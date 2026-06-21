@@ -1,11 +1,11 @@
-# PureScript Universal Polymorphism Benchmark
+# PureScript Universal Multi-Runtime Benchmark
 
 ## Project Goal
 This project is a proof of concept demonstrating the power of abstraction and portability offered by **PureScript**. The goal is to show how the exact same pure functional code (without any manual FFI) can be compiled and executed natively on three radically different ecosystems. This is made possible by the PureScript compiler architecture, which generates an intermediate representation (`CoreFn`) that can be consumed by various backends:
 
-1. **Node.js (V8)**: The premier asynchronous JavaScript engine (default backend).
-2. **Erlang (BEAM)**: The distributed, highly concurrent, and fault-tolerant virtual machine (via the `purerl` backend).
-3. **Chez Scheme**: One of the fastest Lisp compilers in the world for highly optimized native execution (via the `purescm` backend).
+1. **Node.js (V8)**: The premier asynchronous JavaScript engine ([default backend](https://github.com/purescript/purescript)).
+2. **Erlang (BEAM)**: The distributed, highly concurrent, and fault-tolerant virtual machine (via the [`purerl` backend](https://github.com/purerl/purerl)).
+3. **Chez Scheme**: One of the fastest Lisp compilers in the world for highly optimized native execution (via the [`purescm` backend](https://github.com/purescm/purescm)).
 
 ## Benchmark: Fibonacci (40)
 The benchmark calculates the Fibonacci sequence for `n = 40`. This implementation is purely recursive (non-tail-recursive tree execution), which generates an exponential complexity of $O(1.618^n)$. This kind of code applies massive pressure on the Call Stack and measures the raw ability of the compiler and the underlying virtual machine to process millions of frame allocations.
