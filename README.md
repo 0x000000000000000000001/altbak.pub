@@ -21,7 +21,7 @@ Node.js (V8)  | Arista ES (V8) | Chez Scheme (Native) | Erlang (BEAM)
 ------------------------------ | -------------------- | ---------------
 real 0m0.573s | real 0m0.587s  | real 0m0.374s        | real 0m0.438s 
 user 0m0.565s | user 0m0.580s  | user 0m0.326s        | user 0m0.433s 
-sys  0m0.007s | sys  0m0.007s  | sys  0m0.021s        | sys 0m0.210s 
+sys  0m0.007s | sys  0m0.007s  | sys  0m0.021s        | sys  0m0.210s 
 =======================================================================
 ```
 
