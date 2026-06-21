@@ -11,6 +11,10 @@ This project is a proof of concept demonstrating the power of abstraction and po
 ## Benchmark: Fibonacci (40)
 The benchmark calculates the Fibonacci sequence for `n = 40`. This implementation is purely recursive (non-tail-recursive tree execution), which generates an exponential complexity of $O(1.618^n)$. This kind of code applies massive pressure on the Call Stack and measures the raw ability of the compiler and the underlying virtual machine to process millions of frame allocations.
 
+> [!IMPORTANT]
+> **The Benchmark is Just an Excuse**
+> The primary objective here is **not** to pit these technologies against each other to declare a performance "winner". In fact, the benchmark itself is just a pretext. The real goal is to prove that we can seamlessly compile and run the exact same, unmodified PureScript code across **4 completely different runtimes** (V8 standard, V8 optimized, BEAM, and Lisp). The true victory is achieving universal abstraction without sacrificing execution viability.
+
 ### Results
 
 ```text
