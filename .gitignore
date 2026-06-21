@@ -1,13 +1,9 @@
-
-bower_components/
+.DS_Store
 node_modules/
+bower_components/
 .pulp-cache/
-output/
-output-es/
 generated-docs/
 .psc-package/
 .psc*
 .purs*
 .psa*
-.spago
-var/
