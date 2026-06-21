@@ -6,5 +6,7 @@ package:
     - prelude
 workspace:
   packageSet:
-    registry: 77.7.0
+    url: https://raw.githubusercontent.com/purerl/package-sets/erl-0.15.3-20220629/packages.json
   extraPackages: {}
+  backend:
+    cmd: "purerl"

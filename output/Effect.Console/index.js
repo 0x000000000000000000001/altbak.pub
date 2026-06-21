@@ -19,16 +19,6 @@ var infoShow = function (dictShow) {
         return $foreign.info(show(a));
     };
 };
-var grouped = function (name) {
-    return function (inner) {
-        return function __do() {
-            $foreign.group(name)();
-            var result = inner();
-            $foreign.groupEnd();
-            return result;
-        };
-    };
-};
 var errorShow = function (dictShow) {
     var show = Data_Show.show(dictShow);
     return function (a) {
@@ -50,17 +40,13 @@ export {
     time,
     timeLog,
     timeEnd,
-    clear,
-    group,
-    groupCollapsed,
-    groupEnd
+    clear
 } from "./foreign.js";
 export {
     logShow,
     warnShow,
     errorShow,
     infoShow,
-    debugShow,
-    grouped
+    debugShow
 };
 //# sourceMappingURL=index.js.map

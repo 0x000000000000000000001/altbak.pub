@@ -1,1 +1,10 @@
-export .spago/p/prelude-6.0.2/src/Data/Functor.js
+export const arrayMap = function (f) {
+  return function (arr) {
+    var l = arr.length;
+    var result = new Array(l);
+    for (var i = 0; i < l; i++) {
+      result[i] = f(arr[i]);
+    }
+    return result;
+  };
+};

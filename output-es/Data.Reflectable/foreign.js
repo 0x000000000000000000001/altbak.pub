@@ -1,1 +1,5 @@
-export .spago/p/prelude-6.0.2/src/Data/Reflectable.js
+// module Data.Reflectable
+
+export const unsafeCoerce = function (arg) {
+  return arg;
+};

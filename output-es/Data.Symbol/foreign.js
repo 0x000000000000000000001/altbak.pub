@@ -1,1 +1,6 @@
-export .spago/p/prelude-6.0.2/src/Data/Symbol.js
+// module Data.Symbol
+
+export const unsafeCoerce = function (arg) {
+  return arg;
+};
+

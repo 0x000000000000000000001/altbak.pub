@@ -1,1 +1,5 @@
-export .spago/p/prelude-6.0.2/src/Data/Show/Generic.js
+export const intercalate = function (separator) {
+  return function (xs) {
+    return xs.join(separator);
+  };
+};

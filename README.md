@@ -4,8 +4,9 @@
 This project is a proof of concept demonstrating the power of abstraction and portability offered by **PureScript**. The goal is to show how the exact same pure functional code (without any manual FFI) can be compiled and executed natively on three radically different ecosystems. This is made possible by the PureScript compiler architecture, which generates an intermediate representation (`CoreFn`) that can be consumed by various backends:
 
 1. **Node.js (V8)**: The premier asynchronous JavaScript engine ([default backend](https://github.com/purescript/purescript)).
-2. **Erlang (BEAM)**: The distributed, highly concurrent, and fault-tolerant virtual machine (via the [`purerl` backend](https://github.com/purerl/purerl)).
-3. **Chez Scheme**: One of the fastest Lisp compilers in the world for highly optimized native execution (via the [`purescm` backend](https://github.com/purescm/purescm)).
+2. **Arista ES (V8)**: A highly optimized, modern ECMAScript backend developed by Arista Networks for extreme performance (via the [`purs-backend-es` backend](https://github.com/aristanetworks/purescript-backend-optimizer)).
+3. **Erlang (BEAM)**: The distributed, highly concurrent, and fault-tolerant virtual machine (via the [`purerl` backend](https://github.com/purerl/purerl)).
+4. **Chez Scheme**: One of the fastest Lisp compilers in the world for highly optimized native execution (via the [`purescm` backend](https://github.com/purescm/purescm)).
 
 ## Benchmark: Fibonacci (40)
 The benchmark calculates the Fibonacci sequence for `n = 40`. This implementation is purely recursive (non-tail-recursive tree execution), which generates an exponential complexity of $O(1.618^n)$. This kind of code applies massive pressure on the Call Stack and measures the raw ability of the compiler and the underlying virtual machine to process millions of frame allocations.
@@ -13,15 +14,15 @@ The benchmark calculates the Fibonacci sequence for `n = 40`. This implementatio
 ### Results
 
 ```text
-==========================================================================================================
-                                      BENCHMARK RESULTS                                                   
-==========================================================================================================
-Node.js (V8)                        | Chez Scheme (Native)                | Erlang (BEAM)                      
------------------------------------ | ----------------------------------- | ------------------------------
-real    0m0.573s                    | real   0m0.344s                     | real   0m0.475s                      
-user    0m0.565s                    | user   0m0.319s                     | user   0m0.468s                      
-sys     0m0.008s                    | sys    0m0.016s                     | sys    0m0.234s                       
-==========================================================================================================
+=======================================================================
+BENCHMARK RESULTS                                                                 
+=======================================================================
+Node.js (V8)  | Arista ES (V8) | Chez Scheme (Native) | Erlang (BEAM)                 
+------------------------------ | -------------------- | ---------------
+real 0m0.573s | real 0m0.587s  | real 0m0.374s        | real 0m0.438s 
+user 0m0.565s | user 0m0.580s  | user 0m0.326s        | user 0m0.433s 
+sys  0m0.007s | sys  0m0.007s  | sys  0m0.021s        | sys 0m0.210s 
+=======================================================================
 ```
 
 ## Repository Structure and Output Files
