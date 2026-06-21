@@ -1,0 +1,10 @@
+package:
+  name: ps-scheme-test
+  dependencies:
+    - console
+    - effect
+    - prelude
+workspace:
+  packageSet:
+    url: https://raw.githubusercontent.com/purescm/purescm/master/package-sets/1.0.0.json
+  extraPackages: {}

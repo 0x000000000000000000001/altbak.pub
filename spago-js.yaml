@@ -1,0 +1,10 @@
+package:
+  name: ps-scheme-test
+  dependencies:
+    - console
+    - effect
+    - prelude
+workspace:
+  packageSet:
+    registry: 77.7.0
+  extraPackages: {}
