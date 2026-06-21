@@ -13,6 +13,7 @@
   "dependencies": {
     "purescm": "^1.12.0",
     "purescript": "^0.15.16",
+    "purs-backend-es": "^1.4.3",
     "spago": "^1.0.4"
   }
 }
