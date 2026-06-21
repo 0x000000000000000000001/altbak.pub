@@ -12,7 +12,7 @@ This project is a proof of concept demonstrating the power of abstraction and po
 The benchmark calculates the Fibonacci sequence for `n = 40`. This implementation is purely recursive (non-tail-recursive tree execution), which generates an exponential complexity of $O(1.618^n)$. This kind of code applies massive pressure on the Call Stack and measures the raw ability of the compiler and the underlying virtual machine to process millions of frame allocations.
 
 > [!IMPORTANT]
-> **The Benchmark is Just an Excuse**
+> **The benchmark is just an excuse**
 > The primary objective here is **not** to pit these technologies against each other to declare a performance "winner". In fact, the benchmark itself is just a pretext. The real goal is to prove that we can seamlessly compile and run the exact same, unmodified PureScript code across **4 completely different runtimes** (V8 standard, V8 optimized, BEAM, and Lisp). The true victory is achieving universal abstraction without sacrificing execution viability.
 
 ### Results
@@ -32,7 +32,6 @@ sys  0m0.007s | sys  0m0.007s  | sys  0m0.021s        | sys  0m0.210s
 ## Repository Structure and Output Files
 
 > [!NOTE]
-> **No Ignore Policy:**
 > This repository intentionally omits compiled folders from `.gitignore`. All generated code, dependencies, and compilation artifacts are deliberately committed.
 
 The purpose of this approach is to allow an educational exploration of how the backends work, without needing to install the local compilers yourself. You can directly inspect:
