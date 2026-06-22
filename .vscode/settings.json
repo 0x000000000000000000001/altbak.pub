@@ -1,0 +1,23 @@
+{
+  "purescript.addNpmPath": true,
+  "purescript.compilerExecutable": "npx purs",
+  "purescript.spagoBuildArgs": [
+    "build"
+  ],
+  "[purescript]": {
+    "editor.defaultFormatter": "mvakula.vscode-purty"
+  },
+  "editor.unicodeHighlight.allowedCharacters": {
+    "∨": true,
+    "∪": true,
+    "⊤": true,
+    "ι": true,
+    "ᴠ": true,
+    "Ι": true,
+    "Τ": true
+  },
+  "purescript.censorWarnings": [
+    "WildcardInferredType"
+  ],
+  "purescript.diagnosticsOnOpen": true
+}
