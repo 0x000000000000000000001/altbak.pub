@@ -2,7 +2,10 @@
 import * as $foreign from "./foreign.js";
 import * as Effect_Console from "../Effect.Console/index.js";
 var describe = /* #__PURE__ */ Effect_Console.log("Asynchronous Concurrency (1000 forks):");
-var act = /* #__PURE__ */ $foreign.runAsyncTest(1000);
+var act = function __do() {
+    $foreign.runAsyncTest(1000)();
+    return Effect_Console.log("Done")();
+};
 export {
     runAsyncTest
 } from "./foreign.js";

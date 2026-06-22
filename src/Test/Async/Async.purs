@@ -10,4 +10,6 @@ describe :: Effect Unit
 describe = log "Asynchronous Concurrency (1000 forks):"
 
 act :: Effect Unit
-act = runAsyncTest 1000
+act = do
+  runAsyncTest 1000
+  log "Done"

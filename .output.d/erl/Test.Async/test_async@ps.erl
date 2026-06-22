@@ -18,7 +18,11 @@ memoize(X) -> X.
 describe() -> (effect_console@ps:log(<<"Asynchronous Concurrency (1000 forks):"/utf8>>)).
 %-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Async/Async.purs", 12).
 -spec act() -> fun(() -> any()).
-act() -> (test_async@foreign:runAsyncTest(1000)).
+act() -> fun
+  __do() -> 
+  ((test_async@foreign:runAsyncTest(1000))()),
+  ((effect_console@ps:log(<<"Done"/utf8>>))())
+end.
 -spec runAsyncTest() -> fun((integer()) -> fun(() -> any())).
 runAsyncTest() -> fun (_@0) ->
   (test_async@foreign:runAsyncTest(_@0))
