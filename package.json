@@ -17,6 +17,7 @@
     "spago": "^1.0.4"
   },
   "devDependencies": {
+    "purs-tidy": "^0.11.1",
     "purty": "^7.0.0"
   }
 }

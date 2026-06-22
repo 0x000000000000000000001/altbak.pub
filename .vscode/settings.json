@@ -4,9 +4,9 @@
   "purescript.spagoBuildArgs": [
     "build"
   ],
-  "purescript.formatter": "purty",
+  "purescript.formatter": "purs-tidy",
   "[purescript]": {
-    "editor.defaultFormatter": "emattiza.vscode-purty"
+    "editor.defaultFormatter": "nwolverson.ide-purescript"
   },
   "editor.unicodeHighlight.allowedCharacters": {
     "∨": true,
