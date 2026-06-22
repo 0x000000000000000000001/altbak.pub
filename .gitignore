@@ -9,3 +9,5 @@ generated-docs/
 .psa*
 .spago/
 .spago.d/
+.output/
+.output.d/
