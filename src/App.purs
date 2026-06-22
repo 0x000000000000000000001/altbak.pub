@@ -8,6 +8,7 @@ import Test.ListOps as ListOps
 import Test.TCO as TCO
 import Test.Records as Records
 import Test.Ackermann as Ackermann
+import Test.Church as Church
 
 main :: Effect Unit
 main = do
@@ -28,3 +29,6 @@ main = do
   
   Ackermann.describe
   Ackermann.act
+  
+  Church.describe
+  Church.act
