@@ -15,5 +15,8 @@
     "purescript": "^0.15.16",
     "purs-backend-es": "^1.4.3",
     "spago": "^1.0.4"
+  },
+  "devDependencies": {
+    "purty": "^7.0.0"
   }
 }
