@@ -2,7 +2,7 @@ module Test.AstTree where
 
 import Prelude
 import Effect (Effect)
-import Effect.Console (logShow)
+import Effect.Console (logShow, log)
 
 data Expr
   = Val Int
@@ -20,8 +20,8 @@ buildTree :: Int -> Expr
 buildTree 0 = Val 1
 buildTree n = Add (Mul (Val n) (buildTree (n - 1))) (Sub (buildTree (n - 1)) (Val 1))
 
-description :: String
-description = "AST Evaluation"
+describe :: Effect Unit
+describe = log "AST Evaluation:"
 
 act :: Effect Unit
 act = logShow $ eval (buildTree 12)
