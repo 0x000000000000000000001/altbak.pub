@@ -6,6 +6,7 @@ import Test.Fib as Fib
 import Test.AstTree as AstTree
 import Test.ListOps as ListOps
 import Test.TCO as TCO
+import Test.Records as Records
 
 main :: Effect Unit
 main = do
@@ -20,3 +21,6 @@ main = do
   
   TCO.describe
   TCO.act
+  
+  Records.describe
+  Records.act
