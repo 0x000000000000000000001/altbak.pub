@@ -8,8 +8,8 @@ This project is a proof of concept demonstrating the power of abstraction and po
 3. **Erlang (BEAM)**: The distributed, highly concurrent, and fault-tolerant virtual machine (via the [`purerl` backend](https://github.com/purerl/purerl)).
 4. **Chez Scheme**: One of the fastest Lisp compilers in the world for highly optimized native execution (via the [`purescm` backend](https://github.com/purescm/purescm)).
 
-## Benchmark: Fibonacci (40)
-The benchmark calculates the Fibonacci sequence for `n = 40`. This implementation is purely recursive (non-tail-recursive tree execution), which generates an exponential complexity of $O(1.618^n)$. This kind of code applies massive pressure on the Call Stack and measures the raw ability of the compiler and the underlying virtual machine to process millions of frame allocations.
+## Comprehensive Benchmarks
+The benchmark suite runs a wide variety of computationally intensive tasks: AST evaluation, purely recursive Fibonacci, massive List processing, Tail Call Optimization, deep record updates, Ackermann function, Church numerals, Prime sieves, Red-Black tree insertions, heavy Polymorphism (Type Class dictionary lookups), State Monad operations, and deep Lazy Evaluation. These tests apply massive pressure on the call stack, garbage collector, and runtime execution engine to measure the raw ability of the compiler and the underlying virtual machine.
 
 > [!IMPORTANT]
 > **The benchmark is just an excuse**
@@ -23,11 +23,15 @@ BENCHMARK RESULTS
 =======================================================================
 Node.js (V8)  | Arista ES (V8) | Chez Scheme (Native) | Erlang (BEAM)                 
 ------------------------------ | -------------------- | ---------------
-real 0m0.573s | real 0m0.587s  | real 0m0.374s        | real 0m0.438s 
-user 0m0.565s | user 0m0.580s  | user 0m0.326s        | user 0m0.433s 
-sys  0m0.007s | sys  0m0.007s  | sys  0m0.021s        | sys  0m0.210s 
+real 0m1.491s | real 0m1.128s  | real 0m0.620s        | real 0m1.381s 
+user 0m1.567s | user 0m1.190s  | user 0m0.578s        | user 0m1.375s 
+sys  0m0.035s | sys  0m0.035s  | sys  0m0.021s        | sys  0m0.278s 
 =======================================================================
 ```
+
+> [!NOTE]
+> **A 40-year-old dinosaur steals the show!**
+> One of the biggest surprises here is how incredibly performant **Chez Scheme** proves to be. It completely crushes the execution times of modern, highly optimized engines. It is quite a shock to see this "40-year-old dinosaur" (first released in 1984!) comfortably outpace standard Node.js, the Arista backend, and Erlang BEAM across a wide array of functional workloads.
 
 ## Repository Structure and Output Files
 
