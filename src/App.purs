@@ -14,6 +14,7 @@ import Test.RBTree as RBTree
 import Test.Polymorphism as Polymorphism
 import Test.StateMonad as StateMonad
 import Test.LazyEvaluation as LazyEvaluation
+import Test.FileOps as FileOps
 
 main :: Effect Unit
 main = do
@@ -52,3 +53,6 @@ main = do
   
   LazyEvaluation.describe
   LazyEvaluation.act
+  
+  FileOps.describe
+  FileOps.act

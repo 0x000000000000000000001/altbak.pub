@@ -9,7 +9,7 @@ This project is a proof of concept demonstrating the power of abstraction and po
 4. **Chez Scheme**: One of the fastest Lisp compilers in the world for highly optimized native execution (via the [`purescm` backend](https://github.com/purescm/purescm)).
 
 ## Comprehensive Benchmarks
-The benchmark suite runs a wide variety of computationally intensive tasks: AST evaluation, purely recursive Fibonacci, massive List processing, Tail Call Optimization, deep record updates, Ackermann function, Church numerals, Prime sieves, Red-Black tree insertions, heavy Polymorphism (Type Class dictionary lookups), State Monad operations, and deep Lazy Evaluation. These tests apply massive pressure on the call stack, garbage collector, and runtime execution engine to measure the raw ability of the compiler and the underlying virtual machine.
+The benchmark suite runs a wide variety of computationally intensive tasks: AST evaluation, purely recursive Fibonacci, massive List processing, Tail Call Optimization, deep record updates, Ackermann function, Church numerals, Prime sieves, Red-Black tree insertions, heavy Polymorphism (Type Class dictionary lookups), State Monad operations, deep Lazy Evaluation, and heavy File I/O (10,000 synchronous writes and reads). These tests apply massive pressure on the call stack, garbage collector, disk I/O, and runtime execution engine to measure the raw ability of the compiler and the underlying virtual machine.
 
 > [!IMPORTANT]
 > **The benchmark is just an excuse**
@@ -23,9 +23,9 @@ BENCHMARK RESULTS
 =======================================================================
 Node.js (V8)  | Arista ES (V8) | Chez Scheme (Native) | Erlang (BEAM)                 
 ------------------------------ | -------------------- | ---------------
-real 0m1.491s | real 0m1.128s  | real 0m0.620s        | real 0m1.381s 
-user 0m1.567s | user 0m1.190s  | user 0m0.578s        | user 0m1.375s 
-sys  0m0.035s | sys  0m0.035s  | sys  0m0.021s        | sys  0m0.278s 
+real 0m1.965s | real 0m1.478s  | real 0m0.630s        | real 0m2.781s 
+user 0m1.632s | user 0m1.145s  | user 0m0.591s        | user 0m1.947s 
+sys  0m0.432s | sys  0m0.412s  | sys  0m0.034s        | sys  0m1.234s 
 =======================================================================
 ```
 

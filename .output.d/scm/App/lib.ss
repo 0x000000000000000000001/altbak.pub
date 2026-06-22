@@ -11,6 +11,7 @@
     (prefix (Test.AstTree lib) Test.AstTree.)
     (prefix (Test.Church lib) Test.Church.)
     (prefix (Test.Fib lib) Test.Fib.)
+    (prefix (Test.FileOps lib) Test.FileOps.)
     (prefix (Test.LazyEvaluation lib) Test.LazyEvaluation.)
     (prefix (Test.ListOps lib) Test.ListOps.)
     (prefix (Test.Polymorphism lib) Test.Polymorphism.)
@@ -45,5 +46,7 @@
          [_ (Test.Polymorphism.act)]
          [_ (Test.StateMonad.describe)]
          [_ (Test.StateMonad.act)]
-         [_ (Test.LazyEvaluation.describe)])
-          (Test.LazyEvaluation.act)))))
+         [_ (Test.LazyEvaluation.describe)]
+         [_ (Test.LazyEvaluation.act)]
+         [_ (Test.FileOps.describe)])
+          (Test.FileOps.act)))))

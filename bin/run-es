@@ -10,6 +10,12 @@ ln -s spago.yaml.d/js.yaml spago.yaml
 touch spago.lock.d/es.lock && ln -s spago.lock.d/es.lock spago.lock
 npx spago build > /dev/null 2>&1
 npx purs-backend-es build --output-dir .output.d/es > /dev/null 2>&1
+find .output.d/es-purs -name "foreign.js" | while read -r f; do
+  dest=".output.d/es/$(basename $(dirname $f))"
+  mkdir -p "$dest"
+  cp "$f" "$dest/foreign.js"
+done
+
 
 echo "=== Arista ES ==="
 time node -e "import('./.output.d/es/App/index.js').then(m => m.main())"

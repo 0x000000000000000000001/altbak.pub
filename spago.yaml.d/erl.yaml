@@ -4,6 +4,7 @@ package:
     - console
     - effect
     - prelude
+    - refs
 workspace:
   packageSet:
     url: https://raw.githubusercontent.com/purerl/package-sets/erl-0.15.3-20220629/packages.json

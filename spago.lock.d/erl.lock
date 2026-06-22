@@ -7,7 +7,8 @@
           "dependencies": [
             "console",
             "effect",
-            "prelude"
+            "prelude",
+            "refs"
           ]
         },
         "test": {
@@ -1427,6 +1428,15 @@
       "url": "https://github.com/purerl/purescript-prelude.git",
       "rev": "75a86f361270985ae983b59d4a69c0513b7f1cb1",
       "dependencies": []
+    },
+    "refs": {
+      "type": "git",
+      "url": "https://github.com/purerl/purescript-refs.git",
+      "rev": "1a921991d2c0900c4582d69586bfbd5ce3d53952",
+      "dependencies": [
+        "effect",
+        "prelude"
+      ]
     }
   }
 }
