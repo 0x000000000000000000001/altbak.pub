@@ -4,9 +4,9 @@ import Prelude
 import Effect (Effect)
 import Effect.Console (logShow, log)
 
--- Une fonction profondément récursive (Tail Recursive)
--- En PureScript vers JS, elle sera transformée en boucle 'while'
--- En Erlang/Scheme, elle reposera sur l'optimisation native de la VM
+-- A deeply recursive function (Tail Recursive)
+-- In PureScript to JS, it will be transformed into a 'while' loop
+-- In Erlang/Scheme, it relies on native VM optimization
 deepTailRec :: Int -> Int -> Int
 deepTailRec 0 acc = acc
 deepTailRec n acc = deepTailRec (n - 1) (acc + (n `mod` 3))

@@ -12,8 +12,8 @@ type DeepRecord =
 initial :: DeepRecord
 initial = { a: 0, b: { c: 0, d: { e: 0, f: 0 } } }
 
--- On simule 1 million de mises à jour immuables sur un Record imbriqué
--- PureScript en JS utilise Object.assign, Erlang utilise des Maps natives
+-- Simulates 1 million immutable updates on a nested Record
+-- PureScript on JS uses Object.assign, Erlang uses native Maps
 updateRec :: Int -> DeepRecord -> DeepRecord
 updateRec 0 r = r
 updateRec n r = updateRec (n - 1) 
