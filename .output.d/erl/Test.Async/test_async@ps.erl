@@ -13,10 +13,10 @@
 -define(MEMOIZE, memoize).
 memoize(X) -> X.
 -endif.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Async.purs", 9).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Async/Async.purs", 9).
 -spec describe() -> fun(() -> any()).
 describe() -> (effect_console@ps:log(<<"Asynchronous Concurrency (1000 forks):"/utf8>>)).
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Async.purs", 12).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Async/Async.purs", 12).
 -spec act() -> fun(() -> any()).
 act() -> (test_async@foreign:runAsyncTest(1000)).
 -spec runAsyncTest() -> fun((integer()) -> fun(() -> any())).
