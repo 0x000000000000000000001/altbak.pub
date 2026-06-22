@@ -10,6 +10,7 @@ import Test.Records as Records
 import Test.Ackermann as Ackermann
 import Test.Church as Church
 import Test.Primes as Primes
+import Test.RBTree as RBTree
 
 main :: Effect Unit
 main = do
@@ -36,3 +37,6 @@ main = do
   
   Primes.describe
   Primes.act
+  
+  RBTree.describe
+  RBTree.act
