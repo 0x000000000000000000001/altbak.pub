@@ -6,7 +6,7 @@
   ],
   "purescript.formatter": "purty",
   "[purescript]": {
-    "editor.defaultFormatter": "mvakula.vscode-purty"
+    "editor.defaultFormatter": "emattiza.vscode-purty"
   },
   "editor.unicodeHighlight.allowedCharacters": {
     "∨": true,
