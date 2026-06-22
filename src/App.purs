@@ -9,6 +9,7 @@ import Test.TCO as TCO
 import Test.Records as Records
 import Test.Ackermann as Ackermann
 import Test.Church as Church
+import Test.Primes as Primes
 
 main :: Effect Unit
 main = do
@@ -32,3 +33,6 @@ main = do
   
   Church.describe
   Church.act
+  
+  Primes.describe
+  Primes.act
