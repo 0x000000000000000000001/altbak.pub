@@ -13,7 +13,7 @@
 -define(MEMOIZE, memoize).
 memoize(X) -> X.
 -endif.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/FileOps.purs", 11).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/FileOps/FileOps.purs", 11).
 -spec loopIO(integer()) -> fun(() -> any()).
 loopIO(_@10) -> (loopE(_@10, fun
   __do() -> 
@@ -21,15 +21,15 @@ loopIO(_@10) -> (loopE(_@10, fun
   ((test_fileOps@foreign:readFileSync(<<"var/iotest.txt"/utf8>>))()),
   unit
 end)).
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/FileOps.purs", 11).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/FileOps/FileOps.purs", 11).
 -spec loopIO() -> fun((integer()) -> fun(() -> any())).
 loopIO() -> fun (_@11) ->
   (loopIO(_@11))
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/FileOps.purs", 17).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/FileOps/FileOps.purs", 17).
 -spec describe() -> fun(() -> any()).
 describe() -> (effect_console@ps:log(<<"File I/O (10k writes/reads):"/utf8>>)).
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/FileOps.purs", 20).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/FileOps/FileOps.purs", 20).
 -spec act() -> fun(() -> any()).
 act() -> (loopIO(10000)).
 -spec writeFileSync() -> fun((binary()) -> fun((binary()) -> fun(() -> any()))).
