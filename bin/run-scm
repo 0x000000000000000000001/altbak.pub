@@ -2,17 +2,16 @@
 set -e
 cd "$(dirname "$0")/.."
 
-echo "=== Building Scheme Backend ==="
 mkdir -p output-scm .spago-scm
 rm -rf output .spago spago.yaml spago.lock
 ln -s output-scm output
 ln -s .spago-scm .spago
 ln -s spago-scm.yaml spago.yaml
 touch spago-scm.lock && ln -s spago-scm.lock spago.lock
-npx spago fetch
-PATH="$(pwd)/bin:$PATH" npx purescm build
-PATH="$(pwd)/bin:$PATH" npx purescm bundle-app --main App
+npx spago fetch > /dev/null 2>&1
+PATH="$(pwd)/bin:$PATH" npx purescm build > /dev/null 2>&1
+PATH="$(pwd)/bin:$PATH" npx purescm bundle-app --main App > /dev/null 2>&1
 
-echo "=== Executing Scheme Backend (Chez Scheme) ==="
+echo "=== Chez Scheme ==="
 export DYLD_LIBRARY_PATH="/opt/homebrew/lib:/opt/homebrew/opt/icu4c/lib"
 chez --program output/main

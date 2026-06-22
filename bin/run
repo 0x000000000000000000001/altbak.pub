@@ -2,9 +2,9 @@
 set -e
 cd "$(dirname "$0")/.."
 
-echo "=================================="
-echo "    Running all 4 backends...     "
-echo "=================================="
+echo "================================"
+echo "    Running all backends...     "
+echo "================================"
 
 echo ""
 ./bin/run-js
@@ -18,7 +18,3 @@ echo ""
 echo ""
 ./bin/run-erl
 
-echo ""
-echo "=================================="
-echo "   All 4 backends executed!       "
-echo "=================================="

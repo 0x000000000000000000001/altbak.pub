@@ -2,14 +2,13 @@
 set -e
 cd "$(dirname "$0")/.."
 
-echo "=== Building Erlang Backend ==="
 mkdir -p output-erl .spago-erl
 rm -rf output .spago spago.yaml spago.lock
 ln -s output-erl output
 ln -s .spago-erl .spago
 ln -s spago-erl.yaml spago.yaml
 touch spago-erl.lock && ln -s spago-erl.lock spago.lock
-npx spago fetch
+npx spago fetch > /dev/null 2>&1
 # Overwrite legacy CommonJS files with empty ES modules to satisfy newer purs compiler
 find .spago/p -name "*.js" -exec sh -c 'echo "export const __patched = 1;" > "$1"' _ {} \;
 # Inject missing Erlang FFI files for PureScript 0.15 compatibility in purerl
@@ -19,12 +18,12 @@ done
 find .spago/p/prelude -name "Symbol.purs" | while read f; do
   printf -- "-module(data_symbol@foreign).\n-export([unsafeCoerce/1]).\nunsafeCoerce(X) -> X.\n" > "${f%.purs}.erl"
 done
-PATH="$(pwd)/bin:$PATH" npx spago build
+PATH="$(pwd)/bin:$PATH" npx spago build > /dev/null 2>&1
 # erlc compiles the .erl files to .beam files
-erlc -o output/App output/*/*.erl
+erlc -o output/App output/*/*.erl > /dev/null 2>&1
 
-echo "=== Executing Erlang Backend (BEAM) ==="
+echo "=== Erlang BEAM ==="
 erl -noshell -pa output/App -eval '
-    app@ps:main(),
+    (app@ps:main())(),
     halt().
 '

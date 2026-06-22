@@ -2,14 +2,13 @@
 set -e
 cd "$(dirname "$0")/.."
 
-echo "=== Building JavaScript Backend ==="
 mkdir -p output-js .spago-js
 rm -rf output .spago spago.yaml spago.lock
 ln -s output-js output
 ln -s .spago-js .spago
 ln -s spago-js.yaml spago.yaml
 touch spago-js.lock && ln -s spago-js.lock spago.lock
-npx spago build
+npx spago build > /dev/null 2>&1
 
-echo "=== Executing JavaScript Backend (Node.js) ==="
+echo "=== Native Node V8 ==="
 node -e "import('./output/App/index.js').then(m => m.main())"

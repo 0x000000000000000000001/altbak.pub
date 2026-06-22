@@ -27,8 +27,8 @@ fib n = fib (n - 1) + fib (n - 2)
 
 main :: Effect Unit
 main = do
-  log "=== AST Evaluation ==="
+  log "AST Evaluation:"
   logShow $ eval (buildTree 12)
-  
-  log "=== Fibonacci ==="
+
+  log "Fibonacci:"
   logShow $ fib 40

@@ -78,9 +78,9 @@ var buildTree = function (v) {
     return new Add(new Mul(new Val(v), buildTree(v - 1 | 0)), new Sub(buildTree(v - 1 | 0), new Val(1)));
 };
 var main = function __do() {
-    Effect_Console.log("=== AST Evaluation ===")();
+    Effect_Console.log("AST Evaluation:")();
     logShow($$eval(buildTree(12)))();
-    Effect_Console.log("=== Fibonacci ===")();
+    Effect_Console.log("Fibonacci:")();
     return logShow(fib(40))();
 };
 export {

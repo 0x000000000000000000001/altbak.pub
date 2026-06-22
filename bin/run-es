@@ -2,14 +2,13 @@
 set -e
 cd "$(dirname "$0")/.."
 
-echo "=== Building Arista ES Backend ==="
 mkdir -p output-es-purs .spago-js
 rm -rf output .spago spago.yaml spago.lock
 ln -s output-es-purs output
 ln -s .spago-js .spago
 ln -s spago-js.yaml spago.yaml
 touch spago-es.lock && ln -s spago-es.lock spago.lock
-npx purs-backend-es build
+npx purs-backend-es build > /dev/null 2>&1
 
-echo "=== Executing Arista ES Backend (Node.js) ==="
+echo "=== Arista ES ==="
 node -e "import('./output-es/App/index.js').then(m => m.main())"

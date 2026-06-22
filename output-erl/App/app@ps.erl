@@ -79,8 +79,8 @@ end.
 -spec main() -> fun(() -> any()).
 main() -> fun
   __do() -> 
-  ((effect_console@ps:log(<<"=== AST Evaluation ==="/utf8>>))()),
+  ((effect_console@ps:log(<<"AST Evaluation:"/utf8>>))()),
   (((?MEMOIZE((effect_console@ps:logShow((data_show@ps:showInt())))))((eval((buildTree(12))))))()),
-  ((effect_console@ps:log(<<"=== Fibonacci ==="/utf8>>))()),
+  ((effect_console@ps:log(<<"Fibonacci:"/utf8>>))()),
   (((?MEMOIZE((effect_console@ps:logShow((data_show@ps:showInt())))))((fib(40))))())
 end.
