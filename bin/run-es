@@ -3,6 +3,11 @@ set -e
 cd "$(dirname "$0")/.."
 
 echo "=== Building Arista ES Backend ==="
+mkdir -p output-js .spago-js
+rm -rf output .spago spago.yaml
+ln -s output-js output
+ln -s .spago-js .spago
+ln -s spago-js.yaml spago.yaml
 npx purs-backend-es build
 
 echo "=== Executing Arista ES Backend (Node.js) ==="

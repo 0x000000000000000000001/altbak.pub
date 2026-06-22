@@ -1,12 +1,1 @@
-package:
-  name: ps-scheme-test
-  dependencies:
-    - console
-    - datetime
-    - effect
-    - now
-    - prelude
-workspace:
-  packageSet:
-    url: https://raw.githubusercontent.com/purescm/purescm/master/package-sets/1.0.0.json
-  extraPackages: {}
+spago-erl.yaml

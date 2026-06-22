@@ -3,7 +3,11 @@ set -e
 cd "$(dirname "$0")/.."
 
 echo "=== Building Scheme Backend ==="
-cp spago-scm.yaml spago.yaml
+mkdir -p output-scm .spago-scm
+rm -rf output .spago spago.yaml
+ln -s output-scm output
+ln -s .spago-scm .spago
+ln -s spago-scm.yaml spago.yaml
 npx spago build
 PATH="$(pwd)/bin:$PATH" npx purescm build
 PATH="$(pwd)/bin:$PATH" npx purescm bundle-app --main App
