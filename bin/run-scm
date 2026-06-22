@@ -8,7 +8,7 @@ ln -s .output.d/scm output
 ln -s .spago.d/scm .spago
 ln -s spago.yaml.d/scm.yaml spago.yaml
 touch spago.lock.d/scm.lock && ln -s spago.lock.d/scm.lock spago.lock
-npx spago fetch > /dev/null 2>&1
+npx spago build > /dev/null 2>&1
 PATH="$(pwd)/bin:$PATH" npx purescm build > /dev/null 2>&1
 PATH="$(pwd)/bin:$PATH" npx purescm bundle-app --main App > /dev/null 2>&1
 

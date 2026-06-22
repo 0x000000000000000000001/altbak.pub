@@ -4,6 +4,7 @@ import Prelude
 import Effect (Effect)
 import Test.Fib as Fib
 import Test.AstTree as AstTree
+import Test.ListOps as ListOps
 
 main :: Effect Unit
 main = do
@@ -12,3 +13,6 @@ main = do
   
   Fib.describe
   Fib.act
+  
+  ListOps.describe
+  ListOps.act
