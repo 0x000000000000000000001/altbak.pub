@@ -13,6 +13,7 @@ import Test.Primes as Primes
 import Test.RBTree as RBTree
 import Test.Polymorphism as Polymorphism
 import Test.StateMonad as StateMonad
+import Test.LazyEvaluation as LazyEvaluation
 
 main :: Effect Unit
 main = do
@@ -48,3 +49,6 @@ main = do
   
   StateMonad.describe
   StateMonad.act
+  
+  LazyEvaluation.describe
+  LazyEvaluation.act
