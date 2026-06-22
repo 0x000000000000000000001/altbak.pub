@@ -7,6 +7,7 @@ import Test.AstTree as AstTree
 import Test.ListOps as ListOps
 import Test.TCO as TCO
 import Test.Records as Records
+import Test.Ackermann as Ackermann
 
 main :: Effect Unit
 main = do
@@ -24,3 +25,6 @@ main = do
   
   Records.describe
   Records.act
+  
+  Ackermann.describe
+  Ackermann.act
