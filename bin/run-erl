@@ -2,12 +2,12 @@
 set -e
 cd "$(dirname "$0")/.."
 
-mkdir -p output-erl .spago-erl
+mkdir -p .output.d/erl .spago.d/erl
 rm -rf output .spago spago.yaml spago.lock
-ln -s output-erl output
-ln -s .spago-erl .spago
-ln -s spago-erl.yaml spago.yaml
-touch spago-erl.lock && ln -s spago-erl.lock spago.lock
+ln -s .output.d/erl output
+ln -s .spago.d/erl .spago
+ln -s spago.yaml.d/erl.yaml spago.yaml
+touch spago.lock.d/erl.lock && ln -s spago.lock.d/erl.lock spago.lock
 npx spago fetch > /dev/null 2>&1
 # Overwrite legacy CommonJS files with empty ES modules to satisfy newer purs compiler
 find .spago/p -name "*.js" -exec sh -c 'echo "export const __patched = 1;" > "$1"' _ {} \;
@@ -23,7 +23,7 @@ PATH="$(pwd)/bin:$PATH" npx spago build > /dev/null 2>&1
 erlc -o output/App output/*/*.erl > /dev/null 2>&1
 
 echo "=== Erlang BEAM ==="
-erl -noshell -pa output/App -eval '
+time erl -noshell -pa output/App -eval '
     (app@ps:main())(),
     halt().
 '

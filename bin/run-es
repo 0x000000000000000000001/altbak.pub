@@ -2,13 +2,13 @@
 set -e
 cd "$(dirname "$0")/.."
 
-mkdir -p output-es-purs .spago-js
+mkdir -p .output.d/es-purs .spago.d/js
 rm -rf output .spago spago.yaml spago.lock
-ln -s output-es-purs output
-ln -s .spago-js .spago
-ln -s spago-js.yaml spago.yaml
-touch spago-es.lock && ln -s spago-es.lock spago.lock
-npx purs-backend-es build > /dev/null 2>&1
+ln -s .output.d/es-purs output
+ln -s .spago.d/js .spago
+ln -s spago.yaml.d/js.yaml spago.yaml
+touch spago.lock.d/es.lock && ln -s spago.lock.d/es.lock spago.lock
+npx purs-backend-es build --output .output.d/es > /dev/null 2>&1
 
 echo "=== Arista ES ==="
-node -e "import('./output-es/App/index.js').then(m => m.main())"
+time node -e "import('./.output.d/es/App/index.js').then(m => m.main())"
