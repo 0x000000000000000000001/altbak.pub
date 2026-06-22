@@ -9,5 +9,7 @@ generated-docs/
 .psa*
 .spago/
 .spago.d/
-.output/
 .output.d/
+output
+spago.yaml
+spago.lock
