@@ -4,10 +4,11 @@ cd "$(dirname "$0")/.."
 
 echo "=== Building Erlang Backend ==="
 mkdir -p output-erl .spago-erl
-rm -rf output .spago spago.yaml
+rm -rf output .spago spago.yaml spago.lock
 ln -s output-erl output
 ln -s .spago-erl .spago
 ln -s spago-erl.yaml spago.yaml
+touch spago-erl.lock && ln -s spago-erl.lock spago.lock
 npx spago fetch
 # Overwrite legacy CommonJS files with empty ES modules to satisfy newer purs compiler
 find .spago/p -name "*.js" -exec sh -c 'echo "export const __patched = 1;" > "$1"' _ {} \;

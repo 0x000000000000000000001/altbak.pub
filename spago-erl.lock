@@ -1,0 +1,1432 @@
+{
+  "workspace": {
+    "packages": {
+      "ps-scheme-test": {
+        "path": "./",
+        "core": {
+          "dependencies": [
+            "console",
+            "effect",
+            "prelude"
+          ]
+        },
+        "test": {
+          "dependencies": []
+        }
+      }
+    },
+    "package_set": {
+      "address": {
+        "url": "https://raw.githubusercontent.com/purerl/package-sets/erl-0.15.3-20220629/packages.json"
+      },
+      "compiler": ">=0.15.0 <0.16.0",
+      "content": {
+        "arrays": {
+          "repo": "https://github.com/purerl/purescript-arrays.git",
+          "version": "v6.0.0-erl1",
+          "dependencies": [
+            "bifunctors",
+            "control",
+            "foldable-traversable",
+            "maybe",
+            "nonempty",
+            "partial",
+            "prelude",
+            "tailrec",
+            "tuples",
+            "unfoldable",
+            "unsafe-coerce"
+          ]
+        },
+        "assert": {
+          "repo": "https://github.com/purerl/purescript-assert.git",
+          "version": "v5.0.0-erl1",
+          "dependencies": [
+            "console",
+            "effect",
+            "prelude"
+          ]
+        },
+        "bifunctors": {
+          "repo": "https://github.com/purescript/purescript-bifunctors.git",
+          "version": "v5.0.0",
+          "dependencies": [
+            "const",
+            "either",
+            "newtype",
+            "prelude",
+            "tuples"
+          ]
+        },
+        "catenable-lists": {
+          "repo": "https://github.com/purescript/purescript-catenable-lists.git",
+          "version": "v6.0.1",
+          "dependencies": [
+            "control",
+            "foldable-traversable",
+            "lists",
+            "maybe",
+            "prelude",
+            "tuples",
+            "unfoldable"
+          ]
+        },
+        "console": {
+          "repo": "https://github.com/purerl/purescript-console.git",
+          "version": "v5.0.0-erl1",
+          "dependencies": [
+            "effect",
+            "prelude"
+          ]
+        },
+        "const": {
+          "repo": "https://github.com/purescript/purescript-const.git",
+          "version": "v5.0.0",
+          "dependencies": [
+            "invariant",
+            "newtype",
+            "prelude"
+          ]
+        },
+        "contravariant": {
+          "repo": "https://github.com/purescript/purescript-contravariant.git",
+          "version": "v5.0.0",
+          "dependencies": [
+            "const",
+            "either",
+            "newtype",
+            "prelude",
+            "tuples"
+          ]
+        },
+        "control": {
+          "repo": "https://github.com/purerl/purescript-control.git",
+          "version": "v5.0.0-erl1",
+          "dependencies": [
+            "newtype",
+            "prelude"
+          ]
+        },
+        "convertable-options": {
+          "repo": "https://github.com/natefaubion/purescript-convertable-options",
+          "version": "v1.0.0",
+          "dependencies": [
+            "effect",
+            "maybe",
+            "record"
+          ]
+        },
+        "datetime": {
+          "repo": "https://github.com/purerl/purescript-datetime.git",
+          "version": "v5.0.2-erl1",
+          "dependencies": [
+            "bifunctors",
+            "control",
+            "either",
+            "enums",
+            "foldable-traversable",
+            "functions",
+            "gen",
+            "integers",
+            "lists",
+            "math",
+            "maybe",
+            "newtype",
+            "ordered-collections",
+            "partial",
+            "prelude",
+            "tuples"
+          ]
+        },
+        "datetime-parsing": {
+          "repo": "https://github.com/flounders/purescript-datetime-parsing",
+          "version": "10c0a9aecc60a2a5e8cff35bebe45be4dacaa7f8",
+          "dependencies": [
+            "arrays",
+            "datetime",
+            "either",
+            "enums",
+            "foldable-traversable",
+            "integers",
+            "lists",
+            "maybe",
+            "numbers",
+            "parsing",
+            "prelude",
+            "psci-support",
+            "strings"
+          ]
+        },
+        "debug": {
+          "repo": "https://github.com/purerl/purescript-debug.git",
+          "version": "v5.0.0-erl1",
+          "dependencies": [
+            "prelude"
+          ]
+        },
+        "distributive": {
+          "repo": "https://github.com/purescript/purescript-distributive.git",
+          "version": "v5.0.0",
+          "dependencies": [
+            "identity",
+            "newtype",
+            "prelude",
+            "tuples",
+            "type-equality"
+          ]
+        },
+        "effect": {
+          "repo": "https://github.com/purerl/purescript-effect.git",
+          "version": "v3.0.0-erl1",
+          "dependencies": [
+            "prelude"
+          ]
+        },
+        "either": {
+          "repo": "https://github.com/purescript/purescript-either.git",
+          "version": "v5.0.0",
+          "dependencies": [
+            "control",
+            "invariant",
+            "maybe",
+            "prelude"
+          ]
+        },
+        "enums": {
+          "repo": "https://github.com/purerl/purescript-enums.git",
+          "version": "v5.0.0-erl1",
+          "dependencies": [
+            "control",
+            "either",
+            "gen",
+            "maybe",
+            "newtype",
+            "nonempty",
+            "partial",
+            "prelude",
+            "tuples",
+            "unfoldable"
+          ]
+        },
+        "erl-atom": {
+          "repo": "https://github.com/purerl/purescript-erl-atom.git",
+          "version": "v1.2.0",
+          "dependencies": [
+            "prelude",
+            "unsafe-coerce"
+          ]
+        },
+        "erl-binary": {
+          "repo": "https://github.com/purerl/purescript-erl-binary.git",
+          "version": "v0.6.0",
+          "dependencies": [
+            "prelude",
+            "maybe",
+            "erl-lists"
+          ]
+        },
+        "erl-cowboy": {
+          "repo": "https://github.com/purerl/purescript-erl-cowboy",
+          "version": "v0.11.0",
+          "dependencies": [
+            "effect",
+            "either",
+            "erl-atom",
+            "erl-binary",
+            "erl-kernel",
+            "erl-lists",
+            "erl-maps",
+            "erl-modules",
+            "erl-ranch",
+            "erl-ssl",
+            "erl-tuples",
+            "foreign",
+            "functions",
+            "maybe",
+            "prelude",
+            "record",
+            "transformers",
+            "tuples",
+            "unsafe-coerce"
+          ]
+        },
+        "erl-file": {
+          "repo": "https://github.com/purerl/purescript-erl-file.git",
+          "version": "v0.0.3",
+          "dependencies": [
+            "erl-atom",
+            "erl-binary",
+            "prelude"
+          ]
+        },
+        "erl-gun": {
+          "repo": "https://github.com/id3as/purescript-erl-gun.git",
+          "version": "v0.0.2",
+          "dependencies": [
+            "convertable-options",
+            "datetime",
+            "effect",
+            "either",
+            "erl-atom",
+            "erl-binary",
+            "erl-kernel",
+            "erl-lists",
+            "erl-maps",
+            "erl-process",
+            "erl-ssl",
+            "erl-tuples",
+            "erl-untagged-union",
+            "foreign",
+            "functions",
+            "maybe",
+            "prelude",
+            "record",
+            "simple-json",
+            "typelevel-prelude"
+          ]
+        },
+        "erl-jsone": {
+          "repo": "https://github.com/purerl/purescript-erl-jsone",
+          "version": "v0.4.0",
+          "dependencies": [
+            "arrays",
+            "integers",
+            "assert",
+            "either",
+            "erl-lists",
+            "erl-tuples"
+          ]
+        },
+        "erl-kernel": {
+          "repo": "https://github.com/id3as/purescript-erl-kernel.git",
+          "version": "v0.0.3",
+          "dependencies": [
+            "convertable-options",
+            "datetime",
+            "effect",
+            "either",
+            "erl-atom",
+            "erl-binary",
+            "erl-lists",
+            "erl-maps",
+            "erl-process",
+            "erl-tuples",
+            "erl-untagged-union",
+            "foldable-traversable",
+            "foreign",
+            "functions",
+            "integers",
+            "maybe",
+            "newtype",
+            "partial",
+            "prelude",
+            "record",
+            "typelevel-prelude",
+            "unsafe-coerce"
+          ]
+        },
+        "erl-lager": {
+          "repo": "https://github.com/purerl/purescript-erl-lager.git",
+          "version": "v0.0.1",
+          "dependencies": [
+            "erl-lists"
+          ]
+        },
+        "erl-lists": {
+          "repo": "https://github.com/purerl/purescript-erl-lists.git",
+          "version": "v4.0.1",
+          "dependencies": [
+            "prelude",
+            "foldable-traversable",
+            "unfoldable",
+            "filterable",
+            "tuples"
+          ]
+        },
+        "erl-logger": {
+          "repo": "https://github.com/id3as/purescript-erl-logger.git",
+          "version": "v0.0.3",
+          "dependencies": [
+            "prelude",
+            "erl-atom",
+            "erl-lists",
+            "record"
+          ]
+        },
+        "erl-maps": {
+          "repo": "https://github.com/purerl/purescript-erl-maps.git",
+          "version": "v0.5.0",
+          "dependencies": [
+            "erl-lists",
+            "functions",
+            "prelude",
+            "tuples",
+            "unfoldable"
+          ]
+        },
+        "erl-modules": {
+          "repo": "https://github.com/purerl/purescript-erl-modules.git",
+          "version": "v0.1.6",
+          "dependencies": [
+            "erl-atom",
+            "prelude",
+            "strings"
+          ]
+        },
+        "erl-nativerefs": {
+          "repo": "https://github.com/id3as/purescript-erl-nativerefs.git",
+          "version": "v0.1.0",
+          "dependencies": [
+            "prelude",
+            "effect",
+            "erl-tuples"
+          ]
+        },
+        "erl-opentelemetry": {
+          "repo": "https://github.com/id3as/purescript-erl-opentelemetry.git",
+          "version": "v0.0.1",
+          "dependencies": [
+            "effect",
+            "erl-atom",
+            "erl-lists",
+            "erl-maps",
+            "erl-tuples",
+            "erl-untagged-union",
+            "maybe",
+            "prelude",
+            "tuples",
+            "unsafe-reference"
+          ]
+        },
+        "erl-otp-types": {
+          "repo": "https://github.com/id3as/purescript-erl-otp-types.git",
+          "version": "v0.0.2",
+          "dependencies": [
+            "erl-atom",
+            "erl-binary",
+            "erl-kernel",
+            "foreign",
+            "prelude",
+            "unsafe-reference"
+          ]
+        },
+        "erl-pinto": {
+          "repo": "https://github.com/id3as/purescript-erl-pinto.git",
+          "version": "v0.2.0",
+          "dependencies": [
+            "erl-process",
+            "erl-lists",
+            "erl-atom",
+            "erl-kernel",
+            "datetime",
+            "erl-tuples",
+            "erl-modules",
+            "foreign"
+          ]
+        },
+        "erl-process": {
+          "repo": "https://github.com/purerl/purescript-erl-process.git",
+          "version": "v3.3.0",
+          "dependencies": [
+            "datetime",
+            "effect",
+            "either",
+            "foreign",
+            "integers",
+            "prelude"
+          ]
+        },
+        "erl-queue": {
+          "repo": "https://github.com/id3as/purescript-erl-queue.git",
+          "version": "v0.0.2",
+          "dependencies": [
+            "control",
+            "either",
+            "erl-lists",
+            "filterable",
+            "foldable-traversable",
+            "lists",
+            "maybe",
+            "newtype",
+            "nonempty",
+            "prelude",
+            "tuples",
+            "unfoldable"
+          ]
+        },
+        "erl-ranch": {
+          "repo": "https://github.com/id3as/purescript-erl-ranch.git",
+          "version": "v0.0.2",
+          "dependencies": [
+            "convertable-options",
+            "effect",
+            "either",
+            "erl-atom",
+            "erl-kernel",
+            "erl-lists",
+            "erl-maps",
+            "erl-otp-types",
+            "erl-process",
+            "erl-ssl",
+            "erl-tuples",
+            "exceptions",
+            "foreign",
+            "maybe",
+            "prelude",
+            "record",
+            "typelevel-prelude",
+            "unsafe-coerce"
+          ]
+        },
+        "erl-simplebus": {
+          "repo": "https://github.com/id3as/purescript-erl-simplebus.git",
+          "version": "v0.0.3",
+          "dependencies": [
+            "effect",
+            "erl-process",
+            "maybe",
+            "newtype",
+            "prelude"
+          ]
+        },
+        "erl-ssl": {
+          "repo": "https://github.com/id3as/purescript-erl-ssl.git",
+          "version": "v0.0.2",
+          "dependencies": [
+            "convertable-options",
+            "datetime",
+            "effect",
+            "either",
+            "maybe",
+            "erl-atom",
+            "erl-binary",
+            "erl-lists",
+            "erl-kernel",
+            "erl-tuples",
+            "erl-logger",
+            "erl-otp-types",
+            "foreign",
+            "maybe",
+            "partial",
+            "prelude",
+            "record",
+            "unsafe-reference"
+          ]
+        },
+        "erl-stetson": {
+          "repo": "https://github.com/id3as/purescript-erl-stetson.git",
+          "version": "v0.13.0",
+          "dependencies": [
+            "erl-atom",
+            "erl-binary",
+            "erl-lists",
+            "erl-maps",
+            "erl-tuples",
+            "erl-modules",
+            "erl-cowboy",
+            "foreign",
+            "maybe",
+            "prelude",
+            "transformers",
+            "routing-duplex"
+          ]
+        },
+        "erl-test-eunit": {
+          "repo": "https://github.com/id3as/purescript-erl-test-eunit.git",
+          "version": "v0.0.4",
+          "dependencies": [
+            "assert",
+            "console",
+            "debug",
+            "erl-lists",
+            "erl-tuples",
+            "erl-atom",
+            "foreign",
+            "free",
+            "prelude",
+            "psci-support"
+          ]
+        },
+        "erl-test-eunit-discovery": {
+          "repo": "https://github.com/id3as/purescript-erl-test-eunit-discovery.git",
+          "version": "d0b6d9f5bcab13f79c3941c64e52ee86f7cd4e2b",
+          "dependencies": [
+            "effect",
+            "erl-lists",
+            "erl-modules",
+            "erl-test-eunit",
+            "filterable",
+            "foldable-traversable",
+            "maybe",
+            "free",
+            "prelude"
+          ]
+        },
+        "erl-tuples": {
+          "repo": "https://github.com/purerl/purescript-erl-tuples.git",
+          "version": "v3.3.1",
+          "dependencies": [
+            "unfoldable",
+            "tuples"
+          ]
+        },
+        "erl-untagged-union": {
+          "repo": "https://github.com/id3as/purescript-erl-untagged-union.git",
+          "version": "v0.0.2",
+          "dependencies": [
+            "erl-atom",
+            "erl-binary",
+            "erl-lists",
+            "erl-tuples",
+            "foreign",
+            "typelevel-prelude",
+            "maybe",
+            "partial",
+            "prelude",
+            "unsafe-coerce",
+            "erl-process"
+          ]
+        },
+        "exceptions": {
+          "repo": "https://github.com/purerl/purescript-exceptions.git",
+          "version": "v5.0.0-erl1",
+          "dependencies": [
+            "maybe",
+            "either",
+            "effect"
+          ]
+        },
+        "exists": {
+          "repo": "https://github.com/purescript/purescript-exists.git",
+          "version": "v5.1.0",
+          "dependencies": [
+            "unsafe-coerce"
+          ]
+        },
+        "expect-inferred": {
+          "repo": "https://github.com/justinwoo/purescript-expect-inferred",
+          "version": "v2.0.0",
+          "dependencies": [
+            "prelude",
+            "typelevel-prelude"
+          ]
+        },
+        "filterable": {
+          "repo": "https://github.com/purescript/purescript-filterable.git",
+          "version": "v3.0.1",
+          "dependencies": [
+            "arrays",
+            "either",
+            "foldable-traversable",
+            "identity",
+            "lists",
+            "ordered-collections"
+          ]
+        },
+        "foldable-traversable": {
+          "repo": "https://github.com/purerl/purescript-foldable-traversable.git",
+          "version": "v5.0.1-erl1",
+          "dependencies": [
+            "bifunctors",
+            "const",
+            "control",
+            "either",
+            "functors",
+            "identity",
+            "maybe",
+            "newtype",
+            "orders",
+            "prelude",
+            "tuples"
+          ]
+        },
+        "foreign": {
+          "repo": "https://github.com/purerl/purescript-foreign.git",
+          "version": "v6.0.1-erl1",
+          "dependencies": [
+            "either",
+            "functions",
+            "identity",
+            "integers",
+            "lists",
+            "maybe",
+            "prelude",
+            "strings",
+            "transformers"
+          ]
+        },
+        "formatters": {
+          "repo": "https://github.com/id3as/purescript-formatters",
+          "version": "v5.0.1-erl1",
+          "dependencies": [
+            "arrays",
+            "bifunctors",
+            "control",
+            "datetime",
+            "either",
+            "enums",
+            "foldable-traversable",
+            "integers",
+            "lists",
+            "math",
+            "maybe",
+            "newtype",
+            "numbers",
+            "ordered-collections",
+            "parsing",
+            "partial",
+            "prelude",
+            "psci-support",
+            "strings",
+            "transformers",
+            "tuples"
+          ]
+        },
+        "free": {
+          "repo": "https://github.com/purescript/purescript-free.git",
+          "version": "v6.0.1",
+          "dependencies": [
+            "catenable-lists",
+            "control",
+            "distributive",
+            "either",
+            "exists",
+            "foldable-traversable",
+            "invariant",
+            "lazy",
+            "maybe",
+            "prelude",
+            "tailrec",
+            "transformers",
+            "tuples",
+            "unsafe-coerce"
+          ]
+        },
+        "functions": {
+          "repo": "https://github.com/purerl/purescript-functions.git",
+          "version": "v5.0.0-erl1",
+          "dependencies": [
+            "prelude"
+          ]
+        },
+        "functors": {
+          "repo": "https://github.com/purescript/purescript-functors.git",
+          "version": "v4.1.1",
+          "dependencies": [
+            "bifunctors",
+            "const",
+            "contravariant",
+            "control",
+            "distributive",
+            "either",
+            "invariant",
+            "maybe",
+            "newtype",
+            "prelude",
+            "profunctor",
+            "tuples",
+            "unsafe-coerce"
+          ]
+        },
+        "gen": {
+          "repo": "https://github.com/purescript/purescript-gen.git",
+          "version": "v3.0.0",
+          "dependencies": [
+            "either",
+            "foldable-traversable",
+            "identity",
+            "maybe",
+            "newtype",
+            "nonempty",
+            "prelude",
+            "tailrec",
+            "tuples",
+            "unfoldable"
+          ]
+        },
+        "graphs": {
+          "repo": "https://github.com/purescript/purescript-graphs.git",
+          "version": "v5.0.0",
+          "dependencies": [
+            "catenable-lists",
+            "ordered-collections"
+          ]
+        },
+        "heterogeneous": {
+          "repo": "https://github.com/natefaubion/purescript-heterogeneous.git",
+          "version": "v0.5.1",
+          "dependencies": [
+            "prelude",
+            "record",
+            "tuples",
+            "functors",
+            "variant",
+            "either"
+          ]
+        },
+        "identity": {
+          "repo": "https://github.com/purescript/purescript-identity.git",
+          "version": "v5.0.0",
+          "dependencies": [
+            "control",
+            "invariant",
+            "newtype",
+            "prelude"
+          ]
+        },
+        "integers": {
+          "repo": "https://github.com/purerl/purescript-integers.git",
+          "version": "v5.0.0-erl1",
+          "dependencies": [
+            "math",
+            "maybe",
+            "numbers",
+            "prelude"
+          ]
+        },
+        "invariant": {
+          "repo": "https://github.com/purescript/purescript-invariant.git",
+          "version": "v5.0.0",
+          "dependencies": [
+            "control",
+            "prelude"
+          ]
+        },
+        "js-uri": {
+          "repo": "https://github.com/purerl/purescript-js-uri.git",
+          "version": "v2.0.0-erl1",
+          "dependencies": [
+            "functions",
+            "maybe"
+          ]
+        },
+        "lazy": {
+          "repo": "https://github.com/purerl/purescript-lazy.git",
+          "version": "v5.0.0-erl1",
+          "dependencies": [
+            "control",
+            "foldable-traversable",
+            "invariant",
+            "prelude"
+          ]
+        },
+        "lcg": {
+          "repo": "https://github.com/purescript/purescript-lcg.git",
+          "version": "v3.0.0",
+          "dependencies": [
+            "effect",
+            "integers",
+            "math",
+            "maybe",
+            "partial",
+            "prelude",
+            "random"
+          ]
+        },
+        "lists": {
+          "repo": "https://github.com/purescript/purescript-lists.git",
+          "version": "v6.0.1",
+          "dependencies": [
+            "bifunctors",
+            "control",
+            "foldable-traversable",
+            "lazy",
+            "maybe",
+            "newtype",
+            "nonempty",
+            "partial",
+            "prelude",
+            "tailrec",
+            "tuples",
+            "unfoldable"
+          ]
+        },
+        "math": {
+          "repo": "https://github.com/purerl/purescript-math.git",
+          "version": "v3.0.0-erl1",
+          "dependencies": []
+        },
+        "maybe": {
+          "repo": "https://github.com/purescript/purescript-maybe.git",
+          "version": "v5.0.0",
+          "dependencies": [
+            "control",
+            "invariant",
+            "newtype",
+            "prelude"
+          ]
+        },
+        "media-types": {
+          "repo": "https://github.com/purescript-contrib/purescript-media-types.git",
+          "version": "v5.0.0",
+          "dependencies": [
+            "prelude",
+            "newtype"
+          ]
+        },
+        "metadata": {
+          "repo": "https://github.com/spacchetti/purescript-metadata.git",
+          "version": "v0.15.0",
+          "dependencies": []
+        },
+        "newtype": {
+          "repo": "https://github.com/purescript/purescript-newtype.git",
+          "version": "v4.0.0",
+          "dependencies": [
+            "prelude",
+            "safe-coerce"
+          ]
+        },
+        "nonempty": {
+          "repo": "https://github.com/purescript/purescript-nonempty.git",
+          "version": "v6.0.0",
+          "dependencies": [
+            "control",
+            "foldable-traversable",
+            "maybe",
+            "prelude",
+            "tuples",
+            "unfoldable"
+          ]
+        },
+        "nullable": {
+          "repo": "https://github.com/purerl/purescript-nullable.git",
+          "version": "v5.0.0-erl1",
+          "dependencies": [
+            "maybe",
+            "functions"
+          ]
+        },
+        "numbers": {
+          "repo": "https://github.com/purerl/purescript-numbers.git",
+          "version": "v8.0.0-erl1",
+          "dependencies": [
+            "functions",
+            "math",
+            "maybe"
+          ]
+        },
+        "ordered-collections": {
+          "repo": "https://github.com/purerl/purescript-ordered-collections.git",
+          "version": "v2.0.2-erl1",
+          "dependencies": [
+            "arrays",
+            "foldable-traversable",
+            "gen",
+            "lists",
+            "maybe",
+            "partial",
+            "prelude",
+            "tailrec",
+            "tuples",
+            "unfoldable",
+            "unsafe-coerce"
+          ]
+        },
+        "orders": {
+          "repo": "https://github.com/purescript/purescript-orders.git",
+          "version": "v5.0.0",
+          "dependencies": [
+            "newtype",
+            "prelude"
+          ]
+        },
+        "parallel": {
+          "repo": "https://github.com/purescript/purescript-parallel.git",
+          "version": "v5.0.0",
+          "dependencies": [
+            "control",
+            "effect",
+            "either",
+            "foldable-traversable",
+            "functors",
+            "maybe",
+            "newtype",
+            "prelude",
+            "profunctor",
+            "refs",
+            "transformers"
+          ]
+        },
+        "parsing": {
+          "repo": "https://github.com/id3as/purescript-parsing",
+          "version": "v6.0.2-erl1",
+          "dependencies": [
+            "arrays",
+            "assert",
+            "console",
+            "control",
+            "effect",
+            "either",
+            "foldable-traversable",
+            "identity",
+            "integers",
+            "lists",
+            "math",
+            "maybe",
+            "newtype",
+            "prelude",
+            "psci-support",
+            "strings",
+            "tailrec",
+            "transformers",
+            "tuples",
+            "unicode"
+          ]
+        },
+        "partial": {
+          "repo": "https://github.com/purerl/purescript-partial.git",
+          "version": "v3.0.0-erl2",
+          "dependencies": []
+        },
+        "pathy": {
+          "repo": "https://github.com/id3as/purescript-pathy",
+          "version": "v8.1.0-erl1",
+          "dependencies": [
+            "arrays",
+            "either",
+            "exceptions",
+            "foldable-traversable",
+            "gen",
+            "identity",
+            "lists",
+            "maybe",
+            "newtype",
+            "nonempty",
+            "partial",
+            "prelude",
+            "psci-support",
+            "strings",
+            "tailrec",
+            "tuples",
+            "typelevel-prelude",
+            "unsafe-coerce"
+          ]
+        },
+        "prelude": {
+          "repo": "https://github.com/purerl/purescript-prelude.git",
+          "version": "v5.0.1-erl1",
+          "dependencies": []
+        },
+        "profunctor": {
+          "repo": "https://github.com/purescript/purescript-profunctor.git",
+          "version": "v5.0.0",
+          "dependencies": [
+            "control",
+            "distributive",
+            "either",
+            "exists",
+            "invariant",
+            "newtype",
+            "prelude",
+            "tuples"
+          ]
+        },
+        "profunctor-lenses": {
+          "repo": "https://github.com/purerl/purescript-profunctor-lenses.git",
+          "version": "v8.0.0-erl1",
+          "dependencies": [
+            "arrays",
+            "bifunctors",
+            "const",
+            "control",
+            "distributive",
+            "either",
+            "foldable-traversable",
+            "functors",
+            "identity",
+            "lists",
+            "maybe",
+            "newtype",
+            "ordered-collections",
+            "partial",
+            "prelude",
+            "profunctor",
+            "record",
+            "transformers",
+            "tuples",
+            "erl-maps"
+          ]
+        },
+        "psci-support": {
+          "repo": "https://github.com/purescript/purescript-psci-support.git",
+          "version": "v5.0.0",
+          "dependencies": [
+            "console",
+            "effect",
+            "prelude"
+          ]
+        },
+        "quickcheck": {
+          "repo": "https://github.com/purerl/purescript-quickcheck.git",
+          "version": "v7.1.0-erl1",
+          "dependencies": [
+            "arrays",
+            "console",
+            "control",
+            "effect",
+            "either",
+            "enums",
+            "exceptions",
+            "foldable-traversable",
+            "gen",
+            "identity",
+            "integers",
+            "lazy",
+            "lcg",
+            "lists",
+            "math",
+            "maybe",
+            "newtype",
+            "nonempty",
+            "partial",
+            "prelude",
+            "record",
+            "strings",
+            "tailrec",
+            "transformers",
+            "tuples",
+            "unfoldable"
+          ]
+        },
+        "quickcheck-laws": {
+          "repo": "https://github.com/purescript-contrib/purescript-quickcheck-laws",
+          "version": "v6.0.1",
+          "dependencies": [
+            "arrays",
+            "console",
+            "control",
+            "effect",
+            "either",
+            "enums",
+            "foldable-traversable",
+            "identity",
+            "lists",
+            "maybe",
+            "newtype",
+            "prelude",
+            "quickcheck",
+            "tuples"
+          ]
+        },
+        "random": {
+          "repo": "https://github.com/purerl/purescript-random.git",
+          "version": "v5.0.0-erl1",
+          "dependencies": [
+            "effect",
+            "integers",
+            "math"
+          ]
+        },
+        "rationals": {
+          "repo": "https://github.com/anttih/purescript-rationals.git",
+          "version": "c883c972513380ae161d816ed42108acfe8cc8f6",
+          "dependencies": [
+            "prelude",
+            "integers"
+          ]
+        },
+        "record": {
+          "repo": "https://github.com/purerl/purescript-record.git",
+          "version": "v3.0.0-erl1",
+          "dependencies": [
+            "functions",
+            "typelevel-prelude",
+            "unsafe-coerce"
+          ]
+        },
+        "record-prefix": {
+          "repo": "https://github.com/dariooddenino/purescript-record-prefix.git",
+          "version": "v1.0.0",
+          "dependencies": [
+            "prelude",
+            "heterogeneous",
+            "console",
+            "typelevel-prelude"
+          ]
+        },
+        "refs": {
+          "repo": "https://github.com/purerl/purescript-refs.git",
+          "version": "v5.0.0-erl2",
+          "dependencies": [
+            "effect",
+            "prelude"
+          ]
+        },
+        "routing-duplex": {
+          "repo": "https://github.com/natefaubion/purescript-routing-duplex.git",
+          "version": "v0.5.0",
+          "dependencies": [
+            "arrays",
+            "control",
+            "either",
+            "js-uri",
+            "lazy",
+            "numbers",
+            "prelude",
+            "profunctor",
+            "record",
+            "strings",
+            "typelevel-prelude"
+          ]
+        },
+        "safe-coerce": {
+          "repo": "https://github.com/purescript/purescript-safe-coerce.git",
+          "version": "v1.0.0",
+          "dependencies": [
+            "unsafe-coerce"
+          ]
+        },
+        "semirings": {
+          "repo": "https://github.com/purescript/purescript-semirings.git",
+          "version": "v6.0.0",
+          "dependencies": [
+            "foldable-traversable",
+            "lists",
+            "newtype",
+            "prelude"
+          ]
+        },
+        "sequences": {
+          "repo": "https://github.com/hdgarrood/purescript-sequences.git",
+          "version": "v3.0.2",
+          "dependencies": [
+            "prelude",
+            "unsafe-coerce",
+            "partial",
+            "unfoldable",
+            "lazy",
+            "arrays",
+            "profunctor",
+            "maybe",
+            "tuples",
+            "newtype"
+          ]
+        },
+        "simple-json": {
+          "repo": "https://github.com/purerl/purescript-simple-json.git",
+          "version": "baad5dd0d613df6fb2f054fd241d46e11a92e181",
+          "dependencies": [
+            "exceptions",
+            "foreign",
+            "nullable",
+            "prelude",
+            "record",
+            "typelevel-prelude",
+            "variant",
+            "erl-lists",
+            "erl-maps",
+            "erl-kernel"
+          ]
+        },
+        "simple-json-generics": {
+          "repo": "https://github.com/justinwoo/purescript-simple-json-generics",
+          "version": "v0.1.0",
+          "dependencies": [
+            "prelude",
+            "simple-json"
+          ]
+        },
+        "strings": {
+          "repo": "https://github.com/purerl/purescript-strings.git",
+          "version": "v5.0.0-erl2",
+          "dependencies": [
+            "arrays",
+            "control",
+            "either",
+            "enums",
+            "foldable-traversable",
+            "gen",
+            "integers",
+            "maybe",
+            "newtype",
+            "nonempty",
+            "partial",
+            "prelude",
+            "tailrec",
+            "tuples",
+            "unfoldable",
+            "unsafe-coerce"
+          ]
+        },
+        "tailrec": {
+          "repo": "https://github.com/purerl/purescript-tailrec.git",
+          "version": "v5.0.1-erl1",
+          "dependencies": [
+            "bifunctors",
+            "effect",
+            "either",
+            "identity",
+            "maybe",
+            "partial",
+            "prelude",
+            "refs"
+          ]
+        },
+        "these": {
+          "repo": "https://github.com/purescript-contrib/purescript-these.git",
+          "version": "v5.0.0",
+          "dependencies": [
+            "arrays",
+            "gen",
+            "lists",
+            "quickcheck",
+            "quickcheck-laws",
+            "tuples"
+          ]
+        },
+        "transformers": {
+          "repo": "https://github.com/purescript/purescript-transformers.git",
+          "version": "v5.2.0",
+          "dependencies": [
+            "control",
+            "distributive",
+            "effect",
+            "either",
+            "exceptions",
+            "foldable-traversable",
+            "identity",
+            "lazy",
+            "maybe",
+            "newtype",
+            "prelude",
+            "tailrec",
+            "tuples",
+            "unfoldable"
+          ]
+        },
+        "tuples": {
+          "repo": "https://github.com/purescript/purescript-tuples.git",
+          "version": "v6.0.1",
+          "dependencies": [
+            "control",
+            "invariant",
+            "prelude"
+          ]
+        },
+        "type-equality": {
+          "repo": "https://github.com/purescript/purescript-type-equality.git",
+          "version": "v4.0.0",
+          "dependencies": []
+        },
+        "typelevel-prelude": {
+          "repo": "https://github.com/purescript/purescript-typelevel-prelude.git",
+          "version": "v6.0.0",
+          "dependencies": [
+            "prelude",
+            "type-equality"
+          ]
+        },
+        "undefinable": {
+          "repo": "https://github.com/purerl/purescript-undefinable.git",
+          "version": "v4.0.0-erl1",
+          "dependencies": [
+            "maybe",
+            "functions"
+          ]
+        },
+        "unfoldable": {
+          "repo": "https://github.com/purerl/purescript-unfoldable.git",
+          "version": "v5.0.0-erl1",
+          "dependencies": [
+            "foldable-traversable",
+            "maybe",
+            "partial",
+            "prelude",
+            "tuples"
+          ]
+        },
+        "unicode": {
+          "repo": "https://github.com/id3as/purescript-unicode",
+          "version": "v5.0.0-erl1",
+          "dependencies": [
+            "foldable-traversable",
+            "maybe",
+            "psci-support",
+            "strings"
+          ]
+        },
+        "unsafe-coerce": {
+          "repo": "https://github.com/purerl/purescript-unsafe-coerce.git",
+          "version": "v5.0.0-erl1",
+          "dependencies": []
+        },
+        "unsafe-reference": {
+          "repo": "https://github.com/purerl/purescript-unsafe-reference.git",
+          "version": "v4.0.0-erl1",
+          "dependencies": [
+            "prelude"
+          ]
+        },
+        "uri": {
+          "repo": "https://github.com/purescript-contrib/purescript-uri",
+          "version": "v8.0.1",
+          "dependencies": [
+            "arrays",
+            "integers",
+            "js-uri",
+            "numbers",
+            "parsing",
+            "prelude",
+            "profunctor-lenses",
+            "these",
+            "transformers",
+            "unfoldable"
+          ]
+        },
+        "validation": {
+          "repo": "https://github.com/purescript/purescript-validation.git",
+          "version": "v5.0.0",
+          "dependencies": [
+            "bifunctors",
+            "control",
+            "either",
+            "foldable-traversable",
+            "newtype",
+            "prelude"
+          ]
+        },
+        "variant": {
+          "repo": "https://github.com/natefaubion/purescript-variant.git",
+          "version": "v7.0.3",
+          "dependencies": [
+            "enums",
+            "lists",
+            "maybe",
+            "partial",
+            "prelude",
+            "record",
+            "tuples",
+            "unsafe-coerce"
+          ]
+        }
+      }
+    },
+    "extra_packages": {}
+  },
+  "packages": {
+    "console": {
+      "type": "git",
+      "url": "https://github.com/purerl/purescript-console.git",
+      "rev": "56cfd5294acb79758cf30b357751f624650f18e3",
+      "dependencies": [
+        "effect",
+        "prelude"
+      ]
+    },
+    "effect": {
+      "type": "git",
+      "url": "https://github.com/purerl/purescript-effect.git",
+      "rev": "69ba78cd96a27a0af6a723d255dc05a32c6eaa43",
+      "dependencies": [
+        "prelude"
+      ]
+    },
+    "prelude": {
+      "type": "git",
+      "url": "https://github.com/purerl/purescript-prelude.git",
+      "rev": "75a86f361270985ae983b59d4a69c0513b7f1cb1",
+      "dependencies": []
+    }
+  }
+}

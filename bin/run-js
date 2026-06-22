@@ -4,10 +4,11 @@ cd "$(dirname "$0")/.."
 
 echo "=== Building JavaScript Backend ==="
 mkdir -p output-js .spago-js
-rm -rf output .spago spago.yaml
+rm -rf output .spago spago.yaml spago.lock
 ln -s output-js output
 ln -s .spago-js .spago
 ln -s spago-js.yaml spago.yaml
+touch spago-js.lock && ln -s spago-js.lock spago.lock
 npx spago build
 
 echo "=== Executing JavaScript Backend (Node.js) ==="
