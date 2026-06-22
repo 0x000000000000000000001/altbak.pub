@@ -12,6 +12,7 @@ import Test.Church as Church
 import Test.Primes as Primes
 import Test.RBTree as RBTree
 import Test.Polymorphism as Polymorphism
+import Test.StateMonad as StateMonad
 
 main :: Effect Unit
 main = do
@@ -44,3 +45,6 @@ main = do
   
   Polymorphism.describe
   Polymorphism.act
+  
+  StateMonad.describe
+  StateMonad.act
