@@ -2,11 +2,11 @@ package:
   name: ps-scheme-test
   dependencies:
     - console
+    - datetime
     - effect
+    - now
     - prelude
 workspace:
   packageSet:
-    url: https://raw.githubusercontent.com/purerl/package-sets/erl-0.15.3-20220629/packages.json
+    url: https://raw.githubusercontent.com/purescm/purescm/master/package-sets/1.0.0.json
   extraPackages: {}
-  backend:
-    cmd: "purerl"

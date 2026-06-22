@@ -2,7 +2,9 @@ package:
   name: ps-scheme-test
   dependencies:
     - console
+    - datetime
     - effect
+    - now
     - prelude
 workspace:
   packageSet:
