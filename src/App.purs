@@ -11,6 +11,7 @@ import Test.Ackermann as Ackermann
 import Test.Church as Church
 import Test.Primes as Primes
 import Test.RBTree as RBTree
+import Test.Polymorphism as Polymorphism
 
 main :: Effect Unit
 main = do
@@ -40,3 +41,6 @@ main = do
   
   RBTree.describe
   RBTree.act
+  
+  Polymorphism.describe
+  Polymorphism.act
