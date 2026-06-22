@@ -5,6 +5,7 @@ import Effect (Effect)
 import Test.Fib as Fib
 import Test.AstTree as AstTree
 import Test.ListOps as ListOps
+import Test.TCO as TCO
 
 main :: Effect Unit
 main = do
@@ -16,3 +17,6 @@ main = do
   
   ListOps.describe
   ListOps.act
+  
+  TCO.describe
+  TCO.act
