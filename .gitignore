@@ -8,3 +8,6 @@ generated-docs/
 .purs*
 .psa*
 .spago/
+.spago-erl/
+.spago-js/
+.spago-scm/
