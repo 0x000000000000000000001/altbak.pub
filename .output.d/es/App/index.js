@@ -1,5 +1,6 @@
 import * as Test$dAckermann from "../Test.Ackermann/index.js";
 import * as Test$dAstTree from "../Test.AstTree/index.js";
+import * as Test$dAsync from "../Test.Async/index.js";
 import * as Test$dChurch from "../Test.Church/index.js";
 import * as Test$dFib from "../Test.Fib/index.js";
 import * as Test$dFileOps from "../Test.FileOps/index.js";
@@ -37,6 +38,8 @@ const main = () => {
   Test$dLazyEvaluation.describe();
   Test$dLazyEvaluation.act();
   Test$dFileOps.describe();
-  return Test$dFileOps.act();
+  Test$dFileOps.act();
+  Test$dAsync.describe();
+  return Test$dAsync.act();
 };
 export {main};

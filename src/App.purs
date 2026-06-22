@@ -15,6 +15,7 @@ import Test.Polymorphism as Polymorphism
 import Test.StateMonad as StateMonad
 import Test.LazyEvaluation as LazyEvaluation
 import Test.FileOps as FileOps
+import Test.Async as Async
 
 main :: Effect Unit
 main = do
@@ -56,3 +57,6 @@ main = do
   
   FileOps.describe
   FileOps.act
+  
+  Async.describe
+  Async.act

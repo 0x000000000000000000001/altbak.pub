@@ -9,6 +9,7 @@
     (prefix (purescm runtime) rt:)
     (prefix (Test.Ackermann lib) Test.Ackermann.)
     (prefix (Test.AstTree lib) Test.AstTree.)
+    (prefix (Test.Async lib) Test.Async.)
     (prefix (Test.Church lib) Test.Church.)
     (prefix (Test.Fib lib) Test.Fib.)
     (prefix (Test.FileOps lib) Test.FileOps.)
@@ -48,5 +49,7 @@
          [_ (Test.StateMonad.act)]
          [_ (Test.LazyEvaluation.describe)]
          [_ (Test.LazyEvaluation.act)]
-         [_ (Test.FileOps.describe)])
-          (Test.FileOps.act)))))
+         [_ (Test.FileOps.describe)]
+         [_ (Test.FileOps.act)]
+         [_ (Test.Async.describe)])
+          (Test.Async.act)))))

@@ -1,0 +1,27 @@
+(library (Test.Async foreign)
+  (export runAsyncTest)
+  (import (chezscheme))
+
+  (define runAsyncTest
+    (lambda (n)
+      (lambda ()
+        (let ((mutex (make-mutex))
+              (condvar (make-condition))
+              (completed 0))
+          (let loop ((i 0))
+            (if (< i n)
+                (begin
+                  (fork-thread
+                    (lambda ()
+                      (mutex-acquire mutex)
+                      (set! completed (+ completed 1))
+                      (if (= completed n)
+                          (condition-signal condvar))
+                      (mutex-release mutex)))
+                  (loop (+ i 1)))))
+          (mutex-acquire mutex)
+          (unless (= completed n)
+            (condition-wait condvar mutex))
+          (mutex-release mutex)
+          '#()))))
+)
