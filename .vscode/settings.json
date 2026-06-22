@@ -4,6 +4,7 @@
   "purescript.spagoBuildArgs": [
     "build"
   ],
+  "purescript.formatter": "purty",
   "[purescript]": {
     "editor.defaultFormatter": "mvakula.vscode-purty"
   },
