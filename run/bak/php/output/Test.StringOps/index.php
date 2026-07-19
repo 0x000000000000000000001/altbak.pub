@@ -2,12 +2,11 @@
 
 namespace Test\StringOps;
 
-// ALL IMPORTS: Data.Array, Data.Either, Data.Function, Data.Maybe, Data.Ring, Data.Semigroup, Data.Semiring, Data.Show, Data.String, Data.String.CodePoints, Data.String.Common, Data.String.Pattern, Data.String.Regex, Data.String.Regex.Flags, Effect, Effect.Console, Partial.Unsafe, Prelude, Prim, Test.StringOps
-// TO REQUIRE: Data.Array, Data.Either, Data.Function, Data.Maybe, Data.Ring, Data.Semigroup, Data.Semiring, Data.Show, Data.String, Data.String.CodePoints, Data.String.Common, Data.String.Pattern, Data.String.Regex, Data.String.Regex.Flags, Effect, Effect.Console, Partial.Unsafe, Prelude, Test.StringOps
+// ALL IMPORTS: Data.Array, Data.Either, Data.Function, Data.Ring, Data.Semigroup, Data.Semiring, Data.Show, Data.String, Data.String.CodePoints, Data.String.Common, Data.String.Pattern, Data.String.Regex, Data.String.Regex.Flags, Effect, Effect.Console, Partial.Unsafe, Prelude, Prim, Test.StringOps
+// TO REQUIRE: Data.Array, Data.Either, Data.Function, Data.Ring, Data.Semigroup, Data.Semiring, Data.Show, Data.String, Data.String.CodePoints, Data.String.Common, Data.String.Pattern, Data.String.Regex, Data.String.Regex.Flags, Effect, Effect.Console, Partial.Unsafe, Prelude, Test.StringOps
 require_once __DIR__ . '/../Data.Array/index.php';
 require_once __DIR__ . '/../Data.Either/index.php';
 require_once __DIR__ . '/../Data.Function/index.php';
-require_once __DIR__ . '/../Data.Maybe/index.php';
 require_once __DIR__ . '/../Data.Ring/index.php';
 require_once __DIR__ . '/../Data.Semigroup/index.php';
 require_once __DIR__ . '/../Data.Semiring/index.php';

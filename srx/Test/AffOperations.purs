@@ -3,7 +3,7 @@ module Test.AffOperations where
 import Prelude
 import Effect (Effect)
 import Effect.Console (log)
-import Effect.Aff (Aff, launchAff_, delay, Milliseconds(..))
+import Effect.Aff (launchAff_, delay, Milliseconds(..))
 import Effect.Class (liftEffect)
 
 describe :: Effect Unit

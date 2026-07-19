@@ -105,6 +105,50 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 \PhpursThunks::$thunks['Test_FileOps_describe'] = function() { $v = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))("File I/O (10k writes/reads):"); return $v; };
 \PhpursThunks::$thunks['Test_FileOps_act'] = function() { $v = (($GLOBALS['Test_FileOps_loopIO'] ?? \PhpursThunks::eval('Test_FileOps_loopIO')))(10000); return $v; };
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+$ffi_Test_FileOps = \call_user_func(function() {
+  $exports = [];
+$writeFileSync = function($path, $content = null) use (&$writeFileSync) {
+    if (func_num_args() < 2) {
+        $__args = func_get_args();
+        return function(...$more) use ($__args, &$writeFileSync) {
+            return $writeFileSync(...array_merge($__args, $more));
+        };
+    }
+    return function() use ($path, $content) {
+        file_put_contents($path, $content);
+    };
+};
+
+$readFileSync = function($path) {
+    return function() use ($path) {
+        return file_get_contents($path);
+    };
+};
+
+$loopE = function($n, $action = null) use (&$loopE) {
+    if (func_num_args() < 2) {
+        $__args = func_get_args();
+        return function(...$more) use ($__args, &$loopE) {
+            return $loopE(...array_merge($__args, $more));
+        };
+    }
+    return function() use ($n, $action) {
+        for ($i = 0; $i < $n; $i++) {
+            $action();
+        }
+    };
+};
+
+$exports['writeFileSync'] = $writeFileSync;
+$exports['readFileSync'] = $readFileSync;
+$exports['loopE'] = $loopE;
+
+return $exports;
+  return $exports;
+});
+\PhpursThunks::$thunks['Test_FileOps_loopE'] = function() use (&$ffi_Test_FileOps) { return $ffi_Test_FileOps['loopE']; };
+\PhpursThunks::$thunks['Test_FileOps_readFileSync'] = function() use (&$ffi_Test_FileOps) { return $ffi_Test_FileOps['readFileSync']; };
+\PhpursThunks::$thunks['Test_FileOps_writeFileSync'] = function() use (&$ffi_Test_FileOps) { return $ffi_Test_FileOps['writeFileSync']; };
 
 
 
