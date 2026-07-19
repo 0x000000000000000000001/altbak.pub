@@ -94,19 +94,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   }
 }
 \PhpursThunks::$thunks['Data_Enum_Gen_foldable1NonEmpty'] = function() { $v = (($GLOBALS['Data_NonEmpty_foldable1NonEmpty'] ?? \PhpursThunks::eval('Data_NonEmpty_foldable1NonEmpty')))(($GLOBALS['Data_Foldable_foldableArray'] ?? \PhpursThunks::eval('Data_Foldable_foldableArray'))); return $v; };
-\PhpursThunks::$thunks['Data_Enum_Gen_genBoundedEnum'] = function() { $v = function($dictMonadGen) {
+\PhpursThunks::$thunks['Data_Enum_Gen_genBoundedEnum'] = function() { $v = function($dictMonadGen_0) {
   $__num = \func_num_args();
-  $elements_0 = ((($GLOBALS['Control_Monad_Gen_elements'] ?? \PhpursThunks::eval('Control_Monad_Gen_elements')))($dictMonadGen))(($GLOBALS['Data_Enum_Gen_foldable1NonEmpty'] ?? \PhpursThunks::eval('Data_Enum_Gen_foldable1NonEmpty')));
-  $__res = function($dictBoundedEnum) use (&$dictMonadGen, &$elements_0) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Enum_Gen_genBoundedEnum"), recVars=[];
+  $elements_1_0 = ((($GLOBALS['Control_Monad_Gen_elements'] ?? \PhpursThunks::eval('Control_Monad_Gen_elements')))($dictMonadGen_0))(($GLOBALS['Data_Enum_Gen_foldable1NonEmpty'] ?? \PhpursThunks::eval('Data_Enum_Gen_foldable1NonEmpty')));
+  $__res = function($dictBoundedEnum_2) use ($dictMonadGen_0, $elements_1_0) {
   $__num = \func_num_args();
-  $Enum1_1 = (($dictBoundedEnum)->Enum1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $Bounded0_2 = (($dictBoundedEnum)->Bounded0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $v_3 = (($Enum1_1)->succ)(($Bounded0_2)->bottom);
-  if ((is_object($v_3) && (($v_3)->tag === "Just"))) {
-$__t4 = ($elements_0)(new Phpurs_Data2("NonEmpty", ($Bounded0_2)->bottom, ((((($GLOBALS['Data_Enum_enumFromTo'] ?? \PhpursThunks::eval('Data_Enum_enumFromTo')))($Enum1_1))(($GLOBALS['Data_Unfoldable1_unfoldable1Array'] ?? \PhpursThunks::eval('Data_Unfoldable1_unfoldable1Array'))))(($v_3)->value0))(($Bounded0_2)->top)));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $Enum1_3_1 = (($dictBoundedEnum_2)->Enum1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $Bounded0_4_2 = (($dictBoundedEnum_2)->Bounded0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $v_5_3 = (($Enum1_3_1)->succ)(($Bounded0_4_2)->bottom);
+  if ((is_object($v_5_3) && (($v_5_3)->tag === "Just"))) {
+$__t4 = ($elements_1_0)(new Phpurs_Data2("NonEmpty", ($Bounded0_4_2)->bottom, ((((($GLOBALS['Data_Enum_enumFromTo'] ?? \PhpursThunks::eval('Data_Enum_enumFromTo')))($Enum1_3_1))(($GLOBALS['Data_Unfoldable1_unfoldable1Array'] ?? \PhpursThunks::eval('Data_Unfoldable1_unfoldable1Array'))))(($v_5_3)->value0))(($Bounded0_4_2)->top)));
 } else {
-if ((is_object($v_3) && (($v_3)->tag === "Nothing"))) {
-$__t4 = (((((($dictMonadGen)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->pure)(($Bounded0_2)->bottom);
+if ((is_object($v_5_3) && (($v_5_3)->tag === "Nothing"))) {
+$__t4 = (((((($dictMonadGen_0)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->pure)(($Bounded0_4_2)->bottom);
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t4 = null;

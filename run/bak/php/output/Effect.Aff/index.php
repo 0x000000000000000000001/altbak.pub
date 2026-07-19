@@ -117,28 +117,32 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Effect_Aff_void'] = function() { $v = ((($GLOBALS['Control_Applicative_liftA1'] ?? \PhpursThunks::eval('Control_Applicative_liftA1')))(($GLOBALS['Effect_applicativeEffect'] ?? \PhpursThunks::eval('Effect_applicativeEffect'))))(function($v) {
+\PhpursThunks::$thunks['Effect_Aff_void'] = function() { $v = ((($GLOBALS['Control_Applicative_liftA1'] ?? \PhpursThunks::eval('Control_Applicative_liftA1')))(($GLOBALS['Effect_applicativeEffect'] ?? \PhpursThunks::eval('Effect_applicativeEffect'))))(function($v_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }); return $v; };
-\PhpursThunks::$thunks['Effect_Aff_Canceler'] = function() { $v = function($x) {
+\PhpursThunks::$thunks['Effect_Aff_Canceler'] = function() { $v = function($x_0) {
   $__num = \func_num_args();
-  $__res = $x;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Effect_Aff_Canceler"), recVars=[];
+  $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_unsafeFromRight'] = function() { $v = function($v) {
+\PhpursThunks::$thunks['Effect_Aff_unsafeFromRight'] = function() { $v = function($v_0) {
   $__num = \func_num_args();
-  if ((is_object($v) && (($v)->tag === "Right"))) {
-$__t0 = ($v)->value0;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Effect_Aff_unsafeFromRight"), recVars=[];
+  if ((is_object($v_0) && (($v_0)->tag === "Right"))) {
+$__t0 = ($v_0)->value0;
 } else {
-if ((is_object($v) && (($v)->tag === "Left"))) {
-$__t0 = (($GLOBALS['Partial_Unsafe__unsafePartial'] ?? \PhpursThunks::eval('Partial_Unsafe__unsafePartial')))(function($dollar__unused_0) {
+if ((is_object($v_0) && (($v_0)->tag === "Left"))) {
+$__t0 = (($GLOBALS['Partial_Unsafe__unsafePartial'] ?? \PhpursThunks::eval('Partial_Unsafe__unsafePartial')))(function($dollar__unused_1) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = (($GLOBALS['Partial__crashWith'] ?? \PhpursThunks::eval('Partial__crashWith')))("unsafeFromRight: Left");
   goto __end;;
   __end:
@@ -154,14 +158,16 @@ $__t0 = null;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_unsafeFromLeft'] = function() { $v = function($v) {
+\PhpursThunks::$thunks['Effect_Aff_unsafeFromLeft'] = function() { $v = function($v_0) {
   $__num = \func_num_args();
-  if ((is_object($v) && (($v)->tag === "Left"))) {
-$__t0 = ($v)->value0;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Effect_Aff_unsafeFromLeft"), recVars=[];
+  if ((is_object($v_0) && (($v_0)->tag === "Left"))) {
+$__t0 = ($v_0)->value0;
 } else {
-if ((is_object($v) && (($v)->tag === "Right"))) {
-$__t0 = (($GLOBALS['Partial_Unsafe__unsafePartial'] ?? \PhpursThunks::eval('Partial_Unsafe__unsafePartial')))(function($dollar__unused_0) {
+if ((is_object($v_0) && (($v_0)->tag === "Right"))) {
+$__t0 = (($GLOBALS['Partial_Unsafe__unsafePartial'] ?? \PhpursThunks::eval('Partial_Unsafe__unsafePartial')))(function($dollar__unused_1) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = (($GLOBALS['Partial__crashWith'] ?? \PhpursThunks::eval('Partial__crashWith')))("unsafeFromLeft: Right");
   goto __end;;
   __end:
@@ -180,17 +186,19 @@ $__t0 = null;
 \PhpursThunks::$thunks['Effect_Aff_suspendAff'] = function() { $v = (($GLOBALS['Effect_Aff__fork'] ?? \PhpursThunks::eval('Effect_Aff__fork')))(false); return $v; };
 \PhpursThunks::$thunks['Effect_Aff_newtypeCanceler'] = function() { $v = (object)["Coercible0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_isLeft'] = function() { $v = function($v) {
+\PhpursThunks::$thunks['Effect_Aff_isLeft'] = function() { $v = function($v_0) {
   $__num = \func_num_args();
-  if ((is_object($v) && (($v)->tag === "Left"))) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Effect_Aff_isLeft"), recVars=[];
+  if ((is_object($v_0) && (($v_0)->tag === "Left"))) {
 $__t0 = true;
 } else {
-if ((is_object($v) && (($v)->tag === "Right"))) {
+if ((is_object($v_0) && (($v_0)->tag === "Right"))) {
 $__t0 = false;
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -202,27 +210,32 @@ $__t0 = null;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_makeAff'] = function() { $v = function($k) {
+\PhpursThunks::$thunks['Effect_Aff_makeAff'] = function() { $v = function($k_0) {
   $__num = \func_num_args();
-  $__res = (((((((($GLOBALS['Data_Function_Uncurried_runFn6'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn6')))(($GLOBALS['Effect_Aff__makeAff'] ?? \PhpursThunks::eval('Effect_Aff__makeAff'))))(($GLOBALS['Effect_Aff_isLeft'] ?? \PhpursThunks::eval('Effect_Aff_isLeft'))))(($GLOBALS['Effect_Aff_unsafeFromLeft'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromLeft'))))(($GLOBALS['Effect_Aff_unsafeFromRight'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromRight'))))(($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left'))))(($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right'))))($k);
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Effect_Aff_makeAff"), recVars=[];
+  $__res = (((((((($GLOBALS['Data_Function_Uncurried_runFn6'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn6')))(($GLOBALS['Effect_Aff__makeAff'] ?? \PhpursThunks::eval('Effect_Aff__makeAff'))))(($GLOBALS['Effect_Aff_isLeft'] ?? \PhpursThunks::eval('Effect_Aff_isLeft'))))(($GLOBALS['Effect_Aff_unsafeFromLeft'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromLeft'))))(($GLOBALS['Effect_Aff_unsafeFromRight'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromRight'))))(($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left'))))(($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right'))))($k_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_makeFiber'] = function() { $v = function($aff) {
+\PhpursThunks::$thunks['Effect_Aff_makeFiber'] = function() { $v = function($aff_0) {
   $__num = \func_num_args();
-  $__res = (((((((($GLOBALS['Data_Function_Uncurried_runFn6'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn6')))(($GLOBALS['Effect_Aff__makeFiber'] ?? \PhpursThunks::eval('Effect_Aff__makeFiber'))))(($GLOBALS['Effect_Aff_isLeft'] ?? \PhpursThunks::eval('Effect_Aff_isLeft'))))(($GLOBALS['Effect_Aff_unsafeFromLeft'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromLeft'))))(($GLOBALS['Effect_Aff_unsafeFromRight'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromRight'))))(($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left'))))(($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right'))))($aff);
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Effect_Aff_makeFiber"), recVars=[];
+  $__res = (((((((($GLOBALS['Data_Function_Uncurried_runFn6'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn6')))(($GLOBALS['Effect_Aff__makeFiber'] ?? \PhpursThunks::eval('Effect_Aff__makeFiber'))))(($GLOBALS['Effect_Aff_isLeft'] ?? \PhpursThunks::eval('Effect_Aff_isLeft'))))(($GLOBALS['Effect_Aff_unsafeFromLeft'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromLeft'))))(($GLOBALS['Effect_Aff_unsafeFromRight'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromRight'))))(($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left'))))(($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right'))))($aff_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_launchAff'] = function() { $v = function($aff) {
+\PhpursThunks::$thunks['Effect_Aff_launchAff'] = function() { $v = function($aff_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))((((((((($GLOBALS['Data_Function_Uncurried_runFn6'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn6')))(($GLOBALS['Effect_Aff__makeFiber'] ?? \PhpursThunks::eval('Effect_Aff__makeFiber'))))(($GLOBALS['Effect_Aff_isLeft'] ?? \PhpursThunks::eval('Effect_Aff_isLeft'))))(($GLOBALS['Effect_Aff_unsafeFromLeft'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromLeft'))))(($GLOBALS['Effect_Aff_unsafeFromRight'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromRight'))))(($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left'))))(($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right'))))($aff)))(function($fiber) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Effect_Aff_launchAff"), recVars=[];
+  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))((((((((($GLOBALS['Data_Function_Uncurried_runFn6'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn6')))(($GLOBALS['Effect_Aff__makeFiber'] ?? \PhpursThunks::eval('Effect_Aff__makeFiber'))))(($GLOBALS['Effect_Aff_isLeft'] ?? \PhpursThunks::eval('Effect_Aff_isLeft'))))(($GLOBALS['Effect_Aff_unsafeFromLeft'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromLeft'))))(($GLOBALS['Effect_Aff_unsafeFromRight'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromRight'))))(($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left'))))(($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right'))))($aff_0)))(function($fiber_1) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($fiber)->run))(function($dollar__unused_0) use (&$fiber) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($fiber_1)->run))(function($dollar__unused_2) use ($fiber_1) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_pureE'] ?? \PhpursThunks::eval('Effect_pureE')))($fiber);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($GLOBALS['Effect_pureE'] ?? \PhpursThunks::eval('Effect_pureE')))($fiber_1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -240,34 +253,39 @@ $__t0 = null;
 \PhpursThunks::$thunks['Effect_Aff_functorParAff'] = function() { $v = (object)["map" => ($GLOBALS['Effect_Aff__parAffMap'] ?? \PhpursThunks::eval('Effect_Aff__parAffMap'))]; return $v; };
 \PhpursThunks::$thunks['Effect_Aff_functorAff'] = function() { $v = (object)["map" => ($GLOBALS['Effect_Aff__map'] ?? \PhpursThunks::eval('Effect_Aff__map'))]; return $v; };
 \PhpursThunks::$thunks['Effect_Aff_forkAff'] = function() { $v = (($GLOBALS['Effect_Aff__fork'] ?? \PhpursThunks::eval('Effect_Aff__fork')))(true); return $v; };
-\PhpursThunks::$thunks['Effect_Aff_delay'] = function() { $v = function($v) {
+\PhpursThunks::$thunks['Effect_Aff_delay'] = function() { $v = function($v_0) {
   $__num = \func_num_args();
-  $__res = (((($GLOBALS['Data_Function_Uncurried_runFn2'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn2')))(($GLOBALS['Effect_Aff__delay'] ?? \PhpursThunks::eval('Effect_Aff__delay'))))(($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right'))))($v);
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Effect_Aff_delay"), recVars=[];
+  $__res = (((($GLOBALS['Data_Function_Uncurried_runFn2'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn2')))(($GLOBALS['Effect_Aff__delay'] ?? \PhpursThunks::eval('Effect_Aff__delay'))))(($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right'))))($v_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Effect_Aff_bracket'] = function() { $v = (function() {
-  $__fn = function($acquire, $completed = null) use (&$__fn) {
+  $__fn = function($acquire_0, $completed_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Effect_Aff_generalBracket'] ?? \PhpursThunks::eval('Effect_Aff_generalBracket')))($acquire))((object)["killed" => function($v) use (&$completed) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Effect_Aff_bracket"), recVars=[];
+  $__res = ((($GLOBALS['Effect_Aff_generalBracket'] ?? \PhpursThunks::eval('Effect_Aff_generalBracket')))($acquire_0))((object)["killed" => function($v_2) use ($completed_1) {
   $__num = \func_num_args();
-  $__res = $completed;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $completed_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "failed" => function($v) use (&$completed) {
+}, "failed" => function($v_2) use ($completed_1) {
   $__num = \func_num_args();
-  $__res = $completed;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $completed_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "completed" => function($v) use (&$completed) {
+}, "completed" => function($v_2) use ($completed_1) {
   $__num = \func_num_args();
-  $__res = $completed;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $completed_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -280,26 +298,30 @@ $__t0 = null;
 })(); return $v; };
 \PhpursThunks::$thunks['Effect_Aff_applyParAff'] = function() { $v = (object)["apply" => ($GLOBALS['Effect_Aff__parAffApply'] ?? \PhpursThunks::eval('Effect_Aff__parAffApply')), "Functor0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Effect_Aff_functorParAff'] ?? \PhpursThunks::eval('Effect_Aff_functorParAff'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_semigroupParAff'] = function() { $v = function($dictSemigroup) {
+\PhpursThunks::$thunks['Effect_Aff_semigroupParAff'] = function() { $v = function($dictSemigroup_0) {
   $__num = \func_num_args();
-  $__res = (object)["append" => ((($GLOBALS['Control_Apply_lift2'] ?? \PhpursThunks::eval('Control_Apply_lift2')))(($GLOBALS['Effect_Aff_applyParAff'] ?? \PhpursThunks::eval('Effect_Aff_applyParAff'))))(($dictSemigroup)->append)];
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Effect_Aff_semigroupParAff"), recVars=[];
+  $__res = (object)["append" => ((($GLOBALS['Control_Apply_lift2'] ?? \PhpursThunks::eval('Control_Apply_lift2')))(($GLOBALS['Effect_Aff_applyParAff'] ?? \PhpursThunks::eval('Effect_Aff_applyParAff'))))(($dictSemigroup_0)->append)];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Effect_Aff_monadAff'] = function() { $v = (object)["Applicative0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Effect_Aff_monadAff","Effect_Aff_bindAff","Effect_Aff_applyAff","Effect_Aff_applicativeAff"];
   $__res = ($GLOBALS['Effect_Aff_applicativeAff'] ?? \PhpursThunks::eval('Effect_Aff_applicativeAff'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bind1" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Effect_Aff_monadAff","Effect_Aff_bindAff","Effect_Aff_applyAff","Effect_Aff_applicativeAff"];
   $__res = ($GLOBALS['Effect_Aff_bindAff'] ?? \PhpursThunks::eval('Effect_Aff_bindAff'));
   goto __end;;
   __end:
@@ -307,6 +329,7 @@ $__t0 = null;
 }]; return $v; };
 \PhpursThunks::$thunks['Effect_Aff_bindAff'] = function() { $v = (object)["bind" => ($GLOBALS['Effect_Aff__bind'] ?? \PhpursThunks::eval('Effect_Aff__bind')), "Apply0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Effect_Aff_monadAff","Effect_Aff_bindAff","Effect_Aff_applyAff","Effect_Aff_applicativeAff"];
   $__res = ($GLOBALS['Effect_Aff_applyAff'] ?? \PhpursThunks::eval('Effect_Aff_applyAff'));
   goto __end;;
   __end:
@@ -314,6 +337,7 @@ $__t0 = null;
 }]; return $v; };
 \PhpursThunks::$thunks['Effect_Aff_applyAff'] = function() { $v = (object)["apply" => (($GLOBALS['Control_Monad_ap'] ?? \PhpursThunks::eval('Control_Monad_ap')))(($GLOBALS['Effect_Aff_monadAff'] ?? \PhpursThunks::eval('Effect_Aff_monadAff'))), "Functor0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Effect_Aff_monadAff","Effect_Aff_bindAff","Effect_Aff_applyAff","Effect_Aff_applicativeAff"];
   $__res = ($GLOBALS['Effect_Aff_functorAff'] ?? \PhpursThunks::eval('Effect_Aff_functorAff'));
   goto __end;;
   __end:
@@ -321,44 +345,50 @@ $__t0 = null;
 }]; return $v; };
 \PhpursThunks::$thunks['Effect_Aff_applicativeAff'] = function() { $v = (object)["pure" => ($GLOBALS['Effect_Aff__pure'] ?? \PhpursThunks::eval('Effect_Aff__pure')), "Apply0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Effect_Aff_monadAff","Effect_Aff_bindAff","Effect_Aff_applyAff","Effect_Aff_applicativeAff"];
   $__res = ($GLOBALS['Effect_Aff_applyAff'] ?? \PhpursThunks::eval('Effect_Aff_applyAff'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
 \PhpursThunks::$thunks['Effect_Aff_cancelWith'] = function() { $v = (function() {
-  $__fn = function($aff, $v = null) use (&$__fn) {
+  $__fn = function($aff_0, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($GLOBALS['Effect_Aff_generalBracket'] ?? \PhpursThunks::eval('Effect_Aff_generalBracket')))((($GLOBALS['Effect_Aff__pure'] ?? \PhpursThunks::eval('Effect_Aff__pure')))(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')))))((object)["killed" => (function() use (&$v) {
-  $__fn = function($e, $v1 = null) use (&$v, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Effect_Aff_cancelWith"), recVars=[];
+  $__res = (((($GLOBALS['Effect_Aff_generalBracket'] ?? \PhpursThunks::eval('Effect_Aff_generalBracket')))((($GLOBALS['Effect_Aff__pure'] ?? \PhpursThunks::eval('Effect_Aff__pure')))(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')))))((object)["killed" => (function() use ($v_1) {
+  $__fn = function($e_2, $v1_3 = null) use ($v_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($v)($e);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ($v_1)($e_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "failed" => function($v) {
+})(), "failed" => function($v_2) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Effect_Aff__pure'] ?? \PhpursThunks::eval('Effect_Aff__pure'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "completed" => function($v) {
+}, "completed" => function($v_2) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Effect_Aff__pure'] ?? \PhpursThunks::eval('Effect_Aff__pure'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]))(function($v) use (&$aff) {
+}]))(function($v_2) use ($aff_0) {
   $__num = \func_num_args();
-  $__res = $aff;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $aff_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -370,50 +400,55 @@ $__t0 = null;
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Effect_Aff_finally'] = function() { $v = (function() {
-  $__fn = function($fin, $a = null) use (&$__fn) {
+  $__fn = function($fin_0, $a_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($GLOBALS['Effect_Aff_generalBracket'] ?? \PhpursThunks::eval('Effect_Aff_generalBracket')))((($GLOBALS['Effect_Aff__pure'] ?? \PhpursThunks::eval('Effect_Aff__pure')))(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')))))((object)["killed" => (function() use (&$fin) {
-  $__fn = function($v_0, $v = null) use (&$fin, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Effect_Aff_finally"), recVars=[];
+  $__res = (((($GLOBALS['Effect_Aff_generalBracket'] ?? \PhpursThunks::eval('Effect_Aff_generalBracket')))((($GLOBALS['Effect_Aff__pure'] ?? \PhpursThunks::eval('Effect_Aff__pure')))(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')))))((object)["killed" => (function() use ($fin_0) {
+  $__fn = function($v_2, $v_3 = null) use ($fin_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = $fin;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $fin_0;
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "failed" => (function() use (&$fin) {
-  $__fn = function($v_0, $v = null) use (&$fin, &$__fn) {
+})(), "failed" => (function() use ($fin_0) {
+  $__fn = function($v_2, $v_3 = null) use ($fin_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = $fin;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $fin_0;
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "completed" => (function() use (&$fin) {
-  $__fn = function($v_0, $v = null) use (&$fin, &$__fn) {
+})(), "completed" => (function() use ($fin_0) {
+  $__fn = function($v_2, $v_3 = null) use ($fin_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = $fin;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $fin_0;
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]))(function($v) use (&$a) {
+})()]))(function($v_2) use ($a_1) {
   $__num = \func_num_args();
-  $__res = $a;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $a_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -424,40 +459,44 @@ $__t0 = null;
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Effect_Aff_invincible'] = function() { $v = function($a) {
+\PhpursThunks::$thunks['Effect_Aff_invincible'] = function() { $v = function($a_0) {
   $__num = \func_num_args();
-  $__local_var_0 = (($GLOBALS['Effect_Aff__pure'] ?? \PhpursThunks::eval('Effect_Aff__pure')))(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')));
-  $__res = (((($GLOBALS['Effect_Aff_generalBracket'] ?? \PhpursThunks::eval('Effect_Aff_generalBracket')))($a))((object)["killed" => (function() use (&$__local_var_0) {
-  $__fn = function($v_0, $v = null) use (&$__local_var_0, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Effect_Aff_invincible"), recVars=[];
+  $__local_var_1_0 = (($GLOBALS['Effect_Aff__pure'] ?? \PhpursThunks::eval('Effect_Aff__pure')))(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')));
+  $__res = (((($GLOBALS['Effect_Aff_generalBracket'] ?? \PhpursThunks::eval('Effect_Aff_generalBracket')))($a_0))((object)["killed" => (function() use ($__local_var_1_0) {
+  $__fn = function($v_2, $v_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = $__local_var_0;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $__local_var_1_0;
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "failed" => (function() use (&$__local_var_0) {
-  $__fn = function($v_0, $v = null) use (&$__local_var_0, &$__fn) {
+})(), "failed" => (function() use ($__local_var_1_0) {
+  $__fn = function($v_2, $v_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = $__local_var_0;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $__local_var_1_0;
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "completed" => (function() use (&$__local_var_0) {
-  $__fn = function($v_0, $v = null) use (&$__local_var_0, &$__fn) {
+})(), "completed" => (function() use ($__local_var_1_0) {
+  $__fn = function($v_2, $v_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = $__local_var_0;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $__local_var_1_0;
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -468,21 +507,24 @@ $__t0 = null;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_lazyAff'] = function() { $v = (object)["defer" => function($f) {
+\PhpursThunks::$thunks['Effect_Aff_lazyAff'] = function() { $v = (object)["defer" => function($f_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Effect_Aff__bind'] ?? \PhpursThunks::eval('Effect_Aff__bind')))((($GLOBALS['Effect_Aff__pure'] ?? \PhpursThunks::eval('Effect_Aff__pure')))(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')))))($f);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Effect_Aff__bind'] ?? \PhpursThunks::eval('Effect_Aff__bind')))((($GLOBALS['Effect_Aff__pure'] ?? \PhpursThunks::eval('Effect_Aff__pure')))(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')))))($f_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
 \PhpursThunks::$thunks['Effect_Aff_parallelAff'] = function() { $v = (object)["parallel" => ($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')), "sequential" => ($GLOBALS['Effect_Aff__sequential'] ?? \PhpursThunks::eval('Effect_Aff__sequential')), "Apply0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Effect_Aff_applyAff'] ?? \PhpursThunks::eval('Effect_Aff_applyAff'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Apply1" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Effect_Aff_applyParAff'] ?? \PhpursThunks::eval('Effect_Aff_applyParAff'));
   goto __end;;
   __end:
@@ -490,17 +532,20 @@ $__t0 = null;
 }]; return $v; };
 \PhpursThunks::$thunks['Effect_Aff_applicativeParAff'] = function() { $v = (object)["pure" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce'))))(($GLOBALS['Effect_Aff__pure'] ?? \PhpursThunks::eval('Effect_Aff__pure'))), "Apply0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Effect_Aff_applyParAff'] ?? \PhpursThunks::eval('Effect_Aff_applyParAff'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
 \PhpursThunks::$thunks['Effect_Aff_parSequence_'] = function() { $v = (((($GLOBALS['Control_Parallel_parSequence_'] ?? \PhpursThunks::eval('Control_Parallel_parSequence_')))(($GLOBALS['Effect_Aff_parallelAff'] ?? \PhpursThunks::eval('Effect_Aff_parallelAff'))))(($GLOBALS['Effect_Aff_applicativeParAff'] ?? \PhpursThunks::eval('Effect_Aff_applicativeParAff'))))(($GLOBALS['Data_Foldable_foldableArray'] ?? \PhpursThunks::eval('Data_Foldable_foldableArray'))); return $v; };
-\PhpursThunks::$thunks['Effect_Aff_monoidParAff'] = function() { $v = function($dictMonoid) {
+\PhpursThunks::$thunks['Effect_Aff_monoidParAff'] = function() { $v = function($dictMonoid_0) {
   $__num = \func_num_args();
-  $__res = (object)["mempty" => ((($GLOBALS['Effect_Aff_applicativeParAff'] ?? \PhpursThunks::eval('Effect_Aff_applicativeParAff')))->pure)(($dictMonoid)->mempty), "Semigroup0" => function($dollar__unused_0) use (&$dictMonoid) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Effect_Aff_monoidParAff"), recVars=[];
+  $__res = (object)["mempty" => ((($GLOBALS['Effect_Aff_applicativeParAff'] ?? \PhpursThunks::eval('Effect_Aff_applicativeParAff')))->pure)(($dictMonoid_0)->mempty), "Semigroup0" => function($dollar__unused_1) use ($dictMonoid_0) {
   $__num = \func_num_args();
-  $__res = (object)["append" => ((($GLOBALS['Control_Apply_lift2'] ?? \PhpursThunks::eval('Control_Apply_lift2')))(($GLOBALS['Effect_Aff_applyParAff'] ?? \PhpursThunks::eval('Effect_Aff_applyParAff'))))(((($dictMonoid)->Semigroup0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->append)];
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (object)["append" => ((($GLOBALS['Control_Apply_lift2'] ?? \PhpursThunks::eval('Control_Apply_lift2')))(($GLOBALS['Effect_Aff_applyParAff'] ?? \PhpursThunks::eval('Effect_Aff_applyParAff'))))(((($dictMonoid_0)->Semigroup0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->append)];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -510,38 +555,43 @@ $__t0 = null;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Effect_Aff_semigroupCanceler'] = function() { $v = (object)["append" => (function() {
-  $__fn = function($v, $v1 = null, $err = null) use (&$__fn) {
+  $__fn = function($v_0, $v1_1 = null, $err_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($GLOBALS['Effect_Aff_parSequence_'] ?? \PhpursThunks::eval('Effect_Aff_parSequence_')))([($v)($err), ($v1)($err)]);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($GLOBALS['Effect_Aff_parSequence_'] ?? \PhpursThunks::eval('Effect_Aff_parSequence_')))([($v_0)($err_2), ($v1_1)($err_2)]);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
 })()]; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_semigroupAff'] = function() { $v = function($dictSemigroup) {
+\PhpursThunks::$thunks['Effect_Aff_semigroupAff'] = function() { $v = function($dictSemigroup_0) {
   $__num = \func_num_args();
-  $__res = (object)["append" => ((($GLOBALS['Control_Apply_lift2'] ?? \PhpursThunks::eval('Control_Apply_lift2')))(($GLOBALS['Effect_Aff_applyAff'] ?? \PhpursThunks::eval('Effect_Aff_applyAff'))))(($dictSemigroup)->append)];
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Effect_Aff_semigroupAff"), recVars=[];
+  $__res = (object)["append" => ((($GLOBALS['Control_Apply_lift2'] ?? \PhpursThunks::eval('Control_Apply_lift2')))(($GLOBALS['Effect_Aff_applyAff'] ?? \PhpursThunks::eval('Effect_Aff_applyAff'))))(($dictSemigroup_0)->append)];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Effect_Aff_monadEffectAff'] = function() { $v = (object)["liftEffect" => ($GLOBALS['Effect_Aff__liftEffect'] ?? \PhpursThunks::eval('Effect_Aff__liftEffect')), "Monad0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Effect_Aff_monadAff'] ?? \PhpursThunks::eval('Effect_Aff_monadAff'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
 \PhpursThunks::$thunks['Effect_Aff_effectCanceler'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Effect_Aff_Canceler'] ?? \PhpursThunks::eval('Effect_Aff_Canceler'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Function_const'] ?? \PhpursThunks::eval('Data_Function_const'))))(($GLOBALS['Effect_Aff__liftEffect'] ?? \PhpursThunks::eval('Effect_Aff__liftEffect')))); return $v; };
-\PhpursThunks::$thunks['Effect_Aff_joinFiber'] = function() { $v = function($v) {
+\PhpursThunks::$thunks['Effect_Aff_joinFiber'] = function() { $v = function($v_0) {
   $__num = \func_num_args();
-  $__res = (((((((($GLOBALS['Data_Function_Uncurried_runFn6'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn6')))(($GLOBALS['Effect_Aff__makeAff'] ?? \PhpursThunks::eval('Effect_Aff__makeAff'))))(($GLOBALS['Effect_Aff_isLeft'] ?? \PhpursThunks::eval('Effect_Aff_isLeft'))))(($GLOBALS['Effect_Aff_unsafeFromLeft'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromLeft'))))(($GLOBALS['Effect_Aff_unsafeFromRight'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromRight'))))(($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left'))))(($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right'))))(function($k) use (&$v) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Effect_Aff_joinFiber"), recVars=[];
+  $__res = (((((((($GLOBALS['Data_Function_Uncurried_runFn6'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn6')))(($GLOBALS['Effect_Aff__makeAff'] ?? \PhpursThunks::eval('Effect_Aff__makeAff'))))(($GLOBALS['Effect_Aff_isLeft'] ?? \PhpursThunks::eval('Effect_Aff_isLeft'))))(($GLOBALS['Effect_Aff_unsafeFromLeft'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromLeft'))))(($GLOBALS['Effect_Aff_unsafeFromRight'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromRight'))))(($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left'))))(($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right'))))(function($k_1) use ($v_0) {
   $__num = \func_num_args();
-  $__res = (((($GLOBALS['Effect_applyEffect'] ?? \PhpursThunks::eval('Effect_applyEffect')))->apply)((($GLOBALS['Effect_pureE'] ?? \PhpursThunks::eval('Effect_pureE')))(($GLOBALS['Effect_Aff_effectCanceler'] ?? \PhpursThunks::eval('Effect_Aff_effectCanceler')))))((($v)->join)($k));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (((($GLOBALS['Effect_applyEffect'] ?? \PhpursThunks::eval('Effect_applyEffect')))->apply)((($GLOBALS['Effect_pureE'] ?? \PhpursThunks::eval('Effect_pureE')))(($GLOBALS['Effect_Aff_effectCanceler'] ?? \PhpursThunks::eval('Effect_Aff_effectCanceler')))))((($v_0)->join)($k_1));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -551,12 +601,13 @@ $__t0 = null;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Effect_Aff_functorFiber'] = function() { $v = (object)["map" => (function() {
-  $__fn = function($f, $t = null) use (&$__fn) {
+  $__fn = function($f_0, $t_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Effect_Unsafe_unsafePerformEffect'] ?? \PhpursThunks::eval('Effect_Unsafe_unsafePerformEffect')))((((((((($GLOBALS['Data_Function_Uncurried_runFn6'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn6')))(($GLOBALS['Effect_Aff__makeFiber'] ?? \PhpursThunks::eval('Effect_Aff__makeFiber'))))(($GLOBALS['Effect_Aff_isLeft'] ?? \PhpursThunks::eval('Effect_Aff_isLeft'))))(($GLOBALS['Effect_Aff_unsafeFromLeft'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromLeft'))))(($GLOBALS['Effect_Aff_unsafeFromRight'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromRight'))))(($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left'))))(($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right'))))(((($GLOBALS['Effect_Aff__map'] ?? \PhpursThunks::eval('Effect_Aff__map')))($f))((($GLOBALS['Effect_Aff_joinFiber'] ?? \PhpursThunks::eval('Effect_Aff_joinFiber')))($t))));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($GLOBALS['Effect_Unsafe_unsafePerformEffect'] ?? \PhpursThunks::eval('Effect_Unsafe_unsafePerformEffect')))((((((((($GLOBALS['Data_Function_Uncurried_runFn6'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn6')))(($GLOBALS['Effect_Aff__makeFiber'] ?? \PhpursThunks::eval('Effect_Aff__makeFiber'))))(($GLOBALS['Effect_Aff_isLeft'] ?? \PhpursThunks::eval('Effect_Aff_isLeft'))))(($GLOBALS['Effect_Aff_unsafeFromLeft'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromLeft'))))(($GLOBALS['Effect_Aff_unsafeFromRight'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromRight'))))(($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left'))))(($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right'))))(((($GLOBALS['Effect_Aff__map'] ?? \PhpursThunks::eval('Effect_Aff__map')))($f_0))((($GLOBALS['Effect_Aff_joinFiber'] ?? \PhpursThunks::eval('Effect_Aff_joinFiber')))($t_1))));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -564,12 +615,13 @@ $__t0 = null;
   return $__fn;
 })()]; return $v; };
 \PhpursThunks::$thunks['Effect_Aff_applyFiber'] = function() { $v = (object)["apply" => (function() {
-  $__fn = function($t1, $t2 = null) use (&$__fn) {
+  $__fn = function($t1_0, $t2_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Effect_Unsafe_unsafePerformEffect'] ?? \PhpursThunks::eval('Effect_Unsafe_unsafePerformEffect')))((((((((($GLOBALS['Data_Function_Uncurried_runFn6'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn6')))(($GLOBALS['Effect_Aff__makeFiber'] ?? \PhpursThunks::eval('Effect_Aff__makeFiber'))))(($GLOBALS['Effect_Aff_isLeft'] ?? \PhpursThunks::eval('Effect_Aff_isLeft'))))(($GLOBALS['Effect_Aff_unsafeFromLeft'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromLeft'))))(($GLOBALS['Effect_Aff_unsafeFromRight'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromRight'))))(($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left'))))(($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right'))))((((($GLOBALS['Effect_Aff_applyAff'] ?? \PhpursThunks::eval('Effect_Aff_applyAff')))->apply)((($GLOBALS['Effect_Aff_joinFiber'] ?? \PhpursThunks::eval('Effect_Aff_joinFiber')))($t1)))((($GLOBALS['Effect_Aff_joinFiber'] ?? \PhpursThunks::eval('Effect_Aff_joinFiber')))($t2))));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($GLOBALS['Effect_Unsafe_unsafePerformEffect'] ?? \PhpursThunks::eval('Effect_Unsafe_unsafePerformEffect')))((((((((($GLOBALS['Data_Function_Uncurried_runFn6'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn6')))(($GLOBALS['Effect_Aff__makeFiber'] ?? \PhpursThunks::eval('Effect_Aff__makeFiber'))))(($GLOBALS['Effect_Aff_isLeft'] ?? \PhpursThunks::eval('Effect_Aff_isLeft'))))(($GLOBALS['Effect_Aff_unsafeFromLeft'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromLeft'))))(($GLOBALS['Effect_Aff_unsafeFromRight'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromRight'))))(($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left'))))(($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right'))))((((($GLOBALS['Effect_Aff_applyAff'] ?? \PhpursThunks::eval('Effect_Aff_applyAff')))->apply)((($GLOBALS['Effect_Aff_joinFiber'] ?? \PhpursThunks::eval('Effect_Aff_joinFiber')))($t1_0)))((($GLOBALS['Effect_Aff_joinFiber'] ?? \PhpursThunks::eval('Effect_Aff_joinFiber')))($t2_1))));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -577,51 +629,59 @@ $__t0 = null;
   return $__fn;
 })(), "Functor0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Effect_Aff_functorFiber'] ?? \PhpursThunks::eval('Effect_Aff_functorFiber'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_applicativeFiber'] = function() { $v = (object)["pure" => function($a) {
+\PhpursThunks::$thunks['Effect_Aff_applicativeFiber'] = function() { $v = (object)["pure" => function($a_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_Unsafe_unsafePerformEffect'] ?? \PhpursThunks::eval('Effect_Unsafe_unsafePerformEffect')))((((((((($GLOBALS['Data_Function_Uncurried_runFn6'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn6')))(($GLOBALS['Effect_Aff__makeFiber'] ?? \PhpursThunks::eval('Effect_Aff__makeFiber'))))(($GLOBALS['Effect_Aff_isLeft'] ?? \PhpursThunks::eval('Effect_Aff_isLeft'))))(($GLOBALS['Effect_Aff_unsafeFromLeft'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromLeft'))))(($GLOBALS['Effect_Aff_unsafeFromRight'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromRight'))))(($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left'))))(($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right'))))((($GLOBALS['Effect_Aff__pure'] ?? \PhpursThunks::eval('Effect_Aff__pure')))($a)));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($GLOBALS['Effect_Unsafe_unsafePerformEffect'] ?? \PhpursThunks::eval('Effect_Unsafe_unsafePerformEffect')))((((((((($GLOBALS['Data_Function_Uncurried_runFn6'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn6')))(($GLOBALS['Effect_Aff__makeFiber'] ?? \PhpursThunks::eval('Effect_Aff__makeFiber'))))(($GLOBALS['Effect_Aff_isLeft'] ?? \PhpursThunks::eval('Effect_Aff_isLeft'))))(($GLOBALS['Effect_Aff_unsafeFromLeft'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromLeft'))))(($GLOBALS['Effect_Aff_unsafeFromRight'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromRight'))))(($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left'))))(($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right'))))((($GLOBALS['Effect_Aff__pure'] ?? \PhpursThunks::eval('Effect_Aff__pure')))($a_0)));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Apply0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Effect_Aff_applyFiber'] ?? \PhpursThunks::eval('Effect_Aff_applyFiber'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
 \PhpursThunks::$thunks['Effect_Aff_killFiber'] = function() { $v = (function() {
-  $__fn = function($e, $v = null) use (&$__fn) {
+  $__fn = function($e_0, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Effect_Aff__bind'] ?? \PhpursThunks::eval('Effect_Aff__bind')))((($GLOBALS['Effect_Aff__liftEffect'] ?? \PhpursThunks::eval('Effect_Aff__liftEffect')))(($v)->isSuspended)))(function($suspended) use (&$e, &$v) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Effect_Aff_killFiber"), recVars=[];
+  $__res = ((($GLOBALS['Effect_Aff__bind'] ?? \PhpursThunks::eval('Effect_Aff__bind')))((($GLOBALS['Effect_Aff__liftEffect'] ?? \PhpursThunks::eval('Effect_Aff__liftEffect')))(($v_1)->isSuspended)))(function($suspended_2) use ($e_0, $v_1) {
   $__num = \func_num_args();
-  if ($suspended) {
-$__local_var_1 = (($GLOBALS['Effect_pureE'] ?? \PhpursThunks::eval('Effect_pureE')))(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')));
-$__t0 = (($GLOBALS['Effect_Aff__liftEffect'] ?? \PhpursThunks::eval('Effect_Aff__liftEffect')))((((($GLOBALS['Effect_applyEffect'] ?? \PhpursThunks::eval('Effect_applyEffect')))->apply)((($GLOBALS['Effect_pureE'] ?? \PhpursThunks::eval('Effect_pureE')))(function($v) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  if ($suspended_2) {
+$__local_var_3_1 = (($GLOBALS['Effect_pureE'] ?? \PhpursThunks::eval('Effect_pureE')))(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')));
+$__t0 = (($GLOBALS['Effect_Aff__liftEffect'] ?? \PhpursThunks::eval('Effect_Aff__liftEffect')))((((($GLOBALS['Effect_applyEffect'] ?? \PhpursThunks::eval('Effect_applyEffect')))->apply)((($GLOBALS['Effect_pureE'] ?? \PhpursThunks::eval('Effect_pureE')))(function($v_3) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-})))((((($GLOBALS['Data_Function_Uncurried_runFn2'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn2')))(($v)->kill))($e))(function($v) use (&$__local_var_1) {
+})))((((($GLOBALS['Data_Function_Uncurried_runFn2'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn2')))(($v_1)->kill))($e_0))(function($v_4) use ($__local_var_3_1) {
   $__num = \func_num_args();
-  $__res = $__local_var_1;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $__local_var_3_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 })));
 } else {
-$__t0 = (((((((($GLOBALS['Data_Function_Uncurried_runFn6'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn6')))(($GLOBALS['Effect_Aff__makeAff'] ?? \PhpursThunks::eval('Effect_Aff__makeAff'))))(($GLOBALS['Effect_Aff_isLeft'] ?? \PhpursThunks::eval('Effect_Aff_isLeft'))))(($GLOBALS['Effect_Aff_unsafeFromLeft'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromLeft'))))(($GLOBALS['Effect_Aff_unsafeFromRight'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromRight'))))(($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left'))))(($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right'))))(function($k) use (&$e, &$v) {
+$__t0 = (((((((($GLOBALS['Data_Function_Uncurried_runFn6'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn6')))(($GLOBALS['Effect_Aff__makeAff'] ?? \PhpursThunks::eval('Effect_Aff__makeAff'))))(($GLOBALS['Effect_Aff_isLeft'] ?? \PhpursThunks::eval('Effect_Aff_isLeft'))))(($GLOBALS['Effect_Aff_unsafeFromLeft'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromLeft'))))(($GLOBALS['Effect_Aff_unsafeFromRight'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromRight'))))(($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left'))))(($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right'))))(function($k_3) use ($e_0, $v_1) {
   $__num = \func_num_args();
-  $__res = (((($GLOBALS['Effect_applyEffect'] ?? \PhpursThunks::eval('Effect_applyEffect')))->apply)((($GLOBALS['Effect_pureE'] ?? \PhpursThunks::eval('Effect_pureE')))(($GLOBALS['Effect_Aff_effectCanceler'] ?? \PhpursThunks::eval('Effect_Aff_effectCanceler')))))((((($GLOBALS['Data_Function_Uncurried_runFn2'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn2')))(($v)->kill))($e))($k));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (((($GLOBALS['Effect_applyEffect'] ?? \PhpursThunks::eval('Effect_applyEffect')))->apply)((($GLOBALS['Effect_pureE'] ?? \PhpursThunks::eval('Effect_pureE')))(($GLOBALS['Effect_Aff_effectCanceler'] ?? \PhpursThunks::eval('Effect_Aff_effectCanceler')))))((((($GLOBALS['Data_Function_Uncurried_runFn2'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn2')))(($v_1)->kill))($e_0))($k_3));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -639,26 +699,30 @@ $__t0 = (((((((($GLOBALS['Data_Function_Uncurried_runFn6'] ?? \PhpursThunks::eva
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Effect_Aff_fiberCanceler'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Effect_Aff_Canceler'] ?? \PhpursThunks::eval('Effect_Aff_Canceler'))))((function() {
-  $__fn = function($b, $a = null) use (&$__fn) {
+  $__fn = function($b_0, $a_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Effect_Aff_killFiber'] ?? \PhpursThunks::eval('Effect_Aff_killFiber')))($a))($b);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Effect_Aff_killFiber'] ?? \PhpursThunks::eval('Effect_Aff_killFiber')))($a_1))($b_0);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()); return $v; };
-\PhpursThunks::$thunks['Effect_Aff_supervise'] = function() { $v = function($aff) {
+\PhpursThunks::$thunks['Effect_Aff_supervise'] = function() { $v = function($aff_0) {
   $__num = \func_num_args();
-  $killError_0 = (($GLOBALS['Effect_Exception_error'] ?? \PhpursThunks::eval('Effect_Exception_error')))("[Aff] Child fiber outlived parent");
-  $__res = (((($GLOBALS['Effect_Aff_generalBracket'] ?? \PhpursThunks::eval('Effect_Aff_generalBracket')))((($GLOBALS['Effect_Aff__liftEffect'] ?? \PhpursThunks::eval('Effect_Aff__liftEffect')))(((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))((((((((($GLOBALS['Data_Function_Uncurried_runFn6'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn6')))(($GLOBALS['Effect_Aff__makeSupervisedFiber'] ?? \PhpursThunks::eval('Effect_Aff__makeSupervisedFiber'))))(($GLOBALS['Effect_Aff_isLeft'] ?? \PhpursThunks::eval('Effect_Aff_isLeft'))))(($GLOBALS['Effect_Aff_unsafeFromLeft'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromLeft'))))(($GLOBALS['Effect_Aff_unsafeFromRight'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromRight'))))(($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left'))))(($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right'))))($aff)))(function($sup) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Effect_Aff_supervise"), recVars=[];
+  $killError_1_0 = (($GLOBALS['Effect_Exception_error'] ?? \PhpursThunks::eval('Effect_Exception_error')))("[Aff] Child fiber outlived parent");
+  $__res = (((($GLOBALS['Effect_Aff_generalBracket'] ?? \PhpursThunks::eval('Effect_Aff_generalBracket')))((($GLOBALS['Effect_Aff__liftEffect'] ?? \PhpursThunks::eval('Effect_Aff__liftEffect')))(((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))((((((((($GLOBALS['Data_Function_Uncurried_runFn6'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn6')))(($GLOBALS['Effect_Aff__makeSupervisedFiber'] ?? \PhpursThunks::eval('Effect_Aff__makeSupervisedFiber'))))(($GLOBALS['Effect_Aff_isLeft'] ?? \PhpursThunks::eval('Effect_Aff_isLeft'))))(($GLOBALS['Effect_Aff_unsafeFromLeft'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromLeft'))))(($GLOBALS['Effect_Aff_unsafeFromRight'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromRight'))))(($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left'))))(($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right'))))($aff_0)))(function($sup_2) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))((($sup)->fiber)->run))(function($dollar__unused_0) use (&$sup) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))((($sup_2)->fiber)->run))(function($dollar__unused_3) use ($sup_2) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_pureE'] ?? \PhpursThunks::eval('Effect_pureE')))($sup);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($GLOBALS['Effect_pureE'] ?? \PhpursThunks::eval('Effect_pureE')))($sup_2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -667,14 +731,16 @@ $__t0 = (((((((($GLOBALS['Data_Function_Uncurried_runFn6'] ?? \PhpursThunks::eva
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }))))((object)["killed" => (function() {
-  $__fn = function($err, $sup = null) use (&$__fn) {
+  $__fn = function($err_2, $sup_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Effect_Aff_parSequence_'] ?? \PhpursThunks::eval('Effect_Aff_parSequence_')))([((($GLOBALS['Effect_Aff_killFiber'] ?? \PhpursThunks::eval('Effect_Aff_killFiber')))($err))(($sup)->fiber), (((((((($GLOBALS['Data_Function_Uncurried_runFn6'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn6')))(($GLOBALS['Effect_Aff__makeAff'] ?? \PhpursThunks::eval('Effect_Aff__makeAff'))))(($GLOBALS['Effect_Aff_isLeft'] ?? \PhpursThunks::eval('Effect_Aff_isLeft'))))(($GLOBALS['Effect_Aff_unsafeFromLeft'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromLeft'))))(($GLOBALS['Effect_Aff_unsafeFromRight'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromRight'))))(($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left'))))(($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right'))))(function($k) use (&$err, &$sup) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($GLOBALS['Effect_Aff_parSequence_'] ?? \PhpursThunks::eval('Effect_Aff_parSequence_')))([((($GLOBALS['Effect_Aff_killFiber'] ?? \PhpursThunks::eval('Effect_Aff_killFiber')))($err_2))(($sup_3)->fiber), (((((((($GLOBALS['Data_Function_Uncurried_runFn6'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn6')))(($GLOBALS['Effect_Aff__makeAff'] ?? \PhpursThunks::eval('Effect_Aff__makeAff'))))(($GLOBALS['Effect_Aff_isLeft'] ?? \PhpursThunks::eval('Effect_Aff_isLeft'))))(($GLOBALS['Effect_Aff_unsafeFromLeft'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromLeft'))))(($GLOBALS['Effect_Aff_unsafeFromRight'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromRight'))))(($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left'))))(($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right'))))(function($k_4) use ($err_2, $sup_3) {
   $__num = \func_num_args();
-  $__res = ((((($GLOBALS['Data_Function_Uncurried_runFn3'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn3')))(($GLOBALS['Effect_Aff__killAll'] ?? \PhpursThunks::eval('Effect_Aff__killAll'))))($err))(($sup)->supervisor))(($k)(new Phpurs_Data1("Right", ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')))));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((((($GLOBALS['Data_Function_Uncurried_runFn3'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn3')))(($GLOBALS['Effect_Aff__killAll'] ?? \PhpursThunks::eval('Effect_Aff__killAll'))))($err_2))(($sup_3)->supervisor))(($k_4)(new Phpurs_Data1("Right", ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')))));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -684,15 +750,17 @@ $__t0 = (((((((($GLOBALS['Data_Function_Uncurried_runFn6'] ?? \PhpursThunks::eva
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "failed" => (function() use (&$killError_0) {
-  $__fn = function($v, $sup = null) use (&$killError_0, &$__fn) {
+})(), "failed" => (function() use ($killError_1_0) {
+  $__fn = function($v_2, $sup_3 = null) use ($killError_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((((((($GLOBALS['Data_Function_Uncurried_runFn6'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn6')))(($GLOBALS['Effect_Aff__makeAff'] ?? \PhpursThunks::eval('Effect_Aff__makeAff'))))(($GLOBALS['Effect_Aff_isLeft'] ?? \PhpursThunks::eval('Effect_Aff_isLeft'))))(($GLOBALS['Effect_Aff_unsafeFromLeft'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromLeft'))))(($GLOBALS['Effect_Aff_unsafeFromRight'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromRight'))))(($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left'))))(($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right'))))(function($k) use (&$killError_0, &$sup) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (((((((($GLOBALS['Data_Function_Uncurried_runFn6'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn6')))(($GLOBALS['Effect_Aff__makeAff'] ?? \PhpursThunks::eval('Effect_Aff__makeAff'))))(($GLOBALS['Effect_Aff_isLeft'] ?? \PhpursThunks::eval('Effect_Aff_isLeft'))))(($GLOBALS['Effect_Aff_unsafeFromLeft'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromLeft'))))(($GLOBALS['Effect_Aff_unsafeFromRight'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromRight'))))(($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left'))))(($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right'))))(function($k_4) use ($killError_1_0, $sup_3) {
   $__num = \func_num_args();
-  $__res = ((((($GLOBALS['Data_Function_Uncurried_runFn3'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn3')))(($GLOBALS['Effect_Aff__killAll'] ?? \PhpursThunks::eval('Effect_Aff__killAll'))))($killError_0))(($sup)->supervisor))(($k)(new Phpurs_Data1("Right", ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')))));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((((($GLOBALS['Data_Function_Uncurried_runFn3'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn3')))(($GLOBALS['Effect_Aff__killAll'] ?? \PhpursThunks::eval('Effect_Aff__killAll'))))($killError_1_0))(($sup_3)->supervisor))(($k_4)(new Phpurs_Data1("Right", ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')))));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -702,15 +770,17 @@ $__t0 = (((((((($GLOBALS['Data_Function_Uncurried_runFn6'] ?? \PhpursThunks::eva
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "completed" => (function() use (&$killError_0) {
-  $__fn = function($v, $sup = null) use (&$killError_0, &$__fn) {
+})(), "completed" => (function() use ($killError_1_0) {
+  $__fn = function($v_2, $sup_3 = null) use ($killError_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((((((($GLOBALS['Data_Function_Uncurried_runFn6'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn6')))(($GLOBALS['Effect_Aff__makeAff'] ?? \PhpursThunks::eval('Effect_Aff__makeAff'))))(($GLOBALS['Effect_Aff_isLeft'] ?? \PhpursThunks::eval('Effect_Aff_isLeft'))))(($GLOBALS['Effect_Aff_unsafeFromLeft'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromLeft'))))(($GLOBALS['Effect_Aff_unsafeFromRight'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromRight'))))(($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left'))))(($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right'))))(function($k) use (&$killError_0, &$sup) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (((((((($GLOBALS['Data_Function_Uncurried_runFn6'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn6')))(($GLOBALS['Effect_Aff__makeAff'] ?? \PhpursThunks::eval('Effect_Aff__makeAff'))))(($GLOBALS['Effect_Aff_isLeft'] ?? \PhpursThunks::eval('Effect_Aff_isLeft'))))(($GLOBALS['Effect_Aff_unsafeFromLeft'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromLeft'))))(($GLOBALS['Effect_Aff_unsafeFromRight'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromRight'))))(($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left'))))(($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right'))))(function($k_4) use ($killError_1_0, $sup_3) {
   $__num = \func_num_args();
-  $__res = ((((($GLOBALS['Data_Function_Uncurried_runFn3'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn3')))(($GLOBALS['Effect_Aff__killAll'] ?? \PhpursThunks::eval('Effect_Aff__killAll'))))($killError_0))(($sup)->supervisor))(($k)(new Phpurs_Data1("Right", ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')))));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((((($GLOBALS['Data_Function_Uncurried_runFn3'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn3')))(($GLOBALS['Effect_Aff__killAll'] ?? \PhpursThunks::eval('Effect_Aff__killAll'))))($killError_1_0))(($sup_3)->supervisor))(($k_4)(new Phpurs_Data1("Right", ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')))));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -720,9 +790,10 @@ $__t0 = (((((((($GLOBALS['Data_Function_Uncurried_runFn6'] ?? \PhpursThunks::eva
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Effect_Aff_joinFiber'] ?? \PhpursThunks::eval('Effect_Aff_joinFiber'))))(function($v) {
+})()]))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Effect_Aff_joinFiber'] ?? \PhpursThunks::eval('Effect_Aff_joinFiber'))))(function($v_2) {
   $__num = \func_num_args();
-  $__res = ($v)->fiber;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ($v_2)->fiber;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -733,6 +804,7 @@ $__t0 = (((((((($GLOBALS['Data_Function_Uncurried_runFn6'] ?? \PhpursThunks::eva
 }; return $v; };
 \PhpursThunks::$thunks['Effect_Aff_monadSTAff'] = function() { $v = (object)["liftST" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Effect_Aff__liftEffect'] ?? \PhpursThunks::eval('Effect_Aff__liftEffect'))))(($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce'))), "Monad0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Effect_Aff_monadAff'] ?? \PhpursThunks::eval('Effect_Aff_monadAff'));
   goto __end;;
   __end:
@@ -740,6 +812,7 @@ $__t0 = (((((((($GLOBALS['Data_Function_Uncurried_runFn6'] ?? \PhpursThunks::eva
 }]; return $v; };
 \PhpursThunks::$thunks['Effect_Aff_monadThrowAff'] = function() { $v = (object)["throwError" => ($GLOBALS['Effect_Aff__throwError'] ?? \PhpursThunks::eval('Effect_Aff__throwError')), "Monad0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Effect_Aff_monadAff'] ?? \PhpursThunks::eval('Effect_Aff_monadAff'));
   goto __end;;
   __end:
@@ -747,6 +820,7 @@ $__t0 = (((((((($GLOBALS['Data_Function_Uncurried_runFn6'] ?? \PhpursThunks::eva
 }]; return $v; };
 \PhpursThunks::$thunks['Effect_Aff_monadErrorAff'] = function() { $v = (object)["catchError" => ($GLOBALS['Effect_Aff__catchError'] ?? \PhpursThunks::eval('Effect_Aff__catchError')), "MonadThrow0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Effect_Aff_monadThrowAff'] ?? \PhpursThunks::eval('Effect_Aff_monadThrowAff'));
   goto __end;;
   __end:
@@ -755,12 +829,13 @@ $__t0 = (((((((($GLOBALS['Data_Function_Uncurried_runFn6'] ?? \PhpursThunks::eva
 \PhpursThunks::$thunks['Effect_Aff_try'] = function() { $v = (($GLOBALS['Control_Monad_Error_Class_try'] ?? \PhpursThunks::eval('Control_Monad_Error_Class_try')))(($GLOBALS['Effect_Aff_monadErrorAff'] ?? \PhpursThunks::eval('Effect_Aff_monadErrorAff'))); return $v; };
 \PhpursThunks::$thunks['Effect_Aff_attempt'] = function() { $v = ($GLOBALS['Effect_Aff_try'] ?? \PhpursThunks::eval('Effect_Aff_try')); return $v; };
 \PhpursThunks::$thunks['Effect_Aff_runAff'] = function() { $v = (function() {
-  $__fn = function($k, $aff = null) use (&$__fn) {
+  $__fn = function($k_0, $aff_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Effect_Aff_launchAff'] ?? \PhpursThunks::eval('Effect_Aff_launchAff')))(((($GLOBALS['Effect_Aff__bind'] ?? \PhpursThunks::eval('Effect_Aff__bind')))((($GLOBALS['Effect_Aff_try'] ?? \PhpursThunks::eval('Effect_Aff_try')))($aff)))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Effect_Aff__liftEffect'] ?? \PhpursThunks::eval('Effect_Aff__liftEffect'))))($k)));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Effect_Aff_runAff"), recVars=[];
+  $__res = (($GLOBALS['Effect_Aff_launchAff'] ?? \PhpursThunks::eval('Effect_Aff_launchAff')))(((($GLOBALS['Effect_Aff__bind'] ?? \PhpursThunks::eval('Effect_Aff__bind')))((($GLOBALS['Effect_Aff_try'] ?? \PhpursThunks::eval('Effect_Aff_try')))($aff_1)))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Effect_Aff__liftEffect'] ?? \PhpursThunks::eval('Effect_Aff__liftEffect'))))($k_0)));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -768,18 +843,20 @@ $__t0 = (((((((($GLOBALS['Data_Function_Uncurried_runFn6'] ?? \PhpursThunks::eva
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Effect_Aff_runAff_'] = function() { $v = (function() {
-  $__fn = function($k, $aff = null) use (&$__fn) {
+  $__fn = function($k_0, $aff_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($GLOBALS['Effect_applyEffect'] ?? \PhpursThunks::eval('Effect_applyEffect')))->apply)((($GLOBALS['Effect_pureE'] ?? \PhpursThunks::eval('Effect_pureE')))(function($v) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Effect_Aff_runAff_"), recVars=[];
+  $__res = (((($GLOBALS['Effect_applyEffect'] ?? \PhpursThunks::eval('Effect_applyEffect')))->apply)((($GLOBALS['Effect_pureE'] ?? \PhpursThunks::eval('Effect_pureE')))(function($v_2) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-})))(((($GLOBALS['Effect_Aff_runAff'] ?? \PhpursThunks::eval('Effect_Aff_runAff')))($k))($aff));
+})))(((($GLOBALS['Effect_Aff_runAff'] ?? \PhpursThunks::eval('Effect_Aff_runAff')))($k_0))($aff_1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -787,60 +864,69 @@ $__t0 = (((((((($GLOBALS['Data_Function_Uncurried_runFn6'] ?? \PhpursThunks::eva
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Effect_Aff_runSuspendedAff'] = function() { $v = (function() {
-  $__fn = function($k, $aff = null) use (&$__fn) {
+  $__fn = function($k_0, $aff_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((((((($GLOBALS['Data_Function_Uncurried_runFn6'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn6')))(($GLOBALS['Effect_Aff__makeFiber'] ?? \PhpursThunks::eval('Effect_Aff__makeFiber'))))(($GLOBALS['Effect_Aff_isLeft'] ?? \PhpursThunks::eval('Effect_Aff_isLeft'))))(($GLOBALS['Effect_Aff_unsafeFromLeft'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromLeft'))))(($GLOBALS['Effect_Aff_unsafeFromRight'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromRight'))))(($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left'))))(($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right'))))(((($GLOBALS['Effect_Aff__bind'] ?? \PhpursThunks::eval('Effect_Aff__bind')))((($GLOBALS['Effect_Aff_try'] ?? \PhpursThunks::eval('Effect_Aff_try')))($aff)))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Effect_Aff__liftEffect'] ?? \PhpursThunks::eval('Effect_Aff__liftEffect'))))($k)));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Effect_Aff_runSuspendedAff"), recVars=[];
+  $__res = (((((((($GLOBALS['Data_Function_Uncurried_runFn6'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn6')))(($GLOBALS['Effect_Aff__makeFiber'] ?? \PhpursThunks::eval('Effect_Aff__makeFiber'))))(($GLOBALS['Effect_Aff_isLeft'] ?? \PhpursThunks::eval('Effect_Aff_isLeft'))))(($GLOBALS['Effect_Aff_unsafeFromLeft'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromLeft'))))(($GLOBALS['Effect_Aff_unsafeFromRight'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromRight'))))(($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left'))))(($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right'))))(((($GLOBALS['Effect_Aff__bind'] ?? \PhpursThunks::eval('Effect_Aff__bind')))((($GLOBALS['Effect_Aff_try'] ?? \PhpursThunks::eval('Effect_Aff_try')))($aff_1)))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Effect_Aff__liftEffect'] ?? \PhpursThunks::eval('Effect_Aff__liftEffect'))))($k_0)));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Effect_Aff_monadRecAff'] = function() { $v = (object)["tailRecM" => function($k) {
+\PhpursThunks::$thunks['Effect_Aff_monadRecAff'] = function() { $v = (object)["tailRecM" => function($k_0) {
   $__num = \func_num_args();
-  $go = null;
-  $go = function($a) use (&$go, &$k) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $go_1_0 = null;
+  $go_1_0 = function($a_2) use (&$go_1_0, $k_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Effect_Aff__bind'] ?? \PhpursThunks::eval('Effect_Aff__bind')))(($k)($a)))(function($res) use (&$go) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "go_1_0"), recVars=["go_1_0"];
+  while (true) {
+$__res = ((($GLOBALS['Effect_Aff__bind'] ?? \PhpursThunks::eval('Effect_Aff__bind')))(($k_0)($a_2)))(function($res_3) use (&$go_1_0) {
   $__num = \func_num_args();
-  if ((is_object($res) && (($res)->tag === "Done"))) {
-$__t0 = (($GLOBALS['Effect_Aff__pure'] ?? \PhpursThunks::eval('Effect_Aff__pure')))(($res)->value0);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["go_1_0"];
+  if ((is_object($res_3) && (($res_3)->tag === "Done"))) {
+$__t1 = (($GLOBALS['Effect_Aff__pure'] ?? \PhpursThunks::eval('Effect_Aff__pure')))(($res_3)->value0);
 } else {
-if ((is_object($res) && (($res)->tag === "Loop"))) {
-$__t0 = ($go)(($res)->value0);
+if ((is_object($res_3) && (($res_3)->tag === "Loop"))) {
+$__t1 = ($go_1_0)(($res_3)->value0);
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t0 = null;
+$__t1 = null;
 };
 };
-  $__res = $__t0;
+  $__res = $__t1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 });
-  goto __end;;
+goto __end;;
+};
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = $go;
+  $__res = $go_1_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Monad0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Effect_Aff_monadAff'] ?? \PhpursThunks::eval('Effect_Aff_monadAff'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_monoidAff'] = function() { $v = function($dictMonoid) {
+\PhpursThunks::$thunks['Effect_Aff_monoidAff'] = function() { $v = function($dictMonoid_0) {
   $__num = \func_num_args();
-  $__res = (object)["mempty" => (($GLOBALS['Effect_Aff__pure'] ?? \PhpursThunks::eval('Effect_Aff__pure')))(($dictMonoid)->mempty), "Semigroup0" => function($dollar__unused_0) use (&$dictMonoid) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Effect_Aff_monoidAff"), recVars=[];
+  $__res = (object)["mempty" => (($GLOBALS['Effect_Aff__pure'] ?? \PhpursThunks::eval('Effect_Aff__pure')))(($dictMonoid_0)->mempty), "Semigroup0" => function($dollar__unused_1) use ($dictMonoid_0) {
   $__num = \func_num_args();
-  $__res = (object)["append" => ((($GLOBALS['Control_Apply_lift2'] ?? \PhpursThunks::eval('Control_Apply_lift2')))(($GLOBALS['Effect_Aff_applyAff'] ?? \PhpursThunks::eval('Effect_Aff_applyAff'))))(((($dictMonoid)->Semigroup0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->append)];
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (object)["append" => ((($GLOBALS['Control_Apply_lift2'] ?? \PhpursThunks::eval('Control_Apply_lift2')))(($GLOBALS['Effect_Aff_applyAff'] ?? \PhpursThunks::eval('Effect_Aff_applyAff'))))(((($dictMonoid_0)->Semigroup0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->append)];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -850,10 +936,11 @@ $__t0 = null;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Effect_Aff_nonCanceler'] = function() { $v = (function() use (&$__fn) {
-$__local_var_0 = (($GLOBALS['Effect_Aff__pure'] ?? \PhpursThunks::eval('Effect_Aff__pure')))(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')));
-return function($v) use (&$__local_var_0) {
+$__local_var_0_0 = (($GLOBALS['Effect_Aff__pure'] ?? \PhpursThunks::eval('Effect_Aff__pure')))(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')));
+return function($v_1) use ($__local_var_0_0) {
   $__num = \func_num_args();
-  $__res = $__local_var_0;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $__local_var_0_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -861,20 +948,23 @@ return function($v) use (&$__local_var_0) {
 })(); return $v; };
 \PhpursThunks::$thunks['Effect_Aff_monoidCanceler'] = function() { $v = (object)["mempty" => ($GLOBALS['Effect_Aff_nonCanceler'] ?? \PhpursThunks::eval('Effect_Aff_nonCanceler')), "Semigroup0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Effect_Aff_semigroupCanceler'] ?? \PhpursThunks::eval('Effect_Aff_semigroupCanceler'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_never'] = function() { $v = (((((((($GLOBALS['Data_Function_Uncurried_runFn6'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn6')))(($GLOBALS['Effect_Aff__makeAff'] ?? \PhpursThunks::eval('Effect_Aff__makeAff'))))(($GLOBALS['Effect_Aff_isLeft'] ?? \PhpursThunks::eval('Effect_Aff_isLeft'))))(($GLOBALS['Effect_Aff_unsafeFromLeft'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromLeft'))))(($GLOBALS['Effect_Aff_unsafeFromRight'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromRight'))))(($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left'))))(($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right'))))(function($v) {
+\PhpursThunks::$thunks['Effect_Aff_never'] = function() { $v = (((((((($GLOBALS['Data_Function_Uncurried_runFn6'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn6')))(($GLOBALS['Effect_Aff__makeAff'] ?? \PhpursThunks::eval('Effect_Aff__makeAff'))))(($GLOBALS['Effect_Aff_isLeft'] ?? \PhpursThunks::eval('Effect_Aff_isLeft'))))(($GLOBALS['Effect_Aff_unsafeFromLeft'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromLeft'))))(($GLOBALS['Effect_Aff_unsafeFromRight'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromRight'))))(($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left'))))(($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right'))))(function($v_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = (($GLOBALS['Effect_pureE'] ?? \PhpursThunks::eval('Effect_pureE')))(($GLOBALS['Effect_Aff_nonCanceler'] ?? \PhpursThunks::eval('Effect_Aff_nonCanceler')));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }); return $v; };
-\PhpursThunks::$thunks['Effect_Aff_apathize'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Effect_Aff__map'] ?? \PhpursThunks::eval('Effect_Aff__map')))(function($v) {
+\PhpursThunks::$thunks['Effect_Aff_apathize'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Effect_Aff__map'] ?? \PhpursThunks::eval('Effect_Aff__map')))(function($v_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'));
   goto __end;;
   __end:
@@ -882,20 +972,23 @@ return function($v) use (&$__local_var_0) {
 })))(($GLOBALS['Effect_Aff_try'] ?? \PhpursThunks::eval('Effect_Aff_try'))); return $v; };
 \PhpursThunks::$thunks['Effect_Aff_altParAff'] = function() { $v = (object)["alt" => ($GLOBALS['Effect_Aff__parAffAlt'] ?? \PhpursThunks::eval('Effect_Aff__parAffAlt')), "Functor0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Effect_Aff_functorParAff'] ?? \PhpursThunks::eval('Effect_Aff_functorParAff'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
 \PhpursThunks::$thunks['Effect_Aff_altAff'] = function() { $v = (object)["alt" => (function() {
-  $__fn = function($a1, $a2 = null) use (&$__fn) {
+  $__fn = function($a1_0, $a2_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Effect_Aff__catchError'] ?? \PhpursThunks::eval('Effect_Aff__catchError')))($a1))(function($v) use (&$a2) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Effect_Aff__catchError'] ?? \PhpursThunks::eval('Effect_Aff__catchError')))($a1_0))(function($v_2) use ($a2_1) {
   $__num = \func_num_args();
-  $__res = $a2;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $a2_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -907,6 +1000,7 @@ return function($v) use (&$__local_var_0) {
   return $__fn;
 })(), "Functor0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Effect_Aff_functorAff'] ?? \PhpursThunks::eval('Effect_Aff_functorAff'));
   goto __end;;
   __end:
@@ -914,6 +1008,7 @@ return function($v) use (&$__local_var_0) {
 }]; return $v; };
 \PhpursThunks::$thunks['Effect_Aff_plusAff'] = function() { $v = (object)["empty" => (($GLOBALS['Effect_Aff__throwError'] ?? \PhpursThunks::eval('Effect_Aff__throwError')))((($GLOBALS['Effect_Exception_error'] ?? \PhpursThunks::eval('Effect_Exception_error')))("Always fails")), "Alt0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Effect_Aff_altAff'] ?? \PhpursThunks::eval('Effect_Aff_altAff'));
   goto __end;;
   __end:
@@ -921,6 +1016,7 @@ return function($v) use (&$__local_var_0) {
 }]; return $v; };
 \PhpursThunks::$thunks['Effect_Aff_plusParAff'] = function() { $v = (object)["empty" => (($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))((($GLOBALS['Effect_Aff_plusAff'] ?? \PhpursThunks::eval('Effect_Aff_plusAff')))->empty), "Alt0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Effect_Aff_altParAff'] ?? \PhpursThunks::eval('Effect_Aff_altParAff'));
   goto __end;;
   __end:
@@ -928,12 +1024,14 @@ return function($v) use (&$__local_var_0) {
 }]; return $v; };
 \PhpursThunks::$thunks['Effect_Aff_alternativeParAff'] = function() { $v = (object)["Applicative0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Effect_Aff_applicativeParAff'] ?? \PhpursThunks::eval('Effect_Aff_applicativeParAff'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Plus1" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Effect_Aff_plusParAff'] ?? \PhpursThunks::eval('Effect_Aff_plusParAff'));
   goto __end;;
   __end:
@@ -1075,8 +1173,8 @@ $_bind = function($aff, $f = null) use (&$_bind) {
     return function() use(&$aff, &$f) { return new PhpursAffBind($aff, $f); };
 };
 $_liftEffect = function($eff) use (&$_liftEffect) { return $eff; };
-$_makeFiber = function($util, $aff = null) use (&$_makeFiber) { 
-    if (\func_num_args() < 2) {
+$_makeFiber = function($isLeft, $unsafeFromLeft, $unsafeFromRight, $Left, $Right, $aff = null) use (&$_makeFiber) { 
+    if (\func_num_args() < 6) {
         $__args = \func_get_args();
         return function(...$more) use ($__args, &$_makeFiber) {
             return $_makeFiber(...\array_merge($__args, $more));
@@ -1139,7 +1237,13 @@ $_delay = function($right, $ms) use (&$_delay) {
 $_makeSupervisedFiber = $_makeFiber;
 $_killAll = function($err, $sup, $cb) use (&$_killAll) { return function() { return function(){}; }; };
 
-$_makeAff = function($k) use (&$_makeAff) { 
+$_makeAff = function($isLeft, $unsafeFromLeft, $unsafeFromRight, $Left, $Right, $k = null) use (&$_makeAff) { 
+    if (\func_num_args() < 6) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$_makeAff) {
+            return $_makeAff(...\array_merge($__args, $more));
+        };
+    }
     return function() use(&$k) { 
         $fiber = \Fiber::getCurrent(); 
         $isDone = false;
@@ -1372,7 +1476,7 @@ $exports['_fork'] = $_fork;
 $exports['_delay'] = $_delay;
 $exports['_makeSupervisedFiber'] = $_makeSupervisedFiber;
 $exports['_killAll'] = $_killAll;
-$exports['makeAff'] = $_makeAff;
+$exports['_makeAff'] = $_makeAff;
 $exports['_throwError'] = $_throwError;
 $exports['_catchError'] = $_catchError;
 $exports['generalBracket'] = $generalBracket;

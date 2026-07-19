@@ -123,53 +123,60 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Control_Monad_RWS_Trans_RWST'] = function() { $v = function($x) {
+\PhpursThunks::$thunks['Control_Monad_RWS_Trans_RWST'] = function() { $v = function($x_0) {
   $__num = \func_num_args();
-  $__res = $x;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_RWS_Trans_RWST"), recVars=[];
+  $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Control_Monad_RWS_Trans_withRWST'] = function() { $v = (function() {
-  $__fn = function($f, $m = null, $r = null, $s = null) use (&$__fn) {
+  $__fn = function($f_0, $m_1 = null, $r_2 = null, $s_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__local_var_0 = (($f)($r))($s);
-  $__res = (($m)(($__local_var_0)->value0))(($__local_var_0)->value1);
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_RWS_Trans_withRWST"), recVars=[];
+  $__local_var_4_0 = (($f_0)($r_2))($s_3);
+  $__res = (($m_1)(($__local_var_4_0)->value0))(($__local_var_4_0)->value1);
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Control_Monad_RWS_Trans_runRWST'] = function() { $v = function($v) {
+\PhpursThunks::$thunks['Control_Monad_RWS_Trans_runRWST'] = function() { $v = function($v_0) {
   $__num = \func_num_args();
-  $__res = $v;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_RWS_Trans_runRWST"), recVars=[];
+  $__res = $v_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Control_Monad_RWS_Trans_newtypeRWST'] = function() { $v = (object)["Coercible0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
-\PhpursThunks::$thunks['Control_Monad_RWS_Trans_monadTransRWST'] = function() { $v = function($dictMonoid) {
+\PhpursThunks::$thunks['Control_Monad_RWS_Trans_monadTransRWST'] = function() { $v = function($dictMonoid_0) {
   $__num = \func_num_args();
-  $mempty_0 = ($dictMonoid)->mempty;
-  $__res = (object)["lift" => (function() use (&$mempty_0) {
-  $__fn = function($dictMonad, $m = null, $v = null, $s = null) use (&$mempty_0, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_RWS_Trans_monadTransRWST"), recVars=[];
+  $mempty_1_0 = ($dictMonoid_0)->mempty;
+  $__res = (object)["lift" => (function() use ($mempty_1_0) {
+  $__fn = function($dictMonad_2, $m_3 = null, $v_4 = null, $s_5 = null) use ($mempty_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ((((($dictMonad)->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->bind)($m))(function($a) use (&$dictMonad, &$mempty_0, &$s) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((((($dictMonad_2)->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->bind)($m_3))(function($a_6) use ($dictMonad_2, $mempty_1_0, $s_5) {
   $__num = \func_num_args();
-  $__res = (((($dictMonad)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->pure)(new Phpurs_Data3("RWSResult", $s, $a, $mempty_0));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (((($dictMonad_2)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->pure)(new Phpurs_Data3("RWSResult", $s_5, $a_6, $mempty_1_0));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -185,12 +192,13 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Control_Monad_RWS_Trans_mapRWST'] = function() { $v = (function() {
-  $__fn = function($f, $v = null, $r = null, $s = null) use (&$__fn) {
+  $__fn = function($f_0, $v_1 = null, $r_2 = null, $s_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ($f)((($v)($r))($s));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_RWS_Trans_mapRWST"), recVars=[];
+  $__res = ($f_0)((($v_1)($r_2))($s_3));
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -198,33 +206,37 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Control_Monad_RWS_Trans_lazyRWST'] = function() { $v = (object)["defer" => (function() {
-  $__fn = function($f, $r = null, $s = null) use (&$__fn) {
+  $__fn = function($f_0, $r_1 = null, $s_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($f)(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'))))($r))($s);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($f_0)(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'))))($r_1))($s_2);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
 })()]; return $v; };
-\PhpursThunks::$thunks['Control_Monad_RWS_Trans_functorRWST'] = function() { $v = function($dictFunctor) {
+\PhpursThunks::$thunks['Control_Monad_RWS_Trans_functorRWST'] = function() { $v = function($dictFunctor_0) {
   $__num = \func_num_args();
-  $__res = (object)["map" => (function() use (&$dictFunctor) {
-  $__fn = function($f, $v = null, $r = null, $s = null) use (&$dictFunctor, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_RWS_Trans_functorRWST"), recVars=[];
+  $__res = (object)["map" => (function() use ($dictFunctor_0) {
+  $__fn = function($f_1, $v_2 = null, $r_3 = null, $s_4 = null) use ($dictFunctor_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ((($dictFunctor)->map)(function($v1) use (&$f) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($dictFunctor_0)->map)(function($v1_5) use ($f_1) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data3("RWSResult", ($v1)->value0, ($f)(($v1)->value1), ($v1)->value2);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = new Phpurs_Data3("RWSResult", ($v1_5)->value0, ($f_1)(($v1_5)->value1), ($v1_5)->value2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))((($v)($r))($s));
+}))((($v_2)($r_3))($s_4));
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -236,14 +248,16 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Control_Monad_RWS_Trans_execRWST'] = function() { $v = (function() {
-  $__fn = function($dictMonad, $v = null, $r = null, $s = null) use (&$__fn) {
+  $__fn = function($dictMonad_0, $v_1 = null, $r_2 = null, $s_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ((((($dictMonad)->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->bind)((($v)($r))($s)))(function($v1) use (&$dictMonad) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_RWS_Trans_execRWST"), recVars=[];
+  $__res = ((((($dictMonad_0)->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->bind)((($v_1)($r_2))($s_3)))(function($v1_4) use ($dictMonad_0) {
   $__num = \func_num_args();
-  $__res = (((($dictMonad)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->pure)(new Phpurs_Data2("Tuple", ($v1)->value0, ($v1)->value2));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (((($dictMonad_0)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->pure)(new Phpurs_Data2("Tuple", ($v1_4)->value0, ($v1_4)->value2));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -255,14 +269,16 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Control_Monad_RWS_Trans_evalRWST'] = function() { $v = (function() {
-  $__fn = function($dictMonad, $v = null, $r = null, $s = null) use (&$__fn) {
+  $__fn = function($dictMonad_0, $v_1 = null, $r_2 = null, $s_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ((((($dictMonad)->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->bind)((($v)($r))($s)))(function($v1) use (&$dictMonad) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_RWS_Trans_evalRWST"), recVars=[];
+  $__res = ((((($dictMonad_0)->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->bind)((($v_1)($r_2))($s_3)))(function($v1_4) use ($dictMonad_0) {
   $__num = \func_num_args();
-  $__res = (((($dictMonad)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->pure)(new Phpurs_Data2("Tuple", ($v1)->value1, ($v1)->value2));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (((($dictMonad_0)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->pure)(new Phpurs_Data2("Tuple", ($v1_4)->value1, ($v1_4)->value2));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -273,46 +289,53 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Control_Monad_RWS_Trans_applyRWST'] = function() { $v = function($dictBind) {
+\PhpursThunks::$thunks['Control_Monad_RWS_Trans_applyRWST'] = function() { $v = function($dictBind_0) {
   $__num = \func_num_args();
-  $Functor0_0 = (((($dictBind)->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $functorRWST1_1 = (object)["map" => (function() use (&$Functor0_0) {
-  $__fn = function($f, $v = null, $r = null, $s = null) use (&$Functor0_0, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_RWS_Trans_applyRWST"), recVars=[];
+  $Functor0_1_0 = (((($dictBind_0)->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $functorRWST1_2_1 = (object)["map" => (function() use ($Functor0_1_0) {
+  $__fn = function($f_2, $v_3 = null, $r_4 = null, $s_5 = null) use ($Functor0_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ((($Functor0_0)->map)(function($v1) use (&$f) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($Functor0_1_0)->map)(function($v1_6) use ($f_2) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data3("RWSResult", ($v1)->value0, ($f)(($v1)->value1), ($v1)->value2);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = new Phpurs_Data3("RWSResult", ($v1_6)->value0, ($f_2)(($v1_6)->value1), ($v1_6)->value2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))((($v)($r))($s));
+}))((($v_3)($r_4))($s_5));
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
 })()];
-  $__res = function($dictMonoid) use (&$Functor0_0, &$dictBind, &$functorRWST1_1) {
+  $__res = function($dictMonoid_3) use ($Functor0_1_0, $dictBind_0, $functorRWST1_2_1) {
   $__num = \func_num_args();
-  $__res = (object)["apply" => (function() use (&$Functor0_0, &$dictBind, &$dictMonoid) {
-  $__fn = function($v, $v1 = null, $r = null, $s = null) use (&$Functor0_0, &$dictBind, &$dictMonoid, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (object)["apply" => (function() use ($Functor0_1_0, $dictBind_0, $dictMonoid_3) {
+  $__fn = function($v_4, $v1_5 = null, $r_6 = null, $s_7 = null) use ($Functor0_1_0, $dictBind_0, $dictMonoid_3, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ((($dictBind)->bind)((($v)($r))($s)))(function($v2) use (&$Functor0_0, &$dictMonoid, &$r, &$v1) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($dictBind_0)->bind)((($v_4)($r_6))($s_7)))(function($v2_8) use ($Functor0_1_0, $dictMonoid_3, $r_6, $v1_5) {
   $__num = \func_num_args();
-  $__local_var_2 = ($v2)->value2;
-  $__res = ((($Functor0_0)->map)(function($v3) use (&$__local_var_2, &$dictMonoid, &$v2) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__local_var_9_2 = ($v2_8)->value2;
+  $__res = ((($Functor0_1_0)->map)(function($v3_10) use ($__local_var_9_2, $dictMonoid_3, $v2_8) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data3("RWSResult", ($v3)->value0, (($v2)->value1)(($v3)->value1), ((((($dictMonoid)->Semigroup0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->append)($__local_var_2))(($v3)->value2));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = new Phpurs_Data3("RWSResult", ($v3_10)->value0, (($v2_8)->value1)(($v3_10)->value1), ((((($dictMonoid_3)->Semigroup0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->append)($__local_var_9_2))(($v3_10)->value2));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))((($v1)($r))(($v2)->value0));
+}))((($v1_5)($r_6))(($v2_8)->value0));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -322,9 +345,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_0) use (&$functorRWST1_1) {
+})(), "Functor0" => function($dollar__unused_4) use ($functorRWST1_2_1) {
   $__num = \func_num_args();
-  $__res = $functorRWST1_1;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $functorRWST1_2_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -337,29 +361,34 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Monad_RWS_Trans_bindRWST'] = function() { $v = function($dictBind) {
+\PhpursThunks::$thunks['Control_Monad_RWS_Trans_bindRWST'] = function() { $v = function($dictBind_0) {
   $__num = \func_num_args();
-  $__local_var_0 = (((($dictBind)->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $applyRWST1_1 = (($GLOBALS['Control_Monad_RWS_Trans_applyRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_applyRWST')))($dictBind);
-  $__res = function($dictMonoid) use (&$__local_var_0, &$applyRWST1_1, &$dictBind) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_RWS_Trans_bindRWST"), recVars=[];
+  $__local_var_1_0 = (((($dictBind_0)->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $applyRWST1_2_1 = (($GLOBALS['Control_Monad_RWS_Trans_applyRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_applyRWST')))($dictBind_0);
+  $__res = function($dictMonoid_3) use ($__local_var_1_0, $applyRWST1_2_1, $dictBind_0) {
   $__num = \func_num_args();
-  $applyRWST2_2 = ($applyRWST1_1)($dictMonoid);
-  $__res = (object)["bind" => (function() use (&$__local_var_0, &$dictBind, &$dictMonoid) {
-  $__fn = function($v, $f = null, $r = null, $s = null) use (&$__local_var_0, &$dictBind, &$dictMonoid, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $applyRWST2_4_2 = ($applyRWST1_2_1)($dictMonoid_3);
+  $__res = (object)["bind" => (function() use ($__local_var_1_0, $dictBind_0, $dictMonoid_3) {
+  $__fn = function($v_5, $f_6 = null, $r_7 = null, $s_8 = null) use ($__local_var_1_0, $dictBind_0, $dictMonoid_3, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ((($dictBind)->bind)((($v)($r))($s)))(function($v1) use (&$__local_var_0, &$dictMonoid, &$f, &$r) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($dictBind_0)->bind)((($v_5)($r_7))($s_8)))(function($v1_9) use ($__local_var_1_0, $dictMonoid_3, $f_6, $r_7) {
   $__num = \func_num_args();
-  $__local_var_3 = ($v1)->value2;
-  $__res = ((($__local_var_0)->map)(function($v3) use (&$__local_var_3, &$dictMonoid) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__local_var_10_3 = ($v1_9)->value2;
+  $__res = ((($__local_var_1_0)->map)(function($v3_11) use ($__local_var_10_3, $dictMonoid_3) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data3("RWSResult", ($v3)->value0, ($v3)->value1, ((((($dictMonoid)->Semigroup0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->append)($__local_var_3))(($v3)->value2));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = new Phpurs_Data3("RWSResult", ($v3_11)->value0, ($v3_11)->value1, ((((($dictMonoid_3)->Semigroup0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->append)($__local_var_10_3))(($v3_11)->value2));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(((($f)(($v1)->value1))($r))(($v1)->value0));
+}))(((($f_6)(($v1_9)->value1))($r_7))(($v1_9)->value0));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -369,9 +398,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})(), "Apply0" => function($dollar__unused_0) use (&$applyRWST2_2) {
+})(), "Apply0" => function($dollar__unused_5) use ($applyRWST2_4_2) {
   $__num = \func_num_args();
-  $__res = $applyRWST2_2;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $applyRWST2_4_2;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -384,15 +414,18 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Monad_RWS_Trans_semigroupRWST'] = function() { $v = function($dictBind) {
+\PhpursThunks::$thunks['Control_Monad_RWS_Trans_semigroupRWST'] = function() { $v = function($dictBind_0) {
   $__num = \func_num_args();
-  $applyRWST1_0 = (($GLOBALS['Control_Monad_RWS_Trans_applyRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_applyRWST')))($dictBind);
-  $__res = function($dictMonoid) use (&$applyRWST1_0) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_RWS_Trans_semigroupRWST"), recVars=[];
+  $applyRWST1_1_0 = (($GLOBALS['Control_Monad_RWS_Trans_applyRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_applyRWST')))($dictBind_0);
+  $__res = function($dictMonoid_2) use ($applyRWST1_1_0) {
   $__num = \func_num_args();
-  $lift2_1 = (($GLOBALS['Control_Apply_lift2'] ?? \PhpursThunks::eval('Control_Apply_lift2')))(($applyRWST1_0)($dictMonoid));
-  $__res = function($dictSemigroup) use (&$lift2_1) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $lift2_3_1 = (($GLOBALS['Control_Apply_lift2'] ?? \PhpursThunks::eval('Control_Apply_lift2')))(($applyRWST1_1_0)($dictMonoid_2));
+  $__res = function($dictSemigroup_4) use ($lift2_3_1) {
   $__num = \func_num_args();
-  $__res = (object)["append" => ($lift2_1)(($dictSemigroup)->append)];
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (object)["append" => ($lift2_3_1)(($dictSemigroup_4)->append)];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -405,28 +438,32 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Monad_RWS_Trans_applicativeRWST'] = function() { $v = function($dictMonad) {
+\PhpursThunks::$thunks['Control_Monad_RWS_Trans_applicativeRWST'] = function() { $v = function($dictMonad_0) {
   $__num = \func_num_args();
-  $applyRWST1_0 = (($GLOBALS['Control_Monad_RWS_Trans_applyRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_applyRWST')))((($dictMonad)->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = function($dictMonoid) use (&$applyRWST1_0, &$dictMonad) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_RWS_Trans_applicativeRWST"), recVars=[];
+  $applyRWST1_1_0 = (($GLOBALS['Control_Monad_RWS_Trans_applyRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_applyRWST')))((($dictMonad_0)->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__res = function($dictMonoid_2) use ($applyRWST1_1_0, $dictMonad_0) {
   $__num = \func_num_args();
-  $mempty_1 = ($dictMonoid)->mempty;
-  $applyRWST2_2 = ($applyRWST1_0)($dictMonoid);
-  $__res = (object)["pure" => (function() use (&$dictMonad, &$mempty_1) {
-  $__fn = function($a, $v = null, $s = null) use (&$dictMonad, &$mempty_1, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $mempty_3_1 = ($dictMonoid_2)->mempty;
+  $applyRWST2_4_2 = ($applyRWST1_1_0)($dictMonoid_2);
+  $__res = (object)["pure" => (function() use ($dictMonad_0, $mempty_3_1) {
+  $__fn = function($a_5, $v_6 = null, $s_7 = null) use ($dictMonad_0, $mempty_3_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (((($dictMonad)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->pure)(new Phpurs_Data3("RWSResult", $s, $a, $mempty_1));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (((($dictMonad_0)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->pure)(new Phpurs_Data3("RWSResult", $s_7, $a_5, $mempty_3_1));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(), "Apply0" => function($dollar__unused_0) use (&$applyRWST2_2) {
+})(), "Apply0" => function($dollar__unused_5) use ($applyRWST2_4_2) {
   $__num = \func_num_args();
-  $__res = $applyRWST2_2;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $applyRWST2_4_2;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -439,23 +476,27 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Monad_RWS_Trans_monadRWST'] = function() { $v = function($dictMonad) {
+\PhpursThunks::$thunks['Control_Monad_RWS_Trans_monadRWST'] = function() { $v = function($dictMonad_0) {
   $__num = \func_num_args();
-  $applicativeRWST1_0 = (($GLOBALS['Control_Monad_RWS_Trans_applicativeRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_applicativeRWST')))($dictMonad);
-  $bindRWST1_1 = (($GLOBALS['Control_Monad_RWS_Trans_bindRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_bindRWST')))((($dictMonad)->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = function($dictMonoid) use (&$applicativeRWST1_0, &$bindRWST1_1) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_RWS_Trans_monadRWST"), recVars=[];
+  $applicativeRWST1_1_0 = (($GLOBALS['Control_Monad_RWS_Trans_applicativeRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_applicativeRWST')))($dictMonad_0);
+  $bindRWST1_2_1 = (($GLOBALS['Control_Monad_RWS_Trans_bindRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_bindRWST')))((($dictMonad_0)->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__res = function($dictMonoid_3) use ($applicativeRWST1_1_0, $bindRWST1_2_1) {
   $__num = \func_num_args();
-  $applicativeRWST2_2 = ($applicativeRWST1_0)($dictMonoid);
-  $bindRWST2_3 = ($bindRWST1_1)($dictMonoid);
-  $__res = (object)["Applicative0" => function($dollar__unused_0) use (&$applicativeRWST2_2) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $applicativeRWST2_4_2 = ($applicativeRWST1_1_0)($dictMonoid_3);
+  $bindRWST2_5_3 = ($bindRWST1_2_1)($dictMonoid_3);
+  $__res = (object)["Applicative0" => function($dollar__unused_6) use ($applicativeRWST2_4_2) {
   $__num = \func_num_args();
-  $__res = $applicativeRWST2_2;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $applicativeRWST2_4_2;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Bind1" => function($dollar__unused_0) use (&$bindRWST2_3) {
+}, "Bind1" => function($dollar__unused_6) use ($bindRWST2_5_3) {
   $__num = \func_num_args();
-  $__res = $bindRWST2_3;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $bindRWST2_5_3;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -468,28 +509,32 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Monad_RWS_Trans_monadAskRWST'] = function() { $v = function($dictMonad) {
+\PhpursThunks::$thunks['Control_Monad_RWS_Trans_monadAskRWST'] = function() { $v = function($dictMonad_0) {
   $__num = \func_num_args();
-  $monadRWST1_0 = (($GLOBALS['Control_Monad_RWS_Trans_monadRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_monadRWST')))($dictMonad);
-  $__res = function($dictMonoid) use (&$dictMonad, &$monadRWST1_0) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_RWS_Trans_monadAskRWST"), recVars=[];
+  $monadRWST1_1_0 = (($GLOBALS['Control_Monad_RWS_Trans_monadRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_monadRWST')))($dictMonad_0);
+  $__res = function($dictMonoid_2) use ($dictMonad_0, $monadRWST1_1_0) {
   $__num = \func_num_args();
-  $mempty_1 = ($dictMonoid)->mempty;
-  $monadRWST2_2 = ($monadRWST1_0)($dictMonoid);
-  $__res = (object)["ask" => (function() use (&$dictMonad, &$mempty_1) {
-  $__fn = function($r, $s = null) use (&$dictMonad, &$mempty_1, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $mempty_3_1 = ($dictMonoid_2)->mempty;
+  $monadRWST2_4_2 = ($monadRWST1_1_0)($dictMonoid_2);
+  $__res = (object)["ask" => (function() use ($dictMonad_0, $mempty_3_1) {
+  $__fn = function($r_5, $s_6 = null) use ($dictMonad_0, $mempty_3_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($dictMonad)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->pure)(new Phpurs_Data3("RWSResult", $s, $r, $mempty_1));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (((($dictMonad_0)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->pure)(new Phpurs_Data3("RWSResult", $s_6, $r_5, $mempty_3_1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Monad0" => function($dollar__unused_0) use (&$monadRWST2_2) {
+})(), "Monad0" => function($dollar__unused_5) use ($monadRWST2_4_2) {
   $__num = \func_num_args();
-  $__res = $monadRWST2_2;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $monadRWST2_4_2;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -502,27 +547,31 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Monad_RWS_Trans_monadReaderRWST'] = function() { $v = function($dictMonad) {
+\PhpursThunks::$thunks['Control_Monad_RWS_Trans_monadReaderRWST'] = function() { $v = function($dictMonad_0) {
   $__num = \func_num_args();
-  $monadAskRWST1_0 = (($GLOBALS['Control_Monad_RWS_Trans_monadAskRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_monadAskRWST')))($dictMonad);
-  $__res = function($dictMonoid) use (&$monadAskRWST1_0) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_RWS_Trans_monadReaderRWST"), recVars=[];
+  $monadAskRWST1_1_0 = (($GLOBALS['Control_Monad_RWS_Trans_monadAskRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_monadAskRWST')))($dictMonad_0);
+  $__res = function($dictMonoid_2) use ($monadAskRWST1_1_0) {
   $__num = \func_num_args();
-  $monadAskRWST2_1 = ($monadAskRWST1_0)($dictMonoid);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $monadAskRWST2_3_1 = ($monadAskRWST1_1_0)($dictMonoid_2);
   $__res = (object)["local" => (function() {
-  $__fn = function($f, $m = null, $r = null, $s = null) use (&$__fn) {
+  $__fn = function($f_4, $m_5 = null, $r_6 = null, $s_7 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = (($m)(($f)($r)))($s);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($m_5)(($f_4)($r_6)))($s_7);
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})(), "MonadAsk0" => function($dollar__unused_0) use (&$monadAskRWST2_1) {
+})(), "MonadAsk0" => function($dollar__unused_4) use ($monadAskRWST2_3_1) {
   $__num = \func_num_args();
-  $__res = $monadAskRWST2_1;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $monadAskRWST2_3_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -536,16 +585,18 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Control_Monad_RWS_Trans_monadEffectRWS'] = function() { $v = (function() {
-  $__fn = function($dictMonoid, $dictMonadEffect = null) use (&$__fn) {
+  $__fn = function($dictMonoid_0, $dictMonadEffect_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $Monad0_0 = (($dictMonadEffect)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $monadRWST1_1 = ((($GLOBALS['Control_Monad_RWS_Trans_monadRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_monadRWST')))($Monad0_0))($dictMonoid);
-  $__res = (object)["liftEffect" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((((($GLOBALS['Control_Monad_RWS_Trans_monadTransRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_monadTransRWST')))($dictMonoid))->lift)($Monad0_0)))(($dictMonadEffect)->liftEffect), "Monad0" => function($dollar__unused_0) use (&$monadRWST1_1) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_RWS_Trans_monadEffectRWS"), recVars=[];
+  $Monad0_2_0 = (($dictMonadEffect_1)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $monadRWST1_3_1 = ((($GLOBALS['Control_Monad_RWS_Trans_monadRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_monadRWST')))($Monad0_2_0))($dictMonoid_0);
+  $__res = (object)["liftEffect" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((((($GLOBALS['Control_Monad_RWS_Trans_monadTransRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_monadTransRWST')))($dictMonoid_0))->lift)($Monad0_2_0)))(($dictMonadEffect_1)->liftEffect), "Monad0" => function($dollar__unused_4) use ($monadRWST1_3_1) {
   $__num = \func_num_args();
-  $__res = $monadRWST1_1;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $monadRWST1_3_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -556,37 +607,42 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Control_Monad_RWS_Trans_monadRecRWST'] = function() { $v = function($dictMonadRec) {
+\PhpursThunks::$thunks['Control_Monad_RWS_Trans_monadRecRWST'] = function() { $v = function($dictMonadRec_0) {
   $__num = \func_num_args();
-  $Monad0_0 = (($dictMonadRec)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $monadRWST1_1 = (($GLOBALS['Control_Monad_RWS_Trans_monadRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_monadRWST')))($Monad0_0);
-  $__res = function($dictMonoid) use (&$Monad0_0, &$dictMonadRec, &$monadRWST1_1) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_RWS_Trans_monadRecRWST"), recVars=[];
+  $Monad0_1_0 = (($dictMonadRec_0)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $monadRWST1_2_1 = (($GLOBALS['Control_Monad_RWS_Trans_monadRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_monadRWST')))($Monad0_1_0);
+  $__res = function($dictMonoid_3) use ($Monad0_1_0, $dictMonadRec_0, $monadRWST1_2_1) {
   $__num = \func_num_args();
-  $__local_var_2 = (($dictMonoid)->Semigroup0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $mempty_3 = ($dictMonoid)->mempty;
-  $monadRWST2_4 = ($monadRWST1_1)($dictMonoid);
-  $__res = (object)["tailRecM" => (function() use (&$Monad0_0, &$__local_var_2, &$dictMonadRec, &$mempty_3) {
-  $__fn = function($k, $a = null, $r = null, $s = null) use (&$Monad0_0, &$__local_var_2, &$dictMonadRec, &$mempty_3, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__local_var_4_2 = (($dictMonoid_3)->Semigroup0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $mempty_5_3 = ($dictMonoid_3)->mempty;
+  $monadRWST2_6_4 = ($monadRWST1_2_1)($dictMonoid_3);
+  $__res = (object)["tailRecM" => (function() use ($Monad0_1_0, $__local_var_4_2, $dictMonadRec_0, $mempty_5_3) {
+  $__fn = function($k_7, $a_8 = null, $r_9 = null, $s_10 = null) use ($Monad0_1_0, $__local_var_4_2, $dictMonadRec_0, $mempty_5_3, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ((($dictMonadRec)->tailRecM)(function($v) use (&$Monad0_0, &$__local_var_2, &$k, &$r) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($dictMonadRec_0)->tailRecM)(function($v_11) use ($Monad0_1_0, $__local_var_4_2, $k_7, $r_9) {
   $__num = \func_num_args();
-  $__local_var_5 = ($v)->value2;
-  $__res = ((((($Monad0_0)->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->bind)(((($k)(($v)->value1))($r))(($v)->value0)))(function($v2) use (&$Monad0_0, &$__local_var_2, &$__local_var_5) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__local_var_12_5 = ($v_11)->value2;
+  $__res = ((((($Monad0_1_0)->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->bind)(((($k_7)(($v_11)->value1))($r_9))(($v_11)->value0)))(function($v2_13) use ($Monad0_1_0, $__local_var_12_5, $__local_var_4_2) {
   $__num = \func_num_args();
-  if ((is_object(($v2)->value1) && ((($v2)->value1)->tag === "Loop"))) {
-$__t6 = new Phpurs_Data1("Loop", new Phpurs_Data3("RWSResult", ($v2)->value0, (($v2)->value1)->value0, ((($__local_var_2)->append)($__local_var_5))(($v2)->value2)));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  if ((is_object(($v2_13)->value1) && ((($v2_13)->value1)->tag === "Loop"))) {
+$__t6 = new Phpurs_Data1("Loop", new Phpurs_Data3("RWSResult", ($v2_13)->value0, (($v2_13)->value1)->value0, ((($__local_var_4_2)->append)($__local_var_12_5))(($v2_13)->value2)));
 } else {
-if ((is_object(($v2)->value1) && ((($v2)->value1)->tag === "Done"))) {
-$__t6 = new Phpurs_Data1("Done", new Phpurs_Data3("RWSResult", ($v2)->value0, (($v2)->value1)->value0, ((($__local_var_2)->append)($__local_var_5))(($v2)->value2)));
+if ((is_object(($v2_13)->value1) && ((($v2_13)->value1)->tag === "Done"))) {
+$__t6 = new Phpurs_Data1("Done", new Phpurs_Data3("RWSResult", ($v2_13)->value0, (($v2_13)->value1)->value0, ((($__local_var_4_2)->append)($__local_var_12_5))(($v2_13)->value2)));
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t6 = null;
 };
 };
-  $__res = (((($Monad0_0)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->pure)($__t6);
+  $__res = (((($Monad0_1_0)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->pure)($__t6);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -594,15 +650,16 @@ $__t6 = null;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(new Phpurs_Data3("RWSResult", $s, $a, $mempty_3));
+}))(new Phpurs_Data3("RWSResult", $s_10, $a_8, $mempty_5_3));
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})(), "Monad0" => function($dollar__unused_0) use (&$monadRWST2_4) {
+})(), "Monad0" => function($dollar__unused_7) use ($monadRWST2_6_4) {
   $__num = \func_num_args();
-  $__res = $monadRWST2_4;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $monadRWST2_6_4;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -615,29 +672,33 @@ $__t6 = null;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Monad_RWS_Trans_monadStateRWST'] = function() { $v = function($dictMonad) {
+\PhpursThunks::$thunks['Control_Monad_RWS_Trans_monadStateRWST'] = function() { $v = function($dictMonad_0) {
   $__num = \func_num_args();
-  $monadRWST1_0 = (($GLOBALS['Control_Monad_RWS_Trans_monadRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_monadRWST')))($dictMonad);
-  $__res = function($dictMonoid) use (&$dictMonad, &$monadRWST1_0) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_RWS_Trans_monadStateRWST"), recVars=[];
+  $monadRWST1_1_0 = (($GLOBALS['Control_Monad_RWS_Trans_monadRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_monadRWST')))($dictMonad_0);
+  $__res = function($dictMonoid_2) use ($dictMonad_0, $monadRWST1_1_0) {
   $__num = \func_num_args();
-  $mempty_1 = ($dictMonoid)->mempty;
-  $monadRWST2_2 = ($monadRWST1_0)($dictMonoid);
-  $__res = (object)["state" => (function() use (&$dictMonad, &$mempty_1) {
-  $__fn = function($f, $v = null, $s = null) use (&$dictMonad, &$mempty_1, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $mempty_3_1 = ($dictMonoid_2)->mempty;
+  $monadRWST2_4_2 = ($monadRWST1_1_0)($dictMonoid_2);
+  $__res = (object)["state" => (function() use ($dictMonad_0, $mempty_3_1) {
+  $__fn = function($f_5, $v_6 = null, $s_7 = null) use ($dictMonad_0, $mempty_3_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $v1_3 = ($f)($s);
-  $__res = (((($dictMonad)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->pure)(new Phpurs_Data3("RWSResult", ($v1_3)->value1, ($v1_3)->value0, $mempty_1));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $v1_8_3 = ($f_5)($s_7);
+  $__res = (((($dictMonad_0)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->pure)(new Phpurs_Data3("RWSResult", ($v1_8_3)->value1, ($v1_8_3)->value0, $mempty_3_1));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(), "Monad0" => function($dollar__unused_0) use (&$monadRWST2_2) {
+})(), "Monad0" => function($dollar__unused_5) use ($monadRWST2_4_2) {
   $__num = \func_num_args();
-  $__res = $monadRWST2_2;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $monadRWST2_4_2;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -650,34 +711,39 @@ $__t6 = null;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Monad_RWS_Trans_monadTellRWST'] = function() { $v = function($dictMonad) {
+\PhpursThunks::$thunks['Control_Monad_RWS_Trans_monadTellRWST'] = function() { $v = function($dictMonad_0) {
   $__num = \func_num_args();
-  $monadRWST1_0 = (($GLOBALS['Control_Monad_RWS_Trans_monadRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_monadRWST')))($dictMonad);
-  $__res = function($dictMonoid) use (&$dictMonad, &$monadRWST1_0) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_RWS_Trans_monadTellRWST"), recVars=[];
+  $monadRWST1_1_0 = (($GLOBALS['Control_Monad_RWS_Trans_monadRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_monadRWST')))($dictMonad_0);
+  $__res = function($dictMonoid_2) use ($dictMonad_0, $monadRWST1_1_0) {
   $__num = \func_num_args();
-  $Semigroup0_1 = (($dictMonoid)->Semigroup0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $monadRWST2_2 = ($monadRWST1_0)($dictMonoid);
-  $__res = (object)["tell" => (function() use (&$dictMonad) {
-  $__fn = function($w, $v = null, $s = null) use (&$dictMonad, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $Semigroup0_3_1 = (($dictMonoid_2)->Semigroup0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $monadRWST2_4_2 = ($monadRWST1_1_0)($dictMonoid_2);
+  $__res = (object)["tell" => (function() use ($dictMonad_0) {
+  $__fn = function($w_5, $v_6 = null, $s_7 = null) use ($dictMonad_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (((($dictMonad)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->pure)(new Phpurs_Data3("RWSResult", $s, ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')), $w));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (((($dictMonad_0)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->pure)(new Phpurs_Data3("RWSResult", $s_7, ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')), $w_5));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(), "Semigroup0" => function($dollar__unused_0) use (&$Semigroup0_1) {
+})(), "Semigroup0" => function($dollar__unused_5) use ($Semigroup0_3_1) {
   $__num = \func_num_args();
-  $__res = $Semigroup0_1;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $Semigroup0_3_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Monad1" => function($dollar__unused_0) use (&$monadRWST2_2) {
+}, "Monad1" => function($dollar__unused_5) use ($monadRWST2_4_2) {
   $__num = \func_num_args();
-  $__res = $monadRWST2_2;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $monadRWST2_4_2;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -690,23 +756,27 @@ $__t6 = null;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Monad_RWS_Trans_monadWriterRWST'] = function() { $v = function($dictMonad) {
+\PhpursThunks::$thunks['Control_Monad_RWS_Trans_monadWriterRWST'] = function() { $v = function($dictMonad_0) {
   $__num = \func_num_args();
-  $__local_var_0 = (($dictMonad)->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $__local_var_1 = (($dictMonad)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $monadTellRWST1_2 = (($GLOBALS['Control_Monad_RWS_Trans_monadTellRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_monadTellRWST')))($dictMonad);
-  $__res = function($dictMonoid) use (&$__local_var_0, &$__local_var_1, &$monadTellRWST1_2) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_RWS_Trans_monadWriterRWST"), recVars=[];
+  $__local_var_1_0 = (($dictMonad_0)->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_2_1 = (($dictMonad_0)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $monadTellRWST1_3_2 = (($GLOBALS['Control_Monad_RWS_Trans_monadTellRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_monadTellRWST')))($dictMonad_0);
+  $__res = function($dictMonoid_4) use ($__local_var_1_0, $__local_var_2_1, $monadTellRWST1_3_2) {
   $__num = \func_num_args();
-  $monadTellRWST2_3 = ($monadTellRWST1_2)($dictMonoid);
-  $__res = (object)["listen" => (function() use (&$__local_var_0, &$__local_var_1) {
-  $__fn = function($m, $r = null, $s = null) use (&$__local_var_0, &$__local_var_1, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $monadTellRWST2_5_3 = ($monadTellRWST1_3_2)($dictMonoid_4);
+  $__res = (object)["listen" => (function() use ($__local_var_1_0, $__local_var_2_1) {
+  $__fn = function($m_6, $r_7 = null, $s_8 = null) use ($__local_var_1_0, $__local_var_2_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($__local_var_0)->bind)((($m)($r))($s)))(function($v) use (&$__local_var_1) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($__local_var_1_0)->bind)((($m_6)($r_7))($s_8)))(function($v_9) use ($__local_var_2_1) {
   $__num = \func_num_args();
-  $__res = (($__local_var_1)->pure)(new Phpurs_Data3("RWSResult", ($v)->value0, new Phpurs_Data2("Tuple", ($v)->value1, ($v)->value2), ($v)->value2));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($__local_var_2_1)->pure)(new Phpurs_Data3("RWSResult", ($v_9)->value0, new Phpurs_Data2("Tuple", ($v_9)->value1, ($v_9)->value2), ($v_9)->value2));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -716,15 +786,17 @@ $__t6 = null;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(), "pass" => (function() use (&$__local_var_0, &$__local_var_1) {
-  $__fn = function($m, $r = null, $s = null) use (&$__local_var_0, &$__local_var_1, &$__fn) {
+})(), "pass" => (function() use ($__local_var_1_0, $__local_var_2_1) {
+  $__fn = function($m_6, $r_7 = null, $s_8 = null) use ($__local_var_1_0, $__local_var_2_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($__local_var_0)->bind)((($m)($r))($s)))(function($v) use (&$__local_var_1) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($__local_var_1_0)->bind)((($m_6)($r_7))($s_8)))(function($v_9) use ($__local_var_2_1) {
   $__num = \func_num_args();
-  $__res = (($__local_var_1)->pure)(new Phpurs_Data3("RWSResult", ($v)->value0, (($v)->value1)->value0, ((($v)->value1)->value1)(($v)->value2)));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($__local_var_2_1)->pure)(new Phpurs_Data3("RWSResult", ($v_9)->value0, (($v_9)->value1)->value0, ((($v_9)->value1)->value1)(($v_9)->value2)));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -734,44 +806,17 @@ $__t6 = null;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(), "Monoid0" => function($dollar__unused_0) use (&$dictMonoid) {
+})(), "Monoid0" => function($dollar__unused_6) use ($dictMonoid_4) {
   $__num = \func_num_args();
-  $__res = $dictMonoid;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $dictMonoid_4;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "MonadTell1" => function($dollar__unused_0) use (&$monadTellRWST2_3) {
+}, "MonadTell1" => function($dollar__unused_6) use ($monadTellRWST2_5_3) {
   $__num = \func_num_args();
-  $__res = $monadTellRWST2_3;
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}];
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_RWS_Trans_monadThrowRWST'] = function() { $v = function($dictMonadThrow) {
-  $__num = \func_num_args();
-  $Monad0_0 = (($dictMonadThrow)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $monadRWST1_1 = (($GLOBALS['Control_Monad_RWS_Trans_monadRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_monadRWST')))($Monad0_0);
-  $__res = function($dictMonoid) use (&$Monad0_0, &$dictMonadThrow, &$monadRWST1_1) {
-  $__num = \func_num_args();
-  $lift_2 = (((($GLOBALS['Control_Monad_RWS_Trans_monadTransRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_monadTransRWST')))($dictMonoid))->lift)($Monad0_0);
-  $monadRWST2_3 = ($monadRWST1_1)($dictMonoid);
-  $__res = (object)["throwError" => function($e) use (&$dictMonadThrow, &$lift_2) {
-  $__num = \func_num_args();
-  $__res = ($lift_2)((($dictMonadThrow)->throwError)($e));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Monad0" => function($dollar__unused_0) use (&$monadRWST2_3) {
-  $__num = \func_num_args();
-  $__res = $monadRWST2_3;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $monadTellRWST2_5_3;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -784,21 +829,58 @@ $__t6 = null;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Monad_RWS_Trans_monadErrorRWST'] = function() { $v = function($dictMonadError) {
+\PhpursThunks::$thunks['Control_Monad_RWS_Trans_monadThrowRWST'] = function() { $v = function($dictMonadThrow_0) {
   $__num = \func_num_args();
-  $monadThrowRWST1_0 = (($GLOBALS['Control_Monad_RWS_Trans_monadThrowRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_monadThrowRWST')))((($dictMonadError)->MonadThrow0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = function($dictMonoid) use (&$dictMonadError, &$monadThrowRWST1_0) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_RWS_Trans_monadThrowRWST"), recVars=[];
+  $Monad0_1_0 = (($dictMonadThrow_0)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $monadRWST1_2_1 = (($GLOBALS['Control_Monad_RWS_Trans_monadRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_monadRWST')))($Monad0_1_0);
+  $__res = function($dictMonoid_3) use ($Monad0_1_0, $dictMonadThrow_0, $monadRWST1_2_1) {
   $__num = \func_num_args();
-  $monadThrowRWST2_1 = ($monadThrowRWST1_0)($dictMonoid);
-  $__res = (object)["catchError" => (function() use (&$dictMonadError) {
-  $__fn = function($m, $h = null, $r = null, $s = null) use (&$dictMonadError, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $lift_4_2 = (((($GLOBALS['Control_Monad_RWS_Trans_monadTransRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_monadTransRWST')))($dictMonoid_3))->lift)($Monad0_1_0);
+  $monadRWST2_5_3 = ($monadRWST1_2_1)($dictMonoid_3);
+  $__res = (object)["throwError" => function($e_6) use ($dictMonadThrow_0, $lift_4_2) {
+  $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ($lift_4_2)((($dictMonadThrow_0)->throwError)($e_6));
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Monad0" => function($dollar__unused_6) use ($monadRWST2_5_3) {
+  $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $monadRWST2_5_3;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}; return $v; };
+\PhpursThunks::$thunks['Control_Monad_RWS_Trans_monadErrorRWST'] = function() { $v = function($dictMonadError_0) {
+  $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_RWS_Trans_monadErrorRWST"), recVars=[];
+  $monadThrowRWST1_1_0 = (($GLOBALS['Control_Monad_RWS_Trans_monadThrowRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_monadThrowRWST')))((($dictMonadError_0)->MonadThrow0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__res = function($dictMonoid_2) use ($dictMonadError_0, $monadThrowRWST1_1_0) {
+  $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $monadThrowRWST2_3_1 = ($monadThrowRWST1_1_0)($dictMonoid_2);
+  $__res = (object)["catchError" => (function() use ($dictMonadError_0) {
+  $__fn = function($m_4, $h_5 = null, $r_6 = null, $s_7 = null) use ($dictMonadError_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ((($dictMonadError)->catchError)((($m)($r))($s)))(function($e) use (&$h, &$r, &$s) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($dictMonadError_0)->catchError)((($m_4)($r_6))($s_7)))(function($e_8) use ($h_5, $r_6, $s_7) {
   $__num = \func_num_args();
-  $__res = ((($h)($e))($r))($s);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($h_5)($e_8))($r_6))($s_7);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -808,9 +890,10 @@ $__t6 = null;
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})(), "MonadThrow0" => function($dollar__unused_0) use (&$monadThrowRWST2_1) {
+})(), "MonadThrow0" => function($dollar__unused_4) use ($monadThrowRWST2_3_1) {
   $__num = \func_num_args();
-  $__res = $monadThrowRWST2_1;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $monadThrowRWST2_3_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -824,16 +907,18 @@ $__t6 = null;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Control_Monad_RWS_Trans_monadSTRWST'] = function() { $v = (function() {
-  $__fn = function($dictMonoid, $dictMonadST = null) use (&$__fn) {
+  $__fn = function($dictMonoid_0, $dictMonadST_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $Monad0_0 = (($dictMonadST)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $monadRWST1_1 = ((($GLOBALS['Control_Monad_RWS_Trans_monadRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_monadRWST')))($Monad0_0))($dictMonoid);
-  $__res = (object)["liftST" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((((($GLOBALS['Control_Monad_RWS_Trans_monadTransRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_monadTransRWST')))($dictMonoid))->lift)($Monad0_0)))(($dictMonadST)->liftST), "Monad0" => function($dollar__unused_0) use (&$monadRWST1_1) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_RWS_Trans_monadSTRWST"), recVars=[];
+  $Monad0_2_0 = (($dictMonadST_1)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $monadRWST1_3_1 = ((($GLOBALS['Control_Monad_RWS_Trans_monadRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_monadRWST')))($Monad0_2_0))($dictMonoid_0);
+  $__res = (object)["liftST" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((((($GLOBALS['Control_Monad_RWS_Trans_monadTransRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_monadTransRWST')))($dictMonoid_0))->lift)($Monad0_2_0)))(($dictMonadST_1)->liftST), "Monad0" => function($dollar__unused_4) use ($monadRWST1_3_1) {
   $__num = \func_num_args();
-  $__res = $monadRWST1_1;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $monadRWST1_3_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -844,19 +929,23 @@ $__t6 = null;
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Control_Monad_RWS_Trans_monoidRWST'] = function() { $v = function($dictMonad) {
+\PhpursThunks::$thunks['Control_Monad_RWS_Trans_monoidRWST'] = function() { $v = function($dictMonad_0) {
   $__num = \func_num_args();
-  $applicativeRWST1_0 = (($GLOBALS['Control_Monad_RWS_Trans_applicativeRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_applicativeRWST')))($dictMonad);
-  $semigroupRWST1_1 = (($GLOBALS['Control_Monad_RWS_Trans_semigroupRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_semigroupRWST')))((($dictMonad)->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = function($dictMonoid) use (&$applicativeRWST1_0, &$semigroupRWST1_1) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_RWS_Trans_monoidRWST"), recVars=[];
+  $applicativeRWST1_1_0 = (($GLOBALS['Control_Monad_RWS_Trans_applicativeRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_applicativeRWST')))($dictMonad_0);
+  $semigroupRWST1_2_1 = (($GLOBALS['Control_Monad_RWS_Trans_semigroupRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_semigroupRWST')))((($dictMonad_0)->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__res = function($dictMonoid_3) use ($applicativeRWST1_1_0, $semigroupRWST1_2_1) {
   $__num = \func_num_args();
-  $semigroupRWST2_2 = ($semigroupRWST1_1)($dictMonoid);
-  $__res = function($dictMonoid1) use (&$applicativeRWST1_0, &$dictMonoid, &$semigroupRWST2_2) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $semigroupRWST2_4_2 = ($semigroupRWST1_2_1)($dictMonoid_3);
+  $__res = function($dictMonoid1_5) use ($applicativeRWST1_1_0, $dictMonoid_3, $semigroupRWST2_4_2) {
   $__num = \func_num_args();
-  $semigroupRWST3_3 = ($semigroupRWST2_2)((($dictMonoid1)->Semigroup0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = (object)["mempty" => ((($applicativeRWST1_0)($dictMonoid))->pure)(($dictMonoid1)->mempty), "Semigroup0" => function($dollar__unused_0) use (&$semigroupRWST3_3) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $semigroupRWST3_6_3 = ($semigroupRWST2_4_2)((($dictMonoid1_5)->Semigroup0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__res = (object)["mempty" => ((($applicativeRWST1_1_0)($dictMonoid_3))->pure)(($dictMonoid1_5)->mempty), "Semigroup0" => function($dollar__unused_7) use ($semigroupRWST3_6_3) {
   $__num = \func_num_args();
-  $__res = $semigroupRWST3_3;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $semigroupRWST3_6_3;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -873,43 +962,48 @@ $__t6 = null;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Monad_RWS_Trans_altRWST'] = function() { $v = function($dictAlt) {
+\PhpursThunks::$thunks['Control_Monad_RWS_Trans_altRWST'] = function() { $v = function($dictAlt_0) {
   $__num = \func_num_args();
-  $__local_var_0 = (($dictAlt)->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $functorRWST1_1 = (object)["map" => (function() use (&$__local_var_0) {
-  $__fn = function($f, $v = null, $r = null, $s = null) use (&$__local_var_0, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_RWS_Trans_altRWST"), recVars=[];
+  $__local_var_1_0 = (($dictAlt_0)->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $functorRWST1_2_1 = (object)["map" => (function() use ($__local_var_1_0) {
+  $__fn = function($f_2, $v_3 = null, $r_4 = null, $s_5 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ((($__local_var_0)->map)(function($v1) use (&$f) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($__local_var_1_0)->map)(function($v1_6) use ($f_2) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data3("RWSResult", ($v1)->value0, ($f)(($v1)->value1), ($v1)->value2);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = new Phpurs_Data3("RWSResult", ($v1_6)->value0, ($f_2)(($v1_6)->value1), ($v1_6)->value2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))((($v)($r))($s));
+}))((($v_3)($r_4))($s_5));
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
 })()];
-  $__res = (object)["alt" => (function() use (&$dictAlt) {
-  $__fn = function($v, $v1 = null, $r = null, $s = null) use (&$dictAlt, &$__fn) {
+  $__res = (object)["alt" => (function() use ($dictAlt_0) {
+  $__fn = function($v_3, $v1_4 = null, $r_5 = null, $s_6 = null) use ($dictAlt_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ((($dictAlt)->alt)((($v)($r))($s)))((($v1)($r))($s));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($dictAlt_0)->alt)((($v_3)($r_5))($s_6)))((($v1_4)($r_5))($s_6));
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_0) use (&$functorRWST1_1) {
+})(), "Functor0" => function($dollar__unused_3) use ($functorRWST1_2_1) {
   $__num = \func_num_args();
-  $__res = $functorRWST1_1;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $functorRWST1_2_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -918,25 +1012,28 @@ $__t6 = null;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Monad_RWS_Trans_plusRWST'] = function() { $v = function($dictPlus) {
+\PhpursThunks::$thunks['Control_Monad_RWS_Trans_plusRWST'] = function() { $v = function($dictPlus_0) {
   $__num = \func_num_args();
-  $empty_0 = ($dictPlus)->empty;
-  $altRWST1_1 = (($GLOBALS['Control_Monad_RWS_Trans_altRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_altRWST')))((($dictPlus)->Alt0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = (object)["empty" => (function() use (&$empty_0) {
-  $__fn = function($v, $v1 = null) use (&$empty_0, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_RWS_Trans_plusRWST"), recVars=[];
+  $empty_1_0 = ($dictPlus_0)->empty;
+  $altRWST1_2_1 = (($GLOBALS['Control_Monad_RWS_Trans_altRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_altRWST')))((($dictPlus_0)->Alt0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__res = (object)["empty" => (function() use ($empty_1_0) {
+  $__fn = function($v_3, $v1_4 = null) use ($empty_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = $empty_0;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $empty_1_0;
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Alt0" => function($dollar__unused_0) use (&$altRWST1_1) {
+})(), "Alt0" => function($dollar__unused_3) use ($altRWST1_2_1) {
   $__num = \func_num_args();
-  $__res = $altRWST1_1;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $altRWST1_2_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -946,24 +1043,28 @@ $__t6 = null;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Control_Monad_RWS_Trans_alternativeRWST'] = function() { $v = (function() {
-  $__fn = function($dictMonoid, $dictAlternative = null) use (&$__fn) {
+  $__fn = function($dictMonoid_0, $dictAlternative_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $plusRWST1_0 = (($GLOBALS['Control_Monad_RWS_Trans_plusRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_plusRWST')))((($dictAlternative)->Plus1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = function($dictMonad) use (&$dictMonoid, &$plusRWST1_0) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_RWS_Trans_alternativeRWST"), recVars=[];
+  $plusRWST1_2_0 = (($GLOBALS['Control_Monad_RWS_Trans_plusRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_plusRWST')))((($dictAlternative_1)->Plus1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__res = function($dictMonad_3) use ($dictMonoid_0, $plusRWST1_2_0) {
   $__num = \func_num_args();
-  $applicativeRWST1_1 = ((($GLOBALS['Control_Monad_RWS_Trans_applicativeRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_applicativeRWST')))($dictMonad))($dictMonoid);
-  $__res = (object)["Applicative0" => function($dollar__unused_0) use (&$applicativeRWST1_1) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $applicativeRWST1_4_1 = ((($GLOBALS['Control_Monad_RWS_Trans_applicativeRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_applicativeRWST')))($dictMonad_3))($dictMonoid_0);
+  $__res = (object)["Applicative0" => function($dollar__unused_5) use ($applicativeRWST1_4_1) {
   $__num = \func_num_args();
-  $__res = $applicativeRWST1_1;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $applicativeRWST1_4_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Plus1" => function($dollar__unused_0) use (&$plusRWST1_0) {
+}, "Plus1" => function($dollar__unused_5) use ($plusRWST1_2_0) {
   $__num = \func_num_args();
-  $__res = $plusRWST1_0;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $plusRWST1_2_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

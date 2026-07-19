@@ -89,9 +89,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_String_Common_null'] = function() { $v = function($s) {
+\PhpursThunks::$thunks['Data_String_Common_null'] = function() { $v = function($s_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Eq_eqStringImpl'] ?? \PhpursThunks::eval('Data_Eq_eqStringImpl')))($s))("");
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_String_Common_null"), recVars=[];
+  $__res = ((($GLOBALS['Data_Eq_eqStringImpl'] ?? \PhpursThunks::eval('Data_Eq_eqStringImpl')))($s_0))("");
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

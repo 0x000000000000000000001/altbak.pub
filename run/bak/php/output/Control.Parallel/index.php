@@ -93,19 +93,23 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Control_Parallel_parTraverse_'] = function() { $v = function($dictParallel) {
+\PhpursThunks::$thunks['Control_Parallel_parTraverse_'] = function() { $v = function($dictParallel_0) {
   $__num = \func_num_args();
-  $sequential_0 = ($dictParallel)->sequential;
-  $parallel_1 = ($dictParallel)->parallel;
-  $__res = function($dictApplicative) use (&$parallel_1, &$sequential_0) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Parallel_parTraverse_"), recVars=[];
+  $sequential_1_0 = ($dictParallel_0)->sequential;
+  $parallel_2_1 = ($dictParallel_0)->parallel;
+  $__res = function($dictApplicative_3) use ($parallel_2_1, $sequential_1_0) {
   $__num = \func_num_args();
-  $traverse__2 = (($GLOBALS['Data_Foldable_traverse_'] ?? \PhpursThunks::eval('Data_Foldable_traverse_')))($dictApplicative);
-  $__res = function($dictFoldable) use (&$parallel_1, &$sequential_0, &$traverse__2) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $traverse__4_2 = (($GLOBALS['Data_Foldable_traverse_'] ?? \PhpursThunks::eval('Data_Foldable_traverse_')))($dictApplicative_3);
+  $__res = function($dictFoldable_5) use ($parallel_2_1, $sequential_1_0, $traverse__4_2) {
   $__num = \func_num_args();
-  $traverse_1_3 = ($traverse__2)($dictFoldable);
-  $__res = function($f) use (&$parallel_1, &$sequential_0, &$traverse_1_3) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $traverse_1_6_3 = ($traverse__4_2)($dictFoldable_5);
+  $__res = function($f_7) use ($parallel_2_1, $sequential_1_0, $traverse_1_6_3) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($sequential_0))(($traverse_1_3)(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($parallel_1))($f)));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($sequential_1_0))(($traverse_1_6_3)(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($parallel_2_1))($f_7)));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -122,20 +126,23 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Parallel_parTraverse'] = function() { $v = function($dictParallel) {
+\PhpursThunks::$thunks['Control_Parallel_parTraverse'] = function() { $v = function($dictParallel_0) {
   $__num = \func_num_args();
-  $sequential_0 = ($dictParallel)->sequential;
-  $parallel_1 = ($dictParallel)->parallel;
-  $__res = (function() use (&$parallel_1, &$sequential_0) {
-  $__fn = function($dictApplicative, $dictTraversable = null) use (&$parallel_1, &$sequential_0, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Parallel_parTraverse"), recVars=[];
+  $sequential_1_0 = ($dictParallel_0)->sequential;
+  $parallel_2_1 = ($dictParallel_0)->parallel;
+  $__res = (function() use ($parallel_2_1, $sequential_1_0) {
+  $__fn = function($dictApplicative_3, $dictTraversable_4 = null) use ($parallel_2_1, $sequential_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $traverse_2 = (($dictTraversable)->traverse)($dictApplicative);
-  $__res = function($f) use (&$parallel_1, &$sequential_0, &$traverse_2) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $traverse_5_2 = (($dictTraversable_4)->traverse)($dictApplicative_3);
+  $__res = function($f_6) use ($parallel_2_1, $sequential_1_0, $traverse_5_2) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($sequential_0))(($traverse_2)(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($parallel_1))($f)));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($sequential_1_0))(($traverse_5_2)(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($parallel_2_1))($f_6)));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -150,15 +157,18 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Parallel_parSequence_'] = function() { $v = function($dictParallel) {
+\PhpursThunks::$thunks['Control_Parallel_parSequence_'] = function() { $v = function($dictParallel_0) {
   $__num = \func_num_args();
-  $parTraverse_1_0 = (($GLOBALS['Control_Parallel_parTraverse_'] ?? \PhpursThunks::eval('Control_Parallel_parTraverse_')))($dictParallel);
-  $__res = function($dictApplicative) use (&$parTraverse_1_0) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Parallel_parSequence_"), recVars=[];
+  $parTraverse_1_1_0 = (($GLOBALS['Control_Parallel_parTraverse_'] ?? \PhpursThunks::eval('Control_Parallel_parTraverse_')))($dictParallel_0);
+  $__res = function($dictApplicative_2) use ($parTraverse_1_1_0) {
   $__num = \func_num_args();
-  $parTraverse_2_1 = ($parTraverse_1_0)($dictApplicative);
-  $__res = function($dictFoldable) use (&$parTraverse_2_1) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $parTraverse_2_3_1 = ($parTraverse_1_1_0)($dictApplicative_2);
+  $__res = function($dictFoldable_4) use ($parTraverse_2_3_1) {
   $__num = \func_num_args();
-  $__res = (($parTraverse_2_1)($dictFoldable))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->identity);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($parTraverse_2_3_1)($dictFoldable_4))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->identity);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -171,15 +181,18 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Parallel_parSequence'] = function() { $v = function($dictParallel) {
+\PhpursThunks::$thunks['Control_Parallel_parSequence'] = function() { $v = function($dictParallel_0) {
   $__num = \func_num_args();
-  $parTraverse1_0 = (($GLOBALS['Control_Parallel_parTraverse'] ?? \PhpursThunks::eval('Control_Parallel_parTraverse')))($dictParallel);
-  $__res = function($dictApplicative) use (&$parTraverse1_0) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Parallel_parSequence"), recVars=[];
+  $parTraverse1_1_0 = (($GLOBALS['Control_Parallel_parTraverse'] ?? \PhpursThunks::eval('Control_Parallel_parTraverse')))($dictParallel_0);
+  $__res = function($dictApplicative_2) use ($parTraverse1_1_0) {
   $__num = \func_num_args();
-  $parTraverse2_1 = ($parTraverse1_0)($dictApplicative);
-  $__res = function($dictTraversable) use (&$parTraverse2_1) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $parTraverse2_3_1 = ($parTraverse1_1_0)($dictApplicative_2);
+  $__res = function($dictTraversable_4) use ($parTraverse2_3_1) {
   $__num = \func_num_args();
-  $__res = (($parTraverse2_1)($dictTraversable))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->identity);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($parTraverse2_3_1)($dictTraversable_4))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->identity);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -192,23 +205,27 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Parallel_parOneOfMap'] = function() { $v = function($dictParallel) {
+\PhpursThunks::$thunks['Control_Parallel_parOneOfMap'] = function() { $v = function($dictParallel_0) {
   $__num = \func_num_args();
-  $sequential_0 = ($dictParallel)->sequential;
-  $parallel_1 = ($dictParallel)->parallel;
-  $__res = function($dictAlternative) use (&$parallel_1, &$sequential_0) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Parallel_parOneOfMap"), recVars=[];
+  $sequential_1_0 = ($dictParallel_0)->sequential;
+  $parallel_2_1 = ($dictParallel_0)->parallel;
+  $__res = function($dictAlternative_3) use ($parallel_2_1, $sequential_1_0) {
   $__num = \func_num_args();
-  $Plus1_2 = (($dictAlternative)->Plus1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $__res = function($dictFoldable) use (&$Plus1_2, &$parallel_1, &$sequential_0) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $Plus1_4_2 = (($dictAlternative_3)->Plus1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__res = function($dictFoldable_5) use ($Plus1_4_2, $parallel_2_1, $sequential_1_0) {
   $__num = \func_num_args();
-  $oneOfMap_3 = ((($GLOBALS['Data_Foldable_oneOfMap'] ?? \PhpursThunks::eval('Data_Foldable_oneOfMap')))($dictFoldable))($Plus1_2);
-  $__res = (function() use (&$oneOfMap_3, &$parallel_1, &$sequential_0) {
-  $__fn = function($dictFunctor, $f = null) use (&$oneOfMap_3, &$parallel_1, &$sequential_0, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $oneOfMap_6_3 = ((($GLOBALS['Data_Foldable_oneOfMap'] ?? \PhpursThunks::eval('Data_Foldable_oneOfMap')))($dictFoldable_5))($Plus1_4_2);
+  $__res = (function() use ($oneOfMap_6_3, $parallel_2_1, $sequential_1_0) {
+  $__fn = function($dictFunctor_7, $f_8 = null) use ($oneOfMap_6_3, $parallel_2_1, $sequential_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($sequential_0))(($oneOfMap_3)(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($parallel_1))($f)));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($sequential_1_0))(($oneOfMap_6_3)(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($parallel_2_1))($f_8)));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -227,19 +244,23 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Parallel_parOneOf'] = function() { $v = function($dictParallel) {
+\PhpursThunks::$thunks['Control_Parallel_parOneOf'] = function() { $v = function($dictParallel_0) {
   $__num = \func_num_args();
-  $sequential_0 = ($dictParallel)->sequential;
-  $parallel_1 = ($dictParallel)->parallel;
-  $__res = function($dictAlternative) use (&$parallel_1, &$sequential_0) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Parallel_parOneOf"), recVars=[];
+  $sequential_1_0 = ($dictParallel_0)->sequential;
+  $parallel_2_1 = ($dictParallel_0)->parallel;
+  $__res = function($dictAlternative_3) use ($parallel_2_1, $sequential_1_0) {
   $__num = \func_num_args();
-  $Plus1_2 = (($dictAlternative)->Plus1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $__res = function($dictFoldable) use (&$Plus1_2, &$parallel_1, &$sequential_0) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $Plus1_4_2 = (($dictAlternative_3)->Plus1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__res = function($dictFoldable_5) use ($Plus1_4_2, $parallel_2_1, $sequential_1_0) {
   $__num = \func_num_args();
-  $oneOfMap_3 = ((($GLOBALS['Data_Foldable_oneOfMap'] ?? \PhpursThunks::eval('Data_Foldable_oneOfMap')))($dictFoldable))($Plus1_2);
-  $__res = function($dictFunctor) use (&$oneOfMap_3, &$parallel_1, &$sequential_0) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $oneOfMap_6_3 = ((($GLOBALS['Data_Foldable_oneOfMap'] ?? \PhpursThunks::eval('Data_Foldable_oneOfMap')))($dictFoldable_5))($Plus1_4_2);
+  $__res = function($dictFunctor_7) use ($oneOfMap_6_3, $parallel_2_1, $sequential_1_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($sequential_0))(($oneOfMap_3)($parallel_1));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($sequential_1_0))(($oneOfMap_6_3)($parallel_2_1));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -257,12 +278,13 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Control_Parallel_parApply'] = function() { $v = (function() {
-  $__fn = function($dictParallel, $mf = null, $ma = null) use (&$__fn) {
+  $__fn = function($dictParallel_0, $mf_1 = null, $ma_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($dictParallel)->sequential)(((((($dictParallel)->Apply1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->apply)((($dictParallel)->parallel)($mf)))((($dictParallel)->parallel)($ma)));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Parallel_parApply"), recVars=[];
+  $__res = (($dictParallel_0)->sequential)(((((($dictParallel_0)->Apply1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->apply)((($dictParallel_0)->parallel)($mf_1)))((($dictParallel_0)->parallel)($ma_2)));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;

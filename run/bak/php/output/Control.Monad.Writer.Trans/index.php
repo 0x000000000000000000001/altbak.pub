@@ -111,39 +111,45 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Control_Monad_Writer_Trans_WriterT'] = function() { $v = function($x) {
+\PhpursThunks::$thunks['Control_Monad_Writer_Trans_WriterT'] = function() { $v = function($x_0) {
   $__num = \func_num_args();
-  $__res = $x;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_Writer_Trans_WriterT"), recVars=[];
+  $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Writer_Trans_runWriterT'] = function() { $v = function($v) {
+\PhpursThunks::$thunks['Control_Monad_Writer_Trans_runWriterT'] = function() { $v = function($v_0) {
   $__num = \func_num_args();
-  $__res = $v;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_Writer_Trans_runWriterT"), recVars=[];
+  $__res = $v_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Control_Monad_Writer_Trans_newtypeWriterT'] = function() { $v = (object)["Coercible0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Writer_Trans_monadTransWriterT'] = function() { $v = function($dictMonoid) {
+\PhpursThunks::$thunks['Control_Monad_Writer_Trans_monadTransWriterT'] = function() { $v = function($dictMonoid_0) {
   $__num = \func_num_args();
-  $mempty_0 = ($dictMonoid)->mempty;
-  $__res = (object)["lift" => (function() use (&$mempty_0) {
-  $__fn = function($dictMonad, $m = null) use (&$mempty_0, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_Writer_Trans_monadTransWriterT"), recVars=[];
+  $mempty_1_0 = ($dictMonoid_0)->mempty;
+  $__res = (object)["lift" => (function() use ($mempty_1_0) {
+  $__fn = function($dictMonad_2, $m_3 = null) use ($mempty_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((($dictMonad)->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->bind)($m))(function($a) use (&$dictMonad, &$mempty_0) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((((($dictMonad_2)->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->bind)($m_3))(function($a_4) use ($dictMonad_2, $mempty_1_0) {
   $__num = \func_num_args();
-  $__res = (((($dictMonad)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->pure)(new Phpurs_Data2("Tuple", $a, $mempty_0));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (((($dictMonad_2)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->pure)(new Phpurs_Data2("Tuple", $a_4, $mempty_1_0));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -159,25 +165,29 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Control_Monad_Writer_Trans_mapWriterT'] = function() { $v = (function() {
-  $__fn = function($f, $v = null) use (&$__fn) {
+  $__fn = function($f_0, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($f)($v);
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_Writer_Trans_mapWriterT"), recVars=[];
+  $__res = ($f_0)($v_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Control_Monad_Writer_Trans_functorWriterT'] = function() { $v = function($dictFunctor) {
+\PhpursThunks::$thunks['Control_Monad_Writer_Trans_functorWriterT'] = function() { $v = function($dictFunctor_0) {
   $__num = \func_num_args();
-  $__res = (object)["map" => function($f) use (&$dictFunctor) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_Writer_Trans_functorWriterT"), recVars=[];
+  $__res = (object)["map" => function($f_1) use ($dictFunctor_0) {
   $__num = \func_num_args();
-  $__res = (($dictFunctor)->map)(function($v) use (&$f) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($dictFunctor_0)->map)(function($v_2) use ($f_1) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Tuple", ($f)(($v)->value0), ($v)->value1);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = new Phpurs_Data2("Tuple", ($f_1)(($v_2)->value0), ($v_2)->value1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -191,12 +201,13 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Control_Monad_Writer_Trans_execWriterT'] = function() { $v = (function() {
-  $__fn = function($dictFunctor, $v = null) use (&$__fn) {
+  $__fn = function($dictFunctor_0, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictFunctor)->map)(($GLOBALS['Data_Tuple_snd'] ?? \PhpursThunks::eval('Data_Tuple_snd'))))($v);
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_Writer_Trans_execWriterT"), recVars=[];
+  $__res = ((($dictFunctor_0)->map)(($GLOBALS['Data_Tuple_snd'] ?? \PhpursThunks::eval('Data_Tuple_snd'))))($v_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -204,17 +215,20 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Control_Monad_Writer_Trans_applyWriterT'] = function() { $v = (function() {
-  $__fn = function($dictSemigroup, $dictApply = null) use (&$__fn) {
+  $__fn = function($dictSemigroup_0, $dictApply_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $Functor0_0 = (($dictApply)->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $functorWriterT1_1 = (object)["map" => function($f) use (&$Functor0_0) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_Writer_Trans_applyWriterT"), recVars=[];
+  $Functor0_2_0 = (($dictApply_1)->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $functorWriterT1_3_1 = (object)["map" => function($f_3) use ($Functor0_2_0) {
   $__num = \func_num_args();
-  $__res = (($Functor0_0)->map)(function($v) use (&$f) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($Functor0_2_0)->map)(function($v_4) use ($f_3) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Tuple", ($f)(($v)->value0), ($v)->value1);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = new Phpurs_Data2("Tuple", ($f_3)(($v_4)->value0), ($v_4)->value1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -223,33 +237,36 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = (object)["apply" => (function() use (&$Functor0_0, &$dictApply, &$dictSemigroup) {
-  $__fn = function($v, $v1 = null) use (&$Functor0_0, &$dictApply, &$dictSemigroup, &$__fn) {
+  $__res = (object)["apply" => (function() use ($Functor0_2_0, $dictApply_1, $dictSemigroup_0) {
+  $__fn = function($v_4, $v1_5 = null) use ($Functor0_2_0, $dictApply_1, $dictSemigroup_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictApply)->apply)(((($Functor0_0)->map)((function() use (&$dictSemigroup) {
-  $__fn = function($v3, $v4 = null) use (&$dictSemigroup, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($dictApply_1)->apply)(((($Functor0_2_0)->map)((function() use ($dictSemigroup_0) {
+  $__fn = function($v3_6, $v4_7 = null) use ($dictSemigroup_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", (($v3)->value0)(($v4)->value0), ((($dictSemigroup)->append)(($v3)->value1))(($v4)->value1));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = new Phpurs_Data2("Tuple", (($v3_6)->value0)(($v4_7)->value0), ((($dictSemigroup_0)->append)(($v3_6)->value1))(($v4_7)->value1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))($v)))($v1);
+})()))($v_4)))($v1_5);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_0) use (&$functorWriterT1_1) {
+})(), "Functor0" => function($dollar__unused_4) use ($functorWriterT1_3_1) {
   $__num = \func_num_args();
-  $__res = $functorWriterT1_1;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $functorWriterT1_3_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -261,29 +278,33 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Control_Monad_Writer_Trans_bindWriterT'] = function() { $v = (function() {
-  $__fn = function($dictSemigroup, $dictBind = null) use (&$__fn) {
+  $__fn = function($dictSemigroup_0, $dictBind_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $Apply0_0 = (($dictBind)->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $applyWriterT2_1 = ((($GLOBALS['Control_Monad_Writer_Trans_applyWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_applyWriterT')))($dictSemigroup))($Apply0_0);
-  $__res = (object)["bind" => (function() use (&$Apply0_0, &$dictBind, &$dictSemigroup) {
-  $__fn = function($v, $k = null) use (&$Apply0_0, &$dictBind, &$dictSemigroup, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_Writer_Trans_bindWriterT"), recVars=[];
+  $Apply0_2_0 = (($dictBind_1)->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $applyWriterT2_3_1 = ((($GLOBALS['Control_Monad_Writer_Trans_applyWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_applyWriterT')))($dictSemigroup_0))($Apply0_2_0);
+  $__res = (object)["bind" => (function() use ($Apply0_2_0, $dictBind_1, $dictSemigroup_0) {
+  $__fn = function($v_4, $k_5 = null) use ($Apply0_2_0, $dictBind_1, $dictSemigroup_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictBind)->bind)($v))(function($v1) use (&$Apply0_0, &$dictSemigroup, &$k) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($dictBind_1)->bind)($v_4))(function($v1_6) use ($Apply0_2_0, $dictSemigroup_0, $k_5) {
   $__num = \func_num_args();
-  $__local_var_2 = ($v1)->value1;
-  $__res = ((((($Apply0_0)->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->map)(function($v3) use (&$__local_var_2, &$dictSemigroup) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__local_var_7_2 = ($v1_6)->value1;
+  $__res = ((((($Apply0_2_0)->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->map)(function($v3_8) use ($__local_var_7_2, $dictSemigroup_0) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Tuple", ($v3)->value0, ((($dictSemigroup)->append)($__local_var_2))(($v3)->value1));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = new Phpurs_Data2("Tuple", ($v3_8)->value0, ((($dictSemigroup_0)->append)($__local_var_7_2))(($v3_8)->value1));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(($k)(($v1)->value0));
+}))(($k_5)(($v1_6)->value0));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -293,9 +314,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Apply0" => function($dollar__unused_0) use (&$applyWriterT2_1) {
+})(), "Apply0" => function($dollar__unused_4) use ($applyWriterT2_3_1) {
   $__num = \func_num_args();
-  $__res = $applyWriterT2_1;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $applyWriterT2_3_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -307,15 +329,17 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Control_Monad_Writer_Trans_semigroupWriterT'] = function() { $v = (function() {
-  $__fn = function($dictApply, $dictSemigroup = null) use (&$__fn) {
+  $__fn = function($dictApply_0, $dictSemigroup_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $lift2_0 = (($GLOBALS['Control_Apply_lift2'] ?? \PhpursThunks::eval('Control_Apply_lift2')))(((($GLOBALS['Control_Monad_Writer_Trans_applyWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_applyWriterT')))($dictSemigroup))($dictApply));
-  $__res = function($dictSemigroup1) use (&$lift2_0) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_Writer_Trans_semigroupWriterT"), recVars=[];
+  $lift2_2_0 = (($GLOBALS['Control_Apply_lift2'] ?? \PhpursThunks::eval('Control_Apply_lift2')))(((($GLOBALS['Control_Monad_Writer_Trans_applyWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_applyWriterT')))($dictSemigroup_1))($dictApply_0));
+  $__res = function($dictSemigroup1_3) use ($lift2_2_0) {
   $__num = \func_num_args();
-  $__res = (object)["append" => ($lift2_0)(($dictSemigroup1)->append)];
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (object)["append" => ($lift2_2_0)(($dictSemigroup1_3)->append)];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -326,51 +350,26 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Control_Monad_Writer_Trans_applicativeWriterT'] = function() { $v = function($dictMonoid) {
+\PhpursThunks::$thunks['Control_Monad_Writer_Trans_applicativeWriterT'] = function() { $v = function($dictMonoid_0) {
   $__num = \func_num_args();
-  $mempty_0 = ($dictMonoid)->mempty;
-  $applyWriterT1_1 = (($GLOBALS['Control_Monad_Writer_Trans_applyWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_applyWriterT')))((($dictMonoid)->Semigroup0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = function($dictApplicative) use (&$applyWriterT1_1, &$mempty_0) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_Writer_Trans_applicativeWriterT"), recVars=[];
+  $mempty_1_0 = ($dictMonoid_0)->mempty;
+  $applyWriterT1_2_1 = (($GLOBALS['Control_Monad_Writer_Trans_applyWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_applyWriterT')))((($dictMonoid_0)->Semigroup0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__res = function($dictApplicative_3) use ($applyWriterT1_2_1, $mempty_1_0) {
   $__num = \func_num_args();
-  $applyWriterT2_2 = ($applyWriterT1_1)((($dictApplicative)->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = (object)["pure" => function($a) use (&$dictApplicative, &$mempty_0) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $applyWriterT2_4_2 = ($applyWriterT1_2_1)((($dictApplicative_3)->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__res = (object)["pure" => function($a_5) use ($dictApplicative_3, $mempty_1_0) {
   $__num = \func_num_args();
-  $__res = (($dictApplicative)->pure)(new Phpurs_Data2("Tuple", $a, $mempty_0));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($dictApplicative_3)->pure)(new Phpurs_Data2("Tuple", $a_5, $mempty_1_0));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Apply0" => function($dollar__unused_0) use (&$applyWriterT2_2) {
+}, "Apply0" => function($dollar__unused_5) use ($applyWriterT2_4_2) {
   $__num = \func_num_args();
-  $__res = $applyWriterT2_2;
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}];
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Writer_Trans_monadWriterT'] = function() { $v = function($dictMonoid) {
-  $__num = \func_num_args();
-  $applicativeWriterT1_0 = (($GLOBALS['Control_Monad_Writer_Trans_applicativeWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_applicativeWriterT')))($dictMonoid);
-  $bindWriterT1_1 = (($GLOBALS['Control_Monad_Writer_Trans_bindWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_bindWriterT')))((($dictMonoid)->Semigroup0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = function($dictMonad) use (&$applicativeWriterT1_0, &$bindWriterT1_1) {
-  $__num = \func_num_args();
-  $applicativeWriterT2_2 = ($applicativeWriterT1_0)((($dictMonad)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $bindWriterT2_3 = ($bindWriterT1_1)((($dictMonad)->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = (object)["Applicative0" => function($dollar__unused_0) use (&$applicativeWriterT2_2) {
-  $__num = \func_num_args();
-  $__res = $applicativeWriterT2_2;
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Bind1" => function($dollar__unused_0) use (&$bindWriterT2_3) {
-  $__num = \func_num_args();
-  $__res = $bindWriterT2_3;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $applyWriterT2_4_2;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -383,16 +382,27 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Writer_Trans_monadAskWriterT'] = function() { $v = function($dictMonoid) {
+\PhpursThunks::$thunks['Control_Monad_Writer_Trans_monadWriterT'] = function() { $v = function($dictMonoid_0) {
   $__num = \func_num_args();
-  $monadWriterT1_0 = (($GLOBALS['Control_Monad_Writer_Trans_monadWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_monadWriterT')))($dictMonoid);
-  $__res = function($dictMonadAsk) use (&$dictMonoid, &$monadWriterT1_0) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_Writer_Trans_monadWriterT"), recVars=[];
+  $applicativeWriterT1_1_0 = (($GLOBALS['Control_Monad_Writer_Trans_applicativeWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_applicativeWriterT')))($dictMonoid_0);
+  $bindWriterT1_2_1 = (($GLOBALS['Control_Monad_Writer_Trans_bindWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_bindWriterT')))((($dictMonoid_0)->Semigroup0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__res = function($dictMonad_3) use ($applicativeWriterT1_1_0, $bindWriterT1_2_1) {
   $__num = \func_num_args();
-  $Monad0_1 = (($dictMonadAsk)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $monadWriterT2_2 = ($monadWriterT1_0)($Monad0_1);
-  $__res = (object)["ask" => ((((($GLOBALS['Control_Monad_Writer_Trans_monadTransWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_monadTransWriterT')))($dictMonoid))->lift)($Monad0_1))(($dictMonadAsk)->ask), "Monad0" => function($dollar__unused_0) use (&$monadWriterT2_2) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $applicativeWriterT2_4_2 = ($applicativeWriterT1_1_0)((($dictMonad_3)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $bindWriterT2_5_3 = ($bindWriterT1_2_1)((($dictMonad_3)->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__res = (object)["Applicative0" => function($dollar__unused_6) use ($applicativeWriterT2_4_2) {
   $__num = \func_num_args();
-  $__res = $monadWriterT2_2;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $applicativeWriterT2_4_2;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Bind1" => function($dollar__unused_6) use ($bindWriterT2_5_3) {
+  $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $bindWriterT2_5_3;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -405,21 +415,19 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Writer_Trans_monadReaderWriterT'] = function() { $v = function($dictMonoid) {
+\PhpursThunks::$thunks['Control_Monad_Writer_Trans_monadAskWriterT'] = function() { $v = function($dictMonoid_0) {
   $__num = \func_num_args();
-  $monadAskWriterT1_0 = (($GLOBALS['Control_Monad_Writer_Trans_monadAskWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_monadAskWriterT')))($dictMonoid);
-  $__res = function($dictMonadReader) use (&$monadAskWriterT1_0) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_Writer_Trans_monadAskWriterT"), recVars=[];
+  $monadWriterT1_1_0 = (($GLOBALS['Control_Monad_Writer_Trans_monadWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_monadWriterT')))($dictMonoid_0);
+  $__res = function($dictMonadAsk_2) use ($dictMonoid_0, $monadWriterT1_1_0) {
   $__num = \func_num_args();
-  $monadAskWriterT2_1 = ($monadAskWriterT1_0)((($dictMonadReader)->MonadAsk0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = (object)["local" => function($f) use (&$dictMonadReader) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $Monad0_3_1 = (($dictMonadAsk_2)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $monadWriterT2_4_2 = ($monadWriterT1_1_0)($Monad0_3_1);
+  $__res = (object)["ask" => ((((($GLOBALS['Control_Monad_Writer_Trans_monadTransWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_monadTransWriterT')))($dictMonoid_0))->lift)($Monad0_3_1))(($dictMonadAsk_2)->ask), "Monad0" => function($dollar__unused_5) use ($monadWriterT2_4_2) {
   $__num = \func_num_args();
-  $__res = (($dictMonadReader)->local)($f);
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "MonadAsk0" => function($dollar__unused_0) use (&$monadAskWriterT2_1) {
-  $__num = \func_num_args();
-  $__res = $monadAskWriterT2_1;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $monadWriterT2_4_2;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -432,20 +440,56 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Writer_Trans_monadContWriterT'] = function() { $v = function($dictMonoid) {
+\PhpursThunks::$thunks['Control_Monad_Writer_Trans_monadReaderWriterT'] = function() { $v = function($dictMonoid_0) {
   $__num = \func_num_args();
-  $mempty_0 = ($dictMonoid)->mempty;
-  $monadWriterT1_1 = (($GLOBALS['Control_Monad_Writer_Trans_monadWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_monadWriterT')))($dictMonoid);
-  $__res = function($dictMonadCont) use (&$mempty_0, &$monadWriterT1_1) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_Writer_Trans_monadReaderWriterT"), recVars=[];
+  $monadAskWriterT1_1_0 = (($GLOBALS['Control_Monad_Writer_Trans_monadAskWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_monadAskWriterT')))($dictMonoid_0);
+  $__res = function($dictMonadReader_2) use ($monadAskWriterT1_1_0) {
   $__num = \func_num_args();
-  $monadWriterT2_2 = ($monadWriterT1_1)((($dictMonadCont)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = (object)["callCC" => function($f) use (&$dictMonadCont, &$mempty_0) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $monadAskWriterT2_3_1 = ($monadAskWriterT1_1_0)((($dictMonadReader_2)->MonadAsk0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__res = (object)["local" => function($f_4) use ($dictMonadReader_2) {
   $__num = \func_num_args();
-  $__res = (($dictMonadCont)->callCC)(function($c) use (&$f, &$mempty_0) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($dictMonadReader_2)->local)($f_4);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "MonadAsk0" => function($dollar__unused_4) use ($monadAskWriterT2_3_1) {
   $__num = \func_num_args();
-  $__res = ($f)(function($a) use (&$c, &$mempty_0) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $monadAskWriterT2_3_1;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}; return $v; };
+\PhpursThunks::$thunks['Control_Monad_Writer_Trans_monadContWriterT'] = function() { $v = function($dictMonoid_0) {
   $__num = \func_num_args();
-  $__res = ($c)(new Phpurs_Data2("Tuple", $a, $mempty_0));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_Writer_Trans_monadContWriterT"), recVars=[];
+  $mempty_1_0 = ($dictMonoid_0)->mempty;
+  $monadWriterT1_2_1 = (($GLOBALS['Control_Monad_Writer_Trans_monadWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_monadWriterT')))($dictMonoid_0);
+  $__res = function($dictMonadCont_3) use ($mempty_1_0, $monadWriterT1_2_1) {
+  $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $monadWriterT2_4_2 = ($monadWriterT1_2_1)((($dictMonadCont_3)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__res = (object)["callCC" => function($f_5) use ($dictMonadCont_3, $mempty_1_0) {
+  $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($dictMonadCont_3)->callCC)(function($c_6) use ($f_5, $mempty_1_0) {
+  $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ($f_5)(function($a_7) use ($c_6, $mempty_1_0) {
+  $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ($c_6)(new Phpurs_Data2("Tuple", $a_7, $mempty_1_0));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -457,9 +501,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Monad0" => function($dollar__unused_0) use (&$monadWriterT2_2) {
+}, "Monad0" => function($dollar__unused_5) use ($monadWriterT2_4_2) {
   $__num = \func_num_args();
-  $__res = $monadWriterT2_2;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $monadWriterT2_4_2;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -472,16 +517,19 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Writer_Trans_monadEffectWriter'] = function() { $v = function($dictMonoid) {
+\PhpursThunks::$thunks['Control_Monad_Writer_Trans_monadEffectWriter'] = function() { $v = function($dictMonoid_0) {
   $__num = \func_num_args();
-  $monadWriterT1_0 = (($GLOBALS['Control_Monad_Writer_Trans_monadWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_monadWriterT')))($dictMonoid);
-  $__res = function($dictMonadEffect) use (&$dictMonoid, &$monadWriterT1_0) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_Writer_Trans_monadEffectWriter"), recVars=[];
+  $monadWriterT1_1_0 = (($GLOBALS['Control_Monad_Writer_Trans_monadWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_monadWriterT')))($dictMonoid_0);
+  $__res = function($dictMonadEffect_2) use ($dictMonoid_0, $monadWriterT1_1_0) {
   $__num = \func_num_args();
-  $Monad0_1 = (($dictMonadEffect)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $monadWriterT2_2 = ($monadWriterT1_0)($Monad0_1);
-  $__res = (object)["liftEffect" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((((($GLOBALS['Control_Monad_Writer_Trans_monadTransWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_monadTransWriterT')))($dictMonoid))->lift)($Monad0_1)))(($dictMonadEffect)->liftEffect), "Monad0" => function($dollar__unused_0) use (&$monadWriterT2_2) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $Monad0_3_1 = (($dictMonadEffect_2)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $monadWriterT2_4_2 = ($monadWriterT1_1_0)($Monad0_3_1);
+  $__res = (object)["liftEffect" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((((($GLOBALS['Control_Monad_Writer_Trans_monadTransWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_monadTransWriterT')))($dictMonoid_0))->lift)($Monad0_3_1)))(($dictMonadEffect_2)->liftEffect), "Monad0" => function($dollar__unused_5) use ($monadWriterT2_4_2) {
   $__num = \func_num_args();
-  $__res = $monadWriterT2_2;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $monadWriterT2_4_2;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -494,37 +542,42 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Writer_Trans_monadRecWriterT'] = function() { $v = function($dictMonoid) {
+\PhpursThunks::$thunks['Control_Monad_Writer_Trans_monadRecWriterT'] = function() { $v = function($dictMonoid_0) {
   $__num = \func_num_args();
-  $__local_var_0 = (($dictMonoid)->Semigroup0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $mempty_1 = ($dictMonoid)->mempty;
-  $monadWriterT1_2 = (($GLOBALS['Control_Monad_Writer_Trans_monadWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_monadWriterT')))($dictMonoid);
-  $__res = function($dictMonadRec) use (&$__local_var_0, &$mempty_1, &$monadWriterT1_2) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_Writer_Trans_monadRecWriterT"), recVars=[];
+  $__local_var_1_0 = (($dictMonoid_0)->Semigroup0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $mempty_2_1 = ($dictMonoid_0)->mempty;
+  $monadWriterT1_3_2 = (($GLOBALS['Control_Monad_Writer_Trans_monadWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_monadWriterT')))($dictMonoid_0);
+  $__res = function($dictMonadRec_4) use ($__local_var_1_0, $mempty_2_1, $monadWriterT1_3_2) {
   $__num = \func_num_args();
-  $Monad0_3 = (($dictMonadRec)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $monadWriterT2_4 = ($monadWriterT1_2)($Monad0_3);
-  $__res = (object)["tailRecM" => (function() use (&$Monad0_3, &$__local_var_0, &$dictMonadRec, &$mempty_1) {
-  $__fn = function($f, $a = null) use (&$Monad0_3, &$__local_var_0, &$dictMonadRec, &$mempty_1, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $Monad0_5_3 = (($dictMonadRec_4)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $monadWriterT2_6_4 = ($monadWriterT1_3_2)($Monad0_5_3);
+  $__res = (object)["tailRecM" => (function() use ($Monad0_5_3, $__local_var_1_0, $dictMonadRec_4, $mempty_2_1) {
+  $__fn = function($f_7, $a_8 = null) use ($Monad0_5_3, $__local_var_1_0, $dictMonadRec_4, $mempty_2_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictMonadRec)->tailRecM)(function($v) use (&$Monad0_3, &$__local_var_0, &$f) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($dictMonadRec_4)->tailRecM)(function($v_9) use ($Monad0_5_3, $__local_var_1_0, $f_7) {
   $__num = \func_num_args();
-  $__local_var_5 = ($v)->value1;
-  $__res = ((((($Monad0_3)->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->bind)(($f)(($v)->value0)))(function($v2) use (&$Monad0_3, &$__local_var_0, &$__local_var_5) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__local_var_10_5 = ($v_9)->value1;
+  $__res = ((((($Monad0_5_3)->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->bind)(($f_7)(($v_9)->value0)))(function($v2_11) use ($Monad0_5_3, $__local_var_1_0, $__local_var_10_5) {
   $__num = \func_num_args();
-  if ((is_object(($v2)->value0) && ((($v2)->value0)->tag === "Loop"))) {
-$__t6 = new Phpurs_Data1("Loop", new Phpurs_Data2("Tuple", (($v2)->value0)->value0, ((($__local_var_0)->append)($__local_var_5))(($v2)->value1)));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  if ((is_object(($v2_11)->value0) && ((($v2_11)->value0)->tag === "Loop"))) {
+$__t6 = new Phpurs_Data1("Loop", new Phpurs_Data2("Tuple", (($v2_11)->value0)->value0, ((($__local_var_1_0)->append)($__local_var_10_5))(($v2_11)->value1)));
 } else {
-if ((is_object(($v2)->value0) && ((($v2)->value0)->tag === "Done"))) {
-$__t6 = new Phpurs_Data1("Done", new Phpurs_Data2("Tuple", (($v2)->value0)->value0, ((($__local_var_0)->append)($__local_var_5))(($v2)->value1)));
+if ((is_object(($v2_11)->value0) && ((($v2_11)->value0)->tag === "Done"))) {
+$__t6 = new Phpurs_Data1("Done", new Phpurs_Data2("Tuple", (($v2_11)->value0)->value0, ((($__local_var_1_0)->append)($__local_var_10_5))(($v2_11)->value1)));
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t6 = null;
 };
 };
-  $__res = (((($Monad0_3)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->pure)($__t6);
+  $__res = (((($Monad0_5_3)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->pure)($__t6);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -532,15 +585,16 @@ $__t6 = null;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(new Phpurs_Data2("Tuple", $a, $mempty_1));
+}))(new Phpurs_Data2("Tuple", $a_8, $mempty_2_1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Monad0" => function($dollar__unused_0) use (&$monadWriterT2_4) {
+})(), "Monad0" => function($dollar__unused_7) use ($monadWriterT2_6_4) {
   $__num = \func_num_args();
-  $__res = $monadWriterT2_4;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $monadWriterT2_6_4;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -553,51 +607,27 @@ $__t6 = null;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Writer_Trans_monadStateWriterT'] = function() { $v = function($dictMonoid) {
+\PhpursThunks::$thunks['Control_Monad_Writer_Trans_monadStateWriterT'] = function() { $v = function($dictMonoid_0) {
   $__num = \func_num_args();
-  $monadWriterT1_0 = (($GLOBALS['Control_Monad_Writer_Trans_monadWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_monadWriterT')))($dictMonoid);
-  $__res = function($dictMonadState) use (&$dictMonoid, &$monadWriterT1_0) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_Writer_Trans_monadStateWriterT"), recVars=[];
+  $monadWriterT1_1_0 = (($GLOBALS['Control_Monad_Writer_Trans_monadWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_monadWriterT')))($dictMonoid_0);
+  $__res = function($dictMonadState_2) use ($dictMonoid_0, $monadWriterT1_1_0) {
   $__num = \func_num_args();
-  $Monad0_1 = (($dictMonadState)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $lift1_2 = (((($GLOBALS['Control_Monad_Writer_Trans_monadTransWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_monadTransWriterT')))($dictMonoid))->lift)($Monad0_1);
-  $monadWriterT2_3 = ($monadWriterT1_0)($Monad0_1);
-  $__res = (object)["state" => function($f) use (&$dictMonadState, &$lift1_2) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $Monad0_3_1 = (($dictMonadState_2)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $lift1_4_2 = (((($GLOBALS['Control_Monad_Writer_Trans_monadTransWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_monadTransWriterT')))($dictMonoid_0))->lift)($Monad0_3_1);
+  $monadWriterT2_5_3 = ($monadWriterT1_1_0)($Monad0_3_1);
+  $__res = (object)["state" => function($f_6) use ($dictMonadState_2, $lift1_4_2) {
   $__num = \func_num_args();
-  $__res = ($lift1_2)((($dictMonadState)->state)($f));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ($lift1_4_2)((($dictMonadState_2)->state)($f_6));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Monad0" => function($dollar__unused_0) use (&$monadWriterT2_3) {
+}, "Monad0" => function($dollar__unused_6) use ($monadWriterT2_5_3) {
   $__num = \func_num_args();
-  $__res = $monadWriterT2_3;
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}];
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Writer_Trans_monadTellWriterT'] = function() { $v = function($dictMonoid) {
-  $__num = \func_num_args();
-  $Semigroup0_0 = (($dictMonoid)->Semigroup0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $monadWriterT1_1 = (($GLOBALS['Control_Monad_Writer_Trans_monadWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_monadWriterT')))($dictMonoid);
-  $__res = function($dictMonad) use (&$Semigroup0_0, &$monadWriterT1_1) {
-  $__num = \func_num_args();
-  $monadWriterT2_2 = ($monadWriterT1_1)($dictMonad);
-  $__res = (object)["tell" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Control_Monad_Writer_Trans_WriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_WriterT'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(((($dictMonad)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->pure))((($GLOBALS['Data_Tuple_Tuple'] ?? \PhpursThunks::eval('Data_Tuple_Tuple')))(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'))))), "Semigroup0" => function($dollar__unused_0) use (&$Semigroup0_0) {
-  $__num = \func_num_args();
-  $__res = $Semigroup0_0;
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Monad1" => function($dollar__unused_0) use (&$monadWriterT2_2) {
-  $__num = \func_num_args();
-  $__res = $monadWriterT2_2;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $monadWriterT2_5_3;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -610,19 +640,55 @@ $__t6 = null;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Writer_Trans_monadWriterWriterT'] = function() { $v = function($dictMonoid) {
+\PhpursThunks::$thunks['Control_Monad_Writer_Trans_monadTellWriterT'] = function() { $v = function($dictMonoid_0) {
   $__num = \func_num_args();
-  $monadTellWriterT1_0 = (($GLOBALS['Control_Monad_Writer_Trans_monadTellWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_monadTellWriterT')))($dictMonoid);
-  $__res = function($dictMonad) use (&$dictMonoid, &$monadTellWriterT1_0) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_Writer_Trans_monadTellWriterT"), recVars=[];
+  $Semigroup0_1_0 = (($dictMonoid_0)->Semigroup0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $monadWriterT1_2_1 = (($GLOBALS['Control_Monad_Writer_Trans_monadWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_monadWriterT')))($dictMonoid_0);
+  $__res = function($dictMonad_3) use ($Semigroup0_1_0, $monadWriterT1_2_1) {
   $__num = \func_num_args();
-  $__local_var_1 = (($dictMonad)->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $__local_var_2 = (($dictMonad)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $monadTellWriterT2_3 = ($monadTellWriterT1_0)($dictMonad);
-  $__res = (object)["listen" => function($v) use (&$__local_var_1, &$__local_var_2) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $monadWriterT2_4_2 = ($monadWriterT1_2_1)($dictMonad_3);
+  $__res = (object)["tell" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Control_Monad_Writer_Trans_WriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_WriterT'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(((($dictMonad_3)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->pure))((($GLOBALS['Data_Tuple_Tuple'] ?? \PhpursThunks::eval('Data_Tuple_Tuple')))(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'))))), "Semigroup0" => function($dollar__unused_5) use ($Semigroup0_1_0) {
   $__num = \func_num_args();
-  $__res = ((($__local_var_1)->bind)($v))(function($v1) use (&$__local_var_2) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $Semigroup0_1_0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Monad1" => function($dollar__unused_5) use ($monadWriterT2_4_2) {
   $__num = \func_num_args();
-  $__res = (($__local_var_2)->pure)(new Phpurs_Data2("Tuple", new Phpurs_Data2("Tuple", ($v1)->value0, ($v1)->value1), ($v1)->value1));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $monadWriterT2_4_2;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}; return $v; };
+\PhpursThunks::$thunks['Control_Monad_Writer_Trans_monadWriterWriterT'] = function() { $v = function($dictMonoid_0) {
+  $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_Writer_Trans_monadWriterWriterT"), recVars=[];
+  $monadTellWriterT1_1_0 = (($GLOBALS['Control_Monad_Writer_Trans_monadTellWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_monadTellWriterT')))($dictMonoid_0);
+  $__res = function($dictMonad_2) use ($dictMonoid_0, $monadTellWriterT1_1_0) {
+  $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__local_var_3_1 = (($dictMonad_2)->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_4_2 = (($dictMonad_2)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $monadTellWriterT2_5_3 = ($monadTellWriterT1_1_0)($dictMonad_2);
+  $__res = (object)["listen" => function($v_6) use ($__local_var_3_1, $__local_var_4_2) {
+  $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($__local_var_3_1)->bind)($v_6))(function($v1_7) use ($__local_var_4_2) {
+  $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($__local_var_4_2)->pure)(new Phpurs_Data2("Tuple", new Phpurs_Data2("Tuple", ($v1_7)->value0, ($v1_7)->value1), ($v1_7)->value1));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -630,11 +696,13 @@ $__t6 = null;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "pass" => function($v) use (&$__local_var_1, &$__local_var_2) {
+}, "pass" => function($v_6) use ($__local_var_3_1, $__local_var_4_2) {
   $__num = \func_num_args();
-  $__res = ((($__local_var_1)->bind)($v))(function($v1) use (&$__local_var_2) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($__local_var_3_1)->bind)($v_6))(function($v1_7) use ($__local_var_4_2) {
   $__num = \func_num_args();
-  $__res = (($__local_var_2)->pure)(new Phpurs_Data2("Tuple", (($v1)->value0)->value0, ((($v1)->value0)->value1)(($v1)->value1)));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($__local_var_4_2)->pure)(new Phpurs_Data2("Tuple", (($v1_7)->value0)->value0, ((($v1_7)->value0)->value1)(($v1_7)->value1)));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -642,44 +710,17 @@ $__t6 = null;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Monoid0" => function($dollar__unused_0) use (&$dictMonoid) {
+}, "Monoid0" => function($dollar__unused_6) use ($dictMonoid_0) {
   $__num = \func_num_args();
-  $__res = $dictMonoid;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $dictMonoid_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "MonadTell1" => function($dollar__unused_0) use (&$monadTellWriterT2_3) {
+}, "MonadTell1" => function($dollar__unused_6) use ($monadTellWriterT2_5_3) {
   $__num = \func_num_args();
-  $__res = $monadTellWriterT2_3;
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}];
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Writer_Trans_monadThrowWriterT'] = function() { $v = function($dictMonoid) {
-  $__num = \func_num_args();
-  $monadWriterT1_0 = (($GLOBALS['Control_Monad_Writer_Trans_monadWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_monadWriterT')))($dictMonoid);
-  $__res = function($dictMonadThrow) use (&$dictMonoid, &$monadWriterT1_0) {
-  $__num = \func_num_args();
-  $Monad0_1 = (($dictMonadThrow)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $lift1_2 = (((($GLOBALS['Control_Monad_Writer_Trans_monadTransWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_monadTransWriterT')))($dictMonoid))->lift)($Monad0_1);
-  $monadWriterT2_3 = ($monadWriterT1_0)($Monad0_1);
-  $__res = (object)["throwError" => function($e) use (&$dictMonadThrow, &$lift1_2) {
-  $__num = \func_num_args();
-  $__res = ($lift1_2)((($dictMonadThrow)->throwError)($e));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Monad0" => function($dollar__unused_0) use (&$monadWriterT2_3) {
-  $__num = \func_num_args();
-  $__res = $monadWriterT2_3;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $monadTellWriterT2_5_3;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -692,21 +733,58 @@ $__t6 = null;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Writer_Trans_monadErrorWriterT'] = function() { $v = function($dictMonoid) {
+\PhpursThunks::$thunks['Control_Monad_Writer_Trans_monadThrowWriterT'] = function() { $v = function($dictMonoid_0) {
   $__num = \func_num_args();
-  $monadThrowWriterT1_0 = (($GLOBALS['Control_Monad_Writer_Trans_monadThrowWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_monadThrowWriterT')))($dictMonoid);
-  $__res = function($dictMonadError) use (&$monadThrowWriterT1_0) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_Writer_Trans_monadThrowWriterT"), recVars=[];
+  $monadWriterT1_1_0 = (($GLOBALS['Control_Monad_Writer_Trans_monadWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_monadWriterT')))($dictMonoid_0);
+  $__res = function($dictMonadThrow_2) use ($dictMonoid_0, $monadWriterT1_1_0) {
   $__num = \func_num_args();
-  $monadThrowWriterT2_1 = ($monadThrowWriterT1_0)((($dictMonadError)->MonadThrow0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = (object)["catchError" => (function() use (&$dictMonadError) {
-  $__fn = function($v, $h = null) use (&$dictMonadError, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $Monad0_3_1 = (($dictMonadThrow_2)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $lift1_4_2 = (((($GLOBALS['Control_Monad_Writer_Trans_monadTransWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_monadTransWriterT')))($dictMonoid_0))->lift)($Monad0_3_1);
+  $monadWriterT2_5_3 = ($monadWriterT1_1_0)($Monad0_3_1);
+  $__res = (object)["throwError" => function($e_6) use ($dictMonadThrow_2, $lift1_4_2) {
+  $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ($lift1_4_2)((($dictMonadThrow_2)->throwError)($e_6));
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Monad0" => function($dollar__unused_6) use ($monadWriterT2_5_3) {
+  $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $monadWriterT2_5_3;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}; return $v; };
+\PhpursThunks::$thunks['Control_Monad_Writer_Trans_monadErrorWriterT'] = function() { $v = function($dictMonoid_0) {
+  $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_Writer_Trans_monadErrorWriterT"), recVars=[];
+  $monadThrowWriterT1_1_0 = (($GLOBALS['Control_Monad_Writer_Trans_monadThrowWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_monadThrowWriterT')))($dictMonoid_0);
+  $__res = function($dictMonadError_2) use ($monadThrowWriterT1_1_0) {
+  $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $monadThrowWriterT2_3_1 = ($monadThrowWriterT1_1_0)((($dictMonadError_2)->MonadThrow0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__res = (object)["catchError" => (function() use ($dictMonadError_2) {
+  $__fn = function($v_4, $h_5 = null) use ($dictMonadError_2, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictMonadError)->catchError)($v))(function($e) use (&$h) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($dictMonadError_2)->catchError)($v_4))(function($e_6) use ($h_5) {
   $__num = \func_num_args();
-  $__res = ($h)($e);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ($h_5)($e_6);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -716,9 +794,10 @@ $__t6 = null;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "MonadThrow0" => function($dollar__unused_0) use (&$monadThrowWriterT2_1) {
+})(), "MonadThrow0" => function($dollar__unused_4) use ($monadThrowWriterT2_3_1) {
   $__num = \func_num_args();
-  $__res = $monadThrowWriterT2_1;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $monadThrowWriterT2_3_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -731,16 +810,19 @@ $__t6 = null;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Writer_Trans_monadSTWriterT'] = function() { $v = function($dictMonoid) {
+\PhpursThunks::$thunks['Control_Monad_Writer_Trans_monadSTWriterT'] = function() { $v = function($dictMonoid_0) {
   $__num = \func_num_args();
-  $monadWriterT1_0 = (($GLOBALS['Control_Monad_Writer_Trans_monadWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_monadWriterT')))($dictMonoid);
-  $__res = function($dictMonadST) use (&$dictMonoid, &$monadWriterT1_0) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_Writer_Trans_monadSTWriterT"), recVars=[];
+  $monadWriterT1_1_0 = (($GLOBALS['Control_Monad_Writer_Trans_monadWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_monadWriterT')))($dictMonoid_0);
+  $__res = function($dictMonadST_2) use ($dictMonoid_0, $monadWriterT1_1_0) {
   $__num = \func_num_args();
-  $Monad0_1 = (($dictMonadST)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $monadWriterT2_2 = ($monadWriterT1_0)($Monad0_1);
-  $__res = (object)["liftST" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((((($GLOBALS['Control_Monad_Writer_Trans_monadTransWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_monadTransWriterT')))($dictMonoid))->lift)($Monad0_1)))(($dictMonadST)->liftST), "Monad0" => function($dollar__unused_0) use (&$monadWriterT2_2) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $Monad0_3_1 = (($dictMonadST_2)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $monadWriterT2_4_2 = ($monadWriterT1_1_0)($Monad0_3_1);
+  $__res = (object)["liftST" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((((($GLOBALS['Control_Monad_Writer_Trans_monadTransWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_monadTransWriterT')))($dictMonoid_0))->lift)($Monad0_3_1)))(($dictMonadST_2)->liftST), "Monad0" => function($dollar__unused_5) use ($monadWriterT2_4_2) {
   $__num = \func_num_args();
-  $__res = $monadWriterT2_2;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $monadWriterT2_4_2;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -753,18 +835,22 @@ $__t6 = null;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Writer_Trans_monoidWriterT'] = function() { $v = function($dictApplicative) {
+\PhpursThunks::$thunks['Control_Monad_Writer_Trans_monoidWriterT'] = function() { $v = function($dictApplicative_0) {
   $__num = \func_num_args();
-  $semigroupWriterT1_0 = (($GLOBALS['Control_Monad_Writer_Trans_semigroupWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_semigroupWriterT')))((($dictApplicative)->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = function($dictMonoid) use (&$dictApplicative, &$semigroupWriterT1_0) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_Writer_Trans_monoidWriterT"), recVars=[];
+  $semigroupWriterT1_1_0 = (($GLOBALS['Control_Monad_Writer_Trans_semigroupWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_semigroupWriterT')))((($dictApplicative_0)->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__res = function($dictMonoid_2) use ($dictApplicative_0, $semigroupWriterT1_1_0) {
   $__num = \func_num_args();
-  $semigroupWriterT2_1 = ($semigroupWriterT1_0)((($dictMonoid)->Semigroup0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = function($dictMonoid1) use (&$dictApplicative, &$dictMonoid, &$semigroupWriterT2_1) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $semigroupWriterT2_3_1 = ($semigroupWriterT1_1_0)((($dictMonoid_2)->Semigroup0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__res = function($dictMonoid1_4) use ($dictApplicative_0, $dictMonoid_2, $semigroupWriterT2_3_1) {
   $__num = \func_num_args();
-  $semigroupWriterT3_2 = ($semigroupWriterT2_1)((($dictMonoid1)->Semigroup0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = (object)["mempty" => ((((($GLOBALS['Control_Monad_Writer_Trans_applicativeWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_applicativeWriterT')))($dictMonoid))($dictApplicative))->pure)(($dictMonoid1)->mempty), "Semigroup0" => function($dollar__unused_0) use (&$semigroupWriterT3_2) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $semigroupWriterT3_5_2 = ($semigroupWriterT2_3_1)((($dictMonoid1_4)->Semigroup0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__res = (object)["mempty" => ((((($GLOBALS['Control_Monad_Writer_Trans_applicativeWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_applicativeWriterT')))($dictMonoid_2))($dictApplicative_0))->pure)(($dictMonoid1_4)->mempty), "Semigroup0" => function($dollar__unused_6) use ($semigroupWriterT3_5_2) {
   $__num = \func_num_args();
-  $__res = $semigroupWriterT3_2;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $semigroupWriterT3_5_2;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -781,14 +867,17 @@ $__t6 = null;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Writer_Trans_altWriterT'] = function() { $v = function($dictAlt) {
+\PhpursThunks::$thunks['Control_Monad_Writer_Trans_altWriterT'] = function() { $v = function($dictAlt_0) {
   $__num = \func_num_args();
-  $__local_var_0 = (($dictAlt)->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $functorWriterT1_1 = (object)["map" => function($f) use (&$__local_var_0) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_Writer_Trans_altWriterT"), recVars=[];
+  $__local_var_1_0 = (($dictAlt_0)->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $functorWriterT1_2_1 = (object)["map" => function($f_2) use ($__local_var_1_0) {
   $__num = \func_num_args();
-  $__res = (($__local_var_0)->map)(function($v) use (&$f) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($__local_var_1_0)->map)(function($v_3) use ($f_2) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Tuple", ($f)(($v)->value0), ($v)->value1);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = new Phpurs_Data2("Tuple", ($f_2)(($v_3)->value0), ($v_3)->value1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -797,21 +886,23 @@ $__t6 = null;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = (object)["alt" => (function() use (&$dictAlt) {
-  $__fn = function($v, $v1 = null) use (&$dictAlt, &$__fn) {
+  $__res = (object)["alt" => (function() use ($dictAlt_0) {
+  $__fn = function($v_3, $v1_4 = null) use ($dictAlt_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictAlt)->alt)($v))($v1);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($dictAlt_0)->alt)($v_3))($v1_4);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_0) use (&$functorWriterT1_1) {
+})(), "Functor0" => function($dollar__unused_3) use ($functorWriterT1_2_1) {
   $__num = \func_num_args();
-  $__res = $functorWriterT1_1;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $functorWriterT1_2_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -820,12 +911,14 @@ $__t6 = null;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Writer_Trans_plusWriterT'] = function() { $v = function($dictPlus) {
+\PhpursThunks::$thunks['Control_Monad_Writer_Trans_plusWriterT'] = function() { $v = function($dictPlus_0) {
   $__num = \func_num_args();
-  $altWriterT1_0 = (($GLOBALS['Control_Monad_Writer_Trans_altWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_altWriterT')))((($dictPlus)->Alt0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = (object)["empty" => ($dictPlus)->empty, "Alt0" => function($dollar__unused_0) use (&$altWriterT1_0) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_Writer_Trans_plusWriterT"), recVars=[];
+  $altWriterT1_1_0 = (($GLOBALS['Control_Monad_Writer_Trans_altWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_altWriterT')))((($dictPlus_0)->Alt0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__res = (object)["empty" => ($dictPlus_0)->empty, "Alt0" => function($dollar__unused_2) use ($altWriterT1_1_0) {
   $__num = \func_num_args();
-  $__res = $altWriterT1_0;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $altWriterT1_1_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -834,25 +927,30 @@ $__t6 = null;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Writer_Trans_alternativeWriterT'] = function() { $v = function($dictMonoid) {
+\PhpursThunks::$thunks['Control_Monad_Writer_Trans_alternativeWriterT'] = function() { $v = function($dictMonoid_0) {
   $__num = \func_num_args();
-  $applicativeWriterT1_0 = (($GLOBALS['Control_Monad_Writer_Trans_applicativeWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_applicativeWriterT')))($dictMonoid);
-  $__res = function($dictAlternative) use (&$applicativeWriterT1_0) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_Writer_Trans_alternativeWriterT"), recVars=[];
+  $applicativeWriterT1_1_0 = (($GLOBALS['Control_Monad_Writer_Trans_applicativeWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_applicativeWriterT')))($dictMonoid_0);
+  $__res = function($dictAlternative_2) use ($applicativeWriterT1_1_0) {
   $__num = \func_num_args();
-  $applicativeWriterT2_1 = ($applicativeWriterT1_0)((($dictAlternative)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__local_var_2 = (($dictAlternative)->Plus1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $altWriterT1_3 = (($GLOBALS['Control_Monad_Writer_Trans_altWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_altWriterT')))((($__local_var_2)->Alt0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = (object)["Applicative0" => function($dollar__unused_0) use (&$applicativeWriterT2_1) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $applicativeWriterT2_3_1 = ($applicativeWriterT1_1_0)((($dictAlternative_2)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__local_var_4_2 = (($dictAlternative_2)->Plus1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $altWriterT1_5_3 = (($GLOBALS['Control_Monad_Writer_Trans_altWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_altWriterT')))((($__local_var_4_2)->Alt0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__res = (object)["Applicative0" => function($dollar__unused_6) use ($applicativeWriterT2_3_1) {
   $__num = \func_num_args();
-  $__res = $applicativeWriterT2_1;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $applicativeWriterT2_3_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Plus1" => function($dollar__unused_0) use (&$__local_var_2, &$altWriterT1_3) {
+}, "Plus1" => function($dollar__unused_6) use ($__local_var_4_2, $altWriterT1_5_3) {
   $__num = \func_num_args();
-  $__res = (object)["empty" => ($__local_var_2)->empty, "Alt0" => function($dollar__unused_0) use (&$altWriterT1_3) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (object)["empty" => ($__local_var_4_2)->empty, "Alt0" => function($dollar__unused_7) use ($altWriterT1_5_3) {
   $__num = \func_num_args();
-  $__res = $altWriterT1_3;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $altWriterT1_5_3;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -869,23 +967,27 @@ $__t6 = null;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Writer_Trans_monadPlusWriterT'] = function() { $v = function($dictMonoid) {
+\PhpursThunks::$thunks['Control_Monad_Writer_Trans_monadPlusWriterT'] = function() { $v = function($dictMonoid_0) {
   $__num = \func_num_args();
-  $monadWriterT1_0 = (($GLOBALS['Control_Monad_Writer_Trans_monadWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_monadWriterT')))($dictMonoid);
-  $alternativeWriterT1_1 = (($GLOBALS['Control_Monad_Writer_Trans_alternativeWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_alternativeWriterT')))($dictMonoid);
-  $__res = function($dictMonadPlus) use (&$alternativeWriterT1_1, &$monadWriterT1_0) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_Writer_Trans_monadPlusWriterT"), recVars=[];
+  $monadWriterT1_1_0 = (($GLOBALS['Control_Monad_Writer_Trans_monadWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_monadWriterT')))($dictMonoid_0);
+  $alternativeWriterT1_2_1 = (($GLOBALS['Control_Monad_Writer_Trans_alternativeWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_alternativeWriterT')))($dictMonoid_0);
+  $__res = function($dictMonadPlus_3) use ($alternativeWriterT1_2_1, $monadWriterT1_1_0) {
   $__num = \func_num_args();
-  $monadWriterT2_2 = ($monadWriterT1_0)((($dictMonadPlus)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $alternativeWriterT2_3 = ($alternativeWriterT1_1)((($dictMonadPlus)->Alternative1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = (object)["Monad0" => function($dollar__unused_0) use (&$monadWriterT2_2) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $monadWriterT2_4_2 = ($monadWriterT1_1_0)((($dictMonadPlus_3)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $alternativeWriterT2_5_3 = ($alternativeWriterT1_2_1)((($dictMonadPlus_3)->Alternative1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__res = (object)["Monad0" => function($dollar__unused_6) use ($monadWriterT2_4_2) {
   $__num = \func_num_args();
-  $__res = $monadWriterT2_2;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $monadWriterT2_4_2;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Alternative1" => function($dollar__unused_0) use (&$alternativeWriterT2_3) {
+}, "Alternative1" => function($dollar__unused_6) use ($alternativeWriterT2_5_3) {
   $__num = \func_num_args();
-  $__res = $alternativeWriterT2_3;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $alternativeWriterT2_5_3;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

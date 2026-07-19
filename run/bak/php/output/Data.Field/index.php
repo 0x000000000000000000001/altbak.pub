@@ -91,20 +91,23 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   }
 }
 \PhpursThunks::$thunks['Data_Field_field'] = function() { $v = (function() {
-  $__fn = function($dictEuclideanRing, $dictDivisionRing = null) use (&$__fn) {
+  $__fn = function($dictEuclideanRing_0, $dictDivisionRing_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (object)["EuclideanRing0" => function($dollar__unused_0) use (&$dictEuclideanRing) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Field_field"), recVars=[];
+  $__res = (object)["EuclideanRing0" => function($dollar__unused_2) use ($dictEuclideanRing_0) {
   $__num = \func_num_args();
-  $__res = $dictEuclideanRing;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $dictEuclideanRing_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "DivisionRing1" => function($dollar__unused_0) use (&$dictDivisionRing) {
+}, "DivisionRing1" => function($dollar__unused_2) use ($dictDivisionRing_1) {
   $__num = \func_num_args();
-  $__res = $dictDivisionRing;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $dictDivisionRing_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

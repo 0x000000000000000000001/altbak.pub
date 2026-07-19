@@ -88,22 +88,25 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Control_Monad_State_Class_state'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Control_Monad_State_Class_state'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->state;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_State_Class_state"), recVars=[];
+  $__res = ($dict_0)->state;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Control_Monad_State_Class_put'] = function() { $v = (function() {
-  $__fn = function($dictMonadState, $s = null) use (&$__fn) {
+  $__fn = function($dictMonadState_0, $s_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictMonadState)->state)(function($v) use (&$s) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_State_Class_put"), recVars=[];
+  $__res = (($dictMonadState_0)->state)(function($v_2) use ($s_1) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Tuple", ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')), $s);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = new Phpurs_Data2("Tuple", ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')), $s_1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -115,14 +118,16 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Control_Monad_State_Class_modify_'] = function() { $v = (function() {
-  $__fn = function($dictMonadState, $f = null) use (&$__fn) {
+  $__fn = function($dictMonadState_0, $f_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictMonadState)->state)(function($s) use (&$f) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_State_Class_modify_"), recVars=[];
+  $__res = (($dictMonadState_0)->state)(function($s_2) use ($f_1) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Tuple", ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')), ($f)($s));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = new Phpurs_Data2("Tuple", ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')), ($f_1)($s_2));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -134,15 +139,17 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Control_Monad_State_Class_modify'] = function() { $v = (function() {
-  $__fn = function($dictMonadState, $f = null) use (&$__fn) {
+  $__fn = function($dictMonadState_0, $f_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictMonadState)->state)(function($s) use (&$f) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_State_Class_modify"), recVars=[];
+  $__res = (($dictMonadState_0)->state)(function($s_2) use ($f_1) {
   $__num = \func_num_args();
-  $s__prime___0 = ($f)($s);
-  $__res = new Phpurs_Data2("Tuple", $s__prime___0, $s__prime___0);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $s__prime___3_0 = ($f_1)($s_2);
+  $__res = new Phpurs_Data2("Tuple", $s__prime___3_0, $s__prime___3_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -154,14 +161,16 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Control_Monad_State_Class_gets'] = function() { $v = (function() {
-  $__fn = function($dictMonadState, $f = null) use (&$__fn) {
+  $__fn = function($dictMonadState_0, $f_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictMonadState)->state)(function($s) use (&$f) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_State_Class_gets"), recVars=[];
+  $__res = (($dictMonadState_0)->state)(function($s_2) use ($f_1) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Tuple", ($f)($s), $s);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = new Phpurs_Data2("Tuple", ($f_1)($s_2), $s_2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -172,11 +181,13 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Control_Monad_State_Class_get'] = function() { $v = function($dictMonadState) {
+\PhpursThunks::$thunks['Control_Monad_State_Class_get'] = function() { $v = function($dictMonadState_0) {
   $__num = \func_num_args();
-  $__res = (($dictMonadState)->state)(function($s) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_State_Class_get"), recVars=[];
+  $__res = (($dictMonadState_0)->state)(function($s_1) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Tuple", $s, $s);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = new Phpurs_Data2("Tuple", $s_1, $s_1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

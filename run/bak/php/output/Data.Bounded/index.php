@@ -91,33 +91,37 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Bounded_topRecord'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Data_Bounded_topRecord'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->topRecord;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Bounded_topRecord"), recVars=[];
+  $__res = ($dict_0)->topRecord;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Bounded_top'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Data_Bounded_top'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->top;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Bounded_top"), recVars=[];
+  $__res = ($dict_0)->top;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Data_Bounded_boundedUnit'] = function() { $v = (object)["top" => ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')), "bottom" => ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')), "Ord0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_Ord_ordUnit'] ?? \PhpursThunks::eval('Data_Ord_ordUnit'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
 \PhpursThunks::$thunks['Data_Bounded_boundedRecordNil'] = function() { $v = (object)["topRecord" => (function() {
-  $__fn = function($v, $v1 = null) use (&$__fn) {
+  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = (object)[];
   goto __end;;
   __end:
@@ -125,11 +129,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   };
   return $__fn;
 })(), "bottomRecord" => (function() {
-  $__fn = function($v, $v1 = null) use (&$__fn) {
+  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = (object)[];
   goto __end;;
   __end:
@@ -138,6 +143,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(), "OrdRecord0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_Ord_ordRecordNil'] ?? \PhpursThunks::eval('Data_Ord_ordRecordNil'));
   goto __end;;
   __end:
@@ -145,6 +151,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 }]; return $v; };
 \PhpursThunks::$thunks['Data_Bounded_boundedProxy'] = function() { $v = (object)["bottom" => new Phpurs_Data0("Proxy"), "top" => new Phpurs_Data0("Proxy"), "Ord0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_Ord_ordProxy'] ?? \PhpursThunks::eval('Data_Ord_ordProxy'));
   goto __end;;
   __end:
@@ -152,6 +159,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 }]; return $v; };
 \PhpursThunks::$thunks['Data_Bounded_boundedOrdering'] = function() { $v = (object)["top" => new Phpurs_Data0("GT"), "bottom" => new Phpurs_Data0("LT"), "Ord0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_Ord_ordOrdering'] ?? \PhpursThunks::eval('Data_Ord_ordOrdering'));
   goto __end;;
   __end:
@@ -159,6 +167,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 }]; return $v; };
 \PhpursThunks::$thunks['Data_Bounded_boundedNumber'] = function() { $v = (object)["top" => ($GLOBALS['Data_Bounded_topNumber'] ?? \PhpursThunks::eval('Data_Bounded_topNumber')), "bottom" => ($GLOBALS['Data_Bounded_bottomNumber'] ?? \PhpursThunks::eval('Data_Bounded_bottomNumber')), "Ord0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_Ord_ordNumber'] ?? \PhpursThunks::eval('Data_Ord_ordNumber'));
   goto __end;;
   __end:
@@ -166,6 +175,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 }]; return $v; };
 \PhpursThunks::$thunks['Data_Bounded_boundedInt'] = function() { $v = (object)["top" => ($GLOBALS['Data_Bounded_topInt'] ?? \PhpursThunks::eval('Data_Bounded_topInt')), "bottom" => ($GLOBALS['Data_Bounded_bottomInt'] ?? \PhpursThunks::eval('Data_Bounded_bottomInt')), "Ord0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt'));
   goto __end;;
   __end:
@@ -173,6 +183,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 }]; return $v; };
 \PhpursThunks::$thunks['Data_Bounded_boundedChar'] = function() { $v = (object)["top" => ($GLOBALS['Data_Bounded_topChar'] ?? \PhpursThunks::eval('Data_Bounded_topChar')), "bottom" => ($GLOBALS['Data_Bounded_bottomChar'] ?? \PhpursThunks::eval('Data_Bounded_bottomChar')), "Ord0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_Ord_ordChar'] ?? \PhpursThunks::eval('Data_Ord_ordChar'));
   goto __end;;
   __end:
@@ -180,28 +191,32 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 }]; return $v; };
 \PhpursThunks::$thunks['Data_Bounded_boundedBoolean'] = function() { $v = (object)["top" => true, "bottom" => false, "Ord0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_Ord_ordBoolean'] ?? \PhpursThunks::eval('Data_Ord_ordBoolean'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
-\PhpursThunks::$thunks['Data_Bounded_bottomRecord'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Data_Bounded_bottomRecord'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->bottomRecord;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Bounded_bottomRecord"), recVars=[];
+  $__res = ($dict_0)->bottomRecord;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Data_Bounded_boundedRecord'] = function() { $v = (function() {
-  $__fn = function($dollar__unused_0, $dictBoundedRecord = null) use (&$__fn) {
+  $__fn = function($dollar__unused_0, $dictBoundedRecord_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $ordRecord1_0 = ((($GLOBALS['Data_Ord_ordRecord'] ?? \PhpursThunks::eval('Data_Ord_ordRecord')))(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))((($dictBoundedRecord)->OrdRecord0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = (object)["top" => ((($dictBoundedRecord)->topRecord)(new Phpurs_Data0("Proxy")))(new Phpurs_Data0("Proxy")), "bottom" => ((($dictBoundedRecord)->bottomRecord)(new Phpurs_Data0("Proxy")))(new Phpurs_Data0("Proxy")), "Ord0" => function($dollar__unused_0) use (&$ordRecord1_0) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Bounded_boundedRecord"), recVars=[];
+  $ordRecord1_2_0 = ((($GLOBALS['Data_Ord_ordRecord'] ?? \PhpursThunks::eval('Data_Ord_ordRecord')))(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))((($dictBoundedRecord_1)->OrdRecord0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__res = (object)["top" => ((($dictBoundedRecord_1)->topRecord)(new Phpurs_Data0("Proxy")))(new Phpurs_Data0("Proxy")), "bottom" => ((($dictBoundedRecord_1)->bottomRecord)(new Phpurs_Data0("Proxy")))(new Phpurs_Data0("Proxy")), "Ord0" => function($dollar__unused_3) use ($ordRecord1_2_0) {
   $__num = \func_num_args();
-  $__res = $ordRecord1_0;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $ordRecord1_2_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -212,56 +227,62 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Data_Bounded_bottom'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Data_Bounded_bottom'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->bottom;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Bounded_bottom"), recVars=[];
+  $__res = ($dict_0)->bottom;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Data_Bounded_boundedRecordCons'] = function() { $v = (function() {
-  $__fn = function($dictIsSymbol, $dictBounded = null) use (&$__fn) {
+  $__fn = function($dictIsSymbol_0, $dictBounded_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $top1_0 = ($dictBounded)->top;
-  $bottom1_1 = ($dictBounded)->bottom;
-  $Ord0_2 = (($dictBounded)->Ord0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $__res = (function() use (&$Ord0_2, &$bottom1_1, &$dictIsSymbol, &$top1_0) {
-  $__fn = function($dollar__unused_0, $dollar__unused_1 = null, $dictBoundedRecord = null) use (&$Ord0_2, &$bottom1_1, &$dictIsSymbol, &$top1_0, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Bounded_boundedRecordCons"), recVars=[];
+  $top1_2_0 = ($dictBounded_1)->top;
+  $bottom1_3_1 = ($dictBounded_1)->bottom;
+  $Ord0_4_2 = (($dictBounded_1)->Ord0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__res = (function() use ($Ord0_4_2, $bottom1_3_1, $dictIsSymbol_0, $top1_2_0) {
+  $__fn = function($dollar__unused_5, $dollar__unused_6 = null, $dictBoundedRecord_7 = null) use ($Ord0_4_2, $bottom1_3_1, $dictIsSymbol_0, $top1_2_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $ordRecordCons_3 = ((((($GLOBALS['Data_Ord_ordRecordCons'] ?? \PhpursThunks::eval('Data_Ord_ordRecordCons')))((($dictBoundedRecord)->OrdRecord0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')))))(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))($dictIsSymbol))($Ord0_2);
-  $__res = (object)["topRecord" => (function() use (&$dictBoundedRecord, &$dictIsSymbol, &$top1_0) {
-  $__fn = function($v, $rowProxy = null) use (&$dictBoundedRecord, &$dictIsSymbol, &$top1_0, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $ordRecordCons_8_3 = ((((($GLOBALS['Data_Ord_ordRecordCons'] ?? \PhpursThunks::eval('Data_Ord_ordRecordCons')))((($dictBoundedRecord_7)->OrdRecord0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')))))(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))($dictIsSymbol_0))($Ord0_4_2);
+  $__res = (object)["topRecord" => (function() use ($dictBoundedRecord_7, $dictIsSymbol_0, $top1_2_0) {
+  $__fn = function($v_9, $rowProxy_10 = null) use ($dictBoundedRecord_7, $dictIsSymbol_0, $top1_2_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($GLOBALS['Record_Unsafe_unsafeSet'] ?? \PhpursThunks::eval('Record_Unsafe_unsafeSet')))((($dictIsSymbol)->reflectSymbol)(new Phpurs_Data0("Proxy"))))($top1_0))(((($dictBoundedRecord)->topRecord)(new Phpurs_Data0("Proxy")))($rowProxy));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (((($GLOBALS['Record_Unsafe_unsafeSet'] ?? \PhpursThunks::eval('Record_Unsafe_unsafeSet')))((($dictIsSymbol_0)->reflectSymbol)(new Phpurs_Data0("Proxy"))))($top1_2_0))(((($dictBoundedRecord_7)->topRecord)(new Phpurs_Data0("Proxy")))($rowProxy_10));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "bottomRecord" => (function() use (&$bottom1_1, &$dictBoundedRecord, &$dictIsSymbol) {
-  $__fn = function($v, $rowProxy = null) use (&$bottom1_1, &$dictBoundedRecord, &$dictIsSymbol, &$__fn) {
+})(), "bottomRecord" => (function() use ($bottom1_3_1, $dictBoundedRecord_7, $dictIsSymbol_0) {
+  $__fn = function($v_9, $rowProxy_10 = null) use ($bottom1_3_1, $dictBoundedRecord_7, $dictIsSymbol_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($GLOBALS['Record_Unsafe_unsafeSet'] ?? \PhpursThunks::eval('Record_Unsafe_unsafeSet')))((($dictIsSymbol)->reflectSymbol)(new Phpurs_Data0("Proxy"))))($bottom1_1))(((($dictBoundedRecord)->bottomRecord)(new Phpurs_Data0("Proxy")))($rowProxy));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (((($GLOBALS['Record_Unsafe_unsafeSet'] ?? \PhpursThunks::eval('Record_Unsafe_unsafeSet')))((($dictIsSymbol_0)->reflectSymbol)(new Phpurs_Data0("Proxy"))))($bottom1_3_1))(((($dictBoundedRecord_7)->bottomRecord)(new Phpurs_Data0("Proxy")))($rowProxy_10));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "OrdRecord0" => function($dollar__unused_0) use (&$ordRecordCons_3) {
+})(), "OrdRecord0" => function($dollar__unused_9) use ($ordRecordCons_8_3) {
   $__num = \func_num_args();
-  $__res = $ordRecordCons_3;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $ordRecordCons_8_3;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

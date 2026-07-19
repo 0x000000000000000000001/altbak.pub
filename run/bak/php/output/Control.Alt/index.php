@@ -89,14 +89,16 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 }
 \PhpursThunks::$thunks['Control_Alt_altArray'] = function() { $v = (object)["alt" => ($GLOBALS['Data_Semigroup_concatArray'] ?? \PhpursThunks::eval('Data_Semigroup_concatArray')), "Functor0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_Functor_functorArray'] ?? \PhpursThunks::eval('Data_Functor_functorArray'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
-\PhpursThunks::$thunks['Control_Alt_alt'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Control_Alt_alt'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->alt;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Alt_alt"), recVars=[];
+  $__res = ($dict_0)->alt;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

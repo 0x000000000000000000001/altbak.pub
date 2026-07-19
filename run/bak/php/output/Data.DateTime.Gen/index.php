@@ -91,10 +91,11 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_DateTime_Gen_genDateTime'] = function() { $v = function($dictMonadGen) {
+\PhpursThunks::$thunks['Data_DateTime_Gen_genDateTime'] = function() { $v = function($dictMonadGen_0) {
   $__num = \func_num_args();
-  $Apply0_0 = (((((($dictMonadGen)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $__res = ((($Apply0_0)->apply)(((((($Apply0_0)->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->map)(($GLOBALS['Data_DateTime_DateTime'] ?? \PhpursThunks::eval('Data_DateTime_DateTime'))))((($GLOBALS['Data_Date_Gen_genDate'] ?? \PhpursThunks::eval('Data_Date_Gen_genDate')))($dictMonadGen))))((($GLOBALS['Data_Time_Gen_genTime'] ?? \PhpursThunks::eval('Data_Time_Gen_genTime')))($dictMonadGen));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_DateTime_Gen_genDateTime"), recVars=[];
+  $Apply0_1_0 = (((((($dictMonadGen_0)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__res = ((($Apply0_1_0)->apply)(((((($Apply0_1_0)->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->map)(($GLOBALS['Data_DateTime_DateTime'] ?? \PhpursThunks::eval('Data_DateTime_DateTime'))))((($GLOBALS['Data_Date_Gen_genDate'] ?? \PhpursThunks::eval('Data_Date_Gen_genDate')))($dictMonadGen_0))))((($GLOBALS['Data_Time_Gen_genTime'] ?? \PhpursThunks::eval('Data_Time_Gen_genTime')))($dictMonadGen_0));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

@@ -10,7 +10,6 @@ import Data.String.Regex.Flags (noFlags)
 import Data.Either (Either(..))
 import Partial.Unsafe (unsafePartial)
 import Data.Array (length)
-import Data.Maybe (Maybe(..))
 
 regexPattern :: R.Regex
 regexPattern = unsafePartial (case R.regex "(hello|world)[0-9]+" noFlags of Right r -> r)

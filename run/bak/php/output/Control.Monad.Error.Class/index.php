@@ -96,21 +96,24 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Control_Monad_Error_Class_throwError'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Control_Monad_Error_Class_throwError'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->throwError;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_Error_Class_throwError"), recVars=[];
+  $__res = ($dict_0)->throwError;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Error_Class_monadThrowMaybe'] = function() { $v = (object)["throwError" => function($v) {
+\PhpursThunks::$thunks['Control_Monad_Error_Class_monadThrowMaybe'] = function() { $v = (object)["throwError" => function($v_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = new Phpurs_Data0("Nothing");
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Monad0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_Maybe_monadMaybe'] ?? \PhpursThunks::eval('Data_Maybe_monadMaybe'));
   goto __end;;
   __end:
@@ -118,6 +121,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 }]; return $v; };
 \PhpursThunks::$thunks['Control_Monad_Error_Class_monadThrowEither'] = function() { $v = (object)["throwError" => ($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left')), "Monad0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_Either_monadEither'] ?? \PhpursThunks::eval('Data_Either_monadEither'));
   goto __end;;
   __end:
@@ -125,22 +129,24 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 }]; return $v; };
 \PhpursThunks::$thunks['Control_Monad_Error_Class_monadThrowEffect'] = function() { $v = (object)["throwError" => ($GLOBALS['Effect_Exception_throwException'] ?? \PhpursThunks::eval('Effect_Exception_throwException')), "Monad0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Effect_monadEffect'] ?? \PhpursThunks::eval('Effect_monadEffect'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
 \PhpursThunks::$thunks['Control_Monad_Error_Class_monadErrorMaybe'] = function() { $v = (object)["catchError" => (function() {
-  $__fn = function($v, $v1 = null) use (&$__fn) {
+  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  if ((is_object($v) && (($v)->tag === "Nothing"))) {
-$__t0 = ($v1)(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  if ((is_object($v_0) && (($v_0)->tag === "Nothing"))) {
+$__t0 = ($v1_1)(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')));
 } else {
-if ((is_object($v) && (($v)->tag === "Just"))) {
-$__t0 = new Phpurs_Data1("Just", ($v)->value0);
+if ((is_object($v_0) && (($v_0)->tag === "Just"))) {
+$__t0 = new Phpurs_Data1("Just", ($v_0)->value0);
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t0 = null;
@@ -154,22 +160,24 @@ $__t0 = null;
   return $__fn;
 })(), "MonadThrow0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Control_Monad_Error_Class_monadThrowMaybe'] ?? \PhpursThunks::eval('Control_Monad_Error_Class_monadThrowMaybe'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
 \PhpursThunks::$thunks['Control_Monad_Error_Class_monadErrorEither'] = function() { $v = (object)["catchError" => (function() {
-  $__fn = function($v, $v1 = null) use (&$__fn) {
+  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  if ((is_object($v) && (($v)->tag === "Left"))) {
-$__t0 = ($v1)(($v)->value0);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  if ((is_object($v_0) && (($v_0)->tag === "Left"))) {
+$__t0 = ($v1_1)(($v_0)->value0);
 } else {
-if ((is_object($v) && (($v)->tag === "Right"))) {
-$__t0 = new Phpurs_Data1("Right", ($v)->value0);
+if ((is_object($v_0) && (($v_0)->tag === "Right"))) {
+$__t0 = new Phpurs_Data1("Right", ($v_0)->value0);
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t0 = null;
@@ -183,18 +191,20 @@ $__t0 = null;
   return $__fn;
 })(), "MonadThrow0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Control_Monad_Error_Class_monadThrowEither'] ?? \PhpursThunks::eval('Control_Monad_Error_Class_monadThrowEither'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
 \PhpursThunks::$thunks['Control_Monad_Error_Class_monadErrorEffect'] = function() { $v = (object)["catchError" => (function() {
-  $__fn = function($b, $a = null) use (&$__fn) {
+  $__fn = function($b_0, $a_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Effect_Exception_catchException'] ?? \PhpursThunks::eval('Effect_Exception_catchException')))($a))($b);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Effect_Exception_catchException'] ?? \PhpursThunks::eval('Effect_Exception_catchException')))($a_1))($b_0);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -202,24 +212,28 @@ $__t0 = null;
   return $__fn;
 })(), "MonadThrow0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Control_Monad_Error_Class_monadThrowEffect'] ?? \PhpursThunks::eval('Control_Monad_Error_Class_monadThrowEffect'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Error_Class_liftMaybe'] = function() { $v = function($dictMonadThrow) {
+\PhpursThunks::$thunks['Control_Monad_Error_Class_liftMaybe'] = function() { $v = function($dictMonadThrow_0) {
   $__num = \func_num_args();
-  $pure_0 = ((((($dictMonadThrow)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->pure;
-  $__res = function($error) use (&$dictMonadThrow, &$pure_0) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_Error_Class_liftMaybe"), recVars=[];
+  $pure_1_0 = ((((($dictMonadThrow_0)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->pure;
+  $__res = function($error_2) use ($dictMonadThrow_0, $pure_1_0) {
   $__num = \func_num_args();
-  $__local_var_1 = (($dictMonadThrow)->throwError)($error);
-  $__res = function($v2) use (&$__local_var_1, &$pure_0) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__local_var_3_1 = (($dictMonadThrow_0)->throwError)($error_2);
+  $__res = function($v2_4) use ($__local_var_3_1, $pure_1_0) {
   $__num = \func_num_args();
-  if ((is_object($v2) && (($v2)->tag === "Nothing"))) {
-$__t2 = $__local_var_1;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  if ((is_object($v2_4) && (($v2_4)->tag === "Nothing"))) {
+$__t2 = $__local_var_3_1;
 } else {
-if ((is_object($v2) && (($v2)->tag === "Just"))) {
-$__t2 = ($pure_0)(($v2)->value0);
+if ((is_object($v2_4) && (($v2_4)->tag === "Just"))) {
+$__t2 = ($pure_1_0)(($v2_4)->value0);
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t2 = null;
@@ -238,16 +252,18 @@ $__t2 = null;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Error_Class_liftEither'] = function() { $v = function($dictMonadThrow) {
+\PhpursThunks::$thunks['Control_Monad_Error_Class_liftEither'] = function() { $v = function($dictMonadThrow_0) {
   $__num = \func_num_args();
-  $__local_var_0 = ((((($dictMonadThrow)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->pure;
-  $__res = function($v2) use (&$__local_var_0, &$dictMonadThrow) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_Error_Class_liftEither"), recVars=[];
+  $__local_var_1_0 = ((((($dictMonadThrow_0)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->pure;
+  $__res = function($v2_2) use ($__local_var_1_0, $dictMonadThrow_0) {
   $__num = \func_num_args();
-  if ((is_object($v2) && (($v2)->tag === "Left"))) {
-$__t1 = (($dictMonadThrow)->throwError)(($v2)->value0);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  if ((is_object($v2_2) && (($v2_2)->tag === "Left"))) {
+$__t1 = (($dictMonadThrow_0)->throwError)(($v2_2)->value0);
 } else {
-if ((is_object($v2) && (($v2)->tag === "Right"))) {
-$__t1 = ($__local_var_0)(($v2)->value0);
+if ((is_object($v2_2) && (($v2_2)->tag === "Right"))) {
+$__t1 = ($__local_var_1_0)(($v2_2)->value0);
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t1 = null;
@@ -262,27 +278,30 @@ $__t1 = null;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Error_Class_catchError'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Control_Monad_Error_Class_catchError'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->catchError;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_Error_Class_catchError"), recVars=[];
+  $__res = ($dict_0)->catchError;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Control_Monad_Error_Class_catchJust'] = function() { $v = (function() {
-  $__fn = function($dictMonadError, $p = null, $act = null, $handler = null) use (&$__fn) {
+  $__fn = function($dictMonadError_0, $p_1 = null, $act_2 = null, $handler_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ((($dictMonadError)->catchError)($act))(function($e) use (&$dictMonadError, &$handler, &$p) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_Error_Class_catchJust"), recVars=[];
+  $__res = ((($dictMonadError_0)->catchError)($act_2))(function($e_4) use ($dictMonadError_0, $handler_3, $p_1) {
   $__num = \func_num_args();
-  $v_0 = ($p)($e);
-  if ((is_object($v_0) && (($v_0)->tag === "Nothing"))) {
-$__t1 = (((($dictMonadError)->MonadThrow0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->throwError)($e);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $v_5_0 = ($p_1)($e_4);
+  if ((is_object($v_5_0) && (($v_5_0)->tag === "Nothing"))) {
+$__t1 = (((($dictMonadError_0)->MonadThrow0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->throwError)($e_4);
 } else {
-if ((is_object($v_0) && (($v_0)->tag === "Just"))) {
-$__t1 = ($handler)(($v_0)->value0);
+if ((is_object($v_5_0) && (($v_5_0)->tag === "Just"))) {
+$__t1 = ($handler_3)(($v_5_0)->value0);
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t1 = null;
@@ -299,13 +318,15 @@ $__t1 = null;
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Control_Monad_Error_Class_try'] = function() { $v = function($dictMonadError) {
+\PhpursThunks::$thunks['Control_Monad_Error_Class_try'] = function() { $v = function($dictMonadError_0) {
   $__num = \func_num_args();
-  $Monad0_0 = (((($dictMonadError)->MonadThrow0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $pure_1 = ((($Monad0_0)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->pure;
-  $__res = function($a) use (&$Monad0_0, &$dictMonadError, &$pure_1) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_Error_Class_try"), recVars=[];
+  $Monad0_1_0 = (((($dictMonadError_0)->MonadThrow0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $pure_2_1 = ((($Monad0_1_0)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->pure;
+  $__res = function($a_3) use ($Monad0_1_0, $dictMonadError_0, $pure_2_1) {
   $__num = \func_num_args();
-  $__res = ((($dictMonadError)->catchError)(((((((((($Monad0_0)->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->map)(($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right'))))($a)))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($pure_1))(($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left'))));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($dictMonadError_0)->catchError)(((((((((($Monad0_1_0)->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->map)(($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right'))))($a_3)))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($pure_2_1))(($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left'))));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -314,29 +335,34 @@ $__t1 = null;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Error_Class_withResource'] = function() { $v = function($dictMonadError) {
+\PhpursThunks::$thunks['Control_Monad_Error_Class_withResource'] = function() { $v = function($dictMonadError_0) {
   $__num = \func_num_args();
-  $MonadThrow0_0 = (($dictMonadError)->MonadThrow0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $Monad0_1 = (($MonadThrow0_0)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $Bind1_2 = (($Monad0_1)->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $try1_3 = (($GLOBALS['Control_Monad_Error_Class_try'] ?? \PhpursThunks::eval('Control_Monad_Error_Class_try')))($dictMonadError);
-  $__res = (function() use (&$Bind1_2, &$Monad0_1, &$MonadThrow0_0, &$try1_3) {
-  $__fn = function($acquire, $release = null, $kleisli = null) use (&$Bind1_2, &$Monad0_1, &$MonadThrow0_0, &$try1_3, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_Error_Class_withResource"), recVars=[];
+  $MonadThrow0_1_0 = (($dictMonadError_0)->MonadThrow0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $Monad0_2_1 = (($MonadThrow0_1_0)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $Bind1_3_2 = (($Monad0_2_1)->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $try1_4_3 = (($GLOBALS['Control_Monad_Error_Class_try'] ?? \PhpursThunks::eval('Control_Monad_Error_Class_try')))($dictMonadError_0);
+  $__res = (function() use ($Bind1_3_2, $Monad0_2_1, $MonadThrow0_1_0, $try1_4_3) {
+  $__fn = function($acquire_5, $release_6 = null, $kleisli_7 = null) use ($Bind1_3_2, $Monad0_2_1, $MonadThrow0_1_0, $try1_4_3, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($Bind1_2)->bind)($acquire))(function($resource) use (&$Bind1_2, &$Monad0_1, &$MonadThrow0_0, &$kleisli, &$release, &$try1_3) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($Bind1_3_2)->bind)($acquire_5))(function($resource_8) use ($Bind1_3_2, $Monad0_2_1, $MonadThrow0_1_0, $kleisli_7, $release_6, $try1_4_3) {
   $__num = \func_num_args();
-  $__res = ((($Bind1_2)->bind)(($try1_3)(($kleisli)($resource))))(function($result) use (&$Bind1_2, &$Monad0_1, &$MonadThrow0_0, &$release, &$resource) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($Bind1_3_2)->bind)(($try1_4_3)(($kleisli_7)($resource_8))))(function($result_9) use ($Bind1_3_2, $Monad0_2_1, $MonadThrow0_1_0, $release_6, $resource_8) {
   $__num = \func_num_args();
-  $__res = ((($Bind1_2)->bind)(($release)($resource)))(function($dollar__unused_0) use (&$Monad0_1, &$MonadThrow0_0, &$result) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($Bind1_3_2)->bind)(($release_6)($resource_8)))(function($dollar__unused_10) use ($Monad0_2_1, $MonadThrow0_1_0, $result_9) {
   $__num = \func_num_args();
-  if ((is_object($result) && (($result)->tag === "Left"))) {
-$__t4 = (($MonadThrow0_0)->throwError)(($result)->value0);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  if ((is_object($result_9) && (($result_9)->tag === "Left"))) {
+$__t4 = (($MonadThrow0_1_0)->throwError)(($result_9)->value0);
 } else {
-if ((is_object($result) && (($result)->tag === "Right"))) {
-$__t4 = (((($Monad0_1)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->pure)(($result)->value0);
+if ((is_object($result_9) && (($result_9)->tag === "Right"))) {
+$__t4 = (((($Monad0_2_1)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->pure)(($result_9)->value0);
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t4 = null;

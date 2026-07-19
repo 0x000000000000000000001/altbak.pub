@@ -86,37 +86,42 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Control_Monad_Gen_Class_sized'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Control_Monad_Gen_Class_sized'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->sized;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_Gen_Class_sized"), recVars=[];
+  $__res = ($dict_0)->sized;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Gen_Class_resize'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Control_Monad_Gen_Class_resize'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->resize;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_Gen_Class_resize"), recVars=[];
+  $__res = ($dict_0)->resize;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Gen_Class_chooseInt'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Control_Monad_Gen_Class_chooseInt'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->chooseInt;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_Gen_Class_chooseInt"), recVars=[];
+  $__res = ($dict_0)->chooseInt;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Gen_Class_chooseFloat'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Control_Monad_Gen_Class_chooseFloat'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->chooseFloat;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_Gen_Class_chooseFloat"), recVars=[];
+  $__res = ($dict_0)->chooseFloat;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Gen_Class_chooseBool'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Control_Monad_Gen_Class_chooseBool'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->chooseBool;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_Gen_Class_chooseBool"), recVars=[];
+  $__res = ($dict_0)->chooseBool;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

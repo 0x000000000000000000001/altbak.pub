@@ -95,16 +95,18 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 }
 \PhpursThunks::$thunks['Control_Monad_Writer_writer'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Control_Monad_Writer_Trans_WriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_WriterT'))))(($GLOBALS['Data_Identity_Identity'] ?? \PhpursThunks::eval('Data_Identity_Identity'))); return $v; };
 \PhpursThunks::$thunks['Control_Monad_Writer_runWriter'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce'))))(($GLOBALS['Control_Monad_Writer_Trans_runWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_runWriterT'))); return $v; };
-\PhpursThunks::$thunks['Control_Monad_Writer_mapWriter'] = function() { $v = function($f) {
+\PhpursThunks::$thunks['Control_Monad_Writer_mapWriter'] = function() { $v = function($f_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Identity_Identity'] ?? \PhpursThunks::eval('Data_Identity_Identity'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($f))(($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce'))));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_Writer_mapWriter"), recVars=[];
+  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Identity_Identity'] ?? \PhpursThunks::eval('Data_Identity_Identity'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($f_0))(($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce'))));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Writer_execWriter'] = function() { $v = function($m) {
+\PhpursThunks::$thunks['Control_Monad_Writer_execWriter'] = function() { $v = function($m_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Monad_Writer_runWriter'] ?? \PhpursThunks::eval('Control_Monad_Writer_runWriter')))($m))->value1;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_Writer_execWriter"), recVars=[];
+  $__res = ((($GLOBALS['Control_Monad_Writer_runWriter'] ?? \PhpursThunks::eval('Control_Monad_Writer_runWriter')))($m_0))->value1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

@@ -97,18 +97,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Bifunctor_Join_Join'] = function() { $v = function($x) {
+\PhpursThunks::$thunks['Data_Bifunctor_Join_Join'] = function() { $v = function($x_0) {
   $__num = \func_num_args();
-  $__res = $x;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Bifunctor_Join_Join"), recVars=[];
+  $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Bifunctor_Join_showJoin'] = function() { $v = function($dictShow) {
+\PhpursThunks::$thunks['Data_Bifunctor_Join_showJoin'] = function() { $v = function($dictShow_0) {
   $__num = \func_num_args();
-  $__res = (object)["show" => function($v) use (&$dictShow) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Bifunctor_Join_showJoin"), recVars=[];
+  $__res = (object)["show" => function($v_1) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("(Join "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))((($dictShow)->show)($v)))(")"));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("(Join "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))((($dictShow_0)->show)($v_1)))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -117,36 +120,41 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Bifunctor_Join_ordJoin'] = function() { $v = function($dictOrd) {
+\PhpursThunks::$thunks['Data_Bifunctor_Join_ordJoin'] = function() { $v = function($dictOrd_0) {
   $__num = \func_num_args();
-  $__res = $dictOrd;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Bifunctor_Join_ordJoin"), recVars=[];
+  $__res = $dictOrd_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Data_Bifunctor_Join_newtypeJoin'] = function() { $v = (object)["Coercible0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
-\PhpursThunks::$thunks['Data_Bifunctor_Join_eqJoin'] = function() { $v = function($dictEq) {
+\PhpursThunks::$thunks['Data_Bifunctor_Join_eqJoin'] = function() { $v = function($dictEq_0) {
   $__num = \func_num_args();
-  $__res = $dictEq;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Bifunctor_Join_eqJoin"), recVars=[];
+  $__res = $dictEq_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Bifunctor_Join_bifunctorJoin'] = function() { $v = function($dictBifunctor) {
+\PhpursThunks::$thunks['Data_Bifunctor_Join_bifunctorJoin'] = function() { $v = function($dictBifunctor_0) {
   $__num = \func_num_args();
-  $__res = (object)["map" => (function() use (&$dictBifunctor) {
-  $__fn = function($f, $v = null) use (&$dictBifunctor, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Bifunctor_Join_bifunctorJoin"), recVars=[];
+  $__res = (object)["map" => (function() use ($dictBifunctor_0) {
+  $__fn = function($f_1, $v_2 = null) use ($dictBifunctor_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($dictBifunctor)->bimap)($f))($f))($v);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (((($dictBifunctor_0)->bimap)($f_1))($f_1))($v_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -157,37 +165,41 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Bifunctor_Join_biapplyJoin'] = function() { $v = function($dictBiapply) {
+\PhpursThunks::$thunks['Data_Bifunctor_Join_biapplyJoin'] = function() { $v = function($dictBiapply_0) {
   $__num = \func_num_args();
-  $__local_var_0 = (($dictBiapply)->Bifunctor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $bifunctorJoin1_1 = (object)["map" => (function() use (&$__local_var_0) {
-  $__fn = function($f, $v = null) use (&$__local_var_0, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Bifunctor_Join_biapplyJoin"), recVars=[];
+  $__local_var_1_0 = (($dictBiapply_0)->Bifunctor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $bifunctorJoin1_2_1 = (object)["map" => (function() use ($__local_var_1_0) {
+  $__fn = function($f_2, $v_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($__local_var_0)->bimap)($f))($f))($v);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (((($__local_var_1_0)->bimap)($f_2))($f_2))($v_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()];
-  $__res = (object)["apply" => (function() use (&$dictBiapply) {
-  $__fn = function($v, $v1 = null) use (&$dictBiapply, &$__fn) {
+  $__res = (object)["apply" => (function() use ($dictBiapply_0) {
+  $__fn = function($v_3, $v1_4 = null) use ($dictBiapply_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictBiapply)->biapply)($v))($v1);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($dictBiapply_0)->biapply)($v_3))($v1_4);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_0) use (&$bifunctorJoin1_1) {
+})(), "Functor0" => function($dollar__unused_3) use ($bifunctorJoin1_2_1) {
   $__num = \func_num_args();
-  $__res = $bifunctorJoin1_1;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $bifunctorJoin1_2_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -196,18 +208,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Bifunctor_Join_biapplicativeJoin'] = function() { $v = function($dictBiapplicative) {
+\PhpursThunks::$thunks['Data_Bifunctor_Join_biapplicativeJoin'] = function() { $v = function($dictBiapplicative_0) {
   $__num = \func_num_args();
-  $biapplyJoin1_0 = (($GLOBALS['Data_Bifunctor_Join_biapplyJoin'] ?? \PhpursThunks::eval('Data_Bifunctor_Join_biapplyJoin')))((($dictBiapplicative)->Biapply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = (object)["pure" => function($a) use (&$dictBiapplicative) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Bifunctor_Join_biapplicativeJoin"), recVars=[];
+  $biapplyJoin1_1_0 = (($GLOBALS['Data_Bifunctor_Join_biapplyJoin'] ?? \PhpursThunks::eval('Data_Bifunctor_Join_biapplyJoin')))((($dictBiapplicative_0)->Biapply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__res = (object)["pure" => function($a_2) use ($dictBiapplicative_0) {
   $__num = \func_num_args();
-  $__res = ((($dictBiapplicative)->bipure)($a))($a);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($dictBiapplicative_0)->bipure)($a_2))($a_2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Apply0" => function($dollar__unused_0) use (&$biapplyJoin1_0) {
+}, "Apply0" => function($dollar__unused_2) use ($biapplyJoin1_1_0) {
   $__num = \func_num_args();
-  $__res = $biapplyJoin1_0;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $biapplyJoin1_1_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

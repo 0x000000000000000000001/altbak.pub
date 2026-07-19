@@ -94,10 +94,11 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Date_Component_Gen_fromJust'] = function() { $v = function($v) {
+\PhpursThunks::$thunks['Data_Date_Component_Gen_fromJust'] = function() { $v = function($v_0) {
   $__num = \func_num_args();
-  if ((is_object($v) && (($v)->tag === "Just"))) {
-$__t0 = ($v)->value0;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Date_Component_Gen_fromJust"), recVars=[];
+  if ((is_object($v_0) && (($v_0)->tag === "Just"))) {
+$__t0 = ($v_0)->value0;
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t0 = null;
@@ -107,36 +108,41 @@ $__t0 = null;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Date_Component_Gen_genYear'] = function() { $v = function($dictMonadGen) {
+\PhpursThunks::$thunks['Data_Date_Component_Gen_genYear'] = function() { $v = function($dictMonadGen_0) {
   $__num = \func_num_args();
-  $__res = ((((((((((($dictMonadGen)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->map)(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Partial_Unsafe__unsafePartial'] ?? \PhpursThunks::eval('Partial_Unsafe__unsafePartial')))(function($dollar__unused_0) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Date_Component_Gen_genYear"), recVars=[];
+  $__res = ((((((((((($dictMonadGen_0)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->map)(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Partial_Unsafe__unsafePartial'] ?? \PhpursThunks::eval('Partial_Unsafe__unsafePartial')))(function($dollar__unused_1) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_Date_Component_Gen_fromJust'] ?? \PhpursThunks::eval('Data_Date_Component_Gen_fromJust'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-})))((($GLOBALS['Data_Date_Component_boundedEnumYear'] ?? \PhpursThunks::eval('Data_Date_Component_boundedEnumYear')))->toEnum)))(((($dictMonadGen)->chooseInt)(1900))(2100));
+})))((($GLOBALS['Data_Date_Component_boundedEnumYear'] ?? \PhpursThunks::eval('Data_Date_Component_boundedEnumYear')))->toEnum)))(((($dictMonadGen_0)->chooseInt)(1900))(2100));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Date_Component_Gen_genWeekday'] = function() { $v = function($dictMonadGen) {
+\PhpursThunks::$thunks['Data_Date_Component_Gen_genWeekday'] = function() { $v = function($dictMonadGen_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Enum_Gen_genBoundedEnum'] ?? \PhpursThunks::eval('Data_Enum_Gen_genBoundedEnum')))($dictMonadGen))(($GLOBALS['Data_Date_Component_boundedEnumWeekday'] ?? \PhpursThunks::eval('Data_Date_Component_boundedEnumWeekday')));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Date_Component_Gen_genWeekday"), recVars=[];
+  $__res = ((($GLOBALS['Data_Enum_Gen_genBoundedEnum'] ?? \PhpursThunks::eval('Data_Enum_Gen_genBoundedEnum')))($dictMonadGen_0))(($GLOBALS['Data_Date_Component_boundedEnumWeekday'] ?? \PhpursThunks::eval('Data_Date_Component_boundedEnumWeekday')));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Date_Component_Gen_genMonth'] = function() { $v = function($dictMonadGen) {
+\PhpursThunks::$thunks['Data_Date_Component_Gen_genMonth'] = function() { $v = function($dictMonadGen_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Enum_Gen_genBoundedEnum'] ?? \PhpursThunks::eval('Data_Enum_Gen_genBoundedEnum')))($dictMonadGen))(($GLOBALS['Data_Date_Component_boundedEnumMonth'] ?? \PhpursThunks::eval('Data_Date_Component_boundedEnumMonth')));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Date_Component_Gen_genMonth"), recVars=[];
+  $__res = ((($GLOBALS['Data_Enum_Gen_genBoundedEnum'] ?? \PhpursThunks::eval('Data_Enum_Gen_genBoundedEnum')))($dictMonadGen_0))(($GLOBALS['Data_Date_Component_boundedEnumMonth'] ?? \PhpursThunks::eval('Data_Date_Component_boundedEnumMonth')));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Date_Component_Gen_genDay'] = function() { $v = function($dictMonadGen) {
+\PhpursThunks::$thunks['Data_Date_Component_Gen_genDay'] = function() { $v = function($dictMonadGen_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Enum_Gen_genBoundedEnum'] ?? \PhpursThunks::eval('Data_Enum_Gen_genBoundedEnum')))($dictMonadGen))(($GLOBALS['Data_Date_Component_boundedEnumDay'] ?? \PhpursThunks::eval('Data_Date_Component_boundedEnumDay')));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Date_Component_Gen_genDay"), recVars=[];
+  $__res = ((($GLOBALS['Data_Enum_Gen_genBoundedEnum'] ?? \PhpursThunks::eval('Data_Enum_Gen_genBoundedEnum')))($dictMonadGen_0))(($GLOBALS['Data_Date_Component_boundedEnumDay'] ?? \PhpursThunks::eval('Data_Date_Component_boundedEnumDay')));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

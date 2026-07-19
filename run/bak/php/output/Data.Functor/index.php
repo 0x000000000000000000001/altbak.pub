@@ -89,30 +89,34 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Functor_map'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Data_Functor_map'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->map;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Functor_map"), recVars=[];
+  $__res = ($dict_0)->map;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Data_Functor_mapFlipped'] = function() { $v = (function() {
-  $__fn = function($dictFunctor, $fa = null, $f = null) use (&$__fn) {
+  $__fn = function($dictFunctor_0, $fa_1 = null, $f_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($dictFunctor)->map)($f))($fa);
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Functor_mapFlipped"), recVars=[];
+  $__res = ((($dictFunctor_0)->map)($f_2))($fa_1);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Data_Functor_void'] = function() { $v = function($dictFunctor) {
+\PhpursThunks::$thunks['Data_Functor_void'] = function() { $v = function($dictFunctor_0) {
   $__num = \func_num_args();
-  $__res = (($dictFunctor)->map)(function($v) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Functor_void"), recVars=[];
+  $__res = (($dictFunctor_0)->map)(function($v_1) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'));
   goto __end;;
   __end:
@@ -123,18 +127,20 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Data_Functor_voidLeft'] = function() { $v = (function() {
-  $__fn = function($dictFunctor, $f = null, $x = null) use (&$__fn) {
+  $__fn = function($dictFunctor_0, $f_1 = null, $x_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($dictFunctor)->map)(function($v) use (&$x) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Functor_voidLeft"), recVars=[];
+  $__res = ((($dictFunctor_0)->map)(function($v_3) use ($x_2) {
   $__num = \func_num_args();
-  $__res = $x;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $x_2;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))($f);
+}))($f_1);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -142,14 +148,16 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Data_Functor_voidRight'] = function() { $v = (function() {
-  $__fn = function($dictFunctor, $x = null) use (&$__fn) {
+  $__fn = function($dictFunctor_0, $x_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictFunctor)->map)(function($v) use (&$x) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Functor_voidRight"), recVars=[];
+  $__res = (($dictFunctor_0)->map)(function($v_2) use ($x_1) {
   $__num = \func_num_args();
-  $__res = $x;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $x_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -161,11 +169,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Data_Functor_functorProxy'] = function() { $v = (object)["map" => (function() {
-  $__fn = function($v, $v1 = null) use (&$__fn) {
+  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = new Phpurs_Data0("Proxy");
   goto __end;;
   __end:
@@ -176,18 +185,20 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 \PhpursThunks::$thunks['Data_Functor_functorFn'] = function() { $v = (object)["map" => ($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl'))]; return $v; };
 \PhpursThunks::$thunks['Data_Functor_functorArray'] = function() { $v = (object)["map" => ($GLOBALS['Data_Functor_arrayMap'] ?? \PhpursThunks::eval('Data_Functor_arrayMap'))]; return $v; };
 \PhpursThunks::$thunks['Data_Functor_flap'] = function() { $v = (function() {
-  $__fn = function($dictFunctor, $ff = null, $x = null) use (&$__fn) {
+  $__fn = function($dictFunctor_0, $ff_1 = null, $x_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($dictFunctor)->map)(function($f) use (&$x) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Functor_flap"), recVars=[];
+  $__res = ((($dictFunctor_0)->map)(function($f_3) use ($x_2) {
   $__num = \func_num_args();
-  $__res = ($f)($x);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ($f_3)($x_2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))($ff);
+}))($ff_1);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;

@@ -138,19 +138,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Test_AstTree_eval'] = function() { $v = function($v) {
+\PhpursThunks::$thunks['Test_AstTree_eval'] = function() { $v = function($v_0) {
   $__num = \func_num_args();
-  if ((is_object($v) && (($v)->tag === "Val"))) {
-$__t0 = ($v)->value0;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Test_AstTree_eval"), recVars=["Test_AstTree_eval"];
+  while (true) {
+if ((is_object($v_0) && (($v_0)->tag === "Val"))) {
+$__t0 = ($v_0)->value0;
 } else {
-if ((is_object($v) && (($v)->tag === "Add"))) {
-$__t0 = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))((($GLOBALS['Test_AstTree_eval'] ?? \PhpursThunks::eval('Test_AstTree_eval')))(($v)->value0)))((($GLOBALS['Test_AstTree_eval'] ?? \PhpursThunks::eval('Test_AstTree_eval')))(($v)->value1));
+if ((is_object($v_0) && (($v_0)->tag === "Add"))) {
+$__t0 = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))((($GLOBALS['Test_AstTree_eval'] ?? \PhpursThunks::eval('Test_AstTree_eval')))(($v_0)->value0)))((($GLOBALS['Test_AstTree_eval'] ?? \PhpursThunks::eval('Test_AstTree_eval')))(($v_0)->value1));
 } else {
-if ((is_object($v) && (($v)->tag === "Mul"))) {
-$__t0 = ((($GLOBALS['Data_Semiring_intMul'] ?? \PhpursThunks::eval('Data_Semiring_intMul')))((($GLOBALS['Test_AstTree_eval'] ?? \PhpursThunks::eval('Test_AstTree_eval')))(($v)->value0)))((($GLOBALS['Test_AstTree_eval'] ?? \PhpursThunks::eval('Test_AstTree_eval')))(($v)->value1));
+if ((is_object($v_0) && (($v_0)->tag === "Mul"))) {
+$__t0 = ((($GLOBALS['Data_Semiring_intMul'] ?? \PhpursThunks::eval('Data_Semiring_intMul')))((($GLOBALS['Test_AstTree_eval'] ?? \PhpursThunks::eval('Test_AstTree_eval')))(($v_0)->value0)))((($GLOBALS['Test_AstTree_eval'] ?? \PhpursThunks::eval('Test_AstTree_eval')))(($v_0)->value1));
 } else {
-if ((is_object($v) && (($v)->tag === "Sub"))) {
-$__t0 = ((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))((($GLOBALS['Test_AstTree_eval'] ?? \PhpursThunks::eval('Test_AstTree_eval')))(($v)->value0)))((($GLOBALS['Test_AstTree_eval'] ?? \PhpursThunks::eval('Test_AstTree_eval')))(($v)->value1));
+if ((is_object($v_0) && (($v_0)->tag === "Sub"))) {
+$__t0 = ((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))((($GLOBALS['Test_AstTree_eval'] ?? \PhpursThunks::eval('Test_AstTree_eval')))(($v_0)->value0)))((($GLOBALS['Test_AstTree_eval'] ?? \PhpursThunks::eval('Test_AstTree_eval')))(($v_0)->value1));
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t0 = null;
@@ -158,24 +160,28 @@ $__t0 = null;
 };
 };
 };
-  $__res = $__t0;
-  goto __end;;
+$__res = $__t0;
+goto __end;;
+};
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Test_AstTree_describe'] = function() { $v = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))("AST Evaluation:"); return $v; };
-\PhpursThunks::$thunks['Test_AstTree_buildTree'] = function() { $v = function($v) {
+\PhpursThunks::$thunks['Test_AstTree_buildTree'] = function() { $v = function($v_0) {
   $__num = \func_num_args();
-  switch ($v) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Test_AstTree_buildTree"), recVars=["Test_AstTree_buildTree"];
+  while (true) {
+switch ($v_0) {
 case 0:
 $__t0 = new Phpurs_Data1("Val", 1);
 break;
 default:
-$__t0 = new Phpurs_Data2("Add", new Phpurs_Data2("Mul", new Phpurs_Data1("Val", $v), (($GLOBALS['Test_AstTree_buildTree'] ?? \PhpursThunks::eval('Test_AstTree_buildTree')))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v))(1))), new Phpurs_Data2("Sub", (($GLOBALS['Test_AstTree_buildTree'] ?? \PhpursThunks::eval('Test_AstTree_buildTree')))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v))(1)), new Phpurs_Data1("Val", 1)));
+$__t0 = new Phpurs_Data2("Add", new Phpurs_Data2("Mul", new Phpurs_Data1("Val", $v_0), (($GLOBALS['Test_AstTree_buildTree'] ?? \PhpursThunks::eval('Test_AstTree_buildTree')))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v_0))(1))), new Phpurs_Data2("Sub", (($GLOBALS['Test_AstTree_buildTree'] ?? \PhpursThunks::eval('Test_AstTree_buildTree')))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v_0))(1)), new Phpurs_Data1("Val", 1)));
 break;
 };
-  $__res = $__t0;
-  goto __end;;
+$__res = $__t0;
+goto __end;;
+};
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };

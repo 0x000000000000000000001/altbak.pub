@@ -90,39 +90,45 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Control_Monad_Writer_Class_tell'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Control_Monad_Writer_Class_tell'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->tell;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_Writer_Class_tell"), recVars=[];
+  $__res = ($dict_0)->tell;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Writer_Class_pass'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Control_Monad_Writer_Class_pass'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->pass;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_Writer_Class_pass"), recVars=[];
+  $__res = ($dict_0)->pass;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Writer_Class_listen'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Control_Monad_Writer_Class_listen'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->listen;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_Writer_Class_listen"), recVars=[];
+  $__res = ($dict_0)->listen;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Writer_Class_listens'] = function() { $v = function($dictMonadWriter) {
+\PhpursThunks::$thunks['Control_Monad_Writer_Class_listens'] = function() { $v = function($dictMonadWriter_0) {
   $__num = \func_num_args();
-  $Monad1_0 = (((($dictMonadWriter)->MonadTell1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Monad1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $__res = (function() use (&$Monad1_0, &$dictMonadWriter) {
-  $__fn = function($f, $m = null) use (&$Monad1_0, &$dictMonadWriter, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_Writer_Class_listens"), recVars=[];
+  $Monad1_1_0 = (((($dictMonadWriter_0)->MonadTell1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Monad1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__res = (function() use ($Monad1_1_0, $dictMonadWriter_0) {
+  $__fn = function($f_2, $m_3 = null) use ($Monad1_1_0, $dictMonadWriter_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((($Monad1_0)->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->bind)((($dictMonadWriter)->listen)($m)))(function($v) use (&$Monad1_0, &$f) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((((($Monad1_1_0)->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->bind)((($dictMonadWriter_0)->listen)($m_3)))(function($v_4) use ($Monad1_1_0, $f_2) {
   $__num = \func_num_args();
-  $__res = (((($Monad1_0)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->pure)(new Phpurs_Data2("Tuple", ($v)->value0, ($f)(($v)->value1)));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (((($Monad1_1_0)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->pure)(new Phpurs_Data2("Tuple", ($v_4)->value0, ($f_2)(($v_4)->value1)));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -137,18 +143,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Writer_Class_censor'] = function() { $v = function($dictMonadWriter) {
+\PhpursThunks::$thunks['Control_Monad_Writer_Class_censor'] = function() { $v = function($dictMonadWriter_0) {
   $__num = \func_num_args();
-  $Monad1_0 = (((($dictMonadWriter)->MonadTell1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Monad1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $__res = (function() use (&$Monad1_0, &$dictMonadWriter) {
-  $__fn = function($f, $m = null) use (&$Monad1_0, &$dictMonadWriter, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_Writer_Class_censor"), recVars=[];
+  $Monad1_1_0 = (((($dictMonadWriter_0)->MonadTell1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Monad1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__res = (function() use ($Monad1_1_0, $dictMonadWriter_0) {
+  $__fn = function($f_2, $m_3 = null) use ($Monad1_1_0, $dictMonadWriter_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictMonadWriter)->pass)(((((($Monad1_0)->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->bind)($m))(function($a) use (&$Monad1_0, &$f) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($dictMonadWriter_0)->pass)(((((($Monad1_1_0)->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->bind)($m_3))(function($a_4) use ($Monad1_1_0, $f_2) {
   $__num = \func_num_args();
-  $__res = (((($Monad1_0)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->pure)(new Phpurs_Data2("Tuple", $a, $f));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (((($Monad1_1_0)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->pure)(new Phpurs_Data2("Tuple", $a_4, $f_2));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

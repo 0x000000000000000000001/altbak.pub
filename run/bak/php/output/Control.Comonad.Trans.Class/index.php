@@ -87,15 +87,17 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Control_Comonad_Trans_Class_lower'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Control_Comonad_Trans_Class_lower'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->lower;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Comonad_Trans_Class_lower"), recVars=[];
+  $__res = ($dict_0)->lower;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Trans_Class_comonadTransIdentityT'] = function() { $v = (object)["lower" => function($dictComonad) {
+\PhpursThunks::$thunks['Control_Comonad_Trans_Class_comonadTransIdentityT'] = function() { $v = (object)["lower" => function($dictComonad_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Control_Monad_Identity_Trans_runIdentityT'] ?? \PhpursThunks::eval('Control_Monad_Identity_Trans_runIdentityT'));
   goto __end;;
   __end:

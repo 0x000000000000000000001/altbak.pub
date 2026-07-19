@@ -118,42 +118,43 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Data_DateTime_toRecord'] = function() { $v = function($v) {
+\PhpursThunks::$thunks['Data_DateTime_toRecord'] = function() { $v = function($v_0) {
   $__num = \func_num_args();
-  if ((is_object((($v)->value0)->value1) && (((($v)->value0)->value1)->tag === "January"))) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_DateTime_toRecord"), recVars=[];
+  if ((is_object((($v_0)->value0)->value1) && (((($v_0)->value0)->value1)->tag === "January"))) {
 $__t0 = 1;
 } else {
-if ((is_object((($v)->value0)->value1) && (((($v)->value0)->value1)->tag === "February"))) {
+if ((is_object((($v_0)->value0)->value1) && (((($v_0)->value0)->value1)->tag === "February"))) {
 $__t0 = 2;
 } else {
-if ((is_object((($v)->value0)->value1) && (((($v)->value0)->value1)->tag === "March"))) {
+if ((is_object((($v_0)->value0)->value1) && (((($v_0)->value0)->value1)->tag === "March"))) {
 $__t0 = 3;
 } else {
-if ((is_object((($v)->value0)->value1) && (((($v)->value0)->value1)->tag === "April"))) {
+if ((is_object((($v_0)->value0)->value1) && (((($v_0)->value0)->value1)->tag === "April"))) {
 $__t0 = 4;
 } else {
-if ((is_object((($v)->value0)->value1) && (((($v)->value0)->value1)->tag === "May"))) {
+if ((is_object((($v_0)->value0)->value1) && (((($v_0)->value0)->value1)->tag === "May"))) {
 $__t0 = 5;
 } else {
-if ((is_object((($v)->value0)->value1) && (((($v)->value0)->value1)->tag === "June"))) {
+if ((is_object((($v_0)->value0)->value1) && (((($v_0)->value0)->value1)->tag === "June"))) {
 $__t0 = 6;
 } else {
-if ((is_object((($v)->value0)->value1) && (((($v)->value0)->value1)->tag === "July"))) {
+if ((is_object((($v_0)->value0)->value1) && (((($v_0)->value0)->value1)->tag === "July"))) {
 $__t0 = 7;
 } else {
-if ((is_object((($v)->value0)->value1) && (((($v)->value0)->value1)->tag === "August"))) {
+if ((is_object((($v_0)->value0)->value1) && (((($v_0)->value0)->value1)->tag === "August"))) {
 $__t0 = 8;
 } else {
-if ((is_object((($v)->value0)->value1) && (((($v)->value0)->value1)->tag === "September"))) {
+if ((is_object((($v_0)->value0)->value1) && (((($v_0)->value0)->value1)->tag === "September"))) {
 $__t0 = 9;
 } else {
-if ((is_object((($v)->value0)->value1) && (((($v)->value0)->value1)->tag === "October"))) {
+if ((is_object((($v_0)->value0)->value1) && (((($v_0)->value0)->value1)->tag === "October"))) {
 $__t0 = 10;
 } else {
-if ((is_object((($v)->value0)->value1) && (((($v)->value0)->value1)->tag === "November"))) {
+if ((is_object((($v_0)->value0)->value1) && (((($v_0)->value0)->value1)->tag === "November"))) {
 $__t0 = 11;
 } else {
-if ((is_object((($v)->value0)->value1) && (((($v)->value0)->value1)->tag === "December"))) {
+if ((is_object((($v_0)->value0)->value1) && (((($v_0)->value0)->value1)->tag === "December"))) {
 $__t0 = 12;
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -170,32 +171,35 @@ $__t0 = null;
 };
 };
 };
-  $__res = (object)["year" => (($v)->value0)->value0, "month" => $__t0, "day" => (($v)->value0)->value2, "hour" => (($v)->value1)->value0, "minute" => (($v)->value1)->value1, "second" => (($v)->value1)->value2, "millisecond" => (($v)->value1)->value3];
+  $__res = (object)["year" => (($v_0)->value0)->value0, "month" => $__t0, "day" => (($v_0)->value0)->value2, "hour" => (($v_0)->value1)->value0, "minute" => (($v_0)->value1)->value1, "second" => (($v_0)->value1)->value2, "millisecond" => (($v_0)->value1)->value3];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_DateTime_time'] = function() { $v = function($v) {
+\PhpursThunks::$thunks['Data_DateTime_time'] = function() { $v = function($v_0) {
   $__num = \func_num_args();
-  $__res = ($v)->value1;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_DateTime_time"), recVars=[];
+  $__res = ($v_0)->value1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_DateTime_showDateTime'] = function() { $v = (object)["show" => function($v) {
+\PhpursThunks::$thunks['Data_DateTime_showDateTime'] = function() { $v = (object)["show" => function($v_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("(DateTime "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))(((($GLOBALS['Data_Date_showDate'] ?? \PhpursThunks::eval('Data_Date_showDate')))->show)(($v)->value0)))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))(" "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))(((($GLOBALS['Data_Time_showTime'] ?? \PhpursThunks::eval('Data_Time_showTime')))->show)(($v)->value1)))(")"))));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("(DateTime "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))(((($GLOBALS['Data_Date_showDate'] ?? \PhpursThunks::eval('Data_Date_showDate')))->show)(($v_0)->value0)))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))(" "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))(((($GLOBALS['Data_Time_showTime'] ?? \PhpursThunks::eval('Data_Time_showTime')))->show)(($v_0)->value1)))(")"))));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
 \PhpursThunks::$thunks['Data_DateTime_modifyTimeF'] = function() { $v = (function() {
-  $__fn = function($dictFunctor, $f = null, $v = null) use (&$__fn) {
+  $__fn = function($dictFunctor_0, $f_1 = null, $v_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($dictFunctor)->map)((($GLOBALS['Data_DateTime_DateTime'] ?? \PhpursThunks::eval('Data_DateTime_DateTime')))(($v)->value0)))(($f)(($v)->value1));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_DateTime_modifyTimeF"), recVars=[];
+  $__res = ((($dictFunctor_0)->map)((($GLOBALS['Data_DateTime_DateTime'] ?? \PhpursThunks::eval('Data_DateTime_DateTime')))(($v_2)->value0)))(($f_1)(($v_2)->value1));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -203,12 +207,13 @@ $__t0 = null;
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Data_DateTime_modifyTime'] = function() { $v = (function() {
-  $__fn = function($f, $v = null) use (&$__fn) {
+  $__fn = function($f_0, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("DateTime", ($v)->value0, ($f)(($v)->value1));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_DateTime_modifyTime"), recVars=[];
+  $__res = new Phpurs_Data2("DateTime", ($v_1)->value0, ($f_0)(($v_1)->value1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -216,19 +221,21 @@ $__t0 = null;
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Data_DateTime_modifyDateF'] = function() { $v = (function() {
-  $__fn = function($dictFunctor, $f = null, $v = null) use (&$__fn) {
+  $__fn = function($dictFunctor_0, $f_1 = null, $v_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__local_var_0 = ($v)->value1;
-  $__res = ((($dictFunctor)->map)(function($a) use (&$__local_var_0) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_DateTime_modifyDateF"), recVars=[];
+  $__local_var_3_0 = ($v_2)->value1;
+  $__res = ((($dictFunctor_0)->map)(function($a_4) use ($__local_var_3_0) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("DateTime", $a, $__local_var_0);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = new Phpurs_Data2("DateTime", $a_4, $__local_var_3_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(($f)(($v)->value0));
+}))(($f_1)(($v_2)->value0));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -236,12 +243,13 @@ $__t0 = null;
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Data_DateTime_modifyDate'] = function() { $v = (function() {
-  $__fn = function($f, $v = null) use (&$__fn) {
+  $__fn = function($f_0, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("DateTime", ($f)(($v)->value0), ($v)->value1);
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_DateTime_modifyDate"), recVars=[];
+  $__res = new Phpurs_Data2("DateTime", ($f_0)(($v_1)->value0), ($v_1)->value1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -249,12 +257,13 @@ $__t0 = null;
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Data_DateTime_eqDateTime'] = function() { $v = (object)["eq" => (function() {
-  $__fn = function($x, $y = null) use (&$__fn) {
+  $__fn = function($x_0, $y_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_HeytingAlgebra_boolConj'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolConj')))((((($GLOBALS['Data_Date_eqDate'] ?? \PhpursThunks::eval('Data_Date_eqDate')))->eq)(($x)->value0))(($y)->value0)))((((($GLOBALS['Data_Time_eqTime'] ?? \PhpursThunks::eval('Data_Time_eqTime')))->eq)(($x)->value1))(($y)->value1));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Data_HeytingAlgebra_boolConj'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolConj')))((((($GLOBALS['Data_Date_eqDate'] ?? \PhpursThunks::eval('Data_Date_eqDate')))->eq)(($x_0)->value0))(($y_1)->value0)))((((($GLOBALS['Data_Time_eqTime'] ?? \PhpursThunks::eval('Data_Time_eqTime')))->eq)(($x_0)->value1))(($y_1)->value1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -262,19 +271,20 @@ $__t0 = null;
   return $__fn;
 })()]; return $v; };
 \PhpursThunks::$thunks['Data_DateTime_ordDateTime'] = function() { $v = (object)["compare" => (function() {
-  $__fn = function($x, $y = null) use (&$__fn) {
+  $__fn = function($x_0, $y_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $v_0 = (((($GLOBALS['Data_Date_ordDate'] ?? \PhpursThunks::eval('Data_Date_ordDate')))->compare)(($x)->value0))(($y)->value0);
-  if ((is_object($v_0) && (($v_0)->tag === "LT"))) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $v_2_0 = (((($GLOBALS['Data_Date_ordDate'] ?? \PhpursThunks::eval('Data_Date_ordDate')))->compare)(($x_0)->value0))(($y_1)->value0);
+  if ((is_object($v_2_0) && (($v_2_0)->tag === "LT"))) {
 $__t1 = new Phpurs_Data0("LT");
 } else {
-if ((is_object($v_0) && (($v_0)->tag === "GT"))) {
+if ((is_object($v_2_0) && (($v_2_0)->tag === "GT"))) {
 $__t1 = new Phpurs_Data0("GT");
 } else {
-$__t1 = (((($GLOBALS['Data_Time_ordTime'] ?? \PhpursThunks::eval('Data_Time_ordTime')))->compare)(($x)->value1))(($y)->value1);
+$__t1 = (((($GLOBALS['Data_Time_ordTime'] ?? \PhpursThunks::eval('Data_Time_ordTime')))->compare)(($x_0)->value1))(($y_1)->value1);
 };
 };
   $__res = $__t1;
@@ -285,68 +295,73 @@ $__t1 = (((($GLOBALS['Data_Time_ordTime'] ?? \PhpursThunks::eval('Data_Time_ordT
   return $__fn;
 })(), "Eq0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_DateTime_eqDateTime'] ?? \PhpursThunks::eval('Data_DateTime_eqDateTime'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
 \PhpursThunks::$thunks['Data_DateTime_diff'] = function() { $v = (function() {
-  $__fn = function($dictDuration, $dt1 = null, $dt2 = null) use (&$__fn) {
+  $__fn = function($dictDuration_0, $dt1_1 = null, $dt2_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($dictDuration)->toDuration)((((($GLOBALS['Data_Function_Uncurried_runFn2'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn2')))(($GLOBALS['Data_DateTime_calcDiff'] ?? \PhpursThunks::eval('Data_DateTime_calcDiff'))))((($GLOBALS['Data_DateTime_toRecord'] ?? \PhpursThunks::eval('Data_DateTime_toRecord')))($dt1)))((($GLOBALS['Data_DateTime_toRecord'] ?? \PhpursThunks::eval('Data_DateTime_toRecord')))($dt2)));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_DateTime_diff"), recVars=[];
+  $__res = (($dictDuration_0)->toDuration)((((($GLOBALS['Data_Function_Uncurried_runFn2'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn2')))(($GLOBALS['Data_DateTime_calcDiff'] ?? \PhpursThunks::eval('Data_DateTime_calcDiff'))))((($GLOBALS['Data_DateTime_toRecord'] ?? \PhpursThunks::eval('Data_DateTime_toRecord')))($dt1_1)))((($GLOBALS['Data_DateTime_toRecord'] ?? \PhpursThunks::eval('Data_DateTime_toRecord')))($dt2_2)));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Data_DateTime_date'] = function() { $v = function($v) {
+\PhpursThunks::$thunks['Data_DateTime_date'] = function() { $v = function($v_0) {
   $__num = \func_num_args();
-  $__res = ($v)->value0;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_DateTime_date"), recVars=[];
+  $__res = ($v_0)->value0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Data_DateTime_boundedDateTime'] = function() { $v = (object)["bottom" => new Phpurs_Data2("DateTime", new Phpurs_Data3("Date", (($GLOBALS['Data_Date_Component_boundedYear'] ?? \PhpursThunks::eval('Data_Date_Component_boundedYear')))->bottom, new Phpurs_Data0("January"), 1), new Phpurs_Data4("Time", 0, 0, 0, 0)), "top" => new Phpurs_Data2("DateTime", new Phpurs_Data3("Date", 275759, new Phpurs_Data0("December"), 31), new Phpurs_Data4("Time", 23, 59, 59, 999)), "Ord0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_DateTime_ordDateTime'] ?? \PhpursThunks::eval('Data_DateTime_ordDateTime'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
 \PhpursThunks::$thunks['Data_DateTime_adjust'] = function() { $v = (function() {
-  $__fn = function($dictDuration, $d = null, $dt = null) use (&$__fn) {
+  $__fn = function($dictDuration_0, $d_1 = null, $dt_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__local_var_0 = ((((($GLOBALS['Data_DateTime_adjustImpl'] ?? \PhpursThunks::eval('Data_DateTime_adjustImpl')))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just'))))(new Phpurs_Data0("Nothing")))((($dictDuration)->fromDuration)($d)))((($GLOBALS['Data_DateTime_toRecord'] ?? \PhpursThunks::eval('Data_DateTime_toRecord')))($dt));
-  if ((is_object($__local_var_0) && (($__local_var_0)->tag === "Just"))) {
-$__local_var_2 = ((($GLOBALS['Data_Date_Component_boundedEnumYear'] ?? \PhpursThunks::eval('Data_Date_Component_boundedEnumYear')))->toEnum)((($__local_var_0)->value0)->year);
-if ((is_object($__local_var_2) && (($__local_var_2)->tag === "Just"))) {
-$__t3 = new Phpurs_Data1("Just", (($GLOBALS['Data_Date_exactDate'] ?? \PhpursThunks::eval('Data_Date_exactDate')))(($__local_var_2)->value0));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_DateTime_adjust"), recVars=[];
+  $__local_var_3_0 = ((((($GLOBALS['Data_DateTime_adjustImpl'] ?? \PhpursThunks::eval('Data_DateTime_adjustImpl')))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just'))))(new Phpurs_Data0("Nothing")))((($dictDuration_0)->fromDuration)($d_1)))((($GLOBALS['Data_DateTime_toRecord'] ?? \PhpursThunks::eval('Data_DateTime_toRecord')))($dt_2));
+  if ((is_object($__local_var_3_0) && (($__local_var_3_0)->tag === "Just"))) {
+$__local_var_4_2 = ((($GLOBALS['Data_Date_Component_boundedEnumYear'] ?? \PhpursThunks::eval('Data_Date_Component_boundedEnumYear')))->toEnum)((($__local_var_3_0)->value0)->year);
+if ((is_object($__local_var_4_2) && (($__local_var_4_2)->tag === "Just"))) {
+$__t3 = new Phpurs_Data1("Just", (($GLOBALS['Data_Date_exactDate'] ?? \PhpursThunks::eval('Data_Date_exactDate')))(($__local_var_4_2)->value0));
 } else {
 $__t3 = new Phpurs_Data0("Nothing");
 };
-$__local_var_4 = $__t3;
-if (((($__local_var_0)->value0)->month === 1)) {
-if ((is_object($__local_var_4) && (($__local_var_4)->tag === "Just"))) {
-$__local_var_7 = ((($GLOBALS['Data_Date_Component_boundedEnumDay'] ?? \PhpursThunks::eval('Data_Date_Component_boundedEnumDay')))->toEnum)((($__local_var_0)->value0)->day);
-if ((is_object($__local_var_7) && (($__local_var_7)->tag === "Just"))) {
-$__local_var_9 = ((($__local_var_4)->value0)(new Phpurs_Data0("January")))(($__local_var_7)->value0);
-if ((is_object($__local_var_9) && (($__local_var_9)->tag === "Just"))) {
-$__local_var_11 = ((($GLOBALS['Data_Time_Component_boundedEnumHour'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumHour')))->toEnum)((($__local_var_0)->value0)->hour);
-if ((is_object($__local_var_11) && (($__local_var_11)->tag === "Just"))) {
-$__local_var_13 = ((($GLOBALS['Data_Time_Component_boundedEnumMinute'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMinute')))->toEnum)((($__local_var_0)->value0)->minute);
-if ((is_object($__local_var_13) && (($__local_var_13)->tag === "Just"))) {
-$__local_var_15 = ((($GLOBALS['Data_Time_Component_boundedEnumSecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumSecond')))->toEnum)((($__local_var_0)->value0)->second);
-if ((is_object($__local_var_15) && (($__local_var_15)->tag === "Just"))) {
-$__local_var_17 = ((($GLOBALS['Data_Time_Component_boundedEnumMillisecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMillisecond')))->toEnum)((($__local_var_0)->value0)->millisecond);
-if ((is_object($__local_var_17) && (($__local_var_17)->tag === "Just"))) {
-$__t18 = new Phpurs_Data1("Just", new Phpurs_Data2("DateTime", ($__local_var_9)->value0, new Phpurs_Data4("Time", ($__local_var_11)->value0, ($__local_var_13)->value0, ($__local_var_15)->value0, ($__local_var_17)->value0)));
+$__local_var_5_3 = $__t3;
+if (((($__local_var_3_0)->value0)->month === 1)) {
+if ((is_object($__local_var_5_3) && (($__local_var_5_3)->tag === "Just"))) {
+$__local_var_6_7 = ((($GLOBALS['Data_Date_Component_boundedEnumDay'] ?? \PhpursThunks::eval('Data_Date_Component_boundedEnumDay')))->toEnum)((($__local_var_3_0)->value0)->day);
+if ((is_object($__local_var_6_7) && (($__local_var_6_7)->tag === "Just"))) {
+$__local_var_7_9 = ((($__local_var_5_3)->value0)(new Phpurs_Data0("January")))(($__local_var_6_7)->value0);
+if ((is_object($__local_var_7_9) && (($__local_var_7_9)->tag === "Just"))) {
+$__local_var_8_11 = ((($GLOBALS['Data_Time_Component_boundedEnumHour'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumHour')))->toEnum)((($__local_var_3_0)->value0)->hour);
+if ((is_object($__local_var_8_11) && (($__local_var_8_11)->tag === "Just"))) {
+$__local_var_9_13 = ((($GLOBALS['Data_Time_Component_boundedEnumMinute'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMinute')))->toEnum)((($__local_var_3_0)->value0)->minute);
+if ((is_object($__local_var_9_13) && (($__local_var_9_13)->tag === "Just"))) {
+$__local_var_10_15 = ((($GLOBALS['Data_Time_Component_boundedEnumSecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumSecond')))->toEnum)((($__local_var_3_0)->value0)->second);
+if ((is_object($__local_var_10_15) && (($__local_var_10_15)->tag === "Just"))) {
+$__local_var_11_17 = ((($GLOBALS['Data_Time_Component_boundedEnumMillisecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMillisecond')))->toEnum)((($__local_var_3_0)->value0)->millisecond);
+if ((is_object($__local_var_11_17) && (($__local_var_11_17)->tag === "Just"))) {
+$__t18 = new Phpurs_Data1("Just", new Phpurs_Data2("DateTime", ($__local_var_7_9)->value0, new Phpurs_Data4("Time", ($__local_var_8_11)->value0, ($__local_var_9_13)->value0, ($__local_var_10_15)->value0, ($__local_var_11_17)->value0)));
 } else {
 $__t18 = new Phpurs_Data0("Nothing");
 };
@@ -372,7 +387,7 @@ $__t8 = new Phpurs_Data0("Nothing");
 };
 $__t6 = $__t8;
 } else {
-if ((is_object($__local_var_4) && (($__local_var_4)->tag === "Nothing"))) {
+if ((is_object($__local_var_5_3) && (($__local_var_5_3)->tag === "Nothing"))) {
 $__t6 = new Phpurs_Data0("Nothing");
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -381,21 +396,21 @@ $__t6 = null;
 };
 $__t5 = $__t6;
 } else {
-if (((($__local_var_0)->value0)->month === 2)) {
-if ((is_object($__local_var_4) && (($__local_var_4)->tag === "Just"))) {
-$__local_var_20 = ((($GLOBALS['Data_Date_Component_boundedEnumDay'] ?? \PhpursThunks::eval('Data_Date_Component_boundedEnumDay')))->toEnum)((($__local_var_0)->value0)->day);
-if ((is_object($__local_var_20) && (($__local_var_20)->tag === "Just"))) {
-$__local_var_22 = ((($__local_var_4)->value0)(new Phpurs_Data0("February")))(($__local_var_20)->value0);
-if ((is_object($__local_var_22) && (($__local_var_22)->tag === "Just"))) {
-$__local_var_24 = ((($GLOBALS['Data_Time_Component_boundedEnumHour'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumHour')))->toEnum)((($__local_var_0)->value0)->hour);
-if ((is_object($__local_var_24) && (($__local_var_24)->tag === "Just"))) {
-$__local_var_26 = ((($GLOBALS['Data_Time_Component_boundedEnumMinute'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMinute')))->toEnum)((($__local_var_0)->value0)->minute);
-if ((is_object($__local_var_26) && (($__local_var_26)->tag === "Just"))) {
-$__local_var_28 = ((($GLOBALS['Data_Time_Component_boundedEnumSecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumSecond')))->toEnum)((($__local_var_0)->value0)->second);
-if ((is_object($__local_var_28) && (($__local_var_28)->tag === "Just"))) {
-$__local_var_30 = ((($GLOBALS['Data_Time_Component_boundedEnumMillisecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMillisecond')))->toEnum)((($__local_var_0)->value0)->millisecond);
-if ((is_object($__local_var_30) && (($__local_var_30)->tag === "Just"))) {
-$__t31 = new Phpurs_Data1("Just", new Phpurs_Data2("DateTime", ($__local_var_22)->value0, new Phpurs_Data4("Time", ($__local_var_24)->value0, ($__local_var_26)->value0, ($__local_var_28)->value0, ($__local_var_30)->value0)));
+if (((($__local_var_3_0)->value0)->month === 2)) {
+if ((is_object($__local_var_5_3) && (($__local_var_5_3)->tag === "Just"))) {
+$__local_var_6_20 = ((($GLOBALS['Data_Date_Component_boundedEnumDay'] ?? \PhpursThunks::eval('Data_Date_Component_boundedEnumDay')))->toEnum)((($__local_var_3_0)->value0)->day);
+if ((is_object($__local_var_6_20) && (($__local_var_6_20)->tag === "Just"))) {
+$__local_var_7_22 = ((($__local_var_5_3)->value0)(new Phpurs_Data0("February")))(($__local_var_6_20)->value0);
+if ((is_object($__local_var_7_22) && (($__local_var_7_22)->tag === "Just"))) {
+$__local_var_8_24 = ((($GLOBALS['Data_Time_Component_boundedEnumHour'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumHour')))->toEnum)((($__local_var_3_0)->value0)->hour);
+if ((is_object($__local_var_8_24) && (($__local_var_8_24)->tag === "Just"))) {
+$__local_var_9_26 = ((($GLOBALS['Data_Time_Component_boundedEnumMinute'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMinute')))->toEnum)((($__local_var_3_0)->value0)->minute);
+if ((is_object($__local_var_9_26) && (($__local_var_9_26)->tag === "Just"))) {
+$__local_var_10_28 = ((($GLOBALS['Data_Time_Component_boundedEnumSecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumSecond')))->toEnum)((($__local_var_3_0)->value0)->second);
+if ((is_object($__local_var_10_28) && (($__local_var_10_28)->tag === "Just"))) {
+$__local_var_11_30 = ((($GLOBALS['Data_Time_Component_boundedEnumMillisecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMillisecond')))->toEnum)((($__local_var_3_0)->value0)->millisecond);
+if ((is_object($__local_var_11_30) && (($__local_var_11_30)->tag === "Just"))) {
+$__t31 = new Phpurs_Data1("Just", new Phpurs_Data2("DateTime", ($__local_var_7_22)->value0, new Phpurs_Data4("Time", ($__local_var_8_24)->value0, ($__local_var_9_26)->value0, ($__local_var_10_28)->value0, ($__local_var_11_30)->value0)));
 } else {
 $__t31 = new Phpurs_Data0("Nothing");
 };
@@ -421,7 +436,7 @@ $__t21 = new Phpurs_Data0("Nothing");
 };
 $__t19 = $__t21;
 } else {
-if ((is_object($__local_var_4) && (($__local_var_4)->tag === "Nothing"))) {
+if ((is_object($__local_var_5_3) && (($__local_var_5_3)->tag === "Nothing"))) {
 $__t19 = new Phpurs_Data0("Nothing");
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -430,21 +445,21 @@ $__t19 = null;
 };
 $__t5 = $__t19;
 } else {
-if (((($__local_var_0)->value0)->month === 3)) {
-if ((is_object($__local_var_4) && (($__local_var_4)->tag === "Just"))) {
-$__local_var_33 = ((($GLOBALS['Data_Date_Component_boundedEnumDay'] ?? \PhpursThunks::eval('Data_Date_Component_boundedEnumDay')))->toEnum)((($__local_var_0)->value0)->day);
-if ((is_object($__local_var_33) && (($__local_var_33)->tag === "Just"))) {
-$__local_var_35 = ((($__local_var_4)->value0)(new Phpurs_Data0("March")))(($__local_var_33)->value0);
-if ((is_object($__local_var_35) && (($__local_var_35)->tag === "Just"))) {
-$__local_var_37 = ((($GLOBALS['Data_Time_Component_boundedEnumHour'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumHour')))->toEnum)((($__local_var_0)->value0)->hour);
-if ((is_object($__local_var_37) && (($__local_var_37)->tag === "Just"))) {
-$__local_var_39 = ((($GLOBALS['Data_Time_Component_boundedEnumMinute'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMinute')))->toEnum)((($__local_var_0)->value0)->minute);
-if ((is_object($__local_var_39) && (($__local_var_39)->tag === "Just"))) {
-$__local_var_41 = ((($GLOBALS['Data_Time_Component_boundedEnumSecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumSecond')))->toEnum)((($__local_var_0)->value0)->second);
-if ((is_object($__local_var_41) && (($__local_var_41)->tag === "Just"))) {
-$__local_var_43 = ((($GLOBALS['Data_Time_Component_boundedEnumMillisecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMillisecond')))->toEnum)((($__local_var_0)->value0)->millisecond);
-if ((is_object($__local_var_43) && (($__local_var_43)->tag === "Just"))) {
-$__t44 = new Phpurs_Data1("Just", new Phpurs_Data2("DateTime", ($__local_var_35)->value0, new Phpurs_Data4("Time", ($__local_var_37)->value0, ($__local_var_39)->value0, ($__local_var_41)->value0, ($__local_var_43)->value0)));
+if (((($__local_var_3_0)->value0)->month === 3)) {
+if ((is_object($__local_var_5_3) && (($__local_var_5_3)->tag === "Just"))) {
+$__local_var_6_33 = ((($GLOBALS['Data_Date_Component_boundedEnumDay'] ?? \PhpursThunks::eval('Data_Date_Component_boundedEnumDay')))->toEnum)((($__local_var_3_0)->value0)->day);
+if ((is_object($__local_var_6_33) && (($__local_var_6_33)->tag === "Just"))) {
+$__local_var_7_35 = ((($__local_var_5_3)->value0)(new Phpurs_Data0("March")))(($__local_var_6_33)->value0);
+if ((is_object($__local_var_7_35) && (($__local_var_7_35)->tag === "Just"))) {
+$__local_var_8_37 = ((($GLOBALS['Data_Time_Component_boundedEnumHour'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumHour')))->toEnum)((($__local_var_3_0)->value0)->hour);
+if ((is_object($__local_var_8_37) && (($__local_var_8_37)->tag === "Just"))) {
+$__local_var_9_39 = ((($GLOBALS['Data_Time_Component_boundedEnumMinute'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMinute')))->toEnum)((($__local_var_3_0)->value0)->minute);
+if ((is_object($__local_var_9_39) && (($__local_var_9_39)->tag === "Just"))) {
+$__local_var_10_41 = ((($GLOBALS['Data_Time_Component_boundedEnumSecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumSecond')))->toEnum)((($__local_var_3_0)->value0)->second);
+if ((is_object($__local_var_10_41) && (($__local_var_10_41)->tag === "Just"))) {
+$__local_var_11_43 = ((($GLOBALS['Data_Time_Component_boundedEnumMillisecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMillisecond')))->toEnum)((($__local_var_3_0)->value0)->millisecond);
+if ((is_object($__local_var_11_43) && (($__local_var_11_43)->tag === "Just"))) {
+$__t44 = new Phpurs_Data1("Just", new Phpurs_Data2("DateTime", ($__local_var_7_35)->value0, new Phpurs_Data4("Time", ($__local_var_8_37)->value0, ($__local_var_9_39)->value0, ($__local_var_10_41)->value0, ($__local_var_11_43)->value0)));
 } else {
 $__t44 = new Phpurs_Data0("Nothing");
 };
@@ -470,7 +485,7 @@ $__t34 = new Phpurs_Data0("Nothing");
 };
 $__t32 = $__t34;
 } else {
-if ((is_object($__local_var_4) && (($__local_var_4)->tag === "Nothing"))) {
+if ((is_object($__local_var_5_3) && (($__local_var_5_3)->tag === "Nothing"))) {
 $__t32 = new Phpurs_Data0("Nothing");
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -479,21 +494,21 @@ $__t32 = null;
 };
 $__t5 = $__t32;
 } else {
-if (((($__local_var_0)->value0)->month === 4)) {
-if ((is_object($__local_var_4) && (($__local_var_4)->tag === "Just"))) {
-$__local_var_46 = ((($GLOBALS['Data_Date_Component_boundedEnumDay'] ?? \PhpursThunks::eval('Data_Date_Component_boundedEnumDay')))->toEnum)((($__local_var_0)->value0)->day);
-if ((is_object($__local_var_46) && (($__local_var_46)->tag === "Just"))) {
-$__local_var_48 = ((($__local_var_4)->value0)(new Phpurs_Data0("April")))(($__local_var_46)->value0);
-if ((is_object($__local_var_48) && (($__local_var_48)->tag === "Just"))) {
-$__local_var_50 = ((($GLOBALS['Data_Time_Component_boundedEnumHour'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumHour')))->toEnum)((($__local_var_0)->value0)->hour);
-if ((is_object($__local_var_50) && (($__local_var_50)->tag === "Just"))) {
-$__local_var_52 = ((($GLOBALS['Data_Time_Component_boundedEnumMinute'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMinute')))->toEnum)((($__local_var_0)->value0)->minute);
-if ((is_object($__local_var_52) && (($__local_var_52)->tag === "Just"))) {
-$__local_var_54 = ((($GLOBALS['Data_Time_Component_boundedEnumSecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumSecond')))->toEnum)((($__local_var_0)->value0)->second);
-if ((is_object($__local_var_54) && (($__local_var_54)->tag === "Just"))) {
-$__local_var_56 = ((($GLOBALS['Data_Time_Component_boundedEnumMillisecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMillisecond')))->toEnum)((($__local_var_0)->value0)->millisecond);
-if ((is_object($__local_var_56) && (($__local_var_56)->tag === "Just"))) {
-$__t57 = new Phpurs_Data1("Just", new Phpurs_Data2("DateTime", ($__local_var_48)->value0, new Phpurs_Data4("Time", ($__local_var_50)->value0, ($__local_var_52)->value0, ($__local_var_54)->value0, ($__local_var_56)->value0)));
+if (((($__local_var_3_0)->value0)->month === 4)) {
+if ((is_object($__local_var_5_3) && (($__local_var_5_3)->tag === "Just"))) {
+$__local_var_6_46 = ((($GLOBALS['Data_Date_Component_boundedEnumDay'] ?? \PhpursThunks::eval('Data_Date_Component_boundedEnumDay')))->toEnum)((($__local_var_3_0)->value0)->day);
+if ((is_object($__local_var_6_46) && (($__local_var_6_46)->tag === "Just"))) {
+$__local_var_7_48 = ((($__local_var_5_3)->value0)(new Phpurs_Data0("April")))(($__local_var_6_46)->value0);
+if ((is_object($__local_var_7_48) && (($__local_var_7_48)->tag === "Just"))) {
+$__local_var_8_50 = ((($GLOBALS['Data_Time_Component_boundedEnumHour'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumHour')))->toEnum)((($__local_var_3_0)->value0)->hour);
+if ((is_object($__local_var_8_50) && (($__local_var_8_50)->tag === "Just"))) {
+$__local_var_9_52 = ((($GLOBALS['Data_Time_Component_boundedEnumMinute'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMinute')))->toEnum)((($__local_var_3_0)->value0)->minute);
+if ((is_object($__local_var_9_52) && (($__local_var_9_52)->tag === "Just"))) {
+$__local_var_10_54 = ((($GLOBALS['Data_Time_Component_boundedEnumSecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumSecond')))->toEnum)((($__local_var_3_0)->value0)->second);
+if ((is_object($__local_var_10_54) && (($__local_var_10_54)->tag === "Just"))) {
+$__local_var_11_56 = ((($GLOBALS['Data_Time_Component_boundedEnumMillisecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMillisecond')))->toEnum)((($__local_var_3_0)->value0)->millisecond);
+if ((is_object($__local_var_11_56) && (($__local_var_11_56)->tag === "Just"))) {
+$__t57 = new Phpurs_Data1("Just", new Phpurs_Data2("DateTime", ($__local_var_7_48)->value0, new Phpurs_Data4("Time", ($__local_var_8_50)->value0, ($__local_var_9_52)->value0, ($__local_var_10_54)->value0, ($__local_var_11_56)->value0)));
 } else {
 $__t57 = new Phpurs_Data0("Nothing");
 };
@@ -519,7 +534,7 @@ $__t47 = new Phpurs_Data0("Nothing");
 };
 $__t45 = $__t47;
 } else {
-if ((is_object($__local_var_4) && (($__local_var_4)->tag === "Nothing"))) {
+if ((is_object($__local_var_5_3) && (($__local_var_5_3)->tag === "Nothing"))) {
 $__t45 = new Phpurs_Data0("Nothing");
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -528,21 +543,21 @@ $__t45 = null;
 };
 $__t5 = $__t45;
 } else {
-if (((($__local_var_0)->value0)->month === 5)) {
-if ((is_object($__local_var_4) && (($__local_var_4)->tag === "Just"))) {
-$__local_var_59 = ((($GLOBALS['Data_Date_Component_boundedEnumDay'] ?? \PhpursThunks::eval('Data_Date_Component_boundedEnumDay')))->toEnum)((($__local_var_0)->value0)->day);
-if ((is_object($__local_var_59) && (($__local_var_59)->tag === "Just"))) {
-$__local_var_61 = ((($__local_var_4)->value0)(new Phpurs_Data0("May")))(($__local_var_59)->value0);
-if ((is_object($__local_var_61) && (($__local_var_61)->tag === "Just"))) {
-$__local_var_63 = ((($GLOBALS['Data_Time_Component_boundedEnumHour'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumHour')))->toEnum)((($__local_var_0)->value0)->hour);
-if ((is_object($__local_var_63) && (($__local_var_63)->tag === "Just"))) {
-$__local_var_65 = ((($GLOBALS['Data_Time_Component_boundedEnumMinute'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMinute')))->toEnum)((($__local_var_0)->value0)->minute);
-if ((is_object($__local_var_65) && (($__local_var_65)->tag === "Just"))) {
-$__local_var_67 = ((($GLOBALS['Data_Time_Component_boundedEnumSecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumSecond')))->toEnum)((($__local_var_0)->value0)->second);
-if ((is_object($__local_var_67) && (($__local_var_67)->tag === "Just"))) {
-$__local_var_69 = ((($GLOBALS['Data_Time_Component_boundedEnumMillisecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMillisecond')))->toEnum)((($__local_var_0)->value0)->millisecond);
-if ((is_object($__local_var_69) && (($__local_var_69)->tag === "Just"))) {
-$__t70 = new Phpurs_Data1("Just", new Phpurs_Data2("DateTime", ($__local_var_61)->value0, new Phpurs_Data4("Time", ($__local_var_63)->value0, ($__local_var_65)->value0, ($__local_var_67)->value0, ($__local_var_69)->value0)));
+if (((($__local_var_3_0)->value0)->month === 5)) {
+if ((is_object($__local_var_5_3) && (($__local_var_5_3)->tag === "Just"))) {
+$__local_var_6_59 = ((($GLOBALS['Data_Date_Component_boundedEnumDay'] ?? \PhpursThunks::eval('Data_Date_Component_boundedEnumDay')))->toEnum)((($__local_var_3_0)->value0)->day);
+if ((is_object($__local_var_6_59) && (($__local_var_6_59)->tag === "Just"))) {
+$__local_var_7_61 = ((($__local_var_5_3)->value0)(new Phpurs_Data0("May")))(($__local_var_6_59)->value0);
+if ((is_object($__local_var_7_61) && (($__local_var_7_61)->tag === "Just"))) {
+$__local_var_8_63 = ((($GLOBALS['Data_Time_Component_boundedEnumHour'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumHour')))->toEnum)((($__local_var_3_0)->value0)->hour);
+if ((is_object($__local_var_8_63) && (($__local_var_8_63)->tag === "Just"))) {
+$__local_var_9_65 = ((($GLOBALS['Data_Time_Component_boundedEnumMinute'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMinute')))->toEnum)((($__local_var_3_0)->value0)->minute);
+if ((is_object($__local_var_9_65) && (($__local_var_9_65)->tag === "Just"))) {
+$__local_var_10_67 = ((($GLOBALS['Data_Time_Component_boundedEnumSecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumSecond')))->toEnum)((($__local_var_3_0)->value0)->second);
+if ((is_object($__local_var_10_67) && (($__local_var_10_67)->tag === "Just"))) {
+$__local_var_11_69 = ((($GLOBALS['Data_Time_Component_boundedEnumMillisecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMillisecond')))->toEnum)((($__local_var_3_0)->value0)->millisecond);
+if ((is_object($__local_var_11_69) && (($__local_var_11_69)->tag === "Just"))) {
+$__t70 = new Phpurs_Data1("Just", new Phpurs_Data2("DateTime", ($__local_var_7_61)->value0, new Phpurs_Data4("Time", ($__local_var_8_63)->value0, ($__local_var_9_65)->value0, ($__local_var_10_67)->value0, ($__local_var_11_69)->value0)));
 } else {
 $__t70 = new Phpurs_Data0("Nothing");
 };
@@ -568,7 +583,7 @@ $__t60 = new Phpurs_Data0("Nothing");
 };
 $__t58 = $__t60;
 } else {
-if ((is_object($__local_var_4) && (($__local_var_4)->tag === "Nothing"))) {
+if ((is_object($__local_var_5_3) && (($__local_var_5_3)->tag === "Nothing"))) {
 $__t58 = new Phpurs_Data0("Nothing");
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -577,21 +592,21 @@ $__t58 = null;
 };
 $__t5 = $__t58;
 } else {
-if (((($__local_var_0)->value0)->month === 6)) {
-if ((is_object($__local_var_4) && (($__local_var_4)->tag === "Just"))) {
-$__local_var_72 = ((($GLOBALS['Data_Date_Component_boundedEnumDay'] ?? \PhpursThunks::eval('Data_Date_Component_boundedEnumDay')))->toEnum)((($__local_var_0)->value0)->day);
-if ((is_object($__local_var_72) && (($__local_var_72)->tag === "Just"))) {
-$__local_var_74 = ((($__local_var_4)->value0)(new Phpurs_Data0("June")))(($__local_var_72)->value0);
-if ((is_object($__local_var_74) && (($__local_var_74)->tag === "Just"))) {
-$__local_var_76 = ((($GLOBALS['Data_Time_Component_boundedEnumHour'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumHour')))->toEnum)((($__local_var_0)->value0)->hour);
-if ((is_object($__local_var_76) && (($__local_var_76)->tag === "Just"))) {
-$__local_var_78 = ((($GLOBALS['Data_Time_Component_boundedEnumMinute'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMinute')))->toEnum)((($__local_var_0)->value0)->minute);
-if ((is_object($__local_var_78) && (($__local_var_78)->tag === "Just"))) {
-$__local_var_80 = ((($GLOBALS['Data_Time_Component_boundedEnumSecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumSecond')))->toEnum)((($__local_var_0)->value0)->second);
-if ((is_object($__local_var_80) && (($__local_var_80)->tag === "Just"))) {
-$__local_var_82 = ((($GLOBALS['Data_Time_Component_boundedEnumMillisecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMillisecond')))->toEnum)((($__local_var_0)->value0)->millisecond);
-if ((is_object($__local_var_82) && (($__local_var_82)->tag === "Just"))) {
-$__t83 = new Phpurs_Data1("Just", new Phpurs_Data2("DateTime", ($__local_var_74)->value0, new Phpurs_Data4("Time", ($__local_var_76)->value0, ($__local_var_78)->value0, ($__local_var_80)->value0, ($__local_var_82)->value0)));
+if (((($__local_var_3_0)->value0)->month === 6)) {
+if ((is_object($__local_var_5_3) && (($__local_var_5_3)->tag === "Just"))) {
+$__local_var_6_72 = ((($GLOBALS['Data_Date_Component_boundedEnumDay'] ?? \PhpursThunks::eval('Data_Date_Component_boundedEnumDay')))->toEnum)((($__local_var_3_0)->value0)->day);
+if ((is_object($__local_var_6_72) && (($__local_var_6_72)->tag === "Just"))) {
+$__local_var_7_74 = ((($__local_var_5_3)->value0)(new Phpurs_Data0("June")))(($__local_var_6_72)->value0);
+if ((is_object($__local_var_7_74) && (($__local_var_7_74)->tag === "Just"))) {
+$__local_var_8_76 = ((($GLOBALS['Data_Time_Component_boundedEnumHour'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumHour')))->toEnum)((($__local_var_3_0)->value0)->hour);
+if ((is_object($__local_var_8_76) && (($__local_var_8_76)->tag === "Just"))) {
+$__local_var_9_78 = ((($GLOBALS['Data_Time_Component_boundedEnumMinute'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMinute')))->toEnum)((($__local_var_3_0)->value0)->minute);
+if ((is_object($__local_var_9_78) && (($__local_var_9_78)->tag === "Just"))) {
+$__local_var_10_80 = ((($GLOBALS['Data_Time_Component_boundedEnumSecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumSecond')))->toEnum)((($__local_var_3_0)->value0)->second);
+if ((is_object($__local_var_10_80) && (($__local_var_10_80)->tag === "Just"))) {
+$__local_var_11_82 = ((($GLOBALS['Data_Time_Component_boundedEnumMillisecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMillisecond')))->toEnum)((($__local_var_3_0)->value0)->millisecond);
+if ((is_object($__local_var_11_82) && (($__local_var_11_82)->tag === "Just"))) {
+$__t83 = new Phpurs_Data1("Just", new Phpurs_Data2("DateTime", ($__local_var_7_74)->value0, new Phpurs_Data4("Time", ($__local_var_8_76)->value0, ($__local_var_9_78)->value0, ($__local_var_10_80)->value0, ($__local_var_11_82)->value0)));
 } else {
 $__t83 = new Phpurs_Data0("Nothing");
 };
@@ -617,7 +632,7 @@ $__t73 = new Phpurs_Data0("Nothing");
 };
 $__t71 = $__t73;
 } else {
-if ((is_object($__local_var_4) && (($__local_var_4)->tag === "Nothing"))) {
+if ((is_object($__local_var_5_3) && (($__local_var_5_3)->tag === "Nothing"))) {
 $__t71 = new Phpurs_Data0("Nothing");
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -626,21 +641,21 @@ $__t71 = null;
 };
 $__t5 = $__t71;
 } else {
-if (((($__local_var_0)->value0)->month === 7)) {
-if ((is_object($__local_var_4) && (($__local_var_4)->tag === "Just"))) {
-$__local_var_85 = ((($GLOBALS['Data_Date_Component_boundedEnumDay'] ?? \PhpursThunks::eval('Data_Date_Component_boundedEnumDay')))->toEnum)((($__local_var_0)->value0)->day);
-if ((is_object($__local_var_85) && (($__local_var_85)->tag === "Just"))) {
-$__local_var_87 = ((($__local_var_4)->value0)(new Phpurs_Data0("July")))(($__local_var_85)->value0);
-if ((is_object($__local_var_87) && (($__local_var_87)->tag === "Just"))) {
-$__local_var_89 = ((($GLOBALS['Data_Time_Component_boundedEnumHour'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumHour')))->toEnum)((($__local_var_0)->value0)->hour);
-if ((is_object($__local_var_89) && (($__local_var_89)->tag === "Just"))) {
-$__local_var_91 = ((($GLOBALS['Data_Time_Component_boundedEnumMinute'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMinute')))->toEnum)((($__local_var_0)->value0)->minute);
-if ((is_object($__local_var_91) && (($__local_var_91)->tag === "Just"))) {
-$__local_var_93 = ((($GLOBALS['Data_Time_Component_boundedEnumSecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumSecond')))->toEnum)((($__local_var_0)->value0)->second);
-if ((is_object($__local_var_93) && (($__local_var_93)->tag === "Just"))) {
-$__local_var_95 = ((($GLOBALS['Data_Time_Component_boundedEnumMillisecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMillisecond')))->toEnum)((($__local_var_0)->value0)->millisecond);
-if ((is_object($__local_var_95) && (($__local_var_95)->tag === "Just"))) {
-$__t96 = new Phpurs_Data1("Just", new Phpurs_Data2("DateTime", ($__local_var_87)->value0, new Phpurs_Data4("Time", ($__local_var_89)->value0, ($__local_var_91)->value0, ($__local_var_93)->value0, ($__local_var_95)->value0)));
+if (((($__local_var_3_0)->value0)->month === 7)) {
+if ((is_object($__local_var_5_3) && (($__local_var_5_3)->tag === "Just"))) {
+$__local_var_6_85 = ((($GLOBALS['Data_Date_Component_boundedEnumDay'] ?? \PhpursThunks::eval('Data_Date_Component_boundedEnumDay')))->toEnum)((($__local_var_3_0)->value0)->day);
+if ((is_object($__local_var_6_85) && (($__local_var_6_85)->tag === "Just"))) {
+$__local_var_7_87 = ((($__local_var_5_3)->value0)(new Phpurs_Data0("July")))(($__local_var_6_85)->value0);
+if ((is_object($__local_var_7_87) && (($__local_var_7_87)->tag === "Just"))) {
+$__local_var_8_89 = ((($GLOBALS['Data_Time_Component_boundedEnumHour'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumHour')))->toEnum)((($__local_var_3_0)->value0)->hour);
+if ((is_object($__local_var_8_89) && (($__local_var_8_89)->tag === "Just"))) {
+$__local_var_9_91 = ((($GLOBALS['Data_Time_Component_boundedEnumMinute'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMinute')))->toEnum)((($__local_var_3_0)->value0)->minute);
+if ((is_object($__local_var_9_91) && (($__local_var_9_91)->tag === "Just"))) {
+$__local_var_10_93 = ((($GLOBALS['Data_Time_Component_boundedEnumSecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumSecond')))->toEnum)((($__local_var_3_0)->value0)->second);
+if ((is_object($__local_var_10_93) && (($__local_var_10_93)->tag === "Just"))) {
+$__local_var_11_95 = ((($GLOBALS['Data_Time_Component_boundedEnumMillisecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMillisecond')))->toEnum)((($__local_var_3_0)->value0)->millisecond);
+if ((is_object($__local_var_11_95) && (($__local_var_11_95)->tag === "Just"))) {
+$__t96 = new Phpurs_Data1("Just", new Phpurs_Data2("DateTime", ($__local_var_7_87)->value0, new Phpurs_Data4("Time", ($__local_var_8_89)->value0, ($__local_var_9_91)->value0, ($__local_var_10_93)->value0, ($__local_var_11_95)->value0)));
 } else {
 $__t96 = new Phpurs_Data0("Nothing");
 };
@@ -666,7 +681,7 @@ $__t86 = new Phpurs_Data0("Nothing");
 };
 $__t84 = $__t86;
 } else {
-if ((is_object($__local_var_4) && (($__local_var_4)->tag === "Nothing"))) {
+if ((is_object($__local_var_5_3) && (($__local_var_5_3)->tag === "Nothing"))) {
 $__t84 = new Phpurs_Data0("Nothing");
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -675,21 +690,21 @@ $__t84 = null;
 };
 $__t5 = $__t84;
 } else {
-if (((($__local_var_0)->value0)->month === 8)) {
-if ((is_object($__local_var_4) && (($__local_var_4)->tag === "Just"))) {
-$__local_var_98 = ((($GLOBALS['Data_Date_Component_boundedEnumDay'] ?? \PhpursThunks::eval('Data_Date_Component_boundedEnumDay')))->toEnum)((($__local_var_0)->value0)->day);
-if ((is_object($__local_var_98) && (($__local_var_98)->tag === "Just"))) {
-$__local_var_100 = ((($__local_var_4)->value0)(new Phpurs_Data0("August")))(($__local_var_98)->value0);
-if ((is_object($__local_var_100) && (($__local_var_100)->tag === "Just"))) {
-$__local_var_102 = ((($GLOBALS['Data_Time_Component_boundedEnumHour'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumHour')))->toEnum)((($__local_var_0)->value0)->hour);
-if ((is_object($__local_var_102) && (($__local_var_102)->tag === "Just"))) {
-$__local_var_104 = ((($GLOBALS['Data_Time_Component_boundedEnumMinute'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMinute')))->toEnum)((($__local_var_0)->value0)->minute);
-if ((is_object($__local_var_104) && (($__local_var_104)->tag === "Just"))) {
-$__local_var_106 = ((($GLOBALS['Data_Time_Component_boundedEnumSecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumSecond')))->toEnum)((($__local_var_0)->value0)->second);
-if ((is_object($__local_var_106) && (($__local_var_106)->tag === "Just"))) {
-$__local_var_108 = ((($GLOBALS['Data_Time_Component_boundedEnumMillisecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMillisecond')))->toEnum)((($__local_var_0)->value0)->millisecond);
-if ((is_object($__local_var_108) && (($__local_var_108)->tag === "Just"))) {
-$__t109 = new Phpurs_Data1("Just", new Phpurs_Data2("DateTime", ($__local_var_100)->value0, new Phpurs_Data4("Time", ($__local_var_102)->value0, ($__local_var_104)->value0, ($__local_var_106)->value0, ($__local_var_108)->value0)));
+if (((($__local_var_3_0)->value0)->month === 8)) {
+if ((is_object($__local_var_5_3) && (($__local_var_5_3)->tag === "Just"))) {
+$__local_var_6_98 = ((($GLOBALS['Data_Date_Component_boundedEnumDay'] ?? \PhpursThunks::eval('Data_Date_Component_boundedEnumDay')))->toEnum)((($__local_var_3_0)->value0)->day);
+if ((is_object($__local_var_6_98) && (($__local_var_6_98)->tag === "Just"))) {
+$__local_var_7_100 = ((($__local_var_5_3)->value0)(new Phpurs_Data0("August")))(($__local_var_6_98)->value0);
+if ((is_object($__local_var_7_100) && (($__local_var_7_100)->tag === "Just"))) {
+$__local_var_8_102 = ((($GLOBALS['Data_Time_Component_boundedEnumHour'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumHour')))->toEnum)((($__local_var_3_0)->value0)->hour);
+if ((is_object($__local_var_8_102) && (($__local_var_8_102)->tag === "Just"))) {
+$__local_var_9_104 = ((($GLOBALS['Data_Time_Component_boundedEnumMinute'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMinute')))->toEnum)((($__local_var_3_0)->value0)->minute);
+if ((is_object($__local_var_9_104) && (($__local_var_9_104)->tag === "Just"))) {
+$__local_var_10_106 = ((($GLOBALS['Data_Time_Component_boundedEnumSecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumSecond')))->toEnum)((($__local_var_3_0)->value0)->second);
+if ((is_object($__local_var_10_106) && (($__local_var_10_106)->tag === "Just"))) {
+$__local_var_11_108 = ((($GLOBALS['Data_Time_Component_boundedEnumMillisecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMillisecond')))->toEnum)((($__local_var_3_0)->value0)->millisecond);
+if ((is_object($__local_var_11_108) && (($__local_var_11_108)->tag === "Just"))) {
+$__t109 = new Phpurs_Data1("Just", new Phpurs_Data2("DateTime", ($__local_var_7_100)->value0, new Phpurs_Data4("Time", ($__local_var_8_102)->value0, ($__local_var_9_104)->value0, ($__local_var_10_106)->value0, ($__local_var_11_108)->value0)));
 } else {
 $__t109 = new Phpurs_Data0("Nothing");
 };
@@ -715,7 +730,7 @@ $__t99 = new Phpurs_Data0("Nothing");
 };
 $__t97 = $__t99;
 } else {
-if ((is_object($__local_var_4) && (($__local_var_4)->tag === "Nothing"))) {
+if ((is_object($__local_var_5_3) && (($__local_var_5_3)->tag === "Nothing"))) {
 $__t97 = new Phpurs_Data0("Nothing");
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -724,21 +739,21 @@ $__t97 = null;
 };
 $__t5 = $__t97;
 } else {
-if (((($__local_var_0)->value0)->month === 9)) {
-if ((is_object($__local_var_4) && (($__local_var_4)->tag === "Just"))) {
-$__local_var_111 = ((($GLOBALS['Data_Date_Component_boundedEnumDay'] ?? \PhpursThunks::eval('Data_Date_Component_boundedEnumDay')))->toEnum)((($__local_var_0)->value0)->day);
-if ((is_object($__local_var_111) && (($__local_var_111)->tag === "Just"))) {
-$__local_var_113 = ((($__local_var_4)->value0)(new Phpurs_Data0("September")))(($__local_var_111)->value0);
-if ((is_object($__local_var_113) && (($__local_var_113)->tag === "Just"))) {
-$__local_var_115 = ((($GLOBALS['Data_Time_Component_boundedEnumHour'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumHour')))->toEnum)((($__local_var_0)->value0)->hour);
-if ((is_object($__local_var_115) && (($__local_var_115)->tag === "Just"))) {
-$__local_var_117 = ((($GLOBALS['Data_Time_Component_boundedEnumMinute'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMinute')))->toEnum)((($__local_var_0)->value0)->minute);
-if ((is_object($__local_var_117) && (($__local_var_117)->tag === "Just"))) {
-$__local_var_119 = ((($GLOBALS['Data_Time_Component_boundedEnumSecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumSecond')))->toEnum)((($__local_var_0)->value0)->second);
-if ((is_object($__local_var_119) && (($__local_var_119)->tag === "Just"))) {
-$__local_var_121 = ((($GLOBALS['Data_Time_Component_boundedEnumMillisecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMillisecond')))->toEnum)((($__local_var_0)->value0)->millisecond);
-if ((is_object($__local_var_121) && (($__local_var_121)->tag === "Just"))) {
-$__t122 = new Phpurs_Data1("Just", new Phpurs_Data2("DateTime", ($__local_var_113)->value0, new Phpurs_Data4("Time", ($__local_var_115)->value0, ($__local_var_117)->value0, ($__local_var_119)->value0, ($__local_var_121)->value0)));
+if (((($__local_var_3_0)->value0)->month === 9)) {
+if ((is_object($__local_var_5_3) && (($__local_var_5_3)->tag === "Just"))) {
+$__local_var_6_111 = ((($GLOBALS['Data_Date_Component_boundedEnumDay'] ?? \PhpursThunks::eval('Data_Date_Component_boundedEnumDay')))->toEnum)((($__local_var_3_0)->value0)->day);
+if ((is_object($__local_var_6_111) && (($__local_var_6_111)->tag === "Just"))) {
+$__local_var_7_113 = ((($__local_var_5_3)->value0)(new Phpurs_Data0("September")))(($__local_var_6_111)->value0);
+if ((is_object($__local_var_7_113) && (($__local_var_7_113)->tag === "Just"))) {
+$__local_var_8_115 = ((($GLOBALS['Data_Time_Component_boundedEnumHour'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumHour')))->toEnum)((($__local_var_3_0)->value0)->hour);
+if ((is_object($__local_var_8_115) && (($__local_var_8_115)->tag === "Just"))) {
+$__local_var_9_117 = ((($GLOBALS['Data_Time_Component_boundedEnumMinute'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMinute')))->toEnum)((($__local_var_3_0)->value0)->minute);
+if ((is_object($__local_var_9_117) && (($__local_var_9_117)->tag === "Just"))) {
+$__local_var_10_119 = ((($GLOBALS['Data_Time_Component_boundedEnumSecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumSecond')))->toEnum)((($__local_var_3_0)->value0)->second);
+if ((is_object($__local_var_10_119) && (($__local_var_10_119)->tag === "Just"))) {
+$__local_var_11_121 = ((($GLOBALS['Data_Time_Component_boundedEnumMillisecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMillisecond')))->toEnum)((($__local_var_3_0)->value0)->millisecond);
+if ((is_object($__local_var_11_121) && (($__local_var_11_121)->tag === "Just"))) {
+$__t122 = new Phpurs_Data1("Just", new Phpurs_Data2("DateTime", ($__local_var_7_113)->value0, new Phpurs_Data4("Time", ($__local_var_8_115)->value0, ($__local_var_9_117)->value0, ($__local_var_10_119)->value0, ($__local_var_11_121)->value0)));
 } else {
 $__t122 = new Phpurs_Data0("Nothing");
 };
@@ -764,7 +779,7 @@ $__t112 = new Phpurs_Data0("Nothing");
 };
 $__t110 = $__t112;
 } else {
-if ((is_object($__local_var_4) && (($__local_var_4)->tag === "Nothing"))) {
+if ((is_object($__local_var_5_3) && (($__local_var_5_3)->tag === "Nothing"))) {
 $__t110 = new Phpurs_Data0("Nothing");
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -773,21 +788,21 @@ $__t110 = null;
 };
 $__t5 = $__t110;
 } else {
-if (((($__local_var_0)->value0)->month === 10)) {
-if ((is_object($__local_var_4) && (($__local_var_4)->tag === "Just"))) {
-$__local_var_124 = ((($GLOBALS['Data_Date_Component_boundedEnumDay'] ?? \PhpursThunks::eval('Data_Date_Component_boundedEnumDay')))->toEnum)((($__local_var_0)->value0)->day);
-if ((is_object($__local_var_124) && (($__local_var_124)->tag === "Just"))) {
-$__local_var_126 = ((($__local_var_4)->value0)(new Phpurs_Data0("October")))(($__local_var_124)->value0);
-if ((is_object($__local_var_126) && (($__local_var_126)->tag === "Just"))) {
-$__local_var_128 = ((($GLOBALS['Data_Time_Component_boundedEnumHour'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumHour')))->toEnum)((($__local_var_0)->value0)->hour);
-if ((is_object($__local_var_128) && (($__local_var_128)->tag === "Just"))) {
-$__local_var_130 = ((($GLOBALS['Data_Time_Component_boundedEnumMinute'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMinute')))->toEnum)((($__local_var_0)->value0)->minute);
-if ((is_object($__local_var_130) && (($__local_var_130)->tag === "Just"))) {
-$__local_var_132 = ((($GLOBALS['Data_Time_Component_boundedEnumSecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumSecond')))->toEnum)((($__local_var_0)->value0)->second);
-if ((is_object($__local_var_132) && (($__local_var_132)->tag === "Just"))) {
-$__local_var_134 = ((($GLOBALS['Data_Time_Component_boundedEnumMillisecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMillisecond')))->toEnum)((($__local_var_0)->value0)->millisecond);
-if ((is_object($__local_var_134) && (($__local_var_134)->tag === "Just"))) {
-$__t135 = new Phpurs_Data1("Just", new Phpurs_Data2("DateTime", ($__local_var_126)->value0, new Phpurs_Data4("Time", ($__local_var_128)->value0, ($__local_var_130)->value0, ($__local_var_132)->value0, ($__local_var_134)->value0)));
+if (((($__local_var_3_0)->value0)->month === 10)) {
+if ((is_object($__local_var_5_3) && (($__local_var_5_3)->tag === "Just"))) {
+$__local_var_6_124 = ((($GLOBALS['Data_Date_Component_boundedEnumDay'] ?? \PhpursThunks::eval('Data_Date_Component_boundedEnumDay')))->toEnum)((($__local_var_3_0)->value0)->day);
+if ((is_object($__local_var_6_124) && (($__local_var_6_124)->tag === "Just"))) {
+$__local_var_7_126 = ((($__local_var_5_3)->value0)(new Phpurs_Data0("October")))(($__local_var_6_124)->value0);
+if ((is_object($__local_var_7_126) && (($__local_var_7_126)->tag === "Just"))) {
+$__local_var_8_128 = ((($GLOBALS['Data_Time_Component_boundedEnumHour'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumHour')))->toEnum)((($__local_var_3_0)->value0)->hour);
+if ((is_object($__local_var_8_128) && (($__local_var_8_128)->tag === "Just"))) {
+$__local_var_9_130 = ((($GLOBALS['Data_Time_Component_boundedEnumMinute'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMinute')))->toEnum)((($__local_var_3_0)->value0)->minute);
+if ((is_object($__local_var_9_130) && (($__local_var_9_130)->tag === "Just"))) {
+$__local_var_10_132 = ((($GLOBALS['Data_Time_Component_boundedEnumSecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumSecond')))->toEnum)((($__local_var_3_0)->value0)->second);
+if ((is_object($__local_var_10_132) && (($__local_var_10_132)->tag === "Just"))) {
+$__local_var_11_134 = ((($GLOBALS['Data_Time_Component_boundedEnumMillisecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMillisecond')))->toEnum)((($__local_var_3_0)->value0)->millisecond);
+if ((is_object($__local_var_11_134) && (($__local_var_11_134)->tag === "Just"))) {
+$__t135 = new Phpurs_Data1("Just", new Phpurs_Data2("DateTime", ($__local_var_7_126)->value0, new Phpurs_Data4("Time", ($__local_var_8_128)->value0, ($__local_var_9_130)->value0, ($__local_var_10_132)->value0, ($__local_var_11_134)->value0)));
 } else {
 $__t135 = new Phpurs_Data0("Nothing");
 };
@@ -813,7 +828,7 @@ $__t125 = new Phpurs_Data0("Nothing");
 };
 $__t123 = $__t125;
 } else {
-if ((is_object($__local_var_4) && (($__local_var_4)->tag === "Nothing"))) {
+if ((is_object($__local_var_5_3) && (($__local_var_5_3)->tag === "Nothing"))) {
 $__t123 = new Phpurs_Data0("Nothing");
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -822,21 +837,21 @@ $__t123 = null;
 };
 $__t5 = $__t123;
 } else {
-if (((($__local_var_0)->value0)->month === 11)) {
-if ((is_object($__local_var_4) && (($__local_var_4)->tag === "Just"))) {
-$__local_var_137 = ((($GLOBALS['Data_Date_Component_boundedEnumDay'] ?? \PhpursThunks::eval('Data_Date_Component_boundedEnumDay')))->toEnum)((($__local_var_0)->value0)->day);
-if ((is_object($__local_var_137) && (($__local_var_137)->tag === "Just"))) {
-$__local_var_139 = ((($__local_var_4)->value0)(new Phpurs_Data0("November")))(($__local_var_137)->value0);
-if ((is_object($__local_var_139) && (($__local_var_139)->tag === "Just"))) {
-$__local_var_141 = ((($GLOBALS['Data_Time_Component_boundedEnumHour'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumHour')))->toEnum)((($__local_var_0)->value0)->hour);
-if ((is_object($__local_var_141) && (($__local_var_141)->tag === "Just"))) {
-$__local_var_143 = ((($GLOBALS['Data_Time_Component_boundedEnumMinute'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMinute')))->toEnum)((($__local_var_0)->value0)->minute);
-if ((is_object($__local_var_143) && (($__local_var_143)->tag === "Just"))) {
-$__local_var_145 = ((($GLOBALS['Data_Time_Component_boundedEnumSecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumSecond')))->toEnum)((($__local_var_0)->value0)->second);
-if ((is_object($__local_var_145) && (($__local_var_145)->tag === "Just"))) {
-$__local_var_147 = ((($GLOBALS['Data_Time_Component_boundedEnumMillisecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMillisecond')))->toEnum)((($__local_var_0)->value0)->millisecond);
-if ((is_object($__local_var_147) && (($__local_var_147)->tag === "Just"))) {
-$__t148 = new Phpurs_Data1("Just", new Phpurs_Data2("DateTime", ($__local_var_139)->value0, new Phpurs_Data4("Time", ($__local_var_141)->value0, ($__local_var_143)->value0, ($__local_var_145)->value0, ($__local_var_147)->value0)));
+if (((($__local_var_3_0)->value0)->month === 11)) {
+if ((is_object($__local_var_5_3) && (($__local_var_5_3)->tag === "Just"))) {
+$__local_var_6_137 = ((($GLOBALS['Data_Date_Component_boundedEnumDay'] ?? \PhpursThunks::eval('Data_Date_Component_boundedEnumDay')))->toEnum)((($__local_var_3_0)->value0)->day);
+if ((is_object($__local_var_6_137) && (($__local_var_6_137)->tag === "Just"))) {
+$__local_var_7_139 = ((($__local_var_5_3)->value0)(new Phpurs_Data0("November")))(($__local_var_6_137)->value0);
+if ((is_object($__local_var_7_139) && (($__local_var_7_139)->tag === "Just"))) {
+$__local_var_8_141 = ((($GLOBALS['Data_Time_Component_boundedEnumHour'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumHour')))->toEnum)((($__local_var_3_0)->value0)->hour);
+if ((is_object($__local_var_8_141) && (($__local_var_8_141)->tag === "Just"))) {
+$__local_var_9_143 = ((($GLOBALS['Data_Time_Component_boundedEnumMinute'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMinute')))->toEnum)((($__local_var_3_0)->value0)->minute);
+if ((is_object($__local_var_9_143) && (($__local_var_9_143)->tag === "Just"))) {
+$__local_var_10_145 = ((($GLOBALS['Data_Time_Component_boundedEnumSecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumSecond')))->toEnum)((($__local_var_3_0)->value0)->second);
+if ((is_object($__local_var_10_145) && (($__local_var_10_145)->tag === "Just"))) {
+$__local_var_11_147 = ((($GLOBALS['Data_Time_Component_boundedEnumMillisecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMillisecond')))->toEnum)((($__local_var_3_0)->value0)->millisecond);
+if ((is_object($__local_var_11_147) && (($__local_var_11_147)->tag === "Just"))) {
+$__t148 = new Phpurs_Data1("Just", new Phpurs_Data2("DateTime", ($__local_var_7_139)->value0, new Phpurs_Data4("Time", ($__local_var_8_141)->value0, ($__local_var_9_143)->value0, ($__local_var_10_145)->value0, ($__local_var_11_147)->value0)));
 } else {
 $__t148 = new Phpurs_Data0("Nothing");
 };
@@ -862,7 +877,7 @@ $__t138 = new Phpurs_Data0("Nothing");
 };
 $__t136 = $__t138;
 } else {
-if ((is_object($__local_var_4) && (($__local_var_4)->tag === "Nothing"))) {
+if ((is_object($__local_var_5_3) && (($__local_var_5_3)->tag === "Nothing"))) {
 $__t136 = new Phpurs_Data0("Nothing");
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -871,21 +886,21 @@ $__t136 = null;
 };
 $__t5 = $__t136;
 } else {
-if (((($__local_var_0)->value0)->month === 12)) {
-if ((is_object($__local_var_4) && (($__local_var_4)->tag === "Just"))) {
-$__local_var_150 = ((($GLOBALS['Data_Date_Component_boundedEnumDay'] ?? \PhpursThunks::eval('Data_Date_Component_boundedEnumDay')))->toEnum)((($__local_var_0)->value0)->day);
-if ((is_object($__local_var_150) && (($__local_var_150)->tag === "Just"))) {
-$__local_var_152 = ((($__local_var_4)->value0)(new Phpurs_Data0("December")))(($__local_var_150)->value0);
-if ((is_object($__local_var_152) && (($__local_var_152)->tag === "Just"))) {
-$__local_var_154 = ((($GLOBALS['Data_Time_Component_boundedEnumHour'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumHour')))->toEnum)((($__local_var_0)->value0)->hour);
-if ((is_object($__local_var_154) && (($__local_var_154)->tag === "Just"))) {
-$__local_var_156 = ((($GLOBALS['Data_Time_Component_boundedEnumMinute'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMinute')))->toEnum)((($__local_var_0)->value0)->minute);
-if ((is_object($__local_var_156) && (($__local_var_156)->tag === "Just"))) {
-$__local_var_158 = ((($GLOBALS['Data_Time_Component_boundedEnumSecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumSecond')))->toEnum)((($__local_var_0)->value0)->second);
-if ((is_object($__local_var_158) && (($__local_var_158)->tag === "Just"))) {
-$__local_var_160 = ((($GLOBALS['Data_Time_Component_boundedEnumMillisecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMillisecond')))->toEnum)((($__local_var_0)->value0)->millisecond);
-if ((is_object($__local_var_160) && (($__local_var_160)->tag === "Just"))) {
-$__t161 = new Phpurs_Data1("Just", new Phpurs_Data2("DateTime", ($__local_var_152)->value0, new Phpurs_Data4("Time", ($__local_var_154)->value0, ($__local_var_156)->value0, ($__local_var_158)->value0, ($__local_var_160)->value0)));
+if (((($__local_var_3_0)->value0)->month === 12)) {
+if ((is_object($__local_var_5_3) && (($__local_var_5_3)->tag === "Just"))) {
+$__local_var_6_150 = ((($GLOBALS['Data_Date_Component_boundedEnumDay'] ?? \PhpursThunks::eval('Data_Date_Component_boundedEnumDay')))->toEnum)((($__local_var_3_0)->value0)->day);
+if ((is_object($__local_var_6_150) && (($__local_var_6_150)->tag === "Just"))) {
+$__local_var_7_152 = ((($__local_var_5_3)->value0)(new Phpurs_Data0("December")))(($__local_var_6_150)->value0);
+if ((is_object($__local_var_7_152) && (($__local_var_7_152)->tag === "Just"))) {
+$__local_var_8_154 = ((($GLOBALS['Data_Time_Component_boundedEnumHour'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumHour')))->toEnum)((($__local_var_3_0)->value0)->hour);
+if ((is_object($__local_var_8_154) && (($__local_var_8_154)->tag === "Just"))) {
+$__local_var_9_156 = ((($GLOBALS['Data_Time_Component_boundedEnumMinute'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMinute')))->toEnum)((($__local_var_3_0)->value0)->minute);
+if ((is_object($__local_var_9_156) && (($__local_var_9_156)->tag === "Just"))) {
+$__local_var_10_158 = ((($GLOBALS['Data_Time_Component_boundedEnumSecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumSecond')))->toEnum)((($__local_var_3_0)->value0)->second);
+if ((is_object($__local_var_10_158) && (($__local_var_10_158)->tag === "Just"))) {
+$__local_var_11_160 = ((($GLOBALS['Data_Time_Component_boundedEnumMillisecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMillisecond')))->toEnum)((($__local_var_3_0)->value0)->millisecond);
+if ((is_object($__local_var_11_160) && (($__local_var_11_160)->tag === "Just"))) {
+$__t161 = new Phpurs_Data1("Just", new Phpurs_Data2("DateTime", ($__local_var_7_152)->value0, new Phpurs_Data4("Time", ($__local_var_8_154)->value0, ($__local_var_9_156)->value0, ($__local_var_10_158)->value0, ($__local_var_11_160)->value0)));
 } else {
 $__t161 = new Phpurs_Data0("Nothing");
 };
@@ -911,7 +926,7 @@ $__t151 = new Phpurs_Data0("Nothing");
 };
 $__t149 = $__t151;
 } else {
-if ((is_object($__local_var_4) && (($__local_var_4)->tag === "Nothing"))) {
+if ((is_object($__local_var_5_3) && (($__local_var_5_3)->tag === "Nothing"))) {
 $__t149 = new Phpurs_Data0("Nothing");
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -920,10 +935,10 @@ $__t149 = null;
 };
 $__t5 = $__t149;
 } else {
-if ((is_object($__local_var_4) && (($__local_var_4)->tag === "Just"))) {
+if ((is_object($__local_var_5_3) && (($__local_var_5_3)->tag === "Just"))) {
 $__t5 = new Phpurs_Data0("Nothing");
 } else {
-if ((is_object($__local_var_4) && (($__local_var_4)->tag === "Nothing"))) {
+if ((is_object($__local_var_5_3) && (($__local_var_5_3)->tag === "Nothing"))) {
 $__t5 = new Phpurs_Data0("Nothing");
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -944,7 +959,7 @@ $__t5 = null;
 };
 $__t1 = $__t5;
 } else {
-if ((is_object($__local_var_0) && (($__local_var_0)->tag === "Nothing"))) {
+if ((is_object($__local_var_3_0) && (($__local_var_3_0)->tag === "Nothing"))) {
 $__t1 = new Phpurs_Data0("Nothing");
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);

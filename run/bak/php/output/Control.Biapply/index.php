@@ -90,12 +90,13 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   }
 }
 \PhpursThunks::$thunks['Control_Biapply_biapplyTuple'] = function() { $v = (object)["biapply" => (function() {
-  $__fn = function($v, $v1 = null) use (&$__fn) {
+  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", (($v)->value0)(($v1)->value0), (($v)->value1)(($v1)->value1));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = new Phpurs_Data2("Tuple", (($v_0)->value0)(($v1_1)->value0), (($v_0)->value1)(($v1_1)->value1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -103,37 +104,42 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(), "Bifunctor0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_Bifunctor_bifunctorTuple'] ?? \PhpursThunks::eval('Data_Bifunctor_bifunctorTuple'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
-\PhpursThunks::$thunks['Control_Biapply_biapply'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Control_Biapply_biapply'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->biapply;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Biapply_biapply"), recVars=[];
+  $__res = ($dict_0)->biapply;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Control_Biapply_biapplyFirst'] = function() { $v = (function() {
-  $__fn = function($dictBiapply, $a = null, $b = null) use (&$__fn) {
+  $__fn = function($dictBiapply_0, $a_1 = null, $b_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($dictBiapply)->biapply)((((((($dictBiapply)->Bifunctor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->bimap)(function($v) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Biapply_biapplyFirst"), recVars=[];
+  $__res = ((($dictBiapply_0)->biapply)((((((($dictBiapply_0)->Bifunctor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->bimap)(function($v_3) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = (($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->identity;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(function($v) {
+}))(function($v_3) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = (($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->identity;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))($a)))($b);
+}))($a_1)))($b_2);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -141,12 +147,13 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Control_Biapply_biapplySecond'] = function() { $v = (function() {
-  $__fn = function($dictBiapply, $a = null, $b = null) use (&$__fn) {
+  $__fn = function($dictBiapply_0, $a_1 = null, $b_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($dictBiapply)->biapply)((((((($dictBiapply)->Bifunctor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->bimap)(($GLOBALS['Data_Function_const'] ?? \PhpursThunks::eval('Data_Function_const'))))(($GLOBALS['Data_Function_const'] ?? \PhpursThunks::eval('Data_Function_const'))))($a)))($b);
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Biapply_biapplySecond"), recVars=[];
+  $__res = ((($dictBiapply_0)->biapply)((((((($dictBiapply_0)->Bifunctor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->bimap)(($GLOBALS['Data_Function_const'] ?? \PhpursThunks::eval('Data_Function_const'))))(($GLOBALS['Data_Function_const'] ?? \PhpursThunks::eval('Data_Function_const'))))($a_1)))($b_2);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -154,12 +161,13 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Control_Biapply_bilift2'] = function() { $v = (function() {
-  $__fn = function($dictBiapply, $f = null, $g = null, $a = null, $b = null) use (&$__fn) {
+  $__fn = function($dictBiapply_0, $f_1 = null, $g_2 = null, $a_3 = null, $b_4 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 5) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 5);
   }
-  $__res = ((($dictBiapply)->biapply)((((((($dictBiapply)->Bifunctor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->bimap)($f))($g))($a)))($b);
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Biapply_bilift2"), recVars=[];
+  $__res = ((($dictBiapply_0)->biapply)((((((($dictBiapply_0)->Bifunctor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->bimap)($f_1))($g_2))($a_3)))($b_4);
   goto __end;;
   __end:
   return $__num > 5 ? $__res(...\array_slice(\func_get_args(), 5)) : $__res;
@@ -167,12 +175,13 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Control_Biapply_bilift3'] = function() { $v = (function() {
-  $__fn = function($dictBiapply, $f = null, $g = null, $a = null, $b = null, $c = null) use (&$__fn) {
+  $__fn = function($dictBiapply_0, $f_1 = null, $g_2 = null, $a_3 = null, $b_4 = null, $c_5 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 6) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 6);
   }
-  $__res = ((($dictBiapply)->biapply)(((($dictBiapply)->biapply)((((((($dictBiapply)->Bifunctor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->bimap)($f))($g))($a)))($b)))($c);
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Biapply_bilift3"), recVars=[];
+  $__res = ((($dictBiapply_0)->biapply)(((($dictBiapply_0)->biapply)((((((($dictBiapply_0)->Bifunctor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->bimap)($f_1))($g_2))($a_3)))($b_4)))($c_5);
   goto __end;;
   __end:
   return $__num > 6 ? $__res(...\array_slice(\func_get_args(), 6)) : $__res;

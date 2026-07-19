@@ -95,12 +95,14 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 }
 \PhpursThunks::$thunks['Effect_monadEffect'] = function() { $v = (object)["Applicative0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Effect_monadEffect","Effect_bindEffect","Effect_applyEffect","Effect_applicativeEffect","Effect_functorEffect"];
   $__res = ($GLOBALS['Effect_applicativeEffect'] ?? \PhpursThunks::eval('Effect_applicativeEffect'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bind1" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Effect_monadEffect","Effect_bindEffect","Effect_applyEffect","Effect_applicativeEffect","Effect_functorEffect"];
   $__res = ($GLOBALS['Effect_bindEffect'] ?? \PhpursThunks::eval('Effect_bindEffect'));
   goto __end;;
   __end:
@@ -108,6 +110,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 }]; return $v; };
 \PhpursThunks::$thunks['Effect_bindEffect'] = function() { $v = (object)["bind" => ($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')), "Apply0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Effect_monadEffect","Effect_bindEffect","Effect_applyEffect","Effect_applicativeEffect","Effect_functorEffect"];
   $__res = ($GLOBALS['Effect_applyEffect'] ?? \PhpursThunks::eval('Effect_applyEffect'));
   goto __end;;
   __end:
@@ -115,6 +118,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 }]; return $v; };
 \PhpursThunks::$thunks['Effect_applyEffect'] = function() { $v = (object)["apply" => (($GLOBALS['Control_Monad_ap'] ?? \PhpursThunks::eval('Control_Monad_ap')))(($GLOBALS['Effect_monadEffect'] ?? \PhpursThunks::eval('Effect_monadEffect'))), "Functor0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Effect_monadEffect","Effect_bindEffect","Effect_applyEffect","Effect_applicativeEffect","Effect_functorEffect"];
   $__res = ($GLOBALS['Effect_functorEffect'] ?? \PhpursThunks::eval('Effect_functorEffect'));
   goto __end;;
   __end:
@@ -122,24 +126,28 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 }]; return $v; };
 \PhpursThunks::$thunks['Effect_applicativeEffect'] = function() { $v = (object)["pure" => ($GLOBALS['Effect_pureE'] ?? \PhpursThunks::eval('Effect_pureE')), "Apply0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Effect_monadEffect","Effect_bindEffect","Effect_applyEffect","Effect_applicativeEffect","Effect_functorEffect"];
   $__res = ($GLOBALS['Effect_applyEffect'] ?? \PhpursThunks::eval('Effect_applyEffect'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
 \PhpursThunks::$thunks['Effect_functorEffect'] = function() { $v = (object)["map" => (($GLOBALS['Control_Applicative_liftA1'] ?? \PhpursThunks::eval('Control_Applicative_liftA1')))(($GLOBALS['Effect_applicativeEffect'] ?? \PhpursThunks::eval('Effect_applicativeEffect')))]; return $v; };
-\PhpursThunks::$thunks['Effect_semigroupEffect'] = function() { $v = function($dictSemigroup) {
+\PhpursThunks::$thunks['Effect_semigroupEffect'] = function() { $v = function($dictSemigroup_0) {
   $__num = \func_num_args();
-  $__res = (object)["append" => ((($GLOBALS['Control_Apply_lift2'] ?? \PhpursThunks::eval('Control_Apply_lift2')))(($GLOBALS['Effect_applyEffect'] ?? \PhpursThunks::eval('Effect_applyEffect'))))(($dictSemigroup)->append)];
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Effect_semigroupEffect"), recVars=[];
+  $__res = (object)["append" => ((($GLOBALS['Control_Apply_lift2'] ?? \PhpursThunks::eval('Control_Apply_lift2')))(($GLOBALS['Effect_applyEffect'] ?? \PhpursThunks::eval('Effect_applyEffect'))))(($dictSemigroup_0)->append)];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Effect_monoidEffect'] = function() { $v = function($dictMonoid) {
+\PhpursThunks::$thunks['Effect_monoidEffect'] = function() { $v = function($dictMonoid_0) {
   $__num = \func_num_args();
-  $__res = (object)["mempty" => (($GLOBALS['Effect_pureE'] ?? \PhpursThunks::eval('Effect_pureE')))(($dictMonoid)->mempty), "Semigroup0" => function($dollar__unused_0) use (&$dictMonoid) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Effect_monoidEffect"), recVars=[];
+  $__res = (object)["mempty" => (($GLOBALS['Effect_pureE'] ?? \PhpursThunks::eval('Effect_pureE')))(($dictMonoid_0)->mempty), "Semigroup0" => function($dollar__unused_1) use ($dictMonoid_0) {
   $__num = \func_num_args();
-  $__res = (object)["append" => ((($GLOBALS['Control_Apply_lift2'] ?? \PhpursThunks::eval('Control_Apply_lift2')))(($GLOBALS['Effect_applyEffect'] ?? \PhpursThunks::eval('Effect_applyEffect'))))(((($dictMonoid)->Semigroup0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->append)];
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (object)["append" => ((($GLOBALS['Control_Apply_lift2'] ?? \PhpursThunks::eval('Control_Apply_lift2')))(($GLOBALS['Effect_applyEffect'] ?? \PhpursThunks::eval('Effect_applyEffect'))))(((($dictMonoid_0)->Semigroup0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->append)];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

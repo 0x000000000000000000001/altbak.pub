@@ -91,18 +91,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Control_Monad_whenM'] = function() { $v = function($dictMonad) {
+\PhpursThunks::$thunks['Control_Monad_whenM'] = function() { $v = function($dictMonad_0) {
   $__num = \func_num_args();
-  $when_0 = (($GLOBALS['Control_Applicative_when'] ?? \PhpursThunks::eval('Control_Applicative_when')))((($dictMonad)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = (function() use (&$dictMonad, &$when_0) {
-  $__fn = function($mb, $m = null) use (&$dictMonad, &$when_0, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_whenM"), recVars=[];
+  $when_1_0 = (($GLOBALS['Control_Applicative_when'] ?? \PhpursThunks::eval('Control_Applicative_when')))((($dictMonad_0)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__res = (function() use ($dictMonad_0, $when_1_0) {
+  $__fn = function($mb_2, $m_3 = null) use ($dictMonad_0, $when_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((($dictMonad)->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->bind)($mb))(function($b) use (&$m, &$when_0) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((((($dictMonad_0)->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->bind)($mb_2))(function($b_4) use ($m_3, $when_1_0) {
   $__num = \func_num_args();
-  $__res = (($when_0)($b))($m);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($when_1_0)($b_4))($m_3);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -117,18 +120,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Monad_unlessM'] = function() { $v = function($dictMonad) {
+\PhpursThunks::$thunks['Control_Monad_unlessM'] = function() { $v = function($dictMonad_0) {
   $__num = \func_num_args();
-  $unless_0 = (($GLOBALS['Control_Applicative_unless'] ?? \PhpursThunks::eval('Control_Applicative_unless')))((($dictMonad)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = (function() use (&$dictMonad, &$unless_0) {
-  $__fn = function($mb, $m = null) use (&$dictMonad, &$unless_0, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_unlessM"), recVars=[];
+  $unless_1_0 = (($GLOBALS['Control_Applicative_unless'] ?? \PhpursThunks::eval('Control_Applicative_unless')))((($dictMonad_0)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__res = (function() use ($dictMonad_0, $unless_1_0) {
+  $__fn = function($mb_2, $m_3 = null) use ($dictMonad_0, $unless_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((($dictMonad)->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->bind)($mb))(function($b) use (&$m, &$unless_0) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((((($dictMonad_0)->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->bind)($mb_2))(function($b_4) use ($m_3, $unless_1_0) {
   $__num = \func_num_args();
-  $__res = (($unless_0)($b))($m);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($unless_1_0)($b_4))($m_3);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -145,12 +151,14 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 }; return $v; };
 \PhpursThunks::$thunks['Control_Monad_monadProxy'] = function() { $v = (object)["Applicative0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Control_Applicative_applicativeProxy'] ?? \PhpursThunks::eval('Control_Applicative_applicativeProxy'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bind1" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Control_Bind_bindProxy'] ?? \PhpursThunks::eval('Control_Bind_bindProxy'));
   goto __end;;
   __end:
@@ -158,12 +166,14 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 }]; return $v; };
 \PhpursThunks::$thunks['Control_Monad_monadFn'] = function() { $v = (object)["Applicative0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Control_Applicative_applicativeFn'] ?? \PhpursThunks::eval('Control_Applicative_applicativeFn'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bind1" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Control_Bind_bindFn'] ?? \PhpursThunks::eval('Control_Bind_bindFn'));
   goto __end;;
   __end:
@@ -171,26 +181,30 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 }]; return $v; };
 \PhpursThunks::$thunks['Control_Monad_monadArray'] = function() { $v = (object)["Applicative0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Control_Applicative_applicativeArray'] ?? \PhpursThunks::eval('Control_Applicative_applicativeArray'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bind1" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Control_Bind_bindArray'] ?? \PhpursThunks::eval('Control_Bind_bindArray'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
 \PhpursThunks::$thunks['Control_Monad_liftM1'] = function() { $v = (function() {
-  $__fn = function($dictMonad, $f = null, $a = null) use (&$__fn) {
+  $__fn = function($dictMonad_0, $f_1 = null, $a_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((((($dictMonad)->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->bind)($a))(function($a__prime__) use (&$dictMonad, &$f) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_liftM1"), recVars=[];
+  $__res = ((((($dictMonad_0)->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->bind)($a_2))(function($a__prime___3) use ($dictMonad_0, $f_1) {
   $__num = \func_num_args();
-  $__res = (((($dictMonad)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->pure)(($f)($a__prime__));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (((($dictMonad_0)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->pure)(($f_1)($a__prime___3));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -201,20 +215,24 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Control_Monad_ap'] = function() { $v = function($dictMonad) {
+\PhpursThunks::$thunks['Control_Monad_ap'] = function() { $v = function($dictMonad_0) {
   $__num = \func_num_args();
-  $__local_var_0 = (($dictMonad)->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $__res = (function() use (&$__local_var_0, &$dictMonad) {
-  $__fn = function($f, $a = null) use (&$__local_var_0, &$dictMonad, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_ap"), recVars=[];
+  $__local_var_1_0 = (($dictMonad_0)->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__res = (function() use ($__local_var_1_0, $dictMonad_0) {
+  $__fn = function($f_2, $a_3 = null) use ($__local_var_1_0, $dictMonad_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($__local_var_0)->bind)($f))(function($f__prime__) use (&$__local_var_0, &$a, &$dictMonad) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($__local_var_1_0)->bind)($f_2))(function($f__prime___4) use ($__local_var_1_0, $a_3, $dictMonad_0) {
   $__num = \func_num_args();
-  $__res = ((($__local_var_0)->bind)($a))(function($a__prime__) use (&$dictMonad, &$f__prime__) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($__local_var_1_0)->bind)($a_3))(function($a__prime___5) use ($dictMonad_0, $f__prime___4) {
   $__num = \func_num_args();
-  $__res = (((($dictMonad)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->pure)(($f__prime__)($a__prime__));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (((($dictMonad_0)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->pure)(($f__prime___4)($a__prime___5));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

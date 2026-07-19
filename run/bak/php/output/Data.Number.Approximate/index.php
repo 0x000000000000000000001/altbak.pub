@@ -92,35 +92,38 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Number_Approximate_Tolerance'] = function() { $v = function($x) {
+\PhpursThunks::$thunks['Data_Number_Approximate_Tolerance'] = function() { $v = function($x_0) {
   $__num = \func_num_args();
-  $__res = $x;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Number_Approximate_Tolerance"), recVars=[];
+  $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Number_Approximate_Fraction'] = function() { $v = function($x) {
+\PhpursThunks::$thunks['Data_Number_Approximate_Fraction'] = function() { $v = function($x_0) {
   $__num = \func_num_args();
-  $__res = $x;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Number_Approximate_Fraction"), recVars=[];
+  $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Data_Number_Approximate_eqRelative'] = function() { $v = (function() {
-  $__fn = function($v, $v1 = null, $v2 = null) use (&$__fn) {
+  $__fn = function($v_0, $v1_1 = null, $v2_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  if (($v1 === 0.0)) {
-$__t0 = ( ! (is_object((((($GLOBALS['Data_Ord_ordNumber'] ?? \PhpursThunks::eval('Data_Ord_ordNumber')))->compare)((($GLOBALS['Data_Number_abs'] ?? \PhpursThunks::eval('Data_Number_abs')))($v2)))($v)) && (((((($GLOBALS['Data_Ord_ordNumber'] ?? \PhpursThunks::eval('Data_Ord_ordNumber')))->compare)((($GLOBALS['Data_Number_abs'] ?? \PhpursThunks::eval('Data_Number_abs')))($v2)))($v))->tag === "GT")));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Number_Approximate_eqRelative"), recVars=[];
+  if (($v1_1 === 0.0)) {
+$__t0 = ( ! (is_object((((($GLOBALS['Data_Ord_ordNumber'] ?? \PhpursThunks::eval('Data_Ord_ordNumber')))->compare)((($GLOBALS['Data_Number_abs'] ?? \PhpursThunks::eval('Data_Number_abs')))($v2_2)))($v_0)) && (((((($GLOBALS['Data_Ord_ordNumber'] ?? \PhpursThunks::eval('Data_Ord_ordNumber')))->compare)((($GLOBALS['Data_Number_abs'] ?? \PhpursThunks::eval('Data_Number_abs')))($v2_2)))($v_0))->tag === "GT")));
 } else {
-switch ($v2) {
+switch ($v2_2) {
 case 0.0:
-$__t0 = ( ! (is_object((((($GLOBALS['Data_Ord_ordNumber'] ?? \PhpursThunks::eval('Data_Ord_ordNumber')))->compare)((($GLOBALS['Data_Number_abs'] ?? \PhpursThunks::eval('Data_Number_abs')))($v1)))($v)) && (((((($GLOBALS['Data_Ord_ordNumber'] ?? \PhpursThunks::eval('Data_Ord_ordNumber')))->compare)((($GLOBALS['Data_Number_abs'] ?? \PhpursThunks::eval('Data_Number_abs')))($v1)))($v))->tag === "GT")));
+$__t0 = ( ! (is_object((((($GLOBALS['Data_Ord_ordNumber'] ?? \PhpursThunks::eval('Data_Ord_ordNumber')))->compare)((($GLOBALS['Data_Number_abs'] ?? \PhpursThunks::eval('Data_Number_abs')))($v1_1)))($v_0)) && (((((($GLOBALS['Data_Ord_ordNumber'] ?? \PhpursThunks::eval('Data_Ord_ordNumber')))->compare)((($GLOBALS['Data_Number_abs'] ?? \PhpursThunks::eval('Data_Number_abs')))($v1_1)))($v_0))->tag === "GT")));
 break;
 default:
-$__t0 = ( ! (is_object((((($GLOBALS['Data_Ord_ordNumber'] ?? \PhpursThunks::eval('Data_Ord_ordNumber')))->compare)((($GLOBALS['Data_Number_abs'] ?? \PhpursThunks::eval('Data_Number_abs')))(((($GLOBALS['Data_Ring_numSub'] ?? \PhpursThunks::eval('Data_Ring_numSub')))($v1))($v2))))(((($GLOBALS['Data_EuclideanRing_numDiv'] ?? \PhpursThunks::eval('Data_EuclideanRing_numDiv')))(((($GLOBALS['Data_Semiring_numMul'] ?? \PhpursThunks::eval('Data_Semiring_numMul')))($v))((($GLOBALS['Data_Number_abs'] ?? \PhpursThunks::eval('Data_Number_abs')))(((($GLOBALS['Data_Semiring_numAdd'] ?? \PhpursThunks::eval('Data_Semiring_numAdd')))($v1))($v2)))))(2.0))) && (((((($GLOBALS['Data_Ord_ordNumber'] ?? \PhpursThunks::eval('Data_Ord_ordNumber')))->compare)((($GLOBALS['Data_Number_abs'] ?? \PhpursThunks::eval('Data_Number_abs')))(((($GLOBALS['Data_Ring_numSub'] ?? \PhpursThunks::eval('Data_Ring_numSub')))($v1))($v2))))(((($GLOBALS['Data_EuclideanRing_numDiv'] ?? \PhpursThunks::eval('Data_EuclideanRing_numDiv')))(((($GLOBALS['Data_Semiring_numMul'] ?? \PhpursThunks::eval('Data_Semiring_numMul')))($v))((($GLOBALS['Data_Number_abs'] ?? \PhpursThunks::eval('Data_Number_abs')))(((($GLOBALS['Data_Semiring_numAdd'] ?? \PhpursThunks::eval('Data_Semiring_numAdd')))($v1))($v2)))))(2.0)))->tag === "GT")));
+$__t0 = ( ! (is_object((((($GLOBALS['Data_Ord_ordNumber'] ?? \PhpursThunks::eval('Data_Ord_ordNumber')))->compare)((($GLOBALS['Data_Number_abs'] ?? \PhpursThunks::eval('Data_Number_abs')))(((($GLOBALS['Data_Ring_numSub'] ?? \PhpursThunks::eval('Data_Ring_numSub')))($v1_1))($v2_2))))(((($GLOBALS['Data_EuclideanRing_numDiv'] ?? \PhpursThunks::eval('Data_EuclideanRing_numDiv')))(((($GLOBALS['Data_Semiring_numMul'] ?? \PhpursThunks::eval('Data_Semiring_numMul')))($v_0))((($GLOBALS['Data_Number_abs'] ?? \PhpursThunks::eval('Data_Number_abs')))(((($GLOBALS['Data_Semiring_numAdd'] ?? \PhpursThunks::eval('Data_Semiring_numAdd')))($v1_1))($v2_2)))))(2.0))) && (((((($GLOBALS['Data_Ord_ordNumber'] ?? \PhpursThunks::eval('Data_Ord_ordNumber')))->compare)((($GLOBALS['Data_Number_abs'] ?? \PhpursThunks::eval('Data_Number_abs')))(((($GLOBALS['Data_Ring_numSub'] ?? \PhpursThunks::eval('Data_Ring_numSub')))($v1_1))($v2_2))))(((($GLOBALS['Data_EuclideanRing_numDiv'] ?? \PhpursThunks::eval('Data_EuclideanRing_numDiv')))(((($GLOBALS['Data_Semiring_numMul'] ?? \PhpursThunks::eval('Data_Semiring_numMul')))($v_0))((($GLOBALS['Data_Number_abs'] ?? \PhpursThunks::eval('Data_Number_abs')))(((($GLOBALS['Data_Semiring_numAdd'] ?? \PhpursThunks::eval('Data_Semiring_numAdd')))($v1_1))($v2_2)))))(2.0)))->tag === "GT")));
 break;
 };
 };
@@ -133,12 +136,13 @@ break;
 })(); return $v; };
 \PhpursThunks::$thunks['Data_Number_Approximate_eqApproximate'] = function() { $v = (($GLOBALS['Data_Number_Approximate_eqRelative'] ?? \PhpursThunks::eval('Data_Number_Approximate_eqRelative')))(0.000001); return $v; };
 \PhpursThunks::$thunks['Data_Number_Approximate_neqApproximate'] = function() { $v = (function() {
-  $__fn = function($x, $y = null) use (&$__fn) {
+  $__fn = function($x_0, $y_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_HeytingAlgebra_boolNot'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolNot')))((((($GLOBALS['Data_Number_Approximate_eqRelative'] ?? \PhpursThunks::eval('Data_Number_Approximate_eqRelative')))(0.000001))($x))($y));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Number_Approximate_neqApproximate"), recVars=[];
+  $__res = (($GLOBALS['Data_HeytingAlgebra_boolNot'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolNot')))((((($GLOBALS['Data_Number_Approximate_eqRelative'] ?? \PhpursThunks::eval('Data_Number_Approximate_eqRelative')))(0.000001))($x_0))($y_1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -146,12 +150,13 @@ break;
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Data_Number_Approximate_eqAbsolute'] = function() { $v = (function() {
-  $__fn = function($v, $x = null, $y = null) use (&$__fn) {
+  $__fn = function($v_0, $x_1 = null, $y_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ( ! (is_object((((($GLOBALS['Data_Ord_ordNumber'] ?? \PhpursThunks::eval('Data_Ord_ordNumber')))->compare)((($GLOBALS['Data_Number_abs'] ?? \PhpursThunks::eval('Data_Number_abs')))(((($GLOBALS['Data_Ring_numSub'] ?? \PhpursThunks::eval('Data_Ring_numSub')))($x))($y))))($v)) && (((((($GLOBALS['Data_Ord_ordNumber'] ?? \PhpursThunks::eval('Data_Ord_ordNumber')))->compare)((($GLOBALS['Data_Number_abs'] ?? \PhpursThunks::eval('Data_Number_abs')))(((($GLOBALS['Data_Ring_numSub'] ?? \PhpursThunks::eval('Data_Ring_numSub')))($x))($y))))($v))->tag === "GT")));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Number_Approximate_eqAbsolute"), recVars=[];
+  $__res = ( ! (is_object((((($GLOBALS['Data_Ord_ordNumber'] ?? \PhpursThunks::eval('Data_Ord_ordNumber')))->compare)((($GLOBALS['Data_Number_abs'] ?? \PhpursThunks::eval('Data_Number_abs')))(((($GLOBALS['Data_Ring_numSub'] ?? \PhpursThunks::eval('Data_Ring_numSub')))($x_1))($y_2))))($v_0)) && (((((($GLOBALS['Data_Ord_ordNumber'] ?? \PhpursThunks::eval('Data_Ord_ordNumber')))->compare)((($GLOBALS['Data_Number_abs'] ?? \PhpursThunks::eval('Data_Number_abs')))(((($GLOBALS['Data_Ring_numSub'] ?? \PhpursThunks::eval('Data_Ring_numSub')))($x_1))($y_2))))($v_0))->tag === "GT")));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;

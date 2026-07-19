@@ -93,30 +93,38 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   }
 }
 \PhpursThunks::$thunks['Test_Records_updateRec'] = function() { $v = (function() {
-  $__fn = function($v, $v1 = null) use (&$__fn) {
+  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  switch ($v) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Test_Records_updateRec"), recVars=["Test_Records_updateRec"];
+  while (true) {
+switch ($v_0) {
 case 0:
-$__t3 = $v1;
+$__t5 = $v1_1;
 break;
 default:
-$__obj0 = clone $v1;
-($__obj0)->a = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))(($v1)->a))(1);
-$__obj1 = clone ($v1)->b;
-($__obj1)->c = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))((($v1)->b)->c))(2);
-$__obj2 = clone (($v1)->b)->d;
-($__obj2)->e = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))(((($v1)->b)->d)->e))(3);
-($__obj2)->f = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))(((($v1)->b)->d)->f))(((($GLOBALS['Data_EuclideanRing_intMod'] ?? \PhpursThunks::eval('Data_EuclideanRing_intMod')))($v))(5));
+$__obj0 = clone $v1_1;
+($__obj0)->a = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))(($v1_1)->a))(1);
+$__obj1 = clone ($v1_1)->b;
+($__obj1)->c = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))((($v1_1)->b)->c))(2);
+$__obj2 = clone (($v1_1)->b)->d;
+($__obj2)->e = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))(((($v1_1)->b)->d)->e))(3);
+($__obj2)->f = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))(((($v1_1)->b)->d)->f))(((($GLOBALS['Data_EuclideanRing_intMod'] ?? \PhpursThunks::eval('Data_EuclideanRing_intMod')))($v_0))(5));
 ($__obj1)->d = $__obj2;
 ($__obj0)->b = $__obj1;
-$__t3 = ((($GLOBALS['Test_Records_updateRec'] ?? \PhpursThunks::eval('Test_Records_updateRec')))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v))(1)))($__obj0);
+$__tco_3 = ((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v_0))(1);
+$__tco_4 = $__obj0;
+$v_0 = $__tco_3;
+$v1_1 = $__tco_4;
+continue 2;
+$__t5 = null;
 break;
 };
-  $__res = $__t3;
-  goto __end;;
+$__res = $__t5;
+goto __end;;
+};
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };

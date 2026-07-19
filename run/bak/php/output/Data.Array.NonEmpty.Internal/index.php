@@ -105,9 +105,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Array_NonEmpty_Internal_NonEmptyArray'] = function() { $v = function($x) {
+\PhpursThunks::$thunks['Data_Array_NonEmpty_Internal_NonEmptyArray'] = function() { $v = function($x_0) {
   $__num = \func_num_args();
-  $__res = $x;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Array_NonEmpty_Internal_NonEmptyArray"), recVars=[];
+  $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -115,11 +116,13 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 \PhpursThunks::$thunks['Data_Array_NonEmpty_Internal_unfoldable1NonEmptyArray'] = function() { $v = ($GLOBALS['Data_Unfoldable1_unfoldable1Array'] ?? \PhpursThunks::eval('Data_Unfoldable1_unfoldable1Array')); return $v; };
 \PhpursThunks::$thunks['Data_Array_NonEmpty_Internal_traversableWithIndexNonEmptyArray'] = function() { $v = ($GLOBALS['Data_TraversableWithIndex_traversableWithIndexArray'] ?? \PhpursThunks::eval('Data_TraversableWithIndex_traversableWithIndexArray')); return $v; };
 \PhpursThunks::$thunks['Data_Array_NonEmpty_Internal_traversableNonEmptyArray'] = function() { $v = ($GLOBALS['Data_Traversable_traversableArray'] ?? \PhpursThunks::eval('Data_Traversable_traversableArray')); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_Internal_showNonEmptyArray'] = function() { $v = function($dictShow) {
+\PhpursThunks::$thunks['Data_Array_NonEmpty_Internal_showNonEmptyArray'] = function() { $v = function($dictShow_0) {
   $__num = \func_num_args();
-  $__res = (object)["show" => function($v) use (&$dictShow) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Array_NonEmpty_Internal_showNonEmptyArray"), recVars=[];
+  $__res = (object)["show" => function($v_1) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("(NonEmptyArray "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))(((($GLOBALS['Data_Show_showArrayImpl'] ?? \PhpursThunks::eval('Data_Show_showArrayImpl')))(($dictShow)->show))($v)))(")"));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("(NonEmptyArray "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))(((($GLOBALS['Data_Show_showArrayImpl'] ?? \PhpursThunks::eval('Data_Show_showArrayImpl')))(($dictShow_0)->show))($v_1)))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -129,9 +132,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Data_Array_NonEmpty_Internal_semigroupNonEmptyArray'] = function() { $v = ($GLOBALS['Data_Semigroup_semigroupArray'] ?? \PhpursThunks::eval('Data_Semigroup_semigroupArray')); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_Internal_ordNonEmptyArray'] = function() { $v = function($dictOrd) {
+\PhpursThunks::$thunks['Data_Array_NonEmpty_Internal_ordNonEmptyArray'] = function() { $v = function($dictOrd_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Ord_ordArray'] ?? \PhpursThunks::eval('Data_Ord_ordArray')))($dictOrd);
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Array_NonEmpty_Internal_ordNonEmptyArray"), recVars=[];
+  $__res = (($GLOBALS['Data_Ord_ordArray'] ?? \PhpursThunks::eval('Data_Ord_ordArray')))($dictOrd_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -142,26 +146,30 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 \PhpursThunks::$thunks['Data_Array_NonEmpty_Internal_functorNonEmptyArray'] = function() { $v = ($GLOBALS['Data_Functor_functorArray'] ?? \PhpursThunks::eval('Data_Functor_functorArray')); return $v; };
 \PhpursThunks::$thunks['Data_Array_NonEmpty_Internal_foldableWithIndexNonEmptyArray'] = function() { $v = ($GLOBALS['Data_FoldableWithIndex_foldableWithIndexArray'] ?? \PhpursThunks::eval('Data_FoldableWithIndex_foldableWithIndexArray')); return $v; };
 \PhpursThunks::$thunks['Data_Array_NonEmpty_Internal_foldableNonEmptyArray'] = function() { $v = ($GLOBALS['Data_Foldable_foldableArray'] ?? \PhpursThunks::eval('Data_Foldable_foldableArray')); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_Internal_foldable1NonEmptyArray'] = function() { $v = (object)["foldMap1" => function($dictSemigroup) {
+\PhpursThunks::$thunks['Data_Array_NonEmpty_Internal_foldable1NonEmptyArray'] = function() { $v = (object)["foldMap1" => function($dictSemigroup_0) {
   $__num = \func_num_args();
-  $__res = (((($GLOBALS['Data_Semigroup_Foldable_foldMap1DefaultL'] ?? \PhpursThunks::eval('Data_Semigroup_Foldable_foldMap1DefaultL')))(($GLOBALS['Data_Array_NonEmpty_Internal_foldable1NonEmptyArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_Internal_foldable1NonEmptyArray'))))(($GLOBALS['Data_Functor_functorArray'] ?? \PhpursThunks::eval('Data_Functor_functorArray'))))($dictSemigroup);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_Array_NonEmpty_Internal_foldable1NonEmptyArray"];
+  $__res = (((($GLOBALS['Data_Semigroup_Foldable_foldMap1DefaultL'] ?? \PhpursThunks::eval('Data_Semigroup_Foldable_foldMap1DefaultL')))(($GLOBALS['Data_Array_NonEmpty_Internal_foldable1NonEmptyArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_Internal_foldable1NonEmptyArray'))))(($GLOBALS['Data_Functor_functorArray'] ?? \PhpursThunks::eval('Data_Functor_functorArray'))))($dictSemigroup_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "foldr1" => (($GLOBALS['Data_Function_Uncurried_runFn2'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn2')))(($GLOBALS['Data_Array_NonEmpty_Internal_foldr1Impl'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_Internal_foldr1Impl'))), "foldl1" => (($GLOBALS['Data_Function_Uncurried_runFn2'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn2')))(($GLOBALS['Data_Array_NonEmpty_Internal_foldl1Impl'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_Internal_foldl1Impl'))), "Foldable0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_Array_NonEmpty_Internal_foldable1NonEmptyArray"];
   $__res = ($GLOBALS['Data_Foldable_foldableArray'] ?? \PhpursThunks::eval('Data_Foldable_foldableArray'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_Internal_traversable1NonEmptyArray'] = function() { $v = (object)["traverse1" => function($dictApply) {
+\PhpursThunks::$thunks['Data_Array_NonEmpty_Internal_traversable1NonEmptyArray'] = function() { $v = (object)["traverse1" => function($dictApply_0) {
   $__num = \func_num_args();
-  $apply_0 = ($dictApply)->apply;
-  $map_1 = ((($dictApply)->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->map;
-  $__res = function($f) use (&$apply_0, &$map_1) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_Array_NonEmpty_Internal_traversable1NonEmptyArray"];
+  $apply_1_0 = ($dictApply_0)->apply;
+  $map_2_1 = ((($dictApply_0)->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->map;
+  $__res = function($f_3) use ($apply_1_0, $map_2_1) {
   $__num = \func_num_args();
-  $__res = ((((($GLOBALS['Data_Function_Uncurried_runFn3'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn3')))(($GLOBALS['Data_Array_NonEmpty_Internal_traverse1Impl'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_Internal_traverse1Impl'))))($apply_0))($map_1))($f);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_Array_NonEmpty_Internal_traversable1NonEmptyArray"];
+  $__res = ((((($GLOBALS['Data_Function_Uncurried_runFn3'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn3')))(($GLOBALS['Data_Array_NonEmpty_Internal_traverse1Impl'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_Internal_traverse1Impl'))))($apply_1_0))($map_2_1))($f_3);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -169,28 +177,32 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "sequence1" => function($dictApply) {
+}, "sequence1" => function($dictApply_0) {
   $__num = \func_num_args();
-  $__res = (((($GLOBALS['Data_Array_NonEmpty_Internal_traversable1NonEmptyArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_Internal_traversable1NonEmptyArray')))->traverse1)($dictApply))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->identity);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_Array_NonEmpty_Internal_traversable1NonEmptyArray"];
+  $__res = (((($GLOBALS['Data_Array_NonEmpty_Internal_traversable1NonEmptyArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_Internal_traversable1NonEmptyArray')))->traverse1)($dictApply_0))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->identity);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Foldable10" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_Array_NonEmpty_Internal_traversable1NonEmptyArray"];
   $__res = ($GLOBALS['Data_Array_NonEmpty_Internal_foldable1NonEmptyArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_Internal_foldable1NonEmptyArray'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Traversable1" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_Array_NonEmpty_Internal_traversable1NonEmptyArray"];
   $__res = ($GLOBALS['Data_Traversable_traversableArray'] ?? \PhpursThunks::eval('Data_Traversable_traversableArray'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_Internal_eqNonEmptyArray'] = function() { $v = function($dictEq) {
+\PhpursThunks::$thunks['Data_Array_NonEmpty_Internal_eqNonEmptyArray'] = function() { $v = function($dictEq_0) {
   $__num = \func_num_args();
-  $__res = (object)["eq" => (($GLOBALS['Data_Eq_eqArrayImpl'] ?? \PhpursThunks::eval('Data_Eq_eqArrayImpl')))(($dictEq)->eq)];
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Array_NonEmpty_Internal_eqNonEmptyArray"), recVars=[];
+  $__res = (object)["eq" => (($GLOBALS['Data_Eq_eqArrayImpl'] ?? \PhpursThunks::eval('Data_Eq_eqArrayImpl')))(($dictEq_0)->eq)];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

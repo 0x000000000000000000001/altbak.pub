@@ -93,77 +93,98 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Test_LazyEvaluation_Lazy'] = function() { $v = function($x) {
+\PhpursThunks::$thunks['Test_LazyEvaluation_Lazy'] = function() { $v = function($x_0) {
   $__num = \func_num_args();
-  $__res = $x;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Test_LazyEvaluation_Lazy"), recVars=[];
+  $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Test_LazyEvaluation_force'] = function() { $v = function($v) {
+\PhpursThunks::$thunks['Test_LazyEvaluation_force'] = function() { $v = function($v_0) {
   $__num = \func_num_args();
-  $__res = ($v)(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Test_LazyEvaluation_force"), recVars=[];
+  $__res = ($v_0)(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Test_LazyEvaluation_describe'] = function() { $v = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))("Lazy Evaluation (1M Thunks Forced, 1k Depth):"); return $v; };
-\PhpursThunks::$thunks['Test_LazyEvaluation_defer'] = function() { $v = function($f) {
+\PhpursThunks::$thunks['Test_LazyEvaluation_defer'] = function() { $v = function($f_0) {
   $__num = \func_num_args();
-  $__res = $f;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Test_LazyEvaluation_defer"), recVars=[];
+  $__res = $f_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Test_LazyEvaluation_buildThunks'] = function() { $v = (function() {
-  $__fn = function($v, $v1 = null) use (&$__fn) {
+  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  switch ($v) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Test_LazyEvaluation_buildThunks"), recVars=["Test_LazyEvaluation_buildThunks"];
+  while (true) {
+switch ($v_0) {
 case 0:
-$__t0 = $v1;
+$__t2 = $v1_1;
 break;
 default:
-$__t0 = ((($GLOBALS['Test_LazyEvaluation_buildThunks'] ?? \PhpursThunks::eval('Test_LazyEvaluation_buildThunks')))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v))(1)))(function($v2) use (&$v1) {
+$__tco_0 = ((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v_0))(1);
+$__tco_1 = function($v2_2) use ($v1_1) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))(($v1)(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')))))(1);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Test_LazyEvaluation_buildThunks"];
+  $__res = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))(($v1_1)(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')))))(1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
+};
+$v_0 = $__tco_0;
+$v1_1 = $__tco_1;
+continue 2;
+$__t2 = null;
 break;
 };
-  $__res = $__t0;
-  goto __end;;
+$__res = $__t2;
+goto __end;;
+};
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Test_LazyEvaluation_runManyTimes'] = function() { $v = (function() {
-  $__fn = function($v, $v1 = null) use (&$__fn) {
+  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  switch ($v) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Test_LazyEvaluation_runManyTimes"), recVars=["Test_LazyEvaluation_runManyTimes"];
+  while (true) {
+switch ($v_0) {
 case 0:
-$__t0 = $v1;
+$__t2 = $v1_1;
 break;
 default:
-$__t0 = ((($GLOBALS['Test_LazyEvaluation_runManyTimes'] ?? \PhpursThunks::eval('Test_LazyEvaluation_runManyTimes')))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v))(1)))(((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))($v1))((((($GLOBALS['Test_LazyEvaluation_buildThunks'] ?? \PhpursThunks::eval('Test_LazyEvaluation_buildThunks')))(1000))(function($v2) {
+$__tco_0 = ((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v_0))(1);
+$__tco_1 = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))($v1_1))((((($GLOBALS['Test_LazyEvaluation_buildThunks'] ?? \PhpursThunks::eval('Test_LazyEvaluation_buildThunks')))(1000))(function($v2_2) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Test_LazyEvaluation_runManyTimes"];
   $__res = 0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')))));
+}))(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'))));
+$v_0 = $__tco_0;
+$v1_1 = $__tco_1;
+continue 2;
+$__t2 = null;
 break;
 };
-  $__res = $__t0;
-  goto __end;;
+$__res = $__t2;
+goto __end;;
+};
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };

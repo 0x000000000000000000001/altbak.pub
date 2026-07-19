@@ -89,36 +89,37 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   }
 }
 \PhpursThunks::$thunks['Data_Number_Format_clamp'] = function() { $v = (function() {
-  $__fn = function($low, $hi = null, $x = null) use (&$__fn) {
+  $__fn = function($low_0, $hi_1 = null, $x_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $v_0 = (((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)($low))($x);
-  if ((is_object($v_0) && (($v_0)->tag === "LT"))) {
-$__t1 = $x;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Number_Format_clamp"), recVars=[];
+  $v_3_0 = (((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)($low_0))($x_2);
+  if ((is_object($v_3_0) && (($v_3_0)->tag === "LT"))) {
+$__t1 = $x_2;
 } else {
-if ((is_object($v_0) && (($v_0)->tag === "EQ"))) {
-$__t1 = $low;
+if ((is_object($v_3_0) && (($v_3_0)->tag === "EQ"))) {
+$__t1 = $low_0;
 } else {
-if ((is_object($v_0) && (($v_0)->tag === "GT"))) {
-$__t1 = $low;
+if ((is_object($v_3_0) && (($v_3_0)->tag === "GT"))) {
+$__t1 = $low_0;
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t1 = null;
 };
 };
 };
-  $__local_var_2 = $__t1;
-  $v_3 = (((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)($hi))($__local_var_2);
-  if ((is_object($v_3) && (($v_3)->tag === "LT"))) {
-$__t4 = $hi;
+  $__local_var_4_1 = $__t1;
+  $v_5_3 = (((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)($hi_1))($__local_var_4_1);
+  if ((is_object($v_5_3) && (($v_5_3)->tag === "LT"))) {
+$__t4 = $hi_1;
 } else {
-if ((is_object($v_3) && (($v_3)->tag === "EQ"))) {
-$__t4 = $hi;
+if ((is_object($v_5_3) && (($v_5_3)->tag === "EQ"))) {
+$__t4 = $hi_1;
 } else {
-if ((is_object($v_3) && (($v_3)->tag === "GT"))) {
-$__t4 = $__local_var_2;
+if ((is_object($v_5_3) && (($v_5_3)->tag === "GT"))) {
+$__t4 = $__local_var_4_1;
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t4 = null;
@@ -153,16 +154,17 @@ $__t4 = null;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Number_Format_toStringWith'] = function() { $v = function($v) {
+\PhpursThunks::$thunks['Data_Number_Format_toStringWith'] = function() { $v = function($v_0) {
   $__num = \func_num_args();
-  if ((is_object($v) && (($v)->tag === "Precision"))) {
-$__t0 = (($GLOBALS['Data_Number_Format_toPrecisionNative'] ?? \PhpursThunks::eval('Data_Number_Format_toPrecisionNative')))(($v)->value0);
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Number_Format_toStringWith"), recVars=[];
+  if ((is_object($v_0) && (($v_0)->tag === "Precision"))) {
+$__t0 = (($GLOBALS['Data_Number_Format_toPrecisionNative'] ?? \PhpursThunks::eval('Data_Number_Format_toPrecisionNative')))(($v_0)->value0);
 } else {
-if ((is_object($v) && (($v)->tag === "Fixed"))) {
-$__t0 = (($GLOBALS['Data_Number_Format_toFixedNative'] ?? \PhpursThunks::eval('Data_Number_Format_toFixedNative')))(($v)->value0);
+if ((is_object($v_0) && (($v_0)->tag === "Fixed"))) {
+$__t0 = (($GLOBALS['Data_Number_Format_toFixedNative'] ?? \PhpursThunks::eval('Data_Number_Format_toFixedNative')))(($v_0)->value0);
 } else {
-if ((is_object($v) && (($v)->tag === "Exponential"))) {
-$__t0 = (($GLOBALS['Data_Number_Format_toExponentialNative'] ?? \PhpursThunks::eval('Data_Number_Format_toExponentialNative')))(($v)->value0);
+if ((is_object($v_0) && (($v_0)->tag === "Exponential"))) {
+$__t0 = (($GLOBALS['Data_Number_Format_toExponentialNative'] ?? \PhpursThunks::eval('Data_Number_Format_toExponentialNative')))(($v_0)->value0);
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t0 = null;

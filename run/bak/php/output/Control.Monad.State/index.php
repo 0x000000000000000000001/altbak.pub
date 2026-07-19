@@ -92,27 +92,30 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   }
 }
 \PhpursThunks::$thunks['Control_Monad_State_withState'] = function() { $v = ($GLOBALS['Control_Monad_State_Trans_withStateT'] ?? \PhpursThunks::eval('Control_Monad_State_Trans_withStateT')); return $v; };
-\PhpursThunks::$thunks['Control_Monad_State_runState'] = function() { $v = function($v) {
+\PhpursThunks::$thunks['Control_Monad_State_runState'] = function() { $v = function($v_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce'))))($v);
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_State_runState"), recVars=[];
+  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce'))))($v_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Monad_State_mapState'] = function() { $v = function($f) {
+\PhpursThunks::$thunks['Control_Monad_State_mapState'] = function() { $v = function($f_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Monad_State_Trans_mapStateT'] ?? \PhpursThunks::eval('Control_Monad_State_Trans_mapStateT')))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Identity_Identity'] ?? \PhpursThunks::eval('Data_Identity_Identity'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($f))(($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_State_mapState"), recVars=[];
+  $__res = (($GLOBALS['Control_Monad_State_Trans_mapStateT'] ?? \PhpursThunks::eval('Control_Monad_State_Trans_mapStateT')))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Identity_Identity'] ?? \PhpursThunks::eval('Data_Identity_Identity'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($f_0))(($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Control_Monad_State_execState'] = function() { $v = (function() {
-  $__fn = function($v, $s = null) use (&$__fn) {
+  $__fn = function($v_0, $s_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($v)($s))->value1;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_State_execState"), recVars=[];
+  $__res = (($v_0)($s_1))->value1;
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -120,12 +123,13 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Control_Monad_State_evalState'] = function() { $v = (function() {
-  $__fn = function($v, $s = null) use (&$__fn) {
+  $__fn = function($v_0, $s_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($v)($s))->value0;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_State_evalState"), recVars=[];
+  $__res = (($v_0)($s_1))->value0;
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

@@ -95,21 +95,29 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 }
 \PhpursThunks::$thunks['Test_TCO_describe'] = function() { $v = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))("Tail Call Optimization (100k calls):"); return $v; };
 \PhpursThunks::$thunks['Test_TCO_deepTailRec'] = function() { $v = (function() {
-  $__fn = function($v, $v1 = null) use (&$__fn) {
+  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  switch ($v) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Test_TCO_deepTailRec"), recVars=["Test_TCO_deepTailRec"];
+  while (true) {
+switch ($v_0) {
 case 0:
-$__t0 = $v1;
+$__t2 = $v1_1;
 break;
 default:
-$__t0 = ((($GLOBALS['Test_TCO_deepTailRec'] ?? \PhpursThunks::eval('Test_TCO_deepTailRec')))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v))(1)))(((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))($v1))(((($GLOBALS['Data_EuclideanRing_intMod'] ?? \PhpursThunks::eval('Data_EuclideanRing_intMod')))($v))(3)));
+$__tco_0 = ((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v_0))(1);
+$__tco_1 = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))($v1_1))(((($GLOBALS['Data_EuclideanRing_intMod'] ?? \PhpursThunks::eval('Data_EuclideanRing_intMod')))($v_0))(3));
+$v_0 = $__tco_0;
+$v1_1 = $__tco_1;
+continue 2;
+$__t2 = null;
 break;
 };
-  $__res = $__t0;
-  goto __end;;
+$__res = $__t2;
+goto __end;;
+};
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };

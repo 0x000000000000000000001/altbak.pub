@@ -93,20 +93,22 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   }
 }
 \PhpursThunks::$thunks['Control_Comonad_Env_withEnv'] = function() { $v = ($GLOBALS['Control_Comonad_Env_Trans_withEnvT'] ?? \PhpursThunks::eval('Control_Comonad_Env_Trans_withEnvT')); return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Env_runEnv'] = function() { $v = function($v) {
+\PhpursThunks::$thunks['Control_Comonad_Env_runEnv'] = function() { $v = function($v_0) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Tuple", ($v)->value0, (($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))(($v)->value1));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Comonad_Env_runEnv"), recVars=[];
+  $__res = new Phpurs_Data2("Tuple", ($v_0)->value0, (($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))(($v_0)->value1));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Control_Comonad_Env_mapEnv'] = function() { $v = (function() {
-  $__fn = function($f, $v = null) use (&$__fn) {
+  $__fn = function($f_0, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", ($v)->value0, ($f)(($v)->value1));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Comonad_Env_mapEnv"), recVars=[];
+  $__res = new Phpurs_Data2("Tuple", ($v_1)->value0, ($f_0)(($v_1)->value1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -114,12 +116,13 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Control_Comonad_Env_env'] = function() { $v = (function() {
-  $__fn = function($e, $a = null) use (&$__fn) {
+  $__fn = function($e_0, $a_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", $e, $a);
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Comonad_Env_env"), recVars=[];
+  $__res = new Phpurs_Data2("Tuple", $e_0, $a_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

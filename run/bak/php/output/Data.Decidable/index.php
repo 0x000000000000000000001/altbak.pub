@@ -94,35 +94,44 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Decidable_lose'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Data_Decidable_lose'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->lose;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Decidable_lose"), recVars=[];
+  $__res = ($dict_0)->lose;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Decidable_lost'] = function() { $v = function($dictDecidable) {
+\PhpursThunks::$thunks['Data_Decidable_lost'] = function() { $v = function($dictDecidable_0) {
   $__num = \func_num_args();
-  $__res = (($dictDecidable)->lose)((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->identity);
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Decidable_lost"), recVars=[];
+  $__res = (($dictDecidable_0)->lose)((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->identity);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Data_Decidable_decidablePredicate'] = function() { $v = (object)["lose" => (function() {
-  $__fn = function($f, $a = null) use (&$__fn) {
+  $__fn = function($f_0, $a_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $spin = null;
-  $spin = function($v) use (&$spin) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $spin_2_0 = null;
+  $spin_2_0 = function($v_3) use (&$spin_2_0) {
   $__num = \func_num_args();
-  $__res = ($spin)($v);
-  goto __end;;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "spin_2_0"), recVars=["spin_2_0"];
+  while (true) {
+$__tco_1 = $v_3;
+$v_3 = $__tco_1;
+continue ;
+$__res = null;
+goto __end;;
+};
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = ($spin)(($f)($a));
+  $__res = ($spin_2_0)(($f_0)($a_1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -130,50 +139,62 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(), "Decide0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_Decide_choosePredicate'] ?? \PhpursThunks::eval('Data_Decide_choosePredicate'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Divisible1" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_Divisible_divisiblePredicate'] ?? \PhpursThunks::eval('Data_Divisible_divisiblePredicate'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
-\PhpursThunks::$thunks['Data_Decidable_decidableOp'] = function() { $v = function($dictMonoid) {
+\PhpursThunks::$thunks['Data_Decidable_decidableOp'] = function() { $v = function($dictMonoid_0) {
   $__num = \func_num_args();
-  $chooseOp_0 = (($GLOBALS['Data_Decide_chooseOp'] ?? \PhpursThunks::eval('Data_Decide_chooseOp')))((($dictMonoid)->Semigroup0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $divisibleOp_1 = (($GLOBALS['Data_Divisible_divisibleOp'] ?? \PhpursThunks::eval('Data_Divisible_divisibleOp')))($dictMonoid);
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Decidable_decidableOp"), recVars=[];
+  $chooseOp_1_0 = (($GLOBALS['Data_Decide_chooseOp'] ?? \PhpursThunks::eval('Data_Decide_chooseOp')))((($dictMonoid_0)->Semigroup0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $divisibleOp_2_1 = (($GLOBALS['Data_Divisible_divisibleOp'] ?? \PhpursThunks::eval('Data_Divisible_divisibleOp')))($dictMonoid_0);
   $__res = (object)["lose" => (function() {
-  $__fn = function($f, $a = null) use (&$__fn) {
+  $__fn = function($f_3, $a_4 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $spin = null;
-  $spin = function($v) use (&$spin) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $spin_5_2 = null;
+  $spin_5_2 = function($v_6) use (&$spin_5_2) {
   $__num = \func_num_args();
-  $__res = ($spin)($v);
-  goto __end;;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "spin_5_2"), recVars=["spin_5_2"];
+  while (true) {
+$__tco_3 = $v_6;
+$v_6 = $__tco_3;
+continue ;
+$__res = null;
+goto __end;;
+};
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = ($spin)(($f)($a));
+  $__res = ($spin_5_2)(($f_3)($a_4));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Decide0" => function($dollar__unused_0) use (&$chooseOp_0) {
+})(), "Decide0" => function($dollar__unused_3) use ($chooseOp_1_0) {
   $__num = \func_num_args();
-  $__res = $chooseOp_0;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $chooseOp_1_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Divisible1" => function($dollar__unused_0) use (&$divisibleOp_1) {
+}, "Divisible1" => function($dollar__unused_3) use ($divisibleOp_2_1) {
   $__num = \func_num_args();
-  $__res = $divisibleOp_1;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $divisibleOp_2_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -183,20 +204,27 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Data_Decidable_decidableEquivalence'] = function() { $v = (object)["lose" => (function() {
-  $__fn = function($f, $a = null) use (&$__fn) {
+  $__fn = function($f_0, $a_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $spin = null;
-  $spin = function($v) use (&$spin) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $spin_2_0 = null;
+  $spin_2_0 = function($v_3) use (&$spin_2_0) {
   $__num = \func_num_args();
-  $__res = ($spin)($v);
-  goto __end;;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "spin_2_0"), recVars=["spin_2_0"];
+  while (true) {
+$__tco_1 = $v_3;
+$v_3 = $__tco_1;
+continue ;
+$__res = null;
+goto __end;;
+};
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = ($spin)(($f)($a));
+  $__res = ($spin_2_0)(($f_0)($a_1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -204,32 +232,41 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(), "Decide0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_Decide_chooseEquivalence'] ?? \PhpursThunks::eval('Data_Decide_chooseEquivalence'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Divisible1" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_Divisible_divisibleEquivalence'] ?? \PhpursThunks::eval('Data_Divisible_divisibleEquivalence'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
 \PhpursThunks::$thunks['Data_Decidable_decidableComparison'] = function() { $v = (object)["lose" => (function() {
-  $__fn = function($f, $a = null, $v = null) use (&$__fn) {
+  $__fn = function($f_0, $a_1 = null, $v_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $spin = null;
-  $spin = function($v) use (&$spin) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $spin_3_0 = null;
+  $spin_3_0 = function($v_4) use (&$spin_3_0) {
   $__num = \func_num_args();
-  $__res = ($spin)($v);
-  goto __end;;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "spin_3_0"), recVars=["spin_3_0"];
+  while (true) {
+$__tco_1 = $v_4;
+$v_4 = $__tco_1;
+continue ;
+$__res = null;
+goto __end;;
+};
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = ($spin)(($f)($a));
+  $__res = ($spin_3_0)(($f_0)($a_1));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -237,12 +274,14 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(), "Decide0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_Decide_chooseComparison'] ?? \PhpursThunks::eval('Data_Decide_chooseComparison'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Divisible1" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_Divisible_divisibleComparison'] ?? \PhpursThunks::eval('Data_Divisible_divisibleComparison'));
   goto __end;;
   __end:

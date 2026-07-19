@@ -85,17 +85,24 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Void_absurd'] = function() { $v = function($a) {
+\PhpursThunks::$thunks['Data_Void_absurd'] = function() { $v = function($a_0) {
   $__num = \func_num_args();
-  $spin = null;
-  $spin = function($v) use (&$spin) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Void_absurd"), recVars=[];
+  $spin_1_0 = null;
+  $spin_1_0 = function($v_2) use (&$spin_1_0) {
   $__num = \func_num_args();
-  $__res = ($spin)($v);
-  goto __end;;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "spin_1_0"), recVars=["spin_1_0"];
+  while (true) {
+$__tco_1 = $v_2;
+$v_2 = $__tco_1;
+continue ;
+$__res = null;
+goto __end;;
+};
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = ($spin)($a);
+  $__res = ($spin_1_0)($a_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

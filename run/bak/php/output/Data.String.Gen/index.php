@@ -97,20 +97,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   }
 }
 \PhpursThunks::$thunks['Data_String_Gen_max'] = function() { $v = (function() {
-  $__fn = function($x, $y = null) use (&$__fn) {
+  $__fn = function($x_0, $y_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $v_0 = (((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)($x))($y);
-  if ((is_object($v_0) && (($v_0)->tag === "LT"))) {
-$__t1 = $y;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_String_Gen_max"), recVars=[];
+  $v_2_0 = (((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)($x_0))($y_1);
+  if ((is_object($v_2_0) && (($v_2_0)->tag === "LT"))) {
+$__t1 = $y_1;
 } else {
-if ((is_object($v_0) && (($v_0)->tag === "EQ"))) {
-$__t1 = $x;
+if ((is_object($v_2_0) && (($v_2_0)->tag === "EQ"))) {
+$__t1 = $x_0;
 } else {
-if ((is_object($v_0) && (($v_0)->tag === "GT"))) {
-$__t1 = $x;
+if ((is_object($v_2_0) && (($v_2_0)->tag === "GT"))) {
+$__t1 = $x_0;
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t1 = null;
@@ -125,26 +126,31 @@ $__t1 = null;
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Data_String_Gen_genString'] = function() { $v = (function() {
-  $__fn = function($dictMonadRec, $dictMonadGen = null) use (&$__fn) {
+  $__fn = function($dictMonadRec_0, $dictMonadGen_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $Bind1_0 = (((($dictMonadGen)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $unfoldable1_1 = (((($GLOBALS['Control_Monad_Gen_unfoldable'] ?? \PhpursThunks::eval('Control_Monad_Gen_unfoldable')))($dictMonadRec))($dictMonadGen))(($GLOBALS['Data_Unfoldable_unfoldableArray'] ?? \PhpursThunks::eval('Data_Unfoldable_unfoldableArray')));
-  $__res = function($genChar) use (&$Bind1_0, &$dictMonadGen, &$unfoldable1_1) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_String_Gen_genString"), recVars=[];
+  $Bind1_2_0 = (((($dictMonadGen_1)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $unfoldable1_3_1 = (((($GLOBALS['Control_Monad_Gen_unfoldable'] ?? \PhpursThunks::eval('Control_Monad_Gen_unfoldable')))($dictMonadRec_0))($dictMonadGen_1))(($GLOBALS['Data_Unfoldable_unfoldableArray'] ?? \PhpursThunks::eval('Data_Unfoldable_unfoldableArray')));
+  $__res = function($genChar_4) use ($Bind1_2_0, $dictMonadGen_1, $unfoldable1_3_1) {
   $__num = \func_num_args();
-  $__res = (($dictMonadGen)->sized)(function($size) use (&$Bind1_0, &$dictMonadGen, &$genChar, &$unfoldable1_1) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($dictMonadGen_1)->sized)(function($size_5) use ($Bind1_2_0, $dictMonadGen_1, $genChar_4, $unfoldable1_3_1) {
   $__num = \func_num_args();
-  $__res = ((($Bind1_0)->bind)(((($dictMonadGen)->chooseInt)(1))(((($GLOBALS['Data_String_Gen_max'] ?? \PhpursThunks::eval('Data_String_Gen_max')))(1))($size))))(function($newSize) use (&$Bind1_0, &$dictMonadGen, &$genChar, &$unfoldable1_1) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($Bind1_2_0)->bind)(((($dictMonadGen_1)->chooseInt)(1))(((($GLOBALS['Data_String_Gen_max'] ?? \PhpursThunks::eval('Data_String_Gen_max')))(1))($size_5))))(function($newSize_6) use ($Bind1_2_0, $dictMonadGen_1, $genChar_4, $unfoldable1_3_1) {
   $__num = \func_num_args();
-  $__res = ((($dictMonadGen)->resize)(function($v) use (&$newSize) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($dictMonadGen_1)->resize)(function($v_7) use ($newSize_6) {
   $__num = \func_num_args();
-  $__res = $newSize;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $newSize_6;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(((((((($Bind1_0)->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->map)(($GLOBALS['Data_String_CodeUnits_fromCharArray'] ?? \PhpursThunks::eval('Data_String_CodeUnits_fromCharArray'))))(($unfoldable1_1)($genChar)));
+}))(((((((($Bind1_2_0)->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->map)(($GLOBALS['Data_String_CodeUnits_fromCharArray'] ?? \PhpursThunks::eval('Data_String_CodeUnits_fromCharArray'))))(($unfoldable1_3_1)($genChar_4)));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -164,12 +170,13 @@ $__t1 = null;
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Data_String_Gen_genUnicodeString'] = function() { $v = (function() {
-  $__fn = function($dictMonadRec, $dictMonadGen = null) use (&$__fn) {
+  $__fn = function($dictMonadRec_0, $dictMonadGen_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($GLOBALS['Data_String_Gen_genString'] ?? \PhpursThunks::eval('Data_String_Gen_genString')))($dictMonadRec))($dictMonadGen))((($GLOBALS['Data_Char_Gen_genUnicodeChar'] ?? \PhpursThunks::eval('Data_Char_Gen_genUnicodeChar')))($dictMonadGen));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_String_Gen_genUnicodeString"), recVars=[];
+  $__res = (((($GLOBALS['Data_String_Gen_genString'] ?? \PhpursThunks::eval('Data_String_Gen_genString')))($dictMonadRec_0))($dictMonadGen_1))((($GLOBALS['Data_Char_Gen_genUnicodeChar'] ?? \PhpursThunks::eval('Data_Char_Gen_genUnicodeChar')))($dictMonadGen_1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -177,12 +184,13 @@ $__t1 = null;
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Data_String_Gen_genDigitString'] = function() { $v = (function() {
-  $__fn = function($dictMonadRec, $dictMonadGen = null) use (&$__fn) {
+  $__fn = function($dictMonadRec_0, $dictMonadGen_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($GLOBALS['Data_String_Gen_genString'] ?? \PhpursThunks::eval('Data_String_Gen_genString')))($dictMonadRec))($dictMonadGen))((($GLOBALS['Data_Char_Gen_genDigitChar'] ?? \PhpursThunks::eval('Data_Char_Gen_genDigitChar')))($dictMonadGen));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_String_Gen_genDigitString"), recVars=[];
+  $__res = (((($GLOBALS['Data_String_Gen_genString'] ?? \PhpursThunks::eval('Data_String_Gen_genString')))($dictMonadRec_0))($dictMonadGen_1))((($GLOBALS['Data_Char_Gen_genDigitChar'] ?? \PhpursThunks::eval('Data_Char_Gen_genDigitChar')))($dictMonadGen_1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -190,12 +198,13 @@ $__t1 = null;
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Data_String_Gen_genAsciiString__prime__'] = function() { $v = (function() {
-  $__fn = function($dictMonadRec, $dictMonadGen = null) use (&$__fn) {
+  $__fn = function($dictMonadRec_0, $dictMonadGen_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($GLOBALS['Data_String_Gen_genString'] ?? \PhpursThunks::eval('Data_String_Gen_genString')))($dictMonadRec))($dictMonadGen))((($GLOBALS['Data_Char_Gen_genAsciiChar__prime__'] ?? \PhpursThunks::eval('Data_Char_Gen_genAsciiChar__prime__')))($dictMonadGen));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_String_Gen_genAsciiString'"), recVars=[];
+  $__res = (((($GLOBALS['Data_String_Gen_genString'] ?? \PhpursThunks::eval('Data_String_Gen_genString')))($dictMonadRec_0))($dictMonadGen_1))((($GLOBALS['Data_Char_Gen_genAsciiChar__prime__'] ?? \PhpursThunks::eval('Data_Char_Gen_genAsciiChar__prime__')))($dictMonadGen_1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -203,12 +212,13 @@ $__t1 = null;
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Data_String_Gen_genAsciiString'] = function() { $v = (function() {
-  $__fn = function($dictMonadRec, $dictMonadGen = null) use (&$__fn) {
+  $__fn = function($dictMonadRec_0, $dictMonadGen_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($GLOBALS['Data_String_Gen_genString'] ?? \PhpursThunks::eval('Data_String_Gen_genString')))($dictMonadRec))($dictMonadGen))((($GLOBALS['Data_Char_Gen_genAsciiChar'] ?? \PhpursThunks::eval('Data_Char_Gen_genAsciiChar')))($dictMonadGen));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_String_Gen_genAsciiString"), recVars=[];
+  $__res = (((($GLOBALS['Data_String_Gen_genString'] ?? \PhpursThunks::eval('Data_String_Gen_genString')))($dictMonadRec_0))($dictMonadGen_1))((($GLOBALS['Data_Char_Gen_genAsciiChar'] ?? \PhpursThunks::eval('Data_Char_Gen_genAsciiChar')))($dictMonadGen_1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -216,12 +226,13 @@ $__t1 = null;
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Data_String_Gen_genAlphaUppercaseString'] = function() { $v = (function() {
-  $__fn = function($dictMonadRec, $dictMonadGen = null) use (&$__fn) {
+  $__fn = function($dictMonadRec_0, $dictMonadGen_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($GLOBALS['Data_String_Gen_genString'] ?? \PhpursThunks::eval('Data_String_Gen_genString')))($dictMonadRec))($dictMonadGen))((($GLOBALS['Data_Char_Gen_genAlphaUppercase'] ?? \PhpursThunks::eval('Data_Char_Gen_genAlphaUppercase')))($dictMonadGen));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_String_Gen_genAlphaUppercaseString"), recVars=[];
+  $__res = (((($GLOBALS['Data_String_Gen_genString'] ?? \PhpursThunks::eval('Data_String_Gen_genString')))($dictMonadRec_0))($dictMonadGen_1))((($GLOBALS['Data_Char_Gen_genAlphaUppercase'] ?? \PhpursThunks::eval('Data_Char_Gen_genAlphaUppercase')))($dictMonadGen_1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -229,12 +240,13 @@ $__t1 = null;
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Data_String_Gen_genAlphaString'] = function() { $v = (function() {
-  $__fn = function($dictMonadRec, $dictMonadGen = null) use (&$__fn) {
+  $__fn = function($dictMonadRec_0, $dictMonadGen_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($GLOBALS['Data_String_Gen_genString'] ?? \PhpursThunks::eval('Data_String_Gen_genString')))($dictMonadRec))($dictMonadGen))((($GLOBALS['Data_Char_Gen_genAlpha'] ?? \PhpursThunks::eval('Data_Char_Gen_genAlpha')))($dictMonadGen));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_String_Gen_genAlphaString"), recVars=[];
+  $__res = (((($GLOBALS['Data_String_Gen_genString'] ?? \PhpursThunks::eval('Data_String_Gen_genString')))($dictMonadRec_0))($dictMonadGen_1))((($GLOBALS['Data_Char_Gen_genAlpha'] ?? \PhpursThunks::eval('Data_Char_Gen_genAlpha')))($dictMonadGen_1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -242,12 +254,13 @@ $__t1 = null;
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Data_String_Gen_genAlphaLowercaseString'] = function() { $v = (function() {
-  $__fn = function($dictMonadRec, $dictMonadGen = null) use (&$__fn) {
+  $__fn = function($dictMonadRec_0, $dictMonadGen_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($GLOBALS['Data_String_Gen_genString'] ?? \PhpursThunks::eval('Data_String_Gen_genString')))($dictMonadRec))($dictMonadGen))((($GLOBALS['Data_Char_Gen_genAlphaLowercase'] ?? \PhpursThunks::eval('Data_Char_Gen_genAlphaLowercase')))($dictMonadGen));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_String_Gen_genAlphaLowercaseString"), recVars=[];
+  $__res = (((($GLOBALS['Data_String_Gen_genString'] ?? \PhpursThunks::eval('Data_String_Gen_genString')))($dictMonadRec_0))($dictMonadGen_1))((($GLOBALS['Data_Char_Gen_genAlphaLowercase'] ?? \PhpursThunks::eval('Data_Char_Gen_genAlphaLowercase')))($dictMonadGen_1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

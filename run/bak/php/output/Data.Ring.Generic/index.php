@@ -89,20 +89,22 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Ring_Generic_genericSub__prime__'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Data_Ring_Generic_genericSub__prime__'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->genericSub__prime__;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Ring_Generic_genericSub'"), recVars=[];
+  $__res = ($dict_0)->genericSub__prime__;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Data_Ring_Generic_genericSub'] = function() { $v = (function() {
-  $__fn = function($dictGeneric, $dictGenericRing = null, $x = null, $y = null) use (&$__fn) {
+  $__fn = function($dictGeneric_0, $dictGenericRing_1 = null, $x_2 = null, $y_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = (($dictGeneric)->to)(((($dictGenericRing)->genericSub__prime__)((($dictGeneric)->from)($x)))((($dictGeneric)->from)($y)));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Ring_Generic_genericSub"), recVars=[];
+  $__res = (($dictGeneric_0)->to)(((($dictGenericRing_1)->genericSub__prime__)((($dictGeneric_0)->from)($x_2)))((($dictGeneric_0)->from)($y_3)));
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -110,18 +112,20 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Data_Ring_Generic_genericRingProduct'] = function() { $v = (function() {
-  $__fn = function($dictGenericRing, $dictGenericRing1 = null) use (&$__fn) {
+  $__fn = function($dictGenericRing_0, $dictGenericRing1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (object)["genericSub__prime__" => (function() use (&$dictGenericRing, &$dictGenericRing1) {
-  $__fn = function($v, $v1 = null) use (&$dictGenericRing, &$dictGenericRing1, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Ring_Generic_genericRingProduct"), recVars=[];
+  $__res = (object)["genericSub__prime__" => (function() use ($dictGenericRing1_1, $dictGenericRing_0) {
+  $__fn = function($v_2, $v1_3 = null) use ($dictGenericRing1_1, $dictGenericRing_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Product", ((($dictGenericRing)->genericSub__prime__)(($v)->value0))(($v1)->value0), ((($dictGenericRing1)->genericSub__prime__)(($v)->value1))(($v1)->value1));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = new Phpurs_Data2("Product", ((($dictGenericRing_0)->genericSub__prime__)(($v_2)->value0))(($v1_3)->value0), ((($dictGenericRing1_1)->genericSub__prime__)(($v_2)->value1))(($v1_3)->value1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -135,11 +139,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Data_Ring_Generic_genericRingNoArguments'] = function() { $v = (object)["genericSub__prime__" => (function() {
-  $__fn = function($v, $v1 = null) use (&$__fn) {
+  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = new Phpurs_Data0("NoArguments");
   goto __end;;
   __end:
@@ -147,15 +152,17 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   };
   return $__fn;
 })()]; return $v; };
-\PhpursThunks::$thunks['Data_Ring_Generic_genericRingConstructor'] = function() { $v = function($dictGenericRing) {
+\PhpursThunks::$thunks['Data_Ring_Generic_genericRingConstructor'] = function() { $v = function($dictGenericRing_0) {
   $__num = \func_num_args();
-  $__res = (object)["genericSub__prime__" => (function() use (&$dictGenericRing) {
-  $__fn = function($v, $v1 = null) use (&$dictGenericRing, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Ring_Generic_genericRingConstructor"), recVars=[];
+  $__res = (object)["genericSub__prime__" => (function() use ($dictGenericRing_0) {
+  $__fn = function($v_1, $v1_2 = null) use ($dictGenericRing_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictGenericRing)->genericSub__prime__)($v))($v1);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($dictGenericRing_0)->genericSub__prime__)($v_1))($v1_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -166,15 +173,17 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Ring_Generic_genericRingArgument'] = function() { $v = function($dictRing) {
+\PhpursThunks::$thunks['Data_Ring_Generic_genericRingArgument'] = function() { $v = function($dictRing_0) {
   $__num = \func_num_args();
-  $__res = (object)["genericSub__prime__" => (function() use (&$dictRing) {
-  $__fn = function($v, $v1 = null) use (&$dictRing, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Ring_Generic_genericRingArgument"), recVars=[];
+  $__res = (object)["genericSub__prime__" => (function() use ($dictRing_0) {
+  $__fn = function($v_1, $v1_2 = null) use ($dictRing_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictRing)->sub)($v))($v1);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($dictRing_0)->sub)($v_1))($v1_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

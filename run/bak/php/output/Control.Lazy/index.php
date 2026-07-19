@@ -86,48 +86,53 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Control_Lazy_lazyUnit'] = function() { $v = (object)["defer" => function($v) {
+\PhpursThunks::$thunks['Control_Lazy_lazyUnit'] = function() { $v = (object)["defer" => function($v_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
 \PhpursThunks::$thunks['Control_Lazy_lazyFn'] = function() { $v = (object)["defer" => (function() {
-  $__fn = function($f, $x = null) use (&$__fn) {
+  $__fn = function($f_0, $x_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($f)(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'))))($x);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($f_0)(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'))))($x_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()]; return $v; };
-\PhpursThunks::$thunks['Control_Lazy_defer'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Control_Lazy_defer'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->defer;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Lazy_defer"), recVars=[];
+  $__res = ($dict_0)->defer;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Control_Lazy_fix'] = function() { $v = (function() {
-  $__fn = function($dictLazy, $f = null) use (&$__fn) {
+  $__fn = function($dictLazy_0, $f_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $go = null;
-  $go = (($dictLazy)->defer)(function($v) use (&$f, &$go) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Lazy_fix"), recVars=[];
+  $go_2_0 = null;
+  $go_2_0 = (($dictLazy_0)->defer)(function($v_3) use ($f_1, &$go_2_0) {
   $__num = \func_num_args();
-  $__res = ($f)($go);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["go_2_0"];
+  $__res = ($f_1)($go_2_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 });
-  $__res = $go;
+  $__res = $go_2_0;
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

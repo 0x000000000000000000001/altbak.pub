@@ -105,18 +105,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Functor_App_App'] = function() { $v = function($x) {
+\PhpursThunks::$thunks['Data_Functor_App_App'] = function() { $v = function($x_0) {
   $__num = \func_num_args();
-  $__res = $x;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Functor_App_App"), recVars=[];
+  $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Functor_App_showApp'] = function() { $v = function($dictShow) {
+\PhpursThunks::$thunks['Data_Functor_App_showApp'] = function() { $v = function($dictShow_0) {
   $__num = \func_num_args();
-  $__res = (object)["show" => function($v) use (&$dictShow) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Functor_App_showApp"), recVars=[];
+  $__res = (object)["show" => function($v_1) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("(App "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))((($dictShow)->show)($v)))(")"));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("(App "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))((($dictShow_0)->show)($v_1)))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -126,19 +129,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Data_Functor_App_semigroupApp'] = function() { $v = (function() {
-  $__fn = function($dictApply, $dictSemigroup = null) use (&$__fn) {
+  $__fn = function($dictApply_0, $dictSemigroup_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $append1_0 = ($dictSemigroup)->append;
-  $__res = (object)["append" => (function() use (&$append1_0, &$dictApply) {
-  $__fn = function($v, $v1 = null) use (&$append1_0, &$dictApply, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Functor_App_semigroupApp"), recVars=[];
+  $append1_2_0 = ($dictSemigroup_1)->append;
+  $__res = (object)["append" => (function() use ($append1_2_0, $dictApply_0) {
+  $__fn = function($v_3, $v1_4 = null) use ($append1_2_0, $dictApply_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((($GLOBALS['Control_Apply_lift2'] ?? \PhpursThunks::eval('Control_Apply_lift2')))($dictApply))($append1_0))($v))($v1);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((((($GLOBALS['Control_Apply_lift2'] ?? \PhpursThunks::eval('Control_Apply_lift2')))($dictApply_0))($append1_2_0))($v_3))($v1_4);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -151,29 +156,34 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Data_Functor_App_plusApp'] = function() { $v = function($dictPlus) {
+\PhpursThunks::$thunks['Data_Functor_App_plusApp'] = function() { $v = function($dictPlus_0) {
   $__num = \func_num_args();
-  $__res = $dictPlus;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Functor_App_plusApp"), recVars=[];
+  $__res = $dictPlus_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Data_Functor_App_newtypeApp'] = function() { $v = (object)["Coercible0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
-\PhpursThunks::$thunks['Data_Functor_App_monoidApp'] = function() { $v = function($dictApplicative) {
+\PhpursThunks::$thunks['Data_Functor_App_monoidApp'] = function() { $v = function($dictApplicative_0) {
   $__num = \func_num_args();
-  $semigroupApp1_0 = (($GLOBALS['Data_Functor_App_semigroupApp'] ?? \PhpursThunks::eval('Data_Functor_App_semigroupApp')))((($dictApplicative)->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = function($dictMonoid) use (&$dictApplicative, &$semigroupApp1_0) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Functor_App_monoidApp"), recVars=[];
+  $semigroupApp1_1_0 = (($GLOBALS['Data_Functor_App_semigroupApp'] ?? \PhpursThunks::eval('Data_Functor_App_semigroupApp')))((($dictApplicative_0)->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__res = function($dictMonoid_2) use ($dictApplicative_0, $semigroupApp1_1_0) {
   $__num = \func_num_args();
-  $semigroupApp2_1 = ($semigroupApp1_0)((($dictMonoid)->Semigroup0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = (object)["mempty" => (($dictApplicative)->pure)(($dictMonoid)->mempty), "Semigroup0" => function($dollar__unused_0) use (&$semigroupApp2_1) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $semigroupApp2_3_1 = ($semigroupApp1_1_0)((($dictMonoid_2)->Semigroup0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__res = (object)["mempty" => (($dictApplicative_0)->pure)(($dictMonoid_2)->mempty), "Semigroup0" => function($dollar__unused_4) use ($semigroupApp2_3_1) {
   $__num = \func_num_args();
-  $__res = $semigroupApp2_1;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $semigroupApp2_3_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -186,23 +196,26 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Functor_App_monadPlusApp'] = function() { $v = function($dictMonadPlus) {
+\PhpursThunks::$thunks['Data_Functor_App_monadPlusApp'] = function() { $v = function($dictMonadPlus_0) {
   $__num = \func_num_args();
-  $__res = $dictMonadPlus;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Functor_App_monadPlusApp"), recVars=[];
+  $__res = $dictMonadPlus_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Functor_App_monadApp'] = function() { $v = function($dictMonad) {
+\PhpursThunks::$thunks['Data_Functor_App_monadApp'] = function() { $v = function($dictMonad_0) {
   $__num = \func_num_args();
-  $__res = $dictMonad;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Functor_App_monadApp"), recVars=[];
+  $__res = $dictMonad_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Functor_App_lazyApp'] = function() { $v = function($dictLazy) {
+\PhpursThunks::$thunks['Data_Functor_App_lazyApp'] = function() { $v = function($dictLazy_0) {
   $__num = \func_num_args();
-  $__res = $dictLazy;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Functor_App_lazyApp"), recVars=[];
+  $__res = $dictLazy_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -210,46 +223,51 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 \PhpursThunks::$thunks['Data_Functor_App_hoistLowerApp'] = function() { $v = ($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')); return $v; };
 \PhpursThunks::$thunks['Data_Functor_App_hoistLiftApp'] = function() { $v = ($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')); return $v; };
 \PhpursThunks::$thunks['Data_Functor_App_hoistApp'] = function() { $v = (function() {
-  $__fn = function($f, $v = null) use (&$__fn) {
+  $__fn = function($f_0, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($f)($v);
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Functor_App_hoistApp"), recVars=[];
+  $__res = ($f_0)($v_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Data_Functor_App_functorApp'] = function() { $v = function($dictFunctor) {
+\PhpursThunks::$thunks['Data_Functor_App_functorApp'] = function() { $v = function($dictFunctor_0) {
   $__num = \func_num_args();
-  $__res = $dictFunctor;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Functor_App_functorApp"), recVars=[];
+  $__res = $dictFunctor_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Functor_App_extendApp'] = function() { $v = function($dictExtend) {
+\PhpursThunks::$thunks['Data_Functor_App_extendApp'] = function() { $v = function($dictExtend_0) {
   $__num = \func_num_args();
-  $__res = $dictExtend;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Functor_App_extendApp"), recVars=[];
+  $__res = $dictExtend_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Data_Functor_App_eqApp'] = function() { $v = (function() {
-  $__fn = function($dictEq1, $dictEq = null) use (&$__fn) {
+  $__fn = function($dictEq1_0, $dictEq_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $eq11_0 = (($dictEq1)->eq1)($dictEq);
-  $__res = (object)["eq" => (function() use (&$eq11_0) {
-  $__fn = function($x, $y = null) use (&$eq11_0, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Functor_App_eqApp"), recVars=[];
+  $eq11_2_0 = (($dictEq1_0)->eq1)($dictEq_1);
+  $__res = (object)["eq" => (function() use ($eq11_2_0) {
+  $__fn = function($x_3, $y_4 = null) use ($eq11_2_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($eq11_0)($x))($y);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($eq11_2_0)($x_3))($y_4);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -262,41 +280,46 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Data_Functor_App_ordApp'] = function() { $v = function($dictOrd1) {
+\PhpursThunks::$thunks['Data_Functor_App_ordApp'] = function() { $v = function($dictOrd1_0) {
   $__num = \func_num_args();
-  $__local_var_0 = (($dictOrd1)->Eq10)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $__res = function($dictOrd) use (&$__local_var_0, &$dictOrd1) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Functor_App_ordApp"), recVars=[];
+  $__local_var_1_0 = (($dictOrd1_0)->Eq10)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__res = function($dictOrd_2) use ($__local_var_1_0, $dictOrd1_0) {
   $__num = \func_num_args();
-  $compare11_1 = (($dictOrd1)->compare1)($dictOrd);
-  $eq11_2 = (($__local_var_0)->eq1)((($dictOrd)->Eq0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $eqApp2_3 = (object)["eq" => (function() use (&$eq11_2) {
-  $__fn = function($x, $y = null) use (&$eq11_2, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $compare11_3_1 = (($dictOrd1_0)->compare1)($dictOrd_2);
+  $eq11_4_2 = (($__local_var_1_0)->eq1)((($dictOrd_2)->Eq0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $eqApp2_5_3 = (object)["eq" => (function() use ($eq11_4_2) {
+  $__fn = function($x_5, $y_6 = null) use ($eq11_4_2, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($eq11_2)($x))($y);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($eq11_4_2)($x_5))($y_6);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()];
-  $__res = (object)["compare" => (function() use (&$compare11_1) {
-  $__fn = function($x, $y = null) use (&$compare11_1, &$__fn) {
+  $__res = (object)["compare" => (function() use ($compare11_3_1) {
+  $__fn = function($x_6, $y_7 = null) use ($compare11_3_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($compare11_1)($x))($y);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($compare11_3_1)($x_6))($y_7);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Eq0" => function($dollar__unused_0) use (&$eqApp2_3) {
+})(), "Eq0" => function($dollar__unused_6) use ($eqApp2_5_3) {
   $__num = \func_num_args();
-  $__res = $eqApp2_3;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $eqApp2_5_3;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -309,11 +332,13 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Functor_App_eq1App'] = function() { $v = function($dictEq1) {
+\PhpursThunks::$thunks['Data_Functor_App_eq1App'] = function() { $v = function($dictEq1_0) {
   $__num = \func_num_args();
-  $__res = (object)["eq1" => function($dictEq) use (&$dictEq1) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Functor_App_eq1App"), recVars=[];
+  $__res = (object)["eq1" => function($dictEq_1) use ($dictEq1_0) {
   $__num = \func_num_args();
-  $__res = (($dictEq1)->eq1)($dictEq);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($dictEq1_0)->eq1)($dictEq_1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -322,26 +347,30 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Functor_App_ord1App'] = function() { $v = function($dictOrd1) {
+\PhpursThunks::$thunks['Data_Functor_App_ord1App'] = function() { $v = function($dictOrd1_0) {
   $__num = \func_num_args();
-  $ordApp1_0 = (($GLOBALS['Data_Functor_App_ordApp'] ?? \PhpursThunks::eval('Data_Functor_App_ordApp')))($dictOrd1);
-  $__local_var_1 = (($dictOrd1)->Eq10)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $eq1App1_2 = (object)["eq1" => function($dictEq) use (&$__local_var_1) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Functor_App_ord1App"), recVars=[];
+  $ordApp1_1_0 = (($GLOBALS['Data_Functor_App_ordApp'] ?? \PhpursThunks::eval('Data_Functor_App_ordApp')))($dictOrd1_0);
+  $__local_var_2_1 = (($dictOrd1_0)->Eq10)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $eq1App1_3_2 = (object)["eq1" => function($dictEq_3) use ($__local_var_2_1) {
   $__num = \func_num_args();
-  $__res = (($__local_var_1)->eq1)($dictEq);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($__local_var_2_1)->eq1)($dictEq_3);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = (object)["compare1" => function($dictOrd) use (&$ordApp1_0) {
+  $__res = (object)["compare1" => function($dictOrd_4) use ($ordApp1_1_0) {
   $__num = \func_num_args();
-  $__res = (($ordApp1_0)($dictOrd))->compare;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($ordApp1_1_0)($dictOrd_4))->compare;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Eq10" => function($dollar__unused_0) use (&$eq1App1_2) {
+}, "Eq10" => function($dollar__unused_4) use ($eq1App1_3_2) {
   $__num = \func_num_args();
-  $__res = $eq1App1_2;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $eq1App1_3_2;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -350,44 +379,50 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Functor_App_comonadApp'] = function() { $v = function($dictComonad) {
+\PhpursThunks::$thunks['Data_Functor_App_comonadApp'] = function() { $v = function($dictComonad_0) {
   $__num = \func_num_args();
-  $__res = $dictComonad;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Functor_App_comonadApp"), recVars=[];
+  $__res = $dictComonad_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Functor_App_bindApp'] = function() { $v = function($dictBind) {
+\PhpursThunks::$thunks['Data_Functor_App_bindApp'] = function() { $v = function($dictBind_0) {
   $__num = \func_num_args();
-  $__res = $dictBind;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Functor_App_bindApp"), recVars=[];
+  $__res = $dictBind_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Functor_App_applyApp'] = function() { $v = function($dictApply) {
+\PhpursThunks::$thunks['Data_Functor_App_applyApp'] = function() { $v = function($dictApply_0) {
   $__num = \func_num_args();
-  $__res = $dictApply;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Functor_App_applyApp"), recVars=[];
+  $__res = $dictApply_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Functor_App_applicativeApp'] = function() { $v = function($dictApplicative) {
+\PhpursThunks::$thunks['Data_Functor_App_applicativeApp'] = function() { $v = function($dictApplicative_0) {
   $__num = \func_num_args();
-  $__res = $dictApplicative;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Functor_App_applicativeApp"), recVars=[];
+  $__res = $dictApplicative_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Functor_App_alternativeApp'] = function() { $v = function($dictAlternative) {
+\PhpursThunks::$thunks['Data_Functor_App_alternativeApp'] = function() { $v = function($dictAlternative_0) {
   $__num = \func_num_args();
-  $__res = $dictAlternative;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Functor_App_alternativeApp"), recVars=[];
+  $__res = $dictAlternative_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Functor_App_altApp'] = function() { $v = function($dictAlt) {
+\PhpursThunks::$thunks['Data_Functor_App_altApp'] = function() { $v = function($dictAlt_0) {
   $__num = \func_num_args();
-  $__res = $dictAlt;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Functor_App_altApp"), recVars=[];
+  $__res = $dictAlt_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

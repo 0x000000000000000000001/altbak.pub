@@ -91,15 +91,17 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Control_Alternative_guard'] = function() { $v = function($dictAlternative) {
+\PhpursThunks::$thunks['Control_Alternative_guard'] = function() { $v = function($dictAlternative_0) {
   $__num = \func_num_args();
-  $empty_0 = ((($dictAlternative)->Plus1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->empty;
-  $__res = function($v) use (&$dictAlternative, &$empty_0) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Alternative_guard"), recVars=[];
+  $empty_1_0 = ((($dictAlternative_0)->Plus1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->empty;
+  $__res = function($v_2) use ($dictAlternative_0, $empty_1_0) {
   $__num = \func_num_args();
-  if ($v) {
-$__t1 = (((($dictAlternative)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->pure)(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  if ($v_2) {
+$__t1 = (((($dictAlternative_0)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->pure)(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')));
 } else {
-$__t1 = $empty_0;
+$__t1 = $empty_1_0;
 };
   $__res = $__t1;
   goto __end;;
@@ -112,12 +114,14 @@ $__t1 = $empty_0;
 }; return $v; };
 \PhpursThunks::$thunks['Control_Alternative_alternativeArray'] = function() { $v = (object)["Applicative0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Control_Applicative_applicativeArray'] ?? \PhpursThunks::eval('Control_Applicative_applicativeArray'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Plus1" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Control_Plus_plusArray'] ?? \PhpursThunks::eval('Control_Plus_plusArray'));
   goto __end;;
   __end:

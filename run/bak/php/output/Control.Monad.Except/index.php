@@ -92,16 +92,17 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   }
 }
 \PhpursThunks::$thunks['Control_Monad_Except_withExcept'] = function() { $v = (function() {
-  $__fn = function($f, $v = null) use (&$__fn) {
+  $__fn = function($f_0, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  if ((is_object($v) && (($v)->tag === "Right"))) {
-$__t0 = new Phpurs_Data1("Right", ($v)->value0);
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_Except_withExcept"), recVars=[];
+  if ((is_object($v_1) && (($v_1)->tag === "Right"))) {
+$__t0 = new Phpurs_Data1("Right", ($v_1)->value0);
 } else {
-if ((is_object($v) && (($v)->tag === "Left"))) {
-$__t0 = new Phpurs_Data1("Left", ($f)(($v)->value0));
+if ((is_object($v_1) && (($v_1)->tag === "Left"))) {
+$__t0 = new Phpurs_Data1("Left", ($f_0)(($v_1)->value0));
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t0 = null;
@@ -115,9 +116,10 @@ $__t0 = null;
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Control_Monad_Except_runExcept'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce'))))(($GLOBALS['Control_Monad_Except_Trans_runExceptT'] ?? \PhpursThunks::eval('Control_Monad_Except_Trans_runExceptT'))); return $v; };
-\PhpursThunks::$thunks['Control_Monad_Except_mapExcept'] = function() { $v = function($f) {
+\PhpursThunks::$thunks['Control_Monad_Except_mapExcept'] = function() { $v = function($f_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Identity_Identity'] ?? \PhpursThunks::eval('Data_Identity_Identity'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($f))(($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce'))));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_Except_mapExcept"), recVars=[];
+  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Identity_Identity'] ?? \PhpursThunks::eval('Data_Identity_Identity'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($f_0))(($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce'))));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

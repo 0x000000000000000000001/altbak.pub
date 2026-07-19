@@ -109,31 +109,40 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Test_ListOps_range'] = function() { $v = (function() {
-  $__fn = function($start, $end = null) use (&$__fn) {
+  $__fn = function($start_0, $end_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $go = null;
-  $go = (function() use (&$go, &$start) {
-  $__fn = function($curr, $acc = null) use (&$go, &$start, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Test_ListOps_range"), recVars=[];
+  $go_2_0 = null;
+  $go_2_0 = (function() use (&$go_2_0, $start_0) {
+  $__fn = function($curr_3, $acc_4 = null) use (&$go_2_0, $start_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  if ((is_object((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)($curr))($start)) && (((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)($curr))($start))->tag === "LT"))) {
-$__t0 = $acc;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "go_2_0"), recVars=["go_2_0"];
+  while (true) {
+if ((is_object((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)($curr_3))($start_0)) && (((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)($curr_3))($start_0))->tag === "LT"))) {
+$__t3 = $acc_4;
 } else {
-$__t0 = (($go)(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($curr))(1)))(new Phpurs_Data2("Cons", $curr, $acc));
+$__tco_1 = ((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($curr_3))(1);
+$__tco_2 = new Phpurs_Data2("Cons", $curr_3, $acc_4);
+$curr_3 = $__tco_1;
+$acc_4 = $__tco_2;
+continue ;
+$__t3 = null;
 };
-  $__res = $__t0;
-  goto __end;;
+$__res = $__t3;
+goto __end;;
+};
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })();
-  $__res = (($go)($end))(new Phpurs_Data0("Nil"));
+  $__res = (($go_2_0)($end_1))(new Phpurs_Data0("Nil"));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -141,60 +150,84 @@ $__t0 = (($go)(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Test_ListOps_foldl'] = function() { $v = (function() {
-  $__fn = function($v, $v1 = null, $v2 = null) use (&$__fn) {
+  $__fn = function($v_0, $v1_1 = null, $v2_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  if ((is_object($v2) && (($v2)->tag === "Nil"))) {
-$__t0 = $v1;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Test_ListOps_foldl"), recVars=["Test_ListOps_foldl"];
+  while (true) {
+if ((is_object($v2_2) && (($v2_2)->tag === "Nil"))) {
+$__t0 = $v1_1;
 } else {
-if ((is_object($v2) && (($v2)->tag === "Cons"))) {
-$__t0 = (((($GLOBALS['Test_ListOps_foldl'] ?? \PhpursThunks::eval('Test_ListOps_foldl')))($v))((($v)($v1))(($v2)->value0)))(($v2)->value1);
+if ((is_object($v2_2) && (($v2_2)->tag === "Cons"))) {
+$__tco_1 = $v_0;
+$__tco_2 = (($v_0)($v1_1))(($v2_2)->value0);
+$__tco_3 = ($v2_2)->value1;
+$v_0 = $__tco_1;
+$v1_1 = $__tco_2;
+$v2_2 = $__tco_3;
+continue ;
+$__t0 = null;
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t0 = null;
 };
 };
-  $__res = $__t0;
-  goto __end;;
+$__res = $__t0;
+goto __end;;
+};
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Test_ListOps_filterEvens'] = function() { $v = function($lst) {
+\PhpursThunks::$thunks['Test_ListOps_filterEvens'] = function() { $v = function($lst_0) {
   $__num = \func_num_args();
-  $go = null;
-  $go = (function() use (&$go) {
-  $__fn = function($v, $v1 = null) use (&$go, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Test_ListOps_filterEvens"), recVars=[];
+  $go_1_0 = null;
+  $go_1_0 = (function() use (&$go_1_0) {
+  $__fn = function($v_2, $v1_3 = null) use (&$go_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  if ((is_object($v) && (($v)->tag === "Nil"))) {
-$__t0 = $v1;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "go_1_0"), recVars=["go_1_0"];
+  while (true) {
+if ((is_object($v_2) && (($v_2)->tag === "Nil"))) {
+$__t1 = $v1_3;
 } else {
-if ((is_object($v) && (($v)->tag === "Cons"))) {
-if (((($GLOBALS['Data_Eq_eqIntImpl'] ?? \PhpursThunks::eval('Data_Eq_eqIntImpl')))(((($GLOBALS['Data_EuclideanRing_intMod'] ?? \PhpursThunks::eval('Data_EuclideanRing_intMod')))(($v)->value0))(2)))(0)) {
-$__t1 = (($go)(($v)->value1))(new Phpurs_Data2("Cons", ($v)->value0, $v1));
+if ((is_object($v_2) && (($v_2)->tag === "Cons"))) {
+if (((($GLOBALS['Data_Eq_eqIntImpl'] ?? \PhpursThunks::eval('Data_Eq_eqIntImpl')))(((($GLOBALS['Data_EuclideanRing_intMod'] ?? \PhpursThunks::eval('Data_EuclideanRing_intMod')))(($v_2)->value0))(2)))(0)) {
+$__tco_5 = ($v_2)->value1;
+$__tco_6 = new Phpurs_Data2("Cons", ($v_2)->value0, $v1_3);
+$v_2 = $__tco_5;
+$v1_3 = $__tco_6;
+continue ;
+$__t4 = null;
 } else {
-$__t1 = (($go)(($v)->value1))($v1);
+$__tco_2 = ($v_2)->value1;
+$__tco_3 = $v1_3;
+$v_2 = $__tco_2;
+$v1_3 = $__tco_3;
+continue ;
+$__t4 = null;
 };
-$__t0 = $__t1;
+$__t1 = $__t4;
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t0 = null;
+$__t1 = null;
 };
 };
-  $__res = $__t0;
-  goto __end;;
+$__res = $__t1;
+goto __end;;
+};
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })();
-  $__res = (($go)($lst))(new Phpurs_Data0("Nil"));
+  $__res = (($go_1_0)($lst_0))(new Phpurs_Data0("Nil"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

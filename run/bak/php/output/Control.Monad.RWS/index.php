@@ -98,12 +98,13 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 }
 \PhpursThunks::$thunks['Control_Monad_RWS_withRWS'] = function() { $v = ($GLOBALS['Control_Monad_RWS_Trans_withRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_withRWST')); return $v; };
 \PhpursThunks::$thunks['Control_Monad_RWS_rws'] = function() { $v = (function() {
-  $__fn = function($f, $r = null, $s = null) use (&$__fn) {
+  $__fn = function($f_0, $r_1 = null, $s_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($f)($r))($s);
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_RWS_rws"), recVars=[];
+  $__res = (($f_0)($r_1))($s_2);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -111,28 +112,31 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Control_Monad_RWS_runRWS'] = function() { $v = (function() {
-  $__fn = function($m, $r = null, $s = null) use (&$__fn) {
+  $__fn = function($m_0, $r_1 = null, $s_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($m)($r))($s);
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_RWS_runRWS"), recVars=[];
+  $__res = (($m_0)($r_1))($s_2);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Control_Monad_RWS_mapRWS'] = function() { $v = function($f) {
+\PhpursThunks::$thunks['Control_Monad_RWS_mapRWS'] = function() { $v = function($f_0) {
   $__num = \func_num_args();
-  $__local_var_0 = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Identity_Identity'] ?? \PhpursThunks::eval('Data_Identity_Identity'))))($f)))(($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')));
-  $__res = (function() use (&$__local_var_0) {
-  $__fn = function($v, $r = null, $s = null) use (&$__local_var_0, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_RWS_mapRWS"), recVars=[];
+  $__local_var_1_0 = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Identity_Identity'] ?? \PhpursThunks::eval('Data_Identity_Identity'))))($f_0)))(($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')));
+  $__res = (function() use ($__local_var_1_0) {
+  $__fn = function($v_2, $r_3 = null, $s_4 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ($__local_var_0)((($v)($r))($s));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ($__local_var_1_0)((($v_2)($r_3))($s_4));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -144,12 +148,13 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Control_Monad_RWS_execRWS'] = function() { $v = (function() {
-  $__fn = function($m, $r = null, $s = null) use (&$__fn) {
+  $__fn = function($m_0, $r_1 = null, $s_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))(((((($GLOBALS['Control_Monad_RWS_Trans_execRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_execRWST')))(($GLOBALS['Data_Identity_monadIdentity'] ?? \PhpursThunks::eval('Data_Identity_monadIdentity'))))($m))($r))($s));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_RWS_execRWS"), recVars=[];
+  $__res = (($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))(((((($GLOBALS['Control_Monad_RWS_Trans_execRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_execRWST')))(($GLOBALS['Data_Identity_monadIdentity'] ?? \PhpursThunks::eval('Data_Identity_monadIdentity'))))($m_0))($r_1))($s_2));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -157,12 +162,13 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Control_Monad_RWS_evalRWS'] = function() { $v = (function() {
-  $__fn = function($m, $r = null, $s = null) use (&$__fn) {
+  $__fn = function($m_0, $r_1 = null, $s_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))(((((($GLOBALS['Control_Monad_RWS_Trans_evalRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_evalRWST')))(($GLOBALS['Data_Identity_monadIdentity'] ?? \PhpursThunks::eval('Data_Identity_monadIdentity'))))($m))($r))($s));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_RWS_evalRWS"), recVars=[];
+  $__res = (($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))(((((($GLOBALS['Control_Monad_RWS_Trans_evalRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_evalRWST')))(($GLOBALS['Data_Identity_monadIdentity'] ?? \PhpursThunks::eval('Data_Identity_monadIdentity'))))($m_0))($r_1))($s_2));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;

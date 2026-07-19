@@ -109,27 +109,30 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 }
 \PhpursThunks::$thunks['Data_Bifoldable_monoidEndo'] = function() { $v = (($GLOBALS['Data_Monoid_Endo_monoidEndo'] ?? \PhpursThunks::eval('Data_Monoid_Endo_monoidEndo')))(($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn'))); return $v; };
 \PhpursThunks::$thunks['Data_Bifoldable_monoidDual'] = function() { $v = (($GLOBALS['Data_Monoid_Dual_monoidDual'] ?? \PhpursThunks::eval('Data_Monoid_Dual_monoidDual')))(($GLOBALS['Data_Bifoldable_monoidEndo'] ?? \PhpursThunks::eval('Data_Bifoldable_monoidEndo'))); return $v; };
-\PhpursThunks::$thunks['Data_Bifoldable_bifoldr'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Data_Bifoldable_bifoldr'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->bifoldr;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Bifoldable_bifoldr"), recVars=[];
+  $__res = ($dict_0)->bifoldr;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Data_Bifoldable_bitraverse_'] = function() { $v = (function() {
-  $__fn = function($dictBifoldable, $dictApplicative = null) use (&$__fn) {
+  $__fn = function($dictBifoldable_0, $dictApplicative_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $applySecond_0 = (($GLOBALS['Control_Apply_applySecond'] ?? \PhpursThunks::eval('Control_Apply_applySecond')))((($dictApplicative)->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = (function() use (&$applySecond_0, &$dictApplicative, &$dictBifoldable) {
-  $__fn = function($f, $g = null) use (&$applySecond_0, &$dictApplicative, &$dictBifoldable, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Bifoldable_bitraverse_"), recVars=[];
+  $applySecond_2_0 = (($GLOBALS['Control_Apply_applySecond'] ?? \PhpursThunks::eval('Control_Apply_applySecond')))((($dictApplicative_1)->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__res = (function() use ($applySecond_2_0, $dictApplicative_1, $dictBifoldable_0) {
+  $__fn = function($f_3, $g_4 = null) use ($applySecond_2_0, $dictApplicative_1, $dictBifoldable_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($dictBifoldable)->bifoldr)(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($applySecond_0))($f)))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($applySecond_0))($g)))((($dictApplicative)->pure)(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'))));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (((($dictBifoldable_0)->bifoldr)(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($applySecond_2_0))($f_3)))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($applySecond_2_0))($g_4)))((($dictApplicative_1)->pure)(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'))));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -143,19 +146,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Data_Bifoldable_bifor_'] = function() { $v = (function() {
-  $__fn = function($dictBifoldable, $dictApplicative = null) use (&$__fn) {
+  $__fn = function($dictBifoldable_0, $dictApplicative_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $bitraverse_2_0 = ((($GLOBALS['Data_Bifoldable_bitraverse_'] ?? \PhpursThunks::eval('Data_Bifoldable_bitraverse_')))($dictBifoldable))($dictApplicative);
-  $__res = (function() use (&$bitraverse_2_0) {
-  $__fn = function($t, $f = null, $g = null) use (&$bitraverse_2_0, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Bifoldable_bifor_"), recVars=[];
+  $bitraverse_2_2_0 = ((($GLOBALS['Data_Bifoldable_bitraverse_'] ?? \PhpursThunks::eval('Data_Bifoldable_bitraverse_')))($dictBifoldable_0))($dictApplicative_1);
+  $__res = (function() use ($bitraverse_2_2_0) {
+  $__fn = function($t_3, $f_4 = null, $g_5 = null) use ($bitraverse_2_2_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($bitraverse_2_0)($f))($g))($t);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($bitraverse_2_2_0)($f_4))($g_5))($t_3);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -169,98 +174,108 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Data_Bifoldable_bisequence_'] = function() { $v = (function() {
-  $__fn = function($dictBifoldable, $dictApplicative = null) use (&$__fn) {
+  $__fn = function($dictBifoldable_0, $dictApplicative_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((($GLOBALS['Data_Bifoldable_bitraverse_'] ?? \PhpursThunks::eval('Data_Bifoldable_bitraverse_')))($dictBifoldable))($dictApplicative))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->identity))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->identity);
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Bifoldable_bisequence_"), recVars=[];
+  $__res = ((((($GLOBALS['Data_Bifoldable_bitraverse_'] ?? \PhpursThunks::eval('Data_Bifoldable_bitraverse_')))($dictBifoldable_0))($dictApplicative_1))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->identity))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->identity);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Data_Bifoldable_bifoldl'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Data_Bifoldable_bifoldl'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->bifoldl;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Bifoldable_bifoldl"), recVars=[];
+  $__res = ($dict_0)->bifoldl;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Data_Bifoldable_bifoldableTuple'] = function() { $v = (object)["bifoldMap" => (function() {
-  $__fn = function($dictMonoid, $f = null, $g = null, $v = null) use (&$__fn) {
+  $__fn = function($dictMonoid_0, $f_1 = null, $g_2 = null, $v_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ((((($dictMonoid)->Semigroup0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->append)(($f)(($v)->value0)))(($g)(($v)->value1));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((((($dictMonoid_0)->Semigroup0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->append)(($f_1)(($v_3)->value0)))(($g_2)(($v_3)->value1));
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
 })(), "bifoldr" => (function() {
-  $__fn = function($f, $g = null, $z = null, $v = null) use (&$__fn) {
+  $__fn = function($f_0, $g_1 = null, $z_2 = null, $v_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = (($f)(($v)->value0))((($g)(($v)->value1))($z));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($f_0)(($v_3)->value0))((($g_1)(($v_3)->value1))($z_2));
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
 })(), "bifoldl" => (function() {
-  $__fn = function($f, $g = null, $z = null, $v = null) use (&$__fn) {
+  $__fn = function($f_0, $g_1 = null, $z_2 = null, $v_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = (($g)((($f)($z))(($v)->value0)))(($v)->value1);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($g_1)((($f_0)($z_2))(($v_3)->value0)))(($v_3)->value1);
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
 })()]; return $v; };
-\PhpursThunks::$thunks['Data_Bifoldable_bifoldableJoker'] = function() { $v = function($dictFoldable) {
+\PhpursThunks::$thunks['Data_Bifoldable_bifoldableJoker'] = function() { $v = function($dictFoldable_0) {
   $__num = \func_num_args();
-  $__res = (object)["bifoldr" => (function() use (&$dictFoldable) {
-  $__fn = function($v, $r = null, $u = null, $v1 = null) use (&$dictFoldable, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Bifoldable_bifoldableJoker"), recVars=[];
+  $__res = (object)["bifoldr" => (function() use ($dictFoldable_0) {
+  $__fn = function($v_1, $r_2 = null, $u_3 = null, $v1_4 = null) use ($dictFoldable_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = (((($dictFoldable)->foldr)($r))($u))($v1);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (((($dictFoldable_0)->foldr)($r_2))($u_3))($v1_4);
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})(), "bifoldl" => (function() use (&$dictFoldable) {
-  $__fn = function($v, $r = null, $u = null, $v1 = null) use (&$dictFoldable, &$__fn) {
+})(), "bifoldl" => (function() use ($dictFoldable_0) {
+  $__fn = function($v_1, $r_2 = null, $u_3 = null, $v1_4 = null) use ($dictFoldable_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = (((($dictFoldable)->foldl)($r))($u))($v1);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (((($dictFoldable_0)->foldl)($r_2))($u_3))($v1_4);
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})(), "bifoldMap" => function($dictMonoid) use (&$dictFoldable) {
+})(), "bifoldMap" => function($dictMonoid_1) use ($dictFoldable_0) {
   $__num = \func_num_args();
-  $foldMap1_0 = (($dictFoldable)->foldMap)($dictMonoid);
-  $__res = (function() use (&$foldMap1_0) {
-  $__fn = function($v, $r = null, $v1 = null) use (&$foldMap1_0, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $foldMap1_2_0 = (($dictFoldable_0)->foldMap)($dictMonoid_1);
+  $__res = (function() use ($foldMap1_2_0) {
+  $__fn = function($v_3, $r_4 = null, $v1_5 = null) use ($foldMap1_2_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($foldMap1_0)($r))($v1);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($foldMap1_2_0)($r_4))($v1_5);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -276,16 +291,17 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Data_Bifoldable_bifoldableEither'] = function() { $v = (object)["bifoldr" => (function() {
-  $__fn = function($v, $v1 = null, $v2 = null, $v3 = null) use (&$__fn) {
+  $__fn = function($v_0, $v1_1 = null, $v2_2 = null, $v3_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  if ((is_object($v3) && (($v3)->tag === "Left"))) {
-$__t0 = (($v)(($v3)->value0))($v2);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  if ((is_object($v3_3) && (($v3_3)->tag === "Left"))) {
+$__t0 = (($v_0)(($v3_3)->value0))($v2_2);
 } else {
-if ((is_object($v3) && (($v3)->tag === "Right"))) {
-$__t0 = (($v1)(($v3)->value0))($v2);
+if ((is_object($v3_3) && (($v3_3)->tag === "Right"))) {
+$__t0 = (($v1_1)(($v3_3)->value0))($v2_2);
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t0 = null;
@@ -298,16 +314,17 @@ $__t0 = null;
   };
   return $__fn;
 })(), "bifoldl" => (function() {
-  $__fn = function($v, $v1 = null, $v2 = null, $v3 = null) use (&$__fn) {
+  $__fn = function($v_0, $v1_1 = null, $v2_2 = null, $v3_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  if ((is_object($v3) && (($v3)->tag === "Left"))) {
-$__t1 = (($v)($v2))(($v3)->value0);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  if ((is_object($v3_3) && (($v3_3)->tag === "Left"))) {
+$__t1 = (($v_0)($v2_2))(($v3_3)->value0);
 } else {
-if ((is_object($v3) && (($v3)->tag === "Right"))) {
-$__t1 = (($v1)($v2))(($v3)->value0);
+if ((is_object($v3_3) && (($v3_3)->tag === "Right"))) {
+$__t1 = (($v1_1)($v2_2))(($v3_3)->value0);
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t1 = null;
@@ -320,16 +337,17 @@ $__t1 = null;
   };
   return $__fn;
 })(), "bifoldMap" => (function() {
-  $__fn = function($dictMonoid, $v = null, $v1 = null, $v2 = null) use (&$__fn) {
+  $__fn = function($dictMonoid_0, $v_1 = null, $v1_2 = null, $v2_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  if ((is_object($v2) && (($v2)->tag === "Left"))) {
-$__t2 = ($v)(($v2)->value0);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  if ((is_object($v2_3) && (($v2_3)->tag === "Left"))) {
+$__t2 = ($v_1)(($v2_3)->value0);
 } else {
-if ((is_object($v2) && (($v2)->tag === "Right"))) {
-$__t2 = ($v1)(($v2)->value0);
+if ((is_object($v2_3) && (($v2_3)->tag === "Right"))) {
+$__t2 = ($v1_2)(($v2_3)->value0);
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t2 = null;
@@ -343,78 +361,86 @@ $__t2 = null;
   return $__fn;
 })()]; return $v; };
 \PhpursThunks::$thunks['Data_Bifoldable_bifoldableConst'] = function() { $v = (object)["bifoldr" => (function() {
-  $__fn = function($f, $v = null, $z = null, $v1 = null) use (&$__fn) {
+  $__fn = function($f_0, $v_1 = null, $z_2 = null, $v1_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = (($f)($v1))($z);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($f_0)($v1_3))($z_2);
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
 })(), "bifoldl" => (function() {
-  $__fn = function($f, $v = null, $z = null, $v1 = null) use (&$__fn) {
+  $__fn = function($f_0, $v_1 = null, $z_2 = null, $v1_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = (($f)($z))($v1);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($f_0)($z_2))($v1_3);
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
 })(), "bifoldMap" => (function() {
-  $__fn = function($dictMonoid, $f = null, $v = null, $v1 = null) use (&$__fn) {
+  $__fn = function($dictMonoid_0, $f_1 = null, $v_2 = null, $v1_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ($f)($v1);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ($f_1)($v1_3);
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
 })()]; return $v; };
-\PhpursThunks::$thunks['Data_Bifoldable_bifoldableClown'] = function() { $v = function($dictFoldable) {
+\PhpursThunks::$thunks['Data_Bifoldable_bifoldableClown'] = function() { $v = function($dictFoldable_0) {
   $__num = \func_num_args();
-  $__res = (object)["bifoldr" => (function() use (&$dictFoldable) {
-  $__fn = function($l, $v = null, $u = null, $v1 = null) use (&$dictFoldable, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Bifoldable_bifoldableClown"), recVars=[];
+  $__res = (object)["bifoldr" => (function() use ($dictFoldable_0) {
+  $__fn = function($l_1, $v_2 = null, $u_3 = null, $v1_4 = null) use ($dictFoldable_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = (((($dictFoldable)->foldr)($l))($u))($v1);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (((($dictFoldable_0)->foldr)($l_1))($u_3))($v1_4);
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})(), "bifoldl" => (function() use (&$dictFoldable) {
-  $__fn = function($l, $v = null, $u = null, $v1 = null) use (&$dictFoldable, &$__fn) {
+})(), "bifoldl" => (function() use ($dictFoldable_0) {
+  $__fn = function($l_1, $v_2 = null, $u_3 = null, $v1_4 = null) use ($dictFoldable_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = (((($dictFoldable)->foldl)($l))($u))($v1);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (((($dictFoldable_0)->foldl)($l_1))($u_3))($v1_4);
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})(), "bifoldMap" => function($dictMonoid) use (&$dictFoldable) {
+})(), "bifoldMap" => function($dictMonoid_1) use ($dictFoldable_0) {
   $__num = \func_num_args();
-  $foldMap1_0 = (($dictFoldable)->foldMap)($dictMonoid);
-  $__res = (function() use (&$foldMap1_0) {
-  $__fn = function($l, $v = null, $v1 = null) use (&$foldMap1_0, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $foldMap1_2_0 = (($dictFoldable_0)->foldMap)($dictMonoid_1);
+  $__res = (function() use ($foldMap1_2_0) {
+  $__fn = function($l_3, $v_4 = null, $v1_5 = null) use ($foldMap1_2_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($foldMap1_0)($l))($v1);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($foldMap1_2_0)($l_3))($v1_5);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -430,20 +456,22 @@ $__t2 = null;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Data_Bifoldable_bifoldMapDefaultR'] = function() { $v = (function() {
-  $__fn = function($dictBifoldable, $dictMonoid = null) use (&$__fn) {
+  $__fn = function($dictBifoldable_0, $dictMonoid_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $append_0 = ((($dictMonoid)->Semigroup0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->append;
-  $mempty_1 = ($dictMonoid)->mempty;
-  $__res = (function() use (&$append_0, &$dictBifoldable, &$mempty_1) {
-  $__fn = function($f, $g = null) use (&$append_0, &$dictBifoldable, &$mempty_1, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Bifoldable_bifoldMapDefaultR"), recVars=[];
+  $append_2_0 = ((($dictMonoid_1)->Semigroup0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->append;
+  $mempty_3_1 = ($dictMonoid_1)->mempty;
+  $__res = (function() use ($append_2_0, $dictBifoldable_0, $mempty_3_1) {
+  $__fn = function($f_4, $g_5 = null) use ($append_2_0, $dictBifoldable_0, $mempty_3_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($dictBifoldable)->bifoldr)(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($append_0))($f)))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($append_0))($g)))($mempty_1);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (((($dictBifoldable_0)->bifoldr)(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($append_2_0))($f_4)))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($append_2_0))($g_5)))($mempty_3_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -457,44 +485,48 @@ $__t2 = null;
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Data_Bifoldable_bifoldMapDefaultL'] = function() { $v = (function() {
-  $__fn = function($dictBifoldable, $dictMonoid = null) use (&$__fn) {
+  $__fn = function($dictBifoldable_0, $dictMonoid_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__local_var_0 = (($dictMonoid)->Semigroup0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $mempty_1 = ($dictMonoid)->mempty;
-  $__res = (function() use (&$__local_var_0, &$dictBifoldable, &$mempty_1) {
-  $__fn = function($f, $g = null) use (&$__local_var_0, &$dictBifoldable, &$mempty_1, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Bifoldable_bifoldMapDefaultL"), recVars=[];
+  $__local_var_2_0 = (($dictMonoid_1)->Semigroup0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $mempty_3_1 = ($dictMonoid_1)->mempty;
+  $__res = (function() use ($__local_var_2_0, $dictBifoldable_0, $mempty_3_1) {
+  $__fn = function($f_4, $g_5 = null) use ($__local_var_2_0, $dictBifoldable_0, $mempty_3_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($dictBifoldable)->bifoldl)((function() use (&$__local_var_0, &$f) {
-  $__fn = function($m, $a = null) use (&$__local_var_0, &$f, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (((($dictBifoldable_0)->bifoldl)((function() use ($__local_var_2_0, $f_4) {
+  $__fn = function($m_6, $a_7 = null) use ($__local_var_2_0, $f_4, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($__local_var_0)->append)($m))(($f)($a));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($__local_var_2_0)->append)($m_6))(($f_4)($a_7));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))((function() use (&$__local_var_0, &$g) {
-  $__fn = function($m, $b = null) use (&$__local_var_0, &$g, &$__fn) {
+})()))((function() use ($__local_var_2_0, $g_5) {
+  $__fn = function($m_6, $b_7 = null) use ($__local_var_2_0, $g_5, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($__local_var_0)->append)($m))(($g)($b));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($__local_var_2_0)->append)($m_6))(($g_5)($b_7));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))($mempty_1);
+})()))($mempty_3_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -507,49 +539,55 @@ $__t2 = null;
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Data_Bifoldable_bifoldMap'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Data_Bifoldable_bifoldMap'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->bifoldMap;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Bifoldable_bifoldMap"), recVars=[];
+  $__res = ($dict_0)->bifoldMap;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Bifoldable_bifoldableFlip'] = function() { $v = function($dictBifoldable) {
+\PhpursThunks::$thunks['Data_Bifoldable_bifoldableFlip'] = function() { $v = function($dictBifoldable_0) {
   $__num = \func_num_args();
-  $__res = (object)["bifoldr" => (function() use (&$dictBifoldable) {
-  $__fn = function($r, $l = null, $u = null, $v = null) use (&$dictBifoldable, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Bifoldable_bifoldableFlip"), recVars=[];
+  $__res = (object)["bifoldr" => (function() use ($dictBifoldable_0) {
+  $__fn = function($r_1, $l_2 = null, $u_3 = null, $v_4 = null) use ($dictBifoldable_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ((((($dictBifoldable)->bifoldr)($l))($r))($u))($v);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((((($dictBifoldable_0)->bifoldr)($l_2))($r_1))($u_3))($v_4);
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})(), "bifoldl" => (function() use (&$dictBifoldable) {
-  $__fn = function($r, $l = null, $u = null, $v = null) use (&$dictBifoldable, &$__fn) {
+})(), "bifoldl" => (function() use ($dictBifoldable_0) {
+  $__fn = function($r_1, $l_2 = null, $u_3 = null, $v_4 = null) use ($dictBifoldable_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ((((($dictBifoldable)->bifoldl)($l))($r))($u))($v);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((((($dictBifoldable_0)->bifoldl)($l_2))($r_1))($u_3))($v_4);
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})(), "bifoldMap" => function($dictMonoid) use (&$dictBifoldable) {
+})(), "bifoldMap" => function($dictMonoid_1) use ($dictBifoldable_0) {
   $__num = \func_num_args();
-  $bifoldMap2_0 = (($dictBifoldable)->bifoldMap)($dictMonoid);
-  $__res = (function() use (&$bifoldMap2_0) {
-  $__fn = function($r, $l = null, $v = null) use (&$bifoldMap2_0, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $bifoldMap2_2_0 = (($dictBifoldable_0)->bifoldMap)($dictMonoid_1);
+  $__res = (function() use ($bifoldMap2_2_0) {
+  $__fn = function($r_3, $l_4 = null, $v_5 = null) use ($bifoldMap2_2_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($bifoldMap2_0)($l))($r))($v);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($bifoldMap2_2_0)($l_4))($r_3))($v_5);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -564,40 +602,44 @@ $__t2 = null;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Bifoldable_bifoldlDefault'] = function() { $v = function($dictBifoldable) {
+\PhpursThunks::$thunks['Data_Bifoldable_bifoldlDefault'] = function() { $v = function($dictBifoldable_0) {
   $__num = \func_num_args();
-  $bifoldMap1_0 = (($dictBifoldable)->bifoldMap)(($GLOBALS['Data_Bifoldable_monoidDual'] ?? \PhpursThunks::eval('Data_Bifoldable_monoidDual')));
-  $__res = (function() use (&$bifoldMap1_0) {
-  $__fn = function($f, $g = null, $z = null, $p = null) use (&$bifoldMap1_0, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Bifoldable_bifoldlDefault"), recVars=[];
+  $bifoldMap1_1_0 = (($dictBifoldable_0)->bifoldMap)(($GLOBALS['Data_Bifoldable_monoidDual'] ?? \PhpursThunks::eval('Data_Bifoldable_monoidDual')));
+  $__res = (function() use ($bifoldMap1_1_0) {
+  $__fn = function($f_2, $g_3 = null, $z_4 = null, $p_5 = null) use ($bifoldMap1_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ((($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))((($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))(((($bifoldMap1_0)(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Monoid_Dual_Dual'] ?? \PhpursThunks::eval('Data_Monoid_Dual_Dual'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Monoid_Endo_Endo'] ?? \PhpursThunks::eval('Data_Monoid_Endo_Endo'))))((function() use (&$f) {
-  $__fn = function($b, $a = null) use (&$f, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))((($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))(((($bifoldMap1_1_0)(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Monoid_Dual_Dual'] ?? \PhpursThunks::eval('Data_Monoid_Dual_Dual'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Monoid_Endo_Endo'] ?? \PhpursThunks::eval('Data_Monoid_Endo_Endo'))))((function() use ($f_2) {
+  $__fn = function($b_6, $a_7 = null) use ($f_2, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($f)($a))($b);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($f_2)($a_7))($b_6);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Monoid_Dual_Dual'] ?? \PhpursThunks::eval('Data_Monoid_Dual_Dual'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Monoid_Endo_Endo'] ?? \PhpursThunks::eval('Data_Monoid_Endo_Endo'))))((function() use (&$g) {
-  $__fn = function($b, $a = null) use (&$g, &$__fn) {
+})()))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Monoid_Dual_Dual'] ?? \PhpursThunks::eval('Data_Monoid_Dual_Dual'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Monoid_Endo_Endo'] ?? \PhpursThunks::eval('Data_Monoid_Endo_Endo'))))((function() use ($g_3) {
+  $__fn = function($b_6, $a_7 = null) use ($g_3, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($g)($a))($b);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($g_3)($a_7))($b_6);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))))($p))))($z);
+})()))))($p_5))))($z_4);
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -608,16 +650,18 @@ $__t2 = null;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Bifoldable_bifoldrDefault'] = function() { $v = function($dictBifoldable) {
+\PhpursThunks::$thunks['Data_Bifoldable_bifoldrDefault'] = function() { $v = function($dictBifoldable_0) {
   $__num = \func_num_args();
-  $bifoldMap1_0 = (($dictBifoldable)->bifoldMap)(($GLOBALS['Data_Bifoldable_monoidEndo'] ?? \PhpursThunks::eval('Data_Bifoldable_monoidEndo')));
-  $__res = (function() use (&$bifoldMap1_0) {
-  $__fn = function($f, $g = null, $z = null, $p = null) use (&$bifoldMap1_0, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Bifoldable_bifoldrDefault"), recVars=[];
+  $bifoldMap1_1_0 = (($dictBifoldable_0)->bifoldMap)(($GLOBALS['Data_Bifoldable_monoidEndo'] ?? \PhpursThunks::eval('Data_Bifoldable_monoidEndo')));
+  $__res = (function() use ($bifoldMap1_1_0) {
+  $__fn = function($f_2, $g_3 = null, $z_4 = null, $p_5 = null) use ($bifoldMap1_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ((($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))(((($bifoldMap1_0)(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Monoid_Endo_Endo'] ?? \PhpursThunks::eval('Data_Monoid_Endo_Endo'))))($f)))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Monoid_Endo_Endo'] ?? \PhpursThunks::eval('Data_Monoid_Endo_Endo'))))($g)))($p)))($z);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))(((($bifoldMap1_1_0)(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Monoid_Endo_Endo'] ?? \PhpursThunks::eval('Data_Monoid_Endo_Endo'))))($f_2)))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Monoid_Endo_Endo'] ?? \PhpursThunks::eval('Data_Monoid_Endo_Endo'))))($g_3)))($p_5)))($z_4);
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -629,46 +673,52 @@ $__t2 = null;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Data_Bifoldable_bifoldableProduct2'] = function() { $v = (function() {
-  $__fn = function($dictBifoldable, $dictBifoldable1 = null) use (&$__fn) {
+  $__fn = function($dictBifoldable_0, $dictBifoldable1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (object)["bifoldr" => (function() use (&$dictBifoldable, &$dictBifoldable1) {
-  $__fn = function($l, $r = null, $u = null, $m = null) use (&$dictBifoldable, &$dictBifoldable1, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Bifoldable_bifoldableProduct2"), recVars=["Data_Bifoldable_bifoldableProduct2"];
+  while (true) {
+$__res = (object)["bifoldr" => (function() use ($dictBifoldable1_1, $dictBifoldable_0) {
+  $__fn = function($l_2, $r_3 = null, $u_4 = null, $m_5 = null) use ($dictBifoldable1_1, $dictBifoldable_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = (((((($GLOBALS['Data_Bifoldable_bifoldrDefault'] ?? \PhpursThunks::eval('Data_Bifoldable_bifoldrDefault')))(((($GLOBALS['Data_Bifoldable_bifoldableProduct2'] ?? \PhpursThunks::eval('Data_Bifoldable_bifoldableProduct2')))($dictBifoldable))($dictBifoldable1)))($l))($r))($u))($m);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_Bifoldable_bifoldableProduct2"];
+  $__res = (((((($GLOBALS['Data_Bifoldable_bifoldrDefault'] ?? \PhpursThunks::eval('Data_Bifoldable_bifoldrDefault')))(((($GLOBALS['Data_Bifoldable_bifoldableProduct2'] ?? \PhpursThunks::eval('Data_Bifoldable_bifoldableProduct2')))($dictBifoldable_0))($dictBifoldable1_1)))($l_2))($r_3))($u_4))($m_5);
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})(), "bifoldl" => (function() use (&$dictBifoldable, &$dictBifoldable1) {
-  $__fn = function($l, $r = null, $u = null, $m = null) use (&$dictBifoldable, &$dictBifoldable1, &$__fn) {
+})(), "bifoldl" => (function() use ($dictBifoldable1_1, $dictBifoldable_0) {
+  $__fn = function($l_2, $r_3 = null, $u_4 = null, $m_5 = null) use ($dictBifoldable1_1, $dictBifoldable_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = (((((($GLOBALS['Data_Bifoldable_bifoldlDefault'] ?? \PhpursThunks::eval('Data_Bifoldable_bifoldlDefault')))(((($GLOBALS['Data_Bifoldable_bifoldableProduct2'] ?? \PhpursThunks::eval('Data_Bifoldable_bifoldableProduct2')))($dictBifoldable))($dictBifoldable1)))($l))($r))($u))($m);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_Bifoldable_bifoldableProduct2"];
+  $__res = (((((($GLOBALS['Data_Bifoldable_bifoldlDefault'] ?? \PhpursThunks::eval('Data_Bifoldable_bifoldlDefault')))(((($GLOBALS['Data_Bifoldable_bifoldableProduct2'] ?? \PhpursThunks::eval('Data_Bifoldable_bifoldableProduct2')))($dictBifoldable_0))($dictBifoldable1_1)))($l_2))($r_3))($u_4))($m_5);
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})(), "bifoldMap" => function($dictMonoid) use (&$dictBifoldable, &$dictBifoldable1) {
+})(), "bifoldMap" => function($dictMonoid_2) use ($dictBifoldable1_1, $dictBifoldable_0) {
   $__num = \func_num_args();
-  $bifoldMap3_0 = (($dictBifoldable)->bifoldMap)($dictMonoid);
-  $bifoldMap4_1 = (($dictBifoldable1)->bifoldMap)($dictMonoid);
-  $__res = (function() use (&$bifoldMap3_0, &$bifoldMap4_1, &$dictMonoid) {
-  $__fn = function($l, $r = null, $v = null) use (&$bifoldMap3_0, &$bifoldMap4_1, &$dictMonoid, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_Bifoldable_bifoldableProduct2"];
+  $bifoldMap3_3_0 = (($dictBifoldable_0)->bifoldMap)($dictMonoid_2);
+  $bifoldMap4_4_1 = (($dictBifoldable1_1)->bifoldMap)($dictMonoid_2);
+  $__res = (function() use ($bifoldMap3_3_0, $bifoldMap4_4_1, $dictMonoid_2) {
+  $__fn = function($l_5, $r_6 = null, $v_7 = null) use ($bifoldMap3_3_0, $bifoldMap4_4_1, $dictMonoid_2, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((((($dictMonoid)->Semigroup0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->append)(((($bifoldMap3_0)($l))($r))(($v)->value0)))(((($bifoldMap4_1)($l))($r))(($v)->value1));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_Bifoldable_bifoldableProduct2"];
+  $__res = ((((($dictMonoid_2)->Semigroup0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->append)(((($bifoldMap3_3_0)($l_5))($r_6))(($v_7)->value0)))(((($bifoldMap4_4_1)($l_5))($r_6))(($v_7)->value1));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -679,19 +729,21 @@ $__t2 = null;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  goto __end;;
+goto __end;;
+};
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Data_Bifoldable_bifold'] = function() { $v = (function() {
-  $__fn = function($dictBifoldable, $dictMonoid = null) use (&$__fn) {
+  $__fn = function($dictBifoldable_0, $dictMonoid_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($dictBifoldable)->bifoldMap)($dictMonoid))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->identity))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->identity);
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Bifoldable_bifold"), recVars=[];
+  $__res = (((($dictBifoldable_0)->bifoldMap)($dictMonoid_1))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->identity))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->identity);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -699,39 +751,43 @@ $__t2 = null;
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Data_Bifoldable_biany'] = function() { $v = (function() {
-  $__fn = function($dictBifoldable, $dictBooleanAlgebra = null) use (&$__fn) {
+  $__fn = function($dictBifoldable_0, $dictBooleanAlgebra_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__local_var_0 = (($dictBooleanAlgebra)->HeytingAlgebra0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $semigroupDisj1_1 = (object)["append" => (function() use (&$__local_var_0) {
-  $__fn = function($v, $v1 = null) use (&$__local_var_0, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Bifoldable_biany"), recVars=[];
+  $__local_var_2_0 = (($dictBooleanAlgebra_1)->HeytingAlgebra0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $semigroupDisj1_3_1 = (object)["append" => (function() use ($__local_var_2_0) {
+  $__fn = function($v_3, $v1_4 = null) use ($__local_var_2_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($__local_var_0)->disj)($v))($v1);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($__local_var_2_0)->disj)($v_3))($v1_4);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()];
-  $bifoldMap2_2 = (($dictBifoldable)->bifoldMap)((object)["mempty" => ($__local_var_0)->ff, "Semigroup0" => function($dollar__unused_0) use (&$semigroupDisj1_1) {
+  $bifoldMap2_2_0 = (($dictBifoldable_0)->bifoldMap)((object)["mempty" => ($__local_var_2_0)->ff, "Semigroup0" => function($dollar__unused_4) use ($semigroupDisj1_3_1) {
   $__num = \func_num_args();
-  $__res = $semigroupDisj1_1;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $semigroupDisj1_3_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]);
-  $__res = (function() use (&$bifoldMap2_2) {
-  $__fn = function($p, $q = null) use (&$bifoldMap2_2, &$__fn) {
+  $__res = (function() use ($bifoldMap2_2_0) {
+  $__fn = function($p_3, $q_4 = null) use ($bifoldMap2_2_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce'))))((($bifoldMap2_2)(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Monoid_Disj_Disj'] ?? \PhpursThunks::eval('Data_Monoid_Disj_Disj'))))($p)))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Monoid_Disj_Disj'] ?? \PhpursThunks::eval('Data_Monoid_Disj_Disj'))))($q)));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce'))))((($bifoldMap2_2_0)(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Monoid_Disj_Disj'] ?? \PhpursThunks::eval('Data_Monoid_Disj_Disj'))))($p_3)))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Monoid_Disj_Disj'] ?? \PhpursThunks::eval('Data_Monoid_Disj_Disj'))))($q_4)));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -745,39 +801,43 @@ $__t2 = null;
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Data_Bifoldable_biall'] = function() { $v = (function() {
-  $__fn = function($dictBifoldable, $dictBooleanAlgebra = null) use (&$__fn) {
+  $__fn = function($dictBifoldable_0, $dictBooleanAlgebra_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__local_var_0 = (($dictBooleanAlgebra)->HeytingAlgebra0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $semigroupConj1_1 = (object)["append" => (function() use (&$__local_var_0) {
-  $__fn = function($v, $v1 = null) use (&$__local_var_0, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Bifoldable_biall"), recVars=[];
+  $__local_var_2_0 = (($dictBooleanAlgebra_1)->HeytingAlgebra0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $semigroupConj1_3_1 = (object)["append" => (function() use ($__local_var_2_0) {
+  $__fn = function($v_3, $v1_4 = null) use ($__local_var_2_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($__local_var_0)->conj)($v))($v1);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($__local_var_2_0)->conj)($v_3))($v1_4);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()];
-  $bifoldMap2_2 = (($dictBifoldable)->bifoldMap)((object)["mempty" => ($__local_var_0)->tt, "Semigroup0" => function($dollar__unused_0) use (&$semigroupConj1_1) {
+  $bifoldMap2_2_0 = (($dictBifoldable_0)->bifoldMap)((object)["mempty" => ($__local_var_2_0)->tt, "Semigroup0" => function($dollar__unused_4) use ($semigroupConj1_3_1) {
   $__num = \func_num_args();
-  $__res = $semigroupConj1_1;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $semigroupConj1_3_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]);
-  $__res = (function() use (&$bifoldMap2_2) {
-  $__fn = function($p, $q = null) use (&$bifoldMap2_2, &$__fn) {
+  $__res = (function() use ($bifoldMap2_2_0) {
+  $__fn = function($p_3, $q_4 = null) use ($bifoldMap2_2_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce'))))((($bifoldMap2_2)(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Monoid_Conj_Conj'] ?? \PhpursThunks::eval('Data_Monoid_Conj_Conj'))))($p)))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Monoid_Conj_Conj'] ?? \PhpursThunks::eval('Data_Monoid_Conj_Conj'))))($q)));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce'))))((($bifoldMap2_2_0)(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Monoid_Conj_Conj'] ?? \PhpursThunks::eval('Data_Monoid_Conj_Conj'))))($p_3)))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Monoid_Conj_Conj'] ?? \PhpursThunks::eval('Data_Monoid_Conj_Conj'))))($q_4)));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

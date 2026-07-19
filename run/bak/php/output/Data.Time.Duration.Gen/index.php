@@ -89,37 +89,42 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Time_Duration_Gen_genSeconds'] = function() { $v = function($dictMonadGen) {
+\PhpursThunks::$thunks['Data_Time_Duration_Gen_genSeconds'] = function() { $v = function($dictMonadGen_0) {
   $__num = \func_num_args();
-  $__res = ((((((((((($dictMonadGen)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->map)(($GLOBALS['Data_Time_Duration_Seconds'] ?? \PhpursThunks::eval('Data_Time_Duration_Seconds'))))(((($dictMonadGen)->chooseFloat)(0.0))(600.0));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Time_Duration_Gen_genSeconds"), recVars=[];
+  $__res = ((((((((((($dictMonadGen_0)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->map)(($GLOBALS['Data_Time_Duration_Seconds'] ?? \PhpursThunks::eval('Data_Time_Duration_Seconds'))))(((($dictMonadGen_0)->chooseFloat)(0.0))(600.0));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Time_Duration_Gen_genMinutes'] = function() { $v = function($dictMonadGen) {
+\PhpursThunks::$thunks['Data_Time_Duration_Gen_genMinutes'] = function() { $v = function($dictMonadGen_0) {
   $__num = \func_num_args();
-  $__res = ((((((((((($dictMonadGen)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->map)(($GLOBALS['Data_Time_Duration_Minutes'] ?? \PhpursThunks::eval('Data_Time_Duration_Minutes'))))(((($dictMonadGen)->chooseFloat)(0.0))(600.0));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Time_Duration_Gen_genMinutes"), recVars=[];
+  $__res = ((((((((((($dictMonadGen_0)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->map)(($GLOBALS['Data_Time_Duration_Minutes'] ?? \PhpursThunks::eval('Data_Time_Duration_Minutes'))))(((($dictMonadGen_0)->chooseFloat)(0.0))(600.0));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Time_Duration_Gen_genMilliseconds'] = function() { $v = function($dictMonadGen) {
+\PhpursThunks::$thunks['Data_Time_Duration_Gen_genMilliseconds'] = function() { $v = function($dictMonadGen_0) {
   $__num = \func_num_args();
-  $__res = ((((((((((($dictMonadGen)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->map)(($GLOBALS['Data_Time_Duration_Milliseconds'] ?? \PhpursThunks::eval('Data_Time_Duration_Milliseconds'))))(((($dictMonadGen)->chooseFloat)(0.0))(600000.0));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Time_Duration_Gen_genMilliseconds"), recVars=[];
+  $__res = ((((((((((($dictMonadGen_0)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->map)(($GLOBALS['Data_Time_Duration_Milliseconds'] ?? \PhpursThunks::eval('Data_Time_Duration_Milliseconds'))))(((($dictMonadGen_0)->chooseFloat)(0.0))(600000.0));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Time_Duration_Gen_genHours'] = function() { $v = function($dictMonadGen) {
+\PhpursThunks::$thunks['Data_Time_Duration_Gen_genHours'] = function() { $v = function($dictMonadGen_0) {
   $__num = \func_num_args();
-  $__res = ((((((((((($dictMonadGen)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->map)(($GLOBALS['Data_Time_Duration_Hours'] ?? \PhpursThunks::eval('Data_Time_Duration_Hours'))))(((($dictMonadGen)->chooseFloat)(0.0))(240.0));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Time_Duration_Gen_genHours"), recVars=[];
+  $__res = ((((((((((($dictMonadGen_0)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->map)(($GLOBALS['Data_Time_Duration_Hours'] ?? \PhpursThunks::eval('Data_Time_Duration_Hours'))))(((($dictMonadGen_0)->chooseFloat)(0.0))(240.0));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Time_Duration_Gen_genDays'] = function() { $v = function($dictMonadGen) {
+\PhpursThunks::$thunks['Data_Time_Duration_Gen_genDays'] = function() { $v = function($dictMonadGen_0) {
   $__num = \func_num_args();
-  $__res = ((((((((((($dictMonadGen)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->map)(($GLOBALS['Data_Time_Duration_Days'] ?? \PhpursThunks::eval('Data_Time_Duration_Days'))))(((($dictMonadGen)->chooseFloat)(0.0))(42.0));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Time_Duration_Gen_genDays"), recVars=[];
+  $__res = ((((((((((($dictMonadGen_0)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->map)(($GLOBALS['Data_Time_Duration_Days'] ?? \PhpursThunks::eval('Data_Time_Duration_Days'))))(((($dictMonadGen_0)->chooseFloat)(0.0))(42.0));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

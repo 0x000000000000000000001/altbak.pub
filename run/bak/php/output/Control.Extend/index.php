@@ -88,17 +88,20 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Control_Extend_extendFn'] = function() { $v = function($dictSemigroup) {
+\PhpursThunks::$thunks['Control_Extend_extendFn'] = function() { $v = function($dictSemigroup_0) {
   $__num = \func_num_args();
-  $__res = (object)["extend" => (function() use (&$dictSemigroup) {
-  $__fn = function($f, $g = null, $w = null) use (&$dictSemigroup, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Extend_extendFn"), recVars=[];
+  $__res = (object)["extend" => (function() use ($dictSemigroup_0) {
+  $__fn = function($f_1, $g_2 = null, $w_3 = null) use ($dictSemigroup_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ($f)(function($w__prime__) use (&$dictSemigroup, &$g, &$w) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ($f_1)(function($w__prime___4) use ($dictSemigroup_0, $g_2, $w_3) {
   $__num = \func_num_args();
-  $__res = ($g)(((($dictSemigroup)->append)($w))($w__prime__));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ($g_2)(((($dictSemigroup_0)->append)($w_3))($w__prime___4));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -108,8 +111,9 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_0) {
+})(), "Functor0" => function($dollar__unused_1) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_Functor_functorFn'] ?? \PhpursThunks::eval('Data_Functor_functorFn'));
   goto __end;;
   __end:
@@ -121,45 +125,50 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 }; return $v; };
 \PhpursThunks::$thunks['Control_Extend_extendArray'] = function() { $v = (object)["extend" => ($GLOBALS['Control_Extend_arrayExtend'] ?? \PhpursThunks::eval('Control_Extend_arrayExtend')), "Functor0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_Functor_functorArray'] ?? \PhpursThunks::eval('Data_Functor_functorArray'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
-\PhpursThunks::$thunks['Control_Extend_extend'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Control_Extend_extend'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->extend;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Extend_extend"), recVars=[];
+  $__res = ($dict_0)->extend;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Control_Extend_extendFlipped'] = function() { $v = (function() {
-  $__fn = function($dictExtend, $w = null, $f = null) use (&$__fn) {
+  $__fn = function($dictExtend_0, $w_1 = null, $f_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($dictExtend)->extend)($f))($w);
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Extend_extendFlipped"), recVars=[];
+  $__res = ((($dictExtend_0)->extend)($f_2))($w_1);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Control_Extend_duplicate'] = function() { $v = function($dictExtend) {
+\PhpursThunks::$thunks['Control_Extend_duplicate'] = function() { $v = function($dictExtend_0) {
   $__num = \func_num_args();
-  $__res = (($dictExtend)->extend)((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->identity);
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Extend_duplicate"), recVars=[];
+  $__res = (($dictExtend_0)->extend)((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->identity);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Control_Extend_composeCoKleisliFlipped'] = function() { $v = (function() {
-  $__fn = function($dictExtend, $f = null, $g = null, $w = null) use (&$__fn) {
+  $__fn = function($dictExtend_0, $f_1 = null, $g_2 = null, $w_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ($f)(((($dictExtend)->extend)($g))($w));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Extend_composeCoKleisliFlipped"), recVars=[];
+  $__res = ($f_1)(((($dictExtend_0)->extend)($g_2))($w_3));
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -167,12 +176,13 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Control_Extend_composeCoKleisli'] = function() { $v = (function() {
-  $__fn = function($dictExtend, $f = null, $g = null, $w = null) use (&$__fn) {
+  $__fn = function($dictExtend_0, $f_1 = null, $g_2 = null, $w_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ($g)(((($dictExtend)->extend)($f))($w));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Extend_composeCoKleisli"), recVars=[];
+  $__res = ($g_2)(((($dictExtend_0)->extend)($f_1))($w_3));
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;

@@ -94,32 +94,37 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Divisible_divisiblePredicate'] = function() { $v = (object)["conquer" => function($v) {
+\PhpursThunks::$thunks['Data_Divisible_divisiblePredicate'] = function() { $v = (object)["conquer" => function($v_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = true;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Divide0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_Divide_dividePredicate'] ?? \PhpursThunks::eval('Data_Divide_dividePredicate'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
-\PhpursThunks::$thunks['Data_Divisible_divisibleOp'] = function() { $v = function($dictMonoid) {
+\PhpursThunks::$thunks['Data_Divisible_divisibleOp'] = function() { $v = function($dictMonoid_0) {
   $__num = \func_num_args();
-  $divideOp_0 = (($GLOBALS['Data_Divide_divideOp'] ?? \PhpursThunks::eval('Data_Divide_divideOp')))((($dictMonoid)->Semigroup0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__local_var_1 = ($dictMonoid)->mempty;
-  $__res = (object)["conquer" => function($v) use (&$__local_var_1) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Divisible_divisibleOp"), recVars=[];
+  $divideOp_1_0 = (($GLOBALS['Data_Divide_divideOp'] ?? \PhpursThunks::eval('Data_Divide_divideOp')))((($dictMonoid_0)->Semigroup0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__local_var_2_1 = ($dictMonoid_0)->mempty;
+  $__res = (object)["conquer" => function($v_3) use ($__local_var_2_1) {
   $__num = \func_num_args();
-  $__res = $__local_var_1;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $__local_var_2_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Divide0" => function($dollar__unused_0) use (&$divideOp_0) {
+}, "Divide0" => function($dollar__unused_2) use ($divideOp_1_0) {
   $__num = \func_num_args();
-  $__res = $divideOp_0;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $divideOp_1_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -129,11 +134,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Data_Divisible_divisibleEquivalence'] = function() { $v = (object)["conquer" => (function() {
-  $__fn = function($v, $v1 = null) use (&$__fn) {
+  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = true;
   goto __end;;
   __end:
@@ -142,17 +148,19 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(), "Divide0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_Divide_divideEquivalence'] ?? \PhpursThunks::eval('Data_Divide_divideEquivalence'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
 \PhpursThunks::$thunks['Data_Divisible_divisibleComparison'] = function() { $v = (object)["conquer" => (function() {
-  $__fn = function($v, $v1 = null) use (&$__fn) {
+  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = new Phpurs_Data0("EQ");
   goto __end;;
   __end:
@@ -161,14 +169,16 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(), "Divide0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_Divide_divideComparison'] ?? \PhpursThunks::eval('Data_Divide_divideComparison'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
-\PhpursThunks::$thunks['Data_Divisible_conquer'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Data_Divisible_conquer'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->conquer;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Divisible_conquer"), recVars=[];
+  $__res = ($dict_0)->conquer;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

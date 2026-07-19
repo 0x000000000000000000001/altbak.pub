@@ -107,22 +107,25 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Profunctor_Star_Star'] = function() { $v = function($x) {
+\PhpursThunks::$thunks['Data_Profunctor_Star_Star'] = function() { $v = function($x_0) {
   $__num = \func_num_args();
-  $__res = $x;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Profunctor_Star_Star"), recVars=[];
+  $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Profunctor_Star_semigroupoidStar'] = function() { $v = function($dictBind) {
+\PhpursThunks::$thunks['Data_Profunctor_Star_semigroupoidStar'] = function() { $v = function($dictBind_0) {
   $__num = \func_num_args();
-  $__res = (object)["compose" => (function() use (&$dictBind) {
-  $__fn = function($v, $v1 = null, $x = null) use (&$dictBind, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Profunctor_Star_semigroupoidStar"), recVars=[];
+  $__res = (object)["compose" => (function() use ($dictBind_0) {
+  $__fn = function($v_1, $v1_2 = null, $x_3 = null) use ($dictBind_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($dictBind)->bind)(($v1)($x)))($v);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($dictBind_0)->bind)(($v1_2)($x_3)))($v_1);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -133,15 +136,17 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Profunctor_Star_profunctorStar'] = function() { $v = function($dictFunctor) {
+\PhpursThunks::$thunks['Data_Profunctor_Star_profunctorStar'] = function() { $v = function($dictFunctor_0) {
   $__num = \func_num_args();
-  $__res = (object)["dimap" => (function() use (&$dictFunctor) {
-  $__fn = function($f, $g = null, $v = null) use (&$dictFunctor, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Profunctor_Star_profunctorStar"), recVars=[];
+  $__res = (object)["dimap" => (function() use ($dictFunctor_0) {
+  $__fn = function($f_1, $g_2 = null, $v_3 = null) use ($dictFunctor_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($dictFunctor)->map)($g)))($v)))($f);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($dictFunctor_0)->map)($g_2)))($v_3)))($f_1);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -152,43 +157,48 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Profunctor_Star_strongStar'] = function() { $v = function($dictFunctor) {
+\PhpursThunks::$thunks['Data_Profunctor_Star_strongStar'] = function() { $v = function($dictFunctor_0) {
   $__num = \func_num_args();
-  $profunctorStar1_0 = (($GLOBALS['Data_Profunctor_Star_profunctorStar'] ?? \PhpursThunks::eval('Data_Profunctor_Star_profunctorStar')))($dictFunctor);
-  $__res = (object)["first" => (function() use (&$dictFunctor) {
-  $__fn = function($v, $v1 = null) use (&$dictFunctor, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Profunctor_Star_strongStar"), recVars=[];
+  $profunctorStar1_1_0 = (($GLOBALS['Data_Profunctor_Star_profunctorStar'] ?? \PhpursThunks::eval('Data_Profunctor_Star_profunctorStar')))($dictFunctor_0);
+  $__res = (object)["first" => (function() use ($dictFunctor_0) {
+  $__fn = function($v_2, $v1_3 = null) use ($dictFunctor_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__local_var_1 = ($v1)->value1;
-  $__res = ((($dictFunctor)->map)(function($v2) use (&$__local_var_1) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__local_var_4_1 = ($v1_3)->value1;
+  $__res = ((($dictFunctor_0)->map)(function($v2_5) use ($__local_var_4_1) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Tuple", $v2, $__local_var_1);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = new Phpurs_Data2("Tuple", $v2_5, $__local_var_4_1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(($v)(($v1)->value0));
+}))(($v_2)(($v1_3)->value0));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "second" => (function() use (&$dictFunctor) {
-  $__fn = function($v, $v1 = null) use (&$dictFunctor, &$__fn) {
+})(), "second" => (function() use ($dictFunctor_0) {
+  $__fn = function($v_2, $v1_3 = null) use ($dictFunctor_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictFunctor)->map)((($GLOBALS['Data_Tuple_Tuple'] ?? \PhpursThunks::eval('Data_Tuple_Tuple')))(($v1)->value0)))(($v)(($v1)->value1));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($dictFunctor_0)->map)((($GLOBALS['Data_Tuple_Tuple'] ?? \PhpursThunks::eval('Data_Tuple_Tuple')))(($v1_3)->value0)))(($v_2)(($v1_3)->value1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Profunctor0" => function($dollar__unused_0) use (&$profunctorStar1_0) {
+})(), "Profunctor0" => function($dollar__unused_2) use ($profunctorStar1_1_0) {
   $__num = \func_num_args();
-  $__res = $profunctorStar1_0;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $profunctorStar1_1_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -199,20 +209,23 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 }; return $v; };
 \PhpursThunks::$thunks['Data_Profunctor_Star_newtypeStar'] = function() { $v = (object)["Coercible0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
-\PhpursThunks::$thunks['Data_Profunctor_Star_invariantStar'] = function() { $v = function($dictInvariant) {
+\PhpursThunks::$thunks['Data_Profunctor_Star_invariantStar'] = function() { $v = function($dictInvariant_0) {
   $__num = \func_num_args();
-  $__res = (object)["imap" => (function() use (&$dictInvariant) {
-  $__fn = function($f, $g = null, $v = null) use (&$dictInvariant, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Profunctor_Star_invariantStar"), recVars=[];
+  $__res = (object)["imap" => (function() use ($dictInvariant_0) {
+  $__fn = function($f_1, $g_2 = null, $v_3 = null) use ($dictInvariant_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(((($dictInvariant)->imap)($f))($g)))($v);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(((($dictInvariant_0)->imap)($f_1))($g_2)))($v_3);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -224,27 +237,30 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Data_Profunctor_Star_hoistStar'] = function() { $v = (function() {
-  $__fn = function($f, $v = null) use (&$__fn) {
+  $__fn = function($f_0, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($f))($v);
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Profunctor_Star_hoistStar"), recVars=[];
+  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($f_0))($v_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Data_Profunctor_Star_functorStar'] = function() { $v = function($dictFunctor) {
+\PhpursThunks::$thunks['Data_Profunctor_Star_functorStar'] = function() { $v = function($dictFunctor_0) {
   $__num = \func_num_args();
-  $__res = (object)["map" => (function() use (&$dictFunctor) {
-  $__fn = function($f, $v = null) use (&$dictFunctor, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Profunctor_Star_functorStar"), recVars=[];
+  $__res = (object)["map" => (function() use ($dictFunctor_0) {
+  $__fn = function($f_1, $v_2 = null) use ($dictFunctor_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($dictFunctor)->map)($f)))($v);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($dictFunctor_0)->map)($f_1)))($v_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -255,38 +271,44 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Profunctor_Star_distributiveStar'] = function() { $v = function($dictDistributive) {
+\PhpursThunks::$thunks['Data_Profunctor_Star_distributiveStar'] = function() { $v = function($dictDistributive_0) {
   $__num = \func_num_args();
-  $__local_var_0 = (($dictDistributive)->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $functorStar1_1 = (object)["map" => (function() use (&$__local_var_0) {
-  $__fn = function($f, $v = null) use (&$__local_var_0, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Profunctor_Star_distributiveStar"), recVars=["Data_Profunctor_Star_distributiveStar"];
+  while (true) {
+$__local_var_1_0 = (($dictDistributive_0)->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+$functorStar1_2_1 = (object)["map" => (function() use ($__local_var_1_0) {
+  $__fn = function($f_2, $v_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($__local_var_0)->map)($f)))($v);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_Profunctor_Star_distributiveStar"];
+  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($__local_var_1_0)->map)($f_2)))($v_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()];
-  $__res = (object)["distribute" => function($dictFunctor) use (&$dictDistributive) {
+$__res = (object)["distribute" => function($dictFunctor_3) use ($dictDistributive_0) {
   $__num = \func_num_args();
-  $collect1_2 = (($dictDistributive)->collect)($dictFunctor);
-  $__res = (function() use (&$collect1_2) {
-  $__fn = function($f, $a = null) use (&$collect1_2, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_Profunctor_Star_distributiveStar"];
+  $collect1_4_2 = (($dictDistributive_0)->collect)($dictFunctor_3);
+  $__res = (function() use ($collect1_4_2) {
+  $__fn = function($f_5, $a_6 = null) use ($collect1_4_2, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($collect1_2)(function($v) use (&$a) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_Profunctor_Star_distributiveStar"];
+  $__res = (($collect1_4_2)(function($v_7) use ($a_6) {
   $__num = \func_num_args();
-  $__res = ($v)($a);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_Profunctor_Star_distributiveStar"];
+  $__res = ($v_7)($a_6);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))($f);
+}))($f_5);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -296,21 +318,54 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "collect" => (function() use (&$dictDistributive) {
-  $__fn = function($dictFunctor, $f = null) use (&$dictDistributive, &$__fn) {
+}, "collect" => (function() use ($dictDistributive_0) {
+  $__fn = function($dictFunctor_3, $f_4 = null) use ($dictDistributive_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((((($GLOBALS['Data_Profunctor_Star_distributiveStar'] ?? \PhpursThunks::eval('Data_Profunctor_Star_distributiveStar')))($dictDistributive))->distribute)($dictFunctor)))((($dictFunctor)->map)($f));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_Profunctor_Star_distributiveStar"];
+  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((((($GLOBALS['Data_Profunctor_Star_distributiveStar'] ?? \PhpursThunks::eval('Data_Profunctor_Star_distributiveStar')))($dictDistributive_0))->distribute)($dictFunctor_3)))((($dictFunctor_3)->map)($f_4));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_0) use (&$functorStar1_1) {
+})(), "Functor0" => function($dollar__unused_3) use ($functorStar1_2_1) {
   $__num = \func_num_args();
-  $__res = $functorStar1_1;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_Profunctor_Star_distributiveStar"];
+  $__res = $functorStar1_2_1;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+goto __end;;
+};
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}; return $v; };
+\PhpursThunks::$thunks['Data_Profunctor_Star_closedStar'] = function() { $v = function($dictDistributive_0) {
+  $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Profunctor_Star_closedStar"), recVars=[];
+  $distribute_1_0 = (($dictDistributive_0)->distribute)(($GLOBALS['Data_Functor_functorFn'] ?? \PhpursThunks::eval('Data_Functor_functorFn')));
+  $profunctorStar1_2_1 = (($GLOBALS['Data_Profunctor_Star_profunctorStar'] ?? \PhpursThunks::eval('Data_Profunctor_Star_profunctorStar')))((($dictDistributive_0)->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__res = (object)["closed" => (function() use ($distribute_1_0) {
+  $__fn = function($v_3, $g_4 = null) use ($distribute_1_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ($distribute_1_0)(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($v_3))($g_4));
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})(), "Profunctor0" => function($dollar__unused_3) use ($profunctorStar1_2_1) {
+  $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $profunctorStar1_2_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -319,49 +374,25 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Profunctor_Star_closedStar'] = function() { $v = function($dictDistributive) {
+\PhpursThunks::$thunks['Data_Profunctor_Star_choiceStar'] = function() { $v = function($dictApplicative_0) {
   $__num = \func_num_args();
-  $distribute_0 = (($dictDistributive)->distribute)(($GLOBALS['Data_Functor_functorFn'] ?? \PhpursThunks::eval('Data_Functor_functorFn')));
-  $profunctorStar1_1 = (($GLOBALS['Data_Profunctor_Star_profunctorStar'] ?? \PhpursThunks::eval('Data_Profunctor_Star_profunctorStar')))((($dictDistributive)->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = (object)["closed" => (function() use (&$distribute_0) {
-  $__fn = function($v, $g = null) use (&$distribute_0, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Profunctor_Star_choiceStar"), recVars=[];
+  $Functor0_1_0 = (((($dictApplicative_0)->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $pure_2_1 = ($dictApplicative_0)->pure;
+  $profunctorStar1_3_2 = (($GLOBALS['Data_Profunctor_Star_profunctorStar'] ?? \PhpursThunks::eval('Data_Profunctor_Star_profunctorStar')))($Functor0_1_0);
+  $__res = (object)["left" => function($v_4) use ($Functor0_1_0, $pure_2_1) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ($distribute_0)(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($v))($g));
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Profunctor0" => function($dollar__unused_0) use (&$profunctorStar1_1) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__local_var_5_3 = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($Functor0_1_0)->map)(($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left')))))($v_4);
+  $__local_var_6_4 = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($pure_2_1))(($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right')));
+  $__res = function($v2_7) use ($__local_var_5_3, $__local_var_6_4) {
   $__num = \func_num_args();
-  $__res = $profunctorStar1_1;
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}];
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Profunctor_Star_choiceStar'] = function() { $v = function($dictApplicative) {
-  $__num = \func_num_args();
-  $Functor0_0 = (((($dictApplicative)->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $pure_1 = ($dictApplicative)->pure;
-  $profunctorStar1_2 = (($GLOBALS['Data_Profunctor_Star_profunctorStar'] ?? \PhpursThunks::eval('Data_Profunctor_Star_profunctorStar')))($Functor0_0);
-  $__res = (object)["left" => function($v) use (&$Functor0_0, &$pure_1) {
-  $__num = \func_num_args();
-  $__local_var_3 = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($Functor0_0)->map)(($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left')))))($v);
-  $__local_var_4 = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($pure_1))(($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right')));
-  $__res = function($v2) use (&$__local_var_3, &$__local_var_4) {
-  $__num = \func_num_args();
-  if ((is_object($v2) && (($v2)->tag === "Left"))) {
-$__t5 = ($__local_var_3)(($v2)->value0);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  if ((is_object($v2_7) && (($v2_7)->tag === "Left"))) {
+$__t5 = ($__local_var_5_3)(($v2_7)->value0);
 } else {
-if ((is_object($v2) && (($v2)->tag === "Right"))) {
-$__t5 = ($__local_var_4)(($v2)->value0);
+if ((is_object($v2_7) && (($v2_7)->tag === "Right"))) {
+$__t5 = ($__local_var_6_4)(($v2_7)->value0);
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t5 = null;
@@ -375,17 +406,19 @@ $__t5 = null;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "right" => function($v) use (&$Functor0_0, &$pure_1) {
+}, "right" => function($v_4) use ($Functor0_1_0, $pure_2_1) {
   $__num = \func_num_args();
-  $__local_var_6 = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($pure_1))(($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left')));
-  $__local_var_7 = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($Functor0_0)->map)(($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right')))))($v);
-  $__res = function($v2) use (&$__local_var_6, &$__local_var_7) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__local_var_5_6 = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($pure_2_1))(($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left')));
+  $__local_var_6_7 = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($Functor0_1_0)->map)(($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right')))))($v_4);
+  $__res = function($v2_7) use ($__local_var_5_6, $__local_var_6_7) {
   $__num = \func_num_args();
-  if ((is_object($v2) && (($v2)->tag === "Left"))) {
-$__t8 = ($__local_var_6)(($v2)->value0);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  if ((is_object($v2_7) && (($v2_7)->tag === "Left"))) {
+$__t8 = ($__local_var_5_6)(($v2_7)->value0);
 } else {
-if ((is_object($v2) && (($v2)->tag === "Right"))) {
-$__t8 = ($__local_var_7)(($v2)->value0);
+if ((is_object($v2_7) && (($v2_7)->tag === "Right"))) {
+$__t8 = ($__local_var_6_7)(($v2_7)->value0);
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t8 = null;
@@ -399,9 +432,10 @@ $__t8 = null;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Profunctor0" => function($dollar__unused_0) use (&$profunctorStar1_2) {
+}, "Profunctor0" => function($dollar__unused_4) use ($profunctorStar1_3_2) {
   $__num = \func_num_args();
-  $__res = $profunctorStar1_2;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $profunctorStar1_3_2;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -410,25 +444,28 @@ $__t8 = null;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Profunctor_Star_categoryStar'] = function() { $v = function($dictMonad) {
+\PhpursThunks::$thunks['Data_Profunctor_Star_categoryStar'] = function() { $v = function($dictMonad_0) {
   $__num = \func_num_args();
-  $__local_var_0 = (($dictMonad)->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $semigroupoidStar1_1 = (object)["compose" => (function() use (&$__local_var_0) {
-  $__fn = function($v, $v1 = null, $x = null) use (&$__local_var_0, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Profunctor_Star_categoryStar"), recVars=[];
+  $__local_var_1_0 = (($dictMonad_0)->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $semigroupoidStar1_2_1 = (object)["compose" => (function() use ($__local_var_1_0) {
+  $__fn = function($v_2, $v1_3 = null, $x_4 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($__local_var_0)->bind)(($v1)($x)))($v);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($__local_var_1_0)->bind)(($v1_3)($x_4)))($v_2);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
 })()];
-  $__res = (object)["identity" => ((($dictMonad)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->pure, "Semigroupoid0" => function($dollar__unused_0) use (&$semigroupoidStar1_1) {
+  $__res = (object)["identity" => ((($dictMonad_0)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->pure, "Semigroupoid0" => function($dollar__unused_3) use ($semigroupoidStar1_2_1) {
   $__num = \func_num_args();
-  $__res = $semigroupoidStar1_1;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $semigroupoidStar1_2_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -437,37 +474,41 @@ $__t8 = null;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Profunctor_Star_applyStar'] = function() { $v = function($dictApply) {
+\PhpursThunks::$thunks['Data_Profunctor_Star_applyStar'] = function() { $v = function($dictApply_0) {
   $__num = \func_num_args();
-  $__local_var_0 = (($dictApply)->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $functorStar1_1 = (object)["map" => (function() use (&$__local_var_0) {
-  $__fn = function($f, $v = null) use (&$__local_var_0, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Profunctor_Star_applyStar"), recVars=[];
+  $__local_var_1_0 = (($dictApply_0)->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $functorStar1_2_1 = (object)["map" => (function() use ($__local_var_1_0) {
+  $__fn = function($f_2, $v_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($__local_var_0)->map)($f)))($v);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($__local_var_1_0)->map)($f_2)))($v_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()];
-  $__res = (object)["apply" => (function() use (&$dictApply) {
-  $__fn = function($v, $v1 = null, $a = null) use (&$dictApply, &$__fn) {
+  $__res = (object)["apply" => (function() use ($dictApply_0) {
+  $__fn = function($v_3, $v1_4 = null, $a_5 = null) use ($dictApply_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($dictApply)->apply)(($v)($a)))(($v1)($a));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($dictApply_0)->apply)(($v_3)($a_5)))(($v1_4)($a_5));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_0) use (&$functorStar1_1) {
+})(), "Functor0" => function($dollar__unused_3) use ($functorStar1_2_1) {
   $__num = \func_num_args();
-  $__res = $functorStar1_1;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $functorStar1_2_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -476,18 +517,21 @@ $__t8 = null;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Profunctor_Star_bindStar'] = function() { $v = function($dictBind) {
+\PhpursThunks::$thunks['Data_Profunctor_Star_bindStar'] = function() { $v = function($dictBind_0) {
   $__num = \func_num_args();
-  $applyStar1_0 = (($GLOBALS['Data_Profunctor_Star_applyStar'] ?? \PhpursThunks::eval('Data_Profunctor_Star_applyStar')))((($dictBind)->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = (object)["bind" => (function() use (&$dictBind) {
-  $__fn = function($v, $f = null, $x = null) use (&$dictBind, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Profunctor_Star_bindStar"), recVars=[];
+  $applyStar1_1_0 = (($GLOBALS['Data_Profunctor_Star_applyStar'] ?? \PhpursThunks::eval('Data_Profunctor_Star_applyStar')))((($dictBind_0)->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__res = (object)["bind" => (function() use ($dictBind_0) {
+  $__fn = function($v_2, $f_3 = null, $x_4 = null) use ($dictBind_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($dictBind)->bind)(($v)($x)))(function($a) use (&$f, &$x) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($dictBind_0)->bind)(($v_2)($x_4)))(function($a_5) use ($f_3, $x_4) {
   $__num = \func_num_args();
-  $__res = (($f)($a))($x);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($f_3)($a_5))($x_4);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -497,9 +541,10 @@ $__t8 = null;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(), "Apply0" => function($dollar__unused_0) use (&$applyStar1_0) {
+})(), "Apply0" => function($dollar__unused_2) use ($applyStar1_1_0) {
   $__num = \func_num_args();
-  $__res = $applyStar1_0;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $applyStar1_1_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -508,24 +553,27 @@ $__t8 = null;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Profunctor_Star_applicativeStar'] = function() { $v = function($dictApplicative) {
+\PhpursThunks::$thunks['Data_Profunctor_Star_applicativeStar'] = function() { $v = function($dictApplicative_0) {
   $__num = \func_num_args();
-  $applyStar1_0 = (($GLOBALS['Data_Profunctor_Star_applyStar'] ?? \PhpursThunks::eval('Data_Profunctor_Star_applyStar')))((($dictApplicative)->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = (object)["pure" => (function() use (&$dictApplicative) {
-  $__fn = function($a, $v = null) use (&$dictApplicative, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Profunctor_Star_applicativeStar"), recVars=[];
+  $applyStar1_1_0 = (($GLOBALS['Data_Profunctor_Star_applyStar'] ?? \PhpursThunks::eval('Data_Profunctor_Star_applyStar')))((($dictApplicative_0)->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__res = (object)["pure" => (function() use ($dictApplicative_0) {
+  $__fn = function($a_2, $v_3 = null) use ($dictApplicative_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictApplicative)->pure)($a);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($dictApplicative_0)->pure)($a_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Apply0" => function($dollar__unused_0) use (&$applyStar1_0) {
+})(), "Apply0" => function($dollar__unused_2) use ($applyStar1_1_0) {
   $__num = \func_num_args();
-  $__res = $applyStar1_0;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $applyStar1_1_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -534,19 +582,22 @@ $__t8 = null;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Profunctor_Star_monadStar'] = function() { $v = function($dictMonad) {
+\PhpursThunks::$thunks['Data_Profunctor_Star_monadStar'] = function() { $v = function($dictMonad_0) {
   $__num = \func_num_args();
-  $applicativeStar1_0 = (($GLOBALS['Data_Profunctor_Star_applicativeStar'] ?? \PhpursThunks::eval('Data_Profunctor_Star_applicativeStar')))((($dictMonad)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $bindStar1_1 = (($GLOBALS['Data_Profunctor_Star_bindStar'] ?? \PhpursThunks::eval('Data_Profunctor_Star_bindStar')))((($dictMonad)->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = (object)["Applicative0" => function($dollar__unused_0) use (&$applicativeStar1_0) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Profunctor_Star_monadStar"), recVars=[];
+  $applicativeStar1_1_0 = (($GLOBALS['Data_Profunctor_Star_applicativeStar'] ?? \PhpursThunks::eval('Data_Profunctor_Star_applicativeStar')))((($dictMonad_0)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $bindStar1_2_1 = (($GLOBALS['Data_Profunctor_Star_bindStar'] ?? \PhpursThunks::eval('Data_Profunctor_Star_bindStar')))((($dictMonad_0)->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__res = (object)["Applicative0" => function($dollar__unused_3) use ($applicativeStar1_1_0) {
   $__num = \func_num_args();
-  $__res = $applicativeStar1_0;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $applicativeStar1_1_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Bind1" => function($dollar__unused_0) use (&$bindStar1_1) {
+}, "Bind1" => function($dollar__unused_3) use ($bindStar1_2_1) {
   $__num = \func_num_args();
-  $__res = $bindStar1_1;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $bindStar1_2_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -555,37 +606,41 @@ $__t8 = null;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Profunctor_Star_altStar'] = function() { $v = function($dictAlt) {
+\PhpursThunks::$thunks['Data_Profunctor_Star_altStar'] = function() { $v = function($dictAlt_0) {
   $__num = \func_num_args();
-  $__local_var_0 = (($dictAlt)->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $functorStar1_1 = (object)["map" => (function() use (&$__local_var_0) {
-  $__fn = function($f, $v = null) use (&$__local_var_0, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Profunctor_Star_altStar"), recVars=[];
+  $__local_var_1_0 = (($dictAlt_0)->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $functorStar1_2_1 = (object)["map" => (function() use ($__local_var_1_0) {
+  $__fn = function($f_2, $v_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($__local_var_0)->map)($f)))($v);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($__local_var_1_0)->map)($f_2)))($v_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()];
-  $__res = (object)["alt" => (function() use (&$dictAlt) {
-  $__fn = function($v, $v1 = null, $a = null) use (&$dictAlt, &$__fn) {
+  $__res = (object)["alt" => (function() use ($dictAlt_0) {
+  $__fn = function($v_3, $v1_4 = null, $a_5 = null) use ($dictAlt_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($dictAlt)->alt)(($v)($a)))(($v1)($a));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($dictAlt_0)->alt)(($v_3)($a_5)))(($v1_4)($a_5));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_0) use (&$functorStar1_1) {
+})(), "Functor0" => function($dollar__unused_3) use ($functorStar1_2_1) {
   $__num = \func_num_args();
-  $__res = $functorStar1_1;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $functorStar1_2_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -594,40 +649,22 @@ $__t8 = null;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Profunctor_Star_plusStar'] = function() { $v = function($dictPlus) {
+\PhpursThunks::$thunks['Data_Profunctor_Star_plusStar'] = function() { $v = function($dictPlus_0) {
   $__num = \func_num_args();
-  $empty_0 = ($dictPlus)->empty;
-  $altStar1_1 = (($GLOBALS['Data_Profunctor_Star_altStar'] ?? \PhpursThunks::eval('Data_Profunctor_Star_altStar')))((($dictPlus)->Alt0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = (object)["empty" => function($v) use (&$empty_0) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Profunctor_Star_plusStar"), recVars=[];
+  $empty_1_0 = ($dictPlus_0)->empty;
+  $altStar1_2_1 = (($GLOBALS['Data_Profunctor_Star_altStar'] ?? \PhpursThunks::eval('Data_Profunctor_Star_altStar')))((($dictPlus_0)->Alt0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__res = (object)["empty" => function($v_3) use ($empty_1_0) {
   $__num = \func_num_args();
-  $__res = $empty_0;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $empty_1_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Alt0" => function($dollar__unused_0) use (&$altStar1_1) {
+}, "Alt0" => function($dollar__unused_3) use ($altStar1_2_1) {
   $__num = \func_num_args();
-  $__res = $altStar1_1;
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}];
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Profunctor_Star_alternativeStar'] = function() { $v = function($dictAlternative) {
-  $__num = \func_num_args();
-  $applicativeStar1_0 = (($GLOBALS['Data_Profunctor_Star_applicativeStar'] ?? \PhpursThunks::eval('Data_Profunctor_Star_applicativeStar')))((($dictAlternative)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $plusStar1_1 = (($GLOBALS['Data_Profunctor_Star_plusStar'] ?? \PhpursThunks::eval('Data_Profunctor_Star_plusStar')))((($dictAlternative)->Plus1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = (object)["Applicative0" => function($dollar__unused_0) use (&$applicativeStar1_0) {
-  $__num = \func_num_args();
-  $__res = $applicativeStar1_0;
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Plus1" => function($dollar__unused_0) use (&$plusStar1_1) {
-  $__num = \func_num_args();
-  $__res = $plusStar1_1;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $altStar1_2_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -636,19 +673,46 @@ $__t8 = null;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Profunctor_Star_monadPlusStar'] = function() { $v = function($dictMonadPlus) {
+\PhpursThunks::$thunks['Data_Profunctor_Star_alternativeStar'] = function() { $v = function($dictAlternative_0) {
   $__num = \func_num_args();
-  $monadStar1_0 = (($GLOBALS['Data_Profunctor_Star_monadStar'] ?? \PhpursThunks::eval('Data_Profunctor_Star_monadStar')))((($dictMonadPlus)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $alternativeStar1_1 = (($GLOBALS['Data_Profunctor_Star_alternativeStar'] ?? \PhpursThunks::eval('Data_Profunctor_Star_alternativeStar')))((($dictMonadPlus)->Alternative1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = (object)["Monad0" => function($dollar__unused_0) use (&$monadStar1_0) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Profunctor_Star_alternativeStar"), recVars=[];
+  $applicativeStar1_1_0 = (($GLOBALS['Data_Profunctor_Star_applicativeStar'] ?? \PhpursThunks::eval('Data_Profunctor_Star_applicativeStar')))((($dictAlternative_0)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $plusStar1_2_1 = (($GLOBALS['Data_Profunctor_Star_plusStar'] ?? \PhpursThunks::eval('Data_Profunctor_Star_plusStar')))((($dictAlternative_0)->Plus1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__res = (object)["Applicative0" => function($dollar__unused_3) use ($applicativeStar1_1_0) {
   $__num = \func_num_args();
-  $__res = $monadStar1_0;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $applicativeStar1_1_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Alternative1" => function($dollar__unused_0) use (&$alternativeStar1_1) {
+}, "Plus1" => function($dollar__unused_3) use ($plusStar1_2_1) {
   $__num = \func_num_args();
-  $__res = $alternativeStar1_1;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $plusStar1_2_1;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}; return $v; };
+\PhpursThunks::$thunks['Data_Profunctor_Star_monadPlusStar'] = function() { $v = function($dictMonadPlus_0) {
+  $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Profunctor_Star_monadPlusStar"), recVars=[];
+  $monadStar1_1_0 = (($GLOBALS['Data_Profunctor_Star_monadStar'] ?? \PhpursThunks::eval('Data_Profunctor_Star_monadStar')))((($dictMonadPlus_0)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $alternativeStar1_2_1 = (($GLOBALS['Data_Profunctor_Star_alternativeStar'] ?? \PhpursThunks::eval('Data_Profunctor_Star_alternativeStar')))((($dictMonadPlus_0)->Alternative1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__res = (object)["Monad0" => function($dollar__unused_3) use ($monadStar1_1_0) {
+  $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $monadStar1_1_0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Alternative1" => function($dollar__unused_3) use ($alternativeStar1_2_1) {
+  $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $alternativeStar1_2_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

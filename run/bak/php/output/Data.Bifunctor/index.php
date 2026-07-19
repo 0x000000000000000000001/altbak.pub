@@ -91,23 +91,27 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Bifunctor_bimap'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Data_Bifunctor_bimap'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->bimap;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Bifunctor_bimap"), recVars=[];
+  $__res = ($dict_0)->bimap;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Bifunctor_bivoid'] = function() { $v = function($dictBifunctor) {
+\PhpursThunks::$thunks['Data_Bifunctor_bivoid'] = function() { $v = function($dictBifunctor_0) {
   $__num = \func_num_args();
-  $__res = ((($dictBifunctor)->bimap)(function($v) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Bifunctor_bivoid"), recVars=[];
+  $__res = ((($dictBifunctor_0)->bimap)(function($v_1) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(function($v) {
+}))(function($v_1) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'));
   goto __end;;
   __end:
@@ -118,32 +122,35 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Data_Bifunctor_lmap'] = function() { $v = (function() {
-  $__fn = function($dictBifunctor, $f = null) use (&$__fn) {
+  $__fn = function($dictBifunctor_0, $f_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictBifunctor)->bimap)($f))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->identity);
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Bifunctor_lmap"), recVars=[];
+  $__res = ((($dictBifunctor_0)->bimap)($f_1))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->identity);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Data_Bifunctor_rmap'] = function() { $v = function($dictBifunctor) {
+\PhpursThunks::$thunks['Data_Bifunctor_rmap'] = function() { $v = function($dictBifunctor_0) {
   $__num = \func_num_args();
-  $__res = (($dictBifunctor)->bimap)((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->identity);
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Bifunctor_rmap"), recVars=[];
+  $__res = (($dictBifunctor_0)->bimap)((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->identity);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Data_Bifunctor_bifunctorTuple'] = function() { $v = (object)["bimap" => (function() {
-  $__fn = function($f, $g = null, $v = null) use (&$__fn) {
+  $__fn = function($f_0, $g_1 = null, $v_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = new Phpurs_Data2("Tuple", ($f)(($v)->value0), ($g)(($v)->value1));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = new Phpurs_Data2("Tuple", ($f_0)(($v_2)->value0), ($g_1)(($v_2)->value1));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -151,16 +158,17 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })()]; return $v; };
 \PhpursThunks::$thunks['Data_Bifunctor_bifunctorEither'] = function() { $v = (object)["bimap" => (function() {
-  $__fn = function($v, $v1 = null, $v2 = null) use (&$__fn) {
+  $__fn = function($v_0, $v1_1 = null, $v2_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  if ((is_object($v2) && (($v2)->tag === "Left"))) {
-$__t0 = new Phpurs_Data1("Left", ($v)(($v2)->value0));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  if ((is_object($v2_2) && (($v2_2)->tag === "Left"))) {
+$__t0 = new Phpurs_Data1("Left", ($v_0)(($v2_2)->value0));
 } else {
-if ((is_object($v2) && (($v2)->tag === "Right"))) {
-$__t0 = new Phpurs_Data1("Right", ($v1)(($v2)->value0));
+if ((is_object($v2_2) && (($v2_2)->tag === "Right"))) {
+$__t0 = new Phpurs_Data1("Right", ($v1_1)(($v2_2)->value0));
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t0 = null;
@@ -174,12 +182,13 @@ $__t0 = null;
   return $__fn;
 })()]; return $v; };
 \PhpursThunks::$thunks['Data_Bifunctor_bifunctorConst'] = function() { $v = (object)["bimap" => (function() {
-  $__fn = function($f, $v = null, $v1 = null) use (&$__fn) {
+  $__fn = function($f_0, $v_1 = null, $v1_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ($f)($v1);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ($f_0)($v1_2);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;

@@ -94,48 +94,54 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Control_Comonad_Traced_Trans_TracedT'] = function() { $v = function($x) {
+\PhpursThunks::$thunks['Control_Comonad_Traced_Trans_TracedT'] = function() { $v = function($x_0) {
   $__num = \func_num_args();
-  $__res = $x;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Comonad_Traced_Trans_TracedT"), recVars=[];
+  $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Traced_Trans_runTracedT'] = function() { $v = function($v) {
+\PhpursThunks::$thunks['Control_Comonad_Traced_Trans_runTracedT'] = function() { $v = function($v_0) {
   $__num = \func_num_args();
-  $__res = $v;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Comonad_Traced_Trans_runTracedT"), recVars=[];
+  $__res = $v_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Control_Comonad_Traced_Trans_newtypeTracedT'] = function() { $v = (object)["Coercible0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Traced_Trans_functorTracedT'] = function() { $v = function($dictFunctor) {
+\PhpursThunks::$thunks['Control_Comonad_Traced_Trans_functorTracedT'] = function() { $v = function($dictFunctor_0) {
   $__num = \func_num_args();
-  $__res = (object)["map" => (function() use (&$dictFunctor) {
-  $__fn = function($f, $v = null) use (&$dictFunctor, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ((($dictFunctor)->map)((function() use (&$f) {
-  $__fn = function($g, $t = null) use (&$f, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Comonad_Traced_Trans_functorTracedT"), recVars=[];
+  $__res = (object)["map" => (function() use ($dictFunctor_0) {
+  $__fn = function($f_1, $v_2 = null) use ($dictFunctor_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($f)(($g)($t));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($dictFunctor_0)->map)((function() use ($f_1) {
+  $__fn = function($g_3, $t_4 = null) use ($f_1, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ($f_1)(($g_3)($t_4));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))($v);
+})()))($v_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -146,75 +152,83 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Traced_Trans_extendTracedT'] = function() { $v = function($dictExtend) {
+\PhpursThunks::$thunks['Control_Comonad_Traced_Trans_extendTracedT'] = function() { $v = function($dictExtend_0) {
   $__num = \func_num_args();
-  $Functor0_0 = (($dictExtend)->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $functorTracedT1_1 = (object)["map" => (function() use (&$Functor0_0) {
-  $__fn = function($f, $v = null) use (&$Functor0_0, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ((($Functor0_0)->map)((function() use (&$f) {
-  $__fn = function($g, $t = null) use (&$f, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Comonad_Traced_Trans_extendTracedT"), recVars=[];
+  $Functor0_1_0 = (($dictExtend_0)->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $functorTracedT1_2_1 = (object)["map" => (function() use ($Functor0_1_0) {
+  $__fn = function($f_2, $v_3 = null) use ($Functor0_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($f)(($g)($t));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($Functor0_1_0)->map)((function() use ($f_2) {
+  $__fn = function($g_4, $t_5 = null) use ($f_2, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ($f_2)(($g_4)($t_5));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))($v);
+})()))($v_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()];
-  $__res = function($dictSemigroup) use (&$Functor0_0, &$dictExtend, &$functorTracedT1_1) {
+  $__res = function($dictSemigroup_3) use ($Functor0_1_0, $dictExtend_0, $functorTracedT1_2_1) {
   $__num = \func_num_args();
-  $__res = (object)["extend" => (function() use (&$Functor0_0, &$dictExtend, &$dictSemigroup) {
-  $__fn = function($f, $v = null) use (&$Functor0_0, &$dictExtend, &$dictSemigroup, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ((($dictExtend)->extend)((function() use (&$Functor0_0, &$dictSemigroup, &$f) {
-  $__fn = function($w__prime__, $t = null) use (&$Functor0_0, &$dictSemigroup, &$f, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (object)["extend" => (function() use ($Functor0_1_0, $dictExtend_0, $dictSemigroup_3) {
+  $__fn = function($f_4, $v_5 = null) use ($Functor0_1_0, $dictExtend_0, $dictSemigroup_3, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($f)(((($Functor0_0)->map)((function() use (&$dictSemigroup, &$t) {
-  $__fn = function($h, $t__prime__ = null) use (&$dictSemigroup, &$t, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($dictExtend_0)->extend)((function() use ($Functor0_1_0, $dictSemigroup_3, $f_4) {
+  $__fn = function($w__prime___6, $t_7 = null) use ($Functor0_1_0, $dictSemigroup_3, $f_4, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($h)(((($dictSemigroup)->append)($t))($t__prime__));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ($f_4)(((($Functor0_1_0)->map)((function() use ($dictSemigroup_3, $t_7) {
+  $__fn = function($h_8, $t__prime___9 = null) use ($dictSemigroup_3, $t_7, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ($h_8)(((($dictSemigroup_3)->append)($t_7))($t__prime___9));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))($w__prime__));
+})()))($w__prime___6));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))($v);
+})()))($v_5);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_0) use (&$functorTracedT1_1) {
+})(), "Functor0" => function($dollar__unused_4) use ($functorTracedT1_2_1) {
   $__num = \func_num_args();
-  $__res = $functorTracedT1_1;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $functorTracedT1_2_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -227,22 +241,25 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Traced_Trans_comonadTransTracedT'] = function() { $v = function($dictMonoid) {
+\PhpursThunks::$thunks['Control_Comonad_Traced_Trans_comonadTransTracedT'] = function() { $v = function($dictMonoid_0) {
   $__num = \func_num_args();
-  $mempty_0 = ($dictMonoid)->mempty;
-  $__res = (object)["lower" => (function() use (&$mempty_0) {
-  $__fn = function($dictComonad, $v = null) use (&$mempty_0, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Comonad_Traced_Trans_comonadTransTracedT"), recVars=[];
+  $mempty_1_0 = ($dictMonoid_0)->mempty;
+  $__res = (object)["lower" => (function() use ($mempty_1_0) {
+  $__fn = function($dictComonad_2, $v_3 = null) use ($mempty_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((((($dictComonad)->Extend0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->map)(function($f) use (&$mempty_0) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((((((($dictComonad_2)->Extend0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->map)(function($f_4) use ($mempty_1_0) {
   $__num = \func_num_args();
-  $__res = ($f)($mempty_0);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ($f_4)($mempty_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))($v);
+}))($v_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -253,22 +270,26 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Traced_Trans_comonadTracedT'] = function() { $v = function($dictComonad) {
+\PhpursThunks::$thunks['Control_Comonad_Traced_Trans_comonadTracedT'] = function() { $v = function($dictComonad_0) {
   $__num = \func_num_args();
-  $extendTracedT1_0 = (($GLOBALS['Control_Comonad_Traced_Trans_extendTracedT'] ?? \PhpursThunks::eval('Control_Comonad_Traced_Trans_extendTracedT')))((($dictComonad)->Extend0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = function($dictMonoid) use (&$dictComonad, &$extendTracedT1_0) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Comonad_Traced_Trans_comonadTracedT"), recVars=[];
+  $extendTracedT1_1_0 = (($GLOBALS['Control_Comonad_Traced_Trans_extendTracedT'] ?? \PhpursThunks::eval('Control_Comonad_Traced_Trans_extendTracedT')))((($dictComonad_0)->Extend0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__res = function($dictMonoid_2) use ($dictComonad_0, $extendTracedT1_1_0) {
   $__num = \func_num_args();
-  $mempty_1 = ($dictMonoid)->mempty;
-  $extendTracedT2_2 = ($extendTracedT1_0)((($dictMonoid)->Semigroup0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = (object)["extract" => function($v) use (&$dictComonad, &$mempty_1) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $mempty_3_1 = ($dictMonoid_2)->mempty;
+  $extendTracedT2_4_2 = ($extendTracedT1_1_0)((($dictMonoid_2)->Semigroup0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__res = (object)["extract" => function($v_5) use ($dictComonad_0, $mempty_3_1) {
   $__num = \func_num_args();
-  $__res = ((($dictComonad)->extract)($v))($mempty_1);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($dictComonad_0)->extract)($v_5))($mempty_3_1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Extend0" => function($dollar__unused_0) use (&$extendTracedT2_2) {
+}, "Extend0" => function($dollar__unused_5) use ($extendTracedT2_4_2) {
   $__num = \func_num_args();
-  $__res = $extendTracedT2_2;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $extendTracedT2_4_2;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

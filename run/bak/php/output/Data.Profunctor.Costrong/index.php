@@ -87,16 +87,18 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Profunctor_Costrong_unsecond'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Data_Profunctor_Costrong_unsecond'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->unsecond;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Profunctor_Costrong_unsecond"), recVars=[];
+  $__res = ($dict_0)->unsecond;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Profunctor_Costrong_unfirst'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Data_Profunctor_Costrong_unfirst'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->unfirst;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Profunctor_Costrong_unfirst"), recVars=[];
+  $__res = ($dict_0)->unfirst;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

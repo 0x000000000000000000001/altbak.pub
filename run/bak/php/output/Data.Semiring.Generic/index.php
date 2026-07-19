@@ -89,20 +89,22 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Semiring_Generic_genericZero__prime__'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Data_Semiring_Generic_genericZero__prime__'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->genericZero__prime__;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Semiring_Generic_genericZero'"), recVars=[];
+  $__res = ($dict_0)->genericZero__prime__;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Data_Semiring_Generic_genericZero'] = function() { $v = (function() {
-  $__fn = function($dictGeneric, $dictGenericSemiring = null) use (&$__fn) {
+  $__fn = function($dictGeneric_0, $dictGenericSemiring_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictGeneric)->to)(($dictGenericSemiring)->genericZero__prime__);
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Semiring_Generic_genericZero"), recVars=[];
+  $__res = (($dictGeneric_0)->to)(($dictGenericSemiring_1)->genericZero__prime__);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -110,11 +112,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Data_Semiring_Generic_genericSemiringNoArguments'] = function() { $v = (object)["genericAdd__prime__" => (function() {
-  $__fn = function($v, $v1 = null) use (&$__fn) {
+  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = new Phpurs_Data0("NoArguments");
   goto __end;;
   __end:
@@ -122,11 +125,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   };
   return $__fn;
 })(), "genericZero__prime__" => new Phpurs_Data0("NoArguments"), "genericMul__prime__" => (function() {
-  $__fn = function($v, $v1 = null) use (&$__fn) {
+  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = new Phpurs_Data0("NoArguments");
   goto __end;;
   __end:
@@ -134,146 +138,161 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   };
   return $__fn;
 })(), "genericOne__prime__" => new Phpurs_Data0("NoArguments")]; return $v; };
-\PhpursThunks::$thunks['Data_Semiring_Generic_genericSemiringArgument'] = function() { $v = function($dictSemiring) {
+\PhpursThunks::$thunks['Data_Semiring_Generic_genericSemiringArgument'] = function() { $v = function($dictSemiring_0) {
   $__num = \func_num_args();
-  $__res = (object)["genericAdd__prime__" => (function() use (&$dictSemiring) {
-  $__fn = function($v, $v1 = null) use (&$dictSemiring, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Semiring_Generic_genericSemiringArgument"), recVars=[];
+  $__res = (object)["genericAdd__prime__" => (function() use ($dictSemiring_0) {
+  $__fn = function($v_1, $v1_2 = null) use ($dictSemiring_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictSemiring)->add)($v))($v1);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($dictSemiring_0)->add)($v_1))($v1_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "genericZero__prime__" => ($dictSemiring)->zero, "genericMul__prime__" => (function() use (&$dictSemiring) {
-  $__fn = function($v, $v1 = null) use (&$dictSemiring, &$__fn) {
+})(), "genericZero__prime__" => ($dictSemiring_0)->zero, "genericMul__prime__" => (function() use ($dictSemiring_0) {
+  $__fn = function($v_1, $v1_2 = null) use ($dictSemiring_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictSemiring)->mul)($v))($v1);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($dictSemiring_0)->mul)($v_1))($v1_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "genericOne__prime__" => ($dictSemiring)->one];
+})(), "genericOne__prime__" => ($dictSemiring_0)->one];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Semiring_Generic_genericOne__prime__'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Data_Semiring_Generic_genericOne__prime__'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->genericOne__prime__;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Semiring_Generic_genericOne'"), recVars=[];
+  $__res = ($dict_0)->genericOne__prime__;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Data_Semiring_Generic_genericOne'] = function() { $v = (function() {
-  $__fn = function($dictGeneric, $dictGenericSemiring = null) use (&$__fn) {
+  $__fn = function($dictGeneric_0, $dictGenericSemiring_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictGeneric)->to)(($dictGenericSemiring)->genericOne__prime__);
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Semiring_Generic_genericOne"), recVars=[];
+  $__res = (($dictGeneric_0)->to)(($dictGenericSemiring_1)->genericOne__prime__);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Data_Semiring_Generic_genericMul__prime__'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Data_Semiring_Generic_genericMul__prime__'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->genericMul__prime__;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Semiring_Generic_genericMul'"), recVars=[];
+  $__res = ($dict_0)->genericMul__prime__;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Data_Semiring_Generic_genericMul'] = function() { $v = (function() {
-  $__fn = function($dictGeneric, $dictGenericSemiring = null, $x = null, $y = null) use (&$__fn) {
+  $__fn = function($dictGeneric_0, $dictGenericSemiring_1 = null, $x_2 = null, $y_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = (($dictGeneric)->to)(((($dictGenericSemiring)->genericMul__prime__)((($dictGeneric)->from)($x)))((($dictGeneric)->from)($y)));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Semiring_Generic_genericMul"), recVars=[];
+  $__res = (($dictGeneric_0)->to)(((($dictGenericSemiring_1)->genericMul__prime__)((($dictGeneric_0)->from)($x_2)))((($dictGeneric_0)->from)($y_3)));
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Data_Semiring_Generic_genericAdd__prime__'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Data_Semiring_Generic_genericAdd__prime__'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->genericAdd__prime__;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Semiring_Generic_genericAdd'"), recVars=[];
+  $__res = ($dict_0)->genericAdd__prime__;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Semiring_Generic_genericSemiringConstructor'] = function() { $v = function($dictGenericSemiring) {
+\PhpursThunks::$thunks['Data_Semiring_Generic_genericSemiringConstructor'] = function() { $v = function($dictGenericSemiring_0) {
   $__num = \func_num_args();
-  $__res = (object)["genericAdd__prime__" => (function() use (&$dictGenericSemiring) {
-  $__fn = function($v, $v1 = null) use (&$dictGenericSemiring, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Semiring_Generic_genericSemiringConstructor"), recVars=[];
+  $__res = (object)["genericAdd__prime__" => (function() use ($dictGenericSemiring_0) {
+  $__fn = function($v_1, $v1_2 = null) use ($dictGenericSemiring_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictGenericSemiring)->genericAdd__prime__)($v))($v1);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($dictGenericSemiring_0)->genericAdd__prime__)($v_1))($v1_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "genericZero__prime__" => ($dictGenericSemiring)->genericZero__prime__, "genericMul__prime__" => (function() use (&$dictGenericSemiring) {
-  $__fn = function($v, $v1 = null) use (&$dictGenericSemiring, &$__fn) {
+})(), "genericZero__prime__" => ($dictGenericSemiring_0)->genericZero__prime__, "genericMul__prime__" => (function() use ($dictGenericSemiring_0) {
+  $__fn = function($v_1, $v1_2 = null) use ($dictGenericSemiring_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictGenericSemiring)->genericMul__prime__)($v))($v1);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($dictGenericSemiring_0)->genericMul__prime__)($v_1))($v1_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "genericOne__prime__" => ($dictGenericSemiring)->genericOne__prime__];
+})(), "genericOne__prime__" => ($dictGenericSemiring_0)->genericOne__prime__];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Semiring_Generic_genericSemiringProduct'] = function() { $v = function($dictGenericSemiring) {
+\PhpursThunks::$thunks['Data_Semiring_Generic_genericSemiringProduct'] = function() { $v = function($dictGenericSemiring_0) {
   $__num = \func_num_args();
-  $genericZero__prime__1_0 = ($dictGenericSemiring)->genericZero__prime__;
-  $genericOne__prime__1_1 = ($dictGenericSemiring)->genericOne__prime__;
-  $__res = function($dictGenericSemiring1) use (&$dictGenericSemiring, &$genericOne__prime__1_1, &$genericZero__prime__1_0) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Semiring_Generic_genericSemiringProduct"), recVars=[];
+  $genericZero__prime__1_1_0 = ($dictGenericSemiring_0)->genericZero__prime__;
+  $genericOne__prime__1_2_1 = ($dictGenericSemiring_0)->genericOne__prime__;
+  $__res = function($dictGenericSemiring1_3) use ($dictGenericSemiring_0, $genericOne__prime__1_2_1, $genericZero__prime__1_1_0) {
   $__num = \func_num_args();
-  $__res = (object)["genericAdd__prime__" => (function() use (&$dictGenericSemiring, &$dictGenericSemiring1) {
-  $__fn = function($v, $v1 = null) use (&$dictGenericSemiring, &$dictGenericSemiring1, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (object)["genericAdd__prime__" => (function() use ($dictGenericSemiring1_3, $dictGenericSemiring_0) {
+  $__fn = function($v_4, $v1_5 = null) use ($dictGenericSemiring1_3, $dictGenericSemiring_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Product", ((($dictGenericSemiring)->genericAdd__prime__)(($v)->value0))(($v1)->value0), ((($dictGenericSemiring1)->genericAdd__prime__)(($v)->value1))(($v1)->value1));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = new Phpurs_Data2("Product", ((($dictGenericSemiring_0)->genericAdd__prime__)(($v_4)->value0))(($v1_5)->value0), ((($dictGenericSemiring1_3)->genericAdd__prime__)(($v_4)->value1))(($v1_5)->value1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "genericZero__prime__" => new Phpurs_Data2("Product", $genericZero__prime__1_0, ($dictGenericSemiring1)->genericZero__prime__), "genericMul__prime__" => (function() use (&$dictGenericSemiring, &$dictGenericSemiring1) {
-  $__fn = function($v, $v1 = null) use (&$dictGenericSemiring, &$dictGenericSemiring1, &$__fn) {
+})(), "genericZero__prime__" => new Phpurs_Data2("Product", $genericZero__prime__1_1_0, ($dictGenericSemiring1_3)->genericZero__prime__), "genericMul__prime__" => (function() use ($dictGenericSemiring1_3, $dictGenericSemiring_0) {
+  $__fn = function($v_4, $v1_5 = null) use ($dictGenericSemiring1_3, $dictGenericSemiring_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Product", ((($dictGenericSemiring)->genericMul__prime__)(($v)->value0))(($v1)->value0), ((($dictGenericSemiring1)->genericMul__prime__)(($v)->value1))(($v1)->value1));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = new Phpurs_Data2("Product", ((($dictGenericSemiring_0)->genericMul__prime__)(($v_4)->value0))(($v1_5)->value0), ((($dictGenericSemiring1_3)->genericMul__prime__)(($v_4)->value1))(($v1_5)->value1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "genericOne__prime__" => new Phpurs_Data2("Product", $genericOne__prime__1_1, ($dictGenericSemiring1)->genericOne__prime__)];
+})(), "genericOne__prime__" => new Phpurs_Data2("Product", $genericOne__prime__1_2_1, ($dictGenericSemiring1_3)->genericOne__prime__)];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -283,12 +302,13 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Data_Semiring_Generic_genericAdd'] = function() { $v = (function() {
-  $__fn = function($dictGeneric, $dictGenericSemiring = null, $x = null, $y = null) use (&$__fn) {
+  $__fn = function($dictGeneric_0, $dictGenericSemiring_1 = null, $x_2 = null, $y_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = (($dictGeneric)->to)(((($dictGenericSemiring)->genericAdd__prime__)((($dictGeneric)->from)($x)))((($dictGeneric)->from)($y)));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Semiring_Generic_genericAdd"), recVars=[];
+  $__res = (($dictGeneric_0)->to)(((($dictGenericSemiring_1)->genericAdd__prime__)((($dictGeneric_0)->from)($x_2)))((($dictGeneric_0)->from)($y_3)));
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;

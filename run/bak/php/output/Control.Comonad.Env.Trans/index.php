@@ -99,62 +99,69 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Control_Comonad_Env_Trans_EnvT'] = function() { $v = function($x) {
+\PhpursThunks::$thunks['Control_Comonad_Env_Trans_EnvT'] = function() { $v = function($x_0) {
   $__num = \func_num_args();
-  $__res = $x;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Comonad_Env_Trans_EnvT"), recVars=[];
+  $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Control_Comonad_Env_Trans_withEnvT'] = function() { $v = (function() {
-  $__fn = function($f, $v = null) use (&$__fn) {
+  $__fn = function($f_0, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", ($f)(($v)->value0), ($v)->value1);
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Comonad_Env_Trans_withEnvT"), recVars=[];
+  $__res = new Phpurs_Data2("Tuple", ($f_0)(($v_1)->value0), ($v_1)->value1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Env_Trans_runEnvT'] = function() { $v = function($v) {
+\PhpursThunks::$thunks['Control_Comonad_Env_Trans_runEnvT'] = function() { $v = function($v_0) {
   $__num = \func_num_args();
-  $__res = $v;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Comonad_Env_Trans_runEnvT"), recVars=[];
+  $__res = $v_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Control_Comonad_Env_Trans_newtypeEnvT'] = function() { $v = (object)["Coercible0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
 \PhpursThunks::$thunks['Control_Comonad_Env_Trans_mapEnvT'] = function() { $v = (function() {
-  $__fn = function($f, $v = null) use (&$__fn) {
+  $__fn = function($f_0, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", ($v)->value0, ($f)(($v)->value1));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Comonad_Env_Trans_mapEnvT"), recVars=[];
+  $__res = new Phpurs_Data2("Tuple", ($v_1)->value0, ($f_0)(($v_1)->value1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Env_Trans_functorEnvT'] = function() { $v = function($dictFunctor) {
+\PhpursThunks::$thunks['Control_Comonad_Env_Trans_functorEnvT'] = function() { $v = function($dictFunctor_0) {
   $__num = \func_num_args();
-  $__res = (object)["map" => (function() use (&$dictFunctor) {
-  $__fn = function($f, $v = null) use (&$dictFunctor, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Comonad_Env_Trans_functorEnvT"), recVars=[];
+  $__res = (object)["map" => (function() use ($dictFunctor_0) {
+  $__fn = function($f_1, $v_2 = null) use ($dictFunctor_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", ($v)->value0, ((($dictFunctor)->map)($f))(($v)->value1));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = new Phpurs_Data2("Tuple", ($v_2)->value0, ((($dictFunctor_0)->map)($f_1))(($v_2)->value1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -165,37 +172,41 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Env_Trans_functorWithIndexEnvT'] = function() { $v = function($dictFunctorWithIndex) {
+\PhpursThunks::$thunks['Control_Comonad_Env_Trans_functorWithIndexEnvT'] = function() { $v = function($dictFunctorWithIndex_0) {
   $__num = \func_num_args();
-  $__local_var_0 = (($dictFunctorWithIndex)->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $functorEnvT1_1 = (object)["map" => (function() use (&$__local_var_0) {
-  $__fn = function($f, $v = null) use (&$__local_var_0, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Comonad_Env_Trans_functorWithIndexEnvT"), recVars=[];
+  $__local_var_1_0 = (($dictFunctorWithIndex_0)->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $functorEnvT1_2_1 = (object)["map" => (function() use ($__local_var_1_0) {
+  $__fn = function($f_2, $v_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", ($v)->value0, ((($__local_var_0)->map)($f))(($v)->value1));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = new Phpurs_Data2("Tuple", ($v_3)->value0, ((($__local_var_1_0)->map)($f_2))(($v_3)->value1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()];
-  $__res = (object)["mapWithIndex" => (function() use (&$dictFunctorWithIndex) {
-  $__fn = function($f, $v = null) use (&$dictFunctorWithIndex, &$__fn) {
+  $__res = (object)["mapWithIndex" => (function() use ($dictFunctorWithIndex_0) {
+  $__fn = function($f_3, $v_4 = null) use ($dictFunctorWithIndex_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", ($v)->value0, ((($dictFunctorWithIndex)->mapWithIndex)($f))(($v)->value1));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = new Phpurs_Data2("Tuple", ($v_4)->value0, ((($dictFunctorWithIndex_0)->mapWithIndex)($f_3))(($v_4)->value1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_0) use (&$functorEnvT1_1) {
+})(), "Functor0" => function($dollar__unused_3) use ($functorEnvT1_2_1) {
   $__num = \func_num_args();
-  $__res = $functorEnvT1_1;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $functorEnvT1_2_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -204,42 +215,47 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Env_Trans_foldableEnvT'] = function() { $v = function($dictFoldable) {
+\PhpursThunks::$thunks['Control_Comonad_Env_Trans_foldableEnvT'] = function() { $v = function($dictFoldable_0) {
   $__num = \func_num_args();
-  $__res = (object)["foldl" => (function() use (&$dictFoldable) {
-  $__fn = function($fn, $a = null, $v = null) use (&$dictFoldable, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Comonad_Env_Trans_foldableEnvT"), recVars=[];
+  $__res = (object)["foldl" => (function() use ($dictFoldable_0) {
+  $__fn = function($fn_1, $a_2 = null, $v_3 = null) use ($dictFoldable_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (((($dictFoldable)->foldl)($fn))($a))(($v)->value1);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (((($dictFoldable_0)->foldl)($fn_1))($a_2))(($v_3)->value1);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(), "foldr" => (function() use (&$dictFoldable) {
-  $__fn = function($fn, $a = null, $v = null) use (&$dictFoldable, &$__fn) {
+})(), "foldr" => (function() use ($dictFoldable_0) {
+  $__fn = function($fn_1, $a_2 = null, $v_3 = null) use ($dictFoldable_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (((($dictFoldable)->foldr)($fn))($a))(($v)->value1);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (((($dictFoldable_0)->foldr)($fn_1))($a_2))(($v_3)->value1);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(), "foldMap" => function($dictMonoid) use (&$dictFoldable) {
+})(), "foldMap" => function($dictMonoid_1) use ($dictFoldable_0) {
   $__num = \func_num_args();
-  $foldMap1_0 = (($dictFoldable)->foldMap)($dictMonoid);
-  $__res = (function() use (&$foldMap1_0) {
-  $__fn = function($fn, $v = null) use (&$foldMap1_0, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $foldMap1_2_0 = (($dictFoldable_0)->foldMap)($dictMonoid_1);
+  $__res = (function() use ($foldMap1_2_0) {
+  $__fn = function($fn_3, $v_4 = null) use ($foldMap1_2_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($foldMap1_0)($fn))(($v)->value1);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($foldMap1_2_0)($fn_3))(($v_4)->value1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -254,43 +270,48 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Env_Trans_foldableWithIndexEnvT'] = function() { $v = function($dictFoldableWithIndex) {
+\PhpursThunks::$thunks['Control_Comonad_Env_Trans_foldableWithIndexEnvT'] = function() { $v = function($dictFoldableWithIndex_0) {
   $__num = \func_num_args();
-  $__local_var_0 = (($dictFoldableWithIndex)->Foldable0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $foldableEnvT1_2 = (object)["foldl" => (function() use (&$__local_var_0) {
-  $__fn = function($fn, $a = null, $v = null) use (&$__local_var_0, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Comonad_Env_Trans_foldableWithIndexEnvT"), recVars=[];
+  $__local_var_1_0 = (($dictFoldableWithIndex_0)->Foldable0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $foldableEnvT1_2_1 = (object)["foldl" => (function() use ($__local_var_1_0) {
+  $__fn = function($fn_2, $a_3 = null, $v_4 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (((($__local_var_0)->foldl)($fn))($a))(($v)->value1);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (((($__local_var_1_0)->foldl)($fn_2))($a_3))(($v_4)->value1);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(), "foldr" => (function() use (&$__local_var_0) {
-  $__fn = function($fn, $a = null, $v = null) use (&$__local_var_0, &$__fn) {
+})(), "foldr" => (function() use ($__local_var_1_0) {
+  $__fn = function($fn_2, $a_3 = null, $v_4 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (((($__local_var_0)->foldr)($fn))($a))(($v)->value1);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (((($__local_var_1_0)->foldr)($fn_2))($a_3))(($v_4)->value1);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(), "foldMap" => function($dictMonoid) use (&$__local_var_0) {
+})(), "foldMap" => function($dictMonoid_2) use ($__local_var_1_0) {
   $__num = \func_num_args();
-  $foldMap1_1 = (($__local_var_0)->foldMap)($dictMonoid);
-  $__res = (function() use (&$foldMap1_1) {
-  $__fn = function($fn, $v = null) use (&$foldMap1_1, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $foldMap1_3_1 = (($__local_var_1_0)->foldMap)($dictMonoid_2);
+  $__res = (function() use ($foldMap1_3_1) {
+  $__fn = function($fn_4, $v_5 = null) use ($foldMap1_3_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($foldMap1_1)($fn))(($v)->value1);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($foldMap1_3_1)($fn_4))(($v_5)->value1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -301,40 +322,44 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = (object)["foldlWithIndex" => (function() use (&$dictFoldableWithIndex) {
-  $__fn = function($f, $a = null, $v = null) use (&$dictFoldableWithIndex, &$__fn) {
+  $__res = (object)["foldlWithIndex" => (function() use ($dictFoldableWithIndex_0) {
+  $__fn = function($f_3, $a_4 = null, $v_5 = null) use ($dictFoldableWithIndex_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (((($dictFoldableWithIndex)->foldlWithIndex)($f))($a))(($v)->value1);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (((($dictFoldableWithIndex_0)->foldlWithIndex)($f_3))($a_4))(($v_5)->value1);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(), "foldrWithIndex" => (function() use (&$dictFoldableWithIndex) {
-  $__fn = function($f, $a = null, $v = null) use (&$dictFoldableWithIndex, &$__fn) {
+})(), "foldrWithIndex" => (function() use ($dictFoldableWithIndex_0) {
+  $__fn = function($f_3, $a_4 = null, $v_5 = null) use ($dictFoldableWithIndex_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (((($dictFoldableWithIndex)->foldrWithIndex)($f))($a))(($v)->value1);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (((($dictFoldableWithIndex_0)->foldrWithIndex)($f_3))($a_4))(($v_5)->value1);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(), "foldMapWithIndex" => function($dictMonoid) use (&$dictFoldableWithIndex) {
+})(), "foldMapWithIndex" => function($dictMonoid_3) use ($dictFoldableWithIndex_0) {
   $__num = \func_num_args();
-  $foldMapWithIndex1_3 = (($dictFoldableWithIndex)->foldMapWithIndex)($dictMonoid);
-  $__res = (function() use (&$foldMapWithIndex1_3) {
-  $__fn = function($f, $v = null) use (&$foldMapWithIndex1_3, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $foldMapWithIndex1_4_3 = (($dictFoldableWithIndex_0)->foldMapWithIndex)($dictMonoid_3);
+  $__res = (function() use ($foldMapWithIndex1_4_3) {
+  $__fn = function($f_5, $v_6 = null) use ($foldMapWithIndex1_4_3, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($foldMapWithIndex1_3)($f))(($v)->value1);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($foldMapWithIndex1_4_3)($f_5))(($v_6)->value1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -344,9 +369,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Foldable0" => function($dollar__unused_0) use (&$foldableEnvT1_2) {
+}, "Foldable0" => function($dollar__unused_3) use ($foldableEnvT1_2_1) {
   $__num = \func_num_args();
-  $__res = $foldableEnvT1_2;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $foldableEnvT1_2_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -355,57 +381,63 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Env_Trans_traversableEnvT'] = function() { $v = function($dictTraversable) {
+\PhpursThunks::$thunks['Control_Comonad_Env_Trans_traversableEnvT'] = function() { $v = function($dictTraversable_0) {
   $__num = \func_num_args();
-  $__local_var_0 = (($dictTraversable)->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $functorEnvT1_1 = (object)["map" => (function() use (&$__local_var_0) {
-  $__fn = function($f, $v = null) use (&$__local_var_0, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Comonad_Env_Trans_traversableEnvT"), recVars=[];
+  $__local_var_1_0 = (($dictTraversable_0)->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $functorEnvT1_2_1 = (object)["map" => (function() use ($__local_var_1_0) {
+  $__fn = function($f_2, $v_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", ($v)->value0, ((($__local_var_0)->map)($f))(($v)->value1));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = new Phpurs_Data2("Tuple", ($v_3)->value0, ((($__local_var_1_0)->map)($f_2))(($v_3)->value1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()];
-  $__local_var_2 = (($dictTraversable)->Foldable1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $foldableEnvT1_4 = (object)["foldl" => (function() use (&$__local_var_2) {
-  $__fn = function($fn, $a = null, $v = null) use (&$__local_var_2, &$__fn) {
+  $__local_var_3_2 = (($dictTraversable_0)->Foldable1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $foldableEnvT1_4_3 = (object)["foldl" => (function() use ($__local_var_3_2) {
+  $__fn = function($fn_4, $a_5 = null, $v_6 = null) use ($__local_var_3_2, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (((($__local_var_2)->foldl)($fn))($a))(($v)->value1);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (((($__local_var_3_2)->foldl)($fn_4))($a_5))(($v_6)->value1);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(), "foldr" => (function() use (&$__local_var_2) {
-  $__fn = function($fn, $a = null, $v = null) use (&$__local_var_2, &$__fn) {
+})(), "foldr" => (function() use ($__local_var_3_2) {
+  $__fn = function($fn_4, $a_5 = null, $v_6 = null) use ($__local_var_3_2, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (((($__local_var_2)->foldr)($fn))($a))(($v)->value1);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (((($__local_var_3_2)->foldr)($fn_4))($a_5))(($v_6)->value1);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(), "foldMap" => function($dictMonoid) use (&$__local_var_2) {
+})(), "foldMap" => function($dictMonoid_4) use ($__local_var_3_2) {
   $__num = \func_num_args();
-  $foldMap1_3 = (($__local_var_2)->foldMap)($dictMonoid);
-  $__res = (function() use (&$foldMap1_3) {
-  $__fn = function($fn, $v = null) use (&$foldMap1_3, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $foldMap1_5_3 = (($__local_var_3_2)->foldMap)($dictMonoid_4);
+  $__res = (function() use ($foldMap1_5_3) {
+  $__fn = function($fn_6, $v_7 = null) use ($foldMap1_5_3, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($foldMap1_3)($fn))(($v)->value1);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($foldMap1_5_3)($fn_6))(($v_7)->value1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -416,12 +448,14 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = (object)["sequence" => function($dictApplicative) use (&$dictTraversable) {
+  $__res = (object)["sequence" => function($dictApplicative_5) use ($dictTraversable_0) {
   $__num = \func_num_args();
-  $sequence1_5 = (($dictTraversable)->sequence)($dictApplicative);
-  $__res = function($v) use (&$dictApplicative, &$sequence1_5) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $sequence1_6_5 = (($dictTraversable_0)->sequence)($dictApplicative_5);
+  $__res = function($v_7) use ($dictApplicative_5, $sequence1_6_5) {
   $__num = \func_num_args();
-  $__res = ((((((($dictApplicative)->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->map)(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Control_Comonad_Env_Trans_EnvT'] ?? \PhpursThunks::eval('Control_Comonad_Env_Trans_EnvT'))))((($GLOBALS['Data_Tuple_Tuple'] ?? \PhpursThunks::eval('Data_Tuple_Tuple')))(($v)->value0))))(($sequence1_5)(($v)->value1));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((((((($dictApplicative_5)->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->map)(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Control_Comonad_Env_Trans_EnvT'] ?? \PhpursThunks::eval('Control_Comonad_Env_Trans_EnvT'))))((($GLOBALS['Data_Tuple_Tuple'] ?? \PhpursThunks::eval('Data_Tuple_Tuple')))(($v_7)->value0))))(($sequence1_6_5)(($v_7)->value1));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -429,16 +463,18 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "traverse" => function($dictApplicative) use (&$dictTraversable) {
+}, "traverse" => function($dictApplicative_5) use ($dictTraversable_0) {
   $__num = \func_num_args();
-  $traverse1_6 = (($dictTraversable)->traverse)($dictApplicative);
-  $__res = (function() use (&$dictApplicative, &$traverse1_6) {
-  $__fn = function($f, $v = null) use (&$dictApplicative, &$traverse1_6, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $traverse1_6_6 = (($dictTraversable_0)->traverse)($dictApplicative_5);
+  $__res = (function() use ($dictApplicative_5, $traverse1_6_6) {
+  $__fn = function($f_7, $v_8 = null) use ($dictApplicative_5, $traverse1_6_6, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((((($dictApplicative)->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->map)(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Control_Comonad_Env_Trans_EnvT'] ?? \PhpursThunks::eval('Control_Comonad_Env_Trans_EnvT'))))((($GLOBALS['Data_Tuple_Tuple'] ?? \PhpursThunks::eval('Data_Tuple_Tuple')))(($v)->value0))))((($traverse1_6)($f))(($v)->value1));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((((((($dictApplicative_5)->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->map)(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Control_Comonad_Env_Trans_EnvT'] ?? \PhpursThunks::eval('Control_Comonad_Env_Trans_EnvT'))))((($GLOBALS['Data_Tuple_Tuple'] ?? \PhpursThunks::eval('Data_Tuple_Tuple')))(($v_8)->value0))))((($traverse1_6_6)($f_7))(($v_8)->value1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -448,15 +484,17 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Functor0" => function($dollar__unused_0) use (&$functorEnvT1_1) {
+}, "Functor0" => function($dollar__unused_5) use ($functorEnvT1_2_1) {
   $__num = \func_num_args();
-  $__res = $functorEnvT1_1;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $functorEnvT1_2_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Foldable1" => function($dollar__unused_0) use (&$foldableEnvT1_4) {
+}, "Foldable1" => function($dollar__unused_5) use ($foldableEnvT1_4_3) {
   $__num = \func_num_args();
-  $__res = $foldableEnvT1_4;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $foldableEnvT1_4_3;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -465,21 +503,24 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Env_Trans_traversableWithIndexEnvT'] = function() { $v = function($dictTraversableWithIndex) {
+\PhpursThunks::$thunks['Control_Comonad_Env_Trans_traversableWithIndexEnvT'] = function() { $v = function($dictTraversableWithIndex_0) {
   $__num = \func_num_args();
-  $functorWithIndexEnvT1_0 = (($GLOBALS['Control_Comonad_Env_Trans_functorWithIndexEnvT'] ?? \PhpursThunks::eval('Control_Comonad_Env_Trans_functorWithIndexEnvT')))((($dictTraversableWithIndex)->FunctorWithIndex0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $foldableWithIndexEnvT1_1 = (($GLOBALS['Control_Comonad_Env_Trans_foldableWithIndexEnvT'] ?? \PhpursThunks::eval('Control_Comonad_Env_Trans_foldableWithIndexEnvT')))((($dictTraversableWithIndex)->FoldableWithIndex1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $traversableEnvT1_2 = (($GLOBALS['Control_Comonad_Env_Trans_traversableEnvT'] ?? \PhpursThunks::eval('Control_Comonad_Env_Trans_traversableEnvT')))((($dictTraversableWithIndex)->Traversable2)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = (object)["traverseWithIndex" => function($dictApplicative) use (&$dictTraversableWithIndex) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Comonad_Env_Trans_traversableWithIndexEnvT"), recVars=[];
+  $functorWithIndexEnvT1_1_0 = (($GLOBALS['Control_Comonad_Env_Trans_functorWithIndexEnvT'] ?? \PhpursThunks::eval('Control_Comonad_Env_Trans_functorWithIndexEnvT')))((($dictTraversableWithIndex_0)->FunctorWithIndex0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $foldableWithIndexEnvT1_2_1 = (($GLOBALS['Control_Comonad_Env_Trans_foldableWithIndexEnvT'] ?? \PhpursThunks::eval('Control_Comonad_Env_Trans_foldableWithIndexEnvT')))((($dictTraversableWithIndex_0)->FoldableWithIndex1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $traversableEnvT1_3_2 = (($GLOBALS['Control_Comonad_Env_Trans_traversableEnvT'] ?? \PhpursThunks::eval('Control_Comonad_Env_Trans_traversableEnvT')))((($dictTraversableWithIndex_0)->Traversable2)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__res = (object)["traverseWithIndex" => function($dictApplicative_4) use ($dictTraversableWithIndex_0) {
   $__num = \func_num_args();
-  $traverseWithIndex1_3 = (($dictTraversableWithIndex)->traverseWithIndex)($dictApplicative);
-  $__res = (function() use (&$dictApplicative, &$traverseWithIndex1_3) {
-  $__fn = function($f, $v = null) use (&$dictApplicative, &$traverseWithIndex1_3, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $traverseWithIndex1_5_3 = (($dictTraversableWithIndex_0)->traverseWithIndex)($dictApplicative_4);
+  $__res = (function() use ($dictApplicative_4, $traverseWithIndex1_5_3) {
+  $__fn = function($f_6, $v_7 = null) use ($dictApplicative_4, $traverseWithIndex1_5_3, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((((($dictApplicative)->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->map)(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Control_Comonad_Env_Trans_EnvT'] ?? \PhpursThunks::eval('Control_Comonad_Env_Trans_EnvT'))))((($GLOBALS['Data_Tuple_Tuple'] ?? \PhpursThunks::eval('Data_Tuple_Tuple')))(($v)->value0))))((($traverseWithIndex1_3)($f))(($v)->value1));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((((((($dictApplicative_4)->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->map)(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Control_Comonad_Env_Trans_EnvT'] ?? \PhpursThunks::eval('Control_Comonad_Env_Trans_EnvT'))))((($GLOBALS['Data_Tuple_Tuple'] ?? \PhpursThunks::eval('Data_Tuple_Tuple')))(($v_7)->value0))))((($traverseWithIndex1_5_3)($f_6))(($v_7)->value1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -489,21 +530,24 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "FunctorWithIndex0" => function($dollar__unused_0) use (&$functorWithIndexEnvT1_0) {
+}, "FunctorWithIndex0" => function($dollar__unused_4) use ($functorWithIndexEnvT1_1_0) {
   $__num = \func_num_args();
-  $__res = $functorWithIndexEnvT1_0;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $functorWithIndexEnvT1_1_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "FoldableWithIndex1" => function($dollar__unused_0) use (&$foldableWithIndexEnvT1_1) {
+}, "FoldableWithIndex1" => function($dollar__unused_4) use ($foldableWithIndexEnvT1_2_1) {
   $__num = \func_num_args();
-  $__res = $foldableWithIndexEnvT1_1;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $foldableWithIndexEnvT1_2_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Traversable2" => function($dollar__unused_0) use (&$traversableEnvT1_2) {
+}, "Traversable2" => function($dollar__unused_4) use ($traversableEnvT1_3_2) {
   $__num = \func_num_args();
-  $__res = $traversableEnvT1_2;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $traversableEnvT1_3_2;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -512,37 +556,41 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Env_Trans_extendEnvT'] = function() { $v = function($dictExtend) {
+\PhpursThunks::$thunks['Control_Comonad_Env_Trans_extendEnvT'] = function() { $v = function($dictExtend_0) {
   $__num = \func_num_args();
-  $Functor0_0 = (($dictExtend)->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $functorEnvT1_1 = (object)["map" => (function() use (&$Functor0_0) {
-  $__fn = function($f, $v = null) use (&$Functor0_0, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Comonad_Env_Trans_extendEnvT"), recVars=[];
+  $Functor0_1_0 = (($dictExtend_0)->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $functorEnvT1_2_1 = (object)["map" => (function() use ($Functor0_1_0) {
+  $__fn = function($f_2, $v_3 = null) use ($Functor0_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", ($v)->value0, ((($Functor0_0)->map)($f))(($v)->value1));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = new Phpurs_Data2("Tuple", ($v_3)->value0, ((($Functor0_1_0)->map)($f_2))(($v_3)->value1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()];
-  $__res = (object)["extend" => (function() use (&$Functor0_0, &$dictExtend) {
-  $__fn = function($f, $v = null) use (&$Functor0_0, &$dictExtend, &$__fn) {
+  $__res = (object)["extend" => (function() use ($Functor0_1_0, $dictExtend_0) {
+  $__fn = function($f_3, $v_4 = null) use ($Functor0_1_0, $dictExtend_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", ($v)->value0, ((($Functor0_0)->map)($f))(((($dictExtend)->extend)(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Control_Comonad_Env_Trans_EnvT'] ?? \PhpursThunks::eval('Control_Comonad_Env_Trans_EnvT'))))((($GLOBALS['Data_Tuple_Tuple'] ?? \PhpursThunks::eval('Data_Tuple_Tuple')))(($v)->value0))))(($v)->value1)));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = new Phpurs_Data2("Tuple", ($v_4)->value0, ((($Functor0_1_0)->map)($f_3))(((($dictExtend_0)->extend)(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Control_Comonad_Env_Trans_EnvT'] ?? \PhpursThunks::eval('Control_Comonad_Env_Trans_EnvT'))))((($GLOBALS['Data_Tuple_Tuple'] ?? \PhpursThunks::eval('Data_Tuple_Tuple')))(($v_4)->value0))))(($v_4)->value1)));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_0) use (&$functorEnvT1_1) {
+})(), "Functor0" => function($dollar__unused_3) use ($functorEnvT1_2_1) {
   $__num = \func_num_args();
-  $__res = $functorEnvT1_1;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $functorEnvT1_2_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -552,30 +600,34 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Control_Comonad_Env_Trans_comonadTransEnvT'] = function() { $v = (object)["lower" => (function() {
-  $__fn = function($dictComonad, $v = null) use (&$__fn) {
+  $__fn = function($dictComonad_0, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($v)->value1;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ($v_1)->value1;
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()]; return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Env_Trans_comonadEnvT'] = function() { $v = function($dictComonad) {
+\PhpursThunks::$thunks['Control_Comonad_Env_Trans_comonadEnvT'] = function() { $v = function($dictComonad_0) {
   $__num = \func_num_args();
-  $extendEnvT1_0 = (($GLOBALS['Control_Comonad_Env_Trans_extendEnvT'] ?? \PhpursThunks::eval('Control_Comonad_Env_Trans_extendEnvT')))((($dictComonad)->Extend0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = (object)["extract" => function($v) use (&$dictComonad) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Comonad_Env_Trans_comonadEnvT"), recVars=[];
+  $extendEnvT1_1_0 = (($GLOBALS['Control_Comonad_Env_Trans_extendEnvT'] ?? \PhpursThunks::eval('Control_Comonad_Env_Trans_extendEnvT')))((($dictComonad_0)->Extend0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__res = (object)["extract" => function($v_2) use ($dictComonad_0) {
   $__num = \func_num_args();
-  $__res = (($dictComonad)->extract)(($v)->value1);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($dictComonad_0)->extract)(($v_2)->value1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Extend0" => function($dollar__unused_0) use (&$extendEnvT1_0) {
+}, "Extend0" => function($dollar__unused_2) use ($extendEnvT1_1_0) {
   $__num = \func_num_args();
-  $__res = $extendEnvT1_0;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $extendEnvT1_1_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

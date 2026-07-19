@@ -90,32 +90,35 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   }
 }
 \PhpursThunks::$thunks['Data_Profunctor_profunctorFn'] = function() { $v = (object)["dimap" => (function() {
-  $__fn = function($a2b, $c2d = null, $b2c = null) use (&$__fn) {
+  $__fn = function($a2b_0, $c2d_1 = null, $b2c_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($c2d))($b2c)))($a2b);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($c2d_1))($b2c_2)))($a2b_0);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
 })()]; return $v; };
-\PhpursThunks::$thunks['Data_Profunctor_dimap'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Data_Profunctor_dimap'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->dimap;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Profunctor_dimap"), recVars=[];
+  $__res = ($dict_0)->dimap;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Data_Profunctor_lcmap'] = function() { $v = (function() {
-  $__fn = function($dictProfunctor, $a2b = null) use (&$__fn) {
+  $__fn = function($dictProfunctor_0, $a2b_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictProfunctor)->dimap)($a2b))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->identity);
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Profunctor_lcmap"), recVars=[];
+  $__res = ((($dictProfunctor_0)->dimap)($a2b_1))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->identity);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -123,12 +126,13 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Data_Profunctor_rmap'] = function() { $v = (function() {
-  $__fn = function($dictProfunctor, $b2c = null) use (&$__fn) {
+  $__fn = function($dictProfunctor_0, $b2c_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictProfunctor)->dimap)((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->identity))($b2c);
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Profunctor_rmap"), recVars=[];
+  $__res = ((($dictProfunctor_0)->dimap)((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->identity))($b2c_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -136,12 +140,13 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Data_Profunctor_unwrapIso'] = function() { $v = (function() {
-  $__fn = function($dictProfunctor, $dollar__unused_1 = null) use (&$__fn) {
+  $__fn = function($dictProfunctor_0, $dollar__unused_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictProfunctor)->dimap)(($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce'))))(($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Profunctor_unwrapIso"), recVars=[];
+  $__res = ((($dictProfunctor_0)->dimap)(($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce'))))(($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -149,28 +154,31 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Data_Profunctor_wrapIso'] = function() { $v = (function() {
-  $__fn = function($dictProfunctor, $dollar__unused_1 = null, $v = null) use (&$__fn) {
+  $__fn = function($dictProfunctor_0, $dollar__unused_1 = null, $v_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($dictProfunctor)->dimap)(($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce'))))(($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Profunctor_wrapIso"), recVars=[];
+  $__res = ((($dictProfunctor_0)->dimap)(($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce'))))(($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Data_Profunctor_arr'] = function() { $v = function($dictCategory) {
+\PhpursThunks::$thunks['Data_Profunctor_arr'] = function() { $v = function($dictCategory_0) {
   $__num = \func_num_args();
-  $identity1_0 = ($dictCategory)->identity;
-  $__res = (function() use (&$identity1_0) {
-  $__fn = function($dictProfunctor, $f = null) use (&$identity1_0, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Profunctor_arr"), recVars=[];
+  $identity1_1_0 = ($dictCategory_0)->identity;
+  $__res = (function() use ($identity1_1_0) {
+  $__fn = function($dictProfunctor_2, $f_3 = null) use ($identity1_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($dictProfunctor)->dimap)((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->identity))($f))($identity1_0);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (((($dictProfunctor_2)->dimap)((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->identity))($f_3))($identity1_1_0);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

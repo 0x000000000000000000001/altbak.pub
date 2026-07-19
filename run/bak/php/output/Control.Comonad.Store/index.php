@@ -93,21 +93,23 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   }
 }
 \PhpursThunks::$thunks['Control_Comonad_Store_store'] = function() { $v = (function() {
-  $__fn = function($f, $x = null) use (&$__fn) {
+  $__fn = function($f_0, $x_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", $f, $x);
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Comonad_Store_store"), recVars=[];
+  $__res = new Phpurs_Data2("Tuple", $f_0, $x_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Store_runStore'] = function() { $v = function($v) {
+\PhpursThunks::$thunks['Control_Comonad_Store_runStore'] = function() { $v = function($v_0) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Tuple", (($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))(($v)->value0), ($v)->value1);
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Comonad_Store_runStore"), recVars=[];
+  $__res = new Phpurs_Data2("Tuple", (($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))(($v_0)->value0), ($v_0)->value1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

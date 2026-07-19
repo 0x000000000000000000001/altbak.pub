@@ -2,7 +2,7 @@ module Test.FileOps where
 
 import Prelude
 import Effect (Effect)
-import Effect.Console (logShow, log)
+import Effect.Console (log)
 
 foreign import writeFileSync :: String -> String -> Effect Unit
 foreign import readFileSync :: String -> Effect String

@@ -94,20 +94,28 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 }
 \PhpursThunks::$thunks['AppX_main'] = function() { $v = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['App_main'] ?? \PhpursThunks::eval('App_main'))))(function($dollar__unused_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Test_FileOps_describe'] ?? \PhpursThunks::eval('Test_FileOps_describe'))))(function($dollar__unused_0) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Test_FileOps_describe'] ?? \PhpursThunks::eval('Test_FileOps_describe'))))(function($dollar__unused_1) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Test_FileOps_act'] ?? \PhpursThunks::eval('Test_FileOps_act'))))(function($dollar__unused_0) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Test_FileOps_act'] ?? \PhpursThunks::eval('Test_FileOps_act'))))(function($dollar__unused_2) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Test_STArray_describe'] ?? \PhpursThunks::eval('Test_STArray_describe'))))(function($dollar__unused_0) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Test_STArray_describe'] ?? \PhpursThunks::eval('Test_STArray_describe'))))(function($dollar__unused_3) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Test_STArray_act'] ?? \PhpursThunks::eval('Test_STArray_act'))))(function($dollar__unused_0) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Test_STArray_act'] ?? \PhpursThunks::eval('Test_STArray_act'))))(function($dollar__unused_4) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Test_StringOps_describe'] ?? \PhpursThunks::eval('Test_StringOps_describe'))))(function($dollar__unused_0) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Test_StringOps_describe'] ?? \PhpursThunks::eval('Test_StringOps_describe'))))(function($dollar__unused_5) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Test_StringOps_act'] ?? \PhpursThunks::eval('Test_StringOps_act'))))(function($dollar__unused_0) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Test_StringOps_act'] ?? \PhpursThunks::eval('Test_StringOps_act'))))(function($dollar__unused_6) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Test_AffOperations_describe'] ?? \PhpursThunks::eval('Test_AffOperations_describe'))))(function($dollar__unused_0) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Test_AffOperations_describe'] ?? \PhpursThunks::eval('Test_AffOperations_describe'))))(function($dollar__unused_7) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Test_AffOperations_act'] ?? \PhpursThunks::eval('Test_AffOperations_act'));
   goto __end;;
   __end:

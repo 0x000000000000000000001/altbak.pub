@@ -95,16 +95,19 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Test_STArray_sumArray'] = function() { $v = (($GLOBALS['Control_Monad_ST_Internal_run'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_run')))(((($GLOBALS['Control_Monad_ST_Internal_bind_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_bind_')))(($GLOBALS['Data_Array_ST_new'] ?? \PhpursThunks::eval('Data_Array_ST_new'))))(function($arr) {
+\PhpursThunks::$thunks['Test_STArray_sumArray'] = function() { $v = (($GLOBALS['Control_Monad_ST_Internal_run'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_run')))(((($GLOBALS['Control_Monad_ST_Internal_bind_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_bind_')))(($GLOBALS['Data_Array_ST_new'] ?? \PhpursThunks::eval('Data_Array_ST_new'))))(function($arr_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bind_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_bind_')))(((($GLOBALS['Data_Array_ST_pushAll'] ?? \PhpursThunks::eval('Data_Array_ST_pushAll')))([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))($arr)))(function($dollar__unused_0) use (&$arr) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bind_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_bind_')))(((($GLOBALS['Data_Array_ST_pushAll'] ?? \PhpursThunks::eval('Data_Array_ST_pushAll')))([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))($arr_0)))(function($dollar__unused_1) use ($arr_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bind_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_bind_')))((($GLOBALS['Data_Array_ST_pop'] ?? \PhpursThunks::eval('Data_Array_ST_pop')))($arr)))(function($x) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bind_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_bind_')))((($GLOBALS['Data_Array_ST_pop'] ?? \PhpursThunks::eval('Data_Array_ST_pop')))($arr_0)))(function($x_2) {
   $__num = \func_num_args();
-  if ((is_object($x) && (($x)->tag === "Just"))) {
-$__t0 = (($GLOBALS['Control_Monad_ST_Internal_pure_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_pure_')))(($x)->value0);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  if ((is_object($x_2) && (($x_2)->tag === "Just"))) {
+$__t0 = (($GLOBALS['Control_Monad_ST_Internal_pure_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_pure_')))(($x_2)->value0);
 } else {
-if ((is_object($x) && (($x)->tag === "Nothing"))) {
+if ((is_object($x_2) && (($x_2)->tag === "Nothing"))) {
 $__t0 = (($GLOBALS['Control_Monad_ST_Internal_pure_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_pure_')))(0);
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);

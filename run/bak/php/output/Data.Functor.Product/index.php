@@ -101,22 +101,25 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Functor_Product_Product'] = function() { $v = function($x) {
+\PhpursThunks::$thunks['Data_Functor_Product_Product'] = function() { $v = function($x_0) {
   $__num = \func_num_args();
-  $__res = $x;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Functor_Product_Product"), recVars=[];
+  $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Data_Functor_Product_showProduct'] = function() { $v = (function() {
-  $__fn = function($dictShow, $dictShow1 = null) use (&$__fn) {
+  $__fn = function($dictShow_0, $dictShow1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (object)["show" => function($v) use (&$dictShow, &$dictShow1) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Functor_Product_showProduct"), recVars=[];
+  $__res = (object)["show" => function($v_2) use ($dictShow1_1, $dictShow_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("(product "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))((($dictShow)->show)(($v)->value0)))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))(" "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))((($dictShow1)->show)(($v)->value1)))(")"))));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("(product "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))((($dictShow_0)->show)(($v_2)->value0)))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))(" "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))((($dictShow1_1)->show)(($v_2)->value1)))(")"))));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -128,12 +131,13 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Data_Functor_Product_product'] = function() { $v = (function() {
-  $__fn = function($fa, $ga = null) use (&$__fn) {
+  $__fn = function($fa_0, $ga_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", $fa, $ga);
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Functor_Product_product"), recVars=[];
+  $__res = new Phpurs_Data2("Tuple", $fa_0, $ga_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -142,24 +146,27 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 })(); return $v; };
 \PhpursThunks::$thunks['Data_Functor_Product_newtypeProduct'] = function() { $v = (object)["Coercible0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
 \PhpursThunks::$thunks['Data_Functor_Product_functorProduct'] = function() { $v = (function() {
-  $__fn = function($dictFunctor, $dictFunctor1 = null) use (&$__fn) {
+  $__fn = function($dictFunctor_0, $dictFunctor1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (object)["map" => (function() use (&$dictFunctor, &$dictFunctor1) {
-  $__fn = function($f, $v = null) use (&$dictFunctor, &$dictFunctor1, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Functor_Product_functorProduct"), recVars=[];
+  $__res = (object)["map" => (function() use ($dictFunctor1_1, $dictFunctor_0) {
+  $__fn = function($f_2, $v_3 = null) use ($dictFunctor1_1, $dictFunctor_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", ((($dictFunctor)->map)($f))(($v)->value0), ((($dictFunctor1)->map)($f))(($v)->value1));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = new Phpurs_Data2("Tuple", ((($dictFunctor_0)->map)($f_2))(($v_3)->value0), ((($dictFunctor1_1)->map)($f_2))(($v_3)->value1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -173,22 +180,25 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Data_Functor_Product_eq1Product'] = function() { $v = (function() {
-  $__fn = function($dictEq1, $dictEq11 = null) use (&$__fn) {
+  $__fn = function($dictEq1_0, $dictEq11_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (object)["eq1" => function($dictEq) use (&$dictEq1, &$dictEq11) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Functor_Product_eq1Product"), recVars=[];
+  $__res = (object)["eq1" => function($dictEq_2) use ($dictEq11_1, $dictEq1_0) {
   $__num = \func_num_args();
-  $eq12_0 = (($dictEq1)->eq1)($dictEq);
-  $eq13_1 = (($dictEq11)->eq1)($dictEq);
-  $__res = (function() use (&$eq12_0, &$eq13_1) {
-  $__fn = function($v, $v1 = null) use (&$eq12_0, &$eq13_1, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $eq12_3_0 = (($dictEq1_0)->eq1)($dictEq_2);
+  $eq13_4_1 = (($dictEq11_1)->eq1)($dictEq_2);
+  $__res = (function() use ($eq12_3_0, $eq13_4_1) {
+  $__fn = function($v_5, $v1_6 = null) use ($eq12_3_0, $eq13_4_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_HeytingAlgebra_boolConj'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolConj')))((($eq12_0)(($v)->value0))(($v1)->value0)))((($eq13_1)(($v)->value1))(($v1)->value1));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Data_HeytingAlgebra_boolConj'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolConj')))((($eq12_3_0)(($v_5)->value0))(($v1_6)->value0)))((($eq13_4_1)(($v_5)->value1))(($v1_6)->value1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -206,39 +216,44 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Data_Functor_Product_eqProduct'] = function() { $v = (function() {
-  $__fn = function($dictEq1, $dictEq11 = null, $dictEq = null) use (&$__fn) {
+  $__fn = function($dictEq1_0, $dictEq11_1 = null, $dictEq_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (object)["eq" => ((((($GLOBALS['Data_Functor_Product_eq1Product'] ?? \PhpursThunks::eval('Data_Functor_Product_eq1Product')))($dictEq1))($dictEq11))->eq1)($dictEq)];
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Functor_Product_eqProduct"), recVars=[];
+  $__res = (object)["eq" => ((((($GLOBALS['Data_Functor_Product_eq1Product'] ?? \PhpursThunks::eval('Data_Functor_Product_eq1Product')))($dictEq1_0))($dictEq11_1))->eq1)($dictEq_2)];
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Data_Functor_Product_ord1Product'] = function() { $v = function($dictOrd1) {
+\PhpursThunks::$thunks['Data_Functor_Product_ord1Product'] = function() { $v = function($dictOrd1_0) {
   $__num = \func_num_args();
-  $eq1Product1_0 = (($GLOBALS['Data_Functor_Product_eq1Product'] ?? \PhpursThunks::eval('Data_Functor_Product_eq1Product')))((($dictOrd1)->Eq10)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = function($dictOrd11) use (&$dictOrd1, &$eq1Product1_0) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Functor_Product_ord1Product"), recVars=[];
+  $eq1Product1_1_0 = (($GLOBALS['Data_Functor_Product_eq1Product'] ?? \PhpursThunks::eval('Data_Functor_Product_eq1Product')))((($dictOrd1_0)->Eq10)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__res = function($dictOrd11_2) use ($dictOrd1_0, $eq1Product1_1_0) {
   $__num = \func_num_args();
-  $eq1Product2_1 = ($eq1Product1_0)((($dictOrd11)->Eq10)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = (object)["compare1" => function($dictOrd) use (&$dictOrd1, &$dictOrd11) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $eq1Product2_3_1 = ($eq1Product1_1_0)((($dictOrd11_2)->Eq10)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__res = (object)["compare1" => function($dictOrd_4) use ($dictOrd11_2, $dictOrd1_0) {
   $__num = \func_num_args();
-  $compare12_2 = (($dictOrd1)->compare1)($dictOrd);
-  $compare13_3 = (($dictOrd11)->compare1)($dictOrd);
-  $__res = (function() use (&$compare12_2, &$compare13_3) {
-  $__fn = function($v, $v1 = null) use (&$compare12_2, &$compare13_3, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $compare12_5_2 = (($dictOrd1_0)->compare1)($dictOrd_4);
+  $compare13_6_3 = (($dictOrd11_2)->compare1)($dictOrd_4);
+  $__res = (function() use ($compare12_5_2, $compare13_6_3) {
+  $__fn = function($v_7, $v1_8 = null) use ($compare12_5_2, $compare13_6_3, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $v2_4 = (($compare12_2)(($v)->value0))(($v1)->value0);
-  if ((is_object($v2_4) && (($v2_4)->tag === "EQ"))) {
-$__t5 = (($compare13_3)(($v)->value1))(($v1)->value1);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $v2_9_4 = (($compare12_5_2)(($v_7)->value0))(($v1_8)->value0);
+  if ((is_object($v2_9_4) && (($v2_9_4)->tag === "EQ"))) {
+$__t5 = (($compare13_6_3)(($v_7)->value1))(($v1_8)->value1);
 } else {
-$__t5 = $v2_4;
+$__t5 = $v2_9_4;
 };
   $__res = $__t5;
   goto __end;;
@@ -250,9 +265,10 @@ $__t5 = $v2_4;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Eq10" => function($dollar__unused_0) use (&$eq1Product2_1) {
+}, "Eq10" => function($dollar__unused_4) use ($eq1Product2_3_1) {
   $__num = \func_num_args();
-  $__res = $eq1Product2_1;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $eq1Product2_3_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -265,19 +281,23 @@ $__t5 = $v2_4;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Product_ordProduct'] = function() { $v = function($dictOrd1) {
+\PhpursThunks::$thunks['Data_Functor_Product_ordProduct'] = function() { $v = function($dictOrd1_0) {
   $__num = \func_num_args();
-  $ord1Product1_0 = (($GLOBALS['Data_Functor_Product_ord1Product'] ?? \PhpursThunks::eval('Data_Functor_Product_ord1Product')))($dictOrd1);
-  $eqProduct1_1 = (($GLOBALS['Data_Functor_Product_eqProduct'] ?? \PhpursThunks::eval('Data_Functor_Product_eqProduct')))((($dictOrd1)->Eq10)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = function($dictOrd11) use (&$eqProduct1_1, &$ord1Product1_0) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Functor_Product_ordProduct"), recVars=[];
+  $ord1Product1_1_0 = (($GLOBALS['Data_Functor_Product_ord1Product'] ?? \PhpursThunks::eval('Data_Functor_Product_ord1Product')))($dictOrd1_0);
+  $eqProduct1_2_1 = (($GLOBALS['Data_Functor_Product_eqProduct'] ?? \PhpursThunks::eval('Data_Functor_Product_eqProduct')))((($dictOrd1_0)->Eq10)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__res = function($dictOrd11_3) use ($eqProduct1_2_1, $ord1Product1_1_0) {
   $__num = \func_num_args();
-  $eqProduct2_2 = ($eqProduct1_1)((($dictOrd11)->Eq10)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = function($dictOrd) use (&$dictOrd11, &$eqProduct2_2, &$ord1Product1_0) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $eqProduct2_4_2 = ($eqProduct1_2_1)((($dictOrd11_3)->Eq10)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__res = function($dictOrd_5) use ($dictOrd11_3, $eqProduct2_4_2, $ord1Product1_1_0) {
   $__num = \func_num_args();
-  $eqProduct3_3 = ($eqProduct2_2)((($dictOrd)->Eq0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = (object)["compare" => ((($ord1Product1_0)($dictOrd11))->compare1)($dictOrd), "Eq0" => function($dollar__unused_0) use (&$eqProduct3_3) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $eqProduct3_6_3 = ($eqProduct2_4_2)((($dictOrd_5)->Eq0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__res = (object)["compare" => ((($ord1Product1_1_0)($dictOrd11_3))->compare1)($dictOrd_5), "Eq0" => function($dollar__unused_7) use ($eqProduct3_6_3) {
   $__num = \func_num_args();
-  $__res = $eqProduct3_3;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $eqProduct3_6_3;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -295,52 +315,58 @@ $__t5 = $v2_4;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Data_Functor_Product_bihoistProduct'] = function() { $v = (function() {
-  $__fn = function($natF, $natG = null, $v = null) use (&$__fn) {
+  $__fn = function($natF_0, $natG_1 = null, $v_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = new Phpurs_Data2("Tuple", ($natF)(($v)->value0), ($natG)(($v)->value1));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Functor_Product_bihoistProduct"), recVars=[];
+  $__res = new Phpurs_Data2("Tuple", ($natF_0)(($v_2)->value0), ($natG_1)(($v_2)->value1));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Data_Functor_Product_applyProduct'] = function() { $v = function($dictApply) {
+\PhpursThunks::$thunks['Data_Functor_Product_applyProduct'] = function() { $v = function($dictApply_0) {
   $__num = \func_num_args();
-  $__local_var_0 = (($dictApply)->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $__res = function($dictApply1) use (&$__local_var_0, &$dictApply) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Functor_Product_applyProduct"), recVars=[];
+  $__local_var_1_0 = (($dictApply_0)->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__res = function($dictApply1_2) use ($__local_var_1_0, $dictApply_0) {
   $__num = \func_num_args();
-  $__local_var_1 = (($dictApply1)->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $functorProduct2_2 = (object)["map" => (function() use (&$__local_var_0, &$__local_var_1) {
-  $__fn = function($f, $v = null) use (&$__local_var_0, &$__local_var_1, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__local_var_3_1 = (($dictApply1_2)->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $functorProduct2_4_2 = (object)["map" => (function() use ($__local_var_1_0, $__local_var_3_1) {
+  $__fn = function($f_4, $v_5 = null) use ($__local_var_1_0, $__local_var_3_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", ((($__local_var_0)->map)($f))(($v)->value0), ((($__local_var_1)->map)($f))(($v)->value1));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = new Phpurs_Data2("Tuple", ((($__local_var_1_0)->map)($f_4))(($v_5)->value0), ((($__local_var_3_1)->map)($f_4))(($v_5)->value1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()];
-  $__res = (object)["apply" => (function() use (&$dictApply, &$dictApply1) {
-  $__fn = function($v, $v1 = null) use (&$dictApply, &$dictApply1, &$__fn) {
+  $__res = (object)["apply" => (function() use ($dictApply1_2, $dictApply_0) {
+  $__fn = function($v_5, $v1_6 = null) use ($dictApply1_2, $dictApply_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", ((($dictApply)->apply)(($v)->value0))(($v1)->value0), ((($dictApply1)->apply)(($v)->value1))(($v1)->value1));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = new Phpurs_Data2("Tuple", ((($dictApply_0)->apply)(($v_5)->value0))(($v1_6)->value0), ((($dictApply1_2)->apply)(($v_5)->value1))(($v1_6)->value1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_0) use (&$functorProduct2_2) {
+})(), "Functor0" => function($dollar__unused_5) use ($functorProduct2_4_2) {
   $__num = \func_num_args();
-  $__res = $functorProduct2_2;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $functorProduct2_4_2;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -353,27 +379,31 @@ $__t5 = $v2_4;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Product_bindProduct'] = function() { $v = function($dictBind) {
+\PhpursThunks::$thunks['Data_Functor_Product_bindProduct'] = function() { $v = function($dictBind_0) {
   $__num = \func_num_args();
-  $applyProduct1_0 = (($GLOBALS['Data_Functor_Product_applyProduct'] ?? \PhpursThunks::eval('Data_Functor_Product_applyProduct')))((($dictBind)->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = function($dictBind1) use (&$applyProduct1_0, &$dictBind) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Functor_Product_bindProduct"), recVars=[];
+  $applyProduct1_1_0 = (($GLOBALS['Data_Functor_Product_applyProduct'] ?? \PhpursThunks::eval('Data_Functor_Product_applyProduct')))((($dictBind_0)->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__res = function($dictBind1_2) use ($applyProduct1_1_0, $dictBind_0) {
   $__num = \func_num_args();
-  $applyProduct2_1 = ($applyProduct1_0)((($dictBind1)->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = (object)["bind" => (function() use (&$dictBind, &$dictBind1) {
-  $__fn = function($v, $f = null) use (&$dictBind, &$dictBind1, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $applyProduct2_3_1 = ($applyProduct1_1_0)((($dictBind1_2)->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__res = (object)["bind" => (function() use ($dictBind1_2, $dictBind_0) {
+  $__fn = function($v_4, $f_5 = null) use ($dictBind1_2, $dictBind_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", ((($dictBind)->bind)(($v)->value0))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Tuple_fst'] ?? \PhpursThunks::eval('Data_Tuple_fst'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce'))))($f))), ((($dictBind1)->bind)(($v)->value1))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Tuple_snd'] ?? \PhpursThunks::eval('Data_Tuple_snd'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce'))))($f))));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = new Phpurs_Data2("Tuple", ((($dictBind_0)->bind)(($v_4)->value0))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Tuple_fst'] ?? \PhpursThunks::eval('Data_Tuple_fst'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce'))))($f_5))), ((($dictBind1_2)->bind)(($v_4)->value1))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Tuple_snd'] ?? \PhpursThunks::eval('Data_Tuple_snd'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce'))))($f_5))));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Apply0" => function($dollar__unused_0) use (&$applyProduct2_1) {
+})(), "Apply0" => function($dollar__unused_4) use ($applyProduct2_3_1) {
   $__num = \func_num_args();
-  $__res = $applyProduct2_1;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $applyProduct2_3_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -386,21 +416,25 @@ $__t5 = $v2_4;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Product_applicativeProduct'] = function() { $v = function($dictApplicative) {
+\PhpursThunks::$thunks['Data_Functor_Product_applicativeProduct'] = function() { $v = function($dictApplicative_0) {
   $__num = \func_num_args();
-  $applyProduct1_0 = (($GLOBALS['Data_Functor_Product_applyProduct'] ?? \PhpursThunks::eval('Data_Functor_Product_applyProduct')))((($dictApplicative)->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = function($dictApplicative1) use (&$applyProduct1_0, &$dictApplicative) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Functor_Product_applicativeProduct"), recVars=[];
+  $applyProduct1_1_0 = (($GLOBALS['Data_Functor_Product_applyProduct'] ?? \PhpursThunks::eval('Data_Functor_Product_applyProduct')))((($dictApplicative_0)->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__res = function($dictApplicative1_2) use ($applyProduct1_1_0, $dictApplicative_0) {
   $__num = \func_num_args();
-  $applyProduct2_1 = ($applyProduct1_0)((($dictApplicative1)->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = (object)["pure" => function($a) use (&$dictApplicative, &$dictApplicative1) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $applyProduct2_3_1 = ($applyProduct1_1_0)((($dictApplicative1_2)->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__res = (object)["pure" => function($a_4) use ($dictApplicative1_2, $dictApplicative_0) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Tuple", (($dictApplicative)->pure)($a), (($dictApplicative1)->pure)($a));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = new Phpurs_Data2("Tuple", (($dictApplicative_0)->pure)($a_4), (($dictApplicative1_2)->pure)($a_4));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Apply0" => function($dollar__unused_0) use (&$applyProduct2_1) {
+}, "Apply0" => function($dollar__unused_4) use ($applyProduct2_3_1) {
   $__num = \func_num_args();
-  $__res = $applyProduct2_1;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $applyProduct2_3_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -413,23 +447,27 @@ $__t5 = $v2_4;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Product_monadProduct'] = function() { $v = function($dictMonad) {
+\PhpursThunks::$thunks['Data_Functor_Product_monadProduct'] = function() { $v = function($dictMonad_0) {
   $__num = \func_num_args();
-  $applicativeProduct1_0 = (($GLOBALS['Data_Functor_Product_applicativeProduct'] ?? \PhpursThunks::eval('Data_Functor_Product_applicativeProduct')))((($dictMonad)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $bindProduct1_1 = (($GLOBALS['Data_Functor_Product_bindProduct'] ?? \PhpursThunks::eval('Data_Functor_Product_bindProduct')))((($dictMonad)->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = function($dictMonad1) use (&$applicativeProduct1_0, &$bindProduct1_1) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Functor_Product_monadProduct"), recVars=[];
+  $applicativeProduct1_1_0 = (($GLOBALS['Data_Functor_Product_applicativeProduct'] ?? \PhpursThunks::eval('Data_Functor_Product_applicativeProduct')))((($dictMonad_0)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $bindProduct1_2_1 = (($GLOBALS['Data_Functor_Product_bindProduct'] ?? \PhpursThunks::eval('Data_Functor_Product_bindProduct')))((($dictMonad_0)->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__res = function($dictMonad1_3) use ($applicativeProduct1_1_0, $bindProduct1_2_1) {
   $__num = \func_num_args();
-  $applicativeProduct2_2 = ($applicativeProduct1_0)((($dictMonad1)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $bindProduct2_3 = ($bindProduct1_1)((($dictMonad1)->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = (object)["Applicative0" => function($dollar__unused_0) use (&$applicativeProduct2_2) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $applicativeProduct2_4_2 = ($applicativeProduct1_1_0)((($dictMonad1_3)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $bindProduct2_5_3 = ($bindProduct1_2_1)((($dictMonad1_3)->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__res = (object)["Applicative0" => function($dollar__unused_6) use ($applicativeProduct2_4_2) {
   $__num = \func_num_args();
-  $__res = $applicativeProduct2_2;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $applicativeProduct2_4_2;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Bind1" => function($dollar__unused_0) use (&$bindProduct2_3) {
+}, "Bind1" => function($dollar__unused_6) use ($bindProduct2_5_3) {
   $__num = \func_num_args();
-  $__res = $bindProduct2_3;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $bindProduct2_5_3;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

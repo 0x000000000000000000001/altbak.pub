@@ -100,35 +100,39 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Date_Gen_genDate'] = function() { $v = function($dictMonadGen) {
+\PhpursThunks::$thunks['Data_Date_Gen_genDate'] = function() { $v = function($dictMonadGen_0) {
   $__num = \func_num_args();
-  $Monad0_0 = (($dictMonadGen)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $Bind1_1 = (($Monad0_0)->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $__res = ((($Bind1_1)->bind)((($GLOBALS['Data_Date_Component_Gen_genYear'] ?? \PhpursThunks::eval('Data_Date_Component_Gen_genYear')))($dictMonadGen)))(function($year) use (&$Bind1_1, &$Monad0_0, &$dictMonadGen) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Date_Gen_genDate"), recVars=[];
+  $Monad0_1_0 = (($dictMonadGen_0)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $Bind1_2_1 = (($Monad0_1_0)->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__res = ((($Bind1_2_1)->bind)((($GLOBALS['Data_Date_Component_Gen_genYear'] ?? \PhpursThunks::eval('Data_Date_Component_Gen_genYear')))($dictMonadGen_0)))(function($year_3) use ($Bind1_2_1, $Monad0_1_0, $dictMonadGen_0) {
   $__num = \func_num_args();
-  if ((($GLOBALS['Data_Date_isLeapYear'] ?? \PhpursThunks::eval('Data_Date_isLeapYear')))($year)) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  if ((($GLOBALS['Data_Date_isLeapYear'] ?? \PhpursThunks::eval('Data_Date_isLeapYear')))($year_3)) {
 $__t2 = 365;
 } else {
 $__t2 = 364;
 };
-  $__res = ((($Bind1_1)->bind)(((((((($Bind1_1)->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->map)(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Time_Duration_Days'] ?? \PhpursThunks::eval('Data_Time_Duration_Days'))))(($GLOBALS['Data_Int_toNumber'] ?? \PhpursThunks::eval('Data_Int_toNumber')))))(((($dictMonadGen)->chooseInt)(0))($__t2))))(function($days) use (&$Monad0_0, &$year) {
+  $__res = ((($Bind1_2_1)->bind)(((((((($Bind1_2_1)->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->map)(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Time_Duration_Days'] ?? \PhpursThunks::eval('Data_Time_Duration_Days'))))(($GLOBALS['Data_Int_toNumber'] ?? \PhpursThunks::eval('Data_Int_toNumber')))))(((($dictMonadGen_0)->chooseInt)(0))($__t2))))(function($days_4) use ($Monad0_1_0, $year_3) {
   $__num = \func_num_args();
-  $__res = (((($Monad0_0)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->pure)((($GLOBALS['Partial_Unsafe__unsafePartial'] ?? \PhpursThunks::eval('Partial_Unsafe__unsafePartial')))(function($dollar__unused_0) use (&$days, &$year) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (((($Monad0_1_0)->Applicative0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->pure)((($GLOBALS['Partial_Unsafe__unsafePartial'] ?? \PhpursThunks::eval('Partial_Unsafe__unsafePartial')))(function($dollar__unused_5) use ($days_4, $year_3) {
   $__num = \func_num_args();
-  $__local_var_3 = (((($GLOBALS['Data_Date_exactDate'] ?? \PhpursThunks::eval('Data_Date_exactDate')))($year))(new Phpurs_Data0("January")))(1);
-  if ((is_object($__local_var_3) && (($__local_var_3)->tag === "Just"))) {
-$__t4 = ((($GLOBALS['Data_Date_adjust'] ?? \PhpursThunks::eval('Data_Date_adjust')))($days))(($__local_var_3)->value0);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__local_var_6_3 = (((($GLOBALS['Data_Date_exactDate'] ?? \PhpursThunks::eval('Data_Date_exactDate')))($year_3))(new Phpurs_Data0("January")))(1);
+  if ((is_object($__local_var_6_3) && (($__local_var_6_3)->tag === "Just"))) {
+$__t4 = ((($GLOBALS['Data_Date_adjust'] ?? \PhpursThunks::eval('Data_Date_adjust')))($days_4))(($__local_var_6_3)->value0);
 } else {
-if ((is_object($__local_var_3) && (($__local_var_3)->tag === "Nothing"))) {
+if ((is_object($__local_var_6_3) && (($__local_var_6_3)->tag === "Nothing"))) {
 $__t4 = new Phpurs_Data0("Nothing");
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t4 = null;
 };
 };
-  $__local_var_5 = $__t4;
-  if ((is_object($__local_var_5) && (($__local_var_5)->tag === "Just"))) {
-$__t6 = ($__local_var_5)->value0;
+  $__local_var_7_4 = $__t4;
+  if ((is_object($__local_var_7_4) && (($__local_var_7_4)->tag === "Just"))) {
+$__t6 = ($__local_var_7_4)->value0;
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t6 = null;

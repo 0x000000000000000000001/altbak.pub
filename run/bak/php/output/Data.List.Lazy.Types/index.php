@@ -121,9 +121,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_List_Lazy_Types_List'] = function() { $v = function($x) {
+\PhpursThunks::$thunks['Data_List_Lazy_Types_List'] = function() { $v = function($x_0) {
   $__num = \func_num_args();
-  $__res = $x;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_List_Lazy_Types_List"), recVars=[];
+  $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -142,15 +143,17 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Data_List_Lazy_Types_NonEmptyList'] = function() { $v = function($x) {
+\PhpursThunks::$thunks['Data_List_Lazy_Types_NonEmptyList'] = function() { $v = function($x_0) {
   $__num = \func_num_args();
-  $__res = $x;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_List_Lazy_Types_NonEmptyList"), recVars=[];
+  $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_List_Lazy_Types_nil'] = function() { $v = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v) {
+\PhpursThunks::$thunks['Data_List_Lazy_Types_nil'] = function() { $v = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = new Phpurs_Data0("Nil");
   goto __end;;
   __end:
@@ -158,6 +161,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 }); return $v; };
 \PhpursThunks::$thunks['Data_List_Lazy_Types_newtypeNonEmptyList'] = function() { $v = (object)["Coercible0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'));
   goto __end;;
   __end:
@@ -165,6 +169,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 }]; return $v; };
 \PhpursThunks::$thunks['Data_List_Lazy_Types_newtypeList'] = function() { $v = (object)["Coercible0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'));
   goto __end;;
   __end:
@@ -172,20 +177,22 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 }]; return $v; };
 \PhpursThunks::$thunks['Data_List_Lazy_Types_step'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force'))))(($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce'))); return $v; };
 \PhpursThunks::$thunks['Data_List_Lazy_Types_semigroupList'] = function() { $v = (object)["append" => (function() {
-  $__fn = function($xs, $ys = null) use (&$__fn) {
+  $__fn = function($xs_0, $ys_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__local_var_0 = (($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))($xs);
-  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v) use (&$__local_var_0, &$ys) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_List_Lazy_Types_semigroupList"];
+  $__local_var_2_0 = (($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))($xs_0);
+  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v_3) use ($__local_var_2_0, $ys_1) {
   $__num = \func_num_args();
-  $__local_var_1 = (($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($__local_var_0);
-  if ((is_object($__local_var_1) && (($__local_var_1)->tag === "Nil"))) {
-$__t2 = (($GLOBALS['Data_List_Lazy_Types_step'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_step')))($ys);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_List_Lazy_Types_semigroupList"];
+  $__local_var_4_1 = (($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($__local_var_2_0);
+  if ((is_object($__local_var_4_1) && (($__local_var_4_1)->tag === "Nil"))) {
+$__t2 = (($GLOBALS['Data_List_Lazy_Types_step'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_step')))($ys_1);
 } else {
-if ((is_object($__local_var_1) && (($__local_var_1)->tag === "Cons"))) {
-$__t2 = new Phpurs_Data2("Cons", ($__local_var_1)->value0, (((($GLOBALS['Data_List_Lazy_Types_semigroupList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_semigroupList')))->append)(($__local_var_1)->value1))($ys));
+if ((is_object($__local_var_4_1) && (($__local_var_4_1)->tag === "Cons"))) {
+$__t2 = new Phpurs_Data2("Cons", ($__local_var_4_1)->value0, (((($GLOBALS['Data_List_Lazy_Types_semigroupList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_semigroupList')))->append)(($__local_var_4_1)->value1))($ys_1));
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t2 = null;
@@ -204,33 +211,37 @@ $__t2 = null;
 })()]; return $v; };
 \PhpursThunks::$thunks['Data_List_Lazy_Types_monoidList'] = function() { $v = (object)["mempty" => ($GLOBALS['Data_List_Lazy_Types_nil'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_nil')), "Semigroup0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_List_Lazy_Types_semigroupList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_semigroupList'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
-\PhpursThunks::$thunks['Data_List_Lazy_Types_lazyList'] = function() { $v = (object)["defer" => function($f) {
+\PhpursThunks::$thunks['Data_List_Lazy_Types_lazyList'] = function() { $v = (object)["defer" => function($f_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_List_Lazy_Types_step'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_step'))))($f));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_List_Lazy_Types_step'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_step'))))($f_0));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
 \PhpursThunks::$thunks['Data_List_Lazy_Types_functorList'] = function() { $v = (object)["map" => (function() {
-  $__fn = function($f, $xs = null) use (&$__fn) {
+  $__fn = function($f_0, $xs_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__local_var_0 = (($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))($xs);
-  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v) use (&$__local_var_0, &$f) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_List_Lazy_Types_functorList"];
+  $__local_var_2_0 = (($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))($xs_1);
+  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v_3) use ($__local_var_2_0, $f_0) {
   $__num = \func_num_args();
-  $__local_var_1 = (($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($__local_var_0);
-  if ((is_object($__local_var_1) && (($__local_var_1)->tag === "Nil"))) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_List_Lazy_Types_functorList"];
+  $__local_var_4_1 = (($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($__local_var_2_0);
+  if ((is_object($__local_var_4_1) && (($__local_var_4_1)->tag === "Nil"))) {
 $__t2 = new Phpurs_Data0("Nil");
 } else {
-if ((is_object($__local_var_1) && (($__local_var_1)->tag === "Cons"))) {
-$__t2 = new Phpurs_Data2("Cons", ($f)(($__local_var_1)->value0), (((($GLOBALS['Data_List_Lazy_Types_functorList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_functorList')))->map)($f))(($__local_var_1)->value1));
+if ((is_object($__local_var_4_1) && (($__local_var_4_1)->tag === "Cons"))) {
+$__t2 = new Phpurs_Data2("Cons", ($f_0)(($__local_var_4_1)->value0), (((($GLOBALS['Data_List_Lazy_Types_functorList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_functorList')))->map)($f_0))(($__local_var_4_1)->value1));
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t2 = null;
@@ -248,15 +259,17 @@ $__t2 = null;
   return $__fn;
 })()]; return $v; };
 \PhpursThunks::$thunks['Data_List_Lazy_Types_functorNonEmptyList'] = function() { $v = (object)["map" => (function() {
-  $__fn = function($f, $v = null) use (&$__fn) {
+  $__fn = function($f_0, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v) use (&$f) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v_2) use ($f_0, $v_1) {
   $__num = \func_num_args();
-  $__local_var_0 = (($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($v);
-  $__res = new Phpurs_Data2("NonEmpty", ($f)(($__local_var_0)->value0), (((($GLOBALS['Data_List_Lazy_Types_functorList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_functorList')))->map)($f))(($__local_var_0)->value1));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__local_var_3_0 = (($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($v_1);
+  $__res = new Phpurs_Data2("NonEmpty", ($f_0)(($__local_var_3_0)->value0), (((($GLOBALS['Data_List_Lazy_Types_functorList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_functorList')))->map)($f_0))(($__local_var_3_0)->value1));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -268,61 +281,69 @@ $__t2 = null;
   return $__fn;
 })()]; return $v; };
 \PhpursThunks::$thunks['Data_List_Lazy_Types_eq1List'] = function() { $v = (object)["eq1" => (function() {
-  $__fn = function($dictEq, $xs = null, $ys = null) use (&$__fn) {
+  $__fn = function($dictEq_0, $xs_1 = null, $ys_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $go = null;
-  $go = (function() use (&$dictEq, &$go) {
-  $__fn = function($v, $v1 = null) use (&$dictEq, &$go, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $go_3_0 = null;
+  $go_3_0 = (function() use ($dictEq_0, &$go_3_0) {
+  $__fn = function($v_4, $v1_5 = null) use ($dictEq_0, &$go_3_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  if ((is_object($v) && (($v)->tag === "Nil"))) {
-$__t0 = (is_object($v1) && (($v1)->tag === "Nil"));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "go_3_0"), recVars=["go_3_0"];
+  while (true) {
+if ((is_object($v_4) && (($v_4)->tag === "Nil"))) {
+$__t1 = (is_object($v1_5) && (($v1_5)->tag === "Nil"));
 } else {
-$__t0 = ((is_object($v) && (($v)->tag === "Cons")) && ((is_object($v1) && (($v1)->tag === "Cons")) && (((($dictEq)->eq)(($v)->value0))(($v1)->value0) && (($go)((($GLOBALS['Data_List_Lazy_Types_step'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_step')))(($v)->value1)))((($GLOBALS['Data_List_Lazy_Types_step'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_step')))(($v1)->value1)))));
+$__t1 = ((is_object($v_4) && (($v_4)->tag === "Cons")) && ((is_object($v1_5) && (($v1_5)->tag === "Cons")) && (((($dictEq_0)->eq)(($v_4)->value0))(($v1_5)->value0) && (($go_3_0)((($GLOBALS['Data_List_Lazy_Types_step'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_step')))(($v_4)->value1)))((($GLOBALS['Data_List_Lazy_Types_step'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_step')))(($v1_5)->value1)))));
 };
-  $__res = $__t0;
-  goto __end;;
+$__res = $__t1;
+goto __end;;
+};
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })();
-  $__res = (($go)((($GLOBALS['Data_List_Lazy_Types_step'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_step')))($xs)))((($GLOBALS['Data_List_Lazy_Types_step'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_step')))($ys));
+  $__res = (($go_3_0)((($GLOBALS['Data_List_Lazy_Types_step'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_step')))($xs_1)))((($GLOBALS['Data_List_Lazy_Types_step'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_step')))($ys_2));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
 })()]; return $v; };
-\PhpursThunks::$thunks['Data_List_Lazy_Types_eq1NonEmptyList'] = function() { $v = (object)["eq1" => function($dictEq) {
+\PhpursThunks::$thunks['Data_List_Lazy_Types_eq1NonEmptyList'] = function() { $v = (object)["eq1" => function($dictEq_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Lazy_eq1Lazy'] ?? \PhpursThunks::eval('Data_Lazy_eq1Lazy')))->eq1)(((($GLOBALS['Data_NonEmpty_eqNonEmpty'] ?? \PhpursThunks::eval('Data_NonEmpty_eqNonEmpty')))(($GLOBALS['Data_List_Lazy_Types_eq1List'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_eq1List'))))($dictEq));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Data_Lazy_eq1Lazy'] ?? \PhpursThunks::eval('Data_Lazy_eq1Lazy')))->eq1)(((($GLOBALS['Data_NonEmpty_eqNonEmpty'] ?? \PhpursThunks::eval('Data_NonEmpty_eqNonEmpty')))(($GLOBALS['Data_List_Lazy_Types_eq1List'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_eq1List'))))($dictEq_0));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
-\PhpursThunks::$thunks['Data_List_Lazy_Types_eqList'] = function() { $v = function($dictEq) {
+\PhpursThunks::$thunks['Data_List_Lazy_Types_eqList'] = function() { $v = function($dictEq_0) {
   $__num = \func_num_args();
-  $__res = (object)["eq" => ((($GLOBALS['Data_List_Lazy_Types_eq1List'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_eq1List')))->eq1)($dictEq)];
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_List_Lazy_Types_eqList"), recVars=[];
+  $__res = (object)["eq" => ((($GLOBALS['Data_List_Lazy_Types_eq1List'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_eq1List')))->eq1)($dictEq_0)];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_List_Lazy_Types_eqNonEmptyList'] = function() { $v = function($dictEq) {
+\PhpursThunks::$thunks['Data_List_Lazy_Types_eqNonEmptyList'] = function() { $v = function($dictEq_0) {
   $__num = \func_num_args();
-  $__local_var_0 = ((($GLOBALS['Data_NonEmpty_eqNonEmpty'] ?? \PhpursThunks::eval('Data_NonEmpty_eqNonEmpty')))(($GLOBALS['Data_List_Lazy_Types_eq1List'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_eq1List'))))($dictEq);
-  $__res = (object)["eq" => (function() use (&$__local_var_0) {
-  $__fn = function($x, $y = null) use (&$__local_var_0, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_List_Lazy_Types_eqNonEmptyList"), recVars=[];
+  $__local_var_1_0 = ((($GLOBALS['Data_NonEmpty_eqNonEmpty'] ?? \PhpursThunks::eval('Data_NonEmpty_eqNonEmpty')))(($GLOBALS['Data_List_Lazy_Types_eq1List'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_eq1List'))))($dictEq_0);
+  $__res = (object)["eq" => (function() use ($__local_var_1_0) {
+  $__fn = function($x_2, $y_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($__local_var_0)->eq)((($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($x)))((($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($y));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($__local_var_1_0)->eq)((($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($x_2)))((($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($y_3));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -334,51 +355,60 @@ $__t0 = ((is_object($v) && (($v)->tag === "Cons")) && ((is_object($v1) && (($v1)
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Data_List_Lazy_Types_ord1List'] = function() { $v = (object)["compare1" => (function() {
-  $__fn = function($dictOrd, $xs = null, $ys = null) use (&$__fn) {
+  $__fn = function($dictOrd_0, $xs_1 = null, $ys_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $go = null;
-  $go = (function() use (&$dictOrd, &$go) {
-  $__fn = function($v, $v1 = null) use (&$dictOrd, &$go, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $go_3_0 = null;
+  $go_3_0 = (function() use ($dictOrd_0, &$go_3_0) {
+  $__fn = function($v_4, $v1_5 = null) use ($dictOrd_0, &$go_3_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  if ((is_object($v) && (($v)->tag === "Nil"))) {
-if ((is_object($v1) && (($v1)->tag === "Nil"))) {
-$__t1 = new Phpurs_Data0("EQ");
+  // DEBUG UncurriedAbs: currentBindingName=(Just "go_3_0"), recVars=["go_3_0"];
+  while (true) {
+if ((is_object($v_4) && (($v_4)->tag === "Nil"))) {
+if ((is_object($v1_5) && (($v1_5)->tag === "Nil"))) {
+$__t2 = new Phpurs_Data0("EQ");
 } else {
-$__t1 = new Phpurs_Data0("LT");
+$__t2 = new Phpurs_Data0("LT");
 };
-$__t0 = $__t1;
+$__t1 = $__t2;
 } else {
-if ((is_object($v1) && (($v1)->tag === "Nil"))) {
-$__t0 = new Phpurs_Data0("GT");
+if ((is_object($v1_5) && (($v1_5)->tag === "Nil"))) {
+$__t1 = new Phpurs_Data0("GT");
 } else {
-if (((is_object($v) && (($v)->tag === "Cons")) && (is_object($v1) && (($v1)->tag === "Cons")))) {
-$v2_2 = ((($dictOrd)->compare)(($v)->value0))(($v1)->value0);
-if ((is_object($v2_2) && (($v2_2)->tag === "EQ"))) {
-$__t3 = (($go)((($GLOBALS['Data_List_Lazy_Types_step'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_step')))(($v)->value1)))((($GLOBALS['Data_List_Lazy_Types_step'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_step')))(($v1)->value1));
+if (((is_object($v_4) && (($v_4)->tag === "Cons")) && (is_object($v1_5) && (($v1_5)->tag === "Cons")))) {
+$v2_6_3 = ((($dictOrd_0)->compare)(($v_4)->value0))(($v1_5)->value0);
+if ((is_object($v2_6_3) && (($v2_6_3)->tag === "EQ"))) {
+$__tco_5 = (($GLOBALS['Data_List_Lazy_Types_step'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_step')))(($v_4)->value1);
+$__tco_6 = (($GLOBALS['Data_List_Lazy_Types_step'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_step')))(($v1_5)->value1);
+$v_4 = $__tco_5;
+$v1_5 = $__tco_6;
+continue ;
+$__t4 = null;
 } else {
-$__t3 = $v2_2;
+$__t4 = $v2_6_3;
 };
-$__t0 = $__t3;
+$__t1 = $__t4;
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t0 = null;
+$__t1 = null;
 };
 };
 };
-  $__res = $__t0;
-  goto __end;;
+$__res = $__t1;
+goto __end;;
+};
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })();
-  $__res = (($go)((($GLOBALS['Data_List_Lazy_Types_step'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_step')))($xs)))((($GLOBALS['Data_List_Lazy_Types_step'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_step')))($ys));
+  $__res = (($go_3_0)((($GLOBALS['Data_List_Lazy_Types_step'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_step')))($xs_1)))((($GLOBALS['Data_List_Lazy_Types_step'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_step')))($ys_2));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -386,30 +416,35 @@ $__t0 = null;
   return $__fn;
 })(), "Eq10" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_List_Lazy_Types_eq1List'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_eq1List'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
 \PhpursThunks::$thunks['Data_List_Lazy_Types_ordNonEmpty'] = function() { $v = (($GLOBALS['Data_NonEmpty_ordNonEmpty'] ?? \PhpursThunks::eval('Data_NonEmpty_ordNonEmpty')))(($GLOBALS['Data_List_Lazy_Types_ord1List'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_ord1List'))); return $v; };
-\PhpursThunks::$thunks['Data_List_Lazy_Types_ord1NonEmptyList'] = function() { $v = (object)["compare1" => function($dictOrd) {
+\PhpursThunks::$thunks['Data_List_Lazy_Types_ord1NonEmptyList'] = function() { $v = (object)["compare1" => function($dictOrd_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Lazy_ordLazy'] ?? \PhpursThunks::eval('Data_Lazy_ordLazy')))((($GLOBALS['Data_List_Lazy_Types_ordNonEmpty'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_ordNonEmpty')))($dictOrd)))->compare;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Data_Lazy_ordLazy'] ?? \PhpursThunks::eval('Data_Lazy_ordLazy')))((($GLOBALS['Data_List_Lazy_Types_ordNonEmpty'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_ordNonEmpty')))($dictOrd_0)))->compare;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Eq10" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_List_Lazy_Types_eq1NonEmptyList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_eq1NonEmptyList'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
-\PhpursThunks::$thunks['Data_List_Lazy_Types_ordList'] = function() { $v = function($dictOrd) {
+\PhpursThunks::$thunks['Data_List_Lazy_Types_ordList'] = function() { $v = function($dictOrd_0) {
   $__num = \func_num_args();
-  $__res = (object)["compare" => ((($GLOBALS['Data_List_Lazy_Types_ord1List'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_ord1List')))->compare1)($dictOrd), "Eq0" => function($dollar__unused_0) use (&$dictOrd) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_List_Lazy_Types_ordList"), recVars=[];
+  $__res = (object)["compare" => ((($GLOBALS['Data_List_Lazy_Types_ord1List'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_ord1List')))->compare1)($dictOrd_0), "Eq0" => function($dollar__unused_1) use ($dictOrd_0) {
   $__num = \func_num_args();
-  $__res = (object)["eq" => ((($GLOBALS['Data_List_Lazy_Types_eq1List'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_eq1List')))->eq1)((($dictOrd)->Eq0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))];
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (object)["eq" => ((($GLOBALS['Data_List_Lazy_Types_eq1List'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_eq1List')))->eq1)((($dictOrd_0)->Eq0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -418,22 +453,25 @@ $__t0 = null;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_List_Lazy_Types_ordNonEmptyList'] = function() { $v = function($dictOrd) {
+\PhpursThunks::$thunks['Data_List_Lazy_Types_ordNonEmptyList'] = function() { $v = function($dictOrd_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Lazy_ordLazy'] ?? \PhpursThunks::eval('Data_Lazy_ordLazy')))((($GLOBALS['Data_List_Lazy_Types_ordNonEmpty'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_ordNonEmpty')))($dictOrd));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_List_Lazy_Types_ordNonEmptyList"), recVars=[];
+  $__res = (($GLOBALS['Data_Lazy_ordLazy'] ?? \PhpursThunks::eval('Data_Lazy_ordLazy')))((($GLOBALS['Data_List_Lazy_Types_ordNonEmpty'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_ordNonEmpty')))($dictOrd_0));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Data_List_Lazy_Types_cons'] = function() { $v = (function() {
-  $__fn = function($x, $xs = null) use (&$__fn) {
+  $__fn = function($x_0, $xs_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v) use (&$x, &$xs) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_List_Lazy_Types_cons"), recVars=[];
+  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v_2) use ($x_0, $xs_1) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Cons", $x, $xs);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = new Phpurs_Data2("Cons", $x_0, $xs_1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -445,32 +483,36 @@ $__t0 = null;
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Data_List_Lazy_Types_foldableList'] = function() { $v = (object)["foldr" => (function() {
-  $__fn = function($op, $z = null, $xs = null) use (&$__fn) {
+  $__fn = function($op_0, $z_1 = null, $xs_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((((($GLOBALS['Data_List_Lazy_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_foldableList')))->foldl)((function() use (&$op) {
-  $__fn = function($b, $a = null) use (&$op, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_List_Lazy_Types_foldableList"];
+  $__res = ((((($GLOBALS['Data_List_Lazy_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_foldableList')))->foldl)((function() use ($op_0) {
+  $__fn = function($b_3, $a_4 = null) use ($op_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($op)($a))($b);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_List_Lazy_Types_foldableList"];
+  $__res = (($op_0)($a_4))($b_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))($z))(((((($GLOBALS['Data_List_Lazy_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_foldableList')))->foldl)((function() {
-  $__fn = function($b, $a = null) use (&$__fn) {
+})()))($z_1))(((((($GLOBALS['Data_List_Lazy_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_foldableList')))->foldl)((function() {
+  $__fn = function($b_3, $a_4 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v) use (&$a, &$b) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_List_Lazy_Types_foldableList"];
+  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v_5) use ($a_4, $b_3) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Cons", $a, $b);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_List_Lazy_Types_foldableList"];
+  $__res = new Phpurs_Data2("Cons", $a_4, $b_3);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -480,61 +522,73 @@ $__t0 = null;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))(($GLOBALS['Data_List_Lazy_Types_nil'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_nil'))))($xs));
+})()))(($GLOBALS['Data_List_Lazy_Types_nil'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_nil'))))($xs_2));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(), "foldl" => function($op) {
+})(), "foldl" => function($op_0) {
   $__num = \func_num_args();
-  $go = null;
-  $go = (function() use (&$go, &$op) {
-  $__fn = function($b, $xs = null) use (&$go, &$op, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_List_Lazy_Types_foldableList"];
+  $go_1_0 = null;
+  $go_1_0 = (function() use (&$go_1_0, $op_0) {
+  $__fn = function($b_2, $xs_3 = null) use (&$go_1_0, $op_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $v_0 = (($GLOBALS['Data_List_Lazy_Types_step'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_step')))($xs);
-  if ((is_object($v_0) && (($v_0)->tag === "Nil"))) {
-$__t1 = $b;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "go_1_0"), recVars=["Data_List_Lazy_Types_foldableList","go_1_0"];
+  while (true) {
+$v_4_1 = (($GLOBALS['Data_List_Lazy_Types_step'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_step')))($xs_3);
+if ((is_object($v_4_1) && (($v_4_1)->tag === "Nil"))) {
+$__t2 = $b_2;
 } else {
-if ((is_object($v_0) && (($v_0)->tag === "Cons"))) {
-$__t1 = (($go)((($op)($b))(($v_0)->value0)))(($v_0)->value1);
+if ((is_object($v_4_1) && (($v_4_1)->tag === "Cons"))) {
+$__tco_3 = (($op_0)($b_2))(($v_4_1)->value0);
+$__tco_4 = ($v_4_1)->value1;
+$b_2 = $__tco_3;
+$xs_3 = $__tco_4;
+continue ;
+$__t2 = null;
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t1 = null;
+$__t2 = null;
 };
 };
-  $__res = $__t1;
-  goto __end;;
+$__res = $__t2;
+goto __end;;
+};
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })();
-  $__res = $go;
+  $__res = $go_1_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "foldMap" => function($dictMonoid) {
+}, "foldMap" => function($dictMonoid_0) {
   $__num = \func_num_args();
-  $mempty_2 = ($dictMonoid)->mempty;
-  $__res = function($f) use (&$dictMonoid, &$mempty_2) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_List_Lazy_Types_foldableList"];
+  $mempty_1_5 = ($dictMonoid_0)->mempty;
+  $__res = function($f_2) use ($dictMonoid_0, $mempty_1_5) {
   $__num = \func_num_args();
-  $__res = (((($GLOBALS['Data_List_Lazy_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_foldableList')))->foldl)((function() use (&$dictMonoid, &$f) {
-  $__fn = function($b, $a = null) use (&$dictMonoid, &$f, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_List_Lazy_Types_foldableList"];
+  $__res = (((($GLOBALS['Data_List_Lazy_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_foldableList')))->foldl)((function() use ($dictMonoid_0, $f_2) {
+  $__fn = function($b_3, $a_4 = null) use ($dictMonoid_0, $f_2, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((($dictMonoid)->Semigroup0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->append)($b))(($f)($a));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_List_Lazy_Types_foldableList"];
+  $__res = ((((($dictMonoid_0)->Semigroup0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->append)($b_3))(($f_2)($a_4));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))($mempty_2);
+})()))($mempty_1_5);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -545,49 +599,54 @@ $__t1 = null;
 }]; return $v; };
 \PhpursThunks::$thunks['Data_List_Lazy_Types_foldableNonEmpty'] = function() { $v = (($GLOBALS['Data_NonEmpty_foldableNonEmpty'] ?? \PhpursThunks::eval('Data_NonEmpty_foldableNonEmpty')))(($GLOBALS['Data_List_Lazy_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_foldableList'))); return $v; };
 \PhpursThunks::$thunks['Data_List_Lazy_Types_extendList'] = function() { $v = (object)["extend" => (function() {
-  $__fn = function($f, $l = null) use (&$__fn) {
+  $__fn = function($f_0, $l_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $v_0 = (($GLOBALS['Data_List_Lazy_Types_step'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_step')))($l);
-  if ((is_object($v_0) && (($v_0)->tag === "Nil"))) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $v_2_0 = (($GLOBALS['Data_List_Lazy_Types_step'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_step')))($l_1);
+  if ((is_object($v_2_0) && (($v_2_0)->tag === "Nil"))) {
 $__t1 = ($GLOBALS['Data_List_Lazy_Types_nil'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_nil'));
 } else {
-if ((is_object($v_0) && (($v_0)->tag === "Cons"))) {
-$__local_var_2 = ($f)($l);
-$__local_var_7 = (((((($GLOBALS['Data_List_Lazy_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_foldableList')))->foldr)((function() use (&$f) {
-  $__fn = function($a, $v = null) use (&$f, &$__fn) {
+if ((is_object($v_2_0) && (($v_2_0)->tag === "Cons"))) {
+$__local_var_3_2 = ($f_0)($l_1);
+$__local_var_4_3 = (((((($GLOBALS['Data_List_Lazy_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_foldableList')))->foldr)((function() use ($f_0) {
+  $__fn = function($a_4, $v_5 = null) use ($f_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__local_var_3 = ($v)->acc;
-  $__local_var_4 = ($v)->val;
-  $acc__prime___5 = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v) use (&$__local_var_3, &$a) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__local_var_6_3 = ($v_5)->acc;
+  $__local_var_7_4 = ($v_5)->val;
+  $acc__prime___8_5 = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v_8) use ($__local_var_6_3, $a_4) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Cons", $a, $__local_var_3);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = new Phpurs_Data2("Cons", $a_4, $__local_var_6_3);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 });
-  $__local_var_6 = ($f)($acc__prime___5);
-  $__res = (object)["val" => (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v) use (&$__local_var_4, &$__local_var_6) {
+  $__local_var_9_6 = ($f_0)($acc__prime___8_5);
+  $__res = (object)["val" => (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v_10) use ($__local_var_7_4, $__local_var_9_6) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Cons", $__local_var_6, $__local_var_4);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = new Phpurs_Data2("Cons", $__local_var_9_6, $__local_var_7_4);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}), "acc" => $acc__prime___5];
+}), "acc" => $acc__prime___8_5];
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))((object)["val" => ($GLOBALS['Data_List_Lazy_Types_nil'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_nil')), "acc" => ($GLOBALS['Data_List_Lazy_Types_nil'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_nil'))]))(($v_0)->value1))->val;
-$__t1 = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v) use (&$__local_var_2, &$__local_var_7) {
+})()))((object)["val" => ($GLOBALS['Data_List_Lazy_Types_nil'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_nil')), "acc" => ($GLOBALS['Data_List_Lazy_Types_nil'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_nil'))]))(($v_2_0)->value1))->val;
+$__t1 = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v_5) use ($__local_var_3_2, $__local_var_4_3) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Cons", $__local_var_2, $__local_var_7);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = new Phpurs_Data2("Cons", $__local_var_3_2, $__local_var_4_3);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -605,44 +664,51 @@ $__t1 = null;
   return $__fn;
 })(), "Functor0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_List_Lazy_Types_functorList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_functorList'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
 \PhpursThunks::$thunks['Data_List_Lazy_Types_extendNonEmptyList'] = function() { $v = (object)["extend" => (function() {
-  $__fn = function($f, $v = null) use (&$__fn) {
+  $__fn = function($f_0, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__local_var_0 = ((($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($v))->value1;
-  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v2) use (&$__local_var_0, &$f, &$v) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__local_var_2_0 = ((($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($v_1))->value1;
+  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v2_3) use ($__local_var_2_0, $f_0, $v_1) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("NonEmpty", ($f)($v), (((((($GLOBALS['Data_List_Lazy_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_foldableList')))->foldr)((function() use (&$f) {
-  $__fn = function($a, $v1 = null) use (&$f, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = new Phpurs_Data2("NonEmpty", ($f_0)($v_1), (((((($GLOBALS['Data_List_Lazy_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_foldableList')))->foldr)((function() use ($f_0) {
+  $__fn = function($a_4, $v1_5 = null) use ($f_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__local_var_1 = ($v1)->acc;
-  $__local_var_2 = ($v1)->val;
-  $__local_var_3 = ($f)((($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v2) use (&$__local_var_1, &$a) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__local_var_6_1 = ($v1_5)->acc;
+  $__local_var_7_2 = ($v1_5)->val;
+  $__local_var_8_3 = ($f_0)((($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v2_8) use ($__local_var_6_1, $a_4) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("NonEmpty", $a, $__local_var_1);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = new Phpurs_Data2("NonEmpty", $a_4, $__local_var_6_1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }));
-  $__res = (object)["val" => (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v) use (&$__local_var_2, &$__local_var_3) {
+  $__res = (object)["val" => (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v_9) use ($__local_var_7_2, $__local_var_8_3) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Cons", $__local_var_3, $__local_var_2);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = new Phpurs_Data2("Cons", $__local_var_8_3, $__local_var_7_2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}), "acc" => (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v) use (&$__local_var_1, &$a) {
+}), "acc" => (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v_8) use ($__local_var_6_1, $a_4) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Cons", $a, $__local_var_1);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = new Phpurs_Data2("Cons", $a_4, $__local_var_6_1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -652,7 +718,7 @@ $__t1 = null;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))((object)["val" => ($GLOBALS['Data_List_Lazy_Types_nil'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_nil')), "acc" => ($GLOBALS['Data_List_Lazy_Types_nil'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_nil'))]))($__local_var_0))->val);
+})()))((object)["val" => ($GLOBALS['Data_List_Lazy_Types_nil'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_nil')), "acc" => ($GLOBALS['Data_List_Lazy_Types_nil'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_nil'))]))($__local_var_2_0))->val);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -664,45 +730,50 @@ $__t1 = null;
   return $__fn;
 })(), "Functor0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_List_Lazy_Types_functorNonEmptyList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_functorNonEmptyList'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
 \PhpursThunks::$thunks['Data_List_Lazy_Types_foldableNonEmptyList'] = function() { $v = (object)["foldr" => (function() {
-  $__fn = function($f, $b = null, $v = null) use (&$__fn) {
+  $__fn = function($f_0, $b_1 = null, $v_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((((($GLOBALS['Data_List_Lazy_Types_foldableNonEmpty'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_foldableNonEmpty')))->foldr)($f))($b))((($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($v));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((((($GLOBALS['Data_List_Lazy_Types_foldableNonEmpty'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_foldableNonEmpty')))->foldr)($f_0))($b_1))((($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($v_2));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
 })(), "foldl" => (function() {
-  $__fn = function($f, $b = null, $v = null) use (&$__fn) {
+  $__fn = function($f_0, $b_1 = null, $v_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((((($GLOBALS['Data_List_Lazy_Types_foldableNonEmpty'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_foldableNonEmpty')))->foldl)($f))($b))((($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($v));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((((($GLOBALS['Data_List_Lazy_Types_foldableNonEmpty'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_foldableNonEmpty')))->foldl)($f_0))($b_1))((($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($v_2));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(), "foldMap" => function($dictMonoid) {
+})(), "foldMap" => function($dictMonoid_0) {
   $__num = \func_num_args();
-  $foldMap1_0 = ((($GLOBALS['Data_List_Lazy_Types_foldableNonEmpty'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_foldableNonEmpty')))->foldMap)($dictMonoid);
-  $__res = (function() use (&$foldMap1_0) {
-  $__fn = function($f, $v = null) use (&$foldMap1_0, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $foldMap1_1_0 = ((($GLOBALS['Data_List_Lazy_Types_foldableNonEmpty'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_foldableNonEmpty')))->foldMap)($dictMonoid_0);
+  $__res = (function() use ($foldMap1_1_0) {
+  $__fn = function($f_2, $v_3 = null) use ($foldMap1_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($foldMap1_0)($f))((($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($v));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($foldMap1_1_0)($f_2))((($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($v_3));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -713,28 +784,31 @@ $__t1 = null;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
-\PhpursThunks::$thunks['Data_List_Lazy_Types_showList'] = function() { $v = function($dictShow) {
+\PhpursThunks::$thunks['Data_List_Lazy_Types_showList'] = function() { $v = function($dictShow_0) {
   $__num = \func_num_args();
-  $__res = (object)["show" => function($xs) use (&$dictShow) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_List_Lazy_Types_showList"), recVars=[];
+  $__res = (object)["show" => function($xs_1) use ($dictShow_0) {
   $__num = \func_num_args();
-  $v_0 = (($GLOBALS['Data_List_Lazy_Types_step'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_step')))($xs);
-  if ((is_object($v_0) && (($v_0)->tag === "Nil"))) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $v_2_0 = (($GLOBALS['Data_List_Lazy_Types_step'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_step')))($xs_1);
+  if ((is_object($v_2_0) && (($v_2_0)->tag === "Nil"))) {
 $__t1 = "";
 } else {
-if ((is_object($v_0) && (($v_0)->tag === "Cons"))) {
-$__t1 = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))((($dictShow)->show)(($v_0)->value0)))(((((($GLOBALS['Data_List_Lazy_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_foldableList')))->foldl)((function() use (&$dictShow) {
-  $__fn = function($shown, $x__prime__ = null) use (&$dictShow, &$__fn) {
+if ((is_object($v_2_0) && (($v_2_0)->tag === "Cons"))) {
+$__t1 = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))((($dictShow_0)->show)(($v_2_0)->value0)))(((((($GLOBALS['Data_List_Lazy_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_foldableList')))->foldl)((function() use ($dictShow_0) {
+  $__fn = function($shown_3, $x__prime___4 = null) use ($dictShow_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))($shown))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))(","))((($dictShow)->show)($x__prime__)));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))($shown_3))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))(","))((($dictShow_0)->show)($x__prime___4)));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))(""))(($v_0)->value1));
+})()))(""))(($v_2_0)->value1));
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t1 = null;
@@ -749,11 +823,13 @@ $__t1 = null;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_List_Lazy_Types_showNonEmptyList'] = function() { $v = function($dictShow) {
+\PhpursThunks::$thunks['Data_List_Lazy_Types_showNonEmptyList'] = function() { $v = function($dictShow_0) {
   $__num = \func_num_args();
-  $__res = (object)["show" => function($v) use (&$dictShow) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_List_Lazy_Types_showNonEmptyList"), recVars=[];
+  $__res = (object)["show" => function($v_1) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("(NonEmptyList "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))((((($GLOBALS['Data_Lazy_showLazy'] ?? \PhpursThunks::eval('Data_Lazy_showLazy')))(((($GLOBALS['Data_NonEmpty_showNonEmpty'] ?? \PhpursThunks::eval('Data_NonEmpty_showNonEmpty')))($dictShow))((($GLOBALS['Data_List_Lazy_Types_showList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_showList')))($dictShow))))->show)($v)))(")"));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("(NonEmptyList "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))((((($GLOBALS['Data_Lazy_showLazy'] ?? \PhpursThunks::eval('Data_Lazy_showLazy')))(((($GLOBALS['Data_NonEmpty_showNonEmpty'] ?? \PhpursThunks::eval('Data_NonEmpty_showNonEmpty')))($dictShow_0))((($GLOBALS['Data_List_Lazy_Types_showList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_showList')))($dictShow_0))))->show)($v_1)))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -762,15 +838,17 @@ $__t1 = null;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_List_Lazy_Types_showStep'] = function() { $v = function($dictShow) {
+\PhpursThunks::$thunks['Data_List_Lazy_Types_showStep'] = function() { $v = function($dictShow_0) {
   $__num = \func_num_args();
-  $__res = (object)["show" => function($v) use (&$dictShow) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_List_Lazy_Types_showStep"), recVars=[];
+  $__res = (object)["show" => function($v_1) use ($dictShow_0) {
   $__num = \func_num_args();
-  if ((is_object($v) && (($v)->tag === "Nil"))) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  if ((is_object($v_1) && (($v_1)->tag === "Nil"))) {
 $__t0 = "Nil";
 } else {
-if ((is_object($v) && (($v)->tag === "Cons"))) {
-$__t0 = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("("))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))((($dictShow)->show)(($v)->value0)))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))(" : "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))((((($GLOBALS['Data_List_Lazy_Types_showList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_showList')))($dictShow))->show)(($v)->value1)))(")"))));
+if ((is_object($v_1) && (($v_1)->tag === "Cons"))) {
+$__t0 = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("("))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))((($dictShow_0)->show)(($v_1)->value0)))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))(" : "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))((((($GLOBALS['Data_List_Lazy_Types_showList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_showList')))($dictShow_0))->show)(($v_1)->value1)))(")"))));
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t0 = null;
@@ -786,20 +864,24 @@ $__t0 = null;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Data_List_Lazy_Types_foldableWithIndexList'] = function() { $v = (object)["foldrWithIndex" => (function() {
-  $__fn = function($f, $b = null, $xs = null) use (&$__fn) {
+  $__fn = function($f_0, $b_1 = null, $xs_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $v_2 = ((((($GLOBALS['Data_List_Lazy_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_foldableList')))->foldl)(function($v1) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_List_Lazy_Types_foldableWithIndexList"];
+  $v_3_0 = ((((($GLOBALS['Data_List_Lazy_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_foldableList')))->foldl)(function($v1_3) {
   $__num = \func_num_args();
-  $__local_var_0 = ($v1)->value1;
-  $__local_var_1 = ($v1)->value0;
-  $__res = function($a) use (&$__local_var_0, &$__local_var_1) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_List_Lazy_Types_foldableWithIndexList"];
+  $__local_var_4_0 = ($v1_3)->value1;
+  $__local_var_5_1 = ($v1_3)->value0;
+  $__res = function($a_6) use ($__local_var_4_0, $__local_var_5_1) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Tuple", ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))($__local_var_1))(1), (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v) use (&$__local_var_0, &$a) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_List_Lazy_Types_foldableWithIndexList"];
+  $__res = new Phpurs_Data2("Tuple", ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))($__local_var_5_1))(1), (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v_7) use ($__local_var_4_0, $a_6) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Cons", $a, $__local_var_0);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_List_Lazy_Types_foldableWithIndexList"];
+  $__res = new Phpurs_Data2("Cons", $a_6, $__local_var_4_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -811,14 +893,16 @@ $__t0 = null;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(new Phpurs_Data2("Tuple", 0, ($GLOBALS['Data_List_Lazy_Types_nil'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_nil')))))($xs);
-  $__res = (((((($GLOBALS['Data_List_Lazy_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_foldableList')))->foldl)(function($v1) use (&$f) {
+}))(new Phpurs_Data2("Tuple", 0, ($GLOBALS['Data_List_Lazy_Types_nil'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_nil')))))($xs_2);
+  $__res = (((((($GLOBALS['Data_List_Lazy_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_foldableList')))->foldl)(function($v1_4) use ($f_0) {
   $__num = \func_num_args();
-  $__local_var_3 = ($v1)->value1;
-  $__local_var_4 = ($v1)->value0;
-  $__res = function($a) use (&$__local_var_3, &$__local_var_4, &$f) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_List_Lazy_Types_foldableWithIndexList"];
+  $__local_var_5_3 = ($v1_4)->value1;
+  $__local_var_6_4 = ($v1_4)->value0;
+  $__res = function($a_7) use ($__local_var_5_3, $__local_var_6_4, $f_0) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Tuple", ((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($__local_var_4))(1), ((($f)(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($__local_var_4))(1)))($a))($__local_var_3));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_List_Lazy_Types_foldableWithIndexList"];
+  $__res = new Phpurs_Data2("Tuple", ((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($__local_var_6_4))(1), ((($f_0)(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($__local_var_6_4))(1)))($a_7))($__local_var_5_3));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -826,25 +910,28 @@ $__t0 = null;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(new Phpurs_Data2("Tuple", ($v_2)->value0, $b)))(($v_2)->value1))->value1;
+}))(new Phpurs_Data2("Tuple", ($v_3_0)->value0, $b_1)))(($v_3_0)->value1))->value1;
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
 })(), "foldlWithIndex" => (function() {
-  $__fn = function($f, $acc = null) use (&$__fn) {
+  $__fn = function($f_0, $acc_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Tuple_snd'] ?? \PhpursThunks::eval('Data_Tuple_snd'))))((((($GLOBALS['Data_List_Lazy_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_foldableList')))->foldl)(function($v) use (&$f) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_List_Lazy_Types_foldableWithIndexList"];
+  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Tuple_snd'] ?? \PhpursThunks::eval('Data_Tuple_snd'))))((((($GLOBALS['Data_List_Lazy_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_foldableList')))->foldl)(function($v_2) use ($f_0) {
   $__num = \func_num_args();
-  $__local_var_5 = ($v)->value1;
-  $__local_var_6 = ($v)->value0;
-  $__res = function($a) use (&$__local_var_5, &$__local_var_6, &$f) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_List_Lazy_Types_foldableWithIndexList"];
+  $__local_var_3_5 = ($v_2)->value1;
+  $__local_var_4_6 = ($v_2)->value0;
+  $__res = function($a_5) use ($__local_var_3_5, $__local_var_4_6, $f_0) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Tuple", ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))($__local_var_6))(1), ((($f)($__local_var_6))($__local_var_5))($a));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_List_Lazy_Types_foldableWithIndexList"];
+  $__res = new Phpurs_Data2("Tuple", ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))($__local_var_4_6))(1), ((($f_0)($__local_var_4_6))($__local_var_3_5))($a_5));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -852,30 +939,33 @@ $__t0 = null;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(new Phpurs_Data2("Tuple", 0, $acc)));
+}))(new Phpurs_Data2("Tuple", 0, $acc_1)));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "foldMapWithIndex" => function($dictMonoid) {
+})(), "foldMapWithIndex" => function($dictMonoid_0) {
   $__num = \func_num_args();
-  $mempty_7 = ($dictMonoid)->mempty;
-  $__res = function($f) use (&$dictMonoid, &$mempty_7) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_List_Lazy_Types_foldableWithIndexList"];
+  $mempty_1_7 = ($dictMonoid_0)->mempty;
+  $__res = function($f_2) use ($dictMonoid_0, $mempty_1_7) {
   $__num = \func_num_args();
-  $__res = (((($GLOBALS['Data_List_Lazy_Types_foldableWithIndexList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_foldableWithIndexList')))->foldlWithIndex)((function() use (&$dictMonoid, &$f) {
-  $__fn = function($i, $acc = null) use (&$dictMonoid, &$f, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_List_Lazy_Types_foldableWithIndexList"];
+  $__res = (((($GLOBALS['Data_List_Lazy_Types_foldableWithIndexList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_foldableWithIndexList')))->foldlWithIndex)((function() use ($dictMonoid_0, $f_2) {
+  $__fn = function($i_3, $acc_4 = null) use ($dictMonoid_0, $f_2, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((((($dictMonoid)->Semigroup0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->append)($acc)))(($f)($i));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_List_Lazy_Types_foldableWithIndexList"];
+  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((((($dictMonoid_0)->Semigroup0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->append)($acc_4)))(($f_2)($i_3));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))($mempty_7);
+})()))($mempty_1_7);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -885,29 +975,33 @@ $__t0 = null;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Foldable0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_List_Lazy_Types_foldableWithIndexList"];
   $__res = ($GLOBALS['Data_List_Lazy_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_foldableList'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
 \PhpursThunks::$thunks['Data_List_Lazy_Types_foldableWithIndexNonEmpty'] = function() { $v = (($GLOBALS['Data_NonEmpty_foldableWithIndexNonEmpty'] ?? \PhpursThunks::eval('Data_NonEmpty_foldableWithIndexNonEmpty')))(($GLOBALS['Data_List_Lazy_Types_foldableWithIndexList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_foldableWithIndexList'))); return $v; };
-\PhpursThunks::$thunks['Data_List_Lazy_Types_foldableWithIndexNonEmptyList'] = function() { $v = (object)["foldMapWithIndex" => function($dictMonoid) {
+\PhpursThunks::$thunks['Data_List_Lazy_Types_foldableWithIndexNonEmptyList'] = function() { $v = (object)["foldMapWithIndex" => function($dictMonoid_0) {
   $__num = \func_num_args();
-  $foldMapWithIndex1_0 = ((($GLOBALS['Data_List_Lazy_Types_foldableWithIndexNonEmpty'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_foldableWithIndexNonEmpty')))->foldMapWithIndex)($dictMonoid);
-  $__res = (function() use (&$foldMapWithIndex1_0) {
-  $__fn = function($f, $v = null) use (&$foldMapWithIndex1_0, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $foldMapWithIndex1_1_0 = ((($GLOBALS['Data_List_Lazy_Types_foldableWithIndexNonEmpty'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_foldableWithIndexNonEmpty')))->foldMapWithIndex)($dictMonoid_0);
+  $__res = (function() use ($foldMapWithIndex1_1_0) {
+  $__fn = function($f_2, $v_3 = null) use ($foldMapWithIndex1_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__local_var_1 = (($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))(1);
-  $__res = (($foldMapWithIndex1_0)(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($f))(function($v2) use (&$__local_var_1) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__local_var_4_1 = (($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))(1);
+  $__res = (($foldMapWithIndex1_1_0)(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($f_2))(function($v2_5) use ($__local_var_4_1) {
   $__num = \func_num_args();
-  if ((is_object($v2) && (($v2)->tag === "Nothing"))) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  if ((is_object($v2_5) && (($v2_5)->tag === "Nothing"))) {
 $__t2 = 0;
 } else {
-if ((is_object($v2) && (($v2)->tag === "Just"))) {
-$__t2 = ($__local_var_1)(($v2)->value0);
+if ((is_object($v2_5) && (($v2_5)->tag === "Just"))) {
+$__t2 = ($__local_var_4_1)(($v2_5)->value0);
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t2 = null;
@@ -917,7 +1011,7 @@ $__t2 = null;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-})))((($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($v));
+})))((($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($v_3));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -928,19 +1022,21 @@ $__t2 = null;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "foldlWithIndex" => (function() {
-  $__fn = function($f, $b = null, $v = null) use (&$__fn) {
+  $__fn = function($f_0, $b_1 = null, $v_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__local_var_3 = (($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))(1);
-  $__res = ((((($GLOBALS['Data_List_Lazy_Types_foldableWithIndexNonEmpty'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_foldableWithIndexNonEmpty')))->foldlWithIndex)(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($f))(function($v2) use (&$__local_var_3) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__local_var_3_3 = (($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))(1);
+  $__res = ((((($GLOBALS['Data_List_Lazy_Types_foldableWithIndexNonEmpty'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_foldableWithIndexNonEmpty')))->foldlWithIndex)(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($f_0))(function($v2_4) use ($__local_var_3_3) {
   $__num = \func_num_args();
-  if ((is_object($v2) && (($v2)->tag === "Nothing"))) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  if ((is_object($v2_4) && (($v2_4)->tag === "Nothing"))) {
 $__t4 = 0;
 } else {
-if ((is_object($v2) && (($v2)->tag === "Just"))) {
-$__t4 = ($__local_var_3)(($v2)->value0);
+if ((is_object($v2_4) && (($v2_4)->tag === "Just"))) {
+$__t4 = ($__local_var_3_3)(($v2_4)->value0);
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t4 = null;
@@ -950,26 +1046,28 @@ $__t4 = null;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-})))($b))((($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($v));
+})))($b_1))((($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($v_2));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
 })(), "foldrWithIndex" => (function() {
-  $__fn = function($f, $b = null, $v = null) use (&$__fn) {
+  $__fn = function($f_0, $b_1 = null, $v_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__local_var_5 = (($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))(1);
-  $__res = ((((($GLOBALS['Data_List_Lazy_Types_foldableWithIndexNonEmpty'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_foldableWithIndexNonEmpty')))->foldrWithIndex)(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($f))(function($v2) use (&$__local_var_5) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__local_var_3_5 = (($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))(1);
+  $__res = ((((($GLOBALS['Data_List_Lazy_Types_foldableWithIndexNonEmpty'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_foldableWithIndexNonEmpty')))->foldrWithIndex)(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($f_0))(function($v2_4) use ($__local_var_3_5) {
   $__num = \func_num_args();
-  if ((is_object($v2) && (($v2)->tag === "Nothing"))) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  if ((is_object($v2_4) && (($v2_4)->tag === "Nothing"))) {
 $__t6 = 0;
 } else {
-if ((is_object($v2) && (($v2)->tag === "Just"))) {
-$__t6 = ($__local_var_5)(($v2)->value0);
+if ((is_object($v2_4) && (($v2_4)->tag === "Just"))) {
+$__t6 = ($__local_var_3_5)(($v2_4)->value0);
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t6 = null;
@@ -979,7 +1077,7 @@ $__t6 = null;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-})))($b))((($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($v));
+})))($b_1))((($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($v_2));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -987,23 +1085,27 @@ $__t6 = null;
   return $__fn;
 })(), "Foldable0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_List_Lazy_Types_foldableNonEmptyList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_foldableNonEmptyList'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
-\PhpursThunks::$thunks['Data_List_Lazy_Types_functorWithIndexList'] = function() { $v = (object)["mapWithIndex" => function($f) {
+\PhpursThunks::$thunks['Data_List_Lazy_Types_functorWithIndexList'] = function() { $v = (object)["mapWithIndex" => function($f_0) {
   $__num = \func_num_args();
-  $__res = (((($GLOBALS['Data_List_Lazy_Types_foldableWithIndexList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_foldableWithIndexList')))->foldrWithIndex)((function() use (&$f) {
-  $__fn = function($i, $x = null, $acc = null) use (&$f, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (((($GLOBALS['Data_List_Lazy_Types_foldableWithIndexList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_foldableWithIndexList')))->foldrWithIndex)((function() use ($f_0) {
+  $__fn = function($i_1, $x_2 = null, $acc_3 = null) use ($f_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__local_var_0 = (($f)($i))($x);
-  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v) use (&$__local_var_0, &$acc) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__local_var_4_0 = (($f_0)($i_1))($x_2);
+  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v_5) use ($__local_var_4_0, $acc_3) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Cons", $__local_var_0, $acc);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = new Phpurs_Data2("Cons", $__local_var_4_0, $acc_3);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1019,6 +1121,7 @@ $__t6 = null;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Functor0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_List_Lazy_Types_functorList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_functorList'));
   goto __end;;
   __end:
@@ -1026,21 +1129,24 @@ $__t6 = null;
 }]; return $v; };
 \PhpursThunks::$thunks['Data_List_Lazy_Types_mapWithIndex'] = function() { $v = ((($GLOBALS['Data_NonEmpty_functorWithIndex'] ?? \PhpursThunks::eval('Data_NonEmpty_functorWithIndex')))(($GLOBALS['Data_List_Lazy_Types_functorWithIndexList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_functorWithIndexList'))))->mapWithIndex; return $v; };
 \PhpursThunks::$thunks['Data_List_Lazy_Types_functorWithIndexNonEmptyList'] = function() { $v = (object)["mapWithIndex" => (function() {
-  $__fn = function($f, $v = null) use (&$__fn) {
+  $__fn = function($f_0, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v1) use (&$f, &$v) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v1_2) use ($f_0, $v_1) {
   $__num = \func_num_args();
-  $__local_var_0 = (($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))(1);
-  $__res = ((($GLOBALS['Data_List_Lazy_Types_mapWithIndex'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_mapWithIndex')))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($f))(function($v2) use (&$__local_var_0) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__local_var_3_0 = (($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))(1);
+  $__res = ((($GLOBALS['Data_List_Lazy_Types_mapWithIndex'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_mapWithIndex')))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($f_0))(function($v2_4) use ($__local_var_3_0) {
   $__num = \func_num_args();
-  if ((is_object($v2) && (($v2)->tag === "Nothing"))) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  if ((is_object($v2_4) && (($v2_4)->tag === "Nothing"))) {
 $__t1 = 0;
 } else {
-if ((is_object($v2) && (($v2)->tag === "Just"))) {
-$__t1 = ($__local_var_0)(($v2)->value0);
+if ((is_object($v2_4) && (($v2_4)->tag === "Just"))) {
+$__t1 = ($__local_var_3_0)(($v2_4)->value0);
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t1 = null;
@@ -1050,7 +1156,7 @@ $__t1 = null;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-})))((($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($v));
+})))((($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($v_1));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1062,21 +1168,25 @@ $__t1 = null;
   return $__fn;
 })(), "Functor0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_List_Lazy_Types_functorNonEmptyList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_functorNonEmptyList'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
-\PhpursThunks::$thunks['Data_List_Lazy_Types_toList'] = function() { $v = function($v) {
+\PhpursThunks::$thunks['Data_List_Lazy_Types_toList'] = function() { $v = function($v_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_List_Lazy_Types_step'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_step'))))(function($v1) use (&$v) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_List_Lazy_Types_toList"), recVars=[];
+  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_List_Lazy_Types_step'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_step'))))(function($v1_1) use ($v_0) {
   $__num = \func_num_args();
-  $v2_0 = (($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($v);
-  $__local_var_1 = ($v2_0)->value0;
-  $__local_var_2 = ($v2_0)->value1;
-  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v) use (&$__local_var_1, &$__local_var_2) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $v2_2_0 = (($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($v_0);
+  $__local_var_3_1 = ($v2_2_0)->value0;
+  $__local_var_4_2 = ($v2_2_0)->value1;
+  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v_5) use ($__local_var_3_1, $__local_var_4_2) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Cons", $__local_var_1, $__local_var_2);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = new Phpurs_Data2("Cons", $__local_var_3_1, $__local_var_4_2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1090,17 +1200,19 @@ $__t1 = null;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Data_List_Lazy_Types_semigroupNonEmptyList'] = function() { $v = (object)["append" => (function() {
-  $__fn = function($v, $as__prime__ = null) use (&$__fn) {
+  $__fn = function($v_0, $as__prime___1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $v1_0 = (($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($v);
-  $__local_var_1 = ($v1_0)->value0;
-  $__local_var_2 = ($v1_0)->value1;
-  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v2) use (&$__local_var_1, &$__local_var_2, &$as__prime__) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $v1_2_0 = (($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($v_0);
+  $__local_var_3_1 = ($v1_2_0)->value0;
+  $__local_var_4_2 = ($v1_2_0)->value1;
+  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v2_5) use ($__local_var_3_1, $__local_var_4_2, $as__prime___1) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("NonEmpty", $__local_var_1, (((($GLOBALS['Data_List_Lazy_Types_semigroupList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_semigroupList')))->append)($__local_var_2))((($GLOBALS['Data_List_Lazy_Types_toList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_toList')))($as__prime__)));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = new Phpurs_Data2("NonEmpty", $__local_var_3_1, (((($GLOBALS['Data_List_Lazy_Types_semigroupList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_semigroupList')))->append)($__local_var_4_2))((($GLOBALS['Data_List_Lazy_Types_toList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_toList')))($as__prime___1)));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1111,24 +1223,27 @@ $__t1 = null;
   };
   return $__fn;
 })()]; return $v; };
-\PhpursThunks::$thunks['Data_List_Lazy_Types_traversableList'] = function() { $v = (object)["traverse" => function($dictApplicative) {
+\PhpursThunks::$thunks['Data_List_Lazy_Types_traversableList'] = function() { $v = (object)["traverse" => function($dictApplicative_0) {
   $__num = \func_num_args();
-  $Apply0_0 = (($dictApplicative)->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $__res = function($f) use (&$Apply0_0, &$dictApplicative) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_List_Lazy_Types_traversableList"];
+  $Apply0_1_0 = (($dictApplicative_0)->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__res = function($f_2) use ($Apply0_1_0, $dictApplicative_0) {
   $__num = \func_num_args();
-  $__res = (((($GLOBALS['Data_List_Lazy_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_foldableList')))->foldr)((function() use (&$Apply0_0, &$f) {
-  $__fn = function($a, $b = null) use (&$Apply0_0, &$f, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_List_Lazy_Types_traversableList"];
+  $__res = (((($GLOBALS['Data_List_Lazy_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_foldableList')))->foldr)((function() use ($Apply0_1_0, $f_2) {
+  $__fn = function($a_3, $b_4 = null) use ($Apply0_1_0, $f_2, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($Apply0_0)->apply)(((((($Apply0_0)->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->map)(($GLOBALS['Data_List_Lazy_Types_cons'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_cons'))))(($f)($a))))($b);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_List_Lazy_Types_traversableList"];
+  $__res = ((($Apply0_1_0)->apply)(((((($Apply0_1_0)->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->map)(($GLOBALS['Data_List_Lazy_Types_cons'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_cons'))))(($f_2)($a_3))))($b_4);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))((($dictApplicative)->pure)(($GLOBALS['Data_List_Lazy_Types_nil'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_nil'))));
+})()))((($dictApplicative_0)->pure)(($GLOBALS['Data_List_Lazy_Types_nil'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_nil'))));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1136,40 +1251,47 @@ $__t1 = null;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "sequence" => function($dictApplicative) {
+}, "sequence" => function($dictApplicative_0) {
   $__num = \func_num_args();
-  $__res = (((($GLOBALS['Data_List_Lazy_Types_traversableList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_traversableList')))->traverse)($dictApplicative))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->identity);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_List_Lazy_Types_traversableList"];
+  $__res = (((($GLOBALS['Data_List_Lazy_Types_traversableList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_traversableList')))->traverse)($dictApplicative_0))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->identity);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Functor0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_List_Lazy_Types_traversableList"];
   $__res = ($GLOBALS['Data_List_Lazy_Types_functorList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_functorList'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Foldable1" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_List_Lazy_Types_traversableList"];
   $__res = ($GLOBALS['Data_List_Lazy_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_foldableList'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
 \PhpursThunks::$thunks['Data_List_Lazy_Types_traversableNonEmpty'] = function() { $v = (($GLOBALS['Data_NonEmpty_traversableNonEmpty'] ?? \PhpursThunks::eval('Data_NonEmpty_traversableNonEmpty')))(($GLOBALS['Data_List_Lazy_Types_traversableList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_traversableList'))); return $v; };
-\PhpursThunks::$thunks['Data_List_Lazy_Types_traversableNonEmptyList'] = function() { $v = (object)["traverse" => function($dictApplicative) {
+\PhpursThunks::$thunks['Data_List_Lazy_Types_traversableNonEmptyList'] = function() { $v = (object)["traverse" => function($dictApplicative_0) {
   $__num = \func_num_args();
-  $traverse1_0 = ((($GLOBALS['Data_List_Lazy_Types_traversableNonEmpty'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_traversableNonEmpty')))->traverse)($dictApplicative);
-  $__res = (function() use (&$dictApplicative, &$traverse1_0) {
-  $__fn = function($f, $v = null) use (&$dictApplicative, &$traverse1_0, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $traverse1_1_0 = ((($GLOBALS['Data_List_Lazy_Types_traversableNonEmpty'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_traversableNonEmpty')))->traverse)($dictApplicative_0);
+  $__res = (function() use ($dictApplicative_0, $traverse1_1_0) {
+  $__fn = function($f_2, $v_3 = null) use ($dictApplicative_0, $traverse1_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((((($dictApplicative)->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->map)(function($xxs) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((((((($dictApplicative_0)->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->map)(function($xxs_4) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v1) use (&$xxs) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v1_5) use ($xxs_4) {
   $__num = \func_num_args();
-  $__res = $xxs;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $xxs_4;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1177,7 +1299,7 @@ $__t1 = null;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))((($traverse1_0)($f))((($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($v)));
+}))((($traverse1_1_0)($f_2))((($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($v_3)));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1187,16 +1309,20 @@ $__t1 = null;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "sequence" => function($dictApplicative) {
+}, "sequence" => function($dictApplicative_0) {
   $__num = \func_num_args();
-  $sequence1_1 = ((($GLOBALS['Data_List_Lazy_Types_traversableNonEmpty'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_traversableNonEmpty')))->sequence)($dictApplicative);
-  $__res = function($v) use (&$dictApplicative, &$sequence1_1) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $sequence1_1_1 = ((($GLOBALS['Data_List_Lazy_Types_traversableNonEmpty'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_traversableNonEmpty')))->sequence)($dictApplicative_0);
+  $__res = function($v_2) use ($dictApplicative_0, $sequence1_1_1) {
   $__num = \func_num_args();
-  $__res = ((((((($dictApplicative)->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->map)(function($xxs) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((((((($dictApplicative_0)->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->map)(function($xxs_3) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v1) use (&$xxs) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v1_4) use ($xxs_3) {
   $__num = \func_num_args();
-  $__res = $xxs;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $xxs_3;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1204,7 +1330,7 @@ $__t1 = null;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(($sequence1_1)((($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($v)));
+}))(($sequence1_1_1)((($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($v_2)));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1214,35 +1340,40 @@ $__t1 = null;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Functor0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_List_Lazy_Types_functorNonEmptyList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_functorNonEmptyList'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Foldable1" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_List_Lazy_Types_foldableNonEmptyList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_foldableNonEmptyList'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
-\PhpursThunks::$thunks['Data_List_Lazy_Types_traversableWithIndexList'] = function() { $v = (object)["traverseWithIndex" => function($dictApplicative) {
+\PhpursThunks::$thunks['Data_List_Lazy_Types_traversableWithIndexList'] = function() { $v = (object)["traverseWithIndex" => function($dictApplicative_0) {
   $__num = \func_num_args();
-  $Apply0_0 = (($dictApplicative)->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $__res = function($f) use (&$Apply0_0, &$dictApplicative) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $Apply0_1_0 = (($dictApplicative_0)->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__res = function($f_2) use ($Apply0_1_0, $dictApplicative_0) {
   $__num = \func_num_args();
-  $__res = (((($GLOBALS['Data_List_Lazy_Types_foldableWithIndexList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_foldableWithIndexList')))->foldrWithIndex)((function() use (&$Apply0_0, &$f) {
-  $__fn = function($i, $a = null, $b = null) use (&$Apply0_0, &$f, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (((($GLOBALS['Data_List_Lazy_Types_foldableWithIndexList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_foldableWithIndexList')))->foldrWithIndex)((function() use ($Apply0_1_0, $f_2) {
+  $__fn = function($i_3, $a_4 = null, $b_5 = null) use ($Apply0_1_0, $f_2, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($Apply0_0)->apply)(((((($Apply0_0)->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->map)(($GLOBALS['Data_List_Lazy_Types_cons'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_cons'))))((($f)($i))($a))))($b);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($Apply0_1_0)->apply)(((((($Apply0_1_0)->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->map)(($GLOBALS['Data_List_Lazy_Types_cons'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_cons'))))((($f_2)($i_3))($a_4))))($b_5);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})()))((($dictApplicative)->pure)(($GLOBALS['Data_List_Lazy_Types_nil'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_nil'))));
+})()))((($dictApplicative_0)->pure)(($GLOBALS['Data_List_Lazy_Types_nil'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_nil'))));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1252,39 +1383,46 @@ $__t1 = null;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "FunctorWithIndex0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_List_Lazy_Types_functorWithIndexList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_functorWithIndexList'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "FoldableWithIndex1" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_List_Lazy_Types_foldableWithIndexList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_foldableWithIndexList'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Traversable2" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_List_Lazy_Types_traversableList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_traversableList'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
 \PhpursThunks::$thunks['Data_List_Lazy_Types_traverseWithIndex'] = function() { $v = ((($GLOBALS['Data_NonEmpty_traversableWithIndexNonEmpty'] ?? \PhpursThunks::eval('Data_NonEmpty_traversableWithIndexNonEmpty')))(($GLOBALS['Data_List_Lazy_Types_traversableWithIndexList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_traversableWithIndexList'))))->traverseWithIndex; return $v; };
-\PhpursThunks::$thunks['Data_List_Lazy_Types_traversableWithIndexNonEmptyList'] = function() { $v = (object)["traverseWithIndex" => function($dictApplicative) {
+\PhpursThunks::$thunks['Data_List_Lazy_Types_traversableWithIndexNonEmptyList'] = function() { $v = (object)["traverseWithIndex" => function($dictApplicative_0) {
   $__num = \func_num_args();
-  $traverseWithIndex1_0 = (($GLOBALS['Data_List_Lazy_Types_traverseWithIndex'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_traverseWithIndex')))($dictApplicative);
-  $__res = (function() use (&$dictApplicative, &$traverseWithIndex1_0) {
-  $__fn = function($f, $v = null) use (&$dictApplicative, &$traverseWithIndex1_0, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $traverseWithIndex1_1_0 = (($GLOBALS['Data_List_Lazy_Types_traverseWithIndex'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_traverseWithIndex')))($dictApplicative_0);
+  $__res = (function() use ($dictApplicative_0, $traverseWithIndex1_1_0) {
+  $__fn = function($f_2, $v_3 = null) use ($dictApplicative_0, $traverseWithIndex1_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__local_var_1 = (($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))(1);
-  $__res = ((((((($dictApplicative)->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->map)(function($xxs) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__local_var_4_1 = (($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))(1);
+  $__res = ((((((($dictApplicative_0)->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->map)(function($xxs_4) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v1) use (&$xxs) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v1_5) use ($xxs_4) {
   $__num = \func_num_args();
-  $__res = $xxs;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $xxs_4;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1292,13 +1430,14 @@ $__t1 = null;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))((($traverseWithIndex1_0)(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($f))(function($v2) use (&$__local_var_1) {
+}))((($traverseWithIndex1_1_0)(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($f_2))(function($v2_5) use ($__local_var_4_1) {
   $__num = \func_num_args();
-  if ((is_object($v2) && (($v2)->tag === "Nothing"))) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  if ((is_object($v2_5) && (($v2_5)->tag === "Nothing"))) {
 $__t2 = 0;
 } else {
-if ((is_object($v2) && (($v2)->tag === "Just"))) {
-$__t2 = ($__local_var_1)(($v2)->value0);
+if ((is_object($v2_5) && (($v2_5)->tag === "Just"))) {
+$__t2 = ($__local_var_4_1)(($v2_5)->value0);
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t2 = null;
@@ -1308,7 +1447,7 @@ $__t2 = null;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-})))((($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($v)));
+})))((($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($v_3)));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1320,114 +1459,129 @@ $__t2 = null;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "FunctorWithIndex0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_List_Lazy_Types_functorWithIndexNonEmptyList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_functorWithIndexNonEmptyList'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "FoldableWithIndex1" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_List_Lazy_Types_foldableWithIndexNonEmptyList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_foldableWithIndexNonEmptyList'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Traversable2" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_List_Lazy_Types_traversableNonEmptyList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_traversableNonEmptyList'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
 \PhpursThunks::$thunks['Data_List_Lazy_Types_unfoldable1List'] = function() { $v = (function() use (&$__fn) {
-$go = null;
-$go = (function() use (&$go) {
-  $__fn = function($f, $b = null) use (&$go, &$__fn) {
+$go_0_0 = null;
+$go_0_0 = (function() use (&$go_0_0) {
+  $__fn = function($f_1, $b_2 = null) use (&$go_0_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_List_Lazy_Types_step'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_step'))))(function($v) use (&$b, &$f, &$go) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "go_0_0"), recVars=["go_0_0"];
+  while (true) {
+$__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_List_Lazy_Types_step'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_step'))))(function($v_3) use ($b_2, $f_1, &$go_0_0) {
   $__num = \func_num_args();
-  $v1_0 = ($f)($b);
-  if ((is_object(($v1_0)->value1) && ((($v1_0)->value1)->tag === "Just"))) {
-$__local_var_2 = ($v1_0)->value0;
-$__local_var_3 = (($go)($f))((($v1_0)->value1)->value0);
-$__t1 = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v) use (&$__local_var_2, &$__local_var_3) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["go_0_0"];
+  $v1_4_1 = ($f_1)($b_2);
+  if ((is_object(($v1_4_1)->value1) && ((($v1_4_1)->value1)->tag === "Just"))) {
+$__local_var_5_3 = ($v1_4_1)->value0;
+$__local_var_6_4 = (($go_0_0)($f_1))((($v1_4_1)->value1)->value0);
+$__t2 = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v_7) use ($__local_var_5_3, $__local_var_6_4) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Cons", $__local_var_2, $__local_var_3);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["go_0_0"];
+  $__res = new Phpurs_Data2("Cons", $__local_var_5_3, $__local_var_6_4);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 });
 } else {
-if ((is_object(($v1_0)->value1) && ((($v1_0)->value1)->tag === "Nothing"))) {
-$__local_var_4 = ($v1_0)->value0;
-$__t1 = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v) use (&$__local_var_4) {
+if ((is_object(($v1_4_1)->value1) && ((($v1_4_1)->value1)->tag === "Nothing"))) {
+$__local_var_5_5 = ($v1_4_1)->value0;
+$__t2 = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v_6) use ($__local_var_5_5) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Cons", $__local_var_4, ($GLOBALS['Data_List_Lazy_Types_nil'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_nil')));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["go_0_0"];
+  $__res = new Phpurs_Data2("Cons", $__local_var_5_5, ($GLOBALS['Data_List_Lazy_Types_nil'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_nil')));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 });
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t1 = null;
+$__t2 = null;
 };
 };
-  $__res = $__t1;
+  $__res = $__t2;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }));
-  goto __end;;
+goto __end;;
+};
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })();
-return (object)["unfoldr1" => $go];
+return (object)["unfoldr1" => $go_0_0];
 })(); return $v; };
 \PhpursThunks::$thunks['Data_List_Lazy_Types_unfoldableList'] = function() { $v = (function() use (&$__fn) {
-$go = null;
-$go = (function() use (&$go) {
-  $__fn = function($f, $b = null) use (&$go, &$__fn) {
+$go_0_0 = null;
+$go_0_0 = (function() use (&$go_0_0) {
+  $__fn = function($f_1, $b_2 = null) use (&$go_0_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_List_Lazy_Types_step'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_step'))))(function($v) use (&$b, &$f, &$go) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "go_0_0"), recVars=["go_0_0"];
+  while (true) {
+$__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_List_Lazy_Types_step'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_step'))))(function($v_3) use ($b_2, $f_1, &$go_0_0) {
   $__num = \func_num_args();
-  $v1_0 = ($f)($b);
-  if ((is_object($v1_0) && (($v1_0)->tag === "Nothing"))) {
-$__t1 = ($GLOBALS['Data_List_Lazy_Types_nil'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_nil'));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["go_0_0"];
+  $v1_4_1 = ($f_1)($b_2);
+  if ((is_object($v1_4_1) && (($v1_4_1)->tag === "Nothing"))) {
+$__t2 = ($GLOBALS['Data_List_Lazy_Types_nil'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_nil'));
 } else {
-if ((is_object($v1_0) && (($v1_0)->tag === "Just"))) {
-$__local_var_2 = (($v1_0)->value0)->value0;
-$__local_var_3 = (($go)($f))((($v1_0)->value0)->value1);
-$__t1 = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v) use (&$__local_var_2, &$__local_var_3) {
+if ((is_object($v1_4_1) && (($v1_4_1)->tag === "Just"))) {
+$__local_var_5_3 = (($v1_4_1)->value0)->value0;
+$__local_var_6_4 = (($go_0_0)($f_1))((($v1_4_1)->value0)->value1);
+$__t2 = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v_7) use ($__local_var_5_3, $__local_var_6_4) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Cons", $__local_var_2, $__local_var_3);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["go_0_0"];
+  $__res = new Phpurs_Data2("Cons", $__local_var_5_3, $__local_var_6_4);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 });
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t1 = null;
+$__t2 = null;
 };
 };
-  $__res = $__t1;
+  $__res = $__t2;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }));
-  goto __end;;
+goto __end;;
+};
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })();
-return (object)["unfoldr" => $go, "Unfoldable10" => function($dollar__unused_0) {
+return (object)["unfoldr" => $go_0_0, "Unfoldable10" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_List_Lazy_Types_unfoldable1List'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_unfoldable1List'));
   goto __end;;
   __end:
@@ -1435,16 +1589,18 @@ return (object)["unfoldr" => $go, "Unfoldable10" => function($dollar__unused_0) 
 }];
 })(); return $v; };
 \PhpursThunks::$thunks['Data_List_Lazy_Types_unfoldr1'] = function() { $v = (function() {
-  $__fn = function($f, $b = null) use (&$__fn) {
+  $__fn = function($f_0, $b_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__local_var_0 = ($f)($b);
-  $__res = new Phpurs_Data2("NonEmpty", ($__local_var_0)->value0, (((($GLOBALS['Data_List_Lazy_Types_unfoldableList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_unfoldableList')))->unfoldr)(function($v1) use (&$f) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_List_Lazy_Types_unfoldr1"), recVars=[];
+  $__local_var_2_0 = ($f_0)($b_1);
+  $__res = new Phpurs_Data2("NonEmpty", ($__local_var_2_0)->value0, (((($GLOBALS['Data_List_Lazy_Types_unfoldableList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_unfoldableList')))->unfoldr)(function($v1_3) use ($f_0) {
   $__num = \func_num_args();
-  if ((is_object($v1) && (($v1)->tag === "Just"))) {
-$__t1 = new Phpurs_Data1("Just", ($f)(($v1)->value0));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  if ((is_object($v1_3) && (($v1_3)->tag === "Just"))) {
+$__t1 = new Phpurs_Data1("Just", ($f_0)(($v1_3)->value0));
 } else {
 $__t1 = new Phpurs_Data0("Nothing");
 };
@@ -1452,7 +1608,7 @@ $__t1 = new Phpurs_Data0("Nothing");
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(($__local_var_0)->value1));
+}))(($__local_var_2_0)->value1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1460,14 +1616,16 @@ $__t1 = new Phpurs_Data0("Nothing");
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Data_List_Lazy_Types_unfoldable1NonEmptyList'] = function() { $v = (object)["unfoldr1" => (function() {
-  $__fn = function($f, $b = null) use (&$__fn) {
+  $__fn = function($f_0, $b_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v) use (&$b, &$f) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v_2) use ($b_1, $f_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_List_Lazy_Types_unfoldr1'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_unfoldr1')))($f))($b);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Data_List_Lazy_Types_unfoldr1'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_unfoldr1')))($f_0))($b_1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1478,14 +1636,16 @@ $__t1 = new Phpurs_Data0("Nothing");
   };
   return $__fn;
 })()]; return $v; };
-\PhpursThunks::$thunks['Data_List_Lazy_Types_comonadNonEmptyList'] = function() { $v = (object)["extract" => function($v) {
+\PhpursThunks::$thunks['Data_List_Lazy_Types_comonadNonEmptyList'] = function() { $v = (object)["extract" => function($v_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($v))->value0;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($v_0))->value0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Extend0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_List_Lazy_Types_extendNonEmptyList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_extendNonEmptyList'));
   goto __end;;
   __end:
@@ -1493,32 +1653,36 @@ $__t1 = new Phpurs_Data0("Nothing");
 }]; return $v; };
 \PhpursThunks::$thunks['Data_List_Lazy_Types_monadList'] = function() { $v = (object)["Applicative0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_List_Lazy_Types_monadList","Data_List_Lazy_Types_bindList","Data_List_Lazy_Types_applyList","Data_List_Lazy_Types_applicativeList"];
   $__res = ($GLOBALS['Data_List_Lazy_Types_applicativeList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_applicativeList'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bind1" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_List_Lazy_Types_monadList","Data_List_Lazy_Types_bindList","Data_List_Lazy_Types_applyList","Data_List_Lazy_Types_applicativeList"];
   $__res = ($GLOBALS['Data_List_Lazy_Types_bindList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_bindList'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
 \PhpursThunks::$thunks['Data_List_Lazy_Types_bindList'] = function() { $v = (object)["bind" => (function() {
-  $__fn = function($xs, $f = null) use (&$__fn) {
+  $__fn = function($xs_0, $f_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__local_var_0 = (($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))($xs);
-  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v) use (&$__local_var_0, &$f) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_List_Lazy_Types_monadList","Data_List_Lazy_Types_bindList","Data_List_Lazy_Types_applyList","Data_List_Lazy_Types_applicativeList"];
+  $__local_var_2_0 = (($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))($xs_0);
+  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v_3) use ($__local_var_2_0, $f_1) {
   $__num = \func_num_args();
-  $__local_var_1 = (($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($__local_var_0);
-  if ((is_object($__local_var_1) && (($__local_var_1)->tag === "Nil"))) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_List_Lazy_Types_monadList","Data_List_Lazy_Types_bindList","Data_List_Lazy_Types_applyList","Data_List_Lazy_Types_applicativeList"];
+  $__local_var_4_1 = (($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($__local_var_2_0);
+  if ((is_object($__local_var_4_1) && (($__local_var_4_1)->tag === "Nil"))) {
 $__t2 = new Phpurs_Data0("Nil");
 } else {
-if ((is_object($__local_var_1) && (($__local_var_1)->tag === "Cons"))) {
-$__t2 = (($GLOBALS['Data_List_Lazy_Types_step'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_step')))((((($GLOBALS['Data_List_Lazy_Types_semigroupList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_semigroupList')))->append)(($f)(($__local_var_1)->value0)))((((($GLOBALS['Data_List_Lazy_Types_bindList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_bindList')))->bind)(($__local_var_1)->value1))($f)));
+if ((is_object($__local_var_4_1) && (($__local_var_4_1)->tag === "Cons"))) {
+$__t2 = (($GLOBALS['Data_List_Lazy_Types_step'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_step')))((((($GLOBALS['Data_List_Lazy_Types_semigroupList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_semigroupList')))->append)(($f_1)(($__local_var_4_1)->value0)))((((($GLOBALS['Data_List_Lazy_Types_bindList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_bindList')))->bind)(($__local_var_4_1)->value1))($f_1)));
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t2 = null;
@@ -1536,6 +1700,7 @@ $__t2 = null;
   return $__fn;
 })(), "Apply0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_List_Lazy_Types_monadList","Data_List_Lazy_Types_bindList","Data_List_Lazy_Types_applyList","Data_List_Lazy_Types_applicativeList"];
   $__res = ($GLOBALS['Data_List_Lazy_Types_applyList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_applyList'));
   goto __end;;
   __end:
@@ -1543,16 +1708,19 @@ $__t2 = null;
 }]; return $v; };
 \PhpursThunks::$thunks['Data_List_Lazy_Types_applyList'] = function() { $v = (object)["apply" => (($GLOBALS['Control_Monad_ap'] ?? \PhpursThunks::eval('Control_Monad_ap')))(($GLOBALS['Data_List_Lazy_Types_monadList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_monadList'))), "Functor0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_List_Lazy_Types_monadList","Data_List_Lazy_Types_bindList","Data_List_Lazy_Types_applyList","Data_List_Lazy_Types_applicativeList"];
   $__res = ($GLOBALS['Data_List_Lazy_Types_functorList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_functorList'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
-\PhpursThunks::$thunks['Data_List_Lazy_Types_applicativeList'] = function() { $v = (object)["pure" => function($a) {
+\PhpursThunks::$thunks['Data_List_Lazy_Types_applicativeList'] = function() { $v = (object)["pure" => function($a_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v) use (&$a) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_List_Lazy_Types_monadList","Data_List_Lazy_Types_bindList","Data_List_Lazy_Types_applyList","Data_List_Lazy_Types_applicativeList"];
+  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v_1) use ($a_0) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Cons", $a, ($GLOBALS['Data_List_Lazy_Types_nil'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_nil')));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_List_Lazy_Types_monadList","Data_List_Lazy_Types_bindList","Data_List_Lazy_Types_applyList","Data_List_Lazy_Types_applicativeList"];
+  $__res = new Phpurs_Data2("Cons", $a_0, ($GLOBALS['Data_List_Lazy_Types_nil'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_nil')));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1562,38 +1730,43 @@ $__t2 = null;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Apply0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_List_Lazy_Types_monadList","Data_List_Lazy_Types_bindList","Data_List_Lazy_Types_applyList","Data_List_Lazy_Types_applicativeList"];
   $__res = ($GLOBALS['Data_List_Lazy_Types_applyList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_applyList'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
 \PhpursThunks::$thunks['Data_List_Lazy_Types_applyNonEmptyList'] = function() { $v = (object)["apply" => (function() {
-  $__fn = function($v, $v1 = null) use (&$__fn) {
+  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $v2_0 = (($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($v1);
-  $v3_1 = (($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($v);
-  $__local_var_2 = ($v2_0)->value0;
-  $__local_var_3 = ($v2_0)->value1;
-  $__local_var_4 = ($v3_1)->value0;
-  $__local_var_5 = ($v3_1)->value1;
-  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v4) use (&$__local_var_2, &$__local_var_3, &$__local_var_4, &$__local_var_5) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $v2_2_0 = (($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($v1_1);
+  $v3_3_1 = (($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($v_0);
+  $__local_var_4_2 = ($v2_2_0)->value0;
+  $__local_var_5_3 = ($v2_2_0)->value1;
+  $__local_var_6_4 = ($v3_3_1)->value0;
+  $__local_var_7_5 = ($v3_3_1)->value1;
+  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v4_8) use ($__local_var_4_2, $__local_var_5_3, $__local_var_6_4, $__local_var_7_5) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("NonEmpty", ($__local_var_4)($__local_var_2), (((($GLOBALS['Data_List_Lazy_Types_semigroupList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_semigroupList')))->append)((((($GLOBALS['Data_List_Lazy_Types_applyList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_applyList')))->apply)($__local_var_5))((($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v) use (&$__local_var_2) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = new Phpurs_Data2("NonEmpty", ($__local_var_6_4)($__local_var_4_2), (((($GLOBALS['Data_List_Lazy_Types_semigroupList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_semigroupList')))->append)((((($GLOBALS['Data_List_Lazy_Types_applyList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_applyList')))->apply)($__local_var_7_5))((($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v_9) use ($__local_var_4_2) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Cons", $__local_var_2, ($GLOBALS['Data_List_Lazy_Types_nil'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_nil')));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = new Phpurs_Data2("Cons", $__local_var_4_2, ($GLOBALS['Data_List_Lazy_Types_nil'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_nil')));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))))((((($GLOBALS['Data_List_Lazy_Types_applyList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_applyList')))->apply)((($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v) use (&$__local_var_4, &$__local_var_5) {
+}))))((((($GLOBALS['Data_List_Lazy_Types_applyList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_applyList')))->apply)((($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v_9) use ($__local_var_6_4, $__local_var_7_5) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Cons", $__local_var_4, $__local_var_5);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = new Phpurs_Data2("Cons", $__local_var_6_4, $__local_var_7_5);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-})))($__local_var_3)));
+})))($__local_var_5_3)));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1605,25 +1778,28 @@ $__t2 = null;
   return $__fn;
 })(), "Functor0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_List_Lazy_Types_functorNonEmptyList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_functorNonEmptyList'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
 \PhpursThunks::$thunks['Data_List_Lazy_Types_bindNonEmptyList'] = function() { $v = (object)["bind" => (function() {
-  $__fn = function($v, $f = null) use (&$__fn) {
+  $__fn = function($v_0, $f_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $v1_0 = (($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($v);
-  $__local_var_1 = ($v1_0)->value1;
-  $v2_2 = (($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))((($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))(($f)(($v1_0)->value0)));
-  $__local_var_3 = ($v2_2)->value0;
-  $__local_var_4 = ($v2_2)->value1;
-  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v3) use (&$__local_var_1, &$__local_var_3, &$__local_var_4, &$f) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $v1_2_0 = (($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($v_0);
+  $__local_var_3_1 = ($v1_2_0)->value1;
+  $v2_4_2 = (($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))((($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))(($f_1)(($v1_2_0)->value0)));
+  $__local_var_5_3 = ($v2_4_2)->value0;
+  $__local_var_6_4 = ($v2_4_2)->value1;
+  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v3_7) use ($__local_var_3_1, $__local_var_5_3, $__local_var_6_4, $f_1) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("NonEmpty", $__local_var_3, (((($GLOBALS['Data_List_Lazy_Types_semigroupList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_semigroupList')))->append)($__local_var_4))((((($GLOBALS['Data_List_Lazy_Types_bindList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_bindList')))->bind)($__local_var_1))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_List_Lazy_Types_toList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_toList'))))($f))));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = new Phpurs_Data2("NonEmpty", $__local_var_5_3, (((($GLOBALS['Data_List_Lazy_Types_semigroupList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_semigroupList')))->append)($__local_var_6_4))((((($GLOBALS['Data_List_Lazy_Types_bindList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_bindList')))->bind)($__local_var_3_1))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_List_Lazy_Types_toList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_toList'))))($f_1))));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1635,6 +1811,7 @@ $__t2 = null;
   return $__fn;
 })(), "Apply0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_List_Lazy_Types_applyNonEmptyList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_applyNonEmptyList'));
   goto __end;;
   __end:
@@ -1642,6 +1819,7 @@ $__t2 = null;
 }]; return $v; };
 \PhpursThunks::$thunks['Data_List_Lazy_Types_altNonEmptyList'] = function() { $v = (object)["alt" => (($GLOBALS['Data_List_Lazy_Types_semigroupNonEmptyList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_semigroupNonEmptyList')))->append, "Functor0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_List_Lazy_Types_functorNonEmptyList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_functorNonEmptyList'));
   goto __end;;
   __end:
@@ -1649,6 +1827,7 @@ $__t2 = null;
 }]; return $v; };
 \PhpursThunks::$thunks['Data_List_Lazy_Types_altList'] = function() { $v = (object)["alt" => (($GLOBALS['Data_List_Lazy_Types_semigroupList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_semigroupList')))->append, "Functor0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_List_Lazy_Types_functorList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_functorList'));
   goto __end;;
   __end:
@@ -1656,6 +1835,7 @@ $__t2 = null;
 }]; return $v; };
 \PhpursThunks::$thunks['Data_List_Lazy_Types_plusList'] = function() { $v = (object)["empty" => ($GLOBALS['Data_List_Lazy_Types_nil'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_nil')), "Alt0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_List_Lazy_Types_altList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_altList'));
   goto __end;;
   __end:
@@ -1663,12 +1843,14 @@ $__t2 = null;
 }]; return $v; };
 \PhpursThunks::$thunks['Data_List_Lazy_Types_alternativeList'] = function() { $v = (object)["Applicative0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_List_Lazy_Types_applicativeList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_applicativeList'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Plus1" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_List_Lazy_Types_plusList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_plusList'));
   goto __end;;
   __end:
@@ -1676,22 +1858,26 @@ $__t2 = null;
 }]; return $v; };
 \PhpursThunks::$thunks['Data_List_Lazy_Types_monadPlusList'] = function() { $v = (object)["Monad0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_List_Lazy_Types_monadList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_monadList'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Alternative1" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_List_Lazy_Types_alternativeList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_alternativeList'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
-\PhpursThunks::$thunks['Data_List_Lazy_Types_applicativeNonEmptyList'] = function() { $v = (object)["pure" => function($a) {
+\PhpursThunks::$thunks['Data_List_Lazy_Types_applicativeNonEmptyList'] = function() { $v = (object)["pure" => function($a_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v) use (&$a) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v_1) use ($a_0) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("NonEmpty", $a, ($GLOBALS['Data_List_Lazy_Types_nil'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_nil')));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = new Phpurs_Data2("NonEmpty", $a_0, ($GLOBALS['Data_List_Lazy_Types_nil'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_nil')));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1701,6 +1887,7 @@ $__t2 = null;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Apply0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_List_Lazy_Types_applyNonEmptyList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_applyNonEmptyList'));
   goto __end;;
   __end:
@@ -1708,12 +1895,14 @@ $__t2 = null;
 }]; return $v; };
 \PhpursThunks::$thunks['Data_List_Lazy_Types_monadNonEmptyList'] = function() { $v = (object)["Applicative0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_List_Lazy_Types_applicativeNonEmptyList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_applicativeNonEmptyList'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bind1" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_List_Lazy_Types_bindNonEmptyList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_bindNonEmptyList'));
   goto __end;;
   __end:

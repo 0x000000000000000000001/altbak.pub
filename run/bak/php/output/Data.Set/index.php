@@ -104,23 +104,26 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Set_Set'] = function() { $v = function($x) {
+\PhpursThunks::$thunks['Data_Set_Set'] = function() { $v = function($x_0) {
   $__num = \func_num_args();
-  $__res = $x;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Set_Set"), recVars=[];
+  $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Set_union'] = function() { $v = function($dictOrd) {
+\PhpursThunks::$thunks['Data_Set_union'] = function() { $v = function($dictOrd_0) {
   $__num = \func_num_args();
-  $compare_0 = ($dictOrd)->compare;
-  $__res = (($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))((function() use (&$compare_0) {
-  $__fn = function($m1, $m2 = null) use (&$compare_0, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Set_union"), recVars=[];
+  $compare_1_0 = ($dictOrd_0)->compare;
+  $__res = (($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))((function() use ($compare_1_0) {
+  $__fn = function($m1_2, $m2_3 = null) use ($compare_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Map_Internal_unsafeUnionWith'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeUnionWith'))))($compare_0))(($GLOBALS['Data_Function_const'] ?? \PhpursThunks::eval('Data_Function_const'))))($m1))($m2);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (((((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Map_Internal_unsafeUnionWith'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeUnionWith'))))($compare_1_0))(($GLOBALS['Data_Function_const'] ?? \PhpursThunks::eval('Data_Function_const'))))($m1_2))($m2_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -131,21 +134,24 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Set_toggle'] = function() { $v = function($dictOrd) {
+\PhpursThunks::$thunks['Data_Set_toggle'] = function() { $v = function($dictOrd_0) {
   $__num = \func_num_args();
-  $alter_0 = (($GLOBALS['Data_Map_Internal_alter'] ?? \PhpursThunks::eval('Data_Map_Internal_alter')))($dictOrd);
-  $__res = (function() use (&$alter_0) {
-  $__fn = function($a, $v = null) use (&$alter_0, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Set_toggle"), recVars=[];
+  $alter_1_0 = (($GLOBALS['Data_Map_Internal_alter'] ?? \PhpursThunks::eval('Data_Map_Internal_alter')))($dictOrd_0);
+  $__res = (function() use ($alter_1_0) {
+  $__fn = function($a_2, $v_3 = null) use ($alter_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($alter_0)(function($v2) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($alter_1_0)(function($v2_4) {
   $__num = \func_num_args();
-  if ((is_object($v2) && (($v2)->tag === "Nothing"))) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  if ((is_object($v2_4) && (($v2_4)->tag === "Nothing"))) {
 $__t1 = new Phpurs_Data1("Just", ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')));
 } else {
-if ((is_object($v2) && (($v2)->tag === "Just"))) {
+if ((is_object($v2_4) && (($v2_4)->tag === "Just"))) {
 $__t1 = new Phpurs_Data0("Nothing");
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -156,7 +162,7 @@ $__t1 = null;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))($a))($v);
+}))($a_2))($v_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -167,29 +173,33 @@ $__t1 = null;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Set_toMap'] = function() { $v = function($v) {
+\PhpursThunks::$thunks['Data_Set_toMap'] = function() { $v = function($v_0) {
   $__num = \func_num_args();
-  $__res = $v;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Set_toMap"), recVars=[];
+  $__res = $v_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Set_toList'] = function() { $v = function($v) {
+\PhpursThunks::$thunks['Data_Set_toList'] = function() { $v = function($v_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Map_Internal_keys'] ?? \PhpursThunks::eval('Data_Map_Internal_keys')))($v);
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Set_toList"), recVars=[];
+  $__res = (($GLOBALS['Data_Map_Internal_keys'] ?? \PhpursThunks::eval('Data_Map_Internal_keys')))($v_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Set_toUnfoldable'] = function() { $v = function($dictUnfoldable) {
+\PhpursThunks::$thunks['Data_Set_toUnfoldable'] = function() { $v = function($dictUnfoldable_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($dictUnfoldable)->unfoldr)(function($xs) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Set_toUnfoldable"), recVars=[];
+  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($dictUnfoldable_0)->unfoldr)(function($xs_1) {
   $__num = \func_num_args();
-  if ((is_object($xs) && (($xs)->tag === "Nil"))) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  if ((is_object($xs_1) && (($xs_1)->tag === "Nil"))) {
 $__t0 = new Phpurs_Data0("Nothing");
 } else {
-if ((is_object($xs) && (($xs)->tag === "Cons"))) {
-$__t0 = new Phpurs_Data1("Just", new Phpurs_Data2("Tuple", ($xs)->value0, ($xs)->value1));
+if ((is_object($xs_1) && (($xs_1)->tag === "Cons"))) {
+$__t0 = new Phpurs_Data1("Just", new Phpurs_Data2("Tuple", ($xs_1)->value0, ($xs_1)->value1));
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t0 = null;
@@ -206,18 +216,21 @@ $__t0 = null;
 }; return $v; };
 \PhpursThunks::$thunks['Data_Set_toUnfoldable1'] = function() { $v = (($GLOBALS['Data_Set_toUnfoldable'] ?? \PhpursThunks::eval('Data_Set_toUnfoldable')))(($GLOBALS['Data_Unfoldable_unfoldableArray'] ?? \PhpursThunks::eval('Data_Unfoldable_unfoldableArray'))); return $v; };
 \PhpursThunks::$thunks['Data_Set_size'] = function() { $v = (($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))(($GLOBALS['Data_Map_Internal_size'] ?? \PhpursThunks::eval('Data_Map_Internal_size'))); return $v; };
-\PhpursThunks::$thunks['Data_Set_singleton'] = function() { $v = function($a) {
+\PhpursThunks::$thunks['Data_Set_singleton'] = function() { $v = function($a_0) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data6("Node", 1, 1, $a, ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')), new Phpurs_Data0("Leaf"), new Phpurs_Data0("Leaf"));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Set_singleton"), recVars=[];
+  $__res = new Phpurs_Data6("Node", 1, 1, $a_0, ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')), new Phpurs_Data0("Leaf"), new Phpurs_Data0("Leaf"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Set_showSet'] = function() { $v = function($dictShow) {
+\PhpursThunks::$thunks['Data_Set_showSet'] = function() { $v = function($dictShow_0) {
   $__num = \func_num_args();
-  $__res = (object)["show" => function($s) use (&$dictShow) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Set_showSet"), recVars=[];
+  $__res = (object)["show" => function($s_1) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("(fromFoldable "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))(((($GLOBALS['Data_Show_showArrayImpl'] ?? \PhpursThunks::eval('Data_Show_showArrayImpl')))(($dictShow)->show))((($GLOBALS['Data_Set_toUnfoldable1'] ?? \PhpursThunks::eval('Data_Set_toUnfoldable1')))($s))))(")"));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("(fromFoldable "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))(((($GLOBALS['Data_Show_showArrayImpl'] ?? \PhpursThunks::eval('Data_Show_showArrayImpl')))(($dictShow_0)->show))((($GLOBALS['Data_Set_toUnfoldable1'] ?? \PhpursThunks::eval('Data_Set_toUnfoldable1')))($s_1))))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -226,51 +239,63 @@ $__t0 = null;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Set_semigroupSet'] = function() { $v = function($dictOrd) {
+\PhpursThunks::$thunks['Data_Set_semigroupSet'] = function() { $v = function($dictOrd_0) {
   $__num = \func_num_args();
-  $__res = (object)["append" => (($GLOBALS['Data_Set_union'] ?? \PhpursThunks::eval('Data_Set_union')))($dictOrd)];
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Set_semigroupSet"), recVars=[];
+  $__res = (object)["append" => (($GLOBALS['Data_Set_union'] ?? \PhpursThunks::eval('Data_Set_union')))($dictOrd_0)];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Set_member'] = function() { $v = function($dictOrd) {
+\PhpursThunks::$thunks['Data_Set_member'] = function() { $v = function($dictOrd_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))(function($k) use (&$dictOrd) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Set_member"), recVars=[];
+  $__res = (($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))(function($k_1) use ($dictOrd_0) {
   $__num = \func_num_args();
-  $go = null;
-  $go = function($v) use (&$dictOrd, &$go, &$k) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $go_2_0 = null;
+  $go_2_0 = function($v_3) use ($dictOrd_0, &$go_2_0, $k_1) {
   $__num = \func_num_args();
-  if ((is_object($v) && (($v)->tag === "Leaf"))) {
-$__t0 = false;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "go_2_0"), recVars=["go_2_0"];
+  while (true) {
+if ((is_object($v_3) && (($v_3)->tag === "Leaf"))) {
+$__t1 = false;
 } else {
-if ((is_object($v) && (($v)->tag === "Node"))) {
-$v1_1 = ((($dictOrd)->compare)($k))(($v)->value2);
-if ((is_object($v1_1) && (($v1_1)->tag === "LT"))) {
-$__t2 = ($go)(($v)->value4);
+if ((is_object($v_3) && (($v_3)->tag === "Node"))) {
+$v1_4_2 = ((($dictOrd_0)->compare)($k_1))(($v_3)->value2);
+if ((is_object($v1_4_2) && (($v1_4_2)->tag === "LT"))) {
+$__tco_4 = ($v_3)->value4;
+$v_3 = $__tco_4;
+continue ;
+$__t3 = null;
 } else {
-if ((is_object($v1_1) && (($v1_1)->tag === "GT"))) {
-$__t2 = ($go)(($v)->value5);
+if ((is_object($v1_4_2) && (($v1_4_2)->tag === "GT"))) {
+$__tco_5 = ($v_3)->value5;
+$v_3 = $__tco_5;
+continue ;
+$__t3 = null;
 } else {
-if ((is_object($v1_1) && (($v1_1)->tag === "EQ"))) {
-$__t2 = true;
+if ((is_object($v1_4_2) && (($v1_4_2)->tag === "EQ"))) {
+$__t3 = true;
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t2 = null;
+$__t3 = null;
 };
 };
 };
-$__t0 = $__t2;
+$__t1 = $__t3;
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t0 = null;
+$__t1 = null;
 };
 };
-  $__res = $__t0;
-  goto __end;;
+$__res = $__t1;
+goto __end;;
+};
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = $go;
+  $__res = $go_2_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -280,16 +305,18 @@ $__t0 = null;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Data_Set_isEmpty'] = function() { $v = (($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))(($GLOBALS['Data_Map_Internal_isEmpty'] ?? \PhpursThunks::eval('Data_Map_Internal_isEmpty'))); return $v; };
-\PhpursThunks::$thunks['Data_Set_intersection'] = function() { $v = function($dictOrd) {
+\PhpursThunks::$thunks['Data_Set_intersection'] = function() { $v = function($dictOrd_0) {
   $__num = \func_num_args();
-  $compare_0 = ($dictOrd)->compare;
-  $__res = (($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))((function() use (&$compare_0) {
-  $__fn = function($m1, $m2 = null) use (&$compare_0, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Set_intersection"), recVars=[];
+  $compare_1_0 = ($dictOrd_0)->compare;
+  $__res = (($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))((function() use ($compare_1_0) {
+  $__fn = function($m1_2, $m2_3 = null) use ($compare_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Map_Internal_unsafeIntersectionWith'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeIntersectionWith'))))($compare_0))(($GLOBALS['Data_Function_const'] ?? \PhpursThunks::eval('Data_Function_const'))))($m1))($m2);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (((((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Map_Internal_unsafeIntersectionWith'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeIntersectionWith'))))($compare_1_0))(($GLOBALS['Data_Function_const'] ?? \PhpursThunks::eval('Data_Function_const'))))($m1_2))($m2_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -301,12 +328,13 @@ $__t0 = null;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Data_Set_insert'] = function() { $v = (function() {
-  $__fn = function($dictOrd, $a = null, $v = null) use (&$__fn) {
+  $__fn = function($dictOrd_0, $a_1 = null, $v_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((((($GLOBALS['Data_Map_Internal_insert'] ?? \PhpursThunks::eval('Data_Map_Internal_insert')))($dictOrd))($a))(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'))))($v);
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Set_insert"), recVars=[];
+  $__res = ((((($GLOBALS['Data_Map_Internal_insert'] ?? \PhpursThunks::eval('Data_Map_Internal_insert')))($dictOrd_0))($a_1))(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'))))($v_2);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -314,12 +342,14 @@ $__t0 = null;
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Data_Set_fromMap'] = function() { $v = ($GLOBALS['Data_Set_Set'] ?? \PhpursThunks::eval('Data_Set_Set')); return $v; };
-\PhpursThunks::$thunks['Data_Set_foldableSet'] = function() { $v = (object)["foldMap" => function($dictMonoid) {
+\PhpursThunks::$thunks['Data_Set_foldableSet'] = function() { $v = (object)["foldMap" => function($dictMonoid_0) {
   $__num = \func_num_args();
-  $foldMap1_0 = ((($GLOBALS['Data_List_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Types_foldableList')))->foldMap)($dictMonoid);
-  $__res = function($f) use (&$foldMap1_0) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $foldMap1_1_0 = ((($GLOBALS['Data_List_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Types_foldableList')))->foldMap)($dictMonoid_0);
+  $__res = function($f_2) use ($foldMap1_1_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($foldMap1_0)($f)))(($GLOBALS['Data_Set_toList'] ?? \PhpursThunks::eval('Data_Set_toList')));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($foldMap1_1_0)($f_2)))(($GLOBALS['Data_Set_toList'] ?? \PhpursThunks::eval('Data_Set_toList')));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -328,59 +358,70 @@ $__t0 = null;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "foldl" => (function() {
-  $__fn = function($f, $x = null) use (&$__fn) {
+  $__fn = function($f_0, $x_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $go = null;
-  $go = (function() use (&$f, &$go) {
-  $__fn = function($b, $v = null) use (&$f, &$go, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $go_2_1 = null;
+  $go_2_1 = (function() use ($f_0, &$go_2_1) {
+  $__fn = function($b_3, $v_4 = null) use ($f_0, &$go_2_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  if ((is_object($v) && (($v)->tag === "Nil"))) {
-$__t1 = $b;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "go_2_1"), recVars=["go_2_1"];
+  while (true) {
+if ((is_object($v_4) && (($v_4)->tag === "Nil"))) {
+$__t2 = $b_3;
 } else {
-if ((is_object($v) && (($v)->tag === "Cons"))) {
-$__t1 = (($go)((($f)($b))(($v)->value0)))(($v)->value1);
+if ((is_object($v_4) && (($v_4)->tag === "Cons"))) {
+$__tco_3 = (($f_0)($b_3))(($v_4)->value0);
+$__tco_4 = ($v_4)->value1;
+$b_3 = $__tco_3;
+$v_4 = $__tco_4;
+continue ;
+$__t2 = null;
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t1 = null;
+$__t2 = null;
 };
 };
-  $__res = $__t1;
-  goto __end;;
+$__res = $__t2;
+goto __end;;
+};
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($go)($x)))(($GLOBALS['Data_Set_toList'] ?? \PhpursThunks::eval('Data_Set_toList')));
+  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($go_2_1)($x_1)))(($GLOBALS['Data_Set_toList'] ?? \PhpursThunks::eval('Data_Set_toList')));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })(), "foldr" => (function() {
-  $__fn = function($f, $x = null) use (&$__fn) {
+  $__fn = function($f_0, $x_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((((($GLOBALS['Data_List_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Types_foldableList')))->foldr)($f))($x)))(($GLOBALS['Data_Set_toList'] ?? \PhpursThunks::eval('Data_Set_toList')));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((((($GLOBALS['Data_List_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Types_foldableList')))->foldr)($f_0))($x_1)))(($GLOBALS['Data_Set_toList'] ?? \PhpursThunks::eval('Data_Set_toList')));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()]; return $v; };
-\PhpursThunks::$thunks['Data_Set_findMin'] = function() { $v = function($v) {
+\PhpursThunks::$thunks['Data_Set_findMin'] = function() { $v = function($v_0) {
   $__num = \func_num_args();
-  $__local_var_0 = (($GLOBALS['Data_Map_Internal_findMin'] ?? \PhpursThunks::eval('Data_Map_Internal_findMin')))($v);
-  if ((is_object($__local_var_0) && (($__local_var_0)->tag === "Just"))) {
-$__t1 = new Phpurs_Data1("Just", (($__local_var_0)->value0)->key);
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Set_findMin"), recVars=[];
+  $__local_var_1_0 = (($GLOBALS['Data_Map_Internal_findMin'] ?? \PhpursThunks::eval('Data_Map_Internal_findMin')))($v_0);
+  if ((is_object($__local_var_1_0) && (($__local_var_1_0)->tag === "Just"))) {
+$__t1 = new Phpurs_Data1("Just", (($__local_var_1_0)->value0)->key);
 } else {
 $__t1 = new Phpurs_Data0("Nothing");
 };
@@ -389,11 +430,12 @@ $__t1 = new Phpurs_Data0("Nothing");
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Set_findMax'] = function() { $v = function($v) {
+\PhpursThunks::$thunks['Data_Set_findMax'] = function() { $v = function($v_0) {
   $__num = \func_num_args();
-  $__local_var_0 = (($GLOBALS['Data_Map_Internal_findMax'] ?? \PhpursThunks::eval('Data_Map_Internal_findMax')))($v);
-  if ((is_object($__local_var_0) && (($__local_var_0)->tag === "Just"))) {
-$__t1 = new Phpurs_Data1("Just", (($__local_var_0)->value0)->key);
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Set_findMax"), recVars=[];
+  $__local_var_1_0 = (($GLOBALS['Data_Map_Internal_findMax'] ?? \PhpursThunks::eval('Data_Map_Internal_findMax')))($v_0);
+  if ((is_object($__local_var_1_0) && (($__local_var_1_0)->tag === "Just"))) {
+$__t1 = new Phpurs_Data1("Just", (($__local_var_1_0)->value0)->key);
 } else {
 $__t1 = new Phpurs_Data0("Nothing");
 };
@@ -402,22 +444,25 @@ $__t1 = new Phpurs_Data0("Nothing");
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Set_filter'] = function() { $v = function($dictOrd) {
+\PhpursThunks::$thunks['Data_Set_filter'] = function() { $v = function($dictOrd_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))((($GLOBALS['Data_Map_Internal_filterKeys'] ?? \PhpursThunks::eval('Data_Map_Internal_filterKeys')))($dictOrd));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Set_filter"), recVars=[];
+  $__res = (($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))((($GLOBALS['Data_Map_Internal_filterKeys'] ?? \PhpursThunks::eval('Data_Map_Internal_filterKeys')))($dictOrd_0));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Set_eqSet'] = function() { $v = function($dictEq) {
+\PhpursThunks::$thunks['Data_Set_eqSet'] = function() { $v = function($dictEq_0) {
   $__num = \func_num_args();
-  $__res = (object)["eq" => (function() use (&$dictEq) {
-  $__fn = function($v, $v1 = null) use (&$dictEq, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Set_eqSet"), recVars=[];
+  $__res = (object)["eq" => (function() use ($dictEq_0) {
+  $__fn = function($v_1, $v1_2 = null) use ($dictEq_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((((($GLOBALS['Data_Map_Internal_eqMap'] ?? \PhpursThunks::eval('Data_Map_Internal_eqMap')))($dictEq))(($GLOBALS['Data_Eq_eqUnit'] ?? \PhpursThunks::eval('Data_Eq_eqUnit'))))->eq)($v))($v1);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (((((($GLOBALS['Data_Map_Internal_eqMap'] ?? \PhpursThunks::eval('Data_Map_Internal_eqMap')))($dictEq_0))(($GLOBALS['Data_Eq_eqUnit'] ?? \PhpursThunks::eval('Data_Eq_eqUnit'))))->eq)($v_1))($v1_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -428,37 +473,41 @@ $__t1 = new Phpurs_Data0("Nothing");
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Set_ordSet'] = function() { $v = function($dictOrd) {
+\PhpursThunks::$thunks['Data_Set_ordSet'] = function() { $v = function($dictOrd_0) {
   $__num = \func_num_args();
-  $__local_var_0 = (($dictOrd)->Eq0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $eqSet1_1 = (object)["eq" => (function() use (&$__local_var_0) {
-  $__fn = function($v, $v1 = null) use (&$__local_var_0, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Set_ordSet"), recVars=[];
+  $__local_var_1_0 = (($dictOrd_0)->Eq0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $eqSet1_2_1 = (object)["eq" => (function() use ($__local_var_1_0) {
+  $__fn = function($v_2, $v1_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((((($GLOBALS['Data_Map_Internal_eqMap'] ?? \PhpursThunks::eval('Data_Map_Internal_eqMap')))($__local_var_0))(($GLOBALS['Data_Eq_eqUnit'] ?? \PhpursThunks::eval('Data_Eq_eqUnit'))))->eq)($v))($v1);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (((((($GLOBALS['Data_Map_Internal_eqMap'] ?? \PhpursThunks::eval('Data_Map_Internal_eqMap')))($__local_var_1_0))(($GLOBALS['Data_Eq_eqUnit'] ?? \PhpursThunks::eval('Data_Eq_eqUnit'))))->eq)($v_2))($v1_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()];
-  $__res = (object)["compare" => (function() use (&$dictOrd) {
-  $__fn = function($s1, $s2 = null) use (&$dictOrd, &$__fn) {
+  $__res = (object)["compare" => (function() use ($dictOrd_0) {
+  $__fn = function($s1_3, $s2_4 = null) use ($dictOrd_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((($GLOBALS['Data_List_Types_ordList'] ?? \PhpursThunks::eval('Data_List_Types_ordList')))($dictOrd))->compare)((($GLOBALS['Data_Map_Internal_keys'] ?? \PhpursThunks::eval('Data_Map_Internal_keys')))($s1)))((($GLOBALS['Data_Map_Internal_keys'] ?? \PhpursThunks::eval('Data_Map_Internal_keys')))($s2));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((((($GLOBALS['Data_List_Types_ordList'] ?? \PhpursThunks::eval('Data_List_Types_ordList')))($dictOrd_0))->compare)((($GLOBALS['Data_Map_Internal_keys'] ?? \PhpursThunks::eval('Data_Map_Internal_keys')))($s1_3)))((($GLOBALS['Data_Map_Internal_keys'] ?? \PhpursThunks::eval('Data_Map_Internal_keys')))($s2_4));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Eq0" => function($dollar__unused_0) use (&$eqSet1_1) {
+})(), "Eq0" => function($dollar__unused_3) use ($eqSet1_2_1) {
   $__num = \func_num_args();
-  $__res = $eqSet1_1;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $eqSet1_2_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -468,26 +517,29 @@ $__t1 = new Phpurs_Data0("Nothing");
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Data_Set_eq1Set'] = function() { $v = (object)["eq1" => (function() {
-  $__fn = function($dictEq, $v = null, $v1 = null) use (&$__fn) {
+  $__fn = function($dictEq_0, $v_1 = null, $v1_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (((((($GLOBALS['Data_Map_Internal_eqMap'] ?? \PhpursThunks::eval('Data_Map_Internal_eqMap')))($dictEq))(($GLOBALS['Data_Eq_eqUnit'] ?? \PhpursThunks::eval('Data_Eq_eqUnit'))))->eq)($v))($v1);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (((((($GLOBALS['Data_Map_Internal_eqMap'] ?? \PhpursThunks::eval('Data_Map_Internal_eqMap')))($dictEq_0))(($GLOBALS['Data_Eq_eqUnit'] ?? \PhpursThunks::eval('Data_Eq_eqUnit'))))->eq)($v_1))($v1_2);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
 })()]; return $v; };
-\PhpursThunks::$thunks['Data_Set_ord1Set'] = function() { $v = (object)["compare1" => function($dictOrd) {
+\PhpursThunks::$thunks['Data_Set_ord1Set'] = function() { $v = (object)["compare1" => function($dictOrd_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Set_ordSet'] ?? \PhpursThunks::eval('Data_Set_ordSet')))($dictOrd))->compare;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Data_Set_ordSet'] ?? \PhpursThunks::eval('Data_Set_ordSet')))($dictOrd_0))->compare;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Eq10" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_Set_eq1Set'] ?? \PhpursThunks::eval('Data_Set_eq1Set'));
   goto __end;;
   __end:
@@ -495,18 +547,20 @@ $__t1 = new Phpurs_Data0("Nothing");
 }]; return $v; };
 \PhpursThunks::$thunks['Data_Set_empty'] = function() { $v = new Phpurs_Data0("Leaf"); return $v; };
 \PhpursThunks::$thunks['Data_Set_fromFoldable'] = function() { $v = (function() {
-  $__fn = function($dictFoldable, $dictOrd = null) use (&$__fn) {
+  $__fn = function($dictFoldable_0, $dictOrd_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictFoldable)->foldl)((function() use (&$dictOrd) {
-  $__fn = function($m, $a = null) use (&$dictOrd, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Set_fromFoldable"), recVars=[];
+  $__res = ((($dictFoldable_0)->foldl)((function() use ($dictOrd_1) {
+  $__fn = function($m_2, $a_3 = null) use ($dictOrd_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((($GLOBALS['Data_Map_Internal_insert'] ?? \PhpursThunks::eval('Data_Map_Internal_insert')))($dictOrd))($a))(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'))))($m);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((((($GLOBALS['Data_Map_Internal_insert'] ?? \PhpursThunks::eval('Data_Map_Internal_insert')))($dictOrd_1))($a_3))(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'))))($m_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -520,18 +574,20 @@ $__t1 = new Phpurs_Data0("Nothing");
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Data_Set_map'] = function() { $v = (function() {
-  $__fn = function($dictOrd, $f = null) use (&$__fn) {
+  $__fn = function($dictOrd_0, $f_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($GLOBALS['Data_Set_foldableSet'] ?? \PhpursThunks::eval('Data_Set_foldableSet')))->foldl)((function() use (&$dictOrd, &$f) {
-  $__fn = function($m, $a = null) use (&$dictOrd, &$f, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Set_map"), recVars=[];
+  $__res = (((($GLOBALS['Data_Set_foldableSet'] ?? \PhpursThunks::eval('Data_Set_foldableSet')))->foldl)((function() use ($dictOrd_0, $f_1) {
+  $__fn = function($m_2, $a_3 = null) use ($dictOrd_0, $f_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((($GLOBALS['Data_Map_Internal_insert'] ?? \PhpursThunks::eval('Data_Map_Internal_insert')))($dictOrd))(($f)($a)))(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'))))($m);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((((($GLOBALS['Data_Map_Internal_insert'] ?? \PhpursThunks::eval('Data_Map_Internal_insert')))($dictOrd_0))(($f_1)($a_3)))(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'))))($m_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -545,23 +601,25 @@ $__t1 = new Phpurs_Data0("Nothing");
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Data_Set_mapMaybe'] = function() { $v = (function() {
-  $__fn = function($dictOrd, $f = null) use (&$__fn) {
+  $__fn = function($dictOrd_0, $f_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((((($GLOBALS['Data_List_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Types_foldableList')))->foldr)((function() use (&$dictOrd, &$f) {
-  $__fn = function($a, $acc = null) use (&$dictOrd, &$f, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Set_mapMaybe"), recVars=[];
+  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((((($GLOBALS['Data_List_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Types_foldableList')))->foldr)((function() use ($dictOrd_0, $f_1) {
+  $__fn = function($a_2, $acc_3 = null) use ($dictOrd_0, $f_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__local_var_0 = ($f)($a);
-  if ((is_object($__local_var_0) && (($__local_var_0)->tag === "Nothing"))) {
-$__t1 = $acc;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__local_var_4_0 = ($f_1)($a_2);
+  if ((is_object($__local_var_4_0) && (($__local_var_4_0)->tag === "Nothing"))) {
+$__t1 = $acc_3;
 } else {
-if ((is_object($__local_var_0) && (($__local_var_0)->tag === "Just"))) {
-$__t1 = ((((($GLOBALS['Data_Map_Internal_insert'] ?? \PhpursThunks::eval('Data_Map_Internal_insert')))($dictOrd))(($__local_var_0)->value0))(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'))))($acc);
+if ((is_object($__local_var_4_0) && (($__local_var_4_0)->tag === "Just"))) {
+$__t1 = ((((($GLOBALS['Data_Map_Internal_insert'] ?? \PhpursThunks::eval('Data_Map_Internal_insert')))($dictOrd_0))(($__local_var_4_0)->value0))(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'))))($acc_3);
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t1 = null;
@@ -580,12 +638,14 @@ $__t1 = null;
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Data_Set_monoidSet'] = function() { $v = function($dictOrd) {
+\PhpursThunks::$thunks['Data_Set_monoidSet'] = function() { $v = function($dictOrd_0) {
   $__num = \func_num_args();
-  $semigroupSet1_0 = (object)["append" => (($GLOBALS['Data_Set_union'] ?? \PhpursThunks::eval('Data_Set_union')))($dictOrd)];
-  $__res = (object)["mempty" => new Phpurs_Data0("Leaf"), "Semigroup0" => function($dollar__unused_0) use (&$semigroupSet1_0) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Set_monoidSet"), recVars=[];
+  $semigroupSet1_1_0 = (object)["append" => (($GLOBALS['Data_Set_union'] ?? \PhpursThunks::eval('Data_Set_union')))($dictOrd_0)];
+  $__res = (object)["mempty" => new Phpurs_Data0("Leaf"), "Semigroup0" => function($dollar__unused_2) use ($semigroupSet1_1_0) {
   $__num = \func_num_args();
-  $__res = $semigroupSet1_0;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $semigroupSet1_1_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -595,28 +655,31 @@ $__t1 = null;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Data_Set_unions'] = function() { $v = (function() {
-  $__fn = function($dictFoldable, $dictOrd = null) use (&$__fn) {
+  $__fn = function($dictFoldable_0, $dictOrd_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictFoldable)->foldl)((($GLOBALS['Data_Set_union'] ?? \PhpursThunks::eval('Data_Set_union')))($dictOrd)))(new Phpurs_Data0("Leaf"));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Set_unions"), recVars=[];
+  $__res = ((($dictFoldable_0)->foldl)((($GLOBALS['Data_Set_union'] ?? \PhpursThunks::eval('Data_Set_union')))($dictOrd_1)))(new Phpurs_Data0("Leaf"));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Data_Set_difference'] = function() { $v = function($dictOrd) {
+\PhpursThunks::$thunks['Data_Set_difference'] = function() { $v = function($dictOrd_0) {
   $__num = \func_num_args();
-  $compare_0 = ($dictOrd)->compare;
-  $__res = (($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))((function() use (&$compare_0) {
-  $__fn = function($m1, $m2 = null) use (&$compare_0, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Set_difference"), recVars=[];
+  $compare_1_0 = ($dictOrd_0)->compare;
+  $__res = (($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))((function() use ($compare_1_0) {
+  $__fn = function($m1_2, $m2_3 = null) use ($compare_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((($GLOBALS['Data_Function_Uncurried_runFn3'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn3')))(($GLOBALS['Data_Map_Internal_unsafeDifference'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeDifference'))))($compare_0))($m1))($m2);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((((($GLOBALS['Data_Function_Uncurried_runFn3'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn3')))(($GLOBALS['Data_Map_Internal_unsafeDifference'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeDifference'))))($compare_1_0))($m1_2))($m2_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -627,29 +690,32 @@ $__t1 = null;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Set_subset'] = function() { $v = function($dictOrd) {
+\PhpursThunks::$thunks['Data_Set_subset'] = function() { $v = function($dictOrd_0) {
   $__num = \func_num_args();
-  $compare_0 = ($dictOrd)->compare;
-  $difference1_1 = (($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))((function() use (&$compare_0) {
-  $__fn = function($m1, $m2 = null) use (&$compare_0, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Set_subset"), recVars=[];
+  $compare_1_0 = ($dictOrd_0)->compare;
+  $difference1_1_0 = (($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))((function() use ($compare_1_0) {
+  $__fn = function($m1_2, $m2_3 = null) use ($compare_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((($GLOBALS['Data_Function_Uncurried_runFn3'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn3')))(($GLOBALS['Data_Map_Internal_unsafeDifference'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeDifference'))))($compare_0))($m1))($m2);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((((($GLOBALS['Data_Function_Uncurried_runFn3'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn3')))(($GLOBALS['Data_Map_Internal_unsafeDifference'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeDifference'))))($compare_1_0))($m1_2))($m2_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })());
-  $__res = (function() use (&$difference1_1) {
-  $__fn = function($s1, $s2 = null) use (&$difference1_1, &$__fn) {
+  $__res = (function() use ($difference1_1_0) {
+  $__fn = function($s1_2, $s2_3 = null) use ($difference1_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_Set_isEmpty'] ?? \PhpursThunks::eval('Data_Set_isEmpty')))((($difference1_1)($s1))($s2));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($GLOBALS['Data_Set_isEmpty'] ?? \PhpursThunks::eval('Data_Set_isEmpty')))((($difference1_1_0)($s1_2))($s2_3));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -660,16 +726,18 @@ $__t1 = null;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Set_properSubset'] = function() { $v = function($dictOrd) {
+\PhpursThunks::$thunks['Data_Set_properSubset'] = function() { $v = function($dictOrd_0) {
   $__num = \func_num_args();
-  $subset1_0 = (($GLOBALS['Data_Set_subset'] ?? \PhpursThunks::eval('Data_Set_subset')))($dictOrd);
-  $__res = (function() use (&$subset1_0) {
-  $__fn = function($s1, $s2 = null) use (&$subset1_0, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Set_properSubset"), recVars=[];
+  $subset1_1_0 = (($GLOBALS['Data_Set_subset'] ?? \PhpursThunks::eval('Data_Set_subset')))($dictOrd_0);
+  $__res = (function() use ($subset1_1_0) {
+  $__fn = function($s1_2, $s2_3 = null) use ($subset1_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_HeytingAlgebra_boolConj'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolConj')))(((($GLOBALS['Data_Eq_eqBooleanImpl'] ?? \PhpursThunks::eval('Data_Eq_eqBooleanImpl')))(((($GLOBALS['Data_Eq_eqIntImpl'] ?? \PhpursThunks::eval('Data_Eq_eqIntImpl')))((($GLOBALS['Data_Set_size'] ?? \PhpursThunks::eval('Data_Set_size')))($s1)))((($GLOBALS['Data_Set_size'] ?? \PhpursThunks::eval('Data_Set_size')))($s2))))(false)))((($subset1_0)($s1))($s2));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Data_HeytingAlgebra_boolConj'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolConj')))(((($GLOBALS['Data_Eq_eqBooleanImpl'] ?? \PhpursThunks::eval('Data_Eq_eqBooleanImpl')))(((($GLOBALS['Data_Eq_eqIntImpl'] ?? \PhpursThunks::eval('Data_Eq_eqIntImpl')))((($GLOBALS['Data_Set_size'] ?? \PhpursThunks::eval('Data_Set_size')))($s1_2)))((($GLOBALS['Data_Set_size'] ?? \PhpursThunks::eval('Data_Set_size')))($s2_3))))(false)))((($subset1_1_0)($s1_2))($s2_3));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -680,23 +748,26 @@ $__t1 = null;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Set_delete'] = function() { $v = function($dictOrd) {
+\PhpursThunks::$thunks['Data_Set_delete'] = function() { $v = function($dictOrd_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))((($GLOBALS['Data_Map_Internal_delete'] ?? \PhpursThunks::eval('Data_Map_Internal_delete')))($dictOrd));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Set_delete"), recVars=[];
+  $__res = (($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))((($GLOBALS['Data_Map_Internal_delete'] ?? \PhpursThunks::eval('Data_Map_Internal_delete')))($dictOrd_0));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Set_checkValid'] = function() { $v = function($dictOrd) {
+\PhpursThunks::$thunks['Data_Set_checkValid'] = function() { $v = function($dictOrd_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))((($GLOBALS['Data_Map_Internal_checkValid'] ?? \PhpursThunks::eval('Data_Map_Internal_checkValid')))($dictOrd));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Set_checkValid"), recVars=[];
+  $__res = (($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))((($GLOBALS['Data_Map_Internal_checkValid'] ?? \PhpursThunks::eval('Data_Map_Internal_checkValid')))($dictOrd_0));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Set_catMaybes'] = function() { $v = function($dictOrd) {
+\PhpursThunks::$thunks['Data_Set_catMaybes'] = function() { $v = function($dictOrd_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Set_mapMaybe'] ?? \PhpursThunks::eval('Data_Set_mapMaybe')))($dictOrd))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->identity);
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Set_catMaybes"), recVars=[];
+  $__res = ((($GLOBALS['Data_Set_mapMaybe'] ?? \PhpursThunks::eval('Data_Set_mapMaybe')))($dictOrd_0))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->identity);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

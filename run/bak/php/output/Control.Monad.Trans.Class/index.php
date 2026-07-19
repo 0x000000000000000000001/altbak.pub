@@ -86,9 +86,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Control_Monad_Trans_Class_lift'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Control_Monad_Trans_Class_lift'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->lift;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_Trans_Class_lift"), recVars=[];
+  $__res = ($dict_0)->lift;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

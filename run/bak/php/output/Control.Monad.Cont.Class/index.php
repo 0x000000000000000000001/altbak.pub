@@ -86,9 +86,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Control_Monad_Cont_Class_callCC'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Control_Monad_Cont_Class_callCC'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->callCC;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_Cont_Class_callCC"), recVars=[];
+  $__res = ($dict_0)->callCC;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

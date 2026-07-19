@@ -95,51 +95,58 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 }
 \PhpursThunks::$thunks['Data_Char_Gen_toEnumWithDefaults'] = function() { $v = (($GLOBALS['Data_Enum_toEnumWithDefaults'] ?? \PhpursThunks::eval('Data_Enum_toEnumWithDefaults')))(($GLOBALS['Data_Enum_boundedEnumChar'] ?? \PhpursThunks::eval('Data_Enum_boundedEnumChar'))); return $v; };
 \PhpursThunks::$thunks['Data_Char_Gen_foldable1NonEmpty'] = function() { $v = (($GLOBALS['Data_NonEmpty_foldable1NonEmpty'] ?? \PhpursThunks::eval('Data_NonEmpty_foldable1NonEmpty')))(($GLOBALS['Data_Foldable_foldableArray'] ?? \PhpursThunks::eval('Data_Foldable_foldableArray'))); return $v; };
-\PhpursThunks::$thunks['Data_Char_Gen_genUnicodeChar'] = function() { $v = function($dictMonadGen) {
+\PhpursThunks::$thunks['Data_Char_Gen_genUnicodeChar'] = function() { $v = function($dictMonadGen_0) {
   $__num = \func_num_args();
-  $__res = ((((((((((($dictMonadGen)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->map)(((($GLOBALS['Data_Char_Gen_toEnumWithDefaults'] ?? \PhpursThunks::eval('Data_Char_Gen_toEnumWithDefaults')))(($GLOBALS['Data_Bounded_bottomChar'] ?? \PhpursThunks::eval('Data_Bounded_bottomChar'))))(($GLOBALS['Data_Bounded_topChar'] ?? \PhpursThunks::eval('Data_Bounded_topChar')))))(((($dictMonadGen)->chooseInt)(0))(65536));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Char_Gen_genUnicodeChar"), recVars=[];
+  $__res = ((((((((((($dictMonadGen_0)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->map)(((($GLOBALS['Data_Char_Gen_toEnumWithDefaults'] ?? \PhpursThunks::eval('Data_Char_Gen_toEnumWithDefaults')))(($GLOBALS['Data_Bounded_bottomChar'] ?? \PhpursThunks::eval('Data_Bounded_bottomChar'))))(($GLOBALS['Data_Bounded_topChar'] ?? \PhpursThunks::eval('Data_Bounded_topChar')))))(((($dictMonadGen_0)->chooseInt)(0))(65536));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Char_Gen_genDigitChar'] = function() { $v = function($dictMonadGen) {
+\PhpursThunks::$thunks['Data_Char_Gen_genDigitChar'] = function() { $v = function($dictMonadGen_0) {
   $__num = \func_num_args();
-  $__res = ((((((((((($dictMonadGen)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->map)(((($GLOBALS['Data_Char_Gen_toEnumWithDefaults'] ?? \PhpursThunks::eval('Data_Char_Gen_toEnumWithDefaults')))(($GLOBALS['Data_Bounded_bottomChar'] ?? \PhpursThunks::eval('Data_Bounded_bottomChar'))))(($GLOBALS['Data_Bounded_topChar'] ?? \PhpursThunks::eval('Data_Bounded_topChar')))))(((($dictMonadGen)->chooseInt)(48))(57));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Char_Gen_genDigitChar"), recVars=[];
+  $__res = ((((((((((($dictMonadGen_0)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->map)(((($GLOBALS['Data_Char_Gen_toEnumWithDefaults'] ?? \PhpursThunks::eval('Data_Char_Gen_toEnumWithDefaults')))(($GLOBALS['Data_Bounded_bottomChar'] ?? \PhpursThunks::eval('Data_Bounded_bottomChar'))))(($GLOBALS['Data_Bounded_topChar'] ?? \PhpursThunks::eval('Data_Bounded_topChar')))))(((($dictMonadGen_0)->chooseInt)(48))(57));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Char_Gen_genAsciiChar__prime__'] = function() { $v = function($dictMonadGen) {
+\PhpursThunks::$thunks['Data_Char_Gen_genAsciiChar__prime__'] = function() { $v = function($dictMonadGen_0) {
   $__num = \func_num_args();
-  $__res = ((((((((((($dictMonadGen)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->map)(((($GLOBALS['Data_Char_Gen_toEnumWithDefaults'] ?? \PhpursThunks::eval('Data_Char_Gen_toEnumWithDefaults')))(($GLOBALS['Data_Bounded_bottomChar'] ?? \PhpursThunks::eval('Data_Bounded_bottomChar'))))(($GLOBALS['Data_Bounded_topChar'] ?? \PhpursThunks::eval('Data_Bounded_topChar')))))(((($dictMonadGen)->chooseInt)(0))(127));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Char_Gen_genAsciiChar'"), recVars=[];
+  $__res = ((((((((((($dictMonadGen_0)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->map)(((($GLOBALS['Data_Char_Gen_toEnumWithDefaults'] ?? \PhpursThunks::eval('Data_Char_Gen_toEnumWithDefaults')))(($GLOBALS['Data_Bounded_bottomChar'] ?? \PhpursThunks::eval('Data_Bounded_bottomChar'))))(($GLOBALS['Data_Bounded_topChar'] ?? \PhpursThunks::eval('Data_Bounded_topChar')))))(((($dictMonadGen_0)->chooseInt)(0))(127));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Char_Gen_genAsciiChar'] = function() { $v = function($dictMonadGen) {
+\PhpursThunks::$thunks['Data_Char_Gen_genAsciiChar'] = function() { $v = function($dictMonadGen_0) {
   $__num = \func_num_args();
-  $__res = ((((((((((($dictMonadGen)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->map)(((($GLOBALS['Data_Char_Gen_toEnumWithDefaults'] ?? \PhpursThunks::eval('Data_Char_Gen_toEnumWithDefaults')))(($GLOBALS['Data_Bounded_bottomChar'] ?? \PhpursThunks::eval('Data_Bounded_bottomChar'))))(($GLOBALS['Data_Bounded_topChar'] ?? \PhpursThunks::eval('Data_Bounded_topChar')))))(((($dictMonadGen)->chooseInt)(32))(127));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Char_Gen_genAsciiChar"), recVars=[];
+  $__res = ((((((((((($dictMonadGen_0)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->map)(((($GLOBALS['Data_Char_Gen_toEnumWithDefaults'] ?? \PhpursThunks::eval('Data_Char_Gen_toEnumWithDefaults')))(($GLOBALS['Data_Bounded_bottomChar'] ?? \PhpursThunks::eval('Data_Bounded_bottomChar'))))(($GLOBALS['Data_Bounded_topChar'] ?? \PhpursThunks::eval('Data_Bounded_topChar')))))(((($dictMonadGen_0)->chooseInt)(32))(127));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Char_Gen_genAlphaUppercase'] = function() { $v = function($dictMonadGen) {
+\PhpursThunks::$thunks['Data_Char_Gen_genAlphaUppercase'] = function() { $v = function($dictMonadGen_0) {
   $__num = \func_num_args();
-  $__res = ((((((((((($dictMonadGen)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->map)(((($GLOBALS['Data_Char_Gen_toEnumWithDefaults'] ?? \PhpursThunks::eval('Data_Char_Gen_toEnumWithDefaults')))(($GLOBALS['Data_Bounded_bottomChar'] ?? \PhpursThunks::eval('Data_Bounded_bottomChar'))))(($GLOBALS['Data_Bounded_topChar'] ?? \PhpursThunks::eval('Data_Bounded_topChar')))))(((($dictMonadGen)->chooseInt)(65))(90));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Char_Gen_genAlphaUppercase"), recVars=[];
+  $__res = ((((((((((($dictMonadGen_0)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->map)(((($GLOBALS['Data_Char_Gen_toEnumWithDefaults'] ?? \PhpursThunks::eval('Data_Char_Gen_toEnumWithDefaults')))(($GLOBALS['Data_Bounded_bottomChar'] ?? \PhpursThunks::eval('Data_Bounded_bottomChar'))))(($GLOBALS['Data_Bounded_topChar'] ?? \PhpursThunks::eval('Data_Bounded_topChar')))))(((($dictMonadGen_0)->chooseInt)(65))(90));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Char_Gen_genAlphaLowercase'] = function() { $v = function($dictMonadGen) {
+\PhpursThunks::$thunks['Data_Char_Gen_genAlphaLowercase'] = function() { $v = function($dictMonadGen_0) {
   $__num = \func_num_args();
-  $__res = ((((((((((($dictMonadGen)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->map)(((($GLOBALS['Data_Char_Gen_toEnumWithDefaults'] ?? \PhpursThunks::eval('Data_Char_Gen_toEnumWithDefaults')))(($GLOBALS['Data_Bounded_bottomChar'] ?? \PhpursThunks::eval('Data_Bounded_bottomChar'))))(($GLOBALS['Data_Bounded_topChar'] ?? \PhpursThunks::eval('Data_Bounded_topChar')))))(((($dictMonadGen)->chooseInt)(97))(122));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Char_Gen_genAlphaLowercase"), recVars=[];
+  $__res = ((((((((((($dictMonadGen_0)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->map)(((($GLOBALS['Data_Char_Gen_toEnumWithDefaults'] ?? \PhpursThunks::eval('Data_Char_Gen_toEnumWithDefaults')))(($GLOBALS['Data_Bounded_bottomChar'] ?? \PhpursThunks::eval('Data_Bounded_bottomChar'))))(($GLOBALS['Data_Bounded_topChar'] ?? \PhpursThunks::eval('Data_Bounded_topChar')))))(((($dictMonadGen_0)->chooseInt)(97))(122));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Char_Gen_genAlpha'] = function() { $v = function($dictMonadGen) {
+\PhpursThunks::$thunks['Data_Char_Gen_genAlpha'] = function() { $v = function($dictMonadGen_0) {
   $__num = \func_num_args();
-  $__res = (((($GLOBALS['Control_Monad_Gen_oneOf'] ?? \PhpursThunks::eval('Control_Monad_Gen_oneOf')))($dictMonadGen))(($GLOBALS['Data_Char_Gen_foldable1NonEmpty'] ?? \PhpursThunks::eval('Data_Char_Gen_foldable1NonEmpty'))))(new Phpurs_Data2("NonEmpty", (($GLOBALS['Data_Char_Gen_genAlphaLowercase'] ?? \PhpursThunks::eval('Data_Char_Gen_genAlphaLowercase')))($dictMonadGen), [(($GLOBALS['Data_Char_Gen_genAlphaUppercase'] ?? \PhpursThunks::eval('Data_Char_Gen_genAlphaUppercase')))($dictMonadGen)]));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Char_Gen_genAlpha"), recVars=[];
+  $__res = (((($GLOBALS['Control_Monad_Gen_oneOf'] ?? \PhpursThunks::eval('Control_Monad_Gen_oneOf')))($dictMonadGen_0))(($GLOBALS['Data_Char_Gen_foldable1NonEmpty'] ?? \PhpursThunks::eval('Data_Char_Gen_foldable1NonEmpty'))))(new Phpurs_Data2("NonEmpty", (($GLOBALS['Data_Char_Gen_genAlphaLowercase'] ?? \PhpursThunks::eval('Data_Char_Gen_genAlphaLowercase')))($dictMonadGen_0), [(($GLOBALS['Data_Char_Gen_genAlphaUppercase'] ?? \PhpursThunks::eval('Data_Char_Gen_genAlphaUppercase')))($dictMonadGen_0)]));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

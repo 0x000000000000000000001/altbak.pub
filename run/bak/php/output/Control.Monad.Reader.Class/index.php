@@ -92,18 +92,20 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 }
 \PhpursThunks::$thunks['Control_Monad_Reader_Class_monadAskFun'] = function() { $v = (object)["ask" => (($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->identity, "Monad0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Control_Monad_monadFn'] ?? \PhpursThunks::eval('Control_Monad_monadFn'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
 \PhpursThunks::$thunks['Control_Monad_Reader_Class_monadReaderFun'] = function() { $v = (object)["local" => (function() {
-  $__fn = function($f, $g = null) use (&$__fn) {
+  $__fn = function($f_0, $g_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($g))($f);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($g_1))($f_0);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -111,31 +113,36 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(), "MonadAsk0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Control_Monad_Reader_Class_monadAskFun'] ?? \PhpursThunks::eval('Control_Monad_Reader_Class_monadAskFun'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Reader_Class_local'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Control_Monad_Reader_Class_local'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->local;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_Reader_Class_local"), recVars=[];
+  $__res = ($dict_0)->local;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Reader_Class_ask'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Control_Monad_Reader_Class_ask'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->ask;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_Reader_Class_ask"), recVars=[];
+  $__res = ($dict_0)->ask;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Reader_Class_asks'] = function() { $v = function($dictMonadAsk) {
+\PhpursThunks::$thunks['Control_Monad_Reader_Class_asks'] = function() { $v = function($dictMonadAsk_0) {
   $__num = \func_num_args();
-  $ask1_0 = ($dictMonadAsk)->ask;
-  $__res = function($f) use (&$ask1_0, &$dictMonadAsk) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_Reader_Class_asks"), recVars=[];
+  $ask1_1_0 = ($dictMonadAsk_0)->ask;
+  $__res = function($f_2) use ($ask1_1_0, $dictMonadAsk_0) {
   $__num = \func_num_args();
-  $__res = ((((((((((($dictMonadAsk)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->map)($f))($ask1_0);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((((((((((($dictMonadAsk_0)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->map)($f_2))($ask1_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

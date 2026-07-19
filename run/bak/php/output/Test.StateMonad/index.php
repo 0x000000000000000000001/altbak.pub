@@ -93,20 +93,22 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Test_StateMonad_State'] = function() { $v = function($x) {
+\PhpursThunks::$thunks['Test_StateMonad_State'] = function() { $v = function($x_0) {
   $__num = \func_num_args();
-  $__res = $x;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Test_StateMonad_State"), recVars=[];
+  $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Test_StateMonad_runState'] = function() { $v = (function() {
-  $__fn = function($v, $s = null) use (&$__fn) {
+  $__fn = function($v_0, $s_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($v)($s);
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Test_StateMonad_runState"), recVars=[];
+  $__res = ($v_0)($s_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -114,12 +116,13 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Test_StateMonad_put'] = function() { $v = (function() {
-  $__fn = function($s, $v = null) use (&$__fn) {
+  $__fn = function($s_0, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (object)["val" => ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')), "state" => $s];
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Test_StateMonad_put"), recVars=[];
+  $__res = (object)["val" => ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')), "state" => $s_0];
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -127,34 +130,37 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Test_StateMonad_pureState'] = function() { $v = (function() {
-  $__fn = function($a, $s = null) use (&$__fn) {
+  $__fn = function($a_0, $s_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (object)["val" => $a, "state" => $s];
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Test_StateMonad_pureState"), recVars=[];
+  $__res = (object)["val" => $a_0, "state" => $s_1];
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Test_StateMonad_get'] = function() { $v = function($s) {
+\PhpursThunks::$thunks['Test_StateMonad_get'] = function() { $v = function($s_0) {
   $__num = \func_num_args();
-  $__res = (object)["val" => $s, "state" => $s];
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Test_StateMonad_get"), recVars=[];
+  $__res = (object)["val" => $s_0, "state" => $s_0];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Test_StateMonad_describe'] = function() { $v = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))("State Monad (1.2k Binds, 60 Stack Depth):"); return $v; };
 \PhpursThunks::$thunks['Test_StateMonad_bindState'] = function() { $v = (function() {
-  $__fn = function($v, $g = null, $s = null) use (&$__fn) {
+  $__fn = function($v_0, $g_1 = null, $s_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $r1_0 = ($v)($s);
-  $__res = (($g)(($r1_0)->val))(($r1_0)->state);
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Test_StateMonad_bindState"), recVars=[];
+  $r1_3_0 = ($v_0)($s_2);
+  $__res = (($g_1)(($r1_3_0)->val))(($r1_3_0)->state);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -162,61 +168,75 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Test_StateMonad_modify'] = function() { $v = (function() {
-  $__fn = function($f, $s = null) use (&$__fn) {
+  $__fn = function($f_0, $s_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (object)["val" => ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')), "state" => ($f)($s)];
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Test_StateMonad_modify"), recVars=[];
+  $__res = (object)["val" => ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')), "state" => ($f_0)($s_1)];
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Test_StateMonad_chainModifications'] = function() { $v = function($v) {
+\PhpursThunks::$thunks['Test_StateMonad_chainModifications'] = function() { $v = function($v_0) {
   $__num = \func_num_args();
-  switch ($v) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Test_StateMonad_chainModifications"), recVars=["Test_StateMonad_chainModifications"];
+  while (true) {
+switch ($v_0) {
 case 0:
-$__t0 = function($s) {
+$__t0 = function($s_1) {
   $__num = \func_num_args();
-  $__res = (object)["val" => ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')), "state" => $s];
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Test_StateMonad_chainModifications"];
+  $__res = (object)["val" => ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')), "state" => $s_1];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
 break;
 default:
-$__t0 = function($s) use (&$v) {
+$__t0 = function($s_1) use ($v_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Test_StateMonad_chainModifications'] ?? \PhpursThunks::eval('Test_StateMonad_chainModifications')))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v))(1)))(((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))($s))(1));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Test_StateMonad_chainModifications"];
+  $__res = ((($GLOBALS['Test_StateMonad_chainModifications'] ?? \PhpursThunks::eval('Test_StateMonad_chainModifications')))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v_0))(1)))(((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))($s_1))(1));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
 break;
 };
-  $__res = $__t0;
-  goto __end;;
+$__res = $__t0;
+goto __end;;
+};
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Test_StateMonad_runManyTimes'] = function() { $v = (function() {
-  $__fn = function($v, $v1 = null) use (&$__fn) {
+  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  switch ($v) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Test_StateMonad_runManyTimes"), recVars=["Test_StateMonad_runManyTimes"];
+  while (true) {
+switch ($v_0) {
 case 0:
-$__t0 = $v1;
+$__t2 = $v1_1;
 break;
 default:
-$__t0 = ((($GLOBALS['Test_StateMonad_runManyTimes'] ?? \PhpursThunks::eval('Test_StateMonad_runManyTimes')))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v))(1)))(((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))($v1))((((($GLOBALS['Test_StateMonad_chainModifications'] ?? \PhpursThunks::eval('Test_StateMonad_chainModifications')))(60))(0))->state));
+$__tco_0 = ((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v_0))(1);
+$__tco_1 = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))($v1_1))((((($GLOBALS['Test_StateMonad_chainModifications'] ?? \PhpursThunks::eval('Test_StateMonad_chainModifications')))(60))(0))->state);
+$v_0 = $__tco_0;
+$v1_1 = $__tco_1;
+continue 2;
+$__t2 = null;
 break;
 };
-  $__res = $__t0;
-  goto __end;;
+$__res = $__t2;
+goto __end;;
+};
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };

@@ -85,31 +85,36 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Type_Equality_refl'] = function() { $v = (object)["proof" => function($a) {
+\PhpursThunks::$thunks['Type_Equality_refl'] = function() { $v = (object)["proof" => function($a_0) {
   $__num = \func_num_args();
-  $__res = $a;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $a_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Coercible0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
-\PhpursThunks::$thunks['Type_Equality_proof'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Type_Equality_proof'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->proof;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Type_Equality_proof"), recVars=[];
+  $__res = ($dict_0)->proof;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Type_Equality_to'] = function() { $v = function($dictTypeEquals) {
+\PhpursThunks::$thunks['Type_Equality_to'] = function() { $v = function($dictTypeEquals_0) {
   $__num = \func_num_args();
-  $__res = (($dictTypeEquals)->proof)(function($a) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Type_Equality_to"), recVars=[];
+  $__res = (($dictTypeEquals_0)->proof)(function($a_1) {
   $__num = \func_num_args();
-  $__res = $a;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $a_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -118,11 +123,13 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Type_Equality_from'] = function() { $v = function($dictTypeEquals) {
+\PhpursThunks::$thunks['Type_Equality_from'] = function() { $v = function($dictTypeEquals_0) {
   $__num = \func_num_args();
-  $__res = (($dictTypeEquals)->proof)(function($a) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Type_Equality_from"), recVars=[];
+  $__res = (($dictTypeEquals_0)->proof)(function($a_1) {
   $__num = \func_num_args();
-  $__res = $a;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $a_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

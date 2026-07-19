@@ -90,42 +90,47 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Traversable_Accum_Internal_StateR'] = function() { $v = function($x) {
+\PhpursThunks::$thunks['Data_Traversable_Accum_Internal_StateR'] = function() { $v = function($x_0) {
   $__num = \func_num_args();
-  $__res = $x;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Traversable_Accum_Internal_StateR"), recVars=[];
+  $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Traversable_Accum_Internal_StateL'] = function() { $v = function($x) {
+\PhpursThunks::$thunks['Data_Traversable_Accum_Internal_StateL'] = function() { $v = function($x_0) {
   $__num = \func_num_args();
-  $__res = $x;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Traversable_Accum_Internal_StateL"), recVars=[];
+  $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Traversable_Accum_Internal_stateR'] = function() { $v = function($v) {
+\PhpursThunks::$thunks['Data_Traversable_Accum_Internal_stateR'] = function() { $v = function($v_0) {
   $__num = \func_num_args();
-  $__res = $v;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Traversable_Accum_Internal_stateR"), recVars=[];
+  $__res = $v_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Traversable_Accum_Internal_stateL'] = function() { $v = function($v) {
+\PhpursThunks::$thunks['Data_Traversable_Accum_Internal_stateL'] = function() { $v = function($v_0) {
   $__num = \func_num_args();
-  $__res = $v;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Traversable_Accum_Internal_stateL"), recVars=[];
+  $__res = $v_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Data_Traversable_Accum_Internal_functorStateR'] = function() { $v = (object)["map" => (function() {
-  $__fn = function($f, $k = null, $s = null) use (&$__fn) {
+  $__fn = function($f_0, $k_1 = null, $s_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $v_0 = ($k)($s);
-  $__res = (object)["accum" => ($v_0)->accum, "value" => ($f)(($v_0)->value)];
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $v_3_0 = ($k_1)($s_2);
+  $__res = (object)["accum" => ($v_3_0)->accum, "value" => ($f_0)(($v_3_0)->value)];
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -133,13 +138,14 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })()]; return $v; };
 \PhpursThunks::$thunks['Data_Traversable_Accum_Internal_functorStateL'] = function() { $v = (object)["map" => (function() {
-  $__fn = function($f, $k = null, $s = null) use (&$__fn) {
+  $__fn = function($f_0, $k_1 = null, $s_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $v_0 = ($k)($s);
-  $__res = (object)["accum" => ($v_0)->accum, "value" => ($f)(($v_0)->value)];
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $v_3_0 = ($k_1)($s_2);
+  $__res = (object)["accum" => ($v_3_0)->accum, "value" => ($f_0)(($v_3_0)->value)];
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -147,14 +153,15 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })()]; return $v; };
 \PhpursThunks::$thunks['Data_Traversable_Accum_Internal_applyStateR'] = function() { $v = (object)["apply" => (function() {
-  $__fn = function($f, $x = null, $s = null) use (&$__fn) {
+  $__fn = function($f_0, $x_1 = null, $s_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $v_0 = ($x)($s);
-  $v1_1 = ($f)(($v_0)->accum);
-  $__res = (object)["accum" => ($v1_1)->accum, "value" => (($v1_1)->value)(($v_0)->value)];
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $v_3_0 = ($x_1)($s_2);
+  $v1_4_1 = ($f_0)(($v_3_0)->accum);
+  $__res = (object)["accum" => ($v1_4_1)->accum, "value" => (($v1_4_1)->value)(($v_3_0)->value)];
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -162,20 +169,22 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(), "Functor0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_Traversable_Accum_Internal_functorStateR'] ?? \PhpursThunks::eval('Data_Traversable_Accum_Internal_functorStateR'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
 \PhpursThunks::$thunks['Data_Traversable_Accum_Internal_applyStateL'] = function() { $v = (object)["apply" => (function() {
-  $__fn = function($f, $x = null, $s = null) use (&$__fn) {
+  $__fn = function($f_0, $x_1 = null, $s_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $v_0 = ($f)($s);
-  $v1_1 = ($x)(($v_0)->accum);
-  $__res = (object)["accum" => ($v1_1)->accum, "value" => (($v_0)->value)(($v1_1)->value)];
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $v_3_0 = ($f_0)($s_2);
+  $v1_4_1 = ($x_1)(($v_3_0)->accum);
+  $__res = (object)["accum" => ($v1_4_1)->accum, "value" => (($v_3_0)->value)(($v1_4_1)->value)];
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -183,18 +192,20 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(), "Functor0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_Traversable_Accum_Internal_functorStateL'] ?? \PhpursThunks::eval('Data_Traversable_Accum_Internal_functorStateL'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
 \PhpursThunks::$thunks['Data_Traversable_Accum_Internal_applicativeStateR'] = function() { $v = (object)["pure" => (function() {
-  $__fn = function($a, $s = null) use (&$__fn) {
+  $__fn = function($a_0, $s_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (object)["accum" => $s, "value" => $a];
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (object)["accum" => $s_1, "value" => $a_0];
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -202,18 +213,20 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(), "Apply0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_Traversable_Accum_Internal_applyStateR'] ?? \PhpursThunks::eval('Data_Traversable_Accum_Internal_applyStateR'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
 \PhpursThunks::$thunks['Data_Traversable_Accum_Internal_applicativeStateL'] = function() { $v = (object)["pure" => (function() {
-  $__fn = function($a, $s = null) use (&$__fn) {
+  $__fn = function($a_0, $s_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (object)["accum" => $s, "value" => $a];
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (object)["accum" => $s_1, "value" => $a_0];
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -221,6 +234,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(), "Apply0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_Traversable_Accum_Internal_applyStateL'] ?? \PhpursThunks::eval('Data_Traversable_Accum_Internal_applyStateL'));
   goto __end;;
   __end:

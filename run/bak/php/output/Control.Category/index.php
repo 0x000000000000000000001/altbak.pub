@@ -86,21 +86,24 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Control_Category_identity'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Control_Category_identity'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->identity;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Category_identity"), recVars=[];
+  $__res = ($dict_0)->identity;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Category_categoryFn'] = function() { $v = (object)["identity" => function($x) {
+\PhpursThunks::$thunks['Control_Category_categoryFn'] = function() { $v = (object)["identity" => function($x_0) {
   $__num = \func_num_args();
-  $__res = $x;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Semigroupoid0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Control_Semigroupoid_semigroupoidFn'] ?? \PhpursThunks::eval('Control_Semigroupoid_semigroupoidFn'));
   goto __end;;
   __end:

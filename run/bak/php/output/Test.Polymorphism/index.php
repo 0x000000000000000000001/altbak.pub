@@ -92,52 +92,64 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Test_Polymorphism_mempty_'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Test_Polymorphism_mempty_'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->mempty_;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Test_Polymorphism_mempty_"), recVars=[];
+  $__res = ($dict_0)->mempty_;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Test_Polymorphism_mappend_'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Test_Polymorphism_mappend_'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->mappend_;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Test_Polymorphism_mappend_"), recVars=[];
+  $__res = ($dict_0)->mappend_;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Test_Polymorphism_polyLoop'] = function() { $v = function($dictMonoidish) {
+\PhpursThunks::$thunks['Test_Polymorphism_polyLoop'] = function() { $v = function($dictMonoidish_0) {
   $__num = \func_num_args();
-  $mempty_1_0 = ($dictMonoidish)->mempty_;
-  $__res = (function() use (&$dictMonoidish, &$mempty_1_0) {
-  $__fn = function($n_init, $acc_init = null) use (&$dictMonoidish, &$mempty_1_0, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $go = null;
-  $go = (function() use (&$dictMonoidish, &$go, &$mempty_1_0) {
-  $__fn = function($v, $v1 = null) use (&$dictMonoidish, &$go, &$mempty_1_0, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Test_Polymorphism_polyLoop"), recVars=[];
+  $mempty_1_1_0 = ($dictMonoidish_0)->mempty_;
+  $__res = (function() use ($dictMonoidish_0, $mempty_1_1_0) {
+  $__fn = function($n_init_2, $acc_init_3 = null) use ($dictMonoidish_0, $mempty_1_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  switch ($v) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $go_4_1 = null;
+  $go_4_1 = (function() use ($dictMonoidish_0, &$go_4_1, $mempty_1_1_0) {
+  $__fn = function($v_5, $v1_6 = null) use ($dictMonoidish_0, &$go_4_1, $mempty_1_1_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  // DEBUG UncurriedAbs: currentBindingName=(Just "go_4_1"), recVars=["go_4_1"];
+  while (true) {
+switch ($v_5) {
 case 0:
-$__t1 = $v1;
+$__t4 = $v1_6;
 break;
 default:
-$__t1 = (($go)(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v))(1)))(((($dictMonoidish)->mappend_)($v1))($mempty_1_0));
+$__tco_2 = ((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v_5))(1);
+$__tco_3 = ((($dictMonoidish_0)->mappend_)($v1_6))($mempty_1_1_0);
+$v_5 = $__tco_2;
+$v1_6 = $__tco_3;
+continue 2;
+$__t4 = null;
 break;
 };
-  $__res = $__t1;
-  goto __end;;
+$__res = $__t4;
+goto __end;;
+};
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })();
-  $__res = (($go)($n_init))($acc_init);
+  $__res = (($go_4_1)($n_init_2))($acc_init_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -149,12 +161,13 @@ break;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Test_Polymorphism_intMonoidish'] = function() { $v = (object)["mempty_" => 1, "mappend_" => (function() {
-  $__fn = function($x, $y = null) use (&$__fn) {
+  $__fn = function($x_0, $y_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))($x))($y);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))($x_0))($y_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

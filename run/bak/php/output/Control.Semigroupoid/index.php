@@ -86,20 +86,22 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   }
 }
 \PhpursThunks::$thunks['Control_Semigroupoid_semigroupoidFn'] = function() { $v = (object)["compose" => ($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl'))]; return $v; };
-\PhpursThunks::$thunks['Control_Semigroupoid_compose'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Control_Semigroupoid_compose'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->compose;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Semigroupoid_compose"), recVars=[];
+  $__res = ($dict_0)->compose;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Control_Semigroupoid_composeFlipped'] = function() { $v = (function() {
-  $__fn = function($dictSemigroupoid, $f = null, $g = null) use (&$__fn) {
+  $__fn = function($dictSemigroupoid_0, $f_1 = null, $g_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($dictSemigroupoid)->compose)($g))($f);
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Semigroupoid_composeFlipped"), recVars=[];
+  $__res = ((($dictSemigroupoid_0)->compose)($g_2))($f_1);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;

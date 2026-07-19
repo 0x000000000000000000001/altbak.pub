@@ -23,11 +23,10 @@ export PATH="$PWD/run/bak/js/node_modules/.bin:$PATH"
 spago build --backend-args "--main ${ENTRY_POINT} --ffi run/bak/php/ffi" || echo "Compilation failed, but that's expected for now!"
 
 echo "=== Native PHP ==="
-if [ -f "output/main.php" ]; then
+if [ -f "output/${ENTRY_POINT}/main.mod.php" ]; then
     php bin/php/composer.phar update --no-plugins -d run/bak/php
-    echo "<?php require __DIR__ . '/../vendor/autoload.php'; require 'main.php';" > output/run.php
     mkdir -p /tmp/phpurs_opcache
-    time php -d xdebug.mode=off -d opcache.enable_cli=1 -d opcache.file_cache=/tmp/phpurs_opcache -d opcache.jit_buffer_size=128M -d opcache.jit=1255 output/run.php
+    time php -d xdebug.mode=off -d opcache.enable_cli=1 -d opcache.file_cache=/tmp/phpurs_opcache -d opcache.jit_buffer_size=128M -d opcache.jit=1255 output/${ENTRY_POINT}/main.mod.php
 else
-    echo "No output/main.php generated."
+    echo "No output/${ENTRY_POINT}/main.mod.php generated."
 fi

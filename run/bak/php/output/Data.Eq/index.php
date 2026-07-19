@@ -92,11 +92,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   }
 }
 \PhpursThunks::$thunks['Data_Eq_eqVoid'] = function() { $v = (object)["eq" => (function() {
-  $__fn = function($v, $v1 = null) use (&$__fn) {
+  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = true;
   goto __end;;
   __end:
@@ -105,11 +106,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })()]; return $v; };
 \PhpursThunks::$thunks['Data_Eq_eqUnit'] = function() { $v = (object)["eq" => (function() {
-  $__fn = function($v, $v1 = null) use (&$__fn) {
+  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = true;
   goto __end;;
   __end:
@@ -119,11 +121,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 })()]; return $v; };
 \PhpursThunks::$thunks['Data_Eq_eqString'] = function() { $v = (object)["eq" => ($GLOBALS['Data_Eq_eqStringImpl'] ?? \PhpursThunks::eval('Data_Eq_eqStringImpl'))]; return $v; };
 \PhpursThunks::$thunks['Data_Eq_eqRowNil'] = function() { $v = (object)["eqRecord" => (function() {
-  $__fn = function($v, $v1 = null, $v2 = null) use (&$__fn) {
+  $__fn = function($v_0, $v1_1 = null, $v2_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = true;
   goto __end;;
   __end:
@@ -131,20 +134,22 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   };
   return $__fn;
 })()]; return $v; };
-\PhpursThunks::$thunks['Data_Eq_eqRecord'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Data_Eq_eqRecord'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->eqRecord;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Eq_eqRecord"), recVars=[];
+  $__res = ($dict_0)->eqRecord;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Data_Eq_eqRec'] = function() { $v = (function() {
-  $__fn = function($dollar__unused_0, $dictEqRecord = null) use (&$__fn) {
+  $__fn = function($dollar__unused_0, $dictEqRecord_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (object)["eq" => (($dictEqRecord)->eqRecord)(new Phpurs_Data0("Proxy"))];
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Eq_eqRec"), recVars=[];
+  $__res = (object)["eq" => (($dictEqRecord_1)->eqRecord)(new Phpurs_Data0("Proxy"))];
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -152,11 +157,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Data_Eq_eqProxy'] = function() { $v = (object)["eq" => (function() {
-  $__fn = function($v, $v1 = null) use (&$__fn) {
+  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = true;
   goto __end;;
   __end:
@@ -168,48 +174,54 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 \PhpursThunks::$thunks['Data_Eq_eqInt'] = function() { $v = (object)["eq" => ($GLOBALS['Data_Eq_eqIntImpl'] ?? \PhpursThunks::eval('Data_Eq_eqIntImpl'))]; return $v; };
 \PhpursThunks::$thunks['Data_Eq_eqChar'] = function() { $v = (object)["eq" => ($GLOBALS['Data_Eq_eqCharImpl'] ?? \PhpursThunks::eval('Data_Eq_eqCharImpl'))]; return $v; };
 \PhpursThunks::$thunks['Data_Eq_eqBoolean'] = function() { $v = (object)["eq" => ($GLOBALS['Data_Eq_eqBooleanImpl'] ?? \PhpursThunks::eval('Data_Eq_eqBooleanImpl'))]; return $v; };
-\PhpursThunks::$thunks['Data_Eq_eq1'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Data_Eq_eq1'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->eq1;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Eq_eq1"), recVars=[];
+  $__res = ($dict_0)->eq1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Eq_eq'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Data_Eq_eq'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->eq;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Eq_eq"), recVars=[];
+  $__res = ($dict_0)->eq;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Eq_eqArray'] = function() { $v = function($dictEq) {
+\PhpursThunks::$thunks['Data_Eq_eqArray'] = function() { $v = function($dictEq_0) {
   $__num = \func_num_args();
-  $__res = (object)["eq" => (($GLOBALS['Data_Eq_eqArrayImpl'] ?? \PhpursThunks::eval('Data_Eq_eqArrayImpl')))(($dictEq)->eq)];
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Eq_eqArray"), recVars=[];
+  $__res = (object)["eq" => (($GLOBALS['Data_Eq_eqArrayImpl'] ?? \PhpursThunks::eval('Data_Eq_eqArrayImpl')))(($dictEq_0)->eq)];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Eq_eq1Array'] = function() { $v = (object)["eq1" => function($dictEq) {
+\PhpursThunks::$thunks['Data_Eq_eq1Array'] = function() { $v = (object)["eq1" => function($dictEq_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Eq_eqArrayImpl'] ?? \PhpursThunks::eval('Data_Eq_eqArrayImpl')))(($dictEq)->eq);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($GLOBALS['Data_Eq_eqArrayImpl'] ?? \PhpursThunks::eval('Data_Eq_eqArrayImpl')))(($dictEq_0)->eq);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
 \PhpursThunks::$thunks['Data_Eq_eqRowCons'] = function() { $v = (function() {
-  $__fn = function($dictEqRecord, $dollar__unused_1 = null, $dictIsSymbol = null, $dictEq = null) use (&$__fn) {
+  $__fn = function($dictEqRecord_0, $dollar__unused_1 = null, $dictIsSymbol_2 = null, $dictEq_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = (object)["eqRecord" => (function() use (&$dictEq, &$dictEqRecord, &$dictIsSymbol) {
-  $__fn = function($v, $ra = null, $rb = null) use (&$dictEq, &$dictEqRecord, &$dictIsSymbol, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Eq_eqRowCons"), recVars=[];
+  $__res = (object)["eqRecord" => (function() use ($dictEqRecord_0, $dictEq_3, $dictIsSymbol_2) {
+  $__fn = function($v_4, $ra_5 = null, $rb_6 = null) use ($dictEqRecord_0, $dictEq_3, $dictIsSymbol_2, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $get_0 = (($GLOBALS['Record_Unsafe_unsafeGet'] ?? \PhpursThunks::eval('Record_Unsafe_unsafeGet')))((($dictIsSymbol)->reflectSymbol)(new Phpurs_Data0("Proxy")));
-  $__res = ((($GLOBALS['Data_HeytingAlgebra_boolConj'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolConj')))(((($dictEq)->eq)(($get_0)($ra)))(($get_0)($rb))))((((($dictEqRecord)->eqRecord)(new Phpurs_Data0("Proxy")))($ra))($rb));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $get_7_0 = (($GLOBALS['Record_Unsafe_unsafeGet'] ?? \PhpursThunks::eval('Record_Unsafe_unsafeGet')))((($dictIsSymbol_2)->reflectSymbol)(new Phpurs_Data0("Proxy")));
+  $__res = ((($GLOBALS['Data_HeytingAlgebra_boolConj'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolConj')))(((($dictEq_3)->eq)(($get_7_0)($ra_5)))(($get_7_0)($rb_6))))((((($dictEqRecord_0)->eqRecord)(new Phpurs_Data0("Proxy")))($ra_5))($rb_6));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -223,12 +235,13 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Data_Eq_notEq'] = function() { $v = (function() {
-  $__fn = function($dictEq, $x = null, $y = null) use (&$__fn) {
+  $__fn = function($dictEq_0, $x_1 = null, $y_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($GLOBALS['Data_Eq_eqBooleanImpl'] ?? \PhpursThunks::eval('Data_Eq_eqBooleanImpl')))(((($dictEq)->eq)($x))($y)))(false);
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Eq_notEq"), recVars=[];
+  $__res = ((($GLOBALS['Data_Eq_eqBooleanImpl'] ?? \PhpursThunks::eval('Data_Eq_eqBooleanImpl')))(((($dictEq_0)->eq)($x_1))($y_2)))(false);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -236,19 +249,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Data_Eq_notEq1'] = function() { $v = (function() {
-  $__fn = function($dictEq1, $dictEq = null) use (&$__fn) {
+  $__fn = function($dictEq1_0, $dictEq_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $eq12_0 = (($dictEq1)->eq1)($dictEq);
-  $__res = (function() use (&$eq12_0) {
-  $__fn = function($x, $y = null) use (&$eq12_0, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Eq_notEq1"), recVars=[];
+  $eq12_2_0 = (($dictEq1_0)->eq1)($dictEq_1);
+  $__res = (function() use ($eq12_2_0) {
+  $__fn = function($x_3, $y_4 = null) use ($eq12_2_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_Eq_eqBooleanImpl'] ?? \PhpursThunks::eval('Data_Eq_eqBooleanImpl')))((($eq12_0)($x))($y)))(false);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Data_Eq_eqBooleanImpl'] ?? \PhpursThunks::eval('Data_Eq_eqBooleanImpl')))((($eq12_2_0)($x_3))($y_4)))(false);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

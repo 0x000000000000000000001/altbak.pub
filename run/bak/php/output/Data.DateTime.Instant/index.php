@@ -105,20 +105,22 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   }
 }
 \PhpursThunks::$thunks['Data_DateTime_Instant_negateDuration'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->identity))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))(($GLOBALS['Data_Time_Duration_negate'] ?? \PhpursThunks::eval('Data_Time_Duration_negate')))))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->identity)); return $v; };
-\PhpursThunks::$thunks['Data_DateTime_Instant_unInstant'] = function() { $v = function($v) {
+\PhpursThunks::$thunks['Data_DateTime_Instant_unInstant'] = function() { $v = function($v_0) {
   $__num = \func_num_args();
-  $__res = $v;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_DateTime_Instant_unInstant"), recVars=[];
+  $__res = $v_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Data_DateTime_Instant_toDateTime'] = function() { $v = (($GLOBALS['Data_DateTime_Instant_toDateTimeImpl'] ?? \PhpursThunks::eval('Data_DateTime_Instant_toDateTimeImpl')))((($GLOBALS['Partial_Unsafe__unsafePartial'] ?? \PhpursThunks::eval('Partial_Unsafe__unsafePartial')))((function() {
-  $__fn = function($dollar__unused_0, $y = null, $mo = null, $d = null, $h = null, $mi = null, $s = null, $ms = null) use (&$__fn) {
+  $__fn = function($dollar__unused_0, $y_1 = null, $mo_2 = null, $d_3 = null, $h_4 = null, $mi_5 = null, $s_6 = null, $ms_7 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 8) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 8);
   }
-  switch ($mo) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  switch ($mo_2) {
 case 1:
 $__t0 = new Phpurs_Data0("January");
 break;
@@ -160,25 +162,27 @@ throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t0 = null;
 break;
 };
-  $__res = new Phpurs_Data2("DateTime", (((($GLOBALS['Data_Date_canonicalDate'] ?? \PhpursThunks::eval('Data_Date_canonicalDate')))($y))($__t0))($d), new Phpurs_Data4("Time", $h, $mi, $s, $ms));
+  $__res = new Phpurs_Data2("DateTime", (((($GLOBALS['Data_Date_canonicalDate'] ?? \PhpursThunks::eval('Data_Date_canonicalDate')))($y_1))($__t0))($d_3), new Phpurs_Data4("Time", $h_4, $mi_5, $s_6, $ms_7));
   goto __end;;
   __end:
   return $__num > 8 ? $__res(...\array_slice(\func_get_args(), 8)) : $__res;
   };
   return $__fn;
 })())); return $v; };
-\PhpursThunks::$thunks['Data_DateTime_Instant_showInstant'] = function() { $v = (object)["show" => function($v) {
+\PhpursThunks::$thunks['Data_DateTime_Instant_showInstant'] = function() { $v = (object)["show" => function($v_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("(Instant "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("(Milliseconds "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))((($GLOBALS['Data_Show_showNumberImpl'] ?? \PhpursThunks::eval('Data_Show_showNumberImpl')))($v)))(")"))))(")"));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("(Instant "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("(Milliseconds "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))((($GLOBALS['Data_Show_showNumberImpl'] ?? \PhpursThunks::eval('Data_Show_showNumberImpl')))($v_0)))(")"))))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
 \PhpursThunks::$thunks['Data_DateTime_Instant_ordDateTime'] = function() { $v = ($GLOBALS['Data_Ord_ordNumber'] ?? \PhpursThunks::eval('Data_Ord_ordNumber')); return $v; };
-\PhpursThunks::$thunks['Data_DateTime_Instant_instant'] = function() { $v = function($v) {
+\PhpursThunks::$thunks['Data_DateTime_Instant_instant'] = function() { $v = function($v_0) {
   $__num = \func_num_args();
-  if (((($GLOBALS['Data_HeytingAlgebra_boolConj'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolConj')))(( ! (is_object((((($GLOBALS['Data_Ord_ordNumber'] ?? \PhpursThunks::eval('Data_Ord_ordNumber')))->compare)($v))(((($GLOBALS['Data_Ring_numSub'] ?? \PhpursThunks::eval('Data_Ring_numSub')))(0.0))(8639977881600000.0))) && (((((($GLOBALS['Data_Ord_ordNumber'] ?? \PhpursThunks::eval('Data_Ord_ordNumber')))->compare)($v))(((($GLOBALS['Data_Ring_numSub'] ?? \PhpursThunks::eval('Data_Ring_numSub')))(0.0))(8639977881600000.0)))->tag === "LT")))))(( ! (is_object((((($GLOBALS['Data_Ord_ordNumber'] ?? \PhpursThunks::eval('Data_Ord_ordNumber')))->compare)($v))(8639977881599999.0)) && (((((($GLOBALS['Data_Ord_ordNumber'] ?? \PhpursThunks::eval('Data_Ord_ordNumber')))->compare)($v))(8639977881599999.0))->tag === "GT"))))) {
-$__t0 = new Phpurs_Data1("Just", $v);
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_DateTime_Instant_instant"), recVars=[];
+  if (((($GLOBALS['Data_HeytingAlgebra_boolConj'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolConj')))(( ! (is_object((((($GLOBALS['Data_Ord_ordNumber'] ?? \PhpursThunks::eval('Data_Ord_ordNumber')))->compare)($v_0))(((($GLOBALS['Data_Ring_numSub'] ?? \PhpursThunks::eval('Data_Ring_numSub')))(0.0))(8639977881600000.0))) && (((((($GLOBALS['Data_Ord_ordNumber'] ?? \PhpursThunks::eval('Data_Ord_ordNumber')))->compare)($v_0))(((($GLOBALS['Data_Ring_numSub'] ?? \PhpursThunks::eval('Data_Ring_numSub')))(0.0))(8639977881600000.0)))->tag === "LT")))))(( ! (is_object((((($GLOBALS['Data_Ord_ordNumber'] ?? \PhpursThunks::eval('Data_Ord_ordNumber')))->compare)($v_0))(8639977881599999.0)) && (((((($GLOBALS['Data_Ord_ordNumber'] ?? \PhpursThunks::eval('Data_Ord_ordNumber')))->compare)($v_0))(8639977881599999.0))->tag === "GT"))))) {
+$__t0 = new Phpurs_Data1("Just", $v_0);
 } else {
 $__t0 = new Phpurs_Data0("Nothing");
 };
@@ -187,42 +191,43 @@ $__t0 = new Phpurs_Data0("Nothing");
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_DateTime_Instant_fromDateTime'] = function() { $v = function($v) {
+\PhpursThunks::$thunks['Data_DateTime_Instant_fromDateTime'] = function() { $v = function($v_0) {
   $__num = \func_num_args();
-  if ((is_object((($v)->value0)->value1) && (((($v)->value0)->value1)->tag === "January"))) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_DateTime_Instant_fromDateTime"), recVars=[];
+  if ((is_object((($v_0)->value0)->value1) && (((($v_0)->value0)->value1)->tag === "January"))) {
 $__t0 = 1;
 } else {
-if ((is_object((($v)->value0)->value1) && (((($v)->value0)->value1)->tag === "February"))) {
+if ((is_object((($v_0)->value0)->value1) && (((($v_0)->value0)->value1)->tag === "February"))) {
 $__t0 = 2;
 } else {
-if ((is_object((($v)->value0)->value1) && (((($v)->value0)->value1)->tag === "March"))) {
+if ((is_object((($v_0)->value0)->value1) && (((($v_0)->value0)->value1)->tag === "March"))) {
 $__t0 = 3;
 } else {
-if ((is_object((($v)->value0)->value1) && (((($v)->value0)->value1)->tag === "April"))) {
+if ((is_object((($v_0)->value0)->value1) && (((($v_0)->value0)->value1)->tag === "April"))) {
 $__t0 = 4;
 } else {
-if ((is_object((($v)->value0)->value1) && (((($v)->value0)->value1)->tag === "May"))) {
+if ((is_object((($v_0)->value0)->value1) && (((($v_0)->value0)->value1)->tag === "May"))) {
 $__t0 = 5;
 } else {
-if ((is_object((($v)->value0)->value1) && (((($v)->value0)->value1)->tag === "June"))) {
+if ((is_object((($v_0)->value0)->value1) && (((($v_0)->value0)->value1)->tag === "June"))) {
 $__t0 = 6;
 } else {
-if ((is_object((($v)->value0)->value1) && (((($v)->value0)->value1)->tag === "July"))) {
+if ((is_object((($v_0)->value0)->value1) && (((($v_0)->value0)->value1)->tag === "July"))) {
 $__t0 = 7;
 } else {
-if ((is_object((($v)->value0)->value1) && (((($v)->value0)->value1)->tag === "August"))) {
+if ((is_object((($v_0)->value0)->value1) && (((($v_0)->value0)->value1)->tag === "August"))) {
 $__t0 = 8;
 } else {
-if ((is_object((($v)->value0)->value1) && (((($v)->value0)->value1)->tag === "September"))) {
+if ((is_object((($v_0)->value0)->value1) && (((($v_0)->value0)->value1)->tag === "September"))) {
 $__t0 = 9;
 } else {
-if ((is_object((($v)->value0)->value1) && (((($v)->value0)->value1)->tag === "October"))) {
+if ((is_object((($v_0)->value0)->value1) && (((($v_0)->value0)->value1)->tag === "October"))) {
 $__t0 = 10;
 } else {
-if ((is_object((($v)->value0)->value1) && (((($v)->value0)->value1)->tag === "November"))) {
+if ((is_object((($v_0)->value0)->value1) && (((($v_0)->value0)->value1)->tag === "November"))) {
 $__t0 = 11;
 } else {
-if ((is_object((($v)->value0)->value1) && (((($v)->value0)->value1)->tag === "December"))) {
+if ((is_object((($v_0)->value0)->value1) && (((($v_0)->value0)->value1)->tag === "December"))) {
 $__t0 = 12;
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -239,47 +244,48 @@ $__t0 = null;
 };
 };
 };
-  $__res = ((((((((($GLOBALS['Data_Function_Uncurried_runFn7'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn7')))(($GLOBALS['Data_DateTime_Instant_fromDateTimeImpl'] ?? \PhpursThunks::eval('Data_DateTime_Instant_fromDateTimeImpl'))))((($v)->value0)->value0))($__t0))((($v)->value0)->value2))((($v)->value1)->value0))((($v)->value1)->value1))((($v)->value1)->value2))((($v)->value1)->value3);
+  $__res = ((((((((($GLOBALS['Data_Function_Uncurried_runFn7'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn7')))(($GLOBALS['Data_DateTime_Instant_fromDateTimeImpl'] ?? \PhpursThunks::eval('Data_DateTime_Instant_fromDateTimeImpl'))))((($v_0)->value0)->value0))($__t0))((($v_0)->value0)->value2))((($v_0)->value1)->value0))((($v_0)->value1)->value1))((($v_0)->value1)->value2))((($v_0)->value1)->value3);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_DateTime_Instant_fromDate'] = function() { $v = function($d) {
+\PhpursThunks::$thunks['Data_DateTime_Instant_fromDate'] = function() { $v = function($d_0) {
   $__num = \func_num_args();
-  if ((is_object(($d)->value1) && ((($d)->value1)->tag === "January"))) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_DateTime_Instant_fromDate"), recVars=[];
+  if ((is_object(($d_0)->value1) && ((($d_0)->value1)->tag === "January"))) {
 $__t0 = 1;
 } else {
-if ((is_object(($d)->value1) && ((($d)->value1)->tag === "February"))) {
+if ((is_object(($d_0)->value1) && ((($d_0)->value1)->tag === "February"))) {
 $__t0 = 2;
 } else {
-if ((is_object(($d)->value1) && ((($d)->value1)->tag === "March"))) {
+if ((is_object(($d_0)->value1) && ((($d_0)->value1)->tag === "March"))) {
 $__t0 = 3;
 } else {
-if ((is_object(($d)->value1) && ((($d)->value1)->tag === "April"))) {
+if ((is_object(($d_0)->value1) && ((($d_0)->value1)->tag === "April"))) {
 $__t0 = 4;
 } else {
-if ((is_object(($d)->value1) && ((($d)->value1)->tag === "May"))) {
+if ((is_object(($d_0)->value1) && ((($d_0)->value1)->tag === "May"))) {
 $__t0 = 5;
 } else {
-if ((is_object(($d)->value1) && ((($d)->value1)->tag === "June"))) {
+if ((is_object(($d_0)->value1) && ((($d_0)->value1)->tag === "June"))) {
 $__t0 = 6;
 } else {
-if ((is_object(($d)->value1) && ((($d)->value1)->tag === "July"))) {
+if ((is_object(($d_0)->value1) && ((($d_0)->value1)->tag === "July"))) {
 $__t0 = 7;
 } else {
-if ((is_object(($d)->value1) && ((($d)->value1)->tag === "August"))) {
+if ((is_object(($d_0)->value1) && ((($d_0)->value1)->tag === "August"))) {
 $__t0 = 8;
 } else {
-if ((is_object(($d)->value1) && ((($d)->value1)->tag === "September"))) {
+if ((is_object(($d_0)->value1) && ((($d_0)->value1)->tag === "September"))) {
 $__t0 = 9;
 } else {
-if ((is_object(($d)->value1) && ((($d)->value1)->tag === "October"))) {
+if ((is_object(($d_0)->value1) && ((($d_0)->value1)->tag === "October"))) {
 $__t0 = 10;
 } else {
-if ((is_object(($d)->value1) && ((($d)->value1)->tag === "November"))) {
+if ((is_object(($d_0)->value1) && ((($d_0)->value1)->tag === "November"))) {
 $__t0 = 11;
 } else {
-if ((is_object(($d)->value1) && ((($d)->value1)->tag === "December"))) {
+if ((is_object(($d_0)->value1) && ((($d_0)->value1)->tag === "December"))) {
 $__t0 = 12;
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -296,19 +302,20 @@ $__t0 = null;
 };
 };
 };
-  $__res = ((((((((($GLOBALS['Data_Function_Uncurried_runFn7'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn7')))(($GLOBALS['Data_DateTime_Instant_fromDateTimeImpl'] ?? \PhpursThunks::eval('Data_DateTime_Instant_fromDateTimeImpl'))))(($d)->value0))($__t0))(($d)->value2))(0))(0))(0))(0);
+  $__res = ((((((((($GLOBALS['Data_Function_Uncurried_runFn7'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn7')))(($GLOBALS['Data_DateTime_Instant_fromDateTimeImpl'] ?? \PhpursThunks::eval('Data_DateTime_Instant_fromDateTimeImpl'))))(($d_0)->value0))($__t0))(($d_0)->value2))(0))(0))(0))(0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Data_DateTime_Instant_eqDateTime'] = function() { $v = ($GLOBALS['Data_Eq_eqNumber'] ?? \PhpursThunks::eval('Data_Eq_eqNumber')); return $v; };
 \PhpursThunks::$thunks['Data_DateTime_Instant_diff'] = function() { $v = (function() {
-  $__fn = function($dictDuration, $dt1 = null, $dt2 = null) use (&$__fn) {
+  $__fn = function($dictDuration_0, $dt1_1 = null, $dt2_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($dictDuration)->toDuration)(((($GLOBALS['Data_Semiring_numAdd'] ?? \PhpursThunks::eval('Data_Semiring_numAdd')))($dt1))((($GLOBALS['Data_DateTime_Instant_negateDuration'] ?? \PhpursThunks::eval('Data_DateTime_Instant_negateDuration')))($dt2)));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_DateTime_Instant_diff"), recVars=[];
+  $__res = (($dictDuration_0)->toDuration)(((($GLOBALS['Data_Semiring_numAdd'] ?? \PhpursThunks::eval('Data_Semiring_numAdd')))($dt1_1))((($GLOBALS['Data_DateTime_Instant_negateDuration'] ?? \PhpursThunks::eval('Data_DateTime_Instant_negateDuration')))($dt2_2)));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -317,6 +324,7 @@ $__t0 = null;
 })(); return $v; };
 \PhpursThunks::$thunks['Data_DateTime_Instant_boundedInstant'] = function() { $v = (object)["bottom" => ((($GLOBALS['Data_Ring_numSub'] ?? \PhpursThunks::eval('Data_Ring_numSub')))(0.0))(8639977881600000.0), "top" => 8639977881599999.0, "Ord0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_Ord_ordNumber'] ?? \PhpursThunks::eval('Data_Ord_ordNumber'));
   goto __end;;
   __end:

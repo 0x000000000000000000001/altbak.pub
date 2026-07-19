@@ -91,12 +91,15 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Test_FileOps_loopIO'] = function() { $v = function($n) {
+\PhpursThunks::$thunks['Test_FileOps_loopIO'] = function() { $v = function($n_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Test_FileOps_loopE'] ?? \PhpursThunks::eval('Test_FileOps_loopE')))($n))(((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(((($GLOBALS['Test_FileOps_writeFileSync'] ?? \PhpursThunks::eval('Test_FileOps_writeFileSync')))("var/iotest.txt"))("Hello IO Benchmarks!")))(function($dollar__unused_0) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Test_FileOps_loopIO"), recVars=[];
+  $__res = ((($GLOBALS['Test_FileOps_loopE'] ?? \PhpursThunks::eval('Test_FileOps_loopE')))($n_0))(((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(((($GLOBALS['Test_FileOps_writeFileSync'] ?? \PhpursThunks::eval('Test_FileOps_writeFileSync')))("var/iotest.txt"))("Hello IO Benchmarks!")))(function($dollar__unused_1) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))((($GLOBALS['Test_FileOps_readFileSync'] ?? \PhpursThunks::eval('Test_FileOps_readFileSync')))("var/iotest.txt")))(function($dollar__unused_0) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))((($GLOBALS['Test_FileOps_readFileSync'] ?? \PhpursThunks::eval('Test_FileOps_readFileSync')))("var/iotest.txt")))(function($dollar__unused_2) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = (($GLOBALS['Effect_pureE'] ?? \PhpursThunks::eval('Effect_pureE')))(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')));
   goto __end;;
   __end:

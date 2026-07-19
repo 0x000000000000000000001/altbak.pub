@@ -93,6 +93,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 }
 \PhpursThunks::$thunks['Control_Monad_ST_Class_monadSTST'] = function() { $v = (object)["liftST" => (($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->identity, "Monad0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Control_Monad_ST_Internal_monadST'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_monadST'));
   goto __end;;
   __end:
@@ -100,14 +101,16 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 }]; return $v; };
 \PhpursThunks::$thunks['Control_Monad_ST_Class_monadSTEffect'] = function() { $v = (object)["liftST" => ($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')), "Monad0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Effect_monadEffect'] ?? \PhpursThunks::eval('Effect_monadEffect'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
-\PhpursThunks::$thunks['Control_Monad_ST_Class_liftST'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Control_Monad_ST_Class_liftST'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->liftST;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_ST_Class_liftST"), recVars=[];
+  $__res = ($dict_0)->liftST;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

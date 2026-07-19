@@ -95,6 +95,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 \PhpursThunks::$thunks['Test_AffOperations_describe'] = function() { $v = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))("Aff Operations (Asynchronous Delays):"); return $v; };
 \PhpursThunks::$thunks['Test_AffOperations_act'] = function() { $v = (($GLOBALS['Effect_Aff_launchAff_'] ?? \PhpursThunks::eval('Effect_Aff_launchAff_')))(((($GLOBALS['Effect_Aff__bind'] ?? \PhpursThunks::eval('Effect_Aff__bind')))((((($GLOBALS['Data_Function_Uncurried_runFn2'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn2')))(($GLOBALS['Effect_Aff__delay'] ?? \PhpursThunks::eval('Effect_Aff__delay'))))(($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right'))))(10.0)))(function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = (($GLOBALS['Effect_Aff__liftEffect'] ?? \PhpursThunks::eval('Effect_Aff__liftEffect')))((($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))("10"));
   goto __end;;
   __end:

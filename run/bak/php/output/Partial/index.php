@@ -87,6 +87,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 }
 \PhpursThunks::$thunks['Partial_crashWith'] = function() { $v = function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Partial_crashWith"), recVars=[];
   $__res = ($GLOBALS['Partial__crashWith'] ?? \PhpursThunks::eval('Partial__crashWith'));
   goto __end;;
   __end:
@@ -94,6 +95,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 }; return $v; };
 \PhpursThunks::$thunks['Partial_crash'] = function() { $v = function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Partial_crash"), recVars=[];
   $__res = (($GLOBALS['Partial__crashWith'] ?? \PhpursThunks::eval('Partial__crashWith')))("Partial.crash: partial function");
   goto __end;;
   __end:

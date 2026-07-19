@@ -92,9 +92,11 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Test_Fib_fib'] = function() { $v = function($v) {
+\PhpursThunks::$thunks['Test_Fib_fib'] = function() { $v = function($v_0) {
   $__num = \func_num_args();
-  switch ($v) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Test_Fib_fib"), recVars=["Test_Fib_fib"];
+  while (true) {
+switch ($v_0) {
 case 0:
 $__t0 = 0;
 break;
@@ -102,11 +104,12 @@ case 1:
 $__t0 = 1;
 break;
 default:
-$__t0 = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))((($GLOBALS['Test_Fib_fib'] ?? \PhpursThunks::eval('Test_Fib_fib')))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v))(1))))((($GLOBALS['Test_Fib_fib'] ?? \PhpursThunks::eval('Test_Fib_fib')))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v))(2)));
+$__t0 = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))((($GLOBALS['Test_Fib_fib'] ?? \PhpursThunks::eval('Test_Fib_fib')))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v_0))(1))))((($GLOBALS['Test_Fib_fib'] ?? \PhpursThunks::eval('Test_Fib_fib')))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v_0))(2)));
 break;
 };
-  $__res = $__t0;
-  goto __end;;
+$__res = $__t0;
+goto __end;;
+};
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };

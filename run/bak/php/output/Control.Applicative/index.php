@@ -89,24 +89,26 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Control_Applicative_pure'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Control_Applicative_pure'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->pure;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Applicative_pure"), recVars=[];
+  $__res = ($dict_0)->pure;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Control_Applicative_unless'] = function() { $v = (function() {
-  $__fn = function($dictApplicative, $v = null, $v1 = null) use (&$__fn) {
+  $__fn = function($dictApplicative_0, $v_1 = null, $v1_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  if (( ! $v)) {
-$__t0 = $v1;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Applicative_unless"), recVars=[];
+  if (( ! $v_1)) {
+$__t0 = $v1_2;
 } else {
-if ($v) {
-$__t0 = (($dictApplicative)->pure)(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')));
+if ($v_1) {
+$__t0 = (($dictApplicative_0)->pure)(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')));
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t0 = null;
@@ -120,15 +122,16 @@ $__t0 = null;
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Control_Applicative_when'] = function() { $v = (function() {
-  $__fn = function($dictApplicative, $v = null, $v1 = null) use (&$__fn) {
+  $__fn = function($dictApplicative_0, $v_1 = null, $v1_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  if ($v) {
-$__t0 = $v1;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Applicative_when"), recVars=[];
+  if ($v_1) {
+$__t0 = $v1_2;
 } else {
-$__t0 = (($dictApplicative)->pure)(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')));
+$__t0 = (($dictApplicative_0)->pure)(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')));
 };
   $__res = $__t0;
   goto __end;;
@@ -138,38 +141,42 @@ $__t0 = (($dictApplicative)->pure)(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks:
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Control_Applicative_liftA1'] = function() { $v = (function() {
-  $__fn = function($dictApplicative, $f = null, $a = null) use (&$__fn) {
+  $__fn = function($dictApplicative_0, $f_1 = null, $a_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((((($dictApplicative)->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->apply)((($dictApplicative)->pure)($f)))($a);
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Applicative_liftA1"), recVars=[];
+  $__res = ((((($dictApplicative_0)->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->apply)((($dictApplicative_0)->pure)($f_1)))($a_2);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Control_Applicative_applicativeProxy'] = function() { $v = (object)["pure" => function($v) {
+\PhpursThunks::$thunks['Control_Applicative_applicativeProxy'] = function() { $v = (object)["pure" => function($v_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = new Phpurs_Data0("Proxy");
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Apply0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Control_Apply_applyProxy'] ?? \PhpursThunks::eval('Control_Apply_applyProxy'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
 \PhpursThunks::$thunks['Control_Applicative_applicativeFn'] = function() { $v = (object)["pure" => (function() {
-  $__fn = function($x, $v = null) use (&$__fn) {
+  $__fn = function($x_0, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = $x;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -177,19 +184,22 @@ $__t0 = (($dictApplicative)->pure)(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks:
   return $__fn;
 })(), "Apply0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Control_Apply_applyFn'] ?? \PhpursThunks::eval('Control_Apply_applyFn'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
-\PhpursThunks::$thunks['Control_Applicative_applicativeArray'] = function() { $v = (object)["pure" => function($x) {
+\PhpursThunks::$thunks['Control_Applicative_applicativeArray'] = function() { $v = (object)["pure" => function($x_0) {
   $__num = \func_num_args();
-  $__res = [$x];
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = [$x_0];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Apply0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Control_Apply_applyArray'] ?? \PhpursThunks::eval('Control_Apply_applyArray'));
   goto __end;;
   __end:

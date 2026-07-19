@@ -98,35 +98,41 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   }
 }
 \PhpursThunks::$thunks['Data_Map_Gen_genMap'] = function() { $v = (function() {
-  $__fn = function($dictMonadRec, $dictMonadGen = null) use (&$__fn) {
+  $__fn = function($dictMonadRec_0, $dictMonadGen_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $Bind1_0 = (((($dictMonadGen)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $Apply0_1 = (($Bind1_0)->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $__local_var_2 = (($Apply0_1)->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $unfoldable1_3 = (((($GLOBALS['Control_Monad_Gen_unfoldable'] ?? \PhpursThunks::eval('Control_Monad_Gen_unfoldable')))($dictMonadRec))($dictMonadGen))(($GLOBALS['Data_List_Types_unfoldableList'] ?? \PhpursThunks::eval('Data_List_Types_unfoldableList')));
-  $__res = function($dictOrd) use (&$Apply0_1, &$Bind1_0, &$__local_var_2, &$dictMonadGen, &$unfoldable1_3) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Map_Gen_genMap"), recVars=[];
+  $Bind1_2_0 = (((($dictMonadGen_1)->Monad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->Bind1)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $Apply0_3_1 = (($Bind1_2_0)->Apply0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_4_2 = (($Apply0_3_1)->Functor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $unfoldable1_5_3 = (((($GLOBALS['Control_Monad_Gen_unfoldable'] ?? \PhpursThunks::eval('Control_Monad_Gen_unfoldable')))($dictMonadRec_0))($dictMonadGen_1))(($GLOBALS['Data_List_Types_unfoldableList'] ?? \PhpursThunks::eval('Data_List_Types_unfoldableList')));
+  $__res = function($dictOrd_6) use ($Apply0_3_1, $Bind1_2_0, $__local_var_4_2, $dictMonadGen_1, $unfoldable1_5_3) {
   $__num = \func_num_args();
-  $fromFoldable_4 = ((($GLOBALS['Data_Map_Internal_fromFoldable'] ?? \PhpursThunks::eval('Data_Map_Internal_fromFoldable')))($dictOrd))(($GLOBALS['Data_List_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Types_foldableList')));
-  $__res = (function() use (&$Apply0_1, &$Bind1_0, &$__local_var_2, &$dictMonadGen, &$fromFoldable_4, &$unfoldable1_3) {
-  $__fn = function($genKey, $genValue = null) use (&$Apply0_1, &$Bind1_0, &$__local_var_2, &$dictMonadGen, &$fromFoldable_4, &$unfoldable1_3, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $fromFoldable_7_4 = ((($GLOBALS['Data_Map_Internal_fromFoldable'] ?? \PhpursThunks::eval('Data_Map_Internal_fromFoldable')))($dictOrd_6))(($GLOBALS['Data_List_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Types_foldableList')));
+  $__res = (function() use ($Apply0_3_1, $Bind1_2_0, $__local_var_4_2, $dictMonadGen_1, $fromFoldable_7_4, $unfoldable1_5_3) {
+  $__fn = function($genKey_8, $genValue_9 = null) use ($Apply0_3_1, $Bind1_2_0, $__local_var_4_2, $dictMonadGen_1, $fromFoldable_7_4, $unfoldable1_5_3, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictMonadGen)->sized)(function($size) use (&$Apply0_1, &$Bind1_0, &$__local_var_2, &$dictMonadGen, &$fromFoldable_4, &$genKey, &$genValue, &$unfoldable1_3) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($dictMonadGen_1)->sized)(function($size_10) use ($Apply0_3_1, $Bind1_2_0, $__local_var_4_2, $dictMonadGen_1, $fromFoldable_7_4, $genKey_8, $genValue_9, $unfoldable1_5_3) {
   $__num = \func_num_args();
-  $__res = ((($Bind1_0)->bind)(((($dictMonadGen)->chooseInt)(0))($size)))(function($newSize) use (&$Apply0_1, &$__local_var_2, &$dictMonadGen, &$fromFoldable_4, &$genKey, &$genValue, &$unfoldable1_3) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($Bind1_2_0)->bind)(((($dictMonadGen_1)->chooseInt)(0))($size_10)))(function($newSize_11) use ($Apply0_3_1, $__local_var_4_2, $dictMonadGen_1, $fromFoldable_7_4, $genKey_8, $genValue_9, $unfoldable1_5_3) {
   $__num = \func_num_args();
-  $__res = ((($dictMonadGen)->resize)(function($v) use (&$newSize) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($dictMonadGen_1)->resize)(function($v_12) use ($newSize_11) {
   $__num = \func_num_args();
-  $__res = $newSize;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $newSize_11;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(((($__local_var_2)->map)($fromFoldable_4))(($unfoldable1_3)(((($Apply0_1)->apply)(((($__local_var_2)->map)(($GLOBALS['Data_Tuple_Tuple'] ?? \PhpursThunks::eval('Data_Tuple_Tuple'))))($genKey)))($genValue))));
+}))(((($__local_var_4_2)->map)($fromFoldable_7_4))(($unfoldable1_5_3)(((($Apply0_3_1)->apply)(((($__local_var_4_2)->map)(($GLOBALS['Data_Tuple_Tuple'] ?? \PhpursThunks::eval('Data_Tuple_Tuple'))))($genKey_8)))($genValue_9))));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

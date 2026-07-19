@@ -90,19 +90,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Semigroup_semigroupVoid'] = function() { $v = (object)["append" => function($v) {
+\PhpursThunks::$thunks['Data_Semigroup_semigroupVoid'] = function() { $v = (object)["append" => function($v_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_Void_absurd'] ?? \PhpursThunks::eval('Data_Void_absurd'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
 \PhpursThunks::$thunks['Data_Semigroup_semigroupUnit'] = function() { $v = (object)["append" => (function() {
-  $__fn = function($v, $v1 = null) use (&$__fn) {
+  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'));
   goto __end;;
   __end:
@@ -112,11 +114,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 })()]; return $v; };
 \PhpursThunks::$thunks['Data_Semigroup_semigroupString'] = function() { $v = (object)["append" => ($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString'))]; return $v; };
 \PhpursThunks::$thunks['Data_Semigroup_semigroupRecordNil'] = function() { $v = (object)["appendRecord" => (function() {
-  $__fn = function($v, $v1 = null, $v2 = null) use (&$__fn) {
+  $__fn = function($v_0, $v1_1 = null, $v2_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = (object)[];
   goto __end;;
   __end:
@@ -125,11 +128,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })()]; return $v; };
 \PhpursThunks::$thunks['Data_Semigroup_semigroupProxy'] = function() { $v = (object)["append" => (function() {
-  $__fn = function($v, $v1 = null) use (&$__fn) {
+  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = new Phpurs_Data0("Proxy");
   goto __end;;
   __end:
@@ -138,42 +142,47 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })()]; return $v; };
 \PhpursThunks::$thunks['Data_Semigroup_semigroupArray'] = function() { $v = (object)["append" => ($GLOBALS['Data_Semigroup_concatArray'] ?? \PhpursThunks::eval('Data_Semigroup_concatArray'))]; return $v; };
-\PhpursThunks::$thunks['Data_Semigroup_appendRecord'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Data_Semigroup_appendRecord'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->appendRecord;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Semigroup_appendRecord"), recVars=[];
+  $__res = ($dict_0)->appendRecord;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Data_Semigroup_semigroupRecord'] = function() { $v = (function() {
-  $__fn = function($dollar__unused_0, $dictSemigroupRecord = null) use (&$__fn) {
+  $__fn = function($dollar__unused_0, $dictSemigroupRecord_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (object)["append" => (($dictSemigroupRecord)->appendRecord)(new Phpurs_Data0("Proxy"))];
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Semigroup_semigroupRecord"), recVars=[];
+  $__res = (object)["append" => (($dictSemigroupRecord_1)->appendRecord)(new Phpurs_Data0("Proxy"))];
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Data_Semigroup_append'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Data_Semigroup_append'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->append;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Semigroup_append"), recVars=[];
+  $__res = ($dict_0)->append;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Semigroup_semigroupFn'] = function() { $v = function($dictSemigroup) {
+\PhpursThunks::$thunks['Data_Semigroup_semigroupFn'] = function() { $v = function($dictSemigroup_0) {
   $__num = \func_num_args();
-  $__res = (object)["append" => (function() use (&$dictSemigroup) {
-  $__fn = function($f, $g = null, $x = null) use (&$dictSemigroup, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Semigroup_semigroupFn"), recVars=[];
+  $__res = (object)["append" => (function() use ($dictSemigroup_0) {
+  $__fn = function($f_1, $g_2 = null, $x_3 = null) use ($dictSemigroup_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($dictSemigroup)->append)(($f)($x)))(($g)($x));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($dictSemigroup_0)->append)(($f_1)($x_3)))(($g_2)($x_3));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -185,20 +194,22 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Data_Semigroup_semigroupRecordCons'] = function() { $v = (function() {
-  $__fn = function($dictIsSymbol, $dollar__unused_1 = null, $dictSemigroupRecord = null, $dictSemigroup = null) use (&$__fn) {
+  $__fn = function($dictIsSymbol_0, $dollar__unused_1 = null, $dictSemigroupRecord_2 = null, $dictSemigroup_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = (object)["appendRecord" => (function() use (&$dictIsSymbol, &$dictSemigroup, &$dictSemigroupRecord) {
-  $__fn = function($v, $ra = null, $rb = null) use (&$dictIsSymbol, &$dictSemigroup, &$dictSemigroupRecord, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Semigroup_semigroupRecordCons"), recVars=[];
+  $__res = (object)["appendRecord" => (function() use ($dictIsSymbol_0, $dictSemigroupRecord_2, $dictSemigroup_3) {
+  $__fn = function($v_4, $ra_5 = null, $rb_6 = null) use ($dictIsSymbol_0, $dictSemigroupRecord_2, $dictSemigroup_3, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $key_0 = (($dictIsSymbol)->reflectSymbol)(new Phpurs_Data0("Proxy"));
-  $get_1 = (($GLOBALS['Record_Unsafe_unsafeGet'] ?? \PhpursThunks::eval('Record_Unsafe_unsafeGet')))($key_0);
-  $__res = (((($GLOBALS['Record_Unsafe_unsafeSet'] ?? \PhpursThunks::eval('Record_Unsafe_unsafeSet')))($key_0))(((($dictSemigroup)->append)(($get_1)($ra)))(($get_1)($rb))))((((($dictSemigroupRecord)->appendRecord)(new Phpurs_Data0("Proxy")))($ra))($rb));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $key_7_0 = (($dictIsSymbol_0)->reflectSymbol)(new Phpurs_Data0("Proxy"));
+  $get_8_1 = (($GLOBALS['Record_Unsafe_unsafeGet'] ?? \PhpursThunks::eval('Record_Unsafe_unsafeGet')))($key_7_0);
+  $__res = (((($GLOBALS['Record_Unsafe_unsafeSet'] ?? \PhpursThunks::eval('Record_Unsafe_unsafeSet')))($key_7_0))(((($dictSemigroup_3)->append)(($get_8_1)($ra_5)))(($get_8_1)($rb_6))))((((($dictSemigroupRecord_2)->appendRecord)(new Phpurs_Data0("Proxy")))($ra_5))($rb_6));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;

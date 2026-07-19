@@ -92,27 +92,30 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Profunctor_Choice_right'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Data_Profunctor_Choice_right'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->right;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Profunctor_Choice_right"), recVars=[];
+  $__res = ($dict_0)->right;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Profunctor_Choice_left'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Data_Profunctor_Choice_left'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->left;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Profunctor_Choice_left"), recVars=[];
+  $__res = ($dict_0)->left;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Data_Profunctor_Choice_splitChoice'] = function() { $v = (function() {
-  $__fn = function($dictSemigroupoid, $dictChoice = null, $l = null, $r = null) use (&$__fn) {
+  $__fn = function($dictSemigroupoid_0, $dictChoice_1 = null, $l_2 = null, $r_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ((($dictSemigroupoid)->compose)((($dictChoice)->right)($r)))((($dictChoice)->left)($l));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Profunctor_Choice_splitChoice"), recVars=[];
+  $__res = ((($dictSemigroupoid_0)->compose)((($dictChoice_1)->right)($r_3)))((($dictChoice_1)->left)($l_2));
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -120,25 +123,28 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Data_Profunctor_Choice_fanin'] = function() { $v = (function() {
-  $__fn = function($dictSemigroupoid, $dictChoice = null) use (&$__fn) {
+  $__fn = function($dictSemigroupoid_0, $dictChoice_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $rmap_0 = (($GLOBALS['Data_Profunctor_rmap'] ?? \PhpursThunks::eval('Data_Profunctor_rmap')))((($dictChoice)->Profunctor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = (function() use (&$dictChoice, &$dictSemigroupoid, &$rmap_0) {
-  $__fn = function($l, $r = null) use (&$dictChoice, &$dictSemigroupoid, &$rmap_0, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Profunctor_Choice_fanin"), recVars=[];
+  $rmap_2_0 = (($GLOBALS['Data_Profunctor_rmap'] ?? \PhpursThunks::eval('Data_Profunctor_rmap')))((($dictChoice_1)->Profunctor0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__res = (function() use ($dictChoice_1, $dictSemigroupoid_0, $rmap_2_0) {
+  $__fn = function($l_3, $r_4 = null) use ($dictChoice_1, $dictSemigroupoid_0, $rmap_2_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($rmap_0)(function($v2) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($rmap_2_0)(function($v2_5) {
   $__num = \func_num_args();
-  if ((is_object($v2) && (($v2)->tag === "Left"))) {
-$__t1 = ($v2)->value0;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  if ((is_object($v2_5) && (($v2_5)->tag === "Left"))) {
+$__t1 = ($v2_5)->value0;
 } else {
-if ((is_object($v2) && (($v2)->tag === "Right"))) {
-$__t1 = ($v2)->value0;
+if ((is_object($v2_5) && (($v2_5)->tag === "Right"))) {
+$__t1 = ($v2_5)->value0;
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t1 = null;
@@ -148,7 +154,7 @@ $__t1 = null;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(((($dictSemigroupoid)->compose)((($dictChoice)->right)($r)))((($dictChoice)->left)($l)));
+}))(((($dictSemigroupoid_0)->compose)((($dictChoice_1)->right)($r_4)))((($dictChoice_1)->left)($l_3)));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -162,16 +168,17 @@ $__t1 = null;
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Data_Profunctor_Choice_choiceFn'] = function() { $v = (object)["left" => (function() {
-  $__fn = function($v, $v1 = null) use (&$__fn) {
+  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  if ((is_object($v1) && (($v1)->tag === "Left"))) {
-$__t0 = new Phpurs_Data1("Left", ($v)(($v1)->value0));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  if ((is_object($v1_1) && (($v1_1)->tag === "Left"))) {
+$__t0 = new Phpurs_Data1("Left", ($v_0)(($v1_1)->value0));
 } else {
-if ((is_object($v1) && (($v1)->tag === "Right"))) {
-$__t0 = new Phpurs_Data1("Right", ($v1)->value0);
+if ((is_object($v1_1) && (($v1_1)->tag === "Right"))) {
+$__t0 = new Phpurs_Data1("Right", ($v1_1)->value0);
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t0 = null;
@@ -185,6 +192,7 @@ $__t0 = null;
   return $__fn;
 })(), "right" => (($GLOBALS['Data_Either_functorEither'] ?? \PhpursThunks::eval('Data_Either_functorEither')))->map, "Profunctor0" => function($dollar__unused_0) {
   $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_Profunctor_profunctorFn'] ?? \PhpursThunks::eval('Data_Profunctor_profunctorFn'));
   goto __end;;
   __end:

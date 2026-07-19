@@ -89,26 +89,29 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Semiring_zeroRecord'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Data_Semiring_zeroRecord'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->zeroRecord;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Semiring_zeroRecord"), recVars=[];
+  $__res = ($dict_0)->zeroRecord;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Semiring_zero'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Data_Semiring_zero'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->zero;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Semiring_zero"), recVars=[];
+  $__res = ($dict_0)->zero;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Data_Semiring_semiringUnit'] = function() { $v = (object)["add" => (function() {
-  $__fn = function($v, $v1 = null) use (&$__fn) {
+  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'));
   goto __end;;
   __end:
@@ -116,11 +119,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   };
   return $__fn;
 })(), "zero" => ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')), "mul" => (function() {
-  $__fn = function($v, $v1 = null) use (&$__fn) {
+  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'));
   goto __end;;
   __end:
@@ -129,11 +133,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(), "one" => ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'))]; return $v; };
 \PhpursThunks::$thunks['Data_Semiring_semiringRecordNil'] = function() { $v = (object)["addRecord" => (function() {
-  $__fn = function($v, $v1 = null, $v2 = null) use (&$__fn) {
+  $__fn = function($v_0, $v1_1 = null, $v2_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = (object)[];
   goto __end;;
   __end:
@@ -141,11 +146,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   };
   return $__fn;
 })(), "mulRecord" => (function() {
-  $__fn = function($v, $v1 = null, $v2 = null) use (&$__fn) {
+  $__fn = function($v_0, $v1_1 = null, $v2_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = (object)[];
   goto __end;;
   __end:
@@ -153,11 +159,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   };
   return $__fn;
 })(), "oneRecord" => (function() {
-  $__fn = function($v, $v1 = null) use (&$__fn) {
+  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = (object)[];
   goto __end;;
   __end:
@@ -165,11 +172,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   };
   return $__fn;
 })(), "zeroRecord" => (function() {
-  $__fn = function($v, $v1 = null) use (&$__fn) {
+  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = (object)[];
   goto __end;;
   __end:
@@ -178,11 +186,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })()]; return $v; };
 \PhpursThunks::$thunks['Data_Semiring_semiringProxy'] = function() { $v = (object)["add" => (function() {
-  $__fn = function($v, $v1 = null) use (&$__fn) {
+  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = new Phpurs_Data0("Proxy");
   goto __end;;
   __end:
@@ -190,11 +199,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   };
   return $__fn;
 })(), "mul" => (function() {
-  $__fn = function($v, $v1 = null) use (&$__fn) {
+  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = new Phpurs_Data0("Proxy");
   goto __end;;
   __end:
@@ -204,98 +214,110 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 })(), "one" => new Phpurs_Data0("Proxy"), "zero" => new Phpurs_Data0("Proxy")]; return $v; };
 \PhpursThunks::$thunks['Data_Semiring_semiringNumber'] = function() { $v = (object)["add" => ($GLOBALS['Data_Semiring_numAdd'] ?? \PhpursThunks::eval('Data_Semiring_numAdd')), "zero" => 0.0, "mul" => ($GLOBALS['Data_Semiring_numMul'] ?? \PhpursThunks::eval('Data_Semiring_numMul')), "one" => 1.0]; return $v; };
 \PhpursThunks::$thunks['Data_Semiring_semiringInt'] = function() { $v = (object)["add" => ($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')), "zero" => 0, "mul" => ($GLOBALS['Data_Semiring_intMul'] ?? \PhpursThunks::eval('Data_Semiring_intMul')), "one" => 1]; return $v; };
-\PhpursThunks::$thunks['Data_Semiring_oneRecord'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Data_Semiring_oneRecord'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->oneRecord;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Semiring_oneRecord"), recVars=[];
+  $__res = ($dict_0)->oneRecord;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Semiring_one'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Data_Semiring_one'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->one;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Semiring_one"), recVars=[];
+  $__res = ($dict_0)->one;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Semiring_mulRecord'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Data_Semiring_mulRecord'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->mulRecord;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Semiring_mulRecord"), recVars=[];
+  $__res = ($dict_0)->mulRecord;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Semiring_mul'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Data_Semiring_mul'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->mul;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Semiring_mul"), recVars=[];
+  $__res = ($dict_0)->mul;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Semiring_addRecord'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Data_Semiring_addRecord'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->addRecord;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Semiring_addRecord"), recVars=[];
+  $__res = ($dict_0)->addRecord;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Data_Semiring_semiringRecord'] = function() { $v = (function() {
-  $__fn = function($dollar__unused_0, $dictSemiringRecord = null) use (&$__fn) {
+  $__fn = function($dollar__unused_0, $dictSemiringRecord_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (object)["add" => (($dictSemiringRecord)->addRecord)(new Phpurs_Data0("Proxy")), "mul" => (($dictSemiringRecord)->mulRecord)(new Phpurs_Data0("Proxy")), "one" => ((($dictSemiringRecord)->oneRecord)(new Phpurs_Data0("Proxy")))(new Phpurs_Data0("Proxy")), "zero" => ((($dictSemiringRecord)->zeroRecord)(new Phpurs_Data0("Proxy")))(new Phpurs_Data0("Proxy"))];
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Semiring_semiringRecord"), recVars=[];
+  $__res = (object)["add" => (($dictSemiringRecord_1)->addRecord)(new Phpurs_Data0("Proxy")), "mul" => (($dictSemiringRecord_1)->mulRecord)(new Phpurs_Data0("Proxy")), "one" => ((($dictSemiringRecord_1)->oneRecord)(new Phpurs_Data0("Proxy")))(new Phpurs_Data0("Proxy")), "zero" => ((($dictSemiringRecord_1)->zeroRecord)(new Phpurs_Data0("Proxy")))(new Phpurs_Data0("Proxy"))];
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Data_Semiring_add'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Data_Semiring_add'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->add;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Semiring_add"), recVars=[];
+  $__res = ($dict_0)->add;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Semiring_semiringFn'] = function() { $v = function($dictSemiring) {
+\PhpursThunks::$thunks['Data_Semiring_semiringFn'] = function() { $v = function($dictSemiring_0) {
   $__num = \func_num_args();
-  $zero1_0 = ($dictSemiring)->zero;
-  $one1_1 = ($dictSemiring)->one;
-  $__res = (object)["add" => (function() use (&$dictSemiring) {
-  $__fn = function($f, $g = null, $x = null) use (&$dictSemiring, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Semiring_semiringFn"), recVars=[];
+  $zero1_1_0 = ($dictSemiring_0)->zero;
+  $one1_2_1 = ($dictSemiring_0)->one;
+  $__res = (object)["add" => (function() use ($dictSemiring_0) {
+  $__fn = function($f_3, $g_4 = null, $x_5 = null) use ($dictSemiring_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($dictSemiring)->add)(($f)($x)))(($g)($x));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($dictSemiring_0)->add)(($f_3)($x_5)))(($g_4)($x_5));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(), "zero" => function($v) use (&$zero1_0) {
+})(), "zero" => function($v_3) use ($zero1_1_0) {
   $__num = \func_num_args();
-  $__res = $zero1_0;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $zero1_1_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "mul" => (function() use (&$dictSemiring) {
-  $__fn = function($f, $g = null, $x = null) use (&$dictSemiring, &$__fn) {
+}, "mul" => (function() use ($dictSemiring_0) {
+  $__fn = function($f_3, $g_4 = null, $x_5 = null) use ($dictSemiring_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($dictSemiring)->mul)(($f)($x)))(($g)($x));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($dictSemiring_0)->mul)(($f_3)($x_5)))(($g_4)($x_5));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(), "one" => function($v) use (&$one1_1) {
+})(), "one" => function($v_3) use ($one1_2_1) {
   $__num = \func_num_args();
-  $__res = $one1_1;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $one1_2_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -305,60 +327,65 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Data_Semiring_semiringRecordCons'] = function() { $v = (function() {
-  $__fn = function($dictIsSymbol, $dollar__unused_1 = null, $dictSemiringRecord = null, $dictSemiring = null) use (&$__fn) {
+  $__fn = function($dictIsSymbol_0, $dollar__unused_1 = null, $dictSemiringRecord_2 = null, $dictSemiring_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $one1_0 = ($dictSemiring)->one;
-  $zero1_1 = ($dictSemiring)->zero;
-  $__res = (object)["addRecord" => (function() use (&$dictIsSymbol, &$dictSemiring, &$dictSemiringRecord) {
-  $__fn = function($v, $ra = null, $rb = null) use (&$dictIsSymbol, &$dictSemiring, &$dictSemiringRecord, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Semiring_semiringRecordCons"), recVars=[];
+  $one1_4_0 = ($dictSemiring_3)->one;
+  $zero1_5_1 = ($dictSemiring_3)->zero;
+  $__res = (object)["addRecord" => (function() use ($dictIsSymbol_0, $dictSemiringRecord_2, $dictSemiring_3) {
+  $__fn = function($v_6, $ra_7 = null, $rb_8 = null) use ($dictIsSymbol_0, $dictSemiringRecord_2, $dictSemiring_3, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $key_2 = (($dictIsSymbol)->reflectSymbol)(new Phpurs_Data0("Proxy"));
-  $get_3 = (($GLOBALS['Record_Unsafe_unsafeGet'] ?? \PhpursThunks::eval('Record_Unsafe_unsafeGet')))($key_2);
-  $__res = (((($GLOBALS['Record_Unsafe_unsafeSet'] ?? \PhpursThunks::eval('Record_Unsafe_unsafeSet')))($key_2))(((($dictSemiring)->add)(($get_3)($ra)))(($get_3)($rb))))((((($dictSemiringRecord)->addRecord)(new Phpurs_Data0("Proxy")))($ra))($rb));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $key_9_2 = (($dictIsSymbol_0)->reflectSymbol)(new Phpurs_Data0("Proxy"));
+  $get_10_3 = (($GLOBALS['Record_Unsafe_unsafeGet'] ?? \PhpursThunks::eval('Record_Unsafe_unsafeGet')))($key_9_2);
+  $__res = (((($GLOBALS['Record_Unsafe_unsafeSet'] ?? \PhpursThunks::eval('Record_Unsafe_unsafeSet')))($key_9_2))(((($dictSemiring_3)->add)(($get_10_3)($ra_7)))(($get_10_3)($rb_8))))((((($dictSemiringRecord_2)->addRecord)(new Phpurs_Data0("Proxy")))($ra_7))($rb_8));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(), "mulRecord" => (function() use (&$dictIsSymbol, &$dictSemiring, &$dictSemiringRecord) {
-  $__fn = function($v, $ra = null, $rb = null) use (&$dictIsSymbol, &$dictSemiring, &$dictSemiringRecord, &$__fn) {
+})(), "mulRecord" => (function() use ($dictIsSymbol_0, $dictSemiringRecord_2, $dictSemiring_3) {
+  $__fn = function($v_6, $ra_7 = null, $rb_8 = null) use ($dictIsSymbol_0, $dictSemiringRecord_2, $dictSemiring_3, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $key_4 = (($dictIsSymbol)->reflectSymbol)(new Phpurs_Data0("Proxy"));
-  $get_5 = (($GLOBALS['Record_Unsafe_unsafeGet'] ?? \PhpursThunks::eval('Record_Unsafe_unsafeGet')))($key_4);
-  $__res = (((($GLOBALS['Record_Unsafe_unsafeSet'] ?? \PhpursThunks::eval('Record_Unsafe_unsafeSet')))($key_4))(((($dictSemiring)->mul)(($get_5)($ra)))(($get_5)($rb))))((((($dictSemiringRecord)->mulRecord)(new Phpurs_Data0("Proxy")))($ra))($rb));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $key_9_4 = (($dictIsSymbol_0)->reflectSymbol)(new Phpurs_Data0("Proxy"));
+  $get_10_5 = (($GLOBALS['Record_Unsafe_unsafeGet'] ?? \PhpursThunks::eval('Record_Unsafe_unsafeGet')))($key_9_4);
+  $__res = (((($GLOBALS['Record_Unsafe_unsafeSet'] ?? \PhpursThunks::eval('Record_Unsafe_unsafeSet')))($key_9_4))(((($dictSemiring_3)->mul)(($get_10_5)($ra_7)))(($get_10_5)($rb_8))))((((($dictSemiringRecord_2)->mulRecord)(new Phpurs_Data0("Proxy")))($ra_7))($rb_8));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(), "oneRecord" => (function() use (&$dictIsSymbol, &$dictSemiringRecord, &$one1_0) {
-  $__fn = function($v, $v1 = null) use (&$dictIsSymbol, &$dictSemiringRecord, &$one1_0, &$__fn) {
+})(), "oneRecord" => (function() use ($dictIsSymbol_0, $dictSemiringRecord_2, $one1_4_0) {
+  $__fn = function($v_6, $v1_7 = null) use ($dictIsSymbol_0, $dictSemiringRecord_2, $one1_4_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($GLOBALS['Record_Unsafe_unsafeSet'] ?? \PhpursThunks::eval('Record_Unsafe_unsafeSet')))((($dictIsSymbol)->reflectSymbol)(new Phpurs_Data0("Proxy"))))($one1_0))(((($dictSemiringRecord)->oneRecord)(new Phpurs_Data0("Proxy")))(new Phpurs_Data0("Proxy")));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (((($GLOBALS['Record_Unsafe_unsafeSet'] ?? \PhpursThunks::eval('Record_Unsafe_unsafeSet')))((($dictIsSymbol_0)->reflectSymbol)(new Phpurs_Data0("Proxy"))))($one1_4_0))(((($dictSemiringRecord_2)->oneRecord)(new Phpurs_Data0("Proxy")))(new Phpurs_Data0("Proxy")));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "zeroRecord" => (function() use (&$dictIsSymbol, &$dictSemiringRecord, &$zero1_1) {
-  $__fn = function($v, $v1 = null) use (&$dictIsSymbol, &$dictSemiringRecord, &$zero1_1, &$__fn) {
+})(), "zeroRecord" => (function() use ($dictIsSymbol_0, $dictSemiringRecord_2, $zero1_5_1) {
+  $__fn = function($v_6, $v1_7 = null) use ($dictIsSymbol_0, $dictSemiringRecord_2, $zero1_5_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($GLOBALS['Record_Unsafe_unsafeSet'] ?? \PhpursThunks::eval('Record_Unsafe_unsafeSet')))((($dictIsSymbol)->reflectSymbol)(new Phpurs_Data0("Proxy"))))($zero1_1))(((($dictSemiringRecord)->zeroRecord)(new Phpurs_Data0("Proxy")))(new Phpurs_Data0("Proxy")));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (((($GLOBALS['Record_Unsafe_unsafeSet'] ?? \PhpursThunks::eval('Record_Unsafe_unsafeSet')))((($dictIsSymbol_0)->reflectSymbol)(new Phpurs_Data0("Proxy"))))($zero1_5_1))(((($dictSemiringRecord_2)->zeroRecord)(new Phpurs_Data0("Proxy")))(new Phpurs_Data0("Proxy")));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

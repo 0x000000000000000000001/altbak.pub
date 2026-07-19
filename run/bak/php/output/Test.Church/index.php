@@ -93,23 +93,26 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   }
 }
 \PhpursThunks::$thunks['Test_Church_zeroC'] = function() { $v = (function() {
-  $__fn = function($v, $x = null) use (&$__fn) {
+  $__fn = function($v_0, $x_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = $x;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Test_Church_zeroC"), recVars=[];
+  $__res = $x_1;
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Test_Church_toInt'] = function() { $v = function($n) {
+\PhpursThunks::$thunks['Test_Church_toInt'] = function() { $v = function($n_0) {
   $__num = \func_num_args();
-  $__res = (($n)(function($x) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Test_Church_toInt"), recVars=[];
+  $__res = (($n_0)(function($x_1) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))($x))(1);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))($x_1))(1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -119,12 +122,13 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Test_Church_succC'] = function() { $v = (function() {
-  $__fn = function($n, $f = null, $x = null) use (&$__fn) {
+  $__fn = function($n_0, $f_1 = null, $x_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ($f)((($n)($f))($x));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Test_Church_succC"), recVars=[];
+  $__res = ($f_1)((($n_0)($f_1))($x_2));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -132,33 +136,37 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Test_Church_mulC'] = function() { $v = (function() {
-  $__fn = function($m, $n = null, $f = null, $x = null) use (&$__fn) {
+  $__fn = function($m_0, $n_1 = null, $f_2 = null, $x_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = (($m)(($n)($f)))($x);
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Test_Church_mulC"), recVars=[];
+  $__res = (($m_0)(($n_1)($f_2)))($x_3);
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Test_Church_fromInt'] = function() { $v = function($v) {
+\PhpursThunks::$thunks['Test_Church_fromInt'] = function() { $v = function($v_0) {
   $__num = \func_num_args();
-  switch ($v) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Test_Church_fromInt"), recVars=["Test_Church_fromInt"];
+  while (true) {
+switch ($v_0) {
 case 0:
 $__t1 = ($GLOBALS['Test_Church_zeroC'] ?? \PhpursThunks::eval('Test_Church_zeroC'));
 break;
 default:
-$__local_var_0 = (($GLOBALS['Test_Church_fromInt'] ?? \PhpursThunks::eval('Test_Church_fromInt')))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v))(1));
-$__t1 = (function() use (&$__local_var_0) {
-  $__fn = function($f, $x = null) use (&$__local_var_0, &$__fn) {
+$__local_var_1_0 = (($GLOBALS['Test_Church_fromInt'] ?? \PhpursThunks::eval('Test_Church_fromInt')))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v_0))(1));
+$__t1 = (function() use ($__local_var_1_0) {
+  $__fn = function($f_2, $x_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($f)((($__local_var_0)($f))($x));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Test_Church_fromInt"];
+  $__res = ($f_2)((($__local_var_1_0)($f_2))($x_3));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -167,20 +175,22 @@ $__t1 = (function() use (&$__local_var_0) {
 })();
 break;
 };
-  $__res = $__t1;
-  goto __end;;
+$__res = $__t1;
+goto __end;;
+};
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Test_Church_describe'] = function() { $v = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))("Church Numerals (100k Closure Applications):"); return $v; };
 \PhpursThunks::$thunks['Test_Church_c10'] = function() { $v = (($GLOBALS['Test_Church_fromInt'] ?? \PhpursThunks::eval('Test_Church_fromInt')))(10); return $v; };
 \PhpursThunks::$thunks['Test_Church_c100'] = function() { $v = (function() {
-  $__fn = function($f, $x = null) use (&$__fn) {
+  $__fn = function($f_0, $x_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Test_Church_c10'] ?? \PhpursThunks::eval('Test_Church_c10')))((($GLOBALS['Test_Church_c10'] ?? \PhpursThunks::eval('Test_Church_c10')))($f)))($x);
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Test_Church_c100"), recVars=[];
+  $__res = ((($GLOBALS['Test_Church_c10'] ?? \PhpursThunks::eval('Test_Church_c10')))((($GLOBALS['Test_Church_c10'] ?? \PhpursThunks::eval('Test_Church_c10')))($f_0)))($x_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -188,12 +198,13 @@ break;
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Test_Church_c10k'] = function() { $v = (function() {
-  $__fn = function($f, $x = null) use (&$__fn) {
+  $__fn = function($f_0, $x_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Test_Church_c10'] ?? \PhpursThunks::eval('Test_Church_c10')))((($GLOBALS['Test_Church_c10'] ?? \PhpursThunks::eval('Test_Church_c10')))((($GLOBALS['Test_Church_c100'] ?? \PhpursThunks::eval('Test_Church_c100')))($f))))($x);
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Test_Church_c10k"), recVars=[];
+  $__res = ((($GLOBALS['Test_Church_c10'] ?? \PhpursThunks::eval('Test_Church_c10')))((($GLOBALS['Test_Church_c10'] ?? \PhpursThunks::eval('Test_Church_c10')))((($GLOBALS['Test_Church_c100'] ?? \PhpursThunks::eval('Test_Church_c100')))($f_0))))($x_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -201,12 +212,13 @@ break;
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Test_Church_c100k'] = function() { $v = (function() {
-  $__fn = function($f, $x = null) use (&$__fn) {
+  $__fn = function($f_0, $x_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Test_Church_c10'] ?? \PhpursThunks::eval('Test_Church_c10')))((($GLOBALS['Test_Church_c10'] ?? \PhpursThunks::eval('Test_Church_c10')))((($GLOBALS['Test_Church_c100'] ?? \PhpursThunks::eval('Test_Church_c100')))((($GLOBALS['Test_Church_c10'] ?? \PhpursThunks::eval('Test_Church_c10')))($f)))))($x);
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Test_Church_c100k"), recVars=[];
+  $__res = ((($GLOBALS['Test_Church_c10'] ?? \PhpursThunks::eval('Test_Church_c10')))((($GLOBALS['Test_Church_c10'] ?? \PhpursThunks::eval('Test_Church_c10')))((($GLOBALS['Test_Church_c100'] ?? \PhpursThunks::eval('Test_Church_c100')))((($GLOBALS['Test_Church_c10'] ?? \PhpursThunks::eval('Test_Church_c10')))($f_0)))))($x_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -214,21 +226,23 @@ break;
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Test_Church_addC'] = function() { $v = (function() {
-  $__fn = function($m, $n = null, $f = null, $x = null) use (&$__fn) {
+  $__fn = function($m_0, $n_1 = null, $f_2 = null, $x_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = (($m)($f))((($n)($f))($x));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Test_Church_addC"), recVars=[];
+  $__res = (($m_0)($f_2))((($n_1)($f_2))($x_3));
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Test_Church_act'] = function() { $v = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))((($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))(((($GLOBALS['Test_Church_c10'] ?? \PhpursThunks::eval('Test_Church_c10')))((($GLOBALS['Test_Church_c10'] ?? \PhpursThunks::eval('Test_Church_c10')))((($GLOBALS['Test_Church_c100'] ?? \PhpursThunks::eval('Test_Church_c100')))((($GLOBALS['Test_Church_c10'] ?? \PhpursThunks::eval('Test_Church_c10')))(function($x) {
+\PhpursThunks::$thunks['Test_Church_act'] = function() { $v = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))((($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))(((($GLOBALS['Test_Church_c10'] ?? \PhpursThunks::eval('Test_Church_c10')))((($GLOBALS['Test_Church_c10'] ?? \PhpursThunks::eval('Test_Church_c10')))((($GLOBALS['Test_Church_c100'] ?? \PhpursThunks::eval('Test_Church_c100')))((($GLOBALS['Test_Church_c10'] ?? \PhpursThunks::eval('Test_Church_c10')))(function($x_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))($x))(1);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))($x_0))(1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

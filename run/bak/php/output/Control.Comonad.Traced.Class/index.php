@@ -98,20 +98,22 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Control_Comonad_Traced_Class_track'] = function() { $v = function($dict) {
+\PhpursThunks::$thunks['Control_Comonad_Traced_Class_track'] = function() { $v = function($dict_0) {
   $__num = \func_num_args();
-  $__res = ($dict)->track;
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Comonad_Traced_Class_track"), recVars=[];
+  $__res = ($dict_0)->track;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Control_Comonad_Traced_Class_tracks'] = function() { $v = (function() {
-  $__fn = function($dictComonadTraced, $f = null, $w = null) use (&$__fn) {
+  $__fn = function($dictComonadTraced_0, $f_1 = null, $w_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($dictComonadTraced)->track)(($f)((((($dictComonadTraced)->Comonad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->extract)($w))))($w);
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Comonad_Traced_Class_tracks"), recVars=[];
+  $__res = ((($dictComonadTraced_0)->track)(($f_1)((((($dictComonadTraced_0)->Comonad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->extract)($w_2))))($w_2);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -119,15 +121,17 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Control_Comonad_Traced_Class_lowerTrack'] = function() { $v = (function() {
-  $__fn = function($dictComonadTrans, $dictComonadTraced = null) use (&$__fn) {
+  $__fn = function($dictComonadTrans_0, $dictComonadTraced_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $lower1_0 = (($dictComonadTrans)->lower)((($dictComonadTraced)->Comonad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = function($m) use (&$dictComonadTraced, &$lower1_0) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Comonad_Traced_Class_lowerTrack"), recVars=[];
+  $lower1_2_0 = (($dictComonadTrans_0)->lower)((($dictComonadTraced_1)->Comonad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__res = function($m_3) use ($dictComonadTraced_1, $lower1_2_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($dictComonadTraced)->track)($m)))($lower1_0);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($dictComonadTraced_1)->track)($m_3)))($lower1_2_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -139,24 +143,26 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Control_Comonad_Traced_Class_listens'] = function() { $v = (function() {
-  $__fn = function($dictFunctor, $f = null, $v = null) use (&$__fn) {
+  $__fn = function($dictFunctor_0, $f_1 = null, $v_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($dictFunctor)->map)((function() use (&$f) {
-  $__fn = function($g, $t = null) use (&$f, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Comonad_Traced_Class_listens"), recVars=[];
+  $__res = ((($dictFunctor_0)->map)((function() use ($f_1) {
+  $__fn = function($g_3, $t_4 = null) use ($f_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", ($g)($t), ($f)($t));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = new Phpurs_Data2("Tuple", ($g_3)($t_4), ($f_1)($t_4));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))($v);
+})()))($v_2);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -164,51 +170,57 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Control_Comonad_Traced_Class_listen'] = function() { $v = (function() {
-  $__fn = function($dictFunctor, $v = null) use (&$__fn) {
+  $__fn = function($dictFunctor_0, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictFunctor)->map)((function() {
-  $__fn = function($f, $t = null) use (&$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Comonad_Traced_Class_listen"), recVars=[];
+  $__res = ((($dictFunctor_0)->map)((function() {
+  $__fn = function($f_2, $t_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", ($f)($t), $t);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = new Phpurs_Data2("Tuple", ($f_2)($t_3), $t_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))($v);
+})()))($v_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Traced_Class_comonadTracedTracedT'] = function() { $v = function($dictComonad) {
+\PhpursThunks::$thunks['Control_Comonad_Traced_Class_comonadTracedTracedT'] = function() { $v = function($dictComonad_0) {
   $__num = \func_num_args();
-  $comonadTracedT_0 = (($GLOBALS['Control_Comonad_Traced_Trans_comonadTracedT'] ?? \PhpursThunks::eval('Control_Comonad_Traced_Trans_comonadTracedT')))($dictComonad);
-  $__res = function($dictMonoid) use (&$comonadTracedT_0, &$dictComonad) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Comonad_Traced_Class_comonadTracedTracedT"), recVars=[];
+  $comonadTracedT_1_0 = (($GLOBALS['Control_Comonad_Traced_Trans_comonadTracedT'] ?? \PhpursThunks::eval('Control_Comonad_Traced_Trans_comonadTracedT')))($dictComonad_0);
+  $__res = function($dictMonoid_2) use ($comonadTracedT_1_0, $dictComonad_0) {
   $__num = \func_num_args();
-  $comonadTracedT1_1 = ($comonadTracedT_0)($dictMonoid);
-  $__res = (object)["track" => (function() use (&$dictComonad) {
-  $__fn = function($t, $v = null) use (&$dictComonad, &$__fn) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $comonadTracedT1_3_1 = ($comonadTracedT_1_0)($dictMonoid_2);
+  $__res = (object)["track" => (function() use ($dictComonad_0) {
+  $__fn = function($t_4, $v_5 = null) use ($dictComonad_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictComonad)->extract)($v))($t);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($dictComonad_0)->extract)($v_5))($t_4);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Comonad0" => function($dollar__unused_0) use (&$comonadTracedT1_1) {
+})(), "Comonad0" => function($dollar__unused_4) use ($comonadTracedT1_3_1) {
   $__num = \func_num_args();
-  $__res = $comonadTracedT1_1;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $comonadTracedT1_3_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -221,12 +233,14 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Traced_Class_comonadTracedStoreT'] = function() { $v = function($dictComonadTraced) {
+\PhpursThunks::$thunks['Control_Comonad_Traced_Class_comonadTracedStoreT'] = function() { $v = function($dictComonadTraced_0) {
   $__num = \func_num_args();
-  $comonadStoreT_0 = (($GLOBALS['Control_Comonad_Store_Trans_comonadStoreT'] ?? \PhpursThunks::eval('Control_Comonad_Store_Trans_comonadStoreT')))((($dictComonadTraced)->Comonad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = (object)["track" => ((($GLOBALS['Control_Comonad_Traced_Class_lowerTrack'] ?? \PhpursThunks::eval('Control_Comonad_Traced_Class_lowerTrack')))(($GLOBALS['Control_Comonad_Store_Trans_comonadTransStoreT'] ?? \PhpursThunks::eval('Control_Comonad_Store_Trans_comonadTransStoreT'))))($dictComonadTraced), "Comonad0" => function($dollar__unused_0) use (&$comonadStoreT_0) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Comonad_Traced_Class_comonadTracedStoreT"), recVars=[];
+  $comonadStoreT_1_0 = (($GLOBALS['Control_Comonad_Store_Trans_comonadStoreT'] ?? \PhpursThunks::eval('Control_Comonad_Store_Trans_comonadStoreT')))((($dictComonadTraced_0)->Comonad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__res = (object)["track" => ((($GLOBALS['Control_Comonad_Traced_Class_lowerTrack'] ?? \PhpursThunks::eval('Control_Comonad_Traced_Class_lowerTrack')))(($GLOBALS['Control_Comonad_Store_Trans_comonadTransStoreT'] ?? \PhpursThunks::eval('Control_Comonad_Store_Trans_comonadTransStoreT'))))($dictComonadTraced_0), "Comonad0" => function($dollar__unused_2) use ($comonadStoreT_1_0) {
   $__num = \func_num_args();
-  $__res = $comonadStoreT_0;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $comonadStoreT_1_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -235,12 +249,14 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Traced_Class_comonadTracedIdentityT'] = function() { $v = function($dictComonadTraced) {
+\PhpursThunks::$thunks['Control_Comonad_Traced_Class_comonadTracedIdentityT'] = function() { $v = function($dictComonadTraced_0) {
   $__num = \func_num_args();
-  $comonadIdentityT_0 = (($GLOBALS['Control_Monad_Identity_Trans_comonadIdentityT'] ?? \PhpursThunks::eval('Control_Monad_Identity_Trans_comonadIdentityT')))((($dictComonadTraced)->Comonad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = (object)["track" => ((($GLOBALS['Control_Comonad_Traced_Class_lowerTrack'] ?? \PhpursThunks::eval('Control_Comonad_Traced_Class_lowerTrack')))(($GLOBALS['Control_Comonad_Trans_Class_comonadTransIdentityT'] ?? \PhpursThunks::eval('Control_Comonad_Trans_Class_comonadTransIdentityT'))))($dictComonadTraced), "Comonad0" => function($dollar__unused_0) use (&$comonadIdentityT_0) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Comonad_Traced_Class_comonadTracedIdentityT"), recVars=[];
+  $comonadIdentityT_1_0 = (($GLOBALS['Control_Monad_Identity_Trans_comonadIdentityT'] ?? \PhpursThunks::eval('Control_Monad_Identity_Trans_comonadIdentityT')))((($dictComonadTraced_0)->Comonad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__res = (object)["track" => ((($GLOBALS['Control_Comonad_Traced_Class_lowerTrack'] ?? \PhpursThunks::eval('Control_Comonad_Traced_Class_lowerTrack')))(($GLOBALS['Control_Comonad_Trans_Class_comonadTransIdentityT'] ?? \PhpursThunks::eval('Control_Comonad_Trans_Class_comonadTransIdentityT'))))($dictComonadTraced_0), "Comonad0" => function($dollar__unused_2) use ($comonadIdentityT_1_0) {
   $__num = \func_num_args();
-  $__res = $comonadIdentityT_0;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $comonadIdentityT_1_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -249,12 +265,14 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Traced_Class_comonadTracedEnvT'] = function() { $v = function($dictComonadTraced) {
+\PhpursThunks::$thunks['Control_Comonad_Traced_Class_comonadTracedEnvT'] = function() { $v = function($dictComonadTraced_0) {
   $__num = \func_num_args();
-  $comonadEnvT_0 = (($GLOBALS['Control_Comonad_Env_Trans_comonadEnvT'] ?? \PhpursThunks::eval('Control_Comonad_Env_Trans_comonadEnvT')))((($dictComonadTraced)->Comonad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = (object)["track" => ((($GLOBALS['Control_Comonad_Traced_Class_lowerTrack'] ?? \PhpursThunks::eval('Control_Comonad_Traced_Class_lowerTrack')))(($GLOBALS['Control_Comonad_Env_Trans_comonadTransEnvT'] ?? \PhpursThunks::eval('Control_Comonad_Env_Trans_comonadTransEnvT'))))($dictComonadTraced), "Comonad0" => function($dollar__unused_0) use (&$comonadEnvT_0) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Comonad_Traced_Class_comonadTracedEnvT"), recVars=[];
+  $comonadEnvT_1_0 = (($GLOBALS['Control_Comonad_Env_Trans_comonadEnvT'] ?? \PhpursThunks::eval('Control_Comonad_Env_Trans_comonadEnvT')))((($dictComonadTraced_0)->Comonad0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__res = (object)["track" => ((($GLOBALS['Control_Comonad_Traced_Class_lowerTrack'] ?? \PhpursThunks::eval('Control_Comonad_Traced_Class_lowerTrack')))(($GLOBALS['Control_Comonad_Env_Trans_comonadTransEnvT'] ?? \PhpursThunks::eval('Control_Comonad_Env_Trans_comonadTransEnvT'))))($dictComonadTraced_0), "Comonad0" => function($dollar__unused_2) use ($comonadEnvT_1_0) {
   $__num = \func_num_args();
-  $__res = $comonadEnvT_0;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $comonadEnvT_1_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -264,18 +282,20 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Control_Comonad_Traced_Class_censor'] = function() { $v = (function() {
-  $__fn = function($dictFunctor, $f = null, $v = null) use (&$__fn) {
+  $__fn = function($dictFunctor_0, $f_1 = null, $v_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($dictFunctor)->map)(function($v1) use (&$f) {
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Comonad_Traced_Class_censor"), recVars=[];
+  $__res = ((($dictFunctor_0)->map)(function($v1_3) use ($f_1) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($v1))($f);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($v1_3))($f_1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))($v);
+}))($v_2);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
