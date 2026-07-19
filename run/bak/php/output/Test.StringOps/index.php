@@ -103,21 +103,16 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Test_StringOps_regexPattern'] = function() { $v = (($GLOBALS['Partial_Unsafe__unsafePartial'] ?? \PhpursThunks::eval('Partial_Unsafe__unsafePartial')))(function($dollar__unused_0) {
-  $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__local_var_1_0 = ((((($GLOBALS['Data_String_Regex_regexImpl'] ?? \PhpursThunks::eval('Data_String_Regex_regexImpl')))(($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left'))))(($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right'))))("(hello|world)[0-9]+"))((($GLOBALS['Data_String_Regex_renderFlags'] ?? \PhpursThunks::eval('Data_String_Regex_renderFlags')))(($GLOBALS['Data_String_Regex_Flags_noFlags'] ?? \PhpursThunks::eval('Data_String_Regex_Flags_noFlags'))));
-  if ((is_object($__local_var_1_0) && (($__local_var_1_0)->tag === "Right"))) {
-$__t1 = ($__local_var_1_0)->value0;
+\PhpursThunks::$thunks['Test_StringOps_regexPattern'] = function() { $v = (function() use (&$__fn) {
+$v_0_0 = ((($GLOBALS['Data_String_Regex_regex'] ?? \PhpursThunks::eval('Data_String_Regex_regex')))("(hello|world)[0-9]+"))(($GLOBALS['Data_String_Regex_Flags_noFlags'] ?? \PhpursThunks::eval('Data_String_Regex_Flags_noFlags')));
+if ((is_object($v_0_0) && (($v_0_0)->tag === "Right"))) {
+$__t1 = ($v_0_0)->value0;
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t1 = null;
 };
-  $__res = $__t1;
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}); return $v; };
+return $__t1;
+})(); return $v; };
 \PhpursThunks::$thunks['Test_StringOps_runStringOps'] = function() { $v = function($n_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=(Just "Test_StringOps_runStringOps"), recVars=[];
@@ -135,10 +130,10 @@ case 0:
 $__t5 = $v2_4;
 break;
 default:
-$concatted_5_1 = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))($v1_3))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))((($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))($v_2)))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("world"))((($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))(((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))($v_2))(1)))));
-$__tco_2 = ((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v_2))(1);
+$concatted_5_1 = ((($v1_3 . (($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))($v_2)) . "world") . (($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))(($v_2 + 1)));
+$__tco_2 = ($v_2 - 1);
 $__tco_3 = ((($GLOBALS['Data_String_CodePoints_take'] ?? \PhpursThunks::eval('Data_String_CodePoints_take')))(10))($concatted_5_1);
-$__tco_4 = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))($v2_4))((($GLOBALS['Data_Array_length'] ?? \PhpursThunks::eval('Data_Array_length')))(((($GLOBALS['Data_String_Common_split'] ?? \PhpursThunks::eval('Data_String_Common_split')))("e"))((((($GLOBALS['Data_String_Regex_replace'] ?? \PhpursThunks::eval('Data_String_Regex_replace')))(($GLOBALS['Test_StringOps_regexPattern'] ?? \PhpursThunks::eval('Test_StringOps_regexPattern'))))("matched"))($concatted_5_1))));
+$__tco_4 = ($v2_4 + count(((($GLOBALS['Data_String_Common_split'] ?? \PhpursThunks::eval('Data_String_Common_split')))("e"))((((($GLOBALS['Data_String_Regex_replace'] ?? \PhpursThunks::eval('Data_String_Regex_replace')))(($GLOBALS['Test_StringOps_regexPattern'] ?? \PhpursThunks::eval('Test_StringOps_regexPattern'))))("matched"))($concatted_5_1))));
 $v_2 = $__tco_2;
 $v1_3 = $__tco_3;
 $v2_4 = $__tco_4;

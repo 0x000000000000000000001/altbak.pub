@@ -104,7 +104,7 @@ case 1:
 $__t0 = 1;
 break;
 default:
-$__t0 = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))((($GLOBALS['Test_Fib_fib'] ?? \PhpursThunks::eval('Test_Fib_fib')))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v_0))(1))))((($GLOBALS['Test_Fib_fib'] ?? \PhpursThunks::eval('Test_Fib_fib')))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v_0))(2)));
+$__t0 = ((($GLOBALS['Test_Fib_fib'] ?? \PhpursThunks::eval('Test_Fib_fib')))(($v_0 - 1)) + (($GLOBALS['Test_Fib_fib'] ?? \PhpursThunks::eval('Test_Fib_fib')))(($v_0 - 2)));
 break;
 };
 $__res = $__t0;

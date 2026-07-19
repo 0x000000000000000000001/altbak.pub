@@ -138,7 +138,30 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Data_List_any'] = function() { $v = ((($GLOBALS['Data_Foldable_any'] ?? \PhpursThunks::eval('Data_Foldable_any')))(($GLOBALS['Data_List_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Types_foldableList'))))(($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_heytingAlgebraBoolean'))); return $v; };
+\PhpursThunks::$thunks['Data_List_any'] = function() { $v = (function() use (&$__fn) {
+$semigroupDisj1_0_0 = (object)["append" => (function() {
+  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ($v_0 || $v1_1);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})()];
+return ((($GLOBALS['Data_List_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Types_foldableList')))->foldMap)((object)["mempty" => false, "Semigroup0" => function($dollar__unused_1) use ($semigroupDisj1_0_0) {
+  $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $semigroupDisj1_0_0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}]);
+})(); return $v; };
 \PhpursThunks::$thunks['Data_List_Pattern'] = function() { $v = function($x_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=(Just "Data_List_Pattern"), recVars=[];
@@ -161,7 +184,7 @@ case 0:
 $__t3 = new Phpurs_Data1("Just", new Phpurs_Data2("Cons", $v1_1, ($v2_2)->value1));
 break;
 default:
-$__local_var_3_1 = (((($GLOBALS['Data_List_updateAt'] ?? \PhpursThunks::eval('Data_List_updateAt')))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v_0))(1)))($v1_1))(($v2_2)->value1);
+$__local_var_3_1 = (((($GLOBALS['Data_List_updateAt'] ?? \PhpursThunks::eval('Data_List_updateAt')))(($v_0 - 1)))($v1_1))(($v2_2)->value1);
 if ((is_object($__local_var_3_1) && (($__local_var_3_1)->tag === "Just"))) {
 $__t2 = new Phpurs_Data1("Just", new Phpurs_Data2("Cons", ($v2_2)->value0, ($__local_var_3_1)->value0));
 } else {
@@ -505,9 +528,12 @@ goto __end;;
   }
   // DEBUG UncurriedAbs: currentBindingName=(Just "ascending_4_9"), recVars=["merge_1_0","mergePairs_2_4","mergeAll_3_6","sequences_4_9","descending_4_9","ascending_4_9"];
   while (true) {
-if (((is_object($v2_7) && (($v2_7)->tag === "Cons")) && ((($GLOBALS['Data_Eq_eqBooleanImpl'] ?? \PhpursThunks::eval('Data_Eq_eqBooleanImpl')))((is_object((($cmp_0)($v_5))(($v2_7)->value0)) && (((($cmp_0)($v_5))(($v2_7)->value0))->tag === "GT"))))(false))) {
-$__tco_18 = ($v2_7)->value0;
-$__tco_19 = function($ys_8) use ($v1_6, $v_5) {
+if ((function() use ($cmp_0, $v2_7, $v_5, &$__fn) {
+$__local_var_8_18 = (($cmp_0)($v_5))(($v2_7)->value0);
+return ((is_object($v2_7) && (($v2_7)->tag === "Cons")) && ((is_object($__local_var_8_18) && (($__local_var_8_18)->tag === "LT")) || ( ! (is_object($__local_var_8_18) && (($__local_var_8_18)->tag === "GT")))));
+})()) {
+$__tco_19 = ($v2_7)->value0;
+$__tco_20 = function($ys_8) use ($v1_6, $v_5) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["merge_1_0","mergePairs_2_4","mergeAll_3_6","sequences_4_9","descending_4_9","ascending_4_9"];
   $__res = ($v1_6)(new Phpurs_Data2("Cons", $v_5, $ys_8));
@@ -515,10 +541,10 @@ $__tco_19 = function($ys_8) use ($v1_6, $v_5) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-$__tco_20 = ($v2_7)->value1;
-$v_5 = $__tco_18;
-$v1_6 = $__tco_19;
-$v2_7 = $__tco_20;
+$__tco_21 = ($v2_7)->value1;
+$v_5 = $__tco_19;
+$v1_6 = $__tco_20;
+$v2_7 = $__tco_21;
 continue ;
 $__t17 = null;
 } else {
@@ -559,7 +585,7 @@ goto __end;;
   $__res = (object)["show" => function($v_1) use ($dictShow_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("(Pattern "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))((((($GLOBALS['Data_List_Types_showList'] ?? \PhpursThunks::eval('Data_List_Types_showList')))($dictShow_0))->show)($v_1)))(")"));
+  $__res = (("(Pattern " . (((($GLOBALS['Data_List_Types_showList'] ?? \PhpursThunks::eval('Data_List_Types_showList')))($dictShow_0))->show)($v_1)) . ")");
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -613,7 +639,7 @@ $go_0_0 = (function() use (&$go_0_0) {
   }
   // DEBUG UncurriedAbs: currentBindingName=(Just "go_0_0"), recVars=["go_0_0"];
   while (true) {
-if ((is_object((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)($v1_2))(1)) && (((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)($v1_2))(1))->tag === "LT"))) {
+if (($v1_2 < 1)) {
 $go_4_2 = null;
 $go_4_2 = (function() use (&$go_4_2) {
   $__fn = function($v_5, $v1_6 = null) use (&$go_4_2, &$__fn) {
@@ -685,7 +711,7 @@ $__t1 = (($go_4_6)(new Phpurs_Data0("Nil")))($v_1);
 } else {
 if ((is_object($v2_3) && (($v2_3)->tag === "Cons"))) {
 $__tco_10 = new Phpurs_Data2("Cons", ($v2_3)->value0, $v_1);
-$__tco_11 = ((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v1_2))(1);
+$__tco_11 = ($v1_2 - 1);
 $__tco_12 = ($v2_3)->value1;
 $v_1 = $__tco_10;
 $v1_2 = $__tco_11;
@@ -1125,7 +1151,7 @@ goto __end;;
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   // DEBUG UncurriedAbs: currentBindingName=(Just "Data_List_range"), recVars=[];
-  if (((($GLOBALS['Data_Eq_eqIntImpl'] ?? \PhpursThunks::eval('Data_Eq_eqIntImpl')))($start_0))($end_1)) {
+  if (($start_0 === $end_1)) {
 $__t7 = new Phpurs_Data2("Cons", $start_0, new Phpurs_Data0("Nil"));
 } else {
 $go_2_0 = null;
@@ -1137,10 +1163,10 @@ $go_2_0 = (function() use (&$go_2_0) {
   }
   // DEBUG UncurriedAbs: currentBindingName=(Just "go_2_0"), recVars=["go_2_0"];
   while (true) {
-if (((($GLOBALS['Data_Eq_eqIntImpl'] ?? \PhpursThunks::eval('Data_Eq_eqIntImpl')))($s_3))($e_4)) {
+if (($s_3 === $e_4)) {
 $__t5 = new Phpurs_Data2("Cons", $s_3, $rest_6);
 } else {
-$__tco_1 = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))($s_3))($step_5);
+$__tco_1 = ($s_3 + $step_5);
 $__tco_2 = $e_4;
 $__tco_3 = $step_5;
 $__tco_4 = new Phpurs_Data2("Cons", $s_3, $rest_6);
@@ -1159,10 +1185,10 @@ goto __end;;
   };
   return $__fn;
 })();
-if ((is_object((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)($start_0))($end_1)) && (((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)($start_0))($end_1))->tag === "GT"))) {
+if (($start_0 > $end_1)) {
 $__t6 = 1;
 } else {
-$__t6 = ((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))(0))(1);
+$__t6 = -1;
 };
 $__t7 = (((($go_2_0)($end_1))($start_0))($__t6))(new Phpurs_Data0("Nil"));
 };
@@ -1526,7 +1552,7 @@ if ((is_object($v_2) && (($v_2)->tag === "Nil"))) {
 $__t1 = $b_1;
 } else {
 if ((is_object($v_2) && (($v_2)->tag === "Cons"))) {
-$__tco_2 = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))($b_1))(1);
+$__tco_2 = ($b_1 + 1);
 $__tco_3 = ($v_2)->value1;
 $b_1 = $__tco_2;
 $v_2 = $__tco_3;
@@ -1613,7 +1639,7 @@ if (($v_0 === 0)) {
 $__t0 = new Phpurs_Data1("Just", new Phpurs_Data2("Cons", $v1_1, $v2_2));
 } else {
 if ((is_object($v2_2) && (($v2_2)->tag === "Cons"))) {
-$__local_var_3_1 = (((($GLOBALS['Data_List_insertAt'] ?? \PhpursThunks::eval('Data_List_insertAt')))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v_0))(1)))($v1_1))(($v2_2)->value1);
+$__local_var_3_1 = (((($GLOBALS['Data_List_insertAt'] ?? \PhpursThunks::eval('Data_List_insertAt')))(($v_0 - 1)))($v1_1))(($v2_2)->value1);
 if ((is_object($__local_var_3_1) && (($__local_var_3_1)->tag === "Just"))) {
 $__t2 = new Phpurs_Data1("Just", new Phpurs_Data2("Cons", ($v2_2)->value0, ($__local_var_3_1)->value0));
 } else {
@@ -1672,7 +1698,7 @@ $__t3 = new Phpurs_Data1("Just", ($v_0)->value0);
 break;
 default:
 $__tco_1 = ($v_0)->value1;
-$__tco_2 = ((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v1_1))(1);
+$__tco_2 = ($v1_1 - 1);
 $v_0 = $__tco_1;
 $v1_1 = $__tco_2;
 continue 2;
@@ -2032,7 +2058,7 @@ if ((is_object($v1_3) && (($v1_3)->tag === "Cons"))) {
 if (($fn_0)(($v1_3)->value0)) {
 $__t4 = new Phpurs_Data1("Just", $v_2);
 } else {
-$__tco_2 = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))($v_2))(1);
+$__tco_2 = ($v_2 + 1);
 $__tco_3 = ($v1_3)->value1;
 $v_2 = $__tco_2;
 $v1_3 = $__tco_3;
@@ -2069,24 +2095,29 @@ goto __end;;
   }
   // DEBUG UncurriedAbs: currentBindingName=(Just "Data_List_findLastIndex"), recVars=[];
   $go_2_0 = null;
-  $go_2_0 = (function() use (&$go_2_0) {
-  $__fn = function($v_3, $v1_4 = null) use (&$go_2_0, &$__fn) {
+  $go_2_0 = (function() use ($fn_0, &$go_2_0) {
+  $__fn = function($v_3, $v1_4 = null) use ($fn_0, &$go_2_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   // DEBUG UncurriedAbs: currentBindingName=(Just "go_2_0"), recVars=["go_2_0"];
   while (true) {
-if ((is_object($v1_4) && (($v1_4)->tag === "Nil"))) {
-$__t1 = $v_3;
-} else {
 if ((is_object($v1_4) && (($v1_4)->tag === "Cons"))) {
-$__tco_2 = new Phpurs_Data2("Cons", ($v1_4)->value0, $v_3);
+if (($fn_0)(($v1_4)->value0)) {
+$__t4 = new Phpurs_Data1("Just", $v_3);
+} else {
+$__tco_2 = ($v_3 + 1);
 $__tco_3 = ($v1_4)->value1;
 $v_3 = $__tco_2;
 $v1_4 = $__tco_3;
 continue ;
-$__t1 = null;
+$__t4 = null;
+};
+$__t1 = $__t4;
+} else {
+if ((is_object($v1_4) && (($v1_4)->tag === "Nil"))) {
+$__t1 = new Phpurs_Data0("Nothing");
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t1 = null;
@@ -2100,13 +2131,77 @@ goto __end;;
   };
   return $__fn;
 })();
-  $__local_var_2_0 = ((($GLOBALS['Data_List_findIndex'] ?? \PhpursThunks::eval('Data_List_findIndex')))($fn_0))((($go_2_0)(new Phpurs_Data0("Nil")))($xs_1));
-  if ((is_object($__local_var_2_0) && (($__local_var_2_0)->tag === "Just"))) {
-$__t5 = new Phpurs_Data1("Just", ((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))((($GLOBALS['Data_List_length'] ?? \PhpursThunks::eval('Data_List_length')))($xs_1)))(1)))(($__local_var_2_0)->value0));
+  $go_3_5 = null;
+  $go_3_5 = (function() use (&$go_3_5) {
+  $__fn = function($v_4, $v1_5 = null) use (&$go_3_5, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  // DEBUG UncurriedAbs: currentBindingName=(Just "go_3_5"), recVars=["go_2_0","go_3_5"];
+  while (true) {
+if ((is_object($v1_5) && (($v1_5)->tag === "Nil"))) {
+$__t6 = $v_4;
 } else {
-$__t5 = new Phpurs_Data0("Nothing");
+if ((is_object($v1_5) && (($v1_5)->tag === "Cons"))) {
+$__tco_7 = new Phpurs_Data2("Cons", ($v1_5)->value0, $v_4);
+$__tco_8 = ($v1_5)->value1;
+$v_4 = $__tco_7;
+$v1_5 = $__tco_8;
+continue ;
+$__t6 = null;
+} else {
+throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+$__t6 = null;
 };
-  $__res = $__t5;
+};
+$__res = $__t6;
+goto __end;;
+};
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
+  $__local_var_3_5 = (($go_2_0)(0))((($go_3_5)(new Phpurs_Data0("Nil")))($xs_1));
+  if ((is_object($__local_var_3_5) && (($__local_var_3_5)->tag === "Just"))) {
+$go_4_11 = null;
+$go_4_11 = (function() use (&$go_4_11) {
+  $__fn = function($b_5, $v_6 = null) use (&$go_4_11, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  // DEBUG UncurriedAbs: currentBindingName=(Just "go_4_11"), recVars=["go_2_0","go_4_11"];
+  while (true) {
+if ((is_object($v_6) && (($v_6)->tag === "Nil"))) {
+$__t12 = $b_5;
+} else {
+if ((is_object($v_6) && (($v_6)->tag === "Cons"))) {
+$__tco_13 = ($b_5 + 1);
+$__tco_14 = ($v_6)->value1;
+$b_5 = $__tco_13;
+$v_6 = $__tco_14;
+continue ;
+$__t12 = null;
+} else {
+throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+$__t12 = null;
+};
+};
+$__res = $__t12;
+goto __end;;
+};
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
+$__t10 = new Phpurs_Data1("Just", (((($go_4_11)(0))($xs_1) - 1) - ($__local_var_3_5)->value0));
+} else {
+$__t10 = new Phpurs_Data0("Nothing");
+};
+  $__res = $__t10;
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -2414,7 +2509,7 @@ goto __end;;
 $__t3 = (($go_6_4)(new Phpurs_Data0("Nil")))($v_4);
 } else {
 if ((is_object($v1_5) && (($v1_5)->tag === "Cons"))) {
-if ((($GLOBALS['Data_HeytingAlgebra_boolNot'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolNot')))((($v_0)($__local_var_2_1))(($v1_5)->value0))) {
+if (( ! (($v_0)($__local_var_2_1))(($v1_5)->value0))) {
 $__tco_11 = new Phpurs_Data2("Cons", ($v1_5)->value0, $v_4);
 $__tco_12 = ($v1_5)->value1;
 $v_4 = $__tco_11;
@@ -2475,7 +2570,33 @@ goto __end;;
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ((((($GLOBALS['Data_List_Types_eq1List'] ?? \PhpursThunks::eval('Data_List_Types_eq1List')))->eq1)($dictEq_0))($x_1))($y_2);
+  $go_3_0 = null;
+  $go_3_0 = (function() use ($dictEq_0, &$go_3_0) {
+  $__fn = function($v_4, $v1_5 = null, $v2_6 = null) use ($dictEq_0, &$go_3_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 3) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  }
+  // DEBUG UncurriedAbs: currentBindingName=(Just "go_3_0"), recVars=["go_3_0"];
+  while (true) {
+if (( ! $v2_6)) {
+$__t1 = false;
+} else {
+if ((is_object($v_4) && (($v_4)->tag === "Nil"))) {
+$__t1 = ((is_object($v1_5) && (($v1_5)->tag === "Nil")) && $v2_6);
+} else {
+$__t1 = ((is_object($v_4) && (($v_4)->tag === "Cons")) && ((is_object($v1_5) && (($v1_5)->tag === "Cons")) && ((($go_3_0)(($v_4)->value1))(($v1_5)->value1))(($v2_6 && ((($dictEq_0)->eq)(($v1_5)->value0))(($v_4)->value0)))));
+};
+};
+$__res = $__t1;
+goto __end;;
+};
+  __end:
+  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+  };
+  return $__fn;
+})();
+  $__res = ((($go_3_0)($x_1))($y_2))(true);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -2497,7 +2618,33 @@ goto __end;;
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ((((($GLOBALS['Data_List_Types_eq1List'] ?? \PhpursThunks::eval('Data_List_Types_eq1List')))->eq1)($__local_var_1_0))($x_2))($y_3);
+  $go_4_1 = null;
+  $go_4_1 = (function() use ($__local_var_1_0, &$go_4_1) {
+  $__fn = function($v_5, $v1_6 = null, $v2_7 = null) use ($__local_var_1_0, &$go_4_1, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 3) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  }
+  // DEBUG UncurriedAbs: currentBindingName=(Just "go_4_1"), recVars=["go_4_1"];
+  while (true) {
+if (( ! $v2_7)) {
+$__t2 = false;
+} else {
+if ((is_object($v_5) && (($v_5)->tag === "Nil"))) {
+$__t2 = ((is_object($v1_6) && (($v1_6)->tag === "Nil")) && $v2_7);
+} else {
+$__t2 = ((is_object($v_5) && (($v_5)->tag === "Cons")) && ((is_object($v1_6) && (($v1_6)->tag === "Cons")) && ((($go_4_1)(($v_5)->value1))(($v1_6)->value1))(($v2_7 && ((($__local_var_1_0)->eq)(($v1_6)->value0))(($v_5)->value0)))));
+};
+};
+$__res = $__t2;
+goto __end;;
+};
+  __end:
+  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+  };
+  return $__fn;
+})();
+  $__res = ((($go_4_1)($x_2))($y_3))(true);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -2557,14 +2704,44 @@ goto __end;;
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   // DEBUG UncurriedAbs: currentBindingName=(Just "Data_List_elemIndex"), recVars=[];
-  $__res = (($GLOBALS['Data_List_findIndex'] ?? \PhpursThunks::eval('Data_List_findIndex')))(function($v_2) use ($dictEq_0, $x_1) {
+  $go_2_0 = null;
+  $go_2_0 = (function() use ($dictEq_0, &$go_2_0, $x_1) {
+  $__fn = function($v_3, $v1_4 = null) use ($dictEq_0, &$go_2_0, $x_1, &$__fn) {
   $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ((($dictEq_0)->eq)($v_2))($x_1);
-  goto __end;;
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  // DEBUG UncurriedAbs: currentBindingName=(Just "go_2_0"), recVars=["go_2_0"];
+  while (true) {
+if ((is_object($v1_4) && (($v1_4)->tag === "Cons"))) {
+if (((($dictEq_0)->eq)(($v1_4)->value0))($x_1)) {
+$__t4 = new Phpurs_Data1("Just", $v_3);
+} else {
+$__tco_2 = ($v_3 + 1);
+$__tco_3 = ($v1_4)->value1;
+$v_3 = $__tco_2;
+$v1_4 = $__tco_3;
+continue ;
+$__t4 = null;
+};
+$__t1 = $__t4;
+} else {
+if ((is_object($v1_4) && (($v1_4)->tag === "Nil"))) {
+$__t1 = new Phpurs_Data0("Nothing");
+} else {
+throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+$__t1 = null;
+};
+};
+$__res = $__t1;
+goto __end;;
+};
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
+  $__res = ($go_2_0)(0);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -2605,7 +2782,39 @@ goto __end;;
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   // DEBUG UncurriedAbs: currentBindingName=(Just "Data_List_dropEnd"), recVars=[];
-  $__res = ((($GLOBALS['Data_List_take'] ?? \PhpursThunks::eval('Data_List_take')))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))((($GLOBALS['Data_List_length'] ?? \PhpursThunks::eval('Data_List_length')))($xs_1)))($n_0)))($xs_1);
+  $go_2_0 = null;
+  $go_2_0 = (function() use (&$go_2_0) {
+  $__fn = function($b_3, $v_4 = null) use (&$go_2_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  // DEBUG UncurriedAbs: currentBindingName=(Just "go_2_0"), recVars=["go_2_0"];
+  while (true) {
+if ((is_object($v_4) && (($v_4)->tag === "Nil"))) {
+$__t1 = $b_3;
+} else {
+if ((is_object($v_4) && (($v_4)->tag === "Cons"))) {
+$__tco_2 = ($b_3 + 1);
+$__tco_3 = ($v_4)->value1;
+$b_3 = $__tco_2;
+$v_4 = $__tco_3;
+continue ;
+$__t1 = null;
+} else {
+throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+$__t1 = null;
+};
+};
+$__res = $__t1;
+goto __end;;
+};
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
+  $__res = ((($GLOBALS['Data_List_take'] ?? \PhpursThunks::eval('Data_List_take')))(((($go_2_0)(0))($xs_1) - $n_0)))($xs_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -2620,14 +2829,14 @@ goto __end;;
   }
   // DEBUG UncurriedAbs: currentBindingName=(Just "Data_List_drop"), recVars=["Data_List_drop"];
   while (true) {
-if ((is_object((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)($v_0))(1)) && (((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)($v_0))(1))->tag === "LT"))) {
+if (($v_0 < 1)) {
 $__t0 = $v1_1;
 } else {
 if ((is_object($v1_1) && (($v1_1)->tag === "Nil"))) {
 $__t0 = new Phpurs_Data0("Nil");
 } else {
 if ((is_object($v1_1) && (($v1_1)->tag === "Cons"))) {
-$__tco_1 = ((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v_0))(1);
+$__tco_1 = ($v_0 - 1);
 $__tco_2 = ($v1_1)->value1;
 $v_0 = $__tco_1;
 $v1_1 = $__tco_2;
@@ -2654,7 +2863,7 @@ goto __end;;
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   // DEBUG UncurriedAbs: currentBindingName=(Just "Data_List_slice"), recVars=[];
-  $__res = ((($GLOBALS['Data_List_take'] ?? \PhpursThunks::eval('Data_List_take')))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($end_1))($start_0)))(((($GLOBALS['Data_List_drop'] ?? \PhpursThunks::eval('Data_List_drop')))($start_0))($xs_2));
+  $__res = ((($GLOBALS['Data_List_take'] ?? \PhpursThunks::eval('Data_List_take')))(($end_1 - $start_0)))(((($GLOBALS['Data_List_drop'] ?? \PhpursThunks::eval('Data_List_drop')))($start_0))($xs_2));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -2668,7 +2877,39 @@ goto __end;;
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   // DEBUG UncurriedAbs: currentBindingName=(Just "Data_List_takeEnd"), recVars=[];
-  $__res = ((($GLOBALS['Data_List_drop'] ?? \PhpursThunks::eval('Data_List_drop')))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))((($GLOBALS['Data_List_length'] ?? \PhpursThunks::eval('Data_List_length')))($xs_1)))($n_0)))($xs_1);
+  $go_2_0 = null;
+  $go_2_0 = (function() use (&$go_2_0) {
+  $__fn = function($b_3, $v_4 = null) use (&$go_2_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  // DEBUG UncurriedAbs: currentBindingName=(Just "go_2_0"), recVars=["go_2_0"];
+  while (true) {
+if ((is_object($v_4) && (($v_4)->tag === "Nil"))) {
+$__t1 = $b_3;
+} else {
+if ((is_object($v_4) && (($v_4)->tag === "Cons"))) {
+$__tco_2 = ($b_3 + 1);
+$__tco_3 = ($v_4)->value1;
+$b_3 = $__tco_2;
+$v_4 = $__tco_3;
+continue ;
+$__t1 = null;
+} else {
+throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+$__t1 = null;
+};
+};
+$__res = $__t1;
+goto __end;;
+};
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
+  $__res = ((($GLOBALS['Data_List_drop'] ?? \PhpursThunks::eval('Data_List_drop')))(((($go_2_0)(0))($xs_1) - $n_0)))($xs_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -2774,7 +3015,7 @@ case 0:
 $__t3 = new Phpurs_Data1("Just", ($v1_1)->value1);
 break;
 default:
-$__local_var_2_1 = ((($GLOBALS['Data_List_deleteAt'] ?? \PhpursThunks::eval('Data_List_deleteAt')))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v_0))(1)))(($v1_1)->value1);
+$__local_var_2_1 = ((($GLOBALS['Data_List_deleteAt'] ?? \PhpursThunks::eval('Data_List_deleteAt')))(($v_0 - 1)))(($v1_1)->value1);
 if ((is_object($__local_var_2_1) && (($__local_var_2_1)->tag === "Just"))) {
 $__t2 = new Phpurs_Data1("Just", new Phpurs_Data2("Cons", ($v1_1)->value0, ($__local_var_2_1)->value0));
 } else {
@@ -2972,7 +3213,7 @@ $__t5 = null;
 $__t3 = new Phpurs_Data1("Just", $__t5);
 break;
 default:
-$__local_var_3_1 = (((($GLOBALS['Data_List_alterAt'] ?? \PhpursThunks::eval('Data_List_alterAt')))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v_0))(1)))($v1_1))(($v2_2)->value1);
+$__local_var_3_1 = (((($GLOBALS['Data_List_alterAt'] ?? \PhpursThunks::eval('Data_List_alterAt')))(($v_0 - 1)))($v1_1))(($v2_2)->value1);
 if ((is_object($__local_var_3_1) && (($__local_var_3_1)->tag === "Just"))) {
 $__t2 = new Phpurs_Data1("Just", new Phpurs_Data2("Cons", ($v2_2)->value0, ($__local_var_3_1)->value0));
 } else {

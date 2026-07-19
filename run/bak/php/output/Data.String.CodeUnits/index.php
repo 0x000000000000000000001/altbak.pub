@@ -131,7 +131,7 @@ break;
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   // DEBUG UncurriedAbs: currentBindingName=(Just "Data_String_CodeUnits_takeRight"), recVars=[];
-  $__res = ((($GLOBALS['Data_String_CodeUnits_drop'] ?? \PhpursThunks::eval('Data_String_CodeUnits_drop')))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))((($GLOBALS['Data_String_CodeUnits_length'] ?? \PhpursThunks::eval('Data_String_CodeUnits_length')))($s_1)))($i_0)))($s_1);
+  $__res = ((($GLOBALS['Data_String_CodeUnits_drop'] ?? \PhpursThunks::eval('Data_String_CodeUnits_drop')))(((($GLOBALS['Data_String_CodeUnits_length'] ?? \PhpursThunks::eval('Data_String_CodeUnits_length')))($s_1) - $i_0)))($s_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -145,8 +145,8 @@ break;
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   // DEBUG UncurriedAbs: currentBindingName=(Just "Data_String_CodeUnits_stripSuffix"), recVars=[];
-  $v1_2_0 = ((($GLOBALS['Data_String_CodeUnits_splitAt'] ?? \PhpursThunks::eval('Data_String_CodeUnits_splitAt')))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))((($GLOBALS['Data_String_CodeUnits_length'] ?? \PhpursThunks::eval('Data_String_CodeUnits_length')))($str_1)))((($GLOBALS['Data_String_CodeUnits_length'] ?? \PhpursThunks::eval('Data_String_CodeUnits_length')))($v_0))))($str_1);
-  if (((($GLOBALS['Data_Eq_eqStringImpl'] ?? \PhpursThunks::eval('Data_Eq_eqStringImpl')))(($v1_2_0)->after))($v_0)) {
+  $v1_2_0 = ((($GLOBALS['Data_String_CodeUnits_splitAt'] ?? \PhpursThunks::eval('Data_String_CodeUnits_splitAt')))(((($GLOBALS['Data_String_CodeUnits_length'] ?? \PhpursThunks::eval('Data_String_CodeUnits_length')))($str_1) - (($GLOBALS['Data_String_CodeUnits_length'] ?? \PhpursThunks::eval('Data_String_CodeUnits_length')))($v_0))))($str_1);
+  if ((($v1_2_0)->after === $v_0)) {
 $__t1 = new Phpurs_Data1("Just", ($v1_2_0)->before);
 } else {
 $__t1 = new Phpurs_Data0("Nothing");
@@ -166,7 +166,7 @@ $__t1 = new Phpurs_Data0("Nothing");
   }
   // DEBUG UncurriedAbs: currentBindingName=(Just "Data_String_CodeUnits_stripPrefix"), recVars=[];
   $v1_2_0 = ((($GLOBALS['Data_String_CodeUnits_splitAt'] ?? \PhpursThunks::eval('Data_String_CodeUnits_splitAt')))((($GLOBALS['Data_String_CodeUnits_length'] ?? \PhpursThunks::eval('Data_String_CodeUnits_length')))($v_0)))($str_1);
-  if (((($GLOBALS['Data_Eq_eqStringImpl'] ?? \PhpursThunks::eval('Data_Eq_eqStringImpl')))(($v1_2_0)->before))($v_0)) {
+  if ((($v1_2_0)->before === $v_0)) {
 $__t1 = new Phpurs_Data1("Just", ($v1_2_0)->after);
 } else {
 $__t1 = new Phpurs_Data0("Nothing");
@@ -219,7 +219,7 @@ $__t1 = new Phpurs_Data0("Nothing");
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   // DEBUG UncurriedAbs: currentBindingName=(Just "Data_String_CodeUnits_dropRight"), recVars=[];
-  $__res = ((($GLOBALS['Data_String_CodeUnits_take'] ?? \PhpursThunks::eval('Data_String_CodeUnits_take')))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))((($GLOBALS['Data_String_CodeUnits_length'] ?? \PhpursThunks::eval('Data_String_CodeUnits_length')))($s_1)))($i_0)))($s_1);
+  $__res = ((($GLOBALS['Data_String_CodeUnits_take'] ?? \PhpursThunks::eval('Data_String_CodeUnits_take')))(((($GLOBALS['Data_String_CodeUnits_length'] ?? \PhpursThunks::eval('Data_String_CodeUnits_length')))($s_1) - $i_0)))($s_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

@@ -113,14 +113,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Profunctor_Split_unSplit"), recVars=[];
-  $__res = ((($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))(function($v1_2) use ($f_0) {
-  $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ((($f_0)(($v1_2)->value0))(($v1_2)->value1))(($v1_2)->value2);
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))($v_1);
+  $__res = ((($f_0)(($v_1)->value0))(($v_1)->value1))(($v_1)->value2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -134,7 +127,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Profunctor_Split_split"), recVars=[];
-  $__res = (($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))(new Phpurs_Data3("SplitF", $f_0, $g_1, $fx_2));
+  $__res = new Phpurs_Data3("SplitF", $f_0, $g_1, $fx_2);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -142,96 +135,78 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Data_Profunctor_Split_profunctorSplit'] = function() { $v = (object)["dimap" => (function() {
-  $__fn = function($f_0, $g_1 = null) use (&$__fn) {
+  $__fn = function($f_0, $g_1 = null, $v_2 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 3) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  }
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = new Phpurs_Data3("SplitF", ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($v_2)->value0))($f_0), ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($g_1))(($v_2)->value1), ($v_2)->value2);
+  goto __end;;
+  __end:
+  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+  };
+  return $__fn;
+})()]; return $v; };
+\PhpursThunks::$thunks['Data_Profunctor_Split_lowerSplit'] = function() { $v = (function() {
+  $__fn = function($dictInvariant_0, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = (($GLOBALS['Data_Profunctor_Split_unSplit'] ?? \PhpursThunks::eval('Data_Profunctor_Split_unSplit')))((function() use ($f_0, $g_1) {
-  $__fn = function($h_2, $i_3 = null) use ($f_0, $g_1, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ((($GLOBALS['Data_Profunctor_Split_split'] ?? \PhpursThunks::eval('Data_Profunctor_Split_split')))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($h_2))($f_0)))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($g_1))($i_3));
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Profunctor_Split_lowerSplit"), recVars=[];
+  $__res = (((($dictInvariant_0)->imap)(($v_1)->value1))(($v_1)->value0))(($v_1)->value2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})());
+})(); return $v; };
+\PhpursThunks::$thunks['Data_Profunctor_Split_liftSplit'] = function() { $v = function($fx_0) {
+  $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Profunctor_Split_liftSplit"), recVars=[];
+  $__res = new Phpurs_Data3("SplitF", (($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->identity, (($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->identity, $fx_0);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}; return $v; };
+\PhpursThunks::$thunks['Data_Profunctor_Split_hoistSplit'] = function() { $v = (function() {
+  $__fn = function($nat_0, $v_1 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Profunctor_Split_hoistSplit"), recVars=[];
+  $__local_var_2_0 = ($v_1)->value0;
+  $__local_var_3_1 = ($v_1)->value1;
+  $__res = (((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(function($fx_4) use ($__local_var_2_0, $__local_var_3_1) {
+  $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = new Phpurs_Data3("SplitF", $__local_var_2_0, $__local_var_3_1, $fx_4);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}))($nat_0))(($v_1)->value2);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})(); return $v; };
+\PhpursThunks::$thunks['Data_Profunctor_Split_functorSplit'] = function() { $v = (object)["map" => (function() {
+  $__fn = function($f_0, $v_1 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = new Phpurs_Data3("SplitF", ($v_1)->value0, ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($f_0))(($v_1)->value1), ($v_1)->value2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()]; return $v; };
-\PhpursThunks::$thunks['Data_Profunctor_Split_lowerSplit'] = function() { $v = function($dictInvariant_0) {
-  $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Profunctor_Split_lowerSplit"), recVars=[];
-  $__res = (($GLOBALS['Data_Profunctor_Split_unSplit'] ?? \PhpursThunks::eval('Data_Profunctor_Split_unSplit')))((function() use ($dictInvariant_0) {
-  $__fn = function($b_1, $a_2 = null) use ($dictInvariant_0, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ((($dictInvariant_0)->imap)($a_2))($b_1);
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})());
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Profunctor_Split_liftSplit'] = function() { $v = ((($GLOBALS['Data_Profunctor_Split_split'] ?? \PhpursThunks::eval('Data_Profunctor_Split_split')))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->identity))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->identity); return $v; };
-\PhpursThunks::$thunks['Data_Profunctor_Split_hoistSplit'] = function() { $v = function($nat_0) {
-  $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Profunctor_Split_hoistSplit"), recVars=[];
-  $__res = (($GLOBALS['Data_Profunctor_Split_unSplit'] ?? \PhpursThunks::eval('Data_Profunctor_Split_unSplit')))((function() use ($nat_0) {
-  $__fn = function($f_1, $g_2 = null) use ($nat_0, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(((($GLOBALS['Data_Profunctor_Split_split'] ?? \PhpursThunks::eval('Data_Profunctor_Split_split')))($f_1))($g_2)))($nat_0);
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})());
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Profunctor_Split_functorSplit'] = function() { $v = (object)["map" => function($f_0) {
-  $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = (($GLOBALS['Data_Profunctor_Split_unSplit'] ?? \PhpursThunks::eval('Data_Profunctor_Split_unSplit')))((function() use ($f_0) {
-  $__fn = function($g_1, $h_2 = null, $fx_3 = null) use ($f_0, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = (($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))(new Phpurs_Data3("SplitF", $g_1, ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($f_0))($h_2), $fx_3));
-  goto __end;;
-  __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})());
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 

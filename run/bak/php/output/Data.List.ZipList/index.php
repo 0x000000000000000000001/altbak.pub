@@ -121,7 +121,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   $__res = (object)["show" => function($v_1) use ($dictShow_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("(ZipList "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))((((($GLOBALS['Data_List_Lazy_Types_showList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_showList')))($dictShow_0))->show)($v_1)))(")"));
+  $__res = (("(ZipList " . (((($GLOBALS['Data_List_Lazy_Types_showList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_showList')))($dictShow_0))->show)($v_1)) . ")");
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -182,14 +182,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 \PhpursThunks::$thunks['Data_List_ZipList_zipListIsNotBind'] = function() { $v = function($dollar__unused_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=(Just "Data_List_ZipList_zipListIsNotBind"), recVars=[];
-  $__res = (object)["bind" => (($GLOBALS['Partial_Unsafe__unsafePartial'] ?? \PhpursThunks::eval('Partial_Unsafe__unsafePartial')))(function($dollar__unused_1) {
-  $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = (($GLOBALS['Partial__crashWith'] ?? \PhpursThunks::eval('Partial__crashWith')))("bind: unreachable");
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}), "Apply0" => function($dollar__unused_1) {
+  $__res = (object)["bind" => (($GLOBALS['Partial__crashWith'] ?? \PhpursThunks::eval('Partial__crashWith')))("bind: unreachable"), "Apply0" => function($dollar__unused_1) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_List_ZipList_applyZipList'] ?? \PhpursThunks::eval('Data_List_ZipList_applyZipList'));

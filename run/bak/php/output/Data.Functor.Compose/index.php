@@ -114,7 +114,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   $__res = (object)["show" => function($v_1) use ($dictShow_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("(Compose "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))((($dictShow_0)->show)($v_1)))(")"));
+  $__res = (("(Compose " . (($dictShow_0)->show)($v_1)) . ")");
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -187,7 +187,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = (($eq11_3_0)((($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))($v_4)))((($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))($v1_5));
+  $__res = (($eq11_3_0)($v_4))($v1_5);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -203,34 +203,62 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 \PhpursThunks::$thunks['Data_Functor_Compose_ordCompose'] = function() { $v = function($dictOrd1_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Functor_Compose_ordCompose"), recVars=[];
-  $eqCompose1_1_0 = (($GLOBALS['Data_Functor_Compose_eqCompose'] ?? \PhpursThunks::eval('Data_Functor_Compose_eqCompose')))((($dictOrd1_0)->Eq10)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = function($dictOrd11_2) use ($dictOrd1_0, $eqCompose1_1_0) {
+  $__local_var_1_0 = (($dictOrd1_0)->Eq10)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__res = function($dictOrd11_2) use ($__local_var_1_0, $dictOrd1_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $ordApp_3_1 = (($GLOBALS['Data_Functor_App_ordApp'] ?? \PhpursThunks::eval('Data_Functor_App_ordApp')))($dictOrd11_2);
-  $eqCompose2_4_2 = ($eqCompose1_1_0)((($dictOrd11_2)->Eq10)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = function($dictOrd_5) use ($dictOrd1_0, $eqCompose2_4_2, $ordApp_3_1) {
+  $__local_var_4_2 = (($dictOrd11_2)->Eq10)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__res = function($dictOrd_5) use ($__local_var_1_0, $__local_var_4_2, $dictOrd1_0, $ordApp_3_1) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $compare11_6_3 = (($dictOrd1_0)->compare1)(($ordApp_3_1)($dictOrd_5));
-  $eqCompose3_7_4 = ($eqCompose2_4_2)((($dictOrd_5)->Eq0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = (object)["compare" => (function() use ($compare11_6_3) {
-  $__fn = function($v_8, $v1_9 = null) use ($compare11_6_3, &$__fn) {
+  $eq11_7_4 = (($__local_var_4_2)->eq1)((($dictOrd_5)->Eq0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $eq11_7_4 = (($__local_var_1_0)->eq1)((object)["eq" => (function() use ($eq11_7_4) {
+  $__fn = function($x_8, $y_9 = null) use ($eq11_7_4, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = (($compare11_6_3)((($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))($v_8)))((($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))($v1_9));
+  $__res = (($eq11_7_4)($x_8))($y_9);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Eq0" => function($dollar__unused_8) use ($eqCompose3_7_4) {
+})()]);
+  $eqCompose3_8_6 = (object)["eq" => (function() use ($eq11_7_4) {
+  $__fn = function($v_8, $v1_9 = null) use ($eq11_7_4, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($eq11_7_4)($v_8))($v1_9);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})()];
+  $__res = (object)["compare" => (function() use ($compare11_6_3) {
+  $__fn = function($v_9, $v1_10 = null) use ($compare11_6_3, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($compare11_6_3)($v_9))($v1_10);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})(), "Eq0" => function($dollar__unused_9) use ($eqCompose3_8_6) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = $eqCompose3_7_4;
+  $__res = $eqCompose3_8_6;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -257,7 +285,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   $__res = (object)["eq1" => function($dictEq_2) use ($dictEq11_1, $dictEq1_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ((((($GLOBALS['Data_Functor_Compose_eqCompose'] ?? \PhpursThunks::eval('Data_Functor_Compose_eqCompose')))($dictEq1_0))($dictEq11_1))($dictEq_2))->eq;
+  $eq11_3_0 = (($dictEq11_1)->eq1)($dictEq_2);
+  $__res = (($dictEq1_0)->eq1)((object)["eq" => (function() use ($eq11_3_0) {
+  $__fn = function($x_4, $y_5 = null) use ($eq11_3_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($eq11_3_0)($x_4))($y_5);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})()]);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -272,23 +314,45 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Functor_Compose_ord1Compose"), recVars=[];
   $ordCompose1_1_0 = (($GLOBALS['Data_Functor_Compose_ordCompose'] ?? \PhpursThunks::eval('Data_Functor_Compose_ordCompose')))($dictOrd1_0);
-  $eq1Compose1_2_1 = (($GLOBALS['Data_Functor_Compose_eq1Compose'] ?? \PhpursThunks::eval('Data_Functor_Compose_eq1Compose')))((($dictOrd1_0)->Eq10)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = function($dictOrd11_3) use ($eq1Compose1_2_1, $ordCompose1_1_0) {
+  $__local_var_2_1 = (($dictOrd1_0)->Eq10)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__res = function($dictOrd11_3) use ($__local_var_2_1, $ordCompose1_1_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $ordCompose2_4_2 = ($ordCompose1_1_0)($dictOrd11_3);
-  $eq1Compose2_5_3 = ($eq1Compose1_2_1)((($dictOrd11_3)->Eq10)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = (object)["compare1" => function($dictOrd_6) use ($ordCompose2_4_2) {
+  $__local_var_5_3 = (($dictOrd11_3)->Eq10)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $eq1Compose2_6_4 = (object)["eq1" => function($dictEq_6) use ($__local_var_2_1, $__local_var_5_3) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = (($ordCompose2_4_2)($dictOrd_6))->compare;
+  $eq11_7_4 = (($__local_var_5_3)->eq1)($dictEq_6);
+  $__res = (($__local_var_2_1)->eq1)((object)["eq" => (function() use ($eq11_7_4) {
+  $__fn = function($x_8, $y_9 = null) use ($eq11_7_4, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($eq11_7_4)($x_8))($y_9);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})()]);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Eq10" => function($dollar__unused_6) use ($eq1Compose2_5_3) {
+}];
+  $__res = (object)["compare1" => function($dictOrd_7) use ($ordCompose2_4_2) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = $eq1Compose2_5_3;
+  $__res = (($ordCompose2_4_2)($dictOrd_7))->compare;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Eq10" => function($dollar__unused_7) use ($eq1Compose2_6_4) {
+  $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $eq1Compose2_6_4;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

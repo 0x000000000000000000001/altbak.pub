@@ -144,7 +144,8 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 \PhpursThunks::$thunks['Effect_monoidEffect'] = function() { $v = function($dictMonoid_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=(Just "Effect_monoidEffect"), recVars=[];
-  $__res = (object)["mempty" => (($GLOBALS['Effect_pureE'] ?? \PhpursThunks::eval('Effect_pureE')))(($dictMonoid_0)->mempty), "Semigroup0" => function($dollar__unused_1) use ($dictMonoid_0) {
+  $__local_var_1_0 = ($dictMonoid_0)->mempty;
+  $__res = (object)["mempty" => $__local_var_1_0, "Semigroup0" => function($dollar__unused_1) use ($dictMonoid_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = (object)["append" => ((($GLOBALS['Control_Apply_lift2'] ?? \PhpursThunks::eval('Control_Apply_lift2')))(($GLOBALS['Effect_applyEffect'] ?? \PhpursThunks::eval('Effect_applyEffect'))))(((($dictMonoid_0)->Semigroup0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->append)];

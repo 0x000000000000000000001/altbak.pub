@@ -114,14 +114,6 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Control_Monad_ST_Internal_functorST'] = function() { $v = (object)["map" => ($GLOBALS['Control_Monad_ST_Internal_map_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_map_'))]; return $v; };
-\PhpursThunks::$thunks['Control_Monad_ST_Internal_void'] = function() { $v = (($GLOBALS['Control_Monad_ST_Internal_map_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_map_')))(function($v_0) {
-  $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}); return $v; };
 \PhpursThunks::$thunks['Control_Monad_ST_Internal_monadST'] = function() { $v = (object)["Applicative0" => function($dollar__unused_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Control_Monad_ST_Internal_monadST","Control_Monad_ST_Internal_bindST","Control_Monad_ST_Internal_applyST","Control_Monad_ST_Internal_applicativeST"];
@@ -176,72 +168,32 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $fromDone_2_0 = (($GLOBALS['Partial_Unsafe__unsafePartial'] ?? \PhpursThunks::eval('Partial_Unsafe__unsafePartial')))((function() {
-  $__fn = function($dollar__unused_2, $v_3 = null) use (&$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  if ((is_object($v_3) && (($v_3)->tag === "Done"))) {
-$__t0 = ($v_3)->value0;
+  $__local_var_2_0 = ($f_0)($a_1);
+  $__local_var_3_1 = ($__local_var_2_0)();
+  $r_4_2 = ("TODO_PrimEffect")();
+  $__local_var_5_3 = ("TODO_PrimEffect")();
+  $v_5_4 = ("TODO_PrimEffect")();
+  if ((is_object($v_5_4) && (($v_5_4)->tag === "Loop"))) {
+$e_6_6 = (($f_0)(($v_5_4)->value0))();
+$__local_var_7_7 = ("TODO_PrimEffect")();
+$__t5 = ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'));
+} else {
+if ((is_object($v_5_4) && (($v_5_4)->tag === "Done"))) {
+$__t5 = ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'));
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t0 = null;
+$__t5 = null;
 };
-  $__res = $__t0;
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})());
-  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bind_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_bind_')))(((($GLOBALS['Control_Monad_ST_Internal_bind_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_bind_')))(($f_0)($a_1)))(($GLOBALS['Control_Monad_ST_Internal_new'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_new')))))(function($r_3) use ($f_0, $fromDone_2_0) {
-  $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bind_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_bind_')))(((($GLOBALS['Control_Monad_ST_Internal_while'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_while')))(((($GLOBALS['Control_Monad_ST_Internal_map_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_map_')))(function($v_4) {
-  $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = (is_object($v_4) && (($v_4)->tag === "Loop"));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))((($GLOBALS['Control_Monad_ST_Internal_read'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_read')))($r_3))))(((($GLOBALS['Control_Monad_ST_Internal_bind_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_bind_')))((($GLOBALS['Control_Monad_ST_Internal_read'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_read')))($r_3)))(function($v_4) use ($f_0, $r_3) {
-  $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  if ((is_object($v_4) && (($v_4)->tag === "Loop"))) {
-$__t2 = ((($GLOBALS['Control_Monad_ST_Internal_bind_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_bind_')))(($f_0)(($v_4)->value0)))(function($e_5) use ($r_3) {
-  $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = (($GLOBALS['Control_Monad_ST_Internal_void'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_void')))(((($GLOBALS['Control_Monad_ST_Internal_write'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_write')))($e_5))($r_3));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-} else {
-if ((is_object($v_4) && (($v_4)->tag === "Done"))) {
-$__t2 = (($GLOBALS['Control_Monad_ST_Internal_pure_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_pure_')))(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')));
+};
+  $dollar__unused_5_3 = (((($GLOBALS['Control_Monad_ST_Internal_while'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_while')))((is_object($__local_var_5_3) && (($__local_var_5_3)->tag === "Loop"))))($__t5))();
+  $__local_var_6_9 = ("TODO_PrimEffect")();
+  if ((is_object($__local_var_6_9) && (($__local_var_6_9)->tag === "Done"))) {
+$__t10 = ($__local_var_6_9)->value0;
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t2 = null;
+$__t10 = null;
 };
-};
-  $__res = $__t2;
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))))(function($dollar__unused_4) use ($fromDone_2_0, $r_3) {
-  $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ((($GLOBALS['Control_Monad_ST_Internal_map_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_map_')))($fromDone_2_0))((($GLOBALS['Control_Monad_ST_Internal_read'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_read')))($r_3));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
+  $__res = $__t10;
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -258,7 +210,8 @@ $__t2 = null;
 \PhpursThunks::$thunks['Control_Monad_ST_Internal_monoidST'] = function() { $v = function($dictMonoid_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_ST_Internal_monoidST"), recVars=[];
-  $__res = (object)["mempty" => (($GLOBALS['Control_Monad_ST_Internal_pure_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_pure_')))(($dictMonoid_0)->mempty), "Semigroup0" => function($dollar__unused_1) use ($dictMonoid_0) {
+  $__local_var_1_0 = ($dictMonoid_0)->mempty;
+  $__res = (object)["mempty" => $__local_var_1_0, "Semigroup0" => function($dollar__unused_1) use ($dictMonoid_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = (object)["append" => ((($GLOBALS['Control_Apply_lift2'] ?? \PhpursThunks::eval('Control_Apply_lift2')))(($GLOBALS['Control_Monad_ST_Internal_applyST'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_applyST'))))(((($dictMonoid_0)->Semigroup0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->append)];
@@ -373,7 +326,6 @@ return $exports;
 \PhpursThunks::$thunks['Control_Monad_ST_Internal_run'] = function() use (&$ffi_Control_Monad_ST_Internal) { return $ffi_Control_Monad_ST_Internal['run']; };
 \PhpursThunks::$thunks['Control_Monad_ST_Internal_while'] = function() use (&$ffi_Control_Monad_ST_Internal) { return $ffi_Control_Monad_ST_Internal['while']; };
 \PhpursThunks::$thunks['Control_Monad_ST_Internal_write'] = function() use (&$ffi_Control_Monad_ST_Internal) { return $ffi_Control_Monad_ST_Internal['write']; };
-
 
 
 

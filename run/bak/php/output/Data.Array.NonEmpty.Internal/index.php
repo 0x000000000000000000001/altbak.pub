@@ -122,7 +122,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   $__res = (object)["show" => function($v_1) use ($dictShow_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("(NonEmptyArray "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))(((($GLOBALS['Data_Show_showArrayImpl'] ?? \PhpursThunks::eval('Data_Show_showArrayImpl')))(($dictShow_0)->show))($v_1)))(")"));
+  $__res = (("(NonEmptyArray " . ((($GLOBALS['Data_Show_showArrayImpl'] ?? \PhpursThunks::eval('Data_Show_showArrayImpl')))(($dictShow_0)->show))($v_1)) . ")");
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -153,7 +153,33 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "foldr1" => (($GLOBALS['Data_Function_Uncurried_runFn2'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn2')))(($GLOBALS['Data_Array_NonEmpty_Internal_foldr1Impl'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_Internal_foldr1Impl'))), "foldl1" => (($GLOBALS['Data_Function_Uncurried_runFn2'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn2')))(($GLOBALS['Data_Array_NonEmpty_Internal_foldl1Impl'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_Internal_foldl1Impl'))), "Foldable0" => function($dollar__unused_0) {
+}, "foldr1" => (function() {
+  $__fn = function($__local_var_0, $__local_var_1 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_Array_NonEmpty_Internal_foldable1NonEmptyArray"];
+  $__res = (($GLOBALS['Data_Array_NonEmpty_Internal_foldr1Impl'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_Internal_foldr1Impl')))($__local_var_0, $__local_var_1);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})(), "foldl1" => (function() {
+  $__fn = function($__local_var_0, $__local_var_1 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_Array_NonEmpty_Internal_foldable1NonEmptyArray"];
+  $__res = (($GLOBALS['Data_Array_NonEmpty_Internal_foldl1Impl'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_Internal_foldl1Impl')))($__local_var_0, $__local_var_1);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})(), "Foldable0" => function($dollar__unused_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_Array_NonEmpty_Internal_foldable1NonEmptyArray"];
   $__res = ($GLOBALS['Data_Foldable_foldableArray'] ?? \PhpursThunks::eval('Data_Foldable_foldableArray'));
@@ -169,7 +195,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   $__res = function($f_3) use ($apply_1_0, $map_2_1) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_Array_NonEmpty_Internal_traversable1NonEmptyArray"];
-  $__res = ((((($GLOBALS['Data_Function_Uncurried_runFn3'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn3')))(($GLOBALS['Data_Array_NonEmpty_Internal_traverse1Impl'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_Internal_traverse1Impl'))))($apply_1_0))($map_2_1))($f_3);
+  $__res = (($GLOBALS['Data_Array_NonEmpty_Internal_traverse1Impl'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_Internal_traverse1Impl')))($apply_1_0, $map_2_1, $f_3);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

@@ -200,7 +200,7 @@ default:
 $__t0 = function($s_1) use ($v_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Test_StateMonad_chainModifications"];
-  $__res = ((($GLOBALS['Test_StateMonad_chainModifications'] ?? \PhpursThunks::eval('Test_StateMonad_chainModifications')))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v_0))(1)))(((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))($s_1))(1));
+  $__res = ((($GLOBALS['Test_StateMonad_chainModifications'] ?? \PhpursThunks::eval('Test_StateMonad_chainModifications')))(($v_0 - 1)))(($s_1 + 1));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -226,8 +226,8 @@ case 0:
 $__t2 = $v1_1;
 break;
 default:
-$__tco_0 = ((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v_0))(1);
-$__tco_1 = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))($v1_1))((((($GLOBALS['Test_StateMonad_chainModifications'] ?? \PhpursThunks::eval('Test_StateMonad_chainModifications')))(60))(0))->state);
+$__tco_0 = ($v_0 - 1);
+$__tco_1 = ($v1_1 + (((($GLOBALS['Test_StateMonad_chainModifications'] ?? \PhpursThunks::eval('Test_StateMonad_chainModifications')))(60))(0))->state);
 $v_0 = $__tco_0;
 $v1_1 = $__tco_1;
 continue 2;

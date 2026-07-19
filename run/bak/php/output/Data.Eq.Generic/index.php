@@ -181,7 +181,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ((($GLOBALS['Data_HeytingAlgebra_boolConj'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolConj')))(((($dictGenericEq_0)->genericEq__prime__)(($v_2)->value0))(($v1_3)->value0)))(((($dictGenericEq1_1)->genericEq__prime__)(($v_2)->value1))(($v1_3)->value1));
+  $__res = (((($dictGenericEq_0)->genericEq__prime__)(($v_2)->value0))(($v1_3)->value0) && ((($dictGenericEq1_1)->genericEq__prime__)(($v_2)->value1))(($v1_3)->value1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

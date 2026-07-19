@@ -114,14 +114,14 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   // DEBUG UncurriedAbs: currentBindingName=(Just "Effect_Ref_modify_"), recVars=[];
-  $__res = (((($GLOBALS['Effect_applyEffect'] ?? \PhpursThunks::eval('Effect_applyEffect')))->apply)((($GLOBALS['Effect_pureE'] ?? \PhpursThunks::eval('Effect_pureE')))(function($v_2) {
+  $__res = (((($GLOBALS['Effect_applyEffect'] ?? \PhpursThunks::eval('Effect_applyEffect')))->apply)(function($v_2) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-})))(((($GLOBALS['Effect_Ref_modifyImpl'] ?? \PhpursThunks::eval('Effect_Ref_modifyImpl')))(function($s_2) use ($f_0) {
+}))(((($GLOBALS['Effect_Ref_modifyImpl'] ?? \PhpursThunks::eval('Effect_Ref_modifyImpl')))(function($s_2) use ($f_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $s__prime___3_0 = ($f_0)($s_2);

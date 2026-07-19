@@ -160,7 +160,7 @@ case 0:
 $__t2 = $ctor_3_0;
 break;
 default:
-$__t2 = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("("))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))(((($GLOBALS['Data_Show_Generic_intercalate'] ?? \PhpursThunks::eval('Data_Show_Generic_intercalate')))(" "))(((($GLOBALS['Data_Semigroup_concatArray'] ?? \PhpursThunks::eval('Data_Semigroup_concatArray')))([$ctor_3_0]))($v1_4_1))))(")"));
+$__t2 = (("(" . ((($GLOBALS['Data_Show_Generic_intercalate'] ?? \PhpursThunks::eval('Data_Show_Generic_intercalate')))(" "))(((($GLOBALS['Data_Semigroup_concatArray'] ?? \PhpursThunks::eval('Data_Semigroup_concatArray')))([$ctor_3_0]))($v1_4_1))) . ")");
 break;
 };
   $__res = $__t2;

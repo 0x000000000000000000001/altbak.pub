@@ -143,10 +143,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   }
   // DEBUG UncurriedAbs: currentBindingName=(Just "go_1_0"), recVars=["go_1_0"];
   while (true) {
-if (( ! (is_object((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)($n_2))(0)) && (((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)($n_2))(0))->tag === "GT")))) {
+if (($n_2 <= 0)) {
 $__t3 = $acc_3;
 } else {
-$__tco_1 = ((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($n_2))(1);
+$__tco_1 = ($n_2 - 1);
 $__tco_2 = ($f_0)($acc_3);
 $n_2 = $__tco_1;
 $acc_3 = $__tco_2;

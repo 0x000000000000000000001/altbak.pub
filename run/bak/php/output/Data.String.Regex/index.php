@@ -133,7 +133,7 @@ $__t5 = "u";
 } else {
 $__t5 = "";
 };
-  $__res = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))($__t0))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))($__t1))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))($__t2))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))($__t3))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))($__t4))($__t5)))));
+  $__res = ((((($__t0 . $__t1) . $__t2) . $__t3) . $__t4) . $__t5);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -145,7 +145,37 @@ $__t5 = "";
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   // DEBUG UncurriedAbs: currentBindingName=(Just "Data_String_Regex_regex"), recVars=[];
-  $__res = ((((($GLOBALS['Data_String_Regex_regexImpl'] ?? \PhpursThunks::eval('Data_String_Regex_regexImpl')))(($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left'))))(($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right'))))($s_0))((($GLOBALS['Data_String_Regex_renderFlags'] ?? \PhpursThunks::eval('Data_String_Regex_renderFlags')))($f_1));
+  if (($f_1)->global) {
+$__t0 = "g";
+} else {
+$__t0 = "";
+};
+  if (($f_1)->ignoreCase) {
+$__t1 = "i";
+} else {
+$__t1 = "";
+};
+  if (($f_1)->multiline) {
+$__t2 = "m";
+} else {
+$__t2 = "";
+};
+  if (($f_1)->dotAll) {
+$__t3 = "s";
+} else {
+$__t3 = "";
+};
+  if (($f_1)->sticky) {
+$__t4 = "y";
+} else {
+$__t4 = "";
+};
+  if (($f_1)->unicode) {
+$__t5 = "u";
+} else {
+$__t5 = "";
+};
+  $__res = ((((($GLOBALS['Data_String_Regex_regexImpl'] ?? \PhpursThunks::eval('Data_String_Regex_regexImpl')))(($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left'))))(($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right'))))($s_0))(((((($__t0 . $__t1) . $__t2) . $__t3) . $__t4) . $__t5));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

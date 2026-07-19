@@ -94,21 +94,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 \PhpursThunks::$thunks['Test_FileOps_loopIO'] = function() { $v = function($n_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=(Just "Test_FileOps_loopIO"), recVars=[];
-  $__res = ((($GLOBALS['Test_FileOps_loopE'] ?? \PhpursThunks::eval('Test_FileOps_loopE')))($n_0))(((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(((($GLOBALS['Test_FileOps_writeFileSync'] ?? \PhpursThunks::eval('Test_FileOps_writeFileSync')))("var/iotest.txt"))("Hello IO Benchmarks!")))(function($dollar__unused_1) {
-  $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))((($GLOBALS['Test_FileOps_readFileSync'] ?? \PhpursThunks::eval('Test_FileOps_readFileSync')))("var/iotest.txt")))(function($dollar__unused_2) {
-  $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = (($GLOBALS['Effect_pureE'] ?? \PhpursThunks::eval('Effect_pureE')))(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}));
+  $__local_var_1_0 = ((($GLOBALS['Test_FileOps_writeFileSync'] ?? \PhpursThunks::eval('Test_FileOps_writeFileSync')))("var/iotest.txt"))("Hello IO Benchmarks!");
+  $dollar__unused_2_1 = ($__local_var_1_0)();
+  $dollar__unused_3_2 = ((($GLOBALS['Test_FileOps_readFileSync'] ?? \PhpursThunks::eval('Test_FileOps_readFileSync')))("var/iotest.txt"))();
+  $__res = ((($GLOBALS['Test_FileOps_loopE'] ?? \PhpursThunks::eval('Test_FileOps_loopE')))($n_0))(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

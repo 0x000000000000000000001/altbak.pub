@@ -112,7 +112,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   $__res = (($n_0)(function($x_1) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))($x_1))(1);
+  $__res = ($x_1 + 1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -158,7 +158,7 @@ case 0:
 $__t1 = ($GLOBALS['Test_Church_zeroC'] ?? \PhpursThunks::eval('Test_Church_zeroC'));
 break;
 default:
-$__local_var_1_0 = (($GLOBALS['Test_Church_fromInt'] ?? \PhpursThunks::eval('Test_Church_fromInt')))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v_0))(1));
+$__local_var_1_0 = (($GLOBALS['Test_Church_fromInt'] ?? \PhpursThunks::eval('Test_Church_fromInt')))(($v_0 - 1));
 $__t1 = (function() use ($__local_var_1_0) {
   $__fn = function($f_2, $x_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -242,7 +242,7 @@ goto __end;;
 \PhpursThunks::$thunks['Test_Church_act'] = function() { $v = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))((($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))(((($GLOBALS['Test_Church_c10'] ?? \PhpursThunks::eval('Test_Church_c10')))((($GLOBALS['Test_Church_c10'] ?? \PhpursThunks::eval('Test_Church_c10')))((($GLOBALS['Test_Church_c100'] ?? \PhpursThunks::eval('Test_Church_c100')))((($GLOBALS['Test_Church_c10'] ?? \PhpursThunks::eval('Test_Church_c10')))(function($x_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))($x_0))(1);
+  $__res = ($x_0 + 1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

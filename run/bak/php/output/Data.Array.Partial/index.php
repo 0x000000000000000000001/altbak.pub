@@ -87,7 +87,6 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Array_Partial_unsafeIndex'] = function() { $v = (($GLOBALS['Data_Function_Uncurried_runFn2'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn2')))(($GLOBALS['Data_Array_unsafeIndexImpl'] ?? \PhpursThunks::eval('Data_Array_unsafeIndexImpl'))); return $v; };
 \PhpursThunks::$thunks['Data_Array_Partial_tail'] = function() { $v = (function() {
   $__fn = function($dollar__unused_0, $xs_1 = null) use (&$__fn) {
   $__num = \func_num_args();
@@ -95,7 +94,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Array_Partial_tail"), recVars=[];
-  $__res = (((($GLOBALS['Data_Array_slice'] ?? \PhpursThunks::eval('Data_Array_slice')))(1))((($GLOBALS['Data_Array_length'] ?? \PhpursThunks::eval('Data_Array_length')))($xs_1)))($xs_1);
+  $__res = (($GLOBALS['Data_Array_sliceImpl'] ?? \PhpursThunks::eval('Data_Array_sliceImpl')))(1, count($xs_1), $xs_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -109,7 +108,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Array_Partial_last"), recVars=[];
-  $__res = ((($GLOBALS['Data_Array_Partial_unsafeIndex'] ?? \PhpursThunks::eval('Data_Array_Partial_unsafeIndex')))($xs_1))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))((($GLOBALS['Data_Array_length'] ?? \PhpursThunks::eval('Data_Array_length')))($xs_1)))(1));
+  $__res = ($xs_1)[0];
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -123,7 +122,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Array_Partial_init"), recVars=[];
-  $__res = (((($GLOBALS['Data_Array_slice'] ?? \PhpursThunks::eval('Data_Array_slice')))(0))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))((($GLOBALS['Data_Array_length'] ?? \PhpursThunks::eval('Data_Array_length')))($xs_1)))(1)))($xs_1);
+  $__res = (($GLOBALS['Data_Array_sliceImpl'] ?? \PhpursThunks::eval('Data_Array_sliceImpl')))(0, (count($xs_1) - 1), $xs_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -137,7 +136,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Array_Partial_head"), recVars=[];
-  $__res = ((($GLOBALS['Data_Array_Partial_unsafeIndex'] ?? \PhpursThunks::eval('Data_Array_Partial_unsafeIndex')))($xs_1))(0);
+  $__res = ($xs_1)[0];
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -145,7 +144,6 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(); return $v; };
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
 
 
 

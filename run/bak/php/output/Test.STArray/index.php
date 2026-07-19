@@ -95,38 +95,22 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Test_STArray_sumArray'] = function() { $v = (($GLOBALS['Control_Monad_ST_Internal_run'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_run')))(((($GLOBALS['Control_Monad_ST_Internal_bind_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_bind_')))(($GLOBALS['Data_Array_ST_new'] ?? \PhpursThunks::eval('Data_Array_ST_new'))))(function($arr_0) {
-  $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bind_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_bind_')))(((($GLOBALS['Data_Array_ST_pushAll'] ?? \PhpursThunks::eval('Data_Array_ST_pushAll')))([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))($arr_0)))(function($dollar__unused_1) use ($arr_0) {
-  $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bind_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_bind_')))((($GLOBALS['Data_Array_ST_pop'] ?? \PhpursThunks::eval('Data_Array_ST_pop')))($arr_0)))(function($x_2) {
-  $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  if ((is_object($x_2) && (($x_2)->tag === "Just"))) {
-$__t0 = (($GLOBALS['Control_Monad_ST_Internal_pure_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_pure_')))(($x_2)->value0);
+\PhpursThunks::$thunks['Test_STArray_sumArray'] = function() { $v = (function() use (&$__fn) {
+$arr_0_0 = (($GLOBALS['Data_Array_ST_new'] ?? \PhpursThunks::eval('Data_Array_ST_new')))();
+$dollar__unused_1_1 = (((($GLOBALS['Data_Array_ST_pushAll'] ?? \PhpursThunks::eval('Data_Array_ST_pushAll')))([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))($arr_0_0))();
+$x_2_2 = ((($GLOBALS['Data_Array_ST_pop'] ?? \PhpursThunks::eval('Data_Array_ST_pop')))($arr_0_0))();
+if ((is_object($x_2_2) && (($x_2_2)->tag === "Just"))) {
+$__t3 = ($x_2_2)->value0;
 } else {
-if ((is_object($x_2) && (($x_2)->tag === "Nothing"))) {
-$__t0 = (($GLOBALS['Control_Monad_ST_Internal_pure_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_pure_')))(0);
+if ((is_object($x_2_2) && (($x_2_2)->tag === "Nothing"))) {
+$__t3 = 0;
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t0 = null;
+$__t3 = null;
 };
 };
-  $__res = $__t0;
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-})); return $v; };
+return (($GLOBALS['Control_Monad_ST_Internal_run'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_run')))($__t3);
+})(); return $v; };
 \PhpursThunks::$thunks['Test_STArray_describe'] = function() { $v = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))("STArray Operations:"); return $v; };
 \PhpursThunks::$thunks['Test_STArray_act'] = function() { $v = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))((($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))(($GLOBALS['Test_STArray_sumArray'] ?? \PhpursThunks::eval('Test_STArray_sumArray')))); return $v; };
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };

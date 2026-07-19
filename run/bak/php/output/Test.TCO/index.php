@@ -107,8 +107,8 @@ case 0:
 $__t2 = $v1_1;
 break;
 default:
-$__tco_0 = ((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v_0))(1);
-$__tco_1 = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))($v1_1))(((($GLOBALS['Data_EuclideanRing_intMod'] ?? \PhpursThunks::eval('Data_EuclideanRing_intMod')))($v_0))(3));
+$__tco_0 = ($v_0 - 1);
+$__tco_1 = ($v1_1 + ((($GLOBALS['Data_EuclideanRing_intMod'] ?? \PhpursThunks::eval('Data_EuclideanRing_intMod')))($v_0))(3));
 $v_0 = $__tco_0;
 $v1_1 = $__tco_1;
 continue 2;

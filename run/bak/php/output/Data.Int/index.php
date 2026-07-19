@@ -126,7 +126,7 @@ $__t0 = null;
 \PhpursThunks::$thunks['Data_Int_radix'] = function() { $v = function($n_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Int_radix"), recVars=[];
-  if (((($GLOBALS['Data_HeytingAlgebra_boolConj'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolConj')))(( ! (is_object((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)($n_0))(2)) && (((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)($n_0))(2))->tag === "LT")))))(( ! (is_object((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)($n_0))(36)) && (((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)($n_0))(36))->tag === "GT"))))) {
+  if ((($n_0 >= 2) && ($n_0 <= 36))) {
 $__t0 = new Phpurs_Data1("Just", $n_0);
 } else {
 $__t0 = new Phpurs_Data0("Nothing");
@@ -139,7 +139,7 @@ $__t0 = new Phpurs_Data0("Nothing");
 \PhpursThunks::$thunks['Data_Int_odd'] = function() { $v = function($x_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Int_odd"), recVars=[];
-  $__res = ((($GLOBALS['Data_Eq_eqBooleanImpl'] ?? \PhpursThunks::eval('Data_Eq_eqBooleanImpl')))(((($GLOBALS['Data_Eq_eqIntImpl'] ?? \PhpursThunks::eval('Data_Eq_eqIntImpl')))(((($GLOBALS['Data_Int_Bits_and'] ?? \PhpursThunks::eval('Data_Int_Bits_and')))($x_0))(1)))(0)))(false);
+  $__res = (($x_0 & 1) !== 0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -152,13 +152,13 @@ $__t0 = new Phpurs_Data0("Nothing");
 \PhpursThunks::$thunks['Data_Int_unsafeClamp'] = function() { $v = function($x_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Int_unsafeClamp"), recVars=[];
-  if ((($GLOBALS['Data_HeytingAlgebra_boolNot'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolNot')))((($GLOBALS['Data_Number_isFinite'] ?? \PhpursThunks::eval('Data_Number_isFinite')))($x_0))) {
+  if (( ! (($GLOBALS['Data_Number_isFinite'] ?? \PhpursThunks::eval('Data_Number_isFinite')))($x_0))) {
 $__t2 = 0;
 } else {
-if (( ! (is_object((((($GLOBALS['Data_Ord_ordNumber'] ?? \PhpursThunks::eval('Data_Ord_ordNumber')))->compare)($x_0))((($GLOBALS['Data_Int_toNumber'] ?? \PhpursThunks::eval('Data_Int_toNumber')))(($GLOBALS['Data_Bounded_topInt'] ?? \PhpursThunks::eval('Data_Bounded_topInt'))))) && (((((($GLOBALS['Data_Ord_ordNumber'] ?? \PhpursThunks::eval('Data_Ord_ordNumber')))->compare)($x_0))((($GLOBALS['Data_Int_toNumber'] ?? \PhpursThunks::eval('Data_Int_toNumber')))(($GLOBALS['Data_Bounded_topInt'] ?? \PhpursThunks::eval('Data_Bounded_topInt')))))->tag === "LT")))) {
+if (($x_0 >= (($GLOBALS['Data_Int_toNumber'] ?? \PhpursThunks::eval('Data_Int_toNumber')))(($GLOBALS['Data_Bounded_topInt'] ?? \PhpursThunks::eval('Data_Bounded_topInt'))))) {
 $__t2 = ($GLOBALS['Data_Bounded_topInt'] ?? \PhpursThunks::eval('Data_Bounded_topInt'));
 } else {
-if (( ! (is_object((((($GLOBALS['Data_Ord_ordNumber'] ?? \PhpursThunks::eval('Data_Ord_ordNumber')))->compare)($x_0))((($GLOBALS['Data_Int_toNumber'] ?? \PhpursThunks::eval('Data_Int_toNumber')))(($GLOBALS['Data_Bounded_bottomInt'] ?? \PhpursThunks::eval('Data_Bounded_bottomInt'))))) && (((((($GLOBALS['Data_Ord_ordNumber'] ?? \PhpursThunks::eval('Data_Ord_ordNumber')))->compare)($x_0))((($GLOBALS['Data_Int_toNumber'] ?? \PhpursThunks::eval('Data_Int_toNumber')))(($GLOBALS['Data_Bounded_bottomInt'] ?? \PhpursThunks::eval('Data_Bounded_bottomInt')))))->tag === "GT")))) {
+if (($x_0 <= (($GLOBALS['Data_Int_toNumber'] ?? \PhpursThunks::eval('Data_Int_toNumber')))(($GLOBALS['Data_Bounded_bottomInt'] ?? \PhpursThunks::eval('Data_Bounded_bottomInt'))))) {
 $__t2 = ($GLOBALS['Data_Bounded_bottomInt'] ?? \PhpursThunks::eval('Data_Bounded_bottomInt'));
 } else {
 $__local_var_1_0 = (($GLOBALS['Data_Int_fromNumber'] ?? \PhpursThunks::eval('Data_Int_fromNumber')))($x_0);
@@ -187,7 +187,7 @@ $__t2 = $__t1;
 \PhpursThunks::$thunks['Data_Int_even'] = function() { $v = function($x_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Int_even"), recVars=[];
-  $__res = ((($GLOBALS['Data_Eq_eqIntImpl'] ?? \PhpursThunks::eval('Data_Eq_eqIntImpl')))(((($GLOBALS['Data_Int_Bits_and'] ?? \PhpursThunks::eval('Data_Int_Bits_and')))($x_0))(1)))(0);
+  $__res = (($x_0 & 1) === 0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -195,10 +195,13 @@ $__t2 = $__t1;
 \PhpursThunks::$thunks['Data_Int_parity'] = function() { $v = function($n_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Int_parity"), recVars=[];
-  if (((($GLOBALS['Data_Eq_eqIntImpl'] ?? \PhpursThunks::eval('Data_Eq_eqIntImpl')))(((($GLOBALS['Data_Int_Bits_and'] ?? \PhpursThunks::eval('Data_Int_Bits_and')))($n_0))(1)))(0)) {
+  switch (($n_0 & 1)) {
+case 0:
 $__t0 = new Phpurs_Data0("Even");
-} else {
+break;
+default:
 $__t0 = new Phpurs_Data0("Odd");
+break;
 };
   $__res = $__t0;
   goto __end;;

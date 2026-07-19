@@ -145,14 +145,7 @@ $__t1 = new Phpurs_Data0("Nothing");
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
-\PhpursThunks::$thunks['Data_Unfoldable_unfoldableArray'] = function() { $v = (object)["unfoldr" => ((((($GLOBALS['Data_Unfoldable_unfoldrArrayImpl'] ?? \PhpursThunks::eval('Data_Unfoldable_unfoldrArrayImpl')))(($GLOBALS['Data_Maybe_isNothing'] ?? \PhpursThunks::eval('Data_Maybe_isNothing'))))((($GLOBALS['Partial_Unsafe__unsafePartial'] ?? \PhpursThunks::eval('Partial_Unsafe__unsafePartial')))(function($dollar__unused_0) {
-  $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ($GLOBALS['Data_Unfoldable_fromJust'] ?? \PhpursThunks::eval('Data_Unfoldable_fromJust'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-})))(($GLOBALS['Data_Tuple_fst'] ?? \PhpursThunks::eval('Data_Tuple_fst'))))(($GLOBALS['Data_Tuple_snd'] ?? \PhpursThunks::eval('Data_Tuple_snd'))), "Unfoldable10" => function($dollar__unused_0) {
+\PhpursThunks::$thunks['Data_Unfoldable_unfoldableArray'] = function() { $v = (object)["unfoldr" => ((((($GLOBALS['Data_Unfoldable_unfoldrArrayImpl'] ?? \PhpursThunks::eval('Data_Unfoldable_unfoldrArrayImpl')))(($GLOBALS['Data_Maybe_isNothing'] ?? \PhpursThunks::eval('Data_Maybe_isNothing'))))(($GLOBALS['Data_Unfoldable_fromJust'] ?? \PhpursThunks::eval('Data_Unfoldable_fromJust'))))(($GLOBALS['Data_Tuple_fst'] ?? \PhpursThunks::eval('Data_Tuple_fst'))))(($GLOBALS['Data_Tuple_snd'] ?? \PhpursThunks::eval('Data_Tuple_snd'))), "Unfoldable10" => function($dollar__unused_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ($GLOBALS['Data_Unfoldable1_unfoldable1Array'] ?? \PhpursThunks::eval('Data_Unfoldable1_unfoldable1Array'));
@@ -170,10 +163,10 @@ $__t1 = new Phpurs_Data0("Nothing");
   $__res = ((($dictUnfoldable_0)->unfoldr)(function($i_3) use ($v_2) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  if (( ! (is_object((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)($i_3))(0)) && (((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)($i_3))(0))->tag === "GT")))) {
+  if (($i_3 <= 0)) {
 $__t0 = new Phpurs_Data0("Nothing");
 } else {
-$__t0 = new Phpurs_Data1("Just", new Phpurs_Data2("Tuple", $v_2, ((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($i_3))(1)));
+$__t0 = new Phpurs_Data1("Just", new Phpurs_Data2("Tuple", $v_2, ($i_3 - 1)));
 };
   $__res = $__t0;
   goto __end;;
@@ -201,7 +194,19 @@ $__t0 = new Phpurs_Data1("Just", new Phpurs_Data2("Tuple", $v_2, ((($GLOBALS['Da
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ($sequence_3_0)((((($GLOBALS['Data_Unfoldable_replicate'] ?? \PhpursThunks::eval('Data_Unfoldable_replicate')))($dictUnfoldable_1))($n_4))($m_5));
+  $__res = ($sequence_3_0)(((($dictUnfoldable_1)->unfoldr)(function($i_6) use ($m_5) {
+  $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  if (($i_6 <= 0)) {
+$__t1 = new Phpurs_Data0("Nothing");
+} else {
+$__t1 = new Phpurs_Data1("Just", new Phpurs_Data2("Tuple", $m_5, ($i_6 - 1)));
+};
+  $__res = $__t1;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}))($n_4));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

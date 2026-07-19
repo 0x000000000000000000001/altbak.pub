@@ -195,7 +195,7 @@ goto __end;;
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  if (((($GLOBALS['Data_HeytingAlgebra_boolDisj'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolDisj')))(((($dictEq_0)->eq)($a_5))($zero_3_1)))(((($dictEq_0)->eq)($b_6))($zero_3_1))) {
+  if ((((($dictEq_0)->eq)($a_5))($zero_3_1) || ((($dictEq_0)->eq)($b_6))($zero_3_1))) {
 $__t3 = $zero_3_1;
 } else {
 $__t3 = ((($dictEuclideanRing_1)->div)(((($Semiring0_2_0)->mul)($a_5))($b_6)))((($gcd2_4_2)($a_5))($b_6));

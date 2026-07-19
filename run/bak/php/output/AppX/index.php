@@ -92,63 +92,17 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['AppX_main'] = function() { $v = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['App_main'] ?? \PhpursThunks::eval('App_main'))))(function($dollar__unused_0) {
-  $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Test_FileOps_describe'] ?? \PhpursThunks::eval('Test_FileOps_describe'))))(function($dollar__unused_1) {
-  $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Test_FileOps_act'] ?? \PhpursThunks::eval('Test_FileOps_act'))))(function($dollar__unused_2) {
-  $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Test_STArray_describe'] ?? \PhpursThunks::eval('Test_STArray_describe'))))(function($dollar__unused_3) {
-  $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Test_STArray_act'] ?? \PhpursThunks::eval('Test_STArray_act'))))(function($dollar__unused_4) {
-  $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Test_StringOps_describe'] ?? \PhpursThunks::eval('Test_StringOps_describe'))))(function($dollar__unused_5) {
-  $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Test_StringOps_act'] ?? \PhpursThunks::eval('Test_StringOps_act'))))(function($dollar__unused_6) {
-  $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Test_AffOperations_describe'] ?? \PhpursThunks::eval('Test_AffOperations_describe'))))(function($dollar__unused_7) {
-  $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ($GLOBALS['Test_AffOperations_act'] ?? \PhpursThunks::eval('Test_AffOperations_act'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}); return $v; };
+\PhpursThunks::$thunks['AppX_main'] = function() { $v = (function() use (&$__fn) {
+$dollar__unused_0_0 = (($GLOBALS['App_main'] ?? \PhpursThunks::eval('App_main')))();
+$dollar__unused_1_1 = (($GLOBALS['Test_FileOps_describe'] ?? \PhpursThunks::eval('Test_FileOps_describe')))();
+$dollar__unused_2_2 = (($GLOBALS['Test_FileOps_act'] ?? \PhpursThunks::eval('Test_FileOps_act')))();
+$dollar__unused_3_3 = (($GLOBALS['Test_STArray_describe'] ?? \PhpursThunks::eval('Test_STArray_describe')))();
+$dollar__unused_4_4 = (($GLOBALS['Test_STArray_act'] ?? \PhpursThunks::eval('Test_STArray_act')))();
+$dollar__unused_5_5 = (($GLOBALS['Test_StringOps_describe'] ?? \PhpursThunks::eval('Test_StringOps_describe')))();
+$dollar__unused_6_6 = (($GLOBALS['Test_StringOps_act'] ?? \PhpursThunks::eval('Test_StringOps_act')))();
+$dollar__unused_7_7 = (($GLOBALS['Test_AffOperations_describe'] ?? \PhpursThunks::eval('Test_AffOperations_describe')))();
+return ($GLOBALS['Test_AffOperations_act'] ?? \PhpursThunks::eval('Test_AffOperations_act'));
+})(); return $v; };
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 

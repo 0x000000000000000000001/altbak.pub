@@ -123,7 +123,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   if ((is_object($v_1) && (($v_1)->tag === "Just"))) {
-$__t0 = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("(Just "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))((($dictShow_0)->show)(($v_1)->value0)))(")"));
+$__t0 = (("(Just " . (($dictShow_0)->show)(($v_1)->value0)) . ")");
 } else {
 if ((is_object($v_1) && (($v_1)->tag === "Nothing"))) {
 $__t0 = "Nothing";

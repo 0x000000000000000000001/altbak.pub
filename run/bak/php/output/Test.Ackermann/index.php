@@ -102,11 +102,11 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   // DEBUG UncurriedAbs: currentBindingName=(Just "Test_Ackermann_ackermann"), recVars=["Test_Ackermann_ackermann"];
   while (true) {
 if (($v_0 === 0)) {
-$__t2 = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))($v1_1))(1);
+$__t2 = ($v1_1 + 1);
 } else {
 switch ($v1_1) {
 case 0:
-$__tco_3 = ((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v_0))(1);
+$__tco_3 = ($v_0 - 1);
 $__tco_4 = 1;
 $v_0 = $__tco_3;
 $v1_1 = $__tco_4;
@@ -114,8 +114,8 @@ continue 2;
 $__t2 = null;
 break;
 default:
-$__tco_0 = ((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v_0))(1);
-$__tco_1 = ((($GLOBALS['Test_Ackermann_ackermann'] ?? \PhpursThunks::eval('Test_Ackermann_ackermann')))($v_0))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v1_1))(1));
+$__tco_0 = ($v_0 - 1);
+$__tco_1 = ((($GLOBALS['Test_Ackermann_ackermann'] ?? \PhpursThunks::eval('Test_Ackermann_ackermann')))($v_0))(($v1_1 - 1));
 $v_0 = $__tco_0;
 $v1_1 = $__tco_1;
 continue 2;
