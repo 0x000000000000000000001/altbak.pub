@@ -144,7 +144,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = (($GLOBALS['Data_Map_Internal_unsafeUnionWith'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeUnionWith')))($compare_1_0, $append_3_1, $v_4, $v1_5);
+  $__res = (((((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Map_Internal_unsafeUnionWith'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeUnionWith'))))($compare_1_0))($append_3_1))($v_4))($v1_5);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -162,7 +162,15 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 \PhpursThunks::$thunks['Data_Map_plusSemigroupMap'] = function() { $v = function($dictOrd_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Map_plusSemigroupMap"), recVars=[];
-  $__res = (($GLOBALS['Data_Map_Internal_plusMap'] ?? \PhpursThunks::eval('Data_Map_Internal_plusMap')))($dictOrd_0);
+  $altMap1_1_0 = (($GLOBALS['Data_Map_Internal_altMap'] ?? \PhpursThunks::eval('Data_Map_Internal_altMap')))($dictOrd_0);
+  $__res = (object)["empty" => new Phpurs_Data0("Leaf"), "Alt0" => function($dollar__unused_2) use ($altMap1_1_0) {
+  $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = $altMap1_1_0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -283,28 +291,7 @@ return ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('C
 \PhpursThunks::$thunks['Data_Map_applySemigroupMap'] = function() { $v = function($dictOrd_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Map_applySemigroupMap"), recVars=[];
-  $compare_1_0 = ($dictOrd_0)->compare;
-  $__res = (object)["apply" => (function() use ($compare_1_0) {
-  $__fn = function($m1_2, $m2_3 = null) use ($compare_1_0, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = (($GLOBALS['Data_Map_Internal_unsafeIntersectionWith'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeIntersectionWith')))($compare_1_0, (($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->identity, $m1_2, $m2_3);
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Functor0" => function($dollar__unused_1) {
-  $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ($GLOBALS['Data_Map_Internal_functorMap'] ?? \PhpursThunks::eval('Data_Map_Internal_functorMap'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}];
+  $__res = (($GLOBALS['Data_Map_Internal_applyMap'] ?? \PhpursThunks::eval('Data_Map_Internal_applyMap')))($dictOrd_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -312,28 +299,7 @@ return ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('C
 \PhpursThunks::$thunks['Data_Map_altSemigroupMap'] = function() { $v = function($dictOrd_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Map_altSemigroupMap"), recVars=[];
-  $compare_1_0 = ($dictOrd_0)->compare;
-  $__res = (object)["alt" => (function() use ($compare_1_0) {
-  $__fn = function($m1_2, $m2_3 = null) use ($compare_1_0, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = (($GLOBALS['Data_Map_Internal_unsafeUnionWith'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeUnionWith')))($compare_1_0, ($GLOBALS['Data_Function_const'] ?? \PhpursThunks::eval('Data_Function_const')), $m1_2, $m2_3);
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Functor0" => function($dollar__unused_1) {
-  $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ($GLOBALS['Data_Map_Internal_functorMap'] ?? \PhpursThunks::eval('Data_Map_Internal_functorMap'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}];
+  $__res = (($GLOBALS['Data_Map_Internal_altMap'] ?? \PhpursThunks::eval('Data_Map_Internal_altMap')))($dictOrd_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

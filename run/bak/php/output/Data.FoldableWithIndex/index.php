@@ -1684,7 +1684,7 @@ $__t12 = null;
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ((($foldMapWithIndex1_1_0)(function($i_5) use ($c_2) {
+  $__res = ((($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))((($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))((($foldMapWithIndex1_1_0)(function($i_5) use ($c_2) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__local_var_6_1 = ($c_2)($i_5);
@@ -1705,7 +1705,7 @@ $__t12 = null;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))($xs_4))($u_3);
+}))($xs_4))))($u_3);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -1727,14 +1727,14 @@ $__t12 = null;
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ((($foldMapWithIndex1_1_0)(function($i_5) use ($c_2) {
+  $__res = ((($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))((($foldMapWithIndex1_1_0)(function($i_5) use ($c_2) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Monoid_Endo_Endo'] ?? \PhpursThunks::eval('Data_Monoid_Endo_Endo'))))(($c_2)($i_5));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))($xs_4))($u_3);
+}))($xs_4)))($u_3);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -1756,7 +1756,7 @@ $__t12 = null;
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ((($foldMapWithIndex1_1_0)((function() use ($d_3, $dictSemigroup_2, $t_4) {
+  $__res = ((($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))((($foldMapWithIndex1_1_0)((function() use ($d_3, $dictSemigroup_2, $t_4) {
   $__fn = function($i_6, $a_7 = null, $m_8 = null) use ($d_3, $dictSemigroup_2, $t_4, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -1769,7 +1769,7 @@ $__t12 = null;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})()))($f_5))($d_3);
+})()))($f_5)))($d_3);
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;

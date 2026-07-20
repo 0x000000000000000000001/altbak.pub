@@ -199,19 +199,19 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Data_Map_Internal_unsafeNode'] = function() { $v = (function() {
+\PhpursThunks::$thunks['Data_Map_Internal_unsafeNode'] = function() { $v = (($GLOBALS['Data_Function_Uncurried_mkFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_mkFn4')))((function() {
   $__fn = function($k_0, $v_1 = null, $l_2 = null, $r_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Map_Internal_unsafeNode"), recVars=[];
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   if ((is_object($l_2) && (($l_2)->tag === "Leaf"))) {
 if ((is_object($r_3) && (($r_3)->tag === "Leaf"))) {
 $__t1 = new Phpurs_Data6("Node", 1, 1, $k_0, $v_1, $l_2, $r_3);
 } else {
 if ((is_object($r_3) && (($r_3)->tag === "Node"))) {
-$__t1 = new Phpurs_Data6("Node", (1 + ($r_3)->value0), (1 + ($r_3)->value1), $k_0, $v_1, $l_2, $r_3);
+$__t1 = new Phpurs_Data6("Node", ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))(1))(($r_3)->value0), ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))(1))(($r_3)->value1), $k_0, $v_1, $l_2, $r_3);
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t1 = null;
@@ -221,15 +221,15 @@ $__t0 = $__t1;
 } else {
 if ((is_object($l_2) && (($l_2)->tag === "Node"))) {
 if ((is_object($r_3) && (($r_3)->tag === "Leaf"))) {
-$__t2 = new Phpurs_Data6("Node", (1 + ($l_2)->value0), (1 + ($l_2)->value1), $k_0, $v_1, $l_2, $r_3);
+$__t2 = new Phpurs_Data6("Node", ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))(1))(($l_2)->value0), ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))(1))(($l_2)->value1), $k_0, $v_1, $l_2, $r_3);
 } else {
 if ((is_object($r_3) && (($r_3)->tag === "Node"))) {
-if ((($l_2)->value0 > ($r_3)->value0)) {
-$__t3 = (1 + ($l_2)->value0);
+if ((is_object((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)(($l_2)->value0))(($r_3)->value0)) && (((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)(($l_2)->value0))(($r_3)->value0))->tag === "GT"))) {
+$__t3 = ($l_2)->value0;
 } else {
-$__t3 = (1 + ($r_3)->value0);
+$__t3 = ($r_3)->value0;
 };
-$__t2 = new Phpurs_Data6("Node", $__t3, ((1 + ($l_2)->value1) + ($r_3)->value1), $k_0, $v_1, $l_2, $r_3);
+$__t2 = new Phpurs_Data6("Node", ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))(1))($__t3), ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))(((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))(1))(($l_2)->value1)))(($r_3)->value1), $k_0, $v_1, $l_2, $r_3);
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t2 = null;
@@ -247,7 +247,7 @@ $__t0 = null;
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})(); return $v; };
+})()); return $v; };
 \PhpursThunks::$thunks['Data_Map_Internal_toMapIter'] = function() { $v = function($a_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Map_Internal_toMapIter"), recVars=[];
@@ -272,7 +272,7 @@ if ((is_object($v_4) && (($v_4)->tag === "IterLeaf"))) {
 $__t1 = ($done_2)(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')));
 } else {
 if ((is_object($v_4) && (($v_4)->tag === "IterEmit"))) {
-$__t1 = ($next_1)(($v_4)->value0, ($v_4)->value1, ($v_4)->value2);
+$__t1 = ((((($GLOBALS['Data_Function_Uncurried_runFn3'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn3')))($next_1))(($v_4)->value0))(($v_4)->value1))(($v_4)->value2);
 } else {
 if ((is_object($v_4) && (($v_4)->tag === "IterNode"))) {
 $__tco_2 = (($f_0)(($v_4)->value1))(($v_4)->value0);
@@ -330,145 +330,140 @@ $__t0 = null;
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Data_Map_Internal_unsafeBalancedNode'] = function() { $v = (function() {
-  $__fn = function($k_0, $v_1 = null, $l_2 = null, $r_3 = null) use (&$__fn) {
+\PhpursThunks::$thunks['Data_Map_Internal_unsafeBalancedNode'] = function() { $v = (function() use (&$__fn) {
+$rotateLeft_0_0 = (($GLOBALS['Data_Function_Uncurried_mkFn7'] ?? \PhpursThunks::eval('Data_Function_Uncurried_mkFn7')))((function() {
+  $__fn = function($k_0, $v_1 = null, $l_2 = null, $rk_3 = null, $rv_4 = null, $rl_5 = null, $rr_6 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 7) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 7);
+  }
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  if ((function() use ($rl_5, $rr_6, &$__fn) {
+if ((is_object($rr_6) && (($rr_6)->tag === "Leaf"))) {
+$__t1 = 0;
+} else {
+if ((is_object($rr_6) && (($rr_6)->tag === "Node"))) {
+$__t1 = ($rr_6)->value0;
+} else {
+throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+$__t1 = null;
+};
+};
+return ((is_object($rl_5) && (($rl_5)->tag === "Node")) && (is_object((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)(($rl_5)->value0))($__t1)) && (((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)(($rl_5)->value0))($__t1))->tag === "GT")));
+})()) {
+$__t0 = (((((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Map_Internal_unsafeNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeNode'))))(($rl_5)->value2))(($rl_5)->value3))((((((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Map_Internal_unsafeNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeNode'))))($k_0))($v_1))($l_2))(($rl_5)->value4)))((((((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Map_Internal_unsafeNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeNode'))))($rk_3))($rv_4))(($rl_5)->value5))($rr_6));
+} else {
+$__t0 = (((((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Map_Internal_unsafeNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeNode'))))($rk_3))($rv_4))((((((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Map_Internal_unsafeNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeNode'))))($k_0))($v_1))($l_2))($rl_5)))($rr_6);
+};
+  $__res = $__t0;
+  goto __end;;
+  __end:
+  return $__num > 7 ? $__res(...\array_slice(\func_get_args(), 7)) : $__res;
+  };
+  return $__fn;
+})());
+$rotateRight_1_3 = (($GLOBALS['Data_Function_Uncurried_mkFn7'] ?? \PhpursThunks::eval('Data_Function_Uncurried_mkFn7')))((function() {
+  $__fn = function($k_1, $v_2 = null, $lk_3 = null, $lv_4 = null, $ll_5 = null, $lr_6 = null, $r_7 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 7) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 7);
+  }
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  if ((function() use ($ll_5, $lr_6, &$__fn) {
+if ((is_object($ll_5) && (($ll_5)->tag === "Leaf"))) {
+$__t4 = 0;
+} else {
+if ((is_object($ll_5) && (($ll_5)->tag === "Node"))) {
+$__t4 = ($ll_5)->value0;
+} else {
+throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+$__t4 = null;
+};
+};
+return ((is_object($lr_6) && (($lr_6)->tag === "Node")) && ( ! (is_object((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)($__t4))(($lr_6)->value0)) && (((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)($__t4))(($lr_6)->value0))->tag === "GT"))));
+})()) {
+$__t3 = (((((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Map_Internal_unsafeNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeNode'))))(($lr_6)->value2))(($lr_6)->value3))((((((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Map_Internal_unsafeNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeNode'))))($lk_3))($lv_4))($ll_5))(($lr_6)->value4)))((((((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Map_Internal_unsafeNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeNode'))))($k_1))($v_2))(($lr_6)->value5))($r_7));
+} else {
+$__t3 = (((((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Map_Internal_unsafeNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeNode'))))($lk_3))($lv_4))($ll_5))((((((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Map_Internal_unsafeNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeNode'))))($k_1))($v_2))($lr_6))($r_7));
+};
+  $__res = $__t3;
+  goto __end;;
+  __end:
+  return $__num > 7 ? $__res(...\array_slice(\func_get_args(), 7)) : $__res;
+  };
+  return $__fn;
+})());
+return (($GLOBALS['Data_Function_Uncurried_mkFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_mkFn4')))((function() use ($rotateLeft_0_0, $rotateRight_1_3) {
+  $__fn = function($k_2, $v_3 = null, $l_4 = null, $r_5 = null) use ($rotateLeft_0_0, $rotateRight_1_3, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Map_Internal_unsafeBalancedNode"), recVars=[];
-  if ((is_object($l_2) && (($l_2)->tag === "Leaf"))) {
-if ((is_object($r_3) && (($r_3)->tag === "Leaf"))) {
-$__t1 = new Phpurs_Data6("Node", 1, 1, $k_0, $v_1, new Phpurs_Data0("Leaf"), new Phpurs_Data0("Leaf"));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  if ((is_object($l_4) && (($l_4)->tag === "Leaf"))) {
+if ((is_object($r_5) && (($r_5)->tag === "Leaf"))) {
+$__t7 = new Phpurs_Data6("Node", 1, 1, $k_2, $v_3, new Phpurs_Data0("Leaf"), new Phpurs_Data0("Leaf"));
 } else {
-if (((is_object($r_3) && (($r_3)->tag === "Node")) && (($r_3)->value0 > 1))) {
-if ((function() use ($r_3, &$__fn) {
-if ((is_object(($r_3)->value5) && ((($r_3)->value5)->tag === "Leaf"))) {
-$__t3 = ((($r_3)->value4)->value0 > 0);
+if (((is_object($r_5) && (($r_5)->tag === "Node")) && (is_object((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)(($r_5)->value0))(1)) && (((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)(($r_5)->value0))(1))->tag === "GT")))) {
+$__t7 = ((((((((($GLOBALS['Data_Function_Uncurried_runFn7'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn7')))($rotateLeft_0_0))($k_2))($v_3))($l_4))(($r_5)->value2))(($r_5)->value3))(($r_5)->value4))(($r_5)->value5);
 } else {
-if ((is_object(($r_3)->value5) && ((($r_3)->value5)->tag === "Node"))) {
-$__t3 = ((($r_3)->value4)->value0 > (($r_3)->value5)->value0);
-} else {
-throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t3 = null;
+$__t7 = (((((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Map_Internal_unsafeNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeNode'))))($k_2))($v_3))($l_4))($r_5);
 };
 };
-return ((is_object(($r_3)->value4) && ((($r_3)->value4)->tag === "Node")) && $__t3);
-})()) {
-$__t2 = (($GLOBALS['Data_Map_Internal_unsafeNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeNode')))((($r_3)->value4)->value2, (($r_3)->value4)->value3, (($GLOBALS['Data_Map_Internal_unsafeNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeNode')))($k_0, $v_1, $l_2, (($r_3)->value4)->value4), (($GLOBALS['Data_Map_Internal_unsafeNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeNode')))(($r_3)->value2, ($r_3)->value3, (($r_3)->value4)->value5, ($r_3)->value5));
+$__t6 = $__t7;
 } else {
-$__t2 = (($GLOBALS['Data_Map_Internal_unsafeNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeNode')))(($r_3)->value2, ($r_3)->value3, (($GLOBALS['Data_Map_Internal_unsafeNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeNode')))($k_0, $v_1, $l_2, ($r_3)->value4), ($r_3)->value5);
+if ((is_object($l_4) && (($l_4)->tag === "Node"))) {
+if ((is_object($r_5) && (($r_5)->tag === "Node"))) {
+if ((is_object((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)(($r_5)->value0))(((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))(($l_4)->value0))(1))) && (((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)(($r_5)->value0))(((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))(($l_4)->value0))(1)))->tag === "GT"))) {
+$__t9 = ((((((((($GLOBALS['Data_Function_Uncurried_runFn7'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn7')))($rotateLeft_0_0))($k_2))($v_3))($l_4))(($r_5)->value2))(($r_5)->value3))(($r_5)->value4))(($r_5)->value5);
+} else {
+if ((is_object((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)(($l_4)->value0))(((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))(($r_5)->value0))(1))) && (((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)(($l_4)->value0))(((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))(($r_5)->value0))(1)))->tag === "GT"))) {
+$__t9 = ((((((((($GLOBALS['Data_Function_Uncurried_runFn7'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn7')))($rotateRight_1_3))($k_2))($v_3))(($l_4)->value2))(($l_4)->value3))(($l_4)->value4))(($l_4)->value5))($r_5);
+} else {
+$__t9 = (((((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Map_Internal_unsafeNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeNode'))))($k_2))($v_3))($l_4))($r_5);
 };
-$__t1 = $__t2;
+};
+$__t8 = $__t9;
 } else {
-$__t1 = (($GLOBALS['Data_Map_Internal_unsafeNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeNode')))($k_0, $v_1, $l_2, $r_3);
+if (((is_object($r_5) && (($r_5)->tag === "Leaf")) && (is_object((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)(($l_4)->value0))(1)) && (((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)(($l_4)->value0))(1))->tag === "GT")))) {
+$__t8 = ((((((((($GLOBALS['Data_Function_Uncurried_runFn7'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn7')))($rotateRight_1_3))($k_2))($v_3))(($l_4)->value2))(($l_4)->value3))(($l_4)->value4))(($l_4)->value5))($r_5);
+} else {
+$__t8 = (((((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Map_Internal_unsafeNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeNode'))))($k_2))($v_3))($l_4))($r_5);
 };
 };
-$__t0 = $__t1;
-} else {
-if ((is_object($l_2) && (($l_2)->tag === "Node"))) {
-if ((is_object($r_3) && (($r_3)->tag === "Node"))) {
-if ((($r_3)->value0 > (($l_2)->value0 + 1))) {
-if ((function() use ($r_3, &$__fn) {
-if ((is_object(($r_3)->value5) && ((($r_3)->value5)->tag === "Leaf"))) {
-$__t7 = ((($r_3)->value4)->value0 > 0);
-} else {
-if ((is_object(($r_3)->value5) && ((($r_3)->value5)->tag === "Node"))) {
-$__t7 = ((($r_3)->value4)->value0 > (($r_3)->value5)->value0);
+$__t6 = $__t8;
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t7 = null;
+$__t6 = null;
 };
 };
-return ((is_object(($r_3)->value4) && ((($r_3)->value4)->tag === "Node")) && $__t7);
-})()) {
-$__t6 = (($GLOBALS['Data_Map_Internal_unsafeNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeNode')))((($r_3)->value4)->value2, (($r_3)->value4)->value3, (($GLOBALS['Data_Map_Internal_unsafeNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeNode')))($k_0, $v_1, $l_2, (($r_3)->value4)->value4), (($GLOBALS['Data_Map_Internal_unsafeNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeNode')))(($r_3)->value2, ($r_3)->value3, (($r_3)->value4)->value5, ($r_3)->value5));
-} else {
-$__t6 = (($GLOBALS['Data_Map_Internal_unsafeNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeNode')))(($r_3)->value2, ($r_3)->value3, (($GLOBALS['Data_Map_Internal_unsafeNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeNode')))($k_0, $v_1, $l_2, ($r_3)->value4), ($r_3)->value5);
-};
-$__t5 = $__t6;
-} else {
-if ((($l_2)->value0 > (($r_3)->value0 + 1))) {
-if ((function() use ($l_2, &$__fn) {
-if ((is_object(($l_2)->value4) && ((($l_2)->value4)->tag === "Leaf"))) {
-$__t9 = (0 <= (($l_2)->value5)->value0);
-} else {
-if ((is_object(($l_2)->value4) && ((($l_2)->value4)->tag === "Node"))) {
-$__t9 = ((($l_2)->value4)->value0 <= (($l_2)->value5)->value0);
-} else {
-throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t9 = null;
-};
-};
-return ((is_object(($l_2)->value5) && ((($l_2)->value5)->tag === "Node")) && $__t9);
-})()) {
-$__t8 = (($GLOBALS['Data_Map_Internal_unsafeNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeNode')))((($l_2)->value5)->value2, (($l_2)->value5)->value3, (($GLOBALS['Data_Map_Internal_unsafeNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeNode')))(($l_2)->value2, ($l_2)->value3, ($l_2)->value4, (($l_2)->value5)->value4), (($GLOBALS['Data_Map_Internal_unsafeNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeNode')))($k_0, $v_1, (($l_2)->value5)->value5, $r_3));
-} else {
-$__t8 = (($GLOBALS['Data_Map_Internal_unsafeNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeNode')))(($l_2)->value2, ($l_2)->value3, ($l_2)->value4, (($GLOBALS['Data_Map_Internal_unsafeNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeNode')))($k_0, $v_1, ($l_2)->value5, $r_3));
-};
-$__t5 = $__t8;
-} else {
-$__t5 = (($GLOBALS['Data_Map_Internal_unsafeNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeNode')))($k_0, $v_1, $l_2, $r_3);
-};
-};
-$__t4 = $__t5;
-} else {
-if (((is_object($r_3) && (($r_3)->tag === "Leaf")) && (($l_2)->value0 > 1))) {
-if ((function() use ($l_2, &$__fn) {
-if ((is_object(($l_2)->value4) && ((($l_2)->value4)->tag === "Leaf"))) {
-$__t11 = (0 <= (($l_2)->value5)->value0);
-} else {
-if ((is_object(($l_2)->value4) && ((($l_2)->value4)->tag === "Node"))) {
-$__t11 = ((($l_2)->value4)->value0 <= (($l_2)->value5)->value0);
-} else {
-throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t11 = null;
-};
-};
-return ((is_object(($l_2)->value5) && ((($l_2)->value5)->tag === "Node")) && $__t11);
-})()) {
-$__t10 = (($GLOBALS['Data_Map_Internal_unsafeNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeNode')))((($l_2)->value5)->value2, (($l_2)->value5)->value3, (($GLOBALS['Data_Map_Internal_unsafeNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeNode')))(($l_2)->value2, ($l_2)->value3, ($l_2)->value4, (($l_2)->value5)->value4), (($GLOBALS['Data_Map_Internal_unsafeNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeNode')))($k_0, $v_1, (($l_2)->value5)->value5, $r_3));
-} else {
-$__t10 = (($GLOBALS['Data_Map_Internal_unsafeNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeNode')))(($l_2)->value2, ($l_2)->value3, ($l_2)->value4, (($GLOBALS['Data_Map_Internal_unsafeNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeNode')))($k_0, $v_1, ($l_2)->value5, $r_3));
-};
-$__t4 = $__t10;
-} else {
-$__t4 = (($GLOBALS['Data_Map_Internal_unsafeNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeNode')))($k_0, $v_1, $l_2, $r_3);
-};
-};
-$__t0 = $__t4;
-} else {
-throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t0 = null;
-};
-};
-  $__res = $__t0;
+  $__res = $__t6;
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
+})());
 })(); return $v; };
-\PhpursThunks::$thunks['Data_Map_Internal_unsafeSplit'] = function() { $v = (function() {
+\PhpursThunks::$thunks['Data_Map_Internal_unsafeSplit'] = function() { $v = (($GLOBALS['Data_Function_Uncurried_mkFn3'] ?? \PhpursThunks::eval('Data_Function_Uncurried_mkFn3')))((function() {
   $__fn = function($comp_0, $k_1 = null, $m_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Map_Internal_unsafeSplit"), recVars=["Data_Map_Internal_unsafeSplit"];
-  while (true) {
-if ((is_object($m_2) && (($m_2)->tag === "Leaf"))) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_Map_Internal_unsafeSplit"];
+  if ((is_object($m_2) && (($m_2)->tag === "Leaf"))) {
 $__t0 = new Phpurs_Data3("Split", new Phpurs_Data0("Nothing"), new Phpurs_Data0("Leaf"), new Phpurs_Data0("Leaf"));
 } else {
 if ((is_object($m_2) && (($m_2)->tag === "Node"))) {
 $v_3_1 = (($comp_0)($k_1))(($m_2)->value2);
 if ((is_object($v_3_1) && (($v_3_1)->tag === "LT"))) {
-$v1_4_3 = (($GLOBALS['Data_Map_Internal_unsafeSplit'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeSplit')))($comp_0, $k_1, ($m_2)->value4);
-$__t2 = new Phpurs_Data3("Split", ($v1_4_3)->value0, ($v1_4_3)->value1, (($GLOBALS['Data_Map_Internal_unsafeBalancedNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeBalancedNode')))(($m_2)->value2, ($m_2)->value3, ($v1_4_3)->value2, ($m_2)->value5));
+$v1_4_3 = ((((($GLOBALS['Data_Function_Uncurried_runFn3'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn3')))(($GLOBALS['Data_Map_Internal_unsafeSplit'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeSplit'))))($comp_0))($k_1))(($m_2)->value4);
+$__t2 = new Phpurs_Data3("Split", ($v1_4_3)->value0, ($v1_4_3)->value1, (((((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Map_Internal_unsafeBalancedNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeBalancedNode'))))(($m_2)->value2))(($m_2)->value3))(($v1_4_3)->value2))(($m_2)->value5));
 } else {
 if ((is_object($v_3_1) && (($v_3_1)->tag === "GT"))) {
-$v1_4_4 = (($GLOBALS['Data_Map_Internal_unsafeSplit'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeSplit')))($comp_0, $k_1, ($m_2)->value5);
-$__t2 = new Phpurs_Data3("Split", ($v1_4_4)->value0, (($GLOBALS['Data_Map_Internal_unsafeBalancedNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeBalancedNode')))(($m_2)->value2, ($m_2)->value3, ($m_2)->value4, ($v1_4_4)->value1), ($v1_4_4)->value2);
+$v1_4_4 = ((((($GLOBALS['Data_Function_Uncurried_runFn3'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn3')))(($GLOBALS['Data_Map_Internal_unsafeSplit'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeSplit'))))($comp_0))($k_1))(($m_2)->value5);
+$__t2 = new Phpurs_Data3("Split", ($v1_4_4)->value0, (((((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Map_Internal_unsafeBalancedNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeBalancedNode'))))(($m_2)->value2))(($m_2)->value3))(($m_2)->value4))(($v1_4_4)->value1), ($v1_4_4)->value2);
 } else {
 if ((is_object($v_3_1) && (($v_3_1)->tag === "EQ"))) {
 $__t2 = new Phpurs_Data3("Split", new Phpurs_Data1("Just", ($m_2)->value3), ($m_2)->value4, ($m_2)->value5);
@@ -484,54 +479,51 @@ throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t0 = null;
 };
 };
-$__res = $__t0;
-goto __end;;
-};
+  $__res = $__t0;
+  goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Map_Internal_unsafeSplitLast'] = function() { $v = (function() {
+})()); return $v; };
+\PhpursThunks::$thunks['Data_Map_Internal_unsafeSplitLast'] = function() { $v = (($GLOBALS['Data_Function_Uncurried_mkFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_mkFn4')))((function() {
   $__fn = function($k_0, $v_1 = null, $l_2 = null, $r_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Map_Internal_unsafeSplitLast"), recVars=["Data_Map_Internal_unsafeSplitLast"];
-  while (true) {
-if ((is_object($r_3) && (($r_3)->tag === "Leaf"))) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_Map_Internal_unsafeSplitLast"];
+  if ((is_object($r_3) && (($r_3)->tag === "Leaf"))) {
 $__t0 = new Phpurs_Data3("SplitLast", $k_0, $v_1, $l_2);
 } else {
 if ((is_object($r_3) && (($r_3)->tag === "Node"))) {
-$v1_4_1 = (($GLOBALS['Data_Map_Internal_unsafeSplitLast'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeSplitLast')))(($r_3)->value2, ($r_3)->value3, ($r_3)->value4, ($r_3)->value5);
-$__t0 = new Phpurs_Data3("SplitLast", ($v1_4_1)->value0, ($v1_4_1)->value1, (($GLOBALS['Data_Map_Internal_unsafeBalancedNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeBalancedNode')))($k_0, $v_1, $l_2, ($v1_4_1)->value2));
+$v1_4_1 = (((((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Map_Internal_unsafeSplitLast'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeSplitLast'))))(($r_3)->value2))(($r_3)->value3))(($r_3)->value4))(($r_3)->value5);
+$__t0 = new Phpurs_Data3("SplitLast", ($v1_4_1)->value0, ($v1_4_1)->value1, (((((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Map_Internal_unsafeBalancedNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeBalancedNode'))))($k_0))($v_1))($l_2))(($v1_4_1)->value2));
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t0 = null;
 };
 };
-$__res = $__t0;
-goto __end;;
-};
+  $__res = $__t0;
+  goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Map_Internal_unsafeJoinNodes'] = function() { $v = (function() {
+})()); return $v; };
+\PhpursThunks::$thunks['Data_Map_Internal_unsafeJoinNodes'] = function() { $v = (($GLOBALS['Data_Function_Uncurried_mkFn2'] ?? \PhpursThunks::eval('Data_Function_Uncurried_mkFn2')))((function() {
   $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Map_Internal_unsafeJoinNodes"), recVars=[];
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   if ((is_object($v_0) && (($v_0)->tag === "Leaf"))) {
 $__t0 = $v1_1;
 } else {
 if ((is_object($v_0) && (($v_0)->tag === "Node"))) {
-$v2_2_1 = (($GLOBALS['Data_Map_Internal_unsafeSplitLast'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeSplitLast')))(($v_0)->value2, ($v_0)->value3, ($v_0)->value4, ($v_0)->value5);
-$__t0 = (($GLOBALS['Data_Map_Internal_unsafeBalancedNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeBalancedNode')))(($v2_2_1)->value0, ($v2_2_1)->value1, ($v2_2_1)->value2, $v1_1);
+$v2_2_1 = (((((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Map_Internal_unsafeSplitLast'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeSplitLast'))))(($v_0)->value2))(($v_0)->value3))(($v_0)->value4))(($v_0)->value5);
+$__t0 = (((((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Map_Internal_unsafeBalancedNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeBalancedNode'))))(($v2_2_1)->value0))(($v2_2_1)->value1))(($v2_2_1)->value2))($v1_1);
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t0 = null;
@@ -543,61 +535,58 @@ $__t0 = null;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Map_Internal_unsafeDifference'] = function() { $v = (function() {
+})()); return $v; };
+\PhpursThunks::$thunks['Data_Map_Internal_unsafeDifference'] = function() { $v = (($GLOBALS['Data_Function_Uncurried_mkFn3'] ?? \PhpursThunks::eval('Data_Function_Uncurried_mkFn3')))((function() {
   $__fn = function($comp_0, $l_1 = null, $r_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Map_Internal_unsafeDifference"), recVars=["Data_Map_Internal_unsafeDifference"];
-  while (true) {
-if ((is_object($l_1) && (($l_1)->tag === "Leaf"))) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_Map_Internal_unsafeDifference"];
+  if ((is_object($l_1) && (($l_1)->tag === "Leaf"))) {
 $__t0 = new Phpurs_Data0("Leaf");
 } else {
 if ((is_object($r_2) && (($r_2)->tag === "Leaf"))) {
 $__t0 = $l_1;
 } else {
 if ((is_object($r_2) && (($r_2)->tag === "Node"))) {
-$v_3_1 = (($GLOBALS['Data_Map_Internal_unsafeSplit'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeSplit')))($comp_0, ($r_2)->value2, $l_1);
-$__t0 = (($GLOBALS['Data_Map_Internal_unsafeJoinNodes'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeJoinNodes')))((($GLOBALS['Data_Map_Internal_unsafeDifference'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeDifference')))($comp_0, ($v_3_1)->value1, ($r_2)->value4), (($GLOBALS['Data_Map_Internal_unsafeDifference'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeDifference')))($comp_0, ($v_3_1)->value2, ($r_2)->value5));
+$v_3_1 = ((((($GLOBALS['Data_Function_Uncurried_runFn3'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn3')))(($GLOBALS['Data_Map_Internal_unsafeSplit'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeSplit'))))($comp_0))(($r_2)->value2))($l_1);
+$__t0 = (((($GLOBALS['Data_Function_Uncurried_runFn2'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn2')))(($GLOBALS['Data_Map_Internal_unsafeJoinNodes'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeJoinNodes'))))(((((($GLOBALS['Data_Function_Uncurried_runFn3'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn3')))(($GLOBALS['Data_Map_Internal_unsafeDifference'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeDifference'))))($comp_0))(($v_3_1)->value1))(($r_2)->value4)))(((((($GLOBALS['Data_Function_Uncurried_runFn3'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn3')))(($GLOBALS['Data_Map_Internal_unsafeDifference'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeDifference'))))($comp_0))(($v_3_1)->value2))(($r_2)->value5));
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t0 = null;
 };
 };
 };
-$__res = $__t0;
-goto __end;;
-};
+  $__res = $__t0;
+  goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Map_Internal_unsafeIntersectionWith'] = function() { $v = (function() {
+})()); return $v; };
+\PhpursThunks::$thunks['Data_Map_Internal_unsafeIntersectionWith'] = function() { $v = (($GLOBALS['Data_Function_Uncurried_mkFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_mkFn4')))((function() {
   $__fn = function($comp_0, $app_1 = null, $l_2 = null, $r_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Map_Internal_unsafeIntersectionWith"), recVars=["Data_Map_Internal_unsafeIntersectionWith"];
-  while (true) {
-if ((is_object($l_2) && (($l_2)->tag === "Leaf"))) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_Map_Internal_unsafeIntersectionWith"];
+  if ((is_object($l_2) && (($l_2)->tag === "Leaf"))) {
 $__t0 = new Phpurs_Data0("Leaf");
 } else {
 if ((is_object($r_3) && (($r_3)->tag === "Leaf"))) {
 $__t0 = new Phpurs_Data0("Leaf");
 } else {
 if ((is_object($r_3) && (($r_3)->tag === "Node"))) {
-$v_4_1 = (($GLOBALS['Data_Map_Internal_unsafeSplit'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeSplit')))($comp_0, ($r_3)->value2, $l_2);
-$l__prime___5_2 = (($GLOBALS['Data_Map_Internal_unsafeIntersectionWith'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeIntersectionWith')))($comp_0, $app_1, ($v_4_1)->value1, ($r_3)->value4);
-$r__prime___6_3 = (($GLOBALS['Data_Map_Internal_unsafeIntersectionWith'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeIntersectionWith')))($comp_0, $app_1, ($v_4_1)->value2, ($r_3)->value5);
+$v_4_1 = ((((($GLOBALS['Data_Function_Uncurried_runFn3'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn3')))(($GLOBALS['Data_Map_Internal_unsafeSplit'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeSplit'))))($comp_0))(($r_3)->value2))($l_2);
+$l__prime___5_2 = (((((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Map_Internal_unsafeIntersectionWith'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeIntersectionWith'))))($comp_0))($app_1))(($v_4_1)->value1))(($r_3)->value4);
+$r__prime___6_3 = (((((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Map_Internal_unsafeIntersectionWith'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeIntersectionWith'))))($comp_0))($app_1))(($v_4_1)->value2))(($r_3)->value5);
 if ((is_object(($v_4_1)->value0) && ((($v_4_1)->value0)->tag === "Just"))) {
-$__t4 = (($GLOBALS['Data_Map_Internal_unsafeBalancedNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeBalancedNode')))(($r_3)->value2, (($app_1)((($v_4_1)->value0)->value0))(($r_3)->value3), $l__prime___5_2, $r__prime___6_3);
+$__t4 = (((((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Map_Internal_unsafeBalancedNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeBalancedNode'))))(($r_3)->value2))((($app_1)((($v_4_1)->value0)->value0))(($r_3)->value3)))($l__prime___5_2))($r__prime___6_3);
 } else {
 if ((is_object(($v_4_1)->value0) && ((($v_4_1)->value0)->tag === "Nothing"))) {
-$__t4 = (($GLOBALS['Data_Map_Internal_unsafeJoinNodes'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeJoinNodes')))($l__prime___5_2, $r__prime___6_3);
+$__t4 = (((($GLOBALS['Data_Function_Uncurried_runFn2'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn2')))(($GLOBALS['Data_Map_Internal_unsafeJoinNodes'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeJoinNodes'))))($l__prime___5_2))($r__prime___6_3);
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t4 = null;
@@ -610,37 +599,35 @@ $__t0 = null;
 };
 };
 };
-$__res = $__t0;
-goto __end;;
-};
+  $__res = $__t0;
+  goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Map_Internal_unsafeUnionWith'] = function() { $v = (function() {
+})()); return $v; };
+\PhpursThunks::$thunks['Data_Map_Internal_unsafeUnionWith'] = function() { $v = (($GLOBALS['Data_Function_Uncurried_mkFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_mkFn4')))((function() {
   $__fn = function($comp_0, $app_1 = null, $l_2 = null, $r_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Map_Internal_unsafeUnionWith"), recVars=["Data_Map_Internal_unsafeUnionWith"];
-  while (true) {
-if ((is_object($l_2) && (($l_2)->tag === "Leaf"))) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_Map_Internal_unsafeUnionWith"];
+  if ((is_object($l_2) && (($l_2)->tag === "Leaf"))) {
 $__t0 = $r_3;
 } else {
 if ((is_object($r_3) && (($r_3)->tag === "Leaf"))) {
 $__t0 = $l_2;
 } else {
 if ((is_object($r_3) && (($r_3)->tag === "Node"))) {
-$v_4_1 = (($GLOBALS['Data_Map_Internal_unsafeSplit'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeSplit')))($comp_0, ($r_3)->value2, $l_2);
-$l__prime___5_2 = (($GLOBALS['Data_Map_Internal_unsafeUnionWith'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeUnionWith')))($comp_0, $app_1, ($v_4_1)->value1, ($r_3)->value4);
-$r__prime___6_3 = (($GLOBALS['Data_Map_Internal_unsafeUnionWith'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeUnionWith')))($comp_0, $app_1, ($v_4_1)->value2, ($r_3)->value5);
+$v_4_1 = ((((($GLOBALS['Data_Function_Uncurried_runFn3'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn3')))(($GLOBALS['Data_Map_Internal_unsafeSplit'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeSplit'))))($comp_0))(($r_3)->value2))($l_2);
+$l__prime___5_2 = (((((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Map_Internal_unsafeUnionWith'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeUnionWith'))))($comp_0))($app_1))(($v_4_1)->value1))(($r_3)->value4);
+$r__prime___6_3 = (((((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Map_Internal_unsafeUnionWith'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeUnionWith'))))($comp_0))($app_1))(($v_4_1)->value2))(($r_3)->value5);
 if ((is_object(($v_4_1)->value0) && ((($v_4_1)->value0)->tag === "Just"))) {
-$__t4 = (($GLOBALS['Data_Map_Internal_unsafeBalancedNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeBalancedNode')))(($r_3)->value2, (($app_1)((($v_4_1)->value0)->value0))(($r_3)->value3), $l__prime___5_2, $r__prime___6_3);
+$__t4 = (((((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Map_Internal_unsafeBalancedNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeBalancedNode'))))(($r_3)->value2))((($app_1)((($v_4_1)->value0)->value0))(($r_3)->value3)))($l__prime___5_2))($r__prime___6_3);
 } else {
 if ((is_object(($v_4_1)->value0) && ((($v_4_1)->value0)->tag === "Nothing"))) {
-$__t4 = (($GLOBALS['Data_Map_Internal_unsafeBalancedNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeBalancedNode')))(($r_3)->value2, ($r_3)->value3, $l__prime___5_2, $r__prime___6_3);
+$__t4 = (((((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Map_Internal_unsafeBalancedNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeBalancedNode'))))(($r_3)->value2))(($r_3)->value3))($l__prime___5_2))($r__prime___6_3);
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t4 = null;
@@ -653,14 +640,13 @@ $__t0 = null;
 };
 };
 };
-$__res = $__t0;
-goto __end;;
-};
+  $__res = $__t0;
+  goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})(); return $v; };
+})()); return $v; };
 \PhpursThunks::$thunks['Data_Map_Internal_unionWith'] = function() { $v = function($dictOrd_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Map_Internal_unionWith"), recVars=[];
@@ -672,7 +658,7 @@ goto __end;;
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = (($GLOBALS['Data_Map_Internal_unsafeUnionWith'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeUnionWith')))($compare_1_0, $app_2, $m1_3, $m2_4);
+  $__res = (((((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Map_Internal_unsafeUnionWith'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeUnionWith'))))($compare_1_0))($app_2))($m1_3))($m2_4);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -694,7 +680,7 @@ goto __end;;
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = (($GLOBALS['Data_Map_Internal_unsafeUnionWith'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeUnionWith')))($compare_1_0, ($GLOBALS['Data_Function_const'] ?? \PhpursThunks::eval('Data_Function_const')), $m1_2, $m2_3);
+  $__res = (((((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Map_Internal_unsafeUnionWith'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeUnionWith'))))($compare_1_0))(($GLOBALS['Data_Function_const'] ?? \PhpursThunks::eval('Data_Function_const'))))($m1_2))($m2_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -723,15 +709,15 @@ $__t1 = new Phpurs_Data0("Leaf");
 if ((is_object($v_4) && (($v_4)->tag === "Node"))) {
 $v1_5_2 = ((($dictOrd_0)->compare)($k_2))(($v_4)->value2);
 if ((is_object($v1_5_2) && (($v1_5_2)->tag === "LT"))) {
-$__t3 = (($GLOBALS['Data_Map_Internal_unsafeBalancedNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeBalancedNode')))(($v_4)->value2, ($v_4)->value3, ($go_3_0)(($v_4)->value4), ($v_4)->value5);
+$__t3 = (((((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Map_Internal_unsafeBalancedNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeBalancedNode'))))(($v_4)->value2))(($v_4)->value3))(($go_3_0)(($v_4)->value4)))(($v_4)->value5);
 } else {
 if ((is_object($v1_5_2) && (($v1_5_2)->tag === "GT"))) {
-$__t3 = (($GLOBALS['Data_Map_Internal_unsafeBalancedNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeBalancedNode')))(($v_4)->value2, ($v_4)->value3, ($v_4)->value4, ($go_3_0)(($v_4)->value5));
+$__t3 = (((((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Map_Internal_unsafeBalancedNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeBalancedNode'))))(($v_4)->value2))(($v_4)->value3))(($v_4)->value4))(($go_3_0)(($v_4)->value5));
 } else {
 if ((is_object($v1_5_2) && (($v1_5_2)->tag === "EQ"))) {
 $v2_6_4 = ($f_1)(($v_4)->value3);
 if ((is_object($v2_6_4) && (($v2_6_4)->tag === "Nothing"))) {
-$__t5 = (($GLOBALS['Data_Map_Internal_unsafeJoinNodes'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeJoinNodes')))(($v_4)->value4, ($v_4)->value5);
+$__t5 = (((($GLOBALS['Data_Function_Uncurried_runFn2'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn2')))(($GLOBALS['Data_Map_Internal_unsafeJoinNodes'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeJoinNodes'))))(($v_4)->value4))(($v_4)->value5);
 } else {
 if ((is_object($v2_6_4) && (($v2_6_4)->tag === "Just"))) {
 $__t5 = new Phpurs_Data6("Node", ($v_4)->value0, ($v_4)->value1, ($v_4)->value2, ($v2_6_4)->value0, ($v_4)->value4, ($v_4)->value5);
@@ -783,12 +769,12 @@ goto __end;;
   // DEBUG UncurriedAbs: currentBindingName=(Just "go_2_0"), recVars=["go_2_0"];
   while (true) {
 if ((is_object($v_4) && (($v_4)->tag === "Leaf"))) {
-$__t1 = ($ind_3 . "Leaf");
+$__t1 = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))($ind_3))("Leaf");
 } else {
 if ((is_object($v_4) && (($v_4)->tag === "Node"))) {
-$__t1 = (((((((((($ind_3 . "[") . (($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))(($v_4)->value0)) . "] ") . (($dictShow_0)->show)(($v_4)->value2)) . " => ") . (($dictShow1_1)->show)(($v_4)->value3)) . "
-") . (($go_2_0)(($ind_3 . "    ")))(($v_4)->value4)) . "
-") . (($go_2_0)(($ind_3 . "    ")))(($v_4)->value5));
+$__t1 = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))($ind_3))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("["))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))((($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))(($v_4)->value0)))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("] "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))((($dictShow_0)->show)(($v_4)->value2)))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))(" => "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))((($dictShow1_1)->show)(($v_4)->value3)))("
+")))))))))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))((($go_2_0)(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))($ind_3))("    ")))(($v_4)->value4)))("
+")))((($go_2_0)(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))($ind_3))("    ")))(($v_4)->value5)));
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t1 = null;
@@ -828,7 +814,7 @@ goto __end;;
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = (($GLOBALS['Data_Map_Internal_unsafeUnionWith'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeUnionWith')))($compare_2_0, $__local_var_4_1, $m1_5, $m2_6);
+  $__res = (((((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Map_Internal_unsafeUnionWith'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeUnionWith'))))($compare_2_0))($__local_var_4_1))($m1_5))($m2_6);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -856,9 +842,9 @@ goto __end;;
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $v_4_1 = (($GLOBALS['Data_Map_Internal_unsafeSplit'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeSplit')))($compare_1_0, $k_2, $m_3);
+  $v_4_1 = ((((($GLOBALS['Data_Function_Uncurried_runFn3'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn3')))(($GLOBALS['Data_Map_Internal_unsafeSplit'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeSplit'))))($compare_1_0))($k_2))($m_3);
   if ((is_object(($v_4_1)->value0) && ((($v_4_1)->value0)->tag === "Just"))) {
-$__t2 = new Phpurs_Data1("Just", new Phpurs_Data2("Tuple", (($v_4_1)->value0)->value0, (($GLOBALS['Data_Map_Internal_unsafeJoinNodes'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeJoinNodes')))(($v_4_1)->value1, ($v_4_1)->value2)));
+$__t2 = new Phpurs_Data1("Just", new Phpurs_Data2("Tuple", (($v_4_1)->value0)->value0, (((($GLOBALS['Data_Function_Uncurried_runFn2'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn2')))(($GLOBALS['Data_Map_Internal_unsafeJoinNodes'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeJoinNodes'))))(($v_4_1)->value1))(($v_4_1)->value2)));
 } else {
 $__t2 = new Phpurs_Data0("Nothing");
 };
@@ -947,10 +933,10 @@ $__t1 = new Phpurs_Data0("Leaf");
 if ((is_object($v_3) && (($v_3)->tag === "Node"))) {
 $v2_4_2 = (($f_1)(($v_3)->value2))(($v_3)->value3);
 if ((is_object($v2_4_2) && (($v2_4_2)->tag === "Just"))) {
-$__t3 = (($GLOBALS['Data_Map_Internal_unsafeBalancedNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeBalancedNode')))(($v_3)->value2, ($v2_4_2)->value0, ($go_2_0)(($v_3)->value4), ($go_2_0)(($v_3)->value5));
+$__t3 = (((((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Map_Internal_unsafeBalancedNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeBalancedNode'))))(($v_3)->value2))(($v2_4_2)->value0))(($go_2_0)(($v_3)->value4)))(($go_2_0)(($v_3)->value5));
 } else {
 if ((is_object($v2_4_2) && (($v2_4_2)->tag === "Nothing"))) {
-$__t3 = (($GLOBALS['Data_Map_Internal_unsafeJoinNodes'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeJoinNodes')))(($go_2_0)(($v_3)->value4), ($go_2_0)(($v_3)->value5));
+$__t3 = (((($GLOBALS['Data_Function_Uncurried_runFn2'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn2')))(($GLOBALS['Data_Map_Internal_unsafeJoinNodes'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeJoinNodes'))))(($go_2_0)(($v_3)->value4)))(($go_2_0)(($v_3)->value5));
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t3 = null;
@@ -1196,7 +1182,7 @@ $__t0 = null;
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Data_Map_Internal_stepUnorderedCps'] = function() { $v = (($GLOBALS['Data_Map_Internal_stepWith'] ?? \PhpursThunks::eval('Data_Map_Internal_stepWith')))(($GLOBALS['Data_Map_Internal_iterMapU'] ?? \PhpursThunks::eval('Data_Map_Internal_iterMapU'))); return $v; };
-\PhpursThunks::$thunks['Data_Map_Internal_stepUnfoldrUnordered'] = function() { $v = (((($GLOBALS['Data_Map_Internal_stepWith'] ?? \PhpursThunks::eval('Data_Map_Internal_stepWith')))(($GLOBALS['Data_Map_Internal_iterMapU'] ?? \PhpursThunks::eval('Data_Map_Internal_iterMapU'))))((function() {
+\PhpursThunks::$thunks['Data_Map_Internal_stepUnfoldrUnordered'] = function() { $v = (((($GLOBALS['Data_Map_Internal_stepWith'] ?? \PhpursThunks::eval('Data_Map_Internal_stepWith')))(($GLOBALS['Data_Map_Internal_iterMapU'] ?? \PhpursThunks::eval('Data_Map_Internal_iterMapU'))))((($GLOBALS['Data_Function_Uncurried_mkFn3'] ?? \PhpursThunks::eval('Data_Function_Uncurried_mkFn3')))((function() {
   $__fn = function($k_0, $v_1 = null, $next_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -1209,7 +1195,7 @@ $__t0 = null;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})()))(function($v_0) {
+})())))(function($v_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = new Phpurs_Data0("Nothing");
@@ -1225,7 +1211,7 @@ $__t0 = null;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Map_Internal_stepUnordered'] = function() { $v = (((($GLOBALS['Data_Map_Internal_stepWith'] ?? \PhpursThunks::eval('Data_Map_Internal_stepWith')))(($GLOBALS['Data_Map_Internal_iterMapU'] ?? \PhpursThunks::eval('Data_Map_Internal_iterMapU'))))((function() {
+\PhpursThunks::$thunks['Data_Map_Internal_stepUnordered'] = function() { $v = (((($GLOBALS['Data_Map_Internal_stepWith'] ?? \PhpursThunks::eval('Data_Map_Internal_stepWith')))(($GLOBALS['Data_Map_Internal_iterMapU'] ?? \PhpursThunks::eval('Data_Map_Internal_iterMapU'))))((($GLOBALS['Data_Function_Uncurried_mkFn3'] ?? \PhpursThunks::eval('Data_Function_Uncurried_mkFn3')))((function() {
   $__fn = function($k_0, $v_1 = null, $next_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -1238,7 +1224,7 @@ $__t0 = null;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})()))(function($v_0) {
+})())))(function($v_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = new Phpurs_Data0("IterDone");
@@ -1292,7 +1278,7 @@ goto __end;;
 return $go_0_0;
 })(); return $v; };
 \PhpursThunks::$thunks['Data_Map_Internal_stepDescCps'] = function() { $v = (($GLOBALS['Data_Map_Internal_stepWith'] ?? \PhpursThunks::eval('Data_Map_Internal_stepWith')))(($GLOBALS['Data_Map_Internal_iterMapR'] ?? \PhpursThunks::eval('Data_Map_Internal_iterMapR'))); return $v; };
-\PhpursThunks::$thunks['Data_Map_Internal_stepDesc'] = function() { $v = (((($GLOBALS['Data_Map_Internal_stepWith'] ?? \PhpursThunks::eval('Data_Map_Internal_stepWith')))(($GLOBALS['Data_Map_Internal_iterMapR'] ?? \PhpursThunks::eval('Data_Map_Internal_iterMapR'))))((function() {
+\PhpursThunks::$thunks['Data_Map_Internal_stepDesc'] = function() { $v = (((($GLOBALS['Data_Map_Internal_stepWith'] ?? \PhpursThunks::eval('Data_Map_Internal_stepWith')))(($GLOBALS['Data_Map_Internal_iterMapR'] ?? \PhpursThunks::eval('Data_Map_Internal_iterMapR'))))((($GLOBALS['Data_Function_Uncurried_mkFn3'] ?? \PhpursThunks::eval('Data_Function_Uncurried_mkFn3')))((function() {
   $__fn = function($k_0, $v_1 = null, $next_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -1305,7 +1291,7 @@ return $go_0_0;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})()))(function($v_0) {
+})())))(function($v_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = new Phpurs_Data0("IterDone");
@@ -1359,7 +1345,7 @@ goto __end;;
 return $go_0_0;
 })(); return $v; };
 \PhpursThunks::$thunks['Data_Map_Internal_stepAscCps'] = function() { $v = (($GLOBALS['Data_Map_Internal_stepWith'] ?? \PhpursThunks::eval('Data_Map_Internal_stepWith')))(($GLOBALS['Data_Map_Internal_iterMapL'] ?? \PhpursThunks::eval('Data_Map_Internal_iterMapL'))); return $v; };
-\PhpursThunks::$thunks['Data_Map_Internal_stepAsc'] = function() { $v = (((($GLOBALS['Data_Map_Internal_stepWith'] ?? \PhpursThunks::eval('Data_Map_Internal_stepWith')))(($GLOBALS['Data_Map_Internal_iterMapL'] ?? \PhpursThunks::eval('Data_Map_Internal_iterMapL'))))((function() {
+\PhpursThunks::$thunks['Data_Map_Internal_stepAsc'] = function() { $v = (((($GLOBALS['Data_Map_Internal_stepWith'] ?? \PhpursThunks::eval('Data_Map_Internal_stepWith')))(($GLOBALS['Data_Map_Internal_iterMapL'] ?? \PhpursThunks::eval('Data_Map_Internal_iterMapL'))))((($GLOBALS['Data_Function_Uncurried_mkFn3'] ?? \PhpursThunks::eval('Data_Function_Uncurried_mkFn3')))((function() {
   $__fn = function($k_0, $v_1 = null, $next_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -1372,7 +1358,7 @@ return $go_0_0;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})()))(function($v_0) {
+})())))(function($v_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = new Phpurs_Data0("IterDone");
@@ -1399,7 +1385,7 @@ return $go_0_0;
 $v_5_1 = (($GLOBALS['Data_Map_Internal_stepAsc'] ?? \PhpursThunks::eval('Data_Map_Internal_stepAsc')))($a_3);
 if ((is_object($v_5_1) && (($v_5_1)->tag === "IterNext"))) {
 $v2_6_3 = (($GLOBALS['Data_Map_Internal_stepAsc'] ?? \PhpursThunks::eval('Data_Map_Internal_stepAsc')))($b_4);
-$__t2 = ((is_object($v2_6_3) && (($v2_6_3)->tag === "IterNext")) && ((((($dictEq_0)->eq)(($v_5_1)->value0))(($v2_6_3)->value0) && ((($dictEq1_1)->eq)(($v_5_1)->value1))(($v2_6_3)->value1)) && (($go_2_0)(($v_5_1)->value2))(($v2_6_3)->value2)));
+$__t2 = ((is_object($v2_6_3) && (($v2_6_3)->tag === "IterNext")) && (((($GLOBALS['Data_HeytingAlgebra_boolConj'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolConj')))(((($dictEq_0)->eq)(($v_5_1)->value0))(($v2_6_3)->value0)))(((($dictEq1_1)->eq)(($v_5_1)->value1))(($v2_6_3)->value1)) && (($go_2_0)(($v_5_1)->value2))(($v2_6_3)->value2)));
 } else {
 if ((is_object($v_5_1) && (($v_5_1)->tag === "IterDone"))) {
 $__t2 = true;
@@ -1512,7 +1498,7 @@ goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Map_Internal_stepUnfoldr'] = function() { $v = (((($GLOBALS['Data_Map_Internal_stepWith'] ?? \PhpursThunks::eval('Data_Map_Internal_stepWith')))(($GLOBALS['Data_Map_Internal_iterMapL'] ?? \PhpursThunks::eval('Data_Map_Internal_iterMapL'))))((function() {
+\PhpursThunks::$thunks['Data_Map_Internal_stepUnfoldr'] = function() { $v = (((($GLOBALS['Data_Map_Internal_stepWith'] ?? \PhpursThunks::eval('Data_Map_Internal_stepWith')))(($GLOBALS['Data_Map_Internal_iterMapL'] ?? \PhpursThunks::eval('Data_Map_Internal_iterMapL'))))((($GLOBALS['Data_Function_Uncurried_mkFn3'] ?? \PhpursThunks::eval('Data_Function_Uncurried_mkFn3')))((function() {
   $__fn = function($k_0, $v_1 = null, $next_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -1525,7 +1511,7 @@ goto __end;;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})()))(function($v_0) {
+})())))(function($v_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = new Phpurs_Data0("Nothing");
@@ -1549,18 +1535,11 @@ goto __end;;
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Map_Internal_showMap"), recVars=[];
-  $show1_2_0 = (($GLOBALS['Data_Show_showArrayImpl'] ?? \PhpursThunks::eval('Data_Show_showArrayImpl')))(function($v_2) use ($dictShow1_1, $dictShow_0) {
-  $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = (((("(Tuple " . (($dictShow_0)->show)(($v_2)->value0)) . " ") . (($dictShow1_1)->show)(($v_2)->value1)) . ")");
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
+  $show1_2_0 = (($GLOBALS['Data_Show_showArrayImpl'] ?? \PhpursThunks::eval('Data_Show_showArrayImpl')))((((($GLOBALS['Data_Tuple_showTuple'] ?? \PhpursThunks::eval('Data_Tuple_showTuple')))($dictShow_0))($dictShow1_1))->show);
   $__res = (object)["show" => function($as_3) use ($show1_2_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = (("(fromFoldable " . ($show1_2_0)((($GLOBALS['Data_Map_Internal_toUnfoldable1'] ?? \PhpursThunks::eval('Data_Map_Internal_toUnfoldable1')))($as_3))) . ")");
+  $__res = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("(fromFoldable "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))(($show1_2_0)((($GLOBALS['Data_Map_Internal_toUnfoldable1'] ?? \PhpursThunks::eval('Data_Map_Internal_toUnfoldable1')))($as_3))))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1639,7 +1618,7 @@ if ((is_object($v1_7_9) && (($v1_7_9)->tag === "Nothing"))) {
 $__t10 = false;
 } else {
 if ((is_object($v1_7_9) && (($v1_7_9)->tag === "Just"))) {
-$__t10 = (((($dictEq_1)->eq)(($m1_3)->value3))(($v1_7_9)->value0) && ((($go_2_0)(($m1_3)->value4))($m2_4) && (($go_2_0)(($m1_3)->value5))($m2_4)));
+$__t10 = ((($GLOBALS['Data_HeytingAlgebra_boolConj'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolConj')))(((($dictEq_1)->eq)(($m1_3)->value3))(($v1_7_9)->value0)))(((($GLOBALS['Data_HeytingAlgebra_boolConj'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolConj')))((($go_2_0)(($m1_3)->value4))($m2_4)))((($go_2_0)(($m1_3)->value5))($m2_4)));
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t10 = null;
@@ -1685,7 +1664,7 @@ goto __end;;
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = (($GLOBALS['Data_Map_Internal_unsafeIntersectionWith'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeIntersectionWith')))($compare_1_0, $app_2, $m1_3, $m2_4);
+  $__res = (((((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Map_Internal_unsafeIntersectionWith'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeIntersectionWith'))))($compare_1_0))($app_2))($m1_3))($m2_4);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -1707,7 +1686,7 @@ goto __end;;
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = (($GLOBALS['Data_Map_Internal_unsafeIntersectionWith'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeIntersectionWith')))($compare_1_0, ($GLOBALS['Data_Function_const'] ?? \PhpursThunks::eval('Data_Function_const')), $m1_2, $m2_3);
+  $__res = (((((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Map_Internal_unsafeIntersectionWith'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeIntersectionWith'))))($compare_1_0))(($GLOBALS['Data_Function_const'] ?? \PhpursThunks::eval('Data_Function_const'))))($m1_2))($m2_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1736,10 +1715,10 @@ $__t1 = new Phpurs_Data6("Node", 1, 1, $k_2, $v_3, new Phpurs_Data0("Leaf"), new
 if ((is_object($v1_5) && (($v1_5)->tag === "Node"))) {
 $v2_6_2 = ((($dictOrd_0)->compare)($k_2))(($v1_5)->value2);
 if ((is_object($v2_6_2) && (($v2_6_2)->tag === "LT"))) {
-$__t3 = (($GLOBALS['Data_Map_Internal_unsafeBalancedNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeBalancedNode')))(($v1_5)->value2, ($v1_5)->value3, ($go_4_0)(($v1_5)->value4), ($v1_5)->value5);
+$__t3 = (((((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Map_Internal_unsafeBalancedNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeBalancedNode'))))(($v1_5)->value2))(($v1_5)->value3))(($go_4_0)(($v1_5)->value4)))(($v1_5)->value5);
 } else {
 if ((is_object($v2_6_2) && (($v2_6_2)->tag === "GT"))) {
-$__t3 = (($GLOBALS['Data_Map_Internal_unsafeBalancedNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeBalancedNode')))(($v1_5)->value2, ($v1_5)->value3, ($v1_5)->value4, ($go_4_0)(($v1_5)->value5));
+$__t3 = (((((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Map_Internal_unsafeBalancedNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeBalancedNode'))))(($v1_5)->value2))(($v1_5)->value3))(($v1_5)->value4))(($go_4_0)(($v1_5)->value5));
 } else {
 if ((is_object($v2_6_2) && (($v2_6_2)->tag === "EQ"))) {
 $__t3 = new Phpurs_Data6("Node", ($v1_5)->value0, ($v1_5)->value1, $k_2, (($app_1)(($v1_5)->value3))($v_3), ($v1_5)->value4, ($v1_5)->value5);
@@ -1786,10 +1765,10 @@ $__t1 = new Phpurs_Data6("Node", 1, 1, $k_1, $v_2, new Phpurs_Data0("Leaf"), new
 if ((is_object($v1_4) && (($v1_4)->tag === "Node"))) {
 $v2_5_2 = ((($dictOrd_0)->compare)($k_1))(($v1_4)->value2);
 if ((is_object($v2_5_2) && (($v2_5_2)->tag === "LT"))) {
-$__t3 = (($GLOBALS['Data_Map_Internal_unsafeBalancedNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeBalancedNode')))(($v1_4)->value2, ($v1_4)->value3, ($go_3_0)(($v1_4)->value4), ($v1_4)->value5);
+$__t3 = (((((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Map_Internal_unsafeBalancedNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeBalancedNode'))))(($v1_4)->value2))(($v1_4)->value3))(($go_3_0)(($v1_4)->value4)))(($v1_4)->value5);
 } else {
 if ((is_object($v2_5_2) && (($v2_5_2)->tag === "GT"))) {
-$__t3 = (($GLOBALS['Data_Map_Internal_unsafeBalancedNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeBalancedNode')))(($v1_4)->value2, ($v1_4)->value3, ($v1_4)->value4, ($go_3_0)(($v1_4)->value5));
+$__t3 = (((((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Map_Internal_unsafeBalancedNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeBalancedNode'))))(($v1_4)->value2))(($v1_4)->value3))(($v1_4)->value4))(($go_3_0)(($v1_4)->value5));
 } else {
 if ((is_object($v2_5_2) && (($v2_5_2)->tag === "EQ"))) {
 $__t3 = new Phpurs_Data6("Node", ($v1_4)->value0, ($v1_4)->value1, $k_1, $v_2, ($v1_4)->value4, ($v1_4)->value5);
@@ -1891,41 +1870,34 @@ goto __end;;
   }
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $go_2_0 = null;
-  $go_2_0 = (function() use ($f_0, &$go_2_0) {
+  $go_2_0 = (($GLOBALS['Data_Function_Uncurried_mkFn2'] ?? \PhpursThunks::eval('Data_Function_Uncurried_mkFn2')))((function() use ($f_0, &$go_2_0) {
   $__fn = function($m__prime___3, $z__prime___4 = null) use ($f_0, &$go_2_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  // DEBUG UncurriedAbs: currentBindingName=(Just "go_2_0"), recVars=["go_2_0"];
-  while (true) {
-if ((is_object($m__prime___3) && (($m__prime___3)->tag === "Leaf"))) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["go_2_0"];
+  if ((is_object($m__prime___3) && (($m__prime___3)->tag === "Leaf"))) {
 $__t1 = $z__prime___4;
 } else {
 if ((is_object($m__prime___3) && (($m__prime___3)->tag === "Node"))) {
-$__tco_2 = ($m__prime___3)->value4;
-$__tco_3 = (($f_0)(($m__prime___3)->value3))(($go_2_0)(($m__prime___3)->value5, $z__prime___4));
-$m__prime___3 = $__tco_2;
-$z__prime___4 = $__tco_3;
-continue ;
-$__t1 = null;
+$__t1 = (((($GLOBALS['Data_Function_Uncurried_runFn2'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn2')))($go_2_0))(($m__prime___3)->value4))((($f_0)(($m__prime___3)->value3))((((($GLOBALS['Data_Function_Uncurried_runFn2'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn2')))($go_2_0))(($m__prime___3)->value5))($z__prime___4)));
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t1 = null;
 };
 };
-$__res = $__t1;
-goto __end;;
-};
+  $__res = $__t1;
+  goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})();
+})());
   $__res = function($m_3) use (&$go_2_0, $z_1) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["go_2_0"];
-  $__res = ($go_2_0)($m_3, $z_1);
+  $__res = (((($GLOBALS['Data_Function_Uncurried_runFn2'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn2')))($go_2_0))($m_3))($z_1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1942,42 +1914,35 @@ goto __end;;
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $go_2_4 = null;
-  $go_2_4 = (function() use ($f_0, &$go_2_4) {
-  $__fn = function($z__prime___3, $m__prime___4 = null) use ($f_0, &$go_2_4, &$__fn) {
+  $go_2_2 = null;
+  $go_2_2 = (($GLOBALS['Data_Function_Uncurried_mkFn2'] ?? \PhpursThunks::eval('Data_Function_Uncurried_mkFn2')))((function() use ($f_0, &$go_2_2) {
+  $__fn = function($z__prime___3, $m__prime___4 = null) use ($f_0, &$go_2_2, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  // DEBUG UncurriedAbs: currentBindingName=(Just "go_2_4"), recVars=["go_2_4"];
-  while (true) {
-if ((is_object($m__prime___4) && (($m__prime___4)->tag === "Leaf"))) {
-$__t5 = $z__prime___3;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["go_2_2"];
+  if ((is_object($m__prime___4) && (($m__prime___4)->tag === "Leaf"))) {
+$__t3 = $z__prime___3;
 } else {
 if ((is_object($m__prime___4) && (($m__prime___4)->tag === "Node"))) {
-$__tco_6 = (($f_0)(($go_2_4)($z__prime___3, ($m__prime___4)->value4)))(($m__prime___4)->value3);
-$__tco_7 = ($m__prime___4)->value5;
-$z__prime___3 = $__tco_6;
-$m__prime___4 = $__tco_7;
-continue ;
-$__t5 = null;
+$__t3 = (((($GLOBALS['Data_Function_Uncurried_runFn2'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn2')))($go_2_2))((($f_0)((((($GLOBALS['Data_Function_Uncurried_runFn2'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn2')))($go_2_2))($z__prime___3))(($m__prime___4)->value4)))(($m__prime___4)->value3)))(($m__prime___4)->value5);
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t5 = null;
+$__t3 = null;
 };
 };
-$__res = $__t5;
-goto __end;;
-};
+  $__res = $__t3;
+  goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})();
-  $__res = function($m_3) use (&$go_2_4, $z_1) {
+})());
+  $__res = function($m_3) use (&$go_2_2, $z_1) {
   $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["go_2_4"];
-  $__res = ($go_2_4)($z_1, $m_3);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["go_2_2"];
+  $__res = (((($GLOBALS['Data_Function_Uncurried_runFn2'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn2')))($go_2_2))($z_1))($m_3);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1990,33 +1955,33 @@ goto __end;;
 })(), "foldMap" => function($dictMonoid_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $mempty_1_8 = ($dictMonoid_0)->mempty;
-  $__local_var_2_9 = (($dictMonoid_0)->Semigroup0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $__res = function($f_3) use ($__local_var_2_9, $mempty_1_8) {
+  $mempty_1_4 = ($dictMonoid_0)->mempty;
+  $__local_var_2_5 = (($dictMonoid_0)->Semigroup0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__res = function($f_3) use ($__local_var_2_5, $mempty_1_4) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $go_4_10 = null;
-  $go_4_10 = function($v_5) use ($__local_var_2_9, $f_3, &$go_4_10, $mempty_1_8) {
+  $go_4_6 = null;
+  $go_4_6 = function($v_5) use ($__local_var_2_5, $f_3, &$go_4_6, $mempty_1_4) {
   $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=(Just "go_4_10"), recVars=["go_4_10"];
+  // DEBUG UncurriedAbs: currentBindingName=(Just "go_4_6"), recVars=["go_4_6"];
   while (true) {
 if ((is_object($v_5) && (($v_5)->tag === "Leaf"))) {
-$__t11 = $mempty_1_8;
+$__t7 = $mempty_1_4;
 } else {
 if ((is_object($v_5) && (($v_5)->tag === "Node"))) {
-$__t11 = ((($__local_var_2_9)->append)(($go_4_10)(($v_5)->value4)))(((($__local_var_2_9)->append)(($f_3)(($v_5)->value3)))(($go_4_10)(($v_5)->value5)));
+$__t7 = ((($__local_var_2_5)->append)(($go_4_6)(($v_5)->value4)))(((($__local_var_2_5)->append)(($f_3)(($v_5)->value3)))(($go_4_6)(($v_5)->value5)));
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t11 = null;
+$__t7 = null;
 };
 };
-$__res = $__t11;
+$__res = $__t7;
 goto __end;;
 };
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = $go_4_10;
+  $__res = $go_4_6;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -2033,41 +1998,34 @@ goto __end;;
   }
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $go_2_0 = null;
-  $go_2_0 = (function() use ($f_0, &$go_2_0) {
+  $go_2_0 = (($GLOBALS['Data_Function_Uncurried_mkFn2'] ?? \PhpursThunks::eval('Data_Function_Uncurried_mkFn2')))((function() use ($f_0, &$go_2_0) {
   $__fn = function($m__prime___3, $z__prime___4 = null) use ($f_0, &$go_2_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  // DEBUG UncurriedAbs: currentBindingName=(Just "go_2_0"), recVars=["go_2_0"];
-  while (true) {
-if ((is_object($m__prime___3) && (($m__prime___3)->tag === "Leaf"))) {
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["go_2_0"];
+  if ((is_object($m__prime___3) && (($m__prime___3)->tag === "Leaf"))) {
 $__t1 = $z__prime___4;
 } else {
 if ((is_object($m__prime___3) && (($m__prime___3)->tag === "Node"))) {
-$__tco_2 = ($m__prime___3)->value4;
-$__tco_3 = ((($f_0)(($m__prime___3)->value2))(($m__prime___3)->value3))(($go_2_0)(($m__prime___3)->value5, $z__prime___4));
-$m__prime___3 = $__tco_2;
-$z__prime___4 = $__tco_3;
-continue ;
-$__t1 = null;
+$__t1 = (((($GLOBALS['Data_Function_Uncurried_runFn2'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn2')))($go_2_0))(($m__prime___3)->value4))(((($f_0)(($m__prime___3)->value2))(($m__prime___3)->value3))((((($GLOBALS['Data_Function_Uncurried_runFn2'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn2')))($go_2_0))(($m__prime___3)->value5))($z__prime___4)));
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t1 = null;
 };
 };
-$__res = $__t1;
-goto __end;;
-};
+  $__res = $__t1;
+  goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})();
+})());
   $__res = function($m_3) use (&$go_2_0, $z_1) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["go_2_0"];
-  $__res = ($go_2_0)($m_3, $z_1);
+  $__res = (((($GLOBALS['Data_Function_Uncurried_runFn2'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn2')))($go_2_0))($m_3))($z_1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -2084,42 +2042,35 @@ goto __end;;
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $go_2_4 = null;
-  $go_2_4 = (function() use ($f_0, &$go_2_4) {
-  $__fn = function($z__prime___3, $m__prime___4 = null) use ($f_0, &$go_2_4, &$__fn) {
+  $go_2_2 = null;
+  $go_2_2 = (($GLOBALS['Data_Function_Uncurried_mkFn2'] ?? \PhpursThunks::eval('Data_Function_Uncurried_mkFn2')))((function() use ($f_0, &$go_2_2) {
+  $__fn = function($z__prime___3, $m__prime___4 = null) use ($f_0, &$go_2_2, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  // DEBUG UncurriedAbs: currentBindingName=(Just "go_2_4"), recVars=["go_2_4"];
-  while (true) {
-if ((is_object($m__prime___4) && (($m__prime___4)->tag === "Leaf"))) {
-$__t5 = $z__prime___3;
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["go_2_2"];
+  if ((is_object($m__prime___4) && (($m__prime___4)->tag === "Leaf"))) {
+$__t3 = $z__prime___3;
 } else {
 if ((is_object($m__prime___4) && (($m__prime___4)->tag === "Node"))) {
-$__tco_6 = ((($f_0)(($m__prime___4)->value2))(($go_2_4)($z__prime___3, ($m__prime___4)->value4)))(($m__prime___4)->value3);
-$__tco_7 = ($m__prime___4)->value5;
-$z__prime___3 = $__tco_6;
-$m__prime___4 = $__tco_7;
-continue ;
-$__t5 = null;
+$__t3 = (((($GLOBALS['Data_Function_Uncurried_runFn2'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn2')))($go_2_2))(((($f_0)(($m__prime___4)->value2))((((($GLOBALS['Data_Function_Uncurried_runFn2'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn2')))($go_2_2))($z__prime___3))(($m__prime___4)->value4)))(($m__prime___4)->value3)))(($m__prime___4)->value5);
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t5 = null;
+$__t3 = null;
 };
 };
-$__res = $__t5;
-goto __end;;
-};
+  $__res = $__t3;
+  goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})();
-  $__res = function($m_3) use (&$go_2_4, $z_1) {
+})());
+  $__res = function($m_3) use (&$go_2_2, $z_1) {
   $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["go_2_4"];
-  $__res = ($go_2_4)($z_1, $m_3);
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["go_2_2"];
+  $__res = (((($GLOBALS['Data_Function_Uncurried_runFn2'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn2')))($go_2_2))($z_1))($m_3);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -2132,33 +2083,33 @@ goto __end;;
 })(), "foldMapWithIndex" => function($dictMonoid_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $mempty_1_8 = ($dictMonoid_0)->mempty;
-  $__local_var_2_9 = (($dictMonoid_0)->Semigroup0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $__res = function($f_3) use ($__local_var_2_9, $mempty_1_8) {
+  $mempty_1_4 = ($dictMonoid_0)->mempty;
+  $__local_var_2_5 = (($dictMonoid_0)->Semigroup0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__res = function($f_3) use ($__local_var_2_5, $mempty_1_4) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $go_4_10 = null;
-  $go_4_10 = function($v_5) use ($__local_var_2_9, $f_3, &$go_4_10, $mempty_1_8) {
+  $go_4_6 = null;
+  $go_4_6 = function($v_5) use ($__local_var_2_5, $f_3, &$go_4_6, $mempty_1_4) {
   $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=(Just "go_4_10"), recVars=["go_4_10"];
+  // DEBUG UncurriedAbs: currentBindingName=(Just "go_4_6"), recVars=["go_4_6"];
   while (true) {
 if ((is_object($v_5) && (($v_5)->tag === "Leaf"))) {
-$__t11 = $mempty_1_8;
+$__t7 = $mempty_1_4;
 } else {
 if ((is_object($v_5) && (($v_5)->tag === "Node"))) {
-$__t11 = ((($__local_var_2_9)->append)(($go_4_10)(($v_5)->value4)))(((($__local_var_2_9)->append)((($f_3)(($v_5)->value2))(($v_5)->value3)))(($go_4_10)(($v_5)->value5)));
+$__t7 = ((($__local_var_2_5)->append)(($go_4_6)(($v_5)->value4)))(((($__local_var_2_5)->append)((($f_3)(($v_5)->value2))(($v_5)->value3)))(($go_4_6)(($v_5)->value5)));
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t11 = null;
+$__t7 = null;
 };
 };
-$__res = $__t11;
+$__res = $__t7;
 goto __end;;
 };
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = $go_4_10;
+  $__res = $go_4_6;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -2174,48 +2125,20 @@ goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
-\PhpursThunks::$thunks['Data_Map_Internal_keys'] = function() { $v = (function() use (&$__fn) {
-$go_0_0 = null;
-$go_0_0 = (function() use (&$go_0_0) {
-  $__fn = function($m__prime___1, $z__prime___2 = null) use (&$go_0_0, &$__fn) {
+\PhpursThunks::$thunks['Data_Map_Internal_keys'] = function() { $v = (((($GLOBALS['Data_Map_Internal_foldableWithIndexMap'] ?? \PhpursThunks::eval('Data_Map_Internal_foldableWithIndexMap')))->foldrWithIndex)((function() {
+  $__fn = function($k_0, $v_1 = null, $acc_2 = null) use (&$__fn) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  if ($__num < 3) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  // DEBUG UncurriedAbs: currentBindingName=(Just "go_0_0"), recVars=["go_0_0"];
-  while (true) {
-if ((is_object($m__prime___1) && (($m__prime___1)->tag === "Leaf"))) {
-$__t1 = $z__prime___2;
-} else {
-if ((is_object($m__prime___1) && (($m__prime___1)->tag === "Node"))) {
-$__tco_2 = ($m__prime___1)->value4;
-$__tco_3 = new Phpurs_Data2("Cons", ($m__prime___1)->value2, ($go_0_0)(($m__prime___1)->value5, $z__prime___2));
-$m__prime___1 = $__tco_2;
-$z__prime___2 = $__tco_3;
-continue ;
-$__t1 = null;
-} else {
-throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t1 = null;
-};
-};
-$__res = $__t1;
-goto __end;;
-};
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
-return function($m_1) use (&$go_0_0) {
-  $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["go_0_0"];
-  $__res = ($go_0_0)($m_1, new Phpurs_Data0("Nil"));
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = new Phpurs_Data2("Cons", $k_0, $acc_2);
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
-})(); return $v; };
+  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+  };
+  return $__fn;
+})()))(new Phpurs_Data0("Nil")); return $v; };
 \PhpursThunks::$thunks['Data_Map_Internal_traversableMap'] = function() { $v = (object)["traverse" => function($dictApplicative_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Data_Map_Internal_traversableMap"];
@@ -2364,48 +2287,7 @@ goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
-\PhpursThunks::$thunks['Data_Map_Internal_values'] = function() { $v = (function() use (&$__fn) {
-$go_0_0 = null;
-$go_0_0 = (function() use (&$go_0_0) {
-  $__fn = function($m__prime___1, $z__prime___2 = null) use (&$go_0_0, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  // DEBUG UncurriedAbs: currentBindingName=(Just "go_0_0"), recVars=["go_0_0"];
-  while (true) {
-if ((is_object($m__prime___1) && (($m__prime___1)->tag === "Leaf"))) {
-$__t1 = $z__prime___2;
-} else {
-if ((is_object($m__prime___1) && (($m__prime___1)->tag === "Node"))) {
-$__tco_2 = ($m__prime___1)->value4;
-$__tco_3 = new Phpurs_Data2("Cons", ($m__prime___1)->value3, ($go_0_0)(($m__prime___1)->value5, $z__prime___2));
-$m__prime___1 = $__tco_2;
-$z__prime___2 = $__tco_3;
-continue ;
-$__t1 = null;
-} else {
-throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t1 = null;
-};
-};
-$__res = $__t1;
-goto __end;;
-};
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
-return function($m_1) use (&$go_0_0) {
-  $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["go_0_0"];
-  $__res = ($go_0_0)($m_1, new Phpurs_Data0("Nil"));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
-})(); return $v; };
+\PhpursThunks::$thunks['Data_Map_Internal_values'] = function() { $v = (((($GLOBALS['Data_Map_Internal_foldableMap'] ?? \PhpursThunks::eval('Data_Map_Internal_foldableMap')))->foldr)(($GLOBALS['Data_List_Types_Cons'] ?? \PhpursThunks::eval('Data_List_Types_Cons'))))(new Phpurs_Data0("Nil")); return $v; };
 \PhpursThunks::$thunks['Data_Map_Internal_foldSubmapBy'] = function() { $v = (function() {
   $__fn = function($dictOrd_0, $appendFn_1 = null, $memptyValue_2 = null, $kmin_3 = null, $kmax_4 = null, $f_5 = null) use (&$__fn) {
   $__num = \func_num_args();
@@ -2472,7 +2354,7 @@ $__local_var_9_9 = ($kmin_3)->value0;
 $__t7 = function($k_10) use ($__local_var_8_8, $__local_var_9_9, $dictOrd_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = (( ! (is_object(((($dictOrd_0)->compare)($__local_var_9_9))($k_10)) && ((((($dictOrd_0)->compare)($__local_var_9_9))($k_10))->tag === "GT"))) && ( ! (is_object(((($dictOrd_0)->compare)($k_10))($__local_var_8_8)) && ((((($dictOrd_0)->compare)($k_10))($__local_var_8_8))->tag === "GT"))));
+  $__res = ((($GLOBALS['Data_HeytingAlgebra_boolConj'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolConj')))(( ! (is_object(((($dictOrd_0)->compare)($__local_var_9_9))($k_10)) && ((((($dictOrd_0)->compare)($__local_var_9_9))($k_10))->tag === "GT")))))(( ! (is_object(((($dictOrd_0)->compare)($k_10))($__local_var_8_8)) && ((((($dictOrd_0)->compare)($k_10))($__local_var_8_8))->tag === "GT"))));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -2776,9 +2658,9 @@ $__t1 = new Phpurs_Data0("Leaf");
 } else {
 if ((is_object($v_3) && (($v_3)->tag === "Node"))) {
 if ((($f_1)(($v_3)->value2))(($v_3)->value3)) {
-$__t2 = (($GLOBALS['Data_Map_Internal_unsafeBalancedNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeBalancedNode')))(($v_3)->value2, ($v_3)->value3, ($go_2_0)(($v_3)->value4), ($go_2_0)(($v_3)->value5));
+$__t2 = (((((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Map_Internal_unsafeBalancedNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeBalancedNode'))))(($v_3)->value2))(($v_3)->value3))(($go_2_0)(($v_3)->value4)))(($go_2_0)(($v_3)->value5));
 } else {
-$__t2 = (($GLOBALS['Data_Map_Internal_unsafeJoinNodes'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeJoinNodes')))(($go_2_0)(($v_3)->value4), ($go_2_0)(($v_3)->value5));
+$__t2 = (((($GLOBALS['Data_Function_Uncurried_runFn2'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn2')))(($GLOBALS['Data_Map_Internal_unsafeJoinNodes'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeJoinNodes'))))(($go_2_0)(($v_3)->value4)))(($go_2_0)(($v_3)->value5));
 };
 $__t1 = $__t2;
 } else {
@@ -2816,9 +2698,9 @@ $__t1 = new Phpurs_Data0("Leaf");
 } else {
 if ((is_object($v_3) && (($v_3)->tag === "Node"))) {
 if (($f_1)(($v_3)->value2)) {
-$__t2 = (($GLOBALS['Data_Map_Internal_unsafeBalancedNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeBalancedNode')))(($v_3)->value2, ($v_3)->value3, ($go_2_0)(($v_3)->value4), ($go_2_0)(($v_3)->value5));
+$__t2 = (((((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Map_Internal_unsafeBalancedNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeBalancedNode'))))(($v_3)->value2))(($v_3)->value3))(($go_2_0)(($v_3)->value4)))(($go_2_0)(($v_3)->value5));
 } else {
-$__t2 = (($GLOBALS['Data_Map_Internal_unsafeJoinNodes'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeJoinNodes')))(($go_2_0)(($v_3)->value4), ($go_2_0)(($v_3)->value5));
+$__t2 = (((($GLOBALS['Data_Function_Uncurried_runFn2'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn2')))(($GLOBALS['Data_Map_Internal_unsafeJoinNodes'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeJoinNodes'))))(($go_2_0)(($v_3)->value4)))(($go_2_0)(($v_3)->value5));
 };
 $__t1 = $__t2;
 } else {
@@ -2865,7 +2747,7 @@ goto __end;;
 $__t0 = (is_object($ys_3) && (($ys_3)->tag === "Leaf"));
 } else {
 if ((is_object($xs_2) && (($xs_2)->tag === "Node"))) {
-$__t0 = ((is_object($ys_3) && (($ys_3)->tag === "Node")) && ((($xs_2)->value1 === ($ys_3)->value1) && (((((($GLOBALS['Data_Map_Internal_eqMapIter'] ?? \PhpursThunks::eval('Data_Map_Internal_eqMapIter')))($dictEq_0))($dictEq1_1))->eq)(new Phpurs_Data2("IterNode", $xs_2, new Phpurs_Data0("IterLeaf"))))(new Phpurs_Data2("IterNode", $ys_3, new Phpurs_Data0("IterLeaf")))));
+$__t0 = ((is_object($ys_3) && (($ys_3)->tag === "Node")) && (((($GLOBALS['Data_Eq_eqIntImpl'] ?? \PhpursThunks::eval('Data_Eq_eqIntImpl')))(($xs_2)->value1))(($ys_3)->value1) && (((((($GLOBALS['Data_Map_Internal_eqMapIter'] ?? \PhpursThunks::eval('Data_Map_Internal_eqMapIter')))($dictEq_0))($dictEq1_1))->eq)(new Phpurs_Data2("IterNode", $xs_2, new Phpurs_Data0("IterLeaf"))))(new Phpurs_Data2("IterNode", $ys_3, new Phpurs_Data0("IterLeaf")))));
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t0 = null;
@@ -3127,7 +3009,7 @@ $__t3 = (((($ordMapIter1_1_0)($dictOrd1_3))->compare)(new Phpurs_Data2("IterNode
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = (($GLOBALS['Data_Map_Internal_unsafeUnionWith'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeUnionWith')))($compare_1_0, ($GLOBALS['Data_Function_const'] ?? \PhpursThunks::eval('Data_Function_const')), $m1_4, $m2_5);
+  $__res = (((((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Map_Internal_unsafeUnionWith'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeUnionWith'))))($compare_1_0))(($GLOBALS['Data_Function_const'] ?? \PhpursThunks::eval('Data_Function_const'))))($m1_4))($m2_5);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -3158,7 +3040,7 @@ $__t3 = (((($ordMapIter1_1_0)($dictOrd1_3))->compare)(new Phpurs_Data2("IterNode
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = (($GLOBALS['Data_Map_Internal_unsafeUnionWith'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeUnionWith')))($compare_1_0, ($GLOBALS['Data_Function_const'] ?? \PhpursThunks::eval('Data_Function_const')), $m1_3, $m2_4);
+  $__res = (((((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Map_Internal_unsafeUnionWith'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeUnionWith'))))($compare_1_0))(($GLOBALS['Data_Function_const'] ?? \PhpursThunks::eval('Data_Function_const'))))($m1_3))($m2_4);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -3184,7 +3066,7 @@ $__t3 = (((($ordMapIter1_1_0)($dictOrd1_3))->compare)(new Phpurs_Data2("IterNode
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = (($GLOBALS['Data_Map_Internal_unsafeDifference'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeDifference')))($compare_1_0, $m1_2, $m2_3);
+  $__res = ((((($GLOBALS['Data_Function_Uncurried_runFn3'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn3')))(($GLOBALS['Data_Map_Internal_unsafeDifference'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeDifference'))))($compare_1_0))($m1_2))($m2_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -3213,13 +3095,13 @@ $__t1 = new Phpurs_Data0("Leaf");
 if ((is_object($v_3) && (($v_3)->tag === "Node"))) {
 $v1_4_2 = ((($dictOrd_0)->compare)($k_1))(($v_3)->value2);
 if ((is_object($v1_4_2) && (($v1_4_2)->tag === "LT"))) {
-$__t3 = (($GLOBALS['Data_Map_Internal_unsafeBalancedNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeBalancedNode')))(($v_3)->value2, ($v_3)->value3, ($go_2_0)(($v_3)->value4), ($v_3)->value5);
+$__t3 = (((((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Map_Internal_unsafeBalancedNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeBalancedNode'))))(($v_3)->value2))(($v_3)->value3))(($go_2_0)(($v_3)->value4)))(($v_3)->value5);
 } else {
 if ((is_object($v1_4_2) && (($v1_4_2)->tag === "GT"))) {
-$__t3 = (($GLOBALS['Data_Map_Internal_unsafeBalancedNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeBalancedNode')))(($v_3)->value2, ($v_3)->value3, ($v_3)->value4, ($go_2_0)(($v_3)->value5));
+$__t3 = (((((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Map_Internal_unsafeBalancedNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeBalancedNode'))))(($v_3)->value2))(($v_3)->value3))(($v_3)->value4))(($go_2_0)(($v_3)->value5));
 } else {
 if ((is_object($v1_4_2) && (($v1_4_2)->tag === "EQ"))) {
-$__t3 = (($GLOBALS['Data_Map_Internal_unsafeJoinNodes'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeJoinNodes')))(($v_3)->value4, ($v_3)->value5);
+$__t3 = (((($GLOBALS['Data_Function_Uncurried_runFn2'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn2')))(($GLOBALS['Data_Map_Internal_unsafeJoinNodes'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeJoinNodes'))))(($v_3)->value4))(($v_3)->value5);
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t3 = null;
@@ -3262,7 +3144,7 @@ if ((is_object(($v_2)->value5) && ((($v_2)->value5)->tag === "Leaf"))) {
 $__t3 = true;
 } else {
 if ((is_object(($v_2)->value5) && ((($v_2)->value5)->tag === "Node"))) {
-$__t3 = ((($v_2)->value0 === 2) && (((($v_2)->value5)->value0 === 1) && ((($v_2)->value1 > (($v_2)->value5)->value1) && ((is_object(((($dictOrd_0)->compare)((($v_2)->value5)->value2))(($v_2)->value2)) && ((((($dictOrd_0)->compare)((($v_2)->value5)->value2))(($v_2)->value2))->tag === "GT")) && ($go_1_0)(($v_2)->value5)))));
+$__t3 = ((($GLOBALS['Data_HeytingAlgebra_boolConj'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolConj')))(((($GLOBALS['Data_Eq_eqIntImpl'] ?? \PhpursThunks::eval('Data_Eq_eqIntImpl')))(($v_2)->value0))(2)))(((($GLOBALS['Data_HeytingAlgebra_boolConj'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolConj')))(((($GLOBALS['Data_Eq_eqIntImpl'] ?? \PhpursThunks::eval('Data_Eq_eqIntImpl')))((($v_2)->value5)->value0))(1)))(((($GLOBALS['Data_HeytingAlgebra_boolConj'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolConj')))((is_object((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)(($v_2)->value1))((($v_2)->value5)->value1)) && (((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)(($v_2)->value1))((($v_2)->value5)->value1))->tag === "GT"))))(((($GLOBALS['Data_HeytingAlgebra_boolConj'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolConj')))((is_object(((($dictOrd_0)->compare)((($v_2)->value5)->value2))(($v_2)->value2)) && ((((($dictOrd_0)->compare)((($v_2)->value5)->value2))(($v_2)->value2))->tag === "GT"))))(($go_1_0)(($v_2)->value5)))));
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t3 = null;
@@ -3272,10 +3154,10 @@ $__t2 = $__t3;
 } else {
 if ((is_object(($v_2)->value4) && ((($v_2)->value4)->tag === "Node"))) {
 if ((is_object(($v_2)->value5) && ((($v_2)->value5)->tag === "Leaf"))) {
-$__t4 = ((($v_2)->value0 === 2) && (((($v_2)->value4)->value0 === 1) && ((($v_2)->value1 > (($v_2)->value4)->value1) && ((is_object(((($dictOrd_0)->compare)((($v_2)->value4)->value2))(($v_2)->value2)) && ((((($dictOrd_0)->compare)((($v_2)->value4)->value2))(($v_2)->value2))->tag === "LT")) && ($go_1_0)(($v_2)->value4)))));
+$__t4 = ((($GLOBALS['Data_HeytingAlgebra_boolConj'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolConj')))(((($GLOBALS['Data_Eq_eqIntImpl'] ?? \PhpursThunks::eval('Data_Eq_eqIntImpl')))(($v_2)->value0))(2)))(((($GLOBALS['Data_HeytingAlgebra_boolConj'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolConj')))(((($GLOBALS['Data_Eq_eqIntImpl'] ?? \PhpursThunks::eval('Data_Eq_eqIntImpl')))((($v_2)->value4)->value0))(1)))(((($GLOBALS['Data_HeytingAlgebra_boolConj'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolConj')))((is_object((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)(($v_2)->value1))((($v_2)->value4)->value1)) && (((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)(($v_2)->value1))((($v_2)->value4)->value1))->tag === "GT"))))(((($GLOBALS['Data_HeytingAlgebra_boolConj'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolConj')))((is_object(((($dictOrd_0)->compare)((($v_2)->value4)->value2))(($v_2)->value2)) && ((((($dictOrd_0)->compare)((($v_2)->value4)->value2))(($v_2)->value2))->tag === "LT"))))(($go_1_0)(($v_2)->value4)))));
 } else {
 if ((is_object(($v_2)->value5) && ((($v_2)->value5)->tag === "Node"))) {
-$__t4 = ((($v_2)->value0 > (($v_2)->value5)->value0) && ((is_object(((($dictOrd_0)->compare)((($v_2)->value5)->value2))(($v_2)->value2)) && ((((($dictOrd_0)->compare)((($v_2)->value5)->value2))(($v_2)->value2))->tag === "GT")) && ((($v_2)->value0 > (($v_2)->value4)->value0) && ((is_object(((($dictOrd_0)->compare)((($v_2)->value4)->value2))(($v_2)->value2)) && ((((($dictOrd_0)->compare)((($v_2)->value4)->value2))(($v_2)->value2))->tag === "LT")) && (((($GLOBALS['Data_Map_Internal_abs'] ?? \PhpursThunks::eval('Data_Map_Internal_abs')))(((($v_2)->value5)->value0 - (($v_2)->value4)->value0)) < 2) && (((((($v_2)->value5)->value1 + (($v_2)->value4)->value1) + 1) === ($v_2)->value1) && (($go_1_0)(($v_2)->value4) && ($go_1_0)(($v_2)->value5))))))));
+$__t4 = ((($GLOBALS['Data_HeytingAlgebra_boolConj'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolConj')))((is_object((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)(($v_2)->value0))((($v_2)->value5)->value0)) && (((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)(($v_2)->value0))((($v_2)->value5)->value0))->tag === "GT"))))(((($GLOBALS['Data_HeytingAlgebra_boolConj'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolConj')))((is_object(((($dictOrd_0)->compare)((($v_2)->value5)->value2))(($v_2)->value2)) && ((((($dictOrd_0)->compare)((($v_2)->value5)->value2))(($v_2)->value2))->tag === "GT"))))(((($GLOBALS['Data_HeytingAlgebra_boolConj'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolConj')))((is_object((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)(($v_2)->value0))((($v_2)->value4)->value0)) && (((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)(($v_2)->value0))((($v_2)->value4)->value0))->tag === "GT"))))(((($GLOBALS['Data_HeytingAlgebra_boolConj'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolConj')))((is_object(((($dictOrd_0)->compare)((($v_2)->value4)->value2))(($v_2)->value2)) && ((((($dictOrd_0)->compare)((($v_2)->value4)->value2))(($v_2)->value2))->tag === "LT"))))(((($GLOBALS['Data_HeytingAlgebra_boolConj'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolConj')))((is_object((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)((($GLOBALS['Data_Map_Internal_abs'] ?? \PhpursThunks::eval('Data_Map_Internal_abs')))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))((($v_2)->value5)->value0))((($v_2)->value4)->value0))))(2)) && (((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)((($GLOBALS['Data_Map_Internal_abs'] ?? \PhpursThunks::eval('Data_Map_Internal_abs')))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))((($v_2)->value5)->value0))((($v_2)->value4)->value0))))(2))->tag === "LT"))))(((($GLOBALS['Data_HeytingAlgebra_boolConj'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolConj')))(((($GLOBALS['Data_Eq_eqIntImpl'] ?? \PhpursThunks::eval('Data_Eq_eqIntImpl')))(((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))(((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))((($v_2)->value5)->value1))((($v_2)->value4)->value1)))(1)))(($v_2)->value1)))(((($GLOBALS['Data_HeytingAlgebra_boolConj'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolConj')))(($go_1_0)(($v_2)->value4)))(($go_1_0)(($v_2)->value5))))))));
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t4 = null;
@@ -3323,7 +3205,7 @@ goto __end;;
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = (($GLOBALS['Data_Map_Internal_unsafeIntersectionWith'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeIntersectionWith')))($compare_1_0, (($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->identity, $m1_2, $m2_3);
+  $__res = (((((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Map_Internal_unsafeIntersectionWith'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeIntersectionWith'))))($compare_1_0))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->identity))($m1_2))($m2_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -3344,28 +3226,7 @@ goto __end;;
 \PhpursThunks::$thunks['Data_Map_Internal_bindMap'] = function() { $v = function($dictOrd_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Map_Internal_bindMap"), recVars=[];
-  $compare_1_0 = ($dictOrd_0)->compare;
-  $applyMap1_1_0 = (object)["apply" => (function() use ($compare_1_0) {
-  $__fn = function($m1_2, $m2_3 = null) use ($compare_1_0, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = (($GLOBALS['Data_Map_Internal_unsafeIntersectionWith'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeIntersectionWith')))($compare_1_0, (($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->identity, $m1_2, $m2_3);
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Functor0" => function($dollar__unused_1) {
-  $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ($GLOBALS['Data_Map_Internal_functorMap'] ?? \PhpursThunks::eval('Data_Map_Internal_functorMap'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}];
+  $applyMap1_1_0 = (($GLOBALS['Data_Map_Internal_applyMap'] ?? \PhpursThunks::eval('Data_Map_Internal_applyMap')))($dictOrd_0);
   $__res = (object)["bind" => (function() use ($dictOrd_0) {
   $__fn = function($m_2, $f_3 = null) use ($dictOrd_0, &$__fn) {
   $__num = \func_num_args();
@@ -3376,49 +3237,49 @@ goto __end;;
   $__res = (((($GLOBALS['Data_Map_Internal_mapMaybeWithKey'] ?? \PhpursThunks::eval('Data_Map_Internal_mapMaybeWithKey')))($dictOrd_0))(function($k_4) use ($dictOrd_0, $f_3) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $go_5_2 = null;
-  $go_5_2 = function($v_6) use ($dictOrd_0, &$go_5_2, $k_4) {
+  $go_5_1 = null;
+  $go_5_1 = function($v_6) use ($dictOrd_0, &$go_5_1, $k_4) {
   $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=(Just "go_5_2"), recVars=["go_5_2"];
+  // DEBUG UncurriedAbs: currentBindingName=(Just "go_5_1"), recVars=["go_5_1"];
   while (true) {
 if ((is_object($v_6) && (($v_6)->tag === "Leaf"))) {
-$__t3 = new Phpurs_Data0("Nothing");
+$__t2 = new Phpurs_Data0("Nothing");
 } else {
 if ((is_object($v_6) && (($v_6)->tag === "Node"))) {
-$v1_7_4 = ((($dictOrd_0)->compare)($k_4))(($v_6)->value2);
-if ((is_object($v1_7_4) && (($v1_7_4)->tag === "LT"))) {
-$__tco_6 = ($v_6)->value4;
+$v1_7_3 = ((($dictOrd_0)->compare)($k_4))(($v_6)->value2);
+if ((is_object($v1_7_3) && (($v1_7_3)->tag === "LT"))) {
+$__tco_5 = ($v_6)->value4;
+$v_6 = $__tco_5;
+continue ;
+$__t4 = null;
+} else {
+if ((is_object($v1_7_3) && (($v1_7_3)->tag === "GT"))) {
+$__tco_6 = ($v_6)->value5;
 $v_6 = $__tco_6;
 continue ;
-$__t5 = null;
+$__t4 = null;
 } else {
-if ((is_object($v1_7_4) && (($v1_7_4)->tag === "GT"))) {
-$__tco_7 = ($v_6)->value5;
-$v_6 = $__tco_7;
-continue ;
-$__t5 = null;
-} else {
-if ((is_object($v1_7_4) && (($v1_7_4)->tag === "EQ"))) {
-$__t5 = new Phpurs_Data1("Just", ($v_6)->value3);
+if ((is_object($v1_7_3) && (($v1_7_3)->tag === "EQ"))) {
+$__t4 = new Phpurs_Data1("Just", ($v_6)->value3);
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t5 = null;
+$__t4 = null;
 };
 };
 };
-$__t3 = $__t5;
+$__t2 = $__t4;
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t3 = null;
+$__t2 = null;
 };
 };
-$__res = $__t3;
+$__res = $__t2;
 goto __end;;
 };
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($go_5_2))($f_3);
+  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($go_5_1))($f_3);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -3452,7 +3313,7 @@ if ((is_object($v_2) && (($v_2)->tag === "Leaf"))) {
 $__t1 = false;
 } else {
 if ((is_object($v_2) && (($v_2)->tag === "Node"))) {
-$__t1 = ((($predicate_0)(($v_2)->value2))(($v_2)->value3) || (($go_1_0)(($v_2)->value4) || ($go_1_0)(($v_2)->value5)));
+$__t1 = ((($GLOBALS['Data_HeytingAlgebra_boolDisj'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolDisj')))((($predicate_0)(($v_2)->value2))(($v_2)->value3)))(((($GLOBALS['Data_HeytingAlgebra_boolDisj'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolDisj')))(($go_1_0)(($v_2)->value4)))(($go_1_0)(($v_2)->value5)));
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t1 = null;
@@ -3481,7 +3342,7 @@ if ((is_object($v_2) && (($v_2)->tag === "Leaf"))) {
 $__t1 = false;
 } else {
 if ((is_object($v_2) && (($v_2)->tag === "Node"))) {
-$__t1 = (($predicate_0)(($v_2)->value3) || (($go_1_0)(($v_2)->value4) || ($go_1_0)(($v_2)->value5)));
+$__t1 = ((($GLOBALS['Data_HeytingAlgebra_boolDisj'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolDisj')))(($predicate_0)(($v_2)->value3)))(((($GLOBALS['Data_HeytingAlgebra_boolDisj'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolDisj')))(($go_1_0)(($v_2)->value4)))(($go_1_0)(($v_2)->value5)));
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t1 = null;
@@ -3509,13 +3370,13 @@ goto __end;;
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $v_5_1 = (($GLOBALS['Data_Map_Internal_unsafeSplit'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeSplit')))($compare_1_0, $k_3, $m_4);
+  $v_5_1 = ((((($GLOBALS['Data_Function_Uncurried_runFn3'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn3')))(($GLOBALS['Data_Map_Internal_unsafeSplit'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeSplit'))))($compare_1_0))($k_3))($m_4);
   $v2_6_2 = ($f_2)(($v_5_1)->value0);
   if ((is_object($v2_6_2) && (($v2_6_2)->tag === "Nothing"))) {
-$__t3 = (($GLOBALS['Data_Map_Internal_unsafeJoinNodes'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeJoinNodes')))(($v_5_1)->value1, ($v_5_1)->value2);
+$__t3 = (((($GLOBALS['Data_Function_Uncurried_runFn2'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn2')))(($GLOBALS['Data_Map_Internal_unsafeJoinNodes'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeJoinNodes'))))(($v_5_1)->value1))(($v_5_1)->value2);
 } else {
 if ((is_object($v2_6_2) && (($v2_6_2)->tag === "Just"))) {
-$__t3 = (($GLOBALS['Data_Map_Internal_unsafeBalancedNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeBalancedNode')))($k_3, ($v2_6_2)->value0, ($v_5_1)->value1, ($v_5_1)->value2);
+$__t3 = (((((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Map_Internal_unsafeBalancedNode'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeBalancedNode'))))($k_3))(($v2_6_2)->value0))(($v_5_1)->value1))(($v_5_1)->value2);
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t3 = null;
@@ -3543,7 +3404,7 @@ $__t3 = null;
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = (($GLOBALS['Data_Map_Internal_unsafeUnionWith'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeUnionWith')))($compare_1_0, ($GLOBALS['Data_Function_const'] ?? \PhpursThunks::eval('Data_Function_const')), $m1_2, $m2_3);
+  $__res = (((((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Map_Internal_unsafeUnionWith'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeUnionWith'))))($compare_1_0))(($GLOBALS['Data_Function_const'] ?? \PhpursThunks::eval('Data_Function_const'))))($m1_2))($m2_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -3564,28 +3425,7 @@ $__t3 = null;
 \PhpursThunks::$thunks['Data_Map_Internal_plusMap'] = function() { $v = function($dictOrd_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Map_Internal_plusMap"), recVars=[];
-  $compare_1_0 = ($dictOrd_0)->compare;
-  $altMap1_1_0 = (object)["alt" => (function() use ($compare_1_0) {
-  $__fn = function($m1_2, $m2_3 = null) use ($compare_1_0, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = (($GLOBALS['Data_Map_Internal_unsafeUnionWith'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeUnionWith')))($compare_1_0, ($GLOBALS['Data_Function_const'] ?? \PhpursThunks::eval('Data_Function_const')), $m1_2, $m2_3);
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Functor0" => function($dollar__unused_1) {
-  $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ($GLOBALS['Data_Map_Internal_functorMap'] ?? \PhpursThunks::eval('Data_Map_Internal_functorMap'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}];
+  $altMap1_1_0 = (($GLOBALS['Data_Map_Internal_altMap'] ?? \PhpursThunks::eval('Data_Map_Internal_altMap')))($dictOrd_0);
   $__res = (object)["empty" => new Phpurs_Data0("Leaf"), "Alt0" => function($dollar__unused_2) use ($altMap1_1_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];

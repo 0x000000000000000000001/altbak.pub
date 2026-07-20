@@ -118,17 +118,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   $__res = (object)["show" => function($v_1) use ($dictShow_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  if ((is_object($v_1) && (($v_1)->tag === "Just"))) {
-$__t0 = (("First ((Just " . (($dictShow_0)->show)(($v_1)->value0)) . "))");
-} else {
-if ((is_object($v_1) && (($v_1)->tag === "Nothing"))) {
-$__t0 = "First (Nothing)";
-} else {
-throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t0 = null;
-};
-};
-  $__res = $__t0;
+  $__res = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("First ("))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))((((($GLOBALS['Data_Maybe_showMaybe'] ?? \PhpursThunks::eval('Data_Maybe_showMaybe')))($dictShow_0))->show)($v_1)))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

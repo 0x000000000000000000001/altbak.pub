@@ -220,7 +220,7 @@ goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-$__t8 = ($spin_10_9)(((((((((($y_9)->value0)->value0)->value0)->value0)->value0)->value0)->value0)->value0)->value0);
+$__t8 = ($spin_10_9)((($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))(((((((((($y_9)->value0)->value0)->value0)->value0)->value0)->value0)->value0)->value0)->value0));
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t8 = null;
@@ -334,7 +334,7 @@ goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-$__t7 = ($spin_9_8)((((((((($y_8)->value0)->value0)->value0)->value0)->value0)->value0)->value0)->value0);
+$__t7 = ($spin_9_8)((($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))((((((((($y_8)->value0)->value0)->value0)->value0)->value0)->value0)->value0)->value0));
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t7 = null;
@@ -438,7 +438,7 @@ goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-$__t6 = ($spin_8_7)(((((((($y_7)->value0)->value0)->value0)->value0)->value0)->value0)->value0);
+$__t6 = ($spin_8_7)((($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))(((((((($y_7)->value0)->value0)->value0)->value0)->value0)->value0)->value0));
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t6 = null;
@@ -532,7 +532,7 @@ goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-$__t5 = ($spin_7_6)((((((($y_6)->value0)->value0)->value0)->value0)->value0)->value0);
+$__t5 = ($spin_7_6)((($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))((((((($y_6)->value0)->value0)->value0)->value0)->value0)->value0));
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t5 = null;
@@ -616,7 +616,7 @@ goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-$__t4 = ($spin_6_5)(((((($y_5)->value0)->value0)->value0)->value0)->value0);
+$__t4 = ($spin_6_5)((($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))(((((($y_5)->value0)->value0)->value0)->value0)->value0));
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t4 = null;
@@ -690,7 +690,7 @@ goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-$__t3 = ($spin_5_4)((((($y_4)->value0)->value0)->value0)->value0);
+$__t3 = ($spin_5_4)((($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))((((($y_4)->value0)->value0)->value0)->value0));
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t3 = null;
@@ -754,7 +754,7 @@ goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-$__t2 = ($spin_4_3)(((($y_3)->value0)->value0)->value0);
+$__t2 = ($spin_4_3)((($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))(((($y_3)->value0)->value0)->value0));
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t2 = null;
@@ -808,7 +808,7 @@ goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-$__t1 = ($spin_3_2)((($y_2)->value0)->value0);
+$__t1 = ($spin_3_2)((($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))((($y_2)->value0)->value0));
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t1 = null;
@@ -888,7 +888,7 @@ goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-$__t9 = ($spin_11_10)((((((((((($y_10)->value0)->value0)->value0)->value0)->value0)->value0)->value0)->value0)->value0)->value0);
+$__t9 = ($spin_11_10)((($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))((((((((((($y_10)->value0)->value0)->value0)->value0)->value0)->value0)->value0)->value0)->value0)->value0));
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t9 = null;
@@ -976,7 +976,7 @@ goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-$__t0 = ($spin_1_1)(($y_0)->value0);
+$__t0 = ($spin_1_1)((($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))(($y_0)->value0));
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t0 = null;

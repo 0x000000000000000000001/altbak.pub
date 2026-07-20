@@ -90,7 +90,7 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Effect_Unsafe = \call_user_func(function() {
   $exports = [];
 $exports['unsafePerformEffect'] = function($f) {
-  return $f();
+  return \is_callable($f) ? $f() : $f;
 };
 
 return $exports;

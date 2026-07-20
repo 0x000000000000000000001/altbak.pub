@@ -109,7 +109,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 \PhpursThunks::$thunks['Control_Comonad_Store_runStore'] = function() { $v = function($v_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Comonad_Store_runStore"), recVars=[];
-  $__res = new Phpurs_Data2("Tuple", ($v_0)->value0, ($v_0)->value1);
+  $__res = new Phpurs_Data2("Tuple", (($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))(($v_0)->value0), ($v_0)->value1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

@@ -144,8 +144,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 \PhpursThunks::$thunks['Effect_monoidEffect'] = function() { $v = function($dictMonoid_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=(Just "Effect_monoidEffect"), recVars=[];
-  $__local_var_1_0 = ($dictMonoid_0)->mempty;
-  $__res = (object)["mempty" => $__local_var_1_0, "Semigroup0" => function($dollar__unused_1) use ($dictMonoid_0) {
+  $__res = (object)["mempty" => (($GLOBALS['Effect_pureE'] ?? \PhpursThunks::eval('Effect_pureE')))(($dictMonoid_0)->mempty), "Semigroup0" => function($dollar__unused_1) use ($dictMonoid_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = (object)["append" => ((($GLOBALS['Control_Apply_lift2'] ?? \PhpursThunks::eval('Control_Apply_lift2')))(($GLOBALS['Effect_applyEffect'] ?? \PhpursThunks::eval('Effect_applyEffect'))))(((($dictMonoid_0)->Semigroup0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->append)];
@@ -169,15 +168,15 @@ $bindE = function($a, $f = null) use (&$bindE) {
         };
     }
     return function() use(&$a, &$f) {
-        $a_res = $a();
+        $a_res = \is_callable($a) ? $a() : $a;
         $res = $f($a_res);
-        return $res();
+        return \is_callable($res) ? $res() : $res;
     };
 };
 
 $untilE = function($f) {
     return function() use (&$f) {
-        while (!$f()) {}
+        while (!(\is_callable($f) ? $f() : $f)) {}
     };
 };
 
@@ -189,8 +188,8 @@ $whileE = function($f, $a = null) use (&$whileE) {
         };
     }
     return function() use (&$f, &$a) {
-        while ($f()) {
-            $a();
+        while (\is_callable($f) ? $f() : $f) {
+            \is_callable($a) ? $a() : $a;
         }
     };
 };
@@ -204,7 +203,8 @@ $forE = function($lo, $hi = null, $f = null) use (&$forE) {
     }
     return function() use (&$lo, &$hi, &$f) {
         for ($i = $lo; $i < $hi; $i++) {
-            $f($i)();
+            $f_res = $f($i);
+            \is_callable($f_res) ? $f_res() : $f_res;
         }
     };
 };
@@ -218,7 +218,8 @@ $foreachE = function($as, $f = null) use (&$foreachE) {
     }
     return function() use (&$as, &$f) {
         foreach ($as as $a) {
-            $f($a)();
+            $f_res = $f($a);
+            \is_callable($f_res) ? $f_res() : $f_res;
         }
     };
 };

@@ -116,7 +116,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   // DEBUG UncurriedAbs: currentBindingName=(Just "Test_RBTree_max"), recVars=[];
-  if (($x_0 > $y_1)) {
+  if ((is_object((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)($x_0))($y_1)) && (((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)($x_0))($y_1))->tag === "GT"))) {
 $__t0 = $x_0;
 } else {
 $__t0 = $y_1;
@@ -139,12 +139,12 @@ $__t0 = 0;
 if ((is_object($v_0) && (($v_0)->tag === "T"))) {
 $__local_var_1_1 = (($GLOBALS['Test_RBTree_depth'] ?? \PhpursThunks::eval('Test_RBTree_depth')))(($v_0)->value1);
 $__local_var_2_2 = (($GLOBALS['Test_RBTree_depth'] ?? \PhpursThunks::eval('Test_RBTree_depth')))(($v_0)->value3);
-if (($__local_var_1_1 > $__local_var_2_2)) {
-$__t3 = (1 + $__local_var_1_1);
+if ((is_object((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)($__local_var_1_1))($__local_var_2_2)) && (((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)($__local_var_1_1))($__local_var_2_2))->tag === "GT"))) {
+$__t3 = $__local_var_1_1;
 } else {
-$__t3 = (1 + $__local_var_2_2);
+$__t3 = $__local_var_2_2;
 };
-$__t0 = $__t3;
+$__t0 = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))(1))($__t3);
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t0 = null;
@@ -361,10 +361,10 @@ if ((is_object($v_3) && (($v_3)->tag === "E"))) {
 $__t1 = new Phpurs_Data4("T", new Phpurs_Data0("R"), new Phpurs_Data0("E"), $x_0, new Phpurs_Data0("E"));
 } else {
 if ((is_object($v_3) && (($v_3)->tag === "T"))) {
-if (($x_0 < ($v_3)->value2)) {
+if ((is_object((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)($x_0))(($v_3)->value2)) && (((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)($x_0))(($v_3)->value2))->tag === "LT"))) {
 $__t2 = ((((($GLOBALS['Test_RBTree_balance'] ?? \PhpursThunks::eval('Test_RBTree_balance')))(($v_3)->value0))(($ins_2_0)(($v_3)->value1)))(($v_3)->value2))(($v_3)->value3);
 } else {
-if (($x_0 > ($v_3)->value2)) {
+if ((is_object((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)($x_0))(($v_3)->value2)) && (((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)($x_0))(($v_3)->value2))->tag === "GT"))) {
 $__t2 = ((((($GLOBALS['Test_RBTree_balance'] ?? \PhpursThunks::eval('Test_RBTree_balance')))(($v_3)->value0))(($v_3)->value1))(($v_3)->value2))(($ins_2_0)(($v_3)->value3));
 } else {
 $__t2 = new Phpurs_Data4("T", ($v_3)->value0, ($v_3)->value1, ($v_3)->value2, ($v_3)->value3);
@@ -413,7 +413,7 @@ case 0:
 $__t2 = $v1_1;
 break;
 default:
-$__tco_0 = ($v_0 - 1);
+$__tco_0 = ((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v_0))(1);
 $__tco_1 = ((($GLOBALS['Test_RBTree_insert'] ?? \PhpursThunks::eval('Test_RBTree_insert')))($v_0))($v1_1);
 $v_0 = $__tco_0;
 $v1_1 = $__tco_1;

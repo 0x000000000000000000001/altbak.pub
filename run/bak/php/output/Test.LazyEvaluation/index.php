@@ -131,11 +131,11 @@ case 0:
 $__t2 = $v1_1;
 break;
 default:
-$__tco_0 = ($v_0 - 1);
+$__tco_0 = ((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v_0))(1);
 $__tco_1 = function($v2_2) use ($v1_1) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Test_LazyEvaluation_buildThunks"];
-  $__res = (($v1_1)(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'))) + 1);
+  $__res = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))(($v1_1)(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')))))(1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -167,8 +167,8 @@ case 0:
 $__t2 = $v1_1;
 break;
 default:
-$__tco_0 = ($v_0 - 1);
-$__tco_1 = ($v1_1 + (((($GLOBALS['Test_LazyEvaluation_buildThunks'] ?? \PhpursThunks::eval('Test_LazyEvaluation_buildThunks')))(1000))(function($v2_2) {
+$__tco_0 = ((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v_0))(1);
+$__tco_1 = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))($v1_1))((((($GLOBALS['Test_LazyEvaluation_buildThunks'] ?? \PhpursThunks::eval('Test_LazyEvaluation_buildThunks')))(1000))(function($v2_2) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Test_LazyEvaluation_runManyTimes"];
   $__res = 0;

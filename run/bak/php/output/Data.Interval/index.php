@@ -106,24 +106,26 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Interval_show'] = function() { $v = function($v_0) {
+\PhpursThunks::$thunks['Data_Interval_show'] = function() { $v = ((($GLOBALS['Data_Maybe_showMaybe'] ?? \PhpursThunks::eval('Data_Maybe_showMaybe')))(($GLOBALS['Data_Show_showInt'] ?? \PhpursThunks::eval('Data_Show_showInt'))))->show; return $v; };
+\PhpursThunks::$thunks['Data_Interval_eq'] = function() { $v = (function() {
+  $__fn = function($x_0, $y_1 = null) use (&$__fn) {
   $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Interval_show"), recVars=[];
-  if ((is_object($v_0) && (($v_0)->tag === "Just"))) {
-$__t0 = (("(Just " . (($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))(($v_0)->value0)) . ")");
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Interval_eq"), recVars=[];
+  if ((is_object($x_0) && (($x_0)->tag === "Nothing"))) {
+$__t0 = (is_object($y_1) && (($y_1)->tag === "Nothing"));
 } else {
-if ((is_object($v_0) && (($v_0)->tag === "Nothing"))) {
-$__t0 = "Nothing";
-} else {
-throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t0 = null;
-};
+$__t0 = ((is_object($x_0) && (($x_0)->tag === "Just")) && ((is_object($y_1) && (($y_1)->tag === "Just")) && ((($GLOBALS['Data_Eq_eqIntImpl'] ?? \PhpursThunks::eval('Data_Eq_eqIntImpl')))(($x_0)->value0))(($y_1)->value0)));
 };
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})(); return $v; };
 \PhpursThunks::$thunks['Data_Interval_compare'] = function() { $v = ((($GLOBALS['Data_Maybe_ordMaybe'] ?? \PhpursThunks::eval('Data_Maybe_ordMaybe')))(($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt'))))->compare; return $v; };
 \PhpursThunks::$thunks['Data_Interval_StartEnd'] = function() { $v = (function() {
   $__fn = function($value0, $value1 = null) use (&$__fn) {
@@ -195,16 +197,16 @@ $__t0 = null;
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   if ((is_object($v_2) && (($v_2)->tag === "StartEnd"))) {
-$__t0 = (((("(StartEnd " . (($dictShow1_1)->show)(($v_2)->value0)) . " ") . (($dictShow1_1)->show)(($v_2)->value1)) . ")");
+$__t0 = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("(StartEnd "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))((($dictShow1_1)->show)(($v_2)->value0)))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))(" "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))((($dictShow1_1)->show)(($v_2)->value1)))(")"))));
 } else {
 if ((is_object($v_2) && (($v_2)->tag === "DurationEnd"))) {
-$__t0 = (((("(DurationEnd " . (($dictShow_0)->show)(($v_2)->value0)) . " ") . (($dictShow1_1)->show)(($v_2)->value1)) . ")");
+$__t0 = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("(DurationEnd "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))((($dictShow_0)->show)(($v_2)->value0)))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))(" "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))((($dictShow1_1)->show)(($v_2)->value1)))(")"))));
 } else {
 if ((is_object($v_2) && (($v_2)->tag === "StartDuration"))) {
-$__t0 = (((("(StartDuration " . (($dictShow1_1)->show)(($v_2)->value0)) . " ") . (($dictShow_0)->show)(($v_2)->value1)) . ")");
+$__t0 = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("(StartDuration "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))((($dictShow1_1)->show)(($v_2)->value0)))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))(" "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))((($dictShow_0)->show)(($v_2)->value1)))(")"))));
 } else {
 if ((is_object($v_2) && (($v_2)->tag === "DurationOnly"))) {
-$__t0 = (("(DurationOnly " . (($dictShow_0)->show)(($v_2)->value0)) . ")");
+$__t0 = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("(DurationOnly "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))((($dictShow_0)->show)(($v_2)->value0)))(")"));
 } else {
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t0 = null;
@@ -233,7 +235,7 @@ $__t0 = null;
   $__res = (object)["show" => function($v_2) use ($dictShow1_1, $dictShow_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = (((("(RecurringInterval " . (($GLOBALS['Data_Interval_show'] ?? \PhpursThunks::eval('Data_Interval_show')))(($v_2)->value0)) . " ") . ((((($GLOBALS['Data_Interval_showInterval'] ?? \PhpursThunks::eval('Data_Interval_showInterval')))($dictShow_0))($dictShow1_1))->show)(($v_2)->value1)) . ")");
+  $__res = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("(RecurringInterval "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))((($GLOBALS['Data_Interval_show'] ?? \PhpursThunks::eval('Data_Interval_show')))(($v_2)->value0)))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))(" "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))(((((($GLOBALS['Data_Interval_showInterval'] ?? \PhpursThunks::eval('Data_Interval_showInterval')))($dictShow_0))($dictShow1_1))->show)(($v_2)->value1)))(")"))));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -376,13 +378,13 @@ $__t0 = $i_1;
   }
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   if ((is_object($x_2) && (($x_2)->tag === "StartEnd"))) {
-$__t0 = ((is_object($y_3) && (($y_3)->tag === "StartEnd")) && (((($dictEq1_1)->eq)(($x_2)->value0))(($y_3)->value0) && ((($dictEq1_1)->eq)(($x_2)->value1))(($y_3)->value1)));
+$__t0 = ((is_object($y_3) && (($y_3)->tag === "StartEnd")) && ((($GLOBALS['Data_HeytingAlgebra_boolConj'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolConj')))(((($dictEq1_1)->eq)(($x_2)->value0))(($y_3)->value0)))(((($dictEq1_1)->eq)(($x_2)->value1))(($y_3)->value1)));
 } else {
 if ((is_object($x_2) && (($x_2)->tag === "DurationEnd"))) {
-$__t0 = ((is_object($y_3) && (($y_3)->tag === "DurationEnd")) && (((($dictEq_0)->eq)(($x_2)->value0))(($y_3)->value0) && ((($dictEq1_1)->eq)(($x_2)->value1))(($y_3)->value1)));
+$__t0 = ((is_object($y_3) && (($y_3)->tag === "DurationEnd")) && ((($GLOBALS['Data_HeytingAlgebra_boolConj'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolConj')))(((($dictEq_0)->eq)(($x_2)->value0))(($y_3)->value0)))(((($dictEq1_1)->eq)(($x_2)->value1))(($y_3)->value1)));
 } else {
 if ((is_object($x_2) && (($x_2)->tag === "StartDuration"))) {
-$__t0 = ((is_object($y_3) && (($y_3)->tag === "StartDuration")) && (((($dictEq1_1)->eq)(($x_2)->value0))(($y_3)->value0) && ((($dictEq_0)->eq)(($x_2)->value1))(($y_3)->value1)));
+$__t0 = ((is_object($y_3) && (($y_3)->tag === "StartDuration")) && ((($GLOBALS['Data_HeytingAlgebra_boolConj'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolConj')))(((($dictEq1_1)->eq)(($x_2)->value0))(($y_3)->value0)))(((($dictEq_0)->eq)(($x_2)->value1))(($y_3)->value1)));
 } else {
 $__t0 = ((is_object($x_2) && (($x_2)->tag === "DurationOnly")) && ((is_object($y_3) && (($y_3)->tag === "DurationOnly")) && ((($dictEq_0)->eq)(($x_2)->value0))(($y_3)->value0)));
 };
@@ -415,12 +417,7 @@ $__t0 = ((is_object($x_2) && (($x_2)->tag === "DurationOnly")) && ((is_object($y
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  if ((is_object(($x_2)->value0) && ((($x_2)->value0)->tag === "Nothing"))) {
-$__t0 = (is_object(($y_3)->value0) && ((($y_3)->value0)->tag === "Nothing"));
-} else {
-$__t0 = ((is_object(($x_2)->value0) && ((($x_2)->value0)->tag === "Just")) && ((is_object(($y_3)->value0) && ((($y_3)->value0)->tag === "Just")) && ((($x_2)->value0)->value0 === (($y_3)->value0)->value0)));
-};
-  $__res = ($__t0 && (((((($GLOBALS['Data_Interval_eqInterval'] ?? \PhpursThunks::eval('Data_Interval_eqInterval')))($dictEq_0))($dictEq1_1))->eq)(($x_2)->value1))(($y_3)->value1));
+  $__res = ((($GLOBALS['Data_HeytingAlgebra_boolConj'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolConj')))(((($GLOBALS['Data_Interval_eq'] ?? \PhpursThunks::eval('Data_Interval_eq')))(($x_2)->value0))(($y_3)->value0)))((((((($GLOBALS['Data_Interval_eqInterval'] ?? \PhpursThunks::eval('Data_Interval_eqInterval')))($dictEq_0))($dictEq1_1))->eq)(($x_2)->value1))(($y_3)->value1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1126,6 +1123,7 @@ $__t2 = null;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]; return $v; };
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
 
 
 

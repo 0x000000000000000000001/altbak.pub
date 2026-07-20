@@ -139,11 +139,28 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   // DEBUG UncurriedAbs: currentBindingName=(Just "Effect_Console_grouped"), recVars=[];
-  $__local_var_2_0 = (($GLOBALS['Effect_Console_group'] ?? \PhpursThunks::eval('Effect_Console_group')))($name_0);
-  $dollar__unused_3_1 = ($__local_var_2_0)();
-  $result_4_2 = ($inner_1)();
-  $dollar__unused_5_3 = (($GLOBALS['Effect_Console_groupEnd'] ?? \PhpursThunks::eval('Effect_Console_groupEnd')))();
-  $__res = $result_4_2;
+  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))((($GLOBALS['Effect_Console_group'] ?? \PhpursThunks::eval('Effect_Console_group')))($name_0)))(function($dollar__unused_2) use ($inner_1) {
+  $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))($inner_1))(function($result_3) {
+  $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Effect_Console_groupEnd'] ?? \PhpursThunks::eval('Effect_Console_groupEnd'))))(function($dollar__unused_4) use ($result_3) {
+  $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = (($GLOBALS['Effect_pureE'] ?? \PhpursThunks::eval('Effect_pureE')))($result_3);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

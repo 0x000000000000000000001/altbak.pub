@@ -113,53 +113,53 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 \PhpursThunks::$thunks['Data_String_Regex_Flags_showRegexFlags'] = function() { $v = (object)["show" => function($v_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $usedFlags_1_0 = ((($GLOBALS['Data_Semigroup_concatArray'] ?? \PhpursThunks::eval('Data_Semigroup_concatArray')))(((($GLOBALS['Data_Semigroup_concatArray'] ?? \PhpursThunks::eval('Data_Semigroup_concatArray')))(((($GLOBALS['Data_Semigroup_concatArray'] ?? \PhpursThunks::eval('Data_Semigroup_concatArray')))(((($GLOBALS['Data_Semigroup_concatArray'] ?? \PhpursThunks::eval('Data_Semigroup_concatArray')))(((($GLOBALS['Data_Semigroup_concatArray'] ?? \PhpursThunks::eval('Data_Semigroup_concatArray')))(((($GLOBALS['Data_Semigroup_concatArray'] ?? \PhpursThunks::eval('Data_Semigroup_concatArray')))([]))(((($GLOBALS['Data_Functor_arrayMap'] ?? \PhpursThunks::eval('Data_Functor_arrayMap')))(function($v_1) {
+  $usedFlags_1_0 = ((($GLOBALS['Data_Semigroup_concatArray'] ?? \PhpursThunks::eval('Data_Semigroup_concatArray')))([]))(((($GLOBALS['Data_Semigroup_concatArray'] ?? \PhpursThunks::eval('Data_Semigroup_concatArray')))(((($GLOBALS['Data_Functor_arrayMap'] ?? \PhpursThunks::eval('Data_Functor_arrayMap')))(function($v_1) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = "global";
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))((($GLOBALS['Data_String_Regex_Flags_guard'] ?? \PhpursThunks::eval('Data_String_Regex_Flags_guard')))(($v_0)->global)))))(((($GLOBALS['Data_Functor_arrayMap'] ?? \PhpursThunks::eval('Data_Functor_arrayMap')))(function($v_1) {
+}))((($GLOBALS['Data_String_Regex_Flags_guard'] ?? \PhpursThunks::eval('Data_String_Regex_Flags_guard')))(($v_0)->global))))(((($GLOBALS['Data_Semigroup_concatArray'] ?? \PhpursThunks::eval('Data_Semigroup_concatArray')))(((($GLOBALS['Data_Functor_arrayMap'] ?? \PhpursThunks::eval('Data_Functor_arrayMap')))(function($v_1) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = "ignoreCase";
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))((($GLOBALS['Data_String_Regex_Flags_guard'] ?? \PhpursThunks::eval('Data_String_Regex_Flags_guard')))(($v_0)->ignoreCase)))))(((($GLOBALS['Data_Functor_arrayMap'] ?? \PhpursThunks::eval('Data_Functor_arrayMap')))(function($v_1) {
+}))((($GLOBALS['Data_String_Regex_Flags_guard'] ?? \PhpursThunks::eval('Data_String_Regex_Flags_guard')))(($v_0)->ignoreCase))))(((($GLOBALS['Data_Semigroup_concatArray'] ?? \PhpursThunks::eval('Data_Semigroup_concatArray')))(((($GLOBALS['Data_Functor_arrayMap'] ?? \PhpursThunks::eval('Data_Functor_arrayMap')))(function($v_1) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = "multiline";
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))((($GLOBALS['Data_String_Regex_Flags_guard'] ?? \PhpursThunks::eval('Data_String_Regex_Flags_guard')))(($v_0)->multiline)))))(((($GLOBALS['Data_Functor_arrayMap'] ?? \PhpursThunks::eval('Data_Functor_arrayMap')))(function($v_1) {
+}))((($GLOBALS['Data_String_Regex_Flags_guard'] ?? \PhpursThunks::eval('Data_String_Regex_Flags_guard')))(($v_0)->multiline))))(((($GLOBALS['Data_Semigroup_concatArray'] ?? \PhpursThunks::eval('Data_Semigroup_concatArray')))(((($GLOBALS['Data_Functor_arrayMap'] ?? \PhpursThunks::eval('Data_Functor_arrayMap')))(function($v_1) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = "dotAll";
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))((($GLOBALS['Data_String_Regex_Flags_guard'] ?? \PhpursThunks::eval('Data_String_Regex_Flags_guard')))(($v_0)->dotAll)))))(((($GLOBALS['Data_Functor_arrayMap'] ?? \PhpursThunks::eval('Data_Functor_arrayMap')))(function($v_1) {
+}))((($GLOBALS['Data_String_Regex_Flags_guard'] ?? \PhpursThunks::eval('Data_String_Regex_Flags_guard')))(($v_0)->dotAll))))(((($GLOBALS['Data_Semigroup_concatArray'] ?? \PhpursThunks::eval('Data_Semigroup_concatArray')))(((($GLOBALS['Data_Functor_arrayMap'] ?? \PhpursThunks::eval('Data_Functor_arrayMap')))(function($v_1) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = "sticky";
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))((($GLOBALS['Data_String_Regex_Flags_guard'] ?? \PhpursThunks::eval('Data_String_Regex_Flags_guard')))(($v_0)->sticky)))))(((($GLOBALS['Data_Functor_arrayMap'] ?? \PhpursThunks::eval('Data_Functor_arrayMap')))(function($v_1) {
+}))((($GLOBALS['Data_String_Regex_Flags_guard'] ?? \PhpursThunks::eval('Data_String_Regex_Flags_guard')))(($v_0)->sticky))))(((($GLOBALS['Data_Functor_arrayMap'] ?? \PhpursThunks::eval('Data_Functor_arrayMap')))(function($v_1) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $__res = "unicode";
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))((($GLOBALS['Data_String_Regex_Flags_guard'] ?? \PhpursThunks::eval('Data_String_Regex_Flags_guard')))(($v_0)->unicode)));
+}))((($GLOBALS['Data_String_Regex_Flags_guard'] ?? \PhpursThunks::eval('Data_String_Regex_Flags_guard')))(($v_0)->unicode))))))));
   if (((($GLOBALS['Data_String_Regex_Flags_eq'] ?? \PhpursThunks::eval('Data_String_Regex_Flags_eq')))($usedFlags_1_0))([])) {
 $__t1 = "noFlags";
 } else {
-$__t1 = (("(" . ((($GLOBALS['Data_String_Common_joinWith'] ?? \PhpursThunks::eval('Data_String_Common_joinWith')))(" <> "))($usedFlags_1_0)) . ")");
+$__t1 = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("("))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))(((($GLOBALS['Data_String_Common_joinWith'] ?? \PhpursThunks::eval('Data_String_Common_joinWith')))(" <> "))($usedFlags_1_0)))(")"));
 };
   $__res = $__t1;
   goto __end;;
@@ -173,7 +173,7 @@ $__t1 = (("(" . ((($GLOBALS['Data_String_Common_joinWith'] ?? \PhpursThunks::eva
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = (object)["global" => (($v_0)->global || ($v1_1)->global), "ignoreCase" => (($v_0)->ignoreCase || ($v1_1)->ignoreCase), "multiline" => (($v_0)->multiline || ($v1_1)->multiline), "dotAll" => (($v_0)->dotAll || ($v1_1)->dotAll), "sticky" => (($v_0)->sticky || ($v1_1)->sticky), "unicode" => (($v_0)->unicode || ($v1_1)->unicode)];
+  $__res = (object)["global" => ((($GLOBALS['Data_HeytingAlgebra_boolDisj'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolDisj')))(($v_0)->global))(($v1_1)->global), "ignoreCase" => ((($GLOBALS['Data_HeytingAlgebra_boolDisj'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolDisj')))(($v_0)->ignoreCase))(($v1_1)->ignoreCase), "multiline" => ((($GLOBALS['Data_HeytingAlgebra_boolDisj'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolDisj')))(($v_0)->multiline))(($v1_1)->multiline), "dotAll" => ((($GLOBALS['Data_HeytingAlgebra_boolDisj'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolDisj')))(($v_0)->dotAll))(($v1_1)->dotAll), "sticky" => ((($GLOBALS['Data_HeytingAlgebra_boolDisj'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolDisj')))(($v_0)->sticky))(($v1_1)->sticky), "unicode" => ((($GLOBALS['Data_HeytingAlgebra_boolDisj'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolDisj')))(($v_0)->unicode))(($v1_1)->unicode)];
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

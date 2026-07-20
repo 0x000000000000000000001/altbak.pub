@@ -164,7 +164,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   $__res = (object)["show" => function($v_2) use ($dictShow1_1, $dictShow_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = (((("(Tuple " . (($dictShow_0)->show)(($v_2)->value0)) . " ") . (($dictShow1_1)->show)(($v_2)->value1)) . ")");
+  $__res = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("(Tuple "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))((($dictShow_0)->show)(($v_2)->value0)))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))(" "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))((($dictShow1_1)->show)(($v_2)->value1)))(")"))));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -555,7 +555,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = (((($dictEq_0)->eq)(($x_2)->value0))(($y_3)->value0) && ((($dictEq1_1)->eq)(($x_2)->value1))(($y_3)->value1));
+  $__res = ((($GLOBALS['Data_HeytingAlgebra_boolConj'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolConj')))(((($dictEq_0)->eq)(($x_2)->value0))(($y_3)->value0)))(((($dictEq1_1)->eq)(($x_2)->value1))(($y_3)->value1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -571,52 +571,38 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 \PhpursThunks::$thunks['Data_Tuple_ordTuple'] = function() { $v = function($dictOrd_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Tuple_ordTuple"), recVars=[];
-  $__local_var_1_0 = (($dictOrd_0)->Eq0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $__res = function($dictOrd1_2) use ($__local_var_1_0, $dictOrd_0) {
+  $eqTuple1_1_0 = (($GLOBALS['Data_Tuple_eqTuple'] ?? \PhpursThunks::eval('Data_Tuple_eqTuple')))((($dictOrd_0)->Eq0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__res = function($dictOrd1_2) use ($dictOrd_0, $eqTuple1_1_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__local_var_3_1 = (($dictOrd1_2)->Eq0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $eqTuple2_4_2 = (object)["eq" => (function() use ($__local_var_1_0, $__local_var_3_1) {
-  $__fn = function($x_4, $y_5 = null) use ($__local_var_1_0, $__local_var_3_1, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = (((($__local_var_1_0)->eq)(($x_4)->value0))(($y_5)->value0) && ((($__local_var_3_1)->eq)(($x_4)->value1))(($y_5)->value1));
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  $eqTuple2_3_1 = ($eqTuple1_1_0)((($dictOrd1_2)->Eq0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
   $__res = (object)["compare" => (function() use ($dictOrd1_2, $dictOrd_0) {
-  $__fn = function($x_5, $y_6 = null) use ($dictOrd1_2, $dictOrd_0, &$__fn) {
+  $__fn = function($x_4, $y_5 = null) use ($dictOrd1_2, $dictOrd_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $v_7_3 = ((($dictOrd_0)->compare)(($x_5)->value0))(($y_6)->value0);
-  if ((is_object($v_7_3) && (($v_7_3)->tag === "LT"))) {
-$__t4 = new Phpurs_Data0("LT");
+  $v_6_2 = ((($dictOrd_0)->compare)(($x_4)->value0))(($y_5)->value0);
+  if ((is_object($v_6_2) && (($v_6_2)->tag === "LT"))) {
+$__t3 = new Phpurs_Data0("LT");
 } else {
-if ((is_object($v_7_3) && (($v_7_3)->tag === "GT"))) {
-$__t4 = new Phpurs_Data0("GT");
+if ((is_object($v_6_2) && (($v_6_2)->tag === "GT"))) {
+$__t3 = new Phpurs_Data0("GT");
 } else {
-$__t4 = ((($dictOrd1_2)->compare)(($x_5)->value1))(($y_6)->value1);
+$__t3 = ((($dictOrd1_2)->compare)(($x_4)->value1))(($y_5)->value1);
 };
 };
-  $__res = $__t4;
+  $__res = $__t3;
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Eq0" => function($dollar__unused_5) use ($eqTuple2_4_2) {
+})(), "Eq0" => function($dollar__unused_4) use ($eqTuple2_3_1) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = $eqTuple2_4_2;
+  $__res = $eqTuple2_3_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -632,20 +618,14 @@ $__t4 = ((($dictOrd1_2)->compare)(($x_5)->value1))(($y_6)->value1);
 \PhpursThunks::$thunks['Data_Tuple_eq1Tuple'] = function() { $v = function($dictEq_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Tuple_eq1Tuple"), recVars=[];
-  $__res = (object)["eq1" => (function() use ($dictEq_0) {
-  $__fn = function($dictEq1_1, $x_2 = null, $y_3 = null) use ($dictEq_0, &$__fn) {
+  $__res = (object)["eq1" => function($dictEq1_1) use ($dictEq_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = (((($dictEq_0)->eq)(($x_2)->value0))(($y_3)->value0) && ((($dictEq1_1)->eq)(($x_2)->value1))(($y_3)->value1));
+  $__res = (((($GLOBALS['Data_Tuple_eqTuple'] ?? \PhpursThunks::eval('Data_Tuple_eqTuple')))($dictEq_0))($dictEq1_1))->eq;
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -655,20 +635,14 @@ $__t4 = ((($dictOrd1_2)->compare)(($x_5)->value1))(($y_6)->value1);
   // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Tuple_ord1Tuple"), recVars=[];
   $ordTuple1_1_0 = (($GLOBALS['Data_Tuple_ordTuple'] ?? \PhpursThunks::eval('Data_Tuple_ordTuple')))($dictOrd_0);
   $__local_var_2_1 = (($dictOrd_0)->Eq0)(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $eq1Tuple1_3_2 = (object)["eq1" => (function() use ($__local_var_2_1) {
-  $__fn = function($dictEq1_3, $x_4 = null, $y_5 = null) use ($__local_var_2_1, &$__fn) {
+  $eq1Tuple1_3_2 = (object)["eq1" => function($dictEq1_3) use ($__local_var_2_1) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = (((($__local_var_2_1)->eq)(($x_4)->value0))(($y_5)->value0) && ((($dictEq1_3)->eq)(($x_4)->value1))(($y_5)->value1));
+  $__res = (((($GLOBALS['Data_Tuple_eqTuple'] ?? \PhpursThunks::eval('Data_Tuple_eqTuple')))($__local_var_2_1))($dictEq1_3))->eq;
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
   $__res = (object)["compare1" => function($dictOrd1_4) use ($ordTuple1_1_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];

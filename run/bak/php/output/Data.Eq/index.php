@@ -221,7 +221,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   }
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
   $get_7_0 = (($GLOBALS['Record_Unsafe_unsafeGet'] ?? \PhpursThunks::eval('Record_Unsafe_unsafeGet')))((($dictIsSymbol_2)->reflectSymbol)(new Phpurs_Data0("Proxy")));
-  $__res = (((($dictEq_3)->eq)(($get_7_0)($ra_5)))(($get_7_0)($rb_6)) && (((($dictEqRecord_0)->eqRecord)(new Phpurs_Data0("Proxy")))($ra_5))($rb_6));
+  $__res = ((($GLOBALS['Data_HeytingAlgebra_boolConj'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolConj')))(((($dictEq_3)->eq)(($get_7_0)($ra_5)))(($get_7_0)($rb_6))))((((($dictEqRecord_0)->eqRecord)(new Phpurs_Data0("Proxy")))($ra_5))($rb_6));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -241,7 +241,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   // DEBUG UncurriedAbs: currentBindingName=(Just "Data_Eq_notEq"), recVars=[];
-  $__res = ( ! ((($dictEq_0)->eq)($x_1))($y_2));
+  $__res = ((($GLOBALS['Data_Eq_eqBooleanImpl'] ?? \PhpursThunks::eval('Data_Eq_eqBooleanImpl')))(((($dictEq_0)->eq)($x_1))($y_2)))(false);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -263,7 +263,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ( ! (($eq12_2_0)($x_3))($y_4));
+  $__res = ((($GLOBALS['Data_Eq_eqBooleanImpl'] ?? \PhpursThunks::eval('Data_Eq_eqBooleanImpl')))((($eq12_2_0)($x_3))($y_4)))(false);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

@@ -154,7 +154,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_RWS_execRWS"), recVars=[];
-  $__res = ((((($GLOBALS['Control_Monad_RWS_Trans_execRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_execRWST')))(($GLOBALS['Data_Identity_monadIdentity'] ?? \PhpursThunks::eval('Data_Identity_monadIdentity'))))($m_0))($r_1))($s_2);
+  $__res = (($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))(((((($GLOBALS['Control_Monad_RWS_Trans_execRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_execRWST')))(($GLOBALS['Data_Identity_monadIdentity'] ?? \PhpursThunks::eval('Data_Identity_monadIdentity'))))($m_0))($r_1))($s_2));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -168,7 +168,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   // DEBUG UncurriedAbs: currentBindingName=(Just "Control_Monad_RWS_evalRWS"), recVars=[];
-  $__res = ((((($GLOBALS['Control_Monad_RWS_Trans_evalRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_evalRWST')))(($GLOBALS['Data_Identity_monadIdentity'] ?? \PhpursThunks::eval('Data_Identity_monadIdentity'))))($m_0))($r_1))($s_2);
+  $__res = (($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))(((((($GLOBALS['Control_Monad_RWS_Trans_evalRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_evalRWST')))(($GLOBALS['Data_Identity_monadIdentity'] ?? \PhpursThunks::eval('Data_Identity_monadIdentity'))))($m_0))($r_1))($s_2));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;

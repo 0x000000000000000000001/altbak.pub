@@ -124,10 +124,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   }
   // DEBUG UncurriedAbs: currentBindingName=(Just "go_2_0"), recVars=["go_2_0"];
   while (true) {
-if (($curr_3 < $start_0)) {
+if ((is_object((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)($curr_3))($start_0)) && (((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)($curr_3))($start_0))->tag === "LT"))) {
 $__t3 = $acc_4;
 } else {
-$__tco_1 = ($curr_3 - 1);
+$__tco_1 = ((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($curr_3))(1);
 $__tco_2 = new Phpurs_Data2("Cons", $curr_3, $acc_4);
 $curr_3 = $__tco_1;
 $acc_4 = $__tco_2;
@@ -198,23 +198,20 @@ if ((is_object($v_2) && (($v_2)->tag === "Nil"))) {
 $__t1 = $v1_3;
 } else {
 if ((is_object($v_2) && (($v_2)->tag === "Cons"))) {
-switch (((($GLOBALS['Data_EuclideanRing_intMod'] ?? \PhpursThunks::eval('Data_EuclideanRing_intMod')))(($v_2)->value0))(2)) {
-case 0:
+if (((($GLOBALS['Data_Eq_eqIntImpl'] ?? \PhpursThunks::eval('Data_Eq_eqIntImpl')))(((($GLOBALS['Data_EuclideanRing_intMod'] ?? \PhpursThunks::eval('Data_EuclideanRing_intMod')))(($v_2)->value0))(2)))(0)) {
 $__tco_5 = ($v_2)->value1;
 $__tco_6 = new Phpurs_Data2("Cons", ($v_2)->value0, $v1_3);
 $v_2 = $__tco_5;
 $v1_3 = $__tco_6;
-continue 2;
+continue ;
 $__t4 = null;
-break;
-default:
+} else {
 $__tco_2 = ($v_2)->value1;
 $__tco_3 = $v1_3;
 $v_2 = $__tco_2;
 $v1_3 = $__tco_3;
-continue 2;
+continue ;
 $__t4 = null;
-break;
 };
 $__t1 = $__t4;
 } else {
@@ -235,36 +232,7 @@ goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Test_ListOps_sumEvens'] = function() { $v = (function() use (&$__fn) {
-$go_0_0 = null;
-$go_0_0 = (function() use (&$go_0_0) {
-  $__fn = function($curr_1, $acc_2 = null) use (&$go_0_0, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  // DEBUG UncurriedAbs: currentBindingName=(Just "go_0_0"), recVars=["go_0_0"];
-  while (true) {
-if (($curr_1 < 1)) {
-$__t3 = $acc_2;
-} else {
-$__tco_1 = ($curr_1 - 1);
-$__tco_2 = new Phpurs_Data2("Cons", $curr_1, $acc_2);
-$curr_1 = $__tco_1;
-$acc_2 = $__tco_2;
-continue ;
-$__t3 = null;
-};
-$__res = $__t3;
-goto __end;;
-};
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
-return (((($GLOBALS['Test_ListOps_foldl'] ?? \PhpursThunks::eval('Test_ListOps_foldl')))(($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd'))))(0))((($GLOBALS['Test_ListOps_filterEvens'] ?? \PhpursThunks::eval('Test_ListOps_filterEvens')))((($go_0_0)(900))(new Phpurs_Data0("Nil"))));
-})(); return $v; };
+\PhpursThunks::$thunks['Test_ListOps_sumEvens'] = function() { $v = (((($GLOBALS['Test_ListOps_foldl'] ?? \PhpursThunks::eval('Test_ListOps_foldl')))(($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd'))))(0))((($GLOBALS['Test_ListOps_filterEvens'] ?? \PhpursThunks::eval('Test_ListOps_filterEvens')))(((($GLOBALS['Test_ListOps_range'] ?? \PhpursThunks::eval('Test_ListOps_range')))(1))(900))); return $v; };
 \PhpursThunks::$thunks['Test_ListOps_describe'] = function() { $v = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))("List Processing (900 elements):"); return $v; };
 \PhpursThunks::$thunks['Test_ListOps_act'] = function() { $v = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))((($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))(($GLOBALS['Test_ListOps_sumEvens'] ?? \PhpursThunks::eval('Test_ListOps_sumEvens')))); return $v; };
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };

@@ -118,7 +118,7 @@ $__t0 = null;
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   // DEBUG UncurriedAbs: currentBindingName=(Just "Data_String_NonEmpty_CodeUnits_snoc"), recVars=[];
-  $__res = ($s_1 . (($GLOBALS['Data_String_CodeUnits_singleton'] ?? \PhpursThunks::eval('Data_String_CodeUnits_singleton')))($c_0));
+  $__res = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))($s_1))((($GLOBALS['Data_String_CodeUnits_singleton'] ?? \PhpursThunks::eval('Data_String_CodeUnits_singleton')))($c_0));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -220,7 +220,7 @@ break;
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   // DEBUG UncurriedAbs: currentBindingName=(Just "Data_String_NonEmpty_CodeUnits_take"), recVars=[];
-  if (($i_0 < 1)) {
+  if ((is_object((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)($i_0))(1)) && (((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)($i_0))(1))->tag === "LT"))) {
 $__t0 = new Phpurs_Data0("Nothing");
 } else {
 $__t0 = new Phpurs_Data1("Just", ((($GLOBALS['Data_String_CodeUnits_take'] ?? \PhpursThunks::eval('Data_String_CodeUnits_take')))($i_0))($nes_1));
@@ -239,10 +239,10 @@ $__t0 = new Phpurs_Data1("Just", ((($GLOBALS['Data_String_CodeUnits_take'] ?? \P
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   // DEBUG UncurriedAbs: currentBindingName=(Just "Data_String_NonEmpty_CodeUnits_takeRight"), recVars=[];
-  if (($i_0 < 1)) {
+  if ((is_object((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)($i_0))(1)) && (((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)($i_0))(1))->tag === "LT"))) {
 $__t0 = new Phpurs_Data0("Nothing");
 } else {
-$__t0 = new Phpurs_Data1("Just", ((($GLOBALS['Data_String_CodeUnits_drop'] ?? \PhpursThunks::eval('Data_String_CodeUnits_drop')))(((($GLOBALS['Data_String_CodeUnits_length'] ?? \PhpursThunks::eval('Data_String_CodeUnits_length')))($nes_1) - $i_0)))($nes_1));
+$__t0 = new Phpurs_Data1("Just", ((($GLOBALS['Data_String_CodeUnits_drop'] ?? \PhpursThunks::eval('Data_String_CodeUnits_drop')))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))((($GLOBALS['Data_String_CodeUnits_length'] ?? \PhpursThunks::eval('Data_String_CodeUnits_length')))($nes_1)))($i_0)))($nes_1));
 };
   $__res = $__t0;
   goto __end;;
@@ -253,7 +253,14 @@ $__t0 = new Phpurs_Data1("Just", ((($GLOBALS['Data_String_CodeUnits_drop'] ?? \P
 })(); return $v; };
 \PhpursThunks::$thunks['Data_String_NonEmpty_CodeUnits_toChar'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_String_CodeUnits_toChar'] ?? \PhpursThunks::eval('Data_String_CodeUnits_toChar'))))(($GLOBALS['Data_String_NonEmpty_CodeUnits_fromNonEmptyString'] ?? \PhpursThunks::eval('Data_String_NonEmpty_CodeUnits_fromNonEmptyString'))); return $v; };
 \PhpursThunks::$thunks['Data_String_NonEmpty_CodeUnits_toCharArray'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_String_CodeUnits_toCharArray'] ?? \PhpursThunks::eval('Data_String_CodeUnits_toCharArray'))))(($GLOBALS['Data_String_NonEmpty_CodeUnits_fromNonEmptyString'] ?? \PhpursThunks::eval('Data_String_NonEmpty_CodeUnits_fromNonEmptyString'))); return $v; };
-\PhpursThunks::$thunks['Data_String_NonEmpty_CodeUnits_toNonEmptyCharArray'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_String_NonEmpty_CodeUnits_fromJust'] ?? \PhpursThunks::eval('Data_String_NonEmpty_CodeUnits_fromJust'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Array_NonEmpty_fromArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_fromArray'))))(($GLOBALS['Data_String_NonEmpty_CodeUnits_toCharArray'] ?? \PhpursThunks::eval('Data_String_NonEmpty_CodeUnits_toCharArray')))); return $v; };
+\PhpursThunks::$thunks['Data_String_NonEmpty_CodeUnits_toNonEmptyCharArray'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Partial_Unsafe__unsafePartial'] ?? \PhpursThunks::eval('Partial_Unsafe__unsafePartial')))(function($dollar__unused_0) {
+  $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ($GLOBALS['Data_String_NonEmpty_CodeUnits_fromJust'] ?? \PhpursThunks::eval('Data_String_NonEmpty_CodeUnits_fromJust'));
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+})))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Array_NonEmpty_fromArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_fromArray'))))(($GLOBALS['Data_String_NonEmpty_CodeUnits_toCharArray'] ?? \PhpursThunks::eval('Data_String_NonEmpty_CodeUnits_toCharArray')))); return $v; };
 \PhpursThunks::$thunks['Data_String_NonEmpty_CodeUnits_uncons'] = function() { $v = function($nes_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=(Just "Data_String_NonEmpty_CodeUnits_uncons"), recVars=[];
@@ -295,7 +302,14 @@ break;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_String_NonEmpty_CodeUnits_fromNonEmptyCharArray'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_String_NonEmpty_CodeUnits_fromJust'] ?? \PhpursThunks::eval('Data_String_NonEmpty_CodeUnits_fromJust'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_String_NonEmpty_CodeUnits_fromCharArray'] ?? \PhpursThunks::eval('Data_String_NonEmpty_CodeUnits_fromCharArray'))))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray')))); return $v; };
+\PhpursThunks::$thunks['Data_String_NonEmpty_CodeUnits_fromNonEmptyCharArray'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Partial_Unsafe__unsafePartial'] ?? \PhpursThunks::eval('Partial_Unsafe__unsafePartial')))(function($dollar__unused_0) {
+  $__num = \func_num_args();
+  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
+  $__res = ($GLOBALS['Data_String_NonEmpty_CodeUnits_fromJust'] ?? \PhpursThunks::eval('Data_String_NonEmpty_CodeUnits_fromJust'));
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+})))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_String_NonEmpty_CodeUnits_fromCharArray'] ?? \PhpursThunks::eval('Data_String_NonEmpty_CodeUnits_fromCharArray'))))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray')))); return $v; };
 \PhpursThunks::$thunks['Data_String_NonEmpty_CodeUnits_dropWhile'] = function() { $v = function($f_0) {
   $__num = \func_num_args();
   // DEBUG UncurriedAbs: currentBindingName=(Just "Data_String_NonEmpty_CodeUnits_dropWhile"), recVars=[];
@@ -318,10 +332,10 @@ break;
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   // DEBUG UncurriedAbs: currentBindingName=(Just "Data_String_NonEmpty_CodeUnits_dropRight"), recVars=[];
-  if (($i_0 >= (($GLOBALS['Data_String_CodeUnits_length'] ?? \PhpursThunks::eval('Data_String_CodeUnits_length')))($nes_1))) {
+  if (( ! (is_object((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)($i_0))((($GLOBALS['Data_String_CodeUnits_length'] ?? \PhpursThunks::eval('Data_String_CodeUnits_length')))($nes_1))) && (((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)($i_0))((($GLOBALS['Data_String_CodeUnits_length'] ?? \PhpursThunks::eval('Data_String_CodeUnits_length')))($nes_1)))->tag === "LT")))) {
 $__t0 = new Phpurs_Data0("Nothing");
 } else {
-$__t0 = new Phpurs_Data1("Just", ((($GLOBALS['Data_String_CodeUnits_take'] ?? \PhpursThunks::eval('Data_String_CodeUnits_take')))(((($GLOBALS['Data_String_CodeUnits_length'] ?? \PhpursThunks::eval('Data_String_CodeUnits_length')))($nes_1) - $i_0)))($nes_1));
+$__t0 = new Phpurs_Data1("Just", ((($GLOBALS['Data_String_CodeUnits_take'] ?? \PhpursThunks::eval('Data_String_CodeUnits_take')))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))((($GLOBALS['Data_String_CodeUnits_length'] ?? \PhpursThunks::eval('Data_String_CodeUnits_length')))($nes_1)))($i_0)))($nes_1));
 };
   $__res = $__t0;
   goto __end;;
@@ -337,7 +351,7 @@ $__t0 = new Phpurs_Data1("Just", ((($GLOBALS['Data_String_CodeUnits_take'] ?? \P
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   // DEBUG UncurriedAbs: currentBindingName=(Just "Data_String_NonEmpty_CodeUnits_drop"), recVars=[];
-  if (($i_0 >= (($GLOBALS['Data_String_CodeUnits_length'] ?? \PhpursThunks::eval('Data_String_CodeUnits_length')))($nes_1))) {
+  if (( ! (is_object((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)($i_0))((($GLOBALS['Data_String_CodeUnits_length'] ?? \PhpursThunks::eval('Data_String_CodeUnits_length')))($nes_1))) && (((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)($i_0))((($GLOBALS['Data_String_CodeUnits_length'] ?? \PhpursThunks::eval('Data_String_CodeUnits_length')))($nes_1)))->tag === "LT")))) {
 $__t0 = new Phpurs_Data0("Nothing");
 } else {
 $__t0 = new Phpurs_Data1("Just", ((($GLOBALS['Data_String_CodeUnits_drop'] ?? \PhpursThunks::eval('Data_String_CodeUnits_drop')))($i_0))($nes_1));
@@ -357,7 +371,7 @@ $__t0 = new Phpurs_Data1("Just", ((($GLOBALS['Data_String_CodeUnits_drop'] ?? \P
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   // DEBUG UncurriedAbs: currentBindingName=(Just "Data_String_NonEmpty_CodeUnits_cons"), recVars=[];
-  $__res = ((($GLOBALS['Data_String_CodeUnits_singleton'] ?? \PhpursThunks::eval('Data_String_CodeUnits_singleton')))($c_0) . $s_1);
+  $__res = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))((($GLOBALS['Data_String_CodeUnits_singleton'] ?? \PhpursThunks::eval('Data_String_CodeUnits_singleton')))($c_0)))($s_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

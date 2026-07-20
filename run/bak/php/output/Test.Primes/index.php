@@ -126,7 +126,7 @@ $__t1 = $v1_3;
 } else {
 if ((is_object($v_2) && (($v_2)->tag === "Cons"))) {
 $__tco_2 = ($v_2)->value1;
-$__tco_3 = ($v1_3 + ($v_2)->value0);
+$__tco_3 = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))($v1_3))(($v_2)->value0);
 $v_2 = $__tco_2;
 $v1_3 = $__tco_3;
 continue ;
@@ -205,10 +205,10 @@ goto __end;;
   }
   // DEBUG UncurriedAbs: currentBindingName=(Just "go_2_0"), recVars=["go_2_0"];
   while (true) {
-if (($curr_3 < $start_0)) {
+if ((is_object((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)($curr_3))($start_0)) && (((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->compare)($curr_3))($start_0))->tag === "LT"))) {
 $__t3 = $acc_4;
 } else {
-$__tco_1 = ($curr_3 - 1);
+$__tco_1 = ((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($curr_3))(1);
 $__tco_2 = new Phpurs_Data2("Cons", $curr_3, $acc_4);
 $curr_3 = $__tco_1;
 $acc_4 = $__tco_2;
@@ -372,7 +372,7 @@ goto __end;;
 $__t3 = (($go_5_4)($v1_4))(new Phpurs_Data0("Nil"));
 } else {
 if ((is_object($v_3) && (($v_3)->tag === "Cons"))) {
-if ((((($GLOBALS['Data_EuclideanRing_intMod'] ?? \PhpursThunks::eval('Data_EuclideanRing_intMod')))(($v_3)->value0))($__local_var_1_1) !== 0)) {
+if (((($GLOBALS['Data_Eq_eqBooleanImpl'] ?? \PhpursThunks::eval('Data_Eq_eqBooleanImpl')))(((($GLOBALS['Data_Eq_eqIntImpl'] ?? \PhpursThunks::eval('Data_Eq_eqIntImpl')))(((($GLOBALS['Data_EuclideanRing_intMod'] ?? \PhpursThunks::eval('Data_EuclideanRing_intMod')))(($v_3)->value0))($__local_var_1_1)))(0)))(false)) {
 $__tco_11 = ($v_3)->value1;
 $__tco_12 = new Phpurs_Data2("Cons", ($v_3)->value0, $v1_4);
 $v_3 = $__tco_11;
@@ -414,68 +414,7 @@ goto __end;;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Test_Primes_describe'] = function() { $v = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))("Prime Sieve (sum primes up to 500):"); return $v; };
-\PhpursThunks::$thunks['Test_Primes_act'] = function() { $v = (function() use (&$__fn) {
-$go_0_0 = null;
-$go_0_0 = (function() use (&$go_0_0) {
-  $__fn = function($v_1, $v1_2 = null) use (&$go_0_0, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  // DEBUG UncurriedAbs: currentBindingName=(Just "go_0_0"), recVars=["go_0_0"];
-  while (true) {
-if ((is_object($v_1) && (($v_1)->tag === "Nil"))) {
-$__t1 = $v1_2;
-} else {
-if ((is_object($v_1) && (($v_1)->tag === "Cons"))) {
-$__tco_2 = ($v_1)->value1;
-$__tco_3 = ($v1_2 + ($v_1)->value0);
-$v_1 = $__tco_2;
-$v1_2 = $__tco_3;
-continue ;
-$__t1 = null;
-} else {
-throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t1 = null;
-};
-};
-$__res = $__t1;
-goto __end;;
-};
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
-$go_1_4 = null;
-$go_1_4 = (function() use (&$go_1_4) {
-  $__fn = function($curr_2, $acc_3 = null) use (&$go_1_4, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  // DEBUG UncurriedAbs: currentBindingName=(Just "go_1_4"), recVars=["go_0_0","go_1_4"];
-  while (true) {
-if (($curr_2 < 2)) {
-$__t7 = $acc_3;
-} else {
-$__tco_5 = ($curr_2 - 1);
-$__tco_6 = new Phpurs_Data2("Cons", $curr_2, $acc_3);
-$curr_2 = $__tco_5;
-$acc_3 = $__tco_6;
-continue ;
-$__t7 = null;
-};
-$__res = $__t7;
-goto __end;;
-};
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
-return (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))((($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))((($go_0_0)((($GLOBALS['Test_Primes_sieve'] ?? \PhpursThunks::eval('Test_Primes_sieve')))((($go_1_4)(500))(new Phpurs_Data0("Nil")))))(0)));
-})(); return $v; };
+\PhpursThunks::$thunks['Test_Primes_act'] = function() { $v = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))((($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))((($GLOBALS['Test_Primes_sumList'] ?? \PhpursThunks::eval('Test_Primes_sumList')))((($GLOBALS['Test_Primes_sieve'] ?? \PhpursThunks::eval('Test_Primes_sieve')))(((($GLOBALS['Test_Primes_range'] ?? \PhpursThunks::eval('Test_Primes_range')))(2))(500))))); return $v; };
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 

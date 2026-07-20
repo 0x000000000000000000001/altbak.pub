@@ -133,7 +133,7 @@ case 0:
 $__t4 = $v1_6;
 break;
 default:
-$__tco_2 = ($v_5 - 1);
+$__tco_2 = ((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v_5))(1);
 $__tco_3 = ((($dictMonoidish_0)->mappend_)($v1_6))($mempty_1_1_0);
 $v_5 = $__tco_2;
 $v1_6 = $__tco_3;
@@ -167,7 +167,7 @@ goto __end;;
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ($x_0 + $y_1);
+  $__res = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))($x_0))($y_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -175,39 +175,7 @@ goto __end;;
   return $__fn;
 })()]; return $v; };
 \PhpursThunks::$thunks['Test_Polymorphism_describe'] = function() { $v = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))("Polymorphism (10M Type Class Dict Lookups):"); return $v; };
-\PhpursThunks::$thunks['Test_Polymorphism_act'] = function() { $v = (function() use (&$__fn) {
-$go_0_0 = null;
-$go_0_0 = (function() use (&$go_0_0) {
-  $__fn = function($v_1, $v1_2 = null) use (&$go_0_0, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  // DEBUG UncurriedAbs: currentBindingName=(Just "go_0_0"), recVars=["go_0_0"];
-  while (true) {
-switch ($v_1) {
-case 0:
-$__t3 = $v1_2;
-break;
-default:
-$__tco_1 = ($v_1 - 1);
-$__tco_2 = ($v1_2 + 1);
-$v_1 = $__tco_1;
-$v1_2 = $__tco_2;
-continue 2;
-$__t3 = null;
-break;
-};
-$__res = $__t3;
-goto __end;;
-};
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
-return (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))((($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))((($go_0_0)(10000000))(0)));
-})(); return $v; };
+\PhpursThunks::$thunks['Test_Polymorphism_act'] = function() { $v = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))((($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))((((($GLOBALS['Test_Polymorphism_polyLoop'] ?? \PhpursThunks::eval('Test_Polymorphism_polyLoop')))(($GLOBALS['Test_Polymorphism_intMonoidish'] ?? \PhpursThunks::eval('Test_Polymorphism_intMonoidish'))))(10000000))(0))); return $v; };
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
