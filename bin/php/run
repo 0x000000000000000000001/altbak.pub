@@ -20,6 +20,10 @@ if [ "$1" == "--x" ]; then
 fi
 
 export PATH="$PWD/run/bak/js/node_modules/.bin:$PATH"
+
+echo "=== Rebuilding phpurs backend ==="
+(cd ../phpurs && npm run build)
+
 spago build --backend-args "--main ${ENTRY_POINT} --ffi run/bak/php/ffi" || echo "Compilation failed, but that's expected for now!"
 
 echo "=== Native PHP ==="
