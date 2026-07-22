@@ -14,6 +14,9 @@ if [ "$1" == "--x" ]; then
   
   echo ""
   ./bin/php/run --x || echo "=== PHP failed ==="
+  
+  echo ""
+  ./bin/go/run --x || echo "=== Go failed ==="
 else
   echo "================================"
   echo "    Running pure backends...    "
@@ -32,4 +35,7 @@ else
   
   echo ""
   ./bin/php/run || echo "=== PHP failed ==="
+  
+  echo ""
+  ./bin/go/run || echo "=== Go failed ==="
 fi

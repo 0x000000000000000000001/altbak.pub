@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+set -e
+cd "$(dirname "$0")/../.."
+
+mkdir -p run/bak/go/output run/bak/go/spago
+rm -rf output .spago spago.yaml spago.lock
+ln -s run/bak/go/output output
+ln -s run/bak/go/spago .spago
+ln -s run/bak/go/spago.go.yaml spago.yaml
+touch run/bak/go/spago.lock && ln -s run/bak/go/spago.lock spago.lock
+
+ENTRY_POINT="App"
+
+if [ "$1" == "--x" ]; then
+  ENTRY_POINT="AppX"
+  cp -r srx/Test/* src/Test/
+  cp srx/AppX.purs src/
+  trap "rm -rf src/Test/STArray.purs src/Test/AffOperations.purs src/Test/StringOps.purs src/Test/FileOps src/AppX.purs" EXIT
+fi
+
+export PATH="$PWD/run/bak/js/node_modules/.bin:$PATH"
+
+echo "=== Rebuilding gopurs backend ==="
+(cd ../gopurs && npm run build --silent)
+
+spago build > /dev/null 2>&1 || echo "Compilation failed, but that's expected for now!"
+
+# Generate Go code
+node ../gopurs/bin/gopurs.js --main ${ENTRY_POINT}
+
+echo "=== Native Go ==="
+if [ -d "output/${ENTRY_POINT}" ]; then
+    cd output
+    rm -f go.mod
+    go mod init gopurs/output > /dev/null 2>&1
+    go mod tidy > /dev/null 2>&1
+    go build -o go_app .
+    cd ..
+    time ./output/go_app
+else
+    echo "No output/${ENTRY_POINT}/Main.go generated."
+fi
