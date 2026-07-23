@@ -7,15 +7,19 @@ import (
 )
 
 const (
-	TypeInt = 1
-	TypeString = 2
-	TypeRecord = 3
-	TypeFunc = 4
-	TypeFunc2 = 10
-	TypeFunc3 = 11
-	TypeFunc4 = 12
-	TypeFunc5 = 13
-	TypeConstructor = 5
+	TypeFunc = 1
+	TypeFunc2 = 2
+	TypeFunc3 = 3
+	TypeFunc4 = 4
+	TypeFunc5 = 5
+	TypeInt = 6
+	TypeString = 7
+	TypeRecord = 8
+	TypeConstructor = 9
+	TypeFloat = 10
+	TypeBool = 11
+	TypeArray = 12
+	TypeAny = 13
 )
 
 // We do not add FloatVal or BoolVal fields to keep the struct size minimal.
@@ -38,7 +42,7 @@ func Int(v int64) Value {
 }
 
 func Float(v float64) Value {
-	return Value{Type: 7, IntVal: int64(math.Float64bits(v))}
+	return Value{Type: TypeFloat, IntVal: int64(math.Float64bits(v))}
 }
 
 func Bool(v bool) Value {
@@ -46,7 +50,7 @@ func Bool(v bool) Value {
 	if v {
 		i = 1
 	}
-	return Value{Type: 6, IntVal: i}
+	return Value{Type: TypeBool, IntVal: i}
 }
 
 func FloatAdd(a, b Value) Value { return Float(math.Float64frombits(uint64(a.IntVal)) + math.Float64frombits(uint64(b.IntVal))) }
@@ -87,7 +91,7 @@ func BitXor(a Value, b Value) Value {
 }
 
 func Array(v []Value) Value {
-	return Value{Type: 8, PtrVal: v}
+	return Value{Type: TypeArray, PtrVal: v}
 }
 
 type RecordData struct {
@@ -292,7 +296,7 @@ func ArrayAccess(arr Value, index int) Value {
 }
 
 func Any(v any) Value {
-	return Value{Type: 9, PtrVal: v}
+	return Value{Type: TypeAny, PtrVal: v}
 }
 
 func UncurriedApp2(fn Value, a, b Value) Value {
