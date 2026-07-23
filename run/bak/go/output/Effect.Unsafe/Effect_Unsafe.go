@@ -7,5 +7,5 @@ import (
 
 
 func Get_unsafePerformEffect() gopurs_runtime.Value {
-	return UnsafePerformEffect
+	return _Gopurs_UnsafePerformEffect
 }

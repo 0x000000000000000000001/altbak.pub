@@ -121,7 +121,7 @@ _ = __local_var_1_0
 return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
 var go__3_2 gopurs_runtime.Value
 _ = go__3_2
-go__3_2 = gopurs_runtime.Value{PtrVal: func(m_prime_4 gopurs_runtime.Value, z_prime_5 gopurs_runtime.Value) gopurs_runtime.Value {
+go__3_2 = gopurs_runtime.Func2(func(m_prime_4 gopurs_runtime.Value, z_prime_5 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t3 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(m_prime_4, "_tag").StrVal == "Leaf")).IntVal != 0 {
@@ -144,7 +144,7 @@ __t3 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_3:
 return __t3
-}}
+})
 return gopurs_runtime.Apply(__local_var_1_0, gopurs_runtime.UncurriedApp2(go__3_2, x_2, gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nil"))))
 })
 })
@@ -185,7 +185,7 @@ _ = __local_var_0_0
 return gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var go__2_2 gopurs_runtime.Value
 _ = go__2_2
-go__2_2 = gopurs_runtime.Value{PtrVal: func(m_prime_3 gopurs_runtime.Value, z_prime_4 gopurs_runtime.Value) gopurs_runtime.Value {
+go__2_2 = gopurs_runtime.Func2(func(m_prime_3 gopurs_runtime.Value, z_prime_4 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t3 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(m_prime_3, "_tag").StrVal == "Leaf")).IntVal != 0 {
@@ -208,7 +208,7 @@ __t3 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_3:
 return __t3
-}}
+})
 return gopurs_runtime.Apply(__local_var_0_0, gopurs_runtime.UncurriedApp2(go__2_2, x_1, gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nil"))))
 })
 }()
@@ -400,7 +400,7 @@ _ = __local_var_3_1
 return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
 var go__5_2 gopurs_runtime.Value
 _ = go__5_2
-go__5_2 = gopurs_runtime.Value{PtrVal: func(m_prime_6 gopurs_runtime.Value, z_prime_7 gopurs_runtime.Value) gopurs_runtime.Value {
+go__5_2 = gopurs_runtime.Func2(func(m_prime_6 gopurs_runtime.Value, z_prime_7 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t3 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(m_prime_6, "_tag").StrVal == "Leaf")).IntVal != 0 {
@@ -423,7 +423,7 @@ __t3 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_3:
 return __t3
-}}
+})
 return gopurs_runtime.Apply(__local_var_3_1, gopurs_runtime.UncurriedApp2(go__5_2, x_4, gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nil"))))
 })
 })
@@ -473,7 +473,7 @@ _ = __local_var_3_6
 return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
 var go__5_7 gopurs_runtime.Value
 _ = go__5_7
-go__5_7 = gopurs_runtime.Value{PtrVal: func(m_prime_6 gopurs_runtime.Value, z_prime_7 gopurs_runtime.Value) gopurs_runtime.Value {
+go__5_7 = gopurs_runtime.Func2(func(m_prime_6 gopurs_runtime.Value, z_prime_7 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t8 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(m_prime_6, "_tag").StrVal == "Leaf")).IntVal != 0 {
@@ -496,7 +496,7 @@ __t8 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_8:
 return __t8
-}}
+})
 return gopurs_runtime.Apply(__local_var_3_6, gopurs_runtime.UncurriedApp2(go__5_7, x_4, gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nil"))))
 })
 }), gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, x_1 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -505,7 +505,7 @@ _ = __local_var_2_9
 return gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var go__4_10 gopurs_runtime.Value
 _ = go__4_10
-go__4_10 = gopurs_runtime.Value{PtrVal: func(m_prime_5 gopurs_runtime.Value, z_prime_6 gopurs_runtime.Value) gopurs_runtime.Value {
+go__4_10 = gopurs_runtime.Func2(func(m_prime_5 gopurs_runtime.Value, z_prime_6 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t11 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(m_prime_5, "_tag").StrVal == "Leaf")).IntVal != 0 {
@@ -528,7 +528,7 @@ __t11 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_11:
 return __t11
-}}
+})
 return gopurs_runtime.Apply(__local_var_2_9, gopurs_runtime.UncurriedApp2(go__4_10, x_3, gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nil"))))
 })
 }))
@@ -626,7 +626,7 @@ _ = eqSet1_2_1
 return gopurs_runtime.RecordDict2("compare", "Eq0", gopurs_runtime.Func2(func(s1_3 gopurs_runtime.Value, s2_4 gopurs_runtime.Value) gopurs_runtime.Value {
 var go__5_2 gopurs_runtime.Value
 _ = go__5_2
-go__5_2 = gopurs_runtime.Value{PtrVal: func(m_prime_6 gopurs_runtime.Value, z_prime_7 gopurs_runtime.Value) gopurs_runtime.Value {
+go__5_2 = gopurs_runtime.Func2(func(m_prime_6 gopurs_runtime.Value, z_prime_7 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t3 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(m_prime_6, "_tag").StrVal == "Leaf")).IntVal != 0 {
@@ -649,10 +649,10 @@ __t3 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_3:
 return __t3
-}}
+})
 var go__5_4 gopurs_runtime.Value
 _ = go__5_4
-go__5_4 = gopurs_runtime.Value{PtrVal: func(m_prime_6 gopurs_runtime.Value, z_prime_7 gopurs_runtime.Value) gopurs_runtime.Value {
+go__5_4 = gopurs_runtime.Func2(func(m_prime_6 gopurs_runtime.Value, z_prime_7 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t5 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(m_prime_6, "_tag").StrVal == "Leaf")).IntVal != 0 {
@@ -675,7 +675,7 @@ __t5 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_5:
 return __t5
-}}
+})
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(pkg_Data_List_Types.Get_ordList(), dictOrd_0), "compare"), gopurs_runtime.UncurriedApp2(go__5_2, s1_3, gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nil"))), gopurs_runtime.UncurriedApp2(go__5_4, s2_4, gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nil"))))
 }), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return eqSet1_2_1
@@ -781,7 +781,7 @@ _ = __local_var_3_2
 return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
 var go__5_3 gopurs_runtime.Value
 _ = go__5_3
-go__5_3 = gopurs_runtime.Value{PtrVal: func(m_prime_6 gopurs_runtime.Value, z_prime_7 gopurs_runtime.Value) gopurs_runtime.Value {
+go__5_3 = gopurs_runtime.Func2(func(m_prime_6 gopurs_runtime.Value, z_prime_7 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t4 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(m_prime_6, "_tag").StrVal == "Leaf")).IntVal != 0 {
@@ -804,7 +804,7 @@ __t4 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_4:
 return __t4
-}}
+})
 return gopurs_runtime.Apply(__local_var_3_2, gopurs_runtime.UncurriedApp2(go__5_3, x_4, gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nil"))))
 })
 })

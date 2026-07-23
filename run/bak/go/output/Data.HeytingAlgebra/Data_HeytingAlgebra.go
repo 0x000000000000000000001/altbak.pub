@@ -285,13 +285,13 @@ return gopurs_runtime.Apply3(pkg_Record_Unsafe.Get_unsafeSet(), gopurs_runtime.A
 }
 
 func Get_boolConj() gopurs_runtime.Value {
-	return BoolConj
+	return _Gopurs_BoolConj
 }
 
 func Get_boolDisj() gopurs_runtime.Value {
-	return BoolDisj
+	return _Gopurs_BoolDisj
 }
 
 func Get_boolNot() gopurs_runtime.Value {
-	return BoolNot
+	return _Gopurs_BoolNot
 }

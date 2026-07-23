@@ -522,29 +522,29 @@ func Get_base36() gopurs_runtime.Value {
 }
 
 func Get_fromNumberImpl() gopurs_runtime.Value {
-	return FromNumberImpl
+	return _Gopurs_FromNumberImpl
 }
 
 func Get_fromStringAsImpl() gopurs_runtime.Value {
-	return FromStringAsImpl
+	return _Gopurs_FromStringAsImpl
 }
 
 func Get_pow() gopurs_runtime.Value {
-	return Pow
+	return _Gopurs_Pow
 }
 
 func Get_quot() gopurs_runtime.Value {
-	return Quot
+	return _Gopurs_Quot
 }
 
 func Get_rem() gopurs_runtime.Value {
-	return Rem
+	return _Gopurs_Rem
 }
 
 func Get_toNumber() gopurs_runtime.Value {
-	return ToNumber
+	return _Gopurs_ToNumber
 }
 
 func Get_toStringAs() gopurs_runtime.Value {
-	return ToStringAs
+	return _Gopurs_ToStringAs
 }

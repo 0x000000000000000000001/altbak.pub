@@ -299,7 +299,7 @@ var once_monadRecMaybe sync.Once
 func Get_monadRecMaybe() gopurs_runtime.Value {
 	once_monadRecMaybe.Do(func() {
 		monadRecMaybe = gopurs_runtime.RecordDict2("tailRecM", "Monad0", gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, a0_1 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_2_0 := gopurs_runtime.Value{PtrVal: func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_2_0 := gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_2, "_tag").StrVal == "Nothing")).IntVal != 0 {
@@ -343,7 +343,7 @@ __t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_1:
 return __t1
-}}
+})
 _ = __local_var_2_0
 var go__3_3 gopurs_runtime.Value
 go__3_3 = gopurs_runtime.Func(func(v_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -491,7 +491,7 @@ var once_monadRecEither sync.Once
 func Get_monadRecEither() gopurs_runtime.Value {
 	once_monadRecEither.Do(func() {
 		monadRecEither = gopurs_runtime.RecordDict2("tailRecM", "Monad0", gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, a0_1 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_2_0 := gopurs_runtime.Value{PtrVal: func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_2_0 := gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_2, "_tag").StrVal == "Left")).IntVal != 0 {
@@ -535,7 +535,7 @@ __t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_1:
 return __t1
-}}
+})
 _ = __local_var_2_0
 var go__3_3 gopurs_runtime.Value
 go__3_3 = gopurs_runtime.Func(func(v_4_loop gopurs_runtime.Value) gopurs_runtime.Value {

@@ -1,7 +1,10 @@
 package Data_Date
 
+import "gopurs/output/gopurs_runtime"
+
+
+
 import (
-	"gopurs/output/gopurs_runtime"
 	"time"
 )
 
@@ -10,41 +13,48 @@ func createDate(y, m, d int) time.Time {
 	return time.Date(y, time.Month(m+1), d, 0, 0, 0, 0, time.UTC)
 }
 
-var CanonicalDateImpl = gopurs_runtime.Func(func(ctor gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(y gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Func(func(m gopurs_runtime.Value) gopurs_runtime.Value {
-			return gopurs_runtime.Func(func(d gopurs_runtime.Value) gopurs_runtime.Value {
-				date := createDate(int(y.IntVal), int(m.IntVal)-1, int(d.IntVal))
-				res := gopurs_runtime.Apply(ctor, gopurs_runtime.Int(int64(date.Year())))
-				res = gopurs_runtime.Apply(res, gopurs_runtime.Int(int64(date.Month())))
-				res = gopurs_runtime.Apply(res, gopurs_runtime.Int(int64(date.Day())))
-				return res
-			})
-		})
-	})
-})
+func CanonicalDateImpl(ctor func(int) func(int) func(int) interface{}, y int, m int, d int) interface{} {
+	date := createDate(y, m-1, d)
+	return ctor(date.Year())(int(date.Month()))(date.Day())
+}
 
-var CalcWeekday = gopurs_runtime.Func(func(y gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(m gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Func(func(d gopurs_runtime.Value) gopurs_runtime.Value {
-			date := createDate(int(y.IntVal), int(m.IntVal)-1, int(d.IntVal))
-			return gopurs_runtime.Int(int64(date.Weekday()))
-		})
-	})
-})
+func CalcWeekday(y int, m int, d int) int {
+	date := createDate(y, m-1, d)
+	return int(date.Weekday())
+}
 
-var CalcDiff = gopurs_runtime.Func(func(y1 gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(m1 gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Func(func(d1 gopurs_runtime.Value) gopurs_runtime.Value {
-			return gopurs_runtime.Func(func(y2 gopurs_runtime.Value) gopurs_runtime.Value {
-				return gopurs_runtime.Func(func(m2 gopurs_runtime.Value) gopurs_runtime.Value {
-					return gopurs_runtime.Func(func(d2 gopurs_runtime.Value) gopurs_runtime.Value {
-						dt1 := createDate(int(y1.IntVal), int(m1.IntVal)-1, int(d1.IntVal))
-						dt2 := createDate(int(y2.IntVal), int(m2.IntVal)-1, int(d2.IntVal))
-						return gopurs_runtime.Float(float64(dt1.UnixMilli() - dt2.UnixMilli()))
-					})
-				})
-			})
-		})
-	})
+func CalcDiff(y1 int, m1 int, d1 int, y2 int, m2 int, d2 int) float64 {
+	dt1 := createDate(y1, m1-1, d1)
+	dt2 := createDate(y2, m2-1, d2)
+	return float64(dt1.UnixMilli() - dt2.UnixMilli())
+}
+
+func CalcDiff(y int, m int, d int) int { return 0 }
+
+
+// --- Auto-generated FFI wrappers ---
+var _Gopurs_CanonicalDateImpl = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := func(p0 int) func(int) func(int) interface{} {
+		res := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0))
+		return gopurs_runtime.Unbox[func(int) func(int) interface{}](res)
+	}
+	go_arg1 := gopurs_runtime.Unbox[int](arg1)
+	go_arg2 := gopurs_runtime.Unbox[int](arg2)
+	go_arg3 := gopurs_runtime.Unbox[int](arg3)
+	go_res := CanonicalDateImpl(go_arg0, go_arg1, go_arg2, go_arg3)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs_CalcWeekday = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := gopurs_runtime.Unbox[int](arg0)
+	go_arg1 := gopurs_runtime.Unbox[int](arg1)
+	go_arg2 := gopurs_runtime.Unbox[int](arg2)
+	go_res := CalcWeekday(go_arg0, go_arg1, go_arg2)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs_CalcDiff = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := gopurs_runtime.Unbox[int](arg0)
+	go_arg1 := gopurs_runtime.Unbox[int](arg1)
+	go_arg2 := gopurs_runtime.Unbox[int](arg2)
+	go_res := CalcDiff(go_arg0, go_arg1, go_arg2)
+	return gopurs_runtime.Box(go_res)
 })

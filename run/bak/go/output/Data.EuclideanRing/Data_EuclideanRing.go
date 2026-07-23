@@ -138,17 +138,17 @@ return gopurs_runtime.RecordGet(dict_0, "degree")
 }
 
 func Get_intDegree() gopurs_runtime.Value {
-	return IntDegree
+	return _Gopurs_IntDegree
 }
 
 func Get_intDiv() gopurs_runtime.Value {
-	return IntDiv
+	return _Gopurs_IntDiv
 }
 
 func Get_intMod() gopurs_runtime.Value {
-	return IntMod
+	return _Gopurs_IntMod
 }
 
 func Get_numDiv() gopurs_runtime.Value {
-	return NumDiv
+	return _Gopurs_NumDiv
 }

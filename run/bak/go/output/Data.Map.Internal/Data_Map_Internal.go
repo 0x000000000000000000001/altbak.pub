@@ -135,7 +135,7 @@ var unsafeNode gopurs_runtime.Value
 var once_unsafeNode sync.Once
 func Get_unsafeNode() gopurs_runtime.Value {
 	once_unsafeNode.Do(func() {
-		unsafeNode = gopurs_runtime.Value{PtrVal: func(k_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, l_2 gopurs_runtime.Value, r_3 gopurs_runtime.Value) gopurs_runtime.Value {
+		unsafeNode = gopurs_runtime.Func4(func(k_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, l_2 gopurs_runtime.Value, r_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(l_2, "_tag").StrVal == "Leaf")).IntVal != 0 {
@@ -213,7 +213,7 @@ __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_0:
 return __t0
-}}
+})
 	})
 	return unsafeNode
 }
@@ -330,7 +330,7 @@ var unsafeBalancedNode gopurs_runtime.Value
 var once_unsafeBalancedNode sync.Once
 func Get_unsafeBalancedNode() gopurs_runtime.Value {
 	once_unsafeBalancedNode.Do(func() {
-		unsafeBalancedNode = gopurs_runtime.Value{PtrVal: func(k_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, l_2 gopurs_runtime.Value, r_3 gopurs_runtime.Value) gopurs_runtime.Value {
+		unsafeBalancedNode = gopurs_runtime.Func4(func(k_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, l_2 gopurs_runtime.Value, r_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(l_2, "_tag").StrVal == "Leaf")).IntVal != 0 {
@@ -552,7 +552,7 @@ __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_0:
 return __t0
-}}
+})
 	})
 	return unsafeBalancedNode
 }
@@ -698,7 +698,7 @@ var unsafeJoinNodes gopurs_runtime.Value
 var once_unsafeJoinNodes sync.Once
 func Get_unsafeJoinNodes() gopurs_runtime.Value {
 	once_unsafeJoinNodes.Do(func() {
-		unsafeJoinNodes = gopurs_runtime.Value{PtrVal: func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		unsafeJoinNodes = gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_0, "_tag").StrVal == "Leaf")).IntVal != 0 {
@@ -723,7 +723,7 @@ __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_0:
 return __t0
-}}
+})
 	})
 	return unsafeJoinNodes
 }
@@ -1643,9 +1643,9 @@ var stepUnfoldrUnordered gopurs_runtime.Value
 var once_stepUnfoldrUnordered sync.Once
 func Get_stepUnfoldrUnordered() gopurs_runtime.Value {
 	once_stepUnfoldrUnordered.Do(func() {
-		stepUnfoldrUnordered = gopurs_runtime.Apply3(Get_stepWith(), Get_iterMapU(), gopurs_runtime.Value{PtrVal: func(k_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, next_2 gopurs_runtime.Value) gopurs_runtime.Value {
+		stepUnfoldrUnordered = gopurs_runtime.Apply3(Get_stepWith(), Get_iterMapU(), gopurs_runtime.Func3(func(k_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, next_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), k_0, v_1), next_2))
-}}, gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
 }))
 	})
@@ -1671,9 +1671,9 @@ var stepUnordered gopurs_runtime.Value
 var once_stepUnordered sync.Once
 func Get_stepUnordered() gopurs_runtime.Value {
 	once_stepUnordered.Do(func() {
-		stepUnordered = gopurs_runtime.Apply3(Get_stepWith(), Get_iterMapU(), gopurs_runtime.Value{PtrVal: func(k_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, next_2 gopurs_runtime.Value) gopurs_runtime.Value {
+		stepUnordered = gopurs_runtime.Apply3(Get_stepWith(), Get_iterMapU(), gopurs_runtime.Func3(func(k_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, next_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict4("_tag", "value0", "value1", "value2", gopurs_runtime.Str("IterNext"), k_0, v_1, next_2)
-}}, gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("IterDone"))
 }))
 	})
@@ -1760,9 +1760,9 @@ var stepDesc gopurs_runtime.Value
 var once_stepDesc sync.Once
 func Get_stepDesc() gopurs_runtime.Value {
 	once_stepDesc.Do(func() {
-		stepDesc = gopurs_runtime.Apply3(Get_stepWith(), Get_iterMapR(), gopurs_runtime.Value{PtrVal: func(k_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, next_2 gopurs_runtime.Value) gopurs_runtime.Value {
+		stepDesc = gopurs_runtime.Apply3(Get_stepWith(), Get_iterMapR(), gopurs_runtime.Func3(func(k_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, next_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict4("_tag", "value0", "value1", "value2", gopurs_runtime.Str("IterNext"), k_0, v_1, next_2)
-}}, gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("IterDone"))
 }))
 	})
@@ -1849,9 +1849,9 @@ var stepAsc gopurs_runtime.Value
 var once_stepAsc sync.Once
 func Get_stepAsc() gopurs_runtime.Value {
 	once_stepAsc.Do(func() {
-		stepAsc = gopurs_runtime.Apply3(Get_stepWith(), Get_iterMapL(), gopurs_runtime.Value{PtrVal: func(k_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, next_2 gopurs_runtime.Value) gopurs_runtime.Value {
+		stepAsc = gopurs_runtime.Apply3(Get_stepWith(), Get_iterMapL(), gopurs_runtime.Func3(func(k_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, next_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict4("_tag", "value0", "value1", "value2", gopurs_runtime.Str("IterNext"), k_0, v_1, next_2)
-}}, gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("IterDone"))
 }))
 	})
@@ -2038,9 +2038,9 @@ var stepUnfoldr gopurs_runtime.Value
 var once_stepUnfoldr sync.Once
 func Get_stepUnfoldr() gopurs_runtime.Value {
 	once_stepUnfoldr.Do(func() {
-		stepUnfoldr = gopurs_runtime.Apply3(Get_stepWith(), Get_iterMapL(), gopurs_runtime.Value{PtrVal: func(k_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, next_2 gopurs_runtime.Value) gopurs_runtime.Value {
+		stepUnfoldr = gopurs_runtime.Apply3(Get_stepWith(), Get_iterMapL(), gopurs_runtime.Func3(func(k_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, next_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), k_0, v_1), next_2))
-}}, gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
 }))
 	})
@@ -2484,7 +2484,7 @@ func Get_foldableMap() gopurs_runtime.Value {
 		foldableMap = gopurs_runtime.RecordDict3("foldr", "foldl", "foldMap", gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, z_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var go__2_0 gopurs_runtime.Value
 _ = go__2_0
-go__2_0 = gopurs_runtime.Value{PtrVal: func(m_prime_3 gopurs_runtime.Value, z_prime_4 gopurs_runtime.Value) gopurs_runtime.Value {
+go__2_0 = gopurs_runtime.Func2(func(m_prime_3 gopurs_runtime.Value, z_prime_4 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(m_prime_3, "_tag").StrVal == "Leaf")).IntVal != 0 {
@@ -2507,14 +2507,14 @@ __t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_1:
 return __t1
-}}
+})
 return gopurs_runtime.Func(func(m_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.UncurriedApp2(go__2_0, m_3, z_1)
 })
 }), gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, z_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var go__2_2 gopurs_runtime.Value
 _ = go__2_2
-go__2_2 = gopurs_runtime.Value{PtrVal: func(z_prime_3 gopurs_runtime.Value, m_prime_4 gopurs_runtime.Value) gopurs_runtime.Value {
+go__2_2 = gopurs_runtime.Func2(func(z_prime_3 gopurs_runtime.Value, m_prime_4 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t3 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(m_prime_4, "_tag").StrVal == "Leaf")).IntVal != 0 {
@@ -2537,7 +2537,7 @@ __t3 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_3:
 return __t3
-}}
+})
 return gopurs_runtime.Func(func(m_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.UncurriedApp2(go__2_2, z_1, m_3)
 })
@@ -2587,7 +2587,7 @@ func Get_foldableWithIndexMap() gopurs_runtime.Value {
 		foldableWithIndexMap = gopurs_runtime.RecordDict4("foldrWithIndex", "foldlWithIndex", "foldMapWithIndex", "Foldable0", gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, z_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var go__2_0 gopurs_runtime.Value
 _ = go__2_0
-go__2_0 = gopurs_runtime.Value{PtrVal: func(m_prime_3 gopurs_runtime.Value, z_prime_4 gopurs_runtime.Value) gopurs_runtime.Value {
+go__2_0 = gopurs_runtime.Func2(func(m_prime_3 gopurs_runtime.Value, z_prime_4 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(m_prime_3, "_tag").StrVal == "Leaf")).IntVal != 0 {
@@ -2610,14 +2610,14 @@ __t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_1:
 return __t1
-}}
+})
 return gopurs_runtime.Func(func(m_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.UncurriedApp2(go__2_0, m_3, z_1)
 })
 }), gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, z_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var go__2_2 gopurs_runtime.Value
 _ = go__2_2
-go__2_2 = gopurs_runtime.Value{PtrVal: func(z_prime_3 gopurs_runtime.Value, m_prime_4 gopurs_runtime.Value) gopurs_runtime.Value {
+go__2_2 = gopurs_runtime.Func2(func(z_prime_3 gopurs_runtime.Value, m_prime_4 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t3 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(m_prime_4, "_tag").StrVal == "Leaf")).IntVal != 0 {
@@ -2640,7 +2640,7 @@ __t3 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_3:
 return __t3
-}}
+})
 return gopurs_runtime.Func(func(m_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.UncurriedApp2(go__2_2, z_1, m_3)
 })
@@ -2692,7 +2692,7 @@ func Get_keys() gopurs_runtime.Value {
 		keys = func() gopurs_runtime.Value {
 var go__0_0 gopurs_runtime.Value
 _ = go__0_0
-go__0_0 = gopurs_runtime.Value{PtrVal: func(m_prime_1 gopurs_runtime.Value, z_prime_2 gopurs_runtime.Value) gopurs_runtime.Value {
+go__0_0 = gopurs_runtime.Func2(func(m_prime_1 gopurs_runtime.Value, z_prime_2 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(m_prime_1, "_tag").StrVal == "Leaf")).IntVal != 0 {
@@ -2715,7 +2715,7 @@ __t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_1:
 return __t1
-}}
+})
 return gopurs_runtime.Func(func(m_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.UncurriedApp2(go__0_0, m_1, gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nil")))
 })
@@ -2841,7 +2841,7 @@ func Get_values() gopurs_runtime.Value {
 		values = func() gopurs_runtime.Value {
 var go__0_0 gopurs_runtime.Value
 _ = go__0_0
-go__0_0 = gopurs_runtime.Value{PtrVal: func(m_prime_1 gopurs_runtime.Value, z_prime_2 gopurs_runtime.Value) gopurs_runtime.Value {
+go__0_0 = gopurs_runtime.Func2(func(m_prime_1 gopurs_runtime.Value, z_prime_2 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(m_prime_1, "_tag").StrVal == "Leaf")).IntVal != 0 {
@@ -2864,7 +2864,7 @@ __t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_1:
 return __t1
-}}
+})
 return gopurs_runtime.Func(func(m_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.UncurriedApp2(go__0_0, m_1, gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nil")))
 })

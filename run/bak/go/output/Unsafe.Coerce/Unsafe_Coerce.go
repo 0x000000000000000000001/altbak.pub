@@ -7,5 +7,5 @@ import (
 
 
 func Get_unsafeCoerce() gopurs_runtime.Value {
-	return UnsafeCoerce
+	return _Gopurs_UnsafeCoerce
 }

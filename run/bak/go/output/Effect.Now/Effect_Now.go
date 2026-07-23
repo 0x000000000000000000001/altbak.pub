@@ -46,9 +46,9 @@ return gopurs_runtime.RecordGet(gopurs_runtime.Apply(pkg_Data_DateTime_Instant.G
 }
 
 func Get_getTimezoneOffset() gopurs_runtime.Value {
-	return GetTimezoneOffset
+	return _Gopurs_GetTimezoneOffset
 }
 
 func Get_now() gopurs_runtime.Value {
-	return Now
+	return _Gopurs_Now
 }

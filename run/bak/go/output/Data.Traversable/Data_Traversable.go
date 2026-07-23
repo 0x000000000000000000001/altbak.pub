@@ -758,5 +758,5 @@ return gopurs_runtime.Apply2(traverse2_2_0, f_4, x_3)
 }
 
 func Get_traverseArrayImpl() gopurs_runtime.Value {
-	return TraverseArrayImpl
+	return _Gopurs_TraverseArrayImpl
 }

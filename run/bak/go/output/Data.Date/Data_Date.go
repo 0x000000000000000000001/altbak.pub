@@ -1809,13 +1809,13 @@ return __t17
 }
 
 func Get_calcDiff() gopurs_runtime.Value {
-	return CalcDiff
+	return _Gopurs_CalcDiff
 }
 
 func Get_calcWeekday() gopurs_runtime.Value {
-	return CalcWeekday
+	return _Gopurs_CalcWeekday
 }
 
 func Get_canonicalDateImpl() gopurs_runtime.Value {
-	return CanonicalDateImpl
+	return _Gopurs_CanonicalDateImpl
 }

@@ -55,37 +55,37 @@ func Get_showError() gopurs_runtime.Value {
 }
 
 func Get_catchException() gopurs_runtime.Value {
-	return CatchException
+	return _Gopurs_CatchException
 }
 
 func Get_error() gopurs_runtime.Value {
-	return Error
+	return _Gopurs_Error
 }
 
 func Get_errorWithCause() gopurs_runtime.Value {
-	return ErrorWithCause
+	return _Gopurs_ErrorWithCause
 }
 
 func Get_errorWithName() gopurs_runtime.Value {
-	return ErrorWithName
+	return _Gopurs_ErrorWithName
 }
 
 func Get_message() gopurs_runtime.Value {
-	return Message
+	return _Gopurs_Message
 }
 
 func Get_name() gopurs_runtime.Value {
-	return Name
+	return _Gopurs_Name
 }
 
 func Get_showErrorImpl() gopurs_runtime.Value {
-	return ShowErrorImpl
+	return _Gopurs_ShowErrorImpl
 }
 
 func Get_stackImpl() gopurs_runtime.Value {
-	return StackImpl
+	return _Gopurs_StackImpl
 }
 
 func Get_throwException() gopurs_runtime.Value {
-	return ThrowException
+	return _Gopurs_ThrowException
 }

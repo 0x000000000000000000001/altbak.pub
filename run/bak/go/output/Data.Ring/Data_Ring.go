@@ -180,9 +180,9 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictRing_0, "sub"), zero_1
 }
 
 func Get_intSub() gopurs_runtime.Value {
-	return IntSub
+	return _Gopurs_IntSub
 }
 
 func Get_numSub() gopurs_runtime.Value {
-	return NumSub
+	return _Gopurs_NumSub
 }

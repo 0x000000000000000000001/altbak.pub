@@ -1731,9 +1731,9 @@ return semigroupConj1_2_0
 }
 
 func Get_foldlArray() gopurs_runtime.Value {
-	return FoldlArray
+	return _Gopurs_FoldlArray
 }
 
 func Get_foldrArray() gopurs_runtime.Value {
-	return FoldrArray
+	return _Gopurs_FoldrArray
 }

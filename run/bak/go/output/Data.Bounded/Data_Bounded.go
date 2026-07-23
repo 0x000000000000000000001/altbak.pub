@@ -193,25 +193,25 @@ return ordRecordCons_8_3
 }
 
 func Get_bottomChar() gopurs_runtime.Value {
-	return BottomChar
+	return _Gopurs_BottomChar
 }
 
 func Get_bottomInt() gopurs_runtime.Value {
-	return BottomInt
+	return _Gopurs_BottomInt
 }
 
 func Get_bottomNumber() gopurs_runtime.Value {
-	return BottomNumber
+	return _Gopurs_BottomNumber
 }
 
 func Get_topChar() gopurs_runtime.Value {
-	return TopChar
+	return _Gopurs_TopChar
 }
 
 func Get_topInt() gopurs_runtime.Value {
-	return TopInt
+	return _Gopurs_TopInt
 }
 
 func Get_topNumber() gopurs_runtime.Value {
-	return TopNumber
+	return _Gopurs_TopNumber
 }

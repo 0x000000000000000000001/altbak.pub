@@ -7,5 +7,5 @@ import (
 
 
 func Get_unit() gopurs_runtime.Value {
-	return Unit
+	return _Gopurs_Unit
 }

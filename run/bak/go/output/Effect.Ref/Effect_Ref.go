@@ -61,21 +61,21 @@ return pkg_Data_Unit.Get_unit()
 }
 
 func Get__new() gopurs_runtime.Value {
-	return X_New
+	return _Gopurs__New
 }
 
 func Get_modifyImpl() gopurs_runtime.Value {
-	return ModifyImpl
+	return _Gopurs_ModifyImpl
 }
 
 func Get_newWithSelf() gopurs_runtime.Value {
-	return NewWithSelf
+	return _Gopurs_NewWithSelf
 }
 
 func Get_read() gopurs_runtime.Value {
-	return Read
+	return _Gopurs_Read
 }
 
 func Get_write() gopurs_runtime.Value {
-	return Write
+	return _Gopurs_Write
 }

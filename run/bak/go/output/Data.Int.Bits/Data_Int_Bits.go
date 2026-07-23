@@ -7,29 +7,29 @@ import (
 
 
 func Get_and() gopurs_runtime.Value {
-	return And
+	return _Gopurs_And
 }
 
 func Get_complement() gopurs_runtime.Value {
-	return Complement
+	return _Gopurs_Complement
 }
 
 func Get_or() gopurs_runtime.Value {
-	return Or
+	return _Gopurs_Or
 }
 
 func Get_shl() gopurs_runtime.Value {
-	return Shl
+	return _Gopurs_Shl
 }
 
 func Get_shr() gopurs_runtime.Value {
-	return Shr
+	return _Gopurs_Shr
 }
 
 func Get_xor() gopurs_runtime.Value {
-	return Xor
+	return _Gopurs_Xor
 }
 
 func Get_zshr() gopurs_runtime.Value {
-	return Zshr
+	return _Gopurs_Zshr
 }

@@ -434,9 +434,9 @@ return pkg_Data_Ord.Get_ordNumber()
 }
 
 func Get_fromDateTimeImpl() gopurs_runtime.Value {
-	return FromDateTimeImpl
+	return _Gopurs_FromDateTimeImpl
 }
 
 func Get_toDateTimeImpl() gopurs_runtime.Value {
-	return ToDateTimeImpl
+	return _Gopurs_ToDateTimeImpl
 }

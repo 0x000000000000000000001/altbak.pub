@@ -226,7 +226,7 @@ var once_stripPrefix sync.Once
 func Get_stripPrefix() gopurs_runtime.Value {
 	once_stripPrefix.Do(func() {
 		stripPrefix = gopurs_runtime.Func3(func(dictEq_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, s_2 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_3_0 := gopurs_runtime.Value{PtrVal: func(prefix_3 gopurs_runtime.Value, input_4 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_3_0 := gopurs_runtime.Func2(func(prefix_3 gopurs_runtime.Value, input_4 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(input_4, "_tag").StrVal == "Cons")).IntVal != 0 {
@@ -283,9 +283,9 @@ __t1 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
 }
 end_branch_1:
 return __t1
-}}
+})
 _ = __local_var_3_0
-__local_var_4_4 := gopurs_runtime.Value{PtrVal: func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_4_4 := gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t5 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_4, "_tag").StrVal == "Nothing")).IntVal != 0 {
@@ -329,7 +329,7 @@ __t5 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_5:
 return __t5
-}}
+})
 _ = __local_var_4_4
 var go__5_7 gopurs_runtime.Value
 go__5_7 = gopurs_runtime.Func(func(v_6_loop gopurs_runtime.Value) gopurs_runtime.Value {

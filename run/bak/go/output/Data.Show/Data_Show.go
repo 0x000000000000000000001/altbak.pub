@@ -186,21 +186,21 @@ return gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.S
 }
 
 func Get_showArrayImpl() gopurs_runtime.Value {
-	return ShowArrayImpl
+	return _Gopurs_ShowArrayImpl
 }
 
 func Get_showCharImpl() gopurs_runtime.Value {
-	return ShowCharImpl
+	return _Gopurs_ShowCharImpl
 }
 
 func Get_showIntImpl() gopurs_runtime.Value {
-	return ShowIntImpl
+	return _Gopurs_ShowIntImpl
 }
 
 func Get_showNumberImpl() gopurs_runtime.Value {
-	return ShowNumberImpl
+	return _Gopurs_ShowNumberImpl
 }
 
 func Get_showStringImpl() gopurs_runtime.Value {
-	return ShowStringImpl
+	return _Gopurs_ShowStringImpl
 }

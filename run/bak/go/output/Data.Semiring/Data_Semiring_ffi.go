@@ -1,34 +1,43 @@
 package Data_Semiring
 
-import (
-	"gopurs/output/gopurs_runtime"
-	"math"
-)
+import "gopurs/output/gopurs_runtime"
 
-var IntAdd = gopurs_runtime.Func(func(x gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(y gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Int(int64(int64(x.IntVal + y.IntVal)))
-	})
+func IntAdd(x int, y int) int {
+	return x + y
+}
+func IntMul(x int, y int) int {
+	return x * y
+}
+func NumAdd(n1 float64, n2 float64) float64 {
+	return n1 + n2
+}
+func NumMul(n1 float64, n2 float64) float64 {
+	return n1 * n2
+}
+
+
+// --- Auto-generated FFI wrappers ---
+var _Gopurs_IntAdd = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := gopurs_runtime.Unbox[int](arg0)
+	go_arg1 := gopurs_runtime.Unbox[int](arg1)
+	go_res := IntAdd(go_arg0, go_arg1)
+	return gopurs_runtime.Box(go_res)
 })
-
-var IntMul = gopurs_runtime.Func(func(x gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(y gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Int(int64(int64(x.IntVal * y.IntVal)))
-	})
+var _Gopurs_IntMul = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := gopurs_runtime.Unbox[int](arg0)
+	go_arg1 := gopurs_runtime.Unbox[int](arg1)
+	go_res := IntMul(go_arg0, go_arg1)
+	return gopurs_runtime.Box(go_res)
 })
-
-var NumAdd = gopurs_runtime.Func(func(n1 gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(n2 gopurs_runtime.Value) gopurs_runtime.Value {
-		f1 := math.Float64frombits(uint64(n1.IntVal))
-		f2 := math.Float64frombits(uint64(n2.IntVal))
-		return gopurs_runtime.Float(f1 + f2)
-	})
+var _Gopurs_NumAdd = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := gopurs_runtime.Unbox[float64](arg0)
+	go_arg1 := gopurs_runtime.Unbox[float64](arg1)
+	go_res := NumAdd(go_arg0, go_arg1)
+	return gopurs_runtime.Box(go_res)
 })
-
-var NumMul = gopurs_runtime.Func(func(n1 gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(n2 gopurs_runtime.Value) gopurs_runtime.Value {
-		f1 := math.Float64frombits(uint64(n1.IntVal))
-		f2 := math.Float64frombits(uint64(n2.IntVal))
-		return gopurs_runtime.Float(f1 * f2)
-	})
+var _Gopurs_NumMul = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := gopurs_runtime.Unbox[float64](arg0)
+	go_arg1 := gopurs_runtime.Unbox[float64](arg1)
+	go_res := NumMul(go_arg0, go_arg1)
+	return gopurs_runtime.Box(go_res)
 })

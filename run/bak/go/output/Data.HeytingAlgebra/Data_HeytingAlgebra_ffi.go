@@ -2,27 +2,32 @@ package Data_HeytingAlgebra
 
 import "gopurs/output/gopurs_runtime"
 
-var BoolConj = gopurs_runtime.Func(func(b1 gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(b2 gopurs_runtime.Value) gopurs_runtime.Value {
-		if b1.IntVal != 0 && b2.IntVal != 0 {
-			return gopurs_runtime.Bool(true)
-		}
-		return gopurs_runtime.Bool(false)
-	})
-})
+func BoolConj(b1 bool, b2 bool) bool {
+	return b1 && b2
+}
+func BoolDisj(b1 bool, b2 bool) bool {
+	return b1 || b2
+}
+func BoolNot(b bool) bool {
+	return !b
+}
 
-var BoolDisj = gopurs_runtime.Func(func(b1 gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(b2 gopurs_runtime.Value) gopurs_runtime.Value {
-		if b1.IntVal != 0 || b2.IntVal != 0 {
-			return gopurs_runtime.Bool(true)
-		}
-		return gopurs_runtime.Bool(false)
-	})
-})
 
-var BoolNot = gopurs_runtime.Func(func(b gopurs_runtime.Value) gopurs_runtime.Value {
-	if b.IntVal != 0 {
-		return gopurs_runtime.Bool(false)
-	}
-	return gopurs_runtime.Bool(true)
+// --- Auto-generated FFI wrappers ---
+var _Gopurs_BoolConj = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := gopurs_runtime.Unbox[bool](arg0)
+	go_arg1 := gopurs_runtime.Unbox[bool](arg1)
+	go_res := BoolConj(go_arg0, go_arg1)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs_BoolDisj = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := gopurs_runtime.Unbox[bool](arg0)
+	go_arg1 := gopurs_runtime.Unbox[bool](arg1)
+	go_res := BoolDisj(go_arg0, go_arg1)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs_BoolNot = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := gopurs_runtime.Unbox[bool](arg0)
+	go_res := BoolNot(go_arg0)
+	return gopurs_runtime.Box(go_res)
 })

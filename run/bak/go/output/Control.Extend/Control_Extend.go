@@ -91,5 +91,5 @@ return gopurs_runtime.Apply(g_2, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(
 }
 
 func Get_arrayExtend() gopurs_runtime.Value {
-	return ArrayExtend
+	return _Gopurs_ArrayExtend
 }

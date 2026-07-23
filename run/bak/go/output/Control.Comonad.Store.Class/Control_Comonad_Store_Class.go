@@ -103,11 +103,11 @@ _ = comonadTracedT_2_1
 return gopurs_runtime.Func(func(dictMonoid_3 gopurs_runtime.Value) gopurs_runtime.Value {
 mempty_4_2 := gopurs_runtime.RecordGet(dictMonoid_3, "mempty")
 _ = mempty_4_2
-lower1_5_3 := gopurs_runtime.Value{PtrVal: func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
+lower1_5_3 := gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Comonad0_1_0, "Extend0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Func(func(f_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(f_6, mempty_4_2)
 }), v_5)
-}}
+})
 _ = lower1_5_3
 comonadTracedT1_6_4 := gopurs_runtime.Apply(comonadTracedT_2_1, dictMonoid_3)
 _ = comonadTracedT1_6_4

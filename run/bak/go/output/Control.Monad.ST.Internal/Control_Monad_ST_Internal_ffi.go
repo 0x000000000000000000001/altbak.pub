@@ -103,3 +103,17 @@ var Write = gopurs_runtime.Func(func(a gopurs_runtime.Value) gopurs_runtime.Valu
 		})
 	})
 })
+
+
+// --- Auto-generated FFI wrappers ---
+var _Gopurs_Map_ = gopurs_runtime.Box(Map_)
+var _Gopurs_Pure_ = gopurs_runtime.Box(Pure_)
+var _Gopurs_Bind_ = gopurs_runtime.Box(Bind_)
+var _Gopurs_Run = gopurs_runtime.Box(Run)
+var _Gopurs_While = gopurs_runtime.Box(While)
+var _Gopurs_For_ = gopurs_runtime.Box(For_)
+var _Gopurs_Foreach = gopurs_runtime.Box(Foreach)
+var _Gopurs_New_ = gopurs_runtime.Box(New_)
+var _Gopurs_Read = gopurs_runtime.Box(Read)
+var _Gopurs_ModifyImpl = gopurs_runtime.Box(ModifyImpl)
+var _Gopurs_Write = gopurs_runtime.Box(Write)

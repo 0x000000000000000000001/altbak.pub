@@ -62,7 +62,7 @@ func Get_monadParWriterT() gopurs_runtime.Value {
 		monadParWriterT = gopurs_runtime.Func(func(dictMonoid_0 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{})
 _ = __local_var_1_0
-applyWriterT_2_1 := gopurs_runtime.Value{PtrVal: func(dictApply_2 gopurs_runtime.Value) gopurs_runtime.Value {
+applyWriterT_2_1 := gopurs_runtime.Func(func(dictApply_2 gopurs_runtime.Value) gopurs_runtime.Value {
 Functor0_3_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApply_2, "Functor0"), gopurs_runtime.Value{})
 _ = Functor0_3_2
 functorWriterT1_4_3 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_4 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -78,7 +78,7 @@ return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str
 }), gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return functorWriterT1_4_3
 }))
-}}
+})
 _ = applyWriterT_2_1
 return gopurs_runtime.Func(func(dictParallel_3 gopurs_runtime.Value) gopurs_runtime.Value {
 applyWriterT1_4_4 := gopurs_runtime.UncurriedApp(applyWriterT_2_1, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictParallel_3, "Apply0"), gopurs_runtime.Value{}))

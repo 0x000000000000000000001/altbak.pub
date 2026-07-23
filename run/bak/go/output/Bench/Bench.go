@@ -34,13 +34,13 @@ return dt_6_4
 }
 
 func Get_benchNow() gopurs_runtime.Value {
-	return BenchNow
+	return _Gopurs_BenchNow
 }
 
 func Get_formatNumber() gopurs_runtime.Value {
-	return FormatNumber
+	return _Gopurs_FormatNumber
 }
 
 func Get_opaque() gopurs_runtime.Value {
-	return Opaque
+	return _Gopurs_Opaque
 }

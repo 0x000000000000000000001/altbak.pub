@@ -535,9 +535,9 @@ return Get_bindLazy()
 }
 
 func Get_defer_() gopurs_runtime.Value {
-	return Defer_
+	return _Gopurs_Defer_
 }
 
 func Get_force() gopurs_runtime.Value {
-	return Force
+	return _Gopurs_Force
 }

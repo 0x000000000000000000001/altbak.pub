@@ -927,69 +927,69 @@ return Get_plusParAff()
 }
 
 func Get__bind() gopurs_runtime.Value {
-	return X_Bind
+	return _Gopurs__Bind
 }
 
 func Get__catchError() gopurs_runtime.Value {
-	return X_CatchError
+	return _Gopurs__CatchError
 }
 
 func Get__delay() gopurs_runtime.Value {
-	return X_Delay
+	return _Gopurs__Delay
 }
 
 func Get__fork() gopurs_runtime.Value {
-	return X_Fork
+	return _Gopurs__Fork
 }
 
 func Get__killAll() gopurs_runtime.Value {
-	return X_KillAll
+	return _Gopurs__KillAll
 }
 
 func Get__liftEffect() gopurs_runtime.Value {
-	return X_LiftEffect
+	return _Gopurs__LiftEffect
 }
 
 func Get__makeFiber() gopurs_runtime.Value {
-	return X_MakeFiber
+	return _Gopurs__MakeFiber
 }
 
 func Get__makeSupervisedFiber() gopurs_runtime.Value {
-	return X_MakeSupervisedFiber
+	return _Gopurs__MakeSupervisedFiber
 }
 
 func Get__map() gopurs_runtime.Value {
-	return X_Map
+	return _Gopurs__Map
 }
 
 func Get__parAffAlt() gopurs_runtime.Value {
-	return X_ParAffAlt
+	return _Gopurs__ParAffAlt
 }
 
 func Get__parAffApply() gopurs_runtime.Value {
-	return X_ParAffApply
+	return _Gopurs__ParAffApply
 }
 
 func Get__parAffMap() gopurs_runtime.Value {
-	return X_ParAffMap
+	return _Gopurs__ParAffMap
 }
 
 func Get__pure() gopurs_runtime.Value {
-	return X_Pure
+	return _Gopurs__Pure
 }
 
 func Get__sequential() gopurs_runtime.Value {
-	return X_Sequential
+	return _Gopurs__Sequential
 }
 
 func Get__throwError() gopurs_runtime.Value {
-	return X_ThrowError
+	return _Gopurs__ThrowError
 }
 
 func Get_generalBracket() gopurs_runtime.Value {
-	return GeneralBracket
+	return _Gopurs_GeneralBracket
 }
 
 func Get_makeAff() gopurs_runtime.Value {
-	return MakeAff
+	return _Gopurs_MakeAff
 }

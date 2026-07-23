@@ -28,5 +28,5 @@ return gopurs_runtime.Apply(Get__crashWith(), gopurs_runtime.Str("Partial.crash:
 }
 
 func Get__crashWith() gopurs_runtime.Value {
-	return X_CrashWith
+	return _Gopurs__CrashWith
 }

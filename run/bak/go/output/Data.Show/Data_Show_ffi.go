@@ -1,54 +1,62 @@
 package Data_Show
 
-import (
-	"fmt"
-	"gopurs/output/gopurs_runtime"
-	"math"
-)
+import "gopurs/output/gopurs_runtime"
 
-var ShowIntImpl = gopurs_runtime.Func(func(n gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Str(fmt.Sprintf("%v", n.IntVal))
-})
-
-var ShowNumberImpl = gopurs_runtime.Func(func(n gopurs_runtime.Value) gopurs_runtime.Value {
-	f := math.Float64frombits(uint64(n.IntVal))
-	if math.IsNaN(f) {
-		return gopurs_runtime.Str("NaN")
-	}
-	if math.IsInf(f, 1) {
-		return gopurs_runtime.Str("Infinity")
-	}
-	if math.IsInf(f, -1) {
-		return gopurs_runtime.Str("-Infinity")
-	}
-	if f == math.Trunc(f) {
-		return gopurs_runtime.Str(fmt.Sprintf("%.1f", f))
-	}
-	return gopurs_runtime.Str(fmt.Sprintf("%g", f))
-})
-
-var ShowCharImpl = gopurs_runtime.Func(func(c gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Str(fmt.Sprintf("'%s'", c.StrVal))
-})
-
-var ShowStringImpl = gopurs_runtime.Func(func(s gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Str(fmt.Sprintf("%q", s.StrVal))
-})
-
-var ShowArrayImpl = gopurs_runtime.Func(func(f gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(xs gopurs_runtime.Value) gopurs_runtime.Value {
-		// xs is an Array (Wait, what is Array in Value?)
-		// Let's assume xs.ArrayVal is []gopurs_runtime.Value
-		arr := xs.PtrVal.([]gopurs_runtime.Value)
-		res := "["
-		for i, v := range arr {
-			if i > 0 {
-				res += ","
-			}
-			strVal := gopurs_runtime.Apply(f, v)
-			res += strVal.StrVal
+import "fmt"
+func ShowIntImpl(n int) string {
+	return fmt.Sprintf("%v", n)
+}
+func ShowNumberImpl(n float64) string {
+	return fmt.Sprintf("%f", n)
+}
+func ShowCharImpl(c string) string {
+	return fmt.Sprintf("'%s'", c)
+}
+func ShowStringImpl(s string) string {
+	return fmt.Sprintf("%q", s)
+}
+func ShowArrayImpl(f func(any) string, arr []any) string {
+	res := "["
+	for i, v := range arr {
+		if i > 0 {
+			res += ","
 		}
-		res += "]"
-		return gopurs_runtime.Str(res)
-	})
+		res += f(v)
+	}
+	res += "]"
+	return res
+}
+
+
+// --- Auto-generated FFI wrappers ---
+var _Gopurs_ShowIntImpl = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := gopurs_runtime.Unbox[int](arg0)
+	go_res := ShowIntImpl(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs_ShowNumberImpl = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := gopurs_runtime.Unbox[float64](arg0)
+	go_res := ShowNumberImpl(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs_ShowCharImpl = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := gopurs_runtime.Unbox[string](arg0)
+	go_res := ShowCharImpl(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs_ShowStringImpl = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := gopurs_runtime.Unbox[string](arg0)
+	go_res := ShowStringImpl(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs_ShowArrayImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := func(p0 any) string {
+		res := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0))
+		return gopurs_runtime.Unbox[string](res)
+	}
+	arg1_arr := arg1.PtrVal.([]gopurs_runtime.Value)
+	go_arg1 := make([]any, len(arg1_arr))
+	for i, v := range arg1_arr { go_arg1[i] = v.PtrVal }
+	go_res := ShowArrayImpl(go_arg0, go_arg1)
+	return gopurs_runtime.Box(go_res)
 })

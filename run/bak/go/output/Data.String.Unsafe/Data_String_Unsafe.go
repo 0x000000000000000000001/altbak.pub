@@ -7,9 +7,9 @@ import (
 
 
 func Get_char() gopurs_runtime.Value {
-	return Char
+	return _Gopurs_Char
 }
 
 func Get_charAt() gopurs_runtime.Value {
-	return CharAt
+	return _Gopurs_CharAt
 }

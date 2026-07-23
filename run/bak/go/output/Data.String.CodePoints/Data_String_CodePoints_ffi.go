@@ -2,16 +2,68 @@ package Data_String_CodePoints
 
 import "gopurs/output/gopurs_runtime"
 
-func dummyFn(name string) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-		panic("Not implemented: " + name)
-	})
+func X_unsafeCodePointAt0(_ any) any {
+	panic("Not implemented: X_unsafeCodePointAt0")
 }
 
-var X_UnsafeCodePointAt0 = dummyFn("X_UnsafeCodePointAt0")
-var X_CodePointAt = dummyFn("X_CodePointAt")
-var X_CountPrefix = dummyFn("X_CountPrefix")
-var X_FromCodePointArray = dummyFn("X_FromCodePointArray")
-var X_Singleton = dummyFn("X_Singleton")
-var X_Take = dummyFn("X_Take")
-var X_ToCodePointArray = dummyFn("X_ToCodePointArray")
+func X_codePointAt(_ any) any {
+	panic("Not implemented: X_codePointAt")
+}
+
+func X_countPrefix(_ any) any {
+	panic("Not implemented: X_countPrefix")
+}
+
+func X_fromCodePointArray(_ any) any {
+	panic("Not implemented: X_fromCodePointArray")
+}
+
+func X_singleton(_ any) any {
+	panic("Not implemented: X_singleton")
+}
+
+func X_take(_ any) any {
+	panic("Not implemented: X_take")
+}
+
+func X_toCodePointArray(_ any) any {
+	panic("Not implemented: X_toCodePointArray")
+}
+
+
+// --- Auto-generated FFI wrappers ---
+var _Gopurs_X_unsafeCodePointAt0 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0.PtrVal
+	go_res := X_unsafeCodePointAt0(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs_X_codePointAt = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0.PtrVal
+	go_res := X_codePointAt(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs_X_countPrefix = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0.PtrVal
+	go_res := X_countPrefix(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs_X_fromCodePointArray = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0.PtrVal
+	go_res := X_fromCodePointArray(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs_X_singleton = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0.PtrVal
+	go_res := X_singleton(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs_X_take = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0.PtrVal
+	go_res := X_take(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs_X_toCodePointArray = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0.PtrVal
+	go_res := X_toCodePointArray(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})

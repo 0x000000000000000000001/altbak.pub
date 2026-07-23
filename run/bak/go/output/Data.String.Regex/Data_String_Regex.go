@@ -245,41 +245,41 @@ return gopurs_runtime.Apply(Get_flagsImpl(), x_0)
 }
 
 func Get__match() gopurs_runtime.Value {
-	return X_Match
+	return _Gopurs__Match
 }
 
 func Get__replaceBy() gopurs_runtime.Value {
-	return X_ReplaceBy
+	return _Gopurs__ReplaceBy
 }
 
 func Get__search() gopurs_runtime.Value {
-	return X_Search
+	return _Gopurs__Search
 }
 
 func Get_flagsImpl() gopurs_runtime.Value {
-	return FlagsImpl
+	return _Gopurs_FlagsImpl
 }
 
 func Get_regexImpl() gopurs_runtime.Value {
-	return RegexImpl
+	return _Gopurs_RegexImpl
 }
 
 func Get_replace() gopurs_runtime.Value {
-	return Replace
+	return _Gopurs_Replace
 }
 
 func Get_showRegexImpl() gopurs_runtime.Value {
-	return ShowRegexImpl
+	return _Gopurs_ShowRegexImpl
 }
 
 func Get_source() gopurs_runtime.Value {
-	return Source
+	return _Gopurs_Source
 }
 
 func Get_split() gopurs_runtime.Value {
-	return Split
+	return _Gopurs_Split
 }
 
 func Get_test() gopurs_runtime.Value {
-	return Test
+	return _Gopurs_Test
 }

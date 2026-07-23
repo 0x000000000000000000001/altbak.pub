@@ -220,45 +220,45 @@ return semigroupST1_2_1
 }
 
 func Get_bind_() gopurs_runtime.Value {
-	return Bind_
+	return _Gopurs_Bind_
 }
 
 func Get_for_() gopurs_runtime.Value {
-	return For_
+	return _Gopurs_For_
 }
 
 func Get_foreach() gopurs_runtime.Value {
-	return Foreach
+	return _Gopurs_Foreach
 }
 
 func Get_map_() gopurs_runtime.Value {
-	return Map_
+	return _Gopurs_Map_
 }
 
 func Get_modifyImpl() gopurs_runtime.Value {
-	return ModifyImpl
+	return _Gopurs_ModifyImpl
 }
 
 func Get_new_() gopurs_runtime.Value {
-	return New_
+	return _Gopurs_New_
 }
 
 func Get_pure_() gopurs_runtime.Value {
-	return Pure_
+	return _Gopurs_Pure_
 }
 
 func Get_read() gopurs_runtime.Value {
-	return Read
+	return _Gopurs_Read
 }
 
 func Get_run() gopurs_runtime.Value {
-	return Run
+	return _Gopurs_Run
 }
 
 func Get_while() gopurs_runtime.Value {
-	return While
+	return _Gopurs_While
 }
 
 func Get_write() gopurs_runtime.Value {
-	return Write
+	return _Gopurs_Write
 }

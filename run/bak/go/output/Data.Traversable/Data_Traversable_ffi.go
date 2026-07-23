@@ -2,63 +2,78 @@ package Data_Traversable
 
 import "gopurs/output/gopurs_runtime"
 
-var TraverseArrayImpl = gopurs_runtime.Func(func(apply gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(mapFn gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Func(func(pure gopurs_runtime.Value) gopurs_runtime.Value {
-			return gopurs_runtime.Func(func(f gopurs_runtime.Value) gopurs_runtime.Value {
-				return gopurs_runtime.Func(func(arrayVal gopurs_runtime.Value) gopurs_runtime.Value {
+func TraverseArrayImpl(apply func(interface{}) func(interface{}) interface{}, mapFn func(interface{}) func(interface{}) interface{}, pure func(interface{}) interface{}, f func(interface{}) interface{}, arrayVal []interface{}) interface{} {
+	array1 := func(a interface{}) interface{} {
+		return []interface{}{a}
+	}
+	
+	array2 := func(a interface{}) func(interface{}) interface{} {
+		return func(b interface{}) interface{} {
+			return []interface{}{a, b}
+		}
+	}
+	
+	array3 := func(a interface{}) func(interface{}) interface{} {
+		return func(b interface{}) interface{} {
+			return func(c interface{}) interface{} {
+				return []interface{}{a, b, c}
+			}
+		}
+	}
+	
+	concat2 := func(xsVal interface{}) func(interface{}) interface{} {
+		return func(ysVal interface{}) interface{} {
+			xs := xsVal.([]interface{})
+			ys := ysVal.([]interface{})
+			res := make([]interface{}, 0, len(xs)+len(ys))
+			res = append(res, xs...)
+			res = append(res, ys...)
+			return res
+		}
+	}
+	
+	var goFn func(int, int) interface{}
+	goFn = func(bot, top int) interface{} {
+		switch top - bot {
+		case 0:
+			return pure([]interface{}{})
+		case 1:
+			return mapFn(array1)(f(arrayVal[bot]))
+		case 2:
+			return apply(mapFn(array2)(f(arrayVal[bot])))(f(arrayVal[bot+1]))
+		case 3:
+			return apply(apply(mapFn(array3)(f(arrayVal[bot])))(f(arrayVal[bot+1])))(f(arrayVal[bot+2]))
+		default:
+			pivot := bot + ((top - bot) / 4) * 2
+			return apply(mapFn(concat2)(goFn(bot, pivot)))(goFn(pivot, top))
+		}
+	}
+	
+	return goFn(0, len(arrayVal))
+}
 
-					array1 := gopurs_runtime.Func(func(a gopurs_runtime.Value) gopurs_runtime.Value {
-						return gopurs_runtime.Array([]gopurs_runtime.Value{a})
-					})
 
-					array2 := gopurs_runtime.Func(func(a gopurs_runtime.Value) gopurs_runtime.Value {
-						return gopurs_runtime.Func(func(b gopurs_runtime.Value) gopurs_runtime.Value {
-							return gopurs_runtime.Array([]gopurs_runtime.Value{a, b})
-						})
-					})
-
-					array3 := gopurs_runtime.Func(func(a gopurs_runtime.Value) gopurs_runtime.Value {
-						return gopurs_runtime.Func(func(b gopurs_runtime.Value) gopurs_runtime.Value {
-							return gopurs_runtime.Func(func(c gopurs_runtime.Value) gopurs_runtime.Value {
-								return gopurs_runtime.Array([]gopurs_runtime.Value{a, b, c})
-							})
-						})
-					})
-
-					concat2 := gopurs_runtime.Func(func(xsVal gopurs_runtime.Value) gopurs_runtime.Value {
-						return gopurs_runtime.Func(func(ysVal gopurs_runtime.Value) gopurs_runtime.Value {
-							xs := xsVal.PtrVal.([]gopurs_runtime.Value)
-							ys := ysVal.PtrVal.([]gopurs_runtime.Value)
-							res := make([]gopurs_runtime.Value, 0, len(xs)+len(ys))
-							res = append(res, xs...)
-							res = append(res, ys...)
-							return gopurs_runtime.Array(res)
-						})
-					})
-
-					arr := arrayVal.PtrVal.([]gopurs_runtime.Value)
-
-					var goFn func(int, int) gopurs_runtime.Value
-					goFn = func(bot, top int) gopurs_runtime.Value {
-						switch top - bot {
-						case 0:
-							return gopurs_runtime.Apply(pure, gopurs_runtime.Array([]gopurs_runtime.Value{}))
-						case 1:
-							return gopurs_runtime.Apply(gopurs_runtime.Apply(mapFn, array1), gopurs_runtime.Apply(f, arr[bot]))
-						case 2:
-							return gopurs_runtime.Apply(gopurs_runtime.Apply(apply, gopurs_runtime.Apply(gopurs_runtime.Apply(mapFn, array2), gopurs_runtime.Apply(f, arr[bot]))), gopurs_runtime.Apply(f, arr[bot+1]))
-						case 3:
-							return gopurs_runtime.Apply(gopurs_runtime.Apply(apply, gopurs_runtime.Apply(gopurs_runtime.Apply(apply, gopurs_runtime.Apply(gopurs_runtime.Apply(mapFn, array3), gopurs_runtime.Apply(f, arr[bot]))), gopurs_runtime.Apply(f, arr[bot+1]))), gopurs_runtime.Apply(f, arr[bot+2]))
-						default:
-							pivot := bot + ((top-bot)/4)*2
-							return gopurs_runtime.Apply(gopurs_runtime.Apply(apply, gopurs_runtime.Apply(gopurs_runtime.Apply(mapFn, concat2), goFn(bot, pivot))), goFn(pivot, top))
-						}
-					}
-
-					return goFn(0, len(arr))
-				})
-			})
-		})
-	})
+// --- Auto-generated FFI wrappers ---
+var _Gopurs_TraverseArrayImpl = gopurs_runtime.Func5(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := func(p0 interface{}) func(interface{}) interface{} {
+		res := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0))
+		return gopurs_runtime.Unbox[func(interface{}) interface{}](res)
+	}
+	go_arg1 := func(p0 interface{}) func(interface{}) interface{} {
+		res := gopurs_runtime.Apply(arg1, gopurs_runtime.Box(p0))
+		return gopurs_runtime.Unbox[func(interface{}) interface{}](res)
+	}
+	go_arg2 := func(p0 interface{}) interface{} {
+		res := gopurs_runtime.Apply(arg2, gopurs_runtime.Box(p0))
+		return res.PtrVal
+	}
+	go_arg3 := func(p0 interface{}) interface{} {
+		res := gopurs_runtime.Apply(arg3, gopurs_runtime.Box(p0))
+		return res.PtrVal
+	}
+	arg4_arr := arg4.PtrVal.([]gopurs_runtime.Value)
+	go_arg4 := make([]interface{}, len(arg4_arr))
+	for i, v := range arg4_arr { go_arg4[i] = v.PtrVal }
+	go_res := TraverseArrayImpl(go_arg0, go_arg1, go_arg2, go_arg3, go_arg4)
+	return gopurs_runtime.Box(go_res)
 })

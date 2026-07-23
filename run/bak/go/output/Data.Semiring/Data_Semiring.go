@@ -222,17 +222,17 @@ return gopurs_runtime.Apply3(pkg_Record_Unsafe.Get_unsafeSet(), gopurs_runtime.A
 }
 
 func Get_intAdd() gopurs_runtime.Value {
-	return IntAdd
+	return _Gopurs_IntAdd
 }
 
 func Get_intMul() gopurs_runtime.Value {
-	return IntMul
+	return _Gopurs_IntMul
 }
 
 func Get_numAdd() gopurs_runtime.Value {
-	return NumAdd
+	return _Gopurs_NumAdd
 }
 
 func Get_numMul() gopurs_runtime.Value {
-	return NumMul
+	return _Gopurs_NumMul
 }

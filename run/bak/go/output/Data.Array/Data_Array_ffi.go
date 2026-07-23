@@ -2,461 +2,568 @@ package Data_Array
 
 import "gopurs/output/gopurs_runtime"
 
-var RangeImpl = gopurs_runtime.Func(func(startVal gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(endVal gopurs_runtime.Value) gopurs_runtime.Value {
-		start := int(startVal.IntVal)
-		end := int(endVal.IntVal)
-		step := 1
-		if start > end {
-			step = -1
-		}
 
-		size := (end-start)*step + 1
-		result := make([]gopurs_runtime.Value, size)
 
-		i := start
-		n := 0
-		for i != end {
-			result[n] = gopurs_runtime.Int(int64(i))
-			n++
-			i += step
-		}
-		result[n] = gopurs_runtime.Int(int64(i))
-		return gopurs_runtime.Array(result)
-	})
-})
+func RangeImpl(start int, end int) []int {
+	step := 1
+	if start > end {
+		step = -1
+	}
+	size := (end - start) * step + 1
+	result := make([]int, size)
+	i := start
+	n := 0
+	for i != end {
+		result[n] = i
+		n++
+		i += step
+	}
+	result[n] = i
+	return result
+}
 
-var ReplicateImpl = gopurs_runtime.Func(func(countVal gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(value gopurs_runtime.Value) gopurs_runtime.Value {
-		count := int(countVal.IntVal)
-		if count < 1 {
-			return gopurs_runtime.Array(make([]gopurs_runtime.Value, 0))
-		}
-		result := make([]gopurs_runtime.Value, count)
-		for i := 0; i < count; i++ {
-			result[i] = value
-		}
-		return gopurs_runtime.Array(result)
-	})
-})
+func ReplicateImpl(count int, value interface{}) []interface{} {
+	if count < 1 {
+		return make([]interface{}, 0)
+	}
+	result := make([]interface{}, count)
+	for i := 0; i < count; i++ {
+		result[i] = value
+	}
+	return result
+}
 
-var Length = gopurs_runtime.Func(func(xsVal gopurs_runtime.Value) gopurs_runtime.Value {
-	xs := xsVal.PtrVal.([]gopurs_runtime.Value)
-	return gopurs_runtime.Int(int64(len(xs)))
-})
+func Length(xs []interface{}) int {
+	return len(xs)
+}
 
-var UnconsImpl = gopurs_runtime.Func(func(empty gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(next gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Func(func(xsVal gopurs_runtime.Value) gopurs_runtime.Value {
-			xs := xsVal.PtrVal.([]gopurs_runtime.Value)
-			if len(xs) == 0 {
-				return gopurs_runtime.Apply(empty, gopurs_runtime.Value{})
-			}
-			head := xs[0]
-			tail := make([]gopurs_runtime.Value, len(xs)-1)
-			copy(tail, xs[1:])
-			return gopurs_runtime.Apply(gopurs_runtime.Apply(next, head), gopurs_runtime.Array(tail))
-		})
-	})
-})
+func UnconsImpl(empty func(interface{}) interface{}, next func(interface{}) func([]interface{}) interface{}, xs []interface{}) interface{} {
+	if len(xs) == 0 {
+		return empty(nil)
+	}
+	head := xs[0]
+	tail := make([]interface{}, len(xs)-1)
+	copy(tail, xs[1:])
+	return next(head)(tail)
+}
 
-var IndexImpl = gopurs_runtime.Func(func(just gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(nothing gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Func(func(xsVal gopurs_runtime.Value) gopurs_runtime.Value {
-			return gopurs_runtime.Func(func(iVal gopurs_runtime.Value) gopurs_runtime.Value {
-				xs := xsVal.PtrVal.([]gopurs_runtime.Value)
-				i := int(iVal.IntVal)
-				if i < 0 || i >= len(xs) {
-					return nothing
-				}
-				return gopurs_runtime.Apply(just, xs[i])
-			})
-		})
-	})
-})
+func IndexImpl(just func(interface{}) interface{}, nothing interface{}, xs []interface{}, i int) interface{} {
+	if i < 0 || i >= len(xs) {
+		return nothing
+	}
+	return just(xs[i])
+}
 
-var X_updateAt = gopurs_runtime.Func(func(just gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(nothing gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Func(func(iVal gopurs_runtime.Value) gopurs_runtime.Value {
-			return gopurs_runtime.Func(func(aVal gopurs_runtime.Value) gopurs_runtime.Value {
-				return gopurs_runtime.Func(func(xsVal gopurs_runtime.Value) gopurs_runtime.Value {
-					xs := xsVal.PtrVal.([]gopurs_runtime.Value)
-					i := int(iVal.IntVal)
-					if i < 0 || i >= len(xs) {
-						return nothing
-					}
-					l1 := make([]gopurs_runtime.Value, len(xs))
-					copy(l1, xs)
-					l1[i] = aVal
-					return gopurs_runtime.Apply(just, gopurs_runtime.Array(l1))
-				})
-			})
-		})
-	})
-})
+func _UpdateAt(just func([]interface{}) interface{}, nothing interface{}, i int, a interface{}, xs []interface{}) interface{} {
+	if i < 0 || i >= len(xs) {
+		return nothing
+	}
+	l1 := make([]interface{}, len(xs))
+	copy(l1, xs)
+	l1[i] = a
+	return just(l1)
+}
 
-var X_insertAt = gopurs_runtime.Func(func(just gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(nothing gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Func(func(iVal gopurs_runtime.Value) gopurs_runtime.Value {
-			return gopurs_runtime.Func(func(aVal gopurs_runtime.Value) gopurs_runtime.Value {
-				return gopurs_runtime.Func(func(xsVal gopurs_runtime.Value) gopurs_runtime.Value {
-					xs := xsVal.PtrVal.([]gopurs_runtime.Value)
-					i := int(iVal.IntVal)
-					if i < 0 || i > len(xs) {
-						return nothing
-					}
-					l1 := make([]gopurs_runtime.Value, 0, len(xs)+1)
-					l1 = append(l1, xs[:i]...)
-					l1 = append(l1, aVal)
-					l1 = append(l1, xs[i:]...)
-					return gopurs_runtime.Apply(just, gopurs_runtime.Array(l1))
-				})
-			})
-		})
-	})
-})
+func _InsertAt(just func([]interface{}) interface{}, nothing interface{}, i int, a interface{}, xs []interface{}) interface{} {
+	if i < 0 || i > len(xs) {
+		return nothing
+	}
+	l1 := make([]interface{}, 0, len(xs)+1)
+	l1 = append(l1, xs[:i]...)
+	l1 = append(l1, a)
+	l1 = append(l1, xs[i:]...)
+	return just(l1)
+}
 
-var X_deleteAt = gopurs_runtime.Func(func(just gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(nothing gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Func(func(iVal gopurs_runtime.Value) gopurs_runtime.Value {
-			return gopurs_runtime.Func(func(xsVal gopurs_runtime.Value) gopurs_runtime.Value {
-				xs := xsVal.PtrVal.([]gopurs_runtime.Value)
-				i := int(iVal.IntVal)
-				if i < 0 || i >= len(xs) {
-					return nothing
-				}
-				l1 := make([]gopurs_runtime.Value, 0, len(xs)-1)
-				l1 = append(l1, xs[:i]...)
-				l1 = append(l1, xs[i+1:]...)
-				return gopurs_runtime.Apply(just, gopurs_runtime.Array(l1))
-			})
-		})
-	})
-})
+func _DeleteAt(just func([]interface{}) interface{}, nothing interface{}, i int, xs []interface{}) interface{} {
+	if i < 0 || i >= len(xs) {
+		return nothing
+	}
+	l1 := make([]interface{}, 0, len(xs)-1)
+	l1 = append(l1, xs[:i]...)
+	l1 = append(l1, xs[i+1:]...)
+	return just(l1)
+}
 
-var Reverse = gopurs_runtime.Func(func(xsVal gopurs_runtime.Value) gopurs_runtime.Value {
-	xs := xsVal.PtrVal.([]gopurs_runtime.Value)
+func Reverse(xs []interface{}) []interface{} {
 	l := len(xs)
-	l1 := make([]gopurs_runtime.Value, l)
+	l1 := make([]interface{}, l)
 	for i := 0; i < l; i++ {
 		l1[i] = xs[l-1-i]
 	}
-	return gopurs_runtime.Array(l1)
-})
+	return l1
+}
 
-var Concat = gopurs_runtime.Func(func(xssVal gopurs_runtime.Value) gopurs_runtime.Value {
-	xss := xssVal.PtrVal.([]gopurs_runtime.Value)
-	var result []gopurs_runtime.Value
-	for _, xsVal := range xss {
-		xs := xsVal.PtrVal.([]gopurs_runtime.Value)
+func Concat(xss [][]interface{}) []interface{} {
+	var result []interface{}
+	for _, xs := range xss {
 		result = append(result, xs...)
 	}
-	return gopurs_runtime.Array(result)
-})
+	return result
+}
 
-var FilterImpl = gopurs_runtime.Func(func(f gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(xsVal gopurs_runtime.Value) gopurs_runtime.Value {
-		xs := xsVal.PtrVal.([]gopurs_runtime.Value)
-		var result []gopurs_runtime.Value
-		for _, x := range xs {
-			if gopurs_runtime.Apply(f, x).IntVal != 0 { // Bool mapping
-				result = append(result, x)
+func FilterImpl(f func(interface{}) bool, xs []interface{}) []interface{} {
+	var result []interface{}
+	for _, x := range xs {
+		if f(x) {
+			result = append(result, x)
+		}
+	}
+	return result
+}
+
+func SliceImpl(s int, e int, l []interface{}) []interface{} {
+	if s < 0 {
+		s = len(l) + s
+	}
+	if e < 0 {
+		e = len(l) + e
+	}
+	if s < 0 { s = 0 }
+	if e > len(l) { e = len(l) }
+	if s > e { s = e }
+	
+	res := make([]interface{}, e-s)
+	copy(res, l[s:e])
+	return res
+}
+
+func ZipWithImpl(f func(interface{}) func(interface{}) interface{}, xs []interface{}, ys []interface{}) []interface{} {
+	length := len(xs)
+	if len(ys) < length {
+		length = len(ys)
+	}
+	result := make([]interface{}, length)
+	for i := 0; i < length; i++ {
+		result[i] = f(xs[i])(ys[i])
+	}
+	return result
+}
+
+func UnsafeIndexImpl(xs []interface{}, n int) interface{} {
+	return xs[n]
+}
+
+func SortByImpl(compare func(interface{}) func(interface{}) interface{}, fromOrdering func(interface{}) int, xs []interface{}) []interface{} {
+	if len(xs) < 2 {
+		return xs
+	}
+	out := make([]interface{}, len(xs))
+	copy(out, xs)
+	for i := 0; i < len(out); i++ {
+		for j := i + 1; j < len(out); j++ {
+			c := fromOrdering(compare(out[i])(out[j]))
+			if c > 0 { // GT
+				out[i], out[j] = out[j], out[i]
 			}
 		}
-		return gopurs_runtime.Array(result)
-	})
-})
+	}
+	return out
+}
 
-var SliceImpl = gopurs_runtime.Func(func(sVal gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(eVal gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Func(func(lVal gopurs_runtime.Value) gopurs_runtime.Value {
-			s := int(sVal.IntVal)
-			e := int(eVal.IntVal)
-			l := lVal.PtrVal.([]gopurs_runtime.Value)
-			if s < 0 {
-				s = len(l) + s
-			}
-			if e < 0 {
-				e = len(l) + e
-			}
-			if s < 0 {
-				s = 0
-			}
-			if e > len(l) {
-				e = len(l)
-			}
-			if s > e {
-				s = e
-			}
+func ScanrImpl(f func(interface{}) func(interface{}) interface{}, b interface{}, xs []interface{}) []interface{} {
+	out := make([]interface{}, len(xs))
+	acc := b
+	for i := len(xs) - 1; i >= 0; i-- {
+		acc = f(xs[i])(acc)
+		out[i] = acc
+	}
+	return out
+}
 
-			res := make([]gopurs_runtime.Value, e-s)
-			copy(res, l[s:e])
-			return gopurs_runtime.Array(res)
-		})
-	})
-})
+func ScanlImpl(f func(interface{}) func(interface{}) interface{}, b interface{}, xs []interface{}) []interface{} {
+	out := make([]interface{}, len(xs))
+	acc := b
+	for i := 0; i < len(xs); i++ {
+		acc = f(acc)(xs[i])
+		out[i] = acc
+	}
+	return out
+}
 
-var ZipWithImpl = gopurs_runtime.Func(func(f gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(xsVal gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Func(func(ysVal gopurs_runtime.Value) gopurs_runtime.Value {
-			xs := xsVal.PtrVal.([]gopurs_runtime.Value)
-			ys := ysVal.PtrVal.([]gopurs_runtime.Value)
-			length := len(xs)
-			if len(ys) < length {
-				length = len(ys)
-			}
-			result := make([]gopurs_runtime.Value, length)
-			for i := 0; i < length; i++ {
-				result[i] = gopurs_runtime.Apply(gopurs_runtime.Apply(f, xs[i]), ys[i])
-			}
-			return gopurs_runtime.Array(result)
-		})
-	})
-})
-
-var UnsafeIndexImpl = gopurs_runtime.Func(func(xsVal gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(nVal gopurs_runtime.Value) gopurs_runtime.Value {
-		xs := xsVal.PtrVal.([]gopurs_runtime.Value)
-		n := int(nVal.IntVal)
-		return xs[n]
-	})
-})
-
-var SortByImpl = gopurs_runtime.Func(func(compare gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(fromOrdering gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Func(func(xsVal gopurs_runtime.Value) gopurs_runtime.Value {
-			xs := xsVal.PtrVal.([]gopurs_runtime.Value)
-			if len(xs) < 2 {
-				return xsVal
-			}
-			out := make([]gopurs_runtime.Value, len(xs))
-			copy(out, xs)
-			// Sort implementation using merge sort or just simple sort
-			// Wait, simple sort:
-			for i := 0; i < len(out); i++ {
-				for j := i + 1; j < len(out); j++ {
-					c := gopurs_runtime.Apply(fromOrdering, gopurs_runtime.Apply(gopurs_runtime.Apply(compare, out[i]), out[j]))
-					if c.IntVal > 0 { // GT
-						out[i], out[j] = out[j], out[i]
-					}
-				}
-			}
-			return gopurs_runtime.Array(out)
-		})
-	})
-})
-
-var ScanrImpl = gopurs_runtime.Func(func(f gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(b gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Func(func(xsVal gopurs_runtime.Value) gopurs_runtime.Value {
-			xs := xsVal.PtrVal.([]gopurs_runtime.Value)
-			out := make([]gopurs_runtime.Value, len(xs))
-			acc := b
-			for i := len(xs) - 1; i >= 0; i-- {
-				acc = gopurs_runtime.Apply(gopurs_runtime.Apply(f, xs[i]), acc)
-				out[i] = acc
-			}
-			return gopurs_runtime.Array(out)
-		})
-	})
-})
-
-var ScanlImpl = gopurs_runtime.Func(func(f gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(b gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Func(func(xsVal gopurs_runtime.Value) gopurs_runtime.Value {
-			xs := xsVal.PtrVal.([]gopurs_runtime.Value)
-			out := make([]gopurs_runtime.Value, len(xs))
-			acc := b
-			for i := 0; i < len(xs); i++ {
-				acc = gopurs_runtime.Apply(gopurs_runtime.Apply(f, acc), xs[i])
-				out[i] = acc
-			}
-			return gopurs_runtime.Array(out)
-		})
-	})
-})
-
-var PartitionImpl = gopurs_runtime.Func(func(f gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(xsVal gopurs_runtime.Value) gopurs_runtime.Value {
-		xs := xsVal.PtrVal.([]gopurs_runtime.Value)
-		var yes []gopurs_runtime.Value
-		var no []gopurs_runtime.Value
-		for _, x := range xs {
-			if gopurs_runtime.Apply(f, x).IntVal != 0 {
-				yes = append(yes, x)
-			} else {
-				no = append(no, x)
-			}
+func PartitionImpl(f func(interface{}) bool, xs []interface{}) map[string]interface{} {
+	var yes []interface{}
+	var no []interface{}
+	for _, x := range xs {
+		if f(x) {
+			yes = append(yes, x)
+		} else {
+			no = append(no, x)
 		}
-		return gopurs_runtime.RecordDict([]string{"no", "yes"}, []gopurs_runtime.Value{gopurs_runtime.Array(no), gopurs_runtime.Array(yes)})
-	})
-})
+	}
+	return map[string]interface{}{
+		"yes": yes,
+		"no":  no,
+	}
+}
 
-var FromFoldableImpl = gopurs_runtime.Func(func(foldr gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(xsVal gopurs_runtime.Value) gopurs_runtime.Value {
-		// A simple list-to-array since foldr passes elements.
-		// wait, fromFoldableImpl uses a custom Cons.
-		// Actually, we can just do what fromFoldableImpl does in JS:
-		// foldr(\a acc -> Cons(a, acc))(empty)(xs)
-		// Or since we just want array, maybe we can implement it without internal list?
-		// fromFoldableImpl foldr xs = listToArray(foldr(curryCons)(emptyList)(xs))
-		// We'll just define emptyList = [] and Cons = append
-		// BUT foldr builds from right to left!
-		// Actually JS implementation uses a linked list for performance.
+func FromFoldableImpl(foldr interface{}, xsVal interface{}) []interface{} {
+	panic("Not implemented: FromFoldableImpl (complex callback)")
+}
 
-		var emptyList gopurs_runtime.Value // nil map or struct
-		emptyList = gopurs_runtime.Value{PtrVal: nil}
-
-		curryCons := gopurs_runtime.Func(func(head gopurs_runtime.Value) gopurs_runtime.Value {
-			return gopurs_runtime.Func(func(tail gopurs_runtime.Value) gopurs_runtime.Value {
-				return gopurs_runtime.Value{PtrVal: map[string]gopurs_runtime.Value{
-					"head": head,
-					"tail": tail,
-				}}
-			})
-		})
-
-		list := gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(foldr, curryCons), emptyList), xsVal)
-
-		var result []gopurs_runtime.Value
-		curr := list
-		for curr.PtrVal != nil {
-			m := curr.PtrVal.(map[string]gopurs_runtime.Value)
-			result = append(result, m["head"])
-			curr = m["tail"]
+func FindMapImpl(nothing interface{}, isJust func(interface{}) bool, f func(interface{}) interface{}, xs []interface{}) interface{} {
+	for _, x := range xs {
+		res := f(x)
+		if isJust(res) {
+			return res
 		}
-		return gopurs_runtime.Array(result)
-	})
-})
+	}
+	return nothing
+}
 
-var FindMapImpl = gopurs_runtime.Func(func(nothing gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(isJust gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Func(func(f gopurs_runtime.Value) gopurs_runtime.Value {
-			return gopurs_runtime.Func(func(xsVal gopurs_runtime.Value) gopurs_runtime.Value {
-				xs := xsVal.PtrVal.([]gopurs_runtime.Value)
-				for _, x := range xs {
-					res := gopurs_runtime.Apply(f, x)
-					if gopurs_runtime.Apply(isJust, res).IntVal != 0 {
-						return res
-					}
-				}
-				return nothing
-			})
-		})
-	})
-})
-
-var FindLastIndexImpl = gopurs_runtime.Func(func(just gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(nothing gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Func(func(f gopurs_runtime.Value) gopurs_runtime.Value {
-			return gopurs_runtime.Func(func(xsVal gopurs_runtime.Value) gopurs_runtime.Value {
-				xs := xsVal.PtrVal.([]gopurs_runtime.Value)
-				for i := len(xs) - 1; i >= 0; i-- {
-					if gopurs_runtime.Apply(f, xs[i]).IntVal != 0 {
-						return gopurs_runtime.Apply(just, gopurs_runtime.Int(int64(i)))
-					}
-				}
-				return nothing
-			})
-		})
-	})
-})
-
-var FindIndexImpl = gopurs_runtime.Func(func(just gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(nothing gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Func(func(f gopurs_runtime.Value) gopurs_runtime.Value {
-			return gopurs_runtime.Func(func(xsVal gopurs_runtime.Value) gopurs_runtime.Value {
-				xs := xsVal.PtrVal.([]gopurs_runtime.Value)
-				for i := 0; i < len(xs); i++ {
-					if gopurs_runtime.Apply(f, xs[i]).IntVal != 0 {
-						return gopurs_runtime.Apply(just, gopurs_runtime.Int(int64(i)))
-					}
-				}
-				return nothing
-			})
-		})
-	})
-})
-
-var AnyImpl = gopurs_runtime.Func(func(p gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(xsVal gopurs_runtime.Value) gopurs_runtime.Value {
-		xs := xsVal.PtrVal.([]gopurs_runtime.Value)
-		for _, x := range xs {
-			if gopurs_runtime.Apply(p, x).IntVal != 0 {
-				return gopurs_runtime.Int(int64(1))
-			}
+func FindLastIndexImpl(just func(int) interface{}, nothing interface{}, f func(interface{}) bool, xs []interface{}) interface{} {
+	for i := len(xs) - 1; i >= 0; i-- {
+		if f(xs[i]) {
+			return just(i)
 		}
-		return gopurs_runtime.Int(int64(0))
-	})
-})
+	}
+	return nothing
+}
 
-var AllImpl = gopurs_runtime.Func(func(p gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(xsVal gopurs_runtime.Value) gopurs_runtime.Value {
-		xs := xsVal.PtrVal.([]gopurs_runtime.Value)
-		for _, x := range xs {
-			if gopurs_runtime.Apply(p, x).IntVal == 0 {
-				return gopurs_runtime.Int(int64(0))
-			}
+func FindIndexImpl(just func(int) interface{}, nothing interface{}, f func(interface{}) bool, xs []interface{}) interface{} {
+	for i := 0; i < len(xs); i++ {
+		if f(xs[i]) {
+			return just(i)
 		}
-		return gopurs_runtime.Int(int64(1))
-	})
-})
+	}
+	return nothing
+}
 
-var X_InsertAt = gopurs_runtime.Func(func(just gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(nothing gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Func(func(iVal gopurs_runtime.Value) gopurs_runtime.Value {
-			return gopurs_runtime.Func(func(a gopurs_runtime.Value) gopurs_runtime.Value {
-				return gopurs_runtime.Func(func(lVal gopurs_runtime.Value) gopurs_runtime.Value {
-					i := int(iVal.IntVal)
-					l := lVal.PtrVal.([]gopurs_runtime.Value)
-					if i < 0 || i > len(l) {
-						return nothing
-					}
-					l1 := make([]gopurs_runtime.Value, 0, len(l)+1)
-					l1 = append(l1, l[:i]...)
-					l1 = append(l1, a)
-					l1 = append(l1, l[i:]...)
-					return gopurs_runtime.Apply(just, gopurs_runtime.Array(l1))
-				})
-			})
-		})
-	})
-})
+func AnyImpl(p func(interface{}) bool, xs []interface{}) bool {
+	for _, x := range xs {
+		if p(x) {
+			return true
+		}
+	}
+	return false
+}
 
-var X_DeleteAt = gopurs_runtime.Func(func(just gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(nothing gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Func(func(iVal gopurs_runtime.Value) gopurs_runtime.Value {
-			return gopurs_runtime.Func(func(lVal gopurs_runtime.Value) gopurs_runtime.Value {
-				i := int(iVal.IntVal)
-				l := lVal.PtrVal.([]gopurs_runtime.Value)
-				if i < 0 || i >= len(l) {
-					return nothing
-				}
-				l1 := make([]gopurs_runtime.Value, 0, len(l)-1)
-				l1 = append(l1, l[:i]...)
-				l1 = append(l1, l[i+1:]...)
-				return gopurs_runtime.Apply(just, gopurs_runtime.Array(l1))
-			})
-		})
-	})
-})
+func AllImpl(p func(interface{}) bool, xs []interface{}) bool {
+	for _, x := range xs {
+		if !p(x) {
+			return false
+		}
+	}
+	return true
+}
 
-var X_UpdateAt = gopurs_runtime.Func(func(just gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(nothing gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Func(func(iVal gopurs_runtime.Value) gopurs_runtime.Value {
-			return gopurs_runtime.Func(func(a gopurs_runtime.Value) gopurs_runtime.Value {
-				return gopurs_runtime.Func(func(lVal gopurs_runtime.Value) gopurs_runtime.Value {
-					i := int(iVal.IntVal)
-					l := lVal.PtrVal.([]gopurs_runtime.Value)
-					if i < 0 || i >= len(l) {
-						return nothing
-					}
-					l1 := make([]gopurs_runtime.Value, len(l))
-					copy(l1, l)
-					l1[i] = a
-					return gopurs_runtime.Apply(just, gopurs_runtime.Array(l1))
-				})
-			})
-		})
-	})
+
+// --- Auto-generated FFI wrappers ---
+var _Gopurs_RangeImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := gopurs_runtime.Unbox[int](arg0)
+	go_arg1 := gopurs_runtime.Unbox[int](arg1)
+	go_res := RangeImpl(go_arg0, go_arg1)
+	return func() gopurs_runtime.Value {
+			res_arr := make([]gopurs_runtime.Value, len(go_res))
+			for i, v := range go_res { res_arr[i] = gopurs_runtime.Box(v) }
+			return gopurs_runtime.Array(res_arr)
+		}()
+})
+var _Gopurs_ReplicateImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := gopurs_runtime.Unbox[int](arg0)
+	go_arg1 := arg1.PtrVal
+	go_res := ReplicateImpl(go_arg0, go_arg1)
+	return func() gopurs_runtime.Value {
+			res_arr := make([]gopurs_runtime.Value, len(go_res))
+			for i, v := range go_res { res_arr[i] = gopurs_runtime.Box(v) }
+			return gopurs_runtime.Array(res_arr)
+		}()
+})
+var _Gopurs_Length = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	arg0_arr := arg0.PtrVal.([]gopurs_runtime.Value)
+	go_arg0 := make([]interface{}, len(arg0_arr))
+	for i, v := range arg0_arr { go_arg0[i] = v.PtrVal }
+	go_res := Length(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs_UnconsImpl = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := func(p0 interface{}) interface{} {
+		res := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0))
+		return res.PtrVal
+	}
+	go_arg1 := func(p0 interface{}) func([]interface{}) interface{} {
+		res := gopurs_runtime.Apply(arg1, gopurs_runtime.Box(p0))
+		return gopurs_runtime.Unbox[func([]interface{}) interface{}](res)
+	}
+	arg2_arr := arg2.PtrVal.([]gopurs_runtime.Value)
+	go_arg2 := make([]interface{}, len(arg2_arr))
+	for i, v := range arg2_arr { go_arg2[i] = v.PtrVal }
+	go_res := UnconsImpl(go_arg0, go_arg1, go_arg2)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs_IndexImpl = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := func(p0 interface{}) interface{} {
+		res := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0))
+		return res.PtrVal
+	}
+	go_arg1 := arg1.PtrVal
+	arg2_arr := arg2.PtrVal.([]gopurs_runtime.Value)
+	go_arg2 := make([]interface{}, len(arg2_arr))
+	for i, v := range arg2_arr { go_arg2[i] = v.PtrVal }
+	go_arg3 := gopurs_runtime.Unbox[int](arg3)
+	go_res := IndexImpl(go_arg0, go_arg1, go_arg2, go_arg3)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs__UpdateAt = gopurs_runtime.Func5(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := func(p0 []interface{}) interface{} {
+		res := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0))
+		return res.PtrVal
+	}
+	go_arg1 := arg1.PtrVal
+	go_arg2 := gopurs_runtime.Unbox[int](arg2)
+	go_arg3 := arg3.PtrVal
+	arg4_arr := arg4.PtrVal.([]gopurs_runtime.Value)
+	go_arg4 := make([]interface{}, len(arg4_arr))
+	for i, v := range arg4_arr { go_arg4[i] = v.PtrVal }
+	go_res := _UpdateAt(go_arg0, go_arg1, go_arg2, go_arg3, go_arg4)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs__InsertAt = gopurs_runtime.Func5(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := func(p0 []interface{}) interface{} {
+		res := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0))
+		return res.PtrVal
+	}
+	go_arg1 := arg1.PtrVal
+	go_arg2 := gopurs_runtime.Unbox[int](arg2)
+	go_arg3 := arg3.PtrVal
+	arg4_arr := arg4.PtrVal.([]gopurs_runtime.Value)
+	go_arg4 := make([]interface{}, len(arg4_arr))
+	for i, v := range arg4_arr { go_arg4[i] = v.PtrVal }
+	go_res := _InsertAt(go_arg0, go_arg1, go_arg2, go_arg3, go_arg4)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs__DeleteAt = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := func(p0 []interface{}) interface{} {
+		res := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0))
+		return res.PtrVal
+	}
+	go_arg1 := arg1.PtrVal
+	go_arg2 := gopurs_runtime.Unbox[int](arg2)
+	arg3_arr := arg3.PtrVal.([]gopurs_runtime.Value)
+	go_arg3 := make([]interface{}, len(arg3_arr))
+	for i, v := range arg3_arr { go_arg3[i] = v.PtrVal }
+	go_res := _DeleteAt(go_arg0, go_arg1, go_arg2, go_arg3)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs_Reverse = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	arg0_arr := arg0.PtrVal.([]gopurs_runtime.Value)
+	go_arg0 := make([]interface{}, len(arg0_arr))
+	for i, v := range arg0_arr { go_arg0[i] = v.PtrVal }
+	go_res := Reverse(go_arg0)
+	return func() gopurs_runtime.Value {
+			res_arr := make([]gopurs_runtime.Value, len(go_res))
+			for i, v := range go_res { res_arr[i] = gopurs_runtime.Box(v) }
+			return gopurs_runtime.Array(res_arr)
+		}()
+})
+var _Gopurs_Concat = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	arg0_arr := arg0.PtrVal.([]gopurs_runtime.Value)
+	go_arg0 := make([][]interface{}, len(arg0_arr))
+	for i, v := range arg0_arr { go_arg0[i] = gopurs_runtime.Unbox[[]interface{}](v) }
+	go_res := Concat(go_arg0)
+	return func() gopurs_runtime.Value {
+			res_arr := make([]gopurs_runtime.Value, len(go_res))
+			for i, v := range go_res { res_arr[i] = gopurs_runtime.Box(v) }
+			return gopurs_runtime.Array(res_arr)
+		}()
+})
+var _Gopurs_FilterImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := func(p0 interface{}) bool {
+		res := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0))
+		return gopurs_runtime.Unbox[bool](res)
+	}
+	arg1_arr := arg1.PtrVal.([]gopurs_runtime.Value)
+	go_arg1 := make([]interface{}, len(arg1_arr))
+	for i, v := range arg1_arr { go_arg1[i] = v.PtrVal }
+	go_res := FilterImpl(go_arg0, go_arg1)
+	return func() gopurs_runtime.Value {
+			res_arr := make([]gopurs_runtime.Value, len(go_res))
+			for i, v := range go_res { res_arr[i] = gopurs_runtime.Box(v) }
+			return gopurs_runtime.Array(res_arr)
+		}()
+})
+var _Gopurs_SliceImpl = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := gopurs_runtime.Unbox[int](arg0)
+	go_arg1 := gopurs_runtime.Unbox[int](arg1)
+	arg2_arr := arg2.PtrVal.([]gopurs_runtime.Value)
+	go_arg2 := make([]interface{}, len(arg2_arr))
+	for i, v := range arg2_arr { go_arg2[i] = v.PtrVal }
+	go_res := SliceImpl(go_arg0, go_arg1, go_arg2)
+	return func() gopurs_runtime.Value {
+			res_arr := make([]gopurs_runtime.Value, len(go_res))
+			for i, v := range go_res { res_arr[i] = gopurs_runtime.Box(v) }
+			return gopurs_runtime.Array(res_arr)
+		}()
+})
+var _Gopurs_ZipWithImpl = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := func(p0 interface{}) func(interface{}) interface{} {
+		res := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0))
+		return gopurs_runtime.Unbox[func(interface{}) interface{}](res)
+	}
+	arg1_arr := arg1.PtrVal.([]gopurs_runtime.Value)
+	go_arg1 := make([]interface{}, len(arg1_arr))
+	for i, v := range arg1_arr { go_arg1[i] = v.PtrVal }
+	arg2_arr := arg2.PtrVal.([]gopurs_runtime.Value)
+	go_arg2 := make([]interface{}, len(arg2_arr))
+	for i, v := range arg2_arr { go_arg2[i] = v.PtrVal }
+	go_res := ZipWithImpl(go_arg0, go_arg1, go_arg2)
+	return func() gopurs_runtime.Value {
+			res_arr := make([]gopurs_runtime.Value, len(go_res))
+			for i, v := range go_res { res_arr[i] = gopurs_runtime.Box(v) }
+			return gopurs_runtime.Array(res_arr)
+		}()
+})
+var _Gopurs_UnsafeIndexImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+	arg0_arr := arg0.PtrVal.([]gopurs_runtime.Value)
+	go_arg0 := make([]interface{}, len(arg0_arr))
+	for i, v := range arg0_arr { go_arg0[i] = v.PtrVal }
+	go_arg1 := gopurs_runtime.Unbox[int](arg1)
+	go_res := UnsafeIndexImpl(go_arg0, go_arg1)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs_SortByImpl = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := func(p0 interface{}) func(interface{}) interface{} {
+		res := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0))
+		return gopurs_runtime.Unbox[func(interface{}) interface{}](res)
+	}
+	go_arg1 := func(p0 interface{}) int {
+		res := gopurs_runtime.Apply(arg1, gopurs_runtime.Box(p0))
+		return gopurs_runtime.Unbox[int](res)
+	}
+	arg2_arr := arg2.PtrVal.([]gopurs_runtime.Value)
+	go_arg2 := make([]interface{}, len(arg2_arr))
+	for i, v := range arg2_arr { go_arg2[i] = v.PtrVal }
+	go_res := SortByImpl(go_arg0, go_arg1, go_arg2)
+	return func() gopurs_runtime.Value {
+			res_arr := make([]gopurs_runtime.Value, len(go_res))
+			for i, v := range go_res { res_arr[i] = gopurs_runtime.Box(v) }
+			return gopurs_runtime.Array(res_arr)
+		}()
+})
+var _Gopurs_ScanrImpl = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := func(p0 interface{}) func(interface{}) interface{} {
+		res := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0))
+		return gopurs_runtime.Unbox[func(interface{}) interface{}](res)
+	}
+	go_arg1 := arg1.PtrVal
+	arg2_arr := arg2.PtrVal.([]gopurs_runtime.Value)
+	go_arg2 := make([]interface{}, len(arg2_arr))
+	for i, v := range arg2_arr { go_arg2[i] = v.PtrVal }
+	go_res := ScanrImpl(go_arg0, go_arg1, go_arg2)
+	return func() gopurs_runtime.Value {
+			res_arr := make([]gopurs_runtime.Value, len(go_res))
+			for i, v := range go_res { res_arr[i] = gopurs_runtime.Box(v) }
+			return gopurs_runtime.Array(res_arr)
+		}()
+})
+var _Gopurs_ScanlImpl = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := func(p0 interface{}) func(interface{}) interface{} {
+		res := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0))
+		return gopurs_runtime.Unbox[func(interface{}) interface{}](res)
+	}
+	go_arg1 := arg1.PtrVal
+	arg2_arr := arg2.PtrVal.([]gopurs_runtime.Value)
+	go_arg2 := make([]interface{}, len(arg2_arr))
+	for i, v := range arg2_arr { go_arg2[i] = v.PtrVal }
+	go_res := ScanlImpl(go_arg0, go_arg1, go_arg2)
+	return func() gopurs_runtime.Value {
+			res_arr := make([]gopurs_runtime.Value, len(go_res))
+			for i, v := range go_res { res_arr[i] = gopurs_runtime.Box(v) }
+			return gopurs_runtime.Array(res_arr)
+		}()
+})
+var _Gopurs_PartitionImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := func(p0 interface{}) bool {
+		res := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0))
+		return gopurs_runtime.Unbox[bool](res)
+	}
+	arg1_arr := arg1.PtrVal.([]gopurs_runtime.Value)
+	go_arg1 := make([]interface{}, len(arg1_arr))
+	for i, v := range arg1_arr { go_arg1[i] = v.PtrVal }
+	go_res := PartitionImpl(go_arg0, go_arg1)
+	return func() gopurs_runtime.Value {
+			res_map := make(map[string]gopurs_runtime.Value)
+			for k, v := range go_res { res_map[k] = gopurs_runtime.Box(v) }
+			return gopurs_runtime.Record(res_map)
+		}()
+})
+var _Gopurs_FromFoldableImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0.PtrVal
+	go_arg1 := arg1.PtrVal
+	go_res := FromFoldableImpl(go_arg0, go_arg1)
+	return func() gopurs_runtime.Value {
+			res_arr := make([]gopurs_runtime.Value, len(go_res))
+			for i, v := range go_res { res_arr[i] = gopurs_runtime.Box(v) }
+			return gopurs_runtime.Array(res_arr)
+		}()
+})
+var _Gopurs_FindMapImpl = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0.PtrVal
+	go_arg1 := func(p0 interface{}) bool {
+		res := gopurs_runtime.Apply(arg1, gopurs_runtime.Box(p0))
+		return gopurs_runtime.Unbox[bool](res)
+	}
+	go_arg2 := func(p0 interface{}) interface{} {
+		res := gopurs_runtime.Apply(arg2, gopurs_runtime.Box(p0))
+		return res.PtrVal
+	}
+	arg3_arr := arg3.PtrVal.([]gopurs_runtime.Value)
+	go_arg3 := make([]interface{}, len(arg3_arr))
+	for i, v := range arg3_arr { go_arg3[i] = v.PtrVal }
+	go_res := FindMapImpl(go_arg0, go_arg1, go_arg2, go_arg3)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs_FindLastIndexImpl = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := func(p0 int) interface{} {
+		res := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0))
+		return res.PtrVal
+	}
+	go_arg1 := arg1.PtrVal
+	go_arg2 := func(p0 interface{}) bool {
+		res := gopurs_runtime.Apply(arg2, gopurs_runtime.Box(p0))
+		return gopurs_runtime.Unbox[bool](res)
+	}
+	arg3_arr := arg3.PtrVal.([]gopurs_runtime.Value)
+	go_arg3 := make([]interface{}, len(arg3_arr))
+	for i, v := range arg3_arr { go_arg3[i] = v.PtrVal }
+	go_res := FindLastIndexImpl(go_arg0, go_arg1, go_arg2, go_arg3)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs_FindIndexImpl = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := func(p0 int) interface{} {
+		res := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0))
+		return res.PtrVal
+	}
+	go_arg1 := arg1.PtrVal
+	go_arg2 := func(p0 interface{}) bool {
+		res := gopurs_runtime.Apply(arg2, gopurs_runtime.Box(p0))
+		return gopurs_runtime.Unbox[bool](res)
+	}
+	arg3_arr := arg3.PtrVal.([]gopurs_runtime.Value)
+	go_arg3 := make([]interface{}, len(arg3_arr))
+	for i, v := range arg3_arr { go_arg3[i] = v.PtrVal }
+	go_res := FindIndexImpl(go_arg0, go_arg1, go_arg2, go_arg3)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs_AnyImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := func(p0 interface{}) bool {
+		res := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0))
+		return gopurs_runtime.Unbox[bool](res)
+	}
+	arg1_arr := arg1.PtrVal.([]gopurs_runtime.Value)
+	go_arg1 := make([]interface{}, len(arg1_arr))
+	for i, v := range arg1_arr { go_arg1[i] = v.PtrVal }
+	go_res := AnyImpl(go_arg0, go_arg1)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs_AllImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := func(p0 interface{}) bool {
+		res := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0))
+		return gopurs_runtime.Unbox[bool](res)
+	}
+	arg1_arr := arg1.PtrVal.([]gopurs_runtime.Value)
+	go_arg1 := make([]interface{}, len(arg1_arr))
+	for i, v := range arg1_arr { go_arg1[i] = v.PtrVal }
+	go_res := AllImpl(go_arg0, go_arg1)
+	return gopurs_runtime.Box(go_res)
 })

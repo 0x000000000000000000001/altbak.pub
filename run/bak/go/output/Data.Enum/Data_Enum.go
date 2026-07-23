@@ -1506,9 +1506,9 @@ return Get_enumBoolean()
 }
 
 func Get_fromCharCode() gopurs_runtime.Value {
-	return FromCharCode
+	return _Gopurs_FromCharCode
 }
 
 func Get_toCharCode() gopurs_runtime.Value {
-	return ToCharCode
+	return _Gopurs_ToCharCode
 }

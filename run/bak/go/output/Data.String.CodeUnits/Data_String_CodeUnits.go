@@ -288,61 +288,61 @@ func Get_charAt() gopurs_runtime.Value {
 }
 
 func Get__charAt() gopurs_runtime.Value {
-	return X_CharAt
+	return _Gopurs__CharAt
 }
 
 func Get__indexOf() gopurs_runtime.Value {
-	return X_IndexOf
+	return _Gopurs__IndexOf
 }
 
 func Get__indexOfStartingAt() gopurs_runtime.Value {
-	return X_IndexOfStartingAt
+	return _Gopurs__IndexOfStartingAt
 }
 
 func Get__lastIndexOf() gopurs_runtime.Value {
-	return X_LastIndexOf
+	return _Gopurs__LastIndexOf
 }
 
 func Get__lastIndexOfStartingAt() gopurs_runtime.Value {
-	return X_LastIndexOfStartingAt
+	return _Gopurs__LastIndexOfStartingAt
 }
 
 func Get__toChar() gopurs_runtime.Value {
-	return X_ToChar
+	return _Gopurs__ToChar
 }
 
 func Get_countPrefix() gopurs_runtime.Value {
-	return CountPrefix
+	return _Gopurs_CountPrefix
 }
 
 func Get_drop() gopurs_runtime.Value {
-	return Drop
+	return _Gopurs_Drop
 }
 
 func Get_fromCharArray() gopurs_runtime.Value {
-	return FromCharArray
+	return _Gopurs_FromCharArray
 }
 
 func Get_length() gopurs_runtime.Value {
-	return Length
+	return _Gopurs_Length
 }
 
 func Get_singleton() gopurs_runtime.Value {
-	return Singleton
+	return _Gopurs_Singleton
 }
 
 func Get_slice() gopurs_runtime.Value {
-	return Slice
+	return _Gopurs_Slice
 }
 
 func Get_splitAt() gopurs_runtime.Value {
-	return SplitAt
+	return _Gopurs_SplitAt
 }
 
 func Get_take() gopurs_runtime.Value {
-	return Take
+	return _Gopurs_Take
 }
 
 func Get_toCharArray() gopurs_runtime.Value {
-	return ToCharArray
+	return _Gopurs_ToCharArray
 }

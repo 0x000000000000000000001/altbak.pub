@@ -1,50 +1,61 @@
 package Data_EuclideanRing
 
-import (
-	"gopurs/output/gopurs_runtime"
-	"math"
-)
+import "gopurs/output/gopurs_runtime"
 
-var IntDegree = gopurs_runtime.Func(func(x gopurs_runtime.Value) gopurs_runtime.Value {
-	xv := x.IntVal
-	if xv < 0 {
-		xv = -xv
+import "math"
+func IntDegree(x int) int {
+	if x < 0 {
+		x = -x
 	}
-	if xv > 2147483647 {
-		xv = 2147483647
+	if x > 2147483647 {
+		x = 2147483647
 	}
-	return gopurs_runtime.Int(int64(int64(xv)))
-})
+	return x
+}
+func IntDiv(x int, y int) int {
+	if y == 0 {
+		return 0
+	}
+	if y > 0 {
+		return int(math.Floor(float64(x) / float64(y)))
+	}
+	return int(-math.Floor(float64(x) / float64(-y)))
+}
+func IntMod(x int, y int) int {
+	if y == 0 {
+		return 0
+	}
+	if y < 0 {
+		y = -y
+	}
+	return ((x % y) + y) % y
+}
+func NumDiv(n1 float64, n2 float64) float64 {
+	return n1 / n2
+}
 
-var IntDiv = gopurs_runtime.Func(func(x gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(y gopurs_runtime.Value) gopurs_runtime.Value {
-		if y.IntVal == 0 {
-			return gopurs_runtime.Int(int64(0))
-		}
-		if y.IntVal > 0 {
-			return gopurs_runtime.Int(int64(int64(math.Floor(float64(x.IntVal) / float64(y.IntVal)))))
-		}
-		return gopurs_runtime.Int(int64(int64(-math.Floor(float64(x.IntVal) / float64(-y.IntVal)))))
-	})
-})
 
-var IntMod = gopurs_runtime.Func(func(x gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(y gopurs_runtime.Value) gopurs_runtime.Value {
-		if y.IntVal == 0 {
-			return gopurs_runtime.Int(int64(0))
-		}
-		yy := y.IntVal
-		if yy < 0 {
-			yy = -yy
-		}
-		return gopurs_runtime.Int(int64(int64(((x.IntVal % yy) + yy) % yy)))
-	})
+// --- Auto-generated FFI wrappers ---
+var _Gopurs_IntDegree = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := gopurs_runtime.Unbox[int](arg0)
+	go_res := IntDegree(go_arg0)
+	return gopurs_runtime.Box(go_res)
 })
-
-var NumDiv = gopurs_runtime.Func(func(n1 gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(n2 gopurs_runtime.Value) gopurs_runtime.Value {
-		f1 := math.Float64frombits(uint64(n1.IntVal))
-		f2 := math.Float64frombits(uint64(n2.IntVal))
-		return gopurs_runtime.Float(f1 / f2)
-	})
+var _Gopurs_IntDiv = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := gopurs_runtime.Unbox[int](arg0)
+	go_arg1 := gopurs_runtime.Unbox[int](arg1)
+	go_res := IntDiv(go_arg0, go_arg1)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs_IntMod = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := gopurs_runtime.Unbox[int](arg0)
+	go_arg1 := gopurs_runtime.Unbox[int](arg1)
+	go_res := IntMod(go_arg0, go_arg1)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs_NumDiv = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := gopurs_runtime.Unbox[float64](arg0)
+	go_arg1 := gopurs_runtime.Unbox[float64](arg1)
+	go_res := NumDiv(go_arg0, go_arg1)
+	return gopurs_runtime.Box(go_res)
 })

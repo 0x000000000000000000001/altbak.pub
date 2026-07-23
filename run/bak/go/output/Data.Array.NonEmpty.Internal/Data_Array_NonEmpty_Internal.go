@@ -254,13 +254,13 @@ func Get_altNonEmptyArray() gopurs_runtime.Value {
 }
 
 func Get_foldl1Impl() gopurs_runtime.Value {
-	return Foldl1Impl
+	return _Gopurs_Foldl1Impl
 }
 
 func Get_foldr1Impl() gopurs_runtime.Value {
-	return Foldr1Impl
+	return _Gopurs_Foldr1Impl
 }
 
 func Get_traverse1Impl() gopurs_runtime.Value {
-	return Traverse1Impl
+	return _Gopurs_Traverse1Impl
 }

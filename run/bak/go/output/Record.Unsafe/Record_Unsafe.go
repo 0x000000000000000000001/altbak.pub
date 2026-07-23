@@ -7,17 +7,17 @@ import (
 
 
 func Get_unsafeDelete() gopurs_runtime.Value {
-	return UnsafeDelete
+	return _Gopurs_UnsafeDelete
 }
 
 func Get_unsafeGet() gopurs_runtime.Value {
-	return UnsafeGet
+	return _Gopurs_UnsafeGet
 }
 
 func Get_unsafeHas() gopurs_runtime.Value {
-	return UnsafeHas
+	return _Gopurs_UnsafeHas
 }
 
 func Get_unsafeSet() gopurs_runtime.Value {
-	return UnsafeSet
+	return _Gopurs_UnsafeSet
 }

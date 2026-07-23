@@ -1,18 +1,25 @@
 package Data_Ring
 
-import (
-	"gopurs/output/gopurs_runtime"
-	"math"
-)
+import "gopurs/output/gopurs_runtime"
 
-var IntSub = gopurs_runtime.Func(func(x gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(y gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Int(int64(int64(x.IntVal - y.IntVal)))
-	})
+func IntSub(x int, y int) int {
+	return x - y
+}
+func NumSub(x float64, y float64) float64 {
+	return x - y
+}
+
+
+// --- Auto-generated FFI wrappers ---
+var _Gopurs_IntSub = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := gopurs_runtime.Unbox[int](arg0)
+	go_arg1 := gopurs_runtime.Unbox[int](arg1)
+	go_res := IntSub(go_arg0, go_arg1)
+	return gopurs_runtime.Box(go_res)
 })
-
-var NumSub = gopurs_runtime.Func(func(x gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(y gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Float(math.Float64frombits(uint64(x.IntVal)) - math.Float64frombits(uint64(y.IntVal)))
-	})
+var _Gopurs_NumSub = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := gopurs_runtime.Unbox[float64](arg0)
+	go_arg1 := gopurs_runtime.Unbox[float64](arg1)
+	go_res := NumSub(go_arg0, go_arg1)
+	return gopurs_runtime.Box(go_res)
 })

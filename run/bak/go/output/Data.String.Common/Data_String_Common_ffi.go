@@ -1,74 +1,104 @@
 package Data_String_Common
 
+import "gopurs/output/gopurs_runtime"
+
 import (
-	"gopurs/output/gopurs_runtime"
 	"strings"
 )
 
-var X_LocaleCompare = gopurs_runtime.Func(func(lt gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(eq gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Func(func(gt gopurs_runtime.Value) gopurs_runtime.Value {
-			return gopurs_runtime.Func(func(s1 gopurs_runtime.Value) gopurs_runtime.Value {
-				return gopurs_runtime.Func(func(s2 gopurs_runtime.Value) gopurs_runtime.Value {
-					cmp := strings.Compare(s1.StrVal, s2.StrVal)
-					if cmp < 0 {
-						return lt
-					} else if cmp > 0 {
-						return gt
-					}
-					return eq
-				})
-			})
-		})
-	})
-})
+func _LocaleCompare(lt any, eq any, gt any, s1 string, s2 string) any {
+	cmp := strings.Compare(s1, s2)
+	if cmp < 0 {
+		return lt
+	} else if cmp > 0 {
+		return gt
+	}
+	return eq
+}
 
-var Replace = gopurs_runtime.Func(func(s1 gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(s2 gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Func(func(s3 gopurs_runtime.Value) gopurs_runtime.Value {
-			return gopurs_runtime.Str(strings.Replace(s3.StrVal, s1.StrVal, s2.StrVal, 1))
-		})
-	})
-})
+func Replace(s1 string, s2 string, s3 string) string {
+	return strings.Replace(s3, s1, s2, 1)
+}
 
-var ReplaceAll = gopurs_runtime.Func(func(s1 gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(s2 gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Func(func(s3 gopurs_runtime.Value) gopurs_runtime.Value {
-			return gopurs_runtime.Str(strings.ReplaceAll(s3.StrVal, s1.StrVal, s2.StrVal))
-		})
-	})
-})
+func ReplaceAll(s1 string, s2 string, s3 string) string {
+	return strings.ReplaceAll(s3, s1, s2)
+}
 
-var Split = gopurs_runtime.Func(func(sep gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(s gopurs_runtime.Value) gopurs_runtime.Value {
-		parts := strings.Split(s.StrVal, sep.StrVal)
-		arr := make([]gopurs_runtime.Value, len(parts))
-		for i, p := range parts {
-			arr[i] = gopurs_runtime.Str(p)
-		}
-		return gopurs_runtime.Array(arr)
-	})
-})
+func Split(sep string, s string) []string {
+	return strings.Split(s, sep)
+}
 
-var ToLower = gopurs_runtime.Func(func(s gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Str(strings.ToLower(s.StrVal))
-})
+func ToLower(s string) string {
+	return strings.ToLower(s)
+}
 
-var ToUpper = gopurs_runtime.Func(func(s gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Str(strings.ToUpper(s.StrVal))
-})
+func ToUpper(s string) string {
+	return strings.ToUpper(s)
+}
 
-var Trim = gopurs_runtime.Func(func(s gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Str(strings.TrimSpace(s.StrVal))
-})
+func Trim(s string) string {
+	return strings.TrimSpace(s)
+}
 
-var JoinWith = gopurs_runtime.Func(func(s gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(xs gopurs_runtime.Value) gopurs_runtime.Value {
-		arr := xs.PtrVal.([]gopurs_runtime.Value)
-		var strs []string
-		for _, v := range arr {
-			strs = append(strs, v.StrVal)
-		}
-		return gopurs_runtime.Str(strings.Join(strs, s.StrVal))
-	})
+func JoinWith(s string, xs []string) string {
+	return strings.Join(xs, s)
+}
+
+
+// --- Auto-generated FFI wrappers ---
+var _Gopurs__LocaleCompare = gopurs_runtime.Func5(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0.PtrVal
+	go_arg1 := arg1.PtrVal
+	go_arg2 := arg2.PtrVal
+	go_arg3 := gopurs_runtime.Unbox[string](arg3)
+	go_arg4 := gopurs_runtime.Unbox[string](arg4)
+	go_res := _LocaleCompare(go_arg0, go_arg1, go_arg2, go_arg3, go_arg4)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs_Replace = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := gopurs_runtime.Unbox[string](arg0)
+	go_arg1 := gopurs_runtime.Unbox[string](arg1)
+	go_arg2 := gopurs_runtime.Unbox[string](arg2)
+	go_res := Replace(go_arg0, go_arg1, go_arg2)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs_ReplaceAll = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := gopurs_runtime.Unbox[string](arg0)
+	go_arg1 := gopurs_runtime.Unbox[string](arg1)
+	go_arg2 := gopurs_runtime.Unbox[string](arg2)
+	go_res := ReplaceAll(go_arg0, go_arg1, go_arg2)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs_Split = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := gopurs_runtime.Unbox[string](arg0)
+	go_arg1 := gopurs_runtime.Unbox[string](arg1)
+	go_res := Split(go_arg0, go_arg1)
+	return func() gopurs_runtime.Value {
+			res_arr := make([]gopurs_runtime.Value, len(go_res))
+			for i, v := range go_res { res_arr[i] = gopurs_runtime.Box(v) }
+			return gopurs_runtime.Array(res_arr)
+		}()
+})
+var _Gopurs_ToLower = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := gopurs_runtime.Unbox[string](arg0)
+	go_res := ToLower(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs_ToUpper = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := gopurs_runtime.Unbox[string](arg0)
+	go_res := ToUpper(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs_Trim = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := gopurs_runtime.Unbox[string](arg0)
+	go_res := Trim(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs_JoinWith = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := gopurs_runtime.Unbox[string](arg0)
+	arg1_arr := arg1.PtrVal.([]gopurs_runtime.Value)
+	go_arg1 := make([]string, len(arg1_arr))
+	for i, v := range arg1_arr { go_arg1[i] = gopurs_runtime.Unbox[string](v) }
+	go_res := JoinWith(go_arg0, go_arg1)
+	return gopurs_runtime.Box(go_res)
 })

@@ -849,9 +849,9 @@ return __t1
 }
 
 func Get_adjustImpl() gopurs_runtime.Value {
-	return AdjustImpl
+	return _Gopurs_AdjustImpl
 }
 
 func Get_calcDiff() gopurs_runtime.Value {
-	return CalcDiff
+	return _Gopurs_CalcDiff
 }

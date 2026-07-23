@@ -111,5 +111,5 @@ return gopurs_runtime.Apply(f_3, x_2)
 }
 
 func Get_arrayMap() gopurs_runtime.Value {
-	return ArrayMap
+	return _Gopurs_ArrayMap
 }

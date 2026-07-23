@@ -188,17 +188,17 @@ return gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Exponent
 }
 
 func Get_toExponentialNative() gopurs_runtime.Value {
-	return ToExponentialNative
+	return _Gopurs_ToExponentialNative
 }
 
 func Get_toFixedNative() gopurs_runtime.Value {
-	return ToFixedNative
+	return _Gopurs_ToFixedNative
 }
 
 func Get_toPrecisionNative() gopurs_runtime.Value {
-	return ToPrecisionNative
+	return _Gopurs_ToPrecisionNative
 }
 
 func Get_toString() gopurs_runtime.Value {
-	return ToString
+	return _Gopurs_ToString
 }

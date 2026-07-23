@@ -27,5 +27,5 @@ return gopurs_runtime.Apply(pkg_Partial.Get__crashWith(), msg_0)
 }
 
 func Get__unsafePartial() gopurs_runtime.Value {
-	return X_UnsafePartial
+	return _Gopurs__UnsafePartial
 }

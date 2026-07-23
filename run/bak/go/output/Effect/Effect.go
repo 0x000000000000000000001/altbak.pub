@@ -123,25 +123,25 @@ return semigroupEffect1_2_1
 }
 
 func Get_bindE() gopurs_runtime.Value {
-	return BindE
+	return _Gopurs_BindE
 }
 
 func Get_forE() gopurs_runtime.Value {
-	return ForE
+	return _Gopurs_ForE
 }
 
 func Get_foreachE() gopurs_runtime.Value {
-	return ForeachE
+	return _Gopurs_ForeachE
 }
 
 func Get_pureE() gopurs_runtime.Value {
-	return PureE
+	return _Gopurs_PureE
 }
 
 func Get_untilE() gopurs_runtime.Value {
-	return UntilE
+	return _Gopurs_UntilE
 }
 
 func Get_whileE() gopurs_runtime.Value {
-	return WhileE
+	return _Gopurs_WhileE
 }

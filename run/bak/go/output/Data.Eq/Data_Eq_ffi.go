@@ -2,38 +2,69 @@ package Data_Eq
 
 import "gopurs/output/gopurs_runtime"
 
-// refEq for Int, Boolean, String are safe by value in Go!
-var RefEq = gopurs_runtime.Func(func(r1 gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(r2 gopurs_runtime.Value) gopurs_runtime.Value {
-		if r1.Type == r2.Type && r1.IntVal == r2.IntVal && r1.StrVal == r2.StrVal && r1.PtrVal == r2.PtrVal {
-			return gopurs_runtime.Bool(true)
+func refEq(r1 any, r2 any) bool {
+	return r1 == r2
+}
+func EqBooleanImpl(r1 bool, r2 bool) bool { return r1 == r2 }
+func EqIntImpl(r1 int, r2 int) bool { return r1 == r2 }
+func EqNumberImpl(r1 float64, r2 float64) bool { return r1 == r2 }
+func EqCharImpl(r1 string, r2 string) bool { return r1 == r2 }
+func EqStringImpl(r1 string, r2 string) bool { return r1 == r2 }
+func EqArrayImpl(f func(any) func(any) bool, xs []any, ys []any) bool {
+	if len(xs) != len(ys) {
+		return false
+	}
+	for i := range xs {
+		if !f(xs[i])(ys[i]) {
+			return false
 		}
-		return gopurs_runtime.Bool(false)
-	})
+	}
+	return true
+}
+
+
+// --- Auto-generated FFI wrappers ---
+var _Gopurs_EqBooleanImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := gopurs_runtime.Unbox[bool](arg0)
+	go_arg1 := gopurs_runtime.Unbox[bool](arg1)
+	go_res := EqBooleanImpl(go_arg0, go_arg1)
+	return gopurs_runtime.Box(go_res)
 })
-
-var EqBooleanImpl = RefEq
-var EqIntImpl = RefEq
-var EqNumberImpl = RefEq
-var EqCharImpl = RefEq
-var EqStringImpl = RefEq
-
-var EqArrayImpl = gopurs_runtime.Func(func(f gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(xs gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Func(func(ys gopurs_runtime.Value) gopurs_runtime.Value {
-			arr1 := xs.PtrVal.([]gopurs_runtime.Value)
-			arr2 := ys.PtrVal.([]gopurs_runtime.Value)
-			if len(arr1) != len(arr2) {
-				return gopurs_runtime.Bool(false)
-			}
-			for i := range arr1 {
-				thunk := gopurs_runtime.Apply(f, arr1[i])
-				res := gopurs_runtime.Apply(thunk, arr2[i])
-				if res.IntVal == 0 {
-					return gopurs_runtime.Bool(false)
-				}
-			}
-			return gopurs_runtime.Bool(true)
-		})
-	})
+var _Gopurs_EqIntImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := gopurs_runtime.Unbox[int](arg0)
+	go_arg1 := gopurs_runtime.Unbox[int](arg1)
+	go_res := EqIntImpl(go_arg0, go_arg1)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs_EqNumberImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := gopurs_runtime.Unbox[float64](arg0)
+	go_arg1 := gopurs_runtime.Unbox[float64](arg1)
+	go_res := EqNumberImpl(go_arg0, go_arg1)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs_EqCharImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := gopurs_runtime.Unbox[string](arg0)
+	go_arg1 := gopurs_runtime.Unbox[string](arg1)
+	go_res := EqCharImpl(go_arg0, go_arg1)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs_EqStringImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := gopurs_runtime.Unbox[string](arg0)
+	go_arg1 := gopurs_runtime.Unbox[string](arg1)
+	go_res := EqStringImpl(go_arg0, go_arg1)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs_EqArrayImpl = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := func(p0 any) func(any) bool {
+		res := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0))
+		return gopurs_runtime.Unbox[func(any) bool](res)
+	}
+	arg1_arr := arg1.PtrVal.([]gopurs_runtime.Value)
+	go_arg1 := make([]any, len(arg1_arr))
+	for i, v := range arg1_arr { go_arg1[i] = v.PtrVal }
+	arg2_arr := arg2.PtrVal.([]gopurs_runtime.Value)
+	go_arg2 := make([]any, len(arg2_arr))
+	for i, v := range arg2_arr { go_arg2[i] = v.PtrVal }
+	go_res := EqArrayImpl(go_arg0, go_arg1, go_arg2)
+	return gopurs_runtime.Box(go_res)
 })

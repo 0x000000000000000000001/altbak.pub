@@ -68,5 +68,5 @@ return gopurs_runtime.RecordGet(dict_0, "reflectType")
 }
 
 func Get_unsafeCoerce() gopurs_runtime.Value {
-	return UnsafeCoerce
+	return _Gopurs_UnsafeCoerce
 }

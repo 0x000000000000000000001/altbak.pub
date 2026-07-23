@@ -82,49 +82,49 @@ return gopurs_runtime.Apply(Get_debug(), gopurs_runtime.Apply(gopurs_runtime.Rec
 }
 
 func Get_clear() gopurs_runtime.Value {
-	return Clear
+	return _Gopurs_Clear
 }
 
 func Get_debug() gopurs_runtime.Value {
-	return Debug
+	return _Gopurs_Debug
 }
 
 func Get_error() gopurs_runtime.Value {
-	return Error
+	return _Gopurs_Error
 }
 
 func Get_group() gopurs_runtime.Value {
-	return Group
+	return _Gopurs_Group
 }
 
 func Get_groupCollapsed() gopurs_runtime.Value {
-	return GroupCollapsed
+	return _Gopurs_GroupCollapsed
 }
 
 func Get_groupEnd() gopurs_runtime.Value {
-	return GroupEnd
+	return _Gopurs_GroupEnd
 }
 
 func Get_info() gopurs_runtime.Value {
-	return Info
+	return _Gopurs_Info
 }
 
 func Get_log() gopurs_runtime.Value {
-	return Log
+	return _Gopurs_Log
 }
 
 func Get_time() gopurs_runtime.Value {
-	return Time
+	return _Gopurs_Time
 }
 
 func Get_timeEnd() gopurs_runtime.Value {
-	return TimeEnd
+	return _Gopurs_TimeEnd
 }
 
 func Get_timeLog() gopurs_runtime.Value {
-	return TimeLog
+	return _Gopurs_TimeLog
 }
 
 func Get_warn() gopurs_runtime.Value {
-	return Warn
+	return _Gopurs_Warn
 }

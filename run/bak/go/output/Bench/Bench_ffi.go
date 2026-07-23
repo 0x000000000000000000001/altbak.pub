@@ -1,8 +1,9 @@
 package Bench
 
+import "gopurs/output/gopurs_runtime"
+
 import (
-	"gopurs/output/gopurs_runtime"
-	"time"
+"time"
 	"fmt"
 	"math"
 )
@@ -20,3 +21,9 @@ var Opaque = gopurs_runtime.Func(func(a gopurs_runtime.Value) gopurs_runtime.Val
 var FormatNumber = gopurs_runtime.Func(func(n gopurs_runtime.Value) gopurs_runtime.Value {
 	return gopurs_runtime.Str(fmt.Sprintf("%.2f", math.Float64frombits(uint64(n.IntVal))))
 })
+
+
+// --- Auto-generated FFI wrappers ---
+var _Gopurs_BenchNow = gopurs_runtime.Box(BenchNow)
+var _Gopurs_Opaque = gopurs_runtime.Box(Opaque)
+var _Gopurs_FormatNumber = gopurs_runtime.Box(FormatNumber)

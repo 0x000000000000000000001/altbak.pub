@@ -129,5 +129,5 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictApply_0, "apply"), gop
 }
 
 func Get_arrayApply() gopurs_runtime.Value {
-	return ArrayApply
+	return _Gopurs_ArrayApply
 }

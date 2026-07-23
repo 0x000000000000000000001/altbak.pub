@@ -1953,97 +1953,97 @@ return gopurs_runtime.UncurriedApp2(Get_allImpl(), __local_var_0, __local_var_1)
 }
 
 func Get__deleteAt() gopurs_runtime.Value {
-	return X_DeleteAt
+	return _Gopurs__DeleteAt
 }
 
 func Get__insertAt() gopurs_runtime.Value {
-	return X_InsertAt
+	return _Gopurs__InsertAt
 }
 
 func Get__updateAt() gopurs_runtime.Value {
-	return X_UpdateAt
+	return _Gopurs__UpdateAt
 }
 
 func Get_allImpl() gopurs_runtime.Value {
-	return AllImpl
+	return _Gopurs_AllImpl
 }
 
 func Get_anyImpl() gopurs_runtime.Value {
-	return AnyImpl
+	return _Gopurs_AnyImpl
 }
 
 func Get_concat() gopurs_runtime.Value {
-	return Concat
+	return _Gopurs_Concat
 }
 
 func Get_filterImpl() gopurs_runtime.Value {
-	return FilterImpl
+	return _Gopurs_FilterImpl
 }
 
 func Get_findIndexImpl() gopurs_runtime.Value {
-	return FindIndexImpl
+	return _Gopurs_FindIndexImpl
 }
 
 func Get_findLastIndexImpl() gopurs_runtime.Value {
-	return FindLastIndexImpl
+	return _Gopurs_FindLastIndexImpl
 }
 
 func Get_findMapImpl() gopurs_runtime.Value {
-	return FindMapImpl
+	return _Gopurs_FindMapImpl
 }
 
 func Get_fromFoldableImpl() gopurs_runtime.Value {
-	return FromFoldableImpl
+	return _Gopurs_FromFoldableImpl
 }
 
 func Get_indexImpl() gopurs_runtime.Value {
-	return IndexImpl
+	return _Gopurs_IndexImpl
 }
 
 func Get_length() gopurs_runtime.Value {
-	return Length
+	return _Gopurs_Length
 }
 
 func Get_partitionImpl() gopurs_runtime.Value {
-	return PartitionImpl
+	return _Gopurs_PartitionImpl
 }
 
 func Get_rangeImpl() gopurs_runtime.Value {
-	return RangeImpl
+	return _Gopurs_RangeImpl
 }
 
 func Get_replicateImpl() gopurs_runtime.Value {
-	return ReplicateImpl
+	return _Gopurs_ReplicateImpl
 }
 
 func Get_reverse() gopurs_runtime.Value {
-	return Reverse
+	return _Gopurs_Reverse
 }
 
 func Get_scanlImpl() gopurs_runtime.Value {
-	return ScanlImpl
+	return _Gopurs_ScanlImpl
 }
 
 func Get_scanrImpl() gopurs_runtime.Value {
-	return ScanrImpl
+	return _Gopurs_ScanrImpl
 }
 
 func Get_sliceImpl() gopurs_runtime.Value {
-	return SliceImpl
+	return _Gopurs_SliceImpl
 }
 
 func Get_sortByImpl() gopurs_runtime.Value {
-	return SortByImpl
+	return _Gopurs_SortByImpl
 }
 
 func Get_unconsImpl() gopurs_runtime.Value {
-	return UnconsImpl
+	return _Gopurs_UnconsImpl
 }
 
 func Get_unsafeIndexImpl() gopurs_runtime.Value {
-	return UnsafeIndexImpl
+	return _Gopurs_UnsafeIndexImpl
 }
 
 func Get_zipWithImpl() gopurs_runtime.Value {
-	return ZipWithImpl
+	return _Gopurs_ZipWithImpl
 }

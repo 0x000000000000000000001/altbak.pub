@@ -295,69 +295,69 @@ func Get_clone() gopurs_runtime.Value {
 }
 
 func Get_cloneImpl() gopurs_runtime.Value {
-	return CloneImpl
+	return _Gopurs_CloneImpl
 }
 
 func Get_freezeImpl() gopurs_runtime.Value {
-	return FreezeImpl
+	return _Gopurs_FreezeImpl
 }
 
 func Get_lengthImpl() gopurs_runtime.Value {
-	return LengthImpl
+	return _Gopurs_LengthImpl
 }
 
 func Get_new_() gopurs_runtime.Value {
-	return New_
+	return _Gopurs_New_
 }
 
 func Get_peekImpl() gopurs_runtime.Value {
-	return PeekImpl
+	return _Gopurs_PeekImpl
 }
 
 func Get_pokeImpl() gopurs_runtime.Value {
-	return PokeImpl
+	return _Gopurs_PokeImpl
 }
 
 func Get_popImpl() gopurs_runtime.Value {
-	return PopImpl
+	return _Gopurs_PopImpl
 }
 
 func Get_pushAllImpl() gopurs_runtime.Value {
-	return PushAllImpl
+	return _Gopurs_PushAllImpl
 }
 
 func Get_pushImpl() gopurs_runtime.Value {
-	return PushImpl
+	return _Gopurs_PushImpl
 }
 
 func Get_shiftImpl() gopurs_runtime.Value {
-	return ShiftImpl
+	return _Gopurs_ShiftImpl
 }
 
 func Get_sortByImpl() gopurs_runtime.Value {
-	return SortByImpl
+	return _Gopurs_SortByImpl
 }
 
 func Get_spliceImpl() gopurs_runtime.Value {
-	return SpliceImpl
+	return _Gopurs_SpliceImpl
 }
 
 func Get_thawImpl() gopurs_runtime.Value {
-	return ThawImpl
+	return _Gopurs_ThawImpl
 }
 
 func Get_toAssocArrayImpl() gopurs_runtime.Value {
-	return ToAssocArrayImpl
+	return _Gopurs_ToAssocArrayImpl
 }
 
 func Get_unsafeFreezeImpl() gopurs_runtime.Value {
-	return UnsafeFreezeImpl
+	return _Gopurs_UnsafeFreezeImpl
 }
 
 func Get_unsafeThawImpl() gopurs_runtime.Value {
-	return UnsafeThawImpl
+	return _Gopurs_UnsafeThawImpl
 }
 
 func Get_unshiftAllImpl() gopurs_runtime.Value {
-	return UnshiftAllImpl
+	return _Gopurs_UnshiftAllImpl
 }

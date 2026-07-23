@@ -203,25 +203,25 @@ return gopurs_runtime.Bool(gopurs_runtime.Apply2(eq12_2_0, x_3, y_4).IntVal == 0
 }
 
 func Get_eqArrayImpl() gopurs_runtime.Value {
-	return EqArrayImpl
+	return _Gopurs_EqArrayImpl
 }
 
 func Get_eqBooleanImpl() gopurs_runtime.Value {
-	return EqBooleanImpl
+	return _Gopurs_EqBooleanImpl
 }
 
 func Get_eqCharImpl() gopurs_runtime.Value {
-	return EqCharImpl
+	return _Gopurs_EqCharImpl
 }
 
 func Get_eqIntImpl() gopurs_runtime.Value {
-	return EqIntImpl
+	return _Gopurs_EqIntImpl
 }
 
 func Get_eqNumberImpl() gopurs_runtime.Value {
-	return EqNumberImpl
+	return _Gopurs_EqNumberImpl
 }
 
 func Get_eqStringImpl() gopurs_runtime.Value {
-	return EqStringImpl
+	return _Gopurs_EqStringImpl
 }

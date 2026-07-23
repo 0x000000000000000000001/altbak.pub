@@ -443,5 +443,5 @@ return pkg_Data_Monoid_Additive.Get_functorAdditive()
 }
 
 func Get_mapWithIndexArray() gopurs_runtime.Value {
-	return MapWithIndexArray
+	return _Gopurs_MapWithIndexArray
 }

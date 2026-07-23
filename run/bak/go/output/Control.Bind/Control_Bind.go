@@ -159,5 +159,5 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBind_0, "bind"), m_1, 
 }
 
 func Get_arrayBind() gopurs_runtime.Value {
-	return ArrayBind
+	return _Gopurs_ArrayBind
 }

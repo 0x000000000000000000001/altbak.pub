@@ -29,9 +29,9 @@ return gopurs_runtime.Apply(pkg_Control_Monad_ST_Uncurried.Get_runSTFn2(), Get_p
 }
 
 func Get_peekImpl() gopurs_runtime.Value {
-	return PeekImpl
+	return _Gopurs_PeekImpl
 }
 
 func Get_pokeImpl() gopurs_runtime.Value {
-	return PokeImpl
+	return _Gopurs_PokeImpl
 }

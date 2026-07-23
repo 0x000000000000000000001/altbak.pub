@@ -152,5 +152,5 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericShow_1, "generic
 }
 
 func Get_intercalate() gopurs_runtime.Value {
-	return Intercalate
+	return _Gopurs_Intercalate
 }

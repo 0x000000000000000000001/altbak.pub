@@ -765,29 +765,29 @@ return Get_ordCodePoint()
 }
 
 func Get__codePointAt() gopurs_runtime.Value {
-	return X_CodePointAt
+	return _Gopurs__CodePointAt
 }
 
 func Get__countPrefix() gopurs_runtime.Value {
-	return X_CountPrefix
+	return _Gopurs__CountPrefix
 }
 
 func Get__fromCodePointArray() gopurs_runtime.Value {
-	return X_FromCodePointArray
+	return _Gopurs__FromCodePointArray
 }
 
 func Get__singleton() gopurs_runtime.Value {
-	return X_Singleton
+	return _Gopurs__Singleton
 }
 
 func Get__take() gopurs_runtime.Value {
-	return X_Take
+	return _Gopurs__Take
 }
 
 func Get__toCodePointArray() gopurs_runtime.Value {
-	return X_ToCodePointArray
+	return _Gopurs__ToCodePointArray
 }
 
 func Get__unsafeCodePointAt0() gopurs_runtime.Value {
-	return X_UnsafeCodePointAt0
+	return _Gopurs__UnsafeCodePointAt0
 }

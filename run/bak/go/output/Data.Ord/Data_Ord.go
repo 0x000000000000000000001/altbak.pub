@@ -676,25 +676,25 @@ return __t2
 }
 
 func Get_ordArrayImpl() gopurs_runtime.Value {
-	return OrdArrayImpl
+	return _Gopurs_OrdArrayImpl
 }
 
 func Get_ordBooleanImpl() gopurs_runtime.Value {
-	return OrdBooleanImpl
+	return _Gopurs_OrdBooleanImpl
 }
 
 func Get_ordCharImpl() gopurs_runtime.Value {
-	return OrdCharImpl
+	return _Gopurs_OrdCharImpl
 }
 
 func Get_ordIntImpl() gopurs_runtime.Value {
-	return OrdIntImpl
+	return _Gopurs_OrdIntImpl
 }
 
 func Get_ordNumberImpl() gopurs_runtime.Value {
-	return OrdNumberImpl
+	return _Gopurs_OrdNumberImpl
 }
 
 func Get_ordStringImpl() gopurs_runtime.Value {
-	return OrdStringImpl
+	return _Gopurs_OrdStringImpl
 }

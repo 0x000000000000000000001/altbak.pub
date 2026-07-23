@@ -20,6 +20,11 @@ const (
 	TypeBool = 11
 	TypeArray = 12
 	TypeAny = 13
+	TypeFunc6 = 14
+	TypeFunc7 = 15
+	TypeFunc8 = 16
+	TypeFunc9 = 17
+	TypeFunc10 = 18
 )
 
 // We do not add FloatVal or BoolVal fields to keep the struct size minimal.
@@ -214,6 +219,11 @@ func Func2(f func(Value, Value) Value) Value { return Value{Type: TypeFunc2, Fun
 func Func3(f func(Value, Value, Value) Value) Value { return Value{Type: TypeFunc3, Func: *(*unsafe.Pointer)(unsafe.Pointer(&f))} }
 func Func4(f func(Value, Value, Value, Value) Value) Value { return Value{Type: TypeFunc4, Func: *(*unsafe.Pointer)(unsafe.Pointer(&f))} }
 func Func5(f func(Value, Value, Value, Value, Value) Value) Value { return Value{Type: TypeFunc5, Func: *(*unsafe.Pointer)(unsafe.Pointer(&f))} }
+func Func6(f func(Value, Value, Value, Value, Value, Value) Value) Value { return Value{Type: TypeFunc6, Func: *(*unsafe.Pointer)(unsafe.Pointer(&f))} }
+func Func7(f func(Value, Value, Value, Value, Value, Value, Value) Value) Value { return Value{Type: TypeFunc7, Func: *(*unsafe.Pointer)(unsafe.Pointer(&f))} }
+func Func8(f func(Value, Value, Value, Value, Value, Value, Value, Value) Value) Value { return Value{Type: TypeFunc8, Func: *(*unsafe.Pointer)(unsafe.Pointer(&f))} }
+func Func9(f func(Value, Value, Value, Value, Value, Value, Value, Value, Value) Value) Value { return Value{Type: TypeFunc9, Func: *(*unsafe.Pointer)(unsafe.Pointer(&f))} }
+func Func10(f func(Value, Value, Value, Value, Value, Value, Value, Value, Value, Value) Value) Value { return Value{Type: TypeFunc10, Func: *(*unsafe.Pointer)(unsafe.Pointer(&f))} }
 
 func FuncAny(f any) Value {
 	return Value{Type: TypeFunc, PtrVal: f}
@@ -333,4 +343,83 @@ func UncurriedApp(fn Value, args ...Value) Value {
 		res = Apply(res, arg)
 	}
 	return res
+}
+
+func Unbox[T any](v Value) T {
+	var t any = *new(T)
+	switch t.(type) {
+	case int64: return any(v.IntVal).(T)
+	case int: return any(int(v.IntVal)).(T)
+	case string: return any(v.StrVal).(T)
+	case float64: return any(math.Float64frombits(uint64(v.IntVal))).(T)
+	case bool: return any(v.IntVal == 1).(T)
+	case Value: return any(v).(T)
+	default: return v.PtrVal.(T)
+	}
+}
+
+func Box[T any](val T) Value {
+	switch v := any(val).(type) {
+	case int64: return Int(v)
+	case int: return Int(int64(v))
+	case string: return Str(v)
+	case float64: return Value{Type: TypeFloat, IntVal: int64(math.Float64bits(v))}
+	case bool: 
+		if v { return Value{Type: TypeBool, IntVal: 1} }
+		return Value{Type: TypeBool, IntVal: 0}
+	case func():
+		return Func(func(_ Value) Value { v(); return Value{} })
+	case func() bool:
+		return Func(func(_ Value) Value { if v() { return Value{Type: TypeBool, IntVal: 1} }; return Value{Type: TypeBool, IntVal: 0} })
+	case func() int:
+		return Func(func(_ Value) Value { return Int(int64(v())) })
+	case func() int64:
+		return Func(func(_ Value) Value { return Int(v()) })
+	case func() string:
+		return Func(func(_ Value) Value { return Str(v()) })
+	case func() float64:
+		return Func(func(_ Value) Value { return Value{Type: TypeFloat, IntVal: int64(math.Float64bits(v()))} })
+	case func() Value:
+		return Func(func(_ Value) Value { return v() })
+	case func(Value) Value:
+		return Func(v)
+	case Value: return v
+	default: return Any(v)
+	}
+}
+
+func Wrap0[R any](f func() R) Value {
+	return Func(func(_ Value) Value {
+		return Box(f())
+	})
+}
+
+func Wrap1[A, R any](f func(A) R) Value {
+	return Func(func(a Value) Value {
+		return Box(f(Unbox[A](a)))
+	})
+}
+
+func Wrap2[A, B, R any](f func(A, B) R) Value {
+	return Func2(func(a, b Value) Value {
+		return Box(f(Unbox[A](a), Unbox[B](b)))
+	})
+}
+
+func Wrap3[A, B, C, R any](f func(A, B, C) R) Value {
+	return Func3(func(a, b, c Value) Value {
+		return Box(f(Unbox[A](a), Unbox[B](b), Unbox[C](c)))
+	})
+}
+
+func Wrap4[A, B, C, D, R any](f func(A, B, C, D) R) Value {
+	return Func4(func(a, b, c, d Value) Value {
+		return Box(f(Unbox[A](a), Unbox[B](b), Unbox[C](c), Unbox[D](d)))
+	})
+}
+
+func Wrap5[A, B, C, D, E, R any](f func(A, B, C, D, E) R) Value {
+	return Func5(func(a, b, c, d, e Value) Value {
+		return Box(f(Unbox[A](a), Unbox[B](b), Unbox[C](c), Unbox[D](d), Unbox[E](e)))
+	})
 }

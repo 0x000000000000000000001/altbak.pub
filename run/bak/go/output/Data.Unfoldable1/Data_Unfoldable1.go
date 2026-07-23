@@ -214,5 +214,5 @@ return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str
 }
 
 func Get_unfoldr1ArrayImpl() gopurs_runtime.Value {
-	return Unfoldr1ArrayImpl
+	return _Gopurs_Unfoldr1ArrayImpl
 }

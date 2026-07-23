@@ -99,101 +99,101 @@ func Get_e() gopurs_runtime.Value {
 }
 
 func Get_abs() gopurs_runtime.Value {
-	return Abs
+	return _Gopurs_Abs
 }
 
 func Get_acos() gopurs_runtime.Value {
-	return Acos
+	return _Gopurs_Acos
 }
 
 func Get_asin() gopurs_runtime.Value {
-	return Asin
+	return _Gopurs_Asin
 }
 
 func Get_atan() gopurs_runtime.Value {
-	return Atan
+	return _Gopurs_Atan
 }
 
 func Get_atan2() gopurs_runtime.Value {
-	return Atan2
+	return _Gopurs_Atan2
 }
 
 func Get_ceil() gopurs_runtime.Value {
-	return Ceil
+	return _Gopurs_Ceil
 }
 
 func Get_cos() gopurs_runtime.Value {
-	return Cos
+	return _Gopurs_Cos
 }
 
 func Get_exp() gopurs_runtime.Value {
-	return Exp
+	return _Gopurs_Exp
 }
 
 func Get_floor() gopurs_runtime.Value {
-	return Floor
+	return _Gopurs_Floor
 }
 
 func Get_fromStringImpl() gopurs_runtime.Value {
-	return FromStringImpl
+	return _Gopurs_FromStringImpl
 }
 
 func Get_infinity() gopurs_runtime.Value {
-	return Infinity
+	return _Gopurs_Infinity
 }
 
 func Get_isFinite() gopurs_runtime.Value {
-	return IsFinite
+	return _Gopurs_IsFinite
 }
 
 func Get_isNaN() gopurs_runtime.Value {
-	return IsNaN
+	return _Gopurs_IsNaN
 }
 
 func Get_log() gopurs_runtime.Value {
-	return Log
+	return _Gopurs_Log
 }
 
 func Get_max() gopurs_runtime.Value {
-	return Max
+	return _Gopurs_Max
 }
 
 func Get_min() gopurs_runtime.Value {
-	return Min
+	return _Gopurs_Min
 }
 
 func Get_nan() gopurs_runtime.Value {
-	return Nan
+	return _Gopurs_Nan
 }
 
 func Get_pow() gopurs_runtime.Value {
-	return Pow
+	return _Gopurs_Pow
 }
 
 func Get_remainder() gopurs_runtime.Value {
-	return Remainder
+	return _Gopurs_Remainder
 }
 
 func Get_round() gopurs_runtime.Value {
-	return Round
+	return _Gopurs_Round
 }
 
 func Get_sign() gopurs_runtime.Value {
-	return Sign
+	return _Gopurs_Sign
 }
 
 func Get_sin() gopurs_runtime.Value {
-	return Sin
+	return _Gopurs_Sin
 }
 
 func Get_sqrt() gopurs_runtime.Value {
-	return Sqrt
+	return _Gopurs_Sqrt
 }
 
 func Get_tan() gopurs_runtime.Value {
-	return Tan
+	return _Gopurs_Tan
 }
 
 func Get_trunc() gopurs_runtime.Value {
-	return Trunc
+	return _Gopurs_Trunc
 }

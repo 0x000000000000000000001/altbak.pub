@@ -134,9 +134,9 @@ return gopurs_runtime.Apply3(pkg_Record_Unsafe.Get_unsafeSet(), key_7_0, gopurs_
 }
 
 func Get_concatArray() gopurs_runtime.Value {
-	return ConcatArray
+	return _Gopurs_ConcatArray
 }
 
 func Get_concatString() gopurs_runtime.Value {
-	return ConcatString
+	return _Gopurs_ConcatString
 }

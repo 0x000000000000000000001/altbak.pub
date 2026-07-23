@@ -26,33 +26,33 @@ func Get_localeCompare() gopurs_runtime.Value {
 }
 
 func Get__localeCompare() gopurs_runtime.Value {
-	return X_LocaleCompare
+	return _Gopurs__LocaleCompare
 }
 
 func Get_joinWith() gopurs_runtime.Value {
-	return JoinWith
+	return _Gopurs_JoinWith
 }
 
 func Get_replace() gopurs_runtime.Value {
-	return Replace
+	return _Gopurs_Replace
 }
 
 func Get_replaceAll() gopurs_runtime.Value {
-	return ReplaceAll
+	return _Gopurs_ReplaceAll
 }
 
 func Get_split() gopurs_runtime.Value {
-	return Split
+	return _Gopurs_Split
 }
 
 func Get_toLower() gopurs_runtime.Value {
-	return ToLower
+	return _Gopurs_ToLower
 }
 
 func Get_toUpper() gopurs_runtime.Value {
-	return ToUpper
+	return _Gopurs_ToUpper
 }
 
 func Get_trim() gopurs_runtime.Value {
-	return Trim
+	return _Gopurs_Trim
 }

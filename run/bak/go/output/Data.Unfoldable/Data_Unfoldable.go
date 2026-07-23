@@ -179,5 +179,5 @@ return __t0
 }
 
 func Get_unfoldrArrayImpl() gopurs_runtime.Value {
-	return UnfoldrArrayImpl
+	return _Gopurs_UnfoldrArrayImpl
 }

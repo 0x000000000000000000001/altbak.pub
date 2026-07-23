@@ -20,3 +20,8 @@ var Char = gopurs_runtime.Func(func(s gopurs_runtime.Value) gopurs_runtime.Value
 	}
 	panic("Data.String.Unsafe.char: Expected string of length 1.")
 })
+
+
+// --- Auto-generated FFI wrappers ---
+var _Gopurs_CharAt = gopurs_runtime.Box(CharAt)
+var _Gopurs_Char = gopurs_runtime.Box(Char)
