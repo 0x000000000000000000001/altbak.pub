@@ -5,18 +5,12 @@ import (
 	sync "sync"
 	pkg_Control_Alternative "gopurs/output/Control.Alternative"
 	pkg_Data_Maybe "gopurs/output/Data.Maybe"
-	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
 	pkg_Data_Show "gopurs/output/Data.Show"
 	pkg_Data_Ord "gopurs/output/Data.Ord"
 	pkg_Data_Eq "gopurs/output/Data.Eq"
 	pkg_Data_Tuple "gopurs/output/Data.Tuple"
 	pkg_Data_Bounded "gopurs/output/Data.Bounded"
-	pkg_Data_Semiring "gopurs/output/Data.Semiring"
-	pkg_Data_Ring "gopurs/output/Data.Ring"
-	pkg_Data_Unfoldable1 "gopurs/output/Data.Unfoldable1"
-	pkg_Partial_Unsafe "gopurs/output/Partial.Unsafe"
 	pkg_Data_Either "gopurs/output/Data.Either"
-	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
 	pkg_Data_Unit "gopurs/output/Data.Unit"
 )
 
@@ -45,7 +39,7 @@ var once_toEnum sync.Once
 func Get_toEnum() gopurs_runtime.Value {
 	once_toEnum.Do(func() {
 		toEnum = gopurs_runtime.Func(func(dict_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return dict_0.PtrVal.(map[string]gopurs_runtime.Value)["toEnum"]
+return gopurs_runtime.RecordGet(dict_0, "toEnum")
 })
 	})
 	return toEnum
@@ -56,7 +50,7 @@ var once_succ sync.Once
 func Get_succ() gopurs_runtime.Value {
 	once_succ.Do(func() {
 		succ = gopurs_runtime.Func(func(dict_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return dict_0.PtrVal.(map[string]gopurs_runtime.Value)["succ"]
+return gopurs_runtime.RecordGet(dict_0, "succ")
 })
 	})
 	return succ
@@ -66,12 +60,10 @@ var upFromIncluding gopurs_runtime.Value
 var once_upFromIncluding sync.Once
 func Get_upFromIncluding() gopurs_runtime.Value {
 	once_upFromIncluding.Do(func() {
-		upFromIncluding = gopurs_runtime.Func(func(dictEnum_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(dictUnfoldable1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(dictUnfoldable1_1.PtrVal.(map[string]gopurs_runtime.Value)["unfoldr1"], gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Tuple"), "value0": x_2, "value1": gopurs_runtime.Apply(dictEnum_0.PtrVal.(map[string]gopurs_runtime.Value)["succ"], x_2)})
+		upFromIncluding = gopurs_runtime.Func2(func(dictEnum_0 gopurs_runtime.Value, dictUnfoldable1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictUnfoldable1_1, "unfoldr1"), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), x_2, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEnum_0, "succ"), x_2))
 }))
-})
 })
 	})
 	return upFromIncluding
@@ -81,9 +73,9 @@ var showCardinality gopurs_runtime.Value
 var once_showCardinality sync.Once
 func Get_showCardinality() gopurs_runtime.Value {
 	once_showCardinality.Do(func() {
-		showCardinality = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"show": gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Semigroup.Get_concatString(), gopurs_runtime.Str("(Cardinality ")), gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Semigroup.Get_concatString(), gopurs_runtime.Apply(pkg_Data_Show.Get_showIntImpl(), v_0)), gopurs_runtime.Str(")")))
-})})
+		showCardinality = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str("(Cardinality ").StrVal + gopurs_runtime.Apply(pkg_Data_Show.Get_showIntImpl(), v_0).StrVal).StrVal + gopurs_runtime.Str(")").StrVal)
+}))
 	})
 	return showCardinality
 }
@@ -93,7 +85,7 @@ var once_pred sync.Once
 func Get_pred() gopurs_runtime.Value {
 	once_pred.Do(func() {
 		pred = gopurs_runtime.Func(func(dict_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return dict_0.PtrVal.(map[string]gopurs_runtime.Value)["pred"]
+return gopurs_runtime.RecordGet(dict_0, "pred")
 })
 	})
 	return pred
@@ -112,9 +104,9 @@ var newtypeCardinality gopurs_runtime.Value
 var once_newtypeCardinality sync.Once
 func Get_newtypeCardinality() gopurs_runtime.Value {
 	once_newtypeCardinality.Do(func() {
-		newtypeCardinality = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"Coercible0": gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		newtypeCardinality = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{}
-})})
+}))
 	})
 	return newtypeCardinality
 }
@@ -124,7 +116,7 @@ var once_fromEnum sync.Once
 func Get_fromEnum() gopurs_runtime.Value {
 	once_fromEnum.Do(func() {
 		fromEnum = gopurs_runtime.Func(func(dict_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return dict_0.PtrVal.(map[string]gopurs_runtime.Value)["fromEnum"]
+return gopurs_runtime.RecordGet(dict_0, "fromEnum")
 })
 	})
 	return fromEnum
@@ -135,25 +127,25 @@ var once_toEnumWithDefaults sync.Once
 func Get_toEnumWithDefaults() gopurs_runtime.Value {
 	once_toEnumWithDefaults.Do(func() {
 		toEnumWithDefaults = gopurs_runtime.Func(func(dictBoundedEnum_0 gopurs_runtime.Value) gopurs_runtime.Value {
-bottom2_1_0 := gopurs_runtime.Apply(dictBoundedEnum_0.PtrVal.(map[string]gopurs_runtime.Value)["Bounded0"], gopurs_runtime.Value{}).PtrVal.(map[string]gopurs_runtime.Value)["bottom"]
-return gopurs_runtime.Func(func(low_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(high_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
-v_5_1 := gopurs_runtime.Apply(dictBoundedEnum_0.PtrVal.(map[string]gopurs_runtime.Value)["toEnum"], x_4)
+bottom2_1_0 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedEnum_0, "Bounded0"), gopurs_runtime.Value{}), "bottom")
+_ = bottom2_1_0
+return gopurs_runtime.Func3(func(low_2 gopurs_runtime.Value, high_3 gopurs_runtime.Value, x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+v_5_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedEnum_0, "toEnum"), x_4)
+_ = v_5_1
 var __t2 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_5_1.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Just")).IntVal != 0 {
-__t2 = v_5_1.PtrVal.(map[string]gopurs_runtime.Value)["value0"]
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_5_1, "_tag").StrVal == "Just")).IntVal != 0 {
+__t2 = gopurs_runtime.RecordGet(v_5_1, "value0")
 goto end_branch_2
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(v_5_1.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Nothing")).IntVal != 0 {
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_5_1, "_tag").StrVal == "Nothing")).IntVal != 0 {
 var __t3 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Ord.Get_ordInt().PtrVal.(map[string]gopurs_runtime.Value)["compare"], x_4), gopurs_runtime.Apply(dictBoundedEnum_0.PtrVal.(map[string]gopurs_runtime.Value)["fromEnum"], bottom2_1_0)).PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "LT")).IntVal != 0 {
+if (gopurs_runtime.Bool(x_4.IntVal < gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedEnum_0, "fromEnum"), bottom2_1_0).IntVal)).IntVal != 0 {
 __t3 = low_2
 goto end_branch_3
 } else {
@@ -177,8 +169,6 @@ end_branch_2:
 return __t2
 })
 })
-})
-})
 	})
 	return toEnumWithDefaults
 }
@@ -196,13 +186,13 @@ var enumUnit gopurs_runtime.Value
 var once_enumUnit sync.Once
 func Get_enumUnit() gopurs_runtime.Value {
 	once_enumUnit.Do(func() {
-		enumUnit = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"succ": gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Nothing")})
-}), "pred": gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Nothing")})
-}), "Ord0": gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		enumUnit = gopurs_runtime.RecordDict3("succ", "pred", "Ord0", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
+}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
+}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Ord.Get_ordUnit()
-})})
+}))
 	})
 	return enumUnit
 }
@@ -212,83 +202,90 @@ var once_enumTuple sync.Once
 func Get_enumTuple() gopurs_runtime.Value {
 	once_enumTuple.Do(func() {
 		enumTuple = gopurs_runtime.Func(func(dictEnum_0 gopurs_runtime.Value) gopurs_runtime.Value {
-ordTuple_1_0 := gopurs_runtime.Apply(pkg_Data_Tuple.Get_ordTuple(), gopurs_runtime.Apply(dictEnum_0.PtrVal.(map[string]gopurs_runtime.Value)["Ord0"], gopurs_runtime.Value{}))
-return gopurs_runtime.Func(func(dictBoundedEnum_2 gopurs_runtime.Value) gopurs_runtime.Value {
-Bounded0_3_1 := gopurs_runtime.Apply(dictBoundedEnum_2.PtrVal.(map[string]gopurs_runtime.Value)["Bounded0"], gopurs_runtime.Value{})
-bottom2_4_2 := Bounded0_3_1.PtrVal.(map[string]gopurs_runtime.Value)["bottom"]
-Enum1_5_3 := gopurs_runtime.Apply(dictBoundedEnum_2.PtrVal.(map[string]gopurs_runtime.Value)["Enum1"], gopurs_runtime.Value{})
-top2_6_4 := Bounded0_3_1.PtrVal.(map[string]gopurs_runtime.Value)["top"]
-ordTuple1_7_5 := gopurs_runtime.Apply(ordTuple_1_0, gopurs_runtime.Apply(Enum1_5_3.PtrVal.(map[string]gopurs_runtime.Value)["Ord0"], gopurs_runtime.Value{}))
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"succ": gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_9_6 := gopurs_runtime.Apply(dictEnum_0.PtrVal.(map[string]gopurs_runtime.Value)["succ"], v_8.PtrVal.(map[string]gopurs_runtime.Value)["value0"])
-var __t8 gopurs_runtime.Value
-{
-if (gopurs_runtime.Bool(__local_var_9_6.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Just")).IntVal != 0 {
-__t8 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Just"), "value0": gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Tuple"), "value0": __local_var_9_6.PtrVal.(map[string]gopurs_runtime.Value)["value0"], "value1": bottom2_4_2})})
-goto end_branch_8
-} else {
-
-}
-}
-{
-__t8 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Nothing")})
-}
-end_branch_8:
-__local_var_10_7 := __t8
-__local_var_11_9 := gopurs_runtime.Apply(pkg_Data_Tuple.Get_Tuple(), v_8.PtrVal.(map[string]gopurs_runtime.Value)["value0"])
-__local_var_12_10 := gopurs_runtime.Apply(Enum1_5_3.PtrVal.(map[string]gopurs_runtime.Value)["succ"], v_8.PtrVal.(map[string]gopurs_runtime.Value)["value1"])
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEnum_0, "Ord0"), gopurs_runtime.Value{})
+_ = __local_var_1_0
+__local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_0, "Eq0"), gopurs_runtime.Value{})
+_ = __local_var_2_1
+return gopurs_runtime.Func(func(dictBoundedEnum_3 gopurs_runtime.Value) gopurs_runtime.Value {
+Bounded0_4_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedEnum_3, "Bounded0"), gopurs_runtime.Value{})
+_ = Bounded0_4_2
+bottom2_5_3 := gopurs_runtime.RecordGet(Bounded0_4_2, "bottom")
+_ = bottom2_5_3
+Enum1_6_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedEnum_3, "Enum1"), gopurs_runtime.Value{})
+_ = Enum1_6_4
+top2_7_5 := gopurs_runtime.RecordGet(Bounded0_4_2, "top")
+_ = top2_7_5
+__local_var_8_6 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Enum1_6_4, "Ord0"), gopurs_runtime.Value{})
+_ = __local_var_8_6
+__local_var_9_7 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_8_6, "Eq0"), gopurs_runtime.Value{})
+_ = __local_var_9_7
+eqTuple2_10_9 := gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func2(func(x_10 gopurs_runtime.Value, y_11 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_1, "eq"), gopurs_runtime.RecordGet(x_10, "value0"), gopurs_runtime.RecordGet(y_11, "value0")).IntVal != 0 && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_9_7, "eq"), gopurs_runtime.RecordGet(x_10, "value1"), gopurs_runtime.RecordGet(y_11, "value1")).IntVal != 0)
+}))
+_ = eqTuple2_10_9
+ordTuple1_10_8 := gopurs_runtime.RecordDict2("compare", "Eq0", gopurs_runtime.Func2(func(x_11 gopurs_runtime.Value, y_12 gopurs_runtime.Value) gopurs_runtime.Value {
+v_13_10 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "compare"), gopurs_runtime.RecordGet(x_11, "value0"), gopurs_runtime.RecordGet(y_12, "value0"))
+_ = v_13_10
 var __t11 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(__local_var_12_10.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Nothing")).IntVal != 0 {
-__t11 = __local_var_10_7
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_13_10, "_tag").StrVal == "LT")).IntVal != 0 {
+__t11 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("LT"))
 goto end_branch_11
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(__local_var_12_10.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Just")).IntVal != 0 {
-__t11 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Just"), "value0": gopurs_runtime.Apply(__local_var_11_9, __local_var_12_10.PtrVal.(map[string]gopurs_runtime.Value)["value0"])})
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_13_10, "_tag").StrVal == "GT")).IntVal != 0 {
+__t11 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("GT"))
 goto end_branch_11
 } else {
 
 }
 }
 {
-__t11 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t11 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_8_6, "compare"), gopurs_runtime.RecordGet(x_11, "value1"), gopurs_runtime.RecordGet(y_12, "value1"))
 }
 end_branch_11:
 return __t11
-}), "pred": gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_9_12 := gopurs_runtime.Apply(dictEnum_0.PtrVal.(map[string]gopurs_runtime.Value)["pred"], v_8.PtrVal.(map[string]gopurs_runtime.Value)["value0"])
+}), gopurs_runtime.Func(func(_dollar__unused_11 gopurs_runtime.Value) gopurs_runtime.Value {
+return eqTuple2_10_9
+}))
+_ = ordTuple1_10_8
+return gopurs_runtime.RecordDict3("succ", "pred", "Ord0", gopurs_runtime.Func(func(v_11 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_12_12 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEnum_0, "succ"), gopurs_runtime.RecordGet(v_11, "value0"))
+_ = __local_var_12_12
 var __t14 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(__local_var_9_12.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Just")).IntVal != 0 {
-__t14 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Just"), "value0": gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Tuple"), "value0": __local_var_9_12.PtrVal.(map[string]gopurs_runtime.Value)["value0"], "value1": top2_6_4})})
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_12_12, "_tag").StrVal == "Just")).IntVal != 0 {
+__t14 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), gopurs_runtime.RecordGet(__local_var_12_12, "value0"), bottom2_5_3))
 goto end_branch_14
 } else {
 
 }
 }
 {
-__t14 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Nothing")})
+__t14 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
 }
 end_branch_14:
-__local_var_10_13 := __t14
-__local_var_11_15 := gopurs_runtime.Apply(pkg_Data_Tuple.Get_Tuple(), v_8.PtrVal.(map[string]gopurs_runtime.Value)["value0"])
-__local_var_12_16 := gopurs_runtime.Apply(Enum1_5_3.PtrVal.(map[string]gopurs_runtime.Value)["pred"], v_8.PtrVal.(map[string]gopurs_runtime.Value)["value1"])
+__local_var_13_13 := __t14
+_ = __local_var_13_13
+__local_var_14_15 := gopurs_runtime.Apply(pkg_Data_Tuple.Get_Tuple(), gopurs_runtime.RecordGet(v_11, "value0"))
+_ = __local_var_14_15
+__local_var_15_16 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Enum1_6_4, "succ"), gopurs_runtime.RecordGet(v_11, "value1"))
+_ = __local_var_15_16
 var __t17 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(__local_var_12_16.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Nothing")).IntVal != 0 {
-__t17 = __local_var_10_13
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_15_16, "_tag").StrVal == "Nothing")).IntVal != 0 {
+__t17 = __local_var_13_13
 goto end_branch_17
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(__local_var_12_16.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Just")).IntVal != 0 {
-__t17 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Just"), "value0": gopurs_runtime.Apply(__local_var_11_15, __local_var_12_16.PtrVal.(map[string]gopurs_runtime.Value)["value0"])})
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_15_16, "_tag").StrVal == "Just")).IntVal != 0 {
+__t17 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), gopurs_runtime.Apply(__local_var_14_15, gopurs_runtime.RecordGet(__local_var_15_16, "value0")))
 goto end_branch_17
 } else {
 
@@ -299,9 +296,53 @@ __t17 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_17:
 return __t17
-}), "Ord0": gopurs_runtime.Func(func(_dollar__unused_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return ordTuple1_7_5
-})})
+}), gopurs_runtime.Func(func(v_11 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_12_18 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEnum_0, "pred"), gopurs_runtime.RecordGet(v_11, "value0"))
+_ = __local_var_12_18
+var __t20 gopurs_runtime.Value
+{
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_12_18, "_tag").StrVal == "Just")).IntVal != 0 {
+__t20 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), gopurs_runtime.RecordGet(__local_var_12_18, "value0"), top2_7_5))
+goto end_branch_20
+} else {
+
+}
+}
+{
+__t20 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
+}
+end_branch_20:
+__local_var_13_19 := __t20
+_ = __local_var_13_19
+__local_var_14_21 := gopurs_runtime.Apply(pkg_Data_Tuple.Get_Tuple(), gopurs_runtime.RecordGet(v_11, "value0"))
+_ = __local_var_14_21
+__local_var_15_22 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Enum1_6_4, "pred"), gopurs_runtime.RecordGet(v_11, "value1"))
+_ = __local_var_15_22
+var __t23 gopurs_runtime.Value
+{
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_15_22, "_tag").StrVal == "Nothing")).IntVal != 0 {
+__t23 = __local_var_13_19
+goto end_branch_23
+} else {
+
+}
+}
+{
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_15_22, "_tag").StrVal == "Just")).IntVal != 0 {
+__t23 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), gopurs_runtime.Apply(__local_var_14_21, gopurs_runtime.RecordGet(__local_var_15_22, "value0")))
+goto end_branch_23
+} else {
+
+}
+}
+{
+__t23 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_23:
+return __t23
+}), gopurs_runtime.Func(func(_dollar__unused_11 gopurs_runtime.Value) gopurs_runtime.Value {
+return ordTuple1_10_8
+}))
 })
 })
 	})
@@ -312,27 +353,27 @@ var enumOrdering gopurs_runtime.Value
 var once_enumOrdering sync.Once
 func Get_enumOrdering() gopurs_runtime.Value {
 	once_enumOrdering.Do(func() {
-		enumOrdering = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"succ": gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		enumOrdering = gopurs_runtime.RecordDict3("succ", "pred", "Ord0", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_0.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "LT")).IntVal != 0 {
-__t0 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Just"), "value0": gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("EQ")})})
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_0, "_tag").StrVal == "LT")).IntVal != 0 {
+__t0 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("EQ")))
 goto end_branch_0
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(v_0.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "EQ")).IntVal != 0 {
-__t0 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Just"), "value0": gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("GT")})})
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_0, "_tag").StrVal == "EQ")).IntVal != 0 {
+__t0 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("GT")))
 goto end_branch_0
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(v_0.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "GT")).IntVal != 0 {
-__t0 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Nothing")})
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_0, "_tag").StrVal == "GT")).IntVal != 0 {
+__t0 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
 goto end_branch_0
 } else {
 
@@ -343,27 +384,27 @@ __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_0:
 return __t0
-}), "pred": gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_0.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "LT")).IntVal != 0 {
-__t1 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Nothing")})
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_0, "_tag").StrVal == "LT")).IntVal != 0 {
+__t1 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
 goto end_branch_1
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(v_0.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "EQ")).IntVal != 0 {
-__t1 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Just"), "value0": gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("LT")})})
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_0, "_tag").StrVal == "EQ")).IntVal != 0 {
+__t1 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("LT")))
 goto end_branch_1
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(v_0.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "GT")).IntVal != 0 {
-__t1 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Just"), "value0": gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("EQ")})})
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_0, "_tag").StrVal == "GT")).IntVal != 0 {
+__t1 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("EQ")))
 goto end_branch_1
 } else {
 
@@ -374,9 +415,9 @@ __t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_1:
 return __t1
-}), "Ord0": gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Ord.Get_ordOrdering()
-})})
+}))
 	})
 	return enumOrdering
 }
@@ -386,44 +427,46 @@ var once_enumMaybe sync.Once
 func Get_enumMaybe() gopurs_runtime.Value {
 	once_enumMaybe.Do(func() {
 		enumMaybe = gopurs_runtime.Func(func(dictBoundedEnum_0 gopurs_runtime.Value) gopurs_runtime.Value {
-bottom2_1_0 := gopurs_runtime.Apply(dictBoundedEnum_0.PtrVal.(map[string]gopurs_runtime.Value)["Bounded0"], gopurs_runtime.Value{}).PtrVal.(map[string]gopurs_runtime.Value)["bottom"]
-Enum1_2_1 := gopurs_runtime.Apply(dictBoundedEnum_0.PtrVal.(map[string]gopurs_runtime.Value)["Enum1"], gopurs_runtime.Value{})
-__local_var_3_2 := gopurs_runtime.Apply(Enum1_2_1.PtrVal.(map[string]gopurs_runtime.Value)["Ord0"], gopurs_runtime.Value{})
-__local_var_4_3 := gopurs_runtime.Apply(__local_var_3_2.PtrVal.(map[string]gopurs_runtime.Value)["Eq0"], gopurs_runtime.Value{})
-eqMaybe1_5_5 := gopurs_runtime.Record(map[string]gopurs_runtime.Value{"eq": gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(y_6 gopurs_runtime.Value) gopurs_runtime.Value {
+bottom2_1_0 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedEnum_0, "Bounded0"), gopurs_runtime.Value{}), "bottom")
+_ = bottom2_1_0
+Enum1_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedEnum_0, "Enum1"), gopurs_runtime.Value{})
+_ = Enum1_2_1
+__local_var_3_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Enum1_2_1, "Ord0"), gopurs_runtime.Value{})
+_ = __local_var_3_2
+__local_var_4_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_3_2, "Eq0"), gopurs_runtime.Value{})
+_ = __local_var_4_3
+eqMaybe1_5_5 := gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func2(func(x_5 gopurs_runtime.Value, y_6 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t6 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(x_5.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Nothing")).IntVal != 0 {
-__t6 = gopurs_runtime.Bool(y_6.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Nothing")
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(x_5, "_tag").StrVal == "Nothing")).IntVal != 0 {
+__t6 = gopurs_runtime.Bool(gopurs_runtime.RecordGet(y_6, "_tag").StrVal == "Nothing")
 goto end_branch_6
 } else {
 
 }
 }
 {
-__t6 = gopurs_runtime.Bool(gopurs_runtime.Bool(x_5.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Just").IntVal != 0 && gopurs_runtime.Bool(gopurs_runtime.Bool(y_6.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Just").IntVal != 0 && gopurs_runtime.Apply(gopurs_runtime.Apply(__local_var_4_3.PtrVal.(map[string]gopurs_runtime.Value)["eq"], x_5.PtrVal.(map[string]gopurs_runtime.Value)["value0"]), y_6.PtrVal.(map[string]gopurs_runtime.Value)["value0"]).IntVal != 0).IntVal != 0)
+__t6 = gopurs_runtime.Bool(gopurs_runtime.Bool(gopurs_runtime.RecordGet(x_5, "_tag").StrVal == "Just").IntVal != 0 && gopurs_runtime.Bool(gopurs_runtime.Bool(gopurs_runtime.RecordGet(y_6, "_tag").StrVal == "Just").IntVal != 0 && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_4_3, "eq"), gopurs_runtime.RecordGet(x_5, "value0"), gopurs_runtime.RecordGet(y_6, "value0")).IntVal != 0).IntVal != 0)
 }
 end_branch_6:
 return __t6
-})
-})})
-ordMaybe_5_4 := gopurs_runtime.Record(map[string]gopurs_runtime.Value{"compare": gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(y_7 gopurs_runtime.Value) gopurs_runtime.Value {
+}))
+_ = eqMaybe1_5_5
+ordMaybe_5_4 := gopurs_runtime.RecordDict2("compare", "Eq0", gopurs_runtime.Func2(func(x_6 gopurs_runtime.Value, y_7 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t7 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(x_6.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Nothing")).IntVal != 0 {
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(x_6, "_tag").StrVal == "Nothing")).IntVal != 0 {
 var __t8 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(y_7.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Nothing")).IntVal != 0 {
-__t8 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("EQ")})
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(y_7, "_tag").StrVal == "Nothing")).IntVal != 0 {
+__t8 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("EQ"))
 goto end_branch_8
 } else {
 
 }
 }
 {
-__t8 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("LT")})
+__t8 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("LT"))
 }
 end_branch_8:
 __t7 = __t8
@@ -433,16 +476,16 @@ goto end_branch_7
 }
 }
 {
-if (gopurs_runtime.Bool(y_7.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Nothing")).IntVal != 0 {
-__t7 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("GT")})
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(y_7, "_tag").StrVal == "Nothing")).IntVal != 0 {
+__t7 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("GT"))
 goto end_branch_7
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.Bool(x_6.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Just").IntVal != 0 && gopurs_runtime.Bool(y_7.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Just").IntVal != 0)).IntVal != 0 {
-__t7 = gopurs_runtime.Apply(gopurs_runtime.Apply(__local_var_3_2.PtrVal.(map[string]gopurs_runtime.Value)["compare"], x_6.PtrVal.(map[string]gopurs_runtime.Value)["value0"]), y_7.PtrVal.(map[string]gopurs_runtime.Value)["value0"])
+if (gopurs_runtime.Bool(gopurs_runtime.Bool(gopurs_runtime.RecordGet(x_6, "_tag").StrVal == "Just").IntVal != 0 && gopurs_runtime.Bool(gopurs_runtime.RecordGet(y_7, "_tag").StrVal == "Just").IntVal != 0)).IntVal != 0 {
+__t7 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_2, "compare"), gopurs_runtime.RecordGet(x_6, "value0"), gopurs_runtime.RecordGet(y_7, "value0"))
 goto end_branch_7
 } else {
 
@@ -453,34 +496,35 @@ __t7 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_7:
 return __t7
-})
-}), "Eq0": gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return eqMaybe1_5_5
-})})
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"succ": gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
+}))
+_ = ordMaybe_5_4
+return gopurs_runtime.RecordDict3("succ", "pred", "Ord0", gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t9 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_6.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Nothing")).IntVal != 0 {
-__t9 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Just"), "value0": gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Just"), "value0": bottom2_1_0})})
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_6, "_tag").StrVal == "Nothing")).IntVal != 0 {
+__t9 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), bottom2_1_0))
 goto end_branch_9
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(v_6.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Just")).IntVal != 0 {
-__local_var_7_10 := gopurs_runtime.Apply(Enum1_2_1.PtrVal.(map[string]gopurs_runtime.Value)["succ"], v_6.PtrVal.(map[string]gopurs_runtime.Value)["value0"])
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_6, "_tag").StrVal == "Just")).IntVal != 0 {
+__local_var_7_10 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Enum1_2_1, "succ"), gopurs_runtime.RecordGet(v_6, "value0"))
+_ = __local_var_7_10
 var __t11 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(__local_var_7_10.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Just")).IntVal != 0 {
-__t11 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Just"), "value0": gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Just"), "value0": __local_var_7_10.PtrVal.(map[string]gopurs_runtime.Value)["value0"]})})
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_7_10, "_tag").StrVal == "Just")).IntVal != 0 {
+__t11 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), gopurs_runtime.RecordGet(__local_var_7_10, "value0")))
 goto end_branch_11
 } else {
 
 }
 }
 {
-__t11 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Nothing")})
+__t11 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
 }
 end_branch_11:
 __t9 = __t11
@@ -494,19 +538,19 @@ __t9 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_9:
 return __t9
-}), "pred": gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t12 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_6.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Nothing")).IntVal != 0 {
-__t12 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Nothing")})
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_6, "_tag").StrVal == "Nothing")).IntVal != 0 {
+__t12 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
 goto end_branch_12
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(v_6.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Just")).IntVal != 0 {
-__t12 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Just"), "value0": gopurs_runtime.Apply(Enum1_2_1.PtrVal.(map[string]gopurs_runtime.Value)["pred"], v_6.PtrVal.(map[string]gopurs_runtime.Value)["value0"])})
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_6, "_tag").StrVal == "Just")).IntVal != 0 {
+__t12 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(Enum1_2_1, "pred"), gopurs_runtime.RecordGet(v_6, "value0")))
 goto end_branch_12
 } else {
 
@@ -517,9 +561,9 @@ __t12 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_12:
 return __t12
-}), "Ord0": gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return ordMaybe_5_4
-})})
+}))
 })
 	})
 	return enumMaybe
@@ -529,39 +573,39 @@ var enumInt gopurs_runtime.Value
 var once_enumInt sync.Once
 func Get_enumInt() gopurs_runtime.Value {
 	once_enumInt.Do(func() {
-		enumInt = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"succ": gopurs_runtime.Func(func(n_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		enumInt = gopurs_runtime.RecordDict3("succ", "pred", "Ord0", gopurs_runtime.Func(func(n_0 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Ord.Get_ordInt().PtrVal.(map[string]gopurs_runtime.Value)["compare"], n_0), pkg_Data_Bounded.Get_topInt()).PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "LT")).IntVal != 0 {
-__t0 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Just"), "value0": gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Semiring.Get_intAdd(), n_0), gopurs_runtime.Int(1))})
+if (gopurs_runtime.Bool(n_0.IntVal < pkg_Data_Bounded.Get_topInt().IntVal)).IntVal != 0 {
+__t0 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), gopurs_runtime.Int(n_0.IntVal + gopurs_runtime.Int(1).IntVal))
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Nothing")})
+__t0 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
 }
 end_branch_0:
 return __t0
-}), "pred": gopurs_runtime.Func(func(n_0 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(n_0 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Ord.Get_ordInt().PtrVal.(map[string]gopurs_runtime.Value)["compare"], n_0), pkg_Data_Bounded.Get_bottomInt()).PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "GT")).IntVal != 0 {
-__t1 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Just"), "value0": gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Ring.Get_intSub(), n_0), gopurs_runtime.Int(1))})
+if (gopurs_runtime.Bool(n_0.IntVal > pkg_Data_Bounded.Get_bottomInt().IntVal)).IntVal != 0 {
+__t1 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), gopurs_runtime.Int(n_0.IntVal - gopurs_runtime.Int(1).IntVal))
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Nothing")})
+__t1 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
 }
 end_branch_1:
 return __t1
-}), "Ord0": gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Ord.Get_ordInt()
-})})
+}))
 	})
 	return enumInt
 }
@@ -571,81 +615,97 @@ var once_enumFromTo sync.Once
 func Get_enumFromTo() gopurs_runtime.Value {
 	once_enumFromTo.Do(func() {
 		enumFromTo = gopurs_runtime.Func(func(dictEnum_0 gopurs_runtime.Value) gopurs_runtime.Value {
-Ord0_1_0 := gopurs_runtime.Apply(dictEnum_0.PtrVal.(map[string]gopurs_runtime.Value)["Ord0"], gopurs_runtime.Value{})
-return gopurs_runtime.Func(func(dictUnfoldable1_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_4 gopurs_runtime.Value) gopurs_runtime.Value {
+Ord0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEnum_0, "Ord0"), gopurs_runtime.Value{})
+_ = Ord0_1_0
+return gopurs_runtime.Func3(func(dictUnfoldable1_2 gopurs_runtime.Value, v_3 gopurs_runtime.Value, v1_4 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t4 gopurs_runtime.Value
 {
-if (gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(Ord0_1_0.PtrVal.(map[string]gopurs_runtime.Value)["Eq0"], gopurs_runtime.Value{}).PtrVal.(map[string]gopurs_runtime.Value)["eq"], v_3), v1_4)).IntVal != 0 {
-__t4 = gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Unfoldable1.Get_replicate1(), dictUnfoldable1_2), gopurs_runtime.Int(1)), v_3)
+if (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Ord0_1_0, "Eq0"), gopurs_runtime.Value{}), "eq"), v_3, v1_4)).IntVal != 0 {
+__t4 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictUnfoldable1_2, "unfoldr1"), gopurs_runtime.Func(func(i_5 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t5 gopurs_runtime.Value
+{
+if (gopurs_runtime.Bool(i_5.IntVal <= gopurs_runtime.Int(0).IntVal)).IntVal != 0 {
+__t5 = gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), v_3, gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing")))
+goto end_branch_5
+} else {
+
+}
+}
+{
+__t5 = gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), v_3, gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), gopurs_runtime.Int(i_5.IntVal - gopurs_runtime.Int(1).IntVal)))
+}
+end_branch_5:
+return __t5
+}), gopurs_runtime.Int(0))
 goto end_branch_4
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.Apply(gopurs_runtime.Apply(Ord0_1_0.PtrVal.(map[string]gopurs_runtime.Value)["compare"], v_3), v1_4).PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "LT")).IntVal != 0 {
-__t4 = gopurs_runtime.Apply(gopurs_runtime.Apply(dictUnfoldable1_2.PtrVal.(map[string]gopurs_runtime.Value)["unfoldr1"], gopurs_runtime.Func(func(a_5 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_6_5 := gopurs_runtime.Apply(dictEnum_0.PtrVal.(map[string]gopurs_runtime.Value)["succ"], a_5)
-var __t6 gopurs_runtime.Value
-{
-if (gopurs_runtime.Bool(__local_var_6_5.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Just")).IntVal != 0 {
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Ord0_1_0, "compare"), v_3, v1_4), "_tag").StrVal == "LT")).IntVal != 0 {
+__t4 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictUnfoldable1_2, "unfoldr1"), gopurs_runtime.Func(func(a_5 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_6_6 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEnum_0, "succ"), a_5)
+_ = __local_var_6_6
 var __t7 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.Apply(Get_guard(), gopurs_runtime.Bool(gopurs_runtime.Bool(gopurs_runtime.Apply(gopurs_runtime.Apply(Ord0_1_0.PtrVal.(map[string]gopurs_runtime.Value)["compare"], __local_var_6_5.PtrVal.(map[string]gopurs_runtime.Value)["value0"]), v1_4).PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "GT").IntVal == 0)).PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Just")).IntVal != 0 {
-__t7 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Just"), "value0": __local_var_6_5.PtrVal.(map[string]gopurs_runtime.Value)["value0"]})
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_6_6, "_tag").StrVal == "Just")).IntVal != 0 {
+var __t8 gopurs_runtime.Value
+{
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(gopurs_runtime.Apply(Get_guard(), gopurs_runtime.Bool(gopurs_runtime.Bool(gopurs_runtime.RecordGet(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Ord0_1_0, "compare"), gopurs_runtime.RecordGet(__local_var_6_6, "value0"), v1_4), "_tag").StrVal == "GT").IntVal == 0)), "_tag").StrVal == "Just")).IntVal != 0 {
+__t8 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), gopurs_runtime.RecordGet(__local_var_6_6, "value0"))
+goto end_branch_8
+} else {
+
+}
+}
+{
+__t8 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
+}
+end_branch_8:
+__t7 = __t8
 goto end_branch_7
 } else {
 
 }
 }
 {
-__t7 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Nothing")})
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_6_6, "_tag").StrVal == "Nothing")).IntVal != 0 {
+__t7 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
+goto end_branch_7
+} else {
+
+}
+}
+{
+__t7 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_7:
-__t6 = __t7
-goto end_branch_6
-} else {
-
-}
-}
-{
-if (gopurs_runtime.Bool(__local_var_6_5.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Nothing")).IntVal != 0 {
-__t6 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Nothing")})
-goto end_branch_6
-} else {
-
-}
-}
-{
-__t6 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
-}
-end_branch_6:
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Tuple"), "value0": a_5, "value1": __t6})
-})), v_3)
+return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), a_5, __t7)
+}), v_3)
 goto end_branch_4
 } else {
 
 }
 }
 {
-__t4 = gopurs_runtime.Apply(gopurs_runtime.Apply(dictUnfoldable1_2.PtrVal.(map[string]gopurs_runtime.Value)["unfoldr1"], gopurs_runtime.Func(func(a_5 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_6_1 := gopurs_runtime.Apply(dictEnum_0.PtrVal.(map[string]gopurs_runtime.Value)["pred"], a_5)
+__t4 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictUnfoldable1_2, "unfoldr1"), gopurs_runtime.Func(func(a_5 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_6_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEnum_0, "pred"), a_5)
+_ = __local_var_6_1
 var __t2 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(__local_var_6_1.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Just")).IntVal != 0 {
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_6_1, "_tag").StrVal == "Just")).IntVal != 0 {
 var __t3 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.Apply(Get_guard(), gopurs_runtime.Bool(gopurs_runtime.Bool(gopurs_runtime.Apply(gopurs_runtime.Apply(Ord0_1_0.PtrVal.(map[string]gopurs_runtime.Value)["compare"], __local_var_6_1.PtrVal.(map[string]gopurs_runtime.Value)["value0"]), v1_4).PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "LT").IntVal == 0)).PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Just")).IntVal != 0 {
-__t3 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Just"), "value0": __local_var_6_1.PtrVal.(map[string]gopurs_runtime.Value)["value0"]})
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(gopurs_runtime.Apply(Get_guard(), gopurs_runtime.Bool(gopurs_runtime.Bool(gopurs_runtime.RecordGet(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Ord0_1_0, "compare"), gopurs_runtime.RecordGet(__local_var_6_1, "value0"), v1_4), "_tag").StrVal == "LT").IntVal == 0)), "_tag").StrVal == "Just")).IntVal != 0 {
+__t3 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), gopurs_runtime.RecordGet(__local_var_6_1, "value0"))
 goto end_branch_3
 } else {
 
 }
 }
 {
-__t3 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Nothing")})
+__t3 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
 }
 end_branch_3:
 __t2 = __t3
@@ -655,8 +715,8 @@ goto end_branch_2
 }
 }
 {
-if (gopurs_runtime.Bool(__local_var_6_1.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Nothing")).IntVal != 0 {
-__t2 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Nothing")})
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_6_1, "_tag").StrVal == "Nothing")).IntVal != 0 {
+__t2 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
 goto end_branch_2
 } else {
 
@@ -666,13 +726,11 @@ goto end_branch_2
 __t2 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_2:
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Tuple"), "value0": a_5, "value1": __t2})
-})), v_3)
+return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), a_5, __t2)
+}), v_3)
 }
 end_branch_4:
 return __t4
-})
-})
 })
 })
 	})
@@ -683,22 +741,21 @@ var enumFromThenTo gopurs_runtime.Value
 var once_enumFromThenTo sync.Once
 func Get_enumFromThenTo() gopurs_runtime.Value {
 	once_enumFromThenTo.Do(func() {
-		enumFromThenTo = gopurs_runtime.Func(func(dictUnfoldable_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(dictFunctor_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(dictBoundedEnum_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(pkg_Partial_Unsafe.Get__unsafePartial(), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(a_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(b_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(c_6 gopurs_runtime.Value) gopurs_runtime.Value {
-a_prime_7_0 := gopurs_runtime.Apply(dictBoundedEnum_2.PtrVal.(map[string]gopurs_runtime.Value)["fromEnum"], a_4)
-__local_var_8_3 := gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Ring.Get_intSub(), gopurs_runtime.Apply(dictBoundedEnum_2.PtrVal.(map[string]gopurs_runtime.Value)["fromEnum"], b_5)), a_prime_7_0)
-__local_var_9_4 := gopurs_runtime.Apply(dictBoundedEnum_2.PtrVal.(map[string]gopurs_runtime.Value)["fromEnum"], c_6)
-return gopurs_runtime.Apply(gopurs_runtime.Apply(dictFunctor_1.PtrVal.(map[string]gopurs_runtime.Value)["map"], gopurs_runtime.Func(func(x_8 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_9_1 := gopurs_runtime.Apply(dictBoundedEnum_2.PtrVal.(map[string]gopurs_runtime.Value)["toEnum"], x_8)
+		enumFromThenTo = gopurs_runtime.Func5(func(dictUnfoldable_0 gopurs_runtime.Value, dictFunctor_1 gopurs_runtime.Value, dictBoundedEnum_2 gopurs_runtime.Value, a_3 gopurs_runtime.Value, b_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(c_5 gopurs_runtime.Value) gopurs_runtime.Value {
+a_prime_6_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedEnum_2, "fromEnum"), a_3)
+_ = a_prime_6_0
+__local_var_7_3 := gopurs_runtime.Int(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedEnum_2, "fromEnum"), b_4).IntVal - a_prime_6_0.IntVal)
+_ = __local_var_7_3
+__local_var_8_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedEnum_2, "fromEnum"), c_5)
+_ = __local_var_8_4
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_1, "map"), gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_8_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedEnum_2, "toEnum"), x_7)
+_ = __local_var_8_1
 var __t2 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(__local_var_9_1.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Just")).IntVal != 0 {
-__t2 = __local_var_9_1.PtrVal.(map[string]gopurs_runtime.Value)["value0"]
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_8_1, "_tag").StrVal == "Just")).IntVal != 0 {
+__t2 = gopurs_runtime.RecordGet(__local_var_8_1, "value0")
 goto end_branch_2
 } else {
 
@@ -709,27 +766,22 @@ __t2 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_2:
 return __t2
-})), gopurs_runtime.Apply(gopurs_runtime.Apply(dictUnfoldable_0.PtrVal.(map[string]gopurs_runtime.Value)["unfoldr"], gopurs_runtime.Func(func(e_10 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictUnfoldable_0, "unfoldr"), gopurs_runtime.Func(func(e_9 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t5 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.Bool(gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Ord.Get_ordInt().PtrVal.(map[string]gopurs_runtime.Value)["compare"], e_10), __local_var_9_4).PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "GT").IntVal == 0)).IntVal != 0 {
-__t5 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Just"), "value0": gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Tuple"), "value0": e_10, "value1": gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Semiring.Get_intAdd(), e_10), __local_var_8_3)})})
+if (gopurs_runtime.Bool(e_9.IntVal <= __local_var_8_4.IntVal)).IntVal != 0 {
+__t5 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), e_9, gopurs_runtime.Int(e_9.IntVal + __local_var_7_3.IntVal)))
 goto end_branch_5
 } else {
 
 }
 }
 {
-__t5 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Nothing")})
+__t5 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
 }
 end_branch_5:
 return __t5
-})), a_prime_7_0))
-})
-})
-})
-}))
-})
+}), a_prime_6_0))
 })
 })
 	})
@@ -741,30 +793,37 @@ var once_enumEither sync.Once
 func Get_enumEither() gopurs_runtime.Value {
 	once_enumEither.Do(func() {
 		enumEither = gopurs_runtime.Func(func(dictBoundedEnum_0 gopurs_runtime.Value) gopurs_runtime.Value {
-Enum1_1_0 := gopurs_runtime.Apply(dictBoundedEnum_0.PtrVal.(map[string]gopurs_runtime.Value)["Enum1"], gopurs_runtime.Value{})
-top2_2_1 := gopurs_runtime.Apply(dictBoundedEnum_0.PtrVal.(map[string]gopurs_runtime.Value)["Bounded0"], gopurs_runtime.Value{}).PtrVal.(map[string]gopurs_runtime.Value)["top"]
-ordEither_3_2 := gopurs_runtime.Apply(pkg_Data_Either.Get_ordEither(), gopurs_runtime.Apply(Enum1_1_0.PtrVal.(map[string]gopurs_runtime.Value)["Ord0"], gopurs_runtime.Value{}))
+Enum1_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedEnum_0, "Enum1"), gopurs_runtime.Value{})
+_ = Enum1_1_0
+top2_2_1 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedEnum_0, "Bounded0"), gopurs_runtime.Value{}), "top")
+_ = top2_2_1
+ordEither_3_2 := gopurs_runtime.Apply(pkg_Data_Either.Get_ordEither(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(Enum1_1_0, "Ord0"), gopurs_runtime.Value{}))
+_ = ordEither_3_2
 return gopurs_runtime.Func(func(dictBoundedEnum1_4 gopurs_runtime.Value) gopurs_runtime.Value {
-bottom2_5_3 := gopurs_runtime.Apply(dictBoundedEnum1_4.PtrVal.(map[string]gopurs_runtime.Value)["Bounded0"], gopurs_runtime.Value{}).PtrVal.(map[string]gopurs_runtime.Value)["bottom"]
-Enum11_6_4 := gopurs_runtime.Apply(dictBoundedEnum1_4.PtrVal.(map[string]gopurs_runtime.Value)["Enum1"], gopurs_runtime.Value{})
-ordEither1_7_5 := gopurs_runtime.Apply(ordEither_3_2, gopurs_runtime.Apply(Enum11_6_4.PtrVal.(map[string]gopurs_runtime.Value)["Ord0"], gopurs_runtime.Value{}))
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"succ": gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
+bottom2_5_3 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedEnum1_4, "Bounded0"), gopurs_runtime.Value{}), "bottom")
+_ = bottom2_5_3
+Enum11_6_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedEnum1_4, "Enum1"), gopurs_runtime.Value{})
+_ = Enum11_6_4
+ordEither1_7_5 := gopurs_runtime.Apply(ordEither_3_2, gopurs_runtime.Apply(gopurs_runtime.RecordGet(Enum11_6_4, "Ord0"), gopurs_runtime.Value{}))
+_ = ordEither1_7_5
+return gopurs_runtime.RecordDict3("succ", "pred", "Ord0", gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t6 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_8.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Left")).IntVal != 0 {
-__local_var_9_7 := gopurs_runtime.Apply(Enum1_1_0.PtrVal.(map[string]gopurs_runtime.Value)["succ"], v_8.PtrVal.(map[string]gopurs_runtime.Value)["value0"])
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_8, "_tag").StrVal == "Left")).IntVal != 0 {
+__local_var_9_7 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Enum1_1_0, "succ"), gopurs_runtime.RecordGet(v_8, "value0"))
+_ = __local_var_9_7
 var __t8 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(__local_var_9_7.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Nothing")).IntVal != 0 {
-__t8 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Just"), "value0": gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Right"), "value0": bottom2_5_3})})
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_9_7, "_tag").StrVal == "Nothing")).IntVal != 0 {
+__t8 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Right"), bottom2_5_3))
 goto end_branch_8
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(__local_var_9_7.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Just")).IntVal != 0 {
-__t8 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Just"), "value0": gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Left"), "value0": __local_var_9_7.PtrVal.(map[string]gopurs_runtime.Value)["value0"]})})
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_9_7, "_tag").StrVal == "Just")).IntVal != 0 {
+__t8 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Left"), gopurs_runtime.RecordGet(__local_var_9_7, "value0")))
 goto end_branch_8
 } else {
 
@@ -781,20 +840,21 @@ goto end_branch_6
 }
 }
 {
-if (gopurs_runtime.Bool(v_8.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Right")).IntVal != 0 {
-__local_var_9_9 := gopurs_runtime.Apply(Enum11_6_4.PtrVal.(map[string]gopurs_runtime.Value)["succ"], v_8.PtrVal.(map[string]gopurs_runtime.Value)["value0"])
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_8, "_tag").StrVal == "Right")).IntVal != 0 {
+__local_var_9_9 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Enum11_6_4, "succ"), gopurs_runtime.RecordGet(v_8, "value0"))
+_ = __local_var_9_9
 var __t10 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(__local_var_9_9.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Nothing")).IntVal != 0 {
-__t10 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Nothing")})
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_9_9, "_tag").StrVal == "Nothing")).IntVal != 0 {
+__t10 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
 goto end_branch_10
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(__local_var_9_9.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Just")).IntVal != 0 {
-__t10 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Just"), "value0": gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Right"), "value0": __local_var_9_9.PtrVal.(map[string]gopurs_runtime.Value)["value0"]})})
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_9_9, "_tag").StrVal == "Just")).IntVal != 0 {
+__t10 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Right"), gopurs_runtime.RecordGet(__local_var_9_9, "value0")))
 goto end_branch_10
 } else {
 
@@ -815,23 +875,24 @@ __t6 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_6:
 return __t6
-}), "pred": gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t11 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_8.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Left")).IntVal != 0 {
-__local_var_9_12 := gopurs_runtime.Apply(Enum1_1_0.PtrVal.(map[string]gopurs_runtime.Value)["pred"], v_8.PtrVal.(map[string]gopurs_runtime.Value)["value0"])
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_8, "_tag").StrVal == "Left")).IntVal != 0 {
+__local_var_9_12 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Enum1_1_0, "pred"), gopurs_runtime.RecordGet(v_8, "value0"))
+_ = __local_var_9_12
 var __t13 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(__local_var_9_12.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Nothing")).IntVal != 0 {
-__t13 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Nothing")})
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_9_12, "_tag").StrVal == "Nothing")).IntVal != 0 {
+__t13 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
 goto end_branch_13
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(__local_var_9_12.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Just")).IntVal != 0 {
-__t13 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Just"), "value0": gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Left"), "value0": __local_var_9_12.PtrVal.(map[string]gopurs_runtime.Value)["value0"]})})
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_9_12, "_tag").StrVal == "Just")).IntVal != 0 {
+__t13 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Left"), gopurs_runtime.RecordGet(__local_var_9_12, "value0")))
 goto end_branch_13
 } else {
 
@@ -848,20 +909,21 @@ goto end_branch_11
 }
 }
 {
-if (gopurs_runtime.Bool(v_8.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Right")).IntVal != 0 {
-__local_var_9_14 := gopurs_runtime.Apply(Enum11_6_4.PtrVal.(map[string]gopurs_runtime.Value)["pred"], v_8.PtrVal.(map[string]gopurs_runtime.Value)["value0"])
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_8, "_tag").StrVal == "Right")).IntVal != 0 {
+__local_var_9_14 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Enum11_6_4, "pred"), gopurs_runtime.RecordGet(v_8, "value0"))
+_ = __local_var_9_14
 var __t15 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(__local_var_9_14.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Nothing")).IntVal != 0 {
-__t15 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Just"), "value0": gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Left"), "value0": top2_2_1})})
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_9_14, "_tag").StrVal == "Nothing")).IntVal != 0 {
+__t15 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Left"), top2_2_1))
 goto end_branch_15
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(__local_var_9_14.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Just")).IntVal != 0 {
-__t15 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Just"), "value0": gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Right"), "value0": __local_var_9_14.PtrVal.(map[string]gopurs_runtime.Value)["value0"]})})
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_9_14, "_tag").StrVal == "Just")).IntVal != 0 {
+__t15 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Right"), gopurs_runtime.RecordGet(__local_var_9_14, "value0")))
 goto end_branch_15
 } else {
 
@@ -882,9 +944,9 @@ __t11 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_11:
 return __t11
-}), "Ord0": gopurs_runtime.Func(func(_dollar__unused_8 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(_dollar__unused_8 gopurs_runtime.Value) gopurs_runtime.Value {
 return ordEither1_7_5
-})})
+}))
 })
 })
 	})
@@ -895,39 +957,39 @@ var enumBoolean gopurs_runtime.Value
 var once_enumBoolean sync.Once
 func Get_enumBoolean() gopurs_runtime.Value {
 	once_enumBoolean.Do(func() {
-		enumBoolean = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"succ": gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		enumBoolean = gopurs_runtime.RecordDict3("succ", "pred", "Ord0", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(v_0.IntVal == 0)).IntVal != 0 {
-__t0 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Just"), "value0": gopurs_runtime.Bool(true)})
+__t0 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), gopurs_runtime.Bool(true))
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Nothing")})
+__t0 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
 }
 end_branch_0:
 return __t0
-}), "pred": gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
 if (v_0).IntVal != 0 {
-__t1 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Just"), "value0": gopurs_runtime.Bool(false)})
+__t1 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), gopurs_runtime.Bool(false))
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Nothing")})
+__t1 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
 }
 end_branch_1:
 return __t1
-}), "Ord0": gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Ord.Get_ordBoolean()
-})})
+}))
 	})
 	return enumBoolean
 }
@@ -936,12 +998,10 @@ var downFromIncluding gopurs_runtime.Value
 var once_downFromIncluding sync.Once
 func Get_downFromIncluding() gopurs_runtime.Value {
 	once_downFromIncluding.Do(func() {
-		downFromIncluding = gopurs_runtime.Func(func(dictEnum_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(dictUnfoldable1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(dictUnfoldable1_1.PtrVal.(map[string]gopurs_runtime.Value)["unfoldr1"], gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Tuple"), "value0": x_2, "value1": gopurs_runtime.Apply(dictEnum_0.PtrVal.(map[string]gopurs_runtime.Value)["pred"], x_2)})
+		downFromIncluding = gopurs_runtime.Func2(func(dictEnum_0 gopurs_runtime.Value, dictUnfoldable1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictUnfoldable1_1, "unfoldr1"), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), x_2, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEnum_0, "pred"), x_2))
 }))
-})
 })
 	})
 	return downFromIncluding
@@ -951,26 +1011,25 @@ var downFrom gopurs_runtime.Value
 var once_downFrom sync.Once
 func Get_downFrom() gopurs_runtime.Value {
 	once_downFrom.Do(func() {
-		downFrom = gopurs_runtime.Func(func(dictEnum_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(dictUnfoldable_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(dictUnfoldable_1.PtrVal.(map[string]gopurs_runtime.Value)["unfoldr"], gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_3_0 := gopurs_runtime.Apply(dictEnum_0.PtrVal.(map[string]gopurs_runtime.Value)["pred"], x_2)
+		downFrom = gopurs_runtime.Func2(func(dictEnum_0 gopurs_runtime.Value, dictUnfoldable_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictUnfoldable_1, "unfoldr"), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_3_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEnum_0, "pred"), x_2)
+_ = __local_var_3_0
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(__local_var_3_0.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Just")).IntVal != 0 {
-__t1 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Just"), "value0": gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Tuple"), "value0": __local_var_3_0.PtrVal.(map[string]gopurs_runtime.Value)["value0"], "value1": __local_var_3_0.PtrVal.(map[string]gopurs_runtime.Value)["value0"]})})
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_3_0, "_tag").StrVal == "Just")).IntVal != 0 {
+__t1 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), gopurs_runtime.RecordGet(__local_var_3_0, "value0"), gopurs_runtime.RecordGet(__local_var_3_0, "value0")))
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Nothing")})
+__t1 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
 }
 end_branch_1:
 return __t1
 }))
-})
 })
 	})
 	return downFrom
@@ -980,26 +1039,25 @@ var upFrom gopurs_runtime.Value
 var once_upFrom sync.Once
 func Get_upFrom() gopurs_runtime.Value {
 	once_upFrom.Do(func() {
-		upFrom = gopurs_runtime.Func(func(dictEnum_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(dictUnfoldable_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(dictUnfoldable_1.PtrVal.(map[string]gopurs_runtime.Value)["unfoldr"], gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_3_0 := gopurs_runtime.Apply(dictEnum_0.PtrVal.(map[string]gopurs_runtime.Value)["succ"], x_2)
+		upFrom = gopurs_runtime.Func2(func(dictEnum_0 gopurs_runtime.Value, dictUnfoldable_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictUnfoldable_1, "unfoldr"), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_3_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEnum_0, "succ"), x_2)
+_ = __local_var_3_0
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(__local_var_3_0.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Just")).IntVal != 0 {
-__t1 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Just"), "value0": gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Tuple"), "value0": __local_var_3_0.PtrVal.(map[string]gopurs_runtime.Value)["value0"], "value1": __local_var_3_0.PtrVal.(map[string]gopurs_runtime.Value)["value0"]})})
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_3_0, "_tag").StrVal == "Just")).IntVal != 0 {
+__t1 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), gopurs_runtime.RecordGet(__local_var_3_0, "value0"), gopurs_runtime.RecordGet(__local_var_3_0, "value0")))
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Nothing")})
+__t1 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
 }
 end_branch_1:
 return __t1
 }))
-})
 })
 	})
 	return upFrom
@@ -1010,9 +1068,9 @@ var once_defaultToEnum sync.Once
 func Get_defaultToEnum() gopurs_runtime.Value {
 	once_defaultToEnum.Do(func() {
 		defaultToEnum = gopurs_runtime.Func(func(dictBounded_0 gopurs_runtime.Value) gopurs_runtime.Value {
-bottom2_1_0 := dictBounded_0.PtrVal.(map[string]gopurs_runtime.Value)["bottom"]
-return gopurs_runtime.Func(func(dictEnum_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(i_prime_3 gopurs_runtime.Value) gopurs_runtime.Value {
+bottom2_1_0 := gopurs_runtime.RecordGet(dictBounded_0, "bottom")
+_ = bottom2_1_0
+return gopurs_runtime.Func2(func(dictEnum_2 gopurs_runtime.Value, i_prime_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var go__4_1 gopurs_runtime.Value
 go__4_1 = gopurs_runtime.Func(func(i_5_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(x_6_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -1026,20 +1084,21 @@ var x_6 = x_6_loop
 _ = x_6
 var __t4 gopurs_runtime.Value
 {
-if (gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Eq.Get_eqIntImpl(), i_5), gopurs_runtime.Int(0))).IntVal != 0 {
-__t4 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Just"), "value0": x_6})
+if (gopurs_runtime.Bool(i_5.IntVal == gopurs_runtime.Int(0).IntVal)).IntVal != 0 {
+__t4 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), x_6)
 goto end_branch_4
 } else {
 
 }
 }
 {
-v_7_2 := gopurs_runtime.Apply(dictEnum_2.PtrVal.(map[string]gopurs_runtime.Value)["succ"], x_6)
+v_7_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEnum_2, "succ"), x_6)
+_ = v_7_2
 var __t3 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_7_2.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Just")).IntVal != 0 {
-i_5_loop = gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Ring.Get_intSub(), i_5), gopurs_runtime.Int(1))
-x_6_loop = v_7_2.PtrVal.(map[string]gopurs_runtime.Value)["value0"]
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_7_2, "_tag").StrVal == "Just")).IntVal != 0 {
+i_5_loop = gopurs_runtime.Int(i_5.IntVal - gopurs_runtime.Int(1).IntVal)
+x_6_loop = gopurs_runtime.RecordGet(v_7_2, "value0")
 continue go__4_1
 __t3 = gopurs_runtime.Value{}
 goto end_branch_3
@@ -1048,8 +1107,8 @@ goto end_branch_3
 }
 }
 {
-if (gopurs_runtime.Bool(v_7_2.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Nothing")).IntVal != 0 {
-__t3 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Nothing")})
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_7_2, "_tag").StrVal == "Nothing")).IntVal != 0 {
+__t3 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
 goto end_branch_3
 } else {
 
@@ -1069,19 +1128,18 @@ return __t4
 })
 var __t5 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Ord.Get_ordInt().PtrVal.(map[string]gopurs_runtime.Value)["compare"], i_prime_3), gopurs_runtime.Int(0)).PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "LT")).IntVal != 0 {
-__t5 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Nothing")})
+if (gopurs_runtime.Bool(i_prime_3.IntVal < gopurs_runtime.Int(0).IntVal)).IntVal != 0 {
+__t5 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
 goto end_branch_5
 } else {
 
 }
 }
 {
-__t5 = gopurs_runtime.Apply(gopurs_runtime.Apply(go__4_1, i_prime_3), bottom2_1_0)
+__t5 = gopurs_runtime.Apply2(go__4_1, i_prime_3, bottom2_1_0)
 }
 end_branch_5:
 return __t5
-})
 })
 })
 	})
@@ -1092,12 +1150,8 @@ var defaultSucc gopurs_runtime.Value
 var once_defaultSucc sync.Once
 func Get_defaultSucc() gopurs_runtime.Value {
 	once_defaultSucc.Do(func() {
-		defaultSucc = gopurs_runtime.Func(func(toEnum_prime_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(fromEnum_prime_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(a_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(toEnum_prime_0, gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Semiring.Get_intAdd(), gopurs_runtime.Apply(fromEnum_prime_1, a_2)), gopurs_runtime.Int(1)))
-})
-})
+		defaultSucc = gopurs_runtime.Func3(func(toEnum_prime_0 gopurs_runtime.Value, fromEnum_prime_1 gopurs_runtime.Value, a_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(toEnum_prime_0, gopurs_runtime.Int(gopurs_runtime.Apply(fromEnum_prime_1, a_2).IntVal + gopurs_runtime.Int(1).IntVal))
 })
 	})
 	return defaultSucc
@@ -1107,12 +1161,8 @@ var defaultPred gopurs_runtime.Value
 var once_defaultPred sync.Once
 func Get_defaultPred() gopurs_runtime.Value {
 	once_defaultPred.Do(func() {
-		defaultPred = gopurs_runtime.Func(func(toEnum_prime_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(fromEnum_prime_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(a_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(toEnum_prime_0, gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Ring.Get_intSub(), gopurs_runtime.Apply(fromEnum_prime_1, a_2)), gopurs_runtime.Int(1)))
-})
-})
+		defaultPred = gopurs_runtime.Func3(func(toEnum_prime_0 gopurs_runtime.Value, fromEnum_prime_1 gopurs_runtime.Value, a_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(toEnum_prime_0, gopurs_runtime.Int(gopurs_runtime.Apply(fromEnum_prime_1, a_2).IntVal - gopurs_runtime.Int(1).IntVal))
 })
 	})
 	return defaultPred
@@ -1134,12 +1184,13 @@ var i_2 = i_2_loop
 _ = i_2
 var x_3 = x_3_loop
 _ = x_3
-v_4_1 := gopurs_runtime.Apply(dictEnum_0.PtrVal.(map[string]gopurs_runtime.Value)["pred"], x_3)
+v_4_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEnum_0, "pred"), x_3)
+_ = v_4_1
 var __t2 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_4_1.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Just")).IntVal != 0 {
-i_2_loop = gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Semiring.Get_intAdd(), i_2), gopurs_runtime.Int(1))
-x_3_loop = v_4_1.PtrVal.(map[string]gopurs_runtime.Value)["value0"]
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_4_1, "_tag").StrVal == "Just")).IntVal != 0 {
+i_2_loop = gopurs_runtime.Int(i_2.IntVal + gopurs_runtime.Int(1).IntVal)
+x_3_loop = gopurs_runtime.RecordGet(v_4_1, "value0")
 continue go__1_0
 __t2 = gopurs_runtime.Value{}
 goto end_branch_2
@@ -1148,7 +1199,7 @@ goto end_branch_2
 }
 }
 {
-if (gopurs_runtime.Bool(v_4_1.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Nothing")).IntVal != 0 {
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_4_1, "_tag").StrVal == "Nothing")).IntVal != 0 {
 __t2 = i_2
 goto end_branch_2
 } else {
@@ -1175,7 +1226,8 @@ var once_defaultCardinality sync.Once
 func Get_defaultCardinality() gopurs_runtime.Value {
 	once_defaultCardinality.Do(func() {
 		defaultCardinality = gopurs_runtime.Func(func(dictBounded_0 gopurs_runtime.Value) gopurs_runtime.Value {
-bottom2_1_0 := dictBounded_0.PtrVal.(map[string]gopurs_runtime.Value)["bottom"]
+bottom2_1_0 := gopurs_runtime.RecordGet(dictBounded_0, "bottom")
+_ = bottom2_1_0
 return gopurs_runtime.Func(func(dictEnum_2 gopurs_runtime.Value) gopurs_runtime.Value {
 var go__3_1 gopurs_runtime.Value
 go__3_1 = gopurs_runtime.Func(func(i_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -1188,12 +1240,13 @@ var i_4 = i_4_loop
 _ = i_4
 var x_5 = x_5_loop
 _ = x_5
-v_6_2 := gopurs_runtime.Apply(dictEnum_2.PtrVal.(map[string]gopurs_runtime.Value)["succ"], x_5)
+v_6_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEnum_2, "succ"), x_5)
+_ = v_6_2
 var __t3 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_6_2.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Just")).IntVal != 0 {
-i_4_loop = gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Semiring.Get_intAdd(), i_4), gopurs_runtime.Int(1))
-x_5_loop = v_6_2.PtrVal.(map[string]gopurs_runtime.Value)["value0"]
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_6_2, "_tag").StrVal == "Just")).IntVal != 0 {
+i_4_loop = gopurs_runtime.Int(i_4.IntVal + gopurs_runtime.Int(1).IntVal)
+x_5_loop = gopurs_runtime.RecordGet(v_6_2, "value0")
 continue go__3_1
 __t3 = gopurs_runtime.Value{}
 goto end_branch_3
@@ -1202,7 +1255,7 @@ goto end_branch_3
 }
 }
 {
-if (gopurs_runtime.Bool(v_6_2.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Nothing")).IntVal != 0 {
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_6_2, "_tag").StrVal == "Nothing")).IntVal != 0 {
 __t3 = i_4
 goto end_branch_3
 } else {
@@ -1218,7 +1271,7 @@ return __t3
 }()
 })
 })
-return gopurs_runtime.Apply(gopurs_runtime.Apply(go__3_1, gopurs_runtime.Int(1)), bottom2_1_0)
+return gopurs_runtime.Apply2(go__3_1, gopurs_runtime.Int(1), bottom2_1_0)
 })
 })
 	})
@@ -1232,15 +1285,15 @@ func Get_charToEnum() gopurs_runtime.Value {
 		charToEnum = gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_HeytingAlgebra.Get_boolConj(), gopurs_runtime.Bool(gopurs_runtime.Bool(gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Ord.Get_ordInt().PtrVal.(map[string]gopurs_runtime.Value)["compare"], v_0), gopurs_runtime.Apply(Get_toCharCode(), pkg_Data_Bounded.Get_bottomChar())).PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "LT").IntVal == 0)), gopurs_runtime.Bool(gopurs_runtime.Bool(gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Ord.Get_ordInt().PtrVal.(map[string]gopurs_runtime.Value)["compare"], v_0), gopurs_runtime.Apply(Get_toCharCode(), pkg_Data_Bounded.Get_topChar())).PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "GT").IntVal == 0))).IntVal != 0 {
-__t0 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Just"), "value0": gopurs_runtime.Apply(Get_fromCharCode(), v_0)})
+if (gopurs_runtime.Bool(gopurs_runtime.Bool(v_0.IntVal >= gopurs_runtime.Apply(Get_toCharCode(), pkg_Data_Bounded.Get_bottomChar()).IntVal).IntVal != 0 && gopurs_runtime.Bool(v_0.IntVal <= gopurs_runtime.Apply(Get_toCharCode(), pkg_Data_Bounded.Get_topChar()).IntVal).IntVal != 0)).IntVal != 0 {
+__t0 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), gopurs_runtime.Apply(Get_fromCharCode(), v_0))
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Nothing")})
+__t0 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
 }
 end_branch_0:
 return __t0
@@ -1253,9 +1306,13 @@ var enumChar gopurs_runtime.Value
 var once_enumChar sync.Once
 func Get_enumChar() gopurs_runtime.Value {
 	once_enumChar.Do(func() {
-		enumChar = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"succ": gopurs_runtime.Apply(gopurs_runtime.Apply(Get_defaultSucc(), Get_charToEnum()), Get_toCharCode()), "pred": gopurs_runtime.Apply(gopurs_runtime.Apply(Get_defaultPred(), Get_charToEnum()), Get_toCharCode()), "Ord0": gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		enumChar = gopurs_runtime.RecordDict3("succ", "pred", "Ord0", gopurs_runtime.Func(func(a_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(Get_charToEnum(), gopurs_runtime.Int(gopurs_runtime.Apply(Get_toCharCode(), a_0).IntVal + gopurs_runtime.Int(1).IntVal))
+}), gopurs_runtime.Func(func(a_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(Get_charToEnum(), gopurs_runtime.Int(gopurs_runtime.Apply(Get_toCharCode(), a_0).IntVal - gopurs_runtime.Int(1).IntVal))
+}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Ord.Get_ordChar()
-})})
+}))
 	})
 	return enumChar
 }
@@ -1265,7 +1322,7 @@ var once_cardinality sync.Once
 func Get_cardinality() gopurs_runtime.Value {
 	once_cardinality.Do(func() {
 		cardinality = gopurs_runtime.Func(func(dict_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return dict_0.PtrVal.(map[string]gopurs_runtime.Value)["cardinality"]
+return gopurs_runtime.RecordGet(dict_0, "cardinality")
 })
 	})
 	return cardinality
@@ -1275,28 +1332,28 @@ var boundedEnumUnit gopurs_runtime.Value
 var once_boundedEnumUnit sync.Once
 func Get_boundedEnumUnit() gopurs_runtime.Value {
 	once_boundedEnumUnit.Do(func() {
-		boundedEnumUnit = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"cardinality": gopurs_runtime.Int(1), "toEnum": gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		boundedEnumUnit = gopurs_runtime.RecordDict5("cardinality", "toEnum", "fromEnum", "Bounded0", "Enum1", gopurs_runtime.Int(1), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(v_0.IntVal == gopurs_runtime.Int(0).IntVal)).IntVal != 0 {
-__t0 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Just"), "value0": pkg_Data_Unit.Get_unit()})
+__t0 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), pkg_Data_Unit.Get_unit())
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Nothing")})
+__t0 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
 }
 end_branch_0:
 return __t0
-}), "fromEnum": gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Int(0)
-}), "Bounded0": gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Bounded.Get_boundedUnit()
-}), "Enum1": gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_enumUnit()
-})})
+}))
 	})
 	return boundedEnumUnit
 }
@@ -1305,11 +1362,11 @@ var boundedEnumOrdering gopurs_runtime.Value
 var once_boundedEnumOrdering sync.Once
 func Get_boundedEnumOrdering() gopurs_runtime.Value {
 	once_boundedEnumOrdering.Do(func() {
-		boundedEnumOrdering = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"cardinality": gopurs_runtime.Int(3), "toEnum": gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		boundedEnumOrdering = gopurs_runtime.RecordDict5("cardinality", "toEnum", "fromEnum", "Bounded0", "Enum1", gopurs_runtime.Int(3), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(v_0.IntVal == gopurs_runtime.Int(0).IntVal)).IntVal != 0 {
-__t0 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Just"), "value0": gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("LT")})})
+__t0 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("LT")))
 goto end_branch_0
 } else {
 
@@ -1317,7 +1374,7 @@ goto end_branch_0
 }
 {
 if (gopurs_runtime.Bool(v_0.IntVal == gopurs_runtime.Int(1).IntVal)).IntVal != 0 {
-__t0 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Just"), "value0": gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("EQ")})})
+__t0 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("EQ")))
 goto end_branch_0
 } else {
 
@@ -1325,21 +1382,21 @@ goto end_branch_0
 }
 {
 if (gopurs_runtime.Bool(v_0.IntVal == gopurs_runtime.Int(2).IntVal)).IntVal != 0 {
-__t0 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Just"), "value0": gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("GT")})})
+__t0 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("GT")))
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Nothing")})
+__t0 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
 }
 end_branch_0:
 return __t0
-}), "fromEnum": gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_0.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "LT")).IntVal != 0 {
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_0, "_tag").StrVal == "LT")).IntVal != 0 {
 __t1 = gopurs_runtime.Int(0)
 goto end_branch_1
 } else {
@@ -1347,7 +1404,7 @@ goto end_branch_1
 }
 }
 {
-if (gopurs_runtime.Bool(v_0.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "EQ")).IntVal != 0 {
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_0, "_tag").StrVal == "EQ")).IntVal != 0 {
 __t1 = gopurs_runtime.Int(1)
 goto end_branch_1
 } else {
@@ -1355,7 +1412,7 @@ goto end_branch_1
 }
 }
 {
-if (gopurs_runtime.Bool(v_0.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "GT")).IntVal != 0 {
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_0, "_tag").StrVal == "GT")).IntVal != 0 {
 __t1 = gopurs_runtime.Int(2)
 goto end_branch_1
 } else {
@@ -1367,11 +1424,11 @@ __t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_1:
 return __t1
-}), "Bounded0": gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Bounded.Get_boundedOrdering()
-}), "Enum1": gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_enumOrdering()
-})})
+}))
 	})
 	return boundedEnumOrdering
 }
@@ -1380,11 +1437,11 @@ var boundedEnumChar gopurs_runtime.Value
 var once_boundedEnumChar sync.Once
 func Get_boundedEnumChar() gopurs_runtime.Value {
 	once_boundedEnumChar.Do(func() {
-		boundedEnumChar = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"cardinality": gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Ring.Get_intSub(), gopurs_runtime.Apply(Get_toCharCode(), pkg_Data_Bounded.Get_topChar())), gopurs_runtime.Apply(Get_toCharCode(), pkg_Data_Bounded.Get_bottomChar())), "toEnum": Get_charToEnum(), "fromEnum": Get_toCharCode(), "Bounded0": gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		boundedEnumChar = gopurs_runtime.RecordDict5("cardinality", "toEnum", "fromEnum", "Bounded0", "Enum1", gopurs_runtime.Int(gopurs_runtime.Apply(Get_toCharCode(), pkg_Data_Bounded.Get_topChar()).IntVal - gopurs_runtime.Apply(Get_toCharCode(), pkg_Data_Bounded.Get_bottomChar()).IntVal), Get_charToEnum(), Get_toCharCode(), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Bounded.Get_boundedChar()
-}), "Enum1": gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_enumChar()
-})})
+}))
 	})
 	return boundedEnumChar
 }
@@ -1393,11 +1450,11 @@ var boundedEnumBoolean gopurs_runtime.Value
 var once_boundedEnumBoolean sync.Once
 func Get_boundedEnumBoolean() gopurs_runtime.Value {
 	once_boundedEnumBoolean.Do(func() {
-		boundedEnumBoolean = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"cardinality": gopurs_runtime.Int(2), "toEnum": gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		boundedEnumBoolean = gopurs_runtime.RecordDict5("cardinality", "toEnum", "fromEnum", "Bounded0", "Enum1", gopurs_runtime.Int(2), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(v_0.IntVal == gopurs_runtime.Int(0).IntVal)).IntVal != 0 {
-__t0 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Just"), "value0": gopurs_runtime.Bool(false)})
+__t0 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), gopurs_runtime.Bool(false))
 goto end_branch_0
 } else {
 
@@ -1405,18 +1462,18 @@ goto end_branch_0
 }
 {
 if (gopurs_runtime.Bool(v_0.IntVal == gopurs_runtime.Int(1).IntVal)).IntVal != 0 {
-__t0 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Just"), "value0": gopurs_runtime.Bool(true)})
+__t0 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), gopurs_runtime.Bool(true))
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Nothing")})
+__t0 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
 }
 end_branch_0:
 return __t0
-}), "fromEnum": gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(v_0.IntVal == 0)).IntVal != 0 {
@@ -1439,11 +1496,11 @@ __t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_1:
 return __t1
-}), "Bounded0": gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Bounded.Get_boundedBoolean()
-}), "Enum1": gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_enumBoolean()
-})})
+}))
 	})
 	return boundedEnumBoolean
 }

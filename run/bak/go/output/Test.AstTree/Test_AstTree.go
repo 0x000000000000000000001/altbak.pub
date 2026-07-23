@@ -3,8 +3,6 @@ package Test_AstTree
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Semiring "gopurs/output/Data.Semiring"
-	pkg_Data_Ring "gopurs/output/Data.Ring"
 	pkg_Effect_Console "gopurs/output/Effect.Console"
 	pkg_Data_Show "gopurs/output/Data.Show"
 )
@@ -14,7 +12,7 @@ var once_Val sync.Once
 func Get_Val() gopurs_runtime.Value {
 	once_Val.Do(func() {
 		Val = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Val"), "value0": value0})
+return gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Val"), value0)
 })
 	})
 	return Val
@@ -26,7 +24,7 @@ func Get_Add() gopurs_runtime.Value {
 	once_Add.Do(func() {
 		Add = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Add"), "value0": value0, "value1": value1})
+return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Add"), value0, value1)
 })
 })
 	})
@@ -39,7 +37,7 @@ func Get_Mul() gopurs_runtime.Value {
 	once_Mul.Do(func() {
 		Mul = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Mul"), "value0": value0, "value1": value1})
+return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Mul"), value0, value1)
 })
 })
 	})
@@ -52,7 +50,7 @@ func Get_Sub() gopurs_runtime.Value {
 	once_Sub.Do(func() {
 		Sub = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Sub"), "value0": value0, "value1": value1})
+return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Sub"), value0, value1)
 })
 })
 	})
@@ -72,32 +70,32 @@ var v_0 = v_0_loop
 _ = v_0
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_0.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Val")).IntVal != 0 {
-__t0 = v_0.PtrVal.(map[string]gopurs_runtime.Value)["value0"]
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_0, "_tag").StrVal == "Val")).IntVal != 0 {
+__t0 = gopurs_runtime.RecordGet(v_0, "value0")
 goto end_branch_0
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(v_0.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Add")).IntVal != 0 {
-__t0 = gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Semiring.Get_intAdd(), gopurs_runtime.Apply(Get_eval(), v_0.PtrVal.(map[string]gopurs_runtime.Value)["value0"])), gopurs_runtime.Apply(Get_eval(), v_0.PtrVal.(map[string]gopurs_runtime.Value)["value1"]))
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_0, "_tag").StrVal == "Add")).IntVal != 0 {
+__t0 = gopurs_runtime.Int(gopurs_runtime.Apply(Get_eval(), gopurs_runtime.RecordGet(v_0, "value0")).IntVal + gopurs_runtime.Apply(Get_eval(), gopurs_runtime.RecordGet(v_0, "value1")).IntVal)
 goto end_branch_0
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(v_0.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Mul")).IntVal != 0 {
-__t0 = gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Semiring.Get_intMul(), gopurs_runtime.Apply(Get_eval(), v_0.PtrVal.(map[string]gopurs_runtime.Value)["value0"])), gopurs_runtime.Apply(Get_eval(), v_0.PtrVal.(map[string]gopurs_runtime.Value)["value1"]))
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_0, "_tag").StrVal == "Mul")).IntVal != 0 {
+__t0 = gopurs_runtime.Int(gopurs_runtime.Apply(Get_eval(), gopurs_runtime.RecordGet(v_0, "value0")).IntVal * gopurs_runtime.Apply(Get_eval(), gopurs_runtime.RecordGet(v_0, "value1")).IntVal)
 goto end_branch_0
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(v_0.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Sub")).IntVal != 0 {
-__t0 = gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Ring.Get_intSub(), gopurs_runtime.Apply(Get_eval(), v_0.PtrVal.(map[string]gopurs_runtime.Value)["value0"])), gopurs_runtime.Apply(Get_eval(), v_0.PtrVal.(map[string]gopurs_runtime.Value)["value1"]))
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_0, "_tag").StrVal == "Sub")).IntVal != 0 {
+__t0 = gopurs_runtime.Int(gopurs_runtime.Apply(Get_eval(), gopurs_runtime.RecordGet(v_0, "value0")).IntVal - gopurs_runtime.Apply(Get_eval(), gopurs_runtime.RecordGet(v_0, "value1")).IntVal)
 goto end_branch_0
 } else {
 
@@ -138,14 +136,14 @@ _ = v_0
 var __t0 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(v_0.IntVal == gopurs_runtime.Int(0).IntVal)).IntVal != 0 {
-__t0 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Val"), "value0": gopurs_runtime.Int(1)})
+__t0 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Val"), gopurs_runtime.Int(1))
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Add"), "value0": gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Mul"), "value0": gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Val"), "value0": v_0}), "value1": gopurs_runtime.Apply(Get_buildTree(), gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Ring.Get_intSub(), v_0), gopurs_runtime.Int(1)))}), "value1": gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Sub"), "value0": gopurs_runtime.Apply(Get_buildTree(), gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Ring.Get_intSub(), v_0), gopurs_runtime.Int(1))), "value1": gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Val"), "value0": gopurs_runtime.Int(1)})})})
+__t0 = gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Add"), gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Mul"), gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Val"), v_0), gopurs_runtime.Apply(Get_buildTree(), gopurs_runtime.Int(v_0.IntVal - gopurs_runtime.Int(1).IntVal))), gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Sub"), gopurs_runtime.Apply(Get_buildTree(), gopurs_runtime.Int(v_0.IntVal - gopurs_runtime.Int(1).IntVal)), gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Val"), gopurs_runtime.Int(1))))
 }
 end_branch_0:
 return __t0

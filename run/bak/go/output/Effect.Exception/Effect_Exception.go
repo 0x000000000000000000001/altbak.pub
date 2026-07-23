@@ -3,8 +3,6 @@ package Effect_Exception
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Effect "gopurs/output/Effect"
-	pkg_Data_Either "gopurs/output/Data.Either"
 	pkg_Data_Maybe "gopurs/output/Data.Maybe"
 )
 
@@ -13,9 +11,15 @@ var once_try sync.Once
 func Get_try() gopurs_runtime.Value {
 	once_try.Do(func() {
 		try = gopurs_runtime.Func(func(action_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(Get_catchException(), gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(pkg_Effect.Get_pureE(), gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Left"), "value0": x_1}))
-})), gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Effect.Get_applyEffect().PtrVal.(map[string]gopurs_runtime.Value)["apply"], gopurs_runtime.Apply(pkg_Effect.Get_pureE(), pkg_Data_Either.Get_Right())), action_0))
+return gopurs_runtime.Apply2(Get_catchException(), gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Left"), x_1)
+})
+}), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+a_prime_1_0 := gopurs_runtime.Apply(action_0, gopurs_runtime.Value{})
+_ = a_prime_1_0
+return gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Right"), a_prime_1_0)
+}))
 })
 	})
 	return try
@@ -36,7 +40,7 @@ var stack gopurs_runtime.Value
 var once_stack sync.Once
 func Get_stack() gopurs_runtime.Value {
 	once_stack.Do(func() {
-		stack = gopurs_runtime.Apply(gopurs_runtime.Apply(Get_stackImpl(), pkg_Data_Maybe.Get_Just()), gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Nothing")}))
+		stack = gopurs_runtime.Apply2(Get_stackImpl(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing")))
 	})
 	return stack
 }
@@ -45,7 +49,7 @@ var showError gopurs_runtime.Value
 var once_showError sync.Once
 func Get_showError() gopurs_runtime.Value {
 	once_showError.Do(func() {
-		showError = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"show": Get_showErrorImpl()})
+		showError = gopurs_runtime.RecordDict1("show", Get_showErrorImpl())
 	})
 	return showError
 }

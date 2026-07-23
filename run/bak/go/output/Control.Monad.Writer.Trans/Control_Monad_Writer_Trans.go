@@ -33,9 +33,9 @@ var newtypeWriterT gopurs_runtime.Value
 var once_newtypeWriterT sync.Once
 func Get_newtypeWriterT() gopurs_runtime.Value {
 	once_newtypeWriterT.Do(func() {
-		newtypeWriterT = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"Coercible0": gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		newtypeWriterT = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{}
-})})
+}))
 	})
 	return newtypeWriterT
 }
@@ -45,14 +45,13 @@ var once_monadTransWriterT sync.Once
 func Get_monadTransWriterT() gopurs_runtime.Value {
 	once_monadTransWriterT.Do(func() {
 		monadTransWriterT = gopurs_runtime.Func(func(dictMonoid_0 gopurs_runtime.Value) gopurs_runtime.Value {
-mempty_1_0 := dictMonoid_0.PtrVal.(map[string]gopurs_runtime.Value)["mempty"]
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"lift": gopurs_runtime.Func(func(dictMonad_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(m_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(dictMonad_2.PtrVal.(map[string]gopurs_runtime.Value)["Bind1"], gopurs_runtime.Value{}).PtrVal.(map[string]gopurs_runtime.Value)["bind"], m_3), gopurs_runtime.Func(func(a_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(dictMonad_2.PtrVal.(map[string]gopurs_runtime.Value)["Applicative0"], gopurs_runtime.Value{}).PtrVal.(map[string]gopurs_runtime.Value)["pure"], gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Tuple"), "value0": a_4, "value1": mempty_1_0}))
+mempty_1_0 := gopurs_runtime.RecordGet(dictMonoid_0, "mempty")
+_ = mempty_1_0
+return gopurs_runtime.RecordDict1("lift", gopurs_runtime.Func2(func(dictMonad_2 gopurs_runtime.Value, m_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_2, "Bind1"), gopurs_runtime.Value{}), "bind"), m_3, gopurs_runtime.Func(func(a_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_2, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), a_4, mempty_1_0))
 }))
-})
-})})
+}))
 })
 	})
 	return monadTransWriterT
@@ -62,10 +61,8 @@ var mapWriterT gopurs_runtime.Value
 var once_mapWriterT sync.Once
 func Get_mapWriterT() gopurs_runtime.Value {
 	once_mapWriterT.Do(func() {
-		mapWriterT = gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		mapWriterT = gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(f_0, v_1)
-})
 })
 	})
 	return mapWriterT
@@ -76,11 +73,11 @@ var once_functorWriterT sync.Once
 func Get_functorWriterT() gopurs_runtime.Value {
 	once_functorWriterT.Do(func() {
 		functorWriterT = gopurs_runtime.Func(func(dictFunctor_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"map": gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(dictFunctor_0.PtrVal.(map[string]gopurs_runtime.Value)["map"], gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Tuple"), "value0": gopurs_runtime.Apply(f_1, v_2.PtrVal.(map[string]gopurs_runtime.Value)["value0"]), "value1": v_2.PtrVal.(map[string]gopurs_runtime.Value)["value1"]})
+return gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctor_0, "map"), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), gopurs_runtime.Apply(f_1, gopurs_runtime.RecordGet(v_2, "value0")), gopurs_runtime.RecordGet(v_2, "value1"))
 }))
-})})
+}))
 })
 	})
 	return functorWriterT
@@ -90,10 +87,8 @@ var execWriterT gopurs_runtime.Value
 var once_execWriterT sync.Once
 func Get_execWriterT() gopurs_runtime.Value {
 	once_execWriterT.Do(func() {
-		execWriterT = gopurs_runtime.Func(func(dictFunctor_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(dictFunctor_0.PtrVal.(map[string]gopurs_runtime.Value)["map"], pkg_Data_Tuple.Get_snd()), v_1)
-})
+		execWriterT = gopurs_runtime.Func2(func(dictFunctor_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), pkg_Data_Tuple.Get_snd(), v_1)
 })
 	})
 	return execWriterT
@@ -103,26 +98,22 @@ var applyWriterT gopurs_runtime.Value
 var once_applyWriterT sync.Once
 func Get_applyWriterT() gopurs_runtime.Value {
 	once_applyWriterT.Do(func() {
-		applyWriterT = gopurs_runtime.Func(func(dictSemigroup_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(dictApply_1 gopurs_runtime.Value) gopurs_runtime.Value {
-Functor0_2_0 := gopurs_runtime.Apply(dictApply_1.PtrVal.(map[string]gopurs_runtime.Value)["Functor0"], gopurs_runtime.Value{})
-functorWriterT1_3_1 := gopurs_runtime.Record(map[string]gopurs_runtime.Value{"map": gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Functor0_2_0.PtrVal.(map[string]gopurs_runtime.Value)["map"], gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Tuple"), "value0": gopurs_runtime.Apply(f_3, v_4.PtrVal.(map[string]gopurs_runtime.Value)["value0"]), "value1": v_4.PtrVal.(map[string]gopurs_runtime.Value)["value1"]})
+		applyWriterT = gopurs_runtime.Func2(func(dictSemigroup_0 gopurs_runtime.Value, dictApply_1 gopurs_runtime.Value) gopurs_runtime.Value {
+Functor0_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApply_1, "Functor0"), gopurs_runtime.Value{})
+_ = Functor0_2_0
+functorWriterT1_3_1 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Functor0_2_0, "map"), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), gopurs_runtime.Apply(f_3, gopurs_runtime.RecordGet(v_4, "value0")), gopurs_runtime.RecordGet(v_4, "value1"))
 }))
-})})
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"apply": gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(dictApply_1.PtrVal.(map[string]gopurs_runtime.Value)["apply"], gopurs_runtime.Apply(gopurs_runtime.Apply(Functor0_2_0.PtrVal.(map[string]gopurs_runtime.Value)["map"], gopurs_runtime.Func(func(v3_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v4_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Tuple"), "value0": gopurs_runtime.Apply(v3_6.PtrVal.(map[string]gopurs_runtime.Value)["value0"], v4_7.PtrVal.(map[string]gopurs_runtime.Value)["value0"]), "value1": gopurs_runtime.Apply(gopurs_runtime.Apply(dictSemigroup_0.PtrVal.(map[string]gopurs_runtime.Value)["append"], v3_6.PtrVal.(map[string]gopurs_runtime.Value)["value1"]), v4_7.PtrVal.(map[string]gopurs_runtime.Value)["value1"])})
-})
-})), v_4)), v1_5)
-})
-}), "Functor0": gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
+}))
+_ = functorWriterT1_3_1
+return gopurs_runtime.RecordDict2("apply", "Functor0", gopurs_runtime.Func2(func(v_4 gopurs_runtime.Value, v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictApply_1, "apply"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Functor0_2_0, "map"), gopurs_runtime.Func2(func(v3_6 gopurs_runtime.Value, v4_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(v3_6, "value0"), gopurs_runtime.RecordGet(v4_7, "value0")), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup_0, "append"), gopurs_runtime.RecordGet(v3_6, "value1"), gopurs_runtime.RecordGet(v4_7, "value1")))
+}), v_4), v1_5)
+}), gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return functorWriterT1_3_1
-})})
-})
+}))
 })
 	})
 	return applyWriterT
@@ -132,39 +123,36 @@ var bindWriterT gopurs_runtime.Value
 var once_bindWriterT sync.Once
 func Get_bindWriterT() gopurs_runtime.Value {
 	once_bindWriterT.Do(func() {
-		bindWriterT = gopurs_runtime.Func(func(dictSemigroup_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(dictBind_1 gopurs_runtime.Value) gopurs_runtime.Value {
-Apply0_2_0 := gopurs_runtime.Apply(dictBind_1.PtrVal.(map[string]gopurs_runtime.Value)["Apply0"], gopurs_runtime.Value{})
-Functor0_3_1 := gopurs_runtime.Apply(Apply0_2_0.PtrVal.(map[string]gopurs_runtime.Value)["Functor0"], gopurs_runtime.Value{})
-functorWriterT1_4_2 := gopurs_runtime.Record(map[string]gopurs_runtime.Value{"map": gopurs_runtime.Func(func(f_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Functor0_3_1.PtrVal.(map[string]gopurs_runtime.Value)["map"], gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Tuple"), "value0": gopurs_runtime.Apply(f_4, v_5.PtrVal.(map[string]gopurs_runtime.Value)["value0"]), "value1": v_5.PtrVal.(map[string]gopurs_runtime.Value)["value1"]})
+		bindWriterT = gopurs_runtime.Func2(func(dictSemigroup_0 gopurs_runtime.Value, dictBind_1 gopurs_runtime.Value) gopurs_runtime.Value {
+Apply0_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBind_1, "Apply0"), gopurs_runtime.Value{})
+_ = Apply0_2_0
+Functor0_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Apply0_2_0, "Functor0"), gopurs_runtime.Value{})
+_ = Functor0_3_1
+functorWriterT1_4_2 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Functor0_3_1, "map"), gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), gopurs_runtime.Apply(f_4, gopurs_runtime.RecordGet(v_5, "value0")), gopurs_runtime.RecordGet(v_5, "value1"))
 }))
-})})
-applyWriterT2_5_3 := gopurs_runtime.Record(map[string]gopurs_runtime.Value{"apply": gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(Apply0_2_0.PtrVal.(map[string]gopurs_runtime.Value)["apply"], gopurs_runtime.Apply(gopurs_runtime.Apply(Functor0_3_1.PtrVal.(map[string]gopurs_runtime.Value)["map"], gopurs_runtime.Func(func(v3_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v4_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Tuple"), "value0": gopurs_runtime.Apply(v3_7.PtrVal.(map[string]gopurs_runtime.Value)["value0"], v4_8.PtrVal.(map[string]gopurs_runtime.Value)["value0"]), "value1": gopurs_runtime.Apply(gopurs_runtime.Apply(dictSemigroup_0.PtrVal.(map[string]gopurs_runtime.Value)["append"], v3_7.PtrVal.(map[string]gopurs_runtime.Value)["value1"]), v4_8.PtrVal.(map[string]gopurs_runtime.Value)["value1"])})
-})
-})), v_5)), v1_6)
-})
-}), "Functor0": gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
+}))
+_ = functorWriterT1_4_2
+applyWriterT2_5_3 := gopurs_runtime.RecordDict2("apply", "Functor0", gopurs_runtime.Func2(func(v_5 gopurs_runtime.Value, v1_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Apply0_2_0, "apply"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Functor0_3_1, "map"), gopurs_runtime.Func2(func(v3_7 gopurs_runtime.Value, v4_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(v3_7, "value0"), gopurs_runtime.RecordGet(v4_8, "value0")), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup_0, "append"), gopurs_runtime.RecordGet(v3_7, "value1"), gopurs_runtime.RecordGet(v4_8, "value1")))
+}), v_5), v1_6)
+}), gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return functorWriterT1_4_2
-})})
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"bind": gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(k_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(dictBind_1.PtrVal.(map[string]gopurs_runtime.Value)["bind"], v_6), gopurs_runtime.Func(func(v1_8 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_9_4 := v1_8.PtrVal.(map[string]gopurs_runtime.Value)["value1"]
-return gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(Apply0_2_0.PtrVal.(map[string]gopurs_runtime.Value)["Functor0"], gopurs_runtime.Value{}).PtrVal.(map[string]gopurs_runtime.Value)["map"], gopurs_runtime.Func(func(v3_10 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Tuple"), "value0": v3_10.PtrVal.(map[string]gopurs_runtime.Value)["value0"], "value1": gopurs_runtime.Apply(gopurs_runtime.Apply(dictSemigroup_0.PtrVal.(map[string]gopurs_runtime.Value)["append"], __local_var_9_4), v3_10.PtrVal.(map[string]gopurs_runtime.Value)["value1"])})
-})), gopurs_runtime.Apply(k_7, v1_8.PtrVal.(map[string]gopurs_runtime.Value)["value0"]))
 }))
-})
-}), "Apply0": gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
+_ = applyWriterT2_5_3
+return gopurs_runtime.RecordDict2("bind", "Apply0", gopurs_runtime.Func2(func(v_6 gopurs_runtime.Value, k_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBind_1, "bind"), v_6, gopurs_runtime.Func(func(v1_8 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_9_4 := gopurs_runtime.RecordGet(v1_8, "value1")
+_ = __local_var_9_4
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Apply0_2_0, "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Func(func(v3_10 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), gopurs_runtime.RecordGet(v3_10, "value0"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup_0, "append"), __local_var_9_4, gopurs_runtime.RecordGet(v3_10, "value1")))
+}), gopurs_runtime.Apply(k_7, gopurs_runtime.RecordGet(v1_8, "value0")))
+}))
+}), gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return applyWriterT2_5_3
-})})
-})
+}))
 })
 	})
 	return bindWriterT
@@ -174,22 +162,17 @@ var semigroupWriterT gopurs_runtime.Value
 var once_semigroupWriterT sync.Once
 func Get_semigroupWriterT() gopurs_runtime.Value {
 	once_semigroupWriterT.Do(func() {
-		semigroupWriterT = gopurs_runtime.Func(func(dictApply_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(dictSemigroup_1 gopurs_runtime.Value) gopurs_runtime.Value {
-Functor0_2_0 := gopurs_runtime.Apply(dictApply_0.PtrVal.(map[string]gopurs_runtime.Value)["Functor0"], gopurs_runtime.Value{})
+		semigroupWriterT = gopurs_runtime.Func2(func(dictApply_0 gopurs_runtime.Value, dictSemigroup_1 gopurs_runtime.Value) gopurs_runtime.Value {
+Functor0_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApply_0, "Functor0"), gopurs_runtime.Value{})
+_ = Functor0_2_0
 return gopurs_runtime.Func(func(dictSemigroup1_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"append": gopurs_runtime.Func(func(a_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(b_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(dictApply_0.PtrVal.(map[string]gopurs_runtime.Value)["apply"], gopurs_runtime.Apply(gopurs_runtime.Apply(Functor0_2_0.PtrVal.(map[string]gopurs_runtime.Value)["map"], gopurs_runtime.Func(func(v3_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v4_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Tuple"), "value0": gopurs_runtime.Apply(v3_6.PtrVal.(map[string]gopurs_runtime.Value)["value0"], v4_7.PtrVal.(map[string]gopurs_runtime.Value)["value0"]), "value1": gopurs_runtime.Apply(gopurs_runtime.Apply(dictSemigroup_1.PtrVal.(map[string]gopurs_runtime.Value)["append"], v3_6.PtrVal.(map[string]gopurs_runtime.Value)["value1"]), v4_7.PtrVal.(map[string]gopurs_runtime.Value)["value1"])})
-})
-})), gopurs_runtime.Apply(gopurs_runtime.Apply(Functor0_2_0.PtrVal.(map[string]gopurs_runtime.Value)["map"], gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Tuple"), "value0": gopurs_runtime.Apply(dictSemigroup1_3.PtrVal.(map[string]gopurs_runtime.Value)["append"], v_6.PtrVal.(map[string]gopurs_runtime.Value)["value0"]), "value1": v_6.PtrVal.(map[string]gopurs_runtime.Value)["value1"]})
-})), a_4))), b_5)
-})
-})})
-})
+return gopurs_runtime.RecordDict1("append", gopurs_runtime.Func2(func(a_4 gopurs_runtime.Value, b_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictApply_0, "apply"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Functor0_2_0, "map"), gopurs_runtime.Func2(func(v3_6 gopurs_runtime.Value, v4_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(v3_6, "value0"), gopurs_runtime.RecordGet(v4_7, "value0")), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup_1, "append"), gopurs_runtime.RecordGet(v3_6, "value1"), gopurs_runtime.RecordGet(v4_7, "value1")))
+}), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Functor0_2_0, "map"), gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictSemigroup1_3, "append"), gopurs_runtime.RecordGet(v_6, "value0")), gopurs_runtime.RecordGet(v_6, "value1"))
+}), a_4)), b_5)
+}))
 })
 })
 	})
@@ -201,32 +184,34 @@ var once_applicativeWriterT sync.Once
 func Get_applicativeWriterT() gopurs_runtime.Value {
 	once_applicativeWriterT.Do(func() {
 		applicativeWriterT = gopurs_runtime.Func(func(dictMonoid_0 gopurs_runtime.Value) gopurs_runtime.Value {
-mempty_1_0 := dictMonoid_0.PtrVal.(map[string]gopurs_runtime.Value)["mempty"]
-__local_var_2_1 := gopurs_runtime.Apply(dictMonoid_0.PtrVal.(map[string]gopurs_runtime.Value)["Semigroup0"], gopurs_runtime.Value{})
+mempty_1_0 := gopurs_runtime.RecordGet(dictMonoid_0, "mempty")
+_ = mempty_1_0
+__local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{})
+_ = __local_var_2_1
 return gopurs_runtime.Func(func(dictApplicative_3 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_4_2 := gopurs_runtime.Apply(dictApplicative_3.PtrVal.(map[string]gopurs_runtime.Value)["Apply0"], gopurs_runtime.Value{})
-Functor0_5_3 := gopurs_runtime.Apply(__local_var_4_2.PtrVal.(map[string]gopurs_runtime.Value)["Functor0"], gopurs_runtime.Value{})
-functorWriterT1_6_5 := gopurs_runtime.Record(map[string]gopurs_runtime.Value{"map": gopurs_runtime.Func(func(f_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Functor0_5_3.PtrVal.(map[string]gopurs_runtime.Value)["map"], gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Tuple"), "value0": gopurs_runtime.Apply(f_6, v_7.PtrVal.(map[string]gopurs_runtime.Value)["value0"]), "value1": v_7.PtrVal.(map[string]gopurs_runtime.Value)["value1"]})
+__local_var_4_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_3, "Apply0"), gopurs_runtime.Value{})
+_ = __local_var_4_2
+Functor0_5_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_4_2, "Functor0"), gopurs_runtime.Value{})
+_ = Functor0_5_3
+functorWriterT1_6_5 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Functor0_5_3, "map"), gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), gopurs_runtime.Apply(f_6, gopurs_runtime.RecordGet(v_7, "value0")), gopurs_runtime.RecordGet(v_7, "value1"))
 }))
-})})
-applyWriterT2_6_4 := gopurs_runtime.Record(map[string]gopurs_runtime.Value{"apply": gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(__local_var_4_2.PtrVal.(map[string]gopurs_runtime.Value)["apply"], gopurs_runtime.Apply(gopurs_runtime.Apply(Functor0_5_3.PtrVal.(map[string]gopurs_runtime.Value)["map"], gopurs_runtime.Func(func(v3_9 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v4_10 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Tuple"), "value0": gopurs_runtime.Apply(v3_9.PtrVal.(map[string]gopurs_runtime.Value)["value0"], v4_10.PtrVal.(map[string]gopurs_runtime.Value)["value0"]), "value1": gopurs_runtime.Apply(gopurs_runtime.Apply(__local_var_2_1.PtrVal.(map[string]gopurs_runtime.Value)["append"], v3_9.PtrVal.(map[string]gopurs_runtime.Value)["value1"]), v4_10.PtrVal.(map[string]gopurs_runtime.Value)["value1"])})
-})
-})), v_7)), v1_8)
-})
-}), "Functor0": gopurs_runtime.Func(func(_dollar__unused_7 gopurs_runtime.Value) gopurs_runtime.Value {
+}))
+_ = functorWriterT1_6_5
+applyWriterT2_6_4 := gopurs_runtime.RecordDict2("apply", "Functor0", gopurs_runtime.Func2(func(v_7 gopurs_runtime.Value, v1_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_4_2, "apply"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Functor0_5_3, "map"), gopurs_runtime.Func2(func(v3_9 gopurs_runtime.Value, v4_10 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(v3_9, "value0"), gopurs_runtime.RecordGet(v4_10, "value0")), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_1, "append"), gopurs_runtime.RecordGet(v3_9, "value1"), gopurs_runtime.RecordGet(v4_10, "value1")))
+}), v_7), v1_8)
+}), gopurs_runtime.Func(func(_dollar__unused_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return functorWriterT1_6_5
-})})
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"pure": gopurs_runtime.Func(func(a_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(dictApplicative_3.PtrVal.(map[string]gopurs_runtime.Value)["pure"], gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Tuple"), "value0": a_7, "value1": mempty_1_0}))
-}), "Apply0": gopurs_runtime.Func(func(_dollar__unused_7 gopurs_runtime.Value) gopurs_runtime.Value {
+}))
+_ = applyWriterT2_6_4
+return gopurs_runtime.RecordDict2("pure", "Apply0", gopurs_runtime.Func(func(a_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_3, "pure"), gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), a_7, mempty_1_0))
+}), gopurs_runtime.Func(func(_dollar__unused_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return applyWriterT2_6_4
-})})
+}))
 })
 })
 	})
@@ -239,15 +224,19 @@ func Get_monadWriterT() gopurs_runtime.Value {
 	once_monadWriterT.Do(func() {
 		monadWriterT = gopurs_runtime.Func(func(dictMonoid_0 gopurs_runtime.Value) gopurs_runtime.Value {
 applicativeWriterT1_1_0 := gopurs_runtime.Apply(Get_applicativeWriterT(), dictMonoid_0)
-bindWriterT1_2_1 := gopurs_runtime.Apply(Get_bindWriterT(), gopurs_runtime.Apply(dictMonoid_0.PtrVal.(map[string]gopurs_runtime.Value)["Semigroup0"], gopurs_runtime.Value{}))
+_ = applicativeWriterT1_1_0
+bindWriterT1_2_1 := gopurs_runtime.Apply(Get_bindWriterT(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{}))
+_ = bindWriterT1_2_1
 return gopurs_runtime.Func(func(dictMonad_3 gopurs_runtime.Value) gopurs_runtime.Value {
-applicativeWriterT2_4_2 := gopurs_runtime.Apply(applicativeWriterT1_1_0, gopurs_runtime.Apply(dictMonad_3.PtrVal.(map[string]gopurs_runtime.Value)["Applicative0"], gopurs_runtime.Value{}))
-bindWriterT2_5_3 := gopurs_runtime.Apply(bindWriterT1_2_1, gopurs_runtime.Apply(dictMonad_3.PtrVal.(map[string]gopurs_runtime.Value)["Bind1"], gopurs_runtime.Value{}))
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"Applicative0": gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
+applicativeWriterT2_4_2 := gopurs_runtime.Apply(applicativeWriterT1_1_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_3, "Applicative0"), gopurs_runtime.Value{}))
+_ = applicativeWriterT2_4_2
+bindWriterT2_5_3 := gopurs_runtime.Apply(bindWriterT1_2_1, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_3, "Bind1"), gopurs_runtime.Value{}))
+_ = bindWriterT2_5_3
+return gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return applicativeWriterT2_4_2
-}), "Bind1": gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return bindWriterT2_5_3
-})})
+}))
 })
 })
 	})
@@ -259,16 +248,20 @@ var once_monadAskWriterT sync.Once
 func Get_monadAskWriterT() gopurs_runtime.Value {
 	once_monadAskWriterT.Do(func() {
 		monadAskWriterT = gopurs_runtime.Func(func(dictMonoid_0 gopurs_runtime.Value) gopurs_runtime.Value {
-mempty_1_0 := dictMonoid_0.PtrVal.(map[string]gopurs_runtime.Value)["mempty"]
+mempty_1_0 := gopurs_runtime.RecordGet(dictMonoid_0, "mempty")
+_ = mempty_1_0
 monadWriterT1_2_1 := gopurs_runtime.Apply(Get_monadWriterT(), dictMonoid_0)
+_ = monadWriterT1_2_1
 return gopurs_runtime.Func(func(dictMonadAsk_3 gopurs_runtime.Value) gopurs_runtime.Value {
-Monad0_4_2 := gopurs_runtime.Apply(dictMonadAsk_3.PtrVal.(map[string]gopurs_runtime.Value)["Monad0"], gopurs_runtime.Value{})
+Monad0_4_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadAsk_3, "Monad0"), gopurs_runtime.Value{})
+_ = Monad0_4_2
 monadWriterT2_5_3 := gopurs_runtime.Apply(monadWriterT1_2_1, Monad0_4_2)
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"ask": gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(Monad0_4_2.PtrVal.(map[string]gopurs_runtime.Value)["Bind1"], gopurs_runtime.Value{}).PtrVal.(map[string]gopurs_runtime.Value)["bind"], dictMonadAsk_3.PtrVal.(map[string]gopurs_runtime.Value)["ask"]), gopurs_runtime.Func(func(a_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(Monad0_4_2.PtrVal.(map[string]gopurs_runtime.Value)["Applicative0"], gopurs_runtime.Value{}).PtrVal.(map[string]gopurs_runtime.Value)["pure"], gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Tuple"), "value0": a_6, "value1": mempty_1_0}))
-})), "Monad0": gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
+_ = monadWriterT2_5_3
+return gopurs_runtime.RecordDict2("ask", "Monad0", gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_4_2, "Bind1"), gopurs_runtime.Value{}), "bind"), gopurs_runtime.RecordGet(dictMonadAsk_3, "ask"), gopurs_runtime.Func(func(a_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_4_2, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), a_6, mempty_1_0))
+})), gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return monadWriterT2_5_3
-})})
+}))
 })
 })
 	})
@@ -281,13 +274,15 @@ func Get_monadReaderWriterT() gopurs_runtime.Value {
 	once_monadReaderWriterT.Do(func() {
 		monadReaderWriterT = gopurs_runtime.Func(func(dictMonoid_0 gopurs_runtime.Value) gopurs_runtime.Value {
 monadAskWriterT1_1_0 := gopurs_runtime.Apply(Get_monadAskWriterT(), dictMonoid_0)
+_ = monadAskWriterT1_1_0
 return gopurs_runtime.Func(func(dictMonadReader_2 gopurs_runtime.Value) gopurs_runtime.Value {
-monadAskWriterT2_3_1 := gopurs_runtime.Apply(monadAskWriterT1_1_0, gopurs_runtime.Apply(dictMonadReader_2.PtrVal.(map[string]gopurs_runtime.Value)["MonadAsk0"], gopurs_runtime.Value{}))
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"local": gopurs_runtime.Func(func(f_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(dictMonadReader_2.PtrVal.(map[string]gopurs_runtime.Value)["local"], f_4)
-}), "MonadAsk0": gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
+monadAskWriterT2_3_1 := gopurs_runtime.Apply(monadAskWriterT1_1_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadReader_2, "MonadAsk0"), gopurs_runtime.Value{}))
+_ = monadAskWriterT2_3_1
+return gopurs_runtime.RecordDict2("local", "MonadAsk0", gopurs_runtime.Func(func(f_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadReader_2, "local"), f_4)
+}), gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return monadAskWriterT2_3_1
-})})
+}))
 })
 })
 	})
@@ -299,19 +294,22 @@ var once_monadContWriterT sync.Once
 func Get_monadContWriterT() gopurs_runtime.Value {
 	once_monadContWriterT.Do(func() {
 		monadContWriterT = gopurs_runtime.Func(func(dictMonoid_0 gopurs_runtime.Value) gopurs_runtime.Value {
-mempty_1_0 := dictMonoid_0.PtrVal.(map[string]gopurs_runtime.Value)["mempty"]
+mempty_1_0 := gopurs_runtime.RecordGet(dictMonoid_0, "mempty")
+_ = mempty_1_0
 monadWriterT1_2_1 := gopurs_runtime.Apply(Get_monadWriterT(), dictMonoid_0)
+_ = monadWriterT1_2_1
 return gopurs_runtime.Func(func(dictMonadCont_3 gopurs_runtime.Value) gopurs_runtime.Value {
-monadWriterT2_4_2 := gopurs_runtime.Apply(monadWriterT1_2_1, gopurs_runtime.Apply(dictMonadCont_3.PtrVal.(map[string]gopurs_runtime.Value)["Monad0"], gopurs_runtime.Value{}))
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"callCC": gopurs_runtime.Func(func(f_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(dictMonadCont_3.PtrVal.(map[string]gopurs_runtime.Value)["callCC"], gopurs_runtime.Func(func(c_6 gopurs_runtime.Value) gopurs_runtime.Value {
+monadWriterT2_4_2 := gopurs_runtime.Apply(monadWriterT1_2_1, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadCont_3, "Monad0"), gopurs_runtime.Value{}))
+_ = monadWriterT2_4_2
+return gopurs_runtime.RecordDict2("callCC", "Monad0", gopurs_runtime.Func(func(f_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadCont_3, "callCC"), gopurs_runtime.Func(func(c_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(f_5, gopurs_runtime.Func(func(a_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(c_6, gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Tuple"), "value0": a_7, "value1": mempty_1_0}))
+return gopurs_runtime.Apply(c_6, gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), a_7, mempty_1_0))
 }))
 }))
-}), "Monad0": gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return monadWriterT2_4_2
-})})
+}))
 })
 })
 	})
@@ -323,18 +321,22 @@ var once_monadEffectWriter sync.Once
 func Get_monadEffectWriter() gopurs_runtime.Value {
 	once_monadEffectWriter.Do(func() {
 		monadEffectWriter = gopurs_runtime.Func(func(dictMonoid_0 gopurs_runtime.Value) gopurs_runtime.Value {
-mempty_1_0 := dictMonoid_0.PtrVal.(map[string]gopurs_runtime.Value)["mempty"]
+mempty_1_0 := gopurs_runtime.RecordGet(dictMonoid_0, "mempty")
+_ = mempty_1_0
 monadWriterT1_2_1 := gopurs_runtime.Apply(Get_monadWriterT(), dictMonoid_0)
+_ = monadWriterT1_2_1
 return gopurs_runtime.Func(func(dictMonadEffect_3 gopurs_runtime.Value) gopurs_runtime.Value {
-Monad0_4_2 := gopurs_runtime.Apply(dictMonadEffect_3.PtrVal.(map[string]gopurs_runtime.Value)["Monad0"], gopurs_runtime.Value{})
+Monad0_4_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_3, "Monad0"), gopurs_runtime.Value{})
+_ = Monad0_4_2
 monadWriterT2_5_3 := gopurs_runtime.Apply(monadWriterT1_2_1, Monad0_4_2)
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"liftEffect": gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(Monad0_4_2.PtrVal.(map[string]gopurs_runtime.Value)["Bind1"], gopurs_runtime.Value{}).PtrVal.(map[string]gopurs_runtime.Value)["bind"], gopurs_runtime.Apply(dictMonadEffect_3.PtrVal.(map[string]gopurs_runtime.Value)["liftEffect"], x_6)), gopurs_runtime.Func(func(a_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(Monad0_4_2.PtrVal.(map[string]gopurs_runtime.Value)["Applicative0"], gopurs_runtime.Value{}).PtrVal.(map[string]gopurs_runtime.Value)["pure"], gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Tuple"), "value0": a_7, "value1": mempty_1_0}))
+_ = monadWriterT2_5_3
+return gopurs_runtime.RecordDict2("liftEffect", "Monad0", gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_4_2, "Bind1"), gopurs_runtime.Value{}), "bind"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_3, "liftEffect"), x_6), gopurs_runtime.Func(func(a_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_4_2, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), a_7, mempty_1_0))
 }))
-}), "Monad0": gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return monadWriterT2_5_3
-})})
+}))
 })
 })
 	})
@@ -346,29 +348,34 @@ var once_monadRecWriterT sync.Once
 func Get_monadRecWriterT() gopurs_runtime.Value {
 	once_monadRecWriterT.Do(func() {
 		monadRecWriterT = gopurs_runtime.Func(func(dictMonoid_0 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_1_0 := gopurs_runtime.Apply(dictMonoid_0.PtrVal.(map[string]gopurs_runtime.Value)["Semigroup0"], gopurs_runtime.Value{})
-mempty_2_1 := dictMonoid_0.PtrVal.(map[string]gopurs_runtime.Value)["mempty"]
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{})
+_ = __local_var_1_0
+mempty_2_1 := gopurs_runtime.RecordGet(dictMonoid_0, "mempty")
+_ = mempty_2_1
 monadWriterT1_3_2 := gopurs_runtime.Apply(Get_monadWriterT(), dictMonoid_0)
+_ = monadWriterT1_3_2
 return gopurs_runtime.Func(func(dictMonadRec_4 gopurs_runtime.Value) gopurs_runtime.Value {
-Monad0_5_3 := gopurs_runtime.Apply(dictMonadRec_4.PtrVal.(map[string]gopurs_runtime.Value)["Monad0"], gopurs_runtime.Value{})
+Monad0_5_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadRec_4, "Monad0"), gopurs_runtime.Value{})
+_ = Monad0_5_3
 monadWriterT2_6_4 := gopurs_runtime.Apply(monadWriterT1_3_2, Monad0_5_3)
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"tailRecM": gopurs_runtime.Func(func(f_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(a_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(dictMonadRec_4.PtrVal.(map[string]gopurs_runtime.Value)["tailRecM"], gopurs_runtime.Func(func(v_9 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_10_5 := v_9.PtrVal.(map[string]gopurs_runtime.Value)["value1"]
-return gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(Monad0_5_3.PtrVal.(map[string]gopurs_runtime.Value)["Bind1"], gopurs_runtime.Value{}).PtrVal.(map[string]gopurs_runtime.Value)["bind"], gopurs_runtime.Apply(f_7, v_9.PtrVal.(map[string]gopurs_runtime.Value)["value0"])), gopurs_runtime.Func(func(v2_11 gopurs_runtime.Value) gopurs_runtime.Value {
+_ = monadWriterT2_6_4
+return gopurs_runtime.RecordDict2("tailRecM", "Monad0", gopurs_runtime.Func2(func(f_7 gopurs_runtime.Value, a_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadRec_4, "tailRecM"), gopurs_runtime.Func(func(v_9 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_10_5 := gopurs_runtime.RecordGet(v_9, "value1")
+_ = __local_var_10_5
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_5_3, "Bind1"), gopurs_runtime.Value{}), "bind"), gopurs_runtime.Apply(f_7, gopurs_runtime.RecordGet(v_9, "value0")), gopurs_runtime.Func(func(v2_11 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t6 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v2_11.PtrVal.(map[string]gopurs_runtime.Value)["value0"].PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Loop")).IntVal != 0 {
-__t6 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Loop"), "value0": gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Tuple"), "value0": v2_11.PtrVal.(map[string]gopurs_runtime.Value)["value0"].PtrVal.(map[string]gopurs_runtime.Value)["value0"], "value1": gopurs_runtime.Apply(gopurs_runtime.Apply(__local_var_1_0.PtrVal.(map[string]gopurs_runtime.Value)["append"], __local_var_10_5), v2_11.PtrVal.(map[string]gopurs_runtime.Value)["value1"])})})
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v2_11, "value0"), "_tag").StrVal == "Loop")).IntVal != 0 {
+__t6 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Loop"), gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v2_11, "value0"), "value0"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "append"), __local_var_10_5, gopurs_runtime.RecordGet(v2_11, "value1"))))
 goto end_branch_6
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(v2_11.PtrVal.(map[string]gopurs_runtime.Value)["value0"].PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Done")).IntVal != 0 {
-__t6 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Done"), "value0": gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Tuple"), "value0": v2_11.PtrVal.(map[string]gopurs_runtime.Value)["value0"].PtrVal.(map[string]gopurs_runtime.Value)["value0"], "value1": gopurs_runtime.Apply(gopurs_runtime.Apply(__local_var_1_0.PtrVal.(map[string]gopurs_runtime.Value)["append"], __local_var_10_5), v2_11.PtrVal.(map[string]gopurs_runtime.Value)["value1"])})})
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v2_11, "value0"), "_tag").StrVal == "Done")).IntVal != 0 {
+__t6 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Done"), gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v2_11, "value0"), "value0"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "append"), __local_var_10_5, gopurs_runtime.RecordGet(v2_11, "value1"))))
 goto end_branch_6
 } else {
 
@@ -378,13 +385,12 @@ goto end_branch_6
 __t6 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_6:
-return gopurs_runtime.Apply(gopurs_runtime.Apply(Monad0_5_3.PtrVal.(map[string]gopurs_runtime.Value)["Applicative0"], gopurs_runtime.Value{}).PtrVal.(map[string]gopurs_runtime.Value)["pure"], __t6)
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_5_3, "Applicative0"), gopurs_runtime.Value{}), "pure"), __t6)
 }))
-})), gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Tuple"), "value0": a_8, "value1": mempty_2_1}))
-})
-}), "Monad0": gopurs_runtime.Func(func(_dollar__unused_7 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), a_8, mempty_2_1))
+}), gopurs_runtime.Func(func(_dollar__unused_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return monadWriterT2_6_4
-})})
+}))
 })
 })
 	})
@@ -396,18 +402,22 @@ var once_monadStateWriterT sync.Once
 func Get_monadStateWriterT() gopurs_runtime.Value {
 	once_monadStateWriterT.Do(func() {
 		monadStateWriterT = gopurs_runtime.Func(func(dictMonoid_0 gopurs_runtime.Value) gopurs_runtime.Value {
-mempty_1_0 := dictMonoid_0.PtrVal.(map[string]gopurs_runtime.Value)["mempty"]
+mempty_1_0 := gopurs_runtime.RecordGet(dictMonoid_0, "mempty")
+_ = mempty_1_0
 monadWriterT1_2_1 := gopurs_runtime.Apply(Get_monadWriterT(), dictMonoid_0)
+_ = monadWriterT1_2_1
 return gopurs_runtime.Func(func(dictMonadState_3 gopurs_runtime.Value) gopurs_runtime.Value {
-Monad0_4_2 := gopurs_runtime.Apply(dictMonadState_3.PtrVal.(map[string]gopurs_runtime.Value)["Monad0"], gopurs_runtime.Value{})
+Monad0_4_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadState_3, "Monad0"), gopurs_runtime.Value{})
+_ = Monad0_4_2
 monadWriterT2_5_3 := gopurs_runtime.Apply(monadWriterT1_2_1, Monad0_4_2)
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"state": gopurs_runtime.Func(func(f_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(Monad0_4_2.PtrVal.(map[string]gopurs_runtime.Value)["Bind1"], gopurs_runtime.Value{}).PtrVal.(map[string]gopurs_runtime.Value)["bind"], gopurs_runtime.Apply(dictMonadState_3.PtrVal.(map[string]gopurs_runtime.Value)["state"], f_6)), gopurs_runtime.Func(func(a_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(Monad0_4_2.PtrVal.(map[string]gopurs_runtime.Value)["Applicative0"], gopurs_runtime.Value{}).PtrVal.(map[string]gopurs_runtime.Value)["pure"], gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Tuple"), "value0": a_7, "value1": mempty_1_0}))
+_ = monadWriterT2_5_3
+return gopurs_runtime.RecordDict2("state", "Monad0", gopurs_runtime.Func(func(f_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_4_2, "Bind1"), gopurs_runtime.Value{}), "bind"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadState_3, "state"), f_6), gopurs_runtime.Func(func(a_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_4_2, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), a_7, mempty_1_0))
 }))
-}), "Monad0": gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return monadWriterT2_5_3
-})})
+}))
 })
 })
 	})
@@ -419,18 +429,22 @@ var once_monadTellWriterT sync.Once
 func Get_monadTellWriterT() gopurs_runtime.Value {
 	once_monadTellWriterT.Do(func() {
 		monadTellWriterT = gopurs_runtime.Func(func(dictMonoid_0 gopurs_runtime.Value) gopurs_runtime.Value {
-Semigroup0_1_0 := gopurs_runtime.Apply(dictMonoid_0.PtrVal.(map[string]gopurs_runtime.Value)["Semigroup0"], gopurs_runtime.Value{})
+Semigroup0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{})
+_ = Semigroup0_1_0
 monadWriterT1_2_1 := gopurs_runtime.Apply(Get_monadWriterT(), dictMonoid_0)
+_ = monadWriterT1_2_1
 return gopurs_runtime.Func(func(dictMonad_3 gopurs_runtime.Value) gopurs_runtime.Value {
 monadWriterT2_4_2 := gopurs_runtime.Apply(monadWriterT1_2_1, dictMonad_3)
+_ = monadWriterT2_4_2
 __local_var_5_3 := gopurs_runtime.Apply(pkg_Data_Tuple.Get_Tuple(), pkg_Data_Unit.Get_unit())
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"tell": gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(dictMonad_3.PtrVal.(map[string]gopurs_runtime.Value)["Applicative0"], gopurs_runtime.Value{}).PtrVal.(map[string]gopurs_runtime.Value)["pure"], gopurs_runtime.Apply(__local_var_5_3, x_6))
-}), "Semigroup0": gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
+_ = __local_var_5_3
+return gopurs_runtime.RecordDict3("tell", "Semigroup0", "Monad1", gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_3, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.Apply(__local_var_5_3, x_6))
+}), gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return Semigroup0_1_0
-}), "Monad1": gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return monadWriterT2_4_2
-})})
+}))
 })
 })
 	})
@@ -443,23 +457,27 @@ func Get_monadWriterWriterT() gopurs_runtime.Value {
 	once_monadWriterWriterT.Do(func() {
 		monadWriterWriterT = gopurs_runtime.Func(func(dictMonoid_0 gopurs_runtime.Value) gopurs_runtime.Value {
 monadTellWriterT1_1_0 := gopurs_runtime.Apply(Get_monadTellWriterT(), dictMonoid_0)
+_ = monadTellWriterT1_1_0
 return gopurs_runtime.Func(func(dictMonad_2 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_3_1 := gopurs_runtime.Apply(dictMonad_2.PtrVal.(map[string]gopurs_runtime.Value)["Bind1"], gopurs_runtime.Value{})
-__local_var_4_2 := gopurs_runtime.Apply(dictMonad_2.PtrVal.(map[string]gopurs_runtime.Value)["Applicative0"], gopurs_runtime.Value{})
+__local_var_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_2, "Bind1"), gopurs_runtime.Value{})
+_ = __local_var_3_1
+__local_var_4_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_2, "Applicative0"), gopurs_runtime.Value{})
+_ = __local_var_4_2
 monadTellWriterT2_5_3 := gopurs_runtime.Apply(monadTellWriterT1_1_0, dictMonad_2)
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"listen": gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(__local_var_3_1.PtrVal.(map[string]gopurs_runtime.Value)["bind"], v_6), gopurs_runtime.Func(func(v1_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(__local_var_4_2.PtrVal.(map[string]gopurs_runtime.Value)["pure"], gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Tuple"), "value0": gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Tuple"), "value0": v1_7.PtrVal.(map[string]gopurs_runtime.Value)["value0"], "value1": v1_7.PtrVal.(map[string]gopurs_runtime.Value)["value1"]}), "value1": v1_7.PtrVal.(map[string]gopurs_runtime.Value)["value1"]}))
+_ = monadTellWriterT2_5_3
+return gopurs_runtime.RecordDict4("listen", "pass", "Monoid0", "MonadTell1", gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_1, "bind"), v_6, gopurs_runtime.Func(func(v1_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_4_2, "pure"), gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), gopurs_runtime.RecordGet(v1_7, "value0"), gopurs_runtime.RecordGet(v1_7, "value1")), gopurs_runtime.RecordGet(v1_7, "value1")))
 }))
-}), "pass": gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(__local_var_3_1.PtrVal.(map[string]gopurs_runtime.Value)["bind"], v_6), gopurs_runtime.Func(func(v1_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(__local_var_4_2.PtrVal.(map[string]gopurs_runtime.Value)["pure"], gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Tuple"), "value0": v1_7.PtrVal.(map[string]gopurs_runtime.Value)["value0"].PtrVal.(map[string]gopurs_runtime.Value)["value0"], "value1": gopurs_runtime.Apply(v1_7.PtrVal.(map[string]gopurs_runtime.Value)["value0"].PtrVal.(map[string]gopurs_runtime.Value)["value1"], v1_7.PtrVal.(map[string]gopurs_runtime.Value)["value1"])}))
+}), gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_1, "bind"), v_6, gopurs_runtime.Func(func(v1_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_4_2, "pure"), gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_7, "value0"), "value0"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_7, "value0"), "value1"), gopurs_runtime.RecordGet(v1_7, "value1"))))
 }))
-}), "Monoid0": gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return dictMonoid_0
-}), "MonadTell1": gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return monadTellWriterT2_5_3
-})})
+}))
 })
 })
 	})
@@ -471,18 +489,22 @@ var once_monadThrowWriterT sync.Once
 func Get_monadThrowWriterT() gopurs_runtime.Value {
 	once_monadThrowWriterT.Do(func() {
 		monadThrowWriterT = gopurs_runtime.Func(func(dictMonoid_0 gopurs_runtime.Value) gopurs_runtime.Value {
-mempty_1_0 := dictMonoid_0.PtrVal.(map[string]gopurs_runtime.Value)["mempty"]
+mempty_1_0 := gopurs_runtime.RecordGet(dictMonoid_0, "mempty")
+_ = mempty_1_0
 monadWriterT1_2_1 := gopurs_runtime.Apply(Get_monadWriterT(), dictMonoid_0)
+_ = monadWriterT1_2_1
 return gopurs_runtime.Func(func(dictMonadThrow_3 gopurs_runtime.Value) gopurs_runtime.Value {
-Monad0_4_2 := gopurs_runtime.Apply(dictMonadThrow_3.PtrVal.(map[string]gopurs_runtime.Value)["Monad0"], gopurs_runtime.Value{})
+Monad0_4_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadThrow_3, "Monad0"), gopurs_runtime.Value{})
+_ = Monad0_4_2
 monadWriterT2_5_3 := gopurs_runtime.Apply(monadWriterT1_2_1, Monad0_4_2)
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"throwError": gopurs_runtime.Func(func(e_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(Monad0_4_2.PtrVal.(map[string]gopurs_runtime.Value)["Bind1"], gopurs_runtime.Value{}).PtrVal.(map[string]gopurs_runtime.Value)["bind"], gopurs_runtime.Apply(dictMonadThrow_3.PtrVal.(map[string]gopurs_runtime.Value)["throwError"], e_6)), gopurs_runtime.Func(func(a_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(Monad0_4_2.PtrVal.(map[string]gopurs_runtime.Value)["Applicative0"], gopurs_runtime.Value{}).PtrVal.(map[string]gopurs_runtime.Value)["pure"], gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Tuple"), "value0": a_7, "value1": mempty_1_0}))
+_ = monadWriterT2_5_3
+return gopurs_runtime.RecordDict2("throwError", "Monad0", gopurs_runtime.Func(func(e_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_4_2, "Bind1"), gopurs_runtime.Value{}), "bind"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadThrow_3, "throwError"), e_6), gopurs_runtime.Func(func(a_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_4_2, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), a_7, mempty_1_0))
 }))
-}), "Monad0": gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return monadWriterT2_5_3
-})})
+}))
 })
 })
 	})
@@ -495,17 +517,17 @@ func Get_monadErrorWriterT() gopurs_runtime.Value {
 	once_monadErrorWriterT.Do(func() {
 		monadErrorWriterT = gopurs_runtime.Func(func(dictMonoid_0 gopurs_runtime.Value) gopurs_runtime.Value {
 monadThrowWriterT1_1_0 := gopurs_runtime.Apply(Get_monadThrowWriterT(), dictMonoid_0)
+_ = monadThrowWriterT1_1_0
 return gopurs_runtime.Func(func(dictMonadError_2 gopurs_runtime.Value) gopurs_runtime.Value {
-monadThrowWriterT2_3_1 := gopurs_runtime.Apply(monadThrowWriterT1_1_0, gopurs_runtime.Apply(dictMonadError_2.PtrVal.(map[string]gopurs_runtime.Value)["MonadThrow0"], gopurs_runtime.Value{}))
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"catchError": gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(h_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(dictMonadError_2.PtrVal.(map[string]gopurs_runtime.Value)["catchError"], v_4), gopurs_runtime.Func(func(e_6 gopurs_runtime.Value) gopurs_runtime.Value {
+monadThrowWriterT2_3_1 := gopurs_runtime.Apply(monadThrowWriterT1_1_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadError_2, "MonadThrow0"), gopurs_runtime.Value{}))
+_ = monadThrowWriterT2_3_1
+return gopurs_runtime.RecordDict2("catchError", "MonadThrow0", gopurs_runtime.Func2(func(v_4 gopurs_runtime.Value, h_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadError_2, "catchError"), v_4, gopurs_runtime.Func(func(e_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(h_5, e_6)
 }))
-})
-}), "MonadThrow0": gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return monadThrowWriterT2_3_1
-})})
+}))
 })
 })
 	})
@@ -517,18 +539,22 @@ var once_monadSTWriterT sync.Once
 func Get_monadSTWriterT() gopurs_runtime.Value {
 	once_monadSTWriterT.Do(func() {
 		monadSTWriterT = gopurs_runtime.Func(func(dictMonoid_0 gopurs_runtime.Value) gopurs_runtime.Value {
-mempty_1_0 := dictMonoid_0.PtrVal.(map[string]gopurs_runtime.Value)["mempty"]
+mempty_1_0 := gopurs_runtime.RecordGet(dictMonoid_0, "mempty")
+_ = mempty_1_0
 monadWriterT1_2_1 := gopurs_runtime.Apply(Get_monadWriterT(), dictMonoid_0)
+_ = monadWriterT1_2_1
 return gopurs_runtime.Func(func(dictMonadST_3 gopurs_runtime.Value) gopurs_runtime.Value {
-Monad0_4_2 := gopurs_runtime.Apply(dictMonadST_3.PtrVal.(map[string]gopurs_runtime.Value)["Monad0"], gopurs_runtime.Value{})
+Monad0_4_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadST_3, "Monad0"), gopurs_runtime.Value{})
+_ = Monad0_4_2
 monadWriterT2_5_3 := gopurs_runtime.Apply(monadWriterT1_2_1, Monad0_4_2)
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"liftST": gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(Monad0_4_2.PtrVal.(map[string]gopurs_runtime.Value)["Bind1"], gopurs_runtime.Value{}).PtrVal.(map[string]gopurs_runtime.Value)["bind"], gopurs_runtime.Apply(dictMonadST_3.PtrVal.(map[string]gopurs_runtime.Value)["liftST"], x_6)), gopurs_runtime.Func(func(a_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(Monad0_4_2.PtrVal.(map[string]gopurs_runtime.Value)["Applicative0"], gopurs_runtime.Value{}).PtrVal.(map[string]gopurs_runtime.Value)["pure"], gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Tuple"), "value0": a_7, "value1": mempty_1_0}))
+_ = monadWriterT2_5_3
+return gopurs_runtime.RecordDict2("liftST", "Monad0", gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_4_2, "Bind1"), gopurs_runtime.Value{}), "bind"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadST_3, "liftST"), x_6), gopurs_runtime.Func(func(a_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_4_2, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), a_7, mempty_1_0))
 }))
-}), "Monad0": gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return monadWriterT2_5_3
-})})
+}))
 })
 })
 	})
@@ -540,26 +566,27 @@ var once_monoidWriterT sync.Once
 func Get_monoidWriterT() gopurs_runtime.Value {
 	once_monoidWriterT.Do(func() {
 		monoidWriterT = gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_1_0 := gopurs_runtime.Apply(dictApplicative_0.PtrVal.(map[string]gopurs_runtime.Value)["Apply0"], gopurs_runtime.Value{})
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{})
+_ = __local_var_1_0
 return gopurs_runtime.Func(func(dictMonoid_2 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_3_1 := gopurs_runtime.Apply(dictMonoid_2.PtrVal.(map[string]gopurs_runtime.Value)["Semigroup0"], gopurs_runtime.Value{})
-Functor0_4_2 := gopurs_runtime.Apply(__local_var_1_0.PtrVal.(map[string]gopurs_runtime.Value)["Functor0"], gopurs_runtime.Value{})
+__local_var_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_2, "Semigroup0"), gopurs_runtime.Value{})
+_ = __local_var_3_1
+Functor0_4_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_0, "Functor0"), gopurs_runtime.Value{})
+_ = Functor0_4_2
 return gopurs_runtime.Func(func(dictMonoid1_5 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_6_3 := gopurs_runtime.Apply(dictMonoid1_5.PtrVal.(map[string]gopurs_runtime.Value)["Semigroup0"], gopurs_runtime.Value{})
-semigroupWriterT3_7_4 := gopurs_runtime.Record(map[string]gopurs_runtime.Value{"append": gopurs_runtime.Func(func(a_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(b_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(__local_var_1_0.PtrVal.(map[string]gopurs_runtime.Value)["apply"], gopurs_runtime.Apply(gopurs_runtime.Apply(Functor0_4_2.PtrVal.(map[string]gopurs_runtime.Value)["map"], gopurs_runtime.Func(func(v3_9 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v4_10 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Tuple"), "value0": gopurs_runtime.Apply(v3_9.PtrVal.(map[string]gopurs_runtime.Value)["value0"], v4_10.PtrVal.(map[string]gopurs_runtime.Value)["value0"]), "value1": gopurs_runtime.Apply(gopurs_runtime.Apply(__local_var_3_1.PtrVal.(map[string]gopurs_runtime.Value)["append"], v3_9.PtrVal.(map[string]gopurs_runtime.Value)["value1"]), v4_10.PtrVal.(map[string]gopurs_runtime.Value)["value1"])})
-})
-})), gopurs_runtime.Apply(gopurs_runtime.Apply(Functor0_4_2.PtrVal.(map[string]gopurs_runtime.Value)["map"], gopurs_runtime.Func(func(v_9 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Tuple"), "value0": gopurs_runtime.Apply(__local_var_6_3.PtrVal.(map[string]gopurs_runtime.Value)["append"], v_9.PtrVal.(map[string]gopurs_runtime.Value)["value0"]), "value1": v_9.PtrVal.(map[string]gopurs_runtime.Value)["value1"]})
-})), a_7))), b_8)
-})
-})})
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"mempty": gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(Get_applicativeWriterT(), dictMonoid_2), dictApplicative_0).PtrVal.(map[string]gopurs_runtime.Value)["pure"], dictMonoid1_5.PtrVal.(map[string]gopurs_runtime.Value)["mempty"]), "Semigroup0": gopurs_runtime.Func(func(_dollar__unused_8 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_6_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid1_5, "Semigroup0"), gopurs_runtime.Value{})
+_ = __local_var_6_3
+semigroupWriterT3_7_4 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func2(func(a_7 gopurs_runtime.Value, b_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "apply"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Functor0_4_2, "map"), gopurs_runtime.Func2(func(v3_9 gopurs_runtime.Value, v4_10 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(v3_9, "value0"), gopurs_runtime.RecordGet(v4_10, "value0")), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_1, "append"), gopurs_runtime.RecordGet(v3_9, "value1"), gopurs_runtime.RecordGet(v4_10, "value1")))
+}), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Functor0_4_2, "map"), gopurs_runtime.Func(func(v_9 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_6_3, "append"), gopurs_runtime.RecordGet(v_9, "value0")), gopurs_runtime.RecordGet(v_9, "value1"))
+}), a_7)), b_8)
+}))
+_ = semigroupWriterT3_7_4
+return gopurs_runtime.RecordDict2("mempty", "Semigroup0", gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply2(Get_applicativeWriterT(), dictMonoid_2, dictApplicative_0), "pure"), gopurs_runtime.RecordGet(dictMonoid1_5, "mempty")), gopurs_runtime.Func(func(_dollar__unused_8 gopurs_runtime.Value) gopurs_runtime.Value {
 return semigroupWriterT3_7_4
-})})
+}))
 })
 })
 })
@@ -572,19 +599,19 @@ var once_altWriterT sync.Once
 func Get_altWriterT() gopurs_runtime.Value {
 	once_altWriterT.Do(func() {
 		altWriterT = gopurs_runtime.Func(func(dictAlt_0 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_1_0 := gopurs_runtime.Apply(dictAlt_0.PtrVal.(map[string]gopurs_runtime.Value)["Functor0"], gopurs_runtime.Value{})
-functorWriterT1_2_1 := gopurs_runtime.Record(map[string]gopurs_runtime.Value{"map": gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(__local_var_1_0.PtrVal.(map[string]gopurs_runtime.Value)["map"], gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Tuple"), "value0": gopurs_runtime.Apply(f_2, v_3.PtrVal.(map[string]gopurs_runtime.Value)["value0"]), "value1": v_3.PtrVal.(map[string]gopurs_runtime.Value)["value1"]})
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictAlt_0, "Functor0"), gopurs_runtime.Value{})
+_ = __local_var_1_0
+functorWriterT1_2_1 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_0, "map"), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), gopurs_runtime.Apply(f_2, gopurs_runtime.RecordGet(v_3, "value0")), gopurs_runtime.RecordGet(v_3, "value1"))
 }))
-})})
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"alt": gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(dictAlt_0.PtrVal.(map[string]gopurs_runtime.Value)["alt"], v_3), v1_4)
-})
-}), "Functor0": gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
+}))
+_ = functorWriterT1_2_1
+return gopurs_runtime.RecordDict2("alt", "Functor0", gopurs_runtime.Func2(func(v_3 gopurs_runtime.Value, v1_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictAlt_0, "alt"), v_3, v1_4)
+}), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return functorWriterT1_2_1
-})})
+}))
 })
 	})
 	return altWriterT
@@ -595,23 +622,25 @@ var once_plusWriterT sync.Once
 func Get_plusWriterT() gopurs_runtime.Value {
 	once_plusWriterT.Do(func() {
 		plusWriterT = gopurs_runtime.Func(func(dictPlus_0 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_1_0 := gopurs_runtime.Apply(dictPlus_0.PtrVal.(map[string]gopurs_runtime.Value)["Alt0"], gopurs_runtime.Value{})
-__local_var_2_1 := gopurs_runtime.Apply(__local_var_1_0.PtrVal.(map[string]gopurs_runtime.Value)["Functor0"], gopurs_runtime.Value{})
-functorWriterT1_3_3 := gopurs_runtime.Record(map[string]gopurs_runtime.Value{"map": gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(__local_var_2_1.PtrVal.(map[string]gopurs_runtime.Value)["map"], gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Tuple"), "value0": gopurs_runtime.Apply(f_3, v_4.PtrVal.(map[string]gopurs_runtime.Value)["value0"]), "value1": v_4.PtrVal.(map[string]gopurs_runtime.Value)["value1"]})
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictPlus_0, "Alt0"), gopurs_runtime.Value{})
+_ = __local_var_1_0
+__local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_0, "Functor0"), gopurs_runtime.Value{})
+_ = __local_var_2_1
+functorWriterT1_3_3 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_1, "map"), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), gopurs_runtime.Apply(f_3, gopurs_runtime.RecordGet(v_4, "value0")), gopurs_runtime.RecordGet(v_4, "value1"))
 }))
-})})
-altWriterT1_3_2 := gopurs_runtime.Record(map[string]gopurs_runtime.Value{"alt": gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(__local_var_1_0.PtrVal.(map[string]gopurs_runtime.Value)["alt"], v_4), v1_5)
-})
-}), "Functor0": gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
+}))
+_ = functorWriterT1_3_3
+altWriterT1_3_2 := gopurs_runtime.RecordDict2("alt", "Functor0", gopurs_runtime.Func2(func(v_4 gopurs_runtime.Value, v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "alt"), v_4, v1_5)
+}), gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return functorWriterT1_3_3
-})})
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"empty": dictPlus_0.PtrVal.(map[string]gopurs_runtime.Value)["empty"], "Alt0": gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
+}))
+_ = altWriterT1_3_2
+return gopurs_runtime.RecordDict2("empty", "Alt0", gopurs_runtime.RecordGet(dictPlus_0, "empty"), gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return altWriterT1_3_2
-})})
+}))
 })
 	})
 	return plusWriterT
@@ -623,31 +652,37 @@ func Get_alternativeWriterT() gopurs_runtime.Value {
 	once_alternativeWriterT.Do(func() {
 		alternativeWriterT = gopurs_runtime.Func(func(dictMonoid_0 gopurs_runtime.Value) gopurs_runtime.Value {
 applicativeWriterT1_1_0 := gopurs_runtime.Apply(Get_applicativeWriterT(), dictMonoid_0)
+_ = applicativeWriterT1_1_0
 return gopurs_runtime.Func(func(dictAlternative_2 gopurs_runtime.Value) gopurs_runtime.Value {
-applicativeWriterT2_3_1 := gopurs_runtime.Apply(applicativeWriterT1_1_0, gopurs_runtime.Apply(dictAlternative_2.PtrVal.(map[string]gopurs_runtime.Value)["Applicative0"], gopurs_runtime.Value{}))
-__local_var_4_2 := gopurs_runtime.Apply(dictAlternative_2.PtrVal.(map[string]gopurs_runtime.Value)["Plus1"], gopurs_runtime.Value{})
-__local_var_5_3 := gopurs_runtime.Apply(__local_var_4_2.PtrVal.(map[string]gopurs_runtime.Value)["Alt0"], gopurs_runtime.Value{})
-__local_var_6_5 := gopurs_runtime.Apply(__local_var_5_3.PtrVal.(map[string]gopurs_runtime.Value)["Functor0"], gopurs_runtime.Value{})
-functorWriterT1_7_6 := gopurs_runtime.Record(map[string]gopurs_runtime.Value{"map": gopurs_runtime.Func(func(f_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(__local_var_6_5.PtrVal.(map[string]gopurs_runtime.Value)["map"], gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Tuple"), "value0": gopurs_runtime.Apply(f_7, v_8.PtrVal.(map[string]gopurs_runtime.Value)["value0"]), "value1": v_8.PtrVal.(map[string]gopurs_runtime.Value)["value1"]})
+applicativeWriterT2_3_1 := gopurs_runtime.Apply(applicativeWriterT1_1_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictAlternative_2, "Applicative0"), gopurs_runtime.Value{}))
+_ = applicativeWriterT2_3_1
+__local_var_4_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictAlternative_2, "Plus1"), gopurs_runtime.Value{})
+_ = __local_var_4_2
+__local_var_5_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_4_2, "Alt0"), gopurs_runtime.Value{})
+_ = __local_var_5_3
+__local_var_6_5 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_5_3, "Functor0"), gopurs_runtime.Value{})
+_ = __local_var_6_5
+functorWriterT1_7_6 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_6_5, "map"), gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), gopurs_runtime.Apply(f_7, gopurs_runtime.RecordGet(v_8, "value0")), gopurs_runtime.RecordGet(v_8, "value1"))
 }))
-})})
-altWriterT1_8_7 := gopurs_runtime.Record(map[string]gopurs_runtime.Value{"alt": gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_9 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(__local_var_5_3.PtrVal.(map[string]gopurs_runtime.Value)["alt"], v_8), v1_9)
-})
-}), "Functor0": gopurs_runtime.Func(func(_dollar__unused_8 gopurs_runtime.Value) gopurs_runtime.Value {
+}))
+_ = functorWriterT1_7_6
+altWriterT1_8_7 := gopurs_runtime.RecordDict2("alt", "Functor0", gopurs_runtime.Func2(func(v_8 gopurs_runtime.Value, v1_9 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_5_3, "alt"), v_8, v1_9)
+}), gopurs_runtime.Func(func(_dollar__unused_8 gopurs_runtime.Value) gopurs_runtime.Value {
 return functorWriterT1_7_6
-})})
-plusWriterT1_6_4 := gopurs_runtime.Record(map[string]gopurs_runtime.Value{"empty": __local_var_4_2.PtrVal.(map[string]gopurs_runtime.Value)["empty"], "Alt0": gopurs_runtime.Func(func(_dollar__unused_9 gopurs_runtime.Value) gopurs_runtime.Value {
+}))
+_ = altWriterT1_8_7
+plusWriterT1_6_4 := gopurs_runtime.RecordDict2("empty", "Alt0", gopurs_runtime.RecordGet(__local_var_4_2, "empty"), gopurs_runtime.Func(func(_dollar__unused_9 gopurs_runtime.Value) gopurs_runtime.Value {
 return altWriterT1_8_7
-})})
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"Applicative0": gopurs_runtime.Func(func(_dollar__unused_7 gopurs_runtime.Value) gopurs_runtime.Value {
+}))
+_ = plusWriterT1_6_4
+return gopurs_runtime.RecordDict2("Applicative0", "Plus1", gopurs_runtime.Func(func(_dollar__unused_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return applicativeWriterT2_3_1
-}), "Plus1": gopurs_runtime.Func(func(_dollar__unused_7 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(_dollar__unused_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return plusWriterT1_6_4
-})})
+}))
 })
 })
 	})
@@ -660,15 +695,19 @@ func Get_monadPlusWriterT() gopurs_runtime.Value {
 	once_monadPlusWriterT.Do(func() {
 		monadPlusWriterT = gopurs_runtime.Func(func(dictMonoid_0 gopurs_runtime.Value) gopurs_runtime.Value {
 monadWriterT1_1_0 := gopurs_runtime.Apply(Get_monadWriterT(), dictMonoid_0)
+_ = monadWriterT1_1_0
 alternativeWriterT1_2_1 := gopurs_runtime.Apply(Get_alternativeWriterT(), dictMonoid_0)
+_ = alternativeWriterT1_2_1
 return gopurs_runtime.Func(func(dictMonadPlus_3 gopurs_runtime.Value) gopurs_runtime.Value {
-monadWriterT2_4_2 := gopurs_runtime.Apply(monadWriterT1_1_0, gopurs_runtime.Apply(dictMonadPlus_3.PtrVal.(map[string]gopurs_runtime.Value)["Monad0"], gopurs_runtime.Value{}))
-alternativeWriterT2_5_3 := gopurs_runtime.Apply(alternativeWriterT1_2_1, gopurs_runtime.Apply(dictMonadPlus_3.PtrVal.(map[string]gopurs_runtime.Value)["Alternative1"], gopurs_runtime.Value{}))
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"Monad0": gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
+monadWriterT2_4_2 := gopurs_runtime.Apply(monadWriterT1_1_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadPlus_3, "Monad0"), gopurs_runtime.Value{}))
+_ = monadWriterT2_4_2
+alternativeWriterT2_5_3 := gopurs_runtime.Apply(alternativeWriterT1_2_1, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadPlus_3, "Alternative1"), gopurs_runtime.Value{}))
+_ = alternativeWriterT2_5_3
+return gopurs_runtime.RecordDict2("Monad0", "Alternative1", gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return monadWriterT2_4_2
-}), "Alternative1": gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return alternativeWriterT2_5_3
-})})
+}))
 })
 })
 	})

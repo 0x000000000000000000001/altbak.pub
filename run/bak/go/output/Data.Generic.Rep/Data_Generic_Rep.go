@@ -3,7 +3,6 @@ package Data_Generic_Rep
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
 	pkg_Data_Show "gopurs/output/Data.Show"
 )
 
@@ -12,7 +11,7 @@ var once_Inl sync.Once
 func Get_Inl() gopurs_runtime.Value {
 	once_Inl.Do(func() {
 		Inl = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Inl"), "value0": value0})
+return gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Inl"), value0)
 })
 	})
 	return Inl
@@ -23,7 +22,7 @@ var once_Inr sync.Once
 func Get_Inr() gopurs_runtime.Value {
 	once_Inr.Do(func() {
 		Inr = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Inr"), "value0": value0})
+return gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Inr"), value0)
 })
 	})
 	return Inr
@@ -35,7 +34,7 @@ func Get_Product() gopurs_runtime.Value {
 	once_Product.Do(func() {
 		Product = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Product"), "value0": value0, "value1": value1})
+return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Product"), value0, value1)
 })
 })
 	})
@@ -46,7 +45,7 @@ var NoArguments gopurs_runtime.Value
 var once_NoArguments sync.Once
 func Get_NoArguments() gopurs_runtime.Value {
 	once_NoArguments.Do(func() {
-		NoArguments = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("NoArguments")})
+		NoArguments = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("NoArguments"))
 	})
 	return NoArguments
 }
@@ -78,7 +77,7 @@ var once_to sync.Once
 func Get_to() gopurs_runtime.Value {
 	once_to.Do(func() {
 		to = gopurs_runtime.Func(func(dict_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return dict_0.PtrVal.(map[string]gopurs_runtime.Value)["to"]
+return gopurs_runtime.RecordGet(dict_0, "to")
 })
 	})
 	return to
@@ -88,21 +87,20 @@ var showSum gopurs_runtime.Value
 var once_showSum sync.Once
 func Get_showSum() gopurs_runtime.Value {
 	once_showSum.Do(func() {
-		showSum = gopurs_runtime.Func(func(dictShow_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(dictShow1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"show": gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+		showSum = gopurs_runtime.Func2(func(dictShow_0 gopurs_runtime.Value, dictShow1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_2.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Inl")).IntVal != 0 {
-__t0 = gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Semigroup.Get_concatString(), gopurs_runtime.Str("(Inl ")), gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Semigroup.Get_concatString(), gopurs_runtime.Apply(dictShow_0.PtrVal.(map[string]gopurs_runtime.Value)["show"], v_2.PtrVal.(map[string]gopurs_runtime.Value)["value0"])), gopurs_runtime.Str(")")))
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_2, "_tag").StrVal == "Inl")).IntVal != 0 {
+__t0 = gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str("(Inl ").StrVal + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), gopurs_runtime.RecordGet(v_2, "value0")).StrVal).StrVal + gopurs_runtime.Str(")").StrVal)
 goto end_branch_0
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(v_2.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Inr")).IntVal != 0 {
-__t0 = gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Semigroup.Get_concatString(), gopurs_runtime.Str("(Inr ")), gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Semigroup.Get_concatString(), gopurs_runtime.Apply(dictShow1_1.PtrVal.(map[string]gopurs_runtime.Value)["show"], v_2.PtrVal.(map[string]gopurs_runtime.Value)["value0"])), gopurs_runtime.Str(")")))
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_2, "_tag").StrVal == "Inr")).IntVal != 0 {
+__t0 = gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str("(Inr ").StrVal + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow1_1, "show"), gopurs_runtime.RecordGet(v_2, "value0")).StrVal).StrVal + gopurs_runtime.Str(")").StrVal)
 goto end_branch_0
 } else {
 
@@ -113,8 +111,7 @@ __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_0:
 return __t0
-})})
-})
+}))
 })
 	})
 	return showSum
@@ -124,12 +121,10 @@ var showProduct gopurs_runtime.Value
 var once_showProduct sync.Once
 func Get_showProduct() gopurs_runtime.Value {
 	once_showProduct.Do(func() {
-		showProduct = gopurs_runtime.Func(func(dictShow_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(dictShow1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"show": gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Semigroup.Get_concatString(), gopurs_runtime.Str("(Product ")), gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Semigroup.Get_concatString(), gopurs_runtime.Apply(dictShow_0.PtrVal.(map[string]gopurs_runtime.Value)["show"], v_2.PtrVal.(map[string]gopurs_runtime.Value)["value0"])), gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Semigroup.Get_concatString(), gopurs_runtime.Str(" ")), gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Semigroup.Get_concatString(), gopurs_runtime.Apply(dictShow1_1.PtrVal.(map[string]gopurs_runtime.Value)["show"], v_2.PtrVal.(map[string]gopurs_runtime.Value)["value1"])), gopurs_runtime.Str(")")))))
-})})
-})
+		showProduct = gopurs_runtime.Func2(func(dictShow_0 gopurs_runtime.Value, dictShow1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str("(Product ").StrVal + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), gopurs_runtime.RecordGet(v_2, "value0")).StrVal).StrVal + gopurs_runtime.Str(" ").StrVal).StrVal + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow1_1, "show"), gopurs_runtime.RecordGet(v_2, "value1")).StrVal).StrVal + gopurs_runtime.Str(")").StrVal)
+}))
 })
 	})
 	return showProduct
@@ -139,9 +134,9 @@ var showNoArguments gopurs_runtime.Value
 var once_showNoArguments sync.Once
 func Get_showNoArguments() gopurs_runtime.Value {
 	once_showNoArguments.Do(func() {
-		showNoArguments = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"show": gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		showNoArguments = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Str("NoArguments")
-})})
+}))
 	})
 	return showNoArguments
 }
@@ -150,12 +145,10 @@ var showConstructor gopurs_runtime.Value
 var once_showConstructor sync.Once
 func Get_showConstructor() gopurs_runtime.Value {
 	once_showConstructor.Do(func() {
-		showConstructor = gopurs_runtime.Func(func(dictIsSymbol_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(dictShow_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"show": gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Semigroup.Get_concatString(), gopurs_runtime.Str("(Constructor @")), gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Semigroup.Get_concatString(), gopurs_runtime.Apply(pkg_Data_Show.Get_showStringImpl(), gopurs_runtime.Apply(dictIsSymbol_0.PtrVal.(map[string]gopurs_runtime.Value)["reflectSymbol"], gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Proxy")})))), gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Semigroup.Get_concatString(), gopurs_runtime.Str(" ")), gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Semigroup.Get_concatString(), gopurs_runtime.Apply(dictShow_1.PtrVal.(map[string]gopurs_runtime.Value)["show"], v_2)), gopurs_runtime.Str(")")))))
-})})
-})
+		showConstructor = gopurs_runtime.Func2(func(dictIsSymbol_0 gopurs_runtime.Value, dictShow_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str("(Constructor @").StrVal + gopurs_runtime.Apply(pkg_Data_Show.Get_showStringImpl(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0, "reflectSymbol"), gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Proxy")))).StrVal).StrVal + gopurs_runtime.Str(" ").StrVal).StrVal + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_1, "show"), v_2).StrVal).StrVal + gopurs_runtime.Str(")").StrVal)
+}))
 })
 	})
 	return showConstructor
@@ -166,9 +159,9 @@ var once_showArgument sync.Once
 func Get_showArgument() gopurs_runtime.Value {
 	once_showArgument.Do(func() {
 		showArgument = gopurs_runtime.Func(func(dictShow_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"show": gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Semigroup.Get_concatString(), gopurs_runtime.Str("(Argument ")), gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Semigroup.Get_concatString(), gopurs_runtime.Apply(dictShow_0.PtrVal.(map[string]gopurs_runtime.Value)["show"], v_1)), gopurs_runtime.Str(")")))
-})})
+return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str("(Argument ").StrVal + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), v_1).StrVal).StrVal + gopurs_runtime.Str(")").StrVal)
+}))
 })
 	})
 	return showArgument
@@ -178,10 +171,8 @@ var repOf gopurs_runtime.Value
 var once_repOf sync.Once
 func Get_repOf() gopurs_runtime.Value {
 	once_repOf.Do(func() {
-		repOf = gopurs_runtime.Func(func(dictGeneric_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Proxy")})
-})
+		repOf = gopurs_runtime.Func2(func(dictGeneric_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Proxy"))
 })
 	})
 	return repOf
@@ -192,7 +183,7 @@ var once_from sync.Once
 func Get_from() gopurs_runtime.Value {
 	once_from.Do(func() {
 		from = gopurs_runtime.Func(func(dict_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return dict_0.PtrVal.(map[string]gopurs_runtime.Value)["from"]
+return gopurs_runtime.RecordGet(dict_0, "from")
 })
 	})
 	return from

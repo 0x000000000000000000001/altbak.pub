@@ -4,8 +4,6 @@ import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
 	pkg_Effect_Console "gopurs/output/Effect.Console"
-	pkg_Data_Semiring "gopurs/output/Data.Semiring"
-	pkg_Data_Ring "gopurs/output/Data.Ring"
 	pkg_Data_Show "gopurs/output/Data.Show"
 )
 
@@ -35,7 +33,7 @@ _ = v1_1
 var __t0 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(v_0.IntVal == gopurs_runtime.Int(0).IntVal)).IntVal != 0 {
-__t0 = gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Semiring.Get_intAdd(), v1_1), gopurs_runtime.Int(1))
+__t0 = gopurs_runtime.Int(v1_1.IntVal + gopurs_runtime.Int(1).IntVal)
 goto end_branch_0
 } else {
 
@@ -43,14 +41,14 @@ goto end_branch_0
 }
 {
 if (gopurs_runtime.Bool(v1_1.IntVal == gopurs_runtime.Int(0).IntVal)).IntVal != 0 {
-__t0 = gopurs_runtime.Apply(gopurs_runtime.Apply(Get_ackermann(), gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Ring.Get_intSub(), v_0), gopurs_runtime.Int(1))), gopurs_runtime.Int(1))
+__t0 = gopurs_runtime.Apply2(Get_ackermann(), gopurs_runtime.Int(v_0.IntVal - gopurs_runtime.Int(1).IntVal), gopurs_runtime.Int(1))
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = gopurs_runtime.Apply(gopurs_runtime.Apply(Get_ackermann(), gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Ring.Get_intSub(), v_0), gopurs_runtime.Int(1))), gopurs_runtime.Apply(gopurs_runtime.Apply(Get_ackermann(), v_0), gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Ring.Get_intSub(), v1_1), gopurs_runtime.Int(1))))
+__t0 = gopurs_runtime.Apply2(Get_ackermann(), gopurs_runtime.Int(v_0.IntVal - gopurs_runtime.Int(1).IntVal), gopurs_runtime.Apply2(Get_ackermann(), v_0, gopurs_runtime.Int(v1_1.IntVal - gopurs_runtime.Int(1).IntVal)))
 }
 end_branch_0:
 return __t0
@@ -66,7 +64,7 @@ var act gopurs_runtime.Value
 var once_act sync.Once
 func Get_act() gopurs_runtime.Value {
 	once_act.Do(func() {
-		act = gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(pkg_Data_Show.Get_showIntImpl(), gopurs_runtime.Apply(gopurs_runtime.Apply(Get_ackermann(), gopurs_runtime.Int(3)), gopurs_runtime.Int(4))))
+		act = gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(pkg_Data_Show.Get_showIntImpl(), gopurs_runtime.Apply2(Get_ackermann(), gopurs_runtime.Int(3), gopurs_runtime.Int(4))))
 	})
 	return act
 }

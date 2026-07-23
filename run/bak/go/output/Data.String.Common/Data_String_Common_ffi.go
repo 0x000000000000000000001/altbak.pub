@@ -1,8 +1,8 @@
 package Data_String_Common
 
 import (
-	"strings"
 	"gopurs/output/gopurs_runtime"
+	"strings"
 )
 
 var X_LocaleCompare = gopurs_runtime.Func(func(lt gopurs_runtime.Value) gopurs_runtime.Value {

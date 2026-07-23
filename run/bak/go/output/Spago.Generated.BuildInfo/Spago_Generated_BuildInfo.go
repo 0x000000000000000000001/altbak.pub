@@ -27,7 +27,7 @@ var packages gopurs_runtime.Value
 var once_packages sync.Once
 func Get_packages() gopurs_runtime.Value {
 	once_packages.Do(func() {
-		packages = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"ps-go-test": gopurs_runtime.Str("0.0.0")})
+		packages = gopurs_runtime.RecordDict1("ps-go-test", gopurs_runtime.Str("0.0.0"))
 	})
 	return packages
 }

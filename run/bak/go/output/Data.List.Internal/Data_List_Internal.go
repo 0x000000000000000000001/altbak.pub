@@ -9,7 +9,7 @@ var Leaf gopurs_runtime.Value
 var once_Leaf sync.Once
 func Get_Leaf() gopurs_runtime.Value {
 	once_Leaf.Do(func() {
-		Leaf = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Leaf")})
+		Leaf = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Leaf"))
 	})
 	return Leaf
 }
@@ -21,7 +21,7 @@ func Get_Two() gopurs_runtime.Value {
 		Two = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Two"), "value0": value0, "value1": value1, "value2": value2})
+return gopurs_runtime.RecordDict4("_tag", "value0", "value1", "value2", gopurs_runtime.Str("Two"), value0, value1, value2)
 })
 })
 })
@@ -38,7 +38,7 @@ return gopurs_runtime.Func(func(value1 gopurs_runtime.Value) gopurs_runtime.Valu
 return gopurs_runtime.Func(func(value2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Three"), "value0": value0, "value1": value1, "value2": value2, "value3": value3, "value4": value4})
+return gopurs_runtime.RecordDict([]string{"_tag", "value0", "value1", "value2", "value3", "value4"}, []gopurs_runtime.Value{gopurs_runtime.Str("Three"), value0, value1, value2, value3, value4})
 })
 })
 })
@@ -54,7 +54,7 @@ func Get_TwoLeft() gopurs_runtime.Value {
 	once_TwoLeft.Do(func() {
 		TwoLeft = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("TwoLeft"), "value0": value0, "value1": value1})
+return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("TwoLeft"), value0, value1)
 })
 })
 	})
@@ -67,7 +67,7 @@ func Get_TwoRight() gopurs_runtime.Value {
 	once_TwoRight.Do(func() {
 		TwoRight = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("TwoRight"), "value0": value0, "value1": value1})
+return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("TwoRight"), value0, value1)
 })
 })
 	})
@@ -82,7 +82,7 @@ func Get_ThreeLeft() gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("ThreeLeft"), "value0": value0, "value1": value1, "value2": value2, "value3": value3})
+return gopurs_runtime.RecordDict5("_tag", "value0", "value1", "value2", "value3", gopurs_runtime.Str("ThreeLeft"), value0, value1, value2, value3)
 })
 })
 })
@@ -99,7 +99,7 @@ func Get_ThreeMiddle() gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("ThreeMiddle"), "value0": value0, "value1": value1, "value2": value2, "value3": value3})
+return gopurs_runtime.RecordDict5("_tag", "value0", "value1", "value2", "value3", gopurs_runtime.Str("ThreeMiddle"), value0, value1, value2, value3)
 })
 })
 })
@@ -116,7 +116,7 @@ func Get_ThreeRight() gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("ThreeRight"), "value0": value0, "value1": value1, "value2": value2, "value3": value3})
+return gopurs_runtime.RecordDict5("_tag", "value0", "value1", "value2", "value3", gopurs_runtime.Str("ThreeRight"), value0, value1, value2, value3)
 })
 })
 })
@@ -132,7 +132,7 @@ func Get_KickUp() gopurs_runtime.Value {
 		KickUp = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("KickUp"), "value0": value0, "value1": value1, "value2": value2})
+return gopurs_runtime.RecordDict4("_tag", "value0", "value1", "value2", gopurs_runtime.Str("KickUp"), value0, value1, value2)
 })
 })
 })
@@ -156,7 +156,7 @@ var v1_1 = v1_1_loop
 _ = v1_1
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_0.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Nil")).IntVal != 0 {
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_0, "_tag").StrVal == "Nil")).IntVal != 0 {
 __t0 = v1_1
 goto end_branch_0
 } else {
@@ -164,43 +164,43 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(v_0.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Cons")).IntVal != 0 {
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_0, "_tag").StrVal == "Cons")).IntVal != 0 {
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_0.PtrVal.(map[string]gopurs_runtime.Value)["value0"].PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "TwoLeft")).IntVal != 0 {
-__t1 = gopurs_runtime.Apply(gopurs_runtime.Apply(Get_fromZipper(), v_0.PtrVal.(map[string]gopurs_runtime.Value)["value1"]), gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Two"), "value0": v1_1, "value1": v_0.PtrVal.(map[string]gopurs_runtime.Value)["value0"].PtrVal.(map[string]gopurs_runtime.Value)["value0"], "value2": v_0.PtrVal.(map[string]gopurs_runtime.Value)["value0"].PtrVal.(map[string]gopurs_runtime.Value)["value1"]}))
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_0, "value0"), "_tag").StrVal == "TwoLeft")).IntVal != 0 {
+__t1 = gopurs_runtime.Apply2(Get_fromZipper(), gopurs_runtime.RecordGet(v_0, "value1"), gopurs_runtime.RecordDict4("_tag", "value0", "value1", "value2", gopurs_runtime.Str("Two"), v1_1, gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_0, "value0"), "value0"), gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_0, "value0"), "value1")))
 goto end_branch_1
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(v_0.PtrVal.(map[string]gopurs_runtime.Value)["value0"].PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "TwoRight")).IntVal != 0 {
-__t1 = gopurs_runtime.Apply(gopurs_runtime.Apply(Get_fromZipper(), v_0.PtrVal.(map[string]gopurs_runtime.Value)["value1"]), gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Two"), "value0": v_0.PtrVal.(map[string]gopurs_runtime.Value)["value0"].PtrVal.(map[string]gopurs_runtime.Value)["value0"], "value1": v_0.PtrVal.(map[string]gopurs_runtime.Value)["value0"].PtrVal.(map[string]gopurs_runtime.Value)["value1"], "value2": v1_1}))
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_0, "value0"), "_tag").StrVal == "TwoRight")).IntVal != 0 {
+__t1 = gopurs_runtime.Apply2(Get_fromZipper(), gopurs_runtime.RecordGet(v_0, "value1"), gopurs_runtime.RecordDict4("_tag", "value0", "value1", "value2", gopurs_runtime.Str("Two"), gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_0, "value0"), "value0"), gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_0, "value0"), "value1"), v1_1))
 goto end_branch_1
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(v_0.PtrVal.(map[string]gopurs_runtime.Value)["value0"].PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "ThreeLeft")).IntVal != 0 {
-__t1 = gopurs_runtime.Apply(gopurs_runtime.Apply(Get_fromZipper(), v_0.PtrVal.(map[string]gopurs_runtime.Value)["value1"]), gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Three"), "value0": v1_1, "value1": v_0.PtrVal.(map[string]gopurs_runtime.Value)["value0"].PtrVal.(map[string]gopurs_runtime.Value)["value0"], "value2": v_0.PtrVal.(map[string]gopurs_runtime.Value)["value0"].PtrVal.(map[string]gopurs_runtime.Value)["value1"], "value3": v_0.PtrVal.(map[string]gopurs_runtime.Value)["value0"].PtrVal.(map[string]gopurs_runtime.Value)["value2"], "value4": v_0.PtrVal.(map[string]gopurs_runtime.Value)["value0"].PtrVal.(map[string]gopurs_runtime.Value)["value3"]}))
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_0, "value0"), "_tag").StrVal == "ThreeLeft")).IntVal != 0 {
+__t1 = gopurs_runtime.Apply2(Get_fromZipper(), gopurs_runtime.RecordGet(v_0, "value1"), gopurs_runtime.RecordDict([]string{"_tag", "value0", "value1", "value2", "value3", "value4"}, []gopurs_runtime.Value{gopurs_runtime.Str("Three"), v1_1, gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_0, "value0"), "value0"), gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_0, "value0"), "value1"), gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_0, "value0"), "value2"), gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_0, "value0"), "value3")}))
 goto end_branch_1
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(v_0.PtrVal.(map[string]gopurs_runtime.Value)["value0"].PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "ThreeMiddle")).IntVal != 0 {
-__t1 = gopurs_runtime.Apply(gopurs_runtime.Apply(Get_fromZipper(), v_0.PtrVal.(map[string]gopurs_runtime.Value)["value1"]), gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Three"), "value0": v_0.PtrVal.(map[string]gopurs_runtime.Value)["value0"].PtrVal.(map[string]gopurs_runtime.Value)["value0"], "value1": v_0.PtrVal.(map[string]gopurs_runtime.Value)["value0"].PtrVal.(map[string]gopurs_runtime.Value)["value1"], "value2": v1_1, "value3": v_0.PtrVal.(map[string]gopurs_runtime.Value)["value0"].PtrVal.(map[string]gopurs_runtime.Value)["value2"], "value4": v_0.PtrVal.(map[string]gopurs_runtime.Value)["value0"].PtrVal.(map[string]gopurs_runtime.Value)["value3"]}))
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_0, "value0"), "_tag").StrVal == "ThreeMiddle")).IntVal != 0 {
+__t1 = gopurs_runtime.Apply2(Get_fromZipper(), gopurs_runtime.RecordGet(v_0, "value1"), gopurs_runtime.RecordDict([]string{"_tag", "value0", "value1", "value2", "value3", "value4"}, []gopurs_runtime.Value{gopurs_runtime.Str("Three"), gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_0, "value0"), "value0"), gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_0, "value0"), "value1"), v1_1, gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_0, "value0"), "value2"), gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_0, "value0"), "value3")}))
 goto end_branch_1
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(v_0.PtrVal.(map[string]gopurs_runtime.Value)["value0"].PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "ThreeRight")).IntVal != 0 {
-__t1 = gopurs_runtime.Apply(gopurs_runtime.Apply(Get_fromZipper(), v_0.PtrVal.(map[string]gopurs_runtime.Value)["value1"]), gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Three"), "value0": v_0.PtrVal.(map[string]gopurs_runtime.Value)["value0"].PtrVal.(map[string]gopurs_runtime.Value)["value0"], "value1": v_0.PtrVal.(map[string]gopurs_runtime.Value)["value0"].PtrVal.(map[string]gopurs_runtime.Value)["value1"], "value2": v_0.PtrVal.(map[string]gopurs_runtime.Value)["value0"].PtrVal.(map[string]gopurs_runtime.Value)["value2"], "value3": v_0.PtrVal.(map[string]gopurs_runtime.Value)["value0"].PtrVal.(map[string]gopurs_runtime.Value)["value3"], "value4": v1_1}))
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_0, "value0"), "_tag").StrVal == "ThreeRight")).IntVal != 0 {
+__t1 = gopurs_runtime.Apply2(Get_fromZipper(), gopurs_runtime.RecordGet(v_0, "value1"), gopurs_runtime.RecordDict([]string{"_tag", "value0", "value1", "value2", "value3", "value4"}, []gopurs_runtime.Value{gopurs_runtime.Str("Three"), gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_0, "value0"), "value0"), gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_0, "value0"), "value1"), gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_0, "value0"), "value2"), gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_0, "value0"), "value3"), v1_1}))
 goto end_branch_1
 } else {
 
@@ -233,9 +233,7 @@ var insertAndLookupBy gopurs_runtime.Value
 var once_insertAndLookupBy sync.Once
 func Get_insertAndLookupBy() gopurs_runtime.Value {
 	once_insertAndLookupBy.Do(func() {
-		insertAndLookupBy = gopurs_runtime.Func(func(comp_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(k_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(orig_2 gopurs_runtime.Value) gopurs_runtime.Value {
+		insertAndLookupBy = gopurs_runtime.Func3(func(comp_0 gopurs_runtime.Value, k_1 gopurs_runtime.Value, orig_2 gopurs_runtime.Value) gopurs_runtime.Value {
 var up_3_0 gopurs_runtime.Value
 up_3_0 = gopurs_runtime.Func(func(v_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_5_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -249,36 +247,36 @@ var v1_5 = v1_5_loop
 _ = v1_5
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_4.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Nil")).IntVal != 0 {
-__t1 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Two"), "value0": v1_5.PtrVal.(map[string]gopurs_runtime.Value)["value0"], "value1": v1_5.PtrVal.(map[string]gopurs_runtime.Value)["value1"], "value2": v1_5.PtrVal.(map[string]gopurs_runtime.Value)["value2"]})
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_4, "_tag").StrVal == "Nil")).IntVal != 0 {
+__t1 = gopurs_runtime.RecordDict4("_tag", "value0", "value1", "value2", gopurs_runtime.Str("Two"), gopurs_runtime.RecordGet(v1_5, "value0"), gopurs_runtime.RecordGet(v1_5, "value1"), gopurs_runtime.RecordGet(v1_5, "value2"))
 goto end_branch_1
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(v_4.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Cons")).IntVal != 0 {
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_4, "_tag").StrVal == "Cons")).IntVal != 0 {
 var __t2 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_4.PtrVal.(map[string]gopurs_runtime.Value)["value0"].PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "TwoLeft")).IntVal != 0 {
-__t2 = gopurs_runtime.Apply(gopurs_runtime.Apply(Get_fromZipper(), v_4.PtrVal.(map[string]gopurs_runtime.Value)["value1"]), gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Three"), "value0": v1_5.PtrVal.(map[string]gopurs_runtime.Value)["value0"], "value1": v1_5.PtrVal.(map[string]gopurs_runtime.Value)["value1"], "value2": v1_5.PtrVal.(map[string]gopurs_runtime.Value)["value2"], "value3": v_4.PtrVal.(map[string]gopurs_runtime.Value)["value0"].PtrVal.(map[string]gopurs_runtime.Value)["value0"], "value4": v_4.PtrVal.(map[string]gopurs_runtime.Value)["value0"].PtrVal.(map[string]gopurs_runtime.Value)["value1"]}))
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_4, "value0"), "_tag").StrVal == "TwoLeft")).IntVal != 0 {
+__t2 = gopurs_runtime.Apply2(Get_fromZipper(), gopurs_runtime.RecordGet(v_4, "value1"), gopurs_runtime.RecordDict([]string{"_tag", "value0", "value1", "value2", "value3", "value4"}, []gopurs_runtime.Value{gopurs_runtime.Str("Three"), gopurs_runtime.RecordGet(v1_5, "value0"), gopurs_runtime.RecordGet(v1_5, "value1"), gopurs_runtime.RecordGet(v1_5, "value2"), gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_4, "value0"), "value0"), gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_4, "value0"), "value1")}))
 goto end_branch_2
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(v_4.PtrVal.(map[string]gopurs_runtime.Value)["value0"].PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "TwoRight")).IntVal != 0 {
-__t2 = gopurs_runtime.Apply(gopurs_runtime.Apply(Get_fromZipper(), v_4.PtrVal.(map[string]gopurs_runtime.Value)["value1"]), gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Three"), "value0": v_4.PtrVal.(map[string]gopurs_runtime.Value)["value0"].PtrVal.(map[string]gopurs_runtime.Value)["value0"], "value1": v_4.PtrVal.(map[string]gopurs_runtime.Value)["value0"].PtrVal.(map[string]gopurs_runtime.Value)["value1"], "value2": v1_5.PtrVal.(map[string]gopurs_runtime.Value)["value0"], "value3": v1_5.PtrVal.(map[string]gopurs_runtime.Value)["value1"], "value4": v1_5.PtrVal.(map[string]gopurs_runtime.Value)["value2"]}))
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_4, "value0"), "_tag").StrVal == "TwoRight")).IntVal != 0 {
+__t2 = gopurs_runtime.Apply2(Get_fromZipper(), gopurs_runtime.RecordGet(v_4, "value1"), gopurs_runtime.RecordDict([]string{"_tag", "value0", "value1", "value2", "value3", "value4"}, []gopurs_runtime.Value{gopurs_runtime.Str("Three"), gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_4, "value0"), "value0"), gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_4, "value0"), "value1"), gopurs_runtime.RecordGet(v1_5, "value0"), gopurs_runtime.RecordGet(v1_5, "value1"), gopurs_runtime.RecordGet(v1_5, "value2")}))
 goto end_branch_2
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(v_4.PtrVal.(map[string]gopurs_runtime.Value)["value0"].PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "ThreeLeft")).IntVal != 0 {
-v_4_loop = v_4.PtrVal.(map[string]gopurs_runtime.Value)["value1"]
-v1_5_loop = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("KickUp"), "value0": gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Two"), "value0": v1_5.PtrVal.(map[string]gopurs_runtime.Value)["value0"], "value1": v1_5.PtrVal.(map[string]gopurs_runtime.Value)["value1"], "value2": v1_5.PtrVal.(map[string]gopurs_runtime.Value)["value2"]}), "value1": v_4.PtrVal.(map[string]gopurs_runtime.Value)["value0"].PtrVal.(map[string]gopurs_runtime.Value)["value0"], "value2": gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Two"), "value0": v_4.PtrVal.(map[string]gopurs_runtime.Value)["value0"].PtrVal.(map[string]gopurs_runtime.Value)["value1"], "value1": v_4.PtrVal.(map[string]gopurs_runtime.Value)["value0"].PtrVal.(map[string]gopurs_runtime.Value)["value2"], "value2": v_4.PtrVal.(map[string]gopurs_runtime.Value)["value0"].PtrVal.(map[string]gopurs_runtime.Value)["value3"]})})
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_4, "value0"), "_tag").StrVal == "ThreeLeft")).IntVal != 0 {
+v_4_loop = gopurs_runtime.RecordGet(v_4, "value1")
+v1_5_loop = gopurs_runtime.RecordDict4("_tag", "value0", "value1", "value2", gopurs_runtime.Str("KickUp"), gopurs_runtime.RecordDict4("_tag", "value0", "value1", "value2", gopurs_runtime.Str("Two"), gopurs_runtime.RecordGet(v1_5, "value0"), gopurs_runtime.RecordGet(v1_5, "value1"), gopurs_runtime.RecordGet(v1_5, "value2")), gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_4, "value0"), "value0"), gopurs_runtime.RecordDict4("_tag", "value0", "value1", "value2", gopurs_runtime.Str("Two"), gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_4, "value0"), "value1"), gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_4, "value0"), "value2"), gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_4, "value0"), "value3")))
 continue up_3_0
 __t2 = gopurs_runtime.Value{}
 goto end_branch_2
@@ -287,9 +285,9 @@ goto end_branch_2
 }
 }
 {
-if (gopurs_runtime.Bool(v_4.PtrVal.(map[string]gopurs_runtime.Value)["value0"].PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "ThreeMiddle")).IntVal != 0 {
-v_4_loop = v_4.PtrVal.(map[string]gopurs_runtime.Value)["value1"]
-v1_5_loop = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("KickUp"), "value0": gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Two"), "value0": v_4.PtrVal.(map[string]gopurs_runtime.Value)["value0"].PtrVal.(map[string]gopurs_runtime.Value)["value0"], "value1": v_4.PtrVal.(map[string]gopurs_runtime.Value)["value0"].PtrVal.(map[string]gopurs_runtime.Value)["value1"], "value2": v1_5.PtrVal.(map[string]gopurs_runtime.Value)["value0"]}), "value1": v1_5.PtrVal.(map[string]gopurs_runtime.Value)["value1"], "value2": gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Two"), "value0": v1_5.PtrVal.(map[string]gopurs_runtime.Value)["value2"], "value1": v_4.PtrVal.(map[string]gopurs_runtime.Value)["value0"].PtrVal.(map[string]gopurs_runtime.Value)["value2"], "value2": v_4.PtrVal.(map[string]gopurs_runtime.Value)["value0"].PtrVal.(map[string]gopurs_runtime.Value)["value3"]})})
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_4, "value0"), "_tag").StrVal == "ThreeMiddle")).IntVal != 0 {
+v_4_loop = gopurs_runtime.RecordGet(v_4, "value1")
+v1_5_loop = gopurs_runtime.RecordDict4("_tag", "value0", "value1", "value2", gopurs_runtime.Str("KickUp"), gopurs_runtime.RecordDict4("_tag", "value0", "value1", "value2", gopurs_runtime.Str("Two"), gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_4, "value0"), "value0"), gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_4, "value0"), "value1"), gopurs_runtime.RecordGet(v1_5, "value0")), gopurs_runtime.RecordGet(v1_5, "value1"), gopurs_runtime.RecordDict4("_tag", "value0", "value1", "value2", gopurs_runtime.Str("Two"), gopurs_runtime.RecordGet(v1_5, "value2"), gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_4, "value0"), "value2"), gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_4, "value0"), "value3")))
 continue up_3_0
 __t2 = gopurs_runtime.Value{}
 goto end_branch_2
@@ -298,9 +296,9 @@ goto end_branch_2
 }
 }
 {
-if (gopurs_runtime.Bool(v_4.PtrVal.(map[string]gopurs_runtime.Value)["value0"].PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "ThreeRight")).IntVal != 0 {
-v_4_loop = v_4.PtrVal.(map[string]gopurs_runtime.Value)["value1"]
-v1_5_loop = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("KickUp"), "value0": gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Two"), "value0": v_4.PtrVal.(map[string]gopurs_runtime.Value)["value0"].PtrVal.(map[string]gopurs_runtime.Value)["value0"], "value1": v_4.PtrVal.(map[string]gopurs_runtime.Value)["value0"].PtrVal.(map[string]gopurs_runtime.Value)["value1"], "value2": v_4.PtrVal.(map[string]gopurs_runtime.Value)["value0"].PtrVal.(map[string]gopurs_runtime.Value)["value2"]}), "value1": v_4.PtrVal.(map[string]gopurs_runtime.Value)["value0"].PtrVal.(map[string]gopurs_runtime.Value)["value3"], "value2": gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Two"), "value0": v1_5.PtrVal.(map[string]gopurs_runtime.Value)["value0"], "value1": v1_5.PtrVal.(map[string]gopurs_runtime.Value)["value1"], "value2": v1_5.PtrVal.(map[string]gopurs_runtime.Value)["value2"]})})
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_4, "value0"), "_tag").StrVal == "ThreeRight")).IntVal != 0 {
+v_4_loop = gopurs_runtime.RecordGet(v_4, "value1")
+v1_5_loop = gopurs_runtime.RecordDict4("_tag", "value0", "value1", "value2", gopurs_runtime.Str("KickUp"), gopurs_runtime.RecordDict4("_tag", "value0", "value1", "value2", gopurs_runtime.Str("Two"), gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_4, "value0"), "value0"), gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_4, "value0"), "value1"), gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_4, "value0"), "value2")), gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_4, "value0"), "value3"), gopurs_runtime.RecordDict4("_tag", "value0", "value1", "value2", gopurs_runtime.Str("Two"), gopurs_runtime.RecordGet(v1_5, "value0"), gopurs_runtime.RecordGet(v1_5, "value1"), gopurs_runtime.RecordGet(v1_5, "value2")))
 continue up_3_0
 __t2 = gopurs_runtime.Value{}
 goto end_branch_2
@@ -340,29 +338,30 @@ var v1_6 = v1_6_loop
 _ = v1_6
 var __t4 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v1_6.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Leaf")).IntVal != 0 {
-__t4 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"found": gopurs_runtime.Bool(false), "result": gopurs_runtime.Apply(gopurs_runtime.Apply(up_3_0, v_5), gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("KickUp"), "value0": gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Leaf")}), "value1": k_1, "value2": gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Leaf")})}))})
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v1_6, "_tag").StrVal == "Leaf")).IntVal != 0 {
+__t4 = gopurs_runtime.RecordDict2("found", "result", gopurs_runtime.Bool(false), gopurs_runtime.Apply2(up_3_0, v_5, gopurs_runtime.RecordDict4("_tag", "value0", "value1", "value2", gopurs_runtime.Str("KickUp"), gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Leaf")), k_1, gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Leaf")))))
 goto end_branch_4
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(v1_6.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Two")).IntVal != 0 {
-v2_7_5 := gopurs_runtime.Apply(gopurs_runtime.Apply(comp_0, k_1), v1_6.PtrVal.(map[string]gopurs_runtime.Value)["value1"])
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v1_6, "_tag").StrVal == "Two")).IntVal != 0 {
+v2_7_5 := gopurs_runtime.Apply2(comp_0, k_1, gopurs_runtime.RecordGet(v1_6, "value1"))
+_ = v2_7_5
 var __t6 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v2_7_5.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "EQ")).IntVal != 0 {
-__t6 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"found": gopurs_runtime.Bool(true), "result": orig_2})
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v2_7_5, "_tag").StrVal == "EQ")).IntVal != 0 {
+__t6 = gopurs_runtime.RecordDict2("found", "result", gopurs_runtime.Bool(true), orig_2)
 goto end_branch_6
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(v2_7_5.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "LT")).IntVal != 0 {
-v_5_loop = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Cons"), "value0": gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("TwoLeft"), "value0": v1_6.PtrVal.(map[string]gopurs_runtime.Value)["value1"], "value1": v1_6.PtrVal.(map[string]gopurs_runtime.Value)["value2"]}), "value1": v_5})
-v1_6_loop = v1_6.PtrVal.(map[string]gopurs_runtime.Value)["value0"]
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v2_7_5, "_tag").StrVal == "LT")).IntVal != 0 {
+v_5_loop = gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Cons"), gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("TwoLeft"), gopurs_runtime.RecordGet(v1_6, "value1"), gopurs_runtime.RecordGet(v1_6, "value2")), v_5)
+v1_6_loop = gopurs_runtime.RecordGet(v1_6, "value0")
 continue down_4_3
 __t6 = gopurs_runtime.Value{}
 goto end_branch_6
@@ -371,8 +370,8 @@ goto end_branch_6
 }
 }
 {
-v_5_loop = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Cons"), "value0": gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("TwoRight"), "value0": v1_6.PtrVal.(map[string]gopurs_runtime.Value)["value0"], "value1": v1_6.PtrVal.(map[string]gopurs_runtime.Value)["value1"]}), "value1": v_5})
-v1_6_loop = v1_6.PtrVal.(map[string]gopurs_runtime.Value)["value2"]
+v_5_loop = gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Cons"), gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("TwoRight"), gopurs_runtime.RecordGet(v1_6, "value0"), gopurs_runtime.RecordGet(v1_6, "value1")), v_5)
+v1_6_loop = gopurs_runtime.RecordGet(v1_6, "value2")
 continue down_4_3
 __t6 = gopurs_runtime.Value{}
 }
@@ -384,32 +383,34 @@ goto end_branch_4
 }
 }
 {
-if (gopurs_runtime.Bool(v1_6.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Three")).IntVal != 0 {
-v2_7_7 := gopurs_runtime.Apply(gopurs_runtime.Apply(comp_0, k_1), v1_6.PtrVal.(map[string]gopurs_runtime.Value)["value1"])
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v1_6, "_tag").StrVal == "Three")).IntVal != 0 {
+v2_7_7 := gopurs_runtime.Apply2(comp_0, k_1, gopurs_runtime.RecordGet(v1_6, "value1"))
+_ = v2_7_7
 var __t10 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v2_7_7.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "EQ")).IntVal != 0 {
-__t10 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"found": gopurs_runtime.Bool(true), "result": orig_2})
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v2_7_7, "_tag").StrVal == "EQ")).IntVal != 0 {
+__t10 = gopurs_runtime.RecordDict2("found", "result", gopurs_runtime.Bool(true), orig_2)
 goto end_branch_10
 } else {
 
 }
 }
 {
-v3_8_8 := gopurs_runtime.Apply(gopurs_runtime.Apply(comp_0, k_1), v1_6.PtrVal.(map[string]gopurs_runtime.Value)["value3"])
+v3_8_8 := gopurs_runtime.Apply2(comp_0, k_1, gopurs_runtime.RecordGet(v1_6, "value3"))
+_ = v3_8_8
 var __t9 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v3_8_8.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "EQ")).IntVal != 0 {
-__t9 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"found": gopurs_runtime.Bool(true), "result": orig_2})
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v3_8_8, "_tag").StrVal == "EQ")).IntVal != 0 {
+__t9 = gopurs_runtime.RecordDict2("found", "result", gopurs_runtime.Bool(true), orig_2)
 goto end_branch_9
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(v2_7_7.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "LT")).IntVal != 0 {
-v_5_loop = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Cons"), "value0": gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("ThreeLeft"), "value0": v1_6.PtrVal.(map[string]gopurs_runtime.Value)["value1"], "value1": v1_6.PtrVal.(map[string]gopurs_runtime.Value)["value2"], "value2": v1_6.PtrVal.(map[string]gopurs_runtime.Value)["value3"], "value3": v1_6.PtrVal.(map[string]gopurs_runtime.Value)["value4"]}), "value1": v_5})
-v1_6_loop = v1_6.PtrVal.(map[string]gopurs_runtime.Value)["value0"]
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v2_7_7, "_tag").StrVal == "LT")).IntVal != 0 {
+v_5_loop = gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Cons"), gopurs_runtime.RecordDict5("_tag", "value0", "value1", "value2", "value3", gopurs_runtime.Str("ThreeLeft"), gopurs_runtime.RecordGet(v1_6, "value1"), gopurs_runtime.RecordGet(v1_6, "value2"), gopurs_runtime.RecordGet(v1_6, "value3"), gopurs_runtime.RecordGet(v1_6, "value4")), v_5)
+v1_6_loop = gopurs_runtime.RecordGet(v1_6, "value0")
 continue down_4_3
 __t9 = gopurs_runtime.Value{}
 goto end_branch_9
@@ -418,9 +419,9 @@ goto end_branch_9
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.Bool(v2_7_7.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "GT").IntVal != 0 && gopurs_runtime.Bool(v3_8_8.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "LT").IntVal != 0)).IntVal != 0 {
-v_5_loop = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Cons"), "value0": gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("ThreeMiddle"), "value0": v1_6.PtrVal.(map[string]gopurs_runtime.Value)["value0"], "value1": v1_6.PtrVal.(map[string]gopurs_runtime.Value)["value1"], "value2": v1_6.PtrVal.(map[string]gopurs_runtime.Value)["value3"], "value3": v1_6.PtrVal.(map[string]gopurs_runtime.Value)["value4"]}), "value1": v_5})
-v1_6_loop = v1_6.PtrVal.(map[string]gopurs_runtime.Value)["value2"]
+if (gopurs_runtime.Bool(gopurs_runtime.Bool(gopurs_runtime.RecordGet(v2_7_7, "_tag").StrVal == "GT").IntVal != 0 && gopurs_runtime.Bool(gopurs_runtime.RecordGet(v3_8_8, "_tag").StrVal == "LT").IntVal != 0)).IntVal != 0 {
+v_5_loop = gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Cons"), gopurs_runtime.RecordDict5("_tag", "value0", "value1", "value2", "value3", gopurs_runtime.Str("ThreeMiddle"), gopurs_runtime.RecordGet(v1_6, "value0"), gopurs_runtime.RecordGet(v1_6, "value1"), gopurs_runtime.RecordGet(v1_6, "value3"), gopurs_runtime.RecordGet(v1_6, "value4")), v_5)
+v1_6_loop = gopurs_runtime.RecordGet(v1_6, "value2")
 continue down_4_3
 __t9 = gopurs_runtime.Value{}
 goto end_branch_9
@@ -429,8 +430,8 @@ goto end_branch_9
 }
 }
 {
-v_5_loop = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Cons"), "value0": gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("ThreeRight"), "value0": v1_6.PtrVal.(map[string]gopurs_runtime.Value)["value0"], "value1": v1_6.PtrVal.(map[string]gopurs_runtime.Value)["value1"], "value2": v1_6.PtrVal.(map[string]gopurs_runtime.Value)["value2"], "value3": v1_6.PtrVal.(map[string]gopurs_runtime.Value)["value3"]}), "value1": v_5})
-v1_6_loop = v1_6.PtrVal.(map[string]gopurs_runtime.Value)["value4"]
+v_5_loop = gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Cons"), gopurs_runtime.RecordDict5("_tag", "value0", "value1", "value2", "value3", gopurs_runtime.Str("ThreeRight"), gopurs_runtime.RecordGet(v1_6, "value0"), gopurs_runtime.RecordGet(v1_6, "value1"), gopurs_runtime.RecordGet(v1_6, "value2"), gopurs_runtime.RecordGet(v1_6, "value3")), v_5)
+v1_6_loop = gopurs_runtime.RecordGet(v1_6, "value4")
 continue down_4_3
 __t9 = gopurs_runtime.Value{}
 }
@@ -453,9 +454,7 @@ return __t4
 }()
 })
 })
-return gopurs_runtime.Apply(gopurs_runtime.Apply(down_4_3, gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Nil")})), orig_2)
-})
-})
+return gopurs_runtime.Apply2(down_4_3, gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nil")), orig_2)
 })
 	})
 	return insertAndLookupBy
@@ -465,7 +464,7 @@ var emptySet gopurs_runtime.Value
 var once_emptySet sync.Once
 func Get_emptySet() gopurs_runtime.Value {
 	once_emptySet.Do(func() {
-		emptySet = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Leaf")})
+		emptySet = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Leaf"))
 	})
 	return emptySet
 }

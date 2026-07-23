@@ -11,23 +11,21 @@ var choosePredicate gopurs_runtime.Value
 var once_choosePredicate sync.Once
 func Get_choosePredicate() gopurs_runtime.Value {
 	once_choosePredicate.Do(func() {
-		choosePredicate = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"choose": gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+		choosePredicate = gopurs_runtime.RecordDict2("choose", "Divide0", gopurs_runtime.Func4(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, v1_2 gopurs_runtime.Value, x_3 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_4_0 := gopurs_runtime.Apply(f_0, x_3)
+_ = __local_var_4_0
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(__local_var_4_0.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Left")).IntVal != 0 {
-__t1 = gopurs_runtime.Apply(v_1, __local_var_4_0.PtrVal.(map[string]gopurs_runtime.Value)["value0"])
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_4_0, "_tag").StrVal == "Left")).IntVal != 0 {
+__t1 = gopurs_runtime.Apply(v_1, gopurs_runtime.RecordGet(__local_var_4_0, "value0"))
 goto end_branch_1
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(__local_var_4_0.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Right")).IntVal != 0 {
-__t1 = gopurs_runtime.Apply(v1_2, __local_var_4_0.PtrVal.(map[string]gopurs_runtime.Value)["value0"])
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_4_0, "_tag").StrVal == "Right")).IntVal != 0 {
+__t1 = gopurs_runtime.Apply(v1_2, gopurs_runtime.RecordGet(__local_var_4_0, "value0"))
 goto end_branch_1
 } else {
 
@@ -38,12 +36,9 @@ __t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_1:
 return __t1
-})
-})
-})
-}), "Divide0": gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Divide.Get_dividePredicate()
-})})
+}))
 	})
 	return choosePredicate
 }
@@ -54,23 +49,22 @@ func Get_chooseOp() gopurs_runtime.Value {
 	once_chooseOp.Do(func() {
 		chooseOp = gopurs_runtime.Func(func(dictSemigroup_0 gopurs_runtime.Value) gopurs_runtime.Value {
 divideOp_1_0 := gopurs_runtime.Apply(pkg_Data_Divide.Get_divideOp(), dictSemigroup_0)
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"choose": gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
+_ = divideOp_1_0
+return gopurs_runtime.RecordDict2("choose", "Divide0", gopurs_runtime.Func4(func(f_2 gopurs_runtime.Value, v_3 gopurs_runtime.Value, v1_4 gopurs_runtime.Value, x_5 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_6_1 := gopurs_runtime.Apply(f_2, x_5)
+_ = __local_var_6_1
 var __t2 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(__local_var_6_1.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Left")).IntVal != 0 {
-__t2 = gopurs_runtime.Apply(v_3, __local_var_6_1.PtrVal.(map[string]gopurs_runtime.Value)["value0"])
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_6_1, "_tag").StrVal == "Left")).IntVal != 0 {
+__t2 = gopurs_runtime.Apply(v_3, gopurs_runtime.RecordGet(__local_var_6_1, "value0"))
 goto end_branch_2
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(__local_var_6_1.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Right")).IntVal != 0 {
-__t2 = gopurs_runtime.Apply(v1_4, __local_var_6_1.PtrVal.(map[string]gopurs_runtime.Value)["value0"])
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_6_1, "_tag").StrVal == "Right")).IntVal != 0 {
+__t2 = gopurs_runtime.Apply(v1_4, gopurs_runtime.RecordGet(__local_var_6_1, "value0"))
 goto end_branch_2
 } else {
 
@@ -81,12 +75,9 @@ __t2 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_2:
 return __t2
-})
-})
-})
-}), "Divide0": gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return divideOp_1_0
-})})
+}))
 })
 	})
 	return chooseOp
@@ -96,27 +87,25 @@ var chooseEquivalence gopurs_runtime.Value
 var once_chooseEquivalence sync.Once
 func Get_chooseEquivalence() gopurs_runtime.Value {
 	once_chooseEquivalence.Do(func() {
-		chooseEquivalence = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"choose": gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(a_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(b_4 gopurs_runtime.Value) gopurs_runtime.Value {
+		chooseEquivalence = gopurs_runtime.RecordDict2("choose", "Divide0", gopurs_runtime.Func5(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, v1_2 gopurs_runtime.Value, a_3 gopurs_runtime.Value, b_4 gopurs_runtime.Value) gopurs_runtime.Value {
 v2_5_0 := gopurs_runtime.Apply(f_0, a_3)
+_ = v2_5_0
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v2_5_0.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Left")).IntVal != 0 {
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v2_5_0, "_tag").StrVal == "Left")).IntVal != 0 {
 v3_6_2 := gopurs_runtime.Apply(f_0, b_4)
+_ = v3_6_2
 var __t3 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v3_6_2.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Left")).IntVal != 0 {
-__t3 = gopurs_runtime.Apply(gopurs_runtime.Apply(v_1, v2_5_0.PtrVal.(map[string]gopurs_runtime.Value)["value0"]), v3_6_2.PtrVal.(map[string]gopurs_runtime.Value)["value0"])
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v3_6_2, "_tag").StrVal == "Left")).IntVal != 0 {
+__t3 = gopurs_runtime.Apply2(v_1, gopurs_runtime.RecordGet(v2_5_0, "value0"), gopurs_runtime.RecordGet(v3_6_2, "value0"))
 goto end_branch_3
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(v3_6_2.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Right")).IntVal != 0 {
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v3_6_2, "_tag").StrVal == "Right")).IntVal != 0 {
 __t3 = gopurs_runtime.Bool(false)
 goto end_branch_3
 } else {
@@ -134,11 +123,12 @@ goto end_branch_1
 }
 }
 {
-if (gopurs_runtime.Bool(v2_5_0.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Right")).IntVal != 0 {
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v2_5_0, "_tag").StrVal == "Right")).IntVal != 0 {
 v3_6_4 := gopurs_runtime.Apply(f_0, b_4)
+_ = v3_6_4
 var __t5 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v3_6_4.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Left")).IntVal != 0 {
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v3_6_4, "_tag").StrVal == "Left")).IntVal != 0 {
 __t5 = gopurs_runtime.Bool(false)
 goto end_branch_5
 } else {
@@ -146,8 +136,8 @@ goto end_branch_5
 }
 }
 {
-if (gopurs_runtime.Bool(v3_6_4.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Right")).IntVal != 0 {
-__t5 = gopurs_runtime.Apply(gopurs_runtime.Apply(v1_2, v2_5_0.PtrVal.(map[string]gopurs_runtime.Value)["value0"]), v3_6_4.PtrVal.(map[string]gopurs_runtime.Value)["value0"])
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v3_6_4, "_tag").StrVal == "Right")).IntVal != 0 {
+__t5 = gopurs_runtime.Apply2(v1_2, gopurs_runtime.RecordGet(v2_5_0, "value0"), gopurs_runtime.RecordGet(v3_6_4, "value0"))
 goto end_branch_5
 } else {
 
@@ -168,13 +158,9 @@ __t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_1:
 return __t1
-})
-})
-})
-})
-}), "Divide0": gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Divide.Get_divideEquivalence()
-})})
+}))
 	})
 	return chooseEquivalence
 }
@@ -183,28 +169,26 @@ var chooseComparison gopurs_runtime.Value
 var once_chooseComparison sync.Once
 func Get_chooseComparison() gopurs_runtime.Value {
 	once_chooseComparison.Do(func() {
-		chooseComparison = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"choose": gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(a_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(b_4 gopurs_runtime.Value) gopurs_runtime.Value {
+		chooseComparison = gopurs_runtime.RecordDict2("choose", "Divide0", gopurs_runtime.Func5(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, v1_2 gopurs_runtime.Value, a_3 gopurs_runtime.Value, b_4 gopurs_runtime.Value) gopurs_runtime.Value {
 v2_5_0 := gopurs_runtime.Apply(f_0, a_3)
+_ = v2_5_0
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v2_5_0.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Left")).IntVal != 0 {
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v2_5_0, "_tag").StrVal == "Left")).IntVal != 0 {
 v3_6_2 := gopurs_runtime.Apply(f_0, b_4)
+_ = v3_6_2
 var __t3 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v3_6_2.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Left")).IntVal != 0 {
-__t3 = gopurs_runtime.Apply(gopurs_runtime.Apply(v_1, v2_5_0.PtrVal.(map[string]gopurs_runtime.Value)["value0"]), v3_6_2.PtrVal.(map[string]gopurs_runtime.Value)["value0"])
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v3_6_2, "_tag").StrVal == "Left")).IntVal != 0 {
+__t3 = gopurs_runtime.Apply2(v_1, gopurs_runtime.RecordGet(v2_5_0, "value0"), gopurs_runtime.RecordGet(v3_6_2, "value0"))
 goto end_branch_3
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(v3_6_2.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Right")).IntVal != 0 {
-__t3 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("LT")})
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v3_6_2, "_tag").StrVal == "Right")).IntVal != 0 {
+__t3 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("LT"))
 goto end_branch_3
 } else {
 
@@ -221,20 +205,21 @@ goto end_branch_1
 }
 }
 {
-if (gopurs_runtime.Bool(v2_5_0.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Right")).IntVal != 0 {
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v2_5_0, "_tag").StrVal == "Right")).IntVal != 0 {
 v3_6_4 := gopurs_runtime.Apply(f_0, b_4)
+_ = v3_6_4
 var __t5 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v3_6_4.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Left")).IntVal != 0 {
-__t5 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("GT")})
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v3_6_4, "_tag").StrVal == "Left")).IntVal != 0 {
+__t5 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("GT"))
 goto end_branch_5
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(v3_6_4.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Right")).IntVal != 0 {
-__t5 = gopurs_runtime.Apply(gopurs_runtime.Apply(v1_2, v2_5_0.PtrVal.(map[string]gopurs_runtime.Value)["value0"]), v3_6_4.PtrVal.(map[string]gopurs_runtime.Value)["value0"])
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v3_6_4, "_tag").StrVal == "Right")).IntVal != 0 {
+__t5 = gopurs_runtime.Apply2(v1_2, gopurs_runtime.RecordGet(v2_5_0, "value0"), gopurs_runtime.RecordGet(v3_6_4, "value0"))
 goto end_branch_5
 } else {
 
@@ -255,13 +240,9 @@ __t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_1:
 return __t1
-})
-})
-})
-})
-}), "Divide0": gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Divide.Get_divideComparison()
-})})
+}))
 	})
 	return chooseComparison
 }
@@ -271,7 +252,7 @@ var once_choose sync.Once
 func Get_choose() gopurs_runtime.Value {
 	once_choose.Do(func() {
 		choose = gopurs_runtime.Func(func(dict_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return dict_0.PtrVal.(map[string]gopurs_runtime.Value)["choose"]
+return gopurs_runtime.RecordGet(dict_0, "choose")
 })
 	})
 	return choose
@@ -282,7 +263,7 @@ var once_chosen sync.Once
 func Get_chosen() gopurs_runtime.Value {
 	once_chosen.Do(func() {
 		chosen = gopurs_runtime.Func(func(dictDecide_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(dictDecide_0.PtrVal.(map[string]gopurs_runtime.Value)["choose"], pkg_Control_Category.Get_categoryFn().PtrVal.(map[string]gopurs_runtime.Value)["identity"])
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDecide_0, "choose"), gopurs_runtime.RecordGet(pkg_Control_Category.Get_categoryFn(), "identity"))
 })
 	})
 	return chosen

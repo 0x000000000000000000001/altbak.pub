@@ -20,9 +20,7 @@ var once_unsafeCrashWith sync.Once
 func Get_unsafeCrashWith() gopurs_runtime.Value {
 	once_unsafeCrashWith.Do(func() {
 		unsafeCrashWith = gopurs_runtime.Func(func(msg_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get__unsafePartial(), gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(pkg_Partial.Get__crashWith(), msg_0)
-}))
 })
 	})
 	return unsafeCrashWith

@@ -3,7 +3,6 @@ package Data_Number
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Function_Uncurried "gopurs/output/Data.Function.Uncurried"
 	pkg_Data_Maybe "gopurs/output/Data.Maybe"
 )
 
@@ -84,7 +83,7 @@ var once_fromString sync.Once
 func Get_fromString() gopurs_runtime.Value {
 	once_fromString.Do(func() {
 		fromString = gopurs_runtime.Func(func(str_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Function_Uncurried.Get_runFn4(), Get_fromStringImpl()), str_0), Get_isFinite()), pkg_Data_Maybe.Get_Just()), gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Nothing")}))
+return gopurs_runtime.UncurriedApp4(Get_fromStringImpl(), str_0, Get_isFinite(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing")))
 })
 	})
 	return fromString

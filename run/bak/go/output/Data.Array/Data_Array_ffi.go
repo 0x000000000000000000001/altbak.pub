@@ -10,18 +10,18 @@ var RangeImpl = gopurs_runtime.Func(func(startVal gopurs_runtime.Value) gopurs_r
 		if start > end {
 			step = -1
 		}
-		
-		size := (end - start) * step + 1
+
+		size := (end-start)*step + 1
 		result := make([]gopurs_runtime.Value, size)
-		
+
 		i := start
 		n := 0
 		for i != end {
-			result[n] = gopurs_runtime.Int(i)
+			result[n] = gopurs_runtime.Int(int64(i))
 			n++
 			i += step
 		}
-		result[n] = gopurs_runtime.Int(i)
+		result[n] = gopurs_runtime.Int(int64(i))
 		return gopurs_runtime.Array(result)
 	})
 })
@@ -42,7 +42,7 @@ var ReplicateImpl = gopurs_runtime.Func(func(countVal gopurs_runtime.Value) gopu
 
 var Length = gopurs_runtime.Func(func(xsVal gopurs_runtime.Value) gopurs_runtime.Value {
 	xs := xsVal.PtrVal.([]gopurs_runtime.Value)
-	return gopurs_runtime.Int(len(xs))
+	return gopurs_runtime.Int(int64(len(xs)))
 })
 
 var UnconsImpl = gopurs_runtime.Func(func(empty gopurs_runtime.Value) gopurs_runtime.Value {
@@ -179,10 +179,16 @@ var SliceImpl = gopurs_runtime.Func(func(sVal gopurs_runtime.Value) gopurs_runti
 			if e < 0 {
 				e = len(l) + e
 			}
-			if s < 0 { s = 0 }
-			if e > len(l) { e = len(l) }
-			if s > e { s = e }
-			
+			if s < 0 {
+				s = 0
+			}
+			if e > len(l) {
+				e = len(l)
+			}
+			if s > e {
+				s = e
+			}
+
 			res := make([]gopurs_runtime.Value, e-s)
 			copy(res, l[s:e])
 			return gopurs_runtime.Array(res)
@@ -282,10 +288,7 @@ var PartitionImpl = gopurs_runtime.Func(func(f gopurs_runtime.Value) gopurs_runt
 				no = append(no, x)
 			}
 		}
-		return gopurs_runtime.Record(map[string]gopurs_runtime.Value{
-			"yes": gopurs_runtime.Array(yes),
-			"no":  gopurs_runtime.Array(no),
-		})
+		return gopurs_runtime.RecordDict([]string{"no", "yes"}, []gopurs_runtime.Value{gopurs_runtime.Array(no), gopurs_runtime.Array(yes)})
 	})
 })
 
@@ -298,12 +301,12 @@ var FromFoldableImpl = gopurs_runtime.Func(func(foldr gopurs_runtime.Value) gopu
 		// Or since we just want array, maybe we can implement it without internal list?
 		// fromFoldableImpl foldr xs = listToArray(foldr(curryCons)(emptyList)(xs))
 		// We'll just define emptyList = [] and Cons = append
-		// BUT foldr builds from right to left! 
+		// BUT foldr builds from right to left!
 		// Actually JS implementation uses a linked list for performance.
-		
+
 		var emptyList gopurs_runtime.Value // nil map or struct
 		emptyList = gopurs_runtime.Value{PtrVal: nil}
-		
+
 		curryCons := gopurs_runtime.Func(func(head gopurs_runtime.Value) gopurs_runtime.Value {
 			return gopurs_runtime.Func(func(tail gopurs_runtime.Value) gopurs_runtime.Value {
 				return gopurs_runtime.Value{PtrVal: map[string]gopurs_runtime.Value{
@@ -312,9 +315,9 @@ var FromFoldableImpl = gopurs_runtime.Func(func(foldr gopurs_runtime.Value) gopu
 				}}
 			})
 		})
-		
+
 		list := gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(foldr, curryCons), emptyList), xsVal)
-		
+
 		var result []gopurs_runtime.Value
 		curr := list
 		for curr.PtrVal != nil {
@@ -350,7 +353,7 @@ var FindLastIndexImpl = gopurs_runtime.Func(func(just gopurs_runtime.Value) gopu
 				xs := xsVal.PtrVal.([]gopurs_runtime.Value)
 				for i := len(xs) - 1; i >= 0; i-- {
 					if gopurs_runtime.Apply(f, xs[i]).IntVal != 0 {
-						return gopurs_runtime.Apply(just, gopurs_runtime.Int(i))
+						return gopurs_runtime.Apply(just, gopurs_runtime.Int(int64(i)))
 					}
 				}
 				return nothing
@@ -366,7 +369,7 @@ var FindIndexImpl = gopurs_runtime.Func(func(just gopurs_runtime.Value) gopurs_r
 				xs := xsVal.PtrVal.([]gopurs_runtime.Value)
 				for i := 0; i < len(xs); i++ {
 					if gopurs_runtime.Apply(f, xs[i]).IntVal != 0 {
-						return gopurs_runtime.Apply(just, gopurs_runtime.Int(i))
+						return gopurs_runtime.Apply(just, gopurs_runtime.Int(int64(i)))
 					}
 				}
 				return nothing
@@ -380,10 +383,10 @@ var AnyImpl = gopurs_runtime.Func(func(p gopurs_runtime.Value) gopurs_runtime.Va
 		xs := xsVal.PtrVal.([]gopurs_runtime.Value)
 		for _, x := range xs {
 			if gopurs_runtime.Apply(p, x).IntVal != 0 {
-				return gopurs_runtime.Int(1)
+				return gopurs_runtime.Int(int64(1))
 			}
 		}
-		return gopurs_runtime.Int(0)
+		return gopurs_runtime.Int(int64(0))
 	})
 })
 
@@ -392,10 +395,10 @@ var AllImpl = gopurs_runtime.Func(func(p gopurs_runtime.Value) gopurs_runtime.Va
 		xs := xsVal.PtrVal.([]gopurs_runtime.Value)
 		for _, x := range xs {
 			if gopurs_runtime.Apply(p, x).IntVal == 0 {
-				return gopurs_runtime.Int(0)
+				return gopurs_runtime.Int(int64(0))
 			}
 		}
-		return gopurs_runtime.Int(1)
+		return gopurs_runtime.Int(int64(1))
 	})
 })
 

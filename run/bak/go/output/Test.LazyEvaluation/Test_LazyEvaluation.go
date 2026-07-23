@@ -5,8 +5,6 @@ import (
 	sync "sync"
 	pkg_Data_Unit "gopurs/output/Data.Unit"
 	pkg_Effect_Console "gopurs/output/Effect.Console"
-	pkg_Data_Ring "gopurs/output/Data.Ring"
-	pkg_Data_Semiring "gopurs/output/Data.Semiring"
 	pkg_Data_Show "gopurs/output/Data.Show"
 )
 
@@ -76,8 +74,8 @@ goto end_branch_0
 }
 }
 {
-__t0 = gopurs_runtime.Apply(gopurs_runtime.Apply(Get_buildThunks(), gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Ring.Get_intSub(), v_0), gopurs_runtime.Int(1))), gopurs_runtime.Func(func(v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Semiring.Get_intAdd(), gopurs_runtime.Apply(v1_1, pkg_Data_Unit.Get_unit())), gopurs_runtime.Int(1))
+__t0 = gopurs_runtime.Apply2(Get_buildThunks(), gopurs_runtime.Int(v_0.IntVal - gopurs_runtime.Int(1).IntVal), gopurs_runtime.Func(func(v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Int(gopurs_runtime.Apply(v1_1, pkg_Data_Unit.Get_unit()).IntVal + gopurs_runtime.Int(1).IntVal)
 }))
 }
 end_branch_0:
@@ -114,9 +112,9 @@ goto end_branch_0
 }
 }
 {
-__t0 = gopurs_runtime.Apply(gopurs_runtime.Apply(Get_runManyTimes(), gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Ring.Get_intSub(), v_0), gopurs_runtime.Int(1))), gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Semiring.Get_intAdd(), v1_1), gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(Get_buildThunks(), gopurs_runtime.Int(1000)), gopurs_runtime.Func(func(v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
+__t0 = gopurs_runtime.Apply2(Get_runManyTimes(), gopurs_runtime.Int(v_0.IntVal - gopurs_runtime.Int(1).IntVal), gopurs_runtime.Int(v1_1.IntVal + gopurs_runtime.Apply3(Get_buildThunks(), gopurs_runtime.Int(1000), gopurs_runtime.Func(func(v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Int(0)
-})), pkg_Data_Unit.Get_unit())))
+}), pkg_Data_Unit.Get_unit()).IntVal))
 }
 end_branch_0:
 return __t0
@@ -132,7 +130,7 @@ var act gopurs_runtime.Value
 var once_act sync.Once
 func Get_act() gopurs_runtime.Value {
 	once_act.Do(func() {
-		act = gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(pkg_Data_Show.Get_showIntImpl(), gopurs_runtime.Apply(gopurs_runtime.Apply(Get_runManyTimes(), gopurs_runtime.Int(1000)), gopurs_runtime.Int(0))))
+		act = gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(pkg_Data_Show.Get_showIntImpl(), gopurs_runtime.Apply2(Get_runManyTimes(), gopurs_runtime.Int(1000), gopurs_runtime.Int(0))))
 	})
 	return act
 }

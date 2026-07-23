@@ -3,8 +3,6 @@ package Test_Fib
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Semiring "gopurs/output/Data.Semiring"
-	pkg_Data_Ring "gopurs/output/Data.Ring"
 	pkg_Effect_Console "gopurs/output/Effect.Console"
 	pkg_Data_Show "gopurs/output/Data.Show"
 )
@@ -38,7 +36,7 @@ goto end_branch_0
 }
 }
 {
-__t0 = gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Semiring.Get_intAdd(), gopurs_runtime.Apply(Get_fib(), gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Ring.Get_intSub(), v_0), gopurs_runtime.Int(1)))), gopurs_runtime.Apply(Get_fib(), gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Ring.Get_intSub(), v_0), gopurs_runtime.Int(2))))
+__t0 = gopurs_runtime.Int(gopurs_runtime.Apply(Get_fib(), gopurs_runtime.Int(v_0.IntVal - gopurs_runtime.Int(1).IntVal)).IntVal + gopurs_runtime.Apply(Get_fib(), gopurs_runtime.Int(v_0.IntVal - gopurs_runtime.Int(2).IntVal)).IntVal)
 }
 end_branch_0:
 return __t0

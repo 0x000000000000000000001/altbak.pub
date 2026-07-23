@@ -6,15 +6,14 @@ import (
 	pkg_Data_Unfoldable1 "gopurs/output/Data.Unfoldable1"
 	pkg_Data_TraversableWithIndex "gopurs/output/Data.TraversableWithIndex"
 	pkg_Data_Traversable "gopurs/output/Data.Traversable"
-	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
 	pkg_Data_Show "gopurs/output/Data.Show"
+	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
 	pkg_Data_Ord "gopurs/output/Data.Ord"
 	pkg_Control_Monad "gopurs/output/Control.Monad"
 	pkg_Data_FunctorWithIndex "gopurs/output/Data.FunctorWithIndex"
 	pkg_Data_Functor "gopurs/output/Data.Functor"
 	pkg_Data_FoldableWithIndex "gopurs/output/Data.FoldableWithIndex"
 	pkg_Data_Foldable "gopurs/output/Data.Foldable"
-	pkg_Data_Function_Uncurried "gopurs/output/Data.Function.Uncurried"
 	pkg_Control_Category "gopurs/output/Control.Category"
 	pkg_Data_Eq "gopurs/output/Data.Eq"
 	pkg_Control_Bind "gopurs/output/Control.Bind"
@@ -66,9 +65,9 @@ var once_showNonEmptyArray sync.Once
 func Get_showNonEmptyArray() gopurs_runtime.Value {
 	once_showNonEmptyArray.Do(func() {
 		showNonEmptyArray = gopurs_runtime.Func(func(dictShow_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"show": gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Semigroup.Get_concatString(), gopurs_runtime.Str("(NonEmptyArray ")), gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Semigroup.Get_concatString(), gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Show.Get_showArrayImpl(), dictShow_0.PtrVal.(map[string]gopurs_runtime.Value)["show"]), v_1)), gopurs_runtime.Str(")")))
-})})
+return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str("(NonEmptyArray ").StrVal + gopurs_runtime.Apply2(pkg_Data_Show.Get_showArrayImpl(), gopurs_runtime.RecordGet(dictShow_0, "show"), v_1).StrVal).StrVal + gopurs_runtime.Str(")").StrVal)
+}))
 })
 	})
 	return showNonEmptyArray
@@ -152,18 +151,25 @@ var foldable1NonEmptyArray gopurs_runtime.Value
 var once_foldable1NonEmptyArray sync.Once
 func Get_foldable1NonEmptyArray() gopurs_runtime.Value {
 	once_foldable1NonEmptyArray.Do(func() {
-		foldable1NonEmptyArray = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"foldMap1": gopurs_runtime.Func(func(dictSemigroup_0 gopurs_runtime.Value) gopurs_runtime.Value {
-append_1_0 := dictSemigroup_0.PtrVal.(map[string]gopurs_runtime.Value)["append"]
+		foldable1NonEmptyArray = gopurs_runtime.RecordDict4("foldMap1", "foldr1", "foldl1", "Foldable0", gopurs_runtime.Func(func(dictSemigroup_0 gopurs_runtime.Value) gopurs_runtime.Value {
+append_1_0 := gopurs_runtime.RecordGet(dictSemigroup_0, "append")
+_ = append_1_0
 return gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_3_1 := gopurs_runtime.Apply(pkg_Data_Functor.Get_arrayMap(), f_2)
-__local_var_4_2 := gopurs_runtime.Apply(Get_foldable1NonEmptyArray().PtrVal.(map[string]gopurs_runtime.Value)["foldl1"], append_1_0)
+_ = __local_var_3_1
+__local_var_4_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_foldable1NonEmptyArray(), "foldl1"), append_1_0)
+_ = __local_var_4_2
 return gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(__local_var_4_2, gopurs_runtime.Apply(__local_var_3_1, x_5))
 })
 })
-}), "foldr1": gopurs_runtime.Apply(pkg_Data_Function_Uncurried.Get_runFn2(), Get_foldr1Impl()), "foldl1": gopurs_runtime.Apply(pkg_Data_Function_Uncurried.Get_runFn2(), Get_foldl1Impl()), "Foldable0": gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func2(func(__local_var_0 gopurs_runtime.Value, __local_var_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.UncurriedApp2(Get_foldr1Impl(), __local_var_0, __local_var_1)
+}), gopurs_runtime.Func2(func(__local_var_0 gopurs_runtime.Value, __local_var_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.UncurriedApp2(Get_foldl1Impl(), __local_var_0, __local_var_1)
+}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Foldable.Get_foldableArray()
-})})
+}))
 	})
 	return foldable1NonEmptyArray
 }
@@ -172,19 +178,21 @@ var traversable1NonEmptyArray gopurs_runtime.Value
 var once_traversable1NonEmptyArray sync.Once
 func Get_traversable1NonEmptyArray() gopurs_runtime.Value {
 	once_traversable1NonEmptyArray.Do(func() {
-		traversable1NonEmptyArray = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"traverse1": gopurs_runtime.Func(func(dictApply_0 gopurs_runtime.Value) gopurs_runtime.Value {
-apply_1_0 := dictApply_0.PtrVal.(map[string]gopurs_runtime.Value)["apply"]
-map__2_1 := gopurs_runtime.Apply(dictApply_0.PtrVal.(map[string]gopurs_runtime.Value)["Functor0"], gopurs_runtime.Value{}).PtrVal.(map[string]gopurs_runtime.Value)["map"]
+		traversable1NonEmptyArray = gopurs_runtime.RecordDict4("traverse1", "sequence1", "Foldable10", "Traversable1", gopurs_runtime.Func(func(dictApply_0 gopurs_runtime.Value) gopurs_runtime.Value {
+apply_1_0 := gopurs_runtime.RecordGet(dictApply_0, "apply")
+_ = apply_1_0
+map__2_1 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApply_0, "Functor0"), gopurs_runtime.Value{}), "map")
+_ = map__2_1
 return gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Function_Uncurried.Get_runFn3(), Get_traverse1Impl()), apply_1_0), map__2_1), f_3)
+return gopurs_runtime.UncurriedApp3(Get_traverse1Impl(), apply_1_0, map__2_1, f_3)
 })
-}), "sequence1": gopurs_runtime.Func(func(dictApply_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(Get_traversable1NonEmptyArray().PtrVal.(map[string]gopurs_runtime.Value)["traverse1"], dictApply_0), pkg_Control_Category.Get_categoryFn().PtrVal.(map[string]gopurs_runtime.Value)["identity"])
-}), "Foldable10": gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(dictApply_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_traversable1NonEmptyArray(), "traverse1"), dictApply_0, gopurs_runtime.RecordGet(pkg_Control_Category.Get_categoryFn(), "identity"))
+}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_foldable1NonEmptyArray()
-}), "Traversable1": gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Traversable.Get_traversableArray()
-})})
+}))
 	})
 	return traversable1NonEmptyArray
 }
@@ -194,7 +202,7 @@ var once_eqNonEmptyArray sync.Once
 func Get_eqNonEmptyArray() gopurs_runtime.Value {
 	once_eqNonEmptyArray.Do(func() {
 		eqNonEmptyArray = gopurs_runtime.Func(func(dictEq_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"eq": gopurs_runtime.Apply(pkg_Data_Eq.Get_eqArrayImpl(), dictEq_0.PtrVal.(map[string]gopurs_runtime.Value)["eq"])})
+return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Apply(pkg_Data_Eq.Get_eqArrayImpl(), gopurs_runtime.RecordGet(dictEq_0, "eq")))
 })
 	})
 	return eqNonEmptyArray

@@ -4,7 +4,6 @@ import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
 	pkg_Data_CommutativeRing "gopurs/output/Data.CommutativeRing"
-	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
 )
 
 var mod gopurs_runtime.Value
@@ -12,7 +11,7 @@ var once_mod sync.Once
 func Get_mod() gopurs_runtime.Value {
 	once_mod.Do(func() {
 		mod = gopurs_runtime.Func(func(dict_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return dict_0.PtrVal.(map[string]gopurs_runtime.Value)["mod"]
+return gopurs_runtime.RecordGet(dict_0, "mod")
 })
 	})
 	return mod
@@ -32,12 +31,12 @@ var dictEq_0 = dictEq_0_loop
 _ = dictEq_0
 var dictEuclideanRing_1 = dictEuclideanRing_1_loop
 _ = dictEuclideanRing_1
-zero_2_0 := gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(dictEuclideanRing_1.PtrVal.(map[string]gopurs_runtime.Value)["CommutativeRing0"], gopurs_runtime.Value{}).PtrVal.(map[string]gopurs_runtime.Value)["Ring0"], gopurs_runtime.Value{}).PtrVal.(map[string]gopurs_runtime.Value)["Semiring0"], gopurs_runtime.Value{}).PtrVal.(map[string]gopurs_runtime.Value)["zero"]
-return gopurs_runtime.Func(func(a_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(b_4 gopurs_runtime.Value) gopurs_runtime.Value {
+zero_2_0 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEuclideanRing_1, "CommutativeRing0"), gopurs_runtime.Value{}), "Ring0"), gopurs_runtime.Value{}), "Semiring0"), gopurs_runtime.Value{}), "zero")
+_ = zero_2_0
+return gopurs_runtime.Func2(func(a_3 gopurs_runtime.Value, b_4 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Apply(gopurs_runtime.Apply(dictEq_0.PtrVal.(map[string]gopurs_runtime.Value)["eq"], b_4), zero_2_0)).IntVal != 0 {
+if (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), b_4, zero_2_0)).IntVal != 0 {
 __t1 = a_3
 goto end_branch_1
 } else {
@@ -45,11 +44,10 @@ goto end_branch_1
 }
 }
 {
-__t1 = gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(Get_gcd(), dictEq_0), dictEuclideanRing_1), b_4), gopurs_runtime.Apply(gopurs_runtime.Apply(dictEuclideanRing_1.PtrVal.(map[string]gopurs_runtime.Value)["mod"], a_3), b_4))
+__t1 = gopurs_runtime.Apply4(Get_gcd(), dictEq_0, dictEuclideanRing_1, b_4, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEuclideanRing_1, "mod"), a_3, b_4))
 }
 end_branch_1:
 return __t1
-})
 })
 }
 }()
@@ -63,15 +61,13 @@ var euclideanRingNumber gopurs_runtime.Value
 var once_euclideanRingNumber sync.Once
 func Get_euclideanRingNumber() gopurs_runtime.Value {
 	once_euclideanRingNumber.Do(func() {
-		euclideanRingNumber = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"degree": gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		euclideanRingNumber = gopurs_runtime.RecordDict4("degree", "div", "mod", "CommutativeRing0", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Int(1)
-}), "div": Get_numDiv(), "mod": gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+}), Get_numDiv(), gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Float(0.0)
-})
-}), "CommutativeRing0": gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_CommutativeRing.Get_commutativeRingNumber()
-})})
+}))
 	})
 	return euclideanRingNumber
 }
@@ -80,9 +76,9 @@ var euclideanRingInt gopurs_runtime.Value
 var once_euclideanRingInt sync.Once
 func Get_euclideanRingInt() gopurs_runtime.Value {
 	once_euclideanRingInt.Do(func() {
-		euclideanRingInt = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"degree": Get_intDegree(), "div": Get_intDiv(), "mod": Get_intMod(), "CommutativeRing0": gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		euclideanRingInt = gopurs_runtime.RecordDict4("degree", "div", "mod", "CommutativeRing0", Get_intDegree(), Get_intDiv(), Get_intMod(), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_CommutativeRing.Get_commutativeRingInt()
-})})
+}))
 	})
 	return euclideanRingInt
 }
@@ -92,7 +88,7 @@ var once_div sync.Once
 func Get_div() gopurs_runtime.Value {
 	once_div.Do(func() {
 		div = gopurs_runtime.Func(func(dict_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return dict_0.PtrVal.(map[string]gopurs_runtime.Value)["div"]
+return gopurs_runtime.RecordGet(dict_0, "div")
 })
 	})
 	return div
@@ -102,16 +98,17 @@ var lcm gopurs_runtime.Value
 var once_lcm sync.Once
 func Get_lcm() gopurs_runtime.Value {
 	once_lcm.Do(func() {
-		lcm = gopurs_runtime.Func(func(dictEq_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(dictEuclideanRing_1 gopurs_runtime.Value) gopurs_runtime.Value {
-Semiring0_2_0 := gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(dictEuclideanRing_1.PtrVal.(map[string]gopurs_runtime.Value)["CommutativeRing0"], gopurs_runtime.Value{}).PtrVal.(map[string]gopurs_runtime.Value)["Ring0"], gopurs_runtime.Value{}).PtrVal.(map[string]gopurs_runtime.Value)["Semiring0"], gopurs_runtime.Value{})
-zero_3_1 := Semiring0_2_0.PtrVal.(map[string]gopurs_runtime.Value)["zero"]
-gcd2_4_2 := gopurs_runtime.Apply(gopurs_runtime.Apply(Get_gcd(), dictEq_0), dictEuclideanRing_1)
-return gopurs_runtime.Func(func(a_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(b_6 gopurs_runtime.Value) gopurs_runtime.Value {
+		lcm = gopurs_runtime.Func2(func(dictEq_0 gopurs_runtime.Value, dictEuclideanRing_1 gopurs_runtime.Value) gopurs_runtime.Value {
+Semiring0_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEuclideanRing_1, "CommutativeRing0"), gopurs_runtime.Value{}), "Ring0"), gopurs_runtime.Value{}), "Semiring0"), gopurs_runtime.Value{})
+_ = Semiring0_2_0
+zero_3_1 := gopurs_runtime.RecordGet(Semiring0_2_0, "zero")
+_ = zero_3_1
+gcd2_4_2 := gopurs_runtime.Apply2(Get_gcd(), dictEq_0, dictEuclideanRing_1)
+_ = gcd2_4_2
+return gopurs_runtime.Func2(func(a_5 gopurs_runtime.Value, b_6 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t3 gopurs_runtime.Value
 {
-if (gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_HeytingAlgebra.Get_boolDisj(), gopurs_runtime.Apply(gopurs_runtime.Apply(dictEq_0.PtrVal.(map[string]gopurs_runtime.Value)["eq"], a_5), zero_3_1)), gopurs_runtime.Apply(gopurs_runtime.Apply(dictEq_0.PtrVal.(map[string]gopurs_runtime.Value)["eq"], b_6), zero_3_1))).IntVal != 0 {
+if (gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), a_5, zero_3_1).IntVal != 0 || gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), b_6, zero_3_1).IntVal != 0)).IntVal != 0 {
 __t3 = zero_3_1
 goto end_branch_3
 } else {
@@ -119,12 +116,10 @@ goto end_branch_3
 }
 }
 {
-__t3 = gopurs_runtime.Apply(gopurs_runtime.Apply(dictEuclideanRing_1.PtrVal.(map[string]gopurs_runtime.Value)["div"], gopurs_runtime.Apply(gopurs_runtime.Apply(Semiring0_2_0.PtrVal.(map[string]gopurs_runtime.Value)["mul"], a_5), b_6)), gopurs_runtime.Apply(gopurs_runtime.Apply(gcd2_4_2, a_5), b_6))
+__t3 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEuclideanRing_1, "div"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Semiring0_2_0, "mul"), a_5, b_6), gopurs_runtime.Apply2(gcd2_4_2, a_5, b_6))
 }
 end_branch_3:
 return __t3
-})
-})
 })
 })
 	})
@@ -136,7 +131,7 @@ var once_degree sync.Once
 func Get_degree() gopurs_runtime.Value {
 	once_degree.Do(func() {
 		degree = gopurs_runtime.Func(func(dict_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return dict_0.PtrVal.(map[string]gopurs_runtime.Value)["degree"]
+return gopurs_runtime.RecordGet(dict_0, "degree")
 })
 	})
 	return degree

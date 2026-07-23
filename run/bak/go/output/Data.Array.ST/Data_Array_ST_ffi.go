@@ -34,16 +34,16 @@ var PokeImpl = gopurs_runtime.Func(func(iVal gopurs_runtime.Value) gopurs_runtim
 				xs[i] = a
 			}
 			if ret {
-				return gopurs_runtime.Int(1) // Assuming boolean mapped to 1/0
+				return gopurs_runtime.Int(int64(1)) // Assuming boolean mapped to 1/0
 			}
-			return gopurs_runtime.Int(0)
+			return gopurs_runtime.Int(int64(0))
 		})
 	})
 })
 
 var LengthImpl = gopurs_runtime.Func(func(xsVal gopurs_runtime.Value) gopurs_runtime.Value {
 	xs := *(xsVal.PtrVal.(*[]gopurs_runtime.Value))
-	return gopurs_runtime.Int(len(xs))
+	return gopurs_runtime.Int(int64(len(xs)))
 })
 
 var PopImpl = gopurs_runtime.Func(func(just gopurs_runtime.Value) gopurs_runtime.Value {
@@ -66,7 +66,7 @@ var PushAllImpl = gopurs_runtime.Func(func(asVal gopurs_runtime.Value) gopurs_ru
 		as := asVal.PtrVal.([]gopurs_runtime.Value)
 		xsPtr := xsVal.PtrVal.(*[]gopurs_runtime.Value)
 		*xsPtr = append(*xsPtr, as...)
-		return gopurs_runtime.Int(len(*xsPtr))
+		return gopurs_runtime.Int(int64(len(*xsPtr)))
 	})
 })
 
@@ -93,7 +93,7 @@ var UnshiftAllImpl = gopurs_runtime.Func(func(asVal gopurs_runtime.Value) gopurs
 		newArr = append(newArr, as...)
 		newArr = append(newArr, *xsPtr...)
 		*xsPtr = newArr
-		return gopurs_runtime.Int(len(*xsPtr))
+		return gopurs_runtime.Int(int64(len(*xsPtr)))
 	})
 })
 
@@ -106,7 +106,7 @@ var SpliceImpl = gopurs_runtime.Func(func(iVal gopurs_runtime.Value) gopurs_runt
 				bs := bsVal.PtrVal.([]gopurs_runtime.Value)
 				xsPtr := xsVal.PtrVal.(*[]gopurs_runtime.Value)
 				xs := *xsPtr
-				
+
 				if i < 0 {
 					i = len(xs) + i
 					if i < 0 {
@@ -115,22 +115,22 @@ var SpliceImpl = gopurs_runtime.Func(func(iVal gopurs_runtime.Value) gopurs_runt
 				} else if i > len(xs) {
 					i = len(xs)
 				}
-				
+
 				if howMany < 0 {
 					howMany = 0
 				} else if i+howMany > len(xs) {
 					howMany = len(xs) - i
 				}
-				
+
 				removed := make([]gopurs_runtime.Value, howMany)
 				copy(removed, xs[i:i+howMany])
-				
+
 				newArr := make([]gopurs_runtime.Value, 0, len(xs)-howMany+len(bs))
 				newArr = append(newArr, xs[:i]...)
 				newArr = append(newArr, bs...)
 				newArr = append(newArr, xs[i+howMany:]...)
 				*xsPtr = newArr
-				
+
 				return gopurs_runtime.Array(removed)
 			})
 		})
@@ -173,12 +173,12 @@ var SortByImpl = gopurs_runtime.Func(func(compare gopurs_runtime.Value) gopurs_r
 		return gopurs_runtime.Func(func(xsVal gopurs_runtime.Value) gopurs_runtime.Value {
 			xsPtr := xsVal.PtrVal.(*[]gopurs_runtime.Value)
 			xs := *xsPtr
-			
+
 			gosort.SliceStable(xs, func(i, j int) bool {
 				c := gopurs_runtime.Apply(fromOrdering, gopurs_runtime.Apply(gopurs_runtime.Apply(compare, xs[i]), xs[j]))
 				return c.IntVal < 0
 			})
-			
+
 			return xsVal
 		})
 	})
@@ -190,7 +190,7 @@ var ToAssocArrayImpl = gopurs_runtime.Func(func(xsVal gopurs_runtime.Value) gopu
 	for i, v := range xs {
 		dict := map[string]gopurs_runtime.Value{
 			"value": v,
-			"index": gopurs_runtime.Int(i),
+			"index": gopurs_runtime.Int(int64(i)),
 		}
 		as[i] = gopurs_runtime.Value{PtrVal: dict} // Ensure it's a valid PtrVal record
 	}
@@ -201,6 +201,6 @@ var PushImpl = gopurs_runtime.Func(func(aVal gopurs_runtime.Value) gopurs_runtim
 	return gopurs_runtime.Func(func(xsVal gopurs_runtime.Value) gopurs_runtime.Value {
 		xsPtr := xsVal.PtrVal.(*[]gopurs_runtime.Value)
 		*xsPtr = append(*xsPtr, aVal)
-		return gopurs_runtime.Int(len(*xsPtr))
+		return gopurs_runtime.Int(int64(len(*xsPtr)))
 	})
 })

@@ -25,7 +25,7 @@ var Bind_ = gopurs_runtime.Func(func(a gopurs_runtime.Value) gopurs_runtime.Valu
 })
 
 var Run = gopurs_runtime.Func(func(f gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Apply(f, gopurs_runtime.Value{})
+	return f
 })
 
 var While = gopurs_runtime.Func(func(f gopurs_runtime.Value) gopurs_runtime.Value {
@@ -46,7 +46,7 @@ var For_ = gopurs_runtime.Func(func(lo gopurs_runtime.Value) gopurs_runtime.Valu
 				start := lo.IntVal
 				end := hi.IntVal
 				for i := start; i < end; i++ {
-					gopurs_runtime.Apply(gopurs_runtime.Apply(f, gopurs_runtime.Int(int(i))), gopurs_runtime.Value{})
+					gopurs_runtime.Apply(gopurs_runtime.Apply(f, gopurs_runtime.Int(int64(int64(i)))), gopurs_runtime.Value{})
 				}
 				return gopurs_runtime.Value{}
 			})
@@ -85,7 +85,7 @@ var ModifyImpl = gopurs_runtime.Func(func(f gopurs_runtime.Value) gopurs_runtime
 		return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 			ptr := ref.PtrVal.(*gopurs_runtime.Value)
 			t := gopurs_runtime.Apply(f, *ptr)
-			
+
 			// t is { state: s, value: v }
 			dict := t.PtrVal.(map[string]gopurs_runtime.Value)
 			*ptr = dict["state"]

@@ -321,4 +321,3 @@ var RunEffectFn10 = gopurs_runtime.Func(func(fn gopurs_runtime.Value) gopurs_run
 		})
 	})
 })
-

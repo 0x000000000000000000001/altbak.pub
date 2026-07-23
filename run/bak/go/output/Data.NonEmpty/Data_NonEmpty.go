@@ -3,8 +3,6 @@ package Data_NonEmpty
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
-	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
 )
 
 var NonEmpty gopurs_runtime.Value
@@ -13,7 +11,7 @@ func Get_NonEmpty() gopurs_runtime.Value {
 	once_NonEmpty.Do(func() {
 		NonEmpty = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("NonEmpty"), "value0": value0, "value1": value1})
+return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("NonEmpty"), value0, value1)
 })
 })
 	})
@@ -25,27 +23,26 @@ var once_unfoldable1NonEmpty sync.Once
 func Get_unfoldable1NonEmpty() gopurs_runtime.Value {
 	once_unfoldable1NonEmpty.Do(func() {
 		unfoldable1NonEmpty = gopurs_runtime.Func(func(dictUnfoldable_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"unfoldr1": gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(b_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict1("unfoldr1", gopurs_runtime.Func2(func(f_1 gopurs_runtime.Value, b_2 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_3_0 := gopurs_runtime.Apply(f_1, b_2)
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("NonEmpty"), "value0": __local_var_3_0.PtrVal.(map[string]gopurs_runtime.Value)["value0"], "value1": gopurs_runtime.Apply(gopurs_runtime.Apply(dictUnfoldable_0.PtrVal.(map[string]gopurs_runtime.Value)["unfoldr"], gopurs_runtime.Func(func(v1_4 gopurs_runtime.Value) gopurs_runtime.Value {
+_ = __local_var_3_0
+return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("NonEmpty"), gopurs_runtime.RecordGet(__local_var_3_0, "value0"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictUnfoldable_0, "unfoldr"), gopurs_runtime.Func(func(v1_4 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v1_4.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Just")).IntVal != 0 {
-__t1 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Just"), "value0": gopurs_runtime.Apply(f_1, v1_4.PtrVal.(map[string]gopurs_runtime.Value)["value0"])})
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v1_4, "_tag").StrVal == "Just")).IntVal != 0 {
+__t1 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), gopurs_runtime.Apply(f_1, gopurs_runtime.RecordGet(v1_4, "value0")))
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Nothing")})
+__t1 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
 }
 end_branch_1:
 return __t1
-})), __local_var_3_0.PtrVal.(map[string]gopurs_runtime.Value)["value1"])})
-})
-})})
+}), gopurs_runtime.RecordGet(__local_var_3_0, "value1")))
+}))
 })
 	})
 	return unfoldable1NonEmpty
@@ -56,7 +53,7 @@ var once_tail sync.Once
 func Get_tail() gopurs_runtime.Value {
 	once_tail.Do(func() {
 		tail = gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return v_0.PtrVal.(map[string]gopurs_runtime.Value)["value1"]
+return gopurs_runtime.RecordGet(v_0, "value1")
 })
 	})
 	return tail
@@ -67,9 +64,10 @@ var once_singleton sync.Once
 func Get_singleton() gopurs_runtime.Value {
 	once_singleton.Do(func() {
 		singleton = gopurs_runtime.Func(func(dictPlus_0 gopurs_runtime.Value) gopurs_runtime.Value {
-empty_1_0 := dictPlus_0.PtrVal.(map[string]gopurs_runtime.Value)["empty"]
+empty_1_0 := gopurs_runtime.RecordGet(dictPlus_0, "empty")
+_ = empty_1_0
 return gopurs_runtime.Func(func(a_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("NonEmpty"), "value0": a_2, "value1": empty_1_0})
+return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("NonEmpty"), a_2, empty_1_0)
 })
 })
 	})
@@ -80,12 +78,10 @@ var showNonEmpty gopurs_runtime.Value
 var once_showNonEmpty sync.Once
 func Get_showNonEmpty() gopurs_runtime.Value {
 	once_showNonEmpty.Do(func() {
-		showNonEmpty = gopurs_runtime.Func(func(dictShow_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(dictShow1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"show": gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Semigroup.Get_concatString(), gopurs_runtime.Str("(NonEmpty ")), gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Semigroup.Get_concatString(), gopurs_runtime.Apply(dictShow_0.PtrVal.(map[string]gopurs_runtime.Value)["show"], v_2.PtrVal.(map[string]gopurs_runtime.Value)["value0"])), gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Semigroup.Get_concatString(), gopurs_runtime.Str(" ")), gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Semigroup.Get_concatString(), gopurs_runtime.Apply(dictShow1_1.PtrVal.(map[string]gopurs_runtime.Value)["show"], v_2.PtrVal.(map[string]gopurs_runtime.Value)["value1"])), gopurs_runtime.Str(")")))))
-})})
-})
+		showNonEmpty = gopurs_runtime.Func2(func(dictShow_0 gopurs_runtime.Value, dictShow1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str("(NonEmpty ").StrVal + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), gopurs_runtime.RecordGet(v_2, "value0")).StrVal).StrVal + gopurs_runtime.Str(" ").StrVal).StrVal + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow1_1, "show"), gopurs_runtime.RecordGet(v_2, "value1")).StrVal).StrVal + gopurs_runtime.Str(")").StrVal)
+}))
 })
 	})
 	return showNonEmpty
@@ -95,14 +91,10 @@ var semigroupNonEmpty gopurs_runtime.Value
 var once_semigroupNonEmpty sync.Once
 func Get_semigroupNonEmpty() gopurs_runtime.Value {
 	once_semigroupNonEmpty.Do(func() {
-		semigroupNonEmpty = gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(dictSemigroup_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"append": gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("NonEmpty"), "value0": v_2.PtrVal.(map[string]gopurs_runtime.Value)["value0"], "value1": gopurs_runtime.Apply(gopurs_runtime.Apply(dictSemigroup_1.PtrVal.(map[string]gopurs_runtime.Value)["append"], v_2.PtrVal.(map[string]gopurs_runtime.Value)["value1"]), gopurs_runtime.Apply(gopurs_runtime.Apply(dictSemigroup_1.PtrVal.(map[string]gopurs_runtime.Value)["append"], gopurs_runtime.Apply(dictApplicative_0.PtrVal.(map[string]gopurs_runtime.Value)["pure"], v1_3.PtrVal.(map[string]gopurs_runtime.Value)["value0"])), v1_3.PtrVal.(map[string]gopurs_runtime.Value)["value1"]))})
-})
-})})
-})
+		semigroupNonEmpty = gopurs_runtime.Func2(func(dictApplicative_0 gopurs_runtime.Value, dictSemigroup_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict1("append", gopurs_runtime.Func2(func(v_2 gopurs_runtime.Value, v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("NonEmpty"), gopurs_runtime.RecordGet(v_2, "value0"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup_1, "append"), gopurs_runtime.RecordGet(v_2, "value1"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup_1, "append"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "pure"), gopurs_runtime.RecordGet(v1_3, "value0")), gopurs_runtime.RecordGet(v1_3, "value1"))))
+}))
 })
 	})
 	return semigroupNonEmpty
@@ -112,10 +104,8 @@ var oneOf gopurs_runtime.Value
 var once_oneOf sync.Once
 func Get_oneOf() gopurs_runtime.Value {
 	once_oneOf.Do(func() {
-		oneOf = gopurs_runtime.Func(func(dictAlternative_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(dictAlternative_0.PtrVal.(map[string]gopurs_runtime.Value)["Plus1"], gopurs_runtime.Value{}).PtrVal.(map[string]gopurs_runtime.Value)["Alt0"], gopurs_runtime.Value{}).PtrVal.(map[string]gopurs_runtime.Value)["alt"], gopurs_runtime.Apply(gopurs_runtime.Apply(dictAlternative_0.PtrVal.(map[string]gopurs_runtime.Value)["Applicative0"], gopurs_runtime.Value{}).PtrVal.(map[string]gopurs_runtime.Value)["pure"], v_1.PtrVal.(map[string]gopurs_runtime.Value)["value0"])), v_1.PtrVal.(map[string]gopurs_runtime.Value)["value1"])
-})
+		oneOf = gopurs_runtime.Func2(func(dictAlternative_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictAlternative_0, "Plus1"), gopurs_runtime.Value{}), "Alt0"), gopurs_runtime.Value{}), "alt"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictAlternative_0, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.RecordGet(v_1, "value0")), gopurs_runtime.RecordGet(v_1, "value1"))
 })
 	})
 	return oneOf
@@ -126,7 +116,7 @@ var once_head sync.Once
 func Get_head() gopurs_runtime.Value {
 	once_head.Do(func() {
 		head = gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return v_0.PtrVal.(map[string]gopurs_runtime.Value)["value0"]
+return gopurs_runtime.RecordGet(v_0, "value0")
 })
 	})
 	return head
@@ -137,11 +127,9 @@ var once_functorNonEmpty sync.Once
 func Get_functorNonEmpty() gopurs_runtime.Value {
 	once_functorNonEmpty.Do(func() {
 		functorNonEmpty = gopurs_runtime.Func(func(dictFunctor_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"map": gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(m_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("NonEmpty"), "value0": gopurs_runtime.Apply(f_1, m_2.PtrVal.(map[string]gopurs_runtime.Value)["value0"]), "value1": gopurs_runtime.Apply(gopurs_runtime.Apply(dictFunctor_0.PtrVal.(map[string]gopurs_runtime.Value)["map"], f_1), m_2.PtrVal.(map[string]gopurs_runtime.Value)["value1"])})
-})
-})})
+return gopurs_runtime.RecordDict1("map", gopurs_runtime.Func2(func(f_1 gopurs_runtime.Value, m_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("NonEmpty"), gopurs_runtime.Apply(f_1, gopurs_runtime.RecordGet(m_2, "value0")), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), f_1, gopurs_runtime.RecordGet(m_2, "value1")))
+}))
 })
 	})
 	return functorNonEmpty
@@ -152,21 +140,19 @@ var once_functorWithIndex sync.Once
 func Get_functorWithIndex() gopurs_runtime.Value {
 	once_functorWithIndex.Do(func() {
 		functorWithIndex = gopurs_runtime.Func(func(dictFunctorWithIndex_0 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_1_0 := gopurs_runtime.Apply(dictFunctorWithIndex_0.PtrVal.(map[string]gopurs_runtime.Value)["Functor0"], gopurs_runtime.Value{})
-functorNonEmpty1_2_1 := gopurs_runtime.Record(map[string]gopurs_runtime.Value{"map": gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(m_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("NonEmpty"), "value0": gopurs_runtime.Apply(f_2, m_3.PtrVal.(map[string]gopurs_runtime.Value)["value0"]), "value1": gopurs_runtime.Apply(gopurs_runtime.Apply(__local_var_1_0.PtrVal.(map[string]gopurs_runtime.Value)["map"], f_2), m_3.PtrVal.(map[string]gopurs_runtime.Value)["value1"])})
-})
-})})
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"mapWithIndex": gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("NonEmpty"), "value0": gopurs_runtime.Apply(gopurs_runtime.Apply(f_3, gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Nothing")})), v_4.PtrVal.(map[string]gopurs_runtime.Value)["value0"]), "value1": gopurs_runtime.Apply(gopurs_runtime.Apply(dictFunctorWithIndex_0.PtrVal.(map[string]gopurs_runtime.Value)["mapWithIndex"], gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(f_3, gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Just"), "value0": x_5}))
-})), v_4.PtrVal.(map[string]gopurs_runtime.Value)["value1"])})
-})
-}), "Functor0": gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctorWithIndex_0, "Functor0"), gopurs_runtime.Value{})
+_ = __local_var_1_0
+functorNonEmpty1_2_1 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func2(func(f_2 gopurs_runtime.Value, m_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("NonEmpty"), gopurs_runtime.Apply(f_2, gopurs_runtime.RecordGet(m_3, "value0")), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "map"), f_2, gopurs_runtime.RecordGet(m_3, "value1")))
+}))
+_ = functorNonEmpty1_2_1
+return gopurs_runtime.RecordDict2("mapWithIndex", "Functor0", gopurs_runtime.Func2(func(f_3 gopurs_runtime.Value, v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("NonEmpty"), gopurs_runtime.Apply2(f_3, gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing")), gopurs_runtime.RecordGet(v_4, "value0")), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctorWithIndex_0, "mapWithIndex"), gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(f_3, gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), x_5))
+}), gopurs_runtime.RecordGet(v_4, "value1")))
+}), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return functorNonEmpty1_2_1
-})})
+}))
 })
 	})
 	return functorWithIndex
@@ -176,10 +162,8 @@ var fromNonEmpty gopurs_runtime.Value
 var once_fromNonEmpty sync.Once
 func Get_fromNonEmpty() gopurs_runtime.Value {
 	once_fromNonEmpty.Do(func() {
-		fromNonEmpty = gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(f_0, v_1.PtrVal.(map[string]gopurs_runtime.Value)["value0"]), v_1.PtrVal.(map[string]gopurs_runtime.Value)["value1"])
-})
+		fromNonEmpty = gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(f_0, gopurs_runtime.RecordGet(v_1, "value0"), gopurs_runtime.RecordGet(v_1, "value1"))
 })
 	})
 	return fromNonEmpty
@@ -190,26 +174,17 @@ var once_foldableNonEmpty sync.Once
 func Get_foldableNonEmpty() gopurs_runtime.Value {
 	once_foldableNonEmpty.Do(func() {
 		foldableNonEmpty = gopurs_runtime.Func(func(dictFoldable_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"foldMap": gopurs_runtime.Func(func(dictMonoid_1 gopurs_runtime.Value) gopurs_runtime.Value {
-foldMap1_2_0 := gopurs_runtime.Apply(dictFoldable_0.PtrVal.(map[string]gopurs_runtime.Value)["foldMap"], dictMonoid_1)
-return gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(dictMonoid_1.PtrVal.(map[string]gopurs_runtime.Value)["Semigroup0"], gopurs_runtime.Value{}).PtrVal.(map[string]gopurs_runtime.Value)["append"], gopurs_runtime.Apply(f_3, v_4.PtrVal.(map[string]gopurs_runtime.Value)["value0"])), gopurs_runtime.Apply(gopurs_runtime.Apply(foldMap1_2_0, f_3), v_4.PtrVal.(map[string]gopurs_runtime.Value)["value1"]))
+return gopurs_runtime.RecordDict3("foldMap", "foldl", "foldr", gopurs_runtime.Func(func(dictMonoid_1 gopurs_runtime.Value) gopurs_runtime.Value {
+foldMap1_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFoldable_0, "foldMap"), dictMonoid_1)
+_ = foldMap1_2_0
+return gopurs_runtime.Func2(func(f_3 gopurs_runtime.Value, v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_1, "Semigroup0"), gopurs_runtime.Value{}), "append"), gopurs_runtime.Apply(f_3, gopurs_runtime.RecordGet(v_4, "value0")), gopurs_runtime.Apply2(foldMap1_2_0, f_3, gopurs_runtime.RecordGet(v_4, "value1")))
 })
-})
-}), "foldl": gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(b_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(dictFoldable_0.PtrVal.(map[string]gopurs_runtime.Value)["foldl"], f_1), gopurs_runtime.Apply(gopurs_runtime.Apply(f_1, b_2), v_3.PtrVal.(map[string]gopurs_runtime.Value)["value0"])), v_3.PtrVal.(map[string]gopurs_runtime.Value)["value1"])
-})
-})
-}), "foldr": gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(b_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(f_1, v_3.PtrVal.(map[string]gopurs_runtime.Value)["value0"]), gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(dictFoldable_0.PtrVal.(map[string]gopurs_runtime.Value)["foldr"], f_1), b_2), v_3.PtrVal.(map[string]gopurs_runtime.Value)["value1"]))
-})
-})
-})})
+}), gopurs_runtime.Func3(func(f_1 gopurs_runtime.Value, b_2 gopurs_runtime.Value, v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictFoldable_0, "foldl"), f_1, gopurs_runtime.Apply2(f_1, b_2, gopurs_runtime.RecordGet(v_3, "value0")), gopurs_runtime.RecordGet(v_3, "value1"))
+}), gopurs_runtime.Func3(func(f_1 gopurs_runtime.Value, b_2 gopurs_runtime.Value, v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(f_1, gopurs_runtime.RecordGet(v_3, "value0"), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictFoldable_0, "foldr"), f_1, b_2, gopurs_runtime.RecordGet(v_3, "value1")))
+}))
 })
 	})
 	return foldableNonEmpty
@@ -220,55 +195,39 @@ var once_foldableWithIndexNonEmpty sync.Once
 func Get_foldableWithIndexNonEmpty() gopurs_runtime.Value {
 	once_foldableWithIndexNonEmpty.Do(func() {
 		foldableWithIndexNonEmpty = gopurs_runtime.Func(func(dictFoldableWithIndex_0 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_1_0 := gopurs_runtime.Apply(dictFoldableWithIndex_0.PtrVal.(map[string]gopurs_runtime.Value)["Foldable0"], gopurs_runtime.Value{})
-foldableNonEmpty1_2_1 := gopurs_runtime.Record(map[string]gopurs_runtime.Value{"foldMap": gopurs_runtime.Func(func(dictMonoid_2 gopurs_runtime.Value) gopurs_runtime.Value {
-foldMap1_3_2 := gopurs_runtime.Apply(__local_var_1_0.PtrVal.(map[string]gopurs_runtime.Value)["foldMap"], dictMonoid_2)
-return gopurs_runtime.Func(func(f_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(dictMonoid_2.PtrVal.(map[string]gopurs_runtime.Value)["Semigroup0"], gopurs_runtime.Value{}).PtrVal.(map[string]gopurs_runtime.Value)["append"], gopurs_runtime.Apply(f_4, v_5.PtrVal.(map[string]gopurs_runtime.Value)["value0"])), gopurs_runtime.Apply(gopurs_runtime.Apply(foldMap1_3_2, f_4), v_5.PtrVal.(map[string]gopurs_runtime.Value)["value1"]))
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFoldableWithIndex_0, "Foldable0"), gopurs_runtime.Value{})
+_ = __local_var_1_0
+foldableNonEmpty1_2_1 := gopurs_runtime.RecordDict3("foldMap", "foldl", "foldr", gopurs_runtime.Func(func(dictMonoid_2 gopurs_runtime.Value) gopurs_runtime.Value {
+foldMap1_3_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_0, "foldMap"), dictMonoid_2)
+_ = foldMap1_3_2
+return gopurs_runtime.Func2(func(f_4 gopurs_runtime.Value, v_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_2, "Semigroup0"), gopurs_runtime.Value{}), "append"), gopurs_runtime.Apply(f_4, gopurs_runtime.RecordGet(v_5, "value0")), gopurs_runtime.Apply2(foldMap1_3_2, f_4, gopurs_runtime.RecordGet(v_5, "value1")))
 })
+}), gopurs_runtime.Func3(func(f_2 gopurs_runtime.Value, b_3 gopurs_runtime.Value, v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_1_0, "foldl"), f_2, gopurs_runtime.Apply2(f_2, b_3, gopurs_runtime.RecordGet(v_4, "value0")), gopurs_runtime.RecordGet(v_4, "value1"))
+}), gopurs_runtime.Func3(func(f_2 gopurs_runtime.Value, b_3 gopurs_runtime.Value, v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(f_2, gopurs_runtime.RecordGet(v_4, "value0"), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_1_0, "foldr"), f_2, b_3, gopurs_runtime.RecordGet(v_4, "value1")))
+}))
+_ = foldableNonEmpty1_2_1
+return gopurs_runtime.RecordDict4("foldMapWithIndex", "foldlWithIndex", "foldrWithIndex", "Foldable0", gopurs_runtime.Func(func(dictMonoid_3 gopurs_runtime.Value) gopurs_runtime.Value {
+foldMapWithIndex1_4_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFoldableWithIndex_0, "foldMapWithIndex"), dictMonoid_3)
+_ = foldMapWithIndex1_4_3
+return gopurs_runtime.Func2(func(f_5 gopurs_runtime.Value, v_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_3, "Semigroup0"), gopurs_runtime.Value{}), "append"), gopurs_runtime.Apply2(f_5, gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing")), gopurs_runtime.RecordGet(v_6, "value0")), gopurs_runtime.Apply2(foldMapWithIndex1_4_3, gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(f_5, gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), x_7))
+}), gopurs_runtime.RecordGet(v_6, "value1")))
 })
-}), "foldl": gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(b_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(__local_var_1_0.PtrVal.(map[string]gopurs_runtime.Value)["foldl"], f_2), gopurs_runtime.Apply(gopurs_runtime.Apply(f_2, b_3), v_4.PtrVal.(map[string]gopurs_runtime.Value)["value0"])), v_4.PtrVal.(map[string]gopurs_runtime.Value)["value1"])
-})
-})
-}), "foldr": gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(b_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(f_2, v_4.PtrVal.(map[string]gopurs_runtime.Value)["value0"]), gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(__local_var_1_0.PtrVal.(map[string]gopurs_runtime.Value)["foldr"], f_2), b_3), v_4.PtrVal.(map[string]gopurs_runtime.Value)["value1"]))
-})
-})
-})})
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"foldMapWithIndex": gopurs_runtime.Func(func(dictMonoid_3 gopurs_runtime.Value) gopurs_runtime.Value {
-foldMapWithIndex1_4_3 := gopurs_runtime.Apply(dictFoldableWithIndex_0.PtrVal.(map[string]gopurs_runtime.Value)["foldMapWithIndex"], dictMonoid_3)
-return gopurs_runtime.Func(func(f_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(dictMonoid_3.PtrVal.(map[string]gopurs_runtime.Value)["Semigroup0"], gopurs_runtime.Value{}).PtrVal.(map[string]gopurs_runtime.Value)["append"], gopurs_runtime.Apply(gopurs_runtime.Apply(f_5, gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Nothing")})), v_6.PtrVal.(map[string]gopurs_runtime.Value)["value0"])), gopurs_runtime.Apply(gopurs_runtime.Apply(foldMapWithIndex1_4_3, gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(f_5, gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Just"), "value0": x_7}))
-})), v_6.PtrVal.(map[string]gopurs_runtime.Value)["value1"]))
-})
-})
-}), "foldlWithIndex": gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(b_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(dictFoldableWithIndex_0.PtrVal.(map[string]gopurs_runtime.Value)["foldlWithIndex"], gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(f_3, gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Just"), "value0": x_6}))
-})), gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(f_3, gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Nothing")})), b_4), v_5.PtrVal.(map[string]gopurs_runtime.Value)["value0"])), v_5.PtrVal.(map[string]gopurs_runtime.Value)["value1"])
-})
-})
-}), "foldrWithIndex": gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(b_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(f_3, gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Nothing")})), v_5.PtrVal.(map[string]gopurs_runtime.Value)["value0"]), gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(dictFoldableWithIndex_0.PtrVal.(map[string]gopurs_runtime.Value)["foldrWithIndex"], gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(f_3, gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Just"), "value0": x_6}))
-})), b_4), v_5.PtrVal.(map[string]gopurs_runtime.Value)["value1"]))
-})
-})
-}), "Foldable0": gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func3(func(f_3 gopurs_runtime.Value, b_4 gopurs_runtime.Value, v_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictFoldableWithIndex_0, "foldlWithIndex"), gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(f_3, gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), x_6))
+}), gopurs_runtime.Apply3(f_3, gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing")), b_4, gopurs_runtime.RecordGet(v_5, "value0")), gopurs_runtime.RecordGet(v_5, "value1"))
+}), gopurs_runtime.Func3(func(f_3 gopurs_runtime.Value, b_4 gopurs_runtime.Value, v_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply3(f_3, gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing")), gopurs_runtime.RecordGet(v_5, "value0"), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictFoldableWithIndex_0, "foldrWithIndex"), gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(f_3, gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), x_6))
+}), b_4, gopurs_runtime.RecordGet(v_5, "value1")))
+}), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return foldableNonEmpty1_2_1
-})})
+}))
 })
 	})
 	return foldableWithIndexNonEmpty
@@ -279,52 +238,47 @@ var once_traversableNonEmpty sync.Once
 func Get_traversableNonEmpty() gopurs_runtime.Value {
 	once_traversableNonEmpty.Do(func() {
 		traversableNonEmpty = gopurs_runtime.Func(func(dictTraversable_0 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_1_0 := gopurs_runtime.Apply(dictTraversable_0.PtrVal.(map[string]gopurs_runtime.Value)["Functor0"], gopurs_runtime.Value{})
-functorNonEmpty1_2_1 := gopurs_runtime.Record(map[string]gopurs_runtime.Value{"map": gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(m_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("NonEmpty"), "value0": gopurs_runtime.Apply(f_2, m_3.PtrVal.(map[string]gopurs_runtime.Value)["value0"]), "value1": gopurs_runtime.Apply(gopurs_runtime.Apply(__local_var_1_0.PtrVal.(map[string]gopurs_runtime.Value)["map"], f_2), m_3.PtrVal.(map[string]gopurs_runtime.Value)["value1"])})
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTraversable_0, "Functor0"), gopurs_runtime.Value{})
+_ = __local_var_1_0
+functorNonEmpty1_2_1 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func2(func(f_2 gopurs_runtime.Value, m_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("NonEmpty"), gopurs_runtime.Apply(f_2, gopurs_runtime.RecordGet(m_3, "value0")), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "map"), f_2, gopurs_runtime.RecordGet(m_3, "value1")))
+}))
+_ = functorNonEmpty1_2_1
+__local_var_3_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTraversable_0, "Foldable1"), gopurs_runtime.Value{})
+_ = __local_var_3_2
+foldableNonEmpty1_4_3 := gopurs_runtime.RecordDict3("foldMap", "foldl", "foldr", gopurs_runtime.Func(func(dictMonoid_4 gopurs_runtime.Value) gopurs_runtime.Value {
+foldMap1_5_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_3_2, "foldMap"), dictMonoid_4)
+_ = foldMap1_5_4
+return gopurs_runtime.Func2(func(f_6 gopurs_runtime.Value, v_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_4, "Semigroup0"), gopurs_runtime.Value{}), "append"), gopurs_runtime.Apply(f_6, gopurs_runtime.RecordGet(v_7, "value0")), gopurs_runtime.Apply2(foldMap1_5_4, f_6, gopurs_runtime.RecordGet(v_7, "value1")))
 })
-})})
-__local_var_3_2 := gopurs_runtime.Apply(dictTraversable_0.PtrVal.(map[string]gopurs_runtime.Value)["Foldable1"], gopurs_runtime.Value{})
-foldableNonEmpty1_4_3 := gopurs_runtime.Record(map[string]gopurs_runtime.Value{"foldMap": gopurs_runtime.Func(func(dictMonoid_4 gopurs_runtime.Value) gopurs_runtime.Value {
-foldMap1_5_4 := gopurs_runtime.Apply(__local_var_3_2.PtrVal.(map[string]gopurs_runtime.Value)["foldMap"], dictMonoid_4)
-return gopurs_runtime.Func(func(f_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(dictMonoid_4.PtrVal.(map[string]gopurs_runtime.Value)["Semigroup0"], gopurs_runtime.Value{}).PtrVal.(map[string]gopurs_runtime.Value)["append"], gopurs_runtime.Apply(f_6, v_7.PtrVal.(map[string]gopurs_runtime.Value)["value0"])), gopurs_runtime.Apply(gopurs_runtime.Apply(foldMap1_5_4, f_6), v_7.PtrVal.(map[string]gopurs_runtime.Value)["value1"]))
-})
-})
-}), "foldl": gopurs_runtime.Func(func(f_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(b_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(__local_var_3_2.PtrVal.(map[string]gopurs_runtime.Value)["foldl"], f_4), gopurs_runtime.Apply(gopurs_runtime.Apply(f_4, b_5), v_6.PtrVal.(map[string]gopurs_runtime.Value)["value0"])), v_6.PtrVal.(map[string]gopurs_runtime.Value)["value1"])
-})
-})
-}), "foldr": gopurs_runtime.Func(func(f_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(b_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(f_4, v_6.PtrVal.(map[string]gopurs_runtime.Value)["value0"]), gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(__local_var_3_2.PtrVal.(map[string]gopurs_runtime.Value)["foldr"], f_4), b_5), v_6.PtrVal.(map[string]gopurs_runtime.Value)["value1"]))
-})
-})
-})})
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"sequence": gopurs_runtime.Func(func(dictApplicative_5 gopurs_runtime.Value) gopurs_runtime.Value {
-Apply0_6_5 := gopurs_runtime.Apply(dictApplicative_5.PtrVal.(map[string]gopurs_runtime.Value)["Apply0"], gopurs_runtime.Value{})
-sequence1_7_6 := gopurs_runtime.Apply(dictTraversable_0.PtrVal.(map[string]gopurs_runtime.Value)["sequence"], dictApplicative_5)
+}), gopurs_runtime.Func3(func(f_4 gopurs_runtime.Value, b_5 gopurs_runtime.Value, v_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_3_2, "foldl"), f_4, gopurs_runtime.Apply2(f_4, b_5, gopurs_runtime.RecordGet(v_6, "value0")), gopurs_runtime.RecordGet(v_6, "value1"))
+}), gopurs_runtime.Func3(func(f_4 gopurs_runtime.Value, b_5 gopurs_runtime.Value, v_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(f_4, gopurs_runtime.RecordGet(v_6, "value0"), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_3_2, "foldr"), f_4, b_5, gopurs_runtime.RecordGet(v_6, "value1")))
+}))
+_ = foldableNonEmpty1_4_3
+return gopurs_runtime.RecordDict4("sequence", "traverse", "Functor0", "Foldable1", gopurs_runtime.Func(func(dictApplicative_5 gopurs_runtime.Value) gopurs_runtime.Value {
+Apply0_6_5 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_5, "Apply0"), gopurs_runtime.Value{})
+_ = Apply0_6_5
+sequence1_7_6 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTraversable_0, "sequence"), dictApplicative_5)
+_ = sequence1_7_6
 return gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(Apply0_6_5.PtrVal.(map[string]gopurs_runtime.Value)["apply"], gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(Apply0_6_5.PtrVal.(map[string]gopurs_runtime.Value)["Functor0"], gopurs_runtime.Value{}).PtrVal.(map[string]gopurs_runtime.Value)["map"], Get_NonEmpty()), v_8.PtrVal.(map[string]gopurs_runtime.Value)["value0"])), gopurs_runtime.Apply(sequence1_7_6, v_8.PtrVal.(map[string]gopurs_runtime.Value)["value1"]))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Apply0_6_5, "apply"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Apply0_6_5, "Functor0"), gopurs_runtime.Value{}), "map"), Get_NonEmpty(), gopurs_runtime.RecordGet(v_8, "value0")), gopurs_runtime.Apply(sequence1_7_6, gopurs_runtime.RecordGet(v_8, "value1")))
 })
-}), "traverse": gopurs_runtime.Func(func(dictApplicative_5 gopurs_runtime.Value) gopurs_runtime.Value {
-Apply0_6_7 := gopurs_runtime.Apply(dictApplicative_5.PtrVal.(map[string]gopurs_runtime.Value)["Apply0"], gopurs_runtime.Value{})
-traverse1_7_8 := gopurs_runtime.Apply(dictTraversable_0.PtrVal.(map[string]gopurs_runtime.Value)["traverse"], dictApplicative_5)
-return gopurs_runtime.Func(func(f_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_9 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(Apply0_6_7.PtrVal.(map[string]gopurs_runtime.Value)["apply"], gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(Apply0_6_7.PtrVal.(map[string]gopurs_runtime.Value)["Functor0"], gopurs_runtime.Value{}).PtrVal.(map[string]gopurs_runtime.Value)["map"], Get_NonEmpty()), gopurs_runtime.Apply(f_8, v_9.PtrVal.(map[string]gopurs_runtime.Value)["value0"]))), gopurs_runtime.Apply(gopurs_runtime.Apply(traverse1_7_8, f_8), v_9.PtrVal.(map[string]gopurs_runtime.Value)["value1"]))
+}), gopurs_runtime.Func(func(dictApplicative_5 gopurs_runtime.Value) gopurs_runtime.Value {
+Apply0_6_7 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_5, "Apply0"), gopurs_runtime.Value{})
+_ = Apply0_6_7
+traverse1_7_8 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTraversable_0, "traverse"), dictApplicative_5)
+_ = traverse1_7_8
+return gopurs_runtime.Func2(func(f_8 gopurs_runtime.Value, v_9 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Apply0_6_7, "apply"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Apply0_6_7, "Functor0"), gopurs_runtime.Value{}), "map"), Get_NonEmpty(), gopurs_runtime.Apply(f_8, gopurs_runtime.RecordGet(v_9, "value0"))), gopurs_runtime.Apply2(traverse1_7_8, f_8, gopurs_runtime.RecordGet(v_9, "value1")))
 })
-})
-}), "Functor0": gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return functorNonEmpty1_2_1
-}), "Foldable1": gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return foldableNonEmpty1_4_3
-})})
+}))
 })
 	})
 	return traversableNonEmpty
@@ -335,41 +289,43 @@ var once_traversableWithIndexNonEmpty sync.Once
 func Get_traversableWithIndexNonEmpty() gopurs_runtime.Value {
 	once_traversableWithIndexNonEmpty.Do(func() {
 		traversableWithIndexNonEmpty = gopurs_runtime.Func(func(dictTraversableWithIndex_0 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_1_0 := gopurs_runtime.Apply(dictTraversableWithIndex_0.PtrVal.(map[string]gopurs_runtime.Value)["FunctorWithIndex0"], gopurs_runtime.Value{})
-__local_var_2_1 := gopurs_runtime.Apply(__local_var_1_0.PtrVal.(map[string]gopurs_runtime.Value)["Functor0"], gopurs_runtime.Value{})
-functorNonEmpty1_3_3 := gopurs_runtime.Record(map[string]gopurs_runtime.Value{"map": gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(m_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("NonEmpty"), "value0": gopurs_runtime.Apply(f_3, m_4.PtrVal.(map[string]gopurs_runtime.Value)["value0"]), "value1": gopurs_runtime.Apply(gopurs_runtime.Apply(__local_var_2_1.PtrVal.(map[string]gopurs_runtime.Value)["map"], f_3), m_4.PtrVal.(map[string]gopurs_runtime.Value)["value1"])})
-})
-})})
-functorWithIndex1_3_2 := gopurs_runtime.Record(map[string]gopurs_runtime.Value{"mapWithIndex": gopurs_runtime.Func(func(f_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("NonEmpty"), "value0": gopurs_runtime.Apply(gopurs_runtime.Apply(f_4, gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Nothing")})), v_5.PtrVal.(map[string]gopurs_runtime.Value)["value0"]), "value1": gopurs_runtime.Apply(gopurs_runtime.Apply(__local_var_1_0.PtrVal.(map[string]gopurs_runtime.Value)["mapWithIndex"], gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(f_4, gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Just"), "value0": x_6}))
-})), v_5.PtrVal.(map[string]gopurs_runtime.Value)["value1"])})
-})
-}), "Functor0": gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTraversableWithIndex_0, "FunctorWithIndex0"), gopurs_runtime.Value{})
+_ = __local_var_1_0
+__local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_0, "Functor0"), gopurs_runtime.Value{})
+_ = __local_var_2_1
+functorNonEmpty1_3_3 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func2(func(f_3 gopurs_runtime.Value, m_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("NonEmpty"), gopurs_runtime.Apply(f_3, gopurs_runtime.RecordGet(m_4, "value0")), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_1, "map"), f_3, gopurs_runtime.RecordGet(m_4, "value1")))
+}))
+_ = functorNonEmpty1_3_3
+functorWithIndex1_3_2 := gopurs_runtime.RecordDict2("mapWithIndex", "Functor0", gopurs_runtime.Func2(func(f_4 gopurs_runtime.Value, v_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("NonEmpty"), gopurs_runtime.Apply2(f_4, gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing")), gopurs_runtime.RecordGet(v_5, "value0")), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "mapWithIndex"), gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(f_4, gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), x_6))
+}), gopurs_runtime.RecordGet(v_5, "value1")))
+}), gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return functorNonEmpty1_3_3
-})})
-foldableWithIndexNonEmpty1_4_4 := gopurs_runtime.Apply(Get_foldableWithIndexNonEmpty(), gopurs_runtime.Apply(dictTraversableWithIndex_0.PtrVal.(map[string]gopurs_runtime.Value)["FoldableWithIndex1"], gopurs_runtime.Value{}))
-traversableNonEmpty1_5_5 := gopurs_runtime.Apply(Get_traversableNonEmpty(), gopurs_runtime.Apply(dictTraversableWithIndex_0.PtrVal.(map[string]gopurs_runtime.Value)["Traversable2"], gopurs_runtime.Value{}))
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"traverseWithIndex": gopurs_runtime.Func(func(dictApplicative_6 gopurs_runtime.Value) gopurs_runtime.Value {
-Apply0_7_6 := gopurs_runtime.Apply(dictApplicative_6.PtrVal.(map[string]gopurs_runtime.Value)["Apply0"], gopurs_runtime.Value{})
-traverseWithIndex1_8_7 := gopurs_runtime.Apply(dictTraversableWithIndex_0.PtrVal.(map[string]gopurs_runtime.Value)["traverseWithIndex"], dictApplicative_6)
-return gopurs_runtime.Func(func(f_9 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_10 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(Apply0_7_6.PtrVal.(map[string]gopurs_runtime.Value)["apply"], gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(Apply0_7_6.PtrVal.(map[string]gopurs_runtime.Value)["Functor0"], gopurs_runtime.Value{}).PtrVal.(map[string]gopurs_runtime.Value)["map"], Get_NonEmpty()), gopurs_runtime.Apply(gopurs_runtime.Apply(f_9, gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Nothing")})), v_10.PtrVal.(map[string]gopurs_runtime.Value)["value0"]))), gopurs_runtime.Apply(gopurs_runtime.Apply(traverseWithIndex1_8_7, gopurs_runtime.Func(func(x_11 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(f_9, gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Just"), "value0": x_11}))
-})), v_10.PtrVal.(map[string]gopurs_runtime.Value)["value1"]))
+}))
+_ = functorWithIndex1_3_2
+foldableWithIndexNonEmpty1_4_4 := gopurs_runtime.Apply(Get_foldableWithIndexNonEmpty(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTraversableWithIndex_0, "FoldableWithIndex1"), gopurs_runtime.Value{}))
+_ = foldableWithIndexNonEmpty1_4_4
+traversableNonEmpty1_5_5 := gopurs_runtime.Apply(Get_traversableNonEmpty(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTraversableWithIndex_0, "Traversable2"), gopurs_runtime.Value{}))
+_ = traversableNonEmpty1_5_5
+return gopurs_runtime.RecordDict4("traverseWithIndex", "FunctorWithIndex0", "FoldableWithIndex1", "Traversable2", gopurs_runtime.Func(func(dictApplicative_6 gopurs_runtime.Value) gopurs_runtime.Value {
+Apply0_7_6 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_6, "Apply0"), gopurs_runtime.Value{})
+_ = Apply0_7_6
+traverseWithIndex1_8_7 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTraversableWithIndex_0, "traverseWithIndex"), dictApplicative_6)
+_ = traverseWithIndex1_8_7
+return gopurs_runtime.Func2(func(f_9 gopurs_runtime.Value, v_10 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Apply0_7_6, "apply"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Apply0_7_6, "Functor0"), gopurs_runtime.Value{}), "map"), Get_NonEmpty(), gopurs_runtime.Apply2(f_9, gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing")), gopurs_runtime.RecordGet(v_10, "value0"))), gopurs_runtime.Apply2(traverseWithIndex1_8_7, gopurs_runtime.Func(func(x_11 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(f_9, gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), x_11))
+}), gopurs_runtime.RecordGet(v_10, "value1")))
 })
-})
-}), "FunctorWithIndex0": gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return functorWithIndex1_3_2
-}), "FoldableWithIndex1": gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return foldableWithIndexNonEmpty1_4_4
-}), "Traversable2": gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return traversableNonEmpty1_5_5
-})})
+}))
 })
 	})
 	return traversableWithIndexNonEmpty
@@ -380,45 +336,32 @@ var once_foldable1NonEmpty sync.Once
 func Get_foldable1NonEmpty() gopurs_runtime.Value {
 	once_foldable1NonEmpty.Do(func() {
 		foldable1NonEmpty = gopurs_runtime.Func(func(dictFoldable_0 gopurs_runtime.Value) gopurs_runtime.Value {
-foldableNonEmpty1_1_0 := gopurs_runtime.Record(map[string]gopurs_runtime.Value{"foldMap": gopurs_runtime.Func(func(dictMonoid_1 gopurs_runtime.Value) gopurs_runtime.Value {
-foldMap1_2_1 := gopurs_runtime.Apply(dictFoldable_0.PtrVal.(map[string]gopurs_runtime.Value)["foldMap"], dictMonoid_1)
-return gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(dictMonoid_1.PtrVal.(map[string]gopurs_runtime.Value)["Semigroup0"], gopurs_runtime.Value{}).PtrVal.(map[string]gopurs_runtime.Value)["append"], gopurs_runtime.Apply(f_3, v_4.PtrVal.(map[string]gopurs_runtime.Value)["value0"])), gopurs_runtime.Apply(gopurs_runtime.Apply(foldMap1_2_1, f_3), v_4.PtrVal.(map[string]gopurs_runtime.Value)["value1"]))
+foldableNonEmpty1_1_0 := gopurs_runtime.RecordDict3("foldMap", "foldl", "foldr", gopurs_runtime.Func(func(dictMonoid_1 gopurs_runtime.Value) gopurs_runtime.Value {
+foldMap1_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFoldable_0, "foldMap"), dictMonoid_1)
+_ = foldMap1_2_1
+return gopurs_runtime.Func2(func(f_3 gopurs_runtime.Value, v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_1, "Semigroup0"), gopurs_runtime.Value{}), "append"), gopurs_runtime.Apply(f_3, gopurs_runtime.RecordGet(v_4, "value0")), gopurs_runtime.Apply2(foldMap1_2_1, f_3, gopurs_runtime.RecordGet(v_4, "value1")))
 })
-})
-}), "foldl": gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(b_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(dictFoldable_0.PtrVal.(map[string]gopurs_runtime.Value)["foldl"], f_1), gopurs_runtime.Apply(gopurs_runtime.Apply(f_1, b_2), v_3.PtrVal.(map[string]gopurs_runtime.Value)["value0"])), v_3.PtrVal.(map[string]gopurs_runtime.Value)["value1"])
-})
-})
-}), "foldr": gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(b_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(f_1, v_3.PtrVal.(map[string]gopurs_runtime.Value)["value0"]), gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(dictFoldable_0.PtrVal.(map[string]gopurs_runtime.Value)["foldr"], f_1), b_2), v_3.PtrVal.(map[string]gopurs_runtime.Value)["value1"]))
-})
-})
-})})
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"foldMap1": gopurs_runtime.Func(func(dictSemigroup_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(dictFoldable_0.PtrVal.(map[string]gopurs_runtime.Value)["foldl"], gopurs_runtime.Func(func(s_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(a1_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(dictSemigroup_2.PtrVal.(map[string]gopurs_runtime.Value)["append"], s_5), gopurs_runtime.Apply(f_3, a1_6))
-})
-})), gopurs_runtime.Apply(f_3, v_4.PtrVal.(map[string]gopurs_runtime.Value)["value0"])), v_4.PtrVal.(map[string]gopurs_runtime.Value)["value1"])
-})
-})
-}), "foldr1": gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_4_2 := gopurs_runtime.Apply(f_2, v_3.PtrVal.(map[string]gopurs_runtime.Value)["value0"])
-__local_var_5_3 := gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(dictFoldable_0.PtrVal.(map[string]gopurs_runtime.Value)["foldr"], gopurs_runtime.Func(func(a1_5 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func3(func(f_1 gopurs_runtime.Value, b_2 gopurs_runtime.Value, v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictFoldable_0, "foldl"), f_1, gopurs_runtime.Apply2(f_1, b_2, gopurs_runtime.RecordGet(v_3, "value0")), gopurs_runtime.RecordGet(v_3, "value1"))
+}), gopurs_runtime.Func3(func(f_1 gopurs_runtime.Value, b_2 gopurs_runtime.Value, v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(f_1, gopurs_runtime.RecordGet(v_3, "value0"), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictFoldable_0, "foldr"), f_1, b_2, gopurs_runtime.RecordGet(v_3, "value1")))
+}))
+_ = foldableNonEmpty1_1_0
+return gopurs_runtime.RecordDict4("foldMap1", "foldr1", "foldl1", "Foldable0", gopurs_runtime.Func3(func(dictSemigroup_2 gopurs_runtime.Value, f_3 gopurs_runtime.Value, v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictFoldable_0, "foldl"), gopurs_runtime.Func2(func(s_5 gopurs_runtime.Value, a1_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup_2, "append"), s_5, gopurs_runtime.Apply(f_3, a1_6))
+}), gopurs_runtime.Apply(f_3, gopurs_runtime.RecordGet(v_4, "value0")), gopurs_runtime.RecordGet(v_4, "value1"))
+}), gopurs_runtime.Func2(func(f_2 gopurs_runtime.Value, v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_4_2 := gopurs_runtime.Apply(f_2, gopurs_runtime.RecordGet(v_3, "value0"))
+_ = __local_var_4_2
+__local_var_5_3 := gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictFoldable_0, "foldr"), gopurs_runtime.Func(func(a1_5 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_6_4 := gopurs_runtime.Apply(f_2, a1_5)
+_ = __local_var_6_4
 return gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t5 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(x_7.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Nothing")).IntVal != 0 {
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(x_7, "_tag").StrVal == "Nothing")).IntVal != 0 {
 __t5 = a1_5
 goto end_branch_5
 } else {
@@ -426,8 +369,8 @@ goto end_branch_5
 }
 }
 {
-if (gopurs_runtime.Bool(x_7.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Just")).IntVal != 0 {
-__t5 = gopurs_runtime.Apply(__local_var_6_4, x_7.PtrVal.(map[string]gopurs_runtime.Value)["value0"])
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(x_7, "_tag").StrVal == "Just")).IntVal != 0 {
+__t5 = gopurs_runtime.Apply(__local_var_6_4, gopurs_runtime.RecordGet(x_7, "value0"))
 goto end_branch_5
 } else {
 
@@ -437,21 +380,22 @@ goto end_branch_5
 __t5 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_5:
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Just"), "value0": __t5})
+return gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), __t5)
 })
-})), gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Nothing")})), v_3.PtrVal.(map[string]gopurs_runtime.Value)["value1"])
+}), gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing")), gopurs_runtime.RecordGet(v_3, "value1"))
+_ = __local_var_5_3
 var __t6 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(__local_var_5_3.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Nothing")).IntVal != 0 {
-__t6 = v_3.PtrVal.(map[string]gopurs_runtime.Value)["value0"]
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_5_3, "_tag").StrVal == "Nothing")).IntVal != 0 {
+__t6 = gopurs_runtime.RecordGet(v_3, "value0")
 goto end_branch_6
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(__local_var_5_3.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Just")).IntVal != 0 {
-__t6 = gopurs_runtime.Apply(__local_var_4_2, __local_var_5_3.PtrVal.(map[string]gopurs_runtime.Value)["value0"])
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_5_3, "_tag").StrVal == "Just")).IntVal != 0 {
+__t6 = gopurs_runtime.Apply(__local_var_4_2, gopurs_runtime.RecordGet(__local_var_5_3, "value0"))
 goto end_branch_6
 } else {
 
@@ -462,14 +406,11 @@ __t6 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_6:
 return __t6
-})
-}), "foldl1": gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(dictFoldable_0.PtrVal.(map[string]gopurs_runtime.Value)["foldl"], f_2), v_3.PtrVal.(map[string]gopurs_runtime.Value)["value0"]), v_3.PtrVal.(map[string]gopurs_runtime.Value)["value1"])
-})
-}), "Foldable0": gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func2(func(f_2 gopurs_runtime.Value, v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictFoldable_0, "foldl"), f_2, gopurs_runtime.RecordGet(v_3, "value0"), gopurs_runtime.RecordGet(v_3, "value1"))
+}), gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return foldableNonEmpty1_1_0
-})})
+}))
 })
 	})
 	return foldable1NonEmpty
@@ -480,7 +421,7 @@ var once_foldl1 sync.Once
 func Get_foldl1() gopurs_runtime.Value {
 	once_foldl1.Do(func() {
 		foldl1 = gopurs_runtime.Func(func(dictFoldable_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_foldable1NonEmpty(), dictFoldable_0).PtrVal.(map[string]gopurs_runtime.Value)["foldl1"]
+return gopurs_runtime.RecordGet(gopurs_runtime.Apply(Get_foldable1NonEmpty(), dictFoldable_0), "foldl1")
 })
 	})
 	return foldl1
@@ -490,15 +431,12 @@ var eqNonEmpty gopurs_runtime.Value
 var once_eqNonEmpty sync.Once
 func Get_eqNonEmpty() gopurs_runtime.Value {
 	once_eqNonEmpty.Do(func() {
-		eqNonEmpty = gopurs_runtime.Func(func(dictEq1_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(dictEq_1 gopurs_runtime.Value) gopurs_runtime.Value {
-eq11_2_0 := gopurs_runtime.Apply(dictEq1_0.PtrVal.(map[string]gopurs_runtime.Value)["eq1"], dictEq_1)
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"eq": gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(y_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_HeytingAlgebra.Get_boolConj(), gopurs_runtime.Apply(gopurs_runtime.Apply(dictEq_1.PtrVal.(map[string]gopurs_runtime.Value)["eq"], x_3.PtrVal.(map[string]gopurs_runtime.Value)["value0"]), y_4.PtrVal.(map[string]gopurs_runtime.Value)["value0"])), gopurs_runtime.Apply(gopurs_runtime.Apply(eq11_2_0, x_3.PtrVal.(map[string]gopurs_runtime.Value)["value1"]), y_4.PtrVal.(map[string]gopurs_runtime.Value)["value1"]))
-})
-})})
-})
+		eqNonEmpty = gopurs_runtime.Func2(func(dictEq1_0 gopurs_runtime.Value, dictEq_1 gopurs_runtime.Value) gopurs_runtime.Value {
+eq11_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEq1_0, "eq1"), dictEq_1)
+_ = eq11_2_0
+return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func2(func(x_3 gopurs_runtime.Value, y_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_1, "eq"), gopurs_runtime.RecordGet(x_3, "value0"), gopurs_runtime.RecordGet(y_4, "value0")).IntVal != 0 && gopurs_runtime.Apply2(eq11_2_0, gopurs_runtime.RecordGet(x_3, "value1"), gopurs_runtime.RecordGet(y_4, "value1")).IntVal != 0)
+}))
 })
 	})
 	return eqNonEmpty
@@ -509,39 +447,47 @@ var once_ordNonEmpty sync.Once
 func Get_ordNonEmpty() gopurs_runtime.Value {
 	once_ordNonEmpty.Do(func() {
 		ordNonEmpty = gopurs_runtime.Func(func(dictOrd1_0 gopurs_runtime.Value) gopurs_runtime.Value {
-eqNonEmpty1_1_0 := gopurs_runtime.Apply(Get_eqNonEmpty(), gopurs_runtime.Apply(dictOrd1_0.PtrVal.(map[string]gopurs_runtime.Value)["Eq10"], gopurs_runtime.Value{}))
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd1_0, "Eq10"), gopurs_runtime.Value{})
+_ = __local_var_1_0
 return gopurs_runtime.Func(func(dictOrd_2 gopurs_runtime.Value) gopurs_runtime.Value {
-compare11_3_1 := gopurs_runtime.Apply(dictOrd1_0.PtrVal.(map[string]gopurs_runtime.Value)["compare1"], dictOrd_2)
-eqNonEmpty2_4_2 := gopurs_runtime.Apply(eqNonEmpty1_1_0, gopurs_runtime.Apply(dictOrd_2.PtrVal.(map[string]gopurs_runtime.Value)["Eq0"], gopurs_runtime.Value{}))
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"compare": gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(y_6 gopurs_runtime.Value) gopurs_runtime.Value {
-v_7_3 := gopurs_runtime.Apply(gopurs_runtime.Apply(dictOrd_2.PtrVal.(map[string]gopurs_runtime.Value)["compare"], x_5.PtrVal.(map[string]gopurs_runtime.Value)["value0"]), y_6.PtrVal.(map[string]gopurs_runtime.Value)["value0"])
-var __t4 gopurs_runtime.Value
+compare11_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd1_0, "compare1"), dictOrd_2)
+_ = compare11_3_1
+__local_var_4_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd_2, "Eq0"), gopurs_runtime.Value{})
+_ = __local_var_4_2
+eq11_5_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_0, "eq1"), __local_var_4_2)
+_ = eq11_5_3
+eqNonEmpty2_6_4 := gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func2(func(x_6 gopurs_runtime.Value, y_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_4_2, "eq"), gopurs_runtime.RecordGet(x_6, "value0"), gopurs_runtime.RecordGet(y_7, "value0")).IntVal != 0 && gopurs_runtime.Apply2(eq11_5_3, gopurs_runtime.RecordGet(x_6, "value1"), gopurs_runtime.RecordGet(y_7, "value1")).IntVal != 0)
+}))
+_ = eqNonEmpty2_6_4
+return gopurs_runtime.RecordDict2("compare", "Eq0", gopurs_runtime.Func2(func(x_7 gopurs_runtime.Value, y_8 gopurs_runtime.Value) gopurs_runtime.Value {
+v_9_5 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_2, "compare"), gopurs_runtime.RecordGet(x_7, "value0"), gopurs_runtime.RecordGet(y_8, "value0"))
+_ = v_9_5
+var __t6 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_7_3.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "LT")).IntVal != 0 {
-__t4 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("LT")})
-goto end_branch_4
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_9_5, "_tag").StrVal == "LT")).IntVal != 0 {
+__t6 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("LT"))
+goto end_branch_6
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(v_7_3.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "GT")).IntVal != 0 {
-__t4 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("GT")})
-goto end_branch_4
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_9_5, "_tag").StrVal == "GT")).IntVal != 0 {
+__t6 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("GT"))
+goto end_branch_6
 } else {
 
 }
 }
 {
-__t4 = gopurs_runtime.Apply(gopurs_runtime.Apply(compare11_3_1, x_5.PtrVal.(map[string]gopurs_runtime.Value)["value1"]), y_6.PtrVal.(map[string]gopurs_runtime.Value)["value1"])
+__t6 = gopurs_runtime.Apply2(compare11_3_1, gopurs_runtime.RecordGet(x_7, "value1"), gopurs_runtime.RecordGet(y_8, "value1"))
 }
-end_branch_4:
-return __t4
-})
-}), "Eq0": gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return eqNonEmpty2_4_2
-})})
+end_branch_6:
+return __t6
+}), gopurs_runtime.Func(func(_dollar__unused_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return eqNonEmpty2_6_4
+}))
 })
 })
 	})
@@ -553,9 +499,13 @@ var once_eq1NonEmpty sync.Once
 func Get_eq1NonEmpty() gopurs_runtime.Value {
 	once_eq1NonEmpty.Do(func() {
 		eq1NonEmpty = gopurs_runtime.Func(func(dictEq1_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"eq1": gopurs_runtime.Func(func(dictEq_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(Get_eqNonEmpty(), dictEq1_0), dictEq_1).PtrVal.(map[string]gopurs_runtime.Value)["eq"]
-})})
+return gopurs_runtime.RecordDict1("eq1", gopurs_runtime.Func(func(dictEq_1 gopurs_runtime.Value) gopurs_runtime.Value {
+eq11_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEq1_0, "eq1"), dictEq_1)
+_ = eq11_2_0
+return gopurs_runtime.Func2(func(x_3 gopurs_runtime.Value, y_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_1, "eq"), gopurs_runtime.RecordGet(x_3, "value0"), gopurs_runtime.RecordGet(y_4, "value0")).IntVal != 0 && gopurs_runtime.Apply2(eq11_2_0, gopurs_runtime.RecordGet(x_3, "value1"), gopurs_runtime.RecordGet(y_4, "value1")).IntVal != 0)
+})
+}))
 })
 	})
 	return eq1NonEmpty
@@ -567,15 +517,22 @@ func Get_ord1NonEmpty() gopurs_runtime.Value {
 	once_ord1NonEmpty.Do(func() {
 		ord1NonEmpty = gopurs_runtime.Func(func(dictOrd1_0 gopurs_runtime.Value) gopurs_runtime.Value {
 ordNonEmpty1_1_0 := gopurs_runtime.Apply(Get_ordNonEmpty(), dictOrd1_0)
-__local_var_2_1 := gopurs_runtime.Apply(dictOrd1_0.PtrVal.(map[string]gopurs_runtime.Value)["Eq10"], gopurs_runtime.Value{})
-eq1NonEmpty1_3_2 := gopurs_runtime.Record(map[string]gopurs_runtime.Value{"eq1": gopurs_runtime.Func(func(dictEq_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(Get_eqNonEmpty(), __local_var_2_1), dictEq_3).PtrVal.(map[string]gopurs_runtime.Value)["eq"]
-})})
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"compare1": gopurs_runtime.Func(func(dictOrd_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(ordNonEmpty1_1_0, dictOrd_4).PtrVal.(map[string]gopurs_runtime.Value)["compare"]
-}), "Eq10": gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
+_ = ordNonEmpty1_1_0
+__local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd1_0, "Eq10"), gopurs_runtime.Value{})
+_ = __local_var_2_1
+eq1NonEmpty1_3_2 := gopurs_runtime.RecordDict1("eq1", gopurs_runtime.Func(func(dictEq_3 gopurs_runtime.Value) gopurs_runtime.Value {
+eq11_4_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_1, "eq1"), dictEq_3)
+_ = eq11_4_3
+return gopurs_runtime.Func2(func(x_5 gopurs_runtime.Value, y_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_3, "eq"), gopurs_runtime.RecordGet(x_5, "value0"), gopurs_runtime.RecordGet(y_6, "value0")).IntVal != 0 && gopurs_runtime.Apply2(eq11_4_3, gopurs_runtime.RecordGet(x_5, "value1"), gopurs_runtime.RecordGet(y_6, "value1")).IntVal != 0)
+})
+}))
+_ = eq1NonEmpty1_3_2
+return gopurs_runtime.RecordDict2("compare1", "Eq10", gopurs_runtime.Func(func(dictOrd_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordGet(gopurs_runtime.Apply(ordNonEmpty1_1_0, dictOrd_4), "compare")
+}), gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return eq1NonEmpty1_3_2
-})})
+}))
 })
 	})
 	return ord1NonEmpty

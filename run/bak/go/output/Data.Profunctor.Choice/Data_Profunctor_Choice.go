@@ -12,7 +12,7 @@ var once_right sync.Once
 func Get_right() gopurs_runtime.Value {
 	once_right.Do(func() {
 		right = gopurs_runtime.Func(func(dict_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return dict_0.PtrVal.(map[string]gopurs_runtime.Value)["right"]
+return gopurs_runtime.RecordGet(dict_0, "right")
 })
 	})
 	return right
@@ -23,7 +23,7 @@ var once_left sync.Once
 func Get_left() gopurs_runtime.Value {
 	once_left.Do(func() {
 		left = gopurs_runtime.Func(func(dict_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return dict_0.PtrVal.(map[string]gopurs_runtime.Value)["left"]
+return gopurs_runtime.RecordGet(dict_0, "left")
 })
 	})
 	return left
@@ -33,14 +33,8 @@ var splitChoice gopurs_runtime.Value
 var once_splitChoice sync.Once
 func Get_splitChoice() gopurs_runtime.Value {
 	once_splitChoice.Do(func() {
-		splitChoice = gopurs_runtime.Func(func(dictSemigroupoid_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(dictChoice_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(l_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(r_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(dictSemigroupoid_0.PtrVal.(map[string]gopurs_runtime.Value)["compose"], gopurs_runtime.Apply(dictChoice_1.PtrVal.(map[string]gopurs_runtime.Value)["right"], r_3)), gopurs_runtime.Apply(dictChoice_1.PtrVal.(map[string]gopurs_runtime.Value)["left"], l_2))
-})
-})
-})
+		splitChoice = gopurs_runtime.Func4(func(dictSemigroupoid_0 gopurs_runtime.Value, dictChoice_1 gopurs_runtime.Value, l_2 gopurs_runtime.Value, r_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroupoid_0, "compose"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictChoice_1, "right"), r_3), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictChoice_1, "left"), l_2))
 })
 	})
 	return splitChoice
@@ -50,24 +44,23 @@ var fanin gopurs_runtime.Value
 var once_fanin sync.Once
 func Get_fanin() gopurs_runtime.Value {
 	once_fanin.Do(func() {
-		fanin = gopurs_runtime.Func(func(dictSemigroupoid_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(dictChoice_1 gopurs_runtime.Value) gopurs_runtime.Value {
-rmap_2_0 := gopurs_runtime.Apply(pkg_Data_Profunctor.Get_rmap(), gopurs_runtime.Apply(dictChoice_1.PtrVal.(map[string]gopurs_runtime.Value)["Profunctor0"], gopurs_runtime.Value{}))
-return gopurs_runtime.Func(func(l_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(r_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(rmap_2_0, gopurs_runtime.Func(func(v2_5 gopurs_runtime.Value) gopurs_runtime.Value {
+		fanin = gopurs_runtime.Func2(func(dictSemigroupoid_0 gopurs_runtime.Value, dictChoice_1 gopurs_runtime.Value) gopurs_runtime.Value {
+rmap_2_0 := gopurs_runtime.Apply(pkg_Data_Profunctor.Get_rmap(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictChoice_1, "Profunctor0"), gopurs_runtime.Value{}))
+_ = rmap_2_0
+return gopurs_runtime.Func2(func(l_3 gopurs_runtime.Value, r_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(rmap_2_0, gopurs_runtime.Func(func(v2_5 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v2_5.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Left")).IntVal != 0 {
-__t1 = v2_5.PtrVal.(map[string]gopurs_runtime.Value)["value0"]
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v2_5, "_tag").StrVal == "Left")).IntVal != 0 {
+__t1 = gopurs_runtime.RecordGet(v2_5, "value0")
 goto end_branch_1
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(v2_5.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Right")).IntVal != 0 {
-__t1 = v2_5.PtrVal.(map[string]gopurs_runtime.Value)["value0"]
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v2_5, "_tag").StrVal == "Right")).IntVal != 0 {
+__t1 = gopurs_runtime.RecordGet(v2_5, "value0")
 goto end_branch_1
 } else {
 
@@ -78,9 +71,7 @@ __t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_1:
 return __t1
-})), gopurs_runtime.Apply(gopurs_runtime.Apply(dictSemigroupoid_0.PtrVal.(map[string]gopurs_runtime.Value)["compose"], gopurs_runtime.Apply(dictChoice_1.PtrVal.(map[string]gopurs_runtime.Value)["right"], r_4)), gopurs_runtime.Apply(dictChoice_1.PtrVal.(map[string]gopurs_runtime.Value)["left"], l_3)))
-})
-})
+}), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroupoid_0, "compose"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictChoice_1, "right"), r_4), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictChoice_1, "left"), l_3)))
 })
 })
 	})
@@ -91,20 +82,19 @@ var choiceFn gopurs_runtime.Value
 var once_choiceFn sync.Once
 func Get_choiceFn() gopurs_runtime.Value {
 	once_choiceFn.Do(func() {
-		choiceFn = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"left": gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		choiceFn = gopurs_runtime.RecordDict3("left", "right", "Profunctor0", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v1_1.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Left")).IntVal != 0 {
-__t0 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Left"), "value0": gopurs_runtime.Apply(v_0, v1_1.PtrVal.(map[string]gopurs_runtime.Value)["value0"])})
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v1_1, "_tag").StrVal == "Left")).IntVal != 0 {
+__t0 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Left"), gopurs_runtime.Apply(v_0, gopurs_runtime.RecordGet(v1_1, "value0")))
 goto end_branch_0
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(v1_1.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Right")).IntVal != 0 {
-__t0 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Right"), "value0": v1_1.PtrVal.(map[string]gopurs_runtime.Value)["value0"]})
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v1_1, "_tag").StrVal == "Right")).IntVal != 0 {
+__t0 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Right"), gopurs_runtime.RecordGet(v1_1, "value0"))
 goto end_branch_0
 } else {
 
@@ -115,10 +105,9 @@ __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_0:
 return __t0
-})
-}), "right": pkg_Data_Either.Get_functorEither().PtrVal.(map[string]gopurs_runtime.Value)["map"], "Profunctor0": gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.RecordGet(pkg_Data_Either.Get_functorEither(), "map"), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Profunctor.Get_profunctorFn()
-})})
+}))
 	})
 	return choiceFn
 }

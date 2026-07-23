@@ -7,7 +7,7 @@ var MapWithIndexArray = gopurs_runtime.Func(func(f gopurs_runtime.Value) gopurs_
 		xsArr := xs.PtrVal.([]gopurs_runtime.Value)
 		result := make([]gopurs_runtime.Value, len(xsArr))
 		for i, x := range xsArr {
-			result[i] = gopurs_runtime.Apply(gopurs_runtime.Apply(f, gopurs_runtime.Int(i)), x)
+			result[i] = gopurs_runtime.Apply(gopurs_runtime.Apply(f, gopurs_runtime.Int(int64(i))), x)
 		}
 		return gopurs_runtime.Array(result)
 	})

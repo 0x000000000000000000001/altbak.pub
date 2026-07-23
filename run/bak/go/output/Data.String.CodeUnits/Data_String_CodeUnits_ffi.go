@@ -1,8 +1,8 @@
 package Data_String_CodeUnits
 
 import (
-	"strings"
 	"gopurs/output/gopurs_runtime"
+	"strings"
 )
 
 var FromCharArray = gopurs_runtime.Func(func(a gopurs_runtime.Value) gopurs_runtime.Value {
@@ -55,7 +55,7 @@ var X_ToChar = gopurs_runtime.Func(func(just gopurs_runtime.Value) gopurs_runtim
 })
 
 var Length = gopurs_runtime.Func(func(s gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Int(len(s.StrVal))
+	return gopurs_runtime.Int(int64(len(s.StrVal)))
 })
 
 var CountPrefix = gopurs_runtime.Func(func(p gopurs_runtime.Value) gopurs_runtime.Value {
@@ -70,7 +70,7 @@ var CountPrefix = gopurs_runtime.Func(func(p gopurs_runtime.Value) gopurs_runtim
 				break
 			}
 		}
-		return gopurs_runtime.Int(i)
+		return gopurs_runtime.Int(int64(i))
 	})
 })
 
@@ -82,7 +82,7 @@ var X_IndexOf = gopurs_runtime.Func(func(just gopurs_runtime.Value) gopurs_runti
 				if idx == -1 {
 					return nothing
 				}
-				return gopurs_runtime.Apply(just, gopurs_runtime.Int(idx))
+				return gopurs_runtime.Apply(just, gopurs_runtime.Int(int64(idx)))
 			})
 		})
 	})
@@ -102,7 +102,7 @@ var X_IndexOfStartingAt = gopurs_runtime.Func(func(just gopurs_runtime.Value) go
 					if idx == -1 {
 						return nothing
 					}
-					return gopurs_runtime.Apply(just, gopurs_runtime.Int(idx+startIdx))
+					return gopurs_runtime.Apply(just, gopurs_runtime.Int(int64(idx+startIdx)))
 				})
 			})
 		})
@@ -117,7 +117,7 @@ var X_LastIndexOf = gopurs_runtime.Func(func(just gopurs_runtime.Value) gopurs_r
 				if idx == -1 {
 					return nothing
 				}
-				return gopurs_runtime.Apply(just, gopurs_runtime.Int(idx))
+				return gopurs_runtime.Apply(just, gopurs_runtime.Int(int64(idx)))
 			})
 		})
 	})
@@ -137,7 +137,7 @@ var X_LastIndexOfStartingAt = gopurs_runtime.Func(func(just gopurs_runtime.Value
 					if idx == -1 {
 						return nothing
 					}
-					return gopurs_runtime.Apply(just, gopurs_runtime.Int(idx))
+					return gopurs_runtime.Apply(just, gopurs_runtime.Int(int64(idx)))
 				})
 			})
 		})
@@ -148,8 +148,12 @@ var Take = gopurs_runtime.Func(func(n gopurs_runtime.Value) gopurs_runtime.Value
 	return gopurs_runtime.Func(func(s gopurs_runtime.Value) gopurs_runtime.Value {
 		str := s.StrVal
 		idx := int(n.IntVal)
-		if idx < 0 { idx = 0 }
-		if idx > len(str) { idx = len(str) }
+		if idx < 0 {
+			idx = 0
+		}
+		if idx > len(str) {
+			idx = len(str)
+		}
 		return gopurs_runtime.Str(str[:idx])
 	})
 })
@@ -158,8 +162,12 @@ var Drop = gopurs_runtime.Func(func(n gopurs_runtime.Value) gopurs_runtime.Value
 	return gopurs_runtime.Func(func(s gopurs_runtime.Value) gopurs_runtime.Value {
 		str := s.StrVal
 		idx := int(n.IntVal)
-		if idx < 0 { idx = 0 }
-		if idx > len(str) { idx = len(str) }
+		if idx < 0 {
+			idx = 0
+		}
+		if idx > len(str) {
+			idx = len(str)
+		}
 		return gopurs_runtime.Str(str[idx:])
 	})
 })
@@ -170,13 +178,27 @@ var Slice = gopurs_runtime.Func(func(b gopurs_runtime.Value) gopurs_runtime.Valu
 			str := s.StrVal
 			start := int(b.IntVal)
 			end := int(e.IntVal)
-			if start < 0 { start = len(str) + start }
-			if end < 0 { end = len(str) + end }
-			if start < 0 { start = 0 }
-			if end < 0 { end = 0 }
-			if start > len(str) { start = len(str) }
-			if end > len(str) { end = len(str) }
-			if start > end { return gopurs_runtime.Str("") }
+			if start < 0 {
+				start = len(str) + start
+			}
+			if end < 0 {
+				end = len(str) + end
+			}
+			if start < 0 {
+				start = 0
+			}
+			if end < 0 {
+				end = 0
+			}
+			if start > len(str) {
+				start = len(str)
+			}
+			if end > len(str) {
+				end = len(str)
+			}
+			if start > end {
+				return gopurs_runtime.Str("")
+			}
 			return gopurs_runtime.Str(str[start:end])
 		})
 	})
@@ -186,8 +208,12 @@ var SplitAt = gopurs_runtime.Func(func(i gopurs_runtime.Value) gopurs_runtime.Va
 	return gopurs_runtime.Func(func(s gopurs_runtime.Value) gopurs_runtime.Value {
 		str := s.StrVal
 		idx := int(i.IntVal)
-		if idx < 0 { idx = 0 }
-		if idx > len(str) { idx = len(str) }
+		if idx < 0 {
+			idx = 0
+		}
+		if idx > len(str) {
+			idx = len(str)
+		}
 		rec := make(map[string]gopurs_runtime.Value)
 		rec["before"] = gopurs_runtime.Str(str[:idx])
 		rec["after"] = gopurs_runtime.Str(str[idx:])

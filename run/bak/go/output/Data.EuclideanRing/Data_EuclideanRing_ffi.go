@@ -13,31 +13,31 @@ var IntDegree = gopurs_runtime.Func(func(x gopurs_runtime.Value) gopurs_runtime.
 	if xv > 2147483647 {
 		xv = 2147483647
 	}
-	return gopurs_runtime.Int(int(xv))
+	return gopurs_runtime.Int(int64(int64(xv)))
 })
 
 var IntDiv = gopurs_runtime.Func(func(x gopurs_runtime.Value) gopurs_runtime.Value {
 	return gopurs_runtime.Func(func(y gopurs_runtime.Value) gopurs_runtime.Value {
 		if y.IntVal == 0 {
-			return gopurs_runtime.Int(0)
+			return gopurs_runtime.Int(int64(0))
 		}
 		if y.IntVal > 0 {
-			return gopurs_runtime.Int(int(math.Floor(float64(x.IntVal) / float64(y.IntVal))))
+			return gopurs_runtime.Int(int64(int64(math.Floor(float64(x.IntVal) / float64(y.IntVal)))))
 		}
-		return gopurs_runtime.Int(int(-math.Floor(float64(x.IntVal) / float64(-y.IntVal))))
+		return gopurs_runtime.Int(int64(int64(-math.Floor(float64(x.IntVal) / float64(-y.IntVal)))))
 	})
 })
 
 var IntMod = gopurs_runtime.Func(func(x gopurs_runtime.Value) gopurs_runtime.Value {
 	return gopurs_runtime.Func(func(y gopurs_runtime.Value) gopurs_runtime.Value {
 		if y.IntVal == 0 {
-			return gopurs_runtime.Int(0)
+			return gopurs_runtime.Int(int64(0))
 		}
 		yy := y.IntVal
 		if yy < 0 {
 			yy = -yy
 		}
-		return gopurs_runtime.Int(int(((x.IntVal % yy) + yy) % yy))
+		return gopurs_runtime.Int(int64(int64(((x.IntVal % yy) + yy) % yy)))
 	})
 })
 

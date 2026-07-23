@@ -1,19 +1,19 @@
 package Data_Semiring
 
 import (
-	"math"
 	"gopurs/output/gopurs_runtime"
+	"math"
 )
 
 var IntAdd = gopurs_runtime.Func(func(x gopurs_runtime.Value) gopurs_runtime.Value {
 	return gopurs_runtime.Func(func(y gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Int(int(x.IntVal + y.IntVal))
+		return gopurs_runtime.Int(int64(int64(x.IntVal + y.IntVal)))
 	})
 })
 
 var IntMul = gopurs_runtime.Func(func(x gopurs_runtime.Value) gopurs_runtime.Value {
 	return gopurs_runtime.Func(func(y gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Int(int(x.IntVal * y.IntVal))
+		return gopurs_runtime.Int(int64(int64(x.IntVal * y.IntVal)))
 	})
 })
 

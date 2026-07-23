@@ -3,10 +3,6 @@ package Test_Primes
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Semiring "gopurs/output/Data.Semiring"
-	pkg_Data_Ord "gopurs/output/Data.Ord"
-	pkg_Data_Ring "gopurs/output/Data.Ring"
-	pkg_Data_Eq "gopurs/output/Data.Eq"
 	pkg_Data_EuclideanRing "gopurs/output/Data.EuclideanRing"
 	pkg_Effect_Console "gopurs/output/Effect.Console"
 	pkg_Data_Show "gopurs/output/Data.Show"
@@ -16,7 +12,7 @@ var Nil gopurs_runtime.Value
 var once_Nil sync.Once
 func Get_Nil() gopurs_runtime.Value {
 	once_Nil.Do(func() {
-		Nil = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Nil")})
+		Nil = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nil"))
 	})
 	return Nil
 }
@@ -27,7 +23,7 @@ func Get_Cons() gopurs_runtime.Value {
 	once_Cons.Do(func() {
 		Cons = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Cons"), "value0": value0, "value1": value1})
+return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Cons"), value0, value1)
 })
 })
 	})
@@ -52,7 +48,7 @@ var v1_3 = v1_3_loop
 _ = v1_3
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_2.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Nil")).IntVal != 0 {
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_2, "_tag").StrVal == "Nil")).IntVal != 0 {
 __t1 = v1_3
 goto end_branch_1
 } else {
@@ -60,9 +56,9 @@ goto end_branch_1
 }
 }
 {
-if (gopurs_runtime.Bool(v_2.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Cons")).IntVal != 0 {
-v_2_loop = v_2.PtrVal.(map[string]gopurs_runtime.Value)["value1"]
-v1_3_loop = gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Semiring.Get_intAdd(), v1_3), v_2.PtrVal.(map[string]gopurs_runtime.Value)["value0"])
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_2, "_tag").StrVal == "Cons")).IntVal != 0 {
+v_2_loop = gopurs_runtime.RecordGet(v_2, "value1")
+v1_3_loop = gopurs_runtime.Int(v1_3.IntVal + gopurs_runtime.RecordGet(v_2, "value0").IntVal)
 continue go__1_0
 __t1 = gopurs_runtime.Value{}
 goto end_branch_1
@@ -79,7 +75,7 @@ return __t1
 }()
 })
 })
-return gopurs_runtime.Apply(gopurs_runtime.Apply(go__1_0, lst_0), gopurs_runtime.Int(0))
+return gopurs_runtime.Apply2(go__1_0, lst_0, gopurs_runtime.Int(0))
 })
 	})
 	return sumList
@@ -103,7 +99,7 @@ var v1_3 = v1_3_loop
 _ = v1_3
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_2.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Nil")).IntVal != 0 {
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_2, "_tag").StrVal == "Nil")).IntVal != 0 {
 __t1 = v1_3
 goto end_branch_1
 } else {
@@ -111,9 +107,9 @@ goto end_branch_1
 }
 }
 {
-if (gopurs_runtime.Bool(v_2.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Cons")).IntVal != 0 {
-v_2_loop = v_2.PtrVal.(map[string]gopurs_runtime.Value)["value1"]
-v1_3_loop = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Cons"), "value0": v_2.PtrVal.(map[string]gopurs_runtime.Value)["value0"], "value1": v1_3})
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_2, "_tag").StrVal == "Cons")).IntVal != 0 {
+v_2_loop = gopurs_runtime.RecordGet(v_2, "value1")
+v1_3_loop = gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Cons"), gopurs_runtime.RecordGet(v_2, "value0"), v1_3)
 continue go__1_0
 __t1 = gopurs_runtime.Value{}
 goto end_branch_1
@@ -130,7 +126,7 @@ return __t1
 }()
 })
 })
-return gopurs_runtime.Apply(gopurs_runtime.Apply(go__1_0, lst_0), gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Nil")}))
+return gopurs_runtime.Apply2(go__1_0, lst_0, gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nil")))
 })
 	})
 	return reverse
@@ -140,8 +136,7 @@ var range_ gopurs_runtime.Value
 var once_range_ sync.Once
 func Get_range_() gopurs_runtime.Value {
 	once_range_.Do(func() {
-		range_ = gopurs_runtime.Func(func(start_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(end_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		range_ = gopurs_runtime.Func2(func(start_0 gopurs_runtime.Value, end_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var go__2_0 gopurs_runtime.Value
 go__2_0 = gopurs_runtime.Func(func(curr_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(acc_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -155,7 +150,7 @@ var acc_4 = acc_4_loop
 _ = acc_4
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Ord.Get_ordInt().PtrVal.(map[string]gopurs_runtime.Value)["compare"], curr_3), start_0).PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "LT")).IntVal != 0 {
+if (gopurs_runtime.Bool(curr_3.IntVal < start_0.IntVal)).IntVal != 0 {
 __t1 = acc_4
 goto end_branch_1
 } else {
@@ -163,8 +158,8 @@ goto end_branch_1
 }
 }
 {
-curr_3_loop = gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Ring.Get_intSub(), curr_3), gopurs_runtime.Int(1))
-acc_4_loop = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Cons"), "value0": curr_3, "value1": acc_4})
+curr_3_loop = gopurs_runtime.Int(curr_3.IntVal - gopurs_runtime.Int(1).IntVal)
+acc_4_loop = gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Cons"), curr_3, acc_4)
 continue go__2_0
 __t1 = gopurs_runtime.Value{}
 }
@@ -174,8 +169,7 @@ return __t1
 }()
 })
 })
-return gopurs_runtime.Apply(gopurs_runtime.Apply(go__2_0, end_1), gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Nil")}))
-})
+return gopurs_runtime.Apply2(go__2_0, end_1, gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nil")))
 })
 	})
 	return range_
@@ -185,8 +179,7 @@ var filter gopurs_runtime.Value
 var once_filter sync.Once
 func Get_filter() gopurs_runtime.Value {
 	once_filter.Do(func() {
-		filter = gopurs_runtime.Func(func(p_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(lst_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		filter = gopurs_runtime.Func2(func(p_0 gopurs_runtime.Value, lst_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var go__2_0 gopurs_runtime.Value
 go__2_0 = gopurs_runtime.Func(func(v_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -200,7 +193,7 @@ var v1_4 = v1_4_loop
 _ = v1_4
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_3.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Nil")).IntVal != 0 {
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_3, "_tag").StrVal == "Nil")).IntVal != 0 {
 var go__5_2 gopurs_runtime.Value
 go__5_2 = gopurs_runtime.Func(func(v_6_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_7_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -214,7 +207,7 @@ var v1_7 = v1_7_loop
 _ = v1_7
 var __t3 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_6.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Nil")).IntVal != 0 {
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_6, "_tag").StrVal == "Nil")).IntVal != 0 {
 __t3 = v1_7
 goto end_branch_3
 } else {
@@ -222,9 +215,9 @@ goto end_branch_3
 }
 }
 {
-if (gopurs_runtime.Bool(v_6.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Cons")).IntVal != 0 {
-v_6_loop = v_6.PtrVal.(map[string]gopurs_runtime.Value)["value1"]
-v1_7_loop = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Cons"), "value0": v_6.PtrVal.(map[string]gopurs_runtime.Value)["value0"], "value1": v1_7})
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_6, "_tag").StrVal == "Cons")).IntVal != 0 {
+v_6_loop = gopurs_runtime.RecordGet(v_6, "value1")
+v1_7_loop = gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Cons"), gopurs_runtime.RecordGet(v_6, "value0"), v1_7)
 continue go__5_2
 __t3 = gopurs_runtime.Value{}
 goto end_branch_3
@@ -241,19 +234,19 @@ return __t3
 }()
 })
 })
-__t1 = gopurs_runtime.Apply(gopurs_runtime.Apply(go__5_2, v1_4), gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Nil")}))
+__t1 = gopurs_runtime.Apply2(go__5_2, v1_4, gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nil")))
 goto end_branch_1
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(v_3.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Cons")).IntVal != 0 {
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_3, "_tag").StrVal == "Cons")).IntVal != 0 {
 var __t4 gopurs_runtime.Value
 {
-if (gopurs_runtime.Apply(p_0, v_3.PtrVal.(map[string]gopurs_runtime.Value)["value0"])).IntVal != 0 {
-v_3_loop = v_3.PtrVal.(map[string]gopurs_runtime.Value)["value1"]
-v1_4_loop = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Cons"), "value0": v_3.PtrVal.(map[string]gopurs_runtime.Value)["value0"], "value1": v1_4})
+if (gopurs_runtime.Apply(p_0, gopurs_runtime.RecordGet(v_3, "value0"))).IntVal != 0 {
+v_3_loop = gopurs_runtime.RecordGet(v_3, "value1")
+v1_4_loop = gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Cons"), gopurs_runtime.RecordGet(v_3, "value0"), v1_4)
 continue go__2_0
 __t4 = gopurs_runtime.Value{}
 goto end_branch_4
@@ -262,7 +255,7 @@ goto end_branch_4
 }
 }
 {
-v_3_loop = v_3.PtrVal.(map[string]gopurs_runtime.Value)["value1"]
+v_3_loop = gopurs_runtime.RecordGet(v_3, "value1")
 v1_4_loop = v1_4
 continue go__2_0
 __t4 = gopurs_runtime.Value{}
@@ -283,8 +276,7 @@ return __t1
 }()
 })
 })
-return gopurs_runtime.Apply(gopurs_runtime.Apply(go__2_0, lst_1), gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Nil")}))
-})
+return gopurs_runtime.Apply2(go__2_0, lst_1, gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nil")))
 })
 	})
 	return filter
@@ -303,16 +295,17 @@ var v_0 = v_0_loop
 _ = v_0
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_0.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Nil")).IntVal != 0 {
-__t0 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Nil")})
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_0, "_tag").StrVal == "Nil")).IntVal != 0 {
+__t0 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nil"))
 goto end_branch_0
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(v_0.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Cons")).IntVal != 0 {
-__local_var_1_1 := v_0.PtrVal.(map[string]gopurs_runtime.Value)["value0"]
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_0, "_tag").StrVal == "Cons")).IntVal != 0 {
+__local_var_1_1 := gopurs_runtime.RecordGet(v_0, "value0")
+_ = __local_var_1_1
 var go__2_2 gopurs_runtime.Value
 go__2_2 = gopurs_runtime.Func(func(v_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -326,7 +319,7 @@ var v1_4 = v1_4_loop
 _ = v1_4
 var __t3 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_3.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Nil")).IntVal != 0 {
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_3, "_tag").StrVal == "Nil")).IntVal != 0 {
 var go__5_4 gopurs_runtime.Value
 go__5_4 = gopurs_runtime.Func(func(v_6_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_7_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -340,7 +333,7 @@ var v1_7 = v1_7_loop
 _ = v1_7
 var __t5 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_6.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Nil")).IntVal != 0 {
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_6, "_tag").StrVal == "Nil")).IntVal != 0 {
 __t5 = v1_7
 goto end_branch_5
 } else {
@@ -348,9 +341,9 @@ goto end_branch_5
 }
 }
 {
-if (gopurs_runtime.Bool(v_6.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Cons")).IntVal != 0 {
-v_6_loop = v_6.PtrVal.(map[string]gopurs_runtime.Value)["value1"]
-v1_7_loop = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Cons"), "value0": v_6.PtrVal.(map[string]gopurs_runtime.Value)["value0"], "value1": v1_7})
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_6, "_tag").StrVal == "Cons")).IntVal != 0 {
+v_6_loop = gopurs_runtime.RecordGet(v_6, "value1")
+v1_7_loop = gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Cons"), gopurs_runtime.RecordGet(v_6, "value0"), v1_7)
 continue go__5_4
 __t5 = gopurs_runtime.Value{}
 goto end_branch_5
@@ -367,19 +360,19 @@ return __t5
 }()
 })
 })
-__t3 = gopurs_runtime.Apply(gopurs_runtime.Apply(go__5_4, v1_4), gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Nil")}))
+__t3 = gopurs_runtime.Apply2(go__5_4, v1_4, gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nil")))
 goto end_branch_3
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(v_3.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Cons")).IntVal != 0 {
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_3, "_tag").StrVal == "Cons")).IntVal != 0 {
 var __t6 gopurs_runtime.Value
 {
-if (gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Eq.Get_eqBooleanImpl(), gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Eq.Get_eqIntImpl(), gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_EuclideanRing.Get_intMod(), v_3.PtrVal.(map[string]gopurs_runtime.Value)["value0"]), __local_var_1_1)), gopurs_runtime.Int(0))), gopurs_runtime.Bool(false))).IntVal != 0 {
-v_3_loop = v_3.PtrVal.(map[string]gopurs_runtime.Value)["value1"]
-v1_4_loop = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Cons"), "value0": v_3.PtrVal.(map[string]gopurs_runtime.Value)["value0"], "value1": v1_4})
+if (gopurs_runtime.Bool(gopurs_runtime.Apply2(pkg_Data_EuclideanRing.Get_intMod(), gopurs_runtime.RecordGet(v_3, "value0"), __local_var_1_1).IntVal != gopurs_runtime.Int(0).IntVal)).IntVal != 0 {
+v_3_loop = gopurs_runtime.RecordGet(v_3, "value1")
+v1_4_loop = gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Cons"), gopurs_runtime.RecordGet(v_3, "value0"), v1_4)
 continue go__2_2
 __t6 = gopurs_runtime.Value{}
 goto end_branch_6
@@ -388,7 +381,7 @@ goto end_branch_6
 }
 }
 {
-v_3_loop = v_3.PtrVal.(map[string]gopurs_runtime.Value)["value1"]
+v_3_loop = gopurs_runtime.RecordGet(v_3, "value1")
 v1_4_loop = v1_4
 continue go__2_2
 __t6 = gopurs_runtime.Value{}
@@ -409,7 +402,7 @@ return __t3
 }()
 })
 })
-__t0 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Cons"), "value0": __local_var_1_1, "value1": gopurs_runtime.Apply(Get_sieve(), gopurs_runtime.Apply(gopurs_runtime.Apply(go__2_2, v_0.PtrVal.(map[string]gopurs_runtime.Value)["value1"]), gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Nil")})))})
+__t0 = gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Cons"), __local_var_1_1, gopurs_runtime.Apply(Get_sieve(), gopurs_runtime.Apply2(go__2_2, gopurs_runtime.RecordGet(v_0, "value1"), gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nil")))))
 goto end_branch_0
 } else {
 
@@ -440,7 +433,81 @@ var act gopurs_runtime.Value
 var once_act sync.Once
 func Get_act() gopurs_runtime.Value {
 	once_act.Do(func() {
-		act = gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(pkg_Data_Show.Get_showIntImpl(), gopurs_runtime.Apply(Get_sumList(), gopurs_runtime.Apply(Get_sieve(), gopurs_runtime.Apply(gopurs_runtime.Apply(Get_range_(), gopurs_runtime.Int(2)), gopurs_runtime.Int(500))))))
+		act = func() gopurs_runtime.Value {
+var go__0_0 gopurs_runtime.Value
+go__0_0 = gopurs_runtime.Func(func(v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+go__0_0:
+for {
+if false { continue go__0_0 }
+var v_1 = v_1_loop
+_ = v_1
+var v1_2 = v1_2_loop
+_ = v1_2
+var __t1 gopurs_runtime.Value
+{
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_1, "_tag").StrVal == "Nil")).IntVal != 0 {
+__t1 = v1_2
+goto end_branch_1
+} else {
+
+}
+}
+{
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_1, "_tag").StrVal == "Cons")).IntVal != 0 {
+v_1_loop = gopurs_runtime.RecordGet(v_1, "value1")
+v1_2_loop = gopurs_runtime.Int(v1_2.IntVal + gopurs_runtime.RecordGet(v_1, "value0").IntVal)
+continue go__0_0
+__t1 = gopurs_runtime.Value{}
+goto end_branch_1
+} else {
+
+}
+}
+{
+__t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_1:
+return __t1
+}
+}()
+})
+})
+var go__1_2 gopurs_runtime.Value
+go__1_2 = gopurs_runtime.Func(func(curr_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(acc_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+go__1_2:
+for {
+if false { continue go__1_2 }
+var curr_2 = curr_2_loop
+_ = curr_2
+var acc_3 = acc_3_loop
+_ = acc_3
+var __t3 gopurs_runtime.Value
+{
+if (gopurs_runtime.Bool(curr_2.IntVal < gopurs_runtime.Int(2).IntVal)).IntVal != 0 {
+__t3 = acc_3
+goto end_branch_3
+} else {
+
+}
+}
+{
+curr_2_loop = gopurs_runtime.Int(curr_2.IntVal - gopurs_runtime.Int(1).IntVal)
+acc_3_loop = gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Cons"), curr_2, acc_3)
+continue go__1_2
+__t3 = gopurs_runtime.Value{}
+}
+end_branch_3:
+return __t3
+}
+}()
+})
+})
+return gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(pkg_Data_Show.Get_showIntImpl(), gopurs_runtime.Apply2(go__0_0, gopurs_runtime.Apply(Get_sieve(), gopurs_runtime.Apply2(go__1_2, gopurs_runtime.Int(500), gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nil")))), gopurs_runtime.Int(0))))
+}()
 	})
 	return act
 }

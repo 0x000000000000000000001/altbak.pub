@@ -10,7 +10,7 @@ var once_callCC sync.Once
 func Get_callCC() gopurs_runtime.Value {
 	once_callCC.Do(func() {
 		callCC = gopurs_runtime.Func(func(dict_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return dict_0.PtrVal.(map[string]gopurs_runtime.Value)["callCC"]
+return gopurs_runtime.RecordGet(dict_0, "callCC")
 })
 	})
 	return callCC

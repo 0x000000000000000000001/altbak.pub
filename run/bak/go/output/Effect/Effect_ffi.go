@@ -52,7 +52,7 @@ var ForE = gopurs_runtime.Func(func(lo gopurs_runtime.Value) gopurs_runtime.Valu
 				loInt := lo.IntVal
 				hiInt := hi.IntVal
 				for i := loInt; i < hiInt; i++ {
-					thunk := gopurs_runtime.Apply(f, gopurs_runtime.Int(int(i)))
+					thunk := gopurs_runtime.Apply(f, gopurs_runtime.Int(int64(int64(i))))
 					gopurs_runtime.Apply(thunk, gopurs_runtime.Value{})
 				}
 				return gopurs_runtime.Value{}

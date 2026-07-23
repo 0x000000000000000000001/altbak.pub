@@ -177,7 +177,7 @@ var RunFn9 = mkRunFn(9)
 var RunFn10 = mkRunFn(10)
 
 func mkMkFn(arity int) gopurs_runtime.Value {
-    // mkFn is essentially identity because all functions in gopurs are already curried
+	// mkFn is essentially identity because all functions in gopurs are already curried
 	return gopurs_runtime.Func(func(fn gopurs_runtime.Value) gopurs_runtime.Value {
 		return fn
 	})

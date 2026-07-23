@@ -10,7 +10,7 @@ var once_unsecond sync.Once
 func Get_unsecond() gopurs_runtime.Value {
 	once_unsecond.Do(func() {
 		unsecond = gopurs_runtime.Func(func(dict_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return dict_0.PtrVal.(map[string]gopurs_runtime.Value)["unsecond"]
+return gopurs_runtime.RecordGet(dict_0, "unsecond")
 })
 	})
 	return unsecond
@@ -21,7 +21,7 @@ var once_unfirst sync.Once
 func Get_unfirst() gopurs_runtime.Value {
 	once_unfirst.Do(func() {
 		unfirst = gopurs_runtime.Func(func(dict_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return dict_0.PtrVal.(map[string]gopurs_runtime.Value)["unfirst"]
+return gopurs_runtime.RecordGet(dict_0, "unfirst")
 })
 	})
 	return unfirst

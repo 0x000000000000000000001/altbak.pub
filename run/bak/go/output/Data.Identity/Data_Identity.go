@@ -3,7 +3,6 @@ package Data_Identity
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
 )
 
 var Identity gopurs_runtime.Value
@@ -22,9 +21,9 @@ var once_showIdentity sync.Once
 func Get_showIdentity() gopurs_runtime.Value {
 	once_showIdentity.Do(func() {
 		showIdentity = gopurs_runtime.Func(func(dictShow_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"show": gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Semigroup.Get_concatString(), gopurs_runtime.Str("(Identity ")), gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Semigroup.Get_concatString(), gopurs_runtime.Apply(dictShow_0.PtrVal.(map[string]gopurs_runtime.Value)["show"], v_1)), gopurs_runtime.Str(")")))
-})})
+return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str("(Identity ").StrVal + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), v_1).StrVal).StrVal + gopurs_runtime.Str(")").StrVal)
+}))
 })
 	})
 	return showIdentity
@@ -78,9 +77,9 @@ var newtypeIdentity gopurs_runtime.Value
 var once_newtypeIdentity sync.Once
 func Get_newtypeIdentity() gopurs_runtime.Value {
 	once_newtypeIdentity.Do(func() {
-		newtypeIdentity = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"Coercible0": gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		newtypeIdentity = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{}
-})})
+}))
 	})
 	return newtypeIdentity
 }
@@ -122,11 +121,9 @@ var functorIdentity gopurs_runtime.Value
 var once_functorIdentity sync.Once
 func Get_functorIdentity() gopurs_runtime.Value {
 	once_functorIdentity.Do(func() {
-		functorIdentity = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"map": gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(m_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		functorIdentity = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, m_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(f_0, m_1)
-})
-})})
+}))
 	})
 	return functorIdentity
 }
@@ -135,13 +132,9 @@ var invariantIdentity gopurs_runtime.Value
 var once_invariantIdentity sync.Once
 func Get_invariantIdentity() gopurs_runtime.Value {
 	once_invariantIdentity.Do(func() {
-		invariantIdentity = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"imap": gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(m_2 gopurs_runtime.Value) gopurs_runtime.Value {
+		invariantIdentity = gopurs_runtime.RecordDict1("imap", gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, m_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(f_0, m_2)
-})
-})
-})})
+}))
 	})
 	return invariantIdentity
 }
@@ -150,13 +143,11 @@ var extendIdentity gopurs_runtime.Value
 var once_extendIdentity sync.Once
 func Get_extendIdentity() gopurs_runtime.Value {
 	once_extendIdentity.Do(func() {
-		extendIdentity = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"extend": gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(m_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		extendIdentity = gopurs_runtime.RecordDict2("extend", "Functor0", gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, m_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(f_0, m_1)
-})
-}), "Functor0": gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_functorIdentity()
-})})
+}))
 	})
 	return extendIdentity
 }
@@ -187,9 +178,9 @@ var eq1Identity gopurs_runtime.Value
 var once_eq1Identity sync.Once
 func Get_eq1Identity() gopurs_runtime.Value {
 	once_eq1Identity.Do(func() {
-		eq1Identity = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"eq1": gopurs_runtime.Func(func(dictEq_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return dictEq_0.PtrVal.(map[string]gopurs_runtime.Value)["eq"]
-})})
+		eq1Identity = gopurs_runtime.RecordDict1("eq1", gopurs_runtime.Func(func(dictEq_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordGet(dictEq_0, "eq")
+}))
 	})
 	return eq1Identity
 }
@@ -198,11 +189,11 @@ var ord1Identity gopurs_runtime.Value
 var once_ord1Identity sync.Once
 func Get_ord1Identity() gopurs_runtime.Value {
 	once_ord1Identity.Do(func() {
-		ord1Identity = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"compare1": gopurs_runtime.Func(func(dictOrd_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return dictOrd_0.PtrVal.(map[string]gopurs_runtime.Value)["compare"]
-}), "Eq10": gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		ord1Identity = gopurs_runtime.RecordDict2("compare1", "Eq10", gopurs_runtime.Func(func(dictOrd_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordGet(dictOrd_0, "compare")
+}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_eq1Identity()
-})})
+}))
 	})
 	return ord1Identity
 }
@@ -211,11 +202,11 @@ var comonadIdentity gopurs_runtime.Value
 var once_comonadIdentity sync.Once
 func Get_comonadIdentity() gopurs_runtime.Value {
 	once_comonadIdentity.Do(func() {
-		comonadIdentity = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"extract": gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		comonadIdentity = gopurs_runtime.RecordDict2("extract", "Extend0", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return v_0
-}), "Extend0": gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_extendIdentity()
-})})
+}))
 	})
 	return comonadIdentity
 }
@@ -257,13 +248,11 @@ var applyIdentity gopurs_runtime.Value
 var once_applyIdentity sync.Once
 func Get_applyIdentity() gopurs_runtime.Value {
 	once_applyIdentity.Do(func() {
-		applyIdentity = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"apply": gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		applyIdentity = gopurs_runtime.RecordDict2("apply", "Functor0", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(v_0, v1_1)
-})
-}), "Functor0": gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_functorIdentity()
-})})
+}))
 	})
 	return applyIdentity
 }
@@ -272,13 +261,11 @@ var bindIdentity gopurs_runtime.Value
 var once_bindIdentity sync.Once
 func Get_bindIdentity() gopurs_runtime.Value {
 	once_bindIdentity.Do(func() {
-		bindIdentity = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"bind": gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		bindIdentity = gopurs_runtime.RecordDict2("bind", "Apply0", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, f_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(f_1, v_0)
-})
-}), "Apply0": gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_applyIdentity()
-})})
+}))
 	})
 	return bindIdentity
 }
@@ -287,9 +274,9 @@ var applicativeIdentity gopurs_runtime.Value
 var once_applicativeIdentity sync.Once
 func Get_applicativeIdentity() gopurs_runtime.Value {
 	once_applicativeIdentity.Do(func() {
-		applicativeIdentity = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"pure": Get_Identity(), "Apply0": gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		applicativeIdentity = gopurs_runtime.RecordDict2("pure", "Apply0", Get_Identity(), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_applyIdentity()
-})})
+}))
 	})
 	return applicativeIdentity
 }
@@ -298,11 +285,11 @@ var monadIdentity gopurs_runtime.Value
 var once_monadIdentity sync.Once
 func Get_monadIdentity() gopurs_runtime.Value {
 	once_monadIdentity.Do(func() {
-		monadIdentity = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"Applicative0": gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		monadIdentity = gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_applicativeIdentity()
-}), "Bind1": gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_bindIdentity()
-})})
+}))
 	})
 	return monadIdentity
 }
@@ -311,13 +298,11 @@ var altIdentity gopurs_runtime.Value
 var once_altIdentity sync.Once
 func Get_altIdentity() gopurs_runtime.Value {
 	once_altIdentity.Do(func() {
-		altIdentity = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"alt": gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		altIdentity = gopurs_runtime.RecordDict2("alt", "Functor0", gopurs_runtime.Func2(func(x_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return x_0
-})
-}), "Functor0": gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_functorIdentity()
-})})
+}))
 	})
 	return altIdentity
 }

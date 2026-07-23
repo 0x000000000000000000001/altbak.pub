@@ -3,7 +3,6 @@ package Effect_Ref
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Effect "gopurs/output/Effect"
 	pkg_Data_Unit "gopurs/output/Data.Unit"
 )
 
@@ -32,7 +31,8 @@ func Get_modify() gopurs_runtime.Value {
 		modify = gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(Get_modifyImpl(), gopurs_runtime.Func(func(s_1 gopurs_runtime.Value) gopurs_runtime.Value {
 s_prime_2_0 := gopurs_runtime.Apply(f_0, s_1)
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"state": s_prime_2_0, "value": s_prime_2_0})
+_ = s_prime_2_0
+return gopurs_runtime.RecordDict2("state", "value", s_prime_2_0, s_prime_2_0)
 }))
 })
 	})
@@ -43,14 +43,17 @@ var modify_ gopurs_runtime.Value
 var once_modify_ sync.Once
 func Get_modify_() gopurs_runtime.Value {
 	once_modify_.Do(func() {
-		modify_ = gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(s_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Effect.Get_applyEffect().PtrVal.(map[string]gopurs_runtime.Value)["apply"], gopurs_runtime.Apply(pkg_Effect.Get_pureE(), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+		modify_ = gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, s_1 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_2_0 := gopurs_runtime.Apply2(Get_modifyImpl(), gopurs_runtime.Func(func(s_2 gopurs_runtime.Value) gopurs_runtime.Value {
+s_prime_3_1 := gopurs_runtime.Apply(f_0, s_2)
+_ = s_prime_3_1
+return gopurs_runtime.RecordDict2("state", "value", s_prime_3_1, s_prime_3_1)
+}), s_1)
+_ = __local_var_2_0
+return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+a_prime_3_2 := gopurs_runtime.Apply(__local_var_2_0, gopurs_runtime.Value{})
+_ = a_prime_3_2
 return pkg_Data_Unit.Get_unit()
-}))), gopurs_runtime.Apply(gopurs_runtime.Apply(Get_modifyImpl(), gopurs_runtime.Func(func(s_2 gopurs_runtime.Value) gopurs_runtime.Value {
-s_prime_3_0 := gopurs_runtime.Apply(f_0, s_2)
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"state": s_prime_3_0, "value": s_prime_3_0})
-})), s_1))
 })
 })
 	})

@@ -2,8 +2,8 @@ package Data_Show
 
 import (
 	"fmt"
-	"math"
 	"gopurs/output/gopurs_runtime"
+	"math"
 )
 
 var ShowIntImpl = gopurs_runtime.Func(func(n gopurs_runtime.Value) gopurs_runtime.Value {

@@ -11,9 +11,9 @@ var altArray gopurs_runtime.Value
 var once_altArray sync.Once
 func Get_altArray() gopurs_runtime.Value {
 	once_altArray.Do(func() {
-		altArray = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"alt": pkg_Data_Semigroup.Get_concatArray(), "Functor0": gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		altArray = gopurs_runtime.RecordDict2("alt", "Functor0", pkg_Data_Semigroup.Get_concatArray(), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Functor.Get_functorArray()
-})})
+}))
 	})
 	return altArray
 }
@@ -23,7 +23,7 @@ var once_alt sync.Once
 func Get_alt() gopurs_runtime.Value {
 	once_alt.Do(func() {
 		alt = gopurs_runtime.Func(func(dict_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return dict_0.PtrVal.(map[string]gopurs_runtime.Value)["alt"]
+return gopurs_runtime.RecordGet(dict_0, "alt")
 })
 	})
 	return alt

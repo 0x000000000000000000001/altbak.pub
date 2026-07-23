@@ -3,7 +3,6 @@ package Data_Maybe_First
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
 	pkg_Data_Maybe "gopurs/output/Data.Maybe"
 )
 
@@ -23,9 +22,30 @@ var once_showFirst sync.Once
 func Get_showFirst() gopurs_runtime.Value {
 	once_showFirst.Do(func() {
 		showFirst = gopurs_runtime.Func(func(dictShow_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"show": gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Semigroup.Get_concatString(), gopurs_runtime.Str("First (")), gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Semigroup.Get_concatString(), gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Maybe.Get_showMaybe(), dictShow_0).PtrVal.(map[string]gopurs_runtime.Value)["show"], v_1)), gopurs_runtime.Str(")")))
-})})
+return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t0 gopurs_runtime.Value
+{
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_1, "_tag").StrVal == "Just")).IntVal != 0 {
+__t0 = gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str("First ((Just ").StrVal + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), gopurs_runtime.RecordGet(v_1, "value0")).StrVal).StrVal + gopurs_runtime.Str("))").StrVal)
+goto end_branch_0
+} else {
+
+}
+}
+{
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_1, "_tag").StrVal == "Nothing")).IntVal != 0 {
+__t0 = gopurs_runtime.Str("First (Nothing)")
+goto end_branch_0
+} else {
+
+}
+}
+{
+__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_0:
+return __t0
+}))
 })
 	})
 	return showFirst
@@ -35,11 +55,10 @@ var semigroupFirst gopurs_runtime.Value
 var once_semigroupFirst sync.Once
 func Get_semigroupFirst() gopurs_runtime.Value {
 	once_semigroupFirst.Do(func() {
-		semigroupFirst = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"append": gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		semigroupFirst = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_0.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Just")).IntVal != 0 {
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_0, "_tag").StrVal == "Just")).IntVal != 0 {
 __t0 = v_0
 goto end_branch_0
 } else {
@@ -51,8 +70,7 @@ __t0 = v1_1
 }
 end_branch_0:
 return __t0
-})
-})})
+}))
 	})
 	return semigroupFirst
 }
@@ -62,41 +80,40 @@ var once_ordFirst sync.Once
 func Get_ordFirst() gopurs_runtime.Value {
 	once_ordFirst.Do(func() {
 		ordFirst = gopurs_runtime.Func(func(dictOrd_0 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_1_0 := gopurs_runtime.Apply(dictOrd_0.PtrVal.(map[string]gopurs_runtime.Value)["Eq0"], gopurs_runtime.Value{})
-eqMaybe1_2_1 := gopurs_runtime.Record(map[string]gopurs_runtime.Value{"eq": gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(y_3 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd_0, "Eq0"), gopurs_runtime.Value{})
+_ = __local_var_1_0
+eqMaybe1_2_1 := gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func2(func(x_2 gopurs_runtime.Value, y_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t2 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(x_2.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Nothing")).IntVal != 0 {
-__t2 = gopurs_runtime.Bool(y_3.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Nothing")
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(x_2, "_tag").StrVal == "Nothing")).IntVal != 0 {
+__t2 = gopurs_runtime.Bool(gopurs_runtime.RecordGet(y_3, "_tag").StrVal == "Nothing")
 goto end_branch_2
 } else {
 
 }
 }
 {
-__t2 = gopurs_runtime.Bool(gopurs_runtime.Bool(x_2.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Just").IntVal != 0 && gopurs_runtime.Bool(gopurs_runtime.Bool(y_3.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Just").IntVal != 0 && gopurs_runtime.Apply(gopurs_runtime.Apply(__local_var_1_0.PtrVal.(map[string]gopurs_runtime.Value)["eq"], x_2.PtrVal.(map[string]gopurs_runtime.Value)["value0"]), y_3.PtrVal.(map[string]gopurs_runtime.Value)["value0"]).IntVal != 0).IntVal != 0)
+__t2 = gopurs_runtime.Bool(gopurs_runtime.Bool(gopurs_runtime.RecordGet(x_2, "_tag").StrVal == "Just").IntVal != 0 && gopurs_runtime.Bool(gopurs_runtime.Bool(gopurs_runtime.RecordGet(y_3, "_tag").StrVal == "Just").IntVal != 0 && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "eq"), gopurs_runtime.RecordGet(x_2, "value0"), gopurs_runtime.RecordGet(y_3, "value0")).IntVal != 0).IntVal != 0)
 }
 end_branch_2:
 return __t2
-})
-})})
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"compare": gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(y_4 gopurs_runtime.Value) gopurs_runtime.Value {
+}))
+_ = eqMaybe1_2_1
+return gopurs_runtime.RecordDict2("compare", "Eq0", gopurs_runtime.Func2(func(x_3 gopurs_runtime.Value, y_4 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t3 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(x_3.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Nothing")).IntVal != 0 {
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(x_3, "_tag").StrVal == "Nothing")).IntVal != 0 {
 var __t4 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(y_4.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Nothing")).IntVal != 0 {
-__t4 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("EQ")})
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(y_4, "_tag").StrVal == "Nothing")).IntVal != 0 {
+__t4 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("EQ"))
 goto end_branch_4
 } else {
 
 }
 }
 {
-__t4 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("LT")})
+__t4 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("LT"))
 }
 end_branch_4:
 __t3 = __t4
@@ -106,16 +123,16 @@ goto end_branch_3
 }
 }
 {
-if (gopurs_runtime.Bool(y_4.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Nothing")).IntVal != 0 {
-__t3 = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("GT")})
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(y_4, "_tag").StrVal == "Nothing")).IntVal != 0 {
+__t3 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("GT"))
 goto end_branch_3
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.Bool(x_3.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Just").IntVal != 0 && gopurs_runtime.Bool(y_4.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Just").IntVal != 0)).IntVal != 0 {
-__t3 = gopurs_runtime.Apply(gopurs_runtime.Apply(dictOrd_0.PtrVal.(map[string]gopurs_runtime.Value)["compare"], x_3.PtrVal.(map[string]gopurs_runtime.Value)["value0"]), y_4.PtrVal.(map[string]gopurs_runtime.Value)["value0"])
+if (gopurs_runtime.Bool(gopurs_runtime.Bool(gopurs_runtime.RecordGet(x_3, "_tag").StrVal == "Just").IntVal != 0 && gopurs_runtime.Bool(gopurs_runtime.RecordGet(y_4, "_tag").StrVal == "Just").IntVal != 0)).IntVal != 0 {
+__t3 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), gopurs_runtime.RecordGet(x_3, "value0"), gopurs_runtime.RecordGet(y_4, "value0"))
 goto end_branch_3
 } else {
 
@@ -126,10 +143,9 @@ __t3 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_3:
 return __t3
-})
-}), "Eq0": gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return eqMaybe1_2_1
-})})
+}))
 })
 	})
 	return ordFirst
@@ -148,9 +164,9 @@ var newtypeFirst gopurs_runtime.Value
 var once_newtypeFirst sync.Once
 func Get_newtypeFirst() gopurs_runtime.Value {
 	once_newtypeFirst.Do(func() {
-		newtypeFirst = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"Coercible0": gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		newtypeFirst = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{}
-})})
+}))
 	})
 	return newtypeFirst
 }
@@ -159,9 +175,9 @@ var monoidFirst gopurs_runtime.Value
 var once_monoidFirst sync.Once
 func Get_monoidFirst() gopurs_runtime.Value {
 	once_monoidFirst.Do(func() {
-		monoidFirst = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"mempty": gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Nothing")}), "Semigroup0": gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		monoidFirst = gopurs_runtime.RecordDict2("mempty", "Semigroup0", gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing")), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_semigroupFirst()
-})})
+}))
 	})
 	return monoidFirst
 }
@@ -207,24 +223,22 @@ var once_eqFirst sync.Once
 func Get_eqFirst() gopurs_runtime.Value {
 	once_eqFirst.Do(func() {
 		eqFirst = gopurs_runtime.Func(func(dictEq_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Record(map[string]gopurs_runtime.Value{"eq": gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(y_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func2(func(x_1 gopurs_runtime.Value, y_2 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(x_1.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Nothing")).IntVal != 0 {
-__t0 = gopurs_runtime.Bool(y_2.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Nothing")
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(x_1, "_tag").StrVal == "Nothing")).IntVal != 0 {
+__t0 = gopurs_runtime.Bool(gopurs_runtime.RecordGet(y_2, "_tag").StrVal == "Nothing")
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = gopurs_runtime.Bool(gopurs_runtime.Bool(x_1.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Just").IntVal != 0 && gopurs_runtime.Bool(gopurs_runtime.Bool(y_2.PtrVal.(map[string]gopurs_runtime.Value)["_tag"].StrVal == "Just").IntVal != 0 && gopurs_runtime.Apply(gopurs_runtime.Apply(dictEq_0.PtrVal.(map[string]gopurs_runtime.Value)["eq"], x_1.PtrVal.(map[string]gopurs_runtime.Value)["value0"]), y_2.PtrVal.(map[string]gopurs_runtime.Value)["value0"]).IntVal != 0).IntVal != 0)
+__t0 = gopurs_runtime.Bool(gopurs_runtime.Bool(gopurs_runtime.RecordGet(x_1, "_tag").StrVal == "Just").IntVal != 0 && gopurs_runtime.Bool(gopurs_runtime.Bool(gopurs_runtime.RecordGet(y_2, "_tag").StrVal == "Just").IntVal != 0 && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), gopurs_runtime.RecordGet(x_1, "value0"), gopurs_runtime.RecordGet(y_2, "value0")).IntVal != 0).IntVal != 0)
 }
 end_branch_0:
 return __t0
-})
-})})
+}))
 })
 	})
 	return eqFirst
@@ -281,9 +295,9 @@ var altFirst gopurs_runtime.Value
 var once_altFirst sync.Once
 func Get_altFirst() gopurs_runtime.Value {
 	once_altFirst.Do(func() {
-		altFirst = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"alt": Get_semigroupFirst().PtrVal.(map[string]gopurs_runtime.Value)["append"], "Functor0": gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		altFirst = gopurs_runtime.RecordDict2("alt", "Functor0", gopurs_runtime.RecordGet(Get_semigroupFirst(), "append"), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Maybe.Get_functorMaybe()
-})})
+}))
 	})
 	return altFirst
 }
@@ -292,9 +306,9 @@ var plusFirst gopurs_runtime.Value
 var once_plusFirst sync.Once
 func Get_plusFirst() gopurs_runtime.Value {
 	once_plusFirst.Do(func() {
-		plusFirst = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"empty": gopurs_runtime.Record(map[string]gopurs_runtime.Value{"_tag": gopurs_runtime.Str("Nothing")}), "Alt0": gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		plusFirst = gopurs_runtime.RecordDict2("empty", "Alt0", gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing")), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_altFirst()
-})})
+}))
 	})
 	return plusFirst
 }
@@ -303,11 +317,11 @@ var alternativeFirst gopurs_runtime.Value
 var once_alternativeFirst sync.Once
 func Get_alternativeFirst() gopurs_runtime.Value {
 	once_alternativeFirst.Do(func() {
-		alternativeFirst = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"Applicative0": gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		alternativeFirst = gopurs_runtime.RecordDict2("Applicative0", "Plus1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Maybe.Get_applicativeMaybe()
-}), "Plus1": gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_plusFirst()
-})})
+}))
 	})
 	return alternativeFirst
 }

@@ -7,17 +7,17 @@ var TraverseArrayImpl = gopurs_runtime.Func(func(apply gopurs_runtime.Value) gop
 		return gopurs_runtime.Func(func(pure gopurs_runtime.Value) gopurs_runtime.Value {
 			return gopurs_runtime.Func(func(f gopurs_runtime.Value) gopurs_runtime.Value {
 				return gopurs_runtime.Func(func(arrayVal gopurs_runtime.Value) gopurs_runtime.Value {
-					
+
 					array1 := gopurs_runtime.Func(func(a gopurs_runtime.Value) gopurs_runtime.Value {
 						return gopurs_runtime.Array([]gopurs_runtime.Value{a})
 					})
-					
+
 					array2 := gopurs_runtime.Func(func(a gopurs_runtime.Value) gopurs_runtime.Value {
 						return gopurs_runtime.Func(func(b gopurs_runtime.Value) gopurs_runtime.Value {
 							return gopurs_runtime.Array([]gopurs_runtime.Value{a, b})
 						})
 					})
-					
+
 					array3 := gopurs_runtime.Func(func(a gopurs_runtime.Value) gopurs_runtime.Value {
 						return gopurs_runtime.Func(func(b gopurs_runtime.Value) gopurs_runtime.Value {
 							return gopurs_runtime.Func(func(c gopurs_runtime.Value) gopurs_runtime.Value {
@@ -25,7 +25,7 @@ var TraverseArrayImpl = gopurs_runtime.Func(func(apply gopurs_runtime.Value) gop
 							})
 						})
 					})
-					
+
 					concat2 := gopurs_runtime.Func(func(xsVal gopurs_runtime.Value) gopurs_runtime.Value {
 						return gopurs_runtime.Func(func(ysVal gopurs_runtime.Value) gopurs_runtime.Value {
 							xs := xsVal.PtrVal.([]gopurs_runtime.Value)
@@ -36,9 +36,9 @@ var TraverseArrayImpl = gopurs_runtime.Func(func(apply gopurs_runtime.Value) gop
 							return gopurs_runtime.Array(res)
 						})
 					})
-					
+
 					arr := arrayVal.PtrVal.([]gopurs_runtime.Value)
-					
+
 					var goFn func(int, int) gopurs_runtime.Value
 					goFn = func(bot, top int) gopurs_runtime.Value {
 						switch top - bot {
@@ -55,7 +55,7 @@ var TraverseArrayImpl = gopurs_runtime.Func(func(apply gopurs_runtime.Value) gop
 							return gopurs_runtime.Apply(gopurs_runtime.Apply(apply, gopurs_runtime.Apply(gopurs_runtime.Apply(mapFn, concat2), goFn(bot, pivot))), goFn(pivot, top))
 						}
 					}
-					
+
 					return goFn(0, len(arr))
 				})
 			})

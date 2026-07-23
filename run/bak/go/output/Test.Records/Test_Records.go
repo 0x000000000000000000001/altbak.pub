@@ -3,8 +3,6 @@ package Test_Records
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Ring "gopurs/output/Data.Ring"
-	pkg_Data_Semiring "gopurs/output/Data.Semiring"
 	pkg_Data_EuclideanRing "gopurs/output/Data.EuclideanRing"
 	pkg_Effect_Console "gopurs/output/Effect.Console"
 	pkg_Data_Show "gopurs/output/Data.Show"
@@ -34,7 +32,7 @@ goto end_branch_0
 }
 }
 {
-__t0 = gopurs_runtime.Apply(gopurs_runtime.Apply(Get_updateRec(), gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Ring.Get_intSub(), v_0), gopurs_runtime.Int(1))), gopurs_runtime.RecordUpdate(v1_1, map[string]gopurs_runtime.Value{"a": gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Semiring.Get_intAdd(), v1_1.PtrVal.(map[string]gopurs_runtime.Value)["a"]), gopurs_runtime.Int(1)), "b": gopurs_runtime.RecordUpdate(v1_1.PtrVal.(map[string]gopurs_runtime.Value)["b"], map[string]gopurs_runtime.Value{"c": gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Semiring.Get_intAdd(), v1_1.PtrVal.(map[string]gopurs_runtime.Value)["b"].PtrVal.(map[string]gopurs_runtime.Value)["c"]), gopurs_runtime.Int(2)), "d": gopurs_runtime.RecordUpdate(v1_1.PtrVal.(map[string]gopurs_runtime.Value)["b"].PtrVal.(map[string]gopurs_runtime.Value)["d"], map[string]gopurs_runtime.Value{"e": gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Semiring.Get_intAdd(), v1_1.PtrVal.(map[string]gopurs_runtime.Value)["b"].PtrVal.(map[string]gopurs_runtime.Value)["d"].PtrVal.(map[string]gopurs_runtime.Value)["e"]), gopurs_runtime.Int(3)), "f": gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Semiring.Get_intAdd(), v1_1.PtrVal.(map[string]gopurs_runtime.Value)["b"].PtrVal.(map[string]gopurs_runtime.Value)["d"].PtrVal.(map[string]gopurs_runtime.Value)["f"]), gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_EuclideanRing.Get_intMod(), v_0), gopurs_runtime.Int(5)))})})}))
+__t0 = gopurs_runtime.Apply2(Get_updateRec(), gopurs_runtime.Int(v_0.IntVal - gopurs_runtime.Int(1).IntVal), gopurs_runtime.RecordUpdateDict(v1_1, []string{"a", "b"}, []gopurs_runtime.Value{gopurs_runtime.Int(gopurs_runtime.RecordGet(v1_1, "a").IntVal + gopurs_runtime.Int(1).IntVal), gopurs_runtime.RecordUpdateDict(gopurs_runtime.RecordGet(v1_1, "b"), []string{"c", "d"}, []gopurs_runtime.Value{gopurs_runtime.Int(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1, "b"), "c").IntVal + gopurs_runtime.Int(2).IntVal), gopurs_runtime.RecordUpdateDict(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1, "b"), "d"), []string{"e", "f"}, []gopurs_runtime.Value{gopurs_runtime.Int(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1, "b"), "d"), "e").IntVal + gopurs_runtime.Int(3).IntVal), gopurs_runtime.Int(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1, "b"), "d"), "f").IntVal + gopurs_runtime.Apply2(pkg_Data_EuclideanRing.Get_intMod(), v_0, gopurs_runtime.Int(5)).IntVal)})})}))
 }
 end_branch_0:
 return __t0
@@ -50,7 +48,7 @@ var initial gopurs_runtime.Value
 var once_initial sync.Once
 func Get_initial() gopurs_runtime.Value {
 	once_initial.Do(func() {
-		initial = gopurs_runtime.Record(map[string]gopurs_runtime.Value{"a": gopurs_runtime.Int(0), "b": gopurs_runtime.Record(map[string]gopurs_runtime.Value{"c": gopurs_runtime.Int(0), "d": gopurs_runtime.Record(map[string]gopurs_runtime.Value{"e": gopurs_runtime.Int(0), "f": gopurs_runtime.Int(0)})})})
+		initial = gopurs_runtime.RecordDict2("a", "b", gopurs_runtime.Int(0), gopurs_runtime.RecordDict2("c", "d", gopurs_runtime.Int(0), gopurs_runtime.RecordDict2("e", "f", gopurs_runtime.Int(0), gopurs_runtime.Int(0))))
 	})
 	return initial
 }
@@ -68,7 +66,7 @@ var act gopurs_runtime.Value
 var once_act sync.Once
 func Get_act() gopurs_runtime.Value {
 	once_act.Do(func() {
-		act = gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(pkg_Data_Show.Get_showIntImpl(), gopurs_runtime.Apply(gopurs_runtime.Apply(Get_updateRec(), gopurs_runtime.Int(10000)), Get_initial()).PtrVal.(map[string]gopurs_runtime.Value)["b"].PtrVal.(map[string]gopurs_runtime.Value)["d"].PtrVal.(map[string]gopurs_runtime.Value)["f"]))
+		act = gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(pkg_Data_Show.Get_showIntImpl(), gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(gopurs_runtime.Apply2(Get_updateRec(), gopurs_runtime.Int(10000), Get_initial()), "b"), "d"), "f")))
 	})
 	return act
 }

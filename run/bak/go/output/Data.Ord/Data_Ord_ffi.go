@@ -76,16 +76,16 @@ var OrdArrayImpl = gopurs_runtime.Func(func(f gopurs_runtime.Value) gopurs_runti
 			for i < xlen && i < ylen {
 				o := gopurs_runtime.Apply(gopurs_runtime.Apply(f, xsArr[i]), ysArr[i]).IntVal
 				if o != 0 {
-					return gopurs_runtime.Int(int(o))
+					return gopurs_runtime.Int(int64(int64(o)))
 				}
 				i++
 			}
 			if xlen == ylen {
-				return gopurs_runtime.Int(0)
+				return gopurs_runtime.Int(int64(0))
 			} else if xlen > ylen {
-				return gopurs_runtime.Int(-1)
+				return gopurs_runtime.Int(int64(-1))
 			} else {
-				return gopurs_runtime.Int(1)
+				return gopurs_runtime.Int(int64(1))
 			}
 		})
 	})
