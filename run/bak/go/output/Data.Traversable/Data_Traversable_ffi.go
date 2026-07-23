@@ -23,8 +23,29 @@ func TraverseArrayImpl(apply func(interface{}) func(interface{}) interface{}, ma
 	
 	concat2 := func(xsVal interface{}) func(interface{}) interface{} {
 		return func(ysVal interface{}) interface{} {
-			xs := xsVal.([]interface{})
-			ys := ysVal.([]interface{})
+			var xs, ys []interface{}
+			if vx, ok := xsVal.(gopurs_runtime.Value); ok {
+				if arr, ok := vx.PtrVal.([]gopurs_runtime.Value); ok {
+					xs = make([]interface{}, len(arr))
+					for i, x := range arr { xs[i] = x }
+				}
+			} else if arr, ok := xsVal.([]interface{}); ok {
+				xs = arr
+			} else {
+				xs = xsVal.([]interface{})
+			}
+
+			if vy, ok := ysVal.(gopurs_runtime.Value); ok {
+				if arr, ok := vy.PtrVal.([]gopurs_runtime.Value); ok {
+					ys = make([]interface{}, len(arr))
+					for i, y := range arr { ys[i] = y }
+				}
+			} else if arr, ok := ysVal.([]interface{}); ok {
+				ys = arr
+			} else {
+				ys = ysVal.([]interface{})
+			}
+
 			res := make([]interface{}, 0, len(xs)+len(ys))
 			res = append(res, xs...)
 			res = append(res, ys...)
@@ -55,25 +76,27 @@ func TraverseArrayImpl(apply func(interface{}) func(interface{}) interface{}, ma
 
 // --- Auto-generated FFI wrappers ---
 var _Gopurs_TraverseArrayImpl = gopurs_runtime.Func5(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := func(p0 interface{}) func(interface{}) interface{} {
-		res := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0))
-		return gopurs_runtime.Unbox[func(interface{}) interface{}](res)
-	}
-	go_arg1 := func(p0 interface{}) func(interface{}) interface{} {
-		res := gopurs_runtime.Apply(arg1, gopurs_runtime.Box(p0))
-		return gopurs_runtime.Unbox[func(interface{}) interface{}](res)
-	}
-	go_arg2 := func(p0 interface{}) interface{} {
-		res := gopurs_runtime.Apply(arg2, gopurs_runtime.Box(p0))
-		return res.PtrVal
-	}
-	go_arg3 := func(p0 interface{}) interface{} {
-		res := gopurs_runtime.Apply(arg3, gopurs_runtime.Box(p0))
-		return res.PtrVal
-	}
+	go_arg0 := func(p0_0 interface{}) func(interface{}) interface{} {
+			inner_res0 := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
+			return func(p1_0 interface{}) interface{} {
+			return gopurs_runtime.Apply(inner_res0, gopurs_runtime.Box(p1_0))
+		}
+		}
+	go_arg1 := func(p0_0 interface{}) func(interface{}) interface{} {
+			inner_res0 := gopurs_runtime.Apply(arg1, gopurs_runtime.Box(p0_0))
+			return func(p1_0 interface{}) interface{} {
+			return gopurs_runtime.Apply(inner_res0, gopurs_runtime.Box(p1_0))
+		}
+		}
+	go_arg2 := func(p0_0 interface{}) interface{} {
+			return gopurs_runtime.Apply(arg2, gopurs_runtime.Box(p0_0))
+		}
+	go_arg3 := func(p0_0 interface{}) interface{} {
+			return gopurs_runtime.Apply(arg3, gopurs_runtime.Box(p0_0))
+		}
 	arg4_arr := arg4.PtrVal.([]gopurs_runtime.Value)
 	go_arg4 := make([]interface{}, len(arg4_arr))
-	for i, v := range arg4_arr { go_arg4[i] = v.PtrVal }
+	for i, v := range arg4_arr { go_arg4[i] = v }
 	go_res := TraverseArrayImpl(go_arg0, go_arg1, go_arg2, go_arg3, go_arg4)
 	return gopurs_runtime.Box(go_res)
 })

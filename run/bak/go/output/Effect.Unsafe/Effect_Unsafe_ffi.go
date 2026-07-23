@@ -8,9 +8,8 @@ func UnsafePerformEffect(f func() any) any { return f() }
 // --- Auto-generated FFI wrappers ---
 var _Gopurs_UnsafePerformEffect = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func() any {
-		res := gopurs_runtime.Apply(arg0, gopurs_runtime.Value{})
-		return res.PtrVal
-	}
+			return gopurs_runtime.Apply(arg0, gopurs_runtime.Value{})
+		}
 	go_res := UnsafePerformEffect(go_arg0)
 	return gopurs_runtime.Box(go_res)
 })

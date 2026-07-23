@@ -50,11 +50,10 @@ var _Gopurs_ShowErrorImpl = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) 
 	return gopurs_runtime.Box(go_res)
 })
 var _Gopurs_StackImpl = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := func(p0 string) any {
-		res := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0))
-		return res.PtrVal
-	}
-	go_arg1 := arg1.PtrVal
+	go_arg0 := func(p0_0 string) any {
+			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
+		}
+	go_arg1 := arg1
 	go_arg2 := gopurs_runtime.Unbox[error](arg2)
 	go_res := StackImpl(go_arg0, go_arg1, go_arg2)
 	return gopurs_runtime.Box(go_res)
@@ -68,14 +67,15 @@ var _Gopurs_ThrowException = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value)
 		})
 })
 var _Gopurs_CatchException = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := func(p0 error) func() any {
-		res := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0))
-		return gopurs_runtime.Unbox[func() any](res)
-	}
+	go_arg0 := func(p0_0 error) func() any {
+			inner_res0 := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
+			return func() any {
+			return gopurs_runtime.Apply(inner_res0, gopurs_runtime.Value{})
+		}
+		}
 	go_arg1 := func() any {
-		res := gopurs_runtime.Apply(arg1, gopurs_runtime.Value{})
-		return res.PtrVal
-	}
+			return gopurs_runtime.Apply(arg1, gopurs_runtime.Value{})
+		}
 	go_res := CatchException(go_arg0, go_arg1)
 	return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 			inner_res := go_res()

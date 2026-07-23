@@ -34,10 +34,15 @@ func CalcDiff(y int, m int, d int) int { return 0 }
 
 // --- Auto-generated FFI wrappers ---
 var _Gopurs_CanonicalDateImpl = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := func(p0 int) func(int) func(int) interface{} {
-		res := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0))
-		return gopurs_runtime.Unbox[func(int) func(int) interface{}](res)
-	}
+	go_arg0 := func(p0_0 int) func(int) func(int) interface{} {
+			inner_res0 := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
+			return func(p1_0 int) func(int) interface{} {
+			inner_res1 := gopurs_runtime.Apply(inner_res0, gopurs_runtime.Box(p1_0))
+			return func(p2_0 int) interface{} {
+			return gopurs_runtime.Apply(inner_res1, gopurs_runtime.Box(p2_0))
+		}
+		}
+		}
 	go_arg1 := gopurs_runtime.Unbox[int](arg1)
 	go_arg2 := gopurs_runtime.Unbox[int](arg2)
 	go_arg3 := gopurs_runtime.Unbox[int](arg3)

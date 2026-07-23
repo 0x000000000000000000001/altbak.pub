@@ -20,7 +20,7 @@ var _Gopurs_ArrayApply = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, ar
 	for i, v := range arg0_arr { go_arg0[i] = gopurs_runtime.Unbox[func(any) any](v) }
 	arg1_arr := arg1.PtrVal.([]gopurs_runtime.Value)
 	go_arg1 := make([]any, len(arg1_arr))
-	for i, v := range arg1_arr { go_arg1[i] = v.PtrVal }
+	for i, v := range arg1_arr { go_arg1[i] = v }
 	go_res := ArrayApply(go_arg0, go_arg1)
 	return func() gopurs_runtime.Value {
 			res_arr := make([]gopurs_runtime.Value, len(go_res))

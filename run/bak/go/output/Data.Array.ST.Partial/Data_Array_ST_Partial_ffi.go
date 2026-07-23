@@ -11,7 +11,7 @@ var _Gopurs_PeekImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1
 	go_arg0 := gopurs_runtime.Unbox[int](arg0)
 	arg1_arr := arg1.PtrVal.([]gopurs_runtime.Value)
 	go_arg1 := make([]any, len(arg1_arr))
-	for i, v := range arg1_arr { go_arg1[i] = v.PtrVal }
+	for i, v := range arg1_arr { go_arg1[i] = v }
 	go_res := PeekImpl(go_arg0, go_arg1)
 	return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 			inner_res := go_res()
@@ -20,10 +20,10 @@ var _Gopurs_PeekImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1
 })
 var _Gopurs_PokeImpl = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[int](arg0)
-	go_arg1 := arg1.PtrVal
+	go_arg1 := arg1
 	arg2_arr := arg2.PtrVal.([]gopurs_runtime.Value)
 	go_arg2 := make([]any, len(arg2_arr))
-	for i, v := range arg2_arr { go_arg2[i] = v.PtrVal }
+	for i, v := range arg2_arr { go_arg2[i] = v }
 	go_res := PokeImpl(go_arg0, go_arg1, go_arg2)
 	return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 			inner_res := go_res()

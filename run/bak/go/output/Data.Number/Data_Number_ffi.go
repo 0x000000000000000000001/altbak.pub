@@ -129,15 +129,14 @@ var _Gopurs_IsFinite = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopur
 })
 var _Gopurs_FromStringImpl = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[string](arg0)
-	go_arg1 := func(p0 float64) bool {
-		res := gopurs_runtime.Apply(arg1, gopurs_runtime.Box(p0))
-		return gopurs_runtime.Unbox[bool](res)
-	}
-	go_arg2 := func(p0 float64) any {
-		res := gopurs_runtime.Apply(arg2, gopurs_runtime.Box(p0))
-		return res.PtrVal
-	}
-	go_arg3 := arg3.PtrVal
+	go_arg1 := func(p0_0 float64) bool {
+			inner_res0 := gopurs_runtime.Apply(arg1, gopurs_runtime.Box(p0_0))
+			return gopurs_runtime.Unbox[bool](inner_res0)
+		}
+	go_arg2 := func(p0_0 float64) any {
+			return gopurs_runtime.Apply(arg2, gopurs_runtime.Box(p0_0))
+		}
+	go_arg3 := arg3
 	go_res := FromStringImpl(go_arg0, go_arg1, go_arg2, go_arg3)
 	return gopurs_runtime.Box(go_res)
 })

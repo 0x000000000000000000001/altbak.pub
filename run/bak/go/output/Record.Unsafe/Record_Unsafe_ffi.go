@@ -31,26 +31,26 @@ func UnsafeDelete(label string, rec map[string]any) map[string]any {
 // --- Auto-generated FFI wrappers ---
 var _Gopurs_UnsafeHas = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[string](arg0)
-	arg1_map := arg1.PtrVal.(map[string]gopurs_runtime.Value)
+	arg1_map := gopurs_runtime.RecordToMap(arg1)
 	go_arg1 := make(map[string]any)
-	for k, v := range arg1_map { go_arg1[k] = v.PtrVal }
+	for k, v := range arg1_map { go_arg1[k] = v }
 	go_res := UnsafeHas(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
 })
 var _Gopurs_UnsafeGet = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[string](arg0)
-	arg1_map := arg1.PtrVal.(map[string]gopurs_runtime.Value)
+	arg1_map := gopurs_runtime.RecordToMap(arg1)
 	go_arg1 := make(map[string]any)
-	for k, v := range arg1_map { go_arg1[k] = v.PtrVal }
+	for k, v := range arg1_map { go_arg1[k] = v }
 	go_res := UnsafeGet(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
 })
 var _Gopurs_UnsafeSet = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[string](arg0)
-	go_arg1 := arg1.PtrVal
-	arg2_map := arg2.PtrVal.(map[string]gopurs_runtime.Value)
+	go_arg1 := arg1
+	arg2_map := gopurs_runtime.RecordToMap(arg2)
 	go_arg2 := make(map[string]any)
-	for k, v := range arg2_map { go_arg2[k] = v.PtrVal }
+	for k, v := range arg2_map { go_arg2[k] = v }
 	go_res := UnsafeSet(go_arg0, go_arg1, go_arg2)
 	return func() gopurs_runtime.Value {
 			res_map := make(map[string]gopurs_runtime.Value)
@@ -60,9 +60,9 @@ var _Gopurs_UnsafeSet = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg
 })
 var _Gopurs_UnsafeDelete = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[string](arg0)
-	arg1_map := arg1.PtrVal.(map[string]gopurs_runtime.Value)
+	arg1_map := gopurs_runtime.RecordToMap(arg1)
 	go_arg1 := make(map[string]any)
-	for k, v := range arg1_map { go_arg1[k] = v.PtrVal }
+	for k, v := range arg1_map { go_arg1[k] = v }
 	go_res := UnsafeDelete(go_arg0, go_arg1)
 	return func() gopurs_runtime.Value {
 			res_map := make(map[string]gopurs_runtime.Value)

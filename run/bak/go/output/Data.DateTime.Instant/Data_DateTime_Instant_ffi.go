@@ -27,10 +27,27 @@ func ToDateTimeImpl(ctor func(int) func(int) func(int) func(int) func(int) func(
 
 // --- Auto-generated FFI wrappers ---
 var _Gopurs_ToDateTimeImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := func(p0 int) func(int) func(int) func(int) func(int) func(int) func(int) any {
-		res := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0))
-		return gopurs_runtime.Unbox[func(int) func(int) func(int) func(int) func(int) func(int) any](res)
-	}
+	go_arg0 := func(p0_0 int) func(int) func(int) func(int) func(int) func(int) func(int) any {
+			inner_res0 := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
+			return func(p1_0 int) func(int) func(int) func(int) func(int) func(int) any {
+			inner_res1 := gopurs_runtime.Apply(inner_res0, gopurs_runtime.Box(p1_0))
+			return func(p2_0 int) func(int) func(int) func(int) func(int) any {
+			inner_res2 := gopurs_runtime.Apply(inner_res1, gopurs_runtime.Box(p2_0))
+			return func(p3_0 int) func(int) func(int) func(int) any {
+			inner_res3 := gopurs_runtime.Apply(inner_res2, gopurs_runtime.Box(p3_0))
+			return func(p4_0 int) func(int) func(int) any {
+			inner_res4 := gopurs_runtime.Apply(inner_res3, gopurs_runtime.Box(p4_0))
+			return func(p5_0 int) func(int) any {
+			inner_res5 := gopurs_runtime.Apply(inner_res4, gopurs_runtime.Box(p5_0))
+			return func(p6_0 int) any {
+			return gopurs_runtime.Apply(inner_res5, gopurs_runtime.Box(p6_0))
+		}
+		}
+		}
+		}
+		}
+		}
+		}
 	go_arg1 := gopurs_runtime.Unbox[float64](arg1)
 	go_res := ToDateTimeImpl(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)

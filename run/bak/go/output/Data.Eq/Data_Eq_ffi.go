@@ -55,16 +55,19 @@ var _Gopurs_EqStringImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, 
 	return gopurs_runtime.Box(go_res)
 })
 var _Gopurs_EqArrayImpl = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := func(p0 any) func(any) bool {
-		res := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0))
-		return gopurs_runtime.Unbox[func(any) bool](res)
-	}
+	go_arg0 := func(p0_0 any) func(any) bool {
+			inner_res0 := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
+			return func(p1_0 any) bool {
+			inner_res1 := gopurs_runtime.Apply(inner_res0, gopurs_runtime.Box(p1_0))
+			return gopurs_runtime.Unbox[bool](inner_res1)
+		}
+		}
 	arg1_arr := arg1.PtrVal.([]gopurs_runtime.Value)
 	go_arg1 := make([]any, len(arg1_arr))
-	for i, v := range arg1_arr { go_arg1[i] = v.PtrVal }
+	for i, v := range arg1_arr { go_arg1[i] = v }
 	arg2_arr := arg2.PtrVal.([]gopurs_runtime.Value)
 	go_arg2 := make([]any, len(arg2_arr))
-	for i, v := range arg2_arr { go_arg2[i] = v.PtrVal }
+	for i, v := range arg2_arr { go_arg2[i] = v }
 	go_res := EqArrayImpl(go_arg0, go_arg1, go_arg2)
 	return gopurs_runtime.Box(go_res)
 })

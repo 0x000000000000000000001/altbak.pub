@@ -13,13 +13,15 @@ func MapWithIndexArray(f func(int) func(interface{}) interface{}, xs []interface
 
 // --- Auto-generated FFI wrappers ---
 var _Gopurs_MapWithIndexArray = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := func(p0 int) func(interface{}) interface{} {
-		res := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0))
-		return gopurs_runtime.Unbox[func(interface{}) interface{}](res)
-	}
+	go_arg0 := func(p0_0 int) func(interface{}) interface{} {
+			inner_res0 := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
+			return func(p1_0 interface{}) interface{} {
+			return gopurs_runtime.Apply(inner_res0, gopurs_runtime.Box(p1_0))
+		}
+		}
 	arg1_arr := arg1.PtrVal.([]gopurs_runtime.Value)
 	go_arg1 := make([]interface{}, len(arg1_arr))
-	for i, v := range arg1_arr { go_arg1[i] = v.PtrVal }
+	for i, v := range arg1_arr { go_arg1[i] = v }
 	go_res := MapWithIndexArray(go_arg0, go_arg1)
 	return func() gopurs_runtime.Value {
 			res_arr := make([]gopurs_runtime.Value, len(go_res))

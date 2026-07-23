@@ -58,11 +58,10 @@ func Pow(x int, y int) int {
 
 // --- Auto-generated FFI wrappers ---
 var _Gopurs_FromNumberImpl = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := func(p0 int) any {
-		res := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0))
-		return res.PtrVal
-	}
-	go_arg1 := arg1.PtrVal
+	go_arg0 := func(p0_0 int) any {
+			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
+		}
+	go_arg1 := arg1
 	go_arg2 := gopurs_runtime.Unbox[float64](arg2)
 	go_res := FromNumberImpl(go_arg0, go_arg1, go_arg2)
 	return gopurs_runtime.Box(go_res)
@@ -73,11 +72,10 @@ var _Gopurs_ToNumber = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopur
 	return gopurs_runtime.Box(go_res)
 })
 var _Gopurs_FromStringAsImpl = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := func(p0 int) any {
-		res := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0))
-		return res.PtrVal
-	}
-	go_arg1 := arg1.PtrVal
+	go_arg0 := func(p0_0 int) any {
+			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
+		}
+	go_arg1 := arg1
 	go_arg2 := gopurs_runtime.Unbox[int](arg2)
 	go_arg3 := gopurs_runtime.Unbox[string](arg3)
 	go_res := FromStringAsImpl(go_arg0, go_arg1, go_arg2, go_arg3)

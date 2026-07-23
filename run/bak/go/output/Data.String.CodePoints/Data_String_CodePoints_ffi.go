@@ -33,37 +33,37 @@ func X_toCodePointArray(_ any) any {
 
 // --- Auto-generated FFI wrappers ---
 var _Gopurs_X_unsafeCodePointAt0 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := arg0.PtrVal
+	go_arg0 := arg0
 	go_res := X_unsafeCodePointAt0(go_arg0)
 	return gopurs_runtime.Box(go_res)
 })
 var _Gopurs_X_codePointAt = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := arg0.PtrVal
+	go_arg0 := arg0
 	go_res := X_codePointAt(go_arg0)
 	return gopurs_runtime.Box(go_res)
 })
 var _Gopurs_X_countPrefix = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := arg0.PtrVal
+	go_arg0 := arg0
 	go_res := X_countPrefix(go_arg0)
 	return gopurs_runtime.Box(go_res)
 })
 var _Gopurs_X_fromCodePointArray = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := arg0.PtrVal
+	go_arg0 := arg0
 	go_res := X_fromCodePointArray(go_arg0)
 	return gopurs_runtime.Box(go_res)
 })
 var _Gopurs_X_singleton = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := arg0.PtrVal
+	go_arg0 := arg0
 	go_res := X_singleton(go_arg0)
 	return gopurs_runtime.Box(go_res)
 })
 var _Gopurs_X_take = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := arg0.PtrVal
+	go_arg0 := arg0
 	go_res := X_take(go_arg0)
 	return gopurs_runtime.Box(go_res)
 })
 var _Gopurs_X_toCodePointArray = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := arg0.PtrVal
+	go_arg0 := arg0
 	go_res := X_toCodePointArray(go_arg0)
 	return gopurs_runtime.Box(go_res)
 })

@@ -278,47 +278,101 @@ var _Gopurs_MkEffectFn1 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) go
 var _Gopurs_MkEffectFn2 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := MkEffectFn2(go_arg0)
-	return gopurs_runtime.Box(go_res)
+	return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := go_res(arg)
+			return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res()
+			return inner_res
+		})
+		})
 })
 var _Gopurs_MkEffectFn3 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := MkEffectFn3(go_arg0)
-	return gopurs_runtime.Box(go_res)
+	return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := go_res(arg)
+			return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res()
+			return inner_res
+		})
+		})
 })
 var _Gopurs_MkEffectFn4 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := MkEffectFn4(go_arg0)
-	return gopurs_runtime.Box(go_res)
+	return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := go_res(arg)
+			return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res()
+			return inner_res
+		})
+		})
 })
 var _Gopurs_MkEffectFn5 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := MkEffectFn5(go_arg0)
-	return gopurs_runtime.Box(go_res)
+	return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := go_res(arg)
+			return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res()
+			return inner_res
+		})
+		})
 })
 var _Gopurs_MkEffectFn6 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := MkEffectFn6(go_arg0)
-	return gopurs_runtime.Box(go_res)
+	return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := go_res(arg)
+			return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res()
+			return inner_res
+		})
+		})
 })
 var _Gopurs_MkEffectFn7 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := MkEffectFn7(go_arg0)
-	return gopurs_runtime.Box(go_res)
+	return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := go_res(arg)
+			return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res()
+			return inner_res
+		})
+		})
 })
 var _Gopurs_MkEffectFn8 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := MkEffectFn8(go_arg0)
-	return gopurs_runtime.Box(go_res)
+	return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := go_res(arg)
+			return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res()
+			return inner_res
+		})
+		})
 })
 var _Gopurs_MkEffectFn9 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := MkEffectFn9(go_arg0)
-	return gopurs_runtime.Box(go_res)
+	return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := go_res(arg)
+			return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res()
+			return inner_res
+		})
+		})
 })
 var _Gopurs_MkEffectFn10 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := MkEffectFn10(go_arg0)
-	return gopurs_runtime.Box(go_res)
+	return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := go_res(arg)
+			return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res()
+			return inner_res
+		})
+		})
 })
 var _Gopurs_RunEffectFn1 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0

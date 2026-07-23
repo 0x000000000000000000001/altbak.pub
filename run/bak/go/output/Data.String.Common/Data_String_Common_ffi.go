@@ -47,9 +47,9 @@ func JoinWith(s string, xs []string) string {
 
 // --- Auto-generated FFI wrappers ---
 var _Gopurs__LocaleCompare = gopurs_runtime.Func5(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := arg0.PtrVal
-	go_arg1 := arg1.PtrVal
-	go_arg2 := arg2.PtrVal
+	go_arg0 := arg0
+	go_arg1 := arg1
+	go_arg2 := arg2
 	go_arg3 := gopurs_runtime.Unbox[string](arg3)
 	go_arg4 := gopurs_runtime.Unbox[string](arg4)
 	go_res := _LocaleCompare(go_arg0, go_arg1, go_arg2, go_arg3, go_arg4)
