@@ -32,23 +32,23 @@ __local_var_7_3 := gopurs_runtime.Apply(__local_var_4_1, x_5)
 _ = __local_var_7_3
 var __t4 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_6_2, "_tag").StrVal == "LT")).IntVal != 0 {
-__t4 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("LT"))
+if (gopurs_runtime.Bool(__local_var_6_2.StrVal == "LT")).IntVal != 0 {
+__t4 = gopurs_runtime.Constructor0("LT")
 goto end_branch_4
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_6_2, "_tag").StrVal == "GT")).IntVal != 0 {
-__t4 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("GT"))
+if (gopurs_runtime.Bool(__local_var_6_2.StrVal == "GT")).IntVal != 0 {
+__t4 = gopurs_runtime.Constructor0("GT")
 goto end_branch_4
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_6_2, "_tag").StrVal == "EQ")).IntVal != 0 {
+if (gopurs_runtime.Bool(__local_var_6_2.StrVal == "EQ")).IntVal != 0 {
 __t4 = __local_var_7_3
 goto end_branch_4
 } else {
@@ -82,7 +82,7 @@ var once_monoidComparison sync.Once
 func Get_monoidComparison() gopurs_runtime.Value {
 	once_monoidComparison.Do(func() {
 		monoidComparison = gopurs_runtime.RecordDict2("mempty", "Semigroup0", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("EQ"))
+return gopurs_runtime.Constructor0("EQ")
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_semigroupComparison()
 }))

@@ -225,7 +225,7 @@ __local_var_2_0 := gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_stripPref
 _ = __local_var_2_0
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_2_0, "_tag").StrVal == "Nothing")).IntVal != 0 {
+if (gopurs_runtime.Bool(__local_var_2_0.StrVal == "Nothing")).IntVal != 0 {
 __t1 = gopurs_runtime.Bool(false)
 goto end_branch_1
 } else {
@@ -233,7 +233,7 @@ goto end_branch_1
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_2_0, "_tag").StrVal == "Just")).IntVal != 0 {
+if (gopurs_runtime.Bool(__local_var_2_0.StrVal == "Just")).IntVal != 0 {
 __t1 = gopurs_runtime.Bool(true)
 goto end_branch_1
 } else {
@@ -344,14 +344,14 @@ func Get_fromString() gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(v_0.StrVal == gopurs_runtime.Str("").StrVal)).IntVal != 0 {
-__t0 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
+__t0 = gopurs_runtime.Constructor0("Nothing")
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), v_0)
+__t0 = gopurs_runtime.Constructor1("Just", v_0)
 }
 end_branch_0:
 return __t0
@@ -369,18 +369,18 @@ __local_var_2_0 := gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_stripPref
 _ = __local_var_2_0
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_2_0, "_tag").StrVal == "Just")).IntVal != 0 {
+if (gopurs_runtime.Bool(__local_var_2_0.StrVal == "Just")).IntVal != 0 {
 var __t2 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_2_0, "value0").StrVal == gopurs_runtime.Str("").StrVal)).IntVal != 0 {
-__t2 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
+if (gopurs_runtime.Bool(gopurs_runtime.ConstructorGet(__local_var_2_0, 0).StrVal == gopurs_runtime.Str("").StrVal)).IntVal != 0 {
+__t2 = gopurs_runtime.Constructor0("Nothing")
 goto end_branch_2
 } else {
 
 }
 }
 {
-__t2 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), gopurs_runtime.RecordGet(__local_var_2_0, "value0"))
+__t2 = gopurs_runtime.Constructor1("Just", gopurs_runtime.ConstructorGet(__local_var_2_0, 0))
 }
 end_branch_2:
 __t1 = __t2
@@ -390,8 +390,8 @@ goto end_branch_1
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_2_0, "_tag").StrVal == "Nothing")).IntVal != 0 {
-__t1 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
+if (gopurs_runtime.Bool(__local_var_2_0.StrVal == "Nothing")).IntVal != 0 {
+__t1 = gopurs_runtime.Constructor0("Nothing")
 goto end_branch_1
 } else {
 
@@ -416,18 +416,18 @@ __local_var_2_0 := gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_stripSuff
 _ = __local_var_2_0
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_2_0, "_tag").StrVal == "Just")).IntVal != 0 {
+if (gopurs_runtime.Bool(__local_var_2_0.StrVal == "Just")).IntVal != 0 {
 var __t2 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_2_0, "value0").StrVal == gopurs_runtime.Str("").StrVal)).IntVal != 0 {
-__t2 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
+if (gopurs_runtime.Bool(gopurs_runtime.ConstructorGet(__local_var_2_0, 0).StrVal == gopurs_runtime.Str("").StrVal)).IntVal != 0 {
+__t2 = gopurs_runtime.Constructor0("Nothing")
 goto end_branch_2
 } else {
 
 }
 }
 {
-__t2 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), gopurs_runtime.RecordGet(__local_var_2_0, "value0"))
+__t2 = gopurs_runtime.Constructor1("Just", gopurs_runtime.ConstructorGet(__local_var_2_0, 0))
 }
 end_branch_2:
 __t1 = __t2
@@ -437,8 +437,8 @@ goto end_branch_1
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_2_0, "_tag").StrVal == "Nothing")).IntVal != 0 {
-__t1 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
+if (gopurs_runtime.Bool(__local_var_2_0.StrVal == "Nothing")).IntVal != 0 {
+__t1 = gopurs_runtime.Constructor0("Nothing")
 goto end_branch_1
 } else {
 
@@ -464,14 +464,14 @@ _ = __local_var_1_0
 var __t1 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(__local_var_1_0.StrVal == gopurs_runtime.Str("").StrVal)).IntVal != 0 {
-__t1 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
+__t1 = gopurs_runtime.Constructor0("Nothing")
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), __local_var_1_0)
+__t1 = gopurs_runtime.Constructor1("Just", __local_var_1_0)
 }
 end_branch_1:
 return __t1
@@ -531,7 +531,7 @@ __local_var_2_0 := gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_stripSuff
 _ = __local_var_2_0
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_2_0, "_tag").StrVal == "Nothing")).IntVal != 0 {
+if (gopurs_runtime.Bool(__local_var_2_0.StrVal == "Nothing")).IntVal != 0 {
 __t1 = gopurs_runtime.Bool(false)
 goto end_branch_1
 } else {
@@ -539,7 +539,7 @@ goto end_branch_1
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_2_0, "_tag").StrVal == "Just")).IntVal != 0 {
+if (gopurs_runtime.Bool(__local_var_2_0.StrVal == "Just")).IntVal != 0 {
 __t1 = gopurs_runtime.Bool(true)
 goto end_branch_1
 } else {

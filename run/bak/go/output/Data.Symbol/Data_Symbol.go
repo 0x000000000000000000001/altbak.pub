@@ -14,7 +14,7 @@ return gopurs_runtime.Apply3(Get_unsafeCoerce(), gopurs_runtime.Func(func(dictIs
 return gopurs_runtime.Apply(f_1, dictIsSymbol_2)
 }), gopurs_runtime.RecordDict1("reflectSymbol", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return s_0
-})), gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Proxy")))
+})), gopurs_runtime.Constructor0("Proxy"))
 })
 	})
 	return reifySymbol

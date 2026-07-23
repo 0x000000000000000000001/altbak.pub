@@ -21,7 +21,7 @@ v_2_0 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ord.Get_ordInt(
 _ = v_2_0
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_2_0, "_tag").StrVal == "LT")).IntVal != 0 {
+if (gopurs_runtime.Bool(v_2_0.StrVal == "LT")).IntVal != 0 {
 __t1 = y_1
 goto end_branch_1
 } else {
@@ -29,7 +29,7 @@ goto end_branch_1
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_2_0, "_tag").StrVal == "EQ")).IntVal != 0 {
+if (gopurs_runtime.Bool(v_2_0.StrVal == "EQ")).IntVal != 0 {
 __t1 = x_0
 goto end_branch_1
 } else {
@@ -37,7 +37,7 @@ goto end_branch_1
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_2_0, "_tag").StrVal == "GT")).IntVal != 0 {
+if (gopurs_runtime.Bool(v_2_0.StrVal == "GT")).IntVal != 0 {
 __t1 = x_0
 goto end_branch_1
 } else {
@@ -109,7 +109,7 @@ goto end_branch_2
 }
 }
 {
-__t2 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing")))
+__t2 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.Constructor0("Nothing"))
 }
 end_branch_2:
 return __t2

@@ -60,7 +60,7 @@ var once_bifunctorTuple sync.Once
 func Get_bifunctorTuple() gopurs_runtime.Value {
 	once_bifunctorTuple.Do(func() {
 		bifunctorTuple = gopurs_runtime.RecordDict1("bimap", gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, g_1 gopurs_runtime.Value, v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), gopurs_runtime.Apply(f_0, gopurs_runtime.RecordGet(v_2, "value0")), gopurs_runtime.Apply(g_1, gopurs_runtime.RecordGet(v_2, "value1")))
+return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply(f_0, gopurs_runtime.ConstructorGet(v_2, 0)), gopurs_runtime.Apply(g_1, gopurs_runtime.ConstructorGet(v_2, 1)))
 }))
 	})
 	return bifunctorTuple
@@ -73,16 +73,16 @@ func Get_bifunctorEither() gopurs_runtime.Value {
 		bifunctorEither = gopurs_runtime.RecordDict1("bimap", gopurs_runtime.Func3(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value, v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v2_2, "_tag").StrVal == "Left")).IntVal != 0 {
-__t0 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Left"), gopurs_runtime.Apply(v_0, gopurs_runtime.RecordGet(v2_2, "value0")))
+if (gopurs_runtime.Bool(v2_2.StrVal == "Left")).IntVal != 0 {
+__t0 = gopurs_runtime.Constructor1("Left", gopurs_runtime.Apply(v_0, gopurs_runtime.ConstructorGet(v2_2, 0)))
 goto end_branch_0
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v2_2, "_tag").StrVal == "Right")).IntVal != 0 {
-__t0 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Right"), gopurs_runtime.Apply(v1_1, gopurs_runtime.RecordGet(v2_2, "value0")))
+if (gopurs_runtime.Bool(v2_2.StrVal == "Right")).IntVal != 0 {
+__t0 = gopurs_runtime.Constructor1("Right", gopurs_runtime.Apply(v1_1, gopurs_runtime.ConstructorGet(v2_2, 0)))
 goto end_branch_0
 } else {
 

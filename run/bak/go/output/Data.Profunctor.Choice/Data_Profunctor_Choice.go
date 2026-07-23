@@ -51,16 +51,16 @@ return gopurs_runtime.Func2(func(l_3 gopurs_runtime.Value, r_4 gopurs_runtime.Va
 return gopurs_runtime.Apply2(rmap_2_0, gopurs_runtime.Func(func(v2_5 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v2_5, "_tag").StrVal == "Left")).IntVal != 0 {
-__t1 = gopurs_runtime.RecordGet(v2_5, "value0")
+if (gopurs_runtime.Bool(v2_5.StrVal == "Left")).IntVal != 0 {
+__t1 = gopurs_runtime.ConstructorGet(v2_5, 0)
 goto end_branch_1
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v2_5, "_tag").StrVal == "Right")).IntVal != 0 {
-__t1 = gopurs_runtime.RecordGet(v2_5, "value0")
+if (gopurs_runtime.Bool(v2_5.StrVal == "Right")).IntVal != 0 {
+__t1 = gopurs_runtime.ConstructorGet(v2_5, 0)
 goto end_branch_1
 } else {
 
@@ -85,16 +85,16 @@ func Get_choiceFn() gopurs_runtime.Value {
 		choiceFn = gopurs_runtime.RecordDict3("left", "right", "Profunctor0", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v1_1, "_tag").StrVal == "Left")).IntVal != 0 {
-__t0 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Left"), gopurs_runtime.Apply(v_0, gopurs_runtime.RecordGet(v1_1, "value0")))
+if (gopurs_runtime.Bool(v1_1.StrVal == "Left")).IntVal != 0 {
+__t0 = gopurs_runtime.Constructor1("Left", gopurs_runtime.Apply(v_0, gopurs_runtime.ConstructorGet(v1_1, 0)))
 goto end_branch_0
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v1_1, "_tag").StrVal == "Right")).IntVal != 0 {
-__t0 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Right"), gopurs_runtime.RecordGet(v1_1, "value0"))
+if (gopurs_runtime.Bool(v1_1.StrVal == "Right")).IntVal != 0 {
+__t0 = gopurs_runtime.Constructor1("Right", gopurs_runtime.ConstructorGet(v1_1, 0))
 goto end_branch_0
 } else {
 

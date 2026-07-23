@@ -23,7 +23,7 @@ var once_bindProxy sync.Once
 func Get_bindProxy() gopurs_runtime.Value {
 	once_bindProxy.Do(func() {
 		bindProxy = gopurs_runtime.RecordDict2("bind", "Apply0", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Proxy"))
+return gopurs_runtime.Constructor0("Proxy")
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Control_Apply.Get_applyProxy()
 }))

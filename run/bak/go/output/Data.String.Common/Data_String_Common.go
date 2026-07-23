@@ -20,7 +20,7 @@ var localeCompare gopurs_runtime.Value
 var once_localeCompare sync.Once
 func Get_localeCompare() gopurs_runtime.Value {
 	once_localeCompare.Do(func() {
-		localeCompare = gopurs_runtime.Apply3(Get__localeCompare(), gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("LT")), gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("EQ")), gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("GT")))
+		localeCompare = gopurs_runtime.Apply3(Get__localeCompare(), gopurs_runtime.Constructor0("LT"), gopurs_runtime.Constructor0("EQ"), gopurs_runtime.Constructor0("GT"))
 	})
 	return localeCompare
 }

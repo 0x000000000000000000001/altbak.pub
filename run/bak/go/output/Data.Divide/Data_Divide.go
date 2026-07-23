@@ -17,7 +17,7 @@ func Get_dividePredicate() gopurs_runtime.Value {
 		dividePredicate = gopurs_runtime.RecordDict2("divide", "Contravariant0", gopurs_runtime.Func4(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, v1_2 gopurs_runtime.Value, a_3 gopurs_runtime.Value) gopurs_runtime.Value {
 v2_4_0 := gopurs_runtime.Apply(f_0, a_3)
 _ = v2_4_0
-return gopurs_runtime.Bool(gopurs_runtime.Apply(v_1, gopurs_runtime.RecordGet(v2_4_0, "value0")).IntVal != 0 && gopurs_runtime.Apply(v1_2, gopurs_runtime.RecordGet(v2_4_0, "value1")).IntVal != 0)
+return gopurs_runtime.Bool(gopurs_runtime.Apply(v_1, gopurs_runtime.ConstructorGet(v2_4_0, 0)).IntVal != 0 && gopurs_runtime.Apply(v1_2, gopurs_runtime.ConstructorGet(v2_4_0, 1)).IntVal != 0)
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Predicate.Get_contravariantPredicate()
 }))
@@ -33,7 +33,7 @@ func Get_divideOp() gopurs_runtime.Value {
 return gopurs_runtime.RecordDict2("divide", "Contravariant0", gopurs_runtime.Func4(func(f_1 gopurs_runtime.Value, v_2 gopurs_runtime.Value, v1_3 gopurs_runtime.Value, a_4 gopurs_runtime.Value) gopurs_runtime.Value {
 v2_5_0 := gopurs_runtime.Apply(f_1, a_4)
 _ = v2_5_0
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup_0, "append"), gopurs_runtime.Apply(v_2, gopurs_runtime.RecordGet(v2_5_0, "value0")), gopurs_runtime.Apply(v1_3, gopurs_runtime.RecordGet(v2_5_0, "value1")))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup_0, "append"), gopurs_runtime.Apply(v_2, gopurs_runtime.ConstructorGet(v2_5_0, 0)), gopurs_runtime.Apply(v1_3, gopurs_runtime.ConstructorGet(v2_5_0, 1)))
 }), gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Op.Get_contravariantOp()
 }))
@@ -51,7 +51,7 @@ v2_5_0 := gopurs_runtime.Apply(f_0, a_3)
 _ = v2_5_0
 v3_6_1 := gopurs_runtime.Apply(f_0, b_4)
 _ = v3_6_1
-return gopurs_runtime.Bool(gopurs_runtime.Apply2(v_1, gopurs_runtime.RecordGet(v2_5_0, "value0"), gopurs_runtime.RecordGet(v3_6_1, "value0")).IntVal != 0 && gopurs_runtime.Apply2(v1_2, gopurs_runtime.RecordGet(v2_5_0, "value1"), gopurs_runtime.RecordGet(v3_6_1, "value1")).IntVal != 0)
+return gopurs_runtime.Bool(gopurs_runtime.Apply2(v_1, gopurs_runtime.ConstructorGet(v2_5_0, 0), gopurs_runtime.ConstructorGet(v3_6_1, 0)).IntVal != 0 && gopurs_runtime.Apply2(v1_2, gopurs_runtime.ConstructorGet(v2_5_0, 1), gopurs_runtime.ConstructorGet(v3_6_1, 1)).IntVal != 0)
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Equivalence.Get_contravariantEquivalence()
 }))
@@ -68,29 +68,29 @@ v2_5_0 := gopurs_runtime.Apply(f_0, a_3)
 _ = v2_5_0
 v3_6_1 := gopurs_runtime.Apply(f_0, b_4)
 _ = v3_6_1
-__local_var_7_2 := gopurs_runtime.Apply2(v_1, gopurs_runtime.RecordGet(v2_5_0, "value0"), gopurs_runtime.RecordGet(v3_6_1, "value0"))
+__local_var_7_2 := gopurs_runtime.Apply2(v_1, gopurs_runtime.ConstructorGet(v2_5_0, 0), gopurs_runtime.ConstructorGet(v3_6_1, 0))
 _ = __local_var_7_2
-__local_var_8_3 := gopurs_runtime.Apply2(v1_2, gopurs_runtime.RecordGet(v2_5_0, "value1"), gopurs_runtime.RecordGet(v3_6_1, "value1"))
+__local_var_8_3 := gopurs_runtime.Apply2(v1_2, gopurs_runtime.ConstructorGet(v2_5_0, 1), gopurs_runtime.ConstructorGet(v3_6_1, 1))
 _ = __local_var_8_3
 var __t4 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_7_2, "_tag").StrVal == "LT")).IntVal != 0 {
-__t4 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("LT"))
+if (gopurs_runtime.Bool(__local_var_7_2.StrVal == "LT")).IntVal != 0 {
+__t4 = gopurs_runtime.Constructor0("LT")
 goto end_branch_4
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_7_2, "_tag").StrVal == "GT")).IntVal != 0 {
-__t4 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("GT"))
+if (gopurs_runtime.Bool(__local_var_7_2.StrVal == "GT")).IntVal != 0 {
+__t4 = gopurs_runtime.Constructor0("GT")
 goto end_branch_4
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_7_2, "_tag").StrVal == "EQ")).IntVal != 0 {
+if (gopurs_runtime.Bool(__local_var_7_2.StrVal == "EQ")).IntVal != 0 {
 __t4 = __local_var_8_3
 goto end_branch_4
 } else {

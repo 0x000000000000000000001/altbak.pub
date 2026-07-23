@@ -12,7 +12,7 @@ func Get_Tuple() gopurs_runtime.Value {
 	once_Tuple.Do(func() {
 		Tuple = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), value0, value1)
+return gopurs_runtime.Constructor2("Tuple", value0, value1)
 })
 })
 	})
@@ -24,7 +24,7 @@ var once_uncurry sync.Once
 func Get_uncurry() gopurs_runtime.Value {
 	once_uncurry.Do(func() {
 		uncurry = gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(f_0, gopurs_runtime.RecordGet(v_1, "value0"), gopurs_runtime.RecordGet(v_1, "value1"))
+return gopurs_runtime.Apply2(f_0, gopurs_runtime.ConstructorGet(v_1, 0), gopurs_runtime.ConstructorGet(v_1, 1))
 })
 	})
 	return uncurry
@@ -35,7 +35,7 @@ var once_swap sync.Once
 func Get_swap() gopurs_runtime.Value {
 	once_swap.Do(func() {
 		swap = gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), gopurs_runtime.RecordGet(v_0, "value1"), gopurs_runtime.RecordGet(v_0, "value0"))
+return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.ConstructorGet(v_0, 1), gopurs_runtime.ConstructorGet(v_0, 0))
 })
 	})
 	return swap
@@ -46,7 +46,7 @@ var once_snd sync.Once
 func Get_snd() gopurs_runtime.Value {
 	once_snd.Do(func() {
 		snd = gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(v_0, "value1")
+return gopurs_runtime.ConstructorGet(v_0, 1)
 })
 	})
 	return snd
@@ -58,7 +58,7 @@ func Get_showTuple() gopurs_runtime.Value {
 	once_showTuple.Do(func() {
 		showTuple = gopurs_runtime.Func2(func(dictShow_0 gopurs_runtime.Value, dictShow1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str("(Tuple ").StrVal + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), gopurs_runtime.RecordGet(v_2, "value0")).StrVal).StrVal + gopurs_runtime.Str(" ").StrVal).StrVal + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow1_1, "show"), gopurs_runtime.RecordGet(v_2, "value1")).StrVal).StrVal + gopurs_runtime.Str(")").StrVal)
+return gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str("(Tuple ").StrVal + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), gopurs_runtime.ConstructorGet(v_2, 0)).StrVal).StrVal + gopurs_runtime.Str(" ").StrVal).StrVal + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow1_1, "show"), gopurs_runtime.ConstructorGet(v_2, 1)).StrVal).StrVal + gopurs_runtime.Str(")").StrVal)
 }))
 })
 	})
@@ -76,10 +76,10 @@ zero_2_1 := gopurs_runtime.RecordGet(dictSemiring_0, "zero")
 _ = zero_2_1
 return gopurs_runtime.Func(func(dictSemiring1_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict4("add", "one", "mul", "zero", gopurs_runtime.Func2(func(v_4 gopurs_runtime.Value, v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemiring_0, "add"), gopurs_runtime.RecordGet(v_4, "value0"), gopurs_runtime.RecordGet(v1_5, "value0")), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemiring1_3, "add"), gopurs_runtime.RecordGet(v_4, "value1"), gopurs_runtime.RecordGet(v1_5, "value1")))
-}), gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), one_1_0, gopurs_runtime.RecordGet(dictSemiring1_3, "one")), gopurs_runtime.Func2(func(v_4 gopurs_runtime.Value, v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemiring_0, "mul"), gopurs_runtime.RecordGet(v_4, "value0"), gopurs_runtime.RecordGet(v1_5, "value0")), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemiring1_3, "mul"), gopurs_runtime.RecordGet(v_4, "value1"), gopurs_runtime.RecordGet(v1_5, "value1")))
-}), gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), zero_2_1, gopurs_runtime.RecordGet(dictSemiring1_3, "zero")))
+return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemiring_0, "add"), gopurs_runtime.ConstructorGet(v_4, 0), gopurs_runtime.ConstructorGet(v1_5, 0)), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemiring1_3, "add"), gopurs_runtime.ConstructorGet(v_4, 1), gopurs_runtime.ConstructorGet(v1_5, 1)))
+}), gopurs_runtime.Constructor2("Tuple", one_1_0, gopurs_runtime.RecordGet(dictSemiring1_3, "one")), gopurs_runtime.Func2(func(v_4 gopurs_runtime.Value, v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemiring_0, "mul"), gopurs_runtime.ConstructorGet(v_4, 0), gopurs_runtime.ConstructorGet(v1_5, 0)), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemiring1_3, "mul"), gopurs_runtime.ConstructorGet(v_4, 1), gopurs_runtime.ConstructorGet(v1_5, 1)))
+}), gopurs_runtime.Constructor2("Tuple", zero_2_1, gopurs_runtime.RecordGet(dictSemiring1_3, "zero")))
 })
 })
 	})
@@ -91,7 +91,7 @@ var once_semigroupoidTuple sync.Once
 func Get_semigroupoidTuple() gopurs_runtime.Value {
 	once_semigroupoidTuple.Do(func() {
 		semigroupoidTuple = gopurs_runtime.RecordDict1("compose", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), gopurs_runtime.RecordGet(v1_1, "value0"), gopurs_runtime.RecordGet(v_0, "value1"))
+return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.ConstructorGet(v1_1, 0), gopurs_runtime.ConstructorGet(v_0, 1))
 }))
 	})
 	return semigroupoidTuple
@@ -103,7 +103,7 @@ func Get_semigroupTuple() gopurs_runtime.Value {
 	once_semigroupTuple.Do(func() {
 		semigroupTuple = gopurs_runtime.Func2(func(dictSemigroup_0 gopurs_runtime.Value, dictSemigroup1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict1("append", gopurs_runtime.Func2(func(v_2 gopurs_runtime.Value, v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup_0, "append"), gopurs_runtime.RecordGet(v_2, "value0"), gopurs_runtime.RecordGet(v1_3, "value0")), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup1_1, "append"), gopurs_runtime.RecordGet(v_2, "value1"), gopurs_runtime.RecordGet(v1_3, "value1")))
+return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup_0, "append"), gopurs_runtime.ConstructorGet(v_2, 0), gopurs_runtime.ConstructorGet(v1_3, 0)), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup1_1, "append"), gopurs_runtime.ConstructorGet(v_2, 1), gopurs_runtime.ConstructorGet(v1_3, 1)))
 }))
 })
 	})
@@ -123,17 +123,17 @@ zero_3_3 := gopurs_runtime.RecordGet(__local_var_1_0, "zero")
 _ = zero_3_3
 semiringTuple1_3_2 := gopurs_runtime.Func(func(dictSemiring1_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict4("add", "one", "mul", "zero", gopurs_runtime.Func2(func(v_5 gopurs_runtime.Value, v1_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "add"), gopurs_runtime.RecordGet(v_5, "value0"), gopurs_runtime.RecordGet(v1_6, "value0")), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemiring1_4, "add"), gopurs_runtime.RecordGet(v_5, "value1"), gopurs_runtime.RecordGet(v1_6, "value1")))
-}), gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), one_2_1, gopurs_runtime.RecordGet(dictSemiring1_4, "one")), gopurs_runtime.Func2(func(v_5 gopurs_runtime.Value, v1_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "mul"), gopurs_runtime.RecordGet(v_5, "value0"), gopurs_runtime.RecordGet(v1_6, "value0")), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemiring1_4, "mul"), gopurs_runtime.RecordGet(v_5, "value1"), gopurs_runtime.RecordGet(v1_6, "value1")))
-}), gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), zero_3_3, gopurs_runtime.RecordGet(dictSemiring1_4, "zero")))
+return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "add"), gopurs_runtime.ConstructorGet(v_5, 0), gopurs_runtime.ConstructorGet(v1_6, 0)), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemiring1_4, "add"), gopurs_runtime.ConstructorGet(v_5, 1), gopurs_runtime.ConstructorGet(v1_6, 1)))
+}), gopurs_runtime.Constructor2("Tuple", one_2_1, gopurs_runtime.RecordGet(dictSemiring1_4, "one")), gopurs_runtime.Func2(func(v_5 gopurs_runtime.Value, v1_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "mul"), gopurs_runtime.ConstructorGet(v_5, 0), gopurs_runtime.ConstructorGet(v1_6, 0)), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemiring1_4, "mul"), gopurs_runtime.ConstructorGet(v_5, 1), gopurs_runtime.ConstructorGet(v1_6, 1)))
+}), gopurs_runtime.Constructor2("Tuple", zero_3_3, gopurs_runtime.RecordGet(dictSemiring1_4, "zero")))
 })
 _ = semiringTuple1_3_2
 return gopurs_runtime.Func(func(dictRing1_4 gopurs_runtime.Value) gopurs_runtime.Value {
 semiringTuple2_5_4 := gopurs_runtime.Apply(semiringTuple1_3_2, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictRing1_4, "Semiring0"), gopurs_runtime.Value{}))
 _ = semiringTuple2_5_4
 return gopurs_runtime.RecordDict2("sub", "Semiring0", gopurs_runtime.Func2(func(v_6 gopurs_runtime.Value, v1_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictRing_0, "sub"), gopurs_runtime.RecordGet(v_6, "value0"), gopurs_runtime.RecordGet(v1_7, "value0")), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictRing1_4, "sub"), gopurs_runtime.RecordGet(v_6, "value1"), gopurs_runtime.RecordGet(v1_7, "value1")))
+return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictRing_0, "sub"), gopurs_runtime.ConstructorGet(v_6, 0), gopurs_runtime.ConstructorGet(v1_7, 0)), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictRing1_4, "sub"), gopurs_runtime.ConstructorGet(v_6, 1), gopurs_runtime.ConstructorGet(v1_7, 1)))
 }), gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return semiringTuple2_5_4
 }))
@@ -156,10 +156,10 @@ return gopurs_runtime.Func(func(dictMonoid1_3 gopurs_runtime.Value) gopurs_runti
 __local_var_4_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid1_3, "Semigroup0"), gopurs_runtime.Value{})
 _ = __local_var_4_2
 semigroupTuple2_5_3 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func2(func(v_5 gopurs_runtime.Value, v1_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_1, "append"), gopurs_runtime.RecordGet(v_5, "value0"), gopurs_runtime.RecordGet(v1_6, "value0")), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_4_2, "append"), gopurs_runtime.RecordGet(v_5, "value1"), gopurs_runtime.RecordGet(v1_6, "value1")))
+return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_1, "append"), gopurs_runtime.ConstructorGet(v_5, 0), gopurs_runtime.ConstructorGet(v1_6, 0)), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_4_2, "append"), gopurs_runtime.ConstructorGet(v_5, 1), gopurs_runtime.ConstructorGet(v1_6, 1)))
 }))
 _ = semigroupTuple2_5_3
-return gopurs_runtime.RecordDict2("mempty", "Semigroup0", gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), mempty_1_0, gopurs_runtime.RecordGet(dictMonoid1_3, "mempty")), gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict2("mempty", "Semigroup0", gopurs_runtime.Constructor2("Tuple", mempty_1_0, gopurs_runtime.RecordGet(dictMonoid1_3, "mempty")), gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return semigroupTuple2_5_3
 }))
 })
@@ -178,14 +178,14 @@ _ = tt_1_0
 ff_2_1 := gopurs_runtime.RecordGet(dictHeytingAlgebra_0, "ff")
 _ = ff_2_1
 return gopurs_runtime.Func(func(dictHeytingAlgebra1_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict([]string{"tt", "ff", "implies", "conj", "disj", "not"}, []gopurs_runtime.Value{gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), tt_1_0, gopurs_runtime.RecordGet(dictHeytingAlgebra1_3, "tt")), gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), ff_2_1, gopurs_runtime.RecordGet(dictHeytingAlgebra1_3, "ff")), gopurs_runtime.Func2(func(v_4 gopurs_runtime.Value, v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictHeytingAlgebra_0, "implies"), gopurs_runtime.RecordGet(v_4, "value0"), gopurs_runtime.RecordGet(v1_5, "value0")), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictHeytingAlgebra1_3, "implies"), gopurs_runtime.RecordGet(v_4, "value1"), gopurs_runtime.RecordGet(v1_5, "value1")))
+return gopurs_runtime.RecordDict([]string{"tt", "ff", "implies", "conj", "disj", "not"}, []gopurs_runtime.Value{gopurs_runtime.Constructor2("Tuple", tt_1_0, gopurs_runtime.RecordGet(dictHeytingAlgebra1_3, "tt")), gopurs_runtime.Constructor2("Tuple", ff_2_1, gopurs_runtime.RecordGet(dictHeytingAlgebra1_3, "ff")), gopurs_runtime.Func2(func(v_4 gopurs_runtime.Value, v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictHeytingAlgebra_0, "implies"), gopurs_runtime.ConstructorGet(v_4, 0), gopurs_runtime.ConstructorGet(v1_5, 0)), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictHeytingAlgebra1_3, "implies"), gopurs_runtime.ConstructorGet(v_4, 1), gopurs_runtime.ConstructorGet(v1_5, 1)))
 }), gopurs_runtime.Func2(func(v_4 gopurs_runtime.Value, v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictHeytingAlgebra_0, "conj"), gopurs_runtime.RecordGet(v_4, "value0"), gopurs_runtime.RecordGet(v1_5, "value0")), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictHeytingAlgebra1_3, "conj"), gopurs_runtime.RecordGet(v_4, "value1"), gopurs_runtime.RecordGet(v1_5, "value1")))
+return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictHeytingAlgebra_0, "conj"), gopurs_runtime.ConstructorGet(v_4, 0), gopurs_runtime.ConstructorGet(v1_5, 0)), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictHeytingAlgebra1_3, "conj"), gopurs_runtime.ConstructorGet(v_4, 1), gopurs_runtime.ConstructorGet(v1_5, 1)))
 }), gopurs_runtime.Func2(func(v_4 gopurs_runtime.Value, v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictHeytingAlgebra_0, "disj"), gopurs_runtime.RecordGet(v_4, "value0"), gopurs_runtime.RecordGet(v1_5, "value0")), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictHeytingAlgebra1_3, "disj"), gopurs_runtime.RecordGet(v_4, "value1"), gopurs_runtime.RecordGet(v1_5, "value1")))
+return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictHeytingAlgebra_0, "disj"), gopurs_runtime.ConstructorGet(v_4, 0), gopurs_runtime.ConstructorGet(v1_5, 0)), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictHeytingAlgebra1_3, "disj"), gopurs_runtime.ConstructorGet(v_4, 1), gopurs_runtime.ConstructorGet(v1_5, 1)))
 }), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictHeytingAlgebra_0, "not"), gopurs_runtime.RecordGet(v_4, "value0")), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictHeytingAlgebra1_3, "not"), gopurs_runtime.RecordGet(v_4, "value1")))
+return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictHeytingAlgebra_0, "not"), gopurs_runtime.ConstructorGet(v_4, 0)), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictHeytingAlgebra1_3, "not"), gopurs_runtime.ConstructorGet(v_4, 1)))
 })})
 })
 })
@@ -198,9 +198,9 @@ var once_genericTuple sync.Once
 func Get_genericTuple() gopurs_runtime.Value {
 	once_genericTuple.Do(func() {
 		genericTuple = gopurs_runtime.RecordDict2("to", "from", gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), gopurs_runtime.RecordGet(x_0, "value0"), gopurs_runtime.RecordGet(x_0, "value1"))
+return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.ConstructorGet(x_0, 0), gopurs_runtime.ConstructorGet(x_0, 1))
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Product"), gopurs_runtime.RecordGet(x_0, "value0"), gopurs_runtime.RecordGet(x_0, "value1"))
+return gopurs_runtime.Constructor2("Product", gopurs_runtime.ConstructorGet(x_0, 0), gopurs_runtime.ConstructorGet(x_0, 1))
 }))
 	})
 	return genericTuple
@@ -211,7 +211,7 @@ var once_functorTuple sync.Once
 func Get_functorTuple() gopurs_runtime.Value {
 	once_functorTuple.Do(func() {
 		functorTuple = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, m_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), gopurs_runtime.RecordGet(m_1, "value0"), gopurs_runtime.Apply(f_0, gopurs_runtime.RecordGet(m_1, "value1")))
+return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.ConstructorGet(m_1, 0), gopurs_runtime.Apply(f_0, gopurs_runtime.ConstructorGet(m_1, 1)))
 }))
 	})
 	return functorTuple
@@ -222,7 +222,7 @@ var once_invariantTuple sync.Once
 func Get_invariantTuple() gopurs_runtime.Value {
 	once_invariantTuple.Do(func() {
 		invariantTuple = gopurs_runtime.RecordDict1("imap", gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, m_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), gopurs_runtime.RecordGet(m_2, "value0"), gopurs_runtime.Apply(f_0, gopurs_runtime.RecordGet(m_2, "value1")))
+return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.ConstructorGet(m_2, 0), gopurs_runtime.Apply(f_0, gopurs_runtime.ConstructorGet(m_2, 1)))
 }))
 	})
 	return invariantTuple
@@ -233,7 +233,7 @@ var once_fst sync.Once
 func Get_fst() gopurs_runtime.Value {
 	once_fst.Do(func() {
 		fst = gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(v_0, "value0")
+return gopurs_runtime.ConstructorGet(v_0, 0)
 })
 	})
 	return fst
@@ -245,10 +245,10 @@ func Get_lazyTuple() gopurs_runtime.Value {
 	once_lazyTuple.Do(func() {
 		lazyTuple = gopurs_runtime.Func2(func(dictLazy_0 gopurs_runtime.Value, dictLazy1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict1("defer", gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictLazy_0, "defer"), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(gopurs_runtime.Apply(f_2, pkg_Data_Unit.Get_unit()), "value0")
+return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictLazy_0, "defer"), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.ConstructorGet(gopurs_runtime.Apply(f_2, pkg_Data_Unit.Get_unit()), 0)
 })), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictLazy1_1, "defer"), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(gopurs_runtime.Apply(f_2, pkg_Data_Unit.Get_unit()), "value1")
+return gopurs_runtime.ConstructorGet(gopurs_runtime.Apply(f_2, pkg_Data_Unit.Get_unit()), 1)
 })))
 }))
 })
@@ -261,7 +261,7 @@ var once_extendTuple sync.Once
 func Get_extendTuple() gopurs_runtime.Value {
 	once_extendTuple.Do(func() {
 		extendTuple = gopurs_runtime.RecordDict2("extend", "Functor0", gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), gopurs_runtime.RecordGet(v_1, "value0"), gopurs_runtime.Apply(f_0, v_1))
+return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.ConstructorGet(v_1, 0), gopurs_runtime.Apply(f_0, v_1))
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_functorTuple()
 }))
@@ -275,7 +275,7 @@ func Get_eqTuple() gopurs_runtime.Value {
 	once_eqTuple.Do(func() {
 		eqTuple = gopurs_runtime.Func2(func(dictEq_0 gopurs_runtime.Value, dictEq1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func2(func(x_2 gopurs_runtime.Value, y_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), gopurs_runtime.RecordGet(x_2, "value0"), gopurs_runtime.RecordGet(y_3, "value0")).IntVal != 0 && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq1_1, "eq"), gopurs_runtime.RecordGet(x_2, "value1"), gopurs_runtime.RecordGet(y_3, "value1")).IntVal != 0)
+return gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), gopurs_runtime.ConstructorGet(x_2, 0), gopurs_runtime.ConstructorGet(y_3, 0)).IntVal != 0 && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq1_1, "eq"), gopurs_runtime.ConstructorGet(x_2, 1), gopurs_runtime.ConstructorGet(y_3, 1)).IntVal != 0)
 }))
 })
 	})
@@ -293,31 +293,31 @@ return gopurs_runtime.Func(func(dictOrd1_2 gopurs_runtime.Value) gopurs_runtime.
 __local_var_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd1_2, "Eq0"), gopurs_runtime.Value{})
 _ = __local_var_3_1
 eqTuple2_4_2 := gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func2(func(x_4 gopurs_runtime.Value, y_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "eq"), gopurs_runtime.RecordGet(x_4, "value0"), gopurs_runtime.RecordGet(y_5, "value0")).IntVal != 0 && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_1, "eq"), gopurs_runtime.RecordGet(x_4, "value1"), gopurs_runtime.RecordGet(y_5, "value1")).IntVal != 0)
+return gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "eq"), gopurs_runtime.ConstructorGet(x_4, 0), gopurs_runtime.ConstructorGet(y_5, 0)).IntVal != 0 && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_1, "eq"), gopurs_runtime.ConstructorGet(x_4, 1), gopurs_runtime.ConstructorGet(y_5, 1)).IntVal != 0)
 }))
 _ = eqTuple2_4_2
 return gopurs_runtime.RecordDict2("compare", "Eq0", gopurs_runtime.Func2(func(x_5 gopurs_runtime.Value, y_6 gopurs_runtime.Value) gopurs_runtime.Value {
-v_7_3 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), gopurs_runtime.RecordGet(x_5, "value0"), gopurs_runtime.RecordGet(y_6, "value0"))
+v_7_3 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), gopurs_runtime.ConstructorGet(x_5, 0), gopurs_runtime.ConstructorGet(y_6, 0))
 _ = v_7_3
 var __t4 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_7_3, "_tag").StrVal == "LT")).IntVal != 0 {
-__t4 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("LT"))
+if (gopurs_runtime.Bool(v_7_3.StrVal == "LT")).IntVal != 0 {
+__t4 = gopurs_runtime.Constructor0("LT")
 goto end_branch_4
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_7_3, "_tag").StrVal == "GT")).IntVal != 0 {
-__t4 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("GT"))
+if (gopurs_runtime.Bool(v_7_3.StrVal == "GT")).IntVal != 0 {
+__t4 = gopurs_runtime.Constructor0("GT")
 goto end_branch_4
 } else {
 
 }
 }
 {
-__t4 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd1_2, "compare"), gopurs_runtime.RecordGet(x_5, "value1"), gopurs_runtime.RecordGet(y_6, "value1"))
+__t4 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd1_2, "compare"), gopurs_runtime.ConstructorGet(x_5, 1), gopurs_runtime.ConstructorGet(y_6, 1))
 }
 end_branch_4:
 return __t4
@@ -336,7 +336,7 @@ func Get_eq1Tuple() gopurs_runtime.Value {
 	once_eq1Tuple.Do(func() {
 		eq1Tuple = gopurs_runtime.Func(func(dictEq_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict1("eq1", gopurs_runtime.Func3(func(dictEq1_1 gopurs_runtime.Value, x_2 gopurs_runtime.Value, y_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), gopurs_runtime.RecordGet(x_2, "value0"), gopurs_runtime.RecordGet(y_3, "value0")).IntVal != 0 && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq1_1, "eq"), gopurs_runtime.RecordGet(x_2, "value1"), gopurs_runtime.RecordGet(y_3, "value1")).IntVal != 0)
+return gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), gopurs_runtime.ConstructorGet(x_2, 0), gopurs_runtime.ConstructorGet(y_3, 0)).IntVal != 0 && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq1_1, "eq"), gopurs_runtime.ConstructorGet(x_2, 1), gopurs_runtime.ConstructorGet(y_3, 1)).IntVal != 0)
 }))
 })
 	})
@@ -351,31 +351,31 @@ func Get_ord1Tuple() gopurs_runtime.Value {
 __local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd_0, "Eq0"), gopurs_runtime.Value{})
 _ = __local_var_1_0
 eq1Tuple1_2_1 := gopurs_runtime.RecordDict1("eq1", gopurs_runtime.Func3(func(dictEq1_2 gopurs_runtime.Value, x_3 gopurs_runtime.Value, y_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "eq"), gopurs_runtime.RecordGet(x_3, "value0"), gopurs_runtime.RecordGet(y_4, "value0")).IntVal != 0 && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq1_2, "eq"), gopurs_runtime.RecordGet(x_3, "value1"), gopurs_runtime.RecordGet(y_4, "value1")).IntVal != 0)
+return gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "eq"), gopurs_runtime.ConstructorGet(x_3, 0), gopurs_runtime.ConstructorGet(y_4, 0)).IntVal != 0 && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq1_2, "eq"), gopurs_runtime.ConstructorGet(x_3, 1), gopurs_runtime.ConstructorGet(y_4, 1)).IntVal != 0)
 }))
 _ = eq1Tuple1_2_1
 return gopurs_runtime.RecordDict2("compare1", "Eq10", gopurs_runtime.Func3(func(dictOrd1_3 gopurs_runtime.Value, x_4 gopurs_runtime.Value, y_5 gopurs_runtime.Value) gopurs_runtime.Value {
-v_6_2 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), gopurs_runtime.RecordGet(x_4, "value0"), gopurs_runtime.RecordGet(y_5, "value0"))
+v_6_2 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), gopurs_runtime.ConstructorGet(x_4, 0), gopurs_runtime.ConstructorGet(y_5, 0))
 _ = v_6_2
 var __t3 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_6_2, "_tag").StrVal == "LT")).IntVal != 0 {
-__t3 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("LT"))
+if (gopurs_runtime.Bool(v_6_2.StrVal == "LT")).IntVal != 0 {
+__t3 = gopurs_runtime.Constructor0("LT")
 goto end_branch_3
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_6_2, "_tag").StrVal == "GT")).IntVal != 0 {
-__t3 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("GT"))
+if (gopurs_runtime.Bool(v_6_2.StrVal == "GT")).IntVal != 0 {
+__t3 = gopurs_runtime.Constructor0("GT")
 goto end_branch_3
 } else {
 
 }
 }
 {
-__t3 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd1_3, "compare"), gopurs_runtime.RecordGet(x_4, "value1"), gopurs_runtime.RecordGet(y_5, "value1"))
+__t3 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd1_3, "compare"), gopurs_runtime.ConstructorGet(x_4, 1), gopurs_runtime.ConstructorGet(y_5, 1))
 }
 end_branch_3:
 return __t3
@@ -392,7 +392,7 @@ var once_curry sync.Once
 func Get_curry() gopurs_runtime.Value {
 	once_curry.Do(func() {
 		curry = gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, a_1 gopurs_runtime.Value, b_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(f_0, gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), a_1, b_2))
+return gopurs_runtime.Apply(f_0, gopurs_runtime.Constructor2("Tuple", a_1, b_2))
 })
 	})
 	return curry
@@ -447,31 +447,31 @@ _ = __local_var_6_4
 __local_var_7_5 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_6_4, "Eq0"), gopurs_runtime.Value{})
 _ = __local_var_7_5
 eqTuple2_8_7 := gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func2(func(x_8 gopurs_runtime.Value, y_9 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_4_3, "eq"), gopurs_runtime.RecordGet(x_8, "value0"), gopurs_runtime.RecordGet(y_9, "value0")).IntVal != 0 && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_7_5, "eq"), gopurs_runtime.RecordGet(x_8, "value1"), gopurs_runtime.RecordGet(y_9, "value1")).IntVal != 0)
+return gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_4_3, "eq"), gopurs_runtime.ConstructorGet(x_8, 0), gopurs_runtime.ConstructorGet(y_9, 0)).IntVal != 0 && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_7_5, "eq"), gopurs_runtime.ConstructorGet(x_8, 1), gopurs_runtime.ConstructorGet(y_9, 1)).IntVal != 0)
 }))
 _ = eqTuple2_8_7
 ordTuple2_8_6 := gopurs_runtime.RecordDict2("compare", "Eq0", gopurs_runtime.Func2(func(x_9 gopurs_runtime.Value, y_10 gopurs_runtime.Value) gopurs_runtime.Value {
-v_11_8 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_2, "compare"), gopurs_runtime.RecordGet(x_9, "value0"), gopurs_runtime.RecordGet(y_10, "value0"))
+v_11_8 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_2, "compare"), gopurs_runtime.ConstructorGet(x_9, 0), gopurs_runtime.ConstructorGet(y_10, 0))
 _ = v_11_8
 var __t9 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_11_8, "_tag").StrVal == "LT")).IntVal != 0 {
-__t9 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("LT"))
+if (gopurs_runtime.Bool(v_11_8.StrVal == "LT")).IntVal != 0 {
+__t9 = gopurs_runtime.Constructor0("LT")
 goto end_branch_9
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_11_8, "_tag").StrVal == "GT")).IntVal != 0 {
-__t9 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("GT"))
+if (gopurs_runtime.Bool(v_11_8.StrVal == "GT")).IntVal != 0 {
+__t9 = gopurs_runtime.Constructor0("GT")
 goto end_branch_9
 } else {
 
 }
 }
 {
-__t9 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_6_4, "compare"), gopurs_runtime.RecordGet(x_9, "value1"), gopurs_runtime.RecordGet(y_10, "value1"))
+__t9 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_6_4, "compare"), gopurs_runtime.ConstructorGet(x_9, 1), gopurs_runtime.ConstructorGet(y_10, 1))
 }
 end_branch_9:
 return __t9
@@ -479,7 +479,7 @@ return __t9
 return eqTuple2_8_7
 }))
 _ = ordTuple2_8_6
-return gopurs_runtime.RecordDict3("top", "bottom", "Ord0", gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), top_1_0, gopurs_runtime.RecordGet(dictBounded1_5, "top")), gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), bottom_2_1, gopurs_runtime.RecordGet(dictBounded1_5, "bottom")), gopurs_runtime.Func(func(_dollar__unused_9 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict3("top", "bottom", "Ord0", gopurs_runtime.Constructor2("Tuple", top_1_0, gopurs_runtime.RecordGet(dictBounded1_5, "top")), gopurs_runtime.Constructor2("Tuple", bottom_2_1, gopurs_runtime.RecordGet(dictBounded1_5, "bottom")), gopurs_runtime.Func(func(_dollar__unused_9 gopurs_runtime.Value) gopurs_runtime.Value {
 return ordTuple2_8_6
 }))
 })
@@ -513,7 +513,7 @@ func Get_applyTuple() gopurs_runtime.Value {
 	once_applyTuple.Do(func() {
 		applyTuple = gopurs_runtime.Func(func(dictSemigroup_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict2("apply", "Functor0", gopurs_runtime.Func2(func(v_1 gopurs_runtime.Value, v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup_0, "append"), gopurs_runtime.RecordGet(v_1, "value0"), gopurs_runtime.RecordGet(v1_2, "value0")), gopurs_runtime.Apply(gopurs_runtime.RecordGet(v_1, "value1"), gopurs_runtime.RecordGet(v1_2, "value1")))
+return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup_0, "append"), gopurs_runtime.ConstructorGet(v_1, 0), gopurs_runtime.ConstructorGet(v1_2, 0)), gopurs_runtime.Apply(gopurs_runtime.ConstructorGet(v_1, 1), gopurs_runtime.ConstructorGet(v1_2, 1)))
 }), gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_functorTuple()
 }))
@@ -530,9 +530,9 @@ func Get_bindTuple() gopurs_runtime.Value {
 applyTuple1_1_0 := gopurs_runtime.Apply(Get_applyTuple(), dictSemigroup_0)
 _ = applyTuple1_1_0
 return gopurs_runtime.RecordDict2("bind", "Apply0", gopurs_runtime.Func2(func(v_2 gopurs_runtime.Value, f_3 gopurs_runtime.Value) gopurs_runtime.Value {
-v1_4_1 := gopurs_runtime.Apply(f_3, gopurs_runtime.RecordGet(v_2, "value1"))
+v1_4_1 := gopurs_runtime.Apply(f_3, gopurs_runtime.ConstructorGet(v_2, 1))
 _ = v1_4_1
-return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup_0, "append"), gopurs_runtime.RecordGet(v_2, "value0"), gopurs_runtime.RecordGet(v1_4_1, "value0")), gopurs_runtime.RecordGet(v1_4_1, "value1"))
+return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup_0, "append"), gopurs_runtime.ConstructorGet(v_2, 0), gopurs_runtime.ConstructorGet(v1_4_1, 0)), gopurs_runtime.ConstructorGet(v1_4_1, 1))
 }), gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return applyTuple1_1_0
 }))

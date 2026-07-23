@@ -63,24 +63,24 @@ __local_var_4_1 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "co
 _ = __local_var_4_1
 var __t2 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_4_1, "_tag").StrVal == "GT")).IntVal != 0 {
-__t2 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("LT"))
+if (gopurs_runtime.Bool(__local_var_4_1.StrVal == "GT")).IntVal != 0 {
+__t2 = gopurs_runtime.Constructor0("LT")
 goto end_branch_2
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_4_1, "_tag").StrVal == "EQ")).IntVal != 0 {
-__t2 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("EQ"))
+if (gopurs_runtime.Bool(__local_var_4_1.StrVal == "EQ")).IntVal != 0 {
+__t2 = gopurs_runtime.Constructor0("EQ")
 goto end_branch_2
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_4_1, "_tag").StrVal == "LT")).IntVal != 0 {
-__t2 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("GT"))
+if (gopurs_runtime.Bool(__local_var_4_1.StrVal == "LT")).IntVal != 0 {
+__t2 = gopurs_runtime.Constructor0("GT")
 goto end_branch_2
 } else {
 
@@ -113,24 +113,24 @@ __local_var_5_3 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_
 _ = __local_var_5_3
 var __t4 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_5_3, "_tag").StrVal == "GT")).IntVal != 0 {
-__t4 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("LT"))
+if (gopurs_runtime.Bool(__local_var_5_3.StrVal == "GT")).IntVal != 0 {
+__t4 = gopurs_runtime.Constructor0("LT")
 goto end_branch_4
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_5_3, "_tag").StrVal == "EQ")).IntVal != 0 {
-__t4 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("EQ"))
+if (gopurs_runtime.Bool(__local_var_5_3.StrVal == "EQ")).IntVal != 0 {
+__t4 = gopurs_runtime.Constructor0("EQ")
 goto end_branch_4
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_5_3, "_tag").StrVal == "LT")).IntVal != 0 {
-__t4 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("GT"))
+if (gopurs_runtime.Bool(__local_var_5_3.StrVal == "LT")).IntVal != 0 {
+__t4 = gopurs_runtime.Constructor0("GT")
 goto end_branch_4
 } else {
 

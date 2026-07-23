@@ -75,14 +75,14 @@ var genericHeytingAlgebraNoArguments gopurs_runtime.Value
 var once_genericHeytingAlgebraNoArguments sync.Once
 func Get_genericHeytingAlgebraNoArguments() gopurs_runtime.Value {
 	once_genericHeytingAlgebraNoArguments.Do(func() {
-		genericHeytingAlgebraNoArguments = gopurs_runtime.RecordDict([]string{"genericFF'", "genericTT'", "genericImplies'", "genericConj'", "genericDisj'", "genericNot'"}, []gopurs_runtime.Value{gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("NoArguments")), gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("NoArguments")), gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("NoArguments"))
+		genericHeytingAlgebraNoArguments = gopurs_runtime.RecordDict([]string{"genericFF'", "genericTT'", "genericImplies'", "genericConj'", "genericDisj'", "genericNot'"}, []gopurs_runtime.Value{gopurs_runtime.Constructor0("NoArguments"), gopurs_runtime.Constructor0("NoArguments"), gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Constructor0("NoArguments")
 }), gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("NoArguments"))
+return gopurs_runtime.Constructor0("NoArguments")
 }), gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("NoArguments"))
+return gopurs_runtime.Constructor0("NoArguments")
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("NoArguments"))
+return gopurs_runtime.Constructor0("NoArguments")
 })})
 	})
 	return genericHeytingAlgebraNoArguments
@@ -191,14 +191,14 @@ _ = genericFF_prime1_1_0
 genericTT_prime1_2_1 := gopurs_runtime.RecordGet(dictGenericHeytingAlgebra_0, "genericTT'")
 _ = genericTT_prime1_2_1
 return gopurs_runtime.Func(func(dictGenericHeytingAlgebra1_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict([]string{"genericFF'", "genericTT'", "genericImplies'", "genericConj'", "genericDisj'", "genericNot'"}, []gopurs_runtime.Value{gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Product"), genericFF_prime1_1_0, gopurs_runtime.RecordGet(dictGenericHeytingAlgebra1_3, "genericFF'")), gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Product"), genericTT_prime1_2_1, gopurs_runtime.RecordGet(dictGenericHeytingAlgebra1_3, "genericTT'")), gopurs_runtime.Func2(func(v_4 gopurs_runtime.Value, v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Product"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericHeytingAlgebra_0, "genericImplies'"), gopurs_runtime.RecordGet(v_4, "value0"), gopurs_runtime.RecordGet(v1_5, "value0")), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericHeytingAlgebra1_3, "genericImplies'"), gopurs_runtime.RecordGet(v_4, "value1"), gopurs_runtime.RecordGet(v1_5, "value1")))
+return gopurs_runtime.RecordDict([]string{"genericFF'", "genericTT'", "genericImplies'", "genericConj'", "genericDisj'", "genericNot'"}, []gopurs_runtime.Value{gopurs_runtime.Constructor2("Product", genericFF_prime1_1_0, gopurs_runtime.RecordGet(dictGenericHeytingAlgebra1_3, "genericFF'")), gopurs_runtime.Constructor2("Product", genericTT_prime1_2_1, gopurs_runtime.RecordGet(dictGenericHeytingAlgebra1_3, "genericTT'")), gopurs_runtime.Func2(func(v_4 gopurs_runtime.Value, v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Constructor2("Product", gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericHeytingAlgebra_0, "genericImplies'"), gopurs_runtime.ConstructorGet(v_4, 0), gopurs_runtime.ConstructorGet(v1_5, 0)), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericHeytingAlgebra1_3, "genericImplies'"), gopurs_runtime.ConstructorGet(v_4, 1), gopurs_runtime.ConstructorGet(v1_5, 1)))
 }), gopurs_runtime.Func2(func(v_4 gopurs_runtime.Value, v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Product"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericHeytingAlgebra_0, "genericConj'"), gopurs_runtime.RecordGet(v_4, "value0"), gopurs_runtime.RecordGet(v1_5, "value0")), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericHeytingAlgebra1_3, "genericConj'"), gopurs_runtime.RecordGet(v_4, "value1"), gopurs_runtime.RecordGet(v1_5, "value1")))
+return gopurs_runtime.Constructor2("Product", gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericHeytingAlgebra_0, "genericConj'"), gopurs_runtime.ConstructorGet(v_4, 0), gopurs_runtime.ConstructorGet(v1_5, 0)), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericHeytingAlgebra1_3, "genericConj'"), gopurs_runtime.ConstructorGet(v_4, 1), gopurs_runtime.ConstructorGet(v1_5, 1)))
 }), gopurs_runtime.Func2(func(v_4 gopurs_runtime.Value, v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Product"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericHeytingAlgebra_0, "genericDisj'"), gopurs_runtime.RecordGet(v_4, "value0"), gopurs_runtime.RecordGet(v1_5, "value0")), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericHeytingAlgebra1_3, "genericDisj'"), gopurs_runtime.RecordGet(v_4, "value1"), gopurs_runtime.RecordGet(v1_5, "value1")))
+return gopurs_runtime.Constructor2("Product", gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericHeytingAlgebra_0, "genericDisj'"), gopurs_runtime.ConstructorGet(v_4, 0), gopurs_runtime.ConstructorGet(v1_5, 0)), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericHeytingAlgebra1_3, "genericDisj'"), gopurs_runtime.ConstructorGet(v_4, 1), gopurs_runtime.ConstructorGet(v1_5, 1)))
 }), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Product"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericHeytingAlgebra_0, "genericNot'"), gopurs_runtime.RecordGet(v_4, "value0")), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericHeytingAlgebra1_3, "genericNot'"), gopurs_runtime.RecordGet(v_4, "value1")))
+return gopurs_runtime.Constructor2("Product", gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericHeytingAlgebra_0, "genericNot'"), gopurs_runtime.ConstructorGet(v_4, 0)), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericHeytingAlgebra1_3, "genericNot'"), gopurs_runtime.ConstructorGet(v_4, 1)))
 })})
 })
 })

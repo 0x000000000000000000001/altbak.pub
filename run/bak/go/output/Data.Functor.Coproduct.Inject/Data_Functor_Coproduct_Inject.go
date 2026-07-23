@@ -32,20 +32,20 @@ var once_injectLeft sync.Once
 func Get_injectLeft() gopurs_runtime.Value {
 	once_injectLeft.Do(func() {
 		injectLeft = gopurs_runtime.RecordDict2("inj", "prj", gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Left"), x_0)
+return gopurs_runtime.Constructor1("Left", x_0)
 }), gopurs_runtime.Func(func(v2_0 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v2_0, "_tag").StrVal == "Left")).IntVal != 0 {
-__t0 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), gopurs_runtime.RecordGet(v2_0, "value0"))
+if (gopurs_runtime.Bool(v2_0.StrVal == "Left")).IntVal != 0 {
+__t0 = gopurs_runtime.Constructor1("Just", gopurs_runtime.ConstructorGet(v2_0, 0))
 goto end_branch_0
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v2_0, "_tag").StrVal == "Right")).IntVal != 0 {
-__t0 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
+if (gopurs_runtime.Bool(v2_0.StrVal == "Right")).IntVal != 0 {
+__t0 = gopurs_runtime.Constructor0("Nothing")
 goto end_branch_0
 } else {
 
@@ -78,20 +78,20 @@ func Get_injectRight() gopurs_runtime.Value {
 	once_injectRight.Do(func() {
 		injectRight = gopurs_runtime.Func(func(dictInject_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict2("inj", "prj", gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Right"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictInject_0, "inj"), x_1))
+return gopurs_runtime.Constructor1("Right", gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictInject_0, "inj"), x_1))
 }), gopurs_runtime.Func(func(v2_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v2_1, "_tag").StrVal == "Left")).IntVal != 0 {
-__t0 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
+if (gopurs_runtime.Bool(v2_1.StrVal == "Left")).IntVal != 0 {
+__t0 = gopurs_runtime.Constructor0("Nothing")
 goto end_branch_0
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v2_1, "_tag").StrVal == "Right")).IntVal != 0 {
-__t0 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictInject_0, "prj"), gopurs_runtime.RecordGet(v2_1, "value0"))
+if (gopurs_runtime.Bool(v2_1.StrVal == "Right")).IntVal != 0 {
+__t0 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictInject_0, "prj"), gopurs_runtime.ConstructorGet(v2_1, 0))
 goto end_branch_0
 } else {
 

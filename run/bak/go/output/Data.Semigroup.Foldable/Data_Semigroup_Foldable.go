@@ -17,7 +17,7 @@ func Get_FoldRight1() gopurs_runtime.Value {
 	once_FoldRight1.Do(func() {
 		FoldRight1 = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("FoldRight1"), value0, value1)
+return gopurs_runtime.Constructor2("FoldRight1", value0, value1)
 })
 })
 	})
@@ -63,7 +63,7 @@ func Get_maximumBy() gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFoldable1_0, "foldl1"), gopurs_runtime.Func2(func(x_2 gopurs_runtime.Value, y_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(gopurs_runtime.Apply2(cmp_1, x_2, y_3), "_tag").StrVal == "GT")).IntVal != 0 {
+if (gopurs_runtime.Bool(gopurs_runtime.Apply2(cmp_1, x_2, y_3).StrVal == "GT")).IntVal != 0 {
 __t0 = x_2
 goto end_branch_0
 } else {
@@ -89,7 +89,7 @@ func Get_minimumBy() gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFoldable1_0, "foldl1"), gopurs_runtime.Func2(func(x_2 gopurs_runtime.Value, y_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(gopurs_runtime.Apply2(cmp_1, x_2, y_3), "_tag").StrVal == "LT")).IntVal != 0 {
+if (gopurs_runtime.Bool(gopurs_runtime.Apply2(cmp_1, x_2, y_3).StrVal == "LT")).IntVal != 0 {
 __t0 = x_2
 goto end_branch_0
 } else {
@@ -112,11 +112,11 @@ var once_foldableTuple sync.Once
 func Get_foldableTuple() gopurs_runtime.Value {
 	once_foldableTuple.Do(func() {
 		foldableTuple = gopurs_runtime.RecordDict4("foldMap1", "foldr1", "foldl1", "Foldable0", gopurs_runtime.Func3(func(dictSemigroup_0 gopurs_runtime.Value, f_1 gopurs_runtime.Value, v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(f_1, gopurs_runtime.RecordGet(v_2, "value1"))
+return gopurs_runtime.Apply(f_1, gopurs_runtime.ConstructorGet(v_2, 1))
 }), gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(v1_1, "value1")
+return gopurs_runtime.ConstructorGet(v1_1, 1)
 }), gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(v1_1, "value1")
+return gopurs_runtime.ConstructorGet(v1_1, 1)
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Foldable.Get_foldableTuple()
 }))
@@ -180,11 +180,11 @@ var once_foldRight1Semigroup sync.Once
 func Get_foldRight1Semigroup() gopurs_runtime.Value {
 	once_foldRight1Semigroup.Do(func() {
 		foldRight1Semigroup = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_2_0 := gopurs_runtime.RecordGet(v_0, "value1")
+__local_var_2_0 := gopurs_runtime.ConstructorGet(v_0, 1)
 _ = __local_var_2_0
-return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("FoldRight1"), gopurs_runtime.Func2(func(a_3 gopurs_runtime.Value, f_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(v_0, "value0"), gopurs_runtime.Apply2(f_4, __local_var_2_0, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(v1_1, "value0"), a_3, f_4)), f_4)
-}), gopurs_runtime.RecordGet(v1_1, "value1"))
+return gopurs_runtime.Constructor2("FoldRight1", gopurs_runtime.Func2(func(a_3 gopurs_runtime.Value, f_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.ConstructorGet(v_0, 0), gopurs_runtime.Apply2(f_4, __local_var_2_0, gopurs_runtime.Apply2(gopurs_runtime.ConstructorGet(v1_1, 0), a_3, f_4)), f_4)
+}), gopurs_runtime.ConstructorGet(v1_1, 1))
 }))
 	})
 	return foldRight1Semigroup
@@ -195,11 +195,11 @@ var once_semigroupDual sync.Once
 func Get_semigroupDual() gopurs_runtime.Value {
 	once_semigroupDual.Do(func() {
 		semigroupDual = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_2_0 := gopurs_runtime.RecordGet(v1_1, "value1")
+__local_var_2_0 := gopurs_runtime.ConstructorGet(v1_1, 1)
 _ = __local_var_2_0
-return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("FoldRight1"), gopurs_runtime.Func2(func(a_3 gopurs_runtime.Value, f_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(v1_1, "value0"), gopurs_runtime.Apply2(f_4, __local_var_2_0, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(v_0, "value0"), a_3, f_4)), f_4)
-}), gopurs_runtime.RecordGet(v_0, "value1"))
+return gopurs_runtime.Constructor2("FoldRight1", gopurs_runtime.Func2(func(a_3 gopurs_runtime.Value, f_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.ConstructorGet(v1_1, 0), gopurs_runtime.Apply2(f_4, __local_var_2_0, gopurs_runtime.Apply2(gopurs_runtime.ConstructorGet(v_0, 0), a_3, f_4)), f_4)
+}), gopurs_runtime.ConstructorGet(v_0, 1))
 }))
 	})
 	return semigroupDual
@@ -268,7 +268,7 @@ _ = __local_var_1_0
 return gopurs_runtime.Func2(func(x_2 gopurs_runtime.Value, a_3 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_4_1 := gopurs_runtime.Apply(__local_var_1_0, a_3)
 _ = __local_var_4_1
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_4_1, "value0"), gopurs_runtime.RecordGet(__local_var_4_1, "value1"), gopurs_runtime.Func2(func(b_5 gopurs_runtime.Value, a_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.ConstructorGet(__local_var_4_1, 0), gopurs_runtime.ConstructorGet(__local_var_4_1, 1), gopurs_runtime.Func2(func(b_5 gopurs_runtime.Value, a_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(x_2, a_6, b_5)
 }))
 })
@@ -287,7 +287,7 @@ _ = __local_var_1_0
 return gopurs_runtime.Func2(func(b_2 gopurs_runtime.Value, a_3 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_4_1 := gopurs_runtime.Apply(__local_var_1_0, a_3)
 _ = __local_var_4_1
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_4_1, "value0"), gopurs_runtime.RecordGet(__local_var_4_1, "value1"), b_2)
+return gopurs_runtime.Apply2(gopurs_runtime.ConstructorGet(__local_var_4_1, 0), gopurs_runtime.ConstructorGet(__local_var_4_1, 1), b_2)
 })
 })
 	})
@@ -346,7 +346,7 @@ v_3_1 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), v
 _ = v_3_1
 var __t2 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_3_1, "_tag").StrVal == "LT")).IntVal != 0 {
+if (gopurs_runtime.Bool(v_3_1.StrVal == "LT")).IntVal != 0 {
 __t2 = v1_2
 goto end_branch_2
 } else {
@@ -354,7 +354,7 @@ goto end_branch_2
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_3_1, "_tag").StrVal == "EQ")).IntVal != 0 {
+if (gopurs_runtime.Bool(v_3_1.StrVal == "EQ")).IntVal != 0 {
 __t2 = v_1
 goto end_branch_2
 } else {
@@ -362,7 +362,7 @@ goto end_branch_2
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_3_1, "_tag").StrVal == "GT")).IntVal != 0 {
+if (gopurs_runtime.Bool(v_3_1.StrVal == "GT")).IntVal != 0 {
 __t2 = v_1
 goto end_branch_2
 } else {
@@ -394,7 +394,7 @@ v_3_1 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), v
 _ = v_3_1
 var __t2 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_3_1, "_tag").StrVal == "LT")).IntVal != 0 {
+if (gopurs_runtime.Bool(v_3_1.StrVal == "LT")).IntVal != 0 {
 __t2 = v_1
 goto end_branch_2
 } else {
@@ -402,7 +402,7 @@ goto end_branch_2
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_3_1, "_tag").StrVal == "EQ")).IntVal != 0 {
+if (gopurs_runtime.Bool(v_3_1.StrVal == "EQ")).IntVal != 0 {
 __t2 = v_1
 goto end_branch_2
 } else {
@@ -410,7 +410,7 @@ goto end_branch_2
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_3_1, "_tag").StrVal == "GT")).IntVal != 0 {
+if (gopurs_runtime.Bool(v_3_1.StrVal == "GT")).IntVal != 0 {
 __t2 = v1_2
 goto end_branch_2
 } else {

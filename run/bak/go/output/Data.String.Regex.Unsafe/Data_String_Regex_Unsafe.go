@@ -16,16 +16,16 @@ __local_var_2_0 := gopurs_runtime.Apply2(pkg_Data_String_Regex.Get_regex(), s_0,
 _ = __local_var_2_0
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_2_0, "_tag").StrVal == "Left")).IntVal != 0 {
-__t1 = gopurs_runtime.Apply(pkg_Partial.Get__crashWith(), gopurs_runtime.RecordGet(__local_var_2_0, "value0"))
+if (gopurs_runtime.Bool(__local_var_2_0.StrVal == "Left")).IntVal != 0 {
+__t1 = gopurs_runtime.Apply(pkg_Partial.Get__crashWith(), gopurs_runtime.ConstructorGet(__local_var_2_0, 0))
 goto end_branch_1
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_2_0, "_tag").StrVal == "Right")).IntVal != 0 {
-__t1 = gopurs_runtime.RecordGet(__local_var_2_0, "value0")
+if (gopurs_runtime.Bool(__local_var_2_0.StrVal == "Right")).IntVal != 0 {
+__t1 = gopurs_runtime.ConstructorGet(__local_var_2_0, 0)
 goto end_branch_1
 } else {
 

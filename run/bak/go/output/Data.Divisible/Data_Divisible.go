@@ -56,7 +56,7 @@ var once_divisibleComparison sync.Once
 func Get_divisibleComparison() gopurs_runtime.Value {
 	once_divisibleComparison.Do(func() {
 		divisibleComparison = gopurs_runtime.RecordDict2("conquer", "Divide0", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("EQ"))
+return gopurs_runtime.Constructor0("EQ")
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Divide.Get_divideComparison()
 }))

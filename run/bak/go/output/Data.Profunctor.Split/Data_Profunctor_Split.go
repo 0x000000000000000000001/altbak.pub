@@ -13,7 +13,7 @@ func Get_SplitF() gopurs_runtime.Value {
 		SplitF = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict4("_tag", "value0", "value1", "value2", gopurs_runtime.Str("SplitF"), value0, value1, value2)
+return gopurs_runtime.Constructor3("SplitF", value0, value1, value2)
 })
 })
 })
@@ -26,7 +26,7 @@ var once_unSplit sync.Once
 func Get_unSplit() gopurs_runtime.Value {
 	once_unSplit.Do(func() {
 		unSplit = gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(f_0, gopurs_runtime.RecordGet(v_1, "value0"), gopurs_runtime.RecordGet(v_1, "value1"), gopurs_runtime.RecordGet(v_1, "value2"))
+return gopurs_runtime.Apply3(f_0, gopurs_runtime.ConstructorGet(v_1, 0), gopurs_runtime.ConstructorGet(v_1, 1), gopurs_runtime.ConstructorGet(v_1, 2))
 })
 	})
 	return unSplit
@@ -37,7 +37,7 @@ var once_split sync.Once
 func Get_split() gopurs_runtime.Value {
 	once_split.Do(func() {
 		split = gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, g_1 gopurs_runtime.Value, fx_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict4("_tag", "value0", "value1", "value2", gopurs_runtime.Str("SplitF"), f_0, g_1, fx_2)
+return gopurs_runtime.Constructor3("SplitF", f_0, g_1, fx_2)
 })
 	})
 	return split
@@ -48,11 +48,11 @@ var once_profunctorSplit sync.Once
 func Get_profunctorSplit() gopurs_runtime.Value {
 	once_profunctorSplit.Do(func() {
 		profunctorSplit = gopurs_runtime.RecordDict1("dimap", gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, g_1 gopurs_runtime.Value, v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict4("_tag", "value0", "value1", "value2", gopurs_runtime.Str("SplitF"), gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(v_2, "value0"), gopurs_runtime.Apply(f_0, x_3))
+return gopurs_runtime.Constructor3("SplitF", gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.ConstructorGet(v_2, 0), gopurs_runtime.Apply(f_0, x_3))
 }), gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(g_1, gopurs_runtime.Apply(gopurs_runtime.RecordGet(v_2, "value1"), x_3))
-}), gopurs_runtime.RecordGet(v_2, "value2"))
+return gopurs_runtime.Apply(g_1, gopurs_runtime.Apply(gopurs_runtime.ConstructorGet(v_2, 1), x_3))
+}), gopurs_runtime.ConstructorGet(v_2, 2))
 }))
 	})
 	return profunctorSplit
@@ -63,7 +63,7 @@ var once_lowerSplit sync.Once
 func Get_lowerSplit() gopurs_runtime.Value {
 	once_lowerSplit.Do(func() {
 		lowerSplit = gopurs_runtime.Func2(func(dictInvariant_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictInvariant_0, "imap"), gopurs_runtime.RecordGet(v_1, "value1"), gopurs_runtime.RecordGet(v_1, "value0"), gopurs_runtime.RecordGet(v_1, "value2"))
+return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictInvariant_0, "imap"), gopurs_runtime.ConstructorGet(v_1, 1), gopurs_runtime.ConstructorGet(v_1, 0), gopurs_runtime.ConstructorGet(v_1, 2))
 })
 	})
 	return lowerSplit
@@ -74,7 +74,7 @@ var once_liftSplit sync.Once
 func Get_liftSplit() gopurs_runtime.Value {
 	once_liftSplit.Do(func() {
 		liftSplit = gopurs_runtime.Func(func(fx_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict4("_tag", "value0", "value1", "value2", gopurs_runtime.Str("SplitF"), gopurs_runtime.RecordGet(pkg_Control_Category.Get_categoryFn(), "identity"), gopurs_runtime.RecordGet(pkg_Control_Category.Get_categoryFn(), "identity"), fx_0)
+return gopurs_runtime.Constructor3("SplitF", gopurs_runtime.RecordGet(pkg_Control_Category.Get_categoryFn(), "identity"), gopurs_runtime.RecordGet(pkg_Control_Category.Get_categoryFn(), "identity"), fx_0)
 })
 	})
 	return liftSplit
@@ -85,7 +85,7 @@ var once_hoistSplit sync.Once
 func Get_hoistSplit() gopurs_runtime.Value {
 	once_hoistSplit.Do(func() {
 		hoistSplit = gopurs_runtime.Func2(func(nat_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict4("_tag", "value0", "value1", "value2", gopurs_runtime.Str("SplitF"), gopurs_runtime.RecordGet(v_1, "value0"), gopurs_runtime.RecordGet(v_1, "value1"), gopurs_runtime.Apply(nat_0, gopurs_runtime.RecordGet(v_1, "value2")))
+return gopurs_runtime.Constructor3("SplitF", gopurs_runtime.ConstructorGet(v_1, 0), gopurs_runtime.ConstructorGet(v_1, 1), gopurs_runtime.Apply(nat_0, gopurs_runtime.ConstructorGet(v_1, 2)))
 })
 	})
 	return hoistSplit
@@ -96,9 +96,9 @@ var once_functorSplit sync.Once
 func Get_functorSplit() gopurs_runtime.Value {
 	once_functorSplit.Do(func() {
 		functorSplit = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict4("_tag", "value0", "value1", "value2", gopurs_runtime.Str("SplitF"), gopurs_runtime.RecordGet(v_1, "value0"), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(f_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(v_1, "value1"), x_2))
-}), gopurs_runtime.RecordGet(v_1, "value2"))
+return gopurs_runtime.Constructor3("SplitF", gopurs_runtime.ConstructorGet(v_1, 0), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(f_0, gopurs_runtime.Apply(gopurs_runtime.ConstructorGet(v_1, 1), x_2))
+}), gopurs_runtime.ConstructorGet(v_1, 2))
 }))
 	})
 	return functorSplit

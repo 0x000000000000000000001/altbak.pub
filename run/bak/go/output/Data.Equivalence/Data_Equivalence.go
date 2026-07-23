@@ -78,7 +78,7 @@ var once_comparisonEquivalence sync.Once
 func Get_comparisonEquivalence() gopurs_runtime.Value {
 	once_comparisonEquivalence.Do(func() {
 		comparisonEquivalence = gopurs_runtime.Func3(func(v_0 gopurs_runtime.Value, a_1 gopurs_runtime.Value, b_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(gopurs_runtime.RecordGet(gopurs_runtime.Apply2(v_0, a_1, b_2), "_tag").StrVal == "EQ")
+return gopurs_runtime.Bool(gopurs_runtime.Apply2(v_0, a_1, b_2).StrVal == "EQ")
 })
 	})
 	return comparisonEquivalence

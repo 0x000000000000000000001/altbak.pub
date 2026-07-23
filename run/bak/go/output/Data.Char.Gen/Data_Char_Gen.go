@@ -19,15 +19,15 @@ v_3_0 := gopurs_runtime.Apply(pkg_Data_Enum.Get_charToEnum(), x_2)
 _ = v_3_0
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_3_0, "_tag").StrVal == "Just")).IntVal != 0 {
-__t1 = gopurs_runtime.RecordGet(v_3_0, "value0")
+if (gopurs_runtime.Bool(v_3_0.StrVal == "Just")).IntVal != 0 {
+__t1 = gopurs_runtime.ConstructorGet(v_3_0, 0)
 goto end_branch_1
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_3_0, "_tag").StrVal == "Nothing")).IntVal != 0 {
+if (gopurs_runtime.Bool(v_3_0.StrVal == "Nothing")).IntVal != 0 {
 var __t2 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(x_2.IntVal < gopurs_runtime.Apply(pkg_Data_Enum.Get_toCharCode(), pkg_Data_Bounded.Get_bottomChar()).IntVal)).IntVal != 0 {
@@ -137,7 +137,7 @@ var once_genAlpha sync.Once
 func Get_genAlpha() gopurs_runtime.Value {
 	once_genAlpha.Do(func() {
 		genAlpha = gopurs_runtime.Func(func(dictMonadGen_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(pkg_Control_Monad_Gen.Get_oneOf(), dictMonadGen_0, Get_foldable1NonEmpty(), gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("NonEmpty"), gopurs_runtime.Apply(Get_genAlphaLowercase(), dictMonadGen_0), gopurs_runtime.Array([]gopurs_runtime.Value{gopurs_runtime.Apply(Get_genAlphaUppercase(), dictMonadGen_0)})))
+return gopurs_runtime.Apply3(pkg_Control_Monad_Gen.Get_oneOf(), dictMonadGen_0, Get_foldable1NonEmpty(), gopurs_runtime.Constructor2("NonEmpty", gopurs_runtime.Apply(Get_genAlphaLowercase(), dictMonadGen_0), gopurs_runtime.Array([]gopurs_runtime.Value{gopurs_runtime.Apply(Get_genAlphaUppercase(), dictMonadGen_0)})))
 })
 	})
 	return genAlpha

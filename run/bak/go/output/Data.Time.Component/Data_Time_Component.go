@@ -176,14 +176,14 @@ func Get_boundedEnumSecond() gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(gopurs_runtime.Bool(n_0.IntVal >= gopurs_runtime.Int(0).IntVal).IntVal != 0 && gopurs_runtime.Bool(n_0.IntVal <= gopurs_runtime.Int(59).IntVal).IntVal != 0)).IntVal != 0 {
-__t0 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), n_0)
+__t0 = gopurs_runtime.Constructor1("Just", n_0)
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
+__t0 = gopurs_runtime.Constructor0("Nothing")
 }
 end_branch_0:
 return __t0
@@ -208,14 +208,14 @@ _ = __local_var_1_0
 var __t1 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(gopurs_runtime.Bool(__local_var_1_0.IntVal >= gopurs_runtime.Int(0).IntVal).IntVal != 0 && gopurs_runtime.Bool(__local_var_1_0.IntVal <= gopurs_runtime.Int(59).IntVal).IntVal != 0)).IntVal != 0 {
-__t1 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), __local_var_1_0)
+__t1 = gopurs_runtime.Constructor1("Just", __local_var_1_0)
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
+__t1 = gopurs_runtime.Constructor0("Nothing")
 }
 end_branch_1:
 return __t1
@@ -225,14 +225,14 @@ _ = __local_var_1_2
 var __t3 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(gopurs_runtime.Bool(__local_var_1_2.IntVal >= gopurs_runtime.Int(0).IntVal).IntVal != 0 && gopurs_runtime.Bool(__local_var_1_2.IntVal <= gopurs_runtime.Int(59).IntVal).IntVal != 0)).IntVal != 0 {
-__t3 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), __local_var_1_2)
+__t3 = gopurs_runtime.Constructor1("Just", __local_var_1_2)
 goto end_branch_3
 } else {
 
 }
 }
 {
-__t3 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
+__t3 = gopurs_runtime.Constructor0("Nothing")
 }
 end_branch_3:
 return __t3
@@ -251,14 +251,14 @@ func Get_boundedEnumMinute() gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(gopurs_runtime.Bool(n_0.IntVal >= gopurs_runtime.Int(0).IntVal).IntVal != 0 && gopurs_runtime.Bool(n_0.IntVal <= gopurs_runtime.Int(59).IntVal).IntVal != 0)).IntVal != 0 {
-__t0 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), n_0)
+__t0 = gopurs_runtime.Constructor1("Just", n_0)
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
+__t0 = gopurs_runtime.Constructor0("Nothing")
 }
 end_branch_0:
 return __t0
@@ -283,14 +283,14 @@ _ = __local_var_1_0
 var __t1 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(gopurs_runtime.Bool(__local_var_1_0.IntVal >= gopurs_runtime.Int(0).IntVal).IntVal != 0 && gopurs_runtime.Bool(__local_var_1_0.IntVal <= gopurs_runtime.Int(59).IntVal).IntVal != 0)).IntVal != 0 {
-__t1 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), __local_var_1_0)
+__t1 = gopurs_runtime.Constructor1("Just", __local_var_1_0)
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
+__t1 = gopurs_runtime.Constructor0("Nothing")
 }
 end_branch_1:
 return __t1
@@ -300,14 +300,14 @@ _ = __local_var_1_2
 var __t3 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(gopurs_runtime.Bool(__local_var_1_2.IntVal >= gopurs_runtime.Int(0).IntVal).IntVal != 0 && gopurs_runtime.Bool(__local_var_1_2.IntVal <= gopurs_runtime.Int(59).IntVal).IntVal != 0)).IntVal != 0 {
-__t3 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), __local_var_1_2)
+__t3 = gopurs_runtime.Constructor1("Just", __local_var_1_2)
 goto end_branch_3
 } else {
 
 }
 }
 {
-__t3 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
+__t3 = gopurs_runtime.Constructor0("Nothing")
 }
 end_branch_3:
 return __t3
@@ -326,14 +326,14 @@ func Get_boundedEnumMillisecond() gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(gopurs_runtime.Bool(n_0.IntVal >= gopurs_runtime.Int(0).IntVal).IntVal != 0 && gopurs_runtime.Bool(n_0.IntVal <= gopurs_runtime.Int(999).IntVal).IntVal != 0)).IntVal != 0 {
-__t0 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), n_0)
+__t0 = gopurs_runtime.Constructor1("Just", n_0)
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
+__t0 = gopurs_runtime.Constructor0("Nothing")
 }
 end_branch_0:
 return __t0
@@ -358,14 +358,14 @@ _ = __local_var_1_0
 var __t1 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(gopurs_runtime.Bool(__local_var_1_0.IntVal >= gopurs_runtime.Int(0).IntVal).IntVal != 0 && gopurs_runtime.Bool(__local_var_1_0.IntVal <= gopurs_runtime.Int(999).IntVal).IntVal != 0)).IntVal != 0 {
-__t1 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), __local_var_1_0)
+__t1 = gopurs_runtime.Constructor1("Just", __local_var_1_0)
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
+__t1 = gopurs_runtime.Constructor0("Nothing")
 }
 end_branch_1:
 return __t1
@@ -375,14 +375,14 @@ _ = __local_var_1_2
 var __t3 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(gopurs_runtime.Bool(__local_var_1_2.IntVal >= gopurs_runtime.Int(0).IntVal).IntVal != 0 && gopurs_runtime.Bool(__local_var_1_2.IntVal <= gopurs_runtime.Int(999).IntVal).IntVal != 0)).IntVal != 0 {
-__t3 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), __local_var_1_2)
+__t3 = gopurs_runtime.Constructor1("Just", __local_var_1_2)
 goto end_branch_3
 } else {
 
 }
 }
 {
-__t3 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
+__t3 = gopurs_runtime.Constructor0("Nothing")
 }
 end_branch_3:
 return __t3
@@ -401,14 +401,14 @@ func Get_boundedEnumHour() gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(gopurs_runtime.Bool(n_0.IntVal >= gopurs_runtime.Int(0).IntVal).IntVal != 0 && gopurs_runtime.Bool(n_0.IntVal <= gopurs_runtime.Int(23).IntVal).IntVal != 0)).IntVal != 0 {
-__t0 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), n_0)
+__t0 = gopurs_runtime.Constructor1("Just", n_0)
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
+__t0 = gopurs_runtime.Constructor0("Nothing")
 }
 end_branch_0:
 return __t0
@@ -433,14 +433,14 @@ _ = __local_var_1_0
 var __t1 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(gopurs_runtime.Bool(__local_var_1_0.IntVal >= gopurs_runtime.Int(0).IntVal).IntVal != 0 && gopurs_runtime.Bool(__local_var_1_0.IntVal <= gopurs_runtime.Int(23).IntVal).IntVal != 0)).IntVal != 0 {
-__t1 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), __local_var_1_0)
+__t1 = gopurs_runtime.Constructor1("Just", __local_var_1_0)
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
+__t1 = gopurs_runtime.Constructor0("Nothing")
 }
 end_branch_1:
 return __t1
@@ -450,14 +450,14 @@ _ = __local_var_1_2
 var __t3 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(gopurs_runtime.Bool(__local_var_1_2.IntVal >= gopurs_runtime.Int(0).IntVal).IntVal != 0 && gopurs_runtime.Bool(__local_var_1_2.IntVal <= gopurs_runtime.Int(23).IntVal).IntVal != 0)).IntVal != 0 {
-__t3 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), __local_var_1_2)
+__t3 = gopurs_runtime.Constructor1("Just", __local_var_1_2)
 goto end_branch_3
 } else {
 
 }
 }
 {
-__t3 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
+__t3 = gopurs_runtime.Constructor0("Nothing")
 }
 end_branch_3:
 return __t3

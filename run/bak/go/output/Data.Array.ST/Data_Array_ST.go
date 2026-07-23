@@ -100,7 +100,7 @@ func Get_sortBy() gopurs_runtime.Value {
 return gopurs_runtime.Apply3(pkg_Control_Monad_ST_Uncurried.Get_runSTFn3(), Get_sortByImpl(), comp_0, gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_1, "_tag").StrVal == "GT")).IntVal != 0 {
+if (gopurs_runtime.Bool(v_1.StrVal == "GT")).IntVal != 0 {
 __t0 = gopurs_runtime.Int(1)
 goto end_branch_0
 } else {
@@ -108,7 +108,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_1, "_tag").StrVal == "EQ")).IntVal != 0 {
+if (gopurs_runtime.Bool(v_1.StrVal == "EQ")).IntVal != 0 {
 __t0 = gopurs_runtime.Int(0)
 goto end_branch_0
 } else {
@@ -116,7 +116,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_1, "_tag").StrVal == "LT")).IntVal != 0 {
+if (gopurs_runtime.Bool(v_1.StrVal == "LT")).IntVal != 0 {
 __t0 = gopurs_runtime.Int(-1)
 goto end_branch_0
 } else {
@@ -162,7 +162,7 @@ var shift gopurs_runtime.Value
 var once_shift sync.Once
 func Get_shift() gopurs_runtime.Value {
 	once_shift.Do(func() {
-		shift = gopurs_runtime.Apply3(pkg_Control_Monad_ST_Uncurried.Get_runSTFn3(), Get_shiftImpl(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing")))
+		shift = gopurs_runtime.Apply3(pkg_Control_Monad_ST_Uncurried.Get_runSTFn3(), Get_shiftImpl(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Constructor0("Nothing"))
 	})
 	return shift
 }
@@ -204,7 +204,7 @@ var pop gopurs_runtime.Value
 var once_pop sync.Once
 func Get_pop() gopurs_runtime.Value {
 	once_pop.Do(func() {
-		pop = gopurs_runtime.Apply3(pkg_Control_Monad_ST_Uncurried.Get_runSTFn3(), Get_popImpl(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing")))
+		pop = gopurs_runtime.Apply3(pkg_Control_Monad_ST_Uncurried.Get_runSTFn3(), Get_popImpl(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Constructor0("Nothing"))
 	})
 	return pop
 }
@@ -222,7 +222,7 @@ var peek gopurs_runtime.Value
 var once_peek sync.Once
 func Get_peek() gopurs_runtime.Value {
 	once_peek.Do(func() {
-		peek = gopurs_runtime.Apply3(pkg_Control_Monad_ST_Uncurried.Get_runSTFn4(), Get_peekImpl(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing")))
+		peek = gopurs_runtime.Apply3(pkg_Control_Monad_ST_Uncurried.Get_runSTFn4(), Get_peekImpl(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Constructor0("Nothing"))
 	})
 	return peek
 }
@@ -239,15 +239,15 @@ entry_4_1 := gopurs_runtime.Apply(__local_var_3_0, gopurs_runtime.Value{})
 _ = entry_4_1
 var __t2 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(entry_4_1, "_tag").StrVal == "Just")).IntVal != 0 {
-__t2 = gopurs_runtime.Apply3(Get_poke(), i_0, gopurs_runtime.Apply(f_1, gopurs_runtime.RecordGet(entry_4_1, "value0")), xs_2)
+if (gopurs_runtime.Bool(entry_4_1.StrVal == "Just")).IntVal != 0 {
+__t2 = gopurs_runtime.Apply3(Get_poke(), i_0, gopurs_runtime.Apply(f_1, gopurs_runtime.ConstructorGet(entry_4_1, 0)), xs_2)
 goto end_branch_2
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(entry_4_1, "_tag").StrVal == "Nothing")).IntVal != 0 {
+if (gopurs_runtime.Bool(entry_4_1.StrVal == "Nothing")).IntVal != 0 {
 __t2 = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Bool(false)
 })

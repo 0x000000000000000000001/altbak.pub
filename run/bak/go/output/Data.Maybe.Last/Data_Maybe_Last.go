@@ -25,15 +25,15 @@ func Get_showLast() gopurs_runtime.Value {
 return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_1, "_tag").StrVal == "Just")).IntVal != 0 {
-__t0 = gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str("(Last (Just ").StrVal + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), gopurs_runtime.RecordGet(v_1, "value0")).StrVal).StrVal + gopurs_runtime.Str("))").StrVal)
+if (gopurs_runtime.Bool(v_1.StrVal == "Just")).IntVal != 0 {
+__t0 = gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str("(Last (Just ").StrVal + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), gopurs_runtime.ConstructorGet(v_1, 0)).StrVal).StrVal + gopurs_runtime.Str("))").StrVal)
 goto end_branch_0
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_1, "_tag").StrVal == "Nothing")).IntVal != 0 {
+if (gopurs_runtime.Bool(v_1.StrVal == "Nothing")).IntVal != 0 {
 __t0 = gopurs_runtime.Str("(Last Nothing)")
 goto end_branch_0
 } else {
@@ -58,7 +58,7 @@ func Get_semigroupLast() gopurs_runtime.Value {
 		semigroupLast = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v1_1, "_tag").StrVal == "Just")).IntVal != 0 {
+if (gopurs_runtime.Bool(v1_1.StrVal == "Just")).IntVal != 0 {
 __t0 = v1_1
 goto end_branch_0
 } else {
@@ -66,7 +66,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v1_1, "_tag").StrVal == "Nothing")).IntVal != 0 {
+if (gopurs_runtime.Bool(v1_1.StrVal == "Nothing")).IntVal != 0 {
 __t0 = v_0
 goto end_branch_0
 } else {
@@ -93,15 +93,15 @@ _ = __local_var_1_0
 eqMaybe1_2_1 := gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func2(func(x_2 gopurs_runtime.Value, y_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t2 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(x_2, "_tag").StrVal == "Nothing")).IntVal != 0 {
-__t2 = gopurs_runtime.Bool(gopurs_runtime.RecordGet(y_3, "_tag").StrVal == "Nothing")
+if (gopurs_runtime.Bool(x_2.StrVal == "Nothing")).IntVal != 0 {
+__t2 = gopurs_runtime.Bool(y_3.StrVal == "Nothing")
 goto end_branch_2
 } else {
 
 }
 }
 {
-__t2 = gopurs_runtime.Bool(gopurs_runtime.Bool(gopurs_runtime.RecordGet(x_2, "_tag").StrVal == "Just").IntVal != 0 && gopurs_runtime.Bool(gopurs_runtime.Bool(gopurs_runtime.RecordGet(y_3, "_tag").StrVal == "Just").IntVal != 0 && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "eq"), gopurs_runtime.RecordGet(x_2, "value0"), gopurs_runtime.RecordGet(y_3, "value0")).IntVal != 0).IntVal != 0)
+__t2 = gopurs_runtime.Bool(gopurs_runtime.Bool(x_2.StrVal == "Just").IntVal != 0 && gopurs_runtime.Bool(gopurs_runtime.Bool(y_3.StrVal == "Just").IntVal != 0 && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "eq"), gopurs_runtime.ConstructorGet(x_2, 0), gopurs_runtime.ConstructorGet(y_3, 0)).IntVal != 0).IntVal != 0)
 }
 end_branch_2:
 return __t2
@@ -110,18 +110,18 @@ _ = eqMaybe1_2_1
 return gopurs_runtime.RecordDict2("compare", "Eq0", gopurs_runtime.Func2(func(x_3 gopurs_runtime.Value, y_4 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t3 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(x_3, "_tag").StrVal == "Nothing")).IntVal != 0 {
+if (gopurs_runtime.Bool(x_3.StrVal == "Nothing")).IntVal != 0 {
 var __t4 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(y_4, "_tag").StrVal == "Nothing")).IntVal != 0 {
-__t4 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("EQ"))
+if (gopurs_runtime.Bool(y_4.StrVal == "Nothing")).IntVal != 0 {
+__t4 = gopurs_runtime.Constructor0("EQ")
 goto end_branch_4
 } else {
 
 }
 }
 {
-__t4 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("LT"))
+__t4 = gopurs_runtime.Constructor0("LT")
 }
 end_branch_4:
 __t3 = __t4
@@ -131,16 +131,16 @@ goto end_branch_3
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(y_4, "_tag").StrVal == "Nothing")).IntVal != 0 {
-__t3 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("GT"))
+if (gopurs_runtime.Bool(y_4.StrVal == "Nothing")).IntVal != 0 {
+__t3 = gopurs_runtime.Constructor0("GT")
 goto end_branch_3
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.Bool(gopurs_runtime.RecordGet(x_3, "_tag").StrVal == "Just").IntVal != 0 && gopurs_runtime.Bool(gopurs_runtime.RecordGet(y_4, "_tag").StrVal == "Just").IntVal != 0)).IntVal != 0 {
-__t3 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), gopurs_runtime.RecordGet(x_3, "value0"), gopurs_runtime.RecordGet(y_4, "value0"))
+if (gopurs_runtime.Bool(gopurs_runtime.Bool(x_3.StrVal == "Just").IntVal != 0 && gopurs_runtime.Bool(y_4.StrVal == "Just").IntVal != 0)).IntVal != 0 {
+__t3 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), gopurs_runtime.ConstructorGet(x_3, 0), gopurs_runtime.ConstructorGet(y_4, 0))
 goto end_branch_3
 } else {
 
@@ -183,7 +183,7 @@ var monoidLast gopurs_runtime.Value
 var once_monoidLast sync.Once
 func Get_monoidLast() gopurs_runtime.Value {
 	once_monoidLast.Do(func() {
-		monoidLast = gopurs_runtime.RecordDict2("mempty", "Semigroup0", gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing")), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		monoidLast = gopurs_runtime.RecordDict2("mempty", "Semigroup0", gopurs_runtime.Constructor0("Nothing"), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_semigroupLast()
 }))
 	})
@@ -234,15 +234,15 @@ func Get_eqLast() gopurs_runtime.Value {
 return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func2(func(x_1 gopurs_runtime.Value, y_2 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(x_1, "_tag").StrVal == "Nothing")).IntVal != 0 {
-__t0 = gopurs_runtime.Bool(gopurs_runtime.RecordGet(y_2, "_tag").StrVal == "Nothing")
+if (gopurs_runtime.Bool(x_1.StrVal == "Nothing")).IntVal != 0 {
+__t0 = gopurs_runtime.Bool(y_2.StrVal == "Nothing")
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = gopurs_runtime.Bool(gopurs_runtime.Bool(gopurs_runtime.RecordGet(x_1, "_tag").StrVal == "Just").IntVal != 0 && gopurs_runtime.Bool(gopurs_runtime.Bool(gopurs_runtime.RecordGet(y_2, "_tag").StrVal == "Just").IntVal != 0 && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), gopurs_runtime.RecordGet(x_1, "value0"), gopurs_runtime.RecordGet(y_2, "value0")).IntVal != 0).IntVal != 0)
+__t0 = gopurs_runtime.Bool(gopurs_runtime.Bool(x_1.StrVal == "Just").IntVal != 0 && gopurs_runtime.Bool(gopurs_runtime.Bool(y_2.StrVal == "Just").IntVal != 0 && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), gopurs_runtime.ConstructorGet(x_1, 0), gopurs_runtime.ConstructorGet(y_2, 0)).IntVal != 0).IntVal != 0)
 }
 end_branch_0:
 return __t0
@@ -314,7 +314,7 @@ var plusLast gopurs_runtime.Value
 var once_plusLast sync.Once
 func Get_plusLast() gopurs_runtime.Value {
 	once_plusLast.Do(func() {
-		plusLast = gopurs_runtime.RecordDict2("empty", "Alt0", gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing")), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		plusLast = gopurs_runtime.RecordDict2("empty", "Alt0", gopurs_runtime.Constructor0("Nothing"), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_altLast()
 }))
 	})

@@ -29,7 +29,7 @@ return gopurs_runtime.Func2(func(s_5 gopurs_runtime.Value, ms_6 gopurs_runtime.V
 var __t0 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(mo_1.IntVal == gopurs_runtime.Int(1).IntVal)).IntVal != 0 {
-__t0 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("January"))
+__t0 = gopurs_runtime.Constructor0("January")
 goto end_branch_0
 } else {
 
@@ -37,7 +37,7 @@ goto end_branch_0
 }
 {
 if (gopurs_runtime.Bool(mo_1.IntVal == gopurs_runtime.Int(2).IntVal)).IntVal != 0 {
-__t0 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("February"))
+__t0 = gopurs_runtime.Constructor0("February")
 goto end_branch_0
 } else {
 
@@ -45,7 +45,7 @@ goto end_branch_0
 }
 {
 if (gopurs_runtime.Bool(mo_1.IntVal == gopurs_runtime.Int(3).IntVal)).IntVal != 0 {
-__t0 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("March"))
+__t0 = gopurs_runtime.Constructor0("March")
 goto end_branch_0
 } else {
 
@@ -53,7 +53,7 @@ goto end_branch_0
 }
 {
 if (gopurs_runtime.Bool(mo_1.IntVal == gopurs_runtime.Int(4).IntVal)).IntVal != 0 {
-__t0 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("April"))
+__t0 = gopurs_runtime.Constructor0("April")
 goto end_branch_0
 } else {
 
@@ -61,7 +61,7 @@ goto end_branch_0
 }
 {
 if (gopurs_runtime.Bool(mo_1.IntVal == gopurs_runtime.Int(5).IntVal)).IntVal != 0 {
-__t0 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("May"))
+__t0 = gopurs_runtime.Constructor0("May")
 goto end_branch_0
 } else {
 
@@ -69,7 +69,7 @@ goto end_branch_0
 }
 {
 if (gopurs_runtime.Bool(mo_1.IntVal == gopurs_runtime.Int(6).IntVal)).IntVal != 0 {
-__t0 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("June"))
+__t0 = gopurs_runtime.Constructor0("June")
 goto end_branch_0
 } else {
 
@@ -77,7 +77,7 @@ goto end_branch_0
 }
 {
 if (gopurs_runtime.Bool(mo_1.IntVal == gopurs_runtime.Int(7).IntVal)).IntVal != 0 {
-__t0 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("July"))
+__t0 = gopurs_runtime.Constructor0("July")
 goto end_branch_0
 } else {
 
@@ -85,7 +85,7 @@ goto end_branch_0
 }
 {
 if (gopurs_runtime.Bool(mo_1.IntVal == gopurs_runtime.Int(8).IntVal)).IntVal != 0 {
-__t0 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("August"))
+__t0 = gopurs_runtime.Constructor0("August")
 goto end_branch_0
 } else {
 
@@ -93,7 +93,7 @@ goto end_branch_0
 }
 {
 if (gopurs_runtime.Bool(mo_1.IntVal == gopurs_runtime.Int(9).IntVal)).IntVal != 0 {
-__t0 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("September"))
+__t0 = gopurs_runtime.Constructor0("September")
 goto end_branch_0
 } else {
 
@@ -101,7 +101,7 @@ goto end_branch_0
 }
 {
 if (gopurs_runtime.Bool(mo_1.IntVal == gopurs_runtime.Int(10).IntVal)).IntVal != 0 {
-__t0 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("October"))
+__t0 = gopurs_runtime.Constructor0("October")
 goto end_branch_0
 } else {
 
@@ -109,7 +109,7 @@ goto end_branch_0
 }
 {
 if (gopurs_runtime.Bool(mo_1.IntVal == gopurs_runtime.Int(11).IntVal)).IntVal != 0 {
-__t0 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("November"))
+__t0 = gopurs_runtime.Constructor0("November")
 goto end_branch_0
 } else {
 
@@ -117,7 +117,7 @@ goto end_branch_0
 }
 {
 if (gopurs_runtime.Bool(mo_1.IntVal == gopurs_runtime.Int(12).IntVal)).IntVal != 0 {
-__t0 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("December"))
+__t0 = gopurs_runtime.Constructor0("December")
 goto end_branch_0
 } else {
 
@@ -127,7 +127,7 @@ goto end_branch_0
 __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_0:
-return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("DateTime"), gopurs_runtime.Apply3(pkg_Data_Date.Get_canonicalDate(), y_0, __t0, d_2), gopurs_runtime.RecordDict5("_tag", "value0", "value1", "value2", "value3", gopurs_runtime.Str("Time"), h_3, mi_4, s_5, ms_6))
+return gopurs_runtime.Constructor2("DateTime", gopurs_runtime.Apply3(pkg_Data_Date.Get_canonicalDate(), y_0, __t0, d_2), gopurs_runtime.Constructor4("Time", h_3, mi_4, s_5, ms_6))
 })
 }))
 	})
@@ -162,14 +162,14 @@ func Get_instant() gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(gopurs_runtime.FloatGte(v_0, gopurs_runtime.Float(-8639977881600000.0)).IntVal != 0 && gopurs_runtime.FloatLte(v_0, gopurs_runtime.Float(8639977881599999.0)).IntVal != 0)).IntVal != 0 {
-__t0 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), v_0)
+__t0 = gopurs_runtime.Constructor1("Just", v_0)
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
+__t0 = gopurs_runtime.Constructor0("Nothing")
 }
 end_branch_0:
 return __t0
@@ -185,7 +185,7 @@ func Get_fromDateTime() gopurs_runtime.Value {
 		fromDateTime = gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_0, "value0"), "value1"), "_tag").StrVal == "January")).IntVal != 0 {
+if (gopurs_runtime.Bool(gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(v_0, 0), 1).StrVal == "January")).IntVal != 0 {
 __t0 = gopurs_runtime.Int(1)
 goto end_branch_0
 } else {
@@ -193,7 +193,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_0, "value0"), "value1"), "_tag").StrVal == "February")).IntVal != 0 {
+if (gopurs_runtime.Bool(gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(v_0, 0), 1).StrVal == "February")).IntVal != 0 {
 __t0 = gopurs_runtime.Int(2)
 goto end_branch_0
 } else {
@@ -201,7 +201,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_0, "value0"), "value1"), "_tag").StrVal == "March")).IntVal != 0 {
+if (gopurs_runtime.Bool(gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(v_0, 0), 1).StrVal == "March")).IntVal != 0 {
 __t0 = gopurs_runtime.Int(3)
 goto end_branch_0
 } else {
@@ -209,7 +209,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_0, "value0"), "value1"), "_tag").StrVal == "April")).IntVal != 0 {
+if (gopurs_runtime.Bool(gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(v_0, 0), 1).StrVal == "April")).IntVal != 0 {
 __t0 = gopurs_runtime.Int(4)
 goto end_branch_0
 } else {
@@ -217,7 +217,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_0, "value0"), "value1"), "_tag").StrVal == "May")).IntVal != 0 {
+if (gopurs_runtime.Bool(gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(v_0, 0), 1).StrVal == "May")).IntVal != 0 {
 __t0 = gopurs_runtime.Int(5)
 goto end_branch_0
 } else {
@@ -225,7 +225,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_0, "value0"), "value1"), "_tag").StrVal == "June")).IntVal != 0 {
+if (gopurs_runtime.Bool(gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(v_0, 0), 1).StrVal == "June")).IntVal != 0 {
 __t0 = gopurs_runtime.Int(6)
 goto end_branch_0
 } else {
@@ -233,7 +233,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_0, "value0"), "value1"), "_tag").StrVal == "July")).IntVal != 0 {
+if (gopurs_runtime.Bool(gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(v_0, 0), 1).StrVal == "July")).IntVal != 0 {
 __t0 = gopurs_runtime.Int(7)
 goto end_branch_0
 } else {
@@ -241,7 +241,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_0, "value0"), "value1"), "_tag").StrVal == "August")).IntVal != 0 {
+if (gopurs_runtime.Bool(gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(v_0, 0), 1).StrVal == "August")).IntVal != 0 {
 __t0 = gopurs_runtime.Int(8)
 goto end_branch_0
 } else {
@@ -249,7 +249,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_0, "value0"), "value1"), "_tag").StrVal == "September")).IntVal != 0 {
+if (gopurs_runtime.Bool(gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(v_0, 0), 1).StrVal == "September")).IntVal != 0 {
 __t0 = gopurs_runtime.Int(9)
 goto end_branch_0
 } else {
@@ -257,7 +257,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_0, "value0"), "value1"), "_tag").StrVal == "October")).IntVal != 0 {
+if (gopurs_runtime.Bool(gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(v_0, 0), 1).StrVal == "October")).IntVal != 0 {
 __t0 = gopurs_runtime.Int(10)
 goto end_branch_0
 } else {
@@ -265,7 +265,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_0, "value0"), "value1"), "_tag").StrVal == "November")).IntVal != 0 {
+if (gopurs_runtime.Bool(gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(v_0, 0), 1).StrVal == "November")).IntVal != 0 {
 __t0 = gopurs_runtime.Int(11)
 goto end_branch_0
 } else {
@@ -273,7 +273,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_0, "value0"), "value1"), "_tag").StrVal == "December")).IntVal != 0 {
+if (gopurs_runtime.Bool(gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(v_0, 0), 1).StrVal == "December")).IntVal != 0 {
 __t0 = gopurs_runtime.Int(12)
 goto end_branch_0
 } else {
@@ -284,7 +284,7 @@ goto end_branch_0
 __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_0:
-return gopurs_runtime.UncurriedApp(Get_fromDateTimeImpl(), gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_0, "value0"), "value0"), __t0, gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_0, "value0"), "value2"), gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_0, "value1"), "value0"), gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_0, "value1"), "value1"), gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_0, "value1"), "value2"), gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_0, "value1"), "value3"))
+return gopurs_runtime.UncurriedApp(Get_fromDateTimeImpl(), gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(v_0, 0), 0), __t0, gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(v_0, 0), 2), gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(v_0, 1), 0), gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(v_0, 1), 1), gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(v_0, 1), 2), gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(v_0, 1), 3))
 })
 	})
 	return fromDateTime
@@ -297,7 +297,7 @@ func Get_fromDate() gopurs_runtime.Value {
 		fromDate = gopurs_runtime.Func(func(d_0 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(d_0, "value1"), "_tag").StrVal == "January")).IntVal != 0 {
+if (gopurs_runtime.Bool(gopurs_runtime.ConstructorGet(d_0, 1).StrVal == "January")).IntVal != 0 {
 __t0 = gopurs_runtime.Int(1)
 goto end_branch_0
 } else {
@@ -305,7 +305,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(d_0, "value1"), "_tag").StrVal == "February")).IntVal != 0 {
+if (gopurs_runtime.Bool(gopurs_runtime.ConstructorGet(d_0, 1).StrVal == "February")).IntVal != 0 {
 __t0 = gopurs_runtime.Int(2)
 goto end_branch_0
 } else {
@@ -313,7 +313,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(d_0, "value1"), "_tag").StrVal == "March")).IntVal != 0 {
+if (gopurs_runtime.Bool(gopurs_runtime.ConstructorGet(d_0, 1).StrVal == "March")).IntVal != 0 {
 __t0 = gopurs_runtime.Int(3)
 goto end_branch_0
 } else {
@@ -321,7 +321,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(d_0, "value1"), "_tag").StrVal == "April")).IntVal != 0 {
+if (gopurs_runtime.Bool(gopurs_runtime.ConstructorGet(d_0, 1).StrVal == "April")).IntVal != 0 {
 __t0 = gopurs_runtime.Int(4)
 goto end_branch_0
 } else {
@@ -329,7 +329,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(d_0, "value1"), "_tag").StrVal == "May")).IntVal != 0 {
+if (gopurs_runtime.Bool(gopurs_runtime.ConstructorGet(d_0, 1).StrVal == "May")).IntVal != 0 {
 __t0 = gopurs_runtime.Int(5)
 goto end_branch_0
 } else {
@@ -337,7 +337,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(d_0, "value1"), "_tag").StrVal == "June")).IntVal != 0 {
+if (gopurs_runtime.Bool(gopurs_runtime.ConstructorGet(d_0, 1).StrVal == "June")).IntVal != 0 {
 __t0 = gopurs_runtime.Int(6)
 goto end_branch_0
 } else {
@@ -345,7 +345,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(d_0, "value1"), "_tag").StrVal == "July")).IntVal != 0 {
+if (gopurs_runtime.Bool(gopurs_runtime.ConstructorGet(d_0, 1).StrVal == "July")).IntVal != 0 {
 __t0 = gopurs_runtime.Int(7)
 goto end_branch_0
 } else {
@@ -353,7 +353,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(d_0, "value1"), "_tag").StrVal == "August")).IntVal != 0 {
+if (gopurs_runtime.Bool(gopurs_runtime.ConstructorGet(d_0, 1).StrVal == "August")).IntVal != 0 {
 __t0 = gopurs_runtime.Int(8)
 goto end_branch_0
 } else {
@@ -361,7 +361,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(d_0, "value1"), "_tag").StrVal == "September")).IntVal != 0 {
+if (gopurs_runtime.Bool(gopurs_runtime.ConstructorGet(d_0, 1).StrVal == "September")).IntVal != 0 {
 __t0 = gopurs_runtime.Int(9)
 goto end_branch_0
 } else {
@@ -369,7 +369,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(d_0, "value1"), "_tag").StrVal == "October")).IntVal != 0 {
+if (gopurs_runtime.Bool(gopurs_runtime.ConstructorGet(d_0, 1).StrVal == "October")).IntVal != 0 {
 __t0 = gopurs_runtime.Int(10)
 goto end_branch_0
 } else {
@@ -377,7 +377,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(d_0, "value1"), "_tag").StrVal == "November")).IntVal != 0 {
+if (gopurs_runtime.Bool(gopurs_runtime.ConstructorGet(d_0, 1).StrVal == "November")).IntVal != 0 {
 __t0 = gopurs_runtime.Int(11)
 goto end_branch_0
 } else {
@@ -385,7 +385,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(d_0, "value1"), "_tag").StrVal == "December")).IntVal != 0 {
+if (gopurs_runtime.Bool(gopurs_runtime.ConstructorGet(d_0, 1).StrVal == "December")).IntVal != 0 {
 __t0 = gopurs_runtime.Int(12)
 goto end_branch_0
 } else {
@@ -396,7 +396,7 @@ goto end_branch_0
 __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_0:
-return gopurs_runtime.UncurriedApp(Get_fromDateTimeImpl(), gopurs_runtime.RecordGet(d_0, "value0"), __t0, gopurs_runtime.RecordGet(d_0, "value2"), gopurs_runtime.Int(0), gopurs_runtime.Int(0), gopurs_runtime.Int(0), gopurs_runtime.Int(0))
+return gopurs_runtime.UncurriedApp(Get_fromDateTimeImpl(), gopurs_runtime.ConstructorGet(d_0, 0), __t0, gopurs_runtime.ConstructorGet(d_0, 2), gopurs_runtime.Int(0), gopurs_runtime.Int(0), gopurs_runtime.Int(0), gopurs_runtime.Int(0))
 })
 	})
 	return fromDate

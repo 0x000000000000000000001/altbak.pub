@@ -15,7 +15,7 @@ v_3_0 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ord.Get_ordInt(
 _ = v_3_0
 var __t2 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_3_0, "_tag").StrVal == "LT")).IntVal != 0 {
+if (gopurs_runtime.Bool(v_3_0.StrVal == "LT")).IntVal != 0 {
 __t2 = x_2
 goto end_branch_2
 } else {
@@ -23,7 +23,7 @@ goto end_branch_2
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_3_0, "_tag").StrVal == "EQ")).IntVal != 0 {
+if (gopurs_runtime.Bool(v_3_0.StrVal == "EQ")).IntVal != 0 {
 __t2 = low_0
 goto end_branch_2
 } else {
@@ -31,7 +31,7 @@ goto end_branch_2
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_3_0, "_tag").StrVal == "GT")).IntVal != 0 {
+if (gopurs_runtime.Bool(v_3_0.StrVal == "GT")).IntVal != 0 {
 __t2 = low_0
 goto end_branch_2
 } else {
@@ -48,7 +48,7 @@ v_5_3 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ord.Get_ordInt(
 _ = v_5_3
 var __t4 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_5_3, "_tag").StrVal == "LT")).IntVal != 0 {
+if (gopurs_runtime.Bool(v_5_3.StrVal == "LT")).IntVal != 0 {
 __t4 = hi_1
 goto end_branch_4
 } else {
@@ -56,7 +56,7 @@ goto end_branch_4
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_5_3, "_tag").StrVal == "EQ")).IntVal != 0 {
+if (gopurs_runtime.Bool(v_5_3.StrVal == "EQ")).IntVal != 0 {
 __t4 = hi_1
 goto end_branch_4
 } else {
@@ -64,7 +64,7 @@ goto end_branch_4
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_5_3, "_tag").StrVal == "GT")).IntVal != 0 {
+if (gopurs_runtime.Bool(v_5_3.StrVal == "GT")).IntVal != 0 {
 __t4 = __local_var_4_1
 goto end_branch_4
 } else {
@@ -86,7 +86,7 @@ var once_Precision sync.Once
 func Get_Precision() gopurs_runtime.Value {
 	once_Precision.Do(func() {
 		Precision = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Precision"), value0)
+return gopurs_runtime.Constructor1("Precision", value0)
 })
 	})
 	return Precision
@@ -97,7 +97,7 @@ var once_Fixed sync.Once
 func Get_Fixed() gopurs_runtime.Value {
 	once_Fixed.Do(func() {
 		Fixed = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Fixed"), value0)
+return gopurs_runtime.Constructor1("Fixed", value0)
 })
 	})
 	return Fixed
@@ -108,7 +108,7 @@ var once_Exponential sync.Once
 func Get_Exponential() gopurs_runtime.Value {
 	once_Exponential.Do(func() {
 		Exponential = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Exponential"), value0)
+return gopurs_runtime.Constructor1("Exponential", value0)
 })
 	})
 	return Exponential
@@ -121,24 +121,24 @@ func Get_toStringWith() gopurs_runtime.Value {
 		toStringWith = gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_0, "_tag").StrVal == "Precision")).IntVal != 0 {
-__t0 = gopurs_runtime.Apply(Get_toPrecisionNative(), gopurs_runtime.RecordGet(v_0, "value0"))
+if (gopurs_runtime.Bool(v_0.StrVal == "Precision")).IntVal != 0 {
+__t0 = gopurs_runtime.Apply(Get_toPrecisionNative(), gopurs_runtime.ConstructorGet(v_0, 0))
 goto end_branch_0
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_0, "_tag").StrVal == "Fixed")).IntVal != 0 {
-__t0 = gopurs_runtime.Apply(Get_toFixedNative(), gopurs_runtime.RecordGet(v_0, "value0"))
+if (gopurs_runtime.Bool(v_0.StrVal == "Fixed")).IntVal != 0 {
+__t0 = gopurs_runtime.Apply(Get_toFixedNative(), gopurs_runtime.ConstructorGet(v_0, 0))
 goto end_branch_0
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_0, "_tag").StrVal == "Exponential")).IntVal != 0 {
-__t0 = gopurs_runtime.Apply(Get_toExponentialNative(), gopurs_runtime.RecordGet(v_0, "value0"))
+if (gopurs_runtime.Bool(v_0.StrVal == "Exponential")).IntVal != 0 {
+__t0 = gopurs_runtime.Apply(Get_toExponentialNative(), gopurs_runtime.ConstructorGet(v_0, 0))
 goto end_branch_0
 } else {
 
@@ -159,7 +159,7 @@ var once_precision sync.Once
 func Get_precision() gopurs_runtime.Value {
 	once_precision.Do(func() {
 		precision = gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Precision"), gopurs_runtime.Apply3(Get_clamp(), gopurs_runtime.Int(1), gopurs_runtime.Int(21), x_0))
+return gopurs_runtime.Constructor1("Precision", gopurs_runtime.Apply3(Get_clamp(), gopurs_runtime.Int(1), gopurs_runtime.Int(21), x_0))
 })
 	})
 	return precision
@@ -170,7 +170,7 @@ var once_fixed sync.Once
 func Get_fixed() gopurs_runtime.Value {
 	once_fixed.Do(func() {
 		fixed = gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Fixed"), gopurs_runtime.Apply3(Get_clamp(), gopurs_runtime.Int(0), gopurs_runtime.Int(20), x_0))
+return gopurs_runtime.Constructor1("Fixed", gopurs_runtime.Apply3(Get_clamp(), gopurs_runtime.Int(0), gopurs_runtime.Int(20), x_0))
 })
 	})
 	return fixed
@@ -181,7 +181,7 @@ var once_exponential sync.Once
 func Get_exponential() gopurs_runtime.Value {
 	once_exponential.Do(func() {
 		exponential = gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Exponential"), gopurs_runtime.Apply3(Get_clamp(), gopurs_runtime.Int(0), gopurs_runtime.Int(20), x_0))
+return gopurs_runtime.Constructor1("Exponential", gopurs_runtime.Apply3(Get_clamp(), gopurs_runtime.Int(0), gopurs_runtime.Int(20), x_0))
 })
 	})
 	return exponential

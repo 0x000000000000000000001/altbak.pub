@@ -90,7 +90,7 @@ var once_applicativeProxy sync.Once
 func Get_applicativeProxy() gopurs_runtime.Value {
 	once_applicativeProxy.Do(func() {
 		applicativeProxy = gopurs_runtime.RecordDict2("pure", "Apply0", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Proxy"))
+return gopurs_runtime.Constructor0("Proxy")
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Control_Apply.Get_applyProxy()
 }))

@@ -21,7 +21,7 @@ var search gopurs_runtime.Value
 var once_search sync.Once
 func Get_search() gopurs_runtime.Value {
 	once_search.Do(func() {
-		search = gopurs_runtime.Apply2(Get__search(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing")))
+		search = gopurs_runtime.Apply2(Get__search(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Constructor0("Nothing"))
 	})
 	return search
 }
@@ -30,7 +30,7 @@ var replace_prime gopurs_runtime.Value
 var once_replace_prime sync.Once
 func Get_replace_prime() gopurs_runtime.Value {
 	once_replace_prime.Do(func() {
-		replace_prime = gopurs_runtime.Apply2(Get__replaceBy(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing")))
+		replace_prime = gopurs_runtime.Apply2(Get__replaceBy(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Constructor0("Nothing"))
 	})
 	return replace_prime
 }
@@ -228,7 +228,7 @@ var match gopurs_runtime.Value
 var once_match sync.Once
 func Get_match() gopurs_runtime.Value {
 	once_match.Do(func() {
-		match = gopurs_runtime.Apply2(Get__match(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing")))
+		match = gopurs_runtime.Apply2(Get__match(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Constructor0("Nothing"))
 	})
 	return match
 }

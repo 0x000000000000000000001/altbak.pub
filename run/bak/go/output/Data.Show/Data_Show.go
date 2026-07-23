@@ -64,7 +64,7 @@ func Get_showRecord() gopurs_runtime.Value {
 	once_showRecord.Do(func() {
 		showRecord = gopurs_runtime.Func3(func(_dollar__unused_0 gopurs_runtime.Value, _dollar__unused_1 gopurs_runtime.Value, dictShowRecordFields_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(record_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str("{").StrVal + gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictShowRecordFields_2, "showRecordFields"), gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Proxy")), record_3).StrVal).StrVal + gopurs_runtime.Str("}").StrVal)
+return gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str("{").StrVal + gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictShowRecordFields_2, "showRecordFields"), gopurs_runtime.Constructor0("Proxy"), record_3).StrVal).StrVal + gopurs_runtime.Str("}").StrVal)
 }))
 })
 	})
@@ -161,9 +161,9 @@ func Get_showRecordFieldsCons() gopurs_runtime.Value {
 	once_showRecordFieldsCons.Do(func() {
 		showRecordFieldsCons = gopurs_runtime.Func3(func(dictIsSymbol_0 gopurs_runtime.Value, dictShowRecordFields_1 gopurs_runtime.Value, dictShow_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict1("showRecordFields", gopurs_runtime.Func2(func(v_3 gopurs_runtime.Value, record_4 gopurs_runtime.Value) gopurs_runtime.Value {
-key_5_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0, "reflectSymbol"), gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Proxy")))
+key_5_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0, "reflectSymbol"), gopurs_runtime.Constructor0("Proxy"))
 _ = key_5_0
-return gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str(" ").StrVal + key_5_0.StrVal).StrVal + gopurs_runtime.Str(": ").StrVal).StrVal + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_2, "show"), gopurs_runtime.Apply2(pkg_Record_Unsafe.Get_unsafeGet(), key_5_0, record_4)).StrVal).StrVal + gopurs_runtime.Str(",").StrVal).StrVal + gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictShowRecordFields_1, "showRecordFields"), gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Proxy")), record_4).StrVal)
+return gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str(" ").StrVal + key_5_0.StrVal).StrVal + gopurs_runtime.Str(": ").StrVal).StrVal + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_2, "show"), gopurs_runtime.Apply2(pkg_Record_Unsafe.Get_unsafeGet(), key_5_0, record_4)).StrVal).StrVal + gopurs_runtime.Str(",").StrVal).StrVal + gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictShowRecordFields_1, "showRecordFields"), gopurs_runtime.Constructor0("Proxy"), record_4).StrVal)
 }))
 })
 	})
@@ -176,7 +176,7 @@ func Get_showRecordFieldsConsNil() gopurs_runtime.Value {
 	once_showRecordFieldsConsNil.Do(func() {
 		showRecordFieldsConsNil = gopurs_runtime.Func2(func(dictIsSymbol_0 gopurs_runtime.Value, dictShow_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict1("showRecordFields", gopurs_runtime.Func2(func(v_2 gopurs_runtime.Value, record_3 gopurs_runtime.Value) gopurs_runtime.Value {
-key_4_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0, "reflectSymbol"), gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Proxy")))
+key_4_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0, "reflectSymbol"), gopurs_runtime.Constructor0("Proxy"))
 _ = key_4_0
 return gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str(" ").StrVal + key_4_0.StrVal).StrVal + gopurs_runtime.Str(": ").StrVal).StrVal + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_1, "show"), gopurs_runtime.Apply2(pkg_Record_Unsafe.Get_unsafeGet(), key_4_0, record_3)).StrVal).StrVal + gopurs_runtime.Str(" ").StrVal)
 }))

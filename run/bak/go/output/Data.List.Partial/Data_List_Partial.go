@@ -12,8 +12,8 @@ func Get_tail() gopurs_runtime.Value {
 		tail = gopurs_runtime.Func2(func(_dollar__unused_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_1, "_tag").StrVal == "Cons")).IntVal != 0 {
-__t0 = gopurs_runtime.RecordGet(v_1, "value1")
+if (gopurs_runtime.Bool(v_1.StrVal == "Cons")).IntVal != 0 {
+__t0 = gopurs_runtime.ConstructorGet(v_1, 1)
 goto end_branch_0
 } else {
 
@@ -45,18 +45,18 @@ var v_1 = v_1_loop
 _ = v_1
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_1, "_tag").StrVal == "Cons")).IntVal != 0 {
+if (gopurs_runtime.Bool(v_1.StrVal == "Cons")).IntVal != 0 {
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_1, "value1"), "_tag").StrVal == "Nil")).IntVal != 0 {
-__t1 = gopurs_runtime.RecordGet(v_1, "value0")
+if (gopurs_runtime.Bool(gopurs_runtime.ConstructorGet(v_1, 1).StrVal == "Nil")).IntVal != 0 {
+__t1 = gopurs_runtime.ConstructorGet(v_1, 0)
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = gopurs_runtime.Apply2(Get_last(), gopurs_runtime.Value{}, gopurs_runtime.RecordGet(v_1, "value1"))
+__t1 = gopurs_runtime.Apply2(Get_last(), gopurs_runtime.Value{}, gopurs_runtime.ConstructorGet(v_1, 1))
 }
 end_branch_1:
 __t0 = __t1
@@ -94,18 +94,18 @@ var v_1 = v_1_loop
 _ = v_1
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_1, "_tag").StrVal == "Cons")).IntVal != 0 {
+if (gopurs_runtime.Bool(v_1.StrVal == "Cons")).IntVal != 0 {
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_1, "value1"), "_tag").StrVal == "Nil")).IntVal != 0 {
-__t1 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nil"))
+if (gopurs_runtime.Bool(gopurs_runtime.ConstructorGet(v_1, 1).StrVal == "Nil")).IntVal != 0 {
+__t1 = gopurs_runtime.Constructor0("Nil")
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Cons"), gopurs_runtime.RecordGet(v_1, "value0"), gopurs_runtime.Apply2(Get_init_(), gopurs_runtime.Value{}, gopurs_runtime.RecordGet(v_1, "value1")))
+__t1 = gopurs_runtime.Constructor2("Cons", gopurs_runtime.ConstructorGet(v_1, 0), gopurs_runtime.Apply2(Get_init_(), gopurs_runtime.Value{}, gopurs_runtime.ConstructorGet(v_1, 1)))
 }
 end_branch_1:
 __t0 = __t1
@@ -134,8 +134,8 @@ func Get_head() gopurs_runtime.Value {
 		head = gopurs_runtime.Func2(func(_dollar__unused_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_1, "_tag").StrVal == "Cons")).IntVal != 0 {
-__t0 = gopurs_runtime.RecordGet(v_1, "value0")
+if (gopurs_runtime.Bool(v_1.StrVal == "Cons")).IntVal != 0 {
+__t0 = gopurs_runtime.ConstructorGet(v_1, 0)
 goto end_branch_0
 } else {
 

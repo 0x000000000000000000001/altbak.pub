@@ -48,20 +48,20 @@ end_branch_3:
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Bind1_2_1, "bind"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Bind1_2_1, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(pkg_Data_Int.Get_toNumber(), x_4)
 }), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadGen_0, "chooseInt"), gopurs_runtime.Int(0), __t3)), gopurs_runtime.Func(func(days_4 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_5_4 := gopurs_runtime.Apply3(pkg_Data_Date.Get_exactDate(), year_3, gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("January")), gopurs_runtime.Int(1))
+__local_var_5_4 := gopurs_runtime.Apply3(pkg_Data_Date.Get_exactDate(), year_3, gopurs_runtime.Constructor0("January"), gopurs_runtime.Int(1))
 _ = __local_var_5_4
 var __t6 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_5_4, "_tag").StrVal == "Just")).IntVal != 0 {
-__t6 = gopurs_runtime.Apply2(pkg_Data_Date.Get_adjust(), days_4, gopurs_runtime.RecordGet(__local_var_5_4, "value0"))
+if (gopurs_runtime.Bool(__local_var_5_4.StrVal == "Just")).IntVal != 0 {
+__t6 = gopurs_runtime.Apply2(pkg_Data_Date.Get_adjust(), days_4, gopurs_runtime.ConstructorGet(__local_var_5_4, 0))
 goto end_branch_6
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_5_4, "_tag").StrVal == "Nothing")).IntVal != 0 {
-__t6 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
+if (gopurs_runtime.Bool(__local_var_5_4.StrVal == "Nothing")).IntVal != 0 {
+__t6 = gopurs_runtime.Constructor0("Nothing")
 goto end_branch_6
 } else {
 
@@ -75,8 +75,8 @@ __local_var_6_5 := __t6
 _ = __local_var_6_5
 var __t7 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_6_5, "_tag").StrVal == "Just")).IntVal != 0 {
-__t7 = gopurs_runtime.RecordGet(__local_var_6_5, "value0")
+if (gopurs_runtime.Bool(__local_var_6_5.StrVal == "Just")).IntVal != 0 {
+__t7 = gopurs_runtime.ConstructorGet(__local_var_6_5, 0)
 goto end_branch_7
 } else {
 

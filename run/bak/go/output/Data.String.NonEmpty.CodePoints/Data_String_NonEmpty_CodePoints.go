@@ -40,14 +40,14 @@ _ = __local_var_2_0
 var __t1 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(__local_var_2_0.StrVal == gopurs_runtime.Str("").StrVal)).IntVal != 0 {
-__t1 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
+__t1 = gopurs_runtime.Constructor0("Nothing")
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), __local_var_2_0)
+__t1 = gopurs_runtime.Constructor1("Just", __local_var_2_0)
 }
 end_branch_1:
 return __t1
@@ -121,27 +121,27 @@ _ = v_2_0
 var __t1 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_2_0, "before").StrVal == gopurs_runtime.Str("").StrVal)).IntVal != 0 {
-__t1 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
+__t1 = gopurs_runtime.Constructor0("Nothing")
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), gopurs_runtime.RecordGet(v_2_0, "before"))
+__t1 = gopurs_runtime.Constructor1("Just", gopurs_runtime.RecordGet(v_2_0, "before"))
 }
 end_branch_1:
 var __t2 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_2_0, "after").StrVal == gopurs_runtime.Str("").StrVal)).IntVal != 0 {
-__t2 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
+__t2 = gopurs_runtime.Constructor0("Nothing")
 goto end_branch_2
 } else {
 
 }
 }
 {
-__t2 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), gopurs_runtime.RecordGet(v_2_0, "after"))
+__t2 = gopurs_runtime.Constructor1("Just", gopurs_runtime.RecordGet(v_2_0, "after"))
 }
 end_branch_2:
 return gopurs_runtime.RecordDict2("before", "after", __t1, __t2)
@@ -158,14 +158,14 @@ func Get_take() gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(i_0.IntVal < gopurs_runtime.Int(1).IntVal)).IntVal != 0 {
-__t0 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
+__t0 = gopurs_runtime.Constructor0("Nothing")
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), gopurs_runtime.Apply2(pkg_Data_String_CodePoints.Get_take(), i_0, nes_1))
+__t0 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Apply2(pkg_Data_String_CodePoints.Get_take(), i_0, nes_1))
 }
 end_branch_0:
 return __t0
@@ -220,8 +220,8 @@ __local_var_1_0 := gopurs_runtime.Apply2(pkg_Data_String_CodePoints.Get_codePoin
 _ = __local_var_1_0
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_1_0, "_tag").StrVal == "Just")).IntVal != 0 {
-__t1 = gopurs_runtime.RecordGet(__local_var_1_0, "value0")
+if (gopurs_runtime.Bool(__local_var_1_0.StrVal == "Just")).IntVal != 0 {
+__t1 = gopurs_runtime.ConstructorGet(__local_var_1_0, 0)
 goto end_branch_1
 } else {
 
@@ -236,14 +236,14 @@ _ = __local_var_1_2
 var __t3 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(__local_var_1_2.StrVal == gopurs_runtime.Str("").StrVal)).IntVal != 0 {
-__t3 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
+__t3 = gopurs_runtime.Constructor0("Nothing")
 goto end_branch_3
 } else {
 
 }
 }
 {
-__t3 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), __local_var_1_2)
+__t3 = gopurs_runtime.Constructor1("Just", __local_var_1_2)
 }
 end_branch_3:
 return gopurs_runtime.RecordDict2("head", "tail", __t1, __t3)
@@ -271,14 +271,14 @@ func Get_fromCodePointArray() gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(gopurs_runtime.Int(int64(len(v_0.PtrVal.([]gopurs_runtime.Value)))).IntVal == gopurs_runtime.Int(0).IntVal)).IntVal != 0 {
-__t0 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
+__t0 = gopurs_runtime.Constructor0("Nothing")
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), gopurs_runtime.Apply(pkg_Data_String_CodePoints.Get_fromCodePointArray(), v_0))
+__t0 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Apply(pkg_Data_String_CodePoints.Get_fromCodePointArray(), v_0))
 }
 end_branch_0:
 return __t0
@@ -321,14 +321,14 @@ _ = __local_var_2_0
 var __t1 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(__local_var_2_0.StrVal == gopurs_runtime.Str("").StrVal)).IntVal != 0 {
-__t1 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
+__t1 = gopurs_runtime.Constructor0("Nothing")
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), __local_var_2_0)
+__t1 = gopurs_runtime.Constructor1("Just", __local_var_2_0)
 }
 end_branch_1:
 return __t1
@@ -345,14 +345,14 @@ func Get_drop() gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(i_0.IntVal >= gopurs_runtime.Int(int64(len(gopurs_runtime.Apply(pkg_Data_String_CodePoints.Get_toCodePointArray(), nes_1).PtrVal.([]gopurs_runtime.Value)))).IntVal)).IntVal != 0 {
-__t0 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
+__t0 = gopurs_runtime.Constructor0("Nothing")
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_drop(), gopurs_runtime.Apply(pkg_Data_String_CodeUnits.Get_length(), gopurs_runtime.Apply2(pkg_Data_String_CodePoints.Get_take(), i_0, nes_1)), nes_1))
+__t0 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_drop(), gopurs_runtime.Apply(pkg_Data_String_CodeUnits.Get_length(), gopurs_runtime.Apply2(pkg_Data_String_CodePoints.Get_take(), i_0, nes_1)), nes_1))
 }
 end_branch_0:
 return __t0

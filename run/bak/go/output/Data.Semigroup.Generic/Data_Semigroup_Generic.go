@@ -70,7 +70,7 @@ func Get_genericSemigroupProduct() gopurs_runtime.Value {
 	once_genericSemigroupProduct.Do(func() {
 		genericSemigroupProduct = gopurs_runtime.Func2(func(dictGenericSemigroup_0 gopurs_runtime.Value, dictGenericSemigroup1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict1("genericAppend'", gopurs_runtime.Func2(func(v_2 gopurs_runtime.Value, v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Product"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericSemigroup_0, "genericAppend'"), gopurs_runtime.RecordGet(v_2, "value0"), gopurs_runtime.RecordGet(v1_3, "value0")), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericSemigroup1_1, "genericAppend'"), gopurs_runtime.RecordGet(v_2, "value1"), gopurs_runtime.RecordGet(v1_3, "value1")))
+return gopurs_runtime.Constructor2("Product", gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericSemigroup_0, "genericAppend'"), gopurs_runtime.ConstructorGet(v_2, 0), gopurs_runtime.ConstructorGet(v1_3, 0)), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericSemigroup1_1, "genericAppend'"), gopurs_runtime.ConstructorGet(v_2, 1), gopurs_runtime.ConstructorGet(v1_3, 1)))
 }))
 })
 	})

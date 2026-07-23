@@ -50,7 +50,7 @@ return gopurs_runtime.Apply3(Get_unsafeCoerce(), gopurs_runtime.Func(func(dictRe
 return gopurs_runtime.Apply(f_2, dictReflectable_3)
 }), gopurs_runtime.RecordDict1("reflectType", gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return s_1
-})), gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Proxy")))
+})), gopurs_runtime.Constructor0("Proxy"))
 })
 	})
 	return reifyType

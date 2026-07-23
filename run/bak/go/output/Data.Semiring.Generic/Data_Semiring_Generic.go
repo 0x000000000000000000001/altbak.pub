@@ -32,10 +32,10 @@ var once_genericSemiringNoArguments sync.Once
 func Get_genericSemiringNoArguments() gopurs_runtime.Value {
 	once_genericSemiringNoArguments.Do(func() {
 		genericSemiringNoArguments = gopurs_runtime.RecordDict4("genericAdd'", "genericZero'", "genericMul'", "genericOne'", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("NoArguments"))
-}), gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("NoArguments")), gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("NoArguments"))
-}), gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("NoArguments")))
+return gopurs_runtime.Constructor0("NoArguments")
+}), gopurs_runtime.Constructor0("NoArguments"), gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Constructor0("NoArguments")
+}), gopurs_runtime.Constructor0("NoArguments"))
 	})
 	return genericSemiringNoArguments
 }
@@ -136,10 +136,10 @@ genericOne_prime1_2_1 := gopurs_runtime.RecordGet(dictGenericSemiring_0, "generi
 _ = genericOne_prime1_2_1
 return gopurs_runtime.Func(func(dictGenericSemiring1_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict4("genericAdd'", "genericZero'", "genericMul'", "genericOne'", gopurs_runtime.Func2(func(v_4 gopurs_runtime.Value, v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Product"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericSemiring_0, "genericAdd'"), gopurs_runtime.RecordGet(v_4, "value0"), gopurs_runtime.RecordGet(v1_5, "value0")), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericSemiring1_3, "genericAdd'"), gopurs_runtime.RecordGet(v_4, "value1"), gopurs_runtime.RecordGet(v1_5, "value1")))
-}), gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Product"), genericZero_prime1_1_0, gopurs_runtime.RecordGet(dictGenericSemiring1_3, "genericZero'")), gopurs_runtime.Func2(func(v_4 gopurs_runtime.Value, v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Product"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericSemiring_0, "genericMul'"), gopurs_runtime.RecordGet(v_4, "value0"), gopurs_runtime.RecordGet(v1_5, "value0")), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericSemiring1_3, "genericMul'"), gopurs_runtime.RecordGet(v_4, "value1"), gopurs_runtime.RecordGet(v1_5, "value1")))
-}), gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Product"), genericOne_prime1_2_1, gopurs_runtime.RecordGet(dictGenericSemiring1_3, "genericOne'")))
+return gopurs_runtime.Constructor2("Product", gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericSemiring_0, "genericAdd'"), gopurs_runtime.ConstructorGet(v_4, 0), gopurs_runtime.ConstructorGet(v1_5, 0)), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericSemiring1_3, "genericAdd'"), gopurs_runtime.ConstructorGet(v_4, 1), gopurs_runtime.ConstructorGet(v1_5, 1)))
+}), gopurs_runtime.Constructor2("Product", genericZero_prime1_1_0, gopurs_runtime.RecordGet(dictGenericSemiring1_3, "genericZero'")), gopurs_runtime.Func2(func(v_4 gopurs_runtime.Value, v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Constructor2("Product", gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericSemiring_0, "genericMul'"), gopurs_runtime.ConstructorGet(v_4, 0), gopurs_runtime.ConstructorGet(v1_5, 0)), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericSemiring1_3, "genericMul'"), gopurs_runtime.ConstructorGet(v_4, 1), gopurs_runtime.ConstructorGet(v1_5, 1)))
+}), gopurs_runtime.Constructor2("Product", genericOne_prime1_2_1, gopurs_runtime.RecordGet(dictGenericSemiring1_3, "genericOne'")))
 })
 })
 	})

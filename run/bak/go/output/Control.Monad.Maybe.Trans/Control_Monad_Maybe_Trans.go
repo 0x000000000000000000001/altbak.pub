@@ -45,7 +45,7 @@ func Get_monadTransMaybeT() gopurs_runtime.Value {
 	once_monadTransMaybeT.Do(func() {
 		monadTransMaybeT = gopurs_runtime.RecordDict1("lift", gopurs_runtime.Func2(func(dictMonad_0 gopurs_runtime.Value, x_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Bind1"), gopurs_runtime.Value{}), "bind"), x_1, gopurs_runtime.Func(func(a_prime_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), a_prime_2))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.Constructor1("Just", a_prime_2))
 }))
 }))
 	})
@@ -72,15 +72,15 @@ return gopurs_runtime.RecordDict1("map", gopurs_runtime.Func2(func(f_1 gopurs_ru
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v1_3, "_tag").StrVal == "Just")).IntVal != 0 {
-__t0 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), gopurs_runtime.Apply(f_1, gopurs_runtime.RecordGet(v1_3, "value0")))
+if (gopurs_runtime.Bool(v1_3.StrVal == "Just")).IntVal != 0 {
+__t0 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Apply(f_1, gopurs_runtime.ConstructorGet(v1_3, 0)))
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
+__t0 = gopurs_runtime.Constructor0("Nothing")
 }
 end_branch_0:
 return __t0
@@ -115,16 +115,16 @@ return gopurs_runtime.RecordDict2("bind", "Apply0", gopurs_runtime.Func2(func(v_
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Bind1"), gopurs_runtime.Value{}), "bind"), v_1, gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v1_3, "_tag").StrVal == "Nothing")).IntVal != 0 {
-__t0 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing")))
+if (gopurs_runtime.Bool(v1_3.StrVal == "Nothing")).IntVal != 0 {
+__t0 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.Constructor0("Nothing"))
 goto end_branch_0
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v1_3, "_tag").StrVal == "Just")).IntVal != 0 {
-__t0 = gopurs_runtime.Apply(f_2, gopurs_runtime.RecordGet(v1_3, "value0"))
+if (gopurs_runtime.Bool(v1_3.StrVal == "Just")).IntVal != 0 {
+__t0 = gopurs_runtime.Apply(f_2, gopurs_runtime.ConstructorGet(v1_3, 0))
 goto end_branch_0
 } else {
 
@@ -155,15 +155,15 @@ functorMaybeT1_2_1 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func2(fun
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "map"), gopurs_runtime.Func(func(v1_4 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t2 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v1_4, "_tag").StrVal == "Just")).IntVal != 0 {
-__t2 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), gopurs_runtime.Apply(f_2, gopurs_runtime.RecordGet(v1_4, "value0")))
+if (gopurs_runtime.Bool(v1_4.StrVal == "Just")).IntVal != 0 {
+__t2 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Apply(f_2, gopurs_runtime.ConstructorGet(v1_4, 0)))
 goto end_branch_2
 } else {
 
 }
 }
 {
-__t2 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
+__t2 = gopurs_runtime.Constructor0("Nothing")
 }
 end_branch_2:
 return __t2
@@ -192,7 +192,7 @@ func Get_applicativeMaybeT() gopurs_runtime.Value {
 	once_applicativeMaybeT.Do(func() {
 		applicativeMaybeT = gopurs_runtime.Func(func(dictMonad_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict2("pure", "Apply0", gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), x_1))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.Constructor1("Just", x_1))
 }), gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(Get_applyMaybeT(), dictMonad_0)
 }))
@@ -234,7 +234,7 @@ return gopurs_runtime.Apply(Get_bindMaybeT(), Monad0_1_0)
 }))
 _ = monadMaybeT1_2_1
 return gopurs_runtime.RecordDict2("ask", "Monad0", gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Bind1"), gopurs_runtime.Value{}), "bind"), gopurs_runtime.RecordGet(dictMonadAsk_0, "ask"), gopurs_runtime.Func(func(a_prime_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), a_prime_3))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.Constructor1("Just", a_prime_3))
 })), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return monadMaybeT1_2_1
 }))
@@ -276,7 +276,7 @@ _ = monadMaybeT1_2_1
 return gopurs_runtime.RecordDict2("callCC", "Monad0", gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadCont_0, "callCC"), gopurs_runtime.Func(func(c_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(f_3, gopurs_runtime.Func(func(a_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(c_4, gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), a_5))
+return gopurs_runtime.Apply(c_4, gopurs_runtime.Constructor1("Just", a_5))
 }))
 }))
 }), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -302,7 +302,7 @@ return gopurs_runtime.Apply(Get_bindMaybeT(), Monad0_1_0)
 _ = monadMaybeT1_2_1
 return gopurs_runtime.RecordDict2("liftEffect", "Monad0", gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Bind1"), gopurs_runtime.Value{}), "bind"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), x_3), gopurs_runtime.Func(func(a_prime_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), a_prime_4))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.Constructor1("Just", a_prime_4))
 }))
 }), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return monadMaybeT1_2_1
@@ -330,27 +330,27 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadRec_0, "tailRecM")
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Bind1"), gopurs_runtime.Value{}), "bind"), gopurs_runtime.Apply(f_3, a_4), gopurs_runtime.Func(func(m_prime_5 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t2 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(m_prime_5, "_tag").StrVal == "Nothing")).IntVal != 0 {
-__t2 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Done"), gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing")))
+if (gopurs_runtime.Bool(m_prime_5.StrVal == "Nothing")).IntVal != 0 {
+__t2 = gopurs_runtime.Constructor1("Done", gopurs_runtime.Constructor0("Nothing"))
 goto end_branch_2
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(m_prime_5, "_tag").StrVal == "Just")).IntVal != 0 {
+if (gopurs_runtime.Bool(m_prime_5.StrVal == "Just")).IntVal != 0 {
 var __t3 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(m_prime_5, "value0"), "_tag").StrVal == "Loop")).IntVal != 0 {
-__t3 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Loop"), gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(m_prime_5, "value0"), "value0"))
+if (gopurs_runtime.Bool(gopurs_runtime.ConstructorGet(m_prime_5, 0).StrVal == "Loop")).IntVal != 0 {
+__t3 = gopurs_runtime.Constructor1("Loop", gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(m_prime_5, 0), 0))
 goto end_branch_3
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(m_prime_5, "value0"), "_tag").StrVal == "Done")).IntVal != 0 {
-__t3 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Done"), gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(m_prime_5, "value0"), "value0")))
+if (gopurs_runtime.Bool(gopurs_runtime.ConstructorGet(m_prime_5, 0).StrVal == "Done")).IntVal != 0 {
+__t3 = gopurs_runtime.Constructor1("Done", gopurs_runtime.Constructor1("Just", gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(m_prime_5, 0), 0)))
 goto end_branch_3
 } else {
 
@@ -396,7 +396,7 @@ return gopurs_runtime.Apply(Get_bindMaybeT(), Monad0_1_0)
 _ = monadMaybeT1_2_1
 return gopurs_runtime.RecordDict2("state", "Monad0", gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Bind1"), gopurs_runtime.Value{}), "bind"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadState_0, "state"), f_3), gopurs_runtime.Func(func(a_prime_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), a_prime_4))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.Constructor1("Just", a_prime_4))
 }))
 }), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return monadMaybeT1_2_1
@@ -423,7 +423,7 @@ return gopurs_runtime.Apply(Get_bindMaybeT(), Monad1_1_0)
 _ = monadMaybeT1_3_2
 return gopurs_runtime.RecordDict3("tell", "Semigroup0", "Monad1", gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad1_1_0, "Bind1"), gopurs_runtime.Value{}), "bind"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadTell_0, "tell"), x_4), gopurs_runtime.Func(func(a_prime_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad1_1_0, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), a_prime_5))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad1_1_0, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.Constructor1("Just", a_prime_5))
 }))
 }), gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return Semigroup0_2_1
@@ -456,15 +456,15 @@ return gopurs_runtime.RecordDict4("listen", "pass", "Monoid0", "MonadTell1", gop
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_2, "bind"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadWriter_0, "listen"), v_7), gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t6 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_8, "value0"), "_tag").StrVal == "Just")).IntVal != 0 {
-__t6 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v_8, "value0"), "value0"), gopurs_runtime.RecordGet(v_8, "value1")))
+if (gopurs_runtime.Bool(gopurs_runtime.ConstructorGet(v_8, 0).StrVal == "Just")).IntVal != 0 {
+__t6 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Constructor2("Tuple", gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(v_8, 0), 0), gopurs_runtime.ConstructorGet(v_8, 1)))
 goto end_branch_6
 } else {
 
 }
 }
 {
-__t6 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
+__t6 = gopurs_runtime.Constructor0("Nothing")
 }
 end_branch_6:
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_4_3, "pure"), __t6)
@@ -473,16 +473,16 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_4_3, "pure"), _
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadWriter_0, "pass"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_2, "bind"), v_7, gopurs_runtime.Func(func(a_8 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t7 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(a_8, "_tag").StrVal == "Nothing")).IntVal != 0 {
-__t7 = gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing")), gopurs_runtime.RecordGet(pkg_Control_Category.Get_categoryFn(), "identity"))
+if (gopurs_runtime.Bool(a_8.StrVal == "Nothing")).IntVal != 0 {
+__t7 = gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Constructor0("Nothing"), gopurs_runtime.RecordGet(pkg_Control_Category.Get_categoryFn(), "identity"))
 goto end_branch_7
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(a_8, "_tag").StrVal == "Just")).IntVal != 0 {
-__t7 = gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(a_8, "value0"), "value0")), gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(a_8, "value0"), "value1"))
+if (gopurs_runtime.Bool(a_8.StrVal == "Just")).IntVal != 0 {
+__t7 = gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Constructor1("Just", gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(a_8, 0), 0)), gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(a_8, 0), 1))
 goto end_branch_7
 } else {
 
@@ -519,7 +519,7 @@ return gopurs_runtime.Apply(Get_bindMaybeT(), Monad0_1_0)
 _ = monadMaybeT1_2_1
 return gopurs_runtime.RecordDict2("throwError", "Monad0", gopurs_runtime.Func(func(e_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Bind1"), gopurs_runtime.Value{}), "bind"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadThrow_0, "throwError"), e_3), gopurs_runtime.Func(func(a_prime_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), a_prime_4))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.Constructor1("Just", a_prime_4))
 }))
 }), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return monadMaybeT1_2_1
@@ -563,7 +563,7 @@ return gopurs_runtime.Apply(Get_bindMaybeT(), Monad0_1_0)
 _ = monadMaybeT1_2_1
 return gopurs_runtime.RecordDict2("liftST", "Monad0", gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Bind1"), gopurs_runtime.Value{}), "bind"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadST_0, "liftST"), x_3), gopurs_runtime.Func(func(a_prime_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), a_prime_4))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.Constructor1("Just", a_prime_4))
 }))
 }), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return monadMaybeT1_2_1
@@ -605,15 +605,15 @@ functorMaybeT1_3_2 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func2(fun
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_1, "map"), gopurs_runtime.Func(func(v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t3 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v1_5, "_tag").StrVal == "Just")).IntVal != 0 {
-__t3 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), gopurs_runtime.Apply(f_3, gopurs_runtime.RecordGet(v1_5, "value0")))
+if (gopurs_runtime.Bool(v1_5.StrVal == "Just")).IntVal != 0 {
+__t3 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Apply(f_3, gopurs_runtime.ConstructorGet(v1_5, 0)))
 goto end_branch_3
 } else {
 
 }
 }
 {
-__t3 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
+__t3 = gopurs_runtime.Constructor0("Nothing")
 }
 end_branch_3:
 return __t3
@@ -624,7 +624,7 @@ return gopurs_runtime.RecordDict2("alt", "Functor0", gopurs_runtime.Func2(func(v
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Bind1_1_0, "bind"), v_4, gopurs_runtime.Func(func(m_6 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t4 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(m_6, "_tag").StrVal == "Nothing")).IntVal != 0 {
+if (gopurs_runtime.Bool(m_6.StrVal == "Nothing")).IntVal != 0 {
 __t4 = v1_5
 goto end_branch_4
 } else {
@@ -658,15 +658,15 @@ functorMaybeT1_3_3 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func2(fun
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_1, "map"), gopurs_runtime.Func(func(v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t4 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v1_5, "_tag").StrVal == "Just")).IntVal != 0 {
-__t4 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), gopurs_runtime.Apply(f_3, gopurs_runtime.RecordGet(v1_5, "value0")))
+if (gopurs_runtime.Bool(v1_5.StrVal == "Just")).IntVal != 0 {
+__t4 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Apply(f_3, gopurs_runtime.ConstructorGet(v1_5, 0)))
 goto end_branch_4
 } else {
 
 }
 }
 {
-__t4 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
+__t4 = gopurs_runtime.Constructor0("Nothing")
 }
 end_branch_4:
 return __t4
@@ -677,7 +677,7 @@ altMaybeT1_3_2 := gopurs_runtime.RecordDict2("alt", "Functor0", gopurs_runtime.F
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Bind1_1_0, "bind"), v_4, gopurs_runtime.Func(func(m_6 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t5 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(m_6, "_tag").StrVal == "Nothing")).IntVal != 0 {
+if (gopurs_runtime.Bool(m_6.StrVal == "Nothing")).IntVal != 0 {
 __t5 = v1_5
 goto end_branch_5
 } else {
@@ -694,7 +694,7 @@ return __t5
 return functorMaybeT1_3_3
 }))
 _ = altMaybeT1_3_2
-return gopurs_runtime.RecordDict2("empty", "Alt0", gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))), gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict2("empty", "Alt0", gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.Constructor0("Nothing")), gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return altMaybeT1_3_2
 }))
 })

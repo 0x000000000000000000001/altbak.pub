@@ -180,7 +180,7 @@ return gopurs_runtime.Str("ignoreCase")
 return gopurs_runtime.Str("global")
 })), pkg_Data_Eq.Get_eqBoolean()), gopurs_runtime.Value{}, gopurs_runtime.RecordDict1("reflectSymbol", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Str("dotAll")
-})), pkg_Data_Eq.Get_eqBoolean()), "eqRecord"), gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Proxy"))))
+})), pkg_Data_Eq.Get_eqBoolean()), "eqRecord"), gopurs_runtime.Constructor0("Proxy")))
 	})
 	return eqRegexFlags
 }

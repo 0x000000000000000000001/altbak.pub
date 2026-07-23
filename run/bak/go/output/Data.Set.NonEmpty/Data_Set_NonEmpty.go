@@ -35,23 +35,23 @@ func Get_toUnfoldable1() gopurs_runtime.Value {
 	once_toUnfoldable1.Do(func() {
 		toUnfoldable1 = gopurs_runtime.Func(func(dictUnfoldable1_0 gopurs_runtime.Value) gopurs_runtime.Value {
 stepNext_1_0 := gopurs_runtime.Apply3(pkg_Data_Map_Internal.Get_stepWith(), pkg_Data_Map_Internal.Get_iterMapL(), gopurs_runtime.Func3(func(k_1 gopurs_runtime.Value, v_2 gopurs_runtime.Value, next_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), k_1, next_3))
+return gopurs_runtime.Constructor1("Just", gopurs_runtime.Constructor2("Tuple", k_1, next_3))
 }), gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
+return gopurs_runtime.Constructor0("Nothing")
 }))
 _ = stepNext_1_0
 __local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictUnfoldable1_0, "unfoldr1"), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), gopurs_runtime.RecordGet(v_2, "value0"), gopurs_runtime.Apply(stepNext_1_0, gopurs_runtime.RecordGet(v_2, "value1")))
+return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.ConstructorGet(v_2, 0), gopurs_runtime.Apply(stepNext_1_0, gopurs_runtime.ConstructorGet(v_2, 1)))
 }))
 _ = __local_var_2_1
 __local_var_3_2 := gopurs_runtime.Apply3(pkg_Data_Map_Internal.Get_stepWith(), pkg_Data_Map_Internal.Get_iterMapL(), gopurs_runtime.Func3(func(k_3 gopurs_runtime.Value, v_4 gopurs_runtime.Value, next_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), k_3, next_5)
+return gopurs_runtime.Constructor2("Tuple", k_3, next_5)
 }), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(pkg_Partial.Get__crashWith(), gopurs_runtime.Str("toUnfoldable1: impossible"))
 }))
 _ = __local_var_3_2
 return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(__local_var_2_1, gopurs_runtime.Apply(__local_var_3_2, gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("IterNode"), x_4, gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("IterLeaf")))))
+return gopurs_runtime.Apply(__local_var_2_1, gopurs_runtime.Apply(__local_var_3_2, gopurs_runtime.Constructor2("IterNode", x_4, gopurs_runtime.Constructor0("IterLeaf"))))
 })
 })
 	})
@@ -84,16 +84,16 @@ func Get_toUnfoldable() gopurs_runtime.Value {
 __local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictUnfoldable_0, "unfoldr"), gopurs_runtime.Func(func(xs_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(xs_1, "_tag").StrVal == "Nil")).IntVal != 0 {
-__t1 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
+if (gopurs_runtime.Bool(xs_1.StrVal == "Nil")).IntVal != 0 {
+__t1 = gopurs_runtime.Constructor0("Nothing")
 goto end_branch_1
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(xs_1, "_tag").StrVal == "Cons")).IntVal != 0 {
-__t1 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), gopurs_runtime.RecordGet(xs_1, "value0"), gopurs_runtime.RecordGet(xs_1, "value1")))
+if (gopurs_runtime.Bool(xs_1.StrVal == "Cons")).IntVal != 0 {
+__t1 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Constructor2("Tuple", gopurs_runtime.ConstructorGet(xs_1, 0), gopurs_runtime.ConstructorGet(xs_1, 1)))
 goto end_branch_1
 } else {
 
@@ -112,7 +112,7 @@ _ = go__3_2
 go__3_2 = gopurs_runtime.Func2(func(m_prime_4 gopurs_runtime.Value, z_prime_5 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t3 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(m_prime_4, "_tag").StrVal == "Leaf")).IntVal != 0 {
+if (gopurs_runtime.Bool(m_prime_4.StrVal == "Leaf")).IntVal != 0 {
 __t3 = z_prime_5
 goto end_branch_3
 } else {
@@ -120,8 +120,8 @@ goto end_branch_3
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(m_prime_4, "_tag").StrVal == "Node")).IntVal != 0 {
-__t3 = gopurs_runtime.UncurriedApp2(go__3_2, gopurs_runtime.RecordGet(m_prime_4, "value4"), gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Cons"), gopurs_runtime.RecordGet(m_prime_4, "value2"), gopurs_runtime.UncurriedApp2(go__3_2, gopurs_runtime.RecordGet(m_prime_4, "value5"), z_prime_5)))
+if (gopurs_runtime.Bool(m_prime_4.StrVal == "Node")).IntVal != 0 {
+__t3 = gopurs_runtime.UncurriedApp2(go__3_2, gopurs_runtime.ConstructorGet(m_prime_4, 4), gopurs_runtime.Constructor2("Cons", gopurs_runtime.ConstructorGet(m_prime_4, 2), gopurs_runtime.UncurriedApp2(go__3_2, gopurs_runtime.ConstructorGet(m_prime_4, 5), z_prime_5)))
 goto end_branch_3
 } else {
 
@@ -133,7 +133,7 @@ __t3 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 end_branch_3:
 return __t3
 })
-return gopurs_runtime.Apply(__local_var_1_0, gopurs_runtime.UncurriedApp2(go__3_2, x_2, gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nil"))))
+return gopurs_runtime.Apply(__local_var_1_0, gopurs_runtime.UncurriedApp2(go__3_2, x_2, gopurs_runtime.Constructor0("Nil")))
 })
 })
 	})
@@ -159,7 +159,7 @@ func Get_subset() gopurs_runtime.Value {
 compare_1_0 := gopurs_runtime.RecordGet(dictOrd_0, "compare")
 _ = compare_1_0
 return gopurs_runtime.Func2(func(s1_2 gopurs_runtime.Value, s2_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(gopurs_runtime.RecordGet(gopurs_runtime.UncurriedApp3(pkg_Data_Map_Internal.Get_unsafeDifference(), compare_1_0, s1_2, s2_3), "_tag").StrVal == "Leaf")
+return gopurs_runtime.Bool(gopurs_runtime.UncurriedApp3(pkg_Data_Map_Internal.Get_unsafeDifference(), compare_1_0, s1_2, s2_3).StrVal == "Leaf")
 })
 })
 	})
@@ -252,8 +252,8 @@ __local_var_1_0 := gopurs_runtime.Apply(pkg_Data_Map_Internal.Get_findMin(), v_0
 _ = __local_var_1_0
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_1_0, "_tag").StrVal == "Just")).IntVal != 0 {
-__t1 = gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(__local_var_1_0, "value0"), "key")
+if (gopurs_runtime.Bool(__local_var_1_0.StrVal == "Just")).IntVal != 0 {
+__t1 = gopurs_runtime.RecordGet(gopurs_runtime.ConstructorGet(__local_var_1_0, 0), "key")
 goto end_branch_1
 } else {
 
@@ -284,7 +284,7 @@ var v_3 = v_3_loop
 _ = v_3
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_3, "_tag").StrVal == "Leaf")).IntVal != 0 {
+if (gopurs_runtime.Bool(v_3.StrVal == "Leaf")).IntVal != 0 {
 __t1 = gopurs_runtime.Bool(false)
 goto end_branch_1
 } else {
@@ -292,13 +292,13 @@ goto end_branch_1
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_3, "_tag").StrVal == "Node")).IntVal != 0 {
-v1_4_2 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), k_1, gopurs_runtime.RecordGet(v_3, "value2"))
+if (gopurs_runtime.Bool(v_3.StrVal == "Node")).IntVal != 0 {
+v1_4_2 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), k_1, gopurs_runtime.ConstructorGet(v_3, 2))
 _ = v1_4_2
 var __t3 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v1_4_2, "_tag").StrVal == "LT")).IntVal != 0 {
-v_3_loop = gopurs_runtime.RecordGet(v_3, "value4")
+if (gopurs_runtime.Bool(v1_4_2.StrVal == "LT")).IntVal != 0 {
+v_3_loop = gopurs_runtime.ConstructorGet(v_3, 4)
 continue go__2_0
 __t3 = gopurs_runtime.Value{}
 goto end_branch_3
@@ -307,8 +307,8 @@ goto end_branch_3
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v1_4_2, "_tag").StrVal == "GT")).IntVal != 0 {
-v_3_loop = gopurs_runtime.RecordGet(v_3, "value5")
+if (gopurs_runtime.Bool(v1_4_2.StrVal == "GT")).IntVal != 0 {
+v_3_loop = gopurs_runtime.ConstructorGet(v_3, 5)
 continue go__2_0
 __t3 = gopurs_runtime.Value{}
 goto end_branch_3
@@ -317,7 +317,7 @@ goto end_branch_3
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v1_4_2, "_tag").StrVal == "EQ")).IntVal != 0 {
+if (gopurs_runtime.Bool(v1_4_2.StrVal == "EQ")).IntVal != 0 {
 __t3 = gopurs_runtime.Bool(true)
 goto end_branch_3
 } else {
@@ -357,8 +357,8 @@ __local_var_1_0 := gopurs_runtime.Apply(pkg_Data_Map_Internal.Get_findMax(), v_0
 _ = __local_var_1_0
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_1_0, "_tag").StrVal == "Just")).IntVal != 0 {
-__t1 = gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(__local_var_1_0, "value0"), "key")
+if (gopurs_runtime.Bool(__local_var_1_0.StrVal == "Just")).IntVal != 0 {
+__t1 = gopurs_runtime.RecordGet(gopurs_runtime.ConstructorGet(__local_var_1_0, 0), "key")
 goto end_branch_1
 } else {
 
@@ -414,15 +414,15 @@ func Get_fromSet() gopurs_runtime.Value {
 		fromSet = gopurs_runtime.Func(func(s_0 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(s_0, "_tag").StrVal == "Leaf")).IntVal != 0 {
-__t0 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
+if (gopurs_runtime.Bool(s_0.StrVal == "Leaf")).IntVal != 0 {
+__t0 = gopurs_runtime.Constructor0("Nothing")
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), s_0)
+__t0 = gopurs_runtime.Constructor1("Just", s_0)
 }
 end_branch_0:
 return __t0
@@ -443,15 +443,15 @@ __local_var_4_1 := gopurs_runtime.UncurriedApp4(pkg_Data_Map_Internal.Get_unsafe
 _ = __local_var_4_1
 var __t2 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_4_1, "_tag").StrVal == "Leaf")).IntVal != 0 {
-__t2 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
+if (gopurs_runtime.Bool(__local_var_4_1.StrVal == "Leaf")).IntVal != 0 {
+__t2 = gopurs_runtime.Constructor0("Nothing")
 goto end_branch_2
 } else {
 
 }
 }
 {
-__t2 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), __local_var_4_1)
+__t2 = gopurs_runtime.Constructor1("Just", __local_var_4_1)
 }
 end_branch_2:
 return __t2
@@ -483,22 +483,22 @@ func Get_fromFoldable() gopurs_runtime.Value {
 		fromFoldable = gopurs_runtime.Func2(func(dictFoldable_0 gopurs_runtime.Value, dictOrd_1 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_2_0 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFoldable_0, "foldl"), gopurs_runtime.Func2(func(m_2 gopurs_runtime.Value, a_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply4(pkg_Data_Map_Internal.Get_insert(), dictOrd_1, a_3, pkg_Data_Unit.Get_unit(), m_2)
-}), gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Leaf")))
+}), gopurs_runtime.Constructor0("Leaf"))
 _ = __local_var_2_0
 return gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_4_1 := gopurs_runtime.Apply(__local_var_2_0, x_3)
 _ = __local_var_4_1
 var __t2 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_4_1, "_tag").StrVal == "Leaf")).IntVal != 0 {
-__t2 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
+if (gopurs_runtime.Bool(__local_var_4_1.StrVal == "Leaf")).IntVal != 0 {
+__t2 = gopurs_runtime.Constructor0("Nothing")
 goto end_branch_2
 } else {
 
 }
 }
 {
-__t2 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), __local_var_4_1)
+__t2 = gopurs_runtime.Constructor1("Just", __local_var_4_1)
 }
 end_branch_2:
 return __t2
@@ -595,15 +595,15 @@ __local_var_4_1 := gopurs_runtime.UncurriedApp3(pkg_Data_Map_Internal.Get_unsafe
 _ = __local_var_4_1
 var __t2 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_4_1, "_tag").StrVal == "Leaf")).IntVal != 0 {
-__t2 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
+if (gopurs_runtime.Bool(__local_var_4_1.StrVal == "Leaf")).IntVal != 0 {
+__t2 = gopurs_runtime.Constructor0("Nothing")
 goto end_branch_2
 } else {
 
 }
 }
 {
-__t2 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), __local_var_4_1)
+__t2 = gopurs_runtime.Constructor1("Just", __local_var_4_1)
 }
 end_branch_2:
 return __t2
@@ -622,15 +622,15 @@ __local_var_3_0 := gopurs_runtime.Apply3(pkg_Data_Map_Internal.Get_delete_(), di
 _ = __local_var_3_0
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_3_0, "_tag").StrVal == "Leaf")).IntVal != 0 {
-__t1 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
+if (gopurs_runtime.Bool(__local_var_3_0.StrVal == "Leaf")).IntVal != 0 {
+__t1 = gopurs_runtime.Constructor0("Nothing")
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), __local_var_3_0)
+__t1 = gopurs_runtime.Constructor1("Just", __local_var_3_0)
 }
 end_branch_1:
 return __t1

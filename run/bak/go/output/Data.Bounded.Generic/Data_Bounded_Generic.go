@@ -9,7 +9,7 @@ var genericTopNoArguments gopurs_runtime.Value
 var once_genericTopNoArguments sync.Once
 func Get_genericTopNoArguments() gopurs_runtime.Value {
 	once_genericTopNoArguments.Do(func() {
-		genericTopNoArguments = gopurs_runtime.RecordDict1("genericTop'", gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("NoArguments")))
+		genericTopNoArguments = gopurs_runtime.RecordDict1("genericTop'", gopurs_runtime.Constructor0("NoArguments"))
 	})
 	return genericTopNoArguments
 }
@@ -55,7 +55,7 @@ func Get_genericTopProduct() gopurs_runtime.Value {
 genericTop_prime1_1_0 := gopurs_runtime.RecordGet(dictGenericTop_0, "genericTop'")
 _ = genericTop_prime1_1_0
 return gopurs_runtime.Func(func(dictGenericTop1_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("genericTop'", gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Product"), genericTop_prime1_1_0, gopurs_runtime.RecordGet(dictGenericTop1_2, "genericTop'")))
+return gopurs_runtime.RecordDict1("genericTop'", gopurs_runtime.Constructor2("Product", genericTop_prime1_1_0, gopurs_runtime.RecordGet(dictGenericTop1_2, "genericTop'")))
 })
 })
 	})
@@ -67,7 +67,7 @@ var once_genericTopSum sync.Once
 func Get_genericTopSum() gopurs_runtime.Value {
 	once_genericTopSum.Do(func() {
 		genericTopSum = gopurs_runtime.Func(func(dictGenericTop_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("genericTop'", gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Inr"), gopurs_runtime.RecordGet(dictGenericTop_0, "genericTop'")))
+return gopurs_runtime.RecordDict1("genericTop'", gopurs_runtime.Constructor1("Inr", gopurs_runtime.RecordGet(dictGenericTop_0, "genericTop'")))
 })
 	})
 	return genericTopSum
@@ -88,7 +88,7 @@ var genericBottomNoArguments gopurs_runtime.Value
 var once_genericBottomNoArguments sync.Once
 func Get_genericBottomNoArguments() gopurs_runtime.Value {
 	once_genericBottomNoArguments.Do(func() {
-		genericBottomNoArguments = gopurs_runtime.RecordDict1("genericBottom'", gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("NoArguments")))
+		genericBottomNoArguments = gopurs_runtime.RecordDict1("genericBottom'", gopurs_runtime.Constructor0("NoArguments"))
 	})
 	return genericBottomNoArguments
 }
@@ -134,7 +134,7 @@ func Get_genericBottomProduct() gopurs_runtime.Value {
 genericBottom_prime1_1_0 := gopurs_runtime.RecordGet(dictGenericBottom_0, "genericBottom'")
 _ = genericBottom_prime1_1_0
 return gopurs_runtime.Func(func(dictGenericBottom1_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("genericBottom'", gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Product"), genericBottom_prime1_1_0, gopurs_runtime.RecordGet(dictGenericBottom1_2, "genericBottom'")))
+return gopurs_runtime.RecordDict1("genericBottom'", gopurs_runtime.Constructor2("Product", genericBottom_prime1_1_0, gopurs_runtime.RecordGet(dictGenericBottom1_2, "genericBottom'")))
 })
 })
 	})
@@ -146,7 +146,7 @@ var once_genericBottomSum sync.Once
 func Get_genericBottomSum() gopurs_runtime.Value {
 	once_genericBottomSum.Do(func() {
 		genericBottomSum = gopurs_runtime.Func(func(dictGenericBottom_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("genericBottom'", gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Inl"), gopurs_runtime.RecordGet(dictGenericBottom_0, "genericBottom'")))
+return gopurs_runtime.RecordDict1("genericBottom'", gopurs_runtime.Constructor1("Inl", gopurs_runtime.RecordGet(dictGenericBottom_0, "genericBottom'")))
 })
 	})
 	return genericBottomSum

@@ -10,7 +10,7 @@ var once_genericOrdNoConstructors sync.Once
 func Get_genericOrdNoConstructors() gopurs_runtime.Value {
 	once_genericOrdNoConstructors.Do(func() {
 		genericOrdNoConstructors = gopurs_runtime.RecordDict1("genericCompare'", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("EQ"))
+return gopurs_runtime.Constructor0("EQ")
 }))
 	})
 	return genericOrdNoConstructors
@@ -21,7 +21,7 @@ var once_genericOrdNoArguments sync.Once
 func Get_genericOrdNoArguments() gopurs_runtime.Value {
 	once_genericOrdNoArguments.Do(func() {
 		genericOrdNoArguments = gopurs_runtime.RecordDict1("genericCompare'", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("EQ"))
+return gopurs_runtime.Constructor0("EQ")
 }))
 	})
 	return genericOrdNoArguments
@@ -70,12 +70,12 @@ func Get_genericOrdProduct() gopurs_runtime.Value {
 	once_genericOrdProduct.Do(func() {
 		genericOrdProduct = gopurs_runtime.Func2(func(dictGenericOrd_0 gopurs_runtime.Value, dictGenericOrd1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict1("genericCompare'", gopurs_runtime.Func2(func(v_2 gopurs_runtime.Value, v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
-v2_4_0 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericOrd_0, "genericCompare'"), gopurs_runtime.RecordGet(v_2, "value0"), gopurs_runtime.RecordGet(v1_3, "value0"))
+v2_4_0 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericOrd_0, "genericCompare'"), gopurs_runtime.ConstructorGet(v_2, 0), gopurs_runtime.ConstructorGet(v1_3, 0))
 _ = v2_4_0
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v2_4_0, "_tag").StrVal == "EQ")).IntVal != 0 {
-__t1 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericOrd1_1, "genericCompare'"), gopurs_runtime.RecordGet(v_2, "value1"), gopurs_runtime.RecordGet(v1_3, "value1"))
+if (gopurs_runtime.Bool(v2_4_0.StrVal == "EQ")).IntVal != 0 {
+__t1 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericOrd1_1, "genericCompare'"), gopurs_runtime.ConstructorGet(v_2, 1), gopurs_runtime.ConstructorGet(v1_3, 1))
 goto end_branch_1
 } else {
 
@@ -100,19 +100,19 @@ func Get_genericOrdSum() gopurs_runtime.Value {
 return gopurs_runtime.RecordDict1("genericCompare'", gopurs_runtime.Func2(func(v_2 gopurs_runtime.Value, v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_2, "_tag").StrVal == "Inl")).IntVal != 0 {
+if (gopurs_runtime.Bool(v_2.StrVal == "Inl")).IntVal != 0 {
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v1_3, "_tag").StrVal == "Inl")).IntVal != 0 {
-__t1 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericOrd_0, "genericCompare'"), gopurs_runtime.RecordGet(v_2, "value0"), gopurs_runtime.RecordGet(v1_3, "value0"))
+if (gopurs_runtime.Bool(v1_3.StrVal == "Inl")).IntVal != 0 {
+__t1 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericOrd_0, "genericCompare'"), gopurs_runtime.ConstructorGet(v_2, 0), gopurs_runtime.ConstructorGet(v1_3, 0))
 goto end_branch_1
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v1_3, "_tag").StrVal == "Inr")).IntVal != 0 {
-__t1 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("LT"))
+if (gopurs_runtime.Bool(v1_3.StrVal == "Inr")).IntVal != 0 {
+__t1 = gopurs_runtime.Constructor0("LT")
 goto end_branch_1
 } else {
 
@@ -129,19 +129,19 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_2, "_tag").StrVal == "Inr")).IntVal != 0 {
+if (gopurs_runtime.Bool(v_2.StrVal == "Inr")).IntVal != 0 {
 var __t2 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v1_3, "_tag").StrVal == "Inr")).IntVal != 0 {
-__t2 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericOrd1_1, "genericCompare'"), gopurs_runtime.RecordGet(v_2, "value0"), gopurs_runtime.RecordGet(v1_3, "value0"))
+if (gopurs_runtime.Bool(v1_3.StrVal == "Inr")).IntVal != 0 {
+__t2 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericOrd1_1, "genericCompare'"), gopurs_runtime.ConstructorGet(v_2, 0), gopurs_runtime.ConstructorGet(v1_3, 0))
 goto end_branch_2
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v1_3, "_tag").StrVal == "Inl")).IntVal != 0 {
-__t2 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("GT"))
+if (gopurs_runtime.Bool(v1_3.StrVal == "Inl")).IntVal != 0 {
+__t2 = gopurs_runtime.Constructor0("GT")
 goto end_branch_2
 } else {
 

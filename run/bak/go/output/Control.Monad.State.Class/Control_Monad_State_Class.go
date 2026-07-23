@@ -23,7 +23,7 @@ func Get_put() gopurs_runtime.Value {
 	once_put.Do(func() {
 		put = gopurs_runtime.Func2(func(dictMonadState_0 gopurs_runtime.Value, s_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadState_0, "state"), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), pkg_Data_Unit.Get_unit(), s_1)
+return gopurs_runtime.Constructor2("Tuple", pkg_Data_Unit.Get_unit(), s_1)
 }))
 })
 	})
@@ -36,7 +36,7 @@ func Get_modify_() gopurs_runtime.Value {
 	once_modify_.Do(func() {
 		modify_ = gopurs_runtime.Func2(func(dictMonadState_0 gopurs_runtime.Value, f_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadState_0, "state"), gopurs_runtime.Func(func(s_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), pkg_Data_Unit.Get_unit(), gopurs_runtime.Apply(f_1, s_2))
+return gopurs_runtime.Constructor2("Tuple", pkg_Data_Unit.Get_unit(), gopurs_runtime.Apply(f_1, s_2))
 }))
 })
 	})
@@ -51,7 +51,7 @@ func Get_modify() gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadState_0, "state"), gopurs_runtime.Func(func(s_2 gopurs_runtime.Value) gopurs_runtime.Value {
 s_prime_3_0 := gopurs_runtime.Apply(f_1, s_2)
 _ = s_prime_3_0
-return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), s_prime_3_0, s_prime_3_0)
+return gopurs_runtime.Constructor2("Tuple", s_prime_3_0, s_prime_3_0)
 }))
 })
 	})
@@ -64,7 +64,7 @@ func Get_gets() gopurs_runtime.Value {
 	once_gets.Do(func() {
 		gets = gopurs_runtime.Func2(func(dictMonadState_0 gopurs_runtime.Value, f_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadState_0, "state"), gopurs_runtime.Func(func(s_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), gopurs_runtime.Apply(f_1, s_2), s_2)
+return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply(f_1, s_2), s_2)
 }))
 })
 	})
@@ -77,7 +77,7 @@ func Get_get() gopurs_runtime.Value {
 	once_get.Do(func() {
 		get = gopurs_runtime.Func(func(dictMonadState_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadState_0, "state"), gopurs_runtime.Func(func(s_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), s_1, s_1)
+return gopurs_runtime.Constructor2("Tuple", s_1, s_1)
 }))
 })
 	})

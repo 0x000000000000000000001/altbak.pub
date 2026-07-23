@@ -35,15 +35,15 @@ v_5_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Enum1_3_1, "succ"), gopur
 _ = v_5_3
 var __t4 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_5_3, "_tag").StrVal == "Just")).IntVal != 0 {
-__t4 = gopurs_runtime.Apply(elements_1_0, gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("NonEmpty"), gopurs_runtime.RecordGet(Bounded0_4_2, "bottom"), gopurs_runtime.Apply4(pkg_Data_Enum.Get_enumFromTo(), Enum1_3_1, pkg_Data_Unfoldable1.Get_unfoldable1Array(), gopurs_runtime.RecordGet(v_5_3, "value0"), gopurs_runtime.RecordGet(Bounded0_4_2, "top"))))
+if (gopurs_runtime.Bool(v_5_3.StrVal == "Just")).IntVal != 0 {
+__t4 = gopurs_runtime.Apply(elements_1_0, gopurs_runtime.Constructor2("NonEmpty", gopurs_runtime.RecordGet(Bounded0_4_2, "bottom"), gopurs_runtime.Apply4(pkg_Data_Enum.Get_enumFromTo(), Enum1_3_1, pkg_Data_Unfoldable1.Get_unfoldable1Array(), gopurs_runtime.ConstructorGet(v_5_3, 0), gopurs_runtime.RecordGet(Bounded0_4_2, "top"))))
 goto end_branch_4
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_5_3, "_tag").StrVal == "Nothing")).IntVal != 0 {
+if (gopurs_runtime.Bool(v_5_3.StrVal == "Nothing")).IntVal != 0 {
 __t4 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadGen_0, "Monad0"), gopurs_runtime.Value{}), "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.RecordGet(Bounded0_4_2, "bottom"))
 goto end_branch_4
 } else {

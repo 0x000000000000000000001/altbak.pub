@@ -17,7 +17,7 @@ func Get_Time() gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict5("_tag", "value0", "value1", "value2", "value3", gopurs_runtime.Str("Time"), value0, value1, value2, value3)
+return gopurs_runtime.Constructor4("Time", value0, value1, value2, value3)
 })
 })
 })
@@ -31,7 +31,7 @@ var once_showTime sync.Once
 func Get_showTime() gopurs_runtime.Value {
 	once_showTime.Do(func() {
 		showTime = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str("(Time (Hour ").StrVal + gopurs_runtime.Apply(pkg_Data_Show.Get_showIntImpl(), gopurs_runtime.RecordGet(v_0, "value0")).StrVal).StrVal + gopurs_runtime.Str(") (Minute ").StrVal).StrVal + gopurs_runtime.Apply(pkg_Data_Show.Get_showIntImpl(), gopurs_runtime.RecordGet(v_0, "value1")).StrVal).StrVal + gopurs_runtime.Str(") (Second ").StrVal).StrVal + gopurs_runtime.Apply(pkg_Data_Show.Get_showIntImpl(), gopurs_runtime.RecordGet(v_0, "value2")).StrVal).StrVal + gopurs_runtime.Str(") (Millisecond ").StrVal).StrVal + gopurs_runtime.Apply(pkg_Data_Show.Get_showIntImpl(), gopurs_runtime.RecordGet(v_0, "value3")).StrVal).StrVal + gopurs_runtime.Str("))").StrVal)
+return gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str("(Time (Hour ").StrVal + gopurs_runtime.Apply(pkg_Data_Show.Get_showIntImpl(), gopurs_runtime.ConstructorGet(v_0, 0)).StrVal).StrVal + gopurs_runtime.Str(") (Minute ").StrVal).StrVal + gopurs_runtime.Apply(pkg_Data_Show.Get_showIntImpl(), gopurs_runtime.ConstructorGet(v_0, 1)).StrVal).StrVal + gopurs_runtime.Str(") (Second ").StrVal).StrVal + gopurs_runtime.Apply(pkg_Data_Show.Get_showIntImpl(), gopurs_runtime.ConstructorGet(v_0, 2)).StrVal).StrVal + gopurs_runtime.Str(") (Millisecond ").StrVal).StrVal + gopurs_runtime.Apply(pkg_Data_Show.Get_showIntImpl(), gopurs_runtime.ConstructorGet(v_0, 3)).StrVal).StrVal + gopurs_runtime.Str("))").StrVal)
 }))
 	})
 	return showTime
@@ -42,7 +42,7 @@ var once_setSecond sync.Once
 func Get_setSecond() gopurs_runtime.Value {
 	once_setSecond.Do(func() {
 		setSecond = gopurs_runtime.Func2(func(s_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict5("_tag", "value0", "value1", "value2", "value3", gopurs_runtime.Str("Time"), gopurs_runtime.RecordGet(v_1, "value0"), gopurs_runtime.RecordGet(v_1, "value1"), s_0, gopurs_runtime.RecordGet(v_1, "value3"))
+return gopurs_runtime.Constructor4("Time", gopurs_runtime.ConstructorGet(v_1, 0), gopurs_runtime.ConstructorGet(v_1, 1), s_0, gopurs_runtime.ConstructorGet(v_1, 3))
 })
 	})
 	return setSecond
@@ -53,7 +53,7 @@ var once_setMinute sync.Once
 func Get_setMinute() gopurs_runtime.Value {
 	once_setMinute.Do(func() {
 		setMinute = gopurs_runtime.Func2(func(m_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict5("_tag", "value0", "value1", "value2", "value3", gopurs_runtime.Str("Time"), gopurs_runtime.RecordGet(v_1, "value0"), m_0, gopurs_runtime.RecordGet(v_1, "value2"), gopurs_runtime.RecordGet(v_1, "value3"))
+return gopurs_runtime.Constructor4("Time", gopurs_runtime.ConstructorGet(v_1, 0), m_0, gopurs_runtime.ConstructorGet(v_1, 2), gopurs_runtime.ConstructorGet(v_1, 3))
 })
 	})
 	return setMinute
@@ -64,7 +64,7 @@ var once_setMillisecond sync.Once
 func Get_setMillisecond() gopurs_runtime.Value {
 	once_setMillisecond.Do(func() {
 		setMillisecond = gopurs_runtime.Func2(func(ms_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict5("_tag", "value0", "value1", "value2", "value3", gopurs_runtime.Str("Time"), gopurs_runtime.RecordGet(v_1, "value0"), gopurs_runtime.RecordGet(v_1, "value1"), gopurs_runtime.RecordGet(v_1, "value2"), ms_0)
+return gopurs_runtime.Constructor4("Time", gopurs_runtime.ConstructorGet(v_1, 0), gopurs_runtime.ConstructorGet(v_1, 1), gopurs_runtime.ConstructorGet(v_1, 2), ms_0)
 })
 	})
 	return setMillisecond
@@ -75,7 +75,7 @@ var once_setHour sync.Once
 func Get_setHour() gopurs_runtime.Value {
 	once_setHour.Do(func() {
 		setHour = gopurs_runtime.Func2(func(h_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict5("_tag", "value0", "value1", "value2", "value3", gopurs_runtime.Str("Time"), h_0, gopurs_runtime.RecordGet(v_1, "value1"), gopurs_runtime.RecordGet(v_1, "value2"), gopurs_runtime.RecordGet(v_1, "value3"))
+return gopurs_runtime.Constructor4("Time", h_0, gopurs_runtime.ConstructorGet(v_1, 1), gopurs_runtime.ConstructorGet(v_1, 2), gopurs_runtime.ConstructorGet(v_1, 3))
 })
 	})
 	return setHour
@@ -86,7 +86,7 @@ var once_second sync.Once
 func Get_second() gopurs_runtime.Value {
 	once_second.Do(func() {
 		second = gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(v_0, "value2")
+return gopurs_runtime.ConstructorGet(v_0, 2)
 })
 	})
 	return second
@@ -97,7 +97,7 @@ var once_minute sync.Once
 func Get_minute() gopurs_runtime.Value {
 	once_minute.Do(func() {
 		minute = gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(v_0, "value1")
+return gopurs_runtime.ConstructorGet(v_0, 1)
 })
 	})
 	return minute
@@ -108,7 +108,7 @@ var once_millisecond sync.Once
 func Get_millisecond() gopurs_runtime.Value {
 	once_millisecond.Do(func() {
 		millisecond = gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(v_0, "value3")
+return gopurs_runtime.ConstructorGet(v_0, 3)
 })
 	})
 	return millisecond
@@ -130,21 +130,21 @@ _ = __local_var_4_3
 var __t5 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(gopurs_runtime.Bool(__local_var_4_3.IntVal >= gopurs_runtime.Int(0).IntVal).IntVal != 0 && gopurs_runtime.Bool(__local_var_4_3.IntVal <= gopurs_runtime.Int(23).IntVal).IntVal != 0)).IntVal != 0 {
-__t5 = gopurs_runtime.RecordDict2("_tag", "value0", gopurs_runtime.Str("Just"), __local_var_4_3)
+__t5 = gopurs_runtime.Constructor1("Just", __local_var_4_3)
 goto end_branch_5
 } else {
 
 }
 }
 {
-__t5 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nothing"))
+__t5 = gopurs_runtime.Constructor0("Nothing")
 }
 end_branch_5:
 __local_var_5_4 := __t5
 _ = __local_var_5_4
 var __t20 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_5_4, "_tag").StrVal == "Just")).IntVal != 0 {
+if (gopurs_runtime.Bool(__local_var_5_4.StrVal == "Just")).IntVal != 0 {
 __local_var_6_21 := gopurs_runtime.Apply(pkg_Data_Int.Get_unsafeClamp(), gopurs_runtime.Apply(pkg_Data_Number.Get_floor(), minutes_2_1))
 _ = __local_var_6_21
 var __t28 gopurs_runtime.Value
@@ -160,7 +160,7 @@ _ = __local_var_8_33
 var __t34 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(gopurs_runtime.Bool(__local_var_8_33.IntVal >= gopurs_runtime.Int(0).IntVal).IntVal != 0 && gopurs_runtime.Bool(__local_var_8_33.IntVal <= gopurs_runtime.Int(999).IntVal).IntVal != 0)).IntVal != 0 {
-__t34 = gopurs_runtime.RecordDict5("_tag", "value0", "value1", "value2", "value3", gopurs_runtime.Str("Time"), gopurs_runtime.RecordGet(__local_var_5_4, "value0"), __local_var_6_21, __local_var_7_29, __local_var_8_33)
+__t34 = gopurs_runtime.Constructor4("Time", gopurs_runtime.ConstructorGet(__local_var_5_4, 0), __local_var_6_21, __local_var_7_29, __local_var_8_33)
 goto end_branch_34
 } else {
 
@@ -376,7 +376,7 @@ var once_hour sync.Once
 func Get_hour() gopurs_runtime.Value {
 	once_hour.Do(func() {
 		hour = gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(v_0, "value0")
+return gopurs_runtime.ConstructorGet(v_0, 0)
 })
 	})
 	return hour
@@ -387,7 +387,7 @@ var once_timeToMillis sync.Once
 func Get_timeToMillis() gopurs_runtime.Value {
 	once_timeToMillis.Do(func() {
 		timeToMillis = gopurs_runtime.Func(func(t_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.FloatAdd(gopurs_runtime.FloatAdd(gopurs_runtime.FloatAdd(gopurs_runtime.FloatMul(gopurs_runtime.Float(3600000.0), gopurs_runtime.Apply(pkg_Data_Int.Get_toNumber(), gopurs_runtime.RecordGet(t_0, "value0"))), gopurs_runtime.FloatMul(gopurs_runtime.Float(60000.0), gopurs_runtime.Apply(pkg_Data_Int.Get_toNumber(), gopurs_runtime.RecordGet(t_0, "value1")))), gopurs_runtime.FloatMul(gopurs_runtime.Float(1000.0), gopurs_runtime.Apply(pkg_Data_Int.Get_toNumber(), gopurs_runtime.RecordGet(t_0, "value2")))), gopurs_runtime.Apply(pkg_Data_Int.Get_toNumber(), gopurs_runtime.RecordGet(t_0, "value3")))
+return gopurs_runtime.FloatAdd(gopurs_runtime.FloatAdd(gopurs_runtime.FloatAdd(gopurs_runtime.FloatMul(gopurs_runtime.Float(3600000.0), gopurs_runtime.Apply(pkg_Data_Int.Get_toNumber(), gopurs_runtime.ConstructorGet(t_0, 0))), gopurs_runtime.FloatMul(gopurs_runtime.Float(60000.0), gopurs_runtime.Apply(pkg_Data_Int.Get_toNumber(), gopurs_runtime.ConstructorGet(t_0, 1)))), gopurs_runtime.FloatMul(gopurs_runtime.Float(1000.0), gopurs_runtime.Apply(pkg_Data_Int.Get_toNumber(), gopurs_runtime.ConstructorGet(t_0, 2)))), gopurs_runtime.Apply(pkg_Data_Int.Get_toNumber(), gopurs_runtime.ConstructorGet(t_0, 3)))
 })
 	})
 	return timeToMillis
@@ -398,7 +398,7 @@ var once_eqTime sync.Once
 func Get_eqTime() gopurs_runtime.Value {
 	once_eqTime.Do(func() {
 		eqTime = gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func2(func(x_0 gopurs_runtime.Value, y_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(gopurs_runtime.Bool(gopurs_runtime.Bool(gopurs_runtime.Bool(gopurs_runtime.RecordGet(x_0, "value0").IntVal == gopurs_runtime.RecordGet(y_1, "value0").IntVal).IntVal != 0 && gopurs_runtime.Bool(gopurs_runtime.RecordGet(x_0, "value1").IntVal == gopurs_runtime.RecordGet(y_1, "value1").IntVal).IntVal != 0).IntVal != 0 && gopurs_runtime.Bool(gopurs_runtime.RecordGet(x_0, "value2").IntVal == gopurs_runtime.RecordGet(y_1, "value2").IntVal).IntVal != 0).IntVal != 0 && gopurs_runtime.Bool(gopurs_runtime.RecordGet(x_0, "value3").IntVal == gopurs_runtime.RecordGet(y_1, "value3").IntVal).IntVal != 0)
+return gopurs_runtime.Bool(gopurs_runtime.Bool(gopurs_runtime.Bool(gopurs_runtime.Bool(gopurs_runtime.ConstructorGet(x_0, 0).IntVal == gopurs_runtime.ConstructorGet(y_1, 0).IntVal).IntVal != 0 && gopurs_runtime.Bool(gopurs_runtime.ConstructorGet(x_0, 1).IntVal == gopurs_runtime.ConstructorGet(y_1, 1).IntVal).IntVal != 0).IntVal != 0 && gopurs_runtime.Bool(gopurs_runtime.ConstructorGet(x_0, 2).IntVal == gopurs_runtime.ConstructorGet(y_1, 2).IntVal).IntVal != 0).IntVal != 0 && gopurs_runtime.Bool(gopurs_runtime.ConstructorGet(x_0, 3).IntVal == gopurs_runtime.ConstructorGet(y_1, 3).IntVal).IntVal != 0)
 }))
 	})
 	return eqTime
@@ -409,67 +409,67 @@ var once_ordTime sync.Once
 func Get_ordTime() gopurs_runtime.Value {
 	once_ordTime.Do(func() {
 		ordTime = gopurs_runtime.RecordDict2("compare", "Eq0", gopurs_runtime.Func2(func(x_0 gopurs_runtime.Value, y_1 gopurs_runtime.Value) gopurs_runtime.Value {
-v_2_0 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ord.Get_ordInt(), "compare"), gopurs_runtime.RecordGet(x_0, "value0"), gopurs_runtime.RecordGet(y_1, "value0"))
+v_2_0 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ord.Get_ordInt(), "compare"), gopurs_runtime.ConstructorGet(x_0, 0), gopurs_runtime.ConstructorGet(y_1, 0))
 _ = v_2_0
 var __t5 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_2_0, "_tag").StrVal == "LT")).IntVal != 0 {
-__t5 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("LT"))
+if (gopurs_runtime.Bool(v_2_0.StrVal == "LT")).IntVal != 0 {
+__t5 = gopurs_runtime.Constructor0("LT")
 goto end_branch_5
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_2_0, "_tag").StrVal == "GT")).IntVal != 0 {
-__t5 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("GT"))
+if (gopurs_runtime.Bool(v_2_0.StrVal == "GT")).IntVal != 0 {
+__t5 = gopurs_runtime.Constructor0("GT")
 goto end_branch_5
 } else {
 
 }
 }
 {
-v1_3_1 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ord.Get_ordInt(), "compare"), gopurs_runtime.RecordGet(x_0, "value1"), gopurs_runtime.RecordGet(y_1, "value1"))
+v1_3_1 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ord.Get_ordInt(), "compare"), gopurs_runtime.ConstructorGet(x_0, 1), gopurs_runtime.ConstructorGet(y_1, 1))
 _ = v1_3_1
 var __t4 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v1_3_1, "_tag").StrVal == "LT")).IntVal != 0 {
-__t4 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("LT"))
+if (gopurs_runtime.Bool(v1_3_1.StrVal == "LT")).IntVal != 0 {
+__t4 = gopurs_runtime.Constructor0("LT")
 goto end_branch_4
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v1_3_1, "_tag").StrVal == "GT")).IntVal != 0 {
-__t4 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("GT"))
+if (gopurs_runtime.Bool(v1_3_1.StrVal == "GT")).IntVal != 0 {
+__t4 = gopurs_runtime.Constructor0("GT")
 goto end_branch_4
 } else {
 
 }
 }
 {
-v2_4_2 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ord.Get_ordInt(), "compare"), gopurs_runtime.RecordGet(x_0, "value2"), gopurs_runtime.RecordGet(y_1, "value2"))
+v2_4_2 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ord.Get_ordInt(), "compare"), gopurs_runtime.ConstructorGet(x_0, 2), gopurs_runtime.ConstructorGet(y_1, 2))
 _ = v2_4_2
 var __t3 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v2_4_2, "_tag").StrVal == "LT")).IntVal != 0 {
-__t3 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("LT"))
+if (gopurs_runtime.Bool(v2_4_2.StrVal == "LT")).IntVal != 0 {
+__t3 = gopurs_runtime.Constructor0("LT")
 goto end_branch_3
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v2_4_2, "_tag").StrVal == "GT")).IntVal != 0 {
-__t3 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("GT"))
+if (gopurs_runtime.Bool(v2_4_2.StrVal == "GT")).IntVal != 0 {
+__t3 = gopurs_runtime.Constructor0("GT")
 goto end_branch_3
 } else {
 
 }
 }
 {
-__t3 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ord.Get_ordInt(), "compare"), gopurs_runtime.RecordGet(x_0, "value3"), gopurs_runtime.RecordGet(y_1, "value3"))
+__t3 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ord.Get_ordInt(), "compare"), gopurs_runtime.ConstructorGet(x_0, 3), gopurs_runtime.ConstructorGet(y_1, 3))
 }
 end_branch_3:
 __t4 = __t3
@@ -501,7 +501,7 @@ var boundedTime gopurs_runtime.Value
 var once_boundedTime sync.Once
 func Get_boundedTime() gopurs_runtime.Value {
 	once_boundedTime.Do(func() {
-		boundedTime = gopurs_runtime.RecordDict3("bottom", "top", "Ord0", gopurs_runtime.RecordDict5("_tag", "value0", "value1", "value2", "value3", gopurs_runtime.Str("Time"), gopurs_runtime.Int(0), gopurs_runtime.Int(0), gopurs_runtime.Int(0), gopurs_runtime.Int(0)), gopurs_runtime.RecordDict5("_tag", "value0", "value1", "value2", "value3", gopurs_runtime.Str("Time"), gopurs_runtime.Int(23), gopurs_runtime.Int(59), gopurs_runtime.Int(59), gopurs_runtime.Int(999)), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		boundedTime = gopurs_runtime.RecordDict3("bottom", "top", "Ord0", gopurs_runtime.Constructor4("Time", gopurs_runtime.Int(0), gopurs_runtime.Int(0), gopurs_runtime.Int(0), gopurs_runtime.Int(0)), gopurs_runtime.Constructor4("Time", gopurs_runtime.Int(23), gopurs_runtime.Int(59), gopurs_runtime.Int(59), gopurs_runtime.Int(999)), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_ordTime()
 }))
 	})
@@ -512,7 +512,7 @@ var maxTime gopurs_runtime.Value
 var once_maxTime sync.Once
 func Get_maxTime() gopurs_runtime.Value {
 	once_maxTime.Do(func() {
-		maxTime = gopurs_runtime.Apply(Get_timeToMillis(), gopurs_runtime.RecordDict5("_tag", "value0", "value1", "value2", "value3", gopurs_runtime.Str("Time"), gopurs_runtime.Int(23), gopurs_runtime.Int(59), gopurs_runtime.Int(59), gopurs_runtime.Int(999)))
+		maxTime = gopurs_runtime.Apply(Get_timeToMillis(), gopurs_runtime.Constructor4("Time", gopurs_runtime.Int(23), gopurs_runtime.Int(59), gopurs_runtime.Int(59), gopurs_runtime.Int(999)))
 	})
 	return maxTime
 }
@@ -521,7 +521,7 @@ var minTime gopurs_runtime.Value
 var once_minTime sync.Once
 func Get_minTime() gopurs_runtime.Value {
 	once_minTime.Do(func() {
-		minTime = gopurs_runtime.Apply(Get_timeToMillis(), gopurs_runtime.RecordDict5("_tag", "value0", "value1", "value2", "value3", gopurs_runtime.Str("Time"), gopurs_runtime.Int(0), gopurs_runtime.Int(0), gopurs_runtime.Int(0), gopurs_runtime.Int(0)))
+		minTime = gopurs_runtime.Apply(Get_timeToMillis(), gopurs_runtime.Constructor4("Time", gopurs_runtime.Int(0), gopurs_runtime.Int(0), gopurs_runtime.Int(0), gopurs_runtime.Int(0)))
 	})
 	return minTime
 }
@@ -560,7 +560,7 @@ __t4 = gopurs_runtime.Float(0.0)
 end_branch_4:
 wrap_6_3 := __t4
 _ = wrap_6_3
-return gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Tuple"), gopurs_runtime.FloatAdd(wholeDays_4_1, wrap_6_3), gopurs_runtime.Apply(Get_millisToTime(), gopurs_runtime.FloatAdd(msAdjusted_5_2, gopurs_runtime.FloatMul(gopurs_runtime.Float(86400000.0), gopurs_runtime.FloatNeg(wrap_6_3)))))
+return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.FloatAdd(wholeDays_4_1, wrap_6_3), gopurs_runtime.Apply(Get_millisToTime(), gopurs_runtime.FloatAdd(msAdjusted_5_2, gopurs_runtime.FloatMul(gopurs_runtime.Float(86400000.0), gopurs_runtime.FloatNeg(wrap_6_3)))))
 })
 	})
 	return adjust

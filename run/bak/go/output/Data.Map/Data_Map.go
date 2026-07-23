@@ -122,7 +122,7 @@ _ = semigroupSemigroupMap1_1_0
 return gopurs_runtime.Func(func(dictSemigroup_2 gopurs_runtime.Value) gopurs_runtime.Value {
 semigroupSemigroupMap2_3_1 := gopurs_runtime.Apply(semigroupSemigroupMap1_1_0, dictSemigroup_2)
 _ = semigroupSemigroupMap2_3_1
-return gopurs_runtime.RecordDict2("mempty", "Semigroup0", gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Leaf")), gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict2("mempty", "Semigroup0", gopurs_runtime.Constructor0("Leaf"), gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return semigroupSemigroupMap2_3_1
 }))
 })
@@ -141,16 +141,16 @@ _ = go__0_0
 go__0_0 = gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_1, "_tag").StrVal == "Leaf")).IntVal != 0 {
-__t1 = gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Leaf"))
+if (gopurs_runtime.Bool(v_1.StrVal == "Leaf")).IntVal != 0 {
+__t1 = gopurs_runtime.Constructor0("Leaf")
 goto end_branch_1
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_1, "_tag").StrVal == "Node")).IntVal != 0 {
-__t1 = gopurs_runtime.RecordDict([]string{"_tag", "value0", "value1", "value2", "value3", "value4", "value5"}, []gopurs_runtime.Value{gopurs_runtime.Str("Node"), gopurs_runtime.RecordGet(v_1, "value0"), gopurs_runtime.RecordGet(v_1, "value1"), gopurs_runtime.RecordGet(v_1, "value2"), pkg_Data_Unit.Get_unit(), gopurs_runtime.Apply(go__0_0, gopurs_runtime.RecordGet(v_1, "value4")), gopurs_runtime.Apply(go__0_0, gopurs_runtime.RecordGet(v_1, "value5"))})
+if (gopurs_runtime.Bool(v_1.StrVal == "Node")).IntVal != 0 {
+__t1 = gopurs_runtime.Constructor("Node", []gopurs_runtime.Value{gopurs_runtime.ConstructorGet(v_1, 0), gopurs_runtime.ConstructorGet(v_1, 1), gopurs_runtime.ConstructorGet(v_1, 2), pkg_Data_Unit.Get_unit(), gopurs_runtime.Apply(go__0_0, gopurs_runtime.ConstructorGet(v_1, 4)), gopurs_runtime.Apply(go__0_0, gopurs_runtime.ConstructorGet(v_1, 5))})
 goto end_branch_1
 } else {
 

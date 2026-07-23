@@ -64,7 +64,7 @@ var once_eqRec sync.Once
 func Get_eqRec() gopurs_runtime.Value {
 	once_eqRec.Do(func() {
 		eqRec = gopurs_runtime.Func2(func(_dollar__unused_0 gopurs_runtime.Value, dictEqRecord_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEqRecord_1, "eqRecord"), gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Proxy"))))
+return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEqRecord_1, "eqRecord"), gopurs_runtime.Constructor0("Proxy")))
 })
 	})
 	return eqRec
@@ -167,9 +167,9 @@ func Get_eqRowCons() gopurs_runtime.Value {
 	once_eqRowCons.Do(func() {
 		eqRowCons = gopurs_runtime.Func4(func(dictEqRecord_0 gopurs_runtime.Value, _dollar__unused_1 gopurs_runtime.Value, dictIsSymbol_2 gopurs_runtime.Value, dictEq_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict1("eqRecord", gopurs_runtime.Func3(func(v_4 gopurs_runtime.Value, ra_5 gopurs_runtime.Value, rb_6 gopurs_runtime.Value) gopurs_runtime.Value {
-get_7_0 := gopurs_runtime.Apply(pkg_Record_Unsafe.Get_unsafeGet(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_2, "reflectSymbol"), gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Proxy"))))
+get_7_0 := gopurs_runtime.Apply(pkg_Record_Unsafe.Get_unsafeGet(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_2, "reflectSymbol"), gopurs_runtime.Constructor0("Proxy")))
 _ = get_7_0
-return gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_3, "eq"), gopurs_runtime.Apply(get_7_0, ra_5), gopurs_runtime.Apply(get_7_0, rb_6)).IntVal != 0 && gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictEqRecord_0, "eqRecord"), gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Proxy")), ra_5, rb_6).IntVal != 0)
+return gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_3, "eq"), gopurs_runtime.Apply(get_7_0, ra_5), gopurs_runtime.Apply(get_7_0, rb_6)).IntVal != 0 && gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictEqRecord_0, "eqRecord"), gopurs_runtime.Constructor0("Proxy"), ra_5, rb_6).IntVal != 0)
 }))
 })
 	})

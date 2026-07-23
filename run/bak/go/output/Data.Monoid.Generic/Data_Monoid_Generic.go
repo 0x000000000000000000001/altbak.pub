@@ -9,7 +9,7 @@ var genericMonoidNoArguments gopurs_runtime.Value
 var once_genericMonoidNoArguments sync.Once
 func Get_genericMonoidNoArguments() gopurs_runtime.Value {
 	once_genericMonoidNoArguments.Do(func() {
-		genericMonoidNoArguments = gopurs_runtime.RecordDict1("genericMempty'", gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("NoArguments")))
+		genericMonoidNoArguments = gopurs_runtime.RecordDict1("genericMempty'", gopurs_runtime.Constructor0("NoArguments"))
 	})
 	return genericMonoidNoArguments
 }
@@ -55,7 +55,7 @@ func Get_genericMonoidProduct() gopurs_runtime.Value {
 genericMempty_prime1_1_0 := gopurs_runtime.RecordGet(dictGenericMonoid_0, "genericMempty'")
 _ = genericMempty_prime1_1_0
 return gopurs_runtime.Func(func(dictGenericMonoid1_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("genericMempty'", gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Product"), genericMempty_prime1_1_0, gopurs_runtime.RecordGet(dictGenericMonoid1_2, "genericMempty'")))
+return gopurs_runtime.RecordDict1("genericMempty'", gopurs_runtime.Constructor2("Product", genericMempty_prime1_1_0, gopurs_runtime.RecordGet(dictGenericMonoid1_2, "genericMempty'")))
 })
 })
 	})

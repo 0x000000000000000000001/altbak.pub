@@ -73,7 +73,7 @@ var once_functorProxy sync.Once
 func Get_functorProxy() gopurs_runtime.Value {
 	once_functorProxy.Do(func() {
 		functorProxy = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Proxy"))
+return gopurs_runtime.Constructor0("Proxy")
 }))
 	})
 	return functorProxy

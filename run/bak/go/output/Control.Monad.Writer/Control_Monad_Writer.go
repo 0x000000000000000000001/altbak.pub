@@ -43,7 +43,7 @@ var once_execWriter sync.Once
 func Get_execWriter() gopurs_runtime.Value {
 	once_execWriter.Do(func() {
 		execWriter = gopurs_runtime.Func(func(m_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(m_0, "value1")
+return gopurs_runtime.ConstructorGet(m_0, 1)
 })
 	})
 	return execWriter
