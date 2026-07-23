@@ -12,6 +12,7 @@ package:
     - st
     - maybe
     - either
+    - now
 workspace:
   packageSet:
     registry: 77.7.0
@@ -24,6 +25,10 @@ workspace:
       path: "../gopurs-console"
     aff:
       path: "../gopurs-aff"
+    now:
+      path: "../gopurs-now"
+    datetime:
+      path: "../gopurs-datetime"
     exceptions:
       path: "../gopurs-exceptions"
     foldable-traversable:

@@ -2,7 +2,7 @@
 var spagoVersion = "1.0.3";
 var pursVersion = "0.15.15";
 var packages = {
-    "ps-scheme-test": "0.0.0"
+    "ps-js-test": "0.0.0"
 };
 export {
     packages,

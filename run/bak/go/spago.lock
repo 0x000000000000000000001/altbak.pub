@@ -12,6 +12,7 @@
             "effect",
             "either",
             "maybe",
+            "now",
             "partial",
             "prelude",
             "st",
@@ -683,6 +684,9 @@
       "console": {
         "path": "../gopurs-console"
       },
+      "datetime": {
+        "path": "../gopurs-datetime"
+      },
       "effect": {
         "path": "../gopurs-effect"
       },
@@ -703,6 +707,9 @@
       },
       "integers": {
         "path": "../gopurs-integers"
+      },
+      "now": {
+        "path": "../gopurs-now"
       },
       "numbers": {
         "path": "../gopurs-numbers"
@@ -826,9 +833,8 @@
       ]
     },
     "datetime": {
-      "type": "registry",
-      "version": "6.1.0",
-      "integrity": "sha256-tbv6eDXy6QOD7YSknxYSbsDF32OC2JrNbSBpzMs7Doc=",
+      "type": "local",
+      "path": "../gopurs-datetime",
       "dependencies": [
         "bifunctors",
         "control",
@@ -1063,6 +1069,14 @@
         "prelude",
         "tuples",
         "unfoldable"
+      ]
+    },
+    "now": {
+      "type": "local",
+      "path": "../gopurs-now",
+      "dependencies": [
+        "datetime",
+        "effect"
       ]
     },
     "numbers": {

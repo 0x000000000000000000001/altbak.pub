@@ -1,5 +1,5 @@
 package:
-  name: ps-scheme-test
+  name: ps-js-test
   dependencies:
     - aff
     - console
@@ -12,6 +12,7 @@ package:
     - st
     - maybe
     - either
+    - now
   test:
     main: Test.Main
     dependencies: []

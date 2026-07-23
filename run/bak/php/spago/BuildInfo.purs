@@ -3,9 +3,9 @@
 -- @inline export spagoVersion always
 module Spago.Generated.BuildInfo where
 
-packages :: { "ps-scheme-test" :: String }
+packages :: { "ps-php-test" :: String }
 packages =
-  { "ps-scheme-test": "0.0.0"
+  { "ps-php-test": "0.0.0"
   }
 
 pursVersion :: String

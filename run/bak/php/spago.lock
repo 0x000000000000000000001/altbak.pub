@@ -1,7 +1,7 @@
 {
   "workspace": {
     "packages": {
-      "ps-scheme-test": {
+      "ps-php-test": {
         "path": "./",
         "core": {
           "dependencies": [
@@ -12,6 +12,7 @@
             "effect",
             "either",
             "maybe",
+            "now",
             "partial",
             "prelude",
             "st",
@@ -680,6 +681,9 @@
       "console": {
         "path": "../phpurs-console"
       },
+      "datetime": {
+        "path": "../phpurs-datetime"
+      },
       "effect": {
         "path": "../phpurs-effect"
       },
@@ -691,6 +695,9 @@
       },
       "functions": {
         "path": "../phpurs-functions"
+      },
+      "now": {
+        "path": "../phpurs-now"
       },
       "partial": {
         "path": "../phpurs-partial"
@@ -808,9 +815,8 @@
       ]
     },
     "datetime": {
-      "type": "registry",
-      "version": "6.1.0",
-      "integrity": "sha256-tbv6eDXy6QOD7YSknxYSbsDF32OC2JrNbSBpzMs7Doc=",
+      "type": "local",
+      "path": "../phpurs-datetime",
       "dependencies": [
         "bifunctors",
         "control",
@@ -1047,6 +1053,14 @@
         "prelude",
         "tuples",
         "unfoldable"
+      ]
+    },
+    "now": {
+      "type": "local",
+      "path": "../phpurs-now",
+      "dependencies": [
+        "datetime",
+        "effect"
       ]
     },
     "numbers": {

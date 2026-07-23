@@ -14,18 +14,38 @@ ENTRY_POINT="App"
 if [ "$1" == "--test" ]; then
   ENTRY_POINT="AppX"
   TEST_NAME="$2"
+  cat <<EOF > src/Bench.go
+package Bench
+import (
+	"gopurs/output/gopurs_runtime"
+	"time"
+)
+var BenchNow = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+	return gopurs_runtime.Float(float64(time.Now().UnixNano()) / 1e3)
+})
+EOF
+  cat <<EOF > src/Bench.purs
+module Bench where
+import Effect (Effect)
+foreign import benchNow :: Effect Number
+EOF
   cat <<EOF > src/AppX.purs
 module AppX where
 import Prelude
 import Effect (Effect)
+import Effect.Console (log)
+import Bench (benchNow)
 import Test.$TEST_NAME as $TEST_NAME
 
 main :: Effect Unit
 main = do
   $TEST_NAME.describe
+  t1 <- benchNow
   $TEST_NAME.act
+  t2 <- benchNow
+  log ("\n[BENCHMARK] Execution time: " <> show (t2 - t1) <> " μs")
 EOF
-  trap "rm -f src/AppX.purs" EXIT
+  trap "rm -f src/AppX.purs src/Bench.purs src/Bench.go" EXIT
 elif [ "$1" == "--x" ]; then
   ENTRY_POINT="AppX"
   cp -r srx/Test/* src/Test/
@@ -51,6 +71,7 @@ if [ -d "output/${ENTRY_POINT}" ]; then
     go mod tidy > /dev/null 2>&1
     go build -o go_app .
     cd ..
+    
     time ./output/go_app
 else
     echo "No output/${ENTRY_POINT}/Main.go generated."

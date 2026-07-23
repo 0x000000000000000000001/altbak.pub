@@ -2,12 +2,17 @@
 
 namespace AppX;
 
-// ALL IMPORTS: Control.Bind, Effect, Prelude, Prim, Test.Fib
-// TO REQUIRE: Control.Bind, Effect, Prelude, Test.Fib
+// ALL IMPORTS: Bench, Control.Bind, Data.Ring, Data.Semigroup, Data.Show, Effect, Effect.Console, Prelude, Prim, Test.Church
+// TO REQUIRE: Bench, Control.Bind, Data.Ring, Data.Semigroup, Data.Show, Effect, Effect.Console, Prelude, Test.Church
+require_once __DIR__ . '/../Bench/index.php';
 require_once __DIR__ . '/../Control.Bind/index.php';
+require_once __DIR__ . '/../Data.Ring/index.php';
+require_once __DIR__ . '/../Data.Semigroup/index.php';
+require_once __DIR__ . '/../Data.Show/index.php';
 require_once __DIR__ . '/../Effect/index.php';
+require_once __DIR__ . '/../Effect.Console/index.php';
 require_once __DIR__ . '/../Prelude/index.php';
-require_once __DIR__ . '/../Test.Fib/index.php';
+require_once __DIR__ . '/../Test.Church/index.php';
 
 if (!class_exists(__NAMESPACE__ . '\\Phpurs_Data0')) {
   class Phpurs_Data0 { public $tag; public function __construct($t) { $this->tag = $t; } }
@@ -94,9 +99,28 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['AppX_main'] = function() { $v = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Test_Fib_describe'] ?? \PhpursThunks::eval('Test_Fib_describe'))))(function($dollar__unused_0 = null) {
+\PhpursThunks::$thunks['AppX_main'] = function() { $v = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Test_Church_describe'] ?? \PhpursThunks::eval('Test_Church_describe'))))(function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Test_Fib_act'] ?? \PhpursThunks::eval('Test_Fib_act'));
+  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Bench_benchNow'] ?? \PhpursThunks::eval('Bench_benchNow'))))(function($t1_1 = null) {
+  $__num = \func_num_args();
+  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Test_Church_act'] ?? \PhpursThunks::eval('Test_Church_act'))))(function($dollar__unused_2 = null) use ($t1_1) {
+  $__num = \func_num_args();
+  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Bench_benchNow'] ?? \PhpursThunks::eval('Bench_benchNow'))))(function($t2_3 = null) use ($t1_1) {
+  $__num = \func_num_args();
+  $__res = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("
+[BENCHMARK] Vitesse interne pure : "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))((($GLOBALS['Data_Show_showNumberImpl'] ?? \PhpursThunks::eval('Data_Show_showNumberImpl')))(((($GLOBALS['Data_Ring_numSub'] ?? \PhpursThunks::eval('Data_Ring_numSub')))($t2_3))($t1_1))))(" μs")));
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

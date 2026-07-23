@@ -14,18 +14,36 @@ ENTRY_POINT="App"
 if [ "$1" == "--test" ]; then
   ENTRY_POINT="AppX"
   TEST_NAME="$2"
+  cat <<EOF > src/Bench.php
+<?php
+\$benchNow = function() {
+    return microtime(true) * 1000000.0;
+};
+\$exports['benchNow'] = \$benchNow;
+return \$exports;
+EOF
+  cat <<EOF > src/Bench.purs
+module Bench where
+import Effect (Effect)
+foreign import benchNow :: Effect Number
+EOF
   cat <<EOF > src/AppX.purs
 module AppX where
 import Prelude
 import Effect (Effect)
+import Effect.Console (log)
+import Bench (benchNow)
 import Test.$TEST_NAME as $TEST_NAME
 
 main :: Effect Unit
 main = do
   $TEST_NAME.describe
+  t1 <- benchNow
   $TEST_NAME.act
+  t2 <- benchNow
+  log ("\n[BENCHMARK] Execution time: " <> show (t2 - t1) <> " μs")
 EOF
-  trap "rm -f src/AppX.purs" EXIT
+  trap "rm -f src/AppX.purs src/Bench.purs src/Bench.php" EXIT
 elif [ "$1" == "--x" ]; then
   ENTRY_POINT="AppX"
   # Temporarily inject extended tests
