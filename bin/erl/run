@@ -9,6 +9,31 @@ ln -s run/bak/erl/spago .spago
 ln -s run/bak/erl/spago.erl.yaml spago.yaml
 touch run/bak/erl/spago.lock && ln -s run/bak/erl/spago.lock spago.lock
 export PATH="$PWD/run/bak/js/node_modules/.bin:$PATH"
+
+ENTRY_POINT="App"
+
+if [ "$1" == "--test" ]; then
+  ENTRY_POINT="AppX"
+  TEST_NAME="$2"
+  cat <<EOF > src/AppX.purs
+module AppX where
+import Prelude
+import Effect (Effect)
+import Test.$TEST_NAME as $TEST_NAME
+
+main :: Effect Unit
+main = do
+  $TEST_NAME.describe
+  $TEST_NAME.act
+EOF
+  trap "rm -f src/AppX.purs" EXIT
+elif [ "$1" == "--x" ]; then
+  ENTRY_POINT="AppX"
+  # Temporarily inject extended tests
+  cp -r srx/Test/* src/Test/
+  cp srx/AppX.purs src/
+  trap "rm -rf src/Test/STArray.purs src/Test/AffOperations.purs src/Test/StringOps.purs src/Test/FileOps src/AppX.purs" EXIT
+fi
 spago fetch > /dev/null 2>&1
 # Overwrite legacy CommonJS files with empty ES modules to satisfy newer purs compiler
 find .spago/p -name "*.js" -exec sh -c 'echo "export const __patched = 1;" > "$1"' _ {} \;
@@ -21,10 +46,15 @@ find .spago/p/prelude -name "Symbol.purs" | while read f; do
 done
 PATH="$(pwd)/bin/erl:$PATH" spago build > /dev/null 2>&1
 # erlc compiles the .erl files to .beam files
-erlc -o output/App output/*/*.erl > /dev/null 2>&1
+erlc -o output/${ENTRY_POINT} output/*/*.erl > /dev/null 2>&1
 
 echo "=== Erlang BEAM ==="
-time erl -noshell -pa output/App -eval '
-    (app@ps:main())(),
+if [ "$ENTRY_POINT" == "AppX" ]; then
+  ENTRY_LOWER="app_x"
+else
+  ENTRY_LOWER="app"
+fi
+time erl -noshell -pa output/${ENTRY_POINT} -eval "
+    (${ENTRY_LOWER}@ps:main())(),
     halt().
-'
+"

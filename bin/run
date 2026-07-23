@@ -2,7 +2,29 @@
 set -e
 cd "$(dirname "$0")/.."
 
-if [ "$1" == "--x" ]; then
+if [ "$1" == "--test" ]; then
+  echo "================================"
+  echo "  Running test $2...  "
+  echo "================================"
+  echo ""
+  ./bin/js/run --test "$2" || echo "=== JS failed ==="
+  
+  echo ""
+  ./bin/es/run --test "$2" || echo "=== ES failed ==="
+  
+  echo ""
+  ./bin/php/run --test "$2" || echo "=== PHP failed ==="
+  
+  echo ""
+  ./bin/go/run --test "$2" || echo "=== Go failed ==="
+  
+  echo ""
+  ./bin/scm/run --test "$2" || echo "=== Scheme failed ==="
+  
+  echo ""
+  ./bin/erl/run --test "$2" || echo "=== Erlang failed ==="
+
+elif [ "$1" == "--x" ]; then
   echo "================================"
   echo "  Running extended backends...  "
   echo "================================"
