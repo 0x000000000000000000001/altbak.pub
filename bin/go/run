@@ -72,7 +72,7 @@ if [ -d "output/${ENTRY_POINT}" ]; then
     go build -o go_app .
     cd ..
     
-    time ./output/go_app
+    ./output/go_app
 else
     echo "No output/${ENTRY_POINT}/Main.go generated."
 fi

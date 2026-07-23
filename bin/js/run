@@ -43,4 +43,4 @@ fi
 npx spago build > /dev/null 2>&1
 
 echo "=== Native Node V8 ==="
-time node -e "import('./output/${ENTRY_POINT}/index.js').then(m => m.main())"
+node -e "import('./output/${ENTRY_POINT}/index.js').then(m => m.main())"

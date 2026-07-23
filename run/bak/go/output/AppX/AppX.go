@@ -22,7 +22,7 @@ _dollar__unused_2_2 := gopurs_runtime.Apply(pkg_Test_Church.Get_act(), gopurs_ru
 _ = _dollar__unused_2_2
 t2_3_3 := gopurs_runtime.Apply(pkg_Bench.Get_benchNow(), gopurs_runtime.Value{})
 _ = t2_3_3
-return gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str("\n[BENCHMARK] Vitesse interne pure : ").StrVal + gopurs_runtime.Apply(pkg_Data_Show.Get_showNumberImpl(), gopurs_runtime.FloatSub(t2_3_3, t1_1_1)).StrVal).StrVal + gopurs_runtime.Str(" μs").StrVal)), gopurs_runtime.Value{})
+return gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str("\n[BENCHMARK] Execution time: ").StrVal + gopurs_runtime.Apply(pkg_Data_Show.Get_showNumberImpl(), gopurs_runtime.FloatSub(t2_3_3, t1_1_1)).StrVal).StrVal + gopurs_runtime.Str(" μs").StrVal)), gopurs_runtime.Value{})
 })
 	})
 	return main

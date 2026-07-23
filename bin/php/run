@@ -63,7 +63,7 @@ echo "=== Native PHP ==="
 if [ -f "output/${ENTRY_POINT}/main.mod.php" ]; then
     php bin/php/composer.phar update --no-plugins -d run/bak/php
     mkdir -p /tmp/phpurs_opcache
-    time php -d xdebug.mode=off -d opcache.enable_cli=1 -d opcache.file_cache=/tmp/phpurs_opcache -d opcache.jit_buffer_size=128M -d opcache.jit=1255 output/${ENTRY_POINT}/main.mod.php
+    php -d xdebug.mode=off -d opcache.enable_cli=1 -d opcache.file_cache=/tmp/phpurs_opcache -d opcache.jit_buffer_size=128M -d opcache.jit=1255 output/${ENTRY_POINT}/main.mod.php
 else
     echo "No output/${ENTRY_POINT}/main.mod.php generated."
 fi

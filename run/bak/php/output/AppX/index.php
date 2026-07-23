@@ -108,7 +108,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Bench_benchNow'] ?? \PhpursThunks::eval('Bench_benchNow'))))(function($t2_3 = null) use ($t1_1) {
   $__num = \func_num_args();
   $__res = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("
-[BENCHMARK] Vitesse interne pure : "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))((($GLOBALS['Data_Show_showNumberImpl'] ?? \PhpursThunks::eval('Data_Show_showNumberImpl')))(((($GLOBALS['Data_Ring_numSub'] ?? \PhpursThunks::eval('Data_Ring_numSub')))($t2_3))($t1_1))))(" μs")));
+[BENCHMARK] Execution time: "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))((($GLOBALS['Data_Show_showNumberImpl'] ?? \PhpursThunks::eval('Data_Show_showNumberImpl')))(((($GLOBALS['Data_Ring_numSub'] ?? \PhpursThunks::eval('Data_Ring_numSub')))($t2_3))($t1_1))))(" μs")));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
