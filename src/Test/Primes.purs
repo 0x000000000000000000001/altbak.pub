@@ -3,6 +3,7 @@ module Test.Primes where
 import Prelude
 import Effect (Effect)
 import Effect.Console (logShow, log)
+import Bench as Bench
 
 -- Implementation of the Sieve of Eratosthenes using strict Lists.
 -- This benchmark heavily tests:
@@ -53,4 +54,6 @@ describe :: Effect Unit
 describe = log "Prime Sieve (sum primes up to 500):"
 
 act :: Effect Unit
-act = logShow $ sumList (sieve (range 2 500))
+act = do
+  dummy <- Bench.opaque 500
+  logShow $ sumList (sieve (range 2 dummy))

@@ -3,6 +3,7 @@ module Test.RBTree where
 import Prelude
 import Effect (Effect)
 import Effect.Console (logShow, log)
+import Bench as Bench
 
 -- The ultimate functional benchmark: Chris Okasaki's Red-Black Tree.
 -- This heavily tests complex pattern matching, structural sharing,
@@ -47,4 +48,6 @@ describe :: Effect Unit
 describe = log "Red-Black Tree (100k Worst-Case Insertions):"
 
 act :: Effect Unit
-act = logShow $ depth (buildTree 100000 E)
+act = do
+  dummy <- Bench.opaque 100000
+  logShow $ depth (buildTree dummy E)

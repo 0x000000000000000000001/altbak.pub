@@ -2,10 +2,16 @@
 
 namespace App;
 
-// ALL IMPORTS: Control.Bind, Effect, Prelude, Prim, Test.Ackermann, Test.AstTree, Test.Church, Test.Fib, Test.LazyEvaluation, Test.ListOps, Test.Polymorphism, Test.Primes, Test.RBTree, Test.Records, Test.StateMonad, Test.TCO
-// TO REQUIRE: Control.Bind, Effect, Prelude, Test.Ackermann, Test.AstTree, Test.Church, Test.Fib, Test.LazyEvaluation, Test.ListOps, Test.Polymorphism, Test.Primes, Test.RBTree, Test.Records, Test.StateMonad, Test.TCO
+// ALL IMPORTS: Bench, Control.Bind, Data.EuclideanRing, Data.Function, Data.Semigroup, Data.Semiring, Effect, Effect.Console, Prelude, Prim, Test.Ackermann, Test.AstTree, Test.Church, Test.Fib, Test.LazyEvaluation, Test.ListOps, Test.Polymorphism, Test.Primes, Test.RBTree, Test.Records, Test.StateMonad, Test.TCO
+// TO REQUIRE: Bench, Control.Bind, Data.EuclideanRing, Data.Function, Data.Semigroup, Data.Semiring, Effect, Effect.Console, Prelude, Test.Ackermann, Test.AstTree, Test.Church, Test.Fib, Test.LazyEvaluation, Test.ListOps, Test.Polymorphism, Test.Primes, Test.RBTree, Test.Records, Test.StateMonad, Test.TCO
+require_once __DIR__ . '/../Bench/index.php';
 require_once __DIR__ . '/../Control.Bind/index.php';
+require_once __DIR__ . '/../Data.EuclideanRing/index.php';
+require_once __DIR__ . '/../Data.Function/index.php';
+require_once __DIR__ . '/../Data.Semigroup/index.php';
+require_once __DIR__ . '/../Data.Semiring/index.php';
 require_once __DIR__ . '/../Effect/index.php';
+require_once __DIR__ . '/../Effect.Console/index.php';
 require_once __DIR__ . '/../Prelude/index.php';
 require_once __DIR__ . '/../Test.Ackermann/index.php';
 require_once __DIR__ . '/../Test.AstTree/index.php';
@@ -28,6 +34,12 @@ if (!class_exists(__NAMESPACE__ . '\\Phpurs_Data0')) {
   class Phpurs_Data4 { public $tag; public $value0, $value1, $value2, $value3; public function __construct($t, $value0, $value1, $value2, $value3) { $this->tag = $t; $this->value0 = $value0; $this->value1 = $value1; $this->value2 = $value2; $this->value3 = $value3; } }
   class Phpurs_Data5 { public $tag; public $value0, $value1, $value2, $value3, $value4; public function __construct($t, $value0, $value1, $value2, $value3, $value4) { $this->tag = $t; $this->value0 = $value0; $this->value1 = $value1; $this->value2 = $value2; $this->value3 = $value3; $this->value4 = $value4; } }
   class Phpurs_Data6 { public $tag; public $value0, $value1, $value2, $value3, $value4, $value5; public function __construct($t, $value0, $value1, $value2, $value3, $value4, $value5) { $this->tag = $t; $this->value0 = $value0; $this->value1 = $value1; $this->value2 = $value2; $this->value3 = $value3; $this->value4 = $value4; $this->value5 = $value5; } }
+  class Phpurs_Data7 { public $tag; public $value0, $value1, $value2, $value3, $value4, $value5, $value6; public function __construct($t, $value0, $value1, $value2, $value3, $value4, $value5, $value6) { $this->tag = $t; $this->value0 = $value0; $this->value1 = $value1; $this->value2 = $value2; $this->value3 = $value3; $this->value4 = $value4; $this->value5 = $value5; $this->value6 = $value6; } }
+  class Phpurs_Data8 { public $tag; public $value0, $value1, $value2, $value3, $value4, $value5, $value6, $value7; public function __construct($t, $value0, $value1, $value2, $value3, $value4, $value5, $value6, $value7) { $this->tag = $t; $this->value0 = $value0; $this->value1 = $value1; $this->value2 = $value2; $this->value3 = $value3; $this->value4 = $value4; $this->value5 = $value5; $this->value6 = $value6; $this->value7 = $value7; } }
+  class Phpurs_Data9 { public $tag; public $value0, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8; public function __construct($t, $value0, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8) { $this->tag = $t; $this->value0 = $value0; $this->value1 = $value1; $this->value2 = $value2; $this->value3 = $value3; $this->value4 = $value4; $this->value5 = $value5; $this->value6 = $value6; $this->value7 = $value7; $this->value8 = $value8; } }
+  class Phpurs_Data10 { public $tag; public $value0, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8, $value9; public function __construct($t, $value0, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8, $value9) { $this->tag = $t; $this->value0 = $value0; $this->value1 = $value1; $this->value2 = $value2; $this->value3 = $value3; $this->value4 = $value4; $this->value5 = $value5; $this->value6 = $value6; $this->value7 = $value7; $this->value8 = $value8; $this->value9 = $value9; } }
+  class Phpurs_Data11 { public $tag; public $value0, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8, $value9, $value10; public function __construct($t, $value0, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8, $value9, $value10) { $this->tag = $t; $this->value0 = $value0; $this->value1 = $value1; $this->value2 = $value2; $this->value3 = $value3; $this->value4 = $value4; $this->value5 = $value5; $this->value6 = $value6; $this->value7 = $value7; $this->value8 = $value8; $this->value9 = $value9; $this->value10 = $value10; } }
+  class Phpurs_Data12 { public $tag; public $value0, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8, $value9, $value10, $value11; public function __construct($t, $value0, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8, $value9, $value10, $value11) { $this->tag = $t; $this->value0 = $value0; $this->value1 = $value1; $this->value2 = $value2; $this->value3 = $value3; $this->value4 = $value4; $this->value5 = $value5; $this->value6 = $value6; $this->value7 = $value7; $this->value8 = $value8; $this->value9 = $value9; $this->value10 = $value10; $this->value11 = $value11; } }
 }
 if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   function phpurs_curry_fallback($fn, $args, $expected) {
@@ -99,120 +111,32 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['App_main'] = function() { $v = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Test_AstTree_describe'] ?? \PhpursThunks::eval('Test_AstTree_describe'))))(function($dollar__unused_0) {
+\PhpursThunks::$thunks['App_main'] = function() { $v = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(((($GLOBALS['Bench_runBench'] ?? \PhpursThunks::eval('Bench_runBench')))(($GLOBALS['Test_AstTree_describe'] ?? \PhpursThunks::eval('Test_AstTree_describe'))))(($GLOBALS['Test_AstTree_act'] ?? \PhpursThunks::eval('Test_AstTree_act')))))(function($t1_0 = null) {
   $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Test_AstTree_act'] ?? \PhpursThunks::eval('Test_AstTree_act'))))(function($dollar__unused_1) {
+  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(((($GLOBALS['Bench_runBench'] ?? \PhpursThunks::eval('Bench_runBench')))(($GLOBALS['Test_Fib_describe'] ?? \PhpursThunks::eval('Test_Fib_describe'))))(($GLOBALS['Test_Fib_act'] ?? \PhpursThunks::eval('Test_Fib_act')))))(function($t2_1 = null) use ($t1_0) {
   $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Test_Fib_describe'] ?? \PhpursThunks::eval('Test_Fib_describe'))))(function($dollar__unused_2) {
+  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(((($GLOBALS['Bench_runBench'] ?? \PhpursThunks::eval('Bench_runBench')))(($GLOBALS['Test_ListOps_describe'] ?? \PhpursThunks::eval('Test_ListOps_describe'))))(($GLOBALS['Test_ListOps_act'] ?? \PhpursThunks::eval('Test_ListOps_act')))))(function($t3_2 = null) use ($t1_0, $t2_1) {
   $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Test_Fib_act'] ?? \PhpursThunks::eval('Test_Fib_act'))))(function($dollar__unused_3) {
+  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(((($GLOBALS['Bench_runBench'] ?? \PhpursThunks::eval('Bench_runBench')))(($GLOBALS['Test_TCO_describe'] ?? \PhpursThunks::eval('Test_TCO_describe'))))(($GLOBALS['Test_TCO_act'] ?? \PhpursThunks::eval('Test_TCO_act')))))(function($t4_3 = null) use ($t1_0, $t2_1, $t3_2) {
   $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Test_ListOps_describe'] ?? \PhpursThunks::eval('Test_ListOps_describe'))))(function($dollar__unused_4) {
+  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(((($GLOBALS['Bench_runBench'] ?? \PhpursThunks::eval('Bench_runBench')))(($GLOBALS['Test_Records_describe'] ?? \PhpursThunks::eval('Test_Records_describe'))))(($GLOBALS['Test_Records_act'] ?? \PhpursThunks::eval('Test_Records_act')))))(function($t5_4 = null) use ($t1_0, $t2_1, $t3_2, $t4_3) {
   $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Test_ListOps_act'] ?? \PhpursThunks::eval('Test_ListOps_act'))))(function($dollar__unused_5) {
+  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(((($GLOBALS['Bench_runBench'] ?? \PhpursThunks::eval('Bench_runBench')))(($GLOBALS['Test_Ackermann_describe'] ?? \PhpursThunks::eval('Test_Ackermann_describe'))))(($GLOBALS['Test_Ackermann_act'] ?? \PhpursThunks::eval('Test_Ackermann_act')))))(function($t6_5 = null) use ($t1_0, $t2_1, $t3_2, $t4_3, $t5_4) {
   $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Test_TCO_describe'] ?? \PhpursThunks::eval('Test_TCO_describe'))))(function($dollar__unused_6) {
+  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(((($GLOBALS['Bench_runBench'] ?? \PhpursThunks::eval('Bench_runBench')))(($GLOBALS['Test_Church_describe'] ?? \PhpursThunks::eval('Test_Church_describe'))))(($GLOBALS['Test_Church_act'] ?? \PhpursThunks::eval('Test_Church_act')))))(function($t7_6 = null) use ($t1_0, $t2_1, $t3_2, $t4_3, $t5_4, $t6_5) {
   $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Test_TCO_act'] ?? \PhpursThunks::eval('Test_TCO_act'))))(function($dollar__unused_7) {
+  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(((($GLOBALS['Bench_runBench'] ?? \PhpursThunks::eval('Bench_runBench')))(($GLOBALS['Test_Primes_describe'] ?? \PhpursThunks::eval('Test_Primes_describe'))))(($GLOBALS['Test_Primes_act'] ?? \PhpursThunks::eval('Test_Primes_act')))))(function($t8_7 = null) use ($t1_0, $t2_1, $t3_2, $t4_3, $t5_4, $t6_5, $t7_6) {
   $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Test_Records_describe'] ?? \PhpursThunks::eval('Test_Records_describe'))))(function($dollar__unused_8) {
+  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(((($GLOBALS['Bench_runBench'] ?? \PhpursThunks::eval('Bench_runBench')))(($GLOBALS['Test_RBTree_describe'] ?? \PhpursThunks::eval('Test_RBTree_describe'))))(($GLOBALS['Test_RBTree_act'] ?? \PhpursThunks::eval('Test_RBTree_act')))))(function($t9_8 = null) use ($t1_0, $t2_1, $t3_2, $t4_3, $t5_4, $t6_5, $t7_6, $t8_7) {
   $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Test_Records_act'] ?? \PhpursThunks::eval('Test_Records_act'))))(function($dollar__unused_9) {
+  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(((($GLOBALS['Bench_runBench'] ?? \PhpursThunks::eval('Bench_runBench')))(($GLOBALS['Test_Polymorphism_describe'] ?? \PhpursThunks::eval('Test_Polymorphism_describe'))))(($GLOBALS['Test_Polymorphism_act'] ?? \PhpursThunks::eval('Test_Polymorphism_act')))))(function($t10_9 = null) use ($t1_0, $t2_1, $t3_2, $t4_3, $t5_4, $t6_5, $t7_6, $t8_7, $t9_8) {
   $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Test_Ackermann_describe'] ?? \PhpursThunks::eval('Test_Ackermann_describe'))))(function($dollar__unused_10) {
+  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(((($GLOBALS['Bench_runBench'] ?? \PhpursThunks::eval('Bench_runBench')))(($GLOBALS['Test_StateMonad_describe'] ?? \PhpursThunks::eval('Test_StateMonad_describe'))))(($GLOBALS['Test_StateMonad_act'] ?? \PhpursThunks::eval('Test_StateMonad_act')))))(function($t11_10 = null) use ($t10_9, $t1_0, $t2_1, $t3_2, $t4_3, $t5_4, $t6_5, $t7_6, $t8_7, $t9_8) {
   $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Test_Ackermann_act'] ?? \PhpursThunks::eval('Test_Ackermann_act'))))(function($dollar__unused_11) {
+  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(((($GLOBALS['Bench_runBench'] ?? \PhpursThunks::eval('Bench_runBench')))(($GLOBALS['Test_LazyEvaluation_describe'] ?? \PhpursThunks::eval('Test_LazyEvaluation_describe'))))(($GLOBALS['Test_LazyEvaluation_act'] ?? \PhpursThunks::eval('Test_LazyEvaluation_act')))))(function($t12_11 = null) use ($t10_9, $t11_10, $t1_0, $t2_1, $t3_2, $t4_3, $t5_4, $t6_5, $t7_6, $t8_7, $t9_8) {
   $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Test_Church_describe'] ?? \PhpursThunks::eval('Test_Church_describe'))))(function($dollar__unused_12) {
-  $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Test_Church_act'] ?? \PhpursThunks::eval('Test_Church_act'))))(function($dollar__unused_13) {
-  $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Test_Primes_describe'] ?? \PhpursThunks::eval('Test_Primes_describe'))))(function($dollar__unused_14) {
-  $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Test_Primes_act'] ?? \PhpursThunks::eval('Test_Primes_act'))))(function($dollar__unused_15) {
-  $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Test_RBTree_describe'] ?? \PhpursThunks::eval('Test_RBTree_describe'))))(function($dollar__unused_16) {
-  $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Test_RBTree_act'] ?? \PhpursThunks::eval('Test_RBTree_act'))))(function($dollar__unused_17) {
-  $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Test_Polymorphism_describe'] ?? \PhpursThunks::eval('Test_Polymorphism_describe'))))(function($dollar__unused_18) {
-  $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Test_Polymorphism_act'] ?? \PhpursThunks::eval('Test_Polymorphism_act'))))(function($dollar__unused_19) {
-  $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Test_StateMonad_describe'] ?? \PhpursThunks::eval('Test_StateMonad_describe'))))(function($dollar__unused_20) {
-  $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Test_StateMonad_act'] ?? \PhpursThunks::eval('Test_StateMonad_act'))))(function($dollar__unused_21) {
-  $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Test_LazyEvaluation_describe'] ?? \PhpursThunks::eval('Test_LazyEvaluation_describe'))))(function($dollar__unused_22) {
-  $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=[];
-  $__res = ($GLOBALS['Test_LazyEvaluation_act'] ?? \PhpursThunks::eval('Test_LazyEvaluation_act'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
+  $__res = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("Total exec time: "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))((($GLOBALS['Bench_formatNumber'] ?? \PhpursThunks::eval('Bench_formatNumber')))(((($GLOBALS['Data_EuclideanRing_numDiv'] ?? \PhpursThunks::eval('Data_EuclideanRing_numDiv')))(((($GLOBALS['Data_Semiring_numAdd'] ?? \PhpursThunks::eval('Data_Semiring_numAdd')))(((($GLOBALS['Data_Semiring_numAdd'] ?? \PhpursThunks::eval('Data_Semiring_numAdd')))(((($GLOBALS['Data_Semiring_numAdd'] ?? \PhpursThunks::eval('Data_Semiring_numAdd')))(((($GLOBALS['Data_Semiring_numAdd'] ?? \PhpursThunks::eval('Data_Semiring_numAdd')))(((($GLOBALS['Data_Semiring_numAdd'] ?? \PhpursThunks::eval('Data_Semiring_numAdd')))(((($GLOBALS['Data_Semiring_numAdd'] ?? \PhpursThunks::eval('Data_Semiring_numAdd')))(((($GLOBALS['Data_Semiring_numAdd'] ?? \PhpursThunks::eval('Data_Semiring_numAdd')))(((($GLOBALS['Data_Semiring_numAdd'] ?? \PhpursThunks::eval('Data_Semiring_numAdd')))(((($GLOBALS['Data_Semiring_numAdd'] ?? \PhpursThunks::eval('Data_Semiring_numAdd')))(((($GLOBALS['Data_Semiring_numAdd'] ?? \PhpursThunks::eval('Data_Semiring_numAdd')))(((($GLOBALS['Data_Semiring_numAdd'] ?? \PhpursThunks::eval('Data_Semiring_numAdd')))($t1_0))($t2_1)))($t3_2)))($t4_3)))($t5_4)))($t6_5)))($t7_6)))($t8_7)))($t9_8)))($t10_9)))($t11_10)))($t12_11)))(1000.0))))(" ms
+")));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

@@ -3,6 +3,7 @@ module Test.Church where
 import Prelude
 import Effect (Effect)
 import Effect.Console (logShow, log)
+import Bench as Bench
 
 -- Church Numerals represents integers entirely as functions.
 -- This heavily benchmarks currying, closure allocation,
@@ -28,21 +29,22 @@ fromInt n = succC (fromInt (n - 1))
 toInt :: Church Int -> Int
 toInt n = n (\x -> x + 1) 0
 
--- Compute 10^5 (100,000) using function composition
-c10 :: Church Int
-c10 = fromInt 10
+c10 :: Int -> Church Int
+c10 n = fromInt n
 
-c100 :: Church Int
-c100 = mulC c10 c10
+c100 :: Int -> Church Int
+c100 n = mulC (c10 n) (c10 n)
 
-c10k :: Church Int
-c10k = mulC c100 c100
+c10k :: Int -> Church Int
+c10k n = mulC (c100 n) (c100 n)
 
-c100k :: Church Int
-c100k = mulC c10k c10
+c100k :: Int -> Church Int
+c100k n = mulC (c10k n) (c10 n)
 
 describe :: Effect Unit
 describe = log "Church Numerals (100k Closure Applications):"
 
 act :: Effect Unit
-act = logShow $ toInt c100k
+act = do
+  dummy <- Bench.opaque 10
+  logShow $ toInt (c100k dummy)

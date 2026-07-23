@@ -3,6 +3,7 @@ module Test.Records where
 import Prelude
 import Effect (Effect)
 import Effect.Console (logShow, log)
+import Bench as Bench
 
 type DeepRecord = 
   { a :: Int
@@ -29,4 +30,6 @@ describe :: Effect Unit
 describe = log "Deep Record Updates (10k iterations):"
 
 act :: Effect Unit
-act = logShow (updateRec 10000 initial).b.d.f
+act = do
+  dummy <- Bench.opaque 10000
+  logShow (updateRec dummy initial).b.d.f

@@ -4,6 +4,7 @@ import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
 	pkg_Effect_Console "gopurs/output/Effect.Console"
+	pkg_Bench "gopurs/output/Bench"
 	pkg_Data_Show "gopurs/output/Data.Show"
 )
 
@@ -64,7 +65,15 @@ var act gopurs_runtime.Value
 var once_act sync.Once
 func Get_act() gopurs_runtime.Value {
 	once_act.Do(func() {
-		act = gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(pkg_Data_Show.Get_showIntImpl(), gopurs_runtime.Apply2(Get_ackermann(), gopurs_runtime.Int(3), gopurs_runtime.Int(4))))
+		act = func() gopurs_runtime.Value {
+__local_var_0_0 := gopurs_runtime.Apply(pkg_Bench.Get_opaque(), gopurs_runtime.Int(3))
+_ = __local_var_0_0
+return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+dummy_1_1 := gopurs_runtime.Apply(__local_var_0_0, gopurs_runtime.Value{})
+_ = dummy_1_1
+return gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(pkg_Data_Show.Get_showIntImpl(), gopurs_runtime.Apply2(Get_ackermann(), dummy_1_1, gopurs_runtime.Int(4)))), gopurs_runtime.Value{})
+})
+}()
 	})
 	return act
 }

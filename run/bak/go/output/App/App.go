@@ -3,6 +3,7 @@ package App
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
+	pkg_Bench "gopurs/output/Bench"
 	pkg_Test_AstTree "gopurs/output/Test.AstTree"
 	pkg_Test_Fib "gopurs/output/Test.Fib"
 	pkg_Test_ListOps "gopurs/output/Test.ListOps"
@@ -15,61 +16,44 @@ import (
 	pkg_Test_Polymorphism "gopurs/output/Test.Polymorphism"
 	pkg_Test_StateMonad "gopurs/output/Test.StateMonad"
 	pkg_Test_LazyEvaluation "gopurs/output/Test.LazyEvaluation"
+	pkg_Effect_Console "gopurs/output/Effect.Console"
 )
 
 var main gopurs_runtime.Value
 var once_main sync.Once
 func Get_main() gopurs_runtime.Value {
 	once_main.Do(func() {
-		main = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-_dollar__unused_0_0 := gopurs_runtime.Apply(pkg_Test_AstTree.Get_describe(), gopurs_runtime.Value{})
-_ = _dollar__unused_0_0
-_dollar__unused_1_1 := gopurs_runtime.Apply(pkg_Test_AstTree.Get_act(), gopurs_runtime.Value{})
-_ = _dollar__unused_1_1
-_dollar__unused_2_2 := gopurs_runtime.Apply(pkg_Test_Fib.Get_describe(), gopurs_runtime.Value{})
-_ = _dollar__unused_2_2
-_dollar__unused_3_3 := gopurs_runtime.Apply(pkg_Test_Fib.Get_act(), gopurs_runtime.Value{})
-_ = _dollar__unused_3_3
-_dollar__unused_4_4 := gopurs_runtime.Apply(pkg_Test_ListOps.Get_describe(), gopurs_runtime.Value{})
-_ = _dollar__unused_4_4
-_dollar__unused_5_5 := gopurs_runtime.Apply(pkg_Test_ListOps.Get_act(), gopurs_runtime.Value{})
-_ = _dollar__unused_5_5
-_dollar__unused_6_6 := gopurs_runtime.Apply(pkg_Test_TCO.Get_describe(), gopurs_runtime.Value{})
-_ = _dollar__unused_6_6
-_dollar__unused_7_7 := gopurs_runtime.Apply(pkg_Test_TCO.Get_act(), gopurs_runtime.Value{})
-_ = _dollar__unused_7_7
-_dollar__unused_8_8 := gopurs_runtime.Apply(pkg_Test_Records.Get_describe(), gopurs_runtime.Value{})
-_ = _dollar__unused_8_8
-_dollar__unused_9_9 := gopurs_runtime.Apply(pkg_Test_Records.Get_act(), gopurs_runtime.Value{})
-_ = _dollar__unused_9_9
-_dollar__unused_10_10 := gopurs_runtime.Apply(pkg_Test_Ackermann.Get_describe(), gopurs_runtime.Value{})
-_ = _dollar__unused_10_10
-_dollar__unused_11_11 := gopurs_runtime.Apply(pkg_Test_Ackermann.Get_act(), gopurs_runtime.Value{})
-_ = _dollar__unused_11_11
-_dollar__unused_12_12 := gopurs_runtime.Apply(pkg_Test_Church.Get_describe(), gopurs_runtime.Value{})
-_ = _dollar__unused_12_12
-_dollar__unused_13_13 := gopurs_runtime.Apply(pkg_Test_Church.Get_act(), gopurs_runtime.Value{})
-_ = _dollar__unused_13_13
-_dollar__unused_14_14 := gopurs_runtime.Apply(pkg_Test_Primes.Get_describe(), gopurs_runtime.Value{})
-_ = _dollar__unused_14_14
-_dollar__unused_15_15 := gopurs_runtime.Apply(pkg_Test_Primes.Get_act(), gopurs_runtime.Value{})
-_ = _dollar__unused_15_15
-_dollar__unused_16_16 := gopurs_runtime.Apply(pkg_Test_RBTree.Get_describe(), gopurs_runtime.Value{})
-_ = _dollar__unused_16_16
-_dollar__unused_17_17 := gopurs_runtime.Apply(pkg_Test_RBTree.Get_act(), gopurs_runtime.Value{})
-_ = _dollar__unused_17_17
-_dollar__unused_18_18 := gopurs_runtime.Apply(pkg_Test_Polymorphism.Get_describe(), gopurs_runtime.Value{})
-_ = _dollar__unused_18_18
-_dollar__unused_19_19 := gopurs_runtime.Apply(pkg_Test_Polymorphism.Get_act(), gopurs_runtime.Value{})
-_ = _dollar__unused_19_19
-_dollar__unused_20_20 := gopurs_runtime.Apply(pkg_Test_StateMonad.Get_describe(), gopurs_runtime.Value{})
-_ = _dollar__unused_20_20
-_dollar__unused_21_21 := gopurs_runtime.Apply(pkg_Test_StateMonad.Get_act(), gopurs_runtime.Value{})
-_ = _dollar__unused_21_21
-_dollar__unused_22_22 := gopurs_runtime.Apply(pkg_Test_LazyEvaluation.Get_describe(), gopurs_runtime.Value{})
-_ = _dollar__unused_22_22
-return gopurs_runtime.Apply(pkg_Test_LazyEvaluation.Get_act(), gopurs_runtime.Value{})
+		main = func() gopurs_runtime.Value {
+__local_var_0_0 := gopurs_runtime.Apply2(pkg_Bench.Get_runBench(), pkg_Test_AstTree.Get_describe(), pkg_Test_AstTree.Get_act())
+_ = __local_var_0_0
+return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+t1_1_1 := gopurs_runtime.Apply(__local_var_0_0, gopurs_runtime.Value{})
+_ = t1_1_1
+t2_2_2 := gopurs_runtime.Apply(gopurs_runtime.Apply2(pkg_Bench.Get_runBench(), pkg_Test_Fib.Get_describe(), pkg_Test_Fib.Get_act()), gopurs_runtime.Value{})
+_ = t2_2_2
+t3_3_3 := gopurs_runtime.Apply(gopurs_runtime.Apply2(pkg_Bench.Get_runBench(), pkg_Test_ListOps.Get_describe(), pkg_Test_ListOps.Get_act()), gopurs_runtime.Value{})
+_ = t3_3_3
+t4_4_4 := gopurs_runtime.Apply(gopurs_runtime.Apply2(pkg_Bench.Get_runBench(), pkg_Test_TCO.Get_describe(), pkg_Test_TCO.Get_act()), gopurs_runtime.Value{})
+_ = t4_4_4
+t5_5_5 := gopurs_runtime.Apply(gopurs_runtime.Apply2(pkg_Bench.Get_runBench(), pkg_Test_Records.Get_describe(), pkg_Test_Records.Get_act()), gopurs_runtime.Value{})
+_ = t5_5_5
+t6_6_6 := gopurs_runtime.Apply(gopurs_runtime.Apply2(pkg_Bench.Get_runBench(), pkg_Test_Ackermann.Get_describe(), pkg_Test_Ackermann.Get_act()), gopurs_runtime.Value{})
+_ = t6_6_6
+t7_7_7 := gopurs_runtime.Apply(gopurs_runtime.Apply2(pkg_Bench.Get_runBench(), pkg_Test_Church.Get_describe(), pkg_Test_Church.Get_act()), gopurs_runtime.Value{})
+_ = t7_7_7
+t8_8_8 := gopurs_runtime.Apply(gopurs_runtime.Apply2(pkg_Bench.Get_runBench(), pkg_Test_Primes.Get_describe(), pkg_Test_Primes.Get_act()), gopurs_runtime.Value{})
+_ = t8_8_8
+t9_9_9 := gopurs_runtime.Apply(gopurs_runtime.Apply2(pkg_Bench.Get_runBench(), pkg_Test_RBTree.Get_describe(), pkg_Test_RBTree.Get_act()), gopurs_runtime.Value{})
+_ = t9_9_9
+t10_10_10 := gopurs_runtime.Apply(gopurs_runtime.Apply2(pkg_Bench.Get_runBench(), pkg_Test_Polymorphism.Get_describe(), pkg_Test_Polymorphism.Get_act()), gopurs_runtime.Value{})
+_ = t10_10_10
+t11_11_11 := gopurs_runtime.Apply(gopurs_runtime.Apply2(pkg_Bench.Get_runBench(), pkg_Test_StateMonad.Get_describe(), pkg_Test_StateMonad.Get_act()), gopurs_runtime.Value{})
+_ = t11_11_11
+t12_12_12 := gopurs_runtime.Apply(gopurs_runtime.Apply2(pkg_Bench.Get_runBench(), pkg_Test_LazyEvaluation.Get_describe(), pkg_Test_LazyEvaluation.Get_act()), gopurs_runtime.Value{})
+_ = t12_12_12
+return gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str("Total exec time: ").StrVal + gopurs_runtime.Apply(pkg_Bench.Get_formatNumber(), gopurs_runtime.FloatDiv(gopurs_runtime.FloatAdd(gopurs_runtime.FloatAdd(gopurs_runtime.FloatAdd(gopurs_runtime.FloatAdd(gopurs_runtime.FloatAdd(gopurs_runtime.FloatAdd(gopurs_runtime.FloatAdd(gopurs_runtime.FloatAdd(gopurs_runtime.FloatAdd(gopurs_runtime.FloatAdd(gopurs_runtime.FloatAdd(t1_1_1, t2_2_2), t3_3_3), t4_4_4), t5_5_5), t6_6_6), t7_7_7), t8_8_8), t9_9_9), t10_10_10), t11_11_11), t12_12_12), gopurs_runtime.Float(1000.0))).StrVal).StrVal + gopurs_runtime.Str(" ms\n").StrVal)), gopurs_runtime.Value{})
 })
+}()
 	})
 	return main
 }

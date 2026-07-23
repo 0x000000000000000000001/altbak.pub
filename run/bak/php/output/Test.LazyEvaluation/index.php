@@ -2,8 +2,10 @@
 
 namespace Test\LazyEvaluation;
 
-// ALL IMPORTS: Data.Function, Data.Ring, Data.Semiring, Data.Show, Data.Unit, Effect, Effect.Console, Prelude, Prim, Test.LazyEvaluation
-// TO REQUIRE: Data.Function, Data.Ring, Data.Semiring, Data.Show, Data.Unit, Effect, Effect.Console, Prelude, Test.LazyEvaluation
+// ALL IMPORTS: Bench, Control.Bind, Data.Function, Data.Ring, Data.Semiring, Data.Show, Data.Unit, Effect, Effect.Console, Prelude, Prim, Test.LazyEvaluation
+// TO REQUIRE: Bench, Control.Bind, Data.Function, Data.Ring, Data.Semiring, Data.Show, Data.Unit, Effect, Effect.Console, Prelude, Test.LazyEvaluation
+require_once __DIR__ . '/../Bench/index.php';
+require_once __DIR__ . '/../Control.Bind/index.php';
 require_once __DIR__ . '/../Data.Function/index.php';
 require_once __DIR__ . '/../Data.Ring/index.php';
 require_once __DIR__ . '/../Data.Semiring/index.php';
@@ -22,6 +24,12 @@ if (!class_exists(__NAMESPACE__ . '\\Phpurs_Data0')) {
   class Phpurs_Data4 { public $tag; public $value0, $value1, $value2, $value3; public function __construct($t, $value0, $value1, $value2, $value3) { $this->tag = $t; $this->value0 = $value0; $this->value1 = $value1; $this->value2 = $value2; $this->value3 = $value3; } }
   class Phpurs_Data5 { public $tag; public $value0, $value1, $value2, $value3, $value4; public function __construct($t, $value0, $value1, $value2, $value3, $value4) { $this->tag = $t; $this->value0 = $value0; $this->value1 = $value1; $this->value2 = $value2; $this->value3 = $value3; $this->value4 = $value4; } }
   class Phpurs_Data6 { public $tag; public $value0, $value1, $value2, $value3, $value4, $value5; public function __construct($t, $value0, $value1, $value2, $value3, $value4, $value5) { $this->tag = $t; $this->value0 = $value0; $this->value1 = $value1; $this->value2 = $value2; $this->value3 = $value3; $this->value4 = $value4; $this->value5 = $value5; } }
+  class Phpurs_Data7 { public $tag; public $value0, $value1, $value2, $value3, $value4, $value5, $value6; public function __construct($t, $value0, $value1, $value2, $value3, $value4, $value5, $value6) { $this->tag = $t; $this->value0 = $value0; $this->value1 = $value1; $this->value2 = $value2; $this->value3 = $value3; $this->value4 = $value4; $this->value5 = $value5; $this->value6 = $value6; } }
+  class Phpurs_Data8 { public $tag; public $value0, $value1, $value2, $value3, $value4, $value5, $value6, $value7; public function __construct($t, $value0, $value1, $value2, $value3, $value4, $value5, $value6, $value7) { $this->tag = $t; $this->value0 = $value0; $this->value1 = $value1; $this->value2 = $value2; $this->value3 = $value3; $this->value4 = $value4; $this->value5 = $value5; $this->value6 = $value6; $this->value7 = $value7; } }
+  class Phpurs_Data9 { public $tag; public $value0, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8; public function __construct($t, $value0, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8) { $this->tag = $t; $this->value0 = $value0; $this->value1 = $value1; $this->value2 = $value2; $this->value3 = $value3; $this->value4 = $value4; $this->value5 = $value5; $this->value6 = $value6; $this->value7 = $value7; $this->value8 = $value8; } }
+  class Phpurs_Data10 { public $tag; public $value0, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8, $value9; public function __construct($t, $value0, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8, $value9) { $this->tag = $t; $this->value0 = $value0; $this->value1 = $value1; $this->value2 = $value2; $this->value3 = $value3; $this->value4 = $value4; $this->value5 = $value5; $this->value6 = $value6; $this->value7 = $value7; $this->value8 = $value8; $this->value9 = $value9; } }
+  class Phpurs_Data11 { public $tag; public $value0, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8, $value9, $value10; public function __construct($t, $value0, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8, $value9, $value10) { $this->tag = $t; $this->value0 = $value0; $this->value1 = $value1; $this->value2 = $value2; $this->value3 = $value3; $this->value4 = $value4; $this->value5 = $value5; $this->value6 = $value6; $this->value7 = $value7; $this->value8 = $value8; $this->value9 = $value9; $this->value10 = $value10; } }
+  class Phpurs_Data12 { public $tag; public $value0, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8, $value9, $value10, $value11; public function __construct($t, $value0, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8, $value9, $value10, $value11) { $this->tag = $t; $this->value0 = $value0; $this->value1 = $value1; $this->value2 = $value2; $this->value3 = $value3; $this->value4 = $value4; $this->value5 = $value5; $this->value6 = $value6; $this->value7 = $value7; $this->value8 = $value8; $this->value9 = $value9; $this->value10 = $value10; $this->value11 = $value11; } }
 }
 if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   function phpurs_curry_fallback($fn, $args, $expected) {
@@ -93,104 +101,157 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Test_LazyEvaluation_Lazy'] = function() { $v = function($x_0) {
+\PhpursThunks::$thunks['Test_LazyEvaluation_Lazy'] = function() { $v = function($x_0 = null) {
   $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=(Just "Test_LazyEvaluation_Lazy"), recVars=[];
   $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Test_LazyEvaluation_force'] = function() { $v = function($v_0) {
+\PhpursThunks::$thunks['Test_LazyEvaluation_force'] = function() { $v = function($v_0 = null) {
   $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=(Just "Test_LazyEvaluation_force"), recVars=[];
   $__res = ($v_0)(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Test_LazyEvaluation_describe'] = function() { $v = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))("Lazy Evaluation (1M Thunks Forced, 1k Depth):"); return $v; };
-\PhpursThunks::$thunks['Test_LazyEvaluation_defer'] = function() { $v = function($f_0) {
+\PhpursThunks::$thunks['Test_LazyEvaluation_defer'] = function() { $v = function($f_0 = null) {
   $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=(Just "Test_LazyEvaluation_defer"), recVars=[];
   $__res = $f_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Test_LazyEvaluation_buildThunks'] = function() { $v = (function() {
-  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
+  $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  // DEBUG UncurriedAbs: currentBindingName=(Just "Test_LazyEvaluation_buildThunks"), recVars=["Test_LazyEvaluation_buildThunks"];
-  while (true) {
-switch ($v_0) {
+  $__tco_var_Test_LazyEvaluation_buildThunks_v_0 = $v_0;
+  $__tco_var_Test_LazyEvaluation_buildThunks_v1_1 = $v1_1;
+  $__tco_done_Test_LazyEvaluation_buildThunks = false;
+  $__tco_res_Test_LazyEvaluation_buildThunks = null;
+  $__tco_loop_Test_LazyEvaluation_buildThunks = (function() use (&$__tco_done_Test_LazyEvaluation_buildThunks, &$__tco_var_Test_LazyEvaluation_buildThunks_v_0, &$__tco_var_Test_LazyEvaluation_buildThunks_v1_1) {
+  $__fn = function($v_0 = null, $v1_1 = null) use (&$__tco_done_Test_LazyEvaluation_buildThunks, &$__tco_var_Test_LazyEvaluation_buildThunks_v_0, &$__tco_var_Test_LazyEvaluation_buildThunks_v1_1, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__tco_done_Test_LazyEvaluation_buildThunks = true;
+  $v_0 = $__tco_var_Test_LazyEvaluation_buildThunks_v_0;
+  $v1_1 = $__tco_var_Test_LazyEvaluation_buildThunks_v1_1;
+  $__t2 = null;;
+  switch ($v_0) {
 case 0:
 $__t2 = $v1_1;
+goto end_branch_2;;
 break;
 default:
-$__tco_0 = ((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v_0))(1);
-$__tco_1 = function($v2_2) use ($v1_1) {
+;
+break;
+};
+  $__tco_0 = ((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v_0))(1);
+  $__tco_1 = function($v2_2 = null) use ($v1_1) {
   $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Test_LazyEvaluation_buildThunks"];
   $__res = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))(($v1_1)(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')))))(1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-$v_0 = $__tco_0;
-$v1_1 = $__tco_1;
-continue 2;
-$__t2 = null;
-break;
+  $__tco_var_Test_LazyEvaluation_buildThunks_v_0 = $__tco_0;
+  $__tco_var_Test_LazyEvaluation_buildThunks_v1_1 = $__tco_1;
+  $__tco_done_Test_LazyEvaluation_buildThunks = false;
+  $__res = null;
+  goto __end;;
+  $__t2 = null;
+  end_branch_2:;
+  $__res = $__t2;
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
+  while (($__tco_done_Test_LazyEvaluation_buildThunks === false)) {
+$__tco_res_Test_LazyEvaluation_buildThunks = ($__tco_loop_Test_LazyEvaluation_buildThunks)($__tco_var_Test_LazyEvaluation_buildThunks_v_0, $__tco_var_Test_LazyEvaluation_buildThunks_v1_1);
 };
-$__res = $__t2;
-goto __end;;
-};
+  $__res = $__tco_res_Test_LazyEvaluation_buildThunks;
+  goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Test_LazyEvaluation_runManyTimes'] = function() { $v = (function() {
-  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
+  $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  // DEBUG UncurriedAbs: currentBindingName=(Just "Test_LazyEvaluation_runManyTimes"), recVars=["Test_LazyEvaluation_runManyTimes"];
-  while (true) {
-switch ($v_0) {
+  $__tco_var_Test_LazyEvaluation_runManyTimes_v_0 = $v_0;
+  $__tco_var_Test_LazyEvaluation_runManyTimes_v1_1 = $v1_1;
+  $__tco_done_Test_LazyEvaluation_runManyTimes = false;
+  $__tco_res_Test_LazyEvaluation_runManyTimes = null;
+  $__tco_loop_Test_LazyEvaluation_runManyTimes = (function() use (&$__tco_done_Test_LazyEvaluation_runManyTimes, &$__tco_var_Test_LazyEvaluation_runManyTimes_v_0, &$__tco_var_Test_LazyEvaluation_runManyTimes_v1_1) {
+  $__fn = function($v_0 = null, $v1_1 = null) use (&$__tco_done_Test_LazyEvaluation_runManyTimes, &$__tco_var_Test_LazyEvaluation_runManyTimes_v_0, &$__tco_var_Test_LazyEvaluation_runManyTimes_v1_1, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__tco_done_Test_LazyEvaluation_runManyTimes = true;
+  $v_0 = $__tco_var_Test_LazyEvaluation_runManyTimes_v_0;
+  $v1_1 = $__tco_var_Test_LazyEvaluation_runManyTimes_v1_1;
+  $__t2 = null;;
+  switch ($v_0) {
 case 0:
 $__t2 = $v1_1;
+goto end_branch_2;;
 break;
 default:
-$__tco_0 = ((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v_0))(1);
-$__tco_1 = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))($v1_1))((((($GLOBALS['Test_LazyEvaluation_buildThunks'] ?? \PhpursThunks::eval('Test_LazyEvaluation_buildThunks')))(1000))(function($v2_2) {
+;
+break;
+};
+  $__tco_0 = ((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v_0))(1);
+  $__tco_1 = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))($v1_1))((((($GLOBALS['Test_LazyEvaluation_buildThunks'] ?? \PhpursThunks::eval('Test_LazyEvaluation_buildThunks')))(1000))(function($v2_2 = null) {
   $__num = \func_num_args();
-  // DEBUG UncurriedAbs: currentBindingName=Nothing, recVars=["Test_LazyEvaluation_runManyTimes"];
   $__res = 0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }))(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'))));
-$v_0 = $__tco_0;
-$v1_1 = $__tco_1;
-continue 2;
-$__t2 = null;
-break;
+  $__tco_var_Test_LazyEvaluation_runManyTimes_v_0 = $__tco_0;
+  $__tco_var_Test_LazyEvaluation_runManyTimes_v1_1 = $__tco_1;
+  $__tco_done_Test_LazyEvaluation_runManyTimes = false;
+  $__res = null;
+  goto __end;;
+  $__t2 = null;
+  end_branch_2:;
+  $__res = $__t2;
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
+  while (($__tco_done_Test_LazyEvaluation_runManyTimes === false)) {
+$__tco_res_Test_LazyEvaluation_runManyTimes = ($__tco_loop_Test_LazyEvaluation_runManyTimes)($__tco_var_Test_LazyEvaluation_runManyTimes_v_0, $__tco_var_Test_LazyEvaluation_runManyTimes_v1_1);
 };
-$__res = $__t2;
-goto __end;;
-};
+  $__res = $__tco_res_Test_LazyEvaluation_runManyTimes;
+  goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Test_LazyEvaluation_act'] = function() { $v = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))((($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))(((($GLOBALS['Test_LazyEvaluation_runManyTimes'] ?? \PhpursThunks::eval('Test_LazyEvaluation_runManyTimes')))(1000))(0))); return $v; };
+\PhpursThunks::$thunks['Test_LazyEvaluation_act'] = function() { $v = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))((($GLOBALS['Bench_opaque'] ?? \PhpursThunks::eval('Bench_opaque')))(1000)))(function($dummy_0 = null) {
+  $__num = \func_num_args();
+  $__res = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))((($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))(((($GLOBALS['Test_LazyEvaluation_runManyTimes'] ?? \PhpursThunks::eval('Test_LazyEvaluation_runManyTimes')))($dummy_0))(0)));
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}); return $v; };
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 

@@ -4,6 +4,7 @@ import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
 	pkg_Effect_Console "gopurs/output/Effect.Console"
+	pkg_Bench "gopurs/output/Bench"
 	pkg_Data_Show "gopurs/output/Data.Show"
 )
 
@@ -102,7 +103,9 @@ var c10 gopurs_runtime.Value
 var once_c10 sync.Once
 func Get_c10() gopurs_runtime.Value {
 	once_c10.Do(func() {
-		c10 = gopurs_runtime.Apply(Get_fromInt(), gopurs_runtime.Int(10))
+		c10 = gopurs_runtime.Func(func(n_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(Get_fromInt(), n_0)
+})
 	})
 	return c10
 }
@@ -111,8 +114,14 @@ var c100 gopurs_runtime.Value
 var once_c100 sync.Once
 func Get_c100() gopurs_runtime.Value {
 	once_c100.Do(func() {
-		c100 = gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, x_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(Get_c10(), gopurs_runtime.Apply(Get_c10(), f_0), x_1)
+		c100 = gopurs_runtime.Func(func(n_0 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_1_0 := gopurs_runtime.Apply(Get_fromInt(), n_0)
+_ = __local_var_1_0
+__local_var_2_1 := gopurs_runtime.Apply(Get_fromInt(), n_0)
+_ = __local_var_2_1
+return gopurs_runtime.Func2(func(f_3 gopurs_runtime.Value, x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(__local_var_1_0, gopurs_runtime.Apply(__local_var_2_1, f_3), x_4)
+})
 })
 	})
 	return c100
@@ -122,8 +131,14 @@ var c10k gopurs_runtime.Value
 var once_c10k sync.Once
 func Get_c10k() gopurs_runtime.Value {
 	once_c10k.Do(func() {
-		c10k = gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, x_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(Get_c10(), gopurs_runtime.Apply(Get_c10(), gopurs_runtime.Apply(Get_c100(), f_0)), x_1)
+		c10k = gopurs_runtime.Func(func(n_0 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_1_0 := gopurs_runtime.Apply(Get_c100(), n_0)
+_ = __local_var_1_0
+__local_var_2_1 := gopurs_runtime.Apply(Get_c100(), n_0)
+_ = __local_var_2_1
+return gopurs_runtime.Func2(func(f_3 gopurs_runtime.Value, x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(__local_var_1_0, gopurs_runtime.Apply(__local_var_2_1, f_3), x_4)
+})
 })
 	})
 	return c10k
@@ -133,8 +148,14 @@ var c100k gopurs_runtime.Value
 var once_c100k sync.Once
 func Get_c100k() gopurs_runtime.Value {
 	once_c100k.Do(func() {
-		c100k = gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, x_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(Get_c10(), gopurs_runtime.Apply(Get_c10(), gopurs_runtime.Apply(Get_c100(), gopurs_runtime.Apply(Get_c10(), f_0))), x_1)
+		c100k = gopurs_runtime.Func(func(n_0 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_1_0 := gopurs_runtime.Apply(Get_c10k(), n_0)
+_ = __local_var_1_0
+__local_var_2_1 := gopurs_runtime.Apply(Get_fromInt(), n_0)
+_ = __local_var_2_1
+return gopurs_runtime.Func2(func(f_3 gopurs_runtime.Value, x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(__local_var_1_0, gopurs_runtime.Apply(__local_var_2_1, f_3), x_4)
+})
 })
 	})
 	return c100k
@@ -155,9 +176,17 @@ var act gopurs_runtime.Value
 var once_act sync.Once
 func Get_act() gopurs_runtime.Value {
 	once_act.Do(func() {
-		act = gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(pkg_Data_Show.Get_showIntImpl(), gopurs_runtime.Apply2(Get_c10(), gopurs_runtime.Apply(Get_c10(), gopurs_runtime.Apply(Get_c100(), gopurs_runtime.Apply(Get_c10(), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Int(x_0.IntVal + gopurs_runtime.Int(1).IntVal)
-})))), gopurs_runtime.Int(0))))
+		act = func() gopurs_runtime.Value {
+__local_var_0_0 := gopurs_runtime.Apply(pkg_Bench.Get_opaque(), gopurs_runtime.Int(10))
+_ = __local_var_0_0
+return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+dummy_1_1 := gopurs_runtime.Apply(__local_var_0_0, gopurs_runtime.Value{})
+_ = dummy_1_1
+return gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(pkg_Data_Show.Get_showIntImpl(), gopurs_runtime.Apply3(Get_c100k(), dummy_1_1, gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Int(x_2.IntVal + gopurs_runtime.Int(1).IntVal)
+}), gopurs_runtime.Int(0)))), gopurs_runtime.Value{})
+})
+}()
 	})
 	return act
 }

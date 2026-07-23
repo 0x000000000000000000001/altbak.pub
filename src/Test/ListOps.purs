@@ -3,6 +3,7 @@ module Test.ListOps where
 import Prelude
 import Effect (Effect)
 import Effect.Console (logShow, log)
+import Bench as Bench
 
 data List a = Nil | Cons a (List a)
 
@@ -25,11 +26,13 @@ foldl :: ∀ a b. (b -> a -> b) -> b -> List a -> b
 foldl _ acc Nil = acc
 foldl f acc (Cons x xs) = foldl f (f acc x) xs
 
-sumEvens :: Int
-sumEvens = foldl (+) 0 (filterEvens (range 1 900))
+sumEvens :: Int -> Int
+sumEvens n = foldl (+) 0 (filterEvens (range 1 n))
 
 describe :: Effect Unit
 describe = log "List Processing (900 elements):"
 
 act :: Effect Unit
-act = logShow sumEvens
+act = do
+  dummy <- Bench.opaque 900
+  logShow $ sumEvens dummy

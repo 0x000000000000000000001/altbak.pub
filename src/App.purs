@@ -2,6 +2,8 @@ module App where
 
 import Prelude
 import Effect (Effect)
+import Effect.Console (log)
+import Bench (runBench, formatNumber)
 import Test.Fib as Fib
 import Test.AstTree as AstTree
 import Test.ListOps as ListOps
@@ -17,38 +19,18 @@ import Test.LazyEvaluation as LazyEvaluation
 
 main :: Effect Unit
 main = do
-  AstTree.describe
-  AstTree.act
+  t1 <- runBench AstTree.describe AstTree.act
+  t2 <- runBench Fib.describe Fib.act
+  t3 <- runBench ListOps.describe ListOps.act
+  t4 <- runBench TCO.describe TCO.act
+  t5 <- runBench Records.describe Records.act
+  t6 <- runBench Ackermann.describe Ackermann.act
+  t7 <- runBench Church.describe Church.act
+  t8 <- runBench Primes.describe Primes.act
+  t9 <- runBench RBTree.describe RBTree.act
+  t10 <- runBench Polymorphism.describe Polymorphism.act
+  t11 <- runBench StateMonad.describe StateMonad.act
+  t12 <- runBench LazyEvaluation.describe LazyEvaluation.act
 
-  Fib.describe
-  Fib.act
-
-  ListOps.describe
-  ListOps.act
-
-  TCO.describe
-  TCO.act
-
-  Records.describe
-  Records.act
-
-  Ackermann.describe
-  Ackermann.act
-
-  Church.describe
-  Church.act
-
-  Primes.describe
-  Primes.act
-
-  RBTree.describe
-  RBTree.act
-
-  Polymorphism.describe
-  Polymorphism.act
-
-  StateMonad.describe
-  StateMonad.act
-
-  LazyEvaluation.describe
-  LazyEvaluation.act
+  let total = t1 + t2 + t3 + t4 + t5 + t6 + t7 + t8 + t9 + t10 + t11 + t12
+  log $ "Total exec time: " <> formatNumber (total / 1000.0) <> " ms\n"

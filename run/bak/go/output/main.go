@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 	"runtime/pprof"
-	"gopurs/output/AppX"
+	"gopurs/output/App"
 	"gopurs/output/gopurs_runtime"
 )
 
@@ -13,7 +13,7 @@ func main() {
 	pprof.StartCPUProfile(f)
 	defer pprof.StopCPUProfile()
 
-	gopurs_runtime.Apply(AppX.Get_main(), gopurs_runtime.Value{})
+	gopurs_runtime.Apply(App.Get_main(), gopurs_runtime.Value{})
 
 	mf, err := os.Create("mem.prof")
 	if err != nil { panic(err) }

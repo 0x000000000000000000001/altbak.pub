@@ -5,6 +5,7 @@ import (
 	sync "sync"
 	pkg_Data_EuclideanRing "gopurs/output/Data.EuclideanRing"
 	pkg_Effect_Console "gopurs/output/Effect.Console"
+	pkg_Bench "gopurs/output/Bench"
 	pkg_Data_Show "gopurs/output/Data.Show"
 )
 
@@ -434,71 +435,44 @@ var once_act sync.Once
 func Get_act() gopurs_runtime.Value {
 	once_act.Do(func() {
 		act = func() gopurs_runtime.Value {
-var go__0_0 gopurs_runtime.Value
-go__0_0 = gopurs_runtime.Func(func(v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_0_0 := gopurs_runtime.Apply(pkg_Bench.Get_opaque(), gopurs_runtime.Int(500))
+_ = __local_var_0_0
+return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+dummy_1_1 := gopurs_runtime.Apply(__local_var_0_0, gopurs_runtime.Value{})
+_ = dummy_1_1
+var go__2_2 gopurs_runtime.Value
+go__2_2 = gopurs_runtime.Func(func(v_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
-go__0_0:
+go__2_2:
 for {
-if false { continue go__0_0 }
-var v_1 = v_1_loop
-_ = v_1
-var v1_2 = v1_2_loop
-_ = v1_2
-var __t1 gopurs_runtime.Value
-{
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_1, "_tag").StrVal == "Nil")).IntVal != 0 {
-__t1 = v1_2
-goto end_branch_1
-} else {
-
-}
-}
-{
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_1, "_tag").StrVal == "Cons")).IntVal != 0 {
-v_1_loop = gopurs_runtime.RecordGet(v_1, "value1")
-v1_2_loop = gopurs_runtime.Int(v1_2.IntVal + gopurs_runtime.RecordGet(v_1, "value0").IntVal)
-continue go__0_0
-__t1 = gopurs_runtime.Value{}
-goto end_branch_1
-} else {
-
-}
-}
-{
-__t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
-}
-end_branch_1:
-return __t1
-}
-}()
-})
-})
-var go__1_2 gopurs_runtime.Value
-go__1_2 = gopurs_runtime.Func(func(curr_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(acc_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-go__1_2:
-for {
-if false { continue go__1_2 }
-var curr_2 = curr_2_loop
-_ = curr_2
-var acc_3 = acc_3_loop
-_ = acc_3
+if false { continue go__2_2 }
+var v_3 = v_3_loop
+_ = v_3
+var v1_4 = v1_4_loop
+_ = v1_4
 var __t3 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(curr_2.IntVal < gopurs_runtime.Int(2).IntVal)).IntVal != 0 {
-__t3 = acc_3
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_3, "_tag").StrVal == "Nil")).IntVal != 0 {
+__t3 = v1_4
 goto end_branch_3
 } else {
 
 }
 }
 {
-curr_2_loop = gopurs_runtime.Int(curr_2.IntVal - gopurs_runtime.Int(1).IntVal)
-acc_3_loop = gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Cons"), curr_2, acc_3)
-continue go__1_2
+if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_3, "_tag").StrVal == "Cons")).IntVal != 0 {
+v_3_loop = gopurs_runtime.RecordGet(v_3, "value1")
+v1_4_loop = gopurs_runtime.Int(v1_4.IntVal + gopurs_runtime.RecordGet(v_3, "value0").IntVal)
+continue go__2_2
 __t3 = gopurs_runtime.Value{}
+goto end_branch_3
+} else {
+
+}
+}
+{
+__t3 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_3:
 return __t3
@@ -506,7 +480,40 @@ return __t3
 }()
 })
 })
-return gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(pkg_Data_Show.Get_showIntImpl(), gopurs_runtime.Apply2(go__0_0, gopurs_runtime.Apply(Get_sieve(), gopurs_runtime.Apply2(go__1_2, gopurs_runtime.Int(500), gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nil")))), gopurs_runtime.Int(0))))
+var go__3_4 gopurs_runtime.Value
+go__3_4 = gopurs_runtime.Func(func(curr_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(acc_5_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+go__3_4:
+for {
+if false { continue go__3_4 }
+var curr_4 = curr_4_loop
+_ = curr_4
+var acc_5 = acc_5_loop
+_ = acc_5
+var __t5 gopurs_runtime.Value
+{
+if (gopurs_runtime.Bool(curr_4.IntVal < gopurs_runtime.Int(2).IntVal)).IntVal != 0 {
+__t5 = acc_5
+goto end_branch_5
+} else {
+
+}
+}
+{
+curr_4_loop = gopurs_runtime.Int(curr_4.IntVal - gopurs_runtime.Int(1).IntVal)
+acc_5_loop = gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Cons"), curr_4, acc_5)
+continue go__3_4
+__t5 = gopurs_runtime.Value{}
+}
+end_branch_5:
+return __t5
+}
+}()
+})
+})
+return gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(pkg_Data_Show.Get_showIntImpl(), gopurs_runtime.Apply2(go__2_2, gopurs_runtime.Apply(Get_sieve(), gopurs_runtime.Apply2(go__3_4, dummy_1_1, gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nil")))), gopurs_runtime.Int(0)))), gopurs_runtime.Value{})
+})
 }()
 	})
 	return act

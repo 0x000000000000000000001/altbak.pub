@@ -3,6 +3,7 @@ module Test.TCO where
 import Prelude
 import Effect (Effect)
 import Effect.Console (logShow, log)
+import Bench as Bench
 
 -- A deeply recursive function (Tail Recursive)
 -- In PureScript to JS, it will be transformed into a 'while' loop
@@ -15,4 +16,6 @@ describe :: Effect Unit
 describe = log "Tail Call Optimization (100k calls):"
 
 act :: Effect Unit
-act = logShow $ deepTailRec 100000 0
+act = do
+  dummy <- Bench.opaque 100000
+  logShow $ deepTailRec dummy 0

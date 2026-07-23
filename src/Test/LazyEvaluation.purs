@@ -3,6 +3,7 @@ module Test.LazyEvaluation where
 import Prelude
 import Effect (Effect)
 import Effect.Console (logShow, log)
+import Bench as Bench
 
 -- PureScript is strict by default. We simulate Lazy Evaluation (Thunks)
 -- by wrapping computations in functions taking `Unit`.
@@ -33,4 +34,6 @@ describe = log "Lazy Evaluation (1M Thunks Forced, 1k Depth):"
 
 -- The result should be 1000 * 1000 = 1000000
 act :: Effect Unit
-act = logShow $ runManyTimes 1000 0
+act = do
+  dummy <- Bench.opaque 1000
+  logShow $ runManyTimes dummy 0

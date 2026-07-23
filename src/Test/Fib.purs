@@ -3,6 +3,7 @@ module Test.Fib where
 import Prelude
 import Effect (Effect)
 import Effect.Console (logShow, log)
+import Bench as Bench
 
 fib :: Int -> Int
 fib 0 = 0
@@ -13,4 +14,6 @@ describe :: Effect Unit
 describe = log "Fibonacci:"
 
 act :: Effect Unit
-act = logShow $ fib 10
+act = do
+  dummy <- Bench.opaque 10
+  logShow $ fib dummy

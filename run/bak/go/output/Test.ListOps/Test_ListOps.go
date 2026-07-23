@@ -6,6 +6,7 @@ import (
 	pkg_Data_EuclideanRing "gopurs/output/Data.EuclideanRing"
 	pkg_Data_Semiring "gopurs/output/Data.Semiring"
 	pkg_Effect_Console "gopurs/output/Effect.Console"
+	pkg_Bench "gopurs/output/Bench"
 	pkg_Data_Show "gopurs/output/Data.Show"
 )
 
@@ -193,31 +194,31 @@ var sumEvens gopurs_runtime.Value
 var once_sumEvens sync.Once
 func Get_sumEvens() gopurs_runtime.Value {
 	once_sumEvens.Do(func() {
-		sumEvens = func() gopurs_runtime.Value {
-var go__0_0 gopurs_runtime.Value
-go__0_0 = gopurs_runtime.Func(func(curr_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(acc_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		sumEvens = gopurs_runtime.Func(func(n_0 gopurs_runtime.Value) gopurs_runtime.Value {
+var go__1_0 gopurs_runtime.Value
+go__1_0 = gopurs_runtime.Func(func(curr_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(acc_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
-go__0_0:
+go__1_0:
 for {
-if false { continue go__0_0 }
-var curr_1 = curr_1_loop
-_ = curr_1
-var acc_2 = acc_2_loop
-_ = acc_2
+if false { continue go__1_0 }
+var curr_2 = curr_2_loop
+_ = curr_2
+var acc_3 = acc_3_loop
+_ = acc_3
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(curr_1.IntVal < gopurs_runtime.Int(1).IntVal)).IntVal != 0 {
-__t1 = acc_2
+if (gopurs_runtime.Bool(curr_2.IntVal < gopurs_runtime.Int(1).IntVal)).IntVal != 0 {
+__t1 = acc_3
 goto end_branch_1
 } else {
 
 }
 }
 {
-curr_1_loop = gopurs_runtime.Int(curr_1.IntVal - gopurs_runtime.Int(1).IntVal)
-acc_2_loop = gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Cons"), curr_1, acc_2)
-continue go__0_0
+curr_2_loop = gopurs_runtime.Int(curr_2.IntVal - gopurs_runtime.Int(1).IntVal)
+acc_3_loop = gopurs_runtime.RecordDict3("_tag", "value0", "value1", gopurs_runtime.Str("Cons"), curr_2, acc_3)
+continue go__1_0
 __t1 = gopurs_runtime.Value{}
 }
 end_branch_1:
@@ -226,8 +227,8 @@ return __t1
 }()
 })
 })
-return gopurs_runtime.Apply3(Get_foldl(), pkg_Data_Semiring.Get_intAdd(), gopurs_runtime.Int(0), gopurs_runtime.Apply(Get_filterEvens(), gopurs_runtime.Apply2(go__0_0, gopurs_runtime.Int(900), gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nil")))))
-}()
+return gopurs_runtime.Apply3(Get_foldl(), pkg_Data_Semiring.Get_intAdd(), gopurs_runtime.Int(0), gopurs_runtime.Apply(Get_filterEvens(), gopurs_runtime.Apply2(go__1_0, n_0, gopurs_runtime.RecordDict1("_tag", gopurs_runtime.Str("Nil")))))
+})
 	})
 	return sumEvens
 }
@@ -245,7 +246,15 @@ var act gopurs_runtime.Value
 var once_act sync.Once
 func Get_act() gopurs_runtime.Value {
 	once_act.Do(func() {
-		act = gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(pkg_Data_Show.Get_showIntImpl(), Get_sumEvens()))
+		act = func() gopurs_runtime.Value {
+__local_var_0_0 := gopurs_runtime.Apply(pkg_Bench.Get_opaque(), gopurs_runtime.Int(900))
+_ = __local_var_0_0
+return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+dummy_1_1 := gopurs_runtime.Apply(__local_var_0_0, gopurs_runtime.Value{})
+_ = dummy_1_1
+return gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(pkg_Data_Show.Get_showIntImpl(), gopurs_runtime.Apply(Get_sumEvens(), dummy_1_1))), gopurs_runtime.Value{})
+})
+}()
 	})
 	return act
 }

@@ -3,6 +3,7 @@ module Test.Ackermann where
 import Prelude
 import Effect (Effect)
 import Effect.Console (logShow, log)
+import Bench as Bench
 
 -- The Ackermann function is deeply recursive but NOT tail-recursive.
 -- It is a classic benchmark for testing function call overhead,
@@ -16,4 +17,6 @@ describe :: Effect Unit
 describe = log "Ackermann (3, 4):"
 
 act :: Effect Unit
-act = logShow $ ackermann 3 4
+act = do
+  dummy <- Bench.opaque 3
+  logShow $ ackermann dummy 4

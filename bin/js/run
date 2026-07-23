@@ -13,31 +13,17 @@ ENTRY_POINT="App"
 if [ "$1" == "--test" ]; then
   ENTRY_POINT="AppX"
   TEST_NAME="$2"
-  cat <<EOF > src/Bench.js
-export const benchNow = () => performance.now() * 1000.0;
-EOF
-  cat <<EOF > src/Bench.purs
-module Bench where
-import Effect (Effect)
-foreign import benchNow :: Effect Number
-EOF
   cat <<EOF > src/AppX.purs
 module AppX where
 import Prelude
 import Effect (Effect)
-import Effect.Console (log)
-import Bench (benchNow)
+import Bench (runBench)
 import Test.$TEST_NAME as $TEST_NAME
 
 main :: Effect Unit
-main = do
-  $TEST_NAME.describe
-  t1 <- benchNow
-  $TEST_NAME.act
-  t2 <- benchNow
-  log ("\n[BENCHMARK] Execution time: " <> show (t2 - t1) <> " μs")
+main = runBench $TEST_NAME.describe $TEST_NAME.act
 EOF
-  trap "rm -f src/AppX.purs src/Bench.purs src/Bench.js" EXIT
+  trap "rm -f src/AppX.purs" EXIT
 fi
 
 npx spago build > /dev/null 2>&1

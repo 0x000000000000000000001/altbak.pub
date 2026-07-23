@@ -3,6 +3,7 @@ module Test.AstTree where
 import Prelude
 import Effect (Effect)
 import Effect.Console (logShow, log)
+import Bench as Bench
 
 data Expr
   = Val Int
@@ -24,4 +25,6 @@ describe :: Effect Unit
 describe = log "AST Evaluation:"
 
 act :: Effect Unit
-act = logShow $ eval (buildTree 3)
+act = do
+  dummy <- Bench.opaque 3
+  logShow $ eval (buildTree dummy)

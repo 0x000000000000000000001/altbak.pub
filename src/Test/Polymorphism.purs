@@ -3,6 +3,7 @@ module Test.Polymorphism where
 import Prelude
 import Effect (Effect)
 import Effect.Console (logShow, log)
+import Bench as Bench
 
 -- A custom type class to test runtime Dictionary dispatch
 class Monoidish a where
@@ -27,4 +28,6 @@ describe :: Effect Unit
 describe = log "Polymorphism (10M Type Class Dict Lookups):"
 
 act :: Effect Unit
-act = logShow $ polyLoop 10000000 0
+act = do
+  dummy <- Bench.opaque 10000000
+  logShow $ polyLoop dummy 0
