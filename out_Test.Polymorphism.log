@@ -1,0 +1,6 @@
+=== Native Go ===
+Polymorphism (10M Type Class Dict Lookups):
+10000000
+
+Execution time: 81497.00 μs
+

@@ -1,0 +1,6 @@
+=== Native Go ===
+Lazy Evaluation (1M Thunks Forced, 1k Depth):
+1000000
+
+Execution time: 62153.00 μs
+

@@ -1,0 +1,6 @@
+=== Native Go ===
+Prime Sieve (sum primes up to 500):
+21536
+
+Execution time: 660.00 μs
+

@@ -1,0 +1,6 @@
+=== Native Go ===
+Tail Call Optimization (100k calls):
+100000
+
+Execution time: 25501.00 μs
+
