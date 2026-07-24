@@ -62,8 +62,10 @@ fi
 
 export PATH="$PWD/run/bak/js/node_modules/.bin:$PATH"
 
-echo "=== Rebuilding gopurs backend ==="
-(cd ../gopurs && npm run build --silent)
+if [ "$CLEAN" == "1" ]; then
+  echo "=== Rebuilding gopurs backend ==="
+  (cd ../gopurs && npm run build --silent)
+fi
 
 spago build > /dev/null 2>&1 || echo "Compilation failed, but that's expected for now!"
 

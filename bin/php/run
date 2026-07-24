@@ -63,8 +63,10 @@ fi
 
 export PATH="$PWD/run/bak/js/node_modules/.bin:$PATH"
 
-echo "=== Rebuilding phpurs backend ==="
-(cd ../phpurs && npm run build)
+if [ "$CLEAN" == "1" ]; then
+  echo "=== Rebuilding phpurs backend ==="
+  (cd ../phpurs && npm run build)
+fi
 
 spago build --backend-args "--main ${ENTRY_POINT} --ffi run/bak/php/ffi" || echo "Compilation failed, but that's expected for now!"
 
