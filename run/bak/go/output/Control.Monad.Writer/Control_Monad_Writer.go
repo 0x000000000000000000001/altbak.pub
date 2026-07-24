@@ -13,7 +13,7 @@ func Get_writer() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
-return x_0_loop
+return x_0
 }()
 })
 	})
@@ -28,7 +28,7 @@ func Get_runWriter() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
-return x_0_loop
+return x_0
 }()
 })
 	})
@@ -39,7 +39,9 @@ var mapWriter gopurs_runtime.Value
 var once_mapWriter sync.Once
 func Get_mapWriter() gopurs_runtime.Value {
 	once_mapWriter.Do(func() {
-		mapWriter = gopurs_runtime.Func2(Call_mapWriter)
+		mapWriter = gopurs_runtime.Func2(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_mapWriter(f_0_box, v_1_box)
+})
 	})
 	return mapWriter
 }
@@ -52,7 +54,7 @@ func Get_execWriter() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var m_0 gopurs_runtime.Value = m_0_loop
 _ = m_0
-return (*[1024]gopurs_runtime.Value)(m_0_loop.UnsafePtr)[1]
+return (*[1024]gopurs_runtime.Value)(m_0.UnsafePtr)[1]
 }()
 })
 	})
@@ -64,7 +66,7 @@ var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
-return gopurs_runtime.Apply(f_0_loop, v_1_loop)
+return gopurs_runtime.Apply(f_0, v_1)
 }
 
 

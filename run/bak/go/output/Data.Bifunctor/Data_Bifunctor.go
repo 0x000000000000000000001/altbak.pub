@@ -15,7 +15,7 @@ func Get_bimap() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0_loop, "bimap")
+return gopurs_runtime.RecordGet(dict_0, "bimap")
 }()
 })
 	})
@@ -30,7 +30,7 @@ func Get_bivoid() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictBifunctor_0 gopurs_runtime.Value = dictBifunctor_0_loop
 _ = dictBifunctor_0
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBifunctor_0_loop, "bimap"), gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBifunctor_0, "bimap"), gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Unit.Get_unit()
 }), gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Unit.Get_unit()
@@ -45,7 +45,9 @@ var lmap gopurs_runtime.Value
 var once_lmap sync.Once
 func Get_lmap() gopurs_runtime.Value {
 	once_lmap.Do(func() {
-		lmap = gopurs_runtime.Func2(Call_lmap)
+		lmap = gopurs_runtime.Func2(func(dictBifunctor_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_lmap(dictBifunctor_0_box, f_1_box)
+})
 	})
 	return lmap
 }
@@ -58,7 +60,7 @@ func Get_rmap() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictBifunctor_0 gopurs_runtime.Value = dictBifunctor_0_loop
 _ = dictBifunctor_0
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBifunctor_0_loop, "bimap"), gopurs_runtime.RecordGet(pkg_Control_Category.Get_categoryFn(), "identity"))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBifunctor_0, "bimap"), gopurs_runtime.RecordGet(pkg_Control_Category.Get_categoryFn(), "identity"))
 }()
 })
 	})
@@ -124,7 +126,7 @@ var dictBifunctor_0 gopurs_runtime.Value = dictBifunctor_0_loop
 _ = dictBifunctor_0
 var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBifunctor_0_loop, "bimap"), f_1_loop, gopurs_runtime.RecordGet(pkg_Control_Category.Get_categoryFn(), "identity"))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBifunctor_0, "bimap"), f_1, gopurs_runtime.RecordGet(pkg_Control_Category.Get_categoryFn(), "identity"))
 }
 
 

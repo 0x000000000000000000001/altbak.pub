@@ -19,7 +19,9 @@ var runState gopurs_runtime.Value
 var once_runState sync.Once
 func Get_runState() gopurs_runtime.Value {
 	once_runState.Do(func() {
-		runState = gopurs_runtime.Func2(Call_runState)
+		runState = gopurs_runtime.Func2(func(v_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_runState(v_0_box, x_1_box)
+})
 	})
 	return runState
 }
@@ -28,7 +30,9 @@ var mapState gopurs_runtime.Value
 var once_mapState sync.Once
 func Get_mapState() gopurs_runtime.Value {
 	once_mapState.Do(func() {
-		mapState = gopurs_runtime.Func3(Call_mapState)
+		mapState = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_mapState(f_0_box, v_1_box, x_2_box)
+})
 	})
 	return mapState
 }
@@ -37,7 +41,9 @@ var execState gopurs_runtime.Value
 var once_execState sync.Once
 func Get_execState() gopurs_runtime.Value {
 	once_execState.Do(func() {
-		execState = gopurs_runtime.Func2(Call_execState)
+		execState = gopurs_runtime.Func2(func(v_0_box gopurs_runtime.Value, s_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_execState(v_0_box, s_1_box)
+})
 	})
 	return execState
 }
@@ -46,7 +52,9 @@ var evalState gopurs_runtime.Value
 var once_evalState sync.Once
 func Get_evalState() gopurs_runtime.Value {
 	once_evalState.Do(func() {
-		evalState = gopurs_runtime.Func2(Call_evalState)
+		evalState = gopurs_runtime.Func2(func(v_0_box gopurs_runtime.Value, s_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_evalState(v_0_box, s_1_box)
+})
 	})
 	return evalState
 }
@@ -56,7 +64,7 @@ var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 var x_1 gopurs_runtime.Value = x_1_loop
 _ = x_1
-return gopurs_runtime.Apply(v_0_loop, x_1_loop)
+return gopurs_runtime.Apply(v_0, x_1)
 }
 
 func Call_mapState(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -66,7 +74,7 @@ var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
 var x_2 gopurs_runtime.Value = x_2_loop
 _ = x_2
-return gopurs_runtime.Apply(f_0_loop, gopurs_runtime.Apply(v_1_loop, x_2_loop))
+return gopurs_runtime.Apply(f_0, gopurs_runtime.Apply(v_1, x_2))
 }
 
 func Call_execState(v_0_loop gopurs_runtime.Value, s_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -74,7 +82,7 @@ var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 var s_1 gopurs_runtime.Value = s_1_loop
 _ = s_1
-return (*[1024]gopurs_runtime.Value)(gopurs_runtime.Apply(v_0_loop, s_1_loop).UnsafePtr)[1]
+return (*[1024]gopurs_runtime.Value)(gopurs_runtime.Apply(v_0, s_1).UnsafePtr)[1]
 }
 
 func Call_evalState(v_0_loop gopurs_runtime.Value, s_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -82,7 +90,7 @@ var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 var s_1 gopurs_runtime.Value = s_1_loop
 _ = s_1
-return (*[1024]gopurs_runtime.Value)(gopurs_runtime.Apply(v_0_loop, s_1_loop).UnsafePtr)[0]
+return (*[1024]gopurs_runtime.Value)(gopurs_runtime.Apply(v_0, s_1).UnsafePtr)[0]
 }
 
 

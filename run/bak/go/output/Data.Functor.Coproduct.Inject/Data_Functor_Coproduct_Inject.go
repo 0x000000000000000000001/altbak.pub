@@ -15,7 +15,7 @@ func Get_prj() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0_loop, "prj")
+return gopurs_runtime.RecordGet(dict_0, "prj")
 }()
 })
 	})
@@ -73,7 +73,7 @@ func Get_inj() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0_loop, "inj")
+return gopurs_runtime.RecordGet(dict_0, "inj")
 }()
 })
 	})
@@ -89,7 +89,7 @@ return func() gopurs_runtime.Value {
 var dictInject_0 gopurs_runtime.Value = dictInject_0_loop
 _ = dictInject_0
 return gopurs_runtime.RecordDict2("inj", "prj", gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor1("Right", gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictInject_0_loop, "inj"), x_1))
+return gopurs_runtime.Constructor1("Right", gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictInject_0, "inj"), x_1))
 }), gopurs_runtime.Func(func(v2_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
@@ -102,7 +102,7 @@ goto end_branch_0
 }
 {
 if gopurs_runtime.Bool(v2_1.StrVal == "Right").IntVal != 0 {
-__t0 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictInject_0_loop, "prj"), (*[1024]gopurs_runtime.Value)(v2_1.UnsafePtr)[0])
+__t0 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictInject_0, "prj"), (*[1024]gopurs_runtime.Value)(v2_1.UnsafePtr)[0])
 goto end_branch_0
 } else {
 

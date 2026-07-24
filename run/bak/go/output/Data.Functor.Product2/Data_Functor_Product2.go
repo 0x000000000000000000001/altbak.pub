@@ -22,7 +22,9 @@ var showProduct2 gopurs_runtime.Value
 var once_showProduct2 sync.Once
 func Get_showProduct2() gopurs_runtime.Value {
 	once_showProduct2.Do(func() {
-		showProduct2 = gopurs_runtime.Func2(Call_showProduct2)
+		showProduct2 = gopurs_runtime.Func2(func(dictShow_0_box gopurs_runtime.Value, dictShow1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_showProduct2(dictShow_0_box, dictShow1_1_box)
+})
 	})
 	return showProduct2
 }
@@ -31,7 +33,9 @@ var profunctorProduct2 gopurs_runtime.Value
 var once_profunctorProduct2 sync.Once
 func Get_profunctorProduct2() gopurs_runtime.Value {
 	once_profunctorProduct2.Do(func() {
-		profunctorProduct2 = gopurs_runtime.Func2(Call_profunctorProduct2)
+		profunctorProduct2 = gopurs_runtime.Func2(func(dictProfunctor_0_box gopurs_runtime.Value, dictProfunctor1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_profunctorProduct2(dictProfunctor_0_box, dictProfunctor1_1_box)
+})
 	})
 	return profunctorProduct2
 }
@@ -40,7 +44,9 @@ var functorProduct2 gopurs_runtime.Value
 var once_functorProduct2 sync.Once
 func Get_functorProduct2() gopurs_runtime.Value {
 	once_functorProduct2.Do(func() {
-		functorProduct2 = gopurs_runtime.Func2(Call_functorProduct2)
+		functorProduct2 = gopurs_runtime.Func2(func(dictFunctor_0_box gopurs_runtime.Value, dictFunctor1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_functorProduct2(dictFunctor_0_box, dictFunctor1_1_box)
+})
 	})
 	return functorProduct2
 }
@@ -49,7 +55,9 @@ var eqProduct2 gopurs_runtime.Value
 var once_eqProduct2 sync.Once
 func Get_eqProduct2() gopurs_runtime.Value {
 	once_eqProduct2.Do(func() {
-		eqProduct2 = gopurs_runtime.Func2(Call_eqProduct2)
+		eqProduct2 = gopurs_runtime.Func2(func(dictEq_0_box gopurs_runtime.Value, dictEq1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_eqProduct2(dictEq_0_box, dictEq1_1_box)
+})
 	})
 	return eqProduct2
 }
@@ -62,7 +70,7 @@ func Get_ordProduct2() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd_0_loop, "Eq0"), gopurs_runtime.Value{})
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd_0, "Eq0"), gopurs_runtime.Value{})
 _ = __local_var_1_0
 return gopurs_runtime.Func(func(dictOrd1_2 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd1_2, "Eq0"), gopurs_runtime.Value{})
@@ -72,7 +80,7 @@ return gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__loca
 }))
 _ = eqProduct22_4_2
 return gopurs_runtime.RecordDict2("compare", "Eq0", gopurs_runtime.Func2(func(x_5 gopurs_runtime.Value, y_6 gopurs_runtime.Value) gopurs_runtime.Value {
-v_7_3 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0_loop, "compare"), (*[1024]gopurs_runtime.Value)(x_5.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(y_6.UnsafePtr)[0])
+v_7_3 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), (*[1024]gopurs_runtime.Value)(x_5.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(y_6.UnsafePtr)[0])
 _ = v_7_3
 var __t4 gopurs_runtime.Value
 {
@@ -110,7 +118,9 @@ var bifunctorProduct2 gopurs_runtime.Value
 var once_bifunctorProduct2 sync.Once
 func Get_bifunctorProduct2() gopurs_runtime.Value {
 	once_bifunctorProduct2.Do(func() {
-		bifunctorProduct2 = gopurs_runtime.Func2(Call_bifunctorProduct2)
+		bifunctorProduct2 = gopurs_runtime.Func2(func(dictBifunctor_0_box gopurs_runtime.Value, dictBifunctor1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_bifunctorProduct2(dictBifunctor_0_box, dictBifunctor1_1_box)
+})
 	})
 	return bifunctorProduct2
 }
@@ -123,7 +133,7 @@ func Get_biapplyProduct2() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictBiapply_0 gopurs_runtime.Value = dictBiapply_0_loop
 _ = dictBiapply_0
-__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBiapply_0_loop, "Bifunctor0"), gopurs_runtime.Value{})
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBiapply_0, "Bifunctor0"), gopurs_runtime.Value{})
 _ = __local_var_1_0
 return gopurs_runtime.Func(func(dictBiapply1_2 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBiapply1_2, "Bifunctor0"), gopurs_runtime.Value{})
@@ -133,7 +143,7 @@ return gopurs_runtime.Constructor2("Product2", gopurs_runtime.Apply3(gopurs_runt
 }))
 _ = bifunctorProduct22_4_2
 return gopurs_runtime.RecordDict2("biapply", "Bifunctor0", gopurs_runtime.Func2(func(v_5 gopurs_runtime.Value, v1_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Product2", gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBiapply_0_loop, "biapply"), (*[1024]gopurs_runtime.Value)(v_5.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v1_6.UnsafePtr)[0]), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBiapply1_2, "biapply"), (*[1024]gopurs_runtime.Value)(v_5.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(v1_6.UnsafePtr)[1]))
+return gopurs_runtime.Constructor2("Product2", gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBiapply_0, "biapply"), (*[1024]gopurs_runtime.Value)(v_5.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v1_6.UnsafePtr)[0]), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBiapply1_2, "biapply"), (*[1024]gopurs_runtime.Value)(v_5.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(v1_6.UnsafePtr)[1]))
 }), gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return bifunctorProduct22_4_2
 }))
@@ -152,7 +162,7 @@ func Get_biapplicativeProduct2() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictBiapplicative_0 gopurs_runtime.Value = dictBiapplicative_0_loop
 _ = dictBiapplicative_0
-__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBiapplicative_0_loop, "Biapply0"), gopurs_runtime.Value{})
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBiapplicative_0, "Biapply0"), gopurs_runtime.Value{})
 _ = __local_var_1_0
 __local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_0, "Bifunctor0"), gopurs_runtime.Value{})
 _ = __local_var_2_1
@@ -172,7 +182,7 @@ return bifunctorProduct22_6_5
 }))
 _ = biapplyProduct22_6_4
 return gopurs_runtime.RecordDict2("bipure", "Biapply0", gopurs_runtime.Func2(func(a_7 gopurs_runtime.Value, b_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Product2", gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBiapplicative_0_loop, "bipure"), a_7, b_8), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBiapplicative1_3, "bipure"), a_7, b_8))
+return gopurs_runtime.Constructor2("Product2", gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBiapplicative_0, "bipure"), a_7, b_8), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBiapplicative1_3, "bipure"), a_7, b_8))
 }), gopurs_runtime.Func(func(_dollar__unused_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return biapplyProduct22_6_4
 }))
@@ -189,7 +199,7 @@ _ = dictShow_0
 var dictShow1_1 gopurs_runtime.Value = dictShow1_1_loop
 _ = dictShow1_1
 return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str("(Product2 " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0_loop, "show"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0]).StrVal + " " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow1_1_loop, "show"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[1]).StrVal + ")")
+return gopurs_runtime.Str("(Product2 " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0]).StrVal + " " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow1_1, "show"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[1]).StrVal + ")")
 }))
 }
 
@@ -199,7 +209,7 @@ _ = dictProfunctor_0
 var dictProfunctor1_1 gopurs_runtime.Value = dictProfunctor1_1_loop
 _ = dictProfunctor1_1
 return gopurs_runtime.RecordDict1("dimap", gopurs_runtime.Func3(func(f_2 gopurs_runtime.Value, g_3 gopurs_runtime.Value, v_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Product2", gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictProfunctor_0_loop, "dimap"), f_2, g_3, (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[0]), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictProfunctor1_1_loop, "dimap"), f_2, g_3, (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[1]))
+return gopurs_runtime.Constructor2("Product2", gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictProfunctor_0, "dimap"), f_2, g_3, (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[0]), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictProfunctor1_1, "dimap"), f_2, g_3, (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[1]))
 }))
 }
 
@@ -209,7 +219,7 @@ _ = dictFunctor_0
 var dictFunctor1_1 gopurs_runtime.Value = dictFunctor1_1_loop
 _ = dictFunctor1_1
 return gopurs_runtime.RecordDict1("map", gopurs_runtime.Func2(func(f_2 gopurs_runtime.Value, v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Product2", gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0_loop, "map"), f_2, (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[0]), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor1_1_loop, "map"), f_2, (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[1]))
+return gopurs_runtime.Constructor2("Product2", gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), f_2, (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[0]), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor1_1, "map"), f_2, (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[1]))
 }))
 }
 
@@ -219,7 +229,7 @@ _ = dictEq_0
 var dictEq1_1 gopurs_runtime.Value = dictEq1_1_loop
 _ = dictEq1_1
 return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func2(func(x_2 gopurs_runtime.Value, y_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0_loop, "eq"), (*[1024]gopurs_runtime.Value)(x_2.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(y_3.UnsafePtr)[0]).IntVal != 0 && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq1_1_loop, "eq"), (*[1024]gopurs_runtime.Value)(x_2.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(y_3.UnsafePtr)[1]).IntVal != 0)
+return gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), (*[1024]gopurs_runtime.Value)(x_2.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(y_3.UnsafePtr)[0]).IntVal != 0 && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq1_1, "eq"), (*[1024]gopurs_runtime.Value)(x_2.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(y_3.UnsafePtr)[1]).IntVal != 0)
 }))
 }
 
@@ -229,7 +239,7 @@ _ = dictBifunctor_0
 var dictBifunctor1_1 gopurs_runtime.Value = dictBifunctor1_1_loop
 _ = dictBifunctor1_1
 return gopurs_runtime.RecordDict1("bimap", gopurs_runtime.Func3(func(f_2 gopurs_runtime.Value, g_3 gopurs_runtime.Value, v_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Product2", gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictBifunctor_0_loop, "bimap"), f_2, g_3, (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[0]), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictBifunctor1_1_loop, "bimap"), f_2, g_3, (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[1]))
+return gopurs_runtime.Constructor2("Product2", gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictBifunctor_0, "bimap"), f_2, g_3, (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[0]), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictBifunctor1_1, "bimap"), f_2, g_3, (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[1]))
 }))
 }
 

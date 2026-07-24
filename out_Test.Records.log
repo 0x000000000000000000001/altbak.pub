@@ -1,6 +1,7 @@
+Compilation failed, but that's expected for now!
 === Native Go ===
-Deep Record Updates (10k iterations):
-20000
+Fibonacci:
+55
 
-Execution time: 19907.00 μs
+Execution time: 32.00 μs
 

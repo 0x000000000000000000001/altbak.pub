@@ -9,7 +9,9 @@ var on gopurs_runtime.Value
 var once_on sync.Once
 func Get_on() gopurs_runtime.Value {
 	once_on.Do(func() {
-		on = gopurs_runtime.Func4(Call_on)
+		on = gopurs_runtime.Func4(func(f_0_box gopurs_runtime.Value, g_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value, y_3_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_on(f_0_box, g_1_box, x_2_box, y_3_box)
+})
 	})
 	return on
 }
@@ -18,7 +20,9 @@ var flip gopurs_runtime.Value
 var once_flip sync.Once
 func Get_flip() gopurs_runtime.Value {
 	once_flip.Do(func() {
-		flip = gopurs_runtime.Func3(Call_flip)
+		flip = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, b_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_flip(f_0_box, b_1_box, a_2_box)
+})
 	})
 	return flip
 }
@@ -27,7 +31,9 @@ var const_ gopurs_runtime.Value
 var once_const_ sync.Once
 func Get_const_() gopurs_runtime.Value {
 	once_const_.Do(func() {
-		const_ = gopurs_runtime.Func2(Call_const_)
+		const_ = gopurs_runtime.Func2(func(a_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_const_(a_0_box, v_1_box)
+})
 	})
 	return const_
 }
@@ -62,7 +68,7 @@ goto end_branch_1
 }
 {
 n_2_loop = gopurs_runtime.Int(n_2.IntVal - 1)
-acc_3_loop = gopurs_runtime.Apply(f_0_loop, acc_3)
+acc_3_loop = gopurs_runtime.Apply(f_0, acc_3)
 continue go__1_0
 __t1 = gopurs_runtime.Value{}
 }
@@ -83,7 +89,9 @@ var applyFlipped gopurs_runtime.Value
 var once_applyFlipped sync.Once
 func Get_applyFlipped() gopurs_runtime.Value {
 	once_applyFlipped.Do(func() {
-		applyFlipped = gopurs_runtime.Func2(Call_applyFlipped)
+		applyFlipped = gopurs_runtime.Func2(func(x_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_applyFlipped(x_0_box, f_1_box)
+})
 	})
 	return applyFlipped
 }
@@ -92,7 +100,9 @@ var apply gopurs_runtime.Value
 var once_apply sync.Once
 func Get_apply() gopurs_runtime.Value {
 	once_apply.Do(func() {
-		apply = gopurs_runtime.Func2(Call_apply)
+		apply = gopurs_runtime.Func2(func(f_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_apply(f_0_box, x_1_box)
+})
 	})
 	return apply
 }
@@ -106,7 +116,7 @@ var x_2 gopurs_runtime.Value = x_2_loop
 _ = x_2
 var y_3 gopurs_runtime.Value = y_3_loop
 _ = y_3
-return gopurs_runtime.Apply2(f_0_loop, gopurs_runtime.Apply(g_1_loop, x_2_loop), gopurs_runtime.Apply(g_1_loop, y_3_loop))
+return gopurs_runtime.Apply2(f_0, gopurs_runtime.Apply(g_1, x_2), gopurs_runtime.Apply(g_1, y_3))
 }
 
 func Call_flip(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -116,7 +126,7 @@ var b_1 gopurs_runtime.Value = b_1_loop
 _ = b_1
 var a_2 gopurs_runtime.Value = a_2_loop
 _ = a_2
-return gopurs_runtime.Apply2(f_0_loop, a_2_loop, b_1_loop)
+return gopurs_runtime.Apply2(f_0, a_2, b_1)
 }
 
 func Call_const_(a_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -124,7 +134,7 @@ var a_0 gopurs_runtime.Value = a_0_loop
 _ = a_0
 var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
-return a_0_loop
+return a_0
 }
 
 func Call_applyFlipped(x_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -132,7 +142,7 @@ var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
 var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
-return gopurs_runtime.Apply(f_1_loop, x_0_loop)
+return gopurs_runtime.Apply(f_1, x_0)
 }
 
 func Call_apply(f_0_loop gopurs_runtime.Value, x_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -140,7 +150,7 @@ var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var x_1 gopurs_runtime.Value = x_1_loop
 _ = x_1
-return gopurs_runtime.Apply(f_0_loop, x_1_loop)
+return gopurs_runtime.Apply(f_0, x_1)
 }
 
 

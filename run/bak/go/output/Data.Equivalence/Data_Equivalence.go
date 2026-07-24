@@ -13,7 +13,7 @@ func Get_Equivalence() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
-return x_0_loop
+return x_0
 }()
 })
 	})
@@ -63,7 +63,7 @@ func Get_defaultEquivalence() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
 _ = dictEq_0
-return gopurs_runtime.RecordGet(dictEq_0_loop, "eq")
+return gopurs_runtime.RecordGet(dictEq_0, "eq")
 }()
 })
 	})
@@ -85,7 +85,9 @@ var comparisonEquivalence gopurs_runtime.Value
 var once_comparisonEquivalence sync.Once
 func Get_comparisonEquivalence() gopurs_runtime.Value {
 	once_comparisonEquivalence.Do(func() {
-		comparisonEquivalence = gopurs_runtime.Func3(Call_comparisonEquivalence)
+		comparisonEquivalence = gopurs_runtime.Func3(func(v_0_box gopurs_runtime.Value, a_1_box gopurs_runtime.Value, b_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_comparisonEquivalence(v_0_box, a_1_box, b_2_box)
+})
 	})
 	return comparisonEquivalence
 }
@@ -97,7 +99,7 @@ var a_1 gopurs_runtime.Value = a_1_loop
 _ = a_1
 var b_2 gopurs_runtime.Value = b_2_loop
 _ = b_2
-return gopurs_runtime.Bool(gopurs_runtime.Apply2(v_0_loop, a_1_loop, b_2_loop).StrVal == "EQ")
+return gopurs_runtime.Bool(gopurs_runtime.Apply2(v_0, a_1, b_2).StrVal == "EQ")
 }
 
 

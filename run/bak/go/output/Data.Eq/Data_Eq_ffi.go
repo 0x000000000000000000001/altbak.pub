@@ -24,42 +24,55 @@ func EqArrayImpl(f func(any) func(any) bool, xs []any, ys []any) bool {
 
 
 // --- Auto-generated FFI wrappers ---
-func Call_eqBooleanImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_eqBooleanImpl(arg0 bool, arg1 bool) bool { return r1 == r2 } {
+	return EqBooleanImpl(arg0, arg1)
+}
+var _Gopurs_EqBooleanImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[bool](arg0)
 	go_arg1 := gopurs_runtime.Unbox[bool](arg1)
 	go_res := EqBooleanImpl(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
+})
+func Call_eqIntImpl(arg0 int, arg1 int) bool { return r1 == r2 } {
+	return EqIntImpl(arg0, arg1)
 }
-var _Gopurs_EqBooleanImpl = gopurs_runtime.Func2(Call_eqBooleanImpl)
-func Call_eqIntImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_EqIntImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[int](arg0)
 	go_arg1 := gopurs_runtime.Unbox[int](arg1)
 	go_res := EqIntImpl(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
+})
+func Call_eqNumberImpl(arg0 float64, arg1 float64) bool { return r1 == r2 } {
+	return EqNumberImpl(arg0, arg1)
 }
-var _Gopurs_EqIntImpl = gopurs_runtime.Func2(Call_eqIntImpl)
-func Call_eqNumberImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_EqNumberImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[float64](arg0)
 	go_arg1 := gopurs_runtime.Unbox[float64](arg1)
 	go_res := EqNumberImpl(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
+})
+func Call_eqCharImpl(arg0 string, arg1 string) bool { return r1 == r2 } {
+	return EqCharImpl(arg0, arg1)
 }
-var _Gopurs_EqNumberImpl = gopurs_runtime.Func2(Call_eqNumberImpl)
-func Call_eqCharImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_EqCharImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[string](arg0)
 	go_arg1 := gopurs_runtime.Unbox[string](arg1)
 	go_res := EqCharImpl(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
+})
+func Call_eqStringImpl(arg0 string, arg1 string) bool { return r1 == r2 } {
+	return EqStringImpl(arg0, arg1)
 }
-var _Gopurs_EqCharImpl = gopurs_runtime.Func2(Call_eqCharImpl)
-func Call_eqStringImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_EqStringImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[string](arg0)
 	go_arg1 := gopurs_runtime.Unbox[string](arg1)
 	go_res := EqStringImpl(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
+})
+func Call_eqArrayImpl(arg0 func(any) func(any) bool, arg1 []any, arg2 []any) bool {
+	return EqArrayImpl(arg0, arg1, arg2)
 }
-var _Gopurs_EqStringImpl = gopurs_runtime.Func2(Call_eqStringImpl)
-func Call_eqArrayImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_EqArrayImpl = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 any) func(any) bool {
 			inner_res0 := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 			return func(p1_0 any) bool {
@@ -75,5 +88,4 @@ func Call_eqArrayImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2
 	for i, v := range arg2_arr { go_arg2[i] = v }
 	go_res := EqArrayImpl(go_arg0, go_arg1, go_arg2)
 	return gopurs_runtime.Box(go_res)
-}
-var _Gopurs_EqArrayImpl = gopurs_runtime.Func3(Call_eqArrayImpl)
+})

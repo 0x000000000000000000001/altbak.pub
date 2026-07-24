@@ -1,6 +1,7 @@
+Compilation failed, but that's expected for now!
 === Native Go ===
-Church Numerals (100k Closure Applications):
-100000
+Fibonacci:
+55
 
-Execution time: 3376.00 μs
+Execution time: 16.00 μs
 

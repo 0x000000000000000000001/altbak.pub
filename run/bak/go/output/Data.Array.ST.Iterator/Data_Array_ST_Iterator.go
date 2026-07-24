@@ -29,12 +29,12 @@ func Get_peek() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-__local_var_1_0 := (*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[1]
+__local_var_1_0 := (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[1]
 _ = __local_var_1_0
 return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 i_2_1 := *(__local_var_1_0.PtrVal.(*gopurs_runtime.Value))
 _ = i_2_1
-return gopurs_runtime.Apply((*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[0], i_2_1)
+return gopurs_runtime.Apply((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0], i_2_1)
 })
 }()
 })
@@ -50,7 +50,7 @@ func Get_next() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-__local_var_1_0 := (*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[1]
+__local_var_1_0 := (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[1]
 _ = __local_var_1_0
 return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 i_2_1 := *(__local_var_1_0.PtrVal.(*gopurs_runtime.Value))
@@ -61,7 +61,7 @@ _ = s_prime_4_3
 return gopurs_runtime.RecordDict2("state", "value", gopurs_runtime.Int(s_prime_4_3), gopurs_runtime.Int(s_prime_4_3))
 }), __local_var_1_0), gopurs_runtime.Value{})
 _ = _dollar__unused_3_2
-return gopurs_runtime.Apply((*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[0], i_2_1)
+return gopurs_runtime.Apply((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0], i_2_1)
 })
 }()
 })
@@ -73,7 +73,9 @@ var pushWhile gopurs_runtime.Value
 var once_pushWhile sync.Once
 func Get_pushWhile() gopurs_runtime.Value {
 	once_pushWhile.Do(func() {
-		pushWhile = gopurs_runtime.Func3(Call_pushWhile)
+		pushWhile = gopurs_runtime.Func3(func(p_0_box gopurs_runtime.Value, iter_1_box gopurs_runtime.Value, array_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_pushWhile(p_0_box, iter_1_box, array_2_box)
+})
 	})
 	return pushWhile
 }
@@ -97,7 +99,7 @@ func Get_iterator() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
-__local_var_1_0 := gopurs_runtime.Apply(Get_Iterator(), f_0_loop)
+__local_var_1_0 := gopurs_runtime.Apply(Get_Iterator(), f_0)
 _ = __local_var_1_0
 return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 __local_ref_2 := 0
@@ -116,7 +118,9 @@ var iterate gopurs_runtime.Value
 var once_iterate sync.Once
 func Get_iterate() gopurs_runtime.Value {
 	once_iterate.Do(func() {
-		iterate = gopurs_runtime.Func2(Call_iterate)
+		iterate = gopurs_runtime.Func2(func(iter_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_iterate(iter_0_box, f_1_box)
+})
 	})
 	return iterate
 }
@@ -129,12 +133,12 @@ func Get_exhausted() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
-__local_var_1_0 := (*[1024]gopurs_runtime.Value)(x_0_loop.UnsafePtr)[1]
+__local_var_1_0 := (*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[1]
 _ = __local_var_1_0
 return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 i_2_1 := *(__local_var_1_0.PtrVal.(*gopurs_runtime.Value))
 _ = i_2_1
-__local_var_3_2 := gopurs_runtime.Apply((*[1024]gopurs_runtime.Value)(x_0_loop.UnsafePtr)[0], i_2_1)
+__local_var_3_2 := gopurs_runtime.Apply((*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[0], i_2_1)
 _ = __local_var_3_2
 return gopurs_runtime.Apply(gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 var __t3 gopurs_runtime.Value
@@ -179,7 +183,7 @@ __local_ref_1 := false
 _ = __local_ref_1
 break__3_0 := gopurs_runtime.Value{PtrVal: &__local_ref_1}
 _ = break__3_0
-__local_var_4_3 := (*[1024]gopurs_runtime.Value)(iter_1_loop.UnsafePtr)[1]
+__local_var_4_3 := (*[1024]gopurs_runtime.Value)(iter_1.UnsafePtr)[1]
 _ = __local_var_4_3
 return gopurs_runtime.Apply(gopurs_runtime.Apply2(pkg_Control_Monad_ST_Internal.Get_while(), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_4_2 := *(break__3_0.PtrVal.(*gopurs_runtime.Value))
@@ -188,15 +192,15 @@ return gopurs_runtime.Bool(__local_var_4_2.IntVal != 0 != true)
 }), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 i_5_4 := *(__local_var_4_3.PtrVal.(*gopurs_runtime.Value))
 _ = i_5_4
-mx_6_5 := gopurs_runtime.Apply((*[1024]gopurs_runtime.Value)(iter_1_loop.UnsafePtr)[0], i_5_4)
+mx_6_5 := gopurs_runtime.Apply((*[1024]gopurs_runtime.Value)(iter_1.UnsafePtr)[0], i_5_4)
 _ = mx_6_5
 var __t7 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(mx_6_5.StrVal == "Just").IntVal != 0 && gopurs_runtime.Apply(p_0_loop, (*[1024]gopurs_runtime.Value)(mx_6_5.UnsafePtr)[0]).IntVal != 0 {
+if gopurs_runtime.Bool(mx_6_5.StrVal == "Just").IntVal != 0 && gopurs_runtime.Apply(p_0, (*[1024]gopurs_runtime.Value)(mx_6_5.UnsafePtr)[0]).IntVal != 0 {
 __t7 = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-_dollar__unused_7_8 := gopurs_runtime.Apply(gopurs_runtime.Apply2(pkg_Data_Array_ST.Get_push(), (*[1024]gopurs_runtime.Value)(mx_6_5.UnsafePtr)[0], array_2_loop), gopurs_runtime.Value{})
+_dollar__unused_7_8 := gopurs_runtime.Apply(gopurs_runtime.Apply2(pkg_Data_Array_ST.Get_push(), (*[1024]gopurs_runtime.Value)(mx_6_5.UnsafePtr)[0], array_2), gopurs_runtime.Value{})
 _ = _dollar__unused_7_8
-__local_var_8_9 := gopurs_runtime.Apply(gopurs_runtime.Apply(Get_next(), iter_1_loop), gopurs_runtime.Value{})
+__local_var_8_9 := gopurs_runtime.Apply(gopurs_runtime.Apply(Get_next(), iter_1), gopurs_runtime.Value{})
 _ = __local_var_8_9
 return pkg_Data_Unit.Get_unit()
 })
@@ -229,7 +233,7 @@ __local_ref_1 := false
 _ = __local_ref_1
 break__2_0 := gopurs_runtime.Value{PtrVal: &__local_ref_1}
 _ = break__2_0
-__local_var_3_3 := gopurs_runtime.Apply(Get_next(), iter_0_loop)
+__local_var_3_3 := gopurs_runtime.Apply(Get_next(), iter_0)
 _ = __local_var_3_3
 return gopurs_runtime.Apply(gopurs_runtime.Apply2(pkg_Control_Monad_ST_Internal.Get_while(), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_3_2 := *(break__2_0.PtrVal.(*gopurs_runtime.Value))
@@ -241,7 +245,7 @@ _ = mx_4_4
 var __t5 gopurs_runtime.Value
 {
 if gopurs_runtime.Bool(mx_4_4.StrVal == "Just").IntVal != 0 {
-__t5 = gopurs_runtime.Apply(f_1_loop, (*[1024]gopurs_runtime.Value)(mx_4_4.UnsafePtr)[0])
+__t5 = gopurs_runtime.Apply(f_1, (*[1024]gopurs_runtime.Value)(mx_4_4.UnsafePtr)[0])
 goto end_branch_5
 } else {
 

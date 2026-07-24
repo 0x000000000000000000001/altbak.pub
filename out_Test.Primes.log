@@ -1,6 +1,7 @@
+Compilation failed, but that's expected for now!
 === Native Go ===
-Prime Sieve (sum primes up to 500):
-21536
+Fibonacci:
+55
 
-Execution time: 660.00 μs
+Execution time: 17.00 μs
 

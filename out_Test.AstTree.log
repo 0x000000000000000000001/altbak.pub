@@ -1,6 +1,7 @@
+Compilation failed, but that's expected for now!
 === Native Go ===
-AST Evaluation:
-7
+Fibonacci:
+55
 
-Execution time: 22.00 μs
+Execution time: 15.00 μs
 

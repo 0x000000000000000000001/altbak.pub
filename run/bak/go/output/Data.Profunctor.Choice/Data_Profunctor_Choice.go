@@ -15,7 +15,7 @@ func Get_right() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0_loop, "right")
+return gopurs_runtime.RecordGet(dict_0, "right")
 }()
 })
 	})
@@ -30,7 +30,7 @@ func Get_left() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0_loop, "left")
+return gopurs_runtime.RecordGet(dict_0, "left")
 }()
 })
 	})
@@ -41,7 +41,9 @@ var splitChoice gopurs_runtime.Value
 var once_splitChoice sync.Once
 func Get_splitChoice() gopurs_runtime.Value {
 	once_splitChoice.Do(func() {
-		splitChoice = gopurs_runtime.Func4(Call_splitChoice)
+		splitChoice = gopurs_runtime.Func4(func(dictSemigroupoid_0_box gopurs_runtime.Value, dictChoice_1_box gopurs_runtime.Value, l_2_box gopurs_runtime.Value, r_3_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_splitChoice(dictSemigroupoid_0_box, dictChoice_1_box, l_2_box, r_3_box)
+})
 	})
 	return splitChoice
 }
@@ -50,7 +52,9 @@ var fanin gopurs_runtime.Value
 var once_fanin sync.Once
 func Get_fanin() gopurs_runtime.Value {
 	once_fanin.Do(func() {
-		fanin = gopurs_runtime.Func2(Call_fanin)
+		fanin = gopurs_runtime.Func2(func(dictSemigroupoid_0_box gopurs_runtime.Value, dictChoice_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_fanin(dictSemigroupoid_0_box, dictChoice_1_box)
+})
 	})
 	return fanin
 }
@@ -98,7 +102,7 @@ var l_2 gopurs_runtime.Value = l_2_loop
 _ = l_2
 var r_3 gopurs_runtime.Value = r_3_loop
 _ = r_3
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroupoid_0_loop, "compose"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictChoice_1_loop, "right"), r_3_loop), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictChoice_1_loop, "left"), l_2_loop))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroupoid_0, "compose"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictChoice_1, "right"), r_3), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictChoice_1, "left"), l_2))
 }
 
 func Call_fanin(dictSemigroupoid_0_loop gopurs_runtime.Value, dictChoice_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -106,7 +110,7 @@ var dictSemigroupoid_0 gopurs_runtime.Value = dictSemigroupoid_0_loop
 _ = dictSemigroupoid_0
 var dictChoice_1 gopurs_runtime.Value = dictChoice_1_loop
 _ = dictChoice_1
-rmap_2_0 := gopurs_runtime.Apply(pkg_Data_Profunctor.Get_rmap(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictChoice_1_loop, "Profunctor0"), gopurs_runtime.Value{}))
+rmap_2_0 := gopurs_runtime.Apply(pkg_Data_Profunctor.Get_rmap(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictChoice_1, "Profunctor0"), gopurs_runtime.Value{}))
 _ = rmap_2_0
 return gopurs_runtime.Func2(func(l_3 gopurs_runtime.Value, r_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(rmap_2_0, gopurs_runtime.Func(func(v2_5 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -132,7 +136,7 @@ __t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_1:
 return __t1
-}), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroupoid_0_loop, "compose"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictChoice_1_loop, "right"), r_4), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictChoice_1_loop, "left"), l_3)))
+}), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroupoid_0, "compose"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictChoice_1, "right"), r_4), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictChoice_1, "left"), l_3)))
 })
 }
 

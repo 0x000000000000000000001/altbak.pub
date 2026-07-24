@@ -122,7 +122,7 @@ var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v_0_loop.StrVal == "GT").IntVal != 0 {
+if gopurs_runtime.Bool(v_0.StrVal == "GT").IntVal != 0 {
 __t0 = gopurs_runtime.Constructor0("LT")
 goto end_branch_0
 } else {
@@ -130,7 +130,7 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool(v_0_loop.StrVal == "EQ").IntVal != 0 {
+if gopurs_runtime.Bool(v_0.StrVal == "EQ").IntVal != 0 {
 __t0 = gopurs_runtime.Constructor0("EQ")
 goto end_branch_0
 } else {
@@ -138,7 +138,7 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool(v_0_loop.StrVal == "LT").IntVal != 0 {
+if gopurs_runtime.Bool(v_0.StrVal == "LT").IntVal != 0 {
 __t0 = gopurs_runtime.Constructor0("GT")
 goto end_branch_0
 } else {

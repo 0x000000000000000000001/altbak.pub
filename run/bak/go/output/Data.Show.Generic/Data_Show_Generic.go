@@ -26,7 +26,7 @@ return func() gopurs_runtime.Value {
 var dictShow_0 gopurs_runtime.Value = dictShow_0_loop
 _ = dictShow_0
 return gopurs_runtime.RecordDict1("genericShowArgs", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Array([]gopurs_runtime.Value{gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0_loop, "show"), v_1)})
+return gopurs_runtime.Array([]gopurs_runtime.Value{gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), v_1)})
 }))
 }()
 })
@@ -42,7 +42,7 @@ func Get_genericShowArgs() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0_loop, "genericShowArgs")
+return gopurs_runtime.RecordGet(dict_0, "genericShowArgs")
 }()
 })
 	})
@@ -53,7 +53,9 @@ var genericShowArgsProduct gopurs_runtime.Value
 var once_genericShowArgsProduct sync.Once
 func Get_genericShowArgsProduct() gopurs_runtime.Value {
 	once_genericShowArgsProduct.Do(func() {
-		genericShowArgsProduct = gopurs_runtime.Func2(Call_genericShowArgsProduct)
+		genericShowArgsProduct = gopurs_runtime.Func2(func(dictGenericShowArgs_0_box gopurs_runtime.Value, dictGenericShowArgs1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_genericShowArgsProduct(dictGenericShowArgs_0_box, dictGenericShowArgs1_1_box)
+})
 	})
 	return genericShowArgsProduct
 }
@@ -62,7 +64,9 @@ var genericShowConstructor gopurs_runtime.Value
 var once_genericShowConstructor sync.Once
 func Get_genericShowConstructor() gopurs_runtime.Value {
 	once_genericShowConstructor.Do(func() {
-		genericShowConstructor = gopurs_runtime.Func2(Call_genericShowConstructor)
+		genericShowConstructor = gopurs_runtime.Func2(func(dictGenericShowArgs_0_box gopurs_runtime.Value, dictIsSymbol_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_genericShowConstructor(dictGenericShowArgs_0_box, dictIsSymbol_1_box)
+})
 	})
 	return genericShowConstructor
 }
@@ -75,7 +79,7 @@ func Get_genericShow_prime() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0_loop, "genericShow'")
+return gopurs_runtime.RecordGet(dict_0, "genericShow'")
 }()
 })
 	})
@@ -97,7 +101,9 @@ var genericShowSum gopurs_runtime.Value
 var once_genericShowSum sync.Once
 func Get_genericShowSum() gopurs_runtime.Value {
 	once_genericShowSum.Do(func() {
-		genericShowSum = gopurs_runtime.Func2(Call_genericShowSum)
+		genericShowSum = gopurs_runtime.Func2(func(dictGenericShow_0_box gopurs_runtime.Value, dictGenericShow1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_genericShowSum(dictGenericShow_0_box, dictGenericShow1_1_box)
+})
 	})
 	return genericShowSum
 }
@@ -106,7 +112,9 @@ var genericShow gopurs_runtime.Value
 var once_genericShow sync.Once
 func Get_genericShow() gopurs_runtime.Value {
 	once_genericShow.Do(func() {
-		genericShow = gopurs_runtime.Func3(Call_genericShow)
+		genericShow = gopurs_runtime.Func3(func(dictGeneric_0_box gopurs_runtime.Value, dictGenericShow_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_genericShow(dictGeneric_0_box, dictGenericShow_1_box, x_2_box)
+})
 	})
 	return genericShow
 }
@@ -117,7 +125,7 @@ _ = dictGenericShowArgs_0
 var dictGenericShowArgs1_1 gopurs_runtime.Value = dictGenericShowArgs1_1_loop
 _ = dictGenericShowArgs1_1
 return gopurs_runtime.RecordDict1("genericShowArgs", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(pkg_Data_Semigroup.Get_concatArray(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericShowArgs_0_loop, "genericShowArgs"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0]), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericShowArgs1_1_loop, "genericShowArgs"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[1]))
+return gopurs_runtime.Apply2(pkg_Data_Semigroup.Get_concatArray(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericShowArgs_0, "genericShowArgs"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0]), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericShowArgs1_1, "genericShowArgs"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[1]))
 }))
 }
 
@@ -127,9 +135,9 @@ _ = dictGenericShowArgs_0
 var dictIsSymbol_1 gopurs_runtime.Value = dictIsSymbol_1_loop
 _ = dictIsSymbol_1
 return gopurs_runtime.RecordDict1("genericShow'", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-ctor_3_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_1_loop, "reflectSymbol"), gopurs_runtime.Constructor0("Proxy"))
+ctor_3_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_1, "reflectSymbol"), gopurs_runtime.Constructor0("Proxy"))
 _ = ctor_3_0
-v1_4_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericShowArgs_0_loop, "genericShowArgs"), v_2)
+v1_4_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericShowArgs_0, "genericShowArgs"), v_2)
 _ = v1_4_1
 var __t2 gopurs_runtime.Value
 {
@@ -157,7 +165,7 @@ return gopurs_runtime.RecordDict1("genericShow'", gopurs_runtime.Func(func(v_2 g
 var __t0 gopurs_runtime.Value
 {
 if gopurs_runtime.Bool(v_2.StrVal == "Inl").IntVal != 0 {
-__t0 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericShow_0_loop, "genericShow'"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0])
+__t0 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericShow_0, "genericShow'"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0])
 goto end_branch_0
 } else {
 
@@ -165,7 +173,7 @@ goto end_branch_0
 }
 {
 if gopurs_runtime.Bool(v_2.StrVal == "Inr").IntVal != 0 {
-__t0 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericShow1_1_loop, "genericShow'"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0])
+__t0 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericShow1_1, "genericShow'"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0])
 goto end_branch_0
 } else {
 
@@ -186,7 +194,7 @@ var dictGenericShow_1 gopurs_runtime.Value = dictGenericShow_1_loop
 _ = dictGenericShow_1
 var x_2 gopurs_runtime.Value = x_2_loop
 _ = x_2
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericShow_1_loop, "genericShow'"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGeneric_0_loop, "from"), x_2_loop))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericShow_1, "genericShow'"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGeneric_0, "from"), x_2))
 }
 
 func Get_intercalate() gopurs_runtime.Value {

@@ -7,7 +7,10 @@ func PokeImpl(i int, a any, xs []any) func() bool { return func() bool { xs[i] =
 
 
 // --- Auto-generated FFI wrappers ---
-func Call_peekImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_peekImpl(arg0 int, arg1 []any) func() any { return func() any { return xs[i] } } {
+	return PeekImpl(arg0, arg1)
+}
+var _Gopurs_PeekImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[int](arg0)
 	arg1_arr := arg1.PtrVal.([]gopurs_runtime.Value)
 	go_arg1 := make([]any, len(arg1_arr))
@@ -17,9 +20,11 @@ func Call_peekImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_
 			inner_res := go_res()
 			return gopurs_runtime.Box(inner_res)
 		})
+})
+func Call_pokeImpl(arg0 int, arg1 any, arg2 []any) func() bool { return func() bool { xs[i] = a; return true } } {
+	return PokeImpl(arg0, arg1, arg2)
 }
-var _Gopurs_PeekImpl = gopurs_runtime.Func2(Call_peekImpl)
-func Call_pokeImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_PokeImpl = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[int](arg0)
 	go_arg1 := arg1
 	arg2_arr := arg2.PtrVal.([]gopurs_runtime.Value)
@@ -30,5 +35,4 @@ func Call_pokeImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 go
 			inner_res := go_res()
 			return gopurs_runtime.Box(inner_res)
 		})
-}
-var _Gopurs_PokeImpl = gopurs_runtime.Func3(Call_pokeImpl)
+})

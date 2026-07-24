@@ -16,7 +16,7 @@ func Get_topRecord() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0_loop, "topRecord")
+return gopurs_runtime.RecordGet(dict_0, "topRecord")
 }()
 })
 	})
@@ -31,7 +31,7 @@ func Get_top() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0_loop, "top")
+return gopurs_runtime.RecordGet(dict_0, "top")
 }()
 })
 	})
@@ -138,7 +138,7 @@ func Get_bottomRecord() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0_loop, "bottomRecord")
+return gopurs_runtime.RecordGet(dict_0, "bottomRecord")
 }()
 })
 	})
@@ -149,7 +149,9 @@ var boundedRecord gopurs_runtime.Value
 var once_boundedRecord sync.Once
 func Get_boundedRecord() gopurs_runtime.Value {
 	once_boundedRecord.Do(func() {
-		boundedRecord = gopurs_runtime.Func2(Call_boundedRecord)
+		boundedRecord = gopurs_runtime.Func2(func(_dollar__unused_0_box gopurs_runtime.Value, dictBoundedRecord_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_boundedRecord(_dollar__unused_0_box, dictBoundedRecord_1_box)
+})
 	})
 	return boundedRecord
 }
@@ -162,7 +164,7 @@ func Get_bottom() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0_loop, "bottom")
+return gopurs_runtime.RecordGet(dict_0, "bottom")
 }()
 })
 	})
@@ -173,7 +175,9 @@ var boundedRecordCons gopurs_runtime.Value
 var once_boundedRecordCons sync.Once
 func Get_boundedRecordCons() gopurs_runtime.Value {
 	once_boundedRecordCons.Do(func() {
-		boundedRecordCons = gopurs_runtime.Func2(Call_boundedRecordCons)
+		boundedRecordCons = gopurs_runtime.Func2(func(dictIsSymbol_0_box gopurs_runtime.Value, dictBounded_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_boundedRecordCons(dictIsSymbol_0_box, dictBounded_1_box)
+})
 	})
 	return boundedRecordCons
 }
@@ -183,7 +187,7 @@ var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
 var dictBoundedRecord_1 gopurs_runtime.Value = dictBoundedRecord_1_loop
 _ = dictBoundedRecord_1
-__local_var_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedRecord_1_loop, "OrdRecord0"), gopurs_runtime.Value{})
+__local_var_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedRecord_1, "OrdRecord0"), gopurs_runtime.Value{})
 _ = __local_var_2_0
 eqRec1_3_1 := gopurs_runtime.RecordDict1("eq", gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_0, "EqRecord0"), gopurs_runtime.Value{}), "eqRecord"), gopurs_runtime.Constructor0("Proxy")))
 _ = eqRec1_3_1
@@ -191,7 +195,7 @@ ordRecord1_4_2 := gopurs_runtime.RecordDict2("compare", "Eq0", gopurs_runtime.Ap
 return eqRec1_3_1
 }))
 _ = ordRecord1_4_2
-return gopurs_runtime.RecordDict3("top", "bottom", "Ord0", gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBoundedRecord_1_loop, "topRecord"), gopurs_runtime.Constructor0("Proxy"), gopurs_runtime.Constructor0("Proxy")), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBoundedRecord_1_loop, "bottomRecord"), gopurs_runtime.Constructor0("Proxy"), gopurs_runtime.Constructor0("Proxy")), gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict3("top", "bottom", "Ord0", gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBoundedRecord_1, "topRecord"), gopurs_runtime.Constructor0("Proxy"), gopurs_runtime.Constructor0("Proxy")), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBoundedRecord_1, "bottomRecord"), gopurs_runtime.Constructor0("Proxy"), gopurs_runtime.Constructor0("Proxy")), gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return ordRecord1_4_2
 }))
 }
@@ -201,19 +205,19 @@ var dictIsSymbol_0 gopurs_runtime.Value = dictIsSymbol_0_loop
 _ = dictIsSymbol_0
 var dictBounded_1 gopurs_runtime.Value = dictBounded_1_loop
 _ = dictBounded_1
-top1_2_0 := gopurs_runtime.RecordGet(dictBounded_1_loop, "top")
+top1_2_0 := gopurs_runtime.RecordGet(dictBounded_1, "top")
 _ = top1_2_0
-bottom1_3_1 := gopurs_runtime.RecordGet(dictBounded_1_loop, "bottom")
+bottom1_3_1 := gopurs_runtime.RecordGet(dictBounded_1, "bottom")
 _ = bottom1_3_1
-Ord0_4_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBounded_1_loop, "Ord0"), gopurs_runtime.Value{})
+Ord0_4_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBounded_1, "Ord0"), gopurs_runtime.Value{})
 _ = Ord0_4_2
 return gopurs_runtime.Func3(func(_dollar__unused_5 gopurs_runtime.Value, _dollar__unused_6 gopurs_runtime.Value, dictBoundedRecord_7 gopurs_runtime.Value) gopurs_runtime.Value {
-ordRecordCons_8_3 := gopurs_runtime.Apply4(pkg_Data_Ord.Get_ordRecordCons(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedRecord_7, "OrdRecord0"), gopurs_runtime.Value{}), gopurs_runtime.Value{}, dictIsSymbol_0_loop, Ord0_4_2)
+ordRecordCons_8_3 := gopurs_runtime.Apply4(pkg_Data_Ord.Get_ordRecordCons(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedRecord_7, "OrdRecord0"), gopurs_runtime.Value{}), gopurs_runtime.Value{}, dictIsSymbol_0, Ord0_4_2)
 _ = ordRecordCons_8_3
 return gopurs_runtime.RecordDict3("topRecord", "bottomRecord", "OrdRecord0", gopurs_runtime.Func2(func(v_9 gopurs_runtime.Value, rowProxy_10 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(pkg_Record_Unsafe.Get_unsafeSet(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0_loop, "reflectSymbol"), gopurs_runtime.Constructor0("Proxy")), top1_2_0, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBoundedRecord_7, "topRecord"), gopurs_runtime.Constructor0("Proxy"), rowProxy_10))
+return gopurs_runtime.Apply3(pkg_Record_Unsafe.Get_unsafeSet(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0, "reflectSymbol"), gopurs_runtime.Constructor0("Proxy")), top1_2_0, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBoundedRecord_7, "topRecord"), gopurs_runtime.Constructor0("Proxy"), rowProxy_10))
 }), gopurs_runtime.Func2(func(v_9 gopurs_runtime.Value, rowProxy_10 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(pkg_Record_Unsafe.Get_unsafeSet(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0_loop, "reflectSymbol"), gopurs_runtime.Constructor0("Proxy")), bottom1_3_1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBoundedRecord_7, "bottomRecord"), gopurs_runtime.Constructor0("Proxy"), rowProxy_10))
+return gopurs_runtime.Apply3(pkg_Record_Unsafe.Get_unsafeSet(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0, "reflectSymbol"), gopurs_runtime.Constructor0("Proxy")), bottom1_3_1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBoundedRecord_7, "bottomRecord"), gopurs_runtime.Constructor0("Proxy"), rowProxy_10))
 }), gopurs_runtime.Func(func(_dollar__unused_9 gopurs_runtime.Value) gopurs_runtime.Value {
 return ordRecordCons_8_3
 }))

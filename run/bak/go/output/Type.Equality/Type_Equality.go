@@ -26,7 +26,7 @@ func Get_proof() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0_loop, "proof")
+return gopurs_runtime.RecordGet(dict_0, "proof")
 }()
 })
 	})
@@ -41,7 +41,7 @@ func Get_to() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictTypeEquals_0 gopurs_runtime.Value = dictTypeEquals_0_loop
 _ = dictTypeEquals_0
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTypeEquals_0_loop, "proof"), gopurs_runtime.Func(func(a_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTypeEquals_0, "proof"), gopurs_runtime.Func(func(a_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return a_1
 }))
 }()
@@ -58,7 +58,7 @@ func Get_from() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictTypeEquals_0 gopurs_runtime.Value = dictTypeEquals_0_loop
 _ = dictTypeEquals_0
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTypeEquals_0_loop, "proof"), gopurs_runtime.Func(func(a_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTypeEquals_0, "proof"), gopurs_runtime.Func(func(a_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return a_1
 }))
 }()

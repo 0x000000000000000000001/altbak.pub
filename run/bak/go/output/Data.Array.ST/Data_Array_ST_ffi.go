@@ -72,122 +72,156 @@ func PushImpl(_ interface{}, _ interface{}) interface{} {
 
 
 // --- Auto-generated FFI wrappers ---
-func Call_new_(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_new_(arg0 interface{}) interface{} {
+	return New_(arg0)
+}
+var _Gopurs_New_ = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := New_(go_arg0)
 	return gopurs_runtime.Box(go_res)
+})
+func Call_peekImpl(arg0 interface{}, arg1 interface{}, arg2 interface{}, arg3 interface{}) interface{} {
+	return PeekImpl(arg0, arg1, arg2, arg3)
 }
-var _Gopurs_New_ = gopurs_runtime.Func(Call_new_)
-func Call_peekImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_PeekImpl = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_arg1 := arg1
 	go_arg2 := arg2
 	go_arg3 := arg3
 	go_res := PeekImpl(go_arg0, go_arg1, go_arg2, go_arg3)
 	return gopurs_runtime.Box(go_res)
+})
+func Call_pokeImpl(arg0 interface{}, arg1 interface{}, arg2 interface{}) interface{} {
+	return PokeImpl(arg0, arg1, arg2)
 }
-var _Gopurs_PeekImpl = gopurs_runtime.Func4(Call_peekImpl)
-func Call_pokeImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_PokeImpl = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_arg1 := arg1
 	go_arg2 := arg2
 	go_res := PokeImpl(go_arg0, go_arg1, go_arg2)
 	return gopurs_runtime.Box(go_res)
+})
+func Call_lengthImpl(arg0 interface{}) interface{} {
+	return LengthImpl(arg0)
 }
-var _Gopurs_PokeImpl = gopurs_runtime.Func3(Call_pokeImpl)
-func Call_lengthImpl(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_LengthImpl = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := LengthImpl(go_arg0)
 	return gopurs_runtime.Box(go_res)
+})
+func Call_popImpl(arg0 interface{}, arg1 interface{}, arg2 interface{}) interface{} {
+	return PopImpl(arg0, arg1, arg2)
 }
-var _Gopurs_LengthImpl = gopurs_runtime.Func(Call_lengthImpl)
-func Call_popImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_PopImpl = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_arg1 := arg1
 	go_arg2 := arg2
 	go_res := PopImpl(go_arg0, go_arg1, go_arg2)
 	return gopurs_runtime.Box(go_res)
+})
+func Call_pushAllImpl(arg0 interface{}, arg1 interface{}) interface{} {
+	return PushAllImpl(arg0, arg1)
 }
-var _Gopurs_PopImpl = gopurs_runtime.Func3(Call_popImpl)
-func Call_pushAllImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_PushAllImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_arg1 := arg1
 	go_res := PushAllImpl(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
+})
+func Call_shiftImpl(arg0 interface{}, arg1 interface{}, arg2 interface{}) interface{} {
+	return ShiftImpl(arg0, arg1, arg2)
 }
-var _Gopurs_PushAllImpl = gopurs_runtime.Func2(Call_pushAllImpl)
-func Call_shiftImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_ShiftImpl = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_arg1 := arg1
 	go_arg2 := arg2
 	go_res := ShiftImpl(go_arg0, go_arg1, go_arg2)
 	return gopurs_runtime.Box(go_res)
+})
+func Call_unshiftAllImpl(arg0 interface{}, arg1 interface{}) interface{} {
+	return UnshiftAllImpl(arg0, arg1)
 }
-var _Gopurs_ShiftImpl = gopurs_runtime.Func3(Call_shiftImpl)
-func Call_unshiftAllImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_UnshiftAllImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_arg1 := arg1
 	go_res := UnshiftAllImpl(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
+})
+func Call_spliceImpl(arg0 interface{}, arg1 interface{}, arg2 interface{}, arg3 interface{}) interface{} {
+	return SpliceImpl(arg0, arg1, arg2, arg3)
 }
-var _Gopurs_UnshiftAllImpl = gopurs_runtime.Func2(Call_unshiftAllImpl)
-func Call_spliceImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_SpliceImpl = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_arg1 := arg1
 	go_arg2 := arg2
 	go_arg3 := arg3
 	go_res := SpliceImpl(go_arg0, go_arg1, go_arg2, go_arg3)
 	return gopurs_runtime.Box(go_res)
+})
+func Call_unsafeFreezeImpl(arg0 interface{}) interface{} {
+	return UnsafeFreezeImpl(arg0)
 }
-var _Gopurs_SpliceImpl = gopurs_runtime.Func4(Call_spliceImpl)
-func Call_unsafeFreezeImpl(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_UnsafeFreezeImpl = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := UnsafeFreezeImpl(go_arg0)
 	return gopurs_runtime.Box(go_res)
+})
+func Call_unsafeThawImpl(arg0 interface{}) interface{} {
+	return UnsafeThawImpl(arg0)
 }
-var _Gopurs_UnsafeFreezeImpl = gopurs_runtime.Func(Call_unsafeFreezeImpl)
-func Call_unsafeThawImpl(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_UnsafeThawImpl = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := UnsafeThawImpl(go_arg0)
 	return gopurs_runtime.Box(go_res)
+})
+func Call_freezeImpl(arg0 interface{}) interface{} {
+	return FreezeImpl(arg0)
 }
-var _Gopurs_UnsafeThawImpl = gopurs_runtime.Func(Call_unsafeThawImpl)
-func Call_freezeImpl(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_FreezeImpl = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := FreezeImpl(go_arg0)
 	return gopurs_runtime.Box(go_res)
+})
+func Call_thawImpl(arg0 interface{}) interface{} {
+	return ThawImpl(arg0)
 }
-var _Gopurs_FreezeImpl = gopurs_runtime.Func(Call_freezeImpl)
-func Call_thawImpl(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_ThawImpl = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := ThawImpl(go_arg0)
 	return gopurs_runtime.Box(go_res)
+})
+func Call_cloneImpl(arg0 interface{}) interface{} {
+	return CloneImpl(arg0)
 }
-var _Gopurs_ThawImpl = gopurs_runtime.Func(Call_thawImpl)
-func Call_cloneImpl(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_CloneImpl = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := CloneImpl(go_arg0)
 	return gopurs_runtime.Box(go_res)
+})
+func Call_sortByImpl(arg0 interface{}, arg1 interface{}, arg2 interface{}) interface{} {
+	return SortByImpl(arg0, arg1, arg2)
 }
-var _Gopurs_CloneImpl = gopurs_runtime.Func(Call_cloneImpl)
-func Call_sortByImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_SortByImpl = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_arg1 := arg1
 	go_arg2 := arg2
 	go_res := SortByImpl(go_arg0, go_arg1, go_arg2)
 	return gopurs_runtime.Box(go_res)
+})
+func Call_toAssocArrayImpl(arg0 interface{}) interface{} {
+	return ToAssocArrayImpl(arg0)
 }
-var _Gopurs_SortByImpl = gopurs_runtime.Func3(Call_sortByImpl)
-func Call_toAssocArrayImpl(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_ToAssocArrayImpl = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := ToAssocArrayImpl(go_arg0)
 	return gopurs_runtime.Box(go_res)
+})
+func Call_pushImpl(arg0 interface{}, arg1 interface{}) interface{} {
+	return PushImpl(arg0, arg1)
 }
-var _Gopurs_ToAssocArrayImpl = gopurs_runtime.Func(Call_toAssocArrayImpl)
-func Call_pushImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_PushImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_arg1 := arg1
 	go_res := PushImpl(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
-}
-var _Gopurs_PushImpl = gopurs_runtime.Func2(Call_pushImpl)
+})

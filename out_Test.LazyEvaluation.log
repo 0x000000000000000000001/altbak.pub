@@ -1,6 +1,7 @@
+Compilation failed, but that's expected for now!
 === Native Go ===
-Lazy Evaluation (1M Thunks Forced, 1k Depth):
-1000000
+Fibonacci:
+55
 
-Execution time: 62153.00 μs
+Execution time: 15.00 μs
 

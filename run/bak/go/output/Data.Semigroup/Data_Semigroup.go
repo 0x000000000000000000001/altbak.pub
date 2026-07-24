@@ -78,7 +78,7 @@ func Get_appendRecord() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0_loop, "appendRecord")
+return gopurs_runtime.RecordGet(dict_0, "appendRecord")
 }()
 })
 	})
@@ -89,7 +89,9 @@ var semigroupRecord gopurs_runtime.Value
 var once_semigroupRecord sync.Once
 func Get_semigroupRecord() gopurs_runtime.Value {
 	once_semigroupRecord.Do(func() {
-		semigroupRecord = gopurs_runtime.Func2(Call_semigroupRecord)
+		semigroupRecord = gopurs_runtime.Func2(func(_dollar__unused_0_box gopurs_runtime.Value, dictSemigroupRecord_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_semigroupRecord(_dollar__unused_0_box, dictSemigroupRecord_1_box)
+})
 	})
 	return semigroupRecord
 }
@@ -102,7 +104,7 @@ func Get_append_() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0_loop, "append")
+return gopurs_runtime.RecordGet(dict_0, "append")
 }()
 })
 	})
@@ -118,7 +120,7 @@ return func() gopurs_runtime.Value {
 var dictSemigroup_0 gopurs_runtime.Value = dictSemigroup_0_loop
 _ = dictSemigroup_0
 return gopurs_runtime.RecordDict1("append", gopurs_runtime.Func3(func(f_1 gopurs_runtime.Value, g_2 gopurs_runtime.Value, x_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup_0_loop, "append"), gopurs_runtime.Apply(f_1, x_3), gopurs_runtime.Apply(g_2, x_3))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup_0, "append"), gopurs_runtime.Apply(f_1, x_3), gopurs_runtime.Apply(g_2, x_3))
 }))
 }()
 })
@@ -130,7 +132,9 @@ var semigroupRecordCons gopurs_runtime.Value
 var once_semigroupRecordCons sync.Once
 func Get_semigroupRecordCons() gopurs_runtime.Value {
 	once_semigroupRecordCons.Do(func() {
-		semigroupRecordCons = gopurs_runtime.Func4(Call_semigroupRecordCons)
+		semigroupRecordCons = gopurs_runtime.Func4(func(dictIsSymbol_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, dictSemigroupRecord_2_box gopurs_runtime.Value, dictSemigroup_3_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_semigroupRecordCons(dictIsSymbol_0_box, _dollar__unused_1_box, dictSemigroupRecord_2_box, dictSemigroup_3_box)
+})
 	})
 	return semigroupRecordCons
 }
@@ -140,7 +144,7 @@ var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
 var dictSemigroupRecord_1 gopurs_runtime.Value = dictSemigroupRecord_1_loop
 _ = dictSemigroupRecord_1
-return gopurs_runtime.RecordDict1("append", gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictSemigroupRecord_1_loop, "appendRecord"), gopurs_runtime.Constructor0("Proxy")))
+return gopurs_runtime.RecordDict1("append", gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictSemigroupRecord_1, "appendRecord"), gopurs_runtime.Constructor0("Proxy")))
 }
 
 func Call_semigroupRecordCons(dictIsSymbol_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, dictSemigroupRecord_2_loop gopurs_runtime.Value, dictSemigroup_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -153,11 +157,11 @@ _ = dictSemigroupRecord_2
 var dictSemigroup_3 gopurs_runtime.Value = dictSemigroup_3_loop
 _ = dictSemigroup_3
 return gopurs_runtime.RecordDict1("appendRecord", gopurs_runtime.Func3(func(v_4 gopurs_runtime.Value, ra_5 gopurs_runtime.Value, rb_6 gopurs_runtime.Value) gopurs_runtime.Value {
-key_7_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0_loop, "reflectSymbol"), gopurs_runtime.Constructor0("Proxy"))
+key_7_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0, "reflectSymbol"), gopurs_runtime.Constructor0("Proxy"))
 _ = key_7_0
 get_8_1 := gopurs_runtime.Apply(pkg_Record_Unsafe.Get_unsafeGet(), key_7_0)
 _ = get_8_1
-return gopurs_runtime.Apply3(pkg_Record_Unsafe.Get_unsafeSet(), key_7_0, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup_3_loop, "append"), gopurs_runtime.Apply(get_8_1, ra_5), gopurs_runtime.Apply(get_8_1, rb_6)), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictSemigroupRecord_2_loop, "appendRecord"), gopurs_runtime.Constructor0("Proxy"), ra_5, rb_6))
+return gopurs_runtime.Apply3(pkg_Record_Unsafe.Get_unsafeSet(), key_7_0, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup_3, "append"), gopurs_runtime.Apply(get_8_1, ra_5), gopurs_runtime.Apply(get_8_1, rb_6)), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictSemigroupRecord_2, "appendRecord"), gopurs_runtime.Constructor0("Proxy"), ra_5, rb_6))
 }))
 }
 

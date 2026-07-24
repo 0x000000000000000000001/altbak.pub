@@ -14,7 +14,7 @@ func Get_in9() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-return gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Left", v_0_loop)))))))))
+return gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Left", v_0)))))))))
 }()
 })
 	})
@@ -29,7 +29,7 @@ func Get_in8() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-return gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Left", v_0_loop))))))))
+return gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Left", v_0))))))))
 }()
 })
 	})
@@ -44,7 +44,7 @@ func Get_in7() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-return gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Left", v_0_loop)))))))
+return gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Left", v_0)))))))
 }()
 })
 	})
@@ -59,7 +59,7 @@ func Get_in6() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-return gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Left", v_0_loop))))))
+return gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Left", v_0))))))
 }()
 })
 	})
@@ -74,7 +74,7 @@ func Get_in5() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-return gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Left", v_0_loop)))))
+return gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Left", v_0)))))
 }()
 })
 	})
@@ -89,7 +89,7 @@ func Get_in4() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-return gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Left", v_0_loop))))
+return gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Left", v_0))))
 }()
 })
 	})
@@ -104,7 +104,7 @@ func Get_in3() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-return gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Left", v_0_loop)))
+return gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Left", v_0)))
 }()
 })
 	})
@@ -119,7 +119,7 @@ func Get_in2() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-return gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Left", v_0_loop))
+return gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Left", v_0))
 }()
 })
 	})
@@ -134,7 +134,7 @@ func Get_in10() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-return gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Left", v_0_loop))))))))))
+return gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Right", gopurs_runtime.Constructor1("Left", v_0))))))))))
 }()
 })
 	})
@@ -154,7 +154,9 @@ var coproduct9 gopurs_runtime.Value
 var once_coproduct9 sync.Once
 func Get_coproduct9() gopurs_runtime.Value {
 	once_coproduct9.Do(func() {
-		coproduct9 = gopurs_runtime.Func10(Call_coproduct9)
+		coproduct9 = gopurs_runtime.Func10(func(a_0_box gopurs_runtime.Value, b_1_box gopurs_runtime.Value, c_2_box gopurs_runtime.Value, d_3_box gopurs_runtime.Value, e_4_box gopurs_runtime.Value, f_5_box gopurs_runtime.Value, g_6_box gopurs_runtime.Value, h_7_box gopurs_runtime.Value, i_8_box gopurs_runtime.Value, y_9_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_coproduct9(a_0_box, b_1_box, c_2_box, d_3_box, e_4_box, f_5_box, g_6_box, h_7_box, i_8_box, y_9_box)
+})
 	})
 	return coproduct9
 }
@@ -163,7 +165,9 @@ var coproduct8 gopurs_runtime.Value
 var once_coproduct8 sync.Once
 func Get_coproduct8() gopurs_runtime.Value {
 	once_coproduct8.Do(func() {
-		coproduct8 = gopurs_runtime.Func9(Call_coproduct8)
+		coproduct8 = gopurs_runtime.Func9(func(a_0_box gopurs_runtime.Value, b_1_box gopurs_runtime.Value, c_2_box gopurs_runtime.Value, d_3_box gopurs_runtime.Value, e_4_box gopurs_runtime.Value, f_5_box gopurs_runtime.Value, g_6_box gopurs_runtime.Value, h_7_box gopurs_runtime.Value, y_8_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_coproduct8(a_0_box, b_1_box, c_2_box, d_3_box, e_4_box, f_5_box, g_6_box, h_7_box, y_8_box)
+})
 	})
 	return coproduct8
 }
@@ -172,7 +176,9 @@ var coproduct7 gopurs_runtime.Value
 var once_coproduct7 sync.Once
 func Get_coproduct7() gopurs_runtime.Value {
 	once_coproduct7.Do(func() {
-		coproduct7 = gopurs_runtime.Func8(Call_coproduct7)
+		coproduct7 = gopurs_runtime.Func8(func(a_0_box gopurs_runtime.Value, b_1_box gopurs_runtime.Value, c_2_box gopurs_runtime.Value, d_3_box gopurs_runtime.Value, e_4_box gopurs_runtime.Value, f_5_box gopurs_runtime.Value, g_6_box gopurs_runtime.Value, y_7_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_coproduct7(a_0_box, b_1_box, c_2_box, d_3_box, e_4_box, f_5_box, g_6_box, y_7_box)
+})
 	})
 	return coproduct7
 }
@@ -181,7 +187,9 @@ var coproduct6 gopurs_runtime.Value
 var once_coproduct6 sync.Once
 func Get_coproduct6() gopurs_runtime.Value {
 	once_coproduct6.Do(func() {
-		coproduct6 = gopurs_runtime.Func7(Call_coproduct6)
+		coproduct6 = gopurs_runtime.Func7(func(a_0_box gopurs_runtime.Value, b_1_box gopurs_runtime.Value, c_2_box gopurs_runtime.Value, d_3_box gopurs_runtime.Value, e_4_box gopurs_runtime.Value, f_5_box gopurs_runtime.Value, y_6_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_coproduct6(a_0_box, b_1_box, c_2_box, d_3_box, e_4_box, f_5_box, y_6_box)
+})
 	})
 	return coproduct6
 }
@@ -190,7 +198,9 @@ var coproduct5 gopurs_runtime.Value
 var once_coproduct5 sync.Once
 func Get_coproduct5() gopurs_runtime.Value {
 	once_coproduct5.Do(func() {
-		coproduct5 = gopurs_runtime.Func6(Call_coproduct5)
+		coproduct5 = gopurs_runtime.Func6(func(a_0_box gopurs_runtime.Value, b_1_box gopurs_runtime.Value, c_2_box gopurs_runtime.Value, d_3_box gopurs_runtime.Value, e_4_box gopurs_runtime.Value, y_5_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_coproduct5(a_0_box, b_1_box, c_2_box, d_3_box, e_4_box, y_5_box)
+})
 	})
 	return coproduct5
 }
@@ -199,7 +209,9 @@ var coproduct4 gopurs_runtime.Value
 var once_coproduct4 sync.Once
 func Get_coproduct4() gopurs_runtime.Value {
 	once_coproduct4.Do(func() {
-		coproduct4 = gopurs_runtime.Func5(Call_coproduct4)
+		coproduct4 = gopurs_runtime.Func5(func(a_0_box gopurs_runtime.Value, b_1_box gopurs_runtime.Value, c_2_box gopurs_runtime.Value, d_3_box gopurs_runtime.Value, y_4_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_coproduct4(a_0_box, b_1_box, c_2_box, d_3_box, y_4_box)
+})
 	})
 	return coproduct4
 }
@@ -208,7 +220,9 @@ var coproduct3 gopurs_runtime.Value
 var once_coproduct3 sync.Once
 func Get_coproduct3() gopurs_runtime.Value {
 	once_coproduct3.Do(func() {
-		coproduct3 = gopurs_runtime.Func4(Call_coproduct3)
+		coproduct3 = gopurs_runtime.Func4(func(a_0_box gopurs_runtime.Value, b_1_box gopurs_runtime.Value, c_2_box gopurs_runtime.Value, y_3_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_coproduct3(a_0_box, b_1_box, c_2_box, y_3_box)
+})
 	})
 	return coproduct3
 }
@@ -217,7 +231,9 @@ var coproduct2 gopurs_runtime.Value
 var once_coproduct2 sync.Once
 func Get_coproduct2() gopurs_runtime.Value {
 	once_coproduct2.Do(func() {
-		coproduct2 = gopurs_runtime.Func3(Call_coproduct2)
+		coproduct2 = gopurs_runtime.Func3(func(a_0_box gopurs_runtime.Value, b_1_box gopurs_runtime.Value, y_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_coproduct2(a_0_box, b_1_box, y_2_box)
+})
 	})
 	return coproduct2
 }
@@ -262,114 +278,114 @@ var y_10 gopurs_runtime.Value = y_10_loop
 _ = y_10
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(y_10_loop.StrVal == "Left").IntVal != 0 {
-__t0 = gopurs_runtime.Apply(a_0_loop, (*[1024]gopurs_runtime.Value)(y_10_loop.UnsafePtr)[0])
+if gopurs_runtime.Bool(y_10.StrVal == "Left").IntVal != 0 {
+__t0 = gopurs_runtime.Apply(a_0, (*[1024]gopurs_runtime.Value)(y_10.UnsafePtr)[0])
 goto end_branch_0
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(y_10_loop.StrVal == "Right").IntVal != 0 {
+if gopurs_runtime.Bool(y_10.StrVal == "Right").IntVal != 0 {
 var __t1 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_10_loop.UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
-__t1 = gopurs_runtime.Apply(b_1_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_10_loop.UnsafePtr)[0].UnsafePtr)[0])
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_10.UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
+__t1 = gopurs_runtime.Apply(b_1, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_10.UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_1
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_10_loop.UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_10.UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
 var __t2 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_10_loop.UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
-__t2 = gopurs_runtime.Apply(c_2_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_10_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_10.UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
+__t2 = gopurs_runtime.Apply(c_2, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_10.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_2
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_10_loop.UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_10.UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
 var __t3 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_10_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
-__t3 = gopurs_runtime.Apply(d_3_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_10_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_10.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
+__t3 = gopurs_runtime.Apply(d_3, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_10.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_3
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_10_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_10.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
 var __t4 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_10_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
-__t4 = gopurs_runtime.Apply(e_4_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_10_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_10.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
+__t4 = gopurs_runtime.Apply(e_4, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_10.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_4
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_10_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_10.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
 var __t5 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_10_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
-__t5 = gopurs_runtime.Apply(f_5_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_10_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_10.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
+__t5 = gopurs_runtime.Apply(f_5, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_10.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_5
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_10_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_10.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
 var __t6 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_10_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
-__t6 = gopurs_runtime.Apply(g_6_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_10_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_10.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
+__t6 = gopurs_runtime.Apply(g_6, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_10.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_6
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_10_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_10.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
 var __t7 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_10_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
-__t7 = gopurs_runtime.Apply(h_7_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_10_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_10.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
+__t7 = gopurs_runtime.Apply(h_7, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_10.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_7
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_10_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_10.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
 var __t8 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_10_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
-__t8 = gopurs_runtime.Apply(i_8_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_10_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_10.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
+__t8 = gopurs_runtime.Apply(i_8, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_10.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_8
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_10_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_10.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
 var __t9 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_10_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
-__t9 = gopurs_runtime.Apply(j_9_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_10_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_10.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
+__t9 = gopurs_runtime.Apply(j_9, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_10.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_9
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_10_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_10.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
 var spin_11_10 gopurs_runtime.Value
 spin_11_10 = gopurs_runtime.Func(func(v_12_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
@@ -384,7 +400,7 @@ return gopurs_runtime.Value{}
 }
 }()
 })
-__t9 = gopurs_runtime.Apply(spin_11_10, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_10_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
+__t9 = gopurs_runtime.Apply(spin_11_10, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_10.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_9
 } else {
 
@@ -511,15 +527,15 @@ var y_0 gopurs_runtime.Value = y_0_loop
 _ = y_0
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(y_0_loop.StrVal == "Left").IntVal != 0 {
-__t0 = (*[1024]gopurs_runtime.Value)(y_0_loop.UnsafePtr)[0]
+if gopurs_runtime.Bool(y_0.StrVal == "Left").IntVal != 0 {
+__t0 = (*[1024]gopurs_runtime.Value)(y_0.UnsafePtr)[0]
 goto end_branch_0
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(y_0_loop.StrVal == "Right").IntVal != 0 {
+if gopurs_runtime.Bool(y_0.StrVal == "Right").IntVal != 0 {
 var spin_1_1 gopurs_runtime.Value
 spin_1_1 = gopurs_runtime.Func(func(v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
@@ -534,7 +550,7 @@ return gopurs_runtime.Value{}
 }
 }()
 })
-__t0 = gopurs_runtime.Apply(spin_1_1, (*[1024]gopurs_runtime.Value)(y_0_loop.UnsafePtr)[0])
+__t0 = gopurs_runtime.Apply(spin_1_1, (*[1024]gopurs_runtime.Value)(y_0.UnsafePtr)[0])
 goto end_branch_0
 } else {
 
@@ -555,7 +571,9 @@ var at9 gopurs_runtime.Value
 var once_at9 sync.Once
 func Get_at9() gopurs_runtime.Value {
 	once_at9.Do(func() {
-		at9 = gopurs_runtime.Func3(Call_at9)
+		at9 = gopurs_runtime.Func3(func(b_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, y_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_at9(b_0_box, f_1_box, y_2_box)
+})
 	})
 	return at9
 }
@@ -564,7 +582,9 @@ var at8 gopurs_runtime.Value
 var once_at8 sync.Once
 func Get_at8() gopurs_runtime.Value {
 	once_at8.Do(func() {
-		at8 = gopurs_runtime.Func3(Call_at8)
+		at8 = gopurs_runtime.Func3(func(b_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, y_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_at8(b_0_box, f_1_box, y_2_box)
+})
 	})
 	return at8
 }
@@ -573,7 +593,9 @@ var at7 gopurs_runtime.Value
 var once_at7 sync.Once
 func Get_at7() gopurs_runtime.Value {
 	once_at7.Do(func() {
-		at7 = gopurs_runtime.Func3(Call_at7)
+		at7 = gopurs_runtime.Func3(func(b_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, y_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_at7(b_0_box, f_1_box, y_2_box)
+})
 	})
 	return at7
 }
@@ -582,7 +604,9 @@ var at6 gopurs_runtime.Value
 var once_at6 sync.Once
 func Get_at6() gopurs_runtime.Value {
 	once_at6.Do(func() {
-		at6 = gopurs_runtime.Func3(Call_at6)
+		at6 = gopurs_runtime.Func3(func(b_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, y_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_at6(b_0_box, f_1_box, y_2_box)
+})
 	})
 	return at6
 }
@@ -591,7 +615,9 @@ var at5 gopurs_runtime.Value
 var once_at5 sync.Once
 func Get_at5() gopurs_runtime.Value {
 	once_at5.Do(func() {
-		at5 = gopurs_runtime.Func3(Call_at5)
+		at5 = gopurs_runtime.Func3(func(b_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, y_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_at5(b_0_box, f_1_box, y_2_box)
+})
 	})
 	return at5
 }
@@ -600,7 +626,9 @@ var at4 gopurs_runtime.Value
 var once_at4 sync.Once
 func Get_at4() gopurs_runtime.Value {
 	once_at4.Do(func() {
-		at4 = gopurs_runtime.Func3(Call_at4)
+		at4 = gopurs_runtime.Func3(func(b_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, y_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_at4(b_0_box, f_1_box, y_2_box)
+})
 	})
 	return at4
 }
@@ -609,7 +637,9 @@ var at3 gopurs_runtime.Value
 var once_at3 sync.Once
 func Get_at3() gopurs_runtime.Value {
 	once_at3.Do(func() {
-		at3 = gopurs_runtime.Func3(Call_at3)
+		at3 = gopurs_runtime.Func3(func(b_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, y_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_at3(b_0_box, f_1_box, y_2_box)
+})
 	})
 	return at3
 }
@@ -618,7 +648,9 @@ var at2 gopurs_runtime.Value
 var once_at2 sync.Once
 func Get_at2() gopurs_runtime.Value {
 	once_at2.Do(func() {
-		at2 = gopurs_runtime.Func3(Call_at2)
+		at2 = gopurs_runtime.Func3(func(b_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, y_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_at2(b_0_box, f_1_box, y_2_box)
+})
 	})
 	return at2
 }
@@ -627,7 +659,9 @@ var at10 gopurs_runtime.Value
 var once_at10 sync.Once
 func Get_at10() gopurs_runtime.Value {
 	once_at10.Do(func() {
-		at10 = gopurs_runtime.Func3(Call_at10)
+		at10 = gopurs_runtime.Func3(func(b_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, y_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_at10(b_0_box, f_1_box, y_2_box)
+})
 	})
 	return at10
 }
@@ -636,7 +670,9 @@ var at1 gopurs_runtime.Value
 var once_at1 sync.Once
 func Get_at1() gopurs_runtime.Value {
 	once_at1.Do(func() {
-		at1 = gopurs_runtime.Func3(Call_at1)
+		at1 = gopurs_runtime.Func3(func(b_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, y_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_at1(b_0_box, f_1_box, y_2_box)
+})
 	})
 	return at1
 }
@@ -664,103 +700,103 @@ var y_9 gopurs_runtime.Value = y_9_loop
 _ = y_9
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(y_9_loop.StrVal == "Left").IntVal != 0 {
-__t0 = gopurs_runtime.Apply(a_0_loop, (*[1024]gopurs_runtime.Value)(y_9_loop.UnsafePtr)[0])
+if gopurs_runtime.Bool(y_9.StrVal == "Left").IntVal != 0 {
+__t0 = gopurs_runtime.Apply(a_0, (*[1024]gopurs_runtime.Value)(y_9.UnsafePtr)[0])
 goto end_branch_0
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(y_9_loop.StrVal == "Right").IntVal != 0 {
+if gopurs_runtime.Bool(y_9.StrVal == "Right").IntVal != 0 {
 var __t1 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_9_loop.UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
-__t1 = gopurs_runtime.Apply(b_1_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_9_loop.UnsafePtr)[0].UnsafePtr)[0])
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_9.UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
+__t1 = gopurs_runtime.Apply(b_1, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_9.UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_1
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_9_loop.UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_9.UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
 var __t2 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_9_loop.UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
-__t2 = gopurs_runtime.Apply(c_2_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_9_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_9.UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
+__t2 = gopurs_runtime.Apply(c_2, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_9.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_2
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_9_loop.UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_9.UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
 var __t3 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_9_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
-__t3 = gopurs_runtime.Apply(d_3_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_9_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_9.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
+__t3 = gopurs_runtime.Apply(d_3, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_9.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_3
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_9_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_9.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
 var __t4 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_9_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
-__t4 = gopurs_runtime.Apply(e_4_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_9_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_9.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
+__t4 = gopurs_runtime.Apply(e_4, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_9.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_4
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_9_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_9.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
 var __t5 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_9_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
-__t5 = gopurs_runtime.Apply(f_5_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_9_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_9.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
+__t5 = gopurs_runtime.Apply(f_5, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_9.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_5
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_9_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_9.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
 var __t6 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_9_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
-__t6 = gopurs_runtime.Apply(g_6_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_9_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_9.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
+__t6 = gopurs_runtime.Apply(g_6, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_9.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_6
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_9_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_9.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
 var __t7 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_9_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
-__t7 = gopurs_runtime.Apply(h_7_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_9_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_9.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
+__t7 = gopurs_runtime.Apply(h_7, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_9.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_7
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_9_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_9.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
 var __t8 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_9_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
-__t8 = gopurs_runtime.Apply(i_8_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_9_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_9.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
+__t8 = gopurs_runtime.Apply(i_8, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_9.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_8
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_9_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_9.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
 var spin_10_9 gopurs_runtime.Value
 spin_10_9 = gopurs_runtime.Func(func(v_11_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
@@ -775,7 +811,7 @@ return gopurs_runtime.Value{}
 }
 }()
 })
-__t8 = gopurs_runtime.Apply(spin_10_9, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_9_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
+__t8 = gopurs_runtime.Apply(spin_10_9, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_9.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_8
 } else {
 
@@ -889,92 +925,92 @@ var y_8 gopurs_runtime.Value = y_8_loop
 _ = y_8
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(y_8_loop.StrVal == "Left").IntVal != 0 {
-__t0 = gopurs_runtime.Apply(a_0_loop, (*[1024]gopurs_runtime.Value)(y_8_loop.UnsafePtr)[0])
+if gopurs_runtime.Bool(y_8.StrVal == "Left").IntVal != 0 {
+__t0 = gopurs_runtime.Apply(a_0, (*[1024]gopurs_runtime.Value)(y_8.UnsafePtr)[0])
 goto end_branch_0
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(y_8_loop.StrVal == "Right").IntVal != 0 {
+if gopurs_runtime.Bool(y_8.StrVal == "Right").IntVal != 0 {
 var __t1 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_8_loop.UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
-__t1 = gopurs_runtime.Apply(b_1_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_8_loop.UnsafePtr)[0].UnsafePtr)[0])
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_8.UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
+__t1 = gopurs_runtime.Apply(b_1, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_8.UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_1
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_8_loop.UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_8.UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
 var __t2 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_8_loop.UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
-__t2 = gopurs_runtime.Apply(c_2_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_8_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_8.UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
+__t2 = gopurs_runtime.Apply(c_2, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_8.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_2
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_8_loop.UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_8.UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
 var __t3 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_8_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
-__t3 = gopurs_runtime.Apply(d_3_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_8_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_8.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
+__t3 = gopurs_runtime.Apply(d_3, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_8.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_3
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_8_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_8.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
 var __t4 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_8_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
-__t4 = gopurs_runtime.Apply(e_4_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_8_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_8.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
+__t4 = gopurs_runtime.Apply(e_4, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_8.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_4
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_8_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_8.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
 var __t5 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_8_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
-__t5 = gopurs_runtime.Apply(f_5_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_8_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_8.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
+__t5 = gopurs_runtime.Apply(f_5, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_8.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_5
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_8_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_8.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
 var __t6 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_8_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
-__t6 = gopurs_runtime.Apply(g_6_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_8_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_8.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
+__t6 = gopurs_runtime.Apply(g_6, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_8.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_6
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_8_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_8.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
 var __t7 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_8_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
-__t7 = gopurs_runtime.Apply(h_7_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_8_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_8.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
+__t7 = gopurs_runtime.Apply(h_7, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_8.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_7
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_8_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_8.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
 var spin_9_8 gopurs_runtime.Value
 spin_9_8 = gopurs_runtime.Func(func(v_10_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
@@ -989,7 +1025,7 @@ return gopurs_runtime.Value{}
 }
 }()
 })
-__t7 = gopurs_runtime.Apply(spin_9_8, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_8_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
+__t7 = gopurs_runtime.Apply(spin_9_8, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_8.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_7
 } else {
 
@@ -1091,81 +1127,81 @@ var y_7 gopurs_runtime.Value = y_7_loop
 _ = y_7
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(y_7_loop.StrVal == "Left").IntVal != 0 {
-__t0 = gopurs_runtime.Apply(a_0_loop, (*[1024]gopurs_runtime.Value)(y_7_loop.UnsafePtr)[0])
+if gopurs_runtime.Bool(y_7.StrVal == "Left").IntVal != 0 {
+__t0 = gopurs_runtime.Apply(a_0, (*[1024]gopurs_runtime.Value)(y_7.UnsafePtr)[0])
 goto end_branch_0
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(y_7_loop.StrVal == "Right").IntVal != 0 {
+if gopurs_runtime.Bool(y_7.StrVal == "Right").IntVal != 0 {
 var __t1 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_7_loop.UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
-__t1 = gopurs_runtime.Apply(b_1_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_7_loop.UnsafePtr)[0].UnsafePtr)[0])
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_7.UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
+__t1 = gopurs_runtime.Apply(b_1, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_7.UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_1
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_7_loop.UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_7.UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
 var __t2 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_7_loop.UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
-__t2 = gopurs_runtime.Apply(c_2_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_7_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_7.UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
+__t2 = gopurs_runtime.Apply(c_2, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_7.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_2
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_7_loop.UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_7.UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
 var __t3 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_7_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
-__t3 = gopurs_runtime.Apply(d_3_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_7_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_7.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
+__t3 = gopurs_runtime.Apply(d_3, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_7.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_3
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_7_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_7.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
 var __t4 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_7_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
-__t4 = gopurs_runtime.Apply(e_4_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_7_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_7.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
+__t4 = gopurs_runtime.Apply(e_4, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_7.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_4
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_7_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_7.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
 var __t5 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_7_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
-__t5 = gopurs_runtime.Apply(f_5_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_7_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_7.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
+__t5 = gopurs_runtime.Apply(f_5, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_7.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_5
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_7_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_7.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
 var __t6 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_7_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
-__t6 = gopurs_runtime.Apply(g_6_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_7_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_7.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
+__t6 = gopurs_runtime.Apply(g_6, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_7.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_6
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_7_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_7.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
 var spin_8_7 gopurs_runtime.Value
 spin_8_7 = gopurs_runtime.Func(func(v_9_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
@@ -1180,7 +1216,7 @@ return gopurs_runtime.Value{}
 }
 }()
 })
-__t6 = gopurs_runtime.Apply(spin_8_7, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_7_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
+__t6 = gopurs_runtime.Apply(spin_8_7, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_7.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_6
 } else {
 
@@ -1270,70 +1306,70 @@ var y_6 gopurs_runtime.Value = y_6_loop
 _ = y_6
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(y_6_loop.StrVal == "Left").IntVal != 0 {
-__t0 = gopurs_runtime.Apply(a_0_loop, (*[1024]gopurs_runtime.Value)(y_6_loop.UnsafePtr)[0])
+if gopurs_runtime.Bool(y_6.StrVal == "Left").IntVal != 0 {
+__t0 = gopurs_runtime.Apply(a_0, (*[1024]gopurs_runtime.Value)(y_6.UnsafePtr)[0])
 goto end_branch_0
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(y_6_loop.StrVal == "Right").IntVal != 0 {
+if gopurs_runtime.Bool(y_6.StrVal == "Right").IntVal != 0 {
 var __t1 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_6_loop.UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
-__t1 = gopurs_runtime.Apply(b_1_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_6_loop.UnsafePtr)[0].UnsafePtr)[0])
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_6.UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
+__t1 = gopurs_runtime.Apply(b_1, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_6.UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_1
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_6_loop.UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_6.UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
 var __t2 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_6_loop.UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
-__t2 = gopurs_runtime.Apply(c_2_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_6_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_6.UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
+__t2 = gopurs_runtime.Apply(c_2, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_6.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_2
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_6_loop.UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_6.UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
 var __t3 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_6_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
-__t3 = gopurs_runtime.Apply(d_3_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_6_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_6.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
+__t3 = gopurs_runtime.Apply(d_3, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_6.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_3
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_6_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_6.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
 var __t4 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_6_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
-__t4 = gopurs_runtime.Apply(e_4_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_6_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_6.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
+__t4 = gopurs_runtime.Apply(e_4, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_6.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_4
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_6_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_6.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
 var __t5 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_6_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
-__t5 = gopurs_runtime.Apply(f_5_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_6_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_6.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
+__t5 = gopurs_runtime.Apply(f_5, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_6.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_5
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_6_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_6.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
 var spin_7_6 gopurs_runtime.Value
 spin_7_6 = gopurs_runtime.Func(func(v_8_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
@@ -1348,7 +1384,7 @@ return gopurs_runtime.Value{}
 }
 }()
 })
-__t5 = gopurs_runtime.Apply(spin_7_6, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_6_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
+__t5 = gopurs_runtime.Apply(spin_7_6, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_6.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_5
 } else {
 
@@ -1426,59 +1462,59 @@ var y_5 gopurs_runtime.Value = y_5_loop
 _ = y_5
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(y_5_loop.StrVal == "Left").IntVal != 0 {
-__t0 = gopurs_runtime.Apply(a_0_loop, (*[1024]gopurs_runtime.Value)(y_5_loop.UnsafePtr)[0])
+if gopurs_runtime.Bool(y_5.StrVal == "Left").IntVal != 0 {
+__t0 = gopurs_runtime.Apply(a_0, (*[1024]gopurs_runtime.Value)(y_5.UnsafePtr)[0])
 goto end_branch_0
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(y_5_loop.StrVal == "Right").IntVal != 0 {
+if gopurs_runtime.Bool(y_5.StrVal == "Right").IntVal != 0 {
 var __t1 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_5_loop.UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
-__t1 = gopurs_runtime.Apply(b_1_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_5_loop.UnsafePtr)[0].UnsafePtr)[0])
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_5.UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
+__t1 = gopurs_runtime.Apply(b_1, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_5.UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_1
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_5_loop.UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_5.UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
 var __t2 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_5_loop.UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
-__t2 = gopurs_runtime.Apply(c_2_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_5_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_5.UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
+__t2 = gopurs_runtime.Apply(c_2, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_5.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_2
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_5_loop.UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_5.UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
 var __t3 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_5_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
-__t3 = gopurs_runtime.Apply(d_3_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_5_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_5.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
+__t3 = gopurs_runtime.Apply(d_3, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_5.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_3
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_5_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_5.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
 var __t4 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_5_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
-__t4 = gopurs_runtime.Apply(e_4_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_5_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_5.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
+__t4 = gopurs_runtime.Apply(e_4, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_5.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_4
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_5_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_5.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
 var spin_6_5 gopurs_runtime.Value
 spin_6_5 = gopurs_runtime.Func(func(v_7_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
@@ -1493,7 +1529,7 @@ return gopurs_runtime.Value{}
 }
 }()
 })
-__t4 = gopurs_runtime.Apply(spin_6_5, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_5_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
+__t4 = gopurs_runtime.Apply(spin_6_5, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_5.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_4
 } else {
 
@@ -1559,48 +1595,48 @@ var y_4 gopurs_runtime.Value = y_4_loop
 _ = y_4
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(y_4_loop.StrVal == "Left").IntVal != 0 {
-__t0 = gopurs_runtime.Apply(a_0_loop, (*[1024]gopurs_runtime.Value)(y_4_loop.UnsafePtr)[0])
+if gopurs_runtime.Bool(y_4.StrVal == "Left").IntVal != 0 {
+__t0 = gopurs_runtime.Apply(a_0, (*[1024]gopurs_runtime.Value)(y_4.UnsafePtr)[0])
 goto end_branch_0
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(y_4_loop.StrVal == "Right").IntVal != 0 {
+if gopurs_runtime.Bool(y_4.StrVal == "Right").IntVal != 0 {
 var __t1 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_4_loop.UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
-__t1 = gopurs_runtime.Apply(b_1_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_4_loop.UnsafePtr)[0].UnsafePtr)[0])
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_4.UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
+__t1 = gopurs_runtime.Apply(b_1, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_4.UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_1
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_4_loop.UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_4.UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
 var __t2 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_4_loop.UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
-__t2 = gopurs_runtime.Apply(c_2_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_4_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_4.UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
+__t2 = gopurs_runtime.Apply(c_2, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_4.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_2
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_4_loop.UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_4.UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
 var __t3 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_4_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
-__t3 = gopurs_runtime.Apply(d_3_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_4_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_4.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
+__t3 = gopurs_runtime.Apply(d_3, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_4.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_3
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_4_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_4.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
 var spin_5_4 gopurs_runtime.Value
 spin_5_4 = gopurs_runtime.Func(func(v_6_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
@@ -1615,7 +1651,7 @@ return gopurs_runtime.Value{}
 }
 }()
 })
-__t3 = gopurs_runtime.Apply(spin_5_4, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_4_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
+__t3 = gopurs_runtime.Apply(spin_5_4, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_4.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_3
 } else {
 
@@ -1669,37 +1705,37 @@ var y_3 gopurs_runtime.Value = y_3_loop
 _ = y_3
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(y_3_loop.StrVal == "Left").IntVal != 0 {
-__t0 = gopurs_runtime.Apply(a_0_loop, (*[1024]gopurs_runtime.Value)(y_3_loop.UnsafePtr)[0])
+if gopurs_runtime.Bool(y_3.StrVal == "Left").IntVal != 0 {
+__t0 = gopurs_runtime.Apply(a_0, (*[1024]gopurs_runtime.Value)(y_3.UnsafePtr)[0])
 goto end_branch_0
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(y_3_loop.StrVal == "Right").IntVal != 0 {
+if gopurs_runtime.Bool(y_3.StrVal == "Right").IntVal != 0 {
 var __t1 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_3_loop.UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
-__t1 = gopurs_runtime.Apply(b_1_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_3_loop.UnsafePtr)[0].UnsafePtr)[0])
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_3.UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
+__t1 = gopurs_runtime.Apply(b_1, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_3.UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_1
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_3_loop.UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_3.UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
 var __t2 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_3_loop.UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
-__t2 = gopurs_runtime.Apply(c_2_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_3_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_3.UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
+__t2 = gopurs_runtime.Apply(c_2, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_3.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_2
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_3_loop.UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_3.UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
 var spin_4_3 gopurs_runtime.Value
 spin_4_3 = gopurs_runtime.Func(func(v_5_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
@@ -1714,7 +1750,7 @@ return gopurs_runtime.Value{}
 }
 }()
 })
-__t2 = gopurs_runtime.Apply(spin_4_3, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_3_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
+__t2 = gopurs_runtime.Apply(spin_4_3, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_3.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_2
 } else {
 
@@ -1756,26 +1792,26 @@ var y_2 gopurs_runtime.Value = y_2_loop
 _ = y_2
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(y_2_loop.StrVal == "Left").IntVal != 0 {
-__t0 = gopurs_runtime.Apply(a_0_loop, (*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0])
+if gopurs_runtime.Bool(y_2.StrVal == "Left").IntVal != 0 {
+__t0 = gopurs_runtime.Apply(a_0, (*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0])
 goto end_branch_0
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(y_2_loop.StrVal == "Right").IntVal != 0 {
+if gopurs_runtime.Bool(y_2.StrVal == "Right").IntVal != 0 {
 var __t1 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
-__t1 = gopurs_runtime.Apply(b_1_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].UnsafePtr)[0])
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
+__t1 = gopurs_runtime.Apply(b_1, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_1
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].StrVal == "Right").IntVal != 0 {
 var spin_3_2 gopurs_runtime.Value
 spin_3_2 = gopurs_runtime.Func(func(v_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
@@ -1790,7 +1826,7 @@ return gopurs_runtime.Value{}
 }
 }()
 })
-__t1 = gopurs_runtime.Apply(spin_3_2, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].UnsafePtr)[0])
+__t1 = gopurs_runtime.Apply(spin_3_2, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_1
 } else {
 
@@ -1822,15 +1858,15 @@ var y_2 gopurs_runtime.Value = y_2_loop
 _ = y_2
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(y_2_loop.StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
-__t0 = gopurs_runtime.Apply(f_1_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
+if gopurs_runtime.Bool(y_2.StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
+__t0 = gopurs_runtime.Apply(f_1, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = b_0_loop
+__t0 = b_0
 }
 end_branch_0:
 return __t0
@@ -1845,15 +1881,15 @@ var y_2 gopurs_runtime.Value = y_2_loop
 _ = y_2
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(y_2_loop.StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
-__t0 = gopurs_runtime.Apply(f_1_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
+if gopurs_runtime.Bool(y_2.StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
+__t0 = gopurs_runtime.Apply(f_1, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = b_0_loop
+__t0 = b_0
 }
 end_branch_0:
 return __t0
@@ -1868,15 +1904,15 @@ var y_2 gopurs_runtime.Value = y_2_loop
 _ = y_2
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(y_2_loop.StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
-__t0 = gopurs_runtime.Apply(f_1_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
+if gopurs_runtime.Bool(y_2.StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
+__t0 = gopurs_runtime.Apply(f_1, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = b_0_loop
+__t0 = b_0
 }
 end_branch_0:
 return __t0
@@ -1891,15 +1927,15 @@ var y_2 gopurs_runtime.Value = y_2_loop
 _ = y_2
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(y_2_loop.StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
-__t0 = gopurs_runtime.Apply(f_1_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
+if gopurs_runtime.Bool(y_2.StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
+__t0 = gopurs_runtime.Apply(f_1, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = b_0_loop
+__t0 = b_0
 }
 end_branch_0:
 return __t0
@@ -1914,15 +1950,15 @@ var y_2 gopurs_runtime.Value = y_2_loop
 _ = y_2
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(y_2_loop.StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
-__t0 = gopurs_runtime.Apply(f_1_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
+if gopurs_runtime.Bool(y_2.StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
+__t0 = gopurs_runtime.Apply(f_1, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = b_0_loop
+__t0 = b_0
 }
 end_branch_0:
 return __t0
@@ -1937,15 +1973,15 @@ var y_2 gopurs_runtime.Value = y_2_loop
 _ = y_2
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(y_2_loop.StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
-__t0 = gopurs_runtime.Apply(f_1_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
+if gopurs_runtime.Bool(y_2.StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
+__t0 = gopurs_runtime.Apply(f_1, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = b_0_loop
+__t0 = b_0
 }
 end_branch_0:
 return __t0
@@ -1960,15 +1996,15 @@ var y_2 gopurs_runtime.Value = y_2_loop
 _ = y_2
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(y_2_loop.StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
-__t0 = gopurs_runtime.Apply(f_1_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
+if gopurs_runtime.Bool(y_2.StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
+__t0 = gopurs_runtime.Apply(f_1, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = b_0_loop
+__t0 = b_0
 }
 end_branch_0:
 return __t0
@@ -1983,15 +2019,15 @@ var y_2 gopurs_runtime.Value = y_2_loop
 _ = y_2
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(y_2_loop.StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
-__t0 = gopurs_runtime.Apply(f_1_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].UnsafePtr)[0])
+if gopurs_runtime.Bool(y_2.StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
+__t0 = gopurs_runtime.Apply(f_1, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = b_0_loop
+__t0 = b_0
 }
 end_branch_0:
 return __t0
@@ -2006,15 +2042,15 @@ var y_2 gopurs_runtime.Value = y_2_loop
 _ = y_2
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(y_2_loop.StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
-__t0 = gopurs_runtime.Apply(f_1_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
+if gopurs_runtime.Bool(y_2.StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].StrVal == "Left").IntVal != 0 {
+__t0 = gopurs_runtime.Apply(f_1, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = b_0_loop
+__t0 = b_0
 }
 end_branch_0:
 return __t0
@@ -2029,15 +2065,15 @@ var y_2 gopurs_runtime.Value = y_2_loop
 _ = y_2
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(y_2_loop.StrVal == "Left").IntVal != 0 {
-__t0 = gopurs_runtime.Apply(f_1_loop, (*[1024]gopurs_runtime.Value)(y_2_loop.UnsafePtr)[0])
+if gopurs_runtime.Bool(y_2.StrVal == "Left").IntVal != 0 {
+__t0 = gopurs_runtime.Apply(f_1, (*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0])
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = b_0_loop
+__t0 = b_0
 }
 end_branch_0:
 return __t0

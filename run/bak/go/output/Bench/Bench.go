@@ -10,7 +10,9 @@ var runBench gopurs_runtime.Value
 var once_runBench sync.Once
 func Get_runBench() gopurs_runtime.Value {
 	once_runBench.Do(func() {
-		runBench = gopurs_runtime.Func2(Call_runBench)
+		runBench = gopurs_runtime.Func2(func(describe_0_box gopurs_runtime.Value, act_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_runBench(describe_0_box, act_1_box)
+})
 	})
 	return runBench
 }
@@ -21,11 +23,11 @@ _ = describe_0
 var act_1 gopurs_runtime.Value = act_1_loop
 _ = act_1
 return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-_dollar__unused_2_0 := gopurs_runtime.Apply(describe_0_loop, gopurs_runtime.Value{})
+_dollar__unused_2_0 := gopurs_runtime.Apply(describe_0, gopurs_runtime.Value{})
 _ = _dollar__unused_2_0
 t1_3_1 := gopurs_runtime.Apply(Get_benchNow(), gopurs_runtime.Value{})
 _ = t1_3_1
-_dollar__unused_4_2 := gopurs_runtime.Apply(act_1_loop, gopurs_runtime.Value{})
+_dollar__unused_4_2 := gopurs_runtime.Apply(act_1, gopurs_runtime.Value{})
 _ = _dollar__unused_4_2
 t2_5_3 := gopurs_runtime.Apply(Get_benchNow(), gopurs_runtime.Value{})
 _ = t2_5_3

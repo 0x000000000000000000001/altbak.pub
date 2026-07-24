@@ -24,7 +24,7 @@ func Get_compose() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0_loop, "compose")
+return gopurs_runtime.RecordGet(dict_0, "compose")
 }()
 })
 	})
@@ -35,7 +35,9 @@ var composeFlipped gopurs_runtime.Value
 var once_composeFlipped sync.Once
 func Get_composeFlipped() gopurs_runtime.Value {
 	once_composeFlipped.Do(func() {
-		composeFlipped = gopurs_runtime.Func3(Call_composeFlipped)
+		composeFlipped = gopurs_runtime.Func3(func(dictSemigroupoid_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, g_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_composeFlipped(dictSemigroupoid_0_box, f_1_box, g_2_box)
+})
 	})
 	return composeFlipped
 }
@@ -47,7 +49,7 @@ var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
 var g_2 gopurs_runtime.Value = g_2_loop
 _ = g_2
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroupoid_0_loop, "compose"), g_2_loop, f_1_loop)
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroupoid_0, "compose"), g_2, f_1)
 }
 
 

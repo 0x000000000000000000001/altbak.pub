@@ -16,7 +16,7 @@ func Get_List() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
-return x_0_loop
+return x_0
 }()
 })
 	})
@@ -53,7 +53,7 @@ func Get_NonEmptyList() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
-return x_0_loop
+return x_0
 }()
 })
 	})
@@ -101,7 +101,7 @@ func Get_step() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
-return gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), x_0_loop)
+return gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), x_0)
 }()
 })
 	})
@@ -257,7 +257,7 @@ return func() gopurs_runtime.Value {
 var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
 _ = dictEq_0
 return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func2(func(x_1 gopurs_runtime.Value, y_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0_loop, "eq"), (*[1024]gopurs_runtime.Value)(x_1.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0]).IntVal != 0 && gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_eq1List(), "eq1"), dictEq_0_loop, (*[1024]gopurs_runtime.Value)(x_1.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[1]).IntVal != 0)
+return gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), (*[1024]gopurs_runtime.Value)(x_1.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0]).IntVal != 0 && gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_eq1List(), "eq1"), dictEq_0, (*[1024]gopurs_runtime.Value)(x_1.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[1]).IntVal != 0)
 }))
 }()
 })
@@ -284,7 +284,7 @@ func Get_eqList() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
 _ = dictEq_0
-return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_eq1List(), "eq1"), dictEq_0_loop))
+return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_eq1List(), "eq1"), dictEq_0))
 }()
 })
 	})
@@ -299,7 +299,7 @@ func Get_eqNonEmptyList() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
 _ = dictEq_0
-__local_var_1_0 := gopurs_runtime.Apply(Get_eqNonEmpty(), dictEq_0_loop)
+__local_var_1_0 := gopurs_runtime.Apply(Get_eqNonEmpty(), dictEq_0)
 _ = __local_var_1_0
 return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func2(func(x_2 gopurs_runtime.Value, y_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "eq"), gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), x_2), gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), y_3))
@@ -429,8 +429,8 @@ func Get_ordList() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-return gopurs_runtime.RecordDict2("compare", "Eq0", gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_ord1List(), "compare1"), dictOrd_0_loop), gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_eq1List(), "eq1"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd_0_loop, "Eq0"), gopurs_runtime.Value{})))
+return gopurs_runtime.RecordDict2("compare", "Eq0", gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_ord1List(), "compare1"), dictOrd_0), gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_eq1List(), "eq1"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd_0, "Eq0"), gopurs_runtime.Value{})))
 }))
 }()
 })
@@ -446,7 +446,7 @@ func Get_ordNonEmptyList() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-return gopurs_runtime.Apply(pkg_Data_Lazy.Get_ordLazy(), gopurs_runtime.Apply(Get_ordNonEmpty(), dictOrd_0_loop))
+return gopurs_runtime.Apply(pkg_Data_Lazy.Get_ordLazy(), gopurs_runtime.Apply(Get_ordNonEmpty(), dictOrd_0))
 }()
 })
 	})
@@ -457,7 +457,9 @@ var cons gopurs_runtime.Value
 var once_cons sync.Once
 func Get_cons() gopurs_runtime.Value {
 	once_cons.Do(func() {
-		cons = gopurs_runtime.Func2(Call_cons)
+		cons = gopurs_runtime.Func2(func(x_0_box gopurs_runtime.Value, xs_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_cons(x_0_box, xs_1_box)
+})
 	})
 	return cons
 }
@@ -682,8 +684,8 @@ goto end_branch_1
 }
 {
 if gopurs_runtime.Bool(v_2_0.StrVal == "Cons").IntVal != 0 {
-__t1 = gopurs_runtime.Str("(fromFoldable [" + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0_loop, "show"), (*[1024]gopurs_runtime.Value)(v_2_0.UnsafePtr)[0]).StrVal + gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_foldableList(), "foldl"), gopurs_runtime.Func2(func(shown_3 gopurs_runtime.Value, x_prime_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str(shown_3.StrVal + "," + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0_loop, "show"), x_prime_4).StrVal)
+__t1 = gopurs_runtime.Str("(fromFoldable [" + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), (*[1024]gopurs_runtime.Value)(v_2_0.UnsafePtr)[0]).StrVal + gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_foldableList(), "foldl"), gopurs_runtime.Func2(func(shown_3 gopurs_runtime.Value, x_prime_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Str(shown_3.StrVal + "," + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), x_prime_4).StrVal)
 }), gopurs_runtime.Str(""), (*[1024]gopurs_runtime.Value)(v_2_0.UnsafePtr)[1]).StrVal + "])")
 goto end_branch_1
 } else {
@@ -710,12 +712,12 @@ func Get_showNonEmptyList() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictShow_0 gopurs_runtime.Value = dictShow_0_loop
 _ = dictShow_0
-__local_var_1_0 := gopurs_runtime.Apply(Get_showList(), dictShow_0_loop)
+__local_var_1_0 := gopurs_runtime.Apply(Get_showList(), dictShow_0)
 _ = __local_var_1_0
 return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_3_1 := gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), v_2)
 _ = __local_var_3_1
-return gopurs_runtime.Str("(NonEmptyList (defer \\_ -> (NonEmpty " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0_loop, "show"), (*[1024]gopurs_runtime.Value)(__local_var_3_1.UnsafePtr)[0]).StrVal + " " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_0, "show"), (*[1024]gopurs_runtime.Value)(__local_var_3_1.UnsafePtr)[1]).StrVal + ")))")
+return gopurs_runtime.Str("(NonEmptyList (defer \\_ -> (NonEmpty " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), (*[1024]gopurs_runtime.Value)(__local_var_3_1.UnsafePtr)[0]).StrVal + " " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_0, "show"), (*[1024]gopurs_runtime.Value)(__local_var_3_1.UnsafePtr)[1]).StrVal + ")))")
 }))
 }()
 })
@@ -743,7 +745,7 @@ goto end_branch_0
 }
 {
 if gopurs_runtime.Bool(v_1.StrVal == "Cons").IntVal != 0 {
-__t0 = gopurs_runtime.Str("(" + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0_loop, "show"), (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[0]).StrVal + " : " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(Get_showList(), dictShow_0_loop), "show"), (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[1]).StrVal + ")")
+__t0 = gopurs_runtime.Str("(" + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[0]).StrVal + " : " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(Get_showList(), dictShow_0), "show"), (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[1]).StrVal + ")")
 goto end_branch_0
 } else {
 
@@ -944,7 +946,9 @@ var mapWithIndex gopurs_runtime.Value
 var once_mapWithIndex sync.Once
 func Get_mapWithIndex() gopurs_runtime.Value {
 	once_mapWithIndex.Do(func() {
-		mapWithIndex = gopurs_runtime.Func2(Call_mapWithIndex)
+		mapWithIndex = gopurs_runtime.Func2(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_mapWithIndex(f_0_box, v_1_box)
+})
 	})
 	return mapWithIndex
 }
@@ -996,7 +1000,7 @@ return func() gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 return gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
-v2_2_0 := gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), v_0_loop)
+v2_2_0 := gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), v_0)
 _ = v2_2_0
 __local_var_3_1 := (*[1024]gopurs_runtime.Value)(v2_2_0.UnsafePtr)[0]
 _ = __local_var_3_1
@@ -1280,7 +1284,9 @@ var unfoldr1 gopurs_runtime.Value
 var once_unfoldr1 sync.Once
 func Get_unfoldr1() gopurs_runtime.Value {
 	once_unfoldr1.Do(func() {
-		unfoldr1 = gopurs_runtime.Func2(Call_unfoldr1)
+		unfoldr1 = gopurs_runtime.Func2(func(f_0_box gopurs_runtime.Value, b_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_unfoldr1(f_0_box, b_1_box)
+})
 	})
 	return unfoldr1
 }
@@ -1545,7 +1551,7 @@ _ = x_0
 var xs_1 gopurs_runtime.Value = xs_1_loop
 _ = xs_1
 return gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Cons", x_0_loop, xs_1_loop)
+return gopurs_runtime.Constructor2("Cons", x_0, xs_1)
 }))
 }
 
@@ -1554,9 +1560,9 @@ var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
-return gopurs_runtime.Constructor2("NonEmpty", gopurs_runtime.Apply2(f_0_loop, gopurs_runtime.Constructor0("Nothing"), (*[1024]gopurs_runtime.Value)(v_1_loop.UnsafePtr)[0]), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_functorWithIndexList(), "mapWithIndex"), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(f_0_loop, gopurs_runtime.Constructor1("Just", x_2))
-}), (*[1024]gopurs_runtime.Value)(v_1_loop.UnsafePtr)[1]))
+return gopurs_runtime.Constructor2("NonEmpty", gopurs_runtime.Apply2(f_0, gopurs_runtime.Constructor0("Nothing"), (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[0]), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_functorWithIndexList(), "mapWithIndex"), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(f_0, gopurs_runtime.Constructor1("Just", x_2))
+}), (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[1]))
 }
 
 func Call_unfoldr1(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -1564,13 +1570,13 @@ var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var b_1 gopurs_runtime.Value = b_1_loop
 _ = b_1
-__local_var_2_0 := gopurs_runtime.Apply(f_0_loop, b_1_loop)
+__local_var_2_0 := gopurs_runtime.Apply(f_0, b_1)
 _ = __local_var_2_0
 return gopurs_runtime.Constructor2("NonEmpty", (*[1024]gopurs_runtime.Value)(__local_var_2_0.UnsafePtr)[0], gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_unfoldableList(), "unfoldr"), gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
 if gopurs_runtime.Bool(v1_3.StrVal == "Just").IntVal != 0 {
-__t1 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Apply(f_0_loop, (*[1024]gopurs_runtime.Value)(v1_3.UnsafePtr)[0]))
+__t1 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Apply(f_0, (*[1024]gopurs_runtime.Value)(v1_3.UnsafePtr)[0]))
 goto end_branch_1
 } else {
 

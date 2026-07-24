@@ -26,7 +26,10 @@ func ToDateTimeImpl(ctor func(int) func(int) func(int) func(int) func(int) func(
 
 
 // --- Auto-generated FFI wrappers ---
-func Call_toDateTimeImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_toDateTimeImpl(arg0 func(int) func(int) func(int) func(int) func(int) func(int) func(int) any, arg1 float64) any {
+	return ToDateTimeImpl(arg0, arg1)
+}
+var _Gopurs_ToDateTimeImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 int) func(int) func(int) func(int) func(int) func(int) func(int) any {
 			inner_res0 := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 			return func(p1_0 int) func(int) func(int) func(int) func(int) func(int) any {
@@ -51,5 +54,4 @@ func Call_toDateTimeImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) g
 	go_arg1 := gopurs_runtime.Unbox[float64](arg1)
 	go_res := ToDateTimeImpl(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
-}
-var _Gopurs_ToDateTimeImpl = gopurs_runtime.Func2(Call_toDateTimeImpl)
+})

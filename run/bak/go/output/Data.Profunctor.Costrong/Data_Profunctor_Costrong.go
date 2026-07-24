@@ -13,7 +13,7 @@ func Get_unsecond() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0_loop, "unsecond")
+return gopurs_runtime.RecordGet(dict_0, "unsecond")
 }()
 })
 	})
@@ -28,7 +28,7 @@ func Get_unfirst() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0_loop, "unfirst")
+return gopurs_runtime.RecordGet(dict_0, "unfirst")
 }()
 })
 	})

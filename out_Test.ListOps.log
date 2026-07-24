@@ -1,6 +1,7 @@
+Compilation failed, but that's expected for now!
 === Native Go ===
-List Processing (900 elements):
-202950
+Fibonacci:
+55
 
-Execution time: 216.00 μs
+Execution time: 18.00 μs
 

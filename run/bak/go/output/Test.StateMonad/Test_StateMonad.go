@@ -17,7 +17,7 @@ func Get_State() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
-return x_0_loop
+return x_0
 }()
 })
 	})
@@ -28,7 +28,9 @@ var runState gopurs_runtime.Value
 var once_runState sync.Once
 func Get_runState() gopurs_runtime.Value {
 	once_runState.Do(func() {
-		runState = gopurs_runtime.Func2(Call_runState)
+		runState = gopurs_runtime.Func2(func(v_0_box gopurs_runtime.Value, s_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_runState(v_0_box, s_1_box)
+})
 	})
 	return runState
 }
@@ -37,7 +39,9 @@ var put gopurs_runtime.Value
 var once_put sync.Once
 func Get_put() gopurs_runtime.Value {
 	once_put.Do(func() {
-		put = gopurs_runtime.Func2(Call_put)
+		put = gopurs_runtime.Func2(func(s_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_put(s_0_box, v_1_box)
+})
 	})
 	return put
 }
@@ -46,7 +50,9 @@ var pureState gopurs_runtime.Value
 var once_pureState sync.Once
 func Get_pureState() gopurs_runtime.Value {
 	once_pureState.Do(func() {
-		pureState = gopurs_runtime.Func2(Call_pureState)
+		pureState = gopurs_runtime.Func2(func(a_0_box gopurs_runtime.Value, s_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_pureState(a_0_box, s_1_box)
+})
 	})
 	return pureState
 }
@@ -59,7 +65,7 @@ func Get_get() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var s_0 gopurs_runtime.Value = s_0_loop
 _ = s_0
-return gopurs_runtime.RecordDict2("val", "state", s_0_loop, s_0_loop)
+return gopurs_runtime.RecordDict2("val", "state", s_0, s_0)
 }()
 })
 	})
@@ -79,7 +85,9 @@ var bindState gopurs_runtime.Value
 var once_bindState sync.Once
 func Get_bindState() gopurs_runtime.Value {
 	once_bindState.Do(func() {
-		bindState = gopurs_runtime.Func3(Call_bindState)
+		bindState = gopurs_runtime.Func3(func(v_0_box gopurs_runtime.Value, g_1_box gopurs_runtime.Value, s_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_bindState(v_0_box, g_1_box, s_2_box)
+})
 	})
 	return bindState
 }
@@ -88,7 +96,9 @@ var modify gopurs_runtime.Value
 var once_modify sync.Once
 func Get_modify() gopurs_runtime.Value {
 	once_modify.Do(func() {
-		modify = gopurs_runtime.Func2(Call_modify)
+		modify = gopurs_runtime.Func2(func(f_0_box gopurs_runtime.Value, s_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_modify(f_0_box, s_1_box)
+})
 	})
 	return modify
 }
@@ -106,7 +116,7 @@ var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 var __t0 gopurs_runtime.Value
 {
-if v_0_loop.IntVal == 0 {
+if v_0.IntVal == 0 {
 __t0 = gopurs_runtime.Func(func(s_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict2("val", "state", pkg_Data_Unit.Get_unit(), s_1)
 })
@@ -117,7 +127,7 @@ goto end_branch_0
 }
 {
 __t0 = gopurs_runtime.Func(func(s_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(Get_chainModifications(), gopurs_runtime.Int(v_0_loop.IntVal - 1), gopurs_runtime.Int(s_1.IntVal + 1))
+return gopurs_runtime.Apply2(Get_chainModifications(), gopurs_runtime.Int(v_0.IntVal - 1), gopurs_runtime.Int(s_1.IntVal + 1))
 })
 }
 end_branch_0:
@@ -133,7 +143,9 @@ var runManyTimes gopurs_runtime.Value
 var once_runManyTimes sync.Once
 func Get_runManyTimes() gopurs_runtime.Value {
 	once_runManyTimes.Do(func() {
-		runManyTimes = gopurs_runtime.Func2(Call_runManyTimes)
+		runManyTimes = gopurs_runtime.Func2(func(v_0_box gopurs_runtime.Value, v1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_runManyTimes(v_0_box, v1_1_box)
+})
 	})
 	return runManyTimes
 }
@@ -160,7 +172,7 @@ var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 var s_1 gopurs_runtime.Value = s_1_loop
 _ = s_1
-return gopurs_runtime.Apply(v_0_loop, s_1_loop)
+return gopurs_runtime.Apply(v_0, s_1)
 }
 
 func Call_put(s_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -168,7 +180,7 @@ var s_0 gopurs_runtime.Value = s_0_loop
 _ = s_0
 var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
-return gopurs_runtime.RecordDict2("val", "state", pkg_Data_Unit.Get_unit(), s_0_loop)
+return gopurs_runtime.RecordDict2("val", "state", pkg_Data_Unit.Get_unit(), s_0)
 }
 
 func Call_pureState(a_0_loop gopurs_runtime.Value, s_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -176,7 +188,7 @@ var a_0 gopurs_runtime.Value = a_0_loop
 _ = a_0
 var s_1 gopurs_runtime.Value = s_1_loop
 _ = s_1
-return gopurs_runtime.RecordDict2("val", "state", a_0_loop, s_1_loop)
+return gopurs_runtime.RecordDict2("val", "state", a_0, s_1)
 }
 
 func Call_bindState(v_0_loop gopurs_runtime.Value, g_1_loop gopurs_runtime.Value, s_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -186,9 +198,9 @@ var g_1 gopurs_runtime.Value = g_1_loop
 _ = g_1
 var s_2 gopurs_runtime.Value = s_2_loop
 _ = s_2
-r1_3_0 := gopurs_runtime.Apply(v_0_loop, s_2_loop)
+r1_3_0 := gopurs_runtime.Apply(v_0, s_2)
 _ = r1_3_0
-return gopurs_runtime.Apply2(g_1_loop, gopurs_runtime.RecordGet(r1_3_0, "val"), gopurs_runtime.RecordGet(r1_3_0, "state"))
+return gopurs_runtime.Apply2(g_1, gopurs_runtime.RecordGet(r1_3_0, "val"), gopurs_runtime.RecordGet(r1_3_0, "state"))
 }
 
 func Call_modify(f_0_loop gopurs_runtime.Value, s_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -196,7 +208,7 @@ var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var s_1 gopurs_runtime.Value = s_1_loop
 _ = s_1
-return gopurs_runtime.RecordDict2("val", "state", pkg_Data_Unit.Get_unit(), gopurs_runtime.Apply(f_0_loop, s_1_loop))
+return gopurs_runtime.RecordDict2("val", "state", pkg_Data_Unit.Get_unit(), gopurs_runtime.Apply(f_0, s_1))
 }
 
 func Call_runManyTimes(v_0_loop gopurs_runtime.Value, v1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -209,15 +221,18 @@ var v1_1 gopurs_runtime.Value = v1_1_loop
 _ = v1_1
 var __t0 gopurs_runtime.Value
 {
-if v_0_loop.IntVal == 0 {
-__t0 = v1_1_loop
+if v_0.IntVal == 0 {
+__t0 = v1_1
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = Call_runManyTimes(gopurs_runtime.Int(v_0_loop.IntVal - 1), gopurs_runtime.Int(v1_1_loop.IntVal + gopurs_runtime.RecordGet(gopurs_runtime.Apply2(Get_chainModifications(), gopurs_runtime.Int(60), gopurs_runtime.Int(0)), "state").IntVal))
+v_0_loop = gopurs_runtime.Int(v_0.IntVal - 1)
+v1_1_loop = gopurs_runtime.Int(v1_1.IntVal + gopurs_runtime.RecordGet(gopurs_runtime.Apply2(Get_chainModifications(), gopurs_runtime.Int(60), gopurs_runtime.Int(0)), "state").IntVal)
+continue runManyTimes
+__t0 = gopurs_runtime.Value{}
 }
 end_branch_0:
 return __t0

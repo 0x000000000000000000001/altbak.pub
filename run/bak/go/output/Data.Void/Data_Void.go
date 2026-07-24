@@ -27,7 +27,7 @@ return gopurs_runtime.Value{}
 }
 }()
 })
-return gopurs_runtime.Apply(spin_1_0, a_0_loop)
+return gopurs_runtime.Apply(spin_1_0, a_0)
 }()
 })
 	})

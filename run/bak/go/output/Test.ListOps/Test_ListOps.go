@@ -36,7 +36,9 @@ var range_ gopurs_runtime.Value
 var once_range_ sync.Once
 func Get_range_() gopurs_runtime.Value {
 	once_range_.Do(func() {
-		range_ = gopurs_runtime.Func2(Call_range_)
+		range_ = gopurs_runtime.Func2(func(start_0_box gopurs_runtime.Value, end_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_range_(start_0_box, end_1_box)
+})
 	})
 	return range_
 }
@@ -45,7 +47,9 @@ var foldl gopurs_runtime.Value
 var once_foldl sync.Once
 func Get_foldl() gopurs_runtime.Value {
 	once_foldl.Do(func() {
-		foldl = gopurs_runtime.Func3(Call_foldl)
+		foldl = gopurs_runtime.Func3(func(v_0_box gopurs_runtime.Value, v1_1_box gopurs_runtime.Value, v2_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_foldl(v_0_box, v1_1_box, v2_2_box)
+})
 	})
 	return foldl
 }
@@ -114,7 +118,7 @@ return __t1
 }()
 })
 })
-return gopurs_runtime.Apply2(go__1_0, lst_0_loop, gopurs_runtime.Constructor0("Nil"))
+return gopurs_runtime.Apply2(go__1_0, lst_0, gopurs_runtime.Constructor0("Nil"))
 }()
 })
 	})
@@ -161,7 +165,7 @@ return __t1
 }()
 })
 })
-return Call_foldl(pkg_Data_Semiring.Get_intAdd(), gopurs_runtime.Int(0), gopurs_runtime.Apply(Get_filterEvens(), gopurs_runtime.Apply2(go__1_0, n_0_loop, gopurs_runtime.Constructor0("Nil"))))
+return Call_foldl(pkg_Data_Semiring.Get_intAdd(), gopurs_runtime.Int(0), gopurs_runtime.Apply(Get_filterEvens(), gopurs_runtime.Apply2(go__1_0, n_0, gopurs_runtime.Constructor0("Nil"))))
 }()
 })
 	})
@@ -212,7 +216,7 @@ var acc_4 gopurs_runtime.Value = acc_4_loop
 _ = acc_4
 var __t1 gopurs_runtime.Value
 {
-if curr_3.IntVal < start_0_loop.IntVal {
+if curr_3.IntVal < start_0.IntVal {
 __t1 = acc_4
 goto end_branch_1
 } else {
@@ -231,7 +235,7 @@ return __t1
 }()
 })
 })
-return gopurs_runtime.Apply2(go__2_0, end_1_loop, gopurs_runtime.Constructor0("Nil"))
+return gopurs_runtime.Apply2(go__2_0, end_1, gopurs_runtime.Constructor0("Nil"))
 }
 
 func Call_foldl(v_0_loop gopurs_runtime.Value, v1_1_loop gopurs_runtime.Value, v2_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -246,16 +250,20 @@ var v2_2 gopurs_runtime.Value = v2_2_loop
 _ = v2_2
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v2_2_loop.StrVal == "Nil").IntVal != 0 {
-__t0 = v1_1_loop
+if gopurs_runtime.Bool(v2_2.StrVal == "Nil").IntVal != 0 {
+__t0 = v1_1
 goto end_branch_0
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(v2_2_loop.StrVal == "Cons").IntVal != 0 {
-__t0 = Call_foldl(v_0_loop, gopurs_runtime.Apply2(v_0_loop, v1_1_loop, (*[1024]gopurs_runtime.Value)(v2_2_loop.UnsafePtr)[0]), (*[1024]gopurs_runtime.Value)(v2_2_loop.UnsafePtr)[1])
+if gopurs_runtime.Bool(v2_2.StrVal == "Cons").IntVal != 0 {
+v_0_loop = v_0
+v1_1_loop = gopurs_runtime.Apply2(v_0, v1_1, (*[1024]gopurs_runtime.Value)(v2_2.UnsafePtr)[0])
+v2_2_loop = (*[1024]gopurs_runtime.Value)(v2_2.UnsafePtr)[1]
+continue foldl
+__t0 = gopurs_runtime.Value{}
 goto end_branch_0
 } else {
 

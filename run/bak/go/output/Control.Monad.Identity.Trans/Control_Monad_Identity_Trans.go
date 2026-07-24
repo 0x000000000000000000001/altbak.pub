@@ -13,7 +13,7 @@ func Get_IdentityT() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
-return x_0_loop
+return x_0
 }()
 })
 	})
@@ -28,7 +28,7 @@ func Get_monadSTIdentityT() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonadST_0 gopurs_runtime.Value = dictMonadST_0_loop
 _ = dictMonadST_0
-return dictMonadST_0_loop
+return dictMonadST_0
 }()
 })
 	})
@@ -43,7 +43,7 @@ func Get_traversableIdentityT() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictTraversable_0 gopurs_runtime.Value = dictTraversable_0_loop
 _ = dictTraversable_0
-return dictTraversable_0_loop
+return dictTraversable_0
 }()
 })
 	})
@@ -58,7 +58,7 @@ func Get_runIdentityT() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-return v_0_loop
+return v_0
 }()
 })
 	})
@@ -73,7 +73,7 @@ func Get_plusIdentityT() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictPlus_0 gopurs_runtime.Value = dictPlus_0_loop
 _ = dictPlus_0
-return dictPlus_0_loop
+return dictPlus_0
 }()
 })
 	})
@@ -99,7 +99,7 @@ func Get_monadWriterIdentityT() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonadWriter_0 gopurs_runtime.Value = dictMonadWriter_0_loop
 _ = dictMonadWriter_0
-return dictMonadWriter_0_loop
+return dictMonadWriter_0
 }()
 })
 	})
@@ -125,7 +125,7 @@ func Get_monadThrowIdentityT() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonadThrow_0 gopurs_runtime.Value = dictMonadThrow_0_loop
 _ = dictMonadThrow_0
-return dictMonadThrow_0_loop
+return dictMonadThrow_0
 }()
 })
 	})
@@ -140,7 +140,7 @@ func Get_monadTellIdentityT() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonadTell_0 gopurs_runtime.Value = dictMonadTell_0_loop
 _ = dictMonadTell_0
-return dictMonadTell_0_loop
+return dictMonadTell_0
 }()
 })
 	})
@@ -155,7 +155,7 @@ func Get_monadStateIdentityT() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonadState_0 gopurs_runtime.Value = dictMonadState_0_loop
 _ = dictMonadState_0
-return dictMonadState_0_loop
+return dictMonadState_0
 }()
 })
 	})
@@ -170,7 +170,7 @@ func Get_monadRecIdentityT() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonadRec_0 gopurs_runtime.Value = dictMonadRec_0_loop
 _ = dictMonadRec_0
-return dictMonadRec_0_loop
+return dictMonadRec_0
 }()
 })
 	})
@@ -185,7 +185,7 @@ func Get_monadReaderIdentityT() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonadReader_0 gopurs_runtime.Value = dictMonadReader_0_loop
 _ = dictMonadReader_0
-return dictMonadReader_0_loop
+return dictMonadReader_0
 }()
 })
 	})
@@ -200,7 +200,7 @@ func Get_monadPlusIdentityT() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonadPlus_0 gopurs_runtime.Value = dictMonadPlus_0_loop
 _ = dictMonadPlus_0
-return dictMonadPlus_0_loop
+return dictMonadPlus_0
 }()
 })
 	})
@@ -215,7 +215,7 @@ func Get_monadIdentityT() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
-return dictMonad_0_loop
+return dictMonad_0
 }()
 })
 	})
@@ -230,7 +230,7 @@ func Get_monadErrorIdentityT() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonadError_0 gopurs_runtime.Value = dictMonadError_0_loop
 _ = dictMonadError_0
-return dictMonadError_0_loop
+return dictMonadError_0
 }()
 })
 	})
@@ -245,7 +245,7 @@ func Get_monadEffectIdentityT() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonadEffect_0 gopurs_runtime.Value = dictMonadEffect_0_loop
 _ = dictMonadEffect_0
-return dictMonadEffect_0_loop
+return dictMonadEffect_0
 }()
 })
 	})
@@ -260,7 +260,7 @@ func Get_monadContIdentityT() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonadCont_0 gopurs_runtime.Value = dictMonadCont_0_loop
 _ = dictMonadCont_0
-return dictMonadCont_0_loop
+return dictMonadCont_0
 }()
 })
 	})
@@ -275,7 +275,7 @@ func Get_monadAskIdentityT() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonadAsk_0 gopurs_runtime.Value = dictMonadAsk_0_loop
 _ = dictMonadAsk_0
-return dictMonadAsk_0_loop
+return dictMonadAsk_0
 }()
 })
 	})
@@ -286,7 +286,9 @@ var mapIdentityT gopurs_runtime.Value
 var once_mapIdentityT sync.Once
 func Get_mapIdentityT() gopurs_runtime.Value {
 	once_mapIdentityT.Do(func() {
-		mapIdentityT = gopurs_runtime.Func2(Call_mapIdentityT)
+		mapIdentityT = gopurs_runtime.Func2(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_mapIdentityT(f_0_box, v_1_box)
+})
 	})
 	return mapIdentityT
 }
@@ -299,7 +301,7 @@ func Get_functorIdentityT() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictFunctor_0 gopurs_runtime.Value = dictFunctor_0_loop
 _ = dictFunctor_0
-return dictFunctor_0_loop
+return dictFunctor_0
 }()
 })
 	})
@@ -314,7 +316,7 @@ func Get_foldableIdentityT() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictFoldable_0 gopurs_runtime.Value = dictFoldable_0_loop
 _ = dictFoldable_0
-return dictFoldable_0_loop
+return dictFoldable_0
 }()
 })
 	})
@@ -329,10 +331,10 @@ func Get_extendIdentityI() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictExtend_0 gopurs_runtime.Value = dictExtend_0_loop
 _ = dictExtend_0
-__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictExtend_0_loop, "Functor0"), gopurs_runtime.Value{})
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictExtend_0, "Functor0"), gopurs_runtime.Value{})
 _ = __local_var_1_0
 return gopurs_runtime.RecordDict2("extend", "Functor0", gopurs_runtime.Func2(func(f_2 gopurs_runtime.Value, v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictExtend_0_loop, "extend"), gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictExtend_0, "extend"), gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(f_2, x_4)
 }), v_3)
 }), gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -348,7 +350,9 @@ var eqIdentityT gopurs_runtime.Value
 var once_eqIdentityT sync.Once
 func Get_eqIdentityT() gopurs_runtime.Value {
 	once_eqIdentityT.Do(func() {
-		eqIdentityT = gopurs_runtime.Func2(Call_eqIdentityT)
+		eqIdentityT = gopurs_runtime.Func2(func(dictEq1_0_box gopurs_runtime.Value, dictEq_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_eqIdentityT(dictEq1_0_box, dictEq_1_box)
+})
 	})
 	return eqIdentityT
 }
@@ -361,10 +365,10 @@ func Get_ordIdentityT() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictOrd1_0 gopurs_runtime.Value = dictOrd1_0_loop
 _ = dictOrd1_0
-__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd1_0_loop, "Eq10"), gopurs_runtime.Value{})
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd1_0, "Eq10"), gopurs_runtime.Value{})
 _ = __local_var_1_0
 return gopurs_runtime.Func(func(dictOrd_2 gopurs_runtime.Value) gopurs_runtime.Value {
-compare11_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd1_0_loop, "compare1"), dictOrd_2)
+compare11_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd1_0, "compare1"), dictOrd_2)
 _ = compare11_3_1
 eq11_4_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_0, "eq1"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd_2, "Eq0"), gopurs_runtime.Value{}))
 _ = eq11_4_2
@@ -393,7 +397,7 @@ return func() gopurs_runtime.Value {
 var dictEq1_0 gopurs_runtime.Value = dictEq1_0_loop
 _ = dictEq1_0
 return gopurs_runtime.RecordDict1("eq1", gopurs_runtime.Func(func(dictEq_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEq1_0_loop, "eq1"), dictEq_1)
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEq1_0, "eq1"), dictEq_1)
 }))
 }()
 })
@@ -409,16 +413,16 @@ func Get_ord1IdentityT() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictOrd1_0 gopurs_runtime.Value = dictOrd1_0_loop
 _ = dictOrd1_0
-__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd1_0_loop, "Eq10"), gopurs_runtime.Value{})
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd1_0, "Eq10"), gopurs_runtime.Value{})
 _ = __local_var_1_0
-__local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd1_0_loop, "Eq10"), gopurs_runtime.Value{})
+__local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd1_0, "Eq10"), gopurs_runtime.Value{})
 _ = __local_var_2_1
 eq1IdentityT1_3_2 := gopurs_runtime.RecordDict1("eq1", gopurs_runtime.Func(func(dictEq_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_1, "eq1"), dictEq_3)
 }))
 _ = eq1IdentityT1_3_2
 return gopurs_runtime.RecordDict2("compare1", "Eq10", gopurs_runtime.Func(func(dictOrd_4 gopurs_runtime.Value) gopurs_runtime.Value {
-compare11_5_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd1_0_loop, "compare1"), dictOrd_4)
+compare11_5_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd1_0, "compare1"), dictOrd_4)
 _ = compare11_5_3
 eq11_6_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_0, "eq1"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd_4, "Eq0"), gopurs_runtime.Value{}))
 _ = eq11_6_4
@@ -448,7 +452,7 @@ func Get_comonadIdentityT() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictComonad_0 gopurs_runtime.Value = dictComonad_0_loop
 _ = dictComonad_0
-__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonad_0_loop, "Extend0"), gopurs_runtime.Value{})
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonad_0, "Extend0"), gopurs_runtime.Value{})
 _ = __local_var_1_0
 __local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_0, "Functor0"), gopurs_runtime.Value{})
 _ = __local_var_2_1
@@ -461,7 +465,7 @@ return __local_var_2_1
 }))
 _ = extendIdentityI1_3_2
 return gopurs_runtime.RecordDict2("extract", "Extend0", gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonad_0_loop, "extract"), x_4)
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonad_0, "extract"), x_4)
 }), gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return extendIdentityI1_3_2
 }))
@@ -479,7 +483,7 @@ func Get_bindIdentityT() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictBind_0 gopurs_runtime.Value = dictBind_0_loop
 _ = dictBind_0
-return dictBind_0_loop
+return dictBind_0
 }()
 })
 	})
@@ -494,7 +498,7 @@ func Get_applyIdentityT() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictApply_0 gopurs_runtime.Value = dictApply_0_loop
 _ = dictApply_0
-return dictApply_0_loop
+return dictApply_0
 }()
 })
 	})
@@ -509,7 +513,7 @@ func Get_applicativeIdentityT() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictApplicative_0 gopurs_runtime.Value = dictApplicative_0_loop
 _ = dictApplicative_0
-return dictApplicative_0_loop
+return dictApplicative_0
 }()
 })
 	})
@@ -524,7 +528,7 @@ func Get_alternativeIdentityT() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictAlternative_0 gopurs_runtime.Value = dictAlternative_0_loop
 _ = dictAlternative_0
-return dictAlternative_0_loop
+return dictAlternative_0
 }()
 })
 	})
@@ -539,7 +543,7 @@ func Get_altIdentityT() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictAlt_0 gopurs_runtime.Value = dictAlt_0_loop
 _ = dictAlt_0
-return dictAlt_0_loop
+return dictAlt_0
 }()
 })
 	})
@@ -551,7 +555,7 @@ var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
-return gopurs_runtime.Apply(f_0_loop, v_1_loop)
+return gopurs_runtime.Apply(f_0, v_1)
 }
 
 func Call_eqIdentityT(dictEq1_0_loop gopurs_runtime.Value, dictEq_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -559,7 +563,7 @@ var dictEq1_0 gopurs_runtime.Value = dictEq1_0_loop
 _ = dictEq1_0
 var dictEq_1 gopurs_runtime.Value = dictEq_1_loop
 _ = dictEq_1
-eq11_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEq1_0_loop, "eq1"), dictEq_1_loop)
+eq11_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEq1_0, "eq1"), dictEq_1)
 _ = eq11_2_0
 return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func2(func(x_3 gopurs_runtime.Value, y_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(eq11_2_0, x_3, y_4)

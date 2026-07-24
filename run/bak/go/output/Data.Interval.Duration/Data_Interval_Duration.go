@@ -81,7 +81,7 @@ func Get_Duration() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
-return x_0_loop
+return x_0
 }()
 })
 	})
@@ -527,7 +527,7 @@ func Get_hour() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-return gopurs_runtime.Constructor("Node", []gopurs_runtime.Value{gopurs_runtime.Int(1), gopurs_runtime.Int(1), gopurs_runtime.Constructor0("Hour"), v_0_loop, gopurs_runtime.Constructor0("Leaf"), gopurs_runtime.Constructor0("Leaf")})
+return gopurs_runtime.Constructor("Node", []gopurs_runtime.Value{gopurs_runtime.Int(1), gopurs_runtime.Int(1), gopurs_runtime.Constructor0("Hour"), v_0, gopurs_runtime.Constructor0("Leaf"), gopurs_runtime.Constructor0("Leaf")})
 }()
 })
 	})
@@ -542,7 +542,7 @@ func Get_millisecond() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
-return gopurs_runtime.Constructor("Node", []gopurs_runtime.Value{gopurs_runtime.Int(1), gopurs_runtime.Int(1), gopurs_runtime.Constructor0("Second"), gopurs_runtime.Float(x_0_loop.FloatVal() / 1000.0), gopurs_runtime.Constructor0("Leaf"), gopurs_runtime.Constructor0("Leaf")})
+return gopurs_runtime.Constructor("Node", []gopurs_runtime.Value{gopurs_runtime.Int(1), gopurs_runtime.Int(1), gopurs_runtime.Constructor0("Second"), gopurs_runtime.Float(x_0.FloatVal() / 1000.0), gopurs_runtime.Constructor0("Leaf"), gopurs_runtime.Constructor0("Leaf")})
 }()
 })
 	})
@@ -557,7 +557,7 @@ func Get_minute() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-return gopurs_runtime.Constructor("Node", []gopurs_runtime.Value{gopurs_runtime.Int(1), gopurs_runtime.Int(1), gopurs_runtime.Constructor0("Minute"), v_0_loop, gopurs_runtime.Constructor0("Leaf"), gopurs_runtime.Constructor0("Leaf")})
+return gopurs_runtime.Constructor("Node", []gopurs_runtime.Value{gopurs_runtime.Int(1), gopurs_runtime.Int(1), gopurs_runtime.Constructor0("Minute"), v_0, gopurs_runtime.Constructor0("Leaf"), gopurs_runtime.Constructor0("Leaf")})
 }()
 })
 	})
@@ -572,7 +572,7 @@ func Get_month() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-return gopurs_runtime.Constructor("Node", []gopurs_runtime.Value{gopurs_runtime.Int(1), gopurs_runtime.Int(1), gopurs_runtime.Constructor0("Month"), v_0_loop, gopurs_runtime.Constructor0("Leaf"), gopurs_runtime.Constructor0("Leaf")})
+return gopurs_runtime.Constructor("Node", []gopurs_runtime.Value{gopurs_runtime.Int(1), gopurs_runtime.Int(1), gopurs_runtime.Constructor0("Month"), v_0, gopurs_runtime.Constructor0("Leaf"), gopurs_runtime.Constructor0("Leaf")})
 }()
 })
 	})
@@ -587,7 +587,7 @@ func Get_second() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-return gopurs_runtime.Constructor("Node", []gopurs_runtime.Value{gopurs_runtime.Int(1), gopurs_runtime.Int(1), gopurs_runtime.Constructor0("Second"), v_0_loop, gopurs_runtime.Constructor0("Leaf"), gopurs_runtime.Constructor0("Leaf")})
+return gopurs_runtime.Constructor("Node", []gopurs_runtime.Value{gopurs_runtime.Int(1), gopurs_runtime.Int(1), gopurs_runtime.Constructor0("Second"), v_0, gopurs_runtime.Constructor0("Leaf"), gopurs_runtime.Constructor0("Leaf")})
 }()
 })
 	})
@@ -602,7 +602,7 @@ func Get_week() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-return gopurs_runtime.Constructor("Node", []gopurs_runtime.Value{gopurs_runtime.Int(1), gopurs_runtime.Int(1), gopurs_runtime.Constructor0("Week"), v_0_loop, gopurs_runtime.Constructor0("Leaf"), gopurs_runtime.Constructor0("Leaf")})
+return gopurs_runtime.Constructor("Node", []gopurs_runtime.Value{gopurs_runtime.Int(1), gopurs_runtime.Int(1), gopurs_runtime.Constructor0("Week"), v_0, gopurs_runtime.Constructor0("Leaf"), gopurs_runtime.Constructor0("Leaf")})
 }()
 })
 	})
@@ -617,7 +617,7 @@ func Get_year() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-return gopurs_runtime.Constructor("Node", []gopurs_runtime.Value{gopurs_runtime.Int(1), gopurs_runtime.Int(1), gopurs_runtime.Constructor0("Year"), v_0_loop, gopurs_runtime.Constructor0("Leaf"), gopurs_runtime.Constructor0("Leaf")})
+return gopurs_runtime.Constructor("Node", []gopurs_runtime.Value{gopurs_runtime.Int(1), gopurs_runtime.Int(1), gopurs_runtime.Constructor0("Year"), v_0, gopurs_runtime.Constructor0("Leaf"), gopurs_runtime.Constructor0("Leaf")})
 }()
 })
 	})
@@ -632,7 +632,7 @@ func Get_day() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-return gopurs_runtime.Constructor("Node", []gopurs_runtime.Value{gopurs_runtime.Int(1), gopurs_runtime.Int(1), gopurs_runtime.Constructor0("Day"), v_0_loop, gopurs_runtime.Constructor0("Leaf"), gopurs_runtime.Constructor0("Leaf")})
+return gopurs_runtime.Constructor("Node", []gopurs_runtime.Value{gopurs_runtime.Int(1), gopurs_runtime.Int(1), gopurs_runtime.Constructor0("Day"), v_0, gopurs_runtime.Constructor0("Leaf"), gopurs_runtime.Constructor0("Leaf")})
 }()
 })
 	})

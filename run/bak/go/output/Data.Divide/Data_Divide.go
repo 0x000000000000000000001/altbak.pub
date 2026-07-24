@@ -36,7 +36,7 @@ _ = dictSemigroup_0
 return gopurs_runtime.RecordDict2("divide", "Contravariant0", gopurs_runtime.Func4(func(f_1 gopurs_runtime.Value, v_2 gopurs_runtime.Value, v1_3 gopurs_runtime.Value, a_4 gopurs_runtime.Value) gopurs_runtime.Value {
 v2_5_0 := gopurs_runtime.Apply(f_1, a_4)
 _ = v2_5_0
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup_0_loop, "append"), gopurs_runtime.Apply(v_2, (*[1024]gopurs_runtime.Value)(v2_5_0.UnsafePtr)[0]), gopurs_runtime.Apply(v1_3, (*[1024]gopurs_runtime.Value)(v2_5_0.UnsafePtr)[1]))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup_0, "append"), gopurs_runtime.Apply(v_2, (*[1024]gopurs_runtime.Value)(v2_5_0.UnsafePtr)[0]), gopurs_runtime.Apply(v1_3, (*[1024]gopurs_runtime.Value)(v2_5_0.UnsafePtr)[1]))
 }), gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Op.Get_contravariantOp()
 }))
@@ -121,7 +121,7 @@ func Get_divide() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0_loop, "divide")
+return gopurs_runtime.RecordGet(dict_0, "divide")
 }()
 })
 	})
@@ -136,7 +136,7 @@ func Get_divided() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictDivide_0 gopurs_runtime.Value = dictDivide_0_loop
 _ = dictDivide_0
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDivide_0_loop, "divide"), gopurs_runtime.RecordGet(pkg_Control_Category.Get_categoryFn(), "identity"))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDivide_0, "divide"), gopurs_runtime.RecordGet(pkg_Control_Category.Get_categoryFn(), "identity"))
 }()
 })
 	})

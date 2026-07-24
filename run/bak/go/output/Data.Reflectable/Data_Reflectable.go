@@ -45,7 +45,9 @@ var reifyType gopurs_runtime.Value
 var once_reifyType sync.Once
 func Get_reifyType() gopurs_runtime.Value {
 	once_reifyType.Do(func() {
-		reifyType = gopurs_runtime.Func3(Call_reifyType)
+		reifyType = gopurs_runtime.Func3(func(_dollar__unused_0_box gopurs_runtime.Value, s_1_box gopurs_runtime.Value, f_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_reifyType(_dollar__unused_0_box, s_1_box, f_2_box)
+})
 	})
 	return reifyType
 }
@@ -58,7 +60,7 @@ func Get_reflectType() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0_loop, "reflectType")
+return gopurs_runtime.RecordGet(dict_0, "reflectType")
 }()
 })
 	})
@@ -73,9 +75,9 @@ _ = s_1
 var f_2 gopurs_runtime.Value = f_2_loop
 _ = f_2
 return gopurs_runtime.Apply3(Get_unsafeCoerce(), gopurs_runtime.Func(func(dictReflectable_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(f_2_loop, dictReflectable_3)
+return gopurs_runtime.Apply(f_2, dictReflectable_3)
 }), gopurs_runtime.RecordDict1("reflectType", gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return s_1_loop
+return s_1
 })), gopurs_runtime.Constructor0("Proxy"))
 }
 

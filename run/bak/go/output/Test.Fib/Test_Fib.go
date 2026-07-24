@@ -21,7 +21,7 @@ var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 var __t0 gopurs_runtime.Value
 {
-if v_0_loop.IntVal == 0 {
+if v_0.IntVal == 0 {
 __t0 = gopurs_runtime.Int(0)
 goto end_branch_0
 } else {
@@ -29,7 +29,7 @@ goto end_branch_0
 }
 }
 {
-if v_0_loop.IntVal == 1 {
+if v_0.IntVal == 1 {
 __t0 = gopurs_runtime.Int(1)
 goto end_branch_0
 } else {
@@ -37,7 +37,7 @@ goto end_branch_0
 }
 }
 {
-__t0 = gopurs_runtime.Int(gopurs_runtime.Apply(Get_fib(), gopurs_runtime.Int(v_0_loop.IntVal - 1)).IntVal + gopurs_runtime.Apply(Get_fib(), gopurs_runtime.Int(v_0_loop.IntVal - 2)).IntVal)
+__t0 = gopurs_runtime.Int(gopurs_runtime.Apply(Get_fib(), gopurs_runtime.Int(v_0.IntVal - 1)).IntVal + gopurs_runtime.Apply(Get_fib(), gopurs_runtime.Int(v_0.IntVal - 2)).IntVal)
 }
 end_branch_0:
 return __t0

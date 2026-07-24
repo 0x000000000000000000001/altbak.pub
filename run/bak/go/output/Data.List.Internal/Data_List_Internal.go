@@ -144,7 +144,9 @@ var fromZipper gopurs_runtime.Value
 var once_fromZipper sync.Once
 func Get_fromZipper() gopurs_runtime.Value {
 	once_fromZipper.Do(func() {
-		fromZipper = gopurs_runtime.Func2(Call_fromZipper)
+		fromZipper = gopurs_runtime.Func2(func(v_0_box gopurs_runtime.Value, v1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_fromZipper(v_0_box, v1_1_box)
+})
 	})
 	return fromZipper
 }
@@ -153,7 +155,9 @@ var insertAndLookupBy gopurs_runtime.Value
 var once_insertAndLookupBy sync.Once
 func Get_insertAndLookupBy() gopurs_runtime.Value {
 	once_insertAndLookupBy.Do(func() {
-		insertAndLookupBy = gopurs_runtime.Func3(Call_insertAndLookupBy)
+		insertAndLookupBy = gopurs_runtime.Func3(func(comp_0_box gopurs_runtime.Value, k_1_box gopurs_runtime.Value, orig_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_insertAndLookupBy(comp_0_box, k_1_box, orig_2_box)
+})
 	})
 	return insertAndLookupBy
 }
@@ -177,51 +181,66 @@ var v1_1 gopurs_runtime.Value = v1_1_loop
 _ = v1_1
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v_0_loop.StrVal == "Nil").IntVal != 0 {
-__t0 = v1_1_loop
+if gopurs_runtime.Bool(v_0.StrVal == "Nil").IntVal != 0 {
+__t0 = v1_1
 goto end_branch_0
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(v_0_loop.StrVal == "Cons").IntVal != 0 {
+if gopurs_runtime.Bool(v_0.StrVal == "Cons").IntVal != 0 {
 var __t1 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[0].StrVal == "TwoLeft").IntVal != 0 {
-__t1 = Call_fromZipper((*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[1], gopurs_runtime.Constructor3("Two", v1_1_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[0].UnsafePtr)[0], (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[0].UnsafePtr)[1]))
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "TwoLeft").IntVal != 0 {
+v_0_loop = (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[1]
+v1_1_loop = gopurs_runtime.Constructor3("Two", v1_1, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].UnsafePtr)[0], (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].UnsafePtr)[1])
+continue fromZipper
+__t1 = gopurs_runtime.Value{}
 goto end_branch_1
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[0].StrVal == "TwoRight").IntVal != 0 {
-__t1 = Call_fromZipper((*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[1], gopurs_runtime.Constructor3("Two", (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[0].UnsafePtr)[0], (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[0].UnsafePtr)[1], v1_1_loop))
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "TwoRight").IntVal != 0 {
+v_0_loop = (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[1]
+v1_1_loop = gopurs_runtime.Constructor3("Two", (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].UnsafePtr)[0], (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].UnsafePtr)[1], v1_1)
+continue fromZipper
+__t1 = gopurs_runtime.Value{}
 goto end_branch_1
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[0].StrVal == "ThreeLeft").IntVal != 0 {
-__t1 = Call_fromZipper((*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[1], gopurs_runtime.Constructor5("Three", v1_1_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[0].UnsafePtr)[0], (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[0].UnsafePtr)[1], (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[0].UnsafePtr)[2], (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[0].UnsafePtr)[3]))
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "ThreeLeft").IntVal != 0 {
+v_0_loop = (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[1]
+v1_1_loop = gopurs_runtime.Constructor5("Three", v1_1, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].UnsafePtr)[0], (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].UnsafePtr)[1], (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].UnsafePtr)[2], (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].UnsafePtr)[3])
+continue fromZipper
+__t1 = gopurs_runtime.Value{}
 goto end_branch_1
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[0].StrVal == "ThreeMiddle").IntVal != 0 {
-__t1 = Call_fromZipper((*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[1], gopurs_runtime.Constructor5("Three", (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[0].UnsafePtr)[0], (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[0].UnsafePtr)[1], v1_1_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[0].UnsafePtr)[2], (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[0].UnsafePtr)[3]))
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "ThreeMiddle").IntVal != 0 {
+v_0_loop = (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[1]
+v1_1_loop = gopurs_runtime.Constructor5("Three", (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].UnsafePtr)[0], (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].UnsafePtr)[1], v1_1, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].UnsafePtr)[2], (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].UnsafePtr)[3])
+continue fromZipper
+__t1 = gopurs_runtime.Value{}
 goto end_branch_1
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[0].StrVal == "ThreeRight").IntVal != 0 {
-__t1 = Call_fromZipper((*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[1], gopurs_runtime.Constructor5("Three", (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[0].UnsafePtr)[0], (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[0].UnsafePtr)[1], (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[0].UnsafePtr)[2], (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[0].UnsafePtr)[3], v1_1_loop))
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "ThreeRight").IntVal != 0 {
+v_0_loop = (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[1]
+v1_1_loop = gopurs_runtime.Constructor5("Three", (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].UnsafePtr)[0], (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].UnsafePtr)[1], (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].UnsafePtr)[2], (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].UnsafePtr)[3], v1_1)
+continue fromZipper
+__t1 = gopurs_runtime.Value{}
 goto end_branch_1
 } else {
 
@@ -357,7 +376,7 @@ _ = v1_6
 var __t4 gopurs_runtime.Value
 {
 if gopurs_runtime.Bool(v1_6.StrVal == "Leaf").IntVal != 0 {
-__t4 = gopurs_runtime.RecordDict2("found", "result", gopurs_runtime.Bool(false), gopurs_runtime.Apply2(up_3_0, v_5, gopurs_runtime.Constructor3("KickUp", gopurs_runtime.Constructor0("Leaf"), k_1_loop, gopurs_runtime.Constructor0("Leaf"))))
+__t4 = gopurs_runtime.RecordDict2("found", "result", gopurs_runtime.Bool(false), gopurs_runtime.Apply2(up_3_0, v_5, gopurs_runtime.Constructor3("KickUp", gopurs_runtime.Constructor0("Leaf"), k_1, gopurs_runtime.Constructor0("Leaf"))))
 goto end_branch_4
 } else {
 
@@ -365,12 +384,12 @@ goto end_branch_4
 }
 {
 if gopurs_runtime.Bool(v1_6.StrVal == "Two").IntVal != 0 {
-v2_7_5 := gopurs_runtime.Apply2(comp_0_loop, k_1_loop, (*[1024]gopurs_runtime.Value)(v1_6.UnsafePtr)[1])
+v2_7_5 := gopurs_runtime.Apply2(comp_0, k_1, (*[1024]gopurs_runtime.Value)(v1_6.UnsafePtr)[1])
 _ = v2_7_5
 var __t6 gopurs_runtime.Value
 {
 if gopurs_runtime.Bool(v2_7_5.StrVal == "EQ").IntVal != 0 {
-__t6 = gopurs_runtime.RecordDict2("found", "result", gopurs_runtime.Bool(true), orig_2_loop)
+__t6 = gopurs_runtime.RecordDict2("found", "result", gopurs_runtime.Bool(true), orig_2)
 goto end_branch_6
 } else {
 
@@ -402,24 +421,24 @@ goto end_branch_4
 }
 {
 if gopurs_runtime.Bool(v1_6.StrVal == "Three").IntVal != 0 {
-v2_7_7 := gopurs_runtime.Apply2(comp_0_loop, k_1_loop, (*[1024]gopurs_runtime.Value)(v1_6.UnsafePtr)[1])
+v2_7_7 := gopurs_runtime.Apply2(comp_0, k_1, (*[1024]gopurs_runtime.Value)(v1_6.UnsafePtr)[1])
 _ = v2_7_7
 var __t10 gopurs_runtime.Value
 {
 if gopurs_runtime.Bool(v2_7_7.StrVal == "EQ").IntVal != 0 {
-__t10 = gopurs_runtime.RecordDict2("found", "result", gopurs_runtime.Bool(true), orig_2_loop)
+__t10 = gopurs_runtime.RecordDict2("found", "result", gopurs_runtime.Bool(true), orig_2)
 goto end_branch_10
 } else {
 
 }
 }
 {
-v3_8_8 := gopurs_runtime.Apply2(comp_0_loop, k_1_loop, (*[1024]gopurs_runtime.Value)(v1_6.UnsafePtr)[3])
+v3_8_8 := gopurs_runtime.Apply2(comp_0, k_1, (*[1024]gopurs_runtime.Value)(v1_6.UnsafePtr)[3])
 _ = v3_8_8
 var __t9 gopurs_runtime.Value
 {
 if gopurs_runtime.Bool(v3_8_8.StrVal == "EQ").IntVal != 0 {
-__t9 = gopurs_runtime.RecordDict2("found", "result", gopurs_runtime.Bool(true), orig_2_loop)
+__t9 = gopurs_runtime.RecordDict2("found", "result", gopurs_runtime.Bool(true), orig_2)
 goto end_branch_9
 } else {
 
@@ -472,7 +491,7 @@ return __t4
 }()
 })
 })
-return gopurs_runtime.Apply2(down_4_3, gopurs_runtime.Constructor0("Nil"), orig_2_loop)
+return gopurs_runtime.Apply2(down_4_3, gopurs_runtime.Constructor0("Nil"), orig_2)
 }
 
 

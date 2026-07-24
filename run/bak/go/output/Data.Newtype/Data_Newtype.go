@@ -40,7 +40,9 @@ var underF2 gopurs_runtime.Value
 var once_underF2 sync.Once
 func Get_underF2() gopurs_runtime.Value {
 	once_underF2.Do(func() {
-		underF2 = gopurs_runtime.Func5(Call_underF2)
+		underF2 = gopurs_runtime.Func5(func(_dollar__unused_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, _dollar__unused_2_box gopurs_runtime.Value, _dollar__unused_3_box gopurs_runtime.Value, v_4_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_underF2(_dollar__unused_0_box, _dollar__unused_1_box, _dollar__unused_2_box, _dollar__unused_3_box, v_4_box)
+})
 	})
 	return underF2
 }
@@ -49,7 +51,9 @@ var underF gopurs_runtime.Value
 var once_underF sync.Once
 func Get_underF() gopurs_runtime.Value {
 	once_underF.Do(func() {
-		underF = gopurs_runtime.Func5(Call_underF)
+		underF = gopurs_runtime.Func5(func(_dollar__unused_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, _dollar__unused_2_box gopurs_runtime.Value, _dollar__unused_3_box gopurs_runtime.Value, v_4_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_underF(_dollar__unused_0_box, _dollar__unused_1_box, _dollar__unused_2_box, _dollar__unused_3_box, v_4_box)
+})
 	})
 	return underF
 }
@@ -58,7 +62,9 @@ var under2 gopurs_runtime.Value
 var once_under2 sync.Once
 func Get_under2() gopurs_runtime.Value {
 	once_under2.Do(func() {
-		under2 = gopurs_runtime.Func3(Call_under2)
+		under2 = gopurs_runtime.Func3(func(_dollar__unused_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, v_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_under2(_dollar__unused_0_box, _dollar__unused_1_box, v_2_box)
+})
 	})
 	return under2
 }
@@ -67,7 +73,9 @@ var under gopurs_runtime.Value
 var once_under sync.Once
 func Get_under() gopurs_runtime.Value {
 	once_under.Do(func() {
-		under = gopurs_runtime.Func3(Call_under)
+		under = gopurs_runtime.Func3(func(_dollar__unused_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, v_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_under(_dollar__unused_0_box, _dollar__unused_1_box, v_2_box)
+})
 	})
 	return under
 }
@@ -76,7 +84,9 @@ var un gopurs_runtime.Value
 var once_un sync.Once
 func Get_un() gopurs_runtime.Value {
 	once_un.Do(func() {
-		un = gopurs_runtime.Func2(Call_un)
+		un = gopurs_runtime.Func2(func(_dollar__unused_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_un(_dollar__unused_0_box, v_1_box)
+})
 	})
 	return un
 }
@@ -85,7 +95,9 @@ var traverse gopurs_runtime.Value
 var once_traverse sync.Once
 func Get_traverse() gopurs_runtime.Value {
 	once_traverse.Do(func() {
-		traverse = gopurs_runtime.Func3(Call_traverse)
+		traverse = gopurs_runtime.Func3(func(_dollar__unused_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, v_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_traverse(_dollar__unused_0_box, _dollar__unused_1_box, v_2_box)
+})
 	})
 	return traverse
 }
@@ -94,7 +106,9 @@ var overF2 gopurs_runtime.Value
 var once_overF2 sync.Once
 func Get_overF2() gopurs_runtime.Value {
 	once_overF2.Do(func() {
-		overF2 = gopurs_runtime.Func5(Call_overF2)
+		overF2 = gopurs_runtime.Func5(func(_dollar__unused_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, _dollar__unused_2_box gopurs_runtime.Value, _dollar__unused_3_box gopurs_runtime.Value, v_4_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_overF2(_dollar__unused_0_box, _dollar__unused_1_box, _dollar__unused_2_box, _dollar__unused_3_box, v_4_box)
+})
 	})
 	return overF2
 }
@@ -103,7 +117,9 @@ var overF gopurs_runtime.Value
 var once_overF sync.Once
 func Get_overF() gopurs_runtime.Value {
 	once_overF.Do(func() {
-		overF = gopurs_runtime.Func5(Call_overF)
+		overF = gopurs_runtime.Func5(func(_dollar__unused_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, _dollar__unused_2_box gopurs_runtime.Value, _dollar__unused_3_box gopurs_runtime.Value, v_4_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_overF(_dollar__unused_0_box, _dollar__unused_1_box, _dollar__unused_2_box, _dollar__unused_3_box, v_4_box)
+})
 	})
 	return overF
 }
@@ -112,7 +128,9 @@ var over2 gopurs_runtime.Value
 var once_over2 sync.Once
 func Get_over2() gopurs_runtime.Value {
 	once_over2.Do(func() {
-		over2 = gopurs_runtime.Func3(Call_over2)
+		over2 = gopurs_runtime.Func3(func(_dollar__unused_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, v_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_over2(_dollar__unused_0_box, _dollar__unused_1_box, v_2_box)
+})
 	})
 	return over2
 }
@@ -121,7 +139,9 @@ var over gopurs_runtime.Value
 var once_over sync.Once
 func Get_over() gopurs_runtime.Value {
 	once_over.Do(func() {
-		over = gopurs_runtime.Func3(Call_over)
+		over = gopurs_runtime.Func3(func(_dollar__unused_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, v_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_over(_dollar__unused_0_box, _dollar__unused_1_box, v_2_box)
+})
 	})
 	return over
 }
@@ -218,7 +238,9 @@ var modify gopurs_runtime.Value
 var once_modify sync.Once
 func Get_modify() gopurs_runtime.Value {
 	once_modify.Do(func() {
-		modify = gopurs_runtime.Func3(Call_modify)
+		modify = gopurs_runtime.Func3(func(_dollar__unused_0_box gopurs_runtime.Value, fn_1_box gopurs_runtime.Value, t_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_modify(_dollar__unused_0_box, fn_1_box, t_2_box)
+})
 	})
 	return modify
 }
@@ -227,7 +249,9 @@ var collect gopurs_runtime.Value
 var once_collect sync.Once
 func Get_collect() gopurs_runtime.Value {
 	once_collect.Do(func() {
-		collect = gopurs_runtime.Func3(Call_collect)
+		collect = gopurs_runtime.Func3(func(_dollar__unused_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, v_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_collect(_dollar__unused_0_box, _dollar__unused_1_box, v_2_box)
+})
 	})
 	return collect
 }
@@ -236,7 +260,9 @@ var alaF gopurs_runtime.Value
 var once_alaF sync.Once
 func Get_alaF() gopurs_runtime.Value {
 	once_alaF.Do(func() {
-		alaF = gopurs_runtime.Func5(Call_alaF)
+		alaF = gopurs_runtime.Func5(func(_dollar__unused_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, _dollar__unused_2_box gopurs_runtime.Value, _dollar__unused_3_box gopurs_runtime.Value, v_4_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_alaF(_dollar__unused_0_box, _dollar__unused_1_box, _dollar__unused_2_box, _dollar__unused_3_box, v_4_box)
+})
 	})
 	return alaF
 }
@@ -245,7 +271,9 @@ var ala gopurs_runtime.Value
 var once_ala sync.Once
 func Get_ala() gopurs_runtime.Value {
 	once_ala.Do(func() {
-		ala = gopurs_runtime.Func5(Call_ala)
+		ala = gopurs_runtime.Func5(func(_dollar__unused_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, _dollar__unused_2_box gopurs_runtime.Value, v_3_box gopurs_runtime.Value, f_4_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_ala(_dollar__unused_0_box, _dollar__unused_1_box, _dollar__unused_2_box, v_3_box, f_4_box)
+})
 	})
 	return ala
 }
@@ -371,7 +399,7 @@ var fn_1 gopurs_runtime.Value = fn_1_loop
 _ = fn_1
 var t_2 gopurs_runtime.Value = t_2_loop
 _ = t_2
-return gopurs_runtime.Apply(fn_1_loop, t_2_loop)
+return gopurs_runtime.Apply(fn_1, t_2)
 }
 
 func Call_collect(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -409,7 +437,7 @@ var v_3 gopurs_runtime.Value = v_3_loop
 _ = v_3
 var f_4 gopurs_runtime.Value = f_4_loop
 _ = f_4
-return gopurs_runtime.Apply(f_4_loop, pkg_Unsafe_Coerce.Get_unsafeCoerce())
+return gopurs_runtime.Apply(f_4, pkg_Unsafe_Coerce.Get_unsafeCoerce())
 }
 
 

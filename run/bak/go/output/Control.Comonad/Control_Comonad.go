@@ -13,7 +13,7 @@ func Get_extract() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0_loop, "extract")
+return gopurs_runtime.RecordGet(dict_0, "extract")
 }()
 })
 	})

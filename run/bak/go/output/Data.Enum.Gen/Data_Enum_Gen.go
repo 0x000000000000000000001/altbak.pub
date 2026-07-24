@@ -27,7 +27,7 @@ func Get_genBoundedEnum() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonadGen_0 gopurs_runtime.Value = dictMonadGen_0_loop
 _ = dictMonadGen_0
-elements_1_0 := gopurs_runtime.Apply2(pkg_Control_Monad_Gen.Get_elements(), dictMonadGen_0_loop, Get_foldable1NonEmpty())
+elements_1_0 := gopurs_runtime.Apply2(pkg_Control_Monad_Gen.Get_elements(), dictMonadGen_0, Get_foldable1NonEmpty())
 _ = elements_1_0
 return gopurs_runtime.Func(func(dictBoundedEnum_2 gopurs_runtime.Value) gopurs_runtime.Value {
 Enum1_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedEnum_2, "Enum1"), gopurs_runtime.Value{})
@@ -47,7 +47,7 @@ goto end_branch_4
 }
 {
 if gopurs_runtime.Bool(v_5_3.StrVal == "Nothing").IntVal != 0 {
-__t4 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadGen_0_loop, "Monad0"), gopurs_runtime.Value{}), "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.RecordGet(Bounded0_4_2, "bottom"))
+__t4 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadGen_0, "Monad0"), gopurs_runtime.Value{}), "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.RecordGet(Bounded0_4_2, "bottom"))
 goto end_branch_4
 } else {
 

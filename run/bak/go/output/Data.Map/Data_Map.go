@@ -17,7 +17,7 @@ func Get_SemigroupMap() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
-return x_0_loop
+return x_0
 }()
 })
 	})
@@ -46,7 +46,9 @@ var showSemigroupMap gopurs_runtime.Value
 var once_showSemigroupMap sync.Once
 func Get_showSemigroupMap() gopurs_runtime.Value {
 	once_showSemigroupMap.Do(func() {
-		showSemigroupMap = gopurs_runtime.Func2(Call_showSemigroupMap)
+		showSemigroupMap = gopurs_runtime.Func2(func(dictShow_0_box gopurs_runtime.Value, dictShow1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_showSemigroupMap(dictShow_0_box, dictShow1_1_box)
+})
 	})
 	return showSemigroupMap
 }
@@ -59,7 +61,7 @@ func Get_semigroupSemigroupMap() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-compare_1_0 := gopurs_runtime.RecordGet(dictOrd_0_loop, "compare")
+compare_1_0 := gopurs_runtime.RecordGet(dictOrd_0, "compare")
 _ = compare_1_0
 return gopurs_runtime.Func(func(dictSemigroup_2 gopurs_runtime.Value) gopurs_runtime.Value {
 append_3_1 := gopurs_runtime.RecordGet(dictSemigroup_2, "append")
@@ -82,7 +84,7 @@ func Get_plusSemigroupMap() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-return gopurs_runtime.Apply(pkg_Data_Map_Internal.Get_plusMap(), dictOrd_0_loop)
+return gopurs_runtime.Apply(pkg_Data_Map_Internal.Get_plusMap(), dictOrd_0)
 }()
 })
 	})
@@ -97,7 +99,7 @@ func Get_ordSemigroupMap() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-return gopurs_runtime.Apply(pkg_Data_Map_Internal.Get_ordMap(), dictOrd_0_loop)
+return gopurs_runtime.Apply(pkg_Data_Map_Internal.Get_ordMap(), dictOrd_0)
 }()
 })
 	})
@@ -112,7 +114,7 @@ func Get_ord1SemigroupMap() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-return gopurs_runtime.Apply(pkg_Data_Map_Internal.Get_ord1Map(), dictOrd_0_loop)
+return gopurs_runtime.Apply(pkg_Data_Map_Internal.Get_ord1Map(), dictOrd_0)
 }()
 })
 	})
@@ -138,7 +140,7 @@ func Get_monoidSemigroupMap() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-semigroupSemigroupMap1_1_0 := gopurs_runtime.Apply(Get_semigroupSemigroupMap(), dictOrd_0_loop)
+semigroupSemigroupMap1_1_0 := gopurs_runtime.Apply(Get_semigroupSemigroupMap(), dictOrd_0)
 _ = semigroupSemigroupMap1_1_0
 return gopurs_runtime.Func(func(dictSemigroup_2 gopurs_runtime.Value) gopurs_runtime.Value {
 semigroupSemigroupMap2_3_1 := gopurs_runtime.Apply(semigroupSemigroupMap1_1_0, dictSemigroup_2)
@@ -232,7 +234,9 @@ var eqSemigroupMap gopurs_runtime.Value
 var once_eqSemigroupMap sync.Once
 func Get_eqSemigroupMap() gopurs_runtime.Value {
 	once_eqSemigroupMap.Do(func() {
-		eqSemigroupMap = gopurs_runtime.Func2(Call_eqSemigroupMap)
+		eqSemigroupMap = gopurs_runtime.Func2(func(dictEq_0_box gopurs_runtime.Value, dictEq1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_eqSemigroupMap(dictEq_0_box, dictEq1_1_box)
+})
 	})
 	return eqSemigroupMap
 }
@@ -246,7 +250,7 @@ return func() gopurs_runtime.Value {
 var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
 _ = dictEq_0
 return gopurs_runtime.RecordDict1("eq1", gopurs_runtime.Func(func(dictEq1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(gopurs_runtime.Apply2(pkg_Data_Map_Internal.Get_eqMap(), dictEq_0_loop, dictEq1_1), "eq")
+return gopurs_runtime.RecordGet(gopurs_runtime.Apply2(pkg_Data_Map_Internal.Get_eqMap(), dictEq_0, dictEq1_1), "eq")
 }))
 }()
 })
@@ -262,7 +266,7 @@ func Get_bindSemigroupMap() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-return gopurs_runtime.Apply(pkg_Data_Map_Internal.Get_bindMap(), dictOrd_0_loop)
+return gopurs_runtime.Apply(pkg_Data_Map_Internal.Get_bindMap(), dictOrd_0)
 }()
 })
 	})
@@ -277,7 +281,7 @@ func Get_applySemigroupMap() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-compare_1_0 := gopurs_runtime.RecordGet(dictOrd_0_loop, "compare")
+compare_1_0 := gopurs_runtime.RecordGet(dictOrd_0, "compare")
 _ = compare_1_0
 return gopurs_runtime.RecordDict2("apply", "Functor0", gopurs_runtime.Func2(func(m1_2 gopurs_runtime.Value, m2_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.UncurriedApp4(pkg_Data_Map_Internal.Get_unsafeIntersectionWith(), compare_1_0, gopurs_runtime.RecordGet(pkg_Control_Category.Get_categoryFn(), "identity"), m1_2, m2_3)
@@ -298,7 +302,7 @@ func Get_altSemigroupMap() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-compare_1_0 := gopurs_runtime.RecordGet(dictOrd_0_loop, "compare")
+compare_1_0 := gopurs_runtime.RecordGet(dictOrd_0, "compare")
 _ = compare_1_0
 return gopurs_runtime.RecordDict2("alt", "Functor0", gopurs_runtime.Func2(func(m1_2 gopurs_runtime.Value, m2_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.UncurriedApp4(pkg_Data_Map_Internal.Get_unsafeUnionWith(), compare_1_0, pkg_Data_Function.Get_const_(), m1_2, m2_3)
@@ -316,7 +320,7 @@ var dictShow_0 gopurs_runtime.Value = dictShow_0_loop
 _ = dictShow_0
 var dictShow1_1 gopurs_runtime.Value = dictShow1_1_loop
 _ = dictShow1_1
-return gopurs_runtime.Apply2(pkg_Data_Map_Internal.Get_showMap(), dictShow_0_loop, dictShow1_1_loop)
+return gopurs_runtime.Apply2(pkg_Data_Map_Internal.Get_showMap(), dictShow_0, dictShow1_1)
 }
 
 func Call_eqSemigroupMap(dictEq_0_loop gopurs_runtime.Value, dictEq1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -324,7 +328,7 @@ var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
 _ = dictEq_0
 var dictEq1_1 gopurs_runtime.Value = dictEq1_1_loop
 _ = dictEq1_1
-return gopurs_runtime.Apply2(pkg_Data_Map_Internal.Get_eqMap(), dictEq_0_loop, dictEq1_1_loop)
+return gopurs_runtime.Apply2(pkg_Data_Map_Internal.Get_eqMap(), dictEq_0, dictEq1_1)
 }
 
 

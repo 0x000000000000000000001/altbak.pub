@@ -14,7 +14,7 @@ func Get_recip() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0_loop, "recip")
+return gopurs_runtime.RecordGet(dict_0, "recip")
 }()
 })
 	})
@@ -25,7 +25,9 @@ var rightDiv gopurs_runtime.Value
 var once_rightDiv sync.Once
 func Get_rightDiv() gopurs_runtime.Value {
 	once_rightDiv.Do(func() {
-		rightDiv = gopurs_runtime.Func3(Call_rightDiv)
+		rightDiv = gopurs_runtime.Func3(func(dictDivisionRing_0_box gopurs_runtime.Value, a_1_box gopurs_runtime.Value, b_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_rightDiv(dictDivisionRing_0_box, a_1_box, b_2_box)
+})
 	})
 	return rightDiv
 }
@@ -34,7 +36,9 @@ var leftDiv gopurs_runtime.Value
 var once_leftDiv sync.Once
 func Get_leftDiv() gopurs_runtime.Value {
 	once_leftDiv.Do(func() {
-		leftDiv = gopurs_runtime.Func3(Call_leftDiv)
+		leftDiv = gopurs_runtime.Func3(func(dictDivisionRing_0_box gopurs_runtime.Value, a_1_box gopurs_runtime.Value, b_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_leftDiv(dictDivisionRing_0_box, a_1_box, b_2_box)
+})
 	})
 	return leftDiv
 }
@@ -59,7 +63,7 @@ var a_1 gopurs_runtime.Value = a_1_loop
 _ = a_1
 var b_2 gopurs_runtime.Value = b_2_loop
 _ = b_2
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDivisionRing_0_loop, "Ring0"), gopurs_runtime.Value{}), "Semiring0"), gopurs_runtime.Value{}), "mul"), a_1_loop, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDivisionRing_0_loop, "recip"), b_2_loop))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDivisionRing_0, "Ring0"), gopurs_runtime.Value{}), "Semiring0"), gopurs_runtime.Value{}), "mul"), a_1, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDivisionRing_0, "recip"), b_2))
 }
 
 func Call_leftDiv(dictDivisionRing_0_loop gopurs_runtime.Value, a_1_loop gopurs_runtime.Value, b_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -69,7 +73,7 @@ var a_1 gopurs_runtime.Value = a_1_loop
 _ = a_1
 var b_2 gopurs_runtime.Value = b_2_loop
 _ = b_2
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDivisionRing_0_loop, "Ring0"), gopurs_runtime.Value{}), "Semiring0"), gopurs_runtime.Value{}), "mul"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDivisionRing_0_loop, "recip"), b_2_loop), a_1_loop)
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDivisionRing_0, "Ring0"), gopurs_runtime.Value{}), "Semiring0"), gopurs_runtime.Value{}), "mul"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDivisionRing_0, "recip"), b_2), a_1)
 }
 
 

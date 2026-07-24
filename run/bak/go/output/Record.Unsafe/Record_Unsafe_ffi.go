@@ -29,25 +29,32 @@ func UnsafeDelete(label string, rec map[string]any) map[string]any {
 
 
 // --- Auto-generated FFI wrappers ---
-func Call_unsafeHas(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_unsafeHas(arg0 string, arg1 map[string]any) bool {
+	return UnsafeHas(arg0, arg1)
+}
+var _Gopurs_UnsafeHas = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[string](arg0)
 	arg1_map := gopurs_runtime.RecordToMap(arg1)
 	go_arg1 := make(map[string]any)
 	for k, v := range arg1_map { go_arg1[k] = v }
 	go_res := UnsafeHas(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
+})
+func Call_unsafeGet(arg0 string, arg1 map[string]any) any {
+	return UnsafeGet(arg0, arg1)
 }
-var _Gopurs_UnsafeHas = gopurs_runtime.Func2(Call_unsafeHas)
-func Call_unsafeGet(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_UnsafeGet = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[string](arg0)
 	arg1_map := gopurs_runtime.RecordToMap(arg1)
 	go_arg1 := make(map[string]any)
 	for k, v := range arg1_map { go_arg1[k] = v }
 	go_res := UnsafeGet(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
+})
+func Call_unsafeSet(arg0 string, arg1 any, arg2 map[string]any) map[string]any {
+	return UnsafeSet(arg0, arg1, arg2)
 }
-var _Gopurs_UnsafeGet = gopurs_runtime.Func2(Call_unsafeGet)
-func Call_unsafeSet(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_UnsafeSet = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[string](arg0)
 	go_arg1 := arg1
 	arg2_map := gopurs_runtime.RecordToMap(arg2)
@@ -59,9 +66,11 @@ func Call_unsafeSet(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 g
 			for k, v := range go_res { res_map[k] = gopurs_runtime.Box(v) }
 			return gopurs_runtime.Record(res_map)
 		}()
+})
+func Call_unsafeDelete(arg0 string, arg1 map[string]any) map[string]any {
+	return UnsafeDelete(arg0, arg1)
 }
-var _Gopurs_UnsafeSet = gopurs_runtime.Func3(Call_unsafeSet)
-func Call_unsafeDelete(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_UnsafeDelete = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[string](arg0)
 	arg1_map := gopurs_runtime.RecordToMap(arg1)
 	go_arg1 := make(map[string]any)
@@ -72,5 +81,4 @@ func Call_unsafeDelete(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gop
 			for k, v := range go_res { res_map[k] = gopurs_runtime.Box(v) }
 			return gopurs_runtime.Record(res_map)
 		}()
-}
-var _Gopurs_UnsafeDelete = gopurs_runtime.Func2(Call_unsafeDelete)
+})

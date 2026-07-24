@@ -31,7 +31,7 @@ func Get_Cardinality() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
-return x_0_loop
+return x_0
 }()
 })
 	})
@@ -46,7 +46,7 @@ func Get_toEnum() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0_loop, "toEnum")
+return gopurs_runtime.RecordGet(dict_0, "toEnum")
 }()
 })
 	})
@@ -61,7 +61,7 @@ func Get_succ() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0_loop, "succ")
+return gopurs_runtime.RecordGet(dict_0, "succ")
 }()
 })
 	})
@@ -72,7 +72,9 @@ var upFromIncluding gopurs_runtime.Value
 var once_upFromIncluding sync.Once
 func Get_upFromIncluding() gopurs_runtime.Value {
 	once_upFromIncluding.Do(func() {
-		upFromIncluding = gopurs_runtime.Func2(Call_upFromIncluding)
+		upFromIncluding = gopurs_runtime.Func2(func(dictEnum_0_box gopurs_runtime.Value, dictUnfoldable1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_upFromIncluding(dictEnum_0_box, dictUnfoldable1_1_box)
+})
 	})
 	return upFromIncluding
 }
@@ -96,7 +98,7 @@ func Get_pred() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0_loop, "pred")
+return gopurs_runtime.RecordGet(dict_0, "pred")
 }()
 })
 	})
@@ -131,7 +133,7 @@ func Get_fromEnum() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0_loop, "fromEnum")
+return gopurs_runtime.RecordGet(dict_0, "fromEnum")
 }()
 })
 	})
@@ -146,10 +148,10 @@ func Get_toEnumWithDefaults() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictBoundedEnum_0 gopurs_runtime.Value = dictBoundedEnum_0_loop
 _ = dictBoundedEnum_0
-bottom2_1_0 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedEnum_0_loop, "Bounded0"), gopurs_runtime.Value{}), "bottom")
+bottom2_1_0 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedEnum_0, "Bounded0"), gopurs_runtime.Value{}), "bottom")
 _ = bottom2_1_0
 return gopurs_runtime.Func3(func(low_2 gopurs_runtime.Value, high_3 gopurs_runtime.Value, x_4 gopurs_runtime.Value) gopurs_runtime.Value {
-v_5_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedEnum_0_loop, "toEnum"), x_4)
+v_5_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedEnum_0, "toEnum"), x_4)
 _ = v_5_1
 var __t2 gopurs_runtime.Value
 {
@@ -164,7 +166,7 @@ goto end_branch_2
 if gopurs_runtime.Bool(v_5_1.StrVal == "Nothing").IntVal != 0 {
 var __t3 gopurs_runtime.Value
 {
-if x_4.IntVal < gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedEnum_0_loop, "fromEnum"), bottom2_1_0).IntVal {
+if x_4.IntVal < gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedEnum_0, "fromEnum"), bottom2_1_0).IntVal {
 __t3 = low_2
 goto end_branch_3
 } else {
@@ -225,7 +227,7 @@ func Get_enumTuple() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictEnum_0 gopurs_runtime.Value = dictEnum_0_loop
 _ = dictEnum_0
-__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEnum_0_loop, "Ord0"), gopurs_runtime.Value{})
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEnum_0, "Ord0"), gopurs_runtime.Value{})
 _ = __local_var_1_0
 __local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_0, "Eq0"), gopurs_runtime.Value{})
 _ = __local_var_2_1
@@ -276,7 +278,7 @@ return eqTuple2_10_8
 }))
 _ = ordTuple1_11_9
 return gopurs_runtime.RecordDict3("succ", "pred", "Ord0", gopurs_runtime.Func(func(v_12 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_13_12 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEnum_0_loop, "succ"), (*[1024]gopurs_runtime.Value)(v_12.UnsafePtr)[0])
+__local_var_13_12 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEnum_0, "succ"), (*[1024]gopurs_runtime.Value)(v_12.UnsafePtr)[0])
 _ = __local_var_13_12
 var __t14 gopurs_runtime.Value
 {
@@ -320,7 +322,7 @@ __t17 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 end_branch_17:
 return __t17
 }), gopurs_runtime.Func(func(v_12 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_13_18 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEnum_0_loop, "pred"), (*[1024]gopurs_runtime.Value)(v_12.UnsafePtr)[0])
+__local_var_13_18 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEnum_0, "pred"), (*[1024]gopurs_runtime.Value)(v_12.UnsafePtr)[0])
 _ = __local_var_13_18
 var __t20 gopurs_runtime.Value
 {
@@ -454,9 +456,9 @@ func Get_enumMaybe() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictBoundedEnum_0 gopurs_runtime.Value = dictBoundedEnum_0_loop
 _ = dictBoundedEnum_0
-bottom2_1_0 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedEnum_0_loop, "Bounded0"), gopurs_runtime.Value{}), "bottom")
+bottom2_1_0 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedEnum_0, "Bounded0"), gopurs_runtime.Value{}), "bottom")
 _ = bottom2_1_0
-Enum1_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedEnum_0_loop, "Enum1"), gopurs_runtime.Value{})
+Enum1_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedEnum_0, "Enum1"), gopurs_runtime.Value{})
 _ = Enum1_2_1
 __local_var_3_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Enum1_2_1, "Ord0"), gopurs_runtime.Value{})
 _ = __local_var_3_2
@@ -646,7 +648,7 @@ func Get_enumFromTo() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictEnum_0 gopurs_runtime.Value = dictEnum_0_loop
 _ = dictEnum_0
-Ord0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEnum_0_loop, "Ord0"), gopurs_runtime.Value{})
+Ord0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEnum_0, "Ord0"), gopurs_runtime.Value{})
 _ = Ord0_1_0
 return gopurs_runtime.Func3(func(dictUnfoldable1_2 gopurs_runtime.Value, v_3 gopurs_runtime.Value, v1_4 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t4 gopurs_runtime.Value
@@ -676,7 +678,7 @@ goto end_branch_4
 {
 if gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Ord0_1_0, "compare"), v_3, v1_4).StrVal == "LT").IntVal != 0 {
 __t4 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictUnfoldable1_2, "unfoldr1"), gopurs_runtime.Func(func(a_5 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_6_6 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEnum_0_loop, "succ"), a_5)
+__local_var_6_6 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEnum_0, "succ"), a_5)
 _ = __local_var_6_6
 var __t7 gopurs_runtime.Value
 {
@@ -721,7 +723,7 @@ goto end_branch_4
 }
 {
 __t4 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictUnfoldable1_2, "unfoldr1"), gopurs_runtime.Func(func(a_5 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_6_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEnum_0_loop, "pred"), a_5)
+__local_var_6_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEnum_0, "pred"), a_5)
 _ = __local_var_6_1
 var __t2 gopurs_runtime.Value
 {
@@ -773,7 +775,9 @@ var enumFromThenTo gopurs_runtime.Value
 var once_enumFromThenTo sync.Once
 func Get_enumFromThenTo() gopurs_runtime.Value {
 	once_enumFromThenTo.Do(func() {
-		enumFromThenTo = gopurs_runtime.Func6(Call_enumFromThenTo)
+		enumFromThenTo = gopurs_runtime.Func6(func(dictUnfoldable_0_box gopurs_runtime.Value, dictFunctor_1_box gopurs_runtime.Value, dictBoundedEnum_2_box gopurs_runtime.Value, a_3_box gopurs_runtime.Value, b_4_box gopurs_runtime.Value, c_5_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_enumFromThenTo(dictUnfoldable_0_box, dictFunctor_1_box, dictBoundedEnum_2_box, a_3_box, b_4_box, c_5_box)
+})
 	})
 	return enumFromThenTo
 }
@@ -786,9 +790,9 @@ func Get_enumEither() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictBoundedEnum_0 gopurs_runtime.Value = dictBoundedEnum_0_loop
 _ = dictBoundedEnum_0
-Enum1_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedEnum_0_loop, "Enum1"), gopurs_runtime.Value{})
+Enum1_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedEnum_0, "Enum1"), gopurs_runtime.Value{})
 _ = Enum1_1_0
-top2_2_1 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedEnum_0_loop, "Bounded0"), gopurs_runtime.Value{}), "top")
+top2_2_1 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedEnum_0, "Bounded0"), gopurs_runtime.Value{}), "top")
 _ = top2_2_1
 ordEither_3_2 := gopurs_runtime.Apply(pkg_Data_Either.Get_ordEither(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(Enum1_1_0, "Ord0"), gopurs_runtime.Value{}))
 _ = ordEither_3_2
@@ -992,7 +996,9 @@ var downFromIncluding gopurs_runtime.Value
 var once_downFromIncluding sync.Once
 func Get_downFromIncluding() gopurs_runtime.Value {
 	once_downFromIncluding.Do(func() {
-		downFromIncluding = gopurs_runtime.Func2(Call_downFromIncluding)
+		downFromIncluding = gopurs_runtime.Func2(func(dictEnum_0_box gopurs_runtime.Value, dictUnfoldable1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_downFromIncluding(dictEnum_0_box, dictUnfoldable1_1_box)
+})
 	})
 	return downFromIncluding
 }
@@ -1001,7 +1007,9 @@ var downFrom gopurs_runtime.Value
 var once_downFrom sync.Once
 func Get_downFrom() gopurs_runtime.Value {
 	once_downFrom.Do(func() {
-		downFrom = gopurs_runtime.Func2(Call_downFrom)
+		downFrom = gopurs_runtime.Func2(func(dictEnum_0_box gopurs_runtime.Value, dictUnfoldable_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_downFrom(dictEnum_0_box, dictUnfoldable_1_box)
+})
 	})
 	return downFrom
 }
@@ -1010,7 +1018,9 @@ var upFrom gopurs_runtime.Value
 var once_upFrom sync.Once
 func Get_upFrom() gopurs_runtime.Value {
 	once_upFrom.Do(func() {
-		upFrom = gopurs_runtime.Func2(Call_upFrom)
+		upFrom = gopurs_runtime.Func2(func(dictEnum_0_box gopurs_runtime.Value, dictUnfoldable_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_upFrom(dictEnum_0_box, dictUnfoldable_1_box)
+})
 	})
 	return upFrom
 }
@@ -1023,7 +1033,7 @@ func Get_defaultToEnum() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictBounded_0 gopurs_runtime.Value = dictBounded_0_loop
 _ = dictBounded_0
-bottom2_1_0 := gopurs_runtime.RecordGet(dictBounded_0_loop, "bottom")
+bottom2_1_0 := gopurs_runtime.RecordGet(dictBounded_0, "bottom")
 _ = bottom2_1_0
 return gopurs_runtime.Func2(func(dictEnum_2 gopurs_runtime.Value, i_prime_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var go__4_1 gopurs_runtime.Value
@@ -1106,7 +1116,9 @@ var defaultSucc gopurs_runtime.Value
 var once_defaultSucc sync.Once
 func Get_defaultSucc() gopurs_runtime.Value {
 	once_defaultSucc.Do(func() {
-		defaultSucc = gopurs_runtime.Func3(Call_defaultSucc)
+		defaultSucc = gopurs_runtime.Func3(func(toEnum_prime_0_box gopurs_runtime.Value, fromEnum_prime_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_defaultSucc(toEnum_prime_0_box, fromEnum_prime_1_box, a_2_box)
+})
 	})
 	return defaultSucc
 }
@@ -1115,7 +1127,9 @@ var defaultPred gopurs_runtime.Value
 var once_defaultPred sync.Once
 func Get_defaultPred() gopurs_runtime.Value {
 	once_defaultPred.Do(func() {
-		defaultPred = gopurs_runtime.Func3(Call_defaultPred)
+		defaultPred = gopurs_runtime.Func3(func(toEnum_prime_0_box gopurs_runtime.Value, fromEnum_prime_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_defaultPred(toEnum_prime_0_box, fromEnum_prime_1_box, a_2_box)
+})
 	})
 	return defaultPred
 }
@@ -1139,7 +1153,7 @@ var i_2 gopurs_runtime.Value = i_2_loop
 _ = i_2
 var x_3 gopurs_runtime.Value = x_3_loop
 _ = x_3
-v_4_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEnum_0_loop, "pred"), x_3)
+v_4_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEnum_0, "pred"), x_3)
 _ = v_4_1
 var __t2 gopurs_runtime.Value
 {
@@ -1185,7 +1199,7 @@ func Get_defaultCardinality() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictBounded_0 gopurs_runtime.Value = dictBounded_0_loop
 _ = dictBounded_0
-bottom2_1_0 := gopurs_runtime.RecordGet(dictBounded_0_loop, "bottom")
+bottom2_1_0 := gopurs_runtime.RecordGet(dictBounded_0, "bottom")
 _ = bottom2_1_0
 return gopurs_runtime.Func(func(dictEnum_2 gopurs_runtime.Value) gopurs_runtime.Value {
 var go__3_1 gopurs_runtime.Value
@@ -1248,8 +1262,8 @@ var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 var __t0 gopurs_runtime.Value
 {
-if v_0_loop.IntVal >= gopurs_runtime.Apply(Get_toCharCode(), pkg_Data_Bounded.Get_bottomChar()).IntVal && v_0_loop.IntVal <= gopurs_runtime.Apply(Get_toCharCode(), pkg_Data_Bounded.Get_topChar()).IntVal {
-__t0 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Apply(Get_fromCharCode(), v_0_loop))
+if v_0.IntVal >= gopurs_runtime.Apply(Get_toCharCode(), pkg_Data_Bounded.Get_bottomChar()).IntVal && v_0.IntVal <= gopurs_runtime.Apply(Get_toCharCode(), pkg_Data_Bounded.Get_topChar()).IntVal {
+__t0 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Apply(Get_fromCharCode(), v_0))
 goto end_branch_0
 } else {
 
@@ -1289,7 +1303,7 @@ func Get_cardinality() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0_loop, "cardinality")
+return gopurs_runtime.RecordGet(dict_0, "cardinality")
 }()
 })
 	})
@@ -1478,8 +1492,8 @@ var dictEnum_0 gopurs_runtime.Value = dictEnum_0_loop
 _ = dictEnum_0
 var dictUnfoldable1_1 gopurs_runtime.Value = dictUnfoldable1_1_loop
 _ = dictUnfoldable1_1
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictUnfoldable1_1_loop, "unfoldr1"), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Tuple", x_2, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEnum_0_loop, "succ"), x_2))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictUnfoldable1_1, "unfoldr1"), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Constructor2("Tuple", x_2, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEnum_0, "succ"), x_2))
 }))
 }
 
@@ -1496,14 +1510,14 @@ var b_4 gopurs_runtime.Value = b_4_loop
 _ = b_4
 var c_5 gopurs_runtime.Value = c_5_loop
 _ = c_5
-a_prime_6_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedEnum_2_loop, "fromEnum"), a_3_loop)
+a_prime_6_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedEnum_2, "fromEnum"), a_3)
 _ = a_prime_6_0
-__local_var_7_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedEnum_2_loop, "fromEnum"), b_4_loop).IntVal - a_prime_6_0.IntVal
+__local_var_7_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedEnum_2, "fromEnum"), b_4).IntVal - a_prime_6_0.IntVal
 _ = __local_var_7_3
-__local_var_8_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedEnum_2_loop, "fromEnum"), c_5_loop)
+__local_var_8_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedEnum_2, "fromEnum"), c_5)
 _ = __local_var_8_4
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_1_loop, "map"), gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_8_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedEnum_2_loop, "toEnum"), x_7)
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_1, "map"), gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_8_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedEnum_2, "toEnum"), x_7)
 _ = __local_var_8_1
 var __t2 gopurs_runtime.Value
 {
@@ -1519,7 +1533,7 @@ __t2 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_2:
 return __t2
-}), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictUnfoldable_0_loop, "unfoldr"), gopurs_runtime.Func(func(e_9 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictUnfoldable_0, "unfoldr"), gopurs_runtime.Func(func(e_9 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t5 gopurs_runtime.Value
 {
 if e_9.IntVal <= __local_var_8_4.IntVal {
@@ -1542,8 +1556,8 @@ var dictEnum_0 gopurs_runtime.Value = dictEnum_0_loop
 _ = dictEnum_0
 var dictUnfoldable1_1 gopurs_runtime.Value = dictUnfoldable1_1_loop
 _ = dictUnfoldable1_1
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictUnfoldable1_1_loop, "unfoldr1"), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Tuple", x_2, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEnum_0_loop, "pred"), x_2))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictUnfoldable1_1, "unfoldr1"), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Constructor2("Tuple", x_2, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEnum_0, "pred"), x_2))
 }))
 }
 
@@ -1552,8 +1566,8 @@ var dictEnum_0 gopurs_runtime.Value = dictEnum_0_loop
 _ = dictEnum_0
 var dictUnfoldable_1 gopurs_runtime.Value = dictUnfoldable_1_loop
 _ = dictUnfoldable_1
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictUnfoldable_1_loop, "unfoldr"), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_3_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEnum_0_loop, "pred"), x_2)
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictUnfoldable_1, "unfoldr"), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_3_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEnum_0, "pred"), x_2)
 _ = __local_var_3_0
 var __t1 gopurs_runtime.Value
 {
@@ -1577,8 +1591,8 @@ var dictEnum_0 gopurs_runtime.Value = dictEnum_0_loop
 _ = dictEnum_0
 var dictUnfoldable_1 gopurs_runtime.Value = dictUnfoldable_1_loop
 _ = dictUnfoldable_1
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictUnfoldable_1_loop, "unfoldr"), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_3_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEnum_0_loop, "succ"), x_2)
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictUnfoldable_1, "unfoldr"), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_3_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEnum_0, "succ"), x_2)
 _ = __local_var_3_0
 var __t1 gopurs_runtime.Value
 {
@@ -1604,7 +1618,7 @@ var fromEnum_prime_1 gopurs_runtime.Value = fromEnum_prime_1_loop
 _ = fromEnum_prime_1
 var a_2 gopurs_runtime.Value = a_2_loop
 _ = a_2
-return gopurs_runtime.Apply(toEnum_prime_0_loop, gopurs_runtime.Int(gopurs_runtime.Apply(fromEnum_prime_1_loop, a_2_loop).IntVal + 1))
+return gopurs_runtime.Apply(toEnum_prime_0, gopurs_runtime.Int(gopurs_runtime.Apply(fromEnum_prime_1, a_2).IntVal + 1))
 }
 
 func Call_defaultPred(toEnum_prime_0_loop gopurs_runtime.Value, fromEnum_prime_1_loop gopurs_runtime.Value, a_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -1614,7 +1628,7 @@ var fromEnum_prime_1 gopurs_runtime.Value = fromEnum_prime_1_loop
 _ = fromEnum_prime_1
 var a_2 gopurs_runtime.Value = a_2_loop
 _ = a_2
-return gopurs_runtime.Apply(toEnum_prime_0_loop, gopurs_runtime.Int(gopurs_runtime.Apply(fromEnum_prime_1_loop, a_2_loop).IntVal - 1))
+return gopurs_runtime.Apply(toEnum_prime_0, gopurs_runtime.Int(gopurs_runtime.Apply(fromEnum_prime_1, a_2).IntVal - 1))
 }
 
 func Get_fromCharCode() gopurs_runtime.Value {

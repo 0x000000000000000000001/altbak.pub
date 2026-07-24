@@ -264,7 +264,10 @@ func RunEffectFn10(f gopurs_runtime.Value) func(gopurs_runtime.Value) func(gopur
 
 
 // --- Auto-generated FFI wrappers ---
-func Call_mkEffectFn1(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_mkEffectFn1(arg0 gopurs_runtime.Value) func(gopurs_runtime.Value) func() gopurs_runtime.Value {
+	return MkEffectFn1(arg0)
+}
+var _Gopurs_MkEffectFn1 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := MkEffectFn1(go_arg0)
 	return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
@@ -274,9 +277,11 @@ func Call_mkEffectFn1(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 			return inner_res
 		})
 		})
+})
+func Call_mkEffectFn2(arg0 gopurs_runtime.Value) func(gopurs_runtime.Value, gopurs_runtime.Value) func() gopurs_runtime.Value {
+	return MkEffectFn2(arg0)
 }
-var _Gopurs_MkEffectFn1 = gopurs_runtime.Func(Call_mkEffectFn1)
-func Call_mkEffectFn2(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_MkEffectFn2 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := MkEffectFn2(go_arg0)
 	return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
@@ -286,9 +291,11 @@ func Call_mkEffectFn2(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 			return inner_res
 		})
 		})
+})
+func Call_mkEffectFn3(arg0 gopurs_runtime.Value) func(gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value) func() gopurs_runtime.Value {
+	return MkEffectFn3(arg0)
 }
-var _Gopurs_MkEffectFn2 = gopurs_runtime.Func(Call_mkEffectFn2)
-func Call_mkEffectFn3(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_MkEffectFn3 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := MkEffectFn3(go_arg0)
 	return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
@@ -298,9 +305,11 @@ func Call_mkEffectFn3(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 			return inner_res
 		})
 		})
+})
+func Call_mkEffectFn4(arg0 gopurs_runtime.Value) func(gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value) func() gopurs_runtime.Value {
+	return MkEffectFn4(arg0)
 }
-var _Gopurs_MkEffectFn3 = gopurs_runtime.Func(Call_mkEffectFn3)
-func Call_mkEffectFn4(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_MkEffectFn4 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := MkEffectFn4(go_arg0)
 	return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
@@ -310,9 +319,11 @@ func Call_mkEffectFn4(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 			return inner_res
 		})
 		})
+})
+func Call_mkEffectFn5(arg0 gopurs_runtime.Value) func(gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value) func() gopurs_runtime.Value {
+	return MkEffectFn5(arg0)
 }
-var _Gopurs_MkEffectFn4 = gopurs_runtime.Func(Call_mkEffectFn4)
-func Call_mkEffectFn5(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_MkEffectFn5 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := MkEffectFn5(go_arg0)
 	return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
@@ -322,9 +333,11 @@ func Call_mkEffectFn5(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 			return inner_res
 		})
 		})
+})
+func Call_mkEffectFn6(arg0 gopurs_runtime.Value) func(gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value) func() gopurs_runtime.Value {
+	return MkEffectFn6(arg0)
 }
-var _Gopurs_MkEffectFn5 = gopurs_runtime.Func(Call_mkEffectFn5)
-func Call_mkEffectFn6(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_MkEffectFn6 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := MkEffectFn6(go_arg0)
 	return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
@@ -334,9 +347,11 @@ func Call_mkEffectFn6(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 			return inner_res
 		})
 		})
+})
+func Call_mkEffectFn7(arg0 gopurs_runtime.Value) func(gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value) func() gopurs_runtime.Value {
+	return MkEffectFn7(arg0)
 }
-var _Gopurs_MkEffectFn6 = gopurs_runtime.Func(Call_mkEffectFn6)
-func Call_mkEffectFn7(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_MkEffectFn7 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := MkEffectFn7(go_arg0)
 	return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
@@ -346,9 +361,11 @@ func Call_mkEffectFn7(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 			return inner_res
 		})
 		})
+})
+func Call_mkEffectFn8(arg0 gopurs_runtime.Value) func(gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value) func() gopurs_runtime.Value {
+	return MkEffectFn8(arg0)
 }
-var _Gopurs_MkEffectFn7 = gopurs_runtime.Func(Call_mkEffectFn7)
-func Call_mkEffectFn8(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_MkEffectFn8 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := MkEffectFn8(go_arg0)
 	return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
@@ -358,9 +375,11 @@ func Call_mkEffectFn8(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 			return inner_res
 		})
 		})
+})
+func Call_mkEffectFn9(arg0 gopurs_runtime.Value) func(gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value) func() gopurs_runtime.Value {
+	return MkEffectFn9(arg0)
 }
-var _Gopurs_MkEffectFn8 = gopurs_runtime.Func(Call_mkEffectFn8)
-func Call_mkEffectFn9(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_MkEffectFn9 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := MkEffectFn9(go_arg0)
 	return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
@@ -370,9 +389,11 @@ func Call_mkEffectFn9(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 			return inner_res
 		})
 		})
+})
+func Call_mkEffectFn10(arg0 gopurs_runtime.Value) func(gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value) func() gopurs_runtime.Value {
+	return MkEffectFn10(arg0)
 }
-var _Gopurs_MkEffectFn9 = gopurs_runtime.Func(Call_mkEffectFn9)
-func Call_mkEffectFn10(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_MkEffectFn10 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := MkEffectFn10(go_arg0)
 	return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
@@ -382,9 +403,11 @@ func Call_mkEffectFn10(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 			return inner_res
 		})
 		})
+})
+func Call_runEffectFn1(arg0 gopurs_runtime.Value) func(gopurs_runtime.Value) func() gopurs_runtime.Value {
+	return RunEffectFn1(arg0)
 }
-var _Gopurs_MkEffectFn10 = gopurs_runtime.Func(Call_mkEffectFn10)
-func Call_runEffectFn1(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_RunEffectFn1 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := RunEffectFn1(go_arg0)
 	return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
@@ -394,9 +417,11 @@ func Call_runEffectFn1(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 			return inner_res
 		})
 		})
+})
+func Call_runEffectFn2(arg0 gopurs_runtime.Value) func(gopurs_runtime.Value) func(gopurs_runtime.Value) func() gopurs_runtime.Value {
+	return RunEffectFn2(arg0)
 }
-var _Gopurs_RunEffectFn1 = gopurs_runtime.Func(Call_runEffectFn1)
-func Call_runEffectFn2(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_RunEffectFn2 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := RunEffectFn2(go_arg0)
 	return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
@@ -409,9 +434,11 @@ func Call_runEffectFn2(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 		})
 		})
 		})
+})
+func Call_runEffectFn3(arg0 gopurs_runtime.Value) func(gopurs_runtime.Value) func(gopurs_runtime.Value) func(gopurs_runtime.Value) func() gopurs_runtime.Value {
+	return RunEffectFn3(arg0)
 }
-var _Gopurs_RunEffectFn2 = gopurs_runtime.Func(Call_runEffectFn2)
-func Call_runEffectFn3(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_RunEffectFn3 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := RunEffectFn3(go_arg0)
 	return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
@@ -427,9 +454,11 @@ func Call_runEffectFn3(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 		})
 		})
 		})
+})
+func Call_runEffectFn4(arg0 gopurs_runtime.Value) func(gopurs_runtime.Value) func(gopurs_runtime.Value) func(gopurs_runtime.Value) func(gopurs_runtime.Value) func() gopurs_runtime.Value {
+	return RunEffectFn4(arg0)
 }
-var _Gopurs_RunEffectFn3 = gopurs_runtime.Func(Call_runEffectFn3)
-func Call_runEffectFn4(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_RunEffectFn4 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := RunEffectFn4(go_arg0)
 	return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
@@ -448,9 +477,11 @@ func Call_runEffectFn4(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 		})
 		})
 		})
+})
+func Call_runEffectFn5(arg0 gopurs_runtime.Value) func(gopurs_runtime.Value) func(gopurs_runtime.Value) func(gopurs_runtime.Value) func(gopurs_runtime.Value) func(gopurs_runtime.Value) func() gopurs_runtime.Value {
+	return RunEffectFn5(arg0)
 }
-var _Gopurs_RunEffectFn4 = gopurs_runtime.Func(Call_runEffectFn4)
-func Call_runEffectFn5(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_RunEffectFn5 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := RunEffectFn5(go_arg0)
 	return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
@@ -472,9 +503,11 @@ func Call_runEffectFn5(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 		})
 		})
 		})
+})
+func Call_runEffectFn6(arg0 gopurs_runtime.Value) func(gopurs_runtime.Value) func(gopurs_runtime.Value) func(gopurs_runtime.Value) func(gopurs_runtime.Value) func(gopurs_runtime.Value) func(gopurs_runtime.Value) func() gopurs_runtime.Value {
+	return RunEffectFn6(arg0)
 }
-var _Gopurs_RunEffectFn5 = gopurs_runtime.Func(Call_runEffectFn5)
-func Call_runEffectFn6(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_RunEffectFn6 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := RunEffectFn6(go_arg0)
 	return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
@@ -499,9 +532,11 @@ func Call_runEffectFn6(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 		})
 		})
 		})
+})
+func Call_runEffectFn7(arg0 gopurs_runtime.Value) func(gopurs_runtime.Value) func(gopurs_runtime.Value) func(gopurs_runtime.Value) func(gopurs_runtime.Value) func(gopurs_runtime.Value) func(gopurs_runtime.Value) func(gopurs_runtime.Value) func() gopurs_runtime.Value {
+	return RunEffectFn7(arg0)
 }
-var _Gopurs_RunEffectFn6 = gopurs_runtime.Func(Call_runEffectFn6)
-func Call_runEffectFn7(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_RunEffectFn7 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := RunEffectFn7(go_arg0)
 	return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
@@ -529,9 +564,11 @@ func Call_runEffectFn7(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 		})
 		})
 		})
+})
+func Call_runEffectFn8(arg0 gopurs_runtime.Value) func(gopurs_runtime.Value) func(gopurs_runtime.Value) func(gopurs_runtime.Value) func(gopurs_runtime.Value) func(gopurs_runtime.Value) func(gopurs_runtime.Value) func(gopurs_runtime.Value) func(gopurs_runtime.Value) func() gopurs_runtime.Value {
+	return RunEffectFn8(arg0)
 }
-var _Gopurs_RunEffectFn7 = gopurs_runtime.Func(Call_runEffectFn7)
-func Call_runEffectFn8(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_RunEffectFn8 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := RunEffectFn8(go_arg0)
 	return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
@@ -562,9 +599,11 @@ func Call_runEffectFn8(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 		})
 		})
 		})
+})
+func Call_runEffectFn9(arg0 gopurs_runtime.Value) func(gopurs_runtime.Value) func(gopurs_runtime.Value) func(gopurs_runtime.Value) func(gopurs_runtime.Value) func(gopurs_runtime.Value) func(gopurs_runtime.Value) func(gopurs_runtime.Value) func(gopurs_runtime.Value) func(gopurs_runtime.Value) func() gopurs_runtime.Value {
+	return RunEffectFn9(arg0)
 }
-var _Gopurs_RunEffectFn8 = gopurs_runtime.Func(Call_runEffectFn8)
-func Call_runEffectFn9(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_RunEffectFn9 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := RunEffectFn9(go_arg0)
 	return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
@@ -598,9 +637,11 @@ func Call_runEffectFn9(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 		})
 		})
 		})
+})
+func Call_runEffectFn10(arg0 gopurs_runtime.Value) func(gopurs_runtime.Value) func(gopurs_runtime.Value) func(gopurs_runtime.Value) func(gopurs_runtime.Value) func(gopurs_runtime.Value) func(gopurs_runtime.Value) func(gopurs_runtime.Value) func(gopurs_runtime.Value) func(gopurs_runtime.Value) func(gopurs_runtime.Value) func() gopurs_runtime.Value {
+	return RunEffectFn10(arg0)
 }
-var _Gopurs_RunEffectFn9 = gopurs_runtime.Func(Call_runEffectFn9)
-func Call_runEffectFn10(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_RunEffectFn10 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := RunEffectFn10(go_arg0)
 	return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
@@ -637,5 +678,4 @@ func Call_runEffectFn10(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 		})
 		})
 		})
-}
-var _Gopurs_RunEffectFn10 = gopurs_runtime.Func(Call_runEffectFn10)
+})

@@ -23,19 +23,23 @@ func GetTimezoneOffset() func() float64 {
 
 
 // --- Auto-generated FFI wrappers ---
-func Call_now(_ gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_now() func() float64 {
+	return Now()
+}
+var _Gopurs_Now = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 	go_res := Now()
 	return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 			inner_res := go_res()
 			return gopurs_runtime.Box(inner_res)
 		})
+})
+func Call_getTimezoneOffset() func() float64 {
+	return GetTimezoneOffset()
 }
-var _Gopurs_Now = gopurs_runtime.Func(Call_now)
-func Call_getTimezoneOffset(_ gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_GetTimezoneOffset = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 	go_res := GetTimezoneOffset()
 	return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 			inner_res := go_res()
 			return gopurs_runtime.Box(inner_res)
 		})
-}
-var _Gopurs_GetTimezoneOffset = gopurs_runtime.Func(Call_getTimezoneOffset)
+})

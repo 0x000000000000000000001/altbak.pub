@@ -36,7 +36,7 @@ func Get_defer_() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0_loop, "defer")
+return gopurs_runtime.RecordGet(dict_0, "defer")
 }()
 })
 	})
@@ -47,7 +47,9 @@ var fix gopurs_runtime.Value
 var once_fix sync.Once
 func Get_fix() gopurs_runtime.Value {
 	once_fix.Do(func() {
-		fix = gopurs_runtime.Func2(Call_fix)
+		fix = gopurs_runtime.Func2(func(dictLazy_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_fix(dictLazy_0_box, f_1_box)
+})
 	})
 	return fix
 }
@@ -59,8 +61,8 @@ var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
 var go__2_0 gopurs_runtime.Value
 _ = go__2_0
-go__2_0 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictLazy_0_loop, "defer"), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(f_1_loop, go__2_0)
+go__2_0 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictLazy_0, "defer"), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(f_1, go__2_0)
 }))
 return go__2_0
 }

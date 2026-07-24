@@ -117,19 +117,26 @@ var Nan = math.NaN()
 
 
 // --- Auto-generated FFI wrappers ---
-func Call_isNaN(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_isNaN(arg0 float64) bool {
+	return IsNaN(arg0)
+}
+var _Gopurs_IsNaN = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[float64](arg0)
 	go_res := IsNaN(go_arg0)
 	return gopurs_runtime.Box(go_res)
+})
+func Call_isFinite(arg0 float64) bool {
+	return IsFinite(arg0)
 }
-var _Gopurs_IsNaN = gopurs_runtime.Func(Call_isNaN)
-func Call_isFinite(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_IsFinite = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[float64](arg0)
 	go_res := IsFinite(go_arg0)
 	return gopurs_runtime.Box(go_res)
+})
+func Call_fromStringImpl(arg0 string, arg1 func(float64) bool, arg2 func(float64) any, arg3 any) any {
+	return FromStringImpl(arg0, arg1, arg2, arg3)
 }
-var _Gopurs_IsFinite = gopurs_runtime.Func(Call_isFinite)
-func Call_fromStringImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_FromStringImpl = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[string](arg0)
 	go_arg1 := func(p0_0 float64) bool {
 			inner_res0 := gopurs_runtime.Apply(arg1, gopurs_runtime.Box(p0_0))
@@ -141,132 +148,171 @@ func Call_fromStringImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, a
 	go_arg3 := arg3
 	go_res := FromStringImpl(go_arg0, go_arg1, go_arg2, go_arg3)
 	return gopurs_runtime.Box(go_res)
+})
+func Call_abs(arg0 float64) float64 {
+	return Abs(arg0)
 }
-var _Gopurs_FromStringImpl = gopurs_runtime.Func4(Call_fromStringImpl)
-func Call_abs(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_Abs = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[float64](arg0)
 	go_res := Abs(go_arg0)
 	return gopurs_runtime.Box(go_res)
+})
+func Call_acos(arg0 float64) float64 {
+	return Acos(arg0)
 }
-var _Gopurs_Abs = gopurs_runtime.Func(Call_abs)
-func Call_acos(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_Acos = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[float64](arg0)
 	go_res := Acos(go_arg0)
 	return gopurs_runtime.Box(go_res)
+})
+func Call_asin(arg0 float64) float64 {
+	return Asin(arg0)
 }
-var _Gopurs_Acos = gopurs_runtime.Func(Call_acos)
-func Call_asin(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_Asin = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[float64](arg0)
 	go_res := Asin(go_arg0)
 	return gopurs_runtime.Box(go_res)
+})
+func Call_atan(arg0 float64) float64 {
+	return Atan(arg0)
 }
-var _Gopurs_Asin = gopurs_runtime.Func(Call_asin)
-func Call_atan(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_Atan = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[float64](arg0)
 	go_res := Atan(go_arg0)
 	return gopurs_runtime.Box(go_res)
+})
+func Call_atan2(arg0 float64, arg1 float64) float64 {
+	return Atan2(arg0, arg1)
 }
-var _Gopurs_Atan = gopurs_runtime.Func(Call_atan)
-func Call_atan2(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_Atan2 = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[float64](arg0)
 	go_arg1 := gopurs_runtime.Unbox[float64](arg1)
 	go_res := Atan2(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
+})
+func Call_ceil(arg0 float64) float64 {
+	return Ceil(arg0)
 }
-var _Gopurs_Atan2 = gopurs_runtime.Func2(Call_atan2)
-func Call_ceil(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_Ceil = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[float64](arg0)
 	go_res := Ceil(go_arg0)
 	return gopurs_runtime.Box(go_res)
+})
+func Call_cos(arg0 float64) float64 {
+	return Cos(arg0)
 }
-var _Gopurs_Ceil = gopurs_runtime.Func(Call_ceil)
-func Call_cos(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_Cos = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[float64](arg0)
 	go_res := Cos(go_arg0)
 	return gopurs_runtime.Box(go_res)
+})
+func Call_exp(arg0 float64) float64 {
+	return Exp(arg0)
 }
-var _Gopurs_Cos = gopurs_runtime.Func(Call_cos)
-func Call_exp(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_Exp = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[float64](arg0)
 	go_res := Exp(go_arg0)
 	return gopurs_runtime.Box(go_res)
+})
+func Call_floor(arg0 float64) float64 {
+	return Floor(arg0)
 }
-var _Gopurs_Exp = gopurs_runtime.Func(Call_exp)
-func Call_floor(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_Floor = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[float64](arg0)
 	go_res := Floor(go_arg0)
 	return gopurs_runtime.Box(go_res)
+})
+func Call_log(arg0 float64) float64 {
+	return Log(arg0)
 }
-var _Gopurs_Floor = gopurs_runtime.Func(Call_floor)
-func Call_log(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_Log = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[float64](arg0)
 	go_res := Log(go_arg0)
 	return gopurs_runtime.Box(go_res)
+})
+func Call_max(arg0 float64, arg1 float64) float64 {
+	return Max(arg0, arg1)
 }
-var _Gopurs_Log = gopurs_runtime.Func(Call_log)
-func Call_max(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_Max = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[float64](arg0)
 	go_arg1 := gopurs_runtime.Unbox[float64](arg1)
 	go_res := Max(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
+})
+func Call_min(arg0 float64, arg1 float64) float64 {
+	return Min(arg0, arg1)
 }
-var _Gopurs_Max = gopurs_runtime.Func2(Call_max)
-func Call_min(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_Min = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[float64](arg0)
 	go_arg1 := gopurs_runtime.Unbox[float64](arg1)
 	go_res := Min(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
+})
+func Call_pow(arg0 float64, arg1 float64) float64 {
+	return Pow(arg0, arg1)
 }
-var _Gopurs_Min = gopurs_runtime.Func2(Call_min)
-func Call_pow(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_Pow = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[float64](arg0)
 	go_arg1 := gopurs_runtime.Unbox[float64](arg1)
 	go_res := Pow(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
+})
+func Call_remainder(arg0 float64, arg1 float64) float64 {
+	return Remainder(arg0, arg1)
 }
-var _Gopurs_Pow = gopurs_runtime.Func2(Call_pow)
-func Call_remainder(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_Remainder = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[float64](arg0)
 	go_arg1 := gopurs_runtime.Unbox[float64](arg1)
 	go_res := Remainder(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
+})
+func Call_round(arg0 float64) float64 {
+	return Round(arg0)
 }
-var _Gopurs_Remainder = gopurs_runtime.Func2(Call_remainder)
-func Call_round(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_Round = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[float64](arg0)
 	go_res := Round(go_arg0)
 	return gopurs_runtime.Box(go_res)
+})
+func Call_sign(arg0 float64) float64 {
+	return Sign(arg0)
 }
-var _Gopurs_Round = gopurs_runtime.Func(Call_round)
-func Call_sign(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_Sign = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[float64](arg0)
 	go_res := Sign(go_arg0)
 	return gopurs_runtime.Box(go_res)
+})
+func Call_sin(arg0 float64) float64 {
+	return Sin(arg0)
 }
-var _Gopurs_Sign = gopurs_runtime.Func(Call_sign)
-func Call_sin(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_Sin = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[float64](arg0)
 	go_res := Sin(go_arg0)
 	return gopurs_runtime.Box(go_res)
+})
+func Call_sqrt(arg0 float64) float64 {
+	return Sqrt(arg0)
 }
-var _Gopurs_Sin = gopurs_runtime.Func(Call_sin)
-func Call_sqrt(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_Sqrt = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[float64](arg0)
 	go_res := Sqrt(go_arg0)
 	return gopurs_runtime.Box(go_res)
+})
+func Call_tan(arg0 float64) float64 {
+	return Tan(arg0)
 }
-var _Gopurs_Sqrt = gopurs_runtime.Func(Call_sqrt)
-func Call_tan(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_Tan = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[float64](arg0)
 	go_res := Tan(go_arg0)
 	return gopurs_runtime.Box(go_res)
+})
+func Call_trunc(arg0 float64) float64 {
+	return Trunc(arg0)
 }
-var _Gopurs_Tan = gopurs_runtime.Func(Call_tan)
-func Call_trunc(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_Trunc = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[float64](arg0)
 	go_res := Trunc(go_arg0)
 	return gopurs_runtime.Box(go_res)
-}
-var _Gopurs_Trunc = gopurs_runtime.Func(Call_trunc)
+})
 var _Gopurs_Infinity = gopurs_runtime.Box(Infinity)
 var _Gopurs_Nan = gopurs_runtime.Box(Nan)

@@ -13,7 +13,7 @@ func Get_sized() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0_loop, "sized")
+return gopurs_runtime.RecordGet(dict_0, "sized")
 }()
 })
 	})
@@ -28,7 +28,7 @@ func Get_resize() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0_loop, "resize")
+return gopurs_runtime.RecordGet(dict_0, "resize")
 }()
 })
 	})
@@ -43,7 +43,7 @@ func Get_chooseInt() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0_loop, "chooseInt")
+return gopurs_runtime.RecordGet(dict_0, "chooseInt")
 }()
 })
 	})
@@ -58,7 +58,7 @@ func Get_chooseFloat() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0_loop, "chooseFloat")
+return gopurs_runtime.RecordGet(dict_0, "chooseFloat")
 }()
 })
 	})
@@ -73,7 +73,7 @@ func Get_chooseBool() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0_loop, "chooseBool")
+return gopurs_runtime.RecordGet(dict_0, "chooseBool")
 }()
 })
 	})

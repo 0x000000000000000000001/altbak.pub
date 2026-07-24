@@ -33,7 +33,7 @@ return func() gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 return gopurs_runtime.Apply(Get_modifyImpl(), gopurs_runtime.Func(func(s_1 gopurs_runtime.Value) gopurs_runtime.Value {
-s_prime_2_0 := gopurs_runtime.Apply(f_0_loop, s_1)
+s_prime_2_0 := gopurs_runtime.Apply(f_0, s_1)
 _ = s_prime_2_0
 return gopurs_runtime.RecordDict2("state", "value", s_prime_2_0, s_prime_2_0)
 }))
@@ -47,7 +47,9 @@ var modify_ gopurs_runtime.Value
 var once_modify_ sync.Once
 func Get_modify_() gopurs_runtime.Value {
 	once_modify_.Do(func() {
-		modify_ = gopurs_runtime.Func2(Call_modify_)
+		modify_ = gopurs_runtime.Func2(func(f_0_box gopurs_runtime.Value, s_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_modify_(f_0_box, s_1_box)
+})
 	})
 	return modify_
 }
@@ -58,10 +60,10 @@ _ = f_0
 var s_1 gopurs_runtime.Value = s_1_loop
 _ = s_1
 __local_var_2_0 := gopurs_runtime.Apply2(Get_modifyImpl(), gopurs_runtime.Func(func(s_2 gopurs_runtime.Value) gopurs_runtime.Value {
-s_prime_3_1 := gopurs_runtime.Apply(f_0_loop, s_2)
+s_prime_3_1 := gopurs_runtime.Apply(f_0, s_2)
 _ = s_prime_3_1
 return gopurs_runtime.RecordDict2("state", "value", s_prime_3_1, s_prime_3_1)
-}), s_1_loop)
+}), s_1)
 _ = __local_var_2_0
 return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 a_prime_3_2 := gopurs_runtime.Apply(__local_var_2_0, gopurs_runtime.Value{})

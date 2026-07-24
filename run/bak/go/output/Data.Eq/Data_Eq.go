@@ -56,7 +56,7 @@ func Get_eqRecord() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0_loop, "eqRecord")
+return gopurs_runtime.RecordGet(dict_0, "eqRecord")
 }()
 })
 	})
@@ -67,7 +67,9 @@ var eqRec gopurs_runtime.Value
 var once_eqRec sync.Once
 func Get_eqRec() gopurs_runtime.Value {
 	once_eqRec.Do(func() {
-		eqRec = gopurs_runtime.Func2(Call_eqRec)
+		eqRec = gopurs_runtime.Func2(func(_dollar__unused_0_box gopurs_runtime.Value, dictEqRecord_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_eqRec(_dollar__unused_0_box, dictEqRecord_1_box)
+})
 	})
 	return eqRec
 }
@@ -127,7 +129,7 @@ func Get_eq1() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0_loop, "eq1")
+return gopurs_runtime.RecordGet(dict_0, "eq1")
 }()
 })
 	})
@@ -142,7 +144,7 @@ func Get_eq() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0_loop, "eq")
+return gopurs_runtime.RecordGet(dict_0, "eq")
 }()
 })
 	})
@@ -157,7 +159,7 @@ func Get_eqArray() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
 _ = dictEq_0
-return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Apply(Get_eqArrayImpl(), gopurs_runtime.RecordGet(dictEq_0_loop, "eq")))
+return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Apply(Get_eqArrayImpl(), gopurs_runtime.RecordGet(dictEq_0, "eq")))
 }()
 })
 	})
@@ -179,7 +181,9 @@ var eqRowCons gopurs_runtime.Value
 var once_eqRowCons sync.Once
 func Get_eqRowCons() gopurs_runtime.Value {
 	once_eqRowCons.Do(func() {
-		eqRowCons = gopurs_runtime.Func4(Call_eqRowCons)
+		eqRowCons = gopurs_runtime.Func4(func(dictEqRecord_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, dictIsSymbol_2_box gopurs_runtime.Value, dictEq_3_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_eqRowCons(dictEqRecord_0_box, _dollar__unused_1_box, dictIsSymbol_2_box, dictEq_3_box)
+})
 	})
 	return eqRowCons
 }
@@ -188,7 +192,9 @@ var notEq gopurs_runtime.Value
 var once_notEq sync.Once
 func Get_notEq() gopurs_runtime.Value {
 	once_notEq.Do(func() {
-		notEq = gopurs_runtime.Func3(Call_notEq)
+		notEq = gopurs_runtime.Func3(func(dictEq_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value, y_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Bool(Call_notEq(dictEq_0_box, x_1_box, y_2_box))
+})
 	})
 	return notEq
 }
@@ -197,7 +203,9 @@ var notEq1 gopurs_runtime.Value
 var once_notEq1 sync.Once
 func Get_notEq1() gopurs_runtime.Value {
 	once_notEq1.Do(func() {
-		notEq1 = gopurs_runtime.Func2(Call_notEq1)
+		notEq1 = gopurs_runtime.Func2(func(dictEq1_0_box gopurs_runtime.Value, dictEq_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_notEq1(dictEq1_0_box, dictEq_1_box)
+})
 	})
 	return notEq1
 }
@@ -207,7 +215,7 @@ var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
 var dictEqRecord_1 gopurs_runtime.Value = dictEqRecord_1_loop
 _ = dictEqRecord_1
-return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEqRecord_1_loop, "eqRecord"), gopurs_runtime.Constructor0("Proxy")))
+return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEqRecord_1, "eqRecord"), gopurs_runtime.Constructor0("Proxy")))
 }
 
 func Call_eqRowCons(dictEqRecord_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, dictIsSymbol_2_loop gopurs_runtime.Value, dictEq_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -220,20 +228,20 @@ _ = dictIsSymbol_2
 var dictEq_3 gopurs_runtime.Value = dictEq_3_loop
 _ = dictEq_3
 return gopurs_runtime.RecordDict1("eqRecord", gopurs_runtime.Func3(func(v_4 gopurs_runtime.Value, ra_5 gopurs_runtime.Value, rb_6 gopurs_runtime.Value) gopurs_runtime.Value {
-get_7_0 := gopurs_runtime.Apply(pkg_Record_Unsafe.Get_unsafeGet(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_2_loop, "reflectSymbol"), gopurs_runtime.Constructor0("Proxy")))
+get_7_0 := gopurs_runtime.Apply(pkg_Record_Unsafe.Get_unsafeGet(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_2, "reflectSymbol"), gopurs_runtime.Constructor0("Proxy")))
 _ = get_7_0
-return gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_3_loop, "eq"), gopurs_runtime.Apply(get_7_0, ra_5), gopurs_runtime.Apply(get_7_0, rb_6)).IntVal != 0 && gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictEqRecord_0_loop, "eqRecord"), gopurs_runtime.Constructor0("Proxy"), ra_5, rb_6).IntVal != 0)
+return gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_3, "eq"), gopurs_runtime.Apply(get_7_0, ra_5), gopurs_runtime.Apply(get_7_0, rb_6)).IntVal != 0 && gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictEqRecord_0, "eqRecord"), gopurs_runtime.Constructor0("Proxy"), ra_5, rb_6).IntVal != 0)
 }))
 }
 
-func Call_notEq(dictEq_0_loop gopurs_runtime.Value, x_1_loop gopurs_runtime.Value, y_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_notEq(dictEq_0_loop gopurs_runtime.Value, x_1_loop gopurs_runtime.Value, y_2_loop gopurs_runtime.Value) bool {
 var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
 _ = dictEq_0
 var x_1 gopurs_runtime.Value = x_1_loop
 _ = x_1
 var y_2 gopurs_runtime.Value = y_2_loop
 _ = y_2
-return gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0_loop, "eq"), x_1_loop, y_2_loop).IntVal != 0 != true)
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), x_1, y_2).IntVal != 0 != true
 }
 
 func Call_notEq1(dictEq1_0_loop gopurs_runtime.Value, dictEq_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -241,7 +249,7 @@ var dictEq1_0 gopurs_runtime.Value = dictEq1_0_loop
 _ = dictEq1_0
 var dictEq_1 gopurs_runtime.Value = dictEq_1_loop
 _ = dictEq_1
-eq12_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEq1_0_loop, "eq1"), dictEq_1_loop)
+eq12_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEq1_0, "eq1"), dictEq_1)
 _ = eq12_2_0
 return gopurs_runtime.Func2(func(x_3 gopurs_runtime.Value, y_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Bool(gopurs_runtime.Apply2(eq12_2_0, x_3, y_4).IntVal != 0 != true)

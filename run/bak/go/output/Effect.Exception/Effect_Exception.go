@@ -19,7 +19,7 @@ return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Constructor1("Left", x_1)
 })
 }), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-a_prime_1_0 := gopurs_runtime.Apply(action_0_loop, gopurs_runtime.Value{})
+a_prime_1_0 := gopurs_runtime.Apply(action_0, gopurs_runtime.Value{})
 _ = a_prime_1_0
 return gopurs_runtime.Constructor1("Right", a_prime_1_0)
 }))
@@ -37,7 +37,7 @@ func Get_throw() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
-return gopurs_runtime.Apply(Get_throwException(), gopurs_runtime.Apply(Get_error(), x_0_loop))
+return gopurs_runtime.Apply(Get_throwException(), gopurs_runtime.Apply(Get_error(), x_0))
 }()
 })
 	})

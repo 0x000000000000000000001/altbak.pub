@@ -13,7 +13,7 @@ func Get_null() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var s_0 gopurs_runtime.Value = s_0_loop
 _ = s_0
-return gopurs_runtime.Bool(s_0_loop.StrVal == "")
+return gopurs_runtime.Bool(s_0.StrVal == "")
 }()
 })
 	})

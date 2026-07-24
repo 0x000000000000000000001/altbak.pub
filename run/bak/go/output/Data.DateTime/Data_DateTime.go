@@ -31,7 +31,7 @@ var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[0].UnsafePtr)[1].StrVal == "January").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].UnsafePtr)[1].StrVal == "January").IntVal != 0 {
 __t0 = gopurs_runtime.Int(1)
 goto end_branch_0
 } else {
@@ -39,7 +39,7 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[0].UnsafePtr)[1].StrVal == "February").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].UnsafePtr)[1].StrVal == "February").IntVal != 0 {
 __t0 = gopurs_runtime.Int(2)
 goto end_branch_0
 } else {
@@ -47,7 +47,7 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[0].UnsafePtr)[1].StrVal == "March").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].UnsafePtr)[1].StrVal == "March").IntVal != 0 {
 __t0 = gopurs_runtime.Int(3)
 goto end_branch_0
 } else {
@@ -55,7 +55,7 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[0].UnsafePtr)[1].StrVal == "April").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].UnsafePtr)[1].StrVal == "April").IntVal != 0 {
 __t0 = gopurs_runtime.Int(4)
 goto end_branch_0
 } else {
@@ -63,7 +63,7 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[0].UnsafePtr)[1].StrVal == "May").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].UnsafePtr)[1].StrVal == "May").IntVal != 0 {
 __t0 = gopurs_runtime.Int(5)
 goto end_branch_0
 } else {
@@ -71,7 +71,7 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[0].UnsafePtr)[1].StrVal == "June").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].UnsafePtr)[1].StrVal == "June").IntVal != 0 {
 __t0 = gopurs_runtime.Int(6)
 goto end_branch_0
 } else {
@@ -79,7 +79,7 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[0].UnsafePtr)[1].StrVal == "July").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].UnsafePtr)[1].StrVal == "July").IntVal != 0 {
 __t0 = gopurs_runtime.Int(7)
 goto end_branch_0
 } else {
@@ -87,7 +87,7 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[0].UnsafePtr)[1].StrVal == "August").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].UnsafePtr)[1].StrVal == "August").IntVal != 0 {
 __t0 = gopurs_runtime.Int(8)
 goto end_branch_0
 } else {
@@ -95,7 +95,7 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[0].UnsafePtr)[1].StrVal == "September").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].UnsafePtr)[1].StrVal == "September").IntVal != 0 {
 __t0 = gopurs_runtime.Int(9)
 goto end_branch_0
 } else {
@@ -103,7 +103,7 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[0].UnsafePtr)[1].StrVal == "October").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].UnsafePtr)[1].StrVal == "October").IntVal != 0 {
 __t0 = gopurs_runtime.Int(10)
 goto end_branch_0
 } else {
@@ -111,7 +111,7 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[0].UnsafePtr)[1].StrVal == "November").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].UnsafePtr)[1].StrVal == "November").IntVal != 0 {
 __t0 = gopurs_runtime.Int(11)
 goto end_branch_0
 } else {
@@ -119,7 +119,7 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[0].UnsafePtr)[1].StrVal == "December").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].UnsafePtr)[1].StrVal == "December").IntVal != 0 {
 __t0 = gopurs_runtime.Int(12)
 goto end_branch_0
 } else {
@@ -130,7 +130,7 @@ goto end_branch_0
 __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_0:
-return gopurs_runtime.RecordDict([]string{"year", "month", "day", "hour", "minute", "second", "millisecond"}, []gopurs_runtime.Value{(*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[0].UnsafePtr)[0], __t0, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[0].UnsafePtr)[2], (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[1].UnsafePtr)[0], (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[1].UnsafePtr)[1], (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[1].UnsafePtr)[2], (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[1].UnsafePtr)[3]})
+return gopurs_runtime.RecordDict([]string{"year", "month", "day", "hour", "minute", "second", "millisecond"}, []gopurs_runtime.Value{(*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].UnsafePtr)[0], __t0, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].UnsafePtr)[2], (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[1].UnsafePtr)[0], (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[1].UnsafePtr)[1], (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[1].UnsafePtr)[2], (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[1].UnsafePtr)[3]})
 }()
 })
 	})
@@ -145,7 +145,7 @@ func Get_time() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-return (*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[1]
+return (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[1]
 }()
 })
 	})
@@ -167,7 +167,9 @@ var modifyTimeF gopurs_runtime.Value
 var once_modifyTimeF sync.Once
 func Get_modifyTimeF() gopurs_runtime.Value {
 	once_modifyTimeF.Do(func() {
-		modifyTimeF = gopurs_runtime.Func3(Call_modifyTimeF)
+		modifyTimeF = gopurs_runtime.Func3(func(dictFunctor_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, v_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_modifyTimeF(dictFunctor_0_box, f_1_box, v_2_box)
+})
 	})
 	return modifyTimeF
 }
@@ -176,7 +178,9 @@ var modifyTime gopurs_runtime.Value
 var once_modifyTime sync.Once
 func Get_modifyTime() gopurs_runtime.Value {
 	once_modifyTime.Do(func() {
-		modifyTime = gopurs_runtime.Func2(Call_modifyTime)
+		modifyTime = gopurs_runtime.Func2(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_modifyTime(f_0_box, v_1_box)
+})
 	})
 	return modifyTime
 }
@@ -185,7 +189,9 @@ var modifyDateF gopurs_runtime.Value
 var once_modifyDateF sync.Once
 func Get_modifyDateF() gopurs_runtime.Value {
 	once_modifyDateF.Do(func() {
-		modifyDateF = gopurs_runtime.Func3(Call_modifyDateF)
+		modifyDateF = gopurs_runtime.Func3(func(dictFunctor_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, v_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_modifyDateF(dictFunctor_0_box, f_1_box, v_2_box)
+})
 	})
 	return modifyDateF
 }
@@ -194,7 +200,9 @@ var modifyDate gopurs_runtime.Value
 var once_modifyDate sync.Once
 func Get_modifyDate() gopurs_runtime.Value {
 	once_modifyDate.Do(func() {
-		modifyDate = gopurs_runtime.Func2(Call_modifyDate)
+		modifyDate = gopurs_runtime.Func2(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_modifyDate(f_0_box, v_1_box)
+})
 	})
 	return modifyDate
 }
@@ -250,7 +258,9 @@ var diff gopurs_runtime.Value
 var once_diff sync.Once
 func Get_diff() gopurs_runtime.Value {
 	once_diff.Do(func() {
-		diff = gopurs_runtime.Func3(Call_diff)
+		diff = gopurs_runtime.Func3(func(dictDuration_0_box gopurs_runtime.Value, dt1_1_box gopurs_runtime.Value, dt2_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_diff(dictDuration_0_box, dt1_1_box, dt2_2_box)
+})
 	})
 	return diff
 }
@@ -263,7 +273,7 @@ func Get_date() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-return (*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[0]
+return (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0]
 }()
 })
 	})
@@ -285,7 +295,9 @@ var adjust gopurs_runtime.Value
 var once_adjust sync.Once
 func Get_adjust() gopurs_runtime.Value {
 	once_adjust.Do(func() {
-		adjust = gopurs_runtime.Func3(Call_adjust)
+		adjust = gopurs_runtime.Func3(func(dictDuration_0_box gopurs_runtime.Value, d_1_box gopurs_runtime.Value, dt_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_adjust(dictDuration_0_box, d_1_box, dt_2_box)
+})
 	})
 	return adjust
 }
@@ -297,7 +309,7 @@ var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
 var v_2 gopurs_runtime.Value = v_2_loop
 _ = v_2
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0_loop, "map"), gopurs_runtime.Apply(Get_DateTime(), (*[1024]gopurs_runtime.Value)(v_2_loop.UnsafePtr)[0]), gopurs_runtime.Apply(f_1_loop, (*[1024]gopurs_runtime.Value)(v_2_loop.UnsafePtr)[1]))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), gopurs_runtime.Apply(Get_DateTime(), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0]), gopurs_runtime.Apply(f_1, (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[1]))
 }
 
 func Call_modifyTime(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -305,7 +317,7 @@ var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
-return gopurs_runtime.Constructor2("DateTime", (*[1024]gopurs_runtime.Value)(v_1_loop.UnsafePtr)[0], gopurs_runtime.Apply(f_0_loop, (*[1024]gopurs_runtime.Value)(v_1_loop.UnsafePtr)[1]))
+return gopurs_runtime.Constructor2("DateTime", (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[0], gopurs_runtime.Apply(f_0, (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[1]))
 }
 
 func Call_modifyDateF(dictFunctor_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value, v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -315,11 +327,11 @@ var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
 var v_2 gopurs_runtime.Value = v_2_loop
 _ = v_2
-__local_var_3_0 := (*[1024]gopurs_runtime.Value)(v_2_loop.UnsafePtr)[1]
+__local_var_3_0 := (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[1]
 _ = __local_var_3_0
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0_loop, "map"), gopurs_runtime.Func(func(a_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), gopurs_runtime.Func(func(a_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Constructor2("DateTime", a_4, __local_var_3_0)
-}), gopurs_runtime.Apply(f_1_loop, (*[1024]gopurs_runtime.Value)(v_2_loop.UnsafePtr)[0]))
+}), gopurs_runtime.Apply(f_1, (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0]))
 }
 
 func Call_modifyDate(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -327,7 +339,7 @@ var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
-return gopurs_runtime.Constructor2("DateTime", gopurs_runtime.Apply(f_0_loop, (*[1024]gopurs_runtime.Value)(v_1_loop.UnsafePtr)[0]), (*[1024]gopurs_runtime.Value)(v_1_loop.UnsafePtr)[1])
+return gopurs_runtime.Constructor2("DateTime", gopurs_runtime.Apply(f_0, (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[0]), (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[1])
 }
 
 func Call_diff(dictDuration_0_loop gopurs_runtime.Value, dt1_1_loop gopurs_runtime.Value, dt2_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -337,7 +349,7 @@ var dt1_1 gopurs_runtime.Value = dt1_1_loop
 _ = dt1_1
 var dt2_2 gopurs_runtime.Value = dt2_2_loop
 _ = dt2_2
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDuration_0_loop, "toDuration"), gopurs_runtime.UncurriedApp2(Get_calcDiff(), gopurs_runtime.Apply(Get_toRecord(), dt1_1_loop), gopurs_runtime.Apply(Get_toRecord(), dt2_2_loop)))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDuration_0, "toDuration"), gopurs_runtime.UncurriedApp2(Get_calcDiff(), gopurs_runtime.Apply(Get_toRecord(), dt1_1), gopurs_runtime.Apply(Get_toRecord(), dt2_2)))
 }
 
 func Call_adjust(dictDuration_0_loop gopurs_runtime.Value, d_1_loop gopurs_runtime.Value, dt_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -347,7 +359,7 @@ var d_1 gopurs_runtime.Value = d_1_loop
 _ = d_1
 var dt_2 gopurs_runtime.Value = dt_2_loop
 _ = dt_2
-__local_var_3_0 := gopurs_runtime.Apply4(Get_adjustImpl(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Constructor0("Nothing"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDuration_0_loop, "fromDuration"), d_1_loop), gopurs_runtime.Apply(Get_toRecord(), dt_2_loop))
+__local_var_3_0 := gopurs_runtime.Apply4(Get_adjustImpl(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Constructor0("Nothing"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDuration_0, "fromDuration"), d_1), gopurs_runtime.Apply(Get_toRecord(), dt_2))
 _ = __local_var_3_0
 var __t1 gopurs_runtime.Value
 {

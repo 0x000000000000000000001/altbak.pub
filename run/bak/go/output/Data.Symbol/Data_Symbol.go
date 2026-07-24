@@ -9,7 +9,9 @@ var reifySymbol gopurs_runtime.Value
 var once_reifySymbol sync.Once
 func Get_reifySymbol() gopurs_runtime.Value {
 	once_reifySymbol.Do(func() {
-		reifySymbol = gopurs_runtime.Func2(Call_reifySymbol)
+		reifySymbol = gopurs_runtime.Func2(func(s_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_reifySymbol(s_0_box, f_1_box)
+})
 	})
 	return reifySymbol
 }
@@ -22,7 +24,7 @@ func Get_reflectSymbol() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0_loop, "reflectSymbol")
+return gopurs_runtime.RecordGet(dict_0, "reflectSymbol")
 }()
 })
 	})
@@ -35,9 +37,9 @@ _ = s_0
 var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
 return gopurs_runtime.Apply3(Get_unsafeCoerce(), gopurs_runtime.Func(func(dictIsSymbol_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(f_1_loop, dictIsSymbol_2)
+return gopurs_runtime.Apply(f_1, dictIsSymbol_2)
 }), gopurs_runtime.RecordDict1("reflectSymbol", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return s_0_loop
+return s_0
 })), gopurs_runtime.Constructor0("Proxy"))
 }
 

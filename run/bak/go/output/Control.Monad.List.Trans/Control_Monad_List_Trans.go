@@ -49,7 +49,7 @@ func Get_ListT() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
-return x_0_loop
+return x_0
 }()
 })
 	})
@@ -60,7 +60,9 @@ var wrapLazy gopurs_runtime.Value
 var once_wrapLazy sync.Once
 func Get_wrapLazy() gopurs_runtime.Value {
 	once_wrapLazy.Do(func() {
-		wrapLazy = gopurs_runtime.Func2(Call_wrapLazy)
+		wrapLazy = gopurs_runtime.Func2(func(dictApplicative_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_wrapLazy(dictApplicative_0_box, v_1_box)
+})
 	})
 	return wrapLazy
 }
@@ -69,7 +71,9 @@ var wrapEffect gopurs_runtime.Value
 var once_wrapEffect sync.Once
 func Get_wrapEffect() gopurs_runtime.Value {
 	once_wrapEffect.Do(func() {
-		wrapEffect = gopurs_runtime.Func2(Call_wrapEffect)
+		wrapEffect = gopurs_runtime.Func2(func(dictFunctor_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_wrapEffect(dictFunctor_0_box, v_1_box)
+})
 	})
 	return wrapEffect
 }
@@ -78,7 +82,9 @@ var unfold gopurs_runtime.Value
 var once_unfold sync.Once
 func Get_unfold() gopurs_runtime.Value {
 	once_unfold.Do(func() {
-		unfold = gopurs_runtime.Func3(Call_unfold)
+		unfold = gopurs_runtime.Func3(func(dictMonad_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, z_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_unfold(dictMonad_0_box, f_1_box, z_2_box)
+})
 	})
 	return unfold
 }
@@ -94,10 +100,10 @@ for {
 if false { continue uncons }
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
-__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0_loop, "Applicative0"), gopurs_runtime.Value{})
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Applicative0"), gopurs_runtime.Value{})
 _ = __local_var_1_0
 return gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0_loop, "Bind1"), gopurs_runtime.Value{}), "bind"), v_2, gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Bind1"), gopurs_runtime.Value{}), "bind"), v_2, gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
 if gopurs_runtime.Bool(v1_3.StrVal == "Yield").IntVal != 0 {
@@ -109,7 +115,7 @@ goto end_branch_1
 }
 {
 if gopurs_runtime.Bool(v1_3.StrVal == "Skip").IntVal != 0 {
-__t1 = gopurs_runtime.Apply2(Get_uncons(), dictMonad_0_loop, gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), (*[1024]gopurs_runtime.Value)(v1_3.UnsafePtr)[0]))
+__t1 = gopurs_runtime.Apply2(Get_uncons(), dictMonad_0, gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), (*[1024]gopurs_runtime.Value)(v1_3.UnsafePtr)[0]))
 goto end_branch_1
 } else {
 
@@ -145,10 +151,10 @@ func Get_tail() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
-uncons1_1_0 := gopurs_runtime.Apply(Get_uncons(), dictMonad_0_loop)
+uncons1_1_0 := gopurs_runtime.Apply(Get_uncons(), dictMonad_0)
 _ = uncons1_1_0
 return gopurs_runtime.Func(func(l_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0_loop, "Bind1"), gopurs_runtime.Value{}), "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Bind1"), gopurs_runtime.Value{}), "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
 if gopurs_runtime.Bool(v1_3.StrVal == "Just").IntVal != 0 {
@@ -182,7 +188,7 @@ for {
 if false { continue takeWhile }
 var dictApplicative_0 gopurs_runtime.Value = dictApplicative_0_loop
 _ = dictApplicative_0
-__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0_loop, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{})
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{})
 _ = __local_var_1_0
 return gopurs_runtime.Func2(func(f_2 gopurs_runtime.Value, v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "map"), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -192,7 +198,7 @@ if gopurs_runtime.Bool(v_4.StrVal == "Yield").IntVal != 0 {
 var __t2 gopurs_runtime.Value
 {
 if gopurs_runtime.Apply(f_2, (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[0]).IntVal != 0 {
-__local_var_5_3 := gopurs_runtime.Apply2(Get_takeWhile(), dictApplicative_0_loop, f_2)
+__local_var_5_3 := gopurs_runtime.Apply2(Get_takeWhile(), dictApplicative_0, f_2)
 _ = __local_var_5_3
 __t2 = gopurs_runtime.Constructor2("Yield", (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[0], gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(__local_var_5_3, gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[1]))
@@ -216,7 +222,7 @@ goto end_branch_1
 if gopurs_runtime.Bool(v_4.StrVal == "Skip").IntVal != 0 {
 __local_var_5_4 := (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[0]
 _ = __local_var_5_4
-__local_var_6_5 := gopurs_runtime.Apply2(Get_takeWhile(), dictApplicative_0_loop, f_2)
+__local_var_6_5 := gopurs_runtime.Apply2(Get_takeWhile(), dictApplicative_0, f_2)
 _ = __local_var_6_5
 __t1 = gopurs_runtime.Constructor1("Skip", gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(__local_var_6_5, gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), __local_var_5_4))
@@ -252,7 +258,9 @@ var scanl gopurs_runtime.Value
 var once_scanl sync.Once
 func Get_scanl() gopurs_runtime.Value {
 	once_scanl.Do(func() {
-		scanl = gopurs_runtime.Func4(Call_scanl)
+		scanl = gopurs_runtime.Func4(func(dictMonad_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, b_2_box gopurs_runtime.Value, l_3_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_scanl(dictMonad_0_box, f_1_box, b_2_box, l_3_box)
+})
 	})
 	return scanl
 }
@@ -261,7 +269,9 @@ var prepend_prime gopurs_runtime.Value
 var once_prepend_prime sync.Once
 func Get_prepend_prime() gopurs_runtime.Value {
 	once_prepend_prime.Do(func() {
-		prepend_prime = gopurs_runtime.Func3(Call_prepend_prime)
+		prepend_prime = gopurs_runtime.Func3(func(dictApplicative_0_box gopurs_runtime.Value, h_1_box gopurs_runtime.Value, t_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_prepend_prime(dictApplicative_0_box, h_1_box, t_2_box)
+})
 	})
 	return prepend_prime
 }
@@ -270,7 +280,9 @@ var prepend gopurs_runtime.Value
 var once_prepend sync.Once
 func Get_prepend() gopurs_runtime.Value {
 	once_prepend.Do(func() {
-		prepend = gopurs_runtime.Func3(Call_prepend)
+		prepend = gopurs_runtime.Func3(func(dictApplicative_0_box gopurs_runtime.Value, h_1_box gopurs_runtime.Value, t_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_prepend(dictApplicative_0_box, h_1_box, t_2_box)
+})
 	})
 	return prepend
 }
@@ -283,7 +295,7 @@ func Get_nil() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictApplicative_0 gopurs_runtime.Value = dictApplicative_0_loop
 _ = dictApplicative_0
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0_loop, "pure"), gopurs_runtime.Constructor0("Done"))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "pure"), gopurs_runtime.Constructor0("Done"))
 }()
 })
 	})
@@ -298,10 +310,10 @@ func Get_singleton() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictApplicative_0 gopurs_runtime.Value = dictApplicative_0_loop
 _ = dictApplicative_0
-nil1_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0_loop, "pure"), gopurs_runtime.Constructor0("Done"))
+nil1_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "pure"), gopurs_runtime.Constructor0("Done"))
 _ = nil1_1_0
 return gopurs_runtime.Func(func(a_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0_loop, "pure"), gopurs_runtime.Constructor2("Yield", a_2, gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "pure"), gopurs_runtime.Constructor2("Yield", a_2, gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return nil1_1_0
 }))))
 })
@@ -322,9 +334,9 @@ for {
 if false { continue take }
 var dictApplicative_0 gopurs_runtime.Value = dictApplicative_0_loop
 _ = dictApplicative_0
-nil1_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0_loop, "pure"), gopurs_runtime.Constructor0("Done"))
+nil1_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "pure"), gopurs_runtime.Constructor0("Done"))
 _ = nil1_1_0
-__local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0_loop, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{})
+__local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{})
 _ = __local_var_2_1
 return gopurs_runtime.Func2(func(v_3 gopurs_runtime.Value, v1_4 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t7 gopurs_runtime.Value
@@ -343,7 +355,7 @@ var __t2 gopurs_runtime.Value
 if gopurs_runtime.Bool(v2_5.StrVal == "Yield").IntVal != 0 {
 __local_var_6_3 := (*[1024]gopurs_runtime.Value)(v2_5.UnsafePtr)[1]
 _ = __local_var_6_3
-__local_var_7_4 := gopurs_runtime.Apply2(Get_take(), dictApplicative_0_loop, gopurs_runtime.Int(v_3.IntVal - 1))
+__local_var_7_4 := gopurs_runtime.Apply2(Get_take(), dictApplicative_0, gopurs_runtime.Int(v_3.IntVal - 1))
 _ = __local_var_7_4
 __t2 = gopurs_runtime.Constructor2("Yield", (*[1024]gopurs_runtime.Value)(v2_5.UnsafePtr)[0], gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(__local_var_7_4, gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), __local_var_6_3))
@@ -357,7 +369,7 @@ goto end_branch_2
 if gopurs_runtime.Bool(v2_5.StrVal == "Skip").IntVal != 0 {
 __local_var_6_5 := (*[1024]gopurs_runtime.Value)(v2_5.UnsafePtr)[0]
 _ = __local_var_6_5
-__local_var_7_6 := gopurs_runtime.Apply2(Get_take(), dictApplicative_0_loop, v_3)
+__local_var_7_6 := gopurs_runtime.Apply2(Get_take(), dictApplicative_0, v_3)
 _ = __local_var_7_6
 __t2 = gopurs_runtime.Constructor1("Skip", gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(__local_var_7_6, gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), __local_var_6_5))
@@ -403,15 +415,15 @@ for {
 if false { continue zipWith_prime }
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
-Applicative0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0_loop, "Applicative0"), gopurs_runtime.Value{})
+Applicative0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Applicative0"), gopurs_runtime.Value{})
 _ = Applicative0_1_0
 nil1_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Applicative0_1_0, "pure"), gopurs_runtime.Constructor0("Done"))
 _ = nil1_2_1
-Bind1_3_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0_loop, "Bind1"), gopurs_runtime.Value{})
+Bind1_3_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Bind1"), gopurs_runtime.Value{})
 _ = Bind1_3_2
 Functor0_4_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Bind1_3_2, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{})
 _ = Functor0_4_3
-uncons1_5_4 := gopurs_runtime.Apply(Get_uncons(), dictMonad_0_loop)
+uncons1_5_4 := gopurs_runtime.Apply(Get_uncons(), dictMonad_0)
 _ = uncons1_5_4
 return gopurs_runtime.Func3(func(f_6 gopurs_runtime.Value, fa_7 gopurs_runtime.Value, fb_8 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Functor0_4_3, "map"), gopurs_runtime.Func(func(x_9 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -444,7 +456,7 @@ _ = __local_var_11_6
 __local_var_12_7 := (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(ub_10.UnsafePtr)[0].UnsafePtr)[1]
 _ = __local_var_12_7
 __local_var_13_8 := gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v2_13 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply4(Get_zipWith_prime(), dictMonad_0_loop, f_6, __local_var_11_6, __local_var_12_7)
+return gopurs_runtime.Apply4(Get_zipWith_prime(), dictMonad_0, f_6, __local_var_11_6, __local_var_12_7)
 }))
 _ = __local_var_13_8
 __t5 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Functor0_4_3, "map"), gopurs_runtime.Func(func(a_14 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -478,11 +490,11 @@ func Get_zipWith() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
-zipWith_prime1_1_0 := gopurs_runtime.Apply(Get_zipWith_prime(), dictMonad_0_loop)
+zipWith_prime1_1_0 := gopurs_runtime.Apply(Get_zipWith_prime(), dictMonad_0)
 _ = zipWith_prime1_1_0
 return gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(zipWith_prime1_1_0, gopurs_runtime.Func2(func(a_3 gopurs_runtime.Value, b_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0_loop, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.Apply2(f_2, a_3, b_4))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.Apply2(f_2, a_3, b_4))
 }))
 })
 }()
@@ -506,7 +518,9 @@ var mapMaybe gopurs_runtime.Value
 var once_mapMaybe sync.Once
 func Get_mapMaybe() gopurs_runtime.Value {
 	once_mapMaybe.Do(func() {
-		mapMaybe = gopurs_runtime.Func3(Call_mapMaybe)
+		mapMaybe = gopurs_runtime.Func3(func(dictFunctor_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, v_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_mapMaybe(dictFunctor_0_box, f_1_box, v_2_box)
+})
 	})
 	return mapMaybe
 }
@@ -515,7 +529,9 @@ var iterate gopurs_runtime.Value
 var once_iterate sync.Once
 func Get_iterate() gopurs_runtime.Value {
 	once_iterate.Do(func() {
-		iterate = gopurs_runtime.Func3(Call_iterate)
+		iterate = gopurs_runtime.Func3(func(dictMonad_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_iterate(dictMonad_0_box, f_1_box, a_2_box)
+})
 	})
 	return iterate
 }
@@ -528,7 +544,7 @@ func Get_repeat() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
-return gopurs_runtime.Apply2(Get_iterate(), dictMonad_0_loop, gopurs_runtime.RecordGet(pkg_Control_Category.Get_categoryFn(), "identity"))
+return gopurs_runtime.Apply2(Get_iterate(), dictMonad_0, gopurs_runtime.RecordGet(pkg_Control_Category.Get_categoryFn(), "identity"))
 }()
 })
 	})
@@ -543,10 +559,10 @@ func Get_head() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
-uncons1_1_0 := gopurs_runtime.Apply(Get_uncons(), dictMonad_0_loop)
+uncons1_1_0 := gopurs_runtime.Apply(Get_uncons(), dictMonad_0)
 _ = uncons1_1_0
 return gopurs_runtime.Func(func(l_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0_loop, "Bind1"), gopurs_runtime.Value{}), "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Bind1"), gopurs_runtime.Value{}), "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
 if gopurs_runtime.Bool(v1_3.StrVal == "Just").IntVal != 0 {
@@ -581,13 +597,13 @@ if false { continue functorListT }
 var dictFunctor_0 gopurs_runtime.Value = dictFunctor_0_loop
 _ = dictFunctor_0
 return gopurs_runtime.RecordDict1("map", gopurs_runtime.Func2(func(f_1 gopurs_runtime.Value, v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0_loop, "map"), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
 if gopurs_runtime.Bool(v_3.StrVal == "Yield").IntVal != 0 {
 __local_var_4_1 := (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[1]
 _ = __local_var_4_1
-__local_var_5_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(Get_functorListT(), dictFunctor_0_loop), "map"), f_1)
+__local_var_5_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(Get_functorListT(), dictFunctor_0), "map"), f_1)
 _ = __local_var_5_2
 __t0 = gopurs_runtime.Constructor2("Yield", gopurs_runtime.Apply(f_1, (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[0]), gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(__local_var_5_2, gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), __local_var_4_1))
@@ -601,7 +617,7 @@ goto end_branch_0
 if gopurs_runtime.Bool(v_3.StrVal == "Skip").IntVal != 0 {
 __local_var_4_3 := (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[0]
 _ = __local_var_4_3
-__local_var_5_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(Get_functorListT(), dictFunctor_0_loop), "map"), f_1)
+__local_var_5_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(Get_functorListT(), dictFunctor_0), "map"), f_1)
 _ = __local_var_5_4
 __t0 = gopurs_runtime.Constructor1("Skip", gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(__local_var_5_4, gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), __local_var_4_3))
@@ -641,14 +657,14 @@ func Get_fromEffect() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictApplicative_0 gopurs_runtime.Value = dictApplicative_0_loop
 _ = dictApplicative_0
-nil1_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0_loop, "pure"), gopurs_runtime.Constructor0("Done"))
+nil1_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "pure"), gopurs_runtime.Constructor0("Done"))
 _ = nil1_1_0
 return gopurs_runtime.Func(func(fa_2 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_3_1 := gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return nil1_1_0
 }))
 _ = __local_var_3_1
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0_loop, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Func(func(a_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Func(func(a_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Constructor2("Yield", a_4, __local_var_3_1)
 }), fa_2)
 })
@@ -677,7 +693,7 @@ func Get_foldlRec_prime() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonadRec_0 gopurs_runtime.Value = dictMonadRec_0_loop
 _ = dictMonadRec_0
-Monad0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadRec_0_loop, "Monad0"), gopurs_runtime.Value{})
+Monad0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadRec_0, "Monad0"), gopurs_runtime.Value{})
 _ = Monad0_1_0
 __local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Applicative0"), gopurs_runtime.Value{})
 _ = __local_var_2_1
@@ -686,7 +702,7 @@ _ = __local_var_3_2
 uncons1_4_3 := gopurs_runtime.Apply(Get_uncons(), Monad0_1_0)
 _ = uncons1_4_3
 return gopurs_runtime.Func3(func(f_5 gopurs_runtime.Value, a_6 gopurs_runtime.Value, b_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadRec_0_loop, "tailRecM"), gopurs_runtime.Func(func(o_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadRec_0, "tailRecM"), gopurs_runtime.Func(func(o_8 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_9_4 := gopurs_runtime.RecordGet(o_8, "a")
 _ = __local_var_9_4
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_2, "bind"), gopurs_runtime.Apply(uncons1_4_3, gopurs_runtime.RecordGet(o_8, "b")), gopurs_runtime.Func(func(v_10 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -733,8 +749,8 @@ func Get_runListTRec() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonadRec_0 gopurs_runtime.Value = dictMonadRec_0_loop
 _ = dictMonadRec_0
-return gopurs_runtime.Apply3(Get_foldlRec_prime(), dictMonadRec_0_loop, gopurs_runtime.Func2(func(v_1 gopurs_runtime.Value, v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadRec_0_loop, "Monad0"), gopurs_runtime.Value{}), "Applicative0"), gopurs_runtime.Value{}), "pure"), pkg_Data_Unit.Get_unit())
+return gopurs_runtime.Apply3(Get_foldlRec_prime(), dictMonadRec_0, gopurs_runtime.Func2(func(v_1 gopurs_runtime.Value, v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadRec_0, "Monad0"), gopurs_runtime.Value{}), "Applicative0"), gopurs_runtime.Value{}), "pure"), pkg_Data_Unit.Get_unit())
 }), pkg_Data_Unit.Get_unit())
 }()
 })
@@ -750,14 +766,14 @@ func Get_foldlRec() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonadRec_0 gopurs_runtime.Value = dictMonadRec_0_loop
 _ = dictMonadRec_0
-Monad0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadRec_0_loop, "Monad0"), gopurs_runtime.Value{})
+Monad0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadRec_0, "Monad0"), gopurs_runtime.Value{})
 _ = Monad0_1_0
 __local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Applicative0"), gopurs_runtime.Value{})
 _ = __local_var_2_1
 uncons1_3_2 := gopurs_runtime.Apply(Get_uncons(), Monad0_1_0)
 _ = uncons1_3_2
 return gopurs_runtime.Func3(func(f_4 gopurs_runtime.Value, a_5 gopurs_runtime.Value, b_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadRec_0_loop, "tailRecM"), gopurs_runtime.Func(func(o_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadRec_0, "tailRecM"), gopurs_runtime.Func(func(o_7 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_8_3 := gopurs_runtime.RecordGet(o_7, "a")
 _ = __local_var_8_3
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Bind1"), gopurs_runtime.Value{}), "bind"), gopurs_runtime.Apply(uncons1_3_2, gopurs_runtime.RecordGet(o_7, "b")), gopurs_runtime.Func(func(v_9 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -800,9 +816,9 @@ func Get_foldl_prime() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
-__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0_loop, "Bind1"), gopurs_runtime.Value{})
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Bind1"), gopurs_runtime.Value{})
 _ = __local_var_1_0
-uncons1_2_1 := gopurs_runtime.Apply(Get_uncons(), dictMonad_0_loop)
+uncons1_2_1 := gopurs_runtime.Apply(Get_uncons(), dictMonad_0)
 _ = uncons1_2_1
 return gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var loop_4_2 gopurs_runtime.Value
@@ -812,7 +828,7 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "bind"), 
 var __t3 gopurs_runtime.Value
 {
 if gopurs_runtime.Bool(v_7.StrVal == "Nothing").IntVal != 0 {
-__t3 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0_loop, "Applicative0"), gopurs_runtime.Value{}), "pure"), b_5)
+__t3 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Applicative0"), gopurs_runtime.Value{}), "pure"), b_5)
 goto end_branch_3
 } else {
 
@@ -853,8 +869,8 @@ func Get_runListT() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
-return gopurs_runtime.Apply3(Get_foldl_prime(), dictMonad_0_loop, gopurs_runtime.Func2(func(v_1 gopurs_runtime.Value, v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0_loop, "Applicative0"), gopurs_runtime.Value{}), "pure"), pkg_Data_Unit.Get_unit())
+return gopurs_runtime.Apply3(Get_foldl_prime(), dictMonad_0, gopurs_runtime.Func2(func(v_1 gopurs_runtime.Value, v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Applicative0"), gopurs_runtime.Value{}), "pure"), pkg_Data_Unit.Get_unit())
 }), pkg_Data_Unit.Get_unit())
 }()
 })
@@ -870,17 +886,17 @@ func Get_foldl() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
-uncons1_1_0 := gopurs_runtime.Apply(Get_uncons(), dictMonad_0_loop)
+uncons1_1_0 := gopurs_runtime.Apply(Get_uncons(), dictMonad_0)
 _ = uncons1_1_0
 return gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
 var loop_3_1 gopurs_runtime.Value
 _ = loop_3_1
 loop_3_1 = gopurs_runtime.Func2(func(b_4 gopurs_runtime.Value, l_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0_loop, "Bind1"), gopurs_runtime.Value{}), "bind"), gopurs_runtime.Apply(uncons1_1_0, l_5), gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Bind1"), gopurs_runtime.Value{}), "bind"), gopurs_runtime.Apply(uncons1_1_0, l_5), gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t2 gopurs_runtime.Value
 {
 if gopurs_runtime.Bool(v_6.StrVal == "Nothing").IntVal != 0 {
-__t2 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0_loop, "Applicative0"), gopurs_runtime.Value{}), "pure"), b_4)
+__t2 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Applicative0"), gopurs_runtime.Value{}), "pure"), b_4)
 goto end_branch_2
 } else {
 
@@ -913,7 +929,9 @@ var filter gopurs_runtime.Value
 var once_filter sync.Once
 func Get_filter() gopurs_runtime.Value {
 	once_filter.Do(func() {
-		filter = gopurs_runtime.Func3(Call_filter)
+		filter = gopurs_runtime.Func3(func(dictFunctor_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, v_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_filter(dictFunctor_0_box, f_1_box, v_2_box)
+})
 	})
 	return filter
 }
@@ -929,7 +947,7 @@ for {
 if false { continue dropWhile }
 var dictApplicative_0 gopurs_runtime.Value = dictApplicative_0_loop
 _ = dictApplicative_0
-__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0_loop, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{})
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{})
 _ = __local_var_1_0
 return gopurs_runtime.Func2(func(f_2 gopurs_runtime.Value, v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "map"), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -939,7 +957,7 @@ if gopurs_runtime.Bool(v_4.StrVal == "Yield").IntVal != 0 {
 var __t2 gopurs_runtime.Value
 {
 if gopurs_runtime.Apply(f_2, (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[0]).IntVal != 0 {
-__local_var_5_3 := gopurs_runtime.Apply2(Get_dropWhile(), dictApplicative_0_loop, f_2)
+__local_var_5_3 := gopurs_runtime.Apply2(Get_dropWhile(), dictApplicative_0, f_2)
 _ = __local_var_5_3
 __t2 = gopurs_runtime.Constructor1("Skip", gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(__local_var_5_3, gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[1]))
@@ -963,7 +981,7 @@ goto end_branch_1
 if gopurs_runtime.Bool(v_4.StrVal == "Skip").IntVal != 0 {
 __local_var_5_4 := (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[0]
 _ = __local_var_5_4
-__local_var_6_5 := gopurs_runtime.Apply2(Get_dropWhile(), dictApplicative_0_loop, f_2)
+__local_var_6_5 := gopurs_runtime.Apply2(Get_dropWhile(), dictApplicative_0, f_2)
 _ = __local_var_6_5
 __t1 = gopurs_runtime.Constructor1("Skip", gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(__local_var_6_5, gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), __local_var_5_4))
@@ -1006,7 +1024,7 @@ for {
 if false { continue drop }
 var dictApplicative_0 gopurs_runtime.Value = dictApplicative_0_loop
 _ = dictApplicative_0
-__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0_loop, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{})
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{})
 _ = __local_var_1_0
 return gopurs_runtime.Func2(func(v_2 gopurs_runtime.Value, v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t6 gopurs_runtime.Value
@@ -1025,7 +1043,7 @@ var __t1 gopurs_runtime.Value
 if gopurs_runtime.Bool(v2_4.StrVal == "Yield").IntVal != 0 {
 __local_var_5_2 := (*[1024]gopurs_runtime.Value)(v2_4.UnsafePtr)[1]
 _ = __local_var_5_2
-__local_var_6_3 := gopurs_runtime.Apply2(Get_drop(), dictApplicative_0_loop, gopurs_runtime.Int(v_2.IntVal - 1))
+__local_var_6_3 := gopurs_runtime.Apply2(Get_drop(), dictApplicative_0, gopurs_runtime.Int(v_2.IntVal - 1))
 _ = __local_var_6_3
 __t1 = gopurs_runtime.Constructor1("Skip", gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(__local_var_6_3, gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), __local_var_5_2))
@@ -1039,7 +1057,7 @@ goto end_branch_1
 if gopurs_runtime.Bool(v2_4.StrVal == "Skip").IntVal != 0 {
 __local_var_5_4 := (*[1024]gopurs_runtime.Value)(v2_4.UnsafePtr)[0]
 _ = __local_var_5_4
-__local_var_6_5 := gopurs_runtime.Apply2(Get_drop(), dictApplicative_0_loop, v_2)
+__local_var_6_5 := gopurs_runtime.Apply2(Get_drop(), dictApplicative_0, v_2)
 _ = __local_var_6_5
 __t1 = gopurs_runtime.Constructor1("Skip", gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(__local_var_6_5, gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), __local_var_5_4))
@@ -1078,7 +1096,9 @@ var cons gopurs_runtime.Value
 var once_cons sync.Once
 func Get_cons() gopurs_runtime.Value {
 	once_cons.Do(func() {
-		cons = gopurs_runtime.Func3(Call_cons)
+		cons = gopurs_runtime.Func3(func(dictApplicative_0_box gopurs_runtime.Value, lh_1_box gopurs_runtime.Value, t_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_cons(dictApplicative_0_box, lh_1_box, t_2_box)
+})
 	})
 	return cons
 }
@@ -1091,7 +1111,7 @@ func Get_unfoldable1ListT() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
-Applicative0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0_loop, "Applicative0"), gopurs_runtime.Value{})
+Applicative0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Applicative0"), gopurs_runtime.Value{})
 _ = Applicative0_1_0
 singleton1_2_1 := gopurs_runtime.Apply(Get_singleton(), Applicative0_1_0)
 _ = singleton1_2_1
@@ -1146,11 +1166,11 @@ func Get_unfoldableListT() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
-Applicative0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0_loop, "Applicative0"), gopurs_runtime.Value{})
+Applicative0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Applicative0"), gopurs_runtime.Value{})
 _ = Applicative0_1_0
 nil1_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Applicative0_1_0, "pure"), gopurs_runtime.Constructor0("Done"))
 _ = nil1_2_1
-unfoldable1ListT1_3_2 := gopurs_runtime.Apply(Get_unfoldable1ListT(), dictMonad_0_loop)
+unfoldable1ListT1_3_2 := gopurs_runtime.Apply(Get_unfoldable1ListT(), dictMonad_0)
 _ = unfoldable1ListT1_3_2
 return gopurs_runtime.RecordDict2("unfoldr", "Unfoldable10", gopurs_runtime.Func2(func(f_4 gopurs_runtime.Value, b_5 gopurs_runtime.Value) gopurs_runtime.Value {
 var go__6_3 gopurs_runtime.Value
@@ -1205,7 +1225,7 @@ func Get_semigroupListT() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictApplicative_0 gopurs_runtime.Value = dictApplicative_0_loop
 _ = dictApplicative_0
-return gopurs_runtime.RecordDict1("append", gopurs_runtime.Apply(Get_concat(), dictApplicative_0_loop))
+return gopurs_runtime.RecordDict1("append", gopurs_runtime.Apply(Get_concat(), dictApplicative_0))
 }()
 })
 	})
@@ -1220,7 +1240,7 @@ func Get_concat() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictApplicative_0 gopurs_runtime.Value = dictApplicative_0_loop
 _ = dictApplicative_0
-__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0_loop, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{})
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{})
 _ = __local_var_1_0
 return gopurs_runtime.Func2(func(x_2 gopurs_runtime.Value, y_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "map"), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -1230,7 +1250,7 @@ if gopurs_runtime.Bool(v_4.StrVal == "Yield").IntVal != 0 {
 __local_var_5_2 := (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[1]
 _ = __local_var_5_2
 __t1 = gopurs_runtime.Constructor2("Yield", (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[0], gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(Get_concat(), dictApplicative_0_loop, gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), __local_var_5_2), y_3)
+return gopurs_runtime.Apply3(Get_concat(), dictApplicative_0, gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), __local_var_5_2), y_3)
 })))
 goto end_branch_1
 } else {
@@ -1242,7 +1262,7 @@ if gopurs_runtime.Bool(v_4.StrVal == "Skip").IntVal != 0 {
 __local_var_5_3 := (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[0]
 _ = __local_var_5_3
 __t1 = gopurs_runtime.Constructor1("Skip", gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(Get_concat(), dictApplicative_0_loop, gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), __local_var_5_3), y_3)
+return gopurs_runtime.Apply3(Get_concat(), dictApplicative_0, gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), __local_var_5_3), y_3)
 })))
 goto end_branch_1
 } else {
@@ -1280,9 +1300,9 @@ func Get_monoidListT() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictApplicative_0 gopurs_runtime.Value = dictApplicative_0_loop
 _ = dictApplicative_0
-semigroupListT1_1_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Apply(Get_concat(), dictApplicative_0_loop))
+semigroupListT1_1_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Apply(Get_concat(), dictApplicative_0))
 _ = semigroupListT1_1_0
-return gopurs_runtime.RecordDict2("mempty", "Semigroup0", gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0_loop, "pure"), gopurs_runtime.Constructor0("Done")), gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict2("mempty", "Semigroup0", gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "pure"), gopurs_runtime.Constructor0("Done")), gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return semigroupListT1_1_0
 }))
 }()
@@ -1299,7 +1319,7 @@ func Get_catMaybes() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictFunctor_0 gopurs_runtime.Value = dictFunctor_0_loop
 _ = dictFunctor_0
-return gopurs_runtime.Apply2(Get_mapMaybe(), dictFunctor_0_loop, gopurs_runtime.RecordGet(pkg_Control_Category.Get_categoryFn(), "identity"))
+return gopurs_runtime.Apply2(Get_mapMaybe(), dictFunctor_0, gopurs_runtime.RecordGet(pkg_Control_Category.Get_categoryFn(), "identity"))
 }()
 })
 	})
@@ -1315,9 +1335,9 @@ return func() gopurs_runtime.Value {
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
 return gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_applicativeListT(), dictMonad_0_loop)
+return gopurs_runtime.Apply(Get_applicativeListT(), dictMonad_0)
 }), gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_bindListT(), dictMonad_0_loop)
+return gopurs_runtime.Apply(Get_bindListT(), dictMonad_0)
 }))
 }()
 })
@@ -1333,9 +1353,9 @@ func Get_bindListT() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
-append_1_0 := gopurs_runtime.Apply(Get_concat(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0_loop, "Applicative0"), gopurs_runtime.Value{}))
+append_1_0 := gopurs_runtime.Apply(Get_concat(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Applicative0"), gopurs_runtime.Value{}))
 _ = append_1_0
-__local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0_loop, "Bind1"), gopurs_runtime.Value{}), "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{})
+__local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Bind1"), gopurs_runtime.Value{}), "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{})
 _ = __local_var_2_1
 return gopurs_runtime.RecordDict2("bind", "Apply0", gopurs_runtime.Func2(func(fa_3 gopurs_runtime.Value, f_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_1, "map"), gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -1347,7 +1367,7 @@ _ = __local_var_6_3
 __local_var_7_4 := (*[1024]gopurs_runtime.Value)(v_5.UnsafePtr)[1]
 _ = __local_var_7_4
 __t2 = gopurs_runtime.Constructor1("Skip", gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(append_1_0, gopurs_runtime.Apply(f_4, __local_var_6_3), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(Get_bindListT(), dictMonad_0_loop), "bind"), gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), __local_var_7_4), f_4))
+return gopurs_runtime.Apply2(append_1_0, gopurs_runtime.Apply(f_4, __local_var_6_3), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(Get_bindListT(), dictMonad_0), "bind"), gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), __local_var_7_4), f_4))
 })))
 goto end_branch_2
 } else {
@@ -1359,7 +1379,7 @@ if gopurs_runtime.Bool(v_5.StrVal == "Skip").IntVal != 0 {
 __local_var_6_5 := (*[1024]gopurs_runtime.Value)(v_5.UnsafePtr)[0]
 _ = __local_var_6_5
 __t2 = gopurs_runtime.Constructor1("Skip", gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(Get_bindListT(), dictMonad_0_loop), "bind"), gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), __local_var_6_5), f_4)
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(Get_bindListT(), dictMonad_0), "bind"), gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), __local_var_6_5), f_4)
 })))
 goto end_branch_2
 } else {
@@ -1381,7 +1401,7 @@ end_branch_2:
 return __t2
 }), fa_3)
 }), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_applyListT(), dictMonad_0_loop)
+return gopurs_runtime.Apply(Get_applyListT(), dictMonad_0)
 }))
 }()
 })
@@ -1397,14 +1417,14 @@ func Get_applyListT() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
-functorListT1_1_0 := gopurs_runtime.Apply(Get_functorListT(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0_loop, "Bind1"), gopurs_runtime.Value{}), "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}))
+functorListT1_1_0 := gopurs_runtime.Apply(Get_functorListT(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Bind1"), gopurs_runtime.Value{}), "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}))
 _ = functorListT1_1_0
-__local_var_2_1 := gopurs_runtime.Apply(Get_bindListT(), dictMonad_0_loop)
+__local_var_2_1 := gopurs_runtime.Apply(Get_bindListT(), dictMonad_0)
 _ = __local_var_2_1
 return gopurs_runtime.RecordDict2("apply", "Functor0", gopurs_runtime.Func2(func(f_3 gopurs_runtime.Value, a_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_1, "bind"), f_3, gopurs_runtime.Func(func(f_prime_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_1, "bind"), a_4, gopurs_runtime.Func(func(a_prime_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(Get_applicativeListT(), dictMonad_0_loop), "pure"), gopurs_runtime.Apply(f_prime_5, a_prime_6))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(Get_applicativeListT(), dictMonad_0), "pure"), gopurs_runtime.Apply(f_prime_5, a_prime_6))
 }))
 }))
 }), gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -1424,8 +1444,8 @@ func Get_applicativeListT() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
-return gopurs_runtime.RecordDict2("pure", "Apply0", gopurs_runtime.Apply(Get_singleton(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0_loop, "Applicative0"), gopurs_runtime.Value{})), gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_applyListT(), dictMonad_0_loop)
+return gopurs_runtime.RecordDict2("pure", "Apply0", gopurs_runtime.Apply(Get_singleton(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Applicative0"), gopurs_runtime.Value{})), gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(Get_applyListT(), dictMonad_0)
 }))
 }()
 })
@@ -1441,7 +1461,7 @@ func Get_monadEffectListT() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonadEffect_0 gopurs_runtime.Value = dictMonadEffect_0_loop
 _ = dictMonadEffect_0
-Monad0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0_loop, "Monad0"), gopurs_runtime.Value{})
+Monad0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "Monad0"), gopurs_runtime.Value{})
 _ = Monad0_1_0
 monadListT1_2_1 := gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict2("pure", "Apply0", gopurs_runtime.Apply(Get_singleton(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Applicative0"), gopurs_runtime.Value{})), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -1454,7 +1474,7 @@ _ = monadListT1_2_1
 __local_var_3_2 := gopurs_runtime.Apply(Get_fromEffect(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Applicative0"), gopurs_runtime.Value{}))
 _ = __local_var_3_2
 return gopurs_runtime.RecordDict2("liftEffect", "Monad0", gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(__local_var_3_2, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0_loop, "liftEffect"), x_4))
+return gopurs_runtime.Apply(__local_var_3_2, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), x_4))
 }), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return monadListT1_2_1
 }))
@@ -1472,7 +1492,7 @@ func Get_monadSTListT() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonadST_0 gopurs_runtime.Value = dictMonadST_0_loop
 _ = dictMonadST_0
-Monad0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadST_0_loop, "Monad0"), gopurs_runtime.Value{})
+Monad0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadST_0, "Monad0"), gopurs_runtime.Value{})
 _ = Monad0_1_0
 monadListT1_2_1 := gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict2("pure", "Apply0", gopurs_runtime.Apply(Get_singleton(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Applicative0"), gopurs_runtime.Value{})), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -1485,7 +1505,7 @@ _ = monadListT1_2_1
 __local_var_3_2 := gopurs_runtime.Apply(Get_fromEffect(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Applicative0"), gopurs_runtime.Value{}))
 _ = __local_var_3_2
 return gopurs_runtime.RecordDict2("liftST", "Monad0", gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(__local_var_3_2, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadST_0_loop, "liftST"), x_4))
+return gopurs_runtime.Apply(__local_var_3_2, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadST_0, "liftST"), x_4))
 }), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return monadListT1_2_1
 }))
@@ -1503,9 +1523,9 @@ func Get_altListT() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictApplicative_0 gopurs_runtime.Value = dictApplicative_0_loop
 _ = dictApplicative_0
-functorListT1_1_0 := gopurs_runtime.Apply(Get_functorListT(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0_loop, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}))
+functorListT1_1_0 := gopurs_runtime.Apply(Get_functorListT(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}))
 _ = functorListT1_1_0
-return gopurs_runtime.RecordDict2("alt", "Functor0", gopurs_runtime.Apply(Get_concat(), dictApplicative_0_loop), gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict2("alt", "Functor0", gopurs_runtime.Apply(Get_concat(), dictApplicative_0), gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return functorListT1_1_0
 }))
 }()
@@ -1522,7 +1542,7 @@ func Get_plusListT() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
-Applicative0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0_loop, "Applicative0"), gopurs_runtime.Value{})
+Applicative0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Applicative0"), gopurs_runtime.Value{})
 _ = Applicative0_1_0
 altListT1_2_1 := gopurs_runtime.Apply(Get_altListT(), Applicative0_1_0)
 _ = altListT1_2_1
@@ -1543,11 +1563,11 @@ func Get_alternativeListT() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
-applicativeListT1_1_0 := gopurs_runtime.RecordDict2("pure", "Apply0", gopurs_runtime.Apply(Get_singleton(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0_loop, "Applicative0"), gopurs_runtime.Value{})), gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_applyListT(), dictMonad_0_loop)
+applicativeListT1_1_0 := gopurs_runtime.RecordDict2("pure", "Apply0", gopurs_runtime.Apply(Get_singleton(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Applicative0"), gopurs_runtime.Value{})), gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(Get_applyListT(), dictMonad_0)
 }))
 _ = applicativeListT1_1_0
-plusListT1_2_1 := gopurs_runtime.Apply(Get_plusListT(), dictMonad_0_loop)
+plusListT1_2_1 := gopurs_runtime.Apply(Get_plusListT(), dictMonad_0)
 _ = plusListT1_2_1
 return gopurs_runtime.RecordDict2("Applicative0", "Plus1", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return applicativeListT1_1_0
@@ -1569,14 +1589,14 @@ return func() gopurs_runtime.Value {
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
 monadListT1_1_0 := gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict2("pure", "Apply0", gopurs_runtime.Apply(Get_singleton(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0_loop, "Applicative0"), gopurs_runtime.Value{})), gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_applyListT(), dictMonad_0_loop)
+return gopurs_runtime.RecordDict2("pure", "Apply0", gopurs_runtime.Apply(Get_singleton(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Applicative0"), gopurs_runtime.Value{})), gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(Get_applyListT(), dictMonad_0)
 }))
 }), gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_bindListT(), dictMonad_0_loop)
+return gopurs_runtime.Apply(Get_bindListT(), dictMonad_0)
 }))
 _ = monadListT1_1_0
-alternativeListT1_2_1 := gopurs_runtime.Apply(Get_alternativeListT(), dictMonad_0_loop)
+alternativeListT1_2_1 := gopurs_runtime.Apply(Get_alternativeListT(), dictMonad_0)
 _ = alternativeListT1_2_1
 return gopurs_runtime.RecordDict2("Monad0", "Alternative1", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return monadListT1_1_0
@@ -1594,7 +1614,7 @@ var dictApplicative_0 gopurs_runtime.Value = dictApplicative_0_loop
 _ = dictApplicative_0
 var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0_loop, "pure"), gopurs_runtime.Constructor1("Skip", v_1_loop))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "pure"), gopurs_runtime.Constructor1("Skip", v_1))
 }
 
 func Call_wrapEffect(dictFunctor_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -1602,11 +1622,11 @@ var dictFunctor_0 gopurs_runtime.Value = dictFunctor_0_loop
 _ = dictFunctor_0
 var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0_loop, "map"), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Constructor1("Skip", gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return x_2
 })))
-}), v_1_loop)
+}), v_1)
 }
 
 func Call_unfold(dictMonad_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value, z_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -1619,14 +1639,14 @@ var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
 var z_2 gopurs_runtime.Value = z_2_loop
 _ = z_2
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0_loop, "Bind1"), gopurs_runtime.Value{}), "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Bind1"), gopurs_runtime.Value{}), "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
 if gopurs_runtime.Bool(v_3.StrVal == "Just").IntVal != 0 {
 __local_var_4_1 := (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[0].UnsafePtr)[0]
 _ = __local_var_4_1
 __t0 = gopurs_runtime.Constructor2("Yield", (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[0].UnsafePtr)[1], gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_unfold(dictMonad_0_loop, f_1_loop, __local_var_4_1)
+return Call_unfold(dictMonad_0, f_1, __local_var_4_1)
 })))
 goto end_branch_0
 } else {
@@ -1646,7 +1666,7 @@ __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_0:
 return __t0
-}), gopurs_runtime.Apply(f_1_loop, z_2_loop))
+}), gopurs_runtime.Apply(f_1, z_2))
 }
 }
 
@@ -1659,14 +1679,14 @@ var b_2 gopurs_runtime.Value = b_2_loop
 _ = b_2
 var l_3 gopurs_runtime.Value = l_3_loop
 _ = l_3
-return Call_unfold(dictMonad_0_loop, gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_unfold(dictMonad_0, gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_5_0 := (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[0]
 _ = __local_var_5_0
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0_loop, "Bind1"), gopurs_runtime.Value{}), "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Func(func(v1_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Bind1"), gopurs_runtime.Value{}), "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Func(func(v1_6 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
 if gopurs_runtime.Bool(v1_6.StrVal == "Yield").IntVal != 0 {
-__t1 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply2(f_1_loop, __local_var_5_0, (*[1024]gopurs_runtime.Value)(v1_6.UnsafePtr)[0]), gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), (*[1024]gopurs_runtime.Value)(v1_6.UnsafePtr)[1])), __local_var_5_0))
+__t1 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply2(f_1, __local_var_5_0, (*[1024]gopurs_runtime.Value)(v1_6.UnsafePtr)[0]), gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), (*[1024]gopurs_runtime.Value)(v1_6.UnsafePtr)[1])), __local_var_5_0))
 goto end_branch_1
 } else {
 
@@ -1694,7 +1714,7 @@ __t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 end_branch_1:
 return __t1
 }), (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[1])
-}), gopurs_runtime.Constructor2("Tuple", b_2_loop, l_3_loop))
+}), gopurs_runtime.Constructor2("Tuple", b_2, l_3))
 }
 
 func Call_prepend_prime(dictApplicative_0_loop gopurs_runtime.Value, h_1_loop gopurs_runtime.Value, t_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -1704,7 +1724,7 @@ var h_1 gopurs_runtime.Value = h_1_loop
 _ = h_1
 var t_2 gopurs_runtime.Value = t_2_loop
 _ = t_2
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0_loop, "pure"), gopurs_runtime.Constructor2("Yield", h_1_loop, t_2_loop))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "pure"), gopurs_runtime.Constructor2("Yield", h_1, t_2))
 }
 
 func Call_prepend(dictApplicative_0_loop gopurs_runtime.Value, h_1_loop gopurs_runtime.Value, t_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -1714,8 +1734,8 @@ var h_1 gopurs_runtime.Value = h_1_loop
 _ = h_1
 var t_2 gopurs_runtime.Value = t_2_loop
 _ = t_2
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0_loop, "pure"), gopurs_runtime.Constructor2("Yield", h_1_loop, gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return t_2_loop
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "pure"), gopurs_runtime.Constructor2("Yield", h_1, gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return t_2
 }))))
 }
 
@@ -1729,16 +1749,16 @@ var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
 var v_2 gopurs_runtime.Value = v_2_loop
 _ = v_2
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0_loop, "map"), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
 if gopurs_runtime.Bool(v_3.StrVal == "Yield").IntVal != 0 {
-__local_var_4_1 := gopurs_runtime.Apply(f_1_loop, (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[0])
+__local_var_4_1 := gopurs_runtime.Apply(f_1, (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[0])
 _ = __local_var_4_1
 var __t3 gopurs_runtime.Value
 {
 if gopurs_runtime.Bool(__local_var_4_1.StrVal == "Just").IntVal != 0 {
-__local_var_5_4 := gopurs_runtime.Apply2(Get_mapMaybe(), dictFunctor_0_loop, f_1_loop)
+__local_var_5_4 := gopurs_runtime.Apply2(Get_mapMaybe(), dictFunctor_0, f_1)
 _ = __local_var_5_4
 __t3 = gopurs_runtime.Constructor2("Yield", (*[1024]gopurs_runtime.Value)(__local_var_4_1.UnsafePtr)[0], gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(__local_var_5_4, gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[1]))
@@ -1749,7 +1769,7 @@ goto end_branch_3
 }
 }
 {
-__local_var_5_2 := gopurs_runtime.Apply2(Get_mapMaybe(), dictFunctor_0_loop, f_1_loop)
+__local_var_5_2 := gopurs_runtime.Apply2(Get_mapMaybe(), dictFunctor_0, f_1)
 _ = __local_var_5_2
 __t3 = gopurs_runtime.Constructor1("Skip", gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(__local_var_5_2, gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[1]))
@@ -1766,7 +1786,7 @@ goto end_branch_0
 if gopurs_runtime.Bool(v_3.StrVal == "Skip").IntVal != 0 {
 __local_var_4_5 := (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[0]
 _ = __local_var_4_5
-__local_var_5_6 := gopurs_runtime.Apply2(Get_mapMaybe(), dictFunctor_0_loop, f_1_loop)
+__local_var_5_6 := gopurs_runtime.Apply2(Get_mapMaybe(), dictFunctor_0, f_1)
 _ = __local_var_5_6
 __t0 = gopurs_runtime.Constructor1("Skip", gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(__local_var_5_6, gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), __local_var_4_5))
@@ -1789,7 +1809,7 @@ __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_0:
 return __t0
-}), v_2_loop)
+}), v_2)
 }
 }
 
@@ -1800,9 +1820,9 @@ var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
 var a_2 gopurs_runtime.Value = a_2_loop
 _ = a_2
-return Call_unfold(dictMonad_0_loop, gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0_loop, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.Constructor1("Just", gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply(f_1_loop, x_3), x_3)))
-}), a_2_loop)
+return Call_unfold(dictMonad_0, gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.Constructor1("Just", gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply(f_1, x_3), x_3)))
+}), a_2)
 }
 
 func Call_filter(dictFunctor_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value, v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -1815,13 +1835,13 @@ var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
 var v_2 gopurs_runtime.Value = v_2_loop
 _ = v_2
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0_loop, "map"), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
 if gopurs_runtime.Bool(v_3.StrVal == "Yield").IntVal != 0 {
 __local_var_4_1 := (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[1]
 _ = __local_var_4_1
-__local_var_5_2 := gopurs_runtime.Apply2(Get_filter(), dictFunctor_0_loop, f_1_loop)
+__local_var_5_2 := gopurs_runtime.Apply2(Get_filter(), dictFunctor_0, f_1)
 _ = __local_var_5_2
 s_prime_6_3 := gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(__local_var_5_2, gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), __local_var_4_1))
@@ -1829,7 +1849,7 @@ return gopurs_runtime.Apply(__local_var_5_2, gopurs_runtime.Apply(pkg_Data_Lazy.
 _ = s_prime_6_3
 var __t4 gopurs_runtime.Value
 {
-if gopurs_runtime.Apply(f_1_loop, (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[0]).IntVal != 0 {
+if gopurs_runtime.Apply(f_1, (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[0]).IntVal != 0 {
 __t4 = gopurs_runtime.Constructor2("Yield", (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[0], s_prime_6_3)
 goto end_branch_4
 } else {
@@ -1850,7 +1870,7 @@ goto end_branch_0
 if gopurs_runtime.Bool(v_3.StrVal == "Skip").IntVal != 0 {
 __local_var_4_5 := (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[0]
 _ = __local_var_4_5
-__local_var_5_6 := gopurs_runtime.Apply2(Get_filter(), dictFunctor_0_loop, f_1_loop)
+__local_var_5_6 := gopurs_runtime.Apply2(Get_filter(), dictFunctor_0, f_1)
 _ = __local_var_5_6
 __t0 = gopurs_runtime.Constructor1("Skip", gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(__local_var_5_6, gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), __local_var_4_5))
@@ -1873,7 +1893,7 @@ __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_0:
 return __t0
-}), v_2_loop)
+}), v_2)
 }
 }
 
@@ -1884,7 +1904,7 @@ var lh_1 gopurs_runtime.Value = lh_1_loop
 _ = lh_1
 var t_2 gopurs_runtime.Value = t_2_loop
 _ = t_2
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0_loop, "pure"), gopurs_runtime.Constructor2("Yield", gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), lh_1_loop), t_2_loop))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "pure"), gopurs_runtime.Constructor2("Yield", gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), lh_1), t_2))
 }
 
 

@@ -45,7 +45,7 @@ var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.RecordGet(v_0_loop, "global").IntVal != 0 {
+if gopurs_runtime.RecordGet(v_0, "global").IntVal != 0 {
 __t0 = gopurs_runtime.Str("g")
 goto end_branch_0
 } else {
@@ -58,7 +58,7 @@ __t0 = gopurs_runtime.Str("")
 end_branch_0:
 var __t1 gopurs_runtime.Value
 {
-if gopurs_runtime.RecordGet(v_0_loop, "ignoreCase").IntVal != 0 {
+if gopurs_runtime.RecordGet(v_0, "ignoreCase").IntVal != 0 {
 __t1 = gopurs_runtime.Str("i")
 goto end_branch_1
 } else {
@@ -71,7 +71,7 @@ __t1 = gopurs_runtime.Str("")
 end_branch_1:
 var __t2 gopurs_runtime.Value
 {
-if gopurs_runtime.RecordGet(v_0_loop, "multiline").IntVal != 0 {
+if gopurs_runtime.RecordGet(v_0, "multiline").IntVal != 0 {
 __t2 = gopurs_runtime.Str("m")
 goto end_branch_2
 } else {
@@ -84,7 +84,7 @@ __t2 = gopurs_runtime.Str("")
 end_branch_2:
 var __t3 gopurs_runtime.Value
 {
-if gopurs_runtime.RecordGet(v_0_loop, "dotAll").IntVal != 0 {
+if gopurs_runtime.RecordGet(v_0, "dotAll").IntVal != 0 {
 __t3 = gopurs_runtime.Str("s")
 goto end_branch_3
 } else {
@@ -97,7 +97,7 @@ __t3 = gopurs_runtime.Str("")
 end_branch_3:
 var __t4 gopurs_runtime.Value
 {
-if gopurs_runtime.RecordGet(v_0_loop, "sticky").IntVal != 0 {
+if gopurs_runtime.RecordGet(v_0, "sticky").IntVal != 0 {
 __t4 = gopurs_runtime.Str("y")
 goto end_branch_4
 } else {
@@ -110,7 +110,7 @@ __t4 = gopurs_runtime.Str("")
 end_branch_4:
 var __t5 gopurs_runtime.Value
 {
-if gopurs_runtime.RecordGet(v_0_loop, "unicode").IntVal != 0 {
+if gopurs_runtime.RecordGet(v_0, "unicode").IntVal != 0 {
 __t5 = gopurs_runtime.Str("u")
 goto end_branch_5
 } else {
@@ -132,7 +132,9 @@ var regex gopurs_runtime.Value
 var once_regex sync.Once
 func Get_regex() gopurs_runtime.Value {
 	once_regex.Do(func() {
-		regex = gopurs_runtime.Func2(Call_regex)
+		regex = gopurs_runtime.Func2(func(s_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_regex(s_0_box, f_1_box)
+})
 	})
 	return regex
 }
@@ -145,7 +147,7 @@ func Get_parseFlags() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var s_0 gopurs_runtime.Value = s_0_loop
 _ = s_0
-return gopurs_runtime.RecordDict([]string{"global", "ignoreCase", "multiline", "dotAll", "sticky", "unicode"}, []gopurs_runtime.Value{gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_contains(), gopurs_runtime.Str("g"), s_0_loop), gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_contains(), gopurs_runtime.Str("i"), s_0_loop), gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_contains(), gopurs_runtime.Str("m"), s_0_loop), gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_contains(), gopurs_runtime.Str("s"), s_0_loop), gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_contains(), gopurs_runtime.Str("y"), s_0_loop), gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_contains(), gopurs_runtime.Str("u"), s_0_loop)})
+return gopurs_runtime.RecordDict([]string{"global", "ignoreCase", "multiline", "dotAll", "sticky", "unicode"}, []gopurs_runtime.Value{gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_contains(), gopurs_runtime.Str("g"), s_0), gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_contains(), gopurs_runtime.Str("i"), s_0), gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_contains(), gopurs_runtime.Str("m"), s_0), gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_contains(), gopurs_runtime.Str("s"), s_0), gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_contains(), gopurs_runtime.Str("y"), s_0), gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_contains(), gopurs_runtime.Str("u"), s_0)})
 }()
 })
 	})
@@ -169,7 +171,7 @@ func Get_flags() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
-return gopurs_runtime.Apply(Get_flagsImpl(), x_0_loop)
+return gopurs_runtime.Apply(Get_flagsImpl(), x_0)
 }()
 })
 	})
@@ -183,7 +185,7 @@ var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.RecordGet(f_1_loop, "global").IntVal != 0 {
+if gopurs_runtime.RecordGet(f_1, "global").IntVal != 0 {
 __t0 = gopurs_runtime.Str("g")
 goto end_branch_0
 } else {
@@ -196,7 +198,7 @@ __t0 = gopurs_runtime.Str("")
 end_branch_0:
 var __t1 gopurs_runtime.Value
 {
-if gopurs_runtime.RecordGet(f_1_loop, "ignoreCase").IntVal != 0 {
+if gopurs_runtime.RecordGet(f_1, "ignoreCase").IntVal != 0 {
 __t1 = gopurs_runtime.Str("i")
 goto end_branch_1
 } else {
@@ -209,7 +211,7 @@ __t1 = gopurs_runtime.Str("")
 end_branch_1:
 var __t2 gopurs_runtime.Value
 {
-if gopurs_runtime.RecordGet(f_1_loop, "multiline").IntVal != 0 {
+if gopurs_runtime.RecordGet(f_1, "multiline").IntVal != 0 {
 __t2 = gopurs_runtime.Str("m")
 goto end_branch_2
 } else {
@@ -222,7 +224,7 @@ __t2 = gopurs_runtime.Str("")
 end_branch_2:
 var __t3 gopurs_runtime.Value
 {
-if gopurs_runtime.RecordGet(f_1_loop, "dotAll").IntVal != 0 {
+if gopurs_runtime.RecordGet(f_1, "dotAll").IntVal != 0 {
 __t3 = gopurs_runtime.Str("s")
 goto end_branch_3
 } else {
@@ -235,7 +237,7 @@ __t3 = gopurs_runtime.Str("")
 end_branch_3:
 var __t4 gopurs_runtime.Value
 {
-if gopurs_runtime.RecordGet(f_1_loop, "sticky").IntVal != 0 {
+if gopurs_runtime.RecordGet(f_1, "sticky").IntVal != 0 {
 __t4 = gopurs_runtime.Str("y")
 goto end_branch_4
 } else {
@@ -248,7 +250,7 @@ __t4 = gopurs_runtime.Str("")
 end_branch_4:
 var __t5 gopurs_runtime.Value
 {
-if gopurs_runtime.RecordGet(f_1_loop, "unicode").IntVal != 0 {
+if gopurs_runtime.RecordGet(f_1, "unicode").IntVal != 0 {
 __t5 = gopurs_runtime.Str("u")
 goto end_branch_5
 } else {
@@ -259,7 +261,7 @@ goto end_branch_5
 __t5 = gopurs_runtime.Str("")
 }
 end_branch_5:
-return gopurs_runtime.Apply4(Get_regexImpl(), pkg_Data_Either.Get_Left(), pkg_Data_Either.Get_Right(), s_0_loop, gopurs_runtime.Str(__t0.StrVal + __t1.StrVal + __t2.StrVal + __t3.StrVal + __t4.StrVal + __t5.StrVal))
+return gopurs_runtime.Apply4(Get_regexImpl(), pkg_Data_Either.Get_Left(), pkg_Data_Either.Get_Right(), s_0, gopurs_runtime.Str(__t0.StrVal + __t1.StrVal + __t2.StrVal + __t3.StrVal + __t4.StrVal + __t5.StrVal))
 }
 
 func Get__match() gopurs_runtime.Value {

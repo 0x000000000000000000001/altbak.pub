@@ -32,7 +32,9 @@ var commutativeRingRecordCons gopurs_runtime.Value
 var once_commutativeRingRecordCons sync.Once
 func Get_commutativeRingRecordCons() gopurs_runtime.Value {
 	once_commutativeRingRecordCons.Do(func() {
-		commutativeRingRecordCons = gopurs_runtime.Func3(Call_commutativeRingRecordCons)
+		commutativeRingRecordCons = gopurs_runtime.Func3(func(dictIsSymbol_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, dictCommutativeRingRecord_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_commutativeRingRecordCons(dictIsSymbol_0_box, _dollar__unused_1_box, dictCommutativeRingRecord_2_box)
+})
 	})
 	return commutativeRingRecordCons
 }
@@ -41,7 +43,9 @@ var commutativeRingRecord gopurs_runtime.Value
 var once_commutativeRingRecord sync.Once
 func Get_commutativeRingRecord() gopurs_runtime.Value {
 	once_commutativeRingRecord.Do(func() {
-		commutativeRingRecord = gopurs_runtime.Func2(Call_commutativeRingRecord)
+		commutativeRingRecord = gopurs_runtime.Func2(func(_dollar__unused_0_box gopurs_runtime.Value, dictCommutativeRingRecord_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_commutativeRingRecord(_dollar__unused_0_box, dictCommutativeRingRecord_1_box)
+})
 	})
 	return commutativeRingRecord
 }
@@ -87,7 +91,7 @@ func Get_commutativeRingFn() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictCommutativeRing_0 gopurs_runtime.Value = dictCommutativeRing_0_loop
 _ = dictCommutativeRing_0
-__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictCommutativeRing_0_loop, "Ring0"), gopurs_runtime.Value{})
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictCommutativeRing_0, "Ring0"), gopurs_runtime.Value{})
 _ = __local_var_1_0
 __local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_0, "Semiring0"), gopurs_runtime.Value{})
 _ = __local_var_2_1
@@ -127,7 +131,7 @@ var _dollar__unused_1 gopurs_runtime.Value = _dollar__unused_1_loop
 _ = _dollar__unused_1
 var dictCommutativeRingRecord_2 gopurs_runtime.Value = dictCommutativeRingRecord_2_loop
 _ = dictCommutativeRingRecord_2
-ringRecordCons1_3_0 := gopurs_runtime.Apply3(pkg_Data_Ring.Get_ringRecordCons(), dictIsSymbol_0_loop, gopurs_runtime.Value{}, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictCommutativeRingRecord_2_loop, "RingRecord0"), gopurs_runtime.Value{}))
+ringRecordCons1_3_0 := gopurs_runtime.Apply3(pkg_Data_Ring.Get_ringRecordCons(), dictIsSymbol_0, gopurs_runtime.Value{}, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictCommutativeRingRecord_2, "RingRecord0"), gopurs_runtime.Value{}))
 _ = ringRecordCons1_3_0
 return gopurs_runtime.Func(func(dictCommutativeRing_4 gopurs_runtime.Value) gopurs_runtime.Value {
 ringRecordCons2_5_1 := gopurs_runtime.Apply(ringRecordCons1_3_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictCommutativeRing_4, "Ring0"), gopurs_runtime.Value{}))
@@ -143,7 +147,7 @@ var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
 var dictCommutativeRingRecord_1 gopurs_runtime.Value = dictCommutativeRingRecord_1_loop
 _ = dictCommutativeRingRecord_1
-__local_var_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictCommutativeRingRecord_1_loop, "RingRecord0"), gopurs_runtime.Value{})
+__local_var_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictCommutativeRingRecord_1, "RingRecord0"), gopurs_runtime.Value{})
 _ = __local_var_2_0
 __local_var_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_0, "SemiringRecord0"), gopurs_runtime.Value{})
 _ = __local_var_3_1

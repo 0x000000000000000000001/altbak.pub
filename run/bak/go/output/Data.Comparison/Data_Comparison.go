@@ -13,7 +13,7 @@ func Get_Comparison() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
-return x_0_loop
+return x_0
 }()
 })
 	})
@@ -102,7 +102,7 @@ func Get_defaultComparison() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-return gopurs_runtime.RecordGet(dictOrd_0_loop, "compare")
+return gopurs_runtime.RecordGet(dictOrd_0, "compare")
 }()
 })
 	})

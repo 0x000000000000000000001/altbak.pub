@@ -1,6 +1,7 @@
+Compilation failed, but that's expected for now!
 === Native Go ===
-Tail Call Optimization (100k calls):
-100000
+Fibonacci:
+55
 
-Execution time: 25501.00 μs
+Execution time: 15.00 μs
 

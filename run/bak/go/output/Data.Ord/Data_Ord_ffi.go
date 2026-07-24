@@ -50,7 +50,10 @@ func OrdArrayImpl(f func(any) func(any) int, xs []any, ys []any) int {
 
 
 // --- Auto-generated FFI wrappers ---
-func Call_ordBooleanImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_ordBooleanImpl(arg0 any, arg1 any, arg2 any, arg3 bool, arg4 bool) any {
+	return OrdBooleanImpl(arg0, arg1, arg2, arg3, arg4)
+}
+var _Gopurs_OrdBooleanImpl = gopurs_runtime.Func5(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_arg1 := arg1
 	go_arg2 := arg2
@@ -58,9 +61,11 @@ func Call_ordBooleanImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, a
 	go_arg4 := gopurs_runtime.Unbox[bool](arg4)
 	go_res := OrdBooleanImpl(go_arg0, go_arg1, go_arg2, go_arg3, go_arg4)
 	return gopurs_runtime.Box(go_res)
+})
+func Call_ordIntImpl(arg0 any, arg1 any, arg2 any, arg3 int, arg4 int) any {
+	return OrdIntImpl(arg0, arg1, arg2, arg3, arg4)
 }
-var _Gopurs_OrdBooleanImpl = gopurs_runtime.Func5(Call_ordBooleanImpl)
-func Call_ordIntImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_OrdIntImpl = gopurs_runtime.Func5(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_arg1 := arg1
 	go_arg2 := arg2
@@ -68,9 +73,11 @@ func Call_ordIntImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 
 	go_arg4 := gopurs_runtime.Unbox[int](arg4)
 	go_res := OrdIntImpl(go_arg0, go_arg1, go_arg2, go_arg3, go_arg4)
 	return gopurs_runtime.Box(go_res)
+})
+func Call_ordCharImpl(arg0 any, arg1 any, arg2 any, arg3 string, arg4 string) any {
+	return OrdCharImpl(arg0, arg1, arg2, arg3, arg4)
 }
-var _Gopurs_OrdIntImpl = gopurs_runtime.Func5(Call_ordIntImpl)
-func Call_ordCharImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_OrdCharImpl = gopurs_runtime.Func5(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_arg1 := arg1
 	go_arg2 := arg2
@@ -78,9 +85,11 @@ func Call_ordCharImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2
 	go_arg4 := gopurs_runtime.Unbox[string](arg4)
 	go_res := OrdCharImpl(go_arg0, go_arg1, go_arg2, go_arg3, go_arg4)
 	return gopurs_runtime.Box(go_res)
+})
+func Call_ordStringImpl(arg0 any, arg1 any, arg2 any, arg3 string, arg4 string) any {
+	return OrdStringImpl(arg0, arg1, arg2, arg3, arg4)
 }
-var _Gopurs_OrdCharImpl = gopurs_runtime.Func5(Call_ordCharImpl)
-func Call_ordStringImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_OrdStringImpl = gopurs_runtime.Func5(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_arg1 := arg1
 	go_arg2 := arg2
@@ -88,9 +97,11 @@ func Call_ordStringImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, ar
 	go_arg4 := gopurs_runtime.Unbox[string](arg4)
 	go_res := OrdStringImpl(go_arg0, go_arg1, go_arg2, go_arg3, go_arg4)
 	return gopurs_runtime.Box(go_res)
+})
+func Call_ordNumberImpl(arg0 any, arg1 any, arg2 any, arg3 float64, arg4 float64) any {
+	return OrdNumberImpl(arg0, arg1, arg2, arg3, arg4)
 }
-var _Gopurs_OrdStringImpl = gopurs_runtime.Func5(Call_ordStringImpl)
-func Call_ordNumberImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_OrdNumberImpl = gopurs_runtime.Func5(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_arg1 := arg1
 	go_arg2 := arg2
@@ -98,9 +109,11 @@ func Call_ordNumberImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, ar
 	go_arg4 := gopurs_runtime.Unbox[float64](arg4)
 	go_res := OrdNumberImpl(go_arg0, go_arg1, go_arg2, go_arg3, go_arg4)
 	return gopurs_runtime.Box(go_res)
+})
+func Call_ordArrayImpl(arg0 func(any) func(any) int, arg1 []any, arg2 []any) int {
+	return OrdArrayImpl(arg0, arg1, arg2)
 }
-var _Gopurs_OrdNumberImpl = gopurs_runtime.Func5(Call_ordNumberImpl)
-func Call_ordArrayImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_OrdArrayImpl = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 any) func(any) int {
 			inner_res0 := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 			return func(p1_0 any) int {
@@ -116,5 +129,4 @@ func Call_ordArrayImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg
 	for i, v := range arg2_arr { go_arg2[i] = v }
 	go_res := OrdArrayImpl(go_arg0, go_arg1, go_arg2)
 	return gopurs_runtime.Box(go_res)
-}
-var _Gopurs_OrdArrayImpl = gopurs_runtime.Func3(Call_ordArrayImpl)
+})

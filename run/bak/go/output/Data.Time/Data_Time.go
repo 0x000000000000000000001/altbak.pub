@@ -41,7 +41,9 @@ var setSecond gopurs_runtime.Value
 var once_setSecond sync.Once
 func Get_setSecond() gopurs_runtime.Value {
 	once_setSecond.Do(func() {
-		setSecond = gopurs_runtime.Func2(Call_setSecond)
+		setSecond = gopurs_runtime.Func2(func(s_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_setSecond(s_0_box, v_1_box)
+})
 	})
 	return setSecond
 }
@@ -50,7 +52,9 @@ var setMinute gopurs_runtime.Value
 var once_setMinute sync.Once
 func Get_setMinute() gopurs_runtime.Value {
 	once_setMinute.Do(func() {
-		setMinute = gopurs_runtime.Func2(Call_setMinute)
+		setMinute = gopurs_runtime.Func2(func(m_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_setMinute(m_0_box, v_1_box)
+})
 	})
 	return setMinute
 }
@@ -59,7 +63,9 @@ var setMillisecond gopurs_runtime.Value
 var once_setMillisecond sync.Once
 func Get_setMillisecond() gopurs_runtime.Value {
 	once_setMillisecond.Do(func() {
-		setMillisecond = gopurs_runtime.Func2(Call_setMillisecond)
+		setMillisecond = gopurs_runtime.Func2(func(ms_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_setMillisecond(ms_0_box, v_1_box)
+})
 	})
 	return setMillisecond
 }
@@ -68,7 +74,9 @@ var setHour gopurs_runtime.Value
 var once_setHour sync.Once
 func Get_setHour() gopurs_runtime.Value {
 	once_setHour.Do(func() {
-		setHour = gopurs_runtime.Func2(Call_setHour)
+		setHour = gopurs_runtime.Func2(func(h_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_setHour(h_0_box, v_1_box)
+})
 	})
 	return setHour
 }
@@ -81,7 +89,7 @@ func Get_second() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-return (*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[2]
+return (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[2]
 }()
 })
 	})
@@ -96,7 +104,7 @@ func Get_minute() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-return (*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[1]
+return (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[1]
 }()
 })
 	})
@@ -111,7 +119,7 @@ func Get_millisecond() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-return (*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[3]
+return (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[3]
 }()
 })
 	})
@@ -126,11 +134,11 @@ func Get_millisToTime() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-hours_1_0 := gopurs_runtime.Apply(pkg_Data_Number.Get_floor(), gopurs_runtime.Float(v_0_loop.FloatVal() / 3600000.0))
+hours_1_0 := gopurs_runtime.Apply(pkg_Data_Number.Get_floor(), gopurs_runtime.Float(v_0.FloatVal() / 3600000.0))
 _ = hours_1_0
-minutes_2_1 := gopurs_runtime.Apply(pkg_Data_Number.Get_floor(), gopurs_runtime.Float(v_0_loop.FloatVal() - hours_1_0.FloatVal() * 3600000.0 / 60000.0))
+minutes_2_1 := gopurs_runtime.Apply(pkg_Data_Number.Get_floor(), gopurs_runtime.Float(v_0.FloatVal() - hours_1_0.FloatVal() * 3600000.0 / 60000.0))
 _ = minutes_2_1
-seconds_3_2 := gopurs_runtime.Apply(pkg_Data_Number.Get_floor(), gopurs_runtime.Float(v_0_loop.FloatVal() - hours_1_0.FloatVal() * 3600000.0 + minutes_2_1.FloatVal() * 60000.0 / 1000.0))
+seconds_3_2 := gopurs_runtime.Apply(pkg_Data_Number.Get_floor(), gopurs_runtime.Float(v_0.FloatVal() - hours_1_0.FloatVal() * 3600000.0 + minutes_2_1.FloatVal() * 60000.0 / 1000.0))
 _ = seconds_3_2
 __local_var_4_3 := gopurs_runtime.Apply(pkg_Data_Int.Get_unsafeClamp(), gopurs_runtime.Apply(pkg_Data_Number.Get_floor(), hours_1_0))
 _ = __local_var_4_3
@@ -177,7 +185,7 @@ _ = __local_var_8_11
 var __t14 gopurs_runtime.Value
 {
 if __local_var_8_11.IntVal >= 0 && __local_var_8_11.IntVal <= 59 {
-__local_var_9_15 := gopurs_runtime.Apply(pkg_Data_Int.Get_unsafeClamp(), gopurs_runtime.Apply(pkg_Data_Number.Get_floor(), gopurs_runtime.Float(v_0_loop.FloatVal() - hours_1_0.FloatVal() * 3600000.0 + minutes_2_1.FloatVal() * 60000.0 + seconds_3_2.FloatVal() * 1000.0)))
+__local_var_9_15 := gopurs_runtime.Apply(pkg_Data_Int.Get_unsafeClamp(), gopurs_runtime.Apply(pkg_Data_Number.Get_floor(), gopurs_runtime.Float(v_0.FloatVal() - hours_1_0.FloatVal() * 3600000.0 + minutes_2_1.FloatVal() * 60000.0 + seconds_3_2.FloatVal() * 1000.0)))
 _ = __local_var_9_15
 var __t16 gopurs_runtime.Value
 {
@@ -199,7 +207,7 @@ goto end_branch_14
 }
 }
 {
-__local_var_9_12 := gopurs_runtime.Apply(pkg_Data_Int.Get_unsafeClamp(), gopurs_runtime.Apply(pkg_Data_Number.Get_floor(), gopurs_runtime.Float(v_0_loop.FloatVal() - hours_1_0.FloatVal() * 3600000.0 + minutes_2_1.FloatVal() * 60000.0 + seconds_3_2.FloatVal() * 1000.0)))
+__local_var_9_12 := gopurs_runtime.Apply(pkg_Data_Int.Get_unsafeClamp(), gopurs_runtime.Apply(pkg_Data_Number.Get_floor(), gopurs_runtime.Float(v_0.FloatVal() - hours_1_0.FloatVal() * 3600000.0 + minutes_2_1.FloatVal() * 60000.0 + seconds_3_2.FloatVal() * 1000.0)))
 _ = __local_var_9_12
 var __t13 gopurs_runtime.Value
 {
@@ -225,7 +233,7 @@ goto end_branch_10
 }
 {
 if gopurs_runtime.Bool(__local_var_6_6.StrVal == "Nothing").IntVal != 0 {
-__local_var_8_17 := gopurs_runtime.Apply(pkg_Data_Int.Get_unsafeClamp(), gopurs_runtime.Apply(pkg_Data_Number.Get_floor(), gopurs_runtime.Float(v_0_loop.FloatVal() - hours_1_0.FloatVal() * 3600000.0 + minutes_2_1.FloatVal() * 60000.0 + seconds_3_2.FloatVal() * 1000.0)))
+__local_var_8_17 := gopurs_runtime.Apply(pkg_Data_Int.Get_unsafeClamp(), gopurs_runtime.Apply(pkg_Data_Number.Get_floor(), gopurs_runtime.Float(v_0.FloatVal() - hours_1_0.FloatVal() * 3600000.0 + minutes_2_1.FloatVal() * 60000.0 + seconds_3_2.FloatVal() * 1000.0)))
 _ = __local_var_8_17
 var __t18 gopurs_runtime.Value
 {
@@ -258,7 +266,7 @@ goto end_branch_9
 }
 {
 if gopurs_runtime.Bool(__local_var_6_6.StrVal == "Just").IntVal != 0 {
-__local_var_8_19 := gopurs_runtime.Apply(pkg_Data_Int.Get_unsafeClamp(), gopurs_runtime.Apply(pkg_Data_Number.Get_floor(), gopurs_runtime.Float(v_0_loop.FloatVal() - hours_1_0.FloatVal() * 3600000.0 + minutes_2_1.FloatVal() * 60000.0 + seconds_3_2.FloatVal() * 1000.0)))
+__local_var_8_19 := gopurs_runtime.Apply(pkg_Data_Int.Get_unsafeClamp(), gopurs_runtime.Apply(pkg_Data_Number.Get_floor(), gopurs_runtime.Float(v_0.FloatVal() - hours_1_0.FloatVal() * 3600000.0 + minutes_2_1.FloatVal() * 60000.0 + seconds_3_2.FloatVal() * 1000.0)))
 _ = __local_var_8_19
 var __t20 gopurs_runtime.Value
 {
@@ -281,7 +289,7 @@ goto end_branch_9
 }
 {
 if gopurs_runtime.Bool(__local_var_6_6.StrVal == "Nothing").IntVal != 0 {
-__local_var_8_21 := gopurs_runtime.Apply(pkg_Data_Int.Get_unsafeClamp(), gopurs_runtime.Apply(pkg_Data_Number.Get_floor(), gopurs_runtime.Float(v_0_loop.FloatVal() - hours_1_0.FloatVal() * 3600000.0 + minutes_2_1.FloatVal() * 60000.0 + seconds_3_2.FloatVal() * 1000.0)))
+__local_var_8_21 := gopurs_runtime.Apply(pkg_Data_Int.Get_unsafeClamp(), gopurs_runtime.Apply(pkg_Data_Number.Get_floor(), gopurs_runtime.Float(v_0.FloatVal() - hours_1_0.FloatVal() * 3600000.0 + minutes_2_1.FloatVal() * 60000.0 + seconds_3_2.FloatVal() * 1000.0)))
 _ = __local_var_8_21
 var __t22 gopurs_runtime.Value
 {
@@ -321,7 +329,7 @@ func Get_hour() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-return (*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[0]
+return (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0]
 }()
 })
 	})
@@ -336,7 +344,7 @@ func Get_timeToMillis() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var t_0 gopurs_runtime.Value = t_0_loop
 _ = t_0
-return gopurs_runtime.Float(3600000.0 * gopurs_runtime.Apply(pkg_Data_Int.Get_toNumber(), (*[1024]gopurs_runtime.Value)(t_0_loop.UnsafePtr)[0]).FloatVal() + 60000.0 * gopurs_runtime.Apply(pkg_Data_Int.Get_toNumber(), (*[1024]gopurs_runtime.Value)(t_0_loop.UnsafePtr)[1]).FloatVal() + 1000.0 * gopurs_runtime.Apply(pkg_Data_Int.Get_toNumber(), (*[1024]gopurs_runtime.Value)(t_0_loop.UnsafePtr)[2]).FloatVal() + gopurs_runtime.Apply(pkg_Data_Int.Get_toNumber(), (*[1024]gopurs_runtime.Value)(t_0_loop.UnsafePtr)[3]).FloatVal())
+return gopurs_runtime.Float(3600000.0 * gopurs_runtime.Apply(pkg_Data_Int.Get_toNumber(), (*[1024]gopurs_runtime.Value)(t_0.UnsafePtr)[0]).FloatVal() + 60000.0 * gopurs_runtime.Apply(pkg_Data_Int.Get_toNumber(), (*[1024]gopurs_runtime.Value)(t_0.UnsafePtr)[1]).FloatVal() + 1000.0 * gopurs_runtime.Apply(pkg_Data_Int.Get_toNumber(), (*[1024]gopurs_runtime.Value)(t_0.UnsafePtr)[2]).FloatVal() + gopurs_runtime.Apply(pkg_Data_Int.Get_toNumber(), (*[1024]gopurs_runtime.Value)(t_0.UnsafePtr)[3]).FloatVal())
 }()
 })
 	})
@@ -440,7 +448,9 @@ var diff gopurs_runtime.Value
 var once_diff sync.Once
 func Get_diff() gopurs_runtime.Value {
 	once_diff.Do(func() {
-		diff = gopurs_runtime.Func3(Call_diff)
+		diff = gopurs_runtime.Func3(func(dictDuration_0_box gopurs_runtime.Value, t1_1_box gopurs_runtime.Value, t2_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_diff(dictDuration_0_box, t1_1_box, t2_2_box)
+})
 	})
 	return diff
 }
@@ -478,7 +488,9 @@ var adjust gopurs_runtime.Value
 var once_adjust sync.Once
 func Get_adjust() gopurs_runtime.Value {
 	once_adjust.Do(func() {
-		adjust = gopurs_runtime.Func3(Call_adjust)
+		adjust = gopurs_runtime.Func3(func(dictDuration_0_box gopurs_runtime.Value, d_1_box gopurs_runtime.Value, t_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_adjust(dictDuration_0_box, d_1_box, t_2_box)
+})
 	})
 	return adjust
 }
@@ -488,7 +500,7 @@ var s_0 gopurs_runtime.Value = s_0_loop
 _ = s_0
 var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
-return gopurs_runtime.Constructor4("Time", (*[1024]gopurs_runtime.Value)(v_1_loop.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v_1_loop.UnsafePtr)[1], s_0_loop, (*[1024]gopurs_runtime.Value)(v_1_loop.UnsafePtr)[3])
+return gopurs_runtime.Constructor4("Time", (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[1], s_0, (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[3])
 }
 
 func Call_setMinute(m_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -496,7 +508,7 @@ var m_0 gopurs_runtime.Value = m_0_loop
 _ = m_0
 var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
-return gopurs_runtime.Constructor4("Time", (*[1024]gopurs_runtime.Value)(v_1_loop.UnsafePtr)[0], m_0_loop, (*[1024]gopurs_runtime.Value)(v_1_loop.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(v_1_loop.UnsafePtr)[3])
+return gopurs_runtime.Constructor4("Time", (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[0], m_0, (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[3])
 }
 
 func Call_setMillisecond(ms_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -504,7 +516,7 @@ var ms_0 gopurs_runtime.Value = ms_0_loop
 _ = ms_0
 var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
-return gopurs_runtime.Constructor4("Time", (*[1024]gopurs_runtime.Value)(v_1_loop.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v_1_loop.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(v_1_loop.UnsafePtr)[2], ms_0_loop)
+return gopurs_runtime.Constructor4("Time", (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[2], ms_0)
 }
 
 func Call_setHour(h_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -512,7 +524,7 @@ var h_0 gopurs_runtime.Value = h_0_loop
 _ = h_0
 var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
-return gopurs_runtime.Constructor4("Time", h_0_loop, (*[1024]gopurs_runtime.Value)(v_1_loop.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(v_1_loop.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(v_1_loop.UnsafePtr)[3])
+return gopurs_runtime.Constructor4("Time", h_0, (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[3])
 }
 
 func Call_diff(dictDuration_0_loop gopurs_runtime.Value, t1_1_loop gopurs_runtime.Value, t2_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -522,7 +534,7 @@ var t1_1 gopurs_runtime.Value = t1_1_loop
 _ = t1_1
 var t2_2 gopurs_runtime.Value = t2_2_loop
 _ = t2_2
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDuration_0_loop, "toDuration"), gopurs_runtime.Float(gopurs_runtime.Apply(Get_timeToMillis(), t1_1_loop).FloatVal() + gopurs_runtime.FloatNeg(gopurs_runtime.Apply(Get_timeToMillis(), t2_2_loop)).FloatVal()))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDuration_0, "toDuration"), gopurs_runtime.Float(gopurs_runtime.Apply(Get_timeToMillis(), t1_1).FloatVal() + gopurs_runtime.FloatNeg(gopurs_runtime.Apply(Get_timeToMillis(), t2_2)).FloatVal()))
 }
 
 func Call_adjust(dictDuration_0_loop gopurs_runtime.Value, d_1_loop gopurs_runtime.Value, t_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -532,11 +544,11 @@ var d_1 gopurs_runtime.Value = d_1_loop
 _ = d_1
 var t_2 gopurs_runtime.Value = t_2_loop
 _ = t_2
-d_prime_3_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDuration_0_loop, "fromDuration"), d_1_loop)
+d_prime_3_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDuration_0, "fromDuration"), d_1)
 _ = d_prime_3_0
 wholeDays_4_1 := gopurs_runtime.Apply(pkg_Data_Number.Get_floor(), gopurs_runtime.Float(d_prime_3_0.FloatVal() / 86400000.0))
 _ = wholeDays_4_1
-msAdjusted_5_2 := gopurs_runtime.Apply(Get_timeToMillis(), t_2_loop).FloatVal() + d_prime_3_0.FloatVal() + gopurs_runtime.FloatNeg(wholeDays_4_1.FloatVal() * 86400000.0).FloatVal()
+msAdjusted_5_2 := gopurs_runtime.Apply(Get_timeToMillis(), t_2).FloatVal() + d_prime_3_0.FloatVal() + gopurs_runtime.FloatNeg(wholeDays_4_1.FloatVal() * 86400000.0).FloatVal()
 _ = msAdjusted_5_2
 var __t4 gopurs_runtime.Value
 {

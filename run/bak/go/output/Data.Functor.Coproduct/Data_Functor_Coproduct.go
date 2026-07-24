@@ -13,7 +13,7 @@ func Get_Coproduct() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
-return x_0_loop
+return x_0
 }()
 })
 	})
@@ -24,7 +24,9 @@ var showCoproduct gopurs_runtime.Value
 var once_showCoproduct sync.Once
 func Get_showCoproduct() gopurs_runtime.Value {
 	once_showCoproduct.Do(func() {
-		showCoproduct = gopurs_runtime.Func2(Call_showCoproduct)
+		showCoproduct = gopurs_runtime.Func2(func(dictShow_0_box gopurs_runtime.Value, dictShow1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_showCoproduct(dictShow_0_box, dictShow1_1_box)
+})
 	})
 	return showCoproduct
 }
@@ -37,7 +39,7 @@ func Get_right() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var ga_0 gopurs_runtime.Value = ga_0_loop
 _ = ga_0
-return gopurs_runtime.Constructor1("Right", ga_0_loop)
+return gopurs_runtime.Constructor1("Right", ga_0)
 }()
 })
 	})
@@ -63,7 +65,7 @@ func Get_left() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var fa_0 gopurs_runtime.Value = fa_0_loop
 _ = fa_0
-return gopurs_runtime.Constructor1("Left", fa_0_loop)
+return gopurs_runtime.Constructor1("Left", fa_0)
 }()
 })
 	})
@@ -74,7 +76,9 @@ var functorCoproduct gopurs_runtime.Value
 var once_functorCoproduct sync.Once
 func Get_functorCoproduct() gopurs_runtime.Value {
 	once_functorCoproduct.Do(func() {
-		functorCoproduct = gopurs_runtime.Func2(Call_functorCoproduct)
+		functorCoproduct = gopurs_runtime.Func2(func(dictFunctor_0_box gopurs_runtime.Value, dictFunctor1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_functorCoproduct(dictFunctor_0_box, dictFunctor1_1_box)
+})
 	})
 	return functorCoproduct
 }
@@ -83,7 +87,9 @@ var eq1Coproduct gopurs_runtime.Value
 var once_eq1Coproduct sync.Once
 func Get_eq1Coproduct() gopurs_runtime.Value {
 	once_eq1Coproduct.Do(func() {
-		eq1Coproduct = gopurs_runtime.Func2(Call_eq1Coproduct)
+		eq1Coproduct = gopurs_runtime.Func2(func(dictEq1_0_box gopurs_runtime.Value, dictEq11_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_eq1Coproduct(dictEq1_0_box, dictEq11_1_box)
+})
 	})
 	return eq1Coproduct
 }
@@ -92,7 +98,9 @@ var eqCoproduct gopurs_runtime.Value
 var once_eqCoproduct sync.Once
 func Get_eqCoproduct() gopurs_runtime.Value {
 	once_eqCoproduct.Do(func() {
-		eqCoproduct = gopurs_runtime.Func3(Call_eqCoproduct)
+		eqCoproduct = gopurs_runtime.Func3(func(dictEq1_0_box gopurs_runtime.Value, dictEq11_1_box gopurs_runtime.Value, dictEq_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_eqCoproduct(dictEq1_0_box, dictEq11_1_box, dictEq_2_box)
+})
 	})
 	return eqCoproduct
 }
@@ -105,7 +113,7 @@ func Get_ord1Coproduct() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictOrd1_0 gopurs_runtime.Value = dictOrd1_0_loop
 _ = dictOrd1_0
-__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd1_0_loop, "Eq10"), gopurs_runtime.Value{})
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd1_0, "Eq10"), gopurs_runtime.Value{})
 _ = __local_var_1_0
 return gopurs_runtime.Func(func(dictOrd11_2 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd11_2, "Eq10"), gopurs_runtime.Value{})
@@ -134,7 +142,7 @@ return __t5
 }))
 _ = eq1Coproduct2_4_2
 return gopurs_runtime.RecordDict2("compare1", "Eq10", gopurs_runtime.Func(func(dictOrd_5 gopurs_runtime.Value) gopurs_runtime.Value {
-compare12_6_6 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd1_0_loop, "compare1"), dictOrd_5)
+compare12_6_6 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd1_0, "compare1"), dictOrd_5)
 _ = compare12_6_6
 compare13_7_7 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd11_2, "compare1"), dictOrd_5)
 _ = compare13_7_7
@@ -201,9 +209,9 @@ func Get_ordCoproduct() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictOrd1_0 gopurs_runtime.Value = dictOrd1_0_loop
 _ = dictOrd1_0
-ord1Coproduct1_1_0 := gopurs_runtime.Apply(Get_ord1Coproduct(), dictOrd1_0_loop)
+ord1Coproduct1_1_0 := gopurs_runtime.Apply(Get_ord1Coproduct(), dictOrd1_0)
 _ = ord1Coproduct1_1_0
-__local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd1_0_loop, "Eq10"), gopurs_runtime.Value{})
+__local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd1_0, "Eq10"), gopurs_runtime.Value{})
 _ = __local_var_2_1
 return gopurs_runtime.Func(func(dictOrd11_3 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_4_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd11_3, "Eq10"), gopurs_runtime.Value{})
@@ -247,7 +255,9 @@ var coproduct gopurs_runtime.Value
 var once_coproduct sync.Once
 func Get_coproduct() gopurs_runtime.Value {
 	once_coproduct.Do(func() {
-		coproduct = gopurs_runtime.Func3(Call_coproduct)
+		coproduct = gopurs_runtime.Func3(func(v_0_box gopurs_runtime.Value, v1_1_box gopurs_runtime.Value, v2_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_coproduct(v_0_box, v1_1_box, v2_2_box)
+})
 	})
 	return coproduct
 }
@@ -260,7 +270,7 @@ func Get_extendCoproduct() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictExtend_0 gopurs_runtime.Value = dictExtend_0_loop
 _ = dictExtend_0
-__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictExtend_0_loop, "Functor0"), gopurs_runtime.Value{})
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictExtend_0, "Functor0"), gopurs_runtime.Value{})
 _ = __local_var_1_0
 return gopurs_runtime.Func(func(dictExtend1_2 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictExtend1_2, "Functor0"), gopurs_runtime.Value{})
@@ -295,7 +305,7 @@ return __t5
 }))
 _ = functorCoproduct2_4_2
 return gopurs_runtime.RecordDict2("extend", "Functor0", gopurs_runtime.Func(func(f_5 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_6_6 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictExtend_0_loop, "extend"), gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_6_6 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictExtend_0, "extend"), gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(f_5, gopurs_runtime.Constructor1("Left", x_6))
 }))
 _ = __local_var_6_6
@@ -345,7 +355,7 @@ func Get_comonadCoproduct() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictComonad_0 gopurs_runtime.Value = dictComonad_0_loop
 _ = dictComonad_0
-extendCoproduct1_1_0 := gopurs_runtime.Apply(Get_extendCoproduct(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonad_0_loop, "Extend0"), gopurs_runtime.Value{}))
+extendCoproduct1_1_0 := gopurs_runtime.Apply(Get_extendCoproduct(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonad_0, "Extend0"), gopurs_runtime.Value{}))
 _ = extendCoproduct1_1_0
 return gopurs_runtime.Func(func(dictComonad1_2 gopurs_runtime.Value) gopurs_runtime.Value {
 extendCoproduct2_3_1 := gopurs_runtime.Apply(extendCoproduct1_1_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonad1_2, "Extend0"), gopurs_runtime.Value{}))
@@ -354,7 +364,7 @@ return gopurs_runtime.RecordDict2("extract", "Extend0", gopurs_runtime.Func(func
 var __t2 gopurs_runtime.Value
 {
 if gopurs_runtime.Bool(v2_4.StrVal == "Left").IntVal != 0 {
-__t2 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonad_0_loop, "extract"), (*[1024]gopurs_runtime.Value)(v2_4.UnsafePtr)[0])
+__t2 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonad_0, "extract"), (*[1024]gopurs_runtime.Value)(v2_4.UnsafePtr)[0])
 goto end_branch_2
 } else {
 
@@ -387,7 +397,9 @@ var bihoistCoproduct gopurs_runtime.Value
 var once_bihoistCoproduct sync.Once
 func Get_bihoistCoproduct() gopurs_runtime.Value {
 	once_bihoistCoproduct.Do(func() {
-		bihoistCoproduct = gopurs_runtime.Func3(Call_bihoistCoproduct)
+		bihoistCoproduct = gopurs_runtime.Func3(func(natF_0_box gopurs_runtime.Value, natG_1_box gopurs_runtime.Value, v_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_bihoistCoproduct(natF_0_box, natG_1_box, v_2_box)
+})
 	})
 	return bihoistCoproduct
 }
@@ -401,7 +413,7 @@ return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_2 gopurs_ru
 var __t0 gopurs_runtime.Value
 {
 if gopurs_runtime.Bool(v_2.StrVal == "Left").IntVal != 0 {
-__t0 = gopurs_runtime.Str("(left " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0_loop, "show"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0]).StrVal + ")")
+__t0 = gopurs_runtime.Str("(left " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0]).StrVal + ")")
 goto end_branch_0
 } else {
 
@@ -409,7 +421,7 @@ goto end_branch_0
 }
 {
 if gopurs_runtime.Bool(v_2.StrVal == "Right").IntVal != 0 {
-__t0 = gopurs_runtime.Str("(right " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow1_1_loop, "show"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0]).StrVal + ")")
+__t0 = gopurs_runtime.Str("(right " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow1_1, "show"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0]).StrVal + ")")
 goto end_branch_0
 } else {
 
@@ -429,9 +441,9 @@ _ = dictFunctor_0
 var dictFunctor1_1 gopurs_runtime.Value = dictFunctor1_1_loop
 _ = dictFunctor1_1
 return gopurs_runtime.RecordDict1("map", gopurs_runtime.Func2(func(f_2 gopurs_runtime.Value, v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_4_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctor_0_loop, "map"), f_2)
+__local_var_4_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctor_0, "map"), f_2)
 _ = __local_var_4_0
-__local_var_5_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctor1_1_loop, "map"), f_2)
+__local_var_5_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctor1_1, "map"), f_2)
 _ = __local_var_5_1
 var __t2 gopurs_runtime.Value
 {
@@ -464,9 +476,9 @@ _ = dictEq1_0
 var dictEq11_1 gopurs_runtime.Value = dictEq11_1_loop
 _ = dictEq11_1
 return gopurs_runtime.RecordDict1("eq1", gopurs_runtime.Func(func(dictEq_2 gopurs_runtime.Value) gopurs_runtime.Value {
-eq12_3_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEq1_0_loop, "eq1"), dictEq_2)
+eq12_3_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEq1_0, "eq1"), dictEq_2)
 _ = eq12_3_0
-eq13_4_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEq11_1_loop, "eq1"), dictEq_2)
+eq13_4_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEq11_1, "eq1"), dictEq_2)
 _ = eq13_4_1
 return gopurs_runtime.Func2(func(v_5 gopurs_runtime.Value, v1_6 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t2 gopurs_runtime.Value
@@ -494,9 +506,9 @@ var dictEq11_1 gopurs_runtime.Value = dictEq11_1_loop
 _ = dictEq11_1
 var dictEq_2 gopurs_runtime.Value = dictEq_2_loop
 _ = dictEq_2
-eq12_3_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEq1_0_loop, "eq1"), dictEq_2_loop)
+eq12_3_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEq1_0, "eq1"), dictEq_2)
 _ = eq12_3_0
-eq13_4_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEq11_1_loop, "eq1"), dictEq_2_loop)
+eq13_4_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEq11_1, "eq1"), dictEq_2)
 _ = eq13_4_1
 return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func2(func(v_5 gopurs_runtime.Value, v1_6 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t2 gopurs_runtime.Value
@@ -525,16 +537,16 @@ var v2_2 gopurs_runtime.Value = v2_2_loop
 _ = v2_2
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v2_2_loop.StrVal == "Left").IntVal != 0 {
-__t0 = gopurs_runtime.Apply(v_0_loop, (*[1024]gopurs_runtime.Value)(v2_2_loop.UnsafePtr)[0])
+if gopurs_runtime.Bool(v2_2.StrVal == "Left").IntVal != 0 {
+__t0 = gopurs_runtime.Apply(v_0, (*[1024]gopurs_runtime.Value)(v2_2.UnsafePtr)[0])
 goto end_branch_0
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(v2_2_loop.StrVal == "Right").IntVal != 0 {
-__t0 = gopurs_runtime.Apply(v1_1_loop, (*[1024]gopurs_runtime.Value)(v2_2_loop.UnsafePtr)[0])
+if gopurs_runtime.Bool(v2_2.StrVal == "Right").IntVal != 0 {
+__t0 = gopurs_runtime.Apply(v1_1, (*[1024]gopurs_runtime.Value)(v2_2.UnsafePtr)[0])
 goto end_branch_0
 } else {
 
@@ -556,16 +568,16 @@ var v_2 gopurs_runtime.Value = v_2_loop
 _ = v_2
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v_2_loop.StrVal == "Left").IntVal != 0 {
-__t0 = gopurs_runtime.Constructor1("Left", gopurs_runtime.Apply(natF_0_loop, (*[1024]gopurs_runtime.Value)(v_2_loop.UnsafePtr)[0]))
+if gopurs_runtime.Bool(v_2.StrVal == "Left").IntVal != 0 {
+__t0 = gopurs_runtime.Constructor1("Left", gopurs_runtime.Apply(natF_0, (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0]))
 goto end_branch_0
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(v_2_loop.StrVal == "Right").IntVal != 0 {
-__t0 = gopurs_runtime.Constructor1("Right", gopurs_runtime.Apply(natG_1_loop, (*[1024]gopurs_runtime.Value)(v_2_loop.UnsafePtr)[0]))
+if gopurs_runtime.Bool(v_2.StrVal == "Right").IntVal != 0 {
+__t0 = gopurs_runtime.Constructor1("Right", gopurs_runtime.Apply(natG_1, (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0]))
 goto end_branch_0
 } else {
 

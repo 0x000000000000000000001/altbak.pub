@@ -13,7 +13,7 @@ func Get_unright() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0_loop, "unright")
+return gopurs_runtime.RecordGet(dict_0, "unright")
 }()
 })
 	})
@@ -28,7 +28,7 @@ func Get_unleft() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0_loop, "unleft")
+return gopurs_runtime.RecordGet(dict_0, "unleft")
 }()
 })
 	})

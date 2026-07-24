@@ -18,7 +18,7 @@ func Get_throwError() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0_loop, "throwError")
+return gopurs_runtime.RecordGet(dict_0, "throwError")
 }()
 })
 	})
@@ -149,10 +149,10 @@ func Get_liftMaybe() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonadThrow_0 gopurs_runtime.Value = dictMonadThrow_0_loop
 _ = dictMonadThrow_0
-pure_1_0 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadThrow_0_loop, "Monad0"), gopurs_runtime.Value{}), "Applicative0"), gopurs_runtime.Value{}), "pure")
+pure_1_0 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadThrow_0, "Monad0"), gopurs_runtime.Value{}), "Applicative0"), gopurs_runtime.Value{}), "pure")
 _ = pure_1_0
 return gopurs_runtime.Func(func(error_2 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadThrow_0_loop, "throwError"), error_2)
+__local_var_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadThrow_0, "throwError"), error_2)
 _ = __local_var_3_1
 return gopurs_runtime.Func(func(v2_4 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t2 gopurs_runtime.Value
@@ -193,13 +193,13 @@ func Get_liftEither() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonadThrow_0 gopurs_runtime.Value = dictMonadThrow_0_loop
 _ = dictMonadThrow_0
-__local_var_1_0 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadThrow_0_loop, "Monad0"), gopurs_runtime.Value{}), "Applicative0"), gopurs_runtime.Value{}), "pure")
+__local_var_1_0 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadThrow_0, "Monad0"), gopurs_runtime.Value{}), "Applicative0"), gopurs_runtime.Value{}), "pure")
 _ = __local_var_1_0
 return gopurs_runtime.Func(func(v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
 if gopurs_runtime.Bool(v2_2.StrVal == "Left").IntVal != 0 {
-__t1 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadThrow_0_loop, "throwError"), (*[1024]gopurs_runtime.Value)(v2_2.UnsafePtr)[0])
+__t1 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadThrow_0, "throwError"), (*[1024]gopurs_runtime.Value)(v2_2.UnsafePtr)[0])
 goto end_branch_1
 } else {
 
@@ -233,7 +233,7 @@ func Get_catchError() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0_loop, "catchError")
+return gopurs_runtime.RecordGet(dict_0, "catchError")
 }()
 })
 	})
@@ -244,7 +244,9 @@ var catchJust gopurs_runtime.Value
 var once_catchJust sync.Once
 func Get_catchJust() gopurs_runtime.Value {
 	once_catchJust.Do(func() {
-		catchJust = gopurs_runtime.Func4(Call_catchJust)
+		catchJust = gopurs_runtime.Func4(func(dictMonadError_0_box gopurs_runtime.Value, p_1_box gopurs_runtime.Value, act_2_box gopurs_runtime.Value, handler_3_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_catchJust(dictMonadError_0_box, p_1_box, act_2_box, handler_3_box)
+})
 	})
 	return catchJust
 }
@@ -257,10 +259,10 @@ func Get_try() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonadError_0 gopurs_runtime.Value = dictMonadError_0_loop
 _ = dictMonadError_0
-Monad0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadError_0_loop, "MonadThrow0"), gopurs_runtime.Value{}), "Monad0"), gopurs_runtime.Value{})
+Monad0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadError_0, "MonadThrow0"), gopurs_runtime.Value{}), "Monad0"), gopurs_runtime.Value{})
 _ = Monad0_1_0
 return gopurs_runtime.Func(func(a_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadError_0_loop, "catchError"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Bind1"), gopurs_runtime.Value{}), "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), pkg_Data_Either.Get_Right(), a_2), gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadError_0, "catchError"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Bind1"), gopurs_runtime.Value{}), "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), pkg_Data_Either.Get_Right(), a_2), gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.Constructor1("Left", x_3))
 }))
 })
@@ -278,13 +280,13 @@ func Get_withResource() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonadError_0 gopurs_runtime.Value = dictMonadError_0_loop
 _ = dictMonadError_0
-MonadThrow0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadError_0_loop, "MonadThrow0"), gopurs_runtime.Value{})
+MonadThrow0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadError_0, "MonadThrow0"), gopurs_runtime.Value{})
 _ = MonadThrow0_1_0
 Monad0_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(MonadThrow0_1_0, "Monad0"), gopurs_runtime.Value{})
 _ = Monad0_2_1
 Bind1_3_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_2_1, "Bind1"), gopurs_runtime.Value{})
 _ = Bind1_3_2
-try1_4_3 := gopurs_runtime.Apply(Get_try(), dictMonadError_0_loop)
+try1_4_3 := gopurs_runtime.Apply(Get_try(), dictMonadError_0)
 _ = try1_4_3
 return gopurs_runtime.Func3(func(acquire_5 gopurs_runtime.Value, release_6 gopurs_runtime.Value, kleisli_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Bind1_3_2, "bind"), acquire_5, gopurs_runtime.Func(func(resource_8 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -331,13 +333,13 @@ var act_2 gopurs_runtime.Value = act_2_loop
 _ = act_2
 var handler_3 gopurs_runtime.Value = handler_3_loop
 _ = handler_3
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadError_0_loop, "catchError"), act_2_loop, gopurs_runtime.Func(func(e_4 gopurs_runtime.Value) gopurs_runtime.Value {
-v_5_0 := gopurs_runtime.Apply(p_1_loop, e_4)
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadError_0, "catchError"), act_2, gopurs_runtime.Func(func(e_4 gopurs_runtime.Value) gopurs_runtime.Value {
+v_5_0 := gopurs_runtime.Apply(p_1, e_4)
 _ = v_5_0
 var __t1 gopurs_runtime.Value
 {
 if gopurs_runtime.Bool(v_5_0.StrVal == "Nothing").IntVal != 0 {
-__t1 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadError_0_loop, "MonadThrow0"), gopurs_runtime.Value{}), "throwError"), e_4)
+__t1 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadError_0, "MonadThrow0"), gopurs_runtime.Value{}), "throwError"), e_4)
 goto end_branch_1
 } else {
 
@@ -345,7 +347,7 @@ goto end_branch_1
 }
 {
 if gopurs_runtime.Bool(v_5_0.StrVal == "Just").IntVal != 0 {
-__t1 = gopurs_runtime.Apply(handler_3_loop, (*[1024]gopurs_runtime.Value)(v_5_0.UnsafePtr)[0])
+__t1 = gopurs_runtime.Apply(handler_3, (*[1024]gopurs_runtime.Value)(v_5_0.UnsafePtr)[0])
 goto end_branch_1
 } else {
 

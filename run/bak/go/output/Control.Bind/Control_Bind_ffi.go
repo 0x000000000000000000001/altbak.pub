@@ -12,7 +12,10 @@ func ArrayBind(arr []any, f func(any) []any) []any {
 
 
 // --- Auto-generated FFI wrappers ---
-func Call_arrayBind(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_arrayBind(arg0 []any, arg1 func(any) []any) []any {
+	return ArrayBind(arg0, arg1)
+}
+var _Gopurs_ArrayBind = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	arg0_arr := arg0.PtrVal.([]gopurs_runtime.Value)
 	go_arg0 := make([]any, len(arg0_arr))
 	for i, v := range arg0_arr { go_arg0[i] = v }
@@ -29,5 +32,4 @@ func Call_arrayBind(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs
 			for i, v := range go_res { res_arr[i] = gopurs_runtime.Box(v) }
 			return gopurs_runtime.Array(res_arr)
 		}()
-}
-var _Gopurs_ArrayBind = gopurs_runtime.Func2(Call_arrayBind)
+})

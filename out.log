@@ -1,0 +1,503 @@
+=== Native Go ===
+AST Evaluation:
+7
+
+Execution time: 16.00 μs
+
+Fibonacci:
+55
+
+Execution time: 6.00 μs
+
+List Processing (900 elements):
+202950
+
+Execution time: 109.00 μs
+
+Tail Call Optimization (100k calls):
+99999
+
+Execution time: 2861.00 μs
+
+Deep Record Updates (10k iterations):
+20000
+
+Execution time: 9483.00 μs
+
+Ackermann (3, 4):
+5
+
+Execution time: 3.00 μs
+
+Church Numerals (100k Closure Applications):
+100000
+
+Execution time: 3811.00 μs
+
+Prime Sieve (sum primes up to 500):
+21536
+
+Execution time: 691.00 μs
+
+Red-Black Tree (100k Worst-Case Insertions):
+22
+
+Execution time: 320235.00 μs
+
+Polymorphism (10M Type Class Dict Lookups):
+10000000
+
+Execution time: 76933.00 μs
+
+State Monad (1.2k Binds, 60 Stack Depth):
+1200
+
+Execution time: 140.00 μs
+
+Lazy Evaluation (1M Thunks Forced, 1k Depth):
+runtime: goroutine stack exceeds 1000000000-byte limit
+runtime: sp=0xd31dd706430 stack=[0xd31dd706000, 0xd31fd706000]
+fatal error: stack overflow
+
+runtime stack:
+runtime.throw({0x104c90484?, 0x200000001?})
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/panic.go:1229 +0x38 fp=0x16b402da0 sp=0x16b402d70 pc=0x104c0e858
+runtime.newstack()
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/stack.go:1178 +0x498 fp=0x16b402ed0 sp=0x16b402da0 pc=0x104bf7598
+runtime.morestack()
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/asm_arm64.s:507 +0x70 fp=0x16b402ed0 sp=0x16b402ed0 pc=0x104c12fa0
+
+goroutine 1 gp=0xd31bac8c1e0 m=3 mp=0xd31bad09008 [running]:
+gopurs/output/Test%2eLazyEvaluation.Get_buildThunks.func1.1.Call_buildThunks.1({0x0, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0x0})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/Test.LazyEvaluation/Test_LazyEvaluation.go:124 +0x144 fp=0xd31dd706430 sp=0xd31dd706430 pc=0x104c8c224
+gopurs/output/gopurs_runtime.Apply({0x1, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0xd31bd7302f0}, {0xd, 0x0, {0x0, ...}, ...})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/gopurs_runtime/runtime.go:262 +0x150 fp=0xd31dd706550 sp=0xd31dd706430 pc=0x104c58e20
+gopurs/output/Test%2eLazyEvaluation.Get_buildThunks.func1.1.Call_buildThunks.1({0x0, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0x0})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/Test.LazyEvaluation/Test_LazyEvaluation.go:125 +0xb4 fp=0xd31dd706680 sp=0xd31dd706550 pc=0x104c8c194
+gopurs/output/gopurs_runtime.Apply({0x1, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0xd31bd7302f0}, {0xd, 0x0, {0x0, ...}, ...})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/gopurs_runtime/runtime.go:262 +0x150 fp=0xd31dd7067a0 sp=0xd31dd706680 pc=0x104c58e20
+gopurs/output/Test%2eLazyEvaluation.Get_buildThunks.func1.1.Call_buildThunks.1({0x0, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0x0})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/Test.LazyEvaluation/Test_LazyEvaluation.go:125 +0xb4 fp=0xd31dd7068d0 sp=0xd31dd7067a0 pc=0x104c8c194
+gopurs/output/gopurs_runtime.Apply({0x1, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0xd31bd7302f0}, {0xd, 0x0, {0x0, ...}, ...})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/gopurs_runtime/runtime.go:262 +0x150 fp=0xd31dd7069f0 sp=0xd31dd7068d0 pc=0x104c58e20
+gopurs/output/Test%2eLazyEvaluation.Get_buildThunks.func1.1.Call_buildThunks.1({0x0, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0x0})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/Test.LazyEvaluation/Test_LazyEvaluation.go:125 +0xb4 fp=0xd31dd706b20 sp=0xd31dd7069f0 pc=0x104c8c194
+gopurs/output/gopurs_runtime.Apply({0x1, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0xd31bd7302f0}, {0xd, 0x0, {0x0, ...}, ...})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/gopurs_runtime/runtime.go:262 +0x150 fp=0xd31dd706c40 sp=0xd31dd706b20 pc=0x104c58e20
+gopurs/output/Test%2eLazyEvaluation.Get_buildThunks.func1.1.Call_buildThunks.1({0x0, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0x0})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/Test.LazyEvaluation/Test_LazyEvaluation.go:125 +0xb4 fp=0xd31dd706d70 sp=0xd31dd706c40 pc=0x104c8c194
+gopurs/output/gopurs_runtime.Apply({0x1, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0xd31bd7302f0}, {0xd, 0x0, {0x0, ...}, ...})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/gopurs_runtime/runtime.go:262 +0x150 fp=0xd31dd706e90 sp=0xd31dd706d70 pc=0x104c58e20
+gopurs/output/Test%2eLazyEvaluation.Get_buildThunks.func1.1.Call_buildThunks.1({0x0, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0x0})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/Test.LazyEvaluation/Test_LazyEvaluation.go:125 +0xb4 fp=0xd31dd706fc0 sp=0xd31dd706e90 pc=0x104c8c194
+gopurs/output/gopurs_runtime.Apply({0x1, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0xd31bd7302f0}, {0xd, 0x0, {0x0, ...}, ...})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/gopurs_runtime/runtime.go:262 +0x150 fp=0xd31dd7070e0 sp=0xd31dd706fc0 pc=0x104c58e20
+gopurs/output/Test%2eLazyEvaluation.Get_buildThunks.func1.1.Call_buildThunks.1({0x0, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0x0})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/Test.LazyEvaluation/Test_LazyEvaluation.go:125 +0xb4 fp=0xd31dd707210 sp=0xd31dd7070e0 pc=0x104c8c194
+gopurs/output/gopurs_runtime.Apply({0x1, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0xd31bd7302f0}, {0xd, 0x0, {0x0, ...}, ...})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/gopurs_runtime/runtime.go:262 +0x150 fp=0xd31dd707330 sp=0xd31dd707210 pc=0x104c58e20
+gopurs/output/Test%2eLazyEvaluation.Get_buildThunks.func1.1.Call_buildThunks.1({0x0, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0x0})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/Test.LazyEvaluation/Test_LazyEvaluation.go:125 +0xb4 fp=0xd31dd707460 sp=0xd31dd707330 pc=0x104c8c194
+gopurs/output/gopurs_runtime.Apply({0x1, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0xd31bd7302f0}, {0xd, 0x0, {0x0, ...}, ...})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/gopurs_runtime/runtime.go:262 +0x150 fp=0xd31dd707580 sp=0xd31dd707460 pc=0x104c58e20
+gopurs/output/Test%2eLazyEvaluation.Get_buildThunks.func1.1.Call_buildThunks.1({0x0, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0x0})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/Test.LazyEvaluation/Test_LazyEvaluation.go:125 +0xb4 fp=0xd31dd7076b0 sp=0xd31dd707580 pc=0x104c8c194
+gopurs/output/gopurs_runtime.Apply({0x1, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0xd31bd7302f0}, {0xd, 0x0, {0x0, ...}, ...})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/gopurs_runtime/runtime.go:262 +0x150 fp=0xd31dd7077d0 sp=0xd31dd7076b0 pc=0x104c58e20
+gopurs/output/Test%2eLazyEvaluation.Get_buildThunks.func1.1.Call_buildThunks.1({0x0, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0x0})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/Test.LazyEvaluation/Test_LazyEvaluation.go:125 +0xb4 fp=0xd31dd707900 sp=0xd31dd7077d0 pc=0x104c8c194
+gopurs/output/gopurs_runtime.Apply({0x1, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0xd31bd7302f0}, {0xd, 0x0, {0x0, ...}, ...})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/gopurs_runtime/runtime.go:262 +0x150 fp=0xd31dd707a20 sp=0xd31dd707900 pc=0x104c58e20
+gopurs/output/Test%2eLazyEvaluation.Get_buildThunks.func1.1.Call_buildThunks.1({0x0, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0x0})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/Test.LazyEvaluation/Test_LazyEvaluation.go:125 +0xb4 fp=0xd31dd707b50 sp=0xd31dd707a20 pc=0x104c8c194
+gopurs/output/gopurs_runtime.Apply({0x1, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0xd31bd7302f0}, {0xd, 0x0, {0x0, ...}, ...})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/gopurs_runtime/runtime.go:262 +0x150 fp=0xd31dd707c70 sp=0xd31dd707b50 pc=0x104c58e20
+gopurs/output/Test%2eLazyEvaluation.Get_buildThunks.func1.1.Call_buildThunks.1({0x0, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0x0})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/Test.LazyEvaluation/Test_LazyEvaluation.go:125 +0xb4 fp=0xd31dd707da0 sp=0xd31dd707c70 pc=0x104c8c194
+gopurs/output/gopurs_runtime.Apply({0x1, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0xd31bd7302f0}, {0xd, 0x0, {0x0, ...}, ...})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/gopurs_runtime/runtime.go:262 +0x150 fp=0xd31dd707ec0 sp=0xd31dd707da0 pc=0x104c58e20
+gopurs/output/Test%2eLazyEvaluation.Get_buildThunks.func1.1.Call_buildThunks.1({0x0, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0x0})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/Test.LazyEvaluation/Test_LazyEvaluation.go:125 +0xb4 fp=0xd31dd707ff0 sp=0xd31dd707ec0 pc=0x104c8c194
+gopurs/output/gopurs_runtime.Apply({0x1, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0xd31bd7302f0}, {0xd, 0x0, {0x0, ...}, ...})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/gopurs_runtime/runtime.go:262 +0x150 fp=0xd31dd708110 sp=0xd31dd707ff0 pc=0x104c58e20
+gopurs/output/Test%2eLazyEvaluation.Get_buildThunks.func1.1.Call_buildThunks.1({0x0, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0x0})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/Test.LazyEvaluation/Test_LazyEvaluation.go:125 +0xb4 fp=0xd31dd708240 sp=0xd31dd708110 pc=0x104c8c194
+gopurs/output/gopurs_runtime.Apply({0x1, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0xd31bd7302f0}, {0xd, 0x0, {0x0, ...}, ...})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/gopurs_runtime/runtime.go:262 +0x150 fp=0xd31dd708360 sp=0xd31dd708240 pc=0x104c58e20
+gopurs/output/Test%2eLazyEvaluation.Get_buildThunks.func1.1.Call_buildThunks.1({0x0, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0x0})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/Test.LazyEvaluation/Test_LazyEvaluation.go:125 +0xb4 fp=0xd31dd708490 sp=0xd31dd708360 pc=0x104c8c194
+gopurs/output/gopurs_runtime.Apply({0x1, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0xd31bd7302f0}, {0xd, 0x0, {0x0, ...}, ...})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/gopurs_runtime/runtime.go:262 +0x150 fp=0xd31dd7085b0 sp=0xd31dd708490 pc=0x104c58e20
+gopurs/output/Test%2eLazyEvaluation.Get_buildThunks.func1.1.Call_buildThunks.1({0x0, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0x0})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/Test.LazyEvaluation/Test_LazyEvaluation.go:125 +0xb4 fp=0xd31dd7086e0 sp=0xd31dd7085b0 pc=0x104c8c194
+gopurs/output/gopurs_runtime.Apply({0x1, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0xd31bd7302f0}, {0xd, 0x0, {0x0, ...}, ...})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/gopurs_runtime/runtime.go:262 +0x150 fp=0xd31dd708800 sp=0xd31dd7086e0 pc=0x104c58e20
+gopurs/output/Test%2eLazyEvaluation.Get_buildThunks.func1.1.Call_buildThunks.1({0x0, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0x0})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/Test.LazyEvaluation/Test_LazyEvaluation.go:125 +0xb4 fp=0xd31dd708930 sp=0xd31dd708800 pc=0x104c8c194
+gopurs/output/gopurs_runtime.Apply({0x1, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0xd31bd7302f0}, {0xd, 0x0, {0x0, ...}, ...})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/gopurs_runtime/runtime.go:262 +0x150 fp=0xd31dd708a50 sp=0xd31dd708930 pc=0x104c58e20
+gopurs/output/Test%2eLazyEvaluation.Get_buildThunks.func1.1.Call_buildThunks.1({0x0, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0x0})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/Test.LazyEvaluation/Test_LazyEvaluation.go:125 +0xb4 fp=0xd31dd708b80 sp=0xd31dd708a50 pc=0x104c8c194
+gopurs/output/gopurs_runtime.Apply({0x1, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0xd31bd7302f0}, {0xd, 0x0, {0x0, ...}, ...})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/gopurs_runtime/runtime.go:262 +0x150 fp=0xd31dd708ca0 sp=0xd31dd708b80 pc=0x104c58e20
+gopurs/output/Test%2eLazyEvaluation.Get_buildThunks.func1.1.Call_buildThunks.1({0x0, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0x0})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/Test.LazyEvaluation/Test_LazyEvaluation.go:125 +0xb4 fp=0xd31dd708dd0 sp=0xd31dd708ca0 pc=0x104c8c194
+gopurs/output/gopurs_runtime.Apply({0x1, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0xd31bd7302f0}, {0xd, 0x0, {0x0, ...}, ...})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/gopurs_runtime/runtime.go:262 +0x150 fp=0xd31dd708ef0 sp=0xd31dd708dd0 pc=0x104c58e20
+gopurs/output/Test%2eLazyEvaluation.Get_buildThunks.func1.1.Call_buildThunks.1({0x0, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0x0})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/Test.LazyEvaluation/Test_LazyEvaluation.go:125 +0xb4 fp=0xd31dd709020 sp=0xd31dd708ef0 pc=0x104c8c194
+gopurs/output/gopurs_runtime.Apply({0x1, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0xd31bd7302f0}, {0xd, 0x0, {0x0, ...}, ...})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/gopurs_runtime/runtime.go:262 +0x150 fp=0xd31dd709140 sp=0xd31dd709020 pc=0x104c58e20
+gopurs/output/Test%2eLazyEvaluation.Get_buildThunks.func1.1.Call_buildThunks.1({0x0, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0x0})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/Test.LazyEvaluation/Test_LazyEvaluation.go:125 +0xb4 fp=0xd31dd709270 sp=0xd31dd709140 pc=0x104c8c194
+gopurs/output/gopurs_runtime.Apply({0x1, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0xd31bd7302f0}, {0xd, 0x0, {0x0, ...}, ...})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/gopurs_runtime/runtime.go:262 +0x150 fp=0xd31dd709390 sp=0xd31dd709270 pc=0x104c58e20
+gopurs/output/Test%2eLazyEvaluation.Get_buildThunks.func1.1.Call_buildThunks.1({0x0, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0x0})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/Test.LazyEvaluation/Test_LazyEvaluation.go:125 +0xb4 fp=0xd31dd7094c0 sp=0xd31dd709390 pc=0x104c8c194
+gopurs/output/gopurs_runtime.Apply({0x1, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0xd31bd7302f0}, {0xd, 0x0, {0x0, ...}, ...})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/gopurs_runtime/runtime.go:262 +0x150 fp=0xd31dd7095e0 sp=0xd31dd7094c0 pc=0x104c58e20
+gopurs/output/Test%2eLazyEvaluation.Get_buildThunks.func1.1.Call_buildThunks.1({0x0, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0x0})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/Test.LazyEvaluation/Test_LazyEvaluation.go:125 +0xb4 fp=0xd31dd709710 sp=0xd31dd7095e0 pc=0x104c8c194
+gopurs/output/gopurs_runtime.Apply({0x1, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0xd31bd7302f0}, {0xd, 0x0, {0x0, ...}, ...})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/gopurs_runtime/runtime.go:262 +0x150 fp=0xd31dd709830 sp=0xd31dd709710 pc=0x104c58e20
+gopurs/output/Test%2eLazyEvaluation.Get_buildThunks.func1.1.Call_buildThunks.1({0x0, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0x0})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/Test.LazyEvaluation/Test_LazyEvaluation.go:125 +0xb4 fp=0xd31dd709960 sp=0xd31dd709830 pc=0x104c8c194
+gopurs/output/gopurs_runtime.Apply({0x1, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0xd31bd7302f0}, {0xd, 0x0, {0x0, ...}, ...})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/gopurs_runtime/runtime.go:262 +0x150 fp=0xd31dd709a80 sp=0xd31dd709960 pc=0x104c58e20
+gopurs/output/Test%2eLazyEvaluation.Get_buildThunks.func1.1.Call_buildThunks.1({0x0, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0x0})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/Test.LazyEvaluation/Test_LazyEvaluation.go:125 +0xb4 fp=0xd31dd709bb0 sp=0xd31dd709a80 pc=0x104c8c194
+gopurs/output/gopurs_runtime.Apply({0x1, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0xd31bd7302f0}, {0xd, 0x0, {0x0, ...}, ...})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/gopurs_runtime/runtime.go:262 +0x150 fp=0xd31dd709cd0 sp=0xd31dd709bb0 pc=0x104c58e20
+...1813647 frames elided...
+gopurs/output/gopurs_runtime.Apply({0x1, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0xd31bd7302f0}, {0xd, 0x0, {0x0, ...}, ...})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/gopurs_runtime/runtime.go:262 +0x150 fp=0xd31fd702350 sp=0xd31fd702230 pc=0x104c58e20
+gopurs/output/Test%2eLazyEvaluation.Get_buildThunks.func1.1.Call_buildThunks.1({0x0, 0x0, {0x0, 0x0}, {0x6, 0x1}, 0x0})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/Test.LazyEvaluation/Test_LazyEvaluation.go:125 +0xb4 fp=0xd31fd702480 sp=0xd31fd702350 pc=0x104c8c194
+gopurs/output/gopurs_runtime.Apply({0x1, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0xd31bd7302f0}, {0xd, 0x0, {0x0, ...}, ...})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/gopurs_runtime/runtime.go:262 +0x150 fp=0xd31fd7025a0 sp=0xd31fd702480 pc=0x104c58e20
+gopurs/output/Test%2eLazyEvaluation.Get_buildThunks.func1.1.Call_buildThunks.1({0x60, 0x0, {0xd31bd6ba808, 0x104c59928}, {0x6, 0x9}, 0x0})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/Test.LazyEvaluation/Test_LazyEvaluation.go:125 +0xb4 fp=0xd31fd7026d0 sp=0xd31fd7025a0 pc=0x104c8c194
+gopurs/output/gopurs_runtime.Apply({0x1, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0xd31bd7302f0}, {0xd, 0x0, {0x0, ...}, ...})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/gopurs_runtime/runtime.go:262 +0x150 fp=0xd31fd7027f0 sp=0xd31fd7026d0 pc=0x104c58e20
+gopurs/output/Test%2eLazyEvaluation.Get_buildThunks.func1.1.Call_buildThunks.1({0x0, 0x0, {0xd31bd72ee40, 0xd31bd6ba908}, {0x0, 0x0}, 0x0})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/Test.LazyEvaluation/Test_LazyEvaluation.go:125 +0xb4 fp=0xd31fd702920 sp=0xd31fd7027f0 pc=0x104c8c194
+gopurs/output/gopurs_runtime.Apply({0x1, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0xd31bd7302f0}, {0xd, 0x0, {0x0, ...}, ...})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/gopurs_runtime/runtime.go:262 +0x150 fp=0xd31fd702a40 sp=0xd31fd702920 pc=0x104c58e20
+gopurs/output/Test%2eLazyEvaluation.Get_buildThunks.func1.1.Call_buildThunks.1({0x0, 0x0, {0x104d78a00, 0xd31badf8c60}, {0x0, 0x0}, 0xd31bb0bfa40})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/Test.LazyEvaluation/Test_LazyEvaluation.go:125 +0xb4 fp=0xd31fd702b70 sp=0xd31fd702a40 pc=0x104c8c194
+gopurs/output/gopurs_runtime.Apply({0x1, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0xd31bd7302f0}, {0xd, 0x0, {0x0, ...}, ...})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/gopurs_runtime/runtime.go:262 +0x150 fp=0xd31fd702c90 sp=0xd31fd702b70 pc=0x104c58e20
+gopurs/output/Test%2eLazyEvaluation.Get_buildThunks.func1.1.Call_buildThunks.1({0x0, 0x0, {0x0, 0x0}, {0x0, 0x1}, 0x0})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/Test.LazyEvaluation/Test_LazyEvaluation.go:125 +0xb4 fp=0xd31fd702dc0 sp=0xd31fd702c90 pc=0x104c8c194
+gopurs/output/gopurs_runtime.Apply({0x1, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0xd31bd7302f0}, {0xd, 0x0, {0x0, ...}, ...})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/gopurs_runtime/runtime.go:262 +0x150 fp=0xd31fd702ee0 sp=0xd31fd702dc0 pc=0x104c58e20
+gopurs/output/Test%2eLazyEvaluation.Get_buildThunks.func1.1.Call_buildThunks.1({0x0, 0x0, {0x0, 0x8}, {0x0, 0x0}, 0x0})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/Test.LazyEvaluation/Test_LazyEvaluation.go:125 +0xb4 fp=0xd31fd703010 sp=0xd31fd702ee0 pc=0x104c8c194
+gopurs/output/gopurs_runtime.Apply({0x1, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0xd31bd7302f0}, {0xd, 0x0, {0x0, ...}, ...})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/gopurs_runtime/runtime.go:262 +0x150 fp=0xd31fd703130 sp=0xd31fd703010 pc=0x104c58e20
+gopurs/output/Test%2eLazyEvaluation.Get_buildThunks.func1.1.Call_buildThunks.1({0x0, 0x0, {0x0, 0x0}, {0x0, 0x8}, 0x0})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/Test.LazyEvaluation/Test_LazyEvaluation.go:125 +0xb4 fp=0xd31fd703260 sp=0xd31fd703130 pc=0x104c8c194
+gopurs/output/gopurs_runtime.Apply({0x1, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0xd31bd7302f0}, {0xd, 0x0, {0x0, ...}, ...})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/gopurs_runtime/runtime.go:262 +0x150 fp=0xd31fd703380 sp=0xd31fd703260 pc=0x104c58e20
+gopurs/output/Test%2eLazyEvaluation.Get_buildThunks.func1.1.Call_buildThunks.1({0x0, 0x0, {0x0, 0x0}, {0xd31bd72ed80, 0x104c87606}, 0x6})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/Test.LazyEvaluation/Test_LazyEvaluation.go:125 +0xb4 fp=0xd31fd7034b0 sp=0xd31fd703380 pc=0x104c8c194
+gopurs/output/gopurs_runtime.Apply({0x1, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0xd31bd7302f0}, {0xd, 0x0, {0x0, ...}, ...})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/gopurs_runtime/runtime.go:262 +0x150 fp=0xd31fd7035d0 sp=0xd31fd7034b0 pc=0x104c58e20
+gopurs/output/Test%2eLazyEvaluation.Get_buildThunks.func1.1.Call_buildThunks.1({0x0, 0x0, {0x0, 0x0}, {0x0, 0xd31bd6bb706}, 0x36})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/Test.LazyEvaluation/Test_LazyEvaluation.go:125 +0xb4 fp=0xd31fd703700 sp=0xd31fd7035d0 pc=0x104c8c194
+gopurs/output/gopurs_runtime.Apply({0x1, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0xd31bd7302f0}, {0xd, 0x0, {0x0, ...}, ...})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/gopurs_runtime/runtime.go:262 +0x150 fp=0xd31fd703820 sp=0xd31fd703700 pc=0x104c58e20
+gopurs/output/Test%2eLazyEvaluation.Get_buildThunks.func1.1.Call_buildThunks.1({0x0, 0x0, {0x104d78a00, 0xd31badf8c60}, {0x0, 0x0}, 0x0})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/Test.LazyEvaluation/Test_LazyEvaluation.go:125 +0xb4 fp=0xd31fd703950 sp=0xd31fd703820 pc=0x104c8c194
+gopurs/output/gopurs_runtime.Apply({0x1, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0xd31bd7302f0}, {0xd, 0x0, {0x0, ...}, ...})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/gopurs_runtime/runtime.go:262 +0x150 fp=0xd31fd703a70 sp=0xd31fd703950 pc=0x104c58e20
+gopurs/output/Test%2eLazyEvaluation.Get_buildThunks.func1.1.Call_buildThunks.1({0x0, 0x0, {0x0, 0x104d78a00}, {0xd31badf8c60, 0x0}, 0xd31bd6bbcf8})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/Test.LazyEvaluation/Test_LazyEvaluation.go:125 +0xb4 fp=0xd31fd703ba0 sp=0xd31fd703a70 pc=0x104c8c194
+gopurs/output/gopurs_runtime.Apply({0x1, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0xd31bd7302f0}, {0xd, 0x0, {0x0, ...}, ...})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/gopurs_runtime/runtime.go:262 +0x150 fp=0xd31fd703cc0 sp=0xd31fd703ba0 pc=0x104c58e20
+gopurs/output/Test%2eLazyEvaluation.Get_buildThunks.func1.1.Call_buildThunks.1({0x1, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0xd31bd72ed00})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/Test.LazyEvaluation/Test_LazyEvaluation.go:125 +0xb4 fp=0xd31fd703df0 sp=0xd31fd703cc0 pc=0x104c8c194
+gopurs/output/gopurs_runtime.Apply({0x1, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0xd31bd7302f0}, {0xd, 0x0, {0x0, ...}, ...})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/gopurs_runtime/runtime.go:262 +0x150 fp=0xd31fd703f10 sp=0xd31fd703df0 pc=0x104c58e20
+gopurs/output/Test%2eLazyEvaluation.Get_buildThunks.func1.1.Call_buildThunks.1({0x0, 0xa, {0x8, 0x0}, {0x0, 0x0}, 0x104d78a00})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/Test.LazyEvaluation/Test_LazyEvaluation.go:125 +0xb4 fp=0xd31fd704040 sp=0xd31fd703f10 pc=0x104c8c194
+gopurs/output/gopurs_runtime.Apply({0x1, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0xd31bd7302f0}, {0xd, 0x0, {0x0, ...}, ...})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/gopurs_runtime/runtime.go:262 +0x150 fp=0xd31fd704160 sp=0xd31fd704040 pc=0x104c58e20
+gopurs/output/Test%2eLazyEvaluation.Get_buildThunks.func1.1.Call_buildThunks.1({0x38, 0x104c58e20, {0xd31bd6bc406, 0x3}, {0x0, 0x0}, 0x0})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/Test.LazyEvaluation/Test_LazyEvaluation.go:125 +0xb4 fp=0xd31fd704290 sp=0xd31fd704160 pc=0x104c8c194
+gopurs/output/gopurs_runtime.Apply({0x1, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0xd31bd7302f0}, {0xd, 0x0, {0x0, ...}, ...})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/gopurs_runtime/runtime.go:262 +0x150 fp=0xd31fd7043b0 sp=0xd31fd704290 pc=0x104c58e20
+gopurs/output/Test%2eLazyEvaluation.Get_buildThunks.func1.1.Call_buildThunks.1({0x0, 0x0, {0x6, 0xc}, {0x0, 0x0}, 0x0})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/Test.LazyEvaluation/Test_LazyEvaluation.go:125 +0xb4 fp=0xd31fd7044e0 sp=0xd31fd7043b0 pc=0x104c8c194
+gopurs/output/gopurs_runtime.Apply({0x1, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0xd31bd7302f0}, {0xd, 0x0, {0x0, ...}, ...})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/gopurs_runtime/runtime.go:262 +0x150 fp=0xd31fd704600 sp=0xd31fd7044e0 pc=0x104c58e20
+gopurs/output/Test%2eLazyEvaluation.Get_buildThunks.func1.1.Call_buildThunks.1({0x0, 0x104da03e0, {0xd31bad09006, 0x3a}, {0x0, 0x0}, 0x0})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/Test.LazyEvaluation/Test_LazyEvaluation.go:125 +0xb4 fp=0xd31fd704730 sp=0xd31fd704600 pc=0x104c8c194
+gopurs/output/gopurs_runtime.Apply({0x1, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0xd31bd7302f0}, {0xd, 0x0, {0x0, ...}, ...})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/gopurs_runtime/runtime.go:262 +0x150 fp=0xd31fd704850 sp=0xd31fd704730 pc=0x104c58e20
+gopurs/output/Test%2eLazyEvaluation.Get_buildThunks.func1.1.Call_buildThunks.1({0xd8, 0x104c8ae04, {0xd31bd6bc901, 0x1f0000001f0}, {0xd31bd6bc9c8, 0x104bb2e08}, 0x104ddc320})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/Test.LazyEvaluation/Test_LazyEvaluation.go:125 +0xb4 fp=0xd31fd704980 sp=0xd31fd704850 pc=0x104c8c194
+gopurs/output/gopurs_runtime.Apply({0x1, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0xd31bd7302f0}, {0xd, 0x0, {0x0, ...}, ...})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/gopurs_runtime/runtime.go:262 +0x150 fp=0xd31fd704aa0 sp=0xd31fd704980 pc=0x104c58e20
+gopurs/output/Test%2eLazyEvaluation.Get_buildThunks.func1.1.Call_buildThunks.1({0x0, 0x0, {0x0, 0x104da0408}, {0x1, 0x0}, 0x0})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/Test.LazyEvaluation/Test_LazyEvaluation.go:125 +0xb4 fp=0xd31fd704bd0 sp=0xd31fd704aa0 pc=0x104c8c194
+gopurs/output/gopurs_runtime.Apply({0x1, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0xd31bd7302f0}, {0xd, 0x0, {0x0, ...}, ...})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/gopurs_runtime/runtime.go:262 +0x150 fp=0xd31fd704cf0 sp=0xd31fd704bd0 pc=0x104c58e20
+gopurs/output/gopurs_runtime.Apply3({0x2, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0x104da0420}, {0x6, 0x3e8, {0x0, ...}, ...}, ...)
+	/Users/0x1/Documents/htdocs/altbak.pub/output/gopurs_runtime/runtime.go:308 +0x278 fp=0xd31fd704e80 sp=0xd31fd704cf0 pc=0x104c5a248
+gopurs/output/Test%2eLazyEvaluation.Call_runManyTimes({0x6, 0x3e7, {0x0, 0x0}, {0x0, 0x0}, 0x0}, {0x6, 0x0, {0x0, ...}, ...})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/Test.LazyEvaluation/Test_LazyEvaluation.go:154 +0x1f0 fp=0xd31fd705090 sp=0xd31fd704e80 pc=0x104c8b620
+gopurs/output/Test%2eLazyEvaluation.Get_runManyTimes.func1.1({0x6, 0x3e8, {0x0, 0x0}, {0x0, 0x0}, 0x0}, {0x6, 0x0, {0x0, ...}, ...})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/Test.LazyEvaluation/Test_LazyEvaluation.go:82 +0x74 fp=0xd31fd705180 sp=0xd31fd705090 pc=0x104c8bd44
+gopurs/output/gopurs_runtime.Apply2({0x2, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0x104da0438}, {0x6, 0x3e8, {0x0, ...}, ...}, ...)
+	/Users/0x1/Documents/htdocs/altbak.pub/output/gopurs_runtime/runtime.go:283 +0x1b0 fp=0xd31fd7052f0 sp=0xd31fd705180 pc=0x104c59830
+gopurs/output/Test%2eLazyEvaluation.Get_act.func1.Get_act.func1.1.2({0x38, 0x104bb38ac, {0x40, 0x104d87880}, {0x10, 0x104d88800}, 0xd31bd6bd568})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/Test.LazyEvaluation/Test_LazyEvaluation.go:98 +0x18c fp=0xd31fd705500 sp=0xd31fd7052f0 pc=0x104c8babc
+gopurs/output/gopurs_runtime.Apply({0x1, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0xd31bd72fb40}, {0x0, 0x0, {0x0, ...}, ...})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/gopurs_runtime/runtime.go:262 +0x150 fp=0xd31fd705620 sp=0xd31fd705500 pc=0x104c58e20
+gopurs/output/Bench.Get_runBench.func1.1.Call_runBench.1({0x0, 0x0, {0x0, 0xd31bd72fb40}, {0xd31bd6bd801, 0x0}, 0x0})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/Bench/Bench.go:30 +0x130 fp=0xd31fd7057a0 sp=0xd31fd705620 pc=0x104c632a0
+gopurs/output/gopurs_runtime.Apply({0x1, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0xd31badc2180}, {0x0, 0x0, {0x0, ...}, ...})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/gopurs_runtime/runtime.go:262 +0x150 fp=0xd31fd7058c0 sp=0xd31fd7057a0 pc=0x104c58e20
+gopurs/output/App.Get_main.func1.Get_main.func1.1.2({0x0, 0x0, {0xd31badc2000, 0x104c48d8c}, {0xa8, 0x104d93f01}, 0x0})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/App/App.go:52 +0x19c4 fp=0xd31fd705d00 sp=0xd31fd7058c0 pc=0x104c8e014
+gopurs/output/gopurs_runtime.Apply({0x1, 0x0, {0x0, 0x0}, {0x0, 0x0}, 0xd31badb6140}, {0x0, 0x0, {0x0, ...}, ...})
+	/Users/0x1/Documents/htdocs/altbak.pub/output/gopurs_runtime/runtime.go:262 +0x150 fp=0xd31fd705e20 sp=0xd31fd705d00 pc=0x104c58e20
+main.main()
+	/Users/0x1/Documents/htdocs/altbak.pub/output/main.go:18 +0x108 fp=0xd31fd705f30 sp=0xd31fd705e20 pc=0x104c8e698
+runtime.main()
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/proc.go:290 +0x2b4 fp=0xd31fd705fd0 sp=0xd31fd705f30 pc=0x104bdea44
+runtime.goexit({})
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/asm_arm64.s:1447 +0x4 fp=0xd31fd705fd0 sp=0xd31fd705fd0 pc=0x104c14eb4
+
+goroutine 2 gp=0xd31bac8c780 m=nil [force gc (idle)]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/proc.go:462 +0xbc fp=0xd31bad04f90 sp=0xd31bad04f70 pc=0x104c0e92c
+runtime.goparkunlock(...)
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/proc.go:468
+runtime.forcegchelper()
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/proc.go:375 +0xb4 fp=0xd31bad04fd0 sp=0xd31bad04f90 pc=0x104bded64
+runtime.goexit({})
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/asm_arm64.s:1447 +0x4 fp=0xd31bad04fd0 sp=0xd31bad04fd0 pc=0x104c14eb4
+created by runtime.init.7 in goroutine 1
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/proc.go:363 +0x24
+
+goroutine 3 gp=0xd31bac8cd20 m=nil [GC sweep wait]:
+runtime.gopark(0x1?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/proc.go:462 +0xbc fp=0xd31bad05770 sp=0xd31bad05750 pc=0x104c0e92c
+runtime.goparkunlock(...)
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/proc.go:468
+runtime.bgsweep(0xd31baca6380)
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/mgcsweep.go:324 +0x178 fp=0xd31bad057b0 sp=0xd31bad05770 pc=0x104bca1b8
+runtime.gcenable.gowrap1()
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/mgc.go:214 +0x20 fp=0xd31bad057d0 sp=0xd31bad057b0 pc=0x104bbb870
+runtime.goexit({})
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/asm_arm64.s:1447 +0x4 fp=0xd31bad057d0 sp=0xd31bad057d0 pc=0x104c14eb4
+created by runtime.gcenable in goroutine 1
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/mgc.go:214 +0x6c
+
+goroutine 4 gp=0xd31bac8cf00 m=nil [GC scavenge wait]:
+runtime.gopark(0x104db50e0?, 0x6553f100?, 0x0?, 0x0?, 0x0?)
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/proc.go:462 +0xbc fp=0xd31bad05f60 sp=0xd31bad05f40 pc=0x104c0e92c
+runtime.goparkunlock(...)
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/proc.go:468
+runtime.(*scavengerState).park(0x104db50e0)
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/mgcscavenge.go:425 +0x5c fp=0xd31bad05f90 sp=0xd31bad05f60 pc=0x104bc7ccc
+runtime.bgscavenge(0xd31baca6380)
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/mgcscavenge.go:658 +0xac fp=0xd31bad05fb0 sp=0xd31bad05f90 pc=0x104bc826c
+runtime.gcenable.gowrap2()
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/mgc.go:215 +0x20 fp=0xd31bad05fd0 sp=0xd31bad05fb0 pc=0x104bbb830
+runtime.goexit({})
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/asm_arm64.s:1447 +0x4 fp=0xd31bad05fd0 sp=0xd31bad05fd0 pc=0x104c14eb4
+created by runtime.gcenable in goroutine 1
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/mgc.go:215 +0xac
+
+goroutine 5 gp=0xd31bac8d4a0 m=nil [GOMAXPROCS updater (idle)]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/proc.go:462 +0xbc fp=0xd31bad06770 sp=0xd31bad06750 pc=0x104c0e92c
+runtime.goparkunlock(...)
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/proc.go:468
+runtime.updateMaxProcsGoroutine()
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/proc.go:7095 +0xf4 fp=0xd31bad067d0 sp=0xd31bad06770 pc=0x104bed534
+runtime.goexit({})
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/asm_arm64.s:1447 +0x4 fp=0xd31bad067d0 sp=0xd31bad067d0 pc=0x104c14eb4
+created by runtime.defaultGOMAXPROCSUpdateEnable in goroutine 1
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/proc.go:7083 +0x48
+
+goroutine 17 gp=0xd31bad843c0 m=nil [finalizer wait]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/proc.go:462 +0xbc fp=0xd31bad00580 sp=0xd31bad00560 pc=0x104c0e92c
+runtime.runFinalizers()
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/mfinal.go:210 +0x100 fp=0xd31bad007d0 sp=0xd31bad00580 pc=0x104bba940
+runtime.goexit({})
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/asm_arm64.s:1447 +0x4 fp=0xd31bad007d0 sp=0xd31bad007d0 pc=0x104c14eb4
+created by runtime.createfing in goroutine 1
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/mfinal.go:172 +0x78
+
+goroutine 18 gp=0xd31bad845a0 m=nil [GC worker (idle)]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/proc.go:462 +0xbc fp=0xd31bad00f20 sp=0xd31bad00f00 pc=0x104c0e92c
+runtime.gcBgMarkWorker(0xd31bad90070)
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/mgc.go:1791 +0xe0 fp=0xd31bad00fb0 sp=0xd31bad00f20 pc=0x104bbe050
+runtime.gcBgMarkStartWorkers.gowrap1()
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/mgc.go:1695 +0x20 fp=0xd31bad00fd0 sp=0xd31bad00fb0 pc=0x104bbdf50
+runtime.goexit({})
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/asm_arm64.s:1447 +0x4 fp=0xd31bad00fd0 sp=0xd31bad00fd0 pc=0x104c14eb4
+created by runtime.gcBgMarkStartWorkers in goroutine 1
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/mgc.go:1695 +0x134
+
+goroutine 19 gp=0xd31bad84780 m=nil [GC worker (idle)]:
+runtime.gopark(0x20723f942687?, 0x1?, 0x55?, 0x42?, 0x0?)
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/proc.go:462 +0xbc fp=0xd31bad01720 sp=0xd31bad01700 pc=0x104c0e92c
+runtime.gcBgMarkWorker(0xd31bad90070)
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/mgc.go:1791 +0xe0 fp=0xd31bad017b0 sp=0xd31bad01720 pc=0x104bbe050
+runtime.gcBgMarkStartWorkers.gowrap1()
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/mgc.go:1695 +0x20 fp=0xd31bad017d0 sp=0xd31bad017b0 pc=0x104bbdf50
+runtime.goexit({})
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/asm_arm64.s:1447 +0x4 fp=0xd31bad017d0 sp=0xd31bad017d0 pc=0x104c14eb4
+created by runtime.gcBgMarkStartWorkers in goroutine 1
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/mgc.go:1695 +0x134
+
+goroutine 20 gp=0xd31bad84960 m=nil [GC worker (idle)]:
+runtime.gopark(0x207240ba9b0f?, 0x3?, 0xb4?, 0x1?, 0x0?)
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/proc.go:462 +0xbc fp=0xd31bad01f20 sp=0xd31bad01f00 pc=0x104c0e92c
+runtime.gcBgMarkWorker(0xd31bad90070)
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/mgc.go:1791 +0xe0 fp=0xd31bad01fb0 sp=0xd31bad01f20 pc=0x104bbe050
+runtime.gcBgMarkStartWorkers.gowrap1()
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/mgc.go:1695 +0x20 fp=0xd31bad01fd0 sp=0xd31bad01fb0 pc=0x104bbdf50
+runtime.goexit({})
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/asm_arm64.s:1447 +0x4 fp=0xd31bad01fd0 sp=0xd31bad01fd0 pc=0x104c14eb4
+created by runtime.gcBgMarkStartWorkers in goroutine 1
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/mgc.go:1695 +0x134
+
+goroutine 21 gp=0xd31bad84b40 m=nil [GC worker (idle)]:
+runtime.gopark(0x104ddc320?, 0x1?, 0xbd?, 0xc?, 0x0?)
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/proc.go:462 +0xbc fp=0xd31bad02720 sp=0xd31bad02700 pc=0x104c0e92c
+runtime.gcBgMarkWorker(0xd31bad90070)
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/mgc.go:1791 +0xe0 fp=0xd31bad027b0 sp=0xd31bad02720 pc=0x104bbe050
+runtime.gcBgMarkStartWorkers.gowrap1()
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/mgc.go:1695 +0x20 fp=0xd31bad027d0 sp=0xd31bad027b0 pc=0x104bbdf50
+runtime.goexit({})
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/asm_arm64.s:1447 +0x4 fp=0xd31bad027d0 sp=0xd31bad027d0 pc=0x104c14eb4
+created by runtime.gcBgMarkStartWorkers in goroutine 1
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/mgc.go:1695 +0x134
+
+goroutine 22 gp=0xd31bad84d20 m=nil [GC worker (idle)]:
+runtime.gopark(0x207240bad0c5?, 0x3?, 0xcb?, 0xf4?, 0x0?)
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/proc.go:462 +0xbc fp=0xd31bad02f20 sp=0xd31bad02f00 pc=0x104c0e92c
+runtime.gcBgMarkWorker(0xd31bad90070)
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/mgc.go:1791 +0xe0 fp=0xd31bad02fb0 sp=0xd31bad02f20 pc=0x104bbe050
+runtime.gcBgMarkStartWorkers.gowrap1()
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/mgc.go:1695 +0x20 fp=0xd31bad02fd0 sp=0xd31bad02fb0 pc=0x104bbdf50
+runtime.goexit({})
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/asm_arm64.s:1447 +0x4 fp=0xd31bad02fd0 sp=0xd31bad02fd0 pc=0x104c14eb4
+created by runtime.gcBgMarkStartWorkers in goroutine 1
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/mgc.go:1695 +0x134
+
+goroutine 23 gp=0xd31bad84f00 m=nil [GC worker (idle)]:
+runtime.gopark(0x207240b7b9eb?, 0x3?, 0x45?, 0x33?, 0x0?)
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/proc.go:462 +0xbc fp=0xd31bad03720 sp=0xd31bad03700 pc=0x104c0e92c
+runtime.gcBgMarkWorker(0xd31bad90070)
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/mgc.go:1791 +0xe0 fp=0xd31bad037b0 sp=0xd31bad03720 pc=0x104bbe050
+runtime.gcBgMarkStartWorkers.gowrap1()
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/mgc.go:1695 +0x20 fp=0xd31bad037d0 sp=0xd31bad037b0 pc=0x104bbdf50
+runtime.goexit({})
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/asm_arm64.s:1447 +0x4 fp=0xd31bad037d0 sp=0xd31bad037d0 pc=0x104c14eb4
+created by runtime.gcBgMarkStartWorkers in goroutine 1
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/mgc.go:1695 +0x134
+
+goroutine 24 gp=0xd31bad850e0 m=nil [GC worker (idle)]:
+runtime.gopark(0x207240bace7e?, 0x1?, 0x6?, 0xe7?, 0x0?)
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/proc.go:462 +0xbc fp=0xd31bad03f20 sp=0xd31bad03f00 pc=0x104c0e92c
+runtime.gcBgMarkWorker(0xd31bad90070)
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/mgc.go:1791 +0xe0 fp=0xd31bad03fb0 sp=0xd31bad03f20 pc=0x104bbe050
+runtime.gcBgMarkStartWorkers.gowrap1()
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/mgc.go:1695 +0x20 fp=0xd31bad03fd0 sp=0xd31bad03fb0 pc=0x104bbdf50
+runtime.goexit({})
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/asm_arm64.s:1447 +0x4 fp=0xd31bad03fd0 sp=0xd31bad03fd0 pc=0x104c14eb4
+created by runtime.gcBgMarkStartWorkers in goroutine 1
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/mgc.go:1695 +0x134
+
+goroutine 25 gp=0xd31bad852c0 m=nil [GC worker (idle)]:
+runtime.gopark(0x207240bd9fd9?, 0x1?, 0xf1?, 0xb1?, 0x0?)
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/proc.go:462 +0xbc fp=0xd31bb0ee720 sp=0xd31bb0ee700 pc=0x104c0e92c
+runtime.gcBgMarkWorker(0xd31bad90070)
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/mgc.go:1791 +0xe0 fp=0xd31bb0ee7b0 sp=0xd31bb0ee720 pc=0x104bbe050
+runtime.gcBgMarkStartWorkers.gowrap1()
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/mgc.go:1695 +0x20 fp=0xd31bb0ee7d0 sp=0xd31bb0ee7b0 pc=0x104bbdf50
+runtime.goexit({})
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/asm_arm64.s:1447 +0x4 fp=0xd31bb0ee7d0 sp=0xd31bb0ee7d0 pc=0x104c14eb4
+created by runtime.gcBgMarkStartWorkers in goroutine 1
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/mgc.go:1695 +0x134
+
+goroutine 26 gp=0xd31bad854a0 m=nil [GC worker (idle)]:
+runtime.gopark(0x104ddc320?, 0x1?, 0x11?, 0x77?, 0x0?)
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/proc.go:462 +0xbc fp=0xd31bb0eef20 sp=0xd31bb0eef00 pc=0x104c0e92c
+runtime.gcBgMarkWorker(0xd31bad90070)
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/mgc.go:1791 +0xe0 fp=0xd31bb0eefb0 sp=0xd31bb0eef20 pc=0x104bbe050
+runtime.gcBgMarkStartWorkers.gowrap1()
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/mgc.go:1695 +0x20 fp=0xd31bb0eefd0 sp=0xd31bb0eefb0 pc=0x104bbdf50
+runtime.goexit({})
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/asm_arm64.s:1447 +0x4 fp=0xd31bb0eefd0 sp=0xd31bb0eefd0 pc=0x104c14eb4
+created by runtime.gcBgMarkStartWorkers in goroutine 1
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/mgc.go:1695 +0x134
+
+goroutine 27 gp=0xd31bad85680 m=nil [GC worker (idle)]:
+runtime.gopark(0x207240ba35a9?, 0x3?, 0xf6?, 0x63?, 0x0?)
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/proc.go:462 +0xbc fp=0xd31bb0ef720 sp=0xd31bb0ef700 pc=0x104c0e92c
+runtime.gcBgMarkWorker(0xd31bad90070)
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/mgc.go:1791 +0xe0 fp=0xd31bb0ef7b0 sp=0xd31bb0ef720 pc=0x104bbe050
+runtime.gcBgMarkStartWorkers.gowrap1()
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/mgc.go:1695 +0x20 fp=0xd31bb0ef7d0 sp=0xd31bb0ef7b0 pc=0x104bbdf50
+runtime.goexit({})
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/asm_arm64.s:1447 +0x4 fp=0xd31bb0ef7d0 sp=0xd31bb0ef7d0 pc=0x104c14eb4
+created by runtime.gcBgMarkStartWorkers in goroutine 1
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/mgc.go:1695 +0x134
+
+goroutine 28 gp=0xd31bad85860 m=nil [GC worker (idle)]:
+runtime.gopark(0x207240bda02c?, 0x3?, 0x9f?, 0x59?, 0x0?)
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/proc.go:462 +0xbc fp=0xd31bb0eff20 sp=0xd31bb0eff00 pc=0x104c0e92c
+runtime.gcBgMarkWorker(0xd31bad90070)
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/mgc.go:1791 +0xe0 fp=0xd31bb0effb0 sp=0xd31bb0eff20 pc=0x104bbe050
+runtime.gcBgMarkStartWorkers.gowrap1()
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/mgc.go:1695 +0x20 fp=0xd31bb0effd0 sp=0xd31bb0effb0 pc=0x104bbdf50
+runtime.goexit({})
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/asm_arm64.s:1447 +0x4 fp=0xd31bb0effd0 sp=0xd31bb0effd0 pc=0x104c14eb4
+created by runtime.gcBgMarkStartWorkers in goroutine 1
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/mgc.go:1695 +0x134
+
+goroutine 29 gp=0xd31bad85a40 m=nil [GC worker (idle)]:
+runtime.gopark(0x207240ba34d9?, 0x3?, 0xab?, 0xc6?, 0x0?)
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/proc.go:462 +0xbc fp=0xd31bb0f0720 sp=0xd31bb0f0700 pc=0x104c0e92c
+runtime.gcBgMarkWorker(0xd31bad90070)
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/mgc.go:1791 +0xe0 fp=0xd31bb0f07b0 sp=0xd31bb0f0720 pc=0x104bbe050
+runtime.gcBgMarkStartWorkers.gowrap1()
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/mgc.go:1695 +0x20 fp=0xd31bb0f07d0 sp=0xd31bb0f07b0 pc=0x104bbdf50
+runtime.goexit({})
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/asm_arm64.s:1447 +0x4 fp=0xd31bb0f07d0 sp=0xd31bb0f07d0 pc=0x104c14eb4
+created by runtime.gcBgMarkStartWorkers in goroutine 1
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/mgc.go:1695 +0x134
+
+goroutine 30 gp=0xd31bad85c20 m=nil [GC worker (idle)]:
+runtime.gopark(0x207240bc0cda?, 0x1?, 0x10?, 0xaf?, 0x0?)
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/proc.go:462 +0xbc fp=0xd31bad2af20 sp=0xd31bad2af00 pc=0x104c0e92c
+runtime.gcBgMarkWorker(0xd31bad90070)
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/mgc.go:1791 +0xe0 fp=0xd31bad2afb0 sp=0xd31bad2af20 pc=0x104bbe050
+runtime.gcBgMarkStartWorkers.gowrap1()
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/mgc.go:1695 +0x20 fp=0xd31bad2afd0 sp=0xd31bad2afb0 pc=0x104bbdf50
+runtime.goexit({})
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/asm_arm64.s:1447 +0x4 fp=0xd31bad2afd0 sp=0xd31bad2afd0 pc=0x104c14eb4
+created by runtime.gcBgMarkStartWorkers in goroutine 1
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/mgc.go:1695 +0x134
+
+goroutine 31 gp=0xd31bb0f4000 m=nil [GC worker (idle)]:
+runtime.gopark(0x207240bd36b4?, 0x1?, 0x11?, 0x17?, 0x0?)
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/proc.go:462 +0xbc fp=0xd31bad2ff20 sp=0xd31bad2ff00 pc=0x104c0e92c
+runtime.gcBgMarkWorker(0xd31bad90070)
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/mgc.go:1791 +0xe0 fp=0xd31bad2ffb0 sp=0xd31bad2ff20 pc=0x104bbe050
+runtime.gcBgMarkStartWorkers.gowrap1()
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/mgc.go:1695 +0x20 fp=0xd31bad2ffd0 sp=0xd31bad2ffb0 pc=0x104bbdf50
+runtime.goexit({})
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/asm_arm64.s:1447 +0x4 fp=0xd31bad2ffd0 sp=0xd31bad2ffd0 pc=0x104c14eb4
+created by runtime.gcBgMarkStartWorkers in goroutine 1
+	/opt/homebrew/Cellar/go/1.26.5/libexec/src/runtime/mgc.go:1695 +0x134

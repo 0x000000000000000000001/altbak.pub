@@ -13,7 +13,7 @@ func Get_runFn1() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
-return f_0_loop
+return f_0
 }()
 })
 	})
@@ -28,7 +28,7 @@ func Get_mkFn1() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
-return f_0_loop
+return f_0
 }()
 })
 	})

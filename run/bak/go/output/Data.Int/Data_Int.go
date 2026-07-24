@@ -69,8 +69,8 @@ var n_0 gopurs_runtime.Value = n_0_loop
 _ = n_0
 var __t0 gopurs_runtime.Value
 {
-if n_0_loop.IntVal >= 2 && n_0_loop.IntVal <= 36 {
-__t0 = gopurs_runtime.Constructor1("Just", n_0_loop)
+if n_0.IntVal >= 2 && n_0.IntVal <= 36 {
+__t0 = gopurs_runtime.Constructor1("Just", n_0)
 goto end_branch_0
 } else {
 
@@ -95,7 +95,7 @@ func Get_odd() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
-return gopurs_runtime.Bool(x_0_loop.IntVal & 1 != 0)
+return gopurs_runtime.Bool(x_0.IntVal & 1 != 0)
 }()
 })
 	})
@@ -157,7 +157,7 @@ var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
 var __t2 gopurs_runtime.Value
 {
-if gopurs_runtime.Apply(pkg_Data_Number.Get_isFinite(), x_0_loop).IntVal != 0 != true {
+if gopurs_runtime.Apply(pkg_Data_Number.Get_isFinite(), x_0).IntVal != 0 != true {
 __t2 = gopurs_runtime.Int(0)
 goto end_branch_2
 } else {
@@ -165,7 +165,7 @@ goto end_branch_2
 }
 }
 {
-if x_0_loop.FloatVal() >= gopurs_runtime.Apply(Get_toNumber(), pkg_Data_Bounded.Get_topInt()).FloatVal() {
+if x_0.FloatVal() >= gopurs_runtime.Apply(Get_toNumber(), pkg_Data_Bounded.Get_topInt()).FloatVal() {
 __t2 = pkg_Data_Bounded.Get_topInt()
 goto end_branch_2
 } else {
@@ -173,7 +173,7 @@ goto end_branch_2
 }
 }
 {
-if x_0_loop.FloatVal() <= gopurs_runtime.Apply(Get_toNumber(), pkg_Data_Bounded.Get_bottomInt()).FloatVal() {
+if x_0.FloatVal() <= gopurs_runtime.Apply(Get_toNumber(), pkg_Data_Bounded.Get_bottomInt()).FloatVal() {
 __t2 = pkg_Data_Bounded.Get_bottomInt()
 goto end_branch_2
 } else {
@@ -181,7 +181,7 @@ goto end_branch_2
 }
 }
 {
-__local_var_1_0 := gopurs_runtime.Apply(Get_fromNumber(), x_0_loop)
+__local_var_1_0 := gopurs_runtime.Apply(Get_fromNumber(), x_0)
 _ = __local_var_1_0
 var __t1 gopurs_runtime.Value
 {
@@ -222,7 +222,7 @@ func Get_round() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
-return gopurs_runtime.Apply(Get_unsafeClamp(), gopurs_runtime.Apply(pkg_Data_Number.Get_round(), x_0_loop))
+return gopurs_runtime.Apply(Get_unsafeClamp(), gopurs_runtime.Apply(pkg_Data_Number.Get_round(), x_0))
 }()
 })
 	})
@@ -237,7 +237,7 @@ func Get_trunc() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
-return gopurs_runtime.Apply(Get_unsafeClamp(), gopurs_runtime.Apply(pkg_Data_Number.Get_trunc(), x_0_loop))
+return gopurs_runtime.Apply(Get_unsafeClamp(), gopurs_runtime.Apply(pkg_Data_Number.Get_trunc(), x_0))
 }()
 })
 	})
@@ -252,7 +252,7 @@ func Get_floor() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
-return gopurs_runtime.Apply(Get_unsafeClamp(), gopurs_runtime.Apply(pkg_Data_Number.Get_floor(), x_0_loop))
+return gopurs_runtime.Apply(Get_unsafeClamp(), gopurs_runtime.Apply(pkg_Data_Number.Get_floor(), x_0))
 }()
 })
 	})
@@ -267,7 +267,7 @@ func Get_even() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
-return gopurs_runtime.Bool(x_0_loop.IntVal & 1 == 0)
+return gopurs_runtime.Bool(x_0.IntVal & 1 == 0)
 }()
 })
 	})
@@ -284,7 +284,7 @@ var n_0 gopurs_runtime.Value = n_0_loop
 _ = n_0
 var __t0 gopurs_runtime.Value
 {
-if n_0_loop.IntVal & 1 == 0 {
+if n_0.IntVal & 1 == 0 {
 __t0 = gopurs_runtime.Constructor0("Even")
 goto end_branch_0
 } else {
@@ -521,7 +521,7 @@ func Get_ceil() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
-return gopurs_runtime.Apply(Get_unsafeClamp(), gopurs_runtime.Apply(pkg_Data_Number.Get_ceil(), x_0_loop))
+return gopurs_runtime.Apply(Get_unsafeClamp(), gopurs_runtime.Apply(pkg_Data_Number.Get_ceil(), x_0))
 }()
 })
 	})

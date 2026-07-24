@@ -14,7 +14,7 @@ func Get_state() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0_loop, "state")
+return gopurs_runtime.RecordGet(dict_0, "state")
 }()
 })
 	})
@@ -25,7 +25,9 @@ var put gopurs_runtime.Value
 var once_put sync.Once
 func Get_put() gopurs_runtime.Value {
 	once_put.Do(func() {
-		put = gopurs_runtime.Func2(Call_put)
+		put = gopurs_runtime.Func2(func(dictMonadState_0_box gopurs_runtime.Value, s_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_put(dictMonadState_0_box, s_1_box)
+})
 	})
 	return put
 }
@@ -34,7 +36,9 @@ var modify_ gopurs_runtime.Value
 var once_modify_ sync.Once
 func Get_modify_() gopurs_runtime.Value {
 	once_modify_.Do(func() {
-		modify_ = gopurs_runtime.Func2(Call_modify_)
+		modify_ = gopurs_runtime.Func2(func(dictMonadState_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_modify_(dictMonadState_0_box, f_1_box)
+})
 	})
 	return modify_
 }
@@ -43,7 +47,9 @@ var modify gopurs_runtime.Value
 var once_modify sync.Once
 func Get_modify() gopurs_runtime.Value {
 	once_modify.Do(func() {
-		modify = gopurs_runtime.Func2(Call_modify)
+		modify = gopurs_runtime.Func2(func(dictMonadState_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_modify(dictMonadState_0_box, f_1_box)
+})
 	})
 	return modify
 }
@@ -52,7 +58,9 @@ var gets gopurs_runtime.Value
 var once_gets sync.Once
 func Get_gets() gopurs_runtime.Value {
 	once_gets.Do(func() {
-		gets = gopurs_runtime.Func2(Call_gets)
+		gets = gopurs_runtime.Func2(func(dictMonadState_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_gets(dictMonadState_0_box, f_1_box)
+})
 	})
 	return gets
 }
@@ -65,7 +73,7 @@ func Get_get() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonadState_0 gopurs_runtime.Value = dictMonadState_0_loop
 _ = dictMonadState_0
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadState_0_loop, "state"), gopurs_runtime.Func(func(s_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadState_0, "state"), gopurs_runtime.Func(func(s_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Constructor2("Tuple", s_1, s_1)
 }))
 }()
@@ -79,8 +87,8 @@ var dictMonadState_0 gopurs_runtime.Value = dictMonadState_0_loop
 _ = dictMonadState_0
 var s_1 gopurs_runtime.Value = s_1_loop
 _ = s_1
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadState_0_loop, "state"), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Tuple", pkg_Data_Unit.Get_unit(), s_1_loop)
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadState_0, "state"), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Constructor2("Tuple", pkg_Data_Unit.Get_unit(), s_1)
 }))
 }
 
@@ -89,8 +97,8 @@ var dictMonadState_0 gopurs_runtime.Value = dictMonadState_0_loop
 _ = dictMonadState_0
 var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadState_0_loop, "state"), gopurs_runtime.Func(func(s_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Tuple", pkg_Data_Unit.Get_unit(), gopurs_runtime.Apply(f_1_loop, s_2))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadState_0, "state"), gopurs_runtime.Func(func(s_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Constructor2("Tuple", pkg_Data_Unit.Get_unit(), gopurs_runtime.Apply(f_1, s_2))
 }))
 }
 
@@ -99,8 +107,8 @@ var dictMonadState_0 gopurs_runtime.Value = dictMonadState_0_loop
 _ = dictMonadState_0
 var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadState_0_loop, "state"), gopurs_runtime.Func(func(s_2 gopurs_runtime.Value) gopurs_runtime.Value {
-s_prime_3_0 := gopurs_runtime.Apply(f_1_loop, s_2)
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadState_0, "state"), gopurs_runtime.Func(func(s_2 gopurs_runtime.Value) gopurs_runtime.Value {
+s_prime_3_0 := gopurs_runtime.Apply(f_1, s_2)
 _ = s_prime_3_0
 return gopurs_runtime.Constructor2("Tuple", s_prime_3_0, s_prime_3_0)
 }))
@@ -111,8 +119,8 @@ var dictMonadState_0 gopurs_runtime.Value = dictMonadState_0_loop
 _ = dictMonadState_0
 var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadState_0_loop, "state"), gopurs_runtime.Func(func(s_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply(f_1_loop, s_2), s_2)
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadState_0, "state"), gopurs_runtime.Func(func(s_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply(f_1, s_2), s_2)
 }))
 }
 

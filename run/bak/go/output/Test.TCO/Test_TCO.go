@@ -22,7 +22,9 @@ var deepTailRec gopurs_runtime.Value
 var once_deepTailRec sync.Once
 func Get_deepTailRec() gopurs_runtime.Value {
 	once_deepTailRec.Do(func() {
-		deepTailRec = gopurs_runtime.Func2(Call_deepTailRec)
+		deepTailRec = gopurs_runtime.Func2(func(v_0_box gopurs_runtime.Value, v1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_deepTailRec(v_0_box, v1_1_box)
+})
 	})
 	return deepTailRec
 }
@@ -54,15 +56,18 @@ var v1_1 gopurs_runtime.Value = v1_1_loop
 _ = v1_1
 var __t0 gopurs_runtime.Value
 {
-if v_0_loop.IntVal == 0 {
-__t0 = v1_1_loop
+if v_0.IntVal == 0 {
+__t0 = v1_1
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = Call_deepTailRec(gopurs_runtime.Int(v_0_loop.IntVal - 1), gopurs_runtime.Int(v1_1_loop.IntVal + gopurs_runtime.Apply2(pkg_Data_EuclideanRing.Get_intMod(), v_0_loop, gopurs_runtime.Int(3)).IntVal))
+v_0_loop = gopurs_runtime.Int(v_0.IntVal - 1)
+v1_1_loop = gopurs_runtime.Int(v1_1.IntVal + gopurs_runtime.Apply2(pkg_Data_EuclideanRing.Get_intMod(), v_0, gopurs_runtime.Int(3)).IntVal)
+continue deepTailRec
+__t0 = gopurs_runtime.Value{}
 }
 end_branch_0:
 return __t0

@@ -86,7 +86,7 @@ func Get_fromString() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var str_0 gopurs_runtime.Value = str_0_loop
 _ = str_0
-return gopurs_runtime.UncurriedApp4(Get_fromStringImpl(), str_0_loop, Get_isFinite(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Constructor0("Nothing"))
+return gopurs_runtime.UncurriedApp4(Get_fromStringImpl(), str_0, Get_isFinite(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Constructor0("Nothing"))
 }()
 })
 	})

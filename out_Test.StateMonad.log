@@ -1,6 +1,7 @@
+Compilation failed, but that's expected for now!
 === Native Go ===
-State Monad (1.2k Binds, 60 Stack Depth):
-1200
+Fibonacci:
+55
 
-Execution time: 255.00 μs
+Execution time: 15.25 μs
 

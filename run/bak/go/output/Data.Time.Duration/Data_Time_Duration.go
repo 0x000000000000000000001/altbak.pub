@@ -17,7 +17,7 @@ func Get_Seconds() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
-return x_0_loop
+return x_0
 }()
 })
 	})
@@ -32,7 +32,7 @@ func Get_Minutes() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
-return x_0_loop
+return x_0
 }()
 })
 	})
@@ -47,7 +47,7 @@ func Get_Milliseconds() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
-return x_0_loop
+return x_0
 }()
 })
 	})
@@ -62,7 +62,7 @@ func Get_Hours() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
-return x_0_loop
+return x_0
 }()
 })
 	})
@@ -77,7 +77,7 @@ func Get_Days() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
-return x_0_loop
+return x_0
 }()
 })
 	})
@@ -92,7 +92,7 @@ func Get_toDuration() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0_loop, "toDuration")
+return gopurs_runtime.RecordGet(dict_0, "toDuration")
 }()
 })
 	})
@@ -372,7 +372,7 @@ func Get_fromDuration() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0_loop, "fromDuration")
+return gopurs_runtime.RecordGet(dict_0, "fromDuration")
 }()
 })
 	})
@@ -383,7 +383,9 @@ var negateDuration gopurs_runtime.Value
 var once_negateDuration sync.Once
 func Get_negateDuration() gopurs_runtime.Value {
 	once_negateDuration.Do(func() {
-		negateDuration = gopurs_runtime.Func2(Call_negateDuration)
+		negateDuration = gopurs_runtime.Func2(func(dictDuration_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_negateDuration(dictDuration_0_box, x_1_box)
+})
 	})
 	return negateDuration
 }
@@ -498,7 +500,9 @@ var convertDuration gopurs_runtime.Value
 var once_convertDuration sync.Once
 func Get_convertDuration() gopurs_runtime.Value {
 	once_convertDuration.Do(func() {
-		convertDuration = gopurs_runtime.Func3(Call_convertDuration)
+		convertDuration = gopurs_runtime.Func3(func(dictDuration_0_box gopurs_runtime.Value, dictDuration1_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_convertDuration(dictDuration_0_box, dictDuration1_1_box, x_2_box)
+})
 	})
 	return convertDuration
 }
@@ -508,7 +512,7 @@ var dictDuration_0 gopurs_runtime.Value = dictDuration_0_loop
 _ = dictDuration_0
 var x_1 gopurs_runtime.Value = x_1_loop
 _ = x_1
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDuration_0_loop, "toDuration"), gopurs_runtime.FloatNeg(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDuration_0_loop, "fromDuration"), x_1_loop)))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDuration_0, "toDuration"), gopurs_runtime.FloatNeg(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDuration_0, "fromDuration"), x_1)))
 }
 
 func Call_convertDuration(dictDuration_0_loop gopurs_runtime.Value, dictDuration1_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -518,7 +522,7 @@ var dictDuration1_1 gopurs_runtime.Value = dictDuration1_1_loop
 _ = dictDuration1_1
 var x_2 gopurs_runtime.Value = x_2_loop
 _ = x_2
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDuration1_1_loop, "toDuration"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDuration_0_loop, "fromDuration"), x_2_loop))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDuration1_1, "toDuration"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDuration_0, "fromDuration"), x_2))
 }
 
 

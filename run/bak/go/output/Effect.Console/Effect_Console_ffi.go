@@ -69,103 +69,127 @@ func GroupEnd() {
 
 
 // --- Auto-generated FFI wrappers ---
-func Call_log(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_log(arg0 string) func() any {
+	return Log(arg0)
+}
+var _Gopurs_Log = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[string](arg0)
 	go_res := Log(go_arg0)
 	return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 			inner_res := go_res()
 			return gopurs_runtime.Box(inner_res)
 		})
+})
+func Call_warn(arg0 string) func() any {
+	return Warn(arg0)
 }
-var _Gopurs_Log = gopurs_runtime.Func(Call_log)
-func Call_warn(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_Warn = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[string](arg0)
 	go_res := Warn(go_arg0)
 	return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 			inner_res := go_res()
 			return gopurs_runtime.Box(inner_res)
 		})
+})
+func Call_error(arg0 string) func() any {
+	return Error(arg0)
 }
-var _Gopurs_Warn = gopurs_runtime.Func(Call_warn)
-func Call_error(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_Error = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[string](arg0)
 	go_res := Error(go_arg0)
 	return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 			inner_res := go_res()
 			return gopurs_runtime.Box(inner_res)
 		})
+})
+func Call_info(arg0 string) func() any {
+	return Info(arg0)
 }
-var _Gopurs_Error = gopurs_runtime.Func(Call_error)
-func Call_info(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_Info = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[string](arg0)
 	go_res := Info(go_arg0)
 	return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 			inner_res := go_res()
 			return gopurs_runtime.Box(inner_res)
 		})
+})
+func Call_debug(arg0 string) func() any {
+	return Debug(arg0)
 }
-var _Gopurs_Info = gopurs_runtime.Func(Call_info)
-func Call_debug(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_Debug = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[string](arg0)
 	go_res := Debug(go_arg0)
 	return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 			inner_res := go_res()
 			return gopurs_runtime.Box(inner_res)
 		})
+})
+func Call_time(arg0 string) func() any {
+	return Time(arg0)
 }
-var _Gopurs_Debug = gopurs_runtime.Func(Call_debug)
-func Call_time(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_Time = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[string](arg0)
 	go_res := Time(go_arg0)
 	return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 			inner_res := go_res()
 			return gopurs_runtime.Box(inner_res)
 		})
+})
+func Call_timeLog(arg0 string) func() any {
+	return TimeLog(arg0)
 }
-var _Gopurs_Time = gopurs_runtime.Func(Call_time)
-func Call_timeLog(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_TimeLog = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[string](arg0)
 	go_res := TimeLog(go_arg0)
 	return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 			inner_res := go_res()
 			return gopurs_runtime.Box(inner_res)
 		})
+})
+func Call_timeEnd(arg0 string) func() any {
+	return TimeEnd(arg0)
 }
-var _Gopurs_TimeLog = gopurs_runtime.Func(Call_timeLog)
-func Call_timeEnd(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_TimeEnd = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[string](arg0)
 	go_res := TimeEnd(go_arg0)
 	return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 			inner_res := go_res()
 			return gopurs_runtime.Box(inner_res)
 		})
+})
+func Call_clear()  {
+	Clear()
 }
-var _Gopurs_TimeEnd = gopurs_runtime.Func(Call_timeEnd)
-func Call_clear(_ gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_Clear = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 	Clear()
 	return gopurs_runtime.Value{}
+})
+func Call_group(arg0 string) func() any {
+	return Group(arg0)
 }
-var _Gopurs_Clear = gopurs_runtime.Func(Call_clear)
-func Call_group(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_Group = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[string](arg0)
 	go_res := Group(go_arg0)
 	return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 			inner_res := go_res()
 			return gopurs_runtime.Box(inner_res)
 		})
+})
+func Call_groupCollapsed(arg0 string) func() any {
+	return GroupCollapsed(arg0)
 }
-var _Gopurs_Group = gopurs_runtime.Func(Call_group)
-func Call_groupCollapsed(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_GroupCollapsed = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[string](arg0)
 	go_res := GroupCollapsed(go_arg0)
 	return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 			inner_res := go_res()
 			return gopurs_runtime.Box(inner_res)
 		})
+})
+func Call_groupEnd()  {
+	GroupEnd()
 }
-var _Gopurs_GroupCollapsed = gopurs_runtime.Func(Call_groupCollapsed)
-func Call_groupEnd(_ gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_GroupEnd = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 	GroupEnd()
 	return gopurs_runtime.Value{}
-}
-var _Gopurs_GroupEnd = gopurs_runtime.Func(Call_groupEnd)
+})

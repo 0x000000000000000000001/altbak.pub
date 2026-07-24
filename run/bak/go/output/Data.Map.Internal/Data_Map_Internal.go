@@ -135,7 +135,9 @@ var unsafeNode gopurs_runtime.Value
 var once_unsafeNode sync.Once
 func Get_unsafeNode() gopurs_runtime.Value {
 	once_unsafeNode.Do(func() {
-		unsafeNode = gopurs_runtime.Func4(Call_unsafeNode)
+		unsafeNode = gopurs_runtime.Func4(func(k_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value, l_2_box gopurs_runtime.Value, r_3_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_unsafeNode(k_0_box, v_1_box, l_2_box, r_3_box)
+})
 	})
 	return unsafeNode
 }
@@ -148,7 +150,7 @@ func Get_toMapIter() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var a_0 gopurs_runtime.Value = a_0_loop
 _ = a_0
-return gopurs_runtime.Constructor2("IterNode", a_0_loop, gopurs_runtime.Constructor0("IterLeaf"))
+return gopurs_runtime.Constructor2("IterNode", a_0, gopurs_runtime.Constructor0("IterLeaf"))
 }()
 })
 	})
@@ -159,7 +161,9 @@ var stepWith gopurs_runtime.Value
 var once_stepWith sync.Once
 func Get_stepWith() gopurs_runtime.Value {
 	once_stepWith.Do(func() {
-		stepWith = gopurs_runtime.Func3(Call_stepWith)
+		stepWith = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, next_1_box gopurs_runtime.Value, done_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_stepWith(f_0_box, next_1_box, done_2_box)
+})
 	})
 	return stepWith
 }
@@ -174,7 +178,7 @@ var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v_0_loop.StrVal == "Leaf").IntVal != 0 {
+if gopurs_runtime.Bool(v_0.StrVal == "Leaf").IntVal != 0 {
 __t0 = gopurs_runtime.Int(0)
 goto end_branch_0
 } else {
@@ -182,8 +186,8 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool(v_0_loop.StrVal == "Node").IntVal != 0 {
-__t0 = (*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[1]
+if gopurs_runtime.Bool(v_0.StrVal == "Node").IntVal != 0 {
+__t0 = (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[1]
 goto end_branch_0
 } else {
 
@@ -204,7 +208,9 @@ var singleton gopurs_runtime.Value
 var once_singleton sync.Once
 func Get_singleton() gopurs_runtime.Value {
 	once_singleton.Do(func() {
-		singleton = gopurs_runtime.Func2(Call_singleton)
+		singleton = gopurs_runtime.Func2(func(k_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_singleton(k_0_box, v_1_box)
+})
 	})
 	return singleton
 }
@@ -213,7 +219,9 @@ var unsafeBalancedNode gopurs_runtime.Value
 var once_unsafeBalancedNode sync.Once
 func Get_unsafeBalancedNode() gopurs_runtime.Value {
 	once_unsafeBalancedNode.Do(func() {
-		unsafeBalancedNode = gopurs_runtime.Func4(Call_unsafeBalancedNode)
+		unsafeBalancedNode = gopurs_runtime.Func4(func(k_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value, l_2_box gopurs_runtime.Value, r_3_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_unsafeBalancedNode(k_0_box, v_1_box, l_2_box, r_3_box)
+})
 	})
 	return unsafeBalancedNode
 }
@@ -222,7 +230,9 @@ var unsafeSplit gopurs_runtime.Value
 var once_unsafeSplit sync.Once
 func Get_unsafeSplit() gopurs_runtime.Value {
 	once_unsafeSplit.Do(func() {
-		unsafeSplit = gopurs_runtime.Func3(Call_unsafeSplit)
+		unsafeSplit = gopurs_runtime.Func3(func(comp_0_box gopurs_runtime.Value, k_1_box gopurs_runtime.Value, m_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_unsafeSplit(comp_0_box, k_1_box, m_2_box)
+})
 	})
 	return unsafeSplit
 }
@@ -231,7 +241,9 @@ var unsafeSplitLast gopurs_runtime.Value
 var once_unsafeSplitLast sync.Once
 func Get_unsafeSplitLast() gopurs_runtime.Value {
 	once_unsafeSplitLast.Do(func() {
-		unsafeSplitLast = gopurs_runtime.Func4(Call_unsafeSplitLast)
+		unsafeSplitLast = gopurs_runtime.Func4(func(k_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value, l_2_box gopurs_runtime.Value, r_3_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_unsafeSplitLast(k_0_box, v_1_box, l_2_box, r_3_box)
+})
 	})
 	return unsafeSplitLast
 }
@@ -240,7 +252,9 @@ var unsafeJoinNodes gopurs_runtime.Value
 var once_unsafeJoinNodes sync.Once
 func Get_unsafeJoinNodes() gopurs_runtime.Value {
 	once_unsafeJoinNodes.Do(func() {
-		unsafeJoinNodes = gopurs_runtime.Func2(Call_unsafeJoinNodes)
+		unsafeJoinNodes = gopurs_runtime.Func2(func(v_0_box gopurs_runtime.Value, v1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_unsafeJoinNodes(v_0_box, v1_1_box)
+})
 	})
 	return unsafeJoinNodes
 }
@@ -249,7 +263,9 @@ var unsafeDifference gopurs_runtime.Value
 var once_unsafeDifference sync.Once
 func Get_unsafeDifference() gopurs_runtime.Value {
 	once_unsafeDifference.Do(func() {
-		unsafeDifference = gopurs_runtime.Func3(Call_unsafeDifference)
+		unsafeDifference = gopurs_runtime.Func3(func(comp_0_box gopurs_runtime.Value, l_1_box gopurs_runtime.Value, r_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_unsafeDifference(comp_0_box, l_1_box, r_2_box)
+})
 	})
 	return unsafeDifference
 }
@@ -258,7 +274,9 @@ var unsafeIntersectionWith gopurs_runtime.Value
 var once_unsafeIntersectionWith sync.Once
 func Get_unsafeIntersectionWith() gopurs_runtime.Value {
 	once_unsafeIntersectionWith.Do(func() {
-		unsafeIntersectionWith = gopurs_runtime.Func4(Call_unsafeIntersectionWith)
+		unsafeIntersectionWith = gopurs_runtime.Func4(func(comp_0_box gopurs_runtime.Value, app_1_box gopurs_runtime.Value, l_2_box gopurs_runtime.Value, r_3_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_unsafeIntersectionWith(comp_0_box, app_1_box, l_2_box, r_3_box)
+})
 	})
 	return unsafeIntersectionWith
 }
@@ -267,7 +285,9 @@ var unsafeUnionWith gopurs_runtime.Value
 var once_unsafeUnionWith sync.Once
 func Get_unsafeUnionWith() gopurs_runtime.Value {
 	once_unsafeUnionWith.Do(func() {
-		unsafeUnionWith = gopurs_runtime.Func4(Call_unsafeUnionWith)
+		unsafeUnionWith = gopurs_runtime.Func4(func(comp_0_box gopurs_runtime.Value, app_1_box gopurs_runtime.Value, l_2_box gopurs_runtime.Value, r_3_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_unsafeUnionWith(comp_0_box, app_1_box, l_2_box, r_3_box)
+})
 	})
 	return unsafeUnionWith
 }
@@ -280,7 +300,7 @@ func Get_unionWith() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-compare_1_0 := gopurs_runtime.RecordGet(dictOrd_0_loop, "compare")
+compare_1_0 := gopurs_runtime.RecordGet(dictOrd_0, "compare")
 _ = compare_1_0
 return gopurs_runtime.Func3(func(app_2 gopurs_runtime.Value, m1_3 gopurs_runtime.Value, m2_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.UncurriedApp4(Get_unsafeUnionWith(), compare_1_0, app_2, m1_3, m2_4)
@@ -299,7 +319,7 @@ func Get_union() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-compare_1_0 := gopurs_runtime.RecordGet(dictOrd_0_loop, "compare")
+compare_1_0 := gopurs_runtime.RecordGet(dictOrd_0, "compare")
 _ = compare_1_0
 return gopurs_runtime.Func2(func(m1_2 gopurs_runtime.Value, m2_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.UncurriedApp4(Get_unsafeUnionWith(), compare_1_0, pkg_Data_Function.Get_const_(), m1_2, m2_3)
@@ -314,7 +334,9 @@ var update gopurs_runtime.Value
 var once_update sync.Once
 func Get_update() gopurs_runtime.Value {
 	once_update.Do(func() {
-		update = gopurs_runtime.Func3(Call_update)
+		update = gopurs_runtime.Func3(func(dictOrd_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, k_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_update(dictOrd_0_box, f_1_box, k_2_box)
+})
 	})
 	return update
 }
@@ -323,7 +345,9 @@ var showTree gopurs_runtime.Value
 var once_showTree sync.Once
 func Get_showTree() gopurs_runtime.Value {
 	once_showTree.Do(func() {
-		showTree = gopurs_runtime.Func2(Call_showTree)
+		showTree = gopurs_runtime.Func2(func(dictShow_0_box gopurs_runtime.Value, dictShow1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_showTree(dictShow_0_box, dictShow1_1_box)
+})
 	})
 	return showTree
 }
@@ -332,7 +356,9 @@ var semigroupMap gopurs_runtime.Value
 var once_semigroupMap sync.Once
 func Get_semigroupMap() gopurs_runtime.Value {
 	once_semigroupMap.Do(func() {
-		semigroupMap = gopurs_runtime.Func2(Call_semigroupMap)
+		semigroupMap = gopurs_runtime.Func2(func(_dollar__unused_0_box gopurs_runtime.Value, dictOrd_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_semigroupMap(_dollar__unused_0_box, dictOrd_1_box)
+})
 	})
 	return semigroupMap
 }
@@ -345,7 +371,7 @@ func Get_pop() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-compare_1_0 := gopurs_runtime.RecordGet(dictOrd_0_loop, "compare")
+compare_1_0 := gopurs_runtime.RecordGet(dictOrd_0, "compare")
 _ = compare_1_0
 return gopurs_runtime.Func2(func(k_2 gopurs_runtime.Value, m_3 gopurs_runtime.Value) gopurs_runtime.Value {
 v_4_1 := gopurs_runtime.UncurriedApp3(Get_unsafeSplit(), compare_1_0, k_2, m_3)
@@ -375,7 +401,9 @@ var member gopurs_runtime.Value
 var once_member sync.Once
 func Get_member() gopurs_runtime.Value {
 	once_member.Do(func() {
-		member = gopurs_runtime.Func2(Call_member)
+		member = gopurs_runtime.Func2(func(dictOrd_0_box gopurs_runtime.Value, k_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_member(dictOrd_0_box, k_1_box)
+})
 	})
 	return member
 }
@@ -384,7 +412,9 @@ var mapMaybeWithKey gopurs_runtime.Value
 var once_mapMaybeWithKey sync.Once
 func Get_mapMaybeWithKey() gopurs_runtime.Value {
 	once_mapMaybeWithKey.Do(func() {
-		mapMaybeWithKey = gopurs_runtime.Func2(Call_mapMaybeWithKey)
+		mapMaybeWithKey = gopurs_runtime.Func2(func(dictOrd_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_mapMaybeWithKey(dictOrd_0_box, f_1_box)
+})
 	})
 	return mapMaybeWithKey
 }
@@ -393,7 +423,9 @@ var mapMaybe gopurs_runtime.Value
 var once_mapMaybe sync.Once
 func Get_mapMaybe() gopurs_runtime.Value {
 	once_mapMaybe.Do(func() {
-		mapMaybe = gopurs_runtime.Func2(Call_mapMaybe)
+		mapMaybe = gopurs_runtime.Func2(func(dictOrd_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_mapMaybe(dictOrd_0_box, x_1_box)
+})
 	})
 	return mapMaybe
 }
@@ -402,7 +434,9 @@ var lookupLE gopurs_runtime.Value
 var once_lookupLE sync.Once
 func Get_lookupLE() gopurs_runtime.Value {
 	once_lookupLE.Do(func() {
-		lookupLE = gopurs_runtime.Func2(Call_lookupLE)
+		lookupLE = gopurs_runtime.Func2(func(dictOrd_0_box gopurs_runtime.Value, k_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_lookupLE(dictOrd_0_box, k_1_box)
+})
 	})
 	return lookupLE
 }
@@ -411,7 +445,9 @@ var lookupGE gopurs_runtime.Value
 var once_lookupGE sync.Once
 func Get_lookupGE() gopurs_runtime.Value {
 	once_lookupGE.Do(func() {
-		lookupGE = gopurs_runtime.Func2(Call_lookupGE)
+		lookupGE = gopurs_runtime.Func2(func(dictOrd_0_box gopurs_runtime.Value, k_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_lookupGE(dictOrd_0_box, k_1_box)
+})
 	})
 	return lookupGE
 }
@@ -420,7 +456,9 @@ var lookup gopurs_runtime.Value
 var once_lookup sync.Once
 func Get_lookup() gopurs_runtime.Value {
 	once_lookup.Do(func() {
-		lookup = gopurs_runtime.Func2(Call_lookup)
+		lookup = gopurs_runtime.Func2(func(dictOrd_0_box gopurs_runtime.Value, k_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_lookup(dictOrd_0_box, k_1_box)
+})
 	})
 	return lookup
 }
@@ -429,7 +467,9 @@ var iterMapU gopurs_runtime.Value
 var once_iterMapU sync.Once
 func Get_iterMapU() gopurs_runtime.Value {
 	once_iterMapU.Do(func() {
-		iterMapU = gopurs_runtime.Func2(Call_iterMapU)
+		iterMapU = gopurs_runtime.Func2(func(iter_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_iterMapU(iter_0_box, v_1_box)
+})
 	})
 	return iterMapU
 }
@@ -464,7 +504,7 @@ func Get_toUnfoldableUnordered() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictUnfoldable_0 gopurs_runtime.Value = dictUnfoldable_0_loop
 _ = dictUnfoldable_0
-__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictUnfoldable_0_loop, "unfoldr"), Get_stepUnfoldrUnordered())
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictUnfoldable_0, "unfoldr"), Get_stepUnfoldrUnordered())
 _ = __local_var_1_0
 return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(__local_var_1_0, gopurs_runtime.Constructor2("IterNode", x_2, gopurs_runtime.Constructor0("IterLeaf")))
@@ -670,7 +710,9 @@ var eqMapIter gopurs_runtime.Value
 var once_eqMapIter sync.Once
 func Get_eqMapIter() gopurs_runtime.Value {
 	once_eqMapIter.Do(func() {
-		eqMapIter = gopurs_runtime.Func2(Call_eqMapIter)
+		eqMapIter = gopurs_runtime.Func2(func(dictEq_0_box gopurs_runtime.Value, dictEq1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_eqMapIter(dictEq_0_box, dictEq1_1_box)
+})
 	})
 	return eqMapIter
 }
@@ -683,7 +725,7 @@ func Get_ordMapIter() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-eqMapIter1_1_0 := gopurs_runtime.Apply(Get_eqMapIter(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd_0_loop, "Eq0"), gopurs_runtime.Value{}))
+eqMapIter1_1_0 := gopurs_runtime.Apply(Get_eqMapIter(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd_0, "Eq0"), gopurs_runtime.Value{}))
 _ = eqMapIter1_1_0
 return gopurs_runtime.Func(func(dictOrd1_2 gopurs_runtime.Value) gopurs_runtime.Value {
 eqMapIter2_3_1 := gopurs_runtime.Apply(eqMapIter1_1_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd1_2, "Eq0"), gopurs_runtime.Value{}))
@@ -709,7 +751,7 @@ if gopurs_runtime.Bool(v1_8_4.StrVal == "IterNext").IntVal != 0 {
 var __t6 gopurs_runtime.Value
 {
 if gopurs_runtime.Bool(v_7_3.StrVal == "IterNext").IntVal != 0 {
-v3_9_7 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0_loop, "compare"), (*[1024]gopurs_runtime.Value)(v1_8_4.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v_7_3.UnsafePtr)[0])
+v3_9_7 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), (*[1024]gopurs_runtime.Value)(v1_8_4.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v_7_3.UnsafePtr)[0])
 _ = v3_9_7
 var __t8 gopurs_runtime.Value
 {
@@ -835,7 +877,7 @@ func Get_toUnfoldable() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictUnfoldable_0 gopurs_runtime.Value = dictUnfoldable_0_loop
 _ = dictUnfoldable_0
-__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictUnfoldable_0_loop, "unfoldr"), Get_stepUnfoldr())
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictUnfoldable_0, "unfoldr"), Get_stepUnfoldr())
 _ = __local_var_1_0
 return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(__local_var_1_0, gopurs_runtime.Constructor2("IterNode", x_2, gopurs_runtime.Constructor0("IterLeaf")))
@@ -865,7 +907,9 @@ var showMap gopurs_runtime.Value
 var once_showMap sync.Once
 func Get_showMap() gopurs_runtime.Value {
 	once_showMap.Do(func() {
-		showMap = gopurs_runtime.Func2(Call_showMap)
+		showMap = gopurs_runtime.Func2(func(dictShow_0_box gopurs_runtime.Value, dictShow1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_showMap(dictShow_0_box, dictShow1_1_box)
+})
 	})
 	return showMap
 }
@@ -874,7 +918,9 @@ var isSubmap gopurs_runtime.Value
 var once_isSubmap sync.Once
 func Get_isSubmap() gopurs_runtime.Value {
 	once_isSubmap.Do(func() {
-		isSubmap = gopurs_runtime.Func2(Call_isSubmap)
+		isSubmap = gopurs_runtime.Func2(func(dictOrd_0_box gopurs_runtime.Value, dictEq_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_isSubmap(dictOrd_0_box, dictEq_1_box)
+})
 	})
 	return isSubmap
 }
@@ -887,7 +933,7 @@ func Get_isEmpty() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-return gopurs_runtime.Bool(v_0_loop.StrVal == "Leaf")
+return gopurs_runtime.Bool(v_0.StrVal == "Leaf")
 }()
 })
 	})
@@ -902,7 +948,7 @@ func Get_intersectionWith() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-compare_1_0 := gopurs_runtime.RecordGet(dictOrd_0_loop, "compare")
+compare_1_0 := gopurs_runtime.RecordGet(dictOrd_0, "compare")
 _ = compare_1_0
 return gopurs_runtime.Func3(func(app_2 gopurs_runtime.Value, m1_3 gopurs_runtime.Value, m2_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.UncurriedApp4(Get_unsafeIntersectionWith(), compare_1_0, app_2, m1_3, m2_4)
@@ -921,7 +967,7 @@ func Get_intersection() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-compare_1_0 := gopurs_runtime.RecordGet(dictOrd_0_loop, "compare")
+compare_1_0 := gopurs_runtime.RecordGet(dictOrd_0, "compare")
 _ = compare_1_0
 return gopurs_runtime.Func2(func(m1_2 gopurs_runtime.Value, m2_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.UncurriedApp4(Get_unsafeIntersectionWith(), compare_1_0, pkg_Data_Function.Get_const_(), m1_2, m2_3)
@@ -936,7 +982,9 @@ var insertWith gopurs_runtime.Value
 var once_insertWith sync.Once
 func Get_insertWith() gopurs_runtime.Value {
 	once_insertWith.Do(func() {
-		insertWith = gopurs_runtime.Func4(Call_insertWith)
+		insertWith = gopurs_runtime.Func4(func(dictOrd_0_box gopurs_runtime.Value, app_1_box gopurs_runtime.Value, k_2_box gopurs_runtime.Value, v_3_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_insertWith(dictOrd_0_box, app_1_box, k_2_box, v_3_box)
+})
 	})
 	return insertWith
 }
@@ -945,7 +993,9 @@ var insert gopurs_runtime.Value
 var once_insert sync.Once
 func Get_insert() gopurs_runtime.Value {
 	once_insert.Do(func() {
-		insert = gopurs_runtime.Func3(Call_insert)
+		insert = gopurs_runtime.Func3(func(dictOrd_0_box gopurs_runtime.Value, k_1_box gopurs_runtime.Value, v_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_insert(dictOrd_0_box, k_1_box, v_2_box)
+})
 	})
 	return insert
 }
@@ -1288,7 +1338,9 @@ var foldSubmapBy gopurs_runtime.Value
 var once_foldSubmapBy sync.Once
 func Get_foldSubmapBy() gopurs_runtime.Value {
 	once_foldSubmapBy.Do(func() {
-		foldSubmapBy = gopurs_runtime.Func6(Call_foldSubmapBy)
+		foldSubmapBy = gopurs_runtime.Func6(func(dictOrd_0_box gopurs_runtime.Value, appendFn_1_box gopurs_runtime.Value, memptyValue_2_box gopurs_runtime.Value, kmin_3_box gopurs_runtime.Value, kmax_4_box gopurs_runtime.Value, f_5_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_foldSubmapBy(dictOrd_0_box, appendFn_1_box, memptyValue_2_box, kmin_3_box, kmax_4_box, f_5_box)
+})
 	})
 	return foldSubmapBy
 }
@@ -1297,7 +1349,9 @@ var foldSubmap gopurs_runtime.Value
 var once_foldSubmap sync.Once
 func Get_foldSubmap() gopurs_runtime.Value {
 	once_foldSubmap.Do(func() {
-		foldSubmap = gopurs_runtime.Func2(Call_foldSubmap)
+		foldSubmap = gopurs_runtime.Func2(func(dictOrd_0_box gopurs_runtime.Value, dictMonoid_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_foldSubmap(dictOrd_0_box, dictMonoid_1_box)
+})
 	})
 	return foldSubmap
 }
@@ -1315,7 +1369,7 @@ var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v_0_loop.StrVal == "Leaf").IntVal != 0 {
+if gopurs_runtime.Bool(v_0.StrVal == "Leaf").IntVal != 0 {
 __t0 = gopurs_runtime.Constructor0("Nothing")
 goto end_branch_0
 } else {
@@ -1323,18 +1377,20 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool(v_0_loop.StrVal == "Node").IntVal != 0 {
+if gopurs_runtime.Bool(v_0.StrVal == "Node").IntVal != 0 {
 var __t1 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[4].StrVal == "Leaf").IntVal != 0 {
-__t1 = gopurs_runtime.Constructor1("Just", gopurs_runtime.RecordDict2("key", "value", (*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[3]))
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[4].StrVal == "Leaf").IntVal != 0 {
+__t1 = gopurs_runtime.Constructor1("Just", gopurs_runtime.RecordDict2("key", "value", (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[3]))
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = gopurs_runtime.Apply(Get_findMin(), (*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[4])
+v_0_loop = (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[4]
+continue findMin
+__t1 = gopurs_runtime.Value{}
 }
 end_branch_1:
 __t0 = __t1
@@ -1359,7 +1415,9 @@ var lookupGT gopurs_runtime.Value
 var once_lookupGT sync.Once
 func Get_lookupGT() gopurs_runtime.Value {
 	once_lookupGT.Do(func() {
-		lookupGT = gopurs_runtime.Func2(Call_lookupGT)
+		lookupGT = gopurs_runtime.Func2(func(dictOrd_0_box gopurs_runtime.Value, k_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_lookupGT(dictOrd_0_box, k_1_box)
+})
 	})
 	return lookupGT
 }
@@ -1377,7 +1435,7 @@ var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v_0_loop.StrVal == "Leaf").IntVal != 0 {
+if gopurs_runtime.Bool(v_0.StrVal == "Leaf").IntVal != 0 {
 __t0 = gopurs_runtime.Constructor0("Nothing")
 goto end_branch_0
 } else {
@@ -1385,18 +1443,20 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool(v_0_loop.StrVal == "Node").IntVal != 0 {
+if gopurs_runtime.Bool(v_0.StrVal == "Node").IntVal != 0 {
 var __t1 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[5].StrVal == "Leaf").IntVal != 0 {
-__t1 = gopurs_runtime.Constructor1("Just", gopurs_runtime.RecordDict2("key", "value", (*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[3]))
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[5].StrVal == "Leaf").IntVal != 0 {
+__t1 = gopurs_runtime.Constructor1("Just", gopurs_runtime.RecordDict2("key", "value", (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[3]))
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = gopurs_runtime.Apply(Get_findMax(), (*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[5])
+v_0_loop = (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[5]
+continue findMax
+__t1 = gopurs_runtime.Value{}
 }
 end_branch_1:
 __t0 = __t1
@@ -1421,7 +1481,9 @@ var lookupLT gopurs_runtime.Value
 var once_lookupLT sync.Once
 func Get_lookupLT() gopurs_runtime.Value {
 	once_lookupLT.Do(func() {
-		lookupLT = gopurs_runtime.Func2(Call_lookupLT)
+		lookupLT = gopurs_runtime.Func2(func(dictOrd_0_box gopurs_runtime.Value, k_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_lookupLT(dictOrd_0_box, k_1_box)
+})
 	})
 	return lookupLT
 }
@@ -1430,7 +1492,9 @@ var filterWithKey gopurs_runtime.Value
 var once_filterWithKey sync.Once
 func Get_filterWithKey() gopurs_runtime.Value {
 	once_filterWithKey.Do(func() {
-		filterWithKey = gopurs_runtime.Func2(Call_filterWithKey)
+		filterWithKey = gopurs_runtime.Func2(func(dictOrd_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_filterWithKey(dictOrd_0_box, f_1_box)
+})
 	})
 	return filterWithKey
 }
@@ -1439,7 +1503,9 @@ var filterKeys gopurs_runtime.Value
 var once_filterKeys sync.Once
 func Get_filterKeys() gopurs_runtime.Value {
 	once_filterKeys.Do(func() {
-		filterKeys = gopurs_runtime.Func2(Call_filterKeys)
+		filterKeys = gopurs_runtime.Func2(func(dictOrd_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_filterKeys(dictOrd_0_box, f_1_box)
+})
 	})
 	return filterKeys
 }
@@ -1448,7 +1514,9 @@ var filter gopurs_runtime.Value
 var once_filter sync.Once
 func Get_filter() gopurs_runtime.Value {
 	once_filter.Do(func() {
-		filter = gopurs_runtime.Func2(Call_filter)
+		filter = gopurs_runtime.Func2(func(dictOrd_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_filter(dictOrd_0_box, x_1_box)
+})
 	})
 	return filter
 }
@@ -1457,7 +1525,9 @@ var eqMap gopurs_runtime.Value
 var once_eqMap sync.Once
 func Get_eqMap() gopurs_runtime.Value {
 	once_eqMap.Do(func() {
-		eqMap = gopurs_runtime.Func2(Call_eqMap)
+		eqMap = gopurs_runtime.Func2(func(dictEq_0_box gopurs_runtime.Value, dictEq1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_eqMap(dictEq_0_box, dictEq1_1_box)
+})
 	})
 	return eqMap
 }
@@ -1470,9 +1540,9 @@ func Get_ordMap() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-ordMapIter1_1_0 := gopurs_runtime.Apply(Get_ordMapIter(), dictOrd_0_loop)
+ordMapIter1_1_0 := gopurs_runtime.Apply(Get_ordMapIter(), dictOrd_0)
 _ = ordMapIter1_1_0
-eqMap1_2_1 := gopurs_runtime.Apply(Get_eqMap(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd_0_loop, "Eq0"), gopurs_runtime.Value{}))
+eqMap1_2_1 := gopurs_runtime.Apply(Get_eqMap(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd_0, "Eq0"), gopurs_runtime.Value{}))
 _ = eqMap1_2_1
 return gopurs_runtime.Func(func(dictOrd1_3 gopurs_runtime.Value) gopurs_runtime.Value {
 eqMap2_4_2 := gopurs_runtime.Apply(eqMap1_2_1, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd1_3, "Eq0"), gopurs_runtime.Value{}))
@@ -1532,7 +1602,7 @@ return func() gopurs_runtime.Value {
 var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
 _ = dictEq_0
 return gopurs_runtime.RecordDict1("eq1", gopurs_runtime.Func(func(dictEq1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(Call_eqMap(dictEq_0_loop, dictEq1_1), "eq")
+return gopurs_runtime.RecordGet(Call_eqMap(dictEq_0, dictEq1_1), "eq")
 }))
 }()
 })
@@ -1548,9 +1618,9 @@ func Get_ord1Map() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-ordMap1_1_0 := gopurs_runtime.Apply(Get_ordMap(), dictOrd_0_loop)
+ordMap1_1_0 := gopurs_runtime.Apply(Get_ordMap(), dictOrd_0)
 _ = ordMap1_1_0
-__local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd_0_loop, "Eq0"), gopurs_runtime.Value{})
+__local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd_0, "Eq0"), gopurs_runtime.Value{})
 _ = __local_var_2_1
 eq1Map1_3_2 := gopurs_runtime.RecordDict1("eq1", gopurs_runtime.Func(func(dictEq1_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordGet(Call_eqMap(__local_var_2_1, dictEq1_3), "eq")
@@ -1580,7 +1650,9 @@ var fromFoldable gopurs_runtime.Value
 var once_fromFoldable sync.Once
 func Get_fromFoldable() gopurs_runtime.Value {
 	once_fromFoldable.Do(func() {
-		fromFoldable = gopurs_runtime.Func2(Call_fromFoldable)
+		fromFoldable = gopurs_runtime.Func2(func(dictOrd_0_box gopurs_runtime.Value, dictFoldable_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_fromFoldable(dictOrd_0_box, dictFoldable_1_box)
+})
 	})
 	return fromFoldable
 }
@@ -1589,7 +1661,9 @@ var fromFoldableWith gopurs_runtime.Value
 var once_fromFoldableWith sync.Once
 func Get_fromFoldableWith() gopurs_runtime.Value {
 	once_fromFoldableWith.Do(func() {
-		fromFoldableWith = gopurs_runtime.Func3(Call_fromFoldableWith)
+		fromFoldableWith = gopurs_runtime.Func3(func(dictOrd_0_box gopurs_runtime.Value, dictFoldable_1_box gopurs_runtime.Value, f_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_fromFoldableWith(dictOrd_0_box, dictFoldable_1_box, f_2_box)
+})
 	})
 	return fromFoldableWith
 }
@@ -1598,7 +1672,9 @@ var fromFoldableWithIndex gopurs_runtime.Value
 var once_fromFoldableWithIndex sync.Once
 func Get_fromFoldableWithIndex() gopurs_runtime.Value {
 	once_fromFoldableWithIndex.Do(func() {
-		fromFoldableWithIndex = gopurs_runtime.Func2(Call_fromFoldableWithIndex)
+		fromFoldableWithIndex = gopurs_runtime.Func2(func(dictOrd_0_box gopurs_runtime.Value, dictFoldableWithIndex_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_fromFoldableWithIndex(dictOrd_0_box, dictFoldableWithIndex_1_box)
+})
 	})
 	return fromFoldableWithIndex
 }
@@ -1607,7 +1683,9 @@ var monoidSemigroupMap gopurs_runtime.Value
 var once_monoidSemigroupMap sync.Once
 func Get_monoidSemigroupMap() gopurs_runtime.Value {
 	once_monoidSemigroupMap.Do(func() {
-		monoidSemigroupMap = gopurs_runtime.Func2(Call_monoidSemigroupMap)
+		monoidSemigroupMap = gopurs_runtime.Func2(func(_dollar__unused_0_box gopurs_runtime.Value, dictOrd_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_monoidSemigroupMap(_dollar__unused_0_box, dictOrd_1_box)
+})
 	})
 	return monoidSemigroupMap
 }
@@ -1620,10 +1698,10 @@ func Get_submap() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-compare_1_0 := gopurs_runtime.RecordGet(dictOrd_0_loop, "compare")
+compare_1_0 := gopurs_runtime.RecordGet(dictOrd_0, "compare")
 _ = compare_1_0
 return gopurs_runtime.Func2(func(kmin_2 gopurs_runtime.Value, kmax_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_foldSubmapBy(dictOrd_0_loop, gopurs_runtime.Func2(func(m1_4 gopurs_runtime.Value, m2_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_foldSubmapBy(dictOrd_0, gopurs_runtime.Func2(func(m1_4 gopurs_runtime.Value, m2_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.UncurriedApp4(Get_unsafeUnionWith(), compare_1_0, pkg_Data_Function.Get_const_(), m1_4, m2_5)
 }), gopurs_runtime.Constructor0("Leaf"), kmin_2, kmax_3, Get_singleton())
 })
@@ -1641,7 +1719,7 @@ func Get_unions() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-compare_1_0 := gopurs_runtime.RecordGet(dictOrd_0_loop, "compare")
+compare_1_0 := gopurs_runtime.RecordGet(dictOrd_0, "compare")
 _ = compare_1_0
 return gopurs_runtime.Func(func(dictFoldable_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFoldable_2, "foldl"), gopurs_runtime.Func2(func(m1_3 gopurs_runtime.Value, m2_4 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -1662,7 +1740,7 @@ func Get_difference() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-compare_1_0 := gopurs_runtime.RecordGet(dictOrd_0_loop, "compare")
+compare_1_0 := gopurs_runtime.RecordGet(dictOrd_0, "compare")
 _ = compare_1_0
 return gopurs_runtime.Func2(func(m1_2 gopurs_runtime.Value, m2_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.UncurriedApp3(Get_unsafeDifference(), compare_1_0, m1_2, m2_3)
@@ -1677,7 +1755,9 @@ var delete_ gopurs_runtime.Value
 var once_delete_ sync.Once
 func Get_delete_() gopurs_runtime.Value {
 	once_delete_.Do(func() {
-		delete_ = gopurs_runtime.Func2(Call_delete_)
+		delete_ = gopurs_runtime.Func2(func(dictOrd_0_box gopurs_runtime.Value, k_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_delete_(dictOrd_0_box, k_1_box)
+})
 	})
 	return delete_
 }
@@ -1718,7 +1798,7 @@ goto end_branch_3
 }
 {
 if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[5].StrVal == "Node").IntVal != 0 {
-__t3 = gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0].IntVal == 2 && (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[5].UnsafePtr)[0].IntVal == 1 && (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[1].IntVal > (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[5].UnsafePtr)[1].IntVal && gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0_loop, "compare"), (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[5].UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[2]).StrVal == "GT").IntVal != 0 && gopurs_runtime.Apply(go__1_0, (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[5]).IntVal != 0)
+__t3 = gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0].IntVal == 2 && (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[5].UnsafePtr)[0].IntVal == 1 && (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[1].IntVal > (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[5].UnsafePtr)[1].IntVal && gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[5].UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[2]).StrVal == "GT").IntVal != 0 && gopurs_runtime.Apply(go__1_0, (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[5]).IntVal != 0)
 goto end_branch_3
 } else {
 
@@ -1739,7 +1819,7 @@ if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[4].StrVal ==
 var __t4 gopurs_runtime.Value
 {
 if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[5].StrVal == "Leaf").IntVal != 0 {
-__t4 = gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0].IntVal == 2 && (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[4].UnsafePtr)[0].IntVal == 1 && (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[1].IntVal > (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[4].UnsafePtr)[1].IntVal && gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0_loop, "compare"), (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[4].UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[2]).StrVal == "LT").IntVal != 0 && gopurs_runtime.Apply(go__1_0, (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[4]).IntVal != 0)
+__t4 = gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0].IntVal == 2 && (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[4].UnsafePtr)[0].IntVal == 1 && (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[1].IntVal > (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[4].UnsafePtr)[1].IntVal && gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[4].UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[2]).StrVal == "LT").IntVal != 0 && gopurs_runtime.Apply(go__1_0, (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[4]).IntVal != 0)
 goto end_branch_4
 } else {
 
@@ -1762,7 +1842,7 @@ goto end_branch_6
 __t6 = gopurs_runtime.Bool(0 - __local_var_3_5 < 2)
 }
 end_branch_6:
-__t4 = gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0].IntVal > (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[5].UnsafePtr)[0].IntVal && gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0_loop, "compare"), (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[5].UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[2]).StrVal == "GT").IntVal != 0 && (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0].IntVal > (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[4].UnsafePtr)[0].IntVal && gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0_loop, "compare"), (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[4].UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[2]).StrVal == "LT").IntVal != 0 && __t6.IntVal != 0 && (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[5].UnsafePtr)[1].IntVal + (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[4].UnsafePtr)[1].IntVal + 1 == (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[1].IntVal && gopurs_runtime.Apply(go__1_0, (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[4]).IntVal != 0 && gopurs_runtime.Apply(go__1_0, (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[5]).IntVal != 0)
+__t4 = gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0].IntVal > (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[5].UnsafePtr)[0].IntVal && gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[5].UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[2]).StrVal == "GT").IntVal != 0 && (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0].IntVal > (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[4].UnsafePtr)[0].IntVal && gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[4].UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[2]).StrVal == "LT").IntVal != 0 && __t6.IntVal != 0 && (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[5].UnsafePtr)[1].IntVal + (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[4].UnsafePtr)[1].IntVal + 1 == (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[1].IntVal && gopurs_runtime.Apply(go__1_0, (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[4]).IntVal != 0 && gopurs_runtime.Apply(go__1_0, (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[5]).IntVal != 0)
 goto end_branch_4
 } else {
 
@@ -1809,7 +1889,7 @@ func Get_catMaybes() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-return Call_mapMaybeWithKey(dictOrd_0_loop, gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_mapMaybeWithKey(dictOrd_0, gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordGet(pkg_Control_Category.Get_categoryFn(), "identity")
 }))
 }()
@@ -1826,7 +1906,7 @@ func Get_applyMap() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-compare_1_0 := gopurs_runtime.RecordGet(dictOrd_0_loop, "compare")
+compare_1_0 := gopurs_runtime.RecordGet(dictOrd_0, "compare")
 _ = compare_1_0
 return gopurs_runtime.RecordDict2("apply", "Functor0", gopurs_runtime.Func2(func(m1_2 gopurs_runtime.Value, m2_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.UncurriedApp4(Get_unsafeIntersectionWith(), compare_1_0, gopurs_runtime.RecordGet(pkg_Control_Category.Get_categoryFn(), "identity"), m1_2, m2_3)
@@ -1847,7 +1927,7 @@ func Get_bindMap() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-compare_1_1 := gopurs_runtime.RecordGet(dictOrd_0_loop, "compare")
+compare_1_1 := gopurs_runtime.RecordGet(dictOrd_0, "compare")
 _ = compare_1_1
 applyMap1_1_0 := gopurs_runtime.RecordDict2("apply", "Functor0", gopurs_runtime.Func2(func(m1_2 gopurs_runtime.Value, m2_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.UncurriedApp4(Get_unsafeIntersectionWith(), compare_1_1, gopurs_runtime.RecordGet(pkg_Control_Category.Get_categoryFn(), "identity"), m1_2, m2_3)
@@ -1856,7 +1936,7 @@ return Get_functorMap()
 }))
 _ = applyMap1_1_0
 return gopurs_runtime.RecordDict2("bind", "Apply0", gopurs_runtime.Func2(func(m_2 gopurs_runtime.Value, f_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Call_mapMaybeWithKey(dictOrd_0_loop, gopurs_runtime.Func(func(k_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(Call_mapMaybeWithKey(dictOrd_0, gopurs_runtime.Func(func(k_4 gopurs_runtime.Value) gopurs_runtime.Value {
 var go__5_2 gopurs_runtime.Value
 go__5_2 = gopurs_runtime.Func(func(v_6_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
@@ -1876,7 +1956,7 @@ goto end_branch_3
 }
 {
 if gopurs_runtime.Bool(v_6.StrVal == "Node").IntVal != 0 {
-v1_7_4 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0_loop, "compare"), k_4, (*[1024]gopurs_runtime.Value)(v_6.UnsafePtr)[2])
+v1_7_4 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), k_4, (*[1024]gopurs_runtime.Value)(v_6.UnsafePtr)[2])
 _ = v1_7_4
 var __t5 gopurs_runtime.Value
 {
@@ -1960,7 +2040,7 @@ goto end_branch_1
 }
 {
 if gopurs_runtime.Bool(v_2.StrVal == "Node").IntVal != 0 {
-__t1 = gopurs_runtime.Bool(gopurs_runtime.Apply2(predicate_0_loop, (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[3]).IntVal != 0 || gopurs_runtime.Apply(go__1_0, (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[4]).IntVal != 0 || gopurs_runtime.Apply(go__1_0, (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[5]).IntVal != 0)
+__t1 = gopurs_runtime.Bool(gopurs_runtime.Apply2(predicate_0, (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[3]).IntVal != 0 || gopurs_runtime.Apply(go__1_0, (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[4]).IntVal != 0 || gopurs_runtime.Apply(go__1_0, (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[5]).IntVal != 0)
 goto end_branch_1
 } else {
 
@@ -2001,7 +2081,7 @@ goto end_branch_1
 }
 {
 if gopurs_runtime.Bool(v_2.StrVal == "Node").IntVal != 0 {
-__t1 = gopurs_runtime.Bool(gopurs_runtime.Apply(predicate_0_loop, (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[3]).IntVal != 0 || gopurs_runtime.Apply(go__1_0, (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[4]).IntVal != 0 || gopurs_runtime.Apply(go__1_0, (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[5]).IntVal != 0)
+__t1 = gopurs_runtime.Bool(gopurs_runtime.Apply(predicate_0, (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[3]).IntVal != 0 || gopurs_runtime.Apply(go__1_0, (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[4]).IntVal != 0 || gopurs_runtime.Apply(go__1_0, (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[5]).IntVal != 0)
 goto end_branch_1
 } else {
 
@@ -2028,7 +2108,7 @@ func Get_alter() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-compare_1_0 := gopurs_runtime.RecordGet(dictOrd_0_loop, "compare")
+compare_1_0 := gopurs_runtime.RecordGet(dictOrd_0, "compare")
 _ = compare_1_0
 return gopurs_runtime.Func3(func(f_2 gopurs_runtime.Value, k_3 gopurs_runtime.Value, m_4 gopurs_runtime.Value) gopurs_runtime.Value {
 v_5_1 := gopurs_runtime.UncurriedApp3(Get_unsafeSplit(), compare_1_0, k_3, m_4)
@@ -2072,7 +2152,7 @@ func Get_altMap() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-compare_1_0 := gopurs_runtime.RecordGet(dictOrd_0_loop, "compare")
+compare_1_0 := gopurs_runtime.RecordGet(dictOrd_0, "compare")
 _ = compare_1_0
 return gopurs_runtime.RecordDict2("alt", "Functor0", gopurs_runtime.Func2(func(m1_2 gopurs_runtime.Value, m2_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.UncurriedApp4(Get_unsafeUnionWith(), compare_1_0, pkg_Data_Function.Get_const_(), m1_2, m2_3)
@@ -2093,7 +2173,7 @@ func Get_plusMap() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-compare_1_1 := gopurs_runtime.RecordGet(dictOrd_0_loop, "compare")
+compare_1_1 := gopurs_runtime.RecordGet(dictOrd_0, "compare")
 _ = compare_1_1
 altMap1_1_0 := gopurs_runtime.RecordDict2("alt", "Functor0", gopurs_runtime.Func2(func(m1_2 gopurs_runtime.Value, m2_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.UncurriedApp4(Get_unsafeUnionWith(), compare_1_1, pkg_Data_Function.Get_const_(), m1_2, m2_3)
@@ -2121,19 +2201,19 @@ var r_3 gopurs_runtime.Value = r_3_loop
 _ = r_3
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(l_2_loop.StrVal == "Leaf").IntVal != 0 {
+if gopurs_runtime.Bool(l_2.StrVal == "Leaf").IntVal != 0 {
 var __t1 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(r_3_loop.StrVal == "Leaf").IntVal != 0 {
-__t1 = gopurs_runtime.Constructor("Node", []gopurs_runtime.Value{gopurs_runtime.Int(1), gopurs_runtime.Int(1), k_0_loop, v_1_loop, l_2_loop, r_3_loop})
+if gopurs_runtime.Bool(r_3.StrVal == "Leaf").IntVal != 0 {
+__t1 = gopurs_runtime.Constructor("Node", []gopurs_runtime.Value{gopurs_runtime.Int(1), gopurs_runtime.Int(1), k_0, v_1, l_2, r_3})
 goto end_branch_1
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(r_3_loop.StrVal == "Node").IntVal != 0 {
-__t1 = gopurs_runtime.Constructor("Node", []gopurs_runtime.Value{gopurs_runtime.Int(1 + (*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[0].IntVal), gopurs_runtime.Int(1 + (*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[1].IntVal), k_0_loop, v_1_loop, l_2_loop, r_3_loop})
+if gopurs_runtime.Bool(r_3.StrVal == "Node").IntVal != 0 {
+__t1 = gopurs_runtime.Constructor("Node", []gopurs_runtime.Value{gopurs_runtime.Int(1 + (*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[0].IntVal), gopurs_runtime.Int(1 + (*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[1].IntVal), k_0, v_1, l_2, r_3})
 goto end_branch_1
 } else {
 
@@ -2150,32 +2230,32 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool(l_2_loop.StrVal == "Node").IntVal != 0 {
+if gopurs_runtime.Bool(l_2.StrVal == "Node").IntVal != 0 {
 var __t2 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(r_3_loop.StrVal == "Leaf").IntVal != 0 {
-__t2 = gopurs_runtime.Constructor("Node", []gopurs_runtime.Value{gopurs_runtime.Int(1 + (*[1024]gopurs_runtime.Value)(l_2_loop.UnsafePtr)[0].IntVal), gopurs_runtime.Int(1 + (*[1024]gopurs_runtime.Value)(l_2_loop.UnsafePtr)[1].IntVal), k_0_loop, v_1_loop, l_2_loop, r_3_loop})
+if gopurs_runtime.Bool(r_3.StrVal == "Leaf").IntVal != 0 {
+__t2 = gopurs_runtime.Constructor("Node", []gopurs_runtime.Value{gopurs_runtime.Int(1 + (*[1024]gopurs_runtime.Value)(l_2.UnsafePtr)[0].IntVal), gopurs_runtime.Int(1 + (*[1024]gopurs_runtime.Value)(l_2.UnsafePtr)[1].IntVal), k_0, v_1, l_2, r_3})
 goto end_branch_2
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(r_3_loop.StrVal == "Node").IntVal != 0 {
+if gopurs_runtime.Bool(r_3.StrVal == "Node").IntVal != 0 {
 var __t3 gopurs_runtime.Value
 {
-if (*[1024]gopurs_runtime.Value)(l_2_loop.UnsafePtr)[0].IntVal > (*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[0].IntVal {
-__t3 = gopurs_runtime.Int(1 + (*[1024]gopurs_runtime.Value)(l_2_loop.UnsafePtr)[0].IntVal)
+if (*[1024]gopurs_runtime.Value)(l_2.UnsafePtr)[0].IntVal > (*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[0].IntVal {
+__t3 = gopurs_runtime.Int(1 + (*[1024]gopurs_runtime.Value)(l_2.UnsafePtr)[0].IntVal)
 goto end_branch_3
 } else {
 
 }
 }
 {
-__t3 = gopurs_runtime.Int(1 + (*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[0].IntVal)
+__t3 = gopurs_runtime.Int(1 + (*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[0].IntVal)
 }
 end_branch_3:
-__t2 = gopurs_runtime.Constructor("Node", []gopurs_runtime.Value{__t3, gopurs_runtime.Int(1 + (*[1024]gopurs_runtime.Value)(l_2_loop.UnsafePtr)[1].IntVal + (*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[1].IntVal), k_0_loop, v_1_loop, l_2_loop, r_3_loop})
+__t2 = gopurs_runtime.Constructor("Node", []gopurs_runtime.Value{__t3, gopurs_runtime.Int(1 + (*[1024]gopurs_runtime.Value)(l_2.UnsafePtr)[1].IntVal + (*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[1].IntVal), k_0, v_1, l_2, r_3})
 goto end_branch_2
 } else {
 
@@ -2216,7 +2296,7 @@ _ = v_4
 var __t1 gopurs_runtime.Value
 {
 if gopurs_runtime.Bool(v_4.StrVal == "IterLeaf").IntVal != 0 {
-__t1 = gopurs_runtime.Apply(done_2_loop, pkg_Data_Unit.Get_unit())
+__t1 = gopurs_runtime.Apply(done_2, pkg_Data_Unit.Get_unit())
 goto end_branch_1
 } else {
 
@@ -2224,7 +2304,7 @@ goto end_branch_1
 }
 {
 if gopurs_runtime.Bool(v_4.StrVal == "IterEmit").IntVal != 0 {
-__t1 = gopurs_runtime.UncurriedApp3(next_1_loop, (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[2])
+__t1 = gopurs_runtime.UncurriedApp3(next_1, (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[2])
 goto end_branch_1
 } else {
 
@@ -2232,7 +2312,7 @@ goto end_branch_1
 }
 {
 if gopurs_runtime.Bool(v_4.StrVal == "IterNode").IntVal != 0 {
-v_4_loop = gopurs_runtime.Apply2(f_0_loop, (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[0])
+v_4_loop = gopurs_runtime.Apply2(f_0, (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[0])
 continue go__3_0
 __t1 = gopurs_runtime.Value{}
 goto end_branch_1
@@ -2256,7 +2336,7 @@ var k_0 gopurs_runtime.Value = k_0_loop
 _ = k_0
 var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
-return gopurs_runtime.Constructor("Node", []gopurs_runtime.Value{gopurs_runtime.Int(1), gopurs_runtime.Int(1), k_0_loop, v_1_loop, gopurs_runtime.Constructor0("Leaf"), gopurs_runtime.Constructor0("Leaf")})
+return gopurs_runtime.Constructor("Node", []gopurs_runtime.Value{gopurs_runtime.Int(1), gopurs_runtime.Int(1), k_0, v_1, gopurs_runtime.Constructor0("Leaf"), gopurs_runtime.Constructor0("Leaf")})
 }
 
 func Call_unsafeBalancedNode(k_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value, l_2_loop gopurs_runtime.Value, r_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -2270,32 +2350,32 @@ var r_3 gopurs_runtime.Value = r_3_loop
 _ = r_3
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(l_2_loop.StrVal == "Leaf").IntVal != 0 {
+if gopurs_runtime.Bool(l_2.StrVal == "Leaf").IntVal != 0 {
 var __t1 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(r_3_loop.StrVal == "Leaf").IntVal != 0 {
-__t1 = gopurs_runtime.Constructor("Node", []gopurs_runtime.Value{gopurs_runtime.Int(1), gopurs_runtime.Int(1), k_0_loop, v_1_loop, gopurs_runtime.Constructor0("Leaf"), gopurs_runtime.Constructor0("Leaf")})
+if gopurs_runtime.Bool(r_3.StrVal == "Leaf").IntVal != 0 {
+__t1 = gopurs_runtime.Constructor("Node", []gopurs_runtime.Value{gopurs_runtime.Int(1), gopurs_runtime.Int(1), k_0, v_1, gopurs_runtime.Constructor0("Leaf"), gopurs_runtime.Constructor0("Leaf")})
 goto end_branch_1
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(r_3_loop.StrVal == "Node").IntVal != 0 && (*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[0].IntVal > 1 {
+if gopurs_runtime.Bool(r_3.StrVal == "Node").IntVal != 0 && (*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[0].IntVal > 1 {
 var __t2 gopurs_runtime.Value
 {
 var __t3 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[5].StrVal == "Leaf").IntVal != 0 {
-__t3 = gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[4].UnsafePtr)[0].IntVal > 0)
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[5].StrVal == "Leaf").IntVal != 0 {
+__t3 = gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[4].UnsafePtr)[0].IntVal > 0)
 goto end_branch_3
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[5].StrVal == "Node").IntVal != 0 {
-__t3 = gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[4].UnsafePtr)[0].IntVal > (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[5].UnsafePtr)[0].IntVal)
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[5].StrVal == "Node").IntVal != 0 {
+__t3 = gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[4].UnsafePtr)[0].IntVal > (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[5].UnsafePtr)[0].IntVal)
 goto end_branch_3
 } else {
 
@@ -2305,15 +2385,15 @@ goto end_branch_3
 __t3 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_3:
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[4].StrVal == "Node").IntVal != 0 && __t3.IntVal != 0 {
-__t2 = gopurs_runtime.UncurriedApp4(Get_unsafeNode(), (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[4].UnsafePtr)[2], (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[4].UnsafePtr)[3], gopurs_runtime.UncurriedApp4(Get_unsafeNode(), k_0_loop, v_1_loop, l_2_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[4].UnsafePtr)[4]), gopurs_runtime.UncurriedApp4(Get_unsafeNode(), (*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[3], (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[4].UnsafePtr)[5], (*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[5]))
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[4].StrVal == "Node").IntVal != 0 && __t3.IntVal != 0 {
+__t2 = gopurs_runtime.UncurriedApp4(Get_unsafeNode(), (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[4].UnsafePtr)[2], (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[4].UnsafePtr)[3], gopurs_runtime.UncurriedApp4(Get_unsafeNode(), k_0, v_1, l_2, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[4].UnsafePtr)[4]), gopurs_runtime.UncurriedApp4(Get_unsafeNode(), (*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[3], (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[4].UnsafePtr)[5], (*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[5]))
 goto end_branch_2
 } else {
 
 }
 }
 {
-__t2 = gopurs_runtime.UncurriedApp4(Get_unsafeNode(), (*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[3], gopurs_runtime.UncurriedApp4(Get_unsafeNode(), k_0_loop, v_1_loop, l_2_loop, (*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[4]), (*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[5])
+__t2 = gopurs_runtime.UncurriedApp4(Get_unsafeNode(), (*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[3], gopurs_runtime.UncurriedApp4(Get_unsafeNode(), k_0, v_1, l_2, (*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[4]), (*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[5])
 }
 end_branch_2:
 __t1 = __t2
@@ -2323,7 +2403,7 @@ goto end_branch_1
 }
 }
 {
-__t1 = gopurs_runtime.UncurriedApp4(Get_unsafeNode(), k_0_loop, v_1_loop, l_2_loop, r_3_loop)
+__t1 = gopurs_runtime.UncurriedApp4(Get_unsafeNode(), k_0, v_1, l_2, r_3)
 }
 end_branch_1:
 __t0 = __t1
@@ -2333,27 +2413,27 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool(l_2_loop.StrVal == "Node").IntVal != 0 {
+if gopurs_runtime.Bool(l_2.StrVal == "Node").IntVal != 0 {
 var __t4 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(r_3_loop.StrVal == "Node").IntVal != 0 {
+if gopurs_runtime.Bool(r_3.StrVal == "Node").IntVal != 0 {
 var __t5 gopurs_runtime.Value
 {
-if (*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[0].IntVal > (*[1024]gopurs_runtime.Value)(l_2_loop.UnsafePtr)[0].IntVal + 1 {
+if (*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[0].IntVal > (*[1024]gopurs_runtime.Value)(l_2.UnsafePtr)[0].IntVal + 1 {
 var __t6 gopurs_runtime.Value
 {
 var __t7 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[5].StrVal == "Leaf").IntVal != 0 {
-__t7 = gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[4].UnsafePtr)[0].IntVal > 0)
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[5].StrVal == "Leaf").IntVal != 0 {
+__t7 = gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[4].UnsafePtr)[0].IntVal > 0)
 goto end_branch_7
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[5].StrVal == "Node").IntVal != 0 {
-__t7 = gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[4].UnsafePtr)[0].IntVal > (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[5].UnsafePtr)[0].IntVal)
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[5].StrVal == "Node").IntVal != 0 {
+__t7 = gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[4].UnsafePtr)[0].IntVal > (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[5].UnsafePtr)[0].IntVal)
 goto end_branch_7
 } else {
 
@@ -2363,15 +2443,15 @@ goto end_branch_7
 __t7 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_7:
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[4].StrVal == "Node").IntVal != 0 && __t7.IntVal != 0 {
-__t6 = gopurs_runtime.UncurriedApp4(Get_unsafeNode(), (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[4].UnsafePtr)[2], (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[4].UnsafePtr)[3], gopurs_runtime.UncurriedApp4(Get_unsafeNode(), k_0_loop, v_1_loop, l_2_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[4].UnsafePtr)[4]), gopurs_runtime.UncurriedApp4(Get_unsafeNode(), (*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[3], (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[4].UnsafePtr)[5], (*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[5]))
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[4].StrVal == "Node").IntVal != 0 && __t7.IntVal != 0 {
+__t6 = gopurs_runtime.UncurriedApp4(Get_unsafeNode(), (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[4].UnsafePtr)[2], (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[4].UnsafePtr)[3], gopurs_runtime.UncurriedApp4(Get_unsafeNode(), k_0, v_1, l_2, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[4].UnsafePtr)[4]), gopurs_runtime.UncurriedApp4(Get_unsafeNode(), (*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[3], (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[4].UnsafePtr)[5], (*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[5]))
 goto end_branch_6
 } else {
 
 }
 }
 {
-__t6 = gopurs_runtime.UncurriedApp4(Get_unsafeNode(), (*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[3], gopurs_runtime.UncurriedApp4(Get_unsafeNode(), k_0_loop, v_1_loop, l_2_loop, (*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[4]), (*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[5])
+__t6 = gopurs_runtime.UncurriedApp4(Get_unsafeNode(), (*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[3], gopurs_runtime.UncurriedApp4(Get_unsafeNode(), k_0, v_1, l_2, (*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[4]), (*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[5])
 }
 end_branch_6:
 __t5 = __t6
@@ -2381,21 +2461,21 @@ goto end_branch_5
 }
 }
 {
-if (*[1024]gopurs_runtime.Value)(l_2_loop.UnsafePtr)[0].IntVal > (*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[0].IntVal + 1 {
+if (*[1024]gopurs_runtime.Value)(l_2.UnsafePtr)[0].IntVal > (*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[0].IntVal + 1 {
 var __t8 gopurs_runtime.Value
 {
 var __t9 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(l_2_loop.UnsafePtr)[4].StrVal == "Leaf").IntVal != 0 {
-__t9 = gopurs_runtime.Bool(0 <= (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(l_2_loop.UnsafePtr)[5].UnsafePtr)[0].IntVal)
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(l_2.UnsafePtr)[4].StrVal == "Leaf").IntVal != 0 {
+__t9 = gopurs_runtime.Bool(0 <= (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(l_2.UnsafePtr)[5].UnsafePtr)[0].IntVal)
 goto end_branch_9
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(l_2_loop.UnsafePtr)[4].StrVal == "Node").IntVal != 0 {
-__t9 = gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(l_2_loop.UnsafePtr)[4].UnsafePtr)[0].IntVal <= (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(l_2_loop.UnsafePtr)[5].UnsafePtr)[0].IntVal)
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(l_2.UnsafePtr)[4].StrVal == "Node").IntVal != 0 {
+__t9 = gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(l_2.UnsafePtr)[4].UnsafePtr)[0].IntVal <= (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(l_2.UnsafePtr)[5].UnsafePtr)[0].IntVal)
 goto end_branch_9
 } else {
 
@@ -2405,15 +2485,15 @@ goto end_branch_9
 __t9 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_9:
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(l_2_loop.UnsafePtr)[5].StrVal == "Node").IntVal != 0 && __t9.IntVal != 0 {
-__t8 = gopurs_runtime.UncurriedApp4(Get_unsafeNode(), (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(l_2_loop.UnsafePtr)[5].UnsafePtr)[2], (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(l_2_loop.UnsafePtr)[5].UnsafePtr)[3], gopurs_runtime.UncurriedApp4(Get_unsafeNode(), (*[1024]gopurs_runtime.Value)(l_2_loop.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(l_2_loop.UnsafePtr)[3], (*[1024]gopurs_runtime.Value)(l_2_loop.UnsafePtr)[4], (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(l_2_loop.UnsafePtr)[5].UnsafePtr)[4]), gopurs_runtime.UncurriedApp4(Get_unsafeNode(), k_0_loop, v_1_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(l_2_loop.UnsafePtr)[5].UnsafePtr)[5], r_3_loop))
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(l_2.UnsafePtr)[5].StrVal == "Node").IntVal != 0 && __t9.IntVal != 0 {
+__t8 = gopurs_runtime.UncurriedApp4(Get_unsafeNode(), (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(l_2.UnsafePtr)[5].UnsafePtr)[2], (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(l_2.UnsafePtr)[5].UnsafePtr)[3], gopurs_runtime.UncurriedApp4(Get_unsafeNode(), (*[1024]gopurs_runtime.Value)(l_2.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(l_2.UnsafePtr)[3], (*[1024]gopurs_runtime.Value)(l_2.UnsafePtr)[4], (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(l_2.UnsafePtr)[5].UnsafePtr)[4]), gopurs_runtime.UncurriedApp4(Get_unsafeNode(), k_0, v_1, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(l_2.UnsafePtr)[5].UnsafePtr)[5], r_3))
 goto end_branch_8
 } else {
 
 }
 }
 {
-__t8 = gopurs_runtime.UncurriedApp4(Get_unsafeNode(), (*[1024]gopurs_runtime.Value)(l_2_loop.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(l_2_loop.UnsafePtr)[3], (*[1024]gopurs_runtime.Value)(l_2_loop.UnsafePtr)[4], gopurs_runtime.UncurriedApp4(Get_unsafeNode(), k_0_loop, v_1_loop, (*[1024]gopurs_runtime.Value)(l_2_loop.UnsafePtr)[5], r_3_loop))
+__t8 = gopurs_runtime.UncurriedApp4(Get_unsafeNode(), (*[1024]gopurs_runtime.Value)(l_2.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(l_2.UnsafePtr)[3], (*[1024]gopurs_runtime.Value)(l_2.UnsafePtr)[4], gopurs_runtime.UncurriedApp4(Get_unsafeNode(), k_0, v_1, (*[1024]gopurs_runtime.Value)(l_2.UnsafePtr)[5], r_3))
 }
 end_branch_8:
 __t5 = __t8
@@ -2423,7 +2503,7 @@ goto end_branch_5
 }
 }
 {
-__t5 = gopurs_runtime.UncurriedApp4(Get_unsafeNode(), k_0_loop, v_1_loop, l_2_loop, r_3_loop)
+__t5 = gopurs_runtime.UncurriedApp4(Get_unsafeNode(), k_0, v_1, l_2, r_3)
 }
 end_branch_5:
 __t4 = __t5
@@ -2433,21 +2513,21 @@ goto end_branch_4
 }
 }
 {
-if gopurs_runtime.Bool(r_3_loop.StrVal == "Leaf").IntVal != 0 && (*[1024]gopurs_runtime.Value)(l_2_loop.UnsafePtr)[0].IntVal > 1 {
+if gopurs_runtime.Bool(r_3.StrVal == "Leaf").IntVal != 0 && (*[1024]gopurs_runtime.Value)(l_2.UnsafePtr)[0].IntVal > 1 {
 var __t10 gopurs_runtime.Value
 {
 var __t11 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(l_2_loop.UnsafePtr)[4].StrVal == "Leaf").IntVal != 0 {
-__t11 = gopurs_runtime.Bool(0 <= (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(l_2_loop.UnsafePtr)[5].UnsafePtr)[0].IntVal)
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(l_2.UnsafePtr)[4].StrVal == "Leaf").IntVal != 0 {
+__t11 = gopurs_runtime.Bool(0 <= (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(l_2.UnsafePtr)[5].UnsafePtr)[0].IntVal)
 goto end_branch_11
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(l_2_loop.UnsafePtr)[4].StrVal == "Node").IntVal != 0 {
-__t11 = gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(l_2_loop.UnsafePtr)[4].UnsafePtr)[0].IntVal <= (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(l_2_loop.UnsafePtr)[5].UnsafePtr)[0].IntVal)
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(l_2.UnsafePtr)[4].StrVal == "Node").IntVal != 0 {
+__t11 = gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(l_2.UnsafePtr)[4].UnsafePtr)[0].IntVal <= (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(l_2.UnsafePtr)[5].UnsafePtr)[0].IntVal)
 goto end_branch_11
 } else {
 
@@ -2457,15 +2537,15 @@ goto end_branch_11
 __t11 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_11:
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(l_2_loop.UnsafePtr)[5].StrVal == "Node").IntVal != 0 && __t11.IntVal != 0 {
-__t10 = gopurs_runtime.UncurriedApp4(Get_unsafeNode(), (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(l_2_loop.UnsafePtr)[5].UnsafePtr)[2], (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(l_2_loop.UnsafePtr)[5].UnsafePtr)[3], gopurs_runtime.UncurriedApp4(Get_unsafeNode(), (*[1024]gopurs_runtime.Value)(l_2_loop.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(l_2_loop.UnsafePtr)[3], (*[1024]gopurs_runtime.Value)(l_2_loop.UnsafePtr)[4], (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(l_2_loop.UnsafePtr)[5].UnsafePtr)[4]), gopurs_runtime.UncurriedApp4(Get_unsafeNode(), k_0_loop, v_1_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(l_2_loop.UnsafePtr)[5].UnsafePtr)[5], r_3_loop))
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(l_2.UnsafePtr)[5].StrVal == "Node").IntVal != 0 && __t11.IntVal != 0 {
+__t10 = gopurs_runtime.UncurriedApp4(Get_unsafeNode(), (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(l_2.UnsafePtr)[5].UnsafePtr)[2], (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(l_2.UnsafePtr)[5].UnsafePtr)[3], gopurs_runtime.UncurriedApp4(Get_unsafeNode(), (*[1024]gopurs_runtime.Value)(l_2.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(l_2.UnsafePtr)[3], (*[1024]gopurs_runtime.Value)(l_2.UnsafePtr)[4], (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(l_2.UnsafePtr)[5].UnsafePtr)[4]), gopurs_runtime.UncurriedApp4(Get_unsafeNode(), k_0, v_1, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(l_2.UnsafePtr)[5].UnsafePtr)[5], r_3))
 goto end_branch_10
 } else {
 
 }
 }
 {
-__t10 = gopurs_runtime.UncurriedApp4(Get_unsafeNode(), (*[1024]gopurs_runtime.Value)(l_2_loop.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(l_2_loop.UnsafePtr)[3], (*[1024]gopurs_runtime.Value)(l_2_loop.UnsafePtr)[4], gopurs_runtime.UncurriedApp4(Get_unsafeNode(), k_0_loop, v_1_loop, (*[1024]gopurs_runtime.Value)(l_2_loop.UnsafePtr)[5], r_3_loop))
+__t10 = gopurs_runtime.UncurriedApp4(Get_unsafeNode(), (*[1024]gopurs_runtime.Value)(l_2.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(l_2.UnsafePtr)[3], (*[1024]gopurs_runtime.Value)(l_2.UnsafePtr)[4], gopurs_runtime.UncurriedApp4(Get_unsafeNode(), k_0, v_1, (*[1024]gopurs_runtime.Value)(l_2.UnsafePtr)[5], r_3))
 }
 end_branch_10:
 __t4 = __t10
@@ -2475,7 +2555,7 @@ goto end_branch_4
 }
 }
 {
-__t4 = gopurs_runtime.UncurriedApp4(Get_unsafeNode(), k_0_loop, v_1_loop, l_2_loop, r_3_loop)
+__t4 = gopurs_runtime.UncurriedApp4(Get_unsafeNode(), k_0, v_1, l_2, r_3)
 }
 end_branch_4:
 __t0 = __t4
@@ -2503,7 +2583,7 @@ var m_2 gopurs_runtime.Value = m_2_loop
 _ = m_2
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(m_2_loop.StrVal == "Leaf").IntVal != 0 {
+if gopurs_runtime.Bool(m_2.StrVal == "Leaf").IntVal != 0 {
 __t0 = gopurs_runtime.Constructor3("Split", gopurs_runtime.Constructor0("Nothing"), gopurs_runtime.Constructor0("Leaf"), gopurs_runtime.Constructor0("Leaf"))
 goto end_branch_0
 } else {
@@ -2511,15 +2591,15 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool(m_2_loop.StrVal == "Node").IntVal != 0 {
-v_3_1 := gopurs_runtime.Apply2(comp_0_loop, k_1_loop, (*[1024]gopurs_runtime.Value)(m_2_loop.UnsafePtr)[2])
+if gopurs_runtime.Bool(m_2.StrVal == "Node").IntVal != 0 {
+v_3_1 := gopurs_runtime.Apply2(comp_0, k_1, (*[1024]gopurs_runtime.Value)(m_2.UnsafePtr)[2])
 _ = v_3_1
 var __t2 gopurs_runtime.Value
 {
 if gopurs_runtime.Bool(v_3_1.StrVal == "LT").IntVal != 0 {
-v1_4_3 := gopurs_runtime.UncurriedApp3(Get_unsafeSplit(), comp_0_loop, k_1_loop, (*[1024]gopurs_runtime.Value)(m_2_loop.UnsafePtr)[4])
+v1_4_3 := gopurs_runtime.UncurriedApp3(Get_unsafeSplit(), comp_0, k_1, (*[1024]gopurs_runtime.Value)(m_2.UnsafePtr)[4])
 _ = v1_4_3
-__t2 = gopurs_runtime.Constructor3("Split", (*[1024]gopurs_runtime.Value)(v1_4_3.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v1_4_3.UnsafePtr)[1], gopurs_runtime.UncurriedApp4(Get_unsafeBalancedNode(), (*[1024]gopurs_runtime.Value)(m_2_loop.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(m_2_loop.UnsafePtr)[3], (*[1024]gopurs_runtime.Value)(v1_4_3.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(m_2_loop.UnsafePtr)[5]))
+__t2 = gopurs_runtime.Constructor3("Split", (*[1024]gopurs_runtime.Value)(v1_4_3.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v1_4_3.UnsafePtr)[1], gopurs_runtime.UncurriedApp4(Get_unsafeBalancedNode(), (*[1024]gopurs_runtime.Value)(m_2.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(m_2.UnsafePtr)[3], (*[1024]gopurs_runtime.Value)(v1_4_3.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(m_2.UnsafePtr)[5]))
 goto end_branch_2
 } else {
 
@@ -2527,9 +2607,9 @@ goto end_branch_2
 }
 {
 if gopurs_runtime.Bool(v_3_1.StrVal == "GT").IntVal != 0 {
-v1_4_4 := gopurs_runtime.UncurriedApp3(Get_unsafeSplit(), comp_0_loop, k_1_loop, (*[1024]gopurs_runtime.Value)(m_2_loop.UnsafePtr)[5])
+v1_4_4 := gopurs_runtime.UncurriedApp3(Get_unsafeSplit(), comp_0, k_1, (*[1024]gopurs_runtime.Value)(m_2.UnsafePtr)[5])
 _ = v1_4_4
-__t2 = gopurs_runtime.Constructor3("Split", (*[1024]gopurs_runtime.Value)(v1_4_4.UnsafePtr)[0], gopurs_runtime.UncurriedApp4(Get_unsafeBalancedNode(), (*[1024]gopurs_runtime.Value)(m_2_loop.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(m_2_loop.UnsafePtr)[3], (*[1024]gopurs_runtime.Value)(m_2_loop.UnsafePtr)[4], (*[1024]gopurs_runtime.Value)(v1_4_4.UnsafePtr)[1]), (*[1024]gopurs_runtime.Value)(v1_4_4.UnsafePtr)[2])
+__t2 = gopurs_runtime.Constructor3("Split", (*[1024]gopurs_runtime.Value)(v1_4_4.UnsafePtr)[0], gopurs_runtime.UncurriedApp4(Get_unsafeBalancedNode(), (*[1024]gopurs_runtime.Value)(m_2.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(m_2.UnsafePtr)[3], (*[1024]gopurs_runtime.Value)(m_2.UnsafePtr)[4], (*[1024]gopurs_runtime.Value)(v1_4_4.UnsafePtr)[1]), (*[1024]gopurs_runtime.Value)(v1_4_4.UnsafePtr)[2])
 goto end_branch_2
 } else {
 
@@ -2537,7 +2617,7 @@ goto end_branch_2
 }
 {
 if gopurs_runtime.Bool(v_3_1.StrVal == "EQ").IntVal != 0 {
-__t2 = gopurs_runtime.Constructor3("Split", gopurs_runtime.Constructor1("Just", (*[1024]gopurs_runtime.Value)(m_2_loop.UnsafePtr)[3]), (*[1024]gopurs_runtime.Value)(m_2_loop.UnsafePtr)[4], (*[1024]gopurs_runtime.Value)(m_2_loop.UnsafePtr)[5])
+__t2 = gopurs_runtime.Constructor3("Split", gopurs_runtime.Constructor1("Just", (*[1024]gopurs_runtime.Value)(m_2.UnsafePtr)[3]), (*[1024]gopurs_runtime.Value)(m_2.UnsafePtr)[4], (*[1024]gopurs_runtime.Value)(m_2.UnsafePtr)[5])
 goto end_branch_2
 } else {
 
@@ -2575,18 +2655,18 @@ var r_3 gopurs_runtime.Value = r_3_loop
 _ = r_3
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(r_3_loop.StrVal == "Leaf").IntVal != 0 {
-__t0 = gopurs_runtime.Constructor3("SplitLast", k_0_loop, v_1_loop, l_2_loop)
+if gopurs_runtime.Bool(r_3.StrVal == "Leaf").IntVal != 0 {
+__t0 = gopurs_runtime.Constructor3("SplitLast", k_0, v_1, l_2)
 goto end_branch_0
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(r_3_loop.StrVal == "Node").IntVal != 0 {
-v1_4_1 := gopurs_runtime.UncurriedApp4(Get_unsafeSplitLast(), (*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[3], (*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[4], (*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[5])
+if gopurs_runtime.Bool(r_3.StrVal == "Node").IntVal != 0 {
+v1_4_1 := gopurs_runtime.UncurriedApp4(Get_unsafeSplitLast(), (*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[3], (*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[4], (*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[5])
 _ = v1_4_1
-__t0 = gopurs_runtime.Constructor3("SplitLast", (*[1024]gopurs_runtime.Value)(v1_4_1.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v1_4_1.UnsafePtr)[1], gopurs_runtime.UncurriedApp4(Get_unsafeBalancedNode(), k_0_loop, v_1_loop, l_2_loop, (*[1024]gopurs_runtime.Value)(v1_4_1.UnsafePtr)[2]))
+__t0 = gopurs_runtime.Constructor3("SplitLast", (*[1024]gopurs_runtime.Value)(v1_4_1.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v1_4_1.UnsafePtr)[1], gopurs_runtime.UncurriedApp4(Get_unsafeBalancedNode(), k_0, v_1, l_2, (*[1024]gopurs_runtime.Value)(v1_4_1.UnsafePtr)[2]))
 goto end_branch_0
 } else {
 
@@ -2607,18 +2687,18 @@ var v1_1 gopurs_runtime.Value = v1_1_loop
 _ = v1_1
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v_0_loop.StrVal == "Leaf").IntVal != 0 {
-__t0 = v1_1_loop
+if gopurs_runtime.Bool(v_0.StrVal == "Leaf").IntVal != 0 {
+__t0 = v1_1
 goto end_branch_0
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(v_0_loop.StrVal == "Node").IntVal != 0 {
-v2_2_1 := gopurs_runtime.UncurriedApp4(Get_unsafeSplitLast(), (*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[3], (*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[4], (*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[5])
+if gopurs_runtime.Bool(v_0.StrVal == "Node").IntVal != 0 {
+v2_2_1 := gopurs_runtime.UncurriedApp4(Get_unsafeSplitLast(), (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[3], (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[4], (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[5])
 _ = v2_2_1
-__t0 = gopurs_runtime.UncurriedApp4(Get_unsafeBalancedNode(), (*[1024]gopurs_runtime.Value)(v2_2_1.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v2_2_1.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(v2_2_1.UnsafePtr)[2], v1_1_loop)
+__t0 = gopurs_runtime.UncurriedApp4(Get_unsafeBalancedNode(), (*[1024]gopurs_runtime.Value)(v2_2_1.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v2_2_1.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(v2_2_1.UnsafePtr)[2], v1_1)
 goto end_branch_0
 } else {
 
@@ -2643,7 +2723,7 @@ var r_2 gopurs_runtime.Value = r_2_loop
 _ = r_2
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(l_1_loop.StrVal == "Leaf").IntVal != 0 {
+if gopurs_runtime.Bool(l_1.StrVal == "Leaf").IntVal != 0 {
 __t0 = gopurs_runtime.Constructor0("Leaf")
 goto end_branch_0
 } else {
@@ -2651,18 +2731,18 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool(r_2_loop.StrVal == "Leaf").IntVal != 0 {
-__t0 = l_1_loop
+if gopurs_runtime.Bool(r_2.StrVal == "Leaf").IntVal != 0 {
+__t0 = l_1
 goto end_branch_0
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(r_2_loop.StrVal == "Node").IntVal != 0 {
-v_3_1 := gopurs_runtime.UncurriedApp3(Get_unsafeSplit(), comp_0_loop, (*[1024]gopurs_runtime.Value)(r_2_loop.UnsafePtr)[2], l_1_loop)
+if gopurs_runtime.Bool(r_2.StrVal == "Node").IntVal != 0 {
+v_3_1 := gopurs_runtime.UncurriedApp3(Get_unsafeSplit(), comp_0, (*[1024]gopurs_runtime.Value)(r_2.UnsafePtr)[2], l_1)
 _ = v_3_1
-__t0 = gopurs_runtime.UncurriedApp2(Get_unsafeJoinNodes(), gopurs_runtime.UncurriedApp3(Get_unsafeDifference(), comp_0_loop, (*[1024]gopurs_runtime.Value)(v_3_1.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(r_2_loop.UnsafePtr)[4]), gopurs_runtime.UncurriedApp3(Get_unsafeDifference(), comp_0_loop, (*[1024]gopurs_runtime.Value)(v_3_1.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(r_2_loop.UnsafePtr)[5]))
+__t0 = gopurs_runtime.UncurriedApp2(Get_unsafeJoinNodes(), gopurs_runtime.UncurriedApp3(Get_unsafeDifference(), comp_0, (*[1024]gopurs_runtime.Value)(v_3_1.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(r_2.UnsafePtr)[4]), gopurs_runtime.UncurriedApp3(Get_unsafeDifference(), comp_0, (*[1024]gopurs_runtime.Value)(v_3_1.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(r_2.UnsafePtr)[5]))
 goto end_branch_0
 } else {
 
@@ -2690,7 +2770,7 @@ var r_3 gopurs_runtime.Value = r_3_loop
 _ = r_3
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(l_2_loop.StrVal == "Leaf").IntVal != 0 {
+if gopurs_runtime.Bool(l_2.StrVal == "Leaf").IntVal != 0 {
 __t0 = gopurs_runtime.Constructor0("Leaf")
 goto end_branch_0
 } else {
@@ -2698,7 +2778,7 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool(r_3_loop.StrVal == "Leaf").IntVal != 0 {
+if gopurs_runtime.Bool(r_3.StrVal == "Leaf").IntVal != 0 {
 __t0 = gopurs_runtime.Constructor0("Leaf")
 goto end_branch_0
 } else {
@@ -2706,17 +2786,17 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool(r_3_loop.StrVal == "Node").IntVal != 0 {
-v_4_1 := gopurs_runtime.UncurriedApp3(Get_unsafeSplit(), comp_0_loop, (*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[2], l_2_loop)
+if gopurs_runtime.Bool(r_3.StrVal == "Node").IntVal != 0 {
+v_4_1 := gopurs_runtime.UncurriedApp3(Get_unsafeSplit(), comp_0, (*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[2], l_2)
 _ = v_4_1
-l_prime_5_2 := gopurs_runtime.UncurriedApp4(Get_unsafeIntersectionWith(), comp_0_loop, app_1_loop, (*[1024]gopurs_runtime.Value)(v_4_1.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[4])
+l_prime_5_2 := gopurs_runtime.UncurriedApp4(Get_unsafeIntersectionWith(), comp_0, app_1, (*[1024]gopurs_runtime.Value)(v_4_1.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[4])
 _ = l_prime_5_2
-r_prime_6_3 := gopurs_runtime.UncurriedApp4(Get_unsafeIntersectionWith(), comp_0_loop, app_1_loop, (*[1024]gopurs_runtime.Value)(v_4_1.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[5])
+r_prime_6_3 := gopurs_runtime.UncurriedApp4(Get_unsafeIntersectionWith(), comp_0, app_1, (*[1024]gopurs_runtime.Value)(v_4_1.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[5])
 _ = r_prime_6_3
 var __t4 gopurs_runtime.Value
 {
 if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_4_1.UnsafePtr)[0].StrVal == "Just").IntVal != 0 {
-__t4 = gopurs_runtime.UncurriedApp4(Get_unsafeBalancedNode(), (*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[2], gopurs_runtime.Apply2(app_1_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_4_1.UnsafePtr)[0].UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[3]), l_prime_5_2, r_prime_6_3)
+__t4 = gopurs_runtime.UncurriedApp4(Get_unsafeBalancedNode(), (*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[2], gopurs_runtime.Apply2(app_1, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_4_1.UnsafePtr)[0].UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[3]), l_prime_5_2, r_prime_6_3)
 goto end_branch_4
 } else {
 
@@ -2762,33 +2842,33 @@ var r_3 gopurs_runtime.Value = r_3_loop
 _ = r_3
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(l_2_loop.StrVal == "Leaf").IntVal != 0 {
-__t0 = r_3_loop
+if gopurs_runtime.Bool(l_2.StrVal == "Leaf").IntVal != 0 {
+__t0 = r_3
 goto end_branch_0
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(r_3_loop.StrVal == "Leaf").IntVal != 0 {
-__t0 = l_2_loop
+if gopurs_runtime.Bool(r_3.StrVal == "Leaf").IntVal != 0 {
+__t0 = l_2
 goto end_branch_0
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(r_3_loop.StrVal == "Node").IntVal != 0 {
-v_4_1 := gopurs_runtime.UncurriedApp3(Get_unsafeSplit(), comp_0_loop, (*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[2], l_2_loop)
+if gopurs_runtime.Bool(r_3.StrVal == "Node").IntVal != 0 {
+v_4_1 := gopurs_runtime.UncurriedApp3(Get_unsafeSplit(), comp_0, (*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[2], l_2)
 _ = v_4_1
-l_prime_5_2 := gopurs_runtime.UncurriedApp4(Get_unsafeUnionWith(), comp_0_loop, app_1_loop, (*[1024]gopurs_runtime.Value)(v_4_1.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[4])
+l_prime_5_2 := gopurs_runtime.UncurriedApp4(Get_unsafeUnionWith(), comp_0, app_1, (*[1024]gopurs_runtime.Value)(v_4_1.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[4])
 _ = l_prime_5_2
-r_prime_6_3 := gopurs_runtime.UncurriedApp4(Get_unsafeUnionWith(), comp_0_loop, app_1_loop, (*[1024]gopurs_runtime.Value)(v_4_1.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[5])
+r_prime_6_3 := gopurs_runtime.UncurriedApp4(Get_unsafeUnionWith(), comp_0, app_1, (*[1024]gopurs_runtime.Value)(v_4_1.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[5])
 _ = r_prime_6_3
 var __t4 gopurs_runtime.Value
 {
 if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_4_1.UnsafePtr)[0].StrVal == "Just").IntVal != 0 {
-__t4 = gopurs_runtime.UncurriedApp4(Get_unsafeBalancedNode(), (*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[2], gopurs_runtime.Apply2(app_1_loop, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_4_1.UnsafePtr)[0].UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[3]), l_prime_5_2, r_prime_6_3)
+__t4 = gopurs_runtime.UncurriedApp4(Get_unsafeBalancedNode(), (*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[2], gopurs_runtime.Apply2(app_1, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_4_1.UnsafePtr)[0].UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[3]), l_prime_5_2, r_prime_6_3)
 goto end_branch_4
 } else {
 
@@ -2796,7 +2876,7 @@ goto end_branch_4
 }
 {
 if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_4_1.UnsafePtr)[0].StrVal == "Nothing").IntVal != 0 {
-__t4 = gopurs_runtime.UncurriedApp4(Get_unsafeBalancedNode(), (*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(r_3_loop.UnsafePtr)[3], l_prime_5_2, r_prime_6_3)
+__t4 = gopurs_runtime.UncurriedApp4(Get_unsafeBalancedNode(), (*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(r_3.UnsafePtr)[3], l_prime_5_2, r_prime_6_3)
 goto end_branch_4
 } else {
 
@@ -2841,7 +2921,7 @@ goto end_branch_1
 }
 {
 if gopurs_runtime.Bool(v_4.StrVal == "Node").IntVal != 0 {
-v1_5_2 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0_loop, "compare"), k_2_loop, (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[2])
+v1_5_2 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), k_2, (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[2])
 _ = v1_5_2
 var __t3 gopurs_runtime.Value
 {
@@ -2862,7 +2942,7 @@ goto end_branch_3
 }
 {
 if gopurs_runtime.Bool(v1_5_2.StrVal == "EQ").IntVal != 0 {
-v2_6_4 := gopurs_runtime.Apply(f_1_loop, (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[3])
+v2_6_4 := gopurs_runtime.Apply(f_1, (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[3])
 _ = v2_6_4
 var __t5 gopurs_runtime.Value
 {
@@ -2929,7 +3009,7 @@ goto end_branch_1
 }
 {
 if gopurs_runtime.Bool(v_4.StrVal == "Node").IntVal != 0 {
-__t1 = gopurs_runtime.Str(ind_3.StrVal + "[" + gopurs_runtime.Apply(pkg_Data_Show.Get_showIntImpl(), (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[0]).StrVal + "] " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0_loop, "show"), (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[2]).StrVal + " => " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow1_1_loop, "show"), (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[3]).StrVal + "\n" + gopurs_runtime.Apply2(go__2_0, gopurs_runtime.Str(ind_3.StrVal + "    "), (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[4]).StrVal + "\n" + gopurs_runtime.Apply2(go__2_0, gopurs_runtime.Str(ind_3.StrVal + "    "), (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[5]).StrVal)
+__t1 = gopurs_runtime.Str(ind_3.StrVal + "[" + gopurs_runtime.Apply(pkg_Data_Show.Get_showIntImpl(), (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[0]).StrVal + "] " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[2]).StrVal + " => " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow1_1, "show"), (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[3]).StrVal + "\n" + gopurs_runtime.Apply2(go__2_0, gopurs_runtime.Str(ind_3.StrVal + "    "), (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[4]).StrVal + "\n" + gopurs_runtime.Apply2(go__2_0, gopurs_runtime.Str(ind_3.StrVal + "    "), (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[5]).StrVal)
 goto end_branch_1
 } else {
 
@@ -2949,7 +3029,7 @@ var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
 var dictOrd_1 gopurs_runtime.Value = dictOrd_1_loop
 _ = dictOrd_1
-compare_2_0 := gopurs_runtime.RecordGet(dictOrd_1_loop, "compare")
+compare_2_0 := gopurs_runtime.RecordGet(dictOrd_1, "compare")
 _ = compare_2_0
 return gopurs_runtime.Func(func(dictSemigroup_3 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_4_1 := gopurs_runtime.RecordGet(dictSemigroup_3, "append")
@@ -2984,7 +3064,7 @@ goto end_branch_1
 }
 {
 if gopurs_runtime.Bool(v_3.StrVal == "Node").IntVal != 0 {
-v1_4_2 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0_loop, "compare"), k_1_loop, (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[2])
+v1_4_2 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), k_1, (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[2])
 _ = v1_4_2
 var __t3 gopurs_runtime.Value
 {
@@ -3055,7 +3135,7 @@ goto end_branch_1
 }
 {
 if gopurs_runtime.Bool(v_3.StrVal == "Node").IntVal != 0 {
-v2_4_2 := gopurs_runtime.Apply2(f_1_loop, (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[3])
+v2_4_2 := gopurs_runtime.Apply2(f_1, (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[3])
 _ = v2_4_2
 var __t3 gopurs_runtime.Value
 {
@@ -3098,8 +3178,8 @@ var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
 var x_1 gopurs_runtime.Value = x_1_loop
 _ = x_1
-return Call_mapMaybeWithKey(dictOrd_0_loop, gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return x_1_loop
+return Call_mapMaybeWithKey(dictOrd_0, gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_1
 }))
 }
 
@@ -3122,7 +3202,7 @@ goto end_branch_1
 }
 {
 if gopurs_runtime.Bool(v_3.StrVal == "Node").IntVal != 0 {
-v1_4_2 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0_loop, "compare"), k_1_loop, (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[2])
+v1_4_2 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), k_1, (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[2])
 _ = v1_4_2
 var __t3 gopurs_runtime.Value
 {
@@ -3202,7 +3282,7 @@ goto end_branch_1
 }
 {
 if gopurs_runtime.Bool(v_3.StrVal == "Node").IntVal != 0 {
-v1_4_2 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0_loop, "compare"), k_1_loop, (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[2])
+v1_4_2 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), k_1, (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[2])
 _ = v1_4_2
 var __t3 gopurs_runtime.Value
 {
@@ -3287,7 +3367,7 @@ goto end_branch_1
 }
 {
 if gopurs_runtime.Bool(v_3.StrVal == "Node").IntVal != 0 {
-v1_4_2 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0_loop, "compare"), k_1_loop, (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[2])
+v1_4_2 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), k_1, (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[2])
 _ = v1_4_2
 var __t3 gopurs_runtime.Value
 {
@@ -3346,29 +3426,29 @@ var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v_1_loop.StrVal == "Leaf").IntVal != 0 {
-__t0 = iter_0_loop
+if gopurs_runtime.Bool(v_1.StrVal == "Leaf").IntVal != 0 {
+__t0 = iter_0
 goto end_branch_0
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(v_1_loop.StrVal == "Node").IntVal != 0 {
+if gopurs_runtime.Bool(v_1.StrVal == "Node").IntVal != 0 {
 var __t1 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_1_loop.UnsafePtr)[4].StrVal == "Leaf").IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[4].StrVal == "Leaf").IntVal != 0 {
 var __t2 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_1_loop.UnsafePtr)[5].StrVal == "Leaf").IntVal != 0 {
-__t2 = gopurs_runtime.Constructor3("IterEmit", (*[1024]gopurs_runtime.Value)(v_1_loop.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(v_1_loop.UnsafePtr)[3], iter_0_loop)
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[5].StrVal == "Leaf").IntVal != 0 {
+__t2 = gopurs_runtime.Constructor3("IterEmit", (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[3], iter_0)
 goto end_branch_2
 } else {
 
 }
 }
 {
-__t2 = gopurs_runtime.Constructor3("IterEmit", (*[1024]gopurs_runtime.Value)(v_1_loop.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(v_1_loop.UnsafePtr)[3], gopurs_runtime.Constructor2("IterNode", (*[1024]gopurs_runtime.Value)(v_1_loop.UnsafePtr)[5], iter_0_loop))
+__t2 = gopurs_runtime.Constructor3("IterEmit", (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[3], gopurs_runtime.Constructor2("IterNode", (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[5], iter_0))
 }
 end_branch_2:
 __t1 = __t2
@@ -3378,15 +3458,15 @@ goto end_branch_1
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_1_loop.UnsafePtr)[5].StrVal == "Leaf").IntVal != 0 {
-__t1 = gopurs_runtime.Constructor3("IterEmit", (*[1024]gopurs_runtime.Value)(v_1_loop.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(v_1_loop.UnsafePtr)[3], gopurs_runtime.Constructor2("IterNode", (*[1024]gopurs_runtime.Value)(v_1_loop.UnsafePtr)[4], iter_0_loop))
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[5].StrVal == "Leaf").IntVal != 0 {
+__t1 = gopurs_runtime.Constructor3("IterEmit", (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[3], gopurs_runtime.Constructor2("IterNode", (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[4], iter_0))
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = gopurs_runtime.Constructor3("IterEmit", (*[1024]gopurs_runtime.Value)(v_1_loop.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(v_1_loop.UnsafePtr)[3], gopurs_runtime.Constructor2("IterNode", (*[1024]gopurs_runtime.Value)(v_1_loop.UnsafePtr)[4], gopurs_runtime.Constructor2("IterNode", (*[1024]gopurs_runtime.Value)(v_1_loop.UnsafePtr)[5], iter_0_loop)))
+__t1 = gopurs_runtime.Constructor3("IterEmit", (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[3], gopurs_runtime.Constructor2("IterNode", (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[4], gopurs_runtime.Constructor2("IterNode", (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[5], iter_0)))
 }
 end_branch_1:
 __t0 = __t1
@@ -3417,7 +3497,7 @@ var __t2 gopurs_runtime.Value
 if gopurs_runtime.Bool(v_5_1.StrVal == "IterNext").IntVal != 0 {
 v2_6_3 := gopurs_runtime.Apply(Get_stepAsc(), b_4)
 _ = v2_6_3
-__t2 = gopurs_runtime.Bool(gopurs_runtime.Bool(v2_6_3.StrVal == "IterNext").IntVal != 0 && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0_loop, "eq"), (*[1024]gopurs_runtime.Value)(v_5_1.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v2_6_3.UnsafePtr)[0]).IntVal != 0 && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq1_1_loop, "eq"), (*[1024]gopurs_runtime.Value)(v_5_1.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(v2_6_3.UnsafePtr)[1]).IntVal != 0 && gopurs_runtime.Apply2(go__2_0, (*[1024]gopurs_runtime.Value)(v_5_1.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(v2_6_3.UnsafePtr)[2]).IntVal != 0)
+__t2 = gopurs_runtime.Bool(gopurs_runtime.Bool(v2_6_3.StrVal == "IterNext").IntVal != 0 && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), (*[1024]gopurs_runtime.Value)(v_5_1.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v2_6_3.UnsafePtr)[0]).IntVal != 0 && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq1_1, "eq"), (*[1024]gopurs_runtime.Value)(v_5_1.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(v2_6_3.UnsafePtr)[1]).IntVal != 0 && gopurs_runtime.Apply2(go__2_0, (*[1024]gopurs_runtime.Value)(v_5_1.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(v2_6_3.UnsafePtr)[2]).IntVal != 0)
 goto end_branch_2
 } else {
 
@@ -3446,7 +3526,7 @@ _ = dictShow_0
 var dictShow1_1 gopurs_runtime.Value = dictShow1_1_loop
 _ = dictShow1_1
 show1_2_0 := gopurs_runtime.Apply(pkg_Data_Show.Get_showArrayImpl(), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str("(Tuple " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0_loop, "show"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0]).StrVal + " " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow1_1_loop, "show"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[1]).StrVal + ")")
+return gopurs_runtime.Str("(Tuple " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0]).StrVal + " " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow1_1, "show"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[1]).StrVal + ")")
 }))
 _ = show1_2_0
 return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(as_3 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -3494,7 +3574,7 @@ goto end_branch_4
 }
 {
 if gopurs_runtime.Bool(v_7.StrVal == "Node").IntVal != 0 {
-v1_8_5 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0_loop, "compare"), __local_var_5_2, (*[1024]gopurs_runtime.Value)(v_7.UnsafePtr)[2])
+v1_8_5 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), __local_var_5_2, (*[1024]gopurs_runtime.Value)(v_7.UnsafePtr)[2])
 _ = v1_8_5
 var __t6 gopurs_runtime.Value
 {
@@ -3556,7 +3636,7 @@ goto end_branch_8
 }
 {
 if gopurs_runtime.Bool(v1_7_7.StrVal == "Just").IntVal != 0 {
-__t8 = gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_1_loop, "eq"), (*[1024]gopurs_runtime.Value)(m1_3.UnsafePtr)[3], (*[1024]gopurs_runtime.Value)(v1_7_7.UnsafePtr)[0]).IntVal != 0 && gopurs_runtime.Apply2(go__2_0, (*[1024]gopurs_runtime.Value)(m1_3.UnsafePtr)[4], m2_4).IntVal != 0 && gopurs_runtime.Apply2(go__2_0, (*[1024]gopurs_runtime.Value)(m1_3.UnsafePtr)[5], m2_4).IntVal != 0)
+__t8 = gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_1, "eq"), (*[1024]gopurs_runtime.Value)(m1_3.UnsafePtr)[3], (*[1024]gopurs_runtime.Value)(v1_7_7.UnsafePtr)[0]).IntVal != 0 && gopurs_runtime.Apply2(go__2_0, (*[1024]gopurs_runtime.Value)(m1_3.UnsafePtr)[4], m2_4).IntVal != 0 && gopurs_runtime.Apply2(go__2_0, (*[1024]gopurs_runtime.Value)(m1_3.UnsafePtr)[5], m2_4).IntVal != 0)
 goto end_branch_8
 } else {
 
@@ -3596,7 +3676,7 @@ go__4_0 = gopurs_runtime.Func(func(v1_5 gopurs_runtime.Value) gopurs_runtime.Val
 var __t1 gopurs_runtime.Value
 {
 if gopurs_runtime.Bool(v1_5.StrVal == "Leaf").IntVal != 0 {
-__t1 = gopurs_runtime.Constructor("Node", []gopurs_runtime.Value{gopurs_runtime.Int(1), gopurs_runtime.Int(1), k_2_loop, v_3_loop, gopurs_runtime.Constructor0("Leaf"), gopurs_runtime.Constructor0("Leaf")})
+__t1 = gopurs_runtime.Constructor("Node", []gopurs_runtime.Value{gopurs_runtime.Int(1), gopurs_runtime.Int(1), k_2, v_3, gopurs_runtime.Constructor0("Leaf"), gopurs_runtime.Constructor0("Leaf")})
 goto end_branch_1
 } else {
 
@@ -3604,7 +3684,7 @@ goto end_branch_1
 }
 {
 if gopurs_runtime.Bool(v1_5.StrVal == "Node").IntVal != 0 {
-v2_6_2 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0_loop, "compare"), k_2_loop, (*[1024]gopurs_runtime.Value)(v1_5.UnsafePtr)[2])
+v2_6_2 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), k_2, (*[1024]gopurs_runtime.Value)(v1_5.UnsafePtr)[2])
 _ = v2_6_2
 var __t3 gopurs_runtime.Value
 {
@@ -3625,7 +3705,7 @@ goto end_branch_3
 }
 {
 if gopurs_runtime.Bool(v2_6_2.StrVal == "EQ").IntVal != 0 {
-__t3 = gopurs_runtime.Constructor("Node", []gopurs_runtime.Value{(*[1024]gopurs_runtime.Value)(v1_5.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v1_5.UnsafePtr)[1], k_2_loop, gopurs_runtime.Apply2(app_1_loop, (*[1024]gopurs_runtime.Value)(v1_5.UnsafePtr)[3], v_3_loop), (*[1024]gopurs_runtime.Value)(v1_5.UnsafePtr)[4], (*[1024]gopurs_runtime.Value)(v1_5.UnsafePtr)[5]})
+__t3 = gopurs_runtime.Constructor("Node", []gopurs_runtime.Value{(*[1024]gopurs_runtime.Value)(v1_5.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v1_5.UnsafePtr)[1], k_2, gopurs_runtime.Apply2(app_1, (*[1024]gopurs_runtime.Value)(v1_5.UnsafePtr)[3], v_3), (*[1024]gopurs_runtime.Value)(v1_5.UnsafePtr)[4], (*[1024]gopurs_runtime.Value)(v1_5.UnsafePtr)[5]})
 goto end_branch_3
 } else {
 
@@ -3663,7 +3743,7 @@ go__3_0 = gopurs_runtime.Func(func(v1_4 gopurs_runtime.Value) gopurs_runtime.Val
 var __t1 gopurs_runtime.Value
 {
 if gopurs_runtime.Bool(v1_4.StrVal == "Leaf").IntVal != 0 {
-__t1 = gopurs_runtime.Constructor("Node", []gopurs_runtime.Value{gopurs_runtime.Int(1), gopurs_runtime.Int(1), k_1_loop, v_2_loop, gopurs_runtime.Constructor0("Leaf"), gopurs_runtime.Constructor0("Leaf")})
+__t1 = gopurs_runtime.Constructor("Node", []gopurs_runtime.Value{gopurs_runtime.Int(1), gopurs_runtime.Int(1), k_1, v_2, gopurs_runtime.Constructor0("Leaf"), gopurs_runtime.Constructor0("Leaf")})
 goto end_branch_1
 } else {
 
@@ -3671,7 +3751,7 @@ goto end_branch_1
 }
 {
 if gopurs_runtime.Bool(v1_4.StrVal == "Node").IntVal != 0 {
-v2_5_2 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0_loop, "compare"), k_1_loop, (*[1024]gopurs_runtime.Value)(v1_4.UnsafePtr)[2])
+v2_5_2 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), k_1, (*[1024]gopurs_runtime.Value)(v1_4.UnsafePtr)[2])
 _ = v2_5_2
 var __t3 gopurs_runtime.Value
 {
@@ -3692,7 +3772,7 @@ goto end_branch_3
 }
 {
 if gopurs_runtime.Bool(v2_5_2.StrVal == "EQ").IntVal != 0 {
-__t3 = gopurs_runtime.Constructor("Node", []gopurs_runtime.Value{(*[1024]gopurs_runtime.Value)(v1_4.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v1_4.UnsafePtr)[1], k_1_loop, v_2_loop, (*[1024]gopurs_runtime.Value)(v1_4.UnsafePtr)[4], (*[1024]gopurs_runtime.Value)(v1_4.UnsafePtr)[5]})
+__t3 = gopurs_runtime.Constructor("Node", []gopurs_runtime.Value{(*[1024]gopurs_runtime.Value)(v1_4.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v1_4.UnsafePtr)[1], k_1, v_2, (*[1024]gopurs_runtime.Value)(v1_4.UnsafePtr)[4], (*[1024]gopurs_runtime.Value)(v1_4.UnsafePtr)[5]})
 goto end_branch_3
 } else {
 
@@ -3882,11 +3962,11 @@ var f_5 gopurs_runtime.Value = f_5_loop
 _ = f_5
 var __t1 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(kmin_3_loop.StrVal == "Just").IntVal != 0 {
-__local_var_6_2 := (*[1024]gopurs_runtime.Value)(kmin_3_loop.UnsafePtr)[0]
+if gopurs_runtime.Bool(kmin_3.StrVal == "Just").IntVal != 0 {
+__local_var_6_2 := (*[1024]gopurs_runtime.Value)(kmin_3.UnsafePtr)[0]
 _ = __local_var_6_2
 __t1 = gopurs_runtime.Func(func(k_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0_loop, "compare"), k_7, __local_var_6_2).StrVal == "LT")
+return gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), k_7, __local_var_6_2).StrVal == "LT")
 })
 goto end_branch_1
 } else {
@@ -3894,7 +3974,7 @@ goto end_branch_1
 }
 }
 {
-if gopurs_runtime.Bool(kmin_3_loop.StrVal == "Nothing").IntVal != 0 {
+if gopurs_runtime.Bool(kmin_3.StrVal == "Nothing").IntVal != 0 {
 __t1 = gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Bool(false)
 })
@@ -3911,11 +3991,11 @@ tooSmall_6_0 := __t1
 _ = tooSmall_6_0
 var __t4 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(kmax_4_loop.StrVal == "Just").IntVal != 0 {
-__local_var_7_5 := (*[1024]gopurs_runtime.Value)(kmax_4_loop.UnsafePtr)[0]
+if gopurs_runtime.Bool(kmax_4.StrVal == "Just").IntVal != 0 {
+__local_var_7_5 := (*[1024]gopurs_runtime.Value)(kmax_4.UnsafePtr)[0]
 _ = __local_var_7_5
 __t4 = gopurs_runtime.Func(func(k_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0_loop, "compare"), k_8, __local_var_7_5).StrVal == "GT")
+return gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), k_8, __local_var_7_5).StrVal == "GT")
 })
 goto end_branch_4
 } else {
@@ -3923,7 +4003,7 @@ goto end_branch_4
 }
 }
 {
-if gopurs_runtime.Bool(kmax_4_loop.StrVal == "Nothing").IntVal != 0 {
+if gopurs_runtime.Bool(kmax_4.StrVal == "Nothing").IntVal != 0 {
 __t4 = gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Bool(false)
 })
@@ -3940,16 +4020,16 @@ tooLarge_7_3 := __t4
 _ = tooLarge_7_3
 var __t7 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(kmin_3_loop.StrVal == "Just").IntVal != 0 {
+if gopurs_runtime.Bool(kmin_3.StrVal == "Just").IntVal != 0 {
 var __t8 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(kmax_4_loop.StrVal == "Just").IntVal != 0 {
-__local_var_8_9 := (*[1024]gopurs_runtime.Value)(kmax_4_loop.UnsafePtr)[0]
+if gopurs_runtime.Bool(kmax_4.StrVal == "Just").IntVal != 0 {
+__local_var_8_9 := (*[1024]gopurs_runtime.Value)(kmax_4.UnsafePtr)[0]
 _ = __local_var_8_9
-__local_var_9_10 := (*[1024]gopurs_runtime.Value)(kmin_3_loop.UnsafePtr)[0]
+__local_var_9_10 := (*[1024]gopurs_runtime.Value)(kmin_3.UnsafePtr)[0]
 _ = __local_var_9_10
 __t8 = gopurs_runtime.Func(func(k_10 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0_loop, "compare"), __local_var_9_10, k_10).StrVal == "GT").IntVal != 0 != true && gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0_loop, "compare"), k_10, __local_var_8_9).StrVal == "GT").IntVal != 0 != true)
+return gopurs_runtime.Bool(gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), __local_var_9_10, k_10).StrVal == "GT").IntVal != 0 != true && gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), k_10, __local_var_8_9).StrVal == "GT").IntVal != 0 != true)
 })
 goto end_branch_8
 } else {
@@ -3957,11 +4037,11 @@ goto end_branch_8
 }
 }
 {
-if gopurs_runtime.Bool(kmax_4_loop.StrVal == "Nothing").IntVal != 0 {
-__local_var_8_11 := (*[1024]gopurs_runtime.Value)(kmin_3_loop.UnsafePtr)[0]
+if gopurs_runtime.Bool(kmax_4.StrVal == "Nothing").IntVal != 0 {
+__local_var_8_11 := (*[1024]gopurs_runtime.Value)(kmin_3.UnsafePtr)[0]
 _ = __local_var_8_11
 __t8 = gopurs_runtime.Func(func(k_9 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0_loop, "compare"), __local_var_8_11, k_9).StrVal == "GT").IntVal != 0 != true)
+return gopurs_runtime.Bool(gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), __local_var_8_11, k_9).StrVal == "GT").IntVal != 0 != true)
 })
 goto end_branch_8
 } else {
@@ -3979,14 +4059,14 @@ goto end_branch_7
 }
 }
 {
-if gopurs_runtime.Bool(kmin_3_loop.StrVal == "Nothing").IntVal != 0 {
+if gopurs_runtime.Bool(kmin_3.StrVal == "Nothing").IntVal != 0 {
 var __t12 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(kmax_4_loop.StrVal == "Just").IntVal != 0 {
-__local_var_8_13 := (*[1024]gopurs_runtime.Value)(kmax_4_loop.UnsafePtr)[0]
+if gopurs_runtime.Bool(kmax_4.StrVal == "Just").IntVal != 0 {
+__local_var_8_13 := (*[1024]gopurs_runtime.Value)(kmax_4.UnsafePtr)[0]
 _ = __local_var_8_13
 __t12 = gopurs_runtime.Func(func(k_9 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0_loop, "compare"), k_9, __local_var_8_13).StrVal == "GT").IntVal != 0 != true)
+return gopurs_runtime.Bool(gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), k_9, __local_var_8_13).StrVal == "GT").IntVal != 0 != true)
 })
 goto end_branch_12
 } else {
@@ -3994,7 +4074,7 @@ goto end_branch_12
 }
 }
 {
-if gopurs_runtime.Bool(kmax_4_loop.StrVal == "Nothing").IntVal != 0 {
+if gopurs_runtime.Bool(kmax_4.StrVal == "Nothing").IntVal != 0 {
 __t12 = gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Bool(true)
 })
@@ -4025,7 +4105,7 @@ go__9_14 = gopurs_runtime.Func(func(v_10 gopurs_runtime.Value) gopurs_runtime.Va
 var __t15 gopurs_runtime.Value
 {
 if gopurs_runtime.Bool(v_10.StrVal == "Leaf").IntVal != 0 {
-__t15 = memptyValue_2_loop
+__t15 = memptyValue_2
 goto end_branch_15
 } else {
 
@@ -4036,7 +4116,7 @@ if gopurs_runtime.Bool(v_10.StrVal == "Node").IntVal != 0 {
 var __t16 gopurs_runtime.Value
 {
 if gopurs_runtime.Apply(tooSmall_6_0, (*[1024]gopurs_runtime.Value)(v_10.UnsafePtr)[2]).IntVal != 0 {
-__t16 = memptyValue_2_loop
+__t16 = memptyValue_2
 goto end_branch_16
 } else {
 
@@ -4049,20 +4129,20 @@ end_branch_16:
 var __t17 gopurs_runtime.Value
 {
 if gopurs_runtime.Apply(inBounds_8_6, (*[1024]gopurs_runtime.Value)(v_10.UnsafePtr)[2]).IntVal != 0 {
-__t17 = gopurs_runtime.Apply2(f_5_loop, (*[1024]gopurs_runtime.Value)(v_10.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(v_10.UnsafePtr)[3])
+__t17 = gopurs_runtime.Apply2(f_5, (*[1024]gopurs_runtime.Value)(v_10.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(v_10.UnsafePtr)[3])
 goto end_branch_17
 } else {
 
 }
 }
 {
-__t17 = memptyValue_2_loop
+__t17 = memptyValue_2
 }
 end_branch_17:
 var __t18 gopurs_runtime.Value
 {
 if gopurs_runtime.Apply(tooLarge_7_3, (*[1024]gopurs_runtime.Value)(v_10.UnsafePtr)[2]).IntVal != 0 {
-__t18 = memptyValue_2_loop
+__t18 = memptyValue_2
 goto end_branch_18
 } else {
 
@@ -4072,7 +4152,7 @@ goto end_branch_18
 __t18 = gopurs_runtime.Apply(go__9_14, (*[1024]gopurs_runtime.Value)(v_10.UnsafePtr)[5])
 }
 end_branch_18:
-__t15 = gopurs_runtime.Apply2(appendFn_1_loop, gopurs_runtime.Apply2(appendFn_1_loop, __t16, __t17), __t18)
+__t15 = gopurs_runtime.Apply2(appendFn_1, gopurs_runtime.Apply2(appendFn_1, __t16, __t17), __t18)
 goto end_branch_15
 } else {
 
@@ -4092,7 +4172,7 @@ var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
 var dictMonoid_1 gopurs_runtime.Value = dictMonoid_1_loop
 _ = dictMonoid_1
-return gopurs_runtime.Apply3(Get_foldSubmapBy(), dictOrd_0_loop, gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_1_loop, "Semigroup0"), gopurs_runtime.Value{}), "append"), gopurs_runtime.RecordGet(dictMonoid_1_loop, "mempty"))
+return gopurs_runtime.Apply3(Get_foldSubmapBy(), dictOrd_0, gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_1, "Semigroup0"), gopurs_runtime.Value{}), "append"), gopurs_runtime.RecordGet(dictMonoid_1, "mempty"))
 }
 
 func Call_lookupGT(dictOrd_0_loop gopurs_runtime.Value, k_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -4114,7 +4194,7 @@ goto end_branch_1
 }
 {
 if gopurs_runtime.Bool(v_3.StrVal == "Node").IntVal != 0 {
-v1_4_2 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0_loop, "compare"), k_1_loop, (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[2])
+v1_4_2 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), k_1, (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[2])
 _ = v1_4_2
 var __t3 gopurs_runtime.Value
 {
@@ -4194,7 +4274,7 @@ goto end_branch_1
 }
 {
 if gopurs_runtime.Bool(v_3.StrVal == "Node").IntVal != 0 {
-v1_4_2 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0_loop, "compare"), k_1_loop, (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[2])
+v1_4_2 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), k_1, (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[2])
 _ = v1_4_2
 var __t3 gopurs_runtime.Value
 {
@@ -4276,7 +4356,7 @@ goto end_branch_1
 if gopurs_runtime.Bool(v_3.StrVal == "Node").IntVal != 0 {
 var __t2 gopurs_runtime.Value
 {
-if gopurs_runtime.Apply2(f_1_loop, (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[3]).IntVal != 0 {
+if gopurs_runtime.Apply2(f_1, (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[3]).IntVal != 0 {
 __t2 = gopurs_runtime.UncurriedApp4(Get_unsafeBalancedNode(), (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[3], gopurs_runtime.Apply(go__2_0, (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[4]), gopurs_runtime.Apply(go__2_0, (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[5]))
 goto end_branch_2
 } else {
@@ -4323,7 +4403,7 @@ goto end_branch_1
 if gopurs_runtime.Bool(v_3.StrVal == "Node").IntVal != 0 {
 var __t2 gopurs_runtime.Value
 {
-if gopurs_runtime.Apply(f_1_loop, (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[2]).IntVal != 0 {
+if gopurs_runtime.Apply(f_1, (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[2]).IntVal != 0 {
 __t2 = gopurs_runtime.UncurriedApp4(Get_unsafeBalancedNode(), (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[2], (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[3], gopurs_runtime.Apply(go__2_0, (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[4]), gopurs_runtime.Apply(go__2_0, (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[5]))
 goto end_branch_2
 } else {
@@ -4354,8 +4434,8 @@ var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
 var x_1 gopurs_runtime.Value = x_1_loop
 _ = x_1
-return Call_filterWithKey(dictOrd_0_loop, gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return x_1_loop
+return Call_filterWithKey(dictOrd_0, gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_1
 }))
 }
 
@@ -4376,7 +4456,7 @@ goto end_branch_0
 }
 {
 if gopurs_runtime.Bool(xs_2.StrVal == "Node").IntVal != 0 {
-__t0 = gopurs_runtime.Bool(gopurs_runtime.Bool(ys_3.StrVal == "Node").IntVal != 0 && (*[1024]gopurs_runtime.Value)(xs_2.UnsafePtr)[1].IntVal == (*[1024]gopurs_runtime.Value)(ys_3.UnsafePtr)[1].IntVal && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Call_eqMapIter(dictEq_0_loop, dictEq1_1_loop), "eq"), gopurs_runtime.Constructor2("IterNode", xs_2, gopurs_runtime.Constructor0("IterLeaf")), gopurs_runtime.Constructor2("IterNode", ys_3, gopurs_runtime.Constructor0("IterLeaf"))).IntVal != 0)
+__t0 = gopurs_runtime.Bool(gopurs_runtime.Bool(ys_3.StrVal == "Node").IntVal != 0 && (*[1024]gopurs_runtime.Value)(xs_2.UnsafePtr)[1].IntVal == (*[1024]gopurs_runtime.Value)(ys_3.UnsafePtr)[1].IntVal && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Call_eqMapIter(dictEq_0, dictEq1_1), "eq"), gopurs_runtime.Constructor2("IterNode", xs_2, gopurs_runtime.Constructor0("IterLeaf")), gopurs_runtime.Constructor2("IterNode", ys_3, gopurs_runtime.Constructor0("IterLeaf"))).IntVal != 0)
 goto end_branch_0
 } else {
 
@@ -4395,8 +4475,8 @@ var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
 var dictFoldable_1 gopurs_runtime.Value = dictFoldable_1_loop
 _ = dictFoldable_1
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFoldable_1_loop, "foldl"), gopurs_runtime.Func2(func(m_2 gopurs_runtime.Value, v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Call_insert(dictOrd_0_loop, (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[1]), m_2)
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFoldable_1, "foldl"), gopurs_runtime.Func2(func(m_2 gopurs_runtime.Value, v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(Call_insert(dictOrd_0, (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[1]), m_2)
 }), gopurs_runtime.Constructor0("Leaf"))
 }
 
@@ -4407,11 +4487,11 @@ var dictFoldable_1 gopurs_runtime.Value = dictFoldable_1_loop
 _ = dictFoldable_1
 var f_2 gopurs_runtime.Value = f_2_loop
 _ = f_2
-f_prime_3_0 := gopurs_runtime.Apply2(Get_insertWith(), dictOrd_0_loop, gopurs_runtime.Func2(func(b_3 gopurs_runtime.Value, a_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(f_2_loop, a_4, b_3)
+f_prime_3_0 := gopurs_runtime.Apply2(Get_insertWith(), dictOrd_0, gopurs_runtime.Func2(func(b_3 gopurs_runtime.Value, a_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(f_2, a_4, b_3)
 }))
 _ = f_prime_3_0
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFoldable_1_loop, "foldl"), gopurs_runtime.Func2(func(m_4 gopurs_runtime.Value, v_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFoldable_1, "foldl"), gopurs_runtime.Func2(func(m_4 gopurs_runtime.Value, v_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply3(f_prime_3_0, (*[1024]gopurs_runtime.Value)(v_5.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v_5.UnsafePtr)[1], m_4)
 }), gopurs_runtime.Constructor0("Leaf"))
 }
@@ -4421,8 +4501,8 @@ var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
 var dictFoldableWithIndex_1 gopurs_runtime.Value = dictFoldableWithIndex_1_loop
 _ = dictFoldableWithIndex_1
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFoldableWithIndex_1_loop, "foldlWithIndex"), gopurs_runtime.Func3(func(k_2 gopurs_runtime.Value, m_3 gopurs_runtime.Value, v_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Call_insert(dictOrd_0_loop, k_2, v_4), m_3)
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFoldableWithIndex_1, "foldlWithIndex"), gopurs_runtime.Func3(func(k_2 gopurs_runtime.Value, m_3 gopurs_runtime.Value, v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(Call_insert(dictOrd_0, k_2, v_4), m_3)
 }), gopurs_runtime.Constructor0("Leaf"))
 }
 
@@ -4431,7 +4511,7 @@ var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
 var dictOrd_1 gopurs_runtime.Value = dictOrd_1_loop
 _ = dictOrd_1
-semigroupMap2_2_0 := Call_semigroupMap(gopurs_runtime.Value{}, dictOrd_1_loop)
+semigroupMap2_2_0 := Call_semigroupMap(gopurs_runtime.Value{}, dictOrd_1)
 _ = semigroupMap2_2_0
 return gopurs_runtime.Func(func(dictSemigroup_3 gopurs_runtime.Value) gopurs_runtime.Value {
 semigroupMap3_4_1 := gopurs_runtime.Apply(semigroupMap2_2_0, dictSemigroup_3)
@@ -4461,7 +4541,7 @@ goto end_branch_1
 }
 {
 if gopurs_runtime.Bool(v_3.StrVal == "Node").IntVal != 0 {
-v1_4_2 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0_loop, "compare"), k_1_loop, (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[2])
+v1_4_2 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), k_1, (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[2])
 _ = v1_4_2
 var __t3 gopurs_runtime.Value
 {

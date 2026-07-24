@@ -19,7 +19,7 @@ func Get_NonEmptyString() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
-return x_0_loop
+return x_0
 }()
 })
 	})
@@ -34,7 +34,7 @@ func Get_NonEmptyReplacement() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
-return x_0_loop
+return x_0
 }()
 })
 	})
@@ -49,7 +49,7 @@ func Get_toUpper() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-return gopurs_runtime.Apply(pkg_Data_String_Common.Get_toUpper(), v_0_loop)
+return gopurs_runtime.Apply(pkg_Data_String_Common.Get_toUpper(), v_0)
 }()
 })
 	})
@@ -64,7 +64,7 @@ func Get_toString() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-return v_0_loop
+return v_0
 }()
 })
 	})
@@ -79,7 +79,7 @@ func Get_toLower() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-return gopurs_runtime.Apply(pkg_Data_String_Common.Get_toLower(), v_0_loop)
+return gopurs_runtime.Apply(pkg_Data_String_Common.Get_toLower(), v_0)
 }()
 })
 	})
@@ -130,7 +130,9 @@ var replaceAll gopurs_runtime.Value
 var once_replaceAll sync.Once
 func Get_replaceAll() gopurs_runtime.Value {
 	once_replaceAll.Do(func() {
-		replaceAll = gopurs_runtime.Func3(Call_replaceAll)
+		replaceAll = gopurs_runtime.Func3(func(pat_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value, v1_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_replaceAll(pat_0_box, v_1_box, v1_2_box)
+})
 	})
 	return replaceAll
 }
@@ -139,7 +141,9 @@ var replace gopurs_runtime.Value
 var once_replace sync.Once
 func Get_replace() gopurs_runtime.Value {
 	once_replace.Do(func() {
-		replace = gopurs_runtime.Func3(Call_replace)
+		replace = gopurs_runtime.Func3(func(pat_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value, v1_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_replace(pat_0_box, v_1_box, v1_2_box)
+})
 	})
 	return replace
 }
@@ -148,7 +152,9 @@ var prependString gopurs_runtime.Value
 var once_prependString sync.Once
 func Get_prependString() gopurs_runtime.Value {
 	once_prependString.Do(func() {
-		prependString = gopurs_runtime.Func2(Call_prependString)
+		prependString = gopurs_runtime.Func2(func(s1_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Str(Call_prependString(s1_0_box, v_1_box))
+})
 	})
 	return prependString
 }
@@ -180,7 +186,7 @@ return func() gopurs_runtime.Value {
 var dictIsSymbol_0 gopurs_runtime.Value = dictIsSymbol_0_loop
 _ = dictIsSymbol_0
 return gopurs_runtime.RecordDict1("nes", gopurs_runtime.Func(func(p_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0_loop, "reflectSymbol"), p_1)
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0, "reflectSymbol"), p_1)
 }))
 }()
 })
@@ -196,7 +202,7 @@ func Get_nes() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0_loop, "nes")
+return gopurs_runtime.RecordGet(dict_0, "nes")
 }()
 })
 	})
@@ -224,7 +230,9 @@ var localeCompare gopurs_runtime.Value
 var once_localeCompare sync.Once
 func Get_localeCompare() gopurs_runtime.Value {
 	once_localeCompare.Do(func() {
-		localeCompare = gopurs_runtime.Func2(Call_localeCompare)
+		localeCompare = gopurs_runtime.Func2(func(v_0_box gopurs_runtime.Value, v1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_localeCompare(v_0_box, v1_1_box)
+})
 	})
 	return localeCompare
 }
@@ -233,7 +241,9 @@ var liftS gopurs_runtime.Value
 var once_liftS sync.Once
 func Get_liftS() gopurs_runtime.Value {
 	once_liftS.Do(func() {
-		liftS = gopurs_runtime.Func2(Call_liftS)
+		liftS = gopurs_runtime.Func2(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_liftS(f_0_box, v_1_box)
+})
 	})
 	return liftS
 }
@@ -242,7 +252,9 @@ var startsWith gopurs_runtime.Value
 var once_startsWith sync.Once
 func Get_startsWith() gopurs_runtime.Value {
 	once_startsWith.Do(func() {
-		startsWith = gopurs_runtime.Func2(Call_startsWith)
+		startsWith = gopurs_runtime.Func2(func(x_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_startsWith(x_0_box, v_1_box)
+})
 	})
 	return startsWith
 }
@@ -255,7 +267,7 @@ func Get_joinWith1() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictFoldable1_0 gopurs_runtime.Value = dictFoldable1_0_loop
 _ = dictFoldable1_0
-__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFoldable1_0_loop, "Foldable0"), gopurs_runtime.Value{})
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFoldable1_0, "Foldable0"), gopurs_runtime.Value{})
 _ = __local_var_1_0
 return gopurs_runtime.Func2(func(sep_2 gopurs_runtime.Value, xs_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordGet(gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_1_0, "foldl"), gopurs_runtime.Func2(func(v_4 gopurs_runtime.Value, v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -285,7 +297,9 @@ var joinWith gopurs_runtime.Value
 var once_joinWith sync.Once
 func Get_joinWith() gopurs_runtime.Value {
 	once_joinWith.Do(func() {
-		joinWith = gopurs_runtime.Func3(Call_joinWith)
+		joinWith = gopurs_runtime.Func3(func(dictFoldable_0_box gopurs_runtime.Value, splice_1_box gopurs_runtime.Value, xs_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_joinWith(dictFoldable_0_box, splice_1_box, xs_2_box)
+})
 	})
 	return joinWith
 }
@@ -298,7 +312,7 @@ func Get_join1With() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictFoldable1_0 gopurs_runtime.Value = dictFoldable1_0_loop
 _ = dictFoldable1_0
-__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFoldable1_0_loop, "Foldable0"), gopurs_runtime.Value{})
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFoldable1_0, "Foldable0"), gopurs_runtime.Value{})
 _ = __local_var_1_0
 return gopurs_runtime.Func2(func(splice_2 gopurs_runtime.Value, xs_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordGet(gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_1_0, "foldl"), gopurs_runtime.Func2(func(v_4 gopurs_runtime.Value, v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -334,7 +348,7 @@ var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 var __t0 gopurs_runtime.Value
 {
-if v_0_loop.StrVal == "" {
+if v_0.StrVal == "" {
 __t0 = gopurs_runtime.Constructor0("Nothing")
 goto end_branch_0
 } else {
@@ -342,7 +356,7 @@ goto end_branch_0
 }
 }
 {
-__t0 = gopurs_runtime.Constructor1("Just", v_0_loop)
+__t0 = gopurs_runtime.Constructor1("Just", v_0)
 }
 end_branch_0:
 return __t0
@@ -356,7 +370,9 @@ var stripPrefix gopurs_runtime.Value
 var once_stripPrefix sync.Once
 func Get_stripPrefix() gopurs_runtime.Value {
 	once_stripPrefix.Do(func() {
-		stripPrefix = gopurs_runtime.Func2(Call_stripPrefix)
+		stripPrefix = gopurs_runtime.Func2(func(pat_0_box gopurs_runtime.Value, a_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_stripPrefix(pat_0_box, a_1_box)
+})
 	})
 	return stripPrefix
 }
@@ -365,7 +381,9 @@ var stripSuffix gopurs_runtime.Value
 var once_stripSuffix sync.Once
 func Get_stripSuffix() gopurs_runtime.Value {
 	once_stripSuffix.Do(func() {
-		stripSuffix = gopurs_runtime.Func2(Call_stripSuffix)
+		stripSuffix = gopurs_runtime.Func2(func(pat_0_box gopurs_runtime.Value, a_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_stripSuffix(pat_0_box, a_1_box)
+})
 	})
 	return stripSuffix
 }
@@ -378,7 +396,7 @@ func Get_trim() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-__local_var_1_0 := gopurs_runtime.Apply(pkg_Data_String_Common.Get_trim(), v_0_loop)
+__local_var_1_0 := gopurs_runtime.Apply(pkg_Data_String_Common.Get_trim(), v_0)
 _ = __local_var_1_0
 var __t1 gopurs_runtime.Value
 {
@@ -404,7 +422,9 @@ var unsafeFromString gopurs_runtime.Value
 var once_unsafeFromString sync.Once
 func Get_unsafeFromString() gopurs_runtime.Value {
 	once_unsafeFromString.Do(func() {
-		unsafeFromString = gopurs_runtime.Func2(Call_unsafeFromString)
+		unsafeFromString = gopurs_runtime.Func2(func(_dollar__unused_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_unsafeFromString(_dollar__unused_0_box, x_1_box)
+})
 	})
 	return unsafeFromString
 }
@@ -431,7 +451,9 @@ var endsWith gopurs_runtime.Value
 var once_endsWith sync.Once
 func Get_endsWith() gopurs_runtime.Value {
 	once_endsWith.Do(func() {
-		endsWith = gopurs_runtime.Func2(Call_endsWith)
+		endsWith = gopurs_runtime.Func2(func(x_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_endsWith(x_0_box, v_1_box)
+})
 	})
 	return endsWith
 }
@@ -444,7 +466,7 @@ func Get_contains() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
-return gopurs_runtime.Apply(pkg_Data_String_CodeUnits.Get_contains(), x_0_loop)
+return gopurs_runtime.Apply(pkg_Data_String_CodeUnits.Get_contains(), x_0)
 }()
 })
 	})
@@ -455,7 +477,9 @@ var appendString gopurs_runtime.Value
 var once_appendString sync.Once
 func Get_appendString() gopurs_runtime.Value {
 	once_appendString.Do(func() {
-		appendString = gopurs_runtime.Func2(Call_appendString)
+		appendString = gopurs_runtime.Func2(func(v_0_box gopurs_runtime.Value, s2_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Str(Call_appendString(v_0_box, s2_1_box))
+})
 	})
 	return appendString
 }
@@ -467,7 +491,7 @@ var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
 var v1_2 gopurs_runtime.Value = v1_2_loop
 _ = v1_2
-return gopurs_runtime.Apply3(pkg_Data_String_Common.Get_replaceAll(), pat_0_loop, v_1_loop, v1_2_loop)
+return gopurs_runtime.Apply3(pkg_Data_String_Common.Get_replaceAll(), pat_0, v_1, v1_2)
 }
 
 func Call_replace(pat_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value, v1_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -477,15 +501,15 @@ var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
 var v1_2 gopurs_runtime.Value = v1_2_loop
 _ = v1_2
-return gopurs_runtime.Apply3(pkg_Data_String_Common.Get_replace(), pat_0_loop, v_1_loop, v1_2_loop)
+return gopurs_runtime.Apply3(pkg_Data_String_Common.Get_replace(), pat_0, v_1, v1_2)
 }
 
-func Call_prependString(s1_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_prependString(s1_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) string {
 var s1_0 gopurs_runtime.Value = s1_0_loop
 _ = s1_0
 var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
-return gopurs_runtime.Str(s1_0_loop.StrVal + v_1_loop.StrVal)
+return s1_0.StrVal + v_1.StrVal
 }
 
 func Call_localeCompare(v_0_loop gopurs_runtime.Value, v1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -493,7 +517,7 @@ var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 var v1_1 gopurs_runtime.Value = v1_1_loop
 _ = v1_1
-return gopurs_runtime.Apply2(pkg_Data_String_Common.Get_localeCompare(), v_0_loop, v1_1_loop)
+return gopurs_runtime.Apply2(pkg_Data_String_Common.Get_localeCompare(), v_0, v1_1)
 }
 
 func Call_liftS(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -501,7 +525,7 @@ var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
-return gopurs_runtime.Apply(f_0_loop, v_1_loop)
+return gopurs_runtime.Apply(f_0, v_1)
 }
 
 func Call_startsWith(x_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -509,7 +533,7 @@ var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
 var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
-__local_var_2_0 := gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_stripPrefix(), x_0_loop, v_1_loop)
+__local_var_2_0 := gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_stripPrefix(), x_0, v_1)
 _ = __local_var_2_0
 var __t1 gopurs_runtime.Value
 {
@@ -542,7 +566,7 @@ var splice_1 gopurs_runtime.Value = splice_1_loop
 _ = splice_1
 var xs_2 gopurs_runtime.Value = xs_2_loop
 _ = xs_2
-return gopurs_runtime.RecordGet(gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictFoldable_0_loop, "foldl"), gopurs_runtime.Func2(func(v_3 gopurs_runtime.Value, v1_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordGet(gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictFoldable_0, "foldl"), gopurs_runtime.Func2(func(v_3 gopurs_runtime.Value, v1_4 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
 if gopurs_runtime.RecordGet(v_3, "init").IntVal != 0 {
@@ -553,11 +577,11 @@ goto end_branch_0
 }
 }
 {
-__t0 = gopurs_runtime.RecordDict2("init", "acc", gopurs_runtime.Bool(false), gopurs_runtime.Str(gopurs_runtime.RecordGet(v_3, "acc").StrVal + splice_1_loop.StrVal + v1_4.StrVal))
+__t0 = gopurs_runtime.RecordDict2("init", "acc", gopurs_runtime.Bool(false), gopurs_runtime.Str(gopurs_runtime.RecordGet(v_3, "acc").StrVal + splice_1.StrVal + v1_4.StrVal))
 }
 end_branch_0:
 return __t0
-}), gopurs_runtime.RecordDict2("init", "acc", gopurs_runtime.Bool(true), gopurs_runtime.Str("")), xs_2_loop), "acc")
+}), gopurs_runtime.RecordDict2("init", "acc", gopurs_runtime.Bool(true), gopurs_runtime.Str("")), xs_2), "acc")
 }
 
 func Call_stripPrefix(pat_0_loop gopurs_runtime.Value, a_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -565,7 +589,7 @@ var pat_0 gopurs_runtime.Value = pat_0_loop
 _ = pat_0
 var a_1 gopurs_runtime.Value = a_1_loop
 _ = a_1
-__local_var_2_0 := gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_stripPrefix(), pat_0_loop, a_1_loop)
+__local_var_2_0 := gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_stripPrefix(), pat_0, a_1)
 _ = __local_var_2_0
 var __t1 gopurs_runtime.Value
 {
@@ -609,7 +633,7 @@ var pat_0 gopurs_runtime.Value = pat_0_loop
 _ = pat_0
 var a_1 gopurs_runtime.Value = a_1_loop
 _ = a_1
-__local_var_2_0 := gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_stripSuffix(), pat_0_loop, a_1_loop)
+__local_var_2_0 := gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_stripSuffix(), pat_0, a_1)
 _ = __local_var_2_0
 var __t1 gopurs_runtime.Value
 {
@@ -655,7 +679,7 @@ var x_1 gopurs_runtime.Value = x_1_loop
 _ = x_1
 var __t0 gopurs_runtime.Value
 {
-if x_1_loop.StrVal == "" {
+if x_1.StrVal == "" {
 __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 goto end_branch_0
 } else {
@@ -663,7 +687,7 @@ goto end_branch_0
 }
 }
 {
-__t0 = x_1_loop
+__t0 = x_1
 }
 end_branch_0:
 return __t0
@@ -674,7 +698,7 @@ var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
 var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
-__local_var_2_0 := gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_stripSuffix(), x_0_loop, v_1_loop)
+__local_var_2_0 := gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_stripSuffix(), x_0, v_1)
 _ = __local_var_2_0
 var __t1 gopurs_runtime.Value
 {
@@ -700,12 +724,12 @@ end_branch_1:
 return __t1
 }
 
-func Call_appendString(v_0_loop gopurs_runtime.Value, s2_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_appendString(v_0_loop gopurs_runtime.Value, s2_1_loop gopurs_runtime.Value) string {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 var s2_1 gopurs_runtime.Value = s2_1_loop
 _ = s2_1
-return gopurs_runtime.Str(v_0_loop.StrVal + s2_1_loop.StrVal)
+return v_0.StrVal + s2_1.StrVal
 }
 
 
