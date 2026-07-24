@@ -9,8 +9,12 @@ var Const gopurs_runtime.Value
 var once_Const sync.Once
 func Get_Const() gopurs_runtime.Value {
 	once_Const.Do(func() {
-		Const = gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return x_0
+		Const = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var x_0 gopurs_runtime.Value = x_0_loop
+_ = x_0
+return x_0_loop
+}()
 })
 	})
 	return Const
@@ -20,10 +24,14 @@ var showConst gopurs_runtime.Value
 var once_showConst sync.Once
 func Get_showConst() gopurs_runtime.Value {
 	once_showConst.Do(func() {
-		showConst = gopurs_runtime.Func(func(dictShow_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		showConst = gopurs_runtime.Func(func(dictShow_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictShow_0 gopurs_runtime.Value = dictShow_0_loop
+_ = dictShow_0
 return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str("(Const " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), v_1).StrVal + ")")
+return gopurs_runtime.Str("(Const " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0_loop, "show"), v_1).StrVal + ")")
 }))
+}()
 })
 	})
 	return showConst
@@ -33,8 +41,12 @@ var semiringConst gopurs_runtime.Value
 var once_semiringConst sync.Once
 func Get_semiringConst() gopurs_runtime.Value {
 	once_semiringConst.Do(func() {
-		semiringConst = gopurs_runtime.Func(func(dictSemiring_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return dictSemiring_0
+		semiringConst = gopurs_runtime.Func(func(dictSemiring_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictSemiring_0 gopurs_runtime.Value = dictSemiring_0_loop
+_ = dictSemiring_0
+return dictSemiring_0_loop
+}()
 })
 	})
 	return semiringConst
@@ -55,8 +67,12 @@ var semigroupConst gopurs_runtime.Value
 var once_semigroupConst sync.Once
 func Get_semigroupConst() gopurs_runtime.Value {
 	once_semigroupConst.Do(func() {
-		semigroupConst = gopurs_runtime.Func(func(dictSemigroup_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return dictSemigroup_0
+		semigroupConst = gopurs_runtime.Func(func(dictSemigroup_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictSemigroup_0 gopurs_runtime.Value = dictSemigroup_0_loop
+_ = dictSemigroup_0
+return dictSemigroup_0_loop
+}()
 })
 	})
 	return semigroupConst
@@ -66,8 +82,12 @@ var ringConst gopurs_runtime.Value
 var once_ringConst sync.Once
 func Get_ringConst() gopurs_runtime.Value {
 	once_ringConst.Do(func() {
-		ringConst = gopurs_runtime.Func(func(dictRing_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return dictRing_0
+		ringConst = gopurs_runtime.Func(func(dictRing_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictRing_0 gopurs_runtime.Value = dictRing_0_loop
+_ = dictRing_0
+return dictRing_0_loop
+}()
 })
 	})
 	return ringConst
@@ -77,8 +97,12 @@ var ordConst gopurs_runtime.Value
 var once_ordConst sync.Once
 func Get_ordConst() gopurs_runtime.Value {
 	once_ordConst.Do(func() {
-		ordConst = gopurs_runtime.Func(func(dictOrd_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return dictOrd_0
+		ordConst = gopurs_runtime.Func(func(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
+_ = dictOrd_0
+return dictOrd_0_loop
+}()
 })
 	})
 	return ordConst
@@ -99,8 +123,12 @@ var monoidConst gopurs_runtime.Value
 var once_monoidConst sync.Once
 func Get_monoidConst() gopurs_runtime.Value {
 	once_monoidConst.Do(func() {
-		monoidConst = gopurs_runtime.Func(func(dictMonoid_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return dictMonoid_0
+		monoidConst = gopurs_runtime.Func(func(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
+_ = dictMonoid_0
+return dictMonoid_0_loop
+}()
 })
 	})
 	return monoidConst
@@ -110,8 +138,12 @@ var heytingAlgebraConst gopurs_runtime.Value
 var once_heytingAlgebraConst sync.Once
 func Get_heytingAlgebraConst() gopurs_runtime.Value {
 	once_heytingAlgebraConst.Do(func() {
-		heytingAlgebraConst = gopurs_runtime.Func(func(dictHeytingAlgebra_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return dictHeytingAlgebra_0
+		heytingAlgebraConst = gopurs_runtime.Func(func(dictHeytingAlgebra_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictHeytingAlgebra_0 gopurs_runtime.Value = dictHeytingAlgebra_0_loop
+_ = dictHeytingAlgebra_0
+return dictHeytingAlgebra_0_loop
+}()
 })
 	})
 	return heytingAlgebraConst
@@ -143,8 +175,12 @@ var euclideanRingConst gopurs_runtime.Value
 var once_euclideanRingConst sync.Once
 func Get_euclideanRingConst() gopurs_runtime.Value {
 	once_euclideanRingConst.Do(func() {
-		euclideanRingConst = gopurs_runtime.Func(func(dictEuclideanRing_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return dictEuclideanRing_0
+		euclideanRingConst = gopurs_runtime.Func(func(dictEuclideanRing_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictEuclideanRing_0 gopurs_runtime.Value = dictEuclideanRing_0_loop
+_ = dictEuclideanRing_0
+return dictEuclideanRing_0_loop
+}()
 })
 	})
 	return euclideanRingConst
@@ -154,8 +190,12 @@ var eqConst gopurs_runtime.Value
 var once_eqConst sync.Once
 func Get_eqConst() gopurs_runtime.Value {
 	once_eqConst.Do(func() {
-		eqConst = gopurs_runtime.Func(func(dictEq_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return dictEq_0
+		eqConst = gopurs_runtime.Func(func(dictEq_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
+_ = dictEq_0
+return dictEq_0_loop
+}()
 })
 	})
 	return eqConst
@@ -165,12 +205,16 @@ var eq1Const gopurs_runtime.Value
 var once_eq1Const sync.Once
 func Get_eq1Const() gopurs_runtime.Value {
 	once_eq1Const.Do(func() {
-		eq1Const = gopurs_runtime.Func(func(dictEq_0 gopurs_runtime.Value) gopurs_runtime.Value {
-eq_1_0 := gopurs_runtime.RecordGet(dictEq_0, "eq")
+		eq1Const = gopurs_runtime.Func(func(dictEq_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
+_ = dictEq_0
+eq_1_0 := gopurs_runtime.RecordGet(dictEq_0_loop, "eq")
 _ = eq_1_0
 return gopurs_runtime.RecordDict1("eq1", gopurs_runtime.Func(func(dictEq1_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return eq_1_0
 }))
+}()
 })
 	})
 	return eq1Const
@@ -180,10 +224,13 @@ var ord1Const gopurs_runtime.Value
 var once_ord1Const sync.Once
 func Get_ord1Const() gopurs_runtime.Value {
 	once_ord1Const.Do(func() {
-		ord1Const = gopurs_runtime.Func(func(dictOrd_0 gopurs_runtime.Value) gopurs_runtime.Value {
-compare_1_0 := gopurs_runtime.RecordGet(dictOrd_0, "compare")
+		ord1Const = gopurs_runtime.Func(func(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
+_ = dictOrd_0
+compare_1_0 := gopurs_runtime.RecordGet(dictOrd_0_loop, "compare")
 _ = compare_1_0
-eq_2_1 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd_0, "Eq0"), gopurs_runtime.Value{}), "eq")
+eq_2_1 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd_0_loop, "Eq0"), gopurs_runtime.Value{}), "eq")
 _ = eq_2_1
 return gopurs_runtime.RecordDict2("compare1", "Eq10", gopurs_runtime.Func(func(dictOrd1_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return compare_1_0
@@ -192,6 +239,7 @@ return gopurs_runtime.RecordDict1("eq1", gopurs_runtime.Func(func(dictEq1_4 gopu
 return eq_2_1
 }))
 }))
+}()
 })
 	})
 	return ord1Const
@@ -201,8 +249,12 @@ var commutativeRingConst gopurs_runtime.Value
 var once_commutativeRingConst sync.Once
 func Get_commutativeRingConst() gopurs_runtime.Value {
 	once_commutativeRingConst.Do(func() {
-		commutativeRingConst = gopurs_runtime.Func(func(dictCommutativeRing_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return dictCommutativeRing_0
+		commutativeRingConst = gopurs_runtime.Func(func(dictCommutativeRing_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictCommutativeRing_0 gopurs_runtime.Value = dictCommutativeRing_0_loop
+_ = dictCommutativeRing_0
+return dictCommutativeRing_0_loop
+}()
 })
 	})
 	return commutativeRingConst
@@ -212,8 +264,12 @@ var boundedConst gopurs_runtime.Value
 var once_boundedConst sync.Once
 func Get_boundedConst() gopurs_runtime.Value {
 	once_boundedConst.Do(func() {
-		boundedConst = gopurs_runtime.Func(func(dictBounded_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return dictBounded_0
+		boundedConst = gopurs_runtime.Func(func(dictBounded_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictBounded_0 gopurs_runtime.Value = dictBounded_0_loop
+_ = dictBounded_0
+return dictBounded_0_loop
+}()
 })
 	})
 	return boundedConst
@@ -223,8 +279,12 @@ var booleanAlgebraConst gopurs_runtime.Value
 var once_booleanAlgebraConst sync.Once
 func Get_booleanAlgebraConst() gopurs_runtime.Value {
 	once_booleanAlgebraConst.Do(func() {
-		booleanAlgebraConst = gopurs_runtime.Func(func(dictBooleanAlgebra_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return dictBooleanAlgebra_0
+		booleanAlgebraConst = gopurs_runtime.Func(func(dictBooleanAlgebra_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictBooleanAlgebra_0 gopurs_runtime.Value = dictBooleanAlgebra_0_loop
+_ = dictBooleanAlgebra_0
+return dictBooleanAlgebra_0_loop
+}()
 })
 	})
 	return booleanAlgebraConst
@@ -234,12 +294,16 @@ var applyConst gopurs_runtime.Value
 var once_applyConst sync.Once
 func Get_applyConst() gopurs_runtime.Value {
 	once_applyConst.Do(func() {
-		applyConst = gopurs_runtime.Func(func(dictSemigroup_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		applyConst = gopurs_runtime.Func(func(dictSemigroup_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictSemigroup_0 gopurs_runtime.Value = dictSemigroup_0_loop
+_ = dictSemigroup_0
 return gopurs_runtime.RecordDict2("apply", "Functor0", gopurs_runtime.Func2(func(v_1 gopurs_runtime.Value, v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup_0, "append"), v_1, v1_2)
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup_0_loop, "append"), v_1, v1_2)
 }), gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_functorConst()
 }))
+}()
 })
 	})
 	return applyConst
@@ -249,10 +313,13 @@ var applicativeConst gopurs_runtime.Value
 var once_applicativeConst sync.Once
 func Get_applicativeConst() gopurs_runtime.Value {
 	once_applicativeConst.Do(func() {
-		applicativeConst = gopurs_runtime.Func(func(dictMonoid_0 gopurs_runtime.Value) gopurs_runtime.Value {
-mempty_1_0 := gopurs_runtime.RecordGet(dictMonoid_0, "mempty")
+		applicativeConst = gopurs_runtime.Func(func(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
+_ = dictMonoid_0
+mempty_1_0 := gopurs_runtime.RecordGet(dictMonoid_0_loop, "mempty")
 _ = mempty_1_0
-__local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{})
+__local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0_loop, "Semigroup0"), gopurs_runtime.Value{})
 _ = __local_var_2_1
 applyConst1_3_2 := gopurs_runtime.RecordDict2("apply", "Functor0", gopurs_runtime.Func2(func(v_3 gopurs_runtime.Value, v1_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_1, "append"), v_3, v1_4)
@@ -265,6 +332,7 @@ return mempty_1_0
 }), gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return applyConst1_3_2
 }))
+}()
 })
 	})
 	return applicativeConst

@@ -19,9 +19,7 @@ var runReader gopurs_runtime.Value
 var once_runReader sync.Once
 func Get_runReader() gopurs_runtime.Value {
 	once_runReader.Do(func() {
-		runReader = gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, x_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(v_0, x_1)
-})
+		runReader = gopurs_runtime.Func2(Call_runReader)
 	})
 	return runReader
 }
@@ -30,13 +28,27 @@ var mapReader gopurs_runtime.Value
 var once_mapReader sync.Once
 func Get_mapReader() gopurs_runtime.Value {
 	once_mapReader.Do(func() {
-		mapReader = gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(f_0, gopurs_runtime.Apply(v_1, x_2))
-})
+		mapReader = gopurs_runtime.Func3(Call_mapReader)
 	})
 	return mapReader
 }
 
+func Call_runReader(v_0_loop gopurs_runtime.Value, x_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var v_0 gopurs_runtime.Value = v_0_loop
+_ = v_0
+var x_1 gopurs_runtime.Value = x_1_loop
+_ = x_1
+return gopurs_runtime.Apply(v_0_loop, x_1_loop)
+}
 
+func Call_mapReader(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var f_0 gopurs_runtime.Value = f_0_loop
+_ = f_0
+var v_1 gopurs_runtime.Value = v_1_loop
+_ = v_1
+var x_2 gopurs_runtime.Value = x_2_loop
+_ = x_2
+return gopurs_runtime.Apply(f_0_loop, gopurs_runtime.Apply(v_1_loop, x_2_loop))
+}
 
 

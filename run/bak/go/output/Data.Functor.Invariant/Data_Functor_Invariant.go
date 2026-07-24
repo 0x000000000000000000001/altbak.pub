@@ -76,9 +76,7 @@ var imapF gopurs_runtime.Value
 var once_imapF sync.Once
 func Get_imapF() gopurs_runtime.Value {
 	once_imapF.Do(func() {
-		imapF = gopurs_runtime.Func3(func(dictFunctor_0 gopurs_runtime.Value, f_1 gopurs_runtime.Value, v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctor_0, "map"), f_1)
-})
+		imapF = gopurs_runtime.Func3(Call_imapF)
 	})
 	return imapF
 }
@@ -109,8 +107,12 @@ var imap gopurs_runtime.Value
 var once_imap sync.Once
 func Get_imap() gopurs_runtime.Value {
 	once_imap.Do(func() {
-		imap = gopurs_runtime.Func(func(dict_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(dict_0, "imap")
+		imap = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0_loop, "imap")
+}()
 })
 	})
 	return imap
@@ -120,15 +122,27 @@ var invariantAlternate gopurs_runtime.Value
 var once_invariantAlternate sync.Once
 func Get_invariantAlternate() gopurs_runtime.Value {
 	once_invariantAlternate.Do(func() {
-		invariantAlternate = gopurs_runtime.Func(func(dictInvariant_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		invariantAlternate = gopurs_runtime.Func(func(dictInvariant_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictInvariant_0 gopurs_runtime.Value = dictInvariant_0_loop
+_ = dictInvariant_0
 return gopurs_runtime.RecordDict1("imap", gopurs_runtime.Func3(func(f_1 gopurs_runtime.Value, g_2 gopurs_runtime.Value, v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictInvariant_0, "imap"), f_1, g_2, v_3)
+return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictInvariant_0_loop, "imap"), f_1, g_2, v_3)
 }))
+}()
 })
 	})
 	return invariantAlternate
 }
 
-
+func Call_imapF(dictFunctor_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value, v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictFunctor_0 gopurs_runtime.Value = dictFunctor_0_loop
+_ = dictFunctor_0
+var f_1 gopurs_runtime.Value = f_1_loop
+_ = f_1
+var v_2 gopurs_runtime.Value = v_2_loop
+_ = v_2
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctor_0_loop, "map"), f_1_loop)
+}
 
 

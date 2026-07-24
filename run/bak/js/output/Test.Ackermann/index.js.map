@@ -1,1 +1,0 @@
-{"file":"index.js","mappings":";;;;;AAeA,kDACe;AANf,gBAAA;WAAA;QACU,IAAV;YAAY,OAAZ,KAAoB,IAAJ;;QACN,IADV;mBACgB,UADhB,IAC+B,IAAJ,GAAO;;QACxB,OAAM,UAFhB,IAE+B,IAAJ,GAAQ,UAFnC,GAAA,KAEoD,IAAJ;;;AAKhD,UAEE;6BAAsB;mBACZ,UAAU,OAAM","names":[],"sources":["../../src/Test/Ackermann.purs"],"version":3}

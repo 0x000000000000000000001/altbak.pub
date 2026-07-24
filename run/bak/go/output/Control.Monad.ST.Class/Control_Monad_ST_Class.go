@@ -35,8 +35,12 @@ var liftST gopurs_runtime.Value
 var once_liftST sync.Once
 func Get_liftST() gopurs_runtime.Value {
 	once_liftST.Do(func() {
-		liftST = gopurs_runtime.Func(func(dict_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(dict_0, "liftST")
+		liftST = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0_loop, "liftST")
+}()
 })
 	})
 	return liftST

@@ -3,8 +3,8 @@ package Control_Monad_Gen
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Tuple "gopurs/output/Data.Tuple"
 	pkg_Data_Semigroup_Last "gopurs/output/Data.Semigroup.Last"
+	pkg_Data_Tuple "gopurs/output/Data.Tuple"
 	pkg_Data_Unit "gopurs/output/Data.Unit"
 )
 
@@ -51,67 +51,7 @@ var unfoldable gopurs_runtime.Value
 var once_unfoldable sync.Once
 func Get_unfoldable() gopurs_runtime.Value {
 	once_unfoldable.Do(func() {
-		unfoldable = gopurs_runtime.Func2(func(dictMonadRec_0 gopurs_runtime.Value, dictMonadGen_1 gopurs_runtime.Value) gopurs_runtime.Value {
-Monad0_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadGen_1, "Monad0"), gopurs_runtime.Value{})
-_ = Monad0_2_0
-__local_var_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_2_0, "Applicative0"), gopurs_runtime.Value{})
-_ = __local_var_3_1
-Bind1_4_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_2_0, "Bind1"), gopurs_runtime.Value{})
-_ = Bind1_4_2
-return gopurs_runtime.Func2(func(dictUnfoldable_5 gopurs_runtime.Value, gen_6 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_7_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadRec_0, "tailRecM"), gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t7 gopurs_runtime.Value
-{
-if (*[1024]gopurs_runtime.Value)(v_7.UnsafePtr)[1].IntVal <= 0 {
-__t7 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_3_1, "pure"), gopurs_runtime.Constructor1("Done", (*[1024]gopurs_runtime.Value)(v_7.UnsafePtr)[0]))
-goto end_branch_7
-} else {
-
-}
-}
-{
-__local_var_8_5 := (*[1024]gopurs_runtime.Value)(v_7.UnsafePtr)[0]
-_ = __local_var_8_5
-__local_var_9_6 := (*[1024]gopurs_runtime.Value)(v_7.UnsafePtr)[1]
-_ = __local_var_9_6
-__t7 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Bind1_4_2, "bind"), gen_6, gopurs_runtime.Func(func(x_10 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_3_1, "pure"), gopurs_runtime.Constructor1("Loop", gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Constructor2("Cons", x_10, __local_var_8_5), gopurs_runtime.Int(__local_var_9_6.IntVal - 1))))
-}))
-}
-end_branch_7:
-return __t7
-}))
-_ = __local_var_7_4
-__local_var_8_8 := gopurs_runtime.Apply(pkg_Data_Tuple.Get_Tuple(), gopurs_runtime.Constructor0("Nil"))
-_ = __local_var_8_8
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Bind1_4_2, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictUnfoldable_5, "unfoldr"), gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t3 gopurs_runtime.Value
-{
-if gopurs_runtime.Bool(v_7.StrVal == "Nil").IntVal != 0 {
-__t3 = gopurs_runtime.Constructor0("Nothing")
-goto end_branch_3
-} else {
-
-}
-}
-{
-if gopurs_runtime.Bool(v_7.StrVal == "Cons").IntVal != 0 {
-__t3 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Constructor2("Tuple", (*[1024]gopurs_runtime.Value)(v_7.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v_7.UnsafePtr)[1]))
-goto end_branch_3
-} else {
-
-}
-}
-{
-__t3 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
-}
-end_branch_3:
-return __t3
-})), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadGen_1, "sized"), gopurs_runtime.Func(func(x_9 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(__local_var_7_4, gopurs_runtime.Apply(__local_var_8_8, x_9))
-})))
-})
-})
+		unfoldable = gopurs_runtime.Func2(Call_unfoldable)
 	})
 	return unfoldable
 }
@@ -146,8 +86,11 @@ var fromIndex gopurs_runtime.Value
 var once_fromIndex sync.Once
 func Get_fromIndex() gopurs_runtime.Value {
 	once_fromIndex.Do(func() {
-		fromIndex = gopurs_runtime.Func(func(dictFoldable1_0 gopurs_runtime.Value) gopurs_runtime.Value {
-foldMap1_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFoldable1_0, "foldMap1"), pkg_Data_Semigroup_Last.Get_semigroupLast())
+		fromIndex = gopurs_runtime.Func(func(dictFoldable1_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictFoldable1_0 gopurs_runtime.Value = dictFoldable1_0_loop
+_ = dictFoldable1_0
+foldMap1_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFoldable1_0_loop, "foldMap1"), pkg_Data_Semigroup_Last.Get_semigroupLast())
 _ = foldMap1_1_0
 return gopurs_runtime.Func2(func(i_2 gopurs_runtime.Value, xs_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var go__4_1 gopurs_runtime.Value
@@ -211,8 +154,9 @@ return __t2
 }()
 })
 })
-return gopurs_runtime.Apply2(go__4_1, i_2, gopurs_runtime.Apply3(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFoldable1_0, "Foldable0"), gopurs_runtime.Value{}), "foldr"), Get_Cons(), gopurs_runtime.Constructor0("Nil"), xs_3))
+return gopurs_runtime.Apply2(go__4_1, i_2, gopurs_runtime.Apply3(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFoldable1_0_loop, "Foldable0"), gopurs_runtime.Value{}), "foldr"), Get_Cons(), gopurs_runtime.Constructor0("Nil"), xs_3))
 })
+}()
 })
 	})
 	return fromIndex
@@ -222,19 +166,7 @@ var oneOf gopurs_runtime.Value
 var once_oneOf sync.Once
 func Get_oneOf() gopurs_runtime.Value {
 	once_oneOf.Do(func() {
-		oneOf = gopurs_runtime.Func2(func(dictMonadGen_0 gopurs_runtime.Value, dictFoldable1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-length_2_0 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFoldable1_1, "Foldable0"), gopurs_runtime.Value{}), "foldl"), gopurs_runtime.Func2(func(c_2 gopurs_runtime.Value, v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Int(1 + c_2.IntVal)
-}), gopurs_runtime.Int(0))
-_ = length_2_0
-fromIndex1_3_1 := gopurs_runtime.Apply(Get_fromIndex(), dictFoldable1_1)
-_ = fromIndex1_3_1
-return gopurs_runtime.Func(func(xs_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadGen_0, "Monad0"), gopurs_runtime.Value{}), "Bind1"), gopurs_runtime.Value{}), "bind"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadGen_0, "chooseInt"), gopurs_runtime.Int(0), gopurs_runtime.Int(gopurs_runtime.Apply(length_2_0, xs_4).IntVal - 1)), gopurs_runtime.Func(func(n_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(fromIndex1_3_1, n_5, xs_4)
-}))
-})
-})
+		oneOf = gopurs_runtime.Func2(Call_oneOf)
 	})
 	return oneOf
 }
@@ -243,10 +175,13 @@ var freqSemigroup gopurs_runtime.Value
 var once_freqSemigroup sync.Once
 func Get_freqSemigroup() gopurs_runtime.Value {
 	once_freqSemigroup.Do(func() {
-		freqSemigroup = gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_1_0 := (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0]
+		freqSemigroup = gopurs_runtime.Func(func(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var v_0 gopurs_runtime.Value = v_0_loop
+_ = v_0
+__local_var_1_0 := (*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[0]
 _ = __local_var_1_0
-__local_var_2_1 := (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[1]
+__local_var_2_1 := (*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[1]
 _ = __local_var_2_1
 return gopurs_runtime.Func(func(pos_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t2 gopurs_runtime.Value
@@ -264,6 +199,7 @@ __t2 = gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Constructor0("Nothing
 end_branch_2:
 return __t2
 })
+}()
 })
 	})
 	return freqSemigroup
@@ -273,19 +209,7 @@ var frequency gopurs_runtime.Value
 var once_frequency sync.Once
 func Get_frequency() gopurs_runtime.Value {
 	once_frequency.Do(func() {
-		frequency = gopurs_runtime.Func2(func(dictMonadGen_0 gopurs_runtime.Value, dictFoldable1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-foldMap_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFoldable1_1, "Foldable0"), gopurs_runtime.Value{}), "foldMap"), Get_monoidAdditive())
-_ = foldMap_2_0
-foldMap1_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFoldable1_1, "foldMap1"), Get_semigroupFreqSemigroup())
-_ = foldMap1_3_1
-return gopurs_runtime.Func(func(xs_4 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_5_2 := gopurs_runtime.Apply2(foldMap1_3_1, Get_freqSemigroup(), xs_4)
-_ = __local_var_5_2
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadGen_0, "Monad0"), gopurs_runtime.Value{}), "Bind1"), gopurs_runtime.Value{}), "bind"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadGen_0, "chooseFloat"), gopurs_runtime.Float(0.0), gopurs_runtime.Apply2(foldMap_2_0, pkg_Data_Tuple.Get_fst(), xs_4)), gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return (*[1024]gopurs_runtime.Value)(gopurs_runtime.Apply(__local_var_5_2, x_6).UnsafePtr)[1]
-}))
-})
-})
+		frequency = gopurs_runtime.Func2(Call_frequency)
 	})
 	return frequency
 }
@@ -294,11 +218,194 @@ var filtered gopurs_runtime.Value
 var once_filtered sync.Once
 func Get_filtered() gopurs_runtime.Value {
 	once_filtered.Do(func() {
-		filtered = gopurs_runtime.Func2(func(dictMonadRec_0 gopurs_runtime.Value, dictMonadGen_1 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadGen_1, "Monad0"), gopurs_runtime.Value{}), "Bind1"), gopurs_runtime.Value{}), "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{})
+		filtered = gopurs_runtime.Func2(Call_filtered)
+	})
+	return filtered
+}
+
+var suchThat gopurs_runtime.Value
+var once_suchThat sync.Once
+func Get_suchThat() gopurs_runtime.Value {
+	once_suchThat.Do(func() {
+		suchThat = gopurs_runtime.Func2(Call_suchThat)
+	})
+	return suchThat
+}
+
+var elements gopurs_runtime.Value
+var once_elements sync.Once
+func Get_elements() gopurs_runtime.Value {
+	once_elements.Do(func() {
+		elements = gopurs_runtime.Func(func(dictMonadGen_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictMonadGen_0 gopurs_runtime.Value = dictMonadGen_0_loop
+_ = dictMonadGen_0
+Monad0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadGen_0_loop, "Monad0"), gopurs_runtime.Value{})
+_ = Monad0_1_0
+return gopurs_runtime.Func(func(dictFoldable1_2 gopurs_runtime.Value) gopurs_runtime.Value {
+length_3_1 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFoldable1_2, "Foldable0"), gopurs_runtime.Value{}), "foldl"), gopurs_runtime.Func2(func(c_3 gopurs_runtime.Value, v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Int(1 + c_3.IntVal)
+}), gopurs_runtime.Int(0))
+_ = length_3_1
+fromIndex1_4_2 := gopurs_runtime.Apply(Get_fromIndex(), dictFoldable1_2)
+_ = fromIndex1_4_2
+return gopurs_runtime.Func(func(xs_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Bind1"), gopurs_runtime.Value{}), "bind"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadGen_0_loop, "chooseInt"), gopurs_runtime.Int(0), gopurs_runtime.Int(gopurs_runtime.Apply(length_3_1, xs_5).IntVal - 1)), gopurs_runtime.Func(func(n_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.Apply2(fromIndex1_4_2, n_6, xs_5))
+}))
+})
+})
+}()
+})
+	})
+	return elements
+}
+
+var choose gopurs_runtime.Value
+var once_choose sync.Once
+func Get_choose() gopurs_runtime.Value {
+	once_choose.Do(func() {
+		choose = gopurs_runtime.Func(func(dictMonadGen_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictMonadGen_0 gopurs_runtime.Value = dictMonadGen_0_loop
+_ = dictMonadGen_0
+chooseBool_1_0 := gopurs_runtime.RecordGet(dictMonadGen_0_loop, "chooseBool")
+_ = chooseBool_1_0
+return gopurs_runtime.Func2(func(genA_2 gopurs_runtime.Value, genB_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadGen_0_loop, "Monad0"), gopurs_runtime.Value{}), "Bind1"), gopurs_runtime.Value{}), "bind"), chooseBool_1_0, gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t1 gopurs_runtime.Value
+{
+if v_4.IntVal != 0 {
+__t1 = genA_2
+goto end_branch_1
+} else {
+
+}
+}
+{
+__t1 = genB_3
+}
+end_branch_1:
+return __t1
+}))
+})
+}()
+})
+	})
+	return choose
+}
+
+func Call_unfoldable(dictMonadRec_0_loop gopurs_runtime.Value, dictMonadGen_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictMonadRec_0 gopurs_runtime.Value = dictMonadRec_0_loop
+_ = dictMonadRec_0
+var dictMonadGen_1 gopurs_runtime.Value = dictMonadGen_1_loop
+_ = dictMonadGen_1
+Monad0_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadGen_1_loop, "Monad0"), gopurs_runtime.Value{})
+_ = Monad0_2_0
+__local_var_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_2_0, "Applicative0"), gopurs_runtime.Value{})
+_ = __local_var_3_1
+Bind1_4_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_2_0, "Bind1"), gopurs_runtime.Value{})
+_ = Bind1_4_2
+return gopurs_runtime.Func2(func(dictUnfoldable_5 gopurs_runtime.Value, gen_6 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_7_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadRec_0_loop, "tailRecM"), gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t7 gopurs_runtime.Value
+{
+if (*[1024]gopurs_runtime.Value)(v_7.UnsafePtr)[1].IntVal <= 0 {
+__t7 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_3_1, "pure"), gopurs_runtime.Constructor1("Done", (*[1024]gopurs_runtime.Value)(v_7.UnsafePtr)[0]))
+goto end_branch_7
+} else {
+
+}
+}
+{
+__local_var_8_5 := (*[1024]gopurs_runtime.Value)(v_7.UnsafePtr)[0]
+_ = __local_var_8_5
+__local_var_9_6 := (*[1024]gopurs_runtime.Value)(v_7.UnsafePtr)[1]
+_ = __local_var_9_6
+__t7 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Bind1_4_2, "bind"), gen_6, gopurs_runtime.Func(func(x_10 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_3_1, "pure"), gopurs_runtime.Constructor1("Loop", gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Constructor2("Cons", x_10, __local_var_8_5), gopurs_runtime.Int(__local_var_9_6.IntVal - 1))))
+}))
+}
+end_branch_7:
+return __t7
+}))
+_ = __local_var_7_4
+__local_var_8_8 := gopurs_runtime.Apply(pkg_Data_Tuple.Get_Tuple(), gopurs_runtime.Constructor0("Nil"))
+_ = __local_var_8_8
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Bind1_4_2, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictUnfoldable_5, "unfoldr"), gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t3 gopurs_runtime.Value
+{
+if gopurs_runtime.Bool(v_7.StrVal == "Nil").IntVal != 0 {
+__t3 = gopurs_runtime.Constructor0("Nothing")
+goto end_branch_3
+} else {
+
+}
+}
+{
+if gopurs_runtime.Bool(v_7.StrVal == "Cons").IntVal != 0 {
+__t3 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Constructor2("Tuple", (*[1024]gopurs_runtime.Value)(v_7.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v_7.UnsafePtr)[1]))
+goto end_branch_3
+} else {
+
+}
+}
+{
+__t3 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_3:
+return __t3
+})), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadGen_1_loop, "sized"), gopurs_runtime.Func(func(x_9 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_7_4, gopurs_runtime.Apply(__local_var_8_8, x_9))
+})))
+})
+}
+
+func Call_oneOf(dictMonadGen_0_loop gopurs_runtime.Value, dictFoldable1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictMonadGen_0 gopurs_runtime.Value = dictMonadGen_0_loop
+_ = dictMonadGen_0
+var dictFoldable1_1 gopurs_runtime.Value = dictFoldable1_1_loop
+_ = dictFoldable1_1
+length_2_0 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFoldable1_1_loop, "Foldable0"), gopurs_runtime.Value{}), "foldl"), gopurs_runtime.Func2(func(c_2 gopurs_runtime.Value, v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Int(1 + c_2.IntVal)
+}), gopurs_runtime.Int(0))
+_ = length_2_0
+fromIndex1_3_1 := gopurs_runtime.Apply(Get_fromIndex(), dictFoldable1_1_loop)
+_ = fromIndex1_3_1
+return gopurs_runtime.Func(func(xs_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadGen_0_loop, "Monad0"), gopurs_runtime.Value{}), "Bind1"), gopurs_runtime.Value{}), "bind"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadGen_0_loop, "chooseInt"), gopurs_runtime.Int(0), gopurs_runtime.Int(gopurs_runtime.Apply(length_2_0, xs_4).IntVal - 1)), gopurs_runtime.Func(func(n_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(fromIndex1_3_1, n_5, xs_4)
+}))
+})
+}
+
+func Call_frequency(dictMonadGen_0_loop gopurs_runtime.Value, dictFoldable1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictMonadGen_0 gopurs_runtime.Value = dictMonadGen_0_loop
+_ = dictMonadGen_0
+var dictFoldable1_1 gopurs_runtime.Value = dictFoldable1_1_loop
+_ = dictFoldable1_1
+foldMap_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFoldable1_1_loop, "Foldable0"), gopurs_runtime.Value{}), "foldMap"), Get_monoidAdditive())
+_ = foldMap_2_0
+foldMap1_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFoldable1_1_loop, "foldMap1"), Get_semigroupFreqSemigroup())
+_ = foldMap1_3_1
+return gopurs_runtime.Func(func(xs_4 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_5_2 := gopurs_runtime.Apply2(foldMap1_3_1, Get_freqSemigroup(), xs_4)
+_ = __local_var_5_2
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadGen_0_loop, "Monad0"), gopurs_runtime.Value{}), "Bind1"), gopurs_runtime.Value{}), "bind"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadGen_0_loop, "chooseFloat"), gopurs_runtime.Float(0.0), gopurs_runtime.Apply2(foldMap_2_0, pkg_Data_Tuple.Get_fst(), xs_4)), gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return (*[1024]gopurs_runtime.Value)(gopurs_runtime.Apply(__local_var_5_2, x_6).UnsafePtr)[1]
+}))
+})
+}
+
+func Call_filtered(dictMonadRec_0_loop gopurs_runtime.Value, dictMonadGen_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictMonadRec_0 gopurs_runtime.Value = dictMonadRec_0_loop
+_ = dictMonadRec_0
+var dictMonadGen_1 gopurs_runtime.Value = dictMonadGen_1_loop
+_ = dictMonadGen_1
+__local_var_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadGen_1_loop, "Monad0"), gopurs_runtime.Value{}), "Bind1"), gopurs_runtime.Value{}), "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{})
 _ = __local_var_2_0
 return gopurs_runtime.Func(func(gen_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadRec_0, "tailRecM"), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadRec_0_loop, "tailRecM"), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_0, "map"), gopurs_runtime.Func(func(a_5 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
@@ -325,19 +432,16 @@ return __t1
 }), gen_3)
 }), pkg_Data_Unit.Get_unit())
 })
-})
-	})
-	return filtered
 }
 
-var suchThat gopurs_runtime.Value
-var once_suchThat sync.Once
-func Get_suchThat() gopurs_runtime.Value {
-	once_suchThat.Do(func() {
-		suchThat = gopurs_runtime.Func2(func(dictMonadRec_0 gopurs_runtime.Value, dictMonadGen_1 gopurs_runtime.Value) gopurs_runtime.Value {
-filtered2_2_0 := gopurs_runtime.Apply2(Get_filtered(), dictMonadRec_0, dictMonadGen_1)
+func Call_suchThat(dictMonadRec_0_loop gopurs_runtime.Value, dictMonadGen_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictMonadRec_0 gopurs_runtime.Value = dictMonadRec_0_loop
+_ = dictMonadRec_0
+var dictMonadGen_1 gopurs_runtime.Value = dictMonadGen_1_loop
+_ = dictMonadGen_1
+filtered2_2_0 := Call_filtered(dictMonadRec_0_loop, dictMonadGen_1_loop)
 _ = filtered2_2_0
-__local_var_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadGen_1, "Monad0"), gopurs_runtime.Value{}), "Bind1"), gopurs_runtime.Value{}), "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{})
+__local_var_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadGen_1_loop, "Monad0"), gopurs_runtime.Value{}), "Bind1"), gopurs_runtime.Value{}), "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{})
 _ = __local_var_3_1
 return gopurs_runtime.Func2(func(gen_4 gopurs_runtime.Value, pred_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(filtered2_2_0, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_1, "map"), gopurs_runtime.Func(func(a_6 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -357,66 +461,6 @@ end_branch_2:
 return __t2
 }), gen_4))
 })
-})
-	})
-	return suchThat
 }
-
-var elements gopurs_runtime.Value
-var once_elements sync.Once
-func Get_elements() gopurs_runtime.Value {
-	once_elements.Do(func() {
-		elements = gopurs_runtime.Func(func(dictMonadGen_0 gopurs_runtime.Value) gopurs_runtime.Value {
-Monad0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadGen_0, "Monad0"), gopurs_runtime.Value{})
-_ = Monad0_1_0
-return gopurs_runtime.Func(func(dictFoldable1_2 gopurs_runtime.Value) gopurs_runtime.Value {
-length_3_1 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFoldable1_2, "Foldable0"), gopurs_runtime.Value{}), "foldl"), gopurs_runtime.Func2(func(c_3 gopurs_runtime.Value, v_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Int(1 + c_3.IntVal)
-}), gopurs_runtime.Int(0))
-_ = length_3_1
-fromIndex1_4_2 := gopurs_runtime.Apply(Get_fromIndex(), dictFoldable1_2)
-_ = fromIndex1_4_2
-return gopurs_runtime.Func(func(xs_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Bind1"), gopurs_runtime.Value{}), "bind"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadGen_0, "chooseInt"), gopurs_runtime.Int(0), gopurs_runtime.Int(gopurs_runtime.Apply(length_3_1, xs_5).IntVal - 1)), gopurs_runtime.Func(func(n_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.Apply2(fromIndex1_4_2, n_6, xs_5))
-}))
-})
-})
-})
-	})
-	return elements
-}
-
-var choose gopurs_runtime.Value
-var once_choose sync.Once
-func Get_choose() gopurs_runtime.Value {
-	once_choose.Do(func() {
-		choose = gopurs_runtime.Func(func(dictMonadGen_0 gopurs_runtime.Value) gopurs_runtime.Value {
-chooseBool_1_0 := gopurs_runtime.RecordGet(dictMonadGen_0, "chooseBool")
-_ = chooseBool_1_0
-return gopurs_runtime.Func2(func(genA_2 gopurs_runtime.Value, genB_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadGen_0, "Monad0"), gopurs_runtime.Value{}), "Bind1"), gopurs_runtime.Value{}), "bind"), chooseBool_1_0, gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t1 gopurs_runtime.Value
-{
-if v_4.IntVal != 0 {
-__t1 = genA_2
-goto end_branch_1
-} else {
-
-}
-}
-{
-__t1 = genB_3
-}
-end_branch_1:
-return __t1
-}))
-})
-})
-	})
-	return choose
-}
-
-
 
 

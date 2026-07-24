@@ -18,8 +18,12 @@ var genericMonoidArgument gopurs_runtime.Value
 var once_genericMonoidArgument sync.Once
 func Get_genericMonoidArgument() gopurs_runtime.Value {
 	once_genericMonoidArgument.Do(func() {
-		genericMonoidArgument = gopurs_runtime.Func(func(dictMonoid_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("genericMempty'", gopurs_runtime.RecordGet(dictMonoid_0, "mempty"))
+		genericMonoidArgument = gopurs_runtime.Func(func(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
+_ = dictMonoid_0
+return gopurs_runtime.RecordDict1("genericMempty'", gopurs_runtime.RecordGet(dictMonoid_0_loop, "mempty"))
+}()
 })
 	})
 	return genericMonoidArgument
@@ -29,8 +33,12 @@ var genericMempty_prime gopurs_runtime.Value
 var once_genericMempty_prime sync.Once
 func Get_genericMempty_prime() gopurs_runtime.Value {
 	once_genericMempty_prime.Do(func() {
-		genericMempty_prime = gopurs_runtime.Func(func(dict_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(dict_0, "genericMempty'")
+		genericMempty_prime = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0_loop, "genericMempty'")
+}()
 })
 	})
 	return genericMempty_prime
@@ -40,8 +48,12 @@ var genericMonoidConstructor gopurs_runtime.Value
 var once_genericMonoidConstructor sync.Once
 func Get_genericMonoidConstructor() gopurs_runtime.Value {
 	once_genericMonoidConstructor.Do(func() {
-		genericMonoidConstructor = gopurs_runtime.Func(func(dictGenericMonoid_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("genericMempty'", gopurs_runtime.RecordGet(dictGenericMonoid_0, "genericMempty'"))
+		genericMonoidConstructor = gopurs_runtime.Func(func(dictGenericMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictGenericMonoid_0 gopurs_runtime.Value = dictGenericMonoid_0_loop
+_ = dictGenericMonoid_0
+return gopurs_runtime.RecordDict1("genericMempty'", gopurs_runtime.RecordGet(dictGenericMonoid_0_loop, "genericMempty'"))
+}()
 })
 	})
 	return genericMonoidConstructor
@@ -51,12 +63,16 @@ var genericMonoidProduct gopurs_runtime.Value
 var once_genericMonoidProduct sync.Once
 func Get_genericMonoidProduct() gopurs_runtime.Value {
 	once_genericMonoidProduct.Do(func() {
-		genericMonoidProduct = gopurs_runtime.Func(func(dictGenericMonoid_0 gopurs_runtime.Value) gopurs_runtime.Value {
-genericMempty_prime1_1_0 := gopurs_runtime.RecordGet(dictGenericMonoid_0, "genericMempty'")
+		genericMonoidProduct = gopurs_runtime.Func(func(dictGenericMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictGenericMonoid_0 gopurs_runtime.Value = dictGenericMonoid_0_loop
+_ = dictGenericMonoid_0
+genericMempty_prime1_1_0 := gopurs_runtime.RecordGet(dictGenericMonoid_0_loop, "genericMempty'")
 _ = genericMempty_prime1_1_0
 return gopurs_runtime.Func(func(dictGenericMonoid1_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict1("genericMempty'", gopurs_runtime.Constructor2("Product", genericMempty_prime1_1_0, gopurs_runtime.RecordGet(dictGenericMonoid1_2, "genericMempty'")))
 })
+}()
 })
 	})
 	return genericMonoidProduct
@@ -66,13 +82,17 @@ var genericMempty gopurs_runtime.Value
 var once_genericMempty sync.Once
 func Get_genericMempty() gopurs_runtime.Value {
 	once_genericMempty.Do(func() {
-		genericMempty = gopurs_runtime.Func2(func(dictGeneric_0 gopurs_runtime.Value, dictGenericMonoid_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGeneric_0, "to"), gopurs_runtime.RecordGet(dictGenericMonoid_1, "genericMempty'"))
-})
+		genericMempty = gopurs_runtime.Func2(Call_genericMempty)
 	})
 	return genericMempty
 }
 
-
+func Call_genericMempty(dictGeneric_0_loop gopurs_runtime.Value, dictGenericMonoid_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictGeneric_0 gopurs_runtime.Value = dictGeneric_0_loop
+_ = dictGeneric_0
+var dictGenericMonoid_1 gopurs_runtime.Value = dictGenericMonoid_1_loop
+_ = dictGenericMonoid_1
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGeneric_0_loop, "to"), gopurs_runtime.RecordGet(dictGenericMonoid_1_loop, "genericMempty'"))
+}
 
 

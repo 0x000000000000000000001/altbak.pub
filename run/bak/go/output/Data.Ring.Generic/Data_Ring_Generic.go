@@ -9,8 +9,12 @@ var genericSub_prime gopurs_runtime.Value
 var once_genericSub_prime sync.Once
 func Get_genericSub_prime() gopurs_runtime.Value {
 	once_genericSub_prime.Do(func() {
-		genericSub_prime = gopurs_runtime.Func(func(dict_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(dict_0, "genericSub'")
+		genericSub_prime = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0_loop, "genericSub'")
+}()
 })
 	})
 	return genericSub_prime
@@ -20,9 +24,7 @@ var genericSub gopurs_runtime.Value
 var once_genericSub sync.Once
 func Get_genericSub() gopurs_runtime.Value {
 	once_genericSub.Do(func() {
-		genericSub = gopurs_runtime.Func4(func(dictGeneric_0 gopurs_runtime.Value, dictGenericRing_1 gopurs_runtime.Value, x_2 gopurs_runtime.Value, y_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGeneric_0, "to"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericRing_1, "genericSub'"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGeneric_0, "from"), x_2), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGeneric_0, "from"), y_3)))
-})
+		genericSub = gopurs_runtime.Func4(Call_genericSub)
 	})
 	return genericSub
 }
@@ -31,11 +33,7 @@ var genericRingProduct gopurs_runtime.Value
 var once_genericRingProduct sync.Once
 func Get_genericRingProduct() gopurs_runtime.Value {
 	once_genericRingProduct.Do(func() {
-		genericRingProduct = gopurs_runtime.Func2(func(dictGenericRing_0 gopurs_runtime.Value, dictGenericRing1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("genericSub'", gopurs_runtime.Func2(func(v_2 gopurs_runtime.Value, v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Product", gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericRing_0, "genericSub'"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v1_3.UnsafePtr)[0]), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericRing1_1, "genericSub'"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(v1_3.UnsafePtr)[1]))
-}))
-})
+		genericRingProduct = gopurs_runtime.Func2(Call_genericRingProduct)
 	})
 	return genericRingProduct
 }
@@ -55,10 +53,14 @@ var genericRingConstructor gopurs_runtime.Value
 var once_genericRingConstructor sync.Once
 func Get_genericRingConstructor() gopurs_runtime.Value {
 	once_genericRingConstructor.Do(func() {
-		genericRingConstructor = gopurs_runtime.Func(func(dictGenericRing_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		genericRingConstructor = gopurs_runtime.Func(func(dictGenericRing_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictGenericRing_0 gopurs_runtime.Value = dictGenericRing_0_loop
+_ = dictGenericRing_0
 return gopurs_runtime.RecordDict1("genericSub'", gopurs_runtime.Func2(func(v_1 gopurs_runtime.Value, v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericRing_0, "genericSub'"), v_1, v1_2)
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericRing_0_loop, "genericSub'"), v_1, v1_2)
 }))
+}()
 })
 	})
 	return genericRingConstructor
@@ -68,15 +70,39 @@ var genericRingArgument gopurs_runtime.Value
 var once_genericRingArgument sync.Once
 func Get_genericRingArgument() gopurs_runtime.Value {
 	once_genericRingArgument.Do(func() {
-		genericRingArgument = gopurs_runtime.Func(func(dictRing_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		genericRingArgument = gopurs_runtime.Func(func(dictRing_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictRing_0 gopurs_runtime.Value = dictRing_0_loop
+_ = dictRing_0
 return gopurs_runtime.RecordDict1("genericSub'", gopurs_runtime.Func2(func(v_1 gopurs_runtime.Value, v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictRing_0, "sub"), v_1, v1_2)
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictRing_0_loop, "sub"), v_1, v1_2)
 }))
+}()
 })
 	})
 	return genericRingArgument
 }
 
+func Call_genericSub(dictGeneric_0_loop gopurs_runtime.Value, dictGenericRing_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value, y_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictGeneric_0 gopurs_runtime.Value = dictGeneric_0_loop
+_ = dictGeneric_0
+var dictGenericRing_1 gopurs_runtime.Value = dictGenericRing_1_loop
+_ = dictGenericRing_1
+var x_2 gopurs_runtime.Value = x_2_loop
+_ = x_2
+var y_3 gopurs_runtime.Value = y_3_loop
+_ = y_3
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGeneric_0_loop, "to"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericRing_1_loop, "genericSub'"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGeneric_0_loop, "from"), x_2_loop), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGeneric_0_loop, "from"), y_3_loop)))
+}
 
+func Call_genericRingProduct(dictGenericRing_0_loop gopurs_runtime.Value, dictGenericRing1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictGenericRing_0 gopurs_runtime.Value = dictGenericRing_0_loop
+_ = dictGenericRing_0
+var dictGenericRing1_1 gopurs_runtime.Value = dictGenericRing1_1_loop
+_ = dictGenericRing1_1
+return gopurs_runtime.RecordDict1("genericSub'", gopurs_runtime.Func2(func(v_2 gopurs_runtime.Value, v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Constructor2("Product", gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericRing_0_loop, "genericSub'"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v1_3.UnsafePtr)[0]), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericRing1_1_loop, "genericSub'"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(v1_3.UnsafePtr)[1]))
+}))
+}
 
 

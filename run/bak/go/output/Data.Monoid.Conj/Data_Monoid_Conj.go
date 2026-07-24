@@ -9,8 +9,12 @@ var Conj gopurs_runtime.Value
 var once_Conj sync.Once
 func Get_Conj() gopurs_runtime.Value {
 	once_Conj.Do(func() {
-		Conj = gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return x_0
+		Conj = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var x_0 gopurs_runtime.Value = x_0_loop
+_ = x_0
+return x_0_loop
+}()
 })
 	})
 	return Conj
@@ -20,10 +24,14 @@ var showConj gopurs_runtime.Value
 var once_showConj sync.Once
 func Get_showConj() gopurs_runtime.Value {
 	once_showConj.Do(func() {
-		showConj = gopurs_runtime.Func(func(dictShow_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		showConj = gopurs_runtime.Func(func(dictShow_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictShow_0 gopurs_runtime.Value = dictShow_0_loop
+_ = dictShow_0
 return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str("(Conj " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), v_1).StrVal + ")")
+return gopurs_runtime.Str("(Conj " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0_loop, "show"), v_1).StrVal + ")")
 }))
+}()
 })
 	})
 	return showConj
@@ -33,12 +41,16 @@ var semiringConj gopurs_runtime.Value
 var once_semiringConj sync.Once
 func Get_semiringConj() gopurs_runtime.Value {
 	once_semiringConj.Do(func() {
-		semiringConj = gopurs_runtime.Func(func(dictHeytingAlgebra_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict4("zero", "one", "add", "mul", gopurs_runtime.RecordGet(dictHeytingAlgebra_0, "tt"), gopurs_runtime.RecordGet(dictHeytingAlgebra_0, "ff"), gopurs_runtime.Func2(func(v_1 gopurs_runtime.Value, v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictHeytingAlgebra_0, "conj"), v_1, v1_2)
+		semiringConj = gopurs_runtime.Func(func(dictHeytingAlgebra_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictHeytingAlgebra_0 gopurs_runtime.Value = dictHeytingAlgebra_0_loop
+_ = dictHeytingAlgebra_0
+return gopurs_runtime.RecordDict4("zero", "one", "add", "mul", gopurs_runtime.RecordGet(dictHeytingAlgebra_0_loop, "tt"), gopurs_runtime.RecordGet(dictHeytingAlgebra_0_loop, "ff"), gopurs_runtime.Func2(func(v_1 gopurs_runtime.Value, v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictHeytingAlgebra_0_loop, "conj"), v_1, v1_2)
 }), gopurs_runtime.Func2(func(v_1 gopurs_runtime.Value, v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictHeytingAlgebra_0, "disj"), v_1, v1_2)
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictHeytingAlgebra_0_loop, "disj"), v_1, v1_2)
 }))
+}()
 })
 	})
 	return semiringConj
@@ -48,10 +60,14 @@ var semigroupConj gopurs_runtime.Value
 var once_semigroupConj sync.Once
 func Get_semigroupConj() gopurs_runtime.Value {
 	once_semigroupConj.Do(func() {
-		semigroupConj = gopurs_runtime.Func(func(dictHeytingAlgebra_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		semigroupConj = gopurs_runtime.Func(func(dictHeytingAlgebra_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictHeytingAlgebra_0 gopurs_runtime.Value = dictHeytingAlgebra_0_loop
+_ = dictHeytingAlgebra_0
 return gopurs_runtime.RecordDict1("append", gopurs_runtime.Func2(func(v_1 gopurs_runtime.Value, v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictHeytingAlgebra_0, "conj"), v_1, v1_2)
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictHeytingAlgebra_0_loop, "conj"), v_1, v1_2)
 }))
+}()
 })
 	})
 	return semigroupConj
@@ -61,8 +77,12 @@ var ordConj gopurs_runtime.Value
 var once_ordConj sync.Once
 func Get_ordConj() gopurs_runtime.Value {
 	once_ordConj.Do(func() {
-		ordConj = gopurs_runtime.Func(func(dictOrd_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return dictOrd_0
+		ordConj = gopurs_runtime.Func(func(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
+_ = dictOrd_0
+return dictOrd_0_loop
+}()
 })
 	})
 	return ordConj
@@ -72,14 +92,18 @@ var monoidConj gopurs_runtime.Value
 var once_monoidConj sync.Once
 func Get_monoidConj() gopurs_runtime.Value {
 	once_monoidConj.Do(func() {
-		monoidConj = gopurs_runtime.Func(func(dictHeytingAlgebra_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		monoidConj = gopurs_runtime.Func(func(dictHeytingAlgebra_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictHeytingAlgebra_0 gopurs_runtime.Value = dictHeytingAlgebra_0_loop
+_ = dictHeytingAlgebra_0
 semigroupConj1_1_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func2(func(v_1 gopurs_runtime.Value, v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictHeytingAlgebra_0, "conj"), v_1, v1_2)
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictHeytingAlgebra_0_loop, "conj"), v_1, v1_2)
 }))
 _ = semigroupConj1_1_0
-return gopurs_runtime.RecordDict2("mempty", "Semigroup0", gopurs_runtime.RecordGet(dictHeytingAlgebra_0, "tt"), gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict2("mempty", "Semigroup0", gopurs_runtime.RecordGet(dictHeytingAlgebra_0_loop, "tt"), gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return semigroupConj1_1_0
 }))
+}()
 })
 	})
 	return monoidConj
@@ -100,8 +124,12 @@ var eqConj gopurs_runtime.Value
 var once_eqConj sync.Once
 func Get_eqConj() gopurs_runtime.Value {
 	once_eqConj.Do(func() {
-		eqConj = gopurs_runtime.Func(func(dictEq_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return dictEq_0
+		eqConj = gopurs_runtime.Func(func(dictEq_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
+_ = dictEq_0
+return dictEq_0_loop
+}()
 })
 	})
 	return eqConj
@@ -135,8 +163,12 @@ var boundedConj gopurs_runtime.Value
 var once_boundedConj sync.Once
 func Get_boundedConj() gopurs_runtime.Value {
 	once_boundedConj.Do(func() {
-		boundedConj = gopurs_runtime.Func(func(dictBounded_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return dictBounded_0
+		boundedConj = gopurs_runtime.Func(func(dictBounded_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictBounded_0 gopurs_runtime.Value = dictBounded_0_loop
+_ = dictBounded_0
+return dictBounded_0_loop
+}()
 })
 	})
 	return boundedConj

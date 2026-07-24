@@ -19,9 +19,7 @@ var rws gopurs_runtime.Value
 var once_rws sync.Once
 func Get_rws() gopurs_runtime.Value {
 	once_rws.Do(func() {
-		rws = gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, r_1 gopurs_runtime.Value, s_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(f_0, r_1, s_2)
-})
+		rws = gopurs_runtime.Func3(Call_rws)
 	})
 	return rws
 }
@@ -30,9 +28,7 @@ var runRWS gopurs_runtime.Value
 var once_runRWS sync.Once
 func Get_runRWS() gopurs_runtime.Value {
 	once_runRWS.Do(func() {
-		runRWS = gopurs_runtime.Func3(func(m_0 gopurs_runtime.Value, r_1 gopurs_runtime.Value, s_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(m_0, r_1, s_2)
-})
+		runRWS = gopurs_runtime.Func3(Call_runRWS)
 	})
 	return runRWS
 }
@@ -41,9 +37,7 @@ var mapRWS gopurs_runtime.Value
 var once_mapRWS sync.Once
 func Get_mapRWS() gopurs_runtime.Value {
 	once_mapRWS.Do(func() {
-		mapRWS = gopurs_runtime.Func4(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, r_2 gopurs_runtime.Value, s_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(f_0, gopurs_runtime.Apply2(v_1, r_2, s_3))
-})
+		mapRWS = gopurs_runtime.Func4(Call_mapRWS)
 	})
 	return mapRWS
 }
@@ -52,11 +46,7 @@ var execRWS gopurs_runtime.Value
 var once_execRWS sync.Once
 func Get_execRWS() gopurs_runtime.Value {
 	once_execRWS.Do(func() {
-		execRWS = gopurs_runtime.Func3(func(m_0 gopurs_runtime.Value, r_1 gopurs_runtime.Value, s_2 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_3_0 := gopurs_runtime.Apply2(m_0, r_1, s_2)
-_ = __local_var_3_0
-return gopurs_runtime.Constructor2("Tuple", (*[1024]gopurs_runtime.Value)(__local_var_3_0.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(__local_var_3_0.UnsafePtr)[2])
-})
+		execRWS = gopurs_runtime.Func3(Call_execRWS)
 	})
 	return execRWS
 }
@@ -65,15 +55,65 @@ var evalRWS gopurs_runtime.Value
 var once_evalRWS sync.Once
 func Get_evalRWS() gopurs_runtime.Value {
 	once_evalRWS.Do(func() {
-		evalRWS = gopurs_runtime.Func3(func(m_0 gopurs_runtime.Value, r_1 gopurs_runtime.Value, s_2 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_3_0 := gopurs_runtime.Apply2(m_0, r_1, s_2)
-_ = __local_var_3_0
-return gopurs_runtime.Constructor2("Tuple", (*[1024]gopurs_runtime.Value)(__local_var_3_0.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(__local_var_3_0.UnsafePtr)[2])
-})
+		evalRWS = gopurs_runtime.Func3(Call_evalRWS)
 	})
 	return evalRWS
 }
 
+func Call_rws(f_0_loop gopurs_runtime.Value, r_1_loop gopurs_runtime.Value, s_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var f_0 gopurs_runtime.Value = f_0_loop
+_ = f_0
+var r_1 gopurs_runtime.Value = r_1_loop
+_ = r_1
+var s_2 gopurs_runtime.Value = s_2_loop
+_ = s_2
+return gopurs_runtime.Apply2(f_0_loop, r_1_loop, s_2_loop)
+}
 
+func Call_runRWS(m_0_loop gopurs_runtime.Value, r_1_loop gopurs_runtime.Value, s_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var m_0 gopurs_runtime.Value = m_0_loop
+_ = m_0
+var r_1 gopurs_runtime.Value = r_1_loop
+_ = r_1
+var s_2 gopurs_runtime.Value = s_2_loop
+_ = s_2
+return gopurs_runtime.Apply2(m_0_loop, r_1_loop, s_2_loop)
+}
+
+func Call_mapRWS(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value, r_2_loop gopurs_runtime.Value, s_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var f_0 gopurs_runtime.Value = f_0_loop
+_ = f_0
+var v_1 gopurs_runtime.Value = v_1_loop
+_ = v_1
+var r_2 gopurs_runtime.Value = r_2_loop
+_ = r_2
+var s_3 gopurs_runtime.Value = s_3_loop
+_ = s_3
+return gopurs_runtime.Apply(f_0_loop, gopurs_runtime.Apply2(v_1_loop, r_2_loop, s_3_loop))
+}
+
+func Call_execRWS(m_0_loop gopurs_runtime.Value, r_1_loop gopurs_runtime.Value, s_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var m_0 gopurs_runtime.Value = m_0_loop
+_ = m_0
+var r_1 gopurs_runtime.Value = r_1_loop
+_ = r_1
+var s_2 gopurs_runtime.Value = s_2_loop
+_ = s_2
+__local_var_3_0 := gopurs_runtime.Apply2(m_0_loop, r_1_loop, s_2_loop)
+_ = __local_var_3_0
+return gopurs_runtime.Constructor2("Tuple", (*[1024]gopurs_runtime.Value)(__local_var_3_0.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(__local_var_3_0.UnsafePtr)[2])
+}
+
+func Call_evalRWS(m_0_loop gopurs_runtime.Value, r_1_loop gopurs_runtime.Value, s_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var m_0 gopurs_runtime.Value = m_0_loop
+_ = m_0
+var r_1 gopurs_runtime.Value = r_1_loop
+_ = r_1
+var s_2 gopurs_runtime.Value = s_2_loop
+_ = s_2
+__local_var_3_0 := gopurs_runtime.Apply2(m_0_loop, r_1_loop, s_2_loop)
+_ = __local_var_3_0
+return gopurs_runtime.Constructor2("Tuple", (*[1024]gopurs_runtime.Value)(__local_var_3_0.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(__local_var_3_0.UnsafePtr)[2])
+}
 
 

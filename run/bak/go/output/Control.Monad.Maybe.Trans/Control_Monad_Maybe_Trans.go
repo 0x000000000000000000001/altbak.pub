@@ -10,8 +10,12 @@ var MaybeT gopurs_runtime.Value
 var once_MaybeT sync.Once
 func Get_MaybeT() gopurs_runtime.Value {
 	once_MaybeT.Do(func() {
-		MaybeT = gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return x_0
+		MaybeT = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var x_0 gopurs_runtime.Value = x_0_loop
+_ = x_0
+return x_0_loop
+}()
 })
 	})
 	return MaybeT
@@ -21,8 +25,12 @@ var runMaybeT gopurs_runtime.Value
 var once_runMaybeT sync.Once
 func Get_runMaybeT() gopurs_runtime.Value {
 	once_runMaybeT.Do(func() {
-		runMaybeT = gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return v_0
+		runMaybeT = gopurs_runtime.Func(func(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var v_0 gopurs_runtime.Value = v_0_loop
+_ = v_0
+return v_0_loop
+}()
 })
 	})
 	return runMaybeT
@@ -56,9 +64,7 @@ var mapMaybeT gopurs_runtime.Value
 var once_mapMaybeT sync.Once
 func Get_mapMaybeT() gopurs_runtime.Value {
 	once_mapMaybeT.Do(func() {
-		mapMaybeT = gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(f_0, v_1)
-})
+		mapMaybeT = gopurs_runtime.Func2(Call_mapMaybeT)
 	})
 	return mapMaybeT
 }
@@ -67,9 +73,12 @@ var functorMaybeT gopurs_runtime.Value
 var once_functorMaybeT sync.Once
 func Get_functorMaybeT() gopurs_runtime.Value {
 	once_functorMaybeT.Do(func() {
-		functorMaybeT = gopurs_runtime.Func(func(dictFunctor_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		functorMaybeT = gopurs_runtime.Func(func(dictFunctor_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictFunctor_0 gopurs_runtime.Value = dictFunctor_0_loop
+_ = dictFunctor_0
 return gopurs_runtime.RecordDict1("map", gopurs_runtime.Func2(func(f_1 gopurs_runtime.Value, v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0_loop, "map"), gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
 if gopurs_runtime.Bool(v1_3.StrVal == "Just").IntVal != 0 {
@@ -86,6 +95,7 @@ end_branch_0:
 return __t0
 }), v_2)
 }))
+}()
 })
 	})
 	return functorMaybeT
@@ -828,6 +838,12 @@ return alternativeMaybeT1_2_1
 	return monadPlusMaybeT
 }
 
-
+func Call_mapMaybeT(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var f_0 gopurs_runtime.Value = f_0_loop
+_ = f_0
+var v_1 gopurs_runtime.Value = v_1_loop
+_ = v_1
+return gopurs_runtime.Apply(f_0_loop, v_1_loop)
+}
 
 

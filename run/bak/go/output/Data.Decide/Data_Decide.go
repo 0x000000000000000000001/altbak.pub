@@ -47,8 +47,11 @@ var chooseOp gopurs_runtime.Value
 var once_chooseOp sync.Once
 func Get_chooseOp() gopurs_runtime.Value {
 	once_chooseOp.Do(func() {
-		chooseOp = gopurs_runtime.Func(func(dictSemigroup_0 gopurs_runtime.Value) gopurs_runtime.Value {
-divideOp_1_0 := gopurs_runtime.Apply(pkg_Data_Divide.Get_divideOp(), dictSemigroup_0)
+		chooseOp = gopurs_runtime.Func(func(dictSemigroup_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictSemigroup_0 gopurs_runtime.Value = dictSemigroup_0_loop
+_ = dictSemigroup_0
+divideOp_1_0 := gopurs_runtime.Apply(pkg_Data_Divide.Get_divideOp(), dictSemigroup_0_loop)
 _ = divideOp_1_0
 return gopurs_runtime.RecordDict2("choose", "Divide0", gopurs_runtime.Func4(func(f_2 gopurs_runtime.Value, v_3 gopurs_runtime.Value, v1_4 gopurs_runtime.Value, x_5 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_6_1 := gopurs_runtime.Apply(f_2, x_5)
@@ -78,6 +81,7 @@ return __t2
 }), gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return divideOp_1_0
 }))
+}()
 })
 	})
 	return chooseOp
@@ -251,8 +255,12 @@ var choose gopurs_runtime.Value
 var once_choose sync.Once
 func Get_choose() gopurs_runtime.Value {
 	once_choose.Do(func() {
-		choose = gopurs_runtime.Func(func(dict_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(dict_0, "choose")
+		choose = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0_loop, "choose")
+}()
 })
 	})
 	return choose
@@ -262,8 +270,12 @@ var chosen gopurs_runtime.Value
 var once_chosen sync.Once
 func Get_chosen() gopurs_runtime.Value {
 	once_chosen.Do(func() {
-		chosen = gopurs_runtime.Func(func(dictDecide_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDecide_0, "choose"), gopurs_runtime.RecordGet(pkg_Control_Category.Get_categoryFn(), "identity"))
+		chosen = gopurs_runtime.Func(func(dictDecide_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictDecide_0 gopurs_runtime.Value = dictDecide_0_loop
+_ = dictDecide_0
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDecide_0_loop, "choose"), gopurs_runtime.RecordGet(pkg_Control_Category.Get_categoryFn(), "identity"))
+}()
 })
 	})
 	return chosen

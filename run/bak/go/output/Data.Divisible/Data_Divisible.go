@@ -23,16 +23,20 @@ var divisibleOp gopurs_runtime.Value
 var once_divisibleOp sync.Once
 func Get_divisibleOp() gopurs_runtime.Value {
 	once_divisibleOp.Do(func() {
-		divisibleOp = gopurs_runtime.Func(func(dictMonoid_0 gopurs_runtime.Value) gopurs_runtime.Value {
-divideOp_1_0 := gopurs_runtime.Apply(pkg_Data_Divide.Get_divideOp(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{}))
+		divisibleOp = gopurs_runtime.Func(func(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
+_ = dictMonoid_0
+divideOp_1_0 := gopurs_runtime.Apply(pkg_Data_Divide.Get_divideOp(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0_loop, "Semigroup0"), gopurs_runtime.Value{}))
 _ = divideOp_1_0
-__local_var_2_1 := gopurs_runtime.RecordGet(dictMonoid_0, "mempty")
+__local_var_2_1 := gopurs_runtime.RecordGet(dictMonoid_0_loop, "mempty")
 _ = __local_var_2_1
 return gopurs_runtime.RecordDict2("conquer", "Divide0", gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return __local_var_2_1
 }), gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return divideOp_1_0
 }))
+}()
 })
 	})
 	return divisibleOp
@@ -68,8 +72,12 @@ var conquer gopurs_runtime.Value
 var once_conquer sync.Once
 func Get_conquer() gopurs_runtime.Value {
 	once_conquer.Do(func() {
-		conquer = gopurs_runtime.Func(func(dict_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(dict_0, "conquer")
+		conquer = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0_loop, "conquer")
+}()
 })
 	})
 	return conquer

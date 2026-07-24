@@ -19,8 +19,12 @@ var runEnv gopurs_runtime.Value
 var once_runEnv sync.Once
 func Get_runEnv() gopurs_runtime.Value {
 	once_runEnv.Do(func() {
-		runEnv = gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Tuple", (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[1])
+		runEnv = gopurs_runtime.Func(func(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var v_0 gopurs_runtime.Value = v_0_loop
+_ = v_0
+return gopurs_runtime.Constructor2("Tuple", (*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[1])
+}()
 })
 	})
 	return runEnv
@@ -30,9 +34,7 @@ var mapEnv gopurs_runtime.Value
 var once_mapEnv sync.Once
 func Get_mapEnv() gopurs_runtime.Value {
 	once_mapEnv.Do(func() {
-		mapEnv = gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Tuple", (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[0], gopurs_runtime.Apply(f_0, (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[1]))
-})
+		mapEnv = gopurs_runtime.Func2(Call_mapEnv)
 	})
 	return mapEnv
 }
@@ -41,13 +43,25 @@ var env gopurs_runtime.Value
 var once_env sync.Once
 func Get_env() gopurs_runtime.Value {
 	once_env.Do(func() {
-		env = gopurs_runtime.Func2(func(e_0 gopurs_runtime.Value, a_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Tuple", e_0, a_1)
-})
+		env = gopurs_runtime.Func2(Call_env)
 	})
 	return env
 }
 
+func Call_mapEnv(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var f_0 gopurs_runtime.Value = f_0_loop
+_ = f_0
+var v_1 gopurs_runtime.Value = v_1_loop
+_ = v_1
+return gopurs_runtime.Constructor2("Tuple", (*[1024]gopurs_runtime.Value)(v_1_loop.UnsafePtr)[0], gopurs_runtime.Apply(f_0_loop, (*[1024]gopurs_runtime.Value)(v_1_loop.UnsafePtr)[1]))
+}
 
+func Call_env(e_0_loop gopurs_runtime.Value, a_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var e_0 gopurs_runtime.Value = e_0_loop
+_ = e_0
+var a_1 gopurs_runtime.Value = a_1_loop
+_ = a_1
+return gopurs_runtime.Constructor2("Tuple", e_0_loop, a_1_loop)
+}
 
 

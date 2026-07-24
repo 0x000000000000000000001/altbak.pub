@@ -1,0 +1,705 @@
+=== Rebuilding gopurs backend ===
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: gopurs
+
+Downloading dependencies...
+Building...
+[1 of 1] Compiling Spago.Generated.BuildInfo
+           Src   Lib   All
+Warnings     0     0     0
+Errors       0     0     0
+
+✓ Build succeeded.
+
+[  1 of 408] Building Control.Semigroupoid
+[  2 of 408] Building Type.Proxy
+[  3 of 408] Building Data.Symbol
+[  4 of 408] Building Data.Unit
+[  5 of 408] Building Record.Unsafe
+[  6 of 408] Building Data.HeytingAlgebra
+[  7 of 408] Building Data.Void
+[  8 of 408] Building Data.Eq
+[  9 of 408] Building Control.Category
+[ 10 of 408] Building Data.Boolean
+[ 11 of 408] Building Data.Semigroup
+[ 12 of 408] Building Data.Show
+[ 13 of 408] Building Data.Ordering
+[ 14 of 408] Building Data.Semiring
+[ 15 of 408] Building Data.Ring
+[ 16 of 408] Building Data.Ord
+[ 17 of 408] Building Data.Function
+[ 18 of 408] Building Data.Functor
+[ 19 of 408] Building Control.Alt
+[ 20 of 408] Building Control.Apply
+[ 21 of 408] Building Control.Applicative
+[ 22 of 408] Building Control.Bind
+[ 23 of 408] Building Control.Plus
+[ 24 of 408] Building Data.BooleanAlgebra
+[ 25 of 408] Building Data.Bounded
+[ 26 of 408] Building Data.CommutativeRing
+[ 27 of 408] Building Data.EuclideanRing
+[ 28 of 408] Building Control.Monad
+[ 29 of 408] Building Data.Monoid
+[ 30 of 408] Building Data.DivisionRing
+[ 31 of 408] Building Data.Field
+[ 32 of 408] Building Data.NaturalTransformation
+[ 33 of 408] Building Prelude
+[ 34 of 408] Building Data.Monoid.Additive
+[ 35 of 408] Building Control.Alternative
+[ 36 of 408] Building Control.Extend
+[ 37 of 408] Building Control.Comonad
+[ 38 of 408] Building Data.Monoid.Conj
+[ 39 of 408] Building Data.Monoid.Disj
+[ 40 of 408] Building Data.Monoid.Dual
+[ 41 of 408] Building Data.Monoid.Endo
+[ 42 of 408] Building Data.Monoid.Multiplicative
+[ 43 of 408] Building Data.Semigroup.First
+[ 44 of 408] Building Data.Semigroup.Last
+[ 45 of 408] Building Unsafe.Coerce
+[ 46 of 408] Building Safe.Coerce
+[ 47 of 408] Building Data.Newtype
+[ 48 of 408] Building Data.Monoid.Alternate
+[ 49 of 408] Building Data.Functor.Invariant
+[ 50 of 408] Building Data.Const
+[ 51 of 408] Building Data.Generic.Rep
+[ 52 of 408] Building Data.Maybe
+[ 53 of 408] Building Data.Either
+[ 54 of 408] Building Control.Lazy
+[ 55 of 408] Building Control.MonadPlus
+[ 56 of 408] Building Data.Functor.App
+[ 57 of 408] Building Data.Functor.Compose
+[ 58 of 408] Building Data.Tuple
+[ 59 of 408] Building Data.Bifunctor
+[ 60 of 408] Building Data.Functor.Coproduct
+[ 61 of 408] Building Data.Functor.Product
+[ 62 of 408] Building Data.Identity
+[ 63 of 408] Building Data.Maybe.First
+[ 64 of 408] Building Data.Maybe.Last
+[ 65 of 408] Building Data.Foldable
+[ 66 of 408] Building Effect
+[ 67 of 408] Building Effect.Ref
+[ 68 of 408] Building Partial
+[ 69 of 408] Building Partial.Unsafe
+[ 70 of 408] Building Control.Monad.Rec.Class
+[ 71 of 408] Building Data.FunctorWithIndex
+[ 72 of 408] Building Data.FoldableWithIndex
+[ 73 of 408] Building Data.Ord.Max
+[ 74 of 408] Building Data.Ord.Min
+[ 75 of 408] Building Data.Semigroup.Foldable
+[ 76 of 408] Building Data.Traversable.Accum
+[ 77 of 408] Building Data.Traversable.Accum.Internal
+[ 78 of 408] Building Data.Traversable
+[ 79 of 408] Building Data.TraversableWithIndex
+[ 80 of 408] Building Data.Semigroup.Traversable
+[ 81 of 408] Building Data.Unfoldable1
+[ 82 of 408] Building Data.Unfoldable
+[ 83 of 408] Building Data.NonEmpty
+[ 84 of 408] Building Data.List.Types
+[ 85 of 408] Building Data.List.Internal
+[ 86 of 408] Building Data.List
+[ 87 of 408] Building Data.List.NonEmpty
+[ 88 of 408] Building Data.Show.Generic
+[ 89 of 408] Building Ansi.Codes
+[ 90 of 408] Building Ansi.Output
+[ 91 of 408] Building Control.Biapply
+[ 92 of 408] Building Control.Biapplicative
+[ 93 of 408] Building Control.Monad.Trans.Class
+[ 94 of 408] Building Data.CatQueue
+[ 95 of 408] Building Data.CatList
+[ 96 of 408] Building Control.Monad.Free
+[ 97 of 408] Building Control.Monad.State.Class
+[ 98 of 408] Building Control.Monad.Cont.Class
+[ 99 of 408] Building Effect.Exception
+[100 of 408] Building Control.Monad.Error.Class
+[101 of 408] Building Control.Monad.Reader.Class
+[102 of 408] Building Control.Monad.ST.Internal
+[103 of 408] Building Control.Monad.ST
+[104 of 408] Building Control.Monad.ST.Global
+[105 of 408] Building Control.Monad.ST.Class
+[106 of 408] Building Control.Monad.Writer.Class
+[107 of 408] Building Effect.Class
+[108 of 408] Building Control.Monad.State.Trans
+[109 of 408] Building Control.Monad.State
+[110 of 408] Building Data.Lazy
+[111 of 408] Building Control.Comonad.Cofree
+[112 of 408] Building Control.Monad.Identity.Trans
+[113 of 408] Building Control.Comonad.Trans.Class
+[114 of 408] Building Control.Comonad.Env.Trans
+[115 of 408] Building Control.Comonad.Store.Trans
+[116 of 408] Building Control.Comonad.Traced.Trans
+[117 of 408] Building Control.Comonad.Cofree.Class
+[118 of 408] Building Control.Comonad.Store.Class
+[119 of 408] Building Control.Comonad.Store
+[120 of 408] Building Control.Comonad.Env.Class
+[121 of 408] Building Control.Comonad.Env
+[122 of 408] Building Control.Comonad.Traced.Class
+[123 of 408] Building Control.Comonad.Traced
+[124 of 408] Building Control.Monad.Cont.Trans
+[125 of 408] Building Control.Monad.Cont
+[126 of 408] Building Control.Monad.Except.Trans
+[127 of 408] Building Control.Monad.Except
+[128 of 408] Building Control.Monad.Maybe.Trans
+[129 of 408] Building Type.Equality
+[130 of 408] Building Data.Distributive
+[131 of 408] Building Control.Monad.Reader.Trans
+[132 of 408] Building Control.Monad.Writer.Trans
+[133 of 408] Building Control.Monad.Free.Class
+[134 of 408] Building Control.Monad.Gen.Class
+[135 of 408] Building Control.Monad.Gen
+[136 of 408] Building Control.Monad.Gen.Common
+[137 of 408] Building Control.Monad.List.Trans
+[138 of 408] Building Control.Monad.RWS.Trans
+[139 of 408] Building Control.Monad.RWS
+[140 of 408] Building Control.Monad.Reader
+[141 of 408] Building Control.Monad.ST.Ref
+[142 of 408] Building Control.Monad.ST.Uncurried
+[143 of 408] Building Control.Monad.Trampoline
+[144 of 408] Building Control.Monad.Writer
+[145 of 408] Building Data.Functor.Contravariant
+[146 of 408] Building Data.Profunctor
+[147 of 408] Building Data.Profunctor.Closed
+[148 of 408] Building Data.Profunctor.Strong
+[149 of 408] Building Data.Functor.Costar
+[150 of 408] Building Data.Profunctor.Choice
+[151 of 408] Building Data.Profunctor.Star
+[152 of 408] Building Control.Parallel.Class
+[153 of 408] Building Control.Parallel
+[154 of 408] Building Data.Function.Uncurried
+[155 of 408] Building Data.Array.NonEmpty.Internal
+[156 of 408] Building Data.Array.ST
+[157 of 408] Building Data.Array.ST.Iterator
+[158 of 408] Building Data.Array
+[159 of 408] Building Foreign.Object.ST
+[160 of 408] Building Type.Data.Boolean
+[161 of 408] Building Type.Data.Ordering
+[162 of 408] Building Type.Data.Symbol
+[163 of 408] Building Type.RowList
+[164 of 408] Building Type.Row.Homogeneous
+[165 of 408] Building Foreign.Object
+[166 of 408] Building Data.Argonaut.Core
+[167 of 408] Building Data.Argonaut.Decode.Error
+[168 of 408] Building Data.Array.NonEmpty
+[169 of 408] Building Data.Int.Bits
+[170 of 408] Building Data.Number
+[171 of 408] Building Data.Int
+[172 of 408] Building Data.Map.Internal
+[173 of 408] Building Data.Set
+[174 of 408] Building Data.Map
+[175 of 408] Building Data.Enum
+[176 of 408] Building Data.String.Pattern
+[177 of 408] Building Data.String.Unsafe
+[178 of 408] Building Data.String.CodeUnits
+[179 of 408] Building Data.String.Common
+[180 of 408] Building Data.String.CodePoints
+[181 of 408] Building Data.String
+[182 of 408] Building Data.String.NonEmpty.Internal
+[183 of 408] Building Data.String.NonEmpty.CodePoints
+[184 of 408] Building Data.String.NonEmpty
+[185 of 408] Building Data.Argonaut.Decode.Decoders
+[186 of 408] Building Record.Unsafe.Union
+[187 of 408] Building Record
+[188 of 408] Building Data.Argonaut.Decode.Class
+[189 of 408] Building Data.Argonaut.Decode.Combinators
+[190 of 408] Building Data.Argonaut.Parser
+[191 of 408] Building Data.Argonaut.Decode.Parser
+[192 of 408] Building Data.Argonaut.Decode
+[193 of 408] Building Data.Argonaut.Encode.Encoders
+[194 of 408] Building Data.Argonaut.Encode.Class
+[195 of 408] Building Data.Argonaut.Encode.Combinators
+[196 of 408] Building Data.Argonaut.Encode
+[197 of 408] Building Data.Char.Gen
+[198 of 408] Building Data.String.Gen
+[199 of 408] Building Data.Argonaut.Gen
+[200 of 408] Building Data.Argonaut.JCursor
+[201 of 408] Building Data.Argonaut.JCursor.Gen
+[202 of 408] Building Data.Lens.Internal.Wander
+[203 of 408] Building Data.Lens.Internal.Indexed
+[204 of 408] Building Data.Lens.Internal.Shop
+[205 of 408] Building Data.Functor.Clown
+[206 of 408] Building Data.Functor.Flip
+[207 of 408] Building Data.Functor.Joker
+[208 of 408] Building Data.Functor.Product2
+[209 of 408] Building Data.Bifoldable
+[210 of 408] Building Data.Bitraversable
+[211 of 408] Building Data.Lens.Internal.Bazaar
+[212 of 408] Building Data.Lens.Internal.Exchange
+[213 of 408] Building Data.Profunctor.Cochoice
+[214 of 408] Building Data.Lens.Internal.Forget
+[215 of 408] Building Data.Lens.Internal.Grating
+[216 of 408] Building Data.Lens.Internal.Market
+[217 of 408] Building Data.Profunctor.Costrong
+[218 of 408] Building Data.Lens.Internal.Re
+[219 of 408] Building Data.Lens.Internal.Stall
+[220 of 408] Building Data.Lens.Internal.Tagged
+[221 of 408] Building Data.Lens.Types
+[222 of 408] Building Data.Lens.Lens
+[223 of 408] Building Data.Lens.Lens.Tuple
+[224 of 408] Building Data.Lens.Lens.Unit
+[225 of 408] Building Data.Lens.Prism
+[226 of 408] Building Data.Lens.Prism.Either
+[227 of 408] Building Data.Lens.Prism.Maybe
+[228 of 408] Building Data.Lens.Common
+[229 of 408] Building Data.Lens.Fold
+[230 of 408] Building Data.Lens.Getter
+[231 of 408] Building Data.Lens.Internal.Zipping
+[232 of 408] Building Data.Lens.Grate
+[233 of 408] Building Data.Lens.Iso
+[234 of 408] Building Data.Lens.Setter
+[235 of 408] Building Data.Lens.Iso.Newtype
+[236 of 408] Building Data.Lens.Indexed
+[237 of 408] Building Data.Lens.Traversal
+[238 of 408] Building Data.Lens
+[239 of 408] Building Data.Argonaut.Prisms
+[240 of 408] Building Data.Argonaut.Traversals
+[241 of 408] Building Data.Argonaut
+[242 of 408] Building Data.Array.Partial
+[243 of 408] Building Data.Array.ST.Partial
+[244 of 408] Building Data.ArrayBuffer.Types
+[245 of 408] Building Data.Bifunctor.Join
+[246 of 408] Building Data.Bounded.Generic
+[247 of 408] Building Data.Char
+[248 of 408] Building Data.Comparison
+[249 of 408] Building Data.Exists
+[250 of 408] Building Data.Coyoneda
+[251 of 408] Building Data.Date.Component
+[252 of 408] Building Data.Enum.Gen
+[253 of 408] Building Data.Date.Component.Gen
+[254 of 408] Building Data.Time.Duration
+[255 of 408] Building Data.Date
+[256 of 408] Building Data.Date.Gen
+[257 of 408] Building Data.Time.Component
+[258 of 408] Building Data.Time
+[259 of 408] Building Data.DateTime
+[260 of 408] Building Data.Time.Component.Gen
+[261 of 408] Building Data.Time.Gen
+[262 of 408] Building Data.DateTime.Gen
+[263 of 408] Building Data.DateTime.Instant
+[264 of 408] Building Data.Equivalence
+[265 of 408] Building Data.Op
+[266 of 408] Building Data.Predicate
+[267 of 408] Building Data.Divide
+[268 of 408] Building Data.Decide
+[269 of 408] Building Data.Divisible
+[270 of 408] Building Data.Decidable
+[271 of 408] Building Data.Either.Inject
+[272 of 408] Building Data.Either.Nested
+[273 of 408] Building Data.Enum.Generic
+[274 of 408] Building Data.Eq.Generic
+[275 of 408] Building Data.Functor.Coproduct.Inject
+[276 of 408] Building Data.Functor.Coproduct.Nested
+[277 of 408] Building Data.Functor.Product.Nested
+[278 of 408] Building Data.HeytingAlgebra.Generic
+[279 of 408] Building Data.Interval.Duration
+[280 of 408] Building Data.Interval.Duration.Iso
+[281 of 408] Building Data.Interval
+[282 of 408] Building Foreign
+[283 of 408] Building Data.JSDate
+[284 of 408] Building Data.Lens.AffineTraversal
+[285 of 408] Building Data.Lens.Index
+[286 of 408] Building Data.Lens.At
+[287 of 408] Building Data.Lens.Fold.Partial
+[288 of 408] Building Data.Lens.Internal.Focusing
+[289 of 408] Building Data.Lens.Lens.Product
+[290 of 408] Building Data.Lens.Lens.Void
+[291 of 408] Building Data.Lens.Prism.Coproduct
+[292 of 408] Building Data.Lens.Record
+[293 of 408] Building Data.Lens.Zoom
+[294 of 408] Building Data.List.Lazy.Types
+[295 of 408] Building Data.List.Lazy
+[296 of 408] Building Data.List.Lazy.NonEmpty
+[297 of 408] Building Data.List.Partial
+[298 of 408] Building Data.List.ZipList
+[299 of 408] Building Data.Map.Gen
+[300 of 408] Building Data.Monoid.Generic
+[301 of 408] Building Data.Nullable
+[302 of 408] Building Data.Number.Approximate
+[303 of 408] Building Data.Number.Format
+[304 of 408] Building Data.Ord.Down
+[305 of 408] Building Data.Ord.Generic
+[306 of 408] Building Data.Posix.Signal
+[307 of 408] Building Data.Posix
+[308 of 408] Building Data.Profunctor.Join
+[309 of 408] Building Data.Profunctor.Split
+[310 of 408] Building Data.Reflectable
+[311 of 408] Building Data.Ring.Generic
+[312 of 408] Building Data.Semigroup.Generic
+[313 of 408] Building Data.Semiring.Generic
+[314 of 408] Building Data.Set.NonEmpty
+[315 of 408] Building Data.String.CaseInsensitive
+[316 of 408] Building Data.String.NonEmpty.CaseInsensitive
+[317 of 408] Building Data.String.NonEmpty.CodeUnits
+[318 of 408] Building Data.String.Regex.Flags
+[319 of 408] Building Data.String.Regex
+[320 of 408] Building Data.String.Regex.Unsafe
+[321 of 408] Building Data.Time.Duration.Gen
+[322 of 408] Building Data.Tuple.Nested
+[323 of 408] Building Data.Yoneda
+[324 of 408] Building Debug
+[325 of 408] Building Dodo.Internal
+[326 of 408] Building Dodo.Internal.Buffer
+[327 of 408] Building Dodo
+[328 of 408] Building Dodo.Ansi
+[329 of 408] Building Dodo.Box
+[330 of 408] Building Dodo.Common
+[331 of 408] Building Effect.Unsafe
+[332 of 408] Building Effect.Aff
+[333 of 408] Building Effect.Aff.Class
+[334 of 408] Building Effect.Uncurried
+[335 of 408] Building Effect.Aff.Compat
+[336 of 408] Building Effect.Console
+[337 of 408] Building Effect.Class.Console
+[338 of 408] Building Effect.Exception.Unsafe
+[339 of 408] Building Foreign.Index
+[340 of 408] Building Foreign.Keys
+[341 of 408] Building Foreign.Object.Gen
+[342 of 408] Building Foreign.Object.ST.Unsafe
+[343 of 408] Building Foreign.Object.Unsafe
+[344 of 408] Building PureScript.Backend.Optimizer.CoreFn
+[345 of 408] Building PureScript.Backend.Optimizer.Syntax
+[346 of 408] Building PureScript.Backend.Optimizer.Analysis
+[347 of 408] Building PureScript.Backend.Optimizer.Utils
+[348 of 408] Building PureScript.Backend.Optimizer.Semantics
+[349 of 408] Building PureScript.Backend.Optimizer.Codegen.Tco
+[350 of 408] Building Gopurs.FreeVars
+[351 of 408] Building Gopurs.GoAst
+[352 of 408] Building Gopurs.Printer
+[353 of 408] Building Gopurs.ShowTco
+[354 of 408] Building PureScript.CST.Types
+[355 of 408] Building PureScript.CST.Print
+[356 of 408] Building PureScript.CST.Errors
+[357 of 408] Building PureScript.CST.Layout
+[358 of 408] Building PureScript.CST.TokenStream
+[359 of 408] Building PureScript.CST.Lexer
+[360 of 408] Building PureScript.CST.Parser.Monad
+[361 of 408] Building PureScript.Backend.Optimizer.Directives
+[362 of 408] Building PureScript.Backend.Optimizer.Semantics.Foreign
+[363 of 408] Building PureScript.Backend.Optimizer.Convert
+[364 of 408] Building Gopurs.CodeGen
+[365 of 408] Building Gopurs.FfiSupport
+[366 of 408] Building Gopurs.Hash
+[367 of 408] Building Gopurs.Runtime
+[368 of 408] Building Node.Encoding
+[369 of 408] Building Node.Buffer.Types
+[370 of 408] Building Node.Buffer.Immutable
+[371 of 408] Building Node.Buffer.Class
+[372 of 408] Building Node.Buffer
+[373 of 408] Building Node.FS.Constants
+[374 of 408] Building Node.FS
+[375 of 408] Building Node.FS.Perms
+[376 of 408] Building Node.FS.Stats
+[377 of 408] Building Node.Path
+[378 of 408] Building Node.FS.Async
+[379 of 408] Building Node.FS.Aff
+[380 of 408] Building Node.Symbol
+[381 of 408] Building Node.EventEmitter
+[382 of 408] Building Node.EventEmitter.UtilTypes
+[383 of 408] Building Node.Platform
+[384 of 408] Building Node.Stream
+[385 of 408] Building Node.Process
+[386 of 408] Building PureScript.Backend.Optimizer.Builder
+[387 of 408] Building PureScript.Backend.Optimizer.CoreFn.Json
+[388 of 408] Building PureScript.Backend.Optimizer.CoreFn.Sort
+[389 of 408] Building Main
+[390 of 408] Building Node.Buffer.Constants
+[391 of 408] Building Node.Buffer.ST
+[392 of 408] Building Node.FS.Stream
+[393 of 408] Building Node.FS.Sync
+[394 of 408] Building Node.Stream.Aff
+[395 of 408] Building PureScript.Backend.Optimizer.Debug
+[396 of 408] Building PureScript.Backend.Optimizer.Directives.Defaults
+[397 of 408] Building PureScript.Backend.Optimizer.Tracer.Printer
+[398 of 408] Building PureScript.CST.ModuleGraph
+[399 of 408] Building PureScript.CST.Parser
+[400 of 408] Building PureScript.CST.Range.TokenList
+[401 of 408] Building PureScript.CST.Range
+[402 of 408] Building Type.Row
+[403 of 408] Building PureScript.CST.Traversal
+[404 of 408] Building PureScript.CST
+[405 of 408] Building Record.Builder
+[406 of 408] Building Spago.Generated.BuildInfo
+[407 of 408] Building Type.Function
+[408 of 408] Building Type.Prelude
+
+  bin/gopurs.js  684.9kb
+
+⚡ Done in 18ms
+moduleArities keys: ["compose","composeFlipped","semigroupoidFn"]
+moduleArities keys: ["categoryFn","identity"]
+moduleArities keys: ["otherwise"]
+moduleArities keys: ["Proxy"]
+moduleArities keys: ["reflectSymbol","reifySymbol"]
+moduleArities keys: []
+moduleArities keys: []
+moduleArities keys: ["conj","conjRecord","disj","disjRecord","ff","ffRecord","heytingAlgebraBoolean","heytingAlgebraFunction","heytingAlgebraProxy","heytingAlgebraRecord","heytingAlgebraRecordCons","heytingAlgebraRecordNil","heytingAlgebraUnit","implies","impliesRecord","not","notRecord","tt","ttRecord"]
+moduleArities keys: ["absurd"]
+moduleArities keys: ["eq","eq1","eq1Array","eqArray","eqBoolean","eqChar","eqInt","eqNumber","eqProxy","eqRec","eqRecord","eqRowCons","eqRowNil","eqString","eqUnit","eqVoid","notEq","notEq1"]
+moduleArities keys: ["append","appendRecord","semigroupArray","semigroupFn","semigroupProxy","semigroupRecord","semigroupRecordCons","semigroupRecordNil","semigroupString","semigroupUnit","semigroupVoid"]
+moduleArities keys: ["show","showArray","showBoolean","showChar","showInt","showNumber","showProxy","showRecord","showRecordFields","showRecordFieldsCons","showRecordFieldsConsNil","showRecordFieldsNil","showString","showUnit","showVoid"]
+moduleArities keys: ["EQ","GT","LT","eqOrdering","invert","semigroupOrdering","showOrdering"]
+moduleArities keys: ["add","addRecord","mul","mulRecord","one","oneRecord","semiringFn","semiringInt","semiringNumber","semiringProxy","semiringRecord","semiringRecordCons","semiringRecordNil","semiringUnit","zero","zeroRecord"]
+moduleArities keys: ["negate","ringFn","ringInt","ringNumber","ringProxy","ringRecord","ringRecordCons","ringRecordNil","ringUnit","sub","subRecord"]
+moduleArities keys: ["abs","between","clamp","compare","compare1","compareRecord","comparing","greaterThan","greaterThanOrEq","lessThan","lessThanOrEq","max","min","ord1Array","ordArray","ordBoolean","ordChar","ordInt","ordNumber","ordOrdering","ordProxy","ordRecord","ordRecordCons","ordRecordNil","ordString","ordUnit","ordVoid","signum"]
+moduleArities keys: ["apply","applyFlipped","applyN","const","flip","on"]
+moduleArities keys: ["flap","functorArray","functorFn","functorProxy","map","mapFlipped","void","voidLeft","voidRight"]
+moduleArities keys: ["apply","applyArray","applyFirst","applyFn","applyProxy","applySecond","lift2","lift3","lift4","lift5"]
+moduleArities keys: ["applicativeArray","applicativeFn","applicativeProxy","liftA1","pure","unless","when"]
+moduleArities keys: ["bind","bindArray","bindFlipped","bindFn","bindProxy","composeKleisli","composeKleisliFlipped","discard","discardProxy","discardUnit","ifM","join"]
+moduleArities keys: ["ap","liftM1","monadArray","monadFn","monadProxy","unlessM","whenM"]
+moduleArities keys: ["booleanAlgebraBoolean","booleanAlgebraFn","booleanAlgebraProxy","booleanAlgebraRecord","booleanAlgebraRecordCons","booleanAlgebraRecordNil","booleanAlgebraUnit"]
+moduleArities keys: ["commutativeRingFn","commutativeRingInt","commutativeRingNumber","commutativeRingProxy","commutativeRingRecord","commutativeRingRecordCons","commutativeRingRecordNil","commutativeRingUnit"]
+moduleArities keys: ["degree","div","euclideanRingInt","euclideanRingNumber","gcd","lcm","mod"]
+moduleArities keys: ["guard","mempty","memptyRecord","monoidArray","monoidFn","monoidOrdering","monoidRecord","monoidRecordCons","monoidRecordNil","monoidString","monoidUnit","power"]
+moduleArities keys: ["bottom","bottomRecord","boundedBoolean","boundedChar","boundedInt","boundedNumber","boundedOrdering","boundedProxy","boundedRecord","boundedRecordCons","boundedRecordNil","boundedUnit","top","topRecord"]
+moduleArities keys: ["divisionringNumber","leftDiv","recip","rightDiv"]
+moduleArities keys: ["field"]
+moduleArities keys: []
+moduleArities keys: []
+moduleArities keys: ["applicativeEffect","applyEffect","bindEffect","functorEffect","monadEffect","monoidEffect","semigroupEffect"]
+moduleArities keys: ["debugShow","errorShow","grouped","infoShow","logShow","warnShow"]
+moduleArities keys: ["runBench"]
+moduleArities keys: ["ackermann","act","describe"]
+moduleArities keys: ["Add","Mul","Sub","Val","act","buildTree","describe","eval"]
+moduleArities keys: ["act","addC","c10","c100","c100k","c10k","describe","fromInt","mulC","succC","toInt","zeroC"]
+moduleArities keys: ["act","describe","fib"]
+moduleArities keys: ["Lazy","act","buildThunks","defer","describe","force","runManyTimes"]
+moduleArities keys: ["Cons","Nil","act","describe","filterEvens","foldl","range","sumEvens"]
+moduleArities keys: ["act","describe","intMonoidish","mappend_","mempty_","polyLoop"]
+moduleArities keys: ["Cons","Nil","act","describe","filter","range","reverse","sieve","sumList"]
+moduleArities keys: ["B","E","R","T","act","balance","buildTree","depth","describe","insert","max"]
+mbDirectCall failed for balance! flatFn was: Var mbMod: Just Test.RBTree moduleArities has balance: Nothing
+mbDirectCall failed for balance! flatFn was: Var mbMod: Just Test.RBTree moduleArities has balance: Nothing
+moduleArities keys: ["act","describe","initial","updateRec"]
+moduleArities keys: ["State","act","bindState","chainModifications","describe","get","modify","pureState","put","runManyTimes","runState"]
+moduleArities keys: ["act","deepTailRec","describe"]
+moduleArities keys: ["main"]
+moduleArities keys: ["alt","altArray"]
+moduleArities keys: ["empty","plusArray"]
+moduleArities keys: ["alternativeArray","guard"]
+moduleArities keys: ["Additive","applicativeAdditive","applyAdditive","bindAdditive","boundedAdditive","eq1Additive","eqAdditive","functorAdditive","monadAdditive","monoidAdditive","ord1Additive","ordAdditive","semigroupAdditive","showAdditive"]
+moduleArities keys: ["composeCoKleisli","composeCoKleisliFlipped","duplicate","extend","extendArray","extendFlipped","extendFn"]
+moduleArities keys: ["extract"]
+moduleArities keys: ["Conj","applicativeConj","applyConj","bindConj","boundedConj","eq1Conj","eqConj","functorConj","monadConj","monoidConj","ord1Conj","ordConj","semigroupConj","semiringConj","showConj"]
+moduleArities keys: ["Disj","applicativeDisj","applyDisj","bindDisj","boundedDisj","eq1Disj","eqDisj","functorDisj","monadDisj","monoidDisj","ord1Disj","ordDisj","semigroupDisj","semiringDisj","showDisj"]
+moduleArities keys: ["Dual","applicativeDual","applyDual","bindDual","boundedDual","eq1Dual","eqDual","functorDual","monadDual","monoidDual","ord1Dual","ordDual","semigroupDual","showDual"]
+moduleArities keys: ["Endo","boundedEndo","eqEndo","monoidEndo","ordEndo","semigroupEndo","showEndo"]
+moduleArities keys: ["Multiplicative","applicativeMultiplicative","applyMultiplicative","bindMultiplicative","boundedMultiplicative","eq1Multiplicative","eqMultiplicative","functorMultiplicative","monadMultiplicative","monoidMultiplicative","ord1Multiplicative","ordMultiplicative","semigroupMultiplicative","showMultiplicative"]
+moduleArities keys: ["First","applicativeFirst","applyFirst","bindFirst","boundedFirst","eq1First","eqFirst","functorFirst","monadFirst","ord1First","ordFirst","semigroupFirst","showFirst"]
+moduleArities keys: ["Last","applicativeLast","applyLast","bindLast","boundedLast","eq1Last","eqLast","functorLast","monadLast","ord1Last","ordLast","semigroupLast","showLast"]
+moduleArities keys: []
+moduleArities keys: ["coerce"]
+moduleArities keys: ["ala","alaF","collect","modify","newtypeAdditive","newtypeConj","newtypeDisj","newtypeDual","newtypeEndo","newtypeFirst","newtypeLast","newtypeMultiplicative","over","over2","overF","overF2","traverse","un","under","under2","underF","underF2","unwrap","wrap"]
+moduleArities keys: ["Alternate","altAlternate","alternativeAlternate","applicativeAlternate","applyAlternate","bindAlternate","boundedAlternate","comonadAlternate","eq1Alternate","eqAlternate","extendAlternate","functorAlternate","monadAlternate","monoidAlternate","newtypeAlternate","ord1Alternate","ordAlternate","plusAlternate","semigroupAlternate","showAlternate"]
+moduleArities keys: ["imap","imapF","invariantAdditive","invariantAlternate","invariantArray","invariantConj","invariantDisj","invariantDual","invariantEndo","invariantFn","invariantMultiplicative"]
+moduleArities keys: ["Const","applicativeConst","applyConst","booleanAlgebraConst","boundedConst","commutativeRingConst","eq1Const","eqConst","euclideanRingConst","functorConst","heytingAlgebraConst","invariantConst","monoidConst","newtypeConst","ord1Const","ordConst","ringConst","semigroupConst","semigroupoidConst","semiringConst","showConst"]
+moduleArities keys: ["Argument","Constructor","Inl","Inr","NoArguments","Product","from","repOf","showArgument","showConstructor","showNoArguments","showProduct","showSum","to"]
+moduleArities keys: ["Just","Nothing","altMaybe","alternativeMaybe","applicativeMaybe","applyMaybe","bindMaybe","boundedMaybe","eq1Maybe","eqMaybe","extendMaybe","fromJust","fromMaybe","fromMaybe'","functorMaybe","genericMaybe","invariantMaybe","isJust","isNothing","maybe","maybe'","monadMaybe","monoidMaybe","optional","ord1Maybe","ordMaybe","plusMaybe","semigroupMaybe","semiringMaybe","showMaybe"]
+moduleArities keys: ["Left","Right","altEither","applicativeEither","applyEither","bindEither","blush","boundedEither","choose","either","eq1Either","eqEither","extendEither","fromLeft","fromLeft'","fromRight","fromRight'","functorEither","genericEither","hush","invariantEither","isLeft","isRight","monadEither","note","note'","ord1Either","ordEither","semigroupEither","showEither"]
+moduleArities keys: ["defer","fix","lazyFn","lazyUnit"]
+moduleArities keys: ["Tuple","applicativeTuple","applyTuple","bindTuple","booleanAlgebraTuple","boundedTuple","commutativeRingTuple","comonadTuple","curry","eq1Tuple","eqTuple","extendTuple","fst","functorTuple","genericTuple","heytingAlgebraTuple","invariantTuple","lazyTuple","monadTuple","monoidTuple","ord1Tuple","ordTuple","ringTuple","semigroupTuple","semigroupoidTuple","semiringTuple","showTuple","snd","swap","uncurry"]
+moduleArities keys: ["bifunctorConst","bifunctorEither","bifunctorTuple","bimap","bivoid","lmap","rmap"]
+moduleArities keys: ["biapply","biapplyFirst","biapplySecond","biapplyTuple","bilift2","bilift3"]
+moduleArities keys: ["biapplicativeTuple","bipure"]
+moduleArities keys: ["callCC"]
+moduleArities keys: ["showError","stack","throw","try"]
+moduleArities keys: ["catchError","catchJust","liftEither","liftMaybe","monadErrorEffect","monadErrorEither","monadErrorMaybe","monadThrowEffect","monadThrowEither","monadThrowMaybe","throwError","try","withResource"]
+moduleArities keys: ["ask","asks","local","monadAskFun","monadReaderFun"]
+moduleArities keys: ["Identity","altIdentity","applicativeIdentity","applyIdentity","bindIdentity","booleanAlgebraIdentity","boundedIdentity","commutativeRingIdentity","comonadIdentity","eq1Identity","eqIdentity","euclideanRingIdentity","extendIdentity","functorIdentity","heytingAlgebraIdentity","invariantIdentity","lazyIdentity","monadIdentity","monoidIdentity","newtypeIdentity","ord1Identity","ordIdentity","ringIdentity","semigroupIdentity","semiringIdentity","showIdentity"]
+moduleArities keys: ["modify","modify'","modify_","new"]
+moduleArities keys: ["crash","crashWith"]
+moduleArities keys: ["unsafeCrashWith","unsafePartial"]
+moduleArities keys: ["Done","Loop","bifunctorStep","forever","functorStep","loop2","loop3","monadRecEffect","monadRecEither","monadRecFunction","monadRecIdentity","monadRecMaybe","tailRec","tailRec2","tailRec3","tailRecM","tailRecM2","tailRecM3","untilJust","whileJust"]
+moduleArities keys: ["applicativeST","applyST","bindST","functorST","modify","modify'","monadRecST","monadST","monoidST","semigroupST"]
+moduleArities keys: []
+moduleArities keys: ["toEffect"]
+moduleArities keys: ["liftST","monadSTEffect","monadSTST"]
+moduleArities keys: ["get","gets","modify","modify_","put","state"]
+moduleArities keys: ["lift"]
+moduleArities keys: ["censor","listen","listens","pass","tell"]
+moduleArities keys: ["monadPlusArray"]
+moduleArities keys: ["App","altApp","alternativeApp","applicativeApp","applyApp","bindApp","comonadApp","eq1App","eqApp","extendApp","functorApp","hoistApp","hoistLiftApp","hoistLowerApp","lazyApp","monadApp","monadPlusApp","monoidApp","newtypeApp","ord1App","ordApp","plusApp","semigroupApp","showApp"]
+moduleArities keys: ["Compose","altCompose","alternativeCompose","applicativeCompose","applyCompose","bihoistCompose","eq1Compose","eqCompose","functorCompose","newtypeCompose","ord1Compose","ordCompose","plusCompose","showCompose"]
+moduleArities keys: ["Coproduct","bihoistCoproduct","comonadCoproduct","coproduct","eq1Coproduct","eqCoproduct","extendCoproduct","functorCoproduct","left","newtypeCoproduct","ord1Coproduct","ordCoproduct","right","showCoproduct"]
+moduleArities keys: ["Product","applicativeProduct","applyProduct","bihoistProduct","bindProduct","eq1Product","eqProduct","functorProduct","monadProduct","newtypeProduct","ord1Product","ordProduct","product","showProduct"]
+moduleArities keys: ["First","altFirst","alternativeFirst","applicativeFirst","applyFirst","bindFirst","boundedFirst","eq1First","eqFirst","extendFirst","functorFirst","invariantFirst","monadFirst","monoidFirst","newtypeFirst","ord1First","ordFirst","plusFirst","semigroupFirst","showFirst"]
+moduleArities keys: ["Last","altLast","alternativeLast","applicativeLast","applyLast","bindLast","boundedLast","eq1Last","eqLast","extendLast","functorLast","invariantLast","monadLast","monoidLast","newtypeLast","ord1Last","ordLast","plusLast","semigroupLast","showLast"]
+moduleArities keys: ["Append","Empty","Node","all","and","any","elem","find","findMap","fold","foldM","foldMap","foldMapDefaultL","foldMapDefaultR","foldableAdditive","foldableApp","foldableArray","foldableCompose","foldableConj","foldableConst","foldableCoproduct","foldableDisj","foldableDual","foldableEither","foldableFirst","foldableFreeMonoidTree","foldableIdentity","foldableLast","foldableMaybe","foldableMultiplicative","foldableProduct","foldableTuple","foldl","foldlDefault","foldr","foldrDefault","for_","indexl","indexr","intercalate","length","lookup","maximum","maximumBy","minimum","minimumBy","monoidEndo","monoidFreeMonoidTree","notElem","null","oneOf","oneOfMap","or","product","semigroupFreeMonoidTree","sequence_","sum","surround","surroundMap","traverse_"]
+moduleArities keys: []
+moduleArities keys: ["StateL","StateR","applicativeStateL","applicativeStateR","applyStateL","applyStateR","functorStateL","functorStateR","stateL","stateR"]
+moduleArities keys: ["for","mapAccumL","mapAccumR","scanl","scanr","sequence","sequenceDefault","traversableAdditive","traversableApp","traversableArray","traversableCompose","traversableConj","traversableConst","traversableCoproduct","traversableDisj","traversableDual","traversableEither","traversableFirst","traversableIdentity","traversableLast","traversableMaybe","traversableMultiplicative","traversableProduct","traversableTuple","traverse","traverseDefault"]
+moduleArities keys: ["liftEffect","monadEffectEffect"]
+moduleArities keys: ["IdentityT","altIdentityT","alternativeIdentityT","applicativeIdentityT","applyIdentityT","bindIdentityT","comonadIdentityT","eq1IdentityT","eqIdentityT","extendIdentityI","foldableIdentityT","functorIdentityT","mapIdentityT","monadAskIdentityT","monadContIdentityT","monadEffectIdentityT","monadErrorIdentityT","monadIdentityT","monadPlusIdentityT","monadReaderIdentityT","monadRecIdentityT","monadSTIdentityT","monadStateIdentityT","monadTellIdentityT","monadThrowIdentityT","monadTransIdentityT","monadWriterIdentityT","newtypeIdentityT","ord1IdentityT","ordIdentityT","plusIdentityT","runIdentityT","traversableIdentityT"]
+moduleArities keys: ["comonadTransIdentityT","lower"]
+moduleArities keys: ["functorWithIndexAdditive","functorWithIndexApp","functorWithIndexArray","functorWithIndexCompose","functorWithIndexConj","functorWithIndexConst","functorWithIndexCoproduct","functorWithIndexDisj","functorWithIndexDual","functorWithIndexEither","functorWithIndexFirst","functorWithIndexIdentity","functorWithIndexLast","functorWithIndexMaybe","functorWithIndexMultiplicative","functorWithIndexProduct","functorWithIndexTuple","mapDefault","mapWithIndex"]
+moduleArities keys: ["allWithIndex","anyWithIndex","findMapWithIndex","findWithIndex","foldMapDefault","foldMapWithIndex","foldMapWithIndexDefaultL","foldMapWithIndexDefaultR","foldWithIndexM","foldableWithIndexAdditive","foldableWithIndexApp","foldableWithIndexArray","foldableWithIndexCompose","foldableWithIndexConj","foldableWithIndexConst","foldableWithIndexCoproduct","foldableWithIndexDisj","foldableWithIndexDual","foldableWithIndexEither","foldableWithIndexFirst","foldableWithIndexIdentity","foldableWithIndexLast","foldableWithIndexMaybe","foldableWithIndexMultiplicative","foldableWithIndexProduct","foldableWithIndexTuple","foldlDefault","foldlWithIndex","foldlWithIndexDefault","foldrDefault","foldrWithIndex","foldrWithIndexDefault","forWithIndex_","monoidDual","monoidEndo","surroundMapWithIndex","traverseWithIndex_"]
+moduleArities keys: ["forWithIndex","mapAccumLWithIndex","mapAccumRWithIndex","scanlWithIndex","scanrWithIndex","traversableWithIndexAdditive","traversableWithIndexApp","traversableWithIndexArray","traversableWithIndexCompose","traversableWithIndexConj","traversableWithIndexConst","traversableWithIndexCoproduct","traversableWithIndexDisj","traversableWithIndexDual","traversableWithIndexEither","traversableWithIndexFirst","traversableWithIndexIdentity","traversableWithIndexLast","traversableWithIndexMaybe","traversableWithIndexMultiplicative","traversableWithIndexProduct","traversableWithIndexTuple","traverseDefault","traverseWithIndex","traverseWithIndexDefault"]
+moduleArities keys: ["EnvT","comonadEnvT","comonadTransEnvT","extendEnvT","foldableEnvT","foldableWithIndexEnvT","functorEnvT","functorWithIndexEnvT","mapEnvT","newtypeEnvT","runEnvT","traversableEnvT","traversableWithIndexEnvT","withEnvT"]
+moduleArities keys: ["StoreT","comonadStoreT","comonadTransStoreT","extendStoreT","functorStoreT","newtypeStoreT","runStoreT"]
+moduleArities keys: ["TracedT","comonadTracedT","comonadTransTracedT","extendTracedT","functorTracedT","newtypeTracedT","runTracedT"]
+moduleArities keys: ["comonadStoreEnvT","comonadStoreStoreT","comonadStoreTracedT","experiment","peek","peeks","pos","seek","seeks"]
+moduleArities keys: ["runStore","store"]
+moduleArities keys: ["ask","asks","comonadAskEnvT","comonadAskStoreT","comonadAskTracedT","comonadAskTuple","comonadEnvEnvT","comonadEnvStoreT","comonadEnvTracedT","comonadEnvTuple","local"]
+moduleArities keys: ["env","mapEnv","runEnv","withEnv"]
+moduleArities keys: ["censor","comonadTracedEnvT","comonadTracedIdentityT","comonadTracedStoreT","comonadTracedTracedT","listen","listens","lowerTrack2","track","tracks"]
+moduleArities keys: ["runTraced","traced"]
+moduleArities keys: ["ContT","applicativeContT","applyContT","bindContT","functorContT","mapContT","monadAskContT","monadContContT","monadContT","monadEffectContT","monadReaderContT","monadSTContT","monadStateContT","monadTransContT","monoidContT","newtypeContT","runContT","semigroupContT","withContT"]
+moduleArities keys: ["cont","mapCont","runCont","withCont"]
+moduleArities keys: ["ExceptT","altExceptT","alternativeExceptT","applicativeExceptT","applyExceptT","bindExceptT","except","functorExceptT","mapExceptT","monadAskExceptT","monadContExceptT","monadEffectExceptT","monadErrorExceptT","monadExceptT","monadPlusExceptT","monadReaderExceptT","monadRecExceptT","monadSTExceptT","monadStateExceptT","monadTellExceptT","monadThrowExceptT","monadTransExceptT","monadWriterExceptT","monoidExceptT","newtypeExceptT","plusExceptT","runExceptT","semigroupExceptT","withExceptT"]
+moduleArities keys: ["mapExcept","runExcept","withExcept"]
+moduleArities keys: ["chooseBool","chooseFloat","chooseInt","resize","sized"]
+moduleArities keys: ["Max","eqMax","monoidMax","newtypeMax","ordMax","semigroupMax","showMax"]
+moduleArities keys: ["Min","eqMin","monoidMin","newtypeMin","ordMin","semigroupMin","showMin"]
+moduleArities keys: ["FoldRight1","fold1","foldMap1","foldMap1DefaultL","foldMap1DefaultR","foldRight1Semigroup","foldableDual","foldableIdentity","foldableMultiplicative","foldableTuple","foldl1","foldl1Default","foldr1","foldr1Default","for1_","intercalate","intercalateMap","maximum","maximumBy","minimum","minimumBy","mkFoldRight1","semigroupDual","sequence1_","traverse1_"]
+moduleArities keys: ["sequence1","sequence1Default","traversableDual","traversableIdentity","traversableMultiplicative","traversableTuple","traverse1","traverse1Default"]
+moduleArities keys: ["fromJust","iterateN","range","replicate1","replicate1A","singleton","unfoldable1Array","unfoldable1Maybe","unfoldr1"]
+moduleArities keys: ["fromJust","fromMaybe","none","replicate","replicateA","unfoldableArray","unfoldableMaybe","unfoldr"]
+moduleArities keys: ["Cons","Nil","choose","elements","filtered","freqSemigroup","frequency","fromIndex","monoidAdditive","oneOf","semigroupFreqSemigroup","suchThat","unfoldable"]
+moduleArities keys: ["NonEmpty","eq1NonEmpty","eqNonEmpty","foldable1NonEmpty","foldableNonEmpty","foldableWithIndexNonEmpty","foldl1","fromNonEmpty","functorNonEmpty","functorWithIndex","head","oneOf","ord1NonEmpty","ordNonEmpty","semigroupNonEmpty","showNonEmpty","singleton","tail","traversableNonEmpty","traversableWithIndexNonEmpty","unfoldable1NonEmpty"]
+moduleArities keys: ["genEither","genEither'","genIdentity","genMaybe","genMaybe'","genNonEmpty","genTuple","max"]
+moduleArities keys: ["applicativeLazy","applyLazy","bindLazy","booleanAlgebraLazy","boundedLazy","commutativeRingLazy","comonadLazy","eq1Lazy","eqLazy","euclideanRingLazy","extendLazy","foldable1Lazy","foldableLazy","foldableWithIndexLazy","functorLazy","functorWithIndexLazy","heytingAlgebraLazy","invariantLazy","lazyLazy","monadLazy","monoidLazy","ord1Lazy","ordLazy","ringLazy","semigroupLazy","semiringLazy","showLazy","traversable1Lazy","traversableLazy","traversableWithIndexLazy"]
+moduleArities keys: ["Done","ListT","Skip","Yield","altListT","alternativeListT","applicativeListT","applyListT","bindListT","catMaybes","concat","cons","drop","dropWhile","filter","foldl","foldl'","foldlRec","foldlRec'","fromEffect","functorListT","head","iterate","mapMaybe","monadEffectListT","monadListT","monadPlusListT","monadSTListT","monadTransListT","monoidListT","newtypeListT","nil","plusListT","prepend","prepend'","repeat","runListT","runListTRec","scanl","semigroupListT","singleton","tail","take","takeWhile","uncons","unfold","unfoldable1ListT","unfoldableListT","wrapEffect","wrapLazy","zipWith","zipWith'"]
+moduleArities keys: ["MaybeT","altMaybeT","alternativeMaybeT","applicativeMaybeT","applyMaybeT","bindMaybeT","functorMaybeT","mapMaybeT","monadAskMaybeT","monadContMaybeT","monadEffectMaybe","monadErrorMaybeT","monadMaybeT","monadPlusMaybeT","monadReaderMaybeT","monadRecMaybeT","monadSTMaybeT","monadStateMaybeT","monadTellMaybeT","monadThrowMaybeT","monadTransMaybeT","monadWriterMaybeT","monoidMaybeT","newtypeMaybeT","plusMaybeT","runMaybeT","semigroupMaybeT"]
+moduleArities keys: ["RWSResult","RWST","altRWST","alternativeRWST","applicativeRWST","applyRWST","bindRWST","evalRWST","execRWST","functorRWST","lazyRWST","mapRWST","monadAskRWST","monadEffectRWS","monadErrorRWST","monadRWST","monadReaderRWST","monadRecRWST","monadSTRWST","monadStateRWST","monadTellRWST","monadThrowRWST","monadTransRWST","monadWriterRWST","monoidRWST","newtypeRWST","plusRWST","runRWST","semigroupRWST","withRWST"]
+moduleArities keys: ["evalRWS","execRWS","mapRWS","runRWS","rws","withRWS"]
+moduleArities keys: ["from","proof","refl","to"]
+moduleArities keys: ["collect","collectDefault","cotraverse","distribute","distributeDefault","distributiveFunction","distributiveIdentity","distributiveTuple"]
+moduleArities keys: ["ReaderT","altReaderT","alternativeReaderT","applicativeReaderT","applyReaderT","bindReaderT","distributiveReaderT","functorReaderT","mapReaderT","monadAskReaderT","monadContReaderT","monadEffectReader","monadErrorReaderT","monadPlusReaderT","monadReaderReaderT","monadReaderT","monadRecReaderT","monadSTReaderT","monadStateReaderT","monadTellReaderT","monadThrowReaderT","monadTransReaderT","monadWriterReaderT","monoidReaderT","newtypeReaderT","plusReaderT","runReaderT","semigroupReaderT","withReaderT"]
+moduleArities keys: ["mapReader","runReader","withReader"]
+moduleArities keys: []
+moduleArities keys: []
+moduleArities keys: ["StateT","altStateT","alternativeStateT","applicativeStateT","applyStateT","bindStateT","evalStateT","execStateT","functorStateT","lazyStateT","mapStateT","monadAskStateT","monadContStateT","monadEffectState","monadErrorStateT","monadPlusStateT","monadReaderStateT","monadRecStateT","monadSTStateT","monadStateStateT","monadStateT","monadTellStateT","monadThrowStateT","monadTransStateT","monadWriterStateT","monoidStateT","newtypeStateT","plusStateT","runStateT","semigroupStateT","withStateT"]
+moduleArities keys: ["evalState","execState","mapState","runState","withState"]
+moduleArities keys: ["WriterT","altWriterT","alternativeWriterT","applicativeWriterT","applyWriterT","bindWriterT","execWriterT","functorWriterT","mapWriterT","monadAskWriterT","monadContWriterT","monadEffectWriter","monadErrorWriterT","monadPlusWriterT","monadReaderWriterT","monadRecWriterT","monadSTWriterT","monadStateWriterT","monadTellWriterT","monadThrowWriterT","monadTransWriterT","monadWriterT","monadWriterWriterT","monoidWriterT","newtypeWriterT","plusWriterT","runWriterT","semigroupWriterT"]
+moduleArities keys: ["execWriter","mapWriter","runWriter","writer"]
+moduleArities keys: ["cmap","cmapFlipped","coerce","contravariantConst","imapC"]
+moduleArities keys: ["arr","dimap","lcmap","profunctorFn","rmap","unwrapIso","wrapIso"]
+moduleArities keys: ["closed","closedFunction"]
+moduleArities keys: ["fanout","first","second","splitStrong","strongFn"]
+moduleArities keys: ["Costar","applicativeCostar","applyCostar","bifunctorCostar","bindCostar","categoryCostar","closedCostar","distributiveCostar","functorCostar","hoistCostar","invariantCostar","monadCostar","newtypeCostar","profunctorCostar","semigroupoidCostar","strongCostar"]
+moduleArities keys: ["choiceFn","fanin","left","right","splitChoice"]
+moduleArities keys: ["Star","altStar","alternativeStar","applicativeStar","applyStar","bindStar","categoryStar","choiceStar","closedStar","distributiveStar","functorStar","hoistStar","invariantStar","monadPlusStar","monadStar","newtypeStar","plusStar","profunctorStar","semigroupoidStar","strongStar"]
+moduleArities keys: ["ParCont","altParCont","alternativeParCont","applicativeParCont","applyParCont","functorParCont","monadParCostar","monadParExceptT","monadParMaybeT","monadParParCont","monadParReaderT","monadParStar","monadParWriterT","newtypeParCont","parallel","plusParCont","sequential"]
+moduleArities keys: ["parApply","parOneOf","parOneOfMap","parSequence","parSequence_","parTraverse","parTraverse_"]
+moduleArities keys: ["mkFn1","runFn1"]
+moduleArities keys: ["NonEmptyArray","altNonEmptyArray","applicativeNonEmptyArray","applyNonEmptyArray","bindNonEmptyArray","eq1NonEmptyArray","eqNonEmptyArray","foldable1NonEmptyArray","foldableNonEmptyArray","foldableWithIndexNonEmptyArray","functorNonEmptyArray","functorWithIndexNonEmptyArray","monadNonEmptyArray","ord1NonEmptyArray","ordNonEmptyArray","semigroupNonEmptyArray","showNonEmptyArray","traversable1NonEmptyArray","traversableNonEmptyArray","traversableWithIndexNonEmptyArray","unfoldable1NonEmptyArray"]
+moduleArities keys: ["clone","freeze","length","modify","peek","poke","pop","push","pushAll","run","shift","sort","sortBy","sortWith","splice","thaw","toAssocArray","unsafeFreeze","unsafeThaw","unshift","unshiftAll","withArray"]
+moduleArities keys: ["Iterator","exhausted","iterate","iterator","next","peek","pushAll","pushWhile"]
+moduleArities keys: ["all","alterAt","any","catMaybes","concatMap","cons","delete","deleteAt","deleteBy","difference","drop","dropEnd","dropWhile","elem","elemIndex","elemLastIndex","filter","filterA","find","findIndex","findLastIndex","findMap","fold","foldM","foldMap","foldRecM","foldl","foldr","fromFoldable","group","groupAll","groupAllBy","groupBy","head","index","init","insert","insertAt","insertBy","intercalate","intercalate1","intersect","intersectBy","intersperse","last","many","mapMaybe","mapWithIndex","modifyAt","modifyAtIndices","notElem","nub","nubBy","nubByEq","nubEq","null","partition","range","replicate","scanl","scanr","singleton","slice","snoc","some","sort","sortBy","sortWith","span","splitAt","tail","take","takeEnd","takeWhile","toUnfoldable","transpose","traverse_","uncons","union","unionBy","unsafeIndex","unsnoc","unzip","updateAt","updateAtIndices","zip","zipWith","zipWithA"]
+moduleArities keys: ["all","alterAt","any","appendArray","catMaybes","concat","concatMap","cons","cons'","delete","deleteAt","deleteBy","difference","difference'","drop","dropEnd","dropWhile","elem","elemIndex","elemLastIndex","filter","filterA","find","findIndex","findLastIndex","findMap","fold1","foldM","foldMap1","foldRecM","foldl1","foldr1","fromArray","fromFoldable","fromFoldable1","fromNonEmpty","group","groupAll","groupAllBy","groupBy","head","index","init","insert","insertAt","insertBy","intercalate","intercalate1","intersect","intersect'","intersectBy","intersectBy'","intersperse","last","length","mapMaybe","mapWithIndex","max","modifyAt","modifyAtIndices","notElem","nub","nubBy","nubByEq","nubEq","partition","prependArray","range","replicate","reverse","scanl","scanr","singleton","slice","snoc","snoc'","some","sort","sortBy","sortWith","span","splitAt","tail","take","takeEnd","takeWhile","toArray","toNonEmpty","toUnfoldable","toUnfoldable1","transpose","transpose'","uncons","union","union'","unionBy","unionBy'","unsafeIndex","unsnoc","unzip","updateAt","updateAtIndices","zip","zipWith","zipWithA"]
+moduleArities keys: ["head","init","last","tail"]
+moduleArities keys: ["peek","poke"]
+moduleArities keys: ["Clown","biapplicativeClown","biapplyClown","bifunctorClown","eqClown","functorClown","hoistClown","newtypeClown","ordClown","profunctorClown","showClown"]
+moduleArities keys: ["Flip","biapplicativeFlip","biapplyFlip","bifunctorFlip","categoryFlip","contravariantFlip","eqFlip","functorFlip","newtypeFlip","ordFlip","semigroupoidFlip","showFlip"]
+moduleArities keys: ["Joker","applicativeJoker","applyJoker","biapplicativeJoker","biapplyJoker","bifunctorJoker","bindJoker","choiceJoker","eqJoker","functorJoker","hoistJoker","monadJoker","newtypeJoker","ordJoker","profunctorJoker","showJoker"]
+moduleArities keys: ["Product2","biapplicativeProduct2","biapplyProduct2","bifunctorProduct2","eqProduct2","functorProduct2","ordProduct2","profunctorProduct2","showProduct2"]
+moduleArities keys: ["biall","biany","bifold","bifoldMap","bifoldMapDefaultL","bifoldMapDefaultR","bifoldableClown","bifoldableConst","bifoldableEither","bifoldableFlip","bifoldableJoker","bifoldableProduct2","bifoldableTuple","bifoldl","bifoldlDefault","bifoldr","bifoldrDefault","bifor_","bisequence_","bitraverse_","monoidDual","monoidEndo"]
+moduleArities keys: ["Join","biapplicativeJoin","biapplyJoin","bifunctorJoin","eqJoin","newtypeJoin","ordJoin","showJoin"]
+moduleArities keys: ["bifor","bisequence","bisequenceDefault","bitraversableClown","bitraversableConst","bitraversableEither","bitraversableFlip","bitraversableJoker","bitraversableProduct2","bitraversableTuple","bitraverse","bitraverseDefault","lfor","ltraverse","rfor","rtraverse"]
+moduleArities keys: ["genericBottom","genericBottom'","genericBottomArgument","genericBottomConstructor","genericBottomNoArguments","genericBottomProduct","genericBottomSum","genericTop","genericTop'","genericTopArgument","genericTopConstructor","genericTopNoArguments","genericTopProduct","genericTopSum"]
+moduleArities keys: ["Cardinality","boundedEnumBoolean","boundedEnumChar","boundedEnumOrdering","boundedEnumUnit","cardinality","charToEnum","defaultCardinality","defaultFromEnum","defaultPred","defaultSucc","defaultToEnum","downFrom","downFromIncluding","enumBoolean","enumChar","enumEither","enumFromThenTo","enumFromTo","enumInt","enumMaybe","enumOrdering","enumTuple","enumUnit","eqCardinality","fromEnum","guard","newtypeCardinality","ordCardinality","pred","showCardinality","succ","toEnum","toEnumWithDefaults","upFrom","upFromIncluding"]
+moduleArities keys: ["fromCharCode","toCharCode"]
+moduleArities keys: ["foldable1NonEmpty","genAlpha","genAlphaLowercase","genAlphaUppercase","genAsciiChar","genAsciiChar'","genDigitChar","genUnicodeChar","toEnumWithDefaults"]
+moduleArities keys: ["Comparison","contravariantComparison","defaultComparison","monoidComparison","newtypeComparison","semigroupComparison"]
+moduleArities keys: ["April","August","December","February","Friday","January","July","June","March","May","Monday","November","October","Saturday","September","Sunday","Thursday","Tuesday","Wednesday","boundedDay","boundedEnumDay","boundedEnumMonth","boundedEnumWeekday","boundedEnumYear","boundedMonth","boundedWeekday","boundedYear","enumDay","enumMonth","enumWeekday","enumYear","eqDay","eqMonth","eqWeekday","eqYear","ordDay","ordMonth","ordWeekday","ordYear","showDay","showMonth","showWeekday","showYear"]
+moduleArities keys: []
+moduleArities keys: ["e","fromString","ln10","ln2","log10e","log2e","pi","sqrt1_2","sqrt2","tau"]
+moduleArities keys: ["Even","Odd","base36","binary","boundedParity","ceil","commutativeRingParity","decimal","divisionRingParity","eqParity","euclideanRingParity","even","floor","fromNumber","fromString","fromStringAs","hexadecimal","octal","odd","ordParity","parity","radix","ringParity","round","semiringParity","showParity","trunc","unsafeClamp"]
+moduleArities keys: ["Days","Hours","Milliseconds","Minutes","Seconds","convertDuration","durationDays","durationHours","durationMilliseconds","durationMinutes","durationSeconds","eqDays","eqHours","eqMilliseconds","eqMinutes","eqSeconds","fromDuration","monoidDays","monoidHours","monoidMilliseconds","monoidMinutes","monoidSeconds","negateDuration","newtypeDays","newtypeHours","newtypeMilliseconds","newtypeMinutes","newtypeSeconds","ordDays","ordHours","ordMilliseconds","ordMinutes","ordSeconds","semigroupDays","semigroupHours","semigroupMilliseconds","semigroupMinutes","semigroupSeconds","showDays","showHours","showMilliseconds","showMinutes","showSeconds","toDuration"]
+moduleArities keys: ["Date","adjust","boundedDate","canonicalDate","day","diff","enumDate","eqDate","exactDate","isLeapYear","lastDayOfMonth","month","ordDate","showDate","weekday","year"]
+moduleArities keys: ["foldable1NonEmpty","genBoundedEnum"]
+moduleArities keys: ["genDay","genMonth","genWeekday","genYear"]
+moduleArities keys: ["genDate"]
+moduleArities keys: ["boundedEnumHour","boundedEnumMillisecond","boundedEnumMinute","boundedEnumSecond","boundedHour","boundedMillisecond","boundedMinute","boundedSecond","enumHour","enumMillisecond","enumMinute","enumSecond","eqHour","eqMillisecond","eqMinute","eqSecond","ordHour","ordMillisecond","ordMinute","ordSecond","showHour","showMillisecond","showMinute","showSecond"]
+moduleArities keys: ["Time","adjust","boundedTime","diff","eqTime","hour","maxTime","millisToTime","millisecond","minTime","minute","ordTime","second","setHour","setMillisecond","setMinute","setSecond","showTime","timeToMillis"]
+moduleArities keys: ["DateTime","adjust","boundedDateTime","date","diff","eqDateTime","modifyDate","modifyDateF","modifyTime","modifyTimeF","ordDateTime","showDateTime","time","toRecord"]
+moduleArities keys: ["genHour","genMillisecond","genMinute","genSecond"]
+moduleArities keys: ["genTime"]
+moduleArities keys: ["genDateTime"]
+moduleArities keys: ["boundedInstant","diff","eqDateTime","fromDate","fromDateTime","instant","ordDateTime","showInstant","toDateTime","unInstant"]
+moduleArities keys: ["Equivalence","comparisonEquivalence","contravariantEquivalence","defaultEquivalence","monoidEquivalence","newtypeEquivalence","semigroupEquivalence"]
+moduleArities keys: ["Op","categoryOp","contravariantOp","monoidOp","newtypeOp","semigroupOp","semigroupoidOp"]
+moduleArities keys: ["Predicate","booleanAlgebraPredicate","contravariantPredicate","heytingAlgebraPredicate","newtypePredicate"]
+moduleArities keys: ["divide","divideComparison","divideEquivalence","divideOp","dividePredicate","divided"]
+moduleArities keys: ["choose","chooseComparison","chooseEquivalence","chooseOp","choosePredicate","chosen"]
+moduleArities keys: ["conquer","divisibleComparison","divisibleEquivalence","divisibleOp","divisiblePredicate"]
+moduleArities keys: ["decidableComparison","decidableEquivalence","decidableOp","decidablePredicate","lose","lost"]
+moduleArities keys: ["inj","injectLeft","injectReflexive","injectRight","prj"]
+moduleArities keys: ["at1","at10","at2","at3","at4","at5","at6","at7","at8","at9","either1","either10","either2","either3","either4","either5","either6","either7","either8","either9","in1","in10","in2","in3","in4","in5","in6","in7","in8","in9"]
+moduleArities keys: ["genericBoundedEnumArgument","genericBoundedEnumConstructor","genericBoundedEnumNoArguments","genericBoundedEnumProduct","genericBoundedEnumSum","genericCardinality","genericCardinality'","genericEnumArgument","genericEnumConstructor","genericEnumNoArguments","genericEnumProduct","genericEnumSum","genericFromEnum","genericFromEnum'","genericPred","genericPred'","genericSucc","genericSucc'","genericToEnum","genericToEnum'"]
+moduleArities keys: ["genericEq","genericEq'","genericEqArgument","genericEqConstructor","genericEqNoArguments","genericEqNoConstructors","genericEqProduct","genericEqSum"]
+moduleArities keys: ["mkExists","runExists"]
+moduleArities keys: ["inj","injectLeft","injectReflexive","injectRight","prj"]
+moduleArities keys: ["at1","at10","at2","at3","at4","at5","at6","at7","at8","at9","coproduct1","coproduct10","coproduct2","coproduct3","coproduct4","coproduct5","coproduct6","coproduct7","coproduct8","coproduct9","in1","in10","in2","in3","in4","in5","in6","in7","in8","in9"]
+moduleArities keys: ["get1","get10","get2","get3","get4","get5","get6","get7","get8","get9","product1","product10","product2","product3","product4","product5","product6","product7","product8","product9"]
+moduleArities keys: ["genericConj","genericConj'","genericDisj","genericDisj'","genericFF","genericFF'","genericHeytingAlgebraArgument","genericHeytingAlgebraConstructor","genericHeytingAlgebraNoArguments","genericHeytingAlgebraProduct","genericImplies","genericImplies'","genericNot","genericNot'","genericTT","genericTT'"]
+moduleArities keys: ["Cons","Nil","NonEmptyList","altList","altNonEmptyList","alternativeList","applicativeList","applicativeNonEmptyList","applyList","applyNonEmptyList","bindList","bindNonEmptyList","comonadNonEmptyList","eq1List","eq1NonEmptyList","eqList","eqNonEmptyList","extendList","extendNonEmptyList","foldable1NonEmptyList","foldableList","foldableNonEmptyList","foldableWithIndexList","foldableWithIndexNonEmpty","foldableWithIndexNonEmptyList","functorList","functorNonEmptyList","functorWithIndexList","functorWithIndexNonEmptyList","listMap","mapWithIndex","monadList","monadNonEmptyList","monadPlusList","monoidList","nelCons","newtypeNonEmptyList","ord1List","ord1NonEmptyList","ordList","ordNonEmpty","ordNonEmptyList","plusList","semigroupList","semigroupNonEmptyList","showList","showNonEmptyList","toList","traversable1NonEmptyList","traversableList","traversableNonEmptyList","traversableWithIndexList","traversableWithIndexNonEmptyList","traverseWithIndex","unfoldable1List","unfoldable1NonEmptyList","unfoldableList"]
+moduleArities keys: ["KickUp","Leaf","Three","ThreeLeft","ThreeMiddle","ThreeRight","Two","TwoLeft","TwoRight","emptySet","fromZipper","insertAndLookupBy"]
+moduleArities keys: ["Pattern","alterAt","any","catMaybes","concat","concatMap","delete","deleteAt","deleteBy","difference","drop","dropEnd","dropWhile","elemIndex","elemLastIndex","eqPattern","filter","filterM","findIndex","findLastIndex","foldM","fromFoldable","group","groupAll","groupAllBy","groupBy","head","index","init","insert","insertAt","insertBy","intersect","intersectBy","last","length","many","manyRec","mapMaybe","modifyAt","newtypePattern","nub","nubBy","nubByEq","nubEq","null","ordPattern","partition","range","reverse","showPattern","singleton","slice","snoc","some","someRec","sort","sortBy","span","stripPrefix","tail","take","takeEnd","takeWhile","toUnfoldable","transpose","uncons","union","unionBy","unsnoc","unzip","updateAt","zip","zipWith","zipWithA"]
+moduleArities keys: ["IterDone","IterEmit","IterLeaf","IterNext","IterNode","Leaf","Node","Split","SplitLast","altMap","alter","any","anyWithKey","applyMap","bindMap","catMaybes","checkValid","delete","difference","empty","eq1Map","eqMap","eqMapIter","filter","filterKeys","filterWithKey","findMax","findMin","foldSubmap","foldSubmapBy","foldableMap","foldableWithIndexMap","fromFoldable","fromFoldableWith","fromFoldableWithIndex","functorMap","functorWithIndexMap","insert","insertWith","intersection","intersectionWith","isEmpty","isSubmap","iterMapL","iterMapR","iterMapU","keys","lookup","lookupGE","lookupGT","lookupLE","lookupLT","mapMaybe","mapMaybeWithKey","member","monoidSemigroupMap","ord1Map","ordMap","ordMapIter","plusMap","pop","semigroupMap","showMap","showTree","singleton","size","stepAsc","stepAscCps","stepDesc","stepDescCps","stepUnfoldr","stepUnfoldrUnordered","stepUnordered","stepUnorderedCps","stepWith","submap","toMapIter","toUnfoldable","toUnfoldable1","toUnfoldableUnordered","traversableMap","traversableWithIndexMap","union","unionWith","unions","unsafeBalancedNode","unsafeDifference","unsafeIntersectionWith","unsafeJoinNodes","unsafeNode","unsafeSplit","unsafeSplitLast","unsafeUnionWith","update","values"]
+moduleArities keys: ["Set","catMaybes","checkValid","delete","difference","empty","eq1Set","eqSet","filter","findMax","findMin","foldableSet","fromFoldable","fromMap","insert","intersection","isEmpty","map","mapMaybe","member","monoidSet","ord1Set","ordSet","properSubset","semigroupSet","showSet","singleton","size","subset","toMap","toUnfoldable","toUnfoldable1","toggle","union","unions"]
+moduleArities keys: ["SemigroupMap","altSemigroupMap","applySemigroupMap","bindSemigroupMap","eq1SemigroupMap","eqSemigroupMap","foldableSemigroupMap","foldableWithIndexSemigroupMap","functorSemigroupMap","functorWithIndexSemigroupMap","keys","monoidSemigroupMap","newtypeSemigroupMap","ord1SemigroupMap","ordSemigroupMap","plusSemigroupMap","semigroupSemigroupMap","showSemigroupMap","traversableSemigroupMap","traversableWithIndexSemigroupMap"]
+moduleArities keys: ["Day","Duration","Hour","Minute","Month","Second","Week","Year","compare","day","eq","eqDuration","eqDurationComponent","hour","millisecond","minute","monoidDuration","month","newtypeDuration","ordDuration","ordDurationComponent","second","semigroupDuration","show","showDuration","showDurationComponent","week","year"]
+moduleArities keys: ["DurationEnd","DurationOnly","RecurringInterval","StartDuration","StartEnd","bifoldableInterval","bifoldableRecurringInterval","bifunctorInterval","bifunctorRecurringInterval","bitraversableInterval","bitraversableRecurringInterval","compare","eqInterval","eqRecurringInterval","extendInterval","extendRecurringInterval","foldableInterval","foldableRecurringInterval","functorInterval","functorRecurringInterval","ordInterval","ordRecurringInterval","over","show","showInterval","showRecurringInterval","traversableInterval","traversableRecurringInterval"]
+moduleArities keys: ["appendFoldable","catMaybes","concat","concatMap","cons","cons'","drop","dropWhile","elemIndex","elemLastIndex","filter","filterM","findIndex","findLastIndex","foldM","fromFoldable","fromList","group","groupAll","groupAllBy","groupBy","head","index","init","insertAt","intersect","intersectBy","last","length","mapMaybe","modifyAt","nub","nubBy","nubByEq","nubEq","partition","reverse","singleton","snoc","snoc'","sort","sortBy","span","tail","take","takeWhile","toList","toUnfoldable","uncons","union","unionBy","unsnoc","unzip","updateAt","wrappedOperation","wrappedOperation2","zip","zipWith","zipWithA"]
+moduleArities keys: ["ContainsNegativeValue","InvalidFractionalUse","InvalidWeekComponentUsage","IsEmpty","checkEmptiness","checkFractionalUse","checkNegativeValues","checkValidIsoDuration","checkWeekUsage","eqError","eqIsoDuration","fold","foldMap1","foldMap2","lookup","mkIsoDuration","ordError","ordIsoDuration","prettyError","showError","showIsoDuration","toUnfoldable","unIsoDuration"]
+moduleArities keys: ["Cons","List","Nil","NonEmptyList","altList","altNonEmptyList","alternativeList","applicativeList","applicativeNonEmptyList","applyList","applyNonEmptyList","bindList","bindNonEmptyList","comonadNonEmptyList","cons","eq1List","eq1NonEmptyList","eqList","eqNonEmpty","eqNonEmptyList","extendList","extendNonEmptyList","foldableList","foldableNonEmpty","foldableNonEmptyList","foldableWithIndexList","foldableWithIndexNonEmpty","foldableWithIndexNonEmptyList","functorList","functorNonEmptyList","functorWithIndexList","functorWithIndexNonEmptyList","lazyList","mapWithIndex","monadList","monadNonEmptyList","monadPlusList","monoidList","newtypeList","newtypeNonEmptyList","nil","ord1List","ord1NonEmptyList","ordList","ordNonEmpty","ordNonEmptyList","plusList","semigroupList","semigroupNonEmptyList","showList","showNonEmptyList","showStep","step","toList","traversableList","traversableNonEmpty","traversableNonEmptyList","traversableWithIndexList","traversableWithIndexNonEmptyList","traverseWithIndex","unfoldable1List","unfoldable1NonEmptyList","unfoldableList","unfoldr1"]
+moduleArities keys: ["Pattern","alterAt","any","catMaybes","concat","concatMap","cycle","delete","deleteAt","deleteBy","difference","drop","dropWhile","elemIndex","elemLastIndex","eqPattern","filter","filterM","findIndex","findLastIndex","foldM","foldrLazy","fromFoldable","group","groupBy","head","index","init","insert","insertAt","insertBy","intersect","intersectBy","iterate","last","length","many","mapMaybe","modifyAt","newtypePattern","nub","nubBy","nubByEq","nubEq","null","ordPattern","partition","range","repeat","replicate","replicateM","reverse","scanlLazy","showPattern","singleton","slice","snoc","some","span","stripPrefix","tail","take","takeWhile","toUnfoldable","transpose","uncons","union","unionBy","unzip","updateAt","zip","zipWith","zipWithA"]
+moduleArities keys: ["appendFoldable","concatMap","cons","fromFoldable","fromList","head","init","iterate","last","length","repeat","singleton","tail","toList","toUnfoldable","uncons"]
+moduleArities keys: ["head","init","last","tail"]
+moduleArities keys: ["ZipList","altZipList","alternativeZipList","applicativeZipList","applyZipList","eqZipList","foldableZipList","functorZipList","monoidZipList","newtypeZipList","ordZipList","plusZipList","semigroupZipList","showZipList","traversableZipList","zipListIsNotBind"]
+moduleArities keys: ["genMap"]
+moduleArities keys: ["genericMempty","genericMempty'","genericMonoidArgument","genericMonoidConstructor","genericMonoidNoArguments","genericMonoidProduct"]
+moduleArities keys: ["Fraction","Tolerance","eqAbsolute","eqApproximate","eqRelative","neqApproximate"]
+moduleArities keys: ["Exponential","Fixed","Precision","clamp","exponential","fixed","precision","toStringWith"]
+moduleArities keys: ["Down","boundedDown","eqDown","newtypeDown","ordDown","showDown"]
+moduleArities keys: ["genericCompare","genericCompare'","genericOrdArgument","genericOrdConstructor","genericOrdNoArguments","genericOrdNoConstructors","genericOrdProduct","genericOrdSum"]
+moduleArities keys: ["unleft","unright"]
+moduleArities keys: ["unfirst","unsecond"]
+moduleArities keys: ["Join","eqJoin","invariantJoin","monoidJoin","newtypeJoin","ordJoin","semigroupJoin","showJoin"]
+moduleArities keys: ["SplitF","functorSplit","hoistSplit","liftSplit","lowerSplit","profunctorSplit","split","unSplit"]
+moduleArities keys: ["reflectType","reifiableBoolean","reifiableInt","reifiableOrdering","reifiableString","reifyType"]
+moduleArities keys: ["genericRingArgument","genericRingConstructor","genericRingNoArguments","genericRingProduct","genericSub","genericSub'"]
+moduleArities keys: ["genericAppend","genericAppend'","genericSemigroupArgument","genericSemigroupConstructor","genericSemigroupNoArguments","genericSemigroupNoConstructors","genericSemigroupProduct"]
+moduleArities keys: ["genericAdd","genericAdd'","genericMul","genericMul'","genericOne","genericOne'","genericSemiringArgument","genericSemiringConstructor","genericSemiringNoArguments","genericSemiringProduct","genericZero","genericZero'"]
+moduleArities keys: ["cons","delete","difference","eq1NonEmptySet","eqNonEmptySet","filter","foldable1NonEmptySet","foldableNonEmptySet","fromFoldable","fromFoldable1","fromSet","insert","intersection","map","mapMaybe","max","member","min","ord1NonEmptySet","ordNonEmptySet","properSubset","semigroupNonEmptySet","showNonEmptySet","singleton","size","subset","toSet","toUnfoldable","toUnfoldable1","toUnfoldable11","toUnfoldable12","unionSet"]
+moduleArities keys: ["genericShow","genericShow'","genericShowArgs","genericShowArgsArgument","genericShowArgsNoArguments","genericShowArgsProduct","genericShowConstructor","genericShowNoConstructors","genericShowSum"]
+moduleArities keys: ["Pattern","Replacement","eqPattern","eqReplacement","newtypePattern","newtypeReplacement","ordPattern","ordReplacement","showPattern","showReplacement"]
+moduleArities keys: []
+moduleArities keys: ["charAt","contains","dropRight","dropWhile","endsWith","indexOf","indexOf'","lastIndexOf","lastIndexOf'","startsWith","stripPrefix","stripSuffix","takeRight","takeWhile","toChar","uncons"]
+moduleArities keys: ["localeCompare","null"]
+moduleArities keys: ["boundedCodePoint","boundedEnumCodePoint","codePointAt","codePointAtFallback","codePointFromChar","countFallback","countPrefix","countTail","drop","dropWhile","enumCodePoint","eqCodePoint","fromCharCode","fromCodePointArray","indexOf","indexOf'","lastIndexOf","lastIndexOf'","length","ordCodePoint","showCodePoint","singleton","singletonFallback","splitAt","take","takeFallback","takeWhile","toCodePointArray","toCodePointArrayFallback","uncons","unconsButWithTuple","unsafeCodePointAt0","unsafeCodePointAt0Fallback"]
+moduleArities keys: []
+moduleArities keys: ["CaseInsensitiveString","eqCaseInsensitiveString","newtypeCaseInsensitiveString","ordCaseInsensitiveString","showCaseInsensitiveString"]
+moduleArities keys: ["genAlphaLowercaseString","genAlphaString","genAlphaUppercaseString","genAsciiString","genAsciiString'","genDigitString","genString","genUnicodeString","max"]
+moduleArities keys: ["NonEmptyReplacement","NonEmptyString","appendString","contains","endsWith","eqNonEmptyReplacement","eqNonEmptyString","fromString","join1With","joinWith","joinWith1","liftS","localeCompare","makeNonEmptyBad","nes","nonEmptyNonEmpty","ordNonEmptyReplacement","ordNonEmptyString","prependString","replace","replaceAll","semigroupNonEmptyReplacement","semigroupNonEmptyString","showNonEmptyReplacement","showNonEmptyString","startsWith","stripPrefix","stripSuffix","toLower","toString","toUpper","trim","unsafeFromString"]
+moduleArities keys: ["codePointAt","cons","countPrefix","drop","dropWhile","fromCodePointArray","fromFoldable1","fromNonEmptyCodePointArray","indexOf","indexOf'","lastIndexOf","lastIndexOf'","length","singleton","snoc","splitAt","take","takeWhile","toCodePointArray","toNonEmptyCodePointArray","uncons"]
+moduleArities keys: []
+moduleArities keys: ["CaseInsensitiveNonEmptyString","eqCaseInsensitiveNonEmptyString","newtypeCaseInsensitiveNonEmptyString","ordCaseInsensitiveNonEmptyString","showCaseInsensitiveNonEmptyString"]
+moduleArities keys: ["charAt","cons","countPrefix","drop","dropRight","dropWhile","fromCharArray","fromFoldable1","fromNonEmptyCharArray","indexOf","indexOf'","lastIndexOf","lastIndexOf'","length","singleton","snoc","splitAt","take","takeRight","takeWhile","toChar","toCharArray","toNonEmptyCharArray","uncons"]
+moduleArities keys: ["RegexFlags","dotAll","eq","eqRegexFlags","global","guard","ignoreCase","monoidRegexFlags","multiline","newtypeRegexFlags","noFlags","semigroupRegexFlags","showRegexFlags","sticky","unicode"]
+moduleArities keys: ["flags","match","parseFlags","regex","renderFlags","replace'","search","showRegex"]
+moduleArities keys: ["unsafeRegex"]
+moduleArities keys: ["genDays","genHours","genMilliseconds","genMinutes","genSeconds"]
+moduleArities keys: ["curry1","curry10","curry2","curry3","curry4","curry5","curry6","curry7","curry8","curry9","get1","get10","get2","get3","get4","get5","get6","get7","get8","get9","over1","over10","over2","over3","over4","over5","over6","over7","over8","over9","tuple1","tuple10","tuple2","tuple3","tuple4","tuple5","tuple6","tuple7","tuple8","tuple9","uncurry1","uncurry10","uncurry2","uncurry3","uncurry4","uncurry5","uncurry6","uncurry7","uncurry8","uncurry9"]
+moduleArities keys: []
+moduleArities keys: ["Canceler","altAff","altParAff","alternativeParAff","apathize","applicativeAff","applicativeFiber","applicativeParAff","applyAff","applyFiber","applyParAff","attempt","bindAff","bracket","cancelWith","delay","effectCanceler","ffiUtil","fiberCanceler","finally","forkAff","functorAff","functorFiber","functorParAff","invincible","joinFiber","killFiber","launchAff","launchAff_","launchSuspendedAff","lazyAff","lift2","lift21","makeFiber","monadAff","monadEffectAff","monadErrorAff","monadRecAff","monadSTAff","monadThrowAff","monoidAff","monoidCanceler","monoidParAff","never","newtypeCanceler","nonCanceler","parSequence_","parallelAff","plusAff","plusParAff","runAff","runAff_","runSuspendedAff","semigroupAff","semigroupCanceler","semigroupParAff","supervise","suspendAff","try"]
+moduleArities keys: ["liftAff","monadAffAff","monadAffContT","monadAffExceptT","monadAffListT","monadAffMaybe","monadAffRWS","monadAffReader","monadAffState","monadAffWriter"]
+moduleArities keys: ["monoidEffectFn1","monoidEffectFn10","monoidEffectFn2","monoidEffectFn3","monoidEffectFn4","monoidEffectFn5","monoidEffectFn6","monoidEffectFn7","monoidEffectFn8","monoidEffectFn9","semigroupEffectFn1","semigroupEffectFn10","semigroupEffectFn2","semigroupEffectFn3","semigroupEffectFn4","semigroupEffectFn5","semigroupEffectFn6","semigroupEffectFn7","semigroupEffectFn8","semigroupEffectFn9"]
+moduleArities keys: ["EffectFnAff","EffectFnCanceler","fromEffectFnAff"]
+moduleArities keys: ["clear","debug","debugShow","error","errorShow","group","groupCollapsed","groupEnd","grouped","info","infoShow","log","logShow","time","timeEnd","timeLog","warn","warnShow"]
+moduleArities keys: ["unsafeThrow","unsafeThrowException"]
+moduleArities keys: ["nowDate","nowDateTime","nowTime"]
+moduleArities keys: ["packages","pursVersion","spagoVersion"]
+moduleArities keys: ["act"]
+=== Native Go ===
+# gopurs/output/Data.EuclideanRing
+Data.EuclideanRing/Data_EuclideanRing.go:28:30: undefined: Call_gcd
+# gopurs/output/Bench
+Bench/Bench.go:12:35: undefined: Call_runBench
+# gopurs/output/Effect.Console
+Effect.Console/Effect_Console.go:12:35: undefined: Call_warnShow
+Effect.Console/Effect_Console.go:21:34: undefined: Call_logShow
+Effect.Console/Effect_Console.go:30:35: undefined: Call_infoShow
+Effect.Console/Effect_Console.go:39:34: undefined: Call_grouped
+Effect.Console/Effect_Console.go:48:36: undefined: Call_errorShow
+Effect.Console/Effect_Console.go:57:36: undefined: Call_debugShow

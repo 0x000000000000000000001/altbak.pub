@@ -13,8 +13,12 @@ var ZipList gopurs_runtime.Value
 var once_ZipList sync.Once
 func Get_ZipList() gopurs_runtime.Value {
 	once_ZipList.Do(func() {
-		ZipList = gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return x_0
+		ZipList = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var x_0 gopurs_runtime.Value = x_0_loop
+_ = x_0
+return x_0_loop
+}()
 })
 	})
 	return ZipList
@@ -33,10 +37,14 @@ var showZipList gopurs_runtime.Value
 var once_showZipList sync.Once
 func Get_showZipList() gopurs_runtime.Value {
 	once_showZipList.Do(func() {
-		showZipList = gopurs_runtime.Func(func(dictShow_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		showZipList = gopurs_runtime.Func(func(dictShow_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictShow_0 gopurs_runtime.Value = dictShow_0_loop
+_ = dictShow_0
 return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str("(ZipList " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(pkg_Data_List_Lazy_Types.Get_showList(), dictShow_0), "show"), v_1).StrVal + ")")
+return gopurs_runtime.Str("(ZipList " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(pkg_Data_List_Lazy_Types.Get_showList(), dictShow_0_loop), "show"), v_1).StrVal + ")")
 }))
+}()
 })
 	})
 	return showZipList
@@ -55,8 +63,12 @@ var ordZipList gopurs_runtime.Value
 var once_ordZipList sync.Once
 func Get_ordZipList() gopurs_runtime.Value {
 	once_ordZipList.Do(func() {
-		ordZipList = gopurs_runtime.Func(func(dictOrd_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(pkg_Data_List_Lazy_Types.Get_ordList(), dictOrd_0)
+		ordZipList = gopurs_runtime.Func(func(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
+_ = dictOrd_0
+return gopurs_runtime.Apply(pkg_Data_List_Lazy_Types.Get_ordList(), dictOrd_0_loop)
+}()
 })
 	})
 	return ordZipList
@@ -104,8 +116,12 @@ var eqZipList gopurs_runtime.Value
 var once_eqZipList sync.Once
 func Get_eqZipList() gopurs_runtime.Value {
 	once_eqZipList.Do(func() {
-		eqZipList = gopurs_runtime.Func(func(dictEq_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_List_Lazy_Types.Get_eq1List(), "eq1"), dictEq_0))
+		eqZipList = gopurs_runtime.Func(func(dictEq_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
+_ = dictEq_0
+return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_List_Lazy_Types.Get_eq1List(), "eq1"), dictEq_0_loop))
+}()
 })
 	})
 	return eqZipList
@@ -128,10 +144,14 @@ var zipListIsNotBind gopurs_runtime.Value
 var once_zipListIsNotBind sync.Once
 func Get_zipListIsNotBind() gopurs_runtime.Value {
 	once_zipListIsNotBind.Do(func() {
-		zipListIsNotBind = gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		zipListIsNotBind = gopurs_runtime.Func(func(_dollar__unused_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
+_ = _dollar__unused_0
 return gopurs_runtime.RecordDict2("bind", "Apply0", gopurs_runtime.Apply(pkg_Partial.Get__crashWith(), gopurs_runtime.Str("bind: unreachable")), gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_applyZipList()
 }))
+}()
 })
 	})
 	return zipListIsNotBind

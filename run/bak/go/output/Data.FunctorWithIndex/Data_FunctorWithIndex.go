@@ -21,8 +21,12 @@ var mapWithIndex gopurs_runtime.Value
 var once_mapWithIndex sync.Once
 func Get_mapWithIndex() gopurs_runtime.Value {
 	once_mapWithIndex.Do(func() {
-		mapWithIndex = gopurs_runtime.Func(func(dict_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(dict_0, "mapWithIndex")
+		mapWithIndex = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0_loop, "mapWithIndex")
+}()
 })
 	})
 	return mapWithIndex
@@ -32,11 +36,7 @@ var mapDefault gopurs_runtime.Value
 var once_mapDefault sync.Once
 func Get_mapDefault() gopurs_runtime.Value {
 	once_mapDefault.Do(func() {
-		mapDefault = gopurs_runtime.Func2(func(dictFunctorWithIndex_0 gopurs_runtime.Value, f_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctorWithIndex_0, "mapWithIndex"), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return f_1
-}))
-})
+		mapDefault = gopurs_runtime.Func2(Call_mapDefault)
 	})
 	return mapDefault
 }
@@ -62,8 +62,11 @@ var functorWithIndexProduct gopurs_runtime.Value
 var once_functorWithIndexProduct sync.Once
 func Get_functorWithIndexProduct() gopurs_runtime.Value {
 	once_functorWithIndexProduct.Do(func() {
-		functorWithIndexProduct = gopurs_runtime.Func(func(dictFunctorWithIndex_0 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctorWithIndex_0, "Functor0"), gopurs_runtime.Value{})
+		functorWithIndexProduct = gopurs_runtime.Func(func(dictFunctorWithIndex_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictFunctorWithIndex_0 gopurs_runtime.Value = dictFunctorWithIndex_0_loop
+_ = dictFunctorWithIndex_0
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctorWithIndex_0_loop, "Functor0"), gopurs_runtime.Value{})
 _ = __local_var_1_0
 return gopurs_runtime.Func(func(dictFunctorWithIndex1_2 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctorWithIndex1_2, "Functor0"), gopurs_runtime.Value{})
@@ -73,7 +76,7 @@ return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply2(gopurs_runtime
 }))
 _ = functorProduct1_4_2
 return gopurs_runtime.RecordDict2("mapWithIndex", "Functor0", gopurs_runtime.Func2(func(f_5 gopurs_runtime.Value, v_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctorWithIndex_0, "mapWithIndex"), gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctorWithIndex_0_loop, "mapWithIndex"), gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(f_5, gopurs_runtime.Constructor1("Left", x_7))
 }), (*[1024]gopurs_runtime.Value)(v_6.UnsafePtr)[0]), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctorWithIndex1_2, "mapWithIndex"), gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(f_5, gopurs_runtime.Constructor1("Right", x_7))
@@ -82,6 +85,7 @@ return gopurs_runtime.Apply(f_5, gopurs_runtime.Constructor1("Right", x_7))
 return functorProduct1_4_2
 }))
 })
+}()
 })
 	})
 	return functorWithIndexProduct
@@ -271,8 +275,11 @@ var functorWithIndexCoproduct gopurs_runtime.Value
 var once_functorWithIndexCoproduct sync.Once
 func Get_functorWithIndexCoproduct() gopurs_runtime.Value {
 	once_functorWithIndexCoproduct.Do(func() {
-		functorWithIndexCoproduct = gopurs_runtime.Func(func(dictFunctorWithIndex_0 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctorWithIndex_0, "Functor0"), gopurs_runtime.Value{})
+		functorWithIndexCoproduct = gopurs_runtime.Func(func(dictFunctorWithIndex_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictFunctorWithIndex_0 gopurs_runtime.Value = dictFunctorWithIndex_0_loop
+_ = dictFunctorWithIndex_0
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctorWithIndex_0_loop, "Functor0"), gopurs_runtime.Value{})
 _ = __local_var_1_0
 return gopurs_runtime.Func(func(dictFunctorWithIndex1_2 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctorWithIndex1_2, "Functor0"), gopurs_runtime.Value{})
@@ -307,7 +314,7 @@ return __t5
 }))
 _ = functorCoproduct1_4_2
 return gopurs_runtime.RecordDict2("mapWithIndex", "Functor0", gopurs_runtime.Func2(func(f_5 gopurs_runtime.Value, v_6 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_7_6 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctorWithIndex_0, "mapWithIndex"), gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_7_6 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctorWithIndex_0_loop, "mapWithIndex"), gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(f_5, gopurs_runtime.Constructor1("Left", x_7))
 }))
 _ = __local_var_7_6
@@ -341,6 +348,7 @@ return __t8
 return functorCoproduct1_4_2
 }))
 })
+}()
 })
 	})
 	return functorWithIndexCoproduct
@@ -376,8 +384,11 @@ var functorWithIndexCompose gopurs_runtime.Value
 var once_functorWithIndexCompose sync.Once
 func Get_functorWithIndexCompose() gopurs_runtime.Value {
 	once_functorWithIndexCompose.Do(func() {
-		functorWithIndexCompose = gopurs_runtime.Func(func(dictFunctorWithIndex_0 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctorWithIndex_0, "Functor0"), gopurs_runtime.Value{})
+		functorWithIndexCompose = gopurs_runtime.Func(func(dictFunctorWithIndex_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictFunctorWithIndex_0 gopurs_runtime.Value = dictFunctorWithIndex_0_loop
+_ = dictFunctorWithIndex_0
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctorWithIndex_0_loop, "Functor0"), gopurs_runtime.Value{})
 _ = __local_var_1_0
 return gopurs_runtime.Func(func(dictFunctorWithIndex1_2 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctorWithIndex1_2, "Functor0"), gopurs_runtime.Value{})
@@ -387,7 +398,7 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "map"), g
 }))
 _ = functorCompose1_4_2
 return gopurs_runtime.RecordDict2("mapWithIndex", "Functor0", gopurs_runtime.Func2(func(f_5 gopurs_runtime.Value, v_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctorWithIndex_0, "mapWithIndex"), gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctorWithIndex_0_loop, "mapWithIndex"), gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctorWithIndex1_2, "mapWithIndex"), gopurs_runtime.Func(func(b_8 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(f_5, gopurs_runtime.Constructor2("Tuple", x_7, b_8))
 }))
@@ -396,6 +407,7 @@ return gopurs_runtime.Apply(f_5, gopurs_runtime.Constructor2("Tuple", x_7, b_8))
 return functorCompose1_4_2
 }))
 })
+}()
 })
 	})
 	return functorWithIndexCompose
@@ -416,14 +428,18 @@ var functorWithIndexApp gopurs_runtime.Value
 var once_functorWithIndexApp sync.Once
 func Get_functorWithIndexApp() gopurs_runtime.Value {
 	once_functorWithIndexApp.Do(func() {
-		functorWithIndexApp = gopurs_runtime.Func(func(dictFunctorWithIndex_0 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctorWithIndex_0, "Functor0"), gopurs_runtime.Value{})
+		functorWithIndexApp = gopurs_runtime.Func(func(dictFunctorWithIndex_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictFunctorWithIndex_0 gopurs_runtime.Value = dictFunctorWithIndex_0_loop
+_ = dictFunctorWithIndex_0
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctorWithIndex_0_loop, "Functor0"), gopurs_runtime.Value{})
 _ = __local_var_1_0
 return gopurs_runtime.RecordDict2("mapWithIndex", "Functor0", gopurs_runtime.Func2(func(f_2 gopurs_runtime.Value, v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctorWithIndex_0, "mapWithIndex"), f_2, v_3)
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctorWithIndex_0_loop, "mapWithIndex"), f_2, v_3)
 }), gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return __local_var_1_0
 }))
+}()
 })
 	})
 	return functorWithIndexApp
@@ -442,7 +458,15 @@ return pkg_Data_Monoid_Additive.Get_functorAdditive()
 	return functorWithIndexAdditive
 }
 
-
+func Call_mapDefault(dictFunctorWithIndex_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictFunctorWithIndex_0 gopurs_runtime.Value = dictFunctorWithIndex_0_loop
+_ = dictFunctorWithIndex_0
+var f_1 gopurs_runtime.Value = f_1_loop
+_ = f_1
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctorWithIndex_0_loop, "mapWithIndex"), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return f_1_loop
+}))
+}
 
 func Get_mapWithIndexArray() gopurs_runtime.Value {
 	return _Gopurs_MapWithIndexArray

@@ -1,1 +1,0 @@
-{"builtWith":"0.15.16","comments":[],"decls":[],"exports":["unit"],"foreign":["unit"],"imports":[{"annotation":{"meta":null,"sourceSpan":{"end":[14,28],"start":[1,1]}},"moduleName":["Prim"]}],"moduleName":["Data","Unit"],"modulePath":".spago/p/prelude/b5474536977275bda9b1771e06e5f697e0a846d9/prelude/src/Data/Unit.purs","reExports":{},"sourceSpan":{"end":[14,28],"start":[1,1]}}

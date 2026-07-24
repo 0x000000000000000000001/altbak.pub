@@ -9,8 +9,12 @@ var Last gopurs_runtime.Value
 var once_Last sync.Once
 func Get_Last() gopurs_runtime.Value {
 	once_Last.Do(func() {
-		Last = gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return x_0
+		Last = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var x_0 gopurs_runtime.Value = x_0_loop
+_ = x_0
+return x_0_loop
+}()
 })
 	})
 	return Last
@@ -20,10 +24,14 @@ var showLast gopurs_runtime.Value
 var once_showLast sync.Once
 func Get_showLast() gopurs_runtime.Value {
 	once_showLast.Do(func() {
-		showLast = gopurs_runtime.Func(func(dictShow_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		showLast = gopurs_runtime.Func(func(dictShow_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictShow_0 gopurs_runtime.Value = dictShow_0_loop
+_ = dictShow_0
 return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str("(Last " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), v_1).StrVal + ")")
+return gopurs_runtime.Str("(Last " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0_loop, "show"), v_1).StrVal + ")")
 }))
+}()
 })
 	})
 	return showLast
@@ -44,8 +52,12 @@ var ordLast gopurs_runtime.Value
 var once_ordLast sync.Once
 func Get_ordLast() gopurs_runtime.Value {
 	once_ordLast.Do(func() {
-		ordLast = gopurs_runtime.Func(func(dictOrd_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return dictOrd_0
+		ordLast = gopurs_runtime.Func(func(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
+_ = dictOrd_0
+return dictOrd_0_loop
+}()
 })
 	})
 	return ordLast
@@ -66,8 +78,12 @@ var eqLast gopurs_runtime.Value
 var once_eqLast sync.Once
 func Get_eqLast() gopurs_runtime.Value {
 	once_eqLast.Do(func() {
-		eqLast = gopurs_runtime.Func(func(dictEq_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return dictEq_0
+		eqLast = gopurs_runtime.Func(func(dictEq_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
+_ = dictEq_0
+return dictEq_0_loop
+}()
 })
 	})
 	return eqLast
@@ -101,8 +117,12 @@ var boundedLast gopurs_runtime.Value
 var once_boundedLast sync.Once
 func Get_boundedLast() gopurs_runtime.Value {
 	once_boundedLast.Do(func() {
-		boundedLast = gopurs_runtime.Func(func(dictBounded_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return dictBounded_0
+		boundedLast = gopurs_runtime.Func(func(dictBounded_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictBounded_0 gopurs_runtime.Value = dictBounded_0_loop
+_ = dictBounded_0
+return dictBounded_0_loop
+}()
 })
 	})
 	return boundedLast

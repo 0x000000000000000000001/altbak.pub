@@ -11,8 +11,12 @@ var Replacement gopurs_runtime.Value
 var once_Replacement sync.Once
 func Get_Replacement() gopurs_runtime.Value {
 	once_Replacement.Do(func() {
-		Replacement = gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return x_0
+		Replacement = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var x_0 gopurs_runtime.Value = x_0_loop
+_ = x_0
+return x_0_loop
+}()
 })
 	})
 	return Replacement
@@ -22,8 +26,12 @@ var Pattern gopurs_runtime.Value
 var once_Pattern sync.Once
 func Get_Pattern() gopurs_runtime.Value {
 	once_Pattern.Do(func() {
-		Pattern = gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return x_0
+		Pattern = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var x_0 gopurs_runtime.Value = x_0_loop
+_ = x_0
+return x_0_loop
+}()
 })
 	})
 	return Pattern

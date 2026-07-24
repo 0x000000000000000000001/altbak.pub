@@ -117,7 +117,7 @@ var dictParallel_0 gopurs_runtime.Value = dictParallel_0_loop
 _ = dictParallel_0
 var dictApplicative_1 gopurs_runtime.Value = dictApplicative_1_loop
 _ = dictApplicative_1
-parTraverse_2_2_0 := gopurs_runtime.Apply2(Get_parTraverse_(), dictParallel_0_loop, dictApplicative_1_loop)
+parTraverse_2_2_0 := Call_parTraverse_(dictParallel_0_loop, dictApplicative_1_loop)
 _ = parTraverse_2_2_0
 return gopurs_runtime.Func(func(dictFoldable_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(parTraverse_2_2_0, dictFoldable_3, gopurs_runtime.RecordGet(pkg_Control_Category.Get_categoryFn(), "identity"))

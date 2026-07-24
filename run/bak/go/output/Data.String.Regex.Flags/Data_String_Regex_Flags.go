@@ -32,8 +32,12 @@ var RegexFlags gopurs_runtime.Value
 var once_RegexFlags sync.Once
 func Get_RegexFlags() gopurs_runtime.Value {
 	once_RegexFlags.Do(func() {
-		RegexFlags = gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return x_0
+		RegexFlags = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var x_0 gopurs_runtime.Value = x_0_loop
+_ = x_0
+return x_0_loop
+}()
 })
 	})
 	return RegexFlags

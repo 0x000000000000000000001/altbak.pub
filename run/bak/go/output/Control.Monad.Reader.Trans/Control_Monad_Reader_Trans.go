@@ -9,8 +9,12 @@ var ReaderT gopurs_runtime.Value
 var once_ReaderT sync.Once
 func Get_ReaderT() gopurs_runtime.Value {
 	once_ReaderT.Do(func() {
-		ReaderT = gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return x_0
+		ReaderT = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var x_0 gopurs_runtime.Value = x_0_loop
+_ = x_0
+return x_0_loop
+}()
 })
 	})
 	return ReaderT
@@ -20,9 +24,7 @@ var withReaderT gopurs_runtime.Value
 var once_withReaderT sync.Once
 func Get_withReaderT() gopurs_runtime.Value {
 	once_withReaderT.Do(func() {
-		withReaderT = gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(v_1, gopurs_runtime.Apply(f_0, x_2))
-})
+		withReaderT = gopurs_runtime.Func3(Call_withReaderT)
 	})
 	return withReaderT
 }
@@ -31,8 +33,12 @@ var runReaderT gopurs_runtime.Value
 var once_runReaderT sync.Once
 func Get_runReaderT() gopurs_runtime.Value {
 	once_runReaderT.Do(func() {
-		runReaderT = gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return v_0
+		runReaderT = gopurs_runtime.Func(func(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var v_0 gopurs_runtime.Value = v_0_loop
+_ = v_0
+return v_0_loop
+}()
 })
 	})
 	return runReaderT
@@ -64,9 +70,7 @@ var mapReaderT gopurs_runtime.Value
 var once_mapReaderT sync.Once
 func Get_mapReaderT() gopurs_runtime.Value {
 	once_mapReaderT.Do(func() {
-		mapReaderT = gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(f_0, gopurs_runtime.Apply(v_1, x_2))
-})
+		mapReaderT = gopurs_runtime.Func3(Call_mapReaderT)
 	})
 	return mapReaderT
 }
@@ -75,14 +79,18 @@ var functorReaderT gopurs_runtime.Value
 var once_functorReaderT sync.Once
 func Get_functorReaderT() gopurs_runtime.Value {
 	once_functorReaderT.Do(func() {
-		functorReaderT = gopurs_runtime.Func(func(dictFunctor_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		functorReaderT = gopurs_runtime.Func(func(dictFunctor_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictFunctor_0 gopurs_runtime.Value = dictFunctor_0_loop
+_ = dictFunctor_0
 return gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctor_0, "map"), x_1)
+__local_var_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctor_0_loop, "map"), x_1)
 _ = __local_var_2_0
 return gopurs_runtime.Func2(func(v_3 gopurs_runtime.Value, x_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(__local_var_2_0, gopurs_runtime.Apply(v_3, x_4))
 })
 }))
+}()
 })
 	})
 	return functorReaderT
@@ -806,6 +814,24 @@ return alternativeReaderT1_2_1
 	return monadPlusReaderT
 }
 
+func Call_withReaderT(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var f_0 gopurs_runtime.Value = f_0_loop
+_ = f_0
+var v_1 gopurs_runtime.Value = v_1_loop
+_ = v_1
+var x_2 gopurs_runtime.Value = x_2_loop
+_ = x_2
+return gopurs_runtime.Apply(v_1_loop, gopurs_runtime.Apply(f_0_loop, x_2_loop))
+}
 
+func Call_mapReaderT(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var f_0 gopurs_runtime.Value = f_0_loop
+_ = f_0
+var v_1 gopurs_runtime.Value = v_1_loop
+_ = v_1
+var x_2 gopurs_runtime.Value = x_2_loop
+_ = x_2
+return gopurs_runtime.Apply(f_0_loop, gopurs_runtime.Apply(v_1_loop, x_2_loop))
+}
 
 

@@ -11,8 +11,12 @@ var ttRecord gopurs_runtime.Value
 var once_ttRecord sync.Once
 func Get_ttRecord() gopurs_runtime.Value {
 	once_ttRecord.Do(func() {
-		ttRecord = gopurs_runtime.Func(func(dict_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(dict_0, "ttRecord")
+		ttRecord = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0_loop, "ttRecord")
+}()
 })
 	})
 	return ttRecord
@@ -22,8 +26,12 @@ var tt gopurs_runtime.Value
 var once_tt sync.Once
 func Get_tt() gopurs_runtime.Value {
 	once_tt.Do(func() {
-		tt = gopurs_runtime.Func(func(dict_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(dict_0, "tt")
+		tt = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0_loop, "tt")
+}()
 })
 	})
 	return tt
@@ -33,8 +41,12 @@ var notRecord gopurs_runtime.Value
 var once_notRecord sync.Once
 func Get_notRecord() gopurs_runtime.Value {
 	once_notRecord.Do(func() {
-		notRecord = gopurs_runtime.Func(func(dict_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(dict_0, "notRecord")
+		notRecord = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0_loop, "notRecord")
+}()
 })
 	})
 	return notRecord
@@ -44,8 +56,12 @@ var not gopurs_runtime.Value
 var once_not sync.Once
 func Get_not() gopurs_runtime.Value {
 	once_not.Do(func() {
-		not = gopurs_runtime.Func(func(dict_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(dict_0, "not")
+		not = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0_loop, "not")
+}()
 })
 	})
 	return not
@@ -55,8 +71,12 @@ var impliesRecord gopurs_runtime.Value
 var once_impliesRecord sync.Once
 func Get_impliesRecord() gopurs_runtime.Value {
 	once_impliesRecord.Do(func() {
-		impliesRecord = gopurs_runtime.Func(func(dict_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(dict_0, "impliesRecord")
+		impliesRecord = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0_loop, "impliesRecord")
+}()
 })
 	})
 	return impliesRecord
@@ -66,8 +86,12 @@ var implies gopurs_runtime.Value
 var once_implies sync.Once
 func Get_implies() gopurs_runtime.Value {
 	once_implies.Do(func() {
-		implies = gopurs_runtime.Func(func(dict_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(dict_0, "implies")
+		implies = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0_loop, "implies")
+}()
 })
 	})
 	return implies
@@ -132,8 +156,12 @@ var ffRecord gopurs_runtime.Value
 var once_ffRecord sync.Once
 func Get_ffRecord() gopurs_runtime.Value {
 	once_ffRecord.Do(func() {
-		ffRecord = gopurs_runtime.Func(func(dict_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(dict_0, "ffRecord")
+		ffRecord = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0_loop, "ffRecord")
+}()
 })
 	})
 	return ffRecord
@@ -143,8 +171,12 @@ var ff gopurs_runtime.Value
 var once_ff sync.Once
 func Get_ff() gopurs_runtime.Value {
 	once_ff.Do(func() {
-		ff = gopurs_runtime.Func(func(dict_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(dict_0, "ff")
+		ff = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0_loop, "ff")
+}()
 })
 	})
 	return ff
@@ -154,8 +186,12 @@ var disjRecord gopurs_runtime.Value
 var once_disjRecord sync.Once
 func Get_disjRecord() gopurs_runtime.Value {
 	once_disjRecord.Do(func() {
-		disjRecord = gopurs_runtime.Func(func(dict_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(dict_0, "disjRecord")
+		disjRecord = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0_loop, "disjRecord")
+}()
 })
 	})
 	return disjRecord
@@ -165,8 +201,12 @@ var disj gopurs_runtime.Value
 var once_disj sync.Once
 func Get_disj() gopurs_runtime.Value {
 	once_disj.Do(func() {
-		disj = gopurs_runtime.Func(func(dict_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(dict_0, "disj")
+		disj = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0_loop, "disj")
+}()
 })
 	})
 	return disj

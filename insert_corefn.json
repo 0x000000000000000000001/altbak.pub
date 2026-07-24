@@ -1,0 +1,2343 @@
+{
+  "annotation": {
+    "meta": null,
+    "sourceSpan": {
+      "end": [
+        22,
+        30
+      ],
+      "start": [
+        22,
+        1
+      ]
+    },
+    "type": null
+  },
+  "bindType": "NonRec",
+  "expression": {
+    "annotation": {
+      "meta": null,
+      "sourceSpan": {
+        "end": [
+          22,
+          30
+        ],
+        "start": [
+          22,
+          1
+        ]
+      },
+      "type": {
+        "Func": {
+          "args": [
+            "Int",
+            "Any"
+          ],
+          "ret": "Any"
+        }
+      }
+    },
+    "argument": "x",
+    "body": {
+      "annotation": {
+        "meta": null,
+        "sourceSpan": {
+          "end": [
+            22,
+            30
+          ],
+          "start": [
+            22,
+            1
+          ]
+        },
+        "type": {
+          "Func": {
+            "args": [
+              "Any"
+            ],
+            "ret": "Any"
+          }
+        }
+      },
+      "argument": "s",
+      "body": {
+        "annotation": {
+          "meta": {
+            "metaType": "IsWhere"
+          },
+          "sourceSpan": {
+            "end": [
+              23,
+              31
+            ],
+            "start": [
+              23,
+              14
+            ]
+          },
+          "type": "Any"
+        },
+        "binds": [
+          {
+            "annotation": {
+              "meta": null,
+              "sourceSpan": {
+                "end": [
+                  31,
+                  36
+                ],
+                "start": [
+                  31,
+                  3
+                ]
+              },
+              "type": null
+            },
+            "bindType": "NonRec",
+            "expression": {
+              "annotation": {
+                "meta": null,
+                "sourceSpan": {
+                  "end": [
+                    31,
+                    36
+                  ],
+                  "start": [
+                    31,
+                    3
+                  ]
+                },
+                "type": null
+              },
+              "argument": "v",
+              "body": {
+                "annotation": {
+                  "meta": null,
+                  "sourceSpan": {
+                    "end": [
+                      31,
+                      36
+                    ],
+                    "start": [
+                      31,
+                      3
+                    ]
+                  },
+                  "type": "Any"
+                },
+                "caseAlternatives": [
+                  {
+                    "binders": [
+                      {
+                        "annotation": {
+                          "meta": {
+                            "constructorType": "SumType",
+                            "identifiers": [
+                              "value0",
+                              "value1",
+                              "value2",
+                              "value3"
+                            ],
+                            "metaType": "IsConstructor"
+                          },
+                          "sourceSpan": {
+                            "end": [
+                              31,
+                              23
+                            ],
+                            "start": [
+                              31,
+                              14
+                            ]
+                          },
+                          "type": null
+                        },
+                        "binderType": "ConstructorBinder",
+                        "binders": [
+                          {
+                            "annotation": {
+                              "meta": null,
+                              "sourceSpan": {
+                                "end": [
+                                  31,
+                                  17
+                                ],
+                                "start": [
+                                  31,
+                                  16
+                                ]
+                              },
+                              "type": null
+                            },
+                            "binderType": "NullBinder"
+                          },
+                          {
+                            "annotation": {
+                              "meta": null,
+                              "sourceSpan": {
+                                "end": [
+                                  31,
+                                  19
+                                ],
+                                "start": [
+                                  31,
+                                  18
+                                ]
+                              },
+                              "type": null
+                            },
+                            "binderType": "VarBinder",
+                            "identifier": "a"
+                          },
+                          {
+                            "annotation": {
+                              "meta": null,
+                              "sourceSpan": {
+                                "end": [
+                                  31,
+                                  21
+                                ],
+                                "start": [
+                                  31,
+                                  20
+                                ]
+                              },
+                              "type": null
+                            },
+                            "binderType": "VarBinder",
+                            "identifier": "y"
+                          },
+                          {
+                            "annotation": {
+                              "meta": null,
+                              "sourceSpan": {
+                                "end": [
+                                  31,
+                                  23
+                                ],
+                                "start": [
+                                  31,
+                                  22
+                                ]
+                              },
+                              "type": null
+                            },
+                            "binderType": "VarBinder",
+                            "identifier": "b"
+                          }
+                        ],
+                        "constructorName": {
+                          "identifier": "T",
+                          "moduleName": [
+                            "Test",
+                            "RBTree"
+                          ]
+                        },
+                        "typeName": {
+                          "identifier": "Tree",
+                          "moduleName": [
+                            "Test",
+                            "RBTree"
+                          ]
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "abstraction": {
+                        "abstraction": {
+                          "abstraction": {
+                            "abstraction": {
+                              "annotation": {
+                                "meta": {
+                                  "constructorType": "SumType",
+                                  "identifiers": [
+                                    "value0",
+                                    "value1",
+                                    "value2",
+                                    "value3"
+                                  ],
+                                  "metaType": "IsConstructor"
+                                },
+                                "sourceSpan": {
+                                  "end": [
+                                    31,
+                                    28
+                                  ],
+                                  "start": [
+                                    31,
+                                    27
+                                  ]
+                                },
+                                "type": {
+                                  "Func": {
+                                    "args": [
+                                      "Any",
+                                      "Any",
+                                      "Int",
+                                      "Any"
+                                    ],
+                                    "ret": "Any"
+                                  }
+                                }
+                              },
+                              "type": "Var",
+                              "value": {
+                                "identifier": "T",
+                                "moduleName": [
+                                  "Test",
+                                  "RBTree"
+                                ]
+                              }
+                            },
+                            "annotation": {
+                              "meta": null,
+                              "sourceSpan": {
+                                "end": [
+                                  31,
+                                  30
+                                ],
+                                "start": [
+                                  31,
+                                  27
+                                ]
+                              },
+                              "type": {
+                                "Func": {
+                                  "args": [
+                                    "Any",
+                                    "Int",
+                                    "Any"
+                                  ],
+                                  "ret": "Any"
+                                }
+                              }
+                            },
+                            "argument": {
+                              "annotation": {
+                                "meta": {
+                                  "constructorType": "SumType",
+                                  "identifiers": [],
+                                  "metaType": "IsConstructor"
+                                },
+                                "sourceSpan": {
+                                  "end": [
+                                    31,
+                                    30
+                                  ],
+                                  "start": [
+                                    31,
+                                    29
+                                  ]
+                                },
+                                "type": "Any"
+                              },
+                              "type": "Var",
+                              "value": {
+                                "identifier": "B",
+                                "moduleName": [
+                                  "Test",
+                                  "RBTree"
+                                ]
+                              }
+                            },
+                            "type": "App"
+                          },
+                          "annotation": {
+                            "meta": null,
+                            "sourceSpan": {
+                              "end": [
+                                31,
+                                32
+                              ],
+                              "start": [
+                                31,
+                                27
+                              ]
+                            },
+                            "type": {
+                              "Func": {
+                                "args": [
+                                  "Int",
+                                  "Any"
+                                ],
+                                "ret": "Any"
+                              }
+                            }
+                          },
+                          "argument": {
+                            "annotation": {
+                              "meta": null,
+                              "sourceSpan": {
+                                "end": [
+                                  31,
+                                  32
+                                ],
+                                "start": [
+                                  31,
+                                  31
+                                ]
+                              },
+                              "type": "Any"
+                            },
+                            "type": "Var",
+                            "value": {
+                              "identifier": "a",
+                              "sourcePos": [
+                                31,
+                                18
+                              ]
+                            }
+                          },
+                          "type": "App"
+                        },
+                        "annotation": {
+                          "meta": null,
+                          "sourceSpan": {
+                            "end": [
+                              31,
+                              34
+                            ],
+                            "start": [
+                              31,
+                              27
+                            ]
+                          },
+                          "type": {
+                            "Func": {
+                              "args": [
+                                "Any"
+                              ],
+                              "ret": "Any"
+                            }
+                          }
+                        },
+                        "argument": {
+                          "annotation": {
+                            "meta": null,
+                            "sourceSpan": {
+                              "end": [
+                                31,
+                                34
+                              ],
+                              "start": [
+                                31,
+                                33
+                              ]
+                            },
+                            "type": "Int"
+                          },
+                          "type": "Var",
+                          "value": {
+                            "identifier": "y",
+                            "sourcePos": [
+                              31,
+                              20
+                            ]
+                          }
+                        },
+                        "type": "App"
+                      },
+                      "annotation": {
+                        "meta": null,
+                        "sourceSpan": {
+                          "end": [
+                            31,
+                            36
+                          ],
+                          "start": [
+                            31,
+                            27
+                          ]
+                        },
+                        "type": "Any"
+                      },
+                      "argument": {
+                        "annotation": {
+                          "meta": null,
+                          "sourceSpan": {
+                            "end": [
+                              31,
+                              36
+                            ],
+                            "start": [
+                              31,
+                              35
+                            ]
+                          },
+                          "type": "Any"
+                        },
+                        "type": "Var",
+                        "value": {
+                          "identifier": "b",
+                          "sourcePos": [
+                            31,
+                            22
+                          ]
+                        }
+                      },
+                      "type": "App"
+                    },
+                    "isGuarded": false
+                  },
+                  {
+                    "binders": [
+                      {
+                        "annotation": {
+                          "meta": {
+                            "constructorType": "SumType",
+                            "identifiers": [],
+                            "metaType": "IsConstructor"
+                          },
+                          "sourceSpan": {
+                            "end": [
+                              32,
+                              14
+                            ],
+                            "start": [
+                              32,
+                              13
+                            ]
+                          },
+                          "type": null
+                        },
+                        "binderType": "ConstructorBinder",
+                        "binders": [],
+                        "constructorName": {
+                          "identifier": "E",
+                          "moduleName": [
+                            "Test",
+                            "RBTree"
+                          ]
+                        },
+                        "typeName": {
+                          "identifier": "Tree",
+                          "moduleName": [
+                            "Test",
+                            "RBTree"
+                          ]
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "annotation": {
+                        "meta": {
+                          "constructorType": "SumType",
+                          "identifiers": [],
+                          "metaType": "IsConstructor"
+                        },
+                        "sourceSpan": {
+                          "end": [
+                            32,
+                            18
+                          ],
+                          "start": [
+                            32,
+                            17
+                          ]
+                        },
+                        "type": "Any"
+                      },
+                      "type": "Var",
+                      "value": {
+                        "identifier": "E",
+                        "moduleName": [
+                          "Test",
+                          "RBTree"
+                        ]
+                      }
+                    },
+                    "isGuarded": false
+                  }
+                ],
+                "caseExpressions": [
+                  {
+                    "annotation": {
+                      "meta": null,
+                      "sourceSpan": {
+                        "end": [
+                          31,
+                          36
+                        ],
+                        "start": [
+                          31,
+                          3
+                        ]
+                      },
+                      "type": null
+                    },
+                    "type": "Var",
+                    "value": {
+                      "identifier": "v",
+                      "sourcePos": [
+                        0,
+                        0
+                      ]
+                    }
+                  }
+                ],
+                "type": "Case"
+              },
+              "type": "Abs"
+            },
+            "identifier": "makeBlack"
+          },
+          {
+            "bindType": "Rec",
+            "binds": [
+              {
+                "annotation": {
+                  "meta": null,
+                  "sourceSpan": {
+                    "end": [
+                      25,
+                      20
+                    ],
+                    "start": [
+                      25,
+                      3
+                    ]
+                  },
+                  "type": null
+                },
+                "expression": {
+                  "annotation": {
+                    "meta": null,
+                    "sourceSpan": {
+                      "end": [
+                        25,
+                        20
+                      ],
+                      "start": [
+                        25,
+                        3
+                      ]
+                    },
+                    "type": {
+                      "Func": {
+                        "args": [
+                          "Any"
+                        ],
+                        "ret": "Any"
+                      }
+                    }
+                  },
+                  "argument": "v",
+                  "body": {
+                    "annotation": {
+                      "meta": null,
+                      "sourceSpan": {
+                        "end": [
+                          25,
+                          20
+                        ],
+                        "start": [
+                          25,
+                          3
+                        ]
+                      },
+                      "type": "Any"
+                    },
+                    "caseAlternatives": [
+                      {
+                        "binders": [
+                          {
+                            "annotation": {
+                              "meta": {
+                                "constructorType": "SumType",
+                                "identifiers": [],
+                                "metaType": "IsConstructor"
+                              },
+                              "sourceSpan": {
+                                "end": [
+                                  25,
+                                  8
+                                ],
+                                "start": [
+                                  25,
+                                  7
+                                ]
+                              },
+                              "type": null
+                            },
+                            "binderType": "ConstructorBinder",
+                            "binders": [],
+                            "constructorName": {
+                              "identifier": "E",
+                              "moduleName": [
+                                "Test",
+                                "RBTree"
+                              ]
+                            },
+                            "typeName": {
+                              "identifier": "Tree",
+                              "moduleName": [
+                                "Test",
+                                "RBTree"
+                              ]
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "abstraction": {
+                            "abstraction": {
+                              "abstraction": {
+                                "abstraction": {
+                                  "annotation": {
+                                    "meta": {
+                                      "constructorType": "SumType",
+                                      "identifiers": [
+                                        "value0",
+                                        "value1",
+                                        "value2",
+                                        "value3"
+                                      ],
+                                      "metaType": "IsConstructor"
+                                    },
+                                    "sourceSpan": {
+                                      "end": [
+                                        25,
+                                        12
+                                      ],
+                                      "start": [
+                                        25,
+                                        11
+                                      ]
+                                    },
+                                    "type": {
+                                      "Func": {
+                                        "args": [
+                                          "Any",
+                                          "Any",
+                                          "Int",
+                                          "Any"
+                                        ],
+                                        "ret": "Any"
+                                      }
+                                    }
+                                  },
+                                  "type": "Var",
+                                  "value": {
+                                    "identifier": "T",
+                                    "moduleName": [
+                                      "Test",
+                                      "RBTree"
+                                    ]
+                                  }
+                                },
+                                "annotation": {
+                                  "meta": null,
+                                  "sourceSpan": {
+                                    "end": [
+                                      25,
+                                      14
+                                    ],
+                                    "start": [
+                                      25,
+                                      11
+                                    ]
+                                  },
+                                  "type": {
+                                    "Func": {
+                                      "args": [
+                                        "Any",
+                                        "Int",
+                                        "Any"
+                                      ],
+                                      "ret": "Any"
+                                    }
+                                  }
+                                },
+                                "argument": {
+                                  "annotation": {
+                                    "meta": {
+                                      "constructorType": "SumType",
+                                      "identifiers": [],
+                                      "metaType": "IsConstructor"
+                                    },
+                                    "sourceSpan": {
+                                      "end": [
+                                        25,
+                                        14
+                                      ],
+                                      "start": [
+                                        25,
+                                        13
+                                      ]
+                                    },
+                                    "type": "Any"
+                                  },
+                                  "type": "Var",
+                                  "value": {
+                                    "identifier": "R",
+                                    "moduleName": [
+                                      "Test",
+                                      "RBTree"
+                                    ]
+                                  }
+                                },
+                                "type": "App"
+                              },
+                              "annotation": {
+                                "meta": null,
+                                "sourceSpan": {
+                                  "end": [
+                                    25,
+                                    16
+                                  ],
+                                  "start": [
+                                    25,
+                                    11
+                                  ]
+                                },
+                                "type": {
+                                  "Func": {
+                                    "args": [
+                                      "Int",
+                                      "Any"
+                                    ],
+                                    "ret": "Any"
+                                  }
+                                }
+                              },
+                              "argument": {
+                                "annotation": {
+                                  "meta": {
+                                    "constructorType": "SumType",
+                                    "identifiers": [],
+                                    "metaType": "IsConstructor"
+                                  },
+                                  "sourceSpan": {
+                                    "end": [
+                                      25,
+                                      16
+                                    ],
+                                    "start": [
+                                      25,
+                                      15
+                                    ]
+                                  },
+                                  "type": "Any"
+                                },
+                                "type": "Var",
+                                "value": {
+                                  "identifier": "E",
+                                  "moduleName": [
+                                    "Test",
+                                    "RBTree"
+                                  ]
+                                }
+                              },
+                              "type": "App"
+                            },
+                            "annotation": {
+                              "meta": null,
+                              "sourceSpan": {
+                                "end": [
+                                  25,
+                                  18
+                                ],
+                                "start": [
+                                  25,
+                                  11
+                                ]
+                              },
+                              "type": {
+                                "Func": {
+                                  "args": [
+                                    "Any"
+                                  ],
+                                  "ret": "Any"
+                                }
+                              }
+                            },
+                            "argument": {
+                              "annotation": {
+                                "meta": null,
+                                "sourceSpan": {
+                                  "end": [
+                                    25,
+                                    18
+                                  ],
+                                  "start": [
+                                    25,
+                                    17
+                                  ]
+                                },
+                                "type": "Int"
+                              },
+                              "type": "Var",
+                              "value": {
+                                "identifier": "x",
+                                "sourcePos": [
+                                  23,
+                                  1
+                                ]
+                              }
+                            },
+                            "type": "App"
+                          },
+                          "annotation": {
+                            "meta": null,
+                            "sourceSpan": {
+                              "end": [
+                                25,
+                                20
+                              ],
+                              "start": [
+                                25,
+                                11
+                              ]
+                            },
+                            "type": "Any"
+                          },
+                          "argument": {
+                            "annotation": {
+                              "meta": {
+                                "constructorType": "SumType",
+                                "identifiers": [],
+                                "metaType": "IsConstructor"
+                              },
+                              "sourceSpan": {
+                                "end": [
+                                  25,
+                                  20
+                                ],
+                                "start": [
+                                  25,
+                                  19
+                                ]
+                              },
+                              "type": "Any"
+                            },
+                            "type": "Var",
+                            "value": {
+                              "identifier": "E",
+                              "moduleName": [
+                                "Test",
+                                "RBTree"
+                              ]
+                            }
+                          },
+                          "type": "App"
+                        },
+                        "isGuarded": false
+                      },
+                      {
+                        "binders": [
+                          {
+                            "annotation": {
+                              "meta": {
+                                "constructorType": "SumType",
+                                "identifiers": [
+                                  "value0",
+                                  "value1",
+                                  "value2",
+                                  "value3"
+                                ],
+                                "metaType": "IsConstructor"
+                              },
+                              "sourceSpan": {
+                                "end": [
+                                  26,
+                                  21
+                                ],
+                                "start": [
+                                  26,
+                                  8
+                                ]
+                              },
+                              "type": null
+                            },
+                            "binderType": "ConstructorBinder",
+                            "binders": [
+                              {
+                                "annotation": {
+                                  "meta": null,
+                                  "sourceSpan": {
+                                    "end": [
+                                      26,
+                                      15
+                                    ],
+                                    "start": [
+                                      26,
+                                      10
+                                    ]
+                                  },
+                                  "type": null
+                                },
+                                "binderType": "VarBinder",
+                                "identifier": "color"
+                              },
+                              {
+                                "annotation": {
+                                  "meta": null,
+                                  "sourceSpan": {
+                                    "end": [
+                                      26,
+                                      17
+                                    ],
+                                    "start": [
+                                      26,
+                                      16
+                                    ]
+                                  },
+                                  "type": null
+                                },
+                                "binderType": "VarBinder",
+                                "identifier": "a"
+                              },
+                              {
+                                "annotation": {
+                                  "meta": null,
+                                  "sourceSpan": {
+                                    "end": [
+                                      26,
+                                      19
+                                    ],
+                                    "start": [
+                                      26,
+                                      18
+                                    ]
+                                  },
+                                  "type": null
+                                },
+                                "binderType": "VarBinder",
+                                "identifier": "y"
+                              },
+                              {
+                                "annotation": {
+                                  "meta": null,
+                                  "sourceSpan": {
+                                    "end": [
+                                      26,
+                                      21
+                                    ],
+                                    "start": [
+                                      26,
+                                      20
+                                    ]
+                                  },
+                                  "type": null
+                                },
+                                "binderType": "VarBinder",
+                                "identifier": "b"
+                              }
+                            ],
+                            "constructorName": {
+                              "identifier": "T",
+                              "moduleName": [
+                                "Test",
+                                "RBTree"
+                              ]
+                            },
+                            "typeName": {
+                              "identifier": "Tree",
+                              "moduleName": [
+                                "Test",
+                                "RBTree"
+                              ]
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "annotation": {
+                            "meta": null,
+                            "sourceSpan": {
+                              "end": [
+                                29,
+                                23
+                              ],
+                              "start": [
+                                27,
+                                5
+                              ]
+                            },
+                            "type": "Any"
+                          },
+                          "caseAlternatives": [
+                            {
+                              "binders": [
+                                {
+                                  "annotation": {
+                                    "meta": null,
+                                    "sourceSpan": {
+                                      "end": [
+                                        29,
+                                        23
+                                      ],
+                                      "start": [
+                                        27,
+                                        5
+                                      ]
+                                    },
+                                    "type": null
+                                  },
+                                  "binderType": "LiteralBinder",
+                                  "literal": {
+                                    "literalType": "BooleanLiteral",
+                                    "value": true
+                                  }
+                                }
+                              ],
+                              "expression": {
+                                "abstraction": {
+                                  "abstraction": {
+                                    "abstraction": {
+                                      "abstraction": {
+                                        "annotation": {
+                                          "meta": null,
+                                          "sourceSpan": {
+                                            "end": [
+                                              27,
+                                              26
+                                            ],
+                                            "start": [
+                                              27,
+                                              19
+                                            ]
+                                          },
+                                          "type": {
+                                            "Func": {
+                                              "args": [
+                                                "Any",
+                                                "Any",
+                                                "Int",
+                                                "Any"
+                                              ],
+                                              "ret": "Any"
+                                            }
+                                          }
+                                        },
+                                        "type": "Var",
+                                        "value": {
+                                          "identifier": "balance",
+                                          "moduleName": [
+                                            "Test",
+                                            "RBTree"
+                                          ]
+                                        }
+                                      },
+                                      "annotation": {
+                                        "meta": null,
+                                        "sourceSpan": {
+                                          "end": [
+                                            27,
+                                            32
+                                          ],
+                                          "start": [
+                                            27,
+                                            19
+                                          ]
+                                        },
+                                        "type": {
+                                          "Func": {
+                                            "args": [
+                                              "Any",
+                                              "Int",
+                                              "Any"
+                                            ],
+                                            "ret": "Any"
+                                          }
+                                        }
+                                      },
+                                      "argument": {
+                                        "annotation": {
+                                          "meta": null,
+                                          "sourceSpan": {
+                                            "end": [
+                                              27,
+                                              32
+                                            ],
+                                            "start": [
+                                              27,
+                                              27
+                                            ]
+                                          },
+                                          "type": "Any"
+                                        },
+                                        "type": "Var",
+                                        "value": {
+                                          "identifier": "color",
+                                          "sourcePos": [
+                                            26,
+                                            10
+                                          ]
+                                        }
+                                      },
+                                      "type": "App"
+                                    },
+                                    "annotation": {
+                                      "meta": null,
+                                      "sourceSpan": {
+                                        "end": [
+                                          27,
+                                          40
+                                        ],
+                                        "start": [
+                                          27,
+                                          19
+                                        ]
+                                      },
+                                      "type": {
+                                        "Func": {
+                                          "args": [
+                                            "Int",
+                                            "Any"
+                                          ],
+                                          "ret": "Any"
+                                        }
+                                      }
+                                    },
+                                    "argument": {
+                                      "abstraction": {
+                                        "annotation": {
+                                          "meta": null,
+                                          "sourceSpan": {
+                                            "end": [
+                                              27,
+                                              37
+                                            ],
+                                            "start": [
+                                              27,
+                                              34
+                                            ]
+                                          },
+                                          "type": {
+                                            "Func": {
+                                              "args": [
+                                                "Any"
+                                              ],
+                                              "ret": "Any"
+                                            }
+                                          }
+                                        },
+                                        "type": "Var",
+                                        "value": {
+                                          "identifier": "ins",
+                                          "sourcePos": [
+                                            25,
+                                            3
+                                          ]
+                                        }
+                                      },
+                                      "annotation": {
+                                        "meta": null,
+                                        "sourceSpan": {
+                                          "end": [
+                                            27,
+                                            39
+                                          ],
+                                          "start": [
+                                            27,
+                                            34
+                                          ]
+                                        },
+                                        "type": "Any"
+                                      },
+                                      "argument": {
+                                        "annotation": {
+                                          "meta": null,
+                                          "sourceSpan": {
+                                            "end": [
+                                              27,
+                                              39
+                                            ],
+                                            "start": [
+                                              27,
+                                              38
+                                            ]
+                                          },
+                                          "type": "Any"
+                                        },
+                                        "type": "Var",
+                                        "value": {
+                                          "identifier": "a",
+                                          "sourcePos": [
+                                            26,
+                                            16
+                                          ]
+                                        }
+                                      },
+                                      "type": "App"
+                                    },
+                                    "type": "App"
+                                  },
+                                  "annotation": {
+                                    "meta": null,
+                                    "sourceSpan": {
+                                      "end": [
+                                        27,
+                                        42
+                                      ],
+                                      "start": [
+                                        27,
+                                        19
+                                      ]
+                                    },
+                                    "type": {
+                                      "Func": {
+                                        "args": [
+                                          "Any"
+                                        ],
+                                        "ret": "Any"
+                                      }
+                                    }
+                                  },
+                                  "argument": {
+                                    "annotation": {
+                                      "meta": null,
+                                      "sourceSpan": {
+                                        "end": [
+                                          27,
+                                          42
+                                        ],
+                                        "start": [
+                                          27,
+                                          41
+                                        ]
+                                      },
+                                      "type": "Int"
+                                    },
+                                    "type": "Var",
+                                    "value": {
+                                      "identifier": "y",
+                                      "sourcePos": [
+                                        26,
+                                        18
+                                      ]
+                                    }
+                                  },
+                                  "type": "App"
+                                },
+                                "annotation": {
+                                  "meta": null,
+                                  "sourceSpan": {
+                                    "end": [
+                                      27,
+                                      44
+                                    ],
+                                    "start": [
+                                      27,
+                                      19
+                                    ]
+                                  },
+                                  "type": "Any"
+                                },
+                                "argument": {
+                                  "annotation": {
+                                    "meta": null,
+                                    "sourceSpan": {
+                                      "end": [
+                                        27,
+                                        44
+                                      ],
+                                      "start": [
+                                        27,
+                                        43
+                                      ]
+                                    },
+                                    "type": "Any"
+                                  },
+                                  "type": "Var",
+                                  "value": {
+                                    "identifier": "b",
+                                    "sourcePos": [
+                                      26,
+                                      20
+                                    ]
+                                  }
+                                },
+                                "type": "App"
+                              },
+                              "isGuarded": false
+                            },
+                            {
+                              "binders": [
+                                {
+                                  "annotation": {
+                                    "meta": null,
+                                    "sourceSpan": {
+                                      "end": [
+                                        29,
+                                        23
+                                      ],
+                                      "start": [
+                                        27,
+                                        5
+                                      ]
+                                    },
+                                    "type": null
+                                  },
+                                  "binderType": "NullBinder"
+                                }
+                              ],
+                              "expression": {
+                                "annotation": {
+                                  "meta": null,
+                                  "sourceSpan": {
+                                    "end": [
+                                      29,
+                                      23
+                                    ],
+                                    "start": [
+                                      28,
+                                      10
+                                    ]
+                                  },
+                                  "type": "Any"
+                                },
+                                "caseAlternatives": [
+                                  {
+                                    "binders": [
+                                      {
+                                        "annotation": {
+                                          "meta": null,
+                                          "sourceSpan": {
+                                            "end": [
+                                              29,
+                                              23
+                                            ],
+                                            "start": [
+                                              28,
+                                              10
+                                            ]
+                                          },
+                                          "type": null
+                                        },
+                                        "binderType": "LiteralBinder",
+                                        "literal": {
+                                          "literalType": "BooleanLiteral",
+                                          "value": true
+                                        }
+                                      }
+                                    ],
+                                    "expression": {
+                                      "abstraction": {
+                                        "abstraction": {
+                                          "abstraction": {
+                                            "abstraction": {
+                                              "annotation": {
+                                                "meta": null,
+                                                "sourceSpan": {
+                                                  "end": [
+                                                    28,
+                                                    31
+                                                  ],
+                                                  "start": [
+                                                    28,
+                                                    24
+                                                  ]
+                                                },
+                                                "type": {
+                                                  "Func": {
+                                                    "args": [
+                                                      "Any",
+                                                      "Any",
+                                                      "Int",
+                                                      "Any"
+                                                    ],
+                                                    "ret": "Any"
+                                                  }
+                                                }
+                                              },
+                                              "type": "Var",
+                                              "value": {
+                                                "identifier": "balance",
+                                                "moduleName": [
+                                                  "Test",
+                                                  "RBTree"
+                                                ]
+                                              }
+                                            },
+                                            "annotation": {
+                                              "meta": null,
+                                              "sourceSpan": {
+                                                "end": [
+                                                  28,
+                                                  37
+                                                ],
+                                                "start": [
+                                                  28,
+                                                  24
+                                                ]
+                                              },
+                                              "type": {
+                                                "Func": {
+                                                  "args": [
+                                                    "Any",
+                                                    "Int",
+                                                    "Any"
+                                                  ],
+                                                  "ret": "Any"
+                                                }
+                                              }
+                                            },
+                                            "argument": {
+                                              "annotation": {
+                                                "meta": null,
+                                                "sourceSpan": {
+                                                  "end": [
+                                                    28,
+                                                    37
+                                                  ],
+                                                  "start": [
+                                                    28,
+                                                    32
+                                                  ]
+                                                },
+                                                "type": "Any"
+                                              },
+                                              "type": "Var",
+                                              "value": {
+                                                "identifier": "color",
+                                                "sourcePos": [
+                                                  26,
+                                                  10
+                                                ]
+                                              }
+                                            },
+                                            "type": "App"
+                                          },
+                                          "annotation": {
+                                            "meta": null,
+                                            "sourceSpan": {
+                                              "end": [
+                                                28,
+                                                39
+                                              ],
+                                              "start": [
+                                                28,
+                                                24
+                                              ]
+                                            },
+                                            "type": {
+                                              "Func": {
+                                                "args": [
+                                                  "Int",
+                                                  "Any"
+                                                ],
+                                                "ret": "Any"
+                                              }
+                                            }
+                                          },
+                                          "argument": {
+                                            "annotation": {
+                                              "meta": null,
+                                              "sourceSpan": {
+                                                "end": [
+                                                  28,
+                                                  39
+                                                ],
+                                                "start": [
+                                                  28,
+                                                  38
+                                                ]
+                                              },
+                                              "type": "Any"
+                                            },
+                                            "type": "Var",
+                                            "value": {
+                                              "identifier": "a",
+                                              "sourcePos": [
+                                                26,
+                                                16
+                                              ]
+                                            }
+                                          },
+                                          "type": "App"
+                                        },
+                                        "annotation": {
+                                          "meta": null,
+                                          "sourceSpan": {
+                                            "end": [
+                                              28,
+                                              41
+                                            ],
+                                            "start": [
+                                              28,
+                                              24
+                                            ]
+                                          },
+                                          "type": {
+                                            "Func": {
+                                              "args": [
+                                                "Any"
+                                              ],
+                                              "ret": "Any"
+                                            }
+                                          }
+                                        },
+                                        "argument": {
+                                          "annotation": {
+                                            "meta": null,
+                                            "sourceSpan": {
+                                              "end": [
+                                                28,
+                                                41
+                                              ],
+                                              "start": [
+                                                28,
+                                                40
+                                              ]
+                                            },
+                                            "type": "Int"
+                                          },
+                                          "type": "Var",
+                                          "value": {
+                                            "identifier": "y",
+                                            "sourcePos": [
+                                              26,
+                                              18
+                                            ]
+                                          }
+                                        },
+                                        "type": "App"
+                                      },
+                                      "annotation": {
+                                        "meta": null,
+                                        "sourceSpan": {
+                                          "end": [
+                                            28,
+                                            49
+                                          ],
+                                          "start": [
+                                            28,
+                                            24
+                                          ]
+                                        },
+                                        "type": "Any"
+                                      },
+                                      "argument": {
+                                        "abstraction": {
+                                          "annotation": {
+                                            "meta": null,
+                                            "sourceSpan": {
+                                              "end": [
+                                                28,
+                                                46
+                                              ],
+                                              "start": [
+                                                28,
+                                                43
+                                              ]
+                                            },
+                                            "type": {
+                                              "Func": {
+                                                "args": [
+                                                  "Any"
+                                                ],
+                                                "ret": "Any"
+                                              }
+                                            }
+                                          },
+                                          "type": "Var",
+                                          "value": {
+                                            "identifier": "ins",
+                                            "sourcePos": [
+                                              25,
+                                              3
+                                            ]
+                                          }
+                                        },
+                                        "annotation": {
+                                          "meta": null,
+                                          "sourceSpan": {
+                                            "end": [
+                                              28,
+                                              48
+                                            ],
+                                            "start": [
+                                              28,
+                                              43
+                                            ]
+                                          },
+                                          "type": "Any"
+                                        },
+                                        "argument": {
+                                          "annotation": {
+                                            "meta": null,
+                                            "sourceSpan": {
+                                              "end": [
+                                                28,
+                                                48
+                                              ],
+                                              "start": [
+                                                28,
+                                                47
+                                              ]
+                                            },
+                                            "type": "Any"
+                                          },
+                                          "type": "Var",
+                                          "value": {
+                                            "identifier": "b",
+                                            "sourcePos": [
+                                              26,
+                                              20
+                                            ]
+                                          }
+                                        },
+                                        "type": "App"
+                                      },
+                                      "type": "App"
+                                    },
+                                    "isGuarded": false
+                                  },
+                                  {
+                                    "binders": [
+                                      {
+                                        "annotation": {
+                                          "meta": null,
+                                          "sourceSpan": {
+                                            "end": [
+                                              29,
+                                              23
+                                            ],
+                                            "start": [
+                                              28,
+                                              10
+                                            ]
+                                          },
+                                          "type": null
+                                        },
+                                        "binderType": "NullBinder"
+                                      }
+                                    ],
+                                    "expression": {
+                                      "abstraction": {
+                                        "abstraction": {
+                                          "abstraction": {
+                                            "abstraction": {
+                                              "annotation": {
+                                                "meta": {
+                                                  "constructorType": "SumType",
+                                                  "identifiers": [
+                                                    "value0",
+                                                    "value1",
+                                                    "value2",
+                                                    "value3"
+                                                  ],
+                                                  "metaType": "IsConstructor"
+                                                },
+                                                "sourceSpan": {
+                                                  "end": [
+                                                    29,
+                                                    11
+                                                  ],
+                                                  "start": [
+                                                    29,
+                                                    10
+                                                  ]
+                                                },
+                                                "type": {
+                                                  "Func": {
+                                                    "args": [
+                                                      "Any",
+                                                      "Any",
+                                                      "Int",
+                                                      "Any"
+                                                    ],
+                                                    "ret": "Any"
+                                                  }
+                                                }
+                                              },
+                                              "type": "Var",
+                                              "value": {
+                                                "identifier": "T",
+                                                "moduleName": [
+                                                  "Test",
+                                                  "RBTree"
+                                                ]
+                                              }
+                                            },
+                                            "annotation": {
+                                              "meta": null,
+                                              "sourceSpan": {
+                                                "end": [
+                                                  29,
+                                                  17
+                                                ],
+                                                "start": [
+                                                  29,
+                                                  10
+                                                ]
+                                              },
+                                              "type": {
+                                                "Func": {
+                                                  "args": [
+                                                    "Any",
+                                                    "Int",
+                                                    "Any"
+                                                  ],
+                                                  "ret": "Any"
+                                                }
+                                              }
+                                            },
+                                            "argument": {
+                                              "annotation": {
+                                                "meta": null,
+                                                "sourceSpan": {
+                                                  "end": [
+                                                    29,
+                                                    17
+                                                  ],
+                                                  "start": [
+                                                    29,
+                                                    12
+                                                  ]
+                                                },
+                                                "type": "Any"
+                                              },
+                                              "type": "Var",
+                                              "value": {
+                                                "identifier": "color",
+                                                "sourcePos": [
+                                                  26,
+                                                  10
+                                                ]
+                                              }
+                                            },
+                                            "type": "App"
+                                          },
+                                          "annotation": {
+                                            "meta": null,
+                                            "sourceSpan": {
+                                              "end": [
+                                                29,
+                                                19
+                                              ],
+                                              "start": [
+                                                29,
+                                                10
+                                              ]
+                                            },
+                                            "type": {
+                                              "Func": {
+                                                "args": [
+                                                  "Int",
+                                                  "Any"
+                                                ],
+                                                "ret": "Any"
+                                              }
+                                            }
+                                          },
+                                          "argument": {
+                                            "annotation": {
+                                              "meta": null,
+                                              "sourceSpan": {
+                                                "end": [
+                                                  29,
+                                                  19
+                                                ],
+                                                "start": [
+                                                  29,
+                                                  18
+                                                ]
+                                              },
+                                              "type": "Any"
+                                            },
+                                            "type": "Var",
+                                            "value": {
+                                              "identifier": "a",
+                                              "sourcePos": [
+                                                26,
+                                                16
+                                              ]
+                                            }
+                                          },
+                                          "type": "App"
+                                        },
+                                        "annotation": {
+                                          "meta": null,
+                                          "sourceSpan": {
+                                            "end": [
+                                              29,
+                                              21
+                                            ],
+                                            "start": [
+                                              29,
+                                              10
+                                            ]
+                                          },
+                                          "type": {
+                                            "Func": {
+                                              "args": [
+                                                "Any"
+                                              ],
+                                              "ret": "Any"
+                                            }
+                                          }
+                                        },
+                                        "argument": {
+                                          "annotation": {
+                                            "meta": null,
+                                            "sourceSpan": {
+                                              "end": [
+                                                29,
+                                                21
+                                              ],
+                                              "start": [
+                                                29,
+                                                20
+                                              ]
+                                            },
+                                            "type": "Int"
+                                          },
+                                          "type": "Var",
+                                          "value": {
+                                            "identifier": "y",
+                                            "sourcePos": [
+                                              26,
+                                              18
+                                            ]
+                                          }
+                                        },
+                                        "type": "App"
+                                      },
+                                      "annotation": {
+                                        "meta": null,
+                                        "sourceSpan": {
+                                          "end": [
+                                            29,
+                                            23
+                                          ],
+                                          "start": [
+                                            29,
+                                            10
+                                          ]
+                                        },
+                                        "type": "Any"
+                                      },
+                                      "argument": {
+                                        "annotation": {
+                                          "meta": null,
+                                          "sourceSpan": {
+                                            "end": [
+                                              29,
+                                              23
+                                            ],
+                                            "start": [
+                                              29,
+                                              22
+                                            ]
+                                          },
+                                          "type": "Any"
+                                        },
+                                        "type": "Var",
+                                        "value": {
+                                          "identifier": "b",
+                                          "sourcePos": [
+                                            26,
+                                            20
+                                          ]
+                                        }
+                                      },
+                                      "type": "App"
+                                    },
+                                    "isGuarded": false
+                                  }
+                                ],
+                                "caseExpressions": [
+                                  {
+                                    "abstraction": {
+                                      "abstraction": {
+                                        "annotation": {
+                                          "meta": null,
+                                          "sourceSpan": {
+                                            "end": [
+                                              0,
+                                              0
+                                            ],
+                                            "start": [
+                                              0,
+                                              0
+                                            ]
+                                          },
+                                          "type": null
+                                        },
+                                        "type": "Var",
+                                        "value": {
+                                          "identifier": "greaterThan",
+                                          "moduleName": [
+                                            "Test",
+                                            "RBTree"
+                                          ]
+                                        }
+                                      },
+                                      "annotation": {
+                                        "meta": null,
+                                        "sourceSpan": {
+                                          "end": [
+                                            28,
+                                            18
+                                          ],
+                                          "start": [
+                                            28,
+                                            13
+                                          ]
+                                        },
+                                        "type": {
+                                          "Func": {
+                                            "args": [
+                                              "Int"
+                                            ],
+                                            "ret": "Boolean"
+                                          }
+                                        }
+                                      },
+                                      "argument": {
+                                        "annotation": {
+                                          "meta": null,
+                                          "sourceSpan": {
+                                            "end": [
+                                              28,
+                                              14
+                                            ],
+                                            "start": [
+                                              28,
+                                              13
+                                            ]
+                                          },
+                                          "type": "Int"
+                                        },
+                                        "type": "Var",
+                                        "value": {
+                                          "identifier": "x",
+                                          "sourcePos": [
+                                            23,
+                                            1
+                                          ]
+                                        }
+                                      },
+                                      "type": "App"
+                                    },
+                                    "annotation": {
+                                      "meta": null,
+                                      "sourceSpan": {
+                                        "end": [
+                                          28,
+                                          18
+                                        ],
+                                        "start": [
+                                          28,
+                                          13
+                                        ]
+                                      },
+                                      "type": "Boolean"
+                                    },
+                                    "argument": {
+                                      "annotation": {
+                                        "meta": null,
+                                        "sourceSpan": {
+                                          "end": [
+                                            28,
+                                            18
+                                          ],
+                                          "start": [
+                                            28,
+                                            17
+                                          ]
+                                        },
+                                        "type": "Int"
+                                      },
+                                      "type": "Var",
+                                      "value": {
+                                        "identifier": "y",
+                                        "sourcePos": [
+                                          26,
+                                          18
+                                        ]
+                                      }
+                                    },
+                                    "type": "App"
+                                  }
+                                ],
+                                "type": "Case"
+                              },
+                              "isGuarded": false
+                            }
+                          ],
+                          "caseExpressions": [
+                            {
+                              "abstraction": {
+                                "abstraction": {
+                                  "annotation": {
+                                    "meta": null,
+                                    "sourceSpan": {
+                                      "end": [
+                                        0,
+                                        0
+                                      ],
+                                      "start": [
+                                        0,
+                                        0
+                                      ]
+                                    },
+                                    "type": null
+                                  },
+                                  "type": "Var",
+                                  "value": {
+                                    "identifier": "lessThan",
+                                    "moduleName": [
+                                      "Test",
+                                      "RBTree"
+                                    ]
+                                  }
+                                },
+                                "annotation": {
+                                  "meta": null,
+                                  "sourceSpan": {
+                                    "end": [
+                                      27,
+                                      13
+                                    ],
+                                    "start": [
+                                      27,
+                                      8
+                                    ]
+                                  },
+                                  "type": {
+                                    "Func": {
+                                      "args": [
+                                        "Int"
+                                      ],
+                                      "ret": "Boolean"
+                                    }
+                                  }
+                                },
+                                "argument": {
+                                  "annotation": {
+                                    "meta": null,
+                                    "sourceSpan": {
+                                      "end": [
+                                        27,
+                                        9
+                                      ],
+                                      "start": [
+                                        27,
+                                        8
+                                      ]
+                                    },
+                                    "type": "Int"
+                                  },
+                                  "type": "Var",
+                                  "value": {
+                                    "identifier": "x",
+                                    "sourcePos": [
+                                      23,
+                                      1
+                                    ]
+                                  }
+                                },
+                                "type": "App"
+                              },
+                              "annotation": {
+                                "meta": null,
+                                "sourceSpan": {
+                                  "end": [
+                                    27,
+                                    13
+                                  ],
+                                  "start": [
+                                    27,
+                                    8
+                                  ]
+                                },
+                                "type": "Boolean"
+                              },
+                              "argument": {
+                                "annotation": {
+                                  "meta": null,
+                                  "sourceSpan": {
+                                    "end": [
+                                      27,
+                                      13
+                                    ],
+                                    "start": [
+                                      27,
+                                      12
+                                    ]
+                                  },
+                                  "type": "Int"
+                                },
+                                "type": "Var",
+                                "value": {
+                                  "identifier": "y",
+                                  "sourcePos": [
+                                    26,
+                                    18
+                                  ]
+                                }
+                              },
+                              "type": "App"
+                            }
+                          ],
+                          "type": "Case"
+                        },
+                        "isGuarded": false
+                      }
+                    ],
+                    "caseExpressions": [
+                      {
+                        "annotation": {
+                          "meta": null,
+                          "sourceSpan": {
+                            "end": [
+                              25,
+                              20
+                            ],
+                            "start": [
+                              25,
+                              3
+                            ]
+                          },
+                          "type": null
+                        },
+                        "type": "Var",
+                        "value": {
+                          "identifier": "v",
+                          "sourcePos": [
+                            0,
+                            0
+                          ]
+                        }
+                      }
+                    ],
+                    "type": "Case"
+                  },
+                  "type": "Abs"
+                },
+                "identifier": "ins"
+              }
+            ]
+          }
+        ],
+        "expression": {
+          "abstraction": {
+            "annotation": {
+              "meta": null,
+              "sourceSpan": {
+                "end": [
+                  23,
+                  23
+                ],
+                "start": [
+                  23,
+                  14
+                ]
+              },
+              "type": {
+                "Func": {
+                  "args": [
+                    "Any"
+                  ],
+                  "ret": "Any"
+                }
+              }
+            },
+            "type": "Var",
+            "value": {
+              "identifier": "makeBlack",
+              "sourcePos": [
+                31,
+                3
+              ]
+            }
+          },
+          "annotation": {
+            "meta": null,
+            "sourceSpan": {
+              "end": [
+                23,
+                31
+              ],
+              "start": [
+                23,
+                14
+              ]
+            },
+            "type": "Any"
+          },
+          "argument": {
+            "abstraction": {
+              "annotation": {
+                "meta": null,
+                "sourceSpan": {
+                  "end": [
+                    23,
+                    28
+                  ],
+                  "start": [
+                    23,
+                    25
+                  ]
+                },
+                "type": {
+                  "Func": {
+                    "args": [
+                      "Any"
+                    ],
+                    "ret": "Any"
+                  }
+                }
+              },
+              "type": "Var",
+              "value": {
+                "identifier": "ins",
+                "sourcePos": [
+                  25,
+                  3
+                ]
+              }
+            },
+            "annotation": {
+              "meta": null,
+              "sourceSpan": {
+                "end": [
+                  23,
+                  30
+                ],
+                "start": [
+                  23,
+                  25
+                ]
+              },
+              "type": "Any"
+            },
+            "argument": {
+              "annotation": {
+                "meta": null,
+                "sourceSpan": {
+                  "end": [
+                    23,
+                    30
+                  ],
+                  "start": [
+                    23,
+                    29
+                  ]
+                },
+                "type": "Any"
+              },
+              "type": "Var",
+              "value": {
+                "identifier": "s",
+                "sourcePos": [
+                  23,
+                  1
+                ]
+              }
+            },
+            "type": "App"
+          },
+          "type": "App"
+        },
+        "type": "Let"
+      },
+      "type": "Abs"
+    },
+    "type": "Abs"
+  },
+  "identifier": "insert"
+}

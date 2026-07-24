@@ -12,8 +12,12 @@ var CaseInsensitiveNonEmptyString gopurs_runtime.Value
 var once_CaseInsensitiveNonEmptyString sync.Once
 func Get_CaseInsensitiveNonEmptyString() gopurs_runtime.Value {
 	once_CaseInsensitiveNonEmptyString.Do(func() {
-		CaseInsensitiveNonEmptyString = gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return x_0
+		CaseInsensitiveNonEmptyString = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var x_0 gopurs_runtime.Value = x_0_loop
+_ = x_0
+return x_0_loop
+}()
 })
 	})
 	return CaseInsensitiveNonEmptyString

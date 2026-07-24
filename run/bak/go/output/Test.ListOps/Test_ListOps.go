@@ -36,41 +36,7 @@ var range_ gopurs_runtime.Value
 var once_range_ sync.Once
 func Get_range_() gopurs_runtime.Value {
 	once_range_.Do(func() {
-		range_ = gopurs_runtime.Func2(func(start_0 gopurs_runtime.Value, end_1 gopurs_runtime.Value) gopurs_runtime.Value {
-var go__2_0 gopurs_runtime.Value
-go__2_0 = gopurs_runtime.Func(func(curr_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(acc_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-go__2_0:
-for {
-if false { continue go__2_0 }
-var curr_3 gopurs_runtime.Value = curr_3_loop
-_ = curr_3
-var acc_4 gopurs_runtime.Value = acc_4_loop
-_ = acc_4
-var __t1 gopurs_runtime.Value
-{
-if curr_3.IntVal < start_0.IntVal {
-__t1 = acc_4
-goto end_branch_1
-} else {
-
-}
-}
-{
-curr_3_loop = gopurs_runtime.Int(curr_3.IntVal - 1)
-acc_4_loop = gopurs_runtime.Constructor2("Cons", curr_3, acc_4)
-continue go__2_0
-__t1 = gopurs_runtime.Value{}
-}
-end_branch_1:
-return __t1
-}
-}()
-})
-})
-return gopurs_runtime.Apply2(go__2_0, end_1, gopurs_runtime.Constructor0("Nil"))
-})
+		range_ = gopurs_runtime.Func2(Call_range_)
 	})
 	return range_
 }
@@ -88,7 +54,10 @@ var filterEvens gopurs_runtime.Value
 var once_filterEvens sync.Once
 func Get_filterEvens() gopurs_runtime.Value {
 	once_filterEvens.Do(func() {
-		filterEvens = gopurs_runtime.Func(func(lst_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		filterEvens = gopurs_runtime.Func(func(lst_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var lst_0 gopurs_runtime.Value = lst_0_loop
+_ = lst_0
 var go__1_0 gopurs_runtime.Value
 go__1_0 = gopurs_runtime.Func(func(v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -145,7 +114,8 @@ return __t1
 }()
 })
 })
-return gopurs_runtime.Apply2(go__1_0, lst_0, gopurs_runtime.Constructor0("Nil"))
+return gopurs_runtime.Apply2(go__1_0, lst_0_loop, gopurs_runtime.Constructor0("Nil"))
+}()
 })
 	})
 	return filterEvens
@@ -155,7 +125,10 @@ var sumEvens gopurs_runtime.Value
 var once_sumEvens sync.Once
 func Get_sumEvens() gopurs_runtime.Value {
 	once_sumEvens.Do(func() {
-		sumEvens = gopurs_runtime.Func(func(n_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		sumEvens = gopurs_runtime.Func(func(n_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var n_0 gopurs_runtime.Value = n_0_loop
+_ = n_0
 var go__1_0 gopurs_runtime.Value
 go__1_0 = gopurs_runtime.Func(func(curr_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(acc_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -188,7 +161,8 @@ return __t1
 }()
 })
 })
-return gopurs_runtime.Apply3(Get_foldl(), pkg_Data_Semiring.Get_intAdd(), gopurs_runtime.Int(0), gopurs_runtime.Apply(Get_filterEvens(), gopurs_runtime.Apply2(go__1_0, n_0, gopurs_runtime.Constructor0("Nil"))))
+return Call_foldl(pkg_Data_Semiring.Get_intAdd(), gopurs_runtime.Int(0), gopurs_runtime.Apply(Get_filterEvens(), gopurs_runtime.Apply2(go__1_0, n_0_loop, gopurs_runtime.Constructor0("Nil"))))
+}()
 })
 	})
 	return sumEvens
@@ -220,6 +194,46 @@ return gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), g
 	return act
 }
 
+func Call_range_(start_0_loop gopurs_runtime.Value, end_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var start_0 gopurs_runtime.Value = start_0_loop
+_ = start_0
+var end_1 gopurs_runtime.Value = end_1_loop
+_ = end_1
+var go__2_0 gopurs_runtime.Value
+go__2_0 = gopurs_runtime.Func(func(curr_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(acc_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+go__2_0:
+for {
+if false { continue go__2_0 }
+var curr_3 gopurs_runtime.Value = curr_3_loop
+_ = curr_3
+var acc_4 gopurs_runtime.Value = acc_4_loop
+_ = acc_4
+var __t1 gopurs_runtime.Value
+{
+if curr_3.IntVal < start_0_loop.IntVal {
+__t1 = acc_4
+goto end_branch_1
+} else {
+
+}
+}
+{
+curr_3_loop = gopurs_runtime.Int(curr_3.IntVal - 1)
+acc_4_loop = gopurs_runtime.Constructor2("Cons", curr_3, acc_4)
+continue go__2_0
+__t1 = gopurs_runtime.Value{}
+}
+end_branch_1:
+return __t1
+}
+}()
+})
+})
+return gopurs_runtime.Apply2(go__2_0, end_1_loop, gopurs_runtime.Constructor0("Nil"))
+}
+
 func Call_foldl(v_0_loop gopurs_runtime.Value, v1_1_loop gopurs_runtime.Value, v2_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 foldl:
 for {
@@ -241,7 +255,7 @@ goto end_branch_0
 }
 {
 if gopurs_runtime.Bool(v2_2_loop.StrVal == "Cons").IntVal != 0 {
-__t0 = gopurs_runtime.Apply3(Get_foldl(), v_0_loop, gopurs_runtime.Apply2(v_0_loop, v1_1_loop, (*[1024]gopurs_runtime.Value)(v2_2_loop.UnsafePtr)[0]), (*[1024]gopurs_runtime.Value)(v2_2_loop.UnsafePtr)[1])
+__t0 = Call_foldl(v_0_loop, gopurs_runtime.Apply2(v_0_loop, v1_1_loop, (*[1024]gopurs_runtime.Value)(v2_2_loop.UnsafePtr)[0]), (*[1024]gopurs_runtime.Value)(v2_2_loop.UnsafePtr)[1])
 goto end_branch_0
 } else {
 

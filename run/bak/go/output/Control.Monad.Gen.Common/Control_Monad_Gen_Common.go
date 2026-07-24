@@ -219,7 +219,7 @@ unfoldable2_5_2 := gopurs_runtime.Apply(unfoldable1_3_1, dictUnfoldable_4)
 _ = unfoldable2_5_2
 return gopurs_runtime.Func(func(gen_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Apply0_2_0, "apply"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Apply0_2_0, "Functor0"), gopurs_runtime.Value{}), "map"), pkg_Data_NonEmpty.Get_NonEmpty(), gen_6), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadGen_1_loop, "resize"), gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(Get_max(), gopurs_runtime.Int(0), gopurs_runtime.Int(x_7.IntVal - 1))
+return Call_max(gopurs_runtime.Int(0), gopurs_runtime.Int(x_7.IntVal - 1))
 }), gopurs_runtime.Apply(unfoldable2_5_2, gen_6)))
 })
 })

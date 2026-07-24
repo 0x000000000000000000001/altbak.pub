@@ -45,13 +45,7 @@ var reifyType gopurs_runtime.Value
 var once_reifyType sync.Once
 func Get_reifyType() gopurs_runtime.Value {
 	once_reifyType.Do(func() {
-		reifyType = gopurs_runtime.Func3(func(_dollar__unused_0 gopurs_runtime.Value, s_1 gopurs_runtime.Value, f_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(Get_unsafeCoerce(), gopurs_runtime.Func(func(dictReflectable_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(f_2, dictReflectable_3)
-}), gopurs_runtime.RecordDict1("reflectType", gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return s_1
-})), gopurs_runtime.Constructor0("Proxy"))
-})
+		reifyType = gopurs_runtime.Func3(Call_reifyType)
 	})
 	return reifyType
 }
@@ -60,14 +54,30 @@ var reflectType gopurs_runtime.Value
 var once_reflectType sync.Once
 func Get_reflectType() gopurs_runtime.Value {
 	once_reflectType.Do(func() {
-		reflectType = gopurs_runtime.Func(func(dict_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(dict_0, "reflectType")
+		reflectType = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0_loop, "reflectType")
+}()
 })
 	})
 	return reflectType
 }
 
-
+func Call_reifyType(_dollar__unused_0_loop gopurs_runtime.Value, s_1_loop gopurs_runtime.Value, f_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
+_ = _dollar__unused_0
+var s_1 gopurs_runtime.Value = s_1_loop
+_ = s_1
+var f_2 gopurs_runtime.Value = f_2_loop
+_ = f_2
+return gopurs_runtime.Apply3(Get_unsafeCoerce(), gopurs_runtime.Func(func(dictReflectable_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(f_2_loop, dictReflectable_3)
+}), gopurs_runtime.RecordDict1("reflectType", gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return s_1_loop
+})), gopurs_runtime.Constructor0("Proxy"))
+}
 
 func Get_unsafeCoerce() gopurs_runtime.Value {
 	return _Gopurs_UnsafeCoerce

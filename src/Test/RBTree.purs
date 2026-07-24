@@ -20,16 +20,16 @@ balance B a x (T R b y (T R c z d)) = T R (T B a x b) y (T B c z d)
 balance color a x b = T color a x b
 
 insert :: Int -> Tree -> Tree
-insert x s = makeBlack (ins s)
-  where
-  ins E = T R E x E
-  ins (T color a y b) =
-    if x < y then balance color (ins a) y b
-    else if x > y then balance color a y (ins b)
-    else T color a y b
-    
-  makeBlack (T _ a y b) = T B a y b
-  makeBlack E = E
+insert x s = makeBlack (ins x s)
+
+ins :: Int -> Tree -> Tree
+ins x E = T R E x E
+ins x (T color a y b) =
+  if x < y then balance color (ins x a) y b
+  else if x > y then balance color a y (ins x b)
+  else T color a y b
+makeBlack (T _ a y b) = T B a y b
+makeBlack E = E
 
 -- Tail-recursive insertion loop
 buildTree :: Int -> Tree -> Tree

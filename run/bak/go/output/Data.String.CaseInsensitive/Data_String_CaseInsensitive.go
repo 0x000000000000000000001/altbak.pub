@@ -12,8 +12,12 @@ var CaseInsensitiveString gopurs_runtime.Value
 var once_CaseInsensitiveString sync.Once
 func Get_CaseInsensitiveString() gopurs_runtime.Value {
 	once_CaseInsensitiveString.Do(func() {
-		CaseInsensitiveString = gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return x_0
+		CaseInsensitiveString = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var x_0 gopurs_runtime.Value = x_0_loop
+_ = x_0
+return x_0_loop
+}()
 })
 	})
 	return CaseInsensitiveString

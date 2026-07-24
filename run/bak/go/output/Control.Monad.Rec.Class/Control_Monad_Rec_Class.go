@@ -37,8 +37,12 @@ var tailRecM gopurs_runtime.Value
 var once_tailRecM sync.Once
 func Get_tailRecM() gopurs_runtime.Value {
 	once_tailRecM.Do(func() {
-		tailRecM = gopurs_runtime.Func(func(dict_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(dict_0, "tailRecM")
+		tailRecM = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0_loop, "tailRecM")
+}()
 })
 	})
 	return tailRecM
@@ -48,11 +52,7 @@ var tailRecM2 gopurs_runtime.Value
 var once_tailRecM2 sync.Once
 func Get_tailRecM2() gopurs_runtime.Value {
 	once_tailRecM2.Do(func() {
-		tailRecM2 = gopurs_runtime.Func4(func(dictMonadRec_0 gopurs_runtime.Value, f_1 gopurs_runtime.Value, a_2 gopurs_runtime.Value, b_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadRec_0, "tailRecM"), gopurs_runtime.Func(func(o_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(f_1, gopurs_runtime.RecordGet(o_4, "a"), gopurs_runtime.RecordGet(o_4, "b"))
-}), gopurs_runtime.RecordDict2("a", "b", a_2, b_3))
-})
+		tailRecM2 = gopurs_runtime.Func4(Call_tailRecM2)
 	})
 	return tailRecM2
 }
@@ -61,11 +61,7 @@ var tailRecM3 gopurs_runtime.Value
 var once_tailRecM3 sync.Once
 func Get_tailRecM3() gopurs_runtime.Value {
 	once_tailRecM3.Do(func() {
-		tailRecM3 = gopurs_runtime.Func5(func(dictMonadRec_0 gopurs_runtime.Value, f_1 gopurs_runtime.Value, a_2 gopurs_runtime.Value, b_3 gopurs_runtime.Value, c_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadRec_0, "tailRecM"), gopurs_runtime.Func(func(o_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(f_1, gopurs_runtime.RecordGet(o_5, "a"), gopurs_runtime.RecordGet(o_5, "b"), gopurs_runtime.RecordGet(o_5, "c"))
-}), gopurs_runtime.RecordDict3("a", "b", "c", a_2, b_3, c_4))
-})
+		tailRecM3 = gopurs_runtime.Func5(Call_tailRecM3)
 	})
 	return tailRecM3
 }
@@ -74,11 +70,14 @@ var untilJust gopurs_runtime.Value
 var once_untilJust sync.Once
 func Get_untilJust() gopurs_runtime.Value {
 	once_untilJust.Do(func() {
-		untilJust = gopurs_runtime.Func(func(dictMonadRec_0 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadRec_0, "Monad0"), gopurs_runtime.Value{}), "Bind1"), gopurs_runtime.Value{}), "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{})
+		untilJust = gopurs_runtime.Func(func(dictMonadRec_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictMonadRec_0 gopurs_runtime.Value = dictMonadRec_0_loop
+_ = dictMonadRec_0
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadRec_0_loop, "Monad0"), gopurs_runtime.Value{}), "Bind1"), gopurs_runtime.Value{}), "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{})
 _ = __local_var_1_0
 return gopurs_runtime.Func(func(m_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadRec_0, "tailRecM"), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadRec_0_loop, "tailRecM"), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "map"), gopurs_runtime.Func(func(v1_4 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
@@ -105,6 +104,7 @@ return __t1
 }), m_2)
 }), pkg_Data_Unit.Get_unit())
 })
+}()
 })
 	})
 	return untilJust
@@ -114,8 +114,11 @@ var whileJust gopurs_runtime.Value
 var once_whileJust sync.Once
 func Get_whileJust() gopurs_runtime.Value {
 	once_whileJust.Do(func() {
-		whileJust = gopurs_runtime.Func(func(dictMonoid_0 gopurs_runtime.Value) gopurs_runtime.Value {
-mempty_1_0 := gopurs_runtime.RecordGet(dictMonoid_0, "mempty")
+		whileJust = gopurs_runtime.Func(func(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
+_ = dictMonoid_0
+mempty_1_0 := gopurs_runtime.RecordGet(dictMonoid_0_loop, "mempty")
 _ = mempty_1_0
 return gopurs_runtime.Func(func(dictMonadRec_2 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadRec_2, "Monad0"), gopurs_runtime.Value{}), "Bind1"), gopurs_runtime.Value{}), "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{})
@@ -134,7 +137,7 @@ goto end_branch_2
 }
 {
 if gopurs_runtime.Bool(v1_6.StrVal == "Just").IntVal != 0 {
-__t2 = gopurs_runtime.Constructor1("Loop", gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{}), "append"), v_5, (*[1024]gopurs_runtime.Value)(v1_6.UnsafePtr)[0]))
+__t2 = gopurs_runtime.Constructor1("Loop", gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0_loop, "Semigroup0"), gopurs_runtime.Value{}), "append"), v_5, (*[1024]gopurs_runtime.Value)(v1_6.UnsafePtr)[0]))
 goto end_branch_2
 } else {
 
@@ -149,6 +152,7 @@ return __t2
 }), mempty_1_0)
 })
 })
+}()
 })
 	})
 	return whileJust
@@ -158,7 +162,10 @@ var tailRec gopurs_runtime.Value
 var once_tailRec sync.Once
 func Get_tailRec() gopurs_runtime.Value {
 	once_tailRec.Do(func() {
-		tailRec = gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		tailRec = gopurs_runtime.Func(func(f_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var f_0 gopurs_runtime.Value = f_0_loop
+_ = f_0
 var go__1_0 gopurs_runtime.Value
 go__1_0 = gopurs_runtime.Func(func(v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
@@ -170,7 +177,7 @@ _ = v_2
 var __t1 gopurs_runtime.Value
 {
 if gopurs_runtime.Bool(v_2.StrVal == "Loop").IntVal != 0 {
-v_2_loop = gopurs_runtime.Apply(f_0, (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0])
+v_2_loop = gopurs_runtime.Apply(f_0_loop, (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0])
 continue go__1_0
 __t1 = gopurs_runtime.Value{}
 goto end_branch_1
@@ -195,8 +202,9 @@ return __t1
 }()
 })
 return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(go__1_0, gopurs_runtime.Apply(f_0, x_2))
+return gopurs_runtime.Apply(go__1_0, gopurs_runtime.Apply(f_0_loop, x_2))
 })
+}()
 })
 	})
 	return tailRec
@@ -206,44 +214,7 @@ var tailRec2 gopurs_runtime.Value
 var once_tailRec2 sync.Once
 func Get_tailRec2() gopurs_runtime.Value {
 	once_tailRec2.Do(func() {
-		tailRec2 = gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, a_1 gopurs_runtime.Value, b_2 gopurs_runtime.Value) gopurs_runtime.Value {
-var go__3_0 gopurs_runtime.Value
-go__3_0 = gopurs_runtime.Func(func(v_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-go__3_0:
-for {
-if false { continue go__3_0 }
-var v_4 gopurs_runtime.Value = v_4_loop
-_ = v_4
-var __t1 gopurs_runtime.Value
-{
-if gopurs_runtime.Bool(v_4.StrVal == "Loop").IntVal != 0 {
-v_4_loop = gopurs_runtime.Apply2(f_0, gopurs_runtime.RecordGet((*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[0], "a"), gopurs_runtime.RecordGet((*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[0], "b"))
-continue go__3_0
-__t1 = gopurs_runtime.Value{}
-goto end_branch_1
-} else {
-
-}
-}
-{
-if gopurs_runtime.Bool(v_4.StrVal == "Done").IntVal != 0 {
-__t1 = (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[0]
-goto end_branch_1
-} else {
-
-}
-}
-{
-__t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
-}
-end_branch_1:
-return __t1
-}
-}()
-})
-return gopurs_runtime.Apply(go__3_0, gopurs_runtime.Apply2(f_0, a_1, b_2))
-})
+		tailRec2 = gopurs_runtime.Func3(Call_tailRec2)
 	})
 	return tailRec2
 }
@@ -252,44 +223,7 @@ var tailRec3 gopurs_runtime.Value
 var once_tailRec3 sync.Once
 func Get_tailRec3() gopurs_runtime.Value {
 	once_tailRec3.Do(func() {
-		tailRec3 = gopurs_runtime.Func4(func(f_0 gopurs_runtime.Value, a_1 gopurs_runtime.Value, b_2 gopurs_runtime.Value, c_3 gopurs_runtime.Value) gopurs_runtime.Value {
-var go__4_0 gopurs_runtime.Value
-go__4_0 = gopurs_runtime.Func(func(v_5_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-go__4_0:
-for {
-if false { continue go__4_0 }
-var v_5 gopurs_runtime.Value = v_5_loop
-_ = v_5
-var __t1 gopurs_runtime.Value
-{
-if gopurs_runtime.Bool(v_5.StrVal == "Loop").IntVal != 0 {
-v_5_loop = gopurs_runtime.Apply3(f_0, gopurs_runtime.RecordGet((*[1024]gopurs_runtime.Value)(v_5.UnsafePtr)[0], "a"), gopurs_runtime.RecordGet((*[1024]gopurs_runtime.Value)(v_5.UnsafePtr)[0], "b"), gopurs_runtime.RecordGet((*[1024]gopurs_runtime.Value)(v_5.UnsafePtr)[0], "c"))
-continue go__4_0
-__t1 = gopurs_runtime.Value{}
-goto end_branch_1
-} else {
-
-}
-}
-{
-if gopurs_runtime.Bool(v_5.StrVal == "Done").IntVal != 0 {
-__t1 = (*[1024]gopurs_runtime.Value)(v_5.UnsafePtr)[0]
-goto end_branch_1
-} else {
-
-}
-}
-{
-__t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
-}
-end_branch_1:
-return __t1
-}
-}()
-})
-return gopurs_runtime.Apply(go__4_0, gopurs_runtime.Apply3(f_0, a_1, b_2, c_3))
-})
+		tailRec3 = gopurs_runtime.Func4(Call_tailRec3)
 	})
 	return tailRec3
 }
@@ -658,9 +592,7 @@ var loop3 gopurs_runtime.Value
 var once_loop3 sync.Once
 func Get_loop3() gopurs_runtime.Value {
 	once_loop3.Do(func() {
-		loop3 = gopurs_runtime.Func3(func(a_0 gopurs_runtime.Value, b_1 gopurs_runtime.Value, c_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor1("Loop", gopurs_runtime.RecordDict3("a", "b", "c", a_0, b_1, c_2))
-})
+		loop3 = gopurs_runtime.Func3(Call_loop3)
 	})
 	return loop3
 }
@@ -669,9 +601,7 @@ var loop2 gopurs_runtime.Value
 var once_loop2 sync.Once
 func Get_loop2() gopurs_runtime.Value {
 	once_loop2.Do(func() {
-		loop2 = gopurs_runtime.Func2(func(a_0 gopurs_runtime.Value, b_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor1("Loop", gopurs_runtime.RecordDict2("a", "b", a_0, b_1))
-})
+		loop2 = gopurs_runtime.Func2(Call_loop2)
 	})
 	return loop2
 }
@@ -712,16 +642,20 @@ var forever gopurs_runtime.Value
 var once_forever sync.Once
 func Get_forever() gopurs_runtime.Value {
 	once_forever.Do(func() {
-		forever = gopurs_runtime.Func(func(dictMonadRec_0 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadRec_0, "Monad0"), gopurs_runtime.Value{}), "Bind1"), gopurs_runtime.Value{}), "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{})
+		forever = gopurs_runtime.Func(func(dictMonadRec_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictMonadRec_0 gopurs_runtime.Value = dictMonadRec_0_loop
+_ = dictMonadRec_0
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadRec_0_loop, "Monad0"), gopurs_runtime.Value{}), "Bind1"), gopurs_runtime.Value{}), "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{})
 _ = __local_var_1_0
 return gopurs_runtime.Func(func(ma_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadRec_0, "tailRecM"), gopurs_runtime.Func(func(u_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadRec_0_loop, "tailRecM"), gopurs_runtime.Func(func(u_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "map"), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Constructor1("Loop", u_3)
 }), ma_2)
 }), pkg_Data_Unit.Get_unit())
 })
+}()
 })
 	})
 	return forever
@@ -759,6 +693,144 @@ return __t0
 	return bifunctorStep
 }
 
+func Call_tailRecM2(dictMonadRec_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value, a_2_loop gopurs_runtime.Value, b_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictMonadRec_0 gopurs_runtime.Value = dictMonadRec_0_loop
+_ = dictMonadRec_0
+var f_1 gopurs_runtime.Value = f_1_loop
+_ = f_1
+var a_2 gopurs_runtime.Value = a_2_loop
+_ = a_2
+var b_3 gopurs_runtime.Value = b_3_loop
+_ = b_3
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadRec_0_loop, "tailRecM"), gopurs_runtime.Func(func(o_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(f_1_loop, gopurs_runtime.RecordGet(o_4, "a"), gopurs_runtime.RecordGet(o_4, "b"))
+}), gopurs_runtime.RecordDict2("a", "b", a_2_loop, b_3_loop))
+}
 
+func Call_tailRecM3(dictMonadRec_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value, a_2_loop gopurs_runtime.Value, b_3_loop gopurs_runtime.Value, c_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictMonadRec_0 gopurs_runtime.Value = dictMonadRec_0_loop
+_ = dictMonadRec_0
+var f_1 gopurs_runtime.Value = f_1_loop
+_ = f_1
+var a_2 gopurs_runtime.Value = a_2_loop
+_ = a_2
+var b_3 gopurs_runtime.Value = b_3_loop
+_ = b_3
+var c_4 gopurs_runtime.Value = c_4_loop
+_ = c_4
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadRec_0_loop, "tailRecM"), gopurs_runtime.Func(func(o_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply3(f_1_loop, gopurs_runtime.RecordGet(o_5, "a"), gopurs_runtime.RecordGet(o_5, "b"), gopurs_runtime.RecordGet(o_5, "c"))
+}), gopurs_runtime.RecordDict3("a", "b", "c", a_2_loop, b_3_loop, c_4_loop))
+}
+
+func Call_tailRec2(f_0_loop gopurs_runtime.Value, a_1_loop gopurs_runtime.Value, b_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var f_0 gopurs_runtime.Value = f_0_loop
+_ = f_0
+var a_1 gopurs_runtime.Value = a_1_loop
+_ = a_1
+var b_2 gopurs_runtime.Value = b_2_loop
+_ = b_2
+var go__3_0 gopurs_runtime.Value
+go__3_0 = gopurs_runtime.Func(func(v_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+go__3_0:
+for {
+if false { continue go__3_0 }
+var v_4 gopurs_runtime.Value = v_4_loop
+_ = v_4
+var __t1 gopurs_runtime.Value
+{
+if gopurs_runtime.Bool(v_4.StrVal == "Loop").IntVal != 0 {
+v_4_loop = gopurs_runtime.Apply2(f_0_loop, gopurs_runtime.RecordGet((*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[0], "a"), gopurs_runtime.RecordGet((*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[0], "b"))
+continue go__3_0
+__t1 = gopurs_runtime.Value{}
+goto end_branch_1
+} else {
+
+}
+}
+{
+if gopurs_runtime.Bool(v_4.StrVal == "Done").IntVal != 0 {
+__t1 = (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[0]
+goto end_branch_1
+} else {
+
+}
+}
+{
+__t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_1:
+return __t1
+}
+}()
+})
+return gopurs_runtime.Apply(go__3_0, gopurs_runtime.Apply2(f_0_loop, a_1_loop, b_2_loop))
+}
+
+func Call_tailRec3(f_0_loop gopurs_runtime.Value, a_1_loop gopurs_runtime.Value, b_2_loop gopurs_runtime.Value, c_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var f_0 gopurs_runtime.Value = f_0_loop
+_ = f_0
+var a_1 gopurs_runtime.Value = a_1_loop
+_ = a_1
+var b_2 gopurs_runtime.Value = b_2_loop
+_ = b_2
+var c_3 gopurs_runtime.Value = c_3_loop
+_ = c_3
+var go__4_0 gopurs_runtime.Value
+go__4_0 = gopurs_runtime.Func(func(v_5_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+go__4_0:
+for {
+if false { continue go__4_0 }
+var v_5 gopurs_runtime.Value = v_5_loop
+_ = v_5
+var __t1 gopurs_runtime.Value
+{
+if gopurs_runtime.Bool(v_5.StrVal == "Loop").IntVal != 0 {
+v_5_loop = gopurs_runtime.Apply3(f_0_loop, gopurs_runtime.RecordGet((*[1024]gopurs_runtime.Value)(v_5.UnsafePtr)[0], "a"), gopurs_runtime.RecordGet((*[1024]gopurs_runtime.Value)(v_5.UnsafePtr)[0], "b"), gopurs_runtime.RecordGet((*[1024]gopurs_runtime.Value)(v_5.UnsafePtr)[0], "c"))
+continue go__4_0
+__t1 = gopurs_runtime.Value{}
+goto end_branch_1
+} else {
+
+}
+}
+{
+if gopurs_runtime.Bool(v_5.StrVal == "Done").IntVal != 0 {
+__t1 = (*[1024]gopurs_runtime.Value)(v_5.UnsafePtr)[0]
+goto end_branch_1
+} else {
+
+}
+}
+{
+__t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_1:
+return __t1
+}
+}()
+})
+return gopurs_runtime.Apply(go__4_0, gopurs_runtime.Apply3(f_0_loop, a_1_loop, b_2_loop, c_3_loop))
+}
+
+func Call_loop3(a_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, c_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var a_0 gopurs_runtime.Value = a_0_loop
+_ = a_0
+var b_1 gopurs_runtime.Value = b_1_loop
+_ = b_1
+var c_2 gopurs_runtime.Value = c_2_loop
+_ = c_2
+return gopurs_runtime.Constructor1("Loop", gopurs_runtime.RecordDict3("a", "b", "c", a_0_loop, b_1_loop, c_2_loop))
+}
+
+func Call_loop2(a_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var a_0 gopurs_runtime.Value = a_0_loop
+_ = a_0
+var b_1 gopurs_runtime.Value = b_1_loop
+_ = b_1
+return gopurs_runtime.Constructor1("Loop", gopurs_runtime.RecordDict2("a", "b", a_0_loop, b_1_loop))
+}
 
 

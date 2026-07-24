@@ -13,8 +13,12 @@ var Seconds gopurs_runtime.Value
 var once_Seconds sync.Once
 func Get_Seconds() gopurs_runtime.Value {
 	once_Seconds.Do(func() {
-		Seconds = gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return x_0
+		Seconds = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var x_0 gopurs_runtime.Value = x_0_loop
+_ = x_0
+return x_0_loop
+}()
 })
 	})
 	return Seconds
@@ -24,8 +28,12 @@ var Minutes gopurs_runtime.Value
 var once_Minutes sync.Once
 func Get_Minutes() gopurs_runtime.Value {
 	once_Minutes.Do(func() {
-		Minutes = gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return x_0
+		Minutes = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var x_0 gopurs_runtime.Value = x_0_loop
+_ = x_0
+return x_0_loop
+}()
 })
 	})
 	return Minutes
@@ -35,8 +43,12 @@ var Milliseconds gopurs_runtime.Value
 var once_Milliseconds sync.Once
 func Get_Milliseconds() gopurs_runtime.Value {
 	once_Milliseconds.Do(func() {
-		Milliseconds = gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return x_0
+		Milliseconds = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var x_0 gopurs_runtime.Value = x_0_loop
+_ = x_0
+return x_0_loop
+}()
 })
 	})
 	return Milliseconds
@@ -46,8 +58,12 @@ var Hours gopurs_runtime.Value
 var once_Hours sync.Once
 func Get_Hours() gopurs_runtime.Value {
 	once_Hours.Do(func() {
-		Hours = gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return x_0
+		Hours = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var x_0 gopurs_runtime.Value = x_0_loop
+_ = x_0
+return x_0_loop
+}()
 })
 	})
 	return Hours
@@ -57,8 +73,12 @@ var Days gopurs_runtime.Value
 var once_Days sync.Once
 func Get_Days() gopurs_runtime.Value {
 	once_Days.Do(func() {
-		Days = gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return x_0
+		Days = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var x_0 gopurs_runtime.Value = x_0_loop
+_ = x_0
+return x_0_loop
+}()
 })
 	})
 	return Days
@@ -68,8 +88,12 @@ var toDuration gopurs_runtime.Value
 var once_toDuration sync.Once
 func Get_toDuration() gopurs_runtime.Value {
 	once_toDuration.Do(func() {
-		toDuration = gopurs_runtime.Func(func(dict_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(dict_0, "toDuration")
+		toDuration = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0_loop, "toDuration")
+}()
 })
 	})
 	return toDuration
@@ -344,8 +368,12 @@ var fromDuration gopurs_runtime.Value
 var once_fromDuration sync.Once
 func Get_fromDuration() gopurs_runtime.Value {
 	once_fromDuration.Do(func() {
-		fromDuration = gopurs_runtime.Func(func(dict_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(dict_0, "fromDuration")
+		fromDuration = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0_loop, "fromDuration")
+}()
 })
 	})
 	return fromDuration
@@ -355,9 +383,7 @@ var negateDuration gopurs_runtime.Value
 var once_negateDuration sync.Once
 func Get_negateDuration() gopurs_runtime.Value {
 	once_negateDuration.Do(func() {
-		negateDuration = gopurs_runtime.Func2(func(dictDuration_0 gopurs_runtime.Value, x_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDuration_0, "toDuration"), gopurs_runtime.FloatNeg(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDuration_0, "fromDuration"), x_1)))
-})
+		negateDuration = gopurs_runtime.Func2(Call_negateDuration)
 	})
 	return negateDuration
 }
@@ -472,13 +498,27 @@ var convertDuration gopurs_runtime.Value
 var once_convertDuration sync.Once
 func Get_convertDuration() gopurs_runtime.Value {
 	once_convertDuration.Do(func() {
-		convertDuration = gopurs_runtime.Func3(func(dictDuration_0 gopurs_runtime.Value, dictDuration1_1 gopurs_runtime.Value, x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDuration1_1, "toDuration"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDuration_0, "fromDuration"), x_2))
-})
+		convertDuration = gopurs_runtime.Func3(Call_convertDuration)
 	})
 	return convertDuration
 }
 
+func Call_negateDuration(dictDuration_0_loop gopurs_runtime.Value, x_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictDuration_0 gopurs_runtime.Value = dictDuration_0_loop
+_ = dictDuration_0
+var x_1 gopurs_runtime.Value = x_1_loop
+_ = x_1
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDuration_0_loop, "toDuration"), gopurs_runtime.FloatNeg(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDuration_0_loop, "fromDuration"), x_1_loop)))
+}
 
+func Call_convertDuration(dictDuration_0_loop gopurs_runtime.Value, dictDuration1_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictDuration_0 gopurs_runtime.Value = dictDuration_0_loop
+_ = dictDuration_0
+var dictDuration1_1 gopurs_runtime.Value = dictDuration1_1_loop
+_ = dictDuration1_1
+var x_2 gopurs_runtime.Value = x_2_loop
+_ = x_2
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDuration1_1_loop, "toDuration"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDuration_0_loop, "fromDuration"), x_2_loop))
+}
 
 

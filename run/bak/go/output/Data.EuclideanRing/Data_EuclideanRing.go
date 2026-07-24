@@ -60,8 +60,12 @@ var div gopurs_runtime.Value
 var once_div sync.Once
 func Get_div() gopurs_runtime.Value {
 	once_div.Do(func() {
-		div = gopurs_runtime.Func(func(dict_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(dict_0, "div")
+		div = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0_loop, "div")
+}()
 })
 	})
 	return div
@@ -71,30 +75,7 @@ var lcm gopurs_runtime.Value
 var once_lcm sync.Once
 func Get_lcm() gopurs_runtime.Value {
 	once_lcm.Do(func() {
-		lcm = gopurs_runtime.Func2(func(dictEq_0 gopurs_runtime.Value, dictEuclideanRing_1 gopurs_runtime.Value) gopurs_runtime.Value {
-Semiring0_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEuclideanRing_1, "CommutativeRing0"), gopurs_runtime.Value{}), "Ring0"), gopurs_runtime.Value{}), "Semiring0"), gopurs_runtime.Value{})
-_ = Semiring0_2_0
-zero_3_1 := gopurs_runtime.RecordGet(Semiring0_2_0, "zero")
-_ = zero_3_1
-gcd2_4_2 := gopurs_runtime.Apply2(Get_gcd(), dictEq_0, dictEuclideanRing_1)
-_ = gcd2_4_2
-return gopurs_runtime.Func2(func(a_5 gopurs_runtime.Value, b_6 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t3 gopurs_runtime.Value
-{
-if gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), a_5, zero_3_1).IntVal != 0 || gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), b_6, zero_3_1).IntVal != 0 {
-__t3 = zero_3_1
-goto end_branch_3
-} else {
-
-}
-}
-{
-__t3 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEuclideanRing_1, "div"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Semiring0_2_0, "mul"), a_5, b_6), gopurs_runtime.Apply2(gcd2_4_2, a_5, b_6))
-}
-end_branch_3:
-return __t3
-})
-})
+		lcm = gopurs_runtime.Func2(Call_lcm)
 	})
 	return lcm
 }
@@ -103,8 +84,12 @@ var degree gopurs_runtime.Value
 var once_degree sync.Once
 func Get_degree() gopurs_runtime.Value {
 	once_degree.Do(func() {
-		degree = gopurs_runtime.Func(func(dict_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(dict_0, "degree")
+		degree = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0_loop, "degree")
+}()
 })
 	})
 	return degree
@@ -131,12 +116,41 @@ goto end_branch_1
 }
 }
 {
-__t1 = gopurs_runtime.Apply4(Get_gcd(), dictEq_0_loop, dictEuclideanRing_1_loop, b_4, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEuclideanRing_1_loop, "mod"), a_3, b_4))
+__t1 = gopurs_runtime.Apply2(Call_gcd(dictEq_0_loop, dictEuclideanRing_1_loop), b_4, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEuclideanRing_1_loop, "mod"), a_3, b_4))
 }
 end_branch_1:
 return __t1
 })
 }
+}
+
+func Call_lcm(dictEq_0_loop gopurs_runtime.Value, dictEuclideanRing_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
+_ = dictEq_0
+var dictEuclideanRing_1 gopurs_runtime.Value = dictEuclideanRing_1_loop
+_ = dictEuclideanRing_1
+Semiring0_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEuclideanRing_1_loop, "CommutativeRing0"), gopurs_runtime.Value{}), "Ring0"), gopurs_runtime.Value{}), "Semiring0"), gopurs_runtime.Value{})
+_ = Semiring0_2_0
+zero_3_1 := gopurs_runtime.RecordGet(Semiring0_2_0, "zero")
+_ = zero_3_1
+gcd2_4_2 := Call_gcd(dictEq_0_loop, dictEuclideanRing_1_loop)
+_ = gcd2_4_2
+return gopurs_runtime.Func2(func(a_5 gopurs_runtime.Value, b_6 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t3 gopurs_runtime.Value
+{
+if gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0_loop, "eq"), a_5, zero_3_1).IntVal != 0 || gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0_loop, "eq"), b_6, zero_3_1).IntVal != 0 {
+__t3 = zero_3_1
+goto end_branch_3
+} else {
+
+}
+}
+{
+__t3 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEuclideanRing_1_loop, "div"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Semiring0_2_0, "mul"), a_5, b_6), gopurs_runtime.Apply2(gcd2_4_2, a_5, b_6))
+}
+end_branch_3:
+return __t3
+})
 }
 
 func Get_intDegree() gopurs_runtime.Value {

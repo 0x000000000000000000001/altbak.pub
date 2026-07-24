@@ -9,8 +9,12 @@ var StateR gopurs_runtime.Value
 var once_StateR sync.Once
 func Get_StateR() gopurs_runtime.Value {
 	once_StateR.Do(func() {
-		StateR = gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return x_0
+		StateR = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var x_0 gopurs_runtime.Value = x_0_loop
+_ = x_0
+return x_0_loop
+}()
 })
 	})
 	return StateR
@@ -20,8 +24,12 @@ var StateL gopurs_runtime.Value
 var once_StateL sync.Once
 func Get_StateL() gopurs_runtime.Value {
 	once_StateL.Do(func() {
-		StateL = gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return x_0
+		StateL = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var x_0 gopurs_runtime.Value = x_0_loop
+_ = x_0
+return x_0_loop
+}()
 })
 	})
 	return StateL
@@ -31,8 +39,12 @@ var stateR gopurs_runtime.Value
 var once_stateR sync.Once
 func Get_stateR() gopurs_runtime.Value {
 	once_stateR.Do(func() {
-		stateR = gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return v_0
+		stateR = gopurs_runtime.Func(func(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var v_0 gopurs_runtime.Value = v_0_loop
+_ = v_0
+return v_0_loop
+}()
 })
 	})
 	return stateR
@@ -42,8 +54,12 @@ var stateL gopurs_runtime.Value
 var once_stateL sync.Once
 func Get_stateL() gopurs_runtime.Value {
 	once_stateL.Do(func() {
-		stateL = gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return v_0
+		stateL = gopurs_runtime.Func(func(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var v_0 gopurs_runtime.Value = v_0_loop
+_ = v_0
+return v_0_loop
+}()
 })
 	})
 	return stateL

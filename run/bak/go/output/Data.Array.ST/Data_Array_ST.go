@@ -21,8 +21,12 @@ var unshift gopurs_runtime.Value
 var once_unshift sync.Once
 func Get_unshift() gopurs_runtime.Value {
 	once_unshift.Do(func() {
-		unshift = gopurs_runtime.Func(func(a_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(pkg_Control_Monad_ST_Uncurried.Get_runSTFn2(), Get_unshiftAllImpl(), gopurs_runtime.Array([]gopurs_runtime.Value{a_0}))
+		unshift = gopurs_runtime.Func(func(a_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var a_0 gopurs_runtime.Value = a_0_loop
+_ = a_0
+return gopurs_runtime.Apply2(pkg_Control_Monad_ST_Uncurried.Get_runSTFn2(), Get_unshiftAllImpl(), gopurs_runtime.Array([]gopurs_runtime.Value{a_0_loop}))
+}()
 })
 	})
 	return unshift
@@ -68,17 +72,7 @@ var withArray gopurs_runtime.Value
 var once_withArray sync.Once
 func Get_withArray() gopurs_runtime.Value {
 	once_withArray.Do(func() {
-		withArray = gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, xs_1 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_2_0 := gopurs_runtime.Apply(Get_thaw(), xs_1)
-_ = __local_var_2_0
-return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-result_3_1 := gopurs_runtime.Apply(__local_var_2_0, gopurs_runtime.Value{})
-_ = result_3_1
-_dollar__unused_4_2 := gopurs_runtime.Apply(gopurs_runtime.Apply(f_0, result_3_1), gopurs_runtime.Value{})
-_ = _dollar__unused_4_2
-return gopurs_runtime.Apply(gopurs_runtime.Apply(Get_unsafeFreeze(), result_3_1), gopurs_runtime.Value{})
-})
-})
+		withArray = gopurs_runtime.Func2(Call_withArray)
 	})
 	return withArray
 }
@@ -96,8 +90,11 @@ var sortBy gopurs_runtime.Value
 var once_sortBy sync.Once
 func Get_sortBy() gopurs_runtime.Value {
 	once_sortBy.Do(func() {
-		sortBy = gopurs_runtime.Func(func(comp_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(pkg_Control_Monad_ST_Uncurried.Get_runSTFn3(), Get_sortByImpl(), comp_0, gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		sortBy = gopurs_runtime.Func(func(comp_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var comp_0 gopurs_runtime.Value = comp_0_loop
+_ = comp_0
+return gopurs_runtime.Apply3(pkg_Control_Monad_ST_Uncurried.Get_runSTFn3(), Get_sortByImpl(), comp_0_loop, gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
 if gopurs_runtime.Bool(v_1.StrVal == "GT").IntVal != 0 {
@@ -129,6 +126,7 @@ __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 end_branch_0:
 return __t0
 }))
+}()
 })
 	})
 	return sortBy
@@ -138,11 +136,7 @@ var sortWith gopurs_runtime.Value
 var once_sortWith sync.Once
 func Get_sortWith() gopurs_runtime.Value {
 	once_sortWith.Do(func() {
-		sortWith = gopurs_runtime.Func2(func(dictOrd_0 gopurs_runtime.Value, f_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_sortBy(), gopurs_runtime.Func2(func(x_2 gopurs_runtime.Value, y_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), gopurs_runtime.Apply(f_1, x_2), gopurs_runtime.Apply(f_1, y_3))
-}))
-})
+		sortWith = gopurs_runtime.Func2(Call_sortWith)
 	})
 	return sortWith
 }
@@ -151,8 +145,12 @@ var sort gopurs_runtime.Value
 var once_sort sync.Once
 func Get_sort() gopurs_runtime.Value {
 	once_sort.Do(func() {
-		sort = gopurs_runtime.Func(func(dictOrd_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_sortBy(), gopurs_runtime.RecordGet(dictOrd_0, "compare"))
+		sort = gopurs_runtime.Func(func(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
+_ = dictOrd_0
+return gopurs_runtime.Apply(Get_sortBy(), gopurs_runtime.RecordGet(dictOrd_0_loop, "compare"))
+}()
 })
 	})
 	return sort
@@ -171,12 +169,16 @@ var run gopurs_runtime.Value
 var once_run sync.Once
 func Get_run() gopurs_runtime.Value {
 	once_run.Do(func() {
-		run = gopurs_runtime.Func(func(st_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		run = gopurs_runtime.Func(func(st_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var st_0 gopurs_runtime.Value = st_0_loop
+_ = st_0
 return gopurs_runtime.Apply(pkg_Control_Monad_ST_Internal.Get_run(), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_1_0 := gopurs_runtime.Apply(st_0, gopurs_runtime.Value{})
+__local_var_1_0 := gopurs_runtime.Apply(st_0_loop, gopurs_runtime.Value{})
 _ = __local_var_1_0
 return gopurs_runtime.Apply(gopurs_runtime.Apply(Get_unsafeFreeze(), __local_var_1_0), gopurs_runtime.Value{})
 }))
+}()
 })
 	})
 	return run
@@ -231,38 +233,7 @@ var modify gopurs_runtime.Value
 var once_modify sync.Once
 func Get_modify() gopurs_runtime.Value {
 	once_modify.Do(func() {
-		modify = gopurs_runtime.Func3(func(i_0 gopurs_runtime.Value, f_1 gopurs_runtime.Value, xs_2 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_3_0 := gopurs_runtime.Apply2(Get_peek(), i_0, xs_2)
-_ = __local_var_3_0
-return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-entry_4_1 := gopurs_runtime.Apply(__local_var_3_0, gopurs_runtime.Value{})
-_ = entry_4_1
-var __t2 gopurs_runtime.Value
-{
-if gopurs_runtime.Bool(entry_4_1.StrVal == "Just").IntVal != 0 {
-__t2 = gopurs_runtime.Apply3(Get_poke(), i_0, gopurs_runtime.Apply(f_1, (*[1024]gopurs_runtime.Value)(entry_4_1.UnsafePtr)[0]), xs_2)
-goto end_branch_2
-} else {
-
-}
-}
-{
-if gopurs_runtime.Bool(entry_4_1.StrVal == "Nothing").IntVal != 0 {
-__t2 = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(false)
-})
-goto end_branch_2
-} else {
-
-}
-}
-{
-__t2 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
-}
-end_branch_2:
-return gopurs_runtime.Apply(__t2, gopurs_runtime.Value{})
-})
-})
+		modify = gopurs_runtime.Func3(Call_modify)
 	})
 	return modify
 }
@@ -294,7 +265,70 @@ func Get_clone() gopurs_runtime.Value {
 	return clone
 }
 
+func Call_withArray(f_0_loop gopurs_runtime.Value, xs_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var f_0 gopurs_runtime.Value = f_0_loop
+_ = f_0
+var xs_1 gopurs_runtime.Value = xs_1_loop
+_ = xs_1
+__local_var_2_0 := gopurs_runtime.Apply(Get_thaw(), xs_1_loop)
+_ = __local_var_2_0
+return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+result_3_1 := gopurs_runtime.Apply(__local_var_2_0, gopurs_runtime.Value{})
+_ = result_3_1
+_dollar__unused_4_2 := gopurs_runtime.Apply(gopurs_runtime.Apply(f_0_loop, result_3_1), gopurs_runtime.Value{})
+_ = _dollar__unused_4_2
+return gopurs_runtime.Apply(gopurs_runtime.Apply(Get_unsafeFreeze(), result_3_1), gopurs_runtime.Value{})
+})
+}
 
+func Call_sortWith(dictOrd_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
+_ = dictOrd_0
+var f_1 gopurs_runtime.Value = f_1_loop
+_ = f_1
+return gopurs_runtime.Apply(Get_sortBy(), gopurs_runtime.Func2(func(x_2 gopurs_runtime.Value, y_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0_loop, "compare"), gopurs_runtime.Apply(f_1_loop, x_2), gopurs_runtime.Apply(f_1_loop, y_3))
+}))
+}
+
+func Call_modify(i_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value, xs_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var i_0 gopurs_runtime.Value = i_0_loop
+_ = i_0
+var f_1 gopurs_runtime.Value = f_1_loop
+_ = f_1
+var xs_2 gopurs_runtime.Value = xs_2_loop
+_ = xs_2
+__local_var_3_0 := gopurs_runtime.Apply2(Get_peek(), i_0_loop, xs_2_loop)
+_ = __local_var_3_0
+return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+entry_4_1 := gopurs_runtime.Apply(__local_var_3_0, gopurs_runtime.Value{})
+_ = entry_4_1
+var __t2 gopurs_runtime.Value
+{
+if gopurs_runtime.Bool(entry_4_1.StrVal == "Just").IntVal != 0 {
+__t2 = gopurs_runtime.Apply3(Get_poke(), i_0_loop, gopurs_runtime.Apply(f_1_loop, (*[1024]gopurs_runtime.Value)(entry_4_1.UnsafePtr)[0]), xs_2_loop)
+goto end_branch_2
+} else {
+
+}
+}
+{
+if gopurs_runtime.Bool(entry_4_1.StrVal == "Nothing").IntVal != 0 {
+__t2 = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Bool(false)
+})
+goto end_branch_2
+} else {
+
+}
+}
+{
+__t2 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_2:
+return gopurs_runtime.Apply(__t2, gopurs_runtime.Value{})
+})
+}
 
 func Get_cloneImpl() gopurs_runtime.Value {
 	return _Gopurs_CloneImpl

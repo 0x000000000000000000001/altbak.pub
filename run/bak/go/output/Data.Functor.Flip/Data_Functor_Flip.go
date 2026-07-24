@@ -10,8 +10,12 @@ var Flip gopurs_runtime.Value
 var once_Flip sync.Once
 func Get_Flip() gopurs_runtime.Value {
 	once_Flip.Do(func() {
-		Flip = gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return x_0
+		Flip = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var x_0 gopurs_runtime.Value = x_0_loop
+_ = x_0
+return x_0_loop
+}()
 })
 	})
 	return Flip
@@ -21,10 +25,14 @@ var showFlip gopurs_runtime.Value
 var once_showFlip sync.Once
 func Get_showFlip() gopurs_runtime.Value {
 	once_showFlip.Do(func() {
-		showFlip = gopurs_runtime.Func(func(dictShow_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		showFlip = gopurs_runtime.Func(func(dictShow_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictShow_0 gopurs_runtime.Value = dictShow_0_loop
+_ = dictShow_0
 return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str("(Flip " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), v_1).StrVal + ")")
+return gopurs_runtime.Str("(Flip " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0_loop, "show"), v_1).StrVal + ")")
 }))
+}()
 })
 	})
 	return showFlip
@@ -34,10 +42,14 @@ var semigroupoidFlip gopurs_runtime.Value
 var once_semigroupoidFlip sync.Once
 func Get_semigroupoidFlip() gopurs_runtime.Value {
 	once_semigroupoidFlip.Do(func() {
-		semigroupoidFlip = gopurs_runtime.Func(func(dictSemigroupoid_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		semigroupoidFlip = gopurs_runtime.Func(func(dictSemigroupoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictSemigroupoid_0 gopurs_runtime.Value = dictSemigroupoid_0_loop
+_ = dictSemigroupoid_0
 return gopurs_runtime.RecordDict1("compose", gopurs_runtime.Func2(func(v_1 gopurs_runtime.Value, v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroupoid_0, "compose"), v1_2, v_1)
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroupoid_0_loop, "compose"), v1_2, v_1)
 }))
+}()
 })
 	})
 	return semigroupoidFlip
@@ -47,8 +59,12 @@ var ordFlip gopurs_runtime.Value
 var once_ordFlip sync.Once
 func Get_ordFlip() gopurs_runtime.Value {
 	once_ordFlip.Do(func() {
-		ordFlip = gopurs_runtime.Func(func(dictOrd_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return dictOrd_0
+		ordFlip = gopurs_runtime.Func(func(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
+_ = dictOrd_0
+return dictOrd_0_loop
+}()
 })
 	})
 	return ordFlip
@@ -69,10 +85,14 @@ var functorFlip gopurs_runtime.Value
 var once_functorFlip sync.Once
 func Get_functorFlip() gopurs_runtime.Value {
 	once_functorFlip.Do(func() {
-		functorFlip = gopurs_runtime.Func(func(dictBifunctor_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		functorFlip = gopurs_runtime.Func(func(dictBifunctor_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictBifunctor_0 gopurs_runtime.Value = dictBifunctor_0_loop
+_ = dictBifunctor_0
 return gopurs_runtime.RecordDict1("map", gopurs_runtime.Func2(func(f_1 gopurs_runtime.Value, v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictBifunctor_0, "bimap"), f_1, gopurs_runtime.RecordGet(pkg_Control_Category.Get_categoryFn(), "identity"), v_2)
+return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictBifunctor_0_loop, "bimap"), f_1, gopurs_runtime.RecordGet(pkg_Control_Category.Get_categoryFn(), "identity"), v_2)
 }))
+}()
 })
 	})
 	return functorFlip
@@ -82,8 +102,12 @@ var eqFlip gopurs_runtime.Value
 var once_eqFlip sync.Once
 func Get_eqFlip() gopurs_runtime.Value {
 	once_eqFlip.Do(func() {
-		eqFlip = gopurs_runtime.Func(func(dictEq_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return dictEq_0
+		eqFlip = gopurs_runtime.Func(func(dictEq_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
+_ = dictEq_0
+return dictEq_0_loop
+}()
 })
 	})
 	return eqFlip
@@ -93,10 +117,14 @@ var contravariantFlip gopurs_runtime.Value
 var once_contravariantFlip sync.Once
 func Get_contravariantFlip() gopurs_runtime.Value {
 	once_contravariantFlip.Do(func() {
-		contravariantFlip = gopurs_runtime.Func(func(dictProfunctor_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		contravariantFlip = gopurs_runtime.Func(func(dictProfunctor_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictProfunctor_0 gopurs_runtime.Value = dictProfunctor_0_loop
+_ = dictProfunctor_0
 return gopurs_runtime.RecordDict1("cmap", gopurs_runtime.Func2(func(f_1 gopurs_runtime.Value, v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictProfunctor_0, "dimap"), f_1, gopurs_runtime.RecordGet(pkg_Control_Category.Get_categoryFn(), "identity"), v_2)
+return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictProfunctor_0_loop, "dimap"), f_1, gopurs_runtime.RecordGet(pkg_Control_Category.Get_categoryFn(), "identity"), v_2)
 }))
+}()
 })
 	})
 	return contravariantFlip
@@ -106,16 +134,20 @@ var categoryFlip gopurs_runtime.Value
 var once_categoryFlip sync.Once
 func Get_categoryFlip() gopurs_runtime.Value {
 	once_categoryFlip.Do(func() {
-		categoryFlip = gopurs_runtime.Func(func(dictCategory_0 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictCategory_0, "Semigroupoid0"), gopurs_runtime.Value{})
+		categoryFlip = gopurs_runtime.Func(func(dictCategory_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictCategory_0 gopurs_runtime.Value = dictCategory_0_loop
+_ = dictCategory_0
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictCategory_0_loop, "Semigroupoid0"), gopurs_runtime.Value{})
 _ = __local_var_1_0
 semigroupoidFlip1_2_1 := gopurs_runtime.RecordDict1("compose", gopurs_runtime.Func2(func(v_2 gopurs_runtime.Value, v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "compose"), v1_3, v_2)
 }))
 _ = semigroupoidFlip1_2_1
-return gopurs_runtime.RecordDict2("identity", "Semigroupoid0", gopurs_runtime.RecordGet(dictCategory_0, "identity"), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict2("identity", "Semigroupoid0", gopurs_runtime.RecordGet(dictCategory_0_loop, "identity"), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return semigroupoidFlip1_2_1
 }))
+}()
 })
 	})
 	return categoryFlip
@@ -125,10 +157,14 @@ var bifunctorFlip gopurs_runtime.Value
 var once_bifunctorFlip sync.Once
 func Get_bifunctorFlip() gopurs_runtime.Value {
 	once_bifunctorFlip.Do(func() {
-		bifunctorFlip = gopurs_runtime.Func(func(dictBifunctor_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		bifunctorFlip = gopurs_runtime.Func(func(dictBifunctor_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictBifunctor_0 gopurs_runtime.Value = dictBifunctor_0_loop
+_ = dictBifunctor_0
 return gopurs_runtime.RecordDict1("bimap", gopurs_runtime.Func3(func(f_1 gopurs_runtime.Value, g_2 gopurs_runtime.Value, v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictBifunctor_0, "bimap"), g_2, f_1, v_3)
+return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictBifunctor_0_loop, "bimap"), g_2, f_1, v_3)
 }))
+}()
 })
 	})
 	return bifunctorFlip
@@ -138,18 +174,22 @@ var biapplyFlip gopurs_runtime.Value
 var once_biapplyFlip sync.Once
 func Get_biapplyFlip() gopurs_runtime.Value {
 	once_biapplyFlip.Do(func() {
-		biapplyFlip = gopurs_runtime.Func(func(dictBiapply_0 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBiapply_0, "Bifunctor0"), gopurs_runtime.Value{})
+		biapplyFlip = gopurs_runtime.Func(func(dictBiapply_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictBiapply_0 gopurs_runtime.Value = dictBiapply_0_loop
+_ = dictBiapply_0
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBiapply_0_loop, "Bifunctor0"), gopurs_runtime.Value{})
 _ = __local_var_1_0
 bifunctorFlip1_2_1 := gopurs_runtime.RecordDict1("bimap", gopurs_runtime.Func3(func(f_2 gopurs_runtime.Value, g_3 gopurs_runtime.Value, v_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_1_0, "bimap"), g_3, f_2, v_4)
 }))
 _ = bifunctorFlip1_2_1
 return gopurs_runtime.RecordDict2("biapply", "Bifunctor0", gopurs_runtime.Func2(func(v_3 gopurs_runtime.Value, v1_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBiapply_0, "biapply"), v_3, v1_4)
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBiapply_0_loop, "biapply"), v_3, v1_4)
 }), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return bifunctorFlip1_2_1
 }))
+}()
 })
 	})
 	return biapplyFlip
@@ -159,8 +199,11 @@ var biapplicativeFlip gopurs_runtime.Value
 var once_biapplicativeFlip sync.Once
 func Get_biapplicativeFlip() gopurs_runtime.Value {
 	once_biapplicativeFlip.Do(func() {
-		biapplicativeFlip = gopurs_runtime.Func(func(dictBiapplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBiapplicative_0, "Biapply0"), gopurs_runtime.Value{})
+		biapplicativeFlip = gopurs_runtime.Func(func(dictBiapplicative_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictBiapplicative_0 gopurs_runtime.Value = dictBiapplicative_0_loop
+_ = dictBiapplicative_0
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBiapplicative_0_loop, "Biapply0"), gopurs_runtime.Value{})
 _ = __local_var_1_0
 __local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_0, "Bifunctor0"), gopurs_runtime.Value{})
 _ = __local_var_2_1
@@ -175,10 +218,11 @@ return bifunctorFlip1_3_3
 }))
 _ = biapplyFlip1_3_2
 return gopurs_runtime.RecordDict2("bipure", "Biapply0", gopurs_runtime.Func2(func(a_4 gopurs_runtime.Value, b_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBiapplicative_0, "bipure"), b_5, a_4)
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBiapplicative_0_loop, "bipure"), b_5, a_4)
 }), gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return biapplyFlip1_3_2
 }))
+}()
 })
 	})
 	return biapplicativeFlip

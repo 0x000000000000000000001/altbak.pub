@@ -9,8 +9,12 @@ var Equivalence gopurs_runtime.Value
 var once_Equivalence sync.Once
 func Get_Equivalence() gopurs_runtime.Value {
 	once_Equivalence.Do(func() {
-		Equivalence = gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return x_0
+		Equivalence = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var x_0 gopurs_runtime.Value = x_0_loop
+_ = x_0
+return x_0_loop
+}()
 })
 	})
 	return Equivalence
@@ -55,8 +59,12 @@ var defaultEquivalence gopurs_runtime.Value
 var once_defaultEquivalence sync.Once
 func Get_defaultEquivalence() gopurs_runtime.Value {
 	once_defaultEquivalence.Do(func() {
-		defaultEquivalence = gopurs_runtime.Func(func(dictEq_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(dictEq_0, "eq")
+		defaultEquivalence = gopurs_runtime.Func(func(dictEq_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
+_ = dictEq_0
+return gopurs_runtime.RecordGet(dictEq_0_loop, "eq")
+}()
 })
 	})
 	return defaultEquivalence
@@ -77,13 +85,19 @@ var comparisonEquivalence gopurs_runtime.Value
 var once_comparisonEquivalence sync.Once
 func Get_comparisonEquivalence() gopurs_runtime.Value {
 	once_comparisonEquivalence.Do(func() {
-		comparisonEquivalence = gopurs_runtime.Func3(func(v_0 gopurs_runtime.Value, a_1 gopurs_runtime.Value, b_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(gopurs_runtime.Apply2(v_0, a_1, b_2).StrVal == "EQ")
-})
+		comparisonEquivalence = gopurs_runtime.Func3(Call_comparisonEquivalence)
 	})
 	return comparisonEquivalence
 }
 
-
+func Call_comparisonEquivalence(v_0_loop gopurs_runtime.Value, a_1_loop gopurs_runtime.Value, b_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var v_0 gopurs_runtime.Value = v_0_loop
+_ = v_0
+var a_1 gopurs_runtime.Value = a_1_loop
+_ = a_1
+var b_2 gopurs_runtime.Value = b_2_loop
+_ = b_2
+return gopurs_runtime.Bool(gopurs_runtime.Apply2(v_0_loop, a_1_loop, b_2_loop).StrVal == "EQ")
+}
 
 

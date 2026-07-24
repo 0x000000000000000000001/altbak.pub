@@ -12,8 +12,12 @@ var mempty_ gopurs_runtime.Value
 var once_mempty_ sync.Once
 func Get_mempty_() gopurs_runtime.Value {
 	once_mempty_.Do(func() {
-		mempty_ = gopurs_runtime.Func(func(dict_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(dict_0, "mempty_")
+		mempty_ = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0_loop, "mempty_")
+}()
 })
 	})
 	return mempty_
@@ -23,8 +27,12 @@ var mappend_ gopurs_runtime.Value
 var once_mappend_ sync.Once
 func Get_mappend_() gopurs_runtime.Value {
 	once_mappend_.Do(func() {
-		mappend_ = gopurs_runtime.Func(func(dict_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(dict_0, "mappend_")
+		mappend_ = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0_loop, "mappend_")
+}()
 })
 	})
 	return mappend_
@@ -34,8 +42,11 @@ var polyLoop gopurs_runtime.Value
 var once_polyLoop sync.Once
 func Get_polyLoop() gopurs_runtime.Value {
 	once_polyLoop.Do(func() {
-		polyLoop = gopurs_runtime.Func(func(dictMonoidish_0 gopurs_runtime.Value) gopurs_runtime.Value {
-mempty_1_1_0 := gopurs_runtime.RecordGet(dictMonoidish_0, "mempty_")
+		polyLoop = gopurs_runtime.Func(func(dictMonoidish_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictMonoidish_0 gopurs_runtime.Value = dictMonoidish_0_loop
+_ = dictMonoidish_0
+mempty_1_1_0 := gopurs_runtime.RecordGet(dictMonoidish_0_loop, "mempty_")
 _ = mempty_1_1_0
 return gopurs_runtime.Func2(func(n_init_2 gopurs_runtime.Value, acc_init_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var go__4_1 gopurs_runtime.Value
@@ -60,7 +71,7 @@ goto end_branch_2
 }
 {
 v_5_loop = gopurs_runtime.Int(v_5.IntVal - 1)
-v1_6_loop = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonoidish_0, "mappend_"), v1_6, mempty_1_1_0)
+v1_6_loop = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonoidish_0_loop, "mappend_"), v1_6, mempty_1_1_0)
 continue go__4_1
 __t2 = gopurs_runtime.Value{}
 }
@@ -72,6 +83,7 @@ return __t2
 })
 return gopurs_runtime.Apply2(go__4_1, n_init_2, acc_init_3)
 })
+}()
 })
 	})
 	return polyLoop

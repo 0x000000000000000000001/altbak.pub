@@ -4,28 +4,31 @@ import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
 	pkg_Data_Show "gopurs/output/Data.Show"
-	pkg_Data_Ord "gopurs/output/Data.Ord"
 	pkg_Data_Foldable "gopurs/output/Data.Foldable"
 	pkg_Control_Category "gopurs/output/Control.Category"
 	pkg_Data_Bifoldable "gopurs/output/Data.Bifoldable"
+	pkg_Data_Ord "gopurs/output/Data.Ord"
 )
 
 var show gopurs_runtime.Value
 var once_show sync.Once
 func Get_show() gopurs_runtime.Value {
 	once_show.Do(func() {
-		show = gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		show = gopurs_runtime.Func(func(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var v_0 gopurs_runtime.Value = v_0_loop
+_ = v_0
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v_0.StrVal == "Just").IntVal != 0 {
-__t0 = gopurs_runtime.Str("(Just " + gopurs_runtime.Apply(pkg_Data_Show.Get_showIntImpl(), (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0]).StrVal + ")")
+if gopurs_runtime.Bool(v_0_loop.StrVal == "Just").IntVal != 0 {
+__t0 = gopurs_runtime.Str("(Just " + gopurs_runtime.Apply(pkg_Data_Show.Get_showIntImpl(), (*[1024]gopurs_runtime.Value)(v_0_loop.UnsafePtr)[0]).StrVal + ")")
 goto end_branch_0
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(v_0.StrVal == "Nothing").IntVal != 0 {
+if gopurs_runtime.Bool(v_0_loop.StrVal == "Nothing").IntVal != 0 {
 __t0 = gopurs_runtime.Str("Nothing")
 goto end_branch_0
 } else {
@@ -37,6 +40,7 @@ __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_0:
 return __t0
+}()
 })
 	})
 	return show
@@ -46,51 +50,7 @@ var compare gopurs_runtime.Value
 var once_compare sync.Once
 func Get_compare() gopurs_runtime.Value {
 	once_compare.Do(func() {
-		compare = gopurs_runtime.Func2(func(x_0 gopurs_runtime.Value, y_1 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t0 gopurs_runtime.Value
-{
-if gopurs_runtime.Bool(x_0.StrVal == "Nothing").IntVal != 0 {
-var __t1 gopurs_runtime.Value
-{
-if gopurs_runtime.Bool(y_1.StrVal == "Nothing").IntVal != 0 {
-__t1 = gopurs_runtime.Constructor0("EQ")
-goto end_branch_1
-} else {
-
-}
-}
-{
-__t1 = gopurs_runtime.Constructor0("LT")
-}
-end_branch_1:
-__t0 = __t1
-goto end_branch_0
-} else {
-
-}
-}
-{
-if gopurs_runtime.Bool(y_1.StrVal == "Nothing").IntVal != 0 {
-__t0 = gopurs_runtime.Constructor0("GT")
-goto end_branch_0
-} else {
-
-}
-}
-{
-if gopurs_runtime.Bool(x_0.StrVal == "Just").IntVal != 0 && gopurs_runtime.Bool(y_1.StrVal == "Just").IntVal != 0 {
-__t0 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ord.Get_ordInt(), "compare"), (*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0])
-goto end_branch_0
-} else {
-
-}
-}
-{
-__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
-}
-end_branch_0:
-return __t0
-})
+		compare = gopurs_runtime.Func2(Call_compare)
 	})
 	return compare
 }
@@ -162,48 +122,7 @@ var showInterval gopurs_runtime.Value
 var once_showInterval sync.Once
 func Get_showInterval() gopurs_runtime.Value {
 	once_showInterval.Do(func() {
-		showInterval = gopurs_runtime.Func2(func(dictShow_0 gopurs_runtime.Value, dictShow1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t0 gopurs_runtime.Value
-{
-if gopurs_runtime.Bool(v_2.StrVal == "StartEnd").IntVal != 0 {
-__t0 = gopurs_runtime.Str("(StartEnd " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow1_1, "show"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0]).StrVal + " " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow1_1, "show"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[1]).StrVal + ")")
-goto end_branch_0
-} else {
-
-}
-}
-{
-if gopurs_runtime.Bool(v_2.StrVal == "DurationEnd").IntVal != 0 {
-__t0 = gopurs_runtime.Str("(DurationEnd " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0]).StrVal + " " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow1_1, "show"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[1]).StrVal + ")")
-goto end_branch_0
-} else {
-
-}
-}
-{
-if gopurs_runtime.Bool(v_2.StrVal == "StartDuration").IntVal != 0 {
-__t0 = gopurs_runtime.Str("(StartDuration " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow1_1, "show"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0]).StrVal + " " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[1]).StrVal + ")")
-goto end_branch_0
-} else {
-
-}
-}
-{
-if gopurs_runtime.Bool(v_2.StrVal == "DurationOnly").IntVal != 0 {
-__t0 = gopurs_runtime.Str("(DurationOnly " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0]).StrVal + ")")
-goto end_branch_0
-} else {
-
-}
-}
-{
-__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
-}
-end_branch_0:
-return __t0
-}))
-})
+		showInterval = gopurs_runtime.Func2(Call_showInterval)
 	})
 	return showInterval
 }
@@ -212,11 +131,7 @@ var showRecurringInterval gopurs_runtime.Value
 var once_showRecurringInterval sync.Once
 func Get_showRecurringInterval() gopurs_runtime.Value {
 	once_showRecurringInterval.Do(func() {
-		showRecurringInterval = gopurs_runtime.Func2(func(dictShow_0 gopurs_runtime.Value, dictShow1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str("(RecurringInterval " + gopurs_runtime.Apply(Get_show(), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0]).StrVal + " " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply2(Get_showInterval(), dictShow_0, dictShow1_1), "show"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[1]).StrVal + ")")
-}))
-})
+		showRecurringInterval = gopurs_runtime.Func2(Call_showRecurringInterval)
 	})
 	return showRecurringInterval
 }
@@ -225,9 +140,7 @@ var over gopurs_runtime.Value
 var once_over sync.Once
 func Get_over() gopurs_runtime.Value {
 	once_over.Do(func() {
-		over = gopurs_runtime.Func3(func(dictFunctor_0 gopurs_runtime.Value, f_1 gopurs_runtime.Value, v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), gopurs_runtime.Apply(Get_RecurringInterval(), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0]), gopurs_runtime.Apply(f_1, (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[1]))
-})
+		over = gopurs_runtime.Func3(Call_over)
 	})
 	return over
 }
@@ -340,40 +253,7 @@ var eqInterval gopurs_runtime.Value
 var once_eqInterval sync.Once
 func Get_eqInterval() gopurs_runtime.Value {
 	once_eqInterval.Do(func() {
-		eqInterval = gopurs_runtime.Func2(func(dictEq_0 gopurs_runtime.Value, dictEq1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func2(func(x_2 gopurs_runtime.Value, y_3 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t0 gopurs_runtime.Value
-{
-if gopurs_runtime.Bool(x_2.StrVal == "StartEnd").IntVal != 0 {
-__t0 = gopurs_runtime.Bool(gopurs_runtime.Bool(y_3.StrVal == "StartEnd").IntVal != 0 && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq1_1, "eq"), (*[1024]gopurs_runtime.Value)(x_2.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(y_3.UnsafePtr)[0]).IntVal != 0 && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq1_1, "eq"), (*[1024]gopurs_runtime.Value)(x_2.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(y_3.UnsafePtr)[1]).IntVal != 0)
-goto end_branch_0
-} else {
-
-}
-}
-{
-if gopurs_runtime.Bool(x_2.StrVal == "DurationEnd").IntVal != 0 {
-__t0 = gopurs_runtime.Bool(gopurs_runtime.Bool(y_3.StrVal == "DurationEnd").IntVal != 0 && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), (*[1024]gopurs_runtime.Value)(x_2.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(y_3.UnsafePtr)[0]).IntVal != 0 && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq1_1, "eq"), (*[1024]gopurs_runtime.Value)(x_2.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(y_3.UnsafePtr)[1]).IntVal != 0)
-goto end_branch_0
-} else {
-
-}
-}
-{
-if gopurs_runtime.Bool(x_2.StrVal == "StartDuration").IntVal != 0 {
-__t0 = gopurs_runtime.Bool(gopurs_runtime.Bool(y_3.StrVal == "StartDuration").IntVal != 0 && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq1_1, "eq"), (*[1024]gopurs_runtime.Value)(x_2.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(y_3.UnsafePtr)[0]).IntVal != 0 && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), (*[1024]gopurs_runtime.Value)(x_2.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(y_3.UnsafePtr)[1]).IntVal != 0)
-goto end_branch_0
-} else {
-
-}
-}
-{
-__t0 = gopurs_runtime.Bool(gopurs_runtime.Bool(x_2.StrVal == "DurationOnly").IntVal != 0 && gopurs_runtime.Bool(y_3.StrVal == "DurationOnly").IntVal != 0 && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), (*[1024]gopurs_runtime.Value)(x_2.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(y_3.UnsafePtr)[0]).IntVal != 0)
-}
-end_branch_0:
-return __t0
-}))
-})
+		eqInterval = gopurs_runtime.Func2(Call_eqInterval)
 	})
 	return eqInterval
 }
@@ -382,24 +262,7 @@ var eqRecurringInterval gopurs_runtime.Value
 var once_eqRecurringInterval sync.Once
 func Get_eqRecurringInterval() gopurs_runtime.Value {
 	once_eqRecurringInterval.Do(func() {
-		eqRecurringInterval = gopurs_runtime.Func2(func(dictEq_0 gopurs_runtime.Value, dictEq1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func2(func(x_2 gopurs_runtime.Value, y_3 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t0 gopurs_runtime.Value
-{
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(x_2.UnsafePtr)[0].StrVal == "Nothing").IntVal != 0 {
-__t0 = gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_3.UnsafePtr)[0].StrVal == "Nothing")
-goto end_branch_0
-} else {
-
-}
-}
-{
-__t0 = gopurs_runtime.Bool(gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(x_2.UnsafePtr)[0].StrVal == "Just").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_3.UnsafePtr)[0].StrVal == "Just").IntVal != 0 && (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(x_2.UnsafePtr)[0].UnsafePtr)[0].IntVal == (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_3.UnsafePtr)[0].UnsafePtr)[0].IntVal)
-}
-end_branch_0:
-return gopurs_runtime.Bool(__t0.IntVal != 0 && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply2(Get_eqInterval(), dictEq_0, dictEq1_1), "eq"), (*[1024]gopurs_runtime.Value)(x_2.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(y_3.UnsafePtr)[1]).IntVal != 0)
-}))
-})
+		eqRecurringInterval = gopurs_runtime.Func2(Call_eqRecurringInterval)
 	})
 	return eqRecurringInterval
 }
@@ -408,8 +271,11 @@ var ordInterval gopurs_runtime.Value
 var once_ordInterval sync.Once
 func Get_ordInterval() gopurs_runtime.Value {
 	once_ordInterval.Do(func() {
-		ordInterval = gopurs_runtime.Func(func(dictOrd_0 gopurs_runtime.Value) gopurs_runtime.Value {
-eqInterval1_1_0 := gopurs_runtime.Apply(Get_eqInterval(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd_0, "Eq0"), gopurs_runtime.Value{}))
+		ordInterval = gopurs_runtime.Func(func(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
+_ = dictOrd_0
+eqInterval1_1_0 := gopurs_runtime.Apply(Get_eqInterval(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd_0_loop, "Eq0"), gopurs_runtime.Value{}))
 _ = eqInterval1_1_0
 return gopurs_runtime.Func(func(dictOrd1_2 gopurs_runtime.Value) gopurs_runtime.Value {
 eqInterval2_3_1 := gopurs_runtime.Apply(eqInterval1_1_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd1_2, "Eq0"), gopurs_runtime.Value{}))
@@ -473,7 +339,7 @@ if gopurs_runtime.Bool(x_4.StrVal == "DurationEnd").IntVal != 0 {
 var __t6 gopurs_runtime.Value
 {
 if gopurs_runtime.Bool(y_5.StrVal == "DurationEnd").IntVal != 0 {
-v_6_7 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), (*[1024]gopurs_runtime.Value)(x_4.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(y_5.UnsafePtr)[0])
+v_6_7 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0_loop, "compare"), (*[1024]gopurs_runtime.Value)(x_4.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(y_5.UnsafePtr)[0])
 _ = v_6_7
 var __t8 gopurs_runtime.Value
 {
@@ -545,7 +411,7 @@ goto end_branch_11
 }
 }
 {
-__t11 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), (*[1024]gopurs_runtime.Value)(x_4.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(y_5.UnsafePtr)[1])
+__t11 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0_loop, "compare"), (*[1024]gopurs_runtime.Value)(x_4.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(y_5.UnsafePtr)[1])
 }
 end_branch_11:
 __t9 = __t11
@@ -574,7 +440,7 @@ goto end_branch_2
 }
 {
 if gopurs_runtime.Bool(x_4.StrVal == "DurationOnly").IntVal != 0 && gopurs_runtime.Bool(y_5.StrVal == "DurationOnly").IntVal != 0 {
-__t2 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), (*[1024]gopurs_runtime.Value)(x_4.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(y_5.UnsafePtr)[0])
+__t2 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0_loop, "compare"), (*[1024]gopurs_runtime.Value)(x_4.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(y_5.UnsafePtr)[0])
 goto end_branch_2
 } else {
 
@@ -589,6 +455,7 @@ return __t2
 return eqInterval2_3_1
 }))
 })
+}()
 })
 	})
 	return ordInterval
@@ -598,16 +465,19 @@ var ordRecurringInterval gopurs_runtime.Value
 var once_ordRecurringInterval sync.Once
 func Get_ordRecurringInterval() gopurs_runtime.Value {
 	once_ordRecurringInterval.Do(func() {
-		ordRecurringInterval = gopurs_runtime.Func(func(dictOrd_0 gopurs_runtime.Value) gopurs_runtime.Value {
-ordInterval1_1_0 := gopurs_runtime.Apply(Get_ordInterval(), dictOrd_0)
+		ordRecurringInterval = gopurs_runtime.Func(func(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
+_ = dictOrd_0
+ordInterval1_1_0 := gopurs_runtime.Apply(Get_ordInterval(), dictOrd_0_loop)
 _ = ordInterval1_1_0
-eqRecurringInterval1_2_1 := gopurs_runtime.Apply(Get_eqRecurringInterval(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd_0, "Eq0"), gopurs_runtime.Value{}))
+eqRecurringInterval1_2_1 := gopurs_runtime.Apply(Get_eqRecurringInterval(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd_0_loop, "Eq0"), gopurs_runtime.Value{}))
 _ = eqRecurringInterval1_2_1
 return gopurs_runtime.Func(func(dictOrd1_3 gopurs_runtime.Value) gopurs_runtime.Value {
 eqRecurringInterval2_4_2 := gopurs_runtime.Apply(eqRecurringInterval1_2_1, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd1_3, "Eq0"), gopurs_runtime.Value{}))
 _ = eqRecurringInterval2_4_2
 return gopurs_runtime.RecordDict2("compare", "Eq0", gopurs_runtime.Func2(func(x_5 gopurs_runtime.Value, y_6 gopurs_runtime.Value) gopurs_runtime.Value {
-v_7_3 := gopurs_runtime.Apply2(Get_compare(), (*[1024]gopurs_runtime.Value)(x_5.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(y_6.UnsafePtr)[0])
+v_7_3 := Call_compare((*[1024]gopurs_runtime.Value)(x_5.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(y_6.UnsafePtr)[0])
 _ = v_7_3
 var __t4 gopurs_runtime.Value
 {
@@ -635,6 +505,7 @@ return __t4
 return eqRecurringInterval2_4_2
 }))
 })
+}()
 })
 	})
 	return ordRecurringInterval
@@ -1232,6 +1103,183 @@ return Get_bifoldableRecurringInterval()
 	return bitraversableRecurringInterval
 }
 
+func Call_compare(x_0_loop gopurs_runtime.Value, y_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var x_0 gopurs_runtime.Value = x_0_loop
+_ = x_0
+var y_1 gopurs_runtime.Value = y_1_loop
+_ = y_1
+var __t0 gopurs_runtime.Value
+{
+if gopurs_runtime.Bool(x_0_loop.StrVal == "Nothing").IntVal != 0 {
+var __t1 gopurs_runtime.Value
+{
+if gopurs_runtime.Bool(y_1_loop.StrVal == "Nothing").IntVal != 0 {
+__t1 = gopurs_runtime.Constructor0("EQ")
+goto end_branch_1
+} else {
 
+}
+}
+{
+__t1 = gopurs_runtime.Constructor0("LT")
+}
+end_branch_1:
+__t0 = __t1
+goto end_branch_0
+} else {
+
+}
+}
+{
+if gopurs_runtime.Bool(y_1_loop.StrVal == "Nothing").IntVal != 0 {
+__t0 = gopurs_runtime.Constructor0("GT")
+goto end_branch_0
+} else {
+
+}
+}
+{
+if gopurs_runtime.Bool(x_0_loop.StrVal == "Just").IntVal != 0 && gopurs_runtime.Bool(y_1_loop.StrVal == "Just").IntVal != 0 {
+__t0 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ord.Get_ordInt(), "compare"), (*[1024]gopurs_runtime.Value)(x_0_loop.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(y_1_loop.UnsafePtr)[0])
+goto end_branch_0
+} else {
+
+}
+}
+{
+__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_0:
+return __t0
+}
+
+func Call_showInterval(dictShow_0_loop gopurs_runtime.Value, dictShow1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictShow_0 gopurs_runtime.Value = dictShow_0_loop
+_ = dictShow_0
+var dictShow1_1 gopurs_runtime.Value = dictShow1_1_loop
+_ = dictShow1_1
+return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t0 gopurs_runtime.Value
+{
+if gopurs_runtime.Bool(v_2.StrVal == "StartEnd").IntVal != 0 {
+__t0 = gopurs_runtime.Str("(StartEnd " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow1_1_loop, "show"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0]).StrVal + " " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow1_1_loop, "show"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[1]).StrVal + ")")
+goto end_branch_0
+} else {
+
+}
+}
+{
+if gopurs_runtime.Bool(v_2.StrVal == "DurationEnd").IntVal != 0 {
+__t0 = gopurs_runtime.Str("(DurationEnd " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0_loop, "show"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0]).StrVal + " " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow1_1_loop, "show"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[1]).StrVal + ")")
+goto end_branch_0
+} else {
+
+}
+}
+{
+if gopurs_runtime.Bool(v_2.StrVal == "StartDuration").IntVal != 0 {
+__t0 = gopurs_runtime.Str("(StartDuration " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow1_1_loop, "show"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0]).StrVal + " " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0_loop, "show"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[1]).StrVal + ")")
+goto end_branch_0
+} else {
+
+}
+}
+{
+if gopurs_runtime.Bool(v_2.StrVal == "DurationOnly").IntVal != 0 {
+__t0 = gopurs_runtime.Str("(DurationOnly " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0_loop, "show"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0]).StrVal + ")")
+goto end_branch_0
+} else {
+
+}
+}
+{
+__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_0:
+return __t0
+}))
+}
+
+func Call_showRecurringInterval(dictShow_0_loop gopurs_runtime.Value, dictShow1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictShow_0 gopurs_runtime.Value = dictShow_0_loop
+_ = dictShow_0
+var dictShow1_1 gopurs_runtime.Value = dictShow1_1_loop
+_ = dictShow1_1
+return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Str("(RecurringInterval " + gopurs_runtime.Apply(Get_show(), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0]).StrVal + " " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(Call_showInterval(dictShow_0_loop, dictShow1_1_loop), "show"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[1]).StrVal + ")")
+}))
+}
+
+func Call_over(dictFunctor_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value, v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictFunctor_0 gopurs_runtime.Value = dictFunctor_0_loop
+_ = dictFunctor_0
+var f_1 gopurs_runtime.Value = f_1_loop
+_ = f_1
+var v_2 gopurs_runtime.Value = v_2_loop
+_ = v_2
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0_loop, "map"), gopurs_runtime.Apply(Get_RecurringInterval(), (*[1024]gopurs_runtime.Value)(v_2_loop.UnsafePtr)[0]), gopurs_runtime.Apply(f_1_loop, (*[1024]gopurs_runtime.Value)(v_2_loop.UnsafePtr)[1]))
+}
+
+func Call_eqInterval(dictEq_0_loop gopurs_runtime.Value, dictEq1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
+_ = dictEq_0
+var dictEq1_1 gopurs_runtime.Value = dictEq1_1_loop
+_ = dictEq1_1
+return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func2(func(x_2 gopurs_runtime.Value, y_3 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t0 gopurs_runtime.Value
+{
+if gopurs_runtime.Bool(x_2.StrVal == "StartEnd").IntVal != 0 {
+__t0 = gopurs_runtime.Bool(gopurs_runtime.Bool(y_3.StrVal == "StartEnd").IntVal != 0 && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq1_1_loop, "eq"), (*[1024]gopurs_runtime.Value)(x_2.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(y_3.UnsafePtr)[0]).IntVal != 0 && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq1_1_loop, "eq"), (*[1024]gopurs_runtime.Value)(x_2.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(y_3.UnsafePtr)[1]).IntVal != 0)
+goto end_branch_0
+} else {
+
+}
+}
+{
+if gopurs_runtime.Bool(x_2.StrVal == "DurationEnd").IntVal != 0 {
+__t0 = gopurs_runtime.Bool(gopurs_runtime.Bool(y_3.StrVal == "DurationEnd").IntVal != 0 && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0_loop, "eq"), (*[1024]gopurs_runtime.Value)(x_2.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(y_3.UnsafePtr)[0]).IntVal != 0 && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq1_1_loop, "eq"), (*[1024]gopurs_runtime.Value)(x_2.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(y_3.UnsafePtr)[1]).IntVal != 0)
+goto end_branch_0
+} else {
+
+}
+}
+{
+if gopurs_runtime.Bool(x_2.StrVal == "StartDuration").IntVal != 0 {
+__t0 = gopurs_runtime.Bool(gopurs_runtime.Bool(y_3.StrVal == "StartDuration").IntVal != 0 && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq1_1_loop, "eq"), (*[1024]gopurs_runtime.Value)(x_2.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(y_3.UnsafePtr)[0]).IntVal != 0 && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0_loop, "eq"), (*[1024]gopurs_runtime.Value)(x_2.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(y_3.UnsafePtr)[1]).IntVal != 0)
+goto end_branch_0
+} else {
+
+}
+}
+{
+__t0 = gopurs_runtime.Bool(gopurs_runtime.Bool(x_2.StrVal == "DurationOnly").IntVal != 0 && gopurs_runtime.Bool(y_3.StrVal == "DurationOnly").IntVal != 0 && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0_loop, "eq"), (*[1024]gopurs_runtime.Value)(x_2.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(y_3.UnsafePtr)[0]).IntVal != 0)
+}
+end_branch_0:
+return __t0
+}))
+}
+
+func Call_eqRecurringInterval(dictEq_0_loop gopurs_runtime.Value, dictEq1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
+_ = dictEq_0
+var dictEq1_1 gopurs_runtime.Value = dictEq1_1_loop
+_ = dictEq1_1
+return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func2(func(x_2 gopurs_runtime.Value, y_3 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t0 gopurs_runtime.Value
+{
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(x_2.UnsafePtr)[0].StrVal == "Nothing").IntVal != 0 {
+__t0 = gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_3.UnsafePtr)[0].StrVal == "Nothing")
+goto end_branch_0
+} else {
+
+}
+}
+{
+__t0 = gopurs_runtime.Bool(gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(x_2.UnsafePtr)[0].StrVal == "Just").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_3.UnsafePtr)[0].StrVal == "Just").IntVal != 0 && (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(x_2.UnsafePtr)[0].UnsafePtr)[0].IntVal == (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(y_3.UnsafePtr)[0].UnsafePtr)[0].IntVal)
+}
+end_branch_0:
+return gopurs_runtime.Bool(__t0.IntVal != 0 && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Call_eqInterval(dictEq_0_loop, dictEq1_1_loop), "eq"), (*[1024]gopurs_runtime.Value)(x_2.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(y_3.UnsafePtr)[1]).IntVal != 0)
+}))
+}
 
 

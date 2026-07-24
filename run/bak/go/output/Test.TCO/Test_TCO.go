@@ -37,7 +37,7 @@ _ = __local_var_0_0
 return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 dummy_1_1 := gopurs_runtime.Apply(__local_var_0_0, gopurs_runtime.Value{})
 _ = dummy_1_1
-return gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(pkg_Data_Show.Get_showIntImpl(), gopurs_runtime.Apply2(Get_deepTailRec(), dummy_1_1, gopurs_runtime.Int(0)))), gopurs_runtime.Value{})
+return gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(pkg_Data_Show.Get_showIntImpl(), Call_deepTailRec(dummy_1_1, gopurs_runtime.Int(0)))), gopurs_runtime.Value{})
 })
 }()
 	})
@@ -62,7 +62,7 @@ goto end_branch_0
 }
 }
 {
-__t0 = gopurs_runtime.Apply2(Get_deepTailRec(), gopurs_runtime.Int(v_0_loop.IntVal - 1), gopurs_runtime.Int(v1_1_loop.IntVal + gopurs_runtime.Apply2(pkg_Data_EuclideanRing.Get_intMod(), v_0_loop, gopurs_runtime.Int(3)).IntVal))
+__t0 = Call_deepTailRec(gopurs_runtime.Int(v_0_loop.IntVal - 1), gopurs_runtime.Int(v1_1_loop.IntVal + gopurs_runtime.Apply2(pkg_Data_EuclideanRing.Get_intMod(), v_0_loop, gopurs_runtime.Int(3)).IntVal))
 }
 end_branch_0:
 return __t0

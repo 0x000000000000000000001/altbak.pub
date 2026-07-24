@@ -9,8 +9,12 @@ var Down gopurs_runtime.Value
 var once_Down sync.Once
 func Get_Down() gopurs_runtime.Value {
 	once_Down.Do(func() {
-		Down = gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return x_0
+		Down = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var x_0 gopurs_runtime.Value = x_0_loop
+_ = x_0
+return x_0_loop
+}()
 })
 	})
 	return Down
@@ -20,10 +24,14 @@ var showDown gopurs_runtime.Value
 var once_showDown sync.Once
 func Get_showDown() gopurs_runtime.Value {
 	once_showDown.Do(func() {
-		showDown = gopurs_runtime.Func(func(dictShow_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		showDown = gopurs_runtime.Func(func(dictShow_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictShow_0 gopurs_runtime.Value = dictShow_0_loop
+_ = dictShow_0
 return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str("(Down " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), v_1).StrVal + ")")
+return gopurs_runtime.Str("(Down " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0_loop, "show"), v_1).StrVal + ")")
 }))
+}()
 })
 	})
 	return showDown
@@ -44,8 +52,12 @@ var eqDown gopurs_runtime.Value
 var once_eqDown sync.Once
 func Get_eqDown() gopurs_runtime.Value {
 	once_eqDown.Do(func() {
-		eqDown = gopurs_runtime.Func(func(dictEq_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return dictEq_0
+		eqDown = gopurs_runtime.Func(func(dictEq_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
+_ = dictEq_0
+return dictEq_0_loop
+}()
 })
 	})
 	return eqDown
@@ -55,11 +67,14 @@ var ordDown gopurs_runtime.Value
 var once_ordDown sync.Once
 func Get_ordDown() gopurs_runtime.Value {
 	once_ordDown.Do(func() {
-		ordDown = gopurs_runtime.Func(func(dictOrd_0 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd_0, "Eq0"), gopurs_runtime.Value{})
+		ordDown = gopurs_runtime.Func(func(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
+_ = dictOrd_0
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd_0_loop, "Eq0"), gopurs_runtime.Value{})
 _ = __local_var_1_0
 return gopurs_runtime.RecordDict2("compare", "Eq0", gopurs_runtime.Func2(func(v_2 gopurs_runtime.Value, v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_4_1 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), v_2, v1_3)
+__local_var_4_1 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0_loop, "compare"), v_2, v1_3)
 _ = __local_var_4_1
 var __t2 gopurs_runtime.Value
 {
@@ -94,6 +109,7 @@ return __t2
 }), gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return __local_var_1_0
 }))
+}()
 })
 	})
 	return ordDown
@@ -103,8 +119,11 @@ var boundedDown gopurs_runtime.Value
 var once_boundedDown sync.Once
 func Get_boundedDown() gopurs_runtime.Value {
 	once_boundedDown.Do(func() {
-		boundedDown = gopurs_runtime.Func(func(dictBounded_0 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBounded_0, "Ord0"), gopurs_runtime.Value{})
+		boundedDown = gopurs_runtime.Func(func(dictBounded_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictBounded_0 gopurs_runtime.Value = dictBounded_0_loop
+_ = dictBounded_0
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBounded_0_loop, "Ord0"), gopurs_runtime.Value{})
 _ = __local_var_1_0
 __local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_0, "Eq0"), gopurs_runtime.Value{})
 _ = __local_var_2_1
@@ -145,9 +164,10 @@ return __t4
 return __local_var_2_1
 }))
 _ = ordDown1_3_2
-return gopurs_runtime.RecordDict3("top", "bottom", "Ord0", gopurs_runtime.RecordGet(dictBounded_0, "bottom"), gopurs_runtime.RecordGet(dictBounded_0, "top"), gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict3("top", "bottom", "Ord0", gopurs_runtime.RecordGet(dictBounded_0_loop, "bottom"), gopurs_runtime.RecordGet(dictBounded_0_loop, "top"), gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return ordDown1_3_2
 }))
+}()
 })
 	})
 	return boundedDown

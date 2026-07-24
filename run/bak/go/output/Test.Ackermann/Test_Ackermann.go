@@ -36,7 +36,7 @@ _ = __local_var_0_0
 return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 dummy_1_1 := gopurs_runtime.Apply(__local_var_0_0, gopurs_runtime.Value{})
 _ = dummy_1_1
-return gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(pkg_Data_Show.Get_showIntImpl(), gopurs_runtime.Apply2(Get_ackermann(), dummy_1_1, gopurs_runtime.Int(4)))), gopurs_runtime.Value{})
+return gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(pkg_Data_Show.Get_showIntImpl(), Call_ackermann(dummy_1_1, gopurs_runtime.Int(4)))), gopurs_runtime.Value{})
 })
 }()
 	})
@@ -62,14 +62,14 @@ goto end_branch_0
 }
 {
 if v1_1_loop.IntVal == 0 {
-__t0 = gopurs_runtime.Apply2(Get_ackermann(), gopurs_runtime.Int(v_0_loop.IntVal - 1), gopurs_runtime.Int(1))
+__t0 = Call_ackermann(gopurs_runtime.Int(v_0_loop.IntVal - 1), gopurs_runtime.Int(1))
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = gopurs_runtime.Apply2(Get_ackermann(), gopurs_runtime.Int(v_0_loop.IntVal - 1), gopurs_runtime.Apply2(Get_ackermann(), v_0_loop, gopurs_runtime.Int(v1_1_loop.IntVal - 1)))
+__t0 = Call_ackermann(gopurs_runtime.Int(v_0_loop.IntVal - 1), Call_ackermann(v_0_loop, gopurs_runtime.Int(v1_1_loop.IntVal - 1)))
 }
 end_branch_0:
 return __t0

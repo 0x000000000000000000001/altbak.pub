@@ -9,8 +9,12 @@ var Comparison gopurs_runtime.Value
 var once_Comparison sync.Once
 func Get_Comparison() gopurs_runtime.Value {
 	once_Comparison.Do(func() {
-		Comparison = gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return x_0
+		Comparison = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var x_0 gopurs_runtime.Value = x_0_loop
+_ = x_0
+return x_0_loop
+}()
 })
 	})
 	return Comparison
@@ -94,8 +98,12 @@ var defaultComparison gopurs_runtime.Value
 var once_defaultComparison sync.Once
 func Get_defaultComparison() gopurs_runtime.Value {
 	once_defaultComparison.Do(func() {
-		defaultComparison = gopurs_runtime.Func(func(dictOrd_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(dictOrd_0, "compare")
+		defaultComparison = gopurs_runtime.Func(func(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
+_ = dictOrd_0
+return gopurs_runtime.RecordGet(dictOrd_0_loop, "compare")
+}()
 })
 	})
 	return defaultComparison

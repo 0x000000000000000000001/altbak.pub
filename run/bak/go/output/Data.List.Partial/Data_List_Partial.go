@@ -83,7 +83,7 @@ goto end_branch_1
 }
 }
 {
-__t1 = gopurs_runtime.Apply2(Get_last(), gopurs_runtime.Value{}, (*[1024]gopurs_runtime.Value)(v_1_loop.UnsafePtr)[1])
+__t1 = Call_last(gopurs_runtime.Value{}, (*[1024]gopurs_runtime.Value)(v_1_loop.UnsafePtr)[1])
 }
 end_branch_1:
 __t0 = __t1

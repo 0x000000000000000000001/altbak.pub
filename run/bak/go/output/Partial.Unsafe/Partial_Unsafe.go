@@ -19,8 +19,12 @@ var unsafeCrashWith gopurs_runtime.Value
 var once_unsafeCrashWith sync.Once
 func Get_unsafeCrashWith() gopurs_runtime.Value {
 	once_unsafeCrashWith.Do(func() {
-		unsafeCrashWith = gopurs_runtime.Func(func(msg_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(pkg_Partial.Get__crashWith(), msg_0)
+		unsafeCrashWith = gopurs_runtime.Func(func(msg_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var msg_0 gopurs_runtime.Value = msg_0_loop
+_ = msg_0
+return gopurs_runtime.Apply(pkg_Partial.Get__crashWith(), msg_0_loop)
+}()
 })
 	})
 	return unsafeCrashWith

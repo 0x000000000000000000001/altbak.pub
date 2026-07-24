@@ -45,8 +45,12 @@ var ListT gopurs_runtime.Value
 var once_ListT sync.Once
 func Get_ListT() gopurs_runtime.Value {
 	once_ListT.Do(func() {
-		ListT = gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return x_0
+		ListT = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var x_0 gopurs_runtime.Value = x_0_loop
+_ = x_0
+return x_0_loop
+}()
 })
 	})
 	return ListT
@@ -56,9 +60,7 @@ var wrapLazy gopurs_runtime.Value
 var once_wrapLazy sync.Once
 func Get_wrapLazy() gopurs_runtime.Value {
 	once_wrapLazy.Do(func() {
-		wrapLazy = gopurs_runtime.Func2(func(dictApplicative_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "pure"), gopurs_runtime.Constructor1("Skip", v_1))
-})
+		wrapLazy = gopurs_runtime.Func2(Call_wrapLazy)
 	})
 	return wrapLazy
 }
@@ -67,13 +69,7 @@ var wrapEffect gopurs_runtime.Value
 var once_wrapEffect sync.Once
 func Get_wrapEffect() gopurs_runtime.Value {
 	once_wrapEffect.Do(func() {
-		wrapEffect = gopurs_runtime.Func2(func(dictFunctor_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor1("Skip", gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return x_2
-})))
-}), v_1)
-})
+		wrapEffect = gopurs_runtime.Func2(Call_wrapEffect)
 	})
 	return wrapEffect
 }
@@ -478,14 +474,18 @@ var zipWith gopurs_runtime.Value
 var once_zipWith sync.Once
 func Get_zipWith() gopurs_runtime.Value {
 	once_zipWith.Do(func() {
-		zipWith = gopurs_runtime.Func(func(dictMonad_0 gopurs_runtime.Value) gopurs_runtime.Value {
-zipWith_prime1_1_0 := gopurs_runtime.Apply(Get_zipWith_prime(), dictMonad_0)
+		zipWith = gopurs_runtime.Func(func(dictMonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
+_ = dictMonad_0
+zipWith_prime1_1_0 := gopurs_runtime.Apply(Get_zipWith_prime(), dictMonad_0_loop)
 _ = zipWith_prime1_1_0
 return gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(zipWith_prime1_1_0, gopurs_runtime.Func2(func(a_3 gopurs_runtime.Value, b_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.Apply2(f_2, a_3, b_4))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0_loop, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.Apply2(f_2, a_3, b_4))
 }))
 })
+}()
 })
 	})
 	return zipWith
@@ -637,18 +637,22 @@ var fromEffect gopurs_runtime.Value
 var once_fromEffect sync.Once
 func Get_fromEffect() gopurs_runtime.Value {
 	once_fromEffect.Do(func() {
-		fromEffect = gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
-nil1_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "pure"), gopurs_runtime.Constructor0("Done"))
+		fromEffect = gopurs_runtime.Func(func(dictApplicative_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictApplicative_0 gopurs_runtime.Value = dictApplicative_0_loop
+_ = dictApplicative_0
+nil1_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0_loop, "pure"), gopurs_runtime.Constructor0("Done"))
 _ = nil1_1_0
 return gopurs_runtime.Func(func(fa_2 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_3_1 := gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return nil1_1_0
 }))
 _ = __local_var_3_1
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Func(func(a_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0_loop, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Func(func(a_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Constructor2("Yield", a_4, __local_var_3_1)
 }), fa_2)
 })
+}()
 })
 	})
 	return fromEffect
@@ -669,8 +673,11 @@ var foldlRec_prime gopurs_runtime.Value
 var once_foldlRec_prime sync.Once
 func Get_foldlRec_prime() gopurs_runtime.Value {
 	once_foldlRec_prime.Do(func() {
-		foldlRec_prime = gopurs_runtime.Func(func(dictMonadRec_0 gopurs_runtime.Value) gopurs_runtime.Value {
-Monad0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadRec_0, "Monad0"), gopurs_runtime.Value{})
+		foldlRec_prime = gopurs_runtime.Func(func(dictMonadRec_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictMonadRec_0 gopurs_runtime.Value = dictMonadRec_0_loop
+_ = dictMonadRec_0
+Monad0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadRec_0_loop, "Monad0"), gopurs_runtime.Value{})
 _ = Monad0_1_0
 __local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Applicative0"), gopurs_runtime.Value{})
 _ = __local_var_2_1
@@ -679,7 +686,7 @@ _ = __local_var_3_2
 uncons1_4_3 := gopurs_runtime.Apply(Get_uncons(), Monad0_1_0)
 _ = uncons1_4_3
 return gopurs_runtime.Func3(func(f_5 gopurs_runtime.Value, a_6 gopurs_runtime.Value, b_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadRec_0, "tailRecM"), gopurs_runtime.Func(func(o_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadRec_0_loop, "tailRecM"), gopurs_runtime.Func(func(o_8 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_9_4 := gopurs_runtime.RecordGet(o_8, "a")
 _ = __local_var_9_4
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_2, "bind"), gopurs_runtime.Apply(uncons1_4_3, gopurs_runtime.RecordGet(o_8, "b")), gopurs_runtime.Func(func(v_10 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -712,6 +719,7 @@ return __t5
 }))
 }), gopurs_runtime.RecordDict2("a", "b", a_6, b_7))
 })
+}()
 })
 	})
 	return foldlRec_prime
@@ -721,10 +729,14 @@ var runListTRec gopurs_runtime.Value
 var once_runListTRec sync.Once
 func Get_runListTRec() gopurs_runtime.Value {
 	once_runListTRec.Do(func() {
-		runListTRec = gopurs_runtime.Func(func(dictMonadRec_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(Get_foldlRec_prime(), dictMonadRec_0, gopurs_runtime.Func2(func(v_1 gopurs_runtime.Value, v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadRec_0, "Monad0"), gopurs_runtime.Value{}), "Applicative0"), gopurs_runtime.Value{}), "pure"), pkg_Data_Unit.Get_unit())
+		runListTRec = gopurs_runtime.Func(func(dictMonadRec_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictMonadRec_0 gopurs_runtime.Value = dictMonadRec_0_loop
+_ = dictMonadRec_0
+return gopurs_runtime.Apply3(Get_foldlRec_prime(), dictMonadRec_0_loop, gopurs_runtime.Func2(func(v_1 gopurs_runtime.Value, v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadRec_0_loop, "Monad0"), gopurs_runtime.Value{}), "Applicative0"), gopurs_runtime.Value{}), "pure"), pkg_Data_Unit.Get_unit())
 }), pkg_Data_Unit.Get_unit())
+}()
 })
 	})
 	return runListTRec
@@ -734,15 +746,18 @@ var foldlRec gopurs_runtime.Value
 var once_foldlRec sync.Once
 func Get_foldlRec() gopurs_runtime.Value {
 	once_foldlRec.Do(func() {
-		foldlRec = gopurs_runtime.Func(func(dictMonadRec_0 gopurs_runtime.Value) gopurs_runtime.Value {
-Monad0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadRec_0, "Monad0"), gopurs_runtime.Value{})
+		foldlRec = gopurs_runtime.Func(func(dictMonadRec_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictMonadRec_0 gopurs_runtime.Value = dictMonadRec_0_loop
+_ = dictMonadRec_0
+Monad0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadRec_0_loop, "Monad0"), gopurs_runtime.Value{})
 _ = Monad0_1_0
 __local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Applicative0"), gopurs_runtime.Value{})
 _ = __local_var_2_1
 uncons1_3_2 := gopurs_runtime.Apply(Get_uncons(), Monad0_1_0)
 _ = uncons1_3_2
 return gopurs_runtime.Func3(func(f_4 gopurs_runtime.Value, a_5 gopurs_runtime.Value, b_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadRec_0, "tailRecM"), gopurs_runtime.Func(func(o_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadRec_0_loop, "tailRecM"), gopurs_runtime.Func(func(o_7 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_8_3 := gopurs_runtime.RecordGet(o_7, "a")
 _ = __local_var_8_3
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Bind1"), gopurs_runtime.Value{}), "bind"), gopurs_runtime.Apply(uncons1_3_2, gopurs_runtime.RecordGet(o_7, "b")), gopurs_runtime.Func(func(v_9 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -771,6 +786,7 @@ return __t4
 }))
 }), gopurs_runtime.RecordDict2("a", "b", a_5, b_6))
 })
+}()
 })
 	})
 	return foldlRec
@@ -780,10 +796,13 @@ var foldl_prime gopurs_runtime.Value
 var once_foldl_prime sync.Once
 func Get_foldl_prime() gopurs_runtime.Value {
 	once_foldl_prime.Do(func() {
-		foldl_prime = gopurs_runtime.Func(func(dictMonad_0 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Bind1"), gopurs_runtime.Value{})
+		foldl_prime = gopurs_runtime.Func(func(dictMonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
+_ = dictMonad_0
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0_loop, "Bind1"), gopurs_runtime.Value{})
 _ = __local_var_1_0
-uncons1_2_1 := gopurs_runtime.Apply(Get_uncons(), dictMonad_0)
+uncons1_2_1 := gopurs_runtime.Apply(Get_uncons(), dictMonad_0_loop)
 _ = uncons1_2_1
 return gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var loop_4_2 gopurs_runtime.Value
@@ -793,7 +812,7 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "bind"), 
 var __t3 gopurs_runtime.Value
 {
 if gopurs_runtime.Bool(v_7.StrVal == "Nothing").IntVal != 0 {
-__t3 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Applicative0"), gopurs_runtime.Value{}), "pure"), b_5)
+__t3 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0_loop, "Applicative0"), gopurs_runtime.Value{}), "pure"), b_5)
 goto end_branch_3
 } else {
 
@@ -820,6 +839,7 @@ return __t3
 })
 return loop_4_2
 })
+}()
 })
 	})
 	return foldl_prime
@@ -829,10 +849,14 @@ var runListT gopurs_runtime.Value
 var once_runListT sync.Once
 func Get_runListT() gopurs_runtime.Value {
 	once_runListT.Do(func() {
-		runListT = gopurs_runtime.Func(func(dictMonad_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(Get_foldl_prime(), dictMonad_0, gopurs_runtime.Func2(func(v_1 gopurs_runtime.Value, v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Applicative0"), gopurs_runtime.Value{}), "pure"), pkg_Data_Unit.Get_unit())
+		runListT = gopurs_runtime.Func(func(dictMonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
+_ = dictMonad_0
+return gopurs_runtime.Apply3(Get_foldl_prime(), dictMonad_0_loop, gopurs_runtime.Func2(func(v_1 gopurs_runtime.Value, v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0_loop, "Applicative0"), gopurs_runtime.Value{}), "pure"), pkg_Data_Unit.Get_unit())
 }), pkg_Data_Unit.Get_unit())
+}()
 })
 	})
 	return runListT
@@ -842,18 +866,21 @@ var foldl gopurs_runtime.Value
 var once_foldl sync.Once
 func Get_foldl() gopurs_runtime.Value {
 	once_foldl.Do(func() {
-		foldl = gopurs_runtime.Func(func(dictMonad_0 gopurs_runtime.Value) gopurs_runtime.Value {
-uncons1_1_0 := gopurs_runtime.Apply(Get_uncons(), dictMonad_0)
+		foldl = gopurs_runtime.Func(func(dictMonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
+_ = dictMonad_0
+uncons1_1_0 := gopurs_runtime.Apply(Get_uncons(), dictMonad_0_loop)
 _ = uncons1_1_0
 return gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
 var loop_3_1 gopurs_runtime.Value
 _ = loop_3_1
 loop_3_1 = gopurs_runtime.Func2(func(b_4 gopurs_runtime.Value, l_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Bind1"), gopurs_runtime.Value{}), "bind"), gopurs_runtime.Apply(uncons1_1_0, l_5), gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0_loop, "Bind1"), gopurs_runtime.Value{}), "bind"), gopurs_runtime.Apply(uncons1_1_0, l_5), gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t2 gopurs_runtime.Value
 {
 if gopurs_runtime.Bool(v_6.StrVal == "Nothing").IntVal != 0 {
-__t2 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Applicative0"), gopurs_runtime.Value{}), "pure"), b_4)
+__t2 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0_loop, "Applicative0"), gopurs_runtime.Value{}), "pure"), b_4)
 goto end_branch_2
 } else {
 
@@ -876,6 +903,7 @@ return __t2
 })
 return loop_3_1
 })
+}()
 })
 	})
 	return foldl
@@ -1561,6 +1589,26 @@ return alternativeListT1_2_1
 	return monadPlusListT
 }
 
+func Call_wrapLazy(dictApplicative_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictApplicative_0 gopurs_runtime.Value = dictApplicative_0_loop
+_ = dictApplicative_0
+var v_1 gopurs_runtime.Value = v_1_loop
+_ = v_1
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0_loop, "pure"), gopurs_runtime.Constructor1("Skip", v_1_loop))
+}
+
+func Call_wrapEffect(dictFunctor_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictFunctor_0 gopurs_runtime.Value = dictFunctor_0_loop
+_ = dictFunctor_0
+var v_1 gopurs_runtime.Value = v_1_loop
+_ = v_1
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0_loop, "map"), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Constructor1("Skip", gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_2
+})))
+}), v_1_loop)
+}
+
 func Call_unfold(dictMonad_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value, z_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 unfold:
 for {
@@ -1578,7 +1626,7 @@ if gopurs_runtime.Bool(v_3.StrVal == "Just").IntVal != 0 {
 __local_var_4_1 := (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[0].UnsafePtr)[0]
 _ = __local_var_4_1
 __t0 = gopurs_runtime.Constructor2("Yield", (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[0].UnsafePtr)[1], gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(Get_unfold(), dictMonad_0_loop, f_1_loop, __local_var_4_1)
+return Call_unfold(dictMonad_0_loop, f_1_loop, __local_var_4_1)
 })))
 goto end_branch_0
 } else {
@@ -1611,7 +1659,7 @@ var b_2 gopurs_runtime.Value = b_2_loop
 _ = b_2
 var l_3 gopurs_runtime.Value = l_3_loop
 _ = l_3
-return gopurs_runtime.Apply3(Get_unfold(), dictMonad_0_loop, gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_unfold(dictMonad_0_loop, gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_5_0 := (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[0]
 _ = __local_var_5_0
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0_loop, "Bind1"), gopurs_runtime.Value{}), "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Func(func(v1_6 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -1752,7 +1800,7 @@ var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
 var a_2 gopurs_runtime.Value = a_2_loop
 _ = a_2
-return gopurs_runtime.Apply3(Get_unfold(), dictMonad_0_loop, gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_unfold(dictMonad_0_loop, gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0_loop, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.Constructor1("Just", gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply(f_1_loop, x_3), x_3)))
 }), a_2_loop)
 }

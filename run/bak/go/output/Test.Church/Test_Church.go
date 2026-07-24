@@ -101,8 +101,12 @@ var c10 gopurs_runtime.Value
 var once_c10 sync.Once
 func Get_c10() gopurs_runtime.Value {
 	once_c10.Do(func() {
-		c10 = gopurs_runtime.Func(func(n_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_fromInt(), n_0)
+		c10 = gopurs_runtime.Func(func(n_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var n_0 gopurs_runtime.Value = n_0_loop
+_ = n_0
+return gopurs_runtime.Apply(Get_fromInt(), n_0_loop)
+}()
 })
 	})
 	return c10
@@ -112,14 +116,18 @@ var c100 gopurs_runtime.Value
 var once_c100 sync.Once
 func Get_c100() gopurs_runtime.Value {
 	once_c100.Do(func() {
-		c100 = gopurs_runtime.Func(func(n_0 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_1_0 := gopurs_runtime.Apply(Get_fromInt(), n_0)
+		c100 = gopurs_runtime.Func(func(n_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var n_0 gopurs_runtime.Value = n_0_loop
+_ = n_0
+__local_var_1_0 := gopurs_runtime.Apply(Get_fromInt(), n_0_loop)
 _ = __local_var_1_0
-__local_var_2_1 := gopurs_runtime.Apply(Get_fromInt(), n_0)
+__local_var_2_1 := gopurs_runtime.Apply(Get_fromInt(), n_0_loop)
 _ = __local_var_2_1
 return gopurs_runtime.Func2(func(f_3 gopurs_runtime.Value, x_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(__local_var_1_0, gopurs_runtime.Apply(__local_var_2_1, f_3), x_4)
 })
+}()
 })
 	})
 	return c100
@@ -129,14 +137,18 @@ var c10k gopurs_runtime.Value
 var once_c10k sync.Once
 func Get_c10k() gopurs_runtime.Value {
 	once_c10k.Do(func() {
-		c10k = gopurs_runtime.Func(func(n_0 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_1_0 := gopurs_runtime.Apply(Get_c100(), n_0)
+		c10k = gopurs_runtime.Func(func(n_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var n_0 gopurs_runtime.Value = n_0_loop
+_ = n_0
+__local_var_1_0 := gopurs_runtime.Apply(Get_c100(), n_0_loop)
 _ = __local_var_1_0
-__local_var_2_1 := gopurs_runtime.Apply(Get_c100(), n_0)
+__local_var_2_1 := gopurs_runtime.Apply(Get_c100(), n_0_loop)
 _ = __local_var_2_1
 return gopurs_runtime.Func2(func(f_3 gopurs_runtime.Value, x_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(__local_var_1_0, gopurs_runtime.Apply(__local_var_2_1, f_3), x_4)
 })
+}()
 })
 	})
 	return c10k
@@ -146,14 +158,18 @@ var c100k gopurs_runtime.Value
 var once_c100k sync.Once
 func Get_c100k() gopurs_runtime.Value {
 	once_c100k.Do(func() {
-		c100k = gopurs_runtime.Func(func(n_0 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_1_0 := gopurs_runtime.Apply(Get_c10k(), n_0)
+		c100k = gopurs_runtime.Func(func(n_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var n_0 gopurs_runtime.Value = n_0_loop
+_ = n_0
+__local_var_1_0 := gopurs_runtime.Apply(Get_c10k(), n_0_loop)
 _ = __local_var_1_0
-__local_var_2_1 := gopurs_runtime.Apply(Get_fromInt(), n_0)
+__local_var_2_1 := gopurs_runtime.Apply(Get_fromInt(), n_0_loop)
 _ = __local_var_2_1
 return gopurs_runtime.Func2(func(f_3 gopurs_runtime.Value, x_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(__local_var_1_0, gopurs_runtime.Apply(__local_var_2_1, f_3), x_4)
 })
+}()
 })
 	})
 	return c100k
@@ -163,9 +179,7 @@ var addC gopurs_runtime.Value
 var once_addC sync.Once
 func Get_addC() gopurs_runtime.Value {
 	once_addC.Do(func() {
-		addC = gopurs_runtime.Func4(func(m_0 gopurs_runtime.Value, n_1 gopurs_runtime.Value, f_2 gopurs_runtime.Value, x_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(m_0, f_2, gopurs_runtime.Apply2(n_1, f_2, x_3))
-})
+		addC = gopurs_runtime.Func4(Call_addC)
 	})
 	return addC
 }
@@ -217,6 +231,18 @@ _ = f_2
 var x_3 gopurs_runtime.Value = x_3_loop
 _ = x_3
 return gopurs_runtime.Apply2(m_0_loop, gopurs_runtime.Apply(n_1_loop, f_2_loop), x_3_loop)
+}
+
+func Call_addC(m_0_loop gopurs_runtime.Value, n_1_loop gopurs_runtime.Value, f_2_loop gopurs_runtime.Value, x_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var m_0 gopurs_runtime.Value = m_0_loop
+_ = m_0
+var n_1 gopurs_runtime.Value = n_1_loop
+_ = n_1
+var f_2 gopurs_runtime.Value = f_2_loop
+_ = f_2
+var x_3 gopurs_runtime.Value = x_3_loop
+_ = x_3
+return gopurs_runtime.Apply2(m_0_loop, f_2_loop, gopurs_runtime.Apply2(n_1_loop, f_2_loop, x_3_loop))
 }
 
 

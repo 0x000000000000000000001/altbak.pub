@@ -11,8 +11,12 @@ var zeroRecord gopurs_runtime.Value
 var once_zeroRecord sync.Once
 func Get_zeroRecord() gopurs_runtime.Value {
 	once_zeroRecord.Do(func() {
-		zeroRecord = gopurs_runtime.Func(func(dict_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(dict_0, "zeroRecord")
+		zeroRecord = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0_loop, "zeroRecord")
+}()
 })
 	})
 	return zeroRecord
@@ -22,8 +26,12 @@ var zero gopurs_runtime.Value
 var once_zero sync.Once
 func Get_zero() gopurs_runtime.Value {
 	once_zero.Do(func() {
-		zero = gopurs_runtime.Func(func(dict_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(dict_0, "zero")
+		zero = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0_loop, "zero")
+}()
 })
 	})
 	return zero
@@ -94,8 +102,12 @@ var oneRecord gopurs_runtime.Value
 var once_oneRecord sync.Once
 func Get_oneRecord() gopurs_runtime.Value {
 	once_oneRecord.Do(func() {
-		oneRecord = gopurs_runtime.Func(func(dict_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(dict_0, "oneRecord")
+		oneRecord = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0_loop, "oneRecord")
+}()
 })
 	})
 	return oneRecord
@@ -105,8 +117,12 @@ var one gopurs_runtime.Value
 var once_one sync.Once
 func Get_one() gopurs_runtime.Value {
 	once_one.Do(func() {
-		one = gopurs_runtime.Func(func(dict_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(dict_0, "one")
+		one = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0_loop, "one")
+}()
 })
 	})
 	return one
@@ -116,8 +132,12 @@ var mulRecord gopurs_runtime.Value
 var once_mulRecord sync.Once
 func Get_mulRecord() gopurs_runtime.Value {
 	once_mulRecord.Do(func() {
-		mulRecord = gopurs_runtime.Func(func(dict_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(dict_0, "mulRecord")
+		mulRecord = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0_loop, "mulRecord")
+}()
 })
 	})
 	return mulRecord
@@ -127,8 +147,12 @@ var mul gopurs_runtime.Value
 var once_mul sync.Once
 func Get_mul() gopurs_runtime.Value {
 	once_mul.Do(func() {
-		mul = gopurs_runtime.Func(func(dict_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(dict_0, "mul")
+		mul = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0_loop, "mul")
+}()
 })
 	})
 	return mul
@@ -138,8 +162,12 @@ var addRecord gopurs_runtime.Value
 var once_addRecord sync.Once
 func Get_addRecord() gopurs_runtime.Value {
 	once_addRecord.Do(func() {
-		addRecord = gopurs_runtime.Func(func(dict_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(dict_0, "addRecord")
+		addRecord = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0_loop, "addRecord")
+}()
 })
 	})
 	return addRecord
@@ -149,9 +177,7 @@ var semiringRecord gopurs_runtime.Value
 var once_semiringRecord sync.Once
 func Get_semiringRecord() gopurs_runtime.Value {
 	once_semiringRecord.Do(func() {
-		semiringRecord = gopurs_runtime.Func2(func(_dollar__unused_0 gopurs_runtime.Value, dictSemiringRecord_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict4("add", "mul", "one", "zero", gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictSemiringRecord_1, "addRecord"), gopurs_runtime.Constructor0("Proxy")), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictSemiringRecord_1, "mulRecord"), gopurs_runtime.Constructor0("Proxy")), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemiringRecord_1, "oneRecord"), gopurs_runtime.Constructor0("Proxy"), gopurs_runtime.Constructor0("Proxy")), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemiringRecord_1, "zeroRecord"), gopurs_runtime.Constructor0("Proxy"), gopurs_runtime.Constructor0("Proxy")))
-})
+		semiringRecord = gopurs_runtime.Func2(Call_semiringRecord)
 	})
 	return semiringRecord
 }
@@ -160,8 +186,12 @@ var add gopurs_runtime.Value
 var once_add sync.Once
 func Get_add() gopurs_runtime.Value {
 	once_add.Do(func() {
-		add = gopurs_runtime.Func(func(dict_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(dict_0, "add")
+		add = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0_loop, "add")
+}()
 })
 	})
 	return add
@@ -171,20 +201,24 @@ var semiringFn gopurs_runtime.Value
 var once_semiringFn sync.Once
 func Get_semiringFn() gopurs_runtime.Value {
 	once_semiringFn.Do(func() {
-		semiringFn = gopurs_runtime.Func(func(dictSemiring_0 gopurs_runtime.Value) gopurs_runtime.Value {
-zero1_1_0 := gopurs_runtime.RecordGet(dictSemiring_0, "zero")
+		semiringFn = gopurs_runtime.Func(func(dictSemiring_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictSemiring_0 gopurs_runtime.Value = dictSemiring_0_loop
+_ = dictSemiring_0
+zero1_1_0 := gopurs_runtime.RecordGet(dictSemiring_0_loop, "zero")
 _ = zero1_1_0
-one1_2_1 := gopurs_runtime.RecordGet(dictSemiring_0, "one")
+one1_2_1 := gopurs_runtime.RecordGet(dictSemiring_0_loop, "one")
 _ = one1_2_1
 return gopurs_runtime.RecordDict4("add", "zero", "mul", "one", gopurs_runtime.Func3(func(f_3 gopurs_runtime.Value, g_4 gopurs_runtime.Value, x_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemiring_0, "add"), gopurs_runtime.Apply(f_3, x_5), gopurs_runtime.Apply(g_4, x_5))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemiring_0_loop, "add"), gopurs_runtime.Apply(f_3, x_5), gopurs_runtime.Apply(g_4, x_5))
 }), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return zero1_1_0
 }), gopurs_runtime.Func3(func(f_3 gopurs_runtime.Value, g_4 gopurs_runtime.Value, x_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemiring_0, "mul"), gopurs_runtime.Apply(f_3, x_5), gopurs_runtime.Apply(g_4, x_5))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemiring_0_loop, "mul"), gopurs_runtime.Apply(f_3, x_5), gopurs_runtime.Apply(g_4, x_5))
 }), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return one1_2_1
 }))
+}()
 })
 	})
 	return semiringFn
@@ -194,34 +228,50 @@ var semiringRecordCons gopurs_runtime.Value
 var once_semiringRecordCons sync.Once
 func Get_semiringRecordCons() gopurs_runtime.Value {
 	once_semiringRecordCons.Do(func() {
-		semiringRecordCons = gopurs_runtime.Func4(func(dictIsSymbol_0 gopurs_runtime.Value, _dollar__unused_1 gopurs_runtime.Value, dictSemiringRecord_2 gopurs_runtime.Value, dictSemiring_3 gopurs_runtime.Value) gopurs_runtime.Value {
-one1_4_0 := gopurs_runtime.RecordGet(dictSemiring_3, "one")
-_ = one1_4_0
-zero1_5_1 := gopurs_runtime.RecordGet(dictSemiring_3, "zero")
-_ = zero1_5_1
-return gopurs_runtime.RecordDict4("addRecord", "mulRecord", "oneRecord", "zeroRecord", gopurs_runtime.Func3(func(v_6 gopurs_runtime.Value, ra_7 gopurs_runtime.Value, rb_8 gopurs_runtime.Value) gopurs_runtime.Value {
-key_9_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0, "reflectSymbol"), gopurs_runtime.Constructor0("Proxy"))
-_ = key_9_2
-get_10_3 := gopurs_runtime.Apply(pkg_Record_Unsafe.Get_unsafeGet(), key_9_2)
-_ = get_10_3
-return gopurs_runtime.Apply3(pkg_Record_Unsafe.Get_unsafeSet(), key_9_2, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemiring_3, "add"), gopurs_runtime.Apply(get_10_3, ra_7), gopurs_runtime.Apply(get_10_3, rb_8)), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictSemiringRecord_2, "addRecord"), gopurs_runtime.Constructor0("Proxy"), ra_7, rb_8))
-}), gopurs_runtime.Func3(func(v_6 gopurs_runtime.Value, ra_7 gopurs_runtime.Value, rb_8 gopurs_runtime.Value) gopurs_runtime.Value {
-key_9_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0, "reflectSymbol"), gopurs_runtime.Constructor0("Proxy"))
-_ = key_9_4
-get_10_5 := gopurs_runtime.Apply(pkg_Record_Unsafe.Get_unsafeGet(), key_9_4)
-_ = get_10_5
-return gopurs_runtime.Apply3(pkg_Record_Unsafe.Get_unsafeSet(), key_9_4, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemiring_3, "mul"), gopurs_runtime.Apply(get_10_5, ra_7), gopurs_runtime.Apply(get_10_5, rb_8)), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictSemiringRecord_2, "mulRecord"), gopurs_runtime.Constructor0("Proxy"), ra_7, rb_8))
-}), gopurs_runtime.Func2(func(v_6 gopurs_runtime.Value, v1_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(pkg_Record_Unsafe.Get_unsafeSet(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0, "reflectSymbol"), gopurs_runtime.Constructor0("Proxy")), one1_4_0, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemiringRecord_2, "oneRecord"), gopurs_runtime.Constructor0("Proxy"), gopurs_runtime.Constructor0("Proxy")))
-}), gopurs_runtime.Func2(func(v_6 gopurs_runtime.Value, v1_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(pkg_Record_Unsafe.Get_unsafeSet(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0, "reflectSymbol"), gopurs_runtime.Constructor0("Proxy")), zero1_5_1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemiringRecord_2, "zeroRecord"), gopurs_runtime.Constructor0("Proxy"), gopurs_runtime.Constructor0("Proxy")))
-}))
-})
+		semiringRecordCons = gopurs_runtime.Func4(Call_semiringRecordCons)
 	})
 	return semiringRecordCons
 }
 
+func Call_semiringRecord(_dollar__unused_0_loop gopurs_runtime.Value, dictSemiringRecord_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
+_ = _dollar__unused_0
+var dictSemiringRecord_1 gopurs_runtime.Value = dictSemiringRecord_1_loop
+_ = dictSemiringRecord_1
+return gopurs_runtime.RecordDict4("add", "mul", "one", "zero", gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictSemiringRecord_1_loop, "addRecord"), gopurs_runtime.Constructor0("Proxy")), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictSemiringRecord_1_loop, "mulRecord"), gopurs_runtime.Constructor0("Proxy")), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemiringRecord_1_loop, "oneRecord"), gopurs_runtime.Constructor0("Proxy"), gopurs_runtime.Constructor0("Proxy")), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemiringRecord_1_loop, "zeroRecord"), gopurs_runtime.Constructor0("Proxy"), gopurs_runtime.Constructor0("Proxy")))
+}
 
+func Call_semiringRecordCons(dictIsSymbol_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, dictSemiringRecord_2_loop gopurs_runtime.Value, dictSemiring_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictIsSymbol_0 gopurs_runtime.Value = dictIsSymbol_0_loop
+_ = dictIsSymbol_0
+var _dollar__unused_1 gopurs_runtime.Value = _dollar__unused_1_loop
+_ = _dollar__unused_1
+var dictSemiringRecord_2 gopurs_runtime.Value = dictSemiringRecord_2_loop
+_ = dictSemiringRecord_2
+var dictSemiring_3 gopurs_runtime.Value = dictSemiring_3_loop
+_ = dictSemiring_3
+one1_4_0 := gopurs_runtime.RecordGet(dictSemiring_3_loop, "one")
+_ = one1_4_0
+zero1_5_1 := gopurs_runtime.RecordGet(dictSemiring_3_loop, "zero")
+_ = zero1_5_1
+return gopurs_runtime.RecordDict4("addRecord", "mulRecord", "oneRecord", "zeroRecord", gopurs_runtime.Func3(func(v_6 gopurs_runtime.Value, ra_7 gopurs_runtime.Value, rb_8 gopurs_runtime.Value) gopurs_runtime.Value {
+key_9_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0_loop, "reflectSymbol"), gopurs_runtime.Constructor0("Proxy"))
+_ = key_9_2
+get_10_3 := gopurs_runtime.Apply(pkg_Record_Unsafe.Get_unsafeGet(), key_9_2)
+_ = get_10_3
+return gopurs_runtime.Apply3(pkg_Record_Unsafe.Get_unsafeSet(), key_9_2, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemiring_3_loop, "add"), gopurs_runtime.Apply(get_10_3, ra_7), gopurs_runtime.Apply(get_10_3, rb_8)), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictSemiringRecord_2_loop, "addRecord"), gopurs_runtime.Constructor0("Proxy"), ra_7, rb_8))
+}), gopurs_runtime.Func3(func(v_6 gopurs_runtime.Value, ra_7 gopurs_runtime.Value, rb_8 gopurs_runtime.Value) gopurs_runtime.Value {
+key_9_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0_loop, "reflectSymbol"), gopurs_runtime.Constructor0("Proxy"))
+_ = key_9_4
+get_10_5 := gopurs_runtime.Apply(pkg_Record_Unsafe.Get_unsafeGet(), key_9_4)
+_ = get_10_5
+return gopurs_runtime.Apply3(pkg_Record_Unsafe.Get_unsafeSet(), key_9_4, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemiring_3_loop, "mul"), gopurs_runtime.Apply(get_10_5, ra_7), gopurs_runtime.Apply(get_10_5, rb_8)), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictSemiringRecord_2_loop, "mulRecord"), gopurs_runtime.Constructor0("Proxy"), ra_7, rb_8))
+}), gopurs_runtime.Func2(func(v_6 gopurs_runtime.Value, v1_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply3(pkg_Record_Unsafe.Get_unsafeSet(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0_loop, "reflectSymbol"), gopurs_runtime.Constructor0("Proxy")), one1_4_0, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemiringRecord_2_loop, "oneRecord"), gopurs_runtime.Constructor0("Proxy"), gopurs_runtime.Constructor0("Proxy")))
+}), gopurs_runtime.Func2(func(v_6 gopurs_runtime.Value, v1_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply3(pkg_Record_Unsafe.Get_unsafeSet(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0_loop, "reflectSymbol"), gopurs_runtime.Constructor0("Proxy")), zero1_5_1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemiringRecord_2_loop, "zeroRecord"), gopurs_runtime.Constructor0("Proxy"), gopurs_runtime.Constructor0("Proxy")))
+}))
+}
 
 func Get_intAdd() gopurs_runtime.Value {
 	return _Gopurs_IntAdd

@@ -9,8 +9,12 @@ var null gopurs_runtime.Value
 var once_null sync.Once
 func Get_null() gopurs_runtime.Value {
 	once_null.Do(func() {
-		null = gopurs_runtime.Func(func(s_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(s_0.StrVal == "")
+		null = gopurs_runtime.Func(func(s_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var s_0 gopurs_runtime.Value = s_0_loop
+_ = s_0
+return gopurs_runtime.Bool(s_0_loop.StrVal == "")
+}()
 })
 	})
 	return null

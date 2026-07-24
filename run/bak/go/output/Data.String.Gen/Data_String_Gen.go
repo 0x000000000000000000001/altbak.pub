@@ -141,7 +141,7 @@ unfoldable1_3_1 := gopurs_runtime.Apply3(pkg_Control_Monad_Gen.Get_unfoldable(),
 _ = unfoldable1_3_1
 return gopurs_runtime.Func(func(genChar_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadGen_1_loop, "sized"), gopurs_runtime.Func(func(size_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Bind1_2_0, "bind"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadGen_1_loop, "chooseInt"), gopurs_runtime.Int(1), gopurs_runtime.Apply2(Get_max(), gopurs_runtime.Int(1), size_5)), gopurs_runtime.Func(func(newSize_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Bind1_2_0, "bind"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadGen_1_loop, "chooseInt"), gopurs_runtime.Int(1), Call_max(gopurs_runtime.Int(1), size_5)), gopurs_runtime.Func(func(newSize_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadGen_1_loop, "resize"), gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return newSize_6
 }), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Bind1_2_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), pkg_Data_String_CodeUnits.Get_fromCharArray(), gopurs_runtime.Apply(unfoldable1_3_1, genChar_4)))
@@ -155,7 +155,7 @@ var dictMonadRec_0 gopurs_runtime.Value = dictMonadRec_0_loop
 _ = dictMonadRec_0
 var dictMonadGen_1 gopurs_runtime.Value = dictMonadGen_1_loop
 _ = dictMonadGen_1
-return gopurs_runtime.Apply3(Get_genString(), dictMonadRec_0_loop, dictMonadGen_1_loop, gopurs_runtime.Apply(pkg_Data_Char_Gen.Get_genUnicodeChar(), dictMonadGen_1_loop))
+return gopurs_runtime.Apply(Call_genString(dictMonadRec_0_loop, dictMonadGen_1_loop), gopurs_runtime.Apply(pkg_Data_Char_Gen.Get_genUnicodeChar(), dictMonadGen_1_loop))
 }
 
 func Call_genDigitString(dictMonadRec_0_loop gopurs_runtime.Value, dictMonadGen_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -163,7 +163,7 @@ var dictMonadRec_0 gopurs_runtime.Value = dictMonadRec_0_loop
 _ = dictMonadRec_0
 var dictMonadGen_1 gopurs_runtime.Value = dictMonadGen_1_loop
 _ = dictMonadGen_1
-return gopurs_runtime.Apply3(Get_genString(), dictMonadRec_0_loop, dictMonadGen_1_loop, gopurs_runtime.Apply(pkg_Data_Char_Gen.Get_genDigitChar(), dictMonadGen_1_loop))
+return gopurs_runtime.Apply(Call_genString(dictMonadRec_0_loop, dictMonadGen_1_loop), gopurs_runtime.Apply(pkg_Data_Char_Gen.Get_genDigitChar(), dictMonadGen_1_loop))
 }
 
 func Call_genAsciiString_prime(dictMonadRec_0_loop gopurs_runtime.Value, dictMonadGen_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -171,7 +171,7 @@ var dictMonadRec_0 gopurs_runtime.Value = dictMonadRec_0_loop
 _ = dictMonadRec_0
 var dictMonadGen_1 gopurs_runtime.Value = dictMonadGen_1_loop
 _ = dictMonadGen_1
-return gopurs_runtime.Apply3(Get_genString(), dictMonadRec_0_loop, dictMonadGen_1_loop, gopurs_runtime.Apply(pkg_Data_Char_Gen.Get_genAsciiChar_prime(), dictMonadGen_1_loop))
+return gopurs_runtime.Apply(Call_genString(dictMonadRec_0_loop, dictMonadGen_1_loop), gopurs_runtime.Apply(pkg_Data_Char_Gen.Get_genAsciiChar_prime(), dictMonadGen_1_loop))
 }
 
 func Call_genAsciiString(dictMonadRec_0_loop gopurs_runtime.Value, dictMonadGen_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -179,7 +179,7 @@ var dictMonadRec_0 gopurs_runtime.Value = dictMonadRec_0_loop
 _ = dictMonadRec_0
 var dictMonadGen_1 gopurs_runtime.Value = dictMonadGen_1_loop
 _ = dictMonadGen_1
-return gopurs_runtime.Apply3(Get_genString(), dictMonadRec_0_loop, dictMonadGen_1_loop, gopurs_runtime.Apply(pkg_Data_Char_Gen.Get_genAsciiChar(), dictMonadGen_1_loop))
+return gopurs_runtime.Apply(Call_genString(dictMonadRec_0_loop, dictMonadGen_1_loop), gopurs_runtime.Apply(pkg_Data_Char_Gen.Get_genAsciiChar(), dictMonadGen_1_loop))
 }
 
 func Call_genAlphaUppercaseString(dictMonadRec_0_loop gopurs_runtime.Value, dictMonadGen_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -187,7 +187,7 @@ var dictMonadRec_0 gopurs_runtime.Value = dictMonadRec_0_loop
 _ = dictMonadRec_0
 var dictMonadGen_1 gopurs_runtime.Value = dictMonadGen_1_loop
 _ = dictMonadGen_1
-return gopurs_runtime.Apply3(Get_genString(), dictMonadRec_0_loop, dictMonadGen_1_loop, gopurs_runtime.Apply(pkg_Data_Char_Gen.Get_genAlphaUppercase(), dictMonadGen_1_loop))
+return gopurs_runtime.Apply(Call_genString(dictMonadRec_0_loop, dictMonadGen_1_loop), gopurs_runtime.Apply(pkg_Data_Char_Gen.Get_genAlphaUppercase(), dictMonadGen_1_loop))
 }
 
 func Call_genAlphaString(dictMonadRec_0_loop gopurs_runtime.Value, dictMonadGen_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -195,7 +195,7 @@ var dictMonadRec_0 gopurs_runtime.Value = dictMonadRec_0_loop
 _ = dictMonadRec_0
 var dictMonadGen_1 gopurs_runtime.Value = dictMonadGen_1_loop
 _ = dictMonadGen_1
-return gopurs_runtime.Apply3(Get_genString(), dictMonadRec_0_loop, dictMonadGen_1_loop, gopurs_runtime.Apply(pkg_Data_Char_Gen.Get_genAlpha(), dictMonadGen_1_loop))
+return gopurs_runtime.Apply(Call_genString(dictMonadRec_0_loop, dictMonadGen_1_loop), gopurs_runtime.Apply(pkg_Data_Char_Gen.Get_genAlpha(), dictMonadGen_1_loop))
 }
 
 func Call_genAlphaLowercaseString(dictMonadRec_0_loop gopurs_runtime.Value, dictMonadGen_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -203,7 +203,7 @@ var dictMonadRec_0 gopurs_runtime.Value = dictMonadRec_0_loop
 _ = dictMonadRec_0
 var dictMonadGen_1 gopurs_runtime.Value = dictMonadGen_1_loop
 _ = dictMonadGen_1
-return gopurs_runtime.Apply3(Get_genString(), dictMonadRec_0_loop, dictMonadGen_1_loop, gopurs_runtime.Apply(pkg_Data_Char_Gen.Get_genAlphaLowercase(), dictMonadGen_1_loop))
+return gopurs_runtime.Apply(Call_genString(dictMonadRec_0_loop, dictMonadGen_1_loop), gopurs_runtime.Apply(pkg_Data_Char_Gen.Get_genAlphaLowercase(), dictMonadGen_1_loop))
 }
 
 

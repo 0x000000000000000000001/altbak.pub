@@ -82,8 +82,12 @@ var fromString gopurs_runtime.Value
 var once_fromString sync.Once
 func Get_fromString() gopurs_runtime.Value {
 	once_fromString.Do(func() {
-		fromString = gopurs_runtime.Func(func(str_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.UncurriedApp4(Get_fromStringImpl(), str_0, Get_isFinite(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Constructor0("Nothing"))
+		fromString = gopurs_runtime.Func(func(str_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var str_0 gopurs_runtime.Value = str_0_loop
+_ = str_0
+return gopurs_runtime.UncurriedApp4(Get_fromStringImpl(), str_0_loop, Get_isFinite(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Constructor0("Nothing"))
+}()
 })
 	})
 	return fromString

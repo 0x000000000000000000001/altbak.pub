@@ -1,63 +1,88 @@
 #!/usr/bin/env bash
 set -e
 cd "$(dirname "$0")/.."
+CLEAN=""
+MODE="pure"
+TEST_NAME=""
 
-if [ "$1" == "--test" ]; then
-  echo "================================"
-  echo "  Running test $2...  "
-  echo "================================"
-  echo ""
-  ./bin/js/run --test "$2" || echo "=== JS failed ==="
-  
-  echo ""
-  ./bin/es/run --test "$2" || echo "=== ES failed ==="
-  
-  echo ""
-  ./bin/php/run --test "$2" || echo "=== PHP failed ==="
-  
-  echo ""
-  ./bin/go/run --test "$2" || echo "=== Go failed ==="
-  
-  echo ""
-  ./bin/scm/run --test "$2" || echo "=== Scheme failed ==="
-  
-  echo ""
-  ./bin/erl/run --test "$2" || echo "=== Erlang failed ==="
+while [[ $# -gt 0 ]]
+do
+  case "$1" in
+    --clean)
+    CLEAN="--clean"
+    shift
+    ;;
+    --test)
+    MODE="test"
+    TEST_NAME="$2"
+    shift 2
+    ;;
+    --x)
+    MODE="x"
+    shift
+    ;;
+    *)
+    shift
+    ;;
+  esac
+done
 
-elif [ "$1" == "--x" ]; then
+if [ "$MODE" == "test" ]; then
+  echo "================================"
+  echo "  Running test $TEST_NAME...  "
+  echo "================================"
+  echo ""
+  ./bin/js/run $CLEAN --test "$TEST_NAME" || echo "=== JS failed ==="
+  
+  echo ""
+  ./bin/es/run $CLEAN --test "$TEST_NAME" || echo "=== ES failed ==="
+  
+  echo ""
+  ./bin/php/run $CLEAN --test "$TEST_NAME" || echo "=== PHP failed ==="
+  
+  echo ""
+  ./bin/go/run $CLEAN --test "$TEST_NAME" || echo "=== Go failed ==="
+  
+  echo ""
+  ./bin/scm/run $CLEAN --test "$TEST_NAME" || echo "=== Scheme failed ==="
+  
+  echo ""
+  ./bin/erl/run $CLEAN --test "$TEST_NAME" || echo "=== Erlang failed ==="
+
+elif [ "$MODE" == "x" ]; then
   echo "================================"
   echo "  Running extended backends...  "
   echo "================================"
   echo ""
-  ./bin/js/run --x || echo "=== JS failed ==="
+  ./bin/js/run $CLEAN --x || echo "=== JS failed ==="
   
   echo ""
-  ./bin/es/run --x || echo "=== ES failed ==="
+  ./bin/es/run $CLEAN --x || echo "=== ES failed ==="
   
   echo ""
-  ./bin/php/run --x || echo "=== PHP failed ==="
+  ./bin/php/run $CLEAN --x || echo "=== PHP failed ==="
   
   echo ""
-  ./bin/go/run --x || echo "=== Go failed ==="
+  ./bin/go/run $CLEAN --x || echo "=== Go failed ==="
 else
   echo "================================"
   echo "    Running pure backends...    "
   echo "================================"
   echo ""
-  ./bin/js/run || echo "=== JS failed ==="
+  ./bin/js/run $CLEAN || echo "=== JS failed ==="
   
   echo ""
-  ./bin/es/run || echo "=== ES failed ==="
+  ./bin/es/run $CLEAN || echo "=== ES failed ==="
   
   echo ""
-  ./bin/scm/run || echo "=== Scheme failed ==="
+  ./bin/scm/run $CLEAN || echo "=== Scheme failed ==="
   
   echo ""
-  ./bin/erl/run || echo "=== Erlang failed ==="
+  ./bin/erl/run $CLEAN || echo "=== Erlang failed ==="
   
   echo ""
-  ./bin/php/run || echo "=== PHP failed ==="
+  ./bin/php/run $CLEAN || echo "=== PHP failed ==="
   
   echo ""
-  ./bin/go/run || echo "=== Go failed ==="
+  ./bin/go/run $CLEAN || echo "=== Go failed ==="
 fi

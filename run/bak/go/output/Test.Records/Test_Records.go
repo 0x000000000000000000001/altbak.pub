@@ -46,7 +46,7 @@ _ = __local_var_0_0
 return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 dummy_1_1 := gopurs_runtime.Apply(__local_var_0_0, gopurs_runtime.Value{})
 _ = dummy_1_1
-return gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(pkg_Data_Show.Get_showIntImpl(), gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(gopurs_runtime.Apply2(Get_updateRec(), dummy_1_1, Get_initial()), "b"), "d"), "f"))), gopurs_runtime.Value{})
+return gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(pkg_Data_Show.Get_showIntImpl(), gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(Call_updateRec(dummy_1_1, Get_initial()), "b"), "d"), "f"))), gopurs_runtime.Value{})
 })
 }()
 	})
@@ -71,7 +71,7 @@ goto end_branch_0
 }
 }
 {
-__t0 = gopurs_runtime.Apply2(Get_updateRec(), gopurs_runtime.Int(v_0_loop.IntVal - 1), gopurs_runtime.RecordUpdateDict(v1_1_loop, []string{"a", "b"}, []gopurs_runtime.Value{gopurs_runtime.Int(gopurs_runtime.RecordGet(v1_1_loop, "a").IntVal + 1), gopurs_runtime.RecordUpdateDict(gopurs_runtime.RecordGet(v1_1_loop, "b"), []string{"c", "d"}, []gopurs_runtime.Value{gopurs_runtime.Int(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1_loop, "b"), "c").IntVal + 2), gopurs_runtime.RecordUpdateDict(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1_loop, "b"), "d"), []string{"e", "f"}, []gopurs_runtime.Value{gopurs_runtime.Int(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1_loop, "b"), "d"), "e").IntVal + 3), gopurs_runtime.Int(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1_loop, "b"), "d"), "f").IntVal + gopurs_runtime.Apply2(pkg_Data_EuclideanRing.Get_intMod(), v_0_loop, gopurs_runtime.Int(5)).IntVal)})})}))
+__t0 = Call_updateRec(gopurs_runtime.Int(v_0_loop.IntVal - 1), gopurs_runtime.RecordUpdateDict(v1_1_loop, []string{"a", "b"}, []gopurs_runtime.Value{gopurs_runtime.Int(gopurs_runtime.RecordGet(v1_1_loop, "a").IntVal + 1), gopurs_runtime.RecordUpdateDict(gopurs_runtime.RecordGet(v1_1_loop, "b"), []string{"c", "d"}, []gopurs_runtime.Value{gopurs_runtime.Int(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1_loop, "b"), "c").IntVal + 2), gopurs_runtime.RecordUpdateDict(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1_loop, "b"), "d"), []string{"e", "f"}, []gopurs_runtime.Value{gopurs_runtime.Int(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1_loop, "b"), "d"), "e").IntVal + 3), gopurs_runtime.Int(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1_loop, "b"), "d"), "f").IntVal + gopurs_runtime.Apply2(pkg_Data_EuclideanRing.Get_intMod(), v_0_loop, gopurs_runtime.Int(5)).IntVal)})})}))
 }
 end_branch_0:
 return __t0

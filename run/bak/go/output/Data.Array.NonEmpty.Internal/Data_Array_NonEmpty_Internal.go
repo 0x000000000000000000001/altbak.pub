@@ -26,8 +26,12 @@ var NonEmptyArray gopurs_runtime.Value
 var once_NonEmptyArray sync.Once
 func Get_NonEmptyArray() gopurs_runtime.Value {
 	once_NonEmptyArray.Do(func() {
-		NonEmptyArray = gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return x_0
+		NonEmptyArray = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var x_0 gopurs_runtime.Value = x_0_loop
+_ = x_0
+return x_0_loop
+}()
 })
 	})
 	return NonEmptyArray
@@ -64,10 +68,14 @@ var showNonEmptyArray gopurs_runtime.Value
 var once_showNonEmptyArray sync.Once
 func Get_showNonEmptyArray() gopurs_runtime.Value {
 	once_showNonEmptyArray.Do(func() {
-		showNonEmptyArray = gopurs_runtime.Func(func(dictShow_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		showNonEmptyArray = gopurs_runtime.Func(func(dictShow_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictShow_0 gopurs_runtime.Value = dictShow_0_loop
+_ = dictShow_0
 return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str("(NonEmptyArray " + gopurs_runtime.Apply2(pkg_Data_Show.Get_showArrayImpl(), gopurs_runtime.RecordGet(dictShow_0, "show"), v_1).StrVal + ")")
+return gopurs_runtime.Str("(NonEmptyArray " + gopurs_runtime.Apply2(pkg_Data_Show.Get_showArrayImpl(), gopurs_runtime.RecordGet(dictShow_0_loop, "show"), v_1).StrVal + ")")
 }))
+}()
 })
 	})
 	return showNonEmptyArray
@@ -86,8 +94,12 @@ var ordNonEmptyArray gopurs_runtime.Value
 var once_ordNonEmptyArray sync.Once
 func Get_ordNonEmptyArray() gopurs_runtime.Value {
 	once_ordNonEmptyArray.Do(func() {
-		ordNonEmptyArray = gopurs_runtime.Func(func(dictOrd_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(pkg_Data_Ord.Get_ordArray(), dictOrd_0)
+		ordNonEmptyArray = gopurs_runtime.Func(func(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
+_ = dictOrd_0
+return gopurs_runtime.Apply(pkg_Data_Ord.Get_ordArray(), dictOrd_0_loop)
+}()
 })
 	})
 	return ordNonEmptyArray
@@ -201,8 +213,12 @@ var eqNonEmptyArray gopurs_runtime.Value
 var once_eqNonEmptyArray sync.Once
 func Get_eqNonEmptyArray() gopurs_runtime.Value {
 	once_eqNonEmptyArray.Do(func() {
-		eqNonEmptyArray = gopurs_runtime.Func(func(dictEq_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Apply(pkg_Data_Eq.Get_eqArrayImpl(), gopurs_runtime.RecordGet(dictEq_0, "eq")))
+		eqNonEmptyArray = gopurs_runtime.Func(func(dictEq_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
+_ = dictEq_0
+return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Apply(pkg_Data_Eq.Get_eqArrayImpl(), gopurs_runtime.RecordGet(dictEq_0_loop, "eq")))
+}()
 })
 	})
 	return eqNonEmptyArray

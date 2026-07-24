@@ -11,8 +11,12 @@ var StateT gopurs_runtime.Value
 var once_StateT sync.Once
 func Get_StateT() gopurs_runtime.Value {
 	once_StateT.Do(func() {
-		StateT = gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return x_0
+		StateT = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var x_0 gopurs_runtime.Value = x_0_loop
+_ = x_0
+return x_0_loop
+}()
 })
 	})
 	return StateT
@@ -22,9 +26,7 @@ var withStateT gopurs_runtime.Value
 var once_withStateT sync.Once
 func Get_withStateT() gopurs_runtime.Value {
 	once_withStateT.Do(func() {
-		withStateT = gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(v_1, gopurs_runtime.Apply(f_0, x_2))
-})
+		withStateT = gopurs_runtime.Func3(Call_withStateT)
 	})
 	return withStateT
 }
@@ -33,8 +35,12 @@ var runStateT gopurs_runtime.Value
 var once_runStateT sync.Once
 func Get_runStateT() gopurs_runtime.Value {
 	once_runStateT.Do(func() {
-		runStateT = gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return v_0
+		runStateT = gopurs_runtime.Func(func(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var v_0 gopurs_runtime.Value = v_0_loop
+_ = v_0
+return v_0_loop
+}()
 })
 	})
 	return runStateT
@@ -68,9 +74,7 @@ var mapStateT gopurs_runtime.Value
 var once_mapStateT sync.Once
 func Get_mapStateT() gopurs_runtime.Value {
 	once_mapStateT.Do(func() {
-		mapStateT = gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(f_0, gopurs_runtime.Apply(v_1, x_2))
-})
+		mapStateT = gopurs_runtime.Func3(Call_mapStateT)
 	})
 	return mapStateT
 }
@@ -90,12 +94,16 @@ var functorStateT gopurs_runtime.Value
 var once_functorStateT sync.Once
 func Get_functorStateT() gopurs_runtime.Value {
 	once_functorStateT.Do(func() {
-		functorStateT = gopurs_runtime.Func(func(dictFunctor_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		functorStateT = gopurs_runtime.Func(func(dictFunctor_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictFunctor_0 gopurs_runtime.Value = dictFunctor_0_loop
+_ = dictFunctor_0
 return gopurs_runtime.RecordDict1("map", gopurs_runtime.Func3(func(f_1 gopurs_runtime.Value, v_2 gopurs_runtime.Value, s_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), gopurs_runtime.Func(func(v1_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0_loop, "map"), gopurs_runtime.Func(func(v1_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply(f_1, (*[1024]gopurs_runtime.Value)(v1_4.UnsafePtr)[0]), (*[1024]gopurs_runtime.Value)(v1_4.UnsafePtr)[1])
 }), gopurs_runtime.Apply(v_2, s_3))
 }))
+}()
 })
 	})
 	return functorStateT
@@ -105,9 +113,7 @@ var execStateT gopurs_runtime.Value
 var once_execStateT sync.Once
 func Get_execStateT() gopurs_runtime.Value {
 	once_execStateT.Do(func() {
-		execStateT = gopurs_runtime.Func3(func(dictFunctor_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, s_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), pkg_Data_Tuple.Get_snd(), gopurs_runtime.Apply(v_1, s_2))
-})
+		execStateT = gopurs_runtime.Func3(Call_execStateT)
 	})
 	return execStateT
 }
@@ -116,9 +122,7 @@ var evalStateT gopurs_runtime.Value
 var once_evalStateT sync.Once
 func Get_evalStateT() gopurs_runtime.Value {
 	once_evalStateT.Do(func() {
-		evalStateT = gopurs_runtime.Func3(func(dictFunctor_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, s_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), pkg_Data_Tuple.Get_fst(), gopurs_runtime.Apply(v_1, s_2))
-})
+		evalStateT = gopurs_runtime.Func3(Call_evalStateT)
 	})
 	return evalStateT
 }
@@ -717,6 +721,46 @@ return alternativeStateT1_3_2
 })
 	})
 	return monadPlusStateT
+}
+
+func Call_withStateT(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var f_0 gopurs_runtime.Value = f_0_loop
+_ = f_0
+var v_1 gopurs_runtime.Value = v_1_loop
+_ = v_1
+var x_2 gopurs_runtime.Value = x_2_loop
+_ = x_2
+return gopurs_runtime.Apply(v_1_loop, gopurs_runtime.Apply(f_0_loop, x_2_loop))
+}
+
+func Call_mapStateT(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var f_0 gopurs_runtime.Value = f_0_loop
+_ = f_0
+var v_1 gopurs_runtime.Value = v_1_loop
+_ = v_1
+var x_2 gopurs_runtime.Value = x_2_loop
+_ = x_2
+return gopurs_runtime.Apply(f_0_loop, gopurs_runtime.Apply(v_1_loop, x_2_loop))
+}
+
+func Call_execStateT(dictFunctor_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value, s_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictFunctor_0 gopurs_runtime.Value = dictFunctor_0_loop
+_ = dictFunctor_0
+var v_1 gopurs_runtime.Value = v_1_loop
+_ = v_1
+var s_2 gopurs_runtime.Value = s_2_loop
+_ = s_2
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0_loop, "map"), pkg_Data_Tuple.Get_snd(), gopurs_runtime.Apply(v_1_loop, s_2_loop))
+}
+
+func Call_evalStateT(dictFunctor_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value, s_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictFunctor_0 gopurs_runtime.Value = dictFunctor_0_loop
+_ = dictFunctor_0
+var v_1 gopurs_runtime.Value = v_1_loop
+_ = v_1
+var s_2 gopurs_runtime.Value = s_2_loop
+_ = s_2
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0_loop, "map"), pkg_Data_Tuple.Get_fst(), gopurs_runtime.Apply(v_1_loop, s_2_loop))
 }
 
 func Call_altStateT(dictMonad_0_loop gopurs_runtime.Value, dictAlt_1_loop gopurs_runtime.Value) gopurs_runtime.Value {

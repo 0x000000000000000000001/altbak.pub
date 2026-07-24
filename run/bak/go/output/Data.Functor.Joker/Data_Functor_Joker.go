@@ -10,8 +10,12 @@ var Joker gopurs_runtime.Value
 var once_Joker sync.Once
 func Get_Joker() gopurs_runtime.Value {
 	once_Joker.Do(func() {
-		Joker = gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return x_0
+		Joker = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var x_0 gopurs_runtime.Value = x_0_loop
+_ = x_0
+return x_0_loop
+}()
 })
 	})
 	return Joker
@@ -21,10 +25,14 @@ var showJoker gopurs_runtime.Value
 var once_showJoker sync.Once
 func Get_showJoker() gopurs_runtime.Value {
 	once_showJoker.Do(func() {
-		showJoker = gopurs_runtime.Func(func(dictShow_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		showJoker = gopurs_runtime.Func(func(dictShow_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictShow_0 gopurs_runtime.Value = dictShow_0_loop
+_ = dictShow_0
 return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str("(Joker " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), v_1).StrVal + ")")
+return gopurs_runtime.Str("(Joker " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0_loop, "show"), v_1).StrVal + ")")
 }))
+}()
 })
 	})
 	return showJoker
@@ -34,10 +42,14 @@ var profunctorJoker gopurs_runtime.Value
 var once_profunctorJoker sync.Once
 func Get_profunctorJoker() gopurs_runtime.Value {
 	once_profunctorJoker.Do(func() {
-		profunctorJoker = gopurs_runtime.Func(func(dictFunctor_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		profunctorJoker = gopurs_runtime.Func(func(dictFunctor_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictFunctor_0 gopurs_runtime.Value = dictFunctor_0_loop
+_ = dictFunctor_0
 return gopurs_runtime.RecordDict1("dimap", gopurs_runtime.Func3(func(v_1 gopurs_runtime.Value, g_2 gopurs_runtime.Value, v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), g_2, v1_3)
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0_loop, "map"), g_2, v1_3)
 }))
+}()
 })
 	})
 	return profunctorJoker
@@ -47,8 +59,12 @@ var ordJoker gopurs_runtime.Value
 var once_ordJoker sync.Once
 func Get_ordJoker() gopurs_runtime.Value {
 	once_ordJoker.Do(func() {
-		ordJoker = gopurs_runtime.Func(func(dictOrd_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return dictOrd_0
+		ordJoker = gopurs_runtime.Func(func(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
+_ = dictOrd_0
+return dictOrd_0_loop
+}()
 })
 	})
 	return ordJoker
@@ -69,9 +85,7 @@ var hoistJoker gopurs_runtime.Value
 var once_hoistJoker sync.Once
 func Get_hoistJoker() gopurs_runtime.Value {
 	once_hoistJoker.Do(func() {
-		hoistJoker = gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(f_0, v_1)
-})
+		hoistJoker = gopurs_runtime.Func2(Call_hoistJoker)
 	})
 	return hoistJoker
 }
@@ -80,10 +94,14 @@ var functorJoker gopurs_runtime.Value
 var once_functorJoker sync.Once
 func Get_functorJoker() gopurs_runtime.Value {
 	once_functorJoker.Do(func() {
-		functorJoker = gopurs_runtime.Func(func(dictFunctor_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		functorJoker = gopurs_runtime.Func(func(dictFunctor_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictFunctor_0 gopurs_runtime.Value = dictFunctor_0_loop
+_ = dictFunctor_0
 return gopurs_runtime.RecordDict1("map", gopurs_runtime.Func2(func(f_1 gopurs_runtime.Value, v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), f_1, v_2)
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0_loop, "map"), f_1, v_2)
 }))
+}()
 })
 	})
 	return functorJoker
@@ -93,8 +111,12 @@ var eqJoker gopurs_runtime.Value
 var once_eqJoker sync.Once
 func Get_eqJoker() gopurs_runtime.Value {
 	once_eqJoker.Do(func() {
-		eqJoker = gopurs_runtime.Func(func(dictEq_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return dictEq_0
+		eqJoker = gopurs_runtime.Func(func(dictEq_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
+_ = dictEq_0
+return dictEq_0_loop
+}()
 })
 	})
 	return eqJoker
@@ -104,18 +126,22 @@ var choiceJoker gopurs_runtime.Value
 var once_choiceJoker sync.Once
 func Get_choiceJoker() gopurs_runtime.Value {
 	once_choiceJoker.Do(func() {
-		choiceJoker = gopurs_runtime.Func(func(dictFunctor_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		choiceJoker = gopurs_runtime.Func(func(dictFunctor_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictFunctor_0 gopurs_runtime.Value = dictFunctor_0_loop
+_ = dictFunctor_0
 profunctorJoker1_1_0 := gopurs_runtime.RecordDict1("dimap", gopurs_runtime.Func3(func(v_1 gopurs_runtime.Value, g_2 gopurs_runtime.Value, v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), g_2, v1_3)
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0_loop, "map"), g_2, v1_3)
 }))
 _ = profunctorJoker1_1_0
 return gopurs_runtime.RecordDict3("left", "right", "Profunctor0", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), pkg_Data_Either.Get_Left(), v_2)
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0_loop, "map"), pkg_Data_Either.Get_Left(), v_2)
 }), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), pkg_Data_Either.Get_Right(), v_2)
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0_loop, "map"), pkg_Data_Either.Get_Right(), v_2)
 }), gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return profunctorJoker1_1_0
 }))
+}()
 })
 	})
 	return choiceJoker
@@ -125,10 +151,14 @@ var bifunctorJoker gopurs_runtime.Value
 var once_bifunctorJoker sync.Once
 func Get_bifunctorJoker() gopurs_runtime.Value {
 	once_bifunctorJoker.Do(func() {
-		bifunctorJoker = gopurs_runtime.Func(func(dictFunctor_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		bifunctorJoker = gopurs_runtime.Func(func(dictFunctor_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictFunctor_0 gopurs_runtime.Value = dictFunctor_0_loop
+_ = dictFunctor_0
 return gopurs_runtime.RecordDict1("bimap", gopurs_runtime.Func3(func(v_1 gopurs_runtime.Value, g_2 gopurs_runtime.Value, v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), g_2, v1_3)
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0_loop, "map"), g_2, v1_3)
 }))
+}()
 })
 	})
 	return bifunctorJoker
@@ -138,18 +168,22 @@ var biapplyJoker gopurs_runtime.Value
 var once_biapplyJoker sync.Once
 func Get_biapplyJoker() gopurs_runtime.Value {
 	once_biapplyJoker.Do(func() {
-		biapplyJoker = gopurs_runtime.Func(func(dictApply_0 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApply_0, "Functor0"), gopurs_runtime.Value{})
+		biapplyJoker = gopurs_runtime.Func(func(dictApply_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictApply_0 gopurs_runtime.Value = dictApply_0_loop
+_ = dictApply_0
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApply_0_loop, "Functor0"), gopurs_runtime.Value{})
 _ = __local_var_1_0
 bifunctorJoker1_2_1 := gopurs_runtime.RecordDict1("bimap", gopurs_runtime.Func3(func(v_2 gopurs_runtime.Value, g_3 gopurs_runtime.Value, v1_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "map"), g_3, v1_4)
 }))
 _ = bifunctorJoker1_2_1
 return gopurs_runtime.RecordDict2("biapply", "Bifunctor0", gopurs_runtime.Func2(func(v_3 gopurs_runtime.Value, v1_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictApply_0, "apply"), v_3, v1_4)
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictApply_0_loop, "apply"), v_3, v1_4)
 }), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return bifunctorJoker1_2_1
 }))
+}()
 })
 	})
 	return biapplyJoker
@@ -159,8 +193,11 @@ var biapplicativeJoker gopurs_runtime.Value
 var once_biapplicativeJoker sync.Once
 func Get_biapplicativeJoker() gopurs_runtime.Value {
 	once_biapplicativeJoker.Do(func() {
-		biapplicativeJoker = gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{})
+		biapplicativeJoker = gopurs_runtime.Func(func(dictApplicative_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictApplicative_0 gopurs_runtime.Value = dictApplicative_0_loop
+_ = dictApplicative_0
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0_loop, "Apply0"), gopurs_runtime.Value{})
 _ = __local_var_1_0
 __local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_0, "Functor0"), gopurs_runtime.Value{})
 _ = __local_var_2_1
@@ -175,10 +212,11 @@ return bifunctorJoker1_3_3
 }))
 _ = biapplyJoker1_3_2
 return gopurs_runtime.RecordDict2("bipure", "Biapply0", gopurs_runtime.Func2(func(v_4 gopurs_runtime.Value, b_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "pure"), b_5)
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0_loop, "pure"), b_5)
 }), gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return biapplyJoker1_3_2
 }))
+}()
 })
 	})
 	return biapplicativeJoker
@@ -188,18 +226,22 @@ var applyJoker gopurs_runtime.Value
 var once_applyJoker sync.Once
 func Get_applyJoker() gopurs_runtime.Value {
 	once_applyJoker.Do(func() {
-		applyJoker = gopurs_runtime.Func(func(dictApply_0 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApply_0, "Functor0"), gopurs_runtime.Value{})
+		applyJoker = gopurs_runtime.Func(func(dictApply_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictApply_0 gopurs_runtime.Value = dictApply_0_loop
+_ = dictApply_0
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApply_0_loop, "Functor0"), gopurs_runtime.Value{})
 _ = __local_var_1_0
 functorJoker1_2_1 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func2(func(f_2 gopurs_runtime.Value, v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "map"), f_2, v_3)
 }))
 _ = functorJoker1_2_1
 return gopurs_runtime.RecordDict2("apply", "Functor0", gopurs_runtime.Func2(func(v_3 gopurs_runtime.Value, v1_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictApply_0, "apply"), v_3, v1_4)
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictApply_0_loop, "apply"), v_3, v1_4)
 }), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return functorJoker1_2_1
 }))
+}()
 })
 	})
 	return applyJoker
@@ -209,8 +251,11 @@ var bindJoker gopurs_runtime.Value
 var once_bindJoker sync.Once
 func Get_bindJoker() gopurs_runtime.Value {
 	once_bindJoker.Do(func() {
-		bindJoker = gopurs_runtime.Func(func(dictBind_0 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBind_0, "Apply0"), gopurs_runtime.Value{})
+		bindJoker = gopurs_runtime.Func(func(dictBind_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictBind_0 gopurs_runtime.Value = dictBind_0_loop
+_ = dictBind_0
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBind_0_loop, "Apply0"), gopurs_runtime.Value{})
 _ = __local_var_1_0
 __local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_0, "Functor0"), gopurs_runtime.Value{})
 _ = __local_var_2_1
@@ -225,12 +270,13 @@ return functorJoker1_3_3
 }))
 _ = applyJoker1_3_2
 return gopurs_runtime.RecordDict2("bind", "Apply0", gopurs_runtime.Func2(func(v_4 gopurs_runtime.Value, amb_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBind_0, "bind"), v_4, gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBind_0_loop, "bind"), v_4, gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(amb_5, x_6)
 }))
 }), gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return applyJoker1_3_2
 }))
+}()
 })
 	})
 	return bindJoker
@@ -240,8 +286,11 @@ var applicativeJoker gopurs_runtime.Value
 var once_applicativeJoker sync.Once
 func Get_applicativeJoker() gopurs_runtime.Value {
 	once_applicativeJoker.Do(func() {
-		applicativeJoker = gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{})
+		applicativeJoker = gopurs_runtime.Func(func(dictApplicative_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictApplicative_0 gopurs_runtime.Value = dictApplicative_0_loop
+_ = dictApplicative_0
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0_loop, "Apply0"), gopurs_runtime.Value{})
 _ = __local_var_1_0
 __local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_0, "Functor0"), gopurs_runtime.Value{})
 _ = __local_var_2_1
@@ -256,10 +305,11 @@ return functorJoker1_3_3
 }))
 _ = applyJoker1_3_2
 return gopurs_runtime.RecordDict2("pure", "Apply0", gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "pure"), x_4)
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0_loop, "pure"), x_4)
 }), gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return applyJoker1_3_2
 }))
+}()
 })
 	})
 	return applicativeJoker
@@ -269,8 +319,11 @@ var monadJoker gopurs_runtime.Value
 var once_monadJoker sync.Once
 func Get_monadJoker() gopurs_runtime.Value {
 	once_monadJoker.Do(func() {
-		monadJoker = gopurs_runtime.Func(func(dictMonad_0 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Applicative0"), gopurs_runtime.Value{})
+		monadJoker = gopurs_runtime.Func(func(dictMonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
+_ = dictMonad_0
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0_loop, "Applicative0"), gopurs_runtime.Value{})
 _ = __local_var_1_0
 __local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_0, "Apply0"), gopurs_runtime.Value{})
 _ = __local_var_2_1
@@ -292,7 +345,7 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_0, "pure"), x
 return applyJoker1_5_5
 }))
 _ = applicativeJoker1_3_2
-__local_var_4_6 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Bind1"), gopurs_runtime.Value{})
+__local_var_4_6 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0_loop, "Bind1"), gopurs_runtime.Value{})
 _ = __local_var_4_6
 __local_var_5_7 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_4_6, "Apply0"), gopurs_runtime.Value{})
 _ = __local_var_5_7
@@ -321,11 +374,18 @@ return applicativeJoker1_3_2
 }), gopurs_runtime.Func(func(_dollar__unused_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return bindJoker1_6_8
 }))
+}()
 })
 	})
 	return monadJoker
 }
 
-
+func Call_hoistJoker(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var f_0 gopurs_runtime.Value = f_0_loop
+_ = f_0
+var v_1 gopurs_runtime.Value = v_1_loop
+_ = v_1
+return gopurs_runtime.Apply(f_0_loop, v_1_loop)
+}
 
 
