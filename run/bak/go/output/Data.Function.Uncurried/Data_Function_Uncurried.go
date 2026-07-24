@@ -9,8 +9,12 @@ var runFn1 gopurs_runtime.Value
 var once_runFn1 sync.Once
 func Get_runFn1() gopurs_runtime.Value {
 	once_runFn1.Do(func() {
-		runFn1 = gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return f_0
+		runFn1 = gopurs_runtime.Func(func(f_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var f_0 gopurs_runtime.Value = f_0_loop
+_ = f_0
+return f_0_loop
+}()
 })
 	})
 	return runFn1
@@ -20,12 +24,18 @@ var mkFn1 gopurs_runtime.Value
 var once_mkFn1 sync.Once
 func Get_mkFn1() gopurs_runtime.Value {
 	once_mkFn1.Do(func() {
-		mkFn1 = gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return f_0
+		mkFn1 = gopurs_runtime.Func(func(f_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var f_0 gopurs_runtime.Value = f_0_loop
+_ = f_0
+return f_0_loop
+}()
 })
 	})
 	return mkFn1
 }
+
+
 
 func Get_mkFn0() gopurs_runtime.Value {
 	return _Gopurs_MkFn0

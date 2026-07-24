@@ -78,7 +78,7 @@ return gopurs_runtime.Str("unicode")
 _ = usedFlags_1_0
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Apply2(Get_eq(), usedFlags_1_0, gopurs_runtime.Array([]gopurs_runtime.Value{}))).IntVal != 0 {
+if gopurs_runtime.Apply2(Get_eq(), usedFlags_1_0, gopurs_runtime.Array([]gopurs_runtime.Value{})).IntVal != 0 {
 __t1 = gopurs_runtime.Str("noFlags")
 goto end_branch_1
 } else {
@@ -86,7 +86,7 @@ goto end_branch_1
 }
 }
 {
-__t1 = gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str("(").StrVal + gopurs_runtime.Apply2(pkg_Data_String_Common.Get_joinWith(), gopurs_runtime.Str(" <> "), usedFlags_1_0).StrVal).StrVal + gopurs_runtime.Str(")").StrVal)
+__t1 = gopurs_runtime.Str("(" + gopurs_runtime.Apply2(pkg_Data_String_Common.Get_joinWith(), gopurs_runtime.Str(" <> "), usedFlags_1_0).StrVal + ")")
 }
 end_branch_1:
 return __t1
@@ -193,5 +193,7 @@ func Get_dotAll() gopurs_runtime.Value {
 	})
 	return dotAll
 }
+
+
 
 

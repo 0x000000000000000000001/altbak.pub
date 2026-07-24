@@ -12,7 +12,7 @@ func MapWithIndexArray(f func(int) func(interface{}) interface{}, xs []interface
 
 
 // --- Auto-generated FFI wrappers ---
-var _Gopurs_MapWithIndexArray = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_mapWithIndexArray(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 int) func(interface{}) interface{} {
 			inner_res0 := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 			return func(p1_0 interface{}) interface{} {
@@ -28,4 +28,5 @@ var _Gopurs_MapWithIndexArray = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Va
 			for i, v := range go_res { res_arr[i] = gopurs_runtime.Box(v) }
 			return gopurs_runtime.Array(res_arr)
 		}()
-})
+}
+var _Gopurs_MapWithIndexArray = gopurs_runtime.Func2(Call_mapWithIndexArray)

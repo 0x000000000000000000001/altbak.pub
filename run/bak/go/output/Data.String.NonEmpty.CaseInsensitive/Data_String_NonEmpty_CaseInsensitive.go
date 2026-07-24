@@ -24,7 +24,7 @@ var once_showCaseInsensitiveNonEmptyString sync.Once
 func Get_showCaseInsensitiveNonEmptyString() gopurs_runtime.Value {
 	once_showCaseInsensitiveNonEmptyString.Do(func() {
 		showCaseInsensitiveNonEmptyString = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str("(CaseInsensitiveNonEmptyString (NonEmptyString.unsafeFromString ").StrVal + gopurs_runtime.Apply(pkg_Data_Show.Get_showStringImpl(), v_0).StrVal).StrVal + gopurs_runtime.Str("))").StrVal)
+return gopurs_runtime.Str("(CaseInsensitiveNonEmptyString (NonEmptyString.unsafeFromString " + gopurs_runtime.Apply(pkg_Data_Show.Get_showStringImpl(), v_0).StrVal + "))")
 }))
 	})
 	return showCaseInsensitiveNonEmptyString
@@ -64,5 +64,7 @@ return Get_eqCaseInsensitiveNonEmptyString()
 	})
 	return ordCaseInsensitiveNonEmptyString
 }
+
+
 
 

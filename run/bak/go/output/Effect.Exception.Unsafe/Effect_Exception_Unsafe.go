@@ -11,8 +11,12 @@ var unsafeThrowException gopurs_runtime.Value
 var once_unsafeThrowException sync.Once
 func Get_unsafeThrowException() gopurs_runtime.Value {
 	once_unsafeThrowException.Do(func() {
-		unsafeThrowException = gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(pkg_Effect_Unsafe.Get_unsafePerformEffect(), gopurs_runtime.Apply(pkg_Effect_Exception.Get_throwException(), x_0))
+		unsafeThrowException = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var x_0 gopurs_runtime.Value = x_0_loop
+_ = x_0
+return gopurs_runtime.Apply(pkg_Effect_Unsafe.Get_unsafePerformEffect(), gopurs_runtime.Apply(pkg_Effect_Exception.Get_throwException(), x_0_loop))
+}()
 })
 	})
 	return unsafeThrowException
@@ -22,11 +26,17 @@ var unsafeThrow gopurs_runtime.Value
 var once_unsafeThrow sync.Once
 func Get_unsafeThrow() gopurs_runtime.Value {
 	once_unsafeThrow.Do(func() {
-		unsafeThrow = gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(pkg_Effect_Unsafe.Get_unsafePerformEffect(), gopurs_runtime.Apply(pkg_Effect_Exception.Get_throwException(), gopurs_runtime.Apply(pkg_Effect_Exception.Get_error(), x_0)))
+		unsafeThrow = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var x_0 gopurs_runtime.Value = x_0_loop
+_ = x_0
+return gopurs_runtime.Apply(pkg_Effect_Unsafe.Get_unsafePerformEffect(), gopurs_runtime.Apply(pkg_Effect_Exception.Get_throwException(), gopurs_runtime.Apply(pkg_Effect_Exception.Get_error(), x_0_loop)))
+}()
 })
 	})
 	return unsafeThrow
 }
+
+
 
 

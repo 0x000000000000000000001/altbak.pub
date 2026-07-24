@@ -24,16 +24,16 @@ func Get_showCoproduct() gopurs_runtime.Value {
 return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_2.StrVal == "Left")).IntVal != 0 {
-__t0 = gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str("(left ").StrVal + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0]).StrVal).StrVal + gopurs_runtime.Str(")").StrVal)
+if gopurs_runtime.Bool(v_2.StrVal == "Left").IntVal != 0 {
+__t0 = gopurs_runtime.Str("(left " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0]).StrVal + ")")
 goto end_branch_0
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(v_2.StrVal == "Right")).IntVal != 0 {
-__t0 = gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str("(right ").StrVal + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow1_1, "show"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0]).StrVal).StrVal + gopurs_runtime.Str(")").StrVal)
+if gopurs_runtime.Bool(v_2.StrVal == "Right").IntVal != 0 {
+__t0 = gopurs_runtime.Str("(right " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow1_1, "show"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0]).StrVal + ")")
 goto end_branch_0
 } else {
 
@@ -95,7 +95,7 @@ __local_var_5_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctor1_1,
 _ = __local_var_5_1
 var __t2 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_3.StrVal == "Left")).IntVal != 0 {
+if gopurs_runtime.Bool(v_3.StrVal == "Left").IntVal != 0 {
 __t2 = gopurs_runtime.Constructor1("Left", gopurs_runtime.Apply(__local_var_4_0, (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[0]))
 goto end_branch_2
 } else {
@@ -103,7 +103,7 @@ goto end_branch_2
 }
 }
 {
-if (gopurs_runtime.Bool(v_3.StrVal == "Right")).IntVal != 0 {
+if gopurs_runtime.Bool(v_3.StrVal == "Right").IntVal != 0 {
 __t2 = gopurs_runtime.Constructor1("Right", gopurs_runtime.Apply(__local_var_5_1, (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[0]))
 goto end_branch_2
 } else {
@@ -134,7 +134,7 @@ _ = eq13_4_1
 return gopurs_runtime.Func2(func(v_5 gopurs_runtime.Value, v1_6 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t2 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_5.StrVal == "Left")).IntVal != 0 {
+if gopurs_runtime.Bool(v_5.StrVal == "Left").IntVal != 0 {
 __t2 = gopurs_runtime.Bool(gopurs_runtime.Bool(v1_6.StrVal == "Left").IntVal != 0 && gopurs_runtime.Apply2(eq12_3_0, (*[1024]gopurs_runtime.Value)(v_5.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v1_6.UnsafePtr)[0]).IntVal != 0)
 goto end_branch_2
 } else {
@@ -142,7 +142,7 @@ goto end_branch_2
 }
 }
 {
-__t2 = gopurs_runtime.Bool(gopurs_runtime.Bool(v_5.StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool(gopurs_runtime.Bool(v1_6.StrVal == "Right").IntVal != 0 && gopurs_runtime.Apply2(eq13_4_1, (*[1024]gopurs_runtime.Value)(v_5.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v1_6.UnsafePtr)[0]).IntVal != 0).IntVal != 0)
+__t2 = gopurs_runtime.Bool(gopurs_runtime.Bool(v_5.StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool(v1_6.StrVal == "Right").IntVal != 0 && gopurs_runtime.Apply2(eq13_4_1, (*[1024]gopurs_runtime.Value)(v_5.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v1_6.UnsafePtr)[0]).IntVal != 0)
 }
 end_branch_2:
 return __t2
@@ -165,7 +165,7 @@ _ = eq13_4_1
 return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func2(func(v_5 gopurs_runtime.Value, v1_6 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t2 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_5.StrVal == "Left")).IntVal != 0 {
+if gopurs_runtime.Bool(v_5.StrVal == "Left").IntVal != 0 {
 __t2 = gopurs_runtime.Bool(gopurs_runtime.Bool(v1_6.StrVal == "Left").IntVal != 0 && gopurs_runtime.Apply2(eq12_3_0, (*[1024]gopurs_runtime.Value)(v_5.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v1_6.UnsafePtr)[0]).IntVal != 0)
 goto end_branch_2
 } else {
@@ -173,7 +173,7 @@ goto end_branch_2
 }
 }
 {
-__t2 = gopurs_runtime.Bool(gopurs_runtime.Bool(v_5.StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool(gopurs_runtime.Bool(v1_6.StrVal == "Right").IntVal != 0 && gopurs_runtime.Apply2(eq13_4_1, (*[1024]gopurs_runtime.Value)(v_5.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v1_6.UnsafePtr)[0]).IntVal != 0).IntVal != 0)
+__t2 = gopurs_runtime.Bool(gopurs_runtime.Bool(v_5.StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool(v1_6.StrVal == "Right").IntVal != 0 && gopurs_runtime.Apply2(eq13_4_1, (*[1024]gopurs_runtime.Value)(v_5.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v1_6.UnsafePtr)[0]).IntVal != 0)
 }
 end_branch_2:
 return __t2
@@ -201,7 +201,7 @@ _ = eq13_6_4
 return gopurs_runtime.Func2(func(v_7 gopurs_runtime.Value, v1_8 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t5 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_7.StrVal == "Left")).IntVal != 0 {
+if gopurs_runtime.Bool(v_7.StrVal == "Left").IntVal != 0 {
 __t5 = gopurs_runtime.Bool(gopurs_runtime.Bool(v1_8.StrVal == "Left").IntVal != 0 && gopurs_runtime.Apply2(eq12_5_3, (*[1024]gopurs_runtime.Value)(v_7.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v1_8.UnsafePtr)[0]).IntVal != 0)
 goto end_branch_5
 } else {
@@ -209,7 +209,7 @@ goto end_branch_5
 }
 }
 {
-__t5 = gopurs_runtime.Bool(gopurs_runtime.Bool(v_7.StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool(gopurs_runtime.Bool(v1_8.StrVal == "Right").IntVal != 0 && gopurs_runtime.Apply2(eq13_6_4, (*[1024]gopurs_runtime.Value)(v_7.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v1_8.UnsafePtr)[0]).IntVal != 0).IntVal != 0)
+__t5 = gopurs_runtime.Bool(gopurs_runtime.Bool(v_7.StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool(v1_8.StrVal == "Right").IntVal != 0 && gopurs_runtime.Apply2(eq13_6_4, (*[1024]gopurs_runtime.Value)(v_7.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v1_8.UnsafePtr)[0]).IntVal != 0)
 }
 end_branch_5:
 return __t5
@@ -224,10 +224,10 @@ _ = compare13_7_7
 return gopurs_runtime.Func2(func(v_8 gopurs_runtime.Value, v1_9 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t8 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_8.StrVal == "Left")).IntVal != 0 {
+if gopurs_runtime.Bool(v_8.StrVal == "Left").IntVal != 0 {
 var __t9 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v1_9.StrVal == "Left")).IntVal != 0 {
+if gopurs_runtime.Bool(v1_9.StrVal == "Left").IntVal != 0 {
 __t9 = gopurs_runtime.Apply2(compare12_6_6, (*[1024]gopurs_runtime.Value)(v_8.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v1_9.UnsafePtr)[0])
 goto end_branch_9
 } else {
@@ -245,7 +245,7 @@ goto end_branch_8
 }
 }
 {
-if (gopurs_runtime.Bool(v1_9.StrVal == "Left")).IntVal != 0 {
+if gopurs_runtime.Bool(v1_9.StrVal == "Left").IntVal != 0 {
 __t8 = gopurs_runtime.Constructor0("GT")
 goto end_branch_8
 } else {
@@ -253,7 +253,7 @@ goto end_branch_8
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.Bool(v_8.StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool(v1_9.StrVal == "Right").IntVal != 0)).IntVal != 0 {
+if gopurs_runtime.Bool(v_8.StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool(v1_9.StrVal == "Right").IntVal != 0 {
 __t8 = gopurs_runtime.Apply2(compare13_7_7, (*[1024]gopurs_runtime.Value)(v_8.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v1_9.UnsafePtr)[0])
 goto end_branch_8
 } else {
@@ -297,7 +297,7 @@ _ = eq13_8_6
 eqCoproduct3_7_4 := gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func2(func(v_9 gopurs_runtime.Value, v1_10 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t7 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_9.StrVal == "Left")).IntVal != 0 {
+if gopurs_runtime.Bool(v_9.StrVal == "Left").IntVal != 0 {
 __t7 = gopurs_runtime.Bool(gopurs_runtime.Bool(v1_10.StrVal == "Left").IntVal != 0 && gopurs_runtime.Apply2(eq12_7_5, (*[1024]gopurs_runtime.Value)(v_9.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v1_10.UnsafePtr)[0]).IntVal != 0)
 goto end_branch_7
 } else {
@@ -305,7 +305,7 @@ goto end_branch_7
 }
 }
 {
-__t7 = gopurs_runtime.Bool(gopurs_runtime.Bool(v_9.StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool(gopurs_runtime.Bool(v1_10.StrVal == "Right").IntVal != 0 && gopurs_runtime.Apply2(eq13_8_6, (*[1024]gopurs_runtime.Value)(v_9.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v1_10.UnsafePtr)[0]).IntVal != 0).IntVal != 0)
+__t7 = gopurs_runtime.Bool(gopurs_runtime.Bool(v_9.StrVal == "Right").IntVal != 0 && gopurs_runtime.Bool(v1_10.StrVal == "Right").IntVal != 0 && gopurs_runtime.Apply2(eq13_8_6, (*[1024]gopurs_runtime.Value)(v_9.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v1_10.UnsafePtr)[0]).IntVal != 0)
 }
 end_branch_7:
 return __t7
@@ -328,7 +328,7 @@ func Get_coproduct() gopurs_runtime.Value {
 		coproduct = gopurs_runtime.Func3(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value, v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v2_2.StrVal == "Left")).IntVal != 0 {
+if gopurs_runtime.Bool(v2_2.StrVal == "Left").IntVal != 0 {
 __t0 = gopurs_runtime.Apply(v_0, (*[1024]gopurs_runtime.Value)(v2_2.UnsafePtr)[0])
 goto end_branch_0
 } else {
@@ -336,7 +336,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(v2_2.StrVal == "Right")).IntVal != 0 {
+if gopurs_runtime.Bool(v2_2.StrVal == "Right").IntVal != 0 {
 __t0 = gopurs_runtime.Apply(v1_1, (*[1024]gopurs_runtime.Value)(v2_2.UnsafePtr)[0])
 goto end_branch_0
 } else {
@@ -370,7 +370,7 @@ __local_var_7_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_3_1
 _ = __local_var_7_4
 var __t5 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_5.StrVal == "Left")).IntVal != 0 {
+if gopurs_runtime.Bool(v_5.StrVal == "Left").IntVal != 0 {
 __t5 = gopurs_runtime.Constructor1("Left", gopurs_runtime.Apply(__local_var_6_3, (*[1024]gopurs_runtime.Value)(v_5.UnsafePtr)[0]))
 goto end_branch_5
 } else {
@@ -378,7 +378,7 @@ goto end_branch_5
 }
 }
 {
-if (gopurs_runtime.Bool(v_5.StrVal == "Right")).IntVal != 0 {
+if gopurs_runtime.Bool(v_5.StrVal == "Right").IntVal != 0 {
 __t5 = gopurs_runtime.Constructor1("Right", gopurs_runtime.Apply(__local_var_7_4, (*[1024]gopurs_runtime.Value)(v_5.UnsafePtr)[0]))
 goto end_branch_5
 } else {
@@ -404,7 +404,7 @@ _ = __local_var_7_7
 return gopurs_runtime.Func(func(v2_8 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t8 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v2_8.StrVal == "Left")).IntVal != 0 {
+if gopurs_runtime.Bool(v2_8.StrVal == "Left").IntVal != 0 {
 __t8 = gopurs_runtime.Constructor1("Left", gopurs_runtime.Apply(__local_var_6_6, (*[1024]gopurs_runtime.Value)(v2_8.UnsafePtr)[0]))
 goto end_branch_8
 } else {
@@ -412,7 +412,7 @@ goto end_branch_8
 }
 }
 {
-if (gopurs_runtime.Bool(v2_8.StrVal == "Right")).IntVal != 0 {
+if gopurs_runtime.Bool(v2_8.StrVal == "Right").IntVal != 0 {
 __t8 = gopurs_runtime.Constructor1("Right", gopurs_runtime.Apply(__local_var_7_7, (*[1024]gopurs_runtime.Value)(v2_8.UnsafePtr)[0]))
 goto end_branch_8
 } else {
@@ -447,7 +447,7 @@ _ = extendCoproduct2_3_1
 return gopurs_runtime.RecordDict2("extract", "Extend0", gopurs_runtime.Func(func(v2_4 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t2 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v2_4.StrVal == "Left")).IntVal != 0 {
+if gopurs_runtime.Bool(v2_4.StrVal == "Left").IntVal != 0 {
 __t2 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonad_0, "extract"), (*[1024]gopurs_runtime.Value)(v2_4.UnsafePtr)[0])
 goto end_branch_2
 } else {
@@ -455,7 +455,7 @@ goto end_branch_2
 }
 }
 {
-if (gopurs_runtime.Bool(v2_4.StrVal == "Right")).IntVal != 0 {
+if gopurs_runtime.Bool(v2_4.StrVal == "Right").IntVal != 0 {
 __t2 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonad1_2, "extract"), (*[1024]gopurs_runtime.Value)(v2_4.UnsafePtr)[0])
 goto end_branch_2
 } else {
@@ -483,7 +483,7 @@ func Get_bihoistCoproduct() gopurs_runtime.Value {
 		bihoistCoproduct = gopurs_runtime.Func3(func(natF_0 gopurs_runtime.Value, natG_1 gopurs_runtime.Value, v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_2.StrVal == "Left")).IntVal != 0 {
+if gopurs_runtime.Bool(v_2.StrVal == "Left").IntVal != 0 {
 __t0 = gopurs_runtime.Constructor1("Left", gopurs_runtime.Apply(natF_0, (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0]))
 goto end_branch_0
 } else {
@@ -491,7 +491,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(v_2.StrVal == "Right")).IntVal != 0 {
+if gopurs_runtime.Bool(v_2.StrVal == "Right").IntVal != 0 {
 __t0 = gopurs_runtime.Constructor1("Right", gopurs_runtime.Apply(natG_1, (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0]))
 goto end_branch_0
 } else {
@@ -507,5 +507,7 @@ return __t0
 	})
 	return bihoistCoproduct
 }
+
+
 
 

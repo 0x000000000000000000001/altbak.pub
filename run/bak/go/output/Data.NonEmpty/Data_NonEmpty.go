@@ -29,7 +29,7 @@ _ = __local_var_3_0
 return gopurs_runtime.Constructor2("NonEmpty", (*[1024]gopurs_runtime.Value)(__local_var_3_0.UnsafePtr)[0], gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictUnfoldable_0, "unfoldr"), gopurs_runtime.Func(func(v1_4 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v1_4.StrVal == "Just")).IntVal != 0 {
+if gopurs_runtime.Bool(v1_4.StrVal == "Just").IntVal != 0 {
 __t1 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Apply(f_1, (*[1024]gopurs_runtime.Value)(v1_4.UnsafePtr)[0]))
 goto end_branch_1
 } else {
@@ -80,7 +80,7 @@ func Get_showNonEmpty() gopurs_runtime.Value {
 	once_showNonEmpty.Do(func() {
 		showNonEmpty = gopurs_runtime.Func2(func(dictShow_0 gopurs_runtime.Value, dictShow1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str("(NonEmpty ").StrVal + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0]).StrVal).StrVal + gopurs_runtime.Str(" ").StrVal).StrVal + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow1_1, "show"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[1]).StrVal).StrVal + gopurs_runtime.Str(")").StrVal)
+return gopurs_runtime.Str("(NonEmpty " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0]).StrVal + " " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow1_1, "show"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[1]).StrVal + ")")
 }))
 })
 	})
@@ -361,7 +361,7 @@ _ = __local_var_6_4
 return gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t5 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(x_7.StrVal == "Nothing")).IntVal != 0 {
+if gopurs_runtime.Bool(x_7.StrVal == "Nothing").IntVal != 0 {
 __t5 = a1_5
 goto end_branch_5
 } else {
@@ -369,7 +369,7 @@ goto end_branch_5
 }
 }
 {
-if (gopurs_runtime.Bool(x_7.StrVal == "Just")).IntVal != 0 {
+if gopurs_runtime.Bool(x_7.StrVal == "Just").IntVal != 0 {
 __t5 = gopurs_runtime.Apply(__local_var_6_4, (*[1024]gopurs_runtime.Value)(x_7.UnsafePtr)[0])
 goto end_branch_5
 } else {
@@ -386,7 +386,7 @@ return gopurs_runtime.Constructor1("Just", __t5)
 _ = __local_var_5_3
 var __t6 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(__local_var_5_3.StrVal == "Nothing")).IntVal != 0 {
+if gopurs_runtime.Bool(__local_var_5_3.StrVal == "Nothing").IntVal != 0 {
 __t6 = (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[0]
 goto end_branch_6
 } else {
@@ -394,7 +394,7 @@ goto end_branch_6
 }
 }
 {
-if (gopurs_runtime.Bool(__local_var_5_3.StrVal == "Just")).IntVal != 0 {
+if gopurs_runtime.Bool(__local_var_5_3.StrVal == "Just").IntVal != 0 {
 __t6 = gopurs_runtime.Apply(__local_var_4_2, (*[1024]gopurs_runtime.Value)(__local_var_5_3.UnsafePtr)[0])
 goto end_branch_6
 } else {
@@ -465,7 +465,7 @@ v_9_5 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_2, "compare"), (
 _ = v_9_5
 var __t6 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_9_5.StrVal == "LT")).IntVal != 0 {
+if gopurs_runtime.Bool(v_9_5.StrVal == "LT").IntVal != 0 {
 __t6 = gopurs_runtime.Constructor0("LT")
 goto end_branch_6
 } else {
@@ -473,7 +473,7 @@ goto end_branch_6
 }
 }
 {
-if (gopurs_runtime.Bool(v_9_5.StrVal == "GT")).IntVal != 0 {
+if gopurs_runtime.Bool(v_9_5.StrVal == "GT").IntVal != 0 {
 __t6 = gopurs_runtime.Constructor0("GT")
 goto end_branch_6
 } else {
@@ -537,5 +537,7 @@ return eq1NonEmpty1_3_2
 	})
 	return ord1NonEmpty
 }
+
+
 
 

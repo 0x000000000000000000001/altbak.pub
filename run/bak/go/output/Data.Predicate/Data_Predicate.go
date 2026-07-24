@@ -37,13 +37,13 @@ return gopurs_runtime.Bool(false)
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Bool(true)
 }), gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, g_1 gopurs_runtime.Value, a_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(gopurs_runtime.Bool(gopurs_runtime.Apply(f_0, a_2).IntVal == 0).IntVal != 0 || gopurs_runtime.Apply(g_1, a_2).IntVal != 0)
+return gopurs_runtime.Bool(gopurs_runtime.Apply(f_0, a_2).IntVal != 0 != true || gopurs_runtime.Apply(g_1, a_2).IntVal != 0)
 }), gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, g_1 gopurs_runtime.Value, a_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Bool(gopurs_runtime.Apply(f_0, a_2).IntVal != 0 && gopurs_runtime.Apply(g_1, a_2).IntVal != 0)
 }), gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, g_1 gopurs_runtime.Value, a_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Bool(gopurs_runtime.Apply(f_0, a_2).IntVal != 0 || gopurs_runtime.Apply(g_1, a_2).IntVal != 0)
 }), gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, a_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(gopurs_runtime.Apply(f_0, a_1).IntVal == 0)
+return gopurs_runtime.Bool(gopurs_runtime.Apply(f_0, a_1).IntVal != 0 != true)
 })})
 	})
 	return heytingAlgebraPredicate
@@ -68,5 +68,7 @@ func Get_booleanAlgebraPredicate() gopurs_runtime.Value {
 	})
 	return booleanAlgebraPredicate
 }
+
+
 
 

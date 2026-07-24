@@ -10,11 +10,17 @@ var coerce gopurs_runtime.Value
 var once_coerce sync.Once
 func Get_coerce() gopurs_runtime.Value {
 	once_coerce.Do(func() {
-		coerce = gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		coerce = gopurs_runtime.Func(func(_dollar__unused_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
+_ = _dollar__unused_0
 return pkg_Unsafe_Coerce.Get_unsafeCoerce()
+}()
 })
 	})
 	return coerce
 }
+
+
 
 

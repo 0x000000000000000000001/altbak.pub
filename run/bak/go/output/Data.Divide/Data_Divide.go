@@ -74,7 +74,7 @@ __local_var_8_3 := gopurs_runtime.Apply2(v1_2, (*[1024]gopurs_runtime.Value)(v2_
 _ = __local_var_8_3
 var __t4 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(__local_var_7_2.StrVal == "LT")).IntVal != 0 {
+if gopurs_runtime.Bool(__local_var_7_2.StrVal == "LT").IntVal != 0 {
 __t4 = gopurs_runtime.Constructor0("LT")
 goto end_branch_4
 } else {
@@ -82,7 +82,7 @@ goto end_branch_4
 }
 }
 {
-if (gopurs_runtime.Bool(__local_var_7_2.StrVal == "GT")).IntVal != 0 {
+if gopurs_runtime.Bool(__local_var_7_2.StrVal == "GT").IntVal != 0 {
 __t4 = gopurs_runtime.Constructor0("GT")
 goto end_branch_4
 } else {
@@ -90,7 +90,7 @@ goto end_branch_4
 }
 }
 {
-if (gopurs_runtime.Bool(__local_var_7_2.StrVal == "EQ")).IntVal != 0 {
+if gopurs_runtime.Bool(__local_var_7_2.StrVal == "EQ").IntVal != 0 {
 __t4 = __local_var_8_3
 goto end_branch_4
 } else {
@@ -130,5 +130,7 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDivide_0, "divide"), go
 	})
 	return divided
 }
+
+
 
 

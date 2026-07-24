@@ -141,7 +141,7 @@ _ = go__0_0
 go__0_0 = gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_1.StrVal == "Leaf")).IntVal != 0 {
+if gopurs_runtime.Bool(v_1.StrVal == "Leaf").IntVal != 0 {
 __t1 = gopurs_runtime.Constructor0("Leaf")
 goto end_branch_1
 } else {
@@ -149,7 +149,7 @@ goto end_branch_1
 }
 }
 {
-if (gopurs_runtime.Bool(v_1.StrVal == "Node")).IntVal != 0 {
+if gopurs_runtime.Bool(v_1.StrVal == "Node").IntVal != 0 {
 __t1 = gopurs_runtime.Constructor("Node", []gopurs_runtime.Value{(*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[2], pkg_Data_Unit.Get_unit(), gopurs_runtime.Apply(go__0_0, (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[4]), gopurs_runtime.Apply(go__0_0, (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[5])})
 goto end_branch_1
 } else {
@@ -274,5 +274,7 @@ return pkg_Data_Map_Internal.Get_functorMap()
 	})
 	return altSemigroupMap
 }
+
+
 
 

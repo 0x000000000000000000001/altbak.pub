@@ -43,6 +43,5 @@ find run/bak/es/output-purs -name "foreign.js" | while read -r f; do
   cp "$f" "$dest/foreign.js"
 done
 
-
 echo "=== Arista ES ==="
-time node -e "import('./run/bak/es/output/' + '$ENTRY_POINT' + '/index.js').then(m => m.main())"
+node -e "import('./run/bak/es/output/' + '$ENTRY_POINT' + '/index.js').then(m => m.main())"

@@ -154,14 +154,15 @@ func SplitAt(idx int, str string) map[string]any {
 
 
 // --- Auto-generated FFI wrappers ---
-var _Gopurs_FromCharArray = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_fromCharArray(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	arg0_arr := arg0.PtrVal.([]gopurs_runtime.Value)
 	go_arg0 := make([]string, len(arg0_arr))
 	for i, v := range arg0_arr { go_arg0[i] = gopurs_runtime.Unbox[string](v) }
 	go_res := FromCharArray(go_arg0)
 	return gopurs_runtime.Box(go_res)
-})
-var _Gopurs_ToCharArray = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs_FromCharArray = gopurs_runtime.Func(Call_fromCharArray)
+func Call_toCharArray(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[string](arg0)
 	go_res := ToCharArray(go_arg0)
 	return func() gopurs_runtime.Value {
@@ -169,13 +170,15 @@ var _Gopurs_ToCharArray = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) go
 			for i, v := range go_res { res_arr[i] = gopurs_runtime.Box(v) }
 			return gopurs_runtime.Array(res_arr)
 		}()
-})
-var _Gopurs_Singleton = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs_ToCharArray = gopurs_runtime.Func(Call_toCharArray)
+func Call_singleton(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[string](arg0)
 	go_res := Singleton(go_arg0)
 	return gopurs_runtime.Box(go_res)
-})
-var _Gopurs__CharAt = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs_Singleton = gopurs_runtime.Func(Call_singleton)
+func Call__CharAt(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 string) any {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 		}
@@ -184,8 +187,9 @@ var _Gopurs__CharAt = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 
 	go_arg3 := gopurs_runtime.Unbox[string](arg3)
 	go_res := _CharAt(go_arg0, go_arg1, go_arg2, go_arg3)
 	return gopurs_runtime.Box(go_res)
-})
-var _Gopurs__ToChar = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs__CharAt = gopurs_runtime.Func4(Call__CharAt)
+func Call__ToChar(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 string) any {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 		}
@@ -193,13 +197,15 @@ var _Gopurs__ToChar = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 
 	go_arg2 := gopurs_runtime.Unbox[string](arg2)
 	go_res := _ToChar(go_arg0, go_arg1, go_arg2)
 	return gopurs_runtime.Box(go_res)
-})
-var _Gopurs_Length = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs__ToChar = gopurs_runtime.Func3(Call__ToChar)
+func Call_length(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[string](arg0)
 	go_res := Length(go_arg0)
 	return gopurs_runtime.Box(go_res)
-})
-var _Gopurs_CountPrefix = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs_Length = gopurs_runtime.Func(Call_length)
+func Call_countPrefix(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 string) bool {
 			inner_res0 := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 			return gopurs_runtime.Unbox[bool](inner_res0)
@@ -207,8 +213,9 @@ var _Gopurs_CountPrefix = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, a
 	go_arg1 := gopurs_runtime.Unbox[string](arg1)
 	go_res := CountPrefix(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
-})
-var _Gopurs__IndexOf = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs_CountPrefix = gopurs_runtime.Func2(Call_countPrefix)
+func Call__IndexOf(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 int) any {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 		}
@@ -217,8 +224,9 @@ var _Gopurs__IndexOf = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1
 	go_arg3 := gopurs_runtime.Unbox[string](arg3)
 	go_res := _IndexOf(go_arg0, go_arg1, go_arg2, go_arg3)
 	return gopurs_runtime.Box(go_res)
-})
-var _Gopurs__IndexOfStartingAt = gopurs_runtime.Func5(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs__IndexOf = gopurs_runtime.Func4(Call__IndexOf)
+func Call__IndexOfStartingAt(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 int) any {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 		}
@@ -228,8 +236,9 @@ var _Gopurs__IndexOfStartingAt = gopurs_runtime.Func5(func(arg0 gopurs_runtime.V
 	go_arg4 := gopurs_runtime.Unbox[string](arg4)
 	go_res := _IndexOfStartingAt(go_arg0, go_arg1, go_arg2, go_arg3, go_arg4)
 	return gopurs_runtime.Box(go_res)
-})
-var _Gopurs__LastIndexOf = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs__IndexOfStartingAt = gopurs_runtime.Func5(Call__IndexOfStartingAt)
+func Call__LastIndexOf(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 int) any {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 		}
@@ -238,8 +247,9 @@ var _Gopurs__LastIndexOf = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, 
 	go_arg3 := gopurs_runtime.Unbox[string](arg3)
 	go_res := _LastIndexOf(go_arg0, go_arg1, go_arg2, go_arg3)
 	return gopurs_runtime.Box(go_res)
-})
-var _Gopurs__LastIndexOfStartingAt = gopurs_runtime.Func5(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs__LastIndexOf = gopurs_runtime.Func4(Call__LastIndexOf)
+func Call__LastIndexOfStartingAt(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 int) any {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 		}
@@ -249,27 +259,31 @@ var _Gopurs__LastIndexOfStartingAt = gopurs_runtime.Func5(func(arg0 gopurs_runti
 	go_arg4 := gopurs_runtime.Unbox[string](arg4)
 	go_res := _LastIndexOfStartingAt(go_arg0, go_arg1, go_arg2, go_arg3, go_arg4)
 	return gopurs_runtime.Box(go_res)
-})
-var _Gopurs_Take = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs__LastIndexOfStartingAt = gopurs_runtime.Func5(Call__LastIndexOfStartingAt)
+func Call_take(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[int](arg0)
 	go_arg1 := gopurs_runtime.Unbox[string](arg1)
 	go_res := Take(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
-})
-var _Gopurs_Drop = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs_Take = gopurs_runtime.Func2(Call_take)
+func Call_drop(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[int](arg0)
 	go_arg1 := gopurs_runtime.Unbox[string](arg1)
 	go_res := Drop(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
-})
-var _Gopurs_Slice = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs_Drop = gopurs_runtime.Func2(Call_drop)
+func Call_slice(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[int](arg0)
 	go_arg1 := gopurs_runtime.Unbox[int](arg1)
 	go_arg2 := gopurs_runtime.Unbox[string](arg2)
 	go_res := Slice(go_arg0, go_arg1, go_arg2)
 	return gopurs_runtime.Box(go_res)
-})
-var _Gopurs_SplitAt = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs_Slice = gopurs_runtime.Func3(Call_slice)
+func Call_splitAt(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[int](arg0)
 	go_arg1 := gopurs_runtime.Unbox[string](arg1)
 	go_res := SplitAt(go_arg0, go_arg1)
@@ -278,4 +292,5 @@ var _Gopurs_SplitAt = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 
 			for k, v := range go_res { res_map[k] = gopurs_runtime.Box(v) }
 			return gopurs_runtime.Record(res_map)
 		}()
-})
+}
+var _Gopurs_SplitAt = gopurs_runtime.Func2(Call_splitAt)

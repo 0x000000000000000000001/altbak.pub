@@ -12,9 +12,7 @@ var snoc gopurs_runtime.Value
 var once_snoc sync.Once
 func Get_snoc() gopurs_runtime.Value {
 	once_snoc.Do(func() {
-		snoc = gopurs_runtime.Func2(func(c_0 gopurs_runtime.Value, s_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str(s_1.StrVal + gopurs_runtime.Apply(pkg_Data_String_CodePoints.Get_singleton(), c_0).StrVal)
-})
+		snoc = gopurs_runtime.Func2(Call_snoc)
 	})
 	return snoc
 }
@@ -23,8 +21,12 @@ var singleton gopurs_runtime.Value
 var once_singleton sync.Once
 func Get_singleton() gopurs_runtime.Value {
 	once_singleton.Do(func() {
-		singleton = gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(pkg_Data_String_CodePoints.Get_singleton(), x_0)
+		singleton = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var x_0 gopurs_runtime.Value = x_0_loop
+_ = x_0
+return gopurs_runtime.Apply(pkg_Data_String_CodePoints.Get_singleton(), x_0_loop)
+}()
 })
 	})
 	return singleton
@@ -34,12 +36,310 @@ var takeWhile gopurs_runtime.Value
 var once_takeWhile sync.Once
 func Get_takeWhile() gopurs_runtime.Value {
 	once_takeWhile.Do(func() {
-		takeWhile = gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, x_1 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_2_0 := gopurs_runtime.Apply2(pkg_Data_String_CodePoints.Get_take(), gopurs_runtime.Apply2(pkg_Data_String_CodePoints.Get_countPrefix(), f_0, x_1), x_1)
+		takeWhile = gopurs_runtime.Func2(Call_takeWhile)
+	})
+	return takeWhile
+}
+
+var lastIndexOf_prime gopurs_runtime.Value
+var once_lastIndexOf_prime sync.Once
+func Get_lastIndexOf_prime() gopurs_runtime.Value {
+	once_lastIndexOf_prime.Do(func() {
+		lastIndexOf_prime = gopurs_runtime.Func3(Call_lastIndexOf_prime)
+	})
+	return lastIndexOf_prime
+}
+
+var lastIndexOf gopurs_runtime.Value
+var once_lastIndexOf sync.Once
+func Get_lastIndexOf() gopurs_runtime.Value {
+	once_lastIndexOf.Do(func() {
+		lastIndexOf = gopurs_runtime.Func2(Call_lastIndexOf)
+	})
+	return lastIndexOf
+}
+
+var indexOf_prime gopurs_runtime.Value
+var once_indexOf_prime sync.Once
+func Get_indexOf_prime() gopurs_runtime.Value {
+	once_indexOf_prime.Do(func() {
+		indexOf_prime = gopurs_runtime.Func3(Call_indexOf_prime)
+	})
+	return indexOf_prime
+}
+
+var indexOf gopurs_runtime.Value
+var once_indexOf sync.Once
+func Get_indexOf() gopurs_runtime.Value {
+	once_indexOf.Do(func() {
+		indexOf = gopurs_runtime.Func2(Call_indexOf)
+	})
+	return indexOf
+}
+
+var length gopurs_runtime.Value
+var once_length sync.Once
+func Get_length() gopurs_runtime.Value {
+	once_length.Do(func() {
+		length = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var x_0 gopurs_runtime.Value = x_0_loop
+_ = x_0
+return gopurs_runtime.Int(int64(len(gopurs_runtime.Apply(pkg_Data_String_CodePoints.Get_toCodePointArray(), x_0_loop).PtrVal.([]gopurs_runtime.Value))))
+}()
+})
+	})
+	return length
+}
+
+var splitAt gopurs_runtime.Value
+var once_splitAt sync.Once
+func Get_splitAt() gopurs_runtime.Value {
+	once_splitAt.Do(func() {
+		splitAt = gopurs_runtime.Func2(Call_splitAt)
+	})
+	return splitAt
+}
+
+var take gopurs_runtime.Value
+var once_take sync.Once
+func Get_take() gopurs_runtime.Value {
+	once_take.Do(func() {
+		take = gopurs_runtime.Func2(Call_take)
+	})
+	return take
+}
+
+var toCodePointArray gopurs_runtime.Value
+var once_toCodePointArray sync.Once
+func Get_toCodePointArray() gopurs_runtime.Value {
+	once_toCodePointArray.Do(func() {
+		toCodePointArray = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var x_0 gopurs_runtime.Value = x_0_loop
+_ = x_0
+return gopurs_runtime.Apply(pkg_Data_String_CodePoints.Get_toCodePointArray(), x_0_loop)
+}()
+})
+	})
+	return toCodePointArray
+}
+
+var toNonEmptyCodePointArray gopurs_runtime.Value
+var once_toNonEmptyCodePointArray sync.Once
+func Get_toNonEmptyCodePointArray() gopurs_runtime.Value {
+	once_toNonEmptyCodePointArray.Do(func() {
+		toNonEmptyCodePointArray = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var x_0 gopurs_runtime.Value = x_0_loop
+_ = x_0
+__local_var_1_0 := gopurs_runtime.Apply(pkg_Data_String_CodePoints.Get_toCodePointArray(), x_0_loop)
+_ = __local_var_1_0
+var __t1 gopurs_runtime.Value
+{
+if gopurs_runtime.Int(int64(len(__local_var_1_0.PtrVal.([]gopurs_runtime.Value)))).IntVal > 0 {
+__t1 = __local_var_1_0
+goto end_branch_1
+} else {
+
+}
+}
+{
+__t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_1:
+return __t1
+}()
+})
+	})
+	return toNonEmptyCodePointArray
+}
+
+var uncons gopurs_runtime.Value
+var once_uncons sync.Once
+func Get_uncons() gopurs_runtime.Value {
+	once_uncons.Do(func() {
+		uncons = gopurs_runtime.Func(func(nes_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var nes_0 gopurs_runtime.Value = nes_0_loop
+_ = nes_0
+__local_var_1_0 := gopurs_runtime.Apply2(pkg_Data_String_CodePoints.Get_codePointAt(), gopurs_runtime.Int(0), nes_0_loop)
+_ = __local_var_1_0
+var __t1 gopurs_runtime.Value
+{
+if gopurs_runtime.Bool(__local_var_1_0.StrVal == "Just").IntVal != 0 {
+__t1 = (*[1024]gopurs_runtime.Value)(__local_var_1_0.UnsafePtr)[0]
+goto end_branch_1
+} else {
+
+}
+}
+{
+__t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_1:
+__local_var_1_2 := gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_drop(), gopurs_runtime.Apply(pkg_Data_String_CodeUnits.Get_length(), gopurs_runtime.Apply2(pkg_Data_String_CodePoints.Get_take(), gopurs_runtime.Int(1), nes_0_loop)), nes_0_loop)
+_ = __local_var_1_2
+var __t3 gopurs_runtime.Value
+{
+if __local_var_1_2.StrVal == "" {
+__t3 = gopurs_runtime.Constructor0("Nothing")
+goto end_branch_3
+} else {
+
+}
+}
+{
+__t3 = gopurs_runtime.Constructor1("Just", __local_var_1_2)
+}
+end_branch_3:
+return gopurs_runtime.RecordDict2("head", "tail", __t1, __t3)
+}()
+})
+	})
+	return uncons
+}
+
+var fromFoldable1 gopurs_runtime.Value
+var once_fromFoldable1 sync.Once
+func Get_fromFoldable1() gopurs_runtime.Value {
+	once_fromFoldable1.Do(func() {
+		fromFoldable1 = gopurs_runtime.Func(func(dictFoldable1_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dictFoldable1_0 gopurs_runtime.Value = dictFoldable1_0_loop
+_ = dictFoldable1_0
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFoldable1_0_loop, "foldMap1"), pkg_Data_Semigroup.Get_semigroupString(), Get_singleton())
+}()
+})
+	})
+	return fromFoldable1
+}
+
+var fromCodePointArray gopurs_runtime.Value
+var once_fromCodePointArray sync.Once
+func Get_fromCodePointArray() gopurs_runtime.Value {
+	once_fromCodePointArray.Do(func() {
+		fromCodePointArray = gopurs_runtime.Func(func(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var v_0 gopurs_runtime.Value = v_0_loop
+_ = v_0
+var __t0 gopurs_runtime.Value
+{
+if gopurs_runtime.Int(int64(len(v_0_loop.PtrVal.([]gopurs_runtime.Value)))).IntVal == 0 {
+__t0 = gopurs_runtime.Constructor0("Nothing")
+goto end_branch_0
+} else {
+
+}
+}
+{
+__t0 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Apply(pkg_Data_String_CodePoints.Get_fromCodePointArray(), v_0_loop))
+}
+end_branch_0:
+return __t0
+}()
+})
+	})
+	return fromCodePointArray
+}
+
+var fromNonEmptyCodePointArray gopurs_runtime.Value
+var once_fromNonEmptyCodePointArray sync.Once
+func Get_fromNonEmptyCodePointArray() gopurs_runtime.Value {
+	once_fromNonEmptyCodePointArray.Do(func() {
+		fromNonEmptyCodePointArray = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var x_0 gopurs_runtime.Value = x_0_loop
+_ = x_0
+var __t0 gopurs_runtime.Value
+{
+if gopurs_runtime.Int(int64(len(x_0_loop.PtrVal.([]gopurs_runtime.Value)))).IntVal == 0 {
+__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+goto end_branch_0
+} else {
+
+}
+}
+{
+__t0 = gopurs_runtime.Apply(pkg_Data_String_CodePoints.Get_fromCodePointArray(), x_0_loop)
+}
+end_branch_0:
+return __t0
+}()
+})
+	})
+	return fromNonEmptyCodePointArray
+}
+
+var dropWhile gopurs_runtime.Value
+var once_dropWhile sync.Once
+func Get_dropWhile() gopurs_runtime.Value {
+	once_dropWhile.Do(func() {
+		dropWhile = gopurs_runtime.Func2(Call_dropWhile)
+	})
+	return dropWhile
+}
+
+var drop gopurs_runtime.Value
+var once_drop sync.Once
+func Get_drop() gopurs_runtime.Value {
+	once_drop.Do(func() {
+		drop = gopurs_runtime.Func2(Call_drop)
+	})
+	return drop
+}
+
+var countPrefix gopurs_runtime.Value
+var once_countPrefix sync.Once
+func Get_countPrefix() gopurs_runtime.Value {
+	once_countPrefix.Do(func() {
+		countPrefix = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var x_0 gopurs_runtime.Value = x_0_loop
+_ = x_0
+return gopurs_runtime.Apply(pkg_Data_String_CodePoints.Get_countPrefix(), x_0_loop)
+}()
+})
+	})
+	return countPrefix
+}
+
+var cons gopurs_runtime.Value
+var once_cons sync.Once
+func Get_cons() gopurs_runtime.Value {
+	once_cons.Do(func() {
+		cons = gopurs_runtime.Func2(Call_cons)
+	})
+	return cons
+}
+
+var codePointAt gopurs_runtime.Value
+var once_codePointAt sync.Once
+func Get_codePointAt() gopurs_runtime.Value {
+	once_codePointAt.Do(func() {
+		codePointAt = gopurs_runtime.Func2(Call_codePointAt)
+	})
+	return codePointAt
+}
+
+func Call_snoc(c_0_loop gopurs_runtime.Value, s_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var c_0 gopurs_runtime.Value = c_0_loop
+_ = c_0
+var s_1 gopurs_runtime.Value = s_1_loop
+_ = s_1
+return gopurs_runtime.Str(s_1_loop.StrVal + gopurs_runtime.Apply(pkg_Data_String_CodePoints.Get_singleton(), c_0_loop).StrVal)
+}
+
+func Call_takeWhile(f_0_loop gopurs_runtime.Value, x_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var f_0 gopurs_runtime.Value = f_0_loop
+_ = f_0
+var x_1 gopurs_runtime.Value = x_1_loop
+_ = x_1
+__local_var_2_0 := gopurs_runtime.Apply2(pkg_Data_String_CodePoints.Get_take(), gopurs_runtime.Apply2(pkg_Data_String_CodePoints.Get_countPrefix(), f_0_loop, x_1_loop), x_1_loop)
 _ = __local_var_2_0
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(__local_var_2_0.StrVal == gopurs_runtime.Str("").StrVal)).IntVal != 0 {
+if __local_var_2_0.StrVal == "" {
 __t1 = gopurs_runtime.Constructor0("Nothing")
 goto end_branch_1
 } else {
@@ -51,76 +351,54 @@ __t1 = gopurs_runtime.Constructor1("Just", __local_var_2_0)
 }
 end_branch_1:
 return __t1
-})
-	})
-	return takeWhile
 }
 
-var lastIndexOf_prime gopurs_runtime.Value
-var once_lastIndexOf_prime sync.Once
-func Get_lastIndexOf_prime() gopurs_runtime.Value {
-	once_lastIndexOf_prime.Do(func() {
-		lastIndexOf_prime = gopurs_runtime.Func3(func(pat_0 gopurs_runtime.Value, x_1 gopurs_runtime.Value, v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(pkg_Data_String_CodePoints.Get_lastIndexOf_prime(), pat_0, x_1, v_2)
-})
-	})
-	return lastIndexOf_prime
+func Call_lastIndexOf_prime(pat_0_loop gopurs_runtime.Value, x_1_loop gopurs_runtime.Value, v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var pat_0 gopurs_runtime.Value = pat_0_loop
+_ = pat_0
+var x_1 gopurs_runtime.Value = x_1_loop
+_ = x_1
+var v_2 gopurs_runtime.Value = v_2_loop
+_ = v_2
+return gopurs_runtime.Apply3(pkg_Data_String_CodePoints.Get_lastIndexOf_prime(), pat_0_loop, x_1_loop, v_2_loop)
 }
 
-var lastIndexOf gopurs_runtime.Value
-var once_lastIndexOf sync.Once
-func Get_lastIndexOf() gopurs_runtime.Value {
-	once_lastIndexOf.Do(func() {
-		lastIndexOf = gopurs_runtime.Func2(func(x_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(pkg_Data_String_CodePoints.Get_lastIndexOf(), x_0, v_1)
-})
-	})
-	return lastIndexOf
+func Call_lastIndexOf(x_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var x_0 gopurs_runtime.Value = x_0_loop
+_ = x_0
+var v_1 gopurs_runtime.Value = v_1_loop
+_ = v_1
+return gopurs_runtime.Apply2(pkg_Data_String_CodePoints.Get_lastIndexOf(), x_0_loop, v_1_loop)
 }
 
-var indexOf_prime gopurs_runtime.Value
-var once_indexOf_prime sync.Once
-func Get_indexOf_prime() gopurs_runtime.Value {
-	once_indexOf_prime.Do(func() {
-		indexOf_prime = gopurs_runtime.Func3(func(pat_0 gopurs_runtime.Value, x_1 gopurs_runtime.Value, v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(pkg_Data_String_CodePoints.Get_indexOf_prime(), pat_0, x_1, v_2)
-})
-	})
-	return indexOf_prime
+func Call_indexOf_prime(pat_0_loop gopurs_runtime.Value, x_1_loop gopurs_runtime.Value, v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var pat_0 gopurs_runtime.Value = pat_0_loop
+_ = pat_0
+var x_1 gopurs_runtime.Value = x_1_loop
+_ = x_1
+var v_2 gopurs_runtime.Value = v_2_loop
+_ = v_2
+return gopurs_runtime.Apply3(pkg_Data_String_CodePoints.Get_indexOf_prime(), pat_0_loop, x_1_loop, v_2_loop)
 }
 
-var indexOf gopurs_runtime.Value
-var once_indexOf sync.Once
-func Get_indexOf() gopurs_runtime.Value {
-	once_indexOf.Do(func() {
-		indexOf = gopurs_runtime.Func2(func(x_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(pkg_Data_String_CodePoints.Get_indexOf(), x_0, v_1)
-})
-	})
-	return indexOf
+func Call_indexOf(x_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var x_0 gopurs_runtime.Value = x_0_loop
+_ = x_0
+var v_1 gopurs_runtime.Value = v_1_loop
+_ = v_1
+return gopurs_runtime.Apply2(pkg_Data_String_CodePoints.Get_indexOf(), x_0_loop, v_1_loop)
 }
 
-var length gopurs_runtime.Value
-var once_length sync.Once
-func Get_length() gopurs_runtime.Value {
-	once_length.Do(func() {
-		length = gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Int(int64(len(gopurs_runtime.Apply(pkg_Data_String_CodePoints.Get_toCodePointArray(), x_0).PtrVal.([]gopurs_runtime.Value))))
-})
-	})
-	return length
-}
-
-var splitAt gopurs_runtime.Value
-var once_splitAt sync.Once
-func Get_splitAt() gopurs_runtime.Value {
-	once_splitAt.Do(func() {
-		splitAt = gopurs_runtime.Func2(func(i_0 gopurs_runtime.Value, nes_1 gopurs_runtime.Value) gopurs_runtime.Value {
-v_2_0 := gopurs_runtime.Apply2(pkg_Data_String_CodePoints.Get_splitAt(), i_0, nes_1)
+func Call_splitAt(i_0_loop gopurs_runtime.Value, nes_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var i_0 gopurs_runtime.Value = i_0_loop
+_ = i_0
+var nes_1 gopurs_runtime.Value = nes_1_loop
+_ = nes_1
+v_2_0 := gopurs_runtime.Apply2(pkg_Data_String_CodePoints.Get_splitAt(), i_0_loop, nes_1_loop)
 _ = v_2_0
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_2_0, "before").StrVal == gopurs_runtime.Str("").StrVal)).IntVal != 0 {
+if gopurs_runtime.RecordGet(v_2_0, "before").StrVal == "" {
 __t1 = gopurs_runtime.Constructor0("Nothing")
 goto end_branch_1
 } else {
@@ -133,7 +411,7 @@ __t1 = gopurs_runtime.Constructor1("Just", gopurs_runtime.RecordGet(v_2_0, "befo
 end_branch_1:
 var __t2 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_2_0, "after").StrVal == gopurs_runtime.Str("").StrVal)).IntVal != 0 {
+if gopurs_runtime.RecordGet(v_2_0, "after").StrVal == "" {
 __t2 = gopurs_runtime.Constructor0("Nothing")
 goto end_branch_2
 } else {
@@ -145,19 +423,16 @@ __t2 = gopurs_runtime.Constructor1("Just", gopurs_runtime.RecordGet(v_2_0, "afte
 }
 end_branch_2:
 return gopurs_runtime.RecordDict2("before", "after", __t1, __t2)
-})
-	})
-	return splitAt
 }
 
-var take gopurs_runtime.Value
-var once_take sync.Once
-func Get_take() gopurs_runtime.Value {
-	once_take.Do(func() {
-		take = gopurs_runtime.Func2(func(i_0 gopurs_runtime.Value, nes_1 gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_take(i_0_loop gopurs_runtime.Value, nes_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var i_0 gopurs_runtime.Value = i_0_loop
+_ = i_0
+var nes_1 gopurs_runtime.Value = nes_1_loop
+_ = nes_1
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(i_0.IntVal < gopurs_runtime.Int(1).IntVal)).IntVal != 0 {
+if i_0_loop.IntVal < 1 {
 __t0 = gopurs_runtime.Constructor0("Nothing")
 goto end_branch_0
 } else {
@@ -165,162 +440,22 @@ goto end_branch_0
 }
 }
 {
-__t0 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Apply2(pkg_Data_String_CodePoints.Get_take(), i_0, nes_1))
+__t0 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Apply2(pkg_Data_String_CodePoints.Get_take(), i_0_loop, nes_1_loop))
 }
 end_branch_0:
 return __t0
-})
-	})
-	return take
 }
 
-var toCodePointArray gopurs_runtime.Value
-var once_toCodePointArray sync.Once
-func Get_toCodePointArray() gopurs_runtime.Value {
-	once_toCodePointArray.Do(func() {
-		toCodePointArray = gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(pkg_Data_String_CodePoints.Get_toCodePointArray(), x_0)
-})
-	})
-	return toCodePointArray
-}
-
-var toNonEmptyCodePointArray gopurs_runtime.Value
-var once_toNonEmptyCodePointArray sync.Once
-func Get_toNonEmptyCodePointArray() gopurs_runtime.Value {
-	once_toNonEmptyCodePointArray.Do(func() {
-		toNonEmptyCodePointArray = gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_1_0 := gopurs_runtime.Apply(pkg_Data_String_CodePoints.Get_toCodePointArray(), x_0)
-_ = __local_var_1_0
-var __t1 gopurs_runtime.Value
-{
-if (gopurs_runtime.Bool(gopurs_runtime.Int(int64(len(__local_var_1_0.PtrVal.([]gopurs_runtime.Value)))).IntVal > gopurs_runtime.Int(0).IntVal)).IntVal != 0 {
-__t1 = __local_var_1_0
-goto end_branch_1
-} else {
-
-}
-}
-{
-__t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
-}
-end_branch_1:
-return __t1
-})
-	})
-	return toNonEmptyCodePointArray
-}
-
-var uncons gopurs_runtime.Value
-var once_uncons sync.Once
-func Get_uncons() gopurs_runtime.Value {
-	once_uncons.Do(func() {
-		uncons = gopurs_runtime.Func(func(nes_0 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_1_0 := gopurs_runtime.Apply2(pkg_Data_String_CodePoints.Get_codePointAt(), gopurs_runtime.Int(0), nes_0)
-_ = __local_var_1_0
-var __t1 gopurs_runtime.Value
-{
-if (gopurs_runtime.Bool(__local_var_1_0.StrVal == "Just")).IntVal != 0 {
-__t1 = (*[1024]gopurs_runtime.Value)(__local_var_1_0.UnsafePtr)[0]
-goto end_branch_1
-} else {
-
-}
-}
-{
-__t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
-}
-end_branch_1:
-__local_var_1_2 := gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_drop(), gopurs_runtime.Apply(pkg_Data_String_CodeUnits.Get_length(), gopurs_runtime.Apply2(pkg_Data_String_CodePoints.Get_take(), gopurs_runtime.Int(1), nes_0)), nes_0)
-_ = __local_var_1_2
-var __t3 gopurs_runtime.Value
-{
-if (gopurs_runtime.Bool(__local_var_1_2.StrVal == gopurs_runtime.Str("").StrVal)).IntVal != 0 {
-__t3 = gopurs_runtime.Constructor0("Nothing")
-goto end_branch_3
-} else {
-
-}
-}
-{
-__t3 = gopurs_runtime.Constructor1("Just", __local_var_1_2)
-}
-end_branch_3:
-return gopurs_runtime.RecordDict2("head", "tail", __t1, __t3)
-})
-	})
-	return uncons
-}
-
-var fromFoldable1 gopurs_runtime.Value
-var once_fromFoldable1 sync.Once
-func Get_fromFoldable1() gopurs_runtime.Value {
-	once_fromFoldable1.Do(func() {
-		fromFoldable1 = gopurs_runtime.Func(func(dictFoldable1_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFoldable1_0, "foldMap1"), pkg_Data_Semigroup.Get_semigroupString(), Get_singleton())
-})
-	})
-	return fromFoldable1
-}
-
-var fromCodePointArray gopurs_runtime.Value
-var once_fromCodePointArray sync.Once
-func Get_fromCodePointArray() gopurs_runtime.Value {
-	once_fromCodePointArray.Do(func() {
-		fromCodePointArray = gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t0 gopurs_runtime.Value
-{
-if (gopurs_runtime.Bool(gopurs_runtime.Int(int64(len(v_0.PtrVal.([]gopurs_runtime.Value)))).IntVal == gopurs_runtime.Int(0).IntVal)).IntVal != 0 {
-__t0 = gopurs_runtime.Constructor0("Nothing")
-goto end_branch_0
-} else {
-
-}
-}
-{
-__t0 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Apply(pkg_Data_String_CodePoints.Get_fromCodePointArray(), v_0))
-}
-end_branch_0:
-return __t0
-})
-	})
-	return fromCodePointArray
-}
-
-var fromNonEmptyCodePointArray gopurs_runtime.Value
-var once_fromNonEmptyCodePointArray sync.Once
-func Get_fromNonEmptyCodePointArray() gopurs_runtime.Value {
-	once_fromNonEmptyCodePointArray.Do(func() {
-		fromNonEmptyCodePointArray = gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t0 gopurs_runtime.Value
-{
-if (gopurs_runtime.Bool(gopurs_runtime.Int(int64(len(x_0.PtrVal.([]gopurs_runtime.Value)))).IntVal == gopurs_runtime.Int(0).IntVal)).IntVal != 0 {
-__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
-goto end_branch_0
-} else {
-
-}
-}
-{
-__t0 = gopurs_runtime.Apply(pkg_Data_String_CodePoints.Get_fromCodePointArray(), x_0)
-}
-end_branch_0:
-return __t0
-})
-	})
-	return fromNonEmptyCodePointArray
-}
-
-var dropWhile gopurs_runtime.Value
-var once_dropWhile sync.Once
-func Get_dropWhile() gopurs_runtime.Value {
-	once_dropWhile.Do(func() {
-		dropWhile = gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, x_1 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_2_0 := gopurs_runtime.Apply2(pkg_Data_String_CodePoints.Get_dropWhile(), f_0, x_1)
+func Call_dropWhile(f_0_loop gopurs_runtime.Value, x_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var f_0 gopurs_runtime.Value = f_0_loop
+_ = f_0
+var x_1 gopurs_runtime.Value = x_1_loop
+_ = x_1
+__local_var_2_0 := gopurs_runtime.Apply2(pkg_Data_String_CodePoints.Get_dropWhile(), f_0_loop, x_1_loop)
 _ = __local_var_2_0
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(__local_var_2_0.StrVal == gopurs_runtime.Str("").StrVal)).IntVal != 0 {
+if __local_var_2_0.StrVal == "" {
 __t1 = gopurs_runtime.Constructor0("Nothing")
 goto end_branch_1
 } else {
@@ -332,19 +467,16 @@ __t1 = gopurs_runtime.Constructor1("Just", __local_var_2_0)
 }
 end_branch_1:
 return __t1
-})
-	})
-	return dropWhile
 }
 
-var drop gopurs_runtime.Value
-var once_drop sync.Once
-func Get_drop() gopurs_runtime.Value {
-	once_drop.Do(func() {
-		drop = gopurs_runtime.Func2(func(i_0 gopurs_runtime.Value, nes_1 gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_drop(i_0_loop gopurs_runtime.Value, nes_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var i_0 gopurs_runtime.Value = i_0_loop
+_ = i_0
+var nes_1 gopurs_runtime.Value = nes_1_loop
+_ = nes_1
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(i_0.IntVal >= gopurs_runtime.Int(int64(len(gopurs_runtime.Apply(pkg_Data_String_CodePoints.Get_toCodePointArray(), nes_1).PtrVal.([]gopurs_runtime.Value)))).IntVal)).IntVal != 0 {
+if i_0_loop.IntVal >= gopurs_runtime.Int(int64(len(gopurs_runtime.Apply(pkg_Data_String_CodePoints.Get_toCodePointArray(), nes_1_loop).PtrVal.([]gopurs_runtime.Value)))).IntVal {
 __t0 = gopurs_runtime.Constructor0("Nothing")
 goto end_branch_0
 } else {
@@ -352,46 +484,26 @@ goto end_branch_0
 }
 }
 {
-__t0 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_drop(), gopurs_runtime.Apply(pkg_Data_String_CodeUnits.Get_length(), gopurs_runtime.Apply2(pkg_Data_String_CodePoints.Get_take(), i_0, nes_1)), nes_1))
+__t0 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_drop(), gopurs_runtime.Apply(pkg_Data_String_CodeUnits.Get_length(), gopurs_runtime.Apply2(pkg_Data_String_CodePoints.Get_take(), i_0_loop, nes_1_loop)), nes_1_loop))
 }
 end_branch_0:
 return __t0
-})
-	})
-	return drop
 }
 
-var countPrefix gopurs_runtime.Value
-var once_countPrefix sync.Once
-func Get_countPrefix() gopurs_runtime.Value {
-	once_countPrefix.Do(func() {
-		countPrefix = gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(pkg_Data_String_CodePoints.Get_countPrefix(), x_0)
-})
-	})
-	return countPrefix
+func Call_cons(c_0_loop gopurs_runtime.Value, s_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var c_0 gopurs_runtime.Value = c_0_loop
+_ = c_0
+var s_1 gopurs_runtime.Value = s_1_loop
+_ = s_1
+return gopurs_runtime.Str(gopurs_runtime.Apply(pkg_Data_String_CodePoints.Get_singleton(), c_0_loop).StrVal + s_1_loop.StrVal)
 }
 
-var cons gopurs_runtime.Value
-var once_cons sync.Once
-func Get_cons() gopurs_runtime.Value {
-	once_cons.Do(func() {
-		cons = gopurs_runtime.Func2(func(c_0 gopurs_runtime.Value, s_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str(gopurs_runtime.Apply(pkg_Data_String_CodePoints.Get_singleton(), c_0).StrVal + s_1.StrVal)
-})
-	})
-	return cons
-}
-
-var codePointAt gopurs_runtime.Value
-var once_codePointAt sync.Once
-func Get_codePointAt() gopurs_runtime.Value {
-	once_codePointAt.Do(func() {
-		codePointAt = gopurs_runtime.Func2(func(x_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(pkg_Data_String_CodePoints.Get_codePointAt(), x_0, v_1)
-})
-	})
-	return codePointAt
+func Call_codePointAt(x_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var x_0 gopurs_runtime.Value = x_0_loop
+_ = x_0
+var v_1 gopurs_runtime.Value = v_1_loop
+_ = v_1
+return gopurs_runtime.Apply2(pkg_Data_String_CodePoints.Get_codePointAt(), x_0_loop, v_1_loop)
 }
 
 

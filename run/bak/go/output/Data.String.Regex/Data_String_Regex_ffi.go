@@ -17,7 +17,7 @@ func Test(r any, s string) bool { return false }
 
 
 // --- Auto-generated FFI wrappers ---
-var _Gopurs__Match = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
+func Call__Match(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 any) any {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 		}
@@ -26,8 +26,9 @@ var _Gopurs__Match = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 g
 	go_arg3 := gopurs_runtime.Unbox[string](arg3)
 	go_res := _Match(go_arg0, go_arg1, go_arg2, go_arg3)
 	return gopurs_runtime.Box(go_res)
-})
-var _Gopurs__ReplaceBy = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs__Match = gopurs_runtime.Func4(Call__Match)
+func Call__ReplaceBy(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[*regexp.Regexp](arg0)
 	go_arg1 := func(p0_0 string, p0_1 []any) string {
 			inner_res0 := gopurs_runtime.Apply2(arg1, gopurs_runtime.Box(p0_0), gopurs_runtime.Box(p0_1))
@@ -36,8 +37,9 @@ var _Gopurs__ReplaceBy = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, ar
 	go_arg2 := gopurs_runtime.Unbox[string](arg2)
 	go_res := _ReplaceBy(go_arg0, go_arg1, go_arg2)
 	return gopurs_runtime.Box(go_res)
-})
-var _Gopurs__Search = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs__ReplaceBy = gopurs_runtime.Func3(Call__ReplaceBy)
+func Call__Search(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 any) any {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 		}
@@ -46,38 +48,44 @@ var _Gopurs__Search = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 
 	go_arg3 := gopurs_runtime.Unbox[string](arg3)
 	go_res := _Search(go_arg0, go_arg1, go_arg2, go_arg3)
 	return gopurs_runtime.Box(go_res)
-})
-var _Gopurs_FlagsImpl = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs__Search = gopurs_runtime.Func4(Call__Search)
+func Call_flagsImpl(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := FlagsImpl(go_arg0)
 	return gopurs_runtime.Box(go_res)
-})
-var _Gopurs_RegexImpl = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs_FlagsImpl = gopurs_runtime.Func(Call_flagsImpl)
+func Call_regexImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_arg1 := arg1
 	go_arg2 := gopurs_runtime.Unbox[string](arg2)
 	go_arg3 := gopurs_runtime.Unbox[string](arg3)
 	go_res := RegexImpl(go_arg0, go_arg1, go_arg2, go_arg3)
 	return gopurs_runtime.Box(go_res)
-})
-var _Gopurs_Replace = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs_RegexImpl = gopurs_runtime.Func4(Call_regexImpl)
+func Call_replace(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_arg1 := gopurs_runtime.Unbox[string](arg1)
 	go_arg2 := gopurs_runtime.Unbox[string](arg2)
 	go_res := Replace(go_arg0, go_arg1, go_arg2)
 	return gopurs_runtime.Box(go_res)
-})
-var _Gopurs_ShowRegexImpl = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs_Replace = gopurs_runtime.Func3(Call_replace)
+func Call_showRegexImpl(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := ShowRegexImpl(go_arg0)
 	return gopurs_runtime.Box(go_res)
-})
-var _Gopurs_Source = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs_ShowRegexImpl = gopurs_runtime.Func(Call_showRegexImpl)
+func Call_source(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := Source(go_arg0)
 	return gopurs_runtime.Box(go_res)
-})
-var _Gopurs_Split = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs_Source = gopurs_runtime.Func(Call_source)
+func Call_split(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_arg1 := gopurs_runtime.Unbox[string](arg1)
 	go_res := Split(go_arg0, go_arg1)
@@ -86,10 +94,12 @@ var _Gopurs_Split = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 go
 			for i, v := range go_res { res_arr[i] = gopurs_runtime.Box(v) }
 			return gopurs_runtime.Array(res_arr)
 		}()
-})
-var _Gopurs_Test = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs_Split = gopurs_runtime.Func2(Call_split)
+func Call_test(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_arg1 := gopurs_runtime.Unbox[string](arg1)
 	go_res := Test(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
-})
+}
+var _Gopurs_Test = gopurs_runtime.Func2(Call_test)

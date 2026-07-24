@@ -57,7 +57,7 @@ func Pow(x int, y int) int {
 
 
 // --- Auto-generated FFI wrappers ---
-var _Gopurs_FromNumberImpl = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_fromNumberImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 int) any {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 		}
@@ -65,13 +65,15 @@ var _Gopurs_FromNumberImpl = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value
 	go_arg2 := gopurs_runtime.Unbox[float64](arg2)
 	go_res := FromNumberImpl(go_arg0, go_arg1, go_arg2)
 	return gopurs_runtime.Box(go_res)
-})
-var _Gopurs_ToNumber = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs_FromNumberImpl = gopurs_runtime.Func3(Call_fromNumberImpl)
+func Call_toNumber(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[int](arg0)
 	go_res := ToNumber(go_arg0)
 	return gopurs_runtime.Box(go_res)
-})
-var _Gopurs_FromStringAsImpl = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs_ToNumber = gopurs_runtime.Func(Call_toNumber)
+func Call_fromStringAsImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 int) any {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 		}
@@ -80,28 +82,33 @@ var _Gopurs_FromStringAsImpl = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Val
 	go_arg3 := gopurs_runtime.Unbox[string](arg3)
 	go_res := FromStringAsImpl(go_arg0, go_arg1, go_arg2, go_arg3)
 	return gopurs_runtime.Box(go_res)
-})
-var _Gopurs_ToStringAs = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs_FromStringAsImpl = gopurs_runtime.Func4(Call_fromStringAsImpl)
+func Call_toStringAs(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[int](arg0)
 	go_arg1 := gopurs_runtime.Unbox[int](arg1)
 	go_res := ToStringAs(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
-})
-var _Gopurs_Quot = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs_ToStringAs = gopurs_runtime.Func2(Call_toStringAs)
+func Call_quot(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[int](arg0)
 	go_arg1 := gopurs_runtime.Unbox[int](arg1)
 	go_res := Quot(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
-})
-var _Gopurs_Rem = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs_Quot = gopurs_runtime.Func2(Call_quot)
+func Call_rem(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[int](arg0)
 	go_arg1 := gopurs_runtime.Unbox[int](arg1)
 	go_res := Rem(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
-})
-var _Gopurs_Pow = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs_Rem = gopurs_runtime.Func2(Call_rem)
+func Call_pow(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[int](arg0)
 	go_arg1 := gopurs_runtime.Unbox[int](arg1)
 	go_res := Pow(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
-})
+}
+var _Gopurs_Pow = gopurs_runtime.Func2(Call_pow)

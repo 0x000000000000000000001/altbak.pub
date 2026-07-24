@@ -71,7 +71,7 @@ var once_showNonEmptyString sync.Once
 func Get_showNonEmptyString() gopurs_runtime.Value {
 	once_showNonEmptyString.Do(func() {
 		showNonEmptyString = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str("(NonEmptyString.unsafeFromString ").StrVal + gopurs_runtime.Apply(pkg_Data_Show.Get_showStringImpl(), v_0).StrVal).StrVal + gopurs_runtime.Str(")").StrVal)
+return gopurs_runtime.Str("(NonEmptyString.unsafeFromString " + gopurs_runtime.Apply(pkg_Data_Show.Get_showStringImpl(), v_0).StrVal + ")")
 }))
 	})
 	return showNonEmptyString
@@ -82,7 +82,7 @@ var once_showNonEmptyReplacement sync.Once
 func Get_showNonEmptyReplacement() gopurs_runtime.Value {
 	once_showNonEmptyReplacement.Do(func() {
 		showNonEmptyReplacement = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str("(NonEmptyReplacement (NonEmptyString.unsafeFromString ").StrVal + gopurs_runtime.Apply(pkg_Data_Show.Get_showStringImpl(), v_0).StrVal).StrVal + gopurs_runtime.Str("))").StrVal)
+return gopurs_runtime.Str("(NonEmptyReplacement (NonEmptyString.unsafeFromString " + gopurs_runtime.Apply(pkg_Data_Show.Get_showStringImpl(), v_0).StrVal + "))")
 }))
 	})
 	return showNonEmptyReplacement
@@ -225,7 +225,7 @@ __local_var_2_0 := gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_stripPref
 _ = __local_var_2_0
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(__local_var_2_0.StrVal == "Nothing")).IntVal != 0 {
+if gopurs_runtime.Bool(__local_var_2_0.StrVal == "Nothing").IntVal != 0 {
 __t1 = gopurs_runtime.Bool(false)
 goto end_branch_1
 } else {
@@ -233,7 +233,7 @@ goto end_branch_1
 }
 }
 {
-if (gopurs_runtime.Bool(__local_var_2_0.StrVal == "Just")).IntVal != 0 {
+if gopurs_runtime.Bool(__local_var_2_0.StrVal == "Just").IntVal != 0 {
 __t1 = gopurs_runtime.Bool(true)
 goto end_branch_1
 } else {
@@ -261,7 +261,7 @@ return gopurs_runtime.Func2(func(sep_2 gopurs_runtime.Value, xs_3 gopurs_runtime
 return gopurs_runtime.RecordGet(gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_1_0, "foldl"), gopurs_runtime.Func2(func(v_4 gopurs_runtime.Value, v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.RecordGet(v_4, "init")).IntVal != 0 {
+if gopurs_runtime.RecordGet(v_4, "init").IntVal != 0 {
 __t1 = gopurs_runtime.RecordDict2("init", "acc", gopurs_runtime.Bool(false), v1_5)
 goto end_branch_1
 } else {
@@ -269,7 +269,7 @@ goto end_branch_1
 }
 }
 {
-__t1 = gopurs_runtime.RecordDict2("init", "acc", gopurs_runtime.Bool(false), gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.RecordGet(v_4, "acc").StrVal + sep_2.StrVal).StrVal + v1_5.StrVal))
+__t1 = gopurs_runtime.RecordDict2("init", "acc", gopurs_runtime.Bool(false), gopurs_runtime.Str(gopurs_runtime.RecordGet(v_4, "acc").StrVal + sep_2.StrVal + v1_5.StrVal))
 }
 end_branch_1:
 return __t1
@@ -288,7 +288,7 @@ func Get_joinWith() gopurs_runtime.Value {
 return gopurs_runtime.RecordGet(gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictFoldable_0, "foldl"), gopurs_runtime.Func2(func(v_3 gopurs_runtime.Value, v1_4 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.RecordGet(v_3, "init")).IntVal != 0 {
+if gopurs_runtime.RecordGet(v_3, "init").IntVal != 0 {
 __t0 = gopurs_runtime.RecordDict2("init", "acc", gopurs_runtime.Bool(false), v1_4)
 goto end_branch_0
 } else {
@@ -296,7 +296,7 @@ goto end_branch_0
 }
 }
 {
-__t0 = gopurs_runtime.RecordDict2("init", "acc", gopurs_runtime.Bool(false), gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.RecordGet(v_3, "acc").StrVal + splice_1.StrVal).StrVal + v1_4.StrVal))
+__t0 = gopurs_runtime.RecordDict2("init", "acc", gopurs_runtime.Bool(false), gopurs_runtime.Str(gopurs_runtime.RecordGet(v_3, "acc").StrVal + splice_1.StrVal + v1_4.StrVal))
 }
 end_branch_0:
 return __t0
@@ -317,7 +317,7 @@ return gopurs_runtime.Func2(func(splice_2 gopurs_runtime.Value, xs_3 gopurs_runt
 return gopurs_runtime.RecordGet(gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_1_0, "foldl"), gopurs_runtime.Func2(func(v_4 gopurs_runtime.Value, v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.RecordGet(v_4, "init")).IntVal != 0 {
+if gopurs_runtime.RecordGet(v_4, "init").IntVal != 0 {
 __t1 = gopurs_runtime.RecordDict2("init", "acc", gopurs_runtime.Bool(false), v1_5)
 goto end_branch_1
 } else {
@@ -325,7 +325,7 @@ goto end_branch_1
 }
 }
 {
-__t1 = gopurs_runtime.RecordDict2("init", "acc", gopurs_runtime.Bool(false), gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.RecordGet(v_4, "acc").StrVal + splice_2.StrVal).StrVal + v1_5.StrVal))
+__t1 = gopurs_runtime.RecordDict2("init", "acc", gopurs_runtime.Bool(false), gopurs_runtime.Str(gopurs_runtime.RecordGet(v_4, "acc").StrVal + splice_2.StrVal + v1_5.StrVal))
 }
 end_branch_1:
 return __t1
@@ -343,7 +343,7 @@ func Get_fromString() gopurs_runtime.Value {
 		fromString = gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_0.StrVal == gopurs_runtime.Str("").StrVal)).IntVal != 0 {
+if v_0.StrVal == "" {
 __t0 = gopurs_runtime.Constructor0("Nothing")
 goto end_branch_0
 } else {
@@ -369,10 +369,10 @@ __local_var_2_0 := gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_stripPref
 _ = __local_var_2_0
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(__local_var_2_0.StrVal == "Just")).IntVal != 0 {
+if gopurs_runtime.Bool(__local_var_2_0.StrVal == "Just").IntVal != 0 {
 var __t2 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(__local_var_2_0.UnsafePtr)[0].StrVal == gopurs_runtime.Str("").StrVal)).IntVal != 0 {
+if (*[1024]gopurs_runtime.Value)(__local_var_2_0.UnsafePtr)[0].StrVal == "" {
 __t2 = gopurs_runtime.Constructor0("Nothing")
 goto end_branch_2
 } else {
@@ -390,7 +390,7 @@ goto end_branch_1
 }
 }
 {
-if (gopurs_runtime.Bool(__local_var_2_0.StrVal == "Nothing")).IntVal != 0 {
+if gopurs_runtime.Bool(__local_var_2_0.StrVal == "Nothing").IntVal != 0 {
 __t1 = gopurs_runtime.Constructor0("Nothing")
 goto end_branch_1
 } else {
@@ -416,10 +416,10 @@ __local_var_2_0 := gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_stripSuff
 _ = __local_var_2_0
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(__local_var_2_0.StrVal == "Just")).IntVal != 0 {
+if gopurs_runtime.Bool(__local_var_2_0.StrVal == "Just").IntVal != 0 {
 var __t2 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(__local_var_2_0.UnsafePtr)[0].StrVal == gopurs_runtime.Str("").StrVal)).IntVal != 0 {
+if (*[1024]gopurs_runtime.Value)(__local_var_2_0.UnsafePtr)[0].StrVal == "" {
 __t2 = gopurs_runtime.Constructor0("Nothing")
 goto end_branch_2
 } else {
@@ -437,7 +437,7 @@ goto end_branch_1
 }
 }
 {
-if (gopurs_runtime.Bool(__local_var_2_0.StrVal == "Nothing")).IntVal != 0 {
+if gopurs_runtime.Bool(__local_var_2_0.StrVal == "Nothing").IntVal != 0 {
 __t1 = gopurs_runtime.Constructor0("Nothing")
 goto end_branch_1
 } else {
@@ -463,7 +463,7 @@ __local_var_1_0 := gopurs_runtime.Apply(pkg_Data_String_Common.Get_trim(), v_0)
 _ = __local_var_1_0
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(__local_var_1_0.StrVal == gopurs_runtime.Str("").StrVal)).IntVal != 0 {
+if __local_var_1_0.StrVal == "" {
 __t1 = gopurs_runtime.Constructor0("Nothing")
 goto end_branch_1
 } else {
@@ -487,7 +487,7 @@ func Get_unsafeFromString() gopurs_runtime.Value {
 		unsafeFromString = gopurs_runtime.Func2(func(_dollar__unused_0 gopurs_runtime.Value, x_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(x_1.StrVal == gopurs_runtime.Str("").StrVal)).IntVal != 0 {
+if x_1.StrVal == "" {
 __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 goto end_branch_0
 } else {
@@ -531,7 +531,7 @@ __local_var_2_0 := gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_stripSuff
 _ = __local_var_2_0
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(__local_var_2_0.StrVal == "Nothing")).IntVal != 0 {
+if gopurs_runtime.Bool(__local_var_2_0.StrVal == "Nothing").IntVal != 0 {
 __t1 = gopurs_runtime.Bool(false)
 goto end_branch_1
 } else {
@@ -539,7 +539,7 @@ goto end_branch_1
 }
 }
 {
-if (gopurs_runtime.Bool(__local_var_2_0.StrVal == "Just")).IntVal != 0 {
+if gopurs_runtime.Bool(__local_var_2_0.StrVal == "Just").IntVal != 0 {
 __t1 = gopurs_runtime.Bool(true)
 goto end_branch_1
 } else {
@@ -577,5 +577,7 @@ return gopurs_runtime.Str(v_0.StrVal + s2_1.StrVal)
 	})
 	return appendString
 }
+
+
 
 

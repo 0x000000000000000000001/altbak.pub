@@ -78,10 +78,10 @@ func Get_ordOrdering() gopurs_runtime.Value {
 		ordOrdering = gopurs_runtime.RecordDict2("compare", "Eq0", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_0.StrVal == "LT")).IntVal != 0 {
+if gopurs_runtime.Bool(v_0.StrVal == "LT").IntVal != 0 {
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v1_1.StrVal == "LT")).IntVal != 0 {
+if gopurs_runtime.Bool(v1_1.StrVal == "LT").IntVal != 0 {
 __t1 = gopurs_runtime.Constructor0("EQ")
 goto end_branch_1
 } else {
@@ -99,10 +99,10 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(v_0.StrVal == "EQ")).IntVal != 0 {
+if gopurs_runtime.Bool(v_0.StrVal == "EQ").IntVal != 0 {
 var __t2 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v1_1.StrVal == "EQ")).IntVal != 0 {
+if gopurs_runtime.Bool(v1_1.StrVal == "EQ").IntVal != 0 {
 __t2 = gopurs_runtime.Constructor0("EQ")
 goto end_branch_2
 } else {
@@ -110,7 +110,7 @@ goto end_branch_2
 }
 }
 {
-if (gopurs_runtime.Bool(v1_1.StrVal == "LT")).IntVal != 0 {
+if gopurs_runtime.Bool(v1_1.StrVal == "LT").IntVal != 0 {
 __t2 = gopurs_runtime.Constructor0("GT")
 goto end_branch_2
 } else {
@@ -118,7 +118,7 @@ goto end_branch_2
 }
 }
 {
-if (gopurs_runtime.Bool(v1_1.StrVal == "GT")).IntVal != 0 {
+if gopurs_runtime.Bool(v1_1.StrVal == "GT").IntVal != 0 {
 __t2 = gopurs_runtime.Constructor0("LT")
 goto end_branch_2
 } else {
@@ -136,10 +136,10 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(v_0.StrVal == "GT")).IntVal != 0 {
+if gopurs_runtime.Bool(v_0.StrVal == "GT").IntVal != 0 {
 var __t3 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v1_1.StrVal == "GT")).IntVal != 0 {
+if gopurs_runtime.Bool(v1_1.StrVal == "GT").IntVal != 0 {
 __t3 = gopurs_runtime.Constructor0("EQ")
 goto end_branch_3
 } else {
@@ -287,7 +287,7 @@ var once_greaterThanOrEq sync.Once
 func Get_greaterThanOrEq() gopurs_runtime.Value {
 	once_greaterThanOrEq.Do(func() {
 		greaterThanOrEq = gopurs_runtime.Func3(func(dictOrd_0 gopurs_runtime.Value, a1_1 gopurs_runtime.Value, a2_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), a1_1, a2_2).StrVal == "LT").IntVal == 0)
+return gopurs_runtime.Bool(gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), a1_1, a2_2).StrVal == "LT").IntVal != 0 != true)
 })
 	})
 	return greaterThanOrEq
@@ -320,7 +320,7 @@ _ = one_5_3
 return gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t4 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), x_6, zero_3_1).StrVal == "LT")).IntVal != 0 {
+if gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), x_6, zero_3_1).StrVal == "LT").IntVal != 0 {
 __t4 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictRing_1, "sub"), zero_4_2, one_5_3)
 goto end_branch_4
 } else {
@@ -328,7 +328,7 @@ goto end_branch_4
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), x_6, zero_3_1).StrVal == "GT")).IntVal != 0 {
+if gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), x_6, zero_3_1).StrVal == "GT").IntVal != 0 {
 __t4 = one_5_3
 goto end_branch_4
 } else {
@@ -351,7 +351,7 @@ var once_lessThanOrEq sync.Once
 func Get_lessThanOrEq() gopurs_runtime.Value {
 	once_lessThanOrEq.Do(func() {
 		lessThanOrEq = gopurs_runtime.Func3(func(dictOrd_0 gopurs_runtime.Value, a1_1 gopurs_runtime.Value, a2_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), a1_1, a2_2).StrVal == "GT").IntVal == 0)
+return gopurs_runtime.Bool(gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), a1_1, a2_2).StrVal == "GT").IntVal != 0 != true)
 })
 	})
 	return lessThanOrEq
@@ -366,7 +366,7 @@ v_3_0 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), x
 _ = v_3_0
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_3_0.StrVal == "LT")).IntVal != 0 {
+if gopurs_runtime.Bool(v_3_0.StrVal == "LT").IntVal != 0 {
 __t1 = y_2
 goto end_branch_1
 } else {
@@ -374,7 +374,7 @@ goto end_branch_1
 }
 }
 {
-if (gopurs_runtime.Bool(v_3_0.StrVal == "EQ")).IntVal != 0 {
+if gopurs_runtime.Bool(v_3_0.StrVal == "EQ").IntVal != 0 {
 __t1 = x_1
 goto end_branch_1
 } else {
@@ -382,7 +382,7 @@ goto end_branch_1
 }
 }
 {
-if (gopurs_runtime.Bool(v_3_0.StrVal == "GT")).IntVal != 0 {
+if gopurs_runtime.Bool(v_3_0.StrVal == "GT").IntVal != 0 {
 __t1 = x_1
 goto end_branch_1
 } else {
@@ -408,7 +408,7 @@ v_3_0 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), x
 _ = v_3_0
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_3_0.StrVal == "LT")).IntVal != 0 {
+if gopurs_runtime.Bool(v_3_0.StrVal == "LT").IntVal != 0 {
 __t1 = x_1
 goto end_branch_1
 } else {
@@ -416,7 +416,7 @@ goto end_branch_1
 }
 }
 {
-if (gopurs_runtime.Bool(v_3_0.StrVal == "EQ")).IntVal != 0 {
+if gopurs_runtime.Bool(v_3_0.StrVal == "EQ").IntVal != 0 {
 __t1 = x_1
 goto end_branch_1
 } else {
@@ -424,7 +424,7 @@ goto end_branch_1
 }
 }
 {
-if (gopurs_runtime.Bool(v_3_0.StrVal == "GT")).IntVal != 0 {
+if gopurs_runtime.Bool(v_3_0.StrVal == "GT").IntVal != 0 {
 __t1 = y_2
 goto end_branch_1
 } else {
@@ -454,7 +454,7 @@ v_6_1 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), x
 _ = v_6_1
 var __t2 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_6_1.StrVal == "EQ")).IntVal != 0 {
+if gopurs_runtime.Bool(v_6_1.StrVal == "EQ").IntVal != 0 {
 __t2 = gopurs_runtime.Int(0)
 goto end_branch_2
 } else {
@@ -462,7 +462,7 @@ goto end_branch_2
 }
 }
 {
-if (gopurs_runtime.Bool(v_6_1.StrVal == "LT")).IntVal != 0 {
+if gopurs_runtime.Bool(v_6_1.StrVal == "LT").IntVal != 0 {
 __t2 = gopurs_runtime.Int(1)
 goto end_branch_2
 } else {
@@ -470,7 +470,7 @@ goto end_branch_2
 }
 }
 {
-if (gopurs_runtime.Bool(v_6_1.StrVal == "GT")).IntVal != 0 {
+if gopurs_runtime.Bool(v_6_1.StrVal == "GT").IntVal != 0 {
 __t2 = gopurs_runtime.Int(-1)
 goto end_branch_2
 } else {
@@ -524,7 +524,7 @@ left_11_4 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_5, "compare"
 _ = left_11_4
 var __t5 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.Bool(left_11_4.StrVal == "LT").IntVal != 0 || gopurs_runtime.Bool(gopurs_runtime.Bool(left_11_4.StrVal == "GT").IntVal != 0 || gopurs_runtime.Bool(gopurs_runtime.Bool(left_11_4.StrVal == "EQ").IntVal == 0).IntVal != 0).IntVal != 0)).IntVal != 0 {
+if gopurs_runtime.Bool(left_11_4.StrVal == "LT").IntVal != 0 || gopurs_runtime.Bool(left_11_4.StrVal == "GT").IntVal != 0 || gopurs_runtime.Bool(left_11_4.StrVal == "EQ").IntVal != 0 != true {
 __t5 = left_11_4
 goto end_branch_5
 } else {
@@ -555,7 +555,7 @@ v_4_0 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), l
 _ = v_4_0
 var __t2 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_4_0.StrVal == "LT")).IntVal != 0 {
+if gopurs_runtime.Bool(v_4_0.StrVal == "LT").IntVal != 0 {
 __t2 = x_3
 goto end_branch_2
 } else {
@@ -563,7 +563,7 @@ goto end_branch_2
 }
 }
 {
-if (gopurs_runtime.Bool(v_4_0.StrVal == "EQ")).IntVal != 0 {
+if gopurs_runtime.Bool(v_4_0.StrVal == "EQ").IntVal != 0 {
 __t2 = low_1
 goto end_branch_2
 } else {
@@ -571,7 +571,7 @@ goto end_branch_2
 }
 }
 {
-if (gopurs_runtime.Bool(v_4_0.StrVal == "GT")).IntVal != 0 {
+if gopurs_runtime.Bool(v_4_0.StrVal == "GT").IntVal != 0 {
 __t2 = low_1
 goto end_branch_2
 } else {
@@ -588,7 +588,7 @@ v_6_3 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), h
 _ = v_6_3
 var __t4 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_6_3.StrVal == "LT")).IntVal != 0 {
+if gopurs_runtime.Bool(v_6_3.StrVal == "LT").IntVal != 0 {
 __t4 = hi_2
 goto end_branch_4
 } else {
@@ -596,7 +596,7 @@ goto end_branch_4
 }
 }
 {
-if (gopurs_runtime.Bool(v_6_3.StrVal == "EQ")).IntVal != 0 {
+if gopurs_runtime.Bool(v_6_3.StrVal == "EQ").IntVal != 0 {
 __t4 = hi_2
 goto end_branch_4
 } else {
@@ -604,7 +604,7 @@ goto end_branch_4
 }
 }
 {
-if (gopurs_runtime.Bool(v_6_3.StrVal == "GT")).IntVal != 0 {
+if gopurs_runtime.Bool(v_6_3.StrVal == "GT").IntVal != 0 {
 __t4 = __local_var_5_1
 goto end_branch_4
 } else {
@@ -628,7 +628,7 @@ func Get_between() gopurs_runtime.Value {
 		between = gopurs_runtime.Func4(func(dictOrd_0 gopurs_runtime.Value, low_1 gopurs_runtime.Value, hi_2 gopurs_runtime.Value, x_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), x_3, low_1).StrVal == "LT")).IntVal != 0 {
+if gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), x_3, low_1).StrVal == "LT").IntVal != 0 {
 __t0 = gopurs_runtime.Bool(false)
 goto end_branch_0
 } else {
@@ -636,7 +636,7 @@ goto end_branch_0
 }
 }
 {
-__t0 = gopurs_runtime.Bool(gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), x_3, hi_2).StrVal == "GT").IntVal == 0)
+__t0 = gopurs_runtime.Bool(gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), x_3, hi_2).StrVal == "GT").IntVal != 0 != true)
 }
 end_branch_0:
 return __t0
@@ -657,7 +657,7 @@ _ = zero_3_1
 return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t2 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), x_4, zero_2_0).StrVal == "LT").IntVal == 0)).IntVal != 0 {
+if gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), x_4, zero_2_0).StrVal == "LT").IntVal != 0 != true {
 __t2 = x_4
 goto end_branch_2
 } else {
@@ -674,6 +674,8 @@ return __t2
 	})
 	return abs
 }
+
+
 
 func Get_ordArrayImpl() gopurs_runtime.Value {
 	return _Gopurs_OrdArrayImpl

@@ -10,7 +10,7 @@ var once_null sync.Once
 func Get_null() gopurs_runtime.Value {
 	once_null.Do(func() {
 		null = gopurs_runtime.Func(func(s_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(s_0.StrVal == gopurs_runtime.Str("").StrVal)
+return gopurs_runtime.Bool(s_0.StrVal == "")
 })
 	})
 	return null
@@ -24,6 +24,8 @@ func Get_localeCompare() gopurs_runtime.Value {
 	})
 	return localeCompare
 }
+
+
 
 func Get__localeCompare() gopurs_runtime.Value {
 	return _Gopurs__LocaleCompare

@@ -249,7 +249,7 @@ func AllImpl(p func(interface{}) bool, xs []interface{}) bool {
 
 
 // --- Auto-generated FFI wrappers ---
-var _Gopurs_RangeImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_rangeImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[int](arg0)
 	go_arg1 := gopurs_runtime.Unbox[int](arg1)
 	go_res := RangeImpl(go_arg0, go_arg1)
@@ -258,8 +258,9 @@ var _Gopurs_RangeImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg
 			for i, v := range go_res { res_arr[i] = gopurs_runtime.Box(v) }
 			return gopurs_runtime.Array(res_arr)
 		}()
-})
-var _Gopurs_ReplicateImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs_RangeImpl = gopurs_runtime.Func2(Call_rangeImpl)
+func Call_replicateImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[int](arg0)
 	go_arg1 := arg1
 	go_res := ReplicateImpl(go_arg0, go_arg1)
@@ -268,15 +269,17 @@ var _Gopurs_ReplicateImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value,
 			for i, v := range go_res { res_arr[i] = gopurs_runtime.Box(v) }
 			return gopurs_runtime.Array(res_arr)
 		}()
-})
-var _Gopurs_Length = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs_ReplicateImpl = gopurs_runtime.Func2(Call_replicateImpl)
+func Call_length(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	arg0_arr := arg0.PtrVal.([]gopurs_runtime.Value)
 	go_arg0 := make([]interface{}, len(arg0_arr))
 	for i, v := range arg0_arr { go_arg0[i] = v }
 	go_res := Length(go_arg0)
 	return gopurs_runtime.Box(go_res)
-})
-var _Gopurs_UnconsImpl = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs_Length = gopurs_runtime.Func(Call_length)
+func Call_unconsImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 interface{}) interface{} {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 		}
@@ -291,8 +294,9 @@ var _Gopurs_UnconsImpl = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, ar
 	for i, v := range arg2_arr { go_arg2[i] = v }
 	go_res := UnconsImpl(go_arg0, go_arg1, go_arg2)
 	return gopurs_runtime.Box(go_res)
-})
-var _Gopurs_IndexImpl = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs_UnconsImpl = gopurs_runtime.Func3(Call_unconsImpl)
+func Call_indexImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 interface{}) interface{} {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 		}
@@ -303,8 +307,9 @@ var _Gopurs_IndexImpl = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg
 	go_arg3 := gopurs_runtime.Unbox[int](arg3)
 	go_res := IndexImpl(go_arg0, go_arg1, go_arg2, go_arg3)
 	return gopurs_runtime.Box(go_res)
-})
-var _Gopurs__UpdateAt = gopurs_runtime.Func5(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs_IndexImpl = gopurs_runtime.Func4(Call_indexImpl)
+func Call__UpdateAt(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 []interface{}) interface{} {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 		}
@@ -316,8 +321,9 @@ var _Gopurs__UpdateAt = gopurs_runtime.Func5(func(arg0 gopurs_runtime.Value, arg
 	for i, v := range arg4_arr { go_arg4[i] = v }
 	go_res := _UpdateAt(go_arg0, go_arg1, go_arg2, go_arg3, go_arg4)
 	return gopurs_runtime.Box(go_res)
-})
-var _Gopurs__InsertAt = gopurs_runtime.Func5(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs__UpdateAt = gopurs_runtime.Func5(Call__UpdateAt)
+func Call__InsertAt(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 []interface{}) interface{} {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 		}
@@ -329,8 +335,9 @@ var _Gopurs__InsertAt = gopurs_runtime.Func5(func(arg0 gopurs_runtime.Value, arg
 	for i, v := range arg4_arr { go_arg4[i] = v }
 	go_res := _InsertAt(go_arg0, go_arg1, go_arg2, go_arg3, go_arg4)
 	return gopurs_runtime.Box(go_res)
-})
-var _Gopurs__DeleteAt = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs__InsertAt = gopurs_runtime.Func5(Call__InsertAt)
+func Call__DeleteAt(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 []interface{}) interface{} {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 		}
@@ -341,8 +348,9 @@ var _Gopurs__DeleteAt = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg
 	for i, v := range arg3_arr { go_arg3[i] = v }
 	go_res := _DeleteAt(go_arg0, go_arg1, go_arg2, go_arg3)
 	return gopurs_runtime.Box(go_res)
-})
-var _Gopurs_Reverse = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs__DeleteAt = gopurs_runtime.Func4(Call__DeleteAt)
+func Call_reverse(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	arg0_arr := arg0.PtrVal.([]gopurs_runtime.Value)
 	go_arg0 := make([]interface{}, len(arg0_arr))
 	for i, v := range arg0_arr { go_arg0[i] = v }
@@ -352,8 +360,9 @@ var _Gopurs_Reverse = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs
 			for i, v := range go_res { res_arr[i] = gopurs_runtime.Box(v) }
 			return gopurs_runtime.Array(res_arr)
 		}()
-})
-var _Gopurs_Concat = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs_Reverse = gopurs_runtime.Func(Call_reverse)
+func Call_concat(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	arg0_arr := arg0.PtrVal.([]gopurs_runtime.Value)
 	go_arg0 := make([][]interface{}, len(arg0_arr))
 	for i, v := range arg0_arr { go_arg0[i] = gopurs_runtime.Unbox[[]interface{}](v) }
@@ -363,8 +372,9 @@ var _Gopurs_Concat = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_
 			for i, v := range go_res { res_arr[i] = gopurs_runtime.Box(v) }
 			return gopurs_runtime.Array(res_arr)
 		}()
-})
-var _Gopurs_FilterImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs_Concat = gopurs_runtime.Func(Call_concat)
+func Call_filterImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 interface{}) bool {
 			inner_res0 := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 			return gopurs_runtime.Unbox[bool](inner_res0)
@@ -378,8 +388,9 @@ var _Gopurs_FilterImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, ar
 			for i, v := range go_res { res_arr[i] = gopurs_runtime.Box(v) }
 			return gopurs_runtime.Array(res_arr)
 		}()
-})
-var _Gopurs_SliceImpl = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs_FilterImpl = gopurs_runtime.Func2(Call_filterImpl)
+func Call_sliceImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[int](arg0)
 	go_arg1 := gopurs_runtime.Unbox[int](arg1)
 	arg2_arr := arg2.PtrVal.([]gopurs_runtime.Value)
@@ -391,8 +402,9 @@ var _Gopurs_SliceImpl = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg
 			for i, v := range go_res { res_arr[i] = gopurs_runtime.Box(v) }
 			return gopurs_runtime.Array(res_arr)
 		}()
-})
-var _Gopurs_ZipWithImpl = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs_SliceImpl = gopurs_runtime.Func3(Call_sliceImpl)
+func Call_zipWithImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 interface{}) func(interface{}) interface{} {
 			inner_res0 := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 			return func(p1_0 interface{}) interface{} {
@@ -411,16 +423,18 @@ var _Gopurs_ZipWithImpl = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, a
 			for i, v := range go_res { res_arr[i] = gopurs_runtime.Box(v) }
 			return gopurs_runtime.Array(res_arr)
 		}()
-})
-var _Gopurs_UnsafeIndexImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs_ZipWithImpl = gopurs_runtime.Func3(Call_zipWithImpl)
+func Call_unsafeIndexImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	arg0_arr := arg0.PtrVal.([]gopurs_runtime.Value)
 	go_arg0 := make([]interface{}, len(arg0_arr))
 	for i, v := range arg0_arr { go_arg0[i] = v }
 	go_arg1 := gopurs_runtime.Unbox[int](arg1)
 	go_res := UnsafeIndexImpl(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
-})
-var _Gopurs_SortByImpl = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs_UnsafeIndexImpl = gopurs_runtime.Func2(Call_unsafeIndexImpl)
+func Call_sortByImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 interface{}) func(interface{}) interface{} {
 			inner_res0 := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 			return func(p1_0 interface{}) interface{} {
@@ -440,8 +454,9 @@ var _Gopurs_SortByImpl = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, ar
 			for i, v := range go_res { res_arr[i] = gopurs_runtime.Box(v) }
 			return gopurs_runtime.Array(res_arr)
 		}()
-})
-var _Gopurs_ScanrImpl = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs_SortByImpl = gopurs_runtime.Func3(Call_sortByImpl)
+func Call_scanrImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 interface{}) func(interface{}) interface{} {
 			inner_res0 := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 			return func(p1_0 interface{}) interface{} {
@@ -458,8 +473,9 @@ var _Gopurs_ScanrImpl = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg
 			for i, v := range go_res { res_arr[i] = gopurs_runtime.Box(v) }
 			return gopurs_runtime.Array(res_arr)
 		}()
-})
-var _Gopurs_ScanlImpl = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs_ScanrImpl = gopurs_runtime.Func3(Call_scanrImpl)
+func Call_scanlImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 interface{}) func(interface{}) interface{} {
 			inner_res0 := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 			return func(p1_0 interface{}) interface{} {
@@ -476,8 +492,9 @@ var _Gopurs_ScanlImpl = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg
 			for i, v := range go_res { res_arr[i] = gopurs_runtime.Box(v) }
 			return gopurs_runtime.Array(res_arr)
 		}()
-})
-var _Gopurs_PartitionImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs_ScanlImpl = gopurs_runtime.Func3(Call_scanlImpl)
+func Call_partitionImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 interface{}) bool {
 			inner_res0 := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 			return gopurs_runtime.Unbox[bool](inner_res0)
@@ -491,8 +508,9 @@ var _Gopurs_PartitionImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value,
 			for k, v := range go_res { res_map[k] = gopurs_runtime.Box(v) }
 			return gopurs_runtime.Record(res_map)
 		}()
-})
-var _Gopurs_FromFoldableImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs_PartitionImpl = gopurs_runtime.Func2(Call_partitionImpl)
+func Call_fromFoldableImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_arg1 := arg1
 	go_res := FromFoldableImpl(go_arg0, go_arg1)
@@ -501,8 +519,9 @@ var _Gopurs_FromFoldableImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Val
 			for i, v := range go_res { res_arr[i] = gopurs_runtime.Box(v) }
 			return gopurs_runtime.Array(res_arr)
 		}()
-})
-var _Gopurs_FindMapImpl = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs_FromFoldableImpl = gopurs_runtime.Func2(Call_fromFoldableImpl)
+func Call_findMapImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_arg1 := func(p0_0 interface{}) bool {
 			inner_res0 := gopurs_runtime.Apply(arg1, gopurs_runtime.Box(p0_0))
@@ -516,8 +535,9 @@ var _Gopurs_FindMapImpl = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, a
 	for i, v := range arg3_arr { go_arg3[i] = v }
 	go_res := FindMapImpl(go_arg0, go_arg1, go_arg2, go_arg3)
 	return gopurs_runtime.Box(go_res)
-})
-var _Gopurs_FindLastIndexImpl = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs_FindMapImpl = gopurs_runtime.Func4(Call_findMapImpl)
+func Call_findLastIndexImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 int) interface{} {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 		}
@@ -531,8 +551,9 @@ var _Gopurs_FindLastIndexImpl = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Va
 	for i, v := range arg3_arr { go_arg3[i] = v }
 	go_res := FindLastIndexImpl(go_arg0, go_arg1, go_arg2, go_arg3)
 	return gopurs_runtime.Box(go_res)
-})
-var _Gopurs_FindIndexImpl = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs_FindLastIndexImpl = gopurs_runtime.Func4(Call_findLastIndexImpl)
+func Call_findIndexImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 int) interface{} {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 		}
@@ -546,8 +567,9 @@ var _Gopurs_FindIndexImpl = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value,
 	for i, v := range arg3_arr { go_arg3[i] = v }
 	go_res := FindIndexImpl(go_arg0, go_arg1, go_arg2, go_arg3)
 	return gopurs_runtime.Box(go_res)
-})
-var _Gopurs_AnyImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs_FindIndexImpl = gopurs_runtime.Func4(Call_findIndexImpl)
+func Call_anyImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 interface{}) bool {
 			inner_res0 := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 			return gopurs_runtime.Unbox[bool](inner_res0)
@@ -557,8 +579,9 @@ var _Gopurs_AnyImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 
 	for i, v := range arg1_arr { go_arg1[i] = v }
 	go_res := AnyImpl(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
-})
-var _Gopurs_AllImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs_AnyImpl = gopurs_runtime.Func2(Call_anyImpl)
+func Call_allImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 interface{}) bool {
 			inner_res0 := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 			return gopurs_runtime.Unbox[bool](inner_res0)
@@ -568,4 +591,5 @@ var _Gopurs_AllImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 
 	for i, v := range arg1_arr { go_arg1[i] = v }
 	go_res := AllImpl(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
-})
+}
+var _Gopurs_AllImpl = gopurs_runtime.Func2(Call_allImpl)

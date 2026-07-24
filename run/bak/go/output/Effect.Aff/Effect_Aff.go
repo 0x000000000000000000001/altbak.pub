@@ -80,7 +80,7 @@ func Get_ffiUtil() gopurs_runtime.Value {
 		ffiUtil = gopurs_runtime.RecordDict5("isLeft", "fromLeft", "fromRight", "left", "right", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_0.StrVal == "Left")).IntVal != 0 {
+if gopurs_runtime.Bool(v_0.StrVal == "Left").IntVal != 0 {
 __t0 = gopurs_runtime.Bool(true)
 goto end_branch_0
 } else {
@@ -88,7 +88,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(v_0.StrVal == "Right")).IntVal != 0 {
+if gopurs_runtime.Bool(v_0.StrVal == "Right").IntVal != 0 {
 __t0 = gopurs_runtime.Bool(false)
 goto end_branch_0
 } else {
@@ -103,7 +103,7 @@ return __t0
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_0.StrVal == "Left")).IntVal != 0 {
+if gopurs_runtime.Bool(v_0.StrVal == "Left").IntVal != 0 {
 __t1 = (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0]
 goto end_branch_1
 } else {
@@ -111,7 +111,7 @@ goto end_branch_1
 }
 }
 {
-if (gopurs_runtime.Bool(v_0.StrVal == "Right")).IntVal != 0 {
+if gopurs_runtime.Bool(v_0.StrVal == "Right").IntVal != 0 {
 __t1 = gopurs_runtime.Apply(pkg_Partial.Get__crashWith(), gopurs_runtime.Str("unsafeFromLeft: Right"))
 goto end_branch_1
 } else {
@@ -126,7 +126,7 @@ return __t1
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t2 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_0.StrVal == "Right")).IntVal != 0 {
+if gopurs_runtime.Bool(v_0.StrVal == "Right").IntVal != 0 {
 __t2 = (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0]
 goto end_branch_2
 } else {
@@ -134,7 +134,7 @@ goto end_branch_2
 }
 }
 {
-if (gopurs_runtime.Bool(v_0.StrVal == "Left")).IntVal != 0 {
+if gopurs_runtime.Bool(v_0.StrVal == "Left").IntVal != 0 {
 __t2 = gopurs_runtime.Apply(pkg_Partial.Get__crashWith(), gopurs_runtime.Str("unsafeFromRight: Left"))
 goto end_branch_2
 } else {
@@ -565,7 +565,7 @@ func Get_killFiber() gopurs_runtime.Value {
 return gopurs_runtime.Apply2(Get__bind(), gopurs_runtime.Apply(Get__liftEffect(), gopurs_runtime.RecordGet(v_1, "isSuspended")), gopurs_runtime.Func(func(suspended_2 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t3 gopurs_runtime.Value
 {
-if (suspended_2).IntVal != 0 {
+if suspended_2.IntVal != 0 {
 __local_var_3_4 := gopurs_runtime.UncurriedApp2(gopurs_runtime.RecordGet(v_1, "kill"), e_0, gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Unit.Get_unit()
@@ -766,7 +766,7 @@ go__1_0 = gopurs_runtime.Func(func(a_2 gopurs_runtime.Value) gopurs_runtime.Valu
 return gopurs_runtime.Apply2(Get__bind(), gopurs_runtime.Apply(k_0, a_2), gopurs_runtime.Func(func(res_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(res_3.StrVal == "Done")).IntVal != 0 {
+if gopurs_runtime.Bool(res_3.StrVal == "Done").IntVal != 0 {
 __t1 = gopurs_runtime.Apply(Get__pure(), (*[1024]gopurs_runtime.Value)(res_3.UnsafePtr)[0])
 goto end_branch_1
 } else {
@@ -774,7 +774,7 @@ goto end_branch_1
 }
 }
 {
-if (gopurs_runtime.Bool(res_3.StrVal == "Loop")).IntVal != 0 {
+if gopurs_runtime.Bool(res_3.StrVal == "Loop").IntVal != 0 {
 __t1 = gopurs_runtime.Apply(go__1_0, (*[1024]gopurs_runtime.Value)(res_3.UnsafePtr)[0])
 goto end_branch_1
 } else {
@@ -925,6 +925,8 @@ return Get_plusParAff()
 	})
 	return alternativeParAff
 }
+
+
 
 func Get__bind() gopurs_runtime.Value {
 	return _Gopurs__Bind

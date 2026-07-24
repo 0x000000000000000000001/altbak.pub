@@ -22,7 +22,7 @@ func Get_showProduct() gopurs_runtime.Value {
 	once_showProduct.Do(func() {
 		showProduct = gopurs_runtime.Func2(func(dictShow_0 gopurs_runtime.Value, dictShow1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str("(product ").StrVal + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0]).StrVal).StrVal + gopurs_runtime.Str(" ").StrVal).StrVal + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow1_1, "show"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[1]).StrVal).StrVal + gopurs_runtime.Str(")").StrVal)
+return gopurs_runtime.Str("(product " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0]).StrVal + " " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow1_1, "show"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[1]).StrVal + ")")
 }))
 })
 	})
@@ -130,7 +130,7 @@ v2_10_7 := gopurs_runtime.Apply2(compare12_6_5, (*[1024]gopurs_runtime.Value)(v_
 _ = v2_10_7
 var __t8 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v2_10_7.StrVal == "EQ")).IntVal != 0 {
+if gopurs_runtime.Bool(v2_10_7.StrVal == "EQ").IntVal != 0 {
 __t8 = gopurs_runtime.Apply2(compare13_7_6, (*[1024]gopurs_runtime.Value)(v_8.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(v1_9.UnsafePtr)[1])
 goto end_branch_8
 } else {
@@ -319,5 +319,7 @@ return bindProduct2_5_3
 	})
 	return monadProduct
 }
+
+
 
 

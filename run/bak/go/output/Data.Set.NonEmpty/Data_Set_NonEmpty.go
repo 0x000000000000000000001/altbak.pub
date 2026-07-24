@@ -84,7 +84,7 @@ func Get_toUnfoldable() gopurs_runtime.Value {
 __local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictUnfoldable_0, "unfoldr"), gopurs_runtime.Func(func(xs_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(xs_1.StrVal == "Nil")).IntVal != 0 {
+if gopurs_runtime.Bool(xs_1.StrVal == "Nil").IntVal != 0 {
 __t1 = gopurs_runtime.Constructor0("Nothing")
 goto end_branch_1
 } else {
@@ -92,7 +92,7 @@ goto end_branch_1
 }
 }
 {
-if (gopurs_runtime.Bool(xs_1.StrVal == "Cons")).IntVal != 0 {
+if gopurs_runtime.Bool(xs_1.StrVal == "Cons").IntVal != 0 {
 __t1 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Constructor2("Tuple", (*[1024]gopurs_runtime.Value)(xs_1.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(xs_1.UnsafePtr)[1]))
 goto end_branch_1
 } else {
@@ -109,30 +109,7 @@ _ = __local_var_1_0
 return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
 var go__3_2 gopurs_runtime.Value
 _ = go__3_2
-go__3_2 = gopurs_runtime.Func2(func(m_prime_4 gopurs_runtime.Value, z_prime_5 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t3 gopurs_runtime.Value
-{
-if (gopurs_runtime.Bool(m_prime_4.StrVal == "Leaf")).IntVal != 0 {
-__t3 = z_prime_5
-goto end_branch_3
-} else {
-
-}
-}
-{
-if (gopurs_runtime.Bool(m_prime_4.StrVal == "Node")).IntVal != 0 {
-__t3 = gopurs_runtime.UncurriedApp2(go__3_2, (*[1024]gopurs_runtime.Value)(m_prime_4.UnsafePtr)[4], gopurs_runtime.Constructor2("Cons", (*[1024]gopurs_runtime.Value)(m_prime_4.UnsafePtr)[2], gopurs_runtime.UncurriedApp2(go__3_2, (*[1024]gopurs_runtime.Value)(m_prime_4.UnsafePtr)[5], z_prime_5)))
-goto end_branch_3
-} else {
-
-}
-}
-{
-__t3 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
-}
-end_branch_3:
-return __t3
-})
+go__3_2 = gopurs_runtime.Func2(Call_go__3_2)
 return gopurs_runtime.Apply(__local_var_1_0, gopurs_runtime.UncurriedApp2(go__3_2, x_2, gopurs_runtime.Constructor0("Nil")))
 })
 })
@@ -190,7 +167,7 @@ func Get_showNonEmptySet() gopurs_runtime.Value {
 	once_showNonEmptySet.Do(func() {
 		showNonEmptySet = gopurs_runtime.Func(func(dictShow_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(s_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str("(fromFoldable1 (NonEmptyArray ").StrVal + gopurs_runtime.Apply2(pkg_Data_Show.Get_showArrayImpl(), gopurs_runtime.RecordGet(dictShow_0, "show"), gopurs_runtime.Apply(Get_toUnfoldable11(), s_1)).StrVal).StrVal + gopurs_runtime.Str("))").StrVal)
+return gopurs_runtime.Str("(fromFoldable1 (NonEmptyArray " + gopurs_runtime.Apply2(pkg_Data_Show.Get_showArrayImpl(), gopurs_runtime.RecordGet(dictShow_0, "show"), gopurs_runtime.Apply(Get_toUnfoldable11(), s_1)).StrVal + "))")
 }))
 })
 	})
@@ -252,7 +229,7 @@ __local_var_1_0 := gopurs_runtime.Apply(pkg_Data_Map_Internal.Get_findMin(), v_0
 _ = __local_var_1_0
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(__local_var_1_0.StrVal == "Just")).IntVal != 0 {
+if gopurs_runtime.Bool(__local_var_1_0.StrVal == "Just").IntVal != 0 {
 __t1 = gopurs_runtime.RecordGet((*[1024]gopurs_runtime.Value)(__local_var_1_0.UnsafePtr)[0], "key")
 goto end_branch_1
 } else {
@@ -280,11 +257,11 @@ return func() gopurs_runtime.Value {
 go__2_0:
 for {
 if false { continue go__2_0 }
-var v_3 = v_3_loop
+var v_3 gopurs_runtime.Value = v_3_loop
 _ = v_3
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_3.StrVal == "Leaf")).IntVal != 0 {
+if gopurs_runtime.Bool(v_3.StrVal == "Leaf").IntVal != 0 {
 __t1 = gopurs_runtime.Bool(false)
 goto end_branch_1
 } else {
@@ -292,12 +269,12 @@ goto end_branch_1
 }
 }
 {
-if (gopurs_runtime.Bool(v_3.StrVal == "Node")).IntVal != 0 {
+if gopurs_runtime.Bool(v_3.StrVal == "Node").IntVal != 0 {
 v1_4_2 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), k_1, (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[2])
 _ = v1_4_2
 var __t3 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v1_4_2.StrVal == "LT")).IntVal != 0 {
+if gopurs_runtime.Bool(v1_4_2.StrVal == "LT").IntVal != 0 {
 v_3_loop = (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[4]
 continue go__2_0
 __t3 = gopurs_runtime.Value{}
@@ -307,7 +284,7 @@ goto end_branch_3
 }
 }
 {
-if (gopurs_runtime.Bool(v1_4_2.StrVal == "GT")).IntVal != 0 {
+if gopurs_runtime.Bool(v1_4_2.StrVal == "GT").IntVal != 0 {
 v_3_loop = (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[5]
 continue go__2_0
 __t3 = gopurs_runtime.Value{}
@@ -317,7 +294,7 @@ goto end_branch_3
 }
 }
 {
-if (gopurs_runtime.Bool(v1_4_2.StrVal == "EQ")).IntVal != 0 {
+if gopurs_runtime.Bool(v1_4_2.StrVal == "EQ").IntVal != 0 {
 __t3 = gopurs_runtime.Bool(true)
 goto end_branch_3
 } else {
@@ -357,7 +334,7 @@ __local_var_1_0 := gopurs_runtime.Apply(pkg_Data_Map_Internal.Get_findMax(), v_0
 _ = __local_var_1_0
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(__local_var_1_0.StrVal == "Just")).IntVal != 0 {
+if gopurs_runtime.Bool(__local_var_1_0.StrVal == "Just").IntVal != 0 {
 __t1 = gopurs_runtime.RecordGet((*[1024]gopurs_runtime.Value)(__local_var_1_0.UnsafePtr)[0], "key")
 goto end_branch_1
 } else {
@@ -414,7 +391,7 @@ func Get_fromSet() gopurs_runtime.Value {
 		fromSet = gopurs_runtime.Func(func(s_0 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(s_0.StrVal == "Leaf")).IntVal != 0 {
+if gopurs_runtime.Bool(s_0.StrVal == "Leaf").IntVal != 0 {
 __t0 = gopurs_runtime.Constructor0("Nothing")
 goto end_branch_0
 } else {
@@ -443,7 +420,7 @@ __local_var_4_1 := gopurs_runtime.UncurriedApp4(pkg_Data_Map_Internal.Get_unsafe
 _ = __local_var_4_1
 var __t2 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(__local_var_4_1.StrVal == "Leaf")).IntVal != 0 {
+if gopurs_runtime.Bool(__local_var_4_1.StrVal == "Leaf").IntVal != 0 {
 __t2 = gopurs_runtime.Constructor0("Nothing")
 goto end_branch_2
 } else {
@@ -490,7 +467,7 @@ __local_var_4_1 := gopurs_runtime.Apply(__local_var_2_0, x_3)
 _ = __local_var_4_1
 var __t2 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(__local_var_4_1.StrVal == "Leaf")).IntVal != 0 {
+if gopurs_runtime.Bool(__local_var_4_1.StrVal == "Leaf").IntVal != 0 {
 __t2 = gopurs_runtime.Constructor0("Nothing")
 goto end_branch_2
 } else {
@@ -595,7 +572,7 @@ __local_var_4_1 := gopurs_runtime.UncurriedApp3(pkg_Data_Map_Internal.Get_unsafe
 _ = __local_var_4_1
 var __t2 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(__local_var_4_1.StrVal == "Leaf")).IntVal != 0 {
+if gopurs_runtime.Bool(__local_var_4_1.StrVal == "Leaf").IntVal != 0 {
 __t2 = gopurs_runtime.Constructor0("Nothing")
 goto end_branch_2
 } else {
@@ -622,7 +599,7 @@ __local_var_3_0 := gopurs_runtime.Apply3(pkg_Data_Map_Internal.Get_delete_(), di
 _ = __local_var_3_0
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(__local_var_3_0.StrVal == "Leaf")).IntVal != 0 {
+if gopurs_runtime.Bool(__local_var_3_0.StrVal == "Leaf").IntVal != 0 {
 __t1 = gopurs_runtime.Constructor0("Nothing")
 goto end_branch_1
 } else {
@@ -648,6 +625,31 @@ return gopurs_runtime.Apply(pkg_Data_Set.Get_insert(), dictOrd_0)
 })
 	})
 	return cons
+}
+
+func Call_go__3_2(m_prime_4 gopurs_runtime.Value, z_prime_5 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t3 gopurs_runtime.Value
+{
+if gopurs_runtime.Bool(m_prime_4.StrVal == "Leaf").IntVal != 0 {
+__t3 = z_prime_5
+goto end_branch_3
+} else {
+
+}
+}
+{
+if gopurs_runtime.Bool(m_prime_4.StrVal == "Node").IntVal != 0 {
+__t3 = gopurs_runtime.UncurriedApp2(go__3_2, (*[1024]gopurs_runtime.Value)(m_prime_4.UnsafePtr)[4], gopurs_runtime.Constructor2("Cons", (*[1024]gopurs_runtime.Value)(m_prime_4.UnsafePtr)[2], gopurs_runtime.UncurriedApp2(go__3_2, (*[1024]gopurs_runtime.Value)(m_prime_4.UnsafePtr)[5], z_prime_5)))
+goto end_branch_3
+} else {
+
+}
+}
+{
+__t3 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_3:
+return __t3
 }
 
 

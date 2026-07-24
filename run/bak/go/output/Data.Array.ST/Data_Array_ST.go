@@ -100,7 +100,7 @@ func Get_sortBy() gopurs_runtime.Value {
 return gopurs_runtime.Apply3(pkg_Control_Monad_ST_Uncurried.Get_runSTFn3(), Get_sortByImpl(), comp_0, gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_1.StrVal == "GT")).IntVal != 0 {
+if gopurs_runtime.Bool(v_1.StrVal == "GT").IntVal != 0 {
 __t0 = gopurs_runtime.Int(1)
 goto end_branch_0
 } else {
@@ -108,7 +108,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(v_1.StrVal == "EQ")).IntVal != 0 {
+if gopurs_runtime.Bool(v_1.StrVal == "EQ").IntVal != 0 {
 __t0 = gopurs_runtime.Int(0)
 goto end_branch_0
 } else {
@@ -116,7 +116,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(v_1.StrVal == "LT")).IntVal != 0 {
+if gopurs_runtime.Bool(v_1.StrVal == "LT").IntVal != 0 {
 __t0 = gopurs_runtime.Int(-1)
 goto end_branch_0
 } else {
@@ -239,7 +239,7 @@ entry_4_1 := gopurs_runtime.Apply(__local_var_3_0, gopurs_runtime.Value{})
 _ = entry_4_1
 var __t2 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(entry_4_1.StrVal == "Just")).IntVal != 0 {
+if gopurs_runtime.Bool(entry_4_1.StrVal == "Just").IntVal != 0 {
 __t2 = gopurs_runtime.Apply3(Get_poke(), i_0, gopurs_runtime.Apply(f_1, (*[1024]gopurs_runtime.Value)(entry_4_1.UnsafePtr)[0]), xs_2)
 goto end_branch_2
 } else {
@@ -247,7 +247,7 @@ goto end_branch_2
 }
 }
 {
-if (gopurs_runtime.Bool(entry_4_1.StrVal == "Nothing")).IntVal != 0 {
+if gopurs_runtime.Bool(entry_4_1.StrVal == "Nothing").IntVal != 0 {
 __t2 = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Bool(false)
 })
@@ -293,6 +293,8 @@ func Get_clone() gopurs_runtime.Value {
 	})
 	return clone
 }
+
+
 
 func Get_cloneImpl() gopurs_runtime.Value {
 	return _Gopurs_CloneImpl

@@ -24,7 +24,7 @@ var once_showCaseInsensitiveString sync.Once
 func Get_showCaseInsensitiveString() gopurs_runtime.Value {
 	once_showCaseInsensitiveString.Do(func() {
 		showCaseInsensitiveString = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str("(CaseInsensitiveString ").StrVal + gopurs_runtime.Apply(pkg_Data_Show.Get_showStringImpl(), v_0).StrVal).StrVal + gopurs_runtime.Str(")").StrVal)
+return gopurs_runtime.Str("(CaseInsensitiveString " + gopurs_runtime.Apply(pkg_Data_Show.Get_showStringImpl(), v_0).StrVal + ")")
 }))
 	})
 	return showCaseInsensitiveString
@@ -64,5 +64,7 @@ return Get_eqCaseInsensitiveString()
 	})
 	return ordCaseInsensitiveString
 }
+
+
 
 

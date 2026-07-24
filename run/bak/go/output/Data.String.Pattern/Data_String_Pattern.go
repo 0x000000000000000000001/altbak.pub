@@ -34,7 +34,7 @@ var once_showReplacement sync.Once
 func Get_showReplacement() gopurs_runtime.Value {
 	once_showReplacement.Do(func() {
 		showReplacement = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str("(Replacement ").StrVal + gopurs_runtime.Apply(pkg_Data_Show.Get_showStringImpl(), v_0).StrVal).StrVal + gopurs_runtime.Str(")").StrVal)
+return gopurs_runtime.Str("(Replacement " + gopurs_runtime.Apply(pkg_Data_Show.Get_showStringImpl(), v_0).StrVal + ")")
 }))
 	})
 	return showReplacement
@@ -45,7 +45,7 @@ var once_showPattern sync.Once
 func Get_showPattern() gopurs_runtime.Value {
 	once_showPattern.Do(func() {
 		showPattern = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str("(Pattern ").StrVal + gopurs_runtime.Apply(pkg_Data_Show.Get_showStringImpl(), v_0).StrVal).StrVal + gopurs_runtime.Str(")").StrVal)
+return gopurs_runtime.Str("(Pattern " + gopurs_runtime.Apply(pkg_Data_Show.Get_showStringImpl(), v_0).StrVal + ")")
 }))
 	})
 	return showPattern
@@ -120,5 +120,7 @@ return Get_eqPattern()
 	})
 	return ordPattern
 }
+
+
 
 

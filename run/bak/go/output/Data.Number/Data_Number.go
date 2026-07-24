@@ -98,6 +98,8 @@ func Get_e() gopurs_runtime.Value {
 	return e
 }
 
+
+
 func Get_abs() gopurs_runtime.Value {
 	return _Gopurs_Abs
 }

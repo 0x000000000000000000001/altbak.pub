@@ -106,8 +106,12 @@ var sequence1 gopurs_runtime.Value
 var once_sequence1 sync.Once
 func Get_sequence1() gopurs_runtime.Value {
 	once_sequence1.Do(func() {
-		sequence1 = gopurs_runtime.Func(func(dict_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(dict_0, "sequence1")
+		sequence1 = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0_loop, "sequence1")
+}()
 })
 	})
 	return sequence1
@@ -117,15 +121,21 @@ var traverse1Default gopurs_runtime.Value
 var once_traverse1Default sync.Once
 func Get_traverse1Default() gopurs_runtime.Value {
 	once_traverse1Default.Do(func() {
-		traverse1Default = gopurs_runtime.Func2(func(dictTraversable1_0 gopurs_runtime.Value, dictApply_1 gopurs_runtime.Value) gopurs_runtime.Value {
-sequence12_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTraversable1_0, "sequence1"), dictApply_1)
-_ = sequence12_2_0
-return gopurs_runtime.Func2(func(f_3 gopurs_runtime.Value, ta_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(sequence12_2_0, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTraversable1_0, "Traversable1"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), f_3, ta_4))
-})
-})
+		traverse1Default = gopurs_runtime.Func2(Call_traverse1Default)
 	})
 	return traverse1Default
+}
+
+func Call_traverse1Default(dictTraversable1_0_loop gopurs_runtime.Value, dictApply_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictTraversable1_0 gopurs_runtime.Value = dictTraversable1_0_loop
+_ = dictTraversable1_0
+var dictApply_1 gopurs_runtime.Value = dictApply_1_loop
+_ = dictApply_1
+sequence12_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTraversable1_0_loop, "sequence1"), dictApply_1_loop)
+_ = sequence12_2_0
+return gopurs_runtime.Func2(func(f_3 gopurs_runtime.Value, ta_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(sequence12_2_0, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTraversable1_0_loop, "Traversable1"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), f_3, ta_4))
+})
 }
 
 

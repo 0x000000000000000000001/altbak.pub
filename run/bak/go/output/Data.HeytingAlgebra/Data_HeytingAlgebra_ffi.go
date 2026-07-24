@@ -14,20 +14,23 @@ func BoolNot(b bool) bool {
 
 
 // --- Auto-generated FFI wrappers ---
-var _Gopurs_BoolConj = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_boolConj(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[bool](arg0)
 	go_arg1 := gopurs_runtime.Unbox[bool](arg1)
 	go_res := BoolConj(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
-})
-var _Gopurs_BoolDisj = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs_BoolConj = gopurs_runtime.Func2(Call_boolConj)
+func Call_boolDisj(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[bool](arg0)
 	go_arg1 := gopurs_runtime.Unbox[bool](arg1)
 	go_res := BoolDisj(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
-})
-var _Gopurs_BoolNot = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs_BoolDisj = gopurs_runtime.Func2(Call_boolDisj)
+func Call_boolNot(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[bool](arg0)
 	go_res := BoolNot(go_arg0)
 	return gopurs_runtime.Box(go_res)
-})
+}
+var _Gopurs_BoolNot = gopurs_runtime.Func(Call_boolNot)

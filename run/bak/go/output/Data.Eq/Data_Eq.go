@@ -181,7 +181,7 @@ var once_notEq sync.Once
 func Get_notEq() gopurs_runtime.Value {
 	once_notEq.Do(func() {
 		notEq = gopurs_runtime.Func3(func(dictEq_0 gopurs_runtime.Value, x_1 gopurs_runtime.Value, y_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), x_1, y_2).IntVal == 0)
+return gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), x_1, y_2).IntVal != 0 != true)
 })
 	})
 	return notEq
@@ -195,12 +195,14 @@ func Get_notEq1() gopurs_runtime.Value {
 eq12_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEq1_0, "eq1"), dictEq_1)
 _ = eq12_2_0
 return gopurs_runtime.Func2(func(x_3 gopurs_runtime.Value, y_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(gopurs_runtime.Apply2(eq12_2_0, x_3, y_4).IntVal == 0)
+return gopurs_runtime.Bool(gopurs_runtime.Apply2(eq12_2_0, x_3, y_4).IntVal != 0 != true)
 })
 })
 	})
 	return notEq1
 }
+
+
 
 func Get_eqArrayImpl() gopurs_runtime.Value {
 	return _Gopurs_EqArrayImpl

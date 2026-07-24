@@ -66,7 +66,7 @@ func Get_showNonEmptyArray() gopurs_runtime.Value {
 	once_showNonEmptyArray.Do(func() {
 		showNonEmptyArray = gopurs_runtime.Func(func(dictShow_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str("(NonEmptyArray ").StrVal + gopurs_runtime.Apply2(pkg_Data_Show.Get_showArrayImpl(), gopurs_runtime.RecordGet(dictShow_0, "show"), v_1).StrVal).StrVal + gopurs_runtime.Str(")").StrVal)
+return gopurs_runtime.Str("(NonEmptyArray " + gopurs_runtime.Apply2(pkg_Data_Show.Get_showArrayImpl(), gopurs_runtime.RecordGet(dictShow_0, "show"), v_1).StrVal + ")")
 }))
 })
 	})
@@ -252,6 +252,8 @@ func Get_altNonEmptyArray() gopurs_runtime.Value {
 	})
 	return altNonEmptyArray
 }
+
+
 
 func Get_foldl1Impl() gopurs_runtime.Value {
 	return _Gopurs_Foldl1Impl

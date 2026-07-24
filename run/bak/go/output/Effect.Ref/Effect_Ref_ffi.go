@@ -34,15 +34,16 @@ func Write(val any, ref map[string]any) func() {
 
 
 // --- Auto-generated FFI wrappers ---
-var _Gopurs__New = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+func Call__New(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := _New(go_arg0)
 	return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 			inner_res := go_res()
 			return gopurs_runtime.Box(inner_res)
 		})
-})
-var _Gopurs_NewWithSelf = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs__New = gopurs_runtime.Func(Call__New)
+func Call_newWithSelf(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 any) any {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 		}
@@ -51,8 +52,9 @@ var _Gopurs_NewWithSelf = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) go
 			inner_res := go_res()
 			return gopurs_runtime.Box(inner_res)
 		})
-})
-var _Gopurs_Read = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs_NewWithSelf = gopurs_runtime.Func(Call_newWithSelf)
+func Call_read(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	arg0_map := gopurs_runtime.RecordToMap(arg0)
 	go_arg0 := make(map[string]any)
 	for k, v := range arg0_map { go_arg0[k] = v }
@@ -61,8 +63,9 @@ var _Gopurs_Read = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_ru
 			inner_res := go_res()
 			return gopurs_runtime.Box(inner_res)
 		})
-})
-var _Gopurs_ModifyImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs_Read = gopurs_runtime.Func(Call_read)
+func Call_modifyImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 any) map[string]any {
 			inner_res0 := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 			return gopurs_runtime.Unbox[map[string]any](inner_res0)
@@ -75,8 +78,9 @@ var _Gopurs_ModifyImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, ar
 			inner_res := go_res()
 			return gopurs_runtime.Box(inner_res)
 		})
-})
-var _Gopurs_Write = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs_ModifyImpl = gopurs_runtime.Func2(Call_modifyImpl)
+func Call_write(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	arg1_map := gopurs_runtime.RecordToMap(arg1)
 	go_arg1 := make(map[string]any)
@@ -86,4 +90,5 @@ var _Gopurs_Write = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 go
 			go_res()
 			return gopurs_runtime.Value{}
 		})
-})
+}
+var _Gopurs_Write = gopurs_runtime.Func2(Call_write)

@@ -54,7 +54,7 @@ if [ "$ENTRY_POINT" == "AppX" ]; then
 else
   ENTRY_LOWER="app"
 fi
-time erl -noshell -pa output/${ENTRY_POINT} -eval "
+erl -noshell -pa output/${ENTRY_POINT} -eval "
     (${ENTRY_LOWER}@ps:main())(),
     halt().
 "

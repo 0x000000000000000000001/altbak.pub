@@ -91,7 +91,7 @@ func Get_showDurationComponent() gopurs_runtime.Value {
 		showDurationComponent = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_0.StrVal == "Minute")).IntVal != 0 {
+if gopurs_runtime.Bool(v_0.StrVal == "Minute").IntVal != 0 {
 __t0 = gopurs_runtime.Str("Minute")
 goto end_branch_0
 } else {
@@ -99,7 +99,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(v_0.StrVal == "Second")).IntVal != 0 {
+if gopurs_runtime.Bool(v_0.StrVal == "Second").IntVal != 0 {
 __t0 = gopurs_runtime.Str("Second")
 goto end_branch_0
 } else {
@@ -107,7 +107,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(v_0.StrVal == "Hour")).IntVal != 0 {
+if gopurs_runtime.Bool(v_0.StrVal == "Hour").IntVal != 0 {
 __t0 = gopurs_runtime.Str("Hour")
 goto end_branch_0
 } else {
@@ -115,7 +115,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(v_0.StrVal == "Day")).IntVal != 0 {
+if gopurs_runtime.Bool(v_0.StrVal == "Day").IntVal != 0 {
 __t0 = gopurs_runtime.Str("Day")
 goto end_branch_0
 } else {
@@ -123,7 +123,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(v_0.StrVal == "Week")).IntVal != 0 {
+if gopurs_runtime.Bool(v_0.StrVal == "Week").IntVal != 0 {
 __t0 = gopurs_runtime.Str("Week")
 goto end_branch_0
 } else {
@@ -131,7 +131,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(v_0.StrVal == "Month")).IntVal != 0 {
+if gopurs_runtime.Bool(v_0.StrVal == "Month").IntVal != 0 {
 __t0 = gopurs_runtime.Str("Month")
 goto end_branch_0
 } else {
@@ -139,7 +139,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(v_0.StrVal == "Year")).IntVal != 0 {
+if gopurs_runtime.Bool(v_0.StrVal == "Year").IntVal != 0 {
 __t0 = gopurs_runtime.Str("Year")
 goto end_branch_0
 } else {
@@ -170,7 +170,7 @@ var once_showDuration sync.Once
 func Get_showDuration() gopurs_runtime.Value {
 	once_showDuration.Do(func() {
 		showDuration = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str("(Duration ").StrVal + gopurs_runtime.Apply(Get_show(), v_0).StrVal).StrVal + gopurs_runtime.Str(")").StrVal)
+return gopurs_runtime.Str("(Duration " + gopurs_runtime.Apply(Get_show(), v_0).StrVal + ")")
 }))
 	})
 	return showDuration
@@ -194,7 +194,7 @@ func Get_eqDurationComponent() gopurs_runtime.Value {
 		eqDurationComponent = gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func2(func(x_0 gopurs_runtime.Value, y_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(x_0.StrVal == "Second")).IntVal != 0 {
+if gopurs_runtime.Bool(x_0.StrVal == "Second").IntVal != 0 {
 __t0 = gopurs_runtime.Bool(y_1.StrVal == "Second")
 goto end_branch_0
 } else {
@@ -202,7 +202,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(x_0.StrVal == "Minute")).IntVal != 0 {
+if gopurs_runtime.Bool(x_0.StrVal == "Minute").IntVal != 0 {
 __t0 = gopurs_runtime.Bool(y_1.StrVal == "Minute")
 goto end_branch_0
 } else {
@@ -210,7 +210,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(x_0.StrVal == "Hour")).IntVal != 0 {
+if gopurs_runtime.Bool(x_0.StrVal == "Hour").IntVal != 0 {
 __t0 = gopurs_runtime.Bool(y_1.StrVal == "Hour")
 goto end_branch_0
 } else {
@@ -218,7 +218,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(x_0.StrVal == "Day")).IntVal != 0 {
+if gopurs_runtime.Bool(x_0.StrVal == "Day").IntVal != 0 {
 __t0 = gopurs_runtime.Bool(y_1.StrVal == "Day")
 goto end_branch_0
 } else {
@@ -226,7 +226,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(x_0.StrVal == "Week")).IntVal != 0 {
+if gopurs_runtime.Bool(x_0.StrVal == "Week").IntVal != 0 {
 __t0 = gopurs_runtime.Bool(y_1.StrVal == "Week")
 goto end_branch_0
 } else {
@@ -234,7 +234,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(x_0.StrVal == "Month")).IntVal != 0 {
+if gopurs_runtime.Bool(x_0.StrVal == "Month").IntVal != 0 {
 __t0 = gopurs_runtime.Bool(y_1.StrVal == "Month")
 goto end_branch_0
 } else {
@@ -267,10 +267,10 @@ func Get_ordDurationComponent() gopurs_runtime.Value {
 		ordDurationComponent = gopurs_runtime.RecordDict2("compare", "Eq0", gopurs_runtime.Func2(func(x_0 gopurs_runtime.Value, y_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(x_0.StrVal == "Second")).IntVal != 0 {
+if gopurs_runtime.Bool(x_0.StrVal == "Second").IntVal != 0 {
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(y_1.StrVal == "Second")).IntVal != 0 {
+if gopurs_runtime.Bool(y_1.StrVal == "Second").IntVal != 0 {
 __t1 = gopurs_runtime.Constructor0("EQ")
 goto end_branch_1
 } else {
@@ -288,7 +288,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(y_1.StrVal == "Second")).IntVal != 0 {
+if gopurs_runtime.Bool(y_1.StrVal == "Second").IntVal != 0 {
 __t0 = gopurs_runtime.Constructor0("GT")
 goto end_branch_0
 } else {
@@ -296,10 +296,10 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(x_0.StrVal == "Minute")).IntVal != 0 {
+if gopurs_runtime.Bool(x_0.StrVal == "Minute").IntVal != 0 {
 var __t2 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(y_1.StrVal == "Minute")).IntVal != 0 {
+if gopurs_runtime.Bool(y_1.StrVal == "Minute").IntVal != 0 {
 __t2 = gopurs_runtime.Constructor0("EQ")
 goto end_branch_2
 } else {
@@ -317,7 +317,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(y_1.StrVal == "Minute")).IntVal != 0 {
+if gopurs_runtime.Bool(y_1.StrVal == "Minute").IntVal != 0 {
 __t0 = gopurs_runtime.Constructor0("GT")
 goto end_branch_0
 } else {
@@ -325,10 +325,10 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(x_0.StrVal == "Hour")).IntVal != 0 {
+if gopurs_runtime.Bool(x_0.StrVal == "Hour").IntVal != 0 {
 var __t3 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(y_1.StrVal == "Hour")).IntVal != 0 {
+if gopurs_runtime.Bool(y_1.StrVal == "Hour").IntVal != 0 {
 __t3 = gopurs_runtime.Constructor0("EQ")
 goto end_branch_3
 } else {
@@ -346,7 +346,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(y_1.StrVal == "Hour")).IntVal != 0 {
+if gopurs_runtime.Bool(y_1.StrVal == "Hour").IntVal != 0 {
 __t0 = gopurs_runtime.Constructor0("GT")
 goto end_branch_0
 } else {
@@ -354,10 +354,10 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(x_0.StrVal == "Day")).IntVal != 0 {
+if gopurs_runtime.Bool(x_0.StrVal == "Day").IntVal != 0 {
 var __t4 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(y_1.StrVal == "Day")).IntVal != 0 {
+if gopurs_runtime.Bool(y_1.StrVal == "Day").IntVal != 0 {
 __t4 = gopurs_runtime.Constructor0("EQ")
 goto end_branch_4
 } else {
@@ -375,7 +375,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(y_1.StrVal == "Day")).IntVal != 0 {
+if gopurs_runtime.Bool(y_1.StrVal == "Day").IntVal != 0 {
 __t0 = gopurs_runtime.Constructor0("GT")
 goto end_branch_0
 } else {
@@ -383,10 +383,10 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(x_0.StrVal == "Week")).IntVal != 0 {
+if gopurs_runtime.Bool(x_0.StrVal == "Week").IntVal != 0 {
 var __t5 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(y_1.StrVal == "Week")).IntVal != 0 {
+if gopurs_runtime.Bool(y_1.StrVal == "Week").IntVal != 0 {
 __t5 = gopurs_runtime.Constructor0("EQ")
 goto end_branch_5
 } else {
@@ -404,7 +404,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(y_1.StrVal == "Week")).IntVal != 0 {
+if gopurs_runtime.Bool(y_1.StrVal == "Week").IntVal != 0 {
 __t0 = gopurs_runtime.Constructor0("GT")
 goto end_branch_0
 } else {
@@ -412,10 +412,10 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(x_0.StrVal == "Month")).IntVal != 0 {
+if gopurs_runtime.Bool(x_0.StrVal == "Month").IntVal != 0 {
 var __t6 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(y_1.StrVal == "Month")).IntVal != 0 {
+if gopurs_runtime.Bool(y_1.StrVal == "Month").IntVal != 0 {
 __t6 = gopurs_runtime.Constructor0("EQ")
 goto end_branch_6
 } else {
@@ -433,7 +433,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(y_1.StrVal == "Month")).IntVal != 0 {
+if gopurs_runtime.Bool(y_1.StrVal == "Month").IntVal != 0 {
 __t0 = gopurs_runtime.Constructor0("GT")
 goto end_branch_0
 } else {
@@ -441,7 +441,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.Bool(x_0.StrVal == "Year").IntVal != 0 && gopurs_runtime.Bool(y_1.StrVal == "Year").IntVal != 0)).IntVal != 0 {
+if gopurs_runtime.Bool(x_0.StrVal == "Year").IntVal != 0 && gopurs_runtime.Bool(y_1.StrVal == "Year").IntVal != 0 {
 __t0 = gopurs_runtime.Constructor0("EQ")
 goto end_branch_0
 } else {
@@ -531,7 +531,7 @@ var once_millisecond sync.Once
 func Get_millisecond() gopurs_runtime.Value {
 	once_millisecond.Do(func() {
 		millisecond = gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor("Node", []gopurs_runtime.Value{gopurs_runtime.Int(1), gopurs_runtime.Int(1), gopurs_runtime.Constructor0("Second"), gopurs_runtime.FloatDiv(x_0, gopurs_runtime.Float(1000.0)), gopurs_runtime.Constructor0("Leaf"), gopurs_runtime.Constructor0("Leaf")})
+return gopurs_runtime.Constructor("Node", []gopurs_runtime.Value{gopurs_runtime.Int(1), gopurs_runtime.Int(1), gopurs_runtime.Constructor0("Second"), gopurs_runtime.Float(x_0.FloatVal() / 1000.0), gopurs_runtime.Constructor0("Leaf"), gopurs_runtime.Constructor0("Leaf")})
 })
 	})
 	return millisecond
@@ -602,5 +602,7 @@ return gopurs_runtime.Constructor("Node", []gopurs_runtime.Value{gopurs_runtime.
 	})
 	return day
 }
+
+
 
 

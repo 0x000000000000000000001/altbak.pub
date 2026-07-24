@@ -41,7 +41,7 @@ func AdjustImpl(just func(any) any, nothing any, offset float64, rec map[string]
 
 
 // --- Auto-generated FFI wrappers ---
-var _Gopurs_CalcDiff = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_calcDiff(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	arg0_map := gopurs_runtime.RecordToMap(arg0)
 	go_arg0 := make(map[string]any)
 	for k, v := range arg0_map { go_arg0[k] = v }
@@ -50,8 +50,9 @@ var _Gopurs_CalcDiff = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1
 	for k, v := range arg1_map { go_arg1[k] = v }
 	go_res := CalcDiff(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
-})
-var _Gopurs_AdjustImpl = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
+}
+var _Gopurs_CalcDiff = gopurs_runtime.Func2(Call_calcDiff)
+func Call_adjustImpl(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 any) any {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 		}
@@ -62,4 +63,5 @@ var _Gopurs_AdjustImpl = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, ar
 	for k, v := range arg3_map { go_arg3[k] = v }
 	go_res := AdjustImpl(go_arg0, go_arg1, go_arg2, go_arg3)
 	return gopurs_runtime.Box(go_res)
-})
+}
+var _Gopurs_AdjustImpl = gopurs_runtime.Func4(Call_adjustImpl)

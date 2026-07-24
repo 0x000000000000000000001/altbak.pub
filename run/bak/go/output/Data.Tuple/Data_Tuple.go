@@ -58,7 +58,7 @@ func Get_showTuple() gopurs_runtime.Value {
 	once_showTuple.Do(func() {
 		showTuple = gopurs_runtime.Func2(func(dictShow_0 gopurs_runtime.Value, dictShow1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str("(Tuple ").StrVal + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0]).StrVal).StrVal + gopurs_runtime.Str(" ").StrVal).StrVal + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow1_1, "show"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[1]).StrVal).StrVal + gopurs_runtime.Str(")").StrVal)
+return gopurs_runtime.Str("(Tuple " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0]).StrVal + " " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow1_1, "show"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[1]).StrVal + ")")
 }))
 })
 	})
@@ -301,7 +301,7 @@ v_7_3 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), (
 _ = v_7_3
 var __t4 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_7_3.StrVal == "LT")).IntVal != 0 {
+if gopurs_runtime.Bool(v_7_3.StrVal == "LT").IntVal != 0 {
 __t4 = gopurs_runtime.Constructor0("LT")
 goto end_branch_4
 } else {
@@ -309,7 +309,7 @@ goto end_branch_4
 }
 }
 {
-if (gopurs_runtime.Bool(v_7_3.StrVal == "GT")).IntVal != 0 {
+if gopurs_runtime.Bool(v_7_3.StrVal == "GT").IntVal != 0 {
 __t4 = gopurs_runtime.Constructor0("GT")
 goto end_branch_4
 } else {
@@ -359,7 +359,7 @@ v_6_2 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), (
 _ = v_6_2
 var __t3 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_6_2.StrVal == "LT")).IntVal != 0 {
+if gopurs_runtime.Bool(v_6_2.StrVal == "LT").IntVal != 0 {
 __t3 = gopurs_runtime.Constructor0("LT")
 goto end_branch_3
 } else {
@@ -367,7 +367,7 @@ goto end_branch_3
 }
 }
 {
-if (gopurs_runtime.Bool(v_6_2.StrVal == "GT")).IntVal != 0 {
+if gopurs_runtime.Bool(v_6_2.StrVal == "GT").IntVal != 0 {
 __t3 = gopurs_runtime.Constructor0("GT")
 goto end_branch_3
 } else {
@@ -455,7 +455,7 @@ v_11_8 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_2, "compa
 _ = v_11_8
 var __t9 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_11_8.StrVal == "LT")).IntVal != 0 {
+if gopurs_runtime.Bool(v_11_8.StrVal == "LT").IntVal != 0 {
 __t9 = gopurs_runtime.Constructor0("LT")
 goto end_branch_9
 } else {
@@ -463,7 +463,7 @@ goto end_branch_9
 }
 }
 {
-if (gopurs_runtime.Bool(v_11_8.StrVal == "GT")).IntVal != 0 {
+if gopurs_runtime.Bool(v_11_8.StrVal == "GT").IntVal != 0 {
 __t9 = gopurs_runtime.Constructor0("GT")
 goto end_branch_9
 } else {
@@ -574,5 +574,7 @@ return bindTuple1_2_1
 	})
 	return monadTuple
 }
+
+
 
 

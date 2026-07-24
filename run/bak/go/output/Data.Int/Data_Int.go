@@ -34,7 +34,7 @@ func Get_showParity() gopurs_runtime.Value {
 		showParity = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_0.StrVal == "Even")).IntVal != 0 {
+if gopurs_runtime.Bool(v_0.StrVal == "Even").IntVal != 0 {
 __t0 = gopurs_runtime.Str("Even")
 goto end_branch_0
 } else {
@@ -42,7 +42,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(v_0.StrVal == "Odd")).IntVal != 0 {
+if gopurs_runtime.Bool(v_0.StrVal == "Odd").IntVal != 0 {
 __t0 = gopurs_runtime.Str("Odd")
 goto end_branch_0
 } else {
@@ -66,7 +66,7 @@ func Get_radix() gopurs_runtime.Value {
 		radix = gopurs_runtime.Func(func(n_0 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.Bool(n_0.IntVal >= gopurs_runtime.Int(2).IntVal).IntVal != 0 && gopurs_runtime.Bool(n_0.IntVal <= gopurs_runtime.Int(36).IntVal).IntVal != 0)).IntVal != 0 {
+if n_0.IntVal >= 2 && n_0.IntVal <= 36 {
 __t0 = gopurs_runtime.Constructor1("Just", n_0)
 goto end_branch_0
 } else {
@@ -88,7 +88,7 @@ var once_odd sync.Once
 func Get_odd() gopurs_runtime.Value {
 	once_odd.Do(func() {
 		odd = gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(gopurs_runtime.Int(x_0.IntVal & gopurs_runtime.Int(1).IntVal).IntVal != gopurs_runtime.Int(0).IntVal)
+return gopurs_runtime.Bool(x_0.IntVal & 1 != 0)
 })
 	})
 	return odd
@@ -146,7 +146,7 @@ func Get_unsafeClamp() gopurs_runtime.Value {
 		unsafeClamp = gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t2 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.Apply(pkg_Data_Number.Get_isFinite(), x_0).IntVal == 0)).IntVal != 0 {
+if gopurs_runtime.Apply(pkg_Data_Number.Get_isFinite(), x_0).IntVal != 0 != true {
 __t2 = gopurs_runtime.Int(0)
 goto end_branch_2
 } else {
@@ -154,7 +154,7 @@ goto end_branch_2
 }
 }
 {
-if (gopurs_runtime.FloatGte(x_0, gopurs_runtime.Apply(Get_toNumber(), pkg_Data_Bounded.Get_topInt()))).IntVal != 0 {
+if x_0.FloatVal() >= gopurs_runtime.Apply(Get_toNumber(), pkg_Data_Bounded.Get_topInt()).FloatVal() {
 __t2 = pkg_Data_Bounded.Get_topInt()
 goto end_branch_2
 } else {
@@ -162,7 +162,7 @@ goto end_branch_2
 }
 }
 {
-if (gopurs_runtime.FloatLte(x_0, gopurs_runtime.Apply(Get_toNumber(), pkg_Data_Bounded.Get_bottomInt()))).IntVal != 0 {
+if x_0.FloatVal() <= gopurs_runtime.Apply(Get_toNumber(), pkg_Data_Bounded.Get_bottomInt()).FloatVal() {
 __t2 = pkg_Data_Bounded.Get_bottomInt()
 goto end_branch_2
 } else {
@@ -174,7 +174,7 @@ __local_var_1_0 := gopurs_runtime.Apply(Get_fromNumber(), x_0)
 _ = __local_var_1_0
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(__local_var_1_0.StrVal == "Nothing")).IntVal != 0 {
+if gopurs_runtime.Bool(__local_var_1_0.StrVal == "Nothing").IntVal != 0 {
 __t1 = gopurs_runtime.Int(0)
 goto end_branch_1
 } else {
@@ -182,7 +182,7 @@ goto end_branch_1
 }
 }
 {
-if (gopurs_runtime.Bool(__local_var_1_0.StrVal == "Just")).IntVal != 0 {
+if gopurs_runtime.Bool(__local_var_1_0.StrVal == "Just").IntVal != 0 {
 __t1 = (*[1024]gopurs_runtime.Value)(__local_var_1_0.UnsafePtr)[0]
 goto end_branch_1
 } else {
@@ -240,7 +240,7 @@ var once_even sync.Once
 func Get_even() gopurs_runtime.Value {
 	once_even.Do(func() {
 		even = gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(gopurs_runtime.Int(x_0.IntVal & gopurs_runtime.Int(1).IntVal).IntVal == gopurs_runtime.Int(0).IntVal)
+return gopurs_runtime.Bool(x_0.IntVal & 1 == 0)
 })
 	})
 	return even
@@ -253,7 +253,7 @@ func Get_parity() gopurs_runtime.Value {
 		parity = gopurs_runtime.Func(func(n_0 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.Int(n_0.IntVal & gopurs_runtime.Int(1).IntVal).IntVal == gopurs_runtime.Int(0).IntVal)).IntVal != 0 {
+if n_0.IntVal & 1 == 0 {
 __t0 = gopurs_runtime.Constructor0("Even")
 goto end_branch_0
 } else {
@@ -277,7 +277,7 @@ func Get_eqParity() gopurs_runtime.Value {
 		eqParity = gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func2(func(x_0 gopurs_runtime.Value, y_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(x_0.StrVal == "Even")).IntVal != 0 {
+if gopurs_runtime.Bool(x_0.StrVal == "Even").IntVal != 0 {
 __t0 = gopurs_runtime.Bool(y_1.StrVal == "Even")
 goto end_branch_0
 } else {
@@ -301,10 +301,10 @@ func Get_ordParity() gopurs_runtime.Value {
 		ordParity = gopurs_runtime.RecordDict2("compare", "Eq0", gopurs_runtime.Func2(func(x_0 gopurs_runtime.Value, y_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(x_0.StrVal == "Even")).IntVal != 0 {
+if gopurs_runtime.Bool(x_0.StrVal == "Even").IntVal != 0 {
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(y_1.StrVal == "Even")).IntVal != 0 {
+if gopurs_runtime.Bool(y_1.StrVal == "Even").IntVal != 0 {
 __t1 = gopurs_runtime.Constructor0("EQ")
 goto end_branch_1
 } else {
@@ -322,7 +322,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(y_1.StrVal == "Even")).IntVal != 0 {
+if gopurs_runtime.Bool(y_1.StrVal == "Even").IntVal != 0 {
 __t0 = gopurs_runtime.Constructor0("GT")
 goto end_branch_0
 } else {
@@ -330,7 +330,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.Bool(x_0.StrVal == "Odd").IntVal != 0 && gopurs_runtime.Bool(y_1.StrVal == "Odd").IntVal != 0)).IntVal != 0 {
+if gopurs_runtime.Bool(x_0.StrVal == "Odd").IntVal != 0 && gopurs_runtime.Bool(y_1.StrVal == "Odd").IntVal != 0 {
 __t0 = gopurs_runtime.Constructor0("EQ")
 goto end_branch_0
 } else {
@@ -358,7 +358,7 @@ var __t0 gopurs_runtime.Value
 {
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(x_0.StrVal == "Even")).IntVal != 0 {
+if gopurs_runtime.Bool(x_0.StrVal == "Even").IntVal != 0 {
 __t1 = gopurs_runtime.Bool(y_1.StrVal == "Even")
 goto end_branch_1
 } else {
@@ -369,7 +369,7 @@ goto end_branch_1
 __t1 = gopurs_runtime.Bool(gopurs_runtime.Bool(x_0.StrVal == "Odd").IntVal != 0 && gopurs_runtime.Bool(y_1.StrVal == "Odd").IntVal != 0)
 }
 end_branch_1:
-if (__t1).IntVal != 0 {
+if __t1.IntVal != 0 {
 __t0 = gopurs_runtime.Constructor0("Even")
 goto end_branch_0
 } else {
@@ -384,7 +384,7 @@ return __t0
 }), gopurs_runtime.Constructor0("Odd"), gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t2 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.Bool(v_0.StrVal == "Odd").IntVal != 0 && gopurs_runtime.Bool(v1_1.StrVal == "Odd").IntVal != 0)).IntVal != 0 {
+if gopurs_runtime.Bool(v_0.StrVal == "Odd").IntVal != 0 && gopurs_runtime.Bool(v1_1.StrVal == "Odd").IntVal != 0 {
 __t2 = gopurs_runtime.Constructor0("Odd")
 goto end_branch_2
 } else {
@@ -450,7 +450,7 @@ func Get_euclideanRingParity() gopurs_runtime.Value {
 		euclideanRingParity = gopurs_runtime.RecordDict4("degree", "div", "mod", "CommutativeRing0", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_0.StrVal == "Even")).IntVal != 0 {
+if gopurs_runtime.Bool(v_0.StrVal == "Even").IntVal != 0 {
 __t0 = gopurs_runtime.Int(0)
 goto end_branch_0
 } else {
@@ -458,7 +458,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(v_0.StrVal == "Odd")).IntVal != 0 {
+if gopurs_runtime.Bool(v_0.StrVal == "Odd").IntVal != 0 {
 __t0 = gopurs_runtime.Int(1)
 goto end_branch_0
 } else {
@@ -520,6 +520,8 @@ func Get_base36() gopurs_runtime.Value {
 	})
 	return base36
 }
+
+
 
 func Get_fromNumberImpl() gopurs_runtime.Value {
 	return _Gopurs_FromNumberImpl

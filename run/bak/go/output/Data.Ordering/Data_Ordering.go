@@ -39,7 +39,7 @@ func Get_showOrdering() gopurs_runtime.Value {
 		showOrdering = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_0.StrVal == "LT")).IntVal != 0 {
+if gopurs_runtime.Bool(v_0.StrVal == "LT").IntVal != 0 {
 __t0 = gopurs_runtime.Str("LT")
 goto end_branch_0
 } else {
@@ -47,7 +47,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(v_0.StrVal == "GT")).IntVal != 0 {
+if gopurs_runtime.Bool(v_0.StrVal == "GT").IntVal != 0 {
 __t0 = gopurs_runtime.Str("GT")
 goto end_branch_0
 } else {
@@ -55,7 +55,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(v_0.StrVal == "EQ")).IntVal != 0 {
+if gopurs_runtime.Bool(v_0.StrVal == "EQ").IntVal != 0 {
 __t0 = gopurs_runtime.Str("EQ")
 goto end_branch_0
 } else {
@@ -79,7 +79,7 @@ func Get_semigroupOrdering() gopurs_runtime.Value {
 		semigroupOrdering = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_0.StrVal == "LT")).IntVal != 0 {
+if gopurs_runtime.Bool(v_0.StrVal == "LT").IntVal != 0 {
 __t0 = gopurs_runtime.Constructor0("LT")
 goto end_branch_0
 } else {
@@ -87,7 +87,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(v_0.StrVal == "GT")).IntVal != 0 {
+if gopurs_runtime.Bool(v_0.StrVal == "GT").IntVal != 0 {
 __t0 = gopurs_runtime.Constructor0("GT")
 goto end_branch_0
 } else {
@@ -95,7 +95,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(v_0.StrVal == "EQ")).IntVal != 0 {
+if gopurs_runtime.Bool(v_0.StrVal == "EQ").IntVal != 0 {
 __t0 = v1_1
 goto end_branch_0
 } else {
@@ -119,7 +119,7 @@ func Get_invert() gopurs_runtime.Value {
 		invert = gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_0.StrVal == "GT")).IntVal != 0 {
+if gopurs_runtime.Bool(v_0.StrVal == "GT").IntVal != 0 {
 __t0 = gopurs_runtime.Constructor0("LT")
 goto end_branch_0
 } else {
@@ -127,7 +127,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(v_0.StrVal == "EQ")).IntVal != 0 {
+if gopurs_runtime.Bool(v_0.StrVal == "EQ").IntVal != 0 {
 __t0 = gopurs_runtime.Constructor0("EQ")
 goto end_branch_0
 } else {
@@ -135,7 +135,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(v_0.StrVal == "LT")).IntVal != 0 {
+if gopurs_runtime.Bool(v_0.StrVal == "LT").IntVal != 0 {
 __t0 = gopurs_runtime.Constructor0("GT")
 goto end_branch_0
 } else {
@@ -159,7 +159,7 @@ func Get_eqOrdering() gopurs_runtime.Value {
 		eqOrdering = gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_0.StrVal == "LT")).IntVal != 0 {
+if gopurs_runtime.Bool(v_0.StrVal == "LT").IntVal != 0 {
 __t0 = gopurs_runtime.Bool(v1_1.StrVal == "LT")
 goto end_branch_0
 } else {
@@ -167,7 +167,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(v_0.StrVal == "GT")).IntVal != 0 {
+if gopurs_runtime.Bool(v_0.StrVal == "GT").IntVal != 0 {
 __t0 = gopurs_runtime.Bool(v1_1.StrVal == "GT")
 goto end_branch_0
 } else {
@@ -183,5 +183,7 @@ return __t0
 	})
 	return eqOrdering
 }
+
+
 
 

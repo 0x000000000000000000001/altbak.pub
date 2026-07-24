@@ -23,11 +23,11 @@ return func() gopurs_runtime.Value {
 go__1_0:
 for {
 if false { continue go__1_0 }
-var v_2 = v_2_loop
+var v_2 gopurs_runtime.Value = v_2_loop
 _ = v_2
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_2.StrVal == "Leaf")).IntVal != 0 {
+if gopurs_runtime.Bool(v_2.StrVal == "Leaf").IntVal != 0 {
 __t1 = gopurs_runtime.Constructor0("Nothing")
 goto end_branch_1
 } else {
@@ -35,13 +35,13 @@ goto end_branch_1
 }
 }
 {
-if (gopurs_runtime.Bool(v_2.StrVal == "Node")).IntVal != 0 {
+if gopurs_runtime.Bool(v_2.StrVal == "Node").IntVal != 0 {
 var __t2 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(k_0.StrVal == "Second")).IntVal != 0 {
+if gopurs_runtime.Bool(k_0.StrVal == "Second").IntVal != 0 {
 var __t3 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[2].StrVal == "Second")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[2].StrVal == "Second").IntVal != 0 {
 __t3 = gopurs_runtime.Constructor1("Just", (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[3])
 goto end_branch_3
 } else {
@@ -61,7 +61,7 @@ goto end_branch_2
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[2].StrVal == "Second")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[2].StrVal == "Second").IntVal != 0 {
 v_2_loop = (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[5]
 continue go__1_0
 __t2 = gopurs_runtime.Value{}
@@ -71,10 +71,10 @@ goto end_branch_2
 }
 }
 {
-if (gopurs_runtime.Bool(k_0.StrVal == "Minute")).IntVal != 0 {
+if gopurs_runtime.Bool(k_0.StrVal == "Minute").IntVal != 0 {
 var __t4 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[2].StrVal == "Minute")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[2].StrVal == "Minute").IntVal != 0 {
 __t4 = gopurs_runtime.Constructor1("Just", (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[3])
 goto end_branch_4
 } else {
@@ -94,7 +94,7 @@ goto end_branch_2
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[2].StrVal == "Minute")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[2].StrVal == "Minute").IntVal != 0 {
 v_2_loop = (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[5]
 continue go__1_0
 __t2 = gopurs_runtime.Value{}
@@ -104,10 +104,10 @@ goto end_branch_2
 }
 }
 {
-if (gopurs_runtime.Bool(k_0.StrVal == "Hour")).IntVal != 0 {
+if gopurs_runtime.Bool(k_0.StrVal == "Hour").IntVal != 0 {
 var __t5 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[2].StrVal == "Hour")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[2].StrVal == "Hour").IntVal != 0 {
 __t5 = gopurs_runtime.Constructor1("Just", (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[3])
 goto end_branch_5
 } else {
@@ -127,7 +127,7 @@ goto end_branch_2
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[2].StrVal == "Hour")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[2].StrVal == "Hour").IntVal != 0 {
 v_2_loop = (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[5]
 continue go__1_0
 __t2 = gopurs_runtime.Value{}
@@ -137,10 +137,10 @@ goto end_branch_2
 }
 }
 {
-if (gopurs_runtime.Bool(k_0.StrVal == "Day")).IntVal != 0 {
+if gopurs_runtime.Bool(k_0.StrVal == "Day").IntVal != 0 {
 var __t6 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[2].StrVal == "Day")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[2].StrVal == "Day").IntVal != 0 {
 __t6 = gopurs_runtime.Constructor1("Just", (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[3])
 goto end_branch_6
 } else {
@@ -160,7 +160,7 @@ goto end_branch_2
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[2].StrVal == "Day")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[2].StrVal == "Day").IntVal != 0 {
 v_2_loop = (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[5]
 continue go__1_0
 __t2 = gopurs_runtime.Value{}
@@ -170,10 +170,10 @@ goto end_branch_2
 }
 }
 {
-if (gopurs_runtime.Bool(k_0.StrVal == "Week")).IntVal != 0 {
+if gopurs_runtime.Bool(k_0.StrVal == "Week").IntVal != 0 {
 var __t7 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[2].StrVal == "Week")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[2].StrVal == "Week").IntVal != 0 {
 __t7 = gopurs_runtime.Constructor1("Just", (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[3])
 goto end_branch_7
 } else {
@@ -193,7 +193,7 @@ goto end_branch_2
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[2].StrVal == "Week")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[2].StrVal == "Week").IntVal != 0 {
 v_2_loop = (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[5]
 continue go__1_0
 __t2 = gopurs_runtime.Value{}
@@ -203,10 +203,10 @@ goto end_branch_2
 }
 }
 {
-if (gopurs_runtime.Bool(k_0.StrVal == "Month")).IntVal != 0 {
+if gopurs_runtime.Bool(k_0.StrVal == "Month").IntVal != 0 {
 var __t8 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[2].StrVal == "Month")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[2].StrVal == "Month").IntVal != 0 {
 __t8 = gopurs_runtime.Constructor1("Just", (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[3])
 goto end_branch_8
 } else {
@@ -226,7 +226,7 @@ goto end_branch_2
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[2].StrVal == "Month")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[2].StrVal == "Month").IntVal != 0 {
 v_2_loop = (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[5]
 continue go__1_0
 __t2 = gopurs_runtime.Value{}
@@ -236,7 +236,7 @@ goto end_branch_2
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.Bool(k_0.StrVal == "Year").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[2].StrVal == "Year").IntVal != 0)).IntVal != 0 {
+if gopurs_runtime.Bool(k_0.StrVal == "Year").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[2].StrVal == "Year").IntVal != 0 {
 __t2 = gopurs_runtime.Constructor1("Just", (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[3])
 goto end_branch_2
 } else {
@@ -282,7 +282,7 @@ func Get_foldMap2() gopurs_runtime.Value {
 	once_foldMap2.Do(func() {
 		foldMap2 = func() gopurs_runtime.Value {
 semigroupAdditive1_0_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.FloatAdd(v_0, v1_1)
+return gopurs_runtime.Float(v_0.FloatVal() + v1_1.FloatVal())
 }))
 _ = semigroupAdditive1_0_0
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_List_Types.Get_foldableList(), "foldMap"), gopurs_runtime.RecordDict2("mempty", "Semigroup0", gopurs_runtime.Float(0.0), gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -324,15 +324,15 @@ return func() gopurs_runtime.Value {
 go__1_0:
 for {
 if false { continue go__1_0 }
-var source_2 = source_2_loop
+var source_2 gopurs_runtime.Value = source_2_loop
 _ = source_2
-var memo_3 = memo_3_loop
+var memo_3 gopurs_runtime.Value = memo_3_loop
 _ = memo_3
 v_4_1 := gopurs_runtime.Apply(pkg_Data_Map_Internal.Get_stepUnfoldr(), source_2)
 _ = v_4_1
 var __t2 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_4_1.StrVal == "Nothing")).IntVal != 0 {
+if gopurs_runtime.Bool(v_4_1.StrVal == "Nothing").IntVal != 0 {
 var go__5_3 gopurs_runtime.Value
 go__5_3 = gopurs_runtime.Func(func(b_6_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_7_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -340,13 +340,13 @@ return func() gopurs_runtime.Value {
 go__5_3:
 for {
 if false { continue go__5_3 }
-var b_6 = b_6_loop
+var b_6 gopurs_runtime.Value = b_6_loop
 _ = b_6
-var v_7 = v_7_loop
+var v_7 gopurs_runtime.Value = v_7_loop
 _ = v_7
 var __t4 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_7.StrVal == "Nil")).IntVal != 0 {
+if gopurs_runtime.Bool(v_7.StrVal == "Nil").IntVal != 0 {
 __t4 = b_6
 goto end_branch_4
 } else {
@@ -354,7 +354,7 @@ goto end_branch_4
 }
 }
 {
-if (gopurs_runtime.Bool(v_7.StrVal == "Cons")).IntVal != 0 {
+if gopurs_runtime.Bool(v_7.StrVal == "Cons").IntVal != 0 {
 b_6_loop = gopurs_runtime.Constructor2("Cons", (*[1024]gopurs_runtime.Value)(v_7.UnsafePtr)[0], b_6)
 v_7_loop = (*[1024]gopurs_runtime.Value)(v_7.UnsafePtr)[1]
 continue go__5_3
@@ -380,7 +380,7 @@ goto end_branch_2
 }
 }
 {
-if (gopurs_runtime.Bool(v_4_1.StrVal == "Just")).IntVal != 0 {
+if gopurs_runtime.Bool(v_4_1.StrVal == "Just").IntVal != 0 {
 source_2_loop = (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_4_1.UnsafePtr)[0].UnsafePtr)[1]
 memo_3_loop = gopurs_runtime.Constructor2("Cons", (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_4_1.UnsafePtr)[0].UnsafePtr)[0], memo_3)
 continue go__1_0
@@ -461,7 +461,7 @@ var once_showIsoDuration sync.Once
 func Get_showIsoDuration() gopurs_runtime.Value {
 	once_showIsoDuration.Do(func() {
 		showIsoDuration = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str("(IsoDuration (Duration ").StrVal + gopurs_runtime.Apply(pkg_Data_Interval_Duration.Get_show(), v_0).StrVal).StrVal + gopurs_runtime.Str("))").StrVal)
+return gopurs_runtime.Str("(IsoDuration (Duration " + gopurs_runtime.Apply(pkg_Data_Interval_Duration.Get_show(), v_0).StrVal + "))")
 }))
 	})
 	return showIsoDuration
@@ -474,7 +474,7 @@ func Get_showError() gopurs_runtime.Value {
 		showError = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_0.StrVal == "IsEmpty")).IntVal != 0 {
+if gopurs_runtime.Bool(v_0.StrVal == "IsEmpty").IntVal != 0 {
 __t0 = gopurs_runtime.Str("(IsEmpty)")
 goto end_branch_0
 } else {
@@ -482,7 +482,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(v_0.StrVal == "InvalidWeekComponentUsage")).IntVal != 0 {
+if gopurs_runtime.Bool(v_0.StrVal == "InvalidWeekComponentUsage").IntVal != 0 {
 __t0 = gopurs_runtime.Str("(InvalidWeekComponentUsage)")
 goto end_branch_0
 } else {
@@ -490,10 +490,10 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(v_0.StrVal == "ContainsNegativeValue")).IntVal != 0 {
+if gopurs_runtime.Bool(v_0.StrVal == "ContainsNegativeValue").IntVal != 0 {
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "Minute")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "Minute").IntVal != 0 {
 __t1 = gopurs_runtime.Str("(ContainsNegativeValue Minute)")
 goto end_branch_1
 } else {
@@ -501,7 +501,7 @@ goto end_branch_1
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "Second")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "Second").IntVal != 0 {
 __t1 = gopurs_runtime.Str("(ContainsNegativeValue Second)")
 goto end_branch_1
 } else {
@@ -509,7 +509,7 @@ goto end_branch_1
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "Hour")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "Hour").IntVal != 0 {
 __t1 = gopurs_runtime.Str("(ContainsNegativeValue Hour)")
 goto end_branch_1
 } else {
@@ -517,7 +517,7 @@ goto end_branch_1
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "Day")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "Day").IntVal != 0 {
 __t1 = gopurs_runtime.Str("(ContainsNegativeValue Day)")
 goto end_branch_1
 } else {
@@ -525,7 +525,7 @@ goto end_branch_1
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "Week")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "Week").IntVal != 0 {
 __t1 = gopurs_runtime.Str("(ContainsNegativeValue Week)")
 goto end_branch_1
 } else {
@@ -533,7 +533,7 @@ goto end_branch_1
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "Month")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "Month").IntVal != 0 {
 __t1 = gopurs_runtime.Str("(ContainsNegativeValue Month)")
 goto end_branch_1
 } else {
@@ -541,7 +541,7 @@ goto end_branch_1
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "Year")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "Year").IntVal != 0 {
 __t1 = gopurs_runtime.Str("(ContainsNegativeValue Year)")
 goto end_branch_1
 } else {
@@ -559,10 +559,10 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(v_0.StrVal == "InvalidFractionalUse")).IntVal != 0 {
+if gopurs_runtime.Bool(v_0.StrVal == "InvalidFractionalUse").IntVal != 0 {
 var __t2 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "Minute")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "Minute").IntVal != 0 {
 __t2 = gopurs_runtime.Str("(InvalidFractionalUse Minute)")
 goto end_branch_2
 } else {
@@ -570,7 +570,7 @@ goto end_branch_2
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "Second")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "Second").IntVal != 0 {
 __t2 = gopurs_runtime.Str("(InvalidFractionalUse Second)")
 goto end_branch_2
 } else {
@@ -578,7 +578,7 @@ goto end_branch_2
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "Hour")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "Hour").IntVal != 0 {
 __t2 = gopurs_runtime.Str("(InvalidFractionalUse Hour)")
 goto end_branch_2
 } else {
@@ -586,7 +586,7 @@ goto end_branch_2
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "Day")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "Day").IntVal != 0 {
 __t2 = gopurs_runtime.Str("(InvalidFractionalUse Day)")
 goto end_branch_2
 } else {
@@ -594,7 +594,7 @@ goto end_branch_2
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "Week")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "Week").IntVal != 0 {
 __t2 = gopurs_runtime.Str("(InvalidFractionalUse Week)")
 goto end_branch_2
 } else {
@@ -602,7 +602,7 @@ goto end_branch_2
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "Month")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "Month").IntVal != 0 {
 __t2 = gopurs_runtime.Str("(InvalidFractionalUse Month)")
 goto end_branch_2
 } else {
@@ -610,7 +610,7 @@ goto end_branch_2
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "Year")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "Year").IntVal != 0 {
 __t2 = gopurs_runtime.Str("(InvalidFractionalUse Year)")
 goto end_branch_2
 } else {
@@ -644,7 +644,7 @@ func Get_prettyError() gopurs_runtime.Value {
 		prettyError = gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v_0.StrVal == "IsEmpty")).IntVal != 0 {
+if gopurs_runtime.Bool(v_0.StrVal == "IsEmpty").IntVal != 0 {
 __t0 = gopurs_runtime.Str("Duration is empty (has no components)")
 goto end_branch_0
 } else {
@@ -652,7 +652,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(v_0.StrVal == "InvalidWeekComponentUsage")).IntVal != 0 {
+if gopurs_runtime.Bool(v_0.StrVal == "InvalidWeekComponentUsage").IntVal != 0 {
 __t0 = gopurs_runtime.Str("Week component of Duration is used with other components")
 goto end_branch_0
 } else {
@@ -660,10 +660,10 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(v_0.StrVal == "ContainsNegativeValue")).IntVal != 0 {
+if gopurs_runtime.Bool(v_0.StrVal == "ContainsNegativeValue").IntVal != 0 {
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "Minute")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "Minute").IntVal != 0 {
 __t1 = gopurs_runtime.Str("Component `Minute` contains negative value")
 goto end_branch_1
 } else {
@@ -671,7 +671,7 @@ goto end_branch_1
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "Second")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "Second").IntVal != 0 {
 __t1 = gopurs_runtime.Str("Component `Second` contains negative value")
 goto end_branch_1
 } else {
@@ -679,7 +679,7 @@ goto end_branch_1
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "Hour")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "Hour").IntVal != 0 {
 __t1 = gopurs_runtime.Str("Component `Hour` contains negative value")
 goto end_branch_1
 } else {
@@ -687,7 +687,7 @@ goto end_branch_1
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "Day")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "Day").IntVal != 0 {
 __t1 = gopurs_runtime.Str("Component `Day` contains negative value")
 goto end_branch_1
 } else {
@@ -695,7 +695,7 @@ goto end_branch_1
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "Week")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "Week").IntVal != 0 {
 __t1 = gopurs_runtime.Str("Component `Week` contains negative value")
 goto end_branch_1
 } else {
@@ -703,7 +703,7 @@ goto end_branch_1
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "Month")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "Month").IntVal != 0 {
 __t1 = gopurs_runtime.Str("Component `Month` contains negative value")
 goto end_branch_1
 } else {
@@ -711,7 +711,7 @@ goto end_branch_1
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "Year")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "Year").IntVal != 0 {
 __t1 = gopurs_runtime.Str("Component `Year` contains negative value")
 goto end_branch_1
 } else {
@@ -729,10 +729,10 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(v_0.StrVal == "InvalidFractionalUse")).IntVal != 0 {
+if gopurs_runtime.Bool(v_0.StrVal == "InvalidFractionalUse").IntVal != 0 {
 var __t2 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "Minute")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "Minute").IntVal != 0 {
 __t2 = gopurs_runtime.Str("Invalid usage of Fractional value at component `Minute`")
 goto end_branch_2
 } else {
@@ -740,7 +740,7 @@ goto end_branch_2
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "Second")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "Second").IntVal != 0 {
 __t2 = gopurs_runtime.Str("Invalid usage of Fractional value at component `Second`")
 goto end_branch_2
 } else {
@@ -748,7 +748,7 @@ goto end_branch_2
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "Hour")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "Hour").IntVal != 0 {
 __t2 = gopurs_runtime.Str("Invalid usage of Fractional value at component `Hour`")
 goto end_branch_2
 } else {
@@ -756,7 +756,7 @@ goto end_branch_2
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "Day")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "Day").IntVal != 0 {
 __t2 = gopurs_runtime.Str("Invalid usage of Fractional value at component `Day`")
 goto end_branch_2
 } else {
@@ -764,7 +764,7 @@ goto end_branch_2
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "Week")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "Week").IntVal != 0 {
 __t2 = gopurs_runtime.Str("Invalid usage of Fractional value at component `Week`")
 goto end_branch_2
 } else {
@@ -772,7 +772,7 @@ goto end_branch_2
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "Month")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "Month").IntVal != 0 {
 __t2 = gopurs_runtime.Str("Invalid usage of Fractional value at component `Month`")
 goto end_branch_2
 } else {
@@ -780,7 +780,7 @@ goto end_branch_2
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "Year")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].StrVal == "Year").IntVal != 0 {
 __t2 = gopurs_runtime.Str("Invalid usage of Fractional value at component `Year`")
 goto end_branch_2
 } else {
@@ -838,7 +838,7 @@ func Get_eqError() gopurs_runtime.Value {
 		eqError = gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func2(func(x_0 gopurs_runtime.Value, y_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(x_0.StrVal == "IsEmpty")).IntVal != 0 {
+if gopurs_runtime.Bool(x_0.StrVal == "IsEmpty").IntVal != 0 {
 __t1 = gopurs_runtime.Bool(y_1.StrVal == "IsEmpty")
 goto end_branch_1
 } else {
@@ -846,7 +846,7 @@ goto end_branch_1
 }
 }
 {
-if (gopurs_runtime.Bool(x_0.StrVal == "InvalidWeekComponentUsage")).IntVal != 0 {
+if gopurs_runtime.Bool(x_0.StrVal == "InvalidWeekComponentUsage").IntVal != 0 {
 __t1 = gopurs_runtime.Bool(y_1.StrVal == "InvalidWeekComponentUsage")
 goto end_branch_1
 } else {
@@ -854,10 +854,10 @@ goto end_branch_1
 }
 }
 {
-if (gopurs_runtime.Bool(x_0.StrVal == "ContainsNegativeValue")).IntVal != 0 {
+if gopurs_runtime.Bool(x_0.StrVal == "ContainsNegativeValue").IntVal != 0 {
 var __t2 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[0].StrVal == "Second")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[0].StrVal == "Second").IntVal != 0 {
 __t2 = gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Second")
 goto end_branch_2
 } else {
@@ -865,7 +865,7 @@ goto end_branch_2
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[0].StrVal == "Minute")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[0].StrVal == "Minute").IntVal != 0 {
 __t2 = gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Minute")
 goto end_branch_2
 } else {
@@ -873,7 +873,7 @@ goto end_branch_2
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[0].StrVal == "Hour")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[0].StrVal == "Hour").IntVal != 0 {
 __t2 = gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Hour")
 goto end_branch_2
 } else {
@@ -881,7 +881,7 @@ goto end_branch_2
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[0].StrVal == "Day")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[0].StrVal == "Day").IntVal != 0 {
 __t2 = gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Day")
 goto end_branch_2
 } else {
@@ -889,7 +889,7 @@ goto end_branch_2
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[0].StrVal == "Week")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[0].StrVal == "Week").IntVal != 0 {
 __t2 = gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Week")
 goto end_branch_2
 } else {
@@ -897,7 +897,7 @@ goto end_branch_2
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[0].StrVal == "Month")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[0].StrVal == "Month").IntVal != 0 {
 __t2 = gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Month")
 goto end_branch_2
 } else {
@@ -917,7 +917,7 @@ goto end_branch_1
 {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[0].StrVal == "Second")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[0].StrVal == "Second").IntVal != 0 {
 __t0 = gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Second")
 goto end_branch_0
 } else {
@@ -925,7 +925,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[0].StrVal == "Minute")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[0].StrVal == "Minute").IntVal != 0 {
 __t0 = gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Minute")
 goto end_branch_0
 } else {
@@ -933,7 +933,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[0].StrVal == "Hour")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[0].StrVal == "Hour").IntVal != 0 {
 __t0 = gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Hour")
 goto end_branch_0
 } else {
@@ -941,7 +941,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[0].StrVal == "Day")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[0].StrVal == "Day").IntVal != 0 {
 __t0 = gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Day")
 goto end_branch_0
 } else {
@@ -949,7 +949,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[0].StrVal == "Week")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[0].StrVal == "Week").IntVal != 0 {
 __t0 = gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Week")
 goto end_branch_0
 } else {
@@ -957,7 +957,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[0].StrVal == "Month")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[0].StrVal == "Month").IntVal != 0 {
 __t0 = gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Month")
 goto end_branch_0
 } else {
@@ -968,7 +968,7 @@ goto end_branch_0
 __t0 = gopurs_runtime.Bool(gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[0].StrVal == "Year").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Year").IntVal != 0)
 }
 end_branch_0:
-__t1 = gopurs_runtime.Bool(gopurs_runtime.Bool(x_0.StrVal == "InvalidFractionalUse").IntVal != 0 && gopurs_runtime.Bool(gopurs_runtime.Bool(y_1.StrVal == "InvalidFractionalUse").IntVal != 0 && __t0.IntVal != 0).IntVal != 0)
+__t1 = gopurs_runtime.Bool(gopurs_runtime.Bool(x_0.StrVal == "InvalidFractionalUse").IntVal != 0 && gopurs_runtime.Bool(y_1.StrVal == "InvalidFractionalUse").IntVal != 0 && __t0.IntVal != 0)
 }
 end_branch_1:
 return __t1
@@ -984,10 +984,10 @@ func Get_ordError() gopurs_runtime.Value {
 		ordError = gopurs_runtime.RecordDict2("compare", "Eq0", gopurs_runtime.Func2(func(x_0 gopurs_runtime.Value, y_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(x_0.StrVal == "IsEmpty")).IntVal != 0 {
+if gopurs_runtime.Bool(x_0.StrVal == "IsEmpty").IntVal != 0 {
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(y_1.StrVal == "IsEmpty")).IntVal != 0 {
+if gopurs_runtime.Bool(y_1.StrVal == "IsEmpty").IntVal != 0 {
 __t1 = gopurs_runtime.Constructor0("EQ")
 goto end_branch_1
 } else {
@@ -1005,7 +1005,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(y_1.StrVal == "IsEmpty")).IntVal != 0 {
+if gopurs_runtime.Bool(y_1.StrVal == "IsEmpty").IntVal != 0 {
 __t0 = gopurs_runtime.Constructor0("GT")
 goto end_branch_0
 } else {
@@ -1013,10 +1013,10 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(x_0.StrVal == "InvalidWeekComponentUsage")).IntVal != 0 {
+if gopurs_runtime.Bool(x_0.StrVal == "InvalidWeekComponentUsage").IntVal != 0 {
 var __t2 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(y_1.StrVal == "InvalidWeekComponentUsage")).IntVal != 0 {
+if gopurs_runtime.Bool(y_1.StrVal == "InvalidWeekComponentUsage").IntVal != 0 {
 __t2 = gopurs_runtime.Constructor0("EQ")
 goto end_branch_2
 } else {
@@ -1034,7 +1034,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(y_1.StrVal == "InvalidWeekComponentUsage")).IntVal != 0 {
+if gopurs_runtime.Bool(y_1.StrVal == "InvalidWeekComponentUsage").IntVal != 0 {
 __t0 = gopurs_runtime.Constructor0("GT")
 goto end_branch_0
 } else {
@@ -1042,16 +1042,16 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(x_0.StrVal == "ContainsNegativeValue")).IntVal != 0 {
+if gopurs_runtime.Bool(x_0.StrVal == "ContainsNegativeValue").IntVal != 0 {
 var __t3 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(y_1.StrVal == "ContainsNegativeValue")).IntVal != 0 {
+if gopurs_runtime.Bool(y_1.StrVal == "ContainsNegativeValue").IntVal != 0 {
 var __t4 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[0].StrVal == "Second")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[0].StrVal == "Second").IntVal != 0 {
 var __t5 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Second")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Second").IntVal != 0 {
 __t5 = gopurs_runtime.Constructor0("EQ")
 goto end_branch_5
 } else {
@@ -1069,7 +1069,7 @@ goto end_branch_4
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Second")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Second").IntVal != 0 {
 __t4 = gopurs_runtime.Constructor0("GT")
 goto end_branch_4
 } else {
@@ -1077,10 +1077,10 @@ goto end_branch_4
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[0].StrVal == "Minute")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[0].StrVal == "Minute").IntVal != 0 {
 var __t6 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Minute")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Minute").IntVal != 0 {
 __t6 = gopurs_runtime.Constructor0("EQ")
 goto end_branch_6
 } else {
@@ -1098,7 +1098,7 @@ goto end_branch_4
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Minute")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Minute").IntVal != 0 {
 __t4 = gopurs_runtime.Constructor0("GT")
 goto end_branch_4
 } else {
@@ -1106,10 +1106,10 @@ goto end_branch_4
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[0].StrVal == "Hour")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[0].StrVal == "Hour").IntVal != 0 {
 var __t7 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Hour")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Hour").IntVal != 0 {
 __t7 = gopurs_runtime.Constructor0("EQ")
 goto end_branch_7
 } else {
@@ -1127,7 +1127,7 @@ goto end_branch_4
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Hour")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Hour").IntVal != 0 {
 __t4 = gopurs_runtime.Constructor0("GT")
 goto end_branch_4
 } else {
@@ -1135,10 +1135,10 @@ goto end_branch_4
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[0].StrVal == "Day")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[0].StrVal == "Day").IntVal != 0 {
 var __t8 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Day")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Day").IntVal != 0 {
 __t8 = gopurs_runtime.Constructor0("EQ")
 goto end_branch_8
 } else {
@@ -1156,7 +1156,7 @@ goto end_branch_4
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Day")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Day").IntVal != 0 {
 __t4 = gopurs_runtime.Constructor0("GT")
 goto end_branch_4
 } else {
@@ -1164,10 +1164,10 @@ goto end_branch_4
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[0].StrVal == "Week")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[0].StrVal == "Week").IntVal != 0 {
 var __t9 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Week")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Week").IntVal != 0 {
 __t9 = gopurs_runtime.Constructor0("EQ")
 goto end_branch_9
 } else {
@@ -1185,7 +1185,7 @@ goto end_branch_4
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Week")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Week").IntVal != 0 {
 __t4 = gopurs_runtime.Constructor0("GT")
 goto end_branch_4
 } else {
@@ -1193,10 +1193,10 @@ goto end_branch_4
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[0].StrVal == "Month")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[0].StrVal == "Month").IntVal != 0 {
 var __t10 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Month")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Month").IntVal != 0 {
 __t10 = gopurs_runtime.Constructor0("EQ")
 goto end_branch_10
 } else {
@@ -1214,7 +1214,7 @@ goto end_branch_4
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Month")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Month").IntVal != 0 {
 __t4 = gopurs_runtime.Constructor0("GT")
 goto end_branch_4
 } else {
@@ -1222,7 +1222,7 @@ goto end_branch_4
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[0].StrVal == "Year").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Year").IntVal != 0)).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[0].StrVal == "Year").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Year").IntVal != 0 {
 __t4 = gopurs_runtime.Constructor0("EQ")
 goto end_branch_4
 } else {
@@ -1250,7 +1250,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(y_1.StrVal == "ContainsNegativeValue")).IntVal != 0 {
+if gopurs_runtime.Bool(y_1.StrVal == "ContainsNegativeValue").IntVal != 0 {
 __t0 = gopurs_runtime.Constructor0("GT")
 goto end_branch_0
 } else {
@@ -1258,13 +1258,13 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.Bool(x_0.StrVal == "InvalidFractionalUse").IntVal != 0 && gopurs_runtime.Bool(y_1.StrVal == "InvalidFractionalUse").IntVal != 0)).IntVal != 0 {
+if gopurs_runtime.Bool(x_0.StrVal == "InvalidFractionalUse").IntVal != 0 && gopurs_runtime.Bool(y_1.StrVal == "InvalidFractionalUse").IntVal != 0 {
 var __t11 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[0].StrVal == "Second")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[0].StrVal == "Second").IntVal != 0 {
 var __t12 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Second")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Second").IntVal != 0 {
 __t12 = gopurs_runtime.Constructor0("EQ")
 goto end_branch_12
 } else {
@@ -1282,7 +1282,7 @@ goto end_branch_11
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Second")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Second").IntVal != 0 {
 __t11 = gopurs_runtime.Constructor0("GT")
 goto end_branch_11
 } else {
@@ -1290,10 +1290,10 @@ goto end_branch_11
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[0].StrVal == "Minute")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[0].StrVal == "Minute").IntVal != 0 {
 var __t13 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Minute")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Minute").IntVal != 0 {
 __t13 = gopurs_runtime.Constructor0("EQ")
 goto end_branch_13
 } else {
@@ -1311,7 +1311,7 @@ goto end_branch_11
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Minute")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Minute").IntVal != 0 {
 __t11 = gopurs_runtime.Constructor0("GT")
 goto end_branch_11
 } else {
@@ -1319,10 +1319,10 @@ goto end_branch_11
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[0].StrVal == "Hour")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[0].StrVal == "Hour").IntVal != 0 {
 var __t14 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Hour")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Hour").IntVal != 0 {
 __t14 = gopurs_runtime.Constructor0("EQ")
 goto end_branch_14
 } else {
@@ -1340,7 +1340,7 @@ goto end_branch_11
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Hour")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Hour").IntVal != 0 {
 __t11 = gopurs_runtime.Constructor0("GT")
 goto end_branch_11
 } else {
@@ -1348,10 +1348,10 @@ goto end_branch_11
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[0].StrVal == "Day")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[0].StrVal == "Day").IntVal != 0 {
 var __t15 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Day")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Day").IntVal != 0 {
 __t15 = gopurs_runtime.Constructor0("EQ")
 goto end_branch_15
 } else {
@@ -1369,7 +1369,7 @@ goto end_branch_11
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Day")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Day").IntVal != 0 {
 __t11 = gopurs_runtime.Constructor0("GT")
 goto end_branch_11
 } else {
@@ -1377,10 +1377,10 @@ goto end_branch_11
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[0].StrVal == "Week")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[0].StrVal == "Week").IntVal != 0 {
 var __t16 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Week")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Week").IntVal != 0 {
 __t16 = gopurs_runtime.Constructor0("EQ")
 goto end_branch_16
 } else {
@@ -1398,7 +1398,7 @@ goto end_branch_11
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Week")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Week").IntVal != 0 {
 __t11 = gopurs_runtime.Constructor0("GT")
 goto end_branch_11
 } else {
@@ -1406,10 +1406,10 @@ goto end_branch_11
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[0].StrVal == "Month")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[0].StrVal == "Month").IntVal != 0 {
 var __t17 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Month")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Month").IntVal != 0 {
 __t17 = gopurs_runtime.Constructor0("EQ")
 goto end_branch_17
 } else {
@@ -1427,7 +1427,7 @@ goto end_branch_11
 }
 }
 {
-if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Month")).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Month").IntVal != 0 {
 __t11 = gopurs_runtime.Constructor0("GT")
 goto end_branch_11
 } else {
@@ -1435,7 +1435,7 @@ goto end_branch_11
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[0].StrVal == "Year").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Year").IntVal != 0)).IntVal != 0 {
+if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[0].StrVal == "Year").IntVal != 0 && gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(y_1.UnsafePtr)[0].StrVal == "Year").IntVal != 0 {
 __t11 = gopurs_runtime.Constructor0("EQ")
 goto end_branch_11
 } else {
@@ -1475,7 +1475,7 @@ __local_var_1_1 := gopurs_runtime.Apply2(Get_lookup(), gopurs_runtime.Constructo
 _ = __local_var_1_1
 var __t2 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(__local_var_1_1.StrVal == "Nothing")).IntVal != 0 {
+if gopurs_runtime.Bool(__local_var_1_1.StrVal == "Nothing").IntVal != 0 {
 __t2 = gopurs_runtime.Bool(false)
 goto end_branch_2
 } else {
@@ -1483,7 +1483,7 @@ goto end_branch_2
 }
 }
 {
-if (gopurs_runtime.Bool(__local_var_1_1.StrVal == "Just")).IntVal != 0 {
+if gopurs_runtime.Bool(__local_var_1_1.StrVal == "Just").IntVal != 0 {
 __t2 = gopurs_runtime.Bool(true)
 goto end_branch_2
 } else {
@@ -1496,7 +1496,7 @@ __t2 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 end_branch_2:
 var __t3 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_0, "asMap").StrVal == "Leaf")).IntVal != 0 {
+if gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_0, "asMap").StrVal == "Leaf").IntVal != 0 {
 __t3 = gopurs_runtime.Bool(false)
 goto end_branch_3
 } else {
@@ -1504,8 +1504,8 @@ goto end_branch_3
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_0, "asMap").StrVal == "Node")).IntVal != 0 {
-__t3 = gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(gopurs_runtime.RecordGet(v_0, "asMap").UnsafePtr)[1].IntVal > gopurs_runtime.Int(1).IntVal)
+if gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_0, "asMap").StrVal == "Node").IntVal != 0 {
+__t3 = gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(gopurs_runtime.RecordGet(v_0, "asMap").UnsafePtr)[1].IntVal > 1)
 goto end_branch_3
 } else {
 
@@ -1515,7 +1515,7 @@ goto end_branch_3
 __t3 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_3:
-if (gopurs_runtime.Bool(__t2.IntVal != 0 && __t3.IntVal != 0)).IntVal != 0 {
+if __t2.IntVal != 0 && __t3.IntVal != 0 {
 __t0 = gopurs_runtime.Constructor2("Cons", gopurs_runtime.Constructor0("InvalidWeekComponentUsage"), gopurs_runtime.Constructor0("Nil"))
 goto end_branch_0
 } else {
@@ -1540,7 +1540,7 @@ func Get_checkNegativeValues() gopurs_runtime.Value {
 return gopurs_runtime.Apply2(Get_foldMap1(), gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.FloatGte((*[1024]gopurs_runtime.Value)(v1_1.UnsafePtr)[1], gopurs_runtime.Float(0.0))).IntVal != 0 {
+if (*[1024]gopurs_runtime.Value)(v1_1.UnsafePtr)[1].FloatVal() >= 0.0 {
 __t0 = gopurs_runtime.Constructor0("Nil")
 goto end_branch_0
 } else {
@@ -1564,14 +1564,14 @@ func Get_checkFractionalUse() gopurs_runtime.Value {
 	once_checkFractionalUse.Do(func() {
 		checkFractionalUse = gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_1_0 := gopurs_runtime.Apply2(pkg_Data_List.Get_span(), gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.FloatEq(gopurs_runtime.Apply(pkg_Data_Number.Get_floor(), (*[1024]gopurs_runtime.Value)(x_1.UnsafePtr)[1]), (*[1024]gopurs_runtime.Value)(x_1.UnsafePtr)[1])
+return gopurs_runtime.Bool(gopurs_runtime.Apply(pkg_Data_Number.Get_floor(), (*[1024]gopurs_runtime.Value)(x_1.UnsafePtr)[1]).FloatVal() == (*[1024]gopurs_runtime.Value)(x_1.UnsafePtr)[1].FloatVal())
 }), gopurs_runtime.RecordGet(v_0, "asList"))
 _ = __local_var_1_0
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_1_0, "rest").StrVal == "Cons").IntVal != 0 && gopurs_runtime.FloatGt(gopurs_runtime.Apply2(Get_foldMap2(), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+if gopurs_runtime.Bool(gopurs_runtime.RecordGet(__local_var_1_0, "rest").StrVal == "Cons").IntVal != 0 && gopurs_runtime.Apply2(Get_foldMap2(), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(pkg_Data_Number.Get_abs(), (*[1024]gopurs_runtime.Value)(x_2.UnsafePtr)[1])
-}), (*[1024]gopurs_runtime.Value)(gopurs_runtime.RecordGet(__local_var_1_0, "rest").UnsafePtr)[1]), gopurs_runtime.Float(0.0)).IntVal != 0)).IntVal != 0 {
+}), (*[1024]gopurs_runtime.Value)(gopurs_runtime.RecordGet(__local_var_1_0, "rest").UnsafePtr)[1]).FloatVal() > 0.0 {
 __t1 = gopurs_runtime.Constructor2("Cons", gopurs_runtime.Constructor1("InvalidFractionalUse", (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(gopurs_runtime.RecordGet(__local_var_1_0, "rest").UnsafePtr)[0].UnsafePtr)[0]), gopurs_runtime.Constructor0("Nil"))
 goto end_branch_1
 } else {
@@ -1595,7 +1595,7 @@ func Get_checkEmptiness() gopurs_runtime.Value {
 		checkEmptiness = gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_0, "asList").StrVal == "Nil")).IntVal != 0 {
+if gopurs_runtime.Bool(gopurs_runtime.RecordGet(v_0, "asList").StrVal == "Nil").IntVal != 0 {
 __t0 = gopurs_runtime.Constructor2("Cons", gopurs_runtime.Constructor0("IsEmpty"), gopurs_runtime.Constructor0("Nil"))
 goto end_branch_0
 } else {
@@ -1624,13 +1624,13 @@ return func() gopurs_runtime.Value {
 go__1_0:
 for {
 if false { continue go__1_0 }
-var v_2 = v_2_loop
+var v_2 gopurs_runtime.Value = v_2_loop
 _ = v_2
-var v1_3 = v1_3_loop
+var v1_3 gopurs_runtime.Value = v1_3_loop
 _ = v1_3
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(v1_3.StrVal == "Nil")).IntVal != 0 {
+if gopurs_runtime.Bool(v1_3.StrVal == "Nil").IntVal != 0 {
 __t1 = v_2
 goto end_branch_1
 } else {
@@ -1638,7 +1638,7 @@ goto end_branch_1
 }
 }
 {
-if (gopurs_runtime.Bool(v1_3.StrVal == "Cons")).IntVal != 0 {
+if gopurs_runtime.Bool(v1_3.StrVal == "Cons").IntVal != 0 {
 v_2_loop = gopurs_runtime.Constructor2("Cons", (*[1024]gopurs_runtime.Value)(v1_3.UnsafePtr)[0], v_2)
 v1_3_loop = (*[1024]gopurs_runtime.Value)(v1_3.UnsafePtr)[1]
 continue go__1_0
@@ -1672,7 +1672,7 @@ __local_var_1_0 := gopurs_runtime.Apply(Get_checkValidIsoDuration(), d_0)
 _ = __local_var_1_0
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(__local_var_1_0.StrVal == "Nil")).IntVal != 0 {
+if gopurs_runtime.Bool(__local_var_1_0.StrVal == "Nil").IntVal != 0 {
 __t1 = gopurs_runtime.Constructor1("Right", d_0)
 goto end_branch_1
 } else {
@@ -1680,7 +1680,7 @@ goto end_branch_1
 }
 }
 {
-if (gopurs_runtime.Bool(__local_var_1_0.StrVal == "Cons")).IntVal != 0 {
+if gopurs_runtime.Bool(__local_var_1_0.StrVal == "Cons").IntVal != 0 {
 __t1 = gopurs_runtime.Constructor1("Left", gopurs_runtime.Constructor2("NonEmpty", (*[1024]gopurs_runtime.Value)(__local_var_1_0.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(__local_var_1_0.UnsafePtr)[1]))
 goto end_branch_1
 } else {
@@ -1696,5 +1696,7 @@ return __t1
 	})
 	return mkIsoDuration
 }
+
+
 
 

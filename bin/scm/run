@@ -40,4 +40,4 @@ PATH="$(pwd)/bin/scm:$PATH" purescm bundle-app --main ${ENTRY_POINT} > /dev/null
 
 echo "=== Chez Scheme ==="
 export DYLD_LIBRARY_PATH="/opt/homebrew/lib:/opt/homebrew/opt/icu4c/lib:/opt/homebrew/opt/pcre2/lib"
-time chez --program run/bak/scm/output/main
+chez --program run/bak/scm/output/main
