@@ -13,22 +13,26 @@
 -define(MEMOIZE, memoize).
 memoize(X) -> X.
 -endif.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/TCO.purs", 14).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/TCO.purs", 15).
 -spec describe() -> fun(() -> any()).
 describe() -> (effect_console@ps:log(<<"Tail Call Optimization (100k calls):"/utf8>>)).
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/TCO.purs", 10).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/TCO.purs", 11).
 -spec deepTailRec(integer(),integer()) -> integer().
-deepTailRec(_@15,_@16) -> case { _@15, _@16 } of
-  ({ 0, _@17 }) -> _@17;
-  ({ _@18, _@19 }) -> (deepTailRec(_@18 - 1, _@19 + (((?MEMOIZE((data_euclideanRing@ps:mod((data_euclideanRing@ps:euclideanRingInt())))))(_@18))(3))))
+deepTailRec(_@17,_@18) -> case { _@17, _@18 } of
+  ({ 0, _@19 }) -> _@19;
+  ({ _@20, _@21 }) -> (deepTailRec(_@20 - 1, _@21 + (((?MEMOIZE((data_euclideanRing@ps:mod((data_euclideanRing@ps:euclideanRingInt())))))(_@20))(3))))
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/TCO.purs", 10).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/TCO.purs", 11).
 -spec deepTailRec() -> fun((integer()) -> fun((integer()) -> integer())).
-deepTailRec() -> fun (_@20) ->
-  fun (_@21) ->
-    (deepTailRec(_@20, _@21))
+deepTailRec() -> fun (_@22) ->
+  fun (_@23) ->
+    (deepTailRec(_@22, _@23))
   end
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/TCO.purs", 17).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/TCO.purs", 18).
 -spec act() -> fun(() -> any()).
-act() -> (effect_console@ps:logShow((data_show@ps:showInt()), (deepTailRec(100000, 0)))).
+act() -> fun
+  __do() -> 
+  Dummy = ((bench@ps:opaque(100000))()),
+  (((?MEMOIZE((effect_console@ps:logShow((data_show@ps:showInt())))))((deepTailRec(Dummy, 0))))())
+end.

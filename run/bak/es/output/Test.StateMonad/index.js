@@ -1,3 +1,4 @@
+import * as Bench from "../Bench/index.js";
 import * as Data$dShow from "../Data.Show/index.js";
 import * as Effect$dConsole from "../Effect.Console/index.js";
 const State = x => x;
@@ -29,5 +30,11 @@ const runManyTimes = runManyTimes$a0$copy => runManyTimes$a1$copy => {
   }
   return runManyTimes$r;
 };
-const act = /* #__PURE__ */ Effect$dConsole.log(/* #__PURE__ */ Data$dShow.showIntImpl(/* #__PURE__ */ runManyTimes(20)(0)));
+const act = /* #__PURE__ */ (() => {
+  const $0 = Bench.opaque(20);
+  return () => {
+    const dummy = $0();
+    return Effect$dConsole.log(Data$dShow.showIntImpl(runManyTimes(dummy)(0)))();
+  };
+})();
 export {State, act, bindState, chainModifications, describe, $$get as get, modify, pureState, put, runManyTimes, runState};

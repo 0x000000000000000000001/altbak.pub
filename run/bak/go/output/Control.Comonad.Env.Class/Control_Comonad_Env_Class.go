@@ -36,7 +36,7 @@ var once_comonadEnvTuple sync.Once
 func Get_comonadEnvTuple() gopurs_runtime.Value {
 	once_comonadEnvTuple.Do(func() {
 		comonadEnvTuple = gopurs_runtime.RecordDict2("local", "ComonadAsk0", gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply(f_0, gopurs_runtime.ConstructorGet(v_1, 0)), gopurs_runtime.ConstructorGet(v_1, 1))
+return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply(f_0, (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[0]), (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[1])
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_comonadAskTuple()
 }))
@@ -52,7 +52,7 @@ func Get_comonadAskEnvT() gopurs_runtime.Value {
 comonadEnvT_1_0 := gopurs_runtime.Apply(pkg_Control_Comonad_Env_Trans.Get_comonadEnvT(), dictComonad_0)
 _ = comonadEnvT_1_0
 return gopurs_runtime.RecordDict2("ask", "Comonad0", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.ConstructorGet(v_2, 0)
+return (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0]
 }), gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return comonadEnvT_1_0
 }))
@@ -69,10 +69,10 @@ func Get_comonadEnvEnvT() gopurs_runtime.Value {
 comonadEnvT_1_0 := gopurs_runtime.Apply(pkg_Control_Comonad_Env_Trans.Get_comonadEnvT(), dictComonad_0)
 _ = comonadEnvT_1_0
 return gopurs_runtime.RecordDict2("local", "ComonadAsk0", gopurs_runtime.Func2(func(f_2 gopurs_runtime.Value, v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply(f_2, gopurs_runtime.ConstructorGet(v_3, 0)), gopurs_runtime.ConstructorGet(v_3, 1))
+return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply(f_2, (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[0]), (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[1])
 }), gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict2("ask", "Comonad0", gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.ConstructorGet(v_3, 0)
+return (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[0]
 }), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return comonadEnvT_1_0
 }))
@@ -114,11 +114,11 @@ _ = Comonad0_1_0
 comonadStoreT_2_1 := gopurs_runtime.Apply(pkg_Control_Comonad_Store_Trans.Get_comonadStoreT(), Comonad0_1_0)
 _ = comonadStoreT_2_1
 return gopurs_runtime.RecordDict2("ask", "Comonad0", gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_4_2 := gopurs_runtime.ConstructorGet(x_3, 1)
+__local_var_4_2 := (*[1024]gopurs_runtime.Value)(x_3.UnsafePtr)[1]
 _ = __local_var_4_2
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonadAsk_0, "ask"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Comonad0_1_0, "Extend0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Func(func(v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(v1_5, __local_var_4_2)
-}), gopurs_runtime.ConstructorGet(x_3, 0)))
+}), (*[1024]gopurs_runtime.Value)(x_3.UnsafePtr)[0]))
 }), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return comonadStoreT_2_1
 }))
@@ -135,7 +135,7 @@ func Get_comonadEnvStoreT() gopurs_runtime.Value {
 comonadAskStoreT1_1_0 := gopurs_runtime.Apply(Get_comonadAskStoreT(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonadEnv_0, "ComonadAsk0"), gopurs_runtime.Value{}))
 _ = comonadAskStoreT1_1_0
 return gopurs_runtime.RecordDict2("local", "ComonadAsk0", gopurs_runtime.Func2(func(f_2 gopurs_runtime.Value, v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictComonadEnv_0, "local"), f_2, gopurs_runtime.ConstructorGet(v_3, 0)), gopurs_runtime.ConstructorGet(v_3, 1))
+return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictComonadEnv_0, "local"), f_2, (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[0]), (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[1])
 }), gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return comonadAskStoreT1_1_0
 }))

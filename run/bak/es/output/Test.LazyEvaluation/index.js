@@ -1,3 +1,4 @@
+import * as Bench from "../Bench/index.js";
 import * as Data$dShow from "../Data.Show/index.js";
 import * as Effect$dConsole from "../Effect.Console/index.js";
 const Lazy = x => x;
@@ -32,5 +33,11 @@ const runManyTimes = runManyTimes$a0$copy => runManyTimes$a1$copy => {
   }
   return runManyTimes$r;
 };
-const act = /* #__PURE__ */ Effect$dConsole.log(/* #__PURE__ */ Data$dShow.showIntImpl(/* #__PURE__ */ runManyTimes(1000)(0)));
+const act = /* #__PURE__ */ (() => {
+  const $0 = Bench.opaque(1000);
+  return () => {
+    const dummy = $0();
+    return Effect$dConsole.log(Data$dShow.showIntImpl(runManyTimes(dummy)(0)))();
+  };
+})();
 export {Lazy, act, buildThunks, defer, describe, force, runManyTimes};

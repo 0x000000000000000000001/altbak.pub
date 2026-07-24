@@ -372,7 +372,7 @@ var __t1 gopurs_runtime.Value
 if (gopurs_runtime.Bool(__local_var_2_0.StrVal == "Just")).IntVal != 0 {
 var __t2 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.ConstructorGet(__local_var_2_0, 0).StrVal == gopurs_runtime.Str("").StrVal)).IntVal != 0 {
+if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(__local_var_2_0.UnsafePtr)[0].StrVal == gopurs_runtime.Str("").StrVal)).IntVal != 0 {
 __t2 = gopurs_runtime.Constructor0("Nothing")
 goto end_branch_2
 } else {
@@ -380,7 +380,7 @@ goto end_branch_2
 }
 }
 {
-__t2 = gopurs_runtime.Constructor1("Just", gopurs_runtime.ConstructorGet(__local_var_2_0, 0))
+__t2 = gopurs_runtime.Constructor1("Just", (*[1024]gopurs_runtime.Value)(__local_var_2_0.UnsafePtr)[0])
 }
 end_branch_2:
 __t1 = __t2
@@ -419,7 +419,7 @@ var __t1 gopurs_runtime.Value
 if (gopurs_runtime.Bool(__local_var_2_0.StrVal == "Just")).IntVal != 0 {
 var __t2 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.ConstructorGet(__local_var_2_0, 0).StrVal == gopurs_runtime.Str("").StrVal)).IntVal != 0 {
+if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(__local_var_2_0.UnsafePtr)[0].StrVal == gopurs_runtime.Str("").StrVal)).IntVal != 0 {
 __t2 = gopurs_runtime.Constructor0("Nothing")
 goto end_branch_2
 } else {
@@ -427,7 +427,7 @@ goto end_branch_2
 }
 }
 {
-__t2 = gopurs_runtime.Constructor1("Just", gopurs_runtime.ConstructorGet(__local_var_2_0, 0))
+__t2 = gopurs_runtime.Constructor1("Just", (*[1024]gopurs_runtime.Value)(__local_var_2_0.UnsafePtr)[0])
 }
 end_branch_2:
 __t1 = __t2

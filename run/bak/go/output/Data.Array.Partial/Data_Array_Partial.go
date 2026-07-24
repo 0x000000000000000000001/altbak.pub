@@ -22,7 +22,7 @@ var once_last sync.Once
 func Get_last() gopurs_runtime.Value {
 	once_last.Do(func() {
 		last = gopurs_runtime.Func2(func(_dollar__unused_0 gopurs_runtime.Value, xs_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.ArrayAccess(xs_1, int(gopurs_runtime.Int(gopurs_runtime.Int(int64(len(xs_1.PtrVal.([]gopurs_runtime.Value)))).IntVal - gopurs_runtime.Int(1).IntVal).IntVal))
+return gopurs_runtime.ArrayAccess(xs_1, int(gopurs_runtime.Int(int64(len(xs_1.PtrVal.([]gopurs_runtime.Value)))).IntVal - gopurs_runtime.Int(1).IntVal.IntVal))
 })
 	})
 	return last

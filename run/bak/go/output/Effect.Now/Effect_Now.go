@@ -13,7 +13,7 @@ func Get_nowTime() gopurs_runtime.Value {
 		nowTime = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 a_prime_0_0 := gopurs_runtime.Apply(Get_now(), gopurs_runtime.Value{})
 _ = a_prime_0_0
-return gopurs_runtime.ConstructorGet(gopurs_runtime.Apply(pkg_Data_DateTime_Instant.Get_toDateTime(), a_prime_0_0), 1)
+return (*[1024]gopurs_runtime.Value)(gopurs_runtime.Apply(pkg_Data_DateTime_Instant.Get_toDateTime(), a_prime_0_0).UnsafePtr)[1]
 })
 	})
 	return nowTime
@@ -39,7 +39,7 @@ func Get_nowDate() gopurs_runtime.Value {
 		nowDate = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 a_prime_0_0 := gopurs_runtime.Apply(Get_now(), gopurs_runtime.Value{})
 _ = a_prime_0_0
-return gopurs_runtime.ConstructorGet(gopurs_runtime.Apply(pkg_Data_DateTime_Instant.Get_toDateTime(), a_prime_0_0), 0)
+return (*[1024]gopurs_runtime.Value)(gopurs_runtime.Apply(pkg_Data_DateTime_Instant.Get_toDateTime(), a_prime_0_0).UnsafePtr)[0]
 })
 	})
 	return nowDate

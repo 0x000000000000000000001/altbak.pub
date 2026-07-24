@@ -1,3 +1,4 @@
+import * as Bench from "../Bench/index.js";
 import * as Data$dEuclideanRing from "../Data.EuclideanRing/index.js";
 import * as Data$dShow from "../Data.Show/index.js";
 import * as Effect$dConsole from "../Effect.Console/index.js";
@@ -16,5 +17,11 @@ const deepTailRec = deepTailRec$a0$copy => deepTailRec$a1$copy => {
   }
   return deepTailRec$r;
 };
-const act = /* #__PURE__ */ Effect$dConsole.log(/* #__PURE__ */ Data$dShow.showIntImpl(/* #__PURE__ */ deepTailRec(100000)(0)));
+const act = /* #__PURE__ */ (() => {
+  const $0 = Bench.opaque(100000);
+  return () => {
+    const dummy = $0();
+    return Effect$dConsole.log(Data$dShow.showIntImpl(deepTailRec(dummy)(0)))();
+  };
+})();
 export {act, deepTailRec, describe};

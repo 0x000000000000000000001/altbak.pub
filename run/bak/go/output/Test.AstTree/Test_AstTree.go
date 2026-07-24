@@ -72,7 +72,7 @@ _ = v_0
 var __t0 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(v_0.StrVal == "Val")).IntVal != 0 {
-__t0 = gopurs_runtime.ConstructorGet(v_0, 0)
+__t0 = (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0]
 goto end_branch_0
 } else {
 
@@ -80,7 +80,7 @@ goto end_branch_0
 }
 {
 if (gopurs_runtime.Bool(v_0.StrVal == "Add")).IntVal != 0 {
-__t0 = gopurs_runtime.Int(gopurs_runtime.Apply(Get_eval(), gopurs_runtime.ConstructorGet(v_0, 0)).IntVal + gopurs_runtime.Apply(Get_eval(), gopurs_runtime.ConstructorGet(v_0, 1)).IntVal)
+__t0 = gopurs_runtime.Int(gopurs_runtime.Apply(Get_eval(), (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0]).IntVal + gopurs_runtime.Apply(Get_eval(), (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[1]).IntVal)
 goto end_branch_0
 } else {
 
@@ -88,7 +88,7 @@ goto end_branch_0
 }
 {
 if (gopurs_runtime.Bool(v_0.StrVal == "Mul")).IntVal != 0 {
-__t0 = gopurs_runtime.Int(gopurs_runtime.Apply(Get_eval(), gopurs_runtime.ConstructorGet(v_0, 0)).IntVal * gopurs_runtime.Apply(Get_eval(), gopurs_runtime.ConstructorGet(v_0, 1)).IntVal)
+__t0 = gopurs_runtime.Int(gopurs_runtime.Apply(Get_eval(), (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0]).IntVal * gopurs_runtime.Apply(Get_eval(), (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[1]).IntVal)
 goto end_branch_0
 } else {
 
@@ -96,7 +96,7 @@ goto end_branch_0
 }
 {
 if (gopurs_runtime.Bool(v_0.StrVal == "Sub")).IntVal != 0 {
-__t0 = gopurs_runtime.Int(gopurs_runtime.Apply(Get_eval(), gopurs_runtime.ConstructorGet(v_0, 0)).IntVal - gopurs_runtime.Apply(Get_eval(), gopurs_runtime.ConstructorGet(v_0, 1)).IntVal)
+__t0 = gopurs_runtime.Int(gopurs_runtime.Apply(Get_eval(), (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0]).IntVal - gopurs_runtime.Apply(Get_eval(), (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[1]).IntVal)
 goto end_branch_0
 } else {
 

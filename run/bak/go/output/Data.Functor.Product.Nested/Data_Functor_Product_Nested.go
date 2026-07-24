@@ -131,7 +131,7 @@ var once_get9 sync.Once
 func Get_get9() gopurs_runtime.Value {
 	once_get9.Do(func() {
 		get9 = gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(v_0, 1), 1), 1), 1), 1), 1), 1), 1), 0)
+return (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[1].UnsafePtr)[1].UnsafePtr)[1].UnsafePtr)[1].UnsafePtr)[1].UnsafePtr)[1].UnsafePtr)[1].UnsafePtr)[1].UnsafePtr)[0]
 })
 	})
 	return get9
@@ -142,7 +142,7 @@ var once_get8 sync.Once
 func Get_get8() gopurs_runtime.Value {
 	once_get8.Do(func() {
 		get8 = gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(v_0, 1), 1), 1), 1), 1), 1), 1), 0)
+return (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[1].UnsafePtr)[1].UnsafePtr)[1].UnsafePtr)[1].UnsafePtr)[1].UnsafePtr)[1].UnsafePtr)[1].UnsafePtr)[0]
 })
 	})
 	return get8
@@ -153,7 +153,7 @@ var once_get7 sync.Once
 func Get_get7() gopurs_runtime.Value {
 	once_get7.Do(func() {
 		get7 = gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(v_0, 1), 1), 1), 1), 1), 1), 0)
+return (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[1].UnsafePtr)[1].UnsafePtr)[1].UnsafePtr)[1].UnsafePtr)[1].UnsafePtr)[1].UnsafePtr)[0]
 })
 	})
 	return get7
@@ -164,7 +164,7 @@ var once_get6 sync.Once
 func Get_get6() gopurs_runtime.Value {
 	once_get6.Do(func() {
 		get6 = gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(v_0, 1), 1), 1), 1), 1), 0)
+return (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[1].UnsafePtr)[1].UnsafePtr)[1].UnsafePtr)[1].UnsafePtr)[1].UnsafePtr)[0]
 })
 	})
 	return get6
@@ -175,7 +175,7 @@ var once_get5 sync.Once
 func Get_get5() gopurs_runtime.Value {
 	once_get5.Do(func() {
 		get5 = gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(v_0, 1), 1), 1), 1), 0)
+return (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[1].UnsafePtr)[1].UnsafePtr)[1].UnsafePtr)[1].UnsafePtr)[0]
 })
 	})
 	return get5
@@ -186,7 +186,7 @@ var once_get4 sync.Once
 func Get_get4() gopurs_runtime.Value {
 	once_get4.Do(func() {
 		get4 = gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(v_0, 1), 1), 1), 0)
+return (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[1].UnsafePtr)[1].UnsafePtr)[1].UnsafePtr)[0]
 })
 	})
 	return get4
@@ -197,7 +197,7 @@ var once_get3 sync.Once
 func Get_get3() gopurs_runtime.Value {
 	once_get3.Do(func() {
 		get3 = gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(v_0, 1), 1), 0)
+return (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[1].UnsafePtr)[1].UnsafePtr)[0]
 })
 	})
 	return get3
@@ -208,7 +208,7 @@ var once_get2 sync.Once
 func Get_get2() gopurs_runtime.Value {
 	once_get2.Do(func() {
 		get2 = gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(v_0, 1), 0)
+return (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[1].UnsafePtr)[0]
 })
 	})
 	return get2
@@ -219,7 +219,7 @@ var once_get10 sync.Once
 func Get_get10() gopurs_runtime.Value {
 	once_get10.Do(func() {
 		get10 = gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(v_0, 1), 1), 1), 1), 1), 1), 1), 1), 1), 0)
+return (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[1].UnsafePtr)[1].UnsafePtr)[1].UnsafePtr)[1].UnsafePtr)[1].UnsafePtr)[1].UnsafePtr)[1].UnsafePtr)[1].UnsafePtr)[1].UnsafePtr)[0]
 })
 	})
 	return get10
@@ -230,7 +230,7 @@ var once_get1 sync.Once
 func Get_get1() gopurs_runtime.Value {
 	once_get1.Do(func() {
 		get1 = gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.ConstructorGet(v_0, 0)
+return (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0]
 })
 	})
 	return get1

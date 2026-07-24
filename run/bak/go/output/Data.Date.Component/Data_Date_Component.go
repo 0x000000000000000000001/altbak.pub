@@ -1202,7 +1202,7 @@ var once_enumYear sync.Once
 func Get_enumYear() gopurs_runtime.Value {
 	once_enumYear.Do(func() {
 		enumYear = gopurs_runtime.RecordDict3("succ", "pred", "Ord0", gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_1_0 := gopurs_runtime.Int(x_0.IntVal + gopurs_runtime.Int(1).IntVal)
+__local_var_1_0 := x_0.IntVal + gopurs_runtime.Int(1).IntVal
 _ = __local_var_1_0
 var __t1 gopurs_runtime.Value
 {
@@ -1219,7 +1219,7 @@ __t1 = gopurs_runtime.Constructor0("Nothing")
 end_branch_1:
 return __t1
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_1_2 := gopurs_runtime.Int(x_0.IntVal - gopurs_runtime.Int(1).IntVal)
+__local_var_1_2 := x_0.IntVal - gopurs_runtime.Int(1).IntVal
 _ = __local_var_1_2
 var __t3 gopurs_runtime.Value
 {
@@ -2332,7 +2332,7 @@ var once_enumDay sync.Once
 func Get_enumDay() gopurs_runtime.Value {
 	once_enumDay.Do(func() {
 		enumDay = gopurs_runtime.RecordDict3("succ", "pred", "Ord0", gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_1_0 := gopurs_runtime.Int(x_0.IntVal + gopurs_runtime.Int(1).IntVal)
+__local_var_1_0 := x_0.IntVal + gopurs_runtime.Int(1).IntVal
 _ = __local_var_1_0
 var __t1 gopurs_runtime.Value
 {
@@ -2349,7 +2349,7 @@ __t1 = gopurs_runtime.Constructor0("Nothing")
 end_branch_1:
 return __t1
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_1_2 := gopurs_runtime.Int(x_0.IntVal - gopurs_runtime.Int(1).IntVal)
+__local_var_1_2 := x_0.IntVal - gopurs_runtime.Int(1).IntVal
 _ = __local_var_1_2
 var __t3 gopurs_runtime.Value
 {

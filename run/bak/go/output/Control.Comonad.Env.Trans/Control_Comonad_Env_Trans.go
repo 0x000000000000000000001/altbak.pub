@@ -22,7 +22,7 @@ var once_withEnvT sync.Once
 func Get_withEnvT() gopurs_runtime.Value {
 	once_withEnvT.Do(func() {
 		withEnvT = gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply(f_0, gopurs_runtime.ConstructorGet(v_1, 0)), gopurs_runtime.ConstructorGet(v_1, 1))
+return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply(f_0, (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[0]), (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[1])
 })
 	})
 	return withEnvT
@@ -55,7 +55,7 @@ var once_mapEnvT sync.Once
 func Get_mapEnvT() gopurs_runtime.Value {
 	once_mapEnvT.Do(func() {
 		mapEnvT = gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.ConstructorGet(v_1, 0), gopurs_runtime.Apply(f_0, gopurs_runtime.ConstructorGet(v_1, 1)))
+return gopurs_runtime.Constructor2("Tuple", (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[0], gopurs_runtime.Apply(f_0, (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[1]))
 })
 	})
 	return mapEnvT
@@ -67,7 +67,7 @@ func Get_functorEnvT() gopurs_runtime.Value {
 	once_functorEnvT.Do(func() {
 		functorEnvT = gopurs_runtime.Func(func(dictFunctor_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict1("map", gopurs_runtime.Func2(func(f_1 gopurs_runtime.Value, v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.ConstructorGet(v_2, 0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), f_1, gopurs_runtime.ConstructorGet(v_2, 1)))
+return gopurs_runtime.Constructor2("Tuple", (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0], gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), f_1, (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[1]))
 }))
 })
 	})
@@ -82,11 +82,11 @@ func Get_functorWithIndexEnvT() gopurs_runtime.Value {
 __local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctorWithIndex_0, "Functor0"), gopurs_runtime.Value{})
 _ = __local_var_1_0
 functorEnvT1_2_1 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func2(func(f_2 gopurs_runtime.Value, v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.ConstructorGet(v_3, 0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "map"), f_2, gopurs_runtime.ConstructorGet(v_3, 1)))
+return gopurs_runtime.Constructor2("Tuple", (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[0], gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "map"), f_2, (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[1]))
 }))
 _ = functorEnvT1_2_1
 return gopurs_runtime.RecordDict2("mapWithIndex", "Functor0", gopurs_runtime.Func2(func(f_3 gopurs_runtime.Value, v_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.ConstructorGet(v_4, 0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctorWithIndex_0, "mapWithIndex"), f_3, gopurs_runtime.ConstructorGet(v_4, 1)))
+return gopurs_runtime.Constructor2("Tuple", (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[0], gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctorWithIndex_0, "mapWithIndex"), f_3, (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[1]))
 }), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return functorEnvT1_2_1
 }))
@@ -101,14 +101,14 @@ func Get_foldableEnvT() gopurs_runtime.Value {
 	once_foldableEnvT.Do(func() {
 		foldableEnvT = gopurs_runtime.Func(func(dictFoldable_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict3("foldl", "foldr", "foldMap", gopurs_runtime.Func3(func(fn_1 gopurs_runtime.Value, a_2 gopurs_runtime.Value, v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictFoldable_0, "foldl"), fn_1, a_2, gopurs_runtime.ConstructorGet(v_3, 1))
+return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictFoldable_0, "foldl"), fn_1, a_2, (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[1])
 }), gopurs_runtime.Func3(func(fn_1 gopurs_runtime.Value, a_2 gopurs_runtime.Value, v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictFoldable_0, "foldr"), fn_1, a_2, gopurs_runtime.ConstructorGet(v_3, 1))
+return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictFoldable_0, "foldr"), fn_1, a_2, (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[1])
 }), gopurs_runtime.Func(func(dictMonoid_1 gopurs_runtime.Value) gopurs_runtime.Value {
 foldMap1_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFoldable_0, "foldMap"), dictMonoid_1)
 _ = foldMap1_2_0
 return gopurs_runtime.Func2(func(fn_3 gopurs_runtime.Value, v_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(foldMap1_2_0, fn_3, gopurs_runtime.ConstructorGet(v_4, 1))
+return gopurs_runtime.Apply2(foldMap1_2_0, fn_3, (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[1])
 })
 }))
 })
@@ -124,26 +124,26 @@ func Get_foldableWithIndexEnvT() gopurs_runtime.Value {
 __local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFoldableWithIndex_0, "Foldable0"), gopurs_runtime.Value{})
 _ = __local_var_1_0
 foldableEnvT1_2_1 := gopurs_runtime.RecordDict3("foldl", "foldr", "foldMap", gopurs_runtime.Func3(func(fn_2 gopurs_runtime.Value, a_3 gopurs_runtime.Value, v_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_1_0, "foldl"), fn_2, a_3, gopurs_runtime.ConstructorGet(v_4, 1))
+return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_1_0, "foldl"), fn_2, a_3, (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[1])
 }), gopurs_runtime.Func3(func(fn_2 gopurs_runtime.Value, a_3 gopurs_runtime.Value, v_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_1_0, "foldr"), fn_2, a_3, gopurs_runtime.ConstructorGet(v_4, 1))
+return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_1_0, "foldr"), fn_2, a_3, (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[1])
 }), gopurs_runtime.Func(func(dictMonoid_2 gopurs_runtime.Value) gopurs_runtime.Value {
 foldMap1_3_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_0, "foldMap"), dictMonoid_2)
 _ = foldMap1_3_2
 return gopurs_runtime.Func2(func(fn_4 gopurs_runtime.Value, v_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(foldMap1_3_2, fn_4, gopurs_runtime.ConstructorGet(v_5, 1))
+return gopurs_runtime.Apply2(foldMap1_3_2, fn_4, (*[1024]gopurs_runtime.Value)(v_5.UnsafePtr)[1])
 })
 }))
 _ = foldableEnvT1_2_1
 return gopurs_runtime.RecordDict4("foldlWithIndex", "foldrWithIndex", "foldMapWithIndex", "Foldable0", gopurs_runtime.Func3(func(f_3 gopurs_runtime.Value, a_4 gopurs_runtime.Value, v_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictFoldableWithIndex_0, "foldlWithIndex"), f_3, a_4, gopurs_runtime.ConstructorGet(v_5, 1))
+return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictFoldableWithIndex_0, "foldlWithIndex"), f_3, a_4, (*[1024]gopurs_runtime.Value)(v_5.UnsafePtr)[1])
 }), gopurs_runtime.Func3(func(f_3 gopurs_runtime.Value, a_4 gopurs_runtime.Value, v_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictFoldableWithIndex_0, "foldrWithIndex"), f_3, a_4, gopurs_runtime.ConstructorGet(v_5, 1))
+return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictFoldableWithIndex_0, "foldrWithIndex"), f_3, a_4, (*[1024]gopurs_runtime.Value)(v_5.UnsafePtr)[1])
 }), gopurs_runtime.Func(func(dictMonoid_3 gopurs_runtime.Value) gopurs_runtime.Value {
 foldMapWithIndex1_4_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFoldableWithIndex_0, "foldMapWithIndex"), dictMonoid_3)
 _ = foldMapWithIndex1_4_3
 return gopurs_runtime.Func2(func(f_5 gopurs_runtime.Value, v_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(foldMapWithIndex1_4_3, f_5, gopurs_runtime.ConstructorGet(v_6, 1))
+return gopurs_runtime.Apply2(foldMapWithIndex1_4_3, f_5, (*[1024]gopurs_runtime.Value)(v_6.UnsafePtr)[1])
 })
 }), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return foldableEnvT1_2_1
@@ -161,20 +161,20 @@ func Get_traversableEnvT() gopurs_runtime.Value {
 __local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTraversable_0, "Functor0"), gopurs_runtime.Value{})
 _ = __local_var_1_0
 functorEnvT1_2_1 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func2(func(f_2 gopurs_runtime.Value, v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.ConstructorGet(v_3, 0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "map"), f_2, gopurs_runtime.ConstructorGet(v_3, 1)))
+return gopurs_runtime.Constructor2("Tuple", (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[0], gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "map"), f_2, (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[1]))
 }))
 _ = functorEnvT1_2_1
 __local_var_3_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTraversable_0, "Foldable1"), gopurs_runtime.Value{})
 _ = __local_var_3_2
 foldableEnvT1_4_3 := gopurs_runtime.RecordDict3("foldl", "foldr", "foldMap", gopurs_runtime.Func3(func(fn_4 gopurs_runtime.Value, a_5 gopurs_runtime.Value, v_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_3_2, "foldl"), fn_4, a_5, gopurs_runtime.ConstructorGet(v_6, 1))
+return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_3_2, "foldl"), fn_4, a_5, (*[1024]gopurs_runtime.Value)(v_6.UnsafePtr)[1])
 }), gopurs_runtime.Func3(func(fn_4 gopurs_runtime.Value, a_5 gopurs_runtime.Value, v_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_3_2, "foldr"), fn_4, a_5, gopurs_runtime.ConstructorGet(v_6, 1))
+return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_3_2, "foldr"), fn_4, a_5, (*[1024]gopurs_runtime.Value)(v_6.UnsafePtr)[1])
 }), gopurs_runtime.Func(func(dictMonoid_4 gopurs_runtime.Value) gopurs_runtime.Value {
 foldMap1_5_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_3_2, "foldMap"), dictMonoid_4)
 _ = foldMap1_5_4
 return gopurs_runtime.Func2(func(fn_6 gopurs_runtime.Value, v_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(foldMap1_5_4, fn_6, gopurs_runtime.ConstructorGet(v_7, 1))
+return gopurs_runtime.Apply2(foldMap1_5_4, fn_6, (*[1024]gopurs_runtime.Value)(v_7.UnsafePtr)[1])
 })
 }))
 _ = foldableEnvT1_4_3
@@ -182,13 +182,13 @@ return gopurs_runtime.RecordDict4("sequence", "traverse", "Functor0", "Foldable1
 sequence1_6_5 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTraversable_0, "sequence"), dictApplicative_5)
 _ = sequence1_6_5
 return gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_5, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Apply(pkg_Data_Tuple.Get_Tuple(), gopurs_runtime.ConstructorGet(v_7, 0)), gopurs_runtime.Apply(sequence1_6_5, gopurs_runtime.ConstructorGet(v_7, 1)))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_5, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Apply(pkg_Data_Tuple.Get_Tuple(), (*[1024]gopurs_runtime.Value)(v_7.UnsafePtr)[0]), gopurs_runtime.Apply(sequence1_6_5, (*[1024]gopurs_runtime.Value)(v_7.UnsafePtr)[1]))
 })
 }), gopurs_runtime.Func(func(dictApplicative_5 gopurs_runtime.Value) gopurs_runtime.Value {
 traverse1_6_6 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTraversable_0, "traverse"), dictApplicative_5)
 _ = traverse1_6_6
 return gopurs_runtime.Func2(func(f_7 gopurs_runtime.Value, v_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_5, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Apply(pkg_Data_Tuple.Get_Tuple(), gopurs_runtime.ConstructorGet(v_8, 0)), gopurs_runtime.Apply2(traverse1_6_6, f_7, gopurs_runtime.ConstructorGet(v_8, 1)))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_5, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Apply(pkg_Data_Tuple.Get_Tuple(), (*[1024]gopurs_runtime.Value)(v_8.UnsafePtr)[0]), gopurs_runtime.Apply2(traverse1_6_6, f_7, (*[1024]gopurs_runtime.Value)(v_8.UnsafePtr)[1]))
 })
 }), gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return functorEnvT1_2_1
@@ -210,11 +210,11 @@ _ = __local_var_1_0
 __local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_0, "Functor0"), gopurs_runtime.Value{})
 _ = __local_var_2_1
 functorEnvT1_3_3 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func2(func(f_3 gopurs_runtime.Value, v_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.ConstructorGet(v_4, 0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_1, "map"), f_3, gopurs_runtime.ConstructorGet(v_4, 1)))
+return gopurs_runtime.Constructor2("Tuple", (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[0], gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_1, "map"), f_3, (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[1]))
 }))
 _ = functorEnvT1_3_3
 functorWithIndexEnvT1_3_2 := gopurs_runtime.RecordDict2("mapWithIndex", "Functor0", gopurs_runtime.Func2(func(f_4 gopurs_runtime.Value, v_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.ConstructorGet(v_5, 0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "mapWithIndex"), f_4, gopurs_runtime.ConstructorGet(v_5, 1)))
+return gopurs_runtime.Constructor2("Tuple", (*[1024]gopurs_runtime.Value)(v_5.UnsafePtr)[0], gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "mapWithIndex"), f_4, (*[1024]gopurs_runtime.Value)(v_5.UnsafePtr)[1]))
 }), gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return functorEnvT1_3_3
 }))
@@ -227,7 +227,7 @@ return gopurs_runtime.RecordDict4("traverseWithIndex", "FunctorWithIndex0", "Fol
 traverseWithIndex1_7_6 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTraversableWithIndex_0, "traverseWithIndex"), dictApplicative_6)
 _ = traverseWithIndex1_7_6
 return gopurs_runtime.Func2(func(f_8 gopurs_runtime.Value, v_9 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_6, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Apply(pkg_Data_Tuple.Get_Tuple(), gopurs_runtime.ConstructorGet(v_9, 0)), gopurs_runtime.Apply2(traverseWithIndex1_7_6, f_8, gopurs_runtime.ConstructorGet(v_9, 1)))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_6, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Apply(pkg_Data_Tuple.Get_Tuple(), (*[1024]gopurs_runtime.Value)(v_9.UnsafePtr)[0]), gopurs_runtime.Apply2(traverseWithIndex1_7_6, f_8, (*[1024]gopurs_runtime.Value)(v_9.UnsafePtr)[1]))
 })
 }), gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return functorWithIndexEnvT1_3_2
@@ -249,11 +249,11 @@ func Get_extendEnvT() gopurs_runtime.Value {
 Functor0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictExtend_0, "Functor0"), gopurs_runtime.Value{})
 _ = Functor0_1_0
 functorEnvT1_2_1 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func2(func(f_2 gopurs_runtime.Value, v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.ConstructorGet(v_3, 0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Functor0_1_0, "map"), f_2, gopurs_runtime.ConstructorGet(v_3, 1)))
+return gopurs_runtime.Constructor2("Tuple", (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[0], gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Functor0_1_0, "map"), f_2, (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[1]))
 }))
 _ = functorEnvT1_2_1
 return gopurs_runtime.RecordDict2("extend", "Functor0", gopurs_runtime.Func2(func(f_3 gopurs_runtime.Value, v_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.ConstructorGet(v_4, 0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Functor0_1_0, "map"), f_3, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictExtend_0, "extend"), gopurs_runtime.Apply(pkg_Data_Tuple.Get_Tuple(), gopurs_runtime.ConstructorGet(v_4, 0)), gopurs_runtime.ConstructorGet(v_4, 1))))
+return gopurs_runtime.Constructor2("Tuple", (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[0], gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Functor0_1_0, "map"), f_3, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictExtend_0, "extend"), gopurs_runtime.Apply(pkg_Data_Tuple.Get_Tuple(), (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[0]), (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[1])))
 }), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return functorEnvT1_2_1
 }))
@@ -267,7 +267,7 @@ var once_comonadTransEnvT sync.Once
 func Get_comonadTransEnvT() gopurs_runtime.Value {
 	once_comonadTransEnvT.Do(func() {
 		comonadTransEnvT = gopurs_runtime.RecordDict1("lower", gopurs_runtime.Func2(func(dictComonad_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.ConstructorGet(v_1, 1)
+return (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[1]
 }))
 	})
 	return comonadTransEnvT
@@ -281,7 +281,7 @@ func Get_comonadEnvT() gopurs_runtime.Value {
 extendEnvT1_1_0 := gopurs_runtime.Apply(Get_extendEnvT(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonad_0, "Extend0"), gopurs_runtime.Value{}))
 _ = extendEnvT1_1_0
 return gopurs_runtime.RecordDict2("extract", "Extend0", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonad_0, "extract"), gopurs_runtime.ConstructorGet(v_2, 1))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonad_0, "extract"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[1])
 }), gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return extendEnvT1_1_0
 }))

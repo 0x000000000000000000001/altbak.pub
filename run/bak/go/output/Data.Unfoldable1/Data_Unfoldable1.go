@@ -15,7 +15,7 @@ func Get_fromJust() gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(v_0.StrVal == "Just")).IntVal != 0 {
-__t0 = gopurs_runtime.ConstructorGet(v_0, 0)
+__t0 = (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0]
 goto end_branch_0
 } else {
 
@@ -47,7 +47,7 @@ var once_unfoldable1Maybe sync.Once
 func Get_unfoldable1Maybe() gopurs_runtime.Value {
 	once_unfoldable1Maybe.Do(func() {
 		unfoldable1Maybe = gopurs_runtime.RecordDict1("unfoldr1", gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, b_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor1("Just", gopurs_runtime.ConstructorGet(gopurs_runtime.Apply(f_0, b_1), 0))
+return gopurs_runtime.Constructor1("Just", (*[1024]gopurs_runtime.Value)(gopurs_runtime.Apply(f_0, b_1).UnsafePtr)[0])
 }))
 	})
 	return unfoldable1Maybe
@@ -165,7 +165,7 @@ end_branch_1:
 __local_var_3_0 := __t1
 _ = __local_var_3_0
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictUnfoldable1_0, "unfoldr1"), gopurs_runtime.Func(func(i_4 gopurs_runtime.Value) gopurs_runtime.Value {
-i_prime_5_2 := gopurs_runtime.Int(i_4.IntVal + __local_var_3_0.IntVal)
+i_prime_5_2 := i_4.IntVal + __local_var_3_0.IntVal
 _ = i_prime_5_2
 var __t3 gopurs_runtime.Value
 {
@@ -195,8 +195,8 @@ func Get_iterateN() gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictUnfoldable1_0, "unfoldr1"), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.ConstructorGet(v_4, 1).IntVal > gopurs_runtime.Int(0).IntVal)).IntVal != 0 {
-__t0 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply(f_2, gopurs_runtime.ConstructorGet(v_4, 0)), gopurs_runtime.Int(gopurs_runtime.ConstructorGet(v_4, 1).IntVal - gopurs_runtime.Int(1).IntVal)))
+if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[1].IntVal > gopurs_runtime.Int(0).IntVal)).IntVal != 0 {
+__t0 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply(f_2, (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[0]), gopurs_runtime.Int((*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[1].IntVal - gopurs_runtime.Int(1).IntVal)))
 goto end_branch_0
 } else {
 
@@ -206,7 +206,7 @@ goto end_branch_0
 __t0 = gopurs_runtime.Constructor0("Nothing")
 }
 end_branch_0:
-return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.ConstructorGet(v_4, 0), __t0)
+return gopurs_runtime.Constructor2("Tuple", (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[0], __t0)
 }), gopurs_runtime.Constructor2("Tuple", s_3, gopurs_runtime.Int(n_1.IntVal - gopurs_runtime.Int(1).IntVal)))
 })
 	})

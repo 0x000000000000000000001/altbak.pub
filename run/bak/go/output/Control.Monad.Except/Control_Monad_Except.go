@@ -13,7 +13,7 @@ func Get_withExcept() gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(v_1.StrVal == "Right")).IntVal != 0 {
-__t0 = gopurs_runtime.Constructor1("Right", gopurs_runtime.ConstructorGet(v_1, 0))
+__t0 = gopurs_runtime.Constructor1("Right", (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[0])
 goto end_branch_0
 } else {
 
@@ -21,7 +21,7 @@ goto end_branch_0
 }
 {
 if (gopurs_runtime.Bool(v_1.StrVal == "Left")).IntVal != 0 {
-__t0 = gopurs_runtime.Constructor1("Left", gopurs_runtime.Apply(f_0, gopurs_runtime.ConstructorGet(v_1, 0)))
+__t0 = gopurs_runtime.Constructor1("Left", gopurs_runtime.Apply(f_0, (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[0]))
 goto end_branch_0
 } else {
 

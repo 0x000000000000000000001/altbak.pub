@@ -13,7 +13,7 @@ func Get_tail() gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(v_1.StrVal == "Cons")).IntVal != 0 {
-__t0 = gopurs_runtime.ConstructorGet(v_1, 1)
+__t0 = (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[1]
 goto end_branch_0
 } else {
 
@@ -48,15 +48,15 @@ var __t0 gopurs_runtime.Value
 if (gopurs_runtime.Bool(v_1.StrVal == "Cons")).IntVal != 0 {
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.ConstructorGet(v_1, 1).StrVal == "Nil")).IntVal != 0 {
-__t1 = gopurs_runtime.ConstructorGet(v_1, 0)
+if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[1].StrVal == "Nil")).IntVal != 0 {
+__t1 = (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[0]
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = gopurs_runtime.Apply2(Get_last(), gopurs_runtime.Value{}, gopurs_runtime.ConstructorGet(v_1, 1))
+__t1 = gopurs_runtime.Apply2(Get_last(), gopurs_runtime.Value{}, (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[1])
 }
 end_branch_1:
 __t0 = __t1
@@ -97,7 +97,7 @@ var __t0 gopurs_runtime.Value
 if (gopurs_runtime.Bool(v_1.StrVal == "Cons")).IntVal != 0 {
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.ConstructorGet(v_1, 1).StrVal == "Nil")).IntVal != 0 {
+if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[1].StrVal == "Nil")).IntVal != 0 {
 __t1 = gopurs_runtime.Constructor0("Nil")
 goto end_branch_1
 } else {
@@ -105,7 +105,7 @@ goto end_branch_1
 }
 }
 {
-__t1 = gopurs_runtime.Constructor2("Cons", gopurs_runtime.ConstructorGet(v_1, 0), gopurs_runtime.Apply2(Get_init_(), gopurs_runtime.Value{}, gopurs_runtime.ConstructorGet(v_1, 1)))
+__t1 = gopurs_runtime.Constructor2("Cons", (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[0], gopurs_runtime.Apply2(Get_init_(), gopurs_runtime.Value{}, (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[1]))
 }
 end_branch_1:
 __t0 = __t1
@@ -135,7 +135,7 @@ func Get_head() gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(v_1.StrVal == "Cons")).IntVal != 0 {
-__t0 = gopurs_runtime.ConstructorGet(v_1, 0)
+__t0 = (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[0]
 goto end_branch_0
 } else {
 

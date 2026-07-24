@@ -13,32 +13,22 @@
 -define(MEMOIZE, memoize).
 memoize(X) -> X.
 -endif.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/App.purs", 18).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/App.purs", 20).
 -spec main() -> fun(() -> any()).
 main() -> fun
   __do() -> 
-  ((test_astTree@ps:describe())()),
-  ((test_astTree@ps:act())()),
-  ((test_fib@ps:describe())()),
-  ((test_fib@ps:act())()),
-  ((test_listOps@ps:describe())()),
-  ((test_listOps@ps:act())()),
-  ((test_tCO@ps:describe())()),
-  ((test_tCO@ps:act())()),
-  ((test_records@ps:describe())()),
-  ((test_records@ps:act())()),
-  ((test_ackermann@ps:describe())()),
-  ((test_ackermann@ps:act())()),
-  ((test_church@ps:describe())()),
-  ((test_church@ps:act())()),
-  ((test_primes@ps:describe())()),
-  ((test_primes@ps:act())()),
-  ((test_rBTree@ps:describe())()),
-  ((test_rBTree@ps:act())()),
-  ((test_polymorphism@ps:describe())()),
-  ((test_polymorphism@ps:act())()),
-  ((test_stateMonad@ps:describe())()),
-  ((test_stateMonad@ps:act())()),
-  ((test_lazyEvaluation@ps:describe())()),
-  ((test_lazyEvaluation@ps:act())())
+  T1 = ((bench@ps:runBench((test_astTree@ps:describe()), (test_astTree@ps:act())))()),
+  T2@17 = ((bench@ps:runBench((test_fib@ps:describe()), (test_fib@ps:act())))()),
+  T3@18 = ((bench@ps:runBench((test_listOps@ps:describe()), (test_listOps@ps:act())))()),
+  T4@19 = ((bench@ps:runBench((test_tCO@ps:describe()), (test_tCO@ps:act())))()),
+  T5@20 = ((bench@ps:runBench((test_records@ps:describe()), (test_records@ps:act())))()),
+  T6@21 = ((bench@ps:runBench((test_ackermann@ps:describe()), (test_ackermann@ps:act())))()),
+  T7@22 = ((bench@ps:runBench((test_church@ps:describe()), (test_church@ps:act())))()),
+  T8@23 = ((bench@ps:runBench((test_primes@ps:describe()), (test_primes@ps:act())))()),
+  T9@24 = ((bench@ps:runBench((test_rBTree@ps:describe()), (test_rBTree@ps:act())))()),
+  T10@25 = ((bench@ps:runBench((test_polymorphism@ps:describe()), (test_polymorphism@ps:act())))()),
+  T11@26 = ((bench@ps:runBench((test_stateMonad@ps:describe()), (test_stateMonad@ps:act())))()),
+  T12@27 = ((bench@ps:runBench((test_lazyEvaluation@ps:describe()), (test_lazyEvaluation@ps:act())))()),
+  Total@16@28 = T1 + T2@17 + T3@18 + T4@19 + T5@20 + T6@21 + T7@22 + T8@23 + T9@24 + T10@25 + T11@26 + T12@27,
+  ((effect_console@ps:log((((?MEMOIZE((data_semigroup@ps:append((data_semigroup@ps:semigroupString())))))(<<"Total exec time: "/utf8>>))((((?MEMOIZE((data_semigroup@ps:append((data_semigroup@ps:semigroupString())))))((bench@ps:formatNumber(Total@16@28 / 1000.0))))(<<" ms\n"/utf8>>))))))())
 end.

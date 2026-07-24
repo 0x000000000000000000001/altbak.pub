@@ -52,7 +52,7 @@ return gopurs_runtime.Apply2(rmap_2_0, gopurs_runtime.Func(func(v2_5 gopurs_runt
 var __t1 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(v2_5.StrVal == "Left")).IntVal != 0 {
-__t1 = gopurs_runtime.ConstructorGet(v2_5, 0)
+__t1 = (*[1024]gopurs_runtime.Value)(v2_5.UnsafePtr)[0]
 goto end_branch_1
 } else {
 
@@ -60,7 +60,7 @@ goto end_branch_1
 }
 {
 if (gopurs_runtime.Bool(v2_5.StrVal == "Right")).IntVal != 0 {
-__t1 = gopurs_runtime.ConstructorGet(v2_5, 0)
+__t1 = (*[1024]gopurs_runtime.Value)(v2_5.UnsafePtr)[0]
 goto end_branch_1
 } else {
 
@@ -86,7 +86,7 @@ func Get_choiceFn() gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(v1_1.StrVal == "Left")).IntVal != 0 {
-__t0 = gopurs_runtime.Constructor1("Left", gopurs_runtime.Apply(v_0, gopurs_runtime.ConstructorGet(v1_1, 0)))
+__t0 = gopurs_runtime.Constructor1("Left", gopurs_runtime.Apply(v_0, (*[1024]gopurs_runtime.Value)(v1_1.UnsafePtr)[0]))
 goto end_branch_0
 } else {
 
@@ -94,7 +94,7 @@ goto end_branch_0
 }
 {
 if (gopurs_runtime.Bool(v1_1.StrVal == "Right")).IntVal != 0 {
-__t0 = gopurs_runtime.Constructor1("Right", gopurs_runtime.ConstructorGet(v1_1, 0))
+__t0 = gopurs_runtime.Constructor1("Right", (*[1024]gopurs_runtime.Value)(v1_1.UnsafePtr)[0])
 goto end_branch_0
 } else {
 

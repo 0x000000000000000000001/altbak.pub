@@ -1,1 +1,1 @@
-{"file":"index.js","mappings":";;;AAMA,UAAA;IACI,IAAJ;eAAQ;;IACJ,IADJ;eACQ;;IACJ,OAAI,IAFR,IAEiB,IAAJ,KAAS,IAFtB,IAE+B,IAAJ,KAAnB;;AAER,kDACe;AAEf,oFACgB,IAAI","names":[],"sources":["../../src/Test/Fib.purs"],"version":3}
+{"file":"index.js","mappings":";;;;;AAOA,UAAA;IACI,IAAJ;eAAQ;;IACJ,IADJ;eACQ;;IACJ,OAAI,IAFR,IAEiB,IAAJ,KAAS,IAFtB,IAE+B,IAAJ,KAAnB;;AAER,kDACe;AAEf,UAEE;6BAAsB;mBACZ,IAAI","names":[],"sources":["../../src/Test/Fib.purs"],"version":3}

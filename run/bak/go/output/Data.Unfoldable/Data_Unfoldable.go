@@ -17,7 +17,7 @@ func Get_fromJust() gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(v_0.StrVal == "Just")).IntVal != 0 {
-__t0 = gopurs_runtime.ConstructorGet(v_0, 0)
+__t0 = (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0]
 goto end_branch_0
 } else {
 
@@ -54,7 +54,7 @@ _ = __local_var_2_0
 var __t1 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(__local_var_2_0.StrVal == "Just")).IntVal != 0 {
-__t1 = gopurs_runtime.Constructor1("Just", gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(__local_var_2_0, 0), 0))
+__t1 = gopurs_runtime.Constructor1("Just", (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(__local_var_2_0.UnsafePtr)[0].UnsafePtr)[0])
 goto end_branch_1
 } else {
 
@@ -161,7 +161,7 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictUnfoldable_0, "unfoldr"
 var __t0 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(b_1.StrVal == "Just")).IntVal != 0 {
-__t0 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Constructor2("Tuple", gopurs_runtime.ConstructorGet(b_1, 0), gopurs_runtime.Constructor0("Nothing")))
+__t0 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Constructor2("Tuple", (*[1024]gopurs_runtime.Value)(b_1.UnsafePtr)[0], gopurs_runtime.Constructor0("Nothing")))
 goto end_branch_0
 } else {
 

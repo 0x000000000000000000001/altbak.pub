@@ -42,7 +42,7 @@ var once_execState sync.Once
 func Get_execState() gopurs_runtime.Value {
 	once_execState.Do(func() {
 		execState = gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, s_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.ConstructorGet(gopurs_runtime.Apply(v_0, s_1), 1)
+return (*[1024]gopurs_runtime.Value)(gopurs_runtime.Apply(v_0, s_1).UnsafePtr)[1]
 })
 	})
 	return execState
@@ -53,7 +53,7 @@ var once_evalState sync.Once
 func Get_evalState() gopurs_runtime.Value {
 	once_evalState.Do(func() {
 		evalState = gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, s_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.ConstructorGet(gopurs_runtime.Apply(v_0, s_1), 0)
+return (*[1024]gopurs_runtime.Value)(gopurs_runtime.Apply(v_0, s_1).UnsafePtr)[0]
 })
 	})
 	return evalState

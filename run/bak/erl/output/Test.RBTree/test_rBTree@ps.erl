@@ -13,16 +13,16 @@
 -define(MEMOIZE, memoize).
 memoize(X) -> X.
 -endif.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 11).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 12).
 -spec 'R'() -> any().
 'R'() -> { r }.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 11).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 12).
 -spec 'B'() -> any().
 'B'() -> { b }.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 12).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 13).
 -spec 'E'() -> any().
 'E'() -> { e }.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 12).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 13).
 -spec 'T'() -> any().
 'T'() -> fun (Value0) ->
   fun (Value1) ->
@@ -33,100 +33,104 @@ memoize(X) -> X.
     end
   end
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 43).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 44).
 -spec max(integer(),integer()) -> integer().
-max(_@16,_@17) -> case _@16 > _@17 of
-  (true) -> _@16;
-  (_) -> _@17
+max(_@18,_@19) -> case _@18 > _@19 of
+  (true) -> _@18;
+  (_) -> _@19
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 43).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 44).
 -spec max() -> fun((integer()) -> fun((integer()) -> integer())).
-max() -> fun (_@18) ->
-  fun (_@19) ->
-    (max(_@18, _@19))
+max() -> fun (_@20) ->
+  fun (_@21) ->
+    (max(_@20, _@21))
   end
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 46).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 47).
 -spec describe() -> fun(() -> any()).
 describe() -> (effect_console@ps:log(<<"Red-Black Tree (100k Worst-Case Insertions):"/utf8>>)).
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 39).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 40).
 -spec depth(any()) -> integer().
-depth(_@22) -> case _@22 of
+depth(_@24) -> case _@24 of
   ({ e }) -> 0;
-  ({ t, _, _@23, _, _@24 }) -> 1 + (max((depth(_@23)), (depth(_@24))))
+  ({ t, _, _@25, _, _@26 }) -> 1 + (max((depth(_@25)), (depth(_@26))))
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 39).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 40).
 -spec depth() -> fun((any()) -> integer()).
-depth() -> fun (_@25) ->
-  (depth(_@25))
+depth() -> fun (_@27) ->
+  (depth(_@27))
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 14).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 15).
 -spec balance(any(),any(),integer(),any()) -> any().
-balance(_@58,_@59,_@60,_@61) -> case { _@58, _@59, _@60, _@61 } of
-  ({ { b }, { t, { r }, { t, { r }, _@62, _@63, _@64 }, _@65, _@66 }, _@67, _@68 }) -> { t, { r }, { t, { b }, _@62, _@63, _@64 }, _@65, { t, { b }, _@66, _@67, _@68 } };
-  ({ { b }, { t, { r }, _@69, _@70, { t, { r }, _@71, _@72, _@73 } }, _@74, _@75 }) -> { t, { r }, { t, { b }, _@69, _@70, _@71 }, _@72, { t, { b }, _@73, _@74, _@75 } };
-  ({ { b }, _@76, _@77, { t, { r }, { t, { r }, _@78, _@79, _@80 }, _@81, _@82 } }) -> { t, { r }, { t, { b }, _@76, _@77, _@78 }, _@79, { t, { b }, _@80, _@81, _@82 } };
-  ({ { b }, _@83, _@84, { t, { r }, _@85, _@86, { t, { r }, _@87, _@88, _@89 } } }) -> { t, { r }, { t, { b }, _@83, _@84, _@85 }, _@86, { t, { b }, _@87, _@88, _@89 } };
-  ({ _@90, _@91, _@92, _@93 }) -> { t, _@90, _@91, _@92, _@93 }
+balance(_@60,_@61,_@62,_@63) -> case { _@60, _@61, _@62, _@63 } of
+  ({ { b }, { t, { r }, { t, { r }, _@64, _@65, _@66 }, _@67, _@68 }, _@69, _@70 }) -> { t, { r }, { t, { b }, _@64, _@65, _@66 }, _@67, { t, { b }, _@68, _@69, _@70 } };
+  ({ { b }, { t, { r }, _@71, _@72, { t, { r }, _@73, _@74, _@75 } }, _@76, _@77 }) -> { t, { r }, { t, { b }, _@71, _@72, _@73 }, _@74, { t, { b }, _@75, _@76, _@77 } };
+  ({ { b }, _@78, _@79, { t, { r }, { t, { r }, _@80, _@81, _@82 }, _@83, _@84 } }) -> { t, { r }, { t, { b }, _@78, _@79, _@80 }, _@81, { t, { b }, _@82, _@83, _@84 } };
+  ({ { b }, _@85, _@86, { t, { r }, _@87, _@88, { t, { r }, _@89, _@90, _@91 } } }) -> { t, { r }, { t, { b }, _@85, _@86, _@87 }, _@88, { t, { b }, _@89, _@90, _@91 } };
+  ({ _@92, _@93, _@94, _@95 }) -> { t, _@92, _@93, _@94, _@95 }
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 14).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 15).
 -spec balance() -> fun((any()) -> fun((any()) -> fun((integer()) -> fun((any()) -> any())))).
-balance() -> fun (_@94) ->
-  fun (_@95) ->
-    fun (_@96) ->
-      fun (_@97) ->
-        (balance(_@94, _@95, _@96, _@97))
+balance() -> fun (_@96) ->
+  fun (_@97) ->
+    fun (_@98) ->
+      fun (_@99) ->
+        (balance(_@96, _@97, _@98, _@99))
       end
     end
   end
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 21).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 22).
 -spec insert(integer(),any()) -> any().
-insert(_@106,_@107) -> 
-  MakeBlack@128@131 = fun MakeBlack(V) ->
+insert(_@108,_@109) -> 
+  MakeBlack@130@133 = fun MakeBlack(V) ->
     case V of
-      ({ t, _, _@108, _@109, _@110 }) -> { t, { b }, _@108, _@109, _@110 };
+      ({ t, _, _@110, _@111, _@112 }) -> { t, { b }, _@110, _@111, _@112 };
       ({ e }) -> { e }
     end
   end,
-  Ins@f@129@132 = fun
+  Ins@f@131@134 = fun
     Reccase({ Ins@f }) -> 
     fun (V) ->
       case V of
-        ({ e }) -> { t, { r }, { e }, _@106, { e } };
-        ({ t, _@112, _@113, _@114, _@115 }) -> case _@106 < _@114 of
-          (true) -> (balance(_@112, ((Ins@f({ Ins@f }))(_@113)), _@114, _@115));
-          (_) -> case _@106 > _@114 of
-            (true) -> (balance(_@112, _@113, _@114, ((Ins@f({ Ins@f }))(_@115))));
-            (_) -> { t, _@112, _@113, _@114, _@115 }
+        ({ e }) -> { t, { r }, { e }, _@108, { e } };
+        ({ t, _@114, _@115, _@116, _@117 }) -> case _@108 < _@116 of
+          (true) -> (balance(_@114, ((Ins@f({ Ins@f }))(_@115)), _@116, _@117));
+          (_) -> case _@108 > _@116 of
+            (true) -> (balance(_@114, _@115, _@116, ((Ins@f({ Ins@f }))(_@117))));
+            (_) -> { t, _@114, _@115, _@116, _@117 }
           end
         end
       end
     end
   end,
-  Ins@130@133 = (Ins@f@129@132({ Ins@f@129@132 })),
-  (MakeBlack@128@131((Ins@130@133(_@107))))
+  Ins@132@135 = (Ins@f@131@134({ Ins@f@131@134 })),
+  (MakeBlack@130@133((Ins@132@135(_@109))))
 .
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 21).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 22).
 -spec insert() -> fun((integer()) -> fun((any()) -> any())).
-insert() -> fun (_@116) ->
-  fun (_@117) ->
-    (insert(_@116, _@117))
+insert() -> fun (_@118) ->
+  fun (_@119) ->
+    (insert(_@118, _@119))
   end
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 34).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 35).
 -spec buildTree(integer(),any()) -> any().
-buildTree(_@121,_@122) -> case { _@121, _@122 } of
-  ({ 0, _@123 }) -> _@123;
-  ({ _@124, _@125 }) -> (buildTree(_@124 - 1, (insert(_@124, _@125))))
+buildTree(_@123,_@124) -> case { _@123, _@124 } of
+  ({ 0, _@125 }) -> _@125;
+  ({ _@126, _@127 }) -> (buildTree(_@126 - 1, (insert(_@126, _@127))))
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 34).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 35).
 -spec buildTree() -> fun((integer()) -> fun((any()) -> any())).
-buildTree() -> fun (_@126) ->
-  fun (_@127) ->
-    (buildTree(_@126, _@127))
+buildTree() -> fun (_@128) ->
+  fun (_@129) ->
+    (buildTree(_@128, _@129))
   end
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 49).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 50).
 -spec act() -> fun(() -> any()).
-act() -> (effect_console@ps:logShow((data_show@ps:showInt()), (depth((buildTree(100000, { e })))))).
+act() -> fun
+  __do() -> 
+  Dummy = ((bench@ps:opaque(100000))()),
+  (((?MEMOIZE((effect_console@ps:logShow((data_show@ps:showInt())))))((depth((buildTree(Dummy, { e }))))))())
+end.

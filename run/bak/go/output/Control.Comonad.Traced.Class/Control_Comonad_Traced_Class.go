@@ -110,11 +110,11 @@ return gopurs_runtime.RecordDict2("track", "Comonad0", gopurs_runtime.Func(func(
 __local_var_4_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonadTraced_0, "track"), m_3)
 _ = __local_var_4_2
 return gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_6_3 := gopurs_runtime.ConstructorGet(x_5, 1)
+__local_var_6_3 := (*[1024]gopurs_runtime.Value)(x_5.UnsafePtr)[1]
 _ = __local_var_6_3
 return gopurs_runtime.Apply(__local_var_4_2, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_1, "Extend0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Func(func(v1_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(v1_7, __local_var_6_3)
-}), gopurs_runtime.ConstructorGet(x_5, 0)))
+}), (*[1024]gopurs_runtime.Value)(x_5.UnsafePtr)[0]))
 })
 }), gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return comonadStoreT_1_0
@@ -168,7 +168,7 @@ return gopurs_runtime.RecordDict2("track", "Comonad0", gopurs_runtime.Func(func(
 __local_var_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonadTraced_0, "track"), m_2)
 _ = __local_var_3_1
 return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(__local_var_3_1, gopurs_runtime.ConstructorGet(x_4, 1))
+return gopurs_runtime.Apply(__local_var_3_1, (*[1024]gopurs_runtime.Value)(x_4.UnsafePtr)[1])
 })
 }), gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return comonadEnvT_1_0

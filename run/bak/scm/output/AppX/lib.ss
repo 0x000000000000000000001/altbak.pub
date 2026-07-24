@@ -7,9 +7,9 @@
   (import
     (prefix (chezscheme) scm:)
     (prefix (purescm runtime) rt:)
-    (prefix (Test.Fib lib) Test.Fib.))
+    (prefix (Test.RBTree lib) Test.RBTree.))
 
   (scm:define main
     (scm:lambda ()
-      (scm:let ([_ (Test.Fib.describe)])
-        (Test.Fib.act)))))
+      (scm:let ([_ (Test.RBTree.describe)])
+        (Test.RBTree.act)))))

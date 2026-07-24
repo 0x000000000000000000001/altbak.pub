@@ -20,6 +20,7 @@
   (import
     (prefix (chezscheme) scm:)
     (prefix (purescm runtime) rt:)
+    (prefix (Bench lib) Bench.)
     (prefix (Data.EuclideanRing lib) Data.EuclideanRing.)
     (prefix (Data.Show lib) Data.Show.)
     (prefix (Effect.Console lib) Effect.Console.))
@@ -114,15 +115,18 @@
     (Effect.Console.log (rt:string->pstring "Prime Sieve (sum primes up to 500):")))
 
   (scm:define act
-    (scm:letrec ([go0 (scm:lambda (v1)
-      (scm:lambda (v12)
-        (scm:cond
-          [(Nil? v1) v12]
-          [(Cons? v1) ((go0 (Cons-value1 v1)) (scm:fx+ v12 (Cons-value0 v1)))]
-          [scm:else (rt:fail)])))])
-      (Effect.Console.log (Data.Show.showIntImpl ((go0 (sieve (scm:letrec ([go1 (scm:lambda (curr2)
-        (scm:lambda (acc3)
-          (scm:cond
-            [(scm:fx<? curr2 2) acc3]
-            [scm:else ((go1 (scm:fx- curr2 1)) (Cons* curr2 acc3))])))])
-        ((go1 500) Nil)))) 0))))))
+    (scm:let ([_0 (Bench.opaque 500)])
+      (scm:lambda ()
+        (scm:let ([dummy1 (_0)])
+          ((scm:letrec ([go2 (scm:lambda (v3)
+            (scm:lambda (v14)
+              (scm:cond
+                [(Nil? v3) v14]
+                [(Cons? v3) ((go2 (Cons-value1 v3)) (scm:fx+ v14 (Cons-value0 v3)))]
+                [scm:else (rt:fail)])))])
+            (Effect.Console.log (Data.Show.showIntImpl ((go2 (sieve (scm:letrec ([go3 (scm:lambda (curr4)
+              (scm:lambda (acc5)
+                (scm:cond
+                  [(scm:fx<? curr4 2) acc5]
+                  [scm:else ((go3 (scm:fx- curr4 1)) (Cons* curr4 acc5))])))])
+              ((go3 dummy1) Nil)))) 0))))))))))

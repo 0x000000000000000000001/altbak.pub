@@ -22,7 +22,7 @@ func Get_showProduct() gopurs_runtime.Value {
 	once_showProduct.Do(func() {
 		showProduct = gopurs_runtime.Func2(func(dictShow_0 gopurs_runtime.Value, dictShow1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str("(product ").StrVal + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), gopurs_runtime.ConstructorGet(v_2, 0)).StrVal).StrVal + gopurs_runtime.Str(" ").StrVal).StrVal + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow1_1, "show"), gopurs_runtime.ConstructorGet(v_2, 1)).StrVal).StrVal + gopurs_runtime.Str(")").StrVal)
+return gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str("(product ").StrVal + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0]).StrVal).StrVal + gopurs_runtime.Str(" ").StrVal).StrVal + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow1_1, "show"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[1]).StrVal).StrVal + gopurs_runtime.Str(")").StrVal)
 }))
 })
 	})
@@ -57,7 +57,7 @@ func Get_functorProduct() gopurs_runtime.Value {
 	once_functorProduct.Do(func() {
 		functorProduct = gopurs_runtime.Func2(func(dictFunctor_0 gopurs_runtime.Value, dictFunctor1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict1("map", gopurs_runtime.Func2(func(f_2 gopurs_runtime.Value, v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), f_2, gopurs_runtime.ConstructorGet(v_3, 0)), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor1_1, "map"), f_2, gopurs_runtime.ConstructorGet(v_3, 1)))
+return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), f_2, (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[0]), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor1_1, "map"), f_2, (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[1]))
 }))
 })
 	})
@@ -75,7 +75,7 @@ _ = eq12_3_0
 eq13_4_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEq11_1, "eq1"), dictEq_2)
 _ = eq13_4_1
 return gopurs_runtime.Func2(func(v_5 gopurs_runtime.Value, v1_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(gopurs_runtime.Apply2(eq12_3_0, gopurs_runtime.ConstructorGet(v_5, 0), gopurs_runtime.ConstructorGet(v1_6, 0)).IntVal != 0 && gopurs_runtime.Apply2(eq13_4_1, gopurs_runtime.ConstructorGet(v_5, 1), gopurs_runtime.ConstructorGet(v1_6, 1)).IntVal != 0)
+return gopurs_runtime.Bool(gopurs_runtime.Apply2(eq12_3_0, (*[1024]gopurs_runtime.Value)(v_5.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v1_6.UnsafePtr)[0]).IntVal != 0 && gopurs_runtime.Apply2(eq13_4_1, (*[1024]gopurs_runtime.Value)(v_5.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(v1_6.UnsafePtr)[1]).IntVal != 0)
 })
 }))
 })
@@ -93,7 +93,7 @@ _ = eq12_3_0
 eq13_4_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEq11_1, "eq1"), dictEq_2)
 _ = eq13_4_1
 return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func2(func(v_5 gopurs_runtime.Value, v1_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(gopurs_runtime.Apply2(eq12_3_0, gopurs_runtime.ConstructorGet(v_5, 0), gopurs_runtime.ConstructorGet(v1_6, 0)).IntVal != 0 && gopurs_runtime.Apply2(eq13_4_1, gopurs_runtime.ConstructorGet(v_5, 1), gopurs_runtime.ConstructorGet(v1_6, 1)).IntVal != 0)
+return gopurs_runtime.Bool(gopurs_runtime.Apply2(eq12_3_0, (*[1024]gopurs_runtime.Value)(v_5.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v1_6.UnsafePtr)[0]).IntVal != 0 && gopurs_runtime.Apply2(eq13_4_1, (*[1024]gopurs_runtime.Value)(v_5.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(v1_6.UnsafePtr)[1]).IntVal != 0)
 }))
 })
 	})
@@ -116,7 +116,7 @@ _ = eq12_5_3
 eq13_6_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_3_1, "eq1"), dictEq_4)
 _ = eq13_6_4
 return gopurs_runtime.Func2(func(v_7 gopurs_runtime.Value, v1_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(gopurs_runtime.Apply2(eq12_5_3, gopurs_runtime.ConstructorGet(v_7, 0), gopurs_runtime.ConstructorGet(v1_8, 0)).IntVal != 0 && gopurs_runtime.Apply2(eq13_6_4, gopurs_runtime.ConstructorGet(v_7, 1), gopurs_runtime.ConstructorGet(v1_8, 1)).IntVal != 0)
+return gopurs_runtime.Bool(gopurs_runtime.Apply2(eq12_5_3, (*[1024]gopurs_runtime.Value)(v_7.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v1_8.UnsafePtr)[0]).IntVal != 0 && gopurs_runtime.Apply2(eq13_6_4, (*[1024]gopurs_runtime.Value)(v_7.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(v1_8.UnsafePtr)[1]).IntVal != 0)
 })
 }))
 _ = eq1Product2_4_2
@@ -126,12 +126,12 @@ _ = compare12_6_5
 compare13_7_6 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd11_2, "compare1"), dictOrd_5)
 _ = compare13_7_6
 return gopurs_runtime.Func2(func(v_8 gopurs_runtime.Value, v1_9 gopurs_runtime.Value) gopurs_runtime.Value {
-v2_10_7 := gopurs_runtime.Apply2(compare12_6_5, gopurs_runtime.ConstructorGet(v_8, 0), gopurs_runtime.ConstructorGet(v1_9, 0))
+v2_10_7 := gopurs_runtime.Apply2(compare12_6_5, (*[1024]gopurs_runtime.Value)(v_8.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v1_9.UnsafePtr)[0])
 _ = v2_10_7
 var __t8 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(v2_10_7.StrVal == "EQ")).IntVal != 0 {
-__t8 = gopurs_runtime.Apply2(compare13_7_6, gopurs_runtime.ConstructorGet(v_8, 1), gopurs_runtime.ConstructorGet(v1_9, 1))
+__t8 = gopurs_runtime.Apply2(compare13_7_6, (*[1024]gopurs_runtime.Value)(v_8.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(v1_9.UnsafePtr)[1])
 goto end_branch_8
 } else {
 
@@ -172,7 +172,7 @@ _ = eq12_7_5
 eq13_8_6 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_4_2, "eq1"), __local_var_6_3)
 _ = eq13_8_6
 eqProduct3_7_4 := gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func2(func(v_9 gopurs_runtime.Value, v1_10 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(gopurs_runtime.Apply2(eq12_7_5, gopurs_runtime.ConstructorGet(v_9, 0), gopurs_runtime.ConstructorGet(v1_10, 0)).IntVal != 0 && gopurs_runtime.Apply2(eq13_8_6, gopurs_runtime.ConstructorGet(v_9, 1), gopurs_runtime.ConstructorGet(v1_10, 1)).IntVal != 0)
+return gopurs_runtime.Bool(gopurs_runtime.Apply2(eq12_7_5, (*[1024]gopurs_runtime.Value)(v_9.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v1_10.UnsafePtr)[0]).IntVal != 0 && gopurs_runtime.Apply2(eq13_8_6, (*[1024]gopurs_runtime.Value)(v_9.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(v1_10.UnsafePtr)[1]).IntVal != 0)
 }))
 _ = eqProduct3_7_4
 return gopurs_runtime.RecordDict2("compare", "Eq0", gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(ord1Product1_1_0, dictOrd11_3), "compare1"), dictOrd_5), gopurs_runtime.Func(func(_dollar__unused_8 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -190,7 +190,7 @@ var once_bihoistProduct sync.Once
 func Get_bihoistProduct() gopurs_runtime.Value {
 	once_bihoistProduct.Do(func() {
 		bihoistProduct = gopurs_runtime.Func3(func(natF_0 gopurs_runtime.Value, natG_1 gopurs_runtime.Value, v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply(natF_0, gopurs_runtime.ConstructorGet(v_2, 0)), gopurs_runtime.Apply(natG_1, gopurs_runtime.ConstructorGet(v_2, 1)))
+return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply(natF_0, (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0]), gopurs_runtime.Apply(natG_1, (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[1]))
 })
 	})
 	return bihoistProduct
@@ -207,11 +207,11 @@ return gopurs_runtime.Func(func(dictApply1_2 gopurs_runtime.Value) gopurs_runtim
 __local_var_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApply1_2, "Functor0"), gopurs_runtime.Value{})
 _ = __local_var_3_1
 functorProduct2_4_2 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func2(func(f_4 gopurs_runtime.Value, v_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "map"), f_4, gopurs_runtime.ConstructorGet(v_5, 0)), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_1, "map"), f_4, gopurs_runtime.ConstructorGet(v_5, 1)))
+return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "map"), f_4, (*[1024]gopurs_runtime.Value)(v_5.UnsafePtr)[0]), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_1, "map"), f_4, (*[1024]gopurs_runtime.Value)(v_5.UnsafePtr)[1]))
 }))
 _ = functorProduct2_4_2
 return gopurs_runtime.RecordDict2("apply", "Functor0", gopurs_runtime.Func2(func(v_5 gopurs_runtime.Value, v1_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictApply_0, "apply"), gopurs_runtime.ConstructorGet(v_5, 0), gopurs_runtime.ConstructorGet(v1_6, 0)), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictApply1_2, "apply"), gopurs_runtime.ConstructorGet(v_5, 1), gopurs_runtime.ConstructorGet(v1_6, 1)))
+return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictApply_0, "apply"), (*[1024]gopurs_runtime.Value)(v_5.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v1_6.UnsafePtr)[0]), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictApply1_2, "apply"), (*[1024]gopurs_runtime.Value)(v_5.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(v1_6.UnsafePtr)[1]))
 }), gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return functorProduct2_4_2
 }))
@@ -236,20 +236,20 @@ _ = __local_var_4_2
 __local_var_5_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_4_2, "Functor0"), gopurs_runtime.Value{})
 _ = __local_var_5_3
 functorProduct2_6_5 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func2(func(f_6 gopurs_runtime.Value, v_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_1, "map"), f_6, gopurs_runtime.ConstructorGet(v_7, 0)), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_5_3, "map"), f_6, gopurs_runtime.ConstructorGet(v_7, 1)))
+return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_1, "map"), f_6, (*[1024]gopurs_runtime.Value)(v_7.UnsafePtr)[0]), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_5_3, "map"), f_6, (*[1024]gopurs_runtime.Value)(v_7.UnsafePtr)[1]))
 }))
 _ = functorProduct2_6_5
 applyProduct2_6_4 := gopurs_runtime.RecordDict2("apply", "Functor0", gopurs_runtime.Func2(func(v_7 gopurs_runtime.Value, v1_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "apply"), gopurs_runtime.ConstructorGet(v_7, 0), gopurs_runtime.ConstructorGet(v1_8, 0)), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_4_2, "apply"), gopurs_runtime.ConstructorGet(v_7, 1), gopurs_runtime.ConstructorGet(v1_8, 1)))
+return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "apply"), (*[1024]gopurs_runtime.Value)(v_7.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v1_8.UnsafePtr)[0]), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_4_2, "apply"), (*[1024]gopurs_runtime.Value)(v_7.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(v1_8.UnsafePtr)[1]))
 }), gopurs_runtime.Func(func(_dollar__unused_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return functorProduct2_6_5
 }))
 _ = applyProduct2_6_4
 return gopurs_runtime.RecordDict2("bind", "Apply0", gopurs_runtime.Func2(func(v_7 gopurs_runtime.Value, f_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBind_0, "bind"), gopurs_runtime.ConstructorGet(v_7, 0), gopurs_runtime.Func(func(x_9 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.ConstructorGet(gopurs_runtime.Apply(f_8, x_9), 0)
-})), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBind1_3, "bind"), gopurs_runtime.ConstructorGet(v_7, 1), gopurs_runtime.Func(func(x_9 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.ConstructorGet(gopurs_runtime.Apply(f_8, x_9), 1)
+return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBind_0, "bind"), (*[1024]gopurs_runtime.Value)(v_7.UnsafePtr)[0], gopurs_runtime.Func(func(x_9 gopurs_runtime.Value) gopurs_runtime.Value {
+return (*[1024]gopurs_runtime.Value)(gopurs_runtime.Apply(f_8, x_9).UnsafePtr)[0]
+})), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBind1_3, "bind"), (*[1024]gopurs_runtime.Value)(v_7.UnsafePtr)[1], gopurs_runtime.Func(func(x_9 gopurs_runtime.Value) gopurs_runtime.Value {
+return (*[1024]gopurs_runtime.Value)(gopurs_runtime.Apply(f_8, x_9).UnsafePtr)[1]
 })))
 }), gopurs_runtime.Func(func(_dollar__unused_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return applyProduct2_6_4
@@ -275,11 +275,11 @@ _ = __local_var_4_2
 __local_var_5_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_4_2, "Functor0"), gopurs_runtime.Value{})
 _ = __local_var_5_3
 functorProduct2_6_5 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func2(func(f_6 gopurs_runtime.Value, v_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_1, "map"), f_6, gopurs_runtime.ConstructorGet(v_7, 0)), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_5_3, "map"), f_6, gopurs_runtime.ConstructorGet(v_7, 1)))
+return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_1, "map"), f_6, (*[1024]gopurs_runtime.Value)(v_7.UnsafePtr)[0]), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_5_3, "map"), f_6, (*[1024]gopurs_runtime.Value)(v_7.UnsafePtr)[1]))
 }))
 _ = functorProduct2_6_5
 applyProduct2_6_4 := gopurs_runtime.RecordDict2("apply", "Functor0", gopurs_runtime.Func2(func(v_7 gopurs_runtime.Value, v1_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "apply"), gopurs_runtime.ConstructorGet(v_7, 0), gopurs_runtime.ConstructorGet(v1_8, 0)), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_4_2, "apply"), gopurs_runtime.ConstructorGet(v_7, 1), gopurs_runtime.ConstructorGet(v1_8, 1)))
+return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "apply"), (*[1024]gopurs_runtime.Value)(v_7.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v1_8.UnsafePtr)[0]), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_4_2, "apply"), (*[1024]gopurs_runtime.Value)(v_7.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(v1_8.UnsafePtr)[1]))
 }), gopurs_runtime.Func(func(_dollar__unused_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return functorProduct2_6_5
 }))

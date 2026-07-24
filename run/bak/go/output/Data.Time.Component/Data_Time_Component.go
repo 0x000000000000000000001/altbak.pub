@@ -203,7 +203,7 @@ var once_enumSecond sync.Once
 func Get_enumSecond() gopurs_runtime.Value {
 	once_enumSecond.Do(func() {
 		enumSecond = gopurs_runtime.RecordDict3("succ", "pred", "Ord0", gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_1_0 := gopurs_runtime.Int(x_0.IntVal + gopurs_runtime.Int(1).IntVal)
+__local_var_1_0 := x_0.IntVal + gopurs_runtime.Int(1).IntVal
 _ = __local_var_1_0
 var __t1 gopurs_runtime.Value
 {
@@ -220,7 +220,7 @@ __t1 = gopurs_runtime.Constructor0("Nothing")
 end_branch_1:
 return __t1
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_1_2 := gopurs_runtime.Int(x_0.IntVal - gopurs_runtime.Int(1).IntVal)
+__local_var_1_2 := x_0.IntVal - gopurs_runtime.Int(1).IntVal
 _ = __local_var_1_2
 var __t3 gopurs_runtime.Value
 {
@@ -278,7 +278,7 @@ var once_enumMinute sync.Once
 func Get_enumMinute() gopurs_runtime.Value {
 	once_enumMinute.Do(func() {
 		enumMinute = gopurs_runtime.RecordDict3("succ", "pred", "Ord0", gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_1_0 := gopurs_runtime.Int(x_0.IntVal + gopurs_runtime.Int(1).IntVal)
+__local_var_1_0 := x_0.IntVal + gopurs_runtime.Int(1).IntVal
 _ = __local_var_1_0
 var __t1 gopurs_runtime.Value
 {
@@ -295,7 +295,7 @@ __t1 = gopurs_runtime.Constructor0("Nothing")
 end_branch_1:
 return __t1
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_1_2 := gopurs_runtime.Int(x_0.IntVal - gopurs_runtime.Int(1).IntVal)
+__local_var_1_2 := x_0.IntVal - gopurs_runtime.Int(1).IntVal
 _ = __local_var_1_2
 var __t3 gopurs_runtime.Value
 {
@@ -353,7 +353,7 @@ var once_enumMillisecond sync.Once
 func Get_enumMillisecond() gopurs_runtime.Value {
 	once_enumMillisecond.Do(func() {
 		enumMillisecond = gopurs_runtime.RecordDict3("succ", "pred", "Ord0", gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_1_0 := gopurs_runtime.Int(x_0.IntVal + gopurs_runtime.Int(1).IntVal)
+__local_var_1_0 := x_0.IntVal + gopurs_runtime.Int(1).IntVal
 _ = __local_var_1_0
 var __t1 gopurs_runtime.Value
 {
@@ -370,7 +370,7 @@ __t1 = gopurs_runtime.Constructor0("Nothing")
 end_branch_1:
 return __t1
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_1_2 := gopurs_runtime.Int(x_0.IntVal - gopurs_runtime.Int(1).IntVal)
+__local_var_1_2 := x_0.IntVal - gopurs_runtime.Int(1).IntVal
 _ = __local_var_1_2
 var __t3 gopurs_runtime.Value
 {
@@ -428,7 +428,7 @@ var once_enumHour sync.Once
 func Get_enumHour() gopurs_runtime.Value {
 	once_enumHour.Do(func() {
 		enumHour = gopurs_runtime.RecordDict3("succ", "pred", "Ord0", gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_1_0 := gopurs_runtime.Int(x_0.IntVal + gopurs_runtime.Int(1).IntVal)
+__local_var_1_0 := x_0.IntVal + gopurs_runtime.Int(1).IntVal
 _ = __local_var_1_0
 var __t1 gopurs_runtime.Value
 {
@@ -445,7 +445,7 @@ __t1 = gopurs_runtime.Constructor0("Nothing")
 end_branch_1:
 return __t1
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_1_2 := gopurs_runtime.Int(x_0.IntVal - gopurs_runtime.Int(1).IntVal)
+__local_var_1_2 := x_0.IntVal - gopurs_runtime.Int(1).IntVal
 _ = __local_var_1_2
 var __t3 gopurs_runtime.Value
 {

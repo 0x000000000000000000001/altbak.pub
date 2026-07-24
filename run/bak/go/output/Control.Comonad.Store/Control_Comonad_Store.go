@@ -21,7 +21,7 @@ var once_runStore sync.Once
 func Get_runStore() gopurs_runtime.Value {
 	once_runStore.Do(func() {
 		runStore = gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.ConstructorGet(v_0, 0), gopurs_runtime.ConstructorGet(v_0, 1))
+return gopurs_runtime.Constructor2("Tuple", (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[1])
 })
 	})
 	return runStore

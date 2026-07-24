@@ -1,4 +1,5 @@
 import * as $runtime from "../runtime.js";
+import * as Bench from "../Bench/index.js";
 import * as Data$dShow from "../Data.Show/index.js";
 import * as Effect$dConsole from "../Effect.Console/index.js";
 const $Color = tag => tag;
@@ -98,5 +99,11 @@ const buildTree = buildTree$a0$copy => buildTree$a1$copy => {
   }
   return buildTree$r;
 };
-const act = /* #__PURE__ */ Effect$dConsole.log(/* #__PURE__ */ Data$dShow.showIntImpl(/* #__PURE__ */ depth(/* #__PURE__ */ buildTree(100000)(E))));
+const act = /* #__PURE__ */ (() => {
+  const $0 = Bench.opaque(100000);
+  return () => {
+    const dummy = $0();
+    return Effect$dConsole.log(Data$dShow.showIntImpl(depth(buildTree(dummy)(E))))();
+  };
+})();
 export {$Color, $Tree, B, E, R, T, act, balance, buildTree, depth, describe, insert, max};

@@ -26,12 +26,12 @@ var once_peek sync.Once
 func Get_peek() gopurs_runtime.Value {
 	once_peek.Do(func() {
 		peek = gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_1_0 := gopurs_runtime.ConstructorGet(v_0, 1)
+__local_var_1_0 := (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[1]
 _ = __local_var_1_0
 return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 i_2_1 := *(__local_var_1_0.PtrVal.(*gopurs_runtime.Value))
 _ = i_2_1
-return gopurs_runtime.Apply(gopurs_runtime.ConstructorGet(v_0, 0), i_2_1)
+return gopurs_runtime.Apply((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0], i_2_1)
 })
 })
 	})
@@ -43,18 +43,18 @@ var once_next sync.Once
 func Get_next() gopurs_runtime.Value {
 	once_next.Do(func() {
 		next = gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_1_0 := gopurs_runtime.ConstructorGet(v_0, 1)
+__local_var_1_0 := (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[1]
 _ = __local_var_1_0
 return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 i_2_1 := *(__local_var_1_0.PtrVal.(*gopurs_runtime.Value))
 _ = i_2_1
 _dollar__unused_3_2 := gopurs_runtime.Apply(gopurs_runtime.Apply2(pkg_Control_Monad_ST_Internal.Get_modifyImpl(), gopurs_runtime.Func(func(s_3 gopurs_runtime.Value) gopurs_runtime.Value {
-s_prime_4_3 := gopurs_runtime.Int(s_3.IntVal + gopurs_runtime.Int(1).IntVal)
+s_prime_4_3 := s_3.IntVal + gopurs_runtime.Int(1).IntVal
 _ = s_prime_4_3
 return gopurs_runtime.RecordDict2("state", "value", s_prime_4_3, s_prime_4_3)
 }), __local_var_1_0), gopurs_runtime.Value{})
 _ = _dollar__unused_3_2
-return gopurs_runtime.Apply(gopurs_runtime.ConstructorGet(v_0, 0), i_2_1)
+return gopurs_runtime.Apply((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0], i_2_1)
 })
 })
 	})
@@ -71,7 +71,7 @@ __local_ref_1 := gopurs_runtime.Bool(false)
 _ = __local_ref_1
 break__3_0 := gopurs_runtime.Value{PtrVal: &__local_ref_1}
 _ = break__3_0
-__local_var_4_3 := gopurs_runtime.ConstructorGet(iter_1, 1)
+__local_var_4_3 := (*[1024]gopurs_runtime.Value)(iter_1.UnsafePtr)[1]
 _ = __local_var_4_3
 return gopurs_runtime.Apply(gopurs_runtime.Apply2(pkg_Control_Monad_ST_Internal.Get_while(), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_4_2 := *(break__3_0.PtrVal.(*gopurs_runtime.Value))
@@ -80,13 +80,13 @@ return gopurs_runtime.Bool(__local_var_4_2.IntVal == 0)
 }), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 i_5_4 := *(__local_var_4_3.PtrVal.(*gopurs_runtime.Value))
 _ = i_5_4
-mx_6_5 := gopurs_runtime.Apply(gopurs_runtime.ConstructorGet(iter_1, 0), i_5_4)
+mx_6_5 := gopurs_runtime.Apply((*[1024]gopurs_runtime.Value)(iter_1.UnsafePtr)[0], i_5_4)
 _ = mx_6_5
 var __t7 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.Bool(mx_6_5.StrVal == "Just").IntVal != 0 && gopurs_runtime.Apply(p_0, gopurs_runtime.ConstructorGet(mx_6_5, 0)).IntVal != 0)).IntVal != 0 {
+if (gopurs_runtime.Bool(gopurs_runtime.Bool(mx_6_5.StrVal == "Just").IntVal != 0 && gopurs_runtime.Apply(p_0, (*[1024]gopurs_runtime.Value)(mx_6_5.UnsafePtr)[0]).IntVal != 0)).IntVal != 0 {
 __t7 = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-_dollar__unused_7_8 := gopurs_runtime.Apply(gopurs_runtime.Apply2(pkg_Data_Array_ST.Get_push(), gopurs_runtime.ConstructorGet(mx_6_5, 0), array_2), gopurs_runtime.Value{})
+_dollar__unused_7_8 := gopurs_runtime.Apply(gopurs_runtime.Apply2(pkg_Data_Array_ST.Get_push(), (*[1024]gopurs_runtime.Value)(mx_6_5.UnsafePtr)[0], array_2), gopurs_runtime.Value{})
 _ = _dollar__unused_7_8
 __local_var_8_9 := gopurs_runtime.Apply(gopurs_runtime.Apply(Get_next(), iter_1), gopurs_runtime.Value{})
 _ = __local_var_8_9
@@ -166,7 +166,7 @@ _ = mx_4_4
 var __t5 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(mx_4_4.StrVal == "Just")).IntVal != 0 {
-__t5 = gopurs_runtime.Apply(f_1, gopurs_runtime.ConstructorGet(mx_4_4, 0))
+__t5 = gopurs_runtime.Apply(f_1, (*[1024]gopurs_runtime.Value)(mx_4_4.UnsafePtr)[0])
 goto end_branch_5
 } else {
 
@@ -202,12 +202,12 @@ var once_exhausted sync.Once
 func Get_exhausted() gopurs_runtime.Value {
 	once_exhausted.Do(func() {
 		exhausted = gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_1_0 := gopurs_runtime.ConstructorGet(x_0, 1)
+__local_var_1_0 := (*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[1]
 _ = __local_var_1_0
 return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 i_2_1 := *(__local_var_1_0.PtrVal.(*gopurs_runtime.Value))
 _ = i_2_1
-__local_var_3_2 := gopurs_runtime.Apply(gopurs_runtime.ConstructorGet(x_0, 0), i_2_1)
+__local_var_3_2 := gopurs_runtime.Apply((*[1024]gopurs_runtime.Value)(x_0.UnsafePtr)[0], i_2_1)
 _ = __local_var_3_2
 return gopurs_runtime.Apply(gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 var __t3 gopurs_runtime.Value

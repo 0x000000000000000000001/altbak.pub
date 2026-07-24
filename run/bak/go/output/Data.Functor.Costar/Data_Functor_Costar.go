@@ -63,9 +63,9 @@ return gopurs_runtime.Apply(g_3, gopurs_runtime.Apply(v_4, gopurs_runtime.Apply(
 }))
 _ = profunctorCostar1_2_1
 return gopurs_runtime.RecordDict3("first", "second", "Profunctor0", gopurs_runtime.Func2(func(v_3 gopurs_runtime.Value, x_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply(v_3, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Functor0_1_0, "map"), pkg_Data_Tuple.Get_fst(), x_4)), gopurs_runtime.ConstructorGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonad_0, "extract"), x_4), 1))
+return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply(v_3, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Functor0_1_0, "map"), pkg_Data_Tuple.Get_fst(), x_4)), (*[1024]gopurs_runtime.Value)(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonad_0, "extract"), x_4).UnsafePtr)[1])
 }), gopurs_runtime.Func2(func(v_3 gopurs_runtime.Value, x_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.ConstructorGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonad_0, "extract"), x_4), 0), gopurs_runtime.Apply(v_3, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Functor0_1_0, "map"), pkg_Data_Tuple.Get_snd(), x_4)))
+return gopurs_runtime.Constructor2("Tuple", (*[1024]gopurs_runtime.Value)(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonad_0, "extract"), x_4).UnsafePtr)[0], gopurs_runtime.Apply(v_3, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Functor0_1_0, "map"), pkg_Data_Tuple.Get_snd(), x_4)))
 }), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return profunctorCostar1_2_1
 }))

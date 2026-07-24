@@ -53,7 +53,7 @@ _ = __local_var_5_4
 var __t6 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(__local_var_5_4.StrVal == "Just")).IntVal != 0 {
-__t6 = gopurs_runtime.Apply2(pkg_Data_Date.Get_adjust(), days_4, gopurs_runtime.ConstructorGet(__local_var_5_4, 0))
+__t6 = gopurs_runtime.Apply2(pkg_Data_Date.Get_adjust(), days_4, (*[1024]gopurs_runtime.Value)(__local_var_5_4.UnsafePtr)[0])
 goto end_branch_6
 } else {
 
@@ -76,7 +76,7 @@ _ = __local_var_6_5
 var __t7 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(__local_var_6_5.StrVal == "Just")).IntVal != 0 {
-__t7 = gopurs_runtime.ConstructorGet(__local_var_6_5, 0)
+__t7 = (*[1024]gopurs_runtime.Value)(__local_var_6_5.UnsafePtr)[0]
 goto end_branch_7
 } else {
 

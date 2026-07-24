@@ -122,7 +122,7 @@ func Get_toStringWith() gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(v_0.StrVal == "Precision")).IntVal != 0 {
-__t0 = gopurs_runtime.Apply(Get_toPrecisionNative(), gopurs_runtime.ConstructorGet(v_0, 0))
+__t0 = gopurs_runtime.Apply(Get_toPrecisionNative(), (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0])
 goto end_branch_0
 } else {
 
@@ -130,7 +130,7 @@ goto end_branch_0
 }
 {
 if (gopurs_runtime.Bool(v_0.StrVal == "Fixed")).IntVal != 0 {
-__t0 = gopurs_runtime.Apply(Get_toFixedNative(), gopurs_runtime.ConstructorGet(v_0, 0))
+__t0 = gopurs_runtime.Apply(Get_toFixedNative(), (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0])
 goto end_branch_0
 } else {
 
@@ -138,7 +138,7 @@ goto end_branch_0
 }
 {
 if (gopurs_runtime.Bool(v_0.StrVal == "Exponential")).IntVal != 0 {
-__t0 = gopurs_runtime.Apply(Get_toExponentialNative(), gopurs_runtime.ConstructorGet(v_0, 0))
+__t0 = gopurs_runtime.Apply(Get_toExponentialNative(), (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0])
 goto end_branch_0
 } else {
 

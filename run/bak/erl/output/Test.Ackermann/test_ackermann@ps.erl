@@ -13,23 +13,27 @@
 -define(MEMOIZE, memoize).
 memoize(X) -> X.
 -endif.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Ackermann.purs", 15).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Ackermann.purs", 16).
 -spec describe() -> fun(() -> any()).
 describe() -> (effect_console@ps:log(<<"Ackermann (3, 4):"/utf8>>)).
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Ackermann.purs", 10).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Ackermann.purs", 11).
 -spec ackermann(integer(),integer()) -> integer().
-ackermann(_@12,_@13) -> case { _@12, _@13 } of
-  ({ 0, _@14 }) -> _@14 + 1;
-  ({ _@15, 0 }) -> (ackermann(_@15 - 1, 1));
-  ({ _@16, _@17 }) -> (ackermann(_@16 - 1, (ackermann(_@16, _@17 - 1))))
+ackermann(_@14,_@15) -> case { _@14, _@15 } of
+  ({ 0, _@16 }) -> _@16 + 1;
+  ({ _@17, 0 }) -> (ackermann(_@17 - 1, 1));
+  ({ _@18, _@19 }) -> (ackermann(_@18 - 1, (ackermann(_@18, _@19 - 1))))
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Ackermann.purs", 10).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Ackermann.purs", 11).
 -spec ackermann() -> fun((integer()) -> fun((integer()) -> integer())).
-ackermann() -> fun (_@18) ->
-  fun (_@19) ->
-    (ackermann(_@18, _@19))
+ackermann() -> fun (_@20) ->
+  fun (_@21) ->
+    (ackermann(_@20, _@21))
   end
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Ackermann.purs", 18).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Ackermann.purs", 19).
 -spec act() -> fun(() -> any()).
-act() -> (effect_console@ps:logShow((data_show@ps:showInt()), (ackermann(3, 4)))).
+act() -> fun
+  __do() -> 
+  Dummy = ((bench@ps:opaque(3))()),
+  (((?MEMOIZE((effect_console@ps:logShow((data_show@ps:showInt())))))((ackermann(Dummy, 4))))())
+end.

@@ -33,7 +33,7 @@ func Get_genericRingProduct() gopurs_runtime.Value {
 	once_genericRingProduct.Do(func() {
 		genericRingProduct = gopurs_runtime.Func2(func(dictGenericRing_0 gopurs_runtime.Value, dictGenericRing1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict1("genericSub'", gopurs_runtime.Func2(func(v_2 gopurs_runtime.Value, v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Product", gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericRing_0, "genericSub'"), gopurs_runtime.ConstructorGet(v_2, 0), gopurs_runtime.ConstructorGet(v1_3, 0)), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericRing1_1, "genericSub'"), gopurs_runtime.ConstructorGet(v_2, 1), gopurs_runtime.ConstructorGet(v1_3, 1)))
+return gopurs_runtime.Constructor2("Product", gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericRing_0, "genericSub'"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v1_3.UnsafePtr)[0]), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericRing1_1, "genericSub'"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(v1_3.UnsafePtr)[1]))
 }))
 })
 	})

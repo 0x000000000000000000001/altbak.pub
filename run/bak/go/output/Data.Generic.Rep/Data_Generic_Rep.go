@@ -92,7 +92,7 @@ return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_2 gopurs_ru
 var __t0 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(v_2.StrVal == "Inl")).IntVal != 0 {
-__t0 = gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str("(Inl ").StrVal + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), gopurs_runtime.ConstructorGet(v_2, 0)).StrVal).StrVal + gopurs_runtime.Str(")").StrVal)
+__t0 = gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str("(Inl ").StrVal + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0]).StrVal).StrVal + gopurs_runtime.Str(")").StrVal)
 goto end_branch_0
 } else {
 
@@ -100,7 +100,7 @@ goto end_branch_0
 }
 {
 if (gopurs_runtime.Bool(v_2.StrVal == "Inr")).IntVal != 0 {
-__t0 = gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str("(Inr ").StrVal + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow1_1, "show"), gopurs_runtime.ConstructorGet(v_2, 0)).StrVal).StrVal + gopurs_runtime.Str(")").StrVal)
+__t0 = gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str("(Inr ").StrVal + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow1_1, "show"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0]).StrVal).StrVal + gopurs_runtime.Str(")").StrVal)
 goto end_branch_0
 } else {
 
@@ -123,7 +123,7 @@ func Get_showProduct() gopurs_runtime.Value {
 	once_showProduct.Do(func() {
 		showProduct = gopurs_runtime.Func2(func(dictShow_0 gopurs_runtime.Value, dictShow1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str("(Product ").StrVal + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), gopurs_runtime.ConstructorGet(v_2, 0)).StrVal).StrVal + gopurs_runtime.Str(" ").StrVal).StrVal + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow1_1, "show"), gopurs_runtime.ConstructorGet(v_2, 1)).StrVal).StrVal + gopurs_runtime.Str(")").StrVal)
+return gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str("(Product ").StrVal + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0]).StrVal).StrVal + gopurs_runtime.Str(" ").StrVal).StrVal + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow1_1, "show"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[1]).StrVal).StrVal + gopurs_runtime.Str(")").StrVal)
 }))
 })
 	})

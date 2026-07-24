@@ -12,7 +12,7 @@ var once_strongFn sync.Once
 func Get_strongFn() gopurs_runtime.Value {
 	once_strongFn.Do(func() {
 		strongFn = gopurs_runtime.RecordDict3("first", "second", "Profunctor0", gopurs_runtime.Func2(func(a2b_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply(a2b_0, gopurs_runtime.ConstructorGet(v_1, 0)), gopurs_runtime.ConstructorGet(v_1, 1))
+return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply(a2b_0, (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[0]), (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[1])
 }), gopurs_runtime.RecordGet(pkg_Data_Tuple.Get_functorTuple(), "map"), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Profunctor.Get_profunctorFn()
 }))

@@ -9,6 +9,7 @@
   (import
     (prefix (chezscheme) scm:)
     (prefix (purescm runtime) rt:)
+    (prefix (Bench lib) Bench.)
     (prefix (Data.Show lib) Data.Show.)
     (prefix (Effect.Console lib) Effect.Console.))
 
@@ -24,4 +25,7 @@
           [scm:else ((ackermann (scm:fx- v0 1)) ((ackermann v0) (scm:fx- v11 1)))]))))
 
   (scm:define act
-    (Effect.Console.log (Data.Show.showIntImpl ((ackermann 3) 4)))))
+    (scm:let ([_0 (Bench.opaque 3)])
+      (scm:lambda ()
+        (scm:let ([dummy1 (_0)])
+          ((Effect.Console.log (Data.Show.showIntImpl ((ackermann dummy1) 4)))))))))

@@ -13,127 +13,131 @@
 -define(MEMOIZE, memoize).
 memoize(X) -> X.
 -endif.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Primes.purs", 13).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Primes.purs", 14).
 -spec 'Nil'() -> any().
 'Nil'() -> { nil }.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Primes.purs", 13).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Primes.purs", 14).
 -spec 'Cons'() -> any().
 'Cons'() -> fun (Value0) ->
   fun (Value1) ->
     { cons, Value0, Value1 }
   end
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Primes.purs", 43).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Primes.purs", 44).
 -spec sumList(test_primes_List(integer())) -> integer().
-sumList(_@25) -> 
-  Go@f@70 = fun
-    Reccase({ Go@f }) -> 
-    fun (V) ->
-      fun (V1) ->
-        case { V, V1 } of
-          ({ { nil }, _@27 }) -> _@27;
-          ({ { cons, _@28, _@29 }, _@30 }) -> (((Go@f({ Go@f }))(_@29))(_@30 + _@28))
-        end
-      end
-    end
-  end,
-  Go@71 = (Go@f@70({ Go@f@70 })),
-  ((Go@71(_@25))(0))
-.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Primes.purs", 43).
--spec sumList() -> fun((test_primes_List(integer())) -> integer()).
-sumList() -> fun (_@31) ->
-  (sumList(_@31))
-end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Primes.purs", 32).
--spec reverse(test_primes_List(any())) -> test_primes_List(any()).
-reverse(_@37) -> 
+sumList(_@27) -> 
   Go@f@72 = fun
     Reccase({ Go@f }) -> 
     fun (V) ->
       fun (V1) ->
         case { V, V1 } of
-          ({ { nil }, _@39 }) -> _@39;
-          ({ { cons, _@40, _@41 }, _@42 }) -> (((Go@f({ Go@f }))(_@41))({ cons, _@40, _@42 }))
+          ({ { nil }, _@29 }) -> _@29;
+          ({ { cons, _@30, _@31 }, _@32 }) -> (((Go@f({ Go@f }))(_@31))(_@32 + _@30))
         end
       end
     end
   end,
   Go@73 = (Go@f@72({ Go@f@72 })),
-  ((Go@73(_@37))({ nil }))
+  ((Go@73(_@27))(0))
 .
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Primes.purs", 32).
--spec reverse() -> fun((test_primes_List(any())) -> test_primes_List(any())).
-reverse() -> fun (_@43) ->
-  (reverse(_@43))
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Primes.purs", 44).
+-spec sumList() -> fun((test_primes_List(integer())) -> integer()).
+sumList() -> fun (_@33) ->
+  (sumList(_@33))
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Primes.purs", 15).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Primes.purs", 33).
+-spec reverse(test_primes_List(any())) -> test_primes_List(any()).
+reverse(_@39) -> 
+  Go@f@74 = fun
+    Reccase({ Go@f }) -> 
+    fun (V) ->
+      fun (V1) ->
+        case { V, V1 } of
+          ({ { nil }, _@41 }) -> _@41;
+          ({ { cons, _@42, _@43 }, _@44 }) -> (((Go@f({ Go@f }))(_@43))({ cons, _@42, _@44 }))
+        end
+      end
+    end
+  end,
+  Go@75 = (Go@f@74({ Go@f@74 })),
+  ((Go@75(_@39))({ nil }))
+.
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Primes.purs", 33).
+-spec reverse() -> fun((test_primes_List(any())) -> test_primes_List(any())).
+reverse() -> fun (_@45) ->
+  (reverse(_@45))
+end.
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Primes.purs", 16).
 -spec range(integer(),integer()) -> test_primes_List(integer()).
-range(_@45,_@46) -> 
-  Go@f@74@76 = fun
+range(_@47,_@48) -> 
+  Go@f@76@78 = fun
     Reccase({ Go@f }) -> 
     fun (Curr) ->
       fun (Acc) ->
-        case Curr < _@45 of
+        case Curr < _@47 of
           (true) -> Acc;
           (_) -> (((Go@f({ Go@f }))(Curr - 1))({ cons, Curr, Acc }))
         end
       end
     end
   end,
-  Go@75@77 = (Go@f@74@76({ Go@f@74@76 })),
-  ((Go@75@77(_@46))({ nil }))
+  Go@77@79 = (Go@f@76@78({ Go@f@76@78 })),
+  ((Go@77@79(_@48))({ nil }))
 .
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Primes.purs", 15).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Primes.purs", 16).
 -spec range() -> fun((integer()) -> fun((integer()) -> test_primes_List(integer()))).
-range() -> fun (_@48) ->
-  fun (_@49) ->
-    (range(_@48, _@49))
+range() -> fun (_@50) ->
+  fun (_@51) ->
+    (range(_@50, _@51))
   end
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Primes.purs", 23).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Primes.purs", 24).
 -spec filter(fun((any()) -> boolean()),test_primes_List(any())) -> test_primes_List(any()).
-filter(_@55,_@56) -> 
-  Go@f@78@80 = fun
+filter(_@57,_@58) -> 
+  Go@f@80@82 = fun
     Reccase({ Go@f }) -> 
     fun (V) ->
       fun (V1) ->
         case { V, V1 } of
-          ({ { nil }, _@58 }) -> (reverse(_@58));
-          ({ { cons, _@59, _@60 }, _@61 }) -> case (_@55(_@59)) of
-            (true) -> (((Go@f({ Go@f }))(_@60))({ cons, _@59, _@61 }));
-            (_) -> (((Go@f({ Go@f }))(_@60))(_@61))
+          ({ { nil }, _@60 }) -> (reverse(_@60));
+          ({ { cons, _@61, _@62 }, _@63 }) -> case (_@57(_@61)) of
+            (true) -> (((Go@f({ Go@f }))(_@62))({ cons, _@61, _@63 }));
+            (_) -> (((Go@f({ Go@f }))(_@62))(_@63))
           end
         end
       end
     end
   end,
-  Go@79@81 = (Go@f@78@80({ Go@f@78@80 })),
-  ((Go@79@81(_@56))({ nil }))
+  Go@81@83 = (Go@f@80@82({ Go@f@80@82 })),
+  ((Go@81@83(_@58))({ nil }))
 .
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Primes.purs", 23).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Primes.purs", 24).
 -spec filter() -> fun((fun((any()) -> boolean())) -> fun((test_primes_List(any())) -> test_primes_List(any()))).
-filter() -> fun (_@62) ->
-  fun (_@63) ->
-    (filter(_@62, _@63))
+filter() -> fun (_@64) ->
+  fun (_@65) ->
+    (filter(_@64, _@65))
   end
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Primes.purs", 39).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Primes.purs", 40).
 -spec sieve(test_primes_List(integer())) -> test_primes_List(integer()).
-sieve(_@66) -> case _@66 of
+sieve(_@68) -> case _@68 of
   ({ nil }) -> { nil };
-  ({ cons, _@67, _@68 }) -> { cons, _@67, (sieve((filter(fun (X) ->
-    (((?MEMOIZE((data_euclideanRing@ps:mod((data_euclideanRing@ps:euclideanRingInt())))))(X))(_@67)) =/= 0
-  end, _@68)))) }
+  ({ cons, _@69, _@70 }) -> { cons, _@69, (sieve((filter(fun (X) ->
+    (((?MEMOIZE((data_euclideanRing@ps:mod((data_euclideanRing@ps:euclideanRingInt())))))(X))(_@69)) =/= 0
+  end, _@70)))) }
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Primes.purs", 39).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Primes.purs", 40).
 -spec sieve() -> fun((test_primes_List(integer())) -> test_primes_List(integer())).
-sieve() -> fun (_@69) ->
-  (sieve(_@69))
+sieve() -> fun (_@71) ->
+  (sieve(_@71))
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Primes.purs", 52).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Primes.purs", 53).
 -spec describe() -> fun(() -> any()).
 describe() -> (effect_console@ps:log(<<"Prime Sieve (sum primes up to 500):"/utf8>>)).
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Primes.purs", 55).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Primes.purs", 56).
 -spec act() -> fun(() -> any()).
-act() -> (effect_console@ps:logShow((data_show@ps:showInt()), (sumList((sieve((range(2, 500)))))))).
+act() -> fun
+  __do() -> 
+  Dummy = ((bench@ps:opaque(500))()),
+  (((?MEMOIZE((effect_console@ps:logShow((data_show@ps:showInt())))))((sumList((sieve((range(2, Dummy))))))))())
+end.

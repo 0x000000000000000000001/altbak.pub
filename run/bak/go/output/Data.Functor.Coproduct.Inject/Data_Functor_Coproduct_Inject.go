@@ -37,7 +37,7 @@ return gopurs_runtime.Constructor1("Left", x_0)
 var __t0 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(v2_0.StrVal == "Left")).IntVal != 0 {
-__t0 = gopurs_runtime.Constructor1("Just", gopurs_runtime.ConstructorGet(v2_0, 0))
+__t0 = gopurs_runtime.Constructor1("Just", (*[1024]gopurs_runtime.Value)(v2_0.UnsafePtr)[0])
 goto end_branch_0
 } else {
 
@@ -91,7 +91,7 @@ goto end_branch_0
 }
 {
 if (gopurs_runtime.Bool(v2_1.StrVal == "Right")).IntVal != 0 {
-__t0 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictInject_0, "prj"), gopurs_runtime.ConstructorGet(v2_1, 0))
+__t0 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictInject_0, "prj"), (*[1024]gopurs_runtime.Value)(v2_1.UnsafePtr)[0])
 goto end_branch_0
 } else {
 

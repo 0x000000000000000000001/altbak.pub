@@ -221,7 +221,7 @@ _ = __local_var_1_0
 var __t1 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(__local_var_1_0.StrVal == "Just")).IntVal != 0 {
-__t1 = gopurs_runtime.ConstructorGet(__local_var_1_0, 0)
+__t1 = (*[1024]gopurs_runtime.Value)(__local_var_1_0.UnsafePtr)[0]
 goto end_branch_1
 } else {
 

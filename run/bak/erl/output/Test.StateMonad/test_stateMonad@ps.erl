@@ -13,107 +13,111 @@
 -define(MEMOIZE, memoize).
 memoize(X) -> X.
 -endif.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/StateMonad.purs", 9).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/StateMonad.purs", 10).
 -spec 'State'() -> any().
 'State'() -> fun (X) ->
   X
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/StateMonad.purs", 11).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/StateMonad.purs", 12).
 -spec runState(test_stateMonad_State(any(),any()),any()) -> #{state => any(),val => any()}.
-runState(_@10,_@11) -> case { _@10, _@11 } of
-  ({ _@12, _@13 }) -> (_@12(_@13))
+runState(_@12,_@13) -> case { _@12, _@13 } of
+  ({ _@14, _@15 }) -> (_@14(_@15))
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/StateMonad.purs", 11).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/StateMonad.purs", 12).
 -spec runState() -> fun((test_stateMonad_State(any(),any())) -> fun((any()) -> #{state => any(),val => any()})).
-runState() -> fun (_@14) ->
-  fun (_@15) ->
-    (runState(_@14, _@15))
+runState() -> fun (_@16) ->
+  fun (_@17) ->
+    (runState(_@16, _@17))
   end
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/StateMonad.purs", 27).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/StateMonad.purs", 28).
 -spec put(any()) -> test_stateMonad_State(any(),any()).
-put(_@16) -> fun (V) ->
-  #{val=>unit, state=>_@16}
+put(_@18) -> fun (V) ->
+  #{val=>unit, state=>_@18}
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/StateMonad.purs", 27).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/StateMonad.purs", 28).
 -spec put() -> fun((any()) -> test_stateMonad_State(any(),any())).
-put() -> fun (_@17) ->
-  (put(_@17))
+put() -> fun (_@19) ->
+  (put(_@19))
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/StateMonad.purs", 21).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/StateMonad.purs", 22).
 -spec pureState(any()) -> test_stateMonad_State(any(),any()).
-pureState(_@18) -> fun (S) ->
-  #{val=>_@18, state=>S}
+pureState(_@20) -> fun (S) ->
+  #{val=>_@20, state=>S}
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/StateMonad.purs", 21).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/StateMonad.purs", 22).
 -spec pureState() -> fun((any()) -> test_stateMonad_State(any(),any())).
-pureState() -> fun (_@19) ->
-  (pureState(_@19))
+pureState() -> fun (_@21) ->
+  (pureState(_@21))
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/StateMonad.purs", 24).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/StateMonad.purs", 25).
 -spec get() -> test_stateMonad_State(any(),any()).
 get() -> fun (S) ->
   #{val=>S, state=>S}
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/StateMonad.purs", 46).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/StateMonad.purs", 47).
 -spec describe() -> fun(() -> any()).
 describe() -> (effect_console@ps:log(<<"State Monad (1.2k Binds, 60 Stack Depth):"/utf8>>)).
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/StateMonad.purs", 15).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/StateMonad.purs", 16).
 -spec bindState(test_stateMonad_State(any(),any()),fun((any()) -> test_stateMonad_State(any(),any()))) -> test_stateMonad_State(any(),any()).
-bindState(_@23,_@24) -> case { _@23, _@24 } of
-  ({ _@25, _@26 }) -> fun (S) ->
-    R1@46 = (_@25(S)),
-    V1@47 = (_@26((maps:get(val, R1@46)))),
-    case V1@47 of
-      (_@27) -> (_@27((maps:get(state, R1@46))))
+bindState(_@25,_@26) -> case { _@25, _@26 } of
+  ({ _@27, _@28 }) -> fun (S) ->
+    R1@48 = (_@27(S)),
+    V1@49 = (_@28((maps:get(val, R1@48)))),
+    case V1@49 of
+      (_@29) -> (_@29((maps:get(state, R1@48))))
     end
   end
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/StateMonad.purs", 15).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/StateMonad.purs", 16).
 -spec bindState() -> fun((test_stateMonad_State(any(),any())) -> fun((fun((any()) -> test_stateMonad_State(any(),any()))) -> test_stateMonad_State(any(),any()))).
-bindState() -> fun (_@28) ->
-  fun (_@29) ->
-    (bindState(_@28, _@29))
+bindState() -> fun (_@30) ->
+  fun (_@31) ->
+    (bindState(_@30, _@31))
   end
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/StateMonad.purs", 30).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/StateMonad.purs", 31).
 -spec modify(fun((any()) -> any())) -> test_stateMonad_State(any(),any()).
-modify(_@30) -> (bindState((get()), fun (S) ->
-  (put((_@30(S))))
+modify(_@32) -> (bindState((get()), fun (S) ->
+  (put((_@32(S))))
 end)).
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/StateMonad.purs", 30).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/StateMonad.purs", 31).
 -spec modify() -> fun((fun((any()) -> any())) -> test_stateMonad_State(any(),any())).
-modify() -> fun (_@31) ->
-  (modify(_@31))
+modify() -> fun (_@33) ->
+  (modify(_@33))
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/StateMonad.purs", 36).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/StateMonad.purs", 37).
 -spec chainModifications(integer()) -> test_stateMonad_State(integer(),any()).
-chainModifications(_@33) -> case _@33 of
+chainModifications(_@35) -> case _@35 of
   (0) -> (pureState(unit));
-  (_@34) -> (bindState((modify(fun (X) ->
+  (_@36) -> (bindState((modify(fun (X) ->
     X + 1
   end)), fun (V1) ->
-    (chainModifications(_@34 - 1))
+    (chainModifications(_@36 - 1))
   end))
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/StateMonad.purs", 36).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/StateMonad.purs", 37).
 -spec chainModifications() -> fun((integer()) -> test_stateMonad_State(integer(),any())).
-chainModifications() -> fun (_@35) ->
-  (chainModifications(_@35))
+chainModifications() -> fun (_@37) ->
+  (chainModifications(_@37))
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/StateMonad.purs", 42).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/StateMonad.purs", 43).
 -spec runManyTimes(integer(),integer()) -> integer().
-runManyTimes(_@39,_@40) -> case { _@39, _@40 } of
-  ({ 0, _@41 }) -> _@41;
-  ({ _@42, _@43 }) -> (runManyTimes(_@42 - 1, _@43 + (maps:get(state, (runState((chainModifications(60)), 0))))))
+runManyTimes(_@41,_@42) -> case { _@41, _@42 } of
+  ({ 0, _@43 }) -> _@43;
+  ({ _@44, _@45 }) -> (runManyTimes(_@44 - 1, _@45 + (maps:get(state, (runState((chainModifications(60)), 0))))))
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/StateMonad.purs", 42).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/StateMonad.purs", 43).
 -spec runManyTimes() -> fun((integer()) -> fun((integer()) -> integer())).
-runManyTimes() -> fun (_@44) ->
-  fun (_@45) ->
-    (runManyTimes(_@44, _@45))
+runManyTimes() -> fun (_@46) ->
+  fun (_@47) ->
+    (runManyTimes(_@46, _@47))
   end
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/StateMonad.purs", 50).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/StateMonad.purs", 51).
 -spec act() -> fun(() -> any()).
-act() -> (effect_console@ps:logShow((data_show@ps:showInt()), (runManyTimes(20, 0)))).
+act() -> fun
+  __do() -> 
+  Dummy = ((bench@ps:opaque(20))()),
+  (((?MEMOIZE((effect_console@ps:logShow((data_show@ps:showInt())))))((runManyTimes(Dummy, 0))))())
+end.

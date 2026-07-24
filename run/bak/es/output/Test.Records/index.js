@@ -1,3 +1,4 @@
+import * as Bench from "../Bench/index.js";
 import * as Data$dEuclideanRing from "../Data.EuclideanRing/index.js";
 import * as Data$dShow from "../Data.Show/index.js";
 import * as Effect$dConsole from "../Effect.Console/index.js";
@@ -17,5 +18,11 @@ const updateRec = updateRec$a0$copy => updateRec$a1$copy => {
 };
 const initial = {a: 0, b: {c: 0, d: {e: 0, f: 0}}};
 const describe = /* #__PURE__ */ Effect$dConsole.log("Deep Record Updates (10k iterations):");
-const act = /* #__PURE__ */ (() => Effect$dConsole.log(Data$dShow.showIntImpl(updateRec(10000)(initial).b.d.f)))();
+const act = /* #__PURE__ */ (() => {
+  const $0 = Bench.opaque(10000);
+  return () => {
+    const dummy = $0();
+    return Effect$dConsole.log(Data$dShow.showIntImpl(updateRec(dummy)(initial).b.d.f))();
+  };
+})();
 export {act, describe, initial, updateRec};

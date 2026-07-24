@@ -112,11 +112,11 @@ var once_foldableTuple sync.Once
 func Get_foldableTuple() gopurs_runtime.Value {
 	once_foldableTuple.Do(func() {
 		foldableTuple = gopurs_runtime.RecordDict4("foldMap1", "foldr1", "foldl1", "Foldable0", gopurs_runtime.Func3(func(dictSemigroup_0 gopurs_runtime.Value, f_1 gopurs_runtime.Value, v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(f_1, gopurs_runtime.ConstructorGet(v_2, 1))
+return gopurs_runtime.Apply(f_1, (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[1])
 }), gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.ConstructorGet(v1_1, 1)
+return (*[1024]gopurs_runtime.Value)(v1_1.UnsafePtr)[1]
 }), gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.ConstructorGet(v1_1, 1)
+return (*[1024]gopurs_runtime.Value)(v1_1.UnsafePtr)[1]
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Foldable.Get_foldableTuple()
 }))
@@ -180,11 +180,11 @@ var once_foldRight1Semigroup sync.Once
 func Get_foldRight1Semigroup() gopurs_runtime.Value {
 	once_foldRight1Semigroup.Do(func() {
 		foldRight1Semigroup = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_2_0 := gopurs_runtime.ConstructorGet(v_0, 1)
+__local_var_2_0 := (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[1]
 _ = __local_var_2_0
 return gopurs_runtime.Constructor2("FoldRight1", gopurs_runtime.Func2(func(a_3 gopurs_runtime.Value, f_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.ConstructorGet(v_0, 0), gopurs_runtime.Apply2(f_4, __local_var_2_0, gopurs_runtime.Apply2(gopurs_runtime.ConstructorGet(v1_1, 0), a_3, f_4)), f_4)
-}), gopurs_runtime.ConstructorGet(v1_1, 1))
+return gopurs_runtime.Apply2((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0], gopurs_runtime.Apply2(f_4, __local_var_2_0, gopurs_runtime.Apply2((*[1024]gopurs_runtime.Value)(v1_1.UnsafePtr)[0], a_3, f_4)), f_4)
+}), (*[1024]gopurs_runtime.Value)(v1_1.UnsafePtr)[1])
 }))
 	})
 	return foldRight1Semigroup
@@ -195,11 +195,11 @@ var once_semigroupDual sync.Once
 func Get_semigroupDual() gopurs_runtime.Value {
 	once_semigroupDual.Do(func() {
 		semigroupDual = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_2_0 := gopurs_runtime.ConstructorGet(v1_1, 1)
+__local_var_2_0 := (*[1024]gopurs_runtime.Value)(v1_1.UnsafePtr)[1]
 _ = __local_var_2_0
 return gopurs_runtime.Constructor2("FoldRight1", gopurs_runtime.Func2(func(a_3 gopurs_runtime.Value, f_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.ConstructorGet(v1_1, 0), gopurs_runtime.Apply2(f_4, __local_var_2_0, gopurs_runtime.Apply2(gopurs_runtime.ConstructorGet(v_0, 0), a_3, f_4)), f_4)
-}), gopurs_runtime.ConstructorGet(v_0, 1))
+return gopurs_runtime.Apply2((*[1024]gopurs_runtime.Value)(v1_1.UnsafePtr)[0], gopurs_runtime.Apply2(f_4, __local_var_2_0, gopurs_runtime.Apply2((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0], a_3, f_4)), f_4)
+}), (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[1])
 }))
 	})
 	return semigroupDual
@@ -268,7 +268,7 @@ _ = __local_var_1_0
 return gopurs_runtime.Func2(func(x_2 gopurs_runtime.Value, a_3 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_4_1 := gopurs_runtime.Apply(__local_var_1_0, a_3)
 _ = __local_var_4_1
-return gopurs_runtime.Apply2(gopurs_runtime.ConstructorGet(__local_var_4_1, 0), gopurs_runtime.ConstructorGet(__local_var_4_1, 1), gopurs_runtime.Func2(func(b_5 gopurs_runtime.Value, a_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2((*[1024]gopurs_runtime.Value)(__local_var_4_1.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(__local_var_4_1.UnsafePtr)[1], gopurs_runtime.Func2(func(b_5 gopurs_runtime.Value, a_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(x_2, a_6, b_5)
 }))
 })
@@ -287,7 +287,7 @@ _ = __local_var_1_0
 return gopurs_runtime.Func2(func(b_2 gopurs_runtime.Value, a_3 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_4_1 := gopurs_runtime.Apply(__local_var_1_0, a_3)
 _ = __local_var_4_1
-return gopurs_runtime.Apply2(gopurs_runtime.ConstructorGet(__local_var_4_1, 0), gopurs_runtime.ConstructorGet(__local_var_4_1, 1), b_2)
+return gopurs_runtime.Apply2((*[1024]gopurs_runtime.Value)(__local_var_4_1.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(__local_var_4_1.UnsafePtr)[1], b_2)
 })
 })
 	})

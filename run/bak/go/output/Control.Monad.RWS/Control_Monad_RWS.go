@@ -55,7 +55,7 @@ func Get_execRWS() gopurs_runtime.Value {
 		execRWS = gopurs_runtime.Func3(func(m_0 gopurs_runtime.Value, r_1 gopurs_runtime.Value, s_2 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_3_0 := gopurs_runtime.Apply2(m_0, r_1, s_2)
 _ = __local_var_3_0
-return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.ConstructorGet(__local_var_3_0, 0), gopurs_runtime.ConstructorGet(__local_var_3_0, 2))
+return gopurs_runtime.Constructor2("Tuple", (*[1024]gopurs_runtime.Value)(__local_var_3_0.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(__local_var_3_0.UnsafePtr)[2])
 })
 	})
 	return execRWS
@@ -68,7 +68,7 @@ func Get_evalRWS() gopurs_runtime.Value {
 		evalRWS = gopurs_runtime.Func3(func(m_0 gopurs_runtime.Value, r_1 gopurs_runtime.Value, s_2 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_3_0 := gopurs_runtime.Apply2(m_0, r_1, s_2)
 _ = __local_var_3_0
-return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.ConstructorGet(__local_var_3_0, 1), gopurs_runtime.ConstructorGet(__local_var_3_0, 2))
+return gopurs_runtime.Constructor2("Tuple", (*[1024]gopurs_runtime.Value)(__local_var_3_0.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(__local_var_3_0.UnsafePtr)[2])
 })
 	})
 	return evalRWS

@@ -13,90 +13,94 @@
 -define(MEMOIZE, memoize).
 memoize(X) -> X.
 -endif.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Polymorphism.purs", 9).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Polymorphism.purs", 10).
 -spec mempty_(any()) -> any().
-mempty_(_@9) -> case _@9 of
-  (_@10) -> (maps:get(mempty_, _@10))
-end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Polymorphism.purs", 9).
--spec mempty_() -> fun((any()) -> any()).
-mempty_() -> fun (_@11) ->
-  (mempty_(_@11))
+mempty_(_@11) -> case _@11 of
+  (_@12) -> (maps:get(mempty_, _@12))
 end.
 %-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Polymorphism.purs", 10).
+-spec mempty_() -> fun((any()) -> any()).
+mempty_() -> fun (_@13) ->
+  (mempty_(_@13))
+end.
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Polymorphism.purs", 11).
 -spec mappend_() -> fun((any()) -> fun((any()) -> fun((any()) -> any()))).
 mappend_() -> fun (Dict) ->
   case Dict of
-    (_@12) -> (maps:get(mappend_, _@12))
+    (_@14) -> (maps:get(mappend_, _@14))
   end
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Polymorphism.purs", 10).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Polymorphism.purs", 11).
 -spec mappend_(any(),any(),any()) -> any().
-mappend_(_@17,_@18,_@19) -> ((((mappend_())(_@17))(_@18))(_@19)).
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Polymorphism.purs", 10).
+mappend_(_@19,_@20,_@21) -> ((((mappend_())(_@19))(_@20))(_@21)).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Polymorphism.purs", 11).
 -spec mappend_(any()) -> any().
-mappend_(_@13) -> case _@13 of
-  (_@16) -> (maps:get(mappend_, _@16))
+mappend_(_@15) -> case _@15 of
+  (_@18) -> (maps:get(mappend_, _@18))
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Polymorphism.purs", 20).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Polymorphism.purs", 21).
 -spec polyLoop() -> fun((any()) -> fun((integer()) -> fun((any()) -> any()))).
 polyLoop() -> fun (DictMonoidish) ->
-  Mappend_1@34 = (?MEMOIZE((mappend_(DictMonoidish)))),
-  Mempty_1@35 = (?MEMOIZE((mempty_(DictMonoidish)))),
+  Mappend_1@40 = (?MEMOIZE((mappend_(DictMonoidish)))),
+  Mempty_1@41 = (?MEMOIZE((mempty_(DictMonoidish)))),
   fun (N_init) ->
     fun (Acc_init) ->
-      Go@f@36 = fun
+      Go@f@42 = fun
         Reccase({ Go@f }) -> 
         fun (V) ->
           fun (V1) ->
             case { V, V1 } of
-              ({ 0, _@21 }) -> _@21;
-              ({ _@22, _@23 }) -> (((Go@f({ Go@f }))(_@22 - 1))(((Mappend_1@34(_@23))(Mempty_1@35))))
+              ({ 0, _@23 }) -> _@23;
+              ({ _@24, _@25 }) -> (((Go@f({ Go@f }))(_@24 - 1))(((Mappend_1@40(_@25))(Mempty_1@41))))
             end
           end
         end
       end,
-      Go@37 = (Go@f@36({ Go@f@36 })),
-      ((Go@37(N_init))(Acc_init))
+      Go@43 = (Go@f@42({ Go@f@42 })),
+      ((Go@43(N_init))(Acc_init))
     end
   end
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Polymorphism.purs", 20).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Polymorphism.purs", 21).
 -spec polyLoop(any(),integer(),any()) -> any().
-polyLoop(_@31,_@32,_@33) -> ((((polyLoop())(_@31))(_@32))(_@33)).
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Polymorphism.purs", 20).
+polyLoop(_@33,_@34,_@35) -> ((((polyLoop())(_@33))(_@34))(_@35)).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Polymorphism.purs", 21).
 -spec polyLoop(any()) -> any().
-polyLoop(_@24) -> 
-  Mappend_1@40 = (?MEMOIZE((mappend_(_@24)))),
-  Mempty_1@41 = (?MEMOIZE((mempty_(_@24)))),
+polyLoop(_@26) -> 
+  Mappend_1@46 = (?MEMOIZE((mappend_(_@26)))),
+  Mempty_1@47 = (?MEMOIZE((mempty_(_@26)))),
   fun (N_init) ->
     fun (Acc_init) ->
-      Go@f@38 = fun
+      Go@f@44 = fun
         Reccase({ Go@f }) -> 
         fun (V) ->
           fun (V1) ->
             case { V, V1 } of
-              ({ 0, _@28 }) -> _@28;
-              ({ _@29, _@30 }) -> (((Go@f({ Go@f }))(_@29 - 1))(((Mappend_1@40(_@30))(Mempty_1@41))))
+              ({ 0, _@30 }) -> _@30;
+              ({ _@31, _@32 }) -> (((Go@f({ Go@f }))(_@31 - 1))(((Mappend_1@46(_@32))(Mempty_1@47))))
             end
           end
         end
       end,
-      Go@39 = (Go@f@38({ Go@f@38 })),
-      ((Go@39(N_init))(Acc_init))
+      Go@45 = (Go@f@44({ Go@f@44 })),
+      ((Go@45(N_init))(Acc_init))
     end
   end
 .
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Polymorphism.purs", 12).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Polymorphism.purs", 13).
 -spec intMonoidish() -> any().
 intMonoidish() -> #{mempty_=>1, mappend_=>fun (X) ->
   fun (Y) ->
     X + Y
   end
 end}.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Polymorphism.purs", 26).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Polymorphism.purs", 27).
 -spec describe() -> fun(() -> any()).
 describe() -> (effect_console@ps:log(<<"Polymorphism (10M Type Class Dict Lookups):"/utf8>>)).
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Polymorphism.purs", 29).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Polymorphism.purs", 30).
 -spec act() -> fun(() -> any()).
-act() -> (effect_console@ps:logShow((data_show@ps:showInt()), (polyLoop((intMonoidish()), 10000000, 0)))).
+act() -> fun
+  __do() -> 
+  Dummy = ((bench@ps:opaque(10000000))()),
+  (((?MEMOIZE((effect_console@ps:logShow((data_show@ps:showInt())))))((((?MEMOIZE((polyLoop((intMonoidish())))))(Dummy))(0))))())
+end.

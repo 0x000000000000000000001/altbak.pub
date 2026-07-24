@@ -12,6 +12,7 @@
   (import
     (prefix (chezscheme) scm:)
     (prefix (purescm runtime) rt:)
+    (prefix (Bench lib) Bench.)
     (prefix (Data.Show lib) Data.Show.)
     (prefix (Effect.Console lib) Effect.Console.))
 
@@ -44,9 +45,12 @@
     (Effect.Console.log (rt:string->pstring "Polymorphism (10M Type Class Dict Lookups):")))
 
   (scm:define act
-    (Effect.Console.log (Data.Show.showIntImpl (scm:letrec ([go0 (scm:lambda (v1)
-      (scm:lambda (v12)
-        (scm:cond
-          [(scm:fx=? v1 0) v12]
-          [scm:else ((go0 (scm:fx- v1 1)) (scm:fx+ v12 1))])))])
-      ((go0 10000000) 0))))))
+    (scm:let ([_0 (Bench.opaque 10000000)])
+      (scm:lambda ()
+        (scm:let ([dummy1 (_0)])
+          ((scm:letrec ([go2 (scm:lambda (v3)
+            (scm:lambda (v14)
+              (scm:cond
+                [(scm:fx=? v3 0) v14]
+                [scm:else ((go2 (scm:fx- v3 1)) (scm:fx+ v14 1))])))])
+            (Effect.Console.log (Data.Show.showIntImpl ((go2 dummy1) 0))))))))))

@@ -1,4 +1,5 @@
 import * as $runtime from "../runtime.js";
+import * as Bench from "../Bench/index.js";
 import * as Data$dShow from "../Data.Show/index.js";
 import * as Effect$dConsole from "../Effect.Console/index.js";
 const $Expr = (tag, _1, _2) => ({tag, _1, _2});
@@ -18,5 +19,11 @@ const buildTree = v => {
   if (v === 0) { return $Expr("Val", 1); }
   return $Expr("Add", $Expr("Mul", $Expr("Val", v), buildTree(v - 1 | 0)), $Expr("Sub", buildTree(v - 1 | 0), $Expr("Val", 1)));
 };
-const act = /* #__PURE__ */ Effect$dConsole.log(/* #__PURE__ */ Data$dShow.showIntImpl(/* #__PURE__ */ $$eval(/* #__PURE__ */ buildTree(3))));
+const act = /* #__PURE__ */ (() => {
+  const $0 = Bench.opaque(3);
+  return () => {
+    const dummy = $0();
+    return Effect$dConsole.log(Data$dShow.showIntImpl($$eval(buildTree(dummy))))();
+  };
+})();
 export {$Expr, Add, Mul, Sub, Val, act, buildTree, describe, $$eval as eval};

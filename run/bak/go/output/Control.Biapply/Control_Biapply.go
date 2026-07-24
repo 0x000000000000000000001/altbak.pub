@@ -13,7 +13,7 @@ var once_biapplyTuple sync.Once
 func Get_biapplyTuple() gopurs_runtime.Value {
 	once_biapplyTuple.Do(func() {
 		biapplyTuple = gopurs_runtime.RecordDict2("biapply", "Bifunctor0", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply(gopurs_runtime.ConstructorGet(v_0, 0), gopurs_runtime.ConstructorGet(v1_1, 0)), gopurs_runtime.Apply(gopurs_runtime.ConstructorGet(v_0, 1), gopurs_runtime.ConstructorGet(v1_1, 1)))
+return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v1_1.UnsafePtr)[0]), gopurs_runtime.Apply((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(v1_1.UnsafePtr)[1]))
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Bifunctor.Get_bifunctorTuple()
 }))

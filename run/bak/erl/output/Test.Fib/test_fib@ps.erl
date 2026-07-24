@@ -13,21 +13,25 @@
 -define(MEMOIZE, memoize).
 memoize(X) -> X.
 -endif.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Fib.purs", 7).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Fib.purs", 8).
 -spec fib(integer()) -> integer().
-fib(_@9) -> case _@9 of
+fib(_@11) -> case _@11 of
   (0) -> 0;
   (1) -> 1;
-  (_@10) -> (fib(_@10 - 1)) + (fib(_@10 - 2))
+  (_@12) -> (fib(_@12 - 1)) + (fib(_@12 - 2))
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Fib.purs", 7).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Fib.purs", 8).
 -spec fib() -> fun((integer()) -> integer()).
-fib() -> fun (_@11) ->
-  (fib(_@11))
+fib() -> fun (_@13) ->
+  (fib(_@13))
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Fib.purs", 12).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Fib.purs", 13).
 -spec describe() -> fun(() -> any()).
 describe() -> (effect_console@ps:log(<<"Fibonacci:"/utf8>>)).
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Fib.purs", 15).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Fib.purs", 16).
 -spec act() -> fun(() -> any()).
-act() -> (effect_console@ps:logShow((data_show@ps:showInt()), (fib(10)))).
+act() -> fun
+  __do() -> 
+  Dummy = ((bench@ps:opaque(10))()),
+  (((?MEMOIZE((effect_console@ps:logShow((data_show@ps:showInt())))))((fib(Dummy))))())
+end.

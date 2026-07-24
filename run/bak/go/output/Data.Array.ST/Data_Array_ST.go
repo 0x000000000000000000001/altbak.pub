@@ -240,7 +240,7 @@ _ = entry_4_1
 var __t2 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(entry_4_1.StrVal == "Just")).IntVal != 0 {
-__t2 = gopurs_runtime.Apply3(Get_poke(), i_0, gopurs_runtime.Apply(f_1, gopurs_runtime.ConstructorGet(entry_4_1, 0)), xs_2)
+__t2 = gopurs_runtime.Apply3(Get_poke(), i_0, gopurs_runtime.Apply(f_1, (*[1024]gopurs_runtime.Value)(entry_4_1.UnsafePtr)[0]), xs_2)
 goto end_branch_2
 } else {
 

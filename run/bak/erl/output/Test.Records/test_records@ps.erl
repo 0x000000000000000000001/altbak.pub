@@ -13,34 +13,38 @@
 -define(MEMOIZE, memoize).
 memoize(X) -> X.
 -endif.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Records.purs", 17).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Records.purs", 18).
 -spec updateRec(integer(),#{b => #{d => #{f => integer(),e => integer()},c => integer()},a => integer()}) -> #{b => #{d => #{f => integer(),e => integer()},c => integer()},a => integer()}.
-updateRec(_@15,_@16) -> case { _@15, _@16 } of
-  ({ 0, _@17 }) -> _@17;
-  ({ _@18, _@19 }) -> (updateRec(_@18 - 1, begin
-    V2@28 = _@19,
-    (V2@28)#{a=>(maps:get(a, _@19)) + 1, b=>begin
-      V3@29 = (maps:get(b, _@19)),
-      (V3@29)#{c=>(maps:get(c, (maps:get(b, _@19)))) + 2, d=>begin
-        V4@30 = (maps:get(d, (maps:get(b, _@19)))),
-        (V4@30)#{e=>(maps:get(e, (maps:get(d, (maps:get(b, _@19)))))) + 3, f=>(maps:get(f, (maps:get(d, (maps:get(b, _@19)))))) + (((?MEMOIZE((data_euclideanRing@ps:mod((data_euclideanRing@ps:euclideanRingInt())))))(_@18))(5))}
+updateRec(_@17,_@18) -> case { _@17, _@18 } of
+  ({ 0, _@19 }) -> _@19;
+  ({ _@20, _@21 }) -> (updateRec(_@20 - 1, begin
+    V2@30 = _@21,
+    (V2@30)#{a=>(maps:get(a, _@21)) + 1, b=>begin
+      V3@31 = (maps:get(b, _@21)),
+      (V3@31)#{c=>(maps:get(c, (maps:get(b, _@21)))) + 2, d=>begin
+        V4@32 = (maps:get(d, (maps:get(b, _@21)))),
+        (V4@32)#{e=>(maps:get(e, (maps:get(d, (maps:get(b, _@21)))))) + 3, f=>(maps:get(f, (maps:get(d, (maps:get(b, _@21)))))) + (((?MEMOIZE((data_euclideanRing@ps:mod((data_euclideanRing@ps:euclideanRingInt())))))(_@20))(5))}
       end}
     end}
   end))
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Records.purs", 17).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Records.purs", 18).
 -spec updateRec() -> fun((integer()) -> fun((#{b => #{d => #{f => integer(),e => integer()},c => integer()},a => integer()}) -> #{b => #{d => #{f => integer(),e => integer()},c => integer()},a => integer()})).
-updateRec() -> fun (_@20) ->
-  fun (_@21) ->
-    (updateRec(_@20, _@21))
+updateRec() -> fun (_@22) ->
+  fun (_@23) ->
+    (updateRec(_@22, _@23))
   end
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Records.purs", 12).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Records.purs", 13).
 -spec initial() -> #{b => #{d => #{f => integer(),e => integer()},c => integer()},a => integer()}.
 initial() -> #{a=>0, b=>#{c=>0, d=>#{e=>0, f=>0}}}.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Records.purs", 28).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Records.purs", 29).
 -spec describe() -> fun(() -> any()).
 describe() -> (effect_console@ps:log(<<"Deep Record Updates (10k iterations):"/utf8>>)).
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Records.purs", 31).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/Records.purs", 32).
 -spec act() -> fun(() -> any()).
-act() -> (effect_console@ps:logShow((data_show@ps:showInt()), (maps:get(f, (maps:get(d, (maps:get(b, (updateRec(10000, (initial()))))))))))).
+act() -> fun
+  __do() -> 
+  Dummy = ((bench@ps:opaque(10000))()),
+  (((?MEMOIZE((effect_console@ps:logShow((data_show@ps:showInt())))))((maps:get(f, (maps:get(d, (maps:get(b, (updateRec(Dummy, (initial())))))))))))())
+end.

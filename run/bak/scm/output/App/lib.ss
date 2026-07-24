@@ -7,6 +7,8 @@
   (import
     (prefix (chezscheme) scm:)
     (prefix (purescm runtime) rt:)
+    (prefix (Bench lib) Bench.)
+    (prefix (Effect.Console lib) Effect.Console.)
     (prefix (Test.Ackermann lib) Test.Ackermann.)
     (prefix (Test.AstTree lib) Test.AstTree.)
     (prefix (Test.Church lib) Test.Church.)
@@ -21,29 +23,19 @@
     (prefix (Test.TCO lib) Test.TCO.))
 
   (scm:define main
-    (scm:lambda ()
-      (scm:let*
-        ([_ (Test.AstTree.describe)]
-         [_ (Test.AstTree.act)]
-         [_ (Test.Fib.describe)]
-         [_ (Test.Fib.act)]
-         [_ (Test.ListOps.describe)]
-         [_ (Test.ListOps.act)]
-         [_ (Test.TCO.describe)]
-         [_ (Test.TCO.act)]
-         [_ (Test.Records.describe)]
-         [_ (Test.Records.act)]
-         [_ (Test.Ackermann.describe)]
-         [_ (Test.Ackermann.act)]
-         [_ (Test.Church.describe)]
-         [_ (Test.Church.act)]
-         [_ (Test.Primes.describe)]
-         [_ (Test.Primes.act)]
-         [_ (Test.RBTree.describe)]
-         [_ (Test.RBTree.act)]
-         [_ (Test.Polymorphism.describe)]
-         [_ (Test.Polymorphism.act)]
-         [_ (Test.StateMonad.describe)]
-         [_ (Test.StateMonad.act)]
-         [_ (Test.LazyEvaluation.describe)])
-          (Test.LazyEvaluation.act)))))
+    (scm:let ([_0 ((Bench.runBench Test.AstTree.describe) Test.AstTree.act)])
+      (scm:lambda ()
+        (scm:let*
+          ([t11 (_0)]
+           [t22 (((Bench.runBench Test.Fib.describe) Test.Fib.act))]
+           [t33 (((Bench.runBench Test.ListOps.describe) Test.ListOps.act))]
+           [t44 (((Bench.runBench Test.TCO.describe) Test.TCO.act))]
+           [t55 (((Bench.runBench Test.Records.describe) Test.Records.act))]
+           [t66 (((Bench.runBench Test.Ackermann.describe) Test.Ackermann.act))]
+           [t77 (((Bench.runBench Test.Church.describe) Test.Church.act))]
+           [t88 (((Bench.runBench Test.Primes.describe) Test.Primes.act))]
+           [t99 (((Bench.runBench Test.RBTree.describe) Test.RBTree.act))]
+           [t1010 (((Bench.runBench Test.Polymorphism.describe) Test.Polymorphism.act))]
+           [t1111 (((Bench.runBench Test.StateMonad.describe) Test.StateMonad.act))]
+           [t1212 (((Bench.runBench Test.LazyEvaluation.describe) Test.LazyEvaluation.act))])
+            ((Effect.Console.log (rt:pstring-concat (rt:pstring-concat (rt:string->pstring "Total exec time: ") (Bench.formatNumber (scm:fl/ (scm:fl+ (scm:fl+ (scm:fl+ (scm:fl+ (scm:fl+ (scm:fl+ (scm:fl+ (scm:fl+ (scm:fl+ (scm:fl+ (scm:fl+ t11 t22) t33) t44) t55) t66) t77) t88) t99) t1010) t1111) t1212) 1000.0))) (rt:string->pstring " ms\n")))))))))

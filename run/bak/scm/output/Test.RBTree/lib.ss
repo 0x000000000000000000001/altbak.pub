@@ -26,6 +26,7 @@
   (import
     (prefix (chezscheme) scm:)
     (prefix (purescm runtime) rt:)
+    (prefix (Bench lib) Bench.)
     (prefix (Data.Show lib) Data.Show.)
     (prefix (Effect.Console lib) Effect.Console.))
 
@@ -172,4 +173,7 @@
           [scm:else ((buildTree (scm:fx- v0 1)) ((insert v0) v11))]))))
 
   (scm:define act
-    (Effect.Console.log (Data.Show.showIntImpl (depth ((buildTree 100000) E))))))
+    (scm:let ([_0 (Bench.opaque 100000)])
+      (scm:lambda ()
+        (scm:let ([dummy1 (_0)])
+          ((Effect.Console.log (Data.Show.showIntImpl (depth ((buildTree dummy1) E))))))))))

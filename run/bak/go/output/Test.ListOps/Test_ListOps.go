@@ -103,7 +103,7 @@ goto end_branch_0
 }
 {
 if (gopurs_runtime.Bool(v2_2.StrVal == "Cons")).IntVal != 0 {
-__t0 = gopurs_runtime.Apply3(Get_foldl(), v_0, gopurs_runtime.Apply2(v_0, v1_1, gopurs_runtime.ConstructorGet(v2_2, 0)), gopurs_runtime.ConstructorGet(v2_2, 1))
+__t0 = gopurs_runtime.Apply3(Get_foldl(), v_0, gopurs_runtime.Apply2(v_0, v1_1, (*[1024]gopurs_runtime.Value)(v2_2.UnsafePtr)[0]), (*[1024]gopurs_runtime.Value)(v2_2.UnsafePtr)[1])
 goto end_branch_0
 } else {
 
@@ -152,9 +152,9 @@ goto end_branch_1
 if (gopurs_runtime.Bool(v_2.StrVal == "Cons")).IntVal != 0 {
 var __t2 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.Apply2(pkg_Data_EuclideanRing.Get_intMod(), gopurs_runtime.ConstructorGet(v_2, 0), gopurs_runtime.Int(2)).IntVal == gopurs_runtime.Int(0).IntVal)).IntVal != 0 {
-v_2_loop = gopurs_runtime.ConstructorGet(v_2, 1)
-v1_3_loop = gopurs_runtime.Constructor2("Cons", gopurs_runtime.ConstructorGet(v_2, 0), v1_3)
+if (gopurs_runtime.Bool(gopurs_runtime.Apply2(pkg_Data_EuclideanRing.Get_intMod(), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0], gopurs_runtime.Int(2)).IntVal == gopurs_runtime.Int(0).IntVal)).IntVal != 0 {
+v_2_loop = (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[1]
+v1_3_loop = gopurs_runtime.Constructor2("Cons", (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0], v1_3)
 continue go__1_0
 __t2 = gopurs_runtime.Value{}
 goto end_branch_2
@@ -163,7 +163,7 @@ goto end_branch_2
 }
 }
 {
-v_2_loop = gopurs_runtime.ConstructorGet(v_2, 1)
+v_2_loop = (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[1]
 v1_3_loop = v1_3
 continue go__1_0
 __t2 = gopurs_runtime.Value{}

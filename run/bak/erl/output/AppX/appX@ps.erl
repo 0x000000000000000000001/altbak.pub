@@ -17,6 +17,6 @@ memoize(X) -> X.
 -spec main() -> fun(() -> any()).
 main() -> fun
   __do() -> 
-  ((test_fib@ps:describe())()),
-  ((test_fib@ps:act())())
+  ((test_rBTree@ps:describe())()),
+  ((test_rBTree@ps:act())())
 end.

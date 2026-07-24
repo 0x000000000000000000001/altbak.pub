@@ -1,4 +1,5 @@
 import * as $runtime from "../runtime.js";
+import * as Bench from "../Bench/index.js";
 import * as Data$dEuclideanRing from "../Data.EuclideanRing/index.js";
 import * as Data$dSemiring from "../Data.Semiring/index.js";
 import * as Data$dShow from "../Data.Show/index.js";
@@ -68,7 +69,7 @@ const filterEvens = lst => {
   };
   return go(lst)(Nil);
 };
-const sumEvens = /* #__PURE__ */ foldl(Data$dSemiring.intAdd)(0)(/* #__PURE__ */ filterEvens(/* #__PURE__ */ (() => {
+const sumEvens = n => foldl(Data$dSemiring.intAdd)(0)(filterEvens((() => {
   const go = go$a0$copy => go$a1$copy => {
     let go$a0 = go$a0$copy, go$a1 = go$a1$copy, go$c = true, go$r;
     while (go$c) {
@@ -83,8 +84,14 @@ const sumEvens = /* #__PURE__ */ foldl(Data$dSemiring.intAdd)(0)(/* #__PURE__ */
     }
     return go$r;
   };
-  return go(900)(Nil);
+  return go(n)(Nil);
 })()));
 const describe = /* #__PURE__ */ Effect$dConsole.log("List Processing (900 elements):");
-const act = /* #__PURE__ */ Effect$dConsole.log(/* #__PURE__ */ Data$dShow.showIntImpl(sumEvens));
+const act = /* #__PURE__ */ (() => {
+  const $0 = Bench.opaque(900);
+  return () => {
+    const dummy = $0();
+    return Effect$dConsole.log(Data$dShow.showIntImpl(sumEvens(dummy)))();
+  };
+})();
 export {$List, Cons, Nil, act, describe, filterEvens, foldl, range, sumEvens};

@@ -18,6 +18,7 @@
   (import
     (prefix (chezscheme) scm:)
     (prefix (purescm runtime) rt:)
+    (prefix (Bench lib) Bench.)
     (prefix (Data.Show lib) Data.Show.)
     (prefix (Effect.Console lib) Effect.Console.))
 
@@ -57,22 +58,35 @@
     (Effect.Console.log (rt:string->pstring "Church Numerals (100k Closure Applications):")))
 
   (scm:define c10
-    (fromInt 10))
+    (scm:lambda (n0)
+      (fromInt n0)))
 
   (scm:define c100
-    (scm:lambda (f0)
-      (scm:lambda (x1)
-        ((c10 (c10 f0)) x1))))
+    (scm:lambda (n0)
+      (scm:let*
+        ([_1 (fromInt n0)]
+         [_2 (fromInt n0)])
+          (scm:lambda (f3)
+            (scm:lambda (x4)
+              ((_1 (_2 f3)) x4))))))
 
   (scm:define c10k
-    (scm:lambda (f0)
-      (scm:lambda (x1)
-        ((c10 (c10 (c100 f0))) x1))))
+    (scm:lambda (n0)
+      (scm:let*
+        ([_1 (c100 n0)]
+         [_2 (c100 n0)])
+          (scm:lambda (f3)
+            (scm:lambda (x4)
+              ((_1 (_2 f3)) x4))))))
 
   (scm:define c100k
-    (scm:lambda (f0)
-      (scm:lambda (x1)
-        ((c10 (c10 (c100 (c10 f0)))) x1))))
+    (scm:lambda (n0)
+      (scm:let*
+        ([_1 (c10k n0)]
+         [_2 (fromInt n0)])
+          (scm:lambda (f3)
+            (scm:lambda (x4)
+              ((_1 (_2 f3)) x4))))))
 
   (scm:define addC
     (scm:lambda (m0)
@@ -82,5 +96,8 @@
             ((m0 f2) ((n1 f2) x3)))))))
 
   (scm:define act
-    (Effect.Console.log (Data.Show.showIntImpl ((c10 (c10 (c100 (c10 (scm:lambda (x0)
-      (scm:fx+ x0 1)))))) 0)))))
+    (scm:let ([_0 (Bench.opaque 10)])
+      (scm:lambda ()
+        (scm:let ([dummy1 (_0)])
+          ((Effect.Console.log (Data.Show.showIntImpl (((c100k dummy1) (scm:lambda (x2)
+            (scm:fx+ x2 1))) 0)))))))))

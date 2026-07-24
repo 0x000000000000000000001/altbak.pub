@@ -1,7 +1,7 @@
 {
   "workspace": {
     "packages": {
-      "ps-scheme-test": {
+      "ps-js-test": {
         "path": "./",
         "core": {
           "dependencies": [
@@ -12,6 +12,7 @@
             "effect",
             "either",
             "maybe",
+            "now",
             "partial",
             "prelude",
             "st",
@@ -1011,6 +1012,16 @@
         "prelude",
         "tuples",
         "unfoldable"
+      ]
+    },
+    "now": {
+      "type": "registry",
+      "version": "6.0.0",
+      "integrity": "sha256-mTyG4s8tps3XIf0jjV/lME2/QlwMzrQly2wqfSSUM3o=",
+      "dependencies": [
+        "datetime",
+        "effect",
+        "prelude"
       ]
     },
     "numbers": {

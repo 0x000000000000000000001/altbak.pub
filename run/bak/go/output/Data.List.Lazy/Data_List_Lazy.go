@@ -78,7 +78,7 @@ goto end_branch_2
 }
 {
 if (gopurs_runtime.Bool(gopurs_runtime.Bool(__local_var_4_1.StrVal == "Cons").IntVal != 0 && gopurs_runtime.Bool(v1_5.StrVal == "Cons").IntVal != 0)).IntVal != 0 {
-__t2 = gopurs_runtime.Constructor2("Cons", gopurs_runtime.Apply2(f_0, gopurs_runtime.ConstructorGet(__local_var_4_1, 0), gopurs_runtime.ConstructorGet(v1_5, 0)), gopurs_runtime.Apply3(Get_zipWith(), f_0, gopurs_runtime.ConstructorGet(__local_var_4_1, 1), gopurs_runtime.ConstructorGet(v1_5, 1)))
+__t2 = gopurs_runtime.Constructor2("Cons", gopurs_runtime.Apply2(f_0, (*[1024]gopurs_runtime.Value)(__local_var_4_1.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v1_5.UnsafePtr)[0]), gopurs_runtime.Apply3(Get_zipWith(), f_0, (*[1024]gopurs_runtime.Value)(__local_var_4_1.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(v1_5.UnsafePtr)[1]))
 goto end_branch_2
 } else {
 
@@ -162,14 +162,14 @@ if (gopurs_runtime.Bool(__local_var_4_0.StrVal == "Cons")).IntVal != 0 {
 var __t2 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(n_0.IntVal == gopurs_runtime.Int(0).IntVal)).IntVal != 0 {
-__t2 = gopurs_runtime.Constructor2("Cons", x_1, gopurs_runtime.ConstructorGet(__local_var_4_0, 1))
+__t2 = gopurs_runtime.Constructor2("Cons", x_1, (*[1024]gopurs_runtime.Value)(__local_var_4_0.UnsafePtr)[1])
 goto end_branch_2
 } else {
 
 }
 }
 {
-__t2 = gopurs_runtime.Constructor2("Cons", gopurs_runtime.ConstructorGet(__local_var_4_0, 0), gopurs_runtime.Apply3(Get_updateAt(), gopurs_runtime.Int(n_0.IntVal - gopurs_runtime.Int(1).IntVal), x_1, gopurs_runtime.ConstructorGet(__local_var_4_0, 1)))
+__t2 = gopurs_runtime.Constructor2("Cons", (*[1024]gopurs_runtime.Value)(__local_var_4_0.UnsafePtr)[0], gopurs_runtime.Apply3(Get_updateAt(), gopurs_runtime.Int(n_0.IntVal - gopurs_runtime.Int(1).IntVal), x_1, (*[1024]gopurs_runtime.Value)(__local_var_4_0.UnsafePtr)[1]))
 }
 end_branch_2:
 __t1 = __t2
@@ -198,14 +198,14 @@ var once_unzip sync.Once
 func Get_unzip() gopurs_runtime.Value {
 	once_unzip.Do(func() {
 		unzip = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_List_Lazy_Types.Get_foldableList(), "foldr"), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_1_0 := gopurs_runtime.ConstructorGet(v_0, 0)
+__local_var_1_0 := (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0]
 _ = __local_var_1_0
-__local_var_2_1 := gopurs_runtime.ConstructorGet(v_0, 1)
+__local_var_2_1 := (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[1]
 _ = __local_var_2_1
 return gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_4_2 := gopurs_runtime.ConstructorGet(v1_3, 0)
+__local_var_4_2 := (*[1024]gopurs_runtime.Value)(v1_3.UnsafePtr)[0]
 _ = __local_var_4_2
-__local_var_5_3 := gopurs_runtime.ConstructorGet(v1_3, 1)
+__local_var_5_3 := (*[1024]gopurs_runtime.Value)(v1_3.UnsafePtr)[1]
 _ = __local_var_5_3
 return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Constructor2("Cons", __local_var_1_0, __local_var_4_2)
@@ -236,7 +236,7 @@ goto end_branch_1
 }
 {
 if (gopurs_runtime.Bool(v_1_0.StrVal == "Cons")).IntVal != 0 {
-__t1 = gopurs_runtime.Constructor1("Just", gopurs_runtime.RecordDict2("head", "tail", gopurs_runtime.ConstructorGet(v_1_0, 0), gopurs_runtime.ConstructorGet(v_1_0, 1)))
+__t1 = gopurs_runtime.Constructor1("Just", gopurs_runtime.RecordDict2("head", "tail", (*[1024]gopurs_runtime.Value)(v_1_0.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v_1_0.UnsafePtr)[1]))
 goto end_branch_1
 } else {
 
@@ -263,7 +263,7 @@ _ = __local_var_2_0
 var __t1 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(__local_var_2_0.StrVal == "Just")).IntVal != 0 {
-__t1 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Constructor2("Tuple", gopurs_runtime.RecordGet(gopurs_runtime.ConstructorGet(__local_var_2_0, 0), "head"), gopurs_runtime.RecordGet(gopurs_runtime.ConstructorGet(__local_var_2_0, 0), "tail")))
+__t1 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Constructor2("Tuple", gopurs_runtime.RecordGet((*[1024]gopurs_runtime.Value)(__local_var_2_0.UnsafePtr)[0], "head"), gopurs_runtime.RecordGet((*[1024]gopurs_runtime.Value)(__local_var_2_0.UnsafePtr)[0], "tail")))
 goto end_branch_1
 } else {
 
@@ -294,8 +294,8 @@ _ = p_0
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Lazy.Get_functorLazy(), "map"), gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.Bool(v_1.StrVal == "Cons").IntVal != 0 && gopurs_runtime.Apply(p_0, gopurs_runtime.ConstructorGet(v_1, 0)).IntVal != 0)).IntVal != 0 {
-__t0 = gopurs_runtime.Constructor2("Cons", gopurs_runtime.ConstructorGet(v_1, 0), gopurs_runtime.Apply2(Get_takeWhile(), p_0, gopurs_runtime.ConstructorGet(v_1, 1)))
+if (gopurs_runtime.Bool(gopurs_runtime.Bool(v_1.StrVal == "Cons").IntVal != 0 && gopurs_runtime.Apply(p_0, (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[0]).IntVal != 0)).IntVal != 0 {
+__t0 = gopurs_runtime.Constructor2("Cons", (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[0], gopurs_runtime.Apply2(Get_takeWhile(), p_0, (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[1]))
 goto end_branch_0
 } else {
 
@@ -349,7 +349,7 @@ goto end_branch_0
 }
 {
 if (gopurs_runtime.Bool(v1_1.StrVal == "Cons")).IntVal != 0 {
-__t0 = gopurs_runtime.Constructor2("Cons", gopurs_runtime.ConstructorGet(v1_1, 0), gopurs_runtime.Apply2(Get_take(), gopurs_runtime.Int(n_0.IntVal - gopurs_runtime.Int(1).IntVal), gopurs_runtime.ConstructorGet(v1_1, 1)))
+__t0 = gopurs_runtime.Constructor2("Cons", (*[1024]gopurs_runtime.Value)(v1_1.UnsafePtr)[0], gopurs_runtime.Apply2(Get_take(), gopurs_runtime.Int(n_0.IntVal - gopurs_runtime.Int(1).IntVal), (*[1024]gopurs_runtime.Value)(v1_1.UnsafePtr)[1]))
 goto end_branch_0
 } else {
 
@@ -381,7 +381,7 @@ _ = __local_var_1_0
 var __t1 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(__local_var_1_0.StrVal == "Just")).IntVal != 0 {
-__t1 = gopurs_runtime.Constructor1("Just", gopurs_runtime.RecordGet(gopurs_runtime.ConstructorGet(__local_var_1_0, 0), "tail"))
+__t1 = gopurs_runtime.Constructor1("Just", gopurs_runtime.RecordGet((*[1024]gopurs_runtime.Value)(__local_var_1_0.UnsafePtr)[0], "tail"))
 goto end_branch_1
 } else {
 
@@ -420,8 +420,8 @@ v2_6_3 := gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), input_4)
 _ = v2_6_3
 var __t4 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.Bool(v2_6_3.StrVal == "Cons").IntVal != 0 && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), gopurs_runtime.ConstructorGet(v1_5_1, 0), gopurs_runtime.ConstructorGet(v2_6_3, 0)).IntVal != 0)).IntVal != 0 {
-__t4 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Constructor1("Loop", gopurs_runtime.RecordDict2("a", "b", gopurs_runtime.ConstructorGet(v1_5_1, 1), gopurs_runtime.ConstructorGet(v2_6_3, 1))))
+if (gopurs_runtime.Bool(gopurs_runtime.Bool(v2_6_3.StrVal == "Cons").IntVal != 0 && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), (*[1024]gopurs_runtime.Value)(v1_5_1.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v2_6_3.UnsafePtr)[0]).IntVal != 0)).IntVal != 0 {
+__t4 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Constructor1("Loop", gopurs_runtime.RecordDict2("a", "b", (*[1024]gopurs_runtime.Value)(v1_5_1.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(v2_6_3.UnsafePtr)[1])))
 goto end_branch_4
 } else {
 
@@ -458,16 +458,16 @@ goto end_branch_6
 if (gopurs_runtime.Bool(v_4.StrVal == "Just")).IntVal != 0 {
 var __t7 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.ConstructorGet(v_4, 0).StrVal == "Loop")).IntVal != 0 {
-__t7 = gopurs_runtime.Constructor1("Loop", gopurs_runtime.UncurriedApp2(__local_var_3_0, gopurs_runtime.RecordGet(gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(v_4, 0), 0), "a"), gopurs_runtime.RecordGet(gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(v_4, 0), 0), "b")))
+if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[0].StrVal == "Loop")).IntVal != 0 {
+__t7 = gopurs_runtime.Constructor1("Loop", gopurs_runtime.UncurriedApp2(__local_var_3_0, gopurs_runtime.RecordGet((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[0].UnsafePtr)[0], "a"), gopurs_runtime.RecordGet((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[0].UnsafePtr)[0], "b")))
 goto end_branch_7
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Bool(gopurs_runtime.ConstructorGet(v_4, 0).StrVal == "Done")).IntVal != 0 {
-__t7 = gopurs_runtime.Constructor1("Done", gopurs_runtime.Constructor1("Just", gopurs_runtime.ConstructorGet(gopurs_runtime.ConstructorGet(v_4, 0), 0)))
+if (gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[0].StrVal == "Done")).IntVal != 0 {
+__t7 = gopurs_runtime.Constructor1("Done", gopurs_runtime.Constructor1("Just", (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[0].UnsafePtr)[0]))
 goto end_branch_7
 } else {
 
@@ -501,7 +501,7 @@ _ = v_6
 var __t9 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(v_6.StrVal == "Loop")).IntVal != 0 {
-v_6_loop = gopurs_runtime.UncurriedApp(__local_var_4_5, gopurs_runtime.ConstructorGet(v_6, 0))
+v_6_loop = gopurs_runtime.UncurriedApp(__local_var_4_5, (*[1024]gopurs_runtime.Value)(v_6.UnsafePtr)[0])
 continue go__5_8
 __t9 = gopurs_runtime.Value{}
 goto end_branch_9
@@ -511,7 +511,7 @@ goto end_branch_9
 }
 {
 if (gopurs_runtime.Bool(v_6.StrVal == "Done")).IntVal != 0 {
-__t9 = gopurs_runtime.ConstructorGet(v_6, 0)
+__t9 = (*[1024]gopurs_runtime.Value)(v_6.UnsafePtr)[0]
 goto end_branch_9
 } else {
 
@@ -549,10 +549,10 @@ v_2_0 := gopurs_runtime.Apply(Get_uncons(), xs_1)
 _ = v_2_0
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.Bool(v_2_0.StrVal == "Just").IntVal != 0 && gopurs_runtime.Apply(p_0, gopurs_runtime.RecordGet(gopurs_runtime.ConstructorGet(v_2_0, 0), "head")).IntVal != 0)).IntVal != 0 {
-__local_var_3_2 := gopurs_runtime.RecordGet(gopurs_runtime.ConstructorGet(v_2_0, 0), "head")
+if (gopurs_runtime.Bool(gopurs_runtime.Bool(v_2_0.StrVal == "Just").IntVal != 0 && gopurs_runtime.Apply(p_0, gopurs_runtime.RecordGet((*[1024]gopurs_runtime.Value)(v_2_0.UnsafePtr)[0], "head")).IntVal != 0)).IntVal != 0 {
+__local_var_3_2 := gopurs_runtime.RecordGet((*[1024]gopurs_runtime.Value)(v_2_0.UnsafePtr)[0], "head")
 _ = __local_var_3_2
-v1_4_3 := gopurs_runtime.Apply2(Get_span(), p_0, gopurs_runtime.RecordGet(gopurs_runtime.ConstructorGet(v_2_0, 0), "tail"))
+v1_4_3 := gopurs_runtime.Apply2(Get_span(), p_0, gopurs_runtime.RecordGet((*[1024]gopurs_runtime.Value)(v_2_0.UnsafePtr)[0], "tail"))
 _ = v1_4_3
 __local_var_5_4 := gopurs_runtime.RecordGet(v1_4_3, "init")
 _ = __local_var_5_4
@@ -647,9 +647,9 @@ goto end_branch_1
 }
 {
 if (gopurs_runtime.Bool(__local_var_4_0.StrVal == "Cons")).IntVal != 0 {
-acc_prime_5_2 := gopurs_runtime.Apply2(f_0, acc_1, gopurs_runtime.ConstructorGet(__local_var_4_0, 0))
+acc_prime_5_2 := gopurs_runtime.Apply2(f_0, acc_1, (*[1024]gopurs_runtime.Value)(__local_var_4_0.UnsafePtr)[0])
 _ = acc_prime_5_2
-__t1 = gopurs_runtime.Constructor2("Cons", acc_prime_5_2, gopurs_runtime.Apply3(Get_scanlLazy(), f_0, acc_prime_5_2, gopurs_runtime.ConstructorGet(__local_var_4_0, 1)))
+__t1 = gopurs_runtime.Constructor2("Cons", acc_prime_5_2, gopurs_runtime.Apply3(Get_scanlLazy(), f_0, acc_prime_5_2, (*[1024]gopurs_runtime.Value)(__local_var_4_0.UnsafePtr)[1]))
 goto end_branch_1
 } else {
 
@@ -899,19 +899,19 @@ goto end_branch_2
 }
 {
 if (gopurs_runtime.Bool(v1_3.StrVal == "Cons")).IntVal != 0 {
-v2_4_3 := gopurs_runtime.Apply3(pkg_Data_List_Internal.Get_insertAndLookupBy(), p_0, gopurs_runtime.ConstructorGet(v1_3, 0), v_2)
+v2_4_3 := gopurs_runtime.Apply3(pkg_Data_List_Internal.Get_insertAndLookupBy(), p_0, (*[1024]gopurs_runtime.Value)(v1_3.UnsafePtr)[0], v_2)
 _ = v2_4_3
 var __t4 gopurs_runtime.Value
 {
 if (gopurs_runtime.RecordGet(v2_4_3, "found")).IntVal != 0 {
-__t4 = gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), gopurs_runtime.Apply2(go__1_1, gopurs_runtime.RecordGet(v2_4_3, "result"), gopurs_runtime.ConstructorGet(v1_3, 1)))
+__t4 = gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), gopurs_runtime.Apply2(go__1_1, gopurs_runtime.RecordGet(v2_4_3, "result"), (*[1024]gopurs_runtime.Value)(v1_3.UnsafePtr)[1]))
 goto end_branch_4
 } else {
 
 }
 }
 {
-__t4 = gopurs_runtime.Constructor2("Cons", gopurs_runtime.ConstructorGet(v1_3, 0), gopurs_runtime.Apply2(go__1_1, gopurs_runtime.RecordGet(v2_4_3, "result"), gopurs_runtime.ConstructorGet(v1_3, 1)))
+__t4 = gopurs_runtime.Constructor2("Cons", (*[1024]gopurs_runtime.Value)(v1_3.UnsafePtr)[0], gopurs_runtime.Apply2(go__1_1, gopurs_runtime.RecordGet(v2_4_3, "result"), (*[1024]gopurs_runtime.Value)(v1_3.UnsafePtr)[1]))
 }
 end_branch_4:
 __t2 = __t4
@@ -991,12 +991,12 @@ goto end_branch_1
 }
 {
 if (gopurs_runtime.Bool(v_2.StrVal == "Cons")).IntVal != 0 {
-v1_3_2 := gopurs_runtime.Apply(f_0, gopurs_runtime.ConstructorGet(v_2, 0))
+v1_3_2 := gopurs_runtime.Apply(f_0, (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0])
 _ = v1_3_2
 var __t3 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(v1_3_2.StrVal == "Nothing")).IntVal != 0 {
-v_2_loop = gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), gopurs_runtime.ConstructorGet(v_2, 1))
+v_2_loop = gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[1])
 continue go__1_0
 __t3 = gopurs_runtime.Value{}
 goto end_branch_3
@@ -1006,7 +1006,7 @@ goto end_branch_3
 }
 {
 if (gopurs_runtime.Bool(v1_3_2.StrVal == "Just")).IntVal != 0 {
-__t3 = gopurs_runtime.Constructor2("Cons", gopurs_runtime.ConstructorGet(v1_3_2, 0), gopurs_runtime.Apply2(Get_mapMaybe(), f_0, gopurs_runtime.ConstructorGet(v_2, 1)))
+__t3 = gopurs_runtime.Constructor2("Cons", (*[1024]gopurs_runtime.Value)(v1_3_2.UnsafePtr)[0], gopurs_runtime.Apply2(Get_mapMaybe(), f_0, (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[1]))
 goto end_branch_3
 } else {
 
@@ -1095,7 +1095,7 @@ var __t1 gopurs_runtime.Value
 if (gopurs_runtime.Bool(v_1.StrVal == "Cons")).IntVal != 0 {
 var __t2 gopurs_runtime.Value
 {
-__local_var_2_3 := gopurs_runtime.Apply(Get_uncons(), gopurs_runtime.ConstructorGet(v_1, 1))
+__local_var_2_3 := gopurs_runtime.Apply(Get_uncons(), (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[1])
 _ = __local_var_2_3
 var __t4 gopurs_runtime.Value
 {
@@ -1119,14 +1119,14 @@ __t4 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_4:
 if (__t4).IntVal != 0 {
-__t2 = gopurs_runtime.Constructor1("Just", gopurs_runtime.ConstructorGet(v_1, 0))
+__t2 = gopurs_runtime.Constructor1("Just", (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[0])
 goto end_branch_2
 } else {
 
 }
 }
 {
-v_1_loop = gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), gopurs_runtime.ConstructorGet(v_1, 1))
+v_1_loop = gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[1])
 continue go__0_0
 __t2 = gopurs_runtime.Value{}
 }
@@ -1216,7 +1216,7 @@ goto end_branch_1
 }
 {
 if (gopurs_runtime.Bool(__local_var_4_0.StrVal == "Cons")).IntVal != 0 {
-__t1 = gopurs_runtime.Constructor2("Cons", gopurs_runtime.ConstructorGet(__local_var_4_0, 0), gopurs_runtime.Apply3(Get_insertAt(), gopurs_runtime.Int(v_0.IntVal - gopurs_runtime.Int(1).IntVal), v1_1, gopurs_runtime.ConstructorGet(__local_var_4_0, 1)))
+__t1 = gopurs_runtime.Constructor2("Cons", (*[1024]gopurs_runtime.Value)(__local_var_4_0.UnsafePtr)[0], gopurs_runtime.Apply3(Get_insertAt(), gopurs_runtime.Int(v_0.IntVal - gopurs_runtime.Int(1).IntVal), v1_1, (*[1024]gopurs_runtime.Value)(__local_var_4_0.UnsafePtr)[1]))
 goto end_branch_1
 } else {
 
@@ -1253,7 +1253,7 @@ var __t1 gopurs_runtime.Value
 if (gopurs_runtime.Bool(v_1.StrVal == "Cons")).IntVal != 0 {
 var __t6 gopurs_runtime.Value
 {
-__local_var_2_7 := gopurs_runtime.Apply(Get_uncons(), gopurs_runtime.ConstructorGet(v_1, 1))
+__local_var_2_7 := gopurs_runtime.Apply(Get_uncons(), (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[1])
 _ = __local_var_2_7
 var __t8 gopurs_runtime.Value
 {
@@ -1284,14 +1284,14 @@ goto end_branch_6
 }
 }
 {
-__local_var_2_2 := gopurs_runtime.Apply(go__0_0, gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), gopurs_runtime.ConstructorGet(v_1, 1)))
+__local_var_2_2 := gopurs_runtime.Apply(go__0_0, gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[1]))
 _ = __local_var_2_2
 var __t3 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(__local_var_2_2.StrVal == "Just")).IntVal != 0 {
-__local_var_3_4 := gopurs_runtime.ConstructorGet(v_1, 0)
+__local_var_3_4 := (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[0]
 _ = __local_var_3_4
-__local_var_4_5 := gopurs_runtime.ConstructorGet(__local_var_2_2, 0)
+__local_var_4_5 := (*[1024]gopurs_runtime.Value)(__local_var_2_2.UnsafePtr)[0]
 _ = __local_var_4_5
 __t3 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Constructor2("Cons", __local_var_3_4, __local_var_4_5)
@@ -1358,14 +1358,14 @@ if (gopurs_runtime.Bool(v_2.StrVal == "Cons")).IntVal != 0 {
 var __t2 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(v1_3.IntVal == gopurs_runtime.Int(0).IntVal)).IntVal != 0 {
-__t2 = gopurs_runtime.Constructor1("Just", gopurs_runtime.ConstructorGet(v_2, 0))
+__t2 = gopurs_runtime.Constructor1("Just", (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0])
 goto end_branch_2
 } else {
 
 }
 }
 {
-v_2_loop = gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), gopurs_runtime.ConstructorGet(v_2, 1))
+v_2_loop = gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[1])
 v1_3_loop = gopurs_runtime.Int(v1_3.IntVal - gopurs_runtime.Int(1).IntVal)
 continue go__1_0
 __t2 = gopurs_runtime.Value{}
@@ -1402,7 +1402,7 @@ _ = __local_var_1_0
 var __t1 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(__local_var_1_0.StrVal == "Just")).IntVal != 0 {
-__t1 = gopurs_runtime.Constructor1("Just", gopurs_runtime.RecordGet(gopurs_runtime.ConstructorGet(__local_var_1_0, 0), "head"))
+__t1 = gopurs_runtime.Constructor1("Just", gopurs_runtime.RecordGet((*[1024]gopurs_runtime.Value)(__local_var_1_0.UnsafePtr)[0], "head"))
 goto end_branch_1
 } else {
 
@@ -1442,12 +1442,12 @@ goto end_branch_1
 }
 {
 if (gopurs_runtime.Bool(v_1_0.StrVal == "Just")).IntVal != 0 {
-v1_2_2 := gopurs_runtime.Apply(Get_uncons(), gopurs_runtime.RecordGet(gopurs_runtime.ConstructorGet(v_1_0, 0), "head"))
+v1_2_2 := gopurs_runtime.Apply(Get_uncons(), gopurs_runtime.RecordGet((*[1024]gopurs_runtime.Value)(v_1_0.UnsafePtr)[0], "head"))
 _ = v1_2_2
 var __t3 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(v1_2_2.StrVal == "Nothing")).IntVal != 0 {
-__t3 = gopurs_runtime.Apply(Get_transpose(), gopurs_runtime.RecordGet(gopurs_runtime.ConstructorGet(v_1_0, 0), "tail"))
+__t3 = gopurs_runtime.Apply(Get_transpose(), gopurs_runtime.RecordGet((*[1024]gopurs_runtime.Value)(v_1_0.UnsafePtr)[0], "tail"))
 goto end_branch_3
 } else {
 
@@ -1455,17 +1455,17 @@ goto end_branch_3
 }
 {
 if (gopurs_runtime.Bool(v1_2_2.StrVal == "Just")).IntVal != 0 {
-__local_var_3_4 := gopurs_runtime.RecordGet(gopurs_runtime.ConstructorGet(v1_2_2, 0), "head")
+__local_var_3_4 := gopurs_runtime.RecordGet((*[1024]gopurs_runtime.Value)(v1_2_2.UnsafePtr)[0], "head")
 _ = __local_var_3_4
-__local_var_4_5 := gopurs_runtime.RecordGet(gopurs_runtime.ConstructorGet(v1_2_2, 0), "tail")
+__local_var_4_5 := gopurs_runtime.RecordGet((*[1024]gopurs_runtime.Value)(v1_2_2.UnsafePtr)[0], "tail")
 _ = __local_var_4_5
-__local_var_5_6 := gopurs_runtime.Apply2(Get_mapMaybe(), Get_head(), gopurs_runtime.RecordGet(gopurs_runtime.ConstructorGet(v_1_0, 0), "tail"))
+__local_var_5_6 := gopurs_runtime.Apply2(Get_mapMaybe(), Get_head(), gopurs_runtime.RecordGet((*[1024]gopurs_runtime.Value)(v_1_0.UnsafePtr)[0], "tail"))
 _ = __local_var_5_6
 __local_var_6_7 := gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Constructor2("Cons", __local_var_3_4, __local_var_5_6)
 }))
 _ = __local_var_6_7
-__local_var_7_9 := gopurs_runtime.Apply2(Get_mapMaybe(), Get_tail(), gopurs_runtime.RecordGet(gopurs_runtime.ConstructorGet(v_1_0, 0), "tail"))
+__local_var_7_9 := gopurs_runtime.Apply2(Get_mapMaybe(), Get_tail(), gopurs_runtime.RecordGet((*[1024]gopurs_runtime.Value)(v_1_0.UnsafePtr)[0], "tail"))
 _ = __local_var_7_9
 __local_var_7_8 := gopurs_runtime.Apply(Get_transpose(), gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Constructor2("Cons", __local_var_4_5, __local_var_7_9)
@@ -1524,9 +1524,9 @@ goto end_branch_0
 }
 {
 if (gopurs_runtime.Bool(v_1.StrVal == "Cons")).IntVal != 0 {
-__local_var_2_1 := gopurs_runtime.ConstructorGet(v_1, 0)
+__local_var_2_1 := (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[0]
 _ = __local_var_2_1
-v1_3_2 := gopurs_runtime.Apply2(Get_span(), gopurs_runtime.Apply(eq_0, __local_var_2_1), gopurs_runtime.ConstructorGet(v_1, 1))
+v1_3_2 := gopurs_runtime.Apply2(Get_span(), gopurs_runtime.Apply(eq_0, __local_var_2_1), (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[1])
 _ = v1_3_2
 __local_var_4_3 := gopurs_runtime.RecordGet(v1_3_2, "init")
 _ = __local_var_4_3
@@ -1595,8 +1595,8 @@ goto end_branch_1
 if (gopurs_runtime.Bool(__local_var_4_0.StrVal == "Cons")).IntVal != 0 {
 var __t2 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.Apply2(cmp_0, x_1, gopurs_runtime.ConstructorGet(__local_var_4_0, 0)).StrVal == "GT")).IntVal != 0 {
-__t2 = gopurs_runtime.Constructor2("Cons", gopurs_runtime.ConstructorGet(__local_var_4_0, 0), gopurs_runtime.Apply3(Get_insertBy(), cmp_0, x_1, gopurs_runtime.ConstructorGet(__local_var_4_0, 1)))
+if (gopurs_runtime.Bool(gopurs_runtime.Apply2(cmp_0, x_1, (*[1024]gopurs_runtime.Value)(__local_var_4_0.UnsafePtr)[0]).StrVal == "GT")).IntVal != 0 {
+__t2 = gopurs_runtime.Constructor2("Cons", (*[1024]gopurs_runtime.Value)(__local_var_4_0.UnsafePtr)[0], gopurs_runtime.Apply3(Get_insertBy(), cmp_0, x_1, (*[1024]gopurs_runtime.Value)(__local_var_4_0.UnsafePtr)[1]))
 goto end_branch_2
 } else {
 
@@ -1664,9 +1664,9 @@ _ = v_5_1
 var __t2 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(v_5_1.StrVal == "Cons")).IntVal != 0 {
-__local_var_6_3 := gopurs_runtime.ConstructorGet(v_5_1, 0)
+__local_var_6_3 := (*[1024]gopurs_runtime.Value)(v_5_1.UnsafePtr)[0]
 _ = __local_var_6_3
-__local_var_7_4 := gopurs_runtime.ConstructorGet(v_5_1, 1)
+__local_var_7_4 := (*[1024]gopurs_runtime.Value)(v_5_1.UnsafePtr)[1]
 _ = __local_var_7_4
 __t2 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictLazy_0, "defer"), gopurs_runtime.Func(func(v1_8 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(op_1, __local_var_6_3, gopurs_runtime.Apply(go__3_0, __local_var_7_4))
@@ -1729,9 +1729,9 @@ goto end_branch_1
 }
 {
 if (gopurs_runtime.Bool(v_4_0.StrVal == "Just")).IntVal != 0 {
-__local_var_5_2 := gopurs_runtime.RecordGet(gopurs_runtime.ConstructorGet(v_4_0, 0), "tail")
+__local_var_5_2 := gopurs_runtime.RecordGet((*[1024]gopurs_runtime.Value)(v_4_0.UnsafePtr)[0], "tail")
 _ = __local_var_5_2
-__t1 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Bind1"), gopurs_runtime.Value{}), "bind"), gopurs_runtime.Apply2(f_1, b_2, gopurs_runtime.RecordGet(gopurs_runtime.ConstructorGet(v_4_0, 0), "head")), gopurs_runtime.Func(func(b_prime_6 gopurs_runtime.Value) gopurs_runtime.Value {
+__t1 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Bind1"), gopurs_runtime.Value{}), "bind"), gopurs_runtime.Apply2(f_1, b_2, gopurs_runtime.RecordGet((*[1024]gopurs_runtime.Value)(v_4_0.UnsafePtr)[0], "head")), gopurs_runtime.Func(func(b_prime_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply4(Get_foldM(), dictMonad_0, f_1, b_prime_6, __local_var_5_2)
 }))
 goto end_branch_1
@@ -1777,7 +1777,7 @@ var __t2 gopurs_runtime.Value
 if (gopurs_runtime.Bool(__local_var_4_1.StrVal == "Just")).IntVal != 0 {
 var __t3 gopurs_runtime.Value
 {
-if (gopurs_runtime.Apply(fn_0, gopurs_runtime.RecordGet(gopurs_runtime.ConstructorGet(__local_var_4_1, 0), "head"))).IntVal != 0 {
+if (gopurs_runtime.Apply(fn_0, gopurs_runtime.RecordGet((*[1024]gopurs_runtime.Value)(__local_var_4_1.UnsafePtr)[0], "head"))).IntVal != 0 {
 __t3 = gopurs_runtime.Constructor1("Just", n_2)
 goto end_branch_3
 } else {
@@ -1786,7 +1786,7 @@ goto end_branch_3
 }
 {
 n_2_loop = gopurs_runtime.Int(n_2.IntVal + gopurs_runtime.Int(1).IntVal)
-list_3_loop = gopurs_runtime.RecordGet(gopurs_runtime.ConstructorGet(__local_var_4_1, 0), "tail")
+list_3_loop = gopurs_runtime.RecordGet((*[1024]gopurs_runtime.Value)(__local_var_4_1.UnsafePtr)[0], "tail")
 continue go__1_0
 __t3 = gopurs_runtime.Value{}
 }
@@ -1830,7 +1830,7 @@ _ = __local_var_2_0
 var __t1 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(__local_var_2_0.StrVal == "Just")).IntVal != 0 {
-__t1 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Int(gopurs_runtime.Int(gopurs_runtime.Apply(Get_length(), xs_1).IntVal - gopurs_runtime.Int(1).IntVal).IntVal - gopurs_runtime.ConstructorGet(__local_var_2_0, 0).IntVal))
+__t1 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Int(gopurs_runtime.Apply(Get_length(), xs_1).IntVal - gopurs_runtime.Int(1).IntVal - (*[1024]gopurs_runtime.Value)(__local_var_2_0.UnsafePtr)[0].IntVal))
 goto end_branch_1
 } else {
 
@@ -1875,9 +1875,9 @@ goto end_branch_3
 }
 {
 if (gopurs_runtime.Bool(v_5_2.StrVal == "Just")).IntVal != 0 {
-__local_var_6_4 := gopurs_runtime.RecordGet(gopurs_runtime.ConstructorGet(v_5_2, 0), "head")
+__local_var_6_4 := gopurs_runtime.RecordGet((*[1024]gopurs_runtime.Value)(v_5_2.UnsafePtr)[0], "head")
 _ = __local_var_6_4
-__local_var_7_5 := gopurs_runtime.RecordGet(gopurs_runtime.ConstructorGet(v_5_2, 0), "tail")
+__local_var_7_5 := gopurs_runtime.RecordGet((*[1024]gopurs_runtime.Value)(v_5_2.UnsafePtr)[0], "tail")
 _ = __local_var_7_5
 __t3 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_1, "bind"), gopurs_runtime.Apply(p_3, __local_var_6_4), gopurs_runtime.Func(func(b_8 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_1, "bind"), gopurs_runtime.Apply3(Get_filterM(), dictMonad_0, p_3, __local_var_7_5), gopurs_runtime.Func(func(xs_prime_9 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -1949,15 +1949,15 @@ goto end_branch_1
 if (gopurs_runtime.Bool(v_2.StrVal == "Cons")).IntVal != 0 {
 var __t2 gopurs_runtime.Value
 {
-if (gopurs_runtime.Apply(p_0, gopurs_runtime.ConstructorGet(v_2, 0))).IntVal != 0 {
-__t2 = gopurs_runtime.Constructor2("Cons", gopurs_runtime.ConstructorGet(v_2, 0), gopurs_runtime.Apply2(Get_filter(), p_0, gopurs_runtime.ConstructorGet(v_2, 1)))
+if (gopurs_runtime.Apply(p_0, (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0])).IntVal != 0 {
+__t2 = gopurs_runtime.Constructor2("Cons", (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0], gopurs_runtime.Apply2(Get_filter(), p_0, (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[1]))
 goto end_branch_2
 } else {
 
 }
 }
 {
-v_2_loop = gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), gopurs_runtime.ConstructorGet(v_2, 1))
+v_2_loop = gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[1])
 continue go__1_0
 __t2 = gopurs_runtime.Value{}
 }
@@ -2035,11 +2035,11 @@ goto end_branch_0
 }
 {
 if (gopurs_runtime.Bool(v_1.StrVal == "Cons")).IntVal != 0 {
-__local_var_2_1 := gopurs_runtime.ConstructorGet(v_1, 0)
+__local_var_2_1 := (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[0]
 _ = __local_var_2_1
 __t0 = gopurs_runtime.Constructor2("Cons", __local_var_2_1, gopurs_runtime.Apply2(Get_nubByEq(), eq_0, gopurs_runtime.Apply2(Get_filter(), gopurs_runtime.Func(func(y_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Bool(gopurs_runtime.Apply2(eq_0, __local_var_2_1, y_3).IntVal == 0)
-}), gopurs_runtime.ConstructorGet(v_1, 1))))
+}), (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[1])))
 goto end_branch_0
 } else {
 
@@ -2144,8 +2144,8 @@ var v_2 = v_2_loop
 _ = v_2
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(gopurs_runtime.Bool(v_2.StrVal == "Cons").IntVal != 0 && gopurs_runtime.Apply(p_0, gopurs_runtime.ConstructorGet(v_2, 0)).IntVal != 0)).IntVal != 0 {
-v_2_loop = gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), gopurs_runtime.ConstructorGet(v_2, 1))
+if (gopurs_runtime.Bool(gopurs_runtime.Bool(v_2.StrVal == "Cons").IntVal != 0 && gopurs_runtime.Apply(p_0, (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0]).IntVal != 0)).IntVal != 0 {
+v_2_loop = gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[1])
 continue go__1_0
 __t1 = gopurs_runtime.Value{}
 goto end_branch_1
@@ -2207,7 +2207,7 @@ goto end_branch_1
 {
 if (gopurs_runtime.Bool(v1_3.StrVal == "Cons")).IntVal != 0 {
 v_2_loop = gopurs_runtime.Int(v_2.IntVal - gopurs_runtime.Int(1).IntVal)
-v1_3_loop = gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), gopurs_runtime.ConstructorGet(v1_3, 1))
+v1_3_loop = gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), (*[1024]gopurs_runtime.Value)(v1_3.UnsafePtr)[1])
 continue go__1_0
 __t1 = gopurs_runtime.Value{}
 goto end_branch_1
@@ -2274,15 +2274,15 @@ goto end_branch_1
 if (gopurs_runtime.Bool(__local_var_4_0.StrVal == "Cons")).IntVal != 0 {
 var __t2 gopurs_runtime.Value
 {
-if (gopurs_runtime.Apply2(eq_0, x_1, gopurs_runtime.ConstructorGet(__local_var_4_0, 0))).IntVal != 0 {
-__t2 = gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), gopurs_runtime.ConstructorGet(__local_var_4_0, 1))
+if (gopurs_runtime.Apply2(eq_0, x_1, (*[1024]gopurs_runtime.Value)(__local_var_4_0.UnsafePtr)[0])).IntVal != 0 {
+__t2 = gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), (*[1024]gopurs_runtime.Value)(__local_var_4_0.UnsafePtr)[1])
 goto end_branch_2
 } else {
 
 }
 }
 {
-__t2 = gopurs_runtime.Constructor2("Cons", gopurs_runtime.ConstructorGet(__local_var_4_0, 0), gopurs_runtime.Apply3(Get_deleteBy(), eq_0, x_1, gopurs_runtime.ConstructorGet(__local_var_4_0, 1)))
+__t2 = gopurs_runtime.Constructor2("Cons", (*[1024]gopurs_runtime.Value)(__local_var_4_0.UnsafePtr)[0], gopurs_runtime.Apply3(Get_deleteBy(), eq_0, x_1, (*[1024]gopurs_runtime.Value)(__local_var_4_0.UnsafePtr)[1]))
 }
 end_branch_2:
 __t1 = __t2
@@ -2361,14 +2361,14 @@ if (gopurs_runtime.Bool(__local_var_3_0.StrVal == "Cons")).IntVal != 0 {
 var __t2 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(n_0.IntVal == gopurs_runtime.Int(0).IntVal)).IntVal != 0 {
-__t2 = gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), gopurs_runtime.ConstructorGet(__local_var_3_0, 1))
+__t2 = gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), (*[1024]gopurs_runtime.Value)(__local_var_3_0.UnsafePtr)[1])
 goto end_branch_2
 } else {
 
 }
 }
 {
-__t2 = gopurs_runtime.Constructor2("Cons", gopurs_runtime.ConstructorGet(__local_var_3_0, 0), gopurs_runtime.Apply2(Get_deleteAt(), gopurs_runtime.Int(n_0.IntVal - gopurs_runtime.Int(1).IntVal), gopurs_runtime.ConstructorGet(__local_var_3_0, 1)))
+__t2 = gopurs_runtime.Constructor2("Cons", (*[1024]gopurs_runtime.Value)(__local_var_3_0.UnsafePtr)[0], gopurs_runtime.Apply2(Get_deleteAt(), gopurs_runtime.Int(n_0.IntVal - gopurs_runtime.Int(1).IntVal), (*[1024]gopurs_runtime.Value)(__local_var_3_0.UnsafePtr)[1]))
 }
 end_branch_2:
 __t1 = __t2
@@ -2496,12 +2496,12 @@ if (gopurs_runtime.Bool(__local_var_4_0.StrVal == "Cons")).IntVal != 0 {
 var __t2 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(n_0.IntVal == gopurs_runtime.Int(0).IntVal)).IntVal != 0 {
-v2_5_3 := gopurs_runtime.Apply(f_1, gopurs_runtime.ConstructorGet(__local_var_4_0, 0))
+v2_5_3 := gopurs_runtime.Apply(f_1, (*[1024]gopurs_runtime.Value)(__local_var_4_0.UnsafePtr)[0])
 _ = v2_5_3
 var __t4 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(v2_5_3.StrVal == "Nothing")).IntVal != 0 {
-__t4 = gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), gopurs_runtime.ConstructorGet(__local_var_4_0, 1))
+__t4 = gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), (*[1024]gopurs_runtime.Value)(__local_var_4_0.UnsafePtr)[1])
 goto end_branch_4
 } else {
 
@@ -2509,7 +2509,7 @@ goto end_branch_4
 }
 {
 if (gopurs_runtime.Bool(v2_5_3.StrVal == "Just")).IntVal != 0 {
-__t4 = gopurs_runtime.Constructor2("Cons", gopurs_runtime.ConstructorGet(v2_5_3, 0), gopurs_runtime.ConstructorGet(__local_var_4_0, 1))
+__t4 = gopurs_runtime.Constructor2("Cons", (*[1024]gopurs_runtime.Value)(v2_5_3.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(__local_var_4_0.UnsafePtr)[1])
 goto end_branch_4
 } else {
 
@@ -2526,7 +2526,7 @@ goto end_branch_2
 }
 }
 {
-__t2 = gopurs_runtime.Constructor2("Cons", gopurs_runtime.ConstructorGet(__local_var_4_0, 0), gopurs_runtime.Apply3(Get_alterAt(), gopurs_runtime.Int(n_0.IntVal - gopurs_runtime.Int(1).IntVal), f_1, gopurs_runtime.ConstructorGet(__local_var_4_0, 1)))
+__t2 = gopurs_runtime.Constructor2("Cons", (*[1024]gopurs_runtime.Value)(__local_var_4_0.UnsafePtr)[0], gopurs_runtime.Apply3(Get_alterAt(), gopurs_runtime.Int(n_0.IntVal - gopurs_runtime.Int(1).IntVal), f_1, (*[1024]gopurs_runtime.Value)(__local_var_4_0.UnsafePtr)[1]))
 }
 end_branch_2:
 __t1 = __t2

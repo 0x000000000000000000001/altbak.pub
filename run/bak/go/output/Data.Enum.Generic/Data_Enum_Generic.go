@@ -27,7 +27,7 @@ _ = __local_var_3_0
 var __t1 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(__local_var_3_0.StrVal == "Just")).IntVal != 0 {
-__t1 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGeneric_0, "to"), gopurs_runtime.ConstructorGet(__local_var_3_0, 0)))
+__t1 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGeneric_0, "to"), (*[1024]gopurs_runtime.Value)(__local_var_3_0.UnsafePtr)[0]))
 goto end_branch_1
 } else {
 
@@ -64,7 +64,7 @@ _ = __local_var_3_0
 var __t1 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(__local_var_3_0.StrVal == "Just")).IntVal != 0 {
-__t1 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGeneric_0, "to"), gopurs_runtime.ConstructorGet(__local_var_3_0, 0)))
+__t1 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGeneric_0, "to"), (*[1024]gopurs_runtime.Value)(__local_var_3_0.UnsafePtr)[0]))
 goto end_branch_1
 } else {
 
@@ -101,7 +101,7 @@ _ = __local_var_3_0
 var __t1 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(__local_var_3_0.StrVal == "Just")).IntVal != 0 {
-__t1 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGeneric_0, "to"), gopurs_runtime.ConstructorGet(__local_var_3_0, 0)))
+__t1 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGeneric_0, "to"), (*[1024]gopurs_runtime.Value)(__local_var_3_0.UnsafePtr)[0]))
 goto end_branch_1
 } else {
 
@@ -153,12 +153,12 @@ return gopurs_runtime.RecordDict2("genericPred'", "genericSucc'", gopurs_runtime
 var __t2 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(v_6.StrVal == "Inl")).IntVal != 0 {
-__local_var_7_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericEnum_0, "genericPred'"), gopurs_runtime.ConstructorGet(v_6, 0))
+__local_var_7_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericEnum_0, "genericPred'"), (*[1024]gopurs_runtime.Value)(v_6.UnsafePtr)[0])
 _ = __local_var_7_3
 var __t4 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(__local_var_7_3.StrVal == "Just")).IntVal != 0 {
-__t4 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Constructor1("Inl", gopurs_runtime.ConstructorGet(__local_var_7_3, 0)))
+__t4 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Constructor1("Inl", (*[1024]gopurs_runtime.Value)(__local_var_7_3.UnsafePtr)[0]))
 goto end_branch_4
 } else {
 
@@ -176,7 +176,7 @@ goto end_branch_2
 }
 {
 if (gopurs_runtime.Bool(v_6.StrVal == "Inr")).IntVal != 0 {
-v1_7_5 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericEnum1_3, "genericPred'"), gopurs_runtime.ConstructorGet(v_6, 0))
+v1_7_5 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericEnum1_3, "genericPred'"), (*[1024]gopurs_runtime.Value)(v_6.UnsafePtr)[0])
 _ = v1_7_5
 var __t6 gopurs_runtime.Value
 {
@@ -189,7 +189,7 @@ goto end_branch_6
 }
 {
 if (gopurs_runtime.Bool(v1_7_5.StrVal == "Just")).IntVal != 0 {
-__t6 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Constructor1("Inr", gopurs_runtime.ConstructorGet(v1_7_5, 0)))
+__t6 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Constructor1("Inr", (*[1024]gopurs_runtime.Value)(v1_7_5.UnsafePtr)[0]))
 goto end_branch_6
 } else {
 
@@ -214,7 +214,7 @@ return __t2
 var __t7 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(v_6.StrVal == "Inl")).IntVal != 0 {
-v1_7_8 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericEnum_0, "genericSucc'"), gopurs_runtime.ConstructorGet(v_6, 0))
+v1_7_8 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericEnum_0, "genericSucc'"), (*[1024]gopurs_runtime.Value)(v_6.UnsafePtr)[0])
 _ = v1_7_8
 var __t9 gopurs_runtime.Value
 {
@@ -227,7 +227,7 @@ goto end_branch_9
 }
 {
 if (gopurs_runtime.Bool(v1_7_8.StrVal == "Just")).IntVal != 0 {
-__t9 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Constructor1("Inl", gopurs_runtime.ConstructorGet(v1_7_8, 0)))
+__t9 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Constructor1("Inl", (*[1024]gopurs_runtime.Value)(v1_7_8.UnsafePtr)[0]))
 goto end_branch_9
 } else {
 
@@ -245,12 +245,12 @@ goto end_branch_7
 }
 {
 if (gopurs_runtime.Bool(v_6.StrVal == "Inr")).IntVal != 0 {
-__local_var_7_10 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericEnum1_3, "genericSucc'"), gopurs_runtime.ConstructorGet(v_6, 0))
+__local_var_7_10 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericEnum1_3, "genericSucc'"), (*[1024]gopurs_runtime.Value)(v_6.UnsafePtr)[0])
 _ = __local_var_7_10
 var __t11 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(__local_var_7_10.StrVal == "Just")).IntVal != 0 {
-__t11 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Constructor1("Inr", gopurs_runtime.ConstructorGet(__local_var_7_10, 0)))
+__t11 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Constructor1("Inr", (*[1024]gopurs_runtime.Value)(__local_var_7_10.UnsafePtr)[0]))
 goto end_branch_11
 } else {
 
@@ -289,12 +289,12 @@ return gopurs_runtime.Func(func(dictGenericBottom1_6 gopurs_runtime.Value) gopur
 genericBottom_prime_7_1 := gopurs_runtime.RecordGet(dictGenericBottom1_6, "genericBottom'")
 _ = genericBottom_prime_7_1
 return gopurs_runtime.RecordDict2("genericPred'", "genericSucc'", gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
-v1_9_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericEnum1_3, "genericPred'"), gopurs_runtime.ConstructorGet(v_8, 1))
+v1_9_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericEnum1_3, "genericPred'"), (*[1024]gopurs_runtime.Value)(v_8.UnsafePtr)[1])
 _ = v1_9_2
 var __t3 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(v1_9_2.StrVal == "Just")).IntVal != 0 {
-__t3 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Constructor2("Product", gopurs_runtime.ConstructorGet(v_8, 0), gopurs_runtime.ConstructorGet(v1_9_2, 0)))
+__t3 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Constructor2("Product", (*[1024]gopurs_runtime.Value)(v_8.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v1_9_2.UnsafePtr)[0]))
 goto end_branch_3
 } else {
 
@@ -302,12 +302,12 @@ goto end_branch_3
 }
 {
 if (gopurs_runtime.Bool(v1_9_2.StrVal == "Nothing")).IntVal != 0 {
-__local_var_10_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericEnum_0, "genericPred'"), gopurs_runtime.ConstructorGet(v_8, 0))
+__local_var_10_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericEnum_0, "genericPred'"), (*[1024]gopurs_runtime.Value)(v_8.UnsafePtr)[0])
 _ = __local_var_10_4
 var __t5 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(__local_var_10_4.StrVal == "Just")).IntVal != 0 {
-__t5 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Constructor2("Product", gopurs_runtime.ConstructorGet(__local_var_10_4, 0), genericTop_prime_5_0))
+__t5 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Constructor2("Product", (*[1024]gopurs_runtime.Value)(__local_var_10_4.UnsafePtr)[0], genericTop_prime_5_0))
 goto end_branch_5
 } else {
 
@@ -329,12 +329,12 @@ __t3 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 end_branch_3:
 return __t3
 }), gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
-v1_9_6 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericEnum1_3, "genericSucc'"), gopurs_runtime.ConstructorGet(v_8, 1))
+v1_9_6 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericEnum1_3, "genericSucc'"), (*[1024]gopurs_runtime.Value)(v_8.UnsafePtr)[1])
 _ = v1_9_6
 var __t7 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(v1_9_6.StrVal == "Just")).IntVal != 0 {
-__t7 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Constructor2("Product", gopurs_runtime.ConstructorGet(v_8, 0), gopurs_runtime.ConstructorGet(v1_9_6, 0)))
+__t7 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Constructor2("Product", (*[1024]gopurs_runtime.Value)(v_8.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v1_9_6.UnsafePtr)[0]))
 goto end_branch_7
 } else {
 
@@ -342,12 +342,12 @@ goto end_branch_7
 }
 {
 if (gopurs_runtime.Bool(v1_9_6.StrVal == "Nothing")).IntVal != 0 {
-__local_var_10_8 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericEnum_0, "genericSucc'"), gopurs_runtime.ConstructorGet(v_8, 0))
+__local_var_10_8 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericEnum_0, "genericSucc'"), (*[1024]gopurs_runtime.Value)(v_8.UnsafePtr)[0])
 _ = __local_var_10_8
 var __t9 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(__local_var_10_8.StrVal == "Just")).IntVal != 0 {
-__t9 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Constructor2("Product", gopurs_runtime.ConstructorGet(__local_var_10_8, 0), genericBottom_prime_7_1))
+__t9 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Constructor2("Product", (*[1024]gopurs_runtime.Value)(__local_var_10_8.UnsafePtr)[0], genericBottom_prime_7_1))
 goto end_branch_9
 } else {
 
@@ -399,7 +399,7 @@ _ = __local_var_2_0
 var __t1 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(__local_var_2_0.StrVal == "Just")).IntVal != 0 {
-__t1 = gopurs_runtime.Constructor1("Just", gopurs_runtime.ConstructorGet(__local_var_2_0, 0))
+__t1 = gopurs_runtime.Constructor1("Just", (*[1024]gopurs_runtime.Value)(__local_var_2_0.UnsafePtr)[0])
 goto end_branch_1
 } else {
 
@@ -416,7 +416,7 @@ _ = __local_var_2_2
 var __t3 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(__local_var_2_2.StrVal == "Just")).IntVal != 0 {
-__t3 = gopurs_runtime.Constructor1("Just", gopurs_runtime.ConstructorGet(__local_var_2_2, 0))
+__t3 = gopurs_runtime.Constructor1("Just", (*[1024]gopurs_runtime.Value)(__local_var_2_2.UnsafePtr)[0])
 goto end_branch_3
 } else {
 
@@ -444,7 +444,7 @@ _ = __local_var_2_0
 var __t1 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(__local_var_2_0.StrVal == "Just")).IntVal != 0 {
-__t1 = gopurs_runtime.Constructor1("Just", gopurs_runtime.ConstructorGet(__local_var_2_0, 0))
+__t1 = gopurs_runtime.Constructor1("Just", (*[1024]gopurs_runtime.Value)(__local_var_2_0.UnsafePtr)[0])
 goto end_branch_1
 } else {
 
@@ -461,7 +461,7 @@ _ = __local_var_2_2
 var __t3 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(__local_var_2_2.StrVal == "Just")).IntVal != 0 {
-__t3 = gopurs_runtime.Constructor1("Just", gopurs_runtime.ConstructorGet(__local_var_2_2, 0))
+__t3 = gopurs_runtime.Constructor1("Just", (*[1024]gopurs_runtime.Value)(__local_var_2_2.UnsafePtr)[0])
 goto end_branch_3
 } else {
 
@@ -517,7 +517,7 @@ _ = __local_var_4_4
 var __t5 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(__local_var_4_4.StrVal == "Just")).IntVal != 0 {
-__t5 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Constructor1("Inl", gopurs_runtime.ConstructorGet(__local_var_4_4, 0)))
+__t5 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Constructor1("Inl", (*[1024]gopurs_runtime.Value)(__local_var_4_4.UnsafePtr)[0]))
 goto end_branch_5
 } else {
 
@@ -539,7 +539,7 @@ _ = __local_var_4_1
 var __t2 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(__local_var_4_1.StrVal == "Just")).IntVal != 0 {
-__t2 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Constructor1("Inr", gopurs_runtime.ConstructorGet(__local_var_4_1, 0)))
+__t2 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Constructor1("Inr", (*[1024]gopurs_runtime.Value)(__local_var_4_1.UnsafePtr)[0]))
 goto end_branch_2
 } else {
 
@@ -557,7 +557,7 @@ return __t3
 var __t6 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(v_3.StrVal == "Inl")).IntVal != 0 {
-__t6 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericBoundedEnum_0, "genericFromEnum'"), gopurs_runtime.ConstructorGet(v_3, 0))
+__t6 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericBoundedEnum_0, "genericFromEnum'"), (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[0])
 goto end_branch_6
 } else {
 
@@ -565,7 +565,7 @@ goto end_branch_6
 }
 {
 if (gopurs_runtime.Bool(v_3.StrVal == "Inr")).IntVal != 0 {
-__t6 = gopurs_runtime.Int(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericBoundedEnum1_2, "genericFromEnum'"), gopurs_runtime.ConstructorGet(v_3, 0)).IntVal + genericCardinality_prime1_1_0.IntVal)
+__t6 = gopurs_runtime.Int(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericBoundedEnum1_2, "genericFromEnum'"), (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[0]).IntVal + genericCardinality_prime1_1_0.IntVal)
 goto end_branch_6
 } else {
 
@@ -604,7 +604,7 @@ _ = __local_var_6_4
 var __t5 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(__local_var_6_4.StrVal == "Just")).IntVal != 0 {
-__t5 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Constructor2("Product", gopurs_runtime.ConstructorGet(__local_var_5_2, 0), gopurs_runtime.ConstructorGet(__local_var_6_4, 0)))
+__t5 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Constructor2("Product", (*[1024]gopurs_runtime.Value)(__local_var_5_2.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(__local_var_6_4.UnsafePtr)[0]))
 goto end_branch_5
 } else {
 
@@ -626,7 +626,7 @@ __t3 = gopurs_runtime.Constructor0("Nothing")
 end_branch_3:
 return __t3
 }), gopurs_runtime.Func(func(v1_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Int(gopurs_runtime.Int(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericBoundedEnum_0, "genericFromEnum'"), gopurs_runtime.ConstructorGet(v1_4, 0)).IntVal * genericCardinality_prime2_3_1.IntVal).IntVal + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericBoundedEnum1_2, "genericFromEnum'"), gopurs_runtime.ConstructorGet(v1_4, 1)).IntVal)
+return gopurs_runtime.Int(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericBoundedEnum_0, "genericFromEnum'"), (*[1024]gopurs_runtime.Value)(v1_4.UnsafePtr)[0]).IntVal * genericCardinality_prime2_3_1.IntVal + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericBoundedEnum1_2, "genericFromEnum'"), (*[1024]gopurs_runtime.Value)(v1_4.UnsafePtr)[1]).IntVal)
 }))
 })
 })
@@ -671,7 +671,7 @@ _ = __local_var_2_0
 var __t1 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(__local_var_2_0.StrVal == "Just")).IntVal != 0 {
-__t1 = gopurs_runtime.Constructor1("Just", gopurs_runtime.ConstructorGet(__local_var_2_0, 0))
+__t1 = gopurs_runtime.Constructor1("Just", (*[1024]gopurs_runtime.Value)(__local_var_2_0.UnsafePtr)[0])
 goto end_branch_1
 } else {
 
@@ -701,7 +701,7 @@ _ = __local_var_2_0
 var __t1 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(__local_var_2_0.StrVal == "Just")).IntVal != 0 {
-__t1 = gopurs_runtime.Constructor1("Just", gopurs_runtime.ConstructorGet(__local_var_2_0, 0))
+__t1 = gopurs_runtime.Constructor1("Just", (*[1024]gopurs_runtime.Value)(__local_var_2_0.UnsafePtr)[0])
 goto end_branch_1
 } else {
 

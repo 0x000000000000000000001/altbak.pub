@@ -19,6 +19,7 @@
   (import
     (prefix (chezscheme) scm:)
     (prefix (purescm runtime) rt:)
+    (prefix (Bench lib) Bench.)
     (prefix (Data.EuclideanRing lib) Data.EuclideanRing.)
     (prefix (Data.Semiring lib) Data.Semiring.)
     (prefix (Data.Show lib) Data.Show.)
@@ -71,15 +72,19 @@
         ((go1 lst0) Nil))))
 
   (scm:define sumEvens
-    (((foldl Data.Semiring.intAdd) 0) (filterEvens (scm:letrec ([go0 (scm:lambda (curr1)
-      (scm:lambda (acc2)
-        (scm:cond
-          [(scm:fx<? curr1 1) acc2]
-          [scm:else ((go0 (scm:fx- curr1 1)) (Cons* curr1 acc2))])))])
-      ((go0 900) Nil)))))
+    (scm:lambda (n0)
+      (((foldl Data.Semiring.intAdd) 0) (filterEvens (scm:letrec ([go1 (scm:lambda (curr2)
+        (scm:lambda (acc3)
+          (scm:cond
+            [(scm:fx<? curr2 1) acc3]
+            [scm:else ((go1 (scm:fx- curr2 1)) (Cons* curr2 acc3))])))])
+        ((go1 n0) Nil))))))
 
   (scm:define describe
     (Effect.Console.log (rt:string->pstring "List Processing (900 elements):")))
 
   (scm:define act
-    (Effect.Console.log (Data.Show.showIntImpl sumEvens))))
+    (scm:let ([_0 (Bench.opaque 900)])
+      (scm:lambda ()
+        (scm:let ([dummy1 (_0)])
+          ((Effect.Console.log (Data.Show.showIntImpl (sumEvens dummy1)))))))))

@@ -26,7 +26,7 @@ return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_1 gopurs_ru
 var __t0 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(v_1.StrVal == "Just")).IntVal != 0 {
-__t0 = gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str("First ((Just ").StrVal + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), gopurs_runtime.ConstructorGet(v_1, 0)).StrVal).StrVal + gopurs_runtime.Str("))").StrVal)
+__t0 = gopurs_runtime.Str(gopurs_runtime.Str(gopurs_runtime.Str("First ((Just ").StrVal + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[0]).StrVal).StrVal + gopurs_runtime.Str("))").StrVal)
 goto end_branch_0
 } else {
 
@@ -93,7 +93,7 @@ goto end_branch_2
 }
 }
 {
-__t2 = gopurs_runtime.Bool(gopurs_runtime.Bool(x_2.StrVal == "Just").IntVal != 0 && gopurs_runtime.Bool(gopurs_runtime.Bool(y_3.StrVal == "Just").IntVal != 0 && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "eq"), gopurs_runtime.ConstructorGet(x_2, 0), gopurs_runtime.ConstructorGet(y_3, 0)).IntVal != 0).IntVal != 0)
+__t2 = gopurs_runtime.Bool(gopurs_runtime.Bool(x_2.StrVal == "Just").IntVal != 0 && gopurs_runtime.Bool(gopurs_runtime.Bool(y_3.StrVal == "Just").IntVal != 0 && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "eq"), (*[1024]gopurs_runtime.Value)(x_2.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(y_3.UnsafePtr)[0]).IntVal != 0).IntVal != 0)
 }
 end_branch_2:
 return __t2
@@ -132,7 +132,7 @@ goto end_branch_3
 }
 {
 if (gopurs_runtime.Bool(gopurs_runtime.Bool(x_3.StrVal == "Just").IntVal != 0 && gopurs_runtime.Bool(y_4.StrVal == "Just").IntVal != 0)).IntVal != 0 {
-__t3 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), gopurs_runtime.ConstructorGet(x_3, 0), gopurs_runtime.ConstructorGet(y_4, 0))
+__t3 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), (*[1024]gopurs_runtime.Value)(x_3.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(y_4.UnsafePtr)[0])
 goto end_branch_3
 } else {
 
@@ -234,7 +234,7 @@ goto end_branch_0
 }
 }
 {
-__t0 = gopurs_runtime.Bool(gopurs_runtime.Bool(x_1.StrVal == "Just").IntVal != 0 && gopurs_runtime.Bool(gopurs_runtime.Bool(y_2.StrVal == "Just").IntVal != 0 && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), gopurs_runtime.ConstructorGet(x_1, 0), gopurs_runtime.ConstructorGet(y_2, 0)).IntVal != 0).IntVal != 0)
+__t0 = gopurs_runtime.Bool(gopurs_runtime.Bool(x_1.StrVal == "Just").IntVal != 0 && gopurs_runtime.Bool(gopurs_runtime.Bool(y_2.StrVal == "Just").IntVal != 0 && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), (*[1024]gopurs_runtime.Value)(x_1.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0]).IntVal != 0).IntVal != 0)
 }
 end_branch_0:
 return __t0

@@ -36,7 +36,7 @@ _ = v_5_3
 var __t4 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(v_5_3.StrVal == "Just")).IntVal != 0 {
-__t4 = gopurs_runtime.Apply(elements_1_0, gopurs_runtime.Constructor2("NonEmpty", gopurs_runtime.RecordGet(Bounded0_4_2, "bottom"), gopurs_runtime.Apply4(pkg_Data_Enum.Get_enumFromTo(), Enum1_3_1, pkg_Data_Unfoldable1.Get_unfoldable1Array(), gopurs_runtime.ConstructorGet(v_5_3, 0), gopurs_runtime.RecordGet(Bounded0_4_2, "top"))))
+__t4 = gopurs_runtime.Apply(elements_1_0, gopurs_runtime.Constructor2("NonEmpty", gopurs_runtime.RecordGet(Bounded0_4_2, "bottom"), gopurs_runtime.Apply4(pkg_Data_Enum.Get_enumFromTo(), Enum1_3_1, pkg_Data_Unfoldable1.Get_unfoldable1Array(), (*[1024]gopurs_runtime.Value)(v_5_3.UnsafePtr)[0], gopurs_runtime.RecordGet(Bounded0_4_2, "top"))))
 goto end_branch_4
 } else {
 

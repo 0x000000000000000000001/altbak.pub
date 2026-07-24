@@ -50,7 +50,7 @@ erlc -o output/${ENTRY_POINT} output/*/*.erl > /dev/null 2>&1
 
 echo "=== Erlang BEAM ==="
 if [ "$ENTRY_POINT" == "AppX" ]; then
-  ENTRY_LOWER="app_x"
+  ENTRY_LOWER="appX"
 else
   ENTRY_LOWER="app"
 fi

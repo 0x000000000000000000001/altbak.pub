@@ -13,62 +13,66 @@
 -define(MEMOIZE, memoize).
 memoize(X) -> X.
 -endif.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/LazyEvaluation.purs", 10).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/LazyEvaluation.purs", 11).
 -spec 'Lazy'() -> any().
 'Lazy'() -> fun (X) ->
   X
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/LazyEvaluation.purs", 12).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/LazyEvaluation.purs", 13).
 -spec force(test_lazyEvaluation_Lazy(any())) -> any().
-force(_@9) -> case _@9 of
-  (_@10) -> (_@10(unit))
+force(_@11) -> case _@11 of
+  (_@12) -> (_@12(unit))
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/LazyEvaluation.purs", 12).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/LazyEvaluation.purs", 13).
 -spec force() -> fun((test_lazyEvaluation_Lazy(any())) -> any()).
-force() -> fun (_@11) ->
-  (force(_@11))
+force() -> fun (_@13) ->
+  (force(_@13))
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/LazyEvaluation.purs", 31).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/LazyEvaluation.purs", 32).
 -spec describe() -> fun(() -> any()).
 describe() -> (effect_console@ps:log(<<"Lazy Evaluation (1M Thunks Forced, 1k Depth):"/utf8>>)).
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/LazyEvaluation.purs", 15).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/LazyEvaluation.purs", 16).
 -spec defer(fun((any()) -> any())) -> test_lazyEvaluation_Lazy(any()).
-defer(_@12) -> _@12.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/LazyEvaluation.purs", 15).
+defer(_@14) -> _@14.
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/LazyEvaluation.purs", 16).
 -spec defer() -> fun((fun((any()) -> any())) -> test_lazyEvaluation_Lazy(any())).
-defer() -> fun (_@13) ->
-  (defer(_@13))
+defer() -> fun (_@15) ->
+  (defer(_@15))
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/LazyEvaluation.purs", 21).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/LazyEvaluation.purs", 22).
 -spec buildThunks(integer(),test_lazyEvaluation_Lazy(integer())) -> test_lazyEvaluation_Lazy(integer()).
-buildThunks(_@17,_@18) -> case { _@17, _@18 } of
-  ({ 0, _@19 }) -> _@19;
-  ({ _@20, _@21 }) -> (buildThunks(_@20 - 1, (defer(fun (V2) ->
-    (force(_@21)) + 1
+buildThunks(_@19,_@20) -> case { _@19, _@20 } of
+  ({ 0, _@21 }) -> _@21;
+  ({ _@22, _@23 }) -> (buildThunks(_@22 - 1, (defer(fun (V2) ->
+    (force(_@23)) + 1
   end))))
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/LazyEvaluation.purs", 21).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/LazyEvaluation.purs", 22).
 -spec buildThunks() -> fun((integer()) -> fun((test_lazyEvaluation_Lazy(integer())) -> test_lazyEvaluation_Lazy(integer()))).
-buildThunks() -> fun (_@22) ->
-  fun (_@23) ->
-    (buildThunks(_@22, _@23))
+buildThunks() -> fun (_@24) ->
+  fun (_@25) ->
+    (buildThunks(_@24, _@25))
   end
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/LazyEvaluation.purs", 27).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/LazyEvaluation.purs", 28).
 -spec runManyTimes(integer(),integer()) -> integer().
-runManyTimes(_@27,_@28) -> case { _@27, _@28 } of
-  ({ 0, _@29 }) -> _@29;
-  ({ _@30, _@31 }) -> (runManyTimes(_@30 - 1, _@31 + (force((buildThunks(1000, (defer(fun (V2) ->
+runManyTimes(_@29,_@30) -> case { _@29, _@30 } of
+  ({ 0, _@31 }) -> _@31;
+  ({ _@32, _@33 }) -> (runManyTimes(_@32 - 1, _@33 + (force((buildThunks(1000, (defer(fun (V2) ->
     0
   end))))))))
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/LazyEvaluation.purs", 27).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/LazyEvaluation.purs", 28).
 -spec runManyTimes() -> fun((integer()) -> fun((integer()) -> integer())).
-runManyTimes() -> fun (_@32) ->
-  fun (_@33) ->
-    (runManyTimes(_@32, _@33))
+runManyTimes() -> fun (_@34) ->
+  fun (_@35) ->
+    (runManyTimes(_@34, _@35))
   end
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/LazyEvaluation.purs", 35).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/LazyEvaluation.purs", 36).
 -spec act() -> fun(() -> any()).
-act() -> (effect_console@ps:logShow((data_show@ps:showInt()), (runManyTimes(1000, 0)))).
+act() -> fun
+  __do() -> 
+  Dummy = ((bench@ps:opaque(1000))()),
+  (((?MEMOIZE((effect_console@ps:logShow((data_show@ps:showInt())))))((runManyTimes(Dummy, 0))))())
+end.

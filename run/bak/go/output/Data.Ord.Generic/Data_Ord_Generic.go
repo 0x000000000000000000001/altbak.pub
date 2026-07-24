@@ -70,12 +70,12 @@ func Get_genericOrdProduct() gopurs_runtime.Value {
 	once_genericOrdProduct.Do(func() {
 		genericOrdProduct = gopurs_runtime.Func2(func(dictGenericOrd_0 gopurs_runtime.Value, dictGenericOrd1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict1("genericCompare'", gopurs_runtime.Func2(func(v_2 gopurs_runtime.Value, v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
-v2_4_0 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericOrd_0, "genericCompare'"), gopurs_runtime.ConstructorGet(v_2, 0), gopurs_runtime.ConstructorGet(v1_3, 0))
+v2_4_0 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericOrd_0, "genericCompare'"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v1_3.UnsafePtr)[0])
 _ = v2_4_0
 var __t1 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(v2_4_0.StrVal == "EQ")).IntVal != 0 {
-__t1 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericOrd1_1, "genericCompare'"), gopurs_runtime.ConstructorGet(v_2, 1), gopurs_runtime.ConstructorGet(v1_3, 1))
+__t1 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericOrd1_1, "genericCompare'"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(v1_3.UnsafePtr)[1])
 goto end_branch_1
 } else {
 
@@ -104,7 +104,7 @@ if (gopurs_runtime.Bool(v_2.StrVal == "Inl")).IntVal != 0 {
 var __t1 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(v1_3.StrVal == "Inl")).IntVal != 0 {
-__t1 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericOrd_0, "genericCompare'"), gopurs_runtime.ConstructorGet(v_2, 0), gopurs_runtime.ConstructorGet(v1_3, 0))
+__t1 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericOrd_0, "genericCompare'"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v1_3.UnsafePtr)[0])
 goto end_branch_1
 } else {
 
@@ -133,7 +133,7 @@ if (gopurs_runtime.Bool(v_2.StrVal == "Inr")).IntVal != 0 {
 var __t2 gopurs_runtime.Value
 {
 if (gopurs_runtime.Bool(v1_3.StrVal == "Inr")).IntVal != 0 {
-__t2 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericOrd1_1, "genericCompare'"), gopurs_runtime.ConstructorGet(v_2, 0), gopurs_runtime.ConstructorGet(v1_3, 0))
+__t2 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericOrd1_1, "genericCompare'"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v1_3.UnsafePtr)[0])
 goto end_branch_2
 } else {
 

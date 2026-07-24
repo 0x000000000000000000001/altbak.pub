@@ -22,7 +22,7 @@ import Bench (runBench)
 import Test.$TEST_NAME as $TEST_NAME
 
 main :: Effect Unit
-main = runBench $TEST_NAME.describe $TEST_NAME.act
+main = void $ runBench $TEST_NAME.describe $TEST_NAME.act
 EOF
   trap "rm -f src/AppX.purs" EXIT
 elif [ "$1" == "--x" ]; then

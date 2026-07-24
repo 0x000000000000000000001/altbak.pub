@@ -13,59 +13,63 @@
 -define(MEMOIZE, memoize).
 memoize(X) -> X.
 -endif.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/AstTree.purs", 7).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/AstTree.purs", 8).
 -spec 'Val'() -> any().
 'Val'() -> fun (Value0) ->
   { val, Value0 }
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/AstTree.purs", 7).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/AstTree.purs", 8).
 -spec 'Add'() -> any().
 'Add'() -> fun (Value0) ->
   fun (Value1) ->
     { add, Value0, Value1 }
   end
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/AstTree.purs", 7).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/AstTree.purs", 8).
 -spec 'Mul'() -> any().
 'Mul'() -> fun (Value0) ->
   fun (Value1) ->
     { mul, Value0, Value1 }
   end
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/AstTree.purs", 7).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/AstTree.purs", 8).
 -spec 'Sub'() -> any().
 'Sub'() -> fun (Value0) ->
   fun (Value1) ->
     { sub, Value0, Value1 }
   end
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/AstTree.purs", 13).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/AstTree.purs", 14).
 -spec eval(any()) -> integer().
-eval(_@19) -> case _@19 of
-  ({ val, _@20 }) -> _@20;
-  ({ add, _@21, _@22 }) -> (eval(_@21)) + (eval(_@22));
-  ({ mul, _@23, _@24 }) -> (eval(_@23)) * (eval(_@24));
-  ({ sub, _@25, _@26 }) -> (eval(_@25)) - (eval(_@26))
+eval(_@21) -> case _@21 of
+  ({ val, _@22 }) -> _@22;
+  ({ add, _@23, _@24 }) -> (eval(_@23)) + (eval(_@24));
+  ({ mul, _@25, _@26 }) -> (eval(_@25)) * (eval(_@26));
+  ({ sub, _@27, _@28 }) -> (eval(_@27)) - (eval(_@28))
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/AstTree.purs", 13).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/AstTree.purs", 14).
 -spec eval() -> fun((any()) -> integer()).
-eval() -> fun (_@27) ->
-  (eval(_@27))
+eval() -> fun (_@29) ->
+  (eval(_@29))
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/AstTree.purs", 23).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/AstTree.purs", 24).
 -spec describe() -> fun(() -> any()).
 describe() -> (effect_console@ps:log(<<"AST Evaluation:"/utf8>>)).
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/AstTree.purs", 19).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/AstTree.purs", 20).
 -spec buildTree(integer()) -> any().
-buildTree(_@29) -> case _@29 of
+buildTree(_@31) -> case _@31 of
   (0) -> { val, 1 };
-  (_@30) -> { add, { mul, { val, _@30 }, (buildTree(_@30 - 1)) }, { sub, (buildTree(_@30 - 1)), { val, 1 } } }
+  (_@32) -> { add, { mul, { val, _@32 }, (buildTree(_@32 - 1)) }, { sub, (buildTree(_@32 - 1)), { val, 1 } } }
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/AstTree.purs", 19).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/AstTree.purs", 20).
 -spec buildTree() -> fun((integer()) -> any()).
-buildTree() -> fun (_@31) ->
-  (buildTree(_@31))
+buildTree() -> fun (_@33) ->
+  (buildTree(_@33))
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/AstTree.purs", 26).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/AstTree.purs", 27).
 -spec act() -> fun(() -> any()).
-act() -> (effect_console@ps:logShow((data_show@ps:showInt()), (eval((buildTree(3)))))).
+act() -> fun
+  __do() -> 
+  Dummy = ((bench@ps:opaque(3))()),
+  (((?MEMOIZE((effect_console@ps:logShow((data_show@ps:showInt())))))((eval((buildTree(Dummy))))))())
+end.

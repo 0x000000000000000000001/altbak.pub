@@ -1,6 +1,6 @@
-import * as Test$dFib from "../Test.Fib/index.js";
+import * as Test$dRBTree from "../Test.RBTree/index.js";
 const main = () => {
-  Test$dFib.describe();
-  return Test$dFib.act();
+  Test$dRBTree.describe();
+  return Test$dRBTree.act();
 };
 export {main};

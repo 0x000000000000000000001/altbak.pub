@@ -9,6 +9,7 @@
   (import
     (prefix (chezscheme) scm:)
     (prefix (purescm runtime) rt:)
+    (prefix (Bench lib) Bench.)
     (prefix (Data.Show lib) Data.Show.)
     (prefix (Effect.Console lib) Effect.Console.))
 
@@ -23,4 +24,7 @@
     (Effect.Console.log (rt:string->pstring "Fibonacci:")))
 
   (scm:define act
-    (Effect.Console.log (Data.Show.showIntImpl (fib 10)))))
+    (scm:let ([_0 (Bench.opaque 10)])
+      (scm:lambda ()
+        (scm:let ([dummy1 (_0)])
+          ((Effect.Console.log (Data.Show.showIntImpl (fib dummy1)))))))))

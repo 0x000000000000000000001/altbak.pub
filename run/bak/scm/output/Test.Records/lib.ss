@@ -10,6 +10,7 @@
   (import
     (prefix (chezscheme) scm:)
     (prefix (purescm runtime) rt:)
+    (prefix (Bench lib) Bench.)
     (prefix (Data.EuclideanRing lib) Data.EuclideanRing.)
     (prefix (Data.Show lib) Data.Show.)
     (prefix (Effect.Console lib) Effect.Console.))
@@ -28,4 +29,7 @@
     (Effect.Console.log (rt:string->pstring "Deep Record Updates (10k iterations):")))
 
   (scm:define act
-    (Effect.Console.log (Data.Show.showIntImpl (rt:record-ref (rt:record-ref (rt:record-ref ((updateRec 10000) initial) (scm:string->symbol "b")) (scm:string->symbol "d")) (scm:string->symbol "f"))))))
+    (scm:let ([_0 (Bench.opaque 10000)])
+      (scm:lambda ()
+        (scm:let ([dummy1 (_0)])
+          ((Effect.Console.log (Data.Show.showIntImpl (rt:record-ref (rt:record-ref (rt:record-ref ((updateRec dummy1) initial) (scm:string->symbol "b")) (scm:string->symbol "d")) (scm:string->symbol "f"))))))))))

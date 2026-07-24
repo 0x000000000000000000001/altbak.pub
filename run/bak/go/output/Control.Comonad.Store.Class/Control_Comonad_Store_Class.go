@@ -136,9 +136,9 @@ func Get_comonadStoreStoreT() gopurs_runtime.Value {
 comonadStoreT_1_0 := gopurs_runtime.Apply(pkg_Control_Comonad_Store_Trans.Get_comonadStoreT(), dictComonad_0)
 _ = comonadStoreT_1_0
 return gopurs_runtime.RecordDict3("pos", "peek", "Comonad0", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.ConstructorGet(v_2, 1)
+return (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[1]
 }), gopurs_runtime.Func2(func(s_2 gopurs_runtime.Value, v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictComonad_0, "extract"), gopurs_runtime.ConstructorGet(v_3, 0), s_2)
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictComonad_0, "extract"), (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[0], s_2)
 }), gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return comonadStoreT_1_0
 }))
@@ -155,12 +155,12 @@ func Get_comonadStoreEnvT() gopurs_runtime.Value {
 comonadEnvT_1_0 := gopurs_runtime.Apply(pkg_Control_Comonad_Env_Trans.Get_comonadEnvT(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonadStore_0, "Comonad0"), gopurs_runtime.Value{}))
 _ = comonadEnvT_1_0
 return gopurs_runtime.RecordDict3("pos", "peek", "Comonad0", gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonadStore_0, "pos"), gopurs_runtime.ConstructorGet(x_2, 1))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonadStore_0, "pos"), (*[1024]gopurs_runtime.Value)(x_2.UnsafePtr)[1])
 }), gopurs_runtime.Func(func(s_2 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonadStore_0, "peek"), s_2)
 _ = __local_var_3_1
 return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(__local_var_3_1, gopurs_runtime.ConstructorGet(x_4, 1))
+return gopurs_runtime.Apply(__local_var_3_1, (*[1024]gopurs_runtime.Value)(x_4.UnsafePtr)[1])
 })
 }), gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return comonadEnvT_1_0

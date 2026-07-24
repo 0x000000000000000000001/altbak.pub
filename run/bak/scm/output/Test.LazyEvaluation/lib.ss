@@ -13,6 +13,7 @@
   (import
     (prefix (chezscheme) scm:)
     (prefix (purescm runtime) rt:)
+    (prefix (Bench lib) Bench.)
     (prefix (Data.Show lib) Data.Show.)
     (prefix (Data.Unit lib) Data.Unit.)
     (prefix (Effect.Console lib) Effect.Console.))
@@ -49,4 +50,7 @@
             0)) Data.Unit.unit)))]))))
 
   (scm:define act
-    (Effect.Console.log (Data.Show.showIntImpl ((runManyTimes 1000) 0)))))
+    (scm:let ([_0 (Bench.opaque 1000)])
+      (scm:lambda ()
+        (scm:let ([dummy1 (_0)])
+          ((Effect.Console.log (Data.Show.showIntImpl ((runManyTimes dummy1) 0)))))))))

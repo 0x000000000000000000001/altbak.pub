@@ -20,7 +20,7 @@ var once_runEnv sync.Once
 func Get_runEnv() gopurs_runtime.Value {
 	once_runEnv.Do(func() {
 		runEnv = gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.ConstructorGet(v_0, 0), gopurs_runtime.ConstructorGet(v_0, 1))
+return gopurs_runtime.Constructor2("Tuple", (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[1])
 })
 	})
 	return runEnv
@@ -31,7 +31,7 @@ var once_mapEnv sync.Once
 func Get_mapEnv() gopurs_runtime.Value {
 	once_mapEnv.Do(func() {
 		mapEnv = gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.ConstructorGet(v_1, 0), gopurs_runtime.Apply(f_0, gopurs_runtime.ConstructorGet(v_1, 1)))
+return gopurs_runtime.Constructor2("Tuple", (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[0], gopurs_runtime.Apply(f_0, (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[1]))
 })
 	})
 	return mapEnv
