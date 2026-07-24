@@ -3,8 +3,8 @@ package Effect_Aff
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Partial "gopurs/output/Partial"
 	pkg_Data_Either "gopurs/output/Data.Either"
+	pkg_Partial "gopurs/output/Partial"
 	pkg_Data_Unit "gopurs/output/Data.Unit"
 	pkg_Unsafe_Coerce "gopurs/output/Unsafe.Coerce"
 	pkg_Control_Parallel "gopurs/output/Control.Parallel"
@@ -13,6 +13,8 @@ import (
 	pkg_Effect_Unsafe "gopurs/output/Effect.Unsafe"
 	pkg_Effect_Exception "gopurs/output/Effect.Exception"
 	pkg_Control_Monad_Error_Class "gopurs/output/Control.Monad.Error.Class"
+	pkg_Control_Monad_Rec_Class "gopurs/output/Control.Monad.Rec.Class"
+	unsafe "unsafe"
 )
 
 var Canceler gopurs_runtime.Value
@@ -84,7 +86,7 @@ func Get_ffiUtil() gopurs_runtime.Value {
 		ffiUtil = gopurs_runtime.RecordDict5("isLeft", "fromLeft", "fromRight", "left", "right", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v_0.StrVal == "Left").IntVal != 0 {
+if (v_0.Type == 9 && v_0.IntVal == 590902115) {
 __t0 = gopurs_runtime.Bool(true)
 goto end_branch_0
 } else {
@@ -92,7 +94,7 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool(v_0.StrVal == "Right").IntVal != 0 {
+if (v_0.Type == 9 && v_0.IntVal == 4096564120) {
 __t0 = gopurs_runtime.Bool(false)
 goto end_branch_0
 } else {
@@ -107,15 +109,15 @@ return __t0
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v_0.StrVal == "Left").IntVal != 0 {
-__t1 = (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0]
+if (v_0.Type == 9 && v_0.IntVal == 590902115) {
+__t1 = (*pkg_Data_Either.Data_Data_Either_Left)(v_0.UnsafePtr).V0
 goto end_branch_1
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(v_0.StrVal == "Right").IntVal != 0 {
+if (v_0.Type == 9 && v_0.IntVal == 4096564120) {
 __t1 = gopurs_runtime.Apply(pkg_Partial.Get__crashWith(), gopurs_runtime.Str("unsafeFromLeft: Right"))
 goto end_branch_1
 } else {
@@ -130,15 +132,15 @@ return __t1
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t2 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v_0.StrVal == "Right").IntVal != 0 {
-__t2 = (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0]
+if (v_0.Type == 9 && v_0.IntVal == 4096564120) {
+__t2 = (*pkg_Data_Either.Data_Data_Either_Right)(v_0.UnsafePtr).V0
 goto end_branch_2
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(v_0.StrVal == "Left").IntVal != 0 {
+if (v_0.Type == 9 && v_0.IntVal == 590902115) {
 __t2 = gopurs_runtime.Apply(pkg_Partial.Get__crashWith(), gopurs_runtime.Str("unsafeFromRight: Left"))
 goto end_branch_2
 } else {
@@ -621,15 +623,15 @@ _ = _dollar__unused_4_3
 return sup_3_2
 })), gopurs_runtime.RecordDict3("killed", "failed", "completed", gopurs_runtime.Func2(func(err_2 gopurs_runtime.Value, sup_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(Get_parSequence_(), gopurs_runtime.Array([]gopurs_runtime.Value{Call_killFiber(err_2, gopurs_runtime.RecordGet(sup_3, "fiber")), gopurs_runtime.Apply(Get_makeAff(), gopurs_runtime.Func(func(k_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.UncurriedApp3(Get__killAll(), err_2, gopurs_runtime.RecordGet(sup_3, "supervisor"), gopurs_runtime.Apply(k_4, gopurs_runtime.Constructor1("Right", pkg_Data_Unit.Get_unit())))
+return gopurs_runtime.UncurriedApp3(Get__killAll(), err_2, gopurs_runtime.RecordGet(sup_3, "supervisor"), gopurs_runtime.Apply(k_4, gopurs_runtime.Value{Type: 9, IntVal: 4096564120, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Data_Data_Either_Right{pkg_Data_Unit.Get_unit()})}))
 }))}))
 }), gopurs_runtime.Func2(func(v_2 gopurs_runtime.Value, sup_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(Get_makeAff(), gopurs_runtime.Func(func(k_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.UncurriedApp3(Get__killAll(), killError_1_0, gopurs_runtime.RecordGet(sup_3, "supervisor"), gopurs_runtime.Apply(k_4, gopurs_runtime.Constructor1("Right", pkg_Data_Unit.Get_unit())))
+return gopurs_runtime.UncurriedApp3(Get__killAll(), killError_1_0, gopurs_runtime.RecordGet(sup_3, "supervisor"), gopurs_runtime.Apply(k_4, gopurs_runtime.Value{Type: 9, IntVal: 4096564120, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Data_Data_Either_Right{pkg_Data_Unit.Get_unit()})}))
 }))
 }), gopurs_runtime.Func2(func(v_2 gopurs_runtime.Value, sup_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(Get_makeAff(), gopurs_runtime.Func(func(k_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.UncurriedApp3(Get__killAll(), killError_1_0, gopurs_runtime.RecordGet(sup_3, "supervisor"), gopurs_runtime.Apply(k_4, gopurs_runtime.Constructor1("Right", pkg_Data_Unit.Get_unit())))
+return gopurs_runtime.UncurriedApp3(Get__killAll(), killError_1_0, gopurs_runtime.RecordGet(sup_3, "supervisor"), gopurs_runtime.Apply(k_4, gopurs_runtime.Value{Type: 9, IntVal: 4096564120, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Data_Data_Either_Right{pkg_Data_Unit.Get_unit()})}))
 }))
 })), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(Get_joinFiber(), gopurs_runtime.RecordGet(x_2, "fiber"))
@@ -737,16 +739,16 @@ go__1_0 = gopurs_runtime.Func(func(a_2 gopurs_runtime.Value) gopurs_runtime.Valu
 return gopurs_runtime.Apply2(Get__bind(), gopurs_runtime.Apply(k_0, a_2), gopurs_runtime.Func(func(res_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(res_3.StrVal == "Done").IntVal != 0 {
-__t1 = gopurs_runtime.Apply(Get__pure(), (*[1024]gopurs_runtime.Value)(res_3.UnsafePtr)[0])
+if (res_3.Type == 9 && res_3.IntVal == 2547603288) {
+__t1 = gopurs_runtime.Apply(Get__pure(), (*pkg_Control_Monad_Rec_Class.Data_Control_Monad_Rec_Class_Done)(res_3.UnsafePtr).V0)
 goto end_branch_1
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(res_3.StrVal == "Loop").IntVal != 0 {
-__t1 = gopurs_runtime.Apply(go__1_0, (*[1024]gopurs_runtime.Value)(res_3.UnsafePtr)[0])
+if (res_3.Type == 9 && res_3.IntVal == 1903769252) {
+__t1 = gopurs_runtime.Apply(go__1_0, (*pkg_Control_Monad_Rec_Class.Data_Control_Monad_Rec_Class_Loop)(res_3.UnsafePtr).V0)
 goto end_branch_1
 } else {
 

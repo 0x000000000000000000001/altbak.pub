@@ -158,7 +158,7 @@ func Call_fromCharArray(arg0 []string) string {
 	return FromCharArray(arg0)
 }
 var _Gopurs_FromCharArray = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
-	arg0_arr := arg0.PtrVal.([]gopurs_runtime.Value)
+	arg0_arr := arg0.PtrVal().([]gopurs_runtime.Value)
 	go_arg0 := make([]string, len(arg0_arr))
 	for i, v := range arg0_arr { go_arg0[i] = gopurs_runtime.Unbox[string](v) }
 	go_res := FromCharArray(go_arg0)

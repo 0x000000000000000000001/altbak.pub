@@ -4,6 +4,8 @@ import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
 	pkg_Data_Divide "gopurs/output/Data.Divide"
+	pkg_Data_Ordering "gopurs/output/Data.Ordering"
+	unsafe "unsafe"
 )
 
 var divisiblePredicate gopurs_runtime.Value
@@ -60,7 +62,7 @@ var once_divisibleComparison sync.Once
 func Get_divisibleComparison() gopurs_runtime.Value {
 	once_divisibleComparison.Do(func() {
 		divisibleComparison = gopurs_runtime.RecordDict2("conquer", "Divide0", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor0("EQ")
+return gopurs_runtime.Value{Type: 9, IntVal: 1111389260, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_EQ{})}
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Divide.Get_divideComparison()
 }))

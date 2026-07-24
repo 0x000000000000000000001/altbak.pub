@@ -3,6 +3,8 @@ package Control_Monad_Except
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
+	pkg_Data_Either "gopurs/output/Data.Either"
+	unsafe "unsafe"
 )
 
 var withExcept gopurs_runtime.Value
@@ -49,16 +51,16 @@ var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v_1.StrVal == "Right").IntVal != 0 {
-__t0 = gopurs_runtime.Constructor1("Right", (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[0])
+if (v_1.Type == 9 && v_1.IntVal == 4096564120) {
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 4096564120, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Data_Data_Either_Right{(*pkg_Data_Either.Data_Data_Either_Right)(v_1.UnsafePtr).V0})}
 goto end_branch_0
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(v_1.StrVal == "Left").IntVal != 0 {
-__t0 = gopurs_runtime.Constructor1("Left", gopurs_runtime.Apply(f_0, (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[0]))
+if (v_1.Type == 9 && v_1.IntVal == 590902115) {
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 590902115, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Data_Data_Either_Left{gopurs_runtime.Apply(f_0, (*pkg_Data_Either.Data_Data_Either_Left)(v_1.UnsafePtr).V0)})}
 goto end_branch_0
 } else {
 

@@ -5,6 +5,7 @@ import (
 	sync "sync"
 	pkg_Data_Either "gopurs/output/Data.Either"
 	pkg_Data_Profunctor "gopurs/output/Data.Profunctor"
+	unsafe "unsafe"
 )
 
 var right gopurs_runtime.Value
@@ -66,16 +67,16 @@ func Get_choiceFn() gopurs_runtime.Value {
 		choiceFn = gopurs_runtime.RecordDict3("left", "right", "Profunctor0", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v1_1.StrVal == "Left").IntVal != 0 {
-__t0 = gopurs_runtime.Constructor1("Left", gopurs_runtime.Apply(v_0, (*[1024]gopurs_runtime.Value)(v1_1.UnsafePtr)[0]))
+if (v1_1.Type == 9 && v1_1.IntVal == 590902115) {
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 590902115, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Data_Data_Either_Left{gopurs_runtime.Apply(v_0, (*pkg_Data_Either.Data_Data_Either_Left)(v1_1.UnsafePtr).V0)})}
 goto end_branch_0
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(v1_1.StrVal == "Right").IntVal != 0 {
-__t0 = gopurs_runtime.Constructor1("Right", (*[1024]gopurs_runtime.Value)(v1_1.UnsafePtr)[0])
+if (v1_1.Type == 9 && v1_1.IntVal == 4096564120) {
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 4096564120, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Data_Data_Either_Right{(*pkg_Data_Either.Data_Data_Either_Right)(v1_1.UnsafePtr).V0})}
 goto end_branch_0
 } else {
 
@@ -116,16 +117,16 @@ return gopurs_runtime.Func2(func(l_3 gopurs_runtime.Value, r_4 gopurs_runtime.Va
 return gopurs_runtime.Apply2(rmap_2_0, gopurs_runtime.Func(func(v2_5 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v2_5.StrVal == "Left").IntVal != 0 {
-__t1 = (*[1024]gopurs_runtime.Value)(v2_5.UnsafePtr)[0]
+if (v2_5.Type == 9 && v2_5.IntVal == 590902115) {
+__t1 = (*pkg_Data_Either.Data_Data_Either_Left)(v2_5.UnsafePtr).V0
 goto end_branch_1
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(v2_5.StrVal == "Right").IntVal != 0 {
-__t1 = (*[1024]gopurs_runtime.Value)(v2_5.UnsafePtr)[0]
+if (v2_5.Type == 9 && v2_5.IntVal == 4096564120) {
+__t1 = (*pkg_Data_Either.Data_Data_Either_Right)(v2_5.UnsafePtr).V0
 goto end_branch_1
 } else {
 

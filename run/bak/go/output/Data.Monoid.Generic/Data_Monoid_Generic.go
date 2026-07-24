@@ -3,13 +3,15 @@ package Data_Monoid_Generic
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
+	pkg_Data_Generic_Rep "gopurs/output/Data.Generic.Rep"
+	unsafe "unsafe"
 )
 
 var genericMonoidNoArguments gopurs_runtime.Value
 var once_genericMonoidNoArguments sync.Once
 func Get_genericMonoidNoArguments() gopurs_runtime.Value {
 	once_genericMonoidNoArguments.Do(func() {
-		genericMonoidNoArguments = gopurs_runtime.RecordDict1("genericMempty'", gopurs_runtime.Constructor0("NoArguments"))
+		genericMonoidNoArguments = gopurs_runtime.RecordDict1("genericMempty'", gopurs_runtime.Value{Type: 9, IntVal: 2433704057, UnsafePtr: unsafe.Pointer(&pkg_Data_Generic_Rep.Data_Data_Generic_Rep_NoArguments{})})
 	})
 	return genericMonoidNoArguments
 }
@@ -70,7 +72,7 @@ _ = dictGenericMonoid_0
 genericMempty_prime1_1_0 := gopurs_runtime.RecordGet(dictGenericMonoid_0, "genericMempty'")
 _ = genericMempty_prime1_1_0
 return gopurs_runtime.Func(func(dictGenericMonoid1_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("genericMempty'", gopurs_runtime.Constructor2("Product", genericMempty_prime1_1_0, gopurs_runtime.RecordGet(dictGenericMonoid1_2, "genericMempty'")))
+return gopurs_runtime.RecordDict1("genericMempty'", gopurs_runtime.Value{Type: 9, IntVal: 2309107923, UnsafePtr: unsafe.Pointer(&pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Product{genericMempty_prime1_1_0, gopurs_runtime.RecordGet(dictGenericMonoid1_2, "genericMempty'")})})
 })
 }()
 })

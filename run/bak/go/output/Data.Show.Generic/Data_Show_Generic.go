@@ -4,6 +4,9 @@ import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
 	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
+	pkg_Data_Generic_Rep "gopurs/output/Data.Generic.Rep"
+	pkg_Type_Proxy "gopurs/output/Type.Proxy"
+	unsafe "unsafe"
 )
 
 var genericShowArgsNoArguments gopurs_runtime.Value
@@ -125,7 +128,7 @@ _ = dictGenericShowArgs_0
 var dictGenericShowArgs1_1 gopurs_runtime.Value = dictGenericShowArgs1_1_loop
 _ = dictGenericShowArgs1_1
 return gopurs_runtime.RecordDict1("genericShowArgs", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(pkg_Data_Semigroup.Get_concatArray(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericShowArgs_0, "genericShowArgs"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0]), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericShowArgs1_1, "genericShowArgs"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[1]))
+return gopurs_runtime.Apply2(pkg_Data_Semigroup.Get_concatArray(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericShowArgs_0, "genericShowArgs"), (*pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Product)(v_2.UnsafePtr).V0), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericShowArgs1_1, "genericShowArgs"), (*pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Product)(v_2.UnsafePtr).V1))
 }))
 }
 
@@ -135,7 +138,7 @@ _ = dictGenericShowArgs_0
 var dictIsSymbol_1 gopurs_runtime.Value = dictIsSymbol_1_loop
 _ = dictIsSymbol_1
 return gopurs_runtime.RecordDict1("genericShow'", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-ctor_3_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_1, "reflectSymbol"), gopurs_runtime.Constructor0("Proxy"))
+ctor_3_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_1, "reflectSymbol"), gopurs_runtime.Value{Type: 9, IntVal: 3178699476, UnsafePtr: unsafe.Pointer(&pkg_Type_Proxy.Data_Type_Proxy_Proxy{})})
 _ = ctor_3_0
 v1_4_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericShowArgs_0, "genericShowArgs"), v_2)
 _ = v1_4_1
@@ -149,7 +152,7 @@ goto end_branch_2
 }
 }
 {
-__t2 = gopurs_runtime.Str("(" + gopurs_runtime.Apply2(Get_intercalate(), gopurs_runtime.Str(" "), gopurs_runtime.Apply2(pkg_Data_Semigroup.Get_concatArray(), gopurs_runtime.Array([]gopurs_runtime.Value{ctor_3_0}), v1_4_1)).StrVal + ")")
+__t2 = gopurs_runtime.Str("(" + gopurs_runtime.Apply2(Get_intercalate(), gopurs_runtime.Str(" "), gopurs_runtime.Apply2(pkg_Data_Semigroup.Get_concatArray(), gopurs_runtime.Array([]gopurs_runtime.Value{ctor_3_0}), v1_4_1)).StrVal() + ")")
 }
 end_branch_2:
 return __t2
@@ -164,16 +167,16 @@ _ = dictGenericShow1_1
 return gopurs_runtime.RecordDict1("genericShow'", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v_2.StrVal == "Inl").IntVal != 0 {
-__t0 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericShow_0, "genericShow'"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0])
+if (v_2.Type == 9 && v_2.IntVal == 164387955) {
+__t0 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericShow_0, "genericShow'"), (*pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Inl)(v_2.UnsafePtr).V0)
 goto end_branch_0
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(v_2.StrVal == "Inr").IntVal != 0 {
-__t0 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericShow1_1, "genericShow'"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0])
+if (v_2.Type == 9 && v_2.IntVal == 4051932077) {
+__t0 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericShow1_1, "genericShow'"), (*pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Inr)(v_2.UnsafePtr).V0)
 goto end_branch_0
 } else {
 

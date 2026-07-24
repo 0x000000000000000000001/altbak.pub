@@ -7,13 +7,14 @@ import (
 	pkg_Effect_Console "gopurs/output/Effect.Console"
 	pkg_Bench "gopurs/output/Bench"
 	pkg_Data_Show "gopurs/output/Data.Show"
+	unsafe "unsafe"
 )
 
 var Nil gopurs_runtime.Value
 var once_Nil sync.Once
 func Get_Nil() gopurs_runtime.Value {
 	once_Nil.Do(func() {
-		Nil = gopurs_runtime.Constructor0("Nil")
+		Nil = gopurs_runtime.Value{Type: 9, IntVal: 3777797863, UnsafePtr: unsafe.Pointer(&Data_Test_Primes_Nil{})}
 	})
 	return Nil
 }
@@ -24,7 +25,7 @@ func Get_Cons() gopurs_runtime.Value {
 	once_Cons.Do(func() {
 		Cons = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Cons", value0, value1)
+return gopurs_runtime.Value{Type: 9, IntVal: 2390177629, UnsafePtr: unsafe.Pointer(&Data_Test_Primes_Cons{value0, value1})}
 })
 })
 	})
@@ -52,7 +53,7 @@ var v1_3 gopurs_runtime.Value = v1_3_loop
 _ = v1_3
 var __t1 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v_2.StrVal == "Nil").IntVal != 0 {
+if (v_2.Type == 9 && v_2.IntVal == 3777797863) {
 __t1 = v1_3
 goto end_branch_1
 } else {
@@ -60,9 +61,9 @@ goto end_branch_1
 }
 }
 {
-if gopurs_runtime.Bool(v_2.StrVal == "Cons").IntVal != 0 {
-v_2_loop = (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[1]
-v1_3_loop = gopurs_runtime.Int(v1_3.IntVal + (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0].IntVal)
+if (v_2.Type == 9 && v_2.IntVal == 2390177629) {
+v_2_loop = (*Data_Test_Primes_Cons)(v_2.UnsafePtr).V1
+v1_3_loop = gopurs_runtime.Int(v1_3.IntVal + (*Data_Test_Primes_Cons)(v_2.UnsafePtr).V0.IntVal)
 continue go__1_0
 __t1 = gopurs_runtime.Value{}
 goto end_branch_1
@@ -107,7 +108,7 @@ var v1_3 gopurs_runtime.Value = v1_3_loop
 _ = v1_3
 var __t1 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v_2.StrVal == "Nil").IntVal != 0 {
+if (v_2.Type == 9 && v_2.IntVal == 3777797863) {
 __t1 = v1_3
 goto end_branch_1
 } else {
@@ -115,9 +116,9 @@ goto end_branch_1
 }
 }
 {
-if gopurs_runtime.Bool(v_2.StrVal == "Cons").IntVal != 0 {
-v_2_loop = (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[1]
-v1_3_loop = gopurs_runtime.Constructor2("Cons", (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0], v1_3)
+if (v_2.Type == 9 && v_2.IntVal == 2390177629) {
+v_2_loop = (*Data_Test_Primes_Cons)(v_2.UnsafePtr).V1
+v1_3_loop = gopurs_runtime.Value{Type: 9, IntVal: 2390177629, UnsafePtr: unsafe.Pointer(&Data_Test_Primes_Cons{(*Data_Test_Primes_Cons)(v_2.UnsafePtr).V0, v1_3})}
 continue go__1_0
 __t1 = gopurs_runtime.Value{}
 goto end_branch_1
@@ -134,7 +135,7 @@ return __t1
 }()
 })
 })
-return gopurs_runtime.Apply2(go__1_0, lst_0, gopurs_runtime.Constructor0("Nil"))
+return gopurs_runtime.Apply2(go__1_0, lst_0, gopurs_runtime.Value{Type: 9, IntVal: 3777797863, UnsafePtr: unsafe.Pointer(&Data_Test_Primes_Nil{})})
 }()
 })
 	})
@@ -176,16 +177,16 @@ var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v_0.StrVal == "Nil").IntVal != 0 {
-__t0 = gopurs_runtime.Constructor0("Nil")
+if (v_0.Type == 9 && v_0.IntVal == 3777797863) {
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 3777797863, UnsafePtr: unsafe.Pointer(&Data_Test_Primes_Nil{})}
 goto end_branch_0
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(v_0.StrVal == "Cons").IntVal != 0 {
-__local_var_1_1 := (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0]
+if (v_0.Type == 9 && v_0.IntVal == 2390177629) {
+__local_var_1_1 := (*Data_Test_Primes_Cons)(v_0.UnsafePtr).V0
 _ = __local_var_1_1
 var go__2_2 gopurs_runtime.Value
 go__2_2 = gopurs_runtime.Func(func(v_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -200,7 +201,7 @@ var v1_4 gopurs_runtime.Value = v1_4_loop
 _ = v1_4
 var __t3 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v_3.StrVal == "Nil").IntVal != 0 {
+if (v_3.Type == 9 && v_3.IntVal == 3777797863) {
 var go__5_4 gopurs_runtime.Value
 go__5_4 = gopurs_runtime.Func(func(v_6_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_7_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -214,7 +215,7 @@ var v1_7 gopurs_runtime.Value = v1_7_loop
 _ = v1_7
 var __t5 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v_6.StrVal == "Nil").IntVal != 0 {
+if (v_6.Type == 9 && v_6.IntVal == 3777797863) {
 __t5 = v1_7
 goto end_branch_5
 } else {
@@ -222,9 +223,9 @@ goto end_branch_5
 }
 }
 {
-if gopurs_runtime.Bool(v_6.StrVal == "Cons").IntVal != 0 {
-v_6_loop = (*[1024]gopurs_runtime.Value)(v_6.UnsafePtr)[1]
-v1_7_loop = gopurs_runtime.Constructor2("Cons", (*[1024]gopurs_runtime.Value)(v_6.UnsafePtr)[0], v1_7)
+if (v_6.Type == 9 && v_6.IntVal == 2390177629) {
+v_6_loop = (*Data_Test_Primes_Cons)(v_6.UnsafePtr).V1
+v1_7_loop = gopurs_runtime.Value{Type: 9, IntVal: 2390177629, UnsafePtr: unsafe.Pointer(&Data_Test_Primes_Cons{(*Data_Test_Primes_Cons)(v_6.UnsafePtr).V0, v1_7})}
 continue go__5_4
 __t5 = gopurs_runtime.Value{}
 goto end_branch_5
@@ -241,19 +242,19 @@ return __t5
 }()
 })
 })
-__t3 = gopurs_runtime.Apply2(go__5_4, v1_4, gopurs_runtime.Constructor0("Nil"))
+__t3 = gopurs_runtime.Apply2(go__5_4, v1_4, gopurs_runtime.Value{Type: 9, IntVal: 3777797863, UnsafePtr: unsafe.Pointer(&Data_Test_Primes_Nil{})})
 goto end_branch_3
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(v_3.StrVal == "Cons").IntVal != 0 {
+if (v_3.Type == 9 && v_3.IntVal == 2390177629) {
 var __t6 gopurs_runtime.Value
 {
-if gopurs_runtime.Apply2(pkg_Data_EuclideanRing.Get_intMod(), (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[0], __local_var_1_1).IntVal != 0 {
-v_3_loop = (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[1]
-v1_4_loop = gopurs_runtime.Constructor2("Cons", (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[0], v1_4)
+if gopurs_runtime.Apply2(pkg_Data_EuclideanRing.Get_intMod(), (*Data_Test_Primes_Cons)(v_3.UnsafePtr).V0, __local_var_1_1).IntVal != 0 {
+v_3_loop = (*Data_Test_Primes_Cons)(v_3.UnsafePtr).V1
+v1_4_loop = gopurs_runtime.Value{Type: 9, IntVal: 2390177629, UnsafePtr: unsafe.Pointer(&Data_Test_Primes_Cons{(*Data_Test_Primes_Cons)(v_3.UnsafePtr).V0, v1_4})}
 continue go__2_2
 __t6 = gopurs_runtime.Value{}
 goto end_branch_6
@@ -262,7 +263,7 @@ goto end_branch_6
 }
 }
 {
-v_3_loop = (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[1]
+v_3_loop = (*Data_Test_Primes_Cons)(v_3.UnsafePtr).V1
 v1_4_loop = v1_4
 continue go__2_2
 __t6 = gopurs_runtime.Value{}
@@ -283,7 +284,7 @@ return __t3
 }()
 })
 })
-__t0 = gopurs_runtime.Constructor2("Cons", __local_var_1_1, gopurs_runtime.Apply(Get_sieve(), gopurs_runtime.Apply2(go__2_2, (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[1], gopurs_runtime.Constructor0("Nil"))))
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 2390177629, UnsafePtr: unsafe.Pointer(&Data_Test_Primes_Cons{__local_var_1_1, gopurs_runtime.Apply(Get_sieve(), gopurs_runtime.Apply2(go__2_2, (*Data_Test_Primes_Cons)(v_0.UnsafePtr).V1, gopurs_runtime.Value{Type: 9, IntVal: 3777797863, UnsafePtr: unsafe.Pointer(&Data_Test_Primes_Nil{})}))})}
 goto end_branch_0
 } else {
 
@@ -333,7 +334,7 @@ var v1_4 gopurs_runtime.Value = v1_4_loop
 _ = v1_4
 var __t3 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v_3.StrVal == "Nil").IntVal != 0 {
+if (v_3.Type == 9 && v_3.IntVal == 3777797863) {
 __t3 = v1_4
 goto end_branch_3
 } else {
@@ -341,9 +342,9 @@ goto end_branch_3
 }
 }
 {
-if gopurs_runtime.Bool(v_3.StrVal == "Cons").IntVal != 0 {
-v_3_loop = (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[1]
-v1_4_loop = gopurs_runtime.Int(v1_4.IntVal + (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[0].IntVal)
+if (v_3.Type == 9 && v_3.IntVal == 2390177629) {
+v_3_loop = (*Data_Test_Primes_Cons)(v_3.UnsafePtr).V1
+v1_4_loop = gopurs_runtime.Int(v1_4.IntVal + (*Data_Test_Primes_Cons)(v_3.UnsafePtr).V0.IntVal)
 continue go__2_2
 __t3 = gopurs_runtime.Value{}
 goto end_branch_3
@@ -382,7 +383,7 @@ goto end_branch_5
 }
 {
 curr_4_loop = gopurs_runtime.Int(curr_4.IntVal - 1)
-acc_5_loop = gopurs_runtime.Constructor2("Cons", curr_4, acc_5)
+acc_5_loop = gopurs_runtime.Value{Type: 9, IntVal: 2390177629, UnsafePtr: unsafe.Pointer(&Data_Test_Primes_Cons{curr_4, acc_5})}
 continue go__3_4
 __t5 = gopurs_runtime.Value{}
 }
@@ -392,11 +393,26 @@ return __t5
 }()
 })
 })
-return gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(pkg_Data_Show.Get_showIntImpl(), gopurs_runtime.Apply2(go__2_2, gopurs_runtime.Apply(Get_sieve(), gopurs_runtime.Apply2(go__3_4, dummy_1_1, gopurs_runtime.Constructor0("Nil"))), gopurs_runtime.Int(0)))), gopurs_runtime.Value{})
+return gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(pkg_Data_Show.Get_showIntImpl(), gopurs_runtime.Apply2(go__2_2, gopurs_runtime.Apply(Get_sieve(), gopurs_runtime.Apply2(go__3_4, dummy_1_1, gopurs_runtime.Value{Type: 9, IntVal: 3777797863, UnsafePtr: unsafe.Pointer(&Data_Test_Primes_Nil{})})), gopurs_runtime.Int(0)))), gopurs_runtime.Value{})
 })
 }()
 	})
 	return act
+}
+
+type Data_Test_Primes_Nil struct {
+	
+}
+func Is_Data_Test_Primes_Nil(v gopurs_runtime.Value) bool {
+	return v.Type == 9 && v.IntVal == 3777797863
+}
+
+type Data_Test_Primes_Cons struct {
+	V0 gopurs_runtime.Value
+	V1 gopurs_runtime.Value
+}
+func Is_Data_Test_Primes_Cons(v gopurs_runtime.Value) bool {
+	return v.Type == 9 && v.IntVal == 2390177629
 }
 
 func Call_range_(start_0_loop gopurs_runtime.Value, end_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -426,7 +442,7 @@ goto end_branch_1
 }
 {
 curr_3_loop = gopurs_runtime.Int(curr_3.IntVal - 1)
-acc_4_loop = gopurs_runtime.Constructor2("Cons", curr_3, acc_4)
+acc_4_loop = gopurs_runtime.Value{Type: 9, IntVal: 2390177629, UnsafePtr: unsafe.Pointer(&Data_Test_Primes_Cons{curr_3, acc_4})}
 continue go__2_0
 __t1 = gopurs_runtime.Value{}
 }
@@ -436,7 +452,7 @@ return __t1
 }()
 })
 })
-return gopurs_runtime.Apply2(go__2_0, end_1, gopurs_runtime.Constructor0("Nil"))
+return gopurs_runtime.Apply2(go__2_0, end_1, gopurs_runtime.Value{Type: 9, IntVal: 3777797863, UnsafePtr: unsafe.Pointer(&Data_Test_Primes_Nil{})})
 }
 
 func Call_filter(p_0_loop gopurs_runtime.Value, lst_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -457,7 +473,7 @@ var v1_4 gopurs_runtime.Value = v1_4_loop
 _ = v1_4
 var __t1 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v_3.StrVal == "Nil").IntVal != 0 {
+if (v_3.Type == 9 && v_3.IntVal == 3777797863) {
 var go__5_2 gopurs_runtime.Value
 go__5_2 = gopurs_runtime.Func(func(v_6_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_7_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -471,7 +487,7 @@ var v1_7 gopurs_runtime.Value = v1_7_loop
 _ = v1_7
 var __t3 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v_6.StrVal == "Nil").IntVal != 0 {
+if (v_6.Type == 9 && v_6.IntVal == 3777797863) {
 __t3 = v1_7
 goto end_branch_3
 } else {
@@ -479,9 +495,9 @@ goto end_branch_3
 }
 }
 {
-if gopurs_runtime.Bool(v_6.StrVal == "Cons").IntVal != 0 {
-v_6_loop = (*[1024]gopurs_runtime.Value)(v_6.UnsafePtr)[1]
-v1_7_loop = gopurs_runtime.Constructor2("Cons", (*[1024]gopurs_runtime.Value)(v_6.UnsafePtr)[0], v1_7)
+if (v_6.Type == 9 && v_6.IntVal == 2390177629) {
+v_6_loop = (*Data_Test_Primes_Cons)(v_6.UnsafePtr).V1
+v1_7_loop = gopurs_runtime.Value{Type: 9, IntVal: 2390177629, UnsafePtr: unsafe.Pointer(&Data_Test_Primes_Cons{(*Data_Test_Primes_Cons)(v_6.UnsafePtr).V0, v1_7})}
 continue go__5_2
 __t3 = gopurs_runtime.Value{}
 goto end_branch_3
@@ -498,19 +514,19 @@ return __t3
 }()
 })
 })
-__t1 = gopurs_runtime.Apply2(go__5_2, v1_4, gopurs_runtime.Constructor0("Nil"))
+__t1 = gopurs_runtime.Apply2(go__5_2, v1_4, gopurs_runtime.Value{Type: 9, IntVal: 3777797863, UnsafePtr: unsafe.Pointer(&Data_Test_Primes_Nil{})})
 goto end_branch_1
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(v_3.StrVal == "Cons").IntVal != 0 {
+if (v_3.Type == 9 && v_3.IntVal == 2390177629) {
 var __t4 gopurs_runtime.Value
 {
-if gopurs_runtime.Apply(p_0, (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[0]).IntVal != 0 {
-v_3_loop = (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[1]
-v1_4_loop = gopurs_runtime.Constructor2("Cons", (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[0], v1_4)
+if gopurs_runtime.Apply(p_0, (*Data_Test_Primes_Cons)(v_3.UnsafePtr).V0).IntVal != 0 {
+v_3_loop = (*Data_Test_Primes_Cons)(v_3.UnsafePtr).V1
+v1_4_loop = gopurs_runtime.Value{Type: 9, IntVal: 2390177629, UnsafePtr: unsafe.Pointer(&Data_Test_Primes_Cons{(*Data_Test_Primes_Cons)(v_3.UnsafePtr).V0, v1_4})}
 continue go__2_0
 __t4 = gopurs_runtime.Value{}
 goto end_branch_4
@@ -519,7 +535,7 @@ goto end_branch_4
 }
 }
 {
-v_3_loop = (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[1]
+v_3_loop = (*Data_Test_Primes_Cons)(v_3.UnsafePtr).V1
 v1_4_loop = v1_4
 continue go__2_0
 __t4 = gopurs_runtime.Value{}
@@ -540,7 +556,7 @@ return __t1
 }()
 })
 })
-return gopurs_runtime.Apply2(go__2_0, lst_1, gopurs_runtime.Constructor0("Nil"))
+return gopurs_runtime.Apply2(go__2_0, lst_1, gopurs_runtime.Value{Type: 9, IntVal: 3777797863, UnsafePtr: unsafe.Pointer(&Data_Test_Primes_Nil{})})
 }
 
 

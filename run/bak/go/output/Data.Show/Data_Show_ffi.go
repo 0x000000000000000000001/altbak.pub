@@ -69,7 +69,7 @@ var _Gopurs_ShowArrayImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value,
 			inner_res0 := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 			return gopurs_runtime.Unbox[string](inner_res0)
 		}
-	arg1_arr := arg1.PtrVal.([]gopurs_runtime.Value)
+	arg1_arr := arg1.PtrVal().([]gopurs_runtime.Value)
 	go_arg1 := make([]any, len(arg1_arr))
 	for i, v := range arg1_arr { go_arg1[i] = v }
 	go_res := ShowArrayImpl(go_arg0, go_arg1)

@@ -4,7 +4,9 @@ import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
 	pkg_Data_Unit "gopurs/output/Data.Unit"
+	pkg_Type_Proxy "gopurs/output/Type.Proxy"
 	pkg_Control_Semigroupoid "gopurs/output/Control.Semigroupoid"
+	unsafe "unsafe"
 )
 
 var map_ gopurs_runtime.Value
@@ -77,7 +79,7 @@ var once_functorProxy sync.Once
 func Get_functorProxy() gopurs_runtime.Value {
 	once_functorProxy.Do(func() {
 		functorProxy = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor0("Proxy")
+return gopurs_runtime.Value{Type: 9, IntVal: 3178699476, UnsafePtr: unsafe.Pointer(&pkg_Type_Proxy.Data_Type_Proxy_Proxy{})}
 }))
 	})
 	return functorProxy

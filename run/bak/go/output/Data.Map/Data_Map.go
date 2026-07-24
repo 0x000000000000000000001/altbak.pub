@@ -7,6 +7,7 @@ import (
 	pkg_Data_Unit "gopurs/output/Data.Unit"
 	pkg_Control_Category "gopurs/output/Control.Category"
 	pkg_Data_Function "gopurs/output/Data.Function"
+	unsafe "unsafe"
 )
 
 var SemigroupMap gopurs_runtime.Value
@@ -145,7 +146,7 @@ _ = semigroupSemigroupMap1_1_0
 return gopurs_runtime.Func(func(dictSemigroup_2 gopurs_runtime.Value) gopurs_runtime.Value {
 semigroupSemigroupMap2_3_1 := gopurs_runtime.Apply(semigroupSemigroupMap1_1_0, dictSemigroup_2)
 _ = semigroupSemigroupMap2_3_1
-return gopurs_runtime.RecordDict2("mempty", "Semigroup0", gopurs_runtime.Constructor0("Leaf"), gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict2("mempty", "Semigroup0", gopurs_runtime.Value{Type: 9, IntVal: 1144344694, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Data_Data_Map_Internal_Leaf{})}, gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return semigroupSemigroupMap2_3_1
 }))
 })
@@ -165,16 +166,16 @@ _ = go__0_0
 go__0_0 = gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v_1.StrVal == "Leaf").IntVal != 0 {
-__t1 = gopurs_runtime.Constructor0("Leaf")
+if (v_1.Type == 9 && v_1.IntVal == 1144344694) {
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 1144344694, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Data_Data_Map_Internal_Leaf{})}
 goto end_branch_1
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(v_1.StrVal == "Node").IntVal != 0 {
-__t1 = gopurs_runtime.Constructor("Node", []gopurs_runtime.Value{(*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[2], pkg_Data_Unit.Get_unit(), gopurs_runtime.Apply(go__0_0, (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[4]), gopurs_runtime.Apply(go__0_0, (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[5])})
+if (v_1.Type == 9 && v_1.IntVal == 1240286680) {
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 1240286680, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Data_Data_Map_Internal_Node{(*pkg_Data_Map_Internal.Data_Data_Map_Internal_Node)(v_1.UnsafePtr).V0, (*pkg_Data_Map_Internal.Data_Data_Map_Internal_Node)(v_1.UnsafePtr).V1, (*pkg_Data_Map_Internal.Data_Data_Map_Internal_Node)(v_1.UnsafePtr).V2, pkg_Data_Unit.Get_unit(), gopurs_runtime.Apply(go__0_0, (*pkg_Data_Map_Internal.Data_Data_Map_Internal_Node)(v_1.UnsafePtr).V4), gopurs_runtime.Apply(go__0_0, (*pkg_Data_Map_Internal.Data_Data_Map_Internal_Node)(v_1.UnsafePtr).V5)})}
 goto end_branch_1
 } else {
 

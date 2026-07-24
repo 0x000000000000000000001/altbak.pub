@@ -3,6 +3,8 @@ package Data_Ord_Down
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
+	pkg_Data_Ordering "gopurs/output/Data.Ordering"
+	unsafe "unsafe"
 )
 
 var Down gopurs_runtime.Value
@@ -29,7 +31,7 @@ return func() gopurs_runtime.Value {
 var dictShow_0 gopurs_runtime.Value = dictShow_0_loop
 _ = dictShow_0
 return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str("(Down " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), v_1).StrVal + ")")
+return gopurs_runtime.Str("(Down " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), v_1).StrVal() + ")")
 }))
 }()
 })
@@ -78,24 +80,24 @@ __local_var_4_1 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "co
 _ = __local_var_4_1
 var __t2 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(__local_var_4_1.StrVal == "GT").IntVal != 0 {
-__t2 = gopurs_runtime.Constructor0("LT")
+if (__local_var_4_1.Type == 9 && __local_var_4_1.IntVal == 2098047435) {
+__t2 = gopurs_runtime.Value{Type: 9, IntVal: 3866105248, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_LT{})}
 goto end_branch_2
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(__local_var_4_1.StrVal == "EQ").IntVal != 0 {
-__t2 = gopurs_runtime.Constructor0("EQ")
+if (__local_var_4_1.Type == 9 && __local_var_4_1.IntVal == 1111389260) {
+__t2 = gopurs_runtime.Value{Type: 9, IntVal: 1111389260, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_EQ{})}
 goto end_branch_2
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(__local_var_4_1.StrVal == "LT").IntVal != 0 {
-__t2 = gopurs_runtime.Constructor0("GT")
+if (__local_var_4_1.Type == 9 && __local_var_4_1.IntVal == 3866105248) {
+__t2 = gopurs_runtime.Value{Type: 9, IntVal: 2098047435, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_GT{})}
 goto end_branch_2
 } else {
 
@@ -132,24 +134,24 @@ __local_var_5_3 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_
 _ = __local_var_5_3
 var __t4 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(__local_var_5_3.StrVal == "GT").IntVal != 0 {
-__t4 = gopurs_runtime.Constructor0("LT")
+if (__local_var_5_3.Type == 9 && __local_var_5_3.IntVal == 2098047435) {
+__t4 = gopurs_runtime.Value{Type: 9, IntVal: 3866105248, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_LT{})}
 goto end_branch_4
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(__local_var_5_3.StrVal == "EQ").IntVal != 0 {
-__t4 = gopurs_runtime.Constructor0("EQ")
+if (__local_var_5_3.Type == 9 && __local_var_5_3.IntVal == 1111389260) {
+__t4 = gopurs_runtime.Value{Type: 9, IntVal: 1111389260, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_EQ{})}
 goto end_branch_4
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(__local_var_5_3.StrVal == "LT").IntVal != 0 {
-__t4 = gopurs_runtime.Constructor0("GT")
+if (__local_var_5_3.Type == 9 && __local_var_5_3.IntVal == 3866105248) {
+__t4 = gopurs_runtime.Value{Type: 9, IntVal: 2098047435, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_GT{})}
 goto end_branch_4
 } else {
 

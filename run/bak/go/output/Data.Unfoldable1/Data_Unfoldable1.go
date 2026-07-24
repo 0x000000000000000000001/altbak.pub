@@ -5,6 +5,7 @@ import (
 	sync "sync"
 	pkg_Data_Maybe "gopurs/output/Data.Maybe"
 	pkg_Data_Tuple "gopurs/output/Data.Tuple"
+	unsafe "unsafe"
 )
 
 var fromJust gopurs_runtime.Value
@@ -17,8 +18,8 @@ var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v_0.StrVal == "Just").IntVal != 0 {
-__t0 = (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0]
+if (v_0.Type == 9 && v_0.IntVal == 1354639136) {
+__t0 = (*pkg_Data_Maybe.Data_Data_Maybe_Just)(v_0.UnsafePtr).V0
 goto end_branch_0
 } else {
 
@@ -55,7 +56,7 @@ var once_unfoldable1Maybe sync.Once
 func Get_unfoldable1Maybe() gopurs_runtime.Value {
 	once_unfoldable1Maybe.Do(func() {
 		unfoldable1Maybe = gopurs_runtime.RecordDict1("unfoldr1", gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, b_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor1("Just", (*[1024]gopurs_runtime.Value)(gopurs_runtime.Apply(f_0, b_1).UnsafePtr)[0])
+return gopurs_runtime.Value{Type: 9, IntVal: 1354639136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{(*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(gopurs_runtime.Apply(f_0, b_1).UnsafePtr).V0})}
 }))
 	})
 	return unfoldable1Maybe
@@ -136,14 +137,14 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictUnfoldable1_0, "unfold
 var __t0 gopurs_runtime.Value
 {
 if i_3.IntVal <= 0 {
-__t0 = gopurs_runtime.Constructor2("Tuple", v_2, gopurs_runtime.Constructor0("Nothing"))
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 1102100576, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{v_2, gopurs_runtime.Value{Type: 9, IntVal: 42808261, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}})}
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = gopurs_runtime.Constructor2("Tuple", v_2, gopurs_runtime.Constructor1("Just", gopurs_runtime.Int(i_3.IntVal - 1)))
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 1102100576, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{v_2, gopurs_runtime.Value{Type: 9, IntVal: 1354639136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{gopurs_runtime.Int(i_3.IntVal - 1)})}})}
 }
 end_branch_0:
 return __t0
@@ -164,14 +165,14 @@ return gopurs_runtime.Apply(sequence1_3_0, gopurs_runtime.Apply2(gopurs_runtime.
 var __t1 gopurs_runtime.Value
 {
 if i_6.IntVal <= 0 {
-__t1 = gopurs_runtime.Constructor2("Tuple", m_5, gopurs_runtime.Constructor0("Nothing"))
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 1102100576, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{m_5, gopurs_runtime.Value{Type: 9, IntVal: 42808261, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}})}
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = gopurs_runtime.Constructor2("Tuple", m_5, gopurs_runtime.Constructor1("Just", gopurs_runtime.Int(i_6.IntVal - 1)))
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 1102100576, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{m_5, gopurs_runtime.Value{Type: 9, IntVal: 1354639136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{gopurs_runtime.Int(i_6.IntVal - 1)})}})}
 }
 end_branch_1:
 return __t1
@@ -188,14 +189,14 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictUnfoldable1_0, "unfold
 var __t0 gopurs_runtime.Value
 {
 if i_2.IntVal <= 0 {
-__t0 = gopurs_runtime.Constructor2("Tuple", v_1, gopurs_runtime.Constructor0("Nothing"))
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 1102100576, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{v_1, gopurs_runtime.Value{Type: 9, IntVal: 42808261, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}})}
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = gopurs_runtime.Constructor2("Tuple", v_1, gopurs_runtime.Constructor1("Just", gopurs_runtime.Int(i_2.IntVal - 1)))
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 1102100576, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{v_1, gopurs_runtime.Value{Type: 9, IntVal: 1354639136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{gopurs_runtime.Int(i_2.IntVal - 1)})}})}
 }
 end_branch_0:
 return __t0
@@ -230,17 +231,17 @@ _ = i_prime_5_2
 var __t3 gopurs_runtime.Value
 {
 if i_4.IntVal == end_2.IntVal {
-__t3 = gopurs_runtime.Constructor0("Nothing")
+__t3 = gopurs_runtime.Value{Type: 9, IntVal: 42808261, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}
 goto end_branch_3
 } else {
 
 }
 }
 {
-__t3 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Int(i_prime_5_2))
+__t3 = gopurs_runtime.Value{Type: 9, IntVal: 1354639136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{gopurs_runtime.Int(i_prime_5_2)})}
 }
 end_branch_3:
-return gopurs_runtime.Constructor2("Tuple", i_4, __t3)
+return gopurs_runtime.Value{Type: 9, IntVal: 1102100576, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{i_4, __t3})}
 }), start_1)
 }
 
@@ -256,19 +257,19 @@ _ = s_3
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictUnfoldable1_0, "unfoldr1"), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[1].IntVal > 0 {
-__t0 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply(f_2, (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[0]), gopurs_runtime.Int((*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[1].IntVal - 1)))
+if (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v_4.UnsafePtr).V1.IntVal > 0 {
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 1354639136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{gopurs_runtime.Value{Type: 9, IntVal: 1102100576, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{gopurs_runtime.Apply(f_2, (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v_4.UnsafePtr).V0), gopurs_runtime.Int((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v_4.UnsafePtr).V1.IntVal - 1)})}})}
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = gopurs_runtime.Constructor0("Nothing")
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 42808261, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}
 }
 end_branch_0:
-return gopurs_runtime.Constructor2("Tuple", (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[0], __t0)
-}), gopurs_runtime.Constructor2("Tuple", s_3, gopurs_runtime.Int(n_1.IntVal - 1)))
+return gopurs_runtime.Value{Type: 9, IntVal: 1102100576, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{(*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v_4.UnsafePtr).V0, __t0})}
+}), gopurs_runtime.Value{Type: 9, IntVal: 1102100576, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{s_3, gopurs_runtime.Int(n_1.IntVal - 1)})})
 }
 
 func Get_unfoldr1ArrayImpl() gopurs_runtime.Value {

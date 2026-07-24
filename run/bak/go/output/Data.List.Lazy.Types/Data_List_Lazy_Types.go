@@ -5,7 +5,11 @@ import (
 	sync "sync"
 	pkg_Data_Lazy "gopurs/output/Data.Lazy"
 	pkg_Data_NonEmpty "gopurs/output/Data.NonEmpty"
+	pkg_Data_Ordering "gopurs/output/Data.Ordering"
+	pkg_Data_Tuple "gopurs/output/Data.Tuple"
+	pkg_Data_Maybe "gopurs/output/Data.Maybe"
 	pkg_Control_Category "gopurs/output/Control.Category"
+	unsafe "unsafe"
 )
 
 var List gopurs_runtime.Value
@@ -27,7 +31,7 @@ var Nil gopurs_runtime.Value
 var once_Nil sync.Once
 func Get_Nil() gopurs_runtime.Value {
 	once_Nil.Do(func() {
-		Nil = gopurs_runtime.Constructor0("Nil")
+		Nil = gopurs_runtime.Value{Type: 9, IntVal: 4256230294, UnsafePtr: unsafe.Pointer(&Data_Data_List_Lazy_Types_Nil{})}
 	})
 	return Nil
 }
@@ -38,7 +42,7 @@ func Get_Cons() gopurs_runtime.Value {
 	once_Cons.Do(func() {
 		Cons = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Cons", value0, value1)
+return gopurs_runtime.Value{Type: 9, IntVal: 218341868, UnsafePtr: unsafe.Pointer(&Data_Data_List_Lazy_Types_Cons{value0, value1})}
 })
 })
 	})
@@ -65,7 +69,7 @@ var once_nil sync.Once
 func Get_nil() gopurs_runtime.Value {
 	once_nil.Do(func() {
 		nil = gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor0("Nil")
+return gopurs_runtime.Value{Type: 9, IntVal: 4256230294, UnsafePtr: unsafe.Pointer(&Data_Data_List_Lazy_Types_Nil{})}
 }))
 	})
 	return nil
@@ -118,7 +122,7 @@ __local_var_3_0 := gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), xs_0)
 _ = __local_var_3_0
 var __t1 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(__local_var_3_0.StrVal == "Nil").IntVal != 0 {
+if (__local_var_3_0.Type == 9 && __local_var_3_0.IntVal == 4256230294) {
 __t1 = gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), ys_1)
 goto end_branch_1
 } else {
@@ -126,8 +130,8 @@ goto end_branch_1
 }
 }
 {
-if gopurs_runtime.Bool(__local_var_3_0.StrVal == "Cons").IntVal != 0 {
-__t1 = gopurs_runtime.Constructor2("Cons", (*[1024]gopurs_runtime.Value)(__local_var_3_0.UnsafePtr)[0], gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_semigroupList(), "append"), (*[1024]gopurs_runtime.Value)(__local_var_3_0.UnsafePtr)[1], ys_1))
+if (__local_var_3_0.Type == 9 && __local_var_3_0.IntVal == 218341868) {
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 218341868, UnsafePtr: unsafe.Pointer(&Data_Data_List_Lazy_Types_Cons{(*Data_Data_List_Lazy_Types_Cons)(__local_var_3_0.UnsafePtr).V0, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_semigroupList(), "append"), (*Data_Data_List_Lazy_Types_Cons)(__local_var_3_0.UnsafePtr).V1, ys_1)})}
 goto end_branch_1
 } else {
 
@@ -178,16 +182,16 @@ __local_var_3_0 := gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), xs_1)
 _ = __local_var_3_0
 var __t1 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(__local_var_3_0.StrVal == "Nil").IntVal != 0 {
-__t1 = gopurs_runtime.Constructor0("Nil")
+if (__local_var_3_0.Type == 9 && __local_var_3_0.IntVal == 4256230294) {
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 4256230294, UnsafePtr: unsafe.Pointer(&Data_Data_List_Lazy_Types_Nil{})}
 goto end_branch_1
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(__local_var_3_0.StrVal == "Cons").IntVal != 0 {
-__t1 = gopurs_runtime.Constructor2("Cons", gopurs_runtime.Apply(f_0, (*[1024]gopurs_runtime.Value)(__local_var_3_0.UnsafePtr)[0]), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_functorList(), "map"), f_0, (*[1024]gopurs_runtime.Value)(__local_var_3_0.UnsafePtr)[1]))
+if (__local_var_3_0.Type == 9 && __local_var_3_0.IntVal == 218341868) {
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 218341868, UnsafePtr: unsafe.Pointer(&Data_Data_List_Lazy_Types_Cons{gopurs_runtime.Apply(f_0, (*Data_Data_List_Lazy_Types_Cons)(__local_var_3_0.UnsafePtr).V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_functorList(), "map"), f_0, (*Data_Data_List_Lazy_Types_Cons)(__local_var_3_0.UnsafePtr).V1)})}
 goto end_branch_1
 } else {
 
@@ -212,7 +216,7 @@ func Get_functorNonEmptyList() gopurs_runtime.Value {
 return gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_3_0 := gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), v_1)
 _ = __local_var_3_0
-return gopurs_runtime.Constructor2("NonEmpty", gopurs_runtime.Apply(f_0, (*[1024]gopurs_runtime.Value)(__local_var_3_0.UnsafePtr)[0]), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_functorList(), "map"), f_0, (*[1024]gopurs_runtime.Value)(__local_var_3_0.UnsafePtr)[1]))
+return gopurs_runtime.Value{Type: 9, IntVal: 1104112642, UnsafePtr: unsafe.Pointer(&pkg_Data_NonEmpty.Data_Data_NonEmpty_NonEmpty{gopurs_runtime.Apply(f_0, (*pkg_Data_NonEmpty.Data_Data_NonEmpty_NonEmpty)(__local_var_3_0.UnsafePtr).V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_functorList(), "map"), f_0, (*pkg_Data_NonEmpty.Data_Data_NonEmpty_NonEmpty)(__local_var_3_0.UnsafePtr).V1)})}
 }))
 }))
 	})
@@ -229,15 +233,15 @@ _ = go__3_0
 go__3_0 = gopurs_runtime.Func2(func(v_4 gopurs_runtime.Value, v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v_4.StrVal == "Nil").IntVal != 0 {
-__t1 = gopurs_runtime.Bool(v1_5.StrVal == "Nil")
+if (v_4.Type == 9 && v_4.IntVal == 4256230294) {
+__t1 = gopurs_runtime.Bool((v1_5.Type == 9 && v1_5.IntVal == 4256230294))
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = gopurs_runtime.Bool(gopurs_runtime.Bool(v_4.StrVal == "Cons").IntVal != 0 && gopurs_runtime.Bool(v1_5.StrVal == "Cons").IntVal != 0 && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v1_5.UnsafePtr)[0]).IntVal != 0 && gopurs_runtime.Apply2(go__3_0, gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[1]), gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), (*[1024]gopurs_runtime.Value)(v1_5.UnsafePtr)[1])).IntVal != 0)
+__t1 = gopurs_runtime.Bool((v_4.Type == 9 && v_4.IntVal == 218341868) && (v1_5.Type == 9 && v1_5.IntVal == 218341868) && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), (*Data_Data_List_Lazy_Types_Cons)(v_4.UnsafePtr).V0, (*Data_Data_List_Lazy_Types_Cons)(v1_5.UnsafePtr).V0).IntVal != 0 && gopurs_runtime.Apply2(go__3_0, gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), (*Data_Data_List_Lazy_Types_Cons)(v_4.UnsafePtr).V1), gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), (*Data_Data_List_Lazy_Types_Cons)(v1_5.UnsafePtr).V1)).IntVal != 0)
 }
 end_branch_1:
 return __t1
@@ -257,7 +261,7 @@ return func() gopurs_runtime.Value {
 var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
 _ = dictEq_0
 return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func2(func(x_1 gopurs_runtime.Value, y_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), (*[1024]gopurs_runtime.Value)(x_1.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0]).IntVal != 0 && gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_eq1List(), "eq1"), dictEq_0, (*[1024]gopurs_runtime.Value)(x_1.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[1]).IntVal != 0)
+return gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), (*pkg_Data_NonEmpty.Data_Data_NonEmpty_NonEmpty)(x_1.UnsafePtr).V0, (*pkg_Data_NonEmpty.Data_Data_NonEmpty_NonEmpty)(y_2.UnsafePtr).V0).IntVal != 0 && gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_eq1List(), "eq1"), dictEq_0, (*pkg_Data_NonEmpty.Data_Data_NonEmpty_NonEmpty)(x_1.UnsafePtr).V1, (*pkg_Data_NonEmpty.Data_Data_NonEmpty_NonEmpty)(y_2.UnsafePtr).V1).IntVal != 0)
 }))
 }()
 })
@@ -328,18 +332,18 @@ var v1_5 gopurs_runtime.Value = v1_5_loop
 _ = v1_5
 var __t1 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v_4.StrVal == "Nil").IntVal != 0 {
+if (v_4.Type == 9 && v_4.IntVal == 4256230294) {
 var __t2 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v1_5.StrVal == "Nil").IntVal != 0 {
-__t2 = gopurs_runtime.Constructor0("EQ")
+if (v1_5.Type == 9 && v1_5.IntVal == 4256230294) {
+__t2 = gopurs_runtime.Value{Type: 9, IntVal: 1111389260, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_EQ{})}
 goto end_branch_2
 } else {
 
 }
 }
 {
-__t2 = gopurs_runtime.Constructor0("LT")
+__t2 = gopurs_runtime.Value{Type: 9, IntVal: 3866105248, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_LT{})}
 }
 end_branch_2:
 __t1 = __t2
@@ -349,22 +353,22 @@ goto end_branch_1
 }
 }
 {
-if gopurs_runtime.Bool(v1_5.StrVal == "Nil").IntVal != 0 {
-__t1 = gopurs_runtime.Constructor0("GT")
+if (v1_5.Type == 9 && v1_5.IntVal == 4256230294) {
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 2098047435, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_GT{})}
 goto end_branch_1
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(v_4.StrVal == "Cons").IntVal != 0 && gopurs_runtime.Bool(v1_5.StrVal == "Cons").IntVal != 0 {
-v2_6_3 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v1_5.UnsafePtr)[0])
+if (v_4.Type == 9 && v_4.IntVal == 218341868) && (v1_5.Type == 9 && v1_5.IntVal == 218341868) {
+v2_6_3 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), (*Data_Data_List_Lazy_Types_Cons)(v_4.UnsafePtr).V0, (*Data_Data_List_Lazy_Types_Cons)(v1_5.UnsafePtr).V0)
 _ = v2_6_3
 var __t4 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v2_6_3.StrVal == "EQ").IntVal != 0 {
-v_4_loop = gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), (*[1024]gopurs_runtime.Value)(v_4.UnsafePtr)[1])
-v1_5_loop = gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), (*[1024]gopurs_runtime.Value)(v1_5.UnsafePtr)[1])
+if (v2_6_3.Type == 9 && v2_6_3.IntVal == 1111389260) {
+v_4_loop = gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), (*Data_Data_List_Lazy_Types_Cons)(v_4.UnsafePtr).V1)
+v1_5_loop = gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), (*Data_Data_List_Lazy_Types_Cons)(v1_5.UnsafePtr).V1)
 continue go__3_0
 __t4 = gopurs_runtime.Value{}
 goto end_branch_4
@@ -473,7 +477,7 @@ return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_foldableList(), "foldl
 return gopurs_runtime.Apply2(op_0, a_4, b_3)
 }), z_1, gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_foldableList(), "foldl"), gopurs_runtime.Func2(func(b_3 gopurs_runtime.Value, a_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Cons", a_4, b_3)
+return gopurs_runtime.Value{Type: 9, IntVal: 218341868, UnsafePtr: unsafe.Pointer(&Data_Data_List_Lazy_Types_Cons{a_4, b_3})}
 }))
 }), Get_nil(), xs_2))
 }), gopurs_runtime.Func(func(op_0 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -492,7 +496,7 @@ v_4_1 := gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), xs_3)
 _ = v_4_1
 var __t2 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v_4_1.StrVal == "Nil").IntVal != 0 {
+if (v_4_1.Type == 9 && v_4_1.IntVal == 4256230294) {
 __t2 = b_2
 goto end_branch_2
 } else {
@@ -500,9 +504,9 @@ goto end_branch_2
 }
 }
 {
-if gopurs_runtime.Bool(v_4_1.StrVal == "Cons").IntVal != 0 {
-b_2_loop = gopurs_runtime.Apply2(op_0, b_2, (*[1024]gopurs_runtime.Value)(v_4_1.UnsafePtr)[0])
-xs_3_loop = (*[1024]gopurs_runtime.Value)(v_4_1.UnsafePtr)[1]
+if (v_4_1.Type == 9 && v_4_1.IntVal == 218341868) {
+b_2_loop = gopurs_runtime.Apply2(op_0, b_2, (*Data_Data_List_Lazy_Types_Cons)(v_4_1.UnsafePtr).V0)
+xs_3_loop = (*Data_Data_List_Lazy_Types_Cons)(v_4_1.UnsafePtr).V1
 continue go__1_0
 __t2 = gopurs_runtime.Value{}
 goto end_branch_2
@@ -541,12 +545,12 @@ func Get_foldableNonEmpty() gopurs_runtime.Value {
 foldMap1_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_foldableList(), "foldMap"), dictMonoid_0)
 _ = foldMap1_1_0
 return gopurs_runtime.Func2(func(f_2 gopurs_runtime.Value, v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{}), "append"), gopurs_runtime.Apply(f_2, (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[0]), gopurs_runtime.Apply2(foldMap1_1_0, f_2, (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[1]))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{}), "append"), gopurs_runtime.Apply(f_2, (*pkg_Data_NonEmpty.Data_Data_NonEmpty_NonEmpty)(v_3.UnsafePtr).V0), gopurs_runtime.Apply2(foldMap1_1_0, f_2, (*pkg_Data_NonEmpty.Data_Data_NonEmpty_NonEmpty)(v_3.UnsafePtr).V1))
 })
 }), gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, b_1 gopurs_runtime.Value, v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_foldableList(), "foldl"), f_0, gopurs_runtime.Apply2(f_0, b_1, (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0]), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[1])
+return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_foldableList(), "foldl"), f_0, gopurs_runtime.Apply2(f_0, b_1, (*pkg_Data_NonEmpty.Data_Data_NonEmpty_NonEmpty)(v_2.UnsafePtr).V0), (*pkg_Data_NonEmpty.Data_Data_NonEmpty_NonEmpty)(v_2.UnsafePtr).V1)
 }), gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, b_1 gopurs_runtime.Value, v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(f_0, (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0], gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_foldableList(), "foldr"), f_0, b_1, (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[1]))
+return gopurs_runtime.Apply2(f_0, (*pkg_Data_NonEmpty.Data_Data_NonEmpty_NonEmpty)(v_2.UnsafePtr).V0, gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_foldableList(), "foldr"), f_0, b_1, (*pkg_Data_NonEmpty.Data_Data_NonEmpty_NonEmpty)(v_2.UnsafePtr).V1))
 }))
 	})
 	return foldableNonEmpty
@@ -561,7 +565,7 @@ v_2_0 := gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), l_1)
 _ = v_2_0
 var __t1 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v_2_0.StrVal == "Nil").IntVal != 0 {
+if (v_2_0.Type == 9 && v_2_0.IntVal == 4256230294) {
 __t1 = Get_nil()
 goto end_branch_1
 } else {
@@ -569,7 +573,7 @@ goto end_branch_1
 }
 }
 {
-if gopurs_runtime.Bool(v_2_0.StrVal == "Cons").IntVal != 0 {
+if (v_2_0.Type == 9 && v_2_0.IntVal == 218341868) {
 __local_var_3_2 := gopurs_runtime.Apply(f_0, l_1)
 _ = __local_var_3_2
 __local_var_4_3 := gopurs_runtime.RecordGet(gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_foldableList(), "foldr"), gopurs_runtime.Func2(func(a_4 gopurs_runtime.Value, v_5 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -578,18 +582,18 @@ _ = __local_var_6_4
 __local_var_7_5 := gopurs_runtime.RecordGet(v_5, "val")
 _ = __local_var_7_5
 acc_prime_8_6 := gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Cons", a_4, __local_var_6_4)
+return gopurs_runtime.Value{Type: 9, IntVal: 218341868, UnsafePtr: unsafe.Pointer(&Data_Data_List_Lazy_Types_Cons{a_4, __local_var_6_4})}
 }))
 _ = acc_prime_8_6
 __local_var_9_7 := gopurs_runtime.Apply(f_0, acc_prime_8_6)
 _ = __local_var_9_7
 return gopurs_runtime.RecordDict2("val", "acc", gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v_10 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Cons", __local_var_9_7, __local_var_7_5)
+return gopurs_runtime.Value{Type: 9, IntVal: 218341868, UnsafePtr: unsafe.Pointer(&Data_Data_List_Lazy_Types_Cons{__local_var_9_7, __local_var_7_5})}
 })), acc_prime_8_6)
-}), gopurs_runtime.RecordDict2("val", "acc", Get_nil(), Get_nil()), (*[1024]gopurs_runtime.Value)(v_2_0.UnsafePtr)[1]), "val")
+}), gopurs_runtime.RecordDict2("val", "acc", Get_nil(), Get_nil()), (*Data_Data_List_Lazy_Types_Cons)(v_2_0.UnsafePtr).V1), "val")
 _ = __local_var_4_3
 __t1 = gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Cons", __local_var_3_2, __local_var_4_3)
+return gopurs_runtime.Value{Type: 9, IntVal: 218341868, UnsafePtr: unsafe.Pointer(&Data_Data_List_Lazy_Types_Cons{__local_var_3_2, __local_var_4_3})}
 }))
 goto end_branch_1
 } else {
@@ -613,24 +617,24 @@ var once_extendNonEmptyList sync.Once
 func Get_extendNonEmptyList() gopurs_runtime.Value {
 	once_extendNonEmptyList.Do(func() {
 		extendNonEmptyList = gopurs_runtime.RecordDict2("extend", "Functor0", gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_2_0 := (*[1024]gopurs_runtime.Value)(gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), v_1).UnsafePtr)[1]
+__local_var_2_0 := (*pkg_Data_NonEmpty.Data_Data_NonEmpty_NonEmpty)(gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), v_1).UnsafePtr).V1
 _ = __local_var_2_0
 return gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v2_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("NonEmpty", gopurs_runtime.Apply(f_0, v_1), gopurs_runtime.RecordGet(gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_foldableList(), "foldr"), gopurs_runtime.Func2(func(a_4 gopurs_runtime.Value, v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1104112642, UnsafePtr: unsafe.Pointer(&pkg_Data_NonEmpty.Data_Data_NonEmpty_NonEmpty{gopurs_runtime.Apply(f_0, v_1), gopurs_runtime.RecordGet(gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_foldableList(), "foldr"), gopurs_runtime.Func2(func(a_4 gopurs_runtime.Value, v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_6_1 := gopurs_runtime.RecordGet(v1_5, "acc")
 _ = __local_var_6_1
 __local_var_7_2 := gopurs_runtime.RecordGet(v1_5, "val")
 _ = __local_var_7_2
 __local_var_8_3 := gopurs_runtime.Apply(f_0, gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v2_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("NonEmpty", a_4, __local_var_6_1)
+return gopurs_runtime.Value{Type: 9, IntVal: 1104112642, UnsafePtr: unsafe.Pointer(&pkg_Data_NonEmpty.Data_Data_NonEmpty_NonEmpty{a_4, __local_var_6_1})}
 })))
 _ = __local_var_8_3
 return gopurs_runtime.RecordDict2("val", "acc", gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v_9 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Cons", __local_var_8_3, __local_var_7_2)
+return gopurs_runtime.Value{Type: 9, IntVal: 218341868, UnsafePtr: unsafe.Pointer(&Data_Data_List_Lazy_Types_Cons{__local_var_8_3, __local_var_7_2})}
 })), gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Cons", a_4, __local_var_6_1)
+return gopurs_runtime.Value{Type: 9, IntVal: 218341868, UnsafePtr: unsafe.Pointer(&Data_Data_List_Lazy_Types_Cons{a_4, __local_var_6_1})}
 })))
-}), gopurs_runtime.RecordDict2("val", "acc", Get_nil(), Get_nil()), __local_var_2_0), "val"))
+}), gopurs_runtime.RecordDict2("val", "acc", Get_nil(), Get_nil()), __local_var_2_0), "val")})}
 }))
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_functorNonEmptyList()
@@ -646,11 +650,11 @@ func Get_foldableNonEmptyList() gopurs_runtime.Value {
 		foldableNonEmptyList = gopurs_runtime.RecordDict3("foldr", "foldl", "foldMap", gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, b_1 gopurs_runtime.Value, v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_3_0 := gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), v_2)
 _ = __local_var_3_0
-return gopurs_runtime.Apply2(f_0, (*[1024]gopurs_runtime.Value)(__local_var_3_0.UnsafePtr)[0], gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_foldableList(), "foldr"), f_0, b_1, (*[1024]gopurs_runtime.Value)(__local_var_3_0.UnsafePtr)[1]))
+return gopurs_runtime.Apply2(f_0, (*pkg_Data_NonEmpty.Data_Data_NonEmpty_NonEmpty)(__local_var_3_0.UnsafePtr).V0, gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_foldableList(), "foldr"), f_0, b_1, (*pkg_Data_NonEmpty.Data_Data_NonEmpty_NonEmpty)(__local_var_3_0.UnsafePtr).V1))
 }), gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, b_1 gopurs_runtime.Value, v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_3_1 := gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), v_2)
 _ = __local_var_3_1
-return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_foldableList(), "foldl"), f_0, gopurs_runtime.Apply2(f_0, b_1, (*[1024]gopurs_runtime.Value)(__local_var_3_1.UnsafePtr)[0]), (*[1024]gopurs_runtime.Value)(__local_var_3_1.UnsafePtr)[1])
+return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_foldableList(), "foldl"), f_0, gopurs_runtime.Apply2(f_0, b_1, (*pkg_Data_NonEmpty.Data_Data_NonEmpty_NonEmpty)(__local_var_3_1.UnsafePtr).V0), (*pkg_Data_NonEmpty.Data_Data_NonEmpty_NonEmpty)(__local_var_3_1.UnsafePtr).V1)
 }), gopurs_runtime.Func(func(dictMonoid_0 gopurs_runtime.Value) gopurs_runtime.Value {
 foldMap1_1_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_foldableNonEmpty(), "foldMap"), dictMonoid_0)
 _ = foldMap1_1_2
@@ -675,7 +679,7 @@ v_2_0 := gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), xs_1)
 _ = v_2_0
 var __t1 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v_2_0.StrVal == "Nil").IntVal != 0 {
+if (v_2_0.Type == 9 && v_2_0.IntVal == 4256230294) {
 __t1 = gopurs_runtime.Str("(fromFoldable [])")
 goto end_branch_1
 } else {
@@ -683,10 +687,10 @@ goto end_branch_1
 }
 }
 {
-if gopurs_runtime.Bool(v_2_0.StrVal == "Cons").IntVal != 0 {
-__t1 = gopurs_runtime.Str("(fromFoldable [" + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), (*[1024]gopurs_runtime.Value)(v_2_0.UnsafePtr)[0]).StrVal + gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_foldableList(), "foldl"), gopurs_runtime.Func2(func(shown_3 gopurs_runtime.Value, x_prime_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str(shown_3.StrVal + "," + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), x_prime_4).StrVal)
-}), gopurs_runtime.Str(""), (*[1024]gopurs_runtime.Value)(v_2_0.UnsafePtr)[1]).StrVal + "])")
+if (v_2_0.Type == 9 && v_2_0.IntVal == 218341868) {
+__t1 = gopurs_runtime.Str("(fromFoldable [" + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), (*Data_Data_List_Lazy_Types_Cons)(v_2_0.UnsafePtr).V0).StrVal() + gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_foldableList(), "foldl"), gopurs_runtime.Func2(func(shown_3 gopurs_runtime.Value, x_prime_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Str(shown_3.StrVal() + "," + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), x_prime_4).StrVal())
+}), gopurs_runtime.Str(""), (*Data_Data_List_Lazy_Types_Cons)(v_2_0.UnsafePtr).V1).StrVal() + "])")
 goto end_branch_1
 } else {
 
@@ -717,7 +721,7 @@ _ = __local_var_1_0
 return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_3_1 := gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), v_2)
 _ = __local_var_3_1
-return gopurs_runtime.Str("(NonEmptyList (defer \\_ -> (NonEmpty " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), (*[1024]gopurs_runtime.Value)(__local_var_3_1.UnsafePtr)[0]).StrVal + " " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_0, "show"), (*[1024]gopurs_runtime.Value)(__local_var_3_1.UnsafePtr)[1]).StrVal + ")))")
+return gopurs_runtime.Str("(NonEmptyList (defer \\_ -> (NonEmpty " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), (*pkg_Data_NonEmpty.Data_Data_NonEmpty_NonEmpty)(__local_var_3_1.UnsafePtr).V0).StrVal() + " " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_0, "show"), (*pkg_Data_NonEmpty.Data_Data_NonEmpty_NonEmpty)(__local_var_3_1.UnsafePtr).V1).StrVal() + ")))")
 }))
 }()
 })
@@ -736,7 +740,7 @@ _ = dictShow_0
 return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v_1.StrVal == "Nil").IntVal != 0 {
+if (v_1.Type == 9 && v_1.IntVal == 4256230294) {
 __t0 = gopurs_runtime.Str("Nil")
 goto end_branch_0
 } else {
@@ -744,8 +748,8 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool(v_1.StrVal == "Cons").IntVal != 0 {
-__t0 = gopurs_runtime.Str("(" + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[0]).StrVal + " : " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(Get_showList(), dictShow_0), "show"), (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[1]).StrVal + ")")
+if (v_1.Type == 9 && v_1.IntVal == 218341868) {
+__t0 = gopurs_runtime.Str("(" + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), (*Data_Data_List_Lazy_Types_Cons)(v_1.UnsafePtr).V0).StrVal() + " : " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(Get_showList(), dictShow_0), "show"), (*Data_Data_List_Lazy_Types_Cons)(v_1.UnsafePtr).V1).StrVal() + ")")
 goto end_branch_0
 } else {
 
@@ -769,39 +773,39 @@ func Get_foldableWithIndexList() gopurs_runtime.Value {
 	once_foldableWithIndexList.Do(func() {
 		foldableWithIndexList = gopurs_runtime.RecordDict4("foldrWithIndex", "foldlWithIndex", "foldMapWithIndex", "Foldable0", gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, b_1 gopurs_runtime.Value, xs_2 gopurs_runtime.Value) gopurs_runtime.Value {
 v_3_0 := gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_foldableList(), "foldl"), gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_4_1 := (*[1024]gopurs_runtime.Value)(v1_3.UnsafePtr)[1]
+__local_var_4_1 := (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v1_3.UnsafePtr).V1
 _ = __local_var_4_1
-__local_var_5_2 := (*[1024]gopurs_runtime.Value)(v1_3.UnsafePtr)[0]
+__local_var_5_2 := (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v1_3.UnsafePtr).V0
 _ = __local_var_5_2
 return gopurs_runtime.Func(func(a_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Int(__local_var_5_2.IntVal + 1), gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Cons", a_6, __local_var_4_1)
-})))
+return gopurs_runtime.Value{Type: 9, IntVal: 1102100576, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{gopurs_runtime.Int(__local_var_5_2.IntVal + 1), gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 218341868, UnsafePtr: unsafe.Pointer(&Data_Data_List_Lazy_Types_Cons{a_6, __local_var_4_1})}
+}))})}
 })
-}), gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Int(0), Get_nil()), xs_2)
+}), gopurs_runtime.Value{Type: 9, IntVal: 1102100576, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{gopurs_runtime.Int(0), Get_nil()})}, xs_2)
 _ = v_3_0
-return (*[1024]gopurs_runtime.Value)(gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_foldableList(), "foldl"), gopurs_runtime.Func(func(v1_4 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_5_3 := (*[1024]gopurs_runtime.Value)(v1_4.UnsafePtr)[1]
+return (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_foldableList(), "foldl"), gopurs_runtime.Func(func(v1_4 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_5_3 := (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v1_4.UnsafePtr).V1
 _ = __local_var_5_3
-__local_var_6_4 := (*[1024]gopurs_runtime.Value)(v1_4.UnsafePtr)[0]
+__local_var_6_4 := (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v1_4.UnsafePtr).V0
 _ = __local_var_6_4
 return gopurs_runtime.Func(func(a_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Int(__local_var_6_4.IntVal - 1), gopurs_runtime.Apply3(f_0, gopurs_runtime.Int(__local_var_6_4.IntVal - 1), a_7, __local_var_5_3))
+return gopurs_runtime.Value{Type: 9, IntVal: 1102100576, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{gopurs_runtime.Int(__local_var_6_4.IntVal - 1), gopurs_runtime.Apply3(f_0, gopurs_runtime.Int(__local_var_6_4.IntVal - 1), a_7, __local_var_5_3)})}
 })
-}), gopurs_runtime.Constructor2("Tuple", (*[1024]gopurs_runtime.Value)(v_3_0.UnsafePtr)[0], b_1), (*[1024]gopurs_runtime.Value)(v_3_0.UnsafePtr)[1]).UnsafePtr)[1]
+}), gopurs_runtime.Value{Type: 9, IntVal: 1102100576, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{(*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v_3_0.UnsafePtr).V0, b_1})}, (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v_3_0.UnsafePtr).V1).UnsafePtr).V1
 }), gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, acc_1 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_2_5 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_foldableList(), "foldl"), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_3_6 := (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[1]
+__local_var_3_6 := (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v_2.UnsafePtr).V1
 _ = __local_var_3_6
-__local_var_4_7 := (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0]
+__local_var_4_7 := (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v_2.UnsafePtr).V0
 _ = __local_var_4_7
 return gopurs_runtime.Func(func(a_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Int(__local_var_4_7.IntVal + 1), gopurs_runtime.Apply3(f_0, __local_var_4_7, __local_var_3_6, a_5))
+return gopurs_runtime.Value{Type: 9, IntVal: 1102100576, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{gopurs_runtime.Int(__local_var_4_7.IntVal + 1), gopurs_runtime.Apply3(f_0, __local_var_4_7, __local_var_3_6, a_5)})}
 })
-}), gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Int(0), acc_1))
+}), gopurs_runtime.Value{Type: 9, IntVal: 1102100576, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{gopurs_runtime.Int(0), acc_1})})
 _ = __local_var_2_5
 return gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return (*[1024]gopurs_runtime.Value)(gopurs_runtime.Apply(__local_var_2_5, x_3).UnsafePtr)[1]
+return (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(gopurs_runtime.Apply(__local_var_2_5, x_3).UnsafePtr).V1
 })
 }), gopurs_runtime.Func(func(dictMonoid_0 gopurs_runtime.Value) gopurs_runtime.Value {
 mempty_1_8 := gopurs_runtime.RecordGet(dictMonoid_0, "mempty")
@@ -844,7 +848,7 @@ return gopurs_runtime.Func2(func(f_2 gopurs_runtime.Value, v_3 gopurs_runtime.Va
 return gopurs_runtime.Apply2(foldMapWithIndex1_1_0, gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(x_4.StrVal == "Nothing").IntVal != 0 {
+if (x_4.Type == 9 && x_4.IntVal == 42808261) {
 __t1 = gopurs_runtime.Int(0)
 goto end_branch_1
 } else {
@@ -852,8 +856,8 @@ goto end_branch_1
 }
 }
 {
-if gopurs_runtime.Bool(x_4.StrVal == "Just").IntVal != 0 {
-__t1 = gopurs_runtime.Int(1 + (*[1024]gopurs_runtime.Value)(x_4.UnsafePtr)[0].IntVal)
+if (x_4.Type == 9 && x_4.IntVal == 1354639136) {
+__t1 = gopurs_runtime.Int(1 + (*pkg_Data_Maybe.Data_Data_Maybe_Just)(x_4.UnsafePtr).V0.IntVal)
 goto end_branch_1
 } else {
 
@@ -870,7 +874,7 @@ return gopurs_runtime.Apply(f_2, __t1)
 return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_foldableWithIndexNonEmpty(), "foldlWithIndex"), gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t2 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(x_3.StrVal == "Nothing").IntVal != 0 {
+if (x_3.Type == 9 && x_3.IntVal == 42808261) {
 __t2 = gopurs_runtime.Int(0)
 goto end_branch_2
 } else {
@@ -878,8 +882,8 @@ goto end_branch_2
 }
 }
 {
-if gopurs_runtime.Bool(x_3.StrVal == "Just").IntVal != 0 {
-__t2 = gopurs_runtime.Int(1 + (*[1024]gopurs_runtime.Value)(x_3.UnsafePtr)[0].IntVal)
+if (x_3.Type == 9 && x_3.IntVal == 1354639136) {
+__t2 = gopurs_runtime.Int(1 + (*pkg_Data_Maybe.Data_Data_Maybe_Just)(x_3.UnsafePtr).V0.IntVal)
 goto end_branch_2
 } else {
 
@@ -895,7 +899,7 @@ return gopurs_runtime.Apply(f_0, __t2)
 return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_foldableWithIndexNonEmpty(), "foldrWithIndex"), gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t3 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(x_3.StrVal == "Nothing").IntVal != 0 {
+if (x_3.Type == 9 && x_3.IntVal == 42808261) {
 __t3 = gopurs_runtime.Int(0)
 goto end_branch_3
 } else {
@@ -903,8 +907,8 @@ goto end_branch_3
 }
 }
 {
-if gopurs_runtime.Bool(x_3.StrVal == "Just").IntVal != 0 {
-__t3 = gopurs_runtime.Int(1 + (*[1024]gopurs_runtime.Value)(x_3.UnsafePtr)[0].IntVal)
+if (x_3.Type == 9 && x_3.IntVal == 1354639136) {
+__t3 = gopurs_runtime.Int(1 + (*pkg_Data_Maybe.Data_Data_Maybe_Just)(x_3.UnsafePtr).V0.IntVal)
 goto end_branch_3
 } else {
 
@@ -932,7 +936,7 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_foldableWithIndexList(
 __local_var_4_0 := gopurs_runtime.Apply2(f_0, i_1, x_2)
 _ = __local_var_4_0
 return gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Cons", __local_var_4_0, acc_3)
+return gopurs_runtime.Value{Type: 9, IntVal: 218341868, UnsafePtr: unsafe.Pointer(&Data_Data_List_Lazy_Types_Cons{__local_var_4_0, acc_3})}
 }))
 }), Get_nil())
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -962,7 +966,7 @@ return gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func
 return Call_mapWithIndex(gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(x_3.StrVal == "Nothing").IntVal != 0 {
+if (x_3.Type == 9 && x_3.IntVal == 42808261) {
 __t0 = gopurs_runtime.Int(0)
 goto end_branch_0
 } else {
@@ -970,8 +974,8 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool(x_3.StrVal == "Just").IntVal != 0 {
-__t0 = gopurs_runtime.Int(1 + (*[1024]gopurs_runtime.Value)(x_3.UnsafePtr)[0].IntVal)
+if (x_3.Type == 9 && x_3.IntVal == 1354639136) {
+__t0 = gopurs_runtime.Int(1 + (*pkg_Data_Maybe.Data_Data_Maybe_Just)(x_3.UnsafePtr).V0.IntVal)
 goto end_branch_0
 } else {
 
@@ -1002,12 +1006,12 @@ _ = v_0
 return gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
 v2_2_0 := gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), v_0)
 _ = v2_2_0
-__local_var_3_1 := (*[1024]gopurs_runtime.Value)(v2_2_0.UnsafePtr)[0]
+__local_var_3_1 := (*pkg_Data_NonEmpty.Data_Data_NonEmpty_NonEmpty)(v2_2_0.UnsafePtr).V0
 _ = __local_var_3_1
-__local_var_4_2 := (*[1024]gopurs_runtime.Value)(v2_2_0.UnsafePtr)[1]
+__local_var_4_2 := (*pkg_Data_NonEmpty.Data_Data_NonEmpty_NonEmpty)(v2_2_0.UnsafePtr).V1
 _ = __local_var_4_2
 return gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Cons", __local_var_3_1, __local_var_4_2)
+return gopurs_runtime.Value{Type: 9, IntVal: 218341868, UnsafePtr: unsafe.Pointer(&Data_Data_List_Lazy_Types_Cons{__local_var_3_1, __local_var_4_2})}
 })))
 }))
 }()
@@ -1023,12 +1027,12 @@ func Get_semigroupNonEmptyList() gopurs_runtime.Value {
 		semigroupNonEmptyList = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, as_prime_1 gopurs_runtime.Value) gopurs_runtime.Value {
 v1_2_0 := gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), v_0)
 _ = v1_2_0
-__local_var_3_1 := (*[1024]gopurs_runtime.Value)(v1_2_0.UnsafePtr)[0]
+__local_var_3_1 := (*pkg_Data_NonEmpty.Data_Data_NonEmpty_NonEmpty)(v1_2_0.UnsafePtr).V0
 _ = __local_var_3_1
-__local_var_4_2 := (*[1024]gopurs_runtime.Value)(v1_2_0.UnsafePtr)[1]
+__local_var_4_2 := (*pkg_Data_NonEmpty.Data_Data_NonEmpty_NonEmpty)(v1_2_0.UnsafePtr).V1
 _ = __local_var_4_2
 return gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v2_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("NonEmpty", __local_var_3_1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_semigroupList(), "append"), __local_var_4_2, gopurs_runtime.Apply(Get_toList(), as_prime_1)))
+return gopurs_runtime.Value{Type: 9, IntVal: 1104112642, UnsafePtr: unsafe.Pointer(&pkg_Data_NonEmpty.Data_Data_NonEmpty_NonEmpty{__local_var_3_1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_semigroupList(), "append"), __local_var_4_2, gopurs_runtime.Apply(Get_toList(), as_prime_1))})}
 }))
 }))
 	})
@@ -1147,7 +1151,7 @@ return xxs_4
 }), gopurs_runtime.Apply2(traverseWithIndex1_1_0, gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(x_4.StrVal == "Nothing").IntVal != 0 {
+if (x_4.Type == 9 && x_4.IntVal == 42808261) {
 __t1 = gopurs_runtime.Int(0)
 goto end_branch_1
 } else {
@@ -1155,8 +1159,8 @@ goto end_branch_1
 }
 }
 {
-if gopurs_runtime.Bool(x_4.StrVal == "Just").IntVal != 0 {
-__t1 = gopurs_runtime.Int(1 + (*[1024]gopurs_runtime.Value)(x_4.UnsafePtr)[0].IntVal)
+if (x_4.Type == 9 && x_4.IntVal == 1354639136) {
+__t1 = gopurs_runtime.Int(1 + (*pkg_Data_Maybe.Data_Data_Maybe_Just)(x_4.UnsafePtr).V0.IntVal)
 goto end_branch_1
 } else {
 
@@ -1193,13 +1197,13 @@ v1_4_1 := gopurs_runtime.Apply(f_1, b_2)
 _ = v1_4_1
 var __t2 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v1_4_1.UnsafePtr)[1].StrVal == "Just").IntVal != 0 {
-__local_var_5_3 := (*[1024]gopurs_runtime.Value)(v1_4_1.UnsafePtr)[0]
+if ((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v1_4_1.UnsafePtr).V1.Type == 9 && (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v1_4_1.UnsafePtr).V1.IntVal == 1354639136) {
+__local_var_5_3 := (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v1_4_1.UnsafePtr).V0
 _ = __local_var_5_3
-__local_var_6_4 := gopurs_runtime.Apply2(go__0_0, f_1, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v1_4_1.UnsafePtr)[1].UnsafePtr)[0])
+__local_var_6_4 := gopurs_runtime.Apply2(go__0_0, f_1, (*pkg_Data_Maybe.Data_Data_Maybe_Just)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v1_4_1.UnsafePtr).V1.UnsafePtr).V0)
 _ = __local_var_6_4
 __t2 = gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Cons", __local_var_5_3, __local_var_6_4)
+return gopurs_runtime.Value{Type: 9, IntVal: 218341868, UnsafePtr: unsafe.Pointer(&Data_Data_List_Lazy_Types_Cons{__local_var_5_3, __local_var_6_4})}
 }))
 goto end_branch_2
 } else {
@@ -1207,11 +1211,11 @@ goto end_branch_2
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v1_4_1.UnsafePtr)[1].StrVal == "Nothing").IntVal != 0 {
-__local_var_5_5 := (*[1024]gopurs_runtime.Value)(v1_4_1.UnsafePtr)[0]
+if ((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v1_4_1.UnsafePtr).V1.Type == 9 && (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v1_4_1.UnsafePtr).V1.IntVal == 42808261) {
+__local_var_5_5 := (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v1_4_1.UnsafePtr).V0
 _ = __local_var_5_5
 __t2 = gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Cons", __local_var_5_5, Get_nil())
+return gopurs_runtime.Value{Type: 9, IntVal: 218341868, UnsafePtr: unsafe.Pointer(&Data_Data_List_Lazy_Types_Cons{__local_var_5_5, Get_nil()})}
 }))
 goto end_branch_2
 } else {
@@ -1244,7 +1248,7 @@ v1_4_1 := gopurs_runtime.Apply(f_1, b_2)
 _ = v1_4_1
 var __t2 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v1_4_1.StrVal == "Nothing").IntVal != 0 {
+if (v1_4_1.Type == 9 && v1_4_1.IntVal == 42808261) {
 __t2 = Get_nil()
 goto end_branch_2
 } else {
@@ -1252,13 +1256,13 @@ goto end_branch_2
 }
 }
 {
-if gopurs_runtime.Bool(v1_4_1.StrVal == "Just").IntVal != 0 {
-__local_var_5_3 := (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v1_4_1.UnsafePtr)[0].UnsafePtr)[0]
+if (v1_4_1.Type == 9 && v1_4_1.IntVal == 1354639136) {
+__local_var_5_3 := (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Maybe.Data_Data_Maybe_Just)(v1_4_1.UnsafePtr).V0.UnsafePtr).V0
 _ = __local_var_5_3
-__local_var_6_4 := gopurs_runtime.Apply2(go__0_0, f_1, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v1_4_1.UnsafePtr)[0].UnsafePtr)[1])
+__local_var_6_4 := gopurs_runtime.Apply2(go__0_0, f_1, (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Maybe.Data_Data_Maybe_Just)(v1_4_1.UnsafePtr).V0.UnsafePtr).V1)
 _ = __local_var_6_4
 __t2 = gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Cons", __local_var_5_3, __local_var_6_4)
+return gopurs_runtime.Value{Type: 9, IntVal: 218341868, UnsafePtr: unsafe.Pointer(&Data_Data_List_Lazy_Types_Cons{__local_var_5_3, __local_var_6_4})}
 }))
 goto end_branch_2
 } else {
@@ -1309,7 +1313,7 @@ var once_comonadNonEmptyList sync.Once
 func Get_comonadNonEmptyList() gopurs_runtime.Value {
 	once_comonadNonEmptyList.Do(func() {
 		comonadNonEmptyList = gopurs_runtime.RecordDict2("extract", "Extend0", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return (*[1024]gopurs_runtime.Value)(gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), v_0).UnsafePtr)[0]
+return (*pkg_Data_NonEmpty.Data_Data_NonEmpty_NonEmpty)(gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), v_0).UnsafePtr).V0
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_extendNonEmptyList()
 }))
@@ -1340,16 +1344,16 @@ __local_var_3_0 := gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), xs_0)
 _ = __local_var_3_0
 var __t1 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(__local_var_3_0.StrVal == "Nil").IntVal != 0 {
-__t1 = gopurs_runtime.Constructor0("Nil")
+if (__local_var_3_0.Type == 9 && __local_var_3_0.IntVal == 4256230294) {
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 4256230294, UnsafePtr: unsafe.Pointer(&Data_Data_List_Lazy_Types_Nil{})}
 goto end_branch_1
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(__local_var_3_0.StrVal == "Cons").IntVal != 0 {
-__t1 = gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_semigroupList(), "append"), gopurs_runtime.Apply(f_1, (*[1024]gopurs_runtime.Value)(__local_var_3_0.UnsafePtr)[0]), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_bindList(), "bind"), (*[1024]gopurs_runtime.Value)(__local_var_3_0.UnsafePtr)[1], f_1)))
+if (__local_var_3_0.Type == 9 && __local_var_3_0.IntVal == 218341868) {
+__t1 = gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_semigroupList(), "append"), gopurs_runtime.Apply(f_1, (*Data_Data_List_Lazy_Types_Cons)(__local_var_3_0.UnsafePtr).V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_bindList(), "bind"), (*Data_Data_List_Lazy_Types_Cons)(__local_var_3_0.UnsafePtr).V1, f_1)))
 goto end_branch_1
 } else {
 
@@ -1391,7 +1395,7 @@ func Get_applicativeList() gopurs_runtime.Value {
 	once_applicativeList.Do(func() {
 		applicativeList = gopurs_runtime.RecordDict2("pure", "Apply0", gopurs_runtime.Func(func(a_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Cons", a_0, Get_nil())
+return gopurs_runtime.Value{Type: 9, IntVal: 218341868, UnsafePtr: unsafe.Pointer(&Data_Data_List_Lazy_Types_Cons{a_0, Get_nil()})}
 }))
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_applyList()
@@ -1409,20 +1413,20 @@ v2_2_0 := gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), v1_1)
 _ = v2_2_0
 v3_3_1 := gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), v_0)
 _ = v3_3_1
-__local_var_4_2 := (*[1024]gopurs_runtime.Value)(v2_2_0.UnsafePtr)[0]
+__local_var_4_2 := (*pkg_Data_NonEmpty.Data_Data_NonEmpty_NonEmpty)(v2_2_0.UnsafePtr).V0
 _ = __local_var_4_2
-__local_var_5_3 := (*[1024]gopurs_runtime.Value)(v2_2_0.UnsafePtr)[1]
+__local_var_5_3 := (*pkg_Data_NonEmpty.Data_Data_NonEmpty_NonEmpty)(v2_2_0.UnsafePtr).V1
 _ = __local_var_5_3
-__local_var_6_4 := (*[1024]gopurs_runtime.Value)(v3_3_1.UnsafePtr)[0]
+__local_var_6_4 := (*pkg_Data_NonEmpty.Data_Data_NonEmpty_NonEmpty)(v3_3_1.UnsafePtr).V0
 _ = __local_var_6_4
-__local_var_7_5 := (*[1024]gopurs_runtime.Value)(v3_3_1.UnsafePtr)[1]
+__local_var_7_5 := (*pkg_Data_NonEmpty.Data_Data_NonEmpty_NonEmpty)(v3_3_1.UnsafePtr).V1
 _ = __local_var_7_5
 return gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v4_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("NonEmpty", gopurs_runtime.Apply(__local_var_6_4, __local_var_4_2), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_semigroupList(), "append"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_applyList(), "apply"), __local_var_7_5, gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v_9 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Cons", __local_var_4_2, Get_nil())
+return gopurs_runtime.Value{Type: 9, IntVal: 1104112642, UnsafePtr: unsafe.Pointer(&pkg_Data_NonEmpty.Data_Data_NonEmpty_NonEmpty{gopurs_runtime.Apply(__local_var_6_4, __local_var_4_2), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_semigroupList(), "append"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_applyList(), "apply"), __local_var_7_5, gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v_9 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 218341868, UnsafePtr: unsafe.Pointer(&Data_Data_List_Lazy_Types_Cons{__local_var_4_2, Get_nil()})}
 }))), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_applyList(), "apply"), gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v_9 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Cons", __local_var_6_4, __local_var_7_5)
-})), __local_var_5_3)))
+return gopurs_runtime.Value{Type: 9, IntVal: 218341868, UnsafePtr: unsafe.Pointer(&Data_Data_List_Lazy_Types_Cons{__local_var_6_4, __local_var_7_5})}
+})), __local_var_5_3))})}
 }))
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_functorNonEmptyList()
@@ -1438,18 +1442,18 @@ func Get_bindNonEmptyList() gopurs_runtime.Value {
 		bindNonEmptyList = gopurs_runtime.RecordDict2("bind", "Apply0", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, f_1 gopurs_runtime.Value) gopurs_runtime.Value {
 v1_2_0 := gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), v_0)
 _ = v1_2_0
-__local_var_3_1 := (*[1024]gopurs_runtime.Value)(v1_2_0.UnsafePtr)[1]
+__local_var_3_1 := (*pkg_Data_NonEmpty.Data_Data_NonEmpty_NonEmpty)(v1_2_0.UnsafePtr).V1
 _ = __local_var_3_1
-v2_4_2 := gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), gopurs_runtime.Apply(f_1, (*[1024]gopurs_runtime.Value)(v1_2_0.UnsafePtr)[0]))
+v2_4_2 := gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), gopurs_runtime.Apply(f_1, (*pkg_Data_NonEmpty.Data_Data_NonEmpty_NonEmpty)(v1_2_0.UnsafePtr).V0))
 _ = v2_4_2
-__local_var_5_3 := (*[1024]gopurs_runtime.Value)(v2_4_2.UnsafePtr)[0]
+__local_var_5_3 := (*pkg_Data_NonEmpty.Data_Data_NonEmpty_NonEmpty)(v2_4_2.UnsafePtr).V0
 _ = __local_var_5_3
-__local_var_6_4 := (*[1024]gopurs_runtime.Value)(v2_4_2.UnsafePtr)[1]
+__local_var_6_4 := (*pkg_Data_NonEmpty.Data_Data_NonEmpty_NonEmpty)(v2_4_2.UnsafePtr).V1
 _ = __local_var_6_4
 return gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v3_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("NonEmpty", __local_var_5_3, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_semigroupList(), "append"), __local_var_6_4, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_bindList(), "bind"), __local_var_3_1, gopurs_runtime.Func(func(x_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1104112642, UnsafePtr: unsafe.Pointer(&pkg_Data_NonEmpty.Data_Data_NonEmpty_NonEmpty{__local_var_5_3, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_semigroupList(), "append"), __local_var_6_4, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_bindList(), "bind"), __local_var_3_1, gopurs_runtime.Func(func(x_8 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(Get_toList(), gopurs_runtime.Apply(f_1, x_8))
-}))))
+})))})}
 }))
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_applyNonEmptyList()
@@ -1523,7 +1527,7 @@ func Get_applicativeNonEmptyList() gopurs_runtime.Value {
 	once_applicativeNonEmptyList.Do(func() {
 		applicativeNonEmptyList = gopurs_runtime.RecordDict2("pure", "Apply0", gopurs_runtime.Func(func(a_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("NonEmpty", a_0, Get_nil())
+return gopurs_runtime.Value{Type: 9, IntVal: 1104112642, UnsafePtr: unsafe.Pointer(&pkg_Data_NonEmpty.Data_Data_NonEmpty_NonEmpty{a_0, Get_nil()})}
 }))
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_applyNonEmptyList()
@@ -1545,13 +1549,28 @@ return Get_bindNonEmptyList()
 	return monadNonEmptyList
 }
 
+type Data_Data_List_Lazy_Types_Nil struct {
+	
+}
+func Is_Data_Data_List_Lazy_Types_Nil(v gopurs_runtime.Value) bool {
+	return v.Type == 9 && v.IntVal == 4256230294
+}
+
+type Data_Data_List_Lazy_Types_Cons struct {
+	V0 gopurs_runtime.Value
+	V1 gopurs_runtime.Value
+}
+func Is_Data_Data_List_Lazy_Types_Cons(v gopurs_runtime.Value) bool {
+	return v.Type == 9 && v.IntVal == 218341868
+}
+
 func Call_cons(x_0_loop gopurs_runtime.Value, xs_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
 var xs_1 gopurs_runtime.Value = xs_1_loop
 _ = xs_1
 return gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Cons", x_0, xs_1)
+return gopurs_runtime.Value{Type: 9, IntVal: 218341868, UnsafePtr: unsafe.Pointer(&Data_Data_List_Lazy_Types_Cons{x_0, xs_1})}
 }))
 }
 
@@ -1560,9 +1579,9 @@ var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
-return gopurs_runtime.Constructor2("NonEmpty", gopurs_runtime.Apply2(f_0, gopurs_runtime.Constructor0("Nothing"), (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[0]), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_functorWithIndexList(), "mapWithIndex"), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(f_0, gopurs_runtime.Constructor1("Just", x_2))
-}), (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[1]))
+return gopurs_runtime.Value{Type: 9, IntVal: 1104112642, UnsafePtr: unsafe.Pointer(&pkg_Data_NonEmpty.Data_Data_NonEmpty_NonEmpty{gopurs_runtime.Apply2(f_0, gopurs_runtime.Value{Type: 9, IntVal: 42808261, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}, (*pkg_Data_NonEmpty.Data_Data_NonEmpty_NonEmpty)(v_1.UnsafePtr).V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_functorWithIndexList(), "mapWithIndex"), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(f_0, gopurs_runtime.Value{Type: 9, IntVal: 1354639136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{x_2})})
+}), (*pkg_Data_NonEmpty.Data_Data_NonEmpty_NonEmpty)(v_1.UnsafePtr).V1)})}
 }
 
 func Call_unfoldr1(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -1572,22 +1591,22 @@ var b_1 gopurs_runtime.Value = b_1_loop
 _ = b_1
 __local_var_2_0 := gopurs_runtime.Apply(f_0, b_1)
 _ = __local_var_2_0
-return gopurs_runtime.Constructor2("NonEmpty", (*[1024]gopurs_runtime.Value)(__local_var_2_0.UnsafePtr)[0], gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_unfoldableList(), "unfoldr"), gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1104112642, UnsafePtr: unsafe.Pointer(&pkg_Data_NonEmpty.Data_Data_NonEmpty_NonEmpty{(*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(__local_var_2_0.UnsafePtr).V0, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_unfoldableList(), "unfoldr"), gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v1_3.StrVal == "Just").IntVal != 0 {
-__t1 = gopurs_runtime.Constructor1("Just", gopurs_runtime.Apply(f_0, (*[1024]gopurs_runtime.Value)(v1_3.UnsafePtr)[0]))
+if (v1_3.Type == 9 && v1_3.IntVal == 1354639136) {
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 1354639136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{gopurs_runtime.Apply(f_0, (*pkg_Data_Maybe.Data_Data_Maybe_Just)(v1_3.UnsafePtr).V0)})}
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = gopurs_runtime.Constructor0("Nothing")
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 42808261, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}
 }
 end_branch_1:
 return __t1
-}), (*[1024]gopurs_runtime.Value)(__local_var_2_0.UnsafePtr)[1]))
+}), (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(__local_var_2_0.UnsafePtr).V1)})}
 }
 
 

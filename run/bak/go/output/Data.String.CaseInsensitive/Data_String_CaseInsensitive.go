@@ -28,7 +28,7 @@ var once_showCaseInsensitiveString sync.Once
 func Get_showCaseInsensitiveString() gopurs_runtime.Value {
 	once_showCaseInsensitiveString.Do(func() {
 		showCaseInsensitiveString = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str("(CaseInsensitiveString " + gopurs_runtime.Apply(pkg_Data_Show.Get_showStringImpl(), v_0).StrVal + ")")
+return gopurs_runtime.Str("(CaseInsensitiveString " + gopurs_runtime.Apply(pkg_Data_Show.Get_showStringImpl(), v_0).StrVal() + ")")
 }))
 	})
 	return showCaseInsensitiveString
@@ -50,7 +50,7 @@ var once_eqCaseInsensitiveString sync.Once
 func Get_eqCaseInsensitiveString() gopurs_runtime.Value {
 	once_eqCaseInsensitiveString.Do(func() {
 		eqCaseInsensitiveString = gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(gopurs_runtime.Apply(pkg_Data_String_Common.Get_toLower(), v_0).StrVal == gopurs_runtime.Apply(pkg_Data_String_Common.Get_toLower(), v1_1).StrVal)
+return gopurs_runtime.Bool(gopurs_runtime.Apply(pkg_Data_String_Common.Get_toLower(), v_0).StrVal() == gopurs_runtime.Apply(pkg_Data_String_Common.Get_toLower(), v1_1).StrVal())
 }))
 	})
 	return eqCaseInsensitiveString

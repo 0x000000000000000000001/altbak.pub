@@ -3,6 +3,8 @@ package Data_String_Common
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
+	pkg_Data_Ordering "gopurs/output/Data.Ordering"
+	unsafe "unsafe"
 )
 
 var null gopurs_runtime.Value
@@ -13,7 +15,7 @@ func Get_null() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var s_0 gopurs_runtime.Value = s_0_loop
 _ = s_0
-return gopurs_runtime.Bool(s_0.StrVal == "")
+return gopurs_runtime.Bool(s_0.StrVal() == "")
 }()
 })
 	})
@@ -24,7 +26,7 @@ var localeCompare gopurs_runtime.Value
 var once_localeCompare sync.Once
 func Get_localeCompare() gopurs_runtime.Value {
 	once_localeCompare.Do(func() {
-		localeCompare = gopurs_runtime.Apply3(Get__localeCompare(), gopurs_runtime.Constructor0("LT"), gopurs_runtime.Constructor0("EQ"), gopurs_runtime.Constructor0("GT"))
+		localeCompare = gopurs_runtime.Apply3(Get__localeCompare(), gopurs_runtime.Value{Type: 9, IntVal: 3866105248, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_LT{})}, gopurs_runtime.Value{Type: 9, IntVal: 1111389260, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_EQ{})}, gopurs_runtime.Value{Type: 9, IntVal: 2098047435, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_GT{})})
 	})
 	return localeCompare
 }

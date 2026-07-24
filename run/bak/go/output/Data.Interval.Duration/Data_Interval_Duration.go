@@ -6,15 +6,17 @@ import (
 	pkg_Data_Map_Internal "gopurs/output/Data.Map.Internal"
 	pkg_Data_Show "gopurs/output/Data.Show"
 	pkg_Data_Eq "gopurs/output/Data.Eq"
+	pkg_Data_Ordering "gopurs/output/Data.Ordering"
 	pkg_Data_Ord "gopurs/output/Data.Ord"
 	pkg_Data_Semiring "gopurs/output/Data.Semiring"
+	unsafe "unsafe"
 )
 
 var Second gopurs_runtime.Value
 var once_Second sync.Once
 func Get_Second() gopurs_runtime.Value {
 	once_Second.Do(func() {
-		Second = gopurs_runtime.Constructor0("Second")
+		Second = gopurs_runtime.Value{Type: 9, IntVal: 3908053364, UnsafePtr: unsafe.Pointer(&Data_Data_Interval_Duration_Second{})}
 	})
 	return Second
 }
@@ -23,7 +25,7 @@ var Minute gopurs_runtime.Value
 var once_Minute sync.Once
 func Get_Minute() gopurs_runtime.Value {
 	once_Minute.Do(func() {
-		Minute = gopurs_runtime.Constructor0("Minute")
+		Minute = gopurs_runtime.Value{Type: 9, IntVal: 217821258, UnsafePtr: unsafe.Pointer(&Data_Data_Interval_Duration_Minute{})}
 	})
 	return Minute
 }
@@ -32,7 +34,7 @@ var Hour gopurs_runtime.Value
 var once_Hour sync.Once
 func Get_Hour() gopurs_runtime.Value {
 	once_Hour.Do(func() {
-		Hour = gopurs_runtime.Constructor0("Hour")
+		Hour = gopurs_runtime.Value{Type: 9, IntVal: 1292308612, UnsafePtr: unsafe.Pointer(&Data_Data_Interval_Duration_Hour{})}
 	})
 	return Hour
 }
@@ -41,7 +43,7 @@ var Day gopurs_runtime.Value
 var once_Day sync.Once
 func Get_Day() gopurs_runtime.Value {
 	once_Day.Do(func() {
-		Day = gopurs_runtime.Constructor0("Day")
+		Day = gopurs_runtime.Value{Type: 9, IntVal: 2311060696, UnsafePtr: unsafe.Pointer(&Data_Data_Interval_Duration_Day{})}
 	})
 	return Day
 }
@@ -50,7 +52,7 @@ var Week gopurs_runtime.Value
 var once_Week sync.Once
 func Get_Week() gopurs_runtime.Value {
 	once_Week.Do(func() {
-		Week = gopurs_runtime.Constructor0("Week")
+		Week = gopurs_runtime.Value{Type: 9, IntVal: 401302776, UnsafePtr: unsafe.Pointer(&Data_Data_Interval_Duration_Week{})}
 	})
 	return Week
 }
@@ -59,7 +61,7 @@ var Month gopurs_runtime.Value
 var once_Month sync.Once
 func Get_Month() gopurs_runtime.Value {
 	once_Month.Do(func() {
-		Month = gopurs_runtime.Constructor0("Month")
+		Month = gopurs_runtime.Value{Type: 9, IntVal: 3327533908, UnsafePtr: unsafe.Pointer(&Data_Data_Interval_Duration_Month{})}
 	})
 	return Month
 }
@@ -68,7 +70,7 @@ var Year gopurs_runtime.Value
 var once_Year sync.Once
 func Get_Year() gopurs_runtime.Value {
 	once_Year.Do(func() {
-		Year = gopurs_runtime.Constructor0("Year")
+		Year = gopurs_runtime.Value{Type: 9, IntVal: 3631736139, UnsafePtr: unsafe.Pointer(&Data_Data_Interval_Duration_Year{})}
 	})
 	return Year
 }
@@ -95,7 +97,7 @@ func Get_showDurationComponent() gopurs_runtime.Value {
 		showDurationComponent = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v_0.StrVal == "Minute").IntVal != 0 {
+if (v_0.Type == 9 && v_0.IntVal == 217821258) {
 __t0 = gopurs_runtime.Str("Minute")
 goto end_branch_0
 } else {
@@ -103,7 +105,7 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool(v_0.StrVal == "Second").IntVal != 0 {
+if (v_0.Type == 9 && v_0.IntVal == 3908053364) {
 __t0 = gopurs_runtime.Str("Second")
 goto end_branch_0
 } else {
@@ -111,7 +113,7 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool(v_0.StrVal == "Hour").IntVal != 0 {
+if (v_0.Type == 9 && v_0.IntVal == 1292308612) {
 __t0 = gopurs_runtime.Str("Hour")
 goto end_branch_0
 } else {
@@ -119,7 +121,7 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool(v_0.StrVal == "Day").IntVal != 0 {
+if (v_0.Type == 9 && v_0.IntVal == 2311060696) {
 __t0 = gopurs_runtime.Str("Day")
 goto end_branch_0
 } else {
@@ -127,7 +129,7 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool(v_0.StrVal == "Week").IntVal != 0 {
+if (v_0.Type == 9 && v_0.IntVal == 401302776) {
 __t0 = gopurs_runtime.Str("Week")
 goto end_branch_0
 } else {
@@ -135,7 +137,7 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool(v_0.StrVal == "Month").IntVal != 0 {
+if (v_0.Type == 9 && v_0.IntVal == 3327533908) {
 __t0 = gopurs_runtime.Str("Month")
 goto end_branch_0
 } else {
@@ -143,7 +145,7 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool(v_0.StrVal == "Year").IntVal != 0 {
+if (v_0.Type == 9 && v_0.IntVal == 3631736139) {
 __t0 = gopurs_runtime.Str("Year")
 goto end_branch_0
 } else {
@@ -174,7 +176,7 @@ var once_showDuration sync.Once
 func Get_showDuration() gopurs_runtime.Value {
 	once_showDuration.Do(func() {
 		showDuration = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str("(Duration " + gopurs_runtime.Apply(Get_show(), v_0).StrVal + ")")
+return gopurs_runtime.Str("(Duration " + gopurs_runtime.Apply(Get_show(), v_0).StrVal() + ")")
 }))
 	})
 	return showDuration
@@ -198,55 +200,55 @@ func Get_eqDurationComponent() gopurs_runtime.Value {
 		eqDurationComponent = gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func2(func(x_0 gopurs_runtime.Value, y_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(x_0.StrVal == "Second").IntVal != 0 {
-__t0 = gopurs_runtime.Bool(y_1.StrVal == "Second")
+if (x_0.Type == 9 && x_0.IntVal == 3908053364) {
+__t0 = gopurs_runtime.Bool((y_1.Type == 9 && y_1.IntVal == 3908053364))
 goto end_branch_0
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(x_0.StrVal == "Minute").IntVal != 0 {
-__t0 = gopurs_runtime.Bool(y_1.StrVal == "Minute")
+if (x_0.Type == 9 && x_0.IntVal == 217821258) {
+__t0 = gopurs_runtime.Bool((y_1.Type == 9 && y_1.IntVal == 217821258))
 goto end_branch_0
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(x_0.StrVal == "Hour").IntVal != 0 {
-__t0 = gopurs_runtime.Bool(y_1.StrVal == "Hour")
+if (x_0.Type == 9 && x_0.IntVal == 1292308612) {
+__t0 = gopurs_runtime.Bool((y_1.Type == 9 && y_1.IntVal == 1292308612))
 goto end_branch_0
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(x_0.StrVal == "Day").IntVal != 0 {
-__t0 = gopurs_runtime.Bool(y_1.StrVal == "Day")
+if (x_0.Type == 9 && x_0.IntVal == 2311060696) {
+__t0 = gopurs_runtime.Bool((y_1.Type == 9 && y_1.IntVal == 2311060696))
 goto end_branch_0
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(x_0.StrVal == "Week").IntVal != 0 {
-__t0 = gopurs_runtime.Bool(y_1.StrVal == "Week")
+if (x_0.Type == 9 && x_0.IntVal == 401302776) {
+__t0 = gopurs_runtime.Bool((y_1.Type == 9 && y_1.IntVal == 401302776))
 goto end_branch_0
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(x_0.StrVal == "Month").IntVal != 0 {
-__t0 = gopurs_runtime.Bool(y_1.StrVal == "Month")
+if (x_0.Type == 9 && x_0.IntVal == 3327533908) {
+__t0 = gopurs_runtime.Bool((y_1.Type == 9 && y_1.IntVal == 3327533908))
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = gopurs_runtime.Bool(gopurs_runtime.Bool(x_0.StrVal == "Year").IntVal != 0 && gopurs_runtime.Bool(y_1.StrVal == "Year").IntVal != 0)
+__t0 = gopurs_runtime.Bool((x_0.Type == 9 && x_0.IntVal == 3631736139) && (y_1.Type == 9 && y_1.IntVal == 3631736139))
 }
 end_branch_0:
 return __t0
@@ -271,18 +273,18 @@ func Get_ordDurationComponent() gopurs_runtime.Value {
 		ordDurationComponent = gopurs_runtime.RecordDict2("compare", "Eq0", gopurs_runtime.Func2(func(x_0 gopurs_runtime.Value, y_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(x_0.StrVal == "Second").IntVal != 0 {
+if (x_0.Type == 9 && x_0.IntVal == 3908053364) {
 var __t1 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(y_1.StrVal == "Second").IntVal != 0 {
-__t1 = gopurs_runtime.Constructor0("EQ")
+if (y_1.Type == 9 && y_1.IntVal == 3908053364) {
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 1111389260, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_EQ{})}
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = gopurs_runtime.Constructor0("LT")
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 3866105248, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_LT{})}
 }
 end_branch_1:
 __t0 = __t1
@@ -292,26 +294,26 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool(y_1.StrVal == "Second").IntVal != 0 {
-__t0 = gopurs_runtime.Constructor0("GT")
+if (y_1.Type == 9 && y_1.IntVal == 3908053364) {
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 2098047435, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_GT{})}
 goto end_branch_0
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(x_0.StrVal == "Minute").IntVal != 0 {
+if (x_0.Type == 9 && x_0.IntVal == 217821258) {
 var __t2 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(y_1.StrVal == "Minute").IntVal != 0 {
-__t2 = gopurs_runtime.Constructor0("EQ")
+if (y_1.Type == 9 && y_1.IntVal == 217821258) {
+__t2 = gopurs_runtime.Value{Type: 9, IntVal: 1111389260, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_EQ{})}
 goto end_branch_2
 } else {
 
 }
 }
 {
-__t2 = gopurs_runtime.Constructor0("LT")
+__t2 = gopurs_runtime.Value{Type: 9, IntVal: 3866105248, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_LT{})}
 }
 end_branch_2:
 __t0 = __t2
@@ -321,26 +323,26 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool(y_1.StrVal == "Minute").IntVal != 0 {
-__t0 = gopurs_runtime.Constructor0("GT")
+if (y_1.Type == 9 && y_1.IntVal == 217821258) {
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 2098047435, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_GT{})}
 goto end_branch_0
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(x_0.StrVal == "Hour").IntVal != 0 {
+if (x_0.Type == 9 && x_0.IntVal == 1292308612) {
 var __t3 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(y_1.StrVal == "Hour").IntVal != 0 {
-__t3 = gopurs_runtime.Constructor0("EQ")
+if (y_1.Type == 9 && y_1.IntVal == 1292308612) {
+__t3 = gopurs_runtime.Value{Type: 9, IntVal: 1111389260, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_EQ{})}
 goto end_branch_3
 } else {
 
 }
 }
 {
-__t3 = gopurs_runtime.Constructor0("LT")
+__t3 = gopurs_runtime.Value{Type: 9, IntVal: 3866105248, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_LT{})}
 }
 end_branch_3:
 __t0 = __t3
@@ -350,26 +352,26 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool(y_1.StrVal == "Hour").IntVal != 0 {
-__t0 = gopurs_runtime.Constructor0("GT")
+if (y_1.Type == 9 && y_1.IntVal == 1292308612) {
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 2098047435, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_GT{})}
 goto end_branch_0
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(x_0.StrVal == "Day").IntVal != 0 {
+if (x_0.Type == 9 && x_0.IntVal == 2311060696) {
 var __t4 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(y_1.StrVal == "Day").IntVal != 0 {
-__t4 = gopurs_runtime.Constructor0("EQ")
+if (y_1.Type == 9 && y_1.IntVal == 2311060696) {
+__t4 = gopurs_runtime.Value{Type: 9, IntVal: 1111389260, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_EQ{})}
 goto end_branch_4
 } else {
 
 }
 }
 {
-__t4 = gopurs_runtime.Constructor0("LT")
+__t4 = gopurs_runtime.Value{Type: 9, IntVal: 3866105248, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_LT{})}
 }
 end_branch_4:
 __t0 = __t4
@@ -379,26 +381,26 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool(y_1.StrVal == "Day").IntVal != 0 {
-__t0 = gopurs_runtime.Constructor0("GT")
+if (y_1.Type == 9 && y_1.IntVal == 2311060696) {
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 2098047435, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_GT{})}
 goto end_branch_0
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(x_0.StrVal == "Week").IntVal != 0 {
+if (x_0.Type == 9 && x_0.IntVal == 401302776) {
 var __t5 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(y_1.StrVal == "Week").IntVal != 0 {
-__t5 = gopurs_runtime.Constructor0("EQ")
+if (y_1.Type == 9 && y_1.IntVal == 401302776) {
+__t5 = gopurs_runtime.Value{Type: 9, IntVal: 1111389260, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_EQ{})}
 goto end_branch_5
 } else {
 
 }
 }
 {
-__t5 = gopurs_runtime.Constructor0("LT")
+__t5 = gopurs_runtime.Value{Type: 9, IntVal: 3866105248, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_LT{})}
 }
 end_branch_5:
 __t0 = __t5
@@ -408,26 +410,26 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool(y_1.StrVal == "Week").IntVal != 0 {
-__t0 = gopurs_runtime.Constructor0("GT")
+if (y_1.Type == 9 && y_1.IntVal == 401302776) {
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 2098047435, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_GT{})}
 goto end_branch_0
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(x_0.StrVal == "Month").IntVal != 0 {
+if (x_0.Type == 9 && x_0.IntVal == 3327533908) {
 var __t6 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(y_1.StrVal == "Month").IntVal != 0 {
-__t6 = gopurs_runtime.Constructor0("EQ")
+if (y_1.Type == 9 && y_1.IntVal == 3327533908) {
+__t6 = gopurs_runtime.Value{Type: 9, IntVal: 1111389260, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_EQ{})}
 goto end_branch_6
 } else {
 
 }
 }
 {
-__t6 = gopurs_runtime.Constructor0("LT")
+__t6 = gopurs_runtime.Value{Type: 9, IntVal: 3866105248, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_LT{})}
 }
 end_branch_6:
 __t0 = __t6
@@ -437,16 +439,16 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool(y_1.StrVal == "Month").IntVal != 0 {
-__t0 = gopurs_runtime.Constructor0("GT")
+if (y_1.Type == 9 && y_1.IntVal == 3327533908) {
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 2098047435, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_GT{})}
 goto end_branch_0
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(x_0.StrVal == "Year").IntVal != 0 && gopurs_runtime.Bool(y_1.StrVal == "Year").IntVal != 0 {
-__t0 = gopurs_runtime.Constructor0("EQ")
+if (x_0.Type == 9 && x_0.IntVal == 3631736139) && (y_1.Type == 9 && y_1.IntVal == 3631736139) {
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 1111389260, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_EQ{})}
 goto end_branch_0
 } else {
 
@@ -488,7 +490,7 @@ var monoidDuration gopurs_runtime.Value
 var once_monoidDuration sync.Once
 func Get_monoidDuration() gopurs_runtime.Value {
 	once_monoidDuration.Do(func() {
-		monoidDuration = gopurs_runtime.RecordDict2("mempty", "Semigroup0", gopurs_runtime.Constructor0("Leaf"), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		monoidDuration = gopurs_runtime.RecordDict2("mempty", "Semigroup0", gopurs_runtime.Value{Type: 9, IntVal: 1144344694, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Data_Data_Map_Internal_Leaf{})}, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_semigroupDuration()
 }))
 	})
@@ -527,7 +529,7 @@ func Get_hour() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-return gopurs_runtime.Constructor("Node", []gopurs_runtime.Value{gopurs_runtime.Int(1), gopurs_runtime.Int(1), gopurs_runtime.Constructor0("Hour"), v_0, gopurs_runtime.Constructor0("Leaf"), gopurs_runtime.Constructor0("Leaf")})
+return gopurs_runtime.Value{Type: 9, IntVal: 1240286680, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Data_Data_Map_Internal_Node{gopurs_runtime.Int(1), gopurs_runtime.Int(1), gopurs_runtime.Value{Type: 9, IntVal: 1292308612, UnsafePtr: unsafe.Pointer(&Data_Data_Interval_Duration_Hour{})}, v_0, gopurs_runtime.Value{Type: 9, IntVal: 1144344694, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Data_Data_Map_Internal_Leaf{})}, gopurs_runtime.Value{Type: 9, IntVal: 1144344694, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Data_Data_Map_Internal_Leaf{})}})}
 }()
 })
 	})
@@ -542,7 +544,7 @@ func Get_millisecond() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
-return gopurs_runtime.Constructor("Node", []gopurs_runtime.Value{gopurs_runtime.Int(1), gopurs_runtime.Int(1), gopurs_runtime.Constructor0("Second"), gopurs_runtime.Float(x_0.FloatVal() / 1000.0), gopurs_runtime.Constructor0("Leaf"), gopurs_runtime.Constructor0("Leaf")})
+return gopurs_runtime.Value{Type: 9, IntVal: 1240286680, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Data_Data_Map_Internal_Node{gopurs_runtime.Int(1), gopurs_runtime.Int(1), gopurs_runtime.Value{Type: 9, IntVal: 3908053364, UnsafePtr: unsafe.Pointer(&Data_Data_Interval_Duration_Second{})}, gopurs_runtime.Float(x_0.FloatVal() / 1000.0), gopurs_runtime.Value{Type: 9, IntVal: 1144344694, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Data_Data_Map_Internal_Leaf{})}, gopurs_runtime.Value{Type: 9, IntVal: 1144344694, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Data_Data_Map_Internal_Leaf{})}})}
 }()
 })
 	})
@@ -557,7 +559,7 @@ func Get_minute() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-return gopurs_runtime.Constructor("Node", []gopurs_runtime.Value{gopurs_runtime.Int(1), gopurs_runtime.Int(1), gopurs_runtime.Constructor0("Minute"), v_0, gopurs_runtime.Constructor0("Leaf"), gopurs_runtime.Constructor0("Leaf")})
+return gopurs_runtime.Value{Type: 9, IntVal: 1240286680, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Data_Data_Map_Internal_Node{gopurs_runtime.Int(1), gopurs_runtime.Int(1), gopurs_runtime.Value{Type: 9, IntVal: 217821258, UnsafePtr: unsafe.Pointer(&Data_Data_Interval_Duration_Minute{})}, v_0, gopurs_runtime.Value{Type: 9, IntVal: 1144344694, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Data_Data_Map_Internal_Leaf{})}, gopurs_runtime.Value{Type: 9, IntVal: 1144344694, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Data_Data_Map_Internal_Leaf{})}})}
 }()
 })
 	})
@@ -572,7 +574,7 @@ func Get_month() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-return gopurs_runtime.Constructor("Node", []gopurs_runtime.Value{gopurs_runtime.Int(1), gopurs_runtime.Int(1), gopurs_runtime.Constructor0("Month"), v_0, gopurs_runtime.Constructor0("Leaf"), gopurs_runtime.Constructor0("Leaf")})
+return gopurs_runtime.Value{Type: 9, IntVal: 1240286680, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Data_Data_Map_Internal_Node{gopurs_runtime.Int(1), gopurs_runtime.Int(1), gopurs_runtime.Value{Type: 9, IntVal: 3327533908, UnsafePtr: unsafe.Pointer(&Data_Data_Interval_Duration_Month{})}, v_0, gopurs_runtime.Value{Type: 9, IntVal: 1144344694, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Data_Data_Map_Internal_Leaf{})}, gopurs_runtime.Value{Type: 9, IntVal: 1144344694, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Data_Data_Map_Internal_Leaf{})}})}
 }()
 })
 	})
@@ -587,7 +589,7 @@ func Get_second() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-return gopurs_runtime.Constructor("Node", []gopurs_runtime.Value{gopurs_runtime.Int(1), gopurs_runtime.Int(1), gopurs_runtime.Constructor0("Second"), v_0, gopurs_runtime.Constructor0("Leaf"), gopurs_runtime.Constructor0("Leaf")})
+return gopurs_runtime.Value{Type: 9, IntVal: 1240286680, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Data_Data_Map_Internal_Node{gopurs_runtime.Int(1), gopurs_runtime.Int(1), gopurs_runtime.Value{Type: 9, IntVal: 3908053364, UnsafePtr: unsafe.Pointer(&Data_Data_Interval_Duration_Second{})}, v_0, gopurs_runtime.Value{Type: 9, IntVal: 1144344694, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Data_Data_Map_Internal_Leaf{})}, gopurs_runtime.Value{Type: 9, IntVal: 1144344694, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Data_Data_Map_Internal_Leaf{})}})}
 }()
 })
 	})
@@ -602,7 +604,7 @@ func Get_week() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-return gopurs_runtime.Constructor("Node", []gopurs_runtime.Value{gopurs_runtime.Int(1), gopurs_runtime.Int(1), gopurs_runtime.Constructor0("Week"), v_0, gopurs_runtime.Constructor0("Leaf"), gopurs_runtime.Constructor0("Leaf")})
+return gopurs_runtime.Value{Type: 9, IntVal: 1240286680, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Data_Data_Map_Internal_Node{gopurs_runtime.Int(1), gopurs_runtime.Int(1), gopurs_runtime.Value{Type: 9, IntVal: 401302776, UnsafePtr: unsafe.Pointer(&Data_Data_Interval_Duration_Week{})}, v_0, gopurs_runtime.Value{Type: 9, IntVal: 1144344694, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Data_Data_Map_Internal_Leaf{})}, gopurs_runtime.Value{Type: 9, IntVal: 1144344694, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Data_Data_Map_Internal_Leaf{})}})}
 }()
 })
 	})
@@ -617,7 +619,7 @@ func Get_year() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-return gopurs_runtime.Constructor("Node", []gopurs_runtime.Value{gopurs_runtime.Int(1), gopurs_runtime.Int(1), gopurs_runtime.Constructor0("Year"), v_0, gopurs_runtime.Constructor0("Leaf"), gopurs_runtime.Constructor0("Leaf")})
+return gopurs_runtime.Value{Type: 9, IntVal: 1240286680, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Data_Data_Map_Internal_Node{gopurs_runtime.Int(1), gopurs_runtime.Int(1), gopurs_runtime.Value{Type: 9, IntVal: 3631736139, UnsafePtr: unsafe.Pointer(&Data_Data_Interval_Duration_Year{})}, v_0, gopurs_runtime.Value{Type: 9, IntVal: 1144344694, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Data_Data_Map_Internal_Leaf{})}, gopurs_runtime.Value{Type: 9, IntVal: 1144344694, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Data_Data_Map_Internal_Leaf{})}})}
 }()
 })
 	})
@@ -632,13 +634,60 @@ func Get_day() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-return gopurs_runtime.Constructor("Node", []gopurs_runtime.Value{gopurs_runtime.Int(1), gopurs_runtime.Int(1), gopurs_runtime.Constructor0("Day"), v_0, gopurs_runtime.Constructor0("Leaf"), gopurs_runtime.Constructor0("Leaf")})
+return gopurs_runtime.Value{Type: 9, IntVal: 1240286680, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Data_Data_Map_Internal_Node{gopurs_runtime.Int(1), gopurs_runtime.Int(1), gopurs_runtime.Value{Type: 9, IntVal: 2311060696, UnsafePtr: unsafe.Pointer(&Data_Data_Interval_Duration_Day{})}, v_0, gopurs_runtime.Value{Type: 9, IntVal: 1144344694, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Data_Data_Map_Internal_Leaf{})}, gopurs_runtime.Value{Type: 9, IntVal: 1144344694, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Data_Data_Map_Internal_Leaf{})}})}
 }()
 })
 	})
 	return day
 }
 
+type Data_Data_Interval_Duration_Second struct {
+	
+}
+func Is_Data_Data_Interval_Duration_Second(v gopurs_runtime.Value) bool {
+	return v.Type == 9 && v.IntVal == 3908053364
+}
 
+type Data_Data_Interval_Duration_Minute struct {
+	
+}
+func Is_Data_Data_Interval_Duration_Minute(v gopurs_runtime.Value) bool {
+	return v.Type == 9 && v.IntVal == 217821258
+}
+
+type Data_Data_Interval_Duration_Hour struct {
+	
+}
+func Is_Data_Data_Interval_Duration_Hour(v gopurs_runtime.Value) bool {
+	return v.Type == 9 && v.IntVal == 1292308612
+}
+
+type Data_Data_Interval_Duration_Day struct {
+	
+}
+func Is_Data_Data_Interval_Duration_Day(v gopurs_runtime.Value) bool {
+	return v.Type == 9 && v.IntVal == 2311060696
+}
+
+type Data_Data_Interval_Duration_Week struct {
+	
+}
+func Is_Data_Data_Interval_Duration_Week(v gopurs_runtime.Value) bool {
+	return v.Type == 9 && v.IntVal == 401302776
+}
+
+type Data_Data_Interval_Duration_Month struct {
+	
+}
+func Is_Data_Data_Interval_Duration_Month(v gopurs_runtime.Value) bool {
+	return v.Type == 9 && v.IntVal == 3327533908
+}
+
+type Data_Data_Interval_Duration_Year struct {
+	
+}
+func Is_Data_Data_Interval_Duration_Year(v gopurs_runtime.Value) bool {
+	return v.Type == 9 && v.IntVal == 3631736139
+}
 
 

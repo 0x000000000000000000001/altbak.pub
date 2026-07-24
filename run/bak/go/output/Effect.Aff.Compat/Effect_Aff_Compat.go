@@ -4,6 +4,8 @@ import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
 	pkg_Effect_Aff "gopurs/output/Effect.Aff"
+	pkg_Data_Either "gopurs/output/Data.Either"
+	unsafe "unsafe"
 )
 
 var EffectFnCanceler gopurs_runtime.Value
@@ -47,18 +49,18 @@ _ = v_0
 return gopurs_runtime.Apply(pkg_Effect_Aff.Get_makeAff(), gopurs_runtime.Func(func(k_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 v1_2_0 := gopurs_runtime.UncurriedApp2(v_0, gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(k_1, gopurs_runtime.Constructor1("Left", x_2))
+return gopurs_runtime.Apply(k_1, gopurs_runtime.Value{Type: 9, IntVal: 590902115, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Data_Data_Either_Left{x_2})})
 }), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(k_1, gopurs_runtime.Constructor1("Right", x_2))
+return gopurs_runtime.Apply(k_1, gopurs_runtime.Value{Type: 9, IntVal: 4096564120, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Data_Data_Either_Right{x_2})})
 }))
 _ = v1_2_0
 return gopurs_runtime.Func(func(e_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(pkg_Effect_Aff.Get_makeAff(), gopurs_runtime.Func(func(k2_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 _dollar__unused_5_1 := gopurs_runtime.UncurriedApp3(v1_2_0, e_3, gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(k2_4, gopurs_runtime.Constructor1("Left", x_5))
+return gopurs_runtime.Apply(k2_4, gopurs_runtime.Value{Type: 9, IntVal: 590902115, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Data_Data_Either_Left{x_5})})
 }), gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(k2_4, gopurs_runtime.Constructor1("Right", x_5))
+return gopurs_runtime.Apply(k2_4, gopurs_runtime.Value{Type: 9, IntVal: 4096564120, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Data_Data_Either_Right{x_5})})
 }))
 _ = _dollar__unused_5_1
 return pkg_Effect_Aff.Get_nonCanceler()

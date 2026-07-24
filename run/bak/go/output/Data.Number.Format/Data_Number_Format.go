@@ -4,6 +4,7 @@ import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
 	pkg_Data_Ord "gopurs/output/Data.Ord"
+	unsafe "unsafe"
 )
 
 var clamp gopurs_runtime.Value
@@ -22,7 +23,7 @@ var once_Precision sync.Once
 func Get_Precision() gopurs_runtime.Value {
 	once_Precision.Do(func() {
 		Precision = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor1("Precision", value0)
+return gopurs_runtime.Value{Type: 9, IntVal: 1786680275, UnsafePtr: unsafe.Pointer(&Data_Data_Number_Format_Precision{value0})}
 })
 	})
 	return Precision
@@ -33,7 +34,7 @@ var once_Fixed sync.Once
 func Get_Fixed() gopurs_runtime.Value {
 	once_Fixed.Do(func() {
 		Fixed = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor1("Fixed", value0)
+return gopurs_runtime.Value{Type: 9, IntVal: 1390206259, UnsafePtr: unsafe.Pointer(&Data_Data_Number_Format_Fixed{value0})}
 })
 	})
 	return Fixed
@@ -44,7 +45,7 @@ var once_Exponential sync.Once
 func Get_Exponential() gopurs_runtime.Value {
 	once_Exponential.Do(func() {
 		Exponential = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor1("Exponential", value0)
+return gopurs_runtime.Value{Type: 9, IntVal: 1734244434, UnsafePtr: unsafe.Pointer(&Data_Data_Number_Format_Exponential{value0})}
 })
 	})
 	return Exponential
@@ -60,24 +61,24 @@ var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v_0.StrVal == "Precision").IntVal != 0 {
-__t0 = gopurs_runtime.Apply(Get_toPrecisionNative(), (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0])
+if (v_0.Type == 9 && v_0.IntVal == 1786680275) {
+__t0 = gopurs_runtime.Apply(Get_toPrecisionNative(), (*Data_Data_Number_Format_Precision)(v_0.UnsafePtr).V0)
 goto end_branch_0
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(v_0.StrVal == "Fixed").IntVal != 0 {
-__t0 = gopurs_runtime.Apply(Get_toFixedNative(), (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0])
+if (v_0.Type == 9 && v_0.IntVal == 1390206259) {
+__t0 = gopurs_runtime.Apply(Get_toFixedNative(), (*Data_Data_Number_Format_Fixed)(v_0.UnsafePtr).V0)
 goto end_branch_0
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(v_0.StrVal == "Exponential").IntVal != 0 {
-__t0 = gopurs_runtime.Apply(Get_toExponentialNative(), (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0])
+if (v_0.Type == 9 && v_0.IntVal == 1734244434) {
+__t0 = gopurs_runtime.Apply(Get_toExponentialNative(), (*Data_Data_Number_Format_Exponential)(v_0.UnsafePtr).V0)
 goto end_branch_0
 } else {
 
@@ -102,7 +103,7 @@ func Get_precision() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
-return gopurs_runtime.Constructor1("Precision", Call_clamp(gopurs_runtime.Int(1), gopurs_runtime.Int(21), x_0))
+return gopurs_runtime.Value{Type: 9, IntVal: 1786680275, UnsafePtr: unsafe.Pointer(&Data_Data_Number_Format_Precision{Call_clamp(gopurs_runtime.Int(1), gopurs_runtime.Int(21), x_0)})}
 }()
 })
 	})
@@ -117,7 +118,7 @@ func Get_fixed() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
-return gopurs_runtime.Constructor1("Fixed", Call_clamp(gopurs_runtime.Int(0), gopurs_runtime.Int(20), x_0))
+return gopurs_runtime.Value{Type: 9, IntVal: 1390206259, UnsafePtr: unsafe.Pointer(&Data_Data_Number_Format_Fixed{Call_clamp(gopurs_runtime.Int(0), gopurs_runtime.Int(20), x_0)})}
 }()
 })
 	})
@@ -132,11 +133,32 @@ func Get_exponential() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
-return gopurs_runtime.Constructor1("Exponential", Call_clamp(gopurs_runtime.Int(0), gopurs_runtime.Int(20), x_0))
+return gopurs_runtime.Value{Type: 9, IntVal: 1734244434, UnsafePtr: unsafe.Pointer(&Data_Data_Number_Format_Exponential{Call_clamp(gopurs_runtime.Int(0), gopurs_runtime.Int(20), x_0)})}
 }()
 })
 	})
 	return exponential
+}
+
+type Data_Data_Number_Format_Precision struct {
+	V0 gopurs_runtime.Value
+}
+func Is_Data_Data_Number_Format_Precision(v gopurs_runtime.Value) bool {
+	return v.Type == 9 && v.IntVal == 1786680275
+}
+
+type Data_Data_Number_Format_Fixed struct {
+	V0 gopurs_runtime.Value
+}
+func Is_Data_Data_Number_Format_Fixed(v gopurs_runtime.Value) bool {
+	return v.Type == 9 && v.IntVal == 1390206259
+}
+
+type Data_Data_Number_Format_Exponential struct {
+	V0 gopurs_runtime.Value
+}
+func Is_Data_Data_Number_Format_Exponential(v gopurs_runtime.Value) bool {
+	return v.Type == 9 && v.IntVal == 1734244434
 }
 
 func Call_clamp(low_0_loop gopurs_runtime.Value, hi_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -150,7 +172,7 @@ v_3_0 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ord.Get_ordInt(
 _ = v_3_0
 var __t2 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v_3_0.StrVal == "LT").IntVal != 0 {
+if (v_3_0.Type == 9 && v_3_0.IntVal == 3866105248) {
 __t2 = x_2
 goto end_branch_2
 } else {
@@ -158,7 +180,7 @@ goto end_branch_2
 }
 }
 {
-if gopurs_runtime.Bool(v_3_0.StrVal == "EQ").IntVal != 0 {
+if (v_3_0.Type == 9 && v_3_0.IntVal == 1111389260) {
 __t2 = low_0
 goto end_branch_2
 } else {
@@ -166,7 +188,7 @@ goto end_branch_2
 }
 }
 {
-if gopurs_runtime.Bool(v_3_0.StrVal == "GT").IntVal != 0 {
+if (v_3_0.Type == 9 && v_3_0.IntVal == 2098047435) {
 __t2 = low_0
 goto end_branch_2
 } else {
@@ -183,7 +205,7 @@ v_5_3 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ord.Get_ordInt(
 _ = v_5_3
 var __t4 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v_5_3.StrVal == "LT").IntVal != 0 {
+if (v_5_3.Type == 9 && v_5_3.IntVal == 3866105248) {
 __t4 = hi_1
 goto end_branch_4
 } else {
@@ -191,7 +213,7 @@ goto end_branch_4
 }
 }
 {
-if gopurs_runtime.Bool(v_5_3.StrVal == "EQ").IntVal != 0 {
+if (v_5_3.Type == 9 && v_5_3.IntVal == 1111389260) {
 __t4 = hi_1
 goto end_branch_4
 } else {
@@ -199,7 +221,7 @@ goto end_branch_4
 }
 }
 {
-if gopurs_runtime.Bool(v_5_3.StrVal == "GT").IntVal != 0 {
+if (v_5_3.Type == 9 && v_5_3.IntVal == 2098047435) {
 __t4 = __local_var_4_1
 goto end_branch_4
 } else {

@@ -6,6 +6,7 @@ import (
 	pkg_Effect_Console "gopurs/output/Effect.Console"
 	pkg_Bench "gopurs/output/Bench"
 	pkg_Data_Show "gopurs/output/Data.Show"
+	unsafe "unsafe"
 )
 
 var Val gopurs_runtime.Value
@@ -13,7 +14,7 @@ var once_Val sync.Once
 func Get_Val() gopurs_runtime.Value {
 	once_Val.Do(func() {
 		Val = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor1("Val", value0)
+return gopurs_runtime.Value{Type: 9, IntVal: 245188743, UnsafePtr: unsafe.Pointer(&Data_Test_AstTree_Val{value0})}
 })
 	})
 	return Val
@@ -25,7 +26,7 @@ func Get_Add() gopurs_runtime.Value {
 	once_Add.Do(func() {
 		Add = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Add", value0, value1)
+return gopurs_runtime.Value{Type: 9, IntVal: 2937956733, UnsafePtr: unsafe.Pointer(&Data_Test_AstTree_Add{value0, value1})}
 })
 })
 	})
@@ -38,7 +39,7 @@ func Get_Mul() gopurs_runtime.Value {
 	once_Mul.Do(func() {
 		Mul = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Mul", value0, value1)
+return gopurs_runtime.Value{Type: 9, IntVal: 3406566728, UnsafePtr: unsafe.Pointer(&Data_Test_AstTree_Mul{value0, value1})}
 })
 })
 	})
@@ -51,7 +52,7 @@ func Get_Sub() gopurs_runtime.Value {
 	once_Sub.Do(func() {
 		Sub = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Sub", value0, value1)
+return gopurs_runtime.Value{Type: 9, IntVal: 2029887576, UnsafePtr: unsafe.Pointer(&Data_Test_AstTree_Sub{value0, value1})}
 })
 })
 	})
@@ -71,32 +72,32 @@ var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v_0.StrVal == "Val").IntVal != 0 {
-__t0 = (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0]
+if (v_0.Type == 9 && v_0.IntVal == 245188743) {
+__t0 = (*Data_Test_AstTree_Val)(v_0.UnsafePtr).V0
 goto end_branch_0
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(v_0.StrVal == "Add").IntVal != 0 {
-__t0 = gopurs_runtime.Int(gopurs_runtime.Apply(Get_eval(), (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0]).IntVal + gopurs_runtime.Apply(Get_eval(), (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[1]).IntVal)
+if (v_0.Type == 9 && v_0.IntVal == 2937956733) {
+__t0 = gopurs_runtime.Int(gopurs_runtime.Apply(Get_eval(), (*Data_Test_AstTree_Add)(v_0.UnsafePtr).V0).IntVal + gopurs_runtime.Apply(Get_eval(), (*Data_Test_AstTree_Add)(v_0.UnsafePtr).V1).IntVal)
 goto end_branch_0
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(v_0.StrVal == "Mul").IntVal != 0 {
-__t0 = gopurs_runtime.Int(gopurs_runtime.Apply(Get_eval(), (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0]).IntVal * gopurs_runtime.Apply(Get_eval(), (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[1]).IntVal)
+if (v_0.Type == 9 && v_0.IntVal == 3406566728) {
+__t0 = gopurs_runtime.Int(gopurs_runtime.Apply(Get_eval(), (*Data_Test_AstTree_Mul)(v_0.UnsafePtr).V0).IntVal * gopurs_runtime.Apply(Get_eval(), (*Data_Test_AstTree_Mul)(v_0.UnsafePtr).V1).IntVal)
 goto end_branch_0
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(v_0.StrVal == "Sub").IntVal != 0 {
-__t0 = gopurs_runtime.Int(gopurs_runtime.Apply(Get_eval(), (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0]).IntVal - gopurs_runtime.Apply(Get_eval(), (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[1]).IntVal)
+if (v_0.Type == 9 && v_0.IntVal == 2029887576) {
+__t0 = gopurs_runtime.Int(gopurs_runtime.Apply(Get_eval(), (*Data_Test_AstTree_Sub)(v_0.UnsafePtr).V0).IntVal - gopurs_runtime.Apply(Get_eval(), (*Data_Test_AstTree_Sub)(v_0.UnsafePtr).V1).IntVal)
 goto end_branch_0
 } else {
 
@@ -137,14 +138,14 @@ _ = v_0
 var __t0 gopurs_runtime.Value
 {
 if v_0.IntVal == 0 {
-__t0 = gopurs_runtime.Constructor1("Val", gopurs_runtime.Int(1))
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 245188743, UnsafePtr: unsafe.Pointer(&Data_Test_AstTree_Val{gopurs_runtime.Int(1)})}
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = gopurs_runtime.Constructor2("Add", gopurs_runtime.Constructor2("Mul", gopurs_runtime.Constructor1("Val", v_0), gopurs_runtime.Apply(Get_buildTree(), gopurs_runtime.Int(v_0.IntVal - 1))), gopurs_runtime.Constructor2("Sub", gopurs_runtime.Apply(Get_buildTree(), gopurs_runtime.Int(v_0.IntVal - 1)), gopurs_runtime.Constructor1("Val", gopurs_runtime.Int(1))))
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 2937956733, UnsafePtr: unsafe.Pointer(&Data_Test_AstTree_Add{gopurs_runtime.Value{Type: 9, IntVal: 3406566728, UnsafePtr: unsafe.Pointer(&Data_Test_AstTree_Mul{gopurs_runtime.Value{Type: 9, IntVal: 245188743, UnsafePtr: unsafe.Pointer(&Data_Test_AstTree_Val{v_0})}, gopurs_runtime.Apply(Get_buildTree(), gopurs_runtime.Int(v_0.IntVal - 1))})}, gopurs_runtime.Value{Type: 9, IntVal: 2029887576, UnsafePtr: unsafe.Pointer(&Data_Test_AstTree_Sub{gopurs_runtime.Apply(Get_buildTree(), gopurs_runtime.Int(v_0.IntVal - 1)), gopurs_runtime.Value{Type: 9, IntVal: 245188743, UnsafePtr: unsafe.Pointer(&Data_Test_AstTree_Val{gopurs_runtime.Int(1)})}})}})}
 }
 end_branch_0:
 return __t0
@@ -172,6 +173,35 @@ return gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), g
 	return act
 }
 
+type Data_Test_AstTree_Val struct {
+	V0 gopurs_runtime.Value
+}
+func Is_Data_Test_AstTree_Val(v gopurs_runtime.Value) bool {
+	return v.Type == 9 && v.IntVal == 245188743
+}
 
+type Data_Test_AstTree_Add struct {
+	V0 gopurs_runtime.Value
+	V1 gopurs_runtime.Value
+}
+func Is_Data_Test_AstTree_Add(v gopurs_runtime.Value) bool {
+	return v.Type == 9 && v.IntVal == 2937956733
+}
+
+type Data_Test_AstTree_Mul struct {
+	V0 gopurs_runtime.Value
+	V1 gopurs_runtime.Value
+}
+func Is_Data_Test_AstTree_Mul(v gopurs_runtime.Value) bool {
+	return v.Type == 9 && v.IntVal == 3406566728
+}
+
+type Data_Test_AstTree_Sub struct {
+	V0 gopurs_runtime.Value
+	V1 gopurs_runtime.Value
+}
+func Is_Data_Test_AstTree_Sub(v gopurs_runtime.Value) bool {
+	return v.Type == 9 && v.IntVal == 2029887576
+}
 
 

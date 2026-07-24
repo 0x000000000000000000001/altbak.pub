@@ -143,7 +143,7 @@ func Call_foreachE(arg0 []any, arg1 func(any) func() any) func() any {
 	return ForeachE(arg0, arg1)
 }
 var _Gopurs_ForeachE = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
-	arg0_arr := arg0.PtrVal.([]gopurs_runtime.Value)
+	arg0_arr := arg0.PtrVal().([]gopurs_runtime.Value)
 	go_arg0 := make([]any, len(arg0_arr))
 	for i, v := range arg0_arr { go_arg0[i] = v }
 	go_arg1 := func(p0_0 any) func() any {

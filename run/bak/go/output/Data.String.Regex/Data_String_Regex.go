@@ -6,6 +6,7 @@ import (
 	pkg_Data_Maybe "gopurs/output/Data.Maybe"
 	pkg_Data_String_CodeUnits "gopurs/output/Data.String.CodeUnits"
 	pkg_Data_Either "gopurs/output/Data.Either"
+	unsafe "unsafe"
 )
 
 var showRegex gopurs_runtime.Value
@@ -21,7 +22,7 @@ var search gopurs_runtime.Value
 var once_search sync.Once
 func Get_search() gopurs_runtime.Value {
 	once_search.Do(func() {
-		search = gopurs_runtime.Apply2(Get__search(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Constructor0("Nothing"))
+		search = gopurs_runtime.Apply2(Get__search(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Value{Type: 9, IntVal: 42808261, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})})
 	})
 	return search
 }
@@ -30,7 +31,7 @@ var replace_prime gopurs_runtime.Value
 var once_replace_prime sync.Once
 func Get_replace_prime() gopurs_runtime.Value {
 	once_replace_prime.Do(func() {
-		replace_prime = gopurs_runtime.Apply2(Get__replaceBy(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Constructor0("Nothing"))
+		replace_prime = gopurs_runtime.Apply2(Get__replaceBy(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Value{Type: 9, IntVal: 42808261, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})})
 	})
 	return replace_prime
 }
@@ -121,7 +122,7 @@ goto end_branch_5
 __t5 = gopurs_runtime.Str("")
 }
 end_branch_5:
-return gopurs_runtime.Str(__t0.StrVal + __t1.StrVal + __t2.StrVal + __t3.StrVal + __t4.StrVal + __t5.StrVal)
+return gopurs_runtime.Str(__t0.StrVal() + __t1.StrVal() + __t2.StrVal() + __t3.StrVal() + __t4.StrVal() + __t5.StrVal())
 }()
 })
 	})
@@ -158,7 +159,7 @@ var match gopurs_runtime.Value
 var once_match sync.Once
 func Get_match() gopurs_runtime.Value {
 	once_match.Do(func() {
-		match = gopurs_runtime.Apply2(Get__match(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Constructor0("Nothing"))
+		match = gopurs_runtime.Apply2(Get__match(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Value{Type: 9, IntVal: 42808261, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})})
 	})
 	return match
 }
@@ -261,7 +262,7 @@ goto end_branch_5
 __t5 = gopurs_runtime.Str("")
 }
 end_branch_5:
-return gopurs_runtime.Apply4(Get_regexImpl(), pkg_Data_Either.Get_Left(), pkg_Data_Either.Get_Right(), s_0, gopurs_runtime.Str(__t0.StrVal + __t1.StrVal + __t2.StrVal + __t3.StrVal + __t4.StrVal + __t5.StrVal))
+return gopurs_runtime.Apply4(Get_regexImpl(), pkg_Data_Either.Get_Left(), pkg_Data_Either.Get_Right(), s_0, gopurs_runtime.Str(__t0.StrVal() + __t1.StrVal() + __t2.StrVal() + __t3.StrVal() + __t4.StrVal() + __t5.StrVal()))
 }
 
 func Get__match() gopurs_runtime.Value {

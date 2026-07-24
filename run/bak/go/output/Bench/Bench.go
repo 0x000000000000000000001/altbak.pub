@@ -34,7 +34,7 @@ _ = t2_5_3
 dt_6_4 := t2_5_3.FloatVal() - t1_3_1.FloatVal()
 _ = dt_6_4
 return gopurs_runtime.Apply(gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-_dollar__unused_7_5 := gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Str("\nExecution time: " + gopurs_runtime.Apply(Get_formatNumber(), gopurs_runtime.Float(dt_6_4)).StrVal + " μs\n")), gopurs_runtime.Value{})
+_dollar__unused_7_5 := gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Str("\nExecution time: " + gopurs_runtime.Apply(Get_formatNumber(), gopurs_runtime.Float(dt_6_4)).StrVal() + " μs\n")), gopurs_runtime.Value{})
 _ = _dollar__unused_7_5
 return gopurs_runtime.Float(dt_6_4)
 }), gopurs_runtime.Value{})

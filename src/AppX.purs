@@ -1,4 +1,5 @@
 module AppX where
+
 import Prelude
 import Effect (Effect)
 import Bench (runBench)

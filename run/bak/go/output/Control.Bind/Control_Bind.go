@@ -3,8 +3,10 @@ package Control_Bind
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
+	pkg_Type_Proxy "gopurs/output/Type.Proxy"
 	pkg_Control_Apply "gopurs/output/Control.Apply"
 	pkg_Control_Category "gopurs/output/Control.Category"
+	unsafe "unsafe"
 )
 
 var discard gopurs_runtime.Value
@@ -27,7 +29,7 @@ var once_bindProxy sync.Once
 func Get_bindProxy() gopurs_runtime.Value {
 	once_bindProxy.Do(func() {
 		bindProxy = gopurs_runtime.RecordDict2("bind", "Apply0", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor0("Proxy")
+return gopurs_runtime.Value{Type: 9, IntVal: 3178699476, UnsafePtr: unsafe.Pointer(&pkg_Type_Proxy.Data_Type_Proxy_Proxy{})}
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Control_Apply.Get_applyProxy()
 }))

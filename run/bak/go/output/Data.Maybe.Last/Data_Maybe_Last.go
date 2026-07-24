@@ -4,6 +4,8 @@ import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
 	pkg_Data_Maybe "gopurs/output/Data.Maybe"
+	pkg_Data_Ordering "gopurs/output/Data.Ordering"
+	unsafe "unsafe"
 )
 
 var Last gopurs_runtime.Value
@@ -32,15 +34,15 @@ _ = dictShow_0
 return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v_1.StrVal == "Just").IntVal != 0 {
-__t0 = gopurs_runtime.Str("(Last (Just " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[0]).StrVal + "))")
+if (v_1.Type == 9 && v_1.IntVal == 1354639136) {
+__t0 = gopurs_runtime.Str("(Last (Just " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), (*pkg_Data_Maybe.Data_Data_Maybe_Just)(v_1.UnsafePtr).V0).StrVal() + "))")
 goto end_branch_0
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(v_1.StrVal == "Nothing").IntVal != 0 {
+if (v_1.Type == 9 && v_1.IntVal == 42808261) {
 __t0 = gopurs_runtime.Str("(Last Nothing)")
 goto end_branch_0
 } else {
@@ -66,7 +68,7 @@ func Get_semigroupLast() gopurs_runtime.Value {
 		semigroupLast = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v1_1.StrVal == "Just").IntVal != 0 {
+if (v1_1.Type == 9 && v1_1.IntVal == 1354639136) {
 __t0 = v1_1
 goto end_branch_0
 } else {
@@ -74,7 +76,7 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool(v1_1.StrVal == "Nothing").IntVal != 0 {
+if (v1_1.Type == 9 && v1_1.IntVal == 42808261) {
 __t0 = v_0
 goto end_branch_0
 } else {
@@ -104,15 +106,15 @@ _ = __local_var_1_0
 eqMaybe1_2_1 := gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func2(func(x_2 gopurs_runtime.Value, y_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t2 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(x_2.StrVal == "Nothing").IntVal != 0 {
-__t2 = gopurs_runtime.Bool(y_3.StrVal == "Nothing")
+if (x_2.Type == 9 && x_2.IntVal == 42808261) {
+__t2 = gopurs_runtime.Bool((y_3.Type == 9 && y_3.IntVal == 42808261))
 goto end_branch_2
 } else {
 
 }
 }
 {
-__t2 = gopurs_runtime.Bool(gopurs_runtime.Bool(x_2.StrVal == "Just").IntVal != 0 && gopurs_runtime.Bool(y_3.StrVal == "Just").IntVal != 0 && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "eq"), (*[1024]gopurs_runtime.Value)(x_2.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(y_3.UnsafePtr)[0]).IntVal != 0)
+__t2 = gopurs_runtime.Bool((x_2.Type == 9 && x_2.IntVal == 1354639136) && (y_3.Type == 9 && y_3.IntVal == 1354639136) && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "eq"), (*pkg_Data_Maybe.Data_Data_Maybe_Just)(x_2.UnsafePtr).V0, (*pkg_Data_Maybe.Data_Data_Maybe_Just)(y_3.UnsafePtr).V0).IntVal != 0)
 }
 end_branch_2:
 return __t2
@@ -121,18 +123,18 @@ _ = eqMaybe1_2_1
 return gopurs_runtime.RecordDict2("compare", "Eq0", gopurs_runtime.Func2(func(x_3 gopurs_runtime.Value, y_4 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t3 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(x_3.StrVal == "Nothing").IntVal != 0 {
+if (x_3.Type == 9 && x_3.IntVal == 42808261) {
 var __t4 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(y_4.StrVal == "Nothing").IntVal != 0 {
-__t4 = gopurs_runtime.Constructor0("EQ")
+if (y_4.Type == 9 && y_4.IntVal == 42808261) {
+__t4 = gopurs_runtime.Value{Type: 9, IntVal: 1111389260, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_EQ{})}
 goto end_branch_4
 } else {
 
 }
 }
 {
-__t4 = gopurs_runtime.Constructor0("LT")
+__t4 = gopurs_runtime.Value{Type: 9, IntVal: 3866105248, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_LT{})}
 }
 end_branch_4:
 __t3 = __t4
@@ -142,16 +144,16 @@ goto end_branch_3
 }
 }
 {
-if gopurs_runtime.Bool(y_4.StrVal == "Nothing").IntVal != 0 {
-__t3 = gopurs_runtime.Constructor0("GT")
+if (y_4.Type == 9 && y_4.IntVal == 42808261) {
+__t3 = gopurs_runtime.Value{Type: 9, IntVal: 2098047435, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_GT{})}
 goto end_branch_3
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(x_3.StrVal == "Just").IntVal != 0 && gopurs_runtime.Bool(y_4.StrVal == "Just").IntVal != 0 {
-__t3 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), (*[1024]gopurs_runtime.Value)(x_3.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(y_4.UnsafePtr)[0])
+if (x_3.Type == 9 && x_3.IntVal == 1354639136) && (y_4.Type == 9 && y_4.IntVal == 1354639136) {
+__t3 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), (*pkg_Data_Maybe.Data_Data_Maybe_Just)(x_3.UnsafePtr).V0, (*pkg_Data_Maybe.Data_Data_Maybe_Just)(y_4.UnsafePtr).V0)
 goto end_branch_3
 } else {
 
@@ -195,7 +197,7 @@ var monoidLast gopurs_runtime.Value
 var once_monoidLast sync.Once
 func Get_monoidLast() gopurs_runtime.Value {
 	once_monoidLast.Do(func() {
-		monoidLast = gopurs_runtime.RecordDict2("mempty", "Semigroup0", gopurs_runtime.Constructor0("Nothing"), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		monoidLast = gopurs_runtime.RecordDict2("mempty", "Semigroup0", gopurs_runtime.Value{Type: 9, IntVal: 42808261, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_semigroupLast()
 }))
 	})
@@ -249,15 +251,15 @@ _ = dictEq_0
 return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func2(func(x_1 gopurs_runtime.Value, y_2 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(x_1.StrVal == "Nothing").IntVal != 0 {
-__t0 = gopurs_runtime.Bool(y_2.StrVal == "Nothing")
+if (x_1.Type == 9 && x_1.IntVal == 42808261) {
+__t0 = gopurs_runtime.Bool((y_2.Type == 9 && y_2.IntVal == 42808261))
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = gopurs_runtime.Bool(gopurs_runtime.Bool(x_1.StrVal == "Just").IntVal != 0 && gopurs_runtime.Bool(y_2.StrVal == "Just").IntVal != 0 && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), (*[1024]gopurs_runtime.Value)(x_1.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(y_2.UnsafePtr)[0]).IntVal != 0)
+__t0 = gopurs_runtime.Bool((x_1.Type == 9 && x_1.IntVal == 1354639136) && (y_2.Type == 9 && y_2.IntVal == 1354639136) && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), (*pkg_Data_Maybe.Data_Data_Maybe_Just)(x_1.UnsafePtr).V0, (*pkg_Data_Maybe.Data_Data_Maybe_Just)(y_2.UnsafePtr).V0).IntVal != 0)
 }
 end_branch_0:
 return __t0
@@ -334,7 +336,7 @@ var plusLast gopurs_runtime.Value
 var once_plusLast sync.Once
 func Get_plusLast() gopurs_runtime.Value {
 	once_plusLast.Do(func() {
-		plusLast = gopurs_runtime.RecordDict2("empty", "Alt0", gopurs_runtime.Constructor0("Nothing"), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		plusLast = gopurs_runtime.RecordDict2("empty", "Alt0", gopurs_runtime.Value{Type: 9, IntVal: 42808261, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_altLast()
 }))
 	})

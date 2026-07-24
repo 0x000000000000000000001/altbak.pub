@@ -3,7 +3,9 @@ package Effect_Exception
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
+	pkg_Data_Either "gopurs/output/Data.Either"
 	pkg_Data_Maybe "gopurs/output/Data.Maybe"
+	unsafe "unsafe"
 )
 
 var try gopurs_runtime.Value
@@ -16,12 +18,12 @@ var action_0 gopurs_runtime.Value = action_0_loop
 _ = action_0
 return gopurs_runtime.Apply2(Get_catchException(), gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor1("Left", x_1)
+return gopurs_runtime.Value{Type: 9, IntVal: 590902115, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Data_Data_Either_Left{x_1})}
 })
 }), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 a_prime_1_0 := gopurs_runtime.Apply(action_0, gopurs_runtime.Value{})
 _ = a_prime_1_0
-return gopurs_runtime.Constructor1("Right", a_prime_1_0)
+return gopurs_runtime.Value{Type: 9, IntVal: 4096564120, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Data_Data_Either_Right{a_prime_1_0})}
 }))
 }()
 })
@@ -48,7 +50,7 @@ var stack gopurs_runtime.Value
 var once_stack sync.Once
 func Get_stack() gopurs_runtime.Value {
 	once_stack.Do(func() {
-		stack = gopurs_runtime.Apply2(Get_stackImpl(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Constructor0("Nothing"))
+		stack = gopurs_runtime.Apply2(Get_stackImpl(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Value{Type: 9, IntVal: 42808261, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})})
 	})
 	return stack
 }

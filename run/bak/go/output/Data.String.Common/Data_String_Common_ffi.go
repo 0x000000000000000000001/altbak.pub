@@ -120,7 +120,7 @@ func Call_joinWith(arg0 string, arg1 []string) string {
 }
 var _Gopurs_JoinWith = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[string](arg0)
-	arg1_arr := arg1.PtrVal.([]gopurs_runtime.Value)
+	arg1_arr := arg1.PtrVal().([]gopurs_runtime.Value)
 	go_arg1 := make([]string, len(arg1_arr))
 	for i, v := range arg1_arr { go_arg1[i] = gopurs_runtime.Unbox[string](v) }
 	go_res := JoinWith(go_arg0, go_arg1)

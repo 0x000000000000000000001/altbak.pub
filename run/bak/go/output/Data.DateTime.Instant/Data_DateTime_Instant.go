@@ -3,10 +3,15 @@ package Data_DateTime_Instant
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
+	pkg_Data_Date_Component "gopurs/output/Data.Date.Component"
+	pkg_Data_DateTime "gopurs/output/Data.DateTime"
 	pkg_Data_Date "gopurs/output/Data.Date"
+	pkg_Data_Time "gopurs/output/Data.Time"
 	pkg_Data_Show "gopurs/output/Data.Show"
 	pkg_Data_Ord "gopurs/output/Data.Ord"
+	pkg_Data_Maybe "gopurs/output/Data.Maybe"
 	pkg_Data_Eq "gopurs/output/Data.Eq"
+	unsafe "unsafe"
 )
 
 var unInstant gopurs_runtime.Value
@@ -33,7 +38,7 @@ return gopurs_runtime.Func2(func(s_5 gopurs_runtime.Value, ms_6 gopurs_runtime.V
 var __t0 gopurs_runtime.Value
 {
 if mo_1.IntVal == 1 {
-__t0 = gopurs_runtime.Constructor0("January")
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 3320970370, UnsafePtr: unsafe.Pointer(&pkg_Data_Date_Component.Data_Data_Date_Component_January{})}
 goto end_branch_0
 } else {
 
@@ -41,7 +46,7 @@ goto end_branch_0
 }
 {
 if mo_1.IntVal == 2 {
-__t0 = gopurs_runtime.Constructor0("February")
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 904613236, UnsafePtr: unsafe.Pointer(&pkg_Data_Date_Component.Data_Data_Date_Component_February{})}
 goto end_branch_0
 } else {
 
@@ -49,7 +54,7 @@ goto end_branch_0
 }
 {
 if mo_1.IntVal == 3 {
-__t0 = gopurs_runtime.Constructor0("March")
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 2235536813, UnsafePtr: unsafe.Pointer(&pkg_Data_Date_Component.Data_Data_Date_Component_March{})}
 goto end_branch_0
 } else {
 
@@ -57,7 +62,7 @@ goto end_branch_0
 }
 {
 if mo_1.IntVal == 4 {
-__t0 = gopurs_runtime.Constructor0("April")
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 116409214, UnsafePtr: unsafe.Pointer(&pkg_Data_Date_Component.Data_Data_Date_Component_April{})}
 goto end_branch_0
 } else {
 
@@ -65,7 +70,7 @@ goto end_branch_0
 }
 {
 if mo_1.IntVal == 5 {
-__t0 = gopurs_runtime.Constructor0("May")
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 1527394637, UnsafePtr: unsafe.Pointer(&pkg_Data_Date_Component.Data_Data_Date_Component_May{})}
 goto end_branch_0
 } else {
 
@@ -73,7 +78,7 @@ goto end_branch_0
 }
 {
 if mo_1.IntVal == 6 {
-__t0 = gopurs_runtime.Constructor0("June")
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 2202783052, UnsafePtr: unsafe.Pointer(&pkg_Data_Date_Component.Data_Data_Date_Component_June{})}
 goto end_branch_0
 } else {
 
@@ -81,7 +86,7 @@ goto end_branch_0
 }
 {
 if mo_1.IntVal == 7 {
-__t0 = gopurs_runtime.Constructor0("July")
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 1676632594, UnsafePtr: unsafe.Pointer(&pkg_Data_Date_Component.Data_Data_Date_Component_July{})}
 goto end_branch_0
 } else {
 
@@ -89,7 +94,7 @@ goto end_branch_0
 }
 {
 if mo_1.IntVal == 8 {
-__t0 = gopurs_runtime.Constructor0("August")
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 4203147001, UnsafePtr: unsafe.Pointer(&pkg_Data_Date_Component.Data_Data_Date_Component_August{})}
 goto end_branch_0
 } else {
 
@@ -97,7 +102,7 @@ goto end_branch_0
 }
 {
 if mo_1.IntVal == 9 {
-__t0 = gopurs_runtime.Constructor0("September")
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 783850007, UnsafePtr: unsafe.Pointer(&pkg_Data_Date_Component.Data_Data_Date_Component_September{})}
 goto end_branch_0
 } else {
 
@@ -105,7 +110,7 @@ goto end_branch_0
 }
 {
 if mo_1.IntVal == 10 {
-__t0 = gopurs_runtime.Constructor0("October")
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 2522709242, UnsafePtr: unsafe.Pointer(&pkg_Data_Date_Component.Data_Data_Date_Component_October{})}
 goto end_branch_0
 } else {
 
@@ -113,7 +118,7 @@ goto end_branch_0
 }
 {
 if mo_1.IntVal == 11 {
-__t0 = gopurs_runtime.Constructor0("November")
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 25181906, UnsafePtr: unsafe.Pointer(&pkg_Data_Date_Component.Data_Data_Date_Component_November{})}
 goto end_branch_0
 } else {
 
@@ -121,7 +126,7 @@ goto end_branch_0
 }
 {
 if mo_1.IntVal == 12 {
-__t0 = gopurs_runtime.Constructor0("December")
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 3004478759, UnsafePtr: unsafe.Pointer(&pkg_Data_Date_Component.Data_Data_Date_Component_December{})}
 goto end_branch_0
 } else {
 
@@ -131,7 +136,7 @@ goto end_branch_0
 __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_0:
-return gopurs_runtime.Constructor2("DateTime", gopurs_runtime.Apply3(pkg_Data_Date.Get_canonicalDate(), y_0, __t0, d_2), gopurs_runtime.Constructor4("Time", h_3, mi_4, s_5, ms_6))
+return gopurs_runtime.Value{Type: 9, IntVal: 3781399673, UnsafePtr: unsafe.Pointer(&pkg_Data_DateTime.Data_Data_DateTime_DateTime{gopurs_runtime.Apply3(pkg_Data_Date.Get_canonicalDate(), y_0, __t0, d_2), gopurs_runtime.Value{Type: 9, IntVal: 2065408909, UnsafePtr: unsafe.Pointer(&pkg_Data_Time.Data_Data_Time_Time{h_3, mi_4, s_5, ms_6})}})}
 })
 }))
 	})
@@ -143,7 +148,7 @@ var once_showInstant sync.Once
 func Get_showInstant() gopurs_runtime.Value {
 	once_showInstant.Do(func() {
 		showInstant = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str("(Instant (Milliseconds " + gopurs_runtime.Apply(pkg_Data_Show.Get_showNumberImpl(), v_0).StrVal + "))")
+return gopurs_runtime.Str("(Instant (Milliseconds " + gopurs_runtime.Apply(pkg_Data_Show.Get_showNumberImpl(), v_0).StrVal() + "))")
 }))
 	})
 	return showInstant
@@ -169,14 +174,14 @@ _ = v_0
 var __t0 gopurs_runtime.Value
 {
 if v_0.FloatVal() >= -8639977881600000.0 && v_0.FloatVal() <= 8639977881599999.0 {
-__t0 = gopurs_runtime.Constructor1("Just", v_0)
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 1354639136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{v_0})}
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = gopurs_runtime.Constructor0("Nothing")
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 42808261, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}
 }
 end_branch_0:
 return __t0
@@ -196,7 +201,7 @@ var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].UnsafePtr)[1].StrVal == "January").IntVal != 0 {
+if ((*pkg_Data_Date.Data_Data_Date_Date)((*pkg_Data_DateTime.Data_Data_DateTime_DateTime)(v_0.UnsafePtr).V0.UnsafePtr).V1.Type == 9 && (*pkg_Data_Date.Data_Data_Date_Date)((*pkg_Data_DateTime.Data_Data_DateTime_DateTime)(v_0.UnsafePtr).V0.UnsafePtr).V1.IntVal == 3320970370) {
 __t0 = gopurs_runtime.Int(1)
 goto end_branch_0
 } else {
@@ -204,7 +209,7 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].UnsafePtr)[1].StrVal == "February").IntVal != 0 {
+if ((*pkg_Data_Date.Data_Data_Date_Date)((*pkg_Data_DateTime.Data_Data_DateTime_DateTime)(v_0.UnsafePtr).V0.UnsafePtr).V1.Type == 9 && (*pkg_Data_Date.Data_Data_Date_Date)((*pkg_Data_DateTime.Data_Data_DateTime_DateTime)(v_0.UnsafePtr).V0.UnsafePtr).V1.IntVal == 904613236) {
 __t0 = gopurs_runtime.Int(2)
 goto end_branch_0
 } else {
@@ -212,7 +217,7 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].UnsafePtr)[1].StrVal == "March").IntVal != 0 {
+if ((*pkg_Data_Date.Data_Data_Date_Date)((*pkg_Data_DateTime.Data_Data_DateTime_DateTime)(v_0.UnsafePtr).V0.UnsafePtr).V1.Type == 9 && (*pkg_Data_Date.Data_Data_Date_Date)((*pkg_Data_DateTime.Data_Data_DateTime_DateTime)(v_0.UnsafePtr).V0.UnsafePtr).V1.IntVal == 2235536813) {
 __t0 = gopurs_runtime.Int(3)
 goto end_branch_0
 } else {
@@ -220,7 +225,7 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].UnsafePtr)[1].StrVal == "April").IntVal != 0 {
+if ((*pkg_Data_Date.Data_Data_Date_Date)((*pkg_Data_DateTime.Data_Data_DateTime_DateTime)(v_0.UnsafePtr).V0.UnsafePtr).V1.Type == 9 && (*pkg_Data_Date.Data_Data_Date_Date)((*pkg_Data_DateTime.Data_Data_DateTime_DateTime)(v_0.UnsafePtr).V0.UnsafePtr).V1.IntVal == 116409214) {
 __t0 = gopurs_runtime.Int(4)
 goto end_branch_0
 } else {
@@ -228,7 +233,7 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].UnsafePtr)[1].StrVal == "May").IntVal != 0 {
+if ((*pkg_Data_Date.Data_Data_Date_Date)((*pkg_Data_DateTime.Data_Data_DateTime_DateTime)(v_0.UnsafePtr).V0.UnsafePtr).V1.Type == 9 && (*pkg_Data_Date.Data_Data_Date_Date)((*pkg_Data_DateTime.Data_Data_DateTime_DateTime)(v_0.UnsafePtr).V0.UnsafePtr).V1.IntVal == 1527394637) {
 __t0 = gopurs_runtime.Int(5)
 goto end_branch_0
 } else {
@@ -236,7 +241,7 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].UnsafePtr)[1].StrVal == "June").IntVal != 0 {
+if ((*pkg_Data_Date.Data_Data_Date_Date)((*pkg_Data_DateTime.Data_Data_DateTime_DateTime)(v_0.UnsafePtr).V0.UnsafePtr).V1.Type == 9 && (*pkg_Data_Date.Data_Data_Date_Date)((*pkg_Data_DateTime.Data_Data_DateTime_DateTime)(v_0.UnsafePtr).V0.UnsafePtr).V1.IntVal == 2202783052) {
 __t0 = gopurs_runtime.Int(6)
 goto end_branch_0
 } else {
@@ -244,7 +249,7 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].UnsafePtr)[1].StrVal == "July").IntVal != 0 {
+if ((*pkg_Data_Date.Data_Data_Date_Date)((*pkg_Data_DateTime.Data_Data_DateTime_DateTime)(v_0.UnsafePtr).V0.UnsafePtr).V1.Type == 9 && (*pkg_Data_Date.Data_Data_Date_Date)((*pkg_Data_DateTime.Data_Data_DateTime_DateTime)(v_0.UnsafePtr).V0.UnsafePtr).V1.IntVal == 1676632594) {
 __t0 = gopurs_runtime.Int(7)
 goto end_branch_0
 } else {
@@ -252,7 +257,7 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].UnsafePtr)[1].StrVal == "August").IntVal != 0 {
+if ((*pkg_Data_Date.Data_Data_Date_Date)((*pkg_Data_DateTime.Data_Data_DateTime_DateTime)(v_0.UnsafePtr).V0.UnsafePtr).V1.Type == 9 && (*pkg_Data_Date.Data_Data_Date_Date)((*pkg_Data_DateTime.Data_Data_DateTime_DateTime)(v_0.UnsafePtr).V0.UnsafePtr).V1.IntVal == 4203147001) {
 __t0 = gopurs_runtime.Int(8)
 goto end_branch_0
 } else {
@@ -260,7 +265,7 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].UnsafePtr)[1].StrVal == "September").IntVal != 0 {
+if ((*pkg_Data_Date.Data_Data_Date_Date)((*pkg_Data_DateTime.Data_Data_DateTime_DateTime)(v_0.UnsafePtr).V0.UnsafePtr).V1.Type == 9 && (*pkg_Data_Date.Data_Data_Date_Date)((*pkg_Data_DateTime.Data_Data_DateTime_DateTime)(v_0.UnsafePtr).V0.UnsafePtr).V1.IntVal == 783850007) {
 __t0 = gopurs_runtime.Int(9)
 goto end_branch_0
 } else {
@@ -268,7 +273,7 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].UnsafePtr)[1].StrVal == "October").IntVal != 0 {
+if ((*pkg_Data_Date.Data_Data_Date_Date)((*pkg_Data_DateTime.Data_Data_DateTime_DateTime)(v_0.UnsafePtr).V0.UnsafePtr).V1.Type == 9 && (*pkg_Data_Date.Data_Data_Date_Date)((*pkg_Data_DateTime.Data_Data_DateTime_DateTime)(v_0.UnsafePtr).V0.UnsafePtr).V1.IntVal == 2522709242) {
 __t0 = gopurs_runtime.Int(10)
 goto end_branch_0
 } else {
@@ -276,7 +281,7 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].UnsafePtr)[1].StrVal == "November").IntVal != 0 {
+if ((*pkg_Data_Date.Data_Data_Date_Date)((*pkg_Data_DateTime.Data_Data_DateTime_DateTime)(v_0.UnsafePtr).V0.UnsafePtr).V1.Type == 9 && (*pkg_Data_Date.Data_Data_Date_Date)((*pkg_Data_DateTime.Data_Data_DateTime_DateTime)(v_0.UnsafePtr).V0.UnsafePtr).V1.IntVal == 25181906) {
 __t0 = gopurs_runtime.Int(11)
 goto end_branch_0
 } else {
@@ -284,7 +289,7 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].UnsafePtr)[1].StrVal == "December").IntVal != 0 {
+if ((*pkg_Data_Date.Data_Data_Date_Date)((*pkg_Data_DateTime.Data_Data_DateTime_DateTime)(v_0.UnsafePtr).V0.UnsafePtr).V1.Type == 9 && (*pkg_Data_Date.Data_Data_Date_Date)((*pkg_Data_DateTime.Data_Data_DateTime_DateTime)(v_0.UnsafePtr).V0.UnsafePtr).V1.IntVal == 3004478759) {
 __t0 = gopurs_runtime.Int(12)
 goto end_branch_0
 } else {
@@ -295,7 +300,7 @@ goto end_branch_0
 __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_0:
-return gopurs_runtime.UncurriedApp7(Get_fromDateTimeImpl(), (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].UnsafePtr)[0], __t0, (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0].UnsafePtr)[2], (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[1].UnsafePtr)[0], (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[1].UnsafePtr)[1], (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[1].UnsafePtr)[2], (*[1024]gopurs_runtime.Value)((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[1].UnsafePtr)[3])
+return gopurs_runtime.UncurriedApp7(Get_fromDateTimeImpl(), (*pkg_Data_Date.Data_Data_Date_Date)((*pkg_Data_DateTime.Data_Data_DateTime_DateTime)(v_0.UnsafePtr).V0.UnsafePtr).V0, __t0, (*pkg_Data_Date.Data_Data_Date_Date)((*pkg_Data_DateTime.Data_Data_DateTime_DateTime)(v_0.UnsafePtr).V0.UnsafePtr).V2, (*pkg_Data_Time.Data_Data_Time_Time)((*pkg_Data_DateTime.Data_Data_DateTime_DateTime)(v_0.UnsafePtr).V1.UnsafePtr).V0, (*pkg_Data_Time.Data_Data_Time_Time)((*pkg_Data_DateTime.Data_Data_DateTime_DateTime)(v_0.UnsafePtr).V1.UnsafePtr).V1, (*pkg_Data_Time.Data_Data_Time_Time)((*pkg_Data_DateTime.Data_Data_DateTime_DateTime)(v_0.UnsafePtr).V1.UnsafePtr).V2, (*pkg_Data_Time.Data_Data_Time_Time)((*pkg_Data_DateTime.Data_Data_DateTime_DateTime)(v_0.UnsafePtr).V1.UnsafePtr).V3)
 }()
 })
 	})
@@ -312,7 +317,7 @@ var d_0 gopurs_runtime.Value = d_0_loop
 _ = d_0
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(d_0.UnsafePtr)[1].StrVal == "January").IntVal != 0 {
+if ((*pkg_Data_Date.Data_Data_Date_Date)(d_0.UnsafePtr).V1.Type == 9 && (*pkg_Data_Date.Data_Data_Date_Date)(d_0.UnsafePtr).V1.IntVal == 3320970370) {
 __t0 = gopurs_runtime.Int(1)
 goto end_branch_0
 } else {
@@ -320,7 +325,7 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(d_0.UnsafePtr)[1].StrVal == "February").IntVal != 0 {
+if ((*pkg_Data_Date.Data_Data_Date_Date)(d_0.UnsafePtr).V1.Type == 9 && (*pkg_Data_Date.Data_Data_Date_Date)(d_0.UnsafePtr).V1.IntVal == 904613236) {
 __t0 = gopurs_runtime.Int(2)
 goto end_branch_0
 } else {
@@ -328,7 +333,7 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(d_0.UnsafePtr)[1].StrVal == "March").IntVal != 0 {
+if ((*pkg_Data_Date.Data_Data_Date_Date)(d_0.UnsafePtr).V1.Type == 9 && (*pkg_Data_Date.Data_Data_Date_Date)(d_0.UnsafePtr).V1.IntVal == 2235536813) {
 __t0 = gopurs_runtime.Int(3)
 goto end_branch_0
 } else {
@@ -336,7 +341,7 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(d_0.UnsafePtr)[1].StrVal == "April").IntVal != 0 {
+if ((*pkg_Data_Date.Data_Data_Date_Date)(d_0.UnsafePtr).V1.Type == 9 && (*pkg_Data_Date.Data_Data_Date_Date)(d_0.UnsafePtr).V1.IntVal == 116409214) {
 __t0 = gopurs_runtime.Int(4)
 goto end_branch_0
 } else {
@@ -344,7 +349,7 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(d_0.UnsafePtr)[1].StrVal == "May").IntVal != 0 {
+if ((*pkg_Data_Date.Data_Data_Date_Date)(d_0.UnsafePtr).V1.Type == 9 && (*pkg_Data_Date.Data_Data_Date_Date)(d_0.UnsafePtr).V1.IntVal == 1527394637) {
 __t0 = gopurs_runtime.Int(5)
 goto end_branch_0
 } else {
@@ -352,7 +357,7 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(d_0.UnsafePtr)[1].StrVal == "June").IntVal != 0 {
+if ((*pkg_Data_Date.Data_Data_Date_Date)(d_0.UnsafePtr).V1.Type == 9 && (*pkg_Data_Date.Data_Data_Date_Date)(d_0.UnsafePtr).V1.IntVal == 2202783052) {
 __t0 = gopurs_runtime.Int(6)
 goto end_branch_0
 } else {
@@ -360,7 +365,7 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(d_0.UnsafePtr)[1].StrVal == "July").IntVal != 0 {
+if ((*pkg_Data_Date.Data_Data_Date_Date)(d_0.UnsafePtr).V1.Type == 9 && (*pkg_Data_Date.Data_Data_Date_Date)(d_0.UnsafePtr).V1.IntVal == 1676632594) {
 __t0 = gopurs_runtime.Int(7)
 goto end_branch_0
 } else {
@@ -368,7 +373,7 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(d_0.UnsafePtr)[1].StrVal == "August").IntVal != 0 {
+if ((*pkg_Data_Date.Data_Data_Date_Date)(d_0.UnsafePtr).V1.Type == 9 && (*pkg_Data_Date.Data_Data_Date_Date)(d_0.UnsafePtr).V1.IntVal == 4203147001) {
 __t0 = gopurs_runtime.Int(8)
 goto end_branch_0
 } else {
@@ -376,7 +381,7 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(d_0.UnsafePtr)[1].StrVal == "September").IntVal != 0 {
+if ((*pkg_Data_Date.Data_Data_Date_Date)(d_0.UnsafePtr).V1.Type == 9 && (*pkg_Data_Date.Data_Data_Date_Date)(d_0.UnsafePtr).V1.IntVal == 783850007) {
 __t0 = gopurs_runtime.Int(9)
 goto end_branch_0
 } else {
@@ -384,7 +389,7 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(d_0.UnsafePtr)[1].StrVal == "October").IntVal != 0 {
+if ((*pkg_Data_Date.Data_Data_Date_Date)(d_0.UnsafePtr).V1.Type == 9 && (*pkg_Data_Date.Data_Data_Date_Date)(d_0.UnsafePtr).V1.IntVal == 2522709242) {
 __t0 = gopurs_runtime.Int(10)
 goto end_branch_0
 } else {
@@ -392,7 +397,7 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(d_0.UnsafePtr)[1].StrVal == "November").IntVal != 0 {
+if ((*pkg_Data_Date.Data_Data_Date_Date)(d_0.UnsafePtr).V1.Type == 9 && (*pkg_Data_Date.Data_Data_Date_Date)(d_0.UnsafePtr).V1.IntVal == 25181906) {
 __t0 = gopurs_runtime.Int(11)
 goto end_branch_0
 } else {
@@ -400,7 +405,7 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(d_0.UnsafePtr)[1].StrVal == "December").IntVal != 0 {
+if ((*pkg_Data_Date.Data_Data_Date_Date)(d_0.UnsafePtr).V1.Type == 9 && (*pkg_Data_Date.Data_Data_Date_Date)(d_0.UnsafePtr).V1.IntVal == 3004478759) {
 __t0 = gopurs_runtime.Int(12)
 goto end_branch_0
 } else {
@@ -411,7 +416,7 @@ goto end_branch_0
 __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_0:
-return gopurs_runtime.UncurriedApp7(Get_fromDateTimeImpl(), (*[1024]gopurs_runtime.Value)(d_0.UnsafePtr)[0], __t0, (*[1024]gopurs_runtime.Value)(d_0.UnsafePtr)[2], gopurs_runtime.Int(0), gopurs_runtime.Int(0), gopurs_runtime.Int(0), gopurs_runtime.Int(0))
+return gopurs_runtime.UncurriedApp7(Get_fromDateTimeImpl(), (*pkg_Data_Date.Data_Data_Date_Date)(d_0.UnsafePtr).V0, __t0, (*pkg_Data_Date.Data_Data_Date_Date)(d_0.UnsafePtr).V2, gopurs_runtime.Int(0), gopurs_runtime.Int(0), gopurs_runtime.Int(0), gopurs_runtime.Int(0))
 }()
 })
 	})

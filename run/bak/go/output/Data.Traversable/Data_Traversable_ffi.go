@@ -97,7 +97,7 @@ var _Gopurs_TraverseArrayImpl = gopurs_runtime.Func5(func(arg0 gopurs_runtime.Va
 	go_arg3 := func(p0_0 interface{}) interface{} {
 			return gopurs_runtime.Apply(arg3, gopurs_runtime.Box(p0_0))
 		}
-	arg4_arr := arg4.PtrVal.([]gopurs_runtime.Value)
+	arg4_arr := arg4.PtrVal().([]gopurs_runtime.Value)
 	go_arg4 := make([]interface{}, len(arg4_arr))
 	for i, v := range arg4_arr { go_arg4[i] = v }
 	go_res := TraverseArrayImpl(go_arg0, go_arg1, go_arg2, go_arg3, go_arg4)

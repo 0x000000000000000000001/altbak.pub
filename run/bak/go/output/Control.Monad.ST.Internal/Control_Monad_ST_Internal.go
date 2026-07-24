@@ -3,6 +3,7 @@ package Control_Monad_ST_Internal
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
+	pkg_Control_Monad_Rec_Class "gopurs/output/Control.Monad.Rec.Class"
 	pkg_Data_Unit "gopurs/output/Data.Unit"
 )
 
@@ -137,15 +138,15 @@ _ = r_4_2
 _dollar__unused_5_4 := gopurs_runtime.Apply(gopurs_runtime.Apply2(Get_while(), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_5_5 := *(r_4_2.PtrVal.(*gopurs_runtime.Value))
 _ = __local_var_5_5
-return gopurs_runtime.Bool(__local_var_5_5.StrVal == "Loop")
+return gopurs_runtime.Bool((__local_var_5_5.Type == 9 && __local_var_5_5.IntVal == 1903769252))
 }), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 v_5_6 := *(r_4_2.PtrVal.(*gopurs_runtime.Value))
 _ = v_5_6
 var __t7 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v_5_6.StrVal == "Loop").IntVal != 0 {
+if (v_5_6.Type == 9 && v_5_6.IntVal == 1903769252) {
 __t7 = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-e_6_8 := gopurs_runtime.Apply(gopurs_runtime.Apply(f_0, (*[1024]gopurs_runtime.Value)(v_5_6.UnsafePtr)[0]), gopurs_runtime.Value{})
+e_6_8 := gopurs_runtime.Apply(gopurs_runtime.Apply(f_0, (*pkg_Control_Monad_Rec_Class.Data_Control_Monad_Rec_Class_Loop)(v_5_6.UnsafePtr).V0), gopurs_runtime.Value{})
 _ = e_6_8
 *(r_4_2.PtrVal.(*gopurs_runtime.Value)) = e_6_8
 __local_var_7_9 := e_6_8
@@ -158,7 +159,7 @@ goto end_branch_7
 }
 }
 {
-if gopurs_runtime.Bool(v_5_6.StrVal == "Done").IntVal != 0 {
+if (v_5_6.Type == 9 && v_5_6.IntVal == 2547603288) {
 __t7 = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Unit.Get_unit()
 })
@@ -178,8 +179,8 @@ __local_var_6_10 := *(r_4_2.PtrVal.(*gopurs_runtime.Value))
 _ = __local_var_6_10
 var __t11 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(__local_var_6_10.StrVal == "Done").IntVal != 0 {
-__t11 = (*[1024]gopurs_runtime.Value)(__local_var_6_10.UnsafePtr)[0]
+if (__local_var_6_10.Type == 9 && __local_var_6_10.IntVal == 2547603288) {
+__t11 = (*pkg_Control_Monad_Rec_Class.Data_Control_Monad_Rec_Class_Done)(__local_var_6_10.UnsafePtr).V0
 goto end_branch_11
 } else {
 

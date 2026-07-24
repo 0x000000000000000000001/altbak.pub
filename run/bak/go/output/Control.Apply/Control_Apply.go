@@ -3,9 +3,11 @@ package Control_Apply
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
+	pkg_Type_Proxy "gopurs/output/Type.Proxy"
 	pkg_Data_Functor "gopurs/output/Data.Functor"
 	pkg_Data_Function "gopurs/output/Data.Function"
 	pkg_Control_Category "gopurs/output/Control.Category"
+	unsafe "unsafe"
 )
 
 var applyProxy gopurs_runtime.Value
@@ -13,7 +15,7 @@ var once_applyProxy sync.Once
 func Get_applyProxy() gopurs_runtime.Value {
 	once_applyProxy.Do(func() {
 		applyProxy = gopurs_runtime.RecordDict2("apply", "Functor0", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor0("Proxy")
+return gopurs_runtime.Value{Type: 9, IntVal: 3178699476, UnsafePtr: unsafe.Pointer(&pkg_Type_Proxy.Data_Type_Proxy_Proxy{})}
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Functor.Get_functorProxy()
 }))

@@ -5,6 +5,7 @@ import (
 	sync "sync"
 	pkg_Data_Tuple "gopurs/output/Data.Tuple"
 	pkg_Data_Profunctor "gopurs/output/Data.Profunctor"
+	unsafe "unsafe"
 )
 
 var strongFn gopurs_runtime.Value
@@ -12,7 +13,7 @@ var once_strongFn sync.Once
 func Get_strongFn() gopurs_runtime.Value {
 	once_strongFn.Do(func() {
 		strongFn = gopurs_runtime.RecordDict3("first", "second", "Profunctor0", gopurs_runtime.Func2(func(a2b_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply(a2b_0, (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[0]), (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[1])
+return gopurs_runtime.Value{Type: 9, IntVal: 1102100576, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{gopurs_runtime.Apply(a2b_0, (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v_1.UnsafePtr).V0), (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v_1.UnsafePtr).V1})}
 }), gopurs_runtime.RecordGet(pkg_Data_Tuple.Get_functorTuple(), "map"), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Profunctor.Get_profunctorFn()
 }))
@@ -93,7 +94,7 @@ lcmap_2_0 := gopurs_runtime.Apply(pkg_Data_Profunctor.Get_lcmap(), gopurs_runtim
 _ = lcmap_2_0
 return gopurs_runtime.Func2(func(l_3 gopurs_runtime.Value, r_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(lcmap_2_0, gopurs_runtime.Func(func(a_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Tuple", a_5, a_5)
+return gopurs_runtime.Value{Type: 9, IntVal: 1102100576, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{a_5, a_5})}
 }), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroupoid_0, "compose"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictStrong_1, "second"), r_4), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictStrong_1, "first"), l_3)))
 })
 }

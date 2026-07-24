@@ -4,6 +4,7 @@ import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
 	pkg_Control_Monad_State_Trans "gopurs/output/Control.Monad.State.Trans"
+	pkg_Data_Tuple "gopurs/output/Data.Tuple"
 )
 
 var withState gopurs_runtime.Value
@@ -82,7 +83,7 @@ var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 var s_1 gopurs_runtime.Value = s_1_loop
 _ = s_1
-return (*[1024]gopurs_runtime.Value)(gopurs_runtime.Apply(v_0, s_1).UnsafePtr)[1]
+return (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(gopurs_runtime.Apply(v_0, s_1).UnsafePtr).V1
 }
 
 func Call_evalState(v_0_loop gopurs_runtime.Value, s_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -90,7 +91,7 @@ var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 var s_1 gopurs_runtime.Value = s_1_loop
 _ = s_1
-return (*[1024]gopurs_runtime.Value)(gopurs_runtime.Apply(v_0, s_1).UnsafePtr)[0]
+return (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(gopurs_runtime.Apply(v_0, s_1).UnsafePtr).V0
 }
 
 

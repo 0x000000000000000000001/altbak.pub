@@ -3,8 +3,10 @@ package Control_Applicative
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
+	pkg_Type_Proxy "gopurs/output/Type.Proxy"
 	pkg_Control_Apply "gopurs/output/Control.Apply"
 	pkg_Data_Unit "gopurs/output/Data.Unit"
+	unsafe "unsafe"
 )
 
 var pure gopurs_runtime.Value
@@ -60,7 +62,7 @@ var once_applicativeProxy sync.Once
 func Get_applicativeProxy() gopurs_runtime.Value {
 	once_applicativeProxy.Do(func() {
 		applicativeProxy = gopurs_runtime.RecordDict2("pure", "Apply0", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor0("Proxy")
+return gopurs_runtime.Value{Type: 9, IntVal: 3178699476, UnsafePtr: unsafe.Pointer(&pkg_Type_Proxy.Data_Type_Proxy_Proxy{})}
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Control_Apply.Get_applyProxy()
 }))

@@ -31,7 +31,7 @@ var _Gopurs_FoldrArray = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, ar
 		}
 		}
 	go_arg1 := arg1
-	arg2_arr := arg2.PtrVal.([]gopurs_runtime.Value)
+	arg2_arr := arg2.PtrVal().([]gopurs_runtime.Value)
 	go_arg2 := make([]interface{}, len(arg2_arr))
 	for i, v := range arg2_arr { go_arg2[i] = v }
 	go_res := FoldrArray(go_arg0, go_arg1, go_arg2)
@@ -48,7 +48,7 @@ var _Gopurs_FoldlArray = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, ar
 		}
 		}
 	go_arg1 := arg1
-	arg2_arr := arg2.PtrVal.([]gopurs_runtime.Value)
+	arg2_arr := arg2.PtrVal().([]gopurs_runtime.Value)
 	go_arg2 := make([]interface{}, len(arg2_arr))
 	for i, v := range arg2_arr { go_arg2[i] = v }
 	go_res := FoldlArray(go_arg0, go_arg1, go_arg2)

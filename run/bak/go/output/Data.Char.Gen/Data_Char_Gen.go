@@ -8,6 +8,8 @@ import (
 	pkg_Data_Bounded "gopurs/output/Data.Bounded"
 	pkg_Control_Monad_Gen "gopurs/output/Control.Monad.Gen"
 	pkg_Data_Enum "gopurs/output/Data.Enum"
+	pkg_Data_Maybe "gopurs/output/Data.Maybe"
+	unsafe "unsafe"
 )
 
 var toEnumWithDefaults gopurs_runtime.Value
@@ -128,7 +130,7 @@ func Get_genAlpha() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonadGen_0 gopurs_runtime.Value = dictMonadGen_0_loop
 _ = dictMonadGen_0
-return gopurs_runtime.Apply3(pkg_Control_Monad_Gen.Get_oneOf(), dictMonadGen_0, Get_foldable1NonEmpty(), gopurs_runtime.Constructor2("NonEmpty", gopurs_runtime.Apply(Get_genAlphaLowercase(), dictMonadGen_0), gopurs_runtime.Array([]gopurs_runtime.Value{gopurs_runtime.Apply(Get_genAlphaUppercase(), dictMonadGen_0)})))
+return gopurs_runtime.Apply3(pkg_Control_Monad_Gen.Get_oneOf(), dictMonadGen_0, Get_foldable1NonEmpty(), gopurs_runtime.Value{Type: 9, IntVal: 1104112642, UnsafePtr: unsafe.Pointer(&pkg_Data_NonEmpty.Data_Data_NonEmpty_NonEmpty{gopurs_runtime.Apply(Get_genAlphaLowercase(), dictMonadGen_0), gopurs_runtime.Array([]gopurs_runtime.Value{gopurs_runtime.Apply(Get_genAlphaUppercase(), dictMonadGen_0)})})})
 }()
 })
 	})
@@ -146,15 +148,15 @@ v_3_0 := gopurs_runtime.Apply(pkg_Data_Enum.Get_charToEnum(), x_2)
 _ = v_3_0
 var __t1 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v_3_0.StrVal == "Just").IntVal != 0 {
-__t1 = (*[1024]gopurs_runtime.Value)(v_3_0.UnsafePtr)[0]
+if (v_3_0.Type == 9 && v_3_0.IntVal == 1354639136) {
+__t1 = (*pkg_Data_Maybe.Data_Data_Maybe_Just)(v_3_0.UnsafePtr).V0
 goto end_branch_1
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(v_3_0.StrVal == "Nothing").IntVal != 0 {
+if (v_3_0.Type == 9 && v_3_0.IntVal == 42808261) {
 var __t2 gopurs_runtime.Value
 {
 if x_2.IntVal < gopurs_runtime.Apply(pkg_Data_Enum.Get_toCharCode(), pkg_Data_Bounded.Get_bottomChar()).IntVal {

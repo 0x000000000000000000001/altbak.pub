@@ -3,6 +3,7 @@ package Effect_Now
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
+	pkg_Data_DateTime "gopurs/output/Data.DateTime"
 	pkg_Data_DateTime_Instant "gopurs/output/Data.DateTime.Instant"
 )
 
@@ -13,7 +14,7 @@ func Get_nowTime() gopurs_runtime.Value {
 		nowTime = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 a_prime_0_0 := gopurs_runtime.Apply(Get_now(), gopurs_runtime.Value{})
 _ = a_prime_0_0
-return (*[1024]gopurs_runtime.Value)(gopurs_runtime.Apply(pkg_Data_DateTime_Instant.Get_toDateTime(), a_prime_0_0).UnsafePtr)[1]
+return (*pkg_Data_DateTime.Data_Data_DateTime_DateTime)(gopurs_runtime.Apply(pkg_Data_DateTime_Instant.Get_toDateTime(), a_prime_0_0).UnsafePtr).V1
 })
 	})
 	return nowTime
@@ -39,7 +40,7 @@ func Get_nowDate() gopurs_runtime.Value {
 		nowDate = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 a_prime_0_0 := gopurs_runtime.Apply(Get_now(), gopurs_runtime.Value{})
 _ = a_prime_0_0
-return (*[1024]gopurs_runtime.Value)(gopurs_runtime.Apply(pkg_Data_DateTime_Instant.Get_toDateTime(), a_prime_0_0).UnsafePtr)[0]
+return (*pkg_Data_DateTime.Data_Data_DateTime_DateTime)(gopurs_runtime.Apply(pkg_Data_DateTime_Instant.Get_toDateTime(), a_prime_0_0).UnsafePtr).V0
 })
 	})
 	return nowDate

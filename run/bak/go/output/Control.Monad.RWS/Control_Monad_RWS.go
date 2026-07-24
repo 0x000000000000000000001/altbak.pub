@@ -4,6 +4,8 @@ import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
 	pkg_Control_Monad_RWS_Trans "gopurs/output/Control.Monad.RWS.Trans"
+	pkg_Data_Tuple "gopurs/output/Data.Tuple"
+	unsafe "unsafe"
 )
 
 var withRWS gopurs_runtime.Value
@@ -111,7 +113,7 @@ var s_2 gopurs_runtime.Value = s_2_loop
 _ = s_2
 __local_var_3_0 := gopurs_runtime.Apply2(m_0, r_1, s_2)
 _ = __local_var_3_0
-return gopurs_runtime.Constructor2("Tuple", (*[1024]gopurs_runtime.Value)(__local_var_3_0.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(__local_var_3_0.UnsafePtr)[2])
+return gopurs_runtime.Value{Type: 9, IntVal: 1102100576, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{(*pkg_Control_Monad_RWS_Trans.Data_Control_Monad_RWS_Trans_RWSResult)(__local_var_3_0.UnsafePtr).V0, (*pkg_Control_Monad_RWS_Trans.Data_Control_Monad_RWS_Trans_RWSResult)(__local_var_3_0.UnsafePtr).V2})}
 }
 
 func Call_evalRWS(m_0_loop gopurs_runtime.Value, r_1_loop gopurs_runtime.Value, s_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -123,7 +125,7 @@ var s_2 gopurs_runtime.Value = s_2_loop
 _ = s_2
 __local_var_3_0 := gopurs_runtime.Apply2(m_0, r_1, s_2)
 _ = __local_var_3_0
-return gopurs_runtime.Constructor2("Tuple", (*[1024]gopurs_runtime.Value)(__local_var_3_0.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(__local_var_3_0.UnsafePtr)[2])
+return gopurs_runtime.Value{Type: 9, IntVal: 1102100576, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{(*pkg_Control_Monad_RWS_Trans.Data_Control_Monad_RWS_Trans_RWSResult)(__local_var_3_0.UnsafePtr).V1, (*pkg_Control_Monad_RWS_Trans.Data_Control_Monad_RWS_Trans_RWSResult)(__local_var_3_0.UnsafePtr).V2})}
 }
 
 

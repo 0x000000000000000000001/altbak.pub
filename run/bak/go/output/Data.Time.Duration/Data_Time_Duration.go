@@ -104,7 +104,7 @@ var once_showSeconds sync.Once
 func Get_showSeconds() gopurs_runtime.Value {
 	once_showSeconds.Do(func() {
 		showSeconds = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str("(Seconds " + gopurs_runtime.Apply(pkg_Data_Show.Get_showNumberImpl(), v_0).StrVal + ")")
+return gopurs_runtime.Str("(Seconds " + gopurs_runtime.Apply(pkg_Data_Show.Get_showNumberImpl(), v_0).StrVal() + ")")
 }))
 	})
 	return showSeconds
@@ -115,7 +115,7 @@ var once_showMinutes sync.Once
 func Get_showMinutes() gopurs_runtime.Value {
 	once_showMinutes.Do(func() {
 		showMinutes = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str("(Minutes " + gopurs_runtime.Apply(pkg_Data_Show.Get_showNumberImpl(), v_0).StrVal + ")")
+return gopurs_runtime.Str("(Minutes " + gopurs_runtime.Apply(pkg_Data_Show.Get_showNumberImpl(), v_0).StrVal() + ")")
 }))
 	})
 	return showMinutes
@@ -126,7 +126,7 @@ var once_showMilliseconds sync.Once
 func Get_showMilliseconds() gopurs_runtime.Value {
 	once_showMilliseconds.Do(func() {
 		showMilliseconds = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str("(Milliseconds " + gopurs_runtime.Apply(pkg_Data_Show.Get_showNumberImpl(), v_0).StrVal + ")")
+return gopurs_runtime.Str("(Milliseconds " + gopurs_runtime.Apply(pkg_Data_Show.Get_showNumberImpl(), v_0).StrVal() + ")")
 }))
 	})
 	return showMilliseconds
@@ -137,7 +137,7 @@ var once_showHours sync.Once
 func Get_showHours() gopurs_runtime.Value {
 	once_showHours.Do(func() {
 		showHours = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str("(Hours " + gopurs_runtime.Apply(pkg_Data_Show.Get_showNumberImpl(), v_0).StrVal + ")")
+return gopurs_runtime.Str("(Hours " + gopurs_runtime.Apply(pkg_Data_Show.Get_showNumberImpl(), v_0).StrVal() + ")")
 }))
 	})
 	return showHours
@@ -148,7 +148,7 @@ var once_showDays sync.Once
 func Get_showDays() gopurs_runtime.Value {
 	once_showDays.Do(func() {
 		showDays = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str("(Days " + gopurs_runtime.Apply(pkg_Data_Show.Get_showNumberImpl(), v_0).StrVal + ")")
+return gopurs_runtime.Str("(Days " + gopurs_runtime.Apply(pkg_Data_Show.Get_showNumberImpl(), v_0).StrVal() + ")")
 }))
 	})
 	return showDays

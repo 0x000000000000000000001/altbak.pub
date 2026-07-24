@@ -8,6 +8,8 @@ import (
 	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
 	pkg_Data_Functor "gopurs/output/Data.Functor"
 	pkg_Data_String_Common "gopurs/output/Data.String.Common"
+	pkg_Type_Proxy "gopurs/output/Type.Proxy"
+	unsafe "unsafe"
 )
 
 var guard gopurs_runtime.Value
@@ -90,7 +92,7 @@ goto end_branch_1
 }
 }
 {
-__t1 = gopurs_runtime.Str("(" + gopurs_runtime.Apply2(pkg_Data_String_Common.Get_joinWith(), gopurs_runtime.Str(" <> "), usedFlags_1_0).StrVal + ")")
+__t1 = gopurs_runtime.Str("(" + gopurs_runtime.Apply2(pkg_Data_String_Common.Get_joinWith(), gopurs_runtime.Str(" <> "), usedFlags_1_0).StrVal() + ")")
 }
 end_branch_1:
 return __t1
@@ -184,7 +186,7 @@ return gopurs_runtime.Str("ignoreCase")
 return gopurs_runtime.Str("global")
 })), pkg_Data_Eq.Get_eqBoolean()), gopurs_runtime.Value{}, gopurs_runtime.RecordDict1("reflectSymbol", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Str("dotAll")
-})), pkg_Data_Eq.Get_eqBoolean()), "eqRecord"), gopurs_runtime.Constructor0("Proxy")))
+})), pkg_Data_Eq.Get_eqBoolean()), "eqRecord"), gopurs_runtime.Value{Type: 9, IntVal: 3178699476, UnsafePtr: unsafe.Pointer(&pkg_Type_Proxy.Data_Type_Proxy_Proxy{})}))
 	})
 	return eqRegexFlags
 }

@@ -118,7 +118,7 @@ v_2_0 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ord.Get_ordInt(
 _ = v_2_0
 var __t1 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v_2_0.StrVal == "LT").IntVal != 0 {
+if (v_2_0.Type == 9 && v_2_0.IntVal == 3866105248) {
 __t1 = y_1
 goto end_branch_1
 } else {
@@ -126,7 +126,7 @@ goto end_branch_1
 }
 }
 {
-if gopurs_runtime.Bool(v_2_0.StrVal == "EQ").IntVal != 0 {
+if (v_2_0.Type == 9 && v_2_0.IntVal == 1111389260) {
 __t1 = x_0
 goto end_branch_1
 } else {
@@ -134,7 +134,7 @@ goto end_branch_1
 }
 }
 {
-if gopurs_runtime.Bool(v_2_0.StrVal == "GT").IntVal != 0 {
+if (v_2_0.Type == 9 && v_2_0.IntVal == 2098047435) {
 __t1 = x_0
 goto end_branch_1
 } else {

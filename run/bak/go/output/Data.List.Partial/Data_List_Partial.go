@@ -3,6 +3,8 @@ package Data_List_Partial
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
+	pkg_Data_List_Types "gopurs/output/Data.List.Types"
+	unsafe "unsafe"
 )
 
 var tail gopurs_runtime.Value
@@ -56,8 +58,8 @@ var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v_1.StrVal == "Cons").IntVal != 0 {
-__t0 = (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[1]
+if (v_1.Type == 9 && v_1.IntVal == 2709581417) {
+__t0 = (*pkg_Data_List_Types.Data_Data_List_Types_Cons)(v_1.UnsafePtr).V1
 goto end_branch_0
 } else {
 
@@ -80,11 +82,11 @@ var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v_1.StrVal == "Cons").IntVal != 0 {
+if (v_1.Type == 9 && v_1.IntVal == 2709581417) {
 var __t1 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[1].StrVal == "Nil").IntVal != 0 {
-__t1 = (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[0]
+if ((*pkg_Data_List_Types.Data_Data_List_Types_Cons)(v_1.UnsafePtr).V1.Type == 9 && (*pkg_Data_List_Types.Data_Data_List_Types_Cons)(v_1.UnsafePtr).V1.IntVal == 1536536851) {
+__t1 = (*pkg_Data_List_Types.Data_Data_List_Types_Cons)(v_1.UnsafePtr).V0
 goto end_branch_1
 } else {
 
@@ -92,7 +94,7 @@ goto end_branch_1
 }
 {
 _dollar__unused_0_loop = gopurs_runtime.Value{}
-v_1_loop = (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[1]
+v_1_loop = (*pkg_Data_List_Types.Data_Data_List_Types_Cons)(v_1.UnsafePtr).V1
 continue last
 __t1 = gopurs_runtime.Value{}
 }
@@ -121,18 +123,18 @@ var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v_1.StrVal == "Cons").IntVal != 0 {
+if (v_1.Type == 9 && v_1.IntVal == 2709581417) {
 var __t1 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool((*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[1].StrVal == "Nil").IntVal != 0 {
-__t1 = gopurs_runtime.Constructor0("Nil")
+if ((*pkg_Data_List_Types.Data_Data_List_Types_Cons)(v_1.UnsafePtr).V1.Type == 9 && (*pkg_Data_List_Types.Data_Data_List_Types_Cons)(v_1.UnsafePtr).V1.IntVal == 1536536851) {
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 1536536851, UnsafePtr: unsafe.Pointer(&pkg_Data_List_Types.Data_Data_List_Types_Nil{})}
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = gopurs_runtime.Constructor2("Cons", (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[0], gopurs_runtime.Apply2(Get_init_(), gopurs_runtime.Value{}, (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[1]))
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 2709581417, UnsafePtr: unsafe.Pointer(&pkg_Data_List_Types.Data_Data_List_Types_Cons{(*pkg_Data_List_Types.Data_Data_List_Types_Cons)(v_1.UnsafePtr).V0, gopurs_runtime.Apply2(Get_init_(), gopurs_runtime.Value{}, (*pkg_Data_List_Types.Data_Data_List_Types_Cons)(v_1.UnsafePtr).V1)})}
 }
 end_branch_1:
 __t0 = __t1
@@ -156,8 +158,8 @@ var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v_1.StrVal == "Cons").IntVal != 0 {
-__t0 = (*[1024]gopurs_runtime.Value)(v_1.UnsafePtr)[0]
+if (v_1.Type == 9 && v_1.IntVal == 2709581417) {
+__t0 = (*pkg_Data_List_Types.Data_Data_List_Types_Cons)(v_1.UnsafePtr).V0
 goto end_branch_0
 } else {
 

@@ -4,11 +4,13 @@ import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
 	pkg_Data_Function "gopurs/output/Data.Function"
+	pkg_Data_Tuple "gopurs/output/Data.Tuple"
 	pkg_Data_Foldable "gopurs/output/Data.Foldable"
 	pkg_Unsafe_Coerce "gopurs/output/Unsafe.Coerce"
 	pkg_Control_Apply "gopurs/output/Control.Apply"
 	pkg_Data_Unit "gopurs/output/Data.Unit"
 	pkg_Control_Category "gopurs/output/Control.Category"
+	unsafe "unsafe"
 )
 
 var FoldRight1 gopurs_runtime.Value
@@ -17,7 +19,7 @@ func Get_FoldRight1() gopurs_runtime.Value {
 	once_FoldRight1.Do(func() {
 		FoldRight1 = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("FoldRight1", value0, value1)
+return gopurs_runtime.Value{Type: 9, IntVal: 3805997843, UnsafePtr: unsafe.Pointer(&Data_Data_Semigroup_Foldable_FoldRight1{value0, value1})}
 })
 })
 	})
@@ -90,11 +92,11 @@ var once_foldableTuple sync.Once
 func Get_foldableTuple() gopurs_runtime.Value {
 	once_foldableTuple.Do(func() {
 		foldableTuple = gopurs_runtime.RecordDict4("foldMap1", "foldr1", "foldl1", "Foldable0", gopurs_runtime.Func3(func(dictSemigroup_0 gopurs_runtime.Value, f_1 gopurs_runtime.Value, v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(f_1, (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[1])
+return gopurs_runtime.Apply(f_1, (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v_2.UnsafePtr).V1)
 }), gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return (*[1024]gopurs_runtime.Value)(v1_1.UnsafePtr)[1]
+return (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v1_1.UnsafePtr).V1
 }), gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return (*[1024]gopurs_runtime.Value)(v1_1.UnsafePtr)[1]
+return (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v1_1.UnsafePtr).V1
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Foldable.Get_foldableTuple()
 }))
@@ -158,11 +160,11 @@ var once_foldRight1Semigroup sync.Once
 func Get_foldRight1Semigroup() gopurs_runtime.Value {
 	once_foldRight1Semigroup.Do(func() {
 		foldRight1Semigroup = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_2_0 := (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[1]
+__local_var_2_0 := (*Data_Data_Semigroup_Foldable_FoldRight1)(v_0.UnsafePtr).V1
 _ = __local_var_2_0
-return gopurs_runtime.Constructor2("FoldRight1", gopurs_runtime.Func2(func(a_3 gopurs_runtime.Value, f_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0], gopurs_runtime.Apply2(f_4, __local_var_2_0, gopurs_runtime.Apply2((*[1024]gopurs_runtime.Value)(v1_1.UnsafePtr)[0], a_3, f_4)), f_4)
-}), (*[1024]gopurs_runtime.Value)(v1_1.UnsafePtr)[1])
+return gopurs_runtime.Value{Type: 9, IntVal: 3805997843, UnsafePtr: unsafe.Pointer(&Data_Data_Semigroup_Foldable_FoldRight1{gopurs_runtime.Func2(func(a_3 gopurs_runtime.Value, f_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2((*Data_Data_Semigroup_Foldable_FoldRight1)(v_0.UnsafePtr).V0, gopurs_runtime.Apply2(f_4, __local_var_2_0, gopurs_runtime.Apply2((*Data_Data_Semigroup_Foldable_FoldRight1)(v1_1.UnsafePtr).V0, a_3, f_4)), f_4)
+}), (*Data_Data_Semigroup_Foldable_FoldRight1)(v1_1.UnsafePtr).V1})}
 }))
 	})
 	return foldRight1Semigroup
@@ -173,11 +175,11 @@ var once_semigroupDual sync.Once
 func Get_semigroupDual() gopurs_runtime.Value {
 	once_semigroupDual.Do(func() {
 		semigroupDual = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_2_0 := (*[1024]gopurs_runtime.Value)(v1_1.UnsafePtr)[1]
+__local_var_2_0 := (*Data_Data_Semigroup_Foldable_FoldRight1)(v1_1.UnsafePtr).V1
 _ = __local_var_2_0
-return gopurs_runtime.Constructor2("FoldRight1", gopurs_runtime.Func2(func(a_3 gopurs_runtime.Value, f_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2((*[1024]gopurs_runtime.Value)(v1_1.UnsafePtr)[0], gopurs_runtime.Apply2(f_4, __local_var_2_0, gopurs_runtime.Apply2((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0], a_3, f_4)), f_4)
-}), (*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[1])
+return gopurs_runtime.Value{Type: 9, IntVal: 3805997843, UnsafePtr: unsafe.Pointer(&Data_Data_Semigroup_Foldable_FoldRight1{gopurs_runtime.Func2(func(a_3 gopurs_runtime.Value, f_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2((*Data_Data_Semigroup_Foldable_FoldRight1)(v1_1.UnsafePtr).V0, gopurs_runtime.Apply2(f_4, __local_var_2_0, gopurs_runtime.Apply2((*Data_Data_Semigroup_Foldable_FoldRight1)(v_0.UnsafePtr).V0, a_3, f_4)), f_4)
+}), (*Data_Data_Semigroup_Foldable_FoldRight1)(v_0.UnsafePtr).V1})}
 }))
 	})
 	return semigroupDual
@@ -233,7 +235,7 @@ _ = __local_var_1_0
 return gopurs_runtime.Func2(func(x_2 gopurs_runtime.Value, a_3 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_4_1 := gopurs_runtime.Apply(__local_var_1_0, a_3)
 _ = __local_var_4_1
-return gopurs_runtime.Apply2((*[1024]gopurs_runtime.Value)(__local_var_4_1.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(__local_var_4_1.UnsafePtr)[1], gopurs_runtime.Func2(func(b_5 gopurs_runtime.Value, a_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2((*Data_Data_Semigroup_Foldable_FoldRight1)(__local_var_4_1.UnsafePtr).V0, (*Data_Data_Semigroup_Foldable_FoldRight1)(__local_var_4_1.UnsafePtr).V1, gopurs_runtime.Func2(func(b_5 gopurs_runtime.Value, a_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(x_2, a_6, b_5)
 }))
 })
@@ -256,7 +258,7 @@ _ = __local_var_1_0
 return gopurs_runtime.Func2(func(b_2 gopurs_runtime.Value, a_3 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_4_1 := gopurs_runtime.Apply(__local_var_1_0, a_3)
 _ = __local_var_4_1
-return gopurs_runtime.Apply2((*[1024]gopurs_runtime.Value)(__local_var_4_1.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(__local_var_4_1.UnsafePtr)[1], b_2)
+return gopurs_runtime.Apply2((*Data_Data_Semigroup_Foldable_FoldRight1)(__local_var_4_1.UnsafePtr).V0, (*Data_Data_Semigroup_Foldable_FoldRight1)(__local_var_4_1.UnsafePtr).V1, b_2)
 })
 }()
 })
@@ -299,7 +301,7 @@ v_3_1 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), v
 _ = v_3_1
 var __t2 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v_3_1.StrVal == "LT").IntVal != 0 {
+if (v_3_1.Type == 9 && v_3_1.IntVal == 3866105248) {
 __t2 = v1_2
 goto end_branch_2
 } else {
@@ -307,7 +309,7 @@ goto end_branch_2
 }
 }
 {
-if gopurs_runtime.Bool(v_3_1.StrVal == "EQ").IntVal != 0 {
+if (v_3_1.Type == 9 && v_3_1.IntVal == 1111389260) {
 __t2 = v_1
 goto end_branch_2
 } else {
@@ -315,7 +317,7 @@ goto end_branch_2
 }
 }
 {
-if gopurs_runtime.Bool(v_3_1.StrVal == "GT").IntVal != 0 {
+if (v_3_1.Type == 9 && v_3_1.IntVal == 2098047435) {
 __t2 = v_1
 goto end_branch_2
 } else {
@@ -351,7 +353,7 @@ v_3_1 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), v
 _ = v_3_1
 var __t2 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v_3_1.StrVal == "LT").IntVal != 0 {
+if (v_3_1.Type == 9 && v_3_1.IntVal == 3866105248) {
 __t2 = v_1
 goto end_branch_2
 } else {
@@ -359,7 +361,7 @@ goto end_branch_2
 }
 }
 {
-if gopurs_runtime.Bool(v_3_1.StrVal == "EQ").IntVal != 0 {
+if (v_3_1.Type == 9 && v_3_1.IntVal == 1111389260) {
 __t2 = v_1
 goto end_branch_2
 } else {
@@ -367,7 +369,7 @@ goto end_branch_2
 }
 }
 {
-if gopurs_runtime.Bool(v_3_1.StrVal == "GT").IntVal != 0 {
+if (v_3_1.Type == 9 && v_3_1.IntVal == 2098047435) {
 __t2 = v1_2
 goto end_branch_2
 } else {
@@ -434,6 +436,14 @@ return Call_fold1(dictFoldable1_0_box, dictSemigroup_1_box)
 	return fold1
 }
 
+type Data_Data_Semigroup_Foldable_FoldRight1 struct {
+	V0 gopurs_runtime.Value
+	V1 gopurs_runtime.Value
+}
+func Is_Data_Data_Semigroup_Foldable_FoldRight1(v gopurs_runtime.Value) bool {
+	return v.Type == 9 && v.IntVal == 3805997843
+}
+
 func Call_maximumBy(dictFoldable1_0_loop gopurs_runtime.Value, cmp_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictFoldable1_0 gopurs_runtime.Value = dictFoldable1_0_loop
 _ = dictFoldable1_0
@@ -442,7 +452,7 @@ _ = cmp_1
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFoldable1_0, "foldl1"), gopurs_runtime.Func2(func(x_2 gopurs_runtime.Value, y_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(gopurs_runtime.Apply2(cmp_1, x_2, y_3).StrVal == "GT").IntVal != 0 {
+if (gopurs_runtime.Apply2(cmp_1, x_2, y_3).Type == 9 && gopurs_runtime.Apply2(cmp_1, x_2, y_3).IntVal == 2098047435) {
 __t0 = x_2
 goto end_branch_0
 } else {
@@ -465,7 +475,7 @@ _ = cmp_1
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFoldable1_0, "foldl1"), gopurs_runtime.Func2(func(x_2 gopurs_runtime.Value, y_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(gopurs_runtime.Apply2(cmp_1, x_2, y_3).StrVal == "LT").IntVal != 0 {
+if (gopurs_runtime.Apply2(cmp_1, x_2, y_3).Type == 9 && gopurs_runtime.Apply2(cmp_1, x_2, y_3).IntVal == 3866105248) {
 __t0 = x_2
 goto end_branch_0
 } else {

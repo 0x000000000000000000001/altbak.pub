@@ -18,10 +18,10 @@ func Call_arrayApply(arg0 []func(any) any, arg1 []any) []any {
 	return ArrayApply(arg0, arg1)
 }
 var _Gopurs_ArrayApply = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
-	arg0_arr := arg0.PtrVal.([]gopurs_runtime.Value)
+	arg0_arr := arg0.PtrVal().([]gopurs_runtime.Value)
 	go_arg0 := make([]func(any) any, len(arg0_arr))
 	for i, v := range arg0_arr { go_arg0[i] = gopurs_runtime.Unbox[func(any) any](v) }
-	arg1_arr := arg1.PtrVal.([]gopurs_runtime.Value)
+	arg1_arr := arg1.PtrVal().([]gopurs_runtime.Value)
 	go_arg1 := make([]any, len(arg1_arr))
 	for i, v := range arg1_arr { go_arg1[i] = v }
 	go_res := ArrayApply(go_arg0, go_arg1)

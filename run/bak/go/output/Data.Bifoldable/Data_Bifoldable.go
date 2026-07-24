@@ -4,8 +4,11 @@ import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
 	pkg_Control_Category "gopurs/output/Control.Category"
+	pkg_Data_Tuple "gopurs/output/Data.Tuple"
+	pkg_Data_Either "gopurs/output/Data.Either"
 	pkg_Control_Apply "gopurs/output/Control.Apply"
 	pkg_Data_Unit "gopurs/output/Data.Unit"
+	pkg_Data_Functor_Product2 "gopurs/output/Data.Functor.Product2"
 )
 
 var monoidEndo gopurs_runtime.Value
@@ -112,11 +115,11 @@ var once_bifoldableTuple sync.Once
 func Get_bifoldableTuple() gopurs_runtime.Value {
 	once_bifoldableTuple.Do(func() {
 		bifoldableTuple = gopurs_runtime.RecordDict3("bifoldMap", "bifoldr", "bifoldl", gopurs_runtime.Func4(func(dictMonoid_0 gopurs_runtime.Value, f_1 gopurs_runtime.Value, g_2 gopurs_runtime.Value, v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{}), "append"), gopurs_runtime.Apply(f_1, (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[0]), gopurs_runtime.Apply(g_2, (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[1]))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{}), "append"), gopurs_runtime.Apply(f_1, (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v_3.UnsafePtr).V0), gopurs_runtime.Apply(g_2, (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v_3.UnsafePtr).V1))
 }), gopurs_runtime.Func4(func(f_0 gopurs_runtime.Value, g_1 gopurs_runtime.Value, z_2 gopurs_runtime.Value, v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(f_0, (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[0], gopurs_runtime.Apply2(g_1, (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[1], z_2))
+return gopurs_runtime.Apply2(f_0, (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v_3.UnsafePtr).V0, gopurs_runtime.Apply2(g_1, (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v_3.UnsafePtr).V1, z_2))
 }), gopurs_runtime.Func4(func(f_0 gopurs_runtime.Value, g_1 gopurs_runtime.Value, z_2 gopurs_runtime.Value, v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(g_1, gopurs_runtime.Apply2(f_0, z_2, (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[0]), (*[1024]gopurs_runtime.Value)(v_3.UnsafePtr)[1])
+return gopurs_runtime.Apply2(g_1, gopurs_runtime.Apply2(f_0, z_2, (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v_3.UnsafePtr).V0), (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v_3.UnsafePtr).V1)
 }))
 	})
 	return bifoldableTuple
@@ -154,16 +157,16 @@ func Get_bifoldableEither() gopurs_runtime.Value {
 		bifoldableEither = gopurs_runtime.RecordDict3("bifoldr", "bifoldl", "bifoldMap", gopurs_runtime.Func4(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value, v2_2 gopurs_runtime.Value, v3_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v3_3.StrVal == "Left").IntVal != 0 {
-__t0 = gopurs_runtime.Apply2(v_0, (*[1024]gopurs_runtime.Value)(v3_3.UnsafePtr)[0], v2_2)
+if (v3_3.Type == 9 && v3_3.IntVal == 590902115) {
+__t0 = gopurs_runtime.Apply2(v_0, (*pkg_Data_Either.Data_Data_Either_Left)(v3_3.UnsafePtr).V0, v2_2)
 goto end_branch_0
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(v3_3.StrVal == "Right").IntVal != 0 {
-__t0 = gopurs_runtime.Apply2(v1_1, (*[1024]gopurs_runtime.Value)(v3_3.UnsafePtr)[0], v2_2)
+if (v3_3.Type == 9 && v3_3.IntVal == 4096564120) {
+__t0 = gopurs_runtime.Apply2(v1_1, (*pkg_Data_Either.Data_Data_Either_Right)(v3_3.UnsafePtr).V0, v2_2)
 goto end_branch_0
 } else {
 
@@ -177,16 +180,16 @@ return __t0
 }), gopurs_runtime.Func4(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value, v2_2 gopurs_runtime.Value, v3_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v3_3.StrVal == "Left").IntVal != 0 {
-__t1 = gopurs_runtime.Apply2(v_0, v2_2, (*[1024]gopurs_runtime.Value)(v3_3.UnsafePtr)[0])
+if (v3_3.Type == 9 && v3_3.IntVal == 590902115) {
+__t1 = gopurs_runtime.Apply2(v_0, v2_2, (*pkg_Data_Either.Data_Data_Either_Left)(v3_3.UnsafePtr).V0)
 goto end_branch_1
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(v3_3.StrVal == "Right").IntVal != 0 {
-__t1 = gopurs_runtime.Apply2(v1_1, v2_2, (*[1024]gopurs_runtime.Value)(v3_3.UnsafePtr)[0])
+if (v3_3.Type == 9 && v3_3.IntVal == 4096564120) {
+__t1 = gopurs_runtime.Apply2(v1_1, v2_2, (*pkg_Data_Either.Data_Data_Either_Right)(v3_3.UnsafePtr).V0)
 goto end_branch_1
 } else {
 
@@ -200,16 +203,16 @@ return __t1
 }), gopurs_runtime.Func4(func(dictMonoid_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, v1_2 gopurs_runtime.Value, v2_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t2 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v2_3.StrVal == "Left").IntVal != 0 {
-__t2 = gopurs_runtime.Apply(v_1, (*[1024]gopurs_runtime.Value)(v2_3.UnsafePtr)[0])
+if (v2_3.Type == 9 && v2_3.IntVal == 590902115) {
+__t2 = gopurs_runtime.Apply(v_1, (*pkg_Data_Either.Data_Data_Either_Left)(v2_3.UnsafePtr).V0)
 goto end_branch_2
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(v2_3.StrVal == "Right").IntVal != 0 {
-__t2 = gopurs_runtime.Apply(v1_2, (*[1024]gopurs_runtime.Value)(v2_3.UnsafePtr)[0])
+if (v2_3.Type == 9 && v2_3.IntVal == 4096564120) {
+__t2 = gopurs_runtime.Apply(v1_2, (*pkg_Data_Either.Data_Data_Either_Right)(v2_3.UnsafePtr).V0)
 goto end_branch_2
 } else {
 
@@ -507,7 +510,7 @@ _ = bifoldMap3_3_0
 bifoldMap4_4_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBifoldable1_1, "bifoldMap"), dictMonoid_2)
 _ = bifoldMap4_4_1
 return gopurs_runtime.Func3(func(l_5 gopurs_runtime.Value, r_6 gopurs_runtime.Value, v_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_2, "Semigroup0"), gopurs_runtime.Value{}), "append"), gopurs_runtime.Apply3(bifoldMap3_3_0, l_5, r_6, (*[1024]gopurs_runtime.Value)(v_7.UnsafePtr)[0]), gopurs_runtime.Apply3(bifoldMap4_4_1, l_5, r_6, (*[1024]gopurs_runtime.Value)(v_7.UnsafePtr)[1]))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_2, "Semigroup0"), gopurs_runtime.Value{}), "append"), gopurs_runtime.Apply3(bifoldMap3_3_0, l_5, r_6, (*pkg_Data_Functor_Product2.Data_Data_Functor_Product2_Product2)(v_7.UnsafePtr).V0), gopurs_runtime.Apply3(bifoldMap4_4_1, l_5, r_6, (*pkg_Data_Functor_Product2.Data_Data_Functor_Product2_Product2)(v_7.UnsafePtr).V1))
 })
 }))
 }

@@ -5,6 +5,7 @@ import (
 	sync "sync"
 	pkg_Data_String_Regex "gopurs/output/Data.String.Regex"
 	pkg_Partial "gopurs/output/Partial"
+	pkg_Data_Either "gopurs/output/Data.Either"
 )
 
 var unsafeRegex gopurs_runtime.Value
@@ -27,16 +28,16 @@ __local_var_2_0 := gopurs_runtime.Apply2(pkg_Data_String_Regex.Get_regex(), s_0,
 _ = __local_var_2_0
 var __t1 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(__local_var_2_0.StrVal == "Left").IntVal != 0 {
-__t1 = gopurs_runtime.Apply(pkg_Partial.Get__crashWith(), (*[1024]gopurs_runtime.Value)(__local_var_2_0.UnsafePtr)[0])
+if (__local_var_2_0.Type == 9 && __local_var_2_0.IntVal == 590902115) {
+__t1 = gopurs_runtime.Apply(pkg_Partial.Get__crashWith(), (*pkg_Data_Either.Data_Data_Either_Left)(__local_var_2_0.UnsafePtr).V0)
 goto end_branch_1
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(__local_var_2_0.StrVal == "Right").IntVal != 0 {
-__t1 = (*[1024]gopurs_runtime.Value)(__local_var_2_0.UnsafePtr)[0]
+if (__local_var_2_0.Type == 9 && __local_var_2_0.IntVal == 4096564120) {
+__t1 = (*pkg_Data_Either.Data_Data_Either_Right)(__local_var_2_0.UnsafePtr).V0
 goto end_branch_1
 } else {
 

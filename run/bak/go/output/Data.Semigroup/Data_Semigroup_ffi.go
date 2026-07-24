@@ -33,10 +33,10 @@ func Call_concatArray(arg0 []any, arg1 []any) []any {
 	return ConcatArray(arg0, arg1)
 }
 var _Gopurs_ConcatArray = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
-	arg0_arr := arg0.PtrVal.([]gopurs_runtime.Value)
+	arg0_arr := arg0.PtrVal().([]gopurs_runtime.Value)
 	go_arg0 := make([]any, len(arg0_arr))
 	for i, v := range arg0_arr { go_arg0[i] = v }
-	arg1_arr := arg1.PtrVal.([]gopurs_runtime.Value)
+	arg1_arr := arg1.PtrVal().([]gopurs_runtime.Value)
 	go_arg1 := make([]any, len(arg1_arr))
 	for i, v := range arg1_arr { go_arg1[i] = v }
 	go_res := ConcatArray(go_arg0, go_arg1)

@@ -3,6 +3,8 @@ package Data_Comparison
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
+	pkg_Data_Ordering "gopurs/output/Data.Ordering"
+	unsafe "unsafe"
 )
 
 var Comparison gopurs_runtime.Value
@@ -36,23 +38,23 @@ __local_var_7_3 := gopurs_runtime.Apply(__local_var_4_1, x_5)
 _ = __local_var_7_3
 var __t4 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(__local_var_6_2.StrVal == "LT").IntVal != 0 {
-__t4 = gopurs_runtime.Constructor0("LT")
+if (__local_var_6_2.Type == 9 && __local_var_6_2.IntVal == 3866105248) {
+__t4 = gopurs_runtime.Value{Type: 9, IntVal: 3866105248, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_LT{})}
 goto end_branch_4
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(__local_var_6_2.StrVal == "GT").IntVal != 0 {
-__t4 = gopurs_runtime.Constructor0("GT")
+if (__local_var_6_2.Type == 9 && __local_var_6_2.IntVal == 2098047435) {
+__t4 = gopurs_runtime.Value{Type: 9, IntVal: 2098047435, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_GT{})}
 goto end_branch_4
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(__local_var_6_2.StrVal == "EQ").IntVal != 0 {
+if (__local_var_6_2.Type == 9 && __local_var_6_2.IntVal == 1111389260) {
 __t4 = __local_var_7_3
 goto end_branch_4
 } else {
@@ -86,7 +88,7 @@ var once_monoidComparison sync.Once
 func Get_monoidComparison() gopurs_runtime.Value {
 	once_monoidComparison.Do(func() {
 		monoidComparison = gopurs_runtime.RecordDict2("mempty", "Semigroup0", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor0("EQ")
+return gopurs_runtime.Value{Type: 9, IntVal: 1111389260, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_EQ{})}
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_semigroupComparison()
 }))

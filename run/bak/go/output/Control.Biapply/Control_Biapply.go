@@ -3,9 +3,11 @@ package Control_Biapply
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
+	pkg_Data_Tuple "gopurs/output/Data.Tuple"
 	pkg_Data_Bifunctor "gopurs/output/Data.Bifunctor"
 	pkg_Control_Category "gopurs/output/Control.Category"
 	pkg_Data_Function "gopurs/output/Data.Function"
+	unsafe "unsafe"
 )
 
 var biapplyTuple gopurs_runtime.Value
@@ -13,7 +15,7 @@ var once_biapplyTuple sync.Once
 func Get_biapplyTuple() gopurs_runtime.Value {
 	once_biapplyTuple.Do(func() {
 		biapplyTuple = gopurs_runtime.RecordDict2("biapply", "Bifunctor0", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v1_1.UnsafePtr)[0]), gopurs_runtime.Apply((*[1024]gopurs_runtime.Value)(v_0.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(v1_1.UnsafePtr)[1]))
+return gopurs_runtime.Value{Type: 9, IntVal: 1102100576, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{gopurs_runtime.Apply((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v_0.UnsafePtr).V0, (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v1_1.UnsafePtr).V0), gopurs_runtime.Apply((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v_0.UnsafePtr).V1, (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v1_1.UnsafePtr).V1)})}
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Bifunctor.Get_bifunctorTuple()
 }))

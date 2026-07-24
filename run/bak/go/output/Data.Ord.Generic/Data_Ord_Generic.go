@@ -3,6 +3,9 @@ package Data_Ord_Generic
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
+	pkg_Data_Ordering "gopurs/output/Data.Ordering"
+	pkg_Data_Generic_Rep "gopurs/output/Data.Generic.Rep"
+	unsafe "unsafe"
 )
 
 var genericOrdNoConstructors gopurs_runtime.Value
@@ -10,7 +13,7 @@ var once_genericOrdNoConstructors sync.Once
 func Get_genericOrdNoConstructors() gopurs_runtime.Value {
 	once_genericOrdNoConstructors.Do(func() {
 		genericOrdNoConstructors = gopurs_runtime.RecordDict1("genericCompare'", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor0("EQ")
+return gopurs_runtime.Value{Type: 9, IntVal: 1111389260, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_EQ{})}
 }))
 	})
 	return genericOrdNoConstructors
@@ -21,7 +24,7 @@ var once_genericOrdNoArguments sync.Once
 func Get_genericOrdNoArguments() gopurs_runtime.Value {
 	once_genericOrdNoArguments.Do(func() {
 		genericOrdNoArguments = gopurs_runtime.RecordDict1("genericCompare'", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor0("EQ")
+return gopurs_runtime.Value{Type: 9, IntVal: 1111389260, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_EQ{})}
 }))
 	})
 	return genericOrdNoArguments
@@ -115,12 +118,12 @@ _ = dictGenericOrd_0
 var dictGenericOrd1_1 gopurs_runtime.Value = dictGenericOrd1_1_loop
 _ = dictGenericOrd1_1
 return gopurs_runtime.RecordDict1("genericCompare'", gopurs_runtime.Func2(func(v_2 gopurs_runtime.Value, v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
-v2_4_0 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericOrd_0, "genericCompare'"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v1_3.UnsafePtr)[0])
+v2_4_0 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericOrd_0, "genericCompare'"), (*pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Product)(v_2.UnsafePtr).V0, (*pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Product)(v1_3.UnsafePtr).V0)
 _ = v2_4_0
 var __t1 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v2_4_0.StrVal == "EQ").IntVal != 0 {
-__t1 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericOrd1_1, "genericCompare'"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[1], (*[1024]gopurs_runtime.Value)(v1_3.UnsafePtr)[1])
+if (v2_4_0.Type == 9 && v2_4_0.IntVal == 1111389260) {
+__t1 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericOrd1_1, "genericCompare'"), (*pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Product)(v_2.UnsafePtr).V1, (*pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Product)(v1_3.UnsafePtr).V1)
 goto end_branch_1
 } else {
 
@@ -142,19 +145,19 @@ _ = dictGenericOrd1_1
 return gopurs_runtime.RecordDict1("genericCompare'", gopurs_runtime.Func2(func(v_2 gopurs_runtime.Value, v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v_2.StrVal == "Inl").IntVal != 0 {
+if (v_2.Type == 9 && v_2.IntVal == 164387955) {
 var __t1 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v1_3.StrVal == "Inl").IntVal != 0 {
-__t1 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericOrd_0, "genericCompare'"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v1_3.UnsafePtr)[0])
+if (v1_3.Type == 9 && v1_3.IntVal == 164387955) {
+__t1 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericOrd_0, "genericCompare'"), (*pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Inl)(v_2.UnsafePtr).V0, (*pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Inl)(v1_3.UnsafePtr).V0)
 goto end_branch_1
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(v1_3.StrVal == "Inr").IntVal != 0 {
-__t1 = gopurs_runtime.Constructor0("LT")
+if (v1_3.Type == 9 && v1_3.IntVal == 4051932077) {
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 3866105248, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_LT{})}
 goto end_branch_1
 } else {
 
@@ -171,19 +174,19 @@ goto end_branch_0
 }
 }
 {
-if gopurs_runtime.Bool(v_2.StrVal == "Inr").IntVal != 0 {
+if (v_2.Type == 9 && v_2.IntVal == 4051932077) {
 var __t2 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v1_3.StrVal == "Inr").IntVal != 0 {
-__t2 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericOrd1_1, "genericCompare'"), (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0], (*[1024]gopurs_runtime.Value)(v1_3.UnsafePtr)[0])
+if (v1_3.Type == 9 && v1_3.IntVal == 4051932077) {
+__t2 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericOrd1_1, "genericCompare'"), (*pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Inr)(v_2.UnsafePtr).V0, (*pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Inr)(v1_3.UnsafePtr).V0)
 goto end_branch_2
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(v1_3.StrVal == "Inl").IntVal != 0 {
-__t2 = gopurs_runtime.Constructor0("GT")
+if (v1_3.Type == 9 && v1_3.IntVal == 164387955) {
+__t2 = gopurs_runtime.Value{Type: 9, IntVal: 2098047435, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_GT{})}
 goto end_branch_2
 } else {
 

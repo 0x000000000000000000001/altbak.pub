@@ -19,7 +19,7 @@ var _Gopurs_ArrayMap = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1
 	go_arg0 := func(p0_0 any) any {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 		}
-	arg1_arr := arg1.PtrVal.([]gopurs_runtime.Value)
+	arg1_arr := arg1.PtrVal().([]gopurs_runtime.Value)
 	go_arg1 := make([]any, len(arg1_arr))
 	for i, v := range arg1_arr { go_arg1[i] = v }
 	go_res := ArrayMap(go_arg0, go_arg1)

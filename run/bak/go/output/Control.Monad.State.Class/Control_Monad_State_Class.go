@@ -3,7 +3,9 @@ package Control_Monad_State_Class
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
+	pkg_Data_Tuple "gopurs/output/Data.Tuple"
 	pkg_Data_Unit "gopurs/output/Data.Unit"
+	unsafe "unsafe"
 )
 
 var state gopurs_runtime.Value
@@ -74,7 +76,7 @@ return func() gopurs_runtime.Value {
 var dictMonadState_0 gopurs_runtime.Value = dictMonadState_0_loop
 _ = dictMonadState_0
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadState_0, "state"), gopurs_runtime.Func(func(s_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Tuple", s_1, s_1)
+return gopurs_runtime.Value{Type: 9, IntVal: 1102100576, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{s_1, s_1})}
 }))
 }()
 })
@@ -88,7 +90,7 @@ _ = dictMonadState_0
 var s_1 gopurs_runtime.Value = s_1_loop
 _ = s_1
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadState_0, "state"), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Tuple", pkg_Data_Unit.Get_unit(), s_1)
+return gopurs_runtime.Value{Type: 9, IntVal: 1102100576, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{pkg_Data_Unit.Get_unit(), s_1})}
 }))
 }
 
@@ -98,7 +100,7 @@ _ = dictMonadState_0
 var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadState_0, "state"), gopurs_runtime.Func(func(s_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Tuple", pkg_Data_Unit.Get_unit(), gopurs_runtime.Apply(f_1, s_2))
+return gopurs_runtime.Value{Type: 9, IntVal: 1102100576, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{pkg_Data_Unit.Get_unit(), gopurs_runtime.Apply(f_1, s_2)})}
 }))
 }
 
@@ -110,7 +112,7 @@ _ = f_1
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadState_0, "state"), gopurs_runtime.Func(func(s_2 gopurs_runtime.Value) gopurs_runtime.Value {
 s_prime_3_0 := gopurs_runtime.Apply(f_1, s_2)
 _ = s_prime_3_0
-return gopurs_runtime.Constructor2("Tuple", s_prime_3_0, s_prime_3_0)
+return gopurs_runtime.Value{Type: 9, IntVal: 1102100576, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{s_prime_3_0, s_prime_3_0})}
 }))
 }
 
@@ -120,7 +122,7 @@ _ = dictMonadState_0
 var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadState_0, "state"), gopurs_runtime.Func(func(s_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply(f_1, s_2), s_2)
+return gopurs_runtime.Value{Type: 9, IntVal: 1102100576, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{gopurs_runtime.Apply(f_1, s_2), s_2})}
 }))
 }
 

@@ -3,6 +3,7 @@ package Control_Monad_Writer
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
+	pkg_Data_Tuple "gopurs/output/Data.Tuple"
 )
 
 var writer gopurs_runtime.Value
@@ -54,7 +55,7 @@ func Get_execWriter() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var m_0 gopurs_runtime.Value = m_0_loop
 _ = m_0
-return (*[1024]gopurs_runtime.Value)(m_0.UnsafePtr)[1]
+return (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(m_0.UnsafePtr).V1
 }()
 })
 	})

@@ -29,7 +29,7 @@ return func() gopurs_runtime.Value {
 var dictShow_0 gopurs_runtime.Value = dictShow_0_loop
 _ = dictShow_0
 return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str("(Max " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), v_1).StrVal + ")")
+return gopurs_runtime.Str("(Max " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), v_1).StrVal() + ")")
 }))
 }()
 })
@@ -50,7 +50,7 @@ v_3_0 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), v
 _ = v_3_0
 var __t1 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v_3_0.StrVal == "LT").IntVal != 0 {
+if (v_3_0.Type == 9 && v_3_0.IntVal == 3866105248) {
 __t1 = v1_2
 goto end_branch_1
 } else {
@@ -58,7 +58,7 @@ goto end_branch_1
 }
 }
 {
-if gopurs_runtime.Bool(v_3_0.StrVal == "EQ").IntVal != 0 {
+if (v_3_0.Type == 9 && v_3_0.IntVal == 1111389260) {
 __t1 = v_1
 goto end_branch_1
 } else {
@@ -66,7 +66,7 @@ goto end_branch_1
 }
 }
 {
-if gopurs_runtime.Bool(v_3_0.StrVal == "GT").IntVal != 0 {
+if (v_3_0.Type == 9 && v_3_0.IntVal == 2098047435) {
 __t1 = v_1
 goto end_branch_1
 } else {
@@ -111,7 +111,7 @@ v_4_2 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "compar
 _ = v_4_2
 var __t3 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v_4_2.StrVal == "LT").IntVal != 0 {
+if (v_4_2.Type == 9 && v_4_2.IntVal == 3866105248) {
 __t3 = v1_3
 goto end_branch_3
 } else {
@@ -119,7 +119,7 @@ goto end_branch_3
 }
 }
 {
-if gopurs_runtime.Bool(v_4_2.StrVal == "EQ").IntVal != 0 {
+if (v_4_2.Type == 9 && v_4_2.IntVal == 1111389260) {
 __t3 = v_2
 goto end_branch_3
 } else {
@@ -127,7 +127,7 @@ goto end_branch_3
 }
 }
 {
-if gopurs_runtime.Bool(v_4_2.StrVal == "GT").IntVal != 0 {
+if (v_4_2.Type == 9 && v_4_2.IntVal == 2098047435) {
 __t3 = v_2
 goto end_branch_3
 } else {

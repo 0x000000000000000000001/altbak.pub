@@ -5,6 +5,9 @@ import (
 	sync "sync"
 	pkg_Data_Unit "gopurs/output/Data.Unit"
 	pkg_Control_Category "gopurs/output/Control.Category"
+	pkg_Data_Tuple "gopurs/output/Data.Tuple"
+	pkg_Data_Either "gopurs/output/Data.Either"
+	unsafe "unsafe"
 )
 
 var bimap gopurs_runtime.Value
@@ -72,7 +75,7 @@ var once_bifunctorTuple sync.Once
 func Get_bifunctorTuple() gopurs_runtime.Value {
 	once_bifunctorTuple.Do(func() {
 		bifunctorTuple = gopurs_runtime.RecordDict1("bimap", gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, g_1 gopurs_runtime.Value, v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Constructor2("Tuple", gopurs_runtime.Apply(f_0, (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[0]), gopurs_runtime.Apply(g_1, (*[1024]gopurs_runtime.Value)(v_2.UnsafePtr)[1]))
+return gopurs_runtime.Value{Type: 9, IntVal: 1102100576, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{gopurs_runtime.Apply(f_0, (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v_2.UnsafePtr).V0), gopurs_runtime.Apply(g_1, (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v_2.UnsafePtr).V1)})}
 }))
 	})
 	return bifunctorTuple
@@ -85,16 +88,16 @@ func Get_bifunctorEither() gopurs_runtime.Value {
 		bifunctorEither = gopurs_runtime.RecordDict1("bimap", gopurs_runtime.Func3(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value, v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Bool(v2_2.StrVal == "Left").IntVal != 0 {
-__t0 = gopurs_runtime.Constructor1("Left", gopurs_runtime.Apply(v_0, (*[1024]gopurs_runtime.Value)(v2_2.UnsafePtr)[0]))
+if (v2_2.Type == 9 && v2_2.IntVal == 590902115) {
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 590902115, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Data_Data_Either_Left{gopurs_runtime.Apply(v_0, (*pkg_Data_Either.Data_Data_Either_Left)(v2_2.UnsafePtr).V0)})}
 goto end_branch_0
 } else {
 
 }
 }
 {
-if gopurs_runtime.Bool(v2_2.StrVal == "Right").IntVal != 0 {
-__t0 = gopurs_runtime.Constructor1("Right", gopurs_runtime.Apply(v1_1, (*[1024]gopurs_runtime.Value)(v2_2.UnsafePtr)[0]))
+if (v2_2.Type == 9 && v2_2.IntVal == 4096564120) {
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 4096564120, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Data_Data_Either_Right{gopurs_runtime.Apply(v1_1, (*pkg_Data_Either.Data_Data_Either_Right)(v2_2.UnsafePtr).V0)})}
 goto end_branch_0
 } else {
 
