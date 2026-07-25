@@ -548,7 +548,7 @@ var t1_1 gopurs_runtime.Value = t1_1_loop
 _ = t1_1
 var t2_2 gopurs_runtime.Value = t2_2_loop
 _ = t2_2
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDuration_0, "toDuration"), gopurs_runtime.Float((gopurs_runtime.Apply(Get_timeToMillis(), t1_1).FloatVal()) + (gopurs_runtime.FloatNeg(gopurs_runtime.Apply(Get_timeToMillis(), t2_2)).FloatVal())))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDuration_0, "toDuration"), gopurs_runtime.Float((gopurs_runtime.Apply(Get_timeToMillis(), t1_1).FloatVal()) + ((0.0) - (gopurs_runtime.Apply(Get_timeToMillis(), t2_2).FloatVal()))))
 }
 
 func Call_adjust(dictDuration_0_loop gopurs_runtime.Value, d_1_loop gopurs_runtime.Value, t_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -562,7 +562,7 @@ d_prime_3_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDuration_0, "fr
 _ = d_prime_3_0
 wholeDays_4_1 := gopurs_runtime.Apply(pkg_Data_Number.Get_floor(), gopurs_runtime.Float((d_prime_3_0.FloatVal()) / (86400000.0)))
 _ = wholeDays_4_1
-msAdjusted_5_2 := ((gopurs_runtime.Apply(Get_timeToMillis(), t_2).FloatVal()) + (d_prime_3_0.FloatVal())) + (gopurs_runtime.FloatNeg((wholeDays_4_1.FloatVal()) * (86400000.0)).FloatVal())
+msAdjusted_5_2 := ((gopurs_runtime.Apply(Get_timeToMillis(), t_2).FloatVal()) + (d_prime_3_0.FloatVal())) + ((0.0) - ((wholeDays_4_1.FloatVal()) * (86400000.0)))
 _ = msAdjusted_5_2
 var __t4 gopurs_runtime.Value
 {
@@ -587,7 +587,7 @@ __t4 = gopurs_runtime.Float(0.0)
 end_branch_4:
 wrap_6_3 := __t4
 _ = wrap_6_3
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{gopurs_runtime.Float((wholeDays_4_1.FloatVal()) + (wrap_6_3.FloatVal())), gopurs_runtime.Apply(Get_millisToTime(), gopurs_runtime.Float((msAdjusted_5_2) + ((86400000.0) * (gopurs_runtime.FloatNeg(wrap_6_3).FloatVal()))))})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{gopurs_runtime.Float((wholeDays_4_1.FloatVal()) + (wrap_6_3.FloatVal())), gopurs_runtime.Apply(Get_millisToTime(), gopurs_runtime.Float((msAdjusted_5_2) + ((86400000.0) * ((0.0) - (wrap_6_3.FloatVal())))))})}
 }
 
 

@@ -461,7 +461,7 @@ var dt1_1 gopurs_runtime.Value = dt1_1_loop
 _ = dt1_1
 var dt2_2 gopurs_runtime.Value = dt2_2_loop
 _ = dt2_2
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDuration_0, "toDuration"), gopurs_runtime.Float((dt1_1.FloatVal()) + (gopurs_runtime.FloatNeg(dt2_2).FloatVal())))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDuration_0, "toDuration"), gopurs_runtime.Float((dt1_1.FloatVal()) + ((0.0) - (dt2_2.FloatVal()))))
 }
 
 func Get_fromDateTimeImpl() gopurs_runtime.Value {
