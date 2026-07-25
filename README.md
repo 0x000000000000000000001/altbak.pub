@@ -45,7 +45,7 @@ State Monad (1.2k Binds, 60 Stack Depth)      | ~ 425 μs      | ~ 170 μs      
 Lazy Evaluation (1M Thunks Forced)            | ~ 16372 μs    | ~ 13986 μs     | ~ 21756 μs  | ~ 2868 μs  | ~ 10325 μs    | ~ 629215 μs
 Array Processing (900 elements)               | ~ 218 μs      | ~ 222 μs       | ~ 81 μs     | ~ 13 μs    | ~ 5430 μs     | ~ 886 μs
 --------------------------------------------- | ------------- | -------------- | ----------- | ---------- | ------------- | ---------
-Total Execution Time                          | ~ 125.77 ms   | ~ 81.21 ms     | ~ 81.63 ms  | ~ 46.87 ms | ~ 131.04 ms   | ~ 11877.01 ms (BUG! usually ~600ms)
+Total Execution Time                          | ~ 125.77 ms   | ~ 81.21 ms     | ~ 81.63 ms  | ~ 46.87 ms | ~ 131.04 ms   | ~ 11877.01 ms BUG! Regression under fix
 ```
 
 ### Extended benchmark results (I/O, mutability, async)
