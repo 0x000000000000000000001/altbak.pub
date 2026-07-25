@@ -2,118 +2,195 @@ package Control_Monad_ST_Internal
 
 import "gopurs/output/gopurs_runtime"
 
-var Map_ = gopurs_runtime.Func(func(f gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(a gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-			return gopurs_runtime.Apply(f, gopurs_runtime.Apply(a, gopurs_runtime.Value{}))
-		})
-	})
-})
+func Map_(f any) any {
+	return func(a any) any {
+		return func(_ any) any {
+			return f.(func(any) any)(a.(func(any) any)(nil))
+		}
+	}
+}
 
-var Pure_ = gopurs_runtime.Func(func(a gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+func Pure_(a any) any {
+	return func(_ any) any {
 		return a
-	})
-})
+	}
+}
 
-var Bind_ = gopurs_runtime.Func(func(a gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(f gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-			return gopurs_runtime.Apply(gopurs_runtime.Apply(f, gopurs_runtime.Apply(a, gopurs_runtime.Value{})), gopurs_runtime.Value{})
-		})
-	})
-})
+func Bind_(a any) any {
+	return func(f any) any {
+		return func(_ any) any {
+			return f.(func(any) any)(a.(func(any) any)(nil)).(func(any) any)(nil)
+		}
+	}
+}
 
-var Run = gopurs_runtime.Func(func(f gopurs_runtime.Value) gopurs_runtime.Value {
+func Run(f any) any {
 	return f
-})
+}
 
-var While = gopurs_runtime.Func(func(f gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(a gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-			for gopurs_runtime.Apply(f, gopurs_runtime.Value{}).IntVal != 0 {
-				gopurs_runtime.Apply(a, gopurs_runtime.Value{})
+func While(f any) any {
+	return func(a any) any {
+		return func(_ any) any {
+			for f.(func(any) any)(nil).(int) != 0 {
+				a.(func(any) any)(nil)
 			}
-			return gopurs_runtime.Value{}
-		})
-	})
-})
+			return nil
+		}
+	}
+}
 
-var For_ = gopurs_runtime.Func(func(lo gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(hi gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Func(func(f gopurs_runtime.Value) gopurs_runtime.Value {
-			return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-				start := lo.IntVal
-				end := hi.IntVal
+func For_(lo any) any {
+	return func(hi any) any {
+		return func(f any) any {
+			return func(_ any) any {
+				start := lo.(int)
+				end := hi.(int)
 				for i := start; i < end; i++ {
-					gopurs_runtime.Apply(gopurs_runtime.Apply(f, gopurs_runtime.Int(int64(int64(i)))), gopurs_runtime.Value{})
+					f.(func(any) any)(i).(func(any) any)(nil)
 				}
-				return gopurs_runtime.Value{}
-			})
-		})
-	})
-})
-
-var Foreach = gopurs_runtime.Func(func(as gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(f gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-			arr := as.PtrVal.([]gopurs_runtime.Value)
-			for _, item := range arr {
-				gopurs_runtime.Apply(gopurs_runtime.Apply(f, item), gopurs_runtime.Value{})
+				return nil
 			}
-			return gopurs_runtime.Value{}
-		})
-	})
-})
+		}
+	}
+}
 
-var New_ = gopurs_runtime.Func(func(val gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+func Foreach(as any) any {
+	return func(f any) any {
+		return func(_ any) any {
+			arr := as.([]any)
+			for _, item := range arr {
+				f.(func(any) any)(item).(func(any) any)(nil)
+			}
+			return nil
+		}
+	}
+}
+
+func New_(val any) any {
+	return func(_ any) any {
 		ref := &val
-		return gopurs_runtime.Value{PtrVal: ref}
-	})
-})
+		return ref
+	}
+}
 
-var Read = gopurs_runtime.Func(func(ref gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-		ptr := ref.PtrVal.(*gopurs_runtime.Value)
+func Read(ref any) any {
+	return func(_ any) any {
+		ptr := ref.(*any)
 		return *ptr
-	})
-})
+	}
+}
 
-var ModifyImpl = gopurs_runtime.Func(func(f gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(ref gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-			ptr := ref.PtrVal.(*gopurs_runtime.Value)
-			t := gopurs_runtime.Apply(f, *ptr)
+func ModifyImpl(f any) any {
+	return func(ref any) any {
+		return func(_ any) any {
+			ptr := ref.(*any)
+			t := f.(func(any) any)(*ptr)
 
 			// t is { state: s, value: v }
-			dict := t.PtrVal.(map[string]gopurs_runtime.Value)
+			dict := t.(map[string]any)
 			*ptr = dict["state"]
 			return dict["value"]
-		})
-	})
-})
+		}
+	}
+}
 
-var Write = gopurs_runtime.Func(func(a gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(ref gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-			ptr := ref.PtrVal.(*gopurs_runtime.Value)
+func Write(a any) any {
+	return func(ref any) any {
+		return func(_ any) any {
+			ptr := ref.(*any)
 			*ptr = a
 			return a
-		})
-	})
-})
+		}
+	}
+}
 
 
 // --- Auto-generated FFI wrappers ---
-var _Gopurs_Map_ = gopurs_runtime.Box(Map_)
-var _Gopurs_Pure_ = gopurs_runtime.Box(Pure_)
-var _Gopurs_Bind_ = gopurs_runtime.Box(Bind_)
-var _Gopurs_Run = gopurs_runtime.Box(Run)
-var _Gopurs_While = gopurs_runtime.Box(While)
-var _Gopurs_For_ = gopurs_runtime.Box(For_)
-var _Gopurs_Foreach = gopurs_runtime.Box(Foreach)
-var _Gopurs_New_ = gopurs_runtime.Box(New_)
-var _Gopurs_Read = gopurs_runtime.Box(Read)
-var _Gopurs_ModifyImpl = gopurs_runtime.Box(ModifyImpl)
-var _Gopurs_Write = gopurs_runtime.Box(Write)
+func Call_map_(arg0 any) any {
+	return Map_(arg0)
+}
+var _Gopurs_Map_ = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := Map_(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})
+func Call_pure_(arg0 any) any {
+	return Pure_(arg0)
+}
+var _Gopurs_Pure_ = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := Pure_(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})
+func Call_bind_(arg0 any) any {
+	return Bind_(arg0)
+}
+var _Gopurs_Bind_ = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := Bind_(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})
+func Call_run(arg0 any) any {
+	return Run(arg0)
+}
+var _Gopurs_Run = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := Run(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})
+func Call_while(arg0 any) any {
+	return While(arg0)
+}
+var _Gopurs_While = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := While(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})
+func Call_for_(arg0 any) any {
+	return For_(arg0)
+}
+var _Gopurs_For_ = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := For_(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})
+func Call_foreach(arg0 any) any {
+	return Foreach(arg0)
+}
+var _Gopurs_Foreach = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := Foreach(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})
+func Call_new_(arg0 any) any {
+	return New_(arg0)
+}
+var _Gopurs_New_ = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := New_(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})
+func Call_read(arg0 any) any {
+	return Read(arg0)
+}
+var _Gopurs_Read = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := Read(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})
+func Call_modifyImpl(arg0 any) any {
+	return ModifyImpl(arg0)
+}
+var _Gopurs_ModifyImpl = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := ModifyImpl(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})
+func Call_write(arg0 any) any {
+	return Write(arg0)
+}
+var _Gopurs_Write = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := Write(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})

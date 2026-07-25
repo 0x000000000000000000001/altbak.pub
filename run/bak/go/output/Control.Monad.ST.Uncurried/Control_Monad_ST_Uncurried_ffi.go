@@ -2,345 +2,485 @@ package Control_Monad_ST_Uncurried
 
 import "gopurs/output/gopurs_runtime"
 
-var MkSTFn1 = gopurs_runtime.Func(func(fn gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(a gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Apply(gopurs_runtime.Apply(fn, a), gopurs_runtime.Value{})
-	})
-})
+func MkSTFn1(fn any) any {
+	return func(a any) any {
+		return fn.(func(any) any)(a).(func(any) any)(nil)
+	}
+}
 
-var MkSTFn2 = gopurs_runtime.Func(func(fn gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(a gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Func(func(b gopurs_runtime.Value) gopurs_runtime.Value {
-			return gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(fn, a), b), gopurs_runtime.Value{})
-		})
-	})
-})
+func MkSTFn2(fn any) any {
+	return func(a any) any {
+		return func(b any) any {
+			return fn.(func(any) any)(a).(func(any) any)(b).(func(any) any)(nil)
+		}
+	}
+}
 
-var MkSTFn3 = gopurs_runtime.Func(func(fn gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(a gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Func(func(b gopurs_runtime.Value) gopurs_runtime.Value {
-			return gopurs_runtime.Func(func(c gopurs_runtime.Value) gopurs_runtime.Value {
-				return gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(fn, a), b), c), gopurs_runtime.Value{})
-			})
-		})
-	})
-})
+func MkSTFn3(fn any) any {
+	return func(a any) any {
+		return func(b any) any {
+			return func(c any) any {
+				return fn.(func(any) any)(a).(func(any) any)(b).(func(any) any)(c).(func(any) any)(nil)
+			}
+		}
+	}
+}
 
-var MkSTFn4 = gopurs_runtime.Func(func(fn gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(a gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Func(func(b gopurs_runtime.Value) gopurs_runtime.Value {
-			return gopurs_runtime.Func(func(c gopurs_runtime.Value) gopurs_runtime.Value {
-				return gopurs_runtime.Func(func(d gopurs_runtime.Value) gopurs_runtime.Value {
-					return gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(fn, a), b), c), d), gopurs_runtime.Value{})
-				})
-			})
-		})
-	})
-})
+func MkSTFn4(fn any) any {
+	return func(a any) any {
+		return func(b any) any {
+			return func(c any) any {
+				return func(d any) any {
+					return fn.(func(any) any)(a).(func(any) any)(b).(func(any) any)(c).(func(any) any)(d).(func(any) any)(nil)
+				}
+			}
+		}
+	}
+}
 
-var MkSTFn5 = gopurs_runtime.Func(func(fn gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(a gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Func(func(b gopurs_runtime.Value) gopurs_runtime.Value {
-			return gopurs_runtime.Func(func(c gopurs_runtime.Value) gopurs_runtime.Value {
-				return gopurs_runtime.Func(func(d gopurs_runtime.Value) gopurs_runtime.Value {
-					return gopurs_runtime.Func(func(e gopurs_runtime.Value) gopurs_runtime.Value {
-						return gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(fn, a), b), c), d), e), gopurs_runtime.Value{})
-					})
-				})
-			})
-		})
-	})
-})
+func MkSTFn5(fn any) any {
+	return func(a any) any {
+		return func(b any) any {
+			return func(c any) any {
+				return func(d any) any {
+					return func(e any) any {
+						return fn.(func(any) any)(a).(func(any) any)(b).(func(any) any)(c).(func(any) any)(d).(func(any) any)(e).(func(any) any)(nil)
+					}
+				}
+			}
+		}
+	}
+}
 
-var MkSTFn6 = gopurs_runtime.Func(func(fn gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(a gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Func(func(b gopurs_runtime.Value) gopurs_runtime.Value {
-			return gopurs_runtime.Func(func(c gopurs_runtime.Value) gopurs_runtime.Value {
-				return gopurs_runtime.Func(func(d gopurs_runtime.Value) gopurs_runtime.Value {
-					return gopurs_runtime.Func(func(e gopurs_runtime.Value) gopurs_runtime.Value {
-						return gopurs_runtime.Func(func(f gopurs_runtime.Value) gopurs_runtime.Value {
-							return gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(fn, a), b), c), d), e), f), gopurs_runtime.Value{})
-						})
-					})
-				})
-			})
-		})
-	})
-})
+func MkSTFn6(fn any) any {
+	return func(a any) any {
+		return func(b any) any {
+			return func(c any) any {
+				return func(d any) any {
+					return func(e any) any {
+						return func(f any) any {
+							return fn.(func(any) any)(a).(func(any) any)(b).(func(any) any)(c).(func(any) any)(d).(func(any) any)(e).(func(any) any)(f).(func(any) any)(nil)
+						}
+					}
+				}
+			}
+		}
+	}
+}
 
-var MkSTFn7 = gopurs_runtime.Func(func(fn gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(a gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Func(func(b gopurs_runtime.Value) gopurs_runtime.Value {
-			return gopurs_runtime.Func(func(c gopurs_runtime.Value) gopurs_runtime.Value {
-				return gopurs_runtime.Func(func(d gopurs_runtime.Value) gopurs_runtime.Value {
-					return gopurs_runtime.Func(func(e gopurs_runtime.Value) gopurs_runtime.Value {
-						return gopurs_runtime.Func(func(f gopurs_runtime.Value) gopurs_runtime.Value {
-							return gopurs_runtime.Func(func(g gopurs_runtime.Value) gopurs_runtime.Value {
-								return gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(fn, a), b), c), d), e), f), g), gopurs_runtime.Value{})
-							})
-						})
-					})
-				})
-			})
-		})
-	})
-})
+func MkSTFn7(fn any) any {
+	return func(a any) any {
+		return func(b any) any {
+			return func(c any) any {
+				return func(d any) any {
+					return func(e any) any {
+						return func(f any) any {
+							return func(g any) any {
+								return fn.(func(any) any)(a).(func(any) any)(b).(func(any) any)(c).(func(any) any)(d).(func(any) any)(e).(func(any) any)(f).(func(any) any)(g).(func(any) any)(nil)
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
 
-var MkSTFn8 = gopurs_runtime.Func(func(fn gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(a gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Func(func(b gopurs_runtime.Value) gopurs_runtime.Value {
-			return gopurs_runtime.Func(func(c gopurs_runtime.Value) gopurs_runtime.Value {
-				return gopurs_runtime.Func(func(d gopurs_runtime.Value) gopurs_runtime.Value {
-					return gopurs_runtime.Func(func(e gopurs_runtime.Value) gopurs_runtime.Value {
-						return gopurs_runtime.Func(func(f gopurs_runtime.Value) gopurs_runtime.Value {
-							return gopurs_runtime.Func(func(g gopurs_runtime.Value) gopurs_runtime.Value {
-								return gopurs_runtime.Func(func(h gopurs_runtime.Value) gopurs_runtime.Value {
-									return gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(fn, a), b), c), d), e), f), g), h), gopurs_runtime.Value{})
-								})
-							})
-						})
-					})
-				})
-			})
-		})
-	})
-})
+func MkSTFn8(fn any) any {
+	return func(a any) any {
+		return func(b any) any {
+			return func(c any) any {
+				return func(d any) any {
+					return func(e any) any {
+						return func(f any) any {
+							return func(g any) any {
+								return func(h any) any {
+									return fn.(func(any) any)(a).(func(any) any)(b).(func(any) any)(c).(func(any) any)(d).(func(any) any)(e).(func(any) any)(f).(func(any) any)(g).(func(any) any)(h).(func(any) any)(nil)
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
 
-var MkSTFn9 = gopurs_runtime.Func(func(fn gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(a gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Func(func(b gopurs_runtime.Value) gopurs_runtime.Value {
-			return gopurs_runtime.Func(func(c gopurs_runtime.Value) gopurs_runtime.Value {
-				return gopurs_runtime.Func(func(d gopurs_runtime.Value) gopurs_runtime.Value {
-					return gopurs_runtime.Func(func(e gopurs_runtime.Value) gopurs_runtime.Value {
-						return gopurs_runtime.Func(func(f gopurs_runtime.Value) gopurs_runtime.Value {
-							return gopurs_runtime.Func(func(g gopurs_runtime.Value) gopurs_runtime.Value {
-								return gopurs_runtime.Func(func(h gopurs_runtime.Value) gopurs_runtime.Value {
-									return gopurs_runtime.Func(func(i gopurs_runtime.Value) gopurs_runtime.Value {
-										return gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(fn, a), b), c), d), e), f), g), h), i), gopurs_runtime.Value{})
-									})
-								})
-							})
-						})
-					})
-				})
-			})
-		})
-	})
-})
+func MkSTFn9(fn any) any {
+	return func(a any) any {
+		return func(b any) any {
+			return func(c any) any {
+				return func(d any) any {
+					return func(e any) any {
+						return func(f any) any {
+							return func(g any) any {
+								return func(h any) any {
+									return func(i any) any {
+										return fn.(func(any) any)(a).(func(any) any)(b).(func(any) any)(c).(func(any) any)(d).(func(any) any)(e).(func(any) any)(f).(func(any) any)(g).(func(any) any)(h).(func(any) any)(i).(func(any) any)(nil)
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
 
-var MkSTFn10 = gopurs_runtime.Func(func(fn gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(a gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Func(func(b gopurs_runtime.Value) gopurs_runtime.Value {
-			return gopurs_runtime.Func(func(c gopurs_runtime.Value) gopurs_runtime.Value {
-				return gopurs_runtime.Func(func(d gopurs_runtime.Value) gopurs_runtime.Value {
-					return gopurs_runtime.Func(func(e gopurs_runtime.Value) gopurs_runtime.Value {
-						return gopurs_runtime.Func(func(f gopurs_runtime.Value) gopurs_runtime.Value {
-							return gopurs_runtime.Func(func(g gopurs_runtime.Value) gopurs_runtime.Value {
-								return gopurs_runtime.Func(func(h gopurs_runtime.Value) gopurs_runtime.Value {
-									return gopurs_runtime.Func(func(i gopurs_runtime.Value) gopurs_runtime.Value {
-										return gopurs_runtime.Func(func(j gopurs_runtime.Value) gopurs_runtime.Value {
-											return gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(fn, a), b), c), d), e), f), g), h), i), j), gopurs_runtime.Value{})
-										})
-									})
-								})
-							})
-						})
-					})
-				})
-			})
-		})
-	})
-})
+func MkSTFn10(fn any) any {
+	return func(a any) any {
+		return func(b any) any {
+			return func(c any) any {
+				return func(d any) any {
+					return func(e any) any {
+						return func(f any) any {
+							return func(g any) any {
+								return func(h any) any {
+									return func(i any) any {
+										return func(j any) any {
+											return fn.(func(any) any)(a).(func(any) any)(b).(func(any) any)(c).(func(any) any)(d).(func(any) any)(e).(func(any) any)(f).(func(any) any)(g).(func(any) any)(h).(func(any) any)(i).(func(any) any)(j).(func(any) any)(nil)
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
 
-var RunSTFn1 = gopurs_runtime.Func(func(fn gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(a gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-			return gopurs_runtime.Apply(fn, a)
-		})
-	})
-})
+func RunSTFn1(fn any) any {
+	return func(a any) any {
+		return func(_ any) any {
+			return fn.(func(any) any)(a)
+		}
+	}
+}
 
-var RunSTFn2 = gopurs_runtime.Func(func(fn gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(a gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Func(func(b gopurs_runtime.Value) gopurs_runtime.Value {
-			return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-				return gopurs_runtime.Apply(gopurs_runtime.Apply(fn, a), b)
-			})
-		})
-	})
-})
+func RunSTFn2(fn any) any {
+	return func(a any) any {
+		return func(b any) any {
+			return func(_ any) any {
+				return fn.(func(any) any)(a).(func(any) any)(b)
+			}
+		}
+	}
+}
 
-var RunSTFn3 = gopurs_runtime.Func(func(fn gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(a gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Func(func(b gopurs_runtime.Value) gopurs_runtime.Value {
-			return gopurs_runtime.Func(func(c gopurs_runtime.Value) gopurs_runtime.Value {
-				return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-					return gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(fn, a), b), c)
-				})
-			})
-		})
-	})
-})
+func RunSTFn3(fn any) any {
+	return func(a any) any {
+		return func(b any) any {
+			return func(c any) any {
+				return func(_ any) any {
+					return fn.(func(any) any)(a).(func(any) any)(b).(func(any) any)(c)
+				}
+			}
+		}
+	}
+}
 
-var RunSTFn4 = gopurs_runtime.Func(func(fn gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(a gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Func(func(b gopurs_runtime.Value) gopurs_runtime.Value {
-			return gopurs_runtime.Func(func(c gopurs_runtime.Value) gopurs_runtime.Value {
-				return gopurs_runtime.Func(func(d gopurs_runtime.Value) gopurs_runtime.Value {
-					return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-						return gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(fn, a), b), c), d)
-					})
-				})
-			})
-		})
-	})
-})
+func RunSTFn4(fn any) any {
+	return func(a any) any {
+		return func(b any) any {
+			return func(c any) any {
+				return func(d any) any {
+					return func(_ any) any {
+						return fn.(func(any) any)(a).(func(any) any)(b).(func(any) any)(c).(func(any) any)(d)
+					}
+				}
+			}
+		}
+	}
+}
 
-var RunSTFn5 = gopurs_runtime.Func(func(fn gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(a gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Func(func(b gopurs_runtime.Value) gopurs_runtime.Value {
-			return gopurs_runtime.Func(func(c gopurs_runtime.Value) gopurs_runtime.Value {
-				return gopurs_runtime.Func(func(d gopurs_runtime.Value) gopurs_runtime.Value {
-					return gopurs_runtime.Func(func(e gopurs_runtime.Value) gopurs_runtime.Value {
-						return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-							return gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(fn, a), b), c), d), e)
-						})
-					})
-				})
-			})
-		})
-	})
-})
+func RunSTFn5(fn any) any {
+	return func(a any) any {
+		return func(b any) any {
+			return func(c any) any {
+				return func(d any) any {
+					return func(e any) any {
+						return func(_ any) any {
+							return fn.(func(any) any)(a).(func(any) any)(b).(func(any) any)(c).(func(any) any)(d).(func(any) any)(e)
+						}
+					}
+				}
+			}
+		}
+	}
+}
 
-var RunSTFn6 = gopurs_runtime.Func(func(fn gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(a gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Func(func(b gopurs_runtime.Value) gopurs_runtime.Value {
-			return gopurs_runtime.Func(func(c gopurs_runtime.Value) gopurs_runtime.Value {
-				return gopurs_runtime.Func(func(d gopurs_runtime.Value) gopurs_runtime.Value {
-					return gopurs_runtime.Func(func(e gopurs_runtime.Value) gopurs_runtime.Value {
-						return gopurs_runtime.Func(func(f gopurs_runtime.Value) gopurs_runtime.Value {
-							return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-								return gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(fn, a), b), c), d), e), f)
-							})
-						})
-					})
-				})
-			})
-		})
-	})
-})
+func RunSTFn6(fn any) any {
+	return func(a any) any {
+		return func(b any) any {
+			return func(c any) any {
+				return func(d any) any {
+					return func(e any) any {
+						return func(f any) any {
+							return func(_ any) any {
+								return fn.(func(any) any)(a).(func(any) any)(b).(func(any) any)(c).(func(any) any)(d).(func(any) any)(e).(func(any) any)(f)
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
 
-var RunSTFn7 = gopurs_runtime.Func(func(fn gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(a gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Func(func(b gopurs_runtime.Value) gopurs_runtime.Value {
-			return gopurs_runtime.Func(func(c gopurs_runtime.Value) gopurs_runtime.Value {
-				return gopurs_runtime.Func(func(d gopurs_runtime.Value) gopurs_runtime.Value {
-					return gopurs_runtime.Func(func(e gopurs_runtime.Value) gopurs_runtime.Value {
-						return gopurs_runtime.Func(func(f gopurs_runtime.Value) gopurs_runtime.Value {
-							return gopurs_runtime.Func(func(g gopurs_runtime.Value) gopurs_runtime.Value {
-								return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-									return gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(fn, a), b), c), d), e), f), g)
-								})
-							})
-						})
-					})
-				})
-			})
-		})
-	})
-})
+func RunSTFn7(fn any) any {
+	return func(a any) any {
+		return func(b any) any {
+			return func(c any) any {
+				return func(d any) any {
+					return func(e any) any {
+						return func(f any) any {
+							return func(g any) any {
+								return func(_ any) any {
+									return fn.(func(any) any)(a).(func(any) any)(b).(func(any) any)(c).(func(any) any)(d).(func(any) any)(e).(func(any) any)(f).(func(any) any)(g)
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
 
-var RunSTFn8 = gopurs_runtime.Func(func(fn gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(a gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Func(func(b gopurs_runtime.Value) gopurs_runtime.Value {
-			return gopurs_runtime.Func(func(c gopurs_runtime.Value) gopurs_runtime.Value {
-				return gopurs_runtime.Func(func(d gopurs_runtime.Value) gopurs_runtime.Value {
-					return gopurs_runtime.Func(func(e gopurs_runtime.Value) gopurs_runtime.Value {
-						return gopurs_runtime.Func(func(f gopurs_runtime.Value) gopurs_runtime.Value {
-							return gopurs_runtime.Func(func(g gopurs_runtime.Value) gopurs_runtime.Value {
-								return gopurs_runtime.Func(func(h gopurs_runtime.Value) gopurs_runtime.Value {
-									return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-										return gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(fn, a), b), c), d), e), f), g), h)
-									})
-								})
-							})
-						})
-					})
-				})
-			})
-		})
-	})
-})
+func RunSTFn8(fn any) any {
+	return func(a any) any {
+		return func(b any) any {
+			return func(c any) any {
+				return func(d any) any {
+					return func(e any) any {
+						return func(f any) any {
+							return func(g any) any {
+								return func(h any) any {
+									return func(_ any) any {
+										return fn.(func(any) any)(a).(func(any) any)(b).(func(any) any)(c).(func(any) any)(d).(func(any) any)(e).(func(any) any)(f).(func(any) any)(g).(func(any) any)(h)
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
 
-var RunSTFn9 = gopurs_runtime.Func(func(fn gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(a gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Func(func(b gopurs_runtime.Value) gopurs_runtime.Value {
-			return gopurs_runtime.Func(func(c gopurs_runtime.Value) gopurs_runtime.Value {
-				return gopurs_runtime.Func(func(d gopurs_runtime.Value) gopurs_runtime.Value {
-					return gopurs_runtime.Func(func(e gopurs_runtime.Value) gopurs_runtime.Value {
-						return gopurs_runtime.Func(func(f gopurs_runtime.Value) gopurs_runtime.Value {
-							return gopurs_runtime.Func(func(g gopurs_runtime.Value) gopurs_runtime.Value {
-								return gopurs_runtime.Func(func(h gopurs_runtime.Value) gopurs_runtime.Value {
-									return gopurs_runtime.Func(func(i gopurs_runtime.Value) gopurs_runtime.Value {
-										return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-											return gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(fn, a), b), c), d), e), f), g), h), i)
-										})
-									})
-								})
-							})
-						})
-					})
-				})
-			})
-		})
-	})
-})
+func RunSTFn9(fn any) any {
+	return func(a any) any {
+		return func(b any) any {
+			return func(c any) any {
+				return func(d any) any {
+					return func(e any) any {
+						return func(f any) any {
+							return func(g any) any {
+								return func(h any) any {
+									return func(i any) any {
+										return func(_ any) any {
+											return fn.(func(any) any)(a).(func(any) any)(b).(func(any) any)(c).(func(any) any)(d).(func(any) any)(e).(func(any) any)(f).(func(any) any)(g).(func(any) any)(h).(func(any) any)(i)
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
 
-var RunSTFn10 = gopurs_runtime.Func(func(fn gopurs_runtime.Value) gopurs_runtime.Value {
-	return gopurs_runtime.Func(func(a gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Func(func(b gopurs_runtime.Value) gopurs_runtime.Value {
-			return gopurs_runtime.Func(func(c gopurs_runtime.Value) gopurs_runtime.Value {
-				return gopurs_runtime.Func(func(d gopurs_runtime.Value) gopurs_runtime.Value {
-					return gopurs_runtime.Func(func(e gopurs_runtime.Value) gopurs_runtime.Value {
-						return gopurs_runtime.Func(func(f gopurs_runtime.Value) gopurs_runtime.Value {
-							return gopurs_runtime.Func(func(g gopurs_runtime.Value) gopurs_runtime.Value {
-								return gopurs_runtime.Func(func(h gopurs_runtime.Value) gopurs_runtime.Value {
-									return gopurs_runtime.Func(func(i gopurs_runtime.Value) gopurs_runtime.Value {
-										return gopurs_runtime.Func(func(j gopurs_runtime.Value) gopurs_runtime.Value {
-											return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-												return gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(fn, a), b), c), d), e), f), g), h), i), j)
-											})
-										})
-									})
-								})
-							})
-						})
-					})
-				})
-			})
-		})
-	})
-})
+func RunSTFn10(fn any) any {
+	return func(a any) any {
+		return func(b any) any {
+			return func(c any) any {
+				return func(d any) any {
+					return func(e any) any {
+						return func(f any) any {
+							return func(g any) any {
+								return func(h any) any {
+									return func(i any) any {
+										return func(j any) any {
+											return func(_ any) any {
+												return fn.(func(any) any)(a).(func(any) any)(b).(func(any) any)(c).(func(any) any)(d).(func(any) any)(e).(func(any) any)(f).(func(any) any)(g).(func(any) any)(h).(func(any) any)(i).(func(any) any)(j)
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
 
 
 // --- Auto-generated FFI wrappers ---
-var _Gopurs_MkSTFn1 = gopurs_runtime.Box(MkSTFn1)
-var _Gopurs_MkSTFn2 = gopurs_runtime.Box(MkSTFn2)
-var _Gopurs_MkSTFn3 = gopurs_runtime.Box(MkSTFn3)
-var _Gopurs_MkSTFn4 = gopurs_runtime.Box(MkSTFn4)
-var _Gopurs_MkSTFn5 = gopurs_runtime.Box(MkSTFn5)
-var _Gopurs_MkSTFn6 = gopurs_runtime.Box(MkSTFn6)
-var _Gopurs_MkSTFn7 = gopurs_runtime.Box(MkSTFn7)
-var _Gopurs_MkSTFn8 = gopurs_runtime.Box(MkSTFn8)
-var _Gopurs_MkSTFn9 = gopurs_runtime.Box(MkSTFn9)
-var _Gopurs_MkSTFn10 = gopurs_runtime.Box(MkSTFn10)
-var _Gopurs_RunSTFn1 = gopurs_runtime.Box(RunSTFn1)
-var _Gopurs_RunSTFn2 = gopurs_runtime.Box(RunSTFn2)
-var _Gopurs_RunSTFn3 = gopurs_runtime.Box(RunSTFn3)
-var _Gopurs_RunSTFn4 = gopurs_runtime.Box(RunSTFn4)
-var _Gopurs_RunSTFn5 = gopurs_runtime.Box(RunSTFn5)
-var _Gopurs_RunSTFn6 = gopurs_runtime.Box(RunSTFn6)
-var _Gopurs_RunSTFn7 = gopurs_runtime.Box(RunSTFn7)
-var _Gopurs_RunSTFn8 = gopurs_runtime.Box(RunSTFn8)
-var _Gopurs_RunSTFn9 = gopurs_runtime.Box(RunSTFn9)
-var _Gopurs_RunSTFn10 = gopurs_runtime.Box(RunSTFn10)
+func Call_mkSTFn1(arg0 any) any {
+	return MkSTFn1(arg0)
+}
+var _Gopurs_MkSTFn1 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := MkSTFn1(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})
+func Call_mkSTFn2(arg0 any) any {
+	return MkSTFn2(arg0)
+}
+var _Gopurs_MkSTFn2 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := MkSTFn2(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})
+func Call_mkSTFn3(arg0 any) any {
+	return MkSTFn3(arg0)
+}
+var _Gopurs_MkSTFn3 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := MkSTFn3(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})
+func Call_mkSTFn4(arg0 any) any {
+	return MkSTFn4(arg0)
+}
+var _Gopurs_MkSTFn4 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := MkSTFn4(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})
+func Call_mkSTFn5(arg0 any) any {
+	return MkSTFn5(arg0)
+}
+var _Gopurs_MkSTFn5 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := MkSTFn5(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})
+func Call_mkSTFn6(arg0 any) any {
+	return MkSTFn6(arg0)
+}
+var _Gopurs_MkSTFn6 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := MkSTFn6(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})
+func Call_mkSTFn7(arg0 any) any {
+	return MkSTFn7(arg0)
+}
+var _Gopurs_MkSTFn7 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := MkSTFn7(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})
+func Call_mkSTFn8(arg0 any) any {
+	return MkSTFn8(arg0)
+}
+var _Gopurs_MkSTFn8 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := MkSTFn8(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})
+func Call_mkSTFn9(arg0 any) any {
+	return MkSTFn9(arg0)
+}
+var _Gopurs_MkSTFn9 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := MkSTFn9(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})
+func Call_mkSTFn10(arg0 any) any {
+	return MkSTFn10(arg0)
+}
+var _Gopurs_MkSTFn10 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := MkSTFn10(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})
+func Call_runSTFn1(arg0 any) any {
+	return RunSTFn1(arg0)
+}
+var _Gopurs_RunSTFn1 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := RunSTFn1(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})
+func Call_runSTFn2(arg0 any) any {
+	return RunSTFn2(arg0)
+}
+var _Gopurs_RunSTFn2 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := RunSTFn2(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})
+func Call_runSTFn3(arg0 any) any {
+	return RunSTFn3(arg0)
+}
+var _Gopurs_RunSTFn3 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := RunSTFn3(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})
+func Call_runSTFn4(arg0 any) any {
+	return RunSTFn4(arg0)
+}
+var _Gopurs_RunSTFn4 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := RunSTFn4(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})
+func Call_runSTFn5(arg0 any) any {
+	return RunSTFn5(arg0)
+}
+var _Gopurs_RunSTFn5 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := RunSTFn5(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})
+func Call_runSTFn6(arg0 any) any {
+	return RunSTFn6(arg0)
+}
+var _Gopurs_RunSTFn6 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := RunSTFn6(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})
+func Call_runSTFn7(arg0 any) any {
+	return RunSTFn7(arg0)
+}
+var _Gopurs_RunSTFn7 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := RunSTFn7(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})
+func Call_runSTFn8(arg0 any) any {
+	return RunSTFn8(arg0)
+}
+var _Gopurs_RunSTFn8 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := RunSTFn8(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})
+func Call_runSTFn9(arg0 any) any {
+	return RunSTFn9(arg0)
+}
+var _Gopurs_RunSTFn9 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := RunSTFn9(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})
+func Call_runSTFn10(arg0 any) any {
+	return RunSTFn10(arg0)
+}
+var _Gopurs_RunSTFn10 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := RunSTFn10(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})

@@ -4,63 +4,64 @@ import "gopurs/output/gopurs_runtime"
 
 
 
-func mkRunFn(arity int) gopurs_runtime.Value {
+
+func mkRunFn(arity int) any {
 	if arity == 1 {
-		return gopurs_runtime.Func(func(fn gopurs_runtime.Value) gopurs_runtime.Value {
-			return gopurs_runtime.Func(func(a gopurs_runtime.Value) gopurs_runtime.Value {
-				return gopurs_runtime.Apply(fn, a)
-			})
-		})
+		return func(fn any) any {
+			return func(a any) any {
+				return fn.(func(any) any)(a)
+			}
+		}
 	}
 	if arity == 2 {
-		return gopurs_runtime.Func(func(fn gopurs_runtime.Value) gopurs_runtime.Value {
-			return gopurs_runtime.Func(func(a gopurs_runtime.Value) gopurs_runtime.Value {
-				return gopurs_runtime.Func(func(b gopurs_runtime.Value) gopurs_runtime.Value {
-					return gopurs_runtime.Apply(gopurs_runtime.Apply(fn, a), b)
-				})
-			})
-		})
+		return func(fn any) any {
+			return func(a any) any {
+				return func(b any) any {
+					return fn.(func(any) any)(a).(func(any) any)(b)
+				}
+			}
+		}
 	}
 	if arity == 3 {
-		return gopurs_runtime.Func(func(fn gopurs_runtime.Value) gopurs_runtime.Value {
-			return gopurs_runtime.Func(func(a gopurs_runtime.Value) gopurs_runtime.Value {
-				return gopurs_runtime.Func(func(b gopurs_runtime.Value) gopurs_runtime.Value {
-					return gopurs_runtime.Func(func(c gopurs_runtime.Value) gopurs_runtime.Value {
-						return gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(fn, a), b), c)
-					})
-				})
-			})
-		})
+		return func(fn any) any {
+			return func(a any) any {
+				return func(b any) any {
+					return func(c any) any {
+						return fn.(func(any) any)(a).(func(any) any)(b).(func(any) any)(c)
+					}
+				}
+			}
+		}
 	}
 	if arity == 4 {
-		return gopurs_runtime.Func(func(fn gopurs_runtime.Value) gopurs_runtime.Value {
-			return gopurs_runtime.Func(func(a gopurs_runtime.Value) gopurs_runtime.Value {
-				return gopurs_runtime.Func(func(b gopurs_runtime.Value) gopurs_runtime.Value {
-					return gopurs_runtime.Func(func(c gopurs_runtime.Value) gopurs_runtime.Value {
-						return gopurs_runtime.Func(func(d gopurs_runtime.Value) gopurs_runtime.Value {
-							return gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(fn, a), b), c), d)
-						})
-					})
-				})
-			})
-		})
+		return func(fn any) any {
+			return func(a any) any {
+				return func(b any) any {
+					return func(c any) any {
+						return func(d any) any {
+							return fn.(func(any) any)(a).(func(any) any)(b).(func(any) any)(c).(func(any) any)(d)
+						}
+					}
+				}
+			}
+		}
 	}
 	if arity == 5 {
-		return gopurs_runtime.Func(func(fn gopurs_runtime.Value) gopurs_runtime.Value {
-			return gopurs_runtime.Func(func(a gopurs_runtime.Value) gopurs_runtime.Value {
-				return gopurs_runtime.Func(func(b gopurs_runtime.Value) gopurs_runtime.Value {
-					return gopurs_runtime.Func(func(c gopurs_runtime.Value) gopurs_runtime.Value {
-						return gopurs_runtime.Func(func(d gopurs_runtime.Value) gopurs_runtime.Value {
-							return gopurs_runtime.Func(func(e gopurs_runtime.Value) gopurs_runtime.Value {
-								return gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.Apply(fn, a), b), c), d), e)
-							})
-						})
-					})
-				})
-			})
-		})
+		return func(fn any) any {
+			return func(a any) any {
+				return func(b any) any {
+					return func(c any) any {
+						return func(d any) any {
+							return func(e any) any {
+								return fn.(func(any) any)(a).(func(any) any)(b).(func(any) any)(c).(func(any) any)(d).(func(any) any)(e)
+							}
+						}
+					}
+				}
+			}
+		}
 	}
-	return gopurs_runtime.Value{} // fallback
+	return nil // fallback
 }
 
 var RunFn2 = mkRunFn(2)
@@ -73,11 +74,11 @@ var RunFn8 = mkRunFn(8)
 var RunFn9 = mkRunFn(9)
 var RunFn10 = mkRunFn(10)
 
-func mkMkFn(arity int) gopurs_runtime.Value {
+func mkMkFn(arity int) any {
     // mkFn is essentially identity because all functions in gopurs are already curried
-	return gopurs_runtime.Func(func(fn gopurs_runtime.Value) gopurs_runtime.Value {
+	return func(fn any) any {
 		return fn
-	})
+	}
 }
 
 var MkFn2 = mkMkFn(2)
@@ -90,8 +91,8 @@ var MkFn8 = mkMkFn(8)
 var MkFn9 = mkMkFn(9)
 var MkFn10 = mkMkFn(10)
 
-var MkFn0 = gopurs_runtime.Func(func(f gopurs_runtime.Value) gopurs_runtime.Value { return f })
-var RunFn0 = gopurs_runtime.Func(func(f gopurs_runtime.Value) gopurs_runtime.Value { return gopurs_runtime.Apply(f, gopurs_runtime.Value{}) })
+func MkFn0(f any) any { return f }
+func RunFn0(f any) any { return f.(func(any) any)(nil) }
 
 
 // --- Auto-generated FFI wrappers ---
@@ -113,5 +114,19 @@ var _Gopurs_MkFn7 = gopurs_runtime.Box(MkFn7)
 var _Gopurs_MkFn8 = gopurs_runtime.Box(MkFn8)
 var _Gopurs_MkFn9 = gopurs_runtime.Box(MkFn9)
 var _Gopurs_MkFn10 = gopurs_runtime.Box(MkFn10)
-var _Gopurs_MkFn0 = gopurs_runtime.Box(MkFn0)
-var _Gopurs_RunFn0 = gopurs_runtime.Box(RunFn0)
+func Call_mkFn0(arg0 any) any { return f } {
+	return MkFn0(arg0)
+}
+var _Gopurs_MkFn0 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := MkFn0(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})
+func Call_runFn0(arg0 any) any { return f.(func(any) any)(nil) } {
+	return RunFn0(arg0)
+}
+var _Gopurs_RunFn0 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := RunFn0(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})

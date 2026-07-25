@@ -25,8 +25,8 @@ func TraverseArrayImpl(apply func(interface{}) func(interface{}) interface{}, ma
 	concat2 := func(xsVal interface{}) func(interface{}) interface{} {
 		return func(ysVal interface{}) interface{} {
 			var xs, ys []interface{}
-			if vx, ok := xsVal.(gopurs_runtime.Value); ok {
-				if arr, ok := vx.PtrVal.([]gopurs_runtime.Value); ok {
+			if vx, ok := xsVal.(any); ok {
+				if arr, ok := vx.([]any); ok {
 					xs = make([]interface{}, len(arr))
 					for i, x := range arr { xs[i] = x }
 				}
@@ -36,8 +36,8 @@ func TraverseArrayImpl(apply func(interface{}) func(interface{}) interface{}, ma
 				xs = xsVal.([]interface{})
 			}
 
-			if vy, ok := ysVal.(gopurs_runtime.Value); ok {
-				if arr, ok := vy.PtrVal.([]gopurs_runtime.Value); ok {
+			if vy, ok := ysVal.(any); ok {
+				if arr, ok := vy.([]any); ok {
 					ys = make([]interface{}, len(arr))
 					for i, y := range arr { ys[i] = y }
 				}
