@@ -7,7 +7,7 @@ This project is a proof of concept demonstrating the power of abstraction and po
 2. **Arista ES (V8)**: A highly optimized, modern ECMAScript backend developed by Arista Networks for extreme performance (via the [`purs-backend-es` backend](https://github.com/aristanetworks/purescript-backend-optimizer)).
 3. **Erlang (BEAM)**: The distributed, highly concurrent, and fault tolerant virtual machine (via the [`purerl` backend](https://github.com/purerl/purerl)).
 4. **Chez Scheme**: One of the fastest Lisp compilers in the world for highly optimized native execution (via the [`purescm` backend](https://github.com/purescm/purescm)).
-5. **Native Go**: An experimental Ahead-Of-Time (AOT) backend generating native Go binaries (via the experimental local `gopurs` backend).
+5. **Go**: An experimental Ahead-Of-Time (AOT) backend generating native Go binaries (via the experimental local `gopurs` backend).
 6. **PHP**: Generating modern PHP 7.4+ syntax (via the experimental local `phpurs` backend). PureScript that transpiles to PHP, and targets 70% of the web (e.g. containerless VPS).
 
 ## Comprehensive benchmarks
@@ -29,7 +29,7 @@ Command: `./bin/run` (Runs on all 6 backends)
 =============================================================================================================================================================
 CORE BENCHMARK RESULTS (Fibonacci, AST, tail calls, Church, primes, etc.)                                                                      
 =============================================================================================================================================================
-Benchmark                                     | JS (V8)       | Arista ES (V8) | Native Go   | Scheme     | Erlang (BEAM) | PHP (WIP!)
+Benchmark                                     | JS (V8)       | Arista ES (V8) | Go          | Scheme     | Erlang (BEAM) | PHP (WIP!)
 --------------------------------------------- | ------------- | -------------- | ----------- | ---------- | ------------- | ---------
 AST Evaluation                                | ~ 93 μs       | ~ 75 μs        | ~ 50 μs     | ~ 9 μs     | ~ 692 μs      | ~ 367 μs
 Fibonacci                                     | ~ 43 μs       | ~ 46 μs        | ~ 2 μs      | ~ 2 μs     | ~ 49 μs       | ~ 785 μs
