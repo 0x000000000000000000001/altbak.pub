@@ -7,12 +7,9 @@
   (import
     (prefix (chezscheme) scm:)
     (prefix (purescm runtime) rt:)
-    (prefix (Bench lib) Bench.)
-    (prefix (Data.Unit lib) Data.Unit.)
-    (prefix (Test.TCO lib) Test.TCO.))
+    (prefix (Test.LazyEvaluation lib) Test.LazyEvaluation.))
 
   (scm:define main
-    (scm:let ([_0 ((Bench.runBench Test.TCO.describe) Test.TCO.act)])
-      (scm:lambda ()
-        (scm:let ([a$p1 (_0)])
-          Data.Unit.unit)))))
+    (scm:lambda ()
+      (scm:let ([_ (Test.LazyEvaluation.describe)])
+        (Test.LazyEvaluation.act)))))

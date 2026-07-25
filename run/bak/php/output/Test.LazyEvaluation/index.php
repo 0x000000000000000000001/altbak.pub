@@ -116,13 +116,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Test_LazyEvaluation_describe'] = function() { $v = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))("Lazy Evaluation (1M Thunks Forced, 1k Depth):"); return $v; };
-\PhpursThunks::$thunks['Test_LazyEvaluation_defer'] = function() { $v = function($f_0 = null) {
-  $__num = \func_num_args();
-  $__res = $f_0;
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
+\PhpursThunks::$thunks['Test_LazyEvaluation_defer'] = function() { $v = ($GLOBALS['Test_LazyEvaluation_Lazy'] ?? \PhpursThunks::eval('Test_LazyEvaluation_Lazy')); return $v; };
 \PhpursThunks::$thunks['Test_LazyEvaluation_buildThunks'] = function() { $v = (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();

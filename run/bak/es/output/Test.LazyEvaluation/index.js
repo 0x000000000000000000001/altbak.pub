@@ -4,7 +4,7 @@ import * as Effect$dConsole from "../Effect.Console/index.js";
 const Lazy = x => x;
 const force = v => v();
 const describe = /* #__PURE__ */ Effect$dConsole.log("Lazy Evaluation (1M Thunks Forced, 1k Depth):");
-const defer = f => f;
+const defer = Lazy;
 const buildThunks = buildThunks$a0$copy => buildThunks$a1$copy => {
   let buildThunks$a0 = buildThunks$a0$copy, buildThunks$a1 = buildThunks$a1$copy, buildThunks$c = true, buildThunks$r;
   while (buildThunks$c) {

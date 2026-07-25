@@ -10,6 +10,28 @@ import (
 	pkg_Data_Unit "gopurs/output/Data.Unit"
 )
 
+var cache_Lazy gopurs_runtime.Value
+var once_Lazy sync.Once
+func Get_Lazy() gopurs_runtime.Value {
+	once_Lazy.Do(func() {
+		cache_Lazy = gopurs_runtime.Func(func(x_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_Lazy(x_0_box)
+})
+	})
+	return cache_Lazy
+}
+
+var cache_force gopurs_runtime.Value
+var once_force sync.Once
+func Get_force() gopurs_runtime.Value {
+	once_force.Do(func() {
+		cache_force = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_force(v_0_box)
+})
+	})
+	return cache_force
+}
+
 var cache_describe gopurs_runtime.Value
 var once_describe sync.Once
 func Get_describe() gopurs_runtime.Value {
@@ -17,6 +39,15 @@ func Get_describe() gopurs_runtime.Value {
 		cache_describe = gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Str("Lazy Evaluation (1M Thunks Forced, 1k Depth):"))
 	})
 	return cache_describe
+}
+
+var cache_defer_ gopurs_runtime.Value
+var once_defer_ sync.Once
+func Get_defer_() gopurs_runtime.Value {
+	once_defer_.Do(func() {
+		cache_defer_ = Get_Lazy()
+	})
+	return cache_defer_
 }
 
 var cache_buildThunks gopurs_runtime.Value
@@ -50,6 +81,18 @@ return gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(g
 }))
 	})
 	return cache_act
+}
+
+func Call_Lazy(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var x_0 gopurs_runtime.Value = x_0_loop
+_ = x_0
+return x_0
+}
+
+func Call_force(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var v_0 gopurs_runtime.Value = v_0_loop
+_ = v_0
+return gopurs_runtime.Apply(v_0, pkg_Data_Unit.Get_unit())
 }
 
 func Call_buildThunks(v_0_loop int64, v1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {

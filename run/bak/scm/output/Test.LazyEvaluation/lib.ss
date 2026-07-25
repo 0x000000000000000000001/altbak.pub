@@ -30,8 +30,7 @@
     (Effect.Console.log (rt:string->pstring "Lazy Evaluation (1M Thunks Forced, 1k Depth):")))
 
   (scm:define defer
-    (scm:lambda (f0)
-      f0))
+    Lazy)
 
   (scm:define buildThunks
     (scm:lambda (v0)

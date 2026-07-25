@@ -11,9 +11,7 @@ var force = function (v) {
     return v(Data_Unit.unit);
 };
 var describe = /* #__PURE__ */ Effect_Console.log("Lazy Evaluation (1M Thunks Forced, 1k Depth):");
-var defer = function (f) {
-    return f;
-};
+var defer = Lazy;
 var buildThunks = function ($copy_v) {
     return function ($copy_v1) {
         var $tco_var_v = $copy_v;
@@ -64,8 +62,8 @@ var act = function __do() {
 };
 export {
     Lazy,
-    force,
     defer,
+    force,
     buildThunks,
     runManyTimes,
     describe,
