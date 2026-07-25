@@ -34,6 +34,26 @@ JS (V8)     | Arista ES (V8) | Scheme     | Erlang (BEAM) | Go (WIP!)   | PHP (W
 ~ 129.47 ms | ~ 82.76 ms     | ~ 47.45 ms | ~ 132.51 ms   | ~ 81.61 ms  | ~ 12041.23 ms (BUG! A regression will be fixed, usually ~600ms, but will be even lower once mature)
 ```
 
+### Detailed Execution Times (Arista ES vs Native Go)
+The following table provides a breakdown of the specific micro-benchmarks comparing the Arista ES (V8) backend to the Native Go backend. This highlights where Go's Ahead-Of-Time compilation excels (e.g., math, structural recursion, polymorphism) and its current weaknesses (e.g., deep record updates).
+
+| Benchmark | Arista ES (V8) | Native Go |
+| :--- | :--- | :--- |
+| **AST Evaluation** | ~ 74 μs | **~ 19 μs** |
+| **Fibonacci** | ~ 38 μs | **~ 2 μs** |
+| **List Processing (900 elements)** | ~ 325 μs | **~ 111 μs** |
+| **Tail Call Optimization (100k calls)** | ~ 1.62 ms | **~ 1.31 ms** |
+| **Deep Record Updates (10k iterations)** | **~ 0.55 ms** | ~ 6.23 ms |
+| **Ackermann (3, 4)** | ~ 203 μs | **~ 35 μs** |
+| **Church Numerals (100k Closure Applications)** | ~ 1.54 ms | **~ 0.64 ms** |
+| **Prime Sieve (sum primes up to 500)** | ~ 640 μs | **~ 364 μs** |
+| **Red-Black Tree (100k Worst-Case Insertions)** | ~ 53.70 ms | **~ 51.55 ms** |
+| **Polymorphism (10M Type Class Dict Lookups)** | ~ 7.87 ms | **~ 2.27 ms** |
+| **State Monad (1.2k Binds, 60 Stack Depth)** | ~ 158 μs | **~ 64 μs** |
+| **Lazy Evaluation (1M Thunks Forced)** | **~ 19.90 ms** | ~ 22.30 ms |
+| **Array Processing (900 elements)** | ~ 198 μs | **~ 83 μs** |
+| **Total Execution Time** | ~ 86.81 ms | **~ 84.98 ms** |
+
 ### Extended benchmark results (I/O, mutability, async)
 Command: `./bin/run --x` (Skips runtimes lacking necessary FFI bindings like Scheme and Erlang)
 
