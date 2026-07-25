@@ -32,5 +32,5 @@ main = do
   t11 <- runBench StateMonad.describe StateMonad.act
   t12 <- runBench LazyEvaluation.describe LazyEvaluation.act
 
-  let total = t1 + t2 + t3 + t4 + t5 + t6 + t7 + t8 + t9 + t10 + t11 + t12
-  log $ "Total exec time: " <> formatNumber (total / 1000.0) <> " ms\n"
+  let totalMs = (t1 / 1000.0) + (t2 / 1000.0) + (t3 / 1000.0) + (t4 / 1000.0) + (t5 / 1000.0) + (t6 / 1000.0) + (t7 / 1000.0) + (t8 / 1000.0) + (t9 / 1000.0) + (t10 / 1000.0) + (t11 / 1000.0) + (t12 / 1000.0)
+  log $ "Total exec time: " <> formatNumber totalMs <> " ms\n"
