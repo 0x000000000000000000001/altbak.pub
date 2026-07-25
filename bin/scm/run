@@ -62,9 +62,9 @@ elif [ "$MODE" == "x" ]; then
   trap "rm -rf src/Test/STArray.purs src/Test/AffOperations.purs src/Test/StringOps.purs src/Test/FileOps src/AppX.purs" EXIT
 fi
 
-spago build > /dev/null 2>&1
-PATH="$(pwd)/bin/scm:$PATH" purescm build > /dev/null 2>&1
-PATH="$(pwd)/bin/scm:$PATH" purescm bundle-app --main ${ENTRY_POINT} > /dev/null 2>&1
+spago build
+PATH="$(pwd)/bin/scm:$PATH" npx purescm build
+PATH="$(pwd)/bin/scm:$PATH" npx purescm bundle-app --main ${ENTRY_POINT}
 
 echo "=== Chez Scheme ==="
 export DYLD_LIBRARY_PATH="/opt/homebrew/lib:/opt/homebrew/opt/icu4c/lib:/opt/homebrew/opt/pcre2/lib"

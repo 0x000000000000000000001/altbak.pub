@@ -4,8 +4,15 @@ import Prelude
 
 import Effect (Effect)
 import Effect.Console (logShow, log)
-import Data.Lazy (Lazy, force, defer)
 import Bench as Bench
+
+newtype Lazy a = Lazy (Unit -> a)
+
+defer :: forall a. (Unit -> a) -> Lazy a
+defer = Lazy
+
+force :: forall a. Lazy a -> a
+force (Lazy f) = f unit
 
 -- Builds a chain of n thunks.
 -- When forced, it will consume n frames on the call stack.

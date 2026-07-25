@@ -72,9 +72,9 @@ done
 find .spago/p/prelude -name "Symbol.purs" | while read f; do
   printf -- "-module(data_symbol@foreign).\n-export([unsafeCoerce/1]).\nunsafeCoerce(X) -> X.\n" > "${f%.purs}.erl"
 done
-PATH="$(pwd)/bin/erl:$PATH" spago build > /dev/null 2>&1
+PATH="$(pwd)/bin/erl:$PATH" spago build
 # erlc compiles the .erl files to .beam files
-erlc -o output/${ENTRY_POINT} output/*/*.erl > /dev/null 2>&1
+erlc -o output/${ENTRY_POINT} output/*/*.erl
 
 echo "=== Erlang BEAM ==="
 if [ "$ENTRY_POINT" == "AppX" ]; then
