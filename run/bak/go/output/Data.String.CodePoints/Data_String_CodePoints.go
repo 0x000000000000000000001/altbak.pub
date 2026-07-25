@@ -388,7 +388,7 @@ var once_codePointFromChar sync.Once
 func Get_codePointFromChar() gopurs_runtime.Value {
 	once_codePointFromChar.Do(func() {
 		cache_codePointFromChar = gopurs_runtime.Func(func(x_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_codePointFromChar(x_0_box)
+return Call_codePointFromChar(x_0_box.StrVal())
 })
 	})
 	return cache_codePointFromChar
@@ -754,10 +754,10 @@ _ = s_1
 return gopurs_runtime.Apply2(Get_take(), gopurs_runtime.Apply2(Get_countPrefix(), p_0, gopurs_runtime.Str(s_1)), gopurs_runtime.Str(s_1))
 }
 
-func Call_codePointFromChar(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var x_0 gopurs_runtime.Value = x_0_loop
+func Call_codePointFromChar(x_0_loop string) gopurs_runtime.Value {
+var x_0 string = x_0_loop
 _ = x_0
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Enum.Get_boundedEnumChar(), "fromEnum"), x_0)
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Enum.Get_boundedEnumChar(), "fromEnum"), gopurs_runtime.Str(x_0))
 }
 
 func Call_codePointAtFallback(n_0_loop int64, s_1_loop string) gopurs_runtime.Value {

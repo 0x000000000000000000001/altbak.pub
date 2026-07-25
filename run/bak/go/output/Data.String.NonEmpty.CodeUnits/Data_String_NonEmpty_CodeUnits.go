@@ -49,7 +49,7 @@ var once_snoc sync.Once
 func Get_snoc() gopurs_runtime.Value {
 	once_snoc.Do(func() {
 		cache_snoc = gopurs_runtime.Func2(func(c_0_box gopurs_runtime.Value, s_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_snoc(c_0_box, s_1_box.StrVal())
+return Call_snoc(c_0_box.StrVal(), s_1_box.StrVal())
 })
 	})
 	return cache_snoc
@@ -60,7 +60,7 @@ var once_singleton sync.Once
 func Get_singleton() gopurs_runtime.Value {
 	once_singleton.Do(func() {
 		cache_singleton = gopurs_runtime.Func(func(x_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_singleton(x_0_box)
+return Call_singleton(x_0_box.StrVal())
 })
 	})
 	return cache_singleton
@@ -291,7 +291,7 @@ var once_cons sync.Once
 func Get_cons() gopurs_runtime.Value {
 	once_cons.Do(func() {
 		cache_cons = gopurs_runtime.Func2(func(c_0_box gopurs_runtime.Value, s_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_cons(c_0_box, s_1_box.StrVal())
+return Call_cons(c_0_box.StrVal(), s_1_box.StrVal())
 })
 	})
 	return cache_cons
@@ -308,18 +308,18 @@ return Call_charAt(x_0_box.IntVal)
 	return cache_charAt
 }
 
-func Call_snoc(c_0_loop gopurs_runtime.Value, s_1_loop string) gopurs_runtime.Value {
-var c_0 gopurs_runtime.Value = c_0_loop
+func Call_snoc(c_0_loop string, s_1_loop string) gopurs_runtime.Value {
+var c_0 string = c_0_loop
 _ = c_0
 var s_1 string = s_1_loop
 _ = s_1
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Str(s_1), gopurs_runtime.Apply(pkg_Data_String_CodeUnits.Get_singleton(), c_0))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Str(s_1), gopurs_runtime.Apply(pkg_Data_String_CodeUnits.Get_singleton(), gopurs_runtime.Str(c_0)))
 }
 
-func Call_singleton(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var x_0 gopurs_runtime.Value = x_0_loop
+func Call_singleton(x_0_loop string) gopurs_runtime.Value {
+var x_0 string = x_0_loop
 _ = x_0
-return gopurs_runtime.Apply(pkg_Data_String_CodeUnits.Get_singleton(), x_0)
+return gopurs_runtime.Apply(pkg_Data_String_CodeUnits.Get_singleton(), gopurs_runtime.Str(x_0))
 }
 
 func Call_takeWhile(f_0_loop gopurs_runtime.Value, x_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -622,12 +622,12 @@ _ = x_0
 return gopurs_runtime.Apply(pkg_Data_String_CodeUnits.Get_countPrefix(), x_0)
 }
 
-func Call_cons(c_0_loop gopurs_runtime.Value, s_1_loop string) gopurs_runtime.Value {
-var c_0 gopurs_runtime.Value = c_0_loop
+func Call_cons(c_0_loop string, s_1_loop string) gopurs_runtime.Value {
+var c_0 string = c_0_loop
 _ = c_0
 var s_1 string = s_1_loop
 _ = s_1
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Apply(pkg_Data_String_CodeUnits.Get_singleton(), c_0), gopurs_runtime.Str(s_1))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Apply(pkg_Data_String_CodeUnits.Get_singleton(), gopurs_runtime.Str(c_0)), gopurs_runtime.Str(s_1))
 }
 
 func Call_charAt(x_0_loop int64) gopurs_runtime.Value {
