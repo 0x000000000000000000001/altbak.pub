@@ -1,0 +1,12 @@
+file:///Users/0x1/Documents/htdocs/gopurs/bin/gopurs.js:2002
+                  throw util.fromLeft(step);
+                  ^
+
+[Error: ENOENT: no such file or directory, scandir 'output'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'scandir',
+  path: 'output'
+}
+
+Node.js v24.8.0

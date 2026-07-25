@@ -11,7 +11,7 @@ var cache_withState gopurs_runtime.Value
 var once_withState sync.Once
 func Get_withState() gopurs_runtime.Value {
 	once_withState.Do(func() {
-		cache_withState = pkg_Control_Monad_State_Trans.Get_withStateT()
+		cache_withState = pkg_Control_Monad_State_Trans.Get_withStateT__gopurs_runtime_Value()
 	})
 	return cache_withState
 }
