@@ -5,6 +5,7 @@
         "path": "./",
         "core": {
           "dependencies": [
+            "arrays",
             "console",
             "effect",
             "prelude",
@@ -1406,6 +1407,36 @@
     "extra_packages": {}
   },
   "packages": {
+    "arrays": {
+      "type": "git",
+      "url": "https://github.com/purerl/purescript-arrays.git",
+      "rev": "24ac35d3598af6bfb5e479d313f9493ab4d62984",
+      "dependencies": [
+        "bifunctors",
+        "control",
+        "foldable-traversable",
+        "maybe",
+        "nonempty",
+        "partial",
+        "prelude",
+        "tailrec",
+        "tuples",
+        "unfoldable",
+        "unsafe-coerce"
+      ]
+    },
+    "bifunctors": {
+      "type": "git",
+      "url": "https://github.com/purescript/purescript-bifunctors.git",
+      "rev": "a31d0fc4bbebf19d5e9b21b65493c28b8d3fba62",
+      "dependencies": [
+        "const",
+        "either",
+        "newtype",
+        "prelude",
+        "tuples"
+      ]
+    },
     "console": {
       "type": "git",
       "url": "https://github.com/purerl/purescript-console.git",
@@ -1413,6 +1444,49 @@
       "dependencies": [
         "effect",
         "prelude"
+      ]
+    },
+    "const": {
+      "type": "git",
+      "url": "https://github.com/purescript/purescript-const.git",
+      "rev": "3a3a4bdc44f71311cf27de9bd22039b110277540",
+      "dependencies": [
+        "invariant",
+        "newtype",
+        "prelude"
+      ]
+    },
+    "contravariant": {
+      "type": "git",
+      "url": "https://github.com/purescript/purescript-contravariant.git",
+      "rev": "ae1a765f7ddbfd96ae1f12e399e46d554d8e3b38",
+      "dependencies": [
+        "const",
+        "either",
+        "newtype",
+        "prelude",
+        "tuples"
+      ]
+    },
+    "control": {
+      "type": "git",
+      "url": "https://github.com/purerl/purescript-control.git",
+      "rev": "e3add624f8dacb4d6bec6d9ed682df692e197b5b",
+      "dependencies": [
+        "newtype",
+        "prelude"
+      ]
+    },
+    "distributive": {
+      "type": "git",
+      "url": "https://github.com/purescript/purescript-distributive.git",
+      "rev": "11f3f87ca5720899e1739cedb58dd6227cae6ad5",
+      "dependencies": [
+        "identity",
+        "newtype",
+        "prelude",
+        "tuples",
+        "type-equality"
       ]
     },
     "effect": {
@@ -1423,11 +1497,151 @@
         "prelude"
       ]
     },
+    "either": {
+      "type": "git",
+      "url": "https://github.com/purescript/purescript-either.git",
+      "rev": "c1a1af35684f10eecaf6ac7d38dbf6bd48af2ced",
+      "dependencies": [
+        "control",
+        "invariant",
+        "maybe",
+        "prelude"
+      ]
+    },
+    "exists": {
+      "type": "git",
+      "url": "https://github.com/purescript/purescript-exists.git",
+      "rev": "c34820f8b2d15be29abdd5097c3d636f5df8f28c",
+      "dependencies": [
+        "unsafe-coerce"
+      ]
+    },
+    "foldable-traversable": {
+      "type": "git",
+      "url": "https://github.com/purerl/purescript-foldable-traversable.git",
+      "rev": "444a611d64800a82259b9c22999330b6a7b48a3d",
+      "dependencies": [
+        "bifunctors",
+        "const",
+        "control",
+        "either",
+        "functors",
+        "identity",
+        "maybe",
+        "newtype",
+        "orders",
+        "prelude",
+        "tuples"
+      ]
+    },
+    "functors": {
+      "type": "git",
+      "url": "https://github.com/purescript/purescript-functors.git",
+      "rev": "e936f7a8d2ec53a344c478ccada5add93273848c",
+      "dependencies": [
+        "bifunctors",
+        "const",
+        "contravariant",
+        "control",
+        "distributive",
+        "either",
+        "invariant",
+        "maybe",
+        "newtype",
+        "prelude",
+        "profunctor",
+        "tuples",
+        "unsafe-coerce"
+      ]
+    },
+    "identity": {
+      "type": "git",
+      "url": "https://github.com/purescript/purescript-identity.git",
+      "rev": "5c150ac5ee4fa6f145932f6322a1020463dae8e9",
+      "dependencies": [
+        "control",
+        "invariant",
+        "newtype",
+        "prelude"
+      ]
+    },
+    "invariant": {
+      "type": "git",
+      "url": "https://github.com/purescript/purescript-invariant.git",
+      "rev": "c421b49dec7a1511073bb408a08bdd8c9d17d7b1",
+      "dependencies": [
+        "control",
+        "prelude"
+      ]
+    },
+    "maybe": {
+      "type": "git",
+      "url": "https://github.com/purescript/purescript-maybe.git",
+      "rev": "8e96ca0187208e78e8df6a464c281850e5c9400c",
+      "dependencies": [
+        "control",
+        "invariant",
+        "newtype",
+        "prelude"
+      ]
+    },
+    "newtype": {
+      "type": "git",
+      "url": "https://github.com/purescript/purescript-newtype.git",
+      "rev": "7b292fcd2ac7c4a25d7a7a8d3387d0ee7de89b13",
+      "dependencies": [
+        "prelude",
+        "safe-coerce"
+      ]
+    },
+    "nonempty": {
+      "type": "git",
+      "url": "https://github.com/purescript/purescript-nonempty.git",
+      "rev": "d3e91e3d6e06e5bdcc5b2c21c8e5d0f9b946bb9e",
+      "dependencies": [
+        "control",
+        "foldable-traversable",
+        "maybe",
+        "prelude",
+        "tuples",
+        "unfoldable"
+      ]
+    },
+    "orders": {
+      "type": "git",
+      "url": "https://github.com/purescript/purescript-orders.git",
+      "rev": "c25b7075426cf82bcb960495f28d2541c9a75510",
+      "dependencies": [
+        "newtype",
+        "prelude"
+      ]
+    },
+    "partial": {
+      "type": "git",
+      "url": "https://github.com/purerl/purescript-partial.git",
+      "rev": "6fe347eb3a36c70cacd4aeb581b5748a9d5035aa",
+      "dependencies": []
+    },
     "prelude": {
       "type": "git",
       "url": "https://github.com/purerl/purescript-prelude.git",
       "rev": "75a86f361270985ae983b59d4a69c0513b7f1cb1",
       "dependencies": []
+    },
+    "profunctor": {
+      "type": "git",
+      "url": "https://github.com/purescript/purescript-profunctor.git",
+      "rev": "4551b8e437a00268cc9b687cbe691d75e812e82b",
+      "dependencies": [
+        "control",
+        "distributive",
+        "either",
+        "exists",
+        "invariant",
+        "newtype",
+        "prelude",
+        "tuples"
+      ]
     },
     "refs": {
       "type": "git",
@@ -1437,6 +1651,63 @@
         "effect",
         "prelude"
       ]
+    },
+    "safe-coerce": {
+      "type": "git",
+      "url": "https://github.com/purescript/purescript-safe-coerce.git",
+      "rev": "e719defd227d932da067a1f0d62a60b3d3ff3637",
+      "dependencies": [
+        "unsafe-coerce"
+      ]
+    },
+    "tailrec": {
+      "type": "git",
+      "url": "https://github.com/purerl/purescript-tailrec.git",
+      "rev": "a865d0787fef54e7350d8c1e8d2e9ed94fae47b7",
+      "dependencies": [
+        "bifunctors",
+        "effect",
+        "either",
+        "identity",
+        "maybe",
+        "partial",
+        "prelude",
+        "refs"
+      ]
+    },
+    "tuples": {
+      "type": "git",
+      "url": "https://github.com/purescript/purescript-tuples.git",
+      "rev": "d4fe8ffe9e8c512111ee0bc18a6ba0fd056a6773",
+      "dependencies": [
+        "control",
+        "invariant",
+        "prelude"
+      ]
+    },
+    "type-equality": {
+      "type": "git",
+      "url": "https://github.com/purescript/purescript-type-equality.git",
+      "rev": "f7644468f22ed267a15d398173d234fa6f45e2e0",
+      "dependencies": []
+    },
+    "unfoldable": {
+      "type": "git",
+      "url": "https://github.com/purerl/purescript-unfoldable.git",
+      "rev": "5d3b6ac48757c9aa93f6410f86266034fd510599",
+      "dependencies": [
+        "foldable-traversable",
+        "maybe",
+        "partial",
+        "prelude",
+        "tuples"
+      ]
+    },
+    "unsafe-coerce": {
+      "type": "git",
+      "url": "https://github.com/purerl/purescript-unsafe-coerce.git",
+      "rev": "7150d261d40cd92112e8c2064124c5682627f137",
+      "dependencies": []
     }
   }
 }

@@ -1,6 +1,7 @@
 package:
   name: ps-scheme-test
   dependencies:
+    - arrays
     - console
     - effect
     - prelude

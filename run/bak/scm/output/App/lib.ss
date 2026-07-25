@@ -10,6 +10,7 @@
     (prefix (Bench lib) Bench.)
     (prefix (Effect.Console lib) Effect.Console.)
     (prefix (Test.Ackermann lib) Test.Ackermann.)
+    (prefix (Test.ArrayOps lib) Test.ArrayOps.)
     (prefix (Test.AstTree lib) Test.AstTree.)
     (prefix (Test.Church lib) Test.Church.)
     (prefix (Test.Fib lib) Test.Fib.)
@@ -37,5 +38,6 @@
            [t99 (((Bench.runBench Test.RBTree.describe) Test.RBTree.act))]
            [t1010 (((Bench.runBench Test.Polymorphism.describe) Test.Polymorphism.act))]
            [t1111 (((Bench.runBench Test.StateMonad.describe) Test.StateMonad.act))]
-           [t1212 (((Bench.runBench Test.LazyEvaluation.describe) Test.LazyEvaluation.act))])
-            ((Effect.Console.log (rt:pstring-concat (rt:pstring-concat (rt:string->pstring "Total exec time: ") (Bench.formatNumber (scm:fl+ (scm:fl+ (scm:fl+ (scm:fl+ (scm:fl+ (scm:fl+ (scm:fl+ (scm:fl+ (scm:fl+ (scm:fl+ (scm:fl+ (scm:fl/ t11 1000.0) (scm:fl/ t22 1000.0)) (scm:fl/ t33 1000.0)) (scm:fl/ t44 1000.0)) (scm:fl/ t55 1000.0)) (scm:fl/ t66 1000.0)) (scm:fl/ t77 1000.0)) (scm:fl/ t88 1000.0)) (scm:fl/ t99 1000.0)) (scm:fl/ t1010 1000.0)) (scm:fl/ t1111 1000.0)) (scm:fl/ t1212 1000.0)))) (rt:string->pstring " ms\n")))))))))
+           [t1212 (((Bench.runBench Test.LazyEvaluation.describe) Test.LazyEvaluation.act))]
+           [t1313 (((Bench.runBench Test.ArrayOps.describe) Test.ArrayOps.act))])
+            ((Effect.Console.log (rt:pstring-concat (rt:pstring-concat (rt:string->pstring "Total exec time: ") (Bench.formatNumber (scm:fl+ (scm:fl+ (scm:fl+ (scm:fl+ (scm:fl+ (scm:fl+ (scm:fl+ (scm:fl+ (scm:fl+ (scm:fl+ (scm:fl+ (scm:fl+ (scm:fl/ t11 1000.0) (scm:fl/ t22 1000.0)) (scm:fl/ t33 1000.0)) (scm:fl/ t44 1000.0)) (scm:fl/ t55 1000.0)) (scm:fl/ t66 1000.0)) (scm:fl/ t77 1000.0)) (scm:fl/ t88 1000.0)) (scm:fl/ t99 1000.0)) (scm:fl/ t1010 1000.0)) (scm:fl/ t1111 1000.0)) (scm:fl/ t1212 1000.0)) (scm:fl/ t1313 1000.0)))) (rt:string->pstring " ms\n")))))))))

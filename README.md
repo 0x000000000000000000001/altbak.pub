@@ -31,7 +31,7 @@ CORE BENCHMARK RESULTS (Fibonacci, AST, tail calls, Church, primes, etc.)
 ====================================================================================================================================
 JS (V8)     | Arista ES (V8) | Scheme     | Erlang (BEAM) | Go (WIP!)   | PHP (WIP!)
 ----------- | -------------- | ---------- | ------------- | ----------- | ---------
-~ 122.65 ms | ~ 77.66 ms     | ~ 46.41 ms | ~ 122.71 ms   | ~ 125.47 ms | ~ 11716.88 ms (BUG! A regression will be fixed, usually ~600ms, but will be even lower once mature)
+~ 129.47 ms | ~ 82.76 ms     | ~ 47.45 ms | ~ 132.51 ms   | ~ 128.21 ms | ~ 12041.23 ms (BUG! A regression will be fixed, usually ~600ms, but will be even lower once mature)
 ```
 
 ### Extended benchmark results (I/O, mutability, async)

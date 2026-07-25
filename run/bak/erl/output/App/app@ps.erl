@@ -13,7 +13,7 @@
 -define(MEMOIZE, memoize).
 memoize(X) -> X.
 -endif.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/App.purs", 20).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/App.purs", 21).
 -spec main() -> fun(() -> any()).
 main() -> fun
   __do() -> 
@@ -29,6 +29,7 @@ main() -> fun
   T10@25 = ((bench@ps:runBench((test_polymorphism@ps:describe()), (test_polymorphism@ps:act())))()),
   T11@26 = ((bench@ps:runBench((test_stateMonad@ps:describe()), (test_stateMonad@ps:act())))()),
   T12@27 = ((bench@ps:runBench((test_lazyEvaluation@ps:describe()), (test_lazyEvaluation@ps:act())))()),
-  TotalMs@16@28 = T1 / 1000.0 + T2@17 / 1000.0 + T3@18 / 1000.0 + T4@19 / 1000.0 + T5@20 / 1000.0 + T6@21 / 1000.0 + T7@22 / 1000.0 + T8@23 / 1000.0 + T9@24 / 1000.0 + T10@25 / 1000.0 + T11@26 / 1000.0 + T12@27 / 1000.0,
-  ((effect_console@ps:log((((?MEMOIZE((data_semigroup@ps:append((data_semigroup@ps:semigroupString())))))(<<"Total exec time: "/utf8>>))((((?MEMOIZE((data_semigroup@ps:append((data_semigroup@ps:semigroupString())))))((bench@ps:formatNumber(TotalMs@16@28))))(<<" ms\n"/utf8>>))))))())
+  T13@28 = ((bench@ps:runBench((test_arrayOps@ps:describe()), (test_arrayOps@ps:act())))()),
+  TotalMs@16@29 = T1 / 1000.0 + T2@17 / 1000.0 + T3@18 / 1000.0 + T4@19 / 1000.0 + T5@20 / 1000.0 + T6@21 / 1000.0 + T7@22 / 1000.0 + T8@23 / 1000.0 + T9@24 / 1000.0 + T10@25 / 1000.0 + T11@26 / 1000.0 + T12@27 / 1000.0 + T13@28 / 1000.0,
+  ((effect_console@ps:log((((?MEMOIZE((data_semigroup@ps:append((data_semigroup@ps:semigroupString())))))(<<"Total exec time: "/utf8>>))((((?MEMOIZE((data_semigroup@ps:append((data_semigroup@ps:semigroupString())))))((bench@ps:formatNumber(TotalMs@16@29))))(<<" ms\n"/utf8>>))))))())
 end.
