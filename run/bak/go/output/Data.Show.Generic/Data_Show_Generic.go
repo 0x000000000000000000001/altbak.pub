@@ -144,7 +144,7 @@ v1_4_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericShowArgs_0, "
 _ = v1_4_1
 var __t2 gopurs_runtime.Value
 {
-if gopurs_runtime.Int(int64(len(v1_4_1.PtrVal.([]gopurs_runtime.Value)))).IntVal == 0 {
+if gopurs_runtime.Int(int64(len(v1_4_1.PtrVal().([]gopurs_runtime.Value)))).IntVal == 0 {
 __t2 = ctor_3_0
 goto end_branch_2
 } else {

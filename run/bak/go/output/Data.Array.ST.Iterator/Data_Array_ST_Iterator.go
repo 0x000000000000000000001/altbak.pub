@@ -34,7 +34,7 @@ _ = v_0
 __local_var_1_0 := (*Data_Data_Array_ST_Iterator_Iterator)(v_0.UnsafePtr).V1
 _ = __local_var_1_0
 return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-i_2_1 := *(__local_var_1_0.PtrVal.(*gopurs_runtime.Value))
+i_2_1 := *(__local_var_1_0.PtrVal().(*gopurs_runtime.Value))
 _ = i_2_1
 return gopurs_runtime.Apply((*Data_Data_Array_ST_Iterator_Iterator)(v_0.UnsafePtr).V0, i_2_1)
 })
@@ -55,7 +55,7 @@ _ = v_0
 __local_var_1_0 := (*Data_Data_Array_ST_Iterator_Iterator)(v_0.UnsafePtr).V1
 _ = __local_var_1_0
 return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-i_2_1 := *(__local_var_1_0.PtrVal.(*gopurs_runtime.Value))
+i_2_1 := *(__local_var_1_0.PtrVal().(*gopurs_runtime.Value))
 _ = i_2_1
 _dollar__unused_3_2 := gopurs_runtime.Apply(gopurs_runtime.Apply2(pkg_Control_Monad_ST_Internal.Get_modifyImpl(), gopurs_runtime.Func(func(s_3 gopurs_runtime.Value) gopurs_runtime.Value {
 s_prime_4_3 := s_3.IntVal + 1
@@ -106,7 +106,7 @@ _ = __local_var_1_0
 return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 __local_ref_2 := 0
 _ = __local_ref_2
-__local_var_2_1 := gopurs_runtime.Value{PtrVal: &__local_ref_2}
+__local_var_2_1 := gopurs_runtime.Any(&__local_ref_2)
 _ = __local_var_2_1
 return gopurs_runtime.Apply(__local_var_1_0, __local_var_2_1)
 })
@@ -138,7 +138,7 @@ _ = x_0
 __local_var_1_0 := (*Data_Data_Array_ST_Iterator_Iterator)(x_0.UnsafePtr).V1
 _ = __local_var_1_0
 return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-i_2_1 := *(__local_var_1_0.PtrVal.(*gopurs_runtime.Value))
+i_2_1 := *(__local_var_1_0.PtrVal().(*gopurs_runtime.Value))
 _ = i_2_1
 __local_var_3_2 := gopurs_runtime.Apply((*Data_Data_Array_ST_Iterator_Iterator)(x_0.UnsafePtr).V0, i_2_1)
 _ = __local_var_3_2
@@ -191,16 +191,16 @@ _ = array_2
 return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 __local_ref_1 := false
 _ = __local_ref_1
-break__3_0 := gopurs_runtime.Value{PtrVal: &__local_ref_1}
+break__3_0 := gopurs_runtime.Any(&__local_ref_1)
 _ = break__3_0
 __local_var_4_3 := (*Data_Data_Array_ST_Iterator_Iterator)(iter_1.UnsafePtr).V1
 _ = __local_var_4_3
 return gopurs_runtime.Apply(gopurs_runtime.Apply2(pkg_Control_Monad_ST_Internal.Get_while(), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_4_2 := *(break__3_0.PtrVal.(*gopurs_runtime.Value))
+__local_var_4_2 := *(break__3_0.PtrVal().(*gopurs_runtime.Value))
 _ = __local_var_4_2
 return gopurs_runtime.Bool(__local_var_4_2.IntVal != 0 != true)
 }), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-i_5_4 := *(__local_var_4_3.PtrVal.(*gopurs_runtime.Value))
+i_5_4 := *(__local_var_4_3.PtrVal().(*gopurs_runtime.Value))
 _ = i_5_4
 mx_6_5 := gopurs_runtime.Apply((*Data_Data_Array_ST_Iterator_Iterator)(iter_1.UnsafePtr).V0, i_5_4)
 _ = mx_6_5
@@ -221,7 +221,7 @@ goto end_branch_7
 }
 {
 __t7 = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-*(break__3_0.PtrVal.(*gopurs_runtime.Value)) = true
+*(break__3_0.PtrVal().(*gopurs_runtime.Value)) = true
 __local_var_7_6 := true
 _ = __local_var_7_6
 return pkg_Data_Unit.Get_unit()
@@ -241,12 +241,12 @@ _ = f_1
 return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 __local_ref_1 := false
 _ = __local_ref_1
-break__2_0 := gopurs_runtime.Value{PtrVal: &__local_ref_1}
+break__2_0 := gopurs_runtime.Any(&__local_ref_1)
 _ = break__2_0
 __local_var_3_3 := gopurs_runtime.Apply(Get_next(), iter_0)
 _ = __local_var_3_3
 return gopurs_runtime.Apply(gopurs_runtime.Apply2(pkg_Control_Monad_ST_Internal.Get_while(), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_3_2 := *(break__2_0.PtrVal.(*gopurs_runtime.Value))
+__local_var_3_2 := *(break__2_0.PtrVal().(*gopurs_runtime.Value))
 _ = __local_var_3_2
 return gopurs_runtime.Bool(__local_var_3_2.IntVal != 0 != true)
 }), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
@@ -264,7 +264,7 @@ goto end_branch_5
 {
 if (mx_4_4.Type == 9 && mx_4_4.IntVal == 42808261) {
 __t5 = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-*(break__2_0.PtrVal.(*gopurs_runtime.Value)) = true
+*(break__2_0.PtrVal().(*gopurs_runtime.Value)) = true
 __local_var_5_6 := true
 _ = __local_var_5_6
 return pkg_Data_Unit.Get_unit()

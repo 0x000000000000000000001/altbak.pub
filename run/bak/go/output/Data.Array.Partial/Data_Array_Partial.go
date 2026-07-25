@@ -55,7 +55,7 @@ var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
 var xs_1 gopurs_runtime.Value = xs_1_loop
 _ = xs_1
-return gopurs_runtime.UncurriedApp3(pkg_Data_Array.Get_sliceImpl(), gopurs_runtime.Int(1), gopurs_runtime.Int(int64(len(xs_1.PtrVal.([]gopurs_runtime.Value)))), xs_1)
+return gopurs_runtime.UncurriedApp3(pkg_Data_Array.Get_sliceImpl(), gopurs_runtime.Int(1), gopurs_runtime.Int(int64(len(xs_1.PtrVal().([]gopurs_runtime.Value)))), xs_1)
 }
 
 func Call_last(_dollar__unused_0_loop gopurs_runtime.Value, xs_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -63,7 +63,7 @@ var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
 var xs_1 gopurs_runtime.Value = xs_1_loop
 _ = xs_1
-return gopurs_runtime.ArrayAccess(xs_1, int(gopurs_runtime.Int(int64(len(xs_1.PtrVal.([]gopurs_runtime.Value)))).IntVal - 1))
+return gopurs_runtime.ArrayAccess(xs_1, int(gopurs_runtime.Int(int64(len(xs_1.PtrVal().([]gopurs_runtime.Value)))).IntVal - 1))
 }
 
 func Call_init_(_dollar__unused_0_loop gopurs_runtime.Value, xs_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -71,7 +71,7 @@ var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
 var xs_1 gopurs_runtime.Value = xs_1_loop
 _ = xs_1
-return gopurs_runtime.UncurriedApp3(pkg_Data_Array.Get_sliceImpl(), gopurs_runtime.Int(0), gopurs_runtime.Int(gopurs_runtime.Int(int64(len(xs_1.PtrVal.([]gopurs_runtime.Value)))).IntVal - 1), xs_1)
+return gopurs_runtime.UncurriedApp3(pkg_Data_Array.Get_sliceImpl(), gopurs_runtime.Int(0), gopurs_runtime.Int(gopurs_runtime.Int(int64(len(xs_1.PtrVal().([]gopurs_runtime.Value)))).IntVal - 1), xs_1)
 }
 
 func Call_head(_dollar__unused_0_loop gopurs_runtime.Value, xs_1_loop gopurs_runtime.Value) gopurs_runtime.Value {

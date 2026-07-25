@@ -133,14 +133,14 @@ __local_var_3_1 := gopurs_runtime.Apply(__local_var_2_0, gopurs_runtime.Value{})
 _ = __local_var_3_1
 __local_ref_3 := __local_var_3_1
 _ = __local_ref_3
-r_4_2 := gopurs_runtime.Value{PtrVal: &__local_ref_3}
+r_4_2 := gopurs_runtime.Any(&__local_ref_3)
 _ = r_4_2
 _dollar__unused_5_4 := gopurs_runtime.Apply(gopurs_runtime.Apply2(Get_while(), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_5_5 := *(r_4_2.PtrVal.(*gopurs_runtime.Value))
+__local_var_5_5 := *(r_4_2.PtrVal().(*gopurs_runtime.Value))
 _ = __local_var_5_5
 return gopurs_runtime.Bool((__local_var_5_5.Type == 9 && __local_var_5_5.IntVal == 1903769252))
 }), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-v_5_6 := *(r_4_2.PtrVal.(*gopurs_runtime.Value))
+v_5_6 := *(r_4_2.PtrVal().(*gopurs_runtime.Value))
 _ = v_5_6
 var __t7 gopurs_runtime.Value
 {
@@ -148,7 +148,7 @@ if (v_5_6.Type == 9 && v_5_6.IntVal == 1903769252) {
 __t7 = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 e_6_8 := gopurs_runtime.Apply(gopurs_runtime.Apply(f_0, (*pkg_Control_Monad_Rec_Class.Data_Control_Monad_Rec_Class_Loop)(v_5_6.UnsafePtr).V0), gopurs_runtime.Value{})
 _ = e_6_8
-*(r_4_2.PtrVal.(*gopurs_runtime.Value)) = e_6_8
+*(r_4_2.PtrVal().(*gopurs_runtime.Value)) = e_6_8
 __local_var_7_9 := e_6_8
 _ = __local_var_7_9
 return pkg_Data_Unit.Get_unit()
@@ -175,7 +175,7 @@ end_branch_7:
 return gopurs_runtime.Apply(__t7, gopurs_runtime.Value{})
 })), gopurs_runtime.Value{})
 _ = _dollar__unused_5_4
-__local_var_6_10 := *(r_4_2.PtrVal.(*gopurs_runtime.Value))
+__local_var_6_10 := *(r_4_2.PtrVal().(*gopurs_runtime.Value))
 _ = __local_var_6_10
 var __t11 gopurs_runtime.Value
 {

@@ -74,7 +74,7 @@ concatted_5_1 := v1_3.StrVal() + gopurs_runtime.Apply(pkg_Data_Show.Get_showIntI
 _ = concatted_5_1
 v_2_loop = gopurs_runtime.Int(v_2.IntVal - 1)
 v1_3_loop = gopurs_runtime.Apply2(pkg_Data_String_CodePoints.Get_take(), gopurs_runtime.Int(10), gopurs_runtime.Str(concatted_5_1))
-v2_4_loop = gopurs_runtime.Int(v2_4.IntVal + gopurs_runtime.Int(int64(len(gopurs_runtime.Apply2(pkg_Data_String_Common.Get_split(), gopurs_runtime.Str("e"), gopurs_runtime.Apply3(pkg_Data_String_Regex.Get_replace(), Get_regexPattern(), gopurs_runtime.Str("matched"), gopurs_runtime.Str(concatted_5_1))).PtrVal.([]gopurs_runtime.Value)))).IntVal)
+v2_4_loop = gopurs_runtime.Int(v2_4.IntVal + gopurs_runtime.Int(int64(len(gopurs_runtime.Apply2(pkg_Data_String_Common.Get_split(), gopurs_runtime.Str("e"), gopurs_runtime.Apply3(pkg_Data_String_Regex.Get_replace(), Get_regexPattern(), gopurs_runtime.Str("matched"), gopurs_runtime.Str(concatted_5_1))).PtrVal().([]gopurs_runtime.Value)))).IntVal)
 continue loop_1_0
 __t2 = gopurs_runtime.Value{}
 }

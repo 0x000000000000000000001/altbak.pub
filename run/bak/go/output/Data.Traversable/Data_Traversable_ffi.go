@@ -2,6 +2,7 @@ package Data_Traversable
 
 import "gopurs/output/gopurs_runtime"
 
+
 func TraverseArrayImpl(apply func(interface{}) func(interface{}) interface{}, mapFn func(interface{}) func(interface{}) interface{}, pure func(interface{}) interface{}, f func(interface{}) interface{}, arrayVal []interface{}) interface{} {
 	array1 := func(a interface{}) interface{} {
 		return []interface{}{a}

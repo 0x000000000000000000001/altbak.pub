@@ -99,7 +99,7 @@ func Get_length() gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
-return gopurs_runtime.Int(int64(len(gopurs_runtime.Apply(pkg_Data_String_CodePoints.Get_toCodePointArray(), x_0).PtrVal.([]gopurs_runtime.Value))))
+return gopurs_runtime.Int(int64(len(gopurs_runtime.Apply(pkg_Data_String_CodePoints.Get_toCodePointArray(), x_0).PtrVal().([]gopurs_runtime.Value))))
 }()
 })
 	})
@@ -155,7 +155,7 @@ __local_var_1_0 := gopurs_runtime.Apply(pkg_Data_String_CodePoints.Get_toCodePoi
 _ = __local_var_1_0
 var __t1 gopurs_runtime.Value
 {
-if gopurs_runtime.Int(int64(len(__local_var_1_0.PtrVal.([]gopurs_runtime.Value)))).IntVal > 0 {
+if gopurs_runtime.Int(int64(len(__local_var_1_0.PtrVal().([]gopurs_runtime.Value)))).IntVal > 0 {
 __t1 = __local_var_1_0
 goto end_branch_1
 } else {
@@ -243,7 +243,7 @@ var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Int(int64(len(v_0.PtrVal.([]gopurs_runtime.Value)))).IntVal == 0 {
+if gopurs_runtime.Int(int64(len(v_0.PtrVal().([]gopurs_runtime.Value)))).IntVal == 0 {
 __t0 = gopurs_runtime.Value{Type: 9, IntVal: 42808261, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}
 goto end_branch_0
 } else {
@@ -271,7 +271,7 @@ var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
 var __t0 gopurs_runtime.Value
 {
-if gopurs_runtime.Int(int64(len(x_0.PtrVal.([]gopurs_runtime.Value)))).IntVal == 0 {
+if gopurs_runtime.Int(int64(len(x_0.PtrVal().([]gopurs_runtime.Value)))).IntVal == 0 {
 __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 goto end_branch_0
 } else {
@@ -502,7 +502,7 @@ var nes_1 gopurs_runtime.Value = nes_1_loop
 _ = nes_1
 var __t0 gopurs_runtime.Value
 {
-if i_0.IntVal >= gopurs_runtime.Int(int64(len(gopurs_runtime.Apply(pkg_Data_String_CodePoints.Get_toCodePointArray(), nes_1).PtrVal.([]gopurs_runtime.Value)))).IntVal {
+if i_0.IntVal >= gopurs_runtime.Int(int64(len(gopurs_runtime.Apply(pkg_Data_String_CodePoints.Get_toCodePointArray(), nes_1).PtrVal().([]gopurs_runtime.Value)))).IntVal {
 __t0 = gopurs_runtime.Value{Type: 9, IntVal: 42808261, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}
 goto end_branch_0
 } else {

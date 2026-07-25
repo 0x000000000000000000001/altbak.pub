@@ -535,10 +535,10 @@ __local_var_3_1 := gopurs_runtime.Apply(__local_var_2_0, gopurs_runtime.Value{})
 _ = __local_var_3_1
 __local_ref_3 := __local_var_3_1
 _ = __local_ref_3
-r_4_2 := gopurs_runtime.Value{PtrVal: &__local_ref_3}
+r_4_2 := gopurs_runtime.Any(&__local_ref_3)
 _ = r_4_2
 _dollar__unused_5_4 := gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Effect.Get_untilE(), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-v_5_5 := *(r_4_2.PtrVal.(*gopurs_runtime.Value))
+v_5_5 := *(r_4_2.PtrVal().(*gopurs_runtime.Value))
 _ = v_5_5
 var __t6 gopurs_runtime.Value
 {
@@ -546,7 +546,7 @@ if (v_5_5.Type == 9 && v_5_5.IntVal == 525585346) {
 __t6 = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 e_6_7 := gopurs_runtime.Apply(gopurs_runtime.Apply(f_0, (*Data_Control_Monad_Rec_Class_Loop)(v_5_5.UnsafePtr).V0), gopurs_runtime.Value{})
 _ = e_6_7
-*(r_4_2.PtrVal.(*gopurs_runtime.Value)) = e_6_7
+*(r_4_2.PtrVal().(*gopurs_runtime.Value)) = e_6_7
 _dollar__unused_7_8 := e_6_7
 _ = _dollar__unused_7_8
 return gopurs_runtime.Bool(false)
@@ -573,7 +573,7 @@ end_branch_6:
 return gopurs_runtime.Apply(__t6, gopurs_runtime.Value{})
 })), gopurs_runtime.Value{})
 _ = _dollar__unused_5_4
-a_prime_6_9 := *(r_4_2.PtrVal.(*gopurs_runtime.Value))
+a_prime_6_9 := *(r_4_2.PtrVal().(*gopurs_runtime.Value))
 _ = a_prime_6_9
 var __t10 gopurs_runtime.Value
 {
