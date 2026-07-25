@@ -14,25 +14,23 @@ The benchmark suite runs a wide variety of computationally intensive tasks: AST 
 
 > [!IMPORTANT]
 > **The benchmark is just an excuse**
-> The primary objective here is **not** to pit these technologies against each other to declare a performance "winner". In fact, the benchmark itself is just a pretext. The real goal is to prove that we can seamlessly compile and run the exact same, unmodified PureScript code across **5 completely different runtimes** (V8 standard, V8 optimized, BEAM, Lisp, and PHP). The true victory is achieving universal abstraction without sacrificing execution viability.
+> The primary objective here is **not** to pit these technologies against each other to declare a performance "winner". In fact, the benchmark itself is just a pretext. The real goal is to prove that we can seamlessly compile and run the exact same, unmodified PureScript code across **6 completely different runtimes** (V8 standard, V8 optimized, BEAM, Lisp, Go, and PHP). The true victory is achieving universal abstraction without sacrificing execution viability.
 
 ### Core vs extended tests (`srx/`)
 To ensure fair and executable comparisons across all backends, the test suite is split into two parts:
-1. **Core tests (`src/`)**: Pure computational tasks (AST, Fibonacci, recursion) that run seamlessly on all 5 backends. Executed via `./bin/run`.
+1. **Core tests (`src/`)**: Pure computational tasks (AST, Fibonacci, recursion) that run seamlessly on all 6 backends. Executed via `./bin/run`.
 2. **Extended tests (`srx/`)**: Tests relying heavily on Javascript/PHP FFI bindings (like `Effect.Aff`, mutable `STArray`, and regex). Since Scheme and Erlang lack FFI implementations for these specific libraries in their package sets, they are isolated in the `srx/` directory. **Note that this is completely normal and expected:** Scheme is targeted here for raw computation, and Erlang's BEAM already natively handles concurrency and multithreading at the VM level (making JS style `Aff` workarounds irrelevant). Executed via `./bin/run --x` (which dynamically injects `srx/` into the compilation step and skips Scheme/Erlang).
 
 ### Core benchmark results (pure computational)
-Command: `./bin/run` (Runs on all 5 backends)
+Command: `./bin/run` (Runs on all 6 backends)
 
 ```text
-========================================================================================
+====================================================================================================================================
 CORE BENCHMARK RESULTS (Fibonacci, AST, tail calls, Church, primes, etc.)                                                                      
-========================================================================================
-JS (V8)       | Arista ES (V8) | Chez Scheme (Native) | Erlang (BEAM) | PHP (experimental WIP)
------------------------------- | -------------------- | ------------- | ---------------
-real 0m0.576s | real 0m0.661s  | real 0m0.093s        | real 0m0.751s | real 0m1.692s
-user 0m0.191s | user 0m0.156s  | user 0m0.076s        | user 0m0.767s | user 0m1.135s
-sys  0m0.396s | sys  0m0.456s  | sys  0m0.014s        | sys  0m0.926s | sys  0m0.526s
+====================================================================================================================================
+JS (V8)     | Arista ES (V8) | Chez Scheme (Native) | Erlang (BEAM) | Native Go (experimental WIP) | PHP (experimental WIP)
+----------- | -------------- | -------------------- | ------------- | ---------------------------- | ----------------------
+~ 122.65 ms | ~ 77.66 ms     | ~ 46.41 ms           | ~ 122.71 ms   | ~ 125.47 ms                  | ~ 11716.88 ms (WIP! A regression bug will be fixed, usually ~900ms)
 ```
 
 ### Extended benchmark results (I/O, mutability, async)
@@ -42,16 +40,12 @@ Command: `./bin/run --x` (Skips runtimes lacking necessary FFI bindings like Sch
 ========================================================================================
 EXTENDED BENCHMARK RESULTS (file I/O, regex, STArray, asynchronous Aff)                                                                      
 ========================================================================================
-JS (V8)       | Arista ES (V8) | PHP (experimental WIP)
------------------------------- | ----------------------
-real 0m0.680s | real 0m0.607s  | real 0m2.389s
-user 0m0.266s | user 0m0.173s  | user 0m1.827s
-sys  0m0.419s | sys  0m0.403s  | sys  0m0.526s
+WIP, usually +20% everywhere
 ```
 
 > [!WARNING]
 > **About the PHP results**
-> Please note that the `phpurs` backend is a brand new, completely experimental, and homemade compiler built entirely from scratch for this repository. Its execution time is not yet representative of PHP's actual performance limit, as the compiler is still immature and actively undergoing optimization. Still a WIP! However, it's worth noting the spectacular progress: the initial unoptimized benchmark was taking over **1 minute and 30 seconds**! Step by step, it's getting better and better.
+> Please note that the `phpurs` backend is a brand new, completely experimental, and homemade compiler built entirely from scratch for this repository. Its execution time is not yet representative of PHP's actual performance limit. The currently displayed time (~11s) is due to a recent regression bug; prior to this, it was running at around **900 ms** (which itself was still a WIP milestone, not the final optimized limit). It is actively undergoing optimization and debugging!
 
 
 > [!NOTE]
