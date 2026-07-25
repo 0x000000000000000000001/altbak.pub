@@ -29,23 +29,23 @@ Command: `./bin/run` (Runs on all 6 backends)
 =============================================================================================================================================================
 CORE BENCHMARK RESULTS (Fibonacci, AST, tail calls, Church, primes, etc.)                                                                      
 =============================================================================================================================================================
-Benchmark                                     | JS (V8)     | Arista ES (V8) | Scheme     | Erlang (BEAM) | Native Go   | PHP (WIP!)
---------------------------------------------- | ----------- | -------------- | ---------- | ------------- | ----------- | ---------
-AST Evaluation                                | -           | ~ 74 μs        | -          | -             | ~ 19 μs     | -
-Fibonacci                                     | -           | ~ 38 μs        | -          | -             | ~ 2 μs      | -
-List Processing (900 elements)                | -           | ~ 325 μs       | -          | -             | ~ 111 μs    | -
-Tail Call Optimization (100k calls)           | -           | ~ 1.62 ms      | -          | -             | ~ 1.31 ms   | -
-Deep Record Updates (10k iterations)          | -           | ~ 0.55 ms      | -          | -             | ~ 6.23 ms   | -
-Ackermann (3, 4)                              | -           | ~ 203 μs       | -          | -             | ~ 35 μs     | -
-Church Numerals (100k Closure Applications)   | -           | ~ 1.54 ms      | -          | -             | ~ 0.64 ms   | -
-Prime Sieve (sum primes up to 500)            | -           | ~ 640 μs       | -          | -             | ~ 364 μs    | -
-Red-Black Tree (100k Worst-Case Insertions)   | -           | ~ 53.70 ms     | -          | -             | ~ 51.55 ms  | -
-Polymorphism (10M Type Class Dict Lookups)    | -           | ~ 7.87 ms      | -          | -             | ~ 2.27 ms   | -
-State Monad (1.2k Binds, 60 Stack Depth)      | -           | ~ 158 μs       | -          | -             | ~ 64 μs     | -
-Lazy Evaluation (1M Thunks Forced)            | -           | ~ 19.90 ms     | -          | -             | ~ 22.30 ms  | -
-Array Processing (900 elements)               | -           | ~ 198 μs       | -          | -             | ~ 83 μs     | -
---------------------------------------------- | ----------- | -------------- | ---------- | ------------- | ----------- | ---------
-Total Execution Time                          | ~ 129.47 ms | ~ 86.81 ms     | ~ 47.45 ms | ~ 132.51 ms   | ~ 84.98 ms  | ~ 12041.23 ms (BUG! usually ~600ms)
+Benchmark                                     | JS (V8)       | Arista ES (V8) | Scheme     | Erlang (BEAM) | Native Go   | PHP (WIP!)
+--------------------------------------------- | ------------- | -------------- | ---------- | ------------- | ----------- | ---------
+AST Evaluation                                | ~ 94 μs       | ~ 74 μs        | -          | -             | ~ 19 μs     | -
+Fibonacci                                     | ~ 29 μs       | ~ 38 μs        | -          | -             | ~ 2 μs      | -
+List Processing (900 elements)                | ~ 716 μs      | ~ 325 μs       | -          | -             | ~ 111 μs    | -
+Tail Call Optimization (100k calls)           | ~ 1.27 ms     | ~ 1.62 ms      | -          | -             | ~ 1.31 ms   | -
+Deep Record Updates (10k iterations)          | ~ 0.39 ms     | ~ 0.55 ms      | -          | -             | ~ 6.23 ms   | -
+Ackermann (3, 4)                              | ~ 237 μs      | ~ 203 μs       | -          | -             | ~ 35 μs     | -
+Church Numerals (100k Closure Applications)   | ~ 1.68 ms     | ~ 1.54 ms      | -          | -             | ~ 0.64 ms   | -
+Prime Sieve (sum primes up to 500)            | ~ 645 μs      | ~ 640 μs       | -          | -             | ~ 364 μs    | -
+Red-Black Tree (100k Worst-Case Insertions)   | ~ 93.73 ms    | ~ 53.70 ms     | -          | -             | ~ 51.55 ms  | -
+Polymorphism (10M Type Class Dict Lookups)    | ~ 8.63 ms     | ~ 7.87 ms      | -          | -             | ~ 2.27 ms   | -
+State Monad (1.2k Binds, 60 Stack Depth)      | ~ 476 μs      | ~ 158 μs       | -          | -             | ~ 64 μs     | -
+Lazy Evaluation (1M Thunks Forced)            | ~ 20.57 ms    | ~ 19.90 ms     | -          | -             | ~ 22.30 ms  | -
+Array Processing (900 elements)               | ~ 203 μs      | ~ 198 μs       | -          | -             | ~ 83 μs     | -
+--------------------------------------------- | ------------- | -------------- | ---------- | ------------- | ----------- | ---------
+Total Execution Time                          | ~ 128.68 ms   | ~ 86.81 ms     | ~ 47.45 ms | ~ 132.51 ms   | ~ 84.98 ms  | ~ 12041.23 ms (BUG! usually ~600ms)
 ```
 
 ### Extended benchmark results (I/O, mutability, async)
