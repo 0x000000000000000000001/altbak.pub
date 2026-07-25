@@ -38,4 +38,4 @@
            [t1010 (((Bench.runBench Test.Polymorphism.describe) Test.Polymorphism.act))]
            [t1111 (((Bench.runBench Test.StateMonad.describe) Test.StateMonad.act))]
            [t1212 (((Bench.runBench Test.LazyEvaluation.describe) Test.LazyEvaluation.act))])
-            ((Effect.Console.log (rt:pstring-concat (rt:pstring-concat (rt:string->pstring "Total exec time: ") (Bench.formatNumber (scm:fl/ (scm:fl+ (scm:fl+ (scm:fl+ (scm:fl+ (scm:fl+ (scm:fl+ (scm:fl+ (scm:fl+ (scm:fl+ (scm:fl+ (scm:fl+ t11 t22) t33) t44) t55) t66) t77) t88) t99) t1010) t1111) t1212) 1000.0))) (rt:string->pstring " ms\n")))))))))
+            ((Effect.Console.log (rt:pstring-concat (rt:pstring-concat (rt:string->pstring "Total exec time: ") (Bench.formatNumber (scm:fl+ (scm:fl+ (scm:fl+ (scm:fl+ (scm:fl+ (scm:fl+ (scm:fl+ (scm:fl+ (scm:fl+ (scm:fl+ (scm:fl+ (scm:fl/ t11 1000.0) (scm:fl/ t22 1000.0)) (scm:fl/ t33 1000.0)) (scm:fl/ t44 1000.0)) (scm:fl/ t55 1000.0)) (scm:fl/ t66 1000.0)) (scm:fl/ t77 1000.0)) (scm:fl/ t88 1000.0)) (scm:fl/ t99 1000.0)) (scm:fl/ t1010 1000.0)) (scm:fl/ t1111 1000.0)) (scm:fl/ t1212 1000.0)))) (rt:string->pstring " ms\n")))))))))

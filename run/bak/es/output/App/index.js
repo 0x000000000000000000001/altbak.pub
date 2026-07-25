@@ -27,7 +27,7 @@ const main = /* #__PURE__ */ (() => {
     const t10 = Bench.runBench(Test$dPolymorphism.describe)(Test$dPolymorphism.act)();
     const t11 = Bench.runBench(Test$dStateMonad.describe)(Test$dStateMonad.act)();
     const t12 = Bench.runBench(Test$dLazyEvaluation.describe)(Test$dLazyEvaluation.act)();
-    return Effect$dConsole.log("Total exec time: " + Bench.formatNumber((t1 + t2 + t3 + t4 + t5 + t6 + t7 + t8 + t9 + t10 + t11 + t12) / 1000.0) + " ms\n")();
+    return Effect$dConsole.log("Total exec time: " + Bench.formatNumber(t1 / 1000.0 + t2 / 1000.0 + t3 / 1000.0 + t4 / 1000.0 + t5 / 1000.0 + t6 / 1000.0 + t7 / 1000.0 + t8 / 1000.0 + t9 / 1000.0 + t10 / 1000.0 + t11 / 1000.0 + t12 / 1000.0) + " ms\n")();
   };
 })();
 export {main};

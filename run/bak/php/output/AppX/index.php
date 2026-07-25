@@ -2,14 +2,16 @@
 
 namespace AppX;
 
-// ALL IMPORTS: Bench, Data.Function, Data.Functor, Effect, Prelude, Prim, Test.TCO
-// TO REQUIRE: Bench, Data.Function, Data.Functor, Effect, Prelude, Test.TCO
-require_once __DIR__ . '/../Bench/index.php';
-require_once __DIR__ . '/../Data.Function/index.php';
-require_once __DIR__ . '/../Data.Functor/index.php';
+// ALL IMPORTS: App, Control.Bind, Effect, Prelude, Prim, Test.AffOperations, Test.FileOps, Test.STArray, Test.StringOps
+// TO REQUIRE: App, Control.Bind, Effect, Prelude, Test.AffOperations, Test.FileOps, Test.STArray, Test.StringOps
+require_once __DIR__ . '/../App/index.php';
+require_once __DIR__ . '/../Control.Bind/index.php';
 require_once __DIR__ . '/../Effect/index.php';
 require_once __DIR__ . '/../Prelude/index.php';
-require_once __DIR__ . '/../Test.TCO/index.php';
+require_once __DIR__ . '/../Test.AffOperations/index.php';
+require_once __DIR__ . '/../Test.FileOps/index.php';
+require_once __DIR__ . '/../Test.STArray/index.php';
+require_once __DIR__ . '/../Test.StringOps/index.php';
 
 if (!class_exists(__NAMESPACE__ . '\\Phpurs_Data0')) {
   class Phpurs_Data0 { public $tag; public function __construct($t) { $this->tag = $t; } }
@@ -96,13 +98,55 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['AppX_main'] = function() { $v = (((($GLOBALS['Effect_applyEffect'] ?? \PhpursThunks::eval('Effect_applyEffect')))->{'apply'})((($GLOBALS['Effect_pureE'] ?? \PhpursThunks::eval('Effect_pureE')))(function($v_0 = null) {
+\PhpursThunks::$thunks['AppX_main'] = function() { $v = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['App_main'] ?? \PhpursThunks::eval('App_main'))))(function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'));
+  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Test_FileOps_describe'] ?? \PhpursThunks::eval('Test_FileOps_describe'))))(function($dollar__unused_1 = null) {
+  $__num = \func_num_args();
+  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Test_FileOps_act'] ?? \PhpursThunks::eval('Test_FileOps_act'))))(function($dollar__unused_2 = null) {
+  $__num = \func_num_args();
+  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Test_STArray_describe'] ?? \PhpursThunks::eval('Test_STArray_describe'))))(function($dollar__unused_3 = null) {
+  $__num = \func_num_args();
+  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Test_STArray_act'] ?? \PhpursThunks::eval('Test_STArray_act'))))(function($dollar__unused_4 = null) {
+  $__num = \func_num_args();
+  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Test_StringOps_describe'] ?? \PhpursThunks::eval('Test_StringOps_describe'))))(function($dollar__unused_5 = null) {
+  $__num = \func_num_args();
+  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Test_StringOps_act'] ?? \PhpursThunks::eval('Test_StringOps_act'))))(function($dollar__unused_6 = null) {
+  $__num = \func_num_args();
+  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Test_AffOperations_describe'] ?? \PhpursThunks::eval('Test_AffOperations_describe'))))(function($dollar__unused_7 = null) {
+  $__num = \func_num_args();
+  $__res = ($GLOBALS['Test_AffOperations_act'] ?? \PhpursThunks::eval('Test_AffOperations_act'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-})))(((($GLOBALS['Bench_runBench'] ?? \PhpursThunks::eval('Bench_runBench')))(($GLOBALS['Test_TCO_describe'] ?? \PhpursThunks::eval('Test_TCO_describe'))))(($GLOBALS['Test_TCO_act'] ?? \PhpursThunks::eval('Test_TCO_act')))); return $v; };
+});
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}); return $v; };
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 

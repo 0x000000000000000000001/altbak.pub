@@ -13,7 +13,7 @@ var regexPattern = /* #__PURE__ */ (function () {
     if (v instanceof Data_Either.Right) {
         return v.value0;
     };
-    throw new Error("Failed pattern match at Test.StringOps (line 16, column 31 - line 16, column 89): " + [ v.constructor.name ]);
+    throw new Error("Failed pattern match at Test.StringOps (line 15, column 31 - line 15, column 89): " + [ v.constructor.name ]);
 })();
 var runStringOps = function (n) {
     var loop = function ($copy_v) {

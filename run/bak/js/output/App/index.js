@@ -26,8 +26,8 @@ var main = function __do() {
     var t10 = Bench.runBench(Test_Polymorphism.describe)(Test_Polymorphism.act)();
     var t11 = Bench.runBench(Test_StateMonad.describe)(Test_StateMonad.act)();
     var t12 = Bench.runBench(Test_LazyEvaluation.describe)(Test_LazyEvaluation.act)();
-    var total = t1 + t2 + t3 + t4 + t5 + t6 + t7 + t8 + t9 + t10 + t11 + t12;
-    return Effect_Console.log("Total exec time: " + (Bench.formatNumber(total / 1000.0) + " ms\x0a"))();
+    var totalMs = t1 / 1000.0 + t2 / 1000.0 + t3 / 1000.0 + t4 / 1000.0 + t5 / 1000.0 + t6 / 1000.0 + t7 / 1000.0 + t8 / 1000.0 + t9 / 1000.0 + t10 / 1000.0 + t11 / 1000.0 + t12 / 1000.0;
+    return Effect_Console.log("Total exec time: " + (Bench.formatNumber(totalMs) + " ms\x0a"))();
 };
 export {
     main

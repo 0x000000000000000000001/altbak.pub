@@ -29,6 +29,6 @@ main() -> fun
   T10@25 = ((bench@ps:runBench((test_polymorphism@ps:describe()), (test_polymorphism@ps:act())))()),
   T11@26 = ((bench@ps:runBench((test_stateMonad@ps:describe()), (test_stateMonad@ps:act())))()),
   T12@27 = ((bench@ps:runBench((test_lazyEvaluation@ps:describe()), (test_lazyEvaluation@ps:act())))()),
-  Total@16@28 = T1 + T2@17 + T3@18 + T4@19 + T5@20 + T6@21 + T7@22 + T8@23 + T9@24 + T10@25 + T11@26 + T12@27,
-  ((effect_console@ps:log((((?MEMOIZE((data_semigroup@ps:append((data_semigroup@ps:semigroupString())))))(<<"Total exec time: "/utf8>>))((((?MEMOIZE((data_semigroup@ps:append((data_semigroup@ps:semigroupString())))))((bench@ps:formatNumber(Total@16@28 / 1000.0))))(<<" ms\n"/utf8>>))))))())
+  TotalMs@16@28 = T1 / 1000.0 + T2@17 / 1000.0 + T3@18 / 1000.0 + T4@19 / 1000.0 + T5@20 / 1000.0 + T6@21 / 1000.0 + T7@22 / 1000.0 + T8@23 / 1000.0 + T9@24 / 1000.0 + T10@25 / 1000.0 + T11@26 / 1000.0 + T12@27 / 1000.0,
+  ((effect_console@ps:log((((?MEMOIZE((data_semigroup@ps:append((data_semigroup@ps:semigroupString())))))(<<"Total exec time: "/utf8>>))((((?MEMOIZE((data_semigroup@ps:append((data_semigroup@ps:semigroupString())))))((bench@ps:formatNumber(TotalMs@16@28))))(<<" ms\n"/utf8>>))))))())
 end.
