@@ -11,6 +11,7 @@
             "datetime",
             "effect",
             "either",
+            "lazy",
             "maybe",
             "now",
             "partial",
@@ -708,6 +709,9 @@
       "integers": {
         "path": "../gopurs-integers"
       },
+      "lazy": {
+        "path": "../gopurs-lazy"
+      },
       "now": {
         "path": "../gopurs-now"
       },
@@ -1009,13 +1013,11 @@
       ]
     },
     "lazy": {
-      "type": "registry",
-      "version": "6.0.0",
-      "integrity": "sha256-MHRC+1Pc+AjortBp4b/e1e6KpEpsDwaJBNBB7TOL+1I=",
+      "type": "local",
+      "path": "../gopurs-lazy",
       "dependencies": [
         "control",
         "foldable-traversable",
-        "invariant",
         "prelude"
       ]
     },

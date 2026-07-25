@@ -1,20 +1,11 @@
 module Test.LazyEvaluation where
 
 import Prelude
+
 import Effect (Effect)
 import Effect.Console (logShow, log)
+import Data.Lazy (Lazy, force, defer)
 import Bench as Bench
-
--- PureScript is strict by default. We simulate Lazy Evaluation (Thunks)
--- by wrapping computations in functions taking `Unit`.
--- Forcing these thunks deeply tests memory allocation and function application overhead.
-newtype Lazy a = Lazy (Unit -> a)
-
-force :: forall a. Lazy a -> a
-force (Lazy f) = f unit
-
-defer :: forall a. (Unit -> a) -> Lazy a
-defer f = Lazy f
 
 -- Builds a chain of n thunks.
 -- When forced, it will consume n frames on the call stack.
