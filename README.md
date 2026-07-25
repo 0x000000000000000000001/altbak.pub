@@ -29,8 +29,8 @@ Command: `./bin/run` (Runs on all 6 backends)
 ====================================================================================================================================
 CORE BENCHMARK RESULTS (Fibonacci, AST, tail calls, Church, primes, etc.)                                                                      
 ====================================================================================================================================
-JS (V8)     | Arista ES (V8) | Chez Scheme (Native) | Erlang (BEAM) | Native Go (experimental WIP) | PHP (experimental WIP)
------------ | -------------- | -------------------- | ------------- | ---------------------------- | ----------------------
+JS (V8)     | Arista ES (V8) | Chez Scheme (Native) | Erlang (BEAM) | Native Go (WIP) | PHP (WIP)
+----------- | -------------- | -------------------- | ------------- | --------------- | ---------
 ~ 122.65 ms | ~ 77.66 ms     | ~ 46.41 ms           | ~ 122.71 ms   | ~ 125.47 ms                  | ~ 11716.88 ms (WIP! A regression bug will be fixed, usually ~900ms)
 ```
 
