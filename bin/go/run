@@ -78,6 +78,31 @@ if [ -d "output/${ENTRY_POINT}" ]; then
     rm -f go.mod
     go mod init gopurs/output > /dev/null 2>&1
     go mod tidy > /dev/null 2>&1
+    # Inject pprof into output/main.go if requested
+    if [ "$PPROF" == "1" ]; then
+      cat << 'EOF' > patch_pprof.go
+package main
+import (
+    "os"
+    "log"
+    "runtime/pprof"
+)
+func startPprof() func() {
+    f, err := os.Create("cpu.prof")
+    if err != nil {
+        log.Fatal(err)
+    }
+    pprof.StartCPUProfile(f)
+    return func() {
+        pprof.StopCPUProfile()
+        f.Close()
+    }
+}
+EOF
+      # Assume main.go has "func main() {"
+      sed -i '' -e 's/func main() {/func main() { defer startPprof()() /' main.go
+    fi
+    
     go build -o go_app .
     cd ..
     

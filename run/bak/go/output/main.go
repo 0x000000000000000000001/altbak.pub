@@ -7,7 +7,7 @@ import (
 	"gopurs/output/gopurs_runtime"
 )
 
-func main() {
+func main() { defer startPprof()() 
 	if os.Getenv("PPROF") == "1" {
 		f, err := os.Create("cpu.prof")
 		if err != nil { panic(err) }
