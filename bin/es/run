@@ -63,6 +63,7 @@ elif [ "$MODE" == "x" ]; then
 fi
 
 export PATH="$PWD/run/bak/js/node_modules/.bin:$PATH"
+echo 'Building...'
 spago build > /dev/null 2>&1
 purs-backend-es build --output-dir run/bak/es/output > /dev/null 2>&1
 find run/bak/es/output-purs -name "foreign.js" | while read -r f; do
@@ -71,5 +72,5 @@ find run/bak/es/output-purs -name "foreign.js" | while read -r f; do
   cp "$f" "$dest/foreign.js"
 done
 
-echo "=== Arista ES ==="
+echo "=== Arista ES V8 ==="
 node -e "import('./run/bak/es/output/' + '$ENTRY_POINT' + '/index.js').then(m => m.main())"

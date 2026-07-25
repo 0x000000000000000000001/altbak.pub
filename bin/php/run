@@ -68,9 +68,10 @@ if [ "$CLEAN" == "1" ]; then
   (cd ../phpurs && npm run build)
 fi
 
-spago build --backend-args "--main ${ENTRY_POINT} --ffi run/bak/php/ffi" || echo "Compilation failed, but that's expected for now!"
+echo 'Building...'
+spago build --backend-args "--main ${ENTRY_POINT} --ffi run/bak/php/ffi" &>/dev/null
 
-echo "=== Native PHP ==="
+echo "=== PHP ==="
 if [ -f "output/${ENTRY_POINT}/main.mod.php" ]; then
     php bin/php/composer.phar update --no-plugins -d run/bak/php
     mkdir -p /tmp/phpurs_opcache

@@ -54,7 +54,8 @@ EOF
   trap "rm -f src/AppX.purs" EXIT
 fi
 
+echo 'Building...'
 npx spago build > /dev/null 2>&1
 
-echo "=== Native Node V8 ==="
+echo "=== JS V8 ==="
 node -e "import('./output/${ENTRY_POINT}/index.js').then(m => m.main())"

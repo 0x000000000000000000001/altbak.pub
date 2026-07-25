@@ -31,21 +31,21 @@ CORE BENCHMARK RESULTS (Fibonacci, AST, tail calls, Church, primes, etc.)
 =============================================================================================================================================================
 Benchmark                                     | JS (V8)       | Arista ES (V8) | Scheme     | Erlang (BEAM) | Native Go   | PHP (WIP!)
 --------------------------------------------- | ------------- | -------------- | ---------- | ------------- | ----------- | ---------
-AST Evaluation                                | ~ 94 μs       | ~ 74 μs        | -          | -             | ~ 19 μs     | -
-Fibonacci                                     | ~ 29 μs       | ~ 38 μs        | -          | -             | ~ 2 μs      | -
-List Processing (900 elements)                | ~ 716 μs      | ~ 325 μs       | -          | -             | ~ 111 μs    | -
-Tail Call Optimization (100k calls)           | ~ 1.27 ms     | ~ 1.62 ms      | -          | -             | ~ 1.31 ms   | -
-Deep Record Updates (10k iterations)          | ~ 0.39 ms     | ~ 0.55 ms      | -          | -             | ~ 6.23 ms   | -
-Ackermann (3, 4)                              | ~ 237 μs      | ~ 203 μs       | -          | -             | ~ 35 μs     | -
-Church Numerals (100k Closure Applications)   | ~ 1.68 ms     | ~ 1.54 ms      | -          | -             | ~ 0.64 ms   | -
-Prime Sieve (sum primes up to 500)            | ~ 645 μs      | ~ 640 μs       | -          | -             | ~ 364 μs    | -
-Red-Black Tree (100k Worst-Case Insertions)   | ~ 93.73 ms    | ~ 53.70 ms     | -          | -             | ~ 51.55 ms  | -
-Polymorphism (10M Type Class Dict Lookups)    | ~ 8.63 ms     | ~ 7.87 ms      | -          | -             | ~ 2.27 ms   | -
-State Monad (1.2k Binds, 60 Stack Depth)      | ~ 476 μs      | ~ 158 μs       | -          | -             | ~ 64 μs     | -
-Lazy Evaluation (1M Thunks Forced)            | ~ 20.57 ms    | ~ 19.90 ms     | -          | -             | ~ 22.30 ms  | -
-Array Processing (900 elements)               | ~ 203 μs      | ~ 198 μs       | -          | -             | ~ 83 μs     | -
+AST Evaluation                                | ~ 93 μs       | ~ 75 μs        | ~ 9 μs     | ~ 692 μs      | ~ 50 μs     | ~ 367 μs
+Fibonacci                                     | ~ 43 μs       | ~ 46 μs        | ~ 2 μs     | ~ 49 μs       | ~ 2 μs      | ~ 785 μs
+List Processing (900 elements)                | ~ 386 μs      | ~ 368 μs       | ~ 10 μs    | ~ 1.21 ms     | ~ 94 μs     | ~ 2.78 ms
+Tail Call Optimization (100k calls)           | ~ 1.60 ms     | ~ 1.55 ms      | ~ 326 μs   | ~ 1.48 ms     | ~ 1.02 ms   | ~ 57.36 ms
+Deep Record Updates (10k iterations)          | ~ 433 μs      | ~ 562 μs       | ~ 260 μs   | ~ 778 μs      | ~ 5.14 ms   | ~ 12.71 ms
+Ackermann (3, 4)                              | ~ 211 μs      | ~ 210 μs       | ~ 28 μs    | ~ 57 μs       | ~ 42 μs     | ~ 5.88 ms
+Church Numerals (100k Closure Applications)   | ~ 1.66 ms     | ~ 1.57 ms      | ~ 369 μs   | ~ 617 μs      | ~ 591 μs    | ~ 34.62 ms
+Prime Sieve (sum primes up to 500)            | ~ 725 μs      | ~ 689 μs       | ~ 76 μs    | ~ 232 μs      | ~ 331 μs    | ~ 7.09 ms
+Red-Black Tree (100k Worst-Case Insertions)   | ~ 94.57 ms    | ~ 53.65 ms     | ~ 25.02 ms | ~ 17.90 ms    | ~ 50.16 ms  | ~ 5560.79 ms
+Polymorphism (10M Type Class Dict Lookups)    | ~ 9.03 ms     | ~ 8.11 ms      | ~ 17.88 ms | ~ 92.16 ms    | ~ 2.28 ms   | ~ 5563.22 ms
+State Monad (1.2k Binds, 60 Stack Depth)      | ~ 425 μs      | ~ 170 μs       | ~ 5 μs     | ~ 108 μs      | ~ 78 μs     | ~ 1.30 ms
+Lazy Evaluation (1M Thunks Forced)            | ~ 16.37 ms    | ~ 13.99 ms     | ~ 2.87 ms  | ~ 10.33 ms    | ~ 21.76 ms  | ~ 629.22 ms
+Array Processing (900 elements)               | ~ 218 μs      | ~ 222 μs       | ~ 13 μs    | ~ 5.43 ms     | ~ 81 μs     | ~ 886 μs
 --------------------------------------------- | ------------- | -------------- | ---------- | ------------- | ----------- | ---------
-Total Execution Time                          | ~ 128.68 ms   | ~ 86.81 ms     | ~ 47.45 ms | ~ 132.51 ms   | ~ 84.98 ms  | ~ 12041.23 ms (BUG! usually ~600ms)
+Total Execution Time                          | ~ 125.77 ms   | ~ 81.21 ms     | ~ 46.87 ms | ~ 131.04 ms   | ~ 81.63 ms  | ~ 11877.01 ms (BUG! usually ~600ms)
 ```
 
 ### Extended benchmark results (I/O, mutability, async)

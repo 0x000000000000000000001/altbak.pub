@@ -67,12 +67,13 @@ if [ "$CLEAN" == "1" ]; then
   (cd ../gopurs && npm run build --silent)
 fi
 
-spago build > /dev/null 2>&1 || echo "Compilation failed, but that's expected for now!"
+echo 'Building...'
+spago build > /dev/null 2>&1
 
 # Generate Go code
 node ../gopurs/bin/gopurs.js --main ${ENTRY_POINT}
 
-echo "=== Native Go ==="
+echo "=== Go ==="
 if [ -d "output/${ENTRY_POINT}" ]; then
     cd output
     rm -f go.mod

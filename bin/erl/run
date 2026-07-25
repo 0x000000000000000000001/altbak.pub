@@ -62,6 +62,7 @@ elif [ "$MODE" == "x" ]; then
   cp srx/AppX.purs src/
   trap "rm -rf src/Test/STArray.purs src/Test/AffOperations.purs src/Test/StringOps.purs src/Test/FileOps src/AppX.purs" EXIT
 fi
+echo 'Building...'
 spago fetch > /dev/null 2>&1
 # Overwrite legacy CommonJS files with empty ES modules to satisfy newer purs compiler
 find .spago/p -name "*.js" -exec sh -c 'echo "export const __patched = 1;" > "$1"' _ {} \;
@@ -72,9 +73,9 @@ done
 find .spago/p/prelude -name "Symbol.purs" | while read f; do
   printf -- "-module(data_symbol@foreign).\n-export([unsafeCoerce/1]).\nunsafeCoerce(X) -> X.\n" > "${f%.purs}.erl"
 done
-PATH="$(pwd)/bin/erl:$PATH" spago build
+PATH="$(pwd)/bin/erl:$PATH" spago build > /dev/null 2>&1
 # erlc compiles the .erl files to .beam files
-erlc -o output/${ENTRY_POINT} output/*/*.erl
+erlc -o output/${ENTRY_POINT} output/*/*.erl > /dev/null 2>&1
 
 echo "=== Erlang BEAM ==="
 if [ "$ENTRY_POINT" == "AppX" ]; then
