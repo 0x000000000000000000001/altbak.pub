@@ -16,6 +16,7 @@ import Test.RBTree as RBTree
 import Test.Polymorphism as Polymorphism
 import Test.StateMonad as StateMonad
 import Test.LazyEvaluation as LazyEvaluation
+import Test.ArrayOps as ArrayOps
 
 main :: Effect Unit
 main = do
@@ -31,6 +32,7 @@ main = do
   t10 <- runBench Polymorphism.describe Polymorphism.act
   t11 <- runBench StateMonad.describe StateMonad.act
   t12 <- runBench LazyEvaluation.describe LazyEvaluation.act
+  t13 <- runBench ArrayOps.describe ArrayOps.act
 
-  let totalMs = (t1 / 1000.0) + (t2 / 1000.0) + (t3 / 1000.0) + (t4 / 1000.0) + (t5 / 1000.0) + (t6 / 1000.0) + (t7 / 1000.0) + (t8 / 1000.0) + (t9 / 1000.0) + (t10 / 1000.0) + (t11 / 1000.0) + (t12 / 1000.0)
+  let totalMs = (t1 / 1000.0) + (t2 / 1000.0) + (t3 / 1000.0) + (t4 / 1000.0) + (t5 / 1000.0) + (t6 / 1000.0) + (t7 / 1000.0) + (t8 / 1000.0) + (t9 / 1000.0) + (t10 / 1000.0) + (t11 / 1000.0) + (t12 / 1000.0) + (t13 / 1000.0)
   log $ "Total exec time: " <> formatNumber totalMs <> " ms\n"

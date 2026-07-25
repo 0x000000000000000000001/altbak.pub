@@ -6,7 +6,6 @@ import (
 	pkg_Control_Alternative "gopurs/output/Control.Alternative"
 	pkg_Data_Eq "gopurs/output/Data.Eq"
 	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
-	pkg_Data_Functor "gopurs/output/Data.Functor"
 	pkg_Data_String_Common "gopurs/output/Data.String.Common"
 	pkg_Type_Proxy "gopurs/output/Type.Proxy"
 	unsafe "unsafe"
@@ -68,19 +67,85 @@ var once_showRegexFlags sync.Once
 func Get_showRegexFlags() gopurs_runtime.Value {
 	once_showRegexFlags.Do(func() {
 		cache_showRegexFlags = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-usedFlags_1_0 := gopurs_runtime.Apply2(pkg_Data_Semigroup.Get_concatArray(), gopurs_runtime.Apply2(pkg_Data_Semigroup.Get_concatArray(), gopurs_runtime.Apply2(pkg_Data_Semigroup.Get_concatArray(), gopurs_runtime.Apply2(pkg_Data_Semigroup.Get_concatArray(), gopurs_runtime.Apply2(pkg_Data_Semigroup.Get_concatArray(), gopurs_runtime.Apply2(pkg_Data_Semigroup.Get_concatArray(), gopurs_runtime.Array([]gopurs_runtime.Value{}), gopurs_runtime.Apply2(pkg_Data_Functor.Get_arrayMap(), gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+usedFlags_1_0 := gopurs_runtime.Apply2(pkg_Data_Semigroup.Get_concatArray(), gopurs_runtime.Apply2(pkg_Data_Semigroup.Get_concatArray(), gopurs_runtime.Apply2(pkg_Data_Semigroup.Get_concatArray(), gopurs_runtime.Apply2(pkg_Data_Semigroup.Get_concatArray(), gopurs_runtime.Apply2(pkg_Data_Semigroup.Get_concatArray(), gopurs_runtime.Apply2(pkg_Data_Semigroup.Get_concatArray(), gopurs_runtime.Array([]gopurs_runtime.Value{}), func() gopurs_runtime.Value {
+arr_val_arrayMap9 := gopurs_runtime.Apply(Get_guard(), gopurs_runtime.RecordGet(v_0, "global"))
+_ = arr_val_arrayMap9
+arr_go_arrayMap9 := (*[]gopurs_runtime.Value)(arr_val_arrayMap9.UnsafePtr)
+_ = arr_go_arrayMap9
+res_go_arrayMap9 := make([]gopurs_runtime.Value, len(*arr_go_arrayMap9))
+_ = res_go_arrayMap9
+for i_arrayMap9, v_arrayMap9 := range *arr_go_arrayMap9 {
+res_go_arrayMap9[i_arrayMap9] = gopurs_runtime.Apply(gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Str("global")
-}), gopurs_runtime.Apply(Get_guard(), gopurs_runtime.RecordGet(v_0, "global")))), gopurs_runtime.Apply2(pkg_Data_Functor.Get_arrayMap(), gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+}), v_arrayMap9)
+}
+return gopurs_runtime.Array(res_go_arrayMap9)
+}()), func() gopurs_runtime.Value {
+arr_val_arrayMap8 := gopurs_runtime.Apply(Get_guard(), gopurs_runtime.RecordGet(v_0, "ignoreCase"))
+_ = arr_val_arrayMap8
+arr_go_arrayMap8 := (*[]gopurs_runtime.Value)(arr_val_arrayMap8.UnsafePtr)
+_ = arr_go_arrayMap8
+res_go_arrayMap8 := make([]gopurs_runtime.Value, len(*arr_go_arrayMap8))
+_ = res_go_arrayMap8
+for i_arrayMap8, v_arrayMap8 := range *arr_go_arrayMap8 {
+res_go_arrayMap8[i_arrayMap8] = gopurs_runtime.Apply(gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Str("ignoreCase")
-}), gopurs_runtime.Apply(Get_guard(), gopurs_runtime.RecordGet(v_0, "ignoreCase")))), gopurs_runtime.Apply2(pkg_Data_Functor.Get_arrayMap(), gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+}), v_arrayMap8)
+}
+return gopurs_runtime.Array(res_go_arrayMap8)
+}()), func() gopurs_runtime.Value {
+arr_val_arrayMap7 := gopurs_runtime.Apply(Get_guard(), gopurs_runtime.RecordGet(v_0, "multiline"))
+_ = arr_val_arrayMap7
+arr_go_arrayMap7 := (*[]gopurs_runtime.Value)(arr_val_arrayMap7.UnsafePtr)
+_ = arr_go_arrayMap7
+res_go_arrayMap7 := make([]gopurs_runtime.Value, len(*arr_go_arrayMap7))
+_ = res_go_arrayMap7
+for i_arrayMap7, v_arrayMap7 := range *arr_go_arrayMap7 {
+res_go_arrayMap7[i_arrayMap7] = gopurs_runtime.Apply(gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Str("multiline")
-}), gopurs_runtime.Apply(Get_guard(), gopurs_runtime.RecordGet(v_0, "multiline")))), gopurs_runtime.Apply2(pkg_Data_Functor.Get_arrayMap(), gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+}), v_arrayMap7)
+}
+return gopurs_runtime.Array(res_go_arrayMap7)
+}()), func() gopurs_runtime.Value {
+arr_val_arrayMap6 := gopurs_runtime.Apply(Get_guard(), gopurs_runtime.RecordGet(v_0, "dotAll"))
+_ = arr_val_arrayMap6
+arr_go_arrayMap6 := (*[]gopurs_runtime.Value)(arr_val_arrayMap6.UnsafePtr)
+_ = arr_go_arrayMap6
+res_go_arrayMap6 := make([]gopurs_runtime.Value, len(*arr_go_arrayMap6))
+_ = res_go_arrayMap6
+for i_arrayMap6, v_arrayMap6 := range *arr_go_arrayMap6 {
+res_go_arrayMap6[i_arrayMap6] = gopurs_runtime.Apply(gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Str("dotAll")
-}), gopurs_runtime.Apply(Get_guard(), gopurs_runtime.RecordGet(v_0, "dotAll")))), gopurs_runtime.Apply2(pkg_Data_Functor.Get_arrayMap(), gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+}), v_arrayMap6)
+}
+return gopurs_runtime.Array(res_go_arrayMap6)
+}()), func() gopurs_runtime.Value {
+arr_val_arrayMap5 := gopurs_runtime.Apply(Get_guard(), gopurs_runtime.RecordGet(v_0, "sticky"))
+_ = arr_val_arrayMap5
+arr_go_arrayMap5 := (*[]gopurs_runtime.Value)(arr_val_arrayMap5.UnsafePtr)
+_ = arr_go_arrayMap5
+res_go_arrayMap5 := make([]gopurs_runtime.Value, len(*arr_go_arrayMap5))
+_ = res_go_arrayMap5
+for i_arrayMap5, v_arrayMap5 := range *arr_go_arrayMap5 {
+res_go_arrayMap5[i_arrayMap5] = gopurs_runtime.Apply(gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Str("sticky")
-}), gopurs_runtime.Apply(Get_guard(), gopurs_runtime.RecordGet(v_0, "sticky")))), gopurs_runtime.Apply2(pkg_Data_Functor.Get_arrayMap(), gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+}), v_arrayMap5)
+}
+return gopurs_runtime.Array(res_go_arrayMap5)
+}()), func() gopurs_runtime.Value {
+arr_val_arrayMap4 := gopurs_runtime.Apply(Get_guard(), gopurs_runtime.RecordGet(v_0, "unicode"))
+_ = arr_val_arrayMap4
+arr_go_arrayMap4 := (*[]gopurs_runtime.Value)(arr_val_arrayMap4.UnsafePtr)
+_ = arr_go_arrayMap4
+res_go_arrayMap4 := make([]gopurs_runtime.Value, len(*arr_go_arrayMap4))
+_ = res_go_arrayMap4
+for i_arrayMap4, v_arrayMap4 := range *arr_go_arrayMap4 {
+res_go_arrayMap4[i_arrayMap4] = gopurs_runtime.Apply(gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Str("unicode")
-}), gopurs_runtime.Apply(Get_guard(), gopurs_runtime.RecordGet(v_0, "unicode"))))
+}), v_arrayMap4)
+}
+return gopurs_runtime.Array(res_go_arrayMap4)
+}())
 _ = usedFlags_1_0
 var __t1 gopurs_runtime.Value
 {

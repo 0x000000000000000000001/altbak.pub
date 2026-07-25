@@ -2,6 +2,7 @@
 import * as Bench from "../Bench/index.js";
 import * as Effect_Console from "../Effect.Console/index.js";
 import * as Test_Ackermann from "../Test.Ackermann/index.js";
+import * as Test_ArrayOps from "../Test.ArrayOps/index.js";
 import * as Test_AstTree from "../Test.AstTree/index.js";
 import * as Test_Church from "../Test.Church/index.js";
 import * as Test_Fib from "../Test.Fib/index.js";
@@ -26,7 +27,8 @@ var main = function __do() {
     var t10 = Bench.runBench(Test_Polymorphism.describe)(Test_Polymorphism.act)();
     var t11 = Bench.runBench(Test_StateMonad.describe)(Test_StateMonad.act)();
     var t12 = Bench.runBench(Test_LazyEvaluation.describe)(Test_LazyEvaluation.act)();
-    var totalMs = t1 / 1000.0 + t2 / 1000.0 + t3 / 1000.0 + t4 / 1000.0 + t5 / 1000.0 + t6 / 1000.0 + t7 / 1000.0 + t8 / 1000.0 + t9 / 1000.0 + t10 / 1000.0 + t11 / 1000.0 + t12 / 1000.0;
+    var t13 = Bench.runBench(Test_ArrayOps.describe)(Test_ArrayOps.act)();
+    var totalMs = t1 / 1000.0 + t2 / 1000.0 + t3 / 1000.0 + t4 / 1000.0 + t5 / 1000.0 + t6 / 1000.0 + t7 / 1000.0 + t8 / 1000.0 + t9 / 1000.0 + t10 / 1000.0 + t11 / 1000.0 + t12 / 1000.0 + t13 / 1000.0;
     return Effect_Console.log("Total exec time: " + (Bench.formatNumber(totalMs) + " ms\x0a"))();
 };
 export {

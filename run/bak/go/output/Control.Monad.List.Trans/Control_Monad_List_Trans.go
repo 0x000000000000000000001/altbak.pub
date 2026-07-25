@@ -1867,7 +1867,22 @@ var __t0 gopurs_runtime.Value
 if (v_3.Type == 9 && v_3.IntVal == 1320412129) {
 __local_var_4_1 := (*Data_Control_Monad_List_Trans_Yield)(v_3.UnsafePtr).V1
 _ = __local_var_4_1
-__local_var_5_2 := gopurs_runtime.Apply2(Get_filter(), dictFunctor_0, f_1)
+__local_var_5_2 := func() gopurs_runtime.Value {
+arr_val_filter5 := f_1
+_ = arr_val_filter5
+arr_go_filter5 := (*[]gopurs_runtime.Value)(arr_val_filter5.UnsafePtr)
+_ = arr_go_filter5
+res_go_filter5 := make([]gopurs_runtime.Value, 0)
+_ = res_go_filter5
+for _, v_filter5 := range *arr_go_filter5 {
+if gopurs_runtime.Apply(dictFunctor_0, v_filter5).BoolVal() {
+res_go_filter5 = append(res_go_filter5, v_filter5)
+} else {
+
+}
+}
+return gopurs_runtime.Array(res_go_filter5)
+}()
 _ = __local_var_5_2
 s_prime_6_3 := gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(__local_var_5_2, gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), __local_var_4_1))
@@ -1896,7 +1911,22 @@ goto end_branch_0
 if (v_3.Type == 9 && v_3.IntVal == 813447293) {
 __local_var_4_5 := (*Data_Control_Monad_List_Trans_Skip)(v_3.UnsafePtr).V0
 _ = __local_var_4_5
-__local_var_5_6 := gopurs_runtime.Apply2(Get_filter(), dictFunctor_0, f_1)
+__local_var_5_6 := func() gopurs_runtime.Value {
+arr_val_filter6 := f_1
+_ = arr_val_filter6
+arr_go_filter6 := (*[]gopurs_runtime.Value)(arr_val_filter6.UnsafePtr)
+_ = arr_go_filter6
+res_go_filter6 := make([]gopurs_runtime.Value, 0)
+_ = res_go_filter6
+for _, v_filter6 := range *arr_go_filter6 {
+if gopurs_runtime.Apply(dictFunctor_0, v_filter6).BoolVal() {
+res_go_filter6 = append(res_go_filter6, v_filter6)
+} else {
+
+}
+}
+return gopurs_runtime.Array(res_go_filter6)
+}()
 _ = __local_var_5_6
 __t0 = gopurs_runtime.Value{Type: 9, IntVal: 813447293, UnsafePtr: unsafe.Pointer(&Data_Control_Monad_List_Trans_Skip{gopurs_runtime.Apply(pkg_Data_Lazy.Get_defer_(), gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(__local_var_5_6, gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), __local_var_4_5))

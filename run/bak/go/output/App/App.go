@@ -16,6 +16,7 @@ import (
 	pkg_Test_Polymorphism "gopurs/output/Test.Polymorphism"
 	pkg_Test_StateMonad "gopurs/output/Test.StateMonad"
 	pkg_Test_LazyEvaluation "gopurs/output/Test.LazyEvaluation"
+	pkg_Test_ArrayOps "gopurs/output/Test.ArrayOps"
 	pkg_Effect_Console "gopurs/output/Effect.Console"
 )
 
@@ -51,7 +52,9 @@ t11_11_11 := gopurs_runtime.Apply(gopurs_runtime.Apply2(pkg_Bench.Get_runBench()
 _ = t11_11_11
 t12_12_12 := gopurs_runtime.Apply(gopurs_runtime.Apply2(pkg_Bench.Get_runBench(), pkg_Test_LazyEvaluation.Get_describe(), pkg_Test_LazyEvaluation.Get_act()), gopurs_runtime.Value{})
 _ = t12_12_12
-return gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Str((("Total exec time: ") + (gopurs_runtime.Apply(pkg_Bench.Get_formatNumber(), gopurs_runtime.Float(((((((((((((t1_1_1.FloatVal()) / (1000.0)) + ((t2_2_2.FloatVal()) / (1000.0))) + ((t3_3_3.FloatVal()) / (1000.0))) + ((t4_4_4.FloatVal()) / (1000.0))) + ((t5_5_5.FloatVal()) / (1000.0))) + ((t6_6_6.FloatVal()) / (1000.0))) + ((t7_7_7.FloatVal()) / (1000.0))) + ((t8_8_8.FloatVal()) / (1000.0))) + ((t9_9_9.FloatVal()) / (1000.0))) + ((t10_10_10.FloatVal()) / (1000.0))) + ((t11_11_11.FloatVal()) / (1000.0))) + ((t12_12_12.FloatVal()) / (1000.0)))).StrVal())) + (" ms\n"))), gopurs_runtime.Value{})
+t13_13_13 := gopurs_runtime.Apply(gopurs_runtime.Apply2(pkg_Bench.Get_runBench(), pkg_Test_ArrayOps.Get_describe(), pkg_Test_ArrayOps.Get_act()), gopurs_runtime.Value{})
+_ = t13_13_13
+return gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Str((("Total exec time: ") + (gopurs_runtime.Apply(pkg_Bench.Get_formatNumber(), gopurs_runtime.Float((((((((((((((t1_1_1.FloatVal()) / (1000.0)) + ((t2_2_2.FloatVal()) / (1000.0))) + ((t3_3_3.FloatVal()) / (1000.0))) + ((t4_4_4.FloatVal()) / (1000.0))) + ((t5_5_5.FloatVal()) / (1000.0))) + ((t6_6_6.FloatVal()) / (1000.0))) + ((t7_7_7.FloatVal()) / (1000.0))) + ((t8_8_8.FloatVal()) / (1000.0))) + ((t9_9_9.FloatVal()) / (1000.0))) + ((t10_10_10.FloatVal()) / (1000.0))) + ((t11_11_11.FloatVal()) / (1000.0))) + ((t12_12_12.FloatVal()) / (1000.0))) + ((t13_13_13.FloatVal()) / (1000.0)))).StrVal())) + (" ms\n"))), gopurs_runtime.Value{})
 })
 }()
 	})

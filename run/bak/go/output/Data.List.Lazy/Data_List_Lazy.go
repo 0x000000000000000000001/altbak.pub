@@ -1458,7 +1458,22 @@ if (v_2.Type == 9 && v_2.IntVal == 218341868) {
 var __t2 gopurs_runtime.Value
 {
 if (gopurs_runtime.Apply(p_0, (*pkg_Data_List_Lazy_Types.Data_Data_List_Lazy_Types_Cons)(v_2.UnsafePtr).V0).IntVal) != (0) {
-__t2 = gopurs_runtime.Value{Type: 9, IntVal: 218341868, UnsafePtr: unsafe.Pointer(&pkg_Data_List_Lazy_Types.Data_Data_List_Lazy_Types_Cons{(*pkg_Data_List_Lazy_Types.Data_Data_List_Lazy_Types_Cons)(v_2.UnsafePtr).V0, gopurs_runtime.Apply2(Get_filter(), p_0, (*pkg_Data_List_Lazy_Types.Data_Data_List_Lazy_Types_Cons)(v_2.UnsafePtr).V1)})}
+__t2 = gopurs_runtime.Value{Type: 9, IntVal: 218341868, UnsafePtr: unsafe.Pointer(&pkg_Data_List_Lazy_Types.Data_Data_List_Lazy_Types_Cons{(*pkg_Data_List_Lazy_Types.Data_Data_List_Lazy_Types_Cons)(v_2.UnsafePtr).V0, func() gopurs_runtime.Value {
+arr_val_filter4 := (*pkg_Data_List_Lazy_Types.Data_Data_List_Lazy_Types_Cons)(v_2.UnsafePtr).V1
+_ = arr_val_filter4
+arr_go_filter4 := (*[]gopurs_runtime.Value)(arr_val_filter4.UnsafePtr)
+_ = arr_go_filter4
+res_go_filter4 := make([]gopurs_runtime.Value, 0)
+_ = res_go_filter4
+for _, v_filter4 := range *arr_go_filter4 {
+if gopurs_runtime.Apply(p_0, v_filter4).BoolVal() {
+res_go_filter4 = append(res_go_filter4, v_filter4)
+} else {
+
+}
+}
+return gopurs_runtime.Array(res_go_filter4)
+}()})}
 goto end_branch_2
 } else {
 
@@ -1547,9 +1562,24 @@ goto end_branch_0
 if (v_1.Type == 9 && v_1.IntVal == 218341868) {
 __local_var_2_1 := (*pkg_Data_List_Lazy_Types.Data_Data_List_Lazy_Types_Cons)(v_1.UnsafePtr).V0
 _ = __local_var_2_1
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 218341868, UnsafePtr: unsafe.Pointer(&pkg_Data_List_Lazy_Types.Data_Data_List_Lazy_Types_Cons{__local_var_2_1, gopurs_runtime.Apply2(Get_nubByEq(), eq_0, gopurs_runtime.Apply2(Get_filter(), gopurs_runtime.Func(func(y_3 gopurs_runtime.Value) gopurs_runtime.Value {
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 218341868, UnsafePtr: unsafe.Pointer(&pkg_Data_List_Lazy_Types.Data_Data_List_Lazy_Types_Cons{__local_var_2_1, gopurs_runtime.Apply2(Get_nubByEq(), eq_0, func() gopurs_runtime.Value {
+arr_val_filter6 := (*pkg_Data_List_Lazy_Types.Data_Data_List_Lazy_Types_Cons)(v_1.UnsafePtr).V1
+_ = arr_val_filter6
+arr_go_filter6 := (*[]gopurs_runtime.Value)(arr_val_filter6.UnsafePtr)
+_ = arr_go_filter6
+res_go_filter6 := make([]gopurs_runtime.Value, 0)
+_ = res_go_filter6
+for _, v_filter6 := range *arr_go_filter6 {
+if gopurs_runtime.Apply(gopurs_runtime.Func(func(y_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Bool(((gopurs_runtime.Apply2(eq_0, __local_var_2_1, y_3).IntVal) != (0)) != (true))
-}), (*pkg_Data_List_Lazy_Types.Data_Data_List_Lazy_Types_Cons)(v_1.UnsafePtr).V1))})}
+}), v_filter6).BoolVal() {
+res_go_filter6 = append(res_go_filter6, v_filter6)
+} else {
+
+}
+}
+return gopurs_runtime.Array(res_go_filter6)
+}())})}
 goto end_branch_0
 } else {
 
@@ -2571,9 +2601,24 @@ var xs_1 gopurs_runtime.Value = xs_1_loop
 _ = xs_1
 var ys_2 gopurs_runtime.Value = ys_2_loop
 _ = ys_2
-return gopurs_runtime.Apply2(Get_filter(), gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+arr_val_filter0 := xs_1
+_ = arr_val_filter0
+arr_go_filter0 := (*[]gopurs_runtime.Value)(arr_val_filter0.UnsafePtr)
+_ = arr_go_filter0
+res_go_filter0 := make([]gopurs_runtime.Value, 0)
+_ = res_go_filter0
+for _, v_filter0 := range *arr_go_filter0 {
+if gopurs_runtime.Apply(gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(Get_any(), gopurs_runtime.Apply(eq_0, x_3), ys_2)
-}), xs_1)
+}), v_filter0).BoolVal() {
+res_go_filter0 = append(res_go_filter0, v_filter0)
+} else {
+
+}
+}
+return gopurs_runtime.Array(res_go_filter0)
+}()
 }
 
 func Call_elemLastIndex(dictEq_0_loop gopurs_runtime.Value, x_1_loop gopurs_runtime.Value) gopurs_runtime.Value {

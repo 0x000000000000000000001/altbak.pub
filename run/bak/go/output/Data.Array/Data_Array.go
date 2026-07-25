@@ -14,7 +14,6 @@ import (
 	pkg_Data_Array_ST_Iterator "gopurs/output/Data.Array.ST.Iterator"
 	pkg_Data_Unit "gopurs/output/Data.Unit"
 	pkg_Control_Monad_Rec_Class "gopurs/output/Control.Monad.Rec.Class"
-	pkg_Data_Functor "gopurs/output/Data.Functor"
 	pkg_Data_Ord "gopurs/output/Data.Ord"
 	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
 	pkg_Control_Bind "gopurs/output/Control.Bind"
@@ -43,7 +42,15 @@ _ = __local_var_1_0
 mempty_2_1 := gopurs_runtime.RecordGet(dictMonoid_0, "mempty")
 _ = mempty_2_1
 return gopurs_runtime.Func2(func(sep_3 gopurs_runtime.Value, xs_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(gopurs_runtime.Apply3(pkg_Data_Foldable.Get_foldlArray(), gopurs_runtime.Func2(func(v_5 gopurs_runtime.Value, v1_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordGet(func() gopurs_runtime.Value {
+arr_val_foldlArray4 := xs_4
+_ = arr_val_foldlArray4
+res_go_foldlArray4 := gopurs_runtime.RecordDict2("init", "acc", gopurs_runtime.Bool(true), mempty_2_1)
+_ = res_go_foldlArray4
+arr_go_foldlArray4 := (*[]gopurs_runtime.Value)(arr_val_foldlArray4.UnsafePtr)
+_ = arr_go_foldlArray4
+for _, v_foldlArray4 := range *arr_go_foldlArray4 {
+res_go_foldlArray4 = gopurs_runtime.Apply2(gopurs_runtime.Func2(func(v_5 gopurs_runtime.Value, v1_6 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t2 gopurs_runtime.Value
 {
 if (gopurs_runtime.RecordGet(v_5, "init").IntVal) != (0) {
@@ -58,7 +65,10 @@ __t2 = gopurs_runtime.RecordDict2("init", "acc", gopurs_runtime.Bool(false), gop
 }
 end_branch_2:
 return __t2
-}), gopurs_runtime.RecordDict2("init", "acc", gopurs_runtime.Bool(true), mempty_2_1), xs_4), "acc")
+}), res_go_foldlArray4, v_foldlArray4)
+}
+return res_go_foldlArray4
+}(), "acc")
 })
 }()
 })
@@ -776,7 +786,15 @@ var idx_2 gopurs_runtime.Value = idx_2_loop
 _ = idx_2
 var allArrays_3 gopurs_runtime.Value = allArrays_3_loop
 _ = allArrays_3
-v_4_1 := gopurs_runtime.Apply3(pkg_Data_Foldable.Get_foldlArray(), gopurs_runtime.Func2(func(acc_4 gopurs_runtime.Value, nextArr_5 gopurs_runtime.Value) gopurs_runtime.Value {
+v_4_1 := func() gopurs_runtime.Value {
+arr_val_foldlArray2 := xs_0
+_ = arr_val_foldlArray2
+res_go_foldlArray2 := gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}
+_ = res_go_foldlArray2
+arr_go_foldlArray2 := (*[]gopurs_runtime.Value)(arr_val_foldlArray2.UnsafePtr)
+_ = arr_go_foldlArray2
+for _, v_foldlArray2 := range *arr_go_foldlArray2 {
+res_go_foldlArray2 = gopurs_runtime.Apply2(gopurs_runtime.Func2(func(acc_4 gopurs_runtime.Value, nextArr_5 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_6_2 := gopurs_runtime.UncurriedApp4(Get_indexImpl(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}, nextArr_5, idx_2)
 _ = __local_var_6_2
 var __t3 gopurs_runtime.Value
@@ -822,7 +840,10 @@ __t3 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_3:
 return __t3
-}), gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}, xs_0)
+}), res_go_foldlArray2, v_foldlArray2)
+}
+return res_go_foldlArray2
+}()
 _ = v_4_1
 var __t5 gopurs_runtime.Value
 {
@@ -1834,7 +1855,8 @@ goto end_branch_2
 if (v_3_1.Type == 9 && v_3_1.IntVal == 930809136) {
 __local_var_4_3 := gopurs_runtime.Apply(pkg_Data_Array_ST.Get_unsafeThaw(), gopurs_runtime.Array([]gopurs_runtime.Value{(*pkg_Data_Maybe.Data_Data_Maybe_Just)(v_3_1.UnsafePtr).V0}))
 _ = __local_var_4_3
-__t2 = gopurs_runtime.Apply2(pkg_Data_Functor.Get_arrayMap(), pkg_Data_Tuple.Get_snd(), gopurs_runtime.Apply(Call_sortWith(pkg_Data_Ord.Get_ordInt(), pkg_Data_Tuple.Get_fst()), gopurs_runtime.Apply(pkg_Control_Monad_ST_Internal.Get_run(), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+__t2 = func() gopurs_runtime.Value {
+arr_val_arrayMap3 := gopurs_runtime.Apply(Call_sortWith(pkg_Data_Ord.Get_ordInt(), pkg_Data_Tuple.Get_fst()), gopurs_runtime.Apply(pkg_Control_Monad_ST_Internal.Get_run(), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 result_5_4 := gopurs_runtime.Apply(__local_var_4_3, gopurs_runtime.Value{})
 _ = result_5_4
 _dollar__unused_6_5 := gopurs_runtime.Apply(gopurs_runtime.Apply2(pkg_Control_Monad_ST_Internal.Get_foreach(), indexedAndSorted_2_0, gopurs_runtime.Func(func(v1_6 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -1888,7 +1910,17 @@ return gopurs_runtime.Apply(__t13, gopurs_runtime.Value{})
 })), gopurs_runtime.Value{})
 _ = _dollar__unused_6_5
 return gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Data_Array_ST.Get_unsafeFreeze(), result_5_4), gopurs_runtime.Value{})
-}))))
+})))
+_ = arr_val_arrayMap3
+arr_go_arrayMap3 := (*[]gopurs_runtime.Value)(arr_val_arrayMap3.UnsafePtr)
+_ = arr_go_arrayMap3
+res_go_arrayMap3 := make([]gopurs_runtime.Value, len(*arr_go_arrayMap3))
+_ = res_go_arrayMap3
+for i_arrayMap3, v_arrayMap3 := range *arr_go_arrayMap3 {
+res_go_arrayMap3[i_arrayMap3] = gopurs_runtime.Apply(pkg_Data_Tuple.Get_snd(), v_arrayMap3)
+}
+return gopurs_runtime.Array(res_go_arrayMap3)
+}()
 goto end_branch_2
 } else {
 
@@ -2435,9 +2467,20 @@ var xs_1 gopurs_runtime.Value = xs_1_loop
 _ = xs_1
 var ys_2 gopurs_runtime.Value = ys_2_loop
 _ = ys_2
-return gopurs_runtime.Apply2(pkg_Data_Semigroup.Get_concatArray(), xs_1, gopurs_runtime.Apply3(pkg_Data_Foldable.Get_foldlArray(), gopurs_runtime.Func2(func(b_3 gopurs_runtime.Value, a_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(pkg_Data_Semigroup.Get_concatArray(), xs_1, func() gopurs_runtime.Value {
+arr_val_foldlArray1 := xs_1
+_ = arr_val_foldlArray1
+res_go_foldlArray1 := Call_nubByEq(eq2_0, ys_2)
+_ = res_go_foldlArray1
+arr_go_foldlArray1 := (*[]gopurs_runtime.Value)(arr_val_foldlArray1.UnsafePtr)
+_ = arr_go_foldlArray1
+for _, v_foldlArray1 := range *arr_go_foldlArray1 {
+res_go_foldlArray1 = gopurs_runtime.Apply2(gopurs_runtime.Func2(func(b_3 gopurs_runtime.Value, a_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_deleteBy(eq2_0, a_4, b_3)
-}), Call_nubByEq(eq2_0, ys_2), xs_1))
+}), res_go_foldlArray1, v_foldlArray1)
+}
+return res_go_foldlArray1
+}())
 }
 
 func Call_alterAt(i_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value, xs_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
