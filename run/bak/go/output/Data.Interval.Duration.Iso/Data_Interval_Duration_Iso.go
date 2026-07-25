@@ -666,7 +666,7 @@ goto end_branch_3
 {
 var __t_tag_5 gopurs_runtime.Value = gopurs_runtime.RecordGet(v_0, "asMap")
 if (__t_tag_5.Type == 9 && __t_tag_5.IntVal == 324739070) {
-__t3 = (*pkg_Data_Map_Internal.Data_Data_Map_Internal_Node)(gopurs_runtime.RecordGet(v_0, "asMap").UnsafePtr).V1
+__t3 = gopurs_runtime.Int((*pkg_Data_Map_Internal.Data_Data_Map_Internal_Node)(gopurs_runtime.RecordGet(v_0, "asMap").UnsafePtr).V1)
 goto end_branch_3
 } else {
 

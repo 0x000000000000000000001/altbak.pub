@@ -505,7 +505,7 @@ return gopurs_runtime.Apply(__local_var_1_0, gopurs_runtime.Apply(pkg_Data_Map_I
 func Call_singleton(a_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var a_0 gopurs_runtime.Value = a_0_loop
 _ = a_0
-return gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Data_Data_Map_Internal_Node{gopurs_runtime.Int(1), gopurs_runtime.Int(1), a_0, pkg_Data_Unit.Get_unit(), gopurs_runtime.Value{Type: 9, IntVal: 687041424, UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: 687041424, UnsafePtr: nil}})}
+return gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Data_Data_Map_Internal_Node{1, 1, a_0, pkg_Data_Unit.Get_unit(), gopurs_runtime.Value{Type: 9, IntVal: 687041424, UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: 687041424, UnsafePtr: nil}})}
 }
 
 func Call_showSet(dictShow_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -785,7 +785,7 @@ goto end_branch_1
 }
 {
 if (s1_2.Type == 9 && s1_2.IntVal == 324739070) {
-__t1 = (*pkg_Data_Map_Internal.Data_Data_Map_Internal_Node)(s1_2.UnsafePtr).V1
+__t1 = gopurs_runtime.Int((*pkg_Data_Map_Internal.Data_Data_Map_Internal_Node)(s1_2.UnsafePtr).V1)
 goto end_branch_1
 } else {
 
@@ -806,7 +806,7 @@ goto end_branch_2
 }
 {
 if (s2_3.Type == 9 && s2_3.IntVal == 324739070) {
-__t2 = (*pkg_Data_Map_Internal.Data_Data_Map_Internal_Node)(s2_3.UnsafePtr).V1
+__t2 = gopurs_runtime.Int((*pkg_Data_Map_Internal.Data_Data_Map_Internal_Node)(s2_3.UnsafePtr).V1)
 goto end_branch_2
 } else {
 

@@ -91,7 +91,7 @@ var once_Precision sync.Once
 func Get_Precision() gopurs_runtime.Value {
 	once_Precision.Do(func() {
 		cache_Precision = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 1786680275, UnsafePtr: unsafe.Pointer(&Data_Data_Number_Format_Precision{value0})}
+return gopurs_runtime.Value{Type: 9, IntVal: 1786680275, UnsafePtr: unsafe.Pointer(&Data_Data_Number_Format_Precision{value0.IntVal})}
 })
 	})
 	return cache_Precision
@@ -102,7 +102,7 @@ var once_Fixed sync.Once
 func Get_Fixed() gopurs_runtime.Value {
 	once_Fixed.Do(func() {
 		cache_Fixed = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 1390206259, UnsafePtr: unsafe.Pointer(&Data_Data_Number_Format_Fixed{value0})}
+return gopurs_runtime.Value{Type: 9, IntVal: 1390206259, UnsafePtr: unsafe.Pointer(&Data_Data_Number_Format_Fixed{value0.IntVal})}
 })
 	})
 	return cache_Fixed
@@ -113,7 +113,7 @@ var once_Exponential sync.Once
 func Get_Exponential() gopurs_runtime.Value {
 	once_Exponential.Do(func() {
 		cache_Exponential = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 1734244434, UnsafePtr: unsafe.Pointer(&Data_Data_Number_Format_Exponential{value0})}
+return gopurs_runtime.Value{Type: 9, IntVal: 1734244434, UnsafePtr: unsafe.Pointer(&Data_Data_Number_Format_Exponential{value0.IntVal})}
 })
 	})
 	return cache_Exponential
@@ -138,7 +138,7 @@ func Get_precision() gopurs_runtime.Value {
 __local_var_0_0 := gopurs_runtime.Apply2(Get_clamp(), gopurs_runtime.Int(1), gopurs_runtime.Int(21))
 _ = __local_var_0_0
 return gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 1786680275, UnsafePtr: unsafe.Pointer(&Data_Data_Number_Format_Precision{gopurs_runtime.Apply(__local_var_0_0, x_1)})}
+return gopurs_runtime.Value{Type: 9, IntVal: 1786680275, UnsafePtr: unsafe.Pointer(&Data_Data_Number_Format_Precision{gopurs_runtime.Apply(__local_var_0_0, x_1).IntVal})}
 })
 }()
 	})
@@ -153,7 +153,7 @@ func Get_fixed() gopurs_runtime.Value {
 __local_var_0_0 := gopurs_runtime.Apply2(Get_clamp(), gopurs_runtime.Int(0), gopurs_runtime.Int(20))
 _ = __local_var_0_0
 return gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 1390206259, UnsafePtr: unsafe.Pointer(&Data_Data_Number_Format_Fixed{gopurs_runtime.Apply(__local_var_0_0, x_1)})}
+return gopurs_runtime.Value{Type: 9, IntVal: 1390206259, UnsafePtr: unsafe.Pointer(&Data_Data_Number_Format_Fixed{gopurs_runtime.Apply(__local_var_0_0, x_1).IntVal})}
 })
 }()
 	})
@@ -168,7 +168,7 @@ func Get_exponential() gopurs_runtime.Value {
 __local_var_0_0 := gopurs_runtime.Apply2(Get_clamp(), gopurs_runtime.Int(0), gopurs_runtime.Int(20))
 _ = __local_var_0_0
 return gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 1734244434, UnsafePtr: unsafe.Pointer(&Data_Data_Number_Format_Exponential{gopurs_runtime.Apply(__local_var_0_0, x_1)})}
+return gopurs_runtime.Value{Type: 9, IntVal: 1734244434, UnsafePtr: unsafe.Pointer(&Data_Data_Number_Format_Exponential{gopurs_runtime.Apply(__local_var_0_0, x_1).IntVal})}
 })
 }()
 	})
@@ -176,21 +176,21 @@ return gopurs_runtime.Value{Type: 9, IntVal: 1734244434, UnsafePtr: unsafe.Point
 }
 
 type Data_Data_Number_Format_Precision struct {
-	V0 gopurs_runtime.Value
+	V0 int64
 }
 func Is_Data_Data_Number_Format_Precision(v gopurs_runtime.Value) bool {
 	return v.Type == 9 && v.IntVal == 1786680275
 }
 
 type Data_Data_Number_Format_Fixed struct {
-	V0 gopurs_runtime.Value
+	V0 int64
 }
 func Is_Data_Data_Number_Format_Fixed(v gopurs_runtime.Value) bool {
 	return v.Type == 9 && v.IntVal == 1390206259
 }
 
 type Data_Data_Number_Format_Exponential struct {
-	V0 gopurs_runtime.Value
+	V0 int64
 }
 func Is_Data_Data_Number_Format_Exponential(v gopurs_runtime.Value) bool {
 	return v.Type == 9 && v.IntVal == 1734244434
@@ -202,7 +202,7 @@ _ = v_0
 var __t0 gopurs_runtime.Value
 {
 if (v_0.Type == 9 && v_0.IntVal == 1786680275) {
-__t0 = gopurs_runtime.Apply(Get_toPrecisionNative(), (*Data_Data_Number_Format_Precision)(v_0.UnsafePtr).V0)
+__t0 = gopurs_runtime.Apply(Get_toPrecisionNative(), gopurs_runtime.Int((*Data_Data_Number_Format_Precision)(v_0.UnsafePtr).V0))
 goto end_branch_0
 } else {
 
@@ -210,7 +210,7 @@ goto end_branch_0
 }
 {
 if (v_0.Type == 9 && v_0.IntVal == 1390206259) {
-__t0 = gopurs_runtime.Apply(Get_toFixedNative(), (*Data_Data_Number_Format_Fixed)(v_0.UnsafePtr).V0)
+__t0 = gopurs_runtime.Apply(Get_toFixedNative(), gopurs_runtime.Int((*Data_Data_Number_Format_Fixed)(v_0.UnsafePtr).V0))
 goto end_branch_0
 } else {
 
@@ -218,7 +218,7 @@ goto end_branch_0
 }
 {
 if (v_0.Type == 9 && v_0.IntVal == 1734244434) {
-__t0 = gopurs_runtime.Apply(Get_toExponentialNative(), (*Data_Data_Number_Format_Exponential)(v_0.UnsafePtr).V0)
+__t0 = gopurs_runtime.Apply(Get_toExponentialNative(), gopurs_runtime.Int((*Data_Data_Number_Format_Exponential)(v_0.UnsafePtr).V0))
 goto end_branch_0
 } else {
 

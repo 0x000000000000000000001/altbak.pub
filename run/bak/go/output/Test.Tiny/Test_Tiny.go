@@ -11,7 +11,7 @@ var once_Circle sync.Once
 func Get_Circle() gopurs_runtime.Value {
 	once_Circle.Do(func() {
 		cache_Circle = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 248718980, UnsafePtr: unsafe.Pointer(&Data_Test_Tiny_Circle{value0})}
+return gopurs_runtime.Value{Type: 9, IntVal: 248718980, UnsafePtr: unsafe.Pointer(&Data_Test_Tiny_Circle{value0.IntVal})}
 })
 	})
 	return cache_Circle
@@ -23,7 +23,7 @@ func Get_Rect() gopurs_runtime.Value {
 	once_Rect.Do(func() {
 		cache_Rect = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 261969494, UnsafePtr: unsafe.Pointer(&Data_Test_Tiny_Rect{value0, value1})}
+return gopurs_runtime.Value{Type: 9, IntVal: 261969494, UnsafePtr: unsafe.Pointer(&Data_Test_Tiny_Rect{value0.IntVal, value1.IntVal})}
 })
 })
 	})
@@ -42,15 +42,15 @@ return Call_area(v_0_box)
 }
 
 type Data_Test_Tiny_Circle struct {
-	V0 gopurs_runtime.Value
+	V0 int64
 }
 func Is_Data_Test_Tiny_Circle(v gopurs_runtime.Value) bool {
 	return v.Type == 9 && v.IntVal == 248718980
 }
 
 type Data_Test_Tiny_Rect struct {
-	V0 gopurs_runtime.Value
-	V1 gopurs_runtime.Value
+	V0 int64
+	V1 int64
 }
 func Is_Data_Test_Tiny_Rect(v gopurs_runtime.Value) bool {
 	return v.Type == 9 && v.IntVal == 261969494
@@ -62,7 +62,7 @@ _ = v_0
 var __t0 gopurs_runtime.Value
 {
 if (v_0.Type == 9 && v_0.IntVal == 248718980) {
-__t0 = gopurs_runtime.Int(((*Data_Test_Tiny_Circle)(v_0.UnsafePtr).V0.IntVal) * ((*Data_Test_Tiny_Circle)(v_0.UnsafePtr).V0.IntVal))
+__t0 = gopurs_runtime.Int((gopurs_runtime.Int((*Data_Test_Tiny_Circle)(v_0.UnsafePtr).V0).IntVal) * (gopurs_runtime.Int((*Data_Test_Tiny_Circle)(v_0.UnsafePtr).V0).IntVal))
 goto end_branch_0
 } else {
 
@@ -70,7 +70,7 @@ goto end_branch_0
 }
 {
 if (v_0.Type == 9 && v_0.IntVal == 261969494) {
-__t0 = gopurs_runtime.Int(((*Data_Test_Tiny_Rect)(v_0.UnsafePtr).V0.IntVal) * ((*Data_Test_Tiny_Rect)(v_0.UnsafePtr).V1.IntVal))
+__t0 = gopurs_runtime.Int((gopurs_runtime.Int((*Data_Test_Tiny_Rect)(v_0.UnsafePtr).V0).IntVal) * (gopurs_runtime.Int((*Data_Test_Tiny_Rect)(v_0.UnsafePtr).V1).IntVal))
 goto end_branch_0
 } else {
 
