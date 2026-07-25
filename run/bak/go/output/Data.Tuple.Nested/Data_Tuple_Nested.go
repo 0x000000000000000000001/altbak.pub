@@ -221,12 +221,8 @@ var cache_tuple1 gopurs_runtime.Value
 var once_tuple1 sync.Once
 func Get_tuple1() gopurs_runtime.Value {
 	once_tuple1.Do(func() {
-		cache_tuple1 = gopurs_runtime.Func(func(a_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-var a_0 gopurs_runtime.Value = a_0_loop
-_ = a_0
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{a_0, pkg_Data_Unit.Get_unit()})}
-}()
+		cache_tuple1 = gopurs_runtime.Func(func(a_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_tuple1(a_0_box)
 })
 	})
 	return cache_tuple1
@@ -346,12 +342,8 @@ var cache_get9 gopurs_runtime.Value
 var once_get9 sync.Once
 func Get_get9() gopurs_runtime.Value {
 	once_get9.Do(func() {
-		cache_get9 = gopurs_runtime.Func(func(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-var v_0 gopurs_runtime.Value = v_0_loop
-_ = v_0
-return (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v_0.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V0
-}()
+		cache_get9 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_get9(v_0_box)
 })
 	})
 	return cache_get9
@@ -361,12 +353,8 @@ var cache_get8 gopurs_runtime.Value
 var once_get8 sync.Once
 func Get_get8() gopurs_runtime.Value {
 	once_get8.Do(func() {
-		cache_get8 = gopurs_runtime.Func(func(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-var v_0 gopurs_runtime.Value = v_0_loop
-_ = v_0
-return (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v_0.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V0
-}()
+		cache_get8 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_get8(v_0_box)
 })
 	})
 	return cache_get8
@@ -376,12 +364,8 @@ var cache_get7 gopurs_runtime.Value
 var once_get7 sync.Once
 func Get_get7() gopurs_runtime.Value {
 	once_get7.Do(func() {
-		cache_get7 = gopurs_runtime.Func(func(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-var v_0 gopurs_runtime.Value = v_0_loop
-_ = v_0
-return (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v_0.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V0
-}()
+		cache_get7 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_get7(v_0_box)
 })
 	})
 	return cache_get7
@@ -391,12 +375,8 @@ var cache_get6 gopurs_runtime.Value
 var once_get6 sync.Once
 func Get_get6() gopurs_runtime.Value {
 	once_get6.Do(func() {
-		cache_get6 = gopurs_runtime.Func(func(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-var v_0 gopurs_runtime.Value = v_0_loop
-_ = v_0
-return (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v_0.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V0
-}()
+		cache_get6 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_get6(v_0_box)
 })
 	})
 	return cache_get6
@@ -406,12 +386,8 @@ var cache_get5 gopurs_runtime.Value
 var once_get5 sync.Once
 func Get_get5() gopurs_runtime.Value {
 	once_get5.Do(func() {
-		cache_get5 = gopurs_runtime.Func(func(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-var v_0 gopurs_runtime.Value = v_0_loop
-_ = v_0
-return (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v_0.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V0
-}()
+		cache_get5 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_get5(v_0_box)
 })
 	})
 	return cache_get5
@@ -421,12 +397,8 @@ var cache_get4 gopurs_runtime.Value
 var once_get4 sync.Once
 func Get_get4() gopurs_runtime.Value {
 	once_get4.Do(func() {
-		cache_get4 = gopurs_runtime.Func(func(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-var v_0 gopurs_runtime.Value = v_0_loop
-_ = v_0
-return (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v_0.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V0
-}()
+		cache_get4 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_get4(v_0_box)
 })
 	})
 	return cache_get4
@@ -436,12 +408,8 @@ var cache_get3 gopurs_runtime.Value
 var once_get3 sync.Once
 func Get_get3() gopurs_runtime.Value {
 	once_get3.Do(func() {
-		cache_get3 = gopurs_runtime.Func(func(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-var v_0 gopurs_runtime.Value = v_0_loop
-_ = v_0
-return (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v_0.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V0
-}()
+		cache_get3 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_get3(v_0_box)
 })
 	})
 	return cache_get3
@@ -451,12 +419,8 @@ var cache_get2 gopurs_runtime.Value
 var once_get2 sync.Once
 func Get_get2() gopurs_runtime.Value {
 	once_get2.Do(func() {
-		cache_get2 = gopurs_runtime.Func(func(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-var v_0 gopurs_runtime.Value = v_0_loop
-_ = v_0
-return (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v_0.UnsafePtr).V1.UnsafePtr).V0
-}()
+		cache_get2 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_get2(v_0_box)
 })
 	})
 	return cache_get2
@@ -466,12 +430,8 @@ var cache_get10 gopurs_runtime.Value
 var once_get10 sync.Once
 func Get_get10() gopurs_runtime.Value {
 	once_get10.Do(func() {
-		cache_get10 = gopurs_runtime.Func(func(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-var v_0 gopurs_runtime.Value = v_0_loop
-_ = v_0
-return (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v_0.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V0
-}()
+		cache_get10 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_get10(v_0_box)
 })
 	})
 	return cache_get10
@@ -481,12 +441,8 @@ var cache_get1 gopurs_runtime.Value
 var once_get1 sync.Once
 func Get_get1() gopurs_runtime.Value {
 	once_get1.Do(func() {
-		cache_get1 = gopurs_runtime.Func(func(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-var v_0 gopurs_runtime.Value = v_0_loop
-_ = v_0
-return (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v_0.UnsafePtr).V0
-}()
+		cache_get1 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_get1(v_0_box)
 })
 	})
 	return cache_get1
@@ -496,17 +452,28 @@ var cache_curry9 gopurs_runtime.Value
 var once_curry9 sync.Once
 func Get_curry9() gopurs_runtime.Value {
 	once_curry9.Do(func() {
-		cache_curry9 = gopurs_runtime.Func(func(z_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(f_prime_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(a_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(b_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(c_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(d_5_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(e_6_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(f_7_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(g_8_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(h_9_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(i_10_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_curry9 = gopurs_runtime.Func(func(z_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+var z_0_loop gopurs_runtime.Value = z_0_box
+return gopurs_runtime.Func(func(f_prime_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+var f_prime_1_loop gopurs_runtime.Value = f_prime_1_box
+return gopurs_runtime.Func(func(a_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+var a_2_loop gopurs_runtime.Value = a_2_box
+return gopurs_runtime.Func(func(b_3_box gopurs_runtime.Value) gopurs_runtime.Value {
+var b_3_loop gopurs_runtime.Value = b_3_box
+return gopurs_runtime.Func(func(c_4_box gopurs_runtime.Value) gopurs_runtime.Value {
+var c_4_loop gopurs_runtime.Value = c_4_box
+return gopurs_runtime.Func(func(d_5_box gopurs_runtime.Value) gopurs_runtime.Value {
+var d_5_loop gopurs_runtime.Value = d_5_box
+return gopurs_runtime.Func(func(e_6_box gopurs_runtime.Value) gopurs_runtime.Value {
+var e_6_loop gopurs_runtime.Value = e_6_box
+return gopurs_runtime.Func(func(f_7_box gopurs_runtime.Value) gopurs_runtime.Value {
+var f_7_loop gopurs_runtime.Value = f_7_box
+return gopurs_runtime.Func(func(g_8_box gopurs_runtime.Value) gopurs_runtime.Value {
+var g_8_loop gopurs_runtime.Value = g_8_box
+return gopurs_runtime.Func(func(h_9_box gopurs_runtime.Value) gopurs_runtime.Value {
+var h_9_loop gopurs_runtime.Value = h_9_box
+return gopurs_runtime.Func(func(i_10_box gopurs_runtime.Value) gopurs_runtime.Value {
+var i_10_loop gopurs_runtime.Value = i_10_box
 return func() gopurs_runtime.Value {
 var z_0 gopurs_runtime.Value = z_0_loop
 _ = z_0
@@ -628,18 +595,30 @@ var cache_curry10 gopurs_runtime.Value
 var once_curry10 sync.Once
 func Get_curry10() gopurs_runtime.Value {
 	once_curry10.Do(func() {
-		cache_curry10 = gopurs_runtime.Func(func(z_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(f_prime_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(a_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(b_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(c_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(d_5_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(e_6_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(f_7_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(g_8_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(h_9_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(i_10_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(j_11_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_curry10 = gopurs_runtime.Func(func(z_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+var z_0_loop gopurs_runtime.Value = z_0_box
+return gopurs_runtime.Func(func(f_prime_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+var f_prime_1_loop gopurs_runtime.Value = f_prime_1_box
+return gopurs_runtime.Func(func(a_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+var a_2_loop gopurs_runtime.Value = a_2_box
+return gopurs_runtime.Func(func(b_3_box gopurs_runtime.Value) gopurs_runtime.Value {
+var b_3_loop gopurs_runtime.Value = b_3_box
+return gopurs_runtime.Func(func(c_4_box gopurs_runtime.Value) gopurs_runtime.Value {
+var c_4_loop gopurs_runtime.Value = c_4_box
+return gopurs_runtime.Func(func(d_5_box gopurs_runtime.Value) gopurs_runtime.Value {
+var d_5_loop gopurs_runtime.Value = d_5_box
+return gopurs_runtime.Func(func(e_6_box gopurs_runtime.Value) gopurs_runtime.Value {
+var e_6_loop gopurs_runtime.Value = e_6_box
+return gopurs_runtime.Func(func(f_7_box gopurs_runtime.Value) gopurs_runtime.Value {
+var f_7_loop gopurs_runtime.Value = f_7_box
+return gopurs_runtime.Func(func(g_8_box gopurs_runtime.Value) gopurs_runtime.Value {
+var g_8_loop gopurs_runtime.Value = g_8_box
+return gopurs_runtime.Func(func(h_9_box gopurs_runtime.Value) gopurs_runtime.Value {
+var h_9_loop gopurs_runtime.Value = h_9_box
+return gopurs_runtime.Func(func(i_10_box gopurs_runtime.Value) gopurs_runtime.Value {
+var i_10_loop gopurs_runtime.Value = i_10_box
+return gopurs_runtime.Func(func(j_11_box gopurs_runtime.Value) gopurs_runtime.Value {
+var j_11_loop gopurs_runtime.Value = j_11_box
 return func() gopurs_runtime.Value {
 var z_0 gopurs_runtime.Value = z_0_loop
 _ = z_0
@@ -918,6 +897,12 @@ _ = j_9
 return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{a_0, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{b_1, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{c_2, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{d_3, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{e_4, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{f_5, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{g_6, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{h_7, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{i_8, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{j_9, pkg_Data_Unit.Get_unit()})}})}})}})}})}})}})}})}})}})}
 }
 
+func Call_tuple1(a_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var a_0 gopurs_runtime.Value = a_0_loop
+_ = a_0
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{a_0, pkg_Data_Unit.Get_unit()})}
+}
+
 func Call_over9(o_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var o_0 gopurs_runtime.Value = o_0_loop
 _ = o_0
@@ -996,6 +981,66 @@ _ = o_0
 var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
 return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{gopurs_runtime.Apply(o_0, (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v_1.UnsafePtr).V0), (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v_1.UnsafePtr).V1})}
+}
+
+func Call_get9(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var v_0 gopurs_runtime.Value = v_0_loop
+_ = v_0
+return (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v_0.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V0
+}
+
+func Call_get8(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var v_0 gopurs_runtime.Value = v_0_loop
+_ = v_0
+return (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v_0.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V0
+}
+
+func Call_get7(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var v_0 gopurs_runtime.Value = v_0_loop
+_ = v_0
+return (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v_0.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V0
+}
+
+func Call_get6(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var v_0 gopurs_runtime.Value = v_0_loop
+_ = v_0
+return (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v_0.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V0
+}
+
+func Call_get5(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var v_0 gopurs_runtime.Value = v_0_loop
+_ = v_0
+return (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v_0.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V0
+}
+
+func Call_get4(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var v_0 gopurs_runtime.Value = v_0_loop
+_ = v_0
+return (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v_0.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V0
+}
+
+func Call_get3(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var v_0 gopurs_runtime.Value = v_0_loop
+_ = v_0
+return (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v_0.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V0
+}
+
+func Call_get2(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var v_0 gopurs_runtime.Value = v_0_loop
+_ = v_0
+return (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v_0.UnsafePtr).V1.UnsafePtr).V0
+}
+
+func Call_get10(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var v_0 gopurs_runtime.Value = v_0_loop
+_ = v_0
+return (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v_0.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V1.UnsafePtr).V0
+}
+
+func Call_get1(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var v_0 gopurs_runtime.Value = v_0_loop
+_ = v_0
+return (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v_0.UnsafePtr).V0
 }
 
 func Call_curry8(z_0_loop gopurs_runtime.Value, f_prime_1_loop gopurs_runtime.Value, a_2_loop gopurs_runtime.Value, b_3_loop gopurs_runtime.Value, c_4_loop gopurs_runtime.Value, d_5_loop gopurs_runtime.Value, e_6_loop gopurs_runtime.Value, f_7_loop gopurs_runtime.Value, g_8_loop gopurs_runtime.Value, h_9_loop gopurs_runtime.Value) gopurs_runtime.Value {

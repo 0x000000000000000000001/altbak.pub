@@ -14,9 +14,44 @@ var cache_max gopurs_runtime.Value
 var once_max sync.Once
 func Get_max() gopurs_runtime.Value {
 	once_max.Do(func() {
-		cache_max = gopurs_runtime.Func2(func(x_0_box gopurs_runtime.Value, y_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_max(x_0_box, y_1_box)
+		cache_max = func() gopurs_runtime.Value {
+__local_var_0_0 := gopurs_runtime.Apply3(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: nil})
+_ = __local_var_0_0
+return gopurs_runtime.Func2(func(x_1 gopurs_runtime.Value, y_2 gopurs_runtime.Value) gopurs_runtime.Value {
+v_3_1 := gopurs_runtime.Apply2(__local_var_0_0, x_1, y_2)
+_ = v_3_1
+var __t2 gopurs_runtime.Value
+{
+if (v_3_1.Type == 9 && v_3_1.IntVal == 1527465420) {
+__t2 = y_2
+goto end_branch_2
+} else {
+
+}
+}
+{
+if (v_3_1.Type == 9 && v_3_1.IntVal == 902936544) {
+__t2 = x_1
+goto end_branch_2
+} else {
+
+}
+}
+{
+if (v_3_1.Type == 9 && v_3_1.IntVal == 380165415) {
+__t2 = x_1
+goto end_branch_2
+} else {
+
+}
+}
+{
+__t2 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_2:
+return __t2
 })
+}()
 	})
 	return cache_max
 }
@@ -109,58 +144,19 @@ return Call_genAlphaLowercaseString(dictMonadRec_0_box, dictMonadGen_1_box)
 	return cache_genAlphaLowercaseString
 }
 
-func Call_max(x_0_loop gopurs_runtime.Value, y_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var x_0 gopurs_runtime.Value = x_0_loop
-_ = x_0
-var y_1 gopurs_runtime.Value = y_1_loop
-_ = y_1
-v_2_0 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ord.Get_ordInt(), "compare"), x_0, y_1)
-_ = v_2_0
-var __t1 gopurs_runtime.Value
-{
-if (v_2_0.Type == 9 && v_2_0.IntVal == 1527465420) {
-__t1 = y_1
-goto end_branch_1
-} else {
-
-}
-}
-{
-if (v_2_0.Type == 9 && v_2_0.IntVal == 902936544) {
-__t1 = x_0
-goto end_branch_1
-} else {
-
-}
-}
-{
-if (v_2_0.Type == 9 && v_2_0.IntVal == 380165415) {
-__t1 = x_0
-goto end_branch_1
-} else {
-
-}
-}
-{
-__t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
-}
-end_branch_1:
-return __t1
-}
-
 func Call_genString(dictMonadRec_0_loop gopurs_runtime.Value, dictMonadGen_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadRec_0 gopurs_runtime.Value = dictMonadRec_0_loop
 _ = dictMonadRec_0
 var dictMonadGen_1 gopurs_runtime.Value = dictMonadGen_1_loop
 _ = dictMonadGen_1
-Bind1_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadGen_1, "Monad0"), gopurs_runtime.Value{}), "Bind1"), gopurs_runtime.Value{})
+Bind1_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadGen_1, "Monad0_NOT_FOUND"), gopurs_runtime.Value{}), "Bind1"), gopurs_runtime.Value{})
 _ = Bind1_2_0
 unfoldable1_3_1 := gopurs_runtime.Apply3(pkg_Control_Monad_Gen.Get_unfoldable(), dictMonadRec_0, dictMonadGen_1, pkg_Data_Unfoldable.Get_unfoldableArray())
 _ = unfoldable1_3_1
 return gopurs_runtime.Func(func(genChar_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadGen_1, "sized"), gopurs_runtime.Func(func(size_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Bind1_2_0, "bind"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadGen_1, "chooseInt"), gopurs_runtime.Int(1), Call_max(gopurs_runtime.Int(1), size_5)), gopurs_runtime.Func(func(newSize_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadGen_1, "resize"), gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(((*gopurs_runtime.RecordData5)(dictMonadGen_1.UnsafePtr)).V4, gopurs_runtime.Func(func(size_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Bind1_2_0, "bind"), gopurs_runtime.Apply2(((*gopurs_runtime.RecordData5)(dictMonadGen_1.UnsafePtr)).V2, gopurs_runtime.Int(1), gopurs_runtime.Apply2(Get_max(), gopurs_runtime.Int(1), size_5)), gopurs_runtime.Func(func(newSize_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(((*gopurs_runtime.RecordData5)(dictMonadGen_1.UnsafePtr)).V3, gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return newSize_6
 }), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Bind1_2_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), pkg_Data_String_CodeUnits.Get_fromCharArray(), gopurs_runtime.Apply(unfoldable1_3_1, genChar_4)))
 }))

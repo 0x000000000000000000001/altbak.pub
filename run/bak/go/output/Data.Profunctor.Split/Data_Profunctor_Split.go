@@ -3,9 +3,19 @@ package Data_Profunctor_Split
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Control_Category "gopurs/output/Control.Category"
 	unsafe "unsafe"
 )
+
+var cache_identity gopurs_runtime.Value
+var once_identity sync.Once
+func Get_identity() gopurs_runtime.Value {
+	once_identity.Do(func() {
+		cache_identity = gopurs_runtime.Func(func(x_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_identity(x_0_box)
+})
+	})
+	return cache_identity
+}
 
 var cache_SplitF gopurs_runtime.Value
 var once_SplitF sync.Once
@@ -74,12 +84,8 @@ var cache_liftSplit gopurs_runtime.Value
 var once_liftSplit sync.Once
 func Get_liftSplit() gopurs_runtime.Value {
 	once_liftSplit.Do(func() {
-		cache_liftSplit = gopurs_runtime.Func(func(fx_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-var fx_0 gopurs_runtime.Value = fx_0_loop
-_ = fx_0
-return gopurs_runtime.Value{Type: 9, IntVal: 1995432569, UnsafePtr: unsafe.Pointer(&Data_Data_Profunctor_Split_SplitF{gopurs_runtime.RecordGet(pkg_Control_Category.Get_categoryFn(), "identity"), gopurs_runtime.RecordGet(pkg_Control_Category.Get_categoryFn(), "identity"), fx_0})}
-}()
+		cache_liftSplit = gopurs_runtime.Func(func(fx_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_liftSplit(fx_0_box)
 })
 	})
 	return cache_liftSplit
@@ -118,6 +124,12 @@ func Is_Data_Data_Profunctor_Split_SplitF(v gopurs_runtime.Value) bool {
 	return v.Type == 9 && v.IntVal == 1995432569
 }
 
+func Call_identity(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var x_0 gopurs_runtime.Value = x_0_loop
+_ = x_0
+return x_0
+}
+
 func Call_unSplit(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
@@ -141,7 +153,13 @@ var dictInvariant_0 gopurs_runtime.Value = dictInvariant_0_loop
 _ = dictInvariant_0
 var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
-return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictInvariant_0, "imap"), (*Data_Data_Profunctor_Split_SplitF)(v_1.UnsafePtr).V1, (*Data_Data_Profunctor_Split_SplitF)(v_1.UnsafePtr).V0, (*Data_Data_Profunctor_Split_SplitF)(v_1.UnsafePtr).V2)
+return gopurs_runtime.Apply3(((*gopurs_runtime.RecordData1)(dictInvariant_0.UnsafePtr)).V0, (*Data_Data_Profunctor_Split_SplitF)(v_1.UnsafePtr).V1, (*Data_Data_Profunctor_Split_SplitF)(v_1.UnsafePtr).V0, (*Data_Data_Profunctor_Split_SplitF)(v_1.UnsafePtr).V2)
+}
+
+func Call_liftSplit(fx_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var fx_0 gopurs_runtime.Value = fx_0_loop
+_ = fx_0
+return gopurs_runtime.Value{Type: 9, IntVal: 1995432569, UnsafePtr: unsafe.Pointer(&Data_Data_Profunctor_Split_SplitF{Get_identity(), Get_identity(), fx_0})}
 }
 
 func Call_hoistSplit(nat_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {

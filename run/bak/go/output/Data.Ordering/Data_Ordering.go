@@ -3,14 +3,13 @@ package Data_Ordering
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	unsafe "unsafe"
 )
 
 var cache_LT gopurs_runtime.Value
 var once_LT sync.Once
 func Get_LT() gopurs_runtime.Value {
 	once_LT.Do(func() {
-		cache_LT = gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(&Data_Data_Ordering_LT{})}
+		cache_LT = gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: nil}
 	})
 	return cache_LT
 }
@@ -19,7 +18,7 @@ var cache_GT gopurs_runtime.Value
 var once_GT sync.Once
 func Get_GT() gopurs_runtime.Value {
 	once_GT.Do(func() {
-		cache_GT = gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(&Data_Data_Ordering_GT{})}
+		cache_GT = gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: nil}
 	})
 	return cache_GT
 }
@@ -28,7 +27,7 @@ var cache_EQ gopurs_runtime.Value
 var once_EQ sync.Once
 func Get_EQ() gopurs_runtime.Value {
 	once_EQ.Do(func() {
-		cache_EQ = gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: unsafe.Pointer(&Data_Data_Ordering_EQ{})}
+		cache_EQ = gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil}
 	})
 	return cache_EQ
 }
@@ -81,7 +80,7 @@ func Get_semigroupOrdering() gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
 if (v_0.Type == 9 && v_0.IntVal == 1527465420) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(&Data_Data_Ordering_LT{})}
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: nil}
 goto end_branch_0
 } else {
 
@@ -89,7 +88,7 @@ goto end_branch_0
 }
 {
 if (v_0.Type == 9 && v_0.IntVal == 380165415) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(&Data_Data_Ordering_GT{})}
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: nil}
 goto end_branch_0
 } else {
 
@@ -117,41 +116,8 @@ var cache_invert gopurs_runtime.Value
 var once_invert sync.Once
 func Get_invert() gopurs_runtime.Value {
 	once_invert.Do(func() {
-		cache_invert = gopurs_runtime.Func(func(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-var v_0 gopurs_runtime.Value = v_0_loop
-_ = v_0
-var __t0 gopurs_runtime.Value
-{
-if (v_0.Type == 9 && v_0.IntVal == 380165415) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(&Data_Data_Ordering_LT{})}
-goto end_branch_0
-} else {
-
-}
-}
-{
-if (v_0.Type == 9 && v_0.IntVal == 902936544) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: unsafe.Pointer(&Data_Data_Ordering_EQ{})}
-goto end_branch_0
-} else {
-
-}
-}
-{
-if (v_0.Type == 9 && v_0.IntVal == 1527465420) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(&Data_Data_Ordering_GT{})}
-goto end_branch_0
-} else {
-
-}
-}
-{
-__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
-}
-end_branch_0:
-return __t0
-}()
+		cache_invert = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_invert(v_0_box)
 })
 	})
 	return cache_invert
@@ -208,6 +174,41 @@ type Data_Data_Ordering_EQ struct {
 }
 func Is_Data_Data_Ordering_EQ(v gopurs_runtime.Value) bool {
 	return v.Type == 9 && v.IntVal == 902936544
+}
+
+func Call_invert(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var v_0 gopurs_runtime.Value = v_0_loop
+_ = v_0
+var __t0 gopurs_runtime.Value
+{
+if (v_0.Type == 9 && v_0.IntVal == 380165415) {
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: nil}
+goto end_branch_0
+} else {
+
+}
+}
+{
+if (v_0.Type == 9 && v_0.IntVal == 902936544) {
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil}
+goto end_branch_0
+} else {
+
+}
+}
+{
+if (v_0.Type == 9 && v_0.IntVal == 1527465420) {
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: nil}
+goto end_branch_0
+} else {
+
+}
+}
+{
+__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_0:
+return __t0
 }
 
 

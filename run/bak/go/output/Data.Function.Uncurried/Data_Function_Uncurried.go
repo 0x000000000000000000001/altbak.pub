@@ -9,12 +9,8 @@ var cache_runFn1 gopurs_runtime.Value
 var once_runFn1 sync.Once
 func Get_runFn1() gopurs_runtime.Value {
 	once_runFn1.Do(func() {
-		cache_runFn1 = gopurs_runtime.Func(func(f_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-var f_0 gopurs_runtime.Value = f_0_loop
-_ = f_0
-return f_0
-}()
+		cache_runFn1 = gopurs_runtime.Func(func(f_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_runFn1(f_0_box)
 })
 	})
 	return cache_runFn1
@@ -24,18 +20,24 @@ var cache_mkFn1 gopurs_runtime.Value
 var once_mkFn1 sync.Once
 func Get_mkFn1() gopurs_runtime.Value {
 	once_mkFn1.Do(func() {
-		cache_mkFn1 = gopurs_runtime.Func(func(f_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-var f_0 gopurs_runtime.Value = f_0_loop
-_ = f_0
-return f_0
-}()
+		cache_mkFn1 = gopurs_runtime.Func(func(f_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_mkFn1(f_0_box)
 })
 	})
 	return cache_mkFn1
 }
 
+func Call_runFn1(f_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var f_0 gopurs_runtime.Value = f_0_loop
+_ = f_0
+return f_0
+}
 
+func Call_mkFn1(f_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var f_0 gopurs_runtime.Value = f_0_loop
+_ = f_0
+return f_0
+}
 
 func Get_mkFn0() gopurs_runtime.Value {
 	return _Gopurs_MkFn0

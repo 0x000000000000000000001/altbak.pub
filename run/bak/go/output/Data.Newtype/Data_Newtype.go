@@ -10,12 +10,8 @@ var cache_wrap gopurs_runtime.Value
 var once_wrap sync.Once
 func Get_wrap() gopurs_runtime.Value {
 	once_wrap.Do(func() {
-		cache_wrap = gopurs_runtime.Func(func(_dollar__unused_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
-_ = _dollar__unused_0
-return pkg_Unsafe_Coerce.Get_unsafeCoerce()
-}()
+		cache_wrap = gopurs_runtime.Func(func(_dollar__unused_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_wrap(_dollar__unused_0_box)
 })
 	})
 	return cache_wrap
@@ -25,12 +21,8 @@ var cache_unwrap gopurs_runtime.Value
 var once_unwrap sync.Once
 func Get_unwrap() gopurs_runtime.Value {
 	once_unwrap.Do(func() {
-		cache_unwrap = gopurs_runtime.Func(func(_dollar__unused_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
-_ = _dollar__unused_0
-return pkg_Unsafe_Coerce.Get_unsafeCoerce()
-}()
+		cache_unwrap = gopurs_runtime.Func(func(_dollar__unused_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_unwrap(_dollar__unused_0_box)
 })
 	})
 	return cache_unwrap
@@ -276,6 +268,18 @@ return Call_ala(_dollar__unused_0_box, _dollar__unused_1_box, _dollar__unused_2_
 })
 	})
 	return cache_ala
+}
+
+func Call_wrap(_dollar__unused_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
+_ = _dollar__unused_0
+return pkg_Unsafe_Coerce.Get_unsafeCoerce()
+}
+
+func Call_unwrap(_dollar__unused_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
+_ = _dollar__unused_0
+return pkg_Unsafe_Coerce.Get_unsafeCoerce()
 }
 
 func Call_underF2(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, _dollar__unused_2_loop gopurs_runtime.Value, _dollar__unused_3_loop gopurs_runtime.Value, v_4_loop gopurs_runtime.Value) gopurs_runtime.Value {

@@ -3,15 +3,34 @@ package Data_Time
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Show "gopurs/output/Data.Show"
+	pkg_Data_Ring "gopurs/output/Data.Ring"
+	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
+	pkg_Data_Time_Component "gopurs/output/Data.Time.Component"
+	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
 	pkg_Data_Number "gopurs/output/Data.Number"
-	pkg_Data_Int "gopurs/output/Data.Int"
+	pkg_Data_EuclideanRing "gopurs/output/Data.EuclideanRing"
+	pkg_Data_Semiring "gopurs/output/Data.Semiring"
 	pkg_Data_Maybe "gopurs/output/Data.Maybe"
-	pkg_Data_Ord "gopurs/output/Data.Ord"
-	pkg_Data_Ordering "gopurs/output/Data.Ordering"
+	pkg_Data_Int "gopurs/output/Data.Int"
+	pkg_Data_Time_Duration "gopurs/output/Data.Time.Duration"
 	pkg_Data_Tuple "gopurs/output/Data.Tuple"
 	unsafe "unsafe"
 )
+
+var cache_negate gopurs_runtime.Value
+var once_negate sync.Once
+func Get_negate() gopurs_runtime.Value {
+	once_negate.Do(func() {
+		cache_negate = func() gopurs_runtime.Value {
+zero_0_0 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Ring.Get_ringNumber(), "Semiring0"), gopurs_runtime.Value{}), "zero")
+_ = zero_0_0
+return gopurs_runtime.Func(func(a_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ring.Get_ringNumber(), "sub"), zero_0_0, a_1)
+})
+}()
+	})
+	return cache_negate
+}
 
 var cache_Time gopurs_runtime.Value
 var once_Time sync.Once
@@ -35,7 +54,7 @@ var once_showTime sync.Once
 func Get_showTime() gopurs_runtime.Value {
 	once_showTime.Do(func() {
 		cache_showTime = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str((((((((("(Time (Hour ") + (gopurs_runtime.Apply(pkg_Data_Show.Get_showIntImpl(), (*Data_Data_Time_Time)(v_0.UnsafePtr).V0).StrVal())) + (") (Minute ")) + (gopurs_runtime.Apply(pkg_Data_Show.Get_showIntImpl(), (*Data_Data_Time_Time)(v_0.UnsafePtr).V1).StrVal())) + (") (Second ")) + (gopurs_runtime.Apply(pkg_Data_Show.Get_showIntImpl(), (*Data_Data_Time_Time)(v_0.UnsafePtr).V2).StrVal())) + (") (Millisecond ")) + (gopurs_runtime.Apply(pkg_Data_Show.Get_showIntImpl(), (*Data_Data_Time_Time)(v_0.UnsafePtr).V3).StrVal())) + ("))"))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Str("(Time "), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_showHour(), "show"), (*Data_Data_Time_Time)(v_0.UnsafePtr).V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Str(" "), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_showMinute(), "show"), (*Data_Data_Time_Time)(v_0.UnsafePtr).V1), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Str(" "), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_showSecond(), "show"), (*Data_Data_Time_Time)(v_0.UnsafePtr).V2), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Str(" "), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_showMillisecond(), "show"), (*Data_Data_Time_Time)(v_0.UnsafePtr).V3), gopurs_runtime.Str(")")))))))))
 }))
 	})
 	return cache_showTime
@@ -89,12 +108,8 @@ var cache_second gopurs_runtime.Value
 var once_second sync.Once
 func Get_second() gopurs_runtime.Value {
 	once_second.Do(func() {
-		cache_second = gopurs_runtime.Func(func(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-var v_0 gopurs_runtime.Value = v_0_loop
-_ = v_0
-return (*Data_Data_Time_Time)(v_0.UnsafePtr).V2
-}()
+		cache_second = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_second(v_0_box)
 })
 	})
 	return cache_second
@@ -104,12 +119,8 @@ var cache_minute gopurs_runtime.Value
 var once_minute sync.Once
 func Get_minute() gopurs_runtime.Value {
 	once_minute.Do(func() {
-		cache_minute = gopurs_runtime.Func(func(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-var v_0 gopurs_runtime.Value = v_0_loop
-_ = v_0
-return (*Data_Data_Time_Time)(v_0.UnsafePtr).V1
-}()
+		cache_minute = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_minute(v_0_box)
 })
 	})
 	return cache_minute
@@ -119,12 +130,8 @@ var cache_millisecond gopurs_runtime.Value
 var once_millisecond sync.Once
 func Get_millisecond() gopurs_runtime.Value {
 	once_millisecond.Do(func() {
-		cache_millisecond = gopurs_runtime.Func(func(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-var v_0 gopurs_runtime.Value = v_0_loop
-_ = v_0
-return (*Data_Data_Time_Time)(v_0.UnsafePtr).V3
-}()
+		cache_millisecond = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_millisecond(v_0_box)
 })
 	})
 	return cache_millisecond
@@ -134,192 +141,8 @@ var cache_millisToTime gopurs_runtime.Value
 var once_millisToTime sync.Once
 func Get_millisToTime() gopurs_runtime.Value {
 	once_millisToTime.Do(func() {
-		cache_millisToTime = gopurs_runtime.Func(func(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-var v_0 gopurs_runtime.Value = v_0_loop
-_ = v_0
-hours_1_0 := gopurs_runtime.Apply(pkg_Data_Number.Get_floor(), gopurs_runtime.Float((v_0.FloatVal()) / (3600000.0)))
-_ = hours_1_0
-minutes_2_1 := gopurs_runtime.Apply(pkg_Data_Number.Get_floor(), gopurs_runtime.Float(((v_0.FloatVal()) - ((hours_1_0.FloatVal()) * (3600000.0))) / (60000.0)))
-_ = minutes_2_1
-seconds_3_2 := gopurs_runtime.Apply(pkg_Data_Number.Get_floor(), gopurs_runtime.Float(((v_0.FloatVal()) - (((hours_1_0.FloatVal()) * (3600000.0)) + ((minutes_2_1.FloatVal()) * (60000.0)))) / (1000.0)))
-_ = seconds_3_2
-__local_var_4_3 := gopurs_runtime.Apply(pkg_Data_Int.Get_unsafeClamp(), gopurs_runtime.Apply(pkg_Data_Number.Get_floor(), hours_1_0))
-_ = __local_var_4_3
-var __t5 gopurs_runtime.Value
-{
-if ((__local_var_4_3.IntVal) >= (0)) && ((__local_var_4_3.IntVal) <= (23)) {
-__t5 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{__local_var_4_3})}
-goto end_branch_5
-} else {
-
-}
-}
-{
-__t5 = gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}
-}
-end_branch_5:
-__local_var_5_4 := __t5
-_ = __local_var_5_4
-var __t7 gopurs_runtime.Value
-{
-if (__local_var_5_4.Type == 9 && __local_var_5_4.IntVal == 930809136) {
-__t7 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{gopurs_runtime.Apply(Get_Time(), (*pkg_Data_Maybe.Data_Data_Maybe_Just)(__local_var_5_4.UnsafePtr).V0)})}
-goto end_branch_7
-} else {
-
-}
-}
-{
-__t7 = gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}
-}
-end_branch_7:
-__local_var_6_6 := __t7
-_ = __local_var_6_6
-__local_var_7_8 := gopurs_runtime.Apply(pkg_Data_Int.Get_unsafeClamp(), gopurs_runtime.Apply(pkg_Data_Number.Get_floor(), minutes_2_1))
-_ = __local_var_7_8
-var __t9 gopurs_runtime.Value
-{
-if ((__local_var_7_8.IntVal) >= (0)) && ((__local_var_7_8.IntVal) <= (59)) {
-var __t10 gopurs_runtime.Value
-{
-if (__local_var_6_6.Type == 9 && __local_var_6_6.IntVal == 930809136) {
-__local_var_8_11 := gopurs_runtime.Apply(pkg_Data_Int.Get_unsafeClamp(), gopurs_runtime.Apply(pkg_Data_Number.Get_floor(), seconds_3_2))
-_ = __local_var_8_11
-var __t14 gopurs_runtime.Value
-{
-if ((__local_var_8_11.IntVal) >= (0)) && ((__local_var_8_11.IntVal) <= (59)) {
-__local_var_9_15 := gopurs_runtime.Apply(pkg_Data_Int.Get_unsafeClamp(), gopurs_runtime.Apply(pkg_Data_Number.Get_floor(), gopurs_runtime.Float((v_0.FloatVal()) - ((((hours_1_0.FloatVal()) * (3600000.0)) + ((minutes_2_1.FloatVal()) * (60000.0))) + ((seconds_3_2.FloatVal()) * (1000.0))))))
-_ = __local_var_9_15
-var __t16 gopurs_runtime.Value
-{
-if ((__local_var_9_15.IntVal) >= (0)) && ((__local_var_9_15.IntVal) <= (999)) {
-__t16 = gopurs_runtime.Apply3((*pkg_Data_Maybe.Data_Data_Maybe_Just)(__local_var_6_6.UnsafePtr).V0, __local_var_7_8, __local_var_8_11, __local_var_9_15)
-goto end_branch_16
-} else {
-
-}
-}
-{
-__t16 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
-}
-end_branch_16:
-__t14 = __t16
-goto end_branch_14
-} else {
-
-}
-}
-{
-__local_var_9_12 := gopurs_runtime.Apply(pkg_Data_Int.Get_unsafeClamp(), gopurs_runtime.Apply(pkg_Data_Number.Get_floor(), gopurs_runtime.Float((v_0.FloatVal()) - ((((hours_1_0.FloatVal()) * (3600000.0)) + ((minutes_2_1.FloatVal()) * (60000.0))) + ((seconds_3_2.FloatVal()) * (1000.0))))))
-_ = __local_var_9_12
-var __t13 gopurs_runtime.Value
-{
-if ((__local_var_9_12.IntVal) >= (0)) && ((__local_var_9_12.IntVal) <= (999)) {
-__t13 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
-goto end_branch_13
-} else {
-
-}
-}
-{
-__t13 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
-}
-end_branch_13:
-__t14 = __t13
-}
-end_branch_14:
-__t10 = __t14
-goto end_branch_10
-} else {
-
-}
-}
-{
-if (__local_var_6_6.Type == 9 && __local_var_6_6.IntVal == 3589588149) {
-__local_var_8_17 := gopurs_runtime.Apply(pkg_Data_Int.Get_unsafeClamp(), gopurs_runtime.Apply(pkg_Data_Number.Get_floor(), gopurs_runtime.Float((v_0.FloatVal()) - ((((hours_1_0.FloatVal()) * (3600000.0)) + ((minutes_2_1.FloatVal()) * (60000.0))) + ((seconds_3_2.FloatVal()) * (1000.0))))))
-_ = __local_var_8_17
-var __t18 gopurs_runtime.Value
-{
-if ((__local_var_8_17.IntVal) >= (0)) && ((__local_var_8_17.IntVal) <= (999)) {
-__t18 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
-goto end_branch_18
-} else {
-
-}
-}
-{
-__t18 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
-}
-end_branch_18:
-__t10 = __t18
-goto end_branch_10
-} else {
-
-}
-}
-{
-__t10 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
-}
-end_branch_10:
-__t9 = __t10
-goto end_branch_9
-} else {
-
-}
-}
-{
-if (__local_var_6_6.Type == 9 && __local_var_6_6.IntVal == 930809136) {
-__local_var_8_19 := gopurs_runtime.Apply(pkg_Data_Int.Get_unsafeClamp(), gopurs_runtime.Apply(pkg_Data_Number.Get_floor(), gopurs_runtime.Float((v_0.FloatVal()) - ((((hours_1_0.FloatVal()) * (3600000.0)) + ((minutes_2_1.FloatVal()) * (60000.0))) + ((seconds_3_2.FloatVal()) * (1000.0))))))
-_ = __local_var_8_19
-var __t20 gopurs_runtime.Value
-{
-if ((__local_var_8_19.IntVal) >= (0)) && ((__local_var_8_19.IntVal) <= (999)) {
-__t20 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
-goto end_branch_20
-} else {
-
-}
-}
-{
-__t20 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
-}
-end_branch_20:
-__t9 = __t20
-goto end_branch_9
-} else {
-
-}
-}
-{
-if (__local_var_6_6.Type == 9 && __local_var_6_6.IntVal == 3589588149) {
-__local_var_8_21 := gopurs_runtime.Apply(pkg_Data_Int.Get_unsafeClamp(), gopurs_runtime.Apply(pkg_Data_Number.Get_floor(), gopurs_runtime.Float((v_0.FloatVal()) - ((((hours_1_0.FloatVal()) * (3600000.0)) + ((minutes_2_1.FloatVal()) * (60000.0))) + ((seconds_3_2.FloatVal()) * (1000.0))))))
-_ = __local_var_8_21
-var __t22 gopurs_runtime.Value
-{
-if ((__local_var_8_21.IntVal) >= (0)) && ((__local_var_8_21.IntVal) <= (999)) {
-__t22 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
-goto end_branch_22
-} else {
-
-}
-}
-{
-__t22 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
-}
-end_branch_22:
-__t9 = __t22
-goto end_branch_9
-} else {
-
-}
-}
-{
-__t9 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
-}
-end_branch_9:
-return __t9
-}()
+		cache_millisToTime = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_millisToTime(v_0_box)
 })
 	})
 	return cache_millisToTime
@@ -329,12 +152,8 @@ var cache_hour gopurs_runtime.Value
 var once_hour sync.Once
 func Get_hour() gopurs_runtime.Value {
 	once_hour.Do(func() {
-		cache_hour = gopurs_runtime.Func(func(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-var v_0 gopurs_runtime.Value = v_0_loop
-_ = v_0
-return (*Data_Data_Time_Time)(v_0.UnsafePtr).V0
-}()
+		cache_hour = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_hour(v_0_box)
 })
 	})
 	return cache_hour
@@ -344,12 +163,8 @@ var cache_timeToMillis gopurs_runtime.Value
 var once_timeToMillis sync.Once
 func Get_timeToMillis() gopurs_runtime.Value {
 	once_timeToMillis.Do(func() {
-		cache_timeToMillis = gopurs_runtime.Func(func(t_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-var t_0 gopurs_runtime.Value = t_0_loop
-_ = t_0
-return gopurs_runtime.Float(((((3600000.0) * (gopurs_runtime.Apply(pkg_Data_Int.Get_toNumber(), (*Data_Data_Time_Time)(t_0.UnsafePtr).V0).FloatVal())) + ((60000.0) * (gopurs_runtime.Apply(pkg_Data_Int.Get_toNumber(), (*Data_Data_Time_Time)(t_0.UnsafePtr).V1).FloatVal()))) + ((1000.0) * (gopurs_runtime.Apply(pkg_Data_Int.Get_toNumber(), (*Data_Data_Time_Time)(t_0.UnsafePtr).V2).FloatVal()))) + (gopurs_runtime.Apply(pkg_Data_Int.Get_toNumber(), (*Data_Data_Time_Time)(t_0.UnsafePtr).V3).FloatVal()))
-}()
+		cache_timeToMillis = gopurs_runtime.Func(func(t_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_timeToMillis(t_0_box)
 })
 	})
 	return cache_timeToMillis
@@ -360,7 +175,7 @@ var once_eqTime sync.Once
 func Get_eqTime() gopurs_runtime.Value {
 	once_eqTime.Do(func() {
 		cache_eqTime = gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func2(func(x_0 gopurs_runtime.Value, y_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool((((((*Data_Data_Time_Time)(x_0.UnsafePtr).V0.IntVal) == ((*Data_Data_Time_Time)(y_1.UnsafePtr).V0.IntVal)) && (((*Data_Data_Time_Time)(x_0.UnsafePtr).V1.IntVal) == ((*Data_Data_Time_Time)(y_1.UnsafePtr).V1.IntVal))) && (((*Data_Data_Time_Time)(x_0.UnsafePtr).V2.IntVal) == ((*Data_Data_Time_Time)(y_1.UnsafePtr).V2.IntVal))) && (((*Data_Data_Time_Time)(x_0.UnsafePtr).V3.IntVal) == ((*Data_Data_Time_Time)(y_1.UnsafePtr).V3.IntVal)))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "conj"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "conj"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "conj"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_eqHour(), "eq"), (*Data_Data_Time_Time)(x_0.UnsafePtr).V0, (*Data_Data_Time_Time)(y_1.UnsafePtr).V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_eqMinute(), "eq"), (*Data_Data_Time_Time)(x_0.UnsafePtr).V1, (*Data_Data_Time_Time)(y_1.UnsafePtr).V1)), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_eqSecond(), "eq"), (*Data_Data_Time_Time)(x_0.UnsafePtr).V2, (*Data_Data_Time_Time)(y_1.UnsafePtr).V2)), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_eqMillisecond(), "eq"), (*Data_Data_Time_Time)(x_0.UnsafePtr).V3, (*Data_Data_Time_Time)(y_1.UnsafePtr).V3))
 }))
 	})
 	return cache_eqTime
@@ -370,13 +185,15 @@ var cache_ordTime gopurs_runtime.Value
 var once_ordTime sync.Once
 func Get_ordTime() gopurs_runtime.Value {
 	once_ordTime.Do(func() {
-		cache_ordTime = gopurs_runtime.RecordDict2("compare", "Eq0", gopurs_runtime.Func2(func(x_0 gopurs_runtime.Value, y_1 gopurs_runtime.Value) gopurs_runtime.Value {
-v_2_0 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ord.Get_ordInt(), "compare"), (*Data_Data_Time_Time)(x_0.UnsafePtr).V0, (*Data_Data_Time_Time)(y_1.UnsafePtr).V0)
+		cache_ordTime = gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_eqTime()
+}), gopurs_runtime.Func2(func(x_0 gopurs_runtime.Value, y_1 gopurs_runtime.Value) gopurs_runtime.Value {
+v_2_0 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_ordHour(), "compare"), (*Data_Data_Time_Time)(x_0.UnsafePtr).V0, (*Data_Data_Time_Time)(y_1.UnsafePtr).V0)
 _ = v_2_0
 var __t5 gopurs_runtime.Value
 {
 if (v_2_0.Type == 9 && v_2_0.IntVal == 1527465420) {
-__t5 = gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_LT{})}
+__t5 = gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: nil}
 goto end_branch_5
 } else {
 
@@ -384,19 +201,19 @@ goto end_branch_5
 }
 {
 if (v_2_0.Type == 9 && v_2_0.IntVal == 380165415) {
-__t5 = gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_GT{})}
+__t5 = gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: nil}
 goto end_branch_5
 } else {
 
 }
 }
 {
-v1_3_1 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ord.Get_ordInt(), "compare"), (*Data_Data_Time_Time)(x_0.UnsafePtr).V1, (*Data_Data_Time_Time)(y_1.UnsafePtr).V1)
+v1_3_1 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_ordMinute(), "compare"), (*Data_Data_Time_Time)(x_0.UnsafePtr).V1, (*Data_Data_Time_Time)(y_1.UnsafePtr).V1)
 _ = v1_3_1
 var __t4 gopurs_runtime.Value
 {
 if (v1_3_1.Type == 9 && v1_3_1.IntVal == 1527465420) {
-__t4 = gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_LT{})}
+__t4 = gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: nil}
 goto end_branch_4
 } else {
 
@@ -404,19 +221,19 @@ goto end_branch_4
 }
 {
 if (v1_3_1.Type == 9 && v1_3_1.IntVal == 380165415) {
-__t4 = gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_GT{})}
+__t4 = gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: nil}
 goto end_branch_4
 } else {
 
 }
 }
 {
-v2_4_2 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ord.Get_ordInt(), "compare"), (*Data_Data_Time_Time)(x_0.UnsafePtr).V2, (*Data_Data_Time_Time)(y_1.UnsafePtr).V2)
+v2_4_2 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_ordSecond(), "compare"), (*Data_Data_Time_Time)(x_0.UnsafePtr).V2, (*Data_Data_Time_Time)(y_1.UnsafePtr).V2)
 _ = v2_4_2
 var __t3 gopurs_runtime.Value
 {
 if (v2_4_2.Type == 9 && v2_4_2.IntVal == 1527465420) {
-__t3 = gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_LT{})}
+__t3 = gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: nil}
 goto end_branch_3
 } else {
 
@@ -424,14 +241,14 @@ goto end_branch_3
 }
 {
 if (v2_4_2.Type == 9 && v2_4_2.IntVal == 380165415) {
-__t3 = gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_GT{})}
+__t3 = gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: nil}
 goto end_branch_3
 } else {
 
 }
 }
 {
-__t3 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ord.Get_ordInt(), "compare"), (*Data_Data_Time_Time)(x_0.UnsafePtr).V3, (*Data_Data_Time_Time)(y_1.UnsafePtr).V3)
+__t3 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_ordMillisecond(), "compare"), (*Data_Data_Time_Time)(x_0.UnsafePtr).V3, (*Data_Data_Time_Time)(y_1.UnsafePtr).V3)
 }
 end_branch_3:
 __t4 = __t3
@@ -441,8 +258,6 @@ __t5 = __t4
 }
 end_branch_5:
 return __t5
-}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_eqTime()
 }))
 	})
 	return cache_ordTime
@@ -463,9 +278,9 @@ var cache_boundedTime gopurs_runtime.Value
 var once_boundedTime sync.Once
 func Get_boundedTime() gopurs_runtime.Value {
 	once_boundedTime.Do(func() {
-		cache_boundedTime = gopurs_runtime.RecordDict3("bottom", "top", "Ord0", gopurs_runtime.Value{Type: 9, IntVal: 922918650, UnsafePtr: unsafe.Pointer(&Data_Data_Time_Time{gopurs_runtime.Int(0), gopurs_runtime.Int(0), gopurs_runtime.Int(0), gopurs_runtime.Int(0)})}, gopurs_runtime.Value{Type: 9, IntVal: 922918650, UnsafePtr: unsafe.Pointer(&Data_Data_Time_Time{gopurs_runtime.Int(23), gopurs_runtime.Int(59), gopurs_runtime.Int(59), gopurs_runtime.Int(999)})}, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_boundedTime = gopurs_runtime.RecordDict3("Ord0", "bottom", "top", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_ordTime()
-}))
+}), gopurs_runtime.Value{Type: 9, IntVal: 922918650, UnsafePtr: unsafe.Pointer(&Data_Data_Time_Time{gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_boundedHour(), "bottom"), gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_boundedMinute(), "bottom"), gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_boundedSecond(), "bottom"), gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_boundedMillisecond(), "bottom")})}, gopurs_runtime.Value{Type: 9, IntVal: 922918650, UnsafePtr: unsafe.Pointer(&Data_Data_Time_Time{gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_boundedHour(), "top"), gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_boundedMinute(), "top"), gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_boundedSecond(), "top"), gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_boundedMillisecond(), "top")})})
 	})
 	return cache_boundedTime
 }
@@ -474,7 +289,7 @@ var cache_maxTime gopurs_runtime.Value
 var once_maxTime sync.Once
 func Get_maxTime() gopurs_runtime.Value {
 	once_maxTime.Do(func() {
-		cache_maxTime = gopurs_runtime.Apply(Get_timeToMillis(), gopurs_runtime.Value{Type: 9, IntVal: 922918650, UnsafePtr: unsafe.Pointer(&Data_Data_Time_Time{gopurs_runtime.Int(23), gopurs_runtime.Int(59), gopurs_runtime.Int(59), gopurs_runtime.Int(999)})})
+		cache_maxTime = gopurs_runtime.Apply(Get_timeToMillis(), gopurs_runtime.RecordGet(Get_boundedTime(), "top"))
 	})
 	return cache_maxTime
 }
@@ -483,7 +298,7 @@ var cache_minTime gopurs_runtime.Value
 var once_minTime sync.Once
 func Get_minTime() gopurs_runtime.Value {
 	once_minTime.Do(func() {
-		cache_minTime = gopurs_runtime.Apply(Get_timeToMillis(), gopurs_runtime.Value{Type: 9, IntVal: 922918650, UnsafePtr: unsafe.Pointer(&Data_Data_Time_Time{gopurs_runtime.Int(0), gopurs_runtime.Int(0), gopurs_runtime.Int(0), gopurs_runtime.Int(0)})})
+		cache_minTime = gopurs_runtime.Apply(Get_timeToMillis(), gopurs_runtime.RecordGet(Get_boundedTime(), "bottom"))
 	})
 	return cache_minTime
 }
@@ -541,6 +356,63 @@ _ = v_1
 return gopurs_runtime.Value{Type: 9, IntVal: 922918650, UnsafePtr: unsafe.Pointer(&Data_Data_Time_Time{h_0, (*Data_Data_Time_Time)(v_1.UnsafePtr).V1, (*Data_Data_Time_Time)(v_1.UnsafePtr).V2, (*Data_Data_Time_Time)(v_1.UnsafePtr).V3})}
 }
 
+func Call_second(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var v_0 gopurs_runtime.Value = v_0_loop
+_ = v_0
+return (*Data_Data_Time_Time)(v_0.UnsafePtr).V2
+}
+
+func Call_minute(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var v_0 gopurs_runtime.Value = v_0_loop
+_ = v_0
+return (*Data_Data_Time_Time)(v_0.UnsafePtr).V1
+}
+
+func Call_millisecond(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var v_0 gopurs_runtime.Value = v_0_loop
+_ = v_0
+return (*Data_Data_Time_Time)(v_0.UnsafePtr).V3
+}
+
+func Call_millisToTime(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var v_0 gopurs_runtime.Value = v_0_loop
+_ = v_0
+hours_1_0 := gopurs_runtime.Apply(pkg_Data_Number.Get_floor(), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingNumber(), "div"), v_0, gopurs_runtime.Float(3600000.0)))
+_ = hours_1_0
+minutes_2_1 := gopurs_runtime.Apply(pkg_Data_Number.Get_floor(), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingNumber(), "div"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ring.Get_ringNumber(), "sub"), v_0, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semiring.Get_semiringNumber(), "mul"), hours_1_0, gopurs_runtime.Float(3600000.0))), gopurs_runtime.Float(60000.0)))
+_ = minutes_2_1
+seconds_3_2 := gopurs_runtime.Apply(pkg_Data_Number.Get_floor(), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingNumber(), "div"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ring.Get_ringNumber(), "sub"), v_0, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semiring.Get_semiringNumber(), "add"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semiring.Get_semiringNumber(), "mul"), hours_1_0, gopurs_runtime.Float(3600000.0)), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semiring.Get_semiringNumber(), "mul"), minutes_2_1, gopurs_runtime.Float(60000.0)))), gopurs_runtime.Float(1000.0)))
+_ = seconds_3_2
+__local_var_4_3 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Maybe.Get_applyMaybe(), "apply"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Maybe.Get_applyMaybe(), "apply"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Maybe.Get_applyMaybe(), "apply"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Maybe.Get_functorMaybe(), "map"), Get_Time(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_boundedEnumHour(), "toEnum"), gopurs_runtime.Apply(pkg_Data_Int.Get_unsafeClamp(), gopurs_runtime.Apply(pkg_Data_Number.Get_floor(), hours_1_0)))), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_boundedEnumMinute(), "toEnum"), gopurs_runtime.Apply(pkg_Data_Int.Get_unsafeClamp(), gopurs_runtime.Apply(pkg_Data_Number.Get_floor(), minutes_2_1)))), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_boundedEnumSecond(), "toEnum"), gopurs_runtime.Apply(pkg_Data_Int.Get_unsafeClamp(), gopurs_runtime.Apply(pkg_Data_Number.Get_floor(), seconds_3_2)))), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_boundedEnumMillisecond(), "toEnum"), gopurs_runtime.Apply(pkg_Data_Int.Get_unsafeClamp(), gopurs_runtime.Apply(pkg_Data_Number.Get_floor(), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ring.Get_ringNumber(), "sub"), v_0, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semiring.Get_semiringNumber(), "add"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semiring.Get_semiringNumber(), "add"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semiring.Get_semiringNumber(), "mul"), hours_1_0, gopurs_runtime.Float(3600000.0)), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semiring.Get_semiringNumber(), "mul"), minutes_2_1, gopurs_runtime.Float(60000.0))), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semiring.Get_semiringNumber(), "mul"), seconds_3_2, gopurs_runtime.Float(1000.0))))))))
+_ = __local_var_4_3
+var __t4 gopurs_runtime.Value
+{
+if (__local_var_4_3.Type == 9 && __local_var_4_3.IntVal == 930809136) {
+__t4 = (*pkg_Data_Maybe.Data_Data_Maybe_Just)(__local_var_4_3.UnsafePtr).V0
+goto end_branch_4
+} else {
+
+}
+}
+{
+__t4 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_4:
+return __t4
+}
+
+func Call_hour(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var v_0 gopurs_runtime.Value = v_0_loop
+_ = v_0
+return (*Data_Data_Time_Time)(v_0.UnsafePtr).V0
+}
+
+func Call_timeToMillis(t_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var t_0 gopurs_runtime.Value = t_0_loop
+_ = t_0
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semiring.Get_semiringNumber(), "add"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semiring.Get_semiringNumber(), "add"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semiring.Get_semiringNumber(), "add"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semiring.Get_semiringNumber(), "mul"), gopurs_runtime.Float(3600000.0), gopurs_runtime.Apply(pkg_Data_Int.Get_toNumber(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_boundedEnumHour(), "fromEnum"), (*Data_Data_Time_Time)(t_0.UnsafePtr).V0))), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semiring.Get_semiringNumber(), "mul"), gopurs_runtime.Float(60000.0), gopurs_runtime.Apply(pkg_Data_Int.Get_toNumber(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_boundedEnumMinute(), "fromEnum"), (*Data_Data_Time_Time)(t_0.UnsafePtr).V1)))), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semiring.Get_semiringNumber(), "mul"), gopurs_runtime.Float(1000.0), gopurs_runtime.Apply(pkg_Data_Int.Get_toNumber(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_boundedEnumSecond(), "fromEnum"), (*Data_Data_Time_Time)(t_0.UnsafePtr).V2)))), gopurs_runtime.Apply(pkg_Data_Int.Get_toNumber(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_boundedEnumMillisecond(), "fromEnum"), (*Data_Data_Time_Time)(t_0.UnsafePtr).V3)))
+}
+
 func Call_diff(dictDuration_0_loop gopurs_runtime.Value, t1_1_loop gopurs_runtime.Value, t2_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictDuration_0 gopurs_runtime.Value = dictDuration_0_loop
 _ = dictDuration_0
@@ -548,7 +420,7 @@ var t1_1 gopurs_runtime.Value = t1_1_loop
 _ = t1_1
 var t2_2 gopurs_runtime.Value = t2_2_loop
 _ = t2_2
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDuration_0, "toDuration"), gopurs_runtime.Float((gopurs_runtime.Apply(Get_timeToMillis(), t1_1).FloatVal()) + ((0.0) - (gopurs_runtime.Apply(Get_timeToMillis(), t2_2).FloatVal()))))
+return gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictDuration_0.UnsafePtr)).V1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_semigroupMilliseconds(), "append"), gopurs_runtime.Apply(Get_timeToMillis(), t1_1), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_durationMilliseconds(), "toDuration"), gopurs_runtime.Apply(pkg_Data_Time_Duration.Get_negate(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_durationMilliseconds(), "fromDuration"), gopurs_runtime.Apply(Get_timeToMillis(), t2_2))))))
 }
 
 func Call_adjust(dictDuration_0_loop gopurs_runtime.Value, d_1_loop gopurs_runtime.Value, t_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -558,15 +430,15 @@ var d_1 gopurs_runtime.Value = d_1_loop
 _ = d_1
 var t_2 gopurs_runtime.Value = t_2_loop
 _ = t_2
-d_prime_3_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDuration_0, "fromDuration"), d_1)
+d_prime_3_0 := gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictDuration_0.UnsafePtr)).V0, d_1)
 _ = d_prime_3_0
-wholeDays_4_1 := gopurs_runtime.Apply(pkg_Data_Number.Get_floor(), gopurs_runtime.Float((d_prime_3_0.FloatVal()) / (86400000.0)))
+wholeDays_4_1 := gopurs_runtime.Apply(pkg_Data_Number.Get_floor(), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingNumber(), "div"), d_prime_3_0, gopurs_runtime.Float(86400000.0)))
 _ = wholeDays_4_1
-msAdjusted_5_2 := ((gopurs_runtime.Apply(Get_timeToMillis(), t_2).FloatVal()) + (d_prime_3_0.FloatVal())) + ((0.0) - ((wholeDays_4_1.FloatVal()) * (86400000.0)))
+msAdjusted_5_2 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_semigroupMilliseconds(), "append"), gopurs_runtime.Apply(Get_timeToMillis(), t_2), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_semigroupMilliseconds(), "append"), d_prime_3_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_durationMilliseconds(), "toDuration"), gopurs_runtime.Apply(pkg_Data_Time_Duration.Get_negate(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_durationMilliseconds(), "fromDuration"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_durationDays(), "fromDuration"), wholeDays_4_1))))))
 _ = msAdjusted_5_2
 var __t4 gopurs_runtime.Value
 {
-if (msAdjusted_5_2) > (Get_maxTime().FloatVal()) {
+if (msAdjusted_5_2.FloatVal()) > (Get_maxTime().FloatVal()) {
 __t4 = gopurs_runtime.Float(1.0)
 goto end_branch_4
 } else {
@@ -574,8 +446,8 @@ goto end_branch_4
 }
 }
 {
-if (msAdjusted_5_2) < (Get_minTime().FloatVal()) {
-__t4 = gopurs_runtime.Float(-1.0)
+if (msAdjusted_5_2.FloatVal()) < (Get_minTime().FloatVal()) {
+__t4 = gopurs_runtime.Apply(Get_negate(), gopurs_runtime.Float(1.0))
 goto end_branch_4
 } else {
 
@@ -587,7 +459,7 @@ __t4 = gopurs_runtime.Float(0.0)
 end_branch_4:
 wrap_6_3 := __t4
 _ = wrap_6_3
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{gopurs_runtime.Float((wholeDays_4_1.FloatVal()) + (wrap_6_3.FloatVal())), gopurs_runtime.Apply(Get_millisToTime(), gopurs_runtime.Float((msAdjusted_5_2) + ((86400000.0) * ((0.0) - (wrap_6_3.FloatVal())))))})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_semigroupDays(), "append"), wholeDays_4_1, wrap_6_3), gopurs_runtime.Apply(Get_millisToTime(), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_semigroupMilliseconds(), "append"), msAdjusted_5_2, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semiring.Get_semiringNumber(), "mul"), gopurs_runtime.Float(86400000.0), gopurs_runtime.Apply(Get_negate(), wrap_6_3))))})}
 }
 
 

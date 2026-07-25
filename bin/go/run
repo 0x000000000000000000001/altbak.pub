@@ -106,7 +106,7 @@ EOF
     go build -o go_app .
     cd ..
     
-    ./output/go_app
+    GOGC=1000 ./output/go_app
 else
     echo "No output/${ENTRY_POINT}/Main.go generated."
 fi

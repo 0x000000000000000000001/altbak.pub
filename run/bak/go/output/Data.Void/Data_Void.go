@@ -9,8 +9,14 @@ var cache_absurd gopurs_runtime.Value
 var once_absurd sync.Once
 func Get_absurd() gopurs_runtime.Value {
 	once_absurd.Do(func() {
-		cache_absurd = gopurs_runtime.Func(func(a_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
+		cache_absurd = gopurs_runtime.Func(func(a_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_absurd(a_0_box)
+})
+	})
+	return cache_absurd
+}
+
+func Call_absurd(a_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var a_0 gopurs_runtime.Value = a_0_loop
 _ = a_0
 var spin_1_0 gopurs_runtime.Value
@@ -28,12 +34,6 @@ return gopurs_runtime.Value{}
 }()
 })
 return gopurs_runtime.Apply(spin_1_0, a_0)
-}()
-})
-	})
-	return cache_absurd
 }
-
-
 
 

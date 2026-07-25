@@ -4,6 +4,7 @@ import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
 	pkg_Effect_Console "gopurs/output/Effect.Console"
+	pkg_Effect "gopurs/output/Effect"
 	pkg_Bench "gopurs/output/Bench"
 	pkg_Data_Show "gopurs/output/Data.Show"
 	unsafe "unsafe"
@@ -63,8 +64,76 @@ var cache_eval gopurs_runtime.Value
 var once_eval sync.Once
 func Get_eval() gopurs_runtime.Value {
 	once_eval.Do(func() {
-		cache_eval = gopurs_runtime.Func(func(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
+		cache_eval = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_eval(v_0_box)
+})
+	})
+	return cache_eval
+}
+
+var cache_describe gopurs_runtime.Value
+var once_describe sync.Once
+func Get_describe() gopurs_runtime.Value {
+	once_describe.Do(func() {
+		cache_describe = gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Str("AST Evaluation:"))
+	})
+	return cache_describe
+}
+
+var cache_buildTree gopurs_runtime.Value
+var once_buildTree sync.Once
+func Get_buildTree() gopurs_runtime.Value {
+	once_buildTree.Do(func() {
+		cache_buildTree = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_buildTree(v_0_box.IntVal)
+})
+	})
+	return cache_buildTree
+}
+
+var cache_act gopurs_runtime.Value
+var once_act sync.Once
+func Get_act() gopurs_runtime.Value {
+	once_act.Do(func() {
+		cache_act = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Effect.Get_bindEffect(), "bind"), gopurs_runtime.Apply(pkg_Bench.Get_opaque(), gopurs_runtime.Int(3)), gopurs_runtime.Func(func(dummy_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Show.Get_showInt(), "show"), gopurs_runtime.Apply(Get_eval(), gopurs_runtime.Apply(Get_buildTree(), dummy_0))))
+}))
+	})
+	return cache_act
+}
+
+type Data_Test_AstTree_Val struct {
+	V0 gopurs_runtime.Value
+}
+func Is_Data_Test_AstTree_Val(v gopurs_runtime.Value) bool {
+	return v.Type == 9 && v.IntVal == 245188743
+}
+
+type Data_Test_AstTree_Add struct {
+	V0 gopurs_runtime.Value
+	V1 gopurs_runtime.Value
+}
+func Is_Data_Test_AstTree_Add(v gopurs_runtime.Value) bool {
+	return v.Type == 9 && v.IntVal == 2937956733
+}
+
+type Data_Test_AstTree_Mul struct {
+	V0 gopurs_runtime.Value
+	V1 gopurs_runtime.Value
+}
+func Is_Data_Test_AstTree_Mul(v gopurs_runtime.Value) bool {
+	return v.Type == 9 && v.IntVal == 3406566728
+}
+
+type Data_Test_AstTree_Sub struct {
+	V0 gopurs_runtime.Value
+	V1 gopurs_runtime.Value
+}
+func Is_Data_Test_AstTree_Sub(v gopurs_runtime.Value) bool {
+	return v.Type == 9 && v.IntVal == 2029887576
+}
+
+func Call_eval(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 eval:
 for {
 if false { continue eval }
@@ -109,35 +178,17 @@ __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 end_branch_0:
 return __t0
 }
-}()
-})
-	})
-	return cache_eval
 }
 
-var cache_describe gopurs_runtime.Value
-var once_describe sync.Once
-func Get_describe() gopurs_runtime.Value {
-	once_describe.Do(func() {
-		cache_describe = gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Str("AST Evaluation:"))
-	})
-	return cache_describe
-}
-
-var cache_buildTree gopurs_runtime.Value
-var once_buildTree sync.Once
-func Get_buildTree() gopurs_runtime.Value {
-	once_buildTree.Do(func() {
-		cache_buildTree = gopurs_runtime.Func(func(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
+func Call_buildTree(v_0_loop int64) gopurs_runtime.Value {
 buildTree:
 for {
 if false { continue buildTree }
-var v_0 gopurs_runtime.Value = v_0_loop
+var v_0 int64 = v_0_loop
 _ = v_0
 var __t0 gopurs_runtime.Value
 {
-if (v_0.IntVal) == (0) {
+if (v_0) == (0) {
 __t0 = gopurs_runtime.Value{Type: 9, IntVal: 245188743, UnsafePtr: unsafe.Pointer(&Data_Test_AstTree_Val{gopurs_runtime.Int(1)})}
 goto end_branch_0
 } else {
@@ -145,63 +196,11 @@ goto end_branch_0
 }
 }
 {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 2937956733, UnsafePtr: unsafe.Pointer(&Data_Test_AstTree_Add{gopurs_runtime.Value{Type: 9, IntVal: 3406566728, UnsafePtr: unsafe.Pointer(&Data_Test_AstTree_Mul{gopurs_runtime.Value{Type: 9, IntVal: 245188743, UnsafePtr: unsafe.Pointer(&Data_Test_AstTree_Val{v_0})}, gopurs_runtime.Apply(Get_buildTree(), gopurs_runtime.Int((v_0.IntVal) - (1)))})}, gopurs_runtime.Value{Type: 9, IntVal: 2029887576, UnsafePtr: unsafe.Pointer(&Data_Test_AstTree_Sub{gopurs_runtime.Apply(Get_buildTree(), gopurs_runtime.Int((v_0.IntVal) - (1))), gopurs_runtime.Value{Type: 9, IntVal: 245188743, UnsafePtr: unsafe.Pointer(&Data_Test_AstTree_Val{gopurs_runtime.Int(1)})}})}})}
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 2937956733, UnsafePtr: unsafe.Pointer(&Data_Test_AstTree_Add{gopurs_runtime.Value{Type: 9, IntVal: 3406566728, UnsafePtr: unsafe.Pointer(&Data_Test_AstTree_Mul{gopurs_runtime.Value{Type: 9, IntVal: 245188743, UnsafePtr: unsafe.Pointer(&Data_Test_AstTree_Val{gopurs_runtime.Int(v_0)})}, gopurs_runtime.Apply(Get_buildTree(), gopurs_runtime.Int((v_0) - (1)))})}, gopurs_runtime.Value{Type: 9, IntVal: 2029887576, UnsafePtr: unsafe.Pointer(&Data_Test_AstTree_Sub{gopurs_runtime.Apply(Get_buildTree(), gopurs_runtime.Int((v_0) - (1))), gopurs_runtime.Value{Type: 9, IntVal: 245188743, UnsafePtr: unsafe.Pointer(&Data_Test_AstTree_Val{gopurs_runtime.Int(1)})}})}})}
 }
 end_branch_0:
 return __t0
 }
-}()
-})
-	})
-	return cache_buildTree
-}
-
-var cache_act gopurs_runtime.Value
-var once_act sync.Once
-func Get_act() gopurs_runtime.Value {
-	once_act.Do(func() {
-		cache_act = func() gopurs_runtime.Value {
-__local_var_0_0 := gopurs_runtime.Apply(pkg_Bench.Get_opaque(), gopurs_runtime.Int(3))
-_ = __local_var_0_0
-return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-dummy_1_1 := gopurs_runtime.Apply(__local_var_0_0, gopurs_runtime.Value{})
-_ = dummy_1_1
-return gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(pkg_Data_Show.Get_showIntImpl(), gopurs_runtime.Apply(Get_eval(), gopurs_runtime.Apply(Get_buildTree(), dummy_1_1)))), gopurs_runtime.Value{})
-})
-}()
-	})
-	return cache_act
-}
-
-type Data_Test_AstTree_Val struct {
-	V0 gopurs_runtime.Value
-}
-func Is_Data_Test_AstTree_Val(v gopurs_runtime.Value) bool {
-	return v.Type == 9 && v.IntVal == 245188743
-}
-
-type Data_Test_AstTree_Add struct {
-	V0 gopurs_runtime.Value
-	V1 gopurs_runtime.Value
-}
-func Is_Data_Test_AstTree_Add(v gopurs_runtime.Value) bool {
-	return v.Type == 9 && v.IntVal == 2937956733
-}
-
-type Data_Test_AstTree_Mul struct {
-	V0 gopurs_runtime.Value
-	V1 gopurs_runtime.Value
-}
-func Is_Data_Test_AstTree_Mul(v gopurs_runtime.Value) bool {
-	return v.Type == 9 && v.IntVal == 3406566728
-}
-
-type Data_Test_AstTree_Sub struct {
-	V0 gopurs_runtime.Value
-	V1 gopurs_runtime.Value
-}
-func Is_Data_Test_AstTree_Sub(v gopurs_runtime.Value) bool {
-	return v.Type == 9 && v.IntVal == 2029887576
 }
 
 

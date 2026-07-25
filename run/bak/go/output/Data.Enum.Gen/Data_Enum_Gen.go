@@ -25,8 +25,14 @@ var cache_genBoundedEnum gopurs_runtime.Value
 var once_genBoundedEnum sync.Once
 func Get_genBoundedEnum() gopurs_runtime.Value {
 	once_genBoundedEnum.Do(func() {
-		cache_genBoundedEnum = gopurs_runtime.Func(func(dictMonadGen_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
+		cache_genBoundedEnum = gopurs_runtime.Func(func(dictMonadGen_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_genBoundedEnum(dictMonadGen_0_box)
+})
+	})
+	return cache_genBoundedEnum
+}
+
+func Call_genBoundedEnum(dictMonadGen_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadGen_0 gopurs_runtime.Value = dictMonadGen_0_loop
 _ = dictMonadGen_0
 elements_1_0 := gopurs_runtime.Apply2(pkg_Control_Monad_Gen.Get_elements(), dictMonadGen_0, Get_foldable1NonEmpty())
@@ -49,7 +55,7 @@ goto end_branch_4
 }
 {
 if (v_5_3.Type == 9 && v_5_3.IntVal == 3589588149) {
-__t4 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadGen_0, "Monad0"), gopurs_runtime.Value{}), "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.RecordGet(Bounded0_4_2, "bottom"))
+__t4 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadGen_0, "Monad0_NOT_FOUND"), gopurs_runtime.Value{}), "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.RecordGet(Bounded0_4_2, "bottom"))
 goto end_branch_4
 } else {
 
@@ -61,12 +67,6 @@ __t4 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 end_branch_4:
 return __t4
 })
-}()
-})
-	})
-	return cache_genBoundedEnum
 }
-
-
 
 

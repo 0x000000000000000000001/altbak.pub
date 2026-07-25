@@ -3,9 +3,8 @@ package Data_Eq
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Type_Proxy "gopurs/output/Type.Proxy"
 	pkg_Record_Unsafe "gopurs/output/Record.Unsafe"
-	unsafe "unsafe"
+	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
 )
 
 var cache_eqVoid gopurs_runtime.Value
@@ -54,12 +53,8 @@ var cache_eqRecord gopurs_runtime.Value
 var once_eqRecord sync.Once
 func Get_eqRecord() gopurs_runtime.Value {
 	once_eqRecord.Do(func() {
-		cache_eqRecord = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-var dict_0 gopurs_runtime.Value = dict_0_loop
-_ = dict_0
-return gopurs_runtime.RecordGet(dict_0, "eqRecord")
-}()
+		cache_eqRecord = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_eqRecord(dict_0_box)
 })
 	})
 	return cache_eqRecord
@@ -127,12 +122,8 @@ var cache_eq1 gopurs_runtime.Value
 var once_eq1 sync.Once
 func Get_eq1() gopurs_runtime.Value {
 	once_eq1.Do(func() {
-		cache_eq1 = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-var dict_0 gopurs_runtime.Value = dict_0_loop
-_ = dict_0
-return gopurs_runtime.RecordGet(dict_0, "eq1")
-}()
+		cache_eq1 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_eq1(dict_0_box)
 })
 	})
 	return cache_eq1
@@ -142,12 +133,8 @@ var cache_eq gopurs_runtime.Value
 var once_eq sync.Once
 func Get_eq() gopurs_runtime.Value {
 	once_eq.Do(func() {
-		cache_eq = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-var dict_0 gopurs_runtime.Value = dict_0_loop
-_ = dict_0
-return gopurs_runtime.RecordGet(dict_0, "eq")
-}()
+		cache_eq = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_eq(dict_0_box)
 })
 	})
 	return cache_eq
@@ -157,12 +144,8 @@ var cache_eqArray gopurs_runtime.Value
 var once_eqArray sync.Once
 func Get_eqArray() gopurs_runtime.Value {
 	once_eqArray.Do(func() {
-		cache_eqArray = gopurs_runtime.Func(func(dictEq_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
-_ = dictEq_0
-return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Apply(Get_eqArrayImpl(), gopurs_runtime.RecordGet(dictEq_0, "eq")))
-}()
+		cache_eqArray = gopurs_runtime.Func(func(dictEq_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_eqArray(dictEq_0_box)
 })
 	})
 	return cache_eqArray
@@ -195,7 +178,7 @@ var once_notEq sync.Once
 func Get_notEq() gopurs_runtime.Value {
 	once_notEq.Do(func() {
 		cache_notEq = gopurs_runtime.Func3(func(dictEq_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value, y_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(Call_notEq(dictEq_0_box, x_1_box, y_2_box))
+return Call_notEq(dictEq_0_box, x_1_box, y_2_box)
 })
 	})
 	return cache_notEq
@@ -212,12 +195,36 @@ return Call_notEq1(dictEq1_0_box, dictEq_1_box)
 	return cache_notEq1
 }
 
+func Call_eqRecord(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return ((*gopurs_runtime.RecordData1)(dict_0.UnsafePtr)).V0
+}
+
 func Call_eqRec(_dollar__unused_0_loop gopurs_runtime.Value, dictEqRecord_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
 var dictEqRecord_1 gopurs_runtime.Value = dictEqRecord_1_loop
 _ = dictEqRecord_1
-return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEqRecord_1, "eqRecord"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: unsafe.Pointer(&pkg_Type_Proxy.Data_Type_Proxy_Proxy{})}))
+return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictEqRecord_1.UnsafePtr)).V0, gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}))
+}
+
+func Call_eq1(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return ((*gopurs_runtime.RecordData1)(dict_0.UnsafePtr)).V0
+}
+
+func Call_eq(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return ((*gopurs_runtime.RecordData1)(dict_0.UnsafePtr)).V0
+}
+
+func Call_eqArray(dictEq_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
+_ = dictEq_0
+return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Apply(Get_eqArrayImpl(), ((*gopurs_runtime.RecordData1)(dictEq_0.UnsafePtr)).V0))
 }
 
 func Call_eqRowCons(dictEqRecord_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, dictIsSymbol_2_loop gopurs_runtime.Value, dictEq_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -230,20 +237,20 @@ _ = dictIsSymbol_2
 var dictEq_3 gopurs_runtime.Value = dictEq_3_loop
 _ = dictEq_3
 return gopurs_runtime.RecordDict1("eqRecord", gopurs_runtime.Func3(func(v_4 gopurs_runtime.Value, ra_5 gopurs_runtime.Value, rb_6 gopurs_runtime.Value) gopurs_runtime.Value {
-get_7_0 := gopurs_runtime.Apply(pkg_Record_Unsafe.Get_unsafeGet(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_2, "reflectSymbol"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: unsafe.Pointer(&pkg_Type_Proxy.Data_Type_Proxy_Proxy{})}))
+get_7_0 := gopurs_runtime.Apply(pkg_Record_Unsafe.Get_unsafeGet(), gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictIsSymbol_2.UnsafePtr)).V0, gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}))
 _ = get_7_0
-return gopurs_runtime.Bool(((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_3, "eq"), gopurs_runtime.Apply(get_7_0, ra_5), gopurs_runtime.Apply(get_7_0, rb_6)).IntVal) != (0)) && ((gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictEqRecord_0, "eqRecord"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: unsafe.Pointer(&pkg_Type_Proxy.Data_Type_Proxy_Proxy{})}, ra_5, rb_6).IntVal) != (0)))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "conj"), gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictEq_3.UnsafePtr)).V0, gopurs_runtime.Apply(get_7_0, ra_5), gopurs_runtime.Apply(get_7_0, rb_6)), gopurs_runtime.Apply3(((*gopurs_runtime.RecordData1)(dictEqRecord_0.UnsafePtr)).V0, gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}, ra_5, rb_6))
 }))
 }
 
-func Call_notEq(dictEq_0_loop gopurs_runtime.Value, x_1_loop gopurs_runtime.Value, y_2_loop gopurs_runtime.Value) bool {
+func Call_notEq(dictEq_0_loop gopurs_runtime.Value, x_1_loop gopurs_runtime.Value, y_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
 _ = dictEq_0
 var x_1 gopurs_runtime.Value = x_1_loop
 _ = x_1
 var y_2 gopurs_runtime.Value = y_2_loop
 _ = y_2
-return ((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), x_1, y_2).IntVal) != (0)) != (true)
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_eqBoolean(), "eq"), gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictEq_0.UnsafePtr)).V0, x_1, y_2), gopurs_runtime.Bool(false))
 }
 
 func Call_notEq1(dictEq1_0_loop gopurs_runtime.Value, dictEq_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -251,10 +258,10 @@ var dictEq1_0 gopurs_runtime.Value = dictEq1_0_loop
 _ = dictEq1_0
 var dictEq_1 gopurs_runtime.Value = dictEq_1_loop
 _ = dictEq_1
-eq12_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEq1_0, "eq1"), dictEq_1)
+eq12_2_0 := gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictEq1_0.UnsafePtr)).V0, dictEq_1)
 _ = eq12_2_0
 return gopurs_runtime.Func2(func(x_3 gopurs_runtime.Value, y_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(((gopurs_runtime.Apply2(eq12_2_0, x_3, y_4).IntVal) != (0)) != (true))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_eqBoolean(), "eq"), gopurs_runtime.Apply2(eq12_2_0, x_3, y_4), gopurs_runtime.Bool(false))
 })
 }
 

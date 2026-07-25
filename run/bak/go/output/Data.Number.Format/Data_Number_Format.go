@@ -11,9 +11,77 @@ var cache_clamp gopurs_runtime.Value
 var once_clamp sync.Once
 func Get_clamp() gopurs_runtime.Value {
 	once_clamp.Do(func() {
-		cache_clamp = gopurs_runtime.Func3(func(low_0_box gopurs_runtime.Value, hi_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_clamp(low_0_box, hi_1_box, x_2_box)
+		cache_clamp = func() gopurs_runtime.Value {
+__local_var_0_0 := gopurs_runtime.Apply3(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: nil})
+_ = __local_var_0_0
+return gopurs_runtime.Func3(func(low_1 gopurs_runtime.Value, hi_2 gopurs_runtime.Value, x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+v_4_1 := gopurs_runtime.Apply2(__local_var_0_0, low_1, x_3)
+_ = v_4_1
+var __t3 gopurs_runtime.Value
+{
+if (v_4_1.Type == 9 && v_4_1.IntVal == 1527465420) {
+__t3 = x_3
+goto end_branch_3
+} else {
+
+}
+}
+{
+if (v_4_1.Type == 9 && v_4_1.IntVal == 902936544) {
+__t3 = low_1
+goto end_branch_3
+} else {
+
+}
+}
+{
+if (v_4_1.Type == 9 && v_4_1.IntVal == 380165415) {
+__t3 = low_1
+goto end_branch_3
+} else {
+
+}
+}
+{
+__t3 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_3:
+__local_var_5_2 := __t3
+_ = __local_var_5_2
+v_6_4 := gopurs_runtime.Apply2(__local_var_0_0, hi_2, __local_var_5_2)
+_ = v_6_4
+var __t5 gopurs_runtime.Value
+{
+if (v_6_4.Type == 9 && v_6_4.IntVal == 1527465420) {
+__t5 = hi_2
+goto end_branch_5
+} else {
+
+}
+}
+{
+if (v_6_4.Type == 9 && v_6_4.IntVal == 902936544) {
+__t5 = hi_2
+goto end_branch_5
+} else {
+
+}
+}
+{
+if (v_6_4.Type == 9 && v_6_4.IntVal == 380165415) {
+__t5 = __local_var_5_2
+goto end_branch_5
+} else {
+
+}
+}
+{
+__t5 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_5:
+return __t5
 })
+}()
 	})
 	return cache_clamp
 }
@@ -55,8 +123,80 @@ var cache_toStringWith gopurs_runtime.Value
 var once_toStringWith sync.Once
 func Get_toStringWith() gopurs_runtime.Value {
 	once_toStringWith.Do(func() {
-		cache_toStringWith = gopurs_runtime.Func(func(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
+		cache_toStringWith = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_toStringWith(v_0_box)
+})
+	})
+	return cache_toStringWith
+}
+
+var cache_precision gopurs_runtime.Value
+var once_precision sync.Once
+func Get_precision() gopurs_runtime.Value {
+	once_precision.Do(func() {
+		cache_precision = func() gopurs_runtime.Value {
+__local_var_0_0 := gopurs_runtime.Apply2(Get_clamp(), gopurs_runtime.Int(1), gopurs_runtime.Int(21))
+_ = __local_var_0_0
+return gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1786680275, UnsafePtr: unsafe.Pointer(&Data_Data_Number_Format_Precision{gopurs_runtime.Apply(__local_var_0_0, x_1)})}
+})
+}()
+	})
+	return cache_precision
+}
+
+var cache_fixed gopurs_runtime.Value
+var once_fixed sync.Once
+func Get_fixed() gopurs_runtime.Value {
+	once_fixed.Do(func() {
+		cache_fixed = func() gopurs_runtime.Value {
+__local_var_0_0 := gopurs_runtime.Apply2(Get_clamp(), gopurs_runtime.Int(0), gopurs_runtime.Int(20))
+_ = __local_var_0_0
+return gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1390206259, UnsafePtr: unsafe.Pointer(&Data_Data_Number_Format_Fixed{gopurs_runtime.Apply(__local_var_0_0, x_1)})}
+})
+}()
+	})
+	return cache_fixed
+}
+
+var cache_exponential gopurs_runtime.Value
+var once_exponential sync.Once
+func Get_exponential() gopurs_runtime.Value {
+	once_exponential.Do(func() {
+		cache_exponential = func() gopurs_runtime.Value {
+__local_var_0_0 := gopurs_runtime.Apply2(Get_clamp(), gopurs_runtime.Int(0), gopurs_runtime.Int(20))
+_ = __local_var_0_0
+return gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1734244434, UnsafePtr: unsafe.Pointer(&Data_Data_Number_Format_Exponential{gopurs_runtime.Apply(__local_var_0_0, x_1)})}
+})
+}()
+	})
+	return cache_exponential
+}
+
+type Data_Data_Number_Format_Precision struct {
+	V0 gopurs_runtime.Value
+}
+func Is_Data_Data_Number_Format_Precision(v gopurs_runtime.Value) bool {
+	return v.Type == 9 && v.IntVal == 1786680275
+}
+
+type Data_Data_Number_Format_Fixed struct {
+	V0 gopurs_runtime.Value
+}
+func Is_Data_Data_Number_Format_Fixed(v gopurs_runtime.Value) bool {
+	return v.Type == 9 && v.IntVal == 1390206259
+}
+
+type Data_Data_Number_Format_Exponential struct {
+	V0 gopurs_runtime.Value
+}
+func Is_Data_Data_Number_Format_Exponential(v gopurs_runtime.Value) bool {
+	return v.Type == 9 && v.IntVal == 1734244434
+}
+
+func Call_toStringWith(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 var __t0 gopurs_runtime.Value
@@ -89,150 +229,6 @@ __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_0:
 return __t0
-}()
-})
-	})
-	return cache_toStringWith
-}
-
-var cache_precision gopurs_runtime.Value
-var once_precision sync.Once
-func Get_precision() gopurs_runtime.Value {
-	once_precision.Do(func() {
-		cache_precision = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-var x_0 gopurs_runtime.Value = x_0_loop
-_ = x_0
-return gopurs_runtime.Value{Type: 9, IntVal: 1786680275, UnsafePtr: unsafe.Pointer(&Data_Data_Number_Format_Precision{Call_clamp(gopurs_runtime.Int(1), gopurs_runtime.Int(21), x_0)})}
-}()
-})
-	})
-	return cache_precision
-}
-
-var cache_fixed gopurs_runtime.Value
-var once_fixed sync.Once
-func Get_fixed() gopurs_runtime.Value {
-	once_fixed.Do(func() {
-		cache_fixed = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-var x_0 gopurs_runtime.Value = x_0_loop
-_ = x_0
-return gopurs_runtime.Value{Type: 9, IntVal: 1390206259, UnsafePtr: unsafe.Pointer(&Data_Data_Number_Format_Fixed{Call_clamp(gopurs_runtime.Int(0), gopurs_runtime.Int(20), x_0)})}
-}()
-})
-	})
-	return cache_fixed
-}
-
-var cache_exponential gopurs_runtime.Value
-var once_exponential sync.Once
-func Get_exponential() gopurs_runtime.Value {
-	once_exponential.Do(func() {
-		cache_exponential = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-var x_0 gopurs_runtime.Value = x_0_loop
-_ = x_0
-return gopurs_runtime.Value{Type: 9, IntVal: 1734244434, UnsafePtr: unsafe.Pointer(&Data_Data_Number_Format_Exponential{Call_clamp(gopurs_runtime.Int(0), gopurs_runtime.Int(20), x_0)})}
-}()
-})
-	})
-	return cache_exponential
-}
-
-type Data_Data_Number_Format_Precision struct {
-	V0 gopurs_runtime.Value
-}
-func Is_Data_Data_Number_Format_Precision(v gopurs_runtime.Value) bool {
-	return v.Type == 9 && v.IntVal == 1786680275
-}
-
-type Data_Data_Number_Format_Fixed struct {
-	V0 gopurs_runtime.Value
-}
-func Is_Data_Data_Number_Format_Fixed(v gopurs_runtime.Value) bool {
-	return v.Type == 9 && v.IntVal == 1390206259
-}
-
-type Data_Data_Number_Format_Exponential struct {
-	V0 gopurs_runtime.Value
-}
-func Is_Data_Data_Number_Format_Exponential(v gopurs_runtime.Value) bool {
-	return v.Type == 9 && v.IntVal == 1734244434
-}
-
-func Call_clamp(low_0_loop gopurs_runtime.Value, hi_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var low_0 gopurs_runtime.Value = low_0_loop
-_ = low_0
-var hi_1 gopurs_runtime.Value = hi_1_loop
-_ = hi_1
-var x_2 gopurs_runtime.Value = x_2_loop
-_ = x_2
-v_3_0 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ord.Get_ordInt(), "compare"), low_0, x_2)
-_ = v_3_0
-var __t2 gopurs_runtime.Value
-{
-if (v_3_0.Type == 9 && v_3_0.IntVal == 1527465420) {
-__t2 = x_2
-goto end_branch_2
-} else {
-
-}
-}
-{
-if (v_3_0.Type == 9 && v_3_0.IntVal == 902936544) {
-__t2 = low_0
-goto end_branch_2
-} else {
-
-}
-}
-{
-if (v_3_0.Type == 9 && v_3_0.IntVal == 380165415) {
-__t2 = low_0
-goto end_branch_2
-} else {
-
-}
-}
-{
-__t2 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
-}
-end_branch_2:
-__local_var_4_1 := __t2
-_ = __local_var_4_1
-v_5_3 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ord.Get_ordInt(), "compare"), hi_1, __local_var_4_1)
-_ = v_5_3
-var __t4 gopurs_runtime.Value
-{
-if (v_5_3.Type == 9 && v_5_3.IntVal == 1527465420) {
-__t4 = hi_1
-goto end_branch_4
-} else {
-
-}
-}
-{
-if (v_5_3.Type == 9 && v_5_3.IntVal == 902936544) {
-__t4 = hi_1
-goto end_branch_4
-} else {
-
-}
-}
-{
-if (v_5_3.Type == 9 && v_5_3.IntVal == 380165415) {
-__t4 = __local_var_4_1
-goto end_branch_4
-} else {
-
-}
-}
-{
-__t4 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
-}
-end_branch_4:
-return __t4
 }
 
 func Get_toExponentialNative() gopurs_runtime.Value {

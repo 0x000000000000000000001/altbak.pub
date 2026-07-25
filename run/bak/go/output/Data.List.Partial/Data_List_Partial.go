@@ -85,7 +85,8 @@ var __t0 gopurs_runtime.Value
 if (v_1.Type == 9 && v_1.IntVal == 1358893437) {
 var __t1 gopurs_runtime.Value
 {
-if ((*pkg_Data_List_Types.Data_Data_List_Types_Cons)(v_1.UnsafePtr).V1.Type == 9 && (*pkg_Data_List_Types.Data_Data_List_Types_Cons)(v_1.UnsafePtr).V1.IntVal == 786377863) {
+var __t_tag_2 gopurs_runtime.Value = (*pkg_Data_List_Types.Data_Data_List_Types_Cons)(v_1.UnsafePtr).V1
+if (__t_tag_2.Type == 9 && __t_tag_2.IntVal == 786377863) {
 __t1 = (*pkg_Data_List_Types.Data_Data_List_Types_Cons)(v_1.UnsafePtr).V0
 goto end_branch_1
 } else {
@@ -126,8 +127,9 @@ var __t0 gopurs_runtime.Value
 if (v_1.Type == 9 && v_1.IntVal == 1358893437) {
 var __t1 gopurs_runtime.Value
 {
-if ((*pkg_Data_List_Types.Data_Data_List_Types_Cons)(v_1.UnsafePtr).V1.Type == 9 && (*pkg_Data_List_Types.Data_Data_List_Types_Cons)(v_1.UnsafePtr).V1.IntVal == 786377863) {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 786377863, UnsafePtr: unsafe.Pointer(&pkg_Data_List_Types.Data_Data_List_Types_Nil{})}
+var __t_tag_2 gopurs_runtime.Value = (*pkg_Data_List_Types.Data_Data_List_Types_Cons)(v_1.UnsafePtr).V1
+if (__t_tag_2.Type == 9 && __t_tag_2.IntVal == 786377863) {
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 786377863, UnsafePtr: nil}
 goto end_branch_1
 } else {
 

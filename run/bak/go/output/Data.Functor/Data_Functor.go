@@ -3,22 +3,16 @@ package Data_Functor
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Unit "gopurs/output/Data.Unit"
-	pkg_Type_Proxy "gopurs/output/Type.Proxy"
 	pkg_Control_Semigroupoid "gopurs/output/Control.Semigroupoid"
-	unsafe "unsafe"
+	pkg_Data_Unit "gopurs/output/Data.Unit"
 )
 
 var cache_map_ gopurs_runtime.Value
 var once_map_ sync.Once
 func Get_map_() gopurs_runtime.Value {
 	once_map_.Do(func() {
-		cache_map_ = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-var dict_0 gopurs_runtime.Value = dict_0_loop
-_ = dict_0
-return gopurs_runtime.RecordGet(dict_0, "map")
-}()
+		cache_map_ = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_map_(dict_0_box)
 })
 	})
 	return cache_map_
@@ -39,14 +33,8 @@ var cache_void gopurs_runtime.Value
 var once_void sync.Once
 func Get_void() gopurs_runtime.Value {
 	once_void.Do(func() {
-		cache_void = gopurs_runtime.Func(func(dictFunctor_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-var dictFunctor_0 gopurs_runtime.Value = dictFunctor_0_loop
-_ = dictFunctor_0
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctor_0, "map"), gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return pkg_Data_Unit.Get_unit()
-}))
-}()
+		cache_void = gopurs_runtime.Func(func(dictFunctor_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_void(dictFunctor_0_box)
 })
 	})
 	return cache_void
@@ -79,7 +67,7 @@ var once_functorProxy sync.Once
 func Get_functorProxy() gopurs_runtime.Value {
 	once_functorProxy.Do(func() {
 		cache_functorProxy = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: unsafe.Pointer(&pkg_Type_Proxy.Data_Type_Proxy_Proxy{})}
+return gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}
 }))
 	})
 	return cache_functorProxy
@@ -114,6 +102,12 @@ return Call_flap(dictFunctor_0_box, ff_1_box, x_2_box)
 	return cache_flap
 }
 
+func Call_map_(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return ((*gopurs_runtime.RecordData1)(dict_0.UnsafePtr)).V0
+}
+
 func Call_mapFlipped(dictFunctor_0_loop gopurs_runtime.Value, fa_1_loop gopurs_runtime.Value, f_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictFunctor_0 gopurs_runtime.Value = dictFunctor_0_loop
 _ = dictFunctor_0
@@ -121,7 +115,15 @@ var fa_1 gopurs_runtime.Value = fa_1_loop
 _ = fa_1
 var f_2 gopurs_runtime.Value = f_2_loop
 _ = f_2
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), f_2, fa_1)
+return gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictFunctor_0.UnsafePtr)).V0, f_2, fa_1)
+}
+
+func Call_void(dictFunctor_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictFunctor_0 gopurs_runtime.Value = dictFunctor_0_loop
+_ = dictFunctor_0
+return gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictFunctor_0.UnsafePtr)).V0, gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Data_Unit.Get_unit()
+}))
 }
 
 func Call_voidLeft(dictFunctor_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -131,7 +133,7 @@ var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
 var x_2 gopurs_runtime.Value = x_2_loop
 _ = x_2
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictFunctor_0.UnsafePtr)).V0, gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return x_2
 }), f_1)
 }
@@ -141,7 +143,7 @@ var dictFunctor_0 gopurs_runtime.Value = dictFunctor_0_loop
 _ = dictFunctor_0
 var x_1 gopurs_runtime.Value = x_1_loop
 _ = x_1
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctor_0, "map"), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictFunctor_0.UnsafePtr)).V0, gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return x_1
 }))
 }
@@ -153,7 +155,7 @@ var ff_1 gopurs_runtime.Value = ff_1_loop
 _ = ff_1
 var x_2 gopurs_runtime.Value = x_2_loop
 _ = x_2
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictFunctor_0.UnsafePtr)).V0, gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(f_3, x_2)
 }), ff_1)
 }

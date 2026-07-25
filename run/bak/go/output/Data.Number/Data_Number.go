@@ -4,7 +4,6 @@ import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
 	pkg_Data_Maybe "gopurs/output/Data.Maybe"
-	unsafe "unsafe"
 )
 
 var cache_tau gopurs_runtime.Value
@@ -83,12 +82,8 @@ var cache_fromString gopurs_runtime.Value
 var once_fromString sync.Once
 func Get_fromString() gopurs_runtime.Value {
 	once_fromString.Do(func() {
-		cache_fromString = gopurs_runtime.Func(func(str_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-var str_0 gopurs_runtime.Value = str_0_loop
-_ = str_0
-return gopurs_runtime.UncurriedApp4(Get_fromStringImpl(), str_0, Get_isFinite(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})})
-}()
+		cache_fromString = gopurs_runtime.Func(func(str_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_fromString(str_0_box.StrVal())
 })
 	})
 	return cache_fromString
@@ -103,7 +98,11 @@ func Get_e() gopurs_runtime.Value {
 	return cache_e
 }
 
-
+func Call_fromString(str_0_loop string) gopurs_runtime.Value {
+var str_0 string = str_0_loop
+_ = str_0
+return gopurs_runtime.UncurriedApp4(Get_fromStringImpl(), gopurs_runtime.Str(str_0), Get_isFinite(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: nil})
+}
 
 func Get_abs() gopurs_runtime.Value {
 	return _Gopurs_Abs

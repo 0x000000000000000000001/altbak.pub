@@ -3,19 +3,37 @@ package Test_ListOps
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_EuclideanRing "gopurs/output/Data.EuclideanRing"
-	pkg_Data_Semiring "gopurs/output/Data.Semiring"
+	pkg_Data_Ord "gopurs/output/Data.Ord"
 	pkg_Effect_Console "gopurs/output/Effect.Console"
+	pkg_Effect "gopurs/output/Effect"
 	pkg_Bench "gopurs/output/Bench"
 	pkg_Data_Show "gopurs/output/Data.Show"
+	pkg_Data_Semiring "gopurs/output/Data.Semiring"
+	pkg_Data_EuclideanRing "gopurs/output/Data.EuclideanRing"
 	unsafe "unsafe"
 )
+
+var cache_lessThan gopurs_runtime.Value
+var once_lessThan sync.Once
+func Get_lessThan() gopurs_runtime.Value {
+	once_lessThan.Do(func() {
+		cache_lessThan = func() gopurs_runtime.Value {
+__local_var_0_0 := gopurs_runtime.Apply3(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: nil})
+_ = __local_var_0_0
+return gopurs_runtime.Func2(func(a1_1 gopurs_runtime.Value, a2_2 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t_tag_1 gopurs_runtime.Value = gopurs_runtime.Apply2(__local_var_0_0, a1_1, a2_2)
+return gopurs_runtime.Bool((__t_tag_1.Type == 9 && __t_tag_1.IntVal == 1527465420))
+})
+}()
+	})
+	return cache_lessThan
+}
 
 var cache_Nil gopurs_runtime.Value
 var once_Nil sync.Once
 func Get_Nil() gopurs_runtime.Value {
 	once_Nil.Do(func() {
-		cache_Nil = gopurs_runtime.Value{Type: 9, IntVal: 63553145, UnsafePtr: unsafe.Pointer(&Data_Test_ListOps_Nil{})}
+		cache_Nil = gopurs_runtime.Value{Type: 9, IntVal: 63553145, UnsafePtr: nil}
 	})
 	return cache_Nil
 }
@@ -38,7 +56,7 @@ var once_range_ sync.Once
 func Get_range_() gopurs_runtime.Value {
 	once_range_.Do(func() {
 		cache_range_ = gopurs_runtime.Func2(func(start_0_box gopurs_runtime.Value, end_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_range_(start_0_box, end_1_box)
+return Call_range_(start_0_box.IntVal, end_1_box.IntVal)
 })
 	})
 	return cache_range_
@@ -59,68 +77,8 @@ var cache_filterEvens gopurs_runtime.Value
 var once_filterEvens sync.Once
 func Get_filterEvens() gopurs_runtime.Value {
 	once_filterEvens.Do(func() {
-		cache_filterEvens = gopurs_runtime.Func(func(lst_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-var lst_0 gopurs_runtime.Value = lst_0_loop
-_ = lst_0
-var go__1_0 gopurs_runtime.Value
-go__1_0 = gopurs_runtime.Func(func(v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-go__1_0:
-for {
-if false { continue go__1_0 }
-var v_2 gopurs_runtime.Value = v_2_loop
-_ = v_2
-var v1_3 gopurs_runtime.Value = v1_3_loop
-_ = v1_3
-var __t1 gopurs_runtime.Value
-{
-if (v_2.Type == 9 && v_2.IntVal == 63553145) {
-__t1 = v1_3
-goto end_branch_1
-} else {
-
-}
-}
-{
-if (v_2.Type == 9 && v_2.IntVal == 1127792131) {
-var __t2 gopurs_runtime.Value
-{
-if (gopurs_runtime.Apply2(pkg_Data_EuclideanRing.Get_intMod(), (*Data_Test_ListOps_Cons)(v_2.UnsafePtr).V0, gopurs_runtime.Int(2)).IntVal) == (0) {
-v_2_loop = (*Data_Test_ListOps_Cons)(v_2.UnsafePtr).V1
-v1_3_loop = gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(&Data_Test_ListOps_Cons{(*Data_Test_ListOps_Cons)(v_2.UnsafePtr).V0, v1_3})}
-continue go__1_0
-__t2 = gopurs_runtime.Value{}
-goto end_branch_2
-} else {
-
-}
-}
-{
-v_2_loop = (*Data_Test_ListOps_Cons)(v_2.UnsafePtr).V1
-v1_3_loop = v1_3
-continue go__1_0
-__t2 = gopurs_runtime.Value{}
-}
-end_branch_2:
-__t1 = __t2
-goto end_branch_1
-} else {
-
-}
-}
-{
-__t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
-}
-end_branch_1:
-return __t1
-}
-}()
-})
-})
-return gopurs_runtime.Apply2(go__1_0, lst_0, gopurs_runtime.Value{Type: 9, IntVal: 63553145, UnsafePtr: unsafe.Pointer(&Data_Test_ListOps_Nil{})})
-}()
+		cache_filterEvens = gopurs_runtime.Func(func(lst_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_filterEvens(lst_0_box)
 })
 	})
 	return cache_filterEvens
@@ -130,44 +88,8 @@ var cache_sumEvens gopurs_runtime.Value
 var once_sumEvens sync.Once
 func Get_sumEvens() gopurs_runtime.Value {
 	once_sumEvens.Do(func() {
-		cache_sumEvens = gopurs_runtime.Func(func(n_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-var n_0 gopurs_runtime.Value = n_0_loop
-_ = n_0
-var go__1_0 gopurs_runtime.Value
-go__1_0 = gopurs_runtime.Func(func(curr_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(acc_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-go__1_0:
-for {
-if false { continue go__1_0 }
-var curr_2 gopurs_runtime.Value = curr_2_loop
-_ = curr_2
-var acc_3 gopurs_runtime.Value = acc_3_loop
-_ = acc_3
-var __t1 gopurs_runtime.Value
-{
-if (curr_2.IntVal) < (1) {
-__t1 = acc_3
-goto end_branch_1
-} else {
-
-}
-}
-{
-curr_2_loop = gopurs_runtime.Int((curr_2.IntVal) - (1))
-acc_3_loop = gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(&Data_Test_ListOps_Cons{curr_2, acc_3})}
-continue go__1_0
-__t1 = gopurs_runtime.Value{}
-}
-end_branch_1:
-return __t1
-}
-}()
-})
-})
-return Call_foldl(pkg_Data_Semiring.Get_intAdd(), gopurs_runtime.Int(0), gopurs_runtime.Apply(Get_filterEvens(), gopurs_runtime.Apply2(go__1_0, n_0, gopurs_runtime.Value{Type: 9, IntVal: 63553145, UnsafePtr: unsafe.Pointer(&Data_Test_ListOps_Nil{})})))
-}()
+		cache_sumEvens = gopurs_runtime.Func(func(n_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_sumEvens(n_0_box.IntVal)
 })
 	})
 	return cache_sumEvens
@@ -186,15 +108,9 @@ var cache_act gopurs_runtime.Value
 var once_act sync.Once
 func Get_act() gopurs_runtime.Value {
 	once_act.Do(func() {
-		cache_act = func() gopurs_runtime.Value {
-__local_var_0_0 := gopurs_runtime.Apply(pkg_Bench.Get_opaque(), gopurs_runtime.Int(900))
-_ = __local_var_0_0
-return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-dummy_1_1 := gopurs_runtime.Apply(__local_var_0_0, gopurs_runtime.Value{})
-_ = dummy_1_1
-return gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(pkg_Data_Show.Get_showIntImpl(), gopurs_runtime.Apply(Get_sumEvens(), dummy_1_1))), gopurs_runtime.Value{})
-})
-}()
+		cache_act = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Effect.Get_bindEffect(), "bind"), gopurs_runtime.Apply(pkg_Bench.Get_opaque(), gopurs_runtime.Int(900)), gopurs_runtime.Func(func(dummy_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Show.Get_showInt(), "show"), Call_foldl(pkg_Data_Semiring.Get_intAdd(), gopurs_runtime.Int(0), gopurs_runtime.Apply(Get_filterEvens(), gopurs_runtime.Apply2(Get_range_(), gopurs_runtime.Int(1), dummy_0)))))
+}))
 	})
 	return cache_act
 }
@@ -214,10 +130,10 @@ func Is_Data_Test_ListOps_Cons(v gopurs_runtime.Value) bool {
 	return v.Type == 9 && v.IntVal == 1127792131
 }
 
-func Call_range_(start_0_loop gopurs_runtime.Value, end_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var start_0 gopurs_runtime.Value = start_0_loop
+func Call_range_(start_0_loop int64, end_1_loop int64) gopurs_runtime.Value {
+var start_0 int64 = start_0_loop
 _ = start_0
-var end_1 gopurs_runtime.Value = end_1_loop
+var end_1 int64 = end_1_loop
 _ = end_1
 var go__2_0 gopurs_runtime.Value
 go__2_0 = gopurs_runtime.Func(func(curr_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -232,7 +148,7 @@ var acc_4 gopurs_runtime.Value = acc_4_loop
 _ = acc_4
 var __t1 gopurs_runtime.Value
 {
-if (curr_3.IntVal) < (start_0.IntVal) {
+if (gopurs_runtime.Apply2(Get_lessThan(), curr_3, gopurs_runtime.Int(start_0)).IntVal) != (0) {
 __t1 = acc_4
 goto end_branch_1
 } else {
@@ -251,7 +167,7 @@ return __t1
 }()
 })
 })
-return gopurs_runtime.Apply2(go__2_0, end_1, gopurs_runtime.Value{Type: 9, IntVal: 63553145, UnsafePtr: unsafe.Pointer(&Data_Test_ListOps_Nil{})})
+return gopurs_runtime.Apply2(go__2_0, gopurs_runtime.Int(end_1), gopurs_runtime.Value{Type: 9, IntVal: 63553145, UnsafePtr: nil})
 }
 
 func Call_foldl(v_0_loop gopurs_runtime.Value, v1_1_loop gopurs_runtime.Value, v2_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -291,6 +207,74 @@ __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 end_branch_0:
 return __t0
 }
+}
+
+func Call_filterEvens(lst_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var lst_0 gopurs_runtime.Value = lst_0_loop
+_ = lst_0
+var go__1_0 gopurs_runtime.Value
+go__1_0 = gopurs_runtime.Func(func(v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+go__1_0:
+for {
+if false { continue go__1_0 }
+var v_2 gopurs_runtime.Value = v_2_loop
+_ = v_2
+var v1_3 gopurs_runtime.Value = v1_3_loop
+_ = v1_3
+var __t1 gopurs_runtime.Value
+{
+if (v_2.Type == 9 && v_2.IntVal == 63553145) {
+__t1 = v1_3
+goto end_branch_1
+} else {
+
+}
+}
+{
+if (v_2.Type == 9 && v_2.IntVal == 1127792131) {
+var __t2 gopurs_runtime.Value
+{
+if (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingInt(), "mod"), (*Data_Test_ListOps_Cons)(v_2.UnsafePtr).V0, gopurs_runtime.Int(2)).IntVal) == (0) {
+v_2_loop = (*Data_Test_ListOps_Cons)(v_2.UnsafePtr).V1
+v1_3_loop = gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(&Data_Test_ListOps_Cons{(*Data_Test_ListOps_Cons)(v_2.UnsafePtr).V0, v1_3})}
+continue go__1_0
+__t2 = gopurs_runtime.Value{}
+goto end_branch_2
+} else {
+
+}
+}
+{
+v_2_loop = (*Data_Test_ListOps_Cons)(v_2.UnsafePtr).V1
+v1_3_loop = v1_3
+continue go__1_0
+__t2 = gopurs_runtime.Value{}
+}
+end_branch_2:
+__t1 = __t2
+goto end_branch_1
+} else {
+
+}
+}
+{
+__t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_1:
+return __t1
+}
+}()
+})
+})
+return gopurs_runtime.Apply2(go__1_0, lst_0, gopurs_runtime.Value{Type: 9, IntVal: 63553145, UnsafePtr: nil})
+}
+
+func Call_sumEvens(n_0_loop int64) gopurs_runtime.Value {
+var n_0 int64 = n_0_loop
+_ = n_0
+return Call_foldl(pkg_Data_Semiring.Get_intAdd(), gopurs_runtime.Int(0), gopurs_runtime.Apply(Get_filterEvens(), gopurs_runtime.Apply2(Get_range_(), gopurs_runtime.Int(1), gopurs_runtime.Int(n_0))))
 }
 
 

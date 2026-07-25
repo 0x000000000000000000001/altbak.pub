@@ -4,6 +4,7 @@ import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
 	pkg_Effect_Console "gopurs/output/Effect.Console"
+	pkg_Effect "gopurs/output/Effect"
 	pkg_Bench "gopurs/output/Bench"
 	pkg_Data_Show "gopurs/output/Data.Show"
 )
@@ -12,37 +13,8 @@ var cache_fib gopurs_runtime.Value
 var once_fib sync.Once
 func Get_fib() gopurs_runtime.Value {
 	once_fib.Do(func() {
-		cache_fib = gopurs_runtime.Func(func(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-fib:
-for {
-if false { continue fib }
-var v_0 gopurs_runtime.Value = v_0_loop
-_ = v_0
-var __t0 gopurs_runtime.Value
-{
-if (v_0.IntVal) == (0) {
-__t0 = gopurs_runtime.Int(0)
-goto end_branch_0
-} else {
-
-}
-}
-{
-if (v_0.IntVal) == (1) {
-__t0 = gopurs_runtime.Int(1)
-goto end_branch_0
-} else {
-
-}
-}
-{
-__t0 = gopurs_runtime.Int((gopurs_runtime.Apply(Get_fib(), gopurs_runtime.Int((v_0.IntVal) - (1))).IntVal) + (gopurs_runtime.Apply(Get_fib(), gopurs_runtime.Int((v_0.IntVal) - (2))).IntVal))
-}
-end_branch_0:
-return __t0
-}
-}()
+		cache_fib = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_fib(v_0_box.IntVal)
 })
 	})
 	return cache_fib
@@ -61,19 +33,42 @@ var cache_act gopurs_runtime.Value
 var once_act sync.Once
 func Get_act() gopurs_runtime.Value {
 	once_act.Do(func() {
-		cache_act = func() gopurs_runtime.Value {
-__local_var_0_0 := gopurs_runtime.Apply(pkg_Bench.Get_opaque(), gopurs_runtime.Int(10))
-_ = __local_var_0_0
-return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-dummy_1_1 := gopurs_runtime.Apply(__local_var_0_0, gopurs_runtime.Value{})
-_ = dummy_1_1
-return gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(pkg_Data_Show.Get_showIntImpl(), gopurs_runtime.Apply(Get_fib(), dummy_1_1))), gopurs_runtime.Value{})
-})
-}()
+		cache_act = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Effect.Get_bindEffect(), "bind"), gopurs_runtime.Apply(pkg_Bench.Get_opaque(), gopurs_runtime.Int(10)), gopurs_runtime.Func(func(dummy_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Show.Get_showInt(), "show"), gopurs_runtime.Apply(Get_fib(), dummy_0)))
+}))
 	})
 	return cache_act
 }
 
+func Call_fib(v_0_loop int64) gopurs_runtime.Value {
+fib:
+for {
+if false { continue fib }
+var v_0 int64 = v_0_loop
+_ = v_0
+var __t0 gopurs_runtime.Value
+{
+if (v_0) == (0) {
+__t0 = gopurs_runtime.Int(0)
+goto end_branch_0
+} else {
 
+}
+}
+{
+if (v_0) == (1) {
+__t0 = gopurs_runtime.Int(1)
+goto end_branch_0
+} else {
+
+}
+}
+{
+__t0 = gopurs_runtime.Int((gopurs_runtime.Apply(Get_fib(), gopurs_runtime.Int((v_0) - (1))).IntVal) + (gopurs_runtime.Apply(Get_fib(), gopurs_runtime.Int((v_0) - (2))).IntVal))
+}
+end_branch_0:
+return __t0
+}
+}
 
 

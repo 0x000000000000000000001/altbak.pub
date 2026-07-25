@@ -3,23 +3,29 @@ package Data_Bifunctor
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Unit "gopurs/output/Data.Unit"
-	pkg_Control_Category "gopurs/output/Control.Category"
 	pkg_Data_Tuple "gopurs/output/Data.Tuple"
 	pkg_Data_Either "gopurs/output/Data.Either"
+	pkg_Data_Unit "gopurs/output/Data.Unit"
 	unsafe "unsafe"
 )
+
+var cache_identity gopurs_runtime.Value
+var once_identity sync.Once
+func Get_identity() gopurs_runtime.Value {
+	once_identity.Do(func() {
+		cache_identity = gopurs_runtime.Func(func(x_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_identity(x_0_box)
+})
+	})
+	return cache_identity
+}
 
 var cache_bimap gopurs_runtime.Value
 var once_bimap sync.Once
 func Get_bimap() gopurs_runtime.Value {
 	once_bimap.Do(func() {
-		cache_bimap = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-var dict_0 gopurs_runtime.Value = dict_0_loop
-_ = dict_0
-return gopurs_runtime.RecordGet(dict_0, "bimap")
-}()
+		cache_bimap = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_bimap(dict_0_box)
 })
 	})
 	return cache_bimap
@@ -29,16 +35,8 @@ var cache_bivoid gopurs_runtime.Value
 var once_bivoid sync.Once
 func Get_bivoid() gopurs_runtime.Value {
 	once_bivoid.Do(func() {
-		cache_bivoid = gopurs_runtime.Func(func(dictBifunctor_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-var dictBifunctor_0 gopurs_runtime.Value = dictBifunctor_0_loop
-_ = dictBifunctor_0
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBifunctor_0, "bimap"), gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return pkg_Data_Unit.Get_unit()
-}), gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return pkg_Data_Unit.Get_unit()
-}))
-}()
+		cache_bivoid = gopurs_runtime.Func(func(dictBifunctor_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_bivoid(dictBifunctor_0_box)
 })
 	})
 	return cache_bivoid
@@ -59,12 +57,8 @@ var cache_rmap gopurs_runtime.Value
 var once_rmap sync.Once
 func Get_rmap() gopurs_runtime.Value {
 	once_rmap.Do(func() {
-		cache_rmap = gopurs_runtime.Func(func(dictBifunctor_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-var dictBifunctor_0 gopurs_runtime.Value = dictBifunctor_0_loop
-_ = dictBifunctor_0
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBifunctor_0, "bimap"), gopurs_runtime.RecordGet(pkg_Control_Category.Get_categoryFn(), "identity"))
-}()
+		cache_rmap = gopurs_runtime.Func(func(dictBifunctor_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_rmap(dictBifunctor_0_box)
 })
 	})
 	return cache_rmap
@@ -124,12 +118,40 @@ return gopurs_runtime.Apply(f_0, v1_2)
 	return cache_bifunctorConst
 }
 
+func Call_identity(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var x_0 gopurs_runtime.Value = x_0_loop
+_ = x_0
+return x_0
+}
+
+func Call_bimap(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return ((*gopurs_runtime.RecordData1)(dict_0.UnsafePtr)).V0
+}
+
+func Call_bivoid(dictBifunctor_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictBifunctor_0 gopurs_runtime.Value = dictBifunctor_0_loop
+_ = dictBifunctor_0
+return gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictBifunctor_0.UnsafePtr)).V0, gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Data_Unit.Get_unit()
+}), gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Data_Unit.Get_unit()
+}))
+}
+
 func Call_lmap(dictBifunctor_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictBifunctor_0 gopurs_runtime.Value = dictBifunctor_0_loop
 _ = dictBifunctor_0
 var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBifunctor_0, "bimap"), f_1, gopurs_runtime.RecordGet(pkg_Control_Category.Get_categoryFn(), "identity"))
+return gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictBifunctor_0.UnsafePtr)).V0, f_1, Get_identity())
+}
+
+func Call_rmap(dictBifunctor_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictBifunctor_0 gopurs_runtime.Value = dictBifunctor_0_loop
+_ = dictBifunctor_0
+return gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictBifunctor_0.UnsafePtr)).V0, Get_identity())
 }
 
 

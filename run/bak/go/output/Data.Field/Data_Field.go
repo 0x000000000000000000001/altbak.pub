@@ -21,10 +21,10 @@ var dictEuclideanRing_0 gopurs_runtime.Value = dictEuclideanRing_0_loop
 _ = dictEuclideanRing_0
 var dictDivisionRing_1 gopurs_runtime.Value = dictDivisionRing_1_loop
 _ = dictDivisionRing_1
-return gopurs_runtime.RecordDict2("EuclideanRing0", "DivisionRing1", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return dictEuclideanRing_0
-}), gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict2("DivisionRing1", "EuclideanRing0", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return dictDivisionRing_1
+}), gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return dictEuclideanRing_0
 }))
 }
 

@@ -3,8 +3,6 @@ package Data_Reflectable
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Type_Proxy "gopurs/output/Type.Proxy"
-	unsafe "unsafe"
 )
 
 var cache_reifiableString gopurs_runtime.Value
@@ -58,12 +56,8 @@ var cache_reflectType gopurs_runtime.Value
 var once_reflectType sync.Once
 func Get_reflectType() gopurs_runtime.Value {
 	once_reflectType.Do(func() {
-		cache_reflectType = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-var dict_0 gopurs_runtime.Value = dict_0_loop
-_ = dict_0
-return gopurs_runtime.RecordGet(dict_0, "reflectType")
-}()
+		cache_reflectType = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_reflectType(dict_0_box)
 })
 	})
 	return cache_reflectType
@@ -80,7 +74,13 @@ return gopurs_runtime.Apply3(Get_unsafeCoerce(), gopurs_runtime.Func(func(dictRe
 return gopurs_runtime.Apply(f_2, dictReflectable_3)
 }), gopurs_runtime.RecordDict1("reflectType", gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return s_1
-})), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: unsafe.Pointer(&pkg_Type_Proxy.Data_Type_Proxy_Proxy{})})
+})), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil})
+}
+
+func Call_reflectType(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return ((*gopurs_runtime.RecordData1)(dict_0.UnsafePtr)).V0
 }
 
 func Get_unsafeCoerce() gopurs_runtime.Value {
