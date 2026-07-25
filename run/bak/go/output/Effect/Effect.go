@@ -5,35 +5,35 @@ import (
 	sync "sync"
 )
 
-var monadEffect gopurs_runtime.Value
+var cache_monadEffect gopurs_runtime.Value
 var once_monadEffect sync.Once
 func Get_monadEffect() gopurs_runtime.Value {
 	once_monadEffect.Do(func() {
-		monadEffect = gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monadEffect = gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_applicativeEffect()
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_bindEffect()
 }))
 	})
-	return monadEffect
+	return cache_monadEffect
 }
 
-var bindEffect gopurs_runtime.Value
+var cache_bindEffect gopurs_runtime.Value
 var once_bindEffect sync.Once
 func Get_bindEffect() gopurs_runtime.Value {
 	once_bindEffect.Do(func() {
-		bindEffect = gopurs_runtime.RecordDict2("bind", "Apply0", Get_bindE(), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_bindEffect = gopurs_runtime.RecordDict2("bind", "Apply0", Get_bindE(), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_applyEffect()
 }))
 	})
-	return bindEffect
+	return cache_bindEffect
 }
 
-var applyEffect gopurs_runtime.Value
+var cache_applyEffect gopurs_runtime.Value
 var once_applyEffect sync.Once
 func Get_applyEffect() gopurs_runtime.Value {
 	once_applyEffect.Do(func() {
-		applyEffect = gopurs_runtime.RecordDict2("apply", "Functor0", gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, a_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_applyEffect = gopurs_runtime.RecordDict2("apply", "Functor0", gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, a_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 f_prime_2_0 := gopurs_runtime.Apply(f_0, gopurs_runtime.Value{})
 _ = f_prime_2_0
@@ -45,25 +45,25 @@ return gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_ap
 return Get_functorEffect()
 }))
 	})
-	return applyEffect
+	return cache_applyEffect
 }
 
-var applicativeEffect gopurs_runtime.Value
+var cache_applicativeEffect gopurs_runtime.Value
 var once_applicativeEffect sync.Once
 func Get_applicativeEffect() gopurs_runtime.Value {
 	once_applicativeEffect.Do(func() {
-		applicativeEffect = gopurs_runtime.RecordDict2("pure", "Apply0", Get_pureE(), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_applicativeEffect = gopurs_runtime.RecordDict2("pure", "Apply0", Get_pureE(), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_applyEffect()
 }))
 	})
-	return applicativeEffect
+	return cache_applicativeEffect
 }
 
-var functorEffect gopurs_runtime.Value
+var cache_functorEffect gopurs_runtime.Value
 var once_functorEffect sync.Once
 func Get_functorEffect() gopurs_runtime.Value {
 	once_functorEffect.Do(func() {
-		functorEffect = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, a_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_functorEffect = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, a_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 a_prime_2_0 := gopurs_runtime.Apply(a_1, gopurs_runtime.Value{})
 _ = a_prime_2_0
@@ -71,14 +71,14 @@ return gopurs_runtime.Apply(f_0, a_prime_2_0)
 })
 }))
 	})
-	return functorEffect
+	return cache_functorEffect
 }
 
-var semigroupEffect gopurs_runtime.Value
+var cache_semigroupEffect gopurs_runtime.Value
 var once_semigroupEffect sync.Once
 func Get_semigroupEffect() gopurs_runtime.Value {
 	once_semigroupEffect.Do(func() {
-		semigroupEffect = gopurs_runtime.Func(func(dictSemigroup_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_semigroupEffect = gopurs_runtime.Func(func(dictSemigroup_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictSemigroup_0 gopurs_runtime.Value = dictSemigroup_0_loop
 _ = dictSemigroup_0
@@ -94,14 +94,14 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup_0, "append")
 }()
 })
 	})
-	return semigroupEffect
+	return cache_semigroupEffect
 }
 
-var monoidEffect gopurs_runtime.Value
+var cache_monoidEffect gopurs_runtime.Value
 var once_monoidEffect sync.Once
 func Get_monoidEffect() gopurs_runtime.Value {
 	once_monoidEffect.Do(func() {
-		monoidEffect = gopurs_runtime.Func(func(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monoidEffect = gopurs_runtime.Func(func(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
 _ = dictMonoid_0
@@ -127,7 +127,7 @@ return semigroupEffect1_2_1
 }()
 })
 	})
-	return monoidEffect
+	return cache_monoidEffect
 }
 
 

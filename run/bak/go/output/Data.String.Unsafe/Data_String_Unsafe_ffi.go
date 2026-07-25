@@ -2,8 +2,8 @@ package Data_String_Unsafe
 
 import "gopurs/output/gopurs_runtime"
 
-func CharAt(i any) any {
-	return func(s any) any {
+func CharAt(i interface{}) interface{} {
+	return func(s interface{}) interface{} {
 		str := s.(string)
 		idx := int(i.(int))
 		if idx >= 0 && idx < len(str) {
@@ -13,7 +13,7 @@ func CharAt(i any) any {
 	}
 }
 
-func Char(s any) any {
+func Char(s interface{}) interface{} {
 	str := s.(string)
 	if len(str) == 1 {
 		return (string(str[0]))
@@ -23,7 +23,7 @@ func Char(s any) any {
 
 
 // --- Auto-generated FFI wrappers ---
-func Call_charAt(arg0 any) any {
+func Call_charAt(arg0 interface{}) interface{} {
 	return CharAt(arg0)
 }
 var _Gopurs_CharAt = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -31,7 +31,7 @@ var _Gopurs_CharAt = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_
 	go_res := CharAt(go_arg0)
 	return gopurs_runtime.Box(go_res)
 })
-func Call_char(arg0 any) any {
+func Call_char(arg0 interface{}) interface{} {
 	return Char(arg0)
 }
 var _Gopurs_Char = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {

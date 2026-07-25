@@ -10,24 +10,24 @@ import (
 	unsafe "unsafe"
 )
 
-var biapplyTuple gopurs_runtime.Value
+var cache_biapplyTuple gopurs_runtime.Value
 var once_biapplyTuple sync.Once
 func Get_biapplyTuple() gopurs_runtime.Value {
 	once_biapplyTuple.Do(func() {
-		biapplyTuple = gopurs_runtime.RecordDict2("biapply", "Bifunctor0", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 1102100576, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{gopurs_runtime.Apply((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v_0.UnsafePtr).V0, (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v1_1.UnsafePtr).V0), gopurs_runtime.Apply((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v_0.UnsafePtr).V1, (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v1_1.UnsafePtr).V1)})}
+		cache_biapplyTuple = gopurs_runtime.RecordDict2("biapply", "Bifunctor0", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{gopurs_runtime.Apply((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v_0.UnsafePtr).V0, (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v1_1.UnsafePtr).V0), gopurs_runtime.Apply((*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v_0.UnsafePtr).V1, (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v1_1.UnsafePtr).V1)})}
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Bifunctor.Get_bifunctorTuple()
 }))
 	})
-	return biapplyTuple
+	return cache_biapplyTuple
 }
 
-var biapply gopurs_runtime.Value
+var cache_biapply gopurs_runtime.Value
 var once_biapply sync.Once
 func Get_biapply() gopurs_runtime.Value {
 	once_biapply.Do(func() {
-		biapply = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_biapply = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
@@ -35,51 +35,51 @@ return gopurs_runtime.RecordGet(dict_0, "biapply")
 }()
 })
 	})
-	return biapply
+	return cache_biapply
 }
 
-var biapplyFirst gopurs_runtime.Value
+var cache_biapplyFirst gopurs_runtime.Value
 var once_biapplyFirst sync.Once
 func Get_biapplyFirst() gopurs_runtime.Value {
 	once_biapplyFirst.Do(func() {
-		biapplyFirst = gopurs_runtime.Func3(func(dictBiapply_0_box gopurs_runtime.Value, a_1_box gopurs_runtime.Value, b_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_biapplyFirst = gopurs_runtime.Func3(func(dictBiapply_0_box gopurs_runtime.Value, a_1_box gopurs_runtime.Value, b_2_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_biapplyFirst(dictBiapply_0_box, a_1_box, b_2_box)
 })
 	})
-	return biapplyFirst
+	return cache_biapplyFirst
 }
 
-var biapplySecond gopurs_runtime.Value
+var cache_biapplySecond gopurs_runtime.Value
 var once_biapplySecond sync.Once
 func Get_biapplySecond() gopurs_runtime.Value {
 	once_biapplySecond.Do(func() {
-		biapplySecond = gopurs_runtime.Func3(func(dictBiapply_0_box gopurs_runtime.Value, a_1_box gopurs_runtime.Value, b_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_biapplySecond = gopurs_runtime.Func3(func(dictBiapply_0_box gopurs_runtime.Value, a_1_box gopurs_runtime.Value, b_2_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_biapplySecond(dictBiapply_0_box, a_1_box, b_2_box)
 })
 	})
-	return biapplySecond
+	return cache_biapplySecond
 }
 
-var bilift2 gopurs_runtime.Value
+var cache_bilift2 gopurs_runtime.Value
 var once_bilift2 sync.Once
 func Get_bilift2() gopurs_runtime.Value {
 	once_bilift2.Do(func() {
-		bilift2 = gopurs_runtime.Func5(func(dictBiapply_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, g_2_box gopurs_runtime.Value, a_3_box gopurs_runtime.Value, b_4_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_bilift2 = gopurs_runtime.Func5(func(dictBiapply_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, g_2_box gopurs_runtime.Value, a_3_box gopurs_runtime.Value, b_4_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_bilift2(dictBiapply_0_box, f_1_box, g_2_box, a_3_box, b_4_box)
 })
 	})
-	return bilift2
+	return cache_bilift2
 }
 
-var bilift3 gopurs_runtime.Value
+var cache_bilift3 gopurs_runtime.Value
 var once_bilift3 sync.Once
 func Get_bilift3() gopurs_runtime.Value {
 	once_bilift3.Do(func() {
-		bilift3 = gopurs_runtime.Func6(func(dictBiapply_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, g_2_box gopurs_runtime.Value, a_3_box gopurs_runtime.Value, b_4_box gopurs_runtime.Value, c_5_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_bilift3 = gopurs_runtime.Func6(func(dictBiapply_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, g_2_box gopurs_runtime.Value, a_3_box gopurs_runtime.Value, b_4_box gopurs_runtime.Value, c_5_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_bilift3(dictBiapply_0_box, f_1_box, g_2_box, a_3_box, b_4_box, c_5_box)
 })
 	})
-	return bilift3
+	return cache_bilift3
 }
 
 func Call_biapplyFirst(dictBiapply_0_loop gopurs_runtime.Value, a_1_loop gopurs_runtime.Value, b_2_loop gopurs_runtime.Value) gopurs_runtime.Value {

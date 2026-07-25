@@ -6,33 +6,33 @@ import (
 	pkg_Data_Unit "gopurs/output/Data.Unit"
 )
 
-var lazyUnit gopurs_runtime.Value
+var cache_lazyUnit gopurs_runtime.Value
 var once_lazyUnit sync.Once
 func Get_lazyUnit() gopurs_runtime.Value {
 	once_lazyUnit.Do(func() {
-		lazyUnit = gopurs_runtime.RecordDict1("defer", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_lazyUnit = gopurs_runtime.RecordDict1("defer", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Unit.Get_unit()
 }))
 	})
-	return lazyUnit
+	return cache_lazyUnit
 }
 
-var lazyFn gopurs_runtime.Value
+var cache_lazyFn gopurs_runtime.Value
 var once_lazyFn sync.Once
 func Get_lazyFn() gopurs_runtime.Value {
 	once_lazyFn.Do(func() {
-		lazyFn = gopurs_runtime.RecordDict1("defer", gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_lazyFn = gopurs_runtime.RecordDict1("defer", gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, x_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(f_0, pkg_Data_Unit.Get_unit(), x_1)
 }))
 	})
-	return lazyFn
+	return cache_lazyFn
 }
 
-var defer_ gopurs_runtime.Value
+var cache_defer_ gopurs_runtime.Value
 var once_defer_ sync.Once
 func Get_defer_() gopurs_runtime.Value {
 	once_defer_.Do(func() {
-		defer_ = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_defer_ = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
@@ -40,18 +40,18 @@ return gopurs_runtime.RecordGet(dict_0, "defer")
 }()
 })
 	})
-	return defer_
+	return cache_defer_
 }
 
-var fix gopurs_runtime.Value
+var cache_fix gopurs_runtime.Value
 var once_fix sync.Once
 func Get_fix() gopurs_runtime.Value {
 	once_fix.Do(func() {
-		fix = gopurs_runtime.Func2(func(dictLazy_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_fix = gopurs_runtime.Func2(func(dictLazy_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_fix(dictLazy_0_box, f_1_box)
 })
 	})
-	return fix
+	return cache_fix
 }
 
 func Call_fix(dictLazy_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value) gopurs_runtime.Value {

@@ -7,11 +7,11 @@ import (
 	unsafe "unsafe"
 )
 
-var Costar gopurs_runtime.Value
+var cache_Costar gopurs_runtime.Value
 var once_Costar sync.Once
 func Get_Costar() gopurs_runtime.Value {
 	once_Costar.Do(func() {
-		Costar = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Costar = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
@@ -19,14 +19,14 @@ return x_0
 }()
 })
 	})
-	return Costar
+	return cache_Costar
 }
 
-var semigroupoidCostar gopurs_runtime.Value
+var cache_semigroupoidCostar gopurs_runtime.Value
 var once_semigroupoidCostar sync.Once
 func Get_semigroupoidCostar() gopurs_runtime.Value {
 	once_semigroupoidCostar.Do(func() {
-		semigroupoidCostar = gopurs_runtime.Func(func(dictExtend_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_semigroupoidCostar = gopurs_runtime.Func(func(dictExtend_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictExtend_0 gopurs_runtime.Value = dictExtend_0_loop
 _ = dictExtend_0
@@ -36,14 +36,14 @@ return gopurs_runtime.Apply(v_1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(
 }()
 })
 	})
-	return semigroupoidCostar
+	return cache_semigroupoidCostar
 }
 
-var profunctorCostar gopurs_runtime.Value
+var cache_profunctorCostar gopurs_runtime.Value
 var once_profunctorCostar sync.Once
 func Get_profunctorCostar() gopurs_runtime.Value {
 	once_profunctorCostar.Do(func() {
-		profunctorCostar = gopurs_runtime.Func(func(dictFunctor_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_profunctorCostar = gopurs_runtime.Func(func(dictFunctor_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictFunctor_0 gopurs_runtime.Value = dictFunctor_0_loop
 _ = dictFunctor_0
@@ -57,14 +57,14 @@ return gopurs_runtime.Apply(g_2, gopurs_runtime.Apply(v_3, gopurs_runtime.Apply(
 }()
 })
 	})
-	return profunctorCostar
+	return cache_profunctorCostar
 }
 
-var strongCostar gopurs_runtime.Value
+var cache_strongCostar gopurs_runtime.Value
 var once_strongCostar sync.Once
 func Get_strongCostar() gopurs_runtime.Value {
 	once_strongCostar.Do(func() {
-		strongCostar = gopurs_runtime.Func(func(dictComonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_strongCostar = gopurs_runtime.Func(func(dictComonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictComonad_0 gopurs_runtime.Value = dictComonad_0_loop
 _ = dictComonad_0
@@ -79,67 +79,67 @@ return gopurs_runtime.Apply(g_3, gopurs_runtime.Apply(v_4, gopurs_runtime.Apply(
 }))
 _ = profunctorCostar1_2_1
 return gopurs_runtime.RecordDict3("first", "second", "Profunctor0", gopurs_runtime.Func2(func(v_3 gopurs_runtime.Value, x_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 1102100576, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{gopurs_runtime.Apply(v_3, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Functor0_1_0, "map"), pkg_Data_Tuple.Get_fst(), x_4)), (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonad_0, "extract"), x_4).UnsafePtr).V1})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{gopurs_runtime.Apply(v_3, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Functor0_1_0, "map"), pkg_Data_Tuple.Get_fst(), x_4)), (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonad_0, "extract"), x_4).UnsafePtr).V1})}
 }), gopurs_runtime.Func2(func(v_3 gopurs_runtime.Value, x_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 1102100576, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{(*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonad_0, "extract"), x_4).UnsafePtr).V0, gopurs_runtime.Apply(v_3, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Functor0_1_0, "map"), pkg_Data_Tuple.Get_snd(), x_4))})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{(*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonad_0, "extract"), x_4).UnsafePtr).V0, gopurs_runtime.Apply(v_3, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Functor0_1_0, "map"), pkg_Data_Tuple.Get_snd(), x_4))})}
 }), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return profunctorCostar1_2_1
 }))
 }()
 })
 	})
-	return strongCostar
+	return cache_strongCostar
 }
 
-var newtypeCostar gopurs_runtime.Value
+var cache_newtypeCostar gopurs_runtime.Value
 var once_newtypeCostar sync.Once
 func Get_newtypeCostar() gopurs_runtime.Value {
 	once_newtypeCostar.Do(func() {
-		newtypeCostar = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_newtypeCostar = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{}
 }))
 	})
-	return newtypeCostar
+	return cache_newtypeCostar
 }
 
-var hoistCostar gopurs_runtime.Value
+var cache_hoistCostar gopurs_runtime.Value
 var once_hoistCostar sync.Once
 func Get_hoistCostar() gopurs_runtime.Value {
 	once_hoistCostar.Do(func() {
-		hoistCostar = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_hoistCostar = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_hoistCostar(f_0_box, v_1_box, x_2_box)
 })
 	})
-	return hoistCostar
+	return cache_hoistCostar
 }
 
-var functorCostar gopurs_runtime.Value
+var cache_functorCostar gopurs_runtime.Value
 var once_functorCostar sync.Once
 func Get_functorCostar() gopurs_runtime.Value {
 	once_functorCostar.Do(func() {
-		functorCostar = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_functorCostar = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, x_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(f_0, gopurs_runtime.Apply(v_1, x_2))
 }))
 	})
-	return functorCostar
+	return cache_functorCostar
 }
 
-var invariantCostar gopurs_runtime.Value
+var cache_invariantCostar gopurs_runtime.Value
 var once_invariantCostar sync.Once
 func Get_invariantCostar() gopurs_runtime.Value {
 	once_invariantCostar.Do(func() {
-		invariantCostar = gopurs_runtime.RecordDict1("imap", gopurs_runtime.Func4(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, v_2 gopurs_runtime.Value, x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_invariantCostar = gopurs_runtime.RecordDict1("imap", gopurs_runtime.Func4(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, v_2 gopurs_runtime.Value, x_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(f_0, gopurs_runtime.Apply(v_2, x_3))
 }))
 	})
-	return invariantCostar
+	return cache_invariantCostar
 }
 
-var distributiveCostar gopurs_runtime.Value
+var cache_distributiveCostar gopurs_runtime.Value
 var once_distributiveCostar sync.Once
 func Get_distributiveCostar() gopurs_runtime.Value {
 	once_distributiveCostar.Do(func() {
-		distributiveCostar = gopurs_runtime.RecordDict3("distribute", "collect", "Functor0", gopurs_runtime.Func3(func(dictFunctor_0 gopurs_runtime.Value, f_1 gopurs_runtime.Value, a_2 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_distributiveCostar = gopurs_runtime.RecordDict3("distribute", "collect", "Functor0", gopurs_runtime.Func3(func(dictFunctor_0 gopurs_runtime.Value, f_1 gopurs_runtime.Value, a_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(v_3, a_2)
 }), f_1)
@@ -155,14 +155,14 @@ return gopurs_runtime.Apply(__local_var_2_0, gopurs_runtime.Apply(__local_var_3_
 return Get_functorCostar()
 }))
 	})
-	return distributiveCostar
+	return cache_distributiveCostar
 }
 
-var closedCostar gopurs_runtime.Value
+var cache_closedCostar gopurs_runtime.Value
 var once_closedCostar sync.Once
 func Get_closedCostar() gopurs_runtime.Value {
 	once_closedCostar.Do(func() {
-		closedCostar = gopurs_runtime.Func(func(dictFunctor_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_closedCostar = gopurs_runtime.Func(func(dictFunctor_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictFunctor_0 gopurs_runtime.Value = dictFunctor_0_loop
 _ = dictFunctor_0
@@ -184,14 +184,14 @@ return profunctorCostar1_1_0
 }()
 })
 	})
-	return closedCostar
+	return cache_closedCostar
 }
 
-var categoryCostar gopurs_runtime.Value
+var cache_categoryCostar gopurs_runtime.Value
 var once_categoryCostar sync.Once
 func Get_categoryCostar() gopurs_runtime.Value {
 	once_categoryCostar.Do(func() {
-		categoryCostar = gopurs_runtime.Func(func(dictComonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_categoryCostar = gopurs_runtime.Func(func(dictComonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictComonad_0 gopurs_runtime.Value = dictComonad_0_loop
 _ = dictComonad_0
@@ -207,14 +207,14 @@ return semigroupoidCostar1_2_1
 }()
 })
 	})
-	return categoryCostar
+	return cache_categoryCostar
 }
 
-var bifunctorCostar gopurs_runtime.Value
+var cache_bifunctorCostar gopurs_runtime.Value
 var once_bifunctorCostar sync.Once
 func Get_bifunctorCostar() gopurs_runtime.Value {
 	once_bifunctorCostar.Do(func() {
-		bifunctorCostar = gopurs_runtime.Func(func(dictContravariant_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_bifunctorCostar = gopurs_runtime.Func(func(dictContravariant_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictContravariant_0 gopurs_runtime.Value = dictContravariant_0_loop
 _ = dictContravariant_0
@@ -228,59 +228,59 @@ return gopurs_runtime.Apply(g_2, gopurs_runtime.Apply(v_3, gopurs_runtime.Apply(
 }()
 })
 	})
-	return bifunctorCostar
+	return cache_bifunctorCostar
 }
 
-var applyCostar gopurs_runtime.Value
+var cache_applyCostar gopurs_runtime.Value
 var once_applyCostar sync.Once
 func Get_applyCostar() gopurs_runtime.Value {
 	once_applyCostar.Do(func() {
-		applyCostar = gopurs_runtime.RecordDict2("apply", "Functor0", gopurs_runtime.Func3(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value, a_2 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_applyCostar = gopurs_runtime.RecordDict2("apply", "Functor0", gopurs_runtime.Func3(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value, a_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(v_0, a_2, gopurs_runtime.Apply(v1_1, a_2))
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_functorCostar()
 }))
 	})
-	return applyCostar
+	return cache_applyCostar
 }
 
-var bindCostar gopurs_runtime.Value
+var cache_bindCostar gopurs_runtime.Value
 var once_bindCostar sync.Once
 func Get_bindCostar() gopurs_runtime.Value {
 	once_bindCostar.Do(func() {
-		bindCostar = gopurs_runtime.RecordDict2("bind", "Apply0", gopurs_runtime.Func3(func(v_0 gopurs_runtime.Value, f_1 gopurs_runtime.Value, x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_bindCostar = gopurs_runtime.RecordDict2("bind", "Apply0", gopurs_runtime.Func3(func(v_0 gopurs_runtime.Value, f_1 gopurs_runtime.Value, x_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(f_1, gopurs_runtime.Apply(v_0, x_2), x_2)
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_applyCostar()
 }))
 	})
-	return bindCostar
+	return cache_bindCostar
 }
 
-var applicativeCostar gopurs_runtime.Value
+var cache_applicativeCostar gopurs_runtime.Value
 var once_applicativeCostar sync.Once
 func Get_applicativeCostar() gopurs_runtime.Value {
 	once_applicativeCostar.Do(func() {
-		applicativeCostar = gopurs_runtime.RecordDict2("pure", "Apply0", gopurs_runtime.Func2(func(a_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_applicativeCostar = gopurs_runtime.RecordDict2("pure", "Apply0", gopurs_runtime.Func2(func(a_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return a_0
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_applyCostar()
 }))
 	})
-	return applicativeCostar
+	return cache_applicativeCostar
 }
 
-var monadCostar gopurs_runtime.Value
+var cache_monadCostar gopurs_runtime.Value
 var once_monadCostar sync.Once
 func Get_monadCostar() gopurs_runtime.Value {
 	once_monadCostar.Do(func() {
-		monadCostar = gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monadCostar = gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_applicativeCostar()
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_bindCostar()
 }))
 	})
-	return monadCostar
+	return cache_monadCostar
 }
 
 func Call_hoistCostar(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {

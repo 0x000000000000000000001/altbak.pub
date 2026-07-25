@@ -6,13 +6,13 @@ import (
 	unsafe "unsafe"
 )
 
-var Proxy gopurs_runtime.Value
+var cache_Proxy gopurs_runtime.Value
 var once_Proxy sync.Once
 func Get_Proxy() gopurs_runtime.Value {
 	once_Proxy.Do(func() {
-		Proxy = gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: unsafe.Pointer(&Data_Type_Proxy_Proxy{})}
+		cache_Proxy = gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: unsafe.Pointer(&Data_Type_Proxy_Proxy{})}
 	})
-	return Proxy
+	return cache_Proxy
 }
 
 type Data_Type_Proxy_Proxy struct {

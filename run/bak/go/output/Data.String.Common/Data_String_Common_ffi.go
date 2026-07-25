@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-func _LocaleCompare(lt any, eq any, gt any, s1 string, s2 string) any {
+func _LocaleCompare(lt interface{}, eq interface{}, gt interface{}, s1 string, s2 string) interface{} {
 	cmp := strings.Compare(s1, s2)
 	if cmp < 0 {
 		return lt
@@ -46,7 +46,7 @@ func JoinWith(s string, xs []string) string {
 
 
 // --- Auto-generated FFI wrappers ---
-func Call__LocaleCompare(arg0 any, arg1 any, arg2 any, arg3 string, arg4 string) any {
+func Call__LocaleCompare(arg0 interface{}, arg1 interface{}, arg2 interface{}, arg3 string, arg4 string) interface{} {
 	return _LocaleCompare(arg0, arg1, arg2, arg3, arg4)
 }
 var _Gopurs__LocaleCompare = gopurs_runtime.Func5(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -120,7 +120,7 @@ func Call_joinWith(arg0 string, arg1 []string) string {
 }
 var _Gopurs_JoinWith = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[string](arg0)
-	arg1_arr := arg1.PtrVal().([]gopurs_runtime.Value)
+	arg1_arr := *(*[]gopurs_runtime.Value)(arg1.UnsafePtr)
 	go_arg1 := make([]string, len(arg1_arr))
 	for i, v := range arg1_arr { go_arg1[i] = gopurs_runtime.Unbox[string](v) }
 	go_res := JoinWith(go_arg0, go_arg1)

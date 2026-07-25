@@ -7,22 +7,22 @@ import (
 	pkg_Unsafe_Coerce "gopurs/output/Unsafe.Coerce"
 )
 
-var profunctorFn gopurs_runtime.Value
+var cache_profunctorFn gopurs_runtime.Value
 var once_profunctorFn sync.Once
 func Get_profunctorFn() gopurs_runtime.Value {
 	once_profunctorFn.Do(func() {
-		profunctorFn = gopurs_runtime.RecordDict1("dimap", gopurs_runtime.Func4(func(a2b_0 gopurs_runtime.Value, c2d_1 gopurs_runtime.Value, b2c_2 gopurs_runtime.Value, x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_profunctorFn = gopurs_runtime.RecordDict1("dimap", gopurs_runtime.Func4(func(a2b_0 gopurs_runtime.Value, c2d_1 gopurs_runtime.Value, b2c_2 gopurs_runtime.Value, x_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(c2d_1, gopurs_runtime.Apply(b2c_2, gopurs_runtime.Apply(a2b_0, x_3)))
 }))
 	})
-	return profunctorFn
+	return cache_profunctorFn
 }
 
-var dimap gopurs_runtime.Value
+var cache_dimap gopurs_runtime.Value
 var once_dimap sync.Once
 func Get_dimap() gopurs_runtime.Value {
 	once_dimap.Do(func() {
-		dimap = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_dimap = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
@@ -30,58 +30,58 @@ return gopurs_runtime.RecordGet(dict_0, "dimap")
 }()
 })
 	})
-	return dimap
+	return cache_dimap
 }
 
-var lcmap gopurs_runtime.Value
+var cache_lcmap gopurs_runtime.Value
 var once_lcmap sync.Once
 func Get_lcmap() gopurs_runtime.Value {
 	once_lcmap.Do(func() {
-		lcmap = gopurs_runtime.Func2(func(dictProfunctor_0_box gopurs_runtime.Value, a2b_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_lcmap = gopurs_runtime.Func2(func(dictProfunctor_0_box gopurs_runtime.Value, a2b_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_lcmap(dictProfunctor_0_box, a2b_1_box)
 })
 	})
-	return lcmap
+	return cache_lcmap
 }
 
-var rmap gopurs_runtime.Value
+var cache_rmap gopurs_runtime.Value
 var once_rmap sync.Once
 func Get_rmap() gopurs_runtime.Value {
 	once_rmap.Do(func() {
-		rmap = gopurs_runtime.Func2(func(dictProfunctor_0_box gopurs_runtime.Value, b2c_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_rmap = gopurs_runtime.Func2(func(dictProfunctor_0_box gopurs_runtime.Value, b2c_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_rmap(dictProfunctor_0_box, b2c_1_box)
 })
 	})
-	return rmap
+	return cache_rmap
 }
 
-var unwrapIso gopurs_runtime.Value
+var cache_unwrapIso gopurs_runtime.Value
 var once_unwrapIso sync.Once
 func Get_unwrapIso() gopurs_runtime.Value {
 	once_unwrapIso.Do(func() {
-		unwrapIso = gopurs_runtime.Func2(func(dictProfunctor_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_unwrapIso = gopurs_runtime.Func2(func(dictProfunctor_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_unwrapIso(dictProfunctor_0_box, _dollar__unused_1_box)
 })
 	})
-	return unwrapIso
+	return cache_unwrapIso
 }
 
-var wrapIso gopurs_runtime.Value
+var cache_wrapIso gopurs_runtime.Value
 var once_wrapIso sync.Once
 func Get_wrapIso() gopurs_runtime.Value {
 	once_wrapIso.Do(func() {
-		wrapIso = gopurs_runtime.Func3(func(dictProfunctor_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, v_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_wrapIso = gopurs_runtime.Func3(func(dictProfunctor_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, v_2_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_wrapIso(dictProfunctor_0_box, _dollar__unused_1_box, v_2_box)
 })
 	})
-	return wrapIso
+	return cache_wrapIso
 }
 
-var arr gopurs_runtime.Value
+var cache_arr gopurs_runtime.Value
 var once_arr sync.Once
 func Get_arr() gopurs_runtime.Value {
 	once_arr.Do(func() {
-		arr = gopurs_runtime.Func(func(dictCategory_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_arr = gopurs_runtime.Func(func(dictCategory_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictCategory_0 gopurs_runtime.Value = dictCategory_0_loop
 _ = dictCategory_0
@@ -93,7 +93,7 @@ return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictProfunctor_2, "dimap")
 }()
 })
 	})
-	return arr
+	return cache_arr
 }
 
 func Call_lcmap(dictProfunctor_0_loop gopurs_runtime.Value, a2b_1_loop gopurs_runtime.Value) gopurs_runtime.Value {

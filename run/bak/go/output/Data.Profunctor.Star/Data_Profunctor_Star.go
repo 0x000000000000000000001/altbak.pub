@@ -9,11 +9,11 @@ import (
 	unsafe "unsafe"
 )
 
-var Star gopurs_runtime.Value
+var cache_Star gopurs_runtime.Value
 var once_Star sync.Once
 func Get_Star() gopurs_runtime.Value {
 	once_Star.Do(func() {
-		Star = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Star = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
@@ -21,14 +21,14 @@ return x_0
 }()
 })
 	})
-	return Star
+	return cache_Star
 }
 
-var semigroupoidStar gopurs_runtime.Value
+var cache_semigroupoidStar gopurs_runtime.Value
 var once_semigroupoidStar sync.Once
 func Get_semigroupoidStar() gopurs_runtime.Value {
 	once_semigroupoidStar.Do(func() {
-		semigroupoidStar = gopurs_runtime.Func(func(dictBind_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_semigroupoidStar = gopurs_runtime.Func(func(dictBind_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictBind_0 gopurs_runtime.Value = dictBind_0_loop
 _ = dictBind_0
@@ -38,14 +38,14 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBind_0, "bind"), gopur
 }()
 })
 	})
-	return semigroupoidStar
+	return cache_semigroupoidStar
 }
 
-var profunctorStar gopurs_runtime.Value
+var cache_profunctorStar gopurs_runtime.Value
 var once_profunctorStar sync.Once
 func Get_profunctorStar() gopurs_runtime.Value {
 	once_profunctorStar.Do(func() {
-		profunctorStar = gopurs_runtime.Func(func(dictFunctor_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_profunctorStar = gopurs_runtime.Func(func(dictFunctor_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictFunctor_0 gopurs_runtime.Value = dictFunctor_0_loop
 _ = dictFunctor_0
@@ -59,14 +59,14 @@ return gopurs_runtime.Apply(__local_var_4_0, gopurs_runtime.Apply(v_3, gopurs_ru
 }()
 })
 	})
-	return profunctorStar
+	return cache_profunctorStar
 }
 
-var strongStar gopurs_runtime.Value
+var cache_strongStar gopurs_runtime.Value
 var once_strongStar sync.Once
 func Get_strongStar() gopurs_runtime.Value {
 	once_strongStar.Do(func() {
-		strongStar = gopurs_runtime.Func(func(dictFunctor_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_strongStar = gopurs_runtime.Func(func(dictFunctor_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictFunctor_0 gopurs_runtime.Value = dictFunctor_0_loop
 _ = dictFunctor_0
@@ -82,7 +82,7 @@ return gopurs_runtime.RecordDict3("first", "second", "Profunctor0", gopurs_runti
 __local_var_4_2 := (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v1_3.UnsafePtr).V1
 _ = __local_var_4_2
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), gopurs_runtime.Func(func(v2_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 1102100576, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{v2_5, __local_var_4_2})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{v2_5, __local_var_4_2})}
 }), gopurs_runtime.Apply(v_2, (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v1_3.UnsafePtr).V0))
 }), gopurs_runtime.Func2(func(v_2 gopurs_runtime.Value, v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), gopurs_runtime.Apply(pkg_Data_Tuple.Get_Tuple(), (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v1_3.UnsafePtr).V0), gopurs_runtime.Apply(v_2, (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(v1_3.UnsafePtr).V1))
@@ -92,25 +92,25 @@ return profunctorStar1_1_0
 }()
 })
 	})
-	return strongStar
+	return cache_strongStar
 }
 
-var newtypeStar gopurs_runtime.Value
+var cache_newtypeStar gopurs_runtime.Value
 var once_newtypeStar sync.Once
 func Get_newtypeStar() gopurs_runtime.Value {
 	once_newtypeStar.Do(func() {
-		newtypeStar = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_newtypeStar = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{}
 }))
 	})
-	return newtypeStar
+	return cache_newtypeStar
 }
 
-var invariantStar gopurs_runtime.Value
+var cache_invariantStar gopurs_runtime.Value
 var once_invariantStar sync.Once
 func Get_invariantStar() gopurs_runtime.Value {
 	once_invariantStar.Do(func() {
-		invariantStar = gopurs_runtime.Func(func(dictInvariant_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_invariantStar = gopurs_runtime.Func(func(dictInvariant_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictInvariant_0 gopurs_runtime.Value = dictInvariant_0_loop
 _ = dictInvariant_0
@@ -124,25 +124,25 @@ return gopurs_runtime.Apply(__local_var_4_0, gopurs_runtime.Apply(v_3, x_5))
 }()
 })
 	})
-	return invariantStar
+	return cache_invariantStar
 }
 
-var hoistStar gopurs_runtime.Value
+var cache_hoistStar gopurs_runtime.Value
 var once_hoistStar sync.Once
 func Get_hoistStar() gopurs_runtime.Value {
 	once_hoistStar.Do(func() {
-		hoistStar = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_hoistStar = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_hoistStar(f_0_box, v_1_box, x_2_box)
 })
 	})
-	return hoistStar
+	return cache_hoistStar
 }
 
-var functorStar gopurs_runtime.Value
+var cache_functorStar gopurs_runtime.Value
 var once_functorStar sync.Once
 func Get_functorStar() gopurs_runtime.Value {
 	once_functorStar.Do(func() {
-		functorStar = gopurs_runtime.Func(func(dictFunctor_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_functorStar = gopurs_runtime.Func(func(dictFunctor_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictFunctor_0 gopurs_runtime.Value = dictFunctor_0_loop
 _ = dictFunctor_0
@@ -156,14 +156,14 @@ return gopurs_runtime.Apply(__local_var_3_0, gopurs_runtime.Apply(v_2, x_4))
 }()
 })
 	})
-	return functorStar
+	return cache_functorStar
 }
 
-var distributiveStar gopurs_runtime.Value
+var cache_distributiveStar gopurs_runtime.Value
 var once_distributiveStar sync.Once
 func Get_distributiveStar() gopurs_runtime.Value {
 	once_distributiveStar.Do(func() {
-		distributiveStar = gopurs_runtime.Func(func(dictDistributive_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_distributiveStar = gopurs_runtime.Func(func(dictDistributive_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 distributiveStar:
 for {
@@ -203,14 +203,14 @@ return functorStar1_2_1
 }()
 })
 	})
-	return distributiveStar
+	return cache_distributiveStar
 }
 
-var closedStar gopurs_runtime.Value
+var cache_closedStar gopurs_runtime.Value
 var once_closedStar sync.Once
 func Get_closedStar() gopurs_runtime.Value {
 	once_closedStar.Do(func() {
-		closedStar = gopurs_runtime.Func(func(dictDistributive_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_closedStar = gopurs_runtime.Func(func(dictDistributive_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictDistributive_0 gopurs_runtime.Value = dictDistributive_0_loop
 _ = dictDistributive_0
@@ -236,14 +236,14 @@ return profunctorStar1_3_2
 }()
 })
 	})
-	return closedStar
+	return cache_closedStar
 }
 
-var choiceStar gopurs_runtime.Value
+var cache_choiceStar gopurs_runtime.Value
 var once_choiceStar sync.Once
 func Get_choiceStar() gopurs_runtime.Value {
 	once_choiceStar.Do(func() {
-		choiceStar = gopurs_runtime.Func(func(dictApplicative_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_choiceStar = gopurs_runtime.Func(func(dictApplicative_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictApplicative_0 gopurs_runtime.Value = dictApplicative_0_loop
 _ = dictApplicative_0
@@ -263,7 +263,7 @@ _ = __local_var_4_3
 return gopurs_runtime.Func(func(v2_5 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t4 gopurs_runtime.Value
 {
-if (v2_5.Type == 9 && v2_5.IntVal == 590902115) {
+if (v2_5.Type == 9 && v2_5.IntVal == 3711209382) {
 __t4 = gopurs_runtime.Apply(__local_var_4_3, gopurs_runtime.Apply(v_3, (*pkg_Data_Either.Data_Data_Either_Left)(v2_5.UnsafePtr).V0))
 goto end_branch_4
 } else {
@@ -271,8 +271,8 @@ goto end_branch_4
 }
 }
 {
-if (v2_5.Type == 9 && v2_5.IntVal == 4096564120) {
-__t4 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "pure"), gopurs_runtime.Value{Type: 9, IntVal: 4096564120, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Data_Data_Either_Right{(*pkg_Data_Either.Data_Data_Either_Right)(v2_5.UnsafePtr).V0})})
+if (v2_5.Type == 9 && v2_5.IntVal == 2465973597) {
+__t4 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "pure"), gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Data_Data_Either_Right{(*pkg_Data_Either.Data_Data_Either_Right)(v2_5.UnsafePtr).V0})})
 goto end_branch_4
 } else {
 
@@ -290,15 +290,15 @@ _ = __local_var_4_5
 return gopurs_runtime.Func(func(v2_5 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t6 gopurs_runtime.Value
 {
-if (v2_5.Type == 9 && v2_5.IntVal == 590902115) {
-__t6 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "pure"), gopurs_runtime.Value{Type: 9, IntVal: 590902115, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Data_Data_Either_Left{(*pkg_Data_Either.Data_Data_Either_Left)(v2_5.UnsafePtr).V0})})
+if (v2_5.Type == 9 && v2_5.IntVal == 3711209382) {
+__t6 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "pure"), gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Data_Data_Either_Left{(*pkg_Data_Either.Data_Data_Either_Left)(v2_5.UnsafePtr).V0})})
 goto end_branch_6
 } else {
 
 }
 }
 {
-if (v2_5.Type == 9 && v2_5.IntVal == 4096564120) {
+if (v2_5.Type == 9 && v2_5.IntVal == 2465973597) {
 __t6 = gopurs_runtime.Apply(__local_var_4_5, gopurs_runtime.Apply(v_3, (*pkg_Data_Either.Data_Data_Either_Right)(v2_5.UnsafePtr).V0))
 goto end_branch_6
 } else {
@@ -317,14 +317,14 @@ return profunctorStar1_2_1
 }()
 })
 	})
-	return choiceStar
+	return cache_choiceStar
 }
 
-var categoryStar gopurs_runtime.Value
+var cache_categoryStar gopurs_runtime.Value
 var once_categoryStar sync.Once
 func Get_categoryStar() gopurs_runtime.Value {
 	once_categoryStar.Do(func() {
-		categoryStar = gopurs_runtime.Func(func(dictMonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_categoryStar = gopurs_runtime.Func(func(dictMonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
@@ -340,14 +340,14 @@ return semigroupoidStar1_2_1
 }()
 })
 	})
-	return categoryStar
+	return cache_categoryStar
 }
 
-var applyStar gopurs_runtime.Value
+var cache_applyStar gopurs_runtime.Value
 var once_applyStar sync.Once
 func Get_applyStar() gopurs_runtime.Value {
 	once_applyStar.Do(func() {
-		applyStar = gopurs_runtime.Func(func(dictApply_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_applyStar = gopurs_runtime.Func(func(dictApply_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictApply_0 gopurs_runtime.Value = dictApply_0_loop
 _ = dictApply_0
@@ -369,14 +369,14 @@ return functorStar1_2_1
 }()
 })
 	})
-	return applyStar
+	return cache_applyStar
 }
 
-var bindStar gopurs_runtime.Value
+var cache_bindStar gopurs_runtime.Value
 var once_bindStar sync.Once
 func Get_bindStar() gopurs_runtime.Value {
 	once_bindStar.Do(func() {
-		bindStar = gopurs_runtime.Func(func(dictBind_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_bindStar = gopurs_runtime.Func(func(dictBind_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictBind_0 gopurs_runtime.Value = dictBind_0_loop
 _ = dictBind_0
@@ -408,14 +408,14 @@ return applyStar1_3_2
 }()
 })
 	})
-	return bindStar
+	return cache_bindStar
 }
 
-var applicativeStar gopurs_runtime.Value
+var cache_applicativeStar gopurs_runtime.Value
 var once_applicativeStar sync.Once
 func Get_applicativeStar() gopurs_runtime.Value {
 	once_applicativeStar.Do(func() {
-		applicativeStar = gopurs_runtime.Func(func(dictApplicative_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_applicativeStar = gopurs_runtime.Func(func(dictApplicative_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictApplicative_0 gopurs_runtime.Value = dictApplicative_0_loop
 _ = dictApplicative_0
@@ -445,14 +445,14 @@ return applyStar1_3_2
 }()
 })
 	})
-	return applicativeStar
+	return cache_applicativeStar
 }
 
-var monadStar gopurs_runtime.Value
+var cache_monadStar gopurs_runtime.Value
 var once_monadStar sync.Once
 func Get_monadStar() gopurs_runtime.Value {
 	once_monadStar.Do(func() {
-		monadStar = gopurs_runtime.Func(func(dictMonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monadStar = gopurs_runtime.Func(func(dictMonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
@@ -492,14 +492,14 @@ return bindStar1_4_7
 }()
 })
 	})
-	return monadStar
+	return cache_monadStar
 }
 
-var altStar gopurs_runtime.Value
+var cache_altStar gopurs_runtime.Value
 var once_altStar sync.Once
 func Get_altStar() gopurs_runtime.Value {
 	once_altStar.Do(func() {
-		altStar = gopurs_runtime.Func(func(dictAlt_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_altStar = gopurs_runtime.Func(func(dictAlt_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictAlt_0 gopurs_runtime.Value = dictAlt_0_loop
 _ = dictAlt_0
@@ -521,14 +521,14 @@ return functorStar1_2_1
 }()
 })
 	})
-	return altStar
+	return cache_altStar
 }
 
-var plusStar gopurs_runtime.Value
+var cache_plusStar gopurs_runtime.Value
 var once_plusStar sync.Once
 func Get_plusStar() gopurs_runtime.Value {
 	once_plusStar.Do(func() {
-		plusStar = gopurs_runtime.Func(func(dictPlus_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_plusStar = gopurs_runtime.Func(func(dictPlus_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictPlus_0 gopurs_runtime.Value = dictPlus_0_loop
 _ = dictPlus_0
@@ -560,14 +560,14 @@ return altStar1_4_3
 }()
 })
 	})
-	return plusStar
+	return cache_plusStar
 }
 
-var alternativeStar gopurs_runtime.Value
+var cache_alternativeStar gopurs_runtime.Value
 var once_alternativeStar sync.Once
 func Get_alternativeStar() gopurs_runtime.Value {
 	once_alternativeStar.Do(func() {
-		alternativeStar = gopurs_runtime.Func(func(dictAlternative_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_alternativeStar = gopurs_runtime.Func(func(dictAlternative_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictAlternative_0 gopurs_runtime.Value = dictAlternative_0_loop
 _ = dictAlternative_0
@@ -633,14 +633,14 @@ return plusStar1_6_9
 }()
 })
 	})
-	return alternativeStar
+	return cache_alternativeStar
 }
 
-var monadPlusStar gopurs_runtime.Value
+var cache_monadPlusStar gopurs_runtime.Value
 var once_monadPlusStar sync.Once
 func Get_monadPlusStar() gopurs_runtime.Value {
 	once_monadPlusStar.Do(func() {
-		monadPlusStar = gopurs_runtime.Func(func(dictMonadPlus_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monadPlusStar = gopurs_runtime.Func(func(dictMonadPlus_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonadPlus_0 gopurs_runtime.Value = dictMonadPlus_0_loop
 _ = dictMonadPlus_0
@@ -656,7 +656,7 @@ return alternativeStar1_2_1
 }()
 })
 	})
-	return monadPlusStar
+	return cache_monadPlusStar
 }
 
 func Call_hoistStar(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {

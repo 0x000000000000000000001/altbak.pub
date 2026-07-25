@@ -9,11 +9,11 @@ import (
 	pkg_Data_Show "gopurs/output/Data.Show"
 )
 
-var State gopurs_runtime.Value
+var cache_State gopurs_runtime.Value
 var once_State sync.Once
 func Get_State() gopurs_runtime.Value {
 	once_State.Do(func() {
-		State = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_State = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
@@ -21,47 +21,47 @@ return x_0
 }()
 })
 	})
-	return State
+	return cache_State
 }
 
-var runState gopurs_runtime.Value
+var cache_runState gopurs_runtime.Value
 var once_runState sync.Once
 func Get_runState() gopurs_runtime.Value {
 	once_runState.Do(func() {
-		runState = gopurs_runtime.Func2(func(v_0_box gopurs_runtime.Value, s_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_runState = gopurs_runtime.Func2(func(v_0_box gopurs_runtime.Value, s_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_runState(v_0_box, s_1_box)
 })
 	})
-	return runState
+	return cache_runState
 }
 
-var put gopurs_runtime.Value
+var cache_put gopurs_runtime.Value
 var once_put sync.Once
 func Get_put() gopurs_runtime.Value {
 	once_put.Do(func() {
-		put = gopurs_runtime.Func2(func(s_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_put = gopurs_runtime.Func2(func(s_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_put(s_0_box, v_1_box)
 })
 	})
-	return put
+	return cache_put
 }
 
-var pureState gopurs_runtime.Value
+var cache_pureState gopurs_runtime.Value
 var once_pureState sync.Once
 func Get_pureState() gopurs_runtime.Value {
 	once_pureState.Do(func() {
-		pureState = gopurs_runtime.Func2(func(a_0_box gopurs_runtime.Value, s_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_pureState = gopurs_runtime.Func2(func(a_0_box gopurs_runtime.Value, s_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_pureState(a_0_box, s_1_box)
 })
 	})
-	return pureState
+	return cache_pureState
 }
 
-var get gopurs_runtime.Value
+var cache_get gopurs_runtime.Value
 var once_get sync.Once
 func Get_get() gopurs_runtime.Value {
 	once_get.Do(func() {
-		get = gopurs_runtime.Func(func(s_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_get = gopurs_runtime.Func(func(s_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var s_0 gopurs_runtime.Value = s_0_loop
 _ = s_0
@@ -69,45 +69,45 @@ return gopurs_runtime.RecordDict2("val", "state", s_0, s_0)
 }()
 })
 	})
-	return get
+	return cache_get
 }
 
-var describe gopurs_runtime.Value
+var cache_describe gopurs_runtime.Value
 var once_describe sync.Once
 func Get_describe() gopurs_runtime.Value {
 	once_describe.Do(func() {
-		describe = gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Str("State Monad (1.2k Binds, 60 Stack Depth):"))
+		cache_describe = gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Str("State Monad (1.2k Binds, 60 Stack Depth):"))
 	})
-	return describe
+	return cache_describe
 }
 
-var bindState gopurs_runtime.Value
+var cache_bindState gopurs_runtime.Value
 var once_bindState sync.Once
 func Get_bindState() gopurs_runtime.Value {
 	once_bindState.Do(func() {
-		bindState = gopurs_runtime.Func3(func(v_0_box gopurs_runtime.Value, g_1_box gopurs_runtime.Value, s_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_bindState = gopurs_runtime.Func3(func(v_0_box gopurs_runtime.Value, g_1_box gopurs_runtime.Value, s_2_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_bindState(v_0_box, g_1_box, s_2_box)
 })
 	})
-	return bindState
+	return cache_bindState
 }
 
-var modify gopurs_runtime.Value
+var cache_modify gopurs_runtime.Value
 var once_modify sync.Once
 func Get_modify() gopurs_runtime.Value {
 	once_modify.Do(func() {
-		modify = gopurs_runtime.Func2(func(f_0_box gopurs_runtime.Value, s_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_modify = gopurs_runtime.Func2(func(f_0_box gopurs_runtime.Value, s_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_modify(f_0_box, s_1_box)
 })
 	})
-	return modify
+	return cache_modify
 }
 
-var chainModifications gopurs_runtime.Value
+var cache_chainModifications gopurs_runtime.Value
 var once_chainModifications sync.Once
 func Get_chainModifications() gopurs_runtime.Value {
 	once_chainModifications.Do(func() {
-		chainModifications = gopurs_runtime.Func(func(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_chainModifications = gopurs_runtime.Func(func(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 chainModifications:
 for {
@@ -116,7 +116,7 @@ var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 var __t0 gopurs_runtime.Value
 {
-if v_0.IntVal == 0 {
+if (v_0.IntVal) == (0) {
 __t0 = gopurs_runtime.Func(func(s_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict2("val", "state", pkg_Data_Unit.Get_unit(), s_1)
 })
@@ -127,7 +127,7 @@ goto end_branch_0
 }
 {
 __t0 = gopurs_runtime.Func(func(s_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(Get_chainModifications(), gopurs_runtime.Int(v_0.IntVal - 1), gopurs_runtime.Int(s_1.IntVal + 1))
+return gopurs_runtime.Apply2(Get_chainModifications(), gopurs_runtime.Int((v_0.IntVal) - (1)), gopurs_runtime.Int((s_1.IntVal) + (1)))
 })
 }
 end_branch_0:
@@ -136,25 +136,25 @@ return __t0
 }()
 })
 	})
-	return chainModifications
+	return cache_chainModifications
 }
 
-var runManyTimes gopurs_runtime.Value
+var cache_runManyTimes gopurs_runtime.Value
 var once_runManyTimes sync.Once
 func Get_runManyTimes() gopurs_runtime.Value {
 	once_runManyTimes.Do(func() {
-		runManyTimes = gopurs_runtime.Func2(func(v_0_box gopurs_runtime.Value, v1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_runManyTimes = gopurs_runtime.Func2(func(v_0_box gopurs_runtime.Value, v1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_runManyTimes(v_0_box, v1_1_box)
 })
 	})
-	return runManyTimes
+	return cache_runManyTimes
 }
 
-var act gopurs_runtime.Value
+var cache_act gopurs_runtime.Value
 var once_act sync.Once
 func Get_act() gopurs_runtime.Value {
 	once_act.Do(func() {
-		act = func() gopurs_runtime.Value {
+		cache_act = func() gopurs_runtime.Value {
 __local_var_0_0 := gopurs_runtime.Apply(pkg_Bench.Get_opaque(), gopurs_runtime.Int(20))
 _ = __local_var_0_0
 return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
@@ -164,7 +164,7 @@ return gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), g
 })
 }()
 	})
-	return act
+	return cache_act
 }
 
 func Call_runState(v_0_loop gopurs_runtime.Value, s_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -221,7 +221,7 @@ var v1_1 gopurs_runtime.Value = v1_1_loop
 _ = v1_1
 var __t0 gopurs_runtime.Value
 {
-if v_0.IntVal == 0 {
+if (v_0.IntVal) == (0) {
 __t0 = v1_1
 goto end_branch_0
 } else {
@@ -229,8 +229,8 @@ goto end_branch_0
 }
 }
 {
-v_0_loop = gopurs_runtime.Int(v_0.IntVal - 1)
-v1_1_loop = gopurs_runtime.Int(v1_1.IntVal + gopurs_runtime.RecordGet(gopurs_runtime.Apply2(Get_chainModifications(), gopurs_runtime.Int(60), gopurs_runtime.Int(0)), "state").IntVal)
+v_0_loop = gopurs_runtime.Int((v_0.IntVal) - (1))
+v1_1_loop = gopurs_runtime.Int((v1_1.IntVal) + (gopurs_runtime.RecordGet(gopurs_runtime.Apply2(Get_chainModifications(), gopurs_runtime.Int(60), gopurs_runtime.Int(0)), "state").IntVal))
 continue runManyTimes
 __t0 = gopurs_runtime.Value{}
 }

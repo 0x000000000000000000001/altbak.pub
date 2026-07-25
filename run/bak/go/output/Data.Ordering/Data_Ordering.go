@@ -6,38 +6,38 @@ import (
 	unsafe "unsafe"
 )
 
-var LT gopurs_runtime.Value
+var cache_LT gopurs_runtime.Value
 var once_LT sync.Once
 func Get_LT() gopurs_runtime.Value {
 	once_LT.Do(func() {
-		LT = gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(&Data_Data_Ordering_LT{})}
+		cache_LT = gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(&Data_Data_Ordering_LT{})}
 	})
-	return LT
+	return cache_LT
 }
 
-var GT gopurs_runtime.Value
+var cache_GT gopurs_runtime.Value
 var once_GT sync.Once
 func Get_GT() gopurs_runtime.Value {
 	once_GT.Do(func() {
-		GT = gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(&Data_Data_Ordering_GT{})}
+		cache_GT = gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(&Data_Data_Ordering_GT{})}
 	})
-	return GT
+	return cache_GT
 }
 
-var EQ gopurs_runtime.Value
+var cache_EQ gopurs_runtime.Value
 var once_EQ sync.Once
 func Get_EQ() gopurs_runtime.Value {
 	once_EQ.Do(func() {
-		EQ = gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: unsafe.Pointer(&Data_Data_Ordering_EQ{})}
+		cache_EQ = gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: unsafe.Pointer(&Data_Data_Ordering_EQ{})}
 	})
-	return EQ
+	return cache_EQ
 }
 
-var showOrdering gopurs_runtime.Value
+var cache_showOrdering gopurs_runtime.Value
 var once_showOrdering sync.Once
 func Get_showOrdering() gopurs_runtime.Value {
 	once_showOrdering.Do(func() {
-		showOrdering = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_showOrdering = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
 if (v_0.Type == 9 && v_0.IntVal == 1527465420) {
@@ -70,14 +70,14 @@ end_branch_0:
 return __t0
 }))
 	})
-	return showOrdering
+	return cache_showOrdering
 }
 
-var semigroupOrdering gopurs_runtime.Value
+var cache_semigroupOrdering gopurs_runtime.Value
 var once_semigroupOrdering sync.Once
 func Get_semigroupOrdering() gopurs_runtime.Value {
 	once_semigroupOrdering.Do(func() {
-		semigroupOrdering = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_semigroupOrdering = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
 if (v_0.Type == 9 && v_0.IntVal == 1527465420) {
@@ -110,14 +110,14 @@ end_branch_0:
 return __t0
 }))
 	})
-	return semigroupOrdering
+	return cache_semigroupOrdering
 }
 
-var invert gopurs_runtime.Value
+var cache_invert gopurs_runtime.Value
 var once_invert sync.Once
 func Get_invert() gopurs_runtime.Value {
 	once_invert.Do(func() {
-		invert = gopurs_runtime.Func(func(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_invert = gopurs_runtime.Func(func(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
@@ -154,14 +154,14 @@ return __t0
 }()
 })
 	})
-	return invert
+	return cache_invert
 }
 
-var eqOrdering gopurs_runtime.Value
+var cache_eqOrdering gopurs_runtime.Value
 var once_eqOrdering sync.Once
 func Get_eqOrdering() gopurs_runtime.Value {
 	once_eqOrdering.Do(func() {
-		eqOrdering = gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_eqOrdering = gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
 if (v_0.Type == 9 && v_0.IntVal == 1527465420) {
@@ -180,13 +180,13 @@ goto end_branch_0
 }
 }
 {
-__t0 = gopurs_runtime.Bool((v_0.Type == 9 && v_0.IntVal == 902936544) && (v1_1.Type == 9 && v1_1.IntVal == 902936544))
+__t0 = gopurs_runtime.Bool(((v_0.Type == 9 && v_0.IntVal == 902936544)) && ((v1_1.Type == 9 && v1_1.IntVal == 902936544)))
 }
 end_branch_0:
 return __t0
 }))
 	})
-	return eqOrdering
+	return cache_eqOrdering
 }
 
 type Data_Data_Ordering_LT struct {

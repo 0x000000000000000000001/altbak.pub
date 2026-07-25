@@ -6,29 +6,29 @@ import (
 	pkg_Data_Unit "gopurs/output/Data.Unit"
 )
 
-var new_ gopurs_runtime.Value
+var cache_new_ gopurs_runtime.Value
 var once_new_ sync.Once
 func Get_new_() gopurs_runtime.Value {
 	once_new_.Do(func() {
-		new_ = Get__new()
+		cache_new_ = Get__new()
 	})
-	return new_
+	return cache_new_
 }
 
-var modify_prime gopurs_runtime.Value
+var cache_modify_prime gopurs_runtime.Value
 var once_modify_prime sync.Once
 func Get_modify_prime() gopurs_runtime.Value {
 	once_modify_prime.Do(func() {
-		modify_prime = Get_modifyImpl()
+		cache_modify_prime = Get_modifyImpl()
 	})
-	return modify_prime
+	return cache_modify_prime
 }
 
-var modify gopurs_runtime.Value
+var cache_modify gopurs_runtime.Value
 var once_modify sync.Once
 func Get_modify() gopurs_runtime.Value {
 	once_modify.Do(func() {
-		modify = gopurs_runtime.Func(func(f_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_modify = gopurs_runtime.Func(func(f_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
@@ -40,18 +40,18 @@ return gopurs_runtime.RecordDict2("state", "value", s_prime_2_0, s_prime_2_0)
 }()
 })
 	})
-	return modify
+	return cache_modify
 }
 
-var modify_ gopurs_runtime.Value
+var cache_modify_ gopurs_runtime.Value
 var once_modify_ sync.Once
 func Get_modify_() gopurs_runtime.Value {
 	once_modify_.Do(func() {
-		modify_ = gopurs_runtime.Func2(func(f_0_box gopurs_runtime.Value, s_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_modify_ = gopurs_runtime.Func2(func(f_0_box gopurs_runtime.Value, s_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_modify_(f_0_box, s_1_box)
 })
 	})
-	return modify_
+	return cache_modify_
 }
 
 func Call_modify_(f_0_loop gopurs_runtime.Value, s_1_loop gopurs_runtime.Value) gopurs_runtime.Value {

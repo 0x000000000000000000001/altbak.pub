@@ -8,11 +8,11 @@ import (
 	pkg_Data_Time_Component "gopurs/output/Data.Time.Component"
 )
 
-var genTime gopurs_runtime.Value
+var cache_genTime gopurs_runtime.Value
 var once_genTime sync.Once
 func Get_genTime() gopurs_runtime.Value {
 	once_genTime.Do(func() {
-		genTime = gopurs_runtime.Func(func(dictMonadGen_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_genTime = gopurs_runtime.Func(func(dictMonadGen_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonadGen_0 gopurs_runtime.Value = dictMonadGen_0_loop
 _ = dictMonadGen_0
@@ -22,7 +22,7 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Apply0_1_0, "apply"), gopu
 }()
 })
 	})
-	return genTime
+	return cache_genTime
 }
 
 

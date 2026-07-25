@@ -8,11 +8,11 @@ import (
 	pkg_Data_Divisible "gopurs/output/Data.Divisible"
 )
 
-var lose gopurs_runtime.Value
+var cache_lose gopurs_runtime.Value
 var once_lose sync.Once
 func Get_lose() gopurs_runtime.Value {
 	once_lose.Do(func() {
-		lose = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_lose = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
@@ -20,14 +20,14 @@ return gopurs_runtime.RecordGet(dict_0, "lose")
 }()
 })
 	})
-	return lose
+	return cache_lose
 }
 
-var lost gopurs_runtime.Value
+var cache_lost gopurs_runtime.Value
 var once_lost sync.Once
 func Get_lost() gopurs_runtime.Value {
 	once_lost.Do(func() {
-		lost = gopurs_runtime.Func(func(dictDecidable_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_lost = gopurs_runtime.Func(func(dictDecidable_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictDecidable_0 gopurs_runtime.Value = dictDecidable_0_loop
 _ = dictDecidable_0
@@ -35,14 +35,14 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDecidable_0, "lose"), g
 }()
 })
 	})
-	return lost
+	return cache_lost
 }
 
-var decidablePredicate gopurs_runtime.Value
+var cache_decidablePredicate gopurs_runtime.Value
 var once_decidablePredicate sync.Once
 func Get_decidablePredicate() gopurs_runtime.Value {
 	once_decidablePredicate.Do(func() {
-		decidablePredicate = gopurs_runtime.RecordDict3("lose", "Decide0", "Divisible1", gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, a_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_decidablePredicate = gopurs_runtime.RecordDict3("lose", "Decide0", "Divisible1", gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, a_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var spin_2_0 gopurs_runtime.Value
 spin_2_0 = gopurs_runtime.Func(func(v_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
@@ -64,14 +64,14 @@ return pkg_Data_Decide.Get_choosePredicate()
 return pkg_Data_Divisible.Get_divisiblePredicate()
 }))
 	})
-	return decidablePredicate
+	return cache_decidablePredicate
 }
 
-var decidableOp gopurs_runtime.Value
+var cache_decidableOp gopurs_runtime.Value
 var once_decidableOp sync.Once
 func Get_decidableOp() gopurs_runtime.Value {
 	once_decidableOp.Do(func() {
-		decidableOp = gopurs_runtime.Func(func(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_decidableOp = gopurs_runtime.Func(func(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
 _ = dictMonoid_0
@@ -103,14 +103,14 @@ return divisibleOp_2_1
 }()
 })
 	})
-	return decidableOp
+	return cache_decidableOp
 }
 
-var decidableEquivalence gopurs_runtime.Value
+var cache_decidableEquivalence gopurs_runtime.Value
 var once_decidableEquivalence sync.Once
 func Get_decidableEquivalence() gopurs_runtime.Value {
 	once_decidableEquivalence.Do(func() {
-		decidableEquivalence = gopurs_runtime.RecordDict3("lose", "Decide0", "Divisible1", gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, a_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_decidableEquivalence = gopurs_runtime.RecordDict3("lose", "Decide0", "Divisible1", gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, a_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var spin_2_0 gopurs_runtime.Value
 spin_2_0 = gopurs_runtime.Func(func(v_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
@@ -132,14 +132,14 @@ return pkg_Data_Decide.Get_chooseEquivalence()
 return pkg_Data_Divisible.Get_divisibleEquivalence()
 }))
 	})
-	return decidableEquivalence
+	return cache_decidableEquivalence
 }
 
-var decidableComparison gopurs_runtime.Value
+var cache_decidableComparison gopurs_runtime.Value
 var once_decidableComparison sync.Once
 func Get_decidableComparison() gopurs_runtime.Value {
 	once_decidableComparison.Do(func() {
-		decidableComparison = gopurs_runtime.RecordDict3("lose", "Decide0", "Divisible1", gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, a_1 gopurs_runtime.Value, v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_decidableComparison = gopurs_runtime.RecordDict3("lose", "Decide0", "Divisible1", gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, a_1 gopurs_runtime.Value, v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 var spin_3_0 gopurs_runtime.Value
 spin_3_0 = gopurs_runtime.Func(func(v_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
@@ -161,7 +161,7 @@ return pkg_Data_Decide.Get_chooseComparison()
 return pkg_Data_Divisible.Get_divisibleComparison()
 }))
 	})
-	return decidableComparison
+	return cache_decidableComparison
 }
 
 

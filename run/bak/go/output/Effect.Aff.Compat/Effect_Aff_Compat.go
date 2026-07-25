@@ -8,11 +8,11 @@ import (
 	unsafe "unsafe"
 )
 
-var EffectFnCanceler gopurs_runtime.Value
+var cache_EffectFnCanceler gopurs_runtime.Value
 var once_EffectFnCanceler sync.Once
 func Get_EffectFnCanceler() gopurs_runtime.Value {
 	once_EffectFnCanceler.Do(func() {
-		EffectFnCanceler = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_EffectFnCanceler = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
@@ -20,14 +20,14 @@ return x_0
 }()
 })
 	})
-	return EffectFnCanceler
+	return cache_EffectFnCanceler
 }
 
-var EffectFnAff gopurs_runtime.Value
+var cache_EffectFnAff gopurs_runtime.Value
 var once_EffectFnAff sync.Once
 func Get_EffectFnAff() gopurs_runtime.Value {
 	once_EffectFnAff.Do(func() {
-		EffectFnAff = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_EffectFnAff = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
@@ -35,32 +35,32 @@ return x_0
 }()
 })
 	})
-	return EffectFnAff
+	return cache_EffectFnAff
 }
 
-var fromEffectFnAff gopurs_runtime.Value
+var cache_fromEffectFnAff gopurs_runtime.Value
 var once_fromEffectFnAff sync.Once
 func Get_fromEffectFnAff() gopurs_runtime.Value {
 	once_fromEffectFnAff.Do(func() {
-		fromEffectFnAff = gopurs_runtime.Func(func(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_fromEffectFnAff = gopurs_runtime.Func(func(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 return gopurs_runtime.Apply(pkg_Effect_Aff.Get_makeAff(), gopurs_runtime.Func(func(k_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 v1_2_0 := gopurs_runtime.UncurriedApp2(v_0, gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(k_1, gopurs_runtime.Value{Type: 9, IntVal: 590902115, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Data_Data_Either_Left{x_2})})
+return gopurs_runtime.Apply(k_1, gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Data_Data_Either_Left{x_2})})
 }), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(k_1, gopurs_runtime.Value{Type: 9, IntVal: 4096564120, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Data_Data_Either_Right{x_2})})
+return gopurs_runtime.Apply(k_1, gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Data_Data_Either_Right{x_2})})
 }))
 _ = v1_2_0
 return gopurs_runtime.Func(func(e_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(pkg_Effect_Aff.Get_makeAff(), gopurs_runtime.Func(func(k2_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 _dollar__unused_5_1 := gopurs_runtime.UncurriedApp3(v1_2_0, e_3, gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(k2_4, gopurs_runtime.Value{Type: 9, IntVal: 590902115, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Data_Data_Either_Left{x_5})})
+return gopurs_runtime.Apply(k2_4, gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Data_Data_Either_Left{x_5})})
 }), gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(k2_4, gopurs_runtime.Value{Type: 9, IntVal: 4096564120, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Data_Data_Either_Right{x_5})})
+return gopurs_runtime.Apply(k2_4, gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Data_Data_Either_Right{x_5})})
 }))
 _ = _dollar__unused_5_1
 return pkg_Effect_Aff.Get_nonCanceler()
@@ -72,7 +72,7 @@ return pkg_Effect_Aff.Get_nonCanceler()
 }()
 })
 	})
-	return fromEffectFnAff
+	return cache_fromEffectFnAff
 }
 
 

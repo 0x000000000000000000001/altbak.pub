@@ -8,66 +8,66 @@ import (
 	unsafe "unsafe"
 )
 
-var booleanAlgebraUnit gopurs_runtime.Value
+var cache_booleanAlgebraUnit gopurs_runtime.Value
 var once_booleanAlgebraUnit sync.Once
 func Get_booleanAlgebraUnit() gopurs_runtime.Value {
 	once_booleanAlgebraUnit.Do(func() {
-		booleanAlgebraUnit = gopurs_runtime.RecordDict1("HeytingAlgebra0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_booleanAlgebraUnit = gopurs_runtime.RecordDict1("HeytingAlgebra0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_HeytingAlgebra.Get_heytingAlgebraUnit()
 }))
 	})
-	return booleanAlgebraUnit
+	return cache_booleanAlgebraUnit
 }
 
-var booleanAlgebraRecordNil gopurs_runtime.Value
+var cache_booleanAlgebraRecordNil gopurs_runtime.Value
 var once_booleanAlgebraRecordNil sync.Once
 func Get_booleanAlgebraRecordNil() gopurs_runtime.Value {
 	once_booleanAlgebraRecordNil.Do(func() {
-		booleanAlgebraRecordNil = gopurs_runtime.RecordDict1("HeytingAlgebraRecord0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_booleanAlgebraRecordNil = gopurs_runtime.RecordDict1("HeytingAlgebraRecord0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_HeytingAlgebra.Get_heytingAlgebraRecordNil()
 }))
 	})
-	return booleanAlgebraRecordNil
+	return cache_booleanAlgebraRecordNil
 }
 
-var booleanAlgebraRecordCons gopurs_runtime.Value
+var cache_booleanAlgebraRecordCons gopurs_runtime.Value
 var once_booleanAlgebraRecordCons sync.Once
 func Get_booleanAlgebraRecordCons() gopurs_runtime.Value {
 	once_booleanAlgebraRecordCons.Do(func() {
-		booleanAlgebraRecordCons = gopurs_runtime.Func3(func(dictIsSymbol_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, dictBooleanAlgebraRecord_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_booleanAlgebraRecordCons = gopurs_runtime.Func3(func(dictIsSymbol_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, dictBooleanAlgebraRecord_2_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_booleanAlgebraRecordCons(dictIsSymbol_0_box, _dollar__unused_1_box, dictBooleanAlgebraRecord_2_box)
 })
 	})
-	return booleanAlgebraRecordCons
+	return cache_booleanAlgebraRecordCons
 }
 
-var booleanAlgebraRecord gopurs_runtime.Value
+var cache_booleanAlgebraRecord gopurs_runtime.Value
 var once_booleanAlgebraRecord sync.Once
 func Get_booleanAlgebraRecord() gopurs_runtime.Value {
 	once_booleanAlgebraRecord.Do(func() {
-		booleanAlgebraRecord = gopurs_runtime.Func2(func(_dollar__unused_0_box gopurs_runtime.Value, dictBooleanAlgebraRecord_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_booleanAlgebraRecord = gopurs_runtime.Func2(func(_dollar__unused_0_box gopurs_runtime.Value, dictBooleanAlgebraRecord_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_booleanAlgebraRecord(_dollar__unused_0_box, dictBooleanAlgebraRecord_1_box)
 })
 	})
-	return booleanAlgebraRecord
+	return cache_booleanAlgebraRecord
 }
 
-var booleanAlgebraProxy gopurs_runtime.Value
+var cache_booleanAlgebraProxy gopurs_runtime.Value
 var once_booleanAlgebraProxy sync.Once
 func Get_booleanAlgebraProxy() gopurs_runtime.Value {
 	once_booleanAlgebraProxy.Do(func() {
-		booleanAlgebraProxy = gopurs_runtime.RecordDict1("HeytingAlgebra0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_booleanAlgebraProxy = gopurs_runtime.RecordDict1("HeytingAlgebra0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_HeytingAlgebra.Get_heytingAlgebraProxy()
 }))
 	})
-	return booleanAlgebraProxy
+	return cache_booleanAlgebraProxy
 }
 
-var booleanAlgebraFn gopurs_runtime.Value
+var cache_booleanAlgebraFn gopurs_runtime.Value
 var once_booleanAlgebraFn sync.Once
 func Get_booleanAlgebraFn() gopurs_runtime.Value {
 	once_booleanAlgebraFn.Do(func() {
-		booleanAlgebraFn = gopurs_runtime.Func(func(dictBooleanAlgebra_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_booleanAlgebraFn = gopurs_runtime.Func(func(dictBooleanAlgebra_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictBooleanAlgebra_0 gopurs_runtime.Value = dictBooleanAlgebra_0_loop
 _ = dictBooleanAlgebra_0
@@ -97,18 +97,18 @@ return heytingAlgebraFunction_3_2
 }()
 })
 	})
-	return booleanAlgebraFn
+	return cache_booleanAlgebraFn
 }
 
-var booleanAlgebraBoolean gopurs_runtime.Value
+var cache_booleanAlgebraBoolean gopurs_runtime.Value
 var once_booleanAlgebraBoolean sync.Once
 func Get_booleanAlgebraBoolean() gopurs_runtime.Value {
 	once_booleanAlgebraBoolean.Do(func() {
-		booleanAlgebraBoolean = gopurs_runtime.RecordDict1("HeytingAlgebra0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_booleanAlgebraBoolean = gopurs_runtime.RecordDict1("HeytingAlgebra0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean()
 }))
 	})
-	return booleanAlgebraBoolean
+	return cache_booleanAlgebraBoolean
 }
 
 func Call_booleanAlgebraRecordCons(dictIsSymbol_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, dictBooleanAlgebraRecord_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -136,7 +136,7 @@ var dictBooleanAlgebraRecord_1 gopurs_runtime.Value = dictBooleanAlgebraRecord_1
 _ = dictBooleanAlgebraRecord_1
 __local_var_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBooleanAlgebraRecord_1, "HeytingAlgebraRecord0"), gopurs_runtime.Value{})
 _ = __local_var_2_0
-heytingAlgebraRecord1_3_1 := gopurs_runtime.RecordDict([]string{"ff", "tt", "conj", "disj", "implies", "not"}, []gopurs_runtime.Value{gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_0, "ffRecord"), gopurs_runtime.Value{Type: 9, IntVal: 3178699476, UnsafePtr: unsafe.Pointer(&pkg_Type_Proxy.Data_Type_Proxy_Proxy{})}, gopurs_runtime.Value{Type: 9, IntVal: 3178699476, UnsafePtr: unsafe.Pointer(&pkg_Type_Proxy.Data_Type_Proxy_Proxy{})}), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_0, "ttRecord"), gopurs_runtime.Value{Type: 9, IntVal: 3178699476, UnsafePtr: unsafe.Pointer(&pkg_Type_Proxy.Data_Type_Proxy_Proxy{})}, gopurs_runtime.Value{Type: 9, IntVal: 3178699476, UnsafePtr: unsafe.Pointer(&pkg_Type_Proxy.Data_Type_Proxy_Proxy{})}), gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_0, "conjRecord"), gopurs_runtime.Value{Type: 9, IntVal: 3178699476, UnsafePtr: unsafe.Pointer(&pkg_Type_Proxy.Data_Type_Proxy_Proxy{})}), gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_0, "disjRecord"), gopurs_runtime.Value{Type: 9, IntVal: 3178699476, UnsafePtr: unsafe.Pointer(&pkg_Type_Proxy.Data_Type_Proxy_Proxy{})}), gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_0, "impliesRecord"), gopurs_runtime.Value{Type: 9, IntVal: 3178699476, UnsafePtr: unsafe.Pointer(&pkg_Type_Proxy.Data_Type_Proxy_Proxy{})}), gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_0, "notRecord"), gopurs_runtime.Value{Type: 9, IntVal: 3178699476, UnsafePtr: unsafe.Pointer(&pkg_Type_Proxy.Data_Type_Proxy_Proxy{})})})
+heytingAlgebraRecord1_3_1 := gopurs_runtime.RecordDict([]string{"ff", "tt", "conj", "disj", "implies", "not"}, []gopurs_runtime.Value{gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_0, "ffRecord"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: unsafe.Pointer(&pkg_Type_Proxy.Data_Type_Proxy_Proxy{})}, gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: unsafe.Pointer(&pkg_Type_Proxy.Data_Type_Proxy_Proxy{})}), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_0, "ttRecord"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: unsafe.Pointer(&pkg_Type_Proxy.Data_Type_Proxy_Proxy{})}, gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: unsafe.Pointer(&pkg_Type_Proxy.Data_Type_Proxy_Proxy{})}), gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_0, "conjRecord"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: unsafe.Pointer(&pkg_Type_Proxy.Data_Type_Proxy_Proxy{})}), gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_0, "disjRecord"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: unsafe.Pointer(&pkg_Type_Proxy.Data_Type_Proxy_Proxy{})}), gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_0, "impliesRecord"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: unsafe.Pointer(&pkg_Type_Proxy.Data_Type_Proxy_Proxy{})}), gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_0, "notRecord"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: unsafe.Pointer(&pkg_Type_Proxy.Data_Type_Proxy_Proxy{})})})
 _ = heytingAlgebraRecord1_3_1
 return gopurs_runtime.RecordDict1("HeytingAlgebra0", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return heytingAlgebraRecord1_3_1

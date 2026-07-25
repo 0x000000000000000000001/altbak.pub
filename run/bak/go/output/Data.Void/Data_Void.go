@@ -5,11 +5,11 @@ import (
 	sync "sync"
 )
 
-var absurd gopurs_runtime.Value
+var cache_absurd gopurs_runtime.Value
 var once_absurd sync.Once
 func Get_absurd() gopurs_runtime.Value {
 	once_absurd.Do(func() {
-		absurd = gopurs_runtime.Func(func(a_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_absurd = gopurs_runtime.Func(func(a_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var a_0 gopurs_runtime.Value = a_0_loop
 _ = a_0
@@ -31,7 +31,7 @@ return gopurs_runtime.Apply(spin_1_0, a_0)
 }()
 })
 	})
-	return absurd
+	return cache_absurd
 }
 
 

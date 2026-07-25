@@ -7,11 +7,11 @@ import (
 	pkg_Control_Bind "gopurs/output/Control.Bind"
 )
 
-var whenM gopurs_runtime.Value
+var cache_whenM gopurs_runtime.Value
 var once_whenM sync.Once
 func Get_whenM() gopurs_runtime.Value {
 	once_whenM.Do(func() {
-		whenM = gopurs_runtime.Func(func(dictMonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_whenM = gopurs_runtime.Func(func(dictMonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
@@ -25,14 +25,14 @@ return gopurs_runtime.Apply2(when_1_0, b_4, m_3)
 }()
 })
 	})
-	return whenM
+	return cache_whenM
 }
 
-var unlessM gopurs_runtime.Value
+var cache_unlessM gopurs_runtime.Value
 var once_unlessM sync.Once
 func Get_unlessM() gopurs_runtime.Value {
 	once_unlessM.Do(func() {
-		unlessM = gopurs_runtime.Func(func(dictMonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_unlessM = gopurs_runtime.Func(func(dictMonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
@@ -46,64 +46,64 @@ return gopurs_runtime.Apply2(unless_1_0, b_4, m_3)
 }()
 })
 	})
-	return unlessM
+	return cache_unlessM
 }
 
-var monadProxy gopurs_runtime.Value
+var cache_monadProxy gopurs_runtime.Value
 var once_monadProxy sync.Once
 func Get_monadProxy() gopurs_runtime.Value {
 	once_monadProxy.Do(func() {
-		monadProxy = gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monadProxy = gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Control_Applicative.Get_applicativeProxy()
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Control_Bind.Get_bindProxy()
 }))
 	})
-	return monadProxy
+	return cache_monadProxy
 }
 
-var monadFn gopurs_runtime.Value
+var cache_monadFn gopurs_runtime.Value
 var once_monadFn sync.Once
 func Get_monadFn() gopurs_runtime.Value {
 	once_monadFn.Do(func() {
-		monadFn = gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monadFn = gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Control_Applicative.Get_applicativeFn()
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Control_Bind.Get_bindFn()
 }))
 	})
-	return monadFn
+	return cache_monadFn
 }
 
-var monadArray gopurs_runtime.Value
+var cache_monadArray gopurs_runtime.Value
 var once_monadArray sync.Once
 func Get_monadArray() gopurs_runtime.Value {
 	once_monadArray.Do(func() {
-		monadArray = gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monadArray = gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Control_Applicative.Get_applicativeArray()
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Control_Bind.Get_bindArray()
 }))
 	})
-	return monadArray
+	return cache_monadArray
 }
 
-var liftM1 gopurs_runtime.Value
+var cache_liftM1 gopurs_runtime.Value
 var once_liftM1 sync.Once
 func Get_liftM1() gopurs_runtime.Value {
 	once_liftM1.Do(func() {
-		liftM1 = gopurs_runtime.Func3(func(dictMonad_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_liftM1 = gopurs_runtime.Func3(func(dictMonad_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_liftM1(dictMonad_0_box, f_1_box, a_2_box)
 })
 	})
-	return liftM1
+	return cache_liftM1
 }
 
-var ap gopurs_runtime.Value
+var cache_ap gopurs_runtime.Value
 var once_ap sync.Once
 func Get_ap() gopurs_runtime.Value {
 	once_ap.Do(func() {
-		ap = gopurs_runtime.Func(func(dictMonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_ap = gopurs_runtime.Func(func(dictMonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
@@ -119,7 +119,7 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs
 }()
 })
 	})
-	return ap
+	return cache_ap
 }
 
 func Call_liftM1(dictMonad_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value, a_2_loop gopurs_runtime.Value) gopurs_runtime.Value {

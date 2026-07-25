@@ -11,11 +11,11 @@ import (
 	pkg_Control_Category "gopurs/output/Control.Category"
 )
 
-var distributiveIdentity gopurs_runtime.Value
+var cache_distributiveIdentity gopurs_runtime.Value
 var once_distributiveIdentity sync.Once
 func Get_distributiveIdentity() gopurs_runtime.Value {
 	once_distributiveIdentity.Do(func() {
-		distributiveIdentity = gopurs_runtime.RecordDict3("distribute", "collect", "Functor0", gopurs_runtime.Func(func(dictFunctor_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_distributiveIdentity = gopurs_runtime.RecordDict3("distribute", "collect", "Functor0", gopurs_runtime.Func(func(dictFunctor_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctor_0, "map"), pkg_Unsafe_Coerce.Get_unsafeCoerce())
 }), gopurs_runtime.Func2(func(dictFunctor_0 gopurs_runtime.Value, f_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctor_0, "map"), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -25,14 +25,14 @@ return gopurs_runtime.Apply(f_1, x_2)
 return pkg_Data_Identity.Get_functorIdentity()
 }))
 	})
-	return distributiveIdentity
+	return cache_distributiveIdentity
 }
 
-var distribute gopurs_runtime.Value
+var cache_distribute gopurs_runtime.Value
 var once_distribute sync.Once
 func Get_distribute() gopurs_runtime.Value {
 	once_distribute.Do(func() {
-		distribute = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_distribute = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
@@ -40,14 +40,14 @@ return gopurs_runtime.RecordGet(dict_0, "distribute")
 }()
 })
 	})
-	return distribute
+	return cache_distribute
 }
 
-var distributiveFunction gopurs_runtime.Value
+var cache_distributiveFunction gopurs_runtime.Value
 var once_distributiveFunction sync.Once
 func Get_distributiveFunction() gopurs_runtime.Value {
 	once_distributiveFunction.Do(func() {
-		distributiveFunction = gopurs_runtime.RecordDict3("distribute", "collect", "Functor0", gopurs_runtime.Func3(func(dictFunctor_0 gopurs_runtime.Value, a_1 gopurs_runtime.Value, e_2 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_distributiveFunction = gopurs_runtime.RecordDict3("distribute", "collect", "Functor0", gopurs_runtime.Func3(func(dictFunctor_0 gopurs_runtime.Value, a_1 gopurs_runtime.Value, e_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(v_3, e_2)
 }), a_1)
@@ -63,36 +63,36 @@ return gopurs_runtime.Apply(__local_var_2_0, gopurs_runtime.Apply(__local_var_3_
 return pkg_Data_Functor.Get_functorFn()
 }))
 	})
-	return distributiveFunction
+	return cache_distributiveFunction
 }
 
-var cotraverse gopurs_runtime.Value
+var cache_cotraverse gopurs_runtime.Value
 var once_cotraverse sync.Once
 func Get_cotraverse() gopurs_runtime.Value {
 	once_cotraverse.Do(func() {
-		cotraverse = gopurs_runtime.Func2(func(dictDistributive_0_box gopurs_runtime.Value, dictFunctor_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_cotraverse = gopurs_runtime.Func2(func(dictDistributive_0_box gopurs_runtime.Value, dictFunctor_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_cotraverse(dictDistributive_0_box, dictFunctor_1_box)
 })
 	})
-	return cotraverse
+	return cache_cotraverse
 }
 
-var collectDefault gopurs_runtime.Value
+var cache_collectDefault gopurs_runtime.Value
 var once_collectDefault sync.Once
 func Get_collectDefault() gopurs_runtime.Value {
 	once_collectDefault.Do(func() {
-		collectDefault = gopurs_runtime.Func2(func(dictDistributive_0_box gopurs_runtime.Value, dictFunctor_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_collectDefault = gopurs_runtime.Func2(func(dictDistributive_0_box gopurs_runtime.Value, dictFunctor_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_collectDefault(dictDistributive_0_box, dictFunctor_1_box)
 })
 	})
-	return collectDefault
+	return cache_collectDefault
 }
 
-var distributiveTuple gopurs_runtime.Value
+var cache_distributiveTuple gopurs_runtime.Value
 var once_distributiveTuple sync.Once
 func Get_distributiveTuple() gopurs_runtime.Value {
 	once_distributiveTuple.Do(func() {
-		distributiveTuple = gopurs_runtime.Func(func(dictTypeEquals_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_distributiveTuple = gopurs_runtime.Func(func(dictTypeEquals_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 distributiveTuple:
 for {
@@ -128,14 +128,14 @@ return pkg_Data_Tuple.Get_functorTuple()
 }()
 })
 	})
-	return distributiveTuple
+	return cache_distributiveTuple
 }
 
-var collect gopurs_runtime.Value
+var cache_collect gopurs_runtime.Value
 var once_collect sync.Once
 func Get_collect() gopurs_runtime.Value {
 	once_collect.Do(func() {
-		collect = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_collect = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
@@ -143,18 +143,18 @@ return gopurs_runtime.RecordGet(dict_0, "collect")
 }()
 })
 	})
-	return collect
+	return cache_collect
 }
 
-var distributeDefault gopurs_runtime.Value
+var cache_distributeDefault gopurs_runtime.Value
 var once_distributeDefault sync.Once
 func Get_distributeDefault() gopurs_runtime.Value {
 	once_distributeDefault.Do(func() {
-		distributeDefault = gopurs_runtime.Func2(func(dictDistributive_0_box gopurs_runtime.Value, dictFunctor_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_distributeDefault = gopurs_runtime.Func2(func(dictDistributive_0_box gopurs_runtime.Value, dictFunctor_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_distributeDefault(dictDistributive_0_box, dictFunctor_1_box)
 })
 	})
-	return distributeDefault
+	return cache_distributeDefault
 }
 
 func Call_cotraverse(dictDistributive_0_loop gopurs_runtime.Value, dictFunctor_1_loop gopurs_runtime.Value) gopurs_runtime.Value {

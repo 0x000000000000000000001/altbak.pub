@@ -9,61 +9,61 @@ import (
 	unsafe "unsafe"
 )
 
-var Val gopurs_runtime.Value
+var cache_Val gopurs_runtime.Value
 var once_Val sync.Once
 func Get_Val() gopurs_runtime.Value {
 	once_Val.Do(func() {
-		Val = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Val = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: 245188743, UnsafePtr: unsafe.Pointer(&Data_Test_AstTree_Val{value0})}
 })
 	})
-	return Val
+	return cache_Val
 }
 
-var Add gopurs_runtime.Value
+var cache_Add gopurs_runtime.Value
 var once_Add sync.Once
 func Get_Add() gopurs_runtime.Value {
 	once_Add.Do(func() {
-		Add = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Add = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: 2937956733, UnsafePtr: unsafe.Pointer(&Data_Test_AstTree_Add{value0, value1})}
 })
 })
 	})
-	return Add
+	return cache_Add
 }
 
-var Mul gopurs_runtime.Value
+var cache_Mul gopurs_runtime.Value
 var once_Mul sync.Once
 func Get_Mul() gopurs_runtime.Value {
 	once_Mul.Do(func() {
-		Mul = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Mul = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: 3406566728, UnsafePtr: unsafe.Pointer(&Data_Test_AstTree_Mul{value0, value1})}
 })
 })
 	})
-	return Mul
+	return cache_Mul
 }
 
-var Sub gopurs_runtime.Value
+var cache_Sub gopurs_runtime.Value
 var once_Sub sync.Once
 func Get_Sub() gopurs_runtime.Value {
 	once_Sub.Do(func() {
-		Sub = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Sub = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: 2029887576, UnsafePtr: unsafe.Pointer(&Data_Test_AstTree_Sub{value0, value1})}
 })
 })
 	})
-	return Sub
+	return cache_Sub
 }
 
-var eval gopurs_runtime.Value
+var cache_eval gopurs_runtime.Value
 var once_eval sync.Once
 func Get_eval() gopurs_runtime.Value {
 	once_eval.Do(func() {
-		eval = gopurs_runtime.Func(func(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_eval = gopurs_runtime.Func(func(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 eval:
 for {
@@ -81,7 +81,7 @@ goto end_branch_0
 }
 {
 if (v_0.Type == 9 && v_0.IntVal == 2937956733) {
-__t0 = gopurs_runtime.Int(gopurs_runtime.Apply(Get_eval(), (*Data_Test_AstTree_Add)(v_0.UnsafePtr).V0).IntVal + gopurs_runtime.Apply(Get_eval(), (*Data_Test_AstTree_Add)(v_0.UnsafePtr).V1).IntVal)
+__t0 = gopurs_runtime.Int((gopurs_runtime.Apply(Get_eval(), (*Data_Test_AstTree_Add)(v_0.UnsafePtr).V0).IntVal) + (gopurs_runtime.Apply(Get_eval(), (*Data_Test_AstTree_Add)(v_0.UnsafePtr).V1).IntVal))
 goto end_branch_0
 } else {
 
@@ -89,7 +89,7 @@ goto end_branch_0
 }
 {
 if (v_0.Type == 9 && v_0.IntVal == 3406566728) {
-__t0 = gopurs_runtime.Int(gopurs_runtime.Apply(Get_eval(), (*Data_Test_AstTree_Mul)(v_0.UnsafePtr).V0).IntVal * gopurs_runtime.Apply(Get_eval(), (*Data_Test_AstTree_Mul)(v_0.UnsafePtr).V1).IntVal)
+__t0 = gopurs_runtime.Int((gopurs_runtime.Apply(Get_eval(), (*Data_Test_AstTree_Mul)(v_0.UnsafePtr).V0).IntVal) * (gopurs_runtime.Apply(Get_eval(), (*Data_Test_AstTree_Mul)(v_0.UnsafePtr).V1).IntVal))
 goto end_branch_0
 } else {
 
@@ -97,7 +97,7 @@ goto end_branch_0
 }
 {
 if (v_0.Type == 9 && v_0.IntVal == 2029887576) {
-__t0 = gopurs_runtime.Int(gopurs_runtime.Apply(Get_eval(), (*Data_Test_AstTree_Sub)(v_0.UnsafePtr).V0).IntVal - gopurs_runtime.Apply(Get_eval(), (*Data_Test_AstTree_Sub)(v_0.UnsafePtr).V1).IntVal)
+__t0 = gopurs_runtime.Int((gopurs_runtime.Apply(Get_eval(), (*Data_Test_AstTree_Sub)(v_0.UnsafePtr).V0).IntVal) - (gopurs_runtime.Apply(Get_eval(), (*Data_Test_AstTree_Sub)(v_0.UnsafePtr).V1).IntVal))
 goto end_branch_0
 } else {
 
@@ -112,23 +112,23 @@ return __t0
 }()
 })
 	})
-	return eval
+	return cache_eval
 }
 
-var describe gopurs_runtime.Value
+var cache_describe gopurs_runtime.Value
 var once_describe sync.Once
 func Get_describe() gopurs_runtime.Value {
 	once_describe.Do(func() {
-		describe = gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Str("AST Evaluation:"))
+		cache_describe = gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Str("AST Evaluation:"))
 	})
-	return describe
+	return cache_describe
 }
 
-var buildTree gopurs_runtime.Value
+var cache_buildTree gopurs_runtime.Value
 var once_buildTree sync.Once
 func Get_buildTree() gopurs_runtime.Value {
 	once_buildTree.Do(func() {
-		buildTree = gopurs_runtime.Func(func(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_buildTree = gopurs_runtime.Func(func(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 buildTree:
 for {
@@ -137,7 +137,7 @@ var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 var __t0 gopurs_runtime.Value
 {
-if v_0.IntVal == 0 {
+if (v_0.IntVal) == (0) {
 __t0 = gopurs_runtime.Value{Type: 9, IntVal: 245188743, UnsafePtr: unsafe.Pointer(&Data_Test_AstTree_Val{gopurs_runtime.Int(1)})}
 goto end_branch_0
 } else {
@@ -145,7 +145,7 @@ goto end_branch_0
 }
 }
 {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 2937956733, UnsafePtr: unsafe.Pointer(&Data_Test_AstTree_Add{gopurs_runtime.Value{Type: 9, IntVal: 3406566728, UnsafePtr: unsafe.Pointer(&Data_Test_AstTree_Mul{gopurs_runtime.Value{Type: 9, IntVal: 245188743, UnsafePtr: unsafe.Pointer(&Data_Test_AstTree_Val{v_0})}, gopurs_runtime.Apply(Get_buildTree(), gopurs_runtime.Int(v_0.IntVal - 1))})}, gopurs_runtime.Value{Type: 9, IntVal: 2029887576, UnsafePtr: unsafe.Pointer(&Data_Test_AstTree_Sub{gopurs_runtime.Apply(Get_buildTree(), gopurs_runtime.Int(v_0.IntVal - 1)), gopurs_runtime.Value{Type: 9, IntVal: 245188743, UnsafePtr: unsafe.Pointer(&Data_Test_AstTree_Val{gopurs_runtime.Int(1)})}})}})}
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 2937956733, UnsafePtr: unsafe.Pointer(&Data_Test_AstTree_Add{gopurs_runtime.Value{Type: 9, IntVal: 3406566728, UnsafePtr: unsafe.Pointer(&Data_Test_AstTree_Mul{gopurs_runtime.Value{Type: 9, IntVal: 245188743, UnsafePtr: unsafe.Pointer(&Data_Test_AstTree_Val{v_0})}, gopurs_runtime.Apply(Get_buildTree(), gopurs_runtime.Int((v_0.IntVal) - (1)))})}, gopurs_runtime.Value{Type: 9, IntVal: 2029887576, UnsafePtr: unsafe.Pointer(&Data_Test_AstTree_Sub{gopurs_runtime.Apply(Get_buildTree(), gopurs_runtime.Int((v_0.IntVal) - (1))), gopurs_runtime.Value{Type: 9, IntVal: 245188743, UnsafePtr: unsafe.Pointer(&Data_Test_AstTree_Val{gopurs_runtime.Int(1)})}})}})}
 }
 end_branch_0:
 return __t0
@@ -153,14 +153,14 @@ return __t0
 }()
 })
 	})
-	return buildTree
+	return cache_buildTree
 }
 
-var act gopurs_runtime.Value
+var cache_act gopurs_runtime.Value
 var once_act sync.Once
 func Get_act() gopurs_runtime.Value {
 	once_act.Do(func() {
-		act = func() gopurs_runtime.Value {
+		cache_act = func() gopurs_runtime.Value {
 __local_var_0_0 := gopurs_runtime.Apply(pkg_Bench.Get_opaque(), gopurs_runtime.Int(3))
 _ = __local_var_0_0
 return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
@@ -170,7 +170,7 @@ return gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), g
 })
 }()
 	})
-	return act
+	return cache_act
 }
 
 type Data_Test_AstTree_Val struct {

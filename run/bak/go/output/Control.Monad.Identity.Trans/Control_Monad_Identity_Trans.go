@@ -5,11 +5,11 @@ import (
 	sync "sync"
 )
 
-var IdentityT gopurs_runtime.Value
+var cache_IdentityT gopurs_runtime.Value
 var once_IdentityT sync.Once
 func Get_IdentityT() gopurs_runtime.Value {
 	once_IdentityT.Do(func() {
-		IdentityT = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_IdentityT = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
@@ -17,14 +17,14 @@ return x_0
 }()
 })
 	})
-	return IdentityT
+	return cache_IdentityT
 }
 
-var monadSTIdentityT gopurs_runtime.Value
+var cache_monadSTIdentityT gopurs_runtime.Value
 var once_monadSTIdentityT sync.Once
 func Get_monadSTIdentityT() gopurs_runtime.Value {
 	once_monadSTIdentityT.Do(func() {
-		monadSTIdentityT = gopurs_runtime.Func(func(dictMonadST_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monadSTIdentityT = gopurs_runtime.Func(func(dictMonadST_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonadST_0 gopurs_runtime.Value = dictMonadST_0_loop
 _ = dictMonadST_0
@@ -32,14 +32,14 @@ return dictMonadST_0
 }()
 })
 	})
-	return monadSTIdentityT
+	return cache_monadSTIdentityT
 }
 
-var traversableIdentityT gopurs_runtime.Value
+var cache_traversableIdentityT gopurs_runtime.Value
 var once_traversableIdentityT sync.Once
 func Get_traversableIdentityT() gopurs_runtime.Value {
 	once_traversableIdentityT.Do(func() {
-		traversableIdentityT = gopurs_runtime.Func(func(dictTraversable_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_traversableIdentityT = gopurs_runtime.Func(func(dictTraversable_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictTraversable_0 gopurs_runtime.Value = dictTraversable_0_loop
 _ = dictTraversable_0
@@ -47,14 +47,14 @@ return dictTraversable_0
 }()
 })
 	})
-	return traversableIdentityT
+	return cache_traversableIdentityT
 }
 
-var runIdentityT gopurs_runtime.Value
+var cache_runIdentityT gopurs_runtime.Value
 var once_runIdentityT sync.Once
 func Get_runIdentityT() gopurs_runtime.Value {
 	once_runIdentityT.Do(func() {
-		runIdentityT = gopurs_runtime.Func(func(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_runIdentityT = gopurs_runtime.Func(func(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
@@ -62,14 +62,14 @@ return v_0
 }()
 })
 	})
-	return runIdentityT
+	return cache_runIdentityT
 }
 
-var plusIdentityT gopurs_runtime.Value
+var cache_plusIdentityT gopurs_runtime.Value
 var once_plusIdentityT sync.Once
 func Get_plusIdentityT() gopurs_runtime.Value {
 	once_plusIdentityT.Do(func() {
-		plusIdentityT = gopurs_runtime.Func(func(dictPlus_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_plusIdentityT = gopurs_runtime.Func(func(dictPlus_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictPlus_0 gopurs_runtime.Value = dictPlus_0_loop
 _ = dictPlus_0
@@ -77,25 +77,25 @@ return dictPlus_0
 }()
 })
 	})
-	return plusIdentityT
+	return cache_plusIdentityT
 }
 
-var newtypeIdentityT gopurs_runtime.Value
+var cache_newtypeIdentityT gopurs_runtime.Value
 var once_newtypeIdentityT sync.Once
 func Get_newtypeIdentityT() gopurs_runtime.Value {
 	once_newtypeIdentityT.Do(func() {
-		newtypeIdentityT = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_newtypeIdentityT = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{}
 }))
 	})
-	return newtypeIdentityT
+	return cache_newtypeIdentityT
 }
 
-var monadWriterIdentityT gopurs_runtime.Value
+var cache_monadWriterIdentityT gopurs_runtime.Value
 var once_monadWriterIdentityT sync.Once
 func Get_monadWriterIdentityT() gopurs_runtime.Value {
 	once_monadWriterIdentityT.Do(func() {
-		monadWriterIdentityT = gopurs_runtime.Func(func(dictMonadWriter_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monadWriterIdentityT = gopurs_runtime.Func(func(dictMonadWriter_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonadWriter_0 gopurs_runtime.Value = dictMonadWriter_0_loop
 _ = dictMonadWriter_0
@@ -103,25 +103,25 @@ return dictMonadWriter_0
 }()
 })
 	})
-	return monadWriterIdentityT
+	return cache_monadWriterIdentityT
 }
 
-var monadTransIdentityT gopurs_runtime.Value
+var cache_monadTransIdentityT gopurs_runtime.Value
 var once_monadTransIdentityT sync.Once
 func Get_monadTransIdentityT() gopurs_runtime.Value {
 	once_monadTransIdentityT.Do(func() {
-		monadTransIdentityT = gopurs_runtime.RecordDict1("lift", gopurs_runtime.Func(func(dictMonad_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monadTransIdentityT = gopurs_runtime.RecordDict1("lift", gopurs_runtime.Func(func(dictMonad_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_IdentityT()
 }))
 	})
-	return monadTransIdentityT
+	return cache_monadTransIdentityT
 }
 
-var monadThrowIdentityT gopurs_runtime.Value
+var cache_monadThrowIdentityT gopurs_runtime.Value
 var once_monadThrowIdentityT sync.Once
 func Get_monadThrowIdentityT() gopurs_runtime.Value {
 	once_monadThrowIdentityT.Do(func() {
-		monadThrowIdentityT = gopurs_runtime.Func(func(dictMonadThrow_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monadThrowIdentityT = gopurs_runtime.Func(func(dictMonadThrow_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonadThrow_0 gopurs_runtime.Value = dictMonadThrow_0_loop
 _ = dictMonadThrow_0
@@ -129,14 +129,14 @@ return dictMonadThrow_0
 }()
 })
 	})
-	return monadThrowIdentityT
+	return cache_monadThrowIdentityT
 }
 
-var monadTellIdentityT gopurs_runtime.Value
+var cache_monadTellIdentityT gopurs_runtime.Value
 var once_monadTellIdentityT sync.Once
 func Get_monadTellIdentityT() gopurs_runtime.Value {
 	once_monadTellIdentityT.Do(func() {
-		monadTellIdentityT = gopurs_runtime.Func(func(dictMonadTell_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monadTellIdentityT = gopurs_runtime.Func(func(dictMonadTell_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonadTell_0 gopurs_runtime.Value = dictMonadTell_0_loop
 _ = dictMonadTell_0
@@ -144,14 +144,14 @@ return dictMonadTell_0
 }()
 })
 	})
-	return monadTellIdentityT
+	return cache_monadTellIdentityT
 }
 
-var monadStateIdentityT gopurs_runtime.Value
+var cache_monadStateIdentityT gopurs_runtime.Value
 var once_monadStateIdentityT sync.Once
 func Get_monadStateIdentityT() gopurs_runtime.Value {
 	once_monadStateIdentityT.Do(func() {
-		monadStateIdentityT = gopurs_runtime.Func(func(dictMonadState_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monadStateIdentityT = gopurs_runtime.Func(func(dictMonadState_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonadState_0 gopurs_runtime.Value = dictMonadState_0_loop
 _ = dictMonadState_0
@@ -159,14 +159,14 @@ return dictMonadState_0
 }()
 })
 	})
-	return monadStateIdentityT
+	return cache_monadStateIdentityT
 }
 
-var monadRecIdentityT gopurs_runtime.Value
+var cache_monadRecIdentityT gopurs_runtime.Value
 var once_monadRecIdentityT sync.Once
 func Get_monadRecIdentityT() gopurs_runtime.Value {
 	once_monadRecIdentityT.Do(func() {
-		monadRecIdentityT = gopurs_runtime.Func(func(dictMonadRec_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monadRecIdentityT = gopurs_runtime.Func(func(dictMonadRec_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonadRec_0 gopurs_runtime.Value = dictMonadRec_0_loop
 _ = dictMonadRec_0
@@ -174,14 +174,14 @@ return dictMonadRec_0
 }()
 })
 	})
-	return monadRecIdentityT
+	return cache_monadRecIdentityT
 }
 
-var monadReaderIdentityT gopurs_runtime.Value
+var cache_monadReaderIdentityT gopurs_runtime.Value
 var once_monadReaderIdentityT sync.Once
 func Get_monadReaderIdentityT() gopurs_runtime.Value {
 	once_monadReaderIdentityT.Do(func() {
-		monadReaderIdentityT = gopurs_runtime.Func(func(dictMonadReader_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monadReaderIdentityT = gopurs_runtime.Func(func(dictMonadReader_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonadReader_0 gopurs_runtime.Value = dictMonadReader_0_loop
 _ = dictMonadReader_0
@@ -189,14 +189,14 @@ return dictMonadReader_0
 }()
 })
 	})
-	return monadReaderIdentityT
+	return cache_monadReaderIdentityT
 }
 
-var monadPlusIdentityT gopurs_runtime.Value
+var cache_monadPlusIdentityT gopurs_runtime.Value
 var once_monadPlusIdentityT sync.Once
 func Get_monadPlusIdentityT() gopurs_runtime.Value {
 	once_monadPlusIdentityT.Do(func() {
-		monadPlusIdentityT = gopurs_runtime.Func(func(dictMonadPlus_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monadPlusIdentityT = gopurs_runtime.Func(func(dictMonadPlus_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonadPlus_0 gopurs_runtime.Value = dictMonadPlus_0_loop
 _ = dictMonadPlus_0
@@ -204,14 +204,14 @@ return dictMonadPlus_0
 }()
 })
 	})
-	return monadPlusIdentityT
+	return cache_monadPlusIdentityT
 }
 
-var monadIdentityT gopurs_runtime.Value
+var cache_monadIdentityT gopurs_runtime.Value
 var once_monadIdentityT sync.Once
 func Get_monadIdentityT() gopurs_runtime.Value {
 	once_monadIdentityT.Do(func() {
-		monadIdentityT = gopurs_runtime.Func(func(dictMonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monadIdentityT = gopurs_runtime.Func(func(dictMonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
@@ -219,14 +219,14 @@ return dictMonad_0
 }()
 })
 	})
-	return monadIdentityT
+	return cache_monadIdentityT
 }
 
-var monadErrorIdentityT gopurs_runtime.Value
+var cache_monadErrorIdentityT gopurs_runtime.Value
 var once_monadErrorIdentityT sync.Once
 func Get_monadErrorIdentityT() gopurs_runtime.Value {
 	once_monadErrorIdentityT.Do(func() {
-		monadErrorIdentityT = gopurs_runtime.Func(func(dictMonadError_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monadErrorIdentityT = gopurs_runtime.Func(func(dictMonadError_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonadError_0 gopurs_runtime.Value = dictMonadError_0_loop
 _ = dictMonadError_0
@@ -234,14 +234,14 @@ return dictMonadError_0
 }()
 })
 	})
-	return monadErrorIdentityT
+	return cache_monadErrorIdentityT
 }
 
-var monadEffectIdentityT gopurs_runtime.Value
+var cache_monadEffectIdentityT gopurs_runtime.Value
 var once_monadEffectIdentityT sync.Once
 func Get_monadEffectIdentityT() gopurs_runtime.Value {
 	once_monadEffectIdentityT.Do(func() {
-		monadEffectIdentityT = gopurs_runtime.Func(func(dictMonadEffect_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monadEffectIdentityT = gopurs_runtime.Func(func(dictMonadEffect_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonadEffect_0 gopurs_runtime.Value = dictMonadEffect_0_loop
 _ = dictMonadEffect_0
@@ -249,14 +249,14 @@ return dictMonadEffect_0
 }()
 })
 	})
-	return monadEffectIdentityT
+	return cache_monadEffectIdentityT
 }
 
-var monadContIdentityT gopurs_runtime.Value
+var cache_monadContIdentityT gopurs_runtime.Value
 var once_monadContIdentityT sync.Once
 func Get_monadContIdentityT() gopurs_runtime.Value {
 	once_monadContIdentityT.Do(func() {
-		monadContIdentityT = gopurs_runtime.Func(func(dictMonadCont_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monadContIdentityT = gopurs_runtime.Func(func(dictMonadCont_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonadCont_0 gopurs_runtime.Value = dictMonadCont_0_loop
 _ = dictMonadCont_0
@@ -264,14 +264,14 @@ return dictMonadCont_0
 }()
 })
 	})
-	return monadContIdentityT
+	return cache_monadContIdentityT
 }
 
-var monadAskIdentityT gopurs_runtime.Value
+var cache_monadAskIdentityT gopurs_runtime.Value
 var once_monadAskIdentityT sync.Once
 func Get_monadAskIdentityT() gopurs_runtime.Value {
 	once_monadAskIdentityT.Do(func() {
-		monadAskIdentityT = gopurs_runtime.Func(func(dictMonadAsk_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monadAskIdentityT = gopurs_runtime.Func(func(dictMonadAsk_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonadAsk_0 gopurs_runtime.Value = dictMonadAsk_0_loop
 _ = dictMonadAsk_0
@@ -279,25 +279,25 @@ return dictMonadAsk_0
 }()
 })
 	})
-	return monadAskIdentityT
+	return cache_monadAskIdentityT
 }
 
-var mapIdentityT gopurs_runtime.Value
+var cache_mapIdentityT gopurs_runtime.Value
 var once_mapIdentityT sync.Once
 func Get_mapIdentityT() gopurs_runtime.Value {
 	once_mapIdentityT.Do(func() {
-		mapIdentityT = gopurs_runtime.Func2(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_mapIdentityT = gopurs_runtime.Func2(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_mapIdentityT(f_0_box, v_1_box)
 })
 	})
-	return mapIdentityT
+	return cache_mapIdentityT
 }
 
-var functorIdentityT gopurs_runtime.Value
+var cache_functorIdentityT gopurs_runtime.Value
 var once_functorIdentityT sync.Once
 func Get_functorIdentityT() gopurs_runtime.Value {
 	once_functorIdentityT.Do(func() {
-		functorIdentityT = gopurs_runtime.Func(func(dictFunctor_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_functorIdentityT = gopurs_runtime.Func(func(dictFunctor_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictFunctor_0 gopurs_runtime.Value = dictFunctor_0_loop
 _ = dictFunctor_0
@@ -305,14 +305,14 @@ return dictFunctor_0
 }()
 })
 	})
-	return functorIdentityT
+	return cache_functorIdentityT
 }
 
-var foldableIdentityT gopurs_runtime.Value
+var cache_foldableIdentityT gopurs_runtime.Value
 var once_foldableIdentityT sync.Once
 func Get_foldableIdentityT() gopurs_runtime.Value {
 	once_foldableIdentityT.Do(func() {
-		foldableIdentityT = gopurs_runtime.Func(func(dictFoldable_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_foldableIdentityT = gopurs_runtime.Func(func(dictFoldable_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictFoldable_0 gopurs_runtime.Value = dictFoldable_0_loop
 _ = dictFoldable_0
@@ -320,14 +320,14 @@ return dictFoldable_0
 }()
 })
 	})
-	return foldableIdentityT
+	return cache_foldableIdentityT
 }
 
-var extendIdentityI gopurs_runtime.Value
+var cache_extendIdentityI gopurs_runtime.Value
 var once_extendIdentityI sync.Once
 func Get_extendIdentityI() gopurs_runtime.Value {
 	once_extendIdentityI.Do(func() {
-		extendIdentityI = gopurs_runtime.Func(func(dictExtend_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_extendIdentityI = gopurs_runtime.Func(func(dictExtend_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictExtend_0 gopurs_runtime.Value = dictExtend_0_loop
 _ = dictExtend_0
@@ -343,25 +343,25 @@ return __local_var_1_0
 }()
 })
 	})
-	return extendIdentityI
+	return cache_extendIdentityI
 }
 
-var eqIdentityT gopurs_runtime.Value
+var cache_eqIdentityT gopurs_runtime.Value
 var once_eqIdentityT sync.Once
 func Get_eqIdentityT() gopurs_runtime.Value {
 	once_eqIdentityT.Do(func() {
-		eqIdentityT = gopurs_runtime.Func2(func(dictEq1_0_box gopurs_runtime.Value, dictEq_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_eqIdentityT = gopurs_runtime.Func2(func(dictEq1_0_box gopurs_runtime.Value, dictEq_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_eqIdentityT(dictEq1_0_box, dictEq_1_box)
 })
 	})
-	return eqIdentityT
+	return cache_eqIdentityT
 }
 
-var ordIdentityT gopurs_runtime.Value
+var cache_ordIdentityT gopurs_runtime.Value
 var once_ordIdentityT sync.Once
 func Get_ordIdentityT() gopurs_runtime.Value {
 	once_ordIdentityT.Do(func() {
-		ordIdentityT = gopurs_runtime.Func(func(dictOrd1_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_ordIdentityT = gopurs_runtime.Func(func(dictOrd1_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictOrd1_0 gopurs_runtime.Value = dictOrd1_0_loop
 _ = dictOrd1_0
@@ -385,14 +385,14 @@ return eqIdentityT2_5_3
 }()
 })
 	})
-	return ordIdentityT
+	return cache_ordIdentityT
 }
 
-var eq1IdentityT gopurs_runtime.Value
+var cache_eq1IdentityT gopurs_runtime.Value
 var once_eq1IdentityT sync.Once
 func Get_eq1IdentityT() gopurs_runtime.Value {
 	once_eq1IdentityT.Do(func() {
-		eq1IdentityT = gopurs_runtime.Func(func(dictEq1_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_eq1IdentityT = gopurs_runtime.Func(func(dictEq1_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictEq1_0 gopurs_runtime.Value = dictEq1_0_loop
 _ = dictEq1_0
@@ -402,14 +402,14 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEq1_0, "eq1"), dictEq_1
 }()
 })
 	})
-	return eq1IdentityT
+	return cache_eq1IdentityT
 }
 
-var ord1IdentityT gopurs_runtime.Value
+var cache_ord1IdentityT gopurs_runtime.Value
 var once_ord1IdentityT sync.Once
 func Get_ord1IdentityT() gopurs_runtime.Value {
 	once_ord1IdentityT.Do(func() {
-		ord1IdentityT = gopurs_runtime.Func(func(dictOrd1_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_ord1IdentityT = gopurs_runtime.Func(func(dictOrd1_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictOrd1_0 gopurs_runtime.Value = dictOrd1_0_loop
 _ = dictOrd1_0
@@ -441,14 +441,14 @@ return eq1IdentityT1_3_2
 }()
 })
 	})
-	return ord1IdentityT
+	return cache_ord1IdentityT
 }
 
-var comonadIdentityT gopurs_runtime.Value
+var cache_comonadIdentityT gopurs_runtime.Value
 var once_comonadIdentityT sync.Once
 func Get_comonadIdentityT() gopurs_runtime.Value {
 	once_comonadIdentityT.Do(func() {
-		comonadIdentityT = gopurs_runtime.Func(func(dictComonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_comonadIdentityT = gopurs_runtime.Func(func(dictComonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictComonad_0 gopurs_runtime.Value = dictComonad_0_loop
 _ = dictComonad_0
@@ -472,14 +472,14 @@ return extendIdentityI1_3_2
 }()
 })
 	})
-	return comonadIdentityT
+	return cache_comonadIdentityT
 }
 
-var bindIdentityT gopurs_runtime.Value
+var cache_bindIdentityT gopurs_runtime.Value
 var once_bindIdentityT sync.Once
 func Get_bindIdentityT() gopurs_runtime.Value {
 	once_bindIdentityT.Do(func() {
-		bindIdentityT = gopurs_runtime.Func(func(dictBind_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_bindIdentityT = gopurs_runtime.Func(func(dictBind_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictBind_0 gopurs_runtime.Value = dictBind_0_loop
 _ = dictBind_0
@@ -487,14 +487,14 @@ return dictBind_0
 }()
 })
 	})
-	return bindIdentityT
+	return cache_bindIdentityT
 }
 
-var applyIdentityT gopurs_runtime.Value
+var cache_applyIdentityT gopurs_runtime.Value
 var once_applyIdentityT sync.Once
 func Get_applyIdentityT() gopurs_runtime.Value {
 	once_applyIdentityT.Do(func() {
-		applyIdentityT = gopurs_runtime.Func(func(dictApply_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_applyIdentityT = gopurs_runtime.Func(func(dictApply_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictApply_0 gopurs_runtime.Value = dictApply_0_loop
 _ = dictApply_0
@@ -502,14 +502,14 @@ return dictApply_0
 }()
 })
 	})
-	return applyIdentityT
+	return cache_applyIdentityT
 }
 
-var applicativeIdentityT gopurs_runtime.Value
+var cache_applicativeIdentityT gopurs_runtime.Value
 var once_applicativeIdentityT sync.Once
 func Get_applicativeIdentityT() gopurs_runtime.Value {
 	once_applicativeIdentityT.Do(func() {
-		applicativeIdentityT = gopurs_runtime.Func(func(dictApplicative_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_applicativeIdentityT = gopurs_runtime.Func(func(dictApplicative_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictApplicative_0 gopurs_runtime.Value = dictApplicative_0_loop
 _ = dictApplicative_0
@@ -517,14 +517,14 @@ return dictApplicative_0
 }()
 })
 	})
-	return applicativeIdentityT
+	return cache_applicativeIdentityT
 }
 
-var alternativeIdentityT gopurs_runtime.Value
+var cache_alternativeIdentityT gopurs_runtime.Value
 var once_alternativeIdentityT sync.Once
 func Get_alternativeIdentityT() gopurs_runtime.Value {
 	once_alternativeIdentityT.Do(func() {
-		alternativeIdentityT = gopurs_runtime.Func(func(dictAlternative_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_alternativeIdentityT = gopurs_runtime.Func(func(dictAlternative_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictAlternative_0 gopurs_runtime.Value = dictAlternative_0_loop
 _ = dictAlternative_0
@@ -532,14 +532,14 @@ return dictAlternative_0
 }()
 })
 	})
-	return alternativeIdentityT
+	return cache_alternativeIdentityT
 }
 
-var altIdentityT gopurs_runtime.Value
+var cache_altIdentityT gopurs_runtime.Value
 var once_altIdentityT sync.Once
 func Get_altIdentityT() gopurs_runtime.Value {
 	once_altIdentityT.Do(func() {
-		altIdentityT = gopurs_runtime.Func(func(dictAlt_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_altIdentityT = gopurs_runtime.Func(func(dictAlt_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictAlt_0 gopurs_runtime.Value = dictAlt_0_loop
 _ = dictAlt_0
@@ -547,7 +547,7 @@ return dictAlt_0
 }()
 })
 	})
-	return altIdentityT
+	return cache_altIdentityT
 }
 
 func Call_mapIdentityT(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {

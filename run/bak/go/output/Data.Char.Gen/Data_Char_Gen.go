@@ -12,31 +12,31 @@ import (
 	unsafe "unsafe"
 )
 
-var toEnumWithDefaults gopurs_runtime.Value
+var cache_toEnumWithDefaults gopurs_runtime.Value
 var once_toEnumWithDefaults sync.Once
 func Get_toEnumWithDefaults() gopurs_runtime.Value {
 	once_toEnumWithDefaults.Do(func() {
-		toEnumWithDefaults = gopurs_runtime.Func3(func(low_0_box gopurs_runtime.Value, high_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_toEnumWithDefaults = gopurs_runtime.Func3(func(low_0_box gopurs_runtime.Value, high_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_toEnumWithDefaults(low_0_box, high_1_box, x_2_box)
 })
 	})
-	return toEnumWithDefaults
+	return cache_toEnumWithDefaults
 }
 
-var foldable1NonEmpty gopurs_runtime.Value
+var cache_foldable1NonEmpty gopurs_runtime.Value
 var once_foldable1NonEmpty sync.Once
 func Get_foldable1NonEmpty() gopurs_runtime.Value {
 	once_foldable1NonEmpty.Do(func() {
-		foldable1NonEmpty = gopurs_runtime.Apply(pkg_Data_NonEmpty.Get_foldable1NonEmpty(), pkg_Data_Foldable.Get_foldableArray())
+		cache_foldable1NonEmpty = gopurs_runtime.Apply(pkg_Data_NonEmpty.Get_foldable1NonEmpty(), pkg_Data_Foldable.Get_foldableArray())
 	})
-	return foldable1NonEmpty
+	return cache_foldable1NonEmpty
 }
 
-var genUnicodeChar gopurs_runtime.Value
+var cache_genUnicodeChar gopurs_runtime.Value
 var once_genUnicodeChar sync.Once
 func Get_genUnicodeChar() gopurs_runtime.Value {
 	once_genUnicodeChar.Do(func() {
-		genUnicodeChar = gopurs_runtime.Func(func(dictMonadGen_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_genUnicodeChar = gopurs_runtime.Func(func(dictMonadGen_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonadGen_0 gopurs_runtime.Value = dictMonadGen_0_loop
 _ = dictMonadGen_0
@@ -44,14 +44,14 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopur
 }()
 })
 	})
-	return genUnicodeChar
+	return cache_genUnicodeChar
 }
 
-var genDigitChar gopurs_runtime.Value
+var cache_genDigitChar gopurs_runtime.Value
 var once_genDigitChar sync.Once
 func Get_genDigitChar() gopurs_runtime.Value {
 	once_genDigitChar.Do(func() {
-		genDigitChar = gopurs_runtime.Func(func(dictMonadGen_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_genDigitChar = gopurs_runtime.Func(func(dictMonadGen_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonadGen_0 gopurs_runtime.Value = dictMonadGen_0_loop
 _ = dictMonadGen_0
@@ -59,14 +59,14 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopur
 }()
 })
 	})
-	return genDigitChar
+	return cache_genDigitChar
 }
 
-var genAsciiChar_prime gopurs_runtime.Value
+var cache_genAsciiChar_prime gopurs_runtime.Value
 var once_genAsciiChar_prime sync.Once
 func Get_genAsciiChar_prime() gopurs_runtime.Value {
 	once_genAsciiChar_prime.Do(func() {
-		genAsciiChar_prime = gopurs_runtime.Func(func(dictMonadGen_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_genAsciiChar_prime = gopurs_runtime.Func(func(dictMonadGen_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonadGen_0 gopurs_runtime.Value = dictMonadGen_0_loop
 _ = dictMonadGen_0
@@ -74,14 +74,14 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopur
 }()
 })
 	})
-	return genAsciiChar_prime
+	return cache_genAsciiChar_prime
 }
 
-var genAsciiChar gopurs_runtime.Value
+var cache_genAsciiChar gopurs_runtime.Value
 var once_genAsciiChar sync.Once
 func Get_genAsciiChar() gopurs_runtime.Value {
 	once_genAsciiChar.Do(func() {
-		genAsciiChar = gopurs_runtime.Func(func(dictMonadGen_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_genAsciiChar = gopurs_runtime.Func(func(dictMonadGen_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonadGen_0 gopurs_runtime.Value = dictMonadGen_0_loop
 _ = dictMonadGen_0
@@ -89,14 +89,14 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopur
 }()
 })
 	})
-	return genAsciiChar
+	return cache_genAsciiChar
 }
 
-var genAlphaUppercase gopurs_runtime.Value
+var cache_genAlphaUppercase gopurs_runtime.Value
 var once_genAlphaUppercase sync.Once
 func Get_genAlphaUppercase() gopurs_runtime.Value {
 	once_genAlphaUppercase.Do(func() {
-		genAlphaUppercase = gopurs_runtime.Func(func(dictMonadGen_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_genAlphaUppercase = gopurs_runtime.Func(func(dictMonadGen_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonadGen_0 gopurs_runtime.Value = dictMonadGen_0_loop
 _ = dictMonadGen_0
@@ -104,14 +104,14 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopur
 }()
 })
 	})
-	return genAlphaUppercase
+	return cache_genAlphaUppercase
 }
 
-var genAlphaLowercase gopurs_runtime.Value
+var cache_genAlphaLowercase gopurs_runtime.Value
 var once_genAlphaLowercase sync.Once
 func Get_genAlphaLowercase() gopurs_runtime.Value {
 	once_genAlphaLowercase.Do(func() {
-		genAlphaLowercase = gopurs_runtime.Func(func(dictMonadGen_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_genAlphaLowercase = gopurs_runtime.Func(func(dictMonadGen_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonadGen_0 gopurs_runtime.Value = dictMonadGen_0_loop
 _ = dictMonadGen_0
@@ -119,22 +119,22 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopur
 }()
 })
 	})
-	return genAlphaLowercase
+	return cache_genAlphaLowercase
 }
 
-var genAlpha gopurs_runtime.Value
+var cache_genAlpha gopurs_runtime.Value
 var once_genAlpha sync.Once
 func Get_genAlpha() gopurs_runtime.Value {
 	once_genAlpha.Do(func() {
-		genAlpha = gopurs_runtime.Func(func(dictMonadGen_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_genAlpha = gopurs_runtime.Func(func(dictMonadGen_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonadGen_0 gopurs_runtime.Value = dictMonadGen_0_loop
 _ = dictMonadGen_0
-return gopurs_runtime.Apply3(pkg_Control_Monad_Gen.Get_oneOf(), dictMonadGen_0, Get_foldable1NonEmpty(), gopurs_runtime.Value{Type: 9, IntVal: 1104112642, UnsafePtr: unsafe.Pointer(&pkg_Data_NonEmpty.Data_Data_NonEmpty_NonEmpty{gopurs_runtime.Apply(Get_genAlphaLowercase(), dictMonadGen_0), gopurs_runtime.Array([]gopurs_runtime.Value{gopurs_runtime.Apply(Get_genAlphaUppercase(), dictMonadGen_0)})})})
+return gopurs_runtime.Apply3(pkg_Control_Monad_Gen.Get_oneOf(), dictMonadGen_0, Get_foldable1NonEmpty(), gopurs_runtime.Value{Type: 9, IntVal: 3111306138, UnsafePtr: unsafe.Pointer(&pkg_Data_NonEmpty.Data_Data_NonEmpty_NonEmpty{gopurs_runtime.Apply(Get_genAlphaLowercase(), dictMonadGen_0), gopurs_runtime.Array([]gopurs_runtime.Value{gopurs_runtime.Apply(Get_genAlphaUppercase(), dictMonadGen_0)})})})
 }()
 })
 	})
-	return genAlpha
+	return cache_genAlpha
 }
 
 func Call_toEnumWithDefaults(low_0_loop gopurs_runtime.Value, high_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -148,7 +148,7 @@ v_3_0 := gopurs_runtime.Apply(pkg_Data_Enum.Get_charToEnum(), x_2)
 _ = v_3_0
 var __t1 gopurs_runtime.Value
 {
-if (v_3_0.Type == 9 && v_3_0.IntVal == 1354639136) {
+if (v_3_0.Type == 9 && v_3_0.IntVal == 930809136) {
 __t1 = (*pkg_Data_Maybe.Data_Data_Maybe_Just)(v_3_0.UnsafePtr).V0
 goto end_branch_1
 } else {
@@ -156,10 +156,10 @@ goto end_branch_1
 }
 }
 {
-if (v_3_0.Type == 9 && v_3_0.IntVal == 42808261) {
+if (v_3_0.Type == 9 && v_3_0.IntVal == 3589588149) {
 var __t2 gopurs_runtime.Value
 {
-if x_2.IntVal < gopurs_runtime.Apply(pkg_Data_Enum.Get_toCharCode(), pkg_Data_Bounded.Get_bottomChar()).IntVal {
+if (x_2.IntVal) < (gopurs_runtime.Apply(pkg_Data_Enum.Get_toCharCode(), pkg_Data_Bounded.Get_bottomChar()).IntVal) {
 __t2 = low_0
 goto end_branch_2
 } else {

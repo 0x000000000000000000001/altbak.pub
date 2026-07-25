@@ -6,110 +6,110 @@ import (
 	pkg_Effect_Console "gopurs/output/Effect.Console"
 )
 
-var warnShow gopurs_runtime.Value
+var cache_warnShow gopurs_runtime.Value
 var once_warnShow sync.Once
 func Get_warnShow() gopurs_runtime.Value {
 	once_warnShow.Do(func() {
-		warnShow = gopurs_runtime.Func3(func(dictMonadEffect_0_box gopurs_runtime.Value, dictShow_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_warnShow = gopurs_runtime.Func3(func(dictMonadEffect_0_box gopurs_runtime.Value, dictShow_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_warnShow(dictMonadEffect_0_box, dictShow_1_box, x_2_box)
 })
 	})
-	return warnShow
+	return cache_warnShow
 }
 
-var warn gopurs_runtime.Value
+var cache_warn gopurs_runtime.Value
 var once_warn sync.Once
 func Get_warn() gopurs_runtime.Value {
 	once_warn.Do(func() {
-		warn = gopurs_runtime.Func2(func(dictMonadEffect_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_warn = gopurs_runtime.Func2(func(dictMonadEffect_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_warn(dictMonadEffect_0_box, x_1_box)
 })
 	})
-	return warn
+	return cache_warn
 }
 
-var timeLog gopurs_runtime.Value
+var cache_timeLog gopurs_runtime.Value
 var once_timeLog sync.Once
 func Get_timeLog() gopurs_runtime.Value {
 	once_timeLog.Do(func() {
-		timeLog = gopurs_runtime.Func2(func(dictMonadEffect_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_timeLog = gopurs_runtime.Func2(func(dictMonadEffect_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_timeLog(dictMonadEffect_0_box, x_1_box)
 })
 	})
-	return timeLog
+	return cache_timeLog
 }
 
-var timeEnd gopurs_runtime.Value
+var cache_timeEnd gopurs_runtime.Value
 var once_timeEnd sync.Once
 func Get_timeEnd() gopurs_runtime.Value {
 	once_timeEnd.Do(func() {
-		timeEnd = gopurs_runtime.Func2(func(dictMonadEffect_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_timeEnd = gopurs_runtime.Func2(func(dictMonadEffect_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_timeEnd(dictMonadEffect_0_box, x_1_box)
 })
 	})
-	return timeEnd
+	return cache_timeEnd
 }
 
-var time gopurs_runtime.Value
+var cache_time gopurs_runtime.Value
 var once_time sync.Once
 func Get_time() gopurs_runtime.Value {
 	once_time.Do(func() {
-		time = gopurs_runtime.Func2(func(dictMonadEffect_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_time = gopurs_runtime.Func2(func(dictMonadEffect_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_time(dictMonadEffect_0_box, x_1_box)
 })
 	})
-	return time
+	return cache_time
 }
 
-var logShow gopurs_runtime.Value
+var cache_logShow gopurs_runtime.Value
 var once_logShow sync.Once
 func Get_logShow() gopurs_runtime.Value {
 	once_logShow.Do(func() {
-		logShow = gopurs_runtime.Func3(func(dictMonadEffect_0_box gopurs_runtime.Value, dictShow_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_logShow = gopurs_runtime.Func3(func(dictMonadEffect_0_box gopurs_runtime.Value, dictShow_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_logShow(dictMonadEffect_0_box, dictShow_1_box, x_2_box)
 })
 	})
-	return logShow
+	return cache_logShow
 }
 
-var log gopurs_runtime.Value
+var cache_log gopurs_runtime.Value
 var once_log sync.Once
 func Get_log() gopurs_runtime.Value {
 	once_log.Do(func() {
-		log = gopurs_runtime.Func2(func(dictMonadEffect_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_log = gopurs_runtime.Func2(func(dictMonadEffect_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_log(dictMonadEffect_0_box, x_1_box)
 })
 	})
-	return log
+	return cache_log
 }
 
-var infoShow gopurs_runtime.Value
+var cache_infoShow gopurs_runtime.Value
 var once_infoShow sync.Once
 func Get_infoShow() gopurs_runtime.Value {
 	once_infoShow.Do(func() {
-		infoShow = gopurs_runtime.Func3(func(dictMonadEffect_0_box gopurs_runtime.Value, dictShow_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_infoShow = gopurs_runtime.Func3(func(dictMonadEffect_0_box gopurs_runtime.Value, dictShow_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_infoShow(dictMonadEffect_0_box, dictShow_1_box, x_2_box)
 })
 	})
-	return infoShow
+	return cache_infoShow
 }
 
-var info gopurs_runtime.Value
+var cache_info gopurs_runtime.Value
 var once_info sync.Once
 func Get_info() gopurs_runtime.Value {
 	once_info.Do(func() {
-		info = gopurs_runtime.Func2(func(dictMonadEffect_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_info = gopurs_runtime.Func2(func(dictMonadEffect_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_info(dictMonadEffect_0_box, x_1_box)
 })
 	})
-	return info
+	return cache_info
 }
 
-var groupEnd gopurs_runtime.Value
+var cache_groupEnd gopurs_runtime.Value
 var once_groupEnd sync.Once
 func Get_groupEnd() gopurs_runtime.Value {
 	once_groupEnd.Do(func() {
-		groupEnd = gopurs_runtime.Func(func(dictMonadEffect_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_groupEnd = gopurs_runtime.Func(func(dictMonadEffect_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonadEffect_0 gopurs_runtime.Value = dictMonadEffect_0_loop
 _ = dictMonadEffect_0
@@ -117,36 +117,36 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEff
 }()
 })
 	})
-	return groupEnd
+	return cache_groupEnd
 }
 
-var groupCollapsed gopurs_runtime.Value
+var cache_groupCollapsed gopurs_runtime.Value
 var once_groupCollapsed sync.Once
 func Get_groupCollapsed() gopurs_runtime.Value {
 	once_groupCollapsed.Do(func() {
-		groupCollapsed = gopurs_runtime.Func2(func(dictMonadEffect_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_groupCollapsed = gopurs_runtime.Func2(func(dictMonadEffect_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_groupCollapsed(dictMonadEffect_0_box, x_1_box)
 })
 	})
-	return groupCollapsed
+	return cache_groupCollapsed
 }
 
-var group gopurs_runtime.Value
+var cache_group gopurs_runtime.Value
 var once_group sync.Once
 func Get_group() gopurs_runtime.Value {
 	once_group.Do(func() {
-		group = gopurs_runtime.Func2(func(dictMonadEffect_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_group = gopurs_runtime.Func2(func(dictMonadEffect_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_group(dictMonadEffect_0_box, x_1_box)
 })
 	})
-	return group
+	return cache_group
 }
 
-var grouped gopurs_runtime.Value
+var cache_grouped gopurs_runtime.Value
 var once_grouped sync.Once
 func Get_grouped() gopurs_runtime.Value {
 	once_grouped.Do(func() {
-		grouped = gopurs_runtime.Func(func(dictMonadEffect_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_grouped = gopurs_runtime.Func(func(dictMonadEffect_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonadEffect_0 gopurs_runtime.Value = dictMonadEffect_0_loop
 _ = dictMonadEffect_0
@@ -168,58 +168,58 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs
 }()
 })
 	})
-	return grouped
+	return cache_grouped
 }
 
-var errorShow gopurs_runtime.Value
+var cache_errorShow gopurs_runtime.Value
 var once_errorShow sync.Once
 func Get_errorShow() gopurs_runtime.Value {
 	once_errorShow.Do(func() {
-		errorShow = gopurs_runtime.Func3(func(dictMonadEffect_0_box gopurs_runtime.Value, dictShow_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_errorShow = gopurs_runtime.Func3(func(dictMonadEffect_0_box gopurs_runtime.Value, dictShow_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_errorShow(dictMonadEffect_0_box, dictShow_1_box, x_2_box)
 })
 	})
-	return errorShow
+	return cache_errorShow
 }
 
-var error gopurs_runtime.Value
+var cache_error gopurs_runtime.Value
 var once_error sync.Once
 func Get_error() gopurs_runtime.Value {
 	once_error.Do(func() {
-		error = gopurs_runtime.Func2(func(dictMonadEffect_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_error = gopurs_runtime.Func2(func(dictMonadEffect_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_error(dictMonadEffect_0_box, x_1_box)
 })
 	})
-	return error
+	return cache_error
 }
 
-var debugShow gopurs_runtime.Value
+var cache_debugShow gopurs_runtime.Value
 var once_debugShow sync.Once
 func Get_debugShow() gopurs_runtime.Value {
 	once_debugShow.Do(func() {
-		debugShow = gopurs_runtime.Func3(func(dictMonadEffect_0_box gopurs_runtime.Value, dictShow_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_debugShow = gopurs_runtime.Func3(func(dictMonadEffect_0_box gopurs_runtime.Value, dictShow_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_debugShow(dictMonadEffect_0_box, dictShow_1_box, x_2_box)
 })
 	})
-	return debugShow
+	return cache_debugShow
 }
 
-var debug gopurs_runtime.Value
+var cache_debug gopurs_runtime.Value
 var once_debug sync.Once
 func Get_debug() gopurs_runtime.Value {
 	once_debug.Do(func() {
-		debug = gopurs_runtime.Func2(func(dictMonadEffect_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_debug = gopurs_runtime.Func2(func(dictMonadEffect_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_debug(dictMonadEffect_0_box, x_1_box)
 })
 	})
-	return debug
+	return cache_debug
 }
 
-var clear gopurs_runtime.Value
+var cache_clear gopurs_runtime.Value
 var once_clear sync.Once
 func Get_clear() gopurs_runtime.Value {
 	once_clear.Do(func() {
-		clear = gopurs_runtime.Func(func(dictMonadEffect_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_clear = gopurs_runtime.Func(func(dictMonadEffect_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonadEffect_0 gopurs_runtime.Value = dictMonadEffect_0_loop
 _ = dictMonadEffect_0
@@ -227,7 +227,7 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEff
 }()
 })
 	})
-	return clear
+	return cache_clear
 }
 
 func Call_warnShow(dictMonadEffect_0_loop gopurs_runtime.Value, dictShow_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {

@@ -5,11 +5,11 @@ import (
 	sync "sync"
 )
 
-var TracedT gopurs_runtime.Value
+var cache_TracedT gopurs_runtime.Value
 var once_TracedT sync.Once
 func Get_TracedT() gopurs_runtime.Value {
 	once_TracedT.Do(func() {
-		TracedT = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_TracedT = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
@@ -17,14 +17,14 @@ return x_0
 }()
 })
 	})
-	return TracedT
+	return cache_TracedT
 }
 
-var runTracedT gopurs_runtime.Value
+var cache_runTracedT gopurs_runtime.Value
 var once_runTracedT sync.Once
 func Get_runTracedT() gopurs_runtime.Value {
 	once_runTracedT.Do(func() {
-		runTracedT = gopurs_runtime.Func(func(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_runTracedT = gopurs_runtime.Func(func(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
@@ -32,25 +32,25 @@ return v_0
 }()
 })
 	})
-	return runTracedT
+	return cache_runTracedT
 }
 
-var newtypeTracedT gopurs_runtime.Value
+var cache_newtypeTracedT gopurs_runtime.Value
 var once_newtypeTracedT sync.Once
 func Get_newtypeTracedT() gopurs_runtime.Value {
 	once_newtypeTracedT.Do(func() {
-		newtypeTracedT = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_newtypeTracedT = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{}
 }))
 	})
-	return newtypeTracedT
+	return cache_newtypeTracedT
 }
 
-var functorTracedT gopurs_runtime.Value
+var cache_functorTracedT gopurs_runtime.Value
 var once_functorTracedT sync.Once
 func Get_functorTracedT() gopurs_runtime.Value {
 	once_functorTracedT.Do(func() {
-		functorTracedT = gopurs_runtime.Func(func(dictFunctor_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_functorTracedT = gopurs_runtime.Func(func(dictFunctor_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictFunctor_0 gopurs_runtime.Value = dictFunctor_0_loop
 _ = dictFunctor_0
@@ -62,14 +62,14 @@ return gopurs_runtime.Apply(f_1, gopurs_runtime.Apply(g_3, t_4))
 }()
 })
 	})
-	return functorTracedT
+	return cache_functorTracedT
 }
 
-var extendTracedT gopurs_runtime.Value
+var cache_extendTracedT gopurs_runtime.Value
 var once_extendTracedT sync.Once
 func Get_extendTracedT() gopurs_runtime.Value {
 	once_extendTracedT.Do(func() {
-		extendTracedT = gopurs_runtime.Func(func(dictExtend_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_extendTracedT = gopurs_runtime.Func(func(dictExtend_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictExtend_0 gopurs_runtime.Value = dictExtend_0_loop
 _ = dictExtend_0
@@ -95,14 +95,14 @@ return functorTracedT1_2_1
 }()
 })
 	})
-	return extendTracedT
+	return cache_extendTracedT
 }
 
-var comonadTransTracedT gopurs_runtime.Value
+var cache_comonadTransTracedT gopurs_runtime.Value
 var once_comonadTransTracedT sync.Once
 func Get_comonadTransTracedT() gopurs_runtime.Value {
 	once_comonadTransTracedT.Do(func() {
-		comonadTransTracedT = gopurs_runtime.Func(func(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_comonadTransTracedT = gopurs_runtime.Func(func(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
 _ = dictMonoid_0
@@ -116,14 +116,14 @@ return gopurs_runtime.Apply(f_4, mempty_1_0)
 }()
 })
 	})
-	return comonadTransTracedT
+	return cache_comonadTransTracedT
 }
 
-var comonadTracedT gopurs_runtime.Value
+var cache_comonadTracedT gopurs_runtime.Value
 var once_comonadTracedT sync.Once
 func Get_comonadTracedT() gopurs_runtime.Value {
 	once_comonadTracedT.Do(func() {
-		comonadTracedT = gopurs_runtime.Func(func(dictComonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_comonadTracedT = gopurs_runtime.Func(func(dictComonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictComonad_0 gopurs_runtime.Value = dictComonad_0_loop
 _ = dictComonad_0
@@ -163,7 +163,7 @@ return extendTracedT2_6_5
 }()
 })
 	})
-	return comonadTracedT
+	return cache_comonadTracedT
 }
 
 

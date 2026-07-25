@@ -8,34 +8,34 @@ import (
 	unsafe "unsafe"
 )
 
-var try gopurs_runtime.Value
+var cache_try gopurs_runtime.Value
 var once_try sync.Once
 func Get_try() gopurs_runtime.Value {
 	once_try.Do(func() {
-		try = gopurs_runtime.Func(func(action_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_try = gopurs_runtime.Func(func(action_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var action_0 gopurs_runtime.Value = action_0_loop
 _ = action_0
 return gopurs_runtime.Apply2(Get_catchException(), gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 590902115, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Data_Data_Either_Left{x_1})}
+return gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Data_Data_Either_Left{x_1})}
 })
 }), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 a_prime_1_0 := gopurs_runtime.Apply(action_0, gopurs_runtime.Value{})
 _ = a_prime_1_0
-return gopurs_runtime.Value{Type: 9, IntVal: 4096564120, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Data_Data_Either_Right{a_prime_1_0})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Data_Data_Either_Right{a_prime_1_0})}
 }))
 }()
 })
 	})
-	return try
+	return cache_try
 }
 
-var throw gopurs_runtime.Value
+var cache_throw gopurs_runtime.Value
 var once_throw sync.Once
 func Get_throw() gopurs_runtime.Value {
 	once_throw.Do(func() {
-		throw = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_throw = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
@@ -43,25 +43,25 @@ return gopurs_runtime.Apply(Get_throwException(), gopurs_runtime.Apply(Get_error
 }()
 })
 	})
-	return throw
+	return cache_throw
 }
 
-var stack gopurs_runtime.Value
+var cache_stack gopurs_runtime.Value
 var once_stack sync.Once
 func Get_stack() gopurs_runtime.Value {
 	once_stack.Do(func() {
-		stack = gopurs_runtime.Apply2(Get_stackImpl(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Value{Type: 9, IntVal: 42808261, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})})
+		cache_stack = gopurs_runtime.Apply2(Get_stackImpl(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})})
 	})
-	return stack
+	return cache_stack
 }
 
-var showError gopurs_runtime.Value
+var cache_showError gopurs_runtime.Value
 var once_showError sync.Once
 func Get_showError() gopurs_runtime.Value {
 	once_showError.Do(func() {
-		showError = gopurs_runtime.RecordDict1("show", Get_showErrorImpl())
+		cache_showError = gopurs_runtime.RecordDict1("show", Get_showErrorImpl())
 	})
-	return showError
+	return cache_showError
 }
 
 

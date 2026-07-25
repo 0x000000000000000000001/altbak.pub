@@ -9,38 +9,38 @@ import (
 	unsafe "unsafe"
 )
 
-var R gopurs_runtime.Value
+var cache_R gopurs_runtime.Value
 var once_R sync.Once
 func Get_R() gopurs_runtime.Value {
 	once_R.Do(func() {
-		R = gopurs_runtime.Value{Type: 9, IntVal: 3668501016, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_R{})}
+		cache_R = gopurs_runtime.Value{Type: 9, IntVal: 3668501016, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_R{})}
 	})
-	return R
+	return cache_R
 }
 
-var B gopurs_runtime.Value
+var cache_B gopurs_runtime.Value
 var once_B sync.Once
 func Get_B() gopurs_runtime.Value {
 	once_B.Do(func() {
-		B = gopurs_runtime.Value{Type: 9, IntVal: 1583507464, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_B{})}
+		cache_B = gopurs_runtime.Value{Type: 9, IntVal: 1583507464, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_B{})}
 	})
-	return B
+	return cache_B
 }
 
-var E gopurs_runtime.Value
+var cache_E gopurs_runtime.Value
 var once_E sync.Once
 func Get_E() gopurs_runtime.Value {
 	once_E.Do(func() {
-		E = gopurs_runtime.Value{Type: 9, IntVal: 1548554223, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_E{})}
+		cache_E = gopurs_runtime.Value{Type: 9, IntVal: 1548554223, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_E{})}
 	})
-	return E
+	return cache_E
 }
 
-var T gopurs_runtime.Value
+var cache_T gopurs_runtime.Value
 var once_T sync.Once
 func Get_T() gopurs_runtime.Value {
 	once_T.Do(func() {
-		T = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_T = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value3 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -50,25 +50,25 @@ return gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Point
 })
 })
 	})
-	return T
+	return cache_T
 }
 
-var max gopurs_runtime.Value
+var cache_max gopurs_runtime.Value
 var once_max sync.Once
 func Get_max() gopurs_runtime.Value {
 	once_max.Do(func() {
-		max = gopurs_runtime.Func2(func(x_0_box gopurs_runtime.Value, y_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_max = gopurs_runtime.Func2(func(x_0_box gopurs_runtime.Value, y_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_max(x_0_box, y_1_box)
 })
 	})
-	return max
+	return cache_max
 }
 
-var makeBlack gopurs_runtime.Value
+var cache_makeBlack gopurs_runtime.Value
 var once_makeBlack sync.Once
 func Get_makeBlack() gopurs_runtime.Value {
 	once_makeBlack.Do(func() {
-		makeBlack = gopurs_runtime.Func(func(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_makeBlack = gopurs_runtime.Func(func(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
@@ -97,23 +97,23 @@ return __t0
 }()
 })
 	})
-	return makeBlack
+	return cache_makeBlack
 }
 
-var describe gopurs_runtime.Value
+var cache_describe gopurs_runtime.Value
 var once_describe sync.Once
 func Get_describe() gopurs_runtime.Value {
 	once_describe.Do(func() {
-		describe = gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Str("Red-Black Tree (100k Worst-Case Insertions):"))
+		cache_describe = gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Str("Red-Black Tree (100k Worst-Case Insertions):"))
 	})
-	return describe
+	return cache_describe
 }
 
-var depth gopurs_runtime.Value
+var cache_depth gopurs_runtime.Value
 var once_depth sync.Once
 func Get_depth() gopurs_runtime.Value {
 	once_depth.Do(func() {
-		depth = gopurs_runtime.Func(func(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_depth = gopurs_runtime.Func(func(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 depth:
 for {
@@ -137,15 +137,15 @@ __local_var_2_2 := gopurs_runtime.Apply(Get_depth(), (*Data_Test_RBTree_T)(v_0.U
 _ = __local_var_2_2
 var __t3 gopurs_runtime.Value
 {
-if __local_var_1_1.IntVal > __local_var_2_2.IntVal {
-__t3 = gopurs_runtime.Int(1 + __local_var_1_1.IntVal)
+if (__local_var_1_1.IntVal) > (__local_var_2_2.IntVal) {
+__t3 = gopurs_runtime.Int((1) + (__local_var_1_1.IntVal))
 goto end_branch_3
 } else {
 
 }
 }
 {
-__t3 = gopurs_runtime.Int(1 + __local_var_2_2.IntVal)
+__t3 = gopurs_runtime.Int((1) + (__local_var_2_2.IntVal))
 }
 end_branch_3:
 __t0 = __t3
@@ -163,58 +163,58 @@ return __t0
 }()
 })
 	})
-	return depth
+	return cache_depth
 }
 
-var balance gopurs_runtime.Value
+var cache_balance gopurs_runtime.Value
 var once_balance sync.Once
 func Get_balance() gopurs_runtime.Value {
 	once_balance.Do(func() {
-		balance = gopurs_runtime.Func4(func(v_0_box gopurs_runtime.Value, v1_1_box gopurs_runtime.Value, v2_2_box gopurs_runtime.Value, v3_3_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_balance = gopurs_runtime.Func4(func(v_0_box gopurs_runtime.Value, v1_1_box gopurs_runtime.Value, v2_2_box gopurs_runtime.Value, v3_3_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_balance(v_0_box, v1_1_box, v2_2_box, v3_3_box)
 })
 	})
-	return balance
+	return cache_balance
 }
 
-var ins gopurs_runtime.Value
+var cache_ins gopurs_runtime.Value
 var once_ins sync.Once
 func Get_ins() gopurs_runtime.Value {
 	once_ins.Do(func() {
-		ins = gopurs_runtime.Func2(func(v_0_box gopurs_runtime.Value, v1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_ins = gopurs_runtime.Func2(func(v_0_box gopurs_runtime.Value, v1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_ins(v_0_box, v1_1_box)
 })
 	})
-	return ins
+	return cache_ins
 }
 
-var insert gopurs_runtime.Value
+var cache_insert gopurs_runtime.Value
 var once_insert sync.Once
 func Get_insert() gopurs_runtime.Value {
 	once_insert.Do(func() {
-		insert = gopurs_runtime.Func2(func(x_0_box gopurs_runtime.Value, s_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_insert = gopurs_runtime.Func2(func(x_0_box gopurs_runtime.Value, s_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_insert(x_0_box, s_1_box)
 })
 	})
-	return insert
+	return cache_insert
 }
 
-var buildTree gopurs_runtime.Value
+var cache_buildTree gopurs_runtime.Value
 var once_buildTree sync.Once
 func Get_buildTree() gopurs_runtime.Value {
 	once_buildTree.Do(func() {
-		buildTree = gopurs_runtime.Func2(func(v_0_box gopurs_runtime.Value, v1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_buildTree = gopurs_runtime.Func2(func(v_0_box gopurs_runtime.Value, v1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_buildTree(v_0_box, v1_1_box)
 })
 	})
-	return buildTree
+	return cache_buildTree
 }
 
-var act gopurs_runtime.Value
+var cache_act gopurs_runtime.Value
 var once_act sync.Once
 func Get_act() gopurs_runtime.Value {
 	once_act.Do(func() {
-		act = func() gopurs_runtime.Value {
+		cache_act = func() gopurs_runtime.Value {
 __local_var_0_0 := gopurs_runtime.Apply(pkg_Bench.Get_opaque(), gopurs_runtime.Int(100000))
 _ = __local_var_0_0
 return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
@@ -224,7 +224,7 @@ return gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), g
 })
 }()
 	})
-	return act
+	return cache_act
 }
 
 type Data_Test_RBTree_R struct {
@@ -265,7 +265,7 @@ var y_1 gopurs_runtime.Value = y_1_loop
 _ = y_1
 var __t0 gopurs_runtime.Value
 {
-if x_0.IntVal > y_1.IntVal {
+if (x_0.IntVal) > (y_1.IntVal) {
 __t0 = x_0
 goto end_branch_0
 } else {
@@ -321,7 +321,7 @@ goto end_branch_5
 }
 }
 {
-if (v3_3.Type == 9 && v3_3.IntVal == 3983586014) && ((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V0.Type == 9 && (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V0.IntVal == 3668501016) {
+if ((v3_3.Type == 9 && v3_3.IntVal == 3983586014)) && (((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V0.Type == 9 && (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V0.IntVal == 3668501016)) {
 var __t6 gopurs_runtime.Value
 {
 if ((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V1.Type == 9 && (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V1.IntVal == 3983586014) {
@@ -335,7 +335,7 @@ goto end_branch_7
 }
 }
 {
-if ((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.Type == 9 && (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.IntVal == 3983586014) && ((*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V0.Type == 9 && (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V0.IntVal == 3668501016) {
+if (((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.Type == 9 && (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.IntVal == 3983586014)) && (((*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V0.Type == 9 && (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V0.IntVal == 3668501016)) {
 __t7 = gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_T{gopurs_runtime.Value{Type: 9, IntVal: 3668501016, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_R{})}, gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_T{gopurs_runtime.Value{Type: 9, IntVal: 1583507464, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_B{})}, v1_1, v2_2, (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V1})}, (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V2, gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_T{gopurs_runtime.Value{Type: 9, IntVal: 1583507464, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_B{})}, (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V1, (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V2, (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V3})}})}
 goto end_branch_7
 } else {
@@ -353,7 +353,7 @@ goto end_branch_6
 }
 }
 {
-if ((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.Type == 9 && (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.IntVal == 3983586014) && ((*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V0.Type == 9 && (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V0.IntVal == 3668501016) {
+if (((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.Type == 9 && (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.IntVal == 3983586014)) && (((*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V0.Type == 9 && (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V0.IntVal == 3668501016)) {
 __t6 = gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_T{gopurs_runtime.Value{Type: 9, IntVal: 3668501016, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_R{})}, gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_T{gopurs_runtime.Value{Type: 9, IntVal: 1583507464, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_B{})}, v1_1, v2_2, (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V1})}, (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V2, gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_T{gopurs_runtime.Value{Type: 9, IntVal: 1583507464, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_B{})}, (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V1, (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V2, (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V3})}})}
 goto end_branch_6
 } else {
@@ -381,7 +381,7 @@ goto end_branch_4
 }
 }
 {
-if (v3_3.Type == 9 && v3_3.IntVal == 3983586014) && ((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V0.Type == 9 && (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V0.IntVal == 3668501016) {
+if ((v3_3.Type == 9 && v3_3.IntVal == 3983586014)) && (((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V0.Type == 9 && (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V0.IntVal == 3668501016)) {
 var __t8 gopurs_runtime.Value
 {
 if ((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V1.Type == 9 && (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V1.IntVal == 3983586014) {
@@ -395,7 +395,7 @@ goto end_branch_9
 }
 }
 {
-if ((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.Type == 9 && (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.IntVal == 3983586014) && ((*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V0.Type == 9 && (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V0.IntVal == 3668501016) {
+if (((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.Type == 9 && (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.IntVal == 3983586014)) && (((*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V0.Type == 9 && (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V0.IntVal == 3668501016)) {
 __t9 = gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_T{gopurs_runtime.Value{Type: 9, IntVal: 3668501016, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_R{})}, gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_T{gopurs_runtime.Value{Type: 9, IntVal: 1583507464, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_B{})}, v1_1, v2_2, (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V1})}, (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V2, gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_T{gopurs_runtime.Value{Type: 9, IntVal: 1583507464, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_B{})}, (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V1, (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V2, (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V3})}})}
 goto end_branch_9
 } else {
@@ -413,7 +413,7 @@ goto end_branch_8
 }
 }
 {
-if ((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.Type == 9 && (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.IntVal == 3983586014) && ((*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V0.Type == 9 && (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V0.IntVal == 3668501016) {
+if (((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.Type == 9 && (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.IntVal == 3983586014)) && (((*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V0.Type == 9 && (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V0.IntVal == 3668501016)) {
 __t8 = gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_T{gopurs_runtime.Value{Type: 9, IntVal: 3668501016, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_R{})}, gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_T{gopurs_runtime.Value{Type: 9, IntVal: 1583507464, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_B{})}, v1_1, v2_2, (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V1})}, (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V2, gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_T{gopurs_runtime.Value{Type: 9, IntVal: 1583507464, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_B{})}, (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V1, (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V2, (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V3})}})}
 goto end_branch_8
 } else {
@@ -452,7 +452,7 @@ goto end_branch_10
 }
 }
 {
-if (v3_3.Type == 9 && v3_3.IntVal == 3983586014) && ((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V0.Type == 9 && (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V0.IntVal == 3668501016) {
+if ((v3_3.Type == 9 && v3_3.IntVal == 3983586014)) && (((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V0.Type == 9 && (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V0.IntVal == 3668501016)) {
 var __t11 gopurs_runtime.Value
 {
 if ((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V1.Type == 9 && (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V1.IntVal == 3983586014) {
@@ -466,7 +466,7 @@ goto end_branch_12
 }
 }
 {
-if ((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.Type == 9 && (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.IntVal == 3983586014) && ((*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V0.Type == 9 && (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V0.IntVal == 3668501016) {
+if (((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.Type == 9 && (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.IntVal == 3983586014)) && (((*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V0.Type == 9 && (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V0.IntVal == 3668501016)) {
 __t12 = gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_T{gopurs_runtime.Value{Type: 9, IntVal: 3668501016, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_R{})}, gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_T{gopurs_runtime.Value{Type: 9, IntVal: 1583507464, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_B{})}, v1_1, v2_2, (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V1})}, (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V2, gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_T{gopurs_runtime.Value{Type: 9, IntVal: 1583507464, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_B{})}, (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V1, (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V2, (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V3})}})}
 goto end_branch_12
 } else {
@@ -484,7 +484,7 @@ goto end_branch_11
 }
 }
 {
-if ((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.Type == 9 && (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.IntVal == 3983586014) && ((*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V0.Type == 9 && (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V0.IntVal == 3668501016) {
+if (((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.Type == 9 && (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.IntVal == 3983586014)) && (((*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V0.Type == 9 && (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V0.IntVal == 3668501016)) {
 __t11 = gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_T{gopurs_runtime.Value{Type: 9, IntVal: 3668501016, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_R{})}, gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_T{gopurs_runtime.Value{Type: 9, IntVal: 1583507464, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_B{})}, v1_1, v2_2, (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V1})}, (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V2, gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_T{gopurs_runtime.Value{Type: 9, IntVal: 1583507464, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_B{})}, (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V1, (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V2, (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V3})}})}
 goto end_branch_11
 } else {
@@ -512,7 +512,7 @@ goto end_branch_3
 }
 }
 {
-if (v3_3.Type == 9 && v3_3.IntVal == 3983586014) && ((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V0.Type == 9 && (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V0.IntVal == 3668501016) {
+if ((v3_3.Type == 9 && v3_3.IntVal == 3983586014)) && (((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V0.Type == 9 && (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V0.IntVal == 3668501016)) {
 var __t13 gopurs_runtime.Value
 {
 if ((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V1.Type == 9 && (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V1.IntVal == 3983586014) {
@@ -526,7 +526,7 @@ goto end_branch_14
 }
 }
 {
-if ((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.Type == 9 && (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.IntVal == 3983586014) && ((*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V0.Type == 9 && (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V0.IntVal == 3668501016) {
+if (((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.Type == 9 && (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.IntVal == 3983586014)) && (((*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V0.Type == 9 && (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V0.IntVal == 3668501016)) {
 __t14 = gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_T{gopurs_runtime.Value{Type: 9, IntVal: 3668501016, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_R{})}, gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_T{gopurs_runtime.Value{Type: 9, IntVal: 1583507464, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_B{})}, v1_1, v2_2, (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V1})}, (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V2, gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_T{gopurs_runtime.Value{Type: 9, IntVal: 1583507464, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_B{})}, (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V1, (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V2, (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V3})}})}
 goto end_branch_14
 } else {
@@ -544,7 +544,7 @@ goto end_branch_13
 }
 }
 {
-if ((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.Type == 9 && (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.IntVal == 3983586014) && ((*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V0.Type == 9 && (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V0.IntVal == 3668501016) {
+if (((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.Type == 9 && (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.IntVal == 3983586014)) && (((*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V0.Type == 9 && (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V0.IntVal == 3668501016)) {
 __t13 = gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_T{gopurs_runtime.Value{Type: 9, IntVal: 3668501016, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_R{})}, gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_T{gopurs_runtime.Value{Type: 9, IntVal: 1583507464, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_B{})}, v1_1, v2_2, (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V1})}, (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V2, gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_T{gopurs_runtime.Value{Type: 9, IntVal: 1583507464, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_B{})}, (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V1, (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V2, (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V3})}})}
 goto end_branch_13
 } else {
@@ -572,7 +572,7 @@ goto end_branch_2
 }
 }
 {
-if (v3_3.Type == 9 && v3_3.IntVal == 3983586014) && ((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V0.Type == 9 && (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V0.IntVal == 3668501016) {
+if ((v3_3.Type == 9 && v3_3.IntVal == 3983586014)) && (((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V0.Type == 9 && (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V0.IntVal == 3668501016)) {
 var __t15 gopurs_runtime.Value
 {
 if ((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V1.Type == 9 && (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V1.IntVal == 3983586014) {
@@ -586,7 +586,7 @@ goto end_branch_16
 }
 }
 {
-if ((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.Type == 9 && (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.IntVal == 3983586014) && ((*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V0.Type == 9 && (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V0.IntVal == 3668501016) {
+if (((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.Type == 9 && (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.IntVal == 3983586014)) && (((*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V0.Type == 9 && (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V0.IntVal == 3668501016)) {
 __t16 = gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_T{gopurs_runtime.Value{Type: 9, IntVal: 3668501016, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_R{})}, gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_T{gopurs_runtime.Value{Type: 9, IntVal: 1583507464, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_B{})}, v1_1, v2_2, (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V1})}, (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V2, gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_T{gopurs_runtime.Value{Type: 9, IntVal: 1583507464, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_B{})}, (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V1, (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V2, (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V3})}})}
 goto end_branch_16
 } else {
@@ -604,7 +604,7 @@ goto end_branch_15
 }
 }
 {
-if ((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.Type == 9 && (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.IntVal == 3983586014) && ((*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V0.Type == 9 && (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V0.IntVal == 3668501016) {
+if (((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.Type == 9 && (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.IntVal == 3983586014)) && (((*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V0.Type == 9 && (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V0.IntVal == 3668501016)) {
 __t15 = gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_T{gopurs_runtime.Value{Type: 9, IntVal: 3668501016, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_R{})}, gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_T{gopurs_runtime.Value{Type: 9, IntVal: 1583507464, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_B{})}, v1_1, v2_2, (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V1})}, (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V2, gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_T{gopurs_runtime.Value{Type: 9, IntVal: 1583507464, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_B{})}, (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V1, (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V2, (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V3})}})}
 goto end_branch_15
 } else {
@@ -632,7 +632,7 @@ goto end_branch_1
 }
 }
 {
-if (v3_3.Type == 9 && v3_3.IntVal == 3983586014) && ((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V0.Type == 9 && (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V0.IntVal == 3668501016) {
+if ((v3_3.Type == 9 && v3_3.IntVal == 3983586014)) && (((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V0.Type == 9 && (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V0.IntVal == 3668501016)) {
 var __t17 gopurs_runtime.Value
 {
 if ((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V1.Type == 9 && (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V1.IntVal == 3983586014) {
@@ -646,7 +646,7 @@ goto end_branch_18
 }
 }
 {
-if ((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.Type == 9 && (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.IntVal == 3983586014) && ((*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V0.Type == 9 && (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V0.IntVal == 3668501016) {
+if (((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.Type == 9 && (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.IntVal == 3983586014)) && (((*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V0.Type == 9 && (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V0.IntVal == 3668501016)) {
 __t18 = gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_T{gopurs_runtime.Value{Type: 9, IntVal: 3668501016, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_R{})}, gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_T{gopurs_runtime.Value{Type: 9, IntVal: 1583507464, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_B{})}, v1_1, v2_2, (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V1})}, (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V2, gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_T{gopurs_runtime.Value{Type: 9, IntVal: 1583507464, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_B{})}, (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V1, (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V2, (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V3})}})}
 goto end_branch_18
 } else {
@@ -664,7 +664,7 @@ goto end_branch_17
 }
 }
 {
-if ((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.Type == 9 && (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.IntVal == 3983586014) && ((*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V0.Type == 9 && (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V0.IntVal == 3668501016) {
+if (((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.Type == 9 && (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.IntVal == 3983586014)) && (((*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V0.Type == 9 && (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V0.IntVal == 3668501016)) {
 __t17 = gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_T{gopurs_runtime.Value{Type: 9, IntVal: 3668501016, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_R{})}, gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_T{gopurs_runtime.Value{Type: 9, IntVal: 1583507464, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_B{})}, v1_1, v2_2, (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V1})}, (*Data_Test_RBTree_T)(v3_3.UnsafePtr).V2, gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_T{gopurs_runtime.Value{Type: 9, IntVal: 1583507464, UnsafePtr: unsafe.Pointer(&Data_Test_RBTree_B{})}, (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V1, (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V2, (*Data_Test_RBTree_T)((*Data_Test_RBTree_T)(v3_3.UnsafePtr).V3.UnsafePtr).V3})}})}
 goto end_branch_17
 } else {
@@ -719,7 +719,7 @@ goto end_branch_0
 if (v1_1.Type == 9 && v1_1.IntVal == 3983586014) {
 var __t1 gopurs_runtime.Value
 {
-if v_0.IntVal < (*Data_Test_RBTree_T)(v1_1.UnsafePtr).V2.IntVal {
+if (v_0.IntVal) < ((*Data_Test_RBTree_T)(v1_1.UnsafePtr).V2.IntVal) {
 __t1 = Call_balance((*Data_Test_RBTree_T)(v1_1.UnsafePtr).V0, Call_ins(v_0, (*Data_Test_RBTree_T)(v1_1.UnsafePtr).V1), (*Data_Test_RBTree_T)(v1_1.UnsafePtr).V2, (*Data_Test_RBTree_T)(v1_1.UnsafePtr).V3)
 goto end_branch_1
 } else {
@@ -727,7 +727,7 @@ goto end_branch_1
 }
 }
 {
-if v_0.IntVal > (*Data_Test_RBTree_T)(v1_1.UnsafePtr).V2.IntVal {
+if (v_0.IntVal) > ((*Data_Test_RBTree_T)(v1_1.UnsafePtr).V2.IntVal) {
 __t1 = Call_balance((*Data_Test_RBTree_T)(v1_1.UnsafePtr).V0, (*Data_Test_RBTree_T)(v1_1.UnsafePtr).V1, (*Data_Test_RBTree_T)(v1_1.UnsafePtr).V2, Call_ins(v_0, (*Data_Test_RBTree_T)(v1_1.UnsafePtr).V3))
 goto end_branch_1
 } else {
@@ -793,7 +793,7 @@ var v1_1 gopurs_runtime.Value = v1_1_loop
 _ = v1_1
 var __t0 gopurs_runtime.Value
 {
-if v_0.IntVal == 0 {
+if (v_0.IntVal) == (0) {
 __t0 = v1_1
 goto end_branch_0
 } else {
@@ -801,7 +801,7 @@ goto end_branch_0
 }
 }
 {
-v_0_loop = gopurs_runtime.Int(v_0.IntVal - 1)
+v_0_loop = gopurs_runtime.Int((v_0.IntVal) - (1))
 v1_1_loop = Call_insert(v_0, v1_1)
 continue buildTree
 __t0 = gopurs_runtime.Value{}

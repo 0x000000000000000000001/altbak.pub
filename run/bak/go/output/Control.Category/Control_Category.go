@@ -6,11 +6,11 @@ import (
 	pkg_Control_Semigroupoid "gopurs/output/Control.Semigroupoid"
 )
 
-var identity gopurs_runtime.Value
+var cache_identity gopurs_runtime.Value
 var once_identity sync.Once
 func Get_identity() gopurs_runtime.Value {
 	once_identity.Do(func() {
-		identity = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_identity = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
@@ -18,20 +18,20 @@ return gopurs_runtime.RecordGet(dict_0, "identity")
 }()
 })
 	})
-	return identity
+	return cache_identity
 }
 
-var categoryFn gopurs_runtime.Value
+var cache_categoryFn gopurs_runtime.Value
 var once_categoryFn sync.Once
 func Get_categoryFn() gopurs_runtime.Value {
 	once_categoryFn.Do(func() {
-		categoryFn = gopurs_runtime.RecordDict2("identity", "Semigroupoid0", gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_categoryFn = gopurs_runtime.RecordDict2("identity", "Semigroupoid0", gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return x_0
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Control_Semigroupoid.Get_semigroupoidFn()
 }))
 	})
-	return categoryFn
+	return cache_categoryFn
 }
 
 

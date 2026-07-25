@@ -7,43 +7,43 @@ import (
 	pkg_Data_DateTime_Instant "gopurs/output/Data.DateTime.Instant"
 )
 
-var nowTime gopurs_runtime.Value
+var cache_nowTime gopurs_runtime.Value
 var once_nowTime sync.Once
 func Get_nowTime() gopurs_runtime.Value {
 	once_nowTime.Do(func() {
-		nowTime = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_nowTime = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 a_prime_0_0 := gopurs_runtime.Apply(Get_now(), gopurs_runtime.Value{})
 _ = a_prime_0_0
 return (*pkg_Data_DateTime.Data_Data_DateTime_DateTime)(gopurs_runtime.Apply(pkg_Data_DateTime_Instant.Get_toDateTime(), a_prime_0_0).UnsafePtr).V1
 })
 	})
-	return nowTime
+	return cache_nowTime
 }
 
-var nowDateTime gopurs_runtime.Value
+var cache_nowDateTime gopurs_runtime.Value
 var once_nowDateTime sync.Once
 func Get_nowDateTime() gopurs_runtime.Value {
 	once_nowDateTime.Do(func() {
-		nowDateTime = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_nowDateTime = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 a_prime_0_0 := gopurs_runtime.Apply(Get_now(), gopurs_runtime.Value{})
 _ = a_prime_0_0
 return gopurs_runtime.Apply(pkg_Data_DateTime_Instant.Get_toDateTime(), a_prime_0_0)
 })
 	})
-	return nowDateTime
+	return cache_nowDateTime
 }
 
-var nowDate gopurs_runtime.Value
+var cache_nowDate gopurs_runtime.Value
 var once_nowDate sync.Once
 func Get_nowDate() gopurs_runtime.Value {
 	once_nowDate.Do(func() {
-		nowDate = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_nowDate = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 a_prime_0_0 := gopurs_runtime.Apply(Get_now(), gopurs_runtime.Value{})
 _ = a_prime_0_0
 return (*pkg_Data_DateTime.Data_Data_DateTime_DateTime)(gopurs_runtime.Apply(pkg_Data_DateTime_Instant.Get_toDateTime(), a_prime_0_0).UnsafePtr).V0
 })
 	})
-	return nowDate
+	return cache_nowDate
 }
 
 

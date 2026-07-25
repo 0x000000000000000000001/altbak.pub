@@ -8,11 +8,11 @@ import (
 	unsafe "unsafe"
 )
 
-var state gopurs_runtime.Value
+var cache_state gopurs_runtime.Value
 var once_state sync.Once
 func Get_state() gopurs_runtime.Value {
 	once_state.Do(func() {
-		state = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_state = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
@@ -20,68 +20,68 @@ return gopurs_runtime.RecordGet(dict_0, "state")
 }()
 })
 	})
-	return state
+	return cache_state
 }
 
-var put gopurs_runtime.Value
+var cache_put gopurs_runtime.Value
 var once_put sync.Once
 func Get_put() gopurs_runtime.Value {
 	once_put.Do(func() {
-		put = gopurs_runtime.Func2(func(dictMonadState_0_box gopurs_runtime.Value, s_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_put = gopurs_runtime.Func2(func(dictMonadState_0_box gopurs_runtime.Value, s_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_put(dictMonadState_0_box, s_1_box)
 })
 	})
-	return put
+	return cache_put
 }
 
-var modify_ gopurs_runtime.Value
+var cache_modify_ gopurs_runtime.Value
 var once_modify_ sync.Once
 func Get_modify_() gopurs_runtime.Value {
 	once_modify_.Do(func() {
-		modify_ = gopurs_runtime.Func2(func(dictMonadState_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_modify_ = gopurs_runtime.Func2(func(dictMonadState_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_modify_(dictMonadState_0_box, f_1_box)
 })
 	})
-	return modify_
+	return cache_modify_
 }
 
-var modify gopurs_runtime.Value
+var cache_modify gopurs_runtime.Value
 var once_modify sync.Once
 func Get_modify() gopurs_runtime.Value {
 	once_modify.Do(func() {
-		modify = gopurs_runtime.Func2(func(dictMonadState_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_modify = gopurs_runtime.Func2(func(dictMonadState_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_modify(dictMonadState_0_box, f_1_box)
 })
 	})
-	return modify
+	return cache_modify
 }
 
-var gets gopurs_runtime.Value
+var cache_gets gopurs_runtime.Value
 var once_gets sync.Once
 func Get_gets() gopurs_runtime.Value {
 	once_gets.Do(func() {
-		gets = gopurs_runtime.Func2(func(dictMonadState_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_gets = gopurs_runtime.Func2(func(dictMonadState_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_gets(dictMonadState_0_box, f_1_box)
 })
 	})
-	return gets
+	return cache_gets
 }
 
-var get gopurs_runtime.Value
+var cache_get gopurs_runtime.Value
 var once_get sync.Once
 func Get_get() gopurs_runtime.Value {
 	once_get.Do(func() {
-		get = gopurs_runtime.Func(func(dictMonadState_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_get = gopurs_runtime.Func(func(dictMonadState_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonadState_0 gopurs_runtime.Value = dictMonadState_0_loop
 _ = dictMonadState_0
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadState_0, "state"), gopurs_runtime.Func(func(s_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 1102100576, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{s_1, s_1})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{s_1, s_1})}
 }))
 }()
 })
 	})
-	return get
+	return cache_get
 }
 
 func Call_put(dictMonadState_0_loop gopurs_runtime.Value, s_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -90,7 +90,7 @@ _ = dictMonadState_0
 var s_1 gopurs_runtime.Value = s_1_loop
 _ = s_1
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadState_0, "state"), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 1102100576, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{pkg_Data_Unit.Get_unit(), s_1})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{pkg_Data_Unit.Get_unit(), s_1})}
 }))
 }
 
@@ -100,7 +100,7 @@ _ = dictMonadState_0
 var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadState_0, "state"), gopurs_runtime.Func(func(s_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 1102100576, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{pkg_Data_Unit.Get_unit(), gopurs_runtime.Apply(f_1, s_2)})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{pkg_Data_Unit.Get_unit(), gopurs_runtime.Apply(f_1, s_2)})}
 }))
 }
 
@@ -112,7 +112,7 @@ _ = f_1
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadState_0, "state"), gopurs_runtime.Func(func(s_2 gopurs_runtime.Value) gopurs_runtime.Value {
 s_prime_3_0 := gopurs_runtime.Apply(f_1, s_2)
 _ = s_prime_3_0
-return gopurs_runtime.Value{Type: 9, IntVal: 1102100576, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{s_prime_3_0, s_prime_3_0})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{s_prime_3_0, s_prime_3_0})}
 }))
 }
 
@@ -122,7 +122,7 @@ _ = dictMonadState_0
 var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadState_0, "state"), gopurs_runtime.Func(func(s_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 1102100576, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{gopurs_runtime.Apply(f_1, s_2), s_2})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Data_Data_Tuple_Tuple{gopurs_runtime.Apply(f_1, s_2), s_2})}
 }))
 }
 

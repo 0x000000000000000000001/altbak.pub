@@ -6,11 +6,11 @@ import (
 	pkg_Data_Time_Duration "gopurs/output/Data.Time.Duration"
 )
 
-var genSeconds gopurs_runtime.Value
+var cache_genSeconds gopurs_runtime.Value
 var once_genSeconds sync.Once
 func Get_genSeconds() gopurs_runtime.Value {
 	once_genSeconds.Do(func() {
-		genSeconds = gopurs_runtime.Func(func(dictMonadGen_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_genSeconds = gopurs_runtime.Func(func(dictMonadGen_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonadGen_0 gopurs_runtime.Value = dictMonadGen_0_loop
 _ = dictMonadGen_0
@@ -18,14 +18,14 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopur
 }()
 })
 	})
-	return genSeconds
+	return cache_genSeconds
 }
 
-var genMinutes gopurs_runtime.Value
+var cache_genMinutes gopurs_runtime.Value
 var once_genMinutes sync.Once
 func Get_genMinutes() gopurs_runtime.Value {
 	once_genMinutes.Do(func() {
-		genMinutes = gopurs_runtime.Func(func(dictMonadGen_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_genMinutes = gopurs_runtime.Func(func(dictMonadGen_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonadGen_0 gopurs_runtime.Value = dictMonadGen_0_loop
 _ = dictMonadGen_0
@@ -33,14 +33,14 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopur
 }()
 })
 	})
-	return genMinutes
+	return cache_genMinutes
 }
 
-var genMilliseconds gopurs_runtime.Value
+var cache_genMilliseconds gopurs_runtime.Value
 var once_genMilliseconds sync.Once
 func Get_genMilliseconds() gopurs_runtime.Value {
 	once_genMilliseconds.Do(func() {
-		genMilliseconds = gopurs_runtime.Func(func(dictMonadGen_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_genMilliseconds = gopurs_runtime.Func(func(dictMonadGen_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonadGen_0 gopurs_runtime.Value = dictMonadGen_0_loop
 _ = dictMonadGen_0
@@ -48,14 +48,14 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopur
 }()
 })
 	})
-	return genMilliseconds
+	return cache_genMilliseconds
 }
 
-var genHours gopurs_runtime.Value
+var cache_genHours gopurs_runtime.Value
 var once_genHours sync.Once
 func Get_genHours() gopurs_runtime.Value {
 	once_genHours.Do(func() {
-		genHours = gopurs_runtime.Func(func(dictMonadGen_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_genHours = gopurs_runtime.Func(func(dictMonadGen_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonadGen_0 gopurs_runtime.Value = dictMonadGen_0_loop
 _ = dictMonadGen_0
@@ -63,14 +63,14 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopur
 }()
 })
 	})
-	return genHours
+	return cache_genHours
 }
 
-var genDays gopurs_runtime.Value
+var cache_genDays gopurs_runtime.Value
 var once_genDays sync.Once
 func Get_genDays() gopurs_runtime.Value {
 	once_genDays.Do(func() {
-		genDays = gopurs_runtime.Func(func(dictMonadGen_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_genDays = gopurs_runtime.Func(func(dictMonadGen_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonadGen_0 gopurs_runtime.Value = dictMonadGen_0_loop
 _ = dictMonadGen_0
@@ -78,7 +78,7 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopur
 }()
 })
 	})
-	return genDays
+	return cache_genDays
 }
 
 

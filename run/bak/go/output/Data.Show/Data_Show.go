@@ -9,51 +9,51 @@ import (
 	unsafe "unsafe"
 )
 
-var showVoid gopurs_runtime.Value
+var cache_showVoid gopurs_runtime.Value
 var once_showVoid sync.Once
 func Get_showVoid() gopurs_runtime.Value {
 	once_showVoid.Do(func() {
-		showVoid = gopurs_runtime.RecordDict1("show", pkg_Data_Void.Get_absurd())
+		cache_showVoid = gopurs_runtime.RecordDict1("show", pkg_Data_Void.Get_absurd())
 	})
-	return showVoid
+	return cache_showVoid
 }
 
-var showUnit gopurs_runtime.Value
+var cache_showUnit gopurs_runtime.Value
 var once_showUnit sync.Once
 func Get_showUnit() gopurs_runtime.Value {
 	once_showUnit.Do(func() {
-		showUnit = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_showUnit = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Str("unit")
 }))
 	})
-	return showUnit
+	return cache_showUnit
 }
 
-var showString gopurs_runtime.Value
+var cache_showString gopurs_runtime.Value
 var once_showString sync.Once
 func Get_showString() gopurs_runtime.Value {
 	once_showString.Do(func() {
-		showString = gopurs_runtime.RecordDict1("show", Get_showStringImpl())
+		cache_showString = gopurs_runtime.RecordDict1("show", Get_showStringImpl())
 	})
-	return showString
+	return cache_showString
 }
 
-var showRecordFieldsNil gopurs_runtime.Value
+var cache_showRecordFieldsNil gopurs_runtime.Value
 var once_showRecordFieldsNil sync.Once
 func Get_showRecordFieldsNil() gopurs_runtime.Value {
 	once_showRecordFieldsNil.Do(func() {
-		showRecordFieldsNil = gopurs_runtime.RecordDict1("showRecordFields", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_showRecordFieldsNil = gopurs_runtime.RecordDict1("showRecordFields", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Str("")
 }))
 	})
-	return showRecordFieldsNil
+	return cache_showRecordFieldsNil
 }
 
-var showRecordFields gopurs_runtime.Value
+var cache_showRecordFields gopurs_runtime.Value
 var once_showRecordFields sync.Once
 func Get_showRecordFields() gopurs_runtime.Value {
 	once_showRecordFields.Do(func() {
-		showRecordFields = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_showRecordFields = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
@@ -61,66 +61,66 @@ return gopurs_runtime.RecordGet(dict_0, "showRecordFields")
 }()
 })
 	})
-	return showRecordFields
+	return cache_showRecordFields
 }
 
-var showRecord gopurs_runtime.Value
+var cache_showRecord gopurs_runtime.Value
 var once_showRecord sync.Once
 func Get_showRecord() gopurs_runtime.Value {
 	once_showRecord.Do(func() {
-		showRecord = gopurs_runtime.Func3(func(_dollar__unused_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, dictShowRecordFields_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_showRecord = gopurs_runtime.Func3(func(_dollar__unused_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, dictShowRecordFields_2_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_showRecord(_dollar__unused_0_box, _dollar__unused_1_box, dictShowRecordFields_2_box)
 })
 	})
-	return showRecord
+	return cache_showRecord
 }
 
-var showProxy gopurs_runtime.Value
+var cache_showProxy gopurs_runtime.Value
 var once_showProxy sync.Once
 func Get_showProxy() gopurs_runtime.Value {
 	once_showProxy.Do(func() {
-		showProxy = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_showProxy = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Str("Proxy")
 }))
 	})
-	return showProxy
+	return cache_showProxy
 }
 
-var showNumber gopurs_runtime.Value
+var cache_showNumber gopurs_runtime.Value
 var once_showNumber sync.Once
 func Get_showNumber() gopurs_runtime.Value {
 	once_showNumber.Do(func() {
-		showNumber = gopurs_runtime.RecordDict1("show", Get_showNumberImpl())
+		cache_showNumber = gopurs_runtime.RecordDict1("show", Get_showNumberImpl())
 	})
-	return showNumber
+	return cache_showNumber
 }
 
-var showInt gopurs_runtime.Value
+var cache_showInt gopurs_runtime.Value
 var once_showInt sync.Once
 func Get_showInt() gopurs_runtime.Value {
 	once_showInt.Do(func() {
-		showInt = gopurs_runtime.RecordDict1("show", Get_showIntImpl())
+		cache_showInt = gopurs_runtime.RecordDict1("show", Get_showIntImpl())
 	})
-	return showInt
+	return cache_showInt
 }
 
-var showChar gopurs_runtime.Value
+var cache_showChar gopurs_runtime.Value
 var once_showChar sync.Once
 func Get_showChar() gopurs_runtime.Value {
 	once_showChar.Do(func() {
-		showChar = gopurs_runtime.RecordDict1("show", Get_showCharImpl())
+		cache_showChar = gopurs_runtime.RecordDict1("show", Get_showCharImpl())
 	})
-	return showChar
+	return cache_showChar
 }
 
-var showBoolean gopurs_runtime.Value
+var cache_showBoolean gopurs_runtime.Value
 var once_showBoolean sync.Once
 func Get_showBoolean() gopurs_runtime.Value {
 	once_showBoolean.Do(func() {
-		showBoolean = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_showBoolean = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if v_0.IntVal != 0 {
+if (v_0.IntVal) != (0) {
 __t0 = gopurs_runtime.Str("true")
 goto end_branch_0
 } else {
@@ -134,14 +134,14 @@ end_branch_0:
 return __t0
 }))
 	})
-	return showBoolean
+	return cache_showBoolean
 }
 
-var show gopurs_runtime.Value
+var cache_show gopurs_runtime.Value
 var once_show sync.Once
 func Get_show() gopurs_runtime.Value {
 	once_show.Do(func() {
-		show = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_show = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
@@ -149,14 +149,14 @@ return gopurs_runtime.RecordGet(dict_0, "show")
 }()
 })
 	})
-	return show
+	return cache_show
 }
 
-var showArray gopurs_runtime.Value
+var cache_showArray gopurs_runtime.Value
 var once_showArray sync.Once
 func Get_showArray() gopurs_runtime.Value {
 	once_showArray.Do(func() {
-		showArray = gopurs_runtime.Func(func(dictShow_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_showArray = gopurs_runtime.Func(func(dictShow_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictShow_0 gopurs_runtime.Value = dictShow_0_loop
 _ = dictShow_0
@@ -164,29 +164,29 @@ return gopurs_runtime.RecordDict1("show", gopurs_runtime.Apply(Get_showArrayImpl
 }()
 })
 	})
-	return showArray
+	return cache_showArray
 }
 
-var showRecordFieldsCons gopurs_runtime.Value
+var cache_showRecordFieldsCons gopurs_runtime.Value
 var once_showRecordFieldsCons sync.Once
 func Get_showRecordFieldsCons() gopurs_runtime.Value {
 	once_showRecordFieldsCons.Do(func() {
-		showRecordFieldsCons = gopurs_runtime.Func3(func(dictIsSymbol_0_box gopurs_runtime.Value, dictShowRecordFields_1_box gopurs_runtime.Value, dictShow_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_showRecordFieldsCons = gopurs_runtime.Func3(func(dictIsSymbol_0_box gopurs_runtime.Value, dictShowRecordFields_1_box gopurs_runtime.Value, dictShow_2_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_showRecordFieldsCons(dictIsSymbol_0_box, dictShowRecordFields_1_box, dictShow_2_box)
 })
 	})
-	return showRecordFieldsCons
+	return cache_showRecordFieldsCons
 }
 
-var showRecordFieldsConsNil gopurs_runtime.Value
+var cache_showRecordFieldsConsNil gopurs_runtime.Value
 var once_showRecordFieldsConsNil sync.Once
 func Get_showRecordFieldsConsNil() gopurs_runtime.Value {
 	once_showRecordFieldsConsNil.Do(func() {
-		showRecordFieldsConsNil = gopurs_runtime.Func2(func(dictIsSymbol_0_box gopurs_runtime.Value, dictShow_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_showRecordFieldsConsNil = gopurs_runtime.Func2(func(dictIsSymbol_0_box gopurs_runtime.Value, dictShow_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_showRecordFieldsConsNil(dictIsSymbol_0_box, dictShow_1_box)
 })
 	})
-	return showRecordFieldsConsNil
+	return cache_showRecordFieldsConsNil
 }
 
 func Call_showRecord(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, dictShowRecordFields_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -197,7 +197,7 @@ _ = _dollar__unused_1
 var dictShowRecordFields_2 gopurs_runtime.Value = dictShowRecordFields_2_loop
 _ = dictShowRecordFields_2
 return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(record_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str("{" + gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictShowRecordFields_2, "showRecordFields"), gopurs_runtime.Value{Type: 9, IntVal: 3178699476, UnsafePtr: unsafe.Pointer(&pkg_Type_Proxy.Data_Type_Proxy_Proxy{})}, record_3).StrVal() + "}")
+return gopurs_runtime.Str((("{") + (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictShowRecordFields_2, "showRecordFields"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: unsafe.Pointer(&pkg_Type_Proxy.Data_Type_Proxy_Proxy{})}, record_3).StrVal())) + ("}"))
 }))
 }
 
@@ -209,9 +209,9 @@ _ = dictShowRecordFields_1
 var dictShow_2 gopurs_runtime.Value = dictShow_2_loop
 _ = dictShow_2
 return gopurs_runtime.RecordDict1("showRecordFields", gopurs_runtime.Func2(func(v_3 gopurs_runtime.Value, record_4 gopurs_runtime.Value) gopurs_runtime.Value {
-key_5_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0, "reflectSymbol"), gopurs_runtime.Value{Type: 9, IntVal: 3178699476, UnsafePtr: unsafe.Pointer(&pkg_Type_Proxy.Data_Type_Proxy_Proxy{})})
+key_5_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0, "reflectSymbol"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: unsafe.Pointer(&pkg_Type_Proxy.Data_Type_Proxy_Proxy{})})
 _ = key_5_0
-return gopurs_runtime.Str(" " + key_5_0.StrVal() + ": " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_2, "show"), gopurs_runtime.Apply2(pkg_Record_Unsafe.Get_unsafeGet(), key_5_0, record_4)).StrVal() + "," + gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictShowRecordFields_1, "showRecordFields"), gopurs_runtime.Value{Type: 9, IntVal: 3178699476, UnsafePtr: unsafe.Pointer(&pkg_Type_Proxy.Data_Type_Proxy_Proxy{})}, record_4).StrVal())
+return gopurs_runtime.Str((((((" ") + (key_5_0.StrVal())) + (": ")) + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_2, "show"), gopurs_runtime.Apply2(pkg_Record_Unsafe.Get_unsafeGet(), key_5_0, record_4)).StrVal())) + (",")) + (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictShowRecordFields_1, "showRecordFields"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: unsafe.Pointer(&pkg_Type_Proxy.Data_Type_Proxy_Proxy{})}, record_4).StrVal()))
 }))
 }
 
@@ -221,9 +221,9 @@ _ = dictIsSymbol_0
 var dictShow_1 gopurs_runtime.Value = dictShow_1_loop
 _ = dictShow_1
 return gopurs_runtime.RecordDict1("showRecordFields", gopurs_runtime.Func2(func(v_2 gopurs_runtime.Value, record_3 gopurs_runtime.Value) gopurs_runtime.Value {
-key_4_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0, "reflectSymbol"), gopurs_runtime.Value{Type: 9, IntVal: 3178699476, UnsafePtr: unsafe.Pointer(&pkg_Type_Proxy.Data_Type_Proxy_Proxy{})})
+key_4_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0, "reflectSymbol"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: unsafe.Pointer(&pkg_Type_Proxy.Data_Type_Proxy_Proxy{})})
 _ = key_4_0
-return gopurs_runtime.Str(" " + key_4_0.StrVal() + ": " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_1, "show"), gopurs_runtime.Apply2(pkg_Record_Unsafe.Get_unsafeGet(), key_4_0, record_3)).StrVal() + " ")
+return gopurs_runtime.Str(((((" ") + (key_4_0.StrVal())) + (": ")) + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_1, "show"), gopurs_runtime.Apply2(pkg_Record_Unsafe.Get_unsafeGet(), key_4_0, record_3)).StrVal())) + (" "))
 }))
 }
 

@@ -26,14 +26,14 @@ func Singleton(c string) string {
 	return c
 }
 
-func _CharAt(just func(string) any, nothing any, idx int, str string) any {
+func _CharAt(just func(string) interface{}, nothing interface{}, idx int, str string) interface{} {
 	if idx >= 0 && idx < len(str) {
 		return just(string(str[idx]))
 	}
 	return nothing
 }
 
-func _ToChar(just func(string) any, nothing any, str string) any {
+func _ToChar(just func(string) interface{}, nothing interface{}, str string) interface{} {
 	if len(str) == 1 {
 		return just(str)
 	}
@@ -56,7 +56,7 @@ func CountPrefix(p func(string) bool, str string) int {
 	return i
 }
 
-func _IndexOf(just func(int) any, nothing any, x string, s string) any {
+func _IndexOf(just func(int) interface{}, nothing interface{}, x string, s string) interface{} {
 	idx := strings.Index(s, x)
 	if idx == -1 {
 		return nothing
@@ -64,7 +64,7 @@ func _IndexOf(just func(int) any, nothing any, x string, s string) any {
 	return just(idx)
 }
 
-func _IndexOfStartingAt(just func(int) any, nothing any, x string, startIdx int, str string) any {
+func _IndexOfStartingAt(just func(int) interface{}, nothing interface{}, x string, startIdx int, str string) interface{} {
 	if startIdx < 0 || startIdx > len(str) {
 		return nothing
 	}
@@ -75,7 +75,7 @@ func _IndexOfStartingAt(just func(int) any, nothing any, x string, startIdx int,
 	return just(idx + startIdx)
 }
 
-func _LastIndexOf(just func(int) any, nothing any, x string, s string) any {
+func _LastIndexOf(just func(int) interface{}, nothing interface{}, x string, s string) interface{} {
 	idx := strings.LastIndex(s, x)
 	if idx == -1 {
 		return nothing
@@ -83,7 +83,7 @@ func _LastIndexOf(just func(int) any, nothing any, x string, s string) any {
 	return just(idx)
 }
 
-func _LastIndexOfStartingAt(just func(int) any, nothing any, x string, startIdx int, str string) any {
+func _LastIndexOfStartingAt(just func(int) interface{}, nothing interface{}, x string, startIdx int, str string) interface{} {
 	if startIdx < 0 || startIdx >= len(str) {
 		return nothing
 	}
@@ -139,14 +139,14 @@ func Slice(start int, end int, str string) string {
 	return str[start:end]
 }
 
-func SplitAt(idx int, str string) map[string]any {
+func SplitAt(idx int, str string) map[string]interface{} {
 	if idx < 0 {
 		idx = 0
 	}
 	if idx > len(str) {
 		idx = len(str)
 	}
-	rec := make(map[string]any)
+	rec := make(map[string]interface{})
 	rec["before"] = str[:idx]
 	rec["after"] = str[idx:]
 	return rec
@@ -158,7 +158,7 @@ func Call_fromCharArray(arg0 []string) string {
 	return FromCharArray(arg0)
 }
 var _Gopurs_FromCharArray = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
-	arg0_arr := arg0.PtrVal().([]gopurs_runtime.Value)
+	arg0_arr := *(*[]gopurs_runtime.Value)(arg0.UnsafePtr)
 	go_arg0 := make([]string, len(arg0_arr))
 	for i, v := range arg0_arr { go_arg0[i] = gopurs_runtime.Unbox[string](v) }
 	go_res := FromCharArray(go_arg0)
@@ -184,11 +184,11 @@ var _Gopurs_Singleton = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopu
 	go_res := Singleton(go_arg0)
 	return gopurs_runtime.Box(go_res)
 })
-func Call__CharAt(arg0 func(string) any, arg1 any, arg2 int, arg3 string) any {
+func Call__CharAt(arg0 func(string) interface{}, arg1 interface{}, arg2 int, arg3 string) interface{} {
 	return _CharAt(arg0, arg1, arg2, arg3)
 }
 var _Gopurs__CharAt = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := func(p0_0 string) any {
+	go_arg0 := func(p0_0 string) interface{} {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 		}
 	go_arg1 := arg1
@@ -197,11 +197,11 @@ var _Gopurs__CharAt = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 
 	go_res := _CharAt(go_arg0, go_arg1, go_arg2, go_arg3)
 	return gopurs_runtime.Box(go_res)
 })
-func Call__ToChar(arg0 func(string) any, arg1 any, arg2 string) any {
+func Call__ToChar(arg0 func(string) interface{}, arg1 interface{}, arg2 string) interface{} {
 	return _ToChar(arg0, arg1, arg2)
 }
 var _Gopurs__ToChar = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := func(p0_0 string) any {
+	go_arg0 := func(p0_0 string) interface{} {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 		}
 	go_arg1 := arg1
@@ -229,11 +229,11 @@ var _Gopurs_CountPrefix = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, a
 	go_res := CountPrefix(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
 })
-func Call__IndexOf(arg0 func(int) any, arg1 any, arg2 string, arg3 string) any {
+func Call__IndexOf(arg0 func(int) interface{}, arg1 interface{}, arg2 string, arg3 string) interface{} {
 	return _IndexOf(arg0, arg1, arg2, arg3)
 }
 var _Gopurs__IndexOf = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := func(p0_0 int) any {
+	go_arg0 := func(p0_0 int) interface{} {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 		}
 	go_arg1 := arg1
@@ -242,11 +242,11 @@ var _Gopurs__IndexOf = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1
 	go_res := _IndexOf(go_arg0, go_arg1, go_arg2, go_arg3)
 	return gopurs_runtime.Box(go_res)
 })
-func Call__IndexOfStartingAt(arg0 func(int) any, arg1 any, arg2 string, arg3 int, arg4 string) any {
+func Call__IndexOfStartingAt(arg0 func(int) interface{}, arg1 interface{}, arg2 string, arg3 int, arg4 string) interface{} {
 	return _IndexOfStartingAt(arg0, arg1, arg2, arg3, arg4)
 }
 var _Gopurs__IndexOfStartingAt = gopurs_runtime.Func5(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := func(p0_0 int) any {
+	go_arg0 := func(p0_0 int) interface{} {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 		}
 	go_arg1 := arg1
@@ -256,11 +256,11 @@ var _Gopurs__IndexOfStartingAt = gopurs_runtime.Func5(func(arg0 gopurs_runtime.V
 	go_res := _IndexOfStartingAt(go_arg0, go_arg1, go_arg2, go_arg3, go_arg4)
 	return gopurs_runtime.Box(go_res)
 })
-func Call__LastIndexOf(arg0 func(int) any, arg1 any, arg2 string, arg3 string) any {
+func Call__LastIndexOf(arg0 func(int) interface{}, arg1 interface{}, arg2 string, arg3 string) interface{} {
 	return _LastIndexOf(arg0, arg1, arg2, arg3)
 }
 var _Gopurs__LastIndexOf = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := func(p0_0 int) any {
+	go_arg0 := func(p0_0 int) interface{} {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 		}
 	go_arg1 := arg1
@@ -269,11 +269,11 @@ var _Gopurs__LastIndexOf = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, 
 	go_res := _LastIndexOf(go_arg0, go_arg1, go_arg2, go_arg3)
 	return gopurs_runtime.Box(go_res)
 })
-func Call__LastIndexOfStartingAt(arg0 func(int) any, arg1 any, arg2 string, arg3 int, arg4 string) any {
+func Call__LastIndexOfStartingAt(arg0 func(int) interface{}, arg1 interface{}, arg2 string, arg3 int, arg4 string) interface{} {
 	return _LastIndexOfStartingAt(arg0, arg1, arg2, arg3, arg4)
 }
 var _Gopurs__LastIndexOfStartingAt = gopurs_runtime.Func5(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := func(p0_0 int) any {
+	go_arg0 := func(p0_0 int) interface{} {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 		}
 	go_arg1 := arg1
@@ -311,7 +311,7 @@ var _Gopurs_Slice = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 go
 	go_res := Slice(go_arg0, go_arg1, go_arg2)
 	return gopurs_runtime.Box(go_res)
 })
-func Call_splitAt(arg0 int, arg1 string) map[string]any {
+func Call_splitAt(arg0 int, arg1 string) map[string]interface{} {
 	return SplitAt(arg0, arg1)
 }
 var _Gopurs_SplitAt = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {

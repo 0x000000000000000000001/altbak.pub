@@ -7,35 +7,35 @@ import (
 	pkg_Control_Monad "gopurs/output/Control.Monad"
 )
 
-var monadAskFun gopurs_runtime.Value
+var cache_monadAskFun gopurs_runtime.Value
 var once_monadAskFun sync.Once
 func Get_monadAskFun() gopurs_runtime.Value {
 	once_monadAskFun.Do(func() {
-		monadAskFun = gopurs_runtime.RecordDict2("ask", "Monad0", gopurs_runtime.RecordGet(pkg_Control_Category.Get_categoryFn(), "identity"), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monadAskFun = gopurs_runtime.RecordDict2("ask", "Monad0", gopurs_runtime.RecordGet(pkg_Control_Category.Get_categoryFn(), "identity"), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Control_Monad.Get_monadFn()
 }))
 	})
-	return monadAskFun
+	return cache_monadAskFun
 }
 
-var monadReaderFun gopurs_runtime.Value
+var cache_monadReaderFun gopurs_runtime.Value
 var once_monadReaderFun sync.Once
 func Get_monadReaderFun() gopurs_runtime.Value {
 	once_monadReaderFun.Do(func() {
-		monadReaderFun = gopurs_runtime.RecordDict2("local", "MonadAsk0", gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, g_1 gopurs_runtime.Value, x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monadReaderFun = gopurs_runtime.RecordDict2("local", "MonadAsk0", gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, g_1 gopurs_runtime.Value, x_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(g_1, gopurs_runtime.Apply(f_0, x_2))
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_monadAskFun()
 }))
 	})
-	return monadReaderFun
+	return cache_monadReaderFun
 }
 
-var local gopurs_runtime.Value
+var cache_local gopurs_runtime.Value
 var once_local sync.Once
 func Get_local() gopurs_runtime.Value {
 	once_local.Do(func() {
-		local = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_local = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
@@ -43,14 +43,14 @@ return gopurs_runtime.RecordGet(dict_0, "local")
 }()
 })
 	})
-	return local
+	return cache_local
 }
 
-var ask gopurs_runtime.Value
+var cache_ask gopurs_runtime.Value
 var once_ask sync.Once
 func Get_ask() gopurs_runtime.Value {
 	once_ask.Do(func() {
-		ask = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_ask = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
@@ -58,14 +58,14 @@ return gopurs_runtime.RecordGet(dict_0, "ask")
 }()
 })
 	})
-	return ask
+	return cache_ask
 }
 
-var asks gopurs_runtime.Value
+var cache_asks gopurs_runtime.Value
 var once_asks sync.Once
 func Get_asks() gopurs_runtime.Value {
 	once_asks.Do(func() {
-		asks = gopurs_runtime.Func(func(dictMonadAsk_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_asks = gopurs_runtime.Func(func(dictMonadAsk_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonadAsk_0 gopurs_runtime.Value = dictMonadAsk_0_loop
 _ = dictMonadAsk_0
@@ -77,7 +77,7 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopur
 }()
 })
 	})
-	return asks
+	return cache_asks
 }
 
 

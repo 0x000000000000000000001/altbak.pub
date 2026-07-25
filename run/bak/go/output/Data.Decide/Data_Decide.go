@@ -10,16 +10,16 @@ import (
 	unsafe "unsafe"
 )
 
-var choosePredicate gopurs_runtime.Value
+var cache_choosePredicate gopurs_runtime.Value
 var once_choosePredicate sync.Once
 func Get_choosePredicate() gopurs_runtime.Value {
 	once_choosePredicate.Do(func() {
-		choosePredicate = gopurs_runtime.RecordDict2("choose", "Divide0", gopurs_runtime.Func4(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, v1_2 gopurs_runtime.Value, x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_choosePredicate = gopurs_runtime.RecordDict2("choose", "Divide0", gopurs_runtime.Func4(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, v1_2 gopurs_runtime.Value, x_3 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_4_0 := gopurs_runtime.Apply(f_0, x_3)
 _ = __local_var_4_0
 var __t1 gopurs_runtime.Value
 {
-if (__local_var_4_0.Type == 9 && __local_var_4_0.IntVal == 590902115) {
+if (__local_var_4_0.Type == 9 && __local_var_4_0.IntVal == 3711209382) {
 __t1 = gopurs_runtime.Apply(v_1, (*pkg_Data_Either.Data_Data_Either_Left)(__local_var_4_0.UnsafePtr).V0)
 goto end_branch_1
 } else {
@@ -27,7 +27,7 @@ goto end_branch_1
 }
 }
 {
-if (__local_var_4_0.Type == 9 && __local_var_4_0.IntVal == 4096564120) {
+if (__local_var_4_0.Type == 9 && __local_var_4_0.IntVal == 2465973597) {
 __t1 = gopurs_runtime.Apply(v1_2, (*pkg_Data_Either.Data_Data_Either_Right)(__local_var_4_0.UnsafePtr).V0)
 goto end_branch_1
 } else {
@@ -43,14 +43,14 @@ return __t1
 return pkg_Data_Divide.Get_dividePredicate()
 }))
 	})
-	return choosePredicate
+	return cache_choosePredicate
 }
 
-var chooseOp gopurs_runtime.Value
+var cache_chooseOp gopurs_runtime.Value
 var once_chooseOp sync.Once
 func Get_chooseOp() gopurs_runtime.Value {
 	once_chooseOp.Do(func() {
-		chooseOp = gopurs_runtime.Func(func(dictSemigroup_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_chooseOp = gopurs_runtime.Func(func(dictSemigroup_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictSemigroup_0 gopurs_runtime.Value = dictSemigroup_0_loop
 _ = dictSemigroup_0
@@ -61,7 +61,7 @@ __local_var_6_1 := gopurs_runtime.Apply(f_2, x_5)
 _ = __local_var_6_1
 var __t2 gopurs_runtime.Value
 {
-if (__local_var_6_1.Type == 9 && __local_var_6_1.IntVal == 590902115) {
+if (__local_var_6_1.Type == 9 && __local_var_6_1.IntVal == 3711209382) {
 __t2 = gopurs_runtime.Apply(v_3, (*pkg_Data_Either.Data_Data_Either_Left)(__local_var_6_1.UnsafePtr).V0)
 goto end_branch_2
 } else {
@@ -69,7 +69,7 @@ goto end_branch_2
 }
 }
 {
-if (__local_var_6_1.Type == 9 && __local_var_6_1.IntVal == 4096564120) {
+if (__local_var_6_1.Type == 9 && __local_var_6_1.IntVal == 2465973597) {
 __t2 = gopurs_runtime.Apply(v1_4, (*pkg_Data_Either.Data_Data_Either_Right)(__local_var_6_1.UnsafePtr).V0)
 goto end_branch_2
 } else {
@@ -87,24 +87,24 @@ return divideOp_1_0
 }()
 })
 	})
-	return chooseOp
+	return cache_chooseOp
 }
 
-var chooseEquivalence gopurs_runtime.Value
+var cache_chooseEquivalence gopurs_runtime.Value
 var once_chooseEquivalence sync.Once
 func Get_chooseEquivalence() gopurs_runtime.Value {
 	once_chooseEquivalence.Do(func() {
-		chooseEquivalence = gopurs_runtime.RecordDict2("choose", "Divide0", gopurs_runtime.Func5(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, v1_2 gopurs_runtime.Value, a_3 gopurs_runtime.Value, b_4 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_chooseEquivalence = gopurs_runtime.RecordDict2("choose", "Divide0", gopurs_runtime.Func5(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, v1_2 gopurs_runtime.Value, a_3 gopurs_runtime.Value, b_4 gopurs_runtime.Value) gopurs_runtime.Value {
 v2_5_0 := gopurs_runtime.Apply(f_0, a_3)
 _ = v2_5_0
 var __t1 gopurs_runtime.Value
 {
-if (v2_5_0.Type == 9 && v2_5_0.IntVal == 590902115) {
+if (v2_5_0.Type == 9 && v2_5_0.IntVal == 3711209382) {
 v3_6_2 := gopurs_runtime.Apply(f_0, b_4)
 _ = v3_6_2
 var __t3 gopurs_runtime.Value
 {
-if (v3_6_2.Type == 9 && v3_6_2.IntVal == 590902115) {
+if (v3_6_2.Type == 9 && v3_6_2.IntVal == 3711209382) {
 __t3 = gopurs_runtime.Apply2(v_1, (*pkg_Data_Either.Data_Data_Either_Left)(v2_5_0.UnsafePtr).V0, (*pkg_Data_Either.Data_Data_Either_Left)(v3_6_2.UnsafePtr).V0)
 goto end_branch_3
 } else {
@@ -112,7 +112,7 @@ goto end_branch_3
 }
 }
 {
-if (v3_6_2.Type == 9 && v3_6_2.IntVal == 4096564120) {
+if (v3_6_2.Type == 9 && v3_6_2.IntVal == 2465973597) {
 __t3 = gopurs_runtime.Bool(false)
 goto end_branch_3
 } else {
@@ -130,12 +130,12 @@ goto end_branch_1
 }
 }
 {
-if (v2_5_0.Type == 9 && v2_5_0.IntVal == 4096564120) {
+if (v2_5_0.Type == 9 && v2_5_0.IntVal == 2465973597) {
 v3_6_4 := gopurs_runtime.Apply(f_0, b_4)
 _ = v3_6_4
 var __t5 gopurs_runtime.Value
 {
-if (v3_6_4.Type == 9 && v3_6_4.IntVal == 590902115) {
+if (v3_6_4.Type == 9 && v3_6_4.IntVal == 3711209382) {
 __t5 = gopurs_runtime.Bool(false)
 goto end_branch_5
 } else {
@@ -143,7 +143,7 @@ goto end_branch_5
 }
 }
 {
-if (v3_6_4.Type == 9 && v3_6_4.IntVal == 4096564120) {
+if (v3_6_4.Type == 9 && v3_6_4.IntVal == 2465973597) {
 __t5 = gopurs_runtime.Apply2(v1_2, (*pkg_Data_Either.Data_Data_Either_Right)(v2_5_0.UnsafePtr).V0, (*pkg_Data_Either.Data_Data_Either_Right)(v3_6_4.UnsafePtr).V0)
 goto end_branch_5
 } else {
@@ -169,24 +169,24 @@ return __t1
 return pkg_Data_Divide.Get_divideEquivalence()
 }))
 	})
-	return chooseEquivalence
+	return cache_chooseEquivalence
 }
 
-var chooseComparison gopurs_runtime.Value
+var cache_chooseComparison gopurs_runtime.Value
 var once_chooseComparison sync.Once
 func Get_chooseComparison() gopurs_runtime.Value {
 	once_chooseComparison.Do(func() {
-		chooseComparison = gopurs_runtime.RecordDict2("choose", "Divide0", gopurs_runtime.Func5(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, v1_2 gopurs_runtime.Value, a_3 gopurs_runtime.Value, b_4 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_chooseComparison = gopurs_runtime.RecordDict2("choose", "Divide0", gopurs_runtime.Func5(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, v1_2 gopurs_runtime.Value, a_3 gopurs_runtime.Value, b_4 gopurs_runtime.Value) gopurs_runtime.Value {
 v2_5_0 := gopurs_runtime.Apply(f_0, a_3)
 _ = v2_5_0
 var __t1 gopurs_runtime.Value
 {
-if (v2_5_0.Type == 9 && v2_5_0.IntVal == 590902115) {
+if (v2_5_0.Type == 9 && v2_5_0.IntVal == 3711209382) {
 v3_6_2 := gopurs_runtime.Apply(f_0, b_4)
 _ = v3_6_2
 var __t3 gopurs_runtime.Value
 {
-if (v3_6_2.Type == 9 && v3_6_2.IntVal == 590902115) {
+if (v3_6_2.Type == 9 && v3_6_2.IntVal == 3711209382) {
 __t3 = gopurs_runtime.Apply2(v_1, (*pkg_Data_Either.Data_Data_Either_Left)(v2_5_0.UnsafePtr).V0, (*pkg_Data_Either.Data_Data_Either_Left)(v3_6_2.UnsafePtr).V0)
 goto end_branch_3
 } else {
@@ -194,8 +194,8 @@ goto end_branch_3
 }
 }
 {
-if (v3_6_2.Type == 9 && v3_6_2.IntVal == 4096564120) {
-__t3 = gopurs_runtime.Value{Type: 9, IntVal: 3866105248, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_LT{})}
+if (v3_6_2.Type == 9 && v3_6_2.IntVal == 2465973597) {
+__t3 = gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_LT{})}
 goto end_branch_3
 } else {
 
@@ -212,20 +212,20 @@ goto end_branch_1
 }
 }
 {
-if (v2_5_0.Type == 9 && v2_5_0.IntVal == 4096564120) {
+if (v2_5_0.Type == 9 && v2_5_0.IntVal == 2465973597) {
 v3_6_4 := gopurs_runtime.Apply(f_0, b_4)
 _ = v3_6_4
 var __t5 gopurs_runtime.Value
 {
-if (v3_6_4.Type == 9 && v3_6_4.IntVal == 590902115) {
-__t5 = gopurs_runtime.Value{Type: 9, IntVal: 2098047435, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_GT{})}
+if (v3_6_4.Type == 9 && v3_6_4.IntVal == 3711209382) {
+__t5 = gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_GT{})}
 goto end_branch_5
 } else {
 
 }
 }
 {
-if (v3_6_4.Type == 9 && v3_6_4.IntVal == 4096564120) {
+if (v3_6_4.Type == 9 && v3_6_4.IntVal == 2465973597) {
 __t5 = gopurs_runtime.Apply2(v1_2, (*pkg_Data_Either.Data_Data_Either_Right)(v2_5_0.UnsafePtr).V0, (*pkg_Data_Either.Data_Data_Either_Right)(v3_6_4.UnsafePtr).V0)
 goto end_branch_5
 } else {
@@ -251,14 +251,14 @@ return __t1
 return pkg_Data_Divide.Get_divideComparison()
 }))
 	})
-	return chooseComparison
+	return cache_chooseComparison
 }
 
-var choose gopurs_runtime.Value
+var cache_choose gopurs_runtime.Value
 var once_choose sync.Once
 func Get_choose() gopurs_runtime.Value {
 	once_choose.Do(func() {
-		choose = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_choose = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
@@ -266,14 +266,14 @@ return gopurs_runtime.RecordGet(dict_0, "choose")
 }()
 })
 	})
-	return choose
+	return cache_choose
 }
 
-var chosen gopurs_runtime.Value
+var cache_chosen gopurs_runtime.Value
 var once_chosen sync.Once
 func Get_chosen() gopurs_runtime.Value {
 	once_chosen.Do(func() {
-		chosen = gopurs_runtime.Func(func(dictDecide_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_chosen = gopurs_runtime.Func(func(dictDecide_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictDecide_0 gopurs_runtime.Value = dictDecide_0_loop
 _ = dictDecide_0
@@ -281,7 +281,7 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDecide_0, "choose"), go
 }()
 })
 	})
-	return chosen
+	return cache_chosen
 }
 
 

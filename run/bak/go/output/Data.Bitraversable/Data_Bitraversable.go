@@ -16,11 +16,11 @@ import (
 	unsafe "unsafe"
 )
 
-var bitraverse gopurs_runtime.Value
+var cache_bitraverse gopurs_runtime.Value
 var once_bitraverse sync.Once
 func Get_bitraverse() gopurs_runtime.Value {
 	once_bitraverse.Do(func() {
-		bitraverse = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_bitraverse = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
@@ -28,58 +28,58 @@ return gopurs_runtime.RecordGet(dict_0, "bitraverse")
 }()
 })
 	})
-	return bitraverse
+	return cache_bitraverse
 }
 
-var lfor gopurs_runtime.Value
+var cache_lfor gopurs_runtime.Value
 var once_lfor sync.Once
 func Get_lfor() gopurs_runtime.Value {
 	once_lfor.Do(func() {
-		lfor = gopurs_runtime.Func2(func(dictBitraversable_0_box gopurs_runtime.Value, dictApplicative_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_lfor = gopurs_runtime.Func2(func(dictBitraversable_0_box gopurs_runtime.Value, dictApplicative_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_lfor(dictBitraversable_0_box, dictApplicative_1_box)
 })
 	})
-	return lfor
+	return cache_lfor
 }
 
-var ltraverse gopurs_runtime.Value
+var cache_ltraverse gopurs_runtime.Value
 var once_ltraverse sync.Once
 func Get_ltraverse() gopurs_runtime.Value {
 	once_ltraverse.Do(func() {
-		ltraverse = gopurs_runtime.Func2(func(dictBitraversable_0_box gopurs_runtime.Value, dictApplicative_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_ltraverse = gopurs_runtime.Func2(func(dictBitraversable_0_box gopurs_runtime.Value, dictApplicative_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_ltraverse(dictBitraversable_0_box, dictApplicative_1_box)
 })
 	})
-	return ltraverse
+	return cache_ltraverse
 }
 
-var rfor gopurs_runtime.Value
+var cache_rfor gopurs_runtime.Value
 var once_rfor sync.Once
 func Get_rfor() gopurs_runtime.Value {
 	once_rfor.Do(func() {
-		rfor = gopurs_runtime.Func2(func(dictBitraversable_0_box gopurs_runtime.Value, dictApplicative_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_rfor = gopurs_runtime.Func2(func(dictBitraversable_0_box gopurs_runtime.Value, dictApplicative_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_rfor(dictBitraversable_0_box, dictApplicative_1_box)
 })
 	})
-	return rfor
+	return cache_rfor
 }
 
-var rtraverse gopurs_runtime.Value
+var cache_rtraverse gopurs_runtime.Value
 var once_rtraverse sync.Once
 func Get_rtraverse() gopurs_runtime.Value {
 	once_rtraverse.Do(func() {
-		rtraverse = gopurs_runtime.Func2(func(dictBitraversable_0_box gopurs_runtime.Value, dictApplicative_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_rtraverse = gopurs_runtime.Func2(func(dictBitraversable_0_box gopurs_runtime.Value, dictApplicative_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_rtraverse(dictBitraversable_0_box, dictApplicative_1_box)
 })
 	})
-	return rtraverse
+	return cache_rtraverse
 }
 
-var bitraversableTuple gopurs_runtime.Value
+var cache_bitraversableTuple gopurs_runtime.Value
 var once_bitraversableTuple sync.Once
 func Get_bitraversableTuple() gopurs_runtime.Value {
 	once_bitraversableTuple.Do(func() {
-		bitraversableTuple = gopurs_runtime.RecordDict4("bitraverse", "bisequence", "Bifunctor0", "Bifoldable1", gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_bitraversableTuple = gopurs_runtime.RecordDict4("bitraverse", "bisequence", "Bifunctor0", "Bifoldable1", gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
 Apply0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{})
 _ = Apply0_1_0
 return gopurs_runtime.Func3(func(f_2 gopurs_runtime.Value, g_3 gopurs_runtime.Value, v_4 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -97,14 +97,14 @@ return pkg_Data_Bifunctor.Get_bifunctorTuple()
 return pkg_Data_Bifoldable.Get_bifoldableTuple()
 }))
 	})
-	return bitraversableTuple
+	return cache_bitraversableTuple
 }
 
-var bitraversableJoker gopurs_runtime.Value
+var cache_bitraversableJoker gopurs_runtime.Value
 var once_bitraversableJoker sync.Once
 func Get_bitraversableJoker() gopurs_runtime.Value {
 	once_bitraversableJoker.Do(func() {
-		bitraversableJoker = gopurs_runtime.Func(func(dictTraversable_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_bitraversableJoker = gopurs_runtime.Func(func(dictTraversable_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictTraversable_0 gopurs_runtime.Value = dictTraversable_0_loop
 _ = dictTraversable_0
@@ -148,20 +148,20 @@ return bifoldableJoker_4_3
 }()
 })
 	})
-	return bitraversableJoker
+	return cache_bitraversableJoker
 }
 
-var bitraversableEither gopurs_runtime.Value
+var cache_bitraversableEither gopurs_runtime.Value
 var once_bitraversableEither sync.Once
 func Get_bitraversableEither() gopurs_runtime.Value {
 	once_bitraversableEither.Do(func() {
-		bitraversableEither = gopurs_runtime.RecordDict4("bitraverse", "bisequence", "Bifunctor0", "Bifoldable1", gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_bitraversableEither = gopurs_runtime.RecordDict4("bitraverse", "bisequence", "Bifunctor0", "Bifoldable1", gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{})
 _ = __local_var_1_0
 return gopurs_runtime.Func3(func(v_2 gopurs_runtime.Value, v1_3 gopurs_runtime.Value, v2_4 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
-if (v2_4.Type == 9 && v2_4.IntVal == 590902115) {
+if (v2_4.Type == 9 && v2_4.IntVal == 3711209382) {
 __t1 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "map"), pkg_Data_Either.Get_Left(), gopurs_runtime.Apply(v_2, (*pkg_Data_Either.Data_Data_Either_Left)(v2_4.UnsafePtr).V0))
 goto end_branch_1
 } else {
@@ -169,7 +169,7 @@ goto end_branch_1
 }
 }
 {
-if (v2_4.Type == 9 && v2_4.IntVal == 4096564120) {
+if (v2_4.Type == 9 && v2_4.IntVal == 2465973597) {
 __t1 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "map"), pkg_Data_Either.Get_Right(), gopurs_runtime.Apply(v1_3, (*pkg_Data_Either.Data_Data_Either_Right)(v2_4.UnsafePtr).V0))
 goto end_branch_1
 } else {
@@ -188,7 +188,7 @@ _ = __local_var_1_2
 return gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t3 gopurs_runtime.Value
 {
-if (v_2.Type == 9 && v_2.IntVal == 590902115) {
+if (v_2.Type == 9 && v_2.IntVal == 3711209382) {
 __t3 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_2, "map"), pkg_Data_Either.Get_Left(), (*pkg_Data_Either.Data_Data_Either_Left)(v_2.UnsafePtr).V0)
 goto end_branch_3
 } else {
@@ -196,7 +196,7 @@ goto end_branch_3
 }
 }
 {
-if (v_2.Type == 9 && v_2.IntVal == 4096564120) {
+if (v_2.Type == 9 && v_2.IntVal == 2465973597) {
 __t3 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_2, "map"), pkg_Data_Either.Get_Right(), (*pkg_Data_Either.Data_Data_Either_Right)(v_2.UnsafePtr).V0)
 goto end_branch_3
 } else {
@@ -215,14 +215,14 @@ return pkg_Data_Bifunctor.Get_bifunctorEither()
 return pkg_Data_Bifoldable.Get_bifoldableEither()
 }))
 	})
-	return bitraversableEither
+	return cache_bitraversableEither
 }
 
-var bitraversableConst gopurs_runtime.Value
+var cache_bitraversableConst gopurs_runtime.Value
 var once_bitraversableConst sync.Once
 func Get_bitraversableConst() gopurs_runtime.Value {
 	once_bitraversableConst.Do(func() {
-		bitraversableConst = gopurs_runtime.RecordDict4("bitraverse", "bisequence", "Bifunctor0", "Bifoldable1", gopurs_runtime.Func4(func(dictApplicative_0 gopurs_runtime.Value, f_1 gopurs_runtime.Value, v_2 gopurs_runtime.Value, v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_bitraversableConst = gopurs_runtime.RecordDict4("bitraverse", "bisequence", "Bifunctor0", "Bifoldable1", gopurs_runtime.Func4(func(dictApplicative_0 gopurs_runtime.Value, f_1 gopurs_runtime.Value, v_2 gopurs_runtime.Value, v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), pkg_Data_Const.Get_Const(), gopurs_runtime.Apply(f_1, v1_3))
 }), gopurs_runtime.Func2(func(dictApplicative_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), pkg_Data_Const.Get_Const(), v_1)
@@ -232,14 +232,14 @@ return pkg_Data_Bifunctor.Get_bifunctorConst()
 return pkg_Data_Bifoldable.Get_bifoldableConst()
 }))
 	})
-	return bitraversableConst
+	return cache_bitraversableConst
 }
 
-var bitraversableClown gopurs_runtime.Value
+var cache_bitraversableClown gopurs_runtime.Value
 var once_bitraversableClown sync.Once
 func Get_bitraversableClown() gopurs_runtime.Value {
 	once_bitraversableClown.Do(func() {
-		bitraversableClown = gopurs_runtime.Func(func(dictTraversable_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_bitraversableClown = gopurs_runtime.Func(func(dictTraversable_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictTraversable_0 gopurs_runtime.Value = dictTraversable_0_loop
 _ = dictTraversable_0
@@ -283,25 +283,25 @@ return bifoldableClown_4_3
 }()
 })
 	})
-	return bitraversableClown
+	return cache_bitraversableClown
 }
 
-var bisequenceDefault gopurs_runtime.Value
+var cache_bisequenceDefault gopurs_runtime.Value
 var once_bisequenceDefault sync.Once
 func Get_bisequenceDefault() gopurs_runtime.Value {
 	once_bisequenceDefault.Do(func() {
-		bisequenceDefault = gopurs_runtime.Func2(func(dictBitraversable_0_box gopurs_runtime.Value, dictApplicative_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_bisequenceDefault = gopurs_runtime.Func2(func(dictBitraversable_0_box gopurs_runtime.Value, dictApplicative_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_bisequenceDefault(dictBitraversable_0_box, dictApplicative_1_box)
 })
 	})
-	return bisequenceDefault
+	return cache_bisequenceDefault
 }
 
-var bisequence gopurs_runtime.Value
+var cache_bisequence gopurs_runtime.Value
 var once_bisequence sync.Once
 func Get_bisequence() gopurs_runtime.Value {
 	once_bisequence.Do(func() {
-		bisequence = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_bisequence = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
@@ -309,14 +309,14 @@ return gopurs_runtime.RecordGet(dict_0, "bisequence")
 }()
 })
 	})
-	return bisequence
+	return cache_bisequence
 }
 
-var bitraversableFlip gopurs_runtime.Value
+var cache_bitraversableFlip gopurs_runtime.Value
 var once_bitraversableFlip sync.Once
 func Get_bitraversableFlip() gopurs_runtime.Value {
 	once_bitraversableFlip.Do(func() {
-		bitraversableFlip = gopurs_runtime.Func(func(dictBitraversable_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_bitraversableFlip = gopurs_runtime.Func(func(dictBitraversable_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictBitraversable_0 gopurs_runtime.Value = dictBitraversable_0_loop
 _ = dictBitraversable_0
@@ -360,14 +360,14 @@ return bifoldableFlip_4_3
 }()
 })
 	})
-	return bitraversableFlip
+	return cache_bitraversableFlip
 }
 
-var bitraversableProduct2 gopurs_runtime.Value
+var cache_bitraversableProduct2 gopurs_runtime.Value
 var once_bitraversableProduct2 sync.Once
 func Get_bitraversableProduct2() gopurs_runtime.Value {
 	once_bitraversableProduct2.Do(func() {
-		bitraversableProduct2 = gopurs_runtime.Func(func(dictBitraversable_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_bitraversableProduct2 = gopurs_runtime.Func(func(dictBitraversable_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictBitraversable_0 gopurs_runtime.Value = dictBitraversable_0_loop
 _ = dictBitraversable_0
@@ -379,7 +379,7 @@ return gopurs_runtime.Func(func(dictBitraversable1_3 gopurs_runtime.Value) gopur
 __local_var_4_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBitraversable1_3, "Bifunctor0"), gopurs_runtime.Value{})
 _ = __local_var_4_2
 bifunctorProduct21_5_3 := gopurs_runtime.RecordDict1("bimap", gopurs_runtime.Func3(func(f_5 gopurs_runtime.Value, g_6 gopurs_runtime.Value, v_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 1165701537, UnsafePtr: unsafe.Pointer(&pkg_Data_Functor_Product2.Data_Data_Functor_Product2_Product2{gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_1_0, "bimap"), f_5, g_6, (*pkg_Data_Functor_Product2.Data_Data_Functor_Product2_Product2)(v_7.UnsafePtr).V0), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_4_2, "bimap"), f_5, g_6, (*pkg_Data_Functor_Product2.Data_Data_Functor_Product2_Product2)(v_7.UnsafePtr).V1)})}
+return gopurs_runtime.Value{Type: 9, IntVal: 3559137202, UnsafePtr: unsafe.Pointer(&pkg_Data_Functor_Product2.Data_Data_Functor_Product2_Product2{gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_1_0, "bimap"), f_5, g_6, (*pkg_Data_Functor_Product2.Data_Data_Functor_Product2_Product2)(v_7.UnsafePtr).V0), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_4_2, "bimap"), f_5, g_6, (*pkg_Data_Functor_Product2.Data_Data_Functor_Product2_Product2)(v_7.UnsafePtr).V1)})}
 }))
 _ = bifunctorProduct21_5_3
 bifoldableProduct21_6_4 := gopurs_runtime.Apply(bifoldableProduct2_2_1, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBitraversable1_3, "Bifoldable1"), gopurs_runtime.Value{}))
@@ -413,29 +413,29 @@ return bifoldableProduct21_6_4
 }()
 })
 	})
-	return bitraversableProduct2
+	return cache_bitraversableProduct2
 }
 
-var bitraverseDefault gopurs_runtime.Value
+var cache_bitraverseDefault gopurs_runtime.Value
 var once_bitraverseDefault sync.Once
 func Get_bitraverseDefault() gopurs_runtime.Value {
 	once_bitraverseDefault.Do(func() {
-		bitraverseDefault = gopurs_runtime.Func2(func(dictBitraversable_0_box gopurs_runtime.Value, dictApplicative_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_bitraverseDefault = gopurs_runtime.Func2(func(dictBitraversable_0_box gopurs_runtime.Value, dictApplicative_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_bitraverseDefault(dictBitraversable_0_box, dictApplicative_1_box)
 })
 	})
-	return bitraverseDefault
+	return cache_bitraverseDefault
 }
 
-var bifor gopurs_runtime.Value
+var cache_bifor gopurs_runtime.Value
 var once_bifor sync.Once
 func Get_bifor() gopurs_runtime.Value {
 	once_bifor.Do(func() {
-		bifor = gopurs_runtime.Func2(func(dictBitraversable_0_box gopurs_runtime.Value, dictApplicative_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_bifor = gopurs_runtime.Func2(func(dictBitraversable_0_box gopurs_runtime.Value, dictApplicative_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_bifor(dictBitraversable_0_box, dictApplicative_1_box)
 })
 	})
-	return bifor
+	return cache_bifor
 }
 
 func Call_lfor(dictBitraversable_0_loop gopurs_runtime.Value, dictApplicative_1_loop gopurs_runtime.Value) gopurs_runtime.Value {

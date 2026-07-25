@@ -6,11 +6,11 @@ import (
 	pkg_Data_BooleanAlgebra "gopurs/output/Data.BooleanAlgebra"
 )
 
-var Predicate gopurs_runtime.Value
+var cache_Predicate gopurs_runtime.Value
 var once_Predicate sync.Once
 func Get_Predicate() gopurs_runtime.Value {
 	once_Predicate.Do(func() {
-		Predicate = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Predicate = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
@@ -18,59 +18,59 @@ return x_0
 }()
 })
 	})
-	return Predicate
+	return cache_Predicate
 }
 
-var newtypePredicate gopurs_runtime.Value
+var cache_newtypePredicate gopurs_runtime.Value
 var once_newtypePredicate sync.Once
 func Get_newtypePredicate() gopurs_runtime.Value {
 	once_newtypePredicate.Do(func() {
-		newtypePredicate = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_newtypePredicate = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{}
 }))
 	})
-	return newtypePredicate
+	return cache_newtypePredicate
 }
 
-var heytingAlgebraPredicate gopurs_runtime.Value
+var cache_heytingAlgebraPredicate gopurs_runtime.Value
 var once_heytingAlgebraPredicate sync.Once
 func Get_heytingAlgebraPredicate() gopurs_runtime.Value {
 	once_heytingAlgebraPredicate.Do(func() {
-		heytingAlgebraPredicate = gopurs_runtime.RecordDict([]string{"ff", "tt", "implies", "conj", "disj", "not"}, []gopurs_runtime.Value{gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_heytingAlgebraPredicate = gopurs_runtime.RecordDict([]string{"ff", "tt", "implies", "conj", "disj", "not"}, []gopurs_runtime.Value{gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Bool(false)
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Bool(true)
 }), gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, g_1 gopurs_runtime.Value, a_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(gopurs_runtime.Apply(f_0, a_2).IntVal != 0 != true || gopurs_runtime.Apply(g_1, a_2).IntVal != 0)
+return gopurs_runtime.Bool((((gopurs_runtime.Apply(f_0, a_2).IntVal) != (0)) != (true)) || ((gopurs_runtime.Apply(g_1, a_2).IntVal) != (0)))
 }), gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, g_1 gopurs_runtime.Value, a_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(gopurs_runtime.Apply(f_0, a_2).IntVal != 0 && gopurs_runtime.Apply(g_1, a_2).IntVal != 0)
+return gopurs_runtime.Bool(((gopurs_runtime.Apply(f_0, a_2).IntVal) != (0)) && ((gopurs_runtime.Apply(g_1, a_2).IntVal) != (0)))
 }), gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, g_1 gopurs_runtime.Value, a_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(gopurs_runtime.Apply(f_0, a_2).IntVal != 0 || gopurs_runtime.Apply(g_1, a_2).IntVal != 0)
+return gopurs_runtime.Bool(((gopurs_runtime.Apply(f_0, a_2).IntVal) != (0)) || ((gopurs_runtime.Apply(g_1, a_2).IntVal) != (0)))
 }), gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, a_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(gopurs_runtime.Apply(f_0, a_1).IntVal != 0 != true)
+return gopurs_runtime.Bool(((gopurs_runtime.Apply(f_0, a_1).IntVal) != (0)) != (true))
 })})
 	})
-	return heytingAlgebraPredicate
+	return cache_heytingAlgebraPredicate
 }
 
-var contravariantPredicate gopurs_runtime.Value
+var cache_contravariantPredicate gopurs_runtime.Value
 var once_contravariantPredicate sync.Once
 func Get_contravariantPredicate() gopurs_runtime.Value {
 	once_contravariantPredicate.Do(func() {
-		contravariantPredicate = gopurs_runtime.RecordDict1("cmap", gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_contravariantPredicate = gopurs_runtime.RecordDict1("cmap", gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, x_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(v_1, gopurs_runtime.Apply(f_0, x_2))
 }))
 	})
-	return contravariantPredicate
+	return cache_contravariantPredicate
 }
 
-var booleanAlgebraPredicate gopurs_runtime.Value
+var cache_booleanAlgebraPredicate gopurs_runtime.Value
 var once_booleanAlgebraPredicate sync.Once
 func Get_booleanAlgebraPredicate() gopurs_runtime.Value {
 	once_booleanAlgebraPredicate.Do(func() {
-		booleanAlgebraPredicate = gopurs_runtime.Apply(pkg_Data_BooleanAlgebra.Get_booleanAlgebraFn(), pkg_Data_BooleanAlgebra.Get_booleanAlgebraBoolean())
+		cache_booleanAlgebraPredicate = gopurs_runtime.Apply(pkg_Data_BooleanAlgebra.Get_booleanAlgebraFn(), pkg_Data_BooleanAlgebra.Get_booleanAlgebraBoolean())
 	})
-	return booleanAlgebraPredicate
+	return cache_booleanAlgebraPredicate
 }
 
 

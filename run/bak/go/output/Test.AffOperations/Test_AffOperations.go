@@ -9,20 +9,20 @@ import (
 	pkg_Data_Unit "gopurs/output/Data.Unit"
 )
 
-var describe gopurs_runtime.Value
+var cache_describe gopurs_runtime.Value
 var once_describe sync.Once
 func Get_describe() gopurs_runtime.Value {
 	once_describe.Do(func() {
-		describe = gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Str("Aff Operations (Asynchronous Delays):"))
+		cache_describe = gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Str("Aff Operations (Asynchronous Delays):"))
 	})
-	return describe
+	return cache_describe
 }
 
-var act gopurs_runtime.Value
+var cache_act gopurs_runtime.Value
 var once_act sync.Once
 func Get_act() gopurs_runtime.Value {
 	once_act.Do(func() {
-		act = func() gopurs_runtime.Value {
+		cache_act = func() gopurs_runtime.Value {
 __local_var_0_0 := gopurs_runtime.UncurriedApp2(pkg_Effect_Aff.Get__makeFiber(), pkg_Effect_Aff.Get_ffiUtil(), gopurs_runtime.Apply2(pkg_Effect_Aff.Get__bind(), gopurs_runtime.UncurriedApp2(pkg_Effect_Aff.Get__delay(), pkg_Data_Either.Get_Right(), gopurs_runtime.Float(10.0)), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(pkg_Effect_Aff.Get__liftEffect(), gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Str("10")))
 })))
@@ -36,7 +36,7 @@ return pkg_Data_Unit.Get_unit()
 })
 }()
 	})
-	return act
+	return cache_act
 }
 
 

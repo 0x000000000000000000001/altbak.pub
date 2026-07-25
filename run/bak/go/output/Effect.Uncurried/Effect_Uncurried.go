@@ -5,11 +5,11 @@ import (
 	sync "sync"
 )
 
-var semigroupEffectFn9 gopurs_runtime.Value
+var cache_semigroupEffectFn9 gopurs_runtime.Value
 var once_semigroupEffectFn9 sync.Once
 func Get_semigroupEffectFn9() gopurs_runtime.Value {
 	once_semigroupEffectFn9.Do(func() {
-		semigroupEffectFn9 = gopurs_runtime.Func(func(dictSemigroup_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_semigroupEffectFn9 = gopurs_runtime.Func(func(dictSemigroup_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictSemigroup_0 gopurs_runtime.Value = dictSemigroup_0_loop
 _ = dictSemigroup_0
@@ -43,14 +43,14 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup_0, "append")
 }()
 })
 	})
-	return semigroupEffectFn9
+	return cache_semigroupEffectFn9
 }
 
-var semigroupEffectFn8 gopurs_runtime.Value
+var cache_semigroupEffectFn8 gopurs_runtime.Value
 var once_semigroupEffectFn8 sync.Once
 func Get_semigroupEffectFn8() gopurs_runtime.Value {
 	once_semigroupEffectFn8.Do(func() {
-		semigroupEffectFn8 = gopurs_runtime.Func(func(dictSemigroup_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_semigroupEffectFn8 = gopurs_runtime.Func(func(dictSemigroup_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictSemigroup_0 gopurs_runtime.Value = dictSemigroup_0_loop
 _ = dictSemigroup_0
@@ -82,14 +82,14 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup_0, "append")
 }()
 })
 	})
-	return semigroupEffectFn8
+	return cache_semigroupEffectFn8
 }
 
-var semigroupEffectFn7 gopurs_runtime.Value
+var cache_semigroupEffectFn7 gopurs_runtime.Value
 var once_semigroupEffectFn7 sync.Once
 func Get_semigroupEffectFn7() gopurs_runtime.Value {
 	once_semigroupEffectFn7.Do(func() {
-		semigroupEffectFn7 = gopurs_runtime.Func(func(dictSemigroup_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_semigroupEffectFn7 = gopurs_runtime.Func(func(dictSemigroup_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictSemigroup_0 gopurs_runtime.Value = dictSemigroup_0_loop
 _ = dictSemigroup_0
@@ -119,14 +119,14 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup_0, "append")
 }()
 })
 	})
-	return semigroupEffectFn7
+	return cache_semigroupEffectFn7
 }
 
-var semigroupEffectFn6 gopurs_runtime.Value
+var cache_semigroupEffectFn6 gopurs_runtime.Value
 var once_semigroupEffectFn6 sync.Once
 func Get_semigroupEffectFn6() gopurs_runtime.Value {
 	once_semigroupEffectFn6.Do(func() {
-		semigroupEffectFn6 = gopurs_runtime.Func(func(dictSemigroup_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_semigroupEffectFn6 = gopurs_runtime.Func(func(dictSemigroup_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictSemigroup_0 gopurs_runtime.Value = dictSemigroup_0_loop
 _ = dictSemigroup_0
@@ -154,14 +154,14 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup_0, "append")
 }()
 })
 	})
-	return semigroupEffectFn6
+	return cache_semigroupEffectFn6
 }
 
-var semigroupEffectFn5 gopurs_runtime.Value
+var cache_semigroupEffectFn5 gopurs_runtime.Value
 var once_semigroupEffectFn5 sync.Once
 func Get_semigroupEffectFn5() gopurs_runtime.Value {
 	once_semigroupEffectFn5.Do(func() {
-		semigroupEffectFn5 = gopurs_runtime.Func(func(dictSemigroup_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_semigroupEffectFn5 = gopurs_runtime.Func(func(dictSemigroup_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictSemigroup_0 gopurs_runtime.Value = dictSemigroup_0_loop
 _ = dictSemigroup_0
@@ -179,14 +179,14 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup_0, "append")
 }()
 })
 	})
-	return semigroupEffectFn5
+	return cache_semigroupEffectFn5
 }
 
-var semigroupEffectFn4 gopurs_runtime.Value
+var cache_semigroupEffectFn4 gopurs_runtime.Value
 var once_semigroupEffectFn4 sync.Once
 func Get_semigroupEffectFn4() gopurs_runtime.Value {
 	once_semigroupEffectFn4.Do(func() {
-		semigroupEffectFn4 = gopurs_runtime.Func(func(dictSemigroup_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_semigroupEffectFn4 = gopurs_runtime.Func(func(dictSemigroup_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictSemigroup_0 gopurs_runtime.Value = dictSemigroup_0_loop
 _ = dictSemigroup_0
@@ -204,14 +204,14 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup_0, "append")
 }()
 })
 	})
-	return semigroupEffectFn4
+	return cache_semigroupEffectFn4
 }
 
-var semigroupEffectFn3 gopurs_runtime.Value
+var cache_semigroupEffectFn3 gopurs_runtime.Value
 var once_semigroupEffectFn3 sync.Once
 func Get_semigroupEffectFn3() gopurs_runtime.Value {
 	once_semigroupEffectFn3.Do(func() {
-		semigroupEffectFn3 = gopurs_runtime.Func(func(dictSemigroup_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_semigroupEffectFn3 = gopurs_runtime.Func(func(dictSemigroup_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictSemigroup_0 gopurs_runtime.Value = dictSemigroup_0_loop
 _ = dictSemigroup_0
@@ -229,14 +229,14 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup_0, "append")
 }()
 })
 	})
-	return semigroupEffectFn3
+	return cache_semigroupEffectFn3
 }
 
-var semigroupEffectFn2 gopurs_runtime.Value
+var cache_semigroupEffectFn2 gopurs_runtime.Value
 var once_semigroupEffectFn2 sync.Once
 func Get_semigroupEffectFn2() gopurs_runtime.Value {
 	once_semigroupEffectFn2.Do(func() {
-		semigroupEffectFn2 = gopurs_runtime.Func(func(dictSemigroup_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_semigroupEffectFn2 = gopurs_runtime.Func(func(dictSemigroup_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictSemigroup_0 gopurs_runtime.Value = dictSemigroup_0_loop
 _ = dictSemigroup_0
@@ -254,14 +254,14 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup_0, "append")
 }()
 })
 	})
-	return semigroupEffectFn2
+	return cache_semigroupEffectFn2
 }
 
-var semigroupEffectFn10 gopurs_runtime.Value
+var cache_semigroupEffectFn10 gopurs_runtime.Value
 var once_semigroupEffectFn10 sync.Once
 func Get_semigroupEffectFn10() gopurs_runtime.Value {
 	once_semigroupEffectFn10.Do(func() {
-		semigroupEffectFn10 = gopurs_runtime.Func(func(dictSemigroup_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_semigroupEffectFn10 = gopurs_runtime.Func(func(dictSemigroup_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictSemigroup_0 gopurs_runtime.Value = dictSemigroup_0_loop
 _ = dictSemigroup_0
@@ -297,14 +297,14 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup_0, "append")
 }()
 })
 	})
-	return semigroupEffectFn10
+	return cache_semigroupEffectFn10
 }
 
-var semigroupEffectFn1 gopurs_runtime.Value
+var cache_semigroupEffectFn1 gopurs_runtime.Value
 var once_semigroupEffectFn1 sync.Once
 func Get_semigroupEffectFn1() gopurs_runtime.Value {
 	once_semigroupEffectFn1.Do(func() {
-		semigroupEffectFn1 = gopurs_runtime.Func(func(dictSemigroup_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_semigroupEffectFn1 = gopurs_runtime.Func(func(dictSemigroup_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictSemigroup_0 gopurs_runtime.Value = dictSemigroup_0_loop
 _ = dictSemigroup_0
@@ -322,14 +322,14 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup_0, "append")
 }()
 })
 	})
-	return semigroupEffectFn1
+	return cache_semigroupEffectFn1
 }
 
-var monoidEffectFn9 gopurs_runtime.Value
+var cache_monoidEffectFn9 gopurs_runtime.Value
 var once_monoidEffectFn9 sync.Once
 func Get_monoidEffectFn9() gopurs_runtime.Value {
 	once_monoidEffectFn9.Do(func() {
-		monoidEffectFn9 = gopurs_runtime.Func(func(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monoidEffectFn9 = gopurs_runtime.Func(func(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
 _ = dictMonoid_0
@@ -391,14 +391,14 @@ return semigroupEffectFn91_3_2
 }()
 })
 	})
-	return monoidEffectFn9
+	return cache_monoidEffectFn9
 }
 
-var monoidEffectFn8 gopurs_runtime.Value
+var cache_monoidEffectFn8 gopurs_runtime.Value
 var once_monoidEffectFn8 sync.Once
 func Get_monoidEffectFn8() gopurs_runtime.Value {
 	once_monoidEffectFn8.Do(func() {
-		monoidEffectFn8 = gopurs_runtime.Func(func(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monoidEffectFn8 = gopurs_runtime.Func(func(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
 _ = dictMonoid_0
@@ -456,14 +456,14 @@ return semigroupEffectFn81_3_2
 }()
 })
 	})
-	return monoidEffectFn8
+	return cache_monoidEffectFn8
 }
 
-var monoidEffectFn7 gopurs_runtime.Value
+var cache_monoidEffectFn7 gopurs_runtime.Value
 var once_monoidEffectFn7 sync.Once
 func Get_monoidEffectFn7() gopurs_runtime.Value {
 	once_monoidEffectFn7.Do(func() {
-		monoidEffectFn7 = gopurs_runtime.Func(func(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monoidEffectFn7 = gopurs_runtime.Func(func(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
 _ = dictMonoid_0
@@ -517,14 +517,14 @@ return semigroupEffectFn71_3_2
 }()
 })
 	})
-	return monoidEffectFn7
+	return cache_monoidEffectFn7
 }
 
-var monoidEffectFn6 gopurs_runtime.Value
+var cache_monoidEffectFn6 gopurs_runtime.Value
 var once_monoidEffectFn6 sync.Once
 func Get_monoidEffectFn6() gopurs_runtime.Value {
 	once_monoidEffectFn6.Do(func() {
-		monoidEffectFn6 = gopurs_runtime.Func(func(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monoidEffectFn6 = gopurs_runtime.Func(func(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
 _ = dictMonoid_0
@@ -574,14 +574,14 @@ return semigroupEffectFn61_3_2
 }()
 })
 	})
-	return monoidEffectFn6
+	return cache_monoidEffectFn6
 }
 
-var monoidEffectFn5 gopurs_runtime.Value
+var cache_monoidEffectFn5 gopurs_runtime.Value
 var once_monoidEffectFn5 sync.Once
 func Get_monoidEffectFn5() gopurs_runtime.Value {
 	once_monoidEffectFn5.Do(func() {
-		monoidEffectFn5 = gopurs_runtime.Func(func(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monoidEffectFn5 = gopurs_runtime.Func(func(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
 _ = dictMonoid_0
@@ -611,14 +611,14 @@ return semigroupEffectFn51_3_2
 }()
 })
 	})
-	return monoidEffectFn5
+	return cache_monoidEffectFn5
 }
 
-var monoidEffectFn4 gopurs_runtime.Value
+var cache_monoidEffectFn4 gopurs_runtime.Value
 var once_monoidEffectFn4 sync.Once
 func Get_monoidEffectFn4() gopurs_runtime.Value {
 	once_monoidEffectFn4.Do(func() {
-		monoidEffectFn4 = gopurs_runtime.Func(func(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monoidEffectFn4 = gopurs_runtime.Func(func(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
 _ = dictMonoid_0
@@ -648,14 +648,14 @@ return semigroupEffectFn41_3_2
 }()
 })
 	})
-	return monoidEffectFn4
+	return cache_monoidEffectFn4
 }
 
-var monoidEffectFn3 gopurs_runtime.Value
+var cache_monoidEffectFn3 gopurs_runtime.Value
 var once_monoidEffectFn3 sync.Once
 func Get_monoidEffectFn3() gopurs_runtime.Value {
 	once_monoidEffectFn3.Do(func() {
-		monoidEffectFn3 = gopurs_runtime.Func(func(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monoidEffectFn3 = gopurs_runtime.Func(func(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
 _ = dictMonoid_0
@@ -685,14 +685,14 @@ return semigroupEffectFn31_3_2
 }()
 })
 	})
-	return monoidEffectFn3
+	return cache_monoidEffectFn3
 }
 
-var monoidEffectFn2 gopurs_runtime.Value
+var cache_monoidEffectFn2 gopurs_runtime.Value
 var once_monoidEffectFn2 sync.Once
 func Get_monoidEffectFn2() gopurs_runtime.Value {
 	once_monoidEffectFn2.Do(func() {
-		monoidEffectFn2 = gopurs_runtime.Func(func(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monoidEffectFn2 = gopurs_runtime.Func(func(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
 _ = dictMonoid_0
@@ -722,14 +722,14 @@ return semigroupEffectFn21_3_2
 }()
 })
 	})
-	return monoidEffectFn2
+	return cache_monoidEffectFn2
 }
 
-var monoidEffectFn10 gopurs_runtime.Value
+var cache_monoidEffectFn10 gopurs_runtime.Value
 var once_monoidEffectFn10 sync.Once
 func Get_monoidEffectFn10() gopurs_runtime.Value {
 	once_monoidEffectFn10.Do(func() {
-		monoidEffectFn10 = gopurs_runtime.Func(func(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monoidEffectFn10 = gopurs_runtime.Func(func(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
 _ = dictMonoid_0
@@ -795,14 +795,14 @@ return semigroupEffectFn101_3_2
 }()
 })
 	})
-	return monoidEffectFn10
+	return cache_monoidEffectFn10
 }
 
-var monoidEffectFn1 gopurs_runtime.Value
+var cache_monoidEffectFn1 gopurs_runtime.Value
 var once_monoidEffectFn1 sync.Once
 func Get_monoidEffectFn1() gopurs_runtime.Value {
 	once_monoidEffectFn1.Do(func() {
-		monoidEffectFn1 = gopurs_runtime.Func(func(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monoidEffectFn1 = gopurs_runtime.Func(func(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
 _ = dictMonoid_0
@@ -832,7 +832,7 @@ return semigroupEffectFn11_3_2
 }()
 })
 	})
-	return monoidEffectFn1
+	return cache_monoidEffectFn1
 }
 
 

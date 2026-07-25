@@ -6,11 +6,11 @@ import (
 	pkg_Unsafe_Coerce "gopurs/output/Unsafe.Coerce"
 )
 
-var App gopurs_runtime.Value
+var cache_App gopurs_runtime.Value
 var once_App sync.Once
 func Get_App() gopurs_runtime.Value {
 	once_App.Do(func() {
-		App = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_App = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
@@ -18,42 +18,42 @@ return x_0
 }()
 })
 	})
-	return App
+	return cache_App
 }
 
-var showApp gopurs_runtime.Value
+var cache_showApp gopurs_runtime.Value
 var once_showApp sync.Once
 func Get_showApp() gopurs_runtime.Value {
 	once_showApp.Do(func() {
-		showApp = gopurs_runtime.Func(func(dictShow_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_showApp = gopurs_runtime.Func(func(dictShow_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictShow_0 gopurs_runtime.Value = dictShow_0_loop
 _ = dictShow_0
 return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str("(App " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), v_1).StrVal() + ")")
+return gopurs_runtime.Str((("(App ") + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), v_1).StrVal())) + (")"))
 }))
 }()
 })
 	})
-	return showApp
+	return cache_showApp
 }
 
-var semigroupApp gopurs_runtime.Value
+var cache_semigroupApp gopurs_runtime.Value
 var once_semigroupApp sync.Once
 func Get_semigroupApp() gopurs_runtime.Value {
 	once_semigroupApp.Do(func() {
-		semigroupApp = gopurs_runtime.Func2(func(dictApply_0_box gopurs_runtime.Value, dictSemigroup_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_semigroupApp = gopurs_runtime.Func2(func(dictApply_0_box gopurs_runtime.Value, dictSemigroup_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_semigroupApp(dictApply_0_box, dictSemigroup_1_box)
 })
 	})
-	return semigroupApp
+	return cache_semigroupApp
 }
 
-var plusApp gopurs_runtime.Value
+var cache_plusApp gopurs_runtime.Value
 var once_plusApp sync.Once
 func Get_plusApp() gopurs_runtime.Value {
 	once_plusApp.Do(func() {
-		plusApp = gopurs_runtime.Func(func(dictPlus_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_plusApp = gopurs_runtime.Func(func(dictPlus_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictPlus_0 gopurs_runtime.Value = dictPlus_0_loop
 _ = dictPlus_0
@@ -61,25 +61,25 @@ return dictPlus_0
 }()
 })
 	})
-	return plusApp
+	return cache_plusApp
 }
 
-var newtypeApp gopurs_runtime.Value
+var cache_newtypeApp gopurs_runtime.Value
 var once_newtypeApp sync.Once
 func Get_newtypeApp() gopurs_runtime.Value {
 	once_newtypeApp.Do(func() {
-		newtypeApp = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_newtypeApp = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{}
 }))
 	})
-	return newtypeApp
+	return cache_newtypeApp
 }
 
-var monoidApp gopurs_runtime.Value
+var cache_monoidApp gopurs_runtime.Value
 var once_monoidApp sync.Once
 func Get_monoidApp() gopurs_runtime.Value {
 	once_monoidApp.Do(func() {
-		monoidApp = gopurs_runtime.Func(func(dictApplicative_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monoidApp = gopurs_runtime.Func(func(dictApplicative_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictApplicative_0 gopurs_runtime.Value = dictApplicative_0_loop
 _ = dictApplicative_0
@@ -99,14 +99,14 @@ return semigroupApp2_4_2
 }()
 })
 	})
-	return monoidApp
+	return cache_monoidApp
 }
 
-var monadPlusApp gopurs_runtime.Value
+var cache_monadPlusApp gopurs_runtime.Value
 var once_monadPlusApp sync.Once
 func Get_monadPlusApp() gopurs_runtime.Value {
 	once_monadPlusApp.Do(func() {
-		monadPlusApp = gopurs_runtime.Func(func(dictMonadPlus_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monadPlusApp = gopurs_runtime.Func(func(dictMonadPlus_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonadPlus_0 gopurs_runtime.Value = dictMonadPlus_0_loop
 _ = dictMonadPlus_0
@@ -114,14 +114,14 @@ return dictMonadPlus_0
 }()
 })
 	})
-	return monadPlusApp
+	return cache_monadPlusApp
 }
 
-var monadApp gopurs_runtime.Value
+var cache_monadApp gopurs_runtime.Value
 var once_monadApp sync.Once
 func Get_monadApp() gopurs_runtime.Value {
 	once_monadApp.Do(func() {
-		monadApp = gopurs_runtime.Func(func(dictMonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monadApp = gopurs_runtime.Func(func(dictMonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
@@ -129,14 +129,14 @@ return dictMonad_0
 }()
 })
 	})
-	return monadApp
+	return cache_monadApp
 }
 
-var lazyApp gopurs_runtime.Value
+var cache_lazyApp gopurs_runtime.Value
 var once_lazyApp sync.Once
 func Get_lazyApp() gopurs_runtime.Value {
 	once_lazyApp.Do(func() {
-		lazyApp = gopurs_runtime.Func(func(dictLazy_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_lazyApp = gopurs_runtime.Func(func(dictLazy_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictLazy_0 gopurs_runtime.Value = dictLazy_0_loop
 _ = dictLazy_0
@@ -144,43 +144,43 @@ return dictLazy_0
 }()
 })
 	})
-	return lazyApp
+	return cache_lazyApp
 }
 
-var hoistLowerApp gopurs_runtime.Value
+var cache_hoistLowerApp gopurs_runtime.Value
 var once_hoistLowerApp sync.Once
 func Get_hoistLowerApp() gopurs_runtime.Value {
 	once_hoistLowerApp.Do(func() {
-		hoistLowerApp = pkg_Unsafe_Coerce.Get_unsafeCoerce()
+		cache_hoistLowerApp = pkg_Unsafe_Coerce.Get_unsafeCoerce()
 	})
-	return hoistLowerApp
+	return cache_hoistLowerApp
 }
 
-var hoistLiftApp gopurs_runtime.Value
+var cache_hoistLiftApp gopurs_runtime.Value
 var once_hoistLiftApp sync.Once
 func Get_hoistLiftApp() gopurs_runtime.Value {
 	once_hoistLiftApp.Do(func() {
-		hoistLiftApp = pkg_Unsafe_Coerce.Get_unsafeCoerce()
+		cache_hoistLiftApp = pkg_Unsafe_Coerce.Get_unsafeCoerce()
 	})
-	return hoistLiftApp
+	return cache_hoistLiftApp
 }
 
-var hoistApp gopurs_runtime.Value
+var cache_hoistApp gopurs_runtime.Value
 var once_hoistApp sync.Once
 func Get_hoistApp() gopurs_runtime.Value {
 	once_hoistApp.Do(func() {
-		hoistApp = gopurs_runtime.Func2(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_hoistApp = gopurs_runtime.Func2(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_hoistApp(f_0_box, v_1_box)
 })
 	})
-	return hoistApp
+	return cache_hoistApp
 }
 
-var functorApp gopurs_runtime.Value
+var cache_functorApp gopurs_runtime.Value
 var once_functorApp sync.Once
 func Get_functorApp() gopurs_runtime.Value {
 	once_functorApp.Do(func() {
-		functorApp = gopurs_runtime.Func(func(dictFunctor_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_functorApp = gopurs_runtime.Func(func(dictFunctor_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictFunctor_0 gopurs_runtime.Value = dictFunctor_0_loop
 _ = dictFunctor_0
@@ -188,14 +188,14 @@ return dictFunctor_0
 }()
 })
 	})
-	return functorApp
+	return cache_functorApp
 }
 
-var extendApp gopurs_runtime.Value
+var cache_extendApp gopurs_runtime.Value
 var once_extendApp sync.Once
 func Get_extendApp() gopurs_runtime.Value {
 	once_extendApp.Do(func() {
-		extendApp = gopurs_runtime.Func(func(dictExtend_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_extendApp = gopurs_runtime.Func(func(dictExtend_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictExtend_0 gopurs_runtime.Value = dictExtend_0_loop
 _ = dictExtend_0
@@ -203,25 +203,25 @@ return dictExtend_0
 }()
 })
 	})
-	return extendApp
+	return cache_extendApp
 }
 
-var eqApp gopurs_runtime.Value
+var cache_eqApp gopurs_runtime.Value
 var once_eqApp sync.Once
 func Get_eqApp() gopurs_runtime.Value {
 	once_eqApp.Do(func() {
-		eqApp = gopurs_runtime.Func2(func(dictEq1_0_box gopurs_runtime.Value, dictEq_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_eqApp = gopurs_runtime.Func2(func(dictEq1_0_box gopurs_runtime.Value, dictEq_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_eqApp(dictEq1_0_box, dictEq_1_box)
 })
 	})
-	return eqApp
+	return cache_eqApp
 }
 
-var ordApp gopurs_runtime.Value
+var cache_ordApp gopurs_runtime.Value
 var once_ordApp sync.Once
 func Get_ordApp() gopurs_runtime.Value {
 	once_ordApp.Do(func() {
-		ordApp = gopurs_runtime.Func(func(dictOrd1_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_ordApp = gopurs_runtime.Func(func(dictOrd1_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictOrd1_0 gopurs_runtime.Value = dictOrd1_0_loop
 _ = dictOrd1_0
@@ -245,14 +245,14 @@ return eqApp2_5_3
 }()
 })
 	})
-	return ordApp
+	return cache_ordApp
 }
 
-var eq1App gopurs_runtime.Value
+var cache_eq1App gopurs_runtime.Value
 var once_eq1App sync.Once
 func Get_eq1App() gopurs_runtime.Value {
 	once_eq1App.Do(func() {
-		eq1App = gopurs_runtime.Func(func(dictEq1_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_eq1App = gopurs_runtime.Func(func(dictEq1_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictEq1_0 gopurs_runtime.Value = dictEq1_0_loop
 _ = dictEq1_0
@@ -262,14 +262,14 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEq1_0, "eq1"), dictEq_1
 }()
 })
 	})
-	return eq1App
+	return cache_eq1App
 }
 
-var ord1App gopurs_runtime.Value
+var cache_ord1App gopurs_runtime.Value
 var once_ord1App sync.Once
 func Get_ord1App() gopurs_runtime.Value {
 	once_ord1App.Do(func() {
-		ord1App = gopurs_runtime.Func(func(dictOrd1_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_ord1App = gopurs_runtime.Func(func(dictOrd1_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictOrd1_0 gopurs_runtime.Value = dictOrd1_0_loop
 _ = dictOrd1_0
@@ -301,14 +301,14 @@ return eq1App1_3_2
 }()
 })
 	})
-	return ord1App
+	return cache_ord1App
 }
 
-var comonadApp gopurs_runtime.Value
+var cache_comonadApp gopurs_runtime.Value
 var once_comonadApp sync.Once
 func Get_comonadApp() gopurs_runtime.Value {
 	once_comonadApp.Do(func() {
-		comonadApp = gopurs_runtime.Func(func(dictComonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_comonadApp = gopurs_runtime.Func(func(dictComonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictComonad_0 gopurs_runtime.Value = dictComonad_0_loop
 _ = dictComonad_0
@@ -316,14 +316,14 @@ return dictComonad_0
 }()
 })
 	})
-	return comonadApp
+	return cache_comonadApp
 }
 
-var bindApp gopurs_runtime.Value
+var cache_bindApp gopurs_runtime.Value
 var once_bindApp sync.Once
 func Get_bindApp() gopurs_runtime.Value {
 	once_bindApp.Do(func() {
-		bindApp = gopurs_runtime.Func(func(dictBind_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_bindApp = gopurs_runtime.Func(func(dictBind_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictBind_0 gopurs_runtime.Value = dictBind_0_loop
 _ = dictBind_0
@@ -331,14 +331,14 @@ return dictBind_0
 }()
 })
 	})
-	return bindApp
+	return cache_bindApp
 }
 
-var applyApp gopurs_runtime.Value
+var cache_applyApp gopurs_runtime.Value
 var once_applyApp sync.Once
 func Get_applyApp() gopurs_runtime.Value {
 	once_applyApp.Do(func() {
-		applyApp = gopurs_runtime.Func(func(dictApply_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_applyApp = gopurs_runtime.Func(func(dictApply_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictApply_0 gopurs_runtime.Value = dictApply_0_loop
 _ = dictApply_0
@@ -346,14 +346,14 @@ return dictApply_0
 }()
 })
 	})
-	return applyApp
+	return cache_applyApp
 }
 
-var applicativeApp gopurs_runtime.Value
+var cache_applicativeApp gopurs_runtime.Value
 var once_applicativeApp sync.Once
 func Get_applicativeApp() gopurs_runtime.Value {
 	once_applicativeApp.Do(func() {
-		applicativeApp = gopurs_runtime.Func(func(dictApplicative_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_applicativeApp = gopurs_runtime.Func(func(dictApplicative_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictApplicative_0 gopurs_runtime.Value = dictApplicative_0_loop
 _ = dictApplicative_0
@@ -361,14 +361,14 @@ return dictApplicative_0
 }()
 })
 	})
-	return applicativeApp
+	return cache_applicativeApp
 }
 
-var alternativeApp gopurs_runtime.Value
+var cache_alternativeApp gopurs_runtime.Value
 var once_alternativeApp sync.Once
 func Get_alternativeApp() gopurs_runtime.Value {
 	once_alternativeApp.Do(func() {
-		alternativeApp = gopurs_runtime.Func(func(dictAlternative_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_alternativeApp = gopurs_runtime.Func(func(dictAlternative_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictAlternative_0 gopurs_runtime.Value = dictAlternative_0_loop
 _ = dictAlternative_0
@@ -376,14 +376,14 @@ return dictAlternative_0
 }()
 })
 	})
-	return alternativeApp
+	return cache_alternativeApp
 }
 
-var altApp gopurs_runtime.Value
+var cache_altApp gopurs_runtime.Value
 var once_altApp sync.Once
 func Get_altApp() gopurs_runtime.Value {
 	once_altApp.Do(func() {
-		altApp = gopurs_runtime.Func(func(dictAlt_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_altApp = gopurs_runtime.Func(func(dictAlt_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictAlt_0 gopurs_runtime.Value = dictAlt_0_loop
 _ = dictAlt_0
@@ -391,7 +391,7 @@ return dictAlt_0
 }()
 })
 	})
-	return altApp
+	return cache_altApp
 }
 
 func Call_semigroupApp(dictApply_0_loop gopurs_runtime.Value, dictSemigroup_1_loop gopurs_runtime.Value) gopurs_runtime.Value {

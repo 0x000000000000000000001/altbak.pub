@@ -7,10 +7,10 @@ func Error(msg string) error { return errors.New(msg) }
 func Message(e error) string { return e.Error() }
 func Name(e error) string { return "Error" }
 func ShowErrorImpl(e error) string { return e.Error() }
-func StackImpl(just func(string) any, nothing any, e error) any { return nothing }
-func ThrowException(e error) func() any { return func() any { panic(e) } }
-func CatchException(c func(error) func() any, t func() any) func() any {
-	return func() (res any) {
+func StackImpl(just func(string) interface{}, nothing interface{}, e error) interface{} { return nothing }
+func ThrowException(e error) func() interface{} { return func() interface{} { panic(e) } }
+func CatchException(c func(error) func() interface{}, t func() interface{}) func() interface{} {
+	return func() (res interface{}) {
 		defer func() {
 			if r := recover(); r != nil {
 				if err, ok := r.(error); ok {
@@ -61,11 +61,11 @@ var _Gopurs_ShowErrorImpl = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) 
 	go_res := ShowErrorImpl(go_arg0)
 	return gopurs_runtime.Box(go_res)
 })
-func Call_stackImpl(arg0 func(string) any, arg1 any, arg2 error) any { return nothing } {
+func Call_stackImpl(arg0 func(string) interface{}, arg1 interface{}, arg2 error) interface{} { return nothing } {
 	return StackImpl(arg0, arg1, arg2)
 }
 var _Gopurs_StackImpl = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := func(p0_0 string) any {
+	go_arg0 := func(p0_0 string) interface{} {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 		}
 	go_arg1 := arg1
@@ -73,7 +73,7 @@ var _Gopurs_StackImpl = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg
 	go_res := StackImpl(go_arg0, go_arg1, go_arg2)
 	return gopurs_runtime.Box(go_res)
 })
-func Call_throwException(arg0 error) func() any { return func() any { panic(e) } } {
+func Call_throwException(arg0 error) func() interface{} { return func() interface{} { panic(e) } } {
 	return ThrowException(arg0)
 }
 var _Gopurs_ThrowException = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -84,17 +84,17 @@ var _Gopurs_ThrowException = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value)
 			return gopurs_runtime.Box(inner_res)
 		})
 })
-func Call_catchException(arg0 func(error) func() any, arg1 func() any) func() any {
+func Call_catchException(arg0 func(error) func() interface{}, arg1 func() interface{}) func() interface{} {
 	return CatchException(arg0, arg1)
 }
 var _Gopurs_CatchException = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := func(p0_0 error) func() any {
+	go_arg0 := func(p0_0 error) func() interface{} {
 			inner_res0 := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
-			return func() any {
+			return func() interface{} {
 			return gopurs_runtime.Apply(inner_res0, gopurs_runtime.Value{})
 		}
 		}
-	go_arg1 := func() any {
+	go_arg1 := func() interface{} {
 			return gopurs_runtime.Apply(arg1, gopurs_runtime.Value{})
 		}
 	go_res := CatchException(go_arg0, go_arg1)

@@ -9,11 +9,11 @@ import (
 	unsafe "unsafe"
 )
 
-var pure gopurs_runtime.Value
+var cache_pure gopurs_runtime.Value
 var once_pure sync.Once
 func Get_pure() gopurs_runtime.Value {
 	once_pure.Do(func() {
-		pure = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_pure = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
@@ -21,79 +21,79 @@ return gopurs_runtime.RecordGet(dict_0, "pure")
 }()
 })
 	})
-	return pure
+	return cache_pure
 }
 
-var unless gopurs_runtime.Value
+var cache_unless gopurs_runtime.Value
 var once_unless sync.Once
 func Get_unless() gopurs_runtime.Value {
 	once_unless.Do(func() {
-		unless = gopurs_runtime.Func3(func(dictApplicative_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value, v1_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_unless = gopurs_runtime.Func3(func(dictApplicative_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value, v1_2_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_unless(dictApplicative_0_box, v_1_box, v1_2_box)
 })
 	})
-	return unless
+	return cache_unless
 }
 
-var when gopurs_runtime.Value
+var cache_when gopurs_runtime.Value
 var once_when sync.Once
 func Get_when() gopurs_runtime.Value {
 	once_when.Do(func() {
-		when = gopurs_runtime.Func3(func(dictApplicative_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value, v1_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_when = gopurs_runtime.Func3(func(dictApplicative_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value, v1_2_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_when(dictApplicative_0_box, v_1_box, v1_2_box)
 })
 	})
-	return when
+	return cache_when
 }
 
-var liftA1 gopurs_runtime.Value
+var cache_liftA1 gopurs_runtime.Value
 var once_liftA1 sync.Once
 func Get_liftA1() gopurs_runtime.Value {
 	once_liftA1.Do(func() {
-		liftA1 = gopurs_runtime.Func3(func(dictApplicative_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_liftA1 = gopurs_runtime.Func3(func(dictApplicative_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_liftA1(dictApplicative_0_box, f_1_box, a_2_box)
 })
 	})
-	return liftA1
+	return cache_liftA1
 }
 
-var applicativeProxy gopurs_runtime.Value
+var cache_applicativeProxy gopurs_runtime.Value
 var once_applicativeProxy sync.Once
 func Get_applicativeProxy() gopurs_runtime.Value {
 	once_applicativeProxy.Do(func() {
-		applicativeProxy = gopurs_runtime.RecordDict2("pure", "Apply0", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 3178699476, UnsafePtr: unsafe.Pointer(&pkg_Type_Proxy.Data_Type_Proxy_Proxy{})}
+		cache_applicativeProxy = gopurs_runtime.RecordDict2("pure", "Apply0", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: unsafe.Pointer(&pkg_Type_Proxy.Data_Type_Proxy_Proxy{})}
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Control_Apply.Get_applyProxy()
 }))
 	})
-	return applicativeProxy
+	return cache_applicativeProxy
 }
 
-var applicativeFn gopurs_runtime.Value
+var cache_applicativeFn gopurs_runtime.Value
 var once_applicativeFn sync.Once
 func Get_applicativeFn() gopurs_runtime.Value {
 	once_applicativeFn.Do(func() {
-		applicativeFn = gopurs_runtime.RecordDict2("pure", "Apply0", gopurs_runtime.Func2(func(x_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_applicativeFn = gopurs_runtime.RecordDict2("pure", "Apply0", gopurs_runtime.Func2(func(x_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return x_0
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Control_Apply.Get_applyFn()
 }))
 	})
-	return applicativeFn
+	return cache_applicativeFn
 }
 
-var applicativeArray gopurs_runtime.Value
+var cache_applicativeArray gopurs_runtime.Value
 var once_applicativeArray sync.Once
 func Get_applicativeArray() gopurs_runtime.Value {
 	once_applicativeArray.Do(func() {
-		applicativeArray = gopurs_runtime.RecordDict2("pure", "Apply0", gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_applicativeArray = gopurs_runtime.RecordDict2("pure", "Apply0", gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Array([]gopurs_runtime.Value{x_0})
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Control_Apply.Get_applyArray()
 }))
 	})
-	return applicativeArray
+	return cache_applicativeArray
 }
 
 func Call_unless(dictApplicative_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value, v1_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -105,7 +105,7 @@ var v1_2 gopurs_runtime.Value = v1_2_loop
 _ = v1_2
 var __t0 gopurs_runtime.Value
 {
-if v_1.IntVal != 0 != true {
+if ((v_1.IntVal) != (0)) != (true) {
 __t0 = v1_2
 goto end_branch_0
 } else {
@@ -113,7 +113,7 @@ goto end_branch_0
 }
 }
 {
-if v_1.IntVal != 0 {
+if (v_1.IntVal) != (0) {
 __t0 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "pure"), pkg_Data_Unit.Get_unit())
 goto end_branch_0
 } else {
@@ -136,7 +136,7 @@ var v1_2 gopurs_runtime.Value = v1_2_loop
 _ = v1_2
 var __t0 gopurs_runtime.Value
 {
-if v_1.IntVal != 0 {
+if (v_1.IntVal) != (0) {
 __t0 = v1_2
 goto end_branch_0
 } else {

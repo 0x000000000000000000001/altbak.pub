@@ -7,11 +7,11 @@ import (
 	unsafe "unsafe"
 )
 
-var Down gopurs_runtime.Value
+var cache_Down gopurs_runtime.Value
 var once_Down sync.Once
 func Get_Down() gopurs_runtime.Value {
 	once_Down.Do(func() {
-		Down = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Down = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
@@ -19,42 +19,42 @@ return x_0
 }()
 })
 	})
-	return Down
+	return cache_Down
 }
 
-var showDown gopurs_runtime.Value
+var cache_showDown gopurs_runtime.Value
 var once_showDown sync.Once
 func Get_showDown() gopurs_runtime.Value {
 	once_showDown.Do(func() {
-		showDown = gopurs_runtime.Func(func(dictShow_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_showDown = gopurs_runtime.Func(func(dictShow_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictShow_0 gopurs_runtime.Value = dictShow_0_loop
 _ = dictShow_0
 return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str("(Down " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), v_1).StrVal() + ")")
+return gopurs_runtime.Str((("(Down ") + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), v_1).StrVal())) + (")"))
 }))
 }()
 })
 	})
-	return showDown
+	return cache_showDown
 }
 
-var newtypeDown gopurs_runtime.Value
+var cache_newtypeDown gopurs_runtime.Value
 var once_newtypeDown sync.Once
 func Get_newtypeDown() gopurs_runtime.Value {
 	once_newtypeDown.Do(func() {
-		newtypeDown = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_newtypeDown = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{}
 }))
 	})
-	return newtypeDown
+	return cache_newtypeDown
 }
 
-var eqDown gopurs_runtime.Value
+var cache_eqDown gopurs_runtime.Value
 var once_eqDown sync.Once
 func Get_eqDown() gopurs_runtime.Value {
 	once_eqDown.Do(func() {
-		eqDown = gopurs_runtime.Func(func(dictEq_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_eqDown = gopurs_runtime.Func(func(dictEq_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
 _ = dictEq_0
@@ -62,14 +62,14 @@ return dictEq_0
 }()
 })
 	})
-	return eqDown
+	return cache_eqDown
 }
 
-var ordDown gopurs_runtime.Value
+var cache_ordDown gopurs_runtime.Value
 var once_ordDown sync.Once
 func Get_ordDown() gopurs_runtime.Value {
 	once_ordDown.Do(func() {
-		ordDown = gopurs_runtime.Func(func(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_ordDown = gopurs_runtime.Func(func(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
@@ -80,24 +80,24 @@ __local_var_4_1 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "co
 _ = __local_var_4_1
 var __t2 gopurs_runtime.Value
 {
-if (__local_var_4_1.Type == 9 && __local_var_4_1.IntVal == 2098047435) {
-__t2 = gopurs_runtime.Value{Type: 9, IntVal: 3866105248, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_LT{})}
+if (__local_var_4_1.Type == 9 && __local_var_4_1.IntVal == 380165415) {
+__t2 = gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_LT{})}
 goto end_branch_2
 } else {
 
 }
 }
 {
-if (__local_var_4_1.Type == 9 && __local_var_4_1.IntVal == 1111389260) {
-__t2 = gopurs_runtime.Value{Type: 9, IntVal: 1111389260, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_EQ{})}
+if (__local_var_4_1.Type == 9 && __local_var_4_1.IntVal == 902936544) {
+__t2 = gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_EQ{})}
 goto end_branch_2
 } else {
 
 }
 }
 {
-if (__local_var_4_1.Type == 9 && __local_var_4_1.IntVal == 3866105248) {
-__t2 = gopurs_runtime.Value{Type: 9, IntVal: 2098047435, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_GT{})}
+if (__local_var_4_1.Type == 9 && __local_var_4_1.IntVal == 1527465420) {
+__t2 = gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_GT{})}
 goto end_branch_2
 } else {
 
@@ -114,14 +114,14 @@ return __local_var_1_0
 }()
 })
 	})
-	return ordDown
+	return cache_ordDown
 }
 
-var boundedDown gopurs_runtime.Value
+var cache_boundedDown gopurs_runtime.Value
 var once_boundedDown sync.Once
 func Get_boundedDown() gopurs_runtime.Value {
 	once_boundedDown.Do(func() {
-		boundedDown = gopurs_runtime.Func(func(dictBounded_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_boundedDown = gopurs_runtime.Func(func(dictBounded_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictBounded_0 gopurs_runtime.Value = dictBounded_0_loop
 _ = dictBounded_0
@@ -134,24 +134,24 @@ __local_var_5_3 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_
 _ = __local_var_5_3
 var __t4 gopurs_runtime.Value
 {
-if (__local_var_5_3.Type == 9 && __local_var_5_3.IntVal == 2098047435) {
-__t4 = gopurs_runtime.Value{Type: 9, IntVal: 3866105248, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_LT{})}
+if (__local_var_5_3.Type == 9 && __local_var_5_3.IntVal == 380165415) {
+__t4 = gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_LT{})}
 goto end_branch_4
 } else {
 
 }
 }
 {
-if (__local_var_5_3.Type == 9 && __local_var_5_3.IntVal == 1111389260) {
-__t4 = gopurs_runtime.Value{Type: 9, IntVal: 1111389260, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_EQ{})}
+if (__local_var_5_3.Type == 9 && __local_var_5_3.IntVal == 902936544) {
+__t4 = gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_EQ{})}
 goto end_branch_4
 } else {
 
 }
 }
 {
-if (__local_var_5_3.Type == 9 && __local_var_5_3.IntVal == 3866105248) {
-__t4 = gopurs_runtime.Value{Type: 9, IntVal: 2098047435, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_GT{})}
+if (__local_var_5_3.Type == 9 && __local_var_5_3.IntVal == 1527465420) {
+__t4 = gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_GT{})}
 goto end_branch_4
 } else {
 
@@ -172,7 +172,7 @@ return ordDown1_3_2
 }()
 })
 	})
-	return boundedDown
+	return cache_boundedDown
 }
 
 

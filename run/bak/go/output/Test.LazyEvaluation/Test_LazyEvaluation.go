@@ -9,11 +9,11 @@ import (
 	pkg_Data_Show "gopurs/output/Data.Show"
 )
 
-var Lazy gopurs_runtime.Value
+var cache_Lazy gopurs_runtime.Value
 var once_Lazy sync.Once
 func Get_Lazy() gopurs_runtime.Value {
 	once_Lazy.Do(func() {
-		Lazy = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Lazy = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
@@ -21,14 +21,14 @@ return x_0
 }()
 })
 	})
-	return Lazy
+	return cache_Lazy
 }
 
-var force gopurs_runtime.Value
+var cache_force gopurs_runtime.Value
 var once_force sync.Once
 func Get_force() gopurs_runtime.Value {
 	once_force.Do(func() {
-		force = gopurs_runtime.Func(func(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_force = gopurs_runtime.Func(func(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
@@ -36,23 +36,23 @@ return gopurs_runtime.Apply(v_0, pkg_Data_Unit.Get_unit())
 }()
 })
 	})
-	return force
+	return cache_force
 }
 
-var describe gopurs_runtime.Value
+var cache_describe gopurs_runtime.Value
 var once_describe sync.Once
 func Get_describe() gopurs_runtime.Value {
 	once_describe.Do(func() {
-		describe = gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Str("Lazy Evaluation (1M Thunks Forced, 1k Depth):"))
+		cache_describe = gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Str("Lazy Evaluation (1M Thunks Forced, 1k Depth):"))
 	})
-	return describe
+	return cache_describe
 }
 
-var defer_ gopurs_runtime.Value
+var cache_defer_ gopurs_runtime.Value
 var once_defer_ sync.Once
 func Get_defer_() gopurs_runtime.Value {
 	once_defer_.Do(func() {
-		defer_ = gopurs_runtime.Func(func(f_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_defer_ = gopurs_runtime.Func(func(f_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
@@ -60,36 +60,36 @@ return f_0
 }()
 })
 	})
-	return defer_
+	return cache_defer_
 }
 
-var buildThunks gopurs_runtime.Value
+var cache_buildThunks gopurs_runtime.Value
 var once_buildThunks sync.Once
 func Get_buildThunks() gopurs_runtime.Value {
 	once_buildThunks.Do(func() {
-		buildThunks = gopurs_runtime.Func2(func(v_0_box gopurs_runtime.Value, v1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_buildThunks = gopurs_runtime.Func2(func(v_0_box gopurs_runtime.Value, v1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_buildThunks(v_0_box, v1_1_box)
 })
 	})
-	return buildThunks
+	return cache_buildThunks
 }
 
-var runManyTimes gopurs_runtime.Value
+var cache_runManyTimes gopurs_runtime.Value
 var once_runManyTimes sync.Once
 func Get_runManyTimes() gopurs_runtime.Value {
 	once_runManyTimes.Do(func() {
-		runManyTimes = gopurs_runtime.Func2(func(v_0_box gopurs_runtime.Value, v1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_runManyTimes = gopurs_runtime.Func2(func(v_0_box gopurs_runtime.Value, v1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_runManyTimes(v_0_box, v1_1_box)
 })
 	})
-	return runManyTimes
+	return cache_runManyTimes
 }
 
-var act gopurs_runtime.Value
+var cache_act gopurs_runtime.Value
 var once_act sync.Once
 func Get_act() gopurs_runtime.Value {
 	once_act.Do(func() {
-		act = func() gopurs_runtime.Value {
+		cache_act = func() gopurs_runtime.Value {
 __local_var_0_0 := gopurs_runtime.Apply(pkg_Bench.Get_opaque(), gopurs_runtime.Int(1000))
 _ = __local_var_0_0
 return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
@@ -99,7 +99,7 @@ return gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), g
 })
 }()
 	})
-	return act
+	return cache_act
 }
 
 func Call_buildThunks(v_0_loop gopurs_runtime.Value, v1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -112,7 +112,7 @@ var v1_1 gopurs_runtime.Value = v1_1_loop
 _ = v1_1
 var __t0 gopurs_runtime.Value
 {
-if v_0.IntVal == 0 {
+if (v_0.IntVal) == (0) {
 __t0 = v1_1
 goto end_branch_0
 } else {
@@ -120,9 +120,9 @@ goto end_branch_0
 }
 }
 {
-v_0_loop = gopurs_runtime.Int(v_0.IntVal - 1)
+v_0_loop = gopurs_runtime.Int((v_0.IntVal) - (1))
 v1_1_loop = gopurs_runtime.Func(func(v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Int(gopurs_runtime.Apply(v1_1, pkg_Data_Unit.Get_unit()).IntVal + 1)
+return gopurs_runtime.Int((gopurs_runtime.Apply(v1_1, pkg_Data_Unit.Get_unit()).IntVal) + (1))
 })
 continue buildThunks
 __t0 = gopurs_runtime.Value{}
@@ -142,7 +142,7 @@ var v1_1 gopurs_runtime.Value = v1_1_loop
 _ = v1_1
 var __t0 gopurs_runtime.Value
 {
-if v_0.IntVal == 0 {
+if (v_0.IntVal) == (0) {
 __t0 = v1_1
 goto end_branch_0
 } else {
@@ -150,10 +150,10 @@ goto end_branch_0
 }
 }
 {
-v_0_loop = gopurs_runtime.Int(v_0.IntVal - 1)
-v1_1_loop = gopurs_runtime.Int(v1_1.IntVal + gopurs_runtime.Apply(Call_buildThunks(gopurs_runtime.Int(1000), gopurs_runtime.Func(func(v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
+v_0_loop = gopurs_runtime.Int((v_0.IntVal) - (1))
+v1_1_loop = gopurs_runtime.Int((v1_1.IntVal) + (gopurs_runtime.Apply(Call_buildThunks(gopurs_runtime.Int(1000), gopurs_runtime.Func(func(v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Int(0)
-})), pkg_Data_Unit.Get_unit()).IntVal)
+})), pkg_Data_Unit.Get_unit()).IntVal))
 continue runManyTimes
 __t0 = gopurs_runtime.Value{}
 }

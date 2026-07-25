@@ -7,55 +7,55 @@ import (
 	unsafe "unsafe"
 )
 
-var clamp gopurs_runtime.Value
+var cache_clamp gopurs_runtime.Value
 var once_clamp sync.Once
 func Get_clamp() gopurs_runtime.Value {
 	once_clamp.Do(func() {
-		clamp = gopurs_runtime.Func3(func(low_0_box gopurs_runtime.Value, hi_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_clamp = gopurs_runtime.Func3(func(low_0_box gopurs_runtime.Value, hi_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_clamp(low_0_box, hi_1_box, x_2_box)
 })
 	})
-	return clamp
+	return cache_clamp
 }
 
-var Precision gopurs_runtime.Value
+var cache_Precision gopurs_runtime.Value
 var once_Precision sync.Once
 func Get_Precision() gopurs_runtime.Value {
 	once_Precision.Do(func() {
-		Precision = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Precision = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: 1786680275, UnsafePtr: unsafe.Pointer(&Data_Data_Number_Format_Precision{value0})}
 })
 	})
-	return Precision
+	return cache_Precision
 }
 
-var Fixed gopurs_runtime.Value
+var cache_Fixed gopurs_runtime.Value
 var once_Fixed sync.Once
 func Get_Fixed() gopurs_runtime.Value {
 	once_Fixed.Do(func() {
-		Fixed = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Fixed = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: 1390206259, UnsafePtr: unsafe.Pointer(&Data_Data_Number_Format_Fixed{value0})}
 })
 	})
-	return Fixed
+	return cache_Fixed
 }
 
-var Exponential gopurs_runtime.Value
+var cache_Exponential gopurs_runtime.Value
 var once_Exponential sync.Once
 func Get_Exponential() gopurs_runtime.Value {
 	once_Exponential.Do(func() {
-		Exponential = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Exponential = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: 1734244434, UnsafePtr: unsafe.Pointer(&Data_Data_Number_Format_Exponential{value0})}
 })
 	})
-	return Exponential
+	return cache_Exponential
 }
 
-var toStringWith gopurs_runtime.Value
+var cache_toStringWith gopurs_runtime.Value
 var once_toStringWith sync.Once
 func Get_toStringWith() gopurs_runtime.Value {
 	once_toStringWith.Do(func() {
-		toStringWith = gopurs_runtime.Func(func(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_toStringWith = gopurs_runtime.Func(func(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
@@ -92,14 +92,14 @@ return __t0
 }()
 })
 	})
-	return toStringWith
+	return cache_toStringWith
 }
 
-var precision gopurs_runtime.Value
+var cache_precision gopurs_runtime.Value
 var once_precision sync.Once
 func Get_precision() gopurs_runtime.Value {
 	once_precision.Do(func() {
-		precision = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_precision = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
@@ -107,14 +107,14 @@ return gopurs_runtime.Value{Type: 9, IntVal: 1786680275, UnsafePtr: unsafe.Point
 }()
 })
 	})
-	return precision
+	return cache_precision
 }
 
-var fixed gopurs_runtime.Value
+var cache_fixed gopurs_runtime.Value
 var once_fixed sync.Once
 func Get_fixed() gopurs_runtime.Value {
 	once_fixed.Do(func() {
-		fixed = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_fixed = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
@@ -122,14 +122,14 @@ return gopurs_runtime.Value{Type: 9, IntVal: 1390206259, UnsafePtr: unsafe.Point
 }()
 })
 	})
-	return fixed
+	return cache_fixed
 }
 
-var exponential gopurs_runtime.Value
+var cache_exponential gopurs_runtime.Value
 var once_exponential sync.Once
 func Get_exponential() gopurs_runtime.Value {
 	once_exponential.Do(func() {
-		exponential = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_exponential = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
@@ -137,7 +137,7 @@ return gopurs_runtime.Value{Type: 9, IntVal: 1734244434, UnsafePtr: unsafe.Point
 }()
 })
 	})
-	return exponential
+	return cache_exponential
 }
 
 type Data_Data_Number_Format_Precision struct {
@@ -172,7 +172,7 @@ v_3_0 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ord.Get_ordInt(
 _ = v_3_0
 var __t2 gopurs_runtime.Value
 {
-if (v_3_0.Type == 9 && v_3_0.IntVal == 3866105248) {
+if (v_3_0.Type == 9 && v_3_0.IntVal == 1527465420) {
 __t2 = x_2
 goto end_branch_2
 } else {
@@ -180,7 +180,7 @@ goto end_branch_2
 }
 }
 {
-if (v_3_0.Type == 9 && v_3_0.IntVal == 1111389260) {
+if (v_3_0.Type == 9 && v_3_0.IntVal == 902936544) {
 __t2 = low_0
 goto end_branch_2
 } else {
@@ -188,7 +188,7 @@ goto end_branch_2
 }
 }
 {
-if (v_3_0.Type == 9 && v_3_0.IntVal == 2098047435) {
+if (v_3_0.Type == 9 && v_3_0.IntVal == 380165415) {
 __t2 = low_0
 goto end_branch_2
 } else {
@@ -205,7 +205,7 @@ v_5_3 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ord.Get_ordInt(
 _ = v_5_3
 var __t4 gopurs_runtime.Value
 {
-if (v_5_3.Type == 9 && v_5_3.IntVal == 3866105248) {
+if (v_5_3.Type == 9 && v_5_3.IntVal == 1527465420) {
 __t4 = hi_1
 goto end_branch_4
 } else {
@@ -213,7 +213,7 @@ goto end_branch_4
 }
 }
 {
-if (v_5_3.Type == 9 && v_5_3.IntVal == 1111389260) {
+if (v_5_3.Type == 9 && v_5_3.IntVal == 902936544) {
 __t4 = hi_1
 goto end_branch_4
 } else {
@@ -221,7 +221,7 @@ goto end_branch_4
 }
 }
 {
-if (v_5_3.Type == 9 && v_5_3.IntVal == 2098047435) {
+if (v_5_3.Type == 9 && v_5_3.IntVal == 380165415) {
 __t4 = __local_var_4_1
 goto end_branch_4
 } else {

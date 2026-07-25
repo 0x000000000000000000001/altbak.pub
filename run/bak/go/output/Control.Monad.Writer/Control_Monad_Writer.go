@@ -6,11 +6,11 @@ import (
 	pkg_Data_Tuple "gopurs/output/Data.Tuple"
 )
 
-var writer gopurs_runtime.Value
+var cache_writer gopurs_runtime.Value
 var once_writer sync.Once
 func Get_writer() gopurs_runtime.Value {
 	once_writer.Do(func() {
-		writer = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_writer = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
@@ -18,14 +18,14 @@ return x_0
 }()
 })
 	})
-	return writer
+	return cache_writer
 }
 
-var runWriter gopurs_runtime.Value
+var cache_runWriter gopurs_runtime.Value
 var once_runWriter sync.Once
 func Get_runWriter() gopurs_runtime.Value {
 	once_runWriter.Do(func() {
-		runWriter = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_runWriter = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
@@ -33,25 +33,25 @@ return x_0
 }()
 })
 	})
-	return runWriter
+	return cache_runWriter
 }
 
-var mapWriter gopurs_runtime.Value
+var cache_mapWriter gopurs_runtime.Value
 var once_mapWriter sync.Once
 func Get_mapWriter() gopurs_runtime.Value {
 	once_mapWriter.Do(func() {
-		mapWriter = gopurs_runtime.Func2(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_mapWriter = gopurs_runtime.Func2(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_mapWriter(f_0_box, v_1_box)
 })
 	})
-	return mapWriter
+	return cache_mapWriter
 }
 
-var execWriter gopurs_runtime.Value
+var cache_execWriter gopurs_runtime.Value
 var once_execWriter sync.Once
 func Get_execWriter() gopurs_runtime.Value {
 	once_execWriter.Do(func() {
-		execWriter = gopurs_runtime.Func(func(m_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_execWriter = gopurs_runtime.Func(func(m_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var m_0 gopurs_runtime.Value = m_0_loop
 _ = m_0
@@ -59,7 +59,7 @@ return (*pkg_Data_Tuple.Data_Data_Tuple_Tuple)(m_0.UnsafePtr).V1
 }()
 })
 	})
-	return execWriter
+	return cache_execWriter
 }
 
 func Call_mapWriter(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {

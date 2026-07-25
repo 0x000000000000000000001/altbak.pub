@@ -7,11 +7,11 @@ import (
 	unsafe "unsafe"
 )
 
-var SplitF gopurs_runtime.Value
+var cache_SplitF gopurs_runtime.Value
 var once_SplitF sync.Once
 func Get_SplitF() gopurs_runtime.Value {
 	once_SplitF.Do(func() {
-		SplitF = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_SplitF = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: 1995432569, UnsafePtr: unsafe.Pointer(&Data_Data_Profunctor_Split_SplitF{value0, value1, value2})}
@@ -19,36 +19,36 @@ return gopurs_runtime.Value{Type: 9, IntVal: 1995432569, UnsafePtr: unsafe.Point
 })
 })
 	})
-	return SplitF
+	return cache_SplitF
 }
 
-var unSplit gopurs_runtime.Value
+var cache_unSplit gopurs_runtime.Value
 var once_unSplit sync.Once
 func Get_unSplit() gopurs_runtime.Value {
 	once_unSplit.Do(func() {
-		unSplit = gopurs_runtime.Func2(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_unSplit = gopurs_runtime.Func2(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_unSplit(f_0_box, v_1_box)
 })
 	})
-	return unSplit
+	return cache_unSplit
 }
 
-var split gopurs_runtime.Value
+var cache_split gopurs_runtime.Value
 var once_split sync.Once
 func Get_split() gopurs_runtime.Value {
 	once_split.Do(func() {
-		split = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, g_1_box gopurs_runtime.Value, fx_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_split = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, g_1_box gopurs_runtime.Value, fx_2_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_split(f_0_box, g_1_box, fx_2_box)
 })
 	})
-	return split
+	return cache_split
 }
 
-var profunctorSplit gopurs_runtime.Value
+var cache_profunctorSplit gopurs_runtime.Value
 var once_profunctorSplit sync.Once
 func Get_profunctorSplit() gopurs_runtime.Value {
 	once_profunctorSplit.Do(func() {
-		profunctorSplit = gopurs_runtime.RecordDict1("dimap", gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, g_1 gopurs_runtime.Value, v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_profunctorSplit = gopurs_runtime.RecordDict1("dimap", gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, g_1 gopurs_runtime.Value, v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: 1995432569, UnsafePtr: unsafe.Pointer(&Data_Data_Profunctor_Split_SplitF{gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply((*Data_Data_Profunctor_Split_SplitF)(v_2.UnsafePtr).V0, gopurs_runtime.Apply(f_0, x_3))
 }), gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -56,25 +56,25 @@ return gopurs_runtime.Apply(g_1, gopurs_runtime.Apply((*Data_Data_Profunctor_Spl
 }), (*Data_Data_Profunctor_Split_SplitF)(v_2.UnsafePtr).V2})}
 }))
 	})
-	return profunctorSplit
+	return cache_profunctorSplit
 }
 
-var lowerSplit gopurs_runtime.Value
+var cache_lowerSplit gopurs_runtime.Value
 var once_lowerSplit sync.Once
 func Get_lowerSplit() gopurs_runtime.Value {
 	once_lowerSplit.Do(func() {
-		lowerSplit = gopurs_runtime.Func2(func(dictInvariant_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_lowerSplit = gopurs_runtime.Func2(func(dictInvariant_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_lowerSplit(dictInvariant_0_box, v_1_box)
 })
 	})
-	return lowerSplit
+	return cache_lowerSplit
 }
 
-var liftSplit gopurs_runtime.Value
+var cache_liftSplit gopurs_runtime.Value
 var once_liftSplit sync.Once
 func Get_liftSplit() gopurs_runtime.Value {
 	once_liftSplit.Do(func() {
-		liftSplit = gopurs_runtime.Func(func(fx_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_liftSplit = gopurs_runtime.Func(func(fx_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var fx_0 gopurs_runtime.Value = fx_0_loop
 _ = fx_0
@@ -82,31 +82,31 @@ return gopurs_runtime.Value{Type: 9, IntVal: 1995432569, UnsafePtr: unsafe.Point
 }()
 })
 	})
-	return liftSplit
+	return cache_liftSplit
 }
 
-var hoistSplit gopurs_runtime.Value
+var cache_hoistSplit gopurs_runtime.Value
 var once_hoistSplit sync.Once
 func Get_hoistSplit() gopurs_runtime.Value {
 	once_hoistSplit.Do(func() {
-		hoistSplit = gopurs_runtime.Func2(func(nat_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_hoistSplit = gopurs_runtime.Func2(func(nat_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_hoistSplit(nat_0_box, v_1_box)
 })
 	})
-	return hoistSplit
+	return cache_hoistSplit
 }
 
-var functorSplit gopurs_runtime.Value
+var cache_functorSplit gopurs_runtime.Value
 var once_functorSplit sync.Once
 func Get_functorSplit() gopurs_runtime.Value {
 	once_functorSplit.Do(func() {
-		functorSplit = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_functorSplit = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: 1995432569, UnsafePtr: unsafe.Pointer(&Data_Data_Profunctor_Split_SplitF{(*Data_Data_Profunctor_Split_SplitF)(v_1.UnsafePtr).V0, gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(f_0, gopurs_runtime.Apply((*Data_Data_Profunctor_Split_SplitF)(v_1.UnsafePtr).V1, x_2))
 }), (*Data_Data_Profunctor_Split_SplitF)(v_1.UnsafePtr).V2})}
 }))
 	})
-	return functorSplit
+	return cache_functorSplit
 }
 
 type Data_Data_Profunctor_Split_SplitF struct {

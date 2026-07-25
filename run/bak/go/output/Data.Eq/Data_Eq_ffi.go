@@ -2,7 +2,7 @@ package Data_Eq
 
 import "gopurs/output/gopurs_runtime"
 
-func refEq(r1 any, r2 any) bool {
+func refEq(r1 interface{}, r2 interface{}) bool {
 	return r1 == r2
 }
 func EqBooleanImpl(r1 bool, r2 bool) bool {
@@ -20,7 +20,7 @@ func EqCharImpl(r1 string, r2 string) bool {
 func EqStringImpl(r1 string, r2 string) bool {
 	return r1 == r2
 }
-func EqArrayImpl(f func(any) func(any) bool, xs []any, ys []any) bool {
+func EqArrayImpl(f func(interface{}) func(interface{}) bool, xs []interface{}, ys []interface{}) bool {
 	if len(xs) != len(ys) {
 		return false
 	}
@@ -79,22 +79,22 @@ var _Gopurs_EqStringImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, 
 	go_res := EqStringImpl(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
 })
-func Call_eqArrayImpl(arg0 func(any) func(any) bool, arg1 []any, arg2 []any) bool {
+func Call_eqArrayImpl(arg0 func(interface{}) func(interface{}) bool, arg1 []interface{}, arg2 []interface{}) bool {
 	return EqArrayImpl(arg0, arg1, arg2)
 }
 var _Gopurs_EqArrayImpl = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := func(p0_0 any) func(any) bool {
+	go_arg0 := func(p0_0 interface{}) func(interface{}) bool {
 			inner_res0 := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
-			return func(p1_0 any) bool {
+			return func(p1_0 interface{}) bool {
 			inner_res1 := gopurs_runtime.Apply(inner_res0, gopurs_runtime.Box(p1_0))
 			return gopurs_runtime.Unbox[bool](inner_res1)
 		}
 		}
-	arg1_arr := arg1.PtrVal().([]gopurs_runtime.Value)
-	go_arg1 := make([]any, len(arg1_arr))
+	arg1_arr := *(*[]gopurs_runtime.Value)(arg1.UnsafePtr)
+	go_arg1 := make([]interface{}, len(arg1_arr))
 	for i, v := range arg1_arr { go_arg1[i] = v }
-	arg2_arr := arg2.PtrVal().([]gopurs_runtime.Value)
-	go_arg2 := make([]any, len(arg2_arr))
+	arg2_arr := *(*[]gopurs_runtime.Value)(arg2.UnsafePtr)
+	go_arg2 := make([]interface{}, len(arg2_arr))
 	for i, v := range arg2_arr { go_arg2[i] = v }
 	go_res := EqArrayImpl(go_arg0, go_arg1, go_arg2)
 	return gopurs_runtime.Box(go_res)

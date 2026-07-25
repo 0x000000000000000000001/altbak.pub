@@ -7,68 +7,68 @@ import (
 	unsafe "unsafe"
 )
 
-var Product2 gopurs_runtime.Value
+var cache_Product2 gopurs_runtime.Value
 var once_Product2 sync.Once
 func Get_Product2() gopurs_runtime.Value {
 	once_Product2.Do(func() {
-		Product2 = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Product2 = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: 3559137202, UnsafePtr: unsafe.Pointer(&Data_Data_Functor_Product2_Product2{value0, value1})}
 })
 })
 	})
-	return Product2
+	return cache_Product2
 }
 
-var showProduct2 gopurs_runtime.Value
+var cache_showProduct2 gopurs_runtime.Value
 var once_showProduct2 sync.Once
 func Get_showProduct2() gopurs_runtime.Value {
 	once_showProduct2.Do(func() {
-		showProduct2 = gopurs_runtime.Func2(func(dictShow_0_box gopurs_runtime.Value, dictShow1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_showProduct2 = gopurs_runtime.Func2(func(dictShow_0_box gopurs_runtime.Value, dictShow1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_showProduct2(dictShow_0_box, dictShow1_1_box)
 })
 	})
-	return showProduct2
+	return cache_showProduct2
 }
 
-var profunctorProduct2 gopurs_runtime.Value
+var cache_profunctorProduct2 gopurs_runtime.Value
 var once_profunctorProduct2 sync.Once
 func Get_profunctorProduct2() gopurs_runtime.Value {
 	once_profunctorProduct2.Do(func() {
-		profunctorProduct2 = gopurs_runtime.Func2(func(dictProfunctor_0_box gopurs_runtime.Value, dictProfunctor1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_profunctorProduct2 = gopurs_runtime.Func2(func(dictProfunctor_0_box gopurs_runtime.Value, dictProfunctor1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_profunctorProduct2(dictProfunctor_0_box, dictProfunctor1_1_box)
 })
 	})
-	return profunctorProduct2
+	return cache_profunctorProduct2
 }
 
-var functorProduct2 gopurs_runtime.Value
+var cache_functorProduct2 gopurs_runtime.Value
 var once_functorProduct2 sync.Once
 func Get_functorProduct2() gopurs_runtime.Value {
 	once_functorProduct2.Do(func() {
-		functorProduct2 = gopurs_runtime.Func2(func(dictFunctor_0_box gopurs_runtime.Value, dictFunctor1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_functorProduct2 = gopurs_runtime.Func2(func(dictFunctor_0_box gopurs_runtime.Value, dictFunctor1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_functorProduct2(dictFunctor_0_box, dictFunctor1_1_box)
 })
 	})
-	return functorProduct2
+	return cache_functorProduct2
 }
 
-var eqProduct2 gopurs_runtime.Value
+var cache_eqProduct2 gopurs_runtime.Value
 var once_eqProduct2 sync.Once
 func Get_eqProduct2() gopurs_runtime.Value {
 	once_eqProduct2.Do(func() {
-		eqProduct2 = gopurs_runtime.Func2(func(dictEq_0_box gopurs_runtime.Value, dictEq1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_eqProduct2 = gopurs_runtime.Func2(func(dictEq_0_box gopurs_runtime.Value, dictEq1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_eqProduct2(dictEq_0_box, dictEq1_1_box)
 })
 	})
-	return eqProduct2
+	return cache_eqProduct2
 }
 
-var ordProduct2 gopurs_runtime.Value
+var cache_ordProduct2 gopurs_runtime.Value
 var once_ordProduct2 sync.Once
 func Get_ordProduct2() gopurs_runtime.Value {
 	once_ordProduct2.Do(func() {
-		ordProduct2 = gopurs_runtime.Func(func(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_ordProduct2 = gopurs_runtime.Func(func(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
@@ -78,7 +78,7 @@ return gopurs_runtime.Func(func(dictOrd1_2 gopurs_runtime.Value) gopurs_runtime.
 __local_var_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd1_2, "Eq0"), gopurs_runtime.Value{})
 _ = __local_var_3_1
 eqProduct22_4_2 := gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func2(func(x_4 gopurs_runtime.Value, y_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "eq"), (*Data_Data_Functor_Product2_Product2)(x_4.UnsafePtr).V0, (*Data_Data_Functor_Product2_Product2)(y_5.UnsafePtr).V0).IntVal != 0 && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_1, "eq"), (*Data_Data_Functor_Product2_Product2)(x_4.UnsafePtr).V1, (*Data_Data_Functor_Product2_Product2)(y_5.UnsafePtr).V1).IntVal != 0)
+return gopurs_runtime.Bool(((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "eq"), (*Data_Data_Functor_Product2_Product2)(x_4.UnsafePtr).V0, (*Data_Data_Functor_Product2_Product2)(y_5.UnsafePtr).V0).IntVal) != (0)) && ((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_1, "eq"), (*Data_Data_Functor_Product2_Product2)(x_4.UnsafePtr).V1, (*Data_Data_Functor_Product2_Product2)(y_5.UnsafePtr).V1).IntVal) != (0)))
 }))
 _ = eqProduct22_4_2
 return gopurs_runtime.RecordDict2("compare", "Eq0", gopurs_runtime.Func2(func(x_5 gopurs_runtime.Value, y_6 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -86,16 +86,16 @@ v_7_3 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), (
 _ = v_7_3
 var __t4 gopurs_runtime.Value
 {
-if (v_7_3.Type == 9 && v_7_3.IntVal == 3866105248) {
-__t4 = gopurs_runtime.Value{Type: 9, IntVal: 3866105248, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_LT{})}
+if (v_7_3.Type == 9 && v_7_3.IntVal == 1527465420) {
+__t4 = gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_LT{})}
 goto end_branch_4
 } else {
 
 }
 }
 {
-if (v_7_3.Type == 9 && v_7_3.IntVal == 2098047435) {
-__t4 = gopurs_runtime.Value{Type: 9, IntVal: 2098047435, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_GT{})}
+if (v_7_3.Type == 9 && v_7_3.IntVal == 380165415) {
+__t4 = gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_GT{})}
 goto end_branch_4
 } else {
 
@@ -113,25 +113,25 @@ return eqProduct22_4_2
 }()
 })
 	})
-	return ordProduct2
+	return cache_ordProduct2
 }
 
-var bifunctorProduct2 gopurs_runtime.Value
+var cache_bifunctorProduct2 gopurs_runtime.Value
 var once_bifunctorProduct2 sync.Once
 func Get_bifunctorProduct2() gopurs_runtime.Value {
 	once_bifunctorProduct2.Do(func() {
-		bifunctorProduct2 = gopurs_runtime.Func2(func(dictBifunctor_0_box gopurs_runtime.Value, dictBifunctor1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_bifunctorProduct2 = gopurs_runtime.Func2(func(dictBifunctor_0_box gopurs_runtime.Value, dictBifunctor1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_bifunctorProduct2(dictBifunctor_0_box, dictBifunctor1_1_box)
 })
 	})
-	return bifunctorProduct2
+	return cache_bifunctorProduct2
 }
 
-var biapplyProduct2 gopurs_runtime.Value
+var cache_biapplyProduct2 gopurs_runtime.Value
 var once_biapplyProduct2 sync.Once
 func Get_biapplyProduct2() gopurs_runtime.Value {
 	once_biapplyProduct2.Do(func() {
-		biapplyProduct2 = gopurs_runtime.Func(func(dictBiapply_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_biapplyProduct2 = gopurs_runtime.Func(func(dictBiapply_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictBiapply_0 gopurs_runtime.Value = dictBiapply_0_loop
 _ = dictBiapply_0
@@ -153,14 +153,14 @@ return bifunctorProduct22_4_2
 }()
 })
 	})
-	return biapplyProduct2
+	return cache_biapplyProduct2
 }
 
-var biapplicativeProduct2 gopurs_runtime.Value
+var cache_biapplicativeProduct2 gopurs_runtime.Value
 var once_biapplicativeProduct2 sync.Once
 func Get_biapplicativeProduct2() gopurs_runtime.Value {
 	once_biapplicativeProduct2.Do(func() {
-		biapplicativeProduct2 = gopurs_runtime.Func(func(dictBiapplicative_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_biapplicativeProduct2 = gopurs_runtime.Func(func(dictBiapplicative_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictBiapplicative_0 gopurs_runtime.Value = dictBiapplicative_0_loop
 _ = dictBiapplicative_0
@@ -192,7 +192,7 @@ return biapplyProduct22_6_4
 }()
 })
 	})
-	return biapplicativeProduct2
+	return cache_biapplicativeProduct2
 }
 
 type Data_Data_Functor_Product2_Product2 struct {
@@ -209,7 +209,7 @@ _ = dictShow_0
 var dictShow1_1 gopurs_runtime.Value = dictShow1_1_loop
 _ = dictShow1_1
 return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str("(Product2 " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), (*Data_Data_Functor_Product2_Product2)(v_2.UnsafePtr).V0).StrVal() + " " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow1_1, "show"), (*Data_Data_Functor_Product2_Product2)(v_2.UnsafePtr).V1).StrVal() + ")")
+return gopurs_runtime.Str((((("(Product2 ") + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), (*Data_Data_Functor_Product2_Product2)(v_2.UnsafePtr).V0).StrVal())) + (" ")) + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow1_1, "show"), (*Data_Data_Functor_Product2_Product2)(v_2.UnsafePtr).V1).StrVal())) + (")"))
 }))
 }
 
@@ -239,7 +239,7 @@ _ = dictEq_0
 var dictEq1_1 gopurs_runtime.Value = dictEq1_1_loop
 _ = dictEq1_1
 return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func2(func(x_2 gopurs_runtime.Value, y_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), (*Data_Data_Functor_Product2_Product2)(x_2.UnsafePtr).V0, (*Data_Data_Functor_Product2_Product2)(y_3.UnsafePtr).V0).IntVal != 0 && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq1_1, "eq"), (*Data_Data_Functor_Product2_Product2)(x_2.UnsafePtr).V1, (*Data_Data_Functor_Product2_Product2)(y_3.UnsafePtr).V1).IntVal != 0)
+return gopurs_runtime.Bool(((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), (*Data_Data_Functor_Product2_Product2)(x_2.UnsafePtr).V0, (*Data_Data_Functor_Product2_Product2)(y_3.UnsafePtr).V0).IntVal) != (0)) && ((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq1_1, "eq"), (*Data_Data_Functor_Product2_Product2)(x_2.UnsafePtr).V1, (*Data_Data_Functor_Product2_Product2)(y_3.UnsafePtr).V1).IntVal) != (0)))
 }))
 }
 

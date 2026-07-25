@@ -6,22 +6,22 @@ import (
 	pkg_Data_Enum "gopurs/output/Data.Enum"
 )
 
-var toCharCode gopurs_runtime.Value
+var cache_toCharCode gopurs_runtime.Value
 var once_toCharCode sync.Once
 func Get_toCharCode() gopurs_runtime.Value {
 	once_toCharCode.Do(func() {
-		toCharCode = pkg_Data_Enum.Get_toCharCode()
+		cache_toCharCode = pkg_Data_Enum.Get_toCharCode()
 	})
-	return toCharCode
+	return cache_toCharCode
 }
 
-var fromCharCode gopurs_runtime.Value
+var cache_fromCharCode gopurs_runtime.Value
 var once_fromCharCode sync.Once
 func Get_fromCharCode() gopurs_runtime.Value {
 	once_fromCharCode.Do(func() {
-		fromCharCode = pkg_Data_Enum.Get_charToEnum()
+		cache_fromCharCode = pkg_Data_Enum.Get_charToEnum()
 	})
-	return fromCharCode
+	return cache_fromCharCode
 }
 
 

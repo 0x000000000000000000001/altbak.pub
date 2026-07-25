@@ -25,8 +25,8 @@ func TraverseArrayImpl(apply func(interface{}) func(interface{}) interface{}, ma
 	concat2 := func(xsVal interface{}) func(interface{}) interface{} {
 		return func(ysVal interface{}) interface{} {
 			var xs, ys []interface{}
-			if vx, ok := xsVal.(any); ok {
-				if arr, ok := vx.([]any); ok {
+			if vx, ok := xsVal.(interface{}); ok {
+				if arr, ok := vx.([]interface{}); ok {
 					xs = make([]interface{}, len(arr))
 					for i, x := range arr { xs[i] = x }
 				}
@@ -36,8 +36,8 @@ func TraverseArrayImpl(apply func(interface{}) func(interface{}) interface{}, ma
 				xs = xsVal.([]interface{})
 			}
 
-			if vy, ok := ysVal.(any); ok {
-				if arr, ok := vy.([]any); ok {
+			if vy, ok := ysVal.(interface{}); ok {
+				if arr, ok := vy.([]interface{}); ok {
 					ys = make([]interface{}, len(arr))
 					for i, y := range arr { ys[i] = y }
 				}
@@ -98,7 +98,7 @@ var _Gopurs_TraverseArrayImpl = gopurs_runtime.Func5(func(arg0 gopurs_runtime.Va
 	go_arg3 := func(p0_0 interface{}) interface{} {
 			return gopurs_runtime.Apply(arg3, gopurs_runtime.Box(p0_0))
 		}
-	arg4_arr := arg4.PtrVal().([]gopurs_runtime.Value)
+	arg4_arr := *(*[]gopurs_runtime.Value)(arg4.UnsafePtr)
 	go_arg4 := make([]interface{}, len(arg4_arr))
 	for i, v := range arg4_arr { go_arg4[i] = v }
 	go_res := TraverseArrayImpl(go_arg0, go_arg1, go_arg2, go_arg3, go_arg4)

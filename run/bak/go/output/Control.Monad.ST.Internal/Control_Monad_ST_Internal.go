@@ -7,20 +7,20 @@ import (
 	pkg_Data_Unit "gopurs/output/Data.Unit"
 )
 
-var modify_prime gopurs_runtime.Value
+var cache_modify_prime gopurs_runtime.Value
 var once_modify_prime sync.Once
 func Get_modify_prime() gopurs_runtime.Value {
 	once_modify_prime.Do(func() {
-		modify_prime = Get_modifyImpl()
+		cache_modify_prime = Get_modifyImpl()
 	})
-	return modify_prime
+	return cache_modify_prime
 }
 
-var modify gopurs_runtime.Value
+var cache_modify gopurs_runtime.Value
 var once_modify sync.Once
 func Get_modify() gopurs_runtime.Value {
 	once_modify.Do(func() {
-		modify = gopurs_runtime.Func(func(f_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_modify = gopurs_runtime.Func(func(f_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
@@ -32,47 +32,47 @@ return gopurs_runtime.RecordDict2("state", "value", s_prime_2_0, s_prime_2_0)
 }()
 })
 	})
-	return modify
+	return cache_modify
 }
 
-var functorST gopurs_runtime.Value
+var cache_functorST gopurs_runtime.Value
 var once_functorST sync.Once
 func Get_functorST() gopurs_runtime.Value {
 	once_functorST.Do(func() {
-		functorST = gopurs_runtime.RecordDict1("map", Get_map_())
+		cache_functorST = gopurs_runtime.RecordDict1("map", Get_map_())
 	})
-	return functorST
+	return cache_functorST
 }
 
-var monadST gopurs_runtime.Value
+var cache_monadST gopurs_runtime.Value
 var once_monadST sync.Once
 func Get_monadST() gopurs_runtime.Value {
 	once_monadST.Do(func() {
-		monadST = gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monadST = gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_applicativeST()
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_bindST()
 }))
 	})
-	return monadST
+	return cache_monadST
 }
 
-var bindST gopurs_runtime.Value
+var cache_bindST gopurs_runtime.Value
 var once_bindST sync.Once
 func Get_bindST() gopurs_runtime.Value {
 	once_bindST.Do(func() {
-		bindST = gopurs_runtime.RecordDict2("bind", "Apply0", Get_bind_(), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_bindST = gopurs_runtime.RecordDict2("bind", "Apply0", Get_bind_(), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_applyST()
 }))
 	})
-	return bindST
+	return cache_bindST
 }
 
-var applyST gopurs_runtime.Value
+var cache_applyST gopurs_runtime.Value
 var once_applyST sync.Once
 func Get_applyST() gopurs_runtime.Value {
 	once_applyST.Do(func() {
-		applyST = gopurs_runtime.RecordDict2("apply", "Functor0", gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, a_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_applyST = gopurs_runtime.RecordDict2("apply", "Functor0", gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, a_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 f_prime_2_0 := gopurs_runtime.Apply(f_0, gopurs_runtime.Value{})
 _ = f_prime_2_0
@@ -84,25 +84,25 @@ return gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_ap
 return Get_functorST()
 }))
 	})
-	return applyST
+	return cache_applyST
 }
 
-var applicativeST gopurs_runtime.Value
+var cache_applicativeST gopurs_runtime.Value
 var once_applicativeST sync.Once
 func Get_applicativeST() gopurs_runtime.Value {
 	once_applicativeST.Do(func() {
-		applicativeST = gopurs_runtime.RecordDict2("pure", "Apply0", Get_pure_(), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_applicativeST = gopurs_runtime.RecordDict2("pure", "Apply0", Get_pure_(), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_applyST()
 }))
 	})
-	return applicativeST
+	return cache_applicativeST
 }
 
-var semigroupST gopurs_runtime.Value
+var cache_semigroupST gopurs_runtime.Value
 var once_semigroupST sync.Once
 func Get_semigroupST() gopurs_runtime.Value {
 	once_semigroupST.Do(func() {
-		semigroupST = gopurs_runtime.Func(func(dictSemigroup_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_semigroupST = gopurs_runtime.Func(func(dictSemigroup_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictSemigroup_0 gopurs_runtime.Value = dictSemigroup_0_loop
 _ = dictSemigroup_0
@@ -118,14 +118,14 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup_0, "append")
 }()
 })
 	})
-	return semigroupST
+	return cache_semigroupST
 }
 
-var monadRecST gopurs_runtime.Value
+var cache_monadRecST gopurs_runtime.Value
 var once_monadRecST sync.Once
 func Get_monadRecST() gopurs_runtime.Value {
 	once_monadRecST.Do(func() {
-		monadRecST = gopurs_runtime.RecordDict2("tailRecM", "Monad0", gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, a_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monadRecST = gopurs_runtime.RecordDict2("tailRecM", "Monad0", gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, a_1 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_2_0 := gopurs_runtime.Apply(f_0, a_1)
 _ = __local_var_2_0
 return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
@@ -138,13 +138,13 @@ _ = r_4_2
 _dollar__unused_5_4 := gopurs_runtime.Apply(gopurs_runtime.Apply2(Get_while(), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_5_5 := *(r_4_2.PtrVal().(*gopurs_runtime.Value))
 _ = __local_var_5_5
-return gopurs_runtime.Bool((__local_var_5_5.Type == 9 && __local_var_5_5.IntVal == 1903769252))
+return gopurs_runtime.Bool((__local_var_5_5.Type == 9 && __local_var_5_5.IntVal == 525585346))
 }), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 v_5_6 := *(r_4_2.PtrVal().(*gopurs_runtime.Value))
 _ = v_5_6
 var __t7 gopurs_runtime.Value
 {
-if (v_5_6.Type == 9 && v_5_6.IntVal == 1903769252) {
+if (v_5_6.Type == 9 && v_5_6.IntVal == 525585346) {
 __t7 = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 e_6_8 := gopurs_runtime.Apply(gopurs_runtime.Apply(f_0, (*pkg_Control_Monad_Rec_Class.Data_Control_Monad_Rec_Class_Loop)(v_5_6.UnsafePtr).V0), gopurs_runtime.Value{})
 _ = e_6_8
@@ -159,7 +159,7 @@ goto end_branch_7
 }
 }
 {
-if (v_5_6.Type == 9 && v_5_6.IntVal == 2547603288) {
+if (v_5_6.Type == 9 && v_5_6.IntVal == 60402430) {
 __t7 = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Unit.Get_unit()
 })
@@ -179,7 +179,7 @@ __local_var_6_10 := *(r_4_2.PtrVal().(*gopurs_runtime.Value))
 _ = __local_var_6_10
 var __t11 gopurs_runtime.Value
 {
-if (__local_var_6_10.Type == 9 && __local_var_6_10.IntVal == 2547603288) {
+if (__local_var_6_10.Type == 9 && __local_var_6_10.IntVal == 60402430) {
 __t11 = (*pkg_Control_Monad_Rec_Class.Data_Control_Monad_Rec_Class_Done)(__local_var_6_10.UnsafePtr).V0
 goto end_branch_11
 } else {
@@ -196,14 +196,14 @@ return __t11
 return Get_monadST()
 }))
 	})
-	return monadRecST
+	return cache_monadRecST
 }
 
-var monoidST gopurs_runtime.Value
+var cache_monoidST gopurs_runtime.Value
 var once_monoidST sync.Once
 func Get_monoidST() gopurs_runtime.Value {
 	once_monoidST.Do(func() {
-		monoidST = gopurs_runtime.Func(func(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monoidST = gopurs_runtime.Func(func(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
 _ = dictMonoid_0
@@ -229,7 +229,7 @@ return semigroupST1_2_1
 }()
 })
 	})
-	return monoidST
+	return cache_monoidST
 }
 
 

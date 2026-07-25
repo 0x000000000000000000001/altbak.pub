@@ -19,11 +19,11 @@ import (
 	pkg_Effect_Console "gopurs/output/Effect.Console"
 )
 
-var main gopurs_runtime.Value
+var cache_main gopurs_runtime.Value
 var once_main sync.Once
 func Get_main() gopurs_runtime.Value {
 	once_main.Do(func() {
-		main = func() gopurs_runtime.Value {
+		cache_main = func() gopurs_runtime.Value {
 __local_var_0_0 := gopurs_runtime.Apply2(pkg_Bench.Get_runBench(), pkg_Test_AstTree.Get_describe(), pkg_Test_AstTree.Get_act())
 _ = __local_var_0_0
 return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
@@ -51,11 +51,11 @@ t11_11_11 := gopurs_runtime.Apply(gopurs_runtime.Apply2(pkg_Bench.Get_runBench()
 _ = t11_11_11
 t12_12_12 := gopurs_runtime.Apply(gopurs_runtime.Apply2(pkg_Bench.Get_runBench(), pkg_Test_LazyEvaluation.Get_describe(), pkg_Test_LazyEvaluation.Get_act()), gopurs_runtime.Value{})
 _ = t12_12_12
-return gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Str("Total exec time: " + gopurs_runtime.Apply(pkg_Bench.Get_formatNumber(), gopurs_runtime.Float(t1_1_1.FloatVal() / 1000.0 + t2_2_2.FloatVal() / 1000.0 + t3_3_3.FloatVal() / 1000.0 + t4_4_4.FloatVal() / 1000.0 + t5_5_5.FloatVal() / 1000.0 + t6_6_6.FloatVal() / 1000.0 + t7_7_7.FloatVal() / 1000.0 + t8_8_8.FloatVal() / 1000.0 + t9_9_9.FloatVal() / 1000.0 + t10_10_10.FloatVal() / 1000.0 + t11_11_11.FloatVal() / 1000.0 + t12_12_12.FloatVal() / 1000.0)).StrVal() + " ms\n")), gopurs_runtime.Value{})
+return gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Str((("Total exec time: ") + (gopurs_runtime.Apply(pkg_Bench.Get_formatNumber(), gopurs_runtime.Float(((((((((((((t1_1_1.FloatVal()) / (1000.0)) + ((t2_2_2.FloatVal()) / (1000.0))) + ((t3_3_3.FloatVal()) / (1000.0))) + ((t4_4_4.FloatVal()) / (1000.0))) + ((t5_5_5.FloatVal()) / (1000.0))) + ((t6_6_6.FloatVal()) / (1000.0))) + ((t7_7_7.FloatVal()) / (1000.0))) + ((t8_8_8.FloatVal()) / (1000.0))) + ((t9_9_9.FloatVal()) / (1000.0))) + ((t10_10_10.FloatVal()) / (1000.0))) + ((t11_11_11.FloatVal()) / (1000.0))) + ((t12_12_12.FloatVal()) / (1000.0)))).StrVal())) + (" ms\n"))), gopurs_runtime.Value{})
 })
 }()
 	})
-	return main
+	return cache_main
 }
 
 

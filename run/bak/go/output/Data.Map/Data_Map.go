@@ -10,11 +10,11 @@ import (
 	unsafe "unsafe"
 )
 
-var SemigroupMap gopurs_runtime.Value
+var cache_SemigroupMap gopurs_runtime.Value
 var once_SemigroupMap sync.Once
 func Get_SemigroupMap() gopurs_runtime.Value {
 	once_SemigroupMap.Do(func() {
-		SemigroupMap = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_SemigroupMap = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
@@ -22,43 +22,43 @@ return x_0
 }()
 })
 	})
-	return SemigroupMap
+	return cache_SemigroupMap
 }
 
-var traversableWithIndexSemigroupMap gopurs_runtime.Value
+var cache_traversableWithIndexSemigroupMap gopurs_runtime.Value
 var once_traversableWithIndexSemigroupMap sync.Once
 func Get_traversableWithIndexSemigroupMap() gopurs_runtime.Value {
 	once_traversableWithIndexSemigroupMap.Do(func() {
-		traversableWithIndexSemigroupMap = pkg_Data_Map_Internal.Get_traversableWithIndexMap()
+		cache_traversableWithIndexSemigroupMap = pkg_Data_Map_Internal.Get_traversableWithIndexMap()
 	})
-	return traversableWithIndexSemigroupMap
+	return cache_traversableWithIndexSemigroupMap
 }
 
-var traversableSemigroupMap gopurs_runtime.Value
+var cache_traversableSemigroupMap gopurs_runtime.Value
 var once_traversableSemigroupMap sync.Once
 func Get_traversableSemigroupMap() gopurs_runtime.Value {
 	once_traversableSemigroupMap.Do(func() {
-		traversableSemigroupMap = pkg_Data_Map_Internal.Get_traversableMap()
+		cache_traversableSemigroupMap = pkg_Data_Map_Internal.Get_traversableMap()
 	})
-	return traversableSemigroupMap
+	return cache_traversableSemigroupMap
 }
 
-var showSemigroupMap gopurs_runtime.Value
+var cache_showSemigroupMap gopurs_runtime.Value
 var once_showSemigroupMap sync.Once
 func Get_showSemigroupMap() gopurs_runtime.Value {
 	once_showSemigroupMap.Do(func() {
-		showSemigroupMap = gopurs_runtime.Func2(func(dictShow_0_box gopurs_runtime.Value, dictShow1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_showSemigroupMap = gopurs_runtime.Func2(func(dictShow_0_box gopurs_runtime.Value, dictShow1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_showSemigroupMap(dictShow_0_box, dictShow1_1_box)
 })
 	})
-	return showSemigroupMap
+	return cache_showSemigroupMap
 }
 
-var semigroupSemigroupMap gopurs_runtime.Value
+var cache_semigroupSemigroupMap gopurs_runtime.Value
 var once_semigroupSemigroupMap sync.Once
 func Get_semigroupSemigroupMap() gopurs_runtime.Value {
 	once_semigroupSemigroupMap.Do(func() {
-		semigroupSemigroupMap = gopurs_runtime.Func(func(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_semigroupSemigroupMap = gopurs_runtime.Func(func(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
@@ -74,14 +74,14 @@ return gopurs_runtime.UncurriedApp4(pkg_Data_Map_Internal.Get_unsafeUnionWith(),
 }()
 })
 	})
-	return semigroupSemigroupMap
+	return cache_semigroupSemigroupMap
 }
 
-var plusSemigroupMap gopurs_runtime.Value
+var cache_plusSemigroupMap gopurs_runtime.Value
 var once_plusSemigroupMap sync.Once
 func Get_plusSemigroupMap() gopurs_runtime.Value {
 	once_plusSemigroupMap.Do(func() {
-		plusSemigroupMap = gopurs_runtime.Func(func(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_plusSemigroupMap = gopurs_runtime.Func(func(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
@@ -89,14 +89,14 @@ return gopurs_runtime.Apply(pkg_Data_Map_Internal.Get_plusMap(), dictOrd_0)
 }()
 })
 	})
-	return plusSemigroupMap
+	return cache_plusSemigroupMap
 }
 
-var ordSemigroupMap gopurs_runtime.Value
+var cache_ordSemigroupMap gopurs_runtime.Value
 var once_ordSemigroupMap sync.Once
 func Get_ordSemigroupMap() gopurs_runtime.Value {
 	once_ordSemigroupMap.Do(func() {
-		ordSemigroupMap = gopurs_runtime.Func(func(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_ordSemigroupMap = gopurs_runtime.Func(func(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
@@ -104,14 +104,14 @@ return gopurs_runtime.Apply(pkg_Data_Map_Internal.Get_ordMap(), dictOrd_0)
 }()
 })
 	})
-	return ordSemigroupMap
+	return cache_ordSemigroupMap
 }
 
-var ord1SemigroupMap gopurs_runtime.Value
+var cache_ord1SemigroupMap gopurs_runtime.Value
 var once_ord1SemigroupMap sync.Once
 func Get_ord1SemigroupMap() gopurs_runtime.Value {
 	once_ord1SemigroupMap.Do(func() {
-		ord1SemigroupMap = gopurs_runtime.Func(func(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_ord1SemigroupMap = gopurs_runtime.Func(func(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
@@ -119,25 +119,25 @@ return gopurs_runtime.Apply(pkg_Data_Map_Internal.Get_ord1Map(), dictOrd_0)
 }()
 })
 	})
-	return ord1SemigroupMap
+	return cache_ord1SemigroupMap
 }
 
-var newtypeSemigroupMap gopurs_runtime.Value
+var cache_newtypeSemigroupMap gopurs_runtime.Value
 var once_newtypeSemigroupMap sync.Once
 func Get_newtypeSemigroupMap() gopurs_runtime.Value {
 	once_newtypeSemigroupMap.Do(func() {
-		newtypeSemigroupMap = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_newtypeSemigroupMap = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{}
 }))
 	})
-	return newtypeSemigroupMap
+	return cache_newtypeSemigroupMap
 }
 
-var monoidSemigroupMap gopurs_runtime.Value
+var cache_monoidSemigroupMap gopurs_runtime.Value
 var once_monoidSemigroupMap sync.Once
 func Get_monoidSemigroupMap() gopurs_runtime.Value {
 	once_monoidSemigroupMap.Do(func() {
-		monoidSemigroupMap = gopurs_runtime.Func(func(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monoidSemigroupMap = gopurs_runtime.Func(func(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
@@ -146,36 +146,36 @@ _ = semigroupSemigroupMap1_1_0
 return gopurs_runtime.Func(func(dictSemigroup_2 gopurs_runtime.Value) gopurs_runtime.Value {
 semigroupSemigroupMap2_3_1 := gopurs_runtime.Apply(semigroupSemigroupMap1_1_0, dictSemigroup_2)
 _ = semigroupSemigroupMap2_3_1
-return gopurs_runtime.RecordDict2("mempty", "Semigroup0", gopurs_runtime.Value{Type: 9, IntVal: 1144344694, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Data_Data_Map_Internal_Leaf{})}, gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict2("mempty", "Semigroup0", gopurs_runtime.Value{Type: 9, IntVal: 687041424, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Data_Data_Map_Internal_Leaf{})}, gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return semigroupSemigroupMap2_3_1
 }))
 })
 }()
 })
 	})
-	return monoidSemigroupMap
+	return cache_monoidSemigroupMap
 }
 
-var keys gopurs_runtime.Value
+var cache_keys gopurs_runtime.Value
 var once_keys sync.Once
 func Get_keys() gopurs_runtime.Value {
 	once_keys.Do(func() {
-		keys = func() gopurs_runtime.Value {
+		cache_keys = func() gopurs_runtime.Value {
 var go__0_0 gopurs_runtime.Value
 _ = go__0_0
 go__0_0 = gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
-if (v_1.Type == 9 && v_1.IntVal == 1144344694) {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 1144344694, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Data_Data_Map_Internal_Leaf{})}
+if (v_1.Type == 9 && v_1.IntVal == 687041424) {
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 687041424, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Data_Data_Map_Internal_Leaf{})}
 goto end_branch_1
 } else {
 
 }
 }
 {
-if (v_1.Type == 9 && v_1.IntVal == 1240286680) {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 1240286680, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Data_Data_Map_Internal_Node{(*pkg_Data_Map_Internal.Data_Data_Map_Internal_Node)(v_1.UnsafePtr).V0, (*pkg_Data_Map_Internal.Data_Data_Map_Internal_Node)(v_1.UnsafePtr).V1, (*pkg_Data_Map_Internal.Data_Data_Map_Internal_Node)(v_1.UnsafePtr).V2, pkg_Data_Unit.Get_unit(), gopurs_runtime.Apply(go__0_0, (*pkg_Data_Map_Internal.Data_Data_Map_Internal_Node)(v_1.UnsafePtr).V4), gopurs_runtime.Apply(go__0_0, (*pkg_Data_Map_Internal.Data_Data_Map_Internal_Node)(v_1.UnsafePtr).V5)})}
+if (v_1.Type == 9 && v_1.IntVal == 324739070) {
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Data_Data_Map_Internal_Node{(*pkg_Data_Map_Internal.Data_Data_Map_Internal_Node)(v_1.UnsafePtr).V0, (*pkg_Data_Map_Internal.Data_Data_Map_Internal_Node)(v_1.UnsafePtr).V1, (*pkg_Data_Map_Internal.Data_Data_Map_Internal_Node)(v_1.UnsafePtr).V2, pkg_Data_Unit.Get_unit(), gopurs_runtime.Apply(go__0_0, (*pkg_Data_Map_Internal.Data_Data_Map_Internal_Node)(v_1.UnsafePtr).V4), gopurs_runtime.Apply(go__0_0, (*pkg_Data_Map_Internal.Data_Data_Map_Internal_Node)(v_1.UnsafePtr).V5)})}
 goto end_branch_1
 } else {
 
@@ -192,61 +192,61 @@ return gopurs_runtime.Apply(go__0_0, x_1)
 })
 }()
 	})
-	return keys
+	return cache_keys
 }
 
-var functorWithIndexSemigroupMap gopurs_runtime.Value
+var cache_functorWithIndexSemigroupMap gopurs_runtime.Value
 var once_functorWithIndexSemigroupMap sync.Once
 func Get_functorWithIndexSemigroupMap() gopurs_runtime.Value {
 	once_functorWithIndexSemigroupMap.Do(func() {
-		functorWithIndexSemigroupMap = pkg_Data_Map_Internal.Get_functorWithIndexMap()
+		cache_functorWithIndexSemigroupMap = pkg_Data_Map_Internal.Get_functorWithIndexMap()
 	})
-	return functorWithIndexSemigroupMap
+	return cache_functorWithIndexSemigroupMap
 }
 
-var functorSemigroupMap gopurs_runtime.Value
+var cache_functorSemigroupMap gopurs_runtime.Value
 var once_functorSemigroupMap sync.Once
 func Get_functorSemigroupMap() gopurs_runtime.Value {
 	once_functorSemigroupMap.Do(func() {
-		functorSemigroupMap = pkg_Data_Map_Internal.Get_functorMap()
+		cache_functorSemigroupMap = pkg_Data_Map_Internal.Get_functorMap()
 	})
-	return functorSemigroupMap
+	return cache_functorSemigroupMap
 }
 
-var foldableWithIndexSemigroupMap gopurs_runtime.Value
+var cache_foldableWithIndexSemigroupMap gopurs_runtime.Value
 var once_foldableWithIndexSemigroupMap sync.Once
 func Get_foldableWithIndexSemigroupMap() gopurs_runtime.Value {
 	once_foldableWithIndexSemigroupMap.Do(func() {
-		foldableWithIndexSemigroupMap = pkg_Data_Map_Internal.Get_foldableWithIndexMap()
+		cache_foldableWithIndexSemigroupMap = pkg_Data_Map_Internal.Get_foldableWithIndexMap()
 	})
-	return foldableWithIndexSemigroupMap
+	return cache_foldableWithIndexSemigroupMap
 }
 
-var foldableSemigroupMap gopurs_runtime.Value
+var cache_foldableSemigroupMap gopurs_runtime.Value
 var once_foldableSemigroupMap sync.Once
 func Get_foldableSemigroupMap() gopurs_runtime.Value {
 	once_foldableSemigroupMap.Do(func() {
-		foldableSemigroupMap = pkg_Data_Map_Internal.Get_foldableMap()
+		cache_foldableSemigroupMap = pkg_Data_Map_Internal.Get_foldableMap()
 	})
-	return foldableSemigroupMap
+	return cache_foldableSemigroupMap
 }
 
-var eqSemigroupMap gopurs_runtime.Value
+var cache_eqSemigroupMap gopurs_runtime.Value
 var once_eqSemigroupMap sync.Once
 func Get_eqSemigroupMap() gopurs_runtime.Value {
 	once_eqSemigroupMap.Do(func() {
-		eqSemigroupMap = gopurs_runtime.Func2(func(dictEq_0_box gopurs_runtime.Value, dictEq1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_eqSemigroupMap = gopurs_runtime.Func2(func(dictEq_0_box gopurs_runtime.Value, dictEq1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_eqSemigroupMap(dictEq_0_box, dictEq1_1_box)
 })
 	})
-	return eqSemigroupMap
+	return cache_eqSemigroupMap
 }
 
-var eq1SemigroupMap gopurs_runtime.Value
+var cache_eq1SemigroupMap gopurs_runtime.Value
 var once_eq1SemigroupMap sync.Once
 func Get_eq1SemigroupMap() gopurs_runtime.Value {
 	once_eq1SemigroupMap.Do(func() {
-		eq1SemigroupMap = gopurs_runtime.Func(func(dictEq_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_eq1SemigroupMap = gopurs_runtime.Func(func(dictEq_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
 _ = dictEq_0
@@ -256,14 +256,14 @@ return gopurs_runtime.RecordGet(gopurs_runtime.Apply2(pkg_Data_Map_Internal.Get_
 }()
 })
 	})
-	return eq1SemigroupMap
+	return cache_eq1SemigroupMap
 }
 
-var bindSemigroupMap gopurs_runtime.Value
+var cache_bindSemigroupMap gopurs_runtime.Value
 var once_bindSemigroupMap sync.Once
 func Get_bindSemigroupMap() gopurs_runtime.Value {
 	once_bindSemigroupMap.Do(func() {
-		bindSemigroupMap = gopurs_runtime.Func(func(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_bindSemigroupMap = gopurs_runtime.Func(func(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
@@ -271,14 +271,14 @@ return gopurs_runtime.Apply(pkg_Data_Map_Internal.Get_bindMap(), dictOrd_0)
 }()
 })
 	})
-	return bindSemigroupMap
+	return cache_bindSemigroupMap
 }
 
-var applySemigroupMap gopurs_runtime.Value
+var cache_applySemigroupMap gopurs_runtime.Value
 var once_applySemigroupMap sync.Once
 func Get_applySemigroupMap() gopurs_runtime.Value {
 	once_applySemigroupMap.Do(func() {
-		applySemigroupMap = gopurs_runtime.Func(func(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_applySemigroupMap = gopurs_runtime.Func(func(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
@@ -292,14 +292,14 @@ return pkg_Data_Map_Internal.Get_functorMap()
 }()
 })
 	})
-	return applySemigroupMap
+	return cache_applySemigroupMap
 }
 
-var altSemigroupMap gopurs_runtime.Value
+var cache_altSemigroupMap gopurs_runtime.Value
 var once_altSemigroupMap sync.Once
 func Get_altSemigroupMap() gopurs_runtime.Value {
 	once_altSemigroupMap.Do(func() {
-		altSemigroupMap = gopurs_runtime.Func(func(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_altSemigroupMap = gopurs_runtime.Func(func(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
@@ -313,7 +313,7 @@ return pkg_Data_Map_Internal.Get_functorMap()
 }()
 })
 	})
-	return altSemigroupMap
+	return cache_altSemigroupMap
 }
 
 func Call_showSemigroupMap(dictShow_0_loop gopurs_runtime.Value, dictShow1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {

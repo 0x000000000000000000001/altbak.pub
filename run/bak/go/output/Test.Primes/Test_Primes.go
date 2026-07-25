@@ -10,33 +10,33 @@ import (
 	unsafe "unsafe"
 )
 
-var Nil gopurs_runtime.Value
+var cache_Nil gopurs_runtime.Value
 var once_Nil sync.Once
 func Get_Nil() gopurs_runtime.Value {
 	once_Nil.Do(func() {
-		Nil = gopurs_runtime.Value{Type: 9, IntVal: 3777797863, UnsafePtr: unsafe.Pointer(&Data_Test_Primes_Nil{})}
+		cache_Nil = gopurs_runtime.Value{Type: 9, IntVal: 3777797863, UnsafePtr: unsafe.Pointer(&Data_Test_Primes_Nil{})}
 	})
-	return Nil
+	return cache_Nil
 }
 
-var Cons gopurs_runtime.Value
+var cache_Cons gopurs_runtime.Value
 var once_Cons sync.Once
 func Get_Cons() gopurs_runtime.Value {
 	once_Cons.Do(func() {
-		Cons = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Cons = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: 2390177629, UnsafePtr: unsafe.Pointer(&Data_Test_Primes_Cons{value0, value1})}
 })
 })
 	})
-	return Cons
+	return cache_Cons
 }
 
-var sumList gopurs_runtime.Value
+var cache_sumList gopurs_runtime.Value
 var once_sumList sync.Once
 func Get_sumList() gopurs_runtime.Value {
 	once_sumList.Do(func() {
-		sumList = gopurs_runtime.Func(func(lst_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_sumList = gopurs_runtime.Func(func(lst_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var lst_0 gopurs_runtime.Value = lst_0_loop
 _ = lst_0
@@ -63,7 +63,7 @@ goto end_branch_1
 {
 if (v_2.Type == 9 && v_2.IntVal == 2390177629) {
 v_2_loop = (*Data_Test_Primes_Cons)(v_2.UnsafePtr).V1
-v1_3_loop = gopurs_runtime.Int(v1_3.IntVal + (*Data_Test_Primes_Cons)(v_2.UnsafePtr).V0.IntVal)
+v1_3_loop = gopurs_runtime.Int((v1_3.IntVal) + ((*Data_Test_Primes_Cons)(v_2.UnsafePtr).V0.IntVal))
 continue go__1_0
 __t1 = gopurs_runtime.Value{}
 goto end_branch_1
@@ -84,14 +84,14 @@ return gopurs_runtime.Apply2(go__1_0, lst_0, gopurs_runtime.Int(0))
 }()
 })
 	})
-	return sumList
+	return cache_sumList
 }
 
-var reverse gopurs_runtime.Value
+var cache_reverse gopurs_runtime.Value
 var once_reverse sync.Once
 func Get_reverse() gopurs_runtime.Value {
 	once_reverse.Do(func() {
-		reverse = gopurs_runtime.Func(func(lst_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_reverse = gopurs_runtime.Func(func(lst_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var lst_0 gopurs_runtime.Value = lst_0_loop
 _ = lst_0
@@ -139,36 +139,36 @@ return gopurs_runtime.Apply2(go__1_0, lst_0, gopurs_runtime.Value{Type: 9, IntVa
 }()
 })
 	})
-	return reverse
+	return cache_reverse
 }
 
-var range_ gopurs_runtime.Value
+var cache_range_ gopurs_runtime.Value
 var once_range_ sync.Once
 func Get_range_() gopurs_runtime.Value {
 	once_range_.Do(func() {
-		range_ = gopurs_runtime.Func2(func(start_0_box gopurs_runtime.Value, end_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_range_ = gopurs_runtime.Func2(func(start_0_box gopurs_runtime.Value, end_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_range_(start_0_box, end_1_box)
 })
 	})
-	return range_
+	return cache_range_
 }
 
-var filter gopurs_runtime.Value
+var cache_filter gopurs_runtime.Value
 var once_filter sync.Once
 func Get_filter() gopurs_runtime.Value {
 	once_filter.Do(func() {
-		filter = gopurs_runtime.Func2(func(p_0_box gopurs_runtime.Value, lst_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_filter = gopurs_runtime.Func2(func(p_0_box gopurs_runtime.Value, lst_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_filter(p_0_box, lst_1_box)
 })
 	})
-	return filter
+	return cache_filter
 }
 
-var sieve gopurs_runtime.Value
+var cache_sieve gopurs_runtime.Value
 var once_sieve sync.Once
 func Get_sieve() gopurs_runtime.Value {
 	once_sieve.Do(func() {
-		sieve = gopurs_runtime.Func(func(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_sieve = gopurs_runtime.Func(func(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 sieve:
 for {
@@ -252,7 +252,7 @@ goto end_branch_3
 if (v_3.Type == 9 && v_3.IntVal == 2390177629) {
 var __t6 gopurs_runtime.Value
 {
-if gopurs_runtime.Apply2(pkg_Data_EuclideanRing.Get_intMod(), (*Data_Test_Primes_Cons)(v_3.UnsafePtr).V0, __local_var_1_1).IntVal != 0 {
+if (gopurs_runtime.Apply2(pkg_Data_EuclideanRing.Get_intMod(), (*Data_Test_Primes_Cons)(v_3.UnsafePtr).V0, __local_var_1_1).IntVal) != (0) {
 v_3_loop = (*Data_Test_Primes_Cons)(v_3.UnsafePtr).V1
 v1_4_loop = gopurs_runtime.Value{Type: 9, IntVal: 2390177629, UnsafePtr: unsafe.Pointer(&Data_Test_Primes_Cons{(*Data_Test_Primes_Cons)(v_3.UnsafePtr).V0, v1_4})}
 continue go__2_2
@@ -299,23 +299,23 @@ return __t0
 }()
 })
 	})
-	return sieve
+	return cache_sieve
 }
 
-var describe gopurs_runtime.Value
+var cache_describe gopurs_runtime.Value
 var once_describe sync.Once
 func Get_describe() gopurs_runtime.Value {
 	once_describe.Do(func() {
-		describe = gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Str("Prime Sieve (sum primes up to 500):"))
+		cache_describe = gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Str("Prime Sieve (sum primes up to 500):"))
 	})
-	return describe
+	return cache_describe
 }
 
-var act gopurs_runtime.Value
+var cache_act gopurs_runtime.Value
 var once_act sync.Once
 func Get_act() gopurs_runtime.Value {
 	once_act.Do(func() {
-		act = func() gopurs_runtime.Value {
+		cache_act = func() gopurs_runtime.Value {
 __local_var_0_0 := gopurs_runtime.Apply(pkg_Bench.Get_opaque(), gopurs_runtime.Int(500))
 _ = __local_var_0_0
 return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
@@ -344,7 +344,7 @@ goto end_branch_3
 {
 if (v_3.Type == 9 && v_3.IntVal == 2390177629) {
 v_3_loop = (*Data_Test_Primes_Cons)(v_3.UnsafePtr).V1
-v1_4_loop = gopurs_runtime.Int(v1_4.IntVal + (*Data_Test_Primes_Cons)(v_3.UnsafePtr).V0.IntVal)
+v1_4_loop = gopurs_runtime.Int((v1_4.IntVal) + ((*Data_Test_Primes_Cons)(v_3.UnsafePtr).V0.IntVal))
 continue go__2_2
 __t3 = gopurs_runtime.Value{}
 goto end_branch_3
@@ -374,7 +374,7 @@ var acc_5 gopurs_runtime.Value = acc_5_loop
 _ = acc_5
 var __t5 gopurs_runtime.Value
 {
-if curr_4.IntVal < 2 {
+if (curr_4.IntVal) < (2) {
 __t5 = acc_5
 goto end_branch_5
 } else {
@@ -382,7 +382,7 @@ goto end_branch_5
 }
 }
 {
-curr_4_loop = gopurs_runtime.Int(curr_4.IntVal - 1)
+curr_4_loop = gopurs_runtime.Int((curr_4.IntVal) - (1))
 acc_5_loop = gopurs_runtime.Value{Type: 9, IntVal: 2390177629, UnsafePtr: unsafe.Pointer(&Data_Test_Primes_Cons{curr_4, acc_5})}
 continue go__3_4
 __t5 = gopurs_runtime.Value{}
@@ -397,7 +397,7 @@ return gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), g
 })
 }()
 	})
-	return act
+	return cache_act
 }
 
 type Data_Test_Primes_Nil struct {
@@ -433,7 +433,7 @@ var acc_4 gopurs_runtime.Value = acc_4_loop
 _ = acc_4
 var __t1 gopurs_runtime.Value
 {
-if curr_3.IntVal < start_0.IntVal {
+if (curr_3.IntVal) < (start_0.IntVal) {
 __t1 = acc_4
 goto end_branch_1
 } else {
@@ -441,7 +441,7 @@ goto end_branch_1
 }
 }
 {
-curr_3_loop = gopurs_runtime.Int(curr_3.IntVal - 1)
+curr_3_loop = gopurs_runtime.Int((curr_3.IntVal) - (1))
 acc_4_loop = gopurs_runtime.Value{Type: 9, IntVal: 2390177629, UnsafePtr: unsafe.Pointer(&Data_Test_Primes_Cons{curr_3, acc_4})}
 continue go__2_0
 __t1 = gopurs_runtime.Value{}
@@ -524,7 +524,7 @@ goto end_branch_1
 if (v_3.Type == 9 && v_3.IntVal == 2390177629) {
 var __t4 gopurs_runtime.Value
 {
-if gopurs_runtime.Apply(p_0, (*Data_Test_Primes_Cons)(v_3.UnsafePtr).V0).IntVal != 0 {
+if (gopurs_runtime.Apply(p_0, (*Data_Test_Primes_Cons)(v_3.UnsafePtr).V0).IntVal) != (0) {
 v_3_loop = (*Data_Test_Primes_Cons)(v_3.UnsafePtr).V1
 v1_4_loop = gopurs_runtime.Value{Type: 9, IntVal: 2390177629, UnsafePtr: unsafe.Pointer(&Data_Test_Primes_Cons{(*Data_Test_Primes_Cons)(v_3.UnsafePtr).V0, v1_4})}
 continue go__2_0

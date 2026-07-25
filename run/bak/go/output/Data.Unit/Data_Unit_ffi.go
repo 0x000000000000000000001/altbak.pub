@@ -2,7 +2,7 @@ package Data_Unit
 
 import "gopurs/output/gopurs_runtime"
 
-var Unit any = nil
+var Unit interface{} = nil
 
 
 // --- Auto-generated FFI wrappers ---

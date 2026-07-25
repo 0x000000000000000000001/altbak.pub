@@ -5,70 +5,70 @@ import (
 	sync "sync"
 )
 
-var warnShow gopurs_runtime.Value
+var cache_warnShow gopurs_runtime.Value
 var once_warnShow sync.Once
 func Get_warnShow() gopurs_runtime.Value {
 	once_warnShow.Do(func() {
-		warnShow = gopurs_runtime.Func2(func(dictShow_0_box gopurs_runtime.Value, a_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_warnShow = gopurs_runtime.Func2(func(dictShow_0_box gopurs_runtime.Value, a_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_warnShow(dictShow_0_box, a_1_box)
 })
 	})
-	return warnShow
+	return cache_warnShow
 }
 
-var logShow gopurs_runtime.Value
+var cache_logShow gopurs_runtime.Value
 var once_logShow sync.Once
 func Get_logShow() gopurs_runtime.Value {
 	once_logShow.Do(func() {
-		logShow = gopurs_runtime.Func2(func(dictShow_0_box gopurs_runtime.Value, a_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_logShow = gopurs_runtime.Func2(func(dictShow_0_box gopurs_runtime.Value, a_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_logShow(dictShow_0_box, a_1_box)
 })
 	})
-	return logShow
+	return cache_logShow
 }
 
-var infoShow gopurs_runtime.Value
+var cache_infoShow gopurs_runtime.Value
 var once_infoShow sync.Once
 func Get_infoShow() gopurs_runtime.Value {
 	once_infoShow.Do(func() {
-		infoShow = gopurs_runtime.Func2(func(dictShow_0_box gopurs_runtime.Value, a_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_infoShow = gopurs_runtime.Func2(func(dictShow_0_box gopurs_runtime.Value, a_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_infoShow(dictShow_0_box, a_1_box)
 })
 	})
-	return infoShow
+	return cache_infoShow
 }
 
-var grouped gopurs_runtime.Value
+var cache_grouped gopurs_runtime.Value
 var once_grouped sync.Once
 func Get_grouped() gopurs_runtime.Value {
 	once_grouped.Do(func() {
-		grouped = gopurs_runtime.Func2(func(name_0_box gopurs_runtime.Value, inner_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_grouped = gopurs_runtime.Func2(func(name_0_box gopurs_runtime.Value, inner_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_grouped(name_0_box, inner_1_box)
 })
 	})
-	return grouped
+	return cache_grouped
 }
 
-var errorShow gopurs_runtime.Value
+var cache_errorShow gopurs_runtime.Value
 var once_errorShow sync.Once
 func Get_errorShow() gopurs_runtime.Value {
 	once_errorShow.Do(func() {
-		errorShow = gopurs_runtime.Func2(func(dictShow_0_box gopurs_runtime.Value, a_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_errorShow = gopurs_runtime.Func2(func(dictShow_0_box gopurs_runtime.Value, a_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_errorShow(dictShow_0_box, a_1_box)
 })
 	})
-	return errorShow
+	return cache_errorShow
 }
 
-var debugShow gopurs_runtime.Value
+var cache_debugShow gopurs_runtime.Value
 var once_debugShow sync.Once
 func Get_debugShow() gopurs_runtime.Value {
 	once_debugShow.Do(func() {
-		debugShow = gopurs_runtime.Func2(func(dictShow_0_box gopurs_runtime.Value, a_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_debugShow = gopurs_runtime.Func2(func(dictShow_0_box gopurs_runtime.Value, a_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_debugShow(dictShow_0_box, a_1_box)
 })
 	})
-	return debugShow
+	return cache_debugShow
 }
 
 func Call_warnShow(dictShow_0_loop gopurs_runtime.Value, a_1_loop gopurs_runtime.Value) gopurs_runtime.Value {

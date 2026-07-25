@@ -6,22 +6,22 @@ import (
 	pkg_Data_Void "gopurs/output/Data.Void"
 )
 
-var contravariantConst gopurs_runtime.Value
+var cache_contravariantConst gopurs_runtime.Value
 var once_contravariantConst sync.Once
 func Get_contravariantConst() gopurs_runtime.Value {
 	once_contravariantConst.Do(func() {
-		contravariantConst = gopurs_runtime.RecordDict1("cmap", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_contravariantConst = gopurs_runtime.RecordDict1("cmap", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return v1_1
 }))
 	})
-	return contravariantConst
+	return cache_contravariantConst
 }
 
-var cmap gopurs_runtime.Value
+var cache_cmap gopurs_runtime.Value
 var once_cmap sync.Once
 func Get_cmap() gopurs_runtime.Value {
 	once_cmap.Do(func() {
-		cmap = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_cmap = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
@@ -29,40 +29,40 @@ return gopurs_runtime.RecordGet(dict_0, "cmap")
 }()
 })
 	})
-	return cmap
+	return cache_cmap
 }
 
-var cmapFlipped gopurs_runtime.Value
+var cache_cmapFlipped gopurs_runtime.Value
 var once_cmapFlipped sync.Once
 func Get_cmapFlipped() gopurs_runtime.Value {
 	once_cmapFlipped.Do(func() {
-		cmapFlipped = gopurs_runtime.Func3(func(dictContravariant_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value, f_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_cmapFlipped = gopurs_runtime.Func3(func(dictContravariant_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value, f_2_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_cmapFlipped(dictContravariant_0_box, x_1_box, f_2_box)
 })
 	})
-	return cmapFlipped
+	return cache_cmapFlipped
 }
 
-var coerce gopurs_runtime.Value
+var cache_coerce gopurs_runtime.Value
 var once_coerce sync.Once
 func Get_coerce() gopurs_runtime.Value {
 	once_coerce.Do(func() {
-		coerce = gopurs_runtime.Func3(func(dictContravariant_0_box gopurs_runtime.Value, dictFunctor_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_coerce = gopurs_runtime.Func3(func(dictContravariant_0_box gopurs_runtime.Value, dictFunctor_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_coerce(dictContravariant_0_box, dictFunctor_1_box, a_2_box)
 })
 	})
-	return coerce
+	return cache_coerce
 }
 
-var imapC gopurs_runtime.Value
+var cache_imapC gopurs_runtime.Value
 var once_imapC sync.Once
 func Get_imapC() gopurs_runtime.Value {
 	once_imapC.Do(func() {
-		imapC = gopurs_runtime.Func3(func(dictContravariant_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value, f_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_imapC = gopurs_runtime.Func3(func(dictContravariant_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value, f_2_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_imapC(dictContravariant_0_box, v_1_box, f_2_box)
 })
 	})
-	return imapC
+	return cache_imapC
 }
 
 func Call_cmapFlipped(dictContravariant_0_loop gopurs_runtime.Value, x_1_loop gopurs_runtime.Value, f_2_loop gopurs_runtime.Value) gopurs_runtime.Value {

@@ -15,7 +15,7 @@ func IsFinite(v float64) bool {
 	return !math.IsNaN(v) && !math.IsInf(v, 0)
 }
 
-func FromStringImpl(str string, isFinite func(float64) bool, just func(float64) any, nothing any) any {
+func FromStringImpl(str string, isFinite func(float64) bool, just func(float64) interface{}, nothing interface{}) interface{} {
 	val, err := strconv.ParseFloat(str, 64)
 	if err != nil {
 		return nothing
@@ -133,7 +133,7 @@ var _Gopurs_IsFinite = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopur
 	go_res := IsFinite(go_arg0)
 	return gopurs_runtime.Box(go_res)
 })
-func Call_fromStringImpl(arg0 string, arg1 func(float64) bool, arg2 func(float64) any, arg3 any) any {
+func Call_fromStringImpl(arg0 string, arg1 func(float64) bool, arg2 func(float64) interface{}, arg3 interface{}) interface{} {
 	return FromStringImpl(arg0, arg1, arg2, arg3)
 }
 var _Gopurs_FromStringImpl = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -142,7 +142,7 @@ var _Gopurs_FromStringImpl = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value
 			inner_res0 := gopurs_runtime.Apply(arg1, gopurs_runtime.Box(p0_0))
 			return gopurs_runtime.Unbox[bool](inner_res0)
 		}
-	go_arg2 := func(p0_0 float64) any {
+	go_arg2 := func(p0_0 float64) interface{} {
 			return gopurs_runtime.Apply(arg2, gopurs_runtime.Box(p0_0))
 		}
 	go_arg3 := arg3

@@ -10,11 +10,11 @@ import (
 	pkg_Control_Comonad_Env_Trans "gopurs/output/Control.Comonad.Env.Trans"
 )
 
-var pos gopurs_runtime.Value
+var cache_pos gopurs_runtime.Value
 var once_pos sync.Once
 func Get_pos() gopurs_runtime.Value {
 	once_pos.Do(func() {
-		pos = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_pos = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
@@ -22,14 +22,14 @@ return gopurs_runtime.RecordGet(dict_0, "pos")
 }()
 })
 	})
-	return pos
+	return cache_pos
 }
 
-var peek gopurs_runtime.Value
+var cache_peek gopurs_runtime.Value
 var once_peek sync.Once
 func Get_peek() gopurs_runtime.Value {
 	once_peek.Do(func() {
-		peek = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_peek = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
@@ -37,25 +37,25 @@ return gopurs_runtime.RecordGet(dict_0, "peek")
 }()
 })
 	})
-	return peek
+	return cache_peek
 }
 
-var peeks gopurs_runtime.Value
+var cache_peeks gopurs_runtime.Value
 var once_peeks sync.Once
 func Get_peeks() gopurs_runtime.Value {
 	once_peeks.Do(func() {
-		peeks = gopurs_runtime.Func3(func(dictComonadStore_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_peeks = gopurs_runtime.Func3(func(dictComonadStore_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_peeks(dictComonadStore_0_box, f_1_box, x_2_box)
 })
 	})
-	return peeks
+	return cache_peeks
 }
 
-var seeks gopurs_runtime.Value
+var cache_seeks gopurs_runtime.Value
 var once_seeks sync.Once
 func Get_seeks() gopurs_runtime.Value {
 	once_seeks.Do(func() {
-		seeks = gopurs_runtime.Func(func(dictComonadStore_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_seeks = gopurs_runtime.Func(func(dictComonadStore_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictComonadStore_0 gopurs_runtime.Value = dictComonadStore_0_loop
 _ = dictComonadStore_0
@@ -69,14 +69,14 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictComonadStore_0, "peek"
 }()
 })
 	})
-	return seeks
+	return cache_seeks
 }
 
-var seek gopurs_runtime.Value
+var cache_seek gopurs_runtime.Value
 var once_seek sync.Once
 func Get_seek() gopurs_runtime.Value {
 	once_seek.Do(func() {
-		seek = gopurs_runtime.Func(func(dictComonadStore_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_seek = gopurs_runtime.Func(func(dictComonadStore_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictComonadStore_0 gopurs_runtime.Value = dictComonadStore_0_loop
 _ = dictComonadStore_0
@@ -92,25 +92,25 @@ return gopurs_runtime.Apply(__local_var_3_1, gopurs_runtime.Apply(duplicate_1_0,
 }()
 })
 	})
-	return seek
+	return cache_seek
 }
 
-var experiment gopurs_runtime.Value
+var cache_experiment gopurs_runtime.Value
 var once_experiment sync.Once
 func Get_experiment() gopurs_runtime.Value {
 	once_experiment.Do(func() {
-		experiment = gopurs_runtime.Func4(func(dictComonadStore_0_box gopurs_runtime.Value, dictFunctor_1_box gopurs_runtime.Value, f_2_box gopurs_runtime.Value, x_3_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_experiment = gopurs_runtime.Func4(func(dictComonadStore_0_box gopurs_runtime.Value, dictFunctor_1_box gopurs_runtime.Value, f_2_box gopurs_runtime.Value, x_3_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_experiment(dictComonadStore_0_box, dictFunctor_1_box, f_2_box, x_3_box)
 })
 	})
-	return experiment
+	return cache_experiment
 }
 
-var comonadStoreTracedT gopurs_runtime.Value
+var cache_comonadStoreTracedT gopurs_runtime.Value
 var once_comonadStoreTracedT sync.Once
 func Get_comonadStoreTracedT() gopurs_runtime.Value {
 	once_comonadStoreTracedT.Do(func() {
-		comonadStoreTracedT = gopurs_runtime.Func(func(dictComonadStore_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_comonadStoreTracedT = gopurs_runtime.Func(func(dictComonadStore_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictComonadStore_0 gopurs_runtime.Value = dictComonadStore_0_loop
 _ = dictComonadStore_0
@@ -144,14 +144,14 @@ return comonadTracedT1_6_4
 }()
 })
 	})
-	return comonadStoreTracedT
+	return cache_comonadStoreTracedT
 }
 
-var comonadStoreStoreT gopurs_runtime.Value
+var cache_comonadStoreStoreT gopurs_runtime.Value
 var once_comonadStoreStoreT sync.Once
 func Get_comonadStoreStoreT() gopurs_runtime.Value {
 	once_comonadStoreStoreT.Do(func() {
-		comonadStoreStoreT = gopurs_runtime.Func(func(dictComonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_comonadStoreStoreT = gopurs_runtime.Func(func(dictComonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictComonad_0 gopurs_runtime.Value = dictComonad_0_loop
 _ = dictComonad_0
@@ -167,14 +167,14 @@ return comonadStoreT_1_0
 }()
 })
 	})
-	return comonadStoreStoreT
+	return cache_comonadStoreStoreT
 }
 
-var comonadStoreEnvT gopurs_runtime.Value
+var cache_comonadStoreEnvT gopurs_runtime.Value
 var once_comonadStoreEnvT sync.Once
 func Get_comonadStoreEnvT() gopurs_runtime.Value {
 	once_comonadStoreEnvT.Do(func() {
-		comonadStoreEnvT = gopurs_runtime.Func(func(dictComonadStore_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_comonadStoreEnvT = gopurs_runtime.Func(func(dictComonadStore_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictComonadStore_0 gopurs_runtime.Value = dictComonadStore_0_loop
 _ = dictComonadStore_0
@@ -194,7 +194,7 @@ return comonadEnvT_1_0
 }()
 })
 	})
-	return comonadStoreEnvT
+	return cache_comonadStoreEnvT
 }
 
 func Call_peeks(dictComonadStore_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {

@@ -6,11 +6,11 @@ import (
 	pkg_Control_Category "gopurs/output/Control.Category"
 )
 
-var Op gopurs_runtime.Value
+var cache_Op gopurs_runtime.Value
 var once_Op sync.Once
 func Get_Op() gopurs_runtime.Value {
 	once_Op.Do(func() {
-		Op = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Op = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
@@ -18,25 +18,25 @@ return x_0
 }()
 })
 	})
-	return Op
+	return cache_Op
 }
 
-var semigroupoidOp gopurs_runtime.Value
+var cache_semigroupoidOp gopurs_runtime.Value
 var once_semigroupoidOp sync.Once
 func Get_semigroupoidOp() gopurs_runtime.Value {
 	once_semigroupoidOp.Do(func() {
-		semigroupoidOp = gopurs_runtime.RecordDict1("compose", gopurs_runtime.Func3(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value, x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_semigroupoidOp = gopurs_runtime.RecordDict1("compose", gopurs_runtime.Func3(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value, x_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(v1_1, gopurs_runtime.Apply(v_0, x_2))
 }))
 	})
-	return semigroupoidOp
+	return cache_semigroupoidOp
 }
 
-var semigroupOp gopurs_runtime.Value
+var cache_semigroupOp gopurs_runtime.Value
 var once_semigroupOp sync.Once
 func Get_semigroupOp() gopurs_runtime.Value {
 	once_semigroupOp.Do(func() {
-		semigroupOp = gopurs_runtime.Func(func(dictSemigroup_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_semigroupOp = gopurs_runtime.Func(func(dictSemigroup_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictSemigroup_0 gopurs_runtime.Value = dictSemigroup_0_loop
 _ = dictSemigroup_0
@@ -46,25 +46,25 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup_0, "append")
 }()
 })
 	})
-	return semigroupOp
+	return cache_semigroupOp
 }
 
-var newtypeOp gopurs_runtime.Value
+var cache_newtypeOp gopurs_runtime.Value
 var once_newtypeOp sync.Once
 func Get_newtypeOp() gopurs_runtime.Value {
 	once_newtypeOp.Do(func() {
-		newtypeOp = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_newtypeOp = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{}
 }))
 	})
-	return newtypeOp
+	return cache_newtypeOp
 }
 
-var monoidOp gopurs_runtime.Value
+var cache_monoidOp gopurs_runtime.Value
 var once_monoidOp sync.Once
 func Get_monoidOp() gopurs_runtime.Value {
 	once_monoidOp.Do(func() {
-		monoidOp = gopurs_runtime.Func(func(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monoidOp = gopurs_runtime.Func(func(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
 _ = dictMonoid_0
@@ -84,29 +84,29 @@ return semigroupFn_3_2
 }()
 })
 	})
-	return monoidOp
+	return cache_monoidOp
 }
 
-var contravariantOp gopurs_runtime.Value
+var cache_contravariantOp gopurs_runtime.Value
 var once_contravariantOp sync.Once
 func Get_contravariantOp() gopurs_runtime.Value {
 	once_contravariantOp.Do(func() {
-		contravariantOp = gopurs_runtime.RecordDict1("cmap", gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_contravariantOp = gopurs_runtime.RecordDict1("cmap", gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, x_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(v_1, gopurs_runtime.Apply(f_0, x_2))
 }))
 	})
-	return contravariantOp
+	return cache_contravariantOp
 }
 
-var categoryOp gopurs_runtime.Value
+var cache_categoryOp gopurs_runtime.Value
 var once_categoryOp sync.Once
 func Get_categoryOp() gopurs_runtime.Value {
 	once_categoryOp.Do(func() {
-		categoryOp = gopurs_runtime.RecordDict2("identity", "Semigroupoid0", gopurs_runtime.RecordGet(pkg_Control_Category.Get_categoryFn(), "identity"), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_categoryOp = gopurs_runtime.RecordDict2("identity", "Semigroupoid0", gopurs_runtime.RecordGet(pkg_Control_Category.Get_categoryFn(), "identity"), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_semigroupoidOp()
 }))
 	})
-	return categoryOp
+	return cache_categoryOp
 }
 
 

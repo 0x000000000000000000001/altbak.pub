@@ -8,31 +8,31 @@ import (
 	pkg_Data_Show "gopurs/output/Data.Show"
 )
 
-var describe gopurs_runtime.Value
+var cache_describe gopurs_runtime.Value
 var once_describe sync.Once
 func Get_describe() gopurs_runtime.Value {
 	once_describe.Do(func() {
-		describe = gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Str("Ackermann (3, 4):"))
+		cache_describe = gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Str("Ackermann (3, 4):"))
 	})
-	return describe
+	return cache_describe
 }
 
-var ackermann gopurs_runtime.Value
+var cache_ackermann gopurs_runtime.Value
 var once_ackermann sync.Once
 func Get_ackermann() gopurs_runtime.Value {
 	once_ackermann.Do(func() {
-		ackermann = gopurs_runtime.Func2(func(v_0_box gopurs_runtime.Value, v1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_ackermann = gopurs_runtime.Func2(func(v_0_box gopurs_runtime.Value, v1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_ackermann(v_0_box, v1_1_box)
 })
 	})
-	return ackermann
+	return cache_ackermann
 }
 
-var act gopurs_runtime.Value
+var cache_act gopurs_runtime.Value
 var once_act sync.Once
 func Get_act() gopurs_runtime.Value {
 	once_act.Do(func() {
-		act = func() gopurs_runtime.Value {
+		cache_act = func() gopurs_runtime.Value {
 __local_var_0_0 := gopurs_runtime.Apply(pkg_Bench.Get_opaque(), gopurs_runtime.Int(3))
 _ = __local_var_0_0
 return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
@@ -42,7 +42,7 @@ return gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), g
 })
 }()
 	})
-	return act
+	return cache_act
 }
 
 func Call_ackermann(v_0_loop gopurs_runtime.Value, v1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -55,16 +55,16 @@ var v1_1 gopurs_runtime.Value = v1_1_loop
 _ = v1_1
 var __t0 gopurs_runtime.Value
 {
-if v_0.IntVal == 0 {
-__t0 = gopurs_runtime.Int(v1_1.IntVal + 1)
+if (v_0.IntVal) == (0) {
+__t0 = gopurs_runtime.Int((v1_1.IntVal) + (1))
 goto end_branch_0
 } else {
 
 }
 }
 {
-if v1_1.IntVal == 0 {
-v_0_loop = gopurs_runtime.Int(v_0.IntVal - 1)
+if (v1_1.IntVal) == (0) {
+v_0_loop = gopurs_runtime.Int((v_0.IntVal) - (1))
 v1_1_loop = gopurs_runtime.Int(1)
 continue ackermann
 __t0 = gopurs_runtime.Value{}
@@ -74,8 +74,8 @@ goto end_branch_0
 }
 }
 {
-v_0_loop = gopurs_runtime.Int(v_0.IntVal - 1)
-v1_1_loop = Call_ackermann(v_0, gopurs_runtime.Int(v1_1.IntVal - 1))
+v_0_loop = gopurs_runtime.Int((v_0.IntVal) - (1))
+v1_1_loop = Call_ackermann(v_0, gopurs_runtime.Int((v1_1.IntVal) - (1)))
 continue ackermann
 __t0 = gopurs_runtime.Value{}
 }

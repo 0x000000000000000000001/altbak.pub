@@ -9,11 +9,11 @@ import (
 	unsafe "unsafe"
 )
 
-var genericToEnum_prime gopurs_runtime.Value
+var cache_genericToEnum_prime gopurs_runtime.Value
 var once_genericToEnum_prime sync.Once
 func Get_genericToEnum_prime() gopurs_runtime.Value {
 	once_genericToEnum_prime.Do(func() {
-		genericToEnum_prime = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_genericToEnum_prime = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
@@ -21,25 +21,25 @@ return gopurs_runtime.RecordGet(dict_0, "genericToEnum'")
 }()
 })
 	})
-	return genericToEnum_prime
+	return cache_genericToEnum_prime
 }
 
-var genericToEnum gopurs_runtime.Value
+var cache_genericToEnum gopurs_runtime.Value
 var once_genericToEnum sync.Once
 func Get_genericToEnum() gopurs_runtime.Value {
 	once_genericToEnum.Do(func() {
-		genericToEnum = gopurs_runtime.Func3(func(dictGeneric_0_box gopurs_runtime.Value, dictGenericBoundedEnum_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_genericToEnum = gopurs_runtime.Func3(func(dictGeneric_0_box gopurs_runtime.Value, dictGenericBoundedEnum_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_genericToEnum(dictGeneric_0_box, dictGenericBoundedEnum_1_box, x_2_box)
 })
 	})
-	return genericToEnum
+	return cache_genericToEnum
 }
 
-var genericSucc_prime gopurs_runtime.Value
+var cache_genericSucc_prime gopurs_runtime.Value
 var once_genericSucc_prime sync.Once
 func Get_genericSucc_prime() gopurs_runtime.Value {
 	once_genericSucc_prime.Do(func() {
-		genericSucc_prime = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_genericSucc_prime = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
@@ -47,25 +47,25 @@ return gopurs_runtime.RecordGet(dict_0, "genericSucc'")
 }()
 })
 	})
-	return genericSucc_prime
+	return cache_genericSucc_prime
 }
 
-var genericSucc gopurs_runtime.Value
+var cache_genericSucc gopurs_runtime.Value
 var once_genericSucc sync.Once
 func Get_genericSucc() gopurs_runtime.Value {
 	once_genericSucc.Do(func() {
-		genericSucc = gopurs_runtime.Func3(func(dictGeneric_0_box gopurs_runtime.Value, dictGenericEnum_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_genericSucc = gopurs_runtime.Func3(func(dictGeneric_0_box gopurs_runtime.Value, dictGenericEnum_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_genericSucc(dictGeneric_0_box, dictGenericEnum_1_box, x_2_box)
 })
 	})
-	return genericSucc
+	return cache_genericSucc
 }
 
-var genericPred_prime gopurs_runtime.Value
+var cache_genericPred_prime gopurs_runtime.Value
 var once_genericPred_prime sync.Once
 func Get_genericPred_prime() gopurs_runtime.Value {
 	once_genericPred_prime.Do(func() {
-		genericPred_prime = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_genericPred_prime = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
@@ -73,25 +73,25 @@ return gopurs_runtime.RecordGet(dict_0, "genericPred'")
 }()
 })
 	})
-	return genericPred_prime
+	return cache_genericPred_prime
 }
 
-var genericPred gopurs_runtime.Value
+var cache_genericPred gopurs_runtime.Value
 var once_genericPred sync.Once
 func Get_genericPred() gopurs_runtime.Value {
 	once_genericPred.Do(func() {
-		genericPred = gopurs_runtime.Func3(func(dictGeneric_0_box gopurs_runtime.Value, dictGenericEnum_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_genericPred = gopurs_runtime.Func3(func(dictGeneric_0_box gopurs_runtime.Value, dictGenericEnum_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_genericPred(dictGeneric_0_box, dictGenericEnum_1_box, x_2_box)
 })
 	})
-	return genericPred
+	return cache_genericPred
 }
 
-var genericFromEnum_prime gopurs_runtime.Value
+var cache_genericFromEnum_prime gopurs_runtime.Value
 var once_genericFromEnum_prime sync.Once
 func Get_genericFromEnum_prime() gopurs_runtime.Value {
 	once_genericFromEnum_prime.Do(func() {
-		genericFromEnum_prime = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_genericFromEnum_prime = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
@@ -99,60 +99,60 @@ return gopurs_runtime.RecordGet(dict_0, "genericFromEnum'")
 }()
 })
 	})
-	return genericFromEnum_prime
+	return cache_genericFromEnum_prime
 }
 
-var genericFromEnum gopurs_runtime.Value
+var cache_genericFromEnum gopurs_runtime.Value
 var once_genericFromEnum sync.Once
 func Get_genericFromEnum() gopurs_runtime.Value {
 	once_genericFromEnum.Do(func() {
-		genericFromEnum = gopurs_runtime.Func3(func(dictGeneric_0_box gopurs_runtime.Value, dictGenericBoundedEnum_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_genericFromEnum = gopurs_runtime.Func3(func(dictGeneric_0_box gopurs_runtime.Value, dictGenericBoundedEnum_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_genericFromEnum(dictGeneric_0_box, dictGenericBoundedEnum_1_box, x_2_box)
 })
 	})
-	return genericFromEnum
+	return cache_genericFromEnum
 }
 
-var genericEnumSum gopurs_runtime.Value
+var cache_genericEnumSum gopurs_runtime.Value
 var once_genericEnumSum sync.Once
 func Get_genericEnumSum() gopurs_runtime.Value {
 	once_genericEnumSum.Do(func() {
-		genericEnumSum = gopurs_runtime.Func2(func(dictGenericEnum_0_box gopurs_runtime.Value, dictGenericTop_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_genericEnumSum = gopurs_runtime.Func2(func(dictGenericEnum_0_box gopurs_runtime.Value, dictGenericTop_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_genericEnumSum(dictGenericEnum_0_box, dictGenericTop_1_box)
 })
 	})
-	return genericEnumSum
+	return cache_genericEnumSum
 }
 
-var genericEnumProduct gopurs_runtime.Value
+var cache_genericEnumProduct gopurs_runtime.Value
 var once_genericEnumProduct sync.Once
 func Get_genericEnumProduct() gopurs_runtime.Value {
 	once_genericEnumProduct.Do(func() {
-		genericEnumProduct = gopurs_runtime.Func5(func(dictGenericEnum_0_box gopurs_runtime.Value, dictGenericTop_1_box gopurs_runtime.Value, dictGenericBottom_2_box gopurs_runtime.Value, dictGenericEnum1_3_box gopurs_runtime.Value, dictGenericTop1_4_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_genericEnumProduct = gopurs_runtime.Func5(func(dictGenericEnum_0_box gopurs_runtime.Value, dictGenericTop_1_box gopurs_runtime.Value, dictGenericBottom_2_box gopurs_runtime.Value, dictGenericEnum1_3_box gopurs_runtime.Value, dictGenericTop1_4_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_genericEnumProduct(dictGenericEnum_0_box, dictGenericTop_1_box, dictGenericBottom_2_box, dictGenericEnum1_3_box, dictGenericTop1_4_box)
 })
 	})
-	return genericEnumProduct
+	return cache_genericEnumProduct
 }
 
-var genericEnumNoArguments gopurs_runtime.Value
+var cache_genericEnumNoArguments gopurs_runtime.Value
 var once_genericEnumNoArguments sync.Once
 func Get_genericEnumNoArguments() gopurs_runtime.Value {
 	once_genericEnumNoArguments.Do(func() {
-		genericEnumNoArguments = gopurs_runtime.RecordDict2("genericPred'", "genericSucc'", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 42808261, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}
+		cache_genericEnumNoArguments = gopurs_runtime.RecordDict2("genericPred'", "genericSucc'", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 42808261, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}
+return gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}
 }))
 	})
-	return genericEnumNoArguments
+	return cache_genericEnumNoArguments
 }
 
-var genericEnumConstructor gopurs_runtime.Value
+var cache_genericEnumConstructor gopurs_runtime.Value
 var once_genericEnumConstructor sync.Once
 func Get_genericEnumConstructor() gopurs_runtime.Value {
 	once_genericEnumConstructor.Do(func() {
-		genericEnumConstructor = gopurs_runtime.Func(func(dictGenericEnum_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_genericEnumConstructor = gopurs_runtime.Func(func(dictGenericEnum_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictGenericEnum_0 gopurs_runtime.Value = dictGenericEnum_0_loop
 _ = dictGenericEnum_0
@@ -161,15 +161,15 @@ __local_var_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericEnum
 _ = __local_var_2_0
 var __t1 gopurs_runtime.Value
 {
-if (__local_var_2_0.Type == 9 && __local_var_2_0.IntVal == 1354639136) {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 1354639136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{(*pkg_Data_Maybe.Data_Data_Maybe_Just)(__local_var_2_0.UnsafePtr).V0})}
+if (__local_var_2_0.Type == 9 && __local_var_2_0.IntVal == 930809136) {
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{(*pkg_Data_Maybe.Data_Data_Maybe_Just)(__local_var_2_0.UnsafePtr).V0})}
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 42808261, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}
 }
 end_branch_1:
 return __t1
@@ -178,15 +178,15 @@ __local_var_2_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericEnum
 _ = __local_var_2_2
 var __t3 gopurs_runtime.Value
 {
-if (__local_var_2_2.Type == 9 && __local_var_2_2.IntVal == 1354639136) {
-__t3 = gopurs_runtime.Value{Type: 9, IntVal: 1354639136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{(*pkg_Data_Maybe.Data_Data_Maybe_Just)(__local_var_2_2.UnsafePtr).V0})}
+if (__local_var_2_2.Type == 9 && __local_var_2_2.IntVal == 930809136) {
+__t3 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{(*pkg_Data_Maybe.Data_Data_Maybe_Just)(__local_var_2_2.UnsafePtr).V0})}
 goto end_branch_3
 } else {
 
 }
 }
 {
-__t3 = gopurs_runtime.Value{Type: 9, IntVal: 42808261, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}
+__t3 = gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}
 }
 end_branch_3:
 return __t3
@@ -194,14 +194,14 @@ return __t3
 }()
 })
 	})
-	return genericEnumConstructor
+	return cache_genericEnumConstructor
 }
 
-var genericEnumArgument gopurs_runtime.Value
+var cache_genericEnumArgument gopurs_runtime.Value
 var once_genericEnumArgument sync.Once
 func Get_genericEnumArgument() gopurs_runtime.Value {
 	once_genericEnumArgument.Do(func() {
-		genericEnumArgument = gopurs_runtime.Func(func(dictEnum_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_genericEnumArgument = gopurs_runtime.Func(func(dictEnum_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictEnum_0 gopurs_runtime.Value = dictEnum_0_loop
 _ = dictEnum_0
@@ -210,15 +210,15 @@ __local_var_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEnum_0, "pr
 _ = __local_var_2_0
 var __t1 gopurs_runtime.Value
 {
-if (__local_var_2_0.Type == 9 && __local_var_2_0.IntVal == 1354639136) {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 1354639136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{(*pkg_Data_Maybe.Data_Data_Maybe_Just)(__local_var_2_0.UnsafePtr).V0})}
+if (__local_var_2_0.Type == 9 && __local_var_2_0.IntVal == 930809136) {
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{(*pkg_Data_Maybe.Data_Data_Maybe_Just)(__local_var_2_0.UnsafePtr).V0})}
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 42808261, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}
 }
 end_branch_1:
 return __t1
@@ -227,15 +227,15 @@ __local_var_2_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEnum_0, "su
 _ = __local_var_2_2
 var __t3 gopurs_runtime.Value
 {
-if (__local_var_2_2.Type == 9 && __local_var_2_2.IntVal == 1354639136) {
-__t3 = gopurs_runtime.Value{Type: 9, IntVal: 1354639136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{(*pkg_Data_Maybe.Data_Data_Maybe_Just)(__local_var_2_2.UnsafePtr).V0})}
+if (__local_var_2_2.Type == 9 && __local_var_2_2.IntVal == 930809136) {
+__t3 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{(*pkg_Data_Maybe.Data_Data_Maybe_Just)(__local_var_2_2.UnsafePtr).V0})}
 goto end_branch_3
 } else {
 
 }
 }
 {
-__t3 = gopurs_runtime.Value{Type: 9, IntVal: 42808261, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}
+__t3 = gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}
 }
 end_branch_3:
 return __t3
@@ -243,14 +243,14 @@ return __t3
 }()
 })
 	})
-	return genericEnumArgument
+	return cache_genericEnumArgument
 }
 
-var genericCardinality_prime gopurs_runtime.Value
+var cache_genericCardinality_prime gopurs_runtime.Value
 var once_genericCardinality_prime sync.Once
 func Get_genericCardinality_prime() gopurs_runtime.Value {
 	once_genericCardinality_prime.Do(func() {
-		genericCardinality_prime = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_genericCardinality_prime = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
@@ -258,48 +258,48 @@ return gopurs_runtime.RecordGet(dict_0, "genericCardinality'")
 }()
 })
 	})
-	return genericCardinality_prime
+	return cache_genericCardinality_prime
 }
 
-var genericCardinality gopurs_runtime.Value
+var cache_genericCardinality gopurs_runtime.Value
 var once_genericCardinality sync.Once
 func Get_genericCardinality() gopurs_runtime.Value {
 	once_genericCardinality.Do(func() {
-		genericCardinality = gopurs_runtime.Func2(func(dictGeneric_0_box gopurs_runtime.Value, dictGenericBoundedEnum_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_genericCardinality = gopurs_runtime.Func2(func(dictGeneric_0_box gopurs_runtime.Value, dictGenericBoundedEnum_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_genericCardinality(dictGeneric_0_box, dictGenericBoundedEnum_1_box)
 })
 	})
-	return genericCardinality
+	return cache_genericCardinality
 }
 
-var genericBoundedEnumSum gopurs_runtime.Value
+var cache_genericBoundedEnumSum gopurs_runtime.Value
 var once_genericBoundedEnumSum sync.Once
 func Get_genericBoundedEnumSum() gopurs_runtime.Value {
 	once_genericBoundedEnumSum.Do(func() {
-		genericBoundedEnumSum = gopurs_runtime.Func(func(dictGenericBoundedEnum_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_genericBoundedEnumSum = gopurs_runtime.Func(func(dictGenericBoundedEnum_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictGenericBoundedEnum_0 gopurs_runtime.Value = dictGenericBoundedEnum_0_loop
 _ = dictGenericBoundedEnum_0
 genericCardinality_prime1_1_0 := gopurs_runtime.RecordGet(dictGenericBoundedEnum_0, "genericCardinality'")
 _ = genericCardinality_prime1_1_0
 return gopurs_runtime.Func(func(dictGenericBoundedEnum1_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict3("genericCardinality'", "genericToEnum'", "genericFromEnum'", gopurs_runtime.Int(genericCardinality_prime1_1_0.IntVal + gopurs_runtime.RecordGet(dictGenericBoundedEnum1_2, "genericCardinality'").IntVal), gopurs_runtime.Func(func(n_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict3("genericCardinality'", "genericToEnum'", "genericFromEnum'", gopurs_runtime.Int((genericCardinality_prime1_1_0.IntVal) + (gopurs_runtime.RecordGet(dictGenericBoundedEnum1_2, "genericCardinality'").IntVal)), gopurs_runtime.Func(func(n_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t3 gopurs_runtime.Value
 {
-if n_3.IntVal >= 0 && n_3.IntVal < genericCardinality_prime1_1_0.IntVal {
+if ((n_3.IntVal) >= (0)) && ((n_3.IntVal) < (genericCardinality_prime1_1_0.IntVal)) {
 __local_var_4_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericBoundedEnum_0, "genericToEnum'"), n_3)
 _ = __local_var_4_4
 var __t5 gopurs_runtime.Value
 {
-if (__local_var_4_4.Type == 9 && __local_var_4_4.IntVal == 1354639136) {
-__t5 = gopurs_runtime.Value{Type: 9, IntVal: 1354639136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{gopurs_runtime.Value{Type: 9, IntVal: 164387955, UnsafePtr: unsafe.Pointer(&pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Inl{(*pkg_Data_Maybe.Data_Data_Maybe_Just)(__local_var_4_4.UnsafePtr).V0})}})}
+if (__local_var_4_4.Type == 9 && __local_var_4_4.IntVal == 930809136) {
+__t5 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{gopurs_runtime.Value{Type: 9, IntVal: 3478632216, UnsafePtr: unsafe.Pointer(&pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Inl{(*pkg_Data_Maybe.Data_Data_Maybe_Just)(__local_var_4_4.UnsafePtr).V0})}})}
 goto end_branch_5
 } else {
 
 }
 }
 {
-__t5 = gopurs_runtime.Value{Type: 9, IntVal: 42808261, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}
+__t5 = gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}
 }
 end_branch_5:
 __t3 = __t5
@@ -309,19 +309,19 @@ goto end_branch_3
 }
 }
 {
-__local_var_4_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericBoundedEnum1_2, "genericToEnum'"), gopurs_runtime.Int(n_3.IntVal - genericCardinality_prime1_1_0.IntVal))
+__local_var_4_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericBoundedEnum1_2, "genericToEnum'"), gopurs_runtime.Int((n_3.IntVal) - (genericCardinality_prime1_1_0.IntVal)))
 _ = __local_var_4_1
 var __t2 gopurs_runtime.Value
 {
-if (__local_var_4_1.Type == 9 && __local_var_4_1.IntVal == 1354639136) {
-__t2 = gopurs_runtime.Value{Type: 9, IntVal: 1354639136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{gopurs_runtime.Value{Type: 9, IntVal: 4051932077, UnsafePtr: unsafe.Pointer(&pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Inr{(*pkg_Data_Maybe.Data_Data_Maybe_Just)(__local_var_4_1.UnsafePtr).V0})}})}
+if (__local_var_4_1.Type == 9 && __local_var_4_1.IntVal == 930809136) {
+__t2 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{gopurs_runtime.Value{Type: 9, IntVal: 492034566, UnsafePtr: unsafe.Pointer(&pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Inr{(*pkg_Data_Maybe.Data_Data_Maybe_Just)(__local_var_4_1.UnsafePtr).V0})}})}
 goto end_branch_2
 } else {
 
 }
 }
 {
-__t2 = gopurs_runtime.Value{Type: 9, IntVal: 42808261, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}
+__t2 = gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}
 }
 end_branch_2:
 __t3 = __t2
@@ -331,7 +331,7 @@ return __t3
 }), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t6 gopurs_runtime.Value
 {
-if (v_3.Type == 9 && v_3.IntVal == 164387955) {
+if (v_3.Type == 9 && v_3.IntVal == 3478632216) {
 __t6 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericBoundedEnum_0, "genericFromEnum'"), (*pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Inl)(v_3.UnsafePtr).V0)
 goto end_branch_6
 } else {
@@ -339,8 +339,8 @@ goto end_branch_6
 }
 }
 {
-if (v_3.Type == 9 && v_3.IntVal == 4051932077) {
-__t6 = gopurs_runtime.Int(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericBoundedEnum1_2, "genericFromEnum'"), (*pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Inr)(v_3.UnsafePtr).V0).IntVal + genericCardinality_prime1_1_0.IntVal)
+if (v_3.Type == 9 && v_3.IntVal == 492034566) {
+__t6 = gopurs_runtime.Int((gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericBoundedEnum1_2, "genericFromEnum'"), (*pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Inr)(v_3.UnsafePtr).V0).IntVal) + (genericCardinality_prime1_1_0.IntVal))
 goto end_branch_6
 } else {
 
@@ -356,14 +356,14 @@ return __t6
 }()
 })
 	})
-	return genericBoundedEnumSum
+	return cache_genericBoundedEnumSum
 }
 
-var genericBoundedEnumProduct gopurs_runtime.Value
+var cache_genericBoundedEnumProduct gopurs_runtime.Value
 var once_genericBoundedEnumProduct sync.Once
 func Get_genericBoundedEnumProduct() gopurs_runtime.Value {
 	once_genericBoundedEnumProduct.Do(func() {
-		genericBoundedEnumProduct = gopurs_runtime.Func(func(dictGenericBoundedEnum_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_genericBoundedEnumProduct = gopurs_runtime.Func(func(dictGenericBoundedEnum_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictGenericBoundedEnum_0 gopurs_runtime.Value = dictGenericBoundedEnum_0_loop
 _ = dictGenericBoundedEnum_0
@@ -372,25 +372,25 @@ _ = genericCardinality_prime1_1_0
 return gopurs_runtime.Func(func(dictGenericBoundedEnum1_2 gopurs_runtime.Value) gopurs_runtime.Value {
 genericCardinality_prime2_3_1 := gopurs_runtime.RecordGet(dictGenericBoundedEnum1_2, "genericCardinality'")
 _ = genericCardinality_prime2_3_1
-return gopurs_runtime.RecordDict3("genericCardinality'", "genericToEnum'", "genericFromEnum'", gopurs_runtime.Int(genericCardinality_prime1_1_0.IntVal * genericCardinality_prime2_3_1.IntVal), gopurs_runtime.Func(func(n_4 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_5_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericBoundedEnum_0, "genericToEnum'"), gopurs_runtime.Int(n_4.IntVal / genericCardinality_prime2_3_1.IntVal))
+return gopurs_runtime.RecordDict3("genericCardinality'", "genericToEnum'", "genericFromEnum'", gopurs_runtime.Int((genericCardinality_prime1_1_0.IntVal) * (genericCardinality_prime2_3_1.IntVal)), gopurs_runtime.Func(func(n_4 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_5_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericBoundedEnum_0, "genericToEnum'"), gopurs_runtime.Int((n_4.IntVal) / (genericCardinality_prime2_3_1.IntVal)))
 _ = __local_var_5_2
 var __t3 gopurs_runtime.Value
 {
-if (__local_var_5_2.Type == 9 && __local_var_5_2.IntVal == 1354639136) {
+if (__local_var_5_2.Type == 9 && __local_var_5_2.IntVal == 930809136) {
 __local_var_6_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericBoundedEnum1_2, "genericToEnum'"), gopurs_runtime.Apply2(pkg_Data_EuclideanRing.Get_intMod(), n_4, genericCardinality_prime2_3_1))
 _ = __local_var_6_4
 var __t5 gopurs_runtime.Value
 {
-if (__local_var_6_4.Type == 9 && __local_var_6_4.IntVal == 1354639136) {
-__t5 = gopurs_runtime.Value{Type: 9, IntVal: 1354639136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{gopurs_runtime.Value{Type: 9, IntVal: 2309107923, UnsafePtr: unsafe.Pointer(&pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Product{(*pkg_Data_Maybe.Data_Data_Maybe_Just)(__local_var_5_2.UnsafePtr).V0, (*pkg_Data_Maybe.Data_Data_Maybe_Just)(__local_var_6_4.UnsafePtr).V0})}})}
+if (__local_var_6_4.Type == 9 && __local_var_6_4.IntVal == 930809136) {
+__t5 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(&pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Product{(*pkg_Data_Maybe.Data_Data_Maybe_Just)(__local_var_5_2.UnsafePtr).V0, (*pkg_Data_Maybe.Data_Data_Maybe_Just)(__local_var_6_4.UnsafePtr).V0})}})}
 goto end_branch_5
 } else {
 
 }
 }
 {
-__t5 = gopurs_runtime.Value{Type: 9, IntVal: 42808261, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}
+__t5 = gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}
 }
 end_branch_5:
 __t3 = __t5
@@ -400,36 +400,36 @@ goto end_branch_3
 }
 }
 {
-__t3 = gopurs_runtime.Value{Type: 9, IntVal: 42808261, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}
+__t3 = gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}
 }
 end_branch_3:
 return __t3
 }), gopurs_runtime.Func(func(v1_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Int(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericBoundedEnum_0, "genericFromEnum'"), (*pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Product)(v1_4.UnsafePtr).V0).IntVal * genericCardinality_prime2_3_1.IntVal + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericBoundedEnum1_2, "genericFromEnum'"), (*pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Product)(v1_4.UnsafePtr).V1).IntVal)
+return gopurs_runtime.Int(((gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericBoundedEnum_0, "genericFromEnum'"), (*pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Product)(v1_4.UnsafePtr).V0).IntVal) * (genericCardinality_prime2_3_1.IntVal)) + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericBoundedEnum1_2, "genericFromEnum'"), (*pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Product)(v1_4.UnsafePtr).V1).IntVal))
 }))
 })
 }()
 })
 	})
-	return genericBoundedEnumProduct
+	return cache_genericBoundedEnumProduct
 }
 
-var genericBoundedEnumNoArguments gopurs_runtime.Value
+var cache_genericBoundedEnumNoArguments gopurs_runtime.Value
 var once_genericBoundedEnumNoArguments sync.Once
 func Get_genericBoundedEnumNoArguments() gopurs_runtime.Value {
 	once_genericBoundedEnumNoArguments.Do(func() {
-		genericBoundedEnumNoArguments = gopurs_runtime.RecordDict3("genericCardinality'", "genericToEnum'", "genericFromEnum'", gopurs_runtime.Int(1), gopurs_runtime.Func(func(i_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_genericBoundedEnumNoArguments = gopurs_runtime.RecordDict3("genericCardinality'", "genericToEnum'", "genericFromEnum'", gopurs_runtime.Int(1), gopurs_runtime.Func(func(i_0 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if i_0.IntVal == 0 {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 1354639136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{gopurs_runtime.Value{Type: 9, IntVal: 2433704057, UnsafePtr: unsafe.Pointer(&pkg_Data_Generic_Rep.Data_Data_Generic_Rep_NoArguments{})}})}
+if (i_0.IntVal) == (0) {
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{gopurs_runtime.Value{Type: 9, IntVal: 1454898258, UnsafePtr: unsafe.Pointer(&pkg_Data_Generic_Rep.Data_Data_Generic_Rep_NoArguments{})}})}
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 42808261, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}
 }
 end_branch_0:
 return __t0
@@ -437,14 +437,14 @@ return __t0
 return gopurs_runtime.Int(0)
 }))
 	})
-	return genericBoundedEnumNoArguments
+	return cache_genericBoundedEnumNoArguments
 }
 
-var genericBoundedEnumConstructor gopurs_runtime.Value
+var cache_genericBoundedEnumConstructor gopurs_runtime.Value
 var once_genericBoundedEnumConstructor sync.Once
 func Get_genericBoundedEnumConstructor() gopurs_runtime.Value {
 	once_genericBoundedEnumConstructor.Do(func() {
-		genericBoundedEnumConstructor = gopurs_runtime.Func(func(dictGenericBoundedEnum_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_genericBoundedEnumConstructor = gopurs_runtime.Func(func(dictGenericBoundedEnum_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictGenericBoundedEnum_0 gopurs_runtime.Value = dictGenericBoundedEnum_0_loop
 _ = dictGenericBoundedEnum_0
@@ -453,15 +453,15 @@ __local_var_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericBoun
 _ = __local_var_2_0
 var __t1 gopurs_runtime.Value
 {
-if (__local_var_2_0.Type == 9 && __local_var_2_0.IntVal == 1354639136) {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 1354639136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{(*pkg_Data_Maybe.Data_Data_Maybe_Just)(__local_var_2_0.UnsafePtr).V0})}
+if (__local_var_2_0.Type == 9 && __local_var_2_0.IntVal == 930809136) {
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{(*pkg_Data_Maybe.Data_Data_Maybe_Just)(__local_var_2_0.UnsafePtr).V0})}
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 42808261, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}
 }
 end_branch_1:
 return __t1
@@ -471,14 +471,14 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericBoundedEnum_0, "
 }()
 })
 	})
-	return genericBoundedEnumConstructor
+	return cache_genericBoundedEnumConstructor
 }
 
-var genericBoundedEnumArgument gopurs_runtime.Value
+var cache_genericBoundedEnumArgument gopurs_runtime.Value
 var once_genericBoundedEnumArgument sync.Once
 func Get_genericBoundedEnumArgument() gopurs_runtime.Value {
 	once_genericBoundedEnumArgument.Do(func() {
-		genericBoundedEnumArgument = gopurs_runtime.Func(func(dictBoundedEnum_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_genericBoundedEnumArgument = gopurs_runtime.Func(func(dictBoundedEnum_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictBoundedEnum_0 gopurs_runtime.Value = dictBoundedEnum_0_loop
 _ = dictBoundedEnum_0
@@ -487,15 +487,15 @@ __local_var_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedEnum
 _ = __local_var_2_0
 var __t1 gopurs_runtime.Value
 {
-if (__local_var_2_0.Type == 9 && __local_var_2_0.IntVal == 1354639136) {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 1354639136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{(*pkg_Data_Maybe.Data_Data_Maybe_Just)(__local_var_2_0.UnsafePtr).V0})}
+if (__local_var_2_0.Type == 9 && __local_var_2_0.IntVal == 930809136) {
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{(*pkg_Data_Maybe.Data_Data_Maybe_Just)(__local_var_2_0.UnsafePtr).V0})}
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 42808261, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}
 }
 end_branch_1:
 return __t1
@@ -505,7 +505,7 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedEnum_0, "fromEnu
 }()
 })
 	})
-	return genericBoundedEnumArgument
+	return cache_genericBoundedEnumArgument
 }
 
 func Call_genericToEnum(dictGeneric_0_loop gopurs_runtime.Value, dictGenericBoundedEnum_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -519,15 +519,15 @@ __local_var_3_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericBoun
 _ = __local_var_3_0
 var __t1 gopurs_runtime.Value
 {
-if (__local_var_3_0.Type == 9 && __local_var_3_0.IntVal == 1354639136) {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 1354639136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGeneric_0, "to"), (*pkg_Data_Maybe.Data_Data_Maybe_Just)(__local_var_3_0.UnsafePtr).V0)})}
+if (__local_var_3_0.Type == 9 && __local_var_3_0.IntVal == 930809136) {
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGeneric_0, "to"), (*pkg_Data_Maybe.Data_Data_Maybe_Just)(__local_var_3_0.UnsafePtr).V0)})}
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 42808261, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}
 }
 end_branch_1:
 return __t1
@@ -544,15 +544,15 @@ __local_var_3_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericEnum
 _ = __local_var_3_0
 var __t1 gopurs_runtime.Value
 {
-if (__local_var_3_0.Type == 9 && __local_var_3_0.IntVal == 1354639136) {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 1354639136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGeneric_0, "to"), (*pkg_Data_Maybe.Data_Data_Maybe_Just)(__local_var_3_0.UnsafePtr).V0)})}
+if (__local_var_3_0.Type == 9 && __local_var_3_0.IntVal == 930809136) {
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGeneric_0, "to"), (*pkg_Data_Maybe.Data_Data_Maybe_Just)(__local_var_3_0.UnsafePtr).V0)})}
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 42808261, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}
 }
 end_branch_1:
 return __t1
@@ -569,15 +569,15 @@ __local_var_3_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericEnum
 _ = __local_var_3_0
 var __t1 gopurs_runtime.Value
 {
-if (__local_var_3_0.Type == 9 && __local_var_3_0.IntVal == 1354639136) {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 1354639136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGeneric_0, "to"), (*pkg_Data_Maybe.Data_Data_Maybe_Just)(__local_var_3_0.UnsafePtr).V0)})}
+if (__local_var_3_0.Type == 9 && __local_var_3_0.IntVal == 930809136) {
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGeneric_0, "to"), (*pkg_Data_Maybe.Data_Data_Maybe_Just)(__local_var_3_0.UnsafePtr).V0)})}
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 42808261, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}
 }
 end_branch_1:
 return __t1
@@ -606,20 +606,20 @@ _ = genericBottom_prime_5_1
 return gopurs_runtime.RecordDict2("genericPred'", "genericSucc'", gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t2 gopurs_runtime.Value
 {
-if (v_6.Type == 9 && v_6.IntVal == 164387955) {
+if (v_6.Type == 9 && v_6.IntVal == 3478632216) {
 __local_var_7_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericEnum_0, "genericPred'"), (*pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Inl)(v_6.UnsafePtr).V0)
 _ = __local_var_7_3
 var __t4 gopurs_runtime.Value
 {
-if (__local_var_7_3.Type == 9 && __local_var_7_3.IntVal == 1354639136) {
-__t4 = gopurs_runtime.Value{Type: 9, IntVal: 1354639136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{gopurs_runtime.Value{Type: 9, IntVal: 164387955, UnsafePtr: unsafe.Pointer(&pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Inl{(*pkg_Data_Maybe.Data_Data_Maybe_Just)(__local_var_7_3.UnsafePtr).V0})}})}
+if (__local_var_7_3.Type == 9 && __local_var_7_3.IntVal == 930809136) {
+__t4 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{gopurs_runtime.Value{Type: 9, IntVal: 3478632216, UnsafePtr: unsafe.Pointer(&pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Inl{(*pkg_Data_Maybe.Data_Data_Maybe_Just)(__local_var_7_3.UnsafePtr).V0})}})}
 goto end_branch_4
 } else {
 
 }
 }
 {
-__t4 = gopurs_runtime.Value{Type: 9, IntVal: 42808261, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}
+__t4 = gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}
 }
 end_branch_4:
 __t2 = __t4
@@ -629,21 +629,21 @@ goto end_branch_2
 }
 }
 {
-if (v_6.Type == 9 && v_6.IntVal == 4051932077) {
+if (v_6.Type == 9 && v_6.IntVal == 492034566) {
 v1_7_5 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericEnum1_3, "genericPred'"), (*pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Inr)(v_6.UnsafePtr).V0)
 _ = v1_7_5
 var __t6 gopurs_runtime.Value
 {
-if (v1_7_5.Type == 9 && v1_7_5.IntVal == 42808261) {
-__t6 = gopurs_runtime.Value{Type: 9, IntVal: 1354639136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{gopurs_runtime.Value{Type: 9, IntVal: 164387955, UnsafePtr: unsafe.Pointer(&pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Inl{genericTop_prime_2_0})}})}
+if (v1_7_5.Type == 9 && v1_7_5.IntVal == 3589588149) {
+__t6 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{gopurs_runtime.Value{Type: 9, IntVal: 3478632216, UnsafePtr: unsafe.Pointer(&pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Inl{genericTop_prime_2_0})}})}
 goto end_branch_6
 } else {
 
 }
 }
 {
-if (v1_7_5.Type == 9 && v1_7_5.IntVal == 1354639136) {
-__t6 = gopurs_runtime.Value{Type: 9, IntVal: 1354639136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{gopurs_runtime.Value{Type: 9, IntVal: 4051932077, UnsafePtr: unsafe.Pointer(&pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Inr{(*pkg_Data_Maybe.Data_Data_Maybe_Just)(v1_7_5.UnsafePtr).V0})}})}
+if (v1_7_5.Type == 9 && v1_7_5.IntVal == 930809136) {
+__t6 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{gopurs_runtime.Value{Type: 9, IntVal: 492034566, UnsafePtr: unsafe.Pointer(&pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Inr{(*pkg_Data_Maybe.Data_Data_Maybe_Just)(v1_7_5.UnsafePtr).V0})}})}
 goto end_branch_6
 } else {
 
@@ -667,21 +667,21 @@ return __t2
 }), gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t7 gopurs_runtime.Value
 {
-if (v_6.Type == 9 && v_6.IntVal == 164387955) {
+if (v_6.Type == 9 && v_6.IntVal == 3478632216) {
 v1_7_8 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericEnum_0, "genericSucc'"), (*pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Inl)(v_6.UnsafePtr).V0)
 _ = v1_7_8
 var __t9 gopurs_runtime.Value
 {
-if (v1_7_8.Type == 9 && v1_7_8.IntVal == 42808261) {
-__t9 = gopurs_runtime.Value{Type: 9, IntVal: 1354639136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{gopurs_runtime.Value{Type: 9, IntVal: 4051932077, UnsafePtr: unsafe.Pointer(&pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Inr{genericBottom_prime_5_1})}})}
+if (v1_7_8.Type == 9 && v1_7_8.IntVal == 3589588149) {
+__t9 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{gopurs_runtime.Value{Type: 9, IntVal: 492034566, UnsafePtr: unsafe.Pointer(&pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Inr{genericBottom_prime_5_1})}})}
 goto end_branch_9
 } else {
 
 }
 }
 {
-if (v1_7_8.Type == 9 && v1_7_8.IntVal == 1354639136) {
-__t9 = gopurs_runtime.Value{Type: 9, IntVal: 1354639136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{gopurs_runtime.Value{Type: 9, IntVal: 164387955, UnsafePtr: unsafe.Pointer(&pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Inl{(*pkg_Data_Maybe.Data_Data_Maybe_Just)(v1_7_8.UnsafePtr).V0})}})}
+if (v1_7_8.Type == 9 && v1_7_8.IntVal == 930809136) {
+__t9 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{gopurs_runtime.Value{Type: 9, IntVal: 3478632216, UnsafePtr: unsafe.Pointer(&pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Inl{(*pkg_Data_Maybe.Data_Data_Maybe_Just)(v1_7_8.UnsafePtr).V0})}})}
 goto end_branch_9
 } else {
 
@@ -698,20 +698,20 @@ goto end_branch_7
 }
 }
 {
-if (v_6.Type == 9 && v_6.IntVal == 4051932077) {
+if (v_6.Type == 9 && v_6.IntVal == 492034566) {
 __local_var_7_10 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericEnum1_3, "genericSucc'"), (*pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Inr)(v_6.UnsafePtr).V0)
 _ = __local_var_7_10
 var __t11 gopurs_runtime.Value
 {
-if (__local_var_7_10.Type == 9 && __local_var_7_10.IntVal == 1354639136) {
-__t11 = gopurs_runtime.Value{Type: 9, IntVal: 1354639136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{gopurs_runtime.Value{Type: 9, IntVal: 4051932077, UnsafePtr: unsafe.Pointer(&pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Inr{(*pkg_Data_Maybe.Data_Data_Maybe_Just)(__local_var_7_10.UnsafePtr).V0})}})}
+if (__local_var_7_10.Type == 9 && __local_var_7_10.IntVal == 930809136) {
+__t11 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{gopurs_runtime.Value{Type: 9, IntVal: 492034566, UnsafePtr: unsafe.Pointer(&pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Inr{(*pkg_Data_Maybe.Data_Data_Maybe_Just)(__local_var_7_10.UnsafePtr).V0})}})}
 goto end_branch_11
 } else {
 
 }
 }
 {
-__t11 = gopurs_runtime.Value{Type: 9, IntVal: 42808261, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}
+__t11 = gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}
 }
 end_branch_11:
 __t7 = __t11
@@ -750,28 +750,28 @@ v1_9_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericEnum1_3, "gen
 _ = v1_9_2
 var __t3 gopurs_runtime.Value
 {
-if (v1_9_2.Type == 9 && v1_9_2.IntVal == 1354639136) {
-__t3 = gopurs_runtime.Value{Type: 9, IntVal: 1354639136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{gopurs_runtime.Value{Type: 9, IntVal: 2309107923, UnsafePtr: unsafe.Pointer(&pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Product{(*pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Product)(v_8.UnsafePtr).V0, (*pkg_Data_Maybe.Data_Data_Maybe_Just)(v1_9_2.UnsafePtr).V0})}})}
+if (v1_9_2.Type == 9 && v1_9_2.IntVal == 930809136) {
+__t3 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(&pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Product{(*pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Product)(v_8.UnsafePtr).V0, (*pkg_Data_Maybe.Data_Data_Maybe_Just)(v1_9_2.UnsafePtr).V0})}})}
 goto end_branch_3
 } else {
 
 }
 }
 {
-if (v1_9_2.Type == 9 && v1_9_2.IntVal == 42808261) {
+if (v1_9_2.Type == 9 && v1_9_2.IntVal == 3589588149) {
 __local_var_10_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericEnum_0, "genericPred'"), (*pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Product)(v_8.UnsafePtr).V0)
 _ = __local_var_10_4
 var __t5 gopurs_runtime.Value
 {
-if (__local_var_10_4.Type == 9 && __local_var_10_4.IntVal == 1354639136) {
-__t5 = gopurs_runtime.Value{Type: 9, IntVal: 1354639136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{gopurs_runtime.Value{Type: 9, IntVal: 2309107923, UnsafePtr: unsafe.Pointer(&pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Product{(*pkg_Data_Maybe.Data_Data_Maybe_Just)(__local_var_10_4.UnsafePtr).V0, genericTop_prime_5_0})}})}
+if (__local_var_10_4.Type == 9 && __local_var_10_4.IntVal == 930809136) {
+__t5 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(&pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Product{(*pkg_Data_Maybe.Data_Data_Maybe_Just)(__local_var_10_4.UnsafePtr).V0, genericTop_prime_5_0})}})}
 goto end_branch_5
 } else {
 
 }
 }
 {
-__t5 = gopurs_runtime.Value{Type: 9, IntVal: 42808261, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}
+__t5 = gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}
 }
 end_branch_5:
 __t3 = __t5
@@ -790,28 +790,28 @@ v1_9_6 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericEnum1_3, "gen
 _ = v1_9_6
 var __t7 gopurs_runtime.Value
 {
-if (v1_9_6.Type == 9 && v1_9_6.IntVal == 1354639136) {
-__t7 = gopurs_runtime.Value{Type: 9, IntVal: 1354639136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{gopurs_runtime.Value{Type: 9, IntVal: 2309107923, UnsafePtr: unsafe.Pointer(&pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Product{(*pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Product)(v_8.UnsafePtr).V0, (*pkg_Data_Maybe.Data_Data_Maybe_Just)(v1_9_6.UnsafePtr).V0})}})}
+if (v1_9_6.Type == 9 && v1_9_6.IntVal == 930809136) {
+__t7 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(&pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Product{(*pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Product)(v_8.UnsafePtr).V0, (*pkg_Data_Maybe.Data_Data_Maybe_Just)(v1_9_6.UnsafePtr).V0})}})}
 goto end_branch_7
 } else {
 
 }
 }
 {
-if (v1_9_6.Type == 9 && v1_9_6.IntVal == 42808261) {
+if (v1_9_6.Type == 9 && v1_9_6.IntVal == 3589588149) {
 __local_var_10_8 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericEnum_0, "genericSucc'"), (*pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Product)(v_8.UnsafePtr).V0)
 _ = __local_var_10_8
 var __t9 gopurs_runtime.Value
 {
-if (__local_var_10_8.Type == 9 && __local_var_10_8.IntVal == 1354639136) {
-__t9 = gopurs_runtime.Value{Type: 9, IntVal: 1354639136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{gopurs_runtime.Value{Type: 9, IntVal: 2309107923, UnsafePtr: unsafe.Pointer(&pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Product{(*pkg_Data_Maybe.Data_Data_Maybe_Just)(__local_var_10_8.UnsafePtr).V0, genericBottom_prime_7_1})}})}
+if (__local_var_10_8.Type == 9 && __local_var_10_8.IntVal == 930809136) {
+__t9 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(&pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Product{(*pkg_Data_Maybe.Data_Data_Maybe_Just)(__local_var_10_8.UnsafePtr).V0, genericBottom_prime_7_1})}})}
 goto end_branch_9
 } else {
 
 }
 }
 {
-__t9 = gopurs_runtime.Value{Type: 9, IntVal: 42808261, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}
+__t9 = gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}
 }
 end_branch_9:
 __t7 = __t9

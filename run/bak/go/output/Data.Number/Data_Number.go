@@ -7,100 +7,100 @@ import (
 	unsafe "unsafe"
 )
 
-var tau gopurs_runtime.Value
+var cache_tau gopurs_runtime.Value
 var once_tau sync.Once
 func Get_tau() gopurs_runtime.Value {
 	once_tau.Do(func() {
-		tau = gopurs_runtime.Float(6.283185307179586)
+		cache_tau = gopurs_runtime.Float(6.283185307179586)
 	})
-	return tau
+	return cache_tau
 }
 
-var sqrt2 gopurs_runtime.Value
+var cache_sqrt2 gopurs_runtime.Value
 var once_sqrt2 sync.Once
 func Get_sqrt2() gopurs_runtime.Value {
 	once_sqrt2.Do(func() {
-		sqrt2 = gopurs_runtime.Float(1.4142135623730951)
+		cache_sqrt2 = gopurs_runtime.Float(1.4142135623730951)
 	})
-	return sqrt2
+	return cache_sqrt2
 }
 
-var sqrt1_2 gopurs_runtime.Value
+var cache_sqrt1_2 gopurs_runtime.Value
 var once_sqrt1_2 sync.Once
 func Get_sqrt1_2() gopurs_runtime.Value {
 	once_sqrt1_2.Do(func() {
-		sqrt1_2 = gopurs_runtime.Float(0.7071067811865476)
+		cache_sqrt1_2 = gopurs_runtime.Float(0.7071067811865476)
 	})
-	return sqrt1_2
+	return cache_sqrt1_2
 }
 
-var pi gopurs_runtime.Value
+var cache_pi gopurs_runtime.Value
 var once_pi sync.Once
 func Get_pi() gopurs_runtime.Value {
 	once_pi.Do(func() {
-		pi = gopurs_runtime.Float(3.141592653589793)
+		cache_pi = gopurs_runtime.Float(3.141592653589793)
 	})
-	return pi
+	return cache_pi
 }
 
-var log2e gopurs_runtime.Value
+var cache_log2e gopurs_runtime.Value
 var once_log2e sync.Once
 func Get_log2e() gopurs_runtime.Value {
 	once_log2e.Do(func() {
-		log2e = gopurs_runtime.Float(1.4426950408889634)
+		cache_log2e = gopurs_runtime.Float(1.4426950408889634)
 	})
-	return log2e
+	return cache_log2e
 }
 
-var log10e gopurs_runtime.Value
+var cache_log10e gopurs_runtime.Value
 var once_log10e sync.Once
 func Get_log10e() gopurs_runtime.Value {
 	once_log10e.Do(func() {
-		log10e = gopurs_runtime.Float(0.4342944819032518)
+		cache_log10e = gopurs_runtime.Float(0.4342944819032518)
 	})
-	return log10e
+	return cache_log10e
 }
 
-var ln2 gopurs_runtime.Value
+var cache_ln2 gopurs_runtime.Value
 var once_ln2 sync.Once
 func Get_ln2() gopurs_runtime.Value {
 	once_ln2.Do(func() {
-		ln2 = gopurs_runtime.Float(0.6931471805599453)
+		cache_ln2 = gopurs_runtime.Float(0.6931471805599453)
 	})
-	return ln2
+	return cache_ln2
 }
 
-var ln10 gopurs_runtime.Value
+var cache_ln10 gopurs_runtime.Value
 var once_ln10 sync.Once
 func Get_ln10() gopurs_runtime.Value {
 	once_ln10.Do(func() {
-		ln10 = gopurs_runtime.Float(2.302585092994046)
+		cache_ln10 = gopurs_runtime.Float(2.302585092994046)
 	})
-	return ln10
+	return cache_ln10
 }
 
-var fromString gopurs_runtime.Value
+var cache_fromString gopurs_runtime.Value
 var once_fromString sync.Once
 func Get_fromString() gopurs_runtime.Value {
 	once_fromString.Do(func() {
-		fromString = gopurs_runtime.Func(func(str_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_fromString = gopurs_runtime.Func(func(str_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var str_0 gopurs_runtime.Value = str_0_loop
 _ = str_0
-return gopurs_runtime.UncurriedApp4(Get_fromStringImpl(), str_0, Get_isFinite(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Value{Type: 9, IntVal: 42808261, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})})
+return gopurs_runtime.UncurriedApp4(Get_fromStringImpl(), str_0, Get_isFinite(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})})
 }()
 })
 	})
-	return fromString
+	return cache_fromString
 }
 
-var e gopurs_runtime.Value
+var cache_e gopurs_runtime.Value
 var once_e sync.Once
 func Get_e() gopurs_runtime.Value {
 	once_e.Do(func() {
-		e = gopurs_runtime.Float(2.718281828459045)
+		cache_e = gopurs_runtime.Float(2.718281828459045)
 	})
-	return e
+	return cache_e
 }
 
 

@@ -6,11 +6,11 @@ import (
 	pkg_Control_Monad_Identity_Trans "gopurs/output/Control.Monad.Identity.Trans"
 )
 
-var lower gopurs_runtime.Value
+var cache_lower gopurs_runtime.Value
 var once_lower sync.Once
 func Get_lower() gopurs_runtime.Value {
 	once_lower.Do(func() {
-		lower = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_lower = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
@@ -18,18 +18,18 @@ return gopurs_runtime.RecordGet(dict_0, "lower")
 }()
 })
 	})
-	return lower
+	return cache_lower
 }
 
-var comonadTransIdentityT gopurs_runtime.Value
+var cache_comonadTransIdentityT gopurs_runtime.Value
 var once_comonadTransIdentityT sync.Once
 func Get_comonadTransIdentityT() gopurs_runtime.Value {
 	once_comonadTransIdentityT.Do(func() {
-		comonadTransIdentityT = gopurs_runtime.RecordDict1("lower", gopurs_runtime.Func(func(dictComonad_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_comonadTransIdentityT = gopurs_runtime.RecordDict1("lower", gopurs_runtime.Func(func(dictComonad_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Control_Monad_Identity_Trans.Get_runIdentityT()
 }))
 	})
-	return comonadTransIdentityT
+	return cache_comonadTransIdentityT
 }
 
 

@@ -5,11 +5,11 @@ import (
 	sync "sync"
 )
 
-var Additive gopurs_runtime.Value
+var cache_Additive gopurs_runtime.Value
 var once_Additive sync.Once
 func Get_Additive() gopurs_runtime.Value {
 	once_Additive.Do(func() {
-		Additive = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Additive = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
@@ -17,31 +17,31 @@ return x_0
 }()
 })
 	})
-	return Additive
+	return cache_Additive
 }
 
-var showAdditive gopurs_runtime.Value
+var cache_showAdditive gopurs_runtime.Value
 var once_showAdditive sync.Once
 func Get_showAdditive() gopurs_runtime.Value {
 	once_showAdditive.Do(func() {
-		showAdditive = gopurs_runtime.Func(func(dictShow_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_showAdditive = gopurs_runtime.Func(func(dictShow_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictShow_0 gopurs_runtime.Value = dictShow_0_loop
 _ = dictShow_0
 return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str("(Additive " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), v_1).StrVal() + ")")
+return gopurs_runtime.Str((("(Additive ") + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), v_1).StrVal())) + (")"))
 }))
 }()
 })
 	})
-	return showAdditive
+	return cache_showAdditive
 }
 
-var semigroupAdditive gopurs_runtime.Value
+var cache_semigroupAdditive gopurs_runtime.Value
 var once_semigroupAdditive sync.Once
 func Get_semigroupAdditive() gopurs_runtime.Value {
 	once_semigroupAdditive.Do(func() {
-		semigroupAdditive = gopurs_runtime.Func(func(dictSemiring_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_semigroupAdditive = gopurs_runtime.Func(func(dictSemiring_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictSemiring_0 gopurs_runtime.Value = dictSemiring_0_loop
 _ = dictSemiring_0
@@ -51,14 +51,14 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemiring_0, "add"), v_
 }()
 })
 	})
-	return semigroupAdditive
+	return cache_semigroupAdditive
 }
 
-var ordAdditive gopurs_runtime.Value
+var cache_ordAdditive gopurs_runtime.Value
 var once_ordAdditive sync.Once
 func Get_ordAdditive() gopurs_runtime.Value {
 	once_ordAdditive.Do(func() {
-		ordAdditive = gopurs_runtime.Func(func(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_ordAdditive = gopurs_runtime.Func(func(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
@@ -66,14 +66,14 @@ return dictOrd_0
 }()
 })
 	})
-	return ordAdditive
+	return cache_ordAdditive
 }
 
-var monoidAdditive gopurs_runtime.Value
+var cache_monoidAdditive gopurs_runtime.Value
 var once_monoidAdditive sync.Once
 func Get_monoidAdditive() gopurs_runtime.Value {
 	once_monoidAdditive.Do(func() {
-		monoidAdditive = gopurs_runtime.Func(func(dictSemiring_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monoidAdditive = gopurs_runtime.Func(func(dictSemiring_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictSemiring_0 gopurs_runtime.Value = dictSemiring_0_loop
 _ = dictSemiring_0
@@ -87,25 +87,25 @@ return semigroupAdditive1_1_0
 }()
 })
 	})
-	return monoidAdditive
+	return cache_monoidAdditive
 }
 
-var functorAdditive gopurs_runtime.Value
+var cache_functorAdditive gopurs_runtime.Value
 var once_functorAdditive sync.Once
 func Get_functorAdditive() gopurs_runtime.Value {
 	once_functorAdditive.Do(func() {
-		functorAdditive = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, m_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_functorAdditive = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, m_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(f_0, m_1)
 }))
 	})
-	return functorAdditive
+	return cache_functorAdditive
 }
 
-var eqAdditive gopurs_runtime.Value
+var cache_eqAdditive gopurs_runtime.Value
 var once_eqAdditive sync.Once
 func Get_eqAdditive() gopurs_runtime.Value {
 	once_eqAdditive.Do(func() {
-		eqAdditive = gopurs_runtime.Func(func(dictEq_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_eqAdditive = gopurs_runtime.Func(func(dictEq_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
 _ = dictEq_0
@@ -113,38 +113,38 @@ return dictEq_0
 }()
 })
 	})
-	return eqAdditive
+	return cache_eqAdditive
 }
 
-var eq1Additive gopurs_runtime.Value
+var cache_eq1Additive gopurs_runtime.Value
 var once_eq1Additive sync.Once
 func Get_eq1Additive() gopurs_runtime.Value {
 	once_eq1Additive.Do(func() {
-		eq1Additive = gopurs_runtime.RecordDict1("eq1", gopurs_runtime.Func(func(dictEq_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_eq1Additive = gopurs_runtime.RecordDict1("eq1", gopurs_runtime.Func(func(dictEq_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordGet(dictEq_0, "eq")
 }))
 	})
-	return eq1Additive
+	return cache_eq1Additive
 }
 
-var ord1Additive gopurs_runtime.Value
+var cache_ord1Additive gopurs_runtime.Value
 var once_ord1Additive sync.Once
 func Get_ord1Additive() gopurs_runtime.Value {
 	once_ord1Additive.Do(func() {
-		ord1Additive = gopurs_runtime.RecordDict2("compare1", "Eq10", gopurs_runtime.Func(func(dictOrd_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_ord1Additive = gopurs_runtime.RecordDict2("compare1", "Eq10", gopurs_runtime.Func(func(dictOrd_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordGet(dictOrd_0, "compare")
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_eq1Additive()
 }))
 	})
-	return ord1Additive
+	return cache_ord1Additive
 }
 
-var boundedAdditive gopurs_runtime.Value
+var cache_boundedAdditive gopurs_runtime.Value
 var once_boundedAdditive sync.Once
 func Get_boundedAdditive() gopurs_runtime.Value {
 	once_boundedAdditive.Do(func() {
-		boundedAdditive = gopurs_runtime.Func(func(dictBounded_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_boundedAdditive = gopurs_runtime.Func(func(dictBounded_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictBounded_0 gopurs_runtime.Value = dictBounded_0_loop
 _ = dictBounded_0
@@ -152,57 +152,57 @@ return dictBounded_0
 }()
 })
 	})
-	return boundedAdditive
+	return cache_boundedAdditive
 }
 
-var applyAdditive gopurs_runtime.Value
+var cache_applyAdditive gopurs_runtime.Value
 var once_applyAdditive sync.Once
 func Get_applyAdditive() gopurs_runtime.Value {
 	once_applyAdditive.Do(func() {
-		applyAdditive = gopurs_runtime.RecordDict2("apply", "Functor0", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_applyAdditive = gopurs_runtime.RecordDict2("apply", "Functor0", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(v_0, v1_1)
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_functorAdditive()
 }))
 	})
-	return applyAdditive
+	return cache_applyAdditive
 }
 
-var bindAdditive gopurs_runtime.Value
+var cache_bindAdditive gopurs_runtime.Value
 var once_bindAdditive sync.Once
 func Get_bindAdditive() gopurs_runtime.Value {
 	once_bindAdditive.Do(func() {
-		bindAdditive = gopurs_runtime.RecordDict2("bind", "Apply0", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, f_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_bindAdditive = gopurs_runtime.RecordDict2("bind", "Apply0", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, f_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(f_1, v_0)
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_applyAdditive()
 }))
 	})
-	return bindAdditive
+	return cache_bindAdditive
 }
 
-var applicativeAdditive gopurs_runtime.Value
+var cache_applicativeAdditive gopurs_runtime.Value
 var once_applicativeAdditive sync.Once
 func Get_applicativeAdditive() gopurs_runtime.Value {
 	once_applicativeAdditive.Do(func() {
-		applicativeAdditive = gopurs_runtime.RecordDict2("pure", "Apply0", Get_Additive(), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_applicativeAdditive = gopurs_runtime.RecordDict2("pure", "Apply0", Get_Additive(), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_applyAdditive()
 }))
 	})
-	return applicativeAdditive
+	return cache_applicativeAdditive
 }
 
-var monadAdditive gopurs_runtime.Value
+var cache_monadAdditive gopurs_runtime.Value
 var once_monadAdditive sync.Once
 func Get_monadAdditive() gopurs_runtime.Value {
 	once_monadAdditive.Do(func() {
-		monadAdditive = gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monadAdditive = gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_applicativeAdditive()
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_bindAdditive()
 }))
 	})
-	return monadAdditive
+	return cache_monadAdditive
 }
 
 

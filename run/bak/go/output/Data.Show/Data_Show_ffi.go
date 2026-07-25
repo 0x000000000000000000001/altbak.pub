@@ -15,7 +15,7 @@ func ShowCharImpl(c string) string {
 func ShowStringImpl(s string) string {
 	return fmt.Sprintf("%q", s)
 }
-func ShowArrayImpl(f func(any) string, arr []any) string {
+func ShowArrayImpl(f func(interface{}) string, arr []interface{}) string {
 	res := "["
 	for i, v := range arr {
 		if i > 0 {
@@ -61,16 +61,16 @@ var _Gopurs_ShowStringImpl = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value)
 	go_res := ShowStringImpl(go_arg0)
 	return gopurs_runtime.Box(go_res)
 })
-func Call_showArrayImpl(arg0 func(any) string, arg1 []any) string {
+func Call_showArrayImpl(arg0 func(interface{}) string, arg1 []interface{}) string {
 	return ShowArrayImpl(arg0, arg1)
 }
 var _Gopurs_ShowArrayImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := func(p0_0 any) string {
+	go_arg0 := func(p0_0 interface{}) string {
 			inner_res0 := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 			return gopurs_runtime.Unbox[string](inner_res0)
 		}
-	arg1_arr := arg1.PtrVal().([]gopurs_runtime.Value)
-	go_arg1 := make([]any, len(arg1_arr))
+	arg1_arr := *(*[]gopurs_runtime.Value)(arg1.UnsafePtr)
+	go_arg1 := make([]interface{}, len(arg1_arr))
 	for i, v := range arg1_arr { go_arg1[i] = v }
 	go_res := ShowArrayImpl(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)

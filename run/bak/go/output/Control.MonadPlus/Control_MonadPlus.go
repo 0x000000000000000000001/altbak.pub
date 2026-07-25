@@ -7,17 +7,17 @@ import (
 	pkg_Control_Alternative "gopurs/output/Control.Alternative"
 )
 
-var monadPlusArray gopurs_runtime.Value
+var cache_monadPlusArray gopurs_runtime.Value
 var once_monadPlusArray sync.Once
 func Get_monadPlusArray() gopurs_runtime.Value {
 	once_monadPlusArray.Do(func() {
-		monadPlusArray = gopurs_runtime.RecordDict2("Monad0", "Alternative1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monadPlusArray = gopurs_runtime.RecordDict2("Monad0", "Alternative1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Control_Monad.Get_monadArray()
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Control_Alternative.Get_alternativeArray()
 }))
 	})
-	return monadPlusArray
+	return cache_monadPlusArray
 }
 
 

@@ -6,11 +6,11 @@ import (
 	pkg_Data_CommutativeRing "gopurs/output/Data.CommutativeRing"
 )
 
-var mod gopurs_runtime.Value
+var cache_mod gopurs_runtime.Value
 var once_mod sync.Once
 func Get_mod() gopurs_runtime.Value {
 	once_mod.Do(func() {
-		mod = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_mod = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
@@ -18,25 +18,25 @@ return gopurs_runtime.RecordGet(dict_0, "mod")
 }()
 })
 	})
-	return mod
+	return cache_mod
 }
 
-var gcd gopurs_runtime.Value
+var cache_gcd gopurs_runtime.Value
 var once_gcd sync.Once
 func Get_gcd() gopurs_runtime.Value {
 	once_gcd.Do(func() {
-		gcd = gopurs_runtime.Func2(func(dictEq_0_box gopurs_runtime.Value, dictEuclideanRing_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_gcd = gopurs_runtime.Func2(func(dictEq_0_box gopurs_runtime.Value, dictEuclideanRing_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_gcd(dictEq_0_box, dictEuclideanRing_1_box)
 })
 	})
-	return gcd
+	return cache_gcd
 }
 
-var euclideanRingNumber gopurs_runtime.Value
+var cache_euclideanRingNumber gopurs_runtime.Value
 var once_euclideanRingNumber sync.Once
 func Get_euclideanRingNumber() gopurs_runtime.Value {
 	once_euclideanRingNumber.Do(func() {
-		euclideanRingNumber = gopurs_runtime.RecordDict4("degree", "div", "mod", "CommutativeRing0", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_euclideanRingNumber = gopurs_runtime.RecordDict4("degree", "div", "mod", "CommutativeRing0", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Int(1)
 }), Get_numDiv(), gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Float(0.0)
@@ -44,25 +44,25 @@ return gopurs_runtime.Float(0.0)
 return pkg_Data_CommutativeRing.Get_commutativeRingNumber()
 }))
 	})
-	return euclideanRingNumber
+	return cache_euclideanRingNumber
 }
 
-var euclideanRingInt gopurs_runtime.Value
+var cache_euclideanRingInt gopurs_runtime.Value
 var once_euclideanRingInt sync.Once
 func Get_euclideanRingInt() gopurs_runtime.Value {
 	once_euclideanRingInt.Do(func() {
-		euclideanRingInt = gopurs_runtime.RecordDict4("degree", "div", "mod", "CommutativeRing0", Get_intDegree(), Get_intDiv(), Get_intMod(), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_euclideanRingInt = gopurs_runtime.RecordDict4("degree", "div", "mod", "CommutativeRing0", Get_intDegree(), Get_intDiv(), Get_intMod(), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_CommutativeRing.Get_commutativeRingInt()
 }))
 	})
-	return euclideanRingInt
+	return cache_euclideanRingInt
 }
 
-var div gopurs_runtime.Value
+var cache_div gopurs_runtime.Value
 var once_div sync.Once
 func Get_div() gopurs_runtime.Value {
 	once_div.Do(func() {
-		div = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_div = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
@@ -70,25 +70,25 @@ return gopurs_runtime.RecordGet(dict_0, "div")
 }()
 })
 	})
-	return div
+	return cache_div
 }
 
-var lcm gopurs_runtime.Value
+var cache_lcm gopurs_runtime.Value
 var once_lcm sync.Once
 func Get_lcm() gopurs_runtime.Value {
 	once_lcm.Do(func() {
-		lcm = gopurs_runtime.Func2(func(dictEq_0_box gopurs_runtime.Value, dictEuclideanRing_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_lcm = gopurs_runtime.Func2(func(dictEq_0_box gopurs_runtime.Value, dictEuclideanRing_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_lcm(dictEq_0_box, dictEuclideanRing_1_box)
 })
 	})
-	return lcm
+	return cache_lcm
 }
 
-var degree gopurs_runtime.Value
+var cache_degree gopurs_runtime.Value
 var once_degree sync.Once
 func Get_degree() gopurs_runtime.Value {
 	once_degree.Do(func() {
-		degree = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_degree = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
@@ -96,7 +96,7 @@ return gopurs_runtime.RecordGet(dict_0, "degree")
 }()
 })
 	})
-	return degree
+	return cache_degree
 }
 
 func Call_gcd(dictEq_0_loop gopurs_runtime.Value, dictEuclideanRing_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -112,7 +112,7 @@ _ = zero_2_0
 return gopurs_runtime.Func2(func(a_3 gopurs_runtime.Value, b_4 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
-if gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), b_4, zero_2_0).IntVal != 0 {
+if (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), b_4, zero_2_0).IntVal) != (0) {
 __t1 = a_3
 goto end_branch_1
 } else {
@@ -142,7 +142,7 @@ _ = gcd2_4_2
 return gopurs_runtime.Func2(func(a_5 gopurs_runtime.Value, b_6 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t3 gopurs_runtime.Value
 {
-if gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), a_5, zero_3_1).IntVal != 0 || gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), b_6, zero_3_1).IntVal != 0 {
+if ((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), a_5, zero_3_1).IntVal) != (0)) || ((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), b_6, zero_3_1).IntVal) != (0)) {
 __t3 = zero_3_1
 goto end_branch_3
 } else {

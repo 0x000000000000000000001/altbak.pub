@@ -10,69 +10,69 @@ import (
 	unsafe "unsafe"
 )
 
-var Left gopurs_runtime.Value
+var cache_Left gopurs_runtime.Value
 var once_Left sync.Once
 func Get_Left() gopurs_runtime.Value {
 	once_Left.Do(func() {
-		Left = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Left = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&Data_Data_Either_Left{value0})}
 })
 	})
-	return Left
+	return cache_Left
 }
 
-var Right gopurs_runtime.Value
+var cache_Right gopurs_runtime.Value
 var once_Right sync.Once
 func Get_Right() gopurs_runtime.Value {
 	once_Right.Do(func() {
-		Right = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Right = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&Data_Data_Either_Right{value0})}
 })
 	})
-	return Right
+	return cache_Right
 }
 
-var showEither gopurs_runtime.Value
+var cache_showEither gopurs_runtime.Value
 var once_showEither sync.Once
 func Get_showEither() gopurs_runtime.Value {
 	once_showEither.Do(func() {
-		showEither = gopurs_runtime.Func2(func(dictShow_0_box gopurs_runtime.Value, dictShow1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_showEither = gopurs_runtime.Func2(func(dictShow_0_box gopurs_runtime.Value, dictShow1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_showEither(dictShow_0_box, dictShow1_1_box)
 })
 	})
-	return showEither
+	return cache_showEither
 }
 
-var note_prime gopurs_runtime.Value
+var cache_note_prime gopurs_runtime.Value
 var once_note_prime sync.Once
 func Get_note_prime() gopurs_runtime.Value {
 	once_note_prime.Do(func() {
-		note_prime = gopurs_runtime.Func2(func(f_0_box gopurs_runtime.Value, v2_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_note_prime = gopurs_runtime.Func2(func(f_0_box gopurs_runtime.Value, v2_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_note_prime(f_0_box, v2_1_box)
 })
 	})
-	return note_prime
+	return cache_note_prime
 }
 
-var note gopurs_runtime.Value
+var cache_note gopurs_runtime.Value
 var once_note sync.Once
 func Get_note() gopurs_runtime.Value {
 	once_note.Do(func() {
-		note = gopurs_runtime.Func2(func(a_0_box gopurs_runtime.Value, v2_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_note = gopurs_runtime.Func2(func(a_0_box gopurs_runtime.Value, v2_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_note(a_0_box, v2_1_box)
 })
 	})
-	return note
+	return cache_note
 }
 
-var genericEither gopurs_runtime.Value
+var cache_genericEither gopurs_runtime.Value
 var once_genericEither sync.Once
 func Get_genericEither() gopurs_runtime.Value {
 	once_genericEither.Do(func() {
-		genericEither = gopurs_runtime.RecordDict2("to", "from", gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_genericEither = gopurs_runtime.RecordDict2("to", "from", gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (x_0.Type == 9 && x_0.IntVal == 164387955) {
+if (x_0.Type == 9 && x_0.IntVal == 3478632216) {
 __t0 = gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&Data_Data_Either_Left{(*pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Inl)(x_0.UnsafePtr).V0})}
 goto end_branch_0
 } else {
@@ -80,7 +80,7 @@ goto end_branch_0
 }
 }
 {
-if (x_0.Type == 9 && x_0.IntVal == 4051932077) {
+if (x_0.Type == 9 && x_0.IntVal == 492034566) {
 __t0 = gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&Data_Data_Either_Right{(*pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Inr)(x_0.UnsafePtr).V0})}
 goto end_branch_0
 } else {
@@ -96,7 +96,7 @@ return __t0
 var __t1 gopurs_runtime.Value
 {
 if (x_0.Type == 9 && x_0.IntVal == 3711209382) {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 164387955, UnsafePtr: unsafe.Pointer(&pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Inl{(*Data_Data_Either_Left)(x_0.UnsafePtr).V0})}
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 3478632216, UnsafePtr: unsafe.Pointer(&pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Inl{(*Data_Data_Either_Left)(x_0.UnsafePtr).V0})}
 goto end_branch_1
 } else {
 
@@ -104,7 +104,7 @@ goto end_branch_1
 }
 {
 if (x_0.Type == 9 && x_0.IntVal == 2465973597) {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 4051932077, UnsafePtr: unsafe.Pointer(&pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Inr{(*Data_Data_Either_Right)(x_0.UnsafePtr).V0})}
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 492034566, UnsafePtr: unsafe.Pointer(&pkg_Data_Generic_Rep.Data_Data_Generic_Rep_Inr{(*Data_Data_Either_Right)(x_0.UnsafePtr).V0})}
 goto end_branch_1
 } else {
 
@@ -117,14 +117,14 @@ end_branch_1:
 return __t1
 }))
 	})
-	return genericEither
+	return cache_genericEither
 }
 
-var functorEither gopurs_runtime.Value
+var cache_functorEither gopurs_runtime.Value
 var once_functorEither sync.Once
 func Get_functorEither() gopurs_runtime.Value {
 	once_functorEither.Do(func() {
-		functorEither = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, m_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_functorEither = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, m_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
 if (m_1.Type == 9 && m_1.IntVal == 3711209382) {
@@ -149,14 +149,14 @@ end_branch_0:
 return __t0
 }))
 	})
-	return functorEither
+	return cache_functorEither
 }
 
-var invariantEither gopurs_runtime.Value
+var cache_invariantEither gopurs_runtime.Value
 var once_invariantEither sync.Once
 func Get_invariantEither() gopurs_runtime.Value {
 	once_invariantEither.Do(func() {
-		invariantEither = gopurs_runtime.RecordDict1("imap", gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, m_2 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_invariantEither = gopurs_runtime.RecordDict1("imap", gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, m_2 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
 if (m_2.Type == 9 && m_2.IntVal == 3711209382) {
@@ -181,58 +181,58 @@ end_branch_0:
 return __t0
 }))
 	})
-	return invariantEither
+	return cache_invariantEither
 }
 
-var fromRight_prime gopurs_runtime.Value
+var cache_fromRight_prime gopurs_runtime.Value
 var once_fromRight_prime sync.Once
 func Get_fromRight_prime() gopurs_runtime.Value {
 	once_fromRight_prime.Do(func() {
-		fromRight_prime = gopurs_runtime.Func2(func(v_0_box gopurs_runtime.Value, v1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_fromRight_prime = gopurs_runtime.Func2(func(v_0_box gopurs_runtime.Value, v1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_fromRight_prime(v_0_box, v1_1_box)
 })
 	})
-	return fromRight_prime
+	return cache_fromRight_prime
 }
 
-var fromRight gopurs_runtime.Value
+var cache_fromRight gopurs_runtime.Value
 var once_fromRight sync.Once
 func Get_fromRight() gopurs_runtime.Value {
 	once_fromRight.Do(func() {
-		fromRight = gopurs_runtime.Func2(func(v_0_box gopurs_runtime.Value, v1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_fromRight = gopurs_runtime.Func2(func(v_0_box gopurs_runtime.Value, v1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_fromRight(v_0_box, v1_1_box)
 })
 	})
-	return fromRight
+	return cache_fromRight
 }
 
-var fromLeft_prime gopurs_runtime.Value
+var cache_fromLeft_prime gopurs_runtime.Value
 var once_fromLeft_prime sync.Once
 func Get_fromLeft_prime() gopurs_runtime.Value {
 	once_fromLeft_prime.Do(func() {
-		fromLeft_prime = gopurs_runtime.Func2(func(v_0_box gopurs_runtime.Value, v1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_fromLeft_prime = gopurs_runtime.Func2(func(v_0_box gopurs_runtime.Value, v1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_fromLeft_prime(v_0_box, v1_1_box)
 })
 	})
-	return fromLeft_prime
+	return cache_fromLeft_prime
 }
 
-var fromLeft gopurs_runtime.Value
+var cache_fromLeft gopurs_runtime.Value
 var once_fromLeft sync.Once
 func Get_fromLeft() gopurs_runtime.Value {
 	once_fromLeft.Do(func() {
-		fromLeft = gopurs_runtime.Func2(func(v_0_box gopurs_runtime.Value, v1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_fromLeft = gopurs_runtime.Func2(func(v_0_box gopurs_runtime.Value, v1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_fromLeft(v_0_box, v1_1_box)
 })
 	})
-	return fromLeft
+	return cache_fromLeft
 }
 
-var extendEither gopurs_runtime.Value
+var cache_extendEither gopurs_runtime.Value
 var once_extendEither sync.Once
 func Get_extendEither() gopurs_runtime.Value {
 	once_extendEither.Do(func() {
-		extendEither = gopurs_runtime.RecordDict2("extend", "Functor0", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_extendEither = gopurs_runtime.RecordDict2("extend", "Functor0", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
 if (v1_1.Type == 9 && v1_1.IntVal == 3711209382) {
@@ -251,25 +251,25 @@ return __t0
 return Get_functorEither()
 }))
 	})
-	return extendEither
+	return cache_extendEither
 }
 
-var eqEither gopurs_runtime.Value
+var cache_eqEither gopurs_runtime.Value
 var once_eqEither sync.Once
 func Get_eqEither() gopurs_runtime.Value {
 	once_eqEither.Do(func() {
-		eqEither = gopurs_runtime.Func2(func(dictEq_0_box gopurs_runtime.Value, dictEq1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_eqEither = gopurs_runtime.Func2(func(dictEq_0_box gopurs_runtime.Value, dictEq1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_eqEither(dictEq_0_box, dictEq1_1_box)
 })
 	})
-	return eqEither
+	return cache_eqEither
 }
 
-var ordEither gopurs_runtime.Value
+var cache_ordEither gopurs_runtime.Value
 var once_ordEither sync.Once
 func Get_ordEither() gopurs_runtime.Value {
 	once_ordEither.Do(func() {
-		ordEither = gopurs_runtime.Func(func(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_ordEither = gopurs_runtime.Func(func(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
@@ -282,14 +282,14 @@ eqEither2_4_2 := gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func2(func(x_4 
 var __t3 gopurs_runtime.Value
 {
 if (x_4.Type == 9 && x_4.IntVal == 3711209382) {
-__t3 = gopurs_runtime.Bool((y_5.Type == 9 && y_5.IntVal == 3711209382) && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "eq"), (*Data_Data_Either_Left)(x_4.UnsafePtr).V0, (*Data_Data_Either_Left)(y_5.UnsafePtr).V0).IntVal != 0)
+__t3 = gopurs_runtime.Bool(((y_5.Type == 9 && y_5.IntVal == 3711209382)) && ((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "eq"), (*Data_Data_Either_Left)(x_4.UnsafePtr).V0, (*Data_Data_Either_Left)(y_5.UnsafePtr).V0).IntVal) != (0)))
 goto end_branch_3
 } else {
 
 }
 }
 {
-__t3 = gopurs_runtime.Bool((x_4.Type == 9 && x_4.IntVal == 2465973597) && (y_5.Type == 9 && y_5.IntVal == 2465973597) && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_1, "eq"), (*Data_Data_Either_Right)(x_4.UnsafePtr).V0, (*Data_Data_Either_Right)(y_5.UnsafePtr).V0).IntVal != 0)
+__t3 = gopurs_runtime.Bool(((x_4.Type == 9 && x_4.IntVal == 2465973597)) && (((y_5.Type == 9 && y_5.IntVal == 2465973597)) && ((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_1, "eq"), (*Data_Data_Either_Right)(x_4.UnsafePtr).V0, (*Data_Data_Either_Right)(y_5.UnsafePtr).V0).IntVal) != (0))))
 }
 end_branch_3:
 return __t3
@@ -309,7 +309,7 @@ goto end_branch_5
 }
 }
 {
-__t5 = gopurs_runtime.Value{Type: 9, IntVal: 3866105248, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_LT{})}
+__t5 = gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_LT{})}
 }
 end_branch_5:
 __t4 = __t5
@@ -320,14 +320,14 @@ goto end_branch_4
 }
 {
 if (y_6.Type == 9 && y_6.IntVal == 3711209382) {
-__t4 = gopurs_runtime.Value{Type: 9, IntVal: 2098047435, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_GT{})}
+__t4 = gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_GT{})}
 goto end_branch_4
 } else {
 
 }
 }
 {
-if (x_5.Type == 9 && x_5.IntVal == 2465973597) && (y_6.Type == 9 && y_6.IntVal == 2465973597) {
+if ((x_5.Type == 9 && x_5.IntVal == 2465973597)) && ((y_6.Type == 9 && y_6.IntVal == 2465973597)) {
 __t4 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd1_2, "compare"), (*Data_Data_Either_Right)(x_5.UnsafePtr).V0, (*Data_Data_Either_Right)(y_6.UnsafePtr).V0)
 goto end_branch_4
 } else {
@@ -346,14 +346,14 @@ return eqEither2_4_2
 }()
 })
 	})
-	return ordEither
+	return cache_ordEither
 }
 
-var eq1Either gopurs_runtime.Value
+var cache_eq1Either gopurs_runtime.Value
 var once_eq1Either sync.Once
 func Get_eq1Either() gopurs_runtime.Value {
 	once_eq1Either.Do(func() {
-		eq1Either = gopurs_runtime.Func(func(dictEq_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_eq1Either = gopurs_runtime.Func(func(dictEq_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
 _ = dictEq_0
@@ -361,14 +361,14 @@ return gopurs_runtime.RecordDict1("eq1", gopurs_runtime.Func3(func(dictEq1_1 gop
 var __t0 gopurs_runtime.Value
 {
 if (x_2.Type == 9 && x_2.IntVal == 3711209382) {
-__t0 = gopurs_runtime.Bool((y_3.Type == 9 && y_3.IntVal == 3711209382) && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), (*Data_Data_Either_Left)(x_2.UnsafePtr).V0, (*Data_Data_Either_Left)(y_3.UnsafePtr).V0).IntVal != 0)
+__t0 = gopurs_runtime.Bool(((y_3.Type == 9 && y_3.IntVal == 3711209382)) && ((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), (*Data_Data_Either_Left)(x_2.UnsafePtr).V0, (*Data_Data_Either_Left)(y_3.UnsafePtr).V0).IntVal) != (0)))
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = gopurs_runtime.Bool((x_2.Type == 9 && x_2.IntVal == 2465973597) && (y_3.Type == 9 && y_3.IntVal == 2465973597) && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq1_1, "eq"), (*Data_Data_Either_Right)(x_2.UnsafePtr).V0, (*Data_Data_Either_Right)(y_3.UnsafePtr).V0).IntVal != 0)
+__t0 = gopurs_runtime.Bool(((x_2.Type == 9 && x_2.IntVal == 2465973597)) && (((y_3.Type == 9 && y_3.IntVal == 2465973597)) && ((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq1_1, "eq"), (*Data_Data_Either_Right)(x_2.UnsafePtr).V0, (*Data_Data_Either_Right)(y_3.UnsafePtr).V0).IntVal) != (0))))
 }
 end_branch_0:
 return __t0
@@ -376,14 +376,14 @@ return __t0
 }()
 })
 	})
-	return eq1Either
+	return cache_eq1Either
 }
 
-var ord1Either gopurs_runtime.Value
+var cache_ord1Either gopurs_runtime.Value
 var once_ord1Either sync.Once
 func Get_ord1Either() gopurs_runtime.Value {
 	once_ord1Either.Do(func() {
-		ord1Either = gopurs_runtime.Func(func(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_ord1Either = gopurs_runtime.Func(func(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
@@ -395,14 +395,14 @@ eq1Either1_3_2 := gopurs_runtime.RecordDict1("eq1", gopurs_runtime.Func3(func(di
 var __t3 gopurs_runtime.Value
 {
 if (x_4.Type == 9 && x_4.IntVal == 3711209382) {
-__t3 = gopurs_runtime.Bool((y_5.Type == 9 && y_5.IntVal == 3711209382) && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_1, "eq"), (*Data_Data_Either_Left)(x_4.UnsafePtr).V0, (*Data_Data_Either_Left)(y_5.UnsafePtr).V0).IntVal != 0)
+__t3 = gopurs_runtime.Bool(((y_5.Type == 9 && y_5.IntVal == 3711209382)) && ((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_1, "eq"), (*Data_Data_Either_Left)(x_4.UnsafePtr).V0, (*Data_Data_Either_Left)(y_5.UnsafePtr).V0).IntVal) != (0)))
 goto end_branch_3
 } else {
 
 }
 }
 {
-__t3 = gopurs_runtime.Bool((x_4.Type == 9 && x_4.IntVal == 2465973597) && (y_5.Type == 9 && y_5.IntVal == 2465973597) && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq1_3, "eq"), (*Data_Data_Either_Right)(x_4.UnsafePtr).V0, (*Data_Data_Either_Right)(y_5.UnsafePtr).V0).IntVal != 0)
+__t3 = gopurs_runtime.Bool(((x_4.Type == 9 && x_4.IntVal == 2465973597)) && (((y_5.Type == 9 && y_5.IntVal == 2465973597)) && ((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq1_3, "eq"), (*Data_Data_Either_Right)(x_4.UnsafePtr).V0, (*Data_Data_Either_Right)(y_5.UnsafePtr).V0).IntVal) != (0))))
 }
 end_branch_3:
 return __t3
@@ -416,32 +416,32 @@ return eq1Either1_3_2
 }()
 })
 	})
-	return ord1Either
+	return cache_ord1Either
 }
 
-var either gopurs_runtime.Value
+var cache_either gopurs_runtime.Value
 var once_either sync.Once
 func Get_either() gopurs_runtime.Value {
 	once_either.Do(func() {
-		either = gopurs_runtime.Func3(func(v_0_box gopurs_runtime.Value, v1_1_box gopurs_runtime.Value, v2_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_either = gopurs_runtime.Func3(func(v_0_box gopurs_runtime.Value, v1_1_box gopurs_runtime.Value, v2_2_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_either(v_0_box, v1_1_box, v2_2_box)
 })
 	})
-	return either
+	return cache_either
 }
 
-var hush gopurs_runtime.Value
+var cache_hush gopurs_runtime.Value
 var once_hush sync.Once
 func Get_hush() gopurs_runtime.Value {
 	once_hush.Do(func() {
-		hush = gopurs_runtime.Func(func(v2_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_hush = gopurs_runtime.Func(func(v2_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v2_0 gopurs_runtime.Value = v2_0_loop
 _ = v2_0
 var __t0 gopurs_runtime.Value
 {
 if (v2_0.Type == 9 && v2_0.IntVal == 3711209382) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 42808261, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}
 goto end_branch_0
 } else {
 
@@ -449,7 +449,7 @@ goto end_branch_0
 }
 {
 if (v2_0.Type == 9 && v2_0.IntVal == 2465973597) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 1354639136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{(*Data_Data_Either_Right)(v2_0.UnsafePtr).V0})}
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{(*Data_Data_Either_Right)(v2_0.UnsafePtr).V0})}
 goto end_branch_0
 } else {
 
@@ -463,14 +463,14 @@ return __t0
 }()
 })
 	})
-	return hush
+	return cache_hush
 }
 
-var isLeft gopurs_runtime.Value
+var cache_isLeft gopurs_runtime.Value
 var once_isLeft sync.Once
 func Get_isLeft() gopurs_runtime.Value {
 	once_isLeft.Do(func() {
-		isLeft = gopurs_runtime.Func(func(v2_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_isLeft = gopurs_runtime.Func(func(v2_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v2_0 gopurs_runtime.Value = v2_0_loop
 _ = v2_0
@@ -499,14 +499,14 @@ return __t0
 }()
 })
 	})
-	return isLeft
+	return cache_isLeft
 }
 
-var isRight gopurs_runtime.Value
+var cache_isRight gopurs_runtime.Value
 var once_isRight sync.Once
 func Get_isRight() gopurs_runtime.Value {
 	once_isRight.Do(func() {
-		isRight = gopurs_runtime.Func(func(v2_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_isRight = gopurs_runtime.Func(func(v2_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v2_0 gopurs_runtime.Value = v2_0_loop
 _ = v2_0
@@ -535,14 +535,14 @@ return __t0
 }()
 })
 	})
-	return isRight
+	return cache_isRight
 }
 
-var choose gopurs_runtime.Value
+var cache_choose gopurs_runtime.Value
 var once_choose sync.Once
 func Get_choose() gopurs_runtime.Value {
 	once_choose.Do(func() {
-		choose = gopurs_runtime.Func(func(dictAlt_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_choose = gopurs_runtime.Func(func(dictAlt_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictAlt_0 gopurs_runtime.Value = dictAlt_0_loop
 _ = dictAlt_0
@@ -554,14 +554,14 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictAlt_0, "alt"), gopurs_
 }()
 })
 	})
-	return choose
+	return cache_choose
 }
 
-var boundedEither gopurs_runtime.Value
+var cache_boundedEither gopurs_runtime.Value
 var once_boundedEither sync.Once
 func Get_boundedEither() gopurs_runtime.Value {
 	once_boundedEither.Do(func() {
-		boundedEither = gopurs_runtime.Func(func(dictBounded_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_boundedEither = gopurs_runtime.Func(func(dictBounded_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictBounded_0 gopurs_runtime.Value = dictBounded_0_loop
 _ = dictBounded_0
@@ -579,21 +579,21 @@ return ordEither2_4_2
 }()
 })
 	})
-	return boundedEither
+	return cache_boundedEither
 }
 
-var blush gopurs_runtime.Value
+var cache_blush gopurs_runtime.Value
 var once_blush sync.Once
 func Get_blush() gopurs_runtime.Value {
 	once_blush.Do(func() {
-		blush = gopurs_runtime.Func(func(v2_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_blush = gopurs_runtime.Func(func(v2_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v2_0 gopurs_runtime.Value = v2_0_loop
 _ = v2_0
 var __t0 gopurs_runtime.Value
 {
 if (v2_0.Type == 9 && v2_0.IntVal == 3711209382) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 1354639136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{(*Data_Data_Either_Left)(v2_0.UnsafePtr).V0})}
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Just{(*Data_Data_Either_Left)(v2_0.UnsafePtr).V0})}
 goto end_branch_0
 } else {
 
@@ -601,7 +601,7 @@ goto end_branch_0
 }
 {
 if (v2_0.Type == 9 && v2_0.IntVal == 2465973597) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 42808261, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Data_Data_Maybe_Nothing{})}
 goto end_branch_0
 } else {
 
@@ -615,14 +615,14 @@ return __t0
 }()
 })
 	})
-	return blush
+	return cache_blush
 }
 
-var applyEither gopurs_runtime.Value
+var cache_applyEither gopurs_runtime.Value
 var once_applyEither sync.Once
 func Get_applyEither() gopurs_runtime.Value {
 	once_applyEither.Do(func() {
-		applyEither = gopurs_runtime.RecordDict2("apply", "Functor0", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_applyEither = gopurs_runtime.RecordDict2("apply", "Functor0", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
 if (v_0.Type == 9 && v_0.IntVal == 3711209382) {
@@ -670,14 +670,14 @@ return __t0
 return Get_functorEither()
 }))
 	})
-	return applyEither
+	return cache_applyEither
 }
 
-var bindEither gopurs_runtime.Value
+var cache_bindEither gopurs_runtime.Value
 var once_bindEither sync.Once
 func Get_bindEither() gopurs_runtime.Value {
 	once_bindEither.Do(func() {
-		bindEither = gopurs_runtime.RecordDict2("bind", "Apply0", gopurs_runtime.Func(func(v2_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_bindEither = gopurs_runtime.RecordDict2("bind", "Apply0", gopurs_runtime.Func(func(v2_0 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
 if (v2_0.Type == 9 && v2_0.IntVal == 3711209382) {
@@ -712,14 +712,14 @@ return __t0
 return Get_applyEither()
 }))
 	})
-	return bindEither
+	return cache_bindEither
 }
 
-var semigroupEither gopurs_runtime.Value
+var cache_semigroupEither gopurs_runtime.Value
 var once_semigroupEither sync.Once
 func Get_semigroupEither() gopurs_runtime.Value {
 	once_semigroupEither.Do(func() {
-		semigroupEither = gopurs_runtime.Func(func(dictSemigroup_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_semigroupEither = gopurs_runtime.Func(func(dictSemigroup_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictSemigroup_0 gopurs_runtime.Value = dictSemigroup_0_loop
 _ = dictSemigroup_0
@@ -771,38 +771,38 @@ return __t0
 }()
 })
 	})
-	return semigroupEither
+	return cache_semigroupEither
 }
 
-var applicativeEither gopurs_runtime.Value
+var cache_applicativeEither gopurs_runtime.Value
 var once_applicativeEither sync.Once
 func Get_applicativeEither() gopurs_runtime.Value {
 	once_applicativeEither.Do(func() {
-		applicativeEither = gopurs_runtime.RecordDict2("pure", "Apply0", Get_Right(), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_applicativeEither = gopurs_runtime.RecordDict2("pure", "Apply0", Get_Right(), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_applyEither()
 }))
 	})
-	return applicativeEither
+	return cache_applicativeEither
 }
 
-var monadEither gopurs_runtime.Value
+var cache_monadEither gopurs_runtime.Value
 var once_monadEither sync.Once
 func Get_monadEither() gopurs_runtime.Value {
 	once_monadEither.Do(func() {
-		monadEither = gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monadEither = gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_applicativeEither()
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_bindEither()
 }))
 	})
-	return monadEither
+	return cache_monadEither
 }
 
-var altEither gopurs_runtime.Value
+var cache_altEither gopurs_runtime.Value
 var once_altEither sync.Once
 func Get_altEither() gopurs_runtime.Value {
 	once_altEither.Do(func() {
-		altEither = gopurs_runtime.RecordDict2("alt", "Functor0", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_altEither = gopurs_runtime.RecordDict2("alt", "Functor0", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
 if (v_0.Type == 9 && v_0.IntVal == 3711209382) {
@@ -821,7 +821,7 @@ return __t0
 return Get_functorEither()
 }))
 	})
-	return altEither
+	return cache_altEither
 }
 
 type Data_Data_Either_Left struct {
@@ -847,7 +847,7 @@ return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_2 gopurs_ru
 var __t0 gopurs_runtime.Value
 {
 if (v_2.Type == 9 && v_2.IntVal == 3711209382) {
-__t0 = gopurs_runtime.Str("(Left " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), (*Data_Data_Either_Left)(v_2.UnsafePtr).V0).StrVal() + ")")
+__t0 = gopurs_runtime.Str((("(Left ") + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), (*Data_Data_Either_Left)(v_2.UnsafePtr).V0).StrVal())) + (")"))
 goto end_branch_0
 } else {
 
@@ -855,7 +855,7 @@ goto end_branch_0
 }
 {
 if (v_2.Type == 9 && v_2.IntVal == 2465973597) {
-__t0 = gopurs_runtime.Str("(Right " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow1_1, "show"), (*Data_Data_Either_Right)(v_2.UnsafePtr).V0).StrVal() + ")")
+__t0 = gopurs_runtime.Str((("(Right ") + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow1_1, "show"), (*Data_Data_Either_Right)(v_2.UnsafePtr).V0).StrVal())) + (")"))
 goto end_branch_0
 } else {
 
@@ -876,7 +876,7 @@ var v2_1 gopurs_runtime.Value = v2_1_loop
 _ = v2_1
 var __t0 gopurs_runtime.Value
 {
-if (v2_1.Type == 9 && v2_1.IntVal == 42808261) {
+if (v2_1.Type == 9 && v2_1.IntVal == 3589588149) {
 __t0 = gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&Data_Data_Either_Left{gopurs_runtime.Apply(f_0, pkg_Data_Unit.Get_unit())})}
 goto end_branch_0
 } else {
@@ -884,7 +884,7 @@ goto end_branch_0
 }
 }
 {
-if (v2_1.Type == 9 && v2_1.IntVal == 1354639136) {
+if (v2_1.Type == 9 && v2_1.IntVal == 930809136) {
 __t0 = gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&Data_Data_Either_Right{(*pkg_Data_Maybe.Data_Data_Maybe_Just)(v2_1.UnsafePtr).V0})}
 goto end_branch_0
 } else {
@@ -905,7 +905,7 @@ var v2_1 gopurs_runtime.Value = v2_1_loop
 _ = v2_1
 var __t0 gopurs_runtime.Value
 {
-if (v2_1.Type == 9 && v2_1.IntVal == 42808261) {
+if (v2_1.Type == 9 && v2_1.IntVal == 3589588149) {
 __t0 = gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&Data_Data_Either_Left{a_0})}
 goto end_branch_0
 } else {
@@ -913,7 +913,7 @@ goto end_branch_0
 }
 }
 {
-if (v2_1.Type == 9 && v2_1.IntVal == 1354639136) {
+if (v2_1.Type == 9 && v2_1.IntVal == 930809136) {
 __t0 = gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&Data_Data_Either_Right{(*pkg_Data_Maybe.Data_Data_Maybe_Just)(v2_1.UnsafePtr).V0})}
 goto end_branch_0
 } else {
@@ -1020,14 +1020,14 @@ return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func2(func(x_2 gopurs_run
 var __t0 gopurs_runtime.Value
 {
 if (x_2.Type == 9 && x_2.IntVal == 3711209382) {
-__t0 = gopurs_runtime.Bool((y_3.Type == 9 && y_3.IntVal == 3711209382) && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), (*Data_Data_Either_Left)(x_2.UnsafePtr).V0, (*Data_Data_Either_Left)(y_3.UnsafePtr).V0).IntVal != 0)
+__t0 = gopurs_runtime.Bool(((y_3.Type == 9 && y_3.IntVal == 3711209382)) && ((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), (*Data_Data_Either_Left)(x_2.UnsafePtr).V0, (*Data_Data_Either_Left)(y_3.UnsafePtr).V0).IntVal) != (0)))
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = gopurs_runtime.Bool((x_2.Type == 9 && x_2.IntVal == 2465973597) && (y_3.Type == 9 && y_3.IntVal == 2465973597) && gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq1_1, "eq"), (*Data_Data_Either_Right)(x_2.UnsafePtr).V0, (*Data_Data_Either_Right)(y_3.UnsafePtr).V0).IntVal != 0)
+__t0 = gopurs_runtime.Bool(((x_2.Type == 9 && x_2.IntVal == 2465973597)) && (((y_3.Type == 9 && y_3.IntVal == 2465973597)) && ((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq1_1, "eq"), (*Data_Data_Either_Right)(x_2.UnsafePtr).V0, (*Data_Data_Either_Right)(y_3.UnsafePtr).V0).IntVal) != (0))))
 }
 end_branch_0:
 return __t0

@@ -5,48 +5,48 @@ import (
 	sync "sync"
 )
 
-var withCont gopurs_runtime.Value
+var cache_withCont gopurs_runtime.Value
 var once_withCont sync.Once
 func Get_withCont() gopurs_runtime.Value {
 	once_withCont.Do(func() {
-		withCont = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value, k_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_withCont = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value, k_2_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_withCont(f_0_box, v_1_box, k_2_box)
 })
 	})
-	return withCont
+	return cache_withCont
 }
 
-var runCont gopurs_runtime.Value
+var cache_runCont gopurs_runtime.Value
 var once_runCont sync.Once
 func Get_runCont() gopurs_runtime.Value {
 	once_runCont.Do(func() {
-		runCont = gopurs_runtime.Func2(func(cc_0_box gopurs_runtime.Value, k_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_runCont = gopurs_runtime.Func2(func(cc_0_box gopurs_runtime.Value, k_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_runCont(cc_0_box, k_1_box)
 })
 	})
-	return runCont
+	return cache_runCont
 }
 
-var mapCont gopurs_runtime.Value
+var cache_mapCont gopurs_runtime.Value
 var once_mapCont sync.Once
 func Get_mapCont() gopurs_runtime.Value {
 	once_mapCont.Do(func() {
-		mapCont = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value, k_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_mapCont = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value, k_2_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_mapCont(f_0_box, v_1_box, k_2_box)
 })
 	})
-	return mapCont
+	return cache_mapCont
 }
 
-var cont gopurs_runtime.Value
+var cache_cont gopurs_runtime.Value
 var once_cont sync.Once
 func Get_cont() gopurs_runtime.Value {
 	once_cont.Do(func() {
-		cont = gopurs_runtime.Func2(func(f_0_box gopurs_runtime.Value, c_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_cont = gopurs_runtime.Func2(func(f_0_box gopurs_runtime.Value, c_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_cont(f_0_box, c_1_box)
 })
 	})
-	return cont
+	return cache_cont
 }
 
 func Call_withCont(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value, k_2_loop gopurs_runtime.Value) gopurs_runtime.Value {

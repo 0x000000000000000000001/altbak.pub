@@ -8,15 +8,15 @@ import (
 	pkg_Data_Either "gopurs/output/Data.Either"
 )
 
-var unsafeRegex gopurs_runtime.Value
+var cache_unsafeRegex gopurs_runtime.Value
 var once_unsafeRegex sync.Once
 func Get_unsafeRegex() gopurs_runtime.Value {
 	once_unsafeRegex.Do(func() {
-		unsafeRegex = gopurs_runtime.Func2(func(s_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_unsafeRegex = gopurs_runtime.Func2(func(s_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_unsafeRegex(s_0_box, f_1_box)
 })
 	})
-	return unsafeRegex
+	return cache_unsafeRegex
 }
 
 func Call_unsafeRegex(s_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -28,7 +28,7 @@ __local_var_2_0 := gopurs_runtime.Apply2(pkg_Data_String_Regex.Get_regex(), s_0,
 _ = __local_var_2_0
 var __t1 gopurs_runtime.Value
 {
-if (__local_var_2_0.Type == 9 && __local_var_2_0.IntVal == 590902115) {
+if (__local_var_2_0.Type == 9 && __local_var_2_0.IntVal == 3711209382) {
 __t1 = gopurs_runtime.Apply(pkg_Partial.Get__crashWith(), (*pkg_Data_Either.Data_Data_Either_Left)(__local_var_2_0.UnsafePtr).V0)
 goto end_branch_1
 } else {
@@ -36,7 +36,7 @@ goto end_branch_1
 }
 }
 {
-if (__local_var_2_0.Type == 9 && __local_var_2_0.IntVal == 4096564120) {
+if (__local_var_2_0.Type == 9 && __local_var_2_0.IntVal == 2465973597) {
 __t1 = (*pkg_Data_Either.Data_Data_Either_Right)(__local_var_2_0.UnsafePtr).V0
 goto end_branch_1
 } else {

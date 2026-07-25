@@ -6,13 +6,13 @@ import (
 	pkg_Unsafe_Coerce "gopurs/output/Unsafe.Coerce"
 )
 
-var toEffect gopurs_runtime.Value
+var cache_toEffect gopurs_runtime.Value
 var once_toEffect sync.Once
 func Get_toEffect() gopurs_runtime.Value {
 	once_toEffect.Do(func() {
-		toEffect = pkg_Unsafe_Coerce.Get_unsafeCoerce()
+		cache_toEffect = pkg_Unsafe_Coerce.Get_unsafeCoerce()
 	})
-	return toEffect
+	return cache_toEffect
 }
 
 

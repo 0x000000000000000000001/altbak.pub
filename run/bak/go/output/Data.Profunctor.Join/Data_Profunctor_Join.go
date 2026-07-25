@@ -5,11 +5,11 @@ import (
 	sync "sync"
 )
 
-var Join gopurs_runtime.Value
+var cache_Join gopurs_runtime.Value
 var once_Join sync.Once
 func Get_Join() gopurs_runtime.Value {
 	once_Join.Do(func() {
-		Join = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Join = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
@@ -17,31 +17,31 @@ return x_0
 }()
 })
 	})
-	return Join
+	return cache_Join
 }
 
-var showJoin gopurs_runtime.Value
+var cache_showJoin gopurs_runtime.Value
 var once_showJoin sync.Once
 func Get_showJoin() gopurs_runtime.Value {
 	once_showJoin.Do(func() {
-		showJoin = gopurs_runtime.Func(func(dictShow_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_showJoin = gopurs_runtime.Func(func(dictShow_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictShow_0 gopurs_runtime.Value = dictShow_0_loop
 _ = dictShow_0
 return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str("(Join " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), v_1).StrVal() + ")")
+return gopurs_runtime.Str((("(Join ") + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), v_1).StrVal())) + (")"))
 }))
 }()
 })
 	})
-	return showJoin
+	return cache_showJoin
 }
 
-var semigroupJoin gopurs_runtime.Value
+var cache_semigroupJoin gopurs_runtime.Value
 var once_semigroupJoin sync.Once
 func Get_semigroupJoin() gopurs_runtime.Value {
 	once_semigroupJoin.Do(func() {
-		semigroupJoin = gopurs_runtime.Func(func(dictSemigroupoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_semigroupJoin = gopurs_runtime.Func(func(dictSemigroupoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictSemigroupoid_0 gopurs_runtime.Value = dictSemigroupoid_0_loop
 _ = dictSemigroupoid_0
@@ -51,14 +51,14 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroupoid_0, "compo
 }()
 })
 	})
-	return semigroupJoin
+	return cache_semigroupJoin
 }
 
-var ordJoin gopurs_runtime.Value
+var cache_ordJoin gopurs_runtime.Value
 var once_ordJoin sync.Once
 func Get_ordJoin() gopurs_runtime.Value {
 	once_ordJoin.Do(func() {
-		ordJoin = gopurs_runtime.Func(func(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_ordJoin = gopurs_runtime.Func(func(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
@@ -66,25 +66,25 @@ return dictOrd_0
 }()
 })
 	})
-	return ordJoin
+	return cache_ordJoin
 }
 
-var newtypeJoin gopurs_runtime.Value
+var cache_newtypeJoin gopurs_runtime.Value
 var once_newtypeJoin sync.Once
 func Get_newtypeJoin() gopurs_runtime.Value {
 	once_newtypeJoin.Do(func() {
-		newtypeJoin = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_newtypeJoin = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{}
 }))
 	})
-	return newtypeJoin
+	return cache_newtypeJoin
 }
 
-var monoidJoin gopurs_runtime.Value
+var cache_monoidJoin gopurs_runtime.Value
 var once_monoidJoin sync.Once
 func Get_monoidJoin() gopurs_runtime.Value {
 	once_monoidJoin.Do(func() {
-		monoidJoin = gopurs_runtime.Func(func(dictCategory_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monoidJoin = gopurs_runtime.Func(func(dictCategory_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictCategory_0 gopurs_runtime.Value = dictCategory_0_loop
 _ = dictCategory_0
@@ -100,14 +100,14 @@ return semigroupJoin1_2_1
 }()
 })
 	})
-	return monoidJoin
+	return cache_monoidJoin
 }
 
-var invariantJoin gopurs_runtime.Value
+var cache_invariantJoin gopurs_runtime.Value
 var once_invariantJoin sync.Once
 func Get_invariantJoin() gopurs_runtime.Value {
 	once_invariantJoin.Do(func() {
-		invariantJoin = gopurs_runtime.Func(func(dictProfunctor_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_invariantJoin = gopurs_runtime.Func(func(dictProfunctor_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictProfunctor_0 gopurs_runtime.Value = dictProfunctor_0_loop
 _ = dictProfunctor_0
@@ -117,14 +117,14 @@ return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictProfunctor_0, "dimap")
 }()
 })
 	})
-	return invariantJoin
+	return cache_invariantJoin
 }
 
-var eqJoin gopurs_runtime.Value
+var cache_eqJoin gopurs_runtime.Value
 var once_eqJoin sync.Once
 func Get_eqJoin() gopurs_runtime.Value {
 	once_eqJoin.Do(func() {
-		eqJoin = gopurs_runtime.Func(func(dictEq_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_eqJoin = gopurs_runtime.Func(func(dictEq_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
 _ = dictEq_0
@@ -132,7 +132,7 @@ return dictEq_0
 }()
 })
 	})
-	return eqJoin
+	return cache_eqJoin
 }
 
 

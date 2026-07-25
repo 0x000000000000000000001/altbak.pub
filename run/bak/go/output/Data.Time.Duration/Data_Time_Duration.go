@@ -9,11 +9,11 @@ import (
 	pkg_Control_Category "gopurs/output/Control.Category"
 )
 
-var Seconds gopurs_runtime.Value
+var cache_Seconds gopurs_runtime.Value
 var once_Seconds sync.Once
 func Get_Seconds() gopurs_runtime.Value {
 	once_Seconds.Do(func() {
-		Seconds = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Seconds = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
@@ -21,14 +21,14 @@ return x_0
 }()
 })
 	})
-	return Seconds
+	return cache_Seconds
 }
 
-var Minutes gopurs_runtime.Value
+var cache_Minutes gopurs_runtime.Value
 var once_Minutes sync.Once
 func Get_Minutes() gopurs_runtime.Value {
 	once_Minutes.Do(func() {
-		Minutes = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Minutes = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
@@ -36,14 +36,14 @@ return x_0
 }()
 })
 	})
-	return Minutes
+	return cache_Minutes
 }
 
-var Milliseconds gopurs_runtime.Value
+var cache_Milliseconds gopurs_runtime.Value
 var once_Milliseconds sync.Once
 func Get_Milliseconds() gopurs_runtime.Value {
 	once_Milliseconds.Do(func() {
-		Milliseconds = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Milliseconds = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
@@ -51,14 +51,14 @@ return x_0
 }()
 })
 	})
-	return Milliseconds
+	return cache_Milliseconds
 }
 
-var Hours gopurs_runtime.Value
+var cache_Hours gopurs_runtime.Value
 var once_Hours sync.Once
 func Get_Hours() gopurs_runtime.Value {
 	once_Hours.Do(func() {
-		Hours = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Hours = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
@@ -66,14 +66,14 @@ return x_0
 }()
 })
 	})
-	return Hours
+	return cache_Hours
 }
 
-var Days gopurs_runtime.Value
+var cache_Days gopurs_runtime.Value
 var once_Days sync.Once
 func Get_Days() gopurs_runtime.Value {
 	once_Days.Do(func() {
-		Days = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Days = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
@@ -81,14 +81,14 @@ return x_0
 }()
 })
 	})
-	return Days
+	return cache_Days
 }
 
-var toDuration gopurs_runtime.Value
+var cache_toDuration gopurs_runtime.Value
 var once_toDuration sync.Once
 func Get_toDuration() gopurs_runtime.Value {
 	once_toDuration.Do(func() {
-		toDuration = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_toDuration = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
@@ -96,279 +96,279 @@ return gopurs_runtime.RecordGet(dict_0, "toDuration")
 }()
 })
 	})
-	return toDuration
+	return cache_toDuration
 }
 
-var showSeconds gopurs_runtime.Value
+var cache_showSeconds gopurs_runtime.Value
 var once_showSeconds sync.Once
 func Get_showSeconds() gopurs_runtime.Value {
 	once_showSeconds.Do(func() {
-		showSeconds = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str("(Seconds " + gopurs_runtime.Apply(pkg_Data_Show.Get_showNumberImpl(), v_0).StrVal() + ")")
+		cache_showSeconds = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Str((("(Seconds ") + (gopurs_runtime.Apply(pkg_Data_Show.Get_showNumberImpl(), v_0).StrVal())) + (")"))
 }))
 	})
-	return showSeconds
+	return cache_showSeconds
 }
 
-var showMinutes gopurs_runtime.Value
+var cache_showMinutes gopurs_runtime.Value
 var once_showMinutes sync.Once
 func Get_showMinutes() gopurs_runtime.Value {
 	once_showMinutes.Do(func() {
-		showMinutes = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str("(Minutes " + gopurs_runtime.Apply(pkg_Data_Show.Get_showNumberImpl(), v_0).StrVal() + ")")
+		cache_showMinutes = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Str((("(Minutes ") + (gopurs_runtime.Apply(pkg_Data_Show.Get_showNumberImpl(), v_0).StrVal())) + (")"))
 }))
 	})
-	return showMinutes
+	return cache_showMinutes
 }
 
-var showMilliseconds gopurs_runtime.Value
+var cache_showMilliseconds gopurs_runtime.Value
 var once_showMilliseconds sync.Once
 func Get_showMilliseconds() gopurs_runtime.Value {
 	once_showMilliseconds.Do(func() {
-		showMilliseconds = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str("(Milliseconds " + gopurs_runtime.Apply(pkg_Data_Show.Get_showNumberImpl(), v_0).StrVal() + ")")
+		cache_showMilliseconds = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Str((("(Milliseconds ") + (gopurs_runtime.Apply(pkg_Data_Show.Get_showNumberImpl(), v_0).StrVal())) + (")"))
 }))
 	})
-	return showMilliseconds
+	return cache_showMilliseconds
 }
 
-var showHours gopurs_runtime.Value
+var cache_showHours gopurs_runtime.Value
 var once_showHours sync.Once
 func Get_showHours() gopurs_runtime.Value {
 	once_showHours.Do(func() {
-		showHours = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str("(Hours " + gopurs_runtime.Apply(pkg_Data_Show.Get_showNumberImpl(), v_0).StrVal() + ")")
+		cache_showHours = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Str((("(Hours ") + (gopurs_runtime.Apply(pkg_Data_Show.Get_showNumberImpl(), v_0).StrVal())) + (")"))
 }))
 	})
-	return showHours
+	return cache_showHours
 }
 
-var showDays gopurs_runtime.Value
+var cache_showDays gopurs_runtime.Value
 var once_showDays sync.Once
 func Get_showDays() gopurs_runtime.Value {
 	once_showDays.Do(func() {
-		showDays = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str("(Days " + gopurs_runtime.Apply(pkg_Data_Show.Get_showNumberImpl(), v_0).StrVal() + ")")
+		cache_showDays = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Str((("(Days ") + (gopurs_runtime.Apply(pkg_Data_Show.Get_showNumberImpl(), v_0).StrVal())) + (")"))
 }))
 	})
-	return showDays
+	return cache_showDays
 }
 
-var semigroupSeconds gopurs_runtime.Value
+var cache_semigroupSeconds gopurs_runtime.Value
 var once_semigroupSeconds sync.Once
 func Get_semigroupSeconds() gopurs_runtime.Value {
 	once_semigroupSeconds.Do(func() {
-		semigroupSeconds = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Float(v_0.FloatVal() + v1_1.FloatVal())
+		cache_semigroupSeconds = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Float((v_0.FloatVal()) + (v1_1.FloatVal()))
 }))
 	})
-	return semigroupSeconds
+	return cache_semigroupSeconds
 }
 
-var semigroupMinutes gopurs_runtime.Value
+var cache_semigroupMinutes gopurs_runtime.Value
 var once_semigroupMinutes sync.Once
 func Get_semigroupMinutes() gopurs_runtime.Value {
 	once_semigroupMinutes.Do(func() {
-		semigroupMinutes = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Float(v_0.FloatVal() + v1_1.FloatVal())
+		cache_semigroupMinutes = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Float((v_0.FloatVal()) + (v1_1.FloatVal()))
 }))
 	})
-	return semigroupMinutes
+	return cache_semigroupMinutes
 }
 
-var semigroupMilliseconds gopurs_runtime.Value
+var cache_semigroupMilliseconds gopurs_runtime.Value
 var once_semigroupMilliseconds sync.Once
 func Get_semigroupMilliseconds() gopurs_runtime.Value {
 	once_semigroupMilliseconds.Do(func() {
-		semigroupMilliseconds = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Float(v_0.FloatVal() + v1_1.FloatVal())
+		cache_semigroupMilliseconds = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Float((v_0.FloatVal()) + (v1_1.FloatVal()))
 }))
 	})
-	return semigroupMilliseconds
+	return cache_semigroupMilliseconds
 }
 
-var semigroupHours gopurs_runtime.Value
+var cache_semigroupHours gopurs_runtime.Value
 var once_semigroupHours sync.Once
 func Get_semigroupHours() gopurs_runtime.Value {
 	once_semigroupHours.Do(func() {
-		semigroupHours = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Float(v_0.FloatVal() + v1_1.FloatVal())
+		cache_semigroupHours = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Float((v_0.FloatVal()) + (v1_1.FloatVal()))
 }))
 	})
-	return semigroupHours
+	return cache_semigroupHours
 }
 
-var semigroupDays gopurs_runtime.Value
+var cache_semigroupDays gopurs_runtime.Value
 var once_semigroupDays sync.Once
 func Get_semigroupDays() gopurs_runtime.Value {
 	once_semigroupDays.Do(func() {
-		semigroupDays = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Float(v_0.FloatVal() + v1_1.FloatVal())
+		cache_semigroupDays = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Float((v_0.FloatVal()) + (v1_1.FloatVal()))
 }))
 	})
-	return semigroupDays
+	return cache_semigroupDays
 }
 
-var ordSeconds gopurs_runtime.Value
+var cache_ordSeconds gopurs_runtime.Value
 var once_ordSeconds sync.Once
 func Get_ordSeconds() gopurs_runtime.Value {
 	once_ordSeconds.Do(func() {
-		ordSeconds = pkg_Data_Ord.Get_ordNumber()
+		cache_ordSeconds = pkg_Data_Ord.Get_ordNumber()
 	})
-	return ordSeconds
+	return cache_ordSeconds
 }
 
-var ordMinutes gopurs_runtime.Value
+var cache_ordMinutes gopurs_runtime.Value
 var once_ordMinutes sync.Once
 func Get_ordMinutes() gopurs_runtime.Value {
 	once_ordMinutes.Do(func() {
-		ordMinutes = pkg_Data_Ord.Get_ordNumber()
+		cache_ordMinutes = pkg_Data_Ord.Get_ordNumber()
 	})
-	return ordMinutes
+	return cache_ordMinutes
 }
 
-var ordMilliseconds gopurs_runtime.Value
+var cache_ordMilliseconds gopurs_runtime.Value
 var once_ordMilliseconds sync.Once
 func Get_ordMilliseconds() gopurs_runtime.Value {
 	once_ordMilliseconds.Do(func() {
-		ordMilliseconds = pkg_Data_Ord.Get_ordNumber()
+		cache_ordMilliseconds = pkg_Data_Ord.Get_ordNumber()
 	})
-	return ordMilliseconds
+	return cache_ordMilliseconds
 }
 
-var ordHours gopurs_runtime.Value
+var cache_ordHours gopurs_runtime.Value
 var once_ordHours sync.Once
 func Get_ordHours() gopurs_runtime.Value {
 	once_ordHours.Do(func() {
-		ordHours = pkg_Data_Ord.Get_ordNumber()
+		cache_ordHours = pkg_Data_Ord.Get_ordNumber()
 	})
-	return ordHours
+	return cache_ordHours
 }
 
-var ordDays gopurs_runtime.Value
+var cache_ordDays gopurs_runtime.Value
 var once_ordDays sync.Once
 func Get_ordDays() gopurs_runtime.Value {
 	once_ordDays.Do(func() {
-		ordDays = pkg_Data_Ord.Get_ordNumber()
+		cache_ordDays = pkg_Data_Ord.Get_ordNumber()
 	})
-	return ordDays
+	return cache_ordDays
 }
 
-var newtypeSeconds gopurs_runtime.Value
+var cache_newtypeSeconds gopurs_runtime.Value
 var once_newtypeSeconds sync.Once
 func Get_newtypeSeconds() gopurs_runtime.Value {
 	once_newtypeSeconds.Do(func() {
-		newtypeSeconds = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_newtypeSeconds = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{}
 }))
 	})
-	return newtypeSeconds
+	return cache_newtypeSeconds
 }
 
-var newtypeMinutes gopurs_runtime.Value
+var cache_newtypeMinutes gopurs_runtime.Value
 var once_newtypeMinutes sync.Once
 func Get_newtypeMinutes() gopurs_runtime.Value {
 	once_newtypeMinutes.Do(func() {
-		newtypeMinutes = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_newtypeMinutes = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{}
 }))
 	})
-	return newtypeMinutes
+	return cache_newtypeMinutes
 }
 
-var newtypeMilliseconds gopurs_runtime.Value
+var cache_newtypeMilliseconds gopurs_runtime.Value
 var once_newtypeMilliseconds sync.Once
 func Get_newtypeMilliseconds() gopurs_runtime.Value {
 	once_newtypeMilliseconds.Do(func() {
-		newtypeMilliseconds = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_newtypeMilliseconds = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{}
 }))
 	})
-	return newtypeMilliseconds
+	return cache_newtypeMilliseconds
 }
 
-var newtypeHours gopurs_runtime.Value
+var cache_newtypeHours gopurs_runtime.Value
 var once_newtypeHours sync.Once
 func Get_newtypeHours() gopurs_runtime.Value {
 	once_newtypeHours.Do(func() {
-		newtypeHours = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_newtypeHours = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{}
 }))
 	})
-	return newtypeHours
+	return cache_newtypeHours
 }
 
-var newtypeDays gopurs_runtime.Value
+var cache_newtypeDays gopurs_runtime.Value
 var once_newtypeDays sync.Once
 func Get_newtypeDays() gopurs_runtime.Value {
 	once_newtypeDays.Do(func() {
-		newtypeDays = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_newtypeDays = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{}
 }))
 	})
-	return newtypeDays
+	return cache_newtypeDays
 }
 
-var monoidSeconds gopurs_runtime.Value
+var cache_monoidSeconds gopurs_runtime.Value
 var once_monoidSeconds sync.Once
 func Get_monoidSeconds() gopurs_runtime.Value {
 	once_monoidSeconds.Do(func() {
-		monoidSeconds = gopurs_runtime.RecordDict2("mempty", "Semigroup0", gopurs_runtime.Float(0.0), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monoidSeconds = gopurs_runtime.RecordDict2("mempty", "Semigroup0", gopurs_runtime.Float(0.0), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_semigroupSeconds()
 }))
 	})
-	return monoidSeconds
+	return cache_monoidSeconds
 }
 
-var monoidMinutes gopurs_runtime.Value
+var cache_monoidMinutes gopurs_runtime.Value
 var once_monoidMinutes sync.Once
 func Get_monoidMinutes() gopurs_runtime.Value {
 	once_monoidMinutes.Do(func() {
-		monoidMinutes = gopurs_runtime.RecordDict2("mempty", "Semigroup0", gopurs_runtime.Float(0.0), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monoidMinutes = gopurs_runtime.RecordDict2("mempty", "Semigroup0", gopurs_runtime.Float(0.0), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_semigroupMinutes()
 }))
 	})
-	return monoidMinutes
+	return cache_monoidMinutes
 }
 
-var monoidMilliseconds gopurs_runtime.Value
+var cache_monoidMilliseconds gopurs_runtime.Value
 var once_monoidMilliseconds sync.Once
 func Get_monoidMilliseconds() gopurs_runtime.Value {
 	once_monoidMilliseconds.Do(func() {
-		monoidMilliseconds = gopurs_runtime.RecordDict2("mempty", "Semigroup0", gopurs_runtime.Float(0.0), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monoidMilliseconds = gopurs_runtime.RecordDict2("mempty", "Semigroup0", gopurs_runtime.Float(0.0), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_semigroupMilliseconds()
 }))
 	})
-	return monoidMilliseconds
+	return cache_monoidMilliseconds
 }
 
-var monoidHours gopurs_runtime.Value
+var cache_monoidHours gopurs_runtime.Value
 var once_monoidHours sync.Once
 func Get_monoidHours() gopurs_runtime.Value {
 	once_monoidHours.Do(func() {
-		monoidHours = gopurs_runtime.RecordDict2("mempty", "Semigroup0", gopurs_runtime.Float(0.0), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monoidHours = gopurs_runtime.RecordDict2("mempty", "Semigroup0", gopurs_runtime.Float(0.0), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_semigroupHours()
 }))
 	})
-	return monoidHours
+	return cache_monoidHours
 }
 
-var monoidDays gopurs_runtime.Value
+var cache_monoidDays gopurs_runtime.Value
 var once_monoidDays sync.Once
 func Get_monoidDays() gopurs_runtime.Value {
 	once_monoidDays.Do(func() {
-		monoidDays = gopurs_runtime.RecordDict2("mempty", "Semigroup0", gopurs_runtime.Float(0.0), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monoidDays = gopurs_runtime.RecordDict2("mempty", "Semigroup0", gopurs_runtime.Float(0.0), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_semigroupDays()
 }))
 	})
-	return monoidDays
+	return cache_monoidDays
 }
 
-var fromDuration gopurs_runtime.Value
+var cache_fromDuration gopurs_runtime.Value
 var once_fromDuration sync.Once
 func Get_fromDuration() gopurs_runtime.Value {
 	once_fromDuration.Do(func() {
-		fromDuration = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_fromDuration = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
@@ -376,135 +376,135 @@ return gopurs_runtime.RecordGet(dict_0, "fromDuration")
 }()
 })
 	})
-	return fromDuration
+	return cache_fromDuration
 }
 
-var negateDuration gopurs_runtime.Value
+var cache_negateDuration gopurs_runtime.Value
 var once_negateDuration sync.Once
 func Get_negateDuration() gopurs_runtime.Value {
 	once_negateDuration.Do(func() {
-		negateDuration = gopurs_runtime.Func2(func(dictDuration_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_negateDuration = gopurs_runtime.Func2(func(dictDuration_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_negateDuration(dictDuration_0_box, x_1_box)
 })
 	})
-	return negateDuration
+	return cache_negateDuration
 }
 
-var eqSeconds gopurs_runtime.Value
+var cache_eqSeconds gopurs_runtime.Value
 var once_eqSeconds sync.Once
 func Get_eqSeconds() gopurs_runtime.Value {
 	once_eqSeconds.Do(func() {
-		eqSeconds = pkg_Data_Eq.Get_eqNumber()
+		cache_eqSeconds = pkg_Data_Eq.Get_eqNumber()
 	})
-	return eqSeconds
+	return cache_eqSeconds
 }
 
-var eqMinutes gopurs_runtime.Value
+var cache_eqMinutes gopurs_runtime.Value
 var once_eqMinutes sync.Once
 func Get_eqMinutes() gopurs_runtime.Value {
 	once_eqMinutes.Do(func() {
-		eqMinutes = pkg_Data_Eq.Get_eqNumber()
+		cache_eqMinutes = pkg_Data_Eq.Get_eqNumber()
 	})
-	return eqMinutes
+	return cache_eqMinutes
 }
 
-var eqMilliseconds gopurs_runtime.Value
+var cache_eqMilliseconds gopurs_runtime.Value
 var once_eqMilliseconds sync.Once
 func Get_eqMilliseconds() gopurs_runtime.Value {
 	once_eqMilliseconds.Do(func() {
-		eqMilliseconds = pkg_Data_Eq.Get_eqNumber()
+		cache_eqMilliseconds = pkg_Data_Eq.Get_eqNumber()
 	})
-	return eqMilliseconds
+	return cache_eqMilliseconds
 }
 
-var eqHours gopurs_runtime.Value
+var cache_eqHours gopurs_runtime.Value
 var once_eqHours sync.Once
 func Get_eqHours() gopurs_runtime.Value {
 	once_eqHours.Do(func() {
-		eqHours = pkg_Data_Eq.Get_eqNumber()
+		cache_eqHours = pkg_Data_Eq.Get_eqNumber()
 	})
-	return eqHours
+	return cache_eqHours
 }
 
-var eqDays gopurs_runtime.Value
+var cache_eqDays gopurs_runtime.Value
 var once_eqDays sync.Once
 func Get_eqDays() gopurs_runtime.Value {
 	once_eqDays.Do(func() {
-		eqDays = pkg_Data_Eq.Get_eqNumber()
+		cache_eqDays = pkg_Data_Eq.Get_eqNumber()
 	})
-	return eqDays
+	return cache_eqDays
 }
 
-var durationSeconds gopurs_runtime.Value
+var cache_durationSeconds gopurs_runtime.Value
 var once_durationSeconds sync.Once
 func Get_durationSeconds() gopurs_runtime.Value {
 	once_durationSeconds.Do(func() {
-		durationSeconds = gopurs_runtime.RecordDict2("fromDuration", "toDuration", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Float(v_0.FloatVal() * 1000.0)
+		cache_durationSeconds = gopurs_runtime.RecordDict2("fromDuration", "toDuration", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Float((v_0.FloatVal()) * (1000.0))
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Float(v_0.FloatVal() / 1000.0)
+return gopurs_runtime.Float((v_0.FloatVal()) / (1000.0))
 }))
 	})
-	return durationSeconds
+	return cache_durationSeconds
 }
 
-var durationMinutes gopurs_runtime.Value
+var cache_durationMinutes gopurs_runtime.Value
 var once_durationMinutes sync.Once
 func Get_durationMinutes() gopurs_runtime.Value {
 	once_durationMinutes.Do(func() {
-		durationMinutes = gopurs_runtime.RecordDict2("fromDuration", "toDuration", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Float(v_0.FloatVal() * 60000.0)
+		cache_durationMinutes = gopurs_runtime.RecordDict2("fromDuration", "toDuration", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Float((v_0.FloatVal()) * (60000.0))
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Float(v_0.FloatVal() / 60000.0)
+return gopurs_runtime.Float((v_0.FloatVal()) / (60000.0))
 }))
 	})
-	return durationMinutes
+	return cache_durationMinutes
 }
 
-var durationMilliseconds gopurs_runtime.Value
+var cache_durationMilliseconds gopurs_runtime.Value
 var once_durationMilliseconds sync.Once
 func Get_durationMilliseconds() gopurs_runtime.Value {
 	once_durationMilliseconds.Do(func() {
-		durationMilliseconds = gopurs_runtime.RecordDict2("fromDuration", "toDuration", gopurs_runtime.RecordGet(pkg_Control_Category.Get_categoryFn(), "identity"), gopurs_runtime.RecordGet(pkg_Control_Category.Get_categoryFn(), "identity"))
+		cache_durationMilliseconds = gopurs_runtime.RecordDict2("fromDuration", "toDuration", gopurs_runtime.RecordGet(pkg_Control_Category.Get_categoryFn(), "identity"), gopurs_runtime.RecordGet(pkg_Control_Category.Get_categoryFn(), "identity"))
 	})
-	return durationMilliseconds
+	return cache_durationMilliseconds
 }
 
-var durationHours gopurs_runtime.Value
+var cache_durationHours gopurs_runtime.Value
 var once_durationHours sync.Once
 func Get_durationHours() gopurs_runtime.Value {
 	once_durationHours.Do(func() {
-		durationHours = gopurs_runtime.RecordDict2("fromDuration", "toDuration", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Float(v_0.FloatVal() * 3600000.0)
+		cache_durationHours = gopurs_runtime.RecordDict2("fromDuration", "toDuration", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Float((v_0.FloatVal()) * (3600000.0))
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Float(v_0.FloatVal() / 3600000.0)
+return gopurs_runtime.Float((v_0.FloatVal()) / (3600000.0))
 }))
 	})
-	return durationHours
+	return cache_durationHours
 }
 
-var durationDays gopurs_runtime.Value
+var cache_durationDays gopurs_runtime.Value
 var once_durationDays sync.Once
 func Get_durationDays() gopurs_runtime.Value {
 	once_durationDays.Do(func() {
-		durationDays = gopurs_runtime.RecordDict2("fromDuration", "toDuration", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Float(v_0.FloatVal() * 86400000.0)
+		cache_durationDays = gopurs_runtime.RecordDict2("fromDuration", "toDuration", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Float((v_0.FloatVal()) * (86400000.0))
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Float(v_0.FloatVal() / 86400000.0)
+return gopurs_runtime.Float((v_0.FloatVal()) / (86400000.0))
 }))
 	})
-	return durationDays
+	return cache_durationDays
 }
 
-var convertDuration gopurs_runtime.Value
+var cache_convertDuration gopurs_runtime.Value
 var once_convertDuration sync.Once
 func Get_convertDuration() gopurs_runtime.Value {
 	once_convertDuration.Do(func() {
-		convertDuration = gopurs_runtime.Func3(func(dictDuration_0_box gopurs_runtime.Value, dictDuration1_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_convertDuration = gopurs_runtime.Func3(func(dictDuration_0_box gopurs_runtime.Value, dictDuration1_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_convertDuration(dictDuration_0_box, dictDuration1_1_box, x_2_box)
 })
 	})
-	return convertDuration
+	return cache_convertDuration
 }
 
 func Call_negateDuration(dictDuration_0_loop gopurs_runtime.Value, x_1_loop gopurs_runtime.Value) gopurs_runtime.Value {

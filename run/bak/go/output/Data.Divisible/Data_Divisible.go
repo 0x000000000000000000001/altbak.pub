@@ -8,24 +8,24 @@ import (
 	unsafe "unsafe"
 )
 
-var divisiblePredicate gopurs_runtime.Value
+var cache_divisiblePredicate gopurs_runtime.Value
 var once_divisiblePredicate sync.Once
 func Get_divisiblePredicate() gopurs_runtime.Value {
 	once_divisiblePredicate.Do(func() {
-		divisiblePredicate = gopurs_runtime.RecordDict2("conquer", "Divide0", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_divisiblePredicate = gopurs_runtime.RecordDict2("conquer", "Divide0", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Bool(true)
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Divide.Get_dividePredicate()
 }))
 	})
-	return divisiblePredicate
+	return cache_divisiblePredicate
 }
 
-var divisibleOp gopurs_runtime.Value
+var cache_divisibleOp gopurs_runtime.Value
 var once_divisibleOp sync.Once
 func Get_divisibleOp() gopurs_runtime.Value {
 	once_divisibleOp.Do(func() {
-		divisibleOp = gopurs_runtime.Func(func(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_divisibleOp = gopurs_runtime.Func(func(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
 _ = dictMonoid_0
@@ -41,40 +41,40 @@ return divideOp_1_0
 }()
 })
 	})
-	return divisibleOp
+	return cache_divisibleOp
 }
 
-var divisibleEquivalence gopurs_runtime.Value
+var cache_divisibleEquivalence gopurs_runtime.Value
 var once_divisibleEquivalence sync.Once
 func Get_divisibleEquivalence() gopurs_runtime.Value {
 	once_divisibleEquivalence.Do(func() {
-		divisibleEquivalence = gopurs_runtime.RecordDict2("conquer", "Divide0", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_divisibleEquivalence = gopurs_runtime.RecordDict2("conquer", "Divide0", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Bool(true)
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Divide.Get_divideEquivalence()
 }))
 	})
-	return divisibleEquivalence
+	return cache_divisibleEquivalence
 }
 
-var divisibleComparison gopurs_runtime.Value
+var cache_divisibleComparison gopurs_runtime.Value
 var once_divisibleComparison sync.Once
 func Get_divisibleComparison() gopurs_runtime.Value {
 	once_divisibleComparison.Do(func() {
-		divisibleComparison = gopurs_runtime.RecordDict2("conquer", "Divide0", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 1111389260, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_EQ{})}
+		cache_divisibleComparison = gopurs_runtime.RecordDict2("conquer", "Divide0", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: unsafe.Pointer(&pkg_Data_Ordering.Data_Data_Ordering_EQ{})}
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Divide.Get_divideComparison()
 }))
 	})
-	return divisibleComparison
+	return cache_divisibleComparison
 }
 
-var conquer gopurs_runtime.Value
+var cache_conquer gopurs_runtime.Value
 var once_conquer sync.Once
 func Get_conquer() gopurs_runtime.Value {
 	once_conquer.Do(func() {
-		conquer = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_conquer = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
@@ -82,7 +82,7 @@ return gopurs_runtime.RecordGet(dict_0, "conquer")
 }()
 })
 	})
-	return conquer
+	return cache_conquer
 }
 
 

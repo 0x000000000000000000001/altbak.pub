@@ -9,11 +9,11 @@ import (
 	unsafe "unsafe"
 )
 
-var map_ gopurs_runtime.Value
+var cache_map_ gopurs_runtime.Value
 var once_map_ sync.Once
 func Get_map_() gopurs_runtime.Value {
 	once_map_.Do(func() {
-		map_ = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_map_ = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
@@ -21,25 +21,25 @@ return gopurs_runtime.RecordGet(dict_0, "map")
 }()
 })
 	})
-	return map_
+	return cache_map_
 }
 
-var mapFlipped gopurs_runtime.Value
+var cache_mapFlipped gopurs_runtime.Value
 var once_mapFlipped sync.Once
 func Get_mapFlipped() gopurs_runtime.Value {
 	once_mapFlipped.Do(func() {
-		mapFlipped = gopurs_runtime.Func3(func(dictFunctor_0_box gopurs_runtime.Value, fa_1_box gopurs_runtime.Value, f_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_mapFlipped = gopurs_runtime.Func3(func(dictFunctor_0_box gopurs_runtime.Value, fa_1_box gopurs_runtime.Value, f_2_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_mapFlipped(dictFunctor_0_box, fa_1_box, f_2_box)
 })
 	})
-	return mapFlipped
+	return cache_mapFlipped
 }
 
-var void gopurs_runtime.Value
+var cache_void gopurs_runtime.Value
 var once_void sync.Once
 func Get_void() gopurs_runtime.Value {
 	once_void.Do(func() {
-		void = gopurs_runtime.Func(func(dictFunctor_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_void = gopurs_runtime.Func(func(dictFunctor_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictFunctor_0 gopurs_runtime.Value = dictFunctor_0_loop
 _ = dictFunctor_0
@@ -49,69 +49,69 @@ return pkg_Data_Unit.Get_unit()
 }()
 })
 	})
-	return void
+	return cache_void
 }
 
-var voidLeft gopurs_runtime.Value
+var cache_voidLeft gopurs_runtime.Value
 var once_voidLeft sync.Once
 func Get_voidLeft() gopurs_runtime.Value {
 	once_voidLeft.Do(func() {
-		voidLeft = gopurs_runtime.Func3(func(dictFunctor_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_voidLeft = gopurs_runtime.Func3(func(dictFunctor_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_voidLeft(dictFunctor_0_box, f_1_box, x_2_box)
 })
 	})
-	return voidLeft
+	return cache_voidLeft
 }
 
-var voidRight gopurs_runtime.Value
+var cache_voidRight gopurs_runtime.Value
 var once_voidRight sync.Once
 func Get_voidRight() gopurs_runtime.Value {
 	once_voidRight.Do(func() {
-		voidRight = gopurs_runtime.Func2(func(dictFunctor_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_voidRight = gopurs_runtime.Func2(func(dictFunctor_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_voidRight(dictFunctor_0_box, x_1_box)
 })
 	})
-	return voidRight
+	return cache_voidRight
 }
 
-var functorProxy gopurs_runtime.Value
+var cache_functorProxy gopurs_runtime.Value
 var once_functorProxy sync.Once
 func Get_functorProxy() gopurs_runtime.Value {
 	once_functorProxy.Do(func() {
-		functorProxy = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 3178699476, UnsafePtr: unsafe.Pointer(&pkg_Type_Proxy.Data_Type_Proxy_Proxy{})}
+		cache_functorProxy = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: unsafe.Pointer(&pkg_Type_Proxy.Data_Type_Proxy_Proxy{})}
 }))
 	})
-	return functorProxy
+	return cache_functorProxy
 }
 
-var functorFn gopurs_runtime.Value
+var cache_functorFn gopurs_runtime.Value
 var once_functorFn sync.Once
 func Get_functorFn() gopurs_runtime.Value {
 	once_functorFn.Do(func() {
-		functorFn = gopurs_runtime.RecordDict1("map", gopurs_runtime.RecordGet(pkg_Control_Semigroupoid.Get_semigroupoidFn(), "compose"))
+		cache_functorFn = gopurs_runtime.RecordDict1("map", gopurs_runtime.RecordGet(pkg_Control_Semigroupoid.Get_semigroupoidFn(), "compose"))
 	})
-	return functorFn
+	return cache_functorFn
 }
 
-var functorArray gopurs_runtime.Value
+var cache_functorArray gopurs_runtime.Value
 var once_functorArray sync.Once
 func Get_functorArray() gopurs_runtime.Value {
 	once_functorArray.Do(func() {
-		functorArray = gopurs_runtime.RecordDict1("map", Get_arrayMap())
+		cache_functorArray = gopurs_runtime.RecordDict1("map", Get_arrayMap())
 	})
-	return functorArray
+	return cache_functorArray
 }
 
-var flap gopurs_runtime.Value
+var cache_flap gopurs_runtime.Value
 var once_flap sync.Once
 func Get_flap() gopurs_runtime.Value {
 	once_flap.Do(func() {
-		flap = gopurs_runtime.Func3(func(dictFunctor_0_box gopurs_runtime.Value, ff_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_flap = gopurs_runtime.Func3(func(dictFunctor_0_box gopurs_runtime.Value, ff_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_flap(dictFunctor_0_box, ff_1_box, x_2_box)
 })
 	})
-	return flap
+	return cache_flap
 }
 
 func Call_mapFlipped(dictFunctor_0_loop gopurs_runtime.Value, fa_1_loop gopurs_runtime.Value, f_2_loop gopurs_runtime.Value) gopurs_runtime.Value {

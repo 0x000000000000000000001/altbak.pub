@@ -10,11 +10,11 @@ import (
 	pkg_Test_AffOperations "gopurs/output/Test.AffOperations"
 )
 
-var main gopurs_runtime.Value
+var cache_main gopurs_runtime.Value
 var once_main sync.Once
 func Get_main() gopurs_runtime.Value {
 	once_main.Do(func() {
-		main = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_main = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 _dollar__unused_0_0 := gopurs_runtime.Apply(pkg_App.Get_main(), gopurs_runtime.Value{})
 _ = _dollar__unused_0_0
 _dollar__unused_1_1 := gopurs_runtime.Apply(pkg_Test_FileOps.Get_describe(), gopurs_runtime.Value{})
@@ -34,7 +34,7 @@ _ = _dollar__unused_7_7
 return gopurs_runtime.Apply(pkg_Test_AffOperations.Get_act(), gopurs_runtime.Value{})
 })
 	})
-	return main
+	return cache_main
 }
 
 

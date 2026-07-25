@@ -8,11 +8,11 @@ import (
 	unsafe "unsafe"
 )
 
-var right gopurs_runtime.Value
+var cache_right gopurs_runtime.Value
 var once_right sync.Once
 func Get_right() gopurs_runtime.Value {
 	once_right.Do(func() {
-		right = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_right = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
@@ -20,14 +20,14 @@ return gopurs_runtime.RecordGet(dict_0, "right")
 }()
 })
 	})
-	return right
+	return cache_right
 }
 
-var left gopurs_runtime.Value
+var cache_left gopurs_runtime.Value
 var once_left sync.Once
 func Get_left() gopurs_runtime.Value {
 	once_left.Do(func() {
-		left = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_left = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
@@ -35,48 +35,48 @@ return gopurs_runtime.RecordGet(dict_0, "left")
 }()
 })
 	})
-	return left
+	return cache_left
 }
 
-var splitChoice gopurs_runtime.Value
+var cache_splitChoice gopurs_runtime.Value
 var once_splitChoice sync.Once
 func Get_splitChoice() gopurs_runtime.Value {
 	once_splitChoice.Do(func() {
-		splitChoice = gopurs_runtime.Func4(func(dictSemigroupoid_0_box gopurs_runtime.Value, dictChoice_1_box gopurs_runtime.Value, l_2_box gopurs_runtime.Value, r_3_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_splitChoice = gopurs_runtime.Func4(func(dictSemigroupoid_0_box gopurs_runtime.Value, dictChoice_1_box gopurs_runtime.Value, l_2_box gopurs_runtime.Value, r_3_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_splitChoice(dictSemigroupoid_0_box, dictChoice_1_box, l_2_box, r_3_box)
 })
 	})
-	return splitChoice
+	return cache_splitChoice
 }
 
-var fanin gopurs_runtime.Value
+var cache_fanin gopurs_runtime.Value
 var once_fanin sync.Once
 func Get_fanin() gopurs_runtime.Value {
 	once_fanin.Do(func() {
-		fanin = gopurs_runtime.Func2(func(dictSemigroupoid_0_box gopurs_runtime.Value, dictChoice_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_fanin = gopurs_runtime.Func2(func(dictSemigroupoid_0_box gopurs_runtime.Value, dictChoice_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_fanin(dictSemigroupoid_0_box, dictChoice_1_box)
 })
 	})
-	return fanin
+	return cache_fanin
 }
 
-var choiceFn gopurs_runtime.Value
+var cache_choiceFn gopurs_runtime.Value
 var once_choiceFn sync.Once
 func Get_choiceFn() gopurs_runtime.Value {
 	once_choiceFn.Do(func() {
-		choiceFn = gopurs_runtime.RecordDict3("left", "right", "Profunctor0", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_choiceFn = gopurs_runtime.RecordDict3("left", "right", "Profunctor0", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (v1_1.Type == 9 && v1_1.IntVal == 590902115) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 590902115, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Data_Data_Either_Left{gopurs_runtime.Apply(v_0, (*pkg_Data_Either.Data_Data_Either_Left)(v1_1.UnsafePtr).V0)})}
+if (v1_1.Type == 9 && v1_1.IntVal == 3711209382) {
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Data_Data_Either_Left{gopurs_runtime.Apply(v_0, (*pkg_Data_Either.Data_Data_Either_Left)(v1_1.UnsafePtr).V0)})}
 goto end_branch_0
 } else {
 
 }
 }
 {
-if (v1_1.Type == 9 && v1_1.IntVal == 4096564120) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 4096564120, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Data_Data_Either_Right{(*pkg_Data_Either.Data_Data_Either_Right)(v1_1.UnsafePtr).V0})}
+if (v1_1.Type == 9 && v1_1.IntVal == 2465973597) {
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Data_Data_Either_Right{(*pkg_Data_Either.Data_Data_Either_Right)(v1_1.UnsafePtr).V0})}
 goto end_branch_0
 } else {
 
@@ -91,7 +91,7 @@ return __t0
 return pkg_Data_Profunctor.Get_profunctorFn()
 }))
 	})
-	return choiceFn
+	return cache_choiceFn
 }
 
 func Call_splitChoice(dictSemigroupoid_0_loop gopurs_runtime.Value, dictChoice_1_loop gopurs_runtime.Value, l_2_loop gopurs_runtime.Value, r_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -117,7 +117,7 @@ return gopurs_runtime.Func2(func(l_3 gopurs_runtime.Value, r_4 gopurs_runtime.Va
 return gopurs_runtime.Apply2(rmap_2_0, gopurs_runtime.Func(func(v2_5 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
-if (v2_5.Type == 9 && v2_5.IntVal == 590902115) {
+if (v2_5.Type == 9 && v2_5.IntVal == 3711209382) {
 __t1 = (*pkg_Data_Either.Data_Data_Either_Left)(v2_5.UnsafePtr).V0
 goto end_branch_1
 } else {
@@ -125,7 +125,7 @@ goto end_branch_1
 }
 }
 {
-if (v2_5.Type == 9 && v2_5.IntVal == 4096564120) {
+if (v2_5.Type == 9 && v2_5.IntVal == 2465973597) {
 __t1 = (*pkg_Data_Either.Data_Data_Either_Right)(v2_5.UnsafePtr).V0
 goto end_branch_1
 } else {

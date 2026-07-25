@@ -3,123 +3,123 @@ package Effect_Uncurried
 import "gopurs/output/gopurs_runtime"
 
 
-func MkEffectFn1(f any) func(any) func() any {
-	return func(a any) func() any {
-		return func() any {
-			return f.(func(any) any)(a)
+func MkEffectFn1(f interface{}) func(interface{}) func() interface{} {
+	return func(a interface{}) func() interface{} {
+		return func() interface{} {
+			return f.(func(interface{}) interface{})(a)
 		}
 	}
 }
 
-func MkEffectFn2(f any) func(any, any) func() any {
-	return func(a, b any) func() any {
-		return func() any {
-			return f.(func(any) any)(a).(func(any) any)(b)
+func MkEffectFn2(f interface{}) func(interface{}, interface{}) func() interface{} {
+	return func(a, b interface{}) func() interface{} {
+		return func() interface{} {
+			return f.(func(interface{}) interface{})(a).(func(interface{}) interface{})(b)
 		}
 	}
 }
 
-func MkEffectFn3(f any) func(any, any, any) func() any {
-	return func(a, b, c any) func() any {
-		return func() any {
-			return f.(func(any) any)(a).(func(any) any)(b).(func(any) any)(c)
+func MkEffectFn3(f interface{}) func(interface{}, interface{}, interface{}) func() interface{} {
+	return func(a, b, c interface{}) func() interface{} {
+		return func() interface{} {
+			return f.(func(interface{}) interface{})(a).(func(interface{}) interface{})(b).(func(interface{}) interface{})(c)
 		}
 	}
 }
 
-func MkEffectFn4(f any) func(any, any, any, any) func() any {
-	return func(a, b, c, d any) func() any {
-		return func() any {
-			return f.(func(any) any)(a).(func(any) any)(b).(func(any) any)(c).(func(any) any)(d)
+func MkEffectFn4(f interface{}) func(interface{}, interface{}, interface{}, interface{}) func() interface{} {
+	return func(a, b, c, d interface{}) func() interface{} {
+		return func() interface{} {
+			return f.(func(interface{}) interface{})(a).(func(interface{}) interface{})(b).(func(interface{}) interface{})(c).(func(interface{}) interface{})(d)
 		}
 	}
 }
 
-func MkEffectFn5(f any) func(any, any, any, any, any) func() any {
-	return func(a, b, c, d, e any) func() any {
-		return func() any {
-			return f.(func(any) any)(a).(func(any) any)(b).(func(any) any)(c).(func(any) any)(d).(func(any) any)(e)
+func MkEffectFn5(f interface{}) func(interface{}, interface{}, interface{}, interface{}, interface{}) func() interface{} {
+	return func(a, b, c, d, e interface{}) func() interface{} {
+		return func() interface{} {
+			return f.(func(interface{}) interface{})(a).(func(interface{}) interface{})(b).(func(interface{}) interface{})(c).(func(interface{}) interface{})(d).(func(interface{}) interface{})(e)
 		}
 	}
 }
 
-func MkEffectFn6(f any) func(any, any, any, any, any, any) func() any {
-	return func(a, b, c, d, e, g any) func() any {
-		return func() any {
-			return f.(func(any) any)(a).(func(any) any)(b).(func(any) any)(c).(func(any) any)(d).(func(any) any)(e).(func(any) any)(g)
+func MkEffectFn6(f interface{}) func(interface{}, interface{}, interface{}, interface{}, interface{}, interface{}) func() interface{} {
+	return func(a, b, c, d, e, g interface{}) func() interface{} {
+		return func() interface{} {
+			return f.(func(interface{}) interface{})(a).(func(interface{}) interface{})(b).(func(interface{}) interface{})(c).(func(interface{}) interface{})(d).(func(interface{}) interface{})(e).(func(interface{}) interface{})(g)
 		}
 	}
 }
 
-func MkEffectFn7(f any) func(any, any, any, any, any, any, any) func() any {
-	return func(a, b, c, d, e, g, h any) func() any {
-		return func() any {
-			return f.(func(any) any)(a).(func(any) any)(b).(func(any) any)(c).(func(any) any)(d).(func(any) any)(e).(func(any) any)(g).(func(any) any)(h)
+func MkEffectFn7(f interface{}) func(interface{}, interface{}, interface{}, interface{}, interface{}, interface{}, interface{}) func() interface{} {
+	return func(a, b, c, d, e, g, h interface{}) func() interface{} {
+		return func() interface{} {
+			return f.(func(interface{}) interface{})(a).(func(interface{}) interface{})(b).(func(interface{}) interface{})(c).(func(interface{}) interface{})(d).(func(interface{}) interface{})(e).(func(interface{}) interface{})(g).(func(interface{}) interface{})(h)
 		}
 	}
 }
 
-func MkEffectFn8(f any) func(any, any, any, any, any, any, any, any) func() any {
-	return func(a, b, c, d, e, g, h, i any) func() any {
-		return func() any {
-			return f.(func(any) any)(a).(func(any) any)(b).(func(any) any)(c).(func(any) any)(d).(func(any) any)(e).(func(any) any)(g).(func(any) any)(h).(func(any) any)(i)
+func MkEffectFn8(f interface{}) func(interface{}, interface{}, interface{}, interface{}, interface{}, interface{}, interface{}, interface{}) func() interface{} {
+	return func(a, b, c, d, e, g, h, i interface{}) func() interface{} {
+		return func() interface{} {
+			return f.(func(interface{}) interface{})(a).(func(interface{}) interface{})(b).(func(interface{}) interface{})(c).(func(interface{}) interface{})(d).(func(interface{}) interface{})(e).(func(interface{}) interface{})(g).(func(interface{}) interface{})(h).(func(interface{}) interface{})(i)
 		}
 	}
 }
 
-func MkEffectFn9(f any) func(any, any, any, any, any, any, any, any, any) func() any {
-	return func(a, b, c, d, e, g, h, i, j any) func() any {
-		return func() any {
-			return f.(func(any) any)(a).(func(any) any)(b).(func(any) any)(c).(func(any) any)(d).(func(any) any)(e).(func(any) any)(g).(func(any) any)(h).(func(any) any)(i).(func(any) any)(j)
+func MkEffectFn9(f interface{}) func(interface{}, interface{}, interface{}, interface{}, interface{}, interface{}, interface{}, interface{}, interface{}) func() interface{} {
+	return func(a, b, c, d, e, g, h, i, j interface{}) func() interface{} {
+		return func() interface{} {
+			return f.(func(interface{}) interface{})(a).(func(interface{}) interface{})(b).(func(interface{}) interface{})(c).(func(interface{}) interface{})(d).(func(interface{}) interface{})(e).(func(interface{}) interface{})(g).(func(interface{}) interface{})(h).(func(interface{}) interface{})(i).(func(interface{}) interface{})(j)
 		}
 	}
 }
 
-func MkEffectFn10(f any) func(any, any, any, any, any, any, any, any, any, any) func() any {
-	return func(a, b, c, d, e, g, h, i, j, k any) func() any {
-		return func() any {
-			return f.(func(any) any)(a).(func(any) any)(b).(func(any) any)(c).(func(any) any)(d).(func(any) any)(e).(func(any) any)(g).(func(any) any)(h).(func(any) any)(i).(func(any) any)(j).(func(any) any)(k)
+func MkEffectFn10(f interface{}) func(interface{}, interface{}, interface{}, interface{}, interface{}, interface{}, interface{}, interface{}, interface{}, interface{}) func() interface{} {
+	return func(a, b, c, d, e, g, h, i, j, k interface{}) func() interface{} {
+		return func() interface{} {
+			return f.(func(interface{}) interface{})(a).(func(interface{}) interface{})(b).(func(interface{}) interface{})(c).(func(interface{}) interface{})(d).(func(interface{}) interface{})(e).(func(interface{}) interface{})(g).(func(interface{}) interface{})(h).(func(interface{}) interface{})(i).(func(interface{}) interface{})(j).(func(interface{}) interface{})(k)
 		}
 	}
 }
 
-func RunEffectFn1(f any) func(any) func() any {
-	return func(a any) func() any {
-		return func() any {
-			return f.(func(any) any)(a)
+func RunEffectFn1(f interface{}) func(interface{}) func() interface{} {
+	return func(a interface{}) func() interface{} {
+		return func() interface{} {
+			return f.(func(interface{}) interface{})(a)
 		}
 	}
 }
 
-func RunEffectFn2(f any) func(any) func(any) func() any {
-	return func(a any) func(any) func() any {
-		return func(b any) func() any {
-			return func() any {
-				return f.(func(any) any)(a, b)
+func RunEffectFn2(f interface{}) func(interface{}) func(interface{}) func() interface{} {
+	return func(a interface{}) func(interface{}) func() interface{} {
+		return func(b interface{}) func() interface{} {
+			return func() interface{} {
+				return f.(func(interface{}) interface{})(a, b)
 			}
 		}
 	}
 }
 
-func RunEffectFn3(f any) func(any) func(any) func(any) func() any {
-	return func(a any) func(any) func(any) func() any {
-		return func(b any) func(any) func() any {
-			return func(c any) func() any {
-				return func() any {
-					return f.(func(any) any)(a, b, c)
+func RunEffectFn3(f interface{}) func(interface{}) func(interface{}) func(interface{}) func() interface{} {
+	return func(a interface{}) func(interface{}) func(interface{}) func() interface{} {
+		return func(b interface{}) func(interface{}) func() interface{} {
+			return func(c interface{}) func() interface{} {
+				return func() interface{} {
+					return f.(func(interface{}) interface{})(a, b, c)
 				}
 			}
 		}
 	}
 }
 
-func RunEffectFn4(f any) func(any) func(any) func(any) func(any) func() any {
-	return func(a any) func(any) func(any) func(any) func() any {
-		return func(b any) func(any) func(any) func() any {
-			return func(c any) func(any) func() any {
-				return func(d any) func() any {
-					return func() any {
-						return f.(func(any) any)(a, b, c, d)
+func RunEffectFn4(f interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func() interface{} {
+	return func(a interface{}) func(interface{}) func(interface{}) func(interface{}) func() interface{} {
+		return func(b interface{}) func(interface{}) func(interface{}) func() interface{} {
+			return func(c interface{}) func(interface{}) func() interface{} {
+				return func(d interface{}) func() interface{} {
+					return func() interface{} {
+						return f.(func(interface{}) interface{})(a, b, c, d)
 					}
 				}
 			}
@@ -127,14 +127,14 @@ func RunEffectFn4(f any) func(any) func(any) func(any) func(any) func() any {
 	}
 }
 
-func RunEffectFn5(f any) func(any) func(any) func(any) func(any) func(any) func() any {
-	return func(a any) func(any) func(any) func(any) func(any) func() any {
-		return func(b any) func(any) func(any) func(any) func() any {
-			return func(c any) func(any) func(any) func() any {
-				return func(d any) func(any) func() any {
-					return func(e any) func() any {
-						return func() any {
-							return f.(func(any) any)(a, b, c, d, e)
+func RunEffectFn5(f interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func() interface{} {
+	return func(a interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func() interface{} {
+		return func(b interface{}) func(interface{}) func(interface{}) func(interface{}) func() interface{} {
+			return func(c interface{}) func(interface{}) func(interface{}) func() interface{} {
+				return func(d interface{}) func(interface{}) func() interface{} {
+					return func(e interface{}) func() interface{} {
+						return func() interface{} {
+							return f.(func(interface{}) interface{})(a, b, c, d, e)
 						}
 					}
 				}
@@ -143,17 +143,17 @@ func RunEffectFn5(f any) func(any) func(any) func(any) func(any) func(any) func(
 	}
 }
 
-func RunEffectFn6(f any) func(any) func(any) func(any) func(any) func(any) func(any) func() any {
-	return func(a any) func(any) func(any) func(any) func(any) func(any) func() any {
-		return func(b any) func(any) func(any) func(any) func(any) func() any {
-			return func(c any) func(any) func(any) func(any) func() any {
-				return func(d any) func(any) func(any) func() any {
-					return func(e any) func(any) func() any {
-						return func(g any) func() any {
-							return func() any {
-								var args []any
+func RunEffectFn6(f interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func() interface{} {
+	return func(a interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func() interface{} {
+		return func(b interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func() interface{} {
+			return func(c interface{}) func(interface{}) func(interface{}) func(interface{}) func() interface{} {
+				return func(d interface{}) func(interface{}) func(interface{}) func() interface{} {
+					return func(e interface{}) func(interface{}) func() interface{} {
+						return func(g interface{}) func() interface{} {
+							return func() interface{} {
+								var args []interface{}
 								args = append(args, a, b, c, d, e, g)
-								return f.(func(any) any)(args)
+								return f.(func(interface{}) interface{})(args)
 							}
 						}
 					}
@@ -163,18 +163,18 @@ func RunEffectFn6(f any) func(any) func(any) func(any) func(any) func(any) func(
 	}
 }
 
-func RunEffectFn7(f any) func(any) func(any) func(any) func(any) func(any) func(any) func(any) func() any {
-	return func(a any) func(any) func(any) func(any) func(any) func(any) func(any) func() any {
-		return func(b any) func(any) func(any) func(any) func(any) func(any) func() any {
-			return func(c any) func(any) func(any) func(any) func(any) func() any {
-				return func(d any) func(any) func(any) func(any) func() any {
-					return func(e any) func(any) func(any) func() any {
-						return func(g any) func(any) func() any {
-							return func(h any) func() any {
-								return func() any {
-									var args []any
+func RunEffectFn7(f interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func() interface{} {
+	return func(a interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func() interface{} {
+		return func(b interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func() interface{} {
+			return func(c interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func() interface{} {
+				return func(d interface{}) func(interface{}) func(interface{}) func(interface{}) func() interface{} {
+					return func(e interface{}) func(interface{}) func(interface{}) func() interface{} {
+						return func(g interface{}) func(interface{}) func() interface{} {
+							return func(h interface{}) func() interface{} {
+								return func() interface{} {
+									var args []interface{}
 									args = append(args, a, b, c, d, e, g, h)
-									return f.(func(any) any)(args)
+									return f.(func(interface{}) interface{})(args)
 								}
 							}
 						}
@@ -185,19 +185,19 @@ func RunEffectFn7(f any) func(any) func(any) func(any) func(any) func(any) func(
 	}
 }
 
-func RunEffectFn8(f any) func(any) func(any) func(any) func(any) func(any) func(any) func(any) func(any) func() any {
-	return func(a any) func(any) func(any) func(any) func(any) func(any) func(any) func(any) func() any {
-		return func(b any) func(any) func(any) func(any) func(any) func(any) func(any) func() any {
-			return func(c any) func(any) func(any) func(any) func(any) func(any) func() any {
-				return func(d any) func(any) func(any) func(any) func(any) func() any {
-					return func(e any) func(any) func(any) func(any) func() any {
-						return func(g any) func(any) func(any) func() any {
-							return func(h any) func(any) func() any {
-								return func(i any) func() any {
-									return func() any {
-										var args []any
+func RunEffectFn8(f interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func() interface{} {
+	return func(a interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func() interface{} {
+		return func(b interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func() interface{} {
+			return func(c interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func() interface{} {
+				return func(d interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func() interface{} {
+					return func(e interface{}) func(interface{}) func(interface{}) func(interface{}) func() interface{} {
+						return func(g interface{}) func(interface{}) func(interface{}) func() interface{} {
+							return func(h interface{}) func(interface{}) func() interface{} {
+								return func(i interface{}) func() interface{} {
+									return func() interface{} {
+										var args []interface{}
 										args = append(args, a, b, c, d, e, g, h, i)
-										return f.(func(any) any)(args)
+										return f.(func(interface{}) interface{})(args)
 									}
 								}
 							}
@@ -209,20 +209,20 @@ func RunEffectFn8(f any) func(any) func(any) func(any) func(any) func(any) func(
 	}
 }
 
-func RunEffectFn9(f any) func(any) func(any) func(any) func(any) func(any) func(any) func(any) func(any) func(any) func() any {
-	return func(a any) func(any) func(any) func(any) func(any) func(any) func(any) func(any) func(any) func() any {
-		return func(b any) func(any) func(any) func(any) func(any) func(any) func(any) func(any) func() any {
-			return func(c any) func(any) func(any) func(any) func(any) func(any) func(any) func() any {
-				return func(d any) func(any) func(any) func(any) func(any) func(any) func() any {
-					return func(e any) func(any) func(any) func(any) func(any) func() any {
-						return func(g any) func(any) func(any) func(any) func() any {
-							return func(h any) func(any) func(any) func() any {
-								return func(i any) func(any) func() any {
-									return func(j any) func() any {
-										return func() any {
-											var args []any
+func RunEffectFn9(f interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func() interface{} {
+	return func(a interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func() interface{} {
+		return func(b interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func() interface{} {
+			return func(c interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func() interface{} {
+				return func(d interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func() interface{} {
+					return func(e interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func() interface{} {
+						return func(g interface{}) func(interface{}) func(interface{}) func(interface{}) func() interface{} {
+							return func(h interface{}) func(interface{}) func(interface{}) func() interface{} {
+								return func(i interface{}) func(interface{}) func() interface{} {
+									return func(j interface{}) func() interface{} {
+										return func() interface{} {
+											var args []interface{}
 											args = append(args, a, b, c, d, e, g, h, i, j)
-											return f.(func(any) any)(args)
+											return f.(func(interface{}) interface{})(args)
 										}
 									}
 								}
@@ -235,21 +235,21 @@ func RunEffectFn9(f any) func(any) func(any) func(any) func(any) func(any) func(
 	}
 }
 
-func RunEffectFn10(f any) func(any) func(any) func(any) func(any) func(any) func(any) func(any) func(any) func(any) func(any) func() any {
-	return func(a any) func(any) func(any) func(any) func(any) func(any) func(any) func(any) func(any) func(any) func() any {
-		return func(b any) func(any) func(any) func(any) func(any) func(any) func(any) func(any) func(any) func() any {
-			return func(c any) func(any) func(any) func(any) func(any) func(any) func(any) func(any) func() any {
-				return func(d any) func(any) func(any) func(any) func(any) func(any) func(any) func() any {
-					return func(e any) func(any) func(any) func(any) func(any) func(any) func() any {
-						return func(g any) func(any) func(any) func(any) func(any) func() any {
-							return func(h any) func(any) func(any) func(any) func() any {
-								return func(i any) func(any) func(any) func() any {
-									return func(j any) func(any) func() any {
-										return func(k any) func() any {
-											return func() any {
-												var args []any
+func RunEffectFn10(f interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func() interface{} {
+	return func(a interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func() interface{} {
+		return func(b interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func() interface{} {
+			return func(c interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func() interface{} {
+				return func(d interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func() interface{} {
+					return func(e interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func() interface{} {
+						return func(g interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func() interface{} {
+							return func(h interface{}) func(interface{}) func(interface{}) func(interface{}) func() interface{} {
+								return func(i interface{}) func(interface{}) func(interface{}) func() interface{} {
+									return func(j interface{}) func(interface{}) func() interface{} {
+										return func(k interface{}) func() interface{} {
+											return func() interface{} {
+												var args []interface{}
 												args = append(args, a, b, c, d, e, g, h, i, j, k)
-												return f.(func(any) any)(args)
+												return f.(func(interface{}) interface{})(args)
 											}
 										}
 									}
@@ -265,7 +265,7 @@ func RunEffectFn10(f any) func(any) func(any) func(any) func(any) func(any) func
 
 
 // --- Auto-generated FFI wrappers ---
-func Call_mkEffectFn1(arg0 any) func(any) func() any {
+func Call_mkEffectFn1(arg0 interface{}) func(interface{}) func() interface{} {
 	return MkEffectFn1(arg0)
 }
 var _Gopurs_MkEffectFn1 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -279,7 +279,7 @@ var _Gopurs_MkEffectFn1 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) go
 		})
 		})
 })
-func Call_mkEffectFn2(arg0 any) func(any, any) func() any {
+func Call_mkEffectFn2(arg0 interface{}) func(interface{}, interface{}) func() interface{} {
 	return MkEffectFn2(arg0)
 }
 var _Gopurs_MkEffectFn2 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -293,7 +293,7 @@ var _Gopurs_MkEffectFn2 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) go
 		})
 		})
 })
-func Call_mkEffectFn3(arg0 any) func(any, any, any) func() any {
+func Call_mkEffectFn3(arg0 interface{}) func(interface{}, interface{}, interface{}) func() interface{} {
 	return MkEffectFn3(arg0)
 }
 var _Gopurs_MkEffectFn3 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -307,7 +307,7 @@ var _Gopurs_MkEffectFn3 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) go
 		})
 		})
 })
-func Call_mkEffectFn4(arg0 any) func(any, any, any, any) func() any {
+func Call_mkEffectFn4(arg0 interface{}) func(interface{}, interface{}, interface{}, interface{}) func() interface{} {
 	return MkEffectFn4(arg0)
 }
 var _Gopurs_MkEffectFn4 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -321,7 +321,7 @@ var _Gopurs_MkEffectFn4 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) go
 		})
 		})
 })
-func Call_mkEffectFn5(arg0 any) func(any, any, any, any, any) func() any {
+func Call_mkEffectFn5(arg0 interface{}) func(interface{}, interface{}, interface{}, interface{}, interface{}) func() interface{} {
 	return MkEffectFn5(arg0)
 }
 var _Gopurs_MkEffectFn5 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -335,7 +335,7 @@ var _Gopurs_MkEffectFn5 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) go
 		})
 		})
 })
-func Call_mkEffectFn6(arg0 any) func(any, any, any, any, any, any) func() any {
+func Call_mkEffectFn6(arg0 interface{}) func(interface{}, interface{}, interface{}, interface{}, interface{}, interface{}) func() interface{} {
 	return MkEffectFn6(arg0)
 }
 var _Gopurs_MkEffectFn6 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -349,7 +349,7 @@ var _Gopurs_MkEffectFn6 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) go
 		})
 		})
 })
-func Call_mkEffectFn7(arg0 any) func(any, any, any, any, any, any, any) func() any {
+func Call_mkEffectFn7(arg0 interface{}) func(interface{}, interface{}, interface{}, interface{}, interface{}, interface{}, interface{}) func() interface{} {
 	return MkEffectFn7(arg0)
 }
 var _Gopurs_MkEffectFn7 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -363,7 +363,7 @@ var _Gopurs_MkEffectFn7 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) go
 		})
 		})
 })
-func Call_mkEffectFn8(arg0 any) func(any, any, any, any, any, any, any, any) func() any {
+func Call_mkEffectFn8(arg0 interface{}) func(interface{}, interface{}, interface{}, interface{}, interface{}, interface{}, interface{}, interface{}) func() interface{} {
 	return MkEffectFn8(arg0)
 }
 var _Gopurs_MkEffectFn8 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -377,7 +377,7 @@ var _Gopurs_MkEffectFn8 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) go
 		})
 		})
 })
-func Call_mkEffectFn9(arg0 any) func(any, any, any, any, any, any, any, any, any) func() any {
+func Call_mkEffectFn9(arg0 interface{}) func(interface{}, interface{}, interface{}, interface{}, interface{}, interface{}, interface{}, interface{}, interface{}) func() interface{} {
 	return MkEffectFn9(arg0)
 }
 var _Gopurs_MkEffectFn9 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -391,7 +391,7 @@ var _Gopurs_MkEffectFn9 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) go
 		})
 		})
 })
-func Call_mkEffectFn10(arg0 any) func(any, any, any, any, any, any, any, any, any, any) func() any {
+func Call_mkEffectFn10(arg0 interface{}) func(interface{}, interface{}, interface{}, interface{}, interface{}, interface{}, interface{}, interface{}, interface{}, interface{}) func() interface{} {
 	return MkEffectFn10(arg0)
 }
 var _Gopurs_MkEffectFn10 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -405,7 +405,7 @@ var _Gopurs_MkEffectFn10 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) g
 		})
 		})
 })
-func Call_runEffectFn1(arg0 any) func(any) func() any {
+func Call_runEffectFn1(arg0 interface{}) func(interface{}) func() interface{} {
 	return RunEffectFn1(arg0)
 }
 var _Gopurs_RunEffectFn1 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -419,7 +419,7 @@ var _Gopurs_RunEffectFn1 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) g
 		})
 		})
 })
-func Call_runEffectFn2(arg0 any) func(any) func(any) func() any {
+func Call_runEffectFn2(arg0 interface{}) func(interface{}) func(interface{}) func() interface{} {
 	return RunEffectFn2(arg0)
 }
 var _Gopurs_RunEffectFn2 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -436,7 +436,7 @@ var _Gopurs_RunEffectFn2 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) g
 		})
 		})
 })
-func Call_runEffectFn3(arg0 any) func(any) func(any) func(any) func() any {
+func Call_runEffectFn3(arg0 interface{}) func(interface{}) func(interface{}) func(interface{}) func() interface{} {
 	return RunEffectFn3(arg0)
 }
 var _Gopurs_RunEffectFn3 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -456,7 +456,7 @@ var _Gopurs_RunEffectFn3 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) g
 		})
 		})
 })
-func Call_runEffectFn4(arg0 any) func(any) func(any) func(any) func(any) func() any {
+func Call_runEffectFn4(arg0 interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func() interface{} {
 	return RunEffectFn4(arg0)
 }
 var _Gopurs_RunEffectFn4 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -479,7 +479,7 @@ var _Gopurs_RunEffectFn4 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) g
 		})
 		})
 })
-func Call_runEffectFn5(arg0 any) func(any) func(any) func(any) func(any) func(any) func() any {
+func Call_runEffectFn5(arg0 interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func() interface{} {
 	return RunEffectFn5(arg0)
 }
 var _Gopurs_RunEffectFn5 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -505,7 +505,7 @@ var _Gopurs_RunEffectFn5 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) g
 		})
 		})
 })
-func Call_runEffectFn6(arg0 any) func(any) func(any) func(any) func(any) func(any) func(any) func() any {
+func Call_runEffectFn6(arg0 interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func() interface{} {
 	return RunEffectFn6(arg0)
 }
 var _Gopurs_RunEffectFn6 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -534,7 +534,7 @@ var _Gopurs_RunEffectFn6 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) g
 		})
 		})
 })
-func Call_runEffectFn7(arg0 any) func(any) func(any) func(any) func(any) func(any) func(any) func(any) func() any {
+func Call_runEffectFn7(arg0 interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func() interface{} {
 	return RunEffectFn7(arg0)
 }
 var _Gopurs_RunEffectFn7 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -566,7 +566,7 @@ var _Gopurs_RunEffectFn7 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) g
 		})
 		})
 })
-func Call_runEffectFn8(arg0 any) func(any) func(any) func(any) func(any) func(any) func(any) func(any) func(any) func() any {
+func Call_runEffectFn8(arg0 interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func() interface{} {
 	return RunEffectFn8(arg0)
 }
 var _Gopurs_RunEffectFn8 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -601,7 +601,7 @@ var _Gopurs_RunEffectFn8 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) g
 		})
 		})
 })
-func Call_runEffectFn9(arg0 any) func(any) func(any) func(any) func(any) func(any) func(any) func(any) func(any) func(any) func() any {
+func Call_runEffectFn9(arg0 interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func() interface{} {
 	return RunEffectFn9(arg0)
 }
 var _Gopurs_RunEffectFn9 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -639,7 +639,7 @@ var _Gopurs_RunEffectFn9 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) g
 		})
 		})
 })
-func Call_runEffectFn10(arg0 any) func(any) func(any) func(any) func(any) func(any) func(any) func(any) func(any) func(any) func(any) func() any {
+func Call_runEffectFn10(arg0 interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func() interface{} {
 	return RunEffectFn10(arg0)
 }
 var _Gopurs_RunEffectFn10 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {

@@ -176,6 +176,9 @@ func Record(m map[string]Value) Value {
 }
 
 func RecordGet(obj Value, key string) Value {
+	if obj.Type == 0 {
+		panic("Attempt to read property '" + key + "' on uninitialized value")
+	}
     switch obj.Type {
     case TypeRecord: return (*(*map[string]Value)(obj.UnsafePtr))[key]
 	case TypeRecord1:
@@ -345,6 +348,10 @@ func Apply5(f Value, arg1, arg2, arg3, arg4, arg5 Value) Value {
 
 func ArrayAccess(arr Value, index int) Value {
 	return (*(*[]Value)(arr.UnsafePtr))[index]
+}
+
+func ArrayLength(arr Value) int {
+	return len(*(*[]Value)(arr.UnsafePtr))
 }
 
 func Any(v any) Value {

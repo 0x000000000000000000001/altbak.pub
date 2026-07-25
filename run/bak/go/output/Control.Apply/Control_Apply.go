@@ -10,48 +10,48 @@ import (
 	unsafe "unsafe"
 )
 
-var applyProxy gopurs_runtime.Value
+var cache_applyProxy gopurs_runtime.Value
 var once_applyProxy sync.Once
 func Get_applyProxy() gopurs_runtime.Value {
 	once_applyProxy.Do(func() {
-		applyProxy = gopurs_runtime.RecordDict2("apply", "Functor0", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 3178699476, UnsafePtr: unsafe.Pointer(&pkg_Type_Proxy.Data_Type_Proxy_Proxy{})}
+		cache_applyProxy = gopurs_runtime.RecordDict2("apply", "Functor0", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: unsafe.Pointer(&pkg_Type_Proxy.Data_Type_Proxy_Proxy{})}
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Functor.Get_functorProxy()
 }))
 	})
-	return applyProxy
+	return cache_applyProxy
 }
 
-var applyFn gopurs_runtime.Value
+var cache_applyFn gopurs_runtime.Value
 var once_applyFn sync.Once
 func Get_applyFn() gopurs_runtime.Value {
 	once_applyFn.Do(func() {
-		applyFn = gopurs_runtime.RecordDict2("apply", "Functor0", gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, g_1 gopurs_runtime.Value, x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_applyFn = gopurs_runtime.RecordDict2("apply", "Functor0", gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, g_1 gopurs_runtime.Value, x_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(f_0, x_2, gopurs_runtime.Apply(g_1, x_2))
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Functor.Get_functorFn()
 }))
 	})
-	return applyFn
+	return cache_applyFn
 }
 
-var applyArray gopurs_runtime.Value
+var cache_applyArray gopurs_runtime.Value
 var once_applyArray sync.Once
 func Get_applyArray() gopurs_runtime.Value {
 	once_applyArray.Do(func() {
-		applyArray = gopurs_runtime.RecordDict2("apply", "Functor0", Get_arrayApply(), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_applyArray = gopurs_runtime.RecordDict2("apply", "Functor0", Get_arrayApply(), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Functor.Get_functorArray()
 }))
 	})
-	return applyArray
+	return cache_applyArray
 }
 
-var apply gopurs_runtime.Value
+var cache_apply gopurs_runtime.Value
 var once_apply sync.Once
 func Get_apply() gopurs_runtime.Value {
 	once_apply.Do(func() {
-		apply = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_apply = gopurs_runtime.Func(func(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
@@ -59,73 +59,73 @@ return gopurs_runtime.RecordGet(dict_0, "apply")
 }()
 })
 	})
-	return apply
+	return cache_apply
 }
 
-var applyFirst gopurs_runtime.Value
+var cache_applyFirst gopurs_runtime.Value
 var once_applyFirst sync.Once
 func Get_applyFirst() gopurs_runtime.Value {
 	once_applyFirst.Do(func() {
-		applyFirst = gopurs_runtime.Func3(func(dictApply_0_box gopurs_runtime.Value, a_1_box gopurs_runtime.Value, b_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_applyFirst = gopurs_runtime.Func3(func(dictApply_0_box gopurs_runtime.Value, a_1_box gopurs_runtime.Value, b_2_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_applyFirst(dictApply_0_box, a_1_box, b_2_box)
 })
 	})
-	return applyFirst
+	return cache_applyFirst
 }
 
-var applySecond gopurs_runtime.Value
+var cache_applySecond gopurs_runtime.Value
 var once_applySecond sync.Once
 func Get_applySecond() gopurs_runtime.Value {
 	once_applySecond.Do(func() {
-		applySecond = gopurs_runtime.Func3(func(dictApply_0_box gopurs_runtime.Value, a_1_box gopurs_runtime.Value, b_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_applySecond = gopurs_runtime.Func3(func(dictApply_0_box gopurs_runtime.Value, a_1_box gopurs_runtime.Value, b_2_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_applySecond(dictApply_0_box, a_1_box, b_2_box)
 })
 	})
-	return applySecond
+	return cache_applySecond
 }
 
-var lift2 gopurs_runtime.Value
+var cache_lift2 gopurs_runtime.Value
 var once_lift2 sync.Once
 func Get_lift2() gopurs_runtime.Value {
 	once_lift2.Do(func() {
-		lift2 = gopurs_runtime.Func4(func(dictApply_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value, b_3_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_lift2 = gopurs_runtime.Func4(func(dictApply_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value, b_3_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_lift2(dictApply_0_box, f_1_box, a_2_box, b_3_box)
 })
 	})
-	return lift2
+	return cache_lift2
 }
 
-var lift3 gopurs_runtime.Value
+var cache_lift3 gopurs_runtime.Value
 var once_lift3 sync.Once
 func Get_lift3() gopurs_runtime.Value {
 	once_lift3.Do(func() {
-		lift3 = gopurs_runtime.Func5(func(dictApply_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value, b_3_box gopurs_runtime.Value, c_4_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_lift3 = gopurs_runtime.Func5(func(dictApply_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value, b_3_box gopurs_runtime.Value, c_4_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_lift3(dictApply_0_box, f_1_box, a_2_box, b_3_box, c_4_box)
 })
 	})
-	return lift3
+	return cache_lift3
 }
 
-var lift4 gopurs_runtime.Value
+var cache_lift4 gopurs_runtime.Value
 var once_lift4 sync.Once
 func Get_lift4() gopurs_runtime.Value {
 	once_lift4.Do(func() {
-		lift4 = gopurs_runtime.Func6(func(dictApply_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value, b_3_box gopurs_runtime.Value, c_4_box gopurs_runtime.Value, d_5_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_lift4 = gopurs_runtime.Func6(func(dictApply_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value, b_3_box gopurs_runtime.Value, c_4_box gopurs_runtime.Value, d_5_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_lift4(dictApply_0_box, f_1_box, a_2_box, b_3_box, c_4_box, d_5_box)
 })
 	})
-	return lift4
+	return cache_lift4
 }
 
-var lift5 gopurs_runtime.Value
+var cache_lift5 gopurs_runtime.Value
 var once_lift5 sync.Once
 func Get_lift5() gopurs_runtime.Value {
 	once_lift5.Do(func() {
-		lift5 = gopurs_runtime.Func7(func(dictApply_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value, b_3_box gopurs_runtime.Value, c_4_box gopurs_runtime.Value, d_5_box gopurs_runtime.Value, e_6_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_lift5 = gopurs_runtime.Func7(func(dictApply_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value, b_3_box gopurs_runtime.Value, c_4_box gopurs_runtime.Value, d_5_box gopurs_runtime.Value, e_6_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_lift5(dictApply_0_box, f_1_box, a_2_box, b_3_box, c_4_box, d_5_box, e_6_box)
 })
 	})
-	return lift5
+	return cache_lift5
 }
 
 func Call_applyFirst(dictApply_0_loop gopurs_runtime.Value, a_1_loop gopurs_runtime.Value, b_2_loop gopurs_runtime.Value) gopurs_runtime.Value {

@@ -12,20 +12,20 @@ import (
 	unsafe "unsafe"
 )
 
-var foldable1NonEmpty gopurs_runtime.Value
+var cache_foldable1NonEmpty gopurs_runtime.Value
 var once_foldable1NonEmpty sync.Once
 func Get_foldable1NonEmpty() gopurs_runtime.Value {
 	once_foldable1NonEmpty.Do(func() {
-		foldable1NonEmpty = gopurs_runtime.Apply(pkg_Data_NonEmpty.Get_foldable1NonEmpty(), pkg_Data_Foldable.Get_foldableArray())
+		cache_foldable1NonEmpty = gopurs_runtime.Apply(pkg_Data_NonEmpty.Get_foldable1NonEmpty(), pkg_Data_Foldable.Get_foldableArray())
 	})
-	return foldable1NonEmpty
+	return cache_foldable1NonEmpty
 }
 
-var genBoundedEnum gopurs_runtime.Value
+var cache_genBoundedEnum gopurs_runtime.Value
 var once_genBoundedEnum sync.Once
 func Get_genBoundedEnum() gopurs_runtime.Value {
 	once_genBoundedEnum.Do(func() {
-		genBoundedEnum = gopurs_runtime.Func(func(dictMonadGen_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_genBoundedEnum = gopurs_runtime.Func(func(dictMonadGen_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictMonadGen_0 gopurs_runtime.Value = dictMonadGen_0_loop
 _ = dictMonadGen_0
@@ -40,15 +40,15 @@ v_5_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Enum1_3_1, "succ"), gopur
 _ = v_5_3
 var __t4 gopurs_runtime.Value
 {
-if (v_5_3.Type == 9 && v_5_3.IntVal == 1354639136) {
-__t4 = gopurs_runtime.Apply(elements_1_0, gopurs_runtime.Value{Type: 9, IntVal: 1104112642, UnsafePtr: unsafe.Pointer(&pkg_Data_NonEmpty.Data_Data_NonEmpty_NonEmpty{gopurs_runtime.RecordGet(Bounded0_4_2, "bottom"), gopurs_runtime.Apply4(pkg_Data_Enum.Get_enumFromTo(), Enum1_3_1, pkg_Data_Unfoldable1.Get_unfoldable1Array(), (*pkg_Data_Maybe.Data_Data_Maybe_Just)(v_5_3.UnsafePtr).V0, gopurs_runtime.RecordGet(Bounded0_4_2, "top"))})})
+if (v_5_3.Type == 9 && v_5_3.IntVal == 930809136) {
+__t4 = gopurs_runtime.Apply(elements_1_0, gopurs_runtime.Value{Type: 9, IntVal: 3111306138, UnsafePtr: unsafe.Pointer(&pkg_Data_NonEmpty.Data_Data_NonEmpty_NonEmpty{gopurs_runtime.RecordGet(Bounded0_4_2, "bottom"), gopurs_runtime.Apply4(pkg_Data_Enum.Get_enumFromTo(), Enum1_3_1, pkg_Data_Unfoldable1.Get_unfoldable1Array(), (*pkg_Data_Maybe.Data_Data_Maybe_Just)(v_5_3.UnsafePtr).V0, gopurs_runtime.RecordGet(Bounded0_4_2, "top"))})})
 goto end_branch_4
 } else {
 
 }
 }
 {
-if (v_5_3.Type == 9 && v_5_3.IntVal == 42808261) {
+if (v_5_3.Type == 9 && v_5_3.IntVal == 3589588149) {
 __t4 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadGen_0, "Monad0"), gopurs_runtime.Value{}), "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.RecordGet(Bounded0_4_2, "bottom"))
 goto end_branch_4
 } else {
@@ -64,7 +64,7 @@ return __t4
 }()
 })
 	})
-	return genBoundedEnum
+	return cache_genBoundedEnum
 }
 
 

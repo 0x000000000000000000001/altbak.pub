@@ -5,11 +5,11 @@ import (
 	sync "sync"
 )
 
-var Compose gopurs_runtime.Value
+var cache_Compose gopurs_runtime.Value
 var once_Compose sync.Once
 func Get_Compose() gopurs_runtime.Value {
 	once_Compose.Do(func() {
-		Compose = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Compose = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
@@ -17,64 +17,64 @@ return x_0
 }()
 })
 	})
-	return Compose
+	return cache_Compose
 }
 
-var showCompose gopurs_runtime.Value
+var cache_showCompose gopurs_runtime.Value
 var once_showCompose sync.Once
 func Get_showCompose() gopurs_runtime.Value {
 	once_showCompose.Do(func() {
-		showCompose = gopurs_runtime.Func(func(dictShow_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_showCompose = gopurs_runtime.Func(func(dictShow_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictShow_0 gopurs_runtime.Value = dictShow_0_loop
 _ = dictShow_0
 return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str("(Compose " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), v_1).StrVal() + ")")
+return gopurs_runtime.Str((("(Compose ") + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), v_1).StrVal())) + (")"))
 }))
 }()
 })
 	})
-	return showCompose
+	return cache_showCompose
 }
 
-var newtypeCompose gopurs_runtime.Value
+var cache_newtypeCompose gopurs_runtime.Value
 var once_newtypeCompose sync.Once
 func Get_newtypeCompose() gopurs_runtime.Value {
 	once_newtypeCompose.Do(func() {
-		newtypeCompose = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_newtypeCompose = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{}
 }))
 	})
-	return newtypeCompose
+	return cache_newtypeCompose
 }
 
-var functorCompose gopurs_runtime.Value
+var cache_functorCompose gopurs_runtime.Value
 var once_functorCompose sync.Once
 func Get_functorCompose() gopurs_runtime.Value {
 	once_functorCompose.Do(func() {
-		functorCompose = gopurs_runtime.Func2(func(dictFunctor_0_box gopurs_runtime.Value, dictFunctor1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_functorCompose = gopurs_runtime.Func2(func(dictFunctor_0_box gopurs_runtime.Value, dictFunctor1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_functorCompose(dictFunctor_0_box, dictFunctor1_1_box)
 })
 	})
-	return functorCompose
+	return cache_functorCompose
 }
 
-var eqCompose gopurs_runtime.Value
+var cache_eqCompose gopurs_runtime.Value
 var once_eqCompose sync.Once
 func Get_eqCompose() gopurs_runtime.Value {
 	once_eqCompose.Do(func() {
-		eqCompose = gopurs_runtime.Func3(func(dictEq1_0_box gopurs_runtime.Value, dictEq11_1_box gopurs_runtime.Value, dictEq_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_eqCompose = gopurs_runtime.Func3(func(dictEq1_0_box gopurs_runtime.Value, dictEq11_1_box gopurs_runtime.Value, dictEq_2_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_eqCompose(dictEq1_0_box, dictEq11_1_box, dictEq_2_box)
 })
 	})
-	return eqCompose
+	return cache_eqCompose
 }
 
-var ordCompose gopurs_runtime.Value
+var cache_ordCompose gopurs_runtime.Value
 var once_ordCompose sync.Once
 func Get_ordCompose() gopurs_runtime.Value {
 	once_ordCompose.Do(func() {
-		ordCompose = gopurs_runtime.Func(func(dictOrd1_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_ordCompose = gopurs_runtime.Func(func(dictOrd1_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictOrd1_0 gopurs_runtime.Value = dictOrd1_0_loop
 _ = dictOrd1_0
@@ -120,25 +120,25 @@ return eqCompose3_8_9
 }()
 })
 	})
-	return ordCompose
+	return cache_ordCompose
 }
 
-var eq1Compose gopurs_runtime.Value
+var cache_eq1Compose gopurs_runtime.Value
 var once_eq1Compose sync.Once
 func Get_eq1Compose() gopurs_runtime.Value {
 	once_eq1Compose.Do(func() {
-		eq1Compose = gopurs_runtime.Func2(func(dictEq1_0_box gopurs_runtime.Value, dictEq11_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_eq1Compose = gopurs_runtime.Func2(func(dictEq1_0_box gopurs_runtime.Value, dictEq11_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_eq1Compose(dictEq1_0_box, dictEq11_1_box)
 })
 	})
-	return eq1Compose
+	return cache_eq1Compose
 }
 
-var ord1Compose gopurs_runtime.Value
+var cache_ord1Compose gopurs_runtime.Value
 var once_ord1Compose sync.Once
 func Get_ord1Compose() gopurs_runtime.Value {
 	once_ord1Compose.Do(func() {
-		ord1Compose = gopurs_runtime.Func(func(dictOrd1_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_ord1Compose = gopurs_runtime.Func(func(dictOrd1_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictOrd1_0 gopurs_runtime.Value = dictOrd1_0_loop
 _ = dictOrd1_0
@@ -168,25 +168,25 @@ return eq1Compose2_6_4
 }()
 })
 	})
-	return ord1Compose
+	return cache_ord1Compose
 }
 
-var bihoistCompose gopurs_runtime.Value
+var cache_bihoistCompose gopurs_runtime.Value
 var once_bihoistCompose sync.Once
 func Get_bihoistCompose() gopurs_runtime.Value {
 	once_bihoistCompose.Do(func() {
-		bihoistCompose = gopurs_runtime.Func4(func(dictFunctor_0_box gopurs_runtime.Value, natF_1_box gopurs_runtime.Value, natG_2_box gopurs_runtime.Value, v_3_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_bihoistCompose = gopurs_runtime.Func4(func(dictFunctor_0_box gopurs_runtime.Value, natF_1_box gopurs_runtime.Value, natG_2_box gopurs_runtime.Value, v_3_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_bihoistCompose(dictFunctor_0_box, natF_1_box, natG_2_box, v_3_box)
 })
 	})
-	return bihoistCompose
+	return cache_bihoistCompose
 }
 
-var applyCompose gopurs_runtime.Value
+var cache_applyCompose gopurs_runtime.Value
 var once_applyCompose sync.Once
 func Get_applyCompose() gopurs_runtime.Value {
 	once_applyCompose.Do(func() {
-		applyCompose = gopurs_runtime.Func(func(dictApply_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_applyCompose = gopurs_runtime.Func(func(dictApply_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictApply_0 gopurs_runtime.Value = dictApply_0_loop
 _ = dictApply_0
@@ -210,14 +210,14 @@ return functorCompose2_5_3
 }()
 })
 	})
-	return applyCompose
+	return cache_applyCompose
 }
 
-var applicativeCompose gopurs_runtime.Value
+var cache_applicativeCompose gopurs_runtime.Value
 var once_applicativeCompose sync.Once
 func Get_applicativeCompose() gopurs_runtime.Value {
 	once_applicativeCompose.Do(func() {
-		applicativeCompose = gopurs_runtime.Func(func(dictApplicative_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_applicativeCompose = gopurs_runtime.Func(func(dictApplicative_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictApplicative_0 gopurs_runtime.Value = dictApplicative_0_loop
 _ = dictApplicative_0
@@ -251,14 +251,14 @@ return applyCompose2_6_4
 }()
 })
 	})
-	return applicativeCompose
+	return cache_applicativeCompose
 }
 
-var altCompose gopurs_runtime.Value
+var cache_altCompose gopurs_runtime.Value
 var once_altCompose sync.Once
 func Get_altCompose() gopurs_runtime.Value {
 	once_altCompose.Do(func() {
-		altCompose = gopurs_runtime.Func(func(dictAlt_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_altCompose = gopurs_runtime.Func(func(dictAlt_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictAlt_0 gopurs_runtime.Value = dictAlt_0_loop
 _ = dictAlt_0
@@ -278,14 +278,14 @@ return functorCompose2_3_1
 }()
 })
 	})
-	return altCompose
+	return cache_altCompose
 }
 
-var plusCompose gopurs_runtime.Value
+var cache_plusCompose gopurs_runtime.Value
 var once_plusCompose sync.Once
 func Get_plusCompose() gopurs_runtime.Value {
 	once_plusCompose.Do(func() {
-		plusCompose = gopurs_runtime.Func(func(dictPlus_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_plusCompose = gopurs_runtime.Func(func(dictPlus_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictPlus_0 gopurs_runtime.Value = dictPlus_0_loop
 _ = dictPlus_0
@@ -313,14 +313,14 @@ return altCompose2_6_4
 }()
 })
 	})
-	return plusCompose
+	return cache_plusCompose
 }
 
-var alternativeCompose gopurs_runtime.Value
+var cache_alternativeCompose gopurs_runtime.Value
 var once_alternativeCompose sync.Once
 func Get_alternativeCompose() gopurs_runtime.Value {
 	once_alternativeCompose.Do(func() {
-		alternativeCompose = gopurs_runtime.Func(func(dictAlternative_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_alternativeCompose = gopurs_runtime.Func(func(dictAlternative_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictAlternative_0 gopurs_runtime.Value = dictAlternative_0_loop
 _ = dictAlternative_0
@@ -364,7 +364,7 @@ return plusCompose2_7_9
 }()
 })
 	})
-	return alternativeCompose
+	return cache_alternativeCompose
 }
 
 func Call_functorCompose(dictFunctor_0_loop gopurs_runtime.Value, dictFunctor1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {

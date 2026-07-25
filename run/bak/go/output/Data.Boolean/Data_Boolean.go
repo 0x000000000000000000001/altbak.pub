@@ -5,13 +5,13 @@ import (
 	sync "sync"
 )
 
-var otherwise gopurs_runtime.Value
+var cache_otherwise gopurs_runtime.Value
 var once_otherwise sync.Once
 func Get_otherwise() gopurs_runtime.Value {
 	once_otherwise.Do(func() {
-		otherwise = gopurs_runtime.Bool(true)
+		cache_otherwise = gopurs_runtime.Bool(true)
 	})
-	return otherwise
+	return cache_otherwise
 }
 
 

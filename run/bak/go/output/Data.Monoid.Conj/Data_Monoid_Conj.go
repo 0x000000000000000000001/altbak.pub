@@ -5,11 +5,11 @@ import (
 	sync "sync"
 )
 
-var Conj gopurs_runtime.Value
+var cache_Conj gopurs_runtime.Value
 var once_Conj sync.Once
 func Get_Conj() gopurs_runtime.Value {
 	once_Conj.Do(func() {
-		Conj = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Conj = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
@@ -17,31 +17,31 @@ return x_0
 }()
 })
 	})
-	return Conj
+	return cache_Conj
 }
 
-var showConj gopurs_runtime.Value
+var cache_showConj gopurs_runtime.Value
 var once_showConj sync.Once
 func Get_showConj() gopurs_runtime.Value {
 	once_showConj.Do(func() {
-		showConj = gopurs_runtime.Func(func(dictShow_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_showConj = gopurs_runtime.Func(func(dictShow_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictShow_0 gopurs_runtime.Value = dictShow_0_loop
 _ = dictShow_0
 return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str("(Conj " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), v_1).StrVal() + ")")
+return gopurs_runtime.Str((("(Conj ") + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), v_1).StrVal())) + (")"))
 }))
 }()
 })
 	})
-	return showConj
+	return cache_showConj
 }
 
-var semiringConj gopurs_runtime.Value
+var cache_semiringConj gopurs_runtime.Value
 var once_semiringConj sync.Once
 func Get_semiringConj() gopurs_runtime.Value {
 	once_semiringConj.Do(func() {
-		semiringConj = gopurs_runtime.Func(func(dictHeytingAlgebra_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_semiringConj = gopurs_runtime.Func(func(dictHeytingAlgebra_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictHeytingAlgebra_0 gopurs_runtime.Value = dictHeytingAlgebra_0_loop
 _ = dictHeytingAlgebra_0
@@ -53,14 +53,14 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictHeytingAlgebra_0, "dis
 }()
 })
 	})
-	return semiringConj
+	return cache_semiringConj
 }
 
-var semigroupConj gopurs_runtime.Value
+var cache_semigroupConj gopurs_runtime.Value
 var once_semigroupConj sync.Once
 func Get_semigroupConj() gopurs_runtime.Value {
 	once_semigroupConj.Do(func() {
-		semigroupConj = gopurs_runtime.Func(func(dictHeytingAlgebra_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_semigroupConj = gopurs_runtime.Func(func(dictHeytingAlgebra_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictHeytingAlgebra_0 gopurs_runtime.Value = dictHeytingAlgebra_0_loop
 _ = dictHeytingAlgebra_0
@@ -70,14 +70,14 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictHeytingAlgebra_0, "con
 }()
 })
 	})
-	return semigroupConj
+	return cache_semigroupConj
 }
 
-var ordConj gopurs_runtime.Value
+var cache_ordConj gopurs_runtime.Value
 var once_ordConj sync.Once
 func Get_ordConj() gopurs_runtime.Value {
 	once_ordConj.Do(func() {
-		ordConj = gopurs_runtime.Func(func(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_ordConj = gopurs_runtime.Func(func(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
@@ -85,14 +85,14 @@ return dictOrd_0
 }()
 })
 	})
-	return ordConj
+	return cache_ordConj
 }
 
-var monoidConj gopurs_runtime.Value
+var cache_monoidConj gopurs_runtime.Value
 var once_monoidConj sync.Once
 func Get_monoidConj() gopurs_runtime.Value {
 	once_monoidConj.Do(func() {
-		monoidConj = gopurs_runtime.Func(func(dictHeytingAlgebra_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monoidConj = gopurs_runtime.Func(func(dictHeytingAlgebra_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictHeytingAlgebra_0 gopurs_runtime.Value = dictHeytingAlgebra_0_loop
 _ = dictHeytingAlgebra_0
@@ -106,25 +106,25 @@ return semigroupConj1_1_0
 }()
 })
 	})
-	return monoidConj
+	return cache_monoidConj
 }
 
-var functorConj gopurs_runtime.Value
+var cache_functorConj gopurs_runtime.Value
 var once_functorConj sync.Once
 func Get_functorConj() gopurs_runtime.Value {
 	once_functorConj.Do(func() {
-		functorConj = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, m_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_functorConj = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, m_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(f_0, m_1)
 }))
 	})
-	return functorConj
+	return cache_functorConj
 }
 
-var eqConj gopurs_runtime.Value
+var cache_eqConj gopurs_runtime.Value
 var once_eqConj sync.Once
 func Get_eqConj() gopurs_runtime.Value {
 	once_eqConj.Do(func() {
-		eqConj = gopurs_runtime.Func(func(dictEq_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_eqConj = gopurs_runtime.Func(func(dictEq_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
 _ = dictEq_0
@@ -132,38 +132,38 @@ return dictEq_0
 }()
 })
 	})
-	return eqConj
+	return cache_eqConj
 }
 
-var eq1Conj gopurs_runtime.Value
+var cache_eq1Conj gopurs_runtime.Value
 var once_eq1Conj sync.Once
 func Get_eq1Conj() gopurs_runtime.Value {
 	once_eq1Conj.Do(func() {
-		eq1Conj = gopurs_runtime.RecordDict1("eq1", gopurs_runtime.Func(func(dictEq_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_eq1Conj = gopurs_runtime.RecordDict1("eq1", gopurs_runtime.Func(func(dictEq_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordGet(dictEq_0, "eq")
 }))
 	})
-	return eq1Conj
+	return cache_eq1Conj
 }
 
-var ord1Conj gopurs_runtime.Value
+var cache_ord1Conj gopurs_runtime.Value
 var once_ord1Conj sync.Once
 func Get_ord1Conj() gopurs_runtime.Value {
 	once_ord1Conj.Do(func() {
-		ord1Conj = gopurs_runtime.RecordDict2("compare1", "Eq10", gopurs_runtime.Func(func(dictOrd_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_ord1Conj = gopurs_runtime.RecordDict2("compare1", "Eq10", gopurs_runtime.Func(func(dictOrd_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordGet(dictOrd_0, "compare")
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_eq1Conj()
 }))
 	})
-	return ord1Conj
+	return cache_ord1Conj
 }
 
-var boundedConj gopurs_runtime.Value
+var cache_boundedConj gopurs_runtime.Value
 var once_boundedConj sync.Once
 func Get_boundedConj() gopurs_runtime.Value {
 	once_boundedConj.Do(func() {
-		boundedConj = gopurs_runtime.Func(func(dictBounded_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_boundedConj = gopurs_runtime.Func(func(dictBounded_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictBounded_0 gopurs_runtime.Value = dictBounded_0_loop
 _ = dictBounded_0
@@ -171,57 +171,57 @@ return dictBounded_0
 }()
 })
 	})
-	return boundedConj
+	return cache_boundedConj
 }
 
-var applyConj gopurs_runtime.Value
+var cache_applyConj gopurs_runtime.Value
 var once_applyConj sync.Once
 func Get_applyConj() gopurs_runtime.Value {
 	once_applyConj.Do(func() {
-		applyConj = gopurs_runtime.RecordDict2("apply", "Functor0", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_applyConj = gopurs_runtime.RecordDict2("apply", "Functor0", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(v_0, v1_1)
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_functorConj()
 }))
 	})
-	return applyConj
+	return cache_applyConj
 }
 
-var bindConj gopurs_runtime.Value
+var cache_bindConj gopurs_runtime.Value
 var once_bindConj sync.Once
 func Get_bindConj() gopurs_runtime.Value {
 	once_bindConj.Do(func() {
-		bindConj = gopurs_runtime.RecordDict2("bind", "Apply0", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, f_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_bindConj = gopurs_runtime.RecordDict2("bind", "Apply0", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, f_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(f_1, v_0)
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_applyConj()
 }))
 	})
-	return bindConj
+	return cache_bindConj
 }
 
-var applicativeConj gopurs_runtime.Value
+var cache_applicativeConj gopurs_runtime.Value
 var once_applicativeConj sync.Once
 func Get_applicativeConj() gopurs_runtime.Value {
 	once_applicativeConj.Do(func() {
-		applicativeConj = gopurs_runtime.RecordDict2("pure", "Apply0", Get_Conj(), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_applicativeConj = gopurs_runtime.RecordDict2("pure", "Apply0", Get_Conj(), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_applyConj()
 }))
 	})
-	return applicativeConj
+	return cache_applicativeConj
 }
 
-var monadConj gopurs_runtime.Value
+var cache_monadConj gopurs_runtime.Value
 var once_monadConj sync.Once
 func Get_monadConj() gopurs_runtime.Value {
 	once_monadConj.Do(func() {
-		monadConj = gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monadConj = gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_applicativeConj()
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_bindConj()
 }))
 	})
-	return monadConj
+	return cache_monadConj
 }
 
 

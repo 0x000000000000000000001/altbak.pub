@@ -7,7 +7,7 @@ import (
 	"strconv"
 )
 
-func FromNumberImpl(just func(int) any, nothing any, n float64) any {
+func FromNumberImpl(just func(int) interface{}, nothing interface{}, n float64) interface{} {
 	if math.IsNaN(n) || math.IsInf(n, 0) || math.Trunc(n) != n {
 		return nothing
 	}
@@ -18,7 +18,7 @@ func ToNumber(n int) float64 {
 	return float64(n)
 }
 
-func FromStringAsImpl(just func(int) any, nothing any, radix int, s string) any {
+func FromStringAsImpl(just func(int) interface{}, nothing interface{}, radix int, s string) interface{} {
 	val, err := strconv.ParseInt(s, radix, 64)
 	if err != nil {
 		return nothing
@@ -57,11 +57,11 @@ func Pow(x int, y int) int {
 
 
 // --- Auto-generated FFI wrappers ---
-func Call_fromNumberImpl(arg0 func(int) any, arg1 any, arg2 float64) any {
+func Call_fromNumberImpl(arg0 func(int) interface{}, arg1 interface{}, arg2 float64) interface{} {
 	return FromNumberImpl(arg0, arg1, arg2)
 }
 var _Gopurs_FromNumberImpl = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := func(p0_0 int) any {
+	go_arg0 := func(p0_0 int) interface{} {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 		}
 	go_arg1 := arg1
@@ -77,11 +77,11 @@ var _Gopurs_ToNumber = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopur
 	go_res := ToNumber(go_arg0)
 	return gopurs_runtime.Box(go_res)
 })
-func Call_fromStringAsImpl(arg0 func(int) any, arg1 any, arg2 int, arg3 string) any {
+func Call_fromStringAsImpl(arg0 func(int) interface{}, arg1 interface{}, arg2 int, arg3 string) interface{} {
 	return FromStringAsImpl(arg0, arg1, arg2, arg3)
 }
 var _Gopurs_FromStringAsImpl = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := func(p0_0 int) any {
+	go_arg0 := func(p0_0 int) interface{} {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 		}
 	go_arg1 := arg1

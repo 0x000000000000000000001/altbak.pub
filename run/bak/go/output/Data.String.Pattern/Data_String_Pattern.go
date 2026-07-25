@@ -7,11 +7,11 @@ import (
 	pkg_Data_Ord "gopurs/output/Data.Ord"
 )
 
-var Replacement gopurs_runtime.Value
+var cache_Replacement gopurs_runtime.Value
 var once_Replacement sync.Once
 func Get_Replacement() gopurs_runtime.Value {
 	once_Replacement.Do(func() {
-		Replacement = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Replacement = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
@@ -19,14 +19,14 @@ return x_0
 }()
 })
 	})
-	return Replacement
+	return cache_Replacement
 }
 
-var Pattern gopurs_runtime.Value
+var cache_Pattern gopurs_runtime.Value
 var once_Pattern sync.Once
 func Get_Pattern() gopurs_runtime.Value {
 	once_Pattern.Do(func() {
-		Pattern = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Pattern = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
@@ -34,99 +34,99 @@ return x_0
 }()
 })
 	})
-	return Pattern
+	return cache_Pattern
 }
 
-var showReplacement gopurs_runtime.Value
+var cache_showReplacement gopurs_runtime.Value
 var once_showReplacement sync.Once
 func Get_showReplacement() gopurs_runtime.Value {
 	once_showReplacement.Do(func() {
-		showReplacement = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str("(Replacement " + gopurs_runtime.Apply(pkg_Data_Show.Get_showStringImpl(), v_0).StrVal() + ")")
+		cache_showReplacement = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Str((("(Replacement ") + (gopurs_runtime.Apply(pkg_Data_Show.Get_showStringImpl(), v_0).StrVal())) + (")"))
 }))
 	})
-	return showReplacement
+	return cache_showReplacement
 }
 
-var showPattern gopurs_runtime.Value
+var cache_showPattern gopurs_runtime.Value
 var once_showPattern sync.Once
 func Get_showPattern() gopurs_runtime.Value {
 	once_showPattern.Do(func() {
-		showPattern = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str("(Pattern " + gopurs_runtime.Apply(pkg_Data_Show.Get_showStringImpl(), v_0).StrVal() + ")")
+		cache_showPattern = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Str((("(Pattern ") + (gopurs_runtime.Apply(pkg_Data_Show.Get_showStringImpl(), v_0).StrVal())) + (")"))
 }))
 	})
-	return showPattern
+	return cache_showPattern
 }
 
-var newtypeReplacement gopurs_runtime.Value
+var cache_newtypeReplacement gopurs_runtime.Value
 var once_newtypeReplacement sync.Once
 func Get_newtypeReplacement() gopurs_runtime.Value {
 	once_newtypeReplacement.Do(func() {
-		newtypeReplacement = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_newtypeReplacement = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{}
 }))
 	})
-	return newtypeReplacement
+	return cache_newtypeReplacement
 }
 
-var newtypePattern gopurs_runtime.Value
+var cache_newtypePattern gopurs_runtime.Value
 var once_newtypePattern sync.Once
 func Get_newtypePattern() gopurs_runtime.Value {
 	once_newtypePattern.Do(func() {
-		newtypePattern = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_newtypePattern = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{}
 }))
 	})
-	return newtypePattern
+	return cache_newtypePattern
 }
 
-var eqReplacement gopurs_runtime.Value
+var cache_eqReplacement gopurs_runtime.Value
 var once_eqReplacement sync.Once
 func Get_eqReplacement() gopurs_runtime.Value {
 	once_eqReplacement.Do(func() {
-		eqReplacement = gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func2(func(x_0 gopurs_runtime.Value, y_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(x_0.StrVal() == y_1.StrVal())
+		cache_eqReplacement = gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func2(func(x_0 gopurs_runtime.Value, y_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Bool((x_0.StrVal()) == (y_1.StrVal()))
 }))
 	})
-	return eqReplacement
+	return cache_eqReplacement
 }
 
-var ordReplacement gopurs_runtime.Value
+var cache_ordReplacement gopurs_runtime.Value
 var once_ordReplacement sync.Once
 func Get_ordReplacement() gopurs_runtime.Value {
 	once_ordReplacement.Do(func() {
-		ordReplacement = gopurs_runtime.RecordDict2("compare", "Eq0", gopurs_runtime.Func2(func(x_0 gopurs_runtime.Value, y_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_ordReplacement = gopurs_runtime.RecordDict2("compare", "Eq0", gopurs_runtime.Func2(func(x_0 gopurs_runtime.Value, y_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ord.Get_ordString(), "compare"), x_0, y_1)
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_eqReplacement()
 }))
 	})
-	return ordReplacement
+	return cache_ordReplacement
 }
 
-var eqPattern gopurs_runtime.Value
+var cache_eqPattern gopurs_runtime.Value
 var once_eqPattern sync.Once
 func Get_eqPattern() gopurs_runtime.Value {
 	once_eqPattern.Do(func() {
-		eqPattern = gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func2(func(x_0 gopurs_runtime.Value, y_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(x_0.StrVal() == y_1.StrVal())
+		cache_eqPattern = gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func2(func(x_0 gopurs_runtime.Value, y_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Bool((x_0.StrVal()) == (y_1.StrVal()))
 }))
 	})
-	return eqPattern
+	return cache_eqPattern
 }
 
-var ordPattern gopurs_runtime.Value
+var cache_ordPattern gopurs_runtime.Value
 var once_ordPattern sync.Once
 func Get_ordPattern() gopurs_runtime.Value {
 	once_ordPattern.Do(func() {
-		ordPattern = gopurs_runtime.RecordDict2("compare", "Eq0", gopurs_runtime.Func2(func(x_0 gopurs_runtime.Value, y_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_ordPattern = gopurs_runtime.RecordDict2("compare", "Eq0", gopurs_runtime.Func2(func(x_0 gopurs_runtime.Value, y_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ord.Get_ordString(), "compare"), x_0, y_1)
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_eqPattern()
 }))
 	})
-	return ordPattern
+	return cache_ordPattern
 }
 
 

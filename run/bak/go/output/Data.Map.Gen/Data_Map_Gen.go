@@ -9,15 +9,15 @@ import (
 	pkg_Data_Tuple "gopurs/output/Data.Tuple"
 )
 
-var genMap gopurs_runtime.Value
+var cache_genMap gopurs_runtime.Value
 var once_genMap sync.Once
 func Get_genMap() gopurs_runtime.Value {
 	once_genMap.Do(func() {
-		genMap = gopurs_runtime.Func2(func(dictMonadRec_0_box gopurs_runtime.Value, dictMonadGen_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_genMap = gopurs_runtime.Func2(func(dictMonadRec_0_box gopurs_runtime.Value, dictMonadGen_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_genMap(dictMonadRec_0_box, dictMonadGen_1_box)
 })
 	})
-	return genMap
+	return cache_genMap
 }
 
 func Call_genMap(dictMonadRec_0_loop gopurs_runtime.Value, dictMonadGen_1_loop gopurs_runtime.Value) gopurs_runtime.Value {

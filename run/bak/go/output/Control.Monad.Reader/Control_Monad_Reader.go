@@ -6,35 +6,35 @@ import (
 	pkg_Control_Monad_Reader_Trans "gopurs/output/Control.Monad.Reader.Trans"
 )
 
-var withReader gopurs_runtime.Value
+var cache_withReader gopurs_runtime.Value
 var once_withReader sync.Once
 func Get_withReader() gopurs_runtime.Value {
 	once_withReader.Do(func() {
-		withReader = pkg_Control_Monad_Reader_Trans.Get_withReaderT()
+		cache_withReader = pkg_Control_Monad_Reader_Trans.Get_withReaderT()
 	})
-	return withReader
+	return cache_withReader
 }
 
-var runReader gopurs_runtime.Value
+var cache_runReader gopurs_runtime.Value
 var once_runReader sync.Once
 func Get_runReader() gopurs_runtime.Value {
 	once_runReader.Do(func() {
-		runReader = gopurs_runtime.Func2(func(v_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_runReader = gopurs_runtime.Func2(func(v_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_runReader(v_0_box, x_1_box)
 })
 	})
-	return runReader
+	return cache_runReader
 }
 
-var mapReader gopurs_runtime.Value
+var cache_mapReader gopurs_runtime.Value
 var once_mapReader sync.Once
 func Get_mapReader() gopurs_runtime.Value {
 	once_mapReader.Do(func() {
-		mapReader = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_mapReader = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_mapReader(f_0_box, v_1_box, x_2_box)
 })
 	})
-	return mapReader
+	return cache_mapReader
 }
 
 func Call_runReader(v_0_loop gopurs_runtime.Value, x_1_loop gopurs_runtime.Value) gopurs_runtime.Value {

@@ -5,11 +5,11 @@ import (
 	sync "sync"
 )
 
-var Join gopurs_runtime.Value
+var cache_Join gopurs_runtime.Value
 var once_Join sync.Once
 func Get_Join() gopurs_runtime.Value {
 	once_Join.Do(func() {
-		Join = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Join = gopurs_runtime.Func(func(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
@@ -17,31 +17,31 @@ return x_0
 }()
 })
 	})
-	return Join
+	return cache_Join
 }
 
-var showJoin gopurs_runtime.Value
+var cache_showJoin gopurs_runtime.Value
 var once_showJoin sync.Once
 func Get_showJoin() gopurs_runtime.Value {
 	once_showJoin.Do(func() {
-		showJoin = gopurs_runtime.Func(func(dictShow_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_showJoin = gopurs_runtime.Func(func(dictShow_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictShow_0 gopurs_runtime.Value = dictShow_0_loop
 _ = dictShow_0
 return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str("(Join " + gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), v_1).StrVal() + ")")
+return gopurs_runtime.Str((("(Join ") + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), v_1).StrVal())) + (")"))
 }))
 }()
 })
 	})
-	return showJoin
+	return cache_showJoin
 }
 
-var ordJoin gopurs_runtime.Value
+var cache_ordJoin gopurs_runtime.Value
 var once_ordJoin sync.Once
 func Get_ordJoin() gopurs_runtime.Value {
 	once_ordJoin.Do(func() {
-		ordJoin = gopurs_runtime.Func(func(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_ordJoin = gopurs_runtime.Func(func(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
@@ -49,25 +49,25 @@ return dictOrd_0
 }()
 })
 	})
-	return ordJoin
+	return cache_ordJoin
 }
 
-var newtypeJoin gopurs_runtime.Value
+var cache_newtypeJoin gopurs_runtime.Value
 var once_newtypeJoin sync.Once
 func Get_newtypeJoin() gopurs_runtime.Value {
 	once_newtypeJoin.Do(func() {
-		newtypeJoin = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_newtypeJoin = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{}
 }))
 	})
-	return newtypeJoin
+	return cache_newtypeJoin
 }
 
-var eqJoin gopurs_runtime.Value
+var cache_eqJoin gopurs_runtime.Value
 var once_eqJoin sync.Once
 func Get_eqJoin() gopurs_runtime.Value {
 	once_eqJoin.Do(func() {
-		eqJoin = gopurs_runtime.Func(func(dictEq_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_eqJoin = gopurs_runtime.Func(func(dictEq_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
 _ = dictEq_0
@@ -75,14 +75,14 @@ return dictEq_0
 }()
 })
 	})
-	return eqJoin
+	return cache_eqJoin
 }
 
-var bifunctorJoin gopurs_runtime.Value
+var cache_bifunctorJoin gopurs_runtime.Value
 var once_bifunctorJoin sync.Once
 func Get_bifunctorJoin() gopurs_runtime.Value {
 	once_bifunctorJoin.Do(func() {
-		bifunctorJoin = gopurs_runtime.Func(func(dictBifunctor_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_bifunctorJoin = gopurs_runtime.Func(func(dictBifunctor_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictBifunctor_0 gopurs_runtime.Value = dictBifunctor_0_loop
 _ = dictBifunctor_0
@@ -92,14 +92,14 @@ return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictBifunctor_0, "bimap"),
 }()
 })
 	})
-	return bifunctorJoin
+	return cache_bifunctorJoin
 }
 
-var biapplyJoin gopurs_runtime.Value
+var cache_biapplyJoin gopurs_runtime.Value
 var once_biapplyJoin sync.Once
 func Get_biapplyJoin() gopurs_runtime.Value {
 	once_biapplyJoin.Do(func() {
-		biapplyJoin = gopurs_runtime.Func(func(dictBiapply_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_biapplyJoin = gopurs_runtime.Func(func(dictBiapply_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictBiapply_0 gopurs_runtime.Value = dictBiapply_0_loop
 _ = dictBiapply_0
@@ -117,14 +117,14 @@ return bifunctorJoin1_2_1
 }()
 })
 	})
-	return biapplyJoin
+	return cache_biapplyJoin
 }
 
-var biapplicativeJoin gopurs_runtime.Value
+var cache_biapplicativeJoin gopurs_runtime.Value
 var once_biapplicativeJoin sync.Once
 func Get_biapplicativeJoin() gopurs_runtime.Value {
 	once_biapplicativeJoin.Do(func() {
-		biapplicativeJoin = gopurs_runtime.Func(func(dictBiapplicative_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_biapplicativeJoin = gopurs_runtime.Func(func(dictBiapplicative_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var dictBiapplicative_0 gopurs_runtime.Value = dictBiapplicative_0_loop
 _ = dictBiapplicative_0
@@ -150,7 +150,7 @@ return biapplyJoin1_3_2
 }()
 })
 	})
-	return biapplicativeJoin
+	return cache_biapplicativeJoin
 }
 
 

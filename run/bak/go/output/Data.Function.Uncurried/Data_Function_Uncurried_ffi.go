@@ -5,41 +5,41 @@ import "gopurs/output/gopurs_runtime"
 
 
 
-func mkRunFn(arity int) any {
+func mkRunFn(arity int) interface{} {
 	if arity == 1 {
-		return func(fn any) any {
-			return func(a any) any {
-				return fn.(func(any) any)(a)
+		return func(fn interface{}) interface{} {
+			return func(a interface{}) interface{} {
+				return fn.(func(interface{}) interface{})(a)
 			}
 		}
 	}
 	if arity == 2 {
-		return func(fn any) any {
-			return func(a any) any {
-				return func(b any) any {
-					return fn.(func(any) any)(a).(func(any) any)(b)
+		return func(fn interface{}) interface{} {
+			return func(a interface{}) interface{} {
+				return func(b interface{}) interface{} {
+					return fn.(func(interface{}) interface{})(a).(func(interface{}) interface{})(b)
 				}
 			}
 		}
 	}
 	if arity == 3 {
-		return func(fn any) any {
-			return func(a any) any {
-				return func(b any) any {
-					return func(c any) any {
-						return fn.(func(any) any)(a).(func(any) any)(b).(func(any) any)(c)
+		return func(fn interface{}) interface{} {
+			return func(a interface{}) interface{} {
+				return func(b interface{}) interface{} {
+					return func(c interface{}) interface{} {
+						return fn.(func(interface{}) interface{})(a).(func(interface{}) interface{})(b).(func(interface{}) interface{})(c)
 					}
 				}
 			}
 		}
 	}
 	if arity == 4 {
-		return func(fn any) any {
-			return func(a any) any {
-				return func(b any) any {
-					return func(c any) any {
-						return func(d any) any {
-							return fn.(func(any) any)(a).(func(any) any)(b).(func(any) any)(c).(func(any) any)(d)
+		return func(fn interface{}) interface{} {
+			return func(a interface{}) interface{} {
+				return func(b interface{}) interface{} {
+					return func(c interface{}) interface{} {
+						return func(d interface{}) interface{} {
+							return fn.(func(interface{}) interface{})(a).(func(interface{}) interface{})(b).(func(interface{}) interface{})(c).(func(interface{}) interface{})(d)
 						}
 					}
 				}
@@ -47,13 +47,13 @@ func mkRunFn(arity int) any {
 		}
 	}
 	if arity == 5 {
-		return func(fn any) any {
-			return func(a any) any {
-				return func(b any) any {
-					return func(c any) any {
-						return func(d any) any {
-							return func(e any) any {
-								return fn.(func(any) any)(a).(func(any) any)(b).(func(any) any)(c).(func(any) any)(d).(func(any) any)(e)
+		return func(fn interface{}) interface{} {
+			return func(a interface{}) interface{} {
+				return func(b interface{}) interface{} {
+					return func(c interface{}) interface{} {
+						return func(d interface{}) interface{} {
+							return func(e interface{}) interface{} {
+								return fn.(func(interface{}) interface{})(a).(func(interface{}) interface{})(b).(func(interface{}) interface{})(c).(func(interface{}) interface{})(d).(func(interface{}) interface{})(e)
 							}
 						}
 					}
@@ -74,9 +74,9 @@ var RunFn8 = mkRunFn(8)
 var RunFn9 = mkRunFn(9)
 var RunFn10 = mkRunFn(10)
 
-func mkMkFn(arity int) any {
+func mkMkFn(arity int) interface{} {
     // mkFn is essentially identity because all functions in gopurs are already curried
-	return func(fn any) any {
+	return func(fn interface{}) interface{} {
 		return fn
 	}
 }
@@ -91,8 +91,8 @@ var MkFn8 = mkMkFn(8)
 var MkFn9 = mkMkFn(9)
 var MkFn10 = mkMkFn(10)
 
-func MkFn0(f any) any { return f }
-func RunFn0(f any) any { return f.(func(any) any)(nil) }
+func MkFn0(f interface{}) interface{} { return f }
+func RunFn0(f interface{}) interface{} { return f.(func(interface{}) interface{})(nil) }
 
 
 // --- Auto-generated FFI wrappers ---
@@ -114,7 +114,7 @@ var _Gopurs_MkFn7 = gopurs_runtime.Box(MkFn7)
 var _Gopurs_MkFn8 = gopurs_runtime.Box(MkFn8)
 var _Gopurs_MkFn9 = gopurs_runtime.Box(MkFn9)
 var _Gopurs_MkFn10 = gopurs_runtime.Box(MkFn10)
-func Call_mkFn0(arg0 any) any { return f } {
+func Call_mkFn0(arg0 interface{}) interface{} { return f } {
 	return MkFn0(arg0)
 }
 var _Gopurs_MkFn0 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -122,7 +122,7 @@ var _Gopurs_MkFn0 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_r
 	go_res := MkFn0(go_arg0)
 	return gopurs_runtime.Box(go_res)
 })
-func Call_runFn0(arg0 any) any { return f.(func(any) any)(nil) } {
+func Call_runFn0(arg0 interface{}) interface{} { return f.(func(interface{}) interface{})(nil) } {
 	return RunFn0(arg0)
 }
 var _Gopurs_RunFn0 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
