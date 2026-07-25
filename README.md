@@ -22,6 +22,10 @@ To ensure fair and executable comparisons across all backends, the test suite is
 1. **Core tests (`src/`)**: Pure computational tasks (AST, Fibonacci, recursion) that run seamlessly on all 6 backends. Executed via `./bin/run`.
 2. **Extended tests (`srx/`)**: Tests relying heavily on Javascript/PHP FFI bindings (like `Effect.Aff`, mutable `STArray`, and regex). Since Scheme and Erlang lack FFI implementations for these specific libraries in their package sets, they are isolated in the `srx/` directory. **Note that this is completely normal and expected:** Scheme is targeted here for raw computation, and Erlang's BEAM already natively handles concurrency and multithreading at the VM level (making JS style `Aff` workarounds irrelevant). Executed via `./bin/run --x` (which dynamically injects `srx/` into the compilation step and skips Scheme/Erlang).
 
+> [!NOTE]
+> **Single-Threaded Benchmark**
+> All benchmarks presented here are strictly **single-threaded**. They measure raw sequential execution speed and do not take into account the powerful multi-threading and concurrency capabilities inherent to languages like Go or Erlang (BEAM).
+
 ### Core benchmark results (pure computational)
 Command: `./bin/run` (Runs on all 6 backends). New tests will gradually be added.
 
