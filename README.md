@@ -55,7 +55,7 @@ Command: `./bin/run --x` (Skips runtimes lacking necessary FFI bindings like Sch
 ========================================================================================
 EXTENDED BENCHMARK RESULTS (file I/O, regex, STArray, asynchronous Aff)                                                                      
 ========================================================================================
-WIP, usually +20% everywhere
+WIP, usually +20% everywhere, when this is supported (e.g. JS or Go, but not Scheme)
 ```
 
 > [!WARNING]
