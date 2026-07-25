@@ -628,10 +628,13 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopur
 })
 }), gopurs_runtime.Func(func(fn_0 gopurs_runtime.Value) gopurs_runtime.Value {
 var go__1_1 gopurs_runtime.Value
-go__1_1 = gopurs_runtime.Func(func(acc_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(lhs_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(rhs_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
+go__1_1 = gopurs_runtime.Func(func(acc_2_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(lhs_3_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(rhs_4_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
+var acc_2_loop gopurs_runtime.Value = acc_2_loop_val
+var lhs_3_loop gopurs_runtime.Value = lhs_3_loop_val
+var rhs_4_loop gopurs_runtime.Value = rhs_4_loop_val
 go__1_1:
 for {
 if false { continue go__1_1 }
@@ -736,10 +739,13 @@ return gopurs_runtime.Apply3(go__1_1, a_2, b_3, gopurs_runtime.Value{Type: 9, In
 })
 }), gopurs_runtime.Func(func(fn_0 gopurs_runtime.Value) gopurs_runtime.Value {
 var go__1_6 gopurs_runtime.Value
-go__1_6 = gopurs_runtime.Func(func(acc_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(lhs_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(rhs_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
+go__1_6 = gopurs_runtime.Func(func(acc_2_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(lhs_3_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(rhs_4_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
+var acc_2_loop gopurs_runtime.Value = acc_2_loop_val
+var lhs_3_loop gopurs_runtime.Value = lhs_3_loop_val
+var rhs_4_loop gopurs_runtime.Value = rhs_4_loop_val
 go__1_6:
 for {
 if false { continue go__1_6 }

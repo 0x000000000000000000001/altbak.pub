@@ -121,9 +121,11 @@ func Get_act() gopurs_runtime.Value {
 	once_act.Do(func() {
 		cache_act = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Effect.Get_bindEffect(), "bind"), gopurs_runtime.Apply(pkg_Bench.Get_opaque(), gopurs_runtime.Int(500)), gopurs_runtime.Func(func(dummy_0 gopurs_runtime.Value) gopurs_runtime.Value {
 var go__1_0 gopurs_runtime.Value
-go__1_0 = gopurs_runtime.Func(func(v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+go__1_0 = gopurs_runtime.Func(func(v_2_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_3_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
+var v_2_loop gopurs_runtime.Value = v_2_loop_val
+var v1_3_loop gopurs_runtime.Value = v1_3_loop_val
 go__1_0:
 for {
 if false { continue go__1_0 }
@@ -185,9 +187,11 @@ func Call_sumList(lst_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var lst_0 gopurs_runtime.Value = lst_0_loop
 _ = lst_0
 var go__1_0 gopurs_runtime.Value
-go__1_0 = gopurs_runtime.Func(func(v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+go__1_0 = gopurs_runtime.Func(func(v_2_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_3_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
+var v_2_loop gopurs_runtime.Value = v_2_loop_val
+var v1_3_loop gopurs_runtime.Value = v1_3_loop_val
 go__1_0:
 for {
 if false { continue go__1_0 }
@@ -231,9 +235,11 @@ func Call_reverse(lst_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var lst_0 gopurs_runtime.Value = lst_0_loop
 _ = lst_0
 var go__1_0 gopurs_runtime.Value
-go__1_0 = gopurs_runtime.Func(func(v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+go__1_0 = gopurs_runtime.Func(func(v_2_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_3_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
+var v_2_loop gopurs_runtime.Value = v_2_loop_val
+var v1_3_loop gopurs_runtime.Value = v1_3_loop_val
 go__1_0:
 for {
 if false { continue go__1_0 }
@@ -279,9 +285,11 @@ _ = start_0
 var end_1 int64 = end_1_loop
 _ = end_1
 var go__2_0 gopurs_runtime.Value
-go__2_0 = gopurs_runtime.Func(func(curr_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(acc_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
+go__2_0 = gopurs_runtime.Func(func(curr_3_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(acc_4_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
+var curr_3_loop gopurs_runtime.Value = curr_3_loop_val
+var acc_4_loop gopurs_runtime.Value = acc_4_loop_val
 go__2_0:
 for {
 if false { continue go__2_0 }
@@ -319,9 +327,11 @@ _ = p_0
 var lst_1 gopurs_runtime.Value = lst_1_loop
 _ = lst_1
 var go__2_0 gopurs_runtime.Value
-go__2_0 = gopurs_runtime.Func(func(v_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
+go__2_0 = gopurs_runtime.Func(func(v_3_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_4_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
+var v_3_loop gopurs_runtime.Value = v_3_loop_val
+var v1_4_loop gopurs_runtime.Value = v1_4_loop_val
 go__2_0:
 for {
 if false { continue go__2_0 }
@@ -333,9 +343,11 @@ var __t1 gopurs_runtime.Value
 {
 if (v_3.Type == 9 && v_3.IntVal == 3777797863) {
 var go__5_2 gopurs_runtime.Value
-go__5_2 = gopurs_runtime.Func(func(v_6_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_7_loop gopurs_runtime.Value) gopurs_runtime.Value {
+go__5_2 = gopurs_runtime.Func(func(v_6_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_7_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
+var v_6_loop gopurs_runtime.Value = v_6_loop_val
+var v1_7_loop gopurs_runtime.Value = v1_7_loop_val
 go__5_2:
 for {
 if false { continue go__5_2 }
@@ -437,9 +449,11 @@ if (v_0.Type == 9 && v_0.IntVal == 2390177629) {
 __local_var_1_1 := (*Data_Test_Primes_Cons)(v_0.UnsafePtr).V0
 _ = __local_var_1_1
 var go__2_2 gopurs_runtime.Value
-go__2_2 = gopurs_runtime.Func(func(v_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
+go__2_2 = gopurs_runtime.Func(func(v_3_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_4_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
+var v_3_loop gopurs_runtime.Value = v_3_loop_val
+var v1_4_loop gopurs_runtime.Value = v1_4_loop_val
 go__2_2:
 for {
 if false { continue go__2_2 }
@@ -451,9 +465,11 @@ var __t3 gopurs_runtime.Value
 {
 if (v_3.Type == 9 && v_3.IntVal == 3777797863) {
 var go__5_4 gopurs_runtime.Value
-go__5_4 = gopurs_runtime.Func(func(v_6_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_7_loop gopurs_runtime.Value) gopurs_runtime.Value {
+go__5_4 = gopurs_runtime.Func(func(v_6_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_7_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
+var v_6_loop gopurs_runtime.Value = v_6_loop_val
+var v1_7_loop gopurs_runtime.Value = v1_7_loop_val
 go__5_4:
 for {
 if false { continue go__5_4 }

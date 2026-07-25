@@ -506,8 +506,9 @@ func Call_lookup(k_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var k_0 gopurs_runtime.Value = k_0_loop
 _ = k_0
 var go__1_0 gopurs_runtime.Value
-go__1_0 = gopurs_runtime.Func(func(v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+go__1_0 = gopurs_runtime.Func(func(v_2_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
+var v_2_loop gopurs_runtime.Value = v_2_loop_val
 go__1_0:
 for {
 if false { continue go__1_0 }
@@ -761,9 +762,11 @@ func Call_checkValidIsoDuration(v_0_loop gopurs_runtime.Value) gopurs_runtime.Va
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 var go__1_0 gopurs_runtime.Value
-go__1_0 = gopurs_runtime.Func(func(v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+go__1_0 = gopurs_runtime.Func(func(v_2_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_3_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
+var v_2_loop gopurs_runtime.Value = v_2_loop_val
+var v1_3_loop gopurs_runtime.Value = v1_3_loop_val
 go__1_0:
 for {
 if false { continue go__1_0 }

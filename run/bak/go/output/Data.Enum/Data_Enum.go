@@ -1354,9 +1354,11 @@ bottom2_1_0 := ((*gopurs_runtime.RecordData2)(dictBounded_0.UnsafePtr)).V0
 _ = bottom2_1_0
 return gopurs_runtime.Func2(func(dictEnum_2 gopurs_runtime.Value, i_prime_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var go__4_1 gopurs_runtime.Value
-go__4_1 = gopurs_runtime.Func(func(i_5_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(x_6_loop gopurs_runtime.Value) gopurs_runtime.Value {
+go__4_1 = gopurs_runtime.Func(func(i_5_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_6_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
+var i_5_loop gopurs_runtime.Value = i_5_loop_val
+var x_6_loop gopurs_runtime.Value = x_6_loop_val
 go__4_1:
 for {
 if false { continue go__4_1 }
@@ -1449,9 +1451,11 @@ func Call_defaultFromEnum(dictEnum_0_loop gopurs_runtime.Value) gopurs_runtime.V
 var dictEnum_0 gopurs_runtime.Value = dictEnum_0_loop
 _ = dictEnum_0
 var go__1_0 gopurs_runtime.Value
-go__1_0 = gopurs_runtime.Func(func(i_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(x_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+go__1_0 = gopurs_runtime.Func(func(i_2_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_3_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
+var i_2_loop gopurs_runtime.Value = i_2_loop_val
+var x_3_loop gopurs_runtime.Value = x_3_loop_val
 go__1_0:
 for {
 if false { continue go__1_0 }
@@ -1500,9 +1504,11 @@ bottom2_1_0 := ((*gopurs_runtime.RecordData2)(dictBounded_0.UnsafePtr)).V0
 _ = bottom2_1_0
 return gopurs_runtime.Func(func(dictEnum_2 gopurs_runtime.Value) gopurs_runtime.Value {
 var go__3_1 gopurs_runtime.Value
-go__3_1 = gopurs_runtime.Func(func(i_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(x_5_loop gopurs_runtime.Value) gopurs_runtime.Value {
+go__3_1 = gopurs_runtime.Func(func(i_4_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_5_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
+var i_4_loop gopurs_runtime.Value = i_4_loop_val
+var x_5_loop gopurs_runtime.Value = x_5_loop_val
 go__3_1:
 for {
 if false { continue go__3_1 }

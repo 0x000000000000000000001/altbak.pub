@@ -552,9 +552,11 @@ func Get_iterMapR() gopurs_runtime.Value {
 	once_iterMapR.Do(func() {
 		cache_iterMapR = func() gopurs_runtime.Value {
 var go__0_0 gopurs_runtime.Value
-go__0_0 = gopurs_runtime.Func(func(iter_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+go__0_0 = gopurs_runtime.Func(func(iter_1_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_2_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
+var iter_1_loop gopurs_runtime.Value = iter_1_loop_val
+var v_2_loop gopurs_runtime.Value = v_2_loop_val
 go__0_0:
 for {
 if false { continue go__0_0 }
@@ -642,9 +644,11 @@ func Get_iterMapL() gopurs_runtime.Value {
 	once_iterMapL.Do(func() {
 		cache_iterMapL = func() gopurs_runtime.Value {
 var go__0_0 gopurs_runtime.Value
-go__0_0 = gopurs_runtime.Func(func(iter_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+go__0_0 = gopurs_runtime.Func(func(iter_1_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_2_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
+var iter_1_loop gopurs_runtime.Value = iter_1_loop_val
+var v_2_loop gopurs_runtime.Value = v_2_loop_val
 go__0_0:
 for {
 if false { continue go__0_0 }
@@ -1710,8 +1714,9 @@ _ = next_1
 var done_2 gopurs_runtime.Value = done_2_loop
 _ = done_2
 var go__3_0 gopurs_runtime.Value
-go__3_0 = gopurs_runtime.Func(func(v_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
+go__3_0 = gopurs_runtime.Func(func(v_4_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
+var v_4_loop gopurs_runtime.Value = v_4_loop_val
 go__3_0:
 for {
 if false { continue go__3_0 }
@@ -2571,8 +2576,9 @@ _ = dictOrd_0
 var k_1 gopurs_runtime.Value = k_1_loop
 _ = k_1
 var go__2_0 gopurs_runtime.Value
-go__2_0 = gopurs_runtime.Func(func(v_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+go__2_0 = gopurs_runtime.Func(func(v_3_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
+var v_3_loop gopurs_runtime.Value = v_3_loop_val
 go__2_0:
 for {
 if false { continue go__2_0 }
@@ -2874,8 +2880,9 @@ _ = dictOrd_0
 var k_1 gopurs_runtime.Value = k_1_loop
 _ = k_1
 var go__2_0 gopurs_runtime.Value
-go__2_0 = gopurs_runtime.Func(func(v_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+go__2_0 = gopurs_runtime.Func(func(v_3_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
+var v_3_loop gopurs_runtime.Value = v_3_loop_val
 go__2_0:
 for {
 if false { continue go__2_0 }
@@ -3067,9 +3074,11 @@ return gopurs_runtime.Func(func(dictOrd1_2 gopurs_runtime.Value) gopurs_runtime.
 eqMapIter2_3_1 := gopurs_runtime.Apply(eqMapIter1_1_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd1_2, "Eq0"), gopurs_runtime.Value{}))
 _ = eqMapIter2_3_1
 var go__4_2 gopurs_runtime.Value
-go__4_2 = gopurs_runtime.Func(func(a_5_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(b_6_loop gopurs_runtime.Value) gopurs_runtime.Value {
+go__4_2 = gopurs_runtime.Func(func(a_5_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(b_6_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
+var a_5_loop gopurs_runtime.Value = a_5_loop_val
+var b_6_loop gopurs_runtime.Value = b_6_loop_val
 go__4_2:
 for {
 if false { continue go__4_2 }
@@ -3232,8 +3241,9 @@ if (m1_3.Type == 9 && m1_3.IntVal == 324739070) {
 __local_var_5_2 := (*Data_Data_Map_Internal_Node)(m1_3.UnsafePtr).V2
 _ = __local_var_5_2
 var go__6_3 gopurs_runtime.Value
-go__6_3 = gopurs_runtime.Func(func(v_7_loop gopurs_runtime.Value) gopurs_runtime.Value {
+go__6_3 = gopurs_runtime.Func(func(v_7_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
+var v_7_loop gopurs_runtime.Value = v_7_loop_val
 go__6_3:
 for {
 if false { continue go__6_3 }
@@ -4592,8 +4602,9 @@ return applyMap1_1_0
 }), gopurs_runtime.Func2(func(m_2 gopurs_runtime.Value, f_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(Call_mapMaybeWithKey(dictOrd_0, gopurs_runtime.Func(func(k_4 gopurs_runtime.Value) gopurs_runtime.Value {
 var go__5_2 gopurs_runtime.Value
-go__5_2 = gopurs_runtime.Func(func(v_6_loop gopurs_runtime.Value) gopurs_runtime.Value {
+go__5_2 = gopurs_runtime.Func(func(v_6_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
+var v_6_loop gopurs_runtime.Value = v_6_loop_val
 go__5_2:
 for {
 if false { continue go__5_2 }

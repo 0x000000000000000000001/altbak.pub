@@ -532,8 +532,9 @@ _ = dictOrd_0
 var k_1 gopurs_runtime.Value = k_1_loop
 _ = k_1
 var go__2_0 gopurs_runtime.Value
-go__2_0 = gopurs_runtime.Func(func(v_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+go__2_0 = gopurs_runtime.Func(func(v_3_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
+var v_3_loop gopurs_runtime.Value = v_3_loop_val
 go__2_0:
 for {
 if false { continue go__2_0 }

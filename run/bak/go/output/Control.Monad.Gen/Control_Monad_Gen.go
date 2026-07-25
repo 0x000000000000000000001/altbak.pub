@@ -283,9 +283,11 @@ foldMap1_1_0 := gopurs_runtime.Apply(((*gopurs_runtime.RecordData3)(dictFoldable
 _ = foldMap1_1_0
 return gopurs_runtime.Func2(func(i_2 gopurs_runtime.Value, xs_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var go__4_1 gopurs_runtime.Value
-go__4_1 = gopurs_runtime.Func(func(v_5_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_6_loop gopurs_runtime.Value) gopurs_runtime.Value {
+go__4_1 = gopurs_runtime.Func(func(v_5_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_6_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
+var v_5_loop gopurs_runtime.Value = v_5_loop_val
+var v1_6_loop gopurs_runtime.Value = v1_6_loop_val
 go__4_1:
 for {
 if false { continue go__4_1 }

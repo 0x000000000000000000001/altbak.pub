@@ -136,9 +136,11 @@ _ = start_0
 var end_1 int64 = end_1_loop
 _ = end_1
 var go__2_0 gopurs_runtime.Value
-go__2_0 = gopurs_runtime.Func(func(curr_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(acc_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
+go__2_0 = gopurs_runtime.Func(func(curr_3_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(acc_4_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
+var curr_3_loop gopurs_runtime.Value = curr_3_loop_val
+var acc_4_loop gopurs_runtime.Value = acc_4_loop_val
 go__2_0:
 for {
 if false { continue go__2_0 }
@@ -213,9 +215,11 @@ func Call_filterEvens(lst_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var lst_0 gopurs_runtime.Value = lst_0_loop
 _ = lst_0
 var go__1_0 gopurs_runtime.Value
-go__1_0 = gopurs_runtime.Func(func(v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+go__1_0 = gopurs_runtime.Func(func(v_2_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_3_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
+var v_2_loop gopurs_runtime.Value = v_2_loop_val
+var v1_3_loop gopurs_runtime.Value = v1_3_loop_val
 go__1_0:
 for {
 if false { continue go__1_0 }

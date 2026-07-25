@@ -294,9 +294,11 @@ func Get_ord1List() gopurs_runtime.Value {
 return Get_eq1List()
 }), gopurs_runtime.Func3(func(dictOrd_0 gopurs_runtime.Value, xs_1 gopurs_runtime.Value, ys_2 gopurs_runtime.Value) gopurs_runtime.Value {
 var go__3_0 gopurs_runtime.Value
-go__3_0 = gopurs_runtime.Func(func(v_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_5_loop gopurs_runtime.Value) gopurs_runtime.Value {
+go__3_0 = gopurs_runtime.Func(func(v_4_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_5_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
+var v_4_loop gopurs_runtime.Value = v_4_loop_val
+var v1_5_loop gopurs_runtime.Value = v1_5_loop_val
 go__3_0:
 for {
 if false { continue go__3_0 }
@@ -444,9 +446,11 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopur
 })
 }), gopurs_runtime.Func(func(op_0 gopurs_runtime.Value) gopurs_runtime.Value {
 var go__1_1 gopurs_runtime.Value
-go__1_1 = gopurs_runtime.Func(func(b_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(xs_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+go__1_1 = gopurs_runtime.Func(func(b_2_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(xs_3_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
+var b_2_loop gopurs_runtime.Value = b_2_loop_val
+var xs_3_loop gopurs_runtime.Value = xs_3_loop_val
 go__1_1:
 for {
 if false { continue go__1_1 }

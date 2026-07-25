@@ -381,8 +381,9 @@ goto end_branch_25
 var __t_tag_27 gopurs_runtime.Value = (*pkg_Data_Either.Data_Data_Either_Right)((*pkg_Data_Either.Data_Data_Either_Right)((*pkg_Data_Either.Data_Data_Either_Right)((*pkg_Data_Either.Data_Data_Either_Right)((*pkg_Data_Either.Data_Data_Either_Right)((*pkg_Data_Either.Data_Data_Either_Right)((*pkg_Data_Either.Data_Data_Either_Right)((*pkg_Data_Either.Data_Data_Either_Right)((*pkg_Data_Either.Data_Data_Either_Right)(y_10.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_27.Type == 9 && __t_tag_27.IntVal == 2465973597) {
 var spin_11_28 gopurs_runtime.Value
-spin_11_28 = gopurs_runtime.Func(func(v_12_loop gopurs_runtime.Value) gopurs_runtime.Value {
+spin_11_28 = gopurs_runtime.Func(func(v_12_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
+var v_12_loop gopurs_runtime.Value = v_12_loop_val
 spin_11_28:
 for {
 if false { continue spin_11_28 }
@@ -823,8 +824,9 @@ goto end_branch_22
 var __t_tag_24 gopurs_runtime.Value = (*pkg_Data_Either.Data_Data_Either_Right)((*pkg_Data_Either.Data_Data_Either_Right)((*pkg_Data_Either.Data_Data_Either_Right)((*pkg_Data_Either.Data_Data_Either_Right)((*pkg_Data_Either.Data_Data_Either_Right)((*pkg_Data_Either.Data_Data_Either_Right)((*pkg_Data_Either.Data_Data_Either_Right)((*pkg_Data_Either.Data_Data_Either_Right)(y_9.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_24.Type == 9 && __t_tag_24.IntVal == 2465973597) {
 var spin_10_25 gopurs_runtime.Value
-spin_10_25 = gopurs_runtime.Func(func(v_11_loop gopurs_runtime.Value) gopurs_runtime.Value {
+spin_10_25 = gopurs_runtime.Func(func(v_11_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
+var v_11_loop gopurs_runtime.Value = v_11_loop_val
 spin_10_25:
 for {
 if false { continue spin_10_25 }
@@ -1051,8 +1053,9 @@ goto end_branch_19
 var __t_tag_21 gopurs_runtime.Value = (*pkg_Data_Either.Data_Data_Either_Right)((*pkg_Data_Either.Data_Data_Either_Right)((*pkg_Data_Either.Data_Data_Either_Right)((*pkg_Data_Either.Data_Data_Either_Right)((*pkg_Data_Either.Data_Data_Either_Right)((*pkg_Data_Either.Data_Data_Either_Right)((*pkg_Data_Either.Data_Data_Either_Right)(y_8.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_21.Type == 9 && __t_tag_21.IntVal == 2465973597) {
 var spin_9_22 gopurs_runtime.Value
-spin_9_22 = gopurs_runtime.Func(func(v_10_loop gopurs_runtime.Value) gopurs_runtime.Value {
+spin_9_22 = gopurs_runtime.Func(func(v_10_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
+var v_10_loop gopurs_runtime.Value = v_10_loop_val
 spin_9_22:
 for {
 if false { continue spin_9_22 }
@@ -1254,8 +1257,9 @@ goto end_branch_16
 var __t_tag_18 gopurs_runtime.Value = (*pkg_Data_Either.Data_Data_Either_Right)((*pkg_Data_Either.Data_Data_Either_Right)((*pkg_Data_Either.Data_Data_Either_Right)((*pkg_Data_Either.Data_Data_Either_Right)((*pkg_Data_Either.Data_Data_Either_Right)((*pkg_Data_Either.Data_Data_Either_Right)(y_7.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_18.Type == 9 && __t_tag_18.IntVal == 2465973597) {
 var spin_8_19 gopurs_runtime.Value
-spin_8_19 = gopurs_runtime.Func(func(v_9_loop gopurs_runtime.Value) gopurs_runtime.Value {
+spin_8_19 = gopurs_runtime.Func(func(v_9_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
+var v_9_loop gopurs_runtime.Value = v_9_loop_val
 spin_8_19:
 for {
 if false { continue spin_8_19 }
@@ -1432,8 +1436,9 @@ goto end_branch_13
 var __t_tag_15 gopurs_runtime.Value = (*pkg_Data_Either.Data_Data_Either_Right)((*pkg_Data_Either.Data_Data_Either_Right)((*pkg_Data_Either.Data_Data_Either_Right)((*pkg_Data_Either.Data_Data_Either_Right)((*pkg_Data_Either.Data_Data_Either_Right)(y_6.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_15.Type == 9 && __t_tag_15.IntVal == 2465973597) {
 var spin_7_16 gopurs_runtime.Value
-spin_7_16 = gopurs_runtime.Func(func(v_8_loop gopurs_runtime.Value) gopurs_runtime.Value {
+spin_7_16 = gopurs_runtime.Func(func(v_8_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
+var v_8_loop gopurs_runtime.Value = v_8_loop_val
 spin_7_16:
 for {
 if false { continue spin_7_16 }
@@ -1585,8 +1590,9 @@ goto end_branch_10
 var __t_tag_12 gopurs_runtime.Value = (*pkg_Data_Either.Data_Data_Either_Right)((*pkg_Data_Either.Data_Data_Either_Right)((*pkg_Data_Either.Data_Data_Either_Right)((*pkg_Data_Either.Data_Data_Either_Right)(y_5.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_12.Type == 9 && __t_tag_12.IntVal == 2465973597) {
 var spin_6_13 gopurs_runtime.Value
-spin_6_13 = gopurs_runtime.Func(func(v_7_loop gopurs_runtime.Value) gopurs_runtime.Value {
+spin_6_13 = gopurs_runtime.Func(func(v_7_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
+var v_7_loop gopurs_runtime.Value = v_7_loop_val
 spin_6_13:
 for {
 if false { continue spin_6_13 }
@@ -1713,8 +1719,9 @@ goto end_branch_7
 var __t_tag_9 gopurs_runtime.Value = (*pkg_Data_Either.Data_Data_Either_Right)((*pkg_Data_Either.Data_Data_Either_Right)((*pkg_Data_Either.Data_Data_Either_Right)(y_4.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_9.Type == 9 && __t_tag_9.IntVal == 2465973597) {
 var spin_5_10 gopurs_runtime.Value
-spin_5_10 = gopurs_runtime.Func(func(v_6_loop gopurs_runtime.Value) gopurs_runtime.Value {
+spin_5_10 = gopurs_runtime.Func(func(v_6_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
+var v_6_loop gopurs_runtime.Value = v_6_loop_val
 spin_5_10:
 for {
 if false { continue spin_5_10 }
@@ -1816,8 +1823,9 @@ goto end_branch_4
 var __t_tag_6 gopurs_runtime.Value = (*pkg_Data_Either.Data_Data_Either_Right)((*pkg_Data_Either.Data_Data_Either_Right)(y_3.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_6.Type == 9 && __t_tag_6.IntVal == 2465973597) {
 var spin_4_7 gopurs_runtime.Value
-spin_4_7 = gopurs_runtime.Func(func(v_5_loop gopurs_runtime.Value) gopurs_runtime.Value {
+spin_4_7 = gopurs_runtime.Func(func(v_5_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
+var v_5_loop gopurs_runtime.Value = v_5_loop_val
 spin_4_7:
 for {
 if false { continue spin_4_7 }
@@ -1894,8 +1902,9 @@ goto end_branch_1
 var __t_tag_3 gopurs_runtime.Value = (*pkg_Data_Either.Data_Data_Either_Right)(y_2.UnsafePtr).V0
 if (__t_tag_3.Type == 9 && __t_tag_3.IntVal == 2465973597) {
 var spin_3_4 gopurs_runtime.Value
-spin_3_4 = gopurs_runtime.Func(func(v_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
+spin_3_4 = gopurs_runtime.Func(func(v_4_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
+var v_4_loop gopurs_runtime.Value = v_4_loop_val
 spin_3_4:
 for {
 if false { continue spin_3_4 }
@@ -1945,8 +1954,9 @@ goto end_branch_0
 {
 if (y_0.Type == 9 && y_0.IntVal == 2465973597) {
 var spin_1_1 gopurs_runtime.Value
-spin_1_1 = gopurs_runtime.Func(func(v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+spin_1_1 = gopurs_runtime.Func(func(v_2_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
+var v_2_loop gopurs_runtime.Value = v_2_loop_val
 spin_1_1:
 for {
 if false { continue spin_1_1 }

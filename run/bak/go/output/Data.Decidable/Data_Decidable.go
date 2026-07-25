@@ -50,8 +50,9 @@ return pkg_Data_Decide.Get_choosePredicate()
 return pkg_Data_Divisible.Get_divisiblePredicate()
 }), gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, a_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var spin_2_0 gopurs_runtime.Value
-spin_2_0 = gopurs_runtime.Func(func(v_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+spin_2_0 = gopurs_runtime.Func(func(v_3_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
+var v_3_loop gopurs_runtime.Value = v_3_loop_val
 spin_2_0:
 for {
 if false { continue spin_2_0 }
@@ -90,8 +91,9 @@ return pkg_Data_Decide.Get_chooseEquivalence()
 return pkg_Data_Divisible.Get_divisibleEquivalence()
 }), gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, a_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var spin_2_0 gopurs_runtime.Value
-spin_2_0 = gopurs_runtime.Func(func(v_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+spin_2_0 = gopurs_runtime.Func(func(v_3_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
+var v_3_loop gopurs_runtime.Value = v_3_loop_val
 spin_2_0:
 for {
 if false { continue spin_2_0 }
@@ -119,8 +121,9 @@ return pkg_Data_Decide.Get_chooseComparison()
 return pkg_Data_Divisible.Get_divisibleComparison()
 }), gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, a_1 gopurs_runtime.Value, v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 var spin_3_0 gopurs_runtime.Value
-spin_3_0 = gopurs_runtime.Func(func(v_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
+spin_3_0 = gopurs_runtime.Func(func(v_4_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
+var v_4_loop gopurs_runtime.Value = v_4_loop_val
 spin_3_0:
 for {
 if false { continue spin_3_0 }
@@ -169,8 +172,9 @@ return chooseOp_1_0
 return divisibleOp_2_1
 }), gopurs_runtime.Func2(func(f_3 gopurs_runtime.Value, a_4 gopurs_runtime.Value) gopurs_runtime.Value {
 var spin_5_2 gopurs_runtime.Value
-spin_5_2 = gopurs_runtime.Func(func(v_6_loop gopurs_runtime.Value) gopurs_runtime.Value {
+spin_5_2 = gopurs_runtime.Func(func(v_6_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
+var v_6_loop gopurs_runtime.Value = v_6_loop_val
 spin_5_2:
 for {
 if false { continue spin_5_2 }

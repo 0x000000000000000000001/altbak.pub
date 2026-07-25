@@ -1522,8 +1522,9 @@ _ = p_0
 var arr_1 gopurs_runtime.Value = arr_1_loop
 _ = arr_1
 var go__2_0 gopurs_runtime.Value
-go__2_0 = gopurs_runtime.Func(func(i_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+go__2_0 = gopurs_runtime.Func(func(i_3_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
+var i_3_loop gopurs_runtime.Value = i_3_loop_val
 go__2_0:
 for {
 if false { continue go__2_0 }
@@ -1837,9 +1838,11 @@ func Call_transpose(xs_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var xs_0 gopurs_runtime.Value = xs_0_loop
 _ = xs_0
 var go__1_0 gopurs_runtime.Value
-go__1_0 = gopurs_runtime.Func(func(idx_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(allArrays_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+go__1_0 = gopurs_runtime.Func(func(idx_2_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(allArrays_3_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
+var idx_2_loop gopurs_runtime.Value = idx_2_loop_val
+var allArrays_3_loop gopurs_runtime.Value = allArrays_3_loop_val
 go__1_0:
 for {
 if false { continue go__1_0 }

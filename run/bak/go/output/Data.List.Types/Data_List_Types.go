@@ -138,9 +138,11 @@ return gopurs_runtime.Apply(__local_var_4_1, gopurs_runtime.Apply(f_2, x_5))
 })
 }), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
 var go__1_2 gopurs_runtime.Value
-go__1_2 = gopurs_runtime.Func(func(b_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+go__1_2 = gopurs_runtime.Func(func(b_2_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_3_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
+var b_2_loop gopurs_runtime.Value = b_2_loop_val
+var v_3_loop gopurs_runtime.Value = v_3_loop_val
 go__1_2:
 for {
 if false { continue go__1_2 }
@@ -184,9 +186,11 @@ return gopurs_runtime.Apply2(f_0, a_3, b_2)
 }), b_1)
 _ = __local_var_2_4
 var go__3_5 gopurs_runtime.Value
-go__3_5 = gopurs_runtime.Func(func(v_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_5_loop gopurs_runtime.Value) gopurs_runtime.Value {
+go__3_5 = gopurs_runtime.Func(func(v_4_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_5_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
+var v_4_loop gopurs_runtime.Value = v_4_loop_val
+var v1_5_loop gopurs_runtime.Value = v1_5_loop_val
 go__3_5:
 for {
 if false { continue go__3_5 }
@@ -695,9 +699,11 @@ func Get_unfoldable1List() gopurs_runtime.Value {
 	once_unfoldable1List.Do(func() {
 		cache_unfoldable1List = gopurs_runtime.RecordDict1("unfoldr1", gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, b_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var go__2_0 gopurs_runtime.Value
-go__2_0 = gopurs_runtime.Func(func(source_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(memo_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
+go__2_0 = gopurs_runtime.Func(func(source_3_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(memo_4_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
+var source_3_loop gopurs_runtime.Value = source_3_loop_val
+var memo_4_loop gopurs_runtime.Value = memo_4_loop_val
 go__2_0:
 for {
 if false { continue go__2_0 }
@@ -754,9 +760,11 @@ func Get_unfoldableList() gopurs_runtime.Value {
 return Get_unfoldable1List()
 }), gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, b_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var go__2_0 gopurs_runtime.Value
-go__2_0 = gopurs_runtime.Func(func(source_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(memo_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
+go__2_0 = gopurs_runtime.Func(func(source_3_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(memo_4_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
+var source_3_loop gopurs_runtime.Value = source_3_loop_val
+var memo_4_loop gopurs_runtime.Value = memo_4_loop_val
 go__2_0:
 for {
 if false { continue go__2_0 }
@@ -950,9 +958,11 @@ func Get_ord1List() gopurs_runtime.Value {
 return Get_eq1List()
 }), gopurs_runtime.Func3(func(dictOrd_0 gopurs_runtime.Value, xs_1 gopurs_runtime.Value, ys_2 gopurs_runtime.Value) gopurs_runtime.Value {
 var go__3_0 gopurs_runtime.Value
-go__3_0 = gopurs_runtime.Func(func(v_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_5_loop gopurs_runtime.Value) gopurs_runtime.Value {
+go__3_0 = gopurs_runtime.Func(func(v_4_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_5_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
+var v_4_loop gopurs_runtime.Value = v_4_loop_val
+var v1_5_loop gopurs_runtime.Value = v1_5_loop_val
 go__3_0:
 for {
 if false { continue go__3_0 }
@@ -1369,9 +1379,11 @@ func Call_listMap(f_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var chunkedRevMap_1_0 gopurs_runtime.Value
-chunkedRevMap_1_0 = gopurs_runtime.Func(func(v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+chunkedRevMap_1_0 = gopurs_runtime.Func(func(v_2_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_3_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
+var v_2_loop gopurs_runtime.Value = v_2_loop_val
+var v1_3_loop gopurs_runtime.Value = v1_3_loop_val
 chunkedRevMap_1_0:
 for {
 if false { continue chunkedRevMap_1_0 }
@@ -1405,9 +1417,11 @@ goto end_branch_15
 }
 {
 var reverseUnrolledMap_4_1 gopurs_runtime.Value
-reverseUnrolledMap_4_1 = gopurs_runtime.Func(func(v2_5_loop gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v3_6_loop gopurs_runtime.Value) gopurs_runtime.Value {
+reverseUnrolledMap_4_1 = gopurs_runtime.Func(func(v2_5_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v3_6_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
+var v2_5_loop gopurs_runtime.Value = v2_5_loop_val
+var v3_6_loop gopurs_runtime.Value = v3_6_loop_val
 reverseUnrolledMap_4_1:
 for {
 if false { continue reverseUnrolledMap_4_1 }
