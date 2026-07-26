@@ -3590,7 +3590,7 @@ _ = arr_go_filter4
 res_go_filter4 := make([]gopurs_runtime.Value, 0)
 _ = res_go_filter4
 for _, v_filter4 := range *arr_go_filter4 {
-if gopurs_runtime.Apply(p_0, v_filter4).BoolVal() {
+if (gopurs_runtime.Apply(p_0, v_filter4).IntVal) == (1) {
 res_go_filter4 = append(res_go_filter4, v_filter4)
 } else {
 
@@ -3660,7 +3660,7 @@ _ = arr_go_filter4
 res_go_filter4 := make([]gopurs_runtime.Value, 0)
 _ = res_go_filter4
 for _, v_filter4 := range *arr_go_filter4 {
-if gopurs_runtime.Apply(p_0, v_filter4).BoolVal() {
+if (gopurs_runtime.Apply(p_0, v_filter4).IntVal) == (1) {
 res_go_filter4 = append(res_go_filter4, v_filter4)
 } else {
 
@@ -3711,9 +3711,9 @@ _ = arr_go_filter0
 res_go_filter0 := make([]gopurs_runtime.Value, 0)
 _ = res_go_filter0
 for _, v_filter0 := range *arr_go_filter0 {
-if gopurs_runtime.Apply(gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+if (gopurs_runtime.Apply(gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(Get_any(), gopurs_runtime.Apply(eq_0, x_3), ys_2)
-}), v_filter0).BoolVal() {
+}), v_filter0).IntVal) == (1) {
 res_go_filter0 = append(res_go_filter0, v_filter0)
 } else {
 
@@ -3738,9 +3738,9 @@ _ = arr_go_filter0
 res_go_filter0 := make([]gopurs_runtime.Value, 0)
 _ = res_go_filter0
 for _, v_filter0 := range *arr_go_filter0 {
-if gopurs_runtime.Apply(gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+if (gopurs_runtime.Apply(gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(Get_any(), gopurs_runtime.Apply(eq_0, x_3), ys_2)
-}), v_filter0).BoolVal() {
+}), v_filter0).IntVal) == (1) {
 res_go_filter0 = append(res_go_filter0, v_filter0)
 } else {
 
@@ -3781,9 +3781,9 @@ _ = arr_go_filter6
 res_go_filter6 := make([]gopurs_runtime.Value, 0)
 _ = res_go_filter6
 for _, v_filter6 := range *arr_go_filter6 {
-if gopurs_runtime.Apply(gopurs_runtime.Func(func(y_3 gopurs_runtime.Value) gopurs_runtime.Value {
+if (gopurs_runtime.Apply(gopurs_runtime.Func(func(y_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "not"), gopurs_runtime.Apply2(eq_0, __local_var_2_1, y_3))
-}), v_filter6).BoolVal() {
+}), v_filter6).IntVal) == (1) {
 res_go_filter6 = append(res_go_filter6, v_filter6)
 } else {
 
@@ -3829,9 +3829,9 @@ _ = arr_go_filter6
 res_go_filter6 := make([]gopurs_runtime.Value, 0)
 _ = res_go_filter6
 for _, v_filter6 := range *arr_go_filter6 {
-if gopurs_runtime.Apply(gopurs_runtime.Func(func(y_3 gopurs_runtime.Value) gopurs_runtime.Value {
+if (gopurs_runtime.Apply(gopurs_runtime.Func(func(y_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "not"), gopurs_runtime.Apply2(eq_0, __local_var_2_1, y_3))
-}), v_filter6).BoolVal() {
+}), v_filter6).IntVal) == (1) {
 res_go_filter6 = append(res_go_filter6, v_filter6)
 } else {
 

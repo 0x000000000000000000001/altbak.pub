@@ -2034,7 +2034,7 @@ _ = arr_go_filter5
 res_go_filter5 := make([]gopurs_runtime.Value, 0)
 _ = res_go_filter5
 for _, v_filter5 := range *arr_go_filter5 {
-if gopurs_runtime.Apply(dictFunctor_0, v_filter5).BoolVal() {
+if (gopurs_runtime.Apply(dictFunctor_0, v_filter5).IntVal) == (1) {
 res_go_filter5 = append(res_go_filter5, v_filter5)
 } else {
 
@@ -2072,7 +2072,7 @@ _ = arr_go_filter5
 res_go_filter5 := make([]gopurs_runtime.Value, 0)
 _ = res_go_filter5
 for _, v_filter5 := range *arr_go_filter5 {
-if gopurs_runtime.Apply(dictFunctor_0, v_filter5).BoolVal() {
+if (gopurs_runtime.Apply(dictFunctor_0, v_filter5).IntVal) == (1) {
 res_go_filter5 = append(res_go_filter5, v_filter5)
 } else {
 
@@ -2120,7 +2120,7 @@ _ = arr_go_filter5
 res_go_filter5 := make([]gopurs_runtime.Value, 0)
 _ = res_go_filter5
 for _, v_filter5 := range *arr_go_filter5 {
-if gopurs_runtime.Apply(dictFunctor_0, v_filter5).BoolVal() {
+if (gopurs_runtime.Apply(dictFunctor_0, v_filter5).IntVal) == (1) {
 res_go_filter5 = append(res_go_filter5, v_filter5)
 } else {
 
@@ -2158,7 +2158,7 @@ _ = arr_go_filter5
 res_go_filter5 := make([]gopurs_runtime.Value, 0)
 _ = res_go_filter5
 for _, v_filter5 := range *arr_go_filter5 {
-if gopurs_runtime.Apply(dictFunctor_0, v_filter5).BoolVal() {
+if (gopurs_runtime.Apply(dictFunctor_0, v_filter5).IntVal) == (1) {
 res_go_filter5 = append(res_go_filter5, v_filter5)
 } else {
 
