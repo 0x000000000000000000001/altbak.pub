@@ -29,6 +29,17 @@ return Call_zero(dict_0_box)
 	return cache_zero
 }
 
+var cache_zero__gopurs_runtime_Value_2547991806 gopurs_runtime.Value
+var once_zero__gopurs_runtime_Value_2547991806 sync.Once
+func Get_zero__gopurs_runtime_Value_2547991806() gopurs_runtime.Value {
+	once_zero__gopurs_runtime_Value_2547991806.Do(func() {
+		cache_zero__gopurs_runtime_Value_2547991806 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_zero__gopurs_runtime_Value_2547991806(dict_0_box)
+})
+	})
+	return cache_zero__gopurs_runtime_Value_2547991806
+}
+
 var cache_semiringUnit gopurs_runtime.Value
 var once_semiringUnit sync.Once
 func Get_semiringUnit() gopurs_runtime.Value {
@@ -112,6 +123,17 @@ return Call_one(dict_0_box)
 	return cache_one
 }
 
+var cache_one__gopurs_runtime_Value_2547991806 gopurs_runtime.Value
+var once_one__gopurs_runtime_Value_2547991806 sync.Once
+func Get_one__gopurs_runtime_Value_2547991806() gopurs_runtime.Value {
+	once_one__gopurs_runtime_Value_2547991806.Do(func() {
+		cache_one__gopurs_runtime_Value_2547991806 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_one__gopurs_runtime_Value_2547991806(dict_0_box)
+})
+	})
+	return cache_one__gopurs_runtime_Value_2547991806
+}
+
 var cache_mulRecord gopurs_runtime.Value
 var once_mulRecord sync.Once
 func Get_mulRecord() gopurs_runtime.Value {
@@ -132,6 +154,17 @@ return Call_mul(dict_0_box)
 })
 	})
 	return cache_mul
+}
+
+var cache_mul__gopurs_runtime_Value_2122352638 gopurs_runtime.Value
+var once_mul__gopurs_runtime_Value_2122352638 sync.Once
+func Get_mul__gopurs_runtime_Value_2122352638() gopurs_runtime.Value {
+	once_mul__gopurs_runtime_Value_2122352638.Do(func() {
+		cache_mul__gopurs_runtime_Value_2122352638 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_mul__gopurs_runtime_Value_2122352638(dict_0_box)
+})
+	})
+	return cache_mul__gopurs_runtime_Value_2122352638
 }
 
 var cache_addRecord gopurs_runtime.Value
@@ -165,6 +198,17 @@ return Call_add(dict_0_box)
 })
 	})
 	return cache_add
+}
+
+var cache_add__gopurs_runtime_Value_2122352638 gopurs_runtime.Value
+var once_add__gopurs_runtime_Value_2122352638 sync.Once
+func Get_add__gopurs_runtime_Value_2122352638() gopurs_runtime.Value {
+	once_add__gopurs_runtime_Value_2122352638.Do(func() {
+		cache_add__gopurs_runtime_Value_2122352638 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_add__gopurs_runtime_Value_2122352638(dict_0_box)
+})
+	})
+	return cache_add__gopurs_runtime_Value_2122352638
 }
 
 var cache_semiringFn gopurs_runtime.Value
@@ -201,6 +245,12 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "zero")
 }
 
+func Call_zero__gopurs_runtime_Value_2547991806(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "zero")
+}
+
 func Call_oneRecord(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
@@ -213,6 +263,12 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "one")
 }
 
+func Call_one__gopurs_runtime_Value_2547991806(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "one")
+}
+
 func Call_mulRecord(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
@@ -220,6 +276,12 @@ return gopurs_runtime.RecordGet(dict_0, "mulRecord")
 }
 
 func Call_mul(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "mul")
+}
+
+func Call_mul__gopurs_runtime_Value_2122352638(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "mul")
@@ -240,6 +302,12 @@ return gopurs_runtime.RecordDict4("add", "mul", "one", "zero", gopurs_runtime.Ap
 }
 
 func Call_add(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "add")
+}
+
+func Call_add__gopurs_runtime_Value_2122352638(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "add")

@@ -19,6 +19,17 @@ return Call_state(dict_0_box)
 	return cache_state
 }
 
+var cache_state__gopurs_runtime_Value_2505211360 gopurs_runtime.Value
+var once_state__gopurs_runtime_Value_2505211360 sync.Once
+func Get_state__gopurs_runtime_Value_2505211360() gopurs_runtime.Value {
+	once_state__gopurs_runtime_Value_2505211360.Do(func() {
+		cache_state__gopurs_runtime_Value_2505211360 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_state__gopurs_runtime_Value_2505211360(dict_0_box)
+})
+	})
+	return cache_state__gopurs_runtime_Value_2505211360
+}
+
 var cache_put gopurs_runtime.Value
 var once_put sync.Once
 func Get_put() gopurs_runtime.Value {
@@ -75,6 +86,12 @@ return Call_get(dictMonadState_0_box)
 }
 
 func Call_state(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "state")
+}
+
+func Call_state__gopurs_runtime_Value_2505211360(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "state")

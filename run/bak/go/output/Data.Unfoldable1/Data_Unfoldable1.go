@@ -79,6 +79,17 @@ return Call_unfoldr1(dict_0_box)
 	return cache_unfoldr1
 }
 
+var cache_unfoldr1__gopurs_runtime_Value_2343537262 gopurs_runtime.Value
+var once_unfoldr1__gopurs_runtime_Value_2343537262 sync.Once
+func Get_unfoldr1__gopurs_runtime_Value_2343537262() gopurs_runtime.Value {
+	once_unfoldr1__gopurs_runtime_Value_2343537262.Do(func() {
+		cache_unfoldr1__gopurs_runtime_Value_2343537262 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_unfoldr1__gopurs_runtime_Value_2343537262(dict_0_box)
+})
+	})
+	return cache_unfoldr1__gopurs_runtime_Value_2343537262
+}
+
 var cache_unfoldable1Maybe gopurs_runtime.Value
 var once_unfoldable1Maybe sync.Once
 func Get_unfoldable1Maybe() gopurs_runtime.Value {
@@ -110,6 +121,17 @@ return Call_replicate1(dictUnfoldable1_0_box, n_1_box.IntVal, v_2_box)
 	return cache_replicate1
 }
 
+var cache_replicate1__gopurs_runtime_Value_1361646742 gopurs_runtime.Value
+var once_replicate1__gopurs_runtime_Value_1361646742 sync.Once
+func Get_replicate1__gopurs_runtime_Value_1361646742() gopurs_runtime.Value {
+	once_replicate1__gopurs_runtime_Value_1361646742.Do(func() {
+		cache_replicate1__gopurs_runtime_Value_1361646742 = gopurs_runtime.Func3(func(dictUnfoldable1_0_box gopurs_runtime.Value, n_1_box gopurs_runtime.Value, v_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_replicate1__gopurs_runtime_Value_1361646742(dictUnfoldable1_0_box, n_1_box.IntVal, v_2_box)
+})
+	})
+	return cache_replicate1__gopurs_runtime_Value_1361646742
+}
+
 var cache_replicate1A gopurs_runtime.Value
 var once_replicate1A sync.Once
 func Get_replicate1A() gopurs_runtime.Value {
@@ -130,6 +152,17 @@ return Call_singleton(dictUnfoldable1_0_box)
 })
 	})
 	return cache_singleton
+}
+
+var cache_singleton__gopurs_runtime_Value_1174445114 gopurs_runtime.Value
+var once_singleton__gopurs_runtime_Value_1174445114 sync.Once
+func Get_singleton__gopurs_runtime_Value_1174445114() gopurs_runtime.Value {
+	once_singleton__gopurs_runtime_Value_1174445114.Do(func() {
+		cache_singleton__gopurs_runtime_Value_1174445114 = gopurs_runtime.Func(func(dictUnfoldable1_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_singleton__gopurs_runtime_Value_1174445114(dictUnfoldable1_0_box)
+})
+	})
+	return cache_singleton__gopurs_runtime_Value_1174445114
 }
 
 var cache_range_ gopurs_runtime.Value
@@ -179,7 +212,38 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "unfoldr1")
 }
 
+func Call_unfoldr1__gopurs_runtime_Value_2343537262(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "unfoldr1")
+}
+
 func Call_replicate1(dictUnfoldable1_0_loop gopurs_runtime.Value, n_1_loop int64, v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictUnfoldable1_0 gopurs_runtime.Value = dictUnfoldable1_0_loop
+_ = dictUnfoldable1_0
+var n_1 int64 = n_1_loop
+_ = n_1
+var v_2 gopurs_runtime.Value = v_2_loop
+_ = v_2
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictUnfoldable1_0, "unfoldr1"), gopurs_runtime.Func(func(i_3 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t0 gopurs_runtime.Value
+{
+if (gopurs_runtime.Apply2(Get_lessThanOrEq(), i_3, gopurs_runtime.Int(0)).IntVal) != (0) {
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{v_2, gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}})}
+goto end_branch_0
+} else {
+
+}
+}
+{
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{v_2, gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{gopurs_runtime.Int((i_3.IntVal) - (1))})}})}
+}
+end_branch_0:
+return __t0
+}), gopurs_runtime.Int((n_1) - (1)))
+}
+
+func Call_replicate1__gopurs_runtime_Value_1361646742(dictUnfoldable1_0_loop gopurs_runtime.Value, n_1_loop int64, v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictUnfoldable1_0 gopurs_runtime.Value = dictUnfoldable1_0_loop
 _ = dictUnfoldable1_0
 var n_1 int64 = n_1_loop
@@ -219,6 +283,12 @@ return gopurs_runtime.Apply(sequence1_3_0, Call_replicate1(dictUnfoldable1_1, n_
 }
 
 func Call_singleton(dictUnfoldable1_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictUnfoldable1_0 gopurs_runtime.Value = dictUnfoldable1_0_loop
+_ = dictUnfoldable1_0
+return gopurs_runtime.Apply2(Get_replicate1(), dictUnfoldable1_0, gopurs_runtime.Int(1))
+}
+
+func Call_singleton__gopurs_runtime_Value_1174445114(dictUnfoldable1_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictUnfoldable1_0 gopurs_runtime.Value = dictUnfoldable1_0_loop
 _ = dictUnfoldable1_0
 return gopurs_runtime.Apply2(Get_replicate1(), dictUnfoldable1_0, gopurs_runtime.Int(1))

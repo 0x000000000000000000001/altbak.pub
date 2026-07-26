@@ -67,6 +67,17 @@ return Call_genString(dictMonadRec_0_box, dictMonadGen_1_box)
 	return cache_genString
 }
 
+var cache_genString__gopurs_runtime_Value_134939216 gopurs_runtime.Value
+var once_genString__gopurs_runtime_Value_134939216 sync.Once
+func Get_genString__gopurs_runtime_Value_134939216() gopurs_runtime.Value {
+	once_genString__gopurs_runtime_Value_134939216.Do(func() {
+		cache_genString__gopurs_runtime_Value_134939216 = gopurs_runtime.Func2(func(dictMonadRec_0_box gopurs_runtime.Value, dictMonadGen_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_genString__gopurs_runtime_Value_134939216(dictMonadRec_0_box, dictMonadGen_1_box)
+})
+	})
+	return cache_genString__gopurs_runtime_Value_134939216
+}
+
 var cache_genUnicodeString gopurs_runtime.Value
 var once_genUnicodeString sync.Once
 func Get_genUnicodeString() gopurs_runtime.Value {
@@ -145,6 +156,26 @@ return Call_genAlphaLowercaseString(dictMonadRec_0_box, dictMonadGen_1_box)
 }
 
 func Call_genString(dictMonadRec_0_loop gopurs_runtime.Value, dictMonadGen_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictMonadRec_0 gopurs_runtime.Value = dictMonadRec_0_loop
+_ = dictMonadRec_0
+var dictMonadGen_1 gopurs_runtime.Value = dictMonadGen_1_loop
+_ = dictMonadGen_1
+Bind1_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadGen_1, "Monad0"), gopurs_runtime.Value{}), "Bind1"), gopurs_runtime.Value{})
+_ = Bind1_2_0
+unfoldable1_3_1 := gopurs_runtime.Apply3(pkg_Control_Monad_Gen.Get_unfoldable(), dictMonadRec_0, dictMonadGen_1, pkg_Data_Unfoldable.Get_unfoldableArray())
+_ = unfoldable1_3_1
+return gopurs_runtime.Func(func(genChar_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadGen_1, "sized"), gopurs_runtime.Func(func(size_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Bind1_2_0, "bind"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadGen_1, "chooseInt"), gopurs_runtime.Int(1), gopurs_runtime.Apply2(Get_max(), gopurs_runtime.Int(1), size_5)), gopurs_runtime.Func(func(newSize_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadGen_1, "resize"), gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return newSize_6
+}), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Bind1_2_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), pkg_Data_String_CodeUnits.Get_fromCharArray(), gopurs_runtime.Apply(unfoldable1_3_1, genChar_4)))
+}))
+}))
+})
+}
+
+func Call_genString__gopurs_runtime_Value_134939216(dictMonadRec_0_loop gopurs_runtime.Value, dictMonadGen_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadRec_0 gopurs_runtime.Value = dictMonadRec_0_loop
 _ = dictMonadRec_0
 var dictMonadGen_1 gopurs_runtime.Value = dictMonadGen_1_loop

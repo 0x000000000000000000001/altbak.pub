@@ -95,6 +95,17 @@ return Call_genAlphaLowercase(dictMonadGen_0_box)
 	return cache_genAlphaLowercase
 }
 
+var cache_genAlphaLowercase__gopurs_runtime_Value_3283041404 gopurs_runtime.Value
+var once_genAlphaLowercase__gopurs_runtime_Value_3283041404 sync.Once
+func Get_genAlphaLowercase__gopurs_runtime_Value_3283041404() gopurs_runtime.Value {
+	once_genAlphaLowercase__gopurs_runtime_Value_3283041404.Do(func() {
+		cache_genAlphaLowercase__gopurs_runtime_Value_3283041404 = gopurs_runtime.Func(func(dictMonadGen_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_genAlphaLowercase__gopurs_runtime_Value_3283041404(dictMonadGen_0_box)
+})
+	})
+	return cache_genAlphaLowercase__gopurs_runtime_Value_3283041404
+}
+
 var cache_genAlpha gopurs_runtime.Value
 var once_genAlpha sync.Once
 func Get_genAlpha() gopurs_runtime.Value {
@@ -137,6 +148,12 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopur
 }
 
 func Call_genAlphaLowercase(dictMonadGen_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictMonadGen_0 gopurs_runtime.Value = dictMonadGen_0_loop
+_ = dictMonadGen_0
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadGen_0, "Monad0"), gopurs_runtime.Value{}), "Bind1"), gopurs_runtime.Value{}), "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Apply2(Get_toEnumWithDefaults(), gopurs_runtime.RecordGet(pkg_Data_Bounded.Get_boundedChar(), "bottom"), gopurs_runtime.RecordGet(pkg_Data_Bounded.Get_boundedChar(), "top")), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadGen_0, "chooseInt"), gopurs_runtime.Int(97), gopurs_runtime.Int(122)))
+}
+
+func Call_genAlphaLowercase__gopurs_runtime_Value_3283041404(dictMonadGen_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadGen_0 gopurs_runtime.Value = dictMonadGen_0_loop
 _ = dictMonadGen_0
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadGen_0, "Monad0"), gopurs_runtime.Value{}), "Bind1"), gopurs_runtime.Value{}), "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Apply2(Get_toEnumWithDefaults(), gopurs_runtime.RecordGet(pkg_Data_Bounded.Get_boundedChar(), "bottom"), gopurs_runtime.RecordGet(pkg_Data_Bounded.Get_boundedChar(), "top")), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadGen_0, "chooseInt"), gopurs_runtime.Int(97), gopurs_runtime.Int(122)))

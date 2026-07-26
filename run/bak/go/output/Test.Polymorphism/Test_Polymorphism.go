@@ -20,6 +20,17 @@ return Call_mempty_(dict_0_box)
 	return cache_mempty_
 }
 
+var cache_mempty___gopurs_runtime_Value_927982167 gopurs_runtime.Value
+var once_mempty___gopurs_runtime_Value_927982167 sync.Once
+func Get_mempty___gopurs_runtime_Value_927982167() gopurs_runtime.Value {
+	once_mempty___gopurs_runtime_Value_927982167.Do(func() {
+		cache_mempty___gopurs_runtime_Value_927982167 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_mempty___gopurs_runtime_Value_927982167(dict_0_box)
+})
+	})
+	return cache_mempty___gopurs_runtime_Value_927982167
+}
+
 var cache_mappend_ gopurs_runtime.Value
 var once_mappend_ sync.Once
 func Get_mappend_() gopurs_runtime.Value {
@@ -31,6 +42,17 @@ return Call_mappend_(dict_0_box)
 	return cache_mappend_
 }
 
+var cache_mappend___gopurs_runtime_Value_4064429399 gopurs_runtime.Value
+var once_mappend___gopurs_runtime_Value_4064429399 sync.Once
+func Get_mappend___gopurs_runtime_Value_4064429399() gopurs_runtime.Value {
+	once_mappend___gopurs_runtime_Value_4064429399.Do(func() {
+		cache_mappend___gopurs_runtime_Value_4064429399 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_mappend___gopurs_runtime_Value_4064429399(dict_0_box)
+})
+	})
+	return cache_mappend___gopurs_runtime_Value_4064429399
+}
+
 var cache_polyLoop gopurs_runtime.Value
 var once_polyLoop sync.Once
 func Get_polyLoop() gopurs_runtime.Value {
@@ -40,6 +62,17 @@ return Call_polyLoop(dictMonoidish_0_box)
 })
 	})
 	return cache_polyLoop
+}
+
+var cache_polyLoop__gopurs_runtime_Value_2027499135 gopurs_runtime.Value
+var once_polyLoop__gopurs_runtime_Value_2027499135 sync.Once
+func Get_polyLoop__gopurs_runtime_Value_2027499135() gopurs_runtime.Value {
+	once_polyLoop__gopurs_runtime_Value_2027499135.Do(func() {
+		cache_polyLoop__gopurs_runtime_Value_2027499135 = gopurs_runtime.Func(func(dictMonoidish_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_polyLoop__gopurs_runtime_Value_2027499135(dictMonoidish_0_box)
+})
+	})
+	return cache_polyLoop__gopurs_runtime_Value_2027499135
 }
 
 var cache_intMonoidish gopurs_runtime.Value
@@ -113,13 +146,69 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "mempty_")
 }
 
+func Call_mempty___gopurs_runtime_Value_927982167(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "mempty_")
+}
+
 func Call_mappend_(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "mappend_")
 }
 
+func Call_mappend___gopurs_runtime_Value_4064429399(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "mappend_")
+}
+
 func Call_polyLoop(dictMonoidish_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictMonoidish_0 gopurs_runtime.Value = dictMonoidish_0_loop
+_ = dictMonoidish_0
+mempty_1_1_0 := gopurs_runtime.RecordGet(dictMonoidish_0, "mempty_")
+_ = mempty_1_1_0
+return gopurs_runtime.Func2(func(n_init_2 gopurs_runtime.Value, acc_init_3 gopurs_runtime.Value) gopurs_runtime.Value {
+var go__4_1 gopurs_runtime.Value
+go__4_1 = gopurs_runtime.Func(func(v_5_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_6_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var v_5_loop gopurs_runtime.Value = v_5_loop_val
+var v1_6_loop gopurs_runtime.Value = v1_6_loop_val
+go__4_1:
+for {
+if false { continue go__4_1 }
+var v_5 gopurs_runtime.Value = v_5_loop
+_ = v_5
+var v1_6 gopurs_runtime.Value = v1_6_loop
+_ = v1_6
+var __t2 gopurs_runtime.Value
+{
+if (v_5.IntVal) == (0) {
+__t2 = v1_6
+goto end_branch_2
+} else {
+
+}
+}
+{
+v_5_loop = gopurs_runtime.Int((v_5.IntVal) - (1))
+v1_6_loop = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonoidish_0, "mappend_"), v1_6, mempty_1_1_0)
+continue go__4_1
+__t2 = gopurs_runtime.Value{}
+}
+end_branch_2:
+return __t2
+}
+}()
+})
+})
+return gopurs_runtime.Apply2(go__4_1, n_init_2, acc_init_3)
+})
+}
+
+func Call_polyLoop__gopurs_runtime_Value_2027499135(dictMonoidish_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonoidish_0 gopurs_runtime.Value = dictMonoidish_0_loop
 _ = dictMonoidish_0
 mempty_1_1_0 := gopurs_runtime.RecordGet(dictMonoidish_0, "mempty_")

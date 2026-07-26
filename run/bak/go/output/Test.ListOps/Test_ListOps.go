@@ -73,6 +73,28 @@ return Call_foldl(v_0_box, v1_1_box, (*Constructor_Cons[gopurs_runtime.Value])(v
 	return cache_foldl
 }
 
+var cache_foldl__gopurs_runtime_Value_436571761 gopurs_runtime.Value
+var once_foldl__gopurs_runtime_Value_436571761 sync.Once
+func Get_foldl__gopurs_runtime_Value_436571761() gopurs_runtime.Value {
+	once_foldl__gopurs_runtime_Value_436571761.Do(func() {
+		cache_foldl__gopurs_runtime_Value_436571761 = gopurs_runtime.Func3(func(v_0_box gopurs_runtime.Value, v1_1_box gopurs_runtime.Value, v2_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(Call_foldl__gopurs_runtime_Value_436571761(v_0_box, (*Constructor_Cons[int64])(v1_1_box.UnsafePtr), (*Constructor_Cons[gopurs_runtime.Value])(v2_2_box.UnsafePtr)))}
+})
+	})
+	return cache_foldl__gopurs_runtime_Value_436571761
+}
+
+var cache_foldl__gopurs_runtime_Value_206196785 gopurs_runtime.Value
+var once_foldl__gopurs_runtime_Value_206196785 sync.Once
+func Get_foldl__gopurs_runtime_Value_206196785() gopurs_runtime.Value {
+	once_foldl__gopurs_runtime_Value_206196785.Do(func() {
+		cache_foldl__gopurs_runtime_Value_206196785 = gopurs_runtime.Func3(func(v_0_box gopurs_runtime.Value, v1_1_box gopurs_runtime.Value, v2_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_foldl__gopurs_runtime_Value_206196785(v_0_box, v1_1_box, (*Constructor_Cons[gopurs_runtime.Value])(v2_2_box.UnsafePtr))
+})
+	})
+	return cache_foldl__gopurs_runtime_Value_206196785
+}
+
 var cache_filterEvens gopurs_runtime.Value
 var once_filterEvens sync.Once
 func Get_filterEvens() gopurs_runtime.Value {
@@ -169,9 +191,6 @@ return (*Constructor_Cons[int64])(gopurs_runtime.Apply2(go__2_0, gopurs_runtime.
 }
 
 func Call_foldl(v_0_loop gopurs_runtime.Value, v1_1_loop gopurs_runtime.Value, v2_2_loop *Constructor_Cons[gopurs_runtime.Value]) gopurs_runtime.Value {
-foldl:
-for {
-if false { continue foldl }
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 var v1_1 gopurs_runtime.Value = v1_1_loop
@@ -189,11 +208,7 @@ goto end_branch_0
 }
 {
 if (gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(v2_2)}.Type == 9 && gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(v2_2)}.IntVal == 1127792131 && gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(v2_2)}.UnsafePtr != nil) {
-v_0_loop = v_0
-v1_1_loop = gopurs_runtime.Apply2(v_0, v1_1, (*Constructor_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(v2_2)}.UnsafePtr).V0)
-v2_2_loop = (*Constructor_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer((*Constructor_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(v2_2)}.UnsafePtr).V1)}.UnsafePtr)
-continue foldl
-__t0 = gopurs_runtime.Value{}
+__t0 = Call_foldl(v_0, gopurs_runtime.Apply2(v_0, v1_1, (*Constructor_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(v2_2)}.UnsafePtr).V0), (*Constructor_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer((*Constructor_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(v2_2)}.UnsafePtr).V1)}.UnsafePtr))
 goto end_branch_0
 } else {
 
@@ -205,6 +220,67 @@ __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 end_branch_0:
 return __t0
 }
+
+func Call_foldl__gopurs_runtime_Value_436571761(v_0_loop gopurs_runtime.Value, v1_1_loop *Constructor_Cons[int64], v2_2_loop *Constructor_Cons[gopurs_runtime.Value]) *Constructor_Cons[int64] {
+var v_0 gopurs_runtime.Value = v_0_loop
+_ = v_0
+var v1_1 *Constructor_Cons[int64] = v1_1_loop
+_ = v1_1
+var v2_2 *Constructor_Cons[gopurs_runtime.Value] = v2_2_loop
+_ = v2_2
+var __t0 gopurs_runtime.Value
+{
+if (gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(v2_2)}.Type == 9 && gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(v2_2)}.IntVal == 1127792131 && gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(v2_2)}.UnsafePtr == nil) {
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(v1_1)}
+goto end_branch_0
+} else {
+
+}
+}
+{
+if (gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(v2_2)}.Type == 9 && gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(v2_2)}.IntVal == 1127792131 && gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(v2_2)}.UnsafePtr != nil) {
+__t0 = Call_foldl(v_0, gopurs_runtime.Apply2(v_0, gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(v1_1)}, (*Constructor_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(v2_2)}.UnsafePtr).V0), (*Constructor_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer((*Constructor_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(v2_2)}.UnsafePtr).V1)}.UnsafePtr))
+goto end_branch_0
+} else {
+
+}
+}
+{
+__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_0:
+return (*Constructor_Cons[int64])(__t0.UnsafePtr)
+}
+
+func Call_foldl__gopurs_runtime_Value_206196785(v_0_loop gopurs_runtime.Value, v1_1_loop gopurs_runtime.Value, v2_2_loop *Constructor_Cons[gopurs_runtime.Value]) gopurs_runtime.Value {
+var v_0 gopurs_runtime.Value = v_0_loop
+_ = v_0
+var v1_1 gopurs_runtime.Value = v1_1_loop
+_ = v1_1
+var v2_2 *Constructor_Cons[gopurs_runtime.Value] = v2_2_loop
+_ = v2_2
+var __t0 gopurs_runtime.Value
+{
+if (gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(v2_2)}.Type == 9 && gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(v2_2)}.IntVal == 1127792131 && gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(v2_2)}.UnsafePtr == nil) {
+__t0 = v1_1
+goto end_branch_0
+} else {
+
+}
+}
+{
+if (gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(v2_2)}.Type == 9 && gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(v2_2)}.IntVal == 1127792131 && gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(v2_2)}.UnsafePtr != nil) {
+__t0 = Call_foldl(v_0, gopurs_runtime.Apply2(v_0, v1_1, (*Constructor_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(v2_2)}.UnsafePtr).V0), (*Constructor_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer((*Constructor_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(v2_2)}.UnsafePtr).V1)}.UnsafePtr))
+goto end_branch_0
+} else {
+
+}
+}
+{
+__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_0:
+return __t0
 }
 
 func Call_filterEvens(lst_0_loop *Constructor_Cons[int64]) *Constructor_Cons[int64] {

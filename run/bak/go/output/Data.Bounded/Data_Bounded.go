@@ -33,6 +33,17 @@ return Call_top(dict_0_box)
 	return cache_top
 }
 
+var cache_top__gopurs_runtime_Value_1655760489 gopurs_runtime.Value
+var once_top__gopurs_runtime_Value_1655760489 sync.Once
+func Get_top__gopurs_runtime_Value_1655760489() gopurs_runtime.Value {
+	once_top__gopurs_runtime_Value_1655760489.Do(func() {
+		cache_top__gopurs_runtime_Value_1655760489 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_top__gopurs_runtime_Value_1655760489(dict_0_box)
+})
+	})
+	return cache_top__gopurs_runtime_Value_1655760489
+}
+
 var cache_boundedUnit gopurs_runtime.Value
 var once_boundedUnit sync.Once
 func Get_boundedUnit() gopurs_runtime.Value {
@@ -160,6 +171,17 @@ return Call_bottom(dict_0_box)
 	return cache_bottom
 }
 
+var cache_bottom__gopurs_runtime_Value_1655760489 gopurs_runtime.Value
+var once_bottom__gopurs_runtime_Value_1655760489 sync.Once
+func Get_bottom__gopurs_runtime_Value_1655760489() gopurs_runtime.Value {
+	once_bottom__gopurs_runtime_Value_1655760489.Do(func() {
+		cache_bottom__gopurs_runtime_Value_1655760489 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_bottom__gopurs_runtime_Value_1655760489(dict_0_box)
+})
+	})
+	return cache_bottom__gopurs_runtime_Value_1655760489
+}
+
 var cache_boundedRecordCons gopurs_runtime.Value
 var once_boundedRecordCons sync.Once
 func Get_boundedRecordCons() gopurs_runtime.Value {
@@ -178,6 +200,12 @@ return gopurs_runtime.RecordGet(dict_0, "topRecord")
 }
 
 func Call_top(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "top")
+}
+
+func Call_top__gopurs_runtime_Value_1655760489(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "top")
@@ -208,6 +236,12 @@ return ordRecord1_4_2
 }
 
 func Call_bottom(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "bottom")
+}
+
+func Call_bottom__gopurs_runtime_Value_1655760489(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "bottom")

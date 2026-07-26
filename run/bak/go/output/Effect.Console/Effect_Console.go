@@ -38,6 +38,17 @@ return Call_logShow(dictShow_0_box, a_1_box)
 	return cache_logShow
 }
 
+var cache_logShow__gopurs_runtime_Value_1468837143 gopurs_runtime.Value
+var once_logShow__gopurs_runtime_Value_1468837143 sync.Once
+func Get_logShow__gopurs_runtime_Value_1468837143() gopurs_runtime.Value {
+	once_logShow__gopurs_runtime_Value_1468837143.Do(func() {
+		cache_logShow__gopurs_runtime_Value_1468837143 = gopurs_runtime.Func2(func(dictShow_0_box gopurs_runtime.Value, a_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_logShow__gopurs_runtime_Value_1468837143(dictShow_0_box, a_1_box)
+})
+	})
+	return cache_logShow__gopurs_runtime_Value_1468837143
+}
+
 var cache_infoShow gopurs_runtime.Value
 var once_infoShow sync.Once
 func Get_infoShow() gopurs_runtime.Value {
@@ -91,6 +102,14 @@ return gopurs_runtime.Apply(Get_warn(), gopurs_runtime.Apply(gopurs_runtime.Reco
 }
 
 func Call_logShow(dictShow_0_loop gopurs_runtime.Value, a_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictShow_0 gopurs_runtime.Value = dictShow_0_loop
+_ = dictShow_0
+var a_1 gopurs_runtime.Value = a_1_loop
+_ = a_1
+return gopurs_runtime.Apply(Get_log(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), a_1))
+}
+
+func Call_logShow__gopurs_runtime_Value_1468837143(dictShow_0_loop gopurs_runtime.Value, a_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictShow_0 gopurs_runtime.Value = dictShow_0_loop
 _ = dictShow_0
 var a_1 gopurs_runtime.Value = a_1_loop

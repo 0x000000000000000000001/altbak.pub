@@ -32,6 +32,17 @@ return Call_mapWithIndex(dict_0_box)
 	return cache_mapWithIndex
 }
 
+var cache_mapWithIndex__gopurs_runtime_Value_3962822519 gopurs_runtime.Value
+var once_mapWithIndex__gopurs_runtime_Value_3962822519 sync.Once
+func Get_mapWithIndex__gopurs_runtime_Value_3962822519() gopurs_runtime.Value {
+	once_mapWithIndex__gopurs_runtime_Value_3962822519.Do(func() {
+		cache_mapWithIndex__gopurs_runtime_Value_3962822519 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_mapWithIndex__gopurs_runtime_Value_3962822519(dict_0_box)
+})
+	})
+	return cache_mapWithIndex__gopurs_runtime_Value_3962822519
+}
+
 var cache_mapDefault gopurs_runtime.Value
 var once_mapDefault sync.Once
 func Get_mapDefault() gopurs_runtime.Value {
@@ -255,6 +266,12 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Monoid_Additive.Ge
 }
 
 func Call_mapWithIndex(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "mapWithIndex")
+}
+
+func Call_mapWithIndex__gopurs_runtime_Value_3962822519(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "mapWithIndex")

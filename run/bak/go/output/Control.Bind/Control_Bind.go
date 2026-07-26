@@ -28,6 +28,17 @@ return Call_discard(dict_0_box)
 	return cache_discard
 }
 
+var cache_discard__gopurs_runtime_Value_3950241405 gopurs_runtime.Value
+var once_discard__gopurs_runtime_Value_3950241405 sync.Once
+func Get_discard__gopurs_runtime_Value_3950241405() gopurs_runtime.Value {
+	once_discard__gopurs_runtime_Value_3950241405.Do(func() {
+		cache_discard__gopurs_runtime_Value_3950241405 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_discard__gopurs_runtime_Value_3950241405(dict_0_box)
+})
+	})
+	return cache_discard__gopurs_runtime_Value_3950241405
+}
+
 var cache_bindProxy gopurs_runtime.Value
 var once_bindProxy sync.Once
 func Get_bindProxy() gopurs_runtime.Value {
@@ -76,6 +87,39 @@ return Call_bind(dict_0_box)
 	return cache_bind
 }
 
+var cache_bind__gopurs_runtime_Value_1553682102 gopurs_runtime.Value
+var once_bind__gopurs_runtime_Value_1553682102 sync.Once
+func Get_bind__gopurs_runtime_Value_1553682102() gopurs_runtime.Value {
+	once_bind__gopurs_runtime_Value_1553682102.Do(func() {
+		cache_bind__gopurs_runtime_Value_1553682102 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_bind__gopurs_runtime_Value_1553682102(dict_0_box)
+})
+	})
+	return cache_bind__gopurs_runtime_Value_1553682102
+}
+
+var cache_bind__gopurs_runtime_Value_3933150518 gopurs_runtime.Value
+var once_bind__gopurs_runtime_Value_3933150518 sync.Once
+func Get_bind__gopurs_runtime_Value_3933150518() gopurs_runtime.Value {
+	once_bind__gopurs_runtime_Value_3933150518.Do(func() {
+		cache_bind__gopurs_runtime_Value_3933150518 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_bind__gopurs_runtime_Value_3933150518(dict_0_box)
+})
+	})
+	return cache_bind__gopurs_runtime_Value_3933150518
+}
+
+var cache_bind__gopurs_runtime_Value_2164513878 gopurs_runtime.Value
+var once_bind__gopurs_runtime_Value_2164513878 sync.Once
+func Get_bind__gopurs_runtime_Value_2164513878() gopurs_runtime.Value {
+	once_bind__gopurs_runtime_Value_2164513878.Do(func() {
+		cache_bind__gopurs_runtime_Value_2164513878 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_bind__gopurs_runtime_Value_2164513878(dict_0_box)
+})
+	})
+	return cache_bind__gopurs_runtime_Value_2164513878
+}
+
 var cache_bindFlipped gopurs_runtime.Value
 var once_bindFlipped sync.Once
 func Get_bindFlipped() gopurs_runtime.Value {
@@ -87,6 +131,17 @@ return Call_bindFlipped(dictBind_0_box, b_1_box, a_2_box)
 	return cache_bindFlipped
 }
 
+var cache_bindFlipped__gopurs_runtime_Value_2292006102 gopurs_runtime.Value
+var once_bindFlipped__gopurs_runtime_Value_2292006102 sync.Once
+func Get_bindFlipped__gopurs_runtime_Value_2292006102() gopurs_runtime.Value {
+	once_bindFlipped__gopurs_runtime_Value_2292006102.Do(func() {
+		cache_bindFlipped__gopurs_runtime_Value_2292006102 = gopurs_runtime.Func3(func(dictBind_0_box gopurs_runtime.Value, b_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_bindFlipped__gopurs_runtime_Value_2292006102(dictBind_0_box, b_1_box, a_2_box)
+})
+	})
+	return cache_bindFlipped__gopurs_runtime_Value_2292006102
+}
+
 var cache_composeKleisliFlipped gopurs_runtime.Value
 var once_composeKleisliFlipped sync.Once
 func Get_composeKleisliFlipped() gopurs_runtime.Value {
@@ -96,6 +151,17 @@ return Call_composeKleisliFlipped(dictBind_0_box, f_1_box, g_2_box, a_3_box)
 })
 	})
 	return cache_composeKleisliFlipped
+}
+
+var cache_composeKleisliFlipped__gopurs_runtime_Value_477960372 gopurs_runtime.Value
+var once_composeKleisliFlipped__gopurs_runtime_Value_477960372 sync.Once
+func Get_composeKleisliFlipped__gopurs_runtime_Value_477960372() gopurs_runtime.Value {
+	once_composeKleisliFlipped__gopurs_runtime_Value_477960372.Do(func() {
+		cache_composeKleisliFlipped__gopurs_runtime_Value_477960372 = gopurs_runtime.Func4(func(dictBind_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, g_2_box gopurs_runtime.Value, a_3_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_composeKleisliFlipped__gopurs_runtime_Value_477960372(dictBind_0_box, f_1_box, g_2_box, a_3_box)
+})
+	})
+	return cache_composeKleisliFlipped__gopurs_runtime_Value_477960372
 }
 
 var cache_composeKleisli gopurs_runtime.Value
@@ -153,6 +219,17 @@ return Call_join(dictBind_0_box, m_1_box)
 	return cache_join
 }
 
+var cache_join__gopurs_runtime_Value_803698843 gopurs_runtime.Value
+var once_join__gopurs_runtime_Value_803698843 sync.Once
+func Get_join__gopurs_runtime_Value_803698843() gopurs_runtime.Value {
+	once_join__gopurs_runtime_Value_803698843.Do(func() {
+		cache_join__gopurs_runtime_Value_803698843 = gopurs_runtime.Func2(func(dictBind_0_box gopurs_runtime.Value, m_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_join__gopurs_runtime_Value_803698843(dictBind_0_box, m_1_box)
+})
+	})
+	return cache_join__gopurs_runtime_Value_803698843
+}
+
 func Call_identity(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
@@ -165,7 +242,31 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "discard")
 }
 
+func Call_discard__gopurs_runtime_Value_3950241405(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "discard")
+}
+
 func Call_bind(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "bind")
+}
+
+func Call_bind__gopurs_runtime_Value_1553682102(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "bind")
+}
+
+func Call_bind__gopurs_runtime_Value_3933150518(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "bind")
+}
+
+func Call_bind__gopurs_runtime_Value_2164513878(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "bind")
@@ -181,7 +282,29 @@ _ = a_2
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBind_0, "bind"), a_2, b_1)
 }
 
+func Call_bindFlipped__gopurs_runtime_Value_2292006102(dictBind_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictBind_0 gopurs_runtime.Value = dictBind_0_loop
+_ = dictBind_0
+var b_1 gopurs_runtime.Value = b_1_loop
+_ = b_1
+var a_2 gopurs_runtime.Value = a_2_loop
+_ = a_2
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBind_0, "bind"), a_2, b_1)
+}
+
 func Call_composeKleisliFlipped(dictBind_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value, g_2_loop gopurs_runtime.Value, a_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictBind_0 gopurs_runtime.Value = dictBind_0_loop
+_ = dictBind_0
+var f_1 gopurs_runtime.Value = f_1_loop
+_ = f_1
+var g_2 gopurs_runtime.Value = g_2_loop
+_ = g_2
+var a_3 gopurs_runtime.Value = a_3_loop
+_ = a_3
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBind_0, "bind"), gopurs_runtime.Apply(g_2, a_3), f_1)
+}
+
+func Call_composeKleisliFlipped__gopurs_runtime_Value_477960372(dictBind_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value, g_2_loop gopurs_runtime.Value, a_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictBind_0 gopurs_runtime.Value = dictBind_0_loop
 _ = dictBind_0
 var f_1 gopurs_runtime.Value = f_1_loop
@@ -233,6 +356,14 @@ return __t0
 }
 
 func Call_join(dictBind_0_loop gopurs_runtime.Value, m_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictBind_0 gopurs_runtime.Value = dictBind_0_loop
+_ = dictBind_0
+var m_1 gopurs_runtime.Value = m_1_loop
+_ = m_1
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBind_0, "bind"), m_1, Get_identity())
+}
+
+func Call_join__gopurs_runtime_Value_803698843(dictBind_0_loop gopurs_runtime.Value, m_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictBind_0 gopurs_runtime.Value = dictBind_0_loop
 _ = dictBind_0
 var m_1 gopurs_runtime.Value = m_1_loop

@@ -44,6 +44,17 @@ return Call_biapply(dict_0_box)
 	return cache_biapply
 }
 
+var cache_biapply__gopurs_runtime_Value_1299693896 gopurs_runtime.Value
+var once_biapply__gopurs_runtime_Value_1299693896 sync.Once
+func Get_biapply__gopurs_runtime_Value_1299693896() gopurs_runtime.Value {
+	once_biapply__gopurs_runtime_Value_1299693896.Do(func() {
+		cache_biapply__gopurs_runtime_Value_1299693896 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_biapply__gopurs_runtime_Value_1299693896(dict_0_box)
+})
+	})
+	return cache_biapply__gopurs_runtime_Value_1299693896
+}
+
 var cache_biapplyFirst gopurs_runtime.Value
 var once_biapplyFirst sync.Once
 func Get_biapplyFirst() gopurs_runtime.Value {
@@ -95,6 +106,12 @@ return x_0
 }
 
 func Call_biapply(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "biapply")
+}
+
+func Call_biapply__gopurs_runtime_Value_1299693896(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "biapply")

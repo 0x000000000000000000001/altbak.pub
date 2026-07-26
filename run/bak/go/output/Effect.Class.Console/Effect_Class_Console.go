@@ -139,6 +139,17 @@ return Call_group(dictMonadEffect_0_box, x_1_box.StrVal())
 	return cache_group
 }
 
+var cache_group__gopurs_runtime_Value_4065415412 gopurs_runtime.Value
+var once_group__gopurs_runtime_Value_4065415412 sync.Once
+func Get_group__gopurs_runtime_Value_4065415412() gopurs_runtime.Value {
+	once_group__gopurs_runtime_Value_4065415412.Do(func() {
+		cache_group__gopurs_runtime_Value_4065415412 = gopurs_runtime.Func2(func(dictMonadEffect_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_group__gopurs_runtime_Value_4065415412(dictMonadEffect_0_box, x_1_box.StrVal())
+})
+	})
+	return cache_group__gopurs_runtime_Value_4065415412
+}
+
 var cache_grouped gopurs_runtime.Value
 var once_grouped sync.Once
 func Get_grouped() gopurs_runtime.Value {
@@ -298,6 +309,14 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEff
 }
 
 func Call_group(dictMonadEffect_0_loop gopurs_runtime.Value, x_1_loop string) gopurs_runtime.Value {
+var dictMonadEffect_0 gopurs_runtime.Value = dictMonadEffect_0_loop
+_ = dictMonadEffect_0
+var x_1 string = x_1_loop
+_ = x_1
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Apply(pkg_Effect_Console.Get_group(), gopurs_runtime.Str(x_1)))
+}
+
+func Call_group__gopurs_runtime_Value_4065415412(dictMonadEffect_0_loop gopurs_runtime.Value, x_1_loop string) gopurs_runtime.Value {
 var dictMonadEffect_0 gopurs_runtime.Value = dictMonadEffect_0_loop
 _ = dictMonadEffect_0
 var x_1 string = x_1_loop

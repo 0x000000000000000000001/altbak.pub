@@ -49,6 +49,17 @@ return Call_distribute(dict_0_box)
 	return cache_distribute
 }
 
+var cache_distribute__gopurs_runtime_Value_304256629 gopurs_runtime.Value
+var once_distribute__gopurs_runtime_Value_304256629 sync.Once
+func Get_distribute__gopurs_runtime_Value_304256629() gopurs_runtime.Value {
+	once_distribute__gopurs_runtime_Value_304256629.Do(func() {
+		cache_distribute__gopurs_runtime_Value_304256629 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_distribute__gopurs_runtime_Value_304256629(dict_0_box)
+})
+	})
+	return cache_distribute__gopurs_runtime_Value_304256629
+}
+
 var cache_distributiveFunction gopurs_runtime.Value
 var once_distributiveFunction sync.Once
 func Get_distributiveFunction() gopurs_runtime.Value {
@@ -116,6 +127,17 @@ return Call_collect(dict_0_box)
 	return cache_collect
 }
 
+var cache_collect__gopurs_runtime_Value_2080349267 gopurs_runtime.Value
+var once_collect__gopurs_runtime_Value_2080349267 sync.Once
+func Get_collect__gopurs_runtime_Value_2080349267() gopurs_runtime.Value {
+	once_collect__gopurs_runtime_Value_2080349267.Do(func() {
+		cache_collect__gopurs_runtime_Value_2080349267 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_collect__gopurs_runtime_Value_2080349267(dict_0_box)
+})
+	})
+	return cache_collect__gopurs_runtime_Value_2080349267
+}
+
 var cache_distributeDefault gopurs_runtime.Value
 var once_distributeDefault sync.Once
 func Get_distributeDefault() gopurs_runtime.Value {
@@ -134,6 +156,12 @@ return x_0
 }
 
 func Call_distribute(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "distribute")
+}
+
+func Call_distribute__gopurs_runtime_Value_304256629(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "distribute")
@@ -206,6 +234,12 @@ return gopurs_runtime.Apply(__local_var_3_3, gopurs_runtime.Apply(__local_var_4_
 }
 
 func Call_collect(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "collect")
+}
+
+func Call_collect__gopurs_runtime_Value_2080349267(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "collect")

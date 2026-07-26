@@ -29,6 +29,17 @@ return Call_proof(dict_0_box)
 	return cache_proof
 }
 
+var cache_proof__gopurs_runtime_Value_1000867155 gopurs_runtime.Value
+var once_proof__gopurs_runtime_Value_1000867155 sync.Once
+func Get_proof__gopurs_runtime_Value_1000867155() gopurs_runtime.Value {
+	once_proof__gopurs_runtime_Value_1000867155.Do(func() {
+		cache_proof__gopurs_runtime_Value_1000867155 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_proof__gopurs_runtime_Value_1000867155(dict_0_box)
+})
+	})
+	return cache_proof__gopurs_runtime_Value_1000867155
+}
+
 var cache_to gopurs_runtime.Value
 var once_to sync.Once
 func Get_to() gopurs_runtime.Value {
@@ -51,7 +62,24 @@ return Call_from(dictTypeEquals_0_box)
 	return cache_from
 }
 
+var cache_from__gopurs_runtime_Value_2555615728 gopurs_runtime.Value
+var once_from__gopurs_runtime_Value_2555615728 sync.Once
+func Get_from__gopurs_runtime_Value_2555615728() gopurs_runtime.Value {
+	once_from__gopurs_runtime_Value_2555615728.Do(func() {
+		cache_from__gopurs_runtime_Value_2555615728 = gopurs_runtime.Func(func(dictTypeEquals_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_from__gopurs_runtime_Value_2555615728(dictTypeEquals_0_box)
+})
+	})
+	return cache_from__gopurs_runtime_Value_2555615728
+}
+
 func Call_proof(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "proof")
+}
+
+func Call_proof__gopurs_runtime_Value_1000867155(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "proof")
@@ -66,6 +94,14 @@ return a_1
 }
 
 func Call_from(dictTypeEquals_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictTypeEquals_0 gopurs_runtime.Value = dictTypeEquals_0_loop
+_ = dictTypeEquals_0
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTypeEquals_0, "proof"), gopurs_runtime.Func(func(a_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return a_1
+}))
+}
+
+func Call_from__gopurs_runtime_Value_2555615728(dictTypeEquals_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictTypeEquals_0 gopurs_runtime.Value = dictTypeEquals_0_loop
 _ = dictTypeEquals_0
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTypeEquals_0, "proof"), gopurs_runtime.Func(func(a_1 gopurs_runtime.Value) gopurs_runtime.Value {

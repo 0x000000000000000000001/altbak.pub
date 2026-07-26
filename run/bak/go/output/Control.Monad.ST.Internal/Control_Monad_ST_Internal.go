@@ -17,6 +17,15 @@ func Get_modify_prime() gopurs_runtime.Value {
 	return cache_modify_prime
 }
 
+var cache_modify_prime__gopurs_runtime_Value_1280806935 gopurs_runtime.Value
+var once_modify_prime__gopurs_runtime_Value_1280806935 sync.Once
+func Get_modify_prime__gopurs_runtime_Value_1280806935() gopurs_runtime.Value {
+	once_modify_prime__gopurs_runtime_Value_1280806935.Do(func() {
+		cache_modify_prime__gopurs_runtime_Value_1280806935 = Get_modifyImpl()
+	})
+	return cache_modify_prime__gopurs_runtime_Value_1280806935
+}
+
 var cache_modify gopurs_runtime.Value
 var once_modify sync.Once
 func Get_modify() gopurs_runtime.Value {
@@ -26,6 +35,28 @@ return Call_modify(f_0_box)
 })
 	})
 	return cache_modify
+}
+
+var cache_modify__gopurs_runtime_Value_1145252090 gopurs_runtime.Value
+var once_modify__gopurs_runtime_Value_1145252090 sync.Once
+func Get_modify__gopurs_runtime_Value_1145252090() gopurs_runtime.Value {
+	once_modify__gopurs_runtime_Value_1145252090.Do(func() {
+		cache_modify__gopurs_runtime_Value_1145252090 = gopurs_runtime.Func(func(f_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_modify__gopurs_runtime_Value_1145252090(f_0_box)
+})
+	})
+	return cache_modify__gopurs_runtime_Value_1145252090
+}
+
+var cache_modify__gopurs_runtime_Value_3004367162 gopurs_runtime.Value
+var once_modify__gopurs_runtime_Value_3004367162 sync.Once
+func Get_modify__gopurs_runtime_Value_3004367162() gopurs_runtime.Value {
+	once_modify__gopurs_runtime_Value_3004367162.Do(func() {
+		cache_modify__gopurs_runtime_Value_3004367162 = gopurs_runtime.Func(func(f_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_modify__gopurs_runtime_Value_3004367162(f_0_box)
+})
+	})
+	return cache_modify__gopurs_runtime_Value_3004367162
 }
 
 var cache_functorST gopurs_runtime.Value
@@ -215,6 +246,26 @@ return Call_monoidST(dictMonoid_0_box)
 }
 
 func Call_modify(f_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var f_0 gopurs_runtime.Value = f_0_loop
+_ = f_0
+return gopurs_runtime.Apply(Get_modifyImpl(), gopurs_runtime.Func(func(s_1 gopurs_runtime.Value) gopurs_runtime.Value {
+s_prime_2_0 := gopurs_runtime.Apply(f_0, s_1)
+_ = s_prime_2_0
+return gopurs_runtime.RecordDict2("state", "value", s_prime_2_0, s_prime_2_0)
+}))
+}
+
+func Call_modify__gopurs_runtime_Value_1145252090(f_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var f_0 gopurs_runtime.Value = f_0_loop
+_ = f_0
+return gopurs_runtime.Apply(Get_modifyImpl(), gopurs_runtime.Func(func(s_1 gopurs_runtime.Value) gopurs_runtime.Value {
+s_prime_2_0 := gopurs_runtime.Apply(f_0, s_1)
+_ = s_prime_2_0
+return gopurs_runtime.RecordDict2("state", "value", s_prime_2_0, s_prime_2_0)
+}))
+}
+
+func Call_modify__gopurs_runtime_Value_3004367162(f_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 return gopurs_runtime.Apply(Get_modifyImpl(), gopurs_runtime.Func(func(s_1 gopurs_runtime.Value) gopurs_runtime.Value {

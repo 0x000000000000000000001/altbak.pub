@@ -16,7 +16,24 @@ return Call_lift(dict_0_box)
 	return cache_lift
 }
 
+var cache_lift__gopurs_runtime_Value_1653650912 gopurs_runtime.Value
+var once_lift__gopurs_runtime_Value_1653650912 sync.Once
+func Get_lift__gopurs_runtime_Value_1653650912() gopurs_runtime.Value {
+	once_lift__gopurs_runtime_Value_1653650912.Do(func() {
+		cache_lift__gopurs_runtime_Value_1653650912 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_lift__gopurs_runtime_Value_1653650912(dict_0_box)
+})
+	})
+	return cache_lift__gopurs_runtime_Value_1653650912
+}
+
 func Call_lift(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "lift")
+}
+
+func Call_lift__gopurs_runtime_Value_1653650912(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "lift")

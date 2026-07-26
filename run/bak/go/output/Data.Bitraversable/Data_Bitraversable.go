@@ -37,6 +37,17 @@ return Call_bitraverse(dict_0_box)
 	return cache_bitraverse
 }
 
+var cache_bitraverse__gopurs_runtime_Value_1258429293 gopurs_runtime.Value
+var once_bitraverse__gopurs_runtime_Value_1258429293 sync.Once
+func Get_bitraverse__gopurs_runtime_Value_1258429293() gopurs_runtime.Value {
+	once_bitraverse__gopurs_runtime_Value_1258429293.Do(func() {
+		cache_bitraverse__gopurs_runtime_Value_1258429293 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_bitraverse__gopurs_runtime_Value_1258429293(dict_0_box)
+})
+	})
+	return cache_bitraverse__gopurs_runtime_Value_1258429293
+}
+
 var cache_lfor gopurs_runtime.Value
 var once_lfor sync.Once
 func Get_lfor() gopurs_runtime.Value {
@@ -234,6 +245,17 @@ return Call_bisequence(dict_0_box)
 	return cache_bisequence
 }
 
+var cache_bisequence__gopurs_runtime_Value_1091643086 gopurs_runtime.Value
+var once_bisequence__gopurs_runtime_Value_1091643086 sync.Once
+func Get_bisequence__gopurs_runtime_Value_1091643086() gopurs_runtime.Value {
+	once_bisequence__gopurs_runtime_Value_1091643086.Do(func() {
+		cache_bisequence__gopurs_runtime_Value_1091643086 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_bisequence__gopurs_runtime_Value_1091643086(dict_0_box)
+})
+	})
+	return cache_bisequence__gopurs_runtime_Value_1091643086
+}
+
 var cache_bitraversableFlip gopurs_runtime.Value
 var once_bitraversableFlip sync.Once
 func Get_bitraversableFlip() gopurs_runtime.Value {
@@ -285,6 +307,12 @@ return x_0
 }
 
 func Call_bitraverse(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "bitraverse")
+}
+
+func Call_bitraverse__gopurs_runtime_Value_1258429293(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "bitraverse")
@@ -433,6 +461,12 @@ return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictBitraversable_0, "bitr
 }
 
 func Call_bisequence(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "bisequence")
+}
+
+func Call_bisequence__gopurs_runtime_Value_1091643086(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "bisequence")

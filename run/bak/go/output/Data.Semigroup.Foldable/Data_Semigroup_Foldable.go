@@ -57,6 +57,15 @@ func Get_mkFoldRight1() gopurs_runtime.Value {
 	return cache_mkFoldRight1
 }
 
+var cache_mkFoldRight1__gopurs_runtime_Value_2321890291 gopurs_runtime.Value
+var once_mkFoldRight1__gopurs_runtime_Value_2321890291 sync.Once
+func Get_mkFoldRight1__gopurs_runtime_Value_2321890291() gopurs_runtime.Value {
+	once_mkFoldRight1__gopurs_runtime_Value_2321890291.Do(func() {
+		cache_mkFoldRight1__gopurs_runtime_Value_2321890291 = gopurs_runtime.Apply(Get_FoldRight1(), pkg_Data_Function.Get_const_())
+	})
+	return cache_mkFoldRight1__gopurs_runtime_Value_2321890291
+}
+
 var cache_foldr1 gopurs_runtime.Value
 var once_foldr1 sync.Once
 func Get_foldr1() gopurs_runtime.Value {
@@ -68,6 +77,17 @@ return Call_foldr1(dict_0_box)
 	return cache_foldr1
 }
 
+var cache_foldr1__gopurs_runtime_Value_3915303367 gopurs_runtime.Value
+var once_foldr1__gopurs_runtime_Value_3915303367 sync.Once
+func Get_foldr1__gopurs_runtime_Value_3915303367() gopurs_runtime.Value {
+	once_foldr1__gopurs_runtime_Value_3915303367.Do(func() {
+		cache_foldr1__gopurs_runtime_Value_3915303367 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_foldr1__gopurs_runtime_Value_3915303367(dict_0_box)
+})
+	})
+	return cache_foldr1__gopurs_runtime_Value_3915303367
+}
+
 var cache_foldl1 gopurs_runtime.Value
 var once_foldl1 sync.Once
 func Get_foldl1() gopurs_runtime.Value {
@@ -77,6 +97,17 @@ return Call_foldl1(dict_0_box)
 })
 	})
 	return cache_foldl1
+}
+
+var cache_foldl1__gopurs_runtime_Value_3915303367 gopurs_runtime.Value
+var once_foldl1__gopurs_runtime_Value_3915303367 sync.Once
+func Get_foldl1__gopurs_runtime_Value_3915303367() gopurs_runtime.Value {
+	once_foldl1__gopurs_runtime_Value_3915303367.Do(func() {
+		cache_foldl1__gopurs_runtime_Value_3915303367 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_foldl1__gopurs_runtime_Value_3915303367(dict_0_box)
+})
+	})
+	return cache_foldl1__gopurs_runtime_Value_3915303367
 }
 
 var cache_maximumBy gopurs_runtime.Value
@@ -228,6 +259,17 @@ return Call_foldMap1(dict_0_box)
 	return cache_foldMap1
 }
 
+var cache_foldMap1__gopurs_runtime_Value_2884973253 gopurs_runtime.Value
+var once_foldMap1__gopurs_runtime_Value_2884973253 sync.Once
+func Get_foldMap1__gopurs_runtime_Value_2884973253() gopurs_runtime.Value {
+	once_foldMap1__gopurs_runtime_Value_2884973253.Do(func() {
+		cache_foldMap1__gopurs_runtime_Value_2884973253 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_foldMap1__gopurs_runtime_Value_2884973253(dict_0_box)
+})
+	})
+	return cache_foldMap1__gopurs_runtime_Value_2884973253
+}
+
 var cache_foldl1Default gopurs_runtime.Value
 var once_foldl1Default sync.Once
 func Get_foldl1Default() gopurs_runtime.Value {
@@ -305,6 +347,17 @@ return Call_traverse1_(dictFoldable1_0_box, dictApply_1_box)
 	return cache_traverse1_
 }
 
+var cache_traverse1___gopurs_runtime_Value_4195200216 gopurs_runtime.Value
+var once_traverse1___gopurs_runtime_Value_4195200216 sync.Once
+func Get_traverse1___gopurs_runtime_Value_4195200216() gopurs_runtime.Value {
+	once_traverse1___gopurs_runtime_Value_4195200216.Do(func() {
+		cache_traverse1___gopurs_runtime_Value_4195200216 = gopurs_runtime.Func2(func(dictFoldable1_0_box gopurs_runtime.Value, dictApply_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_traverse1___gopurs_runtime_Value_4195200216(dictFoldable1_0_box, dictApply_1_box)
+})
+	})
+	return cache_traverse1___gopurs_runtime_Value_4195200216
+}
+
 var cache_for1_ gopurs_runtime.Value
 var once_for1_ sync.Once
 func Get_for1_() gopurs_runtime.Value {
@@ -366,7 +419,19 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "foldr1")
 }
 
+func Call_foldr1__gopurs_runtime_Value_3915303367(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "foldr1")
+}
+
 func Call_foldl1(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "foldl1")
+}
+
+func Call_foldl1__gopurs_runtime_Value_3915303367(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "foldl1")
@@ -459,6 +524,12 @@ return gopurs_runtime.Apply(__local_var_6_2, gopurs_runtime.Apply(__local_var_5_
 }
 
 func Call_foldMap1(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "foldMap1")
+}
+
+func Call_foldMap1__gopurs_runtime_Value_2884973253(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "foldMap1")
@@ -613,6 +684,24 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFoldable1_2, "foldMap1
 }
 
 func Call_traverse1_(dictFoldable1_0_loop gopurs_runtime.Value, dictApply_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictFoldable1_0 gopurs_runtime.Value = dictFoldable1_0_loop
+_ = dictFoldable1_0
+var dictApply_1 gopurs_runtime.Value = dictApply_1_loop
+_ = dictApply_1
+__local_var_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApply_1, "Functor0"), gopurs_runtime.Value{})
+_ = __local_var_2_0
+foldMap12_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFoldable1_0, "foldMap1"), Call_semigroupAct(dictApply_1))
+_ = foldMap12_3_1
+return gopurs_runtime.Func2(func(f_4 gopurs_runtime.Value, t_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_0, "map"), gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Data_Unit.Get_unit()
+}), gopurs_runtime.Apply2(foldMap12_3_1, gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(f_4, x_6)
+}), t_5))
+})
+}
+
+func Call_traverse1___gopurs_runtime_Value_4195200216(dictFoldable1_0_loop gopurs_runtime.Value, dictApply_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictFoldable1_0 gopurs_runtime.Value = dictFoldable1_0_loop
 _ = dictFoldable1_0
 var dictApply_1 gopurs_runtime.Value = dictApply_1_loop

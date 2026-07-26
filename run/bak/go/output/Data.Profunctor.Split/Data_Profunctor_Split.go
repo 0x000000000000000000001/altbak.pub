@@ -43,6 +43,61 @@ return Call_unSplit(f_0_box, v_1_box)
 	return cache_unSplit
 }
 
+var cache_unSplit__gopurs_runtime_Value_3798616144 gopurs_runtime.Value
+var once_unSplit__gopurs_runtime_Value_3798616144 sync.Once
+func Get_unSplit__gopurs_runtime_Value_3798616144() gopurs_runtime.Value {
+	once_unSplit__gopurs_runtime_Value_3798616144.Do(func() {
+		cache_unSplit__gopurs_runtime_Value_3798616144 = gopurs_runtime.Func2(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_unSplit__gopurs_runtime_Value_3798616144(f_0_box, v_1_box)
+})
+	})
+	return cache_unSplit__gopurs_runtime_Value_3798616144
+}
+
+var cache_unSplit__gopurs_runtime_Value_1009824851 gopurs_runtime.Value
+var once_unSplit__gopurs_runtime_Value_1009824851 sync.Once
+func Get_unSplit__gopurs_runtime_Value_1009824851() gopurs_runtime.Value {
+	once_unSplit__gopurs_runtime_Value_1009824851.Do(func() {
+		cache_unSplit__gopurs_runtime_Value_1009824851 = gopurs_runtime.Func2(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_unSplit__gopurs_runtime_Value_1009824851(f_0_box, v_1_box)
+})
+	})
+	return cache_unSplit__gopurs_runtime_Value_1009824851
+}
+
+var cache_unSplit__gopurs_runtime_Value_2588837779 gopurs_runtime.Value
+var once_unSplit__gopurs_runtime_Value_2588837779 sync.Once
+func Get_unSplit__gopurs_runtime_Value_2588837779() gopurs_runtime.Value {
+	once_unSplit__gopurs_runtime_Value_2588837779.Do(func() {
+		cache_unSplit__gopurs_runtime_Value_2588837779 = gopurs_runtime.Func2(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_unSplit__gopurs_runtime_Value_2588837779(f_0_box, v_1_box)
+})
+	})
+	return cache_unSplit__gopurs_runtime_Value_2588837779
+}
+
+var cache_unSplit__gopurs_runtime_Value_1063092243 gopurs_runtime.Value
+var once_unSplit__gopurs_runtime_Value_1063092243 sync.Once
+func Get_unSplit__gopurs_runtime_Value_1063092243() gopurs_runtime.Value {
+	once_unSplit__gopurs_runtime_Value_1063092243.Do(func() {
+		cache_unSplit__gopurs_runtime_Value_1063092243 = gopurs_runtime.Func2(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_unSplit__gopurs_runtime_Value_1063092243(f_0_box, v_1_box)
+})
+	})
+	return cache_unSplit__gopurs_runtime_Value_1063092243
+}
+
+var cache_unSplit__gopurs_runtime_Value_2408473777 gopurs_runtime.Value
+var once_unSplit__gopurs_runtime_Value_2408473777 sync.Once
+func Get_unSplit__gopurs_runtime_Value_2408473777() gopurs_runtime.Value {
+	once_unSplit__gopurs_runtime_Value_2408473777.Do(func() {
+		cache_unSplit__gopurs_runtime_Value_2408473777 = gopurs_runtime.Func2(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_unSplit__gopurs_runtime_Value_2408473777(f_0_box, v_1_box)
+})
+	})
+	return cache_unSplit__gopurs_runtime_Value_2408473777
+}
+
 var cache_split gopurs_runtime.Value
 var once_split sync.Once
 func Get_split() gopurs_runtime.Value {
@@ -52,6 +107,17 @@ return Call_split(f_0_box, g_1_box, fx_2_box)
 })
 	})
 	return cache_split
+}
+
+var cache_split__gopurs_runtime_Value_2349153714 gopurs_runtime.Value
+var once_split__gopurs_runtime_Value_2349153714 sync.Once
+func Get_split__gopurs_runtime_Value_2349153714() gopurs_runtime.Value {
+	once_split__gopurs_runtime_Value_2349153714.Do(func() {
+		cache_split__gopurs_runtime_Value_2349153714 = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, g_1_box gopurs_runtime.Value, fx_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_split__gopurs_runtime_Value_2349153714(f_0_box, g_1_box, fx_2_box)
+})
+	})
+	return cache_split__gopurs_runtime_Value_2349153714
 }
 
 var cache_profunctorSplit gopurs_runtime.Value
@@ -136,7 +202,57 @@ _ = v_1
 return gopurs_runtime.Apply3(f_0, (*Constructor_SplitF[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V0, (*Constructor_SplitF[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V1, (*Constructor_SplitF[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V2)
 }
 
+func Call_unSplit__gopurs_runtime_Value_3798616144(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var f_0 gopurs_runtime.Value = f_0_loop
+_ = f_0
+var v_1 gopurs_runtime.Value = v_1_loop
+_ = v_1
+return gopurs_runtime.Apply3(f_0, (*Constructor_SplitF[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V0, (*Constructor_SplitF[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V1, (*Constructor_SplitF[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V2)
+}
+
+func Call_unSplit__gopurs_runtime_Value_1009824851(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var f_0 gopurs_runtime.Value = f_0_loop
+_ = f_0
+var v_1 gopurs_runtime.Value = v_1_loop
+_ = v_1
+return gopurs_runtime.Apply3(f_0, (*Constructor_SplitF[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V0, (*Constructor_SplitF[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V1, (*Constructor_SplitF[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V2)
+}
+
+func Call_unSplit__gopurs_runtime_Value_2588837779(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var f_0 gopurs_runtime.Value = f_0_loop
+_ = f_0
+var v_1 gopurs_runtime.Value = v_1_loop
+_ = v_1
+return gopurs_runtime.Apply3(f_0, (*Constructor_SplitF[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V0, (*Constructor_SplitF[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V1, (*Constructor_SplitF[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V2)
+}
+
+func Call_unSplit__gopurs_runtime_Value_1063092243(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var f_0 gopurs_runtime.Value = f_0_loop
+_ = f_0
+var v_1 gopurs_runtime.Value = v_1_loop
+_ = v_1
+return gopurs_runtime.Apply3(f_0, (*Constructor_SplitF[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V0, (*Constructor_SplitF[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V1, (*Constructor_SplitF[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V2)
+}
+
+func Call_unSplit__gopurs_runtime_Value_2408473777(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var f_0 gopurs_runtime.Value = f_0_loop
+_ = f_0
+var v_1 gopurs_runtime.Value = v_1_loop
+_ = v_1
+return gopurs_runtime.Apply3(f_0, (*Constructor_SplitF[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V0, (*Constructor_SplitF[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V1, (*Constructor_SplitF[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V2)
+}
+
 func Call_split(f_0_loop gopurs_runtime.Value, g_1_loop gopurs_runtime.Value, fx_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var f_0 gopurs_runtime.Value = f_0_loop
+_ = f_0
+var g_1 gopurs_runtime.Value = g_1_loop
+_ = g_1
+var fx_2 gopurs_runtime.Value = fx_2_loop
+_ = fx_2
+return gopurs_runtime.Value{Type: 9, IntVal: 1995432569, UnsafePtr: unsafe.Pointer(&Constructor_SplitF[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]{f_0, g_1, fx_2})}
+}
+
+func Call_split__gopurs_runtime_Value_2349153714(f_0_loop gopurs_runtime.Value, g_1_loop gopurs_runtime.Value, fx_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var g_1 gopurs_runtime.Value = g_1_loop

@@ -94,6 +94,17 @@ return Call_divide(dict_0_box)
 	return cache_divide
 }
 
+var cache_divide__gopurs_runtime_Value_347113316 gopurs_runtime.Value
+var once_divide__gopurs_runtime_Value_347113316 sync.Once
+func Get_divide__gopurs_runtime_Value_347113316() gopurs_runtime.Value {
+	once_divide__gopurs_runtime_Value_347113316.Do(func() {
+		cache_divide__gopurs_runtime_Value_347113316 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_divide__gopurs_runtime_Value_347113316(dict_0_box)
+})
+	})
+	return cache_divide__gopurs_runtime_Value_347113316
+}
+
 var cache_divided gopurs_runtime.Value
 var once_divided sync.Once
 func Get_divided() gopurs_runtime.Value {
@@ -124,6 +135,12 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup_0, "append")
 }
 
 func Call_divide(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "divide")
+}
+
+func Call_divide__gopurs_runtime_Value_347113316(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "divide")

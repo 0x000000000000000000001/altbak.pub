@@ -29,7 +29,24 @@ return Call_alt(dict_0_box)
 	return cache_alt
 }
 
+var cache_alt__gopurs_runtime_Value_3324946862 gopurs_runtime.Value
+var once_alt__gopurs_runtime_Value_3324946862 sync.Once
+func Get_alt__gopurs_runtime_Value_3324946862() gopurs_runtime.Value {
+	once_alt__gopurs_runtime_Value_3324946862.Do(func() {
+		cache_alt__gopurs_runtime_Value_3324946862 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_alt__gopurs_runtime_Value_3324946862(dict_0_box)
+})
+	})
+	return cache_alt__gopurs_runtime_Value_3324946862
+}
+
 func Call_alt(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "alt")
+}
+
+func Call_alt__gopurs_runtime_Value_3324946862(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "alt")

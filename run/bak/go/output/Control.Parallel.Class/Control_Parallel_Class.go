@@ -36,6 +36,17 @@ return Call_sequential(dict_0_box)
 	return cache_sequential
 }
 
+var cache_sequential__gopurs_runtime_Value_2027214784 gopurs_runtime.Value
+var once_sequential__gopurs_runtime_Value_2027214784 sync.Once
+func Get_sequential__gopurs_runtime_Value_2027214784() gopurs_runtime.Value {
+	once_sequential__gopurs_runtime_Value_2027214784.Do(func() {
+		cache_sequential__gopurs_runtime_Value_2027214784 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_sequential__gopurs_runtime_Value_2027214784(dict_0_box)
+})
+	})
+	return cache_sequential__gopurs_runtime_Value_2027214784
+}
+
 var cache_parallel gopurs_runtime.Value
 var once_parallel sync.Once
 func Get_parallel() gopurs_runtime.Value {
@@ -45,6 +56,17 @@ return Call_parallel(dict_0_box)
 })
 	})
 	return cache_parallel
+}
+
+var cache_parallel__gopurs_runtime_Value_1714110592 gopurs_runtime.Value
+var once_parallel__gopurs_runtime_Value_1714110592 sync.Once
+func Get_parallel__gopurs_runtime_Value_1714110592() gopurs_runtime.Value {
+	once_parallel__gopurs_runtime_Value_1714110592.Do(func() {
+		cache_parallel__gopurs_runtime_Value_1714110592 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_parallel__gopurs_runtime_Value_1714110592(dict_0_box)
+})
+	})
+	return cache_parallel__gopurs_runtime_Value_1714110592
 }
 
 var cache_newtypeParCont gopurs_runtime.Value
@@ -213,7 +235,19 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "sequential")
 }
 
+func Call_sequential__gopurs_runtime_Value_2027214784(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "sequential")
+}
+
 func Call_parallel(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "parallel")
+}
+
+func Call_parallel__gopurs_runtime_Value_1714110592(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "parallel")

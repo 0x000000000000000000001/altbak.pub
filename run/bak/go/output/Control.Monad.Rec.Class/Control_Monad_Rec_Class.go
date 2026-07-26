@@ -56,6 +56,17 @@ return Call_tailRecM(dict_0_box)
 	return cache_tailRecM
 }
 
+var cache_tailRecM__gopurs_runtime_Value_2501739742 gopurs_runtime.Value
+var once_tailRecM__gopurs_runtime_Value_2501739742 sync.Once
+func Get_tailRecM__gopurs_runtime_Value_2501739742() gopurs_runtime.Value {
+	once_tailRecM__gopurs_runtime_Value_2501739742.Do(func() {
+		cache_tailRecM__gopurs_runtime_Value_2501739742 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_tailRecM__gopurs_runtime_Value_2501739742(dict_0_box)
+})
+	})
+	return cache_tailRecM__gopurs_runtime_Value_2501739742
+}
+
 var cache_tailRecM2 gopurs_runtime.Value
 var once_tailRecM2 sync.Once
 func Get_tailRecM2() gopurs_runtime.Value {
@@ -65,6 +76,17 @@ return Call_tailRecM2(dictMonadRec_0_box, f_1_box, a_2_box, b_3_box)
 })
 	})
 	return cache_tailRecM2
+}
+
+var cache_tailRecM2__gopurs_runtime_Value_2833572382 gopurs_runtime.Value
+var once_tailRecM2__gopurs_runtime_Value_2833572382 sync.Once
+func Get_tailRecM2__gopurs_runtime_Value_2833572382() gopurs_runtime.Value {
+	once_tailRecM2__gopurs_runtime_Value_2833572382.Do(func() {
+		cache_tailRecM2__gopurs_runtime_Value_2833572382 = gopurs_runtime.Func4(func(dictMonadRec_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value, b_3_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_tailRecM2__gopurs_runtime_Value_2833572382(dictMonadRec_0_box, f_1_box, a_2_box, b_3_box)
+})
+	})
+	return cache_tailRecM2__gopurs_runtime_Value_2833572382
 }
 
 var cache_tailRecM3 gopurs_runtime.Value
@@ -109,6 +131,50 @@ return Call_tailRec(f_0_box)
 })
 	})
 	return cache_tailRec
+}
+
+var cache_tailRec__gopurs_runtime_Value_197383241 gopurs_runtime.Value
+var once_tailRec__gopurs_runtime_Value_197383241 sync.Once
+func Get_tailRec__gopurs_runtime_Value_197383241() gopurs_runtime.Value {
+	once_tailRec__gopurs_runtime_Value_197383241.Do(func() {
+		cache_tailRec__gopurs_runtime_Value_197383241 = gopurs_runtime.Func(func(f_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_tailRec__gopurs_runtime_Value_197383241(f_0_box)
+})
+	})
+	return cache_tailRec__gopurs_runtime_Value_197383241
+}
+
+var cache_tailRec__gopurs_runtime_Value_2314362441 gopurs_runtime.Value
+var once_tailRec__gopurs_runtime_Value_2314362441 sync.Once
+func Get_tailRec__gopurs_runtime_Value_2314362441() gopurs_runtime.Value {
+	once_tailRec__gopurs_runtime_Value_2314362441.Do(func() {
+		cache_tailRec__gopurs_runtime_Value_2314362441 = gopurs_runtime.Func(func(f_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_tailRec__gopurs_runtime_Value_2314362441(f_0_box)
+})
+	})
+	return cache_tailRec__gopurs_runtime_Value_2314362441
+}
+
+var cache_tailRec__gopurs_runtime_Value_861966697 gopurs_runtime.Value
+var once_tailRec__gopurs_runtime_Value_861966697 sync.Once
+func Get_tailRec__gopurs_runtime_Value_861966697() gopurs_runtime.Value {
+	once_tailRec__gopurs_runtime_Value_861966697.Do(func() {
+		cache_tailRec__gopurs_runtime_Value_861966697 = gopurs_runtime.Func(func(f_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_tailRec__gopurs_runtime_Value_861966697(f_0_box)
+})
+	})
+	return cache_tailRec__gopurs_runtime_Value_861966697
+}
+
+var cache_tailRec__gopurs_runtime_Value_1654657801 gopurs_runtime.Value
+var once_tailRec__gopurs_runtime_Value_1654657801 sync.Once
+func Get_tailRec__gopurs_runtime_Value_1654657801() gopurs_runtime.Value {
+	once_tailRec__gopurs_runtime_Value_1654657801.Do(func() {
+		cache_tailRec__gopurs_runtime_Value_1654657801 = gopurs_runtime.Func(func(f_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_tailRec__gopurs_runtime_Value_1654657801(f_0_box)
+})
+	})
+	return cache_tailRec__gopurs_runtime_Value_1654657801
 }
 
 var cache_tailRec2 gopurs_runtime.Value
@@ -606,7 +672,27 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "tailRecM")
 }
 
+func Call_tailRecM__gopurs_runtime_Value_2501739742(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "tailRecM")
+}
+
 func Call_tailRecM2(dictMonadRec_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value, a_2_loop gopurs_runtime.Value, b_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictMonadRec_0 gopurs_runtime.Value = dictMonadRec_0_loop
+_ = dictMonadRec_0
+var f_1 gopurs_runtime.Value = f_1_loop
+_ = f_1
+var a_2 gopurs_runtime.Value = a_2_loop
+_ = a_2
+var b_3 gopurs_runtime.Value = b_3_loop
+_ = b_3
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadRec_0, "tailRecM"), gopurs_runtime.Func(func(o_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(f_1, gopurs_runtime.RecordGet(o_4, "a"), gopurs_runtime.RecordGet(o_4, "b"))
+}), gopurs_runtime.RecordDict2("a", "b", a_2, b_3))
+}
+
+func Call_tailRecM2__gopurs_runtime_Value_2833572382(dictMonadRec_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value, a_2_loop gopurs_runtime.Value, b_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadRec_0 gopurs_runtime.Value = dictMonadRec_0_loop
 _ = dictMonadRec_0
 var f_1 gopurs_runtime.Value = f_1_loop
@@ -711,6 +797,182 @@ return __t2
 }
 
 func Call_tailRec(f_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var f_0 gopurs_runtime.Value = f_0_loop
+_ = f_0
+var go__1_0 gopurs_runtime.Value
+go__1_0 = gopurs_runtime.Func(func(v_2_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var v_2_loop gopurs_runtime.Value = v_2_loop_val
+go__1_0:
+for {
+if false { continue go__1_0 }
+var v_2 gopurs_runtime.Value = v_2_loop
+_ = v_2
+var __t1 gopurs_runtime.Value
+{
+if (v_2.Type == 9 && v_2.IntVal == 525585346) {
+v_2_loop = gopurs_runtime.Apply(f_0, (*Constructor_Loop[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0)
+continue go__1_0
+__t1 = gopurs_runtime.Value{}
+goto end_branch_1
+} else {
+
+}
+}
+{
+if (v_2.Type == 9 && v_2.IntVal == 60402430) {
+__t1 = (*Constructor_Done[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0
+goto end_branch_1
+} else {
+
+}
+}
+{
+__t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_1:
+return __t1
+}
+}()
+})
+return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(go__1_0, gopurs_runtime.Apply(f_0, x_2))
+})
+}
+
+func Call_tailRec__gopurs_runtime_Value_197383241(f_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var f_0 gopurs_runtime.Value = f_0_loop
+_ = f_0
+var go__1_0 gopurs_runtime.Value
+go__1_0 = gopurs_runtime.Func(func(v_2_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var v_2_loop gopurs_runtime.Value = v_2_loop_val
+go__1_0:
+for {
+if false { continue go__1_0 }
+var v_2 gopurs_runtime.Value = v_2_loop
+_ = v_2
+var __t1 gopurs_runtime.Value
+{
+if (v_2.Type == 9 && v_2.IntVal == 525585346) {
+v_2_loop = gopurs_runtime.Apply(f_0, (*Constructor_Loop[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0)
+continue go__1_0
+__t1 = gopurs_runtime.Value{}
+goto end_branch_1
+} else {
+
+}
+}
+{
+if (v_2.Type == 9 && v_2.IntVal == 60402430) {
+__t1 = (*Constructor_Done[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0
+goto end_branch_1
+} else {
+
+}
+}
+{
+__t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_1:
+return __t1
+}
+}()
+})
+return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(go__1_0, gopurs_runtime.Apply(f_0, x_2))
+})
+}
+
+func Call_tailRec__gopurs_runtime_Value_2314362441(f_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var f_0 gopurs_runtime.Value = f_0_loop
+_ = f_0
+var go__1_0 gopurs_runtime.Value
+go__1_0 = gopurs_runtime.Func(func(v_2_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var v_2_loop gopurs_runtime.Value = v_2_loop_val
+go__1_0:
+for {
+if false { continue go__1_0 }
+var v_2 gopurs_runtime.Value = v_2_loop
+_ = v_2
+var __t1 gopurs_runtime.Value
+{
+if (v_2.Type == 9 && v_2.IntVal == 525585346) {
+v_2_loop = gopurs_runtime.Apply(f_0, (*Constructor_Loop[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0)
+continue go__1_0
+__t1 = gopurs_runtime.Value{}
+goto end_branch_1
+} else {
+
+}
+}
+{
+if (v_2.Type == 9 && v_2.IntVal == 60402430) {
+__t1 = (*Constructor_Done[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0
+goto end_branch_1
+} else {
+
+}
+}
+{
+__t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_1:
+return __t1
+}
+}()
+})
+return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(go__1_0, gopurs_runtime.Apply(f_0, x_2))
+})
+}
+
+func Call_tailRec__gopurs_runtime_Value_861966697(f_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var f_0 gopurs_runtime.Value = f_0_loop
+_ = f_0
+var go__1_0 gopurs_runtime.Value
+go__1_0 = gopurs_runtime.Func(func(v_2_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var v_2_loop gopurs_runtime.Value = v_2_loop_val
+go__1_0:
+for {
+if false { continue go__1_0 }
+var v_2 gopurs_runtime.Value = v_2_loop
+_ = v_2
+var __t1 gopurs_runtime.Value
+{
+if (v_2.Type == 9 && v_2.IntVal == 525585346) {
+v_2_loop = gopurs_runtime.Apply(f_0, (*Constructor_Loop[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0)
+continue go__1_0
+__t1 = gopurs_runtime.Value{}
+goto end_branch_1
+} else {
+
+}
+}
+{
+if (v_2.Type == 9 && v_2.IntVal == 60402430) {
+__t1 = (*Constructor_Done[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0
+goto end_branch_1
+} else {
+
+}
+}
+{
+__t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_1:
+return __t1
+}
+}()
+})
+return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(go__1_0, gopurs_runtime.Apply(f_0, x_2))
+})
+}
+
+func Call_tailRec__gopurs_runtime_Value_1654657801(f_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var go__1_0 gopurs_runtime.Value

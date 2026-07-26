@@ -238,6 +238,28 @@ return Call_bracket(acquire_0_box, completed_1_box)
 	return cache_bracket
 }
 
+var cache_bracket__gopurs_runtime_Value_2971087291 gopurs_runtime.Value
+var once_bracket__gopurs_runtime_Value_2971087291 sync.Once
+func Get_bracket__gopurs_runtime_Value_2971087291() gopurs_runtime.Value {
+	once_bracket__gopurs_runtime_Value_2971087291.Do(func() {
+		cache_bracket__gopurs_runtime_Value_2971087291 = gopurs_runtime.Func2(func(acquire_0_box gopurs_runtime.Value, completed_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_bracket__gopurs_runtime_Value_2971087291(acquire_0_box, completed_1_box)
+})
+	})
+	return cache_bracket__gopurs_runtime_Value_2971087291
+}
+
+var cache_bracket__gopurs_runtime_Value_3599769051 gopurs_runtime.Value
+var once_bracket__gopurs_runtime_Value_3599769051 sync.Once
+func Get_bracket__gopurs_runtime_Value_3599769051() gopurs_runtime.Value {
+	once_bracket__gopurs_runtime_Value_3599769051.Do(func() {
+		cache_bracket__gopurs_runtime_Value_3599769051 = gopurs_runtime.Func2(func(acquire_0_box gopurs_runtime.Value, completed_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_bracket__gopurs_runtime_Value_3599769051(acquire_0_box, completed_1_box)
+})
+	})
+	return cache_bracket__gopurs_runtime_Value_3599769051
+}
+
 var cache_applyParAff gopurs_runtime.Value
 var once_applyParAff sync.Once
 func Get_applyParAff() gopurs_runtime.Value {
@@ -847,6 +869,34 @@ return gopurs_runtime.UncurriedApp2(Get__delay(), pkg_Data_Either.Get_Right(), v
 }
 
 func Call_bracket(acquire_0_loop gopurs_runtime.Value, completed_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var acquire_0 gopurs_runtime.Value = acquire_0_loop
+_ = acquire_0
+var completed_1 gopurs_runtime.Value = completed_1_loop
+_ = completed_1
+return gopurs_runtime.Apply2(Get_generalBracket(), acquire_0, gopurs_runtime.RecordDict3("completed", "failed", "killed", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return completed_1
+}), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return completed_1
+}), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return completed_1
+})))
+}
+
+func Call_bracket__gopurs_runtime_Value_2971087291(acquire_0_loop gopurs_runtime.Value, completed_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var acquire_0 gopurs_runtime.Value = acquire_0_loop
+_ = acquire_0
+var completed_1 gopurs_runtime.Value = completed_1_loop
+_ = completed_1
+return gopurs_runtime.Apply2(Get_generalBracket(), acquire_0, gopurs_runtime.RecordDict3("completed", "failed", "killed", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return completed_1
+}), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return completed_1
+}), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return completed_1
+})))
+}
+
+func Call_bracket__gopurs_runtime_Value_3599769051(acquire_0_loop gopurs_runtime.Value, completed_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var acquire_0 gopurs_runtime.Value = acquire_0_loop
 _ = acquire_0
 var completed_1 gopurs_runtime.Value = completed_1_loop

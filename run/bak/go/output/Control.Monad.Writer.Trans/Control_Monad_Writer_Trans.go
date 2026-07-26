@@ -31,6 +31,17 @@ return Call_runWriterT(v_0_box)
 	return cache_runWriterT
 }
 
+var cache_runWriterT__gopurs_runtime_Value_2001193531 gopurs_runtime.Value
+var once_runWriterT__gopurs_runtime_Value_2001193531 sync.Once
+func Get_runWriterT__gopurs_runtime_Value_2001193531() gopurs_runtime.Value {
+	once_runWriterT__gopurs_runtime_Value_2001193531.Do(func() {
+		cache_runWriterT__gopurs_runtime_Value_2001193531 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_runWriterT__gopurs_runtime_Value_2001193531(v_0_box)
+})
+	})
+	return cache_runWriterT__gopurs_runtime_Value_2001193531
+}
+
 var cache_newtypeWriterT gopurs_runtime.Value
 var once_newtypeWriterT sync.Once
 func Get_newtypeWriterT() gopurs_runtime.Value {
@@ -62,6 +73,28 @@ return Call_mapWriterT(f_0_box, v_1_box)
 })
 	})
 	return cache_mapWriterT
+}
+
+var cache_mapWriterT__gopurs_runtime_Value_2095108154 gopurs_runtime.Value
+var once_mapWriterT__gopurs_runtime_Value_2095108154 sync.Once
+func Get_mapWriterT__gopurs_runtime_Value_2095108154() gopurs_runtime.Value {
+	once_mapWriterT__gopurs_runtime_Value_2095108154.Do(func() {
+		cache_mapWriterT__gopurs_runtime_Value_2095108154 = gopurs_runtime.Func2(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_mapWriterT__gopurs_runtime_Value_2095108154(f_0_box, v_1_box)
+})
+	})
+	return cache_mapWriterT__gopurs_runtime_Value_2095108154
+}
+
+var cache_mapWriterT__gopurs_runtime_Value_835443929 gopurs_runtime.Value
+var once_mapWriterT__gopurs_runtime_Value_835443929 sync.Once
+func Get_mapWriterT__gopurs_runtime_Value_835443929() gopurs_runtime.Value {
+	once_mapWriterT__gopurs_runtime_Value_835443929.Do(func() {
+		cache_mapWriterT__gopurs_runtime_Value_835443929 = gopurs_runtime.Func2(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_mapWriterT__gopurs_runtime_Value_835443929(f_0_box, v_1_box)
+})
+	})
+	return cache_mapWriterT__gopurs_runtime_Value_835443929
 }
 
 var cache_functorWriterT gopurs_runtime.Value
@@ -329,6 +362,12 @@ _ = v_0
 return v_0
 }
 
+func Call_runWriterT__gopurs_runtime_Value_2001193531(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var v_0 gopurs_runtime.Value = v_0_loop
+_ = v_0
+return v_0
+}
+
 func Call_monadTransWriterT(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
 _ = dictMonoid_0
@@ -342,6 +381,22 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs
 }
 
 func Call_mapWriterT(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var f_0 gopurs_runtime.Value = f_0_loop
+_ = f_0
+var v_1 gopurs_runtime.Value = v_1_loop
+_ = v_1
+return gopurs_runtime.Apply(f_0, v_1)
+}
+
+func Call_mapWriterT__gopurs_runtime_Value_2095108154(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var f_0 gopurs_runtime.Value = f_0_loop
+_ = f_0
+var v_1 gopurs_runtime.Value = v_1_loop
+_ = v_1
+return gopurs_runtime.Apply(f_0, v_1)
+}
+
+func Call_mapWriterT__gopurs_runtime_Value_835443929(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var v_1 gopurs_runtime.Value = v_1_loop

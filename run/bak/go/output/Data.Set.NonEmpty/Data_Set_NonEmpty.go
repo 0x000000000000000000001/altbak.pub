@@ -41,6 +41,17 @@ return Call_toUnfoldable1(dictUnfoldable1_0_box)
 	return cache_toUnfoldable1
 }
 
+var cache_toUnfoldable1__gopurs_runtime_Value_2920537655 gopurs_runtime.Value
+var once_toUnfoldable1__gopurs_runtime_Value_2920537655 sync.Once
+func Get_toUnfoldable1__gopurs_runtime_Value_2920537655() gopurs_runtime.Value {
+	once_toUnfoldable1__gopurs_runtime_Value_2920537655.Do(func() {
+		cache_toUnfoldable1__gopurs_runtime_Value_2920537655 = gopurs_runtime.Func(func(dictUnfoldable1_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_toUnfoldable1__gopurs_runtime_Value_2920537655(dictUnfoldable1_0_box)
+})
+	})
+	return cache_toUnfoldable1__gopurs_runtime_Value_2920537655
+}
+
 var cache_toUnfoldable11 gopurs_runtime.Value
 var once_toUnfoldable11 sync.Once
 func Get_toUnfoldable11() gopurs_runtime.Value {
@@ -108,6 +119,15 @@ func Get_singleton() gopurs_runtime.Value {
 		cache_singleton = pkg_Data_Set.Get_singleton__gopurs_runtime_Value_2050718518()
 	})
 	return cache_singleton
+}
+
+var cache_singleton__gopurs_runtime_Value_2050718518 gopurs_runtime.Value
+var once_singleton__gopurs_runtime_Value_2050718518 sync.Once
+func Get_singleton__gopurs_runtime_Value_2050718518() gopurs_runtime.Value {
+	once_singleton__gopurs_runtime_Value_2050718518.Do(func() {
+		cache_singleton__gopurs_runtime_Value_2050718518 = pkg_Data_Set.Get_singleton__gopurs_runtime_Value_2050718518()
+	})
+	return cache_singleton__gopurs_runtime_Value_2050718518
 }
 
 var cache_showNonEmptySet gopurs_runtime.Value
@@ -390,6 +410,30 @@ return gopurs_runtime.UncurriedApp4(pkg_Data_Map_Internal.Get_unsafeUnionWith(),
 }
 
 func Call_toUnfoldable1(dictUnfoldable1_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictUnfoldable1_0 gopurs_runtime.Value = dictUnfoldable1_0_loop
+_ = dictUnfoldable1_0
+stepNext_1_0 := gopurs_runtime.Apply3(pkg_Data_Map_Internal.Get_stepWith(), pkg_Data_Map_Internal.Get_iterMapL(), gopurs_runtime.Func3(func(k_1 gopurs_runtime.Value, v_2 gopurs_runtime.Value, next_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{k_1, next_3})}})}
+}), gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}
+}))
+_ = stepNext_1_0
+__local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictUnfoldable1_0, "unfoldr1"), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Tuple.Get_functorTuple(), "map"), stepNext_1_0, v_2)
+}))
+_ = __local_var_2_1
+__local_var_3_2 := gopurs_runtime.Apply3(pkg_Data_Map_Internal.Get_stepWith(), pkg_Data_Map_Internal.Get_iterMapL(), gopurs_runtime.Func3(func(k_3 gopurs_runtime.Value, v_4 gopurs_runtime.Value, next_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{k_3, next_5})}
+}), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(pkg_Partial.Get__crashWith(), gopurs_runtime.Str("toUnfoldable1: impossible"))
+}))
+_ = __local_var_3_2
+return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_2_1, gopurs_runtime.Apply(__local_var_3_2, gopurs_runtime.Value{Type: 9, IntVal: 2861335956, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Constructor_IterNode[gopurs_runtime.Value, gopurs_runtime.Value]{(*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(x_4.UnsafePtr), gopurs_runtime.Value{Type: 9, IntVal: 2509360378, UnsafePtr: nil}})}))
+})
+}
+
+func Call_toUnfoldable1__gopurs_runtime_Value_2920537655(dictUnfoldable1_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictUnfoldable1_0 gopurs_runtime.Value = dictUnfoldable1_0_loop
 _ = dictUnfoldable1_0
 stepNext_1_0 := gopurs_runtime.Apply3(pkg_Data_Map_Internal.Get_stepWith(), pkg_Data_Map_Internal.Get_iterMapL(), gopurs_runtime.Func3(func(k_1 gopurs_runtime.Value, v_2 gopurs_runtime.Value, next_3 gopurs_runtime.Value) gopurs_runtime.Value {

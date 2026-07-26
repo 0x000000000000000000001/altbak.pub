@@ -38,6 +38,17 @@ return Call_genericMempty_prime(dict_0_box)
 	return cache_genericMempty_prime
 }
 
+var cache_genericMempty_prime__gopurs_runtime_Value_1681090552 gopurs_runtime.Value
+var once_genericMempty_prime__gopurs_runtime_Value_1681090552 sync.Once
+func Get_genericMempty_prime__gopurs_runtime_Value_1681090552() gopurs_runtime.Value {
+	once_genericMempty_prime__gopurs_runtime_Value_1681090552.Do(func() {
+		cache_genericMempty_prime__gopurs_runtime_Value_1681090552 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_genericMempty_prime__gopurs_runtime_Value_1681090552(dict_0_box)
+})
+	})
+	return cache_genericMempty_prime__gopurs_runtime_Value_1681090552
+}
+
 var cache_genericMonoidConstructor gopurs_runtime.Value
 var once_genericMonoidConstructor sync.Once
 func Get_genericMonoidConstructor() gopurs_runtime.Value {
@@ -78,6 +89,12 @@ return gopurs_runtime.RecordDict1("genericMempty'", gopurs_runtime.RecordGet(dic
 }
 
 func Call_genericMempty_prime(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "genericMempty'")
+}
+
+func Call_genericMempty_prime__gopurs_runtime_Value_1681090552(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "genericMempty'")

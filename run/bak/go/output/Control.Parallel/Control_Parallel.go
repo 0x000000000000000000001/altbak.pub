@@ -28,6 +28,17 @@ return Call_parTraverse_(dictParallel_0_box, dictApplicative_1_box)
 	return cache_parTraverse_
 }
 
+var cache_parTraverse___gopurs_runtime_Value_1289284434 gopurs_runtime.Value
+var once_parTraverse___gopurs_runtime_Value_1289284434 sync.Once
+func Get_parTraverse___gopurs_runtime_Value_1289284434() gopurs_runtime.Value {
+	once_parTraverse___gopurs_runtime_Value_1289284434.Do(func() {
+		cache_parTraverse___gopurs_runtime_Value_1289284434 = gopurs_runtime.Func2(func(dictParallel_0_box gopurs_runtime.Value, dictApplicative_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_parTraverse___gopurs_runtime_Value_1289284434(dictParallel_0_box, dictApplicative_1_box)
+})
+	})
+	return cache_parTraverse___gopurs_runtime_Value_1289284434
+}
+
 var cache_parTraverse gopurs_runtime.Value
 var once_parTraverse sync.Once
 func Get_parTraverse() gopurs_runtime.Value {
@@ -39,6 +50,17 @@ return Call_parTraverse(dictParallel_0_box, dictApplicative_1_box, dictTraversab
 	return cache_parTraverse
 }
 
+var cache_parTraverse__gopurs_runtime_Value_2062199734 gopurs_runtime.Value
+var once_parTraverse__gopurs_runtime_Value_2062199734 sync.Once
+func Get_parTraverse__gopurs_runtime_Value_2062199734() gopurs_runtime.Value {
+	once_parTraverse__gopurs_runtime_Value_2062199734.Do(func() {
+		cache_parTraverse__gopurs_runtime_Value_2062199734 = gopurs_runtime.Func3(func(dictParallel_0_box gopurs_runtime.Value, dictApplicative_1_box gopurs_runtime.Value, dictTraversable_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_parTraverse__gopurs_runtime_Value_2062199734(dictParallel_0_box, dictApplicative_1_box, dictTraversable_2_box)
+})
+	})
+	return cache_parTraverse__gopurs_runtime_Value_2062199734
+}
+
 var cache_parSequence_ gopurs_runtime.Value
 var once_parSequence_ sync.Once
 func Get_parSequence_() gopurs_runtime.Value {
@@ -48,6 +70,17 @@ return Call_parSequence_(dictParallel_0_box, dictApplicative_1_box)
 })
 	})
 	return cache_parSequence_
+}
+
+var cache_parSequence___gopurs_runtime_Value_1322989919 gopurs_runtime.Value
+var once_parSequence___gopurs_runtime_Value_1322989919 sync.Once
+func Get_parSequence___gopurs_runtime_Value_1322989919() gopurs_runtime.Value {
+	once_parSequence___gopurs_runtime_Value_1322989919.Do(func() {
+		cache_parSequence___gopurs_runtime_Value_1322989919 = gopurs_runtime.Func2(func(dictParallel_0_box gopurs_runtime.Value, dictApplicative_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_parSequence___gopurs_runtime_Value_1322989919(dictParallel_0_box, dictApplicative_1_box)
+})
+	})
+	return cache_parSequence___gopurs_runtime_Value_1322989919
 }
 
 var cache_parSequence gopurs_runtime.Value
@@ -122,6 +155,28 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictParallel_0, "sequential
 })
 }
 
+func Call_parTraverse___gopurs_runtime_Value_1289284434(dictParallel_0_loop gopurs_runtime.Value, dictApplicative_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictParallel_0 gopurs_runtime.Value = dictParallel_0_loop
+_ = dictParallel_0
+var dictApplicative_1 gopurs_runtime.Value = dictApplicative_1_loop
+_ = dictApplicative_1
+traverse__2_0 := gopurs_runtime.Apply(pkg_Data_Foldable.Get_traverse_(), dictApplicative_1)
+_ = traverse__2_0
+return gopurs_runtime.Func(func(dictFoldable_3 gopurs_runtime.Value) gopurs_runtime.Value {
+traverse_1_4_1 := gopurs_runtime.Apply(traverse__2_0, dictFoldable_3)
+_ = traverse_1_4_1
+return gopurs_runtime.Func(func(f_5 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_6_2 := gopurs_runtime.Apply(traverse_1_4_1, gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictParallel_0, "parallel"), gopurs_runtime.Apply(f_5, x_6))
+}))
+_ = __local_var_6_2
+return gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictParallel_0, "sequential"), gopurs_runtime.Apply(__local_var_6_2, x_7))
+})
+})
+})
+}
+
 func Call_parTraverse(dictParallel_0_loop gopurs_runtime.Value, dictApplicative_1_loop gopurs_runtime.Value, dictTraversable_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictParallel_0 gopurs_runtime.Value = dictParallel_0_loop
 _ = dictParallel_0
@@ -142,7 +197,39 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictParallel_0, "sequential
 })
 }
 
+func Call_parTraverse__gopurs_runtime_Value_2062199734(dictParallel_0_loop gopurs_runtime.Value, dictApplicative_1_loop gopurs_runtime.Value, dictTraversable_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictParallel_0 gopurs_runtime.Value = dictParallel_0_loop
+_ = dictParallel_0
+var dictApplicative_1 gopurs_runtime.Value = dictApplicative_1_loop
+_ = dictApplicative_1
+var dictTraversable_2 gopurs_runtime.Value = dictTraversable_2_loop
+_ = dictTraversable_2
+traverse_3_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTraversable_2, "traverse"), dictApplicative_1)
+_ = traverse_3_0
+return gopurs_runtime.Func(func(f_4 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_5_1 := gopurs_runtime.Apply(traverse_3_0, gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictParallel_0, "parallel"), gopurs_runtime.Apply(f_4, x_5))
+}))
+_ = __local_var_5_1
+return gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictParallel_0, "sequential"), gopurs_runtime.Apply(__local_var_5_1, x_6))
+})
+})
+}
+
 func Call_parSequence_(dictParallel_0_loop gopurs_runtime.Value, dictApplicative_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictParallel_0 gopurs_runtime.Value = dictParallel_0_loop
+_ = dictParallel_0
+var dictApplicative_1 gopurs_runtime.Value = dictApplicative_1_loop
+_ = dictApplicative_1
+parTraverse_2_2_0 := Call_parTraverse_(dictParallel_0, dictApplicative_1)
+_ = parTraverse_2_2_0
+return gopurs_runtime.Func(func(dictFoldable_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(parTraverse_2_2_0, dictFoldable_3, Get_identity())
+})
+}
+
+func Call_parSequence___gopurs_runtime_Value_1322989919(dictParallel_0_loop gopurs_runtime.Value, dictApplicative_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictParallel_0 gopurs_runtime.Value = dictParallel_0_loop
 _ = dictParallel_0
 var dictApplicative_1 gopurs_runtime.Value = dictApplicative_1_loop

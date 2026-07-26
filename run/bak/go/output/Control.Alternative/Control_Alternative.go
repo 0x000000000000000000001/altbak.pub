@@ -19,6 +19,17 @@ return Call_guard(dictAlternative_0_box)
 	return cache_guard
 }
 
+var cache_guard__gopurs_runtime_Value_489569669 gopurs_runtime.Value
+var once_guard__gopurs_runtime_Value_489569669 sync.Once
+func Get_guard__gopurs_runtime_Value_489569669() gopurs_runtime.Value {
+	once_guard__gopurs_runtime_Value_489569669.Do(func() {
+		cache_guard__gopurs_runtime_Value_489569669 = gopurs_runtime.Func(func(dictAlternative_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_guard__gopurs_runtime_Value_489569669(dictAlternative_0_box)
+})
+	})
+	return cache_guard__gopurs_runtime_Value_489569669
+}
+
 var cache_alternativeArray gopurs_runtime.Value
 var once_alternativeArray sync.Once
 func Get_alternativeArray() gopurs_runtime.Value {
@@ -33,6 +44,29 @@ return pkg_Control_Plus.Get_plusArray()
 }
 
 func Call_guard(dictAlternative_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictAlternative_0 gopurs_runtime.Value = dictAlternative_0_loop
+_ = dictAlternative_0
+empty_1_0 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictAlternative_0, "Plus1"), gopurs_runtime.Value{}), "empty")
+_ = empty_1_0
+return gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t1 gopurs_runtime.Value
+{
+if (v_2.IntVal) != (0) {
+__t1 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictAlternative_0, "Applicative0"), gopurs_runtime.Value{}), "pure"), pkg_Data_Unit.Get_unit())
+goto end_branch_1
+} else {
+
+}
+}
+{
+__t1 = empty_1_0
+}
+end_branch_1:
+return __t1
+})
+}
+
+func Call_guard__gopurs_runtime_Value_489569669(dictAlternative_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictAlternative_0 gopurs_runtime.Value = dictAlternative_0_loop
 _ = dictAlternative_0
 empty_1_0 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictAlternative_0, "Plus1"), gopurs_runtime.Value{}), "empty")

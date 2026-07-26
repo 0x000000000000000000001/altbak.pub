@@ -8,9 +8,9 @@ import (
 	pkg_Data_Ord "gopurs/output/Data.Ord"
 	pkg_Data_Eq "gopurs/output/Data.Eq"
 	pkg_Data_String_Common "gopurs/output/Data.String.Common"
+	pkg_Data_Maybe "gopurs/output/Data.Maybe"
 	pkg_Data_String_CodeUnits "gopurs/output/Data.String.CodeUnits"
 	pkg_Data_Monoid "gopurs/output/Data.Monoid"
-	pkg_Data_Maybe "gopurs/output/Data.Maybe"
 	unsafe "unsafe"
 )
 
@@ -215,6 +215,39 @@ return Call_liftS(f_0_box, v_1_box)
 	return cache_liftS
 }
 
+var cache_liftS__gopurs_runtime_Value_3797610649 gopurs_runtime.Value
+var once_liftS__gopurs_runtime_Value_3797610649 sync.Once
+func Get_liftS__gopurs_runtime_Value_3797610649() gopurs_runtime.Value {
+	once_liftS__gopurs_runtime_Value_3797610649.Do(func() {
+		cache_liftS__gopurs_runtime_Value_3797610649 = gopurs_runtime.Func2(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Bool(Call_liftS__gopurs_runtime_Value_3797610649(f_0_box, v_1_box))
+})
+	})
+	return cache_liftS__gopurs_runtime_Value_3797610649
+}
+
+var cache_liftS__gopurs_runtime_Value_652013849 gopurs_runtime.Value
+var once_liftS__gopurs_runtime_Value_652013849 sync.Once
+func Get_liftS__gopurs_runtime_Value_652013849() gopurs_runtime.Value {
+	once_liftS__gopurs_runtime_Value_652013849.Do(func() {
+		cache_liftS__gopurs_runtime_Value_652013849 = gopurs_runtime.Func2(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_liftS__gopurs_runtime_Value_652013849(f_0_box, v_1_box))}
+})
+	})
+	return cache_liftS__gopurs_runtime_Value_652013849
+}
+
+var cache_liftS__gopurs_runtime_Value_1969893401 gopurs_runtime.Value
+var once_liftS__gopurs_runtime_Value_1969893401 sync.Once
+func Get_liftS__gopurs_runtime_Value_1969893401() gopurs_runtime.Value {
+	once_liftS__gopurs_runtime_Value_1969893401.Do(func() {
+		cache_liftS__gopurs_runtime_Value_1969893401 = gopurs_runtime.Func2(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_liftS__gopurs_runtime_Value_1969893401(f_0_box, v_1_box)
+})
+	})
+	return cache_liftS__gopurs_runtime_Value_1969893401
+}
+
 var cache_startsWith gopurs_runtime.Value
 var once_startsWith sync.Once
 func Get_startsWith() gopurs_runtime.Value {
@@ -246,6 +279,17 @@ return Call_joinWith(dictFoldable_0_box)
 })
 	})
 	return cache_joinWith
+}
+
+var cache_joinWith__gopurs_runtime_Value_4045937484 gopurs_runtime.Value
+var once_joinWith__gopurs_runtime_Value_4045937484 sync.Once
+func Get_joinWith__gopurs_runtime_Value_4045937484() gopurs_runtime.Value {
+	once_joinWith__gopurs_runtime_Value_4045937484.Do(func() {
+		cache_joinWith__gopurs_runtime_Value_4045937484 = gopurs_runtime.Func(func(dictFoldable_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_joinWith__gopurs_runtime_Value_4045937484(dictFoldable_0_box)
+})
+	})
+	return cache_joinWith__gopurs_runtime_Value_4045937484
 }
 
 var cache_join1With gopurs_runtime.Value
@@ -461,6 +505,30 @@ _ = v_1
 return gopurs_runtime.Apply(f_0, v_1)
 }
 
+func Call_liftS__gopurs_runtime_Value_3797610649(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) bool {
+var f_0 gopurs_runtime.Value = f_0_loop
+_ = f_0
+var v_1 gopurs_runtime.Value = v_1_loop
+_ = v_1
+return (gopurs_runtime.Apply(f_0, v_1).IntVal) != (0)
+}
+
+func Call_liftS__gopurs_runtime_Value_652013849(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) *pkg_Data_Maybe.Constructor_Just[string] {
+var f_0 gopurs_runtime.Value = f_0_loop
+_ = f_0
+var v_1 gopurs_runtime.Value = v_1_loop
+_ = v_1
+return (*pkg_Data_Maybe.Constructor_Just[string])(gopurs_runtime.Apply(f_0, v_1).UnsafePtr)
+}
+
+func Call_liftS__gopurs_runtime_Value_1969893401(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var f_0 gopurs_runtime.Value = f_0_loop
+_ = f_0
+var v_1 gopurs_runtime.Value = v_1_loop
+_ = v_1
+return gopurs_runtime.Apply(f_0, v_1)
+}
+
 func Call_startsWith(x_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) bool {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
@@ -520,6 +588,31 @@ return __t2
 }
 
 func Call_joinWith(dictFoldable_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictFoldable_0 gopurs_runtime.Value = dictFoldable_0_loop
+_ = dictFoldable_0
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Monoid.Get_monoidString(), "Semigroup0"), gopurs_runtime.Value{})
+_ = __local_var_1_0
+return gopurs_runtime.Func2(func(splice_2 gopurs_runtime.Value, xs_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordGet(gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictFoldable_0, "foldl"), gopurs_runtime.Func2(func(v_4 gopurs_runtime.Value, v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t1 gopurs_runtime.Value
+{
+if (gopurs_runtime.RecordGet(v_4, "init").IntVal) != (0) {
+__t1 = gopurs_runtime.RecordDict2("acc", "init", v1_5, gopurs_runtime.Bool(false))
+goto end_branch_1
+} else {
+
+}
+}
+{
+__t1 = gopurs_runtime.RecordDict2("acc", "init", gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "append"), gopurs_runtime.RecordGet(v_4, "acc"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "append"), splice_2, v1_5)), gopurs_runtime.Bool(false))
+}
+end_branch_1:
+return __t1
+}), gopurs_runtime.RecordDict2("acc", "init", gopurs_runtime.RecordGet(pkg_Data_Monoid.Get_monoidString(), "mempty"), gopurs_runtime.Bool(true)), xs_3), "acc")
+})
+}
+
+func Call_joinWith__gopurs_runtime_Value_4045937484(dictFoldable_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictFoldable_0 gopurs_runtime.Value = dictFoldable_0_loop
 _ = dictFoldable_0
 __local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Monoid.Get_monoidString(), "Semigroup0"), gopurs_runtime.Value{})

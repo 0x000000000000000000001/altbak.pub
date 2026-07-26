@@ -27,6 +27,24 @@ func Get_new_() gopurs_runtime.Value {
 	return cache_new_
 }
 
+var cache_new__gopurs_runtime_Value_1731740265 gopurs_runtime.Value
+var once_new__gopurs_runtime_Value_1731740265 sync.Once
+func Get_new__gopurs_runtime_Value_1731740265() gopurs_runtime.Value {
+	once_new__gopurs_runtime_Value_1731740265.Do(func() {
+		cache_new__gopurs_runtime_Value_1731740265 = Get__new()
+	})
+	return cache_new__gopurs_runtime_Value_1731740265
+}
+
+var cache_new__gopurs_runtime_Value_22483300 gopurs_runtime.Value
+var once_new__gopurs_runtime_Value_22483300 sync.Once
+func Get_new__gopurs_runtime_Value_22483300() gopurs_runtime.Value {
+	once_new__gopurs_runtime_Value_22483300.Do(func() {
+		cache_new__gopurs_runtime_Value_22483300 = Get__new()
+	})
+	return cache_new__gopurs_runtime_Value_22483300
+}
+
 var cache_modify_prime gopurs_runtime.Value
 var once_modify_prime sync.Once
 func Get_modify_prime() gopurs_runtime.Value {
@@ -34,6 +52,15 @@ func Get_modify_prime() gopurs_runtime.Value {
 		cache_modify_prime = Get_modifyImpl()
 	})
 	return cache_modify_prime
+}
+
+var cache_modify_prime__gopurs_runtime_Value_2048033157 gopurs_runtime.Value
+var once_modify_prime__gopurs_runtime_Value_2048033157 sync.Once
+func Get_modify_prime__gopurs_runtime_Value_2048033157() gopurs_runtime.Value {
+	once_modify_prime__gopurs_runtime_Value_2048033157.Do(func() {
+		cache_modify_prime__gopurs_runtime_Value_2048033157 = Get_modifyImpl()
+	})
+	return cache_modify_prime__gopurs_runtime_Value_2048033157
 }
 
 var cache_modify gopurs_runtime.Value
@@ -45,6 +72,17 @@ return Call_modify(f_0_box)
 })
 	})
 	return cache_modify
+}
+
+var cache_modify__gopurs_runtime_Value_31931706 gopurs_runtime.Value
+var once_modify__gopurs_runtime_Value_31931706 sync.Once
+func Get_modify__gopurs_runtime_Value_31931706() gopurs_runtime.Value {
+	once_modify__gopurs_runtime_Value_31931706.Do(func() {
+		cache_modify__gopurs_runtime_Value_31931706 = gopurs_runtime.Func(func(f_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_modify__gopurs_runtime_Value_31931706(f_0_box)
+})
+	})
+	return cache_modify__gopurs_runtime_Value_31931706
 }
 
 var cache_modify_ gopurs_runtime.Value
@@ -59,6 +97,16 @@ return Call_modify_(f_0_box, s_1_box)
 }
 
 func Call_modify(f_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var f_0 gopurs_runtime.Value = f_0_loop
+_ = f_0
+return gopurs_runtime.Apply(Get_modifyImpl(), gopurs_runtime.Func(func(s_1 gopurs_runtime.Value) gopurs_runtime.Value {
+s_prime_2_0 := gopurs_runtime.Apply(f_0, s_1)
+_ = s_prime_2_0
+return gopurs_runtime.RecordDict2("state", "value", s_prime_2_0, s_prime_2_0)
+}))
+}
+
+func Call_modify__gopurs_runtime_Value_31931706(f_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 return gopurs_runtime.Apply(Get_modifyImpl(), gopurs_runtime.Func(func(s_1 gopurs_runtime.Value) gopurs_runtime.Value {

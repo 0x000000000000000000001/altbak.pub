@@ -17,6 +17,17 @@ return Call_identity(dict_0_box)
 	return cache_identity
 }
 
+var cache_identity__gopurs_runtime_Value_2610482496 gopurs_runtime.Value
+var once_identity__gopurs_runtime_Value_2610482496 sync.Once
+func Get_identity__gopurs_runtime_Value_2610482496() gopurs_runtime.Value {
+	once_identity__gopurs_runtime_Value_2610482496.Do(func() {
+		cache_identity__gopurs_runtime_Value_2610482496 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_identity__gopurs_runtime_Value_2610482496(dict_0_box)
+})
+	})
+	return cache_identity__gopurs_runtime_Value_2610482496
+}
+
 var cache_categoryFn gopurs_runtime.Value
 var once_categoryFn sync.Once
 func Get_categoryFn() gopurs_runtime.Value {
@@ -31,6 +42,12 @@ return x_0
 }
 
 func Call_identity(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "identity")
+}
+
+func Call_identity__gopurs_runtime_Value_2610482496(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "identity")

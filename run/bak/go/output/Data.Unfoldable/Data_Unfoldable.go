@@ -49,6 +49,17 @@ return Call_unfoldr(dict_0_box)
 	return cache_unfoldr
 }
 
+var cache_unfoldr__gopurs_runtime_Value_956138623 gopurs_runtime.Value
+var once_unfoldr__gopurs_runtime_Value_956138623 sync.Once
+func Get_unfoldr__gopurs_runtime_Value_956138623() gopurs_runtime.Value {
+	once_unfoldr__gopurs_runtime_Value_956138623.Do(func() {
+		cache_unfoldr__gopurs_runtime_Value_956138623 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_unfoldr__gopurs_runtime_Value_956138623(dict_0_box)
+})
+	})
+	return cache_unfoldr__gopurs_runtime_Value_956138623
+}
+
 var cache_unfoldableMaybe gopurs_runtime.Value
 var once_unfoldableMaybe sync.Once
 func Get_unfoldableMaybe() gopurs_runtime.Value {
@@ -82,6 +93,17 @@ return Call_replicate(dictUnfoldable_0_box, n_1_box.IntVal, v_2_box)
 })
 	})
 	return cache_replicate
+}
+
+var cache_replicate__gopurs_runtime_Value_1763173703 gopurs_runtime.Value
+var once_replicate__gopurs_runtime_Value_1763173703 sync.Once
+func Get_replicate__gopurs_runtime_Value_1763173703() gopurs_runtime.Value {
+	once_replicate__gopurs_runtime_Value_1763173703.Do(func() {
+		cache_replicate__gopurs_runtime_Value_1763173703 = gopurs_runtime.Func3(func(dictUnfoldable_0_box gopurs_runtime.Value, n_1_box gopurs_runtime.Value, v_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_replicate__gopurs_runtime_Value_1763173703(dictUnfoldable_0_box, n_1_box.IntVal, v_2_box)
+})
+	})
+	return cache_replicate__gopurs_runtime_Value_1763173703
 }
 
 var cache_replicateA gopurs_runtime.Value
@@ -142,7 +164,38 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "unfoldr")
 }
 
+func Call_unfoldr__gopurs_runtime_Value_956138623(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "unfoldr")
+}
+
 func Call_replicate(dictUnfoldable_0_loop gopurs_runtime.Value, n_1_loop int64, v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictUnfoldable_0 gopurs_runtime.Value = dictUnfoldable_0_loop
+_ = dictUnfoldable_0
+var n_1 int64 = n_1_loop
+_ = n_1
+var v_2 gopurs_runtime.Value = v_2_loop
+_ = v_2
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictUnfoldable_0, "unfoldr"), gopurs_runtime.Func(func(i_3 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t0 gopurs_runtime.Value
+{
+if (gopurs_runtime.Apply2(Get_lessThanOrEq(), i_3, gopurs_runtime.Int(0)).IntVal) != (0) {
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}
+goto end_branch_0
+} else {
+
+}
+}
+{
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{v_2, gopurs_runtime.Int((i_3.IntVal) - (1))})}})}
+}
+end_branch_0:
+return __t0
+}), gopurs_runtime.Int(n_1))
+}
+
+func Call_replicate__gopurs_runtime_Value_1763173703(dictUnfoldable_0_loop gopurs_runtime.Value, n_1_loop int64, v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictUnfoldable_0 gopurs_runtime.Value = dictUnfoldable_0_loop
 _ = dictUnfoldable_0
 var n_1 int64 = n_1_loop

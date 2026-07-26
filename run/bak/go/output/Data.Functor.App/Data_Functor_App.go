@@ -124,6 +124,15 @@ func Get_hoistLiftApp() gopurs_runtime.Value {
 	return cache_hoistLiftApp
 }
 
+var cache_hoistLiftApp__gopurs_runtime_Value_3734180027 gopurs_runtime.Value
+var once_hoistLiftApp__gopurs_runtime_Value_3734180027 sync.Once
+func Get_hoistLiftApp__gopurs_runtime_Value_3734180027() gopurs_runtime.Value {
+	once_hoistLiftApp__gopurs_runtime_Value_3734180027.Do(func() {
+		cache_hoistLiftApp__gopurs_runtime_Value_3734180027 = pkg_Unsafe_Coerce.Get_unsafeCoerce()
+	})
+	return cache_hoistLiftApp__gopurs_runtime_Value_3734180027
+}
+
 var cache_hoistApp gopurs_runtime.Value
 var once_hoistApp sync.Once
 func Get_hoistApp() gopurs_runtime.Value {

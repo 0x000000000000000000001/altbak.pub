@@ -32,6 +32,17 @@ return Call_second(dict_0_box)
 	return cache_second
 }
 
+var cache_second__gopurs_runtime_Value_1304552867 gopurs_runtime.Value
+var once_second__gopurs_runtime_Value_1304552867 sync.Once
+func Get_second__gopurs_runtime_Value_1304552867() gopurs_runtime.Value {
+	once_second__gopurs_runtime_Value_1304552867.Do(func() {
+		cache_second__gopurs_runtime_Value_1304552867 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_second__gopurs_runtime_Value_1304552867(dict_0_box)
+})
+	})
+	return cache_second__gopurs_runtime_Value_1304552867
+}
+
 var cache_first gopurs_runtime.Value
 var once_first sync.Once
 func Get_first() gopurs_runtime.Value {
@@ -43,6 +54,17 @@ return Call_first(dict_0_box)
 	return cache_first
 }
 
+var cache_first__gopurs_runtime_Value_1304552867 gopurs_runtime.Value
+var once_first__gopurs_runtime_Value_1304552867 sync.Once
+func Get_first__gopurs_runtime_Value_1304552867() gopurs_runtime.Value {
+	once_first__gopurs_runtime_Value_1304552867.Do(func() {
+		cache_first__gopurs_runtime_Value_1304552867 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_first__gopurs_runtime_Value_1304552867(dict_0_box)
+})
+	})
+	return cache_first__gopurs_runtime_Value_1304552867
+}
+
 var cache_splitStrong gopurs_runtime.Value
 var once_splitStrong sync.Once
 func Get_splitStrong() gopurs_runtime.Value {
@@ -52,6 +74,17 @@ return Call_splitStrong(dictSemigroupoid_0_box, dictStrong_1_box, l_2_box, r_3_b
 })
 	})
 	return cache_splitStrong
+}
+
+var cache_splitStrong__gopurs_runtime_Value_3763519958 gopurs_runtime.Value
+var once_splitStrong__gopurs_runtime_Value_3763519958 sync.Once
+func Get_splitStrong__gopurs_runtime_Value_3763519958() gopurs_runtime.Value {
+	once_splitStrong__gopurs_runtime_Value_3763519958.Do(func() {
+		cache_splitStrong__gopurs_runtime_Value_3763519958 = gopurs_runtime.Func4(func(dictSemigroupoid_0_box gopurs_runtime.Value, dictStrong_1_box gopurs_runtime.Value, l_2_box gopurs_runtime.Value, r_3_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_splitStrong__gopurs_runtime_Value_3763519958(dictSemigroupoid_0_box, dictStrong_1_box, l_2_box, r_3_box)
+})
+	})
+	return cache_splitStrong__gopurs_runtime_Value_3763519958
 }
 
 var cache_fanout gopurs_runtime.Value
@@ -71,13 +104,37 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "second")
 }
 
+func Call_second__gopurs_runtime_Value_1304552867(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "second")
+}
+
 func Call_first(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "first")
 }
 
+func Call_first__gopurs_runtime_Value_1304552867(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "first")
+}
+
 func Call_splitStrong(dictSemigroupoid_0_loop gopurs_runtime.Value, dictStrong_1_loop gopurs_runtime.Value, l_2_loop gopurs_runtime.Value, r_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictSemigroupoid_0 gopurs_runtime.Value = dictSemigroupoid_0_loop
+_ = dictSemigroupoid_0
+var dictStrong_1 gopurs_runtime.Value = dictStrong_1_loop
+_ = dictStrong_1
+var l_2 gopurs_runtime.Value = l_2_loop
+_ = l_2
+var r_3 gopurs_runtime.Value = r_3_loop
+_ = r_3
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroupoid_0, "compose"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictStrong_1, "second"), r_3), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictStrong_1, "first"), l_2))
+}
+
+func Call_splitStrong__gopurs_runtime_Value_3763519958(dictSemigroupoid_0_loop gopurs_runtime.Value, dictStrong_1_loop gopurs_runtime.Value, l_2_loop gopurs_runtime.Value, r_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictSemigroupoid_0 gopurs_runtime.Value = dictSemigroupoid_0_loop
 _ = dictSemigroupoid_0
 var dictStrong_1 gopurs_runtime.Value = dictStrong_1_loop

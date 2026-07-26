@@ -80,6 +80,17 @@ return Call_liftM1(dictMonad_0_box, f_1_box, a_2_box)
 	return cache_liftM1
 }
 
+var cache_liftM1__gopurs_runtime_Value_2997383124 gopurs_runtime.Value
+var once_liftM1__gopurs_runtime_Value_2997383124 sync.Once
+func Get_liftM1__gopurs_runtime_Value_2997383124() gopurs_runtime.Value {
+	once_liftM1__gopurs_runtime_Value_2997383124.Do(func() {
+		cache_liftM1__gopurs_runtime_Value_2997383124 = gopurs_runtime.Func3(func(dictMonad_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_liftM1__gopurs_runtime_Value_2997383124(dictMonad_0_box, f_1_box, a_2_box)
+})
+	})
+	return cache_liftM1__gopurs_runtime_Value_2997383124
+}
+
 var cache_ap gopurs_runtime.Value
 var once_ap sync.Once
 func Get_ap() gopurs_runtime.Value {
@@ -150,6 +161,18 @@ return __t1
 }
 
 func Call_liftM1(dictMonad_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value, a_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
+_ = dictMonad_0
+var f_1 gopurs_runtime.Value = f_1_loop
+_ = f_1
+var a_2 gopurs_runtime.Value = a_2_loop
+_ = a_2
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Bind1"), gopurs_runtime.Value{}), "bind"), a_2, gopurs_runtime.Func(func(a_prime_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.Apply(f_1, a_prime_3))
+}))
+}
+
+func Call_liftM1__gopurs_runtime_Value_2997383124(dictMonad_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value, a_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
 var f_1 gopurs_runtime.Value = f_1_loop

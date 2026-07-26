@@ -23,6 +23,17 @@ return Call_throwError(dict_0_box)
 	return cache_throwError
 }
 
+var cache_throwError__gopurs_runtime_Value_4217979769 gopurs_runtime.Value
+var once_throwError__gopurs_runtime_Value_4217979769 sync.Once
+func Get_throwError__gopurs_runtime_Value_4217979769() gopurs_runtime.Value {
+	once_throwError__gopurs_runtime_Value_4217979769.Do(func() {
+		cache_throwError__gopurs_runtime_Value_4217979769 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_throwError__gopurs_runtime_Value_4217979769(dict_0_box)
+})
+	})
+	return cache_throwError__gopurs_runtime_Value_4217979769
+}
+
 var cache_monadThrowMaybe gopurs_runtime.Value
 var once_monadThrowMaybe sync.Once
 func Get_monadThrowMaybe() gopurs_runtime.Value {
@@ -172,6 +183,17 @@ return Call_catchError(dict_0_box)
 	return cache_catchError
 }
 
+var cache_catchError__gopurs_runtime_Value_1778055282 gopurs_runtime.Value
+var once_catchError__gopurs_runtime_Value_1778055282 sync.Once
+func Get_catchError__gopurs_runtime_Value_1778055282() gopurs_runtime.Value {
+	once_catchError__gopurs_runtime_Value_1778055282.Do(func() {
+		cache_catchError__gopurs_runtime_Value_1778055282 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_catchError__gopurs_runtime_Value_1778055282(dict_0_box)
+})
+	})
+	return cache_catchError__gopurs_runtime_Value_1778055282
+}
+
 var cache_catchJust gopurs_runtime.Value
 var once_catchJust sync.Once
 func Get_catchJust() gopurs_runtime.Value {
@@ -206,6 +228,12 @@ return Call_withResource(dictMonadError_0_box)
 }
 
 func Call_throwError(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "throwError")
+}
+
+func Call_throwError__gopurs_runtime_Value_4217979769(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "throwError")
@@ -278,6 +306,12 @@ return __t1
 }
 
 func Call_catchError(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "catchError")
+}
+
+func Call_catchError__gopurs_runtime_Value_1778055282(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "catchError")

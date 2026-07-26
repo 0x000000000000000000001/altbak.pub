@@ -69,7 +69,7 @@ if [ "$CLEAN" == "1" ]; then
 fi
 
 echo 'Building...'
-spago build --backend-args "--main ${ENTRY_POINT}" &>/dev/null
+spago build --backend-args "--main ${ENTRY_POINT}" 
 
 echo "=== PHP ==="
 if [ -f "output/${ENTRY_POINT}/main.mod.php" ]; then

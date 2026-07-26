@@ -118,6 +118,17 @@ return Call_singleton(a_0_box)
 	return cache_singleton
 }
 
+var cache_singleton__gopurs_runtime_Value_2050718518 gopurs_runtime.Value
+var once_singleton__gopurs_runtime_Value_2050718518 sync.Once
+func Get_singleton__gopurs_runtime_Value_2050718518() gopurs_runtime.Value {
+	once_singleton__gopurs_runtime_Value_2050718518.Do(func() {
+		cache_singleton__gopurs_runtime_Value_2050718518 = gopurs_runtime.Func(func(a_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_singleton__gopurs_runtime_Value_2050718518(a_0_box)
+})
+	})
+	return cache_singleton__gopurs_runtime_Value_2050718518
+}
+
 var cache_showSet gopurs_runtime.Value
 var once_showSet sync.Once
 func Get_showSet() gopurs_runtime.Value {
@@ -503,6 +514,12 @@ return gopurs_runtime.Apply(__local_var_1_0, gopurs_runtime.Apply(pkg_Data_Map_I
 }
 
 func Call_singleton(a_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var a_0 gopurs_runtime.Value = a_0_loop
+_ = a_0
+return gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value]{1, 1, a_0, pkg_Data_Unit.Get_unit(), (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: nil}.UnsafePtr), (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: nil}.UnsafePtr)})}
+}
+
+func Call_singleton__gopurs_runtime_Value_2050718518(a_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var a_0 gopurs_runtime.Value = a_0_loop
 _ = a_0
 return gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value]{1, 1, a_0, pkg_Data_Unit.Get_unit(), (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: nil}.UnsafePtr), (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: nil}.UnsafePtr)})}

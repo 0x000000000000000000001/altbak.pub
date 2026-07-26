@@ -40,6 +40,17 @@ return Call_genericShowArgs(dict_0_box)
 	return cache_genericShowArgs
 }
 
+var cache_genericShowArgs__gopurs_runtime_Value_2688816322 gopurs_runtime.Value
+var once_genericShowArgs__gopurs_runtime_Value_2688816322 sync.Once
+func Get_genericShowArgs__gopurs_runtime_Value_2688816322() gopurs_runtime.Value {
+	once_genericShowArgs__gopurs_runtime_Value_2688816322.Do(func() {
+		cache_genericShowArgs__gopurs_runtime_Value_2688816322 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_genericShowArgs__gopurs_runtime_Value_2688816322(dict_0_box)
+})
+	})
+	return cache_genericShowArgs__gopurs_runtime_Value_2688816322
+}
+
 var cache_genericShowArgsProduct gopurs_runtime.Value
 var once_genericShowArgsProduct sync.Once
 func Get_genericShowArgsProduct() gopurs_runtime.Value {
@@ -71,6 +82,17 @@ return Call_genericShow_prime(dict_0_box)
 })
 	})
 	return cache_genericShow_prime
+}
+
+var cache_genericShow_prime__gopurs_runtime_Value_3379317986 gopurs_runtime.Value
+var once_genericShow_prime__gopurs_runtime_Value_3379317986 sync.Once
+func Get_genericShow_prime__gopurs_runtime_Value_3379317986() gopurs_runtime.Value {
+	once_genericShow_prime__gopurs_runtime_Value_3379317986.Do(func() {
+		cache_genericShow_prime__gopurs_runtime_Value_3379317986 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_genericShow_prime__gopurs_runtime_Value_3379317986(dict_0_box)
+})
+	})
+	return cache_genericShow_prime__gopurs_runtime_Value_3379317986
 }
 
 var cache_genericShowNoConstructors gopurs_runtime.Value
@@ -120,6 +142,12 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "genericShowArgs")
 }
 
+func Call_genericShowArgs__gopurs_runtime_Value_2688816322(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "genericShowArgs")
+}
+
 func Call_genericShowArgsProduct(dictGenericShowArgs_0_loop gopurs_runtime.Value, dictGenericShowArgs1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictGenericShowArgs_0 gopurs_runtime.Value = dictGenericShowArgs_0_loop
 _ = dictGenericShowArgs_0
@@ -158,6 +186,12 @@ return __t2
 }
 
 func Call_genericShow_prime(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "genericShow'")
+}
+
+func Call_genericShow_prime__gopurs_runtime_Value_3379317986(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "genericShow'")

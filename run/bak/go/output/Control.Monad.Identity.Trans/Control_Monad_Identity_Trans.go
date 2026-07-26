@@ -49,6 +49,17 @@ return Call_runIdentityT(v_0_box)
 	return cache_runIdentityT
 }
 
+var cache_runIdentityT__gopurs_runtime_Value_851101024 gopurs_runtime.Value
+var once_runIdentityT__gopurs_runtime_Value_851101024 sync.Once
+func Get_runIdentityT__gopurs_runtime_Value_851101024() gopurs_runtime.Value {
+	once_runIdentityT__gopurs_runtime_Value_851101024.Do(func() {
+		cache_runIdentityT__gopurs_runtime_Value_851101024 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_runIdentityT__gopurs_runtime_Value_851101024(v_0_box)
+})
+	})
+	return cache_runIdentityT__gopurs_runtime_Value_851101024
+}
+
 var cache_plusIdentityT gopurs_runtime.Value
 var once_plusIdentityT sync.Once
 func Get_plusIdentityT() gopurs_runtime.Value {
@@ -387,6 +398,12 @@ return dictTraversable_0
 }
 
 func Call_runIdentityT(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var v_0 gopurs_runtime.Value = v_0_loop
+_ = v_0
+return v_0
+}
+
+func Call_runIdentityT__gopurs_runtime_Value_851101024(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 return v_0

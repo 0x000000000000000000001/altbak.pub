@@ -85,6 +85,17 @@ return Call_to(dict_0_box)
 	return cache_to
 }
 
+var cache_to__gopurs_runtime_Value_2695181986 gopurs_runtime.Value
+var once_to__gopurs_runtime_Value_2695181986 sync.Once
+func Get_to__gopurs_runtime_Value_2695181986() gopurs_runtime.Value {
+	once_to__gopurs_runtime_Value_2695181986.Do(func() {
+		cache_to__gopurs_runtime_Value_2695181986 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_to__gopurs_runtime_Value_2695181986(dict_0_box)
+})
+	})
+	return cache_to__gopurs_runtime_Value_2695181986
+}
+
 var cache_showSum gopurs_runtime.Value
 var once_showSum sync.Once
 func Get_showSum() gopurs_runtime.Value {
@@ -162,6 +173,17 @@ return Call_from(dict_0_box)
 	return cache_from
 }
 
+var cache_from__gopurs_runtime_Value_4189692514 gopurs_runtime.Value
+var once_from__gopurs_runtime_Value_4189692514 sync.Once
+func Get_from__gopurs_runtime_Value_4189692514() gopurs_runtime.Value {
+	once_from__gopurs_runtime_Value_4189692514.Do(func() {
+		cache_from__gopurs_runtime_Value_4189692514 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_from__gopurs_runtime_Value_4189692514(dict_0_box)
+})
+	})
+	return cache_from__gopurs_runtime_Value_4189692514
+}
+
 type Constructor_Inl[T_a any, T_b any] struct {
 	V0 T_a
 }
@@ -196,6 +218,12 @@ return x_0
 }
 
 func Call_to(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "to")
+}
+
+func Call_to__gopurs_runtime_Value_2695181986(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "to")
@@ -269,6 +297,12 @@ return gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}
 }
 
 func Call_from(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "from")
+}
+
+func Call_from__gopurs_runtime_Value_4189692514(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "from")

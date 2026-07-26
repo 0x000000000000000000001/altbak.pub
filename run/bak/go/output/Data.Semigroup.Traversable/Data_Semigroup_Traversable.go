@@ -33,6 +33,17 @@ return Call_traverse1(dict_0_box)
 	return cache_traverse1
 }
 
+var cache_traverse1__gopurs_runtime_Value_1128070767 gopurs_runtime.Value
+var once_traverse1__gopurs_runtime_Value_1128070767 sync.Once
+func Get_traverse1__gopurs_runtime_Value_1128070767() gopurs_runtime.Value {
+	once_traverse1__gopurs_runtime_Value_1128070767.Do(func() {
+		cache_traverse1__gopurs_runtime_Value_1128070767 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_traverse1__gopurs_runtime_Value_1128070767(dict_0_box)
+})
+	})
+	return cache_traverse1__gopurs_runtime_Value_1128070767
+}
+
 var cache_traversableTuple gopurs_runtime.Value
 var once_traversableTuple sync.Once
 func Get_traversableTuple() gopurs_runtime.Value {
@@ -123,6 +134,17 @@ return Call_sequence1(dict_0_box)
 	return cache_sequence1
 }
 
+var cache_sequence1__gopurs_runtime_Value_2955658473 gopurs_runtime.Value
+var once_sequence1__gopurs_runtime_Value_2955658473 sync.Once
+func Get_sequence1__gopurs_runtime_Value_2955658473() gopurs_runtime.Value {
+	once_sequence1__gopurs_runtime_Value_2955658473.Do(func() {
+		cache_sequence1__gopurs_runtime_Value_2955658473 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_sequence1__gopurs_runtime_Value_2955658473(dict_0_box)
+})
+	})
+	return cache_sequence1__gopurs_runtime_Value_2955658473
+}
+
 var cache_traverse1Default gopurs_runtime.Value
 var once_traverse1Default sync.Once
 func Get_traverse1Default() gopurs_runtime.Value {
@@ -146,6 +168,12 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "traverse1")
 }
 
+func Call_traverse1__gopurs_runtime_Value_1128070767(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "traverse1")
+}
+
 func Call_sequence1Default(dictTraversable1_0_loop gopurs_runtime.Value, dictApply_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictTraversable1_0 gopurs_runtime.Value = dictTraversable1_0_loop
 _ = dictTraversable1_0
@@ -155,6 +183,12 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictTraversable1_0, "trave
 }
 
 func Call_sequence1(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "sequence1")
+}
+
+func Call_sequence1__gopurs_runtime_Value_2955658473(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "sequence1")

@@ -50,6 +50,17 @@ return Call_extend(dict_0_box)
 	return cache_extend
 }
 
+var cache_extend__gopurs_runtime_Value_186489329 gopurs_runtime.Value
+var once_extend__gopurs_runtime_Value_186489329 sync.Once
+func Get_extend__gopurs_runtime_Value_186489329() gopurs_runtime.Value {
+	once_extend__gopurs_runtime_Value_186489329.Do(func() {
+		cache_extend__gopurs_runtime_Value_186489329 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_extend__gopurs_runtime_Value_186489329(dict_0_box)
+})
+	})
+	return cache_extend__gopurs_runtime_Value_186489329
+}
+
 var cache_extendFlipped gopurs_runtime.Value
 var once_extendFlipped sync.Once
 func Get_extendFlipped() gopurs_runtime.Value {
@@ -81,6 +92,17 @@ return Call_composeCoKleisliFlipped(dictExtend_0_box, f_1_box, g_2_box, w_3_box)
 })
 	})
 	return cache_composeCoKleisliFlipped
+}
+
+var cache_composeCoKleisliFlipped__gopurs_runtime_Value_3863740592 gopurs_runtime.Value
+var once_composeCoKleisliFlipped__gopurs_runtime_Value_3863740592 sync.Once
+func Get_composeCoKleisliFlipped__gopurs_runtime_Value_3863740592() gopurs_runtime.Value {
+	once_composeCoKleisliFlipped__gopurs_runtime_Value_3863740592.Do(func() {
+		cache_composeCoKleisliFlipped__gopurs_runtime_Value_3863740592 = gopurs_runtime.Func4(func(dictExtend_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, g_2_box gopurs_runtime.Value, w_3_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_composeCoKleisliFlipped__gopurs_runtime_Value_3863740592(dictExtend_0_box, f_1_box, g_2_box, w_3_box)
+})
+	})
+	return cache_composeCoKleisliFlipped__gopurs_runtime_Value_3863740592
 }
 
 var cache_composeCoKleisli gopurs_runtime.Value
@@ -118,6 +140,12 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "extend")
 }
 
+func Call_extend__gopurs_runtime_Value_186489329(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "extend")
+}
+
 func Call_extendFlipped(dictExtend_0_loop gopurs_runtime.Value, w_1_loop gopurs_runtime.Value, f_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictExtend_0 gopurs_runtime.Value = dictExtend_0_loop
 _ = dictExtend_0
@@ -135,6 +163,18 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictExtend_0, "extend"), Ge
 }
 
 func Call_composeCoKleisliFlipped(dictExtend_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value, g_2_loop gopurs_runtime.Value, w_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictExtend_0 gopurs_runtime.Value = dictExtend_0_loop
+_ = dictExtend_0
+var f_1 gopurs_runtime.Value = f_1_loop
+_ = f_1
+var g_2 gopurs_runtime.Value = g_2_loop
+_ = g_2
+var w_3 gopurs_runtime.Value = w_3_loop
+_ = w_3
+return gopurs_runtime.Apply(f_1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictExtend_0, "extend"), g_2, w_3))
+}
+
+func Call_composeCoKleisliFlipped__gopurs_runtime_Value_3863740592(dictExtend_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value, g_2_loop gopurs_runtime.Value, w_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictExtend_0 gopurs_runtime.Value = dictExtend_0_loop
 _ = dictExtend_0
 var f_1 gopurs_runtime.Value = f_1_loop

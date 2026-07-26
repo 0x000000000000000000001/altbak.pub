@@ -54,6 +54,17 @@ return Call_genericToEnum_prime(dict_0_box)
 	return cache_genericToEnum_prime
 }
 
+var cache_genericToEnum_prime__gopurs_runtime_Value_397218870 gopurs_runtime.Value
+var once_genericToEnum_prime__gopurs_runtime_Value_397218870 sync.Once
+func Get_genericToEnum_prime__gopurs_runtime_Value_397218870() gopurs_runtime.Value {
+	once_genericToEnum_prime__gopurs_runtime_Value_397218870.Do(func() {
+		cache_genericToEnum_prime__gopurs_runtime_Value_397218870 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_genericToEnum_prime__gopurs_runtime_Value_397218870(dict_0_box)
+})
+	})
+	return cache_genericToEnum_prime__gopurs_runtime_Value_397218870
+}
+
 var cache_genericToEnum gopurs_runtime.Value
 var once_genericToEnum sync.Once
 func Get_genericToEnum() gopurs_runtime.Value {
@@ -74,6 +85,17 @@ return Call_genericSucc_prime(dict_0_box)
 })
 	})
 	return cache_genericSucc_prime
+}
+
+var cache_genericSucc_prime__gopurs_runtime_Value_1727604173 gopurs_runtime.Value
+var once_genericSucc_prime__gopurs_runtime_Value_1727604173 sync.Once
+func Get_genericSucc_prime__gopurs_runtime_Value_1727604173() gopurs_runtime.Value {
+	once_genericSucc_prime__gopurs_runtime_Value_1727604173.Do(func() {
+		cache_genericSucc_prime__gopurs_runtime_Value_1727604173 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_genericSucc_prime__gopurs_runtime_Value_1727604173(dict_0_box)
+})
+	})
+	return cache_genericSucc_prime__gopurs_runtime_Value_1727604173
 }
 
 var cache_genericSucc gopurs_runtime.Value
@@ -98,6 +120,17 @@ return Call_genericPred_prime(dict_0_box)
 	return cache_genericPred_prime
 }
 
+var cache_genericPred_prime__gopurs_runtime_Value_1727604173 gopurs_runtime.Value
+var once_genericPred_prime__gopurs_runtime_Value_1727604173 sync.Once
+func Get_genericPred_prime__gopurs_runtime_Value_1727604173() gopurs_runtime.Value {
+	once_genericPred_prime__gopurs_runtime_Value_1727604173.Do(func() {
+		cache_genericPred_prime__gopurs_runtime_Value_1727604173 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_genericPred_prime__gopurs_runtime_Value_1727604173(dict_0_box)
+})
+	})
+	return cache_genericPred_prime__gopurs_runtime_Value_1727604173
+}
+
 var cache_genericPred gopurs_runtime.Value
 var once_genericPred sync.Once
 func Get_genericPred() gopurs_runtime.Value {
@@ -118,6 +151,17 @@ return Call_genericFromEnum_prime(dict_0_box)
 })
 	})
 	return cache_genericFromEnum_prime
+}
+
+var cache_genericFromEnum_prime__gopurs_runtime_Value_154194903 gopurs_runtime.Value
+var once_genericFromEnum_prime__gopurs_runtime_Value_154194903 sync.Once
+func Get_genericFromEnum_prime__gopurs_runtime_Value_154194903() gopurs_runtime.Value {
+	once_genericFromEnum_prime__gopurs_runtime_Value_154194903.Do(func() {
+		cache_genericFromEnum_prime__gopurs_runtime_Value_154194903 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_genericFromEnum_prime__gopurs_runtime_Value_154194903(dict_0_box)
+})
+	})
+	return cache_genericFromEnum_prime__gopurs_runtime_Value_154194903
 }
 
 var cache_genericFromEnum gopurs_runtime.Value
@@ -286,6 +330,12 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "genericToEnum'")
 }
 
+func Call_genericToEnum_prime__gopurs_runtime_Value_397218870(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "genericToEnum'")
+}
+
 func Call_genericToEnum(dictGeneric_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictGeneric_0 gopurs_runtime.Value = dictGeneric_0_loop
 _ = dictGeneric_0
@@ -301,6 +351,12 @@ return gopurs_runtime.Apply(__local_var_3_1, gopurs_runtime.Apply(gopurs_runtime
 }
 
 func Call_genericSucc_prime(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "genericSucc'")
+}
+
+func Call_genericSucc_prime__gopurs_runtime_Value_1727604173(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "genericSucc'")
@@ -326,6 +382,12 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "genericPred'")
 }
 
+func Call_genericPred_prime__gopurs_runtime_Value_1727604173(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "genericPred'")
+}
+
 func Call_genericPred(dictGeneric_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictGeneric_0 gopurs_runtime.Value = dictGeneric_0_loop
 _ = dictGeneric_0
@@ -341,6 +403,12 @@ return gopurs_runtime.Apply(__local_var_3_1, gopurs_runtime.Apply(gopurs_runtime
 }
 
 func Call_genericFromEnum_prime(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "genericFromEnum'")
+}
+
+func Call_genericFromEnum_prime__gopurs_runtime_Value_154194903(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "genericFromEnum'")

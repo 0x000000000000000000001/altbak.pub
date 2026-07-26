@@ -46,6 +46,17 @@ return Call_withRWST(f_0_box, m_1_box, r_2_box, s_3_box)
 	return cache_withRWST
 }
 
+var cache_withRWST__gopurs_runtime_Value_1483325624 gopurs_runtime.Value
+var once_withRWST__gopurs_runtime_Value_1483325624 sync.Once
+func Get_withRWST__gopurs_runtime_Value_1483325624() gopurs_runtime.Value {
+	once_withRWST__gopurs_runtime_Value_1483325624.Do(func() {
+		cache_withRWST__gopurs_runtime_Value_1483325624 = gopurs_runtime.Func4(func(f_0_box gopurs_runtime.Value, m_1_box gopurs_runtime.Value, r_2_box gopurs_runtime.Value, s_3_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_withRWST__gopurs_runtime_Value_1483325624(f_0_box, m_1_box, r_2_box, s_3_box)
+})
+	})
+	return cache_withRWST__gopurs_runtime_Value_1483325624
+}
+
 var cache_runRWST gopurs_runtime.Value
 var once_runRWST sync.Once
 func Get_runRWST() gopurs_runtime.Value {
@@ -90,6 +101,17 @@ return Call_mapRWST(f_0_box, v_1_box, r_2_box, s_3_box)
 	return cache_mapRWST
 }
 
+var cache_mapRWST__gopurs_runtime_Value_835443929 gopurs_runtime.Value
+var once_mapRWST__gopurs_runtime_Value_835443929 sync.Once
+func Get_mapRWST__gopurs_runtime_Value_835443929() gopurs_runtime.Value {
+	once_mapRWST__gopurs_runtime_Value_835443929.Do(func() {
+		cache_mapRWST__gopurs_runtime_Value_835443929 = gopurs_runtime.Func4(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value, r_2_box gopurs_runtime.Value, s_3_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_mapRWST__gopurs_runtime_Value_835443929(f_0_box, v_1_box, r_2_box, s_3_box)
+})
+	})
+	return cache_mapRWST__gopurs_runtime_Value_835443929
+}
+
 var cache_lazyRWST gopurs_runtime.Value
 var once_lazyRWST sync.Once
 func Get_lazyRWST() gopurs_runtime.Value {
@@ -123,6 +145,17 @@ return Call_execRWST(dictMonad_0_box, v_1_box, r_2_box, s_3_box)
 	return cache_execRWST
 }
 
+var cache_execRWST__gopurs_runtime_Value_3700440950 gopurs_runtime.Value
+var once_execRWST__gopurs_runtime_Value_3700440950 sync.Once
+func Get_execRWST__gopurs_runtime_Value_3700440950() gopurs_runtime.Value {
+	once_execRWST__gopurs_runtime_Value_3700440950.Do(func() {
+		cache_execRWST__gopurs_runtime_Value_3700440950 = gopurs_runtime.Func4(func(dictMonad_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value, r_2_box gopurs_runtime.Value, s_3_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_execRWST__gopurs_runtime_Value_3700440950(dictMonad_0_box, v_1_box, r_2_box, s_3_box)
+})
+	})
+	return cache_execRWST__gopurs_runtime_Value_3700440950
+}
+
 var cache_evalRWST gopurs_runtime.Value
 var once_evalRWST sync.Once
 func Get_evalRWST() gopurs_runtime.Value {
@@ -132,6 +165,17 @@ return Call_evalRWST(dictMonad_0_box, v_1_box, r_2_box, s_3_box)
 })
 	})
 	return cache_evalRWST
+}
+
+var cache_evalRWST__gopurs_runtime_Value_3700440950 gopurs_runtime.Value
+var once_evalRWST__gopurs_runtime_Value_3700440950 sync.Once
+func Get_evalRWST__gopurs_runtime_Value_3700440950() gopurs_runtime.Value {
+	once_evalRWST__gopurs_runtime_Value_3700440950.Do(func() {
+		cache_evalRWST__gopurs_runtime_Value_3700440950 = gopurs_runtime.Func4(func(dictMonad_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value, r_2_box gopurs_runtime.Value, s_3_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_evalRWST__gopurs_runtime_Value_3700440950(dictMonad_0_box, v_1_box, r_2_box, s_3_box)
+})
+	})
+	return cache_evalRWST__gopurs_runtime_Value_3700440950
 }
 
 var cache_applyRWST gopurs_runtime.Value
@@ -370,6 +414,20 @@ _ = __local_var_4_0
 return gopurs_runtime.Apply2(m_1, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(__local_var_4_0.UnsafePtr).V0, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(__local_var_4_0.UnsafePtr).V1)
 }
 
+func Call_withRWST__gopurs_runtime_Value_1483325624(f_0_loop gopurs_runtime.Value, m_1_loop gopurs_runtime.Value, r_2_loop gopurs_runtime.Value, s_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var f_0 gopurs_runtime.Value = f_0_loop
+_ = f_0
+var m_1 gopurs_runtime.Value = m_1_loop
+_ = m_1
+var r_2 gopurs_runtime.Value = r_2_loop
+_ = r_2
+var s_3 gopurs_runtime.Value = s_3_loop
+_ = s_3
+__local_var_4_0 := gopurs_runtime.Apply2(f_0, r_2, s_3)
+_ = __local_var_4_0
+return gopurs_runtime.Apply2(m_1, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(__local_var_4_0.UnsafePtr).V0, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(__local_var_4_0.UnsafePtr).V1)
+}
+
 func Call_runRWST(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
@@ -389,6 +447,18 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs
 }
 
 func Call_mapRWST(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value, r_2_loop gopurs_runtime.Value, s_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var f_0 gopurs_runtime.Value = f_0_loop
+_ = f_0
+var v_1 gopurs_runtime.Value = v_1_loop
+_ = v_1
+var r_2 gopurs_runtime.Value = r_2_loop
+_ = r_2
+var s_3 gopurs_runtime.Value = s_3_loop
+_ = s_3
+return gopurs_runtime.Apply(f_0, gopurs_runtime.Apply2(v_1, r_2, s_3))
+}
+
+func Call_mapRWST__gopurs_runtime_Value_835443929(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value, r_2_loop gopurs_runtime.Value, s_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var v_1 gopurs_runtime.Value = v_1_loop
@@ -424,7 +494,35 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs
 }))
 }
 
+func Call_execRWST__gopurs_runtime_Value_3700440950(dictMonad_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value, r_2_loop gopurs_runtime.Value, s_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
+_ = dictMonad_0
+var v_1 gopurs_runtime.Value = v_1_loop
+_ = v_1
+var r_2 gopurs_runtime.Value = r_2_loop
+_ = r_2
+var s_3 gopurs_runtime.Value = s_3_loop
+_ = s_3
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Bind1"), gopurs_runtime.Value{}), "bind"), gopurs_runtime.Apply2(v_1, r_2, s_3), gopurs_runtime.Func(func(v1_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{(*Constructor_RWSResult[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value])(v1_4.UnsafePtr).V0, (*Constructor_RWSResult[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value])(v1_4.UnsafePtr).V2})})
+}))
+}
+
 func Call_evalRWST(dictMonad_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value, r_2_loop gopurs_runtime.Value, s_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
+_ = dictMonad_0
+var v_1 gopurs_runtime.Value = v_1_loop
+_ = v_1
+var r_2 gopurs_runtime.Value = r_2_loop
+_ = r_2
+var s_3 gopurs_runtime.Value = s_3_loop
+_ = s_3
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Bind1"), gopurs_runtime.Value{}), "bind"), gopurs_runtime.Apply2(v_1, r_2, s_3), gopurs_runtime.Func(func(v1_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{(*Constructor_RWSResult[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value])(v1_4.UnsafePtr).V1, (*Constructor_RWSResult[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value])(v1_4.UnsafePtr).V2})})
+}))
+}
+
+func Call_evalRWST__gopurs_runtime_Value_3700440950(dictMonad_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value, r_2_loop gopurs_runtime.Value, s_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
 var v_1 gopurs_runtime.Value = v_1_loop

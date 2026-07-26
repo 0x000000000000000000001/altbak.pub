@@ -18,6 +18,17 @@ return Call_genericSub_prime(dict_0_box)
 	return cache_genericSub_prime
 }
 
+var cache_genericSub_prime__gopurs_runtime_Value_1790541253 gopurs_runtime.Value
+var once_genericSub_prime__gopurs_runtime_Value_1790541253 sync.Once
+func Get_genericSub_prime__gopurs_runtime_Value_1790541253() gopurs_runtime.Value {
+	once_genericSub_prime__gopurs_runtime_Value_1790541253.Do(func() {
+		cache_genericSub_prime__gopurs_runtime_Value_1790541253 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_genericSub_prime__gopurs_runtime_Value_1790541253(dict_0_box)
+})
+	})
+	return cache_genericSub_prime__gopurs_runtime_Value_1790541253
+}
+
 var cache_genericSub gopurs_runtime.Value
 var once_genericSub sync.Once
 func Get_genericSub() gopurs_runtime.Value {
@@ -74,6 +85,12 @@ return Call_genericRingArgument(dictRing_0_box)
 }
 
 func Call_genericSub_prime(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "genericSub'")
+}
+
+func Call_genericSub_prime__gopurs_runtime_Value_1790541253(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "genericSub'")

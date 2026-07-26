@@ -29,6 +29,17 @@ return Call_pass(dict_0_box)
 	return cache_pass
 }
 
+var cache_pass__gopurs_runtime_Value_3046402865 gopurs_runtime.Value
+var once_pass__gopurs_runtime_Value_3046402865 sync.Once
+func Get_pass__gopurs_runtime_Value_3046402865() gopurs_runtime.Value {
+	once_pass__gopurs_runtime_Value_3046402865.Do(func() {
+		cache_pass__gopurs_runtime_Value_3046402865 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_pass__gopurs_runtime_Value_3046402865(dict_0_box)
+})
+	})
+	return cache_pass__gopurs_runtime_Value_3046402865
+}
+
 var cache_listen gopurs_runtime.Value
 var once_listen sync.Once
 func Get_listen() gopurs_runtime.Value {
@@ -38,6 +49,17 @@ return Call_listen(dict_0_box)
 })
 	})
 	return cache_listen
+}
+
+var cache_listen__gopurs_runtime_Value_3046402865 gopurs_runtime.Value
+var once_listen__gopurs_runtime_Value_3046402865 sync.Once
+func Get_listen__gopurs_runtime_Value_3046402865() gopurs_runtime.Value {
+	once_listen__gopurs_runtime_Value_3046402865.Do(func() {
+		cache_listen__gopurs_runtime_Value_3046402865 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_listen__gopurs_runtime_Value_3046402865(dict_0_box)
+})
+	})
+	return cache_listen__gopurs_runtime_Value_3046402865
 }
 
 var cache_listens gopurs_runtime.Value
@@ -74,7 +96,19 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "pass")
 }
 
+func Call_pass__gopurs_runtime_Value_3046402865(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "pass")
+}
+
 func Call_listen(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "listen")
+}
+
+func Call_listen__gopurs_runtime_Value_3046402865(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "listen")

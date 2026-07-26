@@ -30,6 +30,17 @@ return Call_withEnvT(f_0_box, v_1_box)
 	return cache_withEnvT
 }
 
+var cache_withEnvT__gopurs_runtime_Value_2580970969 gopurs_runtime.Value
+var once_withEnvT__gopurs_runtime_Value_2580970969 sync.Once
+func Get_withEnvT__gopurs_runtime_Value_2580970969() gopurs_runtime.Value {
+	once_withEnvT__gopurs_runtime_Value_2580970969.Do(func() {
+		cache_withEnvT__gopurs_runtime_Value_2580970969 = gopurs_runtime.Func2(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_withEnvT__gopurs_runtime_Value_2580970969(f_0_box, v_1_box)
+})
+	})
+	return cache_withEnvT__gopurs_runtime_Value_2580970969
+}
+
 var cache_runEnvT gopurs_runtime.Value
 var once_runEnvT sync.Once
 func Get_runEnvT() gopurs_runtime.Value {
@@ -169,6 +180,14 @@ return x_0
 }
 
 func Call_withEnvT(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var f_0 gopurs_runtime.Value = f_0_loop
+_ = f_0
+var v_1 gopurs_runtime.Value = v_1_loop
+_ = v_1
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Apply(f_0, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V0), (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V1})}
+}
+
+func Call_withEnvT__gopurs_runtime_Value_2580970969(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var v_1 gopurs_runtime.Value = v_1_loop

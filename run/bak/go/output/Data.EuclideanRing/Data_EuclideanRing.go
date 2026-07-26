@@ -18,6 +18,17 @@ return Call_mod(dict_0_box)
 	return cache_mod
 }
 
+var cache_mod__gopurs_runtime_Value_3400734130 gopurs_runtime.Value
+var once_mod__gopurs_runtime_Value_3400734130 sync.Once
+func Get_mod__gopurs_runtime_Value_3400734130() gopurs_runtime.Value {
+	once_mod__gopurs_runtime_Value_3400734130.Do(func() {
+		cache_mod__gopurs_runtime_Value_3400734130 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_mod__gopurs_runtime_Value_3400734130(dict_0_box)
+})
+	})
+	return cache_mod__gopurs_runtime_Value_3400734130
+}
+
 var cache_gcd gopurs_runtime.Value
 var once_gcd sync.Once
 func Get_gcd() gopurs_runtime.Value {
@@ -27,6 +38,17 @@ return Call_gcd(dictEq_0_box, dictEuclideanRing_1_box)
 })
 	})
 	return cache_gcd
+}
+
+var cache_gcd__gopurs_runtime_Value_1405932337 gopurs_runtime.Value
+var once_gcd__gopurs_runtime_Value_1405932337 sync.Once
+func Get_gcd__gopurs_runtime_Value_1405932337() gopurs_runtime.Value {
+	once_gcd__gopurs_runtime_Value_1405932337.Do(func() {
+		cache_gcd__gopurs_runtime_Value_1405932337 = gopurs_runtime.Func2(func(dictEq_0_box gopurs_runtime.Value, dictEuclideanRing_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_gcd__gopurs_runtime_Value_1405932337(dictEq_0_box, dictEuclideanRing_1_box)
+})
+	})
+	return cache_gcd__gopurs_runtime_Value_1405932337
 }
 
 var cache_euclideanRingNumber gopurs_runtime.Value
@@ -66,6 +88,17 @@ return Call_div(dict_0_box)
 	return cache_div
 }
 
+var cache_div__gopurs_runtime_Value_3400734130 gopurs_runtime.Value
+var once_div__gopurs_runtime_Value_3400734130 sync.Once
+func Get_div__gopurs_runtime_Value_3400734130() gopurs_runtime.Value {
+	once_div__gopurs_runtime_Value_3400734130.Do(func() {
+		cache_div__gopurs_runtime_Value_3400734130 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_div__gopurs_runtime_Value_3400734130(dict_0_box)
+})
+	})
+	return cache_div__gopurs_runtime_Value_3400734130
+}
+
 var cache_lcm gopurs_runtime.Value
 var once_lcm sync.Once
 func Get_lcm() gopurs_runtime.Value {
@@ -94,10 +127,13 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "mod")
 }
 
+func Call_mod__gopurs_runtime_Value_3400734130(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "mod")
+}
+
 func Call_gcd(dictEq_0_loop gopurs_runtime.Value, dictEuclideanRing_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
-gcd:
-for {
-if false { continue gcd }
 var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
 _ = dictEq_0
 var dictEuclideanRing_1 gopurs_runtime.Value = dictEuclideanRing_1_loop
@@ -121,9 +157,39 @@ end_branch_1:
 return __t1
 })
 }
+
+func Call_gcd__gopurs_runtime_Value_1405932337(dictEq_0_loop gopurs_runtime.Value, dictEuclideanRing_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
+_ = dictEq_0
+var dictEuclideanRing_1 gopurs_runtime.Value = dictEuclideanRing_1_loop
+_ = dictEuclideanRing_1
+zero_2_0 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEuclideanRing_1, "CommutativeRing0"), gopurs_runtime.Value{}), "Ring0"), gopurs_runtime.Value{}), "Semiring0"), gopurs_runtime.Value{}), "zero")
+_ = zero_2_0
+return gopurs_runtime.Func2(func(a_3 gopurs_runtime.Value, b_4 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t1 gopurs_runtime.Value
+{
+if (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), b_4, zero_2_0).IntVal) != (0) {
+__t1 = a_3
+goto end_branch_1
+} else {
+
+}
+}
+{
+__t1 = gopurs_runtime.Apply2(Call_gcd(dictEq_0, dictEuclideanRing_1), b_4, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEuclideanRing_1, "mod"), a_3, b_4))
+}
+end_branch_1:
+return __t1
+})
 }
 
 func Call_div(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "div")
+}
+
+func Call_div__gopurs_runtime_Value_3400734130(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "div")

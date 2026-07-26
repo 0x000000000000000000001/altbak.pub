@@ -117,6 +117,17 @@ return Call_mempty(dict_0_box)
 	return cache_mempty
 }
 
+var cache_mempty__gopurs_runtime_Value_850932430 gopurs_runtime.Value
+var once_mempty__gopurs_runtime_Value_850932430 sync.Once
+func Get_mempty__gopurs_runtime_Value_850932430() gopurs_runtime.Value {
+	once_mempty__gopurs_runtime_Value_850932430.Do(func() {
+		cache_mempty__gopurs_runtime_Value_850932430 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_mempty__gopurs_runtime_Value_850932430(dict_0_box)
+})
+	})
+	return cache_mempty__gopurs_runtime_Value_850932430
+}
+
 var cache_monoidFn gopurs_runtime.Value
 var once_monoidFn sync.Once
 func Get_monoidFn() gopurs_runtime.Value {
@@ -180,6 +191,12 @@ return semigroupRecord1_2_0
 }
 
 func Call_mempty(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "mempty")
+}
+
+func Call_mempty__gopurs_runtime_Value_850932430(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "mempty")

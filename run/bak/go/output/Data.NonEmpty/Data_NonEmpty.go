@@ -56,6 +56,17 @@ return Call_singleton(dictPlus_0_box)
 	return cache_singleton
 }
 
+var cache_singleton__gopurs_runtime_Value_554247010 gopurs_runtime.Value
+var once_singleton__gopurs_runtime_Value_554247010 sync.Once
+func Get_singleton__gopurs_runtime_Value_554247010() gopurs_runtime.Value {
+	once_singleton__gopurs_runtime_Value_554247010.Do(func() {
+		cache_singleton__gopurs_runtime_Value_554247010 = gopurs_runtime.Func(func(dictPlus_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_singleton__gopurs_runtime_Value_554247010(dictPlus_0_box)
+})
+	})
+	return cache_singleton__gopurs_runtime_Value_554247010
+}
+
 var cache_showNonEmpty gopurs_runtime.Value
 var once_showNonEmpty sync.Once
 func Get_showNonEmpty() gopurs_runtime.Value {
@@ -98,6 +109,17 @@ return Call_head(v_0_box)
 })
 	})
 	return cache_head
+}
+
+var cache_head__gopurs_runtime_Value_1145002323 gopurs_runtime.Value
+var once_head__gopurs_runtime_Value_1145002323 sync.Once
+func Get_head__gopurs_runtime_Value_1145002323() gopurs_runtime.Value {
+	once_head__gopurs_runtime_Value_1145002323.Do(func() {
+		cache_head__gopurs_runtime_Value_1145002323 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_head__gopurs_runtime_Value_1145002323(v_0_box)
+})
+	})
+	return cache_head__gopurs_runtime_Value_1145002323
 }
 
 var cache_functorNonEmpty gopurs_runtime.Value
@@ -275,6 +297,16 @@ return gopurs_runtime.Value{Type: 9, IntVal: 3111306138, UnsafePtr: unsafe.Point
 })
 }
 
+func Call_singleton__gopurs_runtime_Value_554247010(dictPlus_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictPlus_0 gopurs_runtime.Value = dictPlus_0_loop
+_ = dictPlus_0
+empty_1_0 := gopurs_runtime.RecordGet(dictPlus_0, "empty")
+_ = empty_1_0
+return gopurs_runtime.Func(func(a_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 3111306138, UnsafePtr: unsafe.Pointer(&Constructor_NonEmpty[gopurs_runtime.Value, gopurs_runtime.Value]{a_2, empty_1_0})}
+})
+}
+
 func Call_showNonEmpty(dictShow_0_loop gopurs_runtime.Value, dictShow1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictShow_0 gopurs_runtime.Value = dictShow_0_loop
 _ = dictShow_0
@@ -304,6 +336,12 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopur
 }
 
 func Call_head(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var v_0 gopurs_runtime.Value = v_0_loop
+_ = v_0
+return (*Constructor_NonEmpty[gopurs_runtime.Value, gopurs_runtime.Value])(v_0.UnsafePtr).V0
+}
+
+func Call_head__gopurs_runtime_Value_1145002323(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 return (*Constructor_NonEmpty[gopurs_runtime.Value, gopurs_runtime.Value])(v_0.UnsafePtr).V0

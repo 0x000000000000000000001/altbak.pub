@@ -39,6 +39,17 @@ return Call_dimap(dict_0_box)
 	return cache_dimap
 }
 
+var cache_dimap__gopurs_runtime_Value_820515366 gopurs_runtime.Value
+var once_dimap__gopurs_runtime_Value_820515366 sync.Once
+func Get_dimap__gopurs_runtime_Value_820515366() gopurs_runtime.Value {
+	once_dimap__gopurs_runtime_Value_820515366.Do(func() {
+		cache_dimap__gopurs_runtime_Value_820515366 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_dimap__gopurs_runtime_Value_820515366(dict_0_box)
+})
+	})
+	return cache_dimap__gopurs_runtime_Value_820515366
+}
+
 var cache_lcmap gopurs_runtime.Value
 var once_lcmap sync.Once
 func Get_lcmap() gopurs_runtime.Value {
@@ -50,6 +61,17 @@ return Call_lcmap(dictProfunctor_0_box, a2b_1_box)
 	return cache_lcmap
 }
 
+var cache_lcmap__gopurs_runtime_Value_4186617248 gopurs_runtime.Value
+var once_lcmap__gopurs_runtime_Value_4186617248 sync.Once
+func Get_lcmap__gopurs_runtime_Value_4186617248() gopurs_runtime.Value {
+	once_lcmap__gopurs_runtime_Value_4186617248.Do(func() {
+		cache_lcmap__gopurs_runtime_Value_4186617248 = gopurs_runtime.Func2(func(dictProfunctor_0_box gopurs_runtime.Value, a2b_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_lcmap__gopurs_runtime_Value_4186617248(dictProfunctor_0_box, a2b_1_box)
+})
+	})
+	return cache_lcmap__gopurs_runtime_Value_4186617248
+}
+
 var cache_rmap gopurs_runtime.Value
 var once_rmap sync.Once
 func Get_rmap() gopurs_runtime.Value {
@@ -59,6 +81,17 @@ return Call_rmap(dictProfunctor_0_box, b2c_1_box)
 })
 	})
 	return cache_rmap
+}
+
+var cache_rmap__gopurs_runtime_Value_3576846818 gopurs_runtime.Value
+var once_rmap__gopurs_runtime_Value_3576846818 sync.Once
+func Get_rmap__gopurs_runtime_Value_3576846818() gopurs_runtime.Value {
+	once_rmap__gopurs_runtime_Value_3576846818.Do(func() {
+		cache_rmap__gopurs_runtime_Value_3576846818 = gopurs_runtime.Func2(func(dictProfunctor_0_box gopurs_runtime.Value, b2c_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_rmap__gopurs_runtime_Value_3576846818(dictProfunctor_0_box, b2c_1_box)
+})
+	})
+	return cache_rmap__gopurs_runtime_Value_3576846818
 }
 
 var cache_unwrapIso gopurs_runtime.Value
@@ -106,6 +139,12 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "dimap")
 }
 
+func Call_dimap__gopurs_runtime_Value_820515366(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "dimap")
+}
+
 func Call_lcmap(dictProfunctor_0_loop gopurs_runtime.Value, a2b_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictProfunctor_0 gopurs_runtime.Value = dictProfunctor_0_loop
 _ = dictProfunctor_0
@@ -114,7 +153,23 @@ _ = a2b_1
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictProfunctor_0, "dimap"), a2b_1, Get_identity())
 }
 
+func Call_lcmap__gopurs_runtime_Value_4186617248(dictProfunctor_0_loop gopurs_runtime.Value, a2b_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictProfunctor_0 gopurs_runtime.Value = dictProfunctor_0_loop
+_ = dictProfunctor_0
+var a2b_1 gopurs_runtime.Value = a2b_1_loop
+_ = a2b_1
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictProfunctor_0, "dimap"), a2b_1, Get_identity())
+}
+
 func Call_rmap(dictProfunctor_0_loop gopurs_runtime.Value, b2c_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictProfunctor_0 gopurs_runtime.Value = dictProfunctor_0_loop
+_ = dictProfunctor_0
+var b2c_1 gopurs_runtime.Value = b2c_1_loop
+_ = b2c_1
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictProfunctor_0, "dimap"), Get_identity(), b2c_1)
+}
+
+func Call_rmap__gopurs_runtime_Value_3576846818(dictProfunctor_0_loop gopurs_runtime.Value, b2c_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictProfunctor_0 gopurs_runtime.Value = dictProfunctor_0_loop
 _ = dictProfunctor_0
 var b2c_1 gopurs_runtime.Value = b2c_1_loop

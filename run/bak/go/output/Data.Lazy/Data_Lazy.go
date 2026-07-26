@@ -29,6 +29,28 @@ return Call_force(v_0_box)
 	return cache_force
 }
 
+var cache_force__gopurs_runtime_Value_3678007478 gopurs_runtime.Value
+var once_force__gopurs_runtime_Value_3678007478 sync.Once
+func Get_force__gopurs_runtime_Value_3678007478() gopurs_runtime.Value {
+	once_force__gopurs_runtime_Value_3678007478.Do(func() {
+		cache_force__gopurs_runtime_Value_3678007478 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_force__gopurs_runtime_Value_3678007478(v_0_box)
+})
+	})
+	return cache_force__gopurs_runtime_Value_3678007478
+}
+
+var cache_force__gopurs_runtime_Value_409010517 gopurs_runtime.Value
+var once_force__gopurs_runtime_Value_409010517 sync.Once
+func Get_force__gopurs_runtime_Value_409010517() gopurs_runtime.Value {
+	once_force__gopurs_runtime_Value_409010517.Do(func() {
+		cache_force__gopurs_runtime_Value_409010517 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_force__gopurs_runtime_Value_409010517(v_0_box)
+})
+	})
+	return cache_force__gopurs_runtime_Value_409010517
+}
+
 var cache_showLazy gopurs_runtime.Value
 var once_showLazy sync.Once
 func Get_showLazy() gopurs_runtime.Value {
@@ -148,6 +170,39 @@ return Call_defer_(f_0_box)
 })
 	})
 	return cache_defer_
+}
+
+var cache_defer__gopurs_runtime_Value_1462316734 gopurs_runtime.Value
+var once_defer__gopurs_runtime_Value_1462316734 sync.Once
+func Get_defer__gopurs_runtime_Value_1462316734() gopurs_runtime.Value {
+	once_defer__gopurs_runtime_Value_1462316734.Do(func() {
+		cache_defer__gopurs_runtime_Value_1462316734 = gopurs_runtime.Func(func(f_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_defer__gopurs_runtime_Value_1462316734(f_0_box)
+})
+	})
+	return cache_defer__gopurs_runtime_Value_1462316734
+}
+
+var cache_defer__gopurs_runtime_Value_173320893 gopurs_runtime.Value
+var once_defer__gopurs_runtime_Value_173320893 sync.Once
+func Get_defer__gopurs_runtime_Value_173320893() gopurs_runtime.Value {
+	once_defer__gopurs_runtime_Value_173320893.Do(func() {
+		cache_defer__gopurs_runtime_Value_173320893 = gopurs_runtime.Func(func(f_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_defer__gopurs_runtime_Value_173320893(f_0_box)
+})
+	})
+	return cache_defer__gopurs_runtime_Value_173320893
+}
+
+var cache_defer__gopurs_runtime_Value_1296473235 gopurs_runtime.Value
+var once_defer__gopurs_runtime_Value_1296473235 sync.Once
+func Get_defer__gopurs_runtime_Value_1296473235() gopurs_runtime.Value {
+	once_defer__gopurs_runtime_Value_1296473235.Do(func() {
+		cache_defer__gopurs_runtime_Value_1296473235 = gopurs_runtime.Func(func(f_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_defer__gopurs_runtime_Value_1296473235(f_0_box)
+})
+	})
+	return cache_defer__gopurs_runtime_Value_1296473235
 }
 
 var cache_functorLazy gopurs_runtime.Value
@@ -446,6 +501,18 @@ _ = v_0
 return gopurs_runtime.Apply(v_0, pkg_Data_Unit.Get_unit())
 }
 
+func Call_force__gopurs_runtime_Value_3678007478(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var v_0 gopurs_runtime.Value = v_0_loop
+_ = v_0
+return gopurs_runtime.Apply(v_0, pkg_Data_Unit.Get_unit())
+}
+
+func Call_force__gopurs_runtime_Value_409010517(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var v_0 gopurs_runtime.Value = v_0_loop
+_ = v_0
+return gopurs_runtime.Apply(v_0, pkg_Data_Unit.Get_unit())
+}
+
 func Call_showLazy(dictShow_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictShow_0 gopurs_runtime.Value = dictShow_0_loop
 _ = dictShow_0
@@ -479,6 +546,24 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), gop
 }
 
 func Call_defer_(f_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var f_0 gopurs_runtime.Value = f_0_loop
+_ = f_0
+return f_0
+}
+
+func Call_defer__gopurs_runtime_Value_1462316734(f_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var f_0 gopurs_runtime.Value = f_0_loop
+_ = f_0
+return f_0
+}
+
+func Call_defer__gopurs_runtime_Value_173320893(f_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var f_0 gopurs_runtime.Value = f_0_loop
+_ = f_0
+return f_0
+}
+
+func Call_defer__gopurs_runtime_Value_1296473235(f_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 return f_0
