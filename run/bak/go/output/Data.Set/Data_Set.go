@@ -3,14 +3,13 @@ package Data_Set
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Control_Semigroupoid "gopurs/output/Control.Semigroupoid"
 	pkg_Data_List "gopurs/output/Data.List"
 	pkg_Data_Unfoldable "gopurs/output/Data.Unfoldable"
 	pkg_Data_Map_Internal "gopurs/output/Data.Map.Internal"
 	pkg_Data_List_Types "gopurs/output/Data.List.Types"
 	pkg_Data_Eq "gopurs/output/Data.Eq"
-	pkg_Data_Function "gopurs/output/Data.Function"
 	pkg_Data_Maybe "gopurs/output/Data.Maybe"
+	pkg_Data_Function "gopurs/output/Data.Function"
 	pkg_Data_Unit "gopurs/output/Data.Unit"
 	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
 	pkg_Data_Show "gopurs/output/Data.Show"
@@ -73,17 +72,6 @@ return Call_toMap(v_0_box)
 	return cache_toMap
 }
 
-var cache_toList gopurs_runtime.Value
-var once_toList sync.Once
-func Get_toList() gopurs_runtime.Value {
-	once_toList.Do(func() {
-		cache_toList = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_toList(v_0_box)
-})
-	})
-	return cache_toList
-}
-
 var cache_toUnfoldable gopurs_runtime.Value
 var once_toUnfoldable sync.Once
 func Get_toUnfoldable() gopurs_runtime.Value {
@@ -99,7 +87,13 @@ var cache_toUnfoldable1 gopurs_runtime.Value
 var once_toUnfoldable1 sync.Once
 func Get_toUnfoldable1() gopurs_runtime.Value {
 	once_toUnfoldable1.Do(func() {
-		cache_toUnfoldable1 = gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), gopurs_runtime.Apply(pkg_Data_List.Get_toUnfoldable(), pkg_Data_Unfoldable.Get_unfoldableArray()), Get_toList())
+		cache_toUnfoldable1 = func() gopurs_runtime.Value {
+__local_var_0_0 := gopurs_runtime.Apply(pkg_Data_List.Get_toUnfoldable(), pkg_Data_Unfoldable.Get_unfoldableArray())
+_ = __local_var_0_0
+return gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_0_0, gopurs_runtime.Apply(pkg_Data_Map_Internal.Get_keys(), x_1))
+})
+}()
 	})
 	return cache_toUnfoldable1
 }
@@ -205,12 +199,24 @@ func Get_foldableSet() gopurs_runtime.Value {
 foldMap1_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_List_Types.Get_foldableList(), "foldMap"), dictMonoid_0)
 _ = foldMap1_1_0
 return gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), gopurs_runtime.Apply(foldMap1_1_0, f_2), Get_toList())
+__local_var_3_1 := gopurs_runtime.Apply(foldMap1_1_0, f_2)
+_ = __local_var_3_1
+return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_3_1, gopurs_runtime.Apply(pkg_Data_Map_Internal.Get_keys(), x_4))
+})
 })
 }), gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, x_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_List_Types.Get_foldableList(), "foldl"), f_0, x_1), Get_toList())
+__local_var_2_2 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_List_Types.Get_foldableList(), "foldl"), f_0, x_1)
+_ = __local_var_2_2
+return gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_2_2, gopurs_runtime.Apply(pkg_Data_Map_Internal.Get_keys(), x_3))
+})
 }), gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, x_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_List_Types.Get_foldableList(), "foldr"), f_0, x_1), Get_toList())
+__local_var_2_3 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_List_Types.Get_foldableList(), "foldr"), f_0, x_1)
+_ = __local_var_2_3
+return gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_2_3, gopurs_runtime.Apply(pkg_Data_Map_Internal.Get_keys(), x_3))
+})
 }))
 	})
 	return cache_foldableSet
@@ -425,8 +431,8 @@ return Call_catMaybes(dictOrd_0_box)
 	return cache_catMaybes
 }
 
-func Call_identity(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var x_0 gopurs_runtime.Value = x_0_loop
+func Call_identity(x_0_loop *pkg_Data_Maybe.Constructor_Just) *pkg_Data_Maybe.Constructor_Just {
+var x_0 *pkg_Data_Maybe.Constructor_Just = x_0_loop
 _ = x_0
 return x_0
 }
@@ -486,16 +492,14 @@ _ = v_0
 return v_0
 }
 
-func Call_toList(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var v_0 gopurs_runtime.Value = v_0_loop
-_ = v_0
-return gopurs_runtime.Apply(pkg_Data_Map_Internal.Get_keys(), v_0)
-}
-
 func Call_toUnfoldable(dictUnfoldable_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictUnfoldable_0 gopurs_runtime.Value = dictUnfoldable_0_loop
 _ = dictUnfoldable_0
-return gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), gopurs_runtime.Apply(pkg_Data_List.Get_toUnfoldable(), dictUnfoldable_0), Get_toList())
+__local_var_1_0 := gopurs_runtime.Apply(pkg_Data_List.Get_toUnfoldable(), dictUnfoldable_0)
+_ = __local_var_1_0
+return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_1_0, gopurs_runtime.Apply(pkg_Data_Map_Internal.Get_keys(), x_2))
+})
 }
 
 func Call_singleton(a_0_loop gopurs_runtime.Value) gopurs_runtime.Value {

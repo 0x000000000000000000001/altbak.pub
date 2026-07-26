@@ -4,8 +4,6 @@ import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
 	pkg_Data_Unit "gopurs/output/Data.Unit"
-	pkg_Control_Semigroupoid "gopurs/output/Control.Semigroupoid"
-	pkg_Data_Function "gopurs/output/Data.Function"
 	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
 )
 
@@ -264,9 +262,13 @@ return Get_foldableLazy()
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_functorLazy()
 }), gopurs_runtime.Func2(func(dictApplicative_0 gopurs_runtime.Value, l_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), Get_defer_(), pkg_Data_Function.Get_const_()), gopurs_runtime.Apply(l_1, pkg_Data_Unit.Get_unit()))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Func2(func(x_2 gopurs_runtime.Value, v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_2
+}), gopurs_runtime.Apply(l_1, pkg_Data_Unit.Get_unit()))
 }), gopurs_runtime.Func3(func(dictApplicative_0 gopurs_runtime.Value, f_1 gopurs_runtime.Value, l_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), Get_defer_(), pkg_Data_Function.Get_const_()), gopurs_runtime.Apply(f_1, gopurs_runtime.Apply(l_2, pkg_Data_Unit.Get_unit())))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Func2(func(x_3 gopurs_runtime.Value, v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_3
+}), gopurs_runtime.Apply(f_1, gopurs_runtime.Apply(l_2, pkg_Data_Unit.Get_unit())))
 }))
 	})
 	return cache_traversableLazy
@@ -281,9 +283,13 @@ return Get_foldable1Lazy()
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_traversableLazy()
 }), gopurs_runtime.Func2(func(dictApply_0 gopurs_runtime.Value, l_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApply_0, "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), Get_defer_(), pkg_Data_Function.Get_const_()), gopurs_runtime.Apply(l_1, pkg_Data_Unit.Get_unit()))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApply_0, "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Func2(func(x_2 gopurs_runtime.Value, v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_2
+}), gopurs_runtime.Apply(l_1, pkg_Data_Unit.Get_unit()))
 }), gopurs_runtime.Func3(func(dictApply_0 gopurs_runtime.Value, f_1 gopurs_runtime.Value, l_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApply_0, "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), Get_defer_(), pkg_Data_Function.Get_const_()), gopurs_runtime.Apply(f_1, gopurs_runtime.Apply(l_2, pkg_Data_Unit.Get_unit())))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApply_0, "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Func2(func(x_3 gopurs_runtime.Value, v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_3
+}), gopurs_runtime.Apply(f_1, gopurs_runtime.Apply(l_2, pkg_Data_Unit.Get_unit())))
 }))
 	})
 	return cache_traversable1Lazy
@@ -553,7 +559,9 @@ return gopurs_runtime.RecordDict4("CommutativeRing0", "degree", "div", "mod", go
 return gopurs_runtime.RecordDict1("Ring0", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return ringLazy1_1_0
 }))
-}), gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), ((*gopurs_runtime.RecordData3)(dictEuclideanRing_0.UnsafePtr)).V0, Get_force()), gopurs_runtime.Func3(func(a_2 gopurs_runtime.Value, b_3 gopurs_runtime.Value, v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(((*gopurs_runtime.RecordData3)(dictEuclideanRing_0.UnsafePtr)).V0, gopurs_runtime.Apply(x_2, pkg_Data_Unit.Get_unit()))
+}), gopurs_runtime.Func3(func(a_2 gopurs_runtime.Value, b_3 gopurs_runtime.Value, v_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(((*gopurs_runtime.RecordData3)(dictEuclideanRing_0.UnsafePtr)).V1, gopurs_runtime.Apply(a_2, pkg_Data_Unit.Get_unit()), gopurs_runtime.Apply(b_3, pkg_Data_Unit.Get_unit()))
 }), gopurs_runtime.Func3(func(a_2 gopurs_runtime.Value, b_3 gopurs_runtime.Value, v_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(((*gopurs_runtime.RecordData3)(dictEuclideanRing_0.UnsafePtr)).V2, gopurs_runtime.Apply(a_2, pkg_Data_Unit.Get_unit()), gopurs_runtime.Apply(b_3, pkg_Data_Unit.Get_unit()))

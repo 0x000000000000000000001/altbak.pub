@@ -105,14 +105,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Functor_Clown_Clown'] = function() { $v = function($x_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Functor_Clown_Clown
+$GLOBALS['Data_Functor_Clown_Clown'] = function($x_0 = null) {
   $__num = \func_num_args();
   $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Clown_showClown'] = function() { $v = function($dictShow_0 = null) {
+};
+
+// Data_Functor_Clown_showClown
+$GLOBALS['Data_Functor_Clown_showClown'] = function($dictShow_0 = null) {
   $__num = \func_num_args();
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
@@ -124,8 +131,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Clown_profunctorClown'] = function() { $v = function($dictContravariant_0 = null) {
+};
+
+// Data_Functor_Clown_profunctorClown
+$GLOBALS['Data_Functor_Clown_profunctorClown'] = function($dictContravariant_0 = null) {
   $__num = \func_num_args();
   $__res = ["dimap" => (function() use ($dictContravariant_0) {
   $__fn = function($f_1 = null, $v_2 = null, $v1_3 = null) use ($dictContravariant_0, &$__fn) {
@@ -143,22 +152,28 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Clown_ordClown'] = function() { $v = function($dictOrd_0 = null) {
+};
+
+// Data_Functor_Clown_ordClown
+$GLOBALS['Data_Functor_Clown_ordClown'] = function($dictOrd_0 = null) {
   $__num = \func_num_args();
   $__res = $dictOrd_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Clown_newtypeClown'] = function() { $v = ["Coercible0" => function($dollar__unused_0 = null) {
+};
+
+// Data_Functor_Clown_newtypeClown
+$GLOBALS['Data_Functor_Clown_newtypeClown'] = ["Coercible0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'));
+  $__res = $GLOBALS['Prim_undefined'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Clown_hoistClown'] = function() { $v = (function() {
+}];
+
+// Data_Functor_Clown_hoistClown
+$GLOBALS['Data_Functor_Clown_hoistClown'] = (function() {
   $__fn = function($f_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -170,8 +185,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Functor_Clown_functorClown'] = function() { $v = ["map" => (function() {
+})();
+
+// Data_Functor_Clown_functorClown
+$GLOBALS['Data_Functor_Clown_functorClown'] = ["map" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -183,15 +200,19 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Clown_eqClown'] = function() { $v = function($dictEq_0 = null) {
+})()];
+
+// Data_Functor_Clown_eqClown
+$GLOBALS['Data_Functor_Clown_eqClown'] = function($dictEq_0 = null) {
   $__num = \func_num_args();
   $__res = $dictEq_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Clown_bifunctorClown'] = function() { $v = function($dictFunctor_0 = null) {
+};
+
+// Data_Functor_Clown_bifunctorClown
+$GLOBALS['Data_Functor_Clown_bifunctorClown'] = function($dictFunctor_0 = null) {
   $__num = \func_num_args();
   $__res = ["bimap" => (function() use ($dictFunctor_0) {
   $__fn = function($f_1 = null, $v_2 = null, $v1_3 = null) use ($dictFunctor_0, &$__fn) {
@@ -209,10 +230,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Clown_biapplyClown'] = function() { $v = function($dictApply_0 = null) {
+};
+
+// Data_Functor_Clown_biapplyClown
+$GLOBALS['Data_Functor_Clown_biapplyClown'] = function($dictApply_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictApply_0)['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_1_0 = (($dictApply_0)['Functor0'])($GLOBALS['Prim_undefined']);
   $bifunctorClown1_2_1 = ["bimap" => (function() use ($__local_var_1_0) {
   $__fn = function($f_2 = null, $v_3 = null, $v1_4 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -248,10 +271,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Clown_biapplicativeClown'] = function() { $v = function($dictApplicative_0 = null) {
+};
+
+// Data_Functor_Clown_biapplicativeClown
+$GLOBALS['Data_Functor_Clown_biapplicativeClown'] = function($dictApplicative_0 = null) {
   $__num = \func_num_args();
-  $biapplyClown1_1_0 = (($GLOBALS['Data_Functor_Clown_biapplyClown'] ?? \PhpursThunks::eval('Data_Functor_Clown_biapplyClown')))((($dictApplicative_0)['Apply0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $biapplyClown1_1_0 = ($GLOBALS['Data_Functor_Clown_biapplyClown'])((($dictApplicative_0)['Apply0'])($GLOBALS['Prim_undefined']));
   $__res = ["bipure" => (function() use ($dictApplicative_0) {
   $__fn = function($a_2 = null, $v_3 = null) use ($dictApplicative_0, &$__fn) {
   $__num = \func_num_args();
@@ -274,18 +299,5 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
-
-
-
+};
 

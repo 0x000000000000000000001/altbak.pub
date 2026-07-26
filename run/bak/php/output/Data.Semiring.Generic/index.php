@@ -95,14 +95,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Semiring_Generic_genericZero__prime__'] = function() { $v = function($dict_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Semiring_Generic_genericZero'
+$GLOBALS['Data_Semiring_Generic_genericZero__prime__'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['genericZero__prime__'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Semiring_Generic_genericZero'] = function() { $v = (function() {
+};
+
+// Data_Semiring_Generic_genericZero
+$GLOBALS['Data_Semiring_Generic_genericZero'] = (function() {
   $__fn = function($dictGeneric_0 = null, $dictGenericSemiring_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -114,8 +121,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Semiring_Generic_genericSemiringNoArguments'] = function() { $v = ["genericAdd__prime__" => (function() {
+})();
+
+// Data_Semiring_Generic_genericSemiringNoArguments
+$GLOBALS['Data_Semiring_Generic_genericSemiringNoArguments'] = ["genericAdd__prime__" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -139,8 +148,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "genericOne__prime__" => new Phpurs_Data0("NoArguments")]; return $v; };
-\PhpursThunks::$thunks['Data_Semiring_Generic_genericSemiringArgument'] = function() { $v = function($dictSemiring_0 = null) {
+})(), "genericOne__prime__" => new Phpurs_Data0("NoArguments")];
+
+// Data_Semiring_Generic_genericSemiringArgument
+$GLOBALS['Data_Semiring_Generic_genericSemiringArgument'] = function($dictSemiring_0 = null) {
   $__num = \func_num_args();
   $__res = ["genericAdd__prime__" => (function() use ($dictSemiring_0) {
   $__fn = function($v_1 = null, $v1_2 = null) use ($dictSemiring_0, &$__fn) {
@@ -170,15 +181,19 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Semiring_Generic_genericOne__prime__'] = function() { $v = function($dict_0 = null) {
+};
+
+// Data_Semiring_Generic_genericOne'
+$GLOBALS['Data_Semiring_Generic_genericOne__prime__'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['genericOne__prime__'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Semiring_Generic_genericOne'] = function() { $v = (function() {
+};
+
+// Data_Semiring_Generic_genericOne
+$GLOBALS['Data_Semiring_Generic_genericOne'] = (function() {
   $__fn = function($dictGeneric_0 = null, $dictGenericSemiring_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -190,15 +205,19 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Semiring_Generic_genericMul__prime__'] = function() { $v = function($dict_0 = null) {
+})();
+
+// Data_Semiring_Generic_genericMul'
+$GLOBALS['Data_Semiring_Generic_genericMul__prime__'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['genericMul__prime__'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Semiring_Generic_genericMul'] = function() { $v = (function() {
+};
+
+// Data_Semiring_Generic_genericMul
+$GLOBALS['Data_Semiring_Generic_genericMul'] = (function() {
   $__fn = function($dictGeneric_0 = null, $dictGenericSemiring_1 = null, $x_2 = null, $y_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
@@ -210,15 +229,19 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Semiring_Generic_genericAdd__prime__'] = function() { $v = function($dict_0 = null) {
+})();
+
+// Data_Semiring_Generic_genericAdd'
+$GLOBALS['Data_Semiring_Generic_genericAdd__prime__'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['genericAdd__prime__'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Semiring_Generic_genericSemiringConstructor'] = function() { $v = function($dictGenericSemiring_0 = null) {
+};
+
+// Data_Semiring_Generic_genericSemiringConstructor
+$GLOBALS['Data_Semiring_Generic_genericSemiringConstructor'] = function($dictGenericSemiring_0 = null) {
   $__num = \func_num_args();
   $__res = ["genericAdd__prime__" => (function() use ($dictGenericSemiring_0) {
   $__fn = function($v_1 = null, $v1_2 = null) use ($dictGenericSemiring_0, &$__fn) {
@@ -248,8 +271,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Semiring_Generic_genericSemiringProduct'] = function() { $v = function($dictGenericSemiring_0 = null) {
+};
+
+// Data_Semiring_Generic_genericSemiringProduct
+$GLOBALS['Data_Semiring_Generic_genericSemiringProduct'] = function($dictGenericSemiring_0 = null) {
   $__num = \func_num_args();
   $genericZero__prime__1_1_0 = ($dictGenericSemiring_0)['genericZero__prime__'];
   $genericOne__prime__1_2_1 = ($dictGenericSemiring_0)['genericOne__prime__'];
@@ -287,8 +312,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Semiring_Generic_genericAdd'] = function() { $v = (function() {
+};
+
+// Data_Semiring_Generic_genericAdd
+$GLOBALS['Data_Semiring_Generic_genericAdd'] = (function() {
   $__fn = function($dictGeneric_0 = null, $dictGenericSemiring_1 = null, $x_2 = null, $y_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
@@ -300,19 +327,5 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
-
-
-
-
+})();
 

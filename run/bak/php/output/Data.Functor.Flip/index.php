@@ -106,14 +106,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Functor_Flip_Flip'] = function() { $v = function($x_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Functor_Flip_Flip
+$GLOBALS['Data_Functor_Flip_Flip'] = function($x_0 = null) {
   $__num = \func_num_args();
   $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Flip_showFlip'] = function() { $v = function($dictShow_0 = null) {
+};
+
+// Data_Functor_Flip_showFlip
+$GLOBALS['Data_Functor_Flip_showFlip'] = function($dictShow_0 = null) {
   $__num = \func_num_args();
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
@@ -125,8 +132,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Flip_semigroupoidFlip'] = function() { $v = function($dictSemigroupoid_0 = null) {
+};
+
+// Data_Functor_Flip_semigroupoidFlip
+$GLOBALS['Data_Functor_Flip_semigroupoidFlip'] = function($dictSemigroupoid_0 = null) {
   $__num = \func_num_args();
   $__res = ["compose" => (function() use ($dictSemigroupoid_0) {
   $__fn = function($v_1 = null, $v1_2 = null) use ($dictSemigroupoid_0, &$__fn) {
@@ -144,22 +153,28 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Flip_ordFlip'] = function() { $v = function($dictOrd_0 = null) {
+};
+
+// Data_Functor_Flip_ordFlip
+$GLOBALS['Data_Functor_Flip_ordFlip'] = function($dictOrd_0 = null) {
   $__num = \func_num_args();
   $__res = $dictOrd_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Flip_newtypeFlip'] = function() { $v = ["Coercible0" => function($dollar__unused_0 = null) {
+};
+
+// Data_Functor_Flip_newtypeFlip
+$GLOBALS['Data_Functor_Flip_newtypeFlip'] = ["Coercible0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'));
+  $__res = $GLOBALS['Prim_undefined'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Flip_functorFlip'] = function() { $v = function($dictBifunctor_0 = null) {
+}];
+
+// Data_Functor_Flip_functorFlip
+$GLOBALS['Data_Functor_Flip_functorFlip'] = function($dictBifunctor_0 = null) {
   $__num = \func_num_args();
   $__res = ["map" => (function() use ($dictBifunctor_0) {
   $__fn = function($f_1 = null, $v_2 = null) use ($dictBifunctor_0, &$__fn) {
@@ -167,7 +182,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($dictBifunctor_0)['bimap'])($f_1))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))['identity']))($v_2);
+  $__res = (((($dictBifunctor_0)['bimap'])($f_1))(($GLOBALS['Control_Category_categoryFn'])['identity']))($v_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -177,15 +192,19 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Flip_eqFlip'] = function() { $v = function($dictEq_0 = null) {
+};
+
+// Data_Functor_Flip_eqFlip
+$GLOBALS['Data_Functor_Flip_eqFlip'] = function($dictEq_0 = null) {
   $__num = \func_num_args();
   $__res = $dictEq_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Flip_contravariantFlip'] = function() { $v = function($dictProfunctor_0 = null) {
+};
+
+// Data_Functor_Flip_contravariantFlip
+$GLOBALS['Data_Functor_Flip_contravariantFlip'] = function($dictProfunctor_0 = null) {
   $__num = \func_num_args();
   $__res = ["cmap" => (function() use ($dictProfunctor_0) {
   $__fn = function($f_1 = null, $v_2 = null) use ($dictProfunctor_0, &$__fn) {
@@ -193,7 +212,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($dictProfunctor_0)['dimap'])($f_1))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))['identity']))($v_2);
+  $__res = (((($dictProfunctor_0)['dimap'])($f_1))(($GLOBALS['Control_Category_categoryFn'])['identity']))($v_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -203,10 +222,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Flip_categoryFlip'] = function() { $v = function($dictCategory_0 = null) {
+};
+
+// Data_Functor_Flip_categoryFlip
+$GLOBALS['Data_Functor_Flip_categoryFlip'] = function($dictCategory_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictCategory_0)['Semigroupoid0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_1_0 = (($dictCategory_0)['Semigroupoid0'])($GLOBALS['Prim_undefined']);
   $semigroupoidFlip1_2_1 = ["compose" => (function() use ($__local_var_1_0) {
   $__fn = function($v_2 = null, $v1_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -230,8 +251,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Flip_bifunctorFlip'] = function() { $v = function($dictBifunctor_0 = null) {
+};
+
+// Data_Functor_Flip_bifunctorFlip
+$GLOBALS['Data_Functor_Flip_bifunctorFlip'] = function($dictBifunctor_0 = null) {
   $__num = \func_num_args();
   $__res = ["bimap" => (function() use ($dictBifunctor_0) {
   $__fn = function($f_1 = null, $g_2 = null, $v_3 = null) use ($dictBifunctor_0, &$__fn) {
@@ -249,10 +272,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Flip_biapplyFlip'] = function() { $v = function($dictBiapply_0 = null) {
+};
+
+// Data_Functor_Flip_biapplyFlip
+$GLOBALS['Data_Functor_Flip_biapplyFlip'] = function($dictBiapply_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictBiapply_0)['Bifunctor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_1_0 = (($dictBiapply_0)['Bifunctor0'])($GLOBALS['Prim_undefined']);
   $bifunctorFlip1_2_1 = ["bimap" => (function() use ($__local_var_1_0) {
   $__fn = function($f_2 = null, $g_3 = null, $v_4 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -288,10 +313,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Flip_biapplicativeFlip'] = function() { $v = function($dictBiapplicative_0 = null) {
+};
+
+// Data_Functor_Flip_biapplicativeFlip
+$GLOBALS['Data_Functor_Flip_biapplicativeFlip'] = function($dictBiapplicative_0 = null) {
   $__num = \func_num_args();
-  $biapplyFlip1_1_0 = (($GLOBALS['Data_Functor_Flip_biapplyFlip'] ?? \PhpursThunks::eval('Data_Functor_Flip_biapplyFlip')))((($dictBiapplicative_0)['Biapply0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $biapplyFlip1_1_0 = ($GLOBALS['Data_Functor_Flip_biapplyFlip'])((($dictBiapplicative_0)['Biapply0'])($GLOBALS['Prim_undefined']));
   $__res = ["bipure" => (function() use ($dictBiapplicative_0) {
   $__fn = function($a_2 = null, $b_3 = null) use ($dictBiapplicative_0, &$__fn) {
   $__num = \func_num_args();
@@ -314,19 +341,5 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
-
-
-
-
+};
 

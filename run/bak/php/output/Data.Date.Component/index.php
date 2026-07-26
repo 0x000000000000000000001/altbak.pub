@@ -105,33 +105,78 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Date_Component_Monday'] = function() { $v = ($GLOBALS['__phpurs_data0_Monday'] ??= new Phpurs_Data0("Monday")); return $v; };
-\PhpursThunks::$thunks['Data_Date_Component_Tuesday'] = function() { $v = ($GLOBALS['__phpurs_data0_Tuesday'] ??= new Phpurs_Data0("Tuesday")); return $v; };
-\PhpursThunks::$thunks['Data_Date_Component_Wednesday'] = function() { $v = ($GLOBALS['__phpurs_data0_Wednesday'] ??= new Phpurs_Data0("Wednesday")); return $v; };
-\PhpursThunks::$thunks['Data_Date_Component_Thursday'] = function() { $v = ($GLOBALS['__phpurs_data0_Thursday'] ??= new Phpurs_Data0("Thursday")); return $v; };
-\PhpursThunks::$thunks['Data_Date_Component_Friday'] = function() { $v = ($GLOBALS['__phpurs_data0_Friday'] ??= new Phpurs_Data0("Friday")); return $v; };
-\PhpursThunks::$thunks['Data_Date_Component_Saturday'] = function() { $v = ($GLOBALS['__phpurs_data0_Saturday'] ??= new Phpurs_Data0("Saturday")); return $v; };
-\PhpursThunks::$thunks['Data_Date_Component_Sunday'] = function() { $v = ($GLOBALS['__phpurs_data0_Sunday'] ??= new Phpurs_Data0("Sunday")); return $v; };
-\PhpursThunks::$thunks['Data_Date_Component_January'] = function() { $v = ($GLOBALS['__phpurs_data0_January'] ??= new Phpurs_Data0("January")); return $v; };
-\PhpursThunks::$thunks['Data_Date_Component_February'] = function() { $v = ($GLOBALS['__phpurs_data0_February'] ??= new Phpurs_Data0("February")); return $v; };
-\PhpursThunks::$thunks['Data_Date_Component_March'] = function() { $v = ($GLOBALS['__phpurs_data0_March'] ??= new Phpurs_Data0("March")); return $v; };
-\PhpursThunks::$thunks['Data_Date_Component_April'] = function() { $v = ($GLOBALS['__phpurs_data0_April'] ??= new Phpurs_Data0("April")); return $v; };
-\PhpursThunks::$thunks['Data_Date_Component_May'] = function() { $v = ($GLOBALS['__phpurs_data0_May'] ??= new Phpurs_Data0("May")); return $v; };
-\PhpursThunks::$thunks['Data_Date_Component_June'] = function() { $v = ($GLOBALS['__phpurs_data0_June'] ??= new Phpurs_Data0("June")); return $v; };
-\PhpursThunks::$thunks['Data_Date_Component_July'] = function() { $v = ($GLOBALS['__phpurs_data0_July'] ??= new Phpurs_Data0("July")); return $v; };
-\PhpursThunks::$thunks['Data_Date_Component_August'] = function() { $v = ($GLOBALS['__phpurs_data0_August'] ??= new Phpurs_Data0("August")); return $v; };
-\PhpursThunks::$thunks['Data_Date_Component_September'] = function() { $v = ($GLOBALS['__phpurs_data0_September'] ??= new Phpurs_Data0("September")); return $v; };
-\PhpursThunks::$thunks['Data_Date_Component_October'] = function() { $v = ($GLOBALS['__phpurs_data0_October'] ??= new Phpurs_Data0("October")); return $v; };
-\PhpursThunks::$thunks['Data_Date_Component_November'] = function() { $v = ($GLOBALS['__phpurs_data0_November'] ??= new Phpurs_Data0("November")); return $v; };
-\PhpursThunks::$thunks['Data_Date_Component_December'] = function() { $v = ($GLOBALS['__phpurs_data0_December'] ??= new Phpurs_Data0("December")); return $v; };
-\PhpursThunks::$thunks['Data_Date_Component_showYear'] = function() { $v = ["show" => function($v_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Date_Component_Monday
+$GLOBALS['Data_Date_Component_Monday'] = ($GLOBALS['__phpurs_data0_Monday'] ??= new Phpurs_Data0("Monday"));
+
+// Data_Date_Component_Tuesday
+$GLOBALS['Data_Date_Component_Tuesday'] = ($GLOBALS['__phpurs_data0_Tuesday'] ??= new Phpurs_Data0("Tuesday"));
+
+// Data_Date_Component_Wednesday
+$GLOBALS['Data_Date_Component_Wednesday'] = ($GLOBALS['__phpurs_data0_Wednesday'] ??= new Phpurs_Data0("Wednesday"));
+
+// Data_Date_Component_Thursday
+$GLOBALS['Data_Date_Component_Thursday'] = ($GLOBALS['__phpurs_data0_Thursday'] ??= new Phpurs_Data0("Thursday"));
+
+// Data_Date_Component_Friday
+$GLOBALS['Data_Date_Component_Friday'] = ($GLOBALS['__phpurs_data0_Friday'] ??= new Phpurs_Data0("Friday"));
+
+// Data_Date_Component_Saturday
+$GLOBALS['Data_Date_Component_Saturday'] = ($GLOBALS['__phpurs_data0_Saturday'] ??= new Phpurs_Data0("Saturday"));
+
+// Data_Date_Component_Sunday
+$GLOBALS['Data_Date_Component_Sunday'] = ($GLOBALS['__phpurs_data0_Sunday'] ??= new Phpurs_Data0("Sunday"));
+
+// Data_Date_Component_January
+$GLOBALS['Data_Date_Component_January'] = ($GLOBALS['__phpurs_data0_January'] ??= new Phpurs_Data0("January"));
+
+// Data_Date_Component_February
+$GLOBALS['Data_Date_Component_February'] = ($GLOBALS['__phpurs_data0_February'] ??= new Phpurs_Data0("February"));
+
+// Data_Date_Component_March
+$GLOBALS['Data_Date_Component_March'] = ($GLOBALS['__phpurs_data0_March'] ??= new Phpurs_Data0("March"));
+
+// Data_Date_Component_April
+$GLOBALS['Data_Date_Component_April'] = ($GLOBALS['__phpurs_data0_April'] ??= new Phpurs_Data0("April"));
+
+// Data_Date_Component_May
+$GLOBALS['Data_Date_Component_May'] = ($GLOBALS['__phpurs_data0_May'] ??= new Phpurs_Data0("May"));
+
+// Data_Date_Component_June
+$GLOBALS['Data_Date_Component_June'] = ($GLOBALS['__phpurs_data0_June'] ??= new Phpurs_Data0("June"));
+
+// Data_Date_Component_July
+$GLOBALS['Data_Date_Component_July'] = ($GLOBALS['__phpurs_data0_July'] ??= new Phpurs_Data0("July"));
+
+// Data_Date_Component_August
+$GLOBALS['Data_Date_Component_August'] = ($GLOBALS['__phpurs_data0_August'] ??= new Phpurs_Data0("August"));
+
+// Data_Date_Component_September
+$GLOBALS['Data_Date_Component_September'] = ($GLOBALS['__phpurs_data0_September'] ??= new Phpurs_Data0("September"));
+
+// Data_Date_Component_October
+$GLOBALS['Data_Date_Component_October'] = ($GLOBALS['__phpurs_data0_October'] ??= new Phpurs_Data0("October"));
+
+// Data_Date_Component_November
+$GLOBALS['Data_Date_Component_November'] = ($GLOBALS['__phpurs_data0_November'] ??= new Phpurs_Data0("November"));
+
+// Data_Date_Component_December
+$GLOBALS['Data_Date_Component_December'] = ($GLOBALS['__phpurs_data0_December'] ??= new Phpurs_Data0("December"));
+
+// Data_Date_Component_showYear
+$GLOBALS['Data_Date_Component_showYear'] = ["show" => function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = (("(Year " . (($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))($v_0)) . ")");
+  $__res = (("(Year " . ($GLOBALS['Data_Show_showIntImpl'])($v_0)) . ")");
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Date_Component_showWeekday'] = function() { $v = ["show" => function($v_0 = null) {
+}];
+
+// Data_Date_Component_showWeekday
+$GLOBALS['Data_Date_Component_showWeekday'] = ["show" => function($v_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object($v_0) && (($v_0)->{'tag'} === "Monday"))) {
@@ -169,8 +214,10 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Date_Component_showMonth'] = function() { $v = ["show" => function($v_0 = null) {
+}];
+
+// Data_Date_Component_showMonth
+$GLOBALS['Data_Date_Component_showMonth'] = ["show" => function($v_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object($v_0) && (($v_0)->{'tag'} === "January"))) {
@@ -228,18 +275,28 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Date_Component_showDay'] = function() { $v = ["show" => function($v_0 = null) {
+}];
+
+// Data_Date_Component_showDay
+$GLOBALS['Data_Date_Component_showDay'] = ["show" => function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = (("(Day " . (($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))($v_0)) . ")");
+  $__res = (("(Day " . ($GLOBALS['Data_Show_showIntImpl'])($v_0)) . ")");
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Date_Component_ordYear'] = function() { $v = ($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')); return $v; };
-\PhpursThunks::$thunks['Data_Date_Component_ordDay'] = function() { $v = ($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')); return $v; };
-\PhpursThunks::$thunks['Data_Date_Component_eqYear'] = function() { $v = ($GLOBALS['Data_Eq_eqInt'] ?? \PhpursThunks::eval('Data_Eq_eqInt')); return $v; };
-\PhpursThunks::$thunks['Data_Date_Component_eqWeekday'] = function() { $v = ["eq" => (function() {
+}];
+
+// Data_Date_Component_ordYear
+$GLOBALS['Data_Date_Component_ordYear'] = $GLOBALS['Data_Ord_ordInt'];
+
+// Data_Date_Component_ordDay
+$GLOBALS['Data_Date_Component_ordDay'] = $GLOBALS['Data_Ord_ordInt'];
+
+// Data_Date_Component_eqYear
+$GLOBALS['Data_Date_Component_eqYear'] = $GLOBALS['Data_Eq_eqInt'];
+
+// Data_Date_Component_eqWeekday
+$GLOBALS['Data_Date_Component_eqWeekday'] = ["eq" => (function() {
   $__fn = function($x_0 = null, $y_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -278,8 +335,10 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Date_Component_ordWeekday'] = function() { $v = ["compare" => (function() {
+})()];
+
+// Data_Date_Component_ordWeekday
+$GLOBALS['Data_Date_Component_ordWeekday'] = ["compare" => (function() {
   $__fn = function($x_0 = null, $y_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -391,12 +450,14 @@ goto end_branch_0;;
   return $__fn;
 })(), "Eq0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Date_Component_eqWeekday'] ?? \PhpursThunks::eval('Data_Date_Component_eqWeekday'));
+  $__res = $GLOBALS['Data_Date_Component_eqWeekday'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Date_Component_eqMonth'] = function() { $v = ["eq" => (function() {
+}];
+
+// Data_Date_Component_eqMonth
+$GLOBALS['Data_Date_Component_eqMonth'] = ["eq" => (function() {
   $__fn = function($x_0 = null, $y_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -455,8 +516,10 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Date_Component_ordMonth'] = function() { $v = ["compare" => (function() {
+})()];
+
+// Data_Date_Component_ordMonth
+$GLOBALS['Data_Date_Component_ordMonth'] = ["compare" => (function() {
   $__fn = function($x_0 = null, $y_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -643,34 +706,44 @@ goto end_branch_0;;
   return $__fn;
 })(), "Eq0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Date_Component_eqMonth'] ?? \PhpursThunks::eval('Data_Date_Component_eqMonth'));
+  $__res = $GLOBALS['Data_Date_Component_eqMonth'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Date_Component_eqDay'] = function() { $v = ($GLOBALS['Data_Eq_eqInt'] ?? \PhpursThunks::eval('Data_Eq_eqInt')); return $v; };
-\PhpursThunks::$thunks['Data_Date_Component_boundedYear'] = function() { $v = ["bottom" => -271820, "top" => 275759, "Ord0" => function($dollar__unused_0 = null) {
+}];
+
+// Data_Date_Component_eqDay
+$GLOBALS['Data_Date_Component_eqDay'] = $GLOBALS['Data_Eq_eqInt'];
+
+// Data_Date_Component_boundedYear
+$GLOBALS['Data_Date_Component_boundedYear'] = ["bottom" => -271820, "top" => 275759, "Ord0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt'));
+  $__res = $GLOBALS['Data_Ord_ordInt'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Date_Component_boundedWeekday'] = function() { $v = ["bottom" => new Phpurs_Data0("Monday"), "top" => new Phpurs_Data0("Sunday"), "Ord0" => function($dollar__unused_0 = null) {
+}];
+
+// Data_Date_Component_boundedWeekday
+$GLOBALS['Data_Date_Component_boundedWeekday'] = ["bottom" => new Phpurs_Data0("Monday"), "top" => new Phpurs_Data0("Sunday"), "Ord0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Date_Component_ordWeekday'] ?? \PhpursThunks::eval('Data_Date_Component_ordWeekday'));
+  $__res = $GLOBALS['Data_Date_Component_ordWeekday'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Date_Component_boundedMonth'] = function() { $v = ["bottom" => new Phpurs_Data0("January"), "top" => new Phpurs_Data0("December"), "Ord0" => function($dollar__unused_0 = null) {
+}];
+
+// Data_Date_Component_boundedMonth
+$GLOBALS['Data_Date_Component_boundedMonth'] = ["bottom" => new Phpurs_Data0("January"), "top" => new Phpurs_Data0("December"), "Ord0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Date_Component_ordMonth'] ?? \PhpursThunks::eval('Data_Date_Component_ordMonth'));
+  $__res = $GLOBALS['Data_Date_Component_ordMonth'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Date_Component_boundedEnumYear'] = function() { $v = ["cardinality" => 547580, "toEnum" => function($n_0 = null) {
+}];
+
+// Data_Date_Component_boundedEnumYear
+$GLOBALS['Data_Date_Component_boundedEnumYear'] = ["cardinality" => 547580, "toEnum" => function($n_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((($n_0 >= -271820) && ($n_0 <= 275759))) {
@@ -691,105 +764,43 @@ goto end_branch_0;;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bounded0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Date_Component_boundedYear'] ?? \PhpursThunks::eval('Data_Date_Component_boundedYear'));
+  $__res = $GLOBALS['Data_Date_Component_boundedYear'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Enum1" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Date_Component_enumYear'] ?? \PhpursThunks::eval('Data_Date_Component_enumYear'));
+  $__res = $GLOBALS['Data_Date_Component_enumYear'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Date_Component_enumYear'] = function() { $v = ["succ" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Data_Date_Component_boundedEnumYear'] ?? \PhpursThunks::eval('Data_Date_Component_boundedEnumYear')))['toEnum']))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(function($v_0 = null) {
+}];
+
+// Data_Date_Component_enumYear
+$GLOBALS['Data_Date_Component_enumYear'] = ["succ" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Date_Component_boundedEnumYear'])['toEnum']))((($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v_0 = null) {
   $__num = \func_num_args();
   $__res = ($v_0 + 1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))((($GLOBALS['Data_Date_Component_boundedEnumYear'] ?? \PhpursThunks::eval('Data_Date_Component_boundedEnumYear')))['fromEnum'])), "pred" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Data_Date_Component_boundedEnumYear'] ?? \PhpursThunks::eval('Data_Date_Component_boundedEnumYear')))['toEnum']))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(function($v_0 = null) {
+}))(($GLOBALS['Data_Date_Component_boundedEnumYear'])['fromEnum'])), "pred" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Date_Component_boundedEnumYear'])['toEnum']))((($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v_0 = null) {
   $__num = \func_num_args();
   $__res = ($v_0 - 1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))((($GLOBALS['Data_Date_Component_boundedEnumYear'] ?? \PhpursThunks::eval('Data_Date_Component_boundedEnumYear')))['fromEnum'])), "Ord0" => function($dollar__unused_0 = null) {
+}))(($GLOBALS['Data_Date_Component_boundedEnumYear'])['fromEnum'])), "Ord0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt'));
+  $__res = $GLOBALS['Data_Ord_ordInt'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Date_Component_boundedEnumWeekday'] = function() { $v = ["cardinality" => 7, "toEnum" => function($v_0 = null) {
+}];
+
+// Data_Date_Component_boundedEnumWeekday
+$GLOBALS['Data_Date_Component_boundedEnumWeekday'] = ["cardinality" => 7, "toEnum" => function($v_0 = null) {
   $__num = \func_num_args();
-  $__t0 = null;;
-  switch ($v_0) {
-case 1:
-$__t0 = new Phpurs_Data1("Just", new Phpurs_Data0("Monday"));
-goto end_branch_0;;
-break;
-default:
-;
-break;
-};
-  switch ($v_0) {
-case 2:
-$__t0 = new Phpurs_Data1("Just", new Phpurs_Data0("Tuesday"));
-goto end_branch_0;;
-break;
-default:
-;
-break;
-};
-  switch ($v_0) {
-case 3:
-$__t0 = new Phpurs_Data1("Just", new Phpurs_Data0("Wednesday"));
-goto end_branch_0;;
-break;
-default:
-;
-break;
-};
-  switch ($v_0) {
-case 4:
-$__t0 = new Phpurs_Data1("Just", new Phpurs_Data0("Thursday"));
-goto end_branch_0;;
-break;
-default:
-;
-break;
-};
-  switch ($v_0) {
-case 5:
-$__t0 = new Phpurs_Data1("Just", new Phpurs_Data0("Friday"));
-goto end_branch_0;;
-break;
-default:
-;
-break;
-};
-  switch ($v_0) {
-case 6:
-$__t0 = new Phpurs_Data1("Just", new Phpurs_Data0("Saturday"));
-goto end_branch_0;;
-break;
-default:
-;
-break;
-};
-  switch ($v_0) {
-case 7:
-$__t0 = new Phpurs_Data1("Just", new Phpurs_Data0("Sunday"));
-goto end_branch_0;;
-break;
-default:
-;
-break;
-};
-  $__t0 = new Phpurs_Data0("Nothing");
-  end_branch_0:;
-  $__res = $__t0;
+  $__res = match ($v_0) { 1 => new Phpurs_Data1("Just", new Phpurs_Data0("Monday")), 2 => new Phpurs_Data1("Just", new Phpurs_Data0("Tuesday")), 3 => new Phpurs_Data1("Just", new Phpurs_Data0("Wednesday")), 4 => new Phpurs_Data1("Just", new Phpurs_Data0("Thursday")), 5 => new Phpurs_Data1("Just", new Phpurs_Data0("Friday")), 6 => new Phpurs_Data1("Just", new Phpurs_Data0("Saturday")), 7 => new Phpurs_Data1("Just", new Phpurs_Data0("Sunday")), default => new Phpurs_Data0("Nothing") };
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -833,150 +844,43 @@ goto end_branch_1;;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bounded0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Date_Component_boundedWeekday'] ?? \PhpursThunks::eval('Data_Date_Component_boundedWeekday'));
+  $__res = $GLOBALS['Data_Date_Component_boundedWeekday'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Enum1" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Date_Component_enumWeekday'] ?? \PhpursThunks::eval('Data_Date_Component_enumWeekday'));
+  $__res = $GLOBALS['Data_Date_Component_enumWeekday'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Date_Component_enumWeekday'] = function() { $v = ["succ" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Data_Date_Component_boundedEnumWeekday'] ?? \PhpursThunks::eval('Data_Date_Component_boundedEnumWeekday')))['toEnum']))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(function($v_0 = null) {
+}];
+
+// Data_Date_Component_enumWeekday
+$GLOBALS['Data_Date_Component_enumWeekday'] = ["succ" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Date_Component_boundedEnumWeekday'])['toEnum']))((($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v_0 = null) {
   $__num = \func_num_args();
   $__res = ($v_0 + 1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))((($GLOBALS['Data_Date_Component_boundedEnumWeekday'] ?? \PhpursThunks::eval('Data_Date_Component_boundedEnumWeekday')))['fromEnum'])), "pred" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Data_Date_Component_boundedEnumWeekday'] ?? \PhpursThunks::eval('Data_Date_Component_boundedEnumWeekday')))['toEnum']))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(function($v_0 = null) {
+}))(($GLOBALS['Data_Date_Component_boundedEnumWeekday'])['fromEnum'])), "pred" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Date_Component_boundedEnumWeekday'])['toEnum']))((($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v_0 = null) {
   $__num = \func_num_args();
   $__res = ($v_0 - 1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))((($GLOBALS['Data_Date_Component_boundedEnumWeekday'] ?? \PhpursThunks::eval('Data_Date_Component_boundedEnumWeekday')))['fromEnum'])), "Ord0" => function($dollar__unused_0 = null) {
+}))(($GLOBALS['Data_Date_Component_boundedEnumWeekday'])['fromEnum'])), "Ord0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Date_Component_ordWeekday'] ?? \PhpursThunks::eval('Data_Date_Component_ordWeekday'));
+  $__res = $GLOBALS['Data_Date_Component_ordWeekday'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Date_Component_boundedEnumMonth'] = function() { $v = ["cardinality" => 12, "toEnum" => function($v_0 = null) {
+}];
+
+// Data_Date_Component_boundedEnumMonth
+$GLOBALS['Data_Date_Component_boundedEnumMonth'] = ["cardinality" => 12, "toEnum" => function($v_0 = null) {
   $__num = \func_num_args();
-  $__t0 = null;;
-  switch ($v_0) {
-case 1:
-$__t0 = new Phpurs_Data1("Just", new Phpurs_Data0("January"));
-goto end_branch_0;;
-break;
-default:
-;
-break;
-};
-  switch ($v_0) {
-case 2:
-$__t0 = new Phpurs_Data1("Just", new Phpurs_Data0("February"));
-goto end_branch_0;;
-break;
-default:
-;
-break;
-};
-  switch ($v_0) {
-case 3:
-$__t0 = new Phpurs_Data1("Just", new Phpurs_Data0("March"));
-goto end_branch_0;;
-break;
-default:
-;
-break;
-};
-  switch ($v_0) {
-case 4:
-$__t0 = new Phpurs_Data1("Just", new Phpurs_Data0("April"));
-goto end_branch_0;;
-break;
-default:
-;
-break;
-};
-  switch ($v_0) {
-case 5:
-$__t0 = new Phpurs_Data1("Just", new Phpurs_Data0("May"));
-goto end_branch_0;;
-break;
-default:
-;
-break;
-};
-  switch ($v_0) {
-case 6:
-$__t0 = new Phpurs_Data1("Just", new Phpurs_Data0("June"));
-goto end_branch_0;;
-break;
-default:
-;
-break;
-};
-  switch ($v_0) {
-case 7:
-$__t0 = new Phpurs_Data1("Just", new Phpurs_Data0("July"));
-goto end_branch_0;;
-break;
-default:
-;
-break;
-};
-  switch ($v_0) {
-case 8:
-$__t0 = new Phpurs_Data1("Just", new Phpurs_Data0("August"));
-goto end_branch_0;;
-break;
-default:
-;
-break;
-};
-  switch ($v_0) {
-case 9:
-$__t0 = new Phpurs_Data1("Just", new Phpurs_Data0("September"));
-goto end_branch_0;;
-break;
-default:
-;
-break;
-};
-  switch ($v_0) {
-case 10:
-$__t0 = new Phpurs_Data1("Just", new Phpurs_Data0("October"));
-goto end_branch_0;;
-break;
-default:
-;
-break;
-};
-  switch ($v_0) {
-case 11:
-$__t0 = new Phpurs_Data1("Just", new Phpurs_Data0("November"));
-goto end_branch_0;;
-break;
-default:
-;
-break;
-};
-  switch ($v_0) {
-case 12:
-$__t0 = new Phpurs_Data1("Just", new Phpurs_Data0("December"));
-goto end_branch_0;;
-break;
-default:
-;
-break;
-};
-  $__t0 = new Phpurs_Data0("Nothing");
-  end_branch_0:;
-  $__res = $__t0;
+  $__res = match ($v_0) { 1 => new Phpurs_Data1("Just", new Phpurs_Data0("January")), 2 => new Phpurs_Data1("Just", new Phpurs_Data0("February")), 3 => new Phpurs_Data1("Just", new Phpurs_Data0("March")), 4 => new Phpurs_Data1("Just", new Phpurs_Data0("April")), 5 => new Phpurs_Data1("Just", new Phpurs_Data0("May")), 6 => new Phpurs_Data1("Just", new Phpurs_Data0("June")), 7 => new Phpurs_Data1("Just", new Phpurs_Data0("July")), 8 => new Phpurs_Data1("Just", new Phpurs_Data0("August")), 9 => new Phpurs_Data1("Just", new Phpurs_Data0("September")), 10 => new Phpurs_Data1("Just", new Phpurs_Data0("October")), 11 => new Phpurs_Data1("Just", new Phpurs_Data0("November")), 12 => new Phpurs_Data1("Just", new Phpurs_Data0("December")), default => new Phpurs_Data0("Nothing") };
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1040,44 +944,50 @@ goto end_branch_1;;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bounded0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Date_Component_boundedMonth'] ?? \PhpursThunks::eval('Data_Date_Component_boundedMonth'));
+  $__res = $GLOBALS['Data_Date_Component_boundedMonth'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Enum1" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Date_Component_enumMonth'] ?? \PhpursThunks::eval('Data_Date_Component_enumMonth'));
+  $__res = $GLOBALS['Data_Date_Component_enumMonth'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Date_Component_enumMonth'] = function() { $v = ["succ" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Data_Date_Component_boundedEnumMonth'] ?? \PhpursThunks::eval('Data_Date_Component_boundedEnumMonth')))['toEnum']))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(function($v_0 = null) {
+}];
+
+// Data_Date_Component_enumMonth
+$GLOBALS['Data_Date_Component_enumMonth'] = ["succ" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Date_Component_boundedEnumMonth'])['toEnum']))((($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v_0 = null) {
   $__num = \func_num_args();
   $__res = ($v_0 + 1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))((($GLOBALS['Data_Date_Component_boundedEnumMonth'] ?? \PhpursThunks::eval('Data_Date_Component_boundedEnumMonth')))['fromEnum'])), "pred" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Data_Date_Component_boundedEnumMonth'] ?? \PhpursThunks::eval('Data_Date_Component_boundedEnumMonth')))['toEnum']))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(function($v_0 = null) {
+}))(($GLOBALS['Data_Date_Component_boundedEnumMonth'])['fromEnum'])), "pred" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Date_Component_boundedEnumMonth'])['toEnum']))((($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v_0 = null) {
   $__num = \func_num_args();
   $__res = ($v_0 - 1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))((($GLOBALS['Data_Date_Component_boundedEnumMonth'] ?? \PhpursThunks::eval('Data_Date_Component_boundedEnumMonth')))['fromEnum'])), "Ord0" => function($dollar__unused_0 = null) {
+}))(($GLOBALS['Data_Date_Component_boundedEnumMonth'])['fromEnum'])), "Ord0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Date_Component_ordMonth'] ?? \PhpursThunks::eval('Data_Date_Component_ordMonth'));
+  $__res = $GLOBALS['Data_Date_Component_ordMonth'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Date_Component_boundedDay'] = function() { $v = ["bottom" => 1, "top" => 31, "Ord0" => function($dollar__unused_0 = null) {
+}];
+
+// Data_Date_Component_boundedDay
+$GLOBALS['Data_Date_Component_boundedDay'] = ["bottom" => 1, "top" => 31, "Ord0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt'));
+  $__res = $GLOBALS['Data_Ord_ordInt'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Date_Component_boundedEnumDay'] = function() { $v = ["cardinality" => 31, "toEnum" => function($n_0 = null) {
+}];
+
+// Data_Date_Component_boundedEnumDay
+$GLOBALS['Data_Date_Component_boundedEnumDay'] = ["cardinality" => 31, "toEnum" => function($n_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((($n_0 >= 1) && ($n_0 <= 31))) {
@@ -1098,79 +1008,36 @@ goto end_branch_0;;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bounded0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Date_Component_boundedDay'] ?? \PhpursThunks::eval('Data_Date_Component_boundedDay'));
+  $__res = $GLOBALS['Data_Date_Component_boundedDay'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Enum1" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Date_Component_enumDay'] ?? \PhpursThunks::eval('Data_Date_Component_enumDay'));
+  $__res = $GLOBALS['Data_Date_Component_enumDay'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Date_Component_enumDay'] = function() { $v = ["succ" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Data_Date_Component_boundedEnumDay'] ?? \PhpursThunks::eval('Data_Date_Component_boundedEnumDay')))['toEnum']))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(function($v_0 = null) {
+}];
+
+// Data_Date_Component_enumDay
+$GLOBALS['Data_Date_Component_enumDay'] = ["succ" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Date_Component_boundedEnumDay'])['toEnum']))((($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v_0 = null) {
   $__num = \func_num_args();
   $__res = ($v_0 + 1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))((($GLOBALS['Data_Date_Component_boundedEnumDay'] ?? \PhpursThunks::eval('Data_Date_Component_boundedEnumDay')))['fromEnum'])), "pred" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Data_Date_Component_boundedEnumDay'] ?? \PhpursThunks::eval('Data_Date_Component_boundedEnumDay')))['toEnum']))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(function($v_0 = null) {
+}))(($GLOBALS['Data_Date_Component_boundedEnumDay'])['fromEnum'])), "pred" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Date_Component_boundedEnumDay'])['toEnum']))((($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v_0 = null) {
   $__num = \func_num_args();
   $__res = ($v_0 - 1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))((($GLOBALS['Data_Date_Component_boundedEnumDay'] ?? \PhpursThunks::eval('Data_Date_Component_boundedEnumDay')))['fromEnum'])), "Ord0" => function($dollar__unused_0 = null) {
+}))(($GLOBALS['Data_Date_Component_boundedEnumDay'])['fromEnum'])), "Ord0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt'));
+  $__res = $GLOBALS['Data_Ord_ordInt'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}];
 

@@ -104,7 +104,7 @@ $exports['unsafeCoerce'] = $unsafeCoerce;
 return $exports;
   return $exports;
 });
-\PhpursThunks::$thunks['Unsafe_Coerce_unsafeCoerce'] = function() use (&$ffi_Unsafe_Coerce) { return $ffi_Unsafe_Coerce['unsafeCoerce']; };
+$GLOBALS['Unsafe_Coerce_unsafeCoerce'] = $ffi_Unsafe_Coerce['unsafeCoerce'] ?? new class { public function __invoke(...$args) { return $this; } };
 
 
 

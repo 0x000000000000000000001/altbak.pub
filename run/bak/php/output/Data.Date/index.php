@@ -116,7 +116,75 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Date_fromJust'] = function() { $v = function($v_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+$ffi_Data_Date = \call_user_func(function() {
+  $exports = [];
+$createDate = function($y, $m, $d) {
+    $dt = new \DateTime('now', new \DateTimeZone('UTC'));
+    $dt->setDate($y, $m + 1, $d);
+    $dt->setTime(0, 0, 0, 0);
+    return $dt;
+};
+
+$canonicalDateImpl = function($ctor, $y = null, $m = null, $d = null) use (&$canonicalDateImpl, $createDate) {
+    if (\func_num_args() < 4) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$canonicalDateImpl) {
+
+            return $canonicalDateImpl(...\array_merge($__args, $more));
+        };
+    }
+
+    $date = $createDate($y, $m - 1, $d);
+    return $ctor
+        ((int)$date->format('Y'))
+        ((int)$date->format('n'))
+        ((int)$date->format('j'));
+};
+
+$calcWeekday = function($y, $m = null, $d = null) use (&$calcWeekday, $createDate) {
+    if (\func_num_args() < 3) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$calcWeekday) {
+
+            return $calcWeekday(...\array_merge($__args, $more));
+        };
+    }
+
+    $date = $createDate($y, $m - 1, $d);
+    return (int)$date->format('w'); // 0 (for Sunday) through 6 (for Saturday)
+};
+
+$calcDiff = function($y1, $m1 = null, $d1 = null, $y2 = null, $m2 = null, $d2 = null) use (&$calcDiff, $createDate) {
+    if (\func_num_args() < 6) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$calcDiff) {
+
+            return $calcDiff(...\array_merge($__args, $more));
+        };
+    }
+
+    $dt1 = $createDate($y1, $m1 - 1, $d1);
+    $dt2 = $createDate($y2, $m2 - 1, $d2);
+    // returns diff in milliseconds
+    return ($dt1->getTimestamp() - $dt2->getTimestamp()) * 1000;
+};
+
+$exports['createDate'] = $createDate;
+$exports['canonicalDateImpl'] = $canonicalDateImpl;
+$exports['calcWeekday'] = $calcWeekday;
+$exports['calcDiff'] = $calcDiff;
+return $exports;
+  return $exports;
+});
+$GLOBALS['Data_Date_calcDiff'] = $ffi_Data_Date['calcDiff'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Date_calcWeekday'] = $ffi_Data_Date['calcWeekday'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Date_canonicalDateImpl'] = $ffi_Data_Date['canonicalDateImpl'] ?? new class { public function __invoke(...$args) { return $this; } };
+
+
+// Data_Date_fromJust
+$GLOBALS['Data_Date_fromJust'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object($v_0) && (($v_0)->{'tag'} === "Just"))) {
@@ -130,9 +198,11 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Date_greaterThan'] = function() { $v = (function() use (&$__fn) {
-$__local_var_0_0 = (($GLOBALS['Data_Maybe_ordMaybe'] ?? \PhpursThunks::eval('Data_Maybe_ordMaybe')))(($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')));
+};
+
+// Data_Date_greaterThan
+$GLOBALS['Data_Date_greaterThan'] = (function() use (&$__fn) {
+$__local_var_0_0 = ($GLOBALS['Data_Maybe_ordMaybe'])($GLOBALS['Data_Ord_ordInt']);
 return (function() use ($__local_var_0_0) {
   $__fn = function($a1_1 = null, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
   $__num = \func_num_args();
@@ -146,8 +216,10 @@ return (function() use ($__local_var_0_0) {
   };
   return $__fn;
 })();
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Date_Date'] = function() { $v = (function() {
+})();
+
+// Data_Date_Date
+$GLOBALS['Data_Date_Date'] = (function() {
   $__fn = function($value0 = null, $value1 = null, $value2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -159,15 +231,19 @@ return (function() use ($__local_var_0_0) {
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Date_year'] = function() { $v = function($v_0 = null) {
+})();
+
+// Data_Date_year
+$GLOBALS['Data_Date_year'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__res = ($v_0)->{'value0'};
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Date_weekday'] = function() { $v = function($v_0 = null) {
+};
+
+// Data_Date_weekday
+$GLOBALS['Data_Date_weekday'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object(($v_0)->{'value1'}) && ((($v_0)->{'value1'})->{'tag'} === "January"))) {
@@ -221,7 +297,7 @@ goto end_branch_0;;
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
   $__t0 = null;
   end_branch_0:;
-  $n_1_0 = (($GLOBALS['Data_Date_calcWeekday'] ?? \PhpursThunks::eval('Data_Date_calcWeekday')))(($v_0)->{'value0'}, $__t0, ($v_0)->{'value2'});
+  $n_1_0 = ($GLOBALS['Data_Date_calcWeekday'])(($v_0)->{'value0'}, $__t0, ($v_0)->{'value2'});
   $__t2 = null;;
   switch ($n_1_0) {
 case 0:
@@ -302,8 +378,10 @@ break;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Date_showDate'] = function() { $v = ["show" => function($v_0 = null) {
+};
+
+// Data_Date_showDate
+$GLOBALS['Data_Date_showDate'] = ["show" => function($v_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object(($v_0)->{'value1'}) && ((($v_0)->{'value1'})->{'tag'} === "January"))) {
@@ -357,32 +435,38 @@ goto end_branch_0;;
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
   $__t0 = null;
   end_branch_0:;
-  $__res = (((((("(Date (Year " . (($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))(($v_0)->{'value0'})) . ") ") . $__t0) . " (Day ") . (($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))(($v_0)->{'value2'})) . "))");
+  $__res = (((((("(Date (Year " . ($GLOBALS['Data_Show_showIntImpl'])(($v_0)->{'value0'})) . ") ") . $__t0) . " (Day ") . ($GLOBALS['Data_Show_showIntImpl'])(($v_0)->{'value2'})) . "))");
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Date_month'] = function() { $v = function($v_0 = null) {
+}];
+
+// Data_Date_month
+$GLOBALS['Data_Date_month'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__res = ($v_0)->{'value1'};
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Date_isLeapYear'] = function() { $v = function($y_0 = null) {
+};
+
+// Data_Date_isLeapYear
+$GLOBALS['Data_Date_isLeapYear'] = function($y_0 = null) {
   $__num = \func_num_args();
-  $__res = ((((($GLOBALS['Data_EuclideanRing_intMod'] ?? \PhpursThunks::eval('Data_EuclideanRing_intMod')))($y_0))(4) === 0) && ((((($GLOBALS['Data_EuclideanRing_intMod'] ?? \PhpursThunks::eval('Data_EuclideanRing_intMod')))($y_0))(400) === 0) || (((($GLOBALS['Data_EuclideanRing_intMod'] ?? \PhpursThunks::eval('Data_EuclideanRing_intMod')))($y_0))(100) !== 0)));
+  $__res = (((($GLOBALS['Data_EuclideanRing_intMod'])($y_0))(4) === 0) && (((($GLOBALS['Data_EuclideanRing_intMod'])($y_0))(400) === 0) || ((($GLOBALS['Data_EuclideanRing_intMod'])($y_0))(100) !== 0)));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Date_lastDayOfMonth'] = function() { $v = (function() {
+};
+
+// Data_Date_lastDayOfMonth
+$GLOBALS['Data_Date_lastDayOfMonth'] = (function() {
   $__fn = function($y_0 = null, $m_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $unsafeDay_2_0 = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Date_fromJust'] ?? \PhpursThunks::eval('Data_Date_fromJust'))))((($GLOBALS['Data_Date_Component_boundedEnumDay'] ?? \PhpursThunks::eval('Data_Date_Component_boundedEnumDay')))['toEnum']);
+  $unsafeDay_2_0 = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Date_fromJust']))(($GLOBALS['Data_Date_Component_boundedEnumDay'])['toEnum']);
   $__t1 = null;;
   if ((is_object($m_1) && (($m_1)->{'tag'} === "January"))) {
 $__t1 = ($unsafeDay_2_0)(31);
@@ -390,7 +474,7 @@ goto end_branch_1;;
 };
   if ((is_object($m_1) && (($m_1)->{'tag'} === "February"))) {
 $__t2 = null;;
-if ((($GLOBALS['Data_Date_isLeapYear'] ?? \PhpursThunks::eval('Data_Date_isLeapYear')))($y_0)) {
+if (($GLOBALS['Data_Date_isLeapYear'])($y_0)) {
 $__t2 = ($unsafeDay_2_0)(29);
 goto end_branch_2;;
 };
@@ -448,8 +532,10 @@ goto end_branch_1;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Date_eqDate'] = function() { $v = ["eq" => (function() {
+})();
+
+// Data_Date_eqDate
+$GLOBALS['Data_Date_eqDate'] = ["eq" => (function() {
   $__fn = function($x_0 = null, $y_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -508,14 +594,16 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Date_ordDate'] = function() { $v = ["compare" => (function() {
+})()];
+
+// Data_Date_ordDate
+$GLOBALS['Data_Date_ordDate'] = ["compare" => (function() {
   $__fn = function($x_0 = null, $y_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $v_2_0 = (((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))['compare'])(($x_0)->{'value0'}))(($y_1)->{'value0'});
+  $v_2_0 = ((($GLOBALS['Data_Ord_ordInt'])['compare'])(($x_0)->{'value0'}))(($y_1)->{'value0'});
   $__t3 = null;;
   if ((is_object($v_2_0) && (($v_2_0)->{'tag'} === "LT"))) {
 $__t3 = new Phpurs_Data0("LT");
@@ -525,7 +613,7 @@ goto end_branch_3;;
 $__t3 = new Phpurs_Data0("GT");
 goto end_branch_3;;
 };
-  $v1_3_1 = (((($GLOBALS['Data_Date_Component_ordMonth'] ?? \PhpursThunks::eval('Data_Date_Component_ordMonth')))['compare'])(($x_0)->{'value1'}))(($y_1)->{'value1'});
+  $v1_3_1 = ((($GLOBALS['Data_Date_Component_ordMonth'])['compare'])(($x_0)->{'value1'}))(($y_1)->{'value1'});
   $__t2 = null;;
   if ((is_object($v1_3_1) && (($v1_3_1)->{'tag'} === "LT"))) {
 $__t2 = new Phpurs_Data0("LT");
@@ -535,7 +623,7 @@ goto end_branch_2;;
 $__t2 = new Phpurs_Data0("GT");
 goto end_branch_2;;
 };
-  $__t2 = (((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))['compare'])(($x_0)->{'value2'}))(($y_1)->{'value2'});
+  $__t2 = ((($GLOBALS['Data_Ord_ordInt'])['compare'])(($x_0)->{'value2'}))(($y_1)->{'value2'});
   end_branch_2:;
   $__t3 = $__t2;
   end_branch_3:;
@@ -547,17 +635,19 @@ goto end_branch_2;;
   return $__fn;
 })(), "Eq0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Date_eqDate'] ?? \PhpursThunks::eval('Data_Date_eqDate'));
+  $__res = $GLOBALS['Data_Date_eqDate'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Date_enumDate'] = function() { $v = ["succ" => function($v_0 = null) {
+}];
+
+// Data_Date_enumDate
+$GLOBALS['Data_Date_enumDate'] = ["succ" => function($v_0 = null) {
   $__num = \func_num_args();
-  $sm_1_0 = ((($GLOBALS['Data_Date_Component_enumMonth'] ?? \PhpursThunks::eval('Data_Date_Component_enumMonth')))['succ'])(($v_0)->{'value1'});
-  $v1_2_1 = ((($GLOBALS['Data_Date_Component_enumDay'] ?? \PhpursThunks::eval('Data_Date_Component_enumDay')))['succ'])(($v_0)->{'value2'});
+  $sm_1_0 = (($GLOBALS['Data_Date_Component_enumMonth'])['succ'])(($v_0)->{'value1'});
+  $v1_2_1 = (($GLOBALS['Data_Date_Component_enumDay'])['succ'])(($v_0)->{'value2'});
   $__t13 = null;;
-  if (((($GLOBALS['Data_Date_greaterThan'] ?? \PhpursThunks::eval('Data_Date_greaterThan')))($v1_2_1))(new Phpurs_Data1("Just", ((($GLOBALS['Data_Date_lastDayOfMonth'] ?? \PhpursThunks::eval('Data_Date_lastDayOfMonth')))(($v_0)->{'value0'}))(($v_0)->{'value1'})))) {
+  if ((($GLOBALS['Data_Date_greaterThan'])($v1_2_1))(new Phpurs_Data1("Just", (($GLOBALS['Data_Date_lastDayOfMonth'])(($v_0)->{'value0'}))(($v_0)->{'value1'})))) {
 $__t14 = null;;
 if ((function() use ($sm_1_0, &$__fn) {
 $__t15 = null;;
@@ -574,7 +664,7 @@ $__t15 = null;
 end_branch_15:;
 return $__t15;
 })()) {
-$__t14 = ((($GLOBALS['Data_Date_Component_enumYear'] ?? \PhpursThunks::eval('Data_Date_Component_enumYear')))['succ'])(($v_0)->{'value0'});
+$__t14 = (($GLOBALS['Data_Date_Component_enumYear'])['succ'])(($v_0)->{'value0'});
 goto end_branch_14;;
 };
 $__t14 = new Phpurs_Data1("Just", ($v_0)->{'value0'});
@@ -630,7 +720,7 @@ $__t4 = null;
 end_branch_4:;
 return ($__t3 && $__t4);
 })()) {
-$__t2 = ((($GLOBALS['Data_Date_Component_enumYear'] ?? \PhpursThunks::eval('Data_Date_Component_enumYear')))['succ'])(($v_0)->{'value0'});
+$__t2 = (($GLOBALS['Data_Date_Component_enumYear'])['succ'])(($v_0)->{'value0'});
 goto end_branch_2;;
 };
   $__t2 = new Phpurs_Data1("Just", ($v_0)->{'value0'});
@@ -671,7 +761,7 @@ goto end_branch_7;;
 };
 $__t7 = ($v_0)->{'value1'};
 end_branch_7:;
-$__local_var_4_7 = ((($GLOBALS['Data_Date_Date'] ?? \PhpursThunks::eval('Data_Date_Date')))(($__local_var_3_2)->{'value0'}))($__t7);
+$__local_var_4_7 = (($GLOBALS['Data_Date_Date'])(($__local_var_3_2)->{'value0'}))($__t7);
 $__t11 = null;;
 if ((function() use ($v1_2_1, &$__fn) {
 $__t12 = null;;
@@ -710,8 +800,8 @@ goto end_branch_6;;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "pred" => function($v_0 = null) {
   $__num = \func_num_args();
-  $pm_1_19 = ((($GLOBALS['Data_Date_Component_enumMonth'] ?? \PhpursThunks::eval('Data_Date_Component_enumMonth')))['pred'])(($v_0)->{'value1'});
-  $pd_2_20 = ((($GLOBALS['Data_Date_Component_enumDay'] ?? \PhpursThunks::eval('Data_Date_Component_enumDay')))['pred'])(($v_0)->{'value2'});
+  $pm_1_19 = (($GLOBALS['Data_Date_Component_enumMonth'])['pred'])(($v_0)->{'value1'});
+  $pd_2_20 = (($GLOBALS['Data_Date_Component_enumDay'])['pred'])(($v_0)->{'value2'});
   $__t21 = null;;
   if ((function() use ($pd_2_20, &$__fn) {
 $__t22 = null;;
@@ -746,7 +836,7 @@ goto end_branch_21;;
   $__t21 = ($v_0)->{'value1'};
   end_branch_21:;
   $m__prime___3_21 = $__t21;
-  $l_4_25 = ((($GLOBALS['Data_Date_lastDayOfMonth'] ?? \PhpursThunks::eval('Data_Date_lastDayOfMonth')))(($v_0)->{'value0'}))($m__prime___3_21);
+  $l_4_25 = (($GLOBALS['Data_Date_lastDayOfMonth'])(($v_0)->{'value0'}))($m__prime___3_21);
   $__t26 = null;;
   if ((function() use ($pd_2_20, $pm_1_19, &$__fn) {
 $__t27 = null;;
@@ -775,7 +865,7 @@ $__t28 = null;
 end_branch_28:;
 return ($__t27 && $__t28);
 })()) {
-$__t26 = ((($GLOBALS['Data_Date_Component_enumYear'] ?? \PhpursThunks::eval('Data_Date_Component_enumYear')))['pred'])(($v_0)->{'value0'});
+$__t26 = (($GLOBALS['Data_Date_Component_enumYear'])['pred'])(($v_0)->{'value0'});
 goto end_branch_26;;
 };
   $__t26 = new Phpurs_Data1("Just", ($v_0)->{'value0'});
@@ -783,7 +873,7 @@ goto end_branch_26;;
   $__local_var_5_26 = $__t26;
   $__t30 = null;;
   if ((is_object($__local_var_5_26) && (($__local_var_5_26)->{'tag'} === "Just"))) {
-$__local_var_6_31 = ((($GLOBALS['Data_Date_Date'] ?? \PhpursThunks::eval('Data_Date_Date')))(($__local_var_5_26)->{'value0'}))($m__prime___3_21);
+$__local_var_6_31 = (($GLOBALS['Data_Date_Date'])(($__local_var_5_26)->{'value0'}))($m__prime___3_21);
 $__t32 = null;;
 if ((function() use ($pd_2_20, &$__fn) {
 $__t33 = null;;
@@ -820,12 +910,14 @@ goto end_branch_30;;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Ord0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Date_ordDate'] ?? \PhpursThunks::eval('Data_Date_ordDate'));
+  $__res = $GLOBALS['Data_Date_ordDate'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Date_diff'] = function() { $v = (function() {
+}];
+
+// Data_Date_diff
+$GLOBALS['Data_Date_diff'] = (function() {
   $__fn = function($dictDuration_0 = null, $v_1 = null, $v1_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -935,21 +1027,25 @@ goto end_branch_1;;
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
   $__t1 = null;
   end_branch_1:;
-  $__res = (($dictDuration_0)['toDuration'])((($GLOBALS['Data_Date_calcDiff'] ?? \PhpursThunks::eval('Data_Date_calcDiff')))(($v_1)->{'value0'}, $__t0, ($v_1)->{'value2'}, ($v1_2)->{'value0'}, $__t1, ($v1_2)->{'value2'}));
+  $__res = (($dictDuration_0)['toDuration'])(($GLOBALS['Data_Date_calcDiff'])(($v_1)->{'value0'}, $__t0, ($v_1)->{'value2'}, ($v1_2)->{'value0'}, $__t1, ($v1_2)->{'value2'}));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Date_day'] = function() { $v = function($v_0 = null) {
+})();
+
+// Data_Date_day
+$GLOBALS['Data_Date_day'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__res = ($v_0)->{'value2'};
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Date_canonicalDate'] = function() { $v = (function() {
+};
+
+// Data_Date_canonicalDate
+$GLOBALS['Data_Date_canonicalDate'] = (function() {
   $__fn = function($y_0 = null, $m_1 = null, $d_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -1007,7 +1103,7 @@ goto end_branch_1;;
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
   $__t1 = null;
   end_branch_1:;
-  $__res = (($GLOBALS['Data_Date_canonicalDateImpl'] ?? \PhpursThunks::eval('Data_Date_canonicalDateImpl')))((function() {
+  $__res = ($GLOBALS['Data_Date_canonicalDateImpl'])((function() {
   $__fn = function($y__prime___3 = null, $m__prime___4 = null, $d__prime___5 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -1137,15 +1233,17 @@ break;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Date_exactDate'] = function() { $v = (function() {
+})();
+
+// Data_Date_exactDate
+$GLOBALS['Data_Date_exactDate'] = (function() {
   $__fn = function($y_0 = null, $m_1 = null, $d_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   $__t0 = null;;
-  if ((((($GLOBALS['Data_Date_eqDate'] ?? \PhpursThunks::eval('Data_Date_eqDate')))['eq'])((((($GLOBALS['Data_Date_canonicalDate'] ?? \PhpursThunks::eval('Data_Date_canonicalDate')))($y_0))($m_1))($d_2)))(new Phpurs_Data3("Date", $y_0, $m_1, $d_2))) {
+  if (((($GLOBALS['Data_Date_eqDate'])['eq'])(((($GLOBALS['Data_Date_canonicalDate'])($y_0))($m_1))($d_2)))(new Phpurs_Data3("Date", $y_0, $m_1, $d_2))) {
 $__t0 = new Phpurs_Data1("Just", new Phpurs_Data3("Date", $y_0, $m_1, $d_2));
 goto end_branch_0;;
 };
@@ -1157,15 +1255,19 @@ goto end_branch_0;;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Date_boundedDate'] = function() { $v = ["bottom" => new Phpurs_Data3("Date", -271820, new Phpurs_Data0("January"), 1), "top" => new Phpurs_Data3("Date", 275759, new Phpurs_Data0("December"), 31), "Ord0" => function($dollar__unused_0 = null) {
+})();
+
+// Data_Date_boundedDate
+$GLOBALS['Data_Date_boundedDate'] = ["bottom" => new Phpurs_Data3("Date", -271820, new Phpurs_Data0("January"), 1), "top" => new Phpurs_Data3("Date", 275759, new Phpurs_Data0("December"), 31), "Ord0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Date_ordDate'] ?? \PhpursThunks::eval('Data_Date_ordDate'));
+  $__res = $GLOBALS['Data_Date_ordDate'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Date_adjust'] = function() { $v = (function() {
+}];
+
+// Data_Date_adjust
+$GLOBALS['Data_Date_adjust'] = (function() {
   $__fn = function($v_0 = null, $date_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -1192,7 +1294,7 @@ break;
   $low_6_2 = ($j_5_1 < 1);
   $__t3 = null;;
   if ($low_6_2) {
-$__local_var_7_4 = ((($GLOBALS['Data_Date_Component_enumMonth'] ?? \PhpursThunks::eval('Data_Date_Component_enumMonth')))['pred'])(($v2_4)->{'value1'});
+$__local_var_7_4 = (($GLOBALS['Data_Date_Component_enumMonth'])['pred'])(($v2_4)->{'value1'});
 $__t5 = null;;
 if ((is_object($__local_var_7_4) && (($__local_var_7_4)->{'tag'} === "Nothing"))) {
 $__t5 = new Phpurs_Data0("December");
@@ -1210,7 +1312,7 @@ goto end_branch_3;;
 };
   $__t3 = ($v2_4)->{'value1'};
   end_branch_3:;
-  $l_7_3 = ((($GLOBALS['Data_Date_lastDayOfMonth'] ?? \PhpursThunks::eval('Data_Date_lastDayOfMonth')))(($v2_4)->{'value0'}))($__t3);
+  $l_7_3 = (($GLOBALS['Data_Date_lastDayOfMonth'])(($v2_4)->{'value0'}))($__t3);
   $hi_8_7 = ($j_5_1 > $l_7_3);
   $__t8 = null;;
   if ($low_6_2) {
@@ -1226,14 +1328,14 @@ goto end_branch_8;;
   $__local_var_9_8 = ($adj_2_0)($__t8);
   $__t12 = null;;
   if ($low_6_2) {
-$__t12 = ((($GLOBALS['Data_Date_enumDate'] ?? \PhpursThunks::eval('Data_Date_enumDate')))['pred'])(new Phpurs_Data3("Date", ($v2_4)->{'value0'}, ($v2_4)->{'value1'}, 1));
+$__t12 = (($GLOBALS['Data_Date_enumDate'])['pred'])(new Phpurs_Data3("Date", ($v2_4)->{'value0'}, ($v2_4)->{'value1'}, 1));
 goto end_branch_12;;
 };
   if ($hi_8_7) {
-$__t12 = ((($GLOBALS['Data_Date_enumDate'] ?? \PhpursThunks::eval('Data_Date_enumDate')))['succ'])(new Phpurs_Data3("Date", ($v2_4)->{'value0'}, ($v2_4)->{'value1'}, $l_7_3));
+$__t12 = (($GLOBALS['Data_Date_enumDate'])['succ'])(new Phpurs_Data3("Date", ($v2_4)->{'value0'}, ($v2_4)->{'value1'}, $l_7_3));
 goto end_branch_12;;
 };
-  $__local_var_10_10 = ((($GLOBALS['Data_Date_Date'] ?? \PhpursThunks::eval('Data_Date_Date')))(($v2_4)->{'value0'}))(($v2_4)->{'value1'});
+  $__local_var_10_10 = (($GLOBALS['Data_Date_Date'])(($v2_4)->{'value0'}))(($v2_4)->{'value1'});
   $__t11 = null;;
   if ((($j_5_1 >= 1) && ($j_5_1 <= 31))) {
 $__t11 = new Phpurs_Data1("Just", ($__local_var_10_10)($j_5_1));
@@ -1265,7 +1367,7 @@ goto end_branch_14;;
   };
   return $__fn;
 })();
-  $__local_var_3_16 = (($GLOBALS['Data_Int_fromNumber'] ?? \PhpursThunks::eval('Data_Int_fromNumber')))($v_0);
+  $__local_var_3_16 = ($GLOBALS['Data_Int_fromNumber'])($v_0);
   $__t17 = null;;
   if ((is_object($__local_var_3_16) && (($__local_var_3_16)->{'tag'} === "Just"))) {
 $__t17 = (($adj_2_0)(($__local_var_3_16)->{'value0'}))($date_1);
@@ -1284,88 +1386,5 @@ goto end_branch_17;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-$ffi_Data_Date = \call_user_func(function() {
-  $exports = [];
-$createDate = function($y, $m, $d) {
-    $dt = new \DateTime('now', new \DateTimeZone('UTC'));
-    $dt->setDate($y, $m + 1, $d);
-    $dt->setTime(0, 0, 0, 0);
-    return $dt;
-};
-
-$canonicalDateImpl = function($ctor, $y = null, $m = null, $d = null) use (&$canonicalDateImpl, $createDate) {
-    if (\func_num_args() < 4) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$canonicalDateImpl) {
-
-            return $canonicalDateImpl(...\array_merge($__args, $more));
-        };
-    }
-
-    $date = $createDate($y, $m - 1, $d);
-    return $ctor
-        ((int)$date->format('Y'))
-        ((int)$date->format('n'))
-        ((int)$date->format('j'));
-};
-
-$calcWeekday = function($y, $m = null, $d = null) use (&$calcWeekday, $createDate) {
-    if (\func_num_args() < 3) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$calcWeekday) {
-
-            return $calcWeekday(...\array_merge($__args, $more));
-        };
-    }
-
-    $date = $createDate($y, $m - 1, $d);
-    return (int)$date->format('w'); // 0 (for Sunday) through 6 (for Saturday)
-};
-
-$calcDiff = function($y1, $m1 = null, $d1 = null, $y2 = null, $m2 = null, $d2 = null) use (&$calcDiff, $createDate) {
-    if (\func_num_args() < 6) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$calcDiff) {
-
-            return $calcDiff(...\array_merge($__args, $more));
-        };
-    }
-
-    $dt1 = $createDate($y1, $m1 - 1, $d1);
-    $dt2 = $createDate($y2, $m2 - 1, $d2);
-    // returns diff in milliseconds
-    return ($dt1->getTimestamp() - $dt2->getTimestamp()) * 1000;
-};
-
-$exports['createDate'] = $createDate;
-$exports['canonicalDateImpl'] = $canonicalDateImpl;
-$exports['calcWeekday'] = $calcWeekday;
-$exports['calcDiff'] = $calcDiff;
-return $exports;
-  return $exports;
-});
-\PhpursThunks::$thunks['Data_Date_calcDiff'] = function() use (&$ffi_Data_Date) { return $ffi_Data_Date['calcDiff']; };
-\PhpursThunks::$thunks['Data_Date_calcWeekday'] = function() use (&$ffi_Data_Date) { return $ffi_Data_Date['calcWeekday']; };
-\PhpursThunks::$thunks['Data_Date_canonicalDateImpl'] = function() use (&$ffi_Data_Date) { return $ffi_Data_Date['canonicalDateImpl']; };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+})();
 

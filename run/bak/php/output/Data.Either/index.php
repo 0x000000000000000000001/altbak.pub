@@ -111,21 +111,30 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Either_Left'] = function() { $v = function($value0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Either_Left
+$GLOBALS['Data_Either_Left'] = function($value0 = null) {
   $__num = \func_num_args();
   $__res = new Phpurs_Data1("Left", $value0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Either_Right'] = function() { $v = function($value0 = null) {
+};
+
+// Data_Either_Right
+$GLOBALS['Data_Either_Right'] = function($value0 = null) {
   $__num = \func_num_args();
   $__res = new Phpurs_Data1("Right", $value0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Either_showEither'] = function() { $v = (function() {
+};
+
+// Data_Either_showEither
+$GLOBALS['Data_Either_showEither'] = (function() {
   $__fn = function($dictShow_0 = null, $dictShow1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -155,15 +164,19 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Either_note__prime__'] = function() { $v = function($f_0 = null) {
+})();
+
+// Data_Either_note'
+$GLOBALS['Data_Either_note__prime__'] = function($f_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Maybe_maybe__prime__'] ?? \PhpursThunks::eval('Data_Maybe_maybe__prime__')))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left'))))($f_0)))(($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right')));
+  $__res = (($GLOBALS['Data_Maybe_maybe__prime__'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Either_Left']))($f_0)))($GLOBALS['Data_Either_Right']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Either_note'] = function() { $v = (function() {
+};
+
+// Data_Either_note
+$GLOBALS['Data_Either_note'] = (function() {
   $__fn = function($a_0 = null, $v2_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -187,8 +200,10 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Either_genericEither'] = function() { $v = ["to" => function($x_0 = null) {
+})();
+
+// Data_Either_genericEither
+$GLOBALS['Data_Either_genericEither'] = ["to" => function($x_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object($x_0) && (($x_0)->{'tag'} === "Inl"))) {
@@ -224,8 +239,10 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Either_functorEither'] = function() { $v = ["map" => (function() {
+}];
+
+// Data_Either_functorEither
+$GLOBALS['Data_Either_functorEither'] = ["map" => (function() {
   $__fn = function($f_0 = null, $m_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -249,8 +266,10 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Either_invariantEither'] = function() { $v = ["imap" => (function() {
+})()];
+
+// Data_Either_invariantEither
+$GLOBALS['Data_Either_invariantEither'] = ["imap" => (function() {
   $__fn = function($f_0 = null, $v_1 = null, $m_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -274,8 +293,10 @@ goto end_branch_0;;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Either_fromRight__prime__'] = function() { $v = (function() {
+})()];
+
+// Data_Either_fromRight'
+$GLOBALS['Data_Either_fromRight__prime__'] = (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -286,7 +307,7 @@ goto end_branch_0;;
 $__t0 = ($v1_1)->{'value0'};
 goto end_branch_0;;
 };
-  $__t0 = ($v_0)(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')));
+  $__t0 = ($v_0)($GLOBALS['Data_Unit_unit']);
   end_branch_0:;
   $__res = $__t0;
   goto __end;;
@@ -294,8 +315,10 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Either_fromRight'] = function() { $v = (function() {
+})();
+
+// Data_Either_fromRight
+$GLOBALS['Data_Either_fromRight'] = (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -314,8 +337,10 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Either_fromLeft__prime__'] = function() { $v = (function() {
+})();
+
+// Data_Either_fromLeft'
+$GLOBALS['Data_Either_fromLeft__prime__'] = (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -326,7 +351,7 @@ goto end_branch_0;;
 $__t0 = ($v1_1)->{'value0'};
 goto end_branch_0;;
 };
-  $__t0 = ($v_0)(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')));
+  $__t0 = ($v_0)($GLOBALS['Data_Unit_unit']);
   end_branch_0:;
   $__res = $__t0;
   goto __end;;
@@ -334,8 +359,10 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Either_fromLeft'] = function() { $v = (function() {
+})();
+
+// Data_Either_fromLeft
+$GLOBALS['Data_Either_fromLeft'] = (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -354,8 +381,10 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Either_extendEither'] = function() { $v = ["extend" => (function() {
+})();
+
+// Data_Either_extendEither
+$GLOBALS['Data_Either_extendEither'] = ["extend" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -376,12 +405,14 @@ goto end_branch_0;;
   return $__fn;
 })(), "Functor0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Either_functorEither'] ?? \PhpursThunks::eval('Data_Either_functorEither'));
+  $__res = $GLOBALS['Data_Either_functorEither'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Either_eqEither'] = function() { $v = (function() {
+}];
+
+// Data_Either_eqEither
+$GLOBALS['Data_Either_eqEither'] = (function() {
   $__fn = function($dictEq_0 = null, $dictEq1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -412,13 +443,15 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Either_ordEither'] = function() { $v = function($dictOrd_0 = null) {
+})();
+
+// Data_Either_ordEither
+$GLOBALS['Data_Either_ordEither'] = function($dictOrd_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictOrd_0)['Eq0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_1_0 = (($dictOrd_0)['Eq0'])($GLOBALS['Prim_undefined']);
   $__res = function($dictOrd1_2 = null) use ($__local_var_1_0, $dictOrd_0) {
   $__num = \func_num_args();
-  $__local_var_3_1 = (($dictOrd1_2)['Eq0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_3_1 = (($dictOrd1_2)['Eq0'])($GLOBALS['Prim_undefined']);
   $eqEither2_4_2 = ["eq" => (function() use ($__local_var_1_0, $__local_var_3_1) {
   $__fn = function($x_4 = null, $y_5 = null) use ($__local_var_1_0, $__local_var_3_1, &$__fn) {
   $__num = \func_num_args();
@@ -488,8 +521,10 @@ goto end_branch_4;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Either_eq1Either'] = function() { $v = function($dictEq_0 = null) {
+};
+
+// Data_Either_eq1Either
+$GLOBALS['Data_Either_eq1Either'] = function($dictEq_0 = null) {
   $__num = \func_num_args();
   $__res = ["eq1" => (function() use ($dictEq_0) {
   $__fn = function($dictEq1_1 = null, $x_2 = null, $y_3 = null) use ($dictEq_0, &$__fn) {
@@ -514,11 +549,13 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Either_ord1Either'] = function() { $v = function($dictOrd_0 = null) {
+};
+
+// Data_Either_ord1Either
+$GLOBALS['Data_Either_ord1Either'] = function($dictOrd_0 = null) {
   $__num = \func_num_args();
-  $ordEither1_1_0 = (($GLOBALS['Data_Either_ordEither'] ?? \PhpursThunks::eval('Data_Either_ordEither')))($dictOrd_0);
-  $__local_var_2_1 = (($dictOrd_0)['Eq0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $ordEither1_1_0 = ($GLOBALS['Data_Either_ordEither'])($dictOrd_0);
+  $__local_var_2_1 = (($dictOrd_0)['Eq0'])($GLOBALS['Prim_undefined']);
   $eq1Either1_3_2 = ["eq1" => (function() use ($__local_var_2_1) {
   $__fn = function($dictEq1_3 = null, $x_4 = null, $y_5 = null) use ($__local_var_2_1, &$__fn) {
   $__num = \func_num_args();
@@ -555,8 +592,10 @@ goto end_branch_2;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Either_either'] = function() { $v = (function() {
+};
+
+// Data_Either_either
+$GLOBALS['Data_Either_either'] = (function() {
   $__fn = function($v_0 = null, $v1_1 = null, $v2_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -580,8 +619,10 @@ goto end_branch_0;;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Either_hush'] = function() { $v = function($v2_0 = null) {
+})();
+
+// Data_Either_hush
+$GLOBALS['Data_Either_hush'] = function($v2_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object($v2_0) && (($v2_0)->{'tag'} === "Left"))) {
@@ -599,8 +640,10 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Either_isLeft'] = function() { $v = function($v2_0 = null) {
+};
+
+// Data_Either_isLeft
+$GLOBALS['Data_Either_isLeft'] = function($v2_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object($v2_0) && (($v2_0)->{'tag'} === "Left"))) {
@@ -618,8 +661,10 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Either_isRight'] = function() { $v = function($v2_0 = null) {
+};
+
+// Data_Either_isRight
+$GLOBALS['Data_Either_isRight'] = function($v2_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object($v2_0) && (($v2_0)->{'tag'} === "Left"))) {
@@ -637,17 +682,19 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Either_choose'] = function() { $v = function($dictAlt_0 = null) {
+};
+
+// Data_Either_choose
+$GLOBALS['Data_Either_choose'] = function($dictAlt_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictAlt_0)['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_1_0 = (($dictAlt_0)['Functor0'])($GLOBALS['Prim_undefined']);
   $__res = (function() use ($__local_var_1_0, $dictAlt_0) {
   $__fn = function($a_2 = null, $b_3 = null) use ($__local_var_1_0, $dictAlt_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictAlt_0)['alt'])(((($__local_var_1_0)['map'])(($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left'))))($a_2)))(((($__local_var_1_0)['map'])(($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right'))))($b_3));
+  $__res = ((($dictAlt_0)['alt'])(((($__local_var_1_0)['map'])($GLOBALS['Data_Either_Left']))($a_2)))(((($__local_var_1_0)['map'])($GLOBALS['Data_Either_Right']))($b_3));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -657,14 +704,16 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Either_boundedEither'] = function() { $v = function($dictBounded_0 = null) {
+};
+
+// Data_Either_boundedEither
+$GLOBALS['Data_Either_boundedEither'] = function($dictBounded_0 = null) {
   $__num = \func_num_args();
   $bottom_1_0 = ($dictBounded_0)['bottom'];
-  $ordEither1_2_1 = (($GLOBALS['Data_Either_ordEither'] ?? \PhpursThunks::eval('Data_Either_ordEither')))((($dictBounded_0)['Ord0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $ordEither1_2_1 = ($GLOBALS['Data_Either_ordEither'])((($dictBounded_0)['Ord0'])($GLOBALS['Prim_undefined']));
   $__res = function($dictBounded1_3 = null) use ($bottom_1_0, $ordEither1_2_1) {
   $__num = \func_num_args();
-  $ordEither2_4_2 = ($ordEither1_2_1)((($dictBounded1_3)['Ord0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $ordEither2_4_2 = ($ordEither1_2_1)((($dictBounded1_3)['Ord0'])($GLOBALS['Prim_undefined']));
   $__res = ["top" => new Phpurs_Data1("Right", ($dictBounded1_3)['top']), "bottom" => new Phpurs_Data1("Left", $bottom_1_0), "Ord0" => function($dollar__unused_5 = null) use ($ordEither2_4_2) {
   $__num = \func_num_args();
   $__res = $ordEither2_4_2;
@@ -679,8 +728,10 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Either_blush'] = function() { $v = function($v2_0 = null) {
+};
+
+// Data_Either_blush
+$GLOBALS['Data_Either_blush'] = function($v2_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object($v2_0) && (($v2_0)->{'tag'} === "Left"))) {
@@ -698,8 +749,10 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Either_applyEither'] = function() { $v = ["apply" => (function() {
+};
+
+// Data_Either_applyEither
+$GLOBALS['Data_Either_applyEither'] = ["apply" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -737,12 +790,14 @@ goto end_branch_0;;
   return $__fn;
 })(), "Functor0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Either_functorEither'] ?? \PhpursThunks::eval('Data_Either_functorEither'));
+  $__res = $GLOBALS['Data_Either_functorEither'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Either_bindEither'] = function() { $v = ["bind" => function($v2_0 = null) {
+}];
+
+// Data_Either_bindEither
+$GLOBALS['Data_Either_bindEither'] = ["bind" => function($v2_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object($v2_0) && (($v2_0)->{'tag'} === "Left"))) {
@@ -776,12 +831,14 @@ goto end_branch_0;;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Apply0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Either_applyEither'] ?? \PhpursThunks::eval('Data_Either_applyEither'));
+  $__res = $GLOBALS['Data_Either_applyEither'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Either_semigroupEither'] = function() { $v = function($dictSemigroup_0 = null) {
+}];
+
+// Data_Either_semigroupEither
+$GLOBALS['Data_Either_semigroupEither'] = function($dictSemigroup_0 = null) {
   $__num = \func_num_args();
   $__res = ["append" => (function() use ($dictSemigroup_0) {
   $__fn = function($x_1 = null, $y_2 = null) use ($dictSemigroup_0, &$__fn) {
@@ -823,28 +880,34 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Either_applicativeEither'] = function() { $v = ["pure" => ($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right')), "Apply0" => function($dollar__unused_0 = null) {
+};
+
+// Data_Either_applicativeEither
+$GLOBALS['Data_Either_applicativeEither'] = ["pure" => $GLOBALS['Data_Either_Right'], "Apply0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Either_applyEither'] ?? \PhpursThunks::eval('Data_Either_applyEither'));
+  $__res = $GLOBALS['Data_Either_applyEither'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Either_monadEither'] = function() { $v = ["Applicative0" => function($dollar__unused_0 = null) {
+}];
+
+// Data_Either_monadEither
+$GLOBALS['Data_Either_monadEither'] = ["Applicative0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Either_applicativeEither'] ?? \PhpursThunks::eval('Data_Either_applicativeEither'));
+  $__res = $GLOBALS['Data_Either_applicativeEither'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bind1" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Either_bindEither'] ?? \PhpursThunks::eval('Data_Either_bindEither'));
+  $__res = $GLOBALS['Data_Either_bindEither'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Either_altEither'] = function() { $v = ["alt" => (function() {
+}];
+
+// Data_Either_altEither
+$GLOBALS['Data_Either_altEither'] = ["alt" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -865,41 +928,9 @@ goto end_branch_0;;
   return $__fn;
 })(), "Functor0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Either_functorEither'] ?? \PhpursThunks::eval('Data_Either_functorEither'));
+  $__res = $GLOBALS['Data_Either_functorEither'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}];
 

@@ -123,13 +123,18 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_List_tailRecM2'] = function() { $v = (function() {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_List_tailRecM2
+$GLOBALS['Data_List_tailRecM2'] = (function() {
   $__fn = function($f_0 = null, $a_1 = null, $b_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (((($GLOBALS['Control_Monad_Rec_Class_monadRecMaybe'] ?? \PhpursThunks::eval('Control_Monad_Rec_Class_monadRecMaybe')))['tailRecM'])(function($o_3 = null) use ($f_0) {
+  $__res = ((($GLOBALS['Control_Monad_Rec_Class_monadRecMaybe'])['tailRecM'])(function($o_3 = null) use ($f_0) {
   $__num = \func_num_args();
   $__res = (($f_0)(($o_3)['a']))(($o_3)['b']);
   goto __end;;
@@ -141,8 +146,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_List_any'] = function() { $v = (function() use (&$__fn) {
+})();
+
+// Data_List_any
+$GLOBALS['Data_List_any'] = (function() use (&$__fn) {
 $semigroupDisj1_0_0 = ["append" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
@@ -156,22 +163,26 @@ $semigroupDisj1_0_0 = ["append" => (function() {
   };
   return $__fn;
 })()];
-return ((($GLOBALS['Data_List_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Types_foldableList')))['foldMap'])(["mempty" => false, "Semigroup0" => function($dollar__unused_1 = null) use ($semigroupDisj1_0_0) {
+return (($GLOBALS['Data_List_Types_foldableList'])['foldMap'])(["mempty" => false, "Semigroup0" => function($dollar__unused_1 = null) use ($semigroupDisj1_0_0) {
   $__num = \func_num_args();
   $__res = $semigroupDisj1_0_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]);
-})(); return $v; };
-\PhpursThunks::$thunks['Data_List_Pattern'] = function() { $v = function($x_0 = null) {
+})();
+
+// Data_List_Pattern
+$GLOBALS['Data_List_Pattern'] = function($x_0 = null) {
   $__num = \func_num_args();
   $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_List_updateAt'] = function() { $v = (function() {
+};
+
+// Data_List_updateAt
+$GLOBALS['Data_List_updateAt'] = (function() {
   $__fn = function($v_0 = null, $v1_1 = null, $v2_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -196,7 +207,7 @@ default:
 ;
 break;
 };
-$__local_var_3_1 = (((($GLOBALS['Data_List_updateAt'] ?? \PhpursThunks::eval('Data_List_updateAt')))(($v_0 - 1)))($v1_1))(($v2_2)->{'value1'});
+$__local_var_3_1 = ((($GLOBALS['Data_List_updateAt'])(($v_0 - 1)))($v1_1))(($v2_2)->{'value1'});
 $__t2 = null;;
 if ((is_object($__local_var_3_1) && (($__local_var_3_1)->{'tag'} === "Just"))) {
 $__t2 = new Phpurs_Data1("Just", new Phpurs_Data2("Cons", ($v2_2)->{'value0'}, ($__local_var_3_1)->{'value0'}));
@@ -217,8 +228,10 @@ goto end_branch_0;;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_List_unzip'] = function() { $v = (((($GLOBALS['Data_List_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Types_foldableList')))['foldr'])(function($v_0 = null) {
+})();
+
+// Data_List_unzip
+$GLOBALS['Data_List_unzip'] = ((($GLOBALS['Data_List_Types_foldableList'])['foldr'])(function($v_0 = null) {
   $__num = \func_num_args();
   $__local_var_1_0 = ($v_0)->{'value0'};
   $__local_var_2_1 = ($v_0)->{'value1'};
@@ -232,8 +245,10 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(new Phpurs_Data2("Tuple", new Phpurs_Data0("Nil"), new Phpurs_Data0("Nil"))); return $v; };
-\PhpursThunks::$thunks['Data_List_uncons'] = function() { $v = function($v_0 = null) {
+}))(new Phpurs_Data2("Tuple", new Phpurs_Data0("Nil"), new Phpurs_Data0("Nil")));
+
+// Data_List_uncons
+$GLOBALS['Data_List_uncons'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object($v_0) && (($v_0)->{'tag'} === "Nil"))) {
@@ -251,8 +266,10 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_List_toUnfoldable'] = function() { $v = function($dictUnfoldable_0 = null) {
+};
+
+// Data_List_toUnfoldable
+$GLOBALS['Data_List_toUnfoldable'] = function($dictUnfoldable_0 = null) {
   $__num = \func_num_args();
   $__res = (($dictUnfoldable_0)['unfoldr'])(function($xs_1 = null) {
   $__num = \func_num_args();
@@ -276,8 +293,10 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_List_tail'] = function() { $v = function($v_0 = null) {
+};
+
+// Data_List_tail
+$GLOBALS['Data_List_tail'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object($v_0) && (($v_0)->{'tag'} === "Nil"))) {
@@ -295,14 +314,16 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_List_stripPrefix'] = function() { $v = (function() {
+};
+
+// Data_List_stripPrefix
+$GLOBALS['Data_List_stripPrefix'] = (function() {
   $__fn = function($dictEq_0 = null, $v_1 = null, $s_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (((($GLOBALS['Data_List_tailRecM2'] ?? \PhpursThunks::eval('Data_List_tailRecM2')))((function() use ($dictEq_0) {
+  $__res = ((($GLOBALS['Data_List_tailRecM2'])((function() use ($dictEq_0) {
   $__fn = function($prefix_3 = null, $input_4 = null) use ($dictEq_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -349,8 +370,10 @@ goto end_branch_0;;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_List_span'] = function() { $v = (function() {
+})();
+
+// Data_List_span
+$GLOBALS['Data_List_span'] = (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -363,7 +386,7 @@ goto end_branch_0;;
   $v1_1 = $__tco_var_Data_List_span_v1_1;
   $__t0 = null;;
   if (((is_object($v1_1) && (($v1_1)->{'tag'} === "Cons")) && ($v_0)(($v1_1)->{'value0'}))) {
-$v2_2_1 = ((($GLOBALS['Data_List_span'] ?? \PhpursThunks::eval('Data_List_span')))($v_0))(($v1_1)->{'value1'});
+$v2_2_1 = (($GLOBALS['Data_List_span'])($v_0))(($v1_1)->{'value1'});
 $__t0 = ["init" => new Phpurs_Data2("Cons", ($v1_1)->{'value0'}, ($v2_2_1)['init']), "rest" => ($v2_2_1)['rest']];
 goto end_branch_0;;
 };
@@ -375,28 +398,34 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_List_snoc'] = function() { $v = (function() {
+})();
+
+// Data_List_snoc
+$GLOBALS['Data_List_snoc'] = (function() {
   $__fn = function($xs_0 = null, $x_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((($GLOBALS['Data_List_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Types_foldableList')))['foldr'])(($GLOBALS['Data_List_Types_Cons'] ?? \PhpursThunks::eval('Data_List_Types_Cons'))))(new Phpurs_Data2("Cons", $x_1, new Phpurs_Data0("Nil"))))($xs_0);
+  $__res = (((($GLOBALS['Data_List_Types_foldableList'])['foldr'])($GLOBALS['Data_List_Types_Cons']))(new Phpurs_Data2("Cons", $x_1, new Phpurs_Data0("Nil"))))($xs_0);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_List_singleton'] = function() { $v = function($a_0 = null) {
+})();
+
+// Data_List_singleton
+$GLOBALS['Data_List_singleton'] = function($a_0 = null) {
   $__num = \func_num_args();
   $__res = new Phpurs_Data2("Cons", $a_0, new Phpurs_Data0("Nil"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_List_sortBy'] = function() { $v = function($cmp_0 = null) {
+};
+
+// Data_List_sortBy
+$GLOBALS['Data_List_sortBy'] = function($cmp_0 = null) {
   $__num = \func_num_args();
   $merge_1_0 = null;
   $merge_1_0 = (function() use ($cmp_0, &$merge_1_0) {
@@ -563,17 +592,19 @@ goto end_branch_12;;
   };
   return $__fn;
 })();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($mergeAll_3_6))($sequences_4_7);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($mergeAll_3_6))($sequences_4_7);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_List_sort'] = function() { $v = function($dictOrd_0 = null) {
+};
+
+// Data_List_sort
+$GLOBALS['Data_List_sort'] = function($dictOrd_0 = null) {
   $__num = \func_num_args();
   $compare_1_0 = ($dictOrd_0)['compare'];
   $__res = function($xs_2 = null) use ($compare_1_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_List_sortBy'] ?? \PhpursThunks::eval('Data_List_sortBy')))($compare_1_0))($xs_2);
+  $__res = (($GLOBALS['Data_List_sortBy'])($compare_1_0))($xs_2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -581,12 +612,14 @@ goto end_branch_12;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_List_showPattern'] = function() { $v = function($dictShow_0 = null) {
+};
+
+// Data_List_showPattern
+$GLOBALS['Data_List_showPattern'] = function($dictShow_0 = null) {
   $__num = \func_num_args();
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = (("(Pattern " . (((($GLOBALS['Data_List_Types_showList'] ?? \PhpursThunks::eval('Data_List_Types_showList')))($dictShow_0))['show'])($v_1)) . ")");
+  $__res = (("(Pattern " . ((($GLOBALS['Data_List_Types_showList'])($dictShow_0))['show'])($v_1)) . ")");
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -594,8 +627,10 @@ goto end_branch_12;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_List_reverse'] = function() { $v = (function() use (&$__fn) {
+};
+
+// Data_List_reverse
+$GLOBALS['Data_List_reverse'] = (function() use (&$__fn) {
 $go_0_0 = null;
 $go_0_0 = (function() use (&$go_0_0) {
   $__fn = function($v_1 = null, $v1_2 = null) use (&$go_0_0, &$__fn) {
@@ -633,8 +668,10 @@ goto end_branch_0;;
   return $__fn;
 })();
 return ($go_0_0)(new Phpurs_Data0("Nil"));
-})(); return $v; };
-\PhpursThunks::$thunks['Data_List_take'] = function() { $v = (function() use (&$__fn) {
+})();
+
+// Data_List_take
+$GLOBALS['Data_List_take'] = (function() use (&$__fn) {
 $go_0_0 = null;
 $go_0_0 = (function() use (&$go_0_0) {
   $__fn = function($v_1 = null, $v1_2 = null, $v2_3 = null) use (&$go_0_0, &$__fn) {
@@ -752,8 +789,10 @@ goto end_branch_0;;
   return $__fn;
 })();
 return ($go_0_0)(new Phpurs_Data0("Nil"));
-})(); return $v; };
-\PhpursThunks::$thunks['Data_List_takeWhile'] = function() { $v = function($p_0 = null) {
+})();
+
+// Data_List_takeWhile
+$GLOBALS['Data_List_takeWhile'] = function($p_0 = null) {
   $__num = \func_num_args();
   $go_1_0 = null;
   $go_1_0 = (function() use (&$go_1_0, $p_0) {
@@ -826,8 +865,10 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_List_unsnoc'] = function() { $v = function($lst_0 = null) {
+};
+
+// Data_List_unsnoc
+$GLOBALS['Data_List_unsnoc'] = function($lst_0 = null) {
   $__num = \func_num_args();
   $go_1_0 = null;
   $go_1_0 = (function() use (&$go_1_0) {
@@ -920,8 +961,10 @@ goto end_branch_2;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_List_zipWith'] = function() { $v = (function() {
+};
+
+// Data_List_zipWith
+$GLOBALS['Data_List_zipWith'] = (function() {
   $__fn = function($f_0 = null, $xs_1 = null, $ys_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -1013,8 +1056,10 @@ goto end_branch_1;;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_List_zip'] = function() { $v = (function() {
+})();
+
+// Data_List_zip
+$GLOBALS['Data_List_zip'] = (function() {
   $__fn = function($xs_0 = null, $ys_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -1106,10 +1151,12 @@ goto end_branch_1;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_List_zipWithA'] = function() { $v = function($dictApplicative_0 = null) {
+})();
+
+// Data_List_zipWithA
+$GLOBALS['Data_List_zipWithA'] = function($dictApplicative_0 = null) {
   $__num = \func_num_args();
-  $sequence1_1_0 = (((($GLOBALS['Data_List_Types_traversableList'] ?? \PhpursThunks::eval('Data_List_Types_traversableList')))['traverse'])($dictApplicative_0))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))['identity']);
+  $sequence1_1_0 = ((($GLOBALS['Data_List_Types_traversableList'])['traverse'])($dictApplicative_0))(($GLOBALS['Control_Category_categoryFn'])['identity']);
   $__res = (function() use ($sequence1_1_0) {
   $__fn = function($f_2 = null, $xs_3 = null, $ys_4 = null) use ($sequence1_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -1206,8 +1253,10 @@ goto end_branch_2;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_List_range'] = function() { $v = (function() {
+};
+
+// Data_List_range
+$GLOBALS['Data_List_range'] = (function() {
   $__fn = function($start_0 = null, $end_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -1272,14 +1321,16 @@ goto end_branch_1;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_List_partition'] = function() { $v = (function() {
+})();
+
+// Data_List_partition
+$GLOBALS['Data_List_partition'] = (function() {
   $__fn = function($p_0 = null, $xs_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((($GLOBALS['Data_List_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Types_foldableList')))['foldr'])((function() use ($p_0) {
+  $__res = (((($GLOBALS['Data_List_Types_foldableList'])['foldr'])((function() use ($p_0) {
   $__fn = function($x_2 = null, $v_3 = null) use ($p_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -1304,15 +1355,19 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_List_null'] = function() { $v = function($v_0 = null) {
+})();
+
+// Data_List_null
+$GLOBALS['Data_List_null'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__res = (is_object($v_0) && (($v_0)->{'tag'} === "Nil"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_List_nubBy'] = function() { $v = function($p_0 = null) {
+};
+
+// Data_List_nubBy
+$GLOBALS['Data_List_nubBy'] = function($p_0 = null) {
   $__num = \func_num_args();
   $go_1_0 = null;
   $go_1_0 = (function() use (&$go_1_0, $p_0) {
@@ -1334,7 +1389,7 @@ $__t0 = $v1_3;
 goto end_branch_0;;
 };
   if ((is_object($v2_4) && (($v2_4)->{'tag'} === "Cons"))) {
-$v3_5_1 = (((($GLOBALS['Data_List_Internal_insertAndLookupBy'] ?? \PhpursThunks::eval('Data_List_Internal_insertAndLookupBy')))($p_0))(($v2_4)->{'value0'}))($v_2);
+$v3_5_1 = ((($GLOBALS['Data_List_Internal_insertAndLookupBy'])($p_0))(($v2_4)->{'value0'}))($v_2);
 $__t5 = null;;
 if (($v3_5_1)['found']) {
 $__tco_6 = ($v3_5_1)['result'];
@@ -1369,26 +1424,32 @@ goto end_branch_0;;
   };
   return $__fn;
 })();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_List_reverse'] ?? \PhpursThunks::eval('Data_List_reverse'))))((($go_1_0)(new Phpurs_Data0("Leaf")))(new Phpurs_Data0("Nil")));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_List_reverse']))((($go_1_0)(new Phpurs_Data0("Leaf")))(new Phpurs_Data0("Nil")));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_List_nub'] = function() { $v = function($dictOrd_0 = null) {
+};
+
+// Data_List_nub
+$GLOBALS['Data_List_nub'] = function($dictOrd_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_List_nubBy'] ?? \PhpursThunks::eval('Data_List_nubBy')))(($dictOrd_0)['compare']);
+  $__res = ($GLOBALS['Data_List_nubBy'])(($dictOrd_0)['compare']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_List_newtypePattern'] = function() { $v = ["Coercible0" => function($dollar__unused_0 = null) {
+};
+
+// Data_List_newtypePattern
+$GLOBALS['Data_List_newtypePattern'] = ["Coercible0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'));
+  $__res = $GLOBALS['Prim_undefined'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_List_mapMaybe'] = function() { $v = function($f_0 = null) {
+}];
+
+// Data_List_mapMaybe
+$GLOBALS['Data_List_mapMaybe'] = function($f_0 = null) {
   $__num = \func_num_args();
   $go_1_0 = null;
   $go_1_0 = (function() use ($f_0, &$go_1_0) {
@@ -1484,20 +1545,22 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_List_manyRec'] = function() { $v = (function() {
+};
+
+// Data_List_manyRec
+$GLOBALS['Data_List_manyRec'] = (function() {
   $__fn = function($dictMonadRec_0 = null, $dictAlternative_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $Alt0_2_0 = (((($dictAlternative_1)['Plus1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Alt0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $__local_var_3_1 = (($dictAlternative_1)['Applicative0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $Alt0_2_0 = (((($dictAlternative_1)['Plus1'])($GLOBALS['Prim_undefined']))['Alt0'])($GLOBALS['Prim_undefined']);
+  $__local_var_3_1 = (($dictAlternative_1)['Applicative0'])($GLOBALS['Prim_undefined']);
   $__res = function($p_4 = null) use ($Alt0_2_0, $__local_var_3_1, $dictMonadRec_0) {
   $__num = \func_num_args();
   $__res = ((($dictMonadRec_0)['tailRecM'])(function($acc_5 = null) use ($Alt0_2_0, $__local_var_3_1, $dictMonadRec_0, $p_4) {
   $__num = \func_num_args();
-  $__res = ((((((($dictMonadRec_0)['Monad0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Bind1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['bind'])(((($Alt0_2_0)['alt'])(((((($Alt0_2_0)['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['map'])(($GLOBALS['Control_Monad_Rec_Class_Loop'] ?? \PhpursThunks::eval('Control_Monad_Rec_Class_Loop'))))($p_4)))((($__local_var_3_1)['pure'])(new Phpurs_Data1("Done", ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')))))))(function($aa_6 = null) use ($__local_var_3_1, $acc_5) {
+  $__res = ((((((($dictMonadRec_0)['Monad0'])($GLOBALS['Prim_undefined']))['Bind1'])($GLOBALS['Prim_undefined']))['bind'])(((($Alt0_2_0)['alt'])(((((($Alt0_2_0)['Functor0'])($GLOBALS['Prim_undefined']))['map'])($GLOBALS['Control_Monad_Rec_Class_Loop']))($p_4)))((($__local_var_3_1)['pure'])(new Phpurs_Data1("Done", $GLOBALS['Data_Unit_unit'])))))(function($aa_6 = null) use ($__local_var_3_1, $acc_5) {
   $__num = \func_num_args();
   $__t2 = null;;
   if ((is_object($aa_6) && (($aa_6)->{'tag'} === "Loop"))) {
@@ -1565,17 +1628,19 @@ goto end_branch_2;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_List_someRec'] = function() { $v = (function() {
+})();
+
+// Data_List_someRec
+$GLOBALS['Data_List_someRec'] = (function() {
   $__fn = function($dictMonadRec_0 = null, $dictAlternative_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $manyRec2_2_0 = ((($GLOBALS['Data_List_manyRec'] ?? \PhpursThunks::eval('Data_List_manyRec')))($dictMonadRec_0))($dictAlternative_1);
+  $manyRec2_2_0 = (($GLOBALS['Data_List_manyRec'])($dictMonadRec_0))($dictAlternative_1);
   $__res = function($v_3 = null) use ($dictAlternative_1, $manyRec2_2_0) {
   $__num = \func_num_args();
-  $__res = ((((((($dictAlternative_1)['Applicative0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Apply0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['apply'])(((((((((($dictAlternative_1)['Plus1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Alt0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['map'])(($GLOBALS['Data_List_Types_Cons'] ?? \PhpursThunks::eval('Data_List_Types_Cons'))))($v_3)))(($manyRec2_2_0)($v_3));
+  $__res = ((((((($dictAlternative_1)['Applicative0'])($GLOBALS['Prim_undefined']))['Apply0'])($GLOBALS['Prim_undefined']))['apply'])(((((((((($dictAlternative_1)['Plus1'])($GLOBALS['Prim_undefined']))['Alt0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']))['map'])($GLOBALS['Data_List_Types_Cons']))($v_3)))(($manyRec2_2_0)($v_3));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1585,16 +1650,18 @@ goto end_branch_2;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_List_some'] = function() { $v = (function() {
+})();
+
+// Data_List_some
+$GLOBALS['Data_List_some'] = (function() {
   $__fn = function($dictAlternative_0 = null, $dictLazy_1 = null, $v_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((((((($dictAlternative_0)['Applicative0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Apply0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['apply'])(((((((((($dictAlternative_0)['Plus1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Alt0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['map'])(($GLOBALS['Data_List_Types_Cons'] ?? \PhpursThunks::eval('Data_List_Types_Cons'))))($v_2)))((($dictLazy_1)['defer'])(function($v1_3 = null) use ($dictAlternative_0, $dictLazy_1, $v_2) {
+  $__res = ((((((($dictAlternative_0)['Applicative0'])($GLOBALS['Prim_undefined']))['Apply0'])($GLOBALS['Prim_undefined']))['apply'])(((((((((($dictAlternative_0)['Plus1'])($GLOBALS['Prim_undefined']))['Alt0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']))['map'])($GLOBALS['Data_List_Types_Cons']))($v_2)))((($dictLazy_1)['defer'])(function($v1_3 = null) use ($dictAlternative_0, $dictLazy_1, $v_2) {
   $__num = \func_num_args();
-  $__res = (((($GLOBALS['Data_List_many'] ?? \PhpursThunks::eval('Data_List_many')))($dictAlternative_0))($dictLazy_1))($v_2);
+  $__res = ((($GLOBALS['Data_List_many'])($dictAlternative_0))($dictLazy_1))($v_2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1604,21 +1671,25 @@ goto end_branch_2;;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_List_many'] = function() { $v = (function() {
+})();
+
+// Data_List_many
+$GLOBALS['Data_List_many'] = (function() {
   $__fn = function($dictAlternative_0 = null, $dictLazy_1 = null, $v_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((((((($dictAlternative_0)['Plus1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Alt0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['alt'])((((($GLOBALS['Data_List_some'] ?? \PhpursThunks::eval('Data_List_some')))($dictAlternative_0))($dictLazy_1))($v_2)))((((($dictAlternative_0)['Applicative0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['pure'])(new Phpurs_Data0("Nil")));
+  $__res = ((((((($dictAlternative_0)['Plus1'])($GLOBALS['Prim_undefined']))['Alt0'])($GLOBALS['Prim_undefined']))['alt'])(((($GLOBALS['Data_List_some'])($dictAlternative_0))($dictLazy_1))($v_2)))((((($dictAlternative_0)['Applicative0'])($GLOBALS['Prim_undefined']))['pure'])(new Phpurs_Data0("Nil")));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_List_length'] = function() { $v = (function() use (&$__fn) {
+})();
+
+// Data_List_length
+$GLOBALS['Data_List_length'] = (function() use (&$__fn) {
 $go_0_0 = null;
 $go_0_0 = (function() use (&$go_0_0) {
   $__fn = function($b_1 = null, $v_2 = null) use (&$go_0_0, &$__fn) {
@@ -1656,8 +1727,10 @@ goto end_branch_0;;
   return $__fn;
 })();
 return ($go_0_0)(0);
-})(); return $v; };
-\PhpursThunks::$thunks['Data_List_last'] = function() { $v = function($v_0 = null) {
+})();
+
+// Data_List_last
+$GLOBALS['Data_List_last'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__tco_var_Data_List_last_v_0 = $v_0;
   tco_loop_Data_List_last:;
@@ -1683,8 +1756,10 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_List_insertBy'] = function() { $v = (function() {
+};
+
+// Data_List_insertBy
+$GLOBALS['Data_List_insertBy'] = (function() {
   $__fn = function($v_0 = null, $v1_1 = null, $v2_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -1705,7 +1780,7 @@ goto end_branch_0;;
   if ((is_object($v2_2) && (($v2_2)->{'tag'} === "Cons"))) {
 $__t1 = null;;
 if ((is_object((($v_0)($v1_1))(($v2_2)->{'value0'})) && (((($v_0)($v1_1))(($v2_2)->{'value0'}))->{'tag'} === "GT"))) {
-$__t1 = new Phpurs_Data2("Cons", ($v2_2)->{'value0'}, (((($GLOBALS['Data_List_insertBy'] ?? \PhpursThunks::eval('Data_List_insertBy')))($v_0))($v1_1))(($v2_2)->{'value1'}));
+$__t1 = new Phpurs_Data2("Cons", ($v2_2)->{'value0'}, ((($GLOBALS['Data_List_insertBy'])($v_0))($v1_1))(($v2_2)->{'value1'}));
 goto end_branch_1;;
 };
 $__t1 = new Phpurs_Data2("Cons", $v1_1, $v2_2);
@@ -1722,8 +1797,10 @@ goto end_branch_0;;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_List_insertAt'] = function() { $v = (function() {
+})();
+
+// Data_List_insertAt
+$GLOBALS['Data_List_insertAt'] = (function() {
   $__fn = function($v_0 = null, $v1_1 = null, $v2_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -1747,7 +1824,7 @@ default:
 break;
 };
   if ((is_object($v2_2) && (($v2_2)->{'tag'} === "Cons"))) {
-$__local_var_3_1 = (((($GLOBALS['Data_List_insertAt'] ?? \PhpursThunks::eval('Data_List_insertAt')))(($v_0 - 1)))($v1_1))(($v2_2)->{'value1'});
+$__local_var_3_1 = ((($GLOBALS['Data_List_insertAt'])(($v_0 - 1)))($v1_1))(($v2_2)->{'value1'});
 $__t2 = null;;
 if ((is_object($__local_var_3_1) && (($__local_var_3_1)->{'tag'} === "Just"))) {
 $__t2 = new Phpurs_Data1("Just", new Phpurs_Data2("Cons", ($v2_2)->{'value0'}, ($__local_var_3_1)->{'value0'}));
@@ -1766,17 +1843,21 @@ goto end_branch_0;;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_List_insert'] = function() { $v = function($dictOrd_0 = null) {
+})();
+
+// Data_List_insert
+$GLOBALS['Data_List_insert'] = function($dictOrd_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_List_insertBy'] ?? \PhpursThunks::eval('Data_List_insertBy')))(($dictOrd_0)['compare']);
+  $__res = ($GLOBALS['Data_List_insertBy'])(($dictOrd_0)['compare']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_List_init'] = function() { $v = function($lst_0 = null) {
+};
+
+// Data_List_init
+$GLOBALS['Data_List_init'] = function($lst_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($GLOBALS['Data_List_unsnoc'] ?? \PhpursThunks::eval('Data_List_unsnoc')))($lst_0);
+  $__local_var_1_0 = ($GLOBALS['Data_List_unsnoc'])($lst_0);
   $__t1 = null;;
   if ((is_object($__local_var_1_0) && (($__local_var_1_0)->{'tag'} === "Just"))) {
 $__t1 = new Phpurs_Data1("Just", (($__local_var_1_0)->{'value0'})['init']);
@@ -1788,8 +1869,10 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_List_index'] = function() { $v = (function() {
+};
+
+// Data_List_index
+$GLOBALS['Data_List_index'] = (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -1835,8 +1918,10 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_List_head'] = function() { $v = function($v_0 = null) {
+})();
+
+// Data_List_head
+$GLOBALS['Data_List_head'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object($v_0) && (($v_0)->{'tag'} === "Nil"))) {
@@ -1854,8 +1939,10 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_List_transpose'] = function() { $v = function($v_0 = null) {
+};
+
+// Data_List_transpose
+$GLOBALS['Data_List_transpose'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__tco_var_Data_List_transpose_v_0 = $v_0;
   tco_loop_Data_List_transpose:;
@@ -2053,7 +2140,7 @@ goto end_branch_4;;
   };
   return $__fn;
 })();
-$__t1 = new Phpurs_Data2("Cons", new Phpurs_Data2("Cons", (($v_0)->{'value0'})->{'value0'}, (($go_1_3)(new Phpurs_Data0("Nil")))(($v_0)->{'value1'})), (($GLOBALS['Data_List_transpose'] ?? \PhpursThunks::eval('Data_List_transpose')))(new Phpurs_Data2("Cons", (($v_0)->{'value0'})->{'value1'}, (($go_1_4)(new Phpurs_Data0("Nil")))(($v_0)->{'value1'}))));
+$__t1 = new Phpurs_Data2("Cons", new Phpurs_Data2("Cons", (($v_0)->{'value0'})->{'value0'}, (($go_1_3)(new Phpurs_Data0("Nil")))(($v_0)->{'value1'})), ($GLOBALS['Data_List_transpose'])(new Phpurs_Data2("Cons", (($v_0)->{'value0'})->{'value1'}, (($go_1_4)(new Phpurs_Data0("Nil")))(($v_0)->{'value1'}))));
 goto end_branch_1;;
 };
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -2069,8 +2156,10 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_List_groupBy'] = function() { $v = (function() {
+};
+
+// Data_List_groupBy
+$GLOBALS['Data_List_groupBy'] = (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -2087,8 +2176,8 @@ $__t0 = new Phpurs_Data0("Nil");
 goto end_branch_0;;
 };
   if ((is_object($v1_1) && (($v1_1)->{'tag'} === "Cons"))) {
-$v2_2_1 = ((($GLOBALS['Data_List_span'] ?? \PhpursThunks::eval('Data_List_span')))(($v_0)(($v1_1)->{'value0'})))(($v1_1)->{'value1'});
-$__t0 = new Phpurs_Data2("Cons", new Phpurs_Data2("NonEmpty", ($v1_1)->{'value0'}, ($v2_2_1)['init']), ((($GLOBALS['Data_List_groupBy'] ?? \PhpursThunks::eval('Data_List_groupBy')))($v_0))(($v2_2_1)['rest']));
+$v2_2_1 = (($GLOBALS['Data_List_span'])(($v_0)(($v1_1)->{'value0'})))(($v1_1)->{'value1'});
+$__t0 = new Phpurs_Data2("Cons", new Phpurs_Data2("NonEmpty", ($v1_1)->{'value0'}, ($v2_2_1)['init']), (($GLOBALS['Data_List_groupBy'])($v_0))(($v2_2_1)['rest']));
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -2100,10 +2189,12 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_List_groupAllBy'] = function() { $v = function($p_0 = null) {
+})();
+
+// Data_List_groupAllBy
+$GLOBALS['Data_List_groupAllBy'] = function($p_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Data_List_groupBy'] ?? \PhpursThunks::eval('Data_List_groupBy')))((function() use ($p_0) {
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_List_groupBy'])((function() use ($p_0) {
   $__fn = function($x_1 = null, $y_2 = null) use ($p_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -2115,24 +2206,28 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})())))((($GLOBALS['Data_List_sortBy'] ?? \PhpursThunks::eval('Data_List_sortBy')))($p_0));
+})())))(($GLOBALS['Data_List_sortBy'])($p_0));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_List_group'] = function() { $v = function($dictEq_0 = null) {
+};
+
+// Data_List_group
+$GLOBALS['Data_List_group'] = function($dictEq_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_List_groupBy'] ?? \PhpursThunks::eval('Data_List_groupBy')))(($dictEq_0)['eq']);
+  $__res = ($GLOBALS['Data_List_groupBy'])(($dictEq_0)['eq']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_List_groupAll'] = function() { $v = function($dictOrd_0 = null) {
+};
+
+// Data_List_groupAll
+$GLOBALS['Data_List_groupAll'] = function($dictOrd_0 = null) {
   $__num = \func_num_args();
   $compare_1_0 = ($dictOrd_0)['compare'];
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Data_List_group'] ?? \PhpursThunks::eval('Data_List_group')))((($dictOrd_0)['Eq0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))))(function($xs_2 = null) use ($compare_1_0) {
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_List_group'])((($dictOrd_0)['Eq0'])($GLOBALS['Prim_undefined']))))(function($xs_2 = null) use ($compare_1_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_List_sortBy'] ?? \PhpursThunks::eval('Data_List_sortBy')))($compare_1_0))($xs_2);
+  $__res = (($GLOBALS['Data_List_sortBy'])($compare_1_0))($xs_2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -2140,15 +2235,19 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_List_fromFoldable'] = function() { $v = function($dictFoldable_0 = null) {
+};
+
+// Data_List_fromFoldable
+$GLOBALS['Data_List_fromFoldable'] = function($dictFoldable_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($dictFoldable_0)['foldr'])(($GLOBALS['Data_List_Types_Cons'] ?? \PhpursThunks::eval('Data_List_Types_Cons'))))(new Phpurs_Data0("Nil"));
+  $__res = ((($dictFoldable_0)['foldr'])($GLOBALS['Data_List_Types_Cons']))(new Phpurs_Data0("Nil"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_List_foldM'] = function() { $v = (function() {
+};
+
+// Data_List_foldM
+$GLOBALS['Data_List_foldM'] = (function() {
   $__fn = function($dictMonad_0 = null, $v_1 = null, $v1_2 = null, $v2_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
@@ -2165,14 +2264,14 @@ goto end_branch_0;;
   $v2_3 = $__tco_var_Data_List_foldM_v2_3;
   $__t0 = null;;
   if ((is_object($v2_3) && (($v2_3)->{'tag'} === "Nil"))) {
-$__t0 = (((($dictMonad_0)['Applicative0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['pure'])($v1_2);
+$__t0 = (((($dictMonad_0)['Applicative0'])($GLOBALS['Prim_undefined']))['pure'])($v1_2);
 goto end_branch_0;;
 };
   if ((is_object($v2_3) && (($v2_3)->{'tag'} === "Cons"))) {
 $__local_var_4_1 = ($v2_3)->{'value1'};
-$__t0 = ((((($dictMonad_0)['Bind1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['bind'])((($v_1)($v1_2))(($v2_3)->{'value0'})))(function($b__prime___5 = null) use ($__local_var_4_1, $dictMonad_0, $v_1) {
+$__t0 = ((((($dictMonad_0)['Bind1'])($GLOBALS['Prim_undefined']))['bind'])((($v_1)($v1_2))(($v2_3)->{'value0'})))(function($b__prime___5 = null) use ($__local_var_4_1, $dictMonad_0, $v_1) {
   $__num = \func_num_args();
-  $__res = ((((($GLOBALS['Data_List_foldM'] ?? \PhpursThunks::eval('Data_List_foldM')))($dictMonad_0))($v_1))($b__prime___5))($__local_var_4_1);
+  $__res = (((($GLOBALS['Data_List_foldM'])($dictMonad_0))($v_1))($b__prime___5))($__local_var_4_1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -2188,8 +2287,10 @@ goto end_branch_0;;
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_List_findIndex'] = function() { $v = function($fn_0 = null) {
+})();
+
+// Data_List_findIndex
+$GLOBALS['Data_List_findIndex'] = function($fn_0 = null) {
   $__num = \func_num_args();
   $go_1_0 = null;
   $go_1_0 = (function() use ($fn_0, &$go_1_0) {
@@ -2238,8 +2339,10 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_List_findLastIndex'] = function() { $v = (function() {
+};
+
+// Data_List_findLastIndex
+$GLOBALS['Data_List_findLastIndex'] = (function() {
   $__fn = function($fn_0 = null, $xs_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -2374,14 +2477,16 @@ goto end_branch_3;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_List_filterM'] = function() { $v = function($dictMonad_0 = null) {
+})();
+
+// Data_List_filterM
+$GLOBALS['Data_List_filterM'] = function($dictMonad_0 = null) {
   $__num = \func_num_args();
   $__tco_var_Data_List_filterM_dictMonad_0 = $dictMonad_0;
   tco_loop_Data_List_filterM:;
   $dictMonad_0 = $__tco_var_Data_List_filterM_dictMonad_0;
-  $__local_var_1_0 = (($dictMonad_0)['Applicative0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $__local_var_2_1 = (($dictMonad_0)['Bind1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_1_0 = (($dictMonad_0)['Applicative0'])($GLOBALS['Prim_undefined']);
+  $__local_var_2_1 = (($dictMonad_0)['Bind1'])($GLOBALS['Prim_undefined']);
   $__res = (function() use ($__local_var_1_0, $__local_var_2_1, $dictMonad_0) {
   $__fn = function($v_3 = null, $v1_4 = null) use ($__local_var_1_0, $__local_var_2_1, $dictMonad_0, &$__fn) {
   $__num = \func_num_args();
@@ -2398,7 +2503,7 @@ $__local_var_5_3 = ($v1_4)->{'value0'};
 $__local_var_6_4 = ($v1_4)->{'value1'};
 $__t2 = ((($__local_var_2_1)['bind'])(($v_3)($__local_var_5_3)))(function($b_7 = null) use ($__local_var_1_0, $__local_var_2_1, $__local_var_5_3, $__local_var_6_4, $dictMonad_0, $v_3) {
   $__num = \func_num_args();
-  $__res = ((($__local_var_2_1)['bind'])((((($GLOBALS['Data_List_filterM'] ?? \PhpursThunks::eval('Data_List_filterM')))($dictMonad_0))($v_3))($__local_var_6_4)))(function($xs__prime___8 = null) use ($__local_var_1_0, $__local_var_5_3, $b_7) {
+  $__res = ((($__local_var_2_1)['bind'])(((($GLOBALS['Data_List_filterM'])($dictMonad_0))($v_3))($__local_var_6_4)))(function($xs__prime___8 = null) use ($__local_var_1_0, $__local_var_5_3, $b_7) {
   $__num = \func_num_args();
   $__t5 = null;;
   if ($b_7) {
@@ -2431,8 +2536,10 @@ goto end_branch_2;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_List_filter'] = function() { $v = function($p_0 = null) {
+};
+
+// Data_List_filter
+$GLOBALS['Data_List_filter'] = function($p_0 = null) {
   $__num = \func_num_args();
   $go_1_0 = null;
   $go_1_0 = (function() use (&$go_1_0, $p_0) {
@@ -2522,8 +2629,10 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_List_intersectBy'] = function() { $v = (function() {
+};
+
+// Data_List_intersectBy
+$GLOBALS['Data_List_intersectBy'] = (function() {
   $__fn = function($v_0 = null, $v1_1 = null, $v2_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -2593,7 +2702,7 @@ goto end_branch_0;;
 };
   if ((is_object($v1_5) && (($v1_5)->{'tag'} === "Cons"))) {
 $__t4 = null;;
-if (((($GLOBALS['Data_List_any'] ?? \PhpursThunks::eval('Data_List_any')))(($v_0)(($v1_5)->{'value0'})))($v2_2)) {
+if ((($GLOBALS['Data_List_any'])(($v_0)(($v1_5)->{'value0'})))($v2_2)) {
 $__tco_5 = new Phpurs_Data2("Cons", ($v1_5)->{'value0'}, $v_4);
 $__tco_6 = ($v1_5)->{'value1'};
 $__tco_var_go_3_0_0_v_4 = $__tco_5;
@@ -2630,15 +2739,19 @@ goto end_branch_0;;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_List_intersect'] = function() { $v = function($dictEq_0 = null) {
+})();
+
+// Data_List_intersect
+$GLOBALS['Data_List_intersect'] = function($dictEq_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_List_intersectBy'] ?? \PhpursThunks::eval('Data_List_intersectBy')))(($dictEq_0)['eq']);
+  $__res = ($GLOBALS['Data_List_intersectBy'])(($dictEq_0)['eq']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_List_nubByEq'] = function() { $v = (function() {
+};
+
+// Data_List_nubByEq
+$GLOBALS['Data_List_nubByEq'] = (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -2740,7 +2853,7 @@ goto end_branch_2;;
   };
   return $__fn;
 })();
-$__t0 = new Phpurs_Data2("Cons", $__local_var_2_1, ((($GLOBALS['Data_List_nubByEq'] ?? \PhpursThunks::eval('Data_List_nubByEq')))($v_0))((($go_3_2)(new Phpurs_Data0("Nil")))(($v1_1)->{'value1'})));
+$__t0 = new Phpurs_Data2("Cons", $__local_var_2_1, (($GLOBALS['Data_List_nubByEq'])($v_0))((($go_3_2)(new Phpurs_Data0("Nil")))(($v1_1)->{'value1'})));
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -2752,15 +2865,19 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_List_nubEq'] = function() { $v = function($dictEq_0 = null) {
+})();
+
+// Data_List_nubEq
+$GLOBALS['Data_List_nubEq'] = function($dictEq_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_List_nubByEq'] ?? \PhpursThunks::eval('Data_List_nubByEq')))(($dictEq_0)['eq']);
+  $__res = ($GLOBALS['Data_List_nubByEq'])(($dictEq_0)['eq']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_List_eqPattern'] = function() { $v = function($dictEq_0 = null) {
+};
+
+// Data_List_eqPattern
+$GLOBALS['Data_List_eqPattern'] = function($dictEq_0 = null) {
   $__num = \func_num_args();
   $__res = ["eq" => (function() use ($dictEq_0) {
   $__fn = function($x_1 = null, $y_2 = null) use ($dictEq_0, &$__fn) {
@@ -2803,10 +2920,12 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_List_ordPattern'] = function() { $v = function($dictOrd_0 = null) {
+};
+
+// Data_List_ordPattern
+$GLOBALS['Data_List_ordPattern'] = function($dictOrd_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictOrd_0)['Eq0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_1_0 = (($dictOrd_0)['Eq0'])($GLOBALS['Prim_undefined']);
   $eqPattern1_2_1 = ["eq" => (function() use ($__local_var_1_0) {
   $__fn = function($x_2 = null, $y_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -2851,7 +2970,7 @@ goto end_branch_2;;
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((($GLOBALS['Data_List_Types_ordList'] ?? \PhpursThunks::eval('Data_List_Types_ordList')))($dictOrd_0))['compare'])($x_3))($y_4);
+  $__res = (((($GLOBALS['Data_List_Types_ordList'])($dictOrd_0))['compare'])($x_3))($y_4);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -2867,14 +2986,16 @@ goto end_branch_2;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_List_elemLastIndex'] = function() { $v = (function() {
+};
+
+// Data_List_elemLastIndex
+$GLOBALS['Data_List_elemLastIndex'] = (function() {
   $__fn = function($dictEq_0 = null, $x_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_List_findLastIndex'] ?? \PhpursThunks::eval('Data_List_findLastIndex')))(function($v_2 = null) use ($dictEq_0, $x_1) {
+  $__res = ($GLOBALS['Data_List_findLastIndex'])(function($v_2 = null) use ($dictEq_0, $x_1) {
   $__num = \func_num_args();
   $__res = ((($dictEq_0)['eq'])($v_2))($x_1);
   goto __end;;
@@ -2886,8 +3007,10 @@ goto end_branch_2;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_List_elemIndex'] = function() { $v = (function() {
+})();
+
+// Data_List_elemIndex
+$GLOBALS['Data_List_elemIndex'] = (function() {
   $__fn = function($dictEq_0 = null, $x_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -2942,8 +3065,10 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_List_dropWhile'] = function() { $v = function($p_0 = null) {
+})();
+
+// Data_List_dropWhile
+$GLOBALS['Data_List_dropWhile'] = function($p_0 = null) {
   $__num = \func_num_args();
   $go_1_0 = null;
   $go_1_0 = function($v_2 = null) use (&$go_1_0, $p_0) {
@@ -2970,8 +3095,10 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_List_dropEnd'] = function() { $v = (function() {
+};
+
+// Data_List_dropEnd
+$GLOBALS['Data_List_dropEnd'] = (function() {
   $__fn = function($n_0 = null, $xs_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -3013,14 +3140,16 @@ goto end_branch_0;;
   };
   return $__fn;
 })();
-  $__res = ((($GLOBALS['Data_List_take'] ?? \PhpursThunks::eval('Data_List_take')))(((($go_2_0)(0))($xs_1) - $n_0)))($xs_1);
+  $__res = (($GLOBALS['Data_List_take'])(((($go_2_0)(0))($xs_1) - $n_0)))($xs_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_List_drop'] = function() { $v = (function() {
+})();
+
+// Data_List_drop
+$GLOBALS['Data_List_drop'] = (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -3058,21 +3187,25 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_List_slice'] = function() { $v = (function() {
+})();
+
+// Data_List_slice
+$GLOBALS['Data_List_slice'] = (function() {
   $__fn = function($start_0 = null, $end_1 = null, $xs_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($GLOBALS['Data_List_take'] ?? \PhpursThunks::eval('Data_List_take')))(($end_1 - $start_0)))(((($GLOBALS['Data_List_drop'] ?? \PhpursThunks::eval('Data_List_drop')))($start_0))($xs_2));
+  $__res = (($GLOBALS['Data_List_take'])(($end_1 - $start_0)))((($GLOBALS['Data_List_drop'])($start_0))($xs_2));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_List_takeEnd'] = function() { $v = (function() {
+})();
+
+// Data_List_takeEnd
+$GLOBALS['Data_List_takeEnd'] = (function() {
   $__fn = function($n_0 = null, $xs_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -3114,14 +3247,16 @@ goto end_branch_0;;
   };
   return $__fn;
 })();
-  $__res = ((($GLOBALS['Data_List_drop'] ?? \PhpursThunks::eval('Data_List_drop')))(((($go_2_0)(0))($xs_1) - $n_0)))($xs_1);
+  $__res = (($GLOBALS['Data_List_drop'])(((($go_2_0)(0))($xs_1) - $n_0)))($xs_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_List_deleteBy'] = function() { $v = (function() {
+})();
+
+// Data_List_deleteBy
+$GLOBALS['Data_List_deleteBy'] = (function() {
   $__fn = function($v_0 = null, $v1_1 = null, $v2_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -3145,7 +3280,7 @@ if ((($v_0)($v1_1))(($v2_2)->{'value0'})) {
 $__t1 = ($v2_2)->{'value1'};
 goto end_branch_1;;
 };
-$__t1 = new Phpurs_Data2("Cons", ($v2_2)->{'value0'}, (((($GLOBALS['Data_List_deleteBy'] ?? \PhpursThunks::eval('Data_List_deleteBy')))($v_0))($v1_1))(($v2_2)->{'value1'}));
+$__t1 = new Phpurs_Data2("Cons", ($v2_2)->{'value0'}, ((($GLOBALS['Data_List_deleteBy'])($v_0))($v1_1))(($v2_2)->{'value1'}));
 end_branch_1:;
 $__t0 = $__t1;
 goto end_branch_0;;
@@ -3159,8 +3294,10 @@ goto end_branch_0;;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_List_unionBy'] = function() { $v = (function() {
+})();
+
+// Data_List_unionBy
+$GLOBALS['Data_List_unionBy'] = (function() {
   $__fn = function($eq2_0 = null, $xs_1 = null, $ys_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -3184,7 +3321,7 @@ $__t0 = $b_4;
 goto end_branch_0;;
 };
   if ((is_object($v_5) && (($v_5)->{'tag'} === "Cons"))) {
-$__tco_1 = (((($GLOBALS['Data_List_deleteBy'] ?? \PhpursThunks::eval('Data_List_deleteBy')))($eq2_0))(($v_5)->{'value0'}))($b_4);
+$__tco_1 = ((($GLOBALS['Data_List_deleteBy'])($eq2_0))(($v_5)->{'value0'}))($b_4);
 $__tco_2 = ($v_5)->{'value1'};
 $__tco_var_go_3_0_0_b_4 = $__tco_1;
 $__tco_var_go_3_0_0_v_5 = $__tco_2;
@@ -3202,21 +3339,25 @@ goto end_branch_0;;
   };
   return $__fn;
 })();
-  $__res = ((((($GLOBALS['Data_List_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Types_foldableList')))['foldr'])(($GLOBALS['Data_List_Types_Cons'] ?? \PhpursThunks::eval('Data_List_Types_Cons'))))((($go_3_0)(((($GLOBALS['Data_List_nubByEq'] ?? \PhpursThunks::eval('Data_List_nubByEq')))($eq2_0))($ys_2)))($xs_1)))($xs_1);
+  $__res = (((($GLOBALS['Data_List_Types_foldableList'])['foldr'])($GLOBALS['Data_List_Types_Cons']))((($go_3_0)((($GLOBALS['Data_List_nubByEq'])($eq2_0))($ys_2)))($xs_1)))($xs_1);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_List_union'] = function() { $v = function($dictEq_0 = null) {
+})();
+
+// Data_List_union
+$GLOBALS['Data_List_union'] = function($dictEq_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_List_unionBy'] ?? \PhpursThunks::eval('Data_List_unionBy')))(($dictEq_0)['eq']);
+  $__res = ($GLOBALS['Data_List_unionBy'])(($dictEq_0)['eq']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_List_deleteAt'] = function() { $v = (function() {
+};
+
+// Data_List_deleteAt
+$GLOBALS['Data_List_deleteAt'] = (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -3239,7 +3380,7 @@ default:
 ;
 break;
 };
-$__local_var_2_1 = ((($GLOBALS['Data_List_deleteAt'] ?? \PhpursThunks::eval('Data_List_deleteAt')))(($v_0 - 1)))(($v1_1)->{'value1'});
+$__local_var_2_1 = (($GLOBALS['Data_List_deleteAt'])(($v_0 - 1)))(($v1_1)->{'value1'});
 $__t2 = null;;
 if ((is_object($__local_var_2_1) && (($__local_var_2_1)->{'tag'} === "Just"))) {
 $__t2 = new Phpurs_Data1("Just", new Phpurs_Data2("Cons", ($v1_1)->{'value0'}, ($__local_var_2_1)->{'value0'}));
@@ -3260,15 +3401,19 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_List_delete'] = function() { $v = function($dictEq_0 = null) {
+})();
+
+// Data_List_delete
+$GLOBALS['Data_List_delete'] = function($dictEq_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_List_deleteBy'] ?? \PhpursThunks::eval('Data_List_deleteBy')))(($dictEq_0)['eq']);
+  $__res = ($GLOBALS['Data_List_deleteBy'])(($dictEq_0)['eq']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_List_difference'] = function() { $v = function($dictEq_0 = null) {
+};
+
+// Data_List_difference
+$GLOBALS['Data_List_difference'] = function($dictEq_0 = null) {
   $__num = \func_num_args();
   $go_1_0 = null;
   $go_1_0 = (function() use ($dictEq_0, &$go_1_0) {
@@ -3288,7 +3433,7 @@ $__t0 = $b_2;
 goto end_branch_0;;
 };
   if ((is_object($v_3) && (($v_3)->{'tag'} === "Cons"))) {
-$__tco_1 = (((($GLOBALS['Data_List_deleteBy'] ?? \PhpursThunks::eval('Data_List_deleteBy')))(($dictEq_0)['eq']))(($v_3)->{'value0'}))($b_2);
+$__tco_1 = ((($GLOBALS['Data_List_deleteBy'])(($dictEq_0)['eq']))(($v_3)->{'value0'}))($b_2);
 $__tco_2 = ($v_3)->{'value1'};
 $__tco_var_go_1_0_0_b_2 = $__tco_1;
 $__tco_var_go_1_0_0_v_3 = $__tco_2;
@@ -3310,28 +3455,34 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_List_concatMap'] = function() { $v = (function() {
+};
+
+// Data_List_concatMap
+$GLOBALS['Data_List_concatMap'] = (function() {
   $__fn = function($b_0 = null, $a_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($GLOBALS['Data_List_Types_bindList'] ?? \PhpursThunks::eval('Data_List_Types_bindList')))['bind'])($a_1))($b_0);
+  $__res = ((($GLOBALS['Data_List_Types_bindList'])['bind'])($a_1))($b_0);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_List_concat'] = function() { $v = function($v_0 = null) {
+})();
+
+// Data_List_concat
+$GLOBALS['Data_List_concat'] = function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = (((($GLOBALS['Data_List_Types_bindList'] ?? \PhpursThunks::eval('Data_List_Types_bindList')))['bind'])($v_0))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))['identity']);
+  $__res = ((($GLOBALS['Data_List_Types_bindList'])['bind'])($v_0))(($GLOBALS['Control_Category_categoryFn'])['identity']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_List_catMaybes'] = function() { $v = (function() use (&$__fn) {
+};
+
+// Data_List_catMaybes
+$GLOBALS['Data_List_catMaybes'] = (function() use (&$__fn) {
 $go_0_0 = null;
 $go_0_0 = (function() use (&$go_0_0) {
   $__fn = function($v_1 = null, $v1_2 = null) use (&$go_0_0, &$__fn) {
@@ -3422,8 +3573,10 @@ goto end_branch_0;;
   return $__fn;
 })();
 return ($go_0_0)(new Phpurs_Data0("Nil"));
-})(); return $v; };
-\PhpursThunks::$thunks['Data_List_alterAt'] = function() { $v = (function() {
+})();
+
+// Data_List_alterAt
+$GLOBALS['Data_List_alterAt'] = (function() {
   $__fn = function($v_0 = null, $v1_1 = null, $v2_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -3461,7 +3614,7 @@ default:
 ;
 break;
 };
-$__local_var_3_1 = (((($GLOBALS['Data_List_alterAt'] ?? \PhpursThunks::eval('Data_List_alterAt')))(($v_0 - 1)))($v1_1))(($v2_2)->{'value1'});
+$__local_var_3_1 = ((($GLOBALS['Data_List_alterAt'])(($v_0 - 1)))($v1_1))(($v2_2)->{'value1'});
 $__t2 = null;;
 if ((is_object($__local_var_3_1) && (($__local_var_3_1)->{'tag'} === "Just"))) {
 $__t2 = new Phpurs_Data1("Just", new Phpurs_Data2("Cons", ($v2_2)->{'value0'}, ($__local_var_3_1)->{'value0'}));
@@ -3482,96 +3635,20 @@ goto end_branch_0;;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_List_modifyAt'] = function() { $v = (function() {
+})();
+
+// Data_List_modifyAt
+$GLOBALS['Data_List_modifyAt'] = (function() {
   $__fn = function($n_0 = null, $f_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_List_alterAt'] ?? \PhpursThunks::eval('Data_List_alterAt')))($n_0))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just'))))($f_1));
+  $__res = (($GLOBALS['Data_List_alterAt'])($n_0))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Maybe_Just']))($f_1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+})();
 

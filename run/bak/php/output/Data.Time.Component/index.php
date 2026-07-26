@@ -104,122 +104,108 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Time_Component_showSecond'] = function() { $v = ["show" => function($v_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Time_Component_showSecond
+$GLOBALS['Data_Time_Component_showSecond'] = ["show" => function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = (("(Second " . (($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))($v_0)) . ")");
+  $__res = (("(Second " . ($GLOBALS['Data_Show_showIntImpl'])($v_0)) . ")");
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Time_Component_showMinute'] = function() { $v = ["show" => function($v_0 = null) {
+}];
+
+// Data_Time_Component_showMinute
+$GLOBALS['Data_Time_Component_showMinute'] = ["show" => function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = (("(Minute " . (($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))($v_0)) . ")");
+  $__res = (("(Minute " . ($GLOBALS['Data_Show_showIntImpl'])($v_0)) . ")");
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Time_Component_showMillisecond'] = function() { $v = ["show" => function($v_0 = null) {
+}];
+
+// Data_Time_Component_showMillisecond
+$GLOBALS['Data_Time_Component_showMillisecond'] = ["show" => function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = (("(Millisecond " . (($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))($v_0)) . ")");
+  $__res = (("(Millisecond " . ($GLOBALS['Data_Show_showIntImpl'])($v_0)) . ")");
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Time_Component_showHour'] = function() { $v = ["show" => function($v_0 = null) {
+}];
+
+// Data_Time_Component_showHour
+$GLOBALS['Data_Time_Component_showHour'] = ["show" => function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = (("(Hour " . (($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))($v_0)) . ")");
+  $__res = (("(Hour " . ($GLOBALS['Data_Show_showIntImpl'])($v_0)) . ")");
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Time_Component_ordSecond'] = function() { $v = ($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')); return $v; };
-\PhpursThunks::$thunks['Data_Time_Component_ordMinute'] = function() { $v = ($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')); return $v; };
-\PhpursThunks::$thunks['Data_Time_Component_ordMillisecond'] = function() { $v = ($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')); return $v; };
-\PhpursThunks::$thunks['Data_Time_Component_ordHour'] = function() { $v = ($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')); return $v; };
-\PhpursThunks::$thunks['Data_Time_Component_eqSecond'] = function() { $v = ($GLOBALS['Data_Eq_eqInt'] ?? \PhpursThunks::eval('Data_Eq_eqInt')); return $v; };
-\PhpursThunks::$thunks['Data_Time_Component_eqMinute'] = function() { $v = ($GLOBALS['Data_Eq_eqInt'] ?? \PhpursThunks::eval('Data_Eq_eqInt')); return $v; };
-\PhpursThunks::$thunks['Data_Time_Component_eqMillisecond'] = function() { $v = ($GLOBALS['Data_Eq_eqInt'] ?? \PhpursThunks::eval('Data_Eq_eqInt')); return $v; };
-\PhpursThunks::$thunks['Data_Time_Component_eqHour'] = function() { $v = ($GLOBALS['Data_Eq_eqInt'] ?? \PhpursThunks::eval('Data_Eq_eqInt')); return $v; };
-\PhpursThunks::$thunks['Data_Time_Component_boundedSecond'] = function() { $v = ["bottom" => 0, "top" => 59, "Ord0" => function($dollar__unused_0 = null) {
+}];
+
+// Data_Time_Component_ordSecond
+$GLOBALS['Data_Time_Component_ordSecond'] = $GLOBALS['Data_Ord_ordInt'];
+
+// Data_Time_Component_ordMinute
+$GLOBALS['Data_Time_Component_ordMinute'] = $GLOBALS['Data_Ord_ordInt'];
+
+// Data_Time_Component_ordMillisecond
+$GLOBALS['Data_Time_Component_ordMillisecond'] = $GLOBALS['Data_Ord_ordInt'];
+
+// Data_Time_Component_ordHour
+$GLOBALS['Data_Time_Component_ordHour'] = $GLOBALS['Data_Ord_ordInt'];
+
+// Data_Time_Component_eqSecond
+$GLOBALS['Data_Time_Component_eqSecond'] = $GLOBALS['Data_Eq_eqInt'];
+
+// Data_Time_Component_eqMinute
+$GLOBALS['Data_Time_Component_eqMinute'] = $GLOBALS['Data_Eq_eqInt'];
+
+// Data_Time_Component_eqMillisecond
+$GLOBALS['Data_Time_Component_eqMillisecond'] = $GLOBALS['Data_Eq_eqInt'];
+
+// Data_Time_Component_eqHour
+$GLOBALS['Data_Time_Component_eqHour'] = $GLOBALS['Data_Eq_eqInt'];
+
+// Data_Time_Component_boundedSecond
+$GLOBALS['Data_Time_Component_boundedSecond'] = ["bottom" => 0, "top" => 59, "Ord0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt'));
+  $__res = $GLOBALS['Data_Ord_ordInt'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Time_Component_boundedMinute'] = function() { $v = ["bottom" => 0, "top" => 59, "Ord0" => function($dollar__unused_0 = null) {
+}];
+
+// Data_Time_Component_boundedMinute
+$GLOBALS['Data_Time_Component_boundedMinute'] = ["bottom" => 0, "top" => 59, "Ord0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt'));
+  $__res = $GLOBALS['Data_Ord_ordInt'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Time_Component_boundedMillisecond'] = function() { $v = ["bottom" => 0, "top" => 999, "Ord0" => function($dollar__unused_0 = null) {
+}];
+
+// Data_Time_Component_boundedMillisecond
+$GLOBALS['Data_Time_Component_boundedMillisecond'] = ["bottom" => 0, "top" => 999, "Ord0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt'));
+  $__res = $GLOBALS['Data_Ord_ordInt'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Time_Component_boundedHour'] = function() { $v = ["bottom" => 0, "top" => 23, "Ord0" => function($dollar__unused_0 = null) {
+}];
+
+// Data_Time_Component_boundedHour
+$GLOBALS['Data_Time_Component_boundedHour'] = ["bottom" => 0, "top" => 23, "Ord0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt'));
+  $__res = $GLOBALS['Data_Ord_ordInt'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Time_Component_boundedEnumSecond'] = function() { $v = ["cardinality" => 60, "toEnum" => function($n_0 = null) {
-  $__num = \func_num_args();
-  $__t0 = null;;
-  if ((($n_0 >= 0) && ($n_0 <= 59))) {
-$__t0 = new Phpurs_Data1("Just", $n_0);
-goto end_branch_0;;
-};
-  $__t0 = new Phpurs_Data0("Nothing");
-  end_branch_0:;
-  $__res = $__t0;
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "fromEnum" => function($v_0 = null) {
-  $__num = \func_num_args();
-  $__res = $v_0;
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Bounded0" => function($dollar__unused_0 = null) {
-  $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Time_Component_boundedSecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedSecond'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Enum1" => function($dollar__unused_0 = null) {
-  $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Time_Component_enumSecond'] ?? \PhpursThunks::eval('Data_Time_Component_enumSecond'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Time_Component_enumSecond'] = function() { $v = ["succ" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Data_Time_Component_boundedEnumSecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumSecond')))['toEnum']))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(function($v_0 = null) {
-  $__num = \func_num_args();
-  $__res = ($v_0 + 1);
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))((($GLOBALS['Data_Time_Component_boundedEnumSecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumSecond')))['fromEnum'])), "pred" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Data_Time_Component_boundedEnumSecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumSecond')))['toEnum']))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(function($v_0 = null) {
-  $__num = \func_num_args();
-  $__res = ($v_0 - 1);
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))((($GLOBALS['Data_Time_Component_boundedEnumSecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumSecond')))['fromEnum'])), "Ord0" => function($dollar__unused_0 = null) {
-  $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Time_Component_boundedEnumMinute'] = function() { $v = ["cardinality" => 60, "toEnum" => function($n_0 = null) {
+}];
+
+// Data_Time_Component_boundedEnumSecond
+$GLOBALS['Data_Time_Component_boundedEnumSecond'] = ["cardinality" => 60, "toEnum" => function($n_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((($n_0 >= 0) && ($n_0 <= 59))) {
@@ -240,37 +226,96 @@ goto end_branch_0;;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bounded0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Time_Component_boundedMinute'] ?? \PhpursThunks::eval('Data_Time_Component_boundedMinute'));
+  $__res = $GLOBALS['Data_Time_Component_boundedSecond'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Enum1" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Time_Component_enumMinute'] ?? \PhpursThunks::eval('Data_Time_Component_enumMinute'));
+  $__res = $GLOBALS['Data_Time_Component_enumSecond'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Time_Component_enumMinute'] = function() { $v = ["succ" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Data_Time_Component_boundedEnumMinute'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMinute')))['toEnum']))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(function($v_0 = null) {
+}];
+
+// Data_Time_Component_enumSecond
+$GLOBALS['Data_Time_Component_enumSecond'] = ["succ" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Time_Component_boundedEnumSecond'])['toEnum']))((($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v_0 = null) {
   $__num = \func_num_args();
   $__res = ($v_0 + 1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))((($GLOBALS['Data_Time_Component_boundedEnumMinute'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMinute')))['fromEnum'])), "pred" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Data_Time_Component_boundedEnumMinute'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMinute')))['toEnum']))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(function($v_0 = null) {
+}))(($GLOBALS['Data_Time_Component_boundedEnumSecond'])['fromEnum'])), "pred" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Time_Component_boundedEnumSecond'])['toEnum']))((($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v_0 = null) {
   $__num = \func_num_args();
   $__res = ($v_0 - 1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))((($GLOBALS['Data_Time_Component_boundedEnumMinute'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMinute')))['fromEnum'])), "Ord0" => function($dollar__unused_0 = null) {
+}))(($GLOBALS['Data_Time_Component_boundedEnumSecond'])['fromEnum'])), "Ord0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt'));
+  $__res = $GLOBALS['Data_Ord_ordInt'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Time_Component_boundedEnumMillisecond'] = function() { $v = ["cardinality" => 1000, "toEnum" => function($n_0 = null) {
+}];
+
+// Data_Time_Component_boundedEnumMinute
+$GLOBALS['Data_Time_Component_boundedEnumMinute'] = ["cardinality" => 60, "toEnum" => function($n_0 = null) {
+  $__num = \func_num_args();
+  $__t0 = null;;
+  if ((($n_0 >= 0) && ($n_0 <= 59))) {
+$__t0 = new Phpurs_Data1("Just", $n_0);
+goto end_branch_0;;
+};
+  $__t0 = new Phpurs_Data0("Nothing");
+  end_branch_0:;
+  $__res = $__t0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "fromEnum" => function($v_0 = null) {
+  $__num = \func_num_args();
+  $__res = $v_0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Bounded0" => function($dollar__unused_0 = null) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Data_Time_Component_boundedMinute'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Enum1" => function($dollar__unused_0 = null) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Data_Time_Component_enumMinute'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+
+// Data_Time_Component_enumMinute
+$GLOBALS['Data_Time_Component_enumMinute'] = ["succ" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Time_Component_boundedEnumMinute'])['toEnum']))((($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v_0 = null) {
+  $__num = \func_num_args();
+  $__res = ($v_0 + 1);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}))(($GLOBALS['Data_Time_Component_boundedEnumMinute'])['fromEnum'])), "pred" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Time_Component_boundedEnumMinute'])['toEnum']))((($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v_0 = null) {
+  $__num = \func_num_args();
+  $__res = ($v_0 - 1);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}))(($GLOBALS['Data_Time_Component_boundedEnumMinute'])['fromEnum'])), "Ord0" => function($dollar__unused_0 = null) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Data_Ord_ordInt'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+
+// Data_Time_Component_boundedEnumMillisecond
+$GLOBALS['Data_Time_Component_boundedEnumMillisecond'] = ["cardinality" => 1000, "toEnum" => function($n_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((($n_0 >= 0) && ($n_0 <= 999))) {
@@ -291,37 +336,41 @@ goto end_branch_0;;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bounded0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Time_Component_boundedMillisecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedMillisecond'));
+  $__res = $GLOBALS['Data_Time_Component_boundedMillisecond'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Enum1" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Time_Component_enumMillisecond'] ?? \PhpursThunks::eval('Data_Time_Component_enumMillisecond'));
+  $__res = $GLOBALS['Data_Time_Component_enumMillisecond'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Time_Component_enumMillisecond'] = function() { $v = ["succ" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Data_Time_Component_boundedEnumMillisecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMillisecond')))['toEnum']))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(function($v_0 = null) {
+}];
+
+// Data_Time_Component_enumMillisecond
+$GLOBALS['Data_Time_Component_enumMillisecond'] = ["succ" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Time_Component_boundedEnumMillisecond'])['toEnum']))((($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v_0 = null) {
   $__num = \func_num_args();
   $__res = ($v_0 + 1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))((($GLOBALS['Data_Time_Component_boundedEnumMillisecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMillisecond')))['fromEnum'])), "pred" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Data_Time_Component_boundedEnumMillisecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMillisecond')))['toEnum']))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(function($v_0 = null) {
+}))(($GLOBALS['Data_Time_Component_boundedEnumMillisecond'])['fromEnum'])), "pred" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Time_Component_boundedEnumMillisecond'])['toEnum']))((($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v_0 = null) {
   $__num = \func_num_args();
   $__res = ($v_0 - 1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))((($GLOBALS['Data_Time_Component_boundedEnumMillisecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMillisecond')))['fromEnum'])), "Ord0" => function($dollar__unused_0 = null) {
+}))(($GLOBALS['Data_Time_Component_boundedEnumMillisecond'])['fromEnum'])), "Ord0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt'));
+  $__res = $GLOBALS['Data_Ord_ordInt'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Time_Component_boundedEnumHour'] = function() { $v = ["cardinality" => 24, "toEnum" => function($n_0 = null) {
+}];
+
+// Data_Time_Component_boundedEnumHour
+$GLOBALS['Data_Time_Component_boundedEnumHour'] = ["cardinality" => 24, "toEnum" => function($n_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((($n_0 >= 0) && ($n_0 <= 23))) {
@@ -342,60 +391,36 @@ goto end_branch_0;;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bounded0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Time_Component_boundedHour'] ?? \PhpursThunks::eval('Data_Time_Component_boundedHour'));
+  $__res = $GLOBALS['Data_Time_Component_boundedHour'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Enum1" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Time_Component_enumHour'] ?? \PhpursThunks::eval('Data_Time_Component_enumHour'));
+  $__res = $GLOBALS['Data_Time_Component_enumHour'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Time_Component_enumHour'] = function() { $v = ["succ" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Data_Time_Component_boundedEnumHour'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumHour')))['toEnum']))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(function($v_0 = null) {
+}];
+
+// Data_Time_Component_enumHour
+$GLOBALS['Data_Time_Component_enumHour'] = ["succ" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Time_Component_boundedEnumHour'])['toEnum']))((($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v_0 = null) {
   $__num = \func_num_args();
   $__res = ($v_0 + 1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))((($GLOBALS['Data_Time_Component_boundedEnumHour'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumHour')))['fromEnum'])), "pred" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Data_Time_Component_boundedEnumHour'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumHour')))['toEnum']))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(function($v_0 = null) {
+}))(($GLOBALS['Data_Time_Component_boundedEnumHour'])['fromEnum'])), "pred" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Time_Component_boundedEnumHour'])['toEnum']))((($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v_0 = null) {
   $__num = \func_num_args();
   $__res = ($v_0 - 1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))((($GLOBALS['Data_Time_Component_boundedEnumHour'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumHour')))['fromEnum'])), "Ord0" => function($dollar__unused_0 = null) {
+}))(($GLOBALS['Data_Time_Component_boundedEnumHour'])['fromEnum'])), "Ord0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt'));
+  $__res = $GLOBALS['Data_Ord_ordInt'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}];
 

@@ -96,102 +96,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Effect_Console_warnShow'] = function() { $v = (function() {
-  $__fn = function($dictShow_0 = null, $a_1 = null) use (&$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = (($GLOBALS['Effect_Console_warn'] ?? \PhpursThunks::eval('Effect_Console_warn')))((($dictShow_0)['show'])($a_1));
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Effect_Console_logShow'] = function() { $v = (function() {
-  $__fn = function($dictShow_0 = null, $a_1 = null) use (&$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))((($dictShow_0)['show'])($a_1));
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Effect_Console_infoShow'] = function() { $v = (function() {
-  $__fn = function($dictShow_0 = null, $a_1 = null) use (&$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = (($GLOBALS['Effect_Console_info'] ?? \PhpursThunks::eval('Effect_Console_info')))((($dictShow_0)['show'])($a_1));
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Effect_Console_grouped'] = function() { $v = (function() {
-  $__fn = function($name_0 = null, $inner_1 = null) use (&$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))((($GLOBALS['Effect_Console_group'] ?? \PhpursThunks::eval('Effect_Console_group')))($name_0)))(function($dollar__unused_2 = null) use ($inner_1) {
-  $__num = \func_num_args();
-  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))($inner_1))(function($result_3 = null) {
-  $__num = \func_num_args();
-  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Effect_Console_groupEnd'] ?? \PhpursThunks::eval('Effect_Console_groupEnd'))))(function($dollar__unused_4 = null) use ($result_3) {
-  $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_pureE'] ?? \PhpursThunks::eval('Effect_pureE')))($result_3);
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Effect_Console_errorShow'] = function() { $v = (function() {
-  $__fn = function($dictShow_0 = null, $a_1 = null) use (&$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = (($GLOBALS['Effect_Console_error'] ?? \PhpursThunks::eval('Effect_Console_error')))((($dictShow_0)['show'])($a_1));
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Effect_Console_debugShow'] = function() { $v = (function() {
-  $__fn = function($dictShow_0 = null, $a_1 = null) use (&$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = (($GLOBALS['Effect_Console_debug'] ?? \PhpursThunks::eval('Effect_Console_debug')))((($dictShow_0)['show'])($a_1));
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(); return $v; };
+
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Effect_Console = \call_user_func(function() {
   $exports = [];
@@ -224,23 +129,125 @@ $exports['groupEnd'] = $groupEnd;
 return $exports;
   return $exports;
 });
-\PhpursThunks::$thunks['Effect_Console_clear'] = function() use (&$ffi_Effect_Console) { return $ffi_Effect_Console['clear']; };
-\PhpursThunks::$thunks['Effect_Console_debug'] = function() use (&$ffi_Effect_Console) { return $ffi_Effect_Console['debug']; };
-\PhpursThunks::$thunks['Effect_Console_error'] = function() use (&$ffi_Effect_Console) { return $ffi_Effect_Console['error']; };
-\PhpursThunks::$thunks['Effect_Console_group'] = function() use (&$ffi_Effect_Console) { return $ffi_Effect_Console['group']; };
-\PhpursThunks::$thunks['Effect_Console_groupCollapsed'] = function() use (&$ffi_Effect_Console) { return $ffi_Effect_Console['groupCollapsed']; };
-\PhpursThunks::$thunks['Effect_Console_groupEnd'] = function() use (&$ffi_Effect_Console) { return $ffi_Effect_Console['groupEnd']; };
-\PhpursThunks::$thunks['Effect_Console_info'] = function() use (&$ffi_Effect_Console) { return $ffi_Effect_Console['info']; };
-\PhpursThunks::$thunks['Effect_Console_log'] = function() use (&$ffi_Effect_Console) { return $ffi_Effect_Console['log']; };
-\PhpursThunks::$thunks['Effect_Console_time'] = function() use (&$ffi_Effect_Console) { return $ffi_Effect_Console['time']; };
-\PhpursThunks::$thunks['Effect_Console_timeEnd'] = function() use (&$ffi_Effect_Console) { return $ffi_Effect_Console['timeEnd']; };
-\PhpursThunks::$thunks['Effect_Console_timeLog'] = function() use (&$ffi_Effect_Console) { return $ffi_Effect_Console['timeLog']; };
-\PhpursThunks::$thunks['Effect_Console_warn'] = function() use (&$ffi_Effect_Console) { return $ffi_Effect_Console['warn']; };
+$GLOBALS['Effect_Console_clear'] = $ffi_Effect_Console['clear'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Effect_Console_debug'] = $ffi_Effect_Console['debug'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Effect_Console_error'] = $ffi_Effect_Console['error'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Effect_Console_group'] = $ffi_Effect_Console['group'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Effect_Console_groupCollapsed'] = $ffi_Effect_Console['groupCollapsed'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Effect_Console_groupEnd'] = $ffi_Effect_Console['groupEnd'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Effect_Console_info'] = $ffi_Effect_Console['info'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Effect_Console_log'] = $ffi_Effect_Console['log'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Effect_Console_time'] = $ffi_Effect_Console['time'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Effect_Console_timeEnd'] = $ffi_Effect_Console['timeEnd'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Effect_Console_timeLog'] = $ffi_Effect_Console['timeLog'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Effect_Console_warn'] = $ffi_Effect_Console['warn'] ?? new class { public function __invoke(...$args) { return $this; } };
 
 
+// Effect_Console_warnShow
+$GLOBALS['Effect_Console_warnShow'] = (function() {
+  $__fn = function($dictShow_0 = null, $a_1 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ($GLOBALS['Effect_Console_warn'])((($dictShow_0)['show'])($a_1));
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
 
+// Effect_Console_logShow
+$GLOBALS['Effect_Console_logShow'] = (function() {
+  $__fn = function($dictShow_0 = null, $a_1 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ($GLOBALS['Effect_Console_log'])((($dictShow_0)['show'])($a_1));
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
 
+// Effect_Console_infoShow
+$GLOBALS['Effect_Console_infoShow'] = (function() {
+  $__fn = function($dictShow_0 = null, $a_1 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ($GLOBALS['Effect_Console_info'])((($dictShow_0)['show'])($a_1));
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
 
+// Effect_Console_grouped
+$GLOBALS['Effect_Console_grouped'] = (function() {
+  $__fn = function($name_0 = null, $inner_1 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = (($GLOBALS['Effect_bindE'])(($GLOBALS['Effect_Console_group'])($name_0)))(function($dollar__unused_2 = null) use ($inner_1) {
+  $__num = \func_num_args();
+  $__res = (($GLOBALS['Effect_bindE'])($inner_1))(function($result_3 = null) {
+  $__num = \func_num_args();
+  $__res = (($GLOBALS['Effect_bindE'])($GLOBALS['Effect_Console_groupEnd']))(function($dollar__unused_4 = null) use ($result_3) {
+  $__num = \func_num_args();
+  $__res = ($GLOBALS['Effect_pureE'])($result_3);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
 
+// Effect_Console_errorShow
+$GLOBALS['Effect_Console_errorShow'] = (function() {
+  $__fn = function($dictShow_0 = null, $a_1 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ($GLOBALS['Effect_Console_error'])((($dictShow_0)['show'])($a_1));
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
 
+// Effect_Console_debugShow
+$GLOBALS['Effect_Console_debugShow'] = (function() {
+  $__fn = function($dictShow_0 = null, $a_1 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ($GLOBALS['Effect_Console_debug'])((($dictShow_0)['show'])($a_1));
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
 

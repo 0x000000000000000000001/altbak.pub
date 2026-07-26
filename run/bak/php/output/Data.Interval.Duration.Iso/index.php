@@ -117,7 +117,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Interval_Duration_Iso_lookup'] = function() { $v = function($k_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Interval_Duration_Iso_lookup
+$GLOBALS['Data_Interval_Duration_Iso_lookup'] = function($k_0 = null) {
   $__num = \func_num_args();
   $go_1_0 = null;
   $go_1_0 = function($v_2 = null) use (&$go_1_0, $k_0) {
@@ -280,9 +285,13 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Interval_Duration_Iso_foldMap1'] = function() { $v = ((($GLOBALS['Data_List_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Types_foldableList')))['foldMap'])(($GLOBALS['Data_List_Types_monoidList'] ?? \PhpursThunks::eval('Data_List_Types_monoidList'))); return $v; };
-\PhpursThunks::$thunks['Data_Interval_Duration_Iso_foldMap2'] = function() { $v = (function() use (&$__fn) {
+};
+
+// Data_Interval_Duration_Iso_foldMap1
+$GLOBALS['Data_Interval_Duration_Iso_foldMap1'] = (($GLOBALS['Data_List_Types_foldableList'])['foldMap'])($GLOBALS['Data_List_Types_monoidList']);
+
+// Data_Interval_Duration_Iso_foldMap2
+$GLOBALS['Data_Interval_Duration_Iso_foldMap2'] = (function() use (&$__fn) {
 $semigroupAdditive1_0_0 = ["append" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
@@ -296,16 +305,20 @@ $semigroupAdditive1_0_0 = ["append" => (function() {
   };
   return $__fn;
 })()];
-return ((($GLOBALS['Data_List_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Types_foldableList')))['foldMap'])(["mempty" => 0.0, "Semigroup0" => function($dollar__unused_1 = null) use ($semigroupAdditive1_0_0) {
+return (($GLOBALS['Data_List_Types_foldableList'])['foldMap'])(["mempty" => 0.0, "Semigroup0" => function($dollar__unused_1 = null) use ($semigroupAdditive1_0_0) {
   $__num = \func_num_args();
   $__res = $semigroupAdditive1_0_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]);
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Interval_Duration_Iso_fold'] = function() { $v = (((($GLOBALS['Data_Foldable_foldMapDefaultR'] ?? \PhpursThunks::eval('Data_Foldable_foldMapDefaultR')))(($GLOBALS['Data_Foldable_foldableArray'] ?? \PhpursThunks::eval('Data_Foldable_foldableArray'))))((($GLOBALS['Data_Monoid_monoidFn'] ?? \PhpursThunks::eval('Data_Monoid_monoidFn')))(($GLOBALS['Data_List_Types_monoidList'] ?? \PhpursThunks::eval('Data_List_Types_monoidList')))))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))['identity']); return $v; };
-\PhpursThunks::$thunks['Data_Interval_Duration_Iso_toUnfoldable'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(function($b_0 = null) {
+})();
+
+// Data_Interval_Duration_Iso_fold
+$GLOBALS['Data_Interval_Duration_Iso_fold'] = ((($GLOBALS['Data_Foldable_foldMapDefaultR'])($GLOBALS['Data_Foldable_foldableArray']))(($GLOBALS['Data_Monoid_monoidFn'])($GLOBALS['Data_List_Types_monoidList'])))(($GLOBALS['Control_Category_categoryFn'])['identity']);
+
+// Data_Interval_Duration_Iso_toUnfoldable
+$GLOBALS['Data_Interval_Duration_Iso_toUnfoldable'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])(function($b_0 = null) {
   $__num = \func_num_args();
   $go_1_0 = null;
   $go_1_0 = (function() use (&$go_1_0) {
@@ -319,7 +332,7 @@ return ((($GLOBALS['Data_List_Types_foldableList'] ?? \PhpursThunks::eval('Data_
   tco_loop_go_1_0_0:;
   $source_2 = $__tco_var_go_1_0_0_source_2;
   $memo_3 = $__tco_var_go_1_0_0_memo_3;
-  $v_4_0 = (($GLOBALS['Data_Map_Internal_stepUnfoldr'] ?? \PhpursThunks::eval('Data_Map_Internal_stepUnfoldr')))($source_2);
+  $v_4_0 = ($GLOBALS['Data_Map_Internal_stepUnfoldr'])($source_2);
   $__t1 = null;;
   if ((is_object($v_4_0) && (($v_4_0)->{'tag'} === "Nothing"))) {
 $go_5_2 = null;
@@ -384,38 +397,52 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(($GLOBALS['Data_Map_Internal_toMapIter'] ?? \PhpursThunks::eval('Data_Map_Internal_toMapIter'))); return $v; };
-\PhpursThunks::$thunks['Data_Interval_Duration_Iso_IsEmpty'] = function() { $v = ($GLOBALS['__phpurs_data0_IsEmpty'] ??= new Phpurs_Data0("IsEmpty")); return $v; };
-\PhpursThunks::$thunks['Data_Interval_Duration_Iso_InvalidWeekComponentUsage'] = function() { $v = ($GLOBALS['__phpurs_data0_InvalidWeekComponentUsage'] ??= new Phpurs_Data0("InvalidWeekComponentUsage")); return $v; };
-\PhpursThunks::$thunks['Data_Interval_Duration_Iso_ContainsNegativeValue'] = function() { $v = function($value0 = null) {
+}))($GLOBALS['Data_Map_Internal_toMapIter']);
+
+// Data_Interval_Duration_Iso_IsEmpty
+$GLOBALS['Data_Interval_Duration_Iso_IsEmpty'] = ($GLOBALS['__phpurs_data0_IsEmpty'] ??= new Phpurs_Data0("IsEmpty"));
+
+// Data_Interval_Duration_Iso_InvalidWeekComponentUsage
+$GLOBALS['Data_Interval_Duration_Iso_InvalidWeekComponentUsage'] = ($GLOBALS['__phpurs_data0_InvalidWeekComponentUsage'] ??= new Phpurs_Data0("InvalidWeekComponentUsage"));
+
+// Data_Interval_Duration_Iso_ContainsNegativeValue
+$GLOBALS['Data_Interval_Duration_Iso_ContainsNegativeValue'] = function($value0 = null) {
   $__num = \func_num_args();
   $__res = new Phpurs_Data1("ContainsNegativeValue", $value0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Interval_Duration_Iso_InvalidFractionalUse'] = function() { $v = function($value0 = null) {
+};
+
+// Data_Interval_Duration_Iso_InvalidFractionalUse
+$GLOBALS['Data_Interval_Duration_Iso_InvalidFractionalUse'] = function($value0 = null) {
   $__num = \func_num_args();
   $__res = new Phpurs_Data1("InvalidFractionalUse", $value0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Interval_Duration_Iso_unIsoDuration'] = function() { $v = function($v_0 = null) {
+};
+
+// Data_Interval_Duration_Iso_unIsoDuration
+$GLOBALS['Data_Interval_Duration_Iso_unIsoDuration'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__res = $v_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Interval_Duration_Iso_showIsoDuration'] = function() { $v = ["show" => function($v_0 = null) {
+};
+
+// Data_Interval_Duration_Iso_showIsoDuration
+$GLOBALS['Data_Interval_Duration_Iso_showIsoDuration'] = ["show" => function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = (("(IsoDuration (Duration " . (($GLOBALS['Data_Interval_Duration_show'] ?? \PhpursThunks::eval('Data_Interval_Duration_show')))($v_0)) . "))");
+  $__res = (("(IsoDuration (Duration " . ($GLOBALS['Data_Interval_Duration_show'])($v_0)) . "))");
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Interval_Duration_Iso_showError'] = function() { $v = ["show" => function($v_0 = null) {
+}];
+
+// Data_Interval_Duration_Iso_showError
+$GLOBALS['Data_Interval_Duration_Iso_showError'] = ["show" => function($v_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object($v_0) && (($v_0)->{'tag'} === "IsEmpty"))) {
@@ -505,8 +532,10 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Interval_Duration_Iso_prettyError'] = function() { $v = function($v_0 = null) {
+}];
+
+// Data_Interval_Duration_Iso_prettyError
+$GLOBALS['Data_Interval_Duration_Iso_prettyError'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object($v_0) && (($v_0)->{'tag'} === "IsEmpty"))) {
@@ -596,27 +625,31 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Interval_Duration_Iso_eqIsoDuration'] = function() { $v = ["eq" => (function() {
+};
+
+// Data_Interval_Duration_Iso_eqIsoDuration
+$GLOBALS['Data_Interval_Duration_Iso_eqIsoDuration'] = ["eq" => (function() {
   $__fn = function($x_0 = null, $y_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_Interval_Duration_eq'] ?? \PhpursThunks::eval('Data_Interval_Duration_eq')))($x_0))($y_1);
+  $__res = (($GLOBALS['Data_Interval_Duration_eq'])($x_0))($y_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Interval_Duration_Iso_ordIsoDuration'] = function() { $v = ["compare" => (function() {
+})()];
+
+// Data_Interval_Duration_Iso_ordIsoDuration
+$GLOBALS['Data_Interval_Duration_Iso_ordIsoDuration'] = ["compare" => (function() {
   $__fn = function($x_0 = null, $y_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_Interval_Duration_compare'] ?? \PhpursThunks::eval('Data_Interval_Duration_compare')))($x_0))($y_1);
+  $__res = (($GLOBALS['Data_Interval_Duration_compare'])($x_0))($y_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -624,12 +657,14 @@ goto end_branch_0;;
   return $__fn;
 })(), "Eq0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Interval_Duration_Iso_eqIsoDuration'] ?? \PhpursThunks::eval('Data_Interval_Duration_Iso_eqIsoDuration'));
+  $__res = $GLOBALS['Data_Interval_Duration_Iso_eqIsoDuration'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Interval_Duration_Iso_eqError'] = function() { $v = ["eq" => (function() {
+}];
+
+// Data_Interval_Duration_Iso_eqError
+$GLOBALS['Data_Interval_Duration_Iso_eqError'] = ["eq" => (function() {
   $__fn = function($x_0 = null, $y_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -710,8 +745,10 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Interval_Duration_Iso_ordError'] = function() { $v = ["compare" => (function() {
+})()];
+
+// Data_Interval_Duration_Iso_ordError
+$GLOBALS['Data_Interval_Duration_Iso_ordError'] = ["compare" => (function() {
   $__fn = function($x_0 = null, $y_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -974,16 +1011,18 @@ goto end_branch_0;;
   return $__fn;
 })(), "Eq0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Interval_Duration_Iso_eqError'] ?? \PhpursThunks::eval('Data_Interval_Duration_Iso_eqError'));
+  $__res = $GLOBALS['Data_Interval_Duration_Iso_eqError'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Interval_Duration_Iso_checkWeekUsage'] = function() { $v = function($v_0 = null) {
+}];
+
+// Data_Interval_Duration_Iso_checkWeekUsage
+$GLOBALS['Data_Interval_Duration_Iso_checkWeekUsage'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((function() use ($v_0, &$__fn) {
-$__local_var_1_1 = ((($GLOBALS['Data_Interval_Duration_Iso_lookup'] ?? \PhpursThunks::eval('Data_Interval_Duration_Iso_lookup')))(new Phpurs_Data0("Week")))(($v_0)['asMap']);
+$__local_var_1_1 = (($GLOBALS['Data_Interval_Duration_Iso_lookup'])(new Phpurs_Data0("Week")))(($v_0)['asMap']);
 $__t2 = null;;
 if ((is_object($__local_var_1_1) && (($__local_var_1_1)->{'tag'} === "Nothing"))) {
 $__t2 = false;
@@ -1019,10 +1058,12 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Interval_Duration_Iso_checkNegativeValues'] = function() { $v = function($v_0 = null) {
+};
+
+// Data_Interval_Duration_Iso_checkNegativeValues
+$GLOBALS['Data_Interval_Duration_Iso_checkNegativeValues'] = function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Interval_Duration_Iso_foldMap1'] ?? \PhpursThunks::eval('Data_Interval_Duration_Iso_foldMap1')))(function($v1_1 = null) {
+  $__res = (($GLOBALS['Data_Interval_Duration_Iso_foldMap1'])(function($v1_1 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((($v1_1)->{'value1'} >= 0.0)) {
@@ -1039,18 +1080,20 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Interval_Duration_Iso_checkFractionalUse'] = function() { $v = function($v_0 = null) {
+};
+
+// Data_Interval_Duration_Iso_checkFractionalUse
+$GLOBALS['Data_Interval_Duration_Iso_checkFractionalUse'] = function($v_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = ((($GLOBALS['Data_List_span'] ?? \PhpursThunks::eval('Data_List_span')))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(function($a_1 = null) {
+  $__local_var_1_0 = (($GLOBALS['Data_List_span'])((($GLOBALS['Control_Semigroupoid_composeImpl'])(function($a_1 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Number_floor'] ?? \PhpursThunks::eval('Data_Number_floor')))($a_1) === $a_1);
+  $__res = (($GLOBALS['Data_Number_floor'])($a_1) === $a_1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(($GLOBALS['Data_Tuple_snd'] ?? \PhpursThunks::eval('Data_Tuple_snd')))))(($v_0)['asList']);
+}))($GLOBALS['Data_Tuple_snd'])))(($v_0)['asList']);
   $__t1 = null;;
-  if (((is_object(($__local_var_1_0)['rest']) && ((($__local_var_1_0)['rest'])->{'tag'} === "Cons")) && (((($GLOBALS['Data_Interval_Duration_Iso_foldMap2'] ?? \PhpursThunks::eval('Data_Interval_Duration_Iso_foldMap2')))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Monoid_Additive_Additive'] ?? \PhpursThunks::eval('Data_Monoid_Additive_Additive'))))(($GLOBALS['Data_Number_abs'] ?? \PhpursThunks::eval('Data_Number_abs')))))(($GLOBALS['Data_Tuple_snd'] ?? \PhpursThunks::eval('Data_Tuple_snd')))))((($__local_var_1_0)['rest'])->{'value1'}) > 0.0))) {
+  if (((is_object(($__local_var_1_0)['rest']) && ((($__local_var_1_0)['rest'])->{'tag'} === "Cons")) && ((($GLOBALS['Data_Interval_Duration_Iso_foldMap2'])((($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Monoid_Additive_Additive']))($GLOBALS['Data_Number_abs'])))($GLOBALS['Data_Tuple_snd'])))((($__local_var_1_0)['rest'])->{'value1'}) > 0.0))) {
 $__t1 = new Phpurs_Data2("Cons", new Phpurs_Data1("InvalidFractionalUse", ((($__local_var_1_0)['rest'])->{'value0'})->{'value0'}), new Phpurs_Data0("Nil"));
 goto end_branch_1;;
 };
@@ -1060,8 +1103,10 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Interval_Duration_Iso_checkEmptiness'] = function() { $v = function($v_0 = null) {
+};
+
+// Data_Interval_Duration_Iso_checkEmptiness
+$GLOBALS['Data_Interval_Duration_Iso_checkEmptiness'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object(($v_0)['asList']) && ((($v_0)['asList'])->{'tag'} === "Nil"))) {
@@ -1074,8 +1119,10 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Interval_Duration_Iso_checkValidIsoDuration'] = function() { $v = function($v_0 = null) {
+};
+
+// Data_Interval_Duration_Iso_checkValidIsoDuration
+$GLOBALS['Data_Interval_Duration_Iso_checkValidIsoDuration'] = function($v_0 = null) {
   $__num = \func_num_args();
   $go_1_0 = null;
   $go_1_0 = (function() use (&$go_1_0) {
@@ -1113,14 +1160,16 @@ goto end_branch_0;;
   };
   return $__fn;
 })();
-  $__res = ((($GLOBALS['Data_Interval_Duration_Iso_fold'] ?? \PhpursThunks::eval('Data_Interval_Duration_Iso_fold')))([($GLOBALS['Data_Interval_Duration_Iso_checkWeekUsage'] ?? \PhpursThunks::eval('Data_Interval_Duration_Iso_checkWeekUsage')), ($GLOBALS['Data_Interval_Duration_Iso_checkEmptiness'] ?? \PhpursThunks::eval('Data_Interval_Duration_Iso_checkEmptiness')), ($GLOBALS['Data_Interval_Duration_Iso_checkFractionalUse'] ?? \PhpursThunks::eval('Data_Interval_Duration_Iso_checkFractionalUse')), ($GLOBALS['Data_Interval_Duration_Iso_checkNegativeValues'] ?? \PhpursThunks::eval('Data_Interval_Duration_Iso_checkNegativeValues'))]))(["asList" => (($go_1_0)(new Phpurs_Data0("Nil")))((($GLOBALS['Data_Interval_Duration_Iso_toUnfoldable'] ?? \PhpursThunks::eval('Data_Interval_Duration_Iso_toUnfoldable')))($v_0)), "asMap" => $v_0]);
+  $__res = (($GLOBALS['Data_Interval_Duration_Iso_fold'])([$GLOBALS['Data_Interval_Duration_Iso_checkWeekUsage'], $GLOBALS['Data_Interval_Duration_Iso_checkEmptiness'], $GLOBALS['Data_Interval_Duration_Iso_checkFractionalUse'], $GLOBALS['Data_Interval_Duration_Iso_checkNegativeValues']]))(["asList" => (($go_1_0)(new Phpurs_Data0("Nil")))(($GLOBALS['Data_Interval_Duration_Iso_toUnfoldable'])($v_0)), "asMap" => $v_0]);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Interval_Duration_Iso_mkIsoDuration'] = function() { $v = function($d_0 = null) {
+};
+
+// Data_Interval_Duration_Iso_mkIsoDuration
+$GLOBALS['Data_Interval_Duration_Iso_mkIsoDuration'] = function($d_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($GLOBALS['Data_Interval_Duration_Iso_checkValidIsoDuration'] ?? \PhpursThunks::eval('Data_Interval_Duration_Iso_checkValidIsoDuration')))($d_0);
+  $__local_var_1_0 = ($GLOBALS['Data_Interval_Duration_Iso_checkValidIsoDuration'])($d_0);
   $__t1 = null;;
   if ((is_object($__local_var_1_0) && (($__local_var_1_0)->{'tag'} === "Nil"))) {
 $__t1 = new Phpurs_Data1("Right", $d_0);
@@ -1137,30 +1186,5 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+};
 

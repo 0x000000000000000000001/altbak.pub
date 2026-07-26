@@ -99,11 +99,16 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Test_BenchCheck_act'] = function() { $v = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Bench_benchNow'] ?? \PhpursThunks::eval('Bench_benchNow'))))(function($t1_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Test_BenchCheck_act
+$GLOBALS['Test_BenchCheck_act'] = (($GLOBALS['Effect_bindE'])($GLOBALS['Bench_benchNow']))(function($t1_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($GLOBALS['Bench_benchNow'] ?? \PhpursThunks::eval('Bench_benchNow'))))(function($t2_1 = null) use ($t1_0) {
+  $__res = (($GLOBALS['Effect_bindE'])($GLOBALS['Bench_benchNow']))(function($t2_1 = null) use ($t1_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))(("Delta: " . (($GLOBALS['Data_Show_showNumberImpl'] ?? \PhpursThunks::eval('Data_Show_showNumberImpl')))(($t2_1 - $t1_0))));
+  $__res = ($GLOBALS['Effect_Console_log'])(("Delta: " . ($GLOBALS['Data_Show_showNumberImpl'])(($t2_1 - $t1_0))));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -111,8 +116,5 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}); return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
+});
 

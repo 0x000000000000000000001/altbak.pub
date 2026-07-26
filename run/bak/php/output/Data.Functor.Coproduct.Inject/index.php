@@ -98,15 +98,24 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Functor_Coproduct_Inject_prj'] = function() { $v = function($dict_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Functor_Coproduct_Inject_prj
+$GLOBALS['Data_Functor_Coproduct_Inject_prj'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['prj'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Coproduct_Inject_injectReflexive'] = function() { $v = ["inj" => (($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))['identity'], "prj" => ($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just'))]; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Coproduct_Inject_injectLeft'] = function() { $v = ["inj" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Functor_Coproduct_Coproduct'] ?? \PhpursThunks::eval('Data_Functor_Coproduct_Coproduct'))))(($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left'))), "prj" => function($v2_0 = null) {
+};
+
+// Data_Functor_Coproduct_Inject_injectReflexive
+$GLOBALS['Data_Functor_Coproduct_Inject_injectReflexive'] = ["inj" => ($GLOBALS['Control_Category_categoryFn'])['identity'], "prj" => $GLOBALS['Data_Maybe_Just']];
+
+// Data_Functor_Coproduct_Inject_injectLeft
+$GLOBALS['Data_Functor_Coproduct_Inject_injectLeft'] = ["inj" => (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Functor_Coproduct_Coproduct']))($GLOBALS['Data_Either_Left']), "prj" => function($v2_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object($v2_0) && (($v2_0)->{'tag'} === "Left"))) {
@@ -124,17 +133,21 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Coproduct_Inject_inj'] = function() { $v = function($dict_0 = null) {
+}];
+
+// Data_Functor_Coproduct_Inject_inj
+$GLOBALS['Data_Functor_Coproduct_Inject_inj'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['inj'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Coproduct_Inject_injectRight'] = function() { $v = function($dictInject_0 = null) {
+};
+
+// Data_Functor_Coproduct_Inject_injectRight
+$GLOBALS['Data_Functor_Coproduct_Inject_injectRight'] = function($dictInject_0 = null) {
   $__num = \func_num_args();
-  $__res = ["inj" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Functor_Coproduct_Coproduct'] ?? \PhpursThunks::eval('Data_Functor_Coproduct_Coproduct'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right'))))(($dictInject_0)['inj'])), "prj" => function($v2_1 = null) use ($dictInject_0) {
+  $__res = ["inj" => (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Functor_Coproduct_Coproduct']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Either_Right']))(($dictInject_0)['inj'])), "prj" => function($v2_1 = null) use ($dictInject_0) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object($v2_1) && (($v2_1)->{'tag'} === "Left"))) {
@@ -156,12 +169,5 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
+};
 

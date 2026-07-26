@@ -111,29 +111,42 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Map_SemigroupMap'] = function() { $v = function($x_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Map_SemigroupMap
+$GLOBALS['Data_Map_SemigroupMap'] = function($x_0 = null) {
   $__num = \func_num_args();
   $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Map_traversableWithIndexSemigroupMap'] = function() { $v = ($GLOBALS['Data_Map_Internal_traversableWithIndexMap'] ?? \PhpursThunks::eval('Data_Map_Internal_traversableWithIndexMap')); return $v; };
-\PhpursThunks::$thunks['Data_Map_traversableSemigroupMap'] = function() { $v = ($GLOBALS['Data_Map_Internal_traversableMap'] ?? \PhpursThunks::eval('Data_Map_Internal_traversableMap')); return $v; };
-\PhpursThunks::$thunks['Data_Map_showSemigroupMap'] = function() { $v = (function() {
+};
+
+// Data_Map_traversableWithIndexSemigroupMap
+$GLOBALS['Data_Map_traversableWithIndexSemigroupMap'] = $GLOBALS['Data_Map_Internal_traversableWithIndexMap'];
+
+// Data_Map_traversableSemigroupMap
+$GLOBALS['Data_Map_traversableSemigroupMap'] = $GLOBALS['Data_Map_Internal_traversableMap'];
+
+// Data_Map_showSemigroupMap
+$GLOBALS['Data_Map_showSemigroupMap'] = (function() {
   $__fn = function($dictShow_0 = null, $dictShow1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_Map_Internal_showMap'] ?? \PhpursThunks::eval('Data_Map_Internal_showMap')))($dictShow_0))($dictShow1_1);
+  $__res = (($GLOBALS['Data_Map_Internal_showMap'])($dictShow_0))($dictShow1_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Map_semigroupSemigroupMap'] = function() { $v = function($dictOrd_0 = null) {
+})();
+
+// Data_Map_semigroupSemigroupMap
+$GLOBALS['Data_Map_semigroupSemigroupMap'] = function($dictOrd_0 = null) {
   $__num = \func_num_args();
   $compare_1_0 = ($dictOrd_0)['compare'];
   $__res = function($dictSemigroup_2 = null) use ($compare_1_0) {
@@ -145,7 +158,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_Map_Internal_unsafeUnionWith'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeUnionWith')))($compare_1_0, $append_3_1, $v_4, $v1_5);
+  $__res = ($GLOBALS['Data_Map_Internal_unsafeUnionWith'])($compare_1_0, $append_3_1, $v_4, $v1_5);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -159,38 +172,48 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Map_plusSemigroupMap'] = function() { $v = function($dictOrd_0 = null) {
+};
+
+// Data_Map_plusSemigroupMap
+$GLOBALS['Data_Map_plusSemigroupMap'] = function($dictOrd_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Map_Internal_plusMap'] ?? \PhpursThunks::eval('Data_Map_Internal_plusMap')))($dictOrd_0);
+  $__res = ($GLOBALS['Data_Map_Internal_plusMap'])($dictOrd_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Map_ordSemigroupMap'] = function() { $v = function($dictOrd_0 = null) {
+};
+
+// Data_Map_ordSemigroupMap
+$GLOBALS['Data_Map_ordSemigroupMap'] = function($dictOrd_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Map_Internal_ordMap'] ?? \PhpursThunks::eval('Data_Map_Internal_ordMap')))($dictOrd_0);
+  $__res = ($GLOBALS['Data_Map_Internal_ordMap'])($dictOrd_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Map_ord1SemigroupMap'] = function() { $v = function($dictOrd_0 = null) {
+};
+
+// Data_Map_ord1SemigroupMap
+$GLOBALS['Data_Map_ord1SemigroupMap'] = function($dictOrd_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Map_Internal_ord1Map'] ?? \PhpursThunks::eval('Data_Map_Internal_ord1Map')))($dictOrd_0);
+  $__res = ($GLOBALS['Data_Map_Internal_ord1Map'])($dictOrd_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Map_newtypeSemigroupMap'] = function() { $v = ["Coercible0" => function($dollar__unused_0 = null) {
+};
+
+// Data_Map_newtypeSemigroupMap
+$GLOBALS['Data_Map_newtypeSemigroupMap'] = ["Coercible0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'));
+  $__res = $GLOBALS['Prim_undefined'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Map_monoidSemigroupMap'] = function() { $v = function($dictOrd_0 = null) {
+}];
+
+// Data_Map_monoidSemigroupMap
+$GLOBALS['Data_Map_monoidSemigroupMap'] = function($dictOrd_0 = null) {
   $__num = \func_num_args();
-  $semigroupSemigroupMap1_1_0 = (($GLOBALS['Data_Map_semigroupSemigroupMap'] ?? \PhpursThunks::eval('Data_Map_semigroupSemigroupMap')))($dictOrd_0);
+  $semigroupSemigroupMap1_1_0 = ($GLOBALS['Data_Map_semigroupSemigroupMap'])($dictOrd_0);
   $__res = function($dictSemigroup_2 = null) use ($semigroupSemigroupMap1_1_0) {
   $__num = \func_num_args();
   $semigroupSemigroupMap2_3_1 = ($semigroupSemigroupMap1_1_0)($dictSemigroup_2);
@@ -208,8 +231,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Map_keys'] = function() { $v = (function() use (&$__fn) {
+};
+
+// Data_Map_keys
+$GLOBALS['Data_Map_keys'] = (function() use (&$__fn) {
 $go_0_0 = null;
 $go_0_0 = function($v_1 = null) use (&$go_0_0) {
   $__num = \func_num_args();
@@ -219,7 +244,7 @@ $__t1 = new Phpurs_Data0("Leaf");
 goto end_branch_1;;
 };
   if ((is_object($v_1) && (($v_1)->{'tag'} === "Node"))) {
-$__t1 = new Phpurs_Data6("Node", ($v_1)->{'value0'}, ($v_1)->{'value1'}, ($v_1)->{'value2'}, ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')), ($go_0_0)(($v_1)->{'value4'}), ($go_0_0)(($v_1)->{'value5'}));
+$__t1 = new Phpurs_Data6("Node", ($v_1)->{'value0'}, ($v_1)->{'value1'}, ($v_1)->{'value2'}, $GLOBALS['Data_Unit_unit'], ($go_0_0)(($v_1)->{'value4'}), ($go_0_0)(($v_1)->{'value5'}));
 goto end_branch_1;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -230,30 +255,42 @@ goto end_branch_1;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-return ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Set_Set'] ?? \PhpursThunks::eval('Data_Set_Set'))))($go_0_0);
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Map_functorWithIndexSemigroupMap'] = function() { $v = ($GLOBALS['Data_Map_Internal_functorWithIndexMap'] ?? \PhpursThunks::eval('Data_Map_Internal_functorWithIndexMap')); return $v; };
-\PhpursThunks::$thunks['Data_Map_functorSemigroupMap'] = function() { $v = ($GLOBALS['Data_Map_Internal_functorMap'] ?? \PhpursThunks::eval('Data_Map_Internal_functorMap')); return $v; };
-\PhpursThunks::$thunks['Data_Map_foldableWithIndexSemigroupMap'] = function() { $v = ($GLOBALS['Data_Map_Internal_foldableWithIndexMap'] ?? \PhpursThunks::eval('Data_Map_Internal_foldableWithIndexMap')); return $v; };
-\PhpursThunks::$thunks['Data_Map_foldableSemigroupMap'] = function() { $v = ($GLOBALS['Data_Map_Internal_foldableMap'] ?? \PhpursThunks::eval('Data_Map_Internal_foldableMap')); return $v; };
-\PhpursThunks::$thunks['Data_Map_eqSemigroupMap'] = function() { $v = (function() {
+return (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Set_Set']))($go_0_0);
+})();
+
+// Data_Map_functorWithIndexSemigroupMap
+$GLOBALS['Data_Map_functorWithIndexSemigroupMap'] = $GLOBALS['Data_Map_Internal_functorWithIndexMap'];
+
+// Data_Map_functorSemigroupMap
+$GLOBALS['Data_Map_functorSemigroupMap'] = $GLOBALS['Data_Map_Internal_functorMap'];
+
+// Data_Map_foldableWithIndexSemigroupMap
+$GLOBALS['Data_Map_foldableWithIndexSemigroupMap'] = $GLOBALS['Data_Map_Internal_foldableWithIndexMap'];
+
+// Data_Map_foldableSemigroupMap
+$GLOBALS['Data_Map_foldableSemigroupMap'] = $GLOBALS['Data_Map_Internal_foldableMap'];
+
+// Data_Map_eqSemigroupMap
+$GLOBALS['Data_Map_eqSemigroupMap'] = (function() {
   $__fn = function($dictEq_0 = null, $dictEq1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_Map_Internal_eqMap'] ?? \PhpursThunks::eval('Data_Map_Internal_eqMap')))($dictEq_0))($dictEq1_1);
+  $__res = (($GLOBALS['Data_Map_Internal_eqMap'])($dictEq_0))($dictEq1_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Map_eq1SemigroupMap'] = function() { $v = function($dictEq_0 = null) {
+})();
+
+// Data_Map_eq1SemigroupMap
+$GLOBALS['Data_Map_eq1SemigroupMap'] = function($dictEq_0 = null) {
   $__num = \func_num_args();
   $__res = ["eq1" => function($dictEq1_1 = null) use ($dictEq_0) {
   $__num = \func_num_args();
-  $__res = (((($GLOBALS['Data_Map_Internal_eqMap'] ?? \PhpursThunks::eval('Data_Map_Internal_eqMap')))($dictEq_0))($dictEq1_1))['eq'];
+  $__res = ((($GLOBALS['Data_Map_Internal_eqMap'])($dictEq_0))($dictEq1_1))['eq'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -261,15 +298,19 @@ return ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('C
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Map_bindSemigroupMap'] = function() { $v = function($dictOrd_0 = null) {
+};
+
+// Data_Map_bindSemigroupMap
+$GLOBALS['Data_Map_bindSemigroupMap'] = function($dictOrd_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Map_Internal_bindMap'] ?? \PhpursThunks::eval('Data_Map_Internal_bindMap')))($dictOrd_0);
+  $__res = ($GLOBALS['Data_Map_Internal_bindMap'])($dictOrd_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Map_applySemigroupMap'] = function() { $v = function($dictOrd_0 = null) {
+};
+
+// Data_Map_applySemigroupMap
+$GLOBALS['Data_Map_applySemigroupMap'] = function($dictOrd_0 = null) {
   $__num = \func_num_args();
   $compare_1_0 = ($dictOrd_0)['compare'];
   $__res = ["apply" => (function() use ($compare_1_0) {
@@ -278,7 +319,7 @@ return ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('C
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_Map_Internal_unsafeIntersectionWith'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeIntersectionWith')))($compare_1_0, (($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))['identity'], $m1_2, $m2_3);
+  $__res = ($GLOBALS['Data_Map_Internal_unsafeIntersectionWith'])($compare_1_0, ($GLOBALS['Control_Category_categoryFn'])['identity'], $m1_2, $m2_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -286,7 +327,7 @@ return ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('C
   return $__fn;
 })(), "Functor0" => function($dollar__unused_1 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Map_Internal_functorMap'] ?? \PhpursThunks::eval('Data_Map_Internal_functorMap'));
+  $__res = $GLOBALS['Data_Map_Internal_functorMap'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -294,8 +335,10 @@ return ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('C
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Map_altSemigroupMap'] = function() { $v = function($dictOrd_0 = null) {
+};
+
+// Data_Map_altSemigroupMap
+$GLOBALS['Data_Map_altSemigroupMap'] = function($dictOrd_0 = null) {
   $__num = \func_num_args();
   $compare_1_0 = ($dictOrd_0)['compare'];
   $__res = ["alt" => (function() use ($compare_1_0) {
@@ -304,7 +347,7 @@ return ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('C
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_Map_Internal_unsafeUnionWith'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeUnionWith')))($compare_1_0, ($GLOBALS['Data_Function_const'] ?? \PhpursThunks::eval('Data_Function_const')), $m1_2, $m2_3);
+  $__res = ($GLOBALS['Data_Map_Internal_unsafeUnionWith'])($compare_1_0, $GLOBALS['Data_Function_const'], $m1_2, $m2_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -312,7 +355,7 @@ return ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('C
   return $__fn;
 })(), "Functor0" => function($dollar__unused_1 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Map_Internal_functorMap'] ?? \PhpursThunks::eval('Data_Map_Internal_functorMap'));
+  $__res = $GLOBALS['Data_Map_Internal_functorMap'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -320,27 +363,5 @@ return ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('C
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+};
 

@@ -4,7 +4,6 @@ import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
 	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
-	pkg_Control_Semigroupoid "gopurs/output/Control.Semigroupoid"
 	pkg_Data_BooleanAlgebra "gopurs/output/Data.BooleanAlgebra"
 )
 
@@ -55,8 +54,8 @@ var cache_contravariantPredicate gopurs_runtime.Value
 var once_contravariantPredicate sync.Once
 func Get_contravariantPredicate() gopurs_runtime.Value {
 	once_contravariantPredicate.Do(func() {
-		cache_contravariantPredicate = gopurs_runtime.RecordDict1("cmap", gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), v_1, f_0)
+		cache_contravariantPredicate = gopurs_runtime.RecordDict1("cmap", gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(v_1, gopurs_runtime.Apply(f_0, x_2))
 }))
 	})
 	return cache_contravariantPredicate

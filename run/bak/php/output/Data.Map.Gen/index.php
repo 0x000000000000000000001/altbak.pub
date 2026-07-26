@@ -103,19 +103,24 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Map_Gen_genMap'] = function() { $v = (function() {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Map_Gen_genMap
+$GLOBALS['Data_Map_Gen_genMap'] = (function() {
   $__fn = function($dictMonadRec_0 = null, $dictMonadGen_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $Bind1_2_0 = (((($dictMonadGen_1)['Monad0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Bind1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $Apply0_3_1 = (($Bind1_2_0)['Apply0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $__local_var_4_2 = (($Apply0_3_1)['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $unfoldable1_5_3 = (((($GLOBALS['Control_Monad_Gen_unfoldable'] ?? \PhpursThunks::eval('Control_Monad_Gen_unfoldable')))($dictMonadRec_0))($dictMonadGen_1))(($GLOBALS['Data_List_Types_unfoldableList'] ?? \PhpursThunks::eval('Data_List_Types_unfoldableList')));
+  $Bind1_2_0 = (((($dictMonadGen_1)['Monad0'])($GLOBALS['Prim_undefined']))['Bind1'])($GLOBALS['Prim_undefined']);
+  $Apply0_3_1 = (($Bind1_2_0)['Apply0'])($GLOBALS['Prim_undefined']);
+  $__local_var_4_2 = (($Apply0_3_1)['Functor0'])($GLOBALS['Prim_undefined']);
+  $unfoldable1_5_3 = ((($GLOBALS['Control_Monad_Gen_unfoldable'])($dictMonadRec_0))($dictMonadGen_1))($GLOBALS['Data_List_Types_unfoldableList']);
   $__res = function($dictOrd_6 = null) use ($Apply0_3_1, $Bind1_2_0, $__local_var_4_2, $dictMonadGen_1, $unfoldable1_5_3) {
   $__num = \func_num_args();
-  $fromFoldable_7_4 = ((($GLOBALS['Data_Map_Internal_fromFoldable'] ?? \PhpursThunks::eval('Data_Map_Internal_fromFoldable')))($dictOrd_6))(($GLOBALS['Data_List_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Types_foldableList')));
+  $fromFoldable_7_4 = (($GLOBALS['Data_Map_Internal_fromFoldable'])($dictOrd_6))($GLOBALS['Data_List_Types_foldableList']);
   $__res = (function() use ($Apply0_3_1, $Bind1_2_0, $__local_var_4_2, $dictMonadGen_1, $fromFoldable_7_4, $unfoldable1_5_3) {
   $__fn = function($genKey_8 = null, $genValue_9 = null) use ($Apply0_3_1, $Bind1_2_0, $__local_var_4_2, $dictMonadGen_1, $fromFoldable_7_4, $unfoldable1_5_3, &$__fn) {
   $__num = \func_num_args();
@@ -132,7 +137,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(((($__local_var_4_2)['map'])($fromFoldable_7_4))(($unfoldable1_5_3)(((($Apply0_3_1)['apply'])(((($__local_var_4_2)['map'])(($GLOBALS['Data_Tuple_Tuple'] ?? \PhpursThunks::eval('Data_Tuple_Tuple'))))($genKey_8)))($genValue_9))));
+}))(((($__local_var_4_2)['map'])($fromFoldable_7_4))(($unfoldable1_5_3)(((($Apply0_3_1)['apply'])(((($__local_var_4_2)['map'])($GLOBALS['Data_Tuple_Tuple']))($genKey_8)))($genValue_9))));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -156,8 +161,5 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
+})();
 

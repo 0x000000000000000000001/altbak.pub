@@ -100,8 +100,15 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Test_Ackermann_describe'] = function() { $v = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))("Ackermann (3, 4):"); return $v; };
-\PhpursThunks::$thunks['Test_Ackermann_ackermann'] = function() { $v = (function() {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Test_Ackermann_describe
+$GLOBALS['Test_Ackermann_describe'] = ($GLOBALS['Effect_Console_log'])("Ackermann (3, 4):");
+
+// Test_Ackermann_ackermann
+$GLOBALS['Test_Ackermann_ackermann'] = (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -137,7 +144,7 @@ default:
 break;
 };
   $__tco_0 = ($v_0 - 1);
-  $__tco_1 = ((($GLOBALS['Test_Ackermann_ackermann'] ?? \PhpursThunks::eval('Test_Ackermann_ackermann')))($v_0))(($v1_1 - 1));
+  $__tco_1 = (($GLOBALS['Test_Ackermann_ackermann'])($v_0))(($v1_1 - 1));
   $__tco_var_Test_Ackermann_ackermann_v_0 = $__tco_0;
   $__tco_var_Test_Ackermann_ackermann_v1_1 = $__tco_1;
   goto tco_loop_Test_Ackermann_ackermann;;
@@ -149,17 +156,14 @@ break;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Test_Ackermann_act'] = function() { $v = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))((($GLOBALS['Bench_opaque'] ?? \PhpursThunks::eval('Bench_opaque')))(3)))(function($dummy_0 = null) {
+})();
+
+// Test_Ackermann_act
+$GLOBALS['Test_Ackermann_act'] = (($GLOBALS['Effect_bindE'])(($GLOBALS['Bench_opaque'])(3)))(function($dummy_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))((($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))(((($GLOBALS['Test_Ackermann_ackermann'] ?? \PhpursThunks::eval('Test_Ackermann_ackermann')))($dummy_0))(4)));
+  $__res = ($GLOBALS['Effect_Console_log'])(($GLOBALS['Data_Show_showIntImpl'])((($GLOBALS['Test_Ackermann_ackermann'])($dummy_0))(4)));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}); return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
+});
 

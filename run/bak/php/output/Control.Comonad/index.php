@@ -93,14 +93,16 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Control_Comonad_extract'] = function() { $v = function($dict_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Control_Comonad_extract
+$GLOBALS['Control_Comonad_extract'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['extract'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
+};
 

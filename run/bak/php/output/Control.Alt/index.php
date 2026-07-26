@@ -93,22 +93,25 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Control_Alt_altArray'] = function() { $v = ["alt" => ($GLOBALS['Data_Semigroup_concatArray'] ?? \PhpursThunks::eval('Data_Semigroup_concatArray')), "Functor0" => function($dollar__unused_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Control_Alt_altArray
+$GLOBALS['Control_Alt_altArray'] = ["alt" => $GLOBALS['Data_Semigroup_concatArray'], "Functor0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Functor_functorArray'] ?? \PhpursThunks::eval('Data_Functor_functorArray'));
+  $__res = $GLOBALS['Data_Functor_functorArray'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Control_Alt_alt'] = function() { $v = function($dict_0 = null) {
+}];
+
+// Control_Alt_alt
+$GLOBALS['Control_Alt_alt'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['alt'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
+};
 

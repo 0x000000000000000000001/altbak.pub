@@ -99,61 +99,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Effect_monadEffect'] = function() { $v = ["Applicative0" => function($dollar__unused_0 = null) {
-  $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_applicativeEffect'] ?? \PhpursThunks::eval('Effect_applicativeEffect'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Bind1" => function($dollar__unused_0 = null) {
-  $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_bindEffect'] ?? \PhpursThunks::eval('Effect_bindEffect'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Effect_bindEffect'] = function() { $v = ["bind" => ($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')), "Apply0" => function($dollar__unused_0 = null) {
-  $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_applyEffect'] ?? \PhpursThunks::eval('Effect_applyEffect'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Effect_applyEffect'] = function() { $v = ["apply" => (($GLOBALS['Control_Monad_ap'] ?? \PhpursThunks::eval('Control_Monad_ap')))(($GLOBALS['Effect_monadEffect'] ?? \PhpursThunks::eval('Effect_monadEffect'))), "Functor0" => function($dollar__unused_0 = null) {
-  $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_functorEffect'] ?? \PhpursThunks::eval('Effect_functorEffect'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Effect_applicativeEffect'] = function() { $v = ["pure" => ($GLOBALS['Effect_pureE'] ?? \PhpursThunks::eval('Effect_pureE')), "Apply0" => function($dollar__unused_0 = null) {
-  $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_applyEffect'] ?? \PhpursThunks::eval('Effect_applyEffect'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Effect_functorEffect'] = function() { $v = ["map" => (($GLOBALS['Control_Applicative_liftA1'] ?? \PhpursThunks::eval('Control_Applicative_liftA1')))(($GLOBALS['Effect_applicativeEffect'] ?? \PhpursThunks::eval('Effect_applicativeEffect')))]; return $v; };
-\PhpursThunks::$thunks['Effect_semigroupEffect'] = function() { $v = function($dictSemigroup_0 = null) {
-  $__num = \func_num_args();
-  $__res = ["append" => ((($GLOBALS['Control_Apply_lift2'] ?? \PhpursThunks::eval('Control_Apply_lift2')))(($GLOBALS['Effect_applyEffect'] ?? \PhpursThunks::eval('Effect_applyEffect'))))(($dictSemigroup_0)['append'])];
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Effect_monoidEffect'] = function() { $v = function($dictMonoid_0 = null) {
-  $__num = \func_num_args();
-  $__res = ["mempty" => (($GLOBALS['Effect_pureE'] ?? \PhpursThunks::eval('Effect_pureE')))(($dictMonoid_0)['mempty']), "Semigroup0" => function($dollar__unused_1 = null) use ($dictMonoid_0) {
-  $__num = \func_num_args();
-  $__res = ["append" => ((($GLOBALS['Control_Apply_lift2'] ?? \PhpursThunks::eval('Control_Apply_lift2')))(($GLOBALS['Effect_applyEffect'] ?? \PhpursThunks::eval('Effect_applyEffect'))))(((($dictMonoid_0)['Semigroup0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['append'])];
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}];
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
+
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Effect = \call_user_func(function() {
   $exports = [];
@@ -230,18 +176,80 @@ $exports['foreachE'] = $foreachE;
 return $exports;
   return $exports;
 });
-\PhpursThunks::$thunks['Effect_bindE'] = function() use (&$ffi_Effect) { return $ffi_Effect['bindE']; };
-\PhpursThunks::$thunks['Effect_forE'] = function() use (&$ffi_Effect) { return $ffi_Effect['forE']; };
-\PhpursThunks::$thunks['Effect_foreachE'] = function() use (&$ffi_Effect) { return $ffi_Effect['foreachE']; };
-\PhpursThunks::$thunks['Effect_pureE'] = function() use (&$ffi_Effect) { return $ffi_Effect['pureE']; };
-\PhpursThunks::$thunks['Effect_untilE'] = function() use (&$ffi_Effect) { return $ffi_Effect['untilE']; };
-\PhpursThunks::$thunks['Effect_whileE'] = function() use (&$ffi_Effect) { return $ffi_Effect['whileE']; };
+$GLOBALS['Effect_bindE'] = $ffi_Effect['bindE'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Effect_forE'] = $ffi_Effect['forE'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Effect_foreachE'] = $ffi_Effect['foreachE'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Effect_pureE'] = $ffi_Effect['pureE'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Effect_untilE'] = $ffi_Effect['untilE'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Effect_whileE'] = $ffi_Effect['whileE'] ?? new class { public function __invoke(...$args) { return $this; } };
 
 
+// Effect_monadEffect
+$GLOBALS['Effect_monadEffect'] = ["Applicative0" => function($dollar__unused_0 = null) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Effect_applicativeEffect'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Bind1" => function($dollar__unused_0 = null) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Effect_bindEffect'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
+// Effect_bindEffect
+$GLOBALS['Effect_bindEffect'] = ["bind" => $GLOBALS['Effect_bindE'], "Apply0" => function($dollar__unused_0 = null) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Effect_applyEffect'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
+// Effect_applyEffect
+$GLOBALS['Effect_applyEffect'] = ["apply" => ($GLOBALS['Control_Monad_ap'])($GLOBALS['Effect_monadEffect']), "Functor0" => function($dollar__unused_0 = null) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Effect_functorEffect'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
+// Effect_applicativeEffect
+$GLOBALS['Effect_applicativeEffect'] = ["pure" => $GLOBALS['Effect_pureE'], "Apply0" => function($dollar__unused_0 = null) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Effect_applyEffect'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
+// Effect_functorEffect
+$GLOBALS['Effect_functorEffect'] = ["map" => ($GLOBALS['Control_Applicative_liftA1'])($GLOBALS['Effect_applicativeEffect'])];
 
+// Effect_semigroupEffect
+$GLOBALS['Effect_semigroupEffect'] = function($dictSemigroup_0 = null) {
+  $__num = \func_num_args();
+  $__res = ["append" => (($GLOBALS['Control_Apply_lift2'])($GLOBALS['Effect_applyEffect']))(($dictSemigroup_0)['append'])];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 
+// Effect_monoidEffect
+$GLOBALS['Effect_monoidEffect'] = function($dictMonoid_0 = null) {
+  $__num = \func_num_args();
+  $__res = ["mempty" => ($GLOBALS['Effect_pureE'])(($dictMonoid_0)['mempty']), "Semigroup0" => function($dollar__unused_1 = null) use ($dictMonoid_0) {
+  $__num = \func_num_args();
+  $__res = ["append" => (($GLOBALS['Control_Apply_lift2'])($GLOBALS['Effect_applyEffect']))(((($dictMonoid_0)['Semigroup0'])($GLOBALS['Prim_undefined']))['append'])];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 

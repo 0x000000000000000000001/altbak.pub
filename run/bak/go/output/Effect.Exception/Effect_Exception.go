@@ -3,10 +3,10 @@ package Effect_Exception
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Control_Semigroupoid "gopurs/output/Control.Semigroupoid"
 	pkg_Data_Maybe "gopurs/output/Data.Maybe"
 	pkg_Effect "gopurs/output/Effect"
 	pkg_Data_Either "gopurs/output/Data.Either"
+	unsafe "unsafe"
 )
 
 var cache_try gopurs_runtime.Value
@@ -24,7 +24,9 @@ var cache_throw gopurs_runtime.Value
 var once_throw sync.Once
 func Get_throw() gopurs_runtime.Value {
 	once_throw.Do(func() {
-		cache_throw = gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), Get_throwException(), Get_error())
+		cache_throw = gopurs_runtime.Func(func(x_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_throw(x_0_box.StrVal())
+})
 	})
 	return cache_throw
 }
@@ -50,7 +52,15 @@ func Get_showError() gopurs_runtime.Value {
 func Call_try(action_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var action_0 gopurs_runtime.Value = action_0_loop
 _ = action_0
-return gopurs_runtime.Apply2(Get_catchException(), gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), gopurs_runtime.RecordGet(pkg_Effect.Get_applicativeEffect(), "pure"), pkg_Data_Either.Get_Left()), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Effect.Get_functorEffect(), "map"), pkg_Data_Either.Get_Right(), action_0))
+return gopurs_runtime.Apply2(Get_catchException(), gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Effect.Get_applicativeEffect(), "pure"), gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value]{x_1})})
+}), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Effect.Get_functorEffect(), "map"), pkg_Data_Either.Get_Right(), action_0))
+}
+
+func Call_throw(x_0_loop string) gopurs_runtime.Value {
+var x_0 string = x_0_loop
+_ = x_0
+return gopurs_runtime.Apply(Get_throwException(), gopurs_runtime.Apply(Get_error(), gopurs_runtime.Str(x_0)))
 }
 
 func Get_catchException() gopurs_runtime.Value {

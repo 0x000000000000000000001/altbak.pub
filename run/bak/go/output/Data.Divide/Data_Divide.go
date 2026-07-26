@@ -105,8 +105,8 @@ return Call_divided(dictDivide_0_box)
 	return cache_divided
 }
 
-func Call_identity(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var x_0 gopurs_runtime.Value = x_0_loop
+func Call_identity(x_0_loop *pkg_Data_Tuple.Constructor_Tuple) *pkg_Data_Tuple.Constructor_Tuple {
+var x_0 *pkg_Data_Tuple.Constructor_Tuple = x_0_loop
 _ = x_0
 return x_0
 }

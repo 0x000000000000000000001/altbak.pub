@@ -101,14 +101,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Test_StateMonad_State'] = function() { $v = function($x_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Test_StateMonad_State
+$GLOBALS['Test_StateMonad_State'] = function($x_0 = null) {
   $__num = \func_num_args();
   $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Test_StateMonad_runState'] = function() { $v = (function() {
+};
+
+// Test_StateMonad_runState
+$GLOBALS['Test_StateMonad_runState'] = (function() {
   $__fn = function($v_0 = null, $s_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -120,21 +127,25 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Test_StateMonad_put'] = function() { $v = (function() {
+})();
+
+// Test_StateMonad_put
+$GLOBALS['Test_StateMonad_put'] = (function() {
   $__fn = function($s_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ["val" => ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')), "state" => $s_0];
+  $__res = ["val" => $GLOBALS['Data_Unit_unit'], "state" => $s_0];
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Test_StateMonad_pureState'] = function() { $v = (function() {
+})();
+
+// Test_StateMonad_pureState
+$GLOBALS['Test_StateMonad_pureState'] = (function() {
   $__fn = function($a_0 = null, $s_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -146,16 +157,22 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Test_StateMonad_get'] = function() { $v = function($s_0 = null) {
+})();
+
+// Test_StateMonad_get
+$GLOBALS['Test_StateMonad_get'] = function($s_0 = null) {
   $__num = \func_num_args();
   $__res = ["val" => $s_0, "state" => $s_0];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Test_StateMonad_describe'] = function() { $v = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))("State Monad (1.2k Binds, 60 Stack Depth):"); return $v; };
-\PhpursThunks::$thunks['Test_StateMonad_bindState'] = function() { $v = (function() {
+};
+
+// Test_StateMonad_describe
+$GLOBALS['Test_StateMonad_describe'] = ($GLOBALS['Effect_Console_log'])("State Monad (1.2k Binds, 60 Stack Depth):");
+
+// Test_StateMonad_bindState
+$GLOBALS['Test_StateMonad_bindState'] = (function() {
   $__fn = function($v_0 = null, $g_1 = null, $s_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -168,55 +185,49 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Test_StateMonad_modify'] = function() { $v = (function() {
+})();
+
+// Test_StateMonad_modify
+$GLOBALS['Test_StateMonad_modify'] = (function() {
   $__fn = function($f_0 = null, $s_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ["val" => ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')), "state" => ($f_0)($s_1)];
+  $__res = ["val" => $GLOBALS['Data_Unit_unit'], "state" => ($f_0)($s_1)];
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Test_StateMonad_chainModifications'] = function() { $v = function($v_0 = null) {
+})();
+
+// Test_StateMonad_chainModifications
+$GLOBALS['Test_StateMonad_chainModifications'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__tco_var_Test_StateMonad_chainModifications_v_0 = $v_0;
   tco_loop_Test_StateMonad_chainModifications:;
   $v_0 = $__tco_var_Test_StateMonad_chainModifications_v_0;
-  $__t0 = null;;
-  switch ($v_0) {
-case 0:
-$__t0 = function($s_1 = null) {
+  $__res = match ($v_0) { 0 => function($s_1 = null) {
   $__num = \func_num_args();
-  $__res = ["val" => ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')), "state" => $s_1];
+  $__res = ["val" => $GLOBALS['Data_Unit_unit'], "state" => $s_1];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
-goto end_branch_0;;
-break;
-default:
-;
-break;
-};
-  $__t0 = function($s_1 = null) use ($v_0) {
+}, default => function($s_1 = null) use ($v_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Test_StateMonad_chainModifications'] ?? \PhpursThunks::eval('Test_StateMonad_chainModifications')))(($v_0 - 1)))(($s_1 + 1));
+  $__res = (($GLOBALS['Test_StateMonad_chainModifications'])(($v_0 - 1)))(($s_1 + 1));
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+} };
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  end_branch_0:;
-  $__res = $__t0;
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Test_StateMonad_runManyTimes'] = function() { $v = (function() {
+
+// Test_StateMonad_runManyTimes
+$GLOBALS['Test_StateMonad_runManyTimes'] = (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -238,7 +249,7 @@ default:
 break;
 };
   $__tco_0 = ($v_0 - 1);
-  $__tco_1 = ($v1_1 + (((($GLOBALS['Test_StateMonad_chainModifications'] ?? \PhpursThunks::eval('Test_StateMonad_chainModifications')))(60))(0))['state']);
+  $__tco_1 = ($v1_1 + ((($GLOBALS['Test_StateMonad_chainModifications'])(60))(0))['state']);
   $__tco_var_Test_StateMonad_runManyTimes_v_0 = $__tco_0;
   $__tco_var_Test_StateMonad_runManyTimes_v1_1 = $__tco_1;
   goto tco_loop_Test_StateMonad_runManyTimes;;
@@ -250,25 +261,14 @@ break;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Test_StateMonad_act'] = function() { $v = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))((($GLOBALS['Bench_opaque'] ?? \PhpursThunks::eval('Bench_opaque')))(20)))(function($dummy_0 = null) {
+})();
+
+// Test_StateMonad_act
+$GLOBALS['Test_StateMonad_act'] = (($GLOBALS['Effect_bindE'])(($GLOBALS['Bench_opaque'])(20)))(function($dummy_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))((($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))(((($GLOBALS['Test_StateMonad_runManyTimes'] ?? \PhpursThunks::eval('Test_StateMonad_runManyTimes')))($dummy_0))(0)));
+  $__res = ($GLOBALS['Effect_Console_log'])(($GLOBALS['Data_Show_showIntImpl'])((($GLOBALS['Test_StateMonad_runManyTimes'])($dummy_0))(0)));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}); return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
-
-
-
+});
 

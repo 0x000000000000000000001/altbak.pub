@@ -95,142 +95,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Control_Apply_applyProxy'] = function() { $v = ["apply" => (function() {
-  $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = new Phpurs_Data0("Proxy");
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Functor0" => function($dollar__unused_0 = null) {
-  $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Functor_functorProxy'] ?? \PhpursThunks::eval('Data_Functor_functorProxy'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Control_Apply_applyFn'] = function() { $v = ["apply" => (function() {
-  $__fn = function($f_0 = null, $g_1 = null, $x_2 = null) use (&$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
-  $__res = (($f_0)($x_2))(($g_1)($x_2));
-  goto __end;;
-  __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})(), "Functor0" => function($dollar__unused_0 = null) {
-  $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Functor_functorFn'] ?? \PhpursThunks::eval('Data_Functor_functorFn'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Control_Apply_applyArray'] = function() { $v = ["apply" => ($GLOBALS['Control_Apply_arrayApply'] ?? \PhpursThunks::eval('Control_Apply_arrayApply')), "Functor0" => function($dollar__unused_0 = null) {
-  $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Functor_functorArray'] ?? \PhpursThunks::eval('Data_Functor_functorArray'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Control_Apply_apply'] = function() { $v = function($dict_0 = null) {
-  $__num = \func_num_args();
-  $__res = ($dict_0)['apply'];
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Apply_applyFirst'] = function() { $v = (function() {
-  $__fn = function($dictApply_0 = null, $a_1 = null, $b_2 = null) use (&$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
-  $__res = ((($dictApply_0)['apply'])(((((($dictApply_0)['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['map'])(($GLOBALS['Data_Function_const'] ?? \PhpursThunks::eval('Data_Function_const'))))($a_1)))($b_2);
-  goto __end;;
-  __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Control_Apply_applySecond'] = function() { $v = (function() {
-  $__fn = function($dictApply_0 = null, $a_1 = null, $b_2 = null) use (&$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
-  $__res = ((($dictApply_0)['apply'])(((((($dictApply_0)['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['map'])(function($v_3 = null) {
-  $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))['identity'];
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))($a_1)))($b_2);
-  goto __end;;
-  __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Control_Apply_lift2'] = function() { $v = (function() {
-  $__fn = function($dictApply_0 = null, $f_1 = null, $a_2 = null, $b_3 = null) use (&$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 4) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 4);
-  }
-  $__res = ((($dictApply_0)['apply'])(((((($dictApply_0)['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['map'])($f_1))($a_2)))($b_3);
-  goto __end;;
-  __end:
-  return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
-  };
-  return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Control_Apply_lift3'] = function() { $v = (function() {
-  $__fn = function($dictApply_0 = null, $f_1 = null, $a_2 = null, $b_3 = null, $c_4 = null) use (&$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 5) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 5);
-  }
-  $__res = ((($dictApply_0)['apply'])(((($dictApply_0)['apply'])(((((($dictApply_0)['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['map'])($f_1))($a_2)))($b_3)))($c_4);
-  goto __end;;
-  __end:
-  return $__num > 5 ? $__res(...\array_slice(\func_get_args(), 5)) : $__res;
-  };
-  return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Control_Apply_lift4'] = function() { $v = (function() {
-  $__fn = function($dictApply_0 = null, $f_1 = null, $a_2 = null, $b_3 = null, $c_4 = null, $d_5 = null) use (&$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 6) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 6);
-  }
-  $__res = ((($dictApply_0)['apply'])(((($dictApply_0)['apply'])(((($dictApply_0)['apply'])(((((($dictApply_0)['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['map'])($f_1))($a_2)))($b_3)))($c_4)))($d_5);
-  goto __end;;
-  __end:
-  return $__num > 6 ? $__res(...\array_slice(\func_get_args(), 6)) : $__res;
-  };
-  return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Control_Apply_lift5'] = function() { $v = (function() {
-  $__fn = function($dictApply_0 = null, $f_1 = null, $a_2 = null, $b_3 = null, $c_4 = null, $d_5 = null, $e_6 = null) use (&$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 7) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 7);
-  }
-  $__res = ((($dictApply_0)['apply'])(((($dictApply_0)['apply'])(((($dictApply_0)['apply'])(((($dictApply_0)['apply'])(((((($dictApply_0)['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['map'])($f_1))($a_2)))($b_3)))($c_4)))($d_5)))($e_6);
-  goto __end;;
-  __end:
-  return $__num > 7 ? $__res(...\array_slice(\func_get_args(), 7)) : $__res;
-  };
-  return $__fn;
-})(); return $v; };
+
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Control_Apply = \call_user_func(function() {
   $exports = [];
@@ -249,16 +114,162 @@ $exports['arrayApply'] = $arrayApply;
 return $exports;
   return $exports;
 });
-\PhpursThunks::$thunks['Control_Apply_arrayApply'] = function() use (&$ffi_Control_Apply) { return $ffi_Control_Apply['arrayApply']; };
+$GLOBALS['Control_Apply_arrayApply'] = $ffi_Control_Apply['arrayApply'] ?? new class { public function __invoke(...$args) { return $this; } };
 
 
+// Control_Apply_applyProxy
+$GLOBALS['Control_Apply_applyProxy'] = ["apply" => (function() {
+  $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = new Phpurs_Data0("Proxy");
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})(), "Functor0" => function($dollar__unused_0 = null) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Data_Functor_functorProxy'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
+// Control_Apply_applyFn
+$GLOBALS['Control_Apply_applyFn'] = ["apply" => (function() {
+  $__fn = function($f_0 = null, $g_1 = null, $x_2 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 3) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  }
+  $__res = (($f_0)($x_2))(($g_1)($x_2));
+  goto __end;;
+  __end:
+  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+  };
+  return $__fn;
+})(), "Functor0" => function($dollar__unused_0 = null) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Data_Functor_functorFn'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
+// Control_Apply_applyArray
+$GLOBALS['Control_Apply_applyArray'] = ["apply" => $GLOBALS['Control_Apply_arrayApply'], "Functor0" => function($dollar__unused_0 = null) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Data_Functor_functorArray'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
+// Control_Apply_apply
+$GLOBALS['Control_Apply_apply'] = function($dict_0 = null) {
+  $__num = \func_num_args();
+  $__res = ($dict_0)['apply'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 
+// Control_Apply_applyFirst
+$GLOBALS['Control_Apply_applyFirst'] = (function() {
+  $__fn = function($dictApply_0 = null, $a_1 = null, $b_2 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 3) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  }
+  $__res = ((($dictApply_0)['apply'])(((((($dictApply_0)['Functor0'])($GLOBALS['Prim_undefined']))['map'])($GLOBALS['Data_Function_const']))($a_1)))($b_2);
+  goto __end;;
+  __end:
+  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+  };
+  return $__fn;
+})();
 
+// Control_Apply_applySecond
+$GLOBALS['Control_Apply_applySecond'] = (function() {
+  $__fn = function($dictApply_0 = null, $a_1 = null, $b_2 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 3) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  }
+  $__res = ((($dictApply_0)['apply'])(((((($dictApply_0)['Functor0'])($GLOBALS['Prim_undefined']))['map'])(function($v_3 = null) {
+  $__num = \func_num_args();
+  $__res = ($GLOBALS['Control_Category_categoryFn'])['identity'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}))($a_1)))($b_2);
+  goto __end;;
+  __end:
+  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+  };
+  return $__fn;
+})();
 
+// Control_Apply_lift2
+$GLOBALS['Control_Apply_lift2'] = (function() {
+  $__fn = function($dictApply_0 = null, $f_1 = null, $a_2 = null, $b_3 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 4) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 4);
+  }
+  $__res = ((($dictApply_0)['apply'])(((((($dictApply_0)['Functor0'])($GLOBALS['Prim_undefined']))['map'])($f_1))($a_2)))($b_3);
+  goto __end;;
+  __end:
+  return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
+  };
+  return $__fn;
+})();
 
+// Control_Apply_lift3
+$GLOBALS['Control_Apply_lift3'] = (function() {
+  $__fn = function($dictApply_0 = null, $f_1 = null, $a_2 = null, $b_3 = null, $c_4 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 5) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 5);
+  }
+  $__res = ((($dictApply_0)['apply'])(((($dictApply_0)['apply'])(((((($dictApply_0)['Functor0'])($GLOBALS['Prim_undefined']))['map'])($f_1))($a_2)))($b_3)))($c_4);
+  goto __end;;
+  __end:
+  return $__num > 5 ? $__res(...\array_slice(\func_get_args(), 5)) : $__res;
+  };
+  return $__fn;
+})();
 
+// Control_Apply_lift4
+$GLOBALS['Control_Apply_lift4'] = (function() {
+  $__fn = function($dictApply_0 = null, $f_1 = null, $a_2 = null, $b_3 = null, $c_4 = null, $d_5 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 6) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 6);
+  }
+  $__res = ((($dictApply_0)['apply'])(((($dictApply_0)['apply'])(((($dictApply_0)['apply'])(((((($dictApply_0)['Functor0'])($GLOBALS['Prim_undefined']))['map'])($f_1))($a_2)))($b_3)))($c_4)))($d_5);
+  goto __end;;
+  __end:
+  return $__num > 6 ? $__res(...\array_slice(\func_get_args(), 6)) : $__res;
+  };
+  return $__fn;
+})();
 
+// Control_Apply_lift5
+$GLOBALS['Control_Apply_lift5'] = (function() {
+  $__fn = function($dictApply_0 = null, $f_1 = null, $a_2 = null, $b_3 = null, $c_4 = null, $d_5 = null, $e_6 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 7) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 7);
+  }
+  $__res = ((($dictApply_0)['apply'])(((($dictApply_0)['apply'])(((($dictApply_0)['apply'])(((($dictApply_0)['apply'])(((((($dictApply_0)['Functor0'])($GLOBALS['Prim_undefined']))['map'])($f_1))($a_2)))($b_3)))($c_4)))($d_5)))($e_6);
+  goto __end;;
+  __end:
+  return $__num > 7 ? $__res(...\array_slice(\func_get_args(), 7)) : $__res;
+  };
+  return $__fn;
+})();
 

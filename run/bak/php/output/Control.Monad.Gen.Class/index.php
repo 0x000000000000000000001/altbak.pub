@@ -92,46 +92,52 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Control_Monad_Gen_Class_sized'] = function() { $v = function($dict_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Control_Monad_Gen_Class_sized
+$GLOBALS['Control_Monad_Gen_Class_sized'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['sized'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Gen_Class_resize'] = function() { $v = function($dict_0 = null) {
+};
+
+// Control_Monad_Gen_Class_resize
+$GLOBALS['Control_Monad_Gen_Class_resize'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['resize'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Gen_Class_chooseInt'] = function() { $v = function($dict_0 = null) {
+};
+
+// Control_Monad_Gen_Class_chooseInt
+$GLOBALS['Control_Monad_Gen_Class_chooseInt'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['chooseInt'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Gen_Class_chooseFloat'] = function() { $v = function($dict_0 = null) {
+};
+
+// Control_Monad_Gen_Class_chooseFloat
+$GLOBALS['Control_Monad_Gen_Class_chooseFloat'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['chooseFloat'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Gen_Class_chooseBool'] = function() { $v = function($dict_0 = null) {
+};
+
+// Control_Monad_Gen_Class_chooseBool
+$GLOBALS['Control_Monad_Gen_Class_chooseBool'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['chooseBool'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
+};
 

@@ -99,20 +99,22 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Control_MonadPlus_monadPlusArray'] = function() { $v = ["Monad0" => function($dollar__unused_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Control_MonadPlus_monadPlusArray
+$GLOBALS['Control_MonadPlus_monadPlusArray'] = ["Monad0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Monad_monadArray'] ?? \PhpursThunks::eval('Control_Monad_monadArray'));
+  $__res = $GLOBALS['Control_Monad_monadArray'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Alternative1" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Alternative_alternativeArray'] ?? \PhpursThunks::eval('Control_Alternative_alternativeArray'));
+  $__res = $GLOBALS['Control_Alternative_alternativeArray'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
+}];
 

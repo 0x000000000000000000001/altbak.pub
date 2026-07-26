@@ -110,14 +110,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Const_Const'] = function() { $v = function($x_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Const_Const
+$GLOBALS['Data_Const_Const'] = function($x_0 = null) {
   $__num = \func_num_args();
   $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Const_showConst'] = function() { $v = function($dictShow_0 = null) {
+};
+
+// Data_Const_showConst
+$GLOBALS['Data_Const_showConst'] = function($dictShow_0 = null) {
   $__num = \func_num_args();
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
@@ -129,15 +136,19 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Const_semiringConst'] = function() { $v = function($dictSemiring_0 = null) {
+};
+
+// Data_Const_semiringConst
+$GLOBALS['Data_Const_semiringConst'] = function($dictSemiring_0 = null) {
   $__num = \func_num_args();
   $__res = $dictSemiring_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Const_semigroupoidConst'] = function() { $v = ["compose" => (function() {
+};
+
+// Data_Const_semigroupoidConst
+$GLOBALS['Data_Const_semigroupoidConst'] = ["compose" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -149,50 +160,64 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Const_semigroupConst'] = function() { $v = function($dictSemigroup_0 = null) {
+})()];
+
+// Data_Const_semigroupConst
+$GLOBALS['Data_Const_semigroupConst'] = function($dictSemigroup_0 = null) {
   $__num = \func_num_args();
   $__res = $dictSemigroup_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Const_ringConst'] = function() { $v = function($dictRing_0 = null) {
+};
+
+// Data_Const_ringConst
+$GLOBALS['Data_Const_ringConst'] = function($dictRing_0 = null) {
   $__num = \func_num_args();
   $__res = $dictRing_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Const_ordConst'] = function() { $v = function($dictOrd_0 = null) {
+};
+
+// Data_Const_ordConst
+$GLOBALS['Data_Const_ordConst'] = function($dictOrd_0 = null) {
   $__num = \func_num_args();
   $__res = $dictOrd_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Const_newtypeConst'] = function() { $v = ["Coercible0" => function($dollar__unused_0 = null) {
+};
+
+// Data_Const_newtypeConst
+$GLOBALS['Data_Const_newtypeConst'] = ["Coercible0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'));
+  $__res = $GLOBALS['Prim_undefined'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Const_monoidConst'] = function() { $v = function($dictMonoid_0 = null) {
+}];
+
+// Data_Const_monoidConst
+$GLOBALS['Data_Const_monoidConst'] = function($dictMonoid_0 = null) {
   $__num = \func_num_args();
   $__res = $dictMonoid_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Const_heytingAlgebraConst'] = function() { $v = function($dictHeytingAlgebra_0 = null) {
+};
+
+// Data_Const_heytingAlgebraConst
+$GLOBALS['Data_Const_heytingAlgebraConst'] = function($dictHeytingAlgebra_0 = null) {
   $__num = \func_num_args();
   $__res = $dictHeytingAlgebra_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Const_functorConst'] = function() { $v = ["map" => (function() {
+};
+
+// Data_Const_functorConst
+$GLOBALS['Data_Const_functorConst'] = ["map" => (function() {
   $__fn = function($f_0 = null, $m_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -204,8 +229,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Const_invariantConst'] = function() { $v = ["imap" => (function() {
+})()];
+
+// Data_Const_invariantConst
+$GLOBALS['Data_Const_invariantConst'] = ["imap" => (function() {
   $__fn = function($f_0 = null, $v_1 = null, $m_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -217,22 +244,28 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Const_euclideanRingConst'] = function() { $v = function($dictEuclideanRing_0 = null) {
+})()];
+
+// Data_Const_euclideanRingConst
+$GLOBALS['Data_Const_euclideanRingConst'] = function($dictEuclideanRing_0 = null) {
   $__num = \func_num_args();
   $__res = $dictEuclideanRing_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Const_eqConst'] = function() { $v = function($dictEq_0 = null) {
+};
+
+// Data_Const_eqConst
+$GLOBALS['Data_Const_eqConst'] = function($dictEq_0 = null) {
   $__num = \func_num_args();
   $__res = $dictEq_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Const_eq1Const'] = function() { $v = function($dictEq_0 = null) {
+};
+
+// Data_Const_eq1Const
+$GLOBALS['Data_Const_eq1Const'] = function($dictEq_0 = null) {
   $__num = \func_num_args();
   $eq_1_0 = ($dictEq_0)['eq'];
   $__res = ["eq1" => function($dictEq1_2 = null) use ($eq_1_0) {
@@ -245,11 +278,13 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Const_ord1Const'] = function() { $v = function($dictOrd_0 = null) {
+};
+
+// Data_Const_ord1Const
+$GLOBALS['Data_Const_ord1Const'] = function($dictOrd_0 = null) {
   $__num = \func_num_args();
   $compare_1_0 = ($dictOrd_0)['compare'];
-  $eq_2_1 = ((($dictOrd_0)['Eq0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['eq'];
+  $eq_2_1 = ((($dictOrd_0)['Eq0'])($GLOBALS['Prim_undefined']))['eq'];
   $__res = ["compare1" => function($dictOrd1_3 = null) use ($compare_1_0) {
   $__num = \func_num_args();
   $__res = $compare_1_0;
@@ -272,29 +307,37 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Const_commutativeRingConst'] = function() { $v = function($dictCommutativeRing_0 = null) {
+};
+
+// Data_Const_commutativeRingConst
+$GLOBALS['Data_Const_commutativeRingConst'] = function($dictCommutativeRing_0 = null) {
   $__num = \func_num_args();
   $__res = $dictCommutativeRing_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Const_boundedConst'] = function() { $v = function($dictBounded_0 = null) {
+};
+
+// Data_Const_boundedConst
+$GLOBALS['Data_Const_boundedConst'] = function($dictBounded_0 = null) {
   $__num = \func_num_args();
   $__res = $dictBounded_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Const_booleanAlgebraConst'] = function() { $v = function($dictBooleanAlgebra_0 = null) {
+};
+
+// Data_Const_booleanAlgebraConst
+$GLOBALS['Data_Const_booleanAlgebraConst'] = function($dictBooleanAlgebra_0 = null) {
   $__num = \func_num_args();
   $__res = $dictBooleanAlgebra_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Const_applyConst'] = function() { $v = function($dictSemigroup_0 = null) {
+};
+
+// Data_Const_applyConst
+$GLOBALS['Data_Const_applyConst'] = function($dictSemigroup_0 = null) {
   $__num = \func_num_args();
   $__res = ["apply" => (function() use ($dictSemigroup_0) {
   $__fn = function($v_1 = null, $v1_2 = null) use ($dictSemigroup_0, &$__fn) {
@@ -310,7 +353,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(), "Functor0" => function($dollar__unused_1 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Const_functorConst'] ?? \PhpursThunks::eval('Data_Const_functorConst'));
+  $__res = $GLOBALS['Data_Const_functorConst'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -318,11 +361,13 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Const_applicativeConst'] = function() { $v = function($dictMonoid_0 = null) {
+};
+
+// Data_Const_applicativeConst
+$GLOBALS['Data_Const_applicativeConst'] = function($dictMonoid_0 = null) {
   $__num = \func_num_args();
   $mempty_1_0 = ($dictMonoid_0)['mempty'];
-  $__local_var_2_1 = (($dictMonoid_0)['Semigroup0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_2_1 = (($dictMonoid_0)['Semigroup0'])($GLOBALS['Prim_undefined']);
   $applyConst1_3_2 = ["apply" => (function() use ($__local_var_2_1) {
   $__fn = function($v_3 = null, $v1_4 = null) use ($__local_var_2_1, &$__fn) {
   $__num = \func_num_args();
@@ -337,7 +382,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(), "Functor0" => function($dollar__unused_3 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Const_functorConst'] ?? \PhpursThunks::eval('Data_Const_functorConst'));
+  $__res = $GLOBALS['Data_Const_functorConst'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -358,28 +403,5 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+};
 

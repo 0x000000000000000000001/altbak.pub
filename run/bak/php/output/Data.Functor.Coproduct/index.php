@@ -104,14 +104,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Functor_Coproduct_Coproduct'] = function() { $v = function($x_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Functor_Coproduct_Coproduct
+$GLOBALS['Data_Functor_Coproduct_Coproduct'] = function($x_0 = null) {
   $__num = \func_num_args();
   $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Coproduct_showCoproduct'] = function() { $v = (function() {
+};
+
+// Data_Functor_Coproduct_showCoproduct
+$GLOBALS['Data_Functor_Coproduct_showCoproduct'] = (function() {
   $__fn = function($dictShow_0 = null, $dictShow1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -141,29 +148,37 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Functor_Coproduct_right'] = function() { $v = function($ga_0 = null) {
+})();
+
+// Data_Functor_Coproduct_right
+$GLOBALS['Data_Functor_Coproduct_right'] = function($ga_0 = null) {
   $__num = \func_num_args();
   $__res = new Phpurs_Data1("Right", $ga_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Coproduct_newtypeCoproduct'] = function() { $v = ["Coercible0" => function($dollar__unused_0 = null) {
+};
+
+// Data_Functor_Coproduct_newtypeCoproduct
+$GLOBALS['Data_Functor_Coproduct_newtypeCoproduct'] = ["Coercible0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'));
+  $__res = $GLOBALS['Prim_undefined'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Coproduct_left'] = function() { $v = function($fa_0 = null) {
+}];
+
+// Data_Functor_Coproduct_left
+$GLOBALS['Data_Functor_Coproduct_left'] = function($fa_0 = null) {
   $__num = \func_num_args();
   $__res = new Phpurs_Data1("Left", $fa_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Coproduct_functorCoproduct'] = function() { $v = (function() {
+};
+
+// Data_Functor_Coproduct_functorCoproduct
+$GLOBALS['Data_Functor_Coproduct_functorCoproduct'] = (function() {
   $__fn = function($dictFunctor_0 = null, $dictFunctor1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -201,8 +216,10 @@ goto end_branch_2;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Functor_Coproduct_eq1Coproduct'] = function() { $v = (function() {
+})();
+
+// Data_Functor_Coproduct_eq1Coproduct
+$GLOBALS['Data_Functor_Coproduct_eq1Coproduct'] = (function() {
   $__fn = function($dictEq1_0 = null, $dictEq11_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -241,8 +258,10 @@ goto end_branch_2;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Functor_Coproduct_eqCoproduct'] = function() { $v = (function() {
+})();
+
+// Data_Functor_Coproduct_eqCoproduct
+$GLOBALS['Data_Functor_Coproduct_eqCoproduct'] = (function() {
   $__fn = function($dictEq1_0 = null, $dictEq11_1 = null, $dictEq_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -275,13 +294,15 @@ goto end_branch_2;;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Functor_Coproduct_ord1Coproduct'] = function() { $v = function($dictOrd1_0 = null) {
+})();
+
+// Data_Functor_Coproduct_ord1Coproduct
+$GLOBALS['Data_Functor_Coproduct_ord1Coproduct'] = function($dictOrd1_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictOrd1_0)['Eq10'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_1_0 = (($dictOrd1_0)['Eq10'])($GLOBALS['Prim_undefined']);
   $__res = function($dictOrd11_2 = null) use ($__local_var_1_0, $dictOrd1_0) {
   $__num = \func_num_args();
-  $__local_var_3_1 = (($dictOrd11_2)['Eq10'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_3_1 = (($dictOrd11_2)['Eq10'])($GLOBALS['Prim_undefined']);
   $eq1Coproduct2_4_2 = ["eq1" => function($dictEq_4 = null) use ($__local_var_1_0, $__local_var_3_1) {
   $__num = \func_num_args();
   $eq12_5_2 = (($__local_var_1_0)['eq1'])($dictEq_4);
@@ -367,17 +388,19 @@ goto end_branch_8;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Coproduct_ordCoproduct'] = function() { $v = function($dictOrd1_0 = null) {
+};
+
+// Data_Functor_Coproduct_ordCoproduct
+$GLOBALS['Data_Functor_Coproduct_ordCoproduct'] = function($dictOrd1_0 = null) {
   $__num = \func_num_args();
-  $ord1Coproduct1_1_0 = (($GLOBALS['Data_Functor_Coproduct_ord1Coproduct'] ?? \PhpursThunks::eval('Data_Functor_Coproduct_ord1Coproduct')))($dictOrd1_0);
-  $__local_var_2_1 = (($dictOrd1_0)['Eq10'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $ord1Coproduct1_1_0 = ($GLOBALS['Data_Functor_Coproduct_ord1Coproduct'])($dictOrd1_0);
+  $__local_var_2_1 = (($dictOrd1_0)['Eq10'])($GLOBALS['Prim_undefined']);
   $__res = function($dictOrd11_3 = null) use ($__local_var_2_1, $ord1Coproduct1_1_0) {
   $__num = \func_num_args();
-  $__local_var_4_2 = (($dictOrd11_3)['Eq10'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_4_2 = (($dictOrd11_3)['Eq10'])($GLOBALS['Prim_undefined']);
   $__res = function($dictOrd_5 = null) use ($__local_var_2_1, $__local_var_4_2, $dictOrd11_3, $ord1Coproduct1_1_0) {
   $__num = \func_num_args();
-  $__local_var_6_3 = (($dictOrd_5)['Eq0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_6_3 = (($dictOrd_5)['Eq0'])($GLOBALS['Prim_undefined']);
   $eq12_7_4 = (($__local_var_2_1)['eq1'])($__local_var_6_3);
   $eq13_8_5 = (($__local_var_4_2)['eq1'])($__local_var_6_3);
   $eqCoproduct3_7_4 = ["eq" => (function() use ($eq12_7_4, $eq13_8_5) {
@@ -418,8 +441,10 @@ goto end_branch_6;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Coproduct_coproduct'] = function() { $v = (function() {
+};
+
+// Data_Functor_Coproduct_coproduct
+$GLOBALS['Data_Functor_Coproduct_coproduct'] = (function() {
   $__fn = function($v_0 = null, $v1_1 = null, $v2_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -443,13 +468,15 @@ goto end_branch_0;;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Functor_Coproduct_extendCoproduct'] = function() { $v = function($dictExtend_0 = null) {
+})();
+
+// Data_Functor_Coproduct_extendCoproduct
+$GLOBALS['Data_Functor_Coproduct_extendCoproduct'] = function($dictExtend_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictExtend_0)['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_1_0 = (($dictExtend_0)['Functor0'])($GLOBALS['Prim_undefined']);
   $__res = function($dictExtend1_2 = null) use ($__local_var_1_0, $dictExtend_0) {
   $__num = \func_num_args();
-  $__local_var_3_1 = (($dictExtend1_2)['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_3_1 = (($dictExtend1_2)['Functor0'])($GLOBALS['Prim_undefined']);
   $functorCoproduct2_4_2 = ["map" => (function() use ($__local_var_1_0, $__local_var_3_1) {
   $__fn = function($f_4 = null, $v_5 = null) use ($__local_var_1_0, $__local_var_3_1, &$__fn) {
   $__num = \func_num_args();
@@ -479,9 +506,9 @@ goto end_branch_4;;
 })()];
   $__res = ["extend" => function($f_5 = null) use ($dictExtend1_2, $dictExtend_0) {
   $__num = \func_num_args();
-  $__local_var_6_6 = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left'))))((($dictExtend_0)['extend'])(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($f_5))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Functor_Coproduct_Coproduct'] ?? \PhpursThunks::eval('Data_Functor_Coproduct_Coproduct'))))(($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left'))))));
-  $__local_var_7_7 = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right'))))((($dictExtend1_2)['extend'])(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($f_5))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Functor_Coproduct_Coproduct'] ?? \PhpursThunks::eval('Data_Functor_Coproduct_Coproduct'))))(($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right'))))));
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Functor_Coproduct_Coproduct'] ?? \PhpursThunks::eval('Data_Functor_Coproduct_Coproduct'))))(function($v2_8 = null) use ($__local_var_6_6, $__local_var_7_7) {
+  $__local_var_6_6 = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Either_Left']))((($dictExtend_0)['extend'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_5))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Functor_Coproduct_Coproduct']))($GLOBALS['Data_Either_Left']))));
+  $__local_var_7_7 = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Either_Right']))((($dictExtend1_2)['extend'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_5))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Functor_Coproduct_Coproduct']))($GLOBALS['Data_Either_Right']))));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Functor_Coproduct_Coproduct']))(function($v2_8 = null) use ($__local_var_6_6, $__local_var_7_7) {
   $__num = \func_num_args();
   $__t8 = null;;
   if ((is_object($v2_8) && (($v2_8)->{'tag'} === "Left"))) {
@@ -517,13 +544,15 @@ goto end_branch_8;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Coproduct_comonadCoproduct'] = function() { $v = function($dictComonad_0 = null) {
+};
+
+// Data_Functor_Coproduct_comonadCoproduct
+$GLOBALS['Data_Functor_Coproduct_comonadCoproduct'] = function($dictComonad_0 = null) {
   $__num = \func_num_args();
-  $extendCoproduct1_1_0 = (($GLOBALS['Data_Functor_Coproduct_extendCoproduct'] ?? \PhpursThunks::eval('Data_Functor_Coproduct_extendCoproduct')))((($dictComonad_0)['Extend0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $extendCoproduct1_1_0 = ($GLOBALS['Data_Functor_Coproduct_extendCoproduct'])((($dictComonad_0)['Extend0'])($GLOBALS['Prim_undefined']));
   $__res = function($dictComonad1_2 = null) use ($dictComonad_0, $extendCoproduct1_1_0) {
   $__num = \func_num_args();
-  $extendCoproduct2_3_1 = ($extendCoproduct1_1_0)((($dictComonad1_2)['Extend0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $extendCoproduct2_3_1 = ($extendCoproduct1_1_0)((($dictComonad1_2)['Extend0'])($GLOBALS['Prim_undefined']));
   $__res = ["extract" => function($v2_4 = null) use ($dictComonad1_2, $dictComonad_0) {
   $__num = \func_num_args();
   $__t2 = null;;
@@ -556,8 +585,10 @@ goto end_branch_2;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Coproduct_bihoistCoproduct'] = function() { $v = (function() {
+};
+
+// Data_Functor_Coproduct_bihoistCoproduct
+$GLOBALS['Data_Functor_Coproduct_bihoistCoproduct'] = (function() {
   $__fn = function($natF_0 = null, $natG_1 = null, $v_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -581,21 +612,5 @@ goto end_branch_0;;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+})();
 

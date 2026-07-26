@@ -99,14 +99,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Ord_Min_Min'] = function() { $v = function($x_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Ord_Min_Min
+$GLOBALS['Data_Ord_Min_Min'] = function($x_0 = null) {
   $__num = \func_num_args();
   $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Ord_Min_showMin'] = function() { $v = function($dictShow_0 = null) {
+};
+
+// Data_Ord_Min_showMin
+$GLOBALS['Data_Ord_Min_showMin'] = function($dictShow_0 = null) {
   $__num = \func_num_args();
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
@@ -118,8 +125,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Ord_Min_semigroupMin'] = function() { $v = function($dictOrd_0 = null) {
+};
+
+// Data_Ord_Min_semigroupMin
+$GLOBALS['Data_Ord_Min_semigroupMin'] = function($dictOrd_0 = null) {
   $__num = \func_num_args();
   $__res = ["append" => (function() use ($dictOrd_0) {
   $__fn = function($v_1 = null, $v1_2 = null) use ($dictOrd_0, &$__fn) {
@@ -154,17 +163,21 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Ord_Min_newtypeMin'] = function() { $v = ["Coercible0" => function($dollar__unused_0 = null) {
+};
+
+// Data_Ord_Min_newtypeMin
+$GLOBALS['Data_Ord_Min_newtypeMin'] = ["Coercible0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'));
+  $__res = $GLOBALS['Prim_undefined'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Ord_Min_monoidMin'] = function() { $v = function($dictBounded_0 = null) {
+}];
+
+// Data_Ord_Min_monoidMin
+$GLOBALS['Data_Ord_Min_monoidMin'] = function($dictBounded_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictBounded_0)['Ord0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_1_0 = (($dictBounded_0)['Ord0'])($GLOBALS['Prim_undefined']);
   $semigroupMin1_2_1 = ["append" => (function() use ($__local_var_1_0) {
   $__fn = function($v_2 = null, $v1_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -205,17 +218,21 @@ goto end_branch_2;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Ord_Min_eqMin'] = function() { $v = function($dictEq_0 = null) {
+};
+
+// Data_Ord_Min_eqMin
+$GLOBALS['Data_Ord_Min_eqMin'] = function($dictEq_0 = null) {
   $__num = \func_num_args();
   $__res = $dictEq_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Ord_Min_ordMin'] = function() { $v = function($dictOrd_0 = null) {
+};
+
+// Data_Ord_Min_ordMin
+$GLOBALS['Data_Ord_Min_ordMin'] = function($dictOrd_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictOrd_0)['Eq0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_1_0 = (($dictOrd_0)['Eq0'])($GLOBALS['Prim_undefined']);
   $__res = ["compare" => (function() use ($dictOrd_0) {
   $__fn = function($v_2 = null, $v1_3 = null) use ($dictOrd_0, &$__fn) {
   $__num = \func_num_args();
@@ -238,14 +255,5 @@ goto end_branch_2;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
+};
 

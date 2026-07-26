@@ -101,10 +101,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Test_RBTree_R'] = function() { $v = ($GLOBALS['__phpurs_data0_R'] ??= new Phpurs_Data0("R")); return $v; };
-\PhpursThunks::$thunks['Test_RBTree_B'] = function() { $v = ($GLOBALS['__phpurs_data0_B'] ??= new Phpurs_Data0("B")); return $v; };
-\PhpursThunks::$thunks['Test_RBTree_E'] = function() { $v = ($GLOBALS['__phpurs_data0_E'] ??= new Phpurs_Data0("E")); return $v; };
-\PhpursThunks::$thunks['Test_RBTree_T'] = function() { $v = (function() {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Test_RBTree_R
+$GLOBALS['Test_RBTree_R'] = ($GLOBALS['__phpurs_data0_R'] ??= new Phpurs_Data0("R"));
+
+// Test_RBTree_B
+$GLOBALS['Test_RBTree_B'] = ($GLOBALS['__phpurs_data0_B'] ??= new Phpurs_Data0("B"));
+
+// Test_RBTree_E
+$GLOBALS['Test_RBTree_E'] = ($GLOBALS['__phpurs_data0_E'] ??= new Phpurs_Data0("E"));
+
+// Test_RBTree_T
+$GLOBALS['Test_RBTree_T'] = (function() {
   $__fn = function($value0 = null, $value1 = null, $value2 = null, $value3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
@@ -116,8 +127,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Test_RBTree_max'] = function() { $v = (function() {
+})();
+
+// Test_RBTree_max
+$GLOBALS['Test_RBTree_max'] = (function() {
   $__fn = function($x_0 = null, $y_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -136,8 +149,10 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Test_RBTree_makeBlack'] = function() { $v = function($v_0 = null) {
+})();
+
+// Test_RBTree_makeBlack
+$GLOBALS['Test_RBTree_makeBlack'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object($v_0) && (($v_0)->{'tag'} === "T"))) {
@@ -155,9 +170,13 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Test_RBTree_describe'] = function() { $v = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))("Red-Black Tree (100k Worst-Case Insertions):"); return $v; };
-\PhpursThunks::$thunks['Test_RBTree_depth'] = function() { $v = function($v_0 = null) {
+};
+
+// Test_RBTree_describe
+$GLOBALS['Test_RBTree_describe'] = ($GLOBALS['Effect_Console_log'])("Red-Black Tree (100k Worst-Case Insertions):");
+
+// Test_RBTree_depth
+$GLOBALS['Test_RBTree_depth'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__tco_var_Test_RBTree_depth_v_0 = $v_0;
   tco_loop_Test_RBTree_depth:;
@@ -168,8 +187,8 @@ $__t0 = 0;
 goto end_branch_0;;
 };
   if ((is_object($v_0) && (($v_0)->{'tag'} === "T"))) {
-$__local_var_1_1 = (($GLOBALS['Test_RBTree_depth'] ?? \PhpursThunks::eval('Test_RBTree_depth')))(($v_0)->{'value1'});
-$__local_var_2_2 = (($GLOBALS['Test_RBTree_depth'] ?? \PhpursThunks::eval('Test_RBTree_depth')))(($v_0)->{'value3'});
+$__local_var_1_1 = ($GLOBALS['Test_RBTree_depth'])(($v_0)->{'value1'});
+$__local_var_2_2 = ($GLOBALS['Test_RBTree_depth'])(($v_0)->{'value3'});
 $__t3 = null;;
 if (($__local_var_1_1 > $__local_var_2_2)) {
 $__t3 = (1 + $__local_var_1_1);
@@ -187,8 +206,10 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Test_RBTree_balance'] = function() { $v = (function() {
+};
+
+// Test_RBTree_balance
+$GLOBALS['Test_RBTree_balance'] = (function() {
   $__fn = function($v_0 = null, $v1_1 = null, $v2_2 = null, $v3_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
@@ -413,8 +434,10 @@ goto end_branch_0;;
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Test_RBTree_ins'] = function() { $v = (function() {
+})();
+
+// Test_RBTree_ins
+$GLOBALS['Test_RBTree_ins'] = (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -433,11 +456,11 @@ goto end_branch_0;;
   if ((is_object($v1_1) && (($v1_1)->{'tag'} === "T"))) {
 $__t1 = null;;
 if (($v_0 < ($v1_1)->{'value2'})) {
-$__t1 = ((((($GLOBALS['Test_RBTree_balance'] ?? \PhpursThunks::eval('Test_RBTree_balance')))(($v1_1)->{'value0'}))(((($GLOBALS['Test_RBTree_ins'] ?? \PhpursThunks::eval('Test_RBTree_ins')))($v_0))(($v1_1)->{'value1'})))(($v1_1)->{'value2'}))(($v1_1)->{'value3'});
+$__t1 = (((($GLOBALS['Test_RBTree_balance'])(($v1_1)->{'value0'}))((($GLOBALS['Test_RBTree_ins'])($v_0))(($v1_1)->{'value1'})))(($v1_1)->{'value2'}))(($v1_1)->{'value3'});
 goto end_branch_1;;
 };
 if (($v_0 > ($v1_1)->{'value2'})) {
-$__t1 = ((((($GLOBALS['Test_RBTree_balance'] ?? \PhpursThunks::eval('Test_RBTree_balance')))(($v1_1)->{'value0'}))(($v1_1)->{'value1'}))(($v1_1)->{'value2'}))(((($GLOBALS['Test_RBTree_ins'] ?? \PhpursThunks::eval('Test_RBTree_ins')))($v_0))(($v1_1)->{'value3'}));
+$__t1 = (((($GLOBALS['Test_RBTree_balance'])(($v1_1)->{'value0'}))(($v1_1)->{'value1'}))(($v1_1)->{'value2'}))((($GLOBALS['Test_RBTree_ins'])($v_0))(($v1_1)->{'value3'}));
 goto end_branch_1;;
 };
 $__t1 = new Phpurs_Data4("T", ($v1_1)->{'value0'}, ($v1_1)->{'value1'}, ($v1_1)->{'value2'}, ($v1_1)->{'value3'});
@@ -454,14 +477,16 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Test_RBTree_insert'] = function() { $v = (function() {
+})();
+
+// Test_RBTree_insert
+$GLOBALS['Test_RBTree_insert'] = (function() {
   $__fn = function($x_0 = null, $s_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__local_var_2_0 = ((($GLOBALS['Test_RBTree_ins'] ?? \PhpursThunks::eval('Test_RBTree_ins')))($x_0))($s_1);
+  $__local_var_2_0 = (($GLOBALS['Test_RBTree_ins'])($x_0))($s_1);
   $__t1 = null;;
   if ((is_object($__local_var_2_0) && (($__local_var_2_0)->{'tag'} === "T"))) {
 $__t1 = new Phpurs_Data4("T", new Phpurs_Data0("B"), ($__local_var_2_0)->{'value1'}, ($__local_var_2_0)->{'value2'}, ($__local_var_2_0)->{'value3'});
@@ -480,8 +505,10 @@ goto end_branch_1;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Test_RBTree_buildTree'] = function() { $v = (function() {
+})();
+
+// Test_RBTree_buildTree
+$GLOBALS['Test_RBTree_buildTree'] = (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -503,7 +530,7 @@ default:
 break;
 };
   $__tco_0 = ($v_0 - 1);
-  $__tco_1 = ((($GLOBALS['Test_RBTree_insert'] ?? \PhpursThunks::eval('Test_RBTree_insert')))($v_0))($v1_1);
+  $__tco_1 = (($GLOBALS['Test_RBTree_insert'])($v_0))($v1_1);
   $__tco_var_Test_RBTree_buildTree_v_0 = $__tco_0;
   $__tco_var_Test_RBTree_buildTree_v1_1 = $__tco_1;
   goto tco_loop_Test_RBTree_buildTree;;
@@ -515,27 +542,14 @@ break;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Test_RBTree_act'] = function() { $v = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))((($GLOBALS['Bench_opaque'] ?? \PhpursThunks::eval('Bench_opaque')))(100000)))(function($dummy_0 = null) {
+})();
+
+// Test_RBTree_act
+$GLOBALS['Test_RBTree_act'] = (($GLOBALS['Effect_bindE'])(($GLOBALS['Bench_opaque'])(100000)))(function($dummy_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))((($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))((($GLOBALS['Test_RBTree_depth'] ?? \PhpursThunks::eval('Test_RBTree_depth')))(((($GLOBALS['Test_RBTree_buildTree'] ?? \PhpursThunks::eval('Test_RBTree_buildTree')))($dummy_0))(new Phpurs_Data0("E")))));
+  $__res = ($GLOBALS['Effect_Console_log'])(($GLOBALS['Data_Show_showIntImpl'])(($GLOBALS['Test_RBTree_depth'])((($GLOBALS['Test_RBTree_buildTree'])($dummy_0))(new Phpurs_Data0("E")))));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}); return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+});
 

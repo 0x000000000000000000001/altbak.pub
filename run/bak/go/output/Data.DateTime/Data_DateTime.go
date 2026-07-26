@@ -196,85 +196,85 @@ return Call_adjust(dictDuration_0_box, d_1_box, dt_2_box)
 }
 
 type Constructor_DateTime struct {
-	V0 gopurs_runtime.Value
-	V1 gopurs_runtime.Value
+	V0 *pkg_Data_Date.Constructor_Date
+	V1 *pkg_Data_Time.Constructor_Time
 }
 
 
-func Call_toRecord(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var v_0 gopurs_runtime.Value = v_0_loop
+func Call_toRecord(v_0_loop *Constructor_DateTime) gopurs_runtime.Value {
+var v_0 *Constructor_DateTime = v_0_loop
 _ = v_0
-return gopurs_runtime.RecordDict([]string{"day", "hour", "millisecond", "minute", "month", "second", "year"}, []gopurs_runtime.Value{gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Date_Component.Get_boundedEnumDay(), "fromEnum"), (*pkg_Data_Date.Constructor_Date)((*Constructor_DateTime)(v_0.UnsafePtr).V0.UnsafePtr).V2), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_boundedEnumHour(), "fromEnum"), (*pkg_Data_Time.Constructor_Time)((*Constructor_DateTime)(v_0.UnsafePtr).V1.UnsafePtr).V0), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_boundedEnumMillisecond(), "fromEnum"), (*pkg_Data_Time.Constructor_Time)((*Constructor_DateTime)(v_0.UnsafePtr).V1.UnsafePtr).V3), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_boundedEnumMinute(), "fromEnum"), (*pkg_Data_Time.Constructor_Time)((*Constructor_DateTime)(v_0.UnsafePtr).V1.UnsafePtr).V1), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Date_Component.Get_boundedEnumMonth(), "fromEnum"), (*pkg_Data_Date.Constructor_Date)((*Constructor_DateTime)(v_0.UnsafePtr).V0.UnsafePtr).V1), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_boundedEnumSecond(), "fromEnum"), (*pkg_Data_Time.Constructor_Time)((*Constructor_DateTime)(v_0.UnsafePtr).V1.UnsafePtr).V2), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Date_Component.Get_boundedEnumYear(), "fromEnum"), (*pkg_Data_Date.Constructor_Date)((*Constructor_DateTime)(v_0.UnsafePtr).V0.UnsafePtr).V0)})
+return gopurs_runtime.RecordDict([]string{"day", "hour", "millisecond", "minute", "month", "second", "year"}, []gopurs_runtime.Value{gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Date_Component.Get_boundedEnumDay(), "fromEnum"), (*pkg_Data_Date.Constructor_Date)((v_0).V0.UnsafePtr).V2), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_boundedEnumHour(), "fromEnum"), (*pkg_Data_Time.Constructor_Time)((v_0).V1.UnsafePtr).V0), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_boundedEnumMillisecond(), "fromEnum"), (*pkg_Data_Time.Constructor_Time)((v_0).V1.UnsafePtr).V3), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_boundedEnumMinute(), "fromEnum"), (*pkg_Data_Time.Constructor_Time)((v_0).V1.UnsafePtr).V1), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Date_Component.Get_boundedEnumMonth(), "fromEnum"), gopurs_runtime.Value{Type: 9, IntVal: (*pkg_Data_Date.Constructor_Date)((v_0).V0.UnsafePtr).V1, UnsafePtr: nil}), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_boundedEnumSecond(), "fromEnum"), (*pkg_Data_Time.Constructor_Time)((v_0).V1.UnsafePtr).V2), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Date_Component.Get_boundedEnumYear(), "fromEnum"), (*pkg_Data_Date.Constructor_Date)((v_0).V0.UnsafePtr).V0)})
 }
 
-func Call_time(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var v_0 gopurs_runtime.Value = v_0_loop
+func Call_time(v_0_loop *Constructor_DateTime) gopurs_runtime.Value {
+var v_0 *Constructor_DateTime = v_0_loop
 _ = v_0
-return (*Constructor_DateTime)(v_0.UnsafePtr).V1
+return (v_0).V1
 }
 
-func Call_modifyTimeF(dictFunctor_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value, v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_modifyTimeF(dictFunctor_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value, v_2_loop *Constructor_DateTime) gopurs_runtime.Value {
 var dictFunctor_0 gopurs_runtime.Value = dictFunctor_0_loop
 _ = dictFunctor_0
 var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
-var v_2 gopurs_runtime.Value = v_2_loop
+var v_2 *Constructor_DateTime = v_2_loop
 _ = v_2
-return gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictFunctor_0.UnsafePtr)).V0, gopurs_runtime.Apply(Get_DateTime(), (*Constructor_DateTime)(v_2.UnsafePtr).V0), gopurs_runtime.Apply(f_1, (*Constructor_DateTime)(v_2.UnsafePtr).V1))
+return gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictFunctor_0.UnsafePtr)).V0, gopurs_runtime.Apply(Get_DateTime(), (v_2).V0), gopurs_runtime.Apply(f_1, (v_2).V1))
 }
 
-func Call_modifyTime(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_modifyTime(f_0_loop gopurs_runtime.Value, v_1_loop *Constructor_DateTime) gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
-var v_1 gopurs_runtime.Value = v_1_loop
+var v_1 *Constructor_DateTime = v_1_loop
 _ = v_1
-return gopurs_runtime.Value{Type: 9, IntVal: 1665554298, UnsafePtr: unsafe.Pointer(&Constructor_DateTime{(*Constructor_DateTime)(v_1.UnsafePtr).V0, gopurs_runtime.Apply(f_0, (*Constructor_DateTime)(v_1.UnsafePtr).V1)})}
+return gopurs_runtime.Value{Type: 9, IntVal: 1665554298, UnsafePtr: unsafe.Pointer(&Constructor_DateTime{(v_1).V0, gopurs_runtime.Apply(f_0, (v_1).V1)})}
 }
 
-func Call_modifyDateF(dictFunctor_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value, v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_modifyDateF(dictFunctor_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value, v_2_loop *Constructor_DateTime) gopurs_runtime.Value {
 var dictFunctor_0 gopurs_runtime.Value = dictFunctor_0_loop
 _ = dictFunctor_0
 var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
-var v_2 gopurs_runtime.Value = v_2_loop
+var v_2 *Constructor_DateTime = v_2_loop
 _ = v_2
-__local_var_3_0 := (*Constructor_DateTime)(v_2.UnsafePtr).V1
+__local_var_3_0 := (v_2).V1
 _ = __local_var_3_0
 return gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictFunctor_0.UnsafePtr)).V0, gopurs_runtime.Func(func(a_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: 1665554298, UnsafePtr: unsafe.Pointer(&Constructor_DateTime{a_4, __local_var_3_0})}
-}), gopurs_runtime.Apply(f_1, (*Constructor_DateTime)(v_2.UnsafePtr).V0))
+}), gopurs_runtime.Apply(f_1, (v_2).V0))
 }
 
-func Call_modifyDate(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_modifyDate(f_0_loop gopurs_runtime.Value, v_1_loop *Constructor_DateTime) gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
-var v_1 gopurs_runtime.Value = v_1_loop
+var v_1 *Constructor_DateTime = v_1_loop
 _ = v_1
-return gopurs_runtime.Value{Type: 9, IntVal: 1665554298, UnsafePtr: unsafe.Pointer(&Constructor_DateTime{gopurs_runtime.Apply(f_0, (*Constructor_DateTime)(v_1.UnsafePtr).V0), (*Constructor_DateTime)(v_1.UnsafePtr).V1})}
+return gopurs_runtime.Value{Type: 9, IntVal: 1665554298, UnsafePtr: unsafe.Pointer(&Constructor_DateTime{gopurs_runtime.Apply(f_0, (v_1).V0), (v_1).V1})}
 }
 
-func Call_diff(dictDuration_0_loop gopurs_runtime.Value, dt1_1_loop gopurs_runtime.Value, dt2_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_diff(dictDuration_0_loop gopurs_runtime.Value, dt1_1_loop *Constructor_DateTime, dt2_2_loop *Constructor_DateTime) gopurs_runtime.Value {
 var dictDuration_0 gopurs_runtime.Value = dictDuration_0_loop
 _ = dictDuration_0
-var dt1_1 gopurs_runtime.Value = dt1_1_loop
+var dt1_1 *Constructor_DateTime = dt1_1_loop
 _ = dt1_1
-var dt2_2 gopurs_runtime.Value = dt2_2_loop
+var dt2_2 *Constructor_DateTime = dt2_2_loop
 _ = dt2_2
 return gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictDuration_0.UnsafePtr)).V1, gopurs_runtime.UncurriedApp2(Get_calcDiff(), gopurs_runtime.Apply(Get_toRecord(), dt1_1), gopurs_runtime.Apply(Get_toRecord(), dt2_2)))
 }
 
-func Call_date(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var v_0 gopurs_runtime.Value = v_0_loop
+func Call_date(v_0_loop *Constructor_DateTime) gopurs_runtime.Value {
+var v_0 *Constructor_DateTime = v_0_loop
 _ = v_0
-return (*Constructor_DateTime)(v_0.UnsafePtr).V0
+return (v_0).V0
 }
 
-func Call_adjust(dictDuration_0_loop gopurs_runtime.Value, d_1_loop gopurs_runtime.Value, dt_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_adjust(dictDuration_0_loop gopurs_runtime.Value, d_1_loop gopurs_runtime.Value, dt_2_loop *Constructor_DateTime) gopurs_runtime.Value {
 var dictDuration_0 gopurs_runtime.Value = dictDuration_0_loop
 _ = dictDuration_0
 var d_1 gopurs_runtime.Value = d_1_loop
 _ = d_1
-var dt_2 gopurs_runtime.Value = dt_2_loop
+var dt_2 *Constructor_DateTime = dt_2_loop
 _ = dt_2
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Maybe.Get_bindMaybe(), "bind"), gopurs_runtime.Apply4(Get_adjustImpl(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: nil}, gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictDuration_0.UnsafePtr)).V0, d_1), gopurs_runtime.Apply(Get_toRecord(), dt_2)), gopurs_runtime.Func(func(rec_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Maybe.Get_applyMaybe(), "apply"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Maybe.Get_functorMaybe(), "map"), Get_DateTime(), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Maybe.Get_bindMaybe(), "bind"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Maybe.Get_applyMaybe(), "apply"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Maybe.Get_applyMaybe(), "apply"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Maybe.Get_functorMaybe(), "map"), pkg_Data_Date.Get_exactDate(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Date_Component.Get_boundedEnumYear(), "toEnum"), gopurs_runtime.RecordGet(rec_3, "year"))), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Date_Component.Get_boundedEnumMonth(), "toEnum"), gopurs_runtime.RecordGet(rec_3, "month"))), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Date_Component.Get_boundedEnumDay(), "toEnum"), gopurs_runtime.RecordGet(rec_3, "day"))), pkg_Control_Bind.Get_identity())), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Maybe.Get_applyMaybe(), "apply"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Maybe.Get_applyMaybe(), "apply"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Maybe.Get_applyMaybe(), "apply"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Maybe.Get_functorMaybe(), "map"), pkg_Data_Time.Get_Time(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_boundedEnumHour(), "toEnum"), gopurs_runtime.RecordGet(rec_3, "hour"))), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_boundedEnumMinute(), "toEnum"), gopurs_runtime.RecordGet(rec_3, "minute"))), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_boundedEnumSecond(), "toEnum"), gopurs_runtime.RecordGet(rec_3, "second"))), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_boundedEnumMillisecond(), "toEnum"), gopurs_runtime.RecordGet(rec_3, "millisecond"))))

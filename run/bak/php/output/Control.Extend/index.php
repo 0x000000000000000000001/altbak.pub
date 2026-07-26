@@ -94,7 +94,13 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Control_Extend_extendFn'] = function() { $v = function($dictSemigroup_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+$GLOBALS['Control_Extend_arrayExtend'] = new class { public function __invoke(...$args) { return $this; } };
+
+
+// Control_Extend_extendFn
+$GLOBALS['Control_Extend_extendFn'] = function($dictSemigroup_0 = null) {
   $__num = \func_num_args();
   $__res = ["extend" => (function() use ($dictSemigroup_0) {
   $__fn = function($f_1 = null, $g_2 = null, $w_3 = null) use ($dictSemigroup_0, &$__fn) {
@@ -116,7 +122,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(), "Functor0" => function($dollar__unused_1 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Functor_functorFn'] ?? \PhpursThunks::eval('Data_Functor_functorFn'));
+  $__res = $GLOBALS['Data_Functor_functorFn'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -124,22 +130,28 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Extend_extendArray'] = function() { $v = ["extend" => ($GLOBALS['Control_Extend_arrayExtend'] ?? \PhpursThunks::eval('Control_Extend_arrayExtend')), "Functor0" => function($dollar__unused_0 = null) {
+};
+
+// Control_Extend_extendArray
+$GLOBALS['Control_Extend_extendArray'] = ["extend" => $GLOBALS['Control_Extend_arrayExtend'], "Functor0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Functor_functorArray'] ?? \PhpursThunks::eval('Data_Functor_functorArray'));
+  $__res = $GLOBALS['Data_Functor_functorArray'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Control_Extend_extend'] = function() { $v = function($dict_0 = null) {
+}];
+
+// Control_Extend_extend
+$GLOBALS['Control_Extend_extend'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['extend'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Extend_extendFlipped'] = function() { $v = (function() {
+};
+
+// Control_Extend_extendFlipped
+$GLOBALS['Control_Extend_extendFlipped'] = (function() {
   $__fn = function($dictExtend_0 = null, $w_1 = null, $f_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -151,15 +163,19 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Control_Extend_duplicate'] = function() { $v = function($dictExtend_0 = null) {
+})();
+
+// Control_Extend_duplicate
+$GLOBALS['Control_Extend_duplicate'] = function($dictExtend_0 = null) {
   $__num = \func_num_args();
-  $__res = (($dictExtend_0)['extend'])((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))['identity']);
+  $__res = (($dictExtend_0)['extend'])(($GLOBALS['Control_Category_categoryFn'])['identity']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Extend_composeCoKleisliFlipped'] = function() { $v = (function() {
+};
+
+// Control_Extend_composeCoKleisliFlipped
+$GLOBALS['Control_Extend_composeCoKleisliFlipped'] = (function() {
   $__fn = function($dictExtend_0 = null, $f_1 = null, $g_2 = null, $w_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
@@ -171,8 +187,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Control_Extend_composeCoKleisli'] = function() { $v = (function() {
+})();
+
+// Control_Extend_composeCoKleisli
+$GLOBALS['Control_Extend_composeCoKleisli'] = (function() {
   $__fn = function($dictExtend_0 = null, $f_1 = null, $g_2 = null, $w_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
@@ -184,14 +202,5 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
+})();
 

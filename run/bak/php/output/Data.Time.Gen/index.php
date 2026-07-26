@@ -96,15 +96,17 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Time_Gen_genTime'] = function() { $v = function($dictMonadGen_0 = null) {
-  $__num = \func_num_args();
-  $Apply0_1_0 = (((((($dictMonadGen_0)['Monad0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Bind1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Apply0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $__res = ((($Apply0_1_0)['apply'])(((($Apply0_1_0)['apply'])(((($Apply0_1_0)['apply'])(((((($Apply0_1_0)['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['map'])(($GLOBALS['Data_Time_Time'] ?? \PhpursThunks::eval('Data_Time_Time'))))(((($GLOBALS['Data_Enum_Gen_genBoundedEnum'] ?? \PhpursThunks::eval('Data_Enum_Gen_genBoundedEnum')))($dictMonadGen_0))(($GLOBALS['Data_Time_Component_boundedEnumHour'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumHour'))))))(((($GLOBALS['Data_Enum_Gen_genBoundedEnum'] ?? \PhpursThunks::eval('Data_Enum_Gen_genBoundedEnum')))($dictMonadGen_0))(($GLOBALS['Data_Time_Component_boundedEnumMinute'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMinute'))))))(((($GLOBALS['Data_Enum_Gen_genBoundedEnum'] ?? \PhpursThunks::eval('Data_Enum_Gen_genBoundedEnum')))($dictMonadGen_0))(($GLOBALS['Data_Time_Component_boundedEnumSecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumSecond'))))))(((($GLOBALS['Data_Enum_Gen_genBoundedEnum'] ?? \PhpursThunks::eval('Data_Enum_Gen_genBoundedEnum')))($dictMonadGen_0))(($GLOBALS['Data_Time_Component_boundedEnumMillisecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMillisecond'))));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
+
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+// Data_Time_Gen_genTime
+$GLOBALS['Data_Time_Gen_genTime'] = function($dictMonadGen_0 = null) {
+  $__num = \func_num_args();
+  $Apply0_1_0 = (((((($dictMonadGen_0)['Monad0'])($GLOBALS['Prim_undefined']))['Bind1'])($GLOBALS['Prim_undefined']))['Apply0'])($GLOBALS['Prim_undefined']);
+  $__res = ((($Apply0_1_0)['apply'])(((($Apply0_1_0)['apply'])(((($Apply0_1_0)['apply'])(((((($Apply0_1_0)['Functor0'])($GLOBALS['Prim_undefined']))['map'])($GLOBALS['Data_Time_Time']))((($GLOBALS['Data_Enum_Gen_genBoundedEnum'])($dictMonadGen_0))($GLOBALS['Data_Time_Component_boundedEnumHour']))))((($GLOBALS['Data_Enum_Gen_genBoundedEnum'])($dictMonadGen_0))($GLOBALS['Data_Time_Component_boundedEnumMinute']))))((($GLOBALS['Data_Enum_Gen_genBoundedEnum'])($dictMonadGen_0))($GLOBALS['Data_Time_Component_boundedEnumSecond']))))((($GLOBALS['Data_Enum_Gen_genBoundedEnum'])($dictMonadGen_0))($GLOBALS['Data_Time_Component_boundedEnumMillisecond']));
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 

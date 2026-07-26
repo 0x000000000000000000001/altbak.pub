@@ -111,7 +111,74 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_DateTime_DateTime'] = function() { $v = (function() {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+$ffi_Data_DateTime = \call_user_func(function() {
+  $exports = [];
+$createUTC = function($y, $mo, $d, $h, $m, $s, $ms) {
+    $dt = new \DateTime('now', new \DateTimeZone('UTC'));
+    $dt->setDate($y, $mo + 1, $d);
+    $dt->setTime($h, $m, $s, $ms * 1000);
+    return (float)$dt->getTimestamp() * 1000 + (int)$dt->format('v');
+};
+
+$calcDiff = function($rec1, $rec2 = null) use (&$calcDiff) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$calcDiff) {
+
+            return $calcDiff(...\array_merge($__args, $more));
+        };
+    }
+
+    $msUTC1 = $createUTC($rec1->year, $rec1->month - 1, $rec1->day, $rec1->hour, $rec1->minute, $rec1->second, $rec1->millisecond);
+    $msUTC2 = $createUTC($rec2->year, $rec2->month - 1, $rec2->day, $rec2->hour, $rec2->minute, $rec2->second, $rec2->millisecond);
+    return $msUTC1 - $msUTC2;
+};
+
+$adjustImpl = function($just, $nothing = null, $offset = null, $rec = null) use (&$adjustImpl) {
+    if (\func_num_args() < 4) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$adjustImpl) {
+
+            return $adjustImpl(...\array_merge($__args, $more));
+        };
+    }
+
+    $msUTC = $createUTC($rec->year, $rec->month - 1, $rec->day, $rec->hour, $rec->minute, $rec->second, $rec->millisecond);
+    $targetMs = $msUTC + $offset;
+    
+    $seconds = floor($targetMs / 1000);
+    $ms = $targetMs - ($seconds * 1000);
+    
+    try {
+        $dt = new \DateTime("@" . $seconds, new \DateTimeZone('UTC'));
+        return $just((object)[
+            'year' => (int)$dt->format('Y'),
+            'month' => (int)$dt->format('n'),
+            'day' => (int)$dt->format('j'),
+            'hour' => (int)$dt->format('G'),
+            'minute' => (int)$dt->format('i'),
+            'second' => (int)$dt->format('s'),
+            'millisecond' => (int)$ms
+        ]);
+    } catch (\Exception $e) {
+        return $nothing;
+    }
+};
+
+$exports['createUTC'] = $createUTC;
+$exports['calcDiff'] = $calcDiff;
+$exports['adjustImpl'] = $adjustImpl;
+return $exports;
+  return $exports;
+});
+$GLOBALS['Data_DateTime_adjustImpl'] = $ffi_Data_DateTime['adjustImpl'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_DateTime_calcDiff'] = $ffi_Data_DateTime['calcDiff'] ?? new class { public function __invoke(...$args) { return $this; } };
+
+
+// Data_DateTime_DateTime
+$GLOBALS['Data_DateTime_DateTime'] = (function() {
   $__fn = function($value0 = null, $value1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -123,8 +190,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_DateTime_toRecord'] = function() { $v = function($v_0 = null) {
+})();
+
+// Data_DateTime_toRecord
+$GLOBALS['Data_DateTime_toRecord'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object((($v_0)->{'value0'})->{'value1'}) && (((($v_0)->{'value0'})->{'value1'})->{'tag'} === "January"))) {
@@ -182,35 +251,43 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_DateTime_time'] = function() { $v = function($v_0 = null) {
+};
+
+// Data_DateTime_time
+$GLOBALS['Data_DateTime_time'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__res = ($v_0)->{'value1'};
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_DateTime_showDateTime'] = function() { $v = ["show" => function($v_0 = null) {
+};
+
+// Data_DateTime_showDateTime
+$GLOBALS['Data_DateTime_showDateTime'] = ["show" => function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = (((("(DateTime " . ((($GLOBALS['Data_Date_showDate'] ?? \PhpursThunks::eval('Data_Date_showDate')))['show'])(($v_0)->{'value0'})) . " ") . ((($GLOBALS['Data_Time_showTime'] ?? \PhpursThunks::eval('Data_Time_showTime')))['show'])(($v_0)->{'value1'})) . ")");
+  $__res = (((("(DateTime " . (($GLOBALS['Data_Date_showDate'])['show'])(($v_0)->{'value0'})) . " ") . (($GLOBALS['Data_Time_showTime'])['show'])(($v_0)->{'value1'})) . ")");
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_DateTime_modifyTimeF'] = function() { $v = (function() {
+}];
+
+// Data_DateTime_modifyTimeF
+$GLOBALS['Data_DateTime_modifyTimeF'] = (function() {
   $__fn = function($dictFunctor_0 = null, $f_1 = null, $v_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($dictFunctor_0)['map'])((($GLOBALS['Data_DateTime_DateTime'] ?? \PhpursThunks::eval('Data_DateTime_DateTime')))(($v_2)->{'value0'})))(($f_1)(($v_2)->{'value1'}));
+  $__res = ((($dictFunctor_0)['map'])(($GLOBALS['Data_DateTime_DateTime'])(($v_2)->{'value0'})))(($f_1)(($v_2)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_DateTime_modifyTime'] = function() { $v = (function() {
+})();
+
+// Data_DateTime_modifyTime
+$GLOBALS['Data_DateTime_modifyTime'] = (function() {
   $__fn = function($f_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -222,8 +299,10 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_DateTime_modifyDateF'] = function() { $v = (function() {
+})();
+
+// Data_DateTime_modifyDateF
+$GLOBALS['Data_DateTime_modifyDateF'] = (function() {
   $__fn = function($dictFunctor_0 = null, $f_1 = null, $v_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -242,8 +321,10 @@ goto end_branch_0;;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_DateTime_modifyDate'] = function() { $v = (function() {
+})();
+
+// Data_DateTime_modifyDate
+$GLOBALS['Data_DateTime_modifyDate'] = (function() {
   $__fn = function($f_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -255,27 +336,31 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_DateTime_eqDateTime'] = function() { $v = ["eq" => (function() {
+})();
+
+// Data_DateTime_eqDateTime
+$GLOBALS['Data_DateTime_eqDateTime'] = ["eq" => (function() {
   $__fn = function($x_0 = null, $y_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((($GLOBALS['Data_Date_eqDate'] ?? \PhpursThunks::eval('Data_Date_eqDate')))['eq'])(($x_0)->{'value0'}))(($y_1)->{'value0'}) && (((((($x_0)->{'value1'})->{'value0'} === (($y_1)->{'value1'})->{'value0'}) && ((($x_0)->{'value1'})->{'value1'} === (($y_1)->{'value1'})->{'value1'})) && ((($x_0)->{'value1'})->{'value2'} === (($y_1)->{'value1'})->{'value2'})) && ((($x_0)->{'value1'})->{'value3'} === (($y_1)->{'value1'})->{'value3'})));
+  $__res = (((($GLOBALS['Data_Date_eqDate'])['eq'])(($x_0)->{'value0'}))(($y_1)->{'value0'}) && (((((($x_0)->{'value1'})->{'value0'} === (($y_1)->{'value1'})->{'value0'}) && ((($x_0)->{'value1'})->{'value1'} === (($y_1)->{'value1'})->{'value1'})) && ((($x_0)->{'value1'})->{'value2'} === (($y_1)->{'value1'})->{'value2'})) && ((($x_0)->{'value1'})->{'value3'} === (($y_1)->{'value1'})->{'value3'})));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_DateTime_ordDateTime'] = function() { $v = ["compare" => (function() {
+})()];
+
+// Data_DateTime_ordDateTime
+$GLOBALS['Data_DateTime_ordDateTime'] = ["compare" => (function() {
   $__fn = function($x_0 = null, $y_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $v_2_0 = (((($GLOBALS['Data_Date_ordDate'] ?? \PhpursThunks::eval('Data_Date_ordDate')))['compare'])(($x_0)->{'value0'}))(($y_1)->{'value0'});
+  $v_2_0 = ((($GLOBALS['Data_Date_ordDate'])['compare'])(($x_0)->{'value0'}))(($y_1)->{'value0'});
   $__t1 = null;;
   if ((is_object($v_2_0) && (($v_2_0)->{'tag'} === "LT"))) {
 $__t1 = new Phpurs_Data0("LT");
@@ -285,7 +370,7 @@ goto end_branch_1;;
 $__t1 = new Phpurs_Data0("GT");
 goto end_branch_1;;
 };
-  $__t1 = (((($GLOBALS['Data_Time_ordTime'] ?? \PhpursThunks::eval('Data_Time_ordTime')))['compare'])(($x_0)->{'value1'}))(($y_1)->{'value1'});
+  $__t1 = ((($GLOBALS['Data_Time_ordTime'])['compare'])(($x_0)->{'value1'}))(($y_1)->{'value1'});
   end_branch_1:;
   $__res = $__t1;
   goto __end;;
@@ -295,45 +380,53 @@ goto end_branch_1;;
   return $__fn;
 })(), "Eq0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_DateTime_eqDateTime'] ?? \PhpursThunks::eval('Data_DateTime_eqDateTime'));
+  $__res = $GLOBALS['Data_DateTime_eqDateTime'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_DateTime_diff'] = function() { $v = (function() {
+}];
+
+// Data_DateTime_diff
+$GLOBALS['Data_DateTime_diff'] = (function() {
   $__fn = function($dictDuration_0 = null, $dt1_1 = null, $dt2_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($dictDuration_0)['toDuration'])((($GLOBALS['Data_DateTime_calcDiff'] ?? \PhpursThunks::eval('Data_DateTime_calcDiff')))((($GLOBALS['Data_DateTime_toRecord'] ?? \PhpursThunks::eval('Data_DateTime_toRecord')))($dt1_1), (($GLOBALS['Data_DateTime_toRecord'] ?? \PhpursThunks::eval('Data_DateTime_toRecord')))($dt2_2)));
+  $__res = (($dictDuration_0)['toDuration'])(($GLOBALS['Data_DateTime_calcDiff'])(($GLOBALS['Data_DateTime_toRecord'])($dt1_1), ($GLOBALS['Data_DateTime_toRecord'])($dt2_2)));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_DateTime_date'] = function() { $v = function($v_0 = null) {
+})();
+
+// Data_DateTime_date
+$GLOBALS['Data_DateTime_date'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__res = ($v_0)->{'value0'};
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_DateTime_boundedDateTime'] = function() { $v = ["bottom" => new Phpurs_Data2("DateTime", new Phpurs_Data3("Date", -271820, new Phpurs_Data0("January"), 1), new Phpurs_Data4("Time", 0, 0, 0, 0)), "top" => new Phpurs_Data2("DateTime", new Phpurs_Data3("Date", 275759, new Phpurs_Data0("December"), 31), new Phpurs_Data4("Time", 23, 59, 59, 999)), "Ord0" => function($dollar__unused_0 = null) {
+};
+
+// Data_DateTime_boundedDateTime
+$GLOBALS['Data_DateTime_boundedDateTime'] = ["bottom" => new Phpurs_Data2("DateTime", new Phpurs_Data3("Date", -271820, new Phpurs_Data0("January"), 1), new Phpurs_Data4("Time", 0, 0, 0, 0)), "top" => new Phpurs_Data2("DateTime", new Phpurs_Data3("Date", 275759, new Phpurs_Data0("December"), 31), new Phpurs_Data4("Time", 23, 59, 59, 999)), "Ord0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_DateTime_ordDateTime'] ?? \PhpursThunks::eval('Data_DateTime_ordDateTime'));
+  $__res = $GLOBALS['Data_DateTime_ordDateTime'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_DateTime_adjust'] = function() { $v = (function() {
+}];
+
+// Data_DateTime_adjust
+$GLOBALS['Data_DateTime_adjust'] = (function() {
   $__fn = function($dictDuration_0 = null, $d_1 = null, $dt_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__local_var_3_0 = ((((($GLOBALS['Data_DateTime_adjustImpl'] ?? \PhpursThunks::eval('Data_DateTime_adjustImpl')))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just'))))(new Phpurs_Data0("Nothing")))((($dictDuration_0)['fromDuration'])($d_1)))((($GLOBALS['Data_DateTime_toRecord'] ?? \PhpursThunks::eval('Data_DateTime_toRecord')))($dt_2));
+  $__local_var_3_0 = (((($GLOBALS['Data_DateTime_adjustImpl'])($GLOBALS['Data_Maybe_Just']))(new Phpurs_Data0("Nothing")))((($dictDuration_0)['fromDuration'])($d_1)))(($GLOBALS['Data_DateTime_toRecord'])($dt_2));
   $__t1 = null;;
   if ((is_object($__local_var_3_0) && (($__local_var_3_0)->{'tag'} === "Just"))) {
 $__t2 = null;;
@@ -346,124 +439,13 @@ end_branch_2:;
 $__local_var_4_2 = $__t2;
 $__t4 = null;;
 if ((is_object($__local_var_4_2) && (($__local_var_4_2)->{'tag'} === "Just"))) {
-$__t4 = new Phpurs_Data1("Just", (($GLOBALS['Data_Date_exactDate'] ?? \PhpursThunks::eval('Data_Date_exactDate')))(($__local_var_4_2)->{'value0'}));
+$__t4 = new Phpurs_Data1("Just", ($GLOBALS['Data_Date_exactDate'])(($__local_var_4_2)->{'value0'}));
 goto end_branch_4;;
 };
 $__t4 = new Phpurs_Data0("Nothing");
 end_branch_4:;
 $__local_var_5_4 = $__t4;
-$__t6 = null;;
-switch ((($__local_var_3_0)->{'value0'})['month']) {
-case 1:
-$__t6 = new Phpurs_Data1("Just", new Phpurs_Data0("January"));
-goto end_branch_6;;
-break;
-default:
-;
-break;
-};
-switch ((($__local_var_3_0)->{'value0'})['month']) {
-case 2:
-$__t6 = new Phpurs_Data1("Just", new Phpurs_Data0("February"));
-goto end_branch_6;;
-break;
-default:
-;
-break;
-};
-switch ((($__local_var_3_0)->{'value0'})['month']) {
-case 3:
-$__t6 = new Phpurs_Data1("Just", new Phpurs_Data0("March"));
-goto end_branch_6;;
-break;
-default:
-;
-break;
-};
-switch ((($__local_var_3_0)->{'value0'})['month']) {
-case 4:
-$__t6 = new Phpurs_Data1("Just", new Phpurs_Data0("April"));
-goto end_branch_6;;
-break;
-default:
-;
-break;
-};
-switch ((($__local_var_3_0)->{'value0'})['month']) {
-case 5:
-$__t6 = new Phpurs_Data1("Just", new Phpurs_Data0("May"));
-goto end_branch_6;;
-break;
-default:
-;
-break;
-};
-switch ((($__local_var_3_0)->{'value0'})['month']) {
-case 6:
-$__t6 = new Phpurs_Data1("Just", new Phpurs_Data0("June"));
-goto end_branch_6;;
-break;
-default:
-;
-break;
-};
-switch ((($__local_var_3_0)->{'value0'})['month']) {
-case 7:
-$__t6 = new Phpurs_Data1("Just", new Phpurs_Data0("July"));
-goto end_branch_6;;
-break;
-default:
-;
-break;
-};
-switch ((($__local_var_3_0)->{'value0'})['month']) {
-case 8:
-$__t6 = new Phpurs_Data1("Just", new Phpurs_Data0("August"));
-goto end_branch_6;;
-break;
-default:
-;
-break;
-};
-switch ((($__local_var_3_0)->{'value0'})['month']) {
-case 9:
-$__t6 = new Phpurs_Data1("Just", new Phpurs_Data0("September"));
-goto end_branch_6;;
-break;
-default:
-;
-break;
-};
-switch ((($__local_var_3_0)->{'value0'})['month']) {
-case 10:
-$__t6 = new Phpurs_Data1("Just", new Phpurs_Data0("October"));
-goto end_branch_6;;
-break;
-default:
-;
-break;
-};
-switch ((($__local_var_3_0)->{'value0'})['month']) {
-case 11:
-$__t6 = new Phpurs_Data1("Just", new Phpurs_Data0("November"));
-goto end_branch_6;;
-break;
-default:
-;
-break;
-};
-switch ((($__local_var_3_0)->{'value0'})['month']) {
-case 12:
-$__t6 = new Phpurs_Data1("Just", new Phpurs_Data0("December"));
-goto end_branch_6;;
-break;
-default:
-;
-break;
-};
-$__t6 = new Phpurs_Data0("Nothing");
-end_branch_6:;
-$__local_var_6_6 = $__t6;
+$__local_var_6_6 = match ((($__local_var_3_0)->{'value0'})['month']) { 1 => new Phpurs_Data1("Just", new Phpurs_Data0("January")), 2 => new Phpurs_Data1("Just", new Phpurs_Data0("February")), 3 => new Phpurs_Data1("Just", new Phpurs_Data0("March")), 4 => new Phpurs_Data1("Just", new Phpurs_Data0("April")), 5 => new Phpurs_Data1("Just", new Phpurs_Data0("May")), 6 => new Phpurs_Data1("Just", new Phpurs_Data0("June")), 7 => new Phpurs_Data1("Just", new Phpurs_Data0("July")), 8 => new Phpurs_Data1("Just", new Phpurs_Data0("August")), 9 => new Phpurs_Data1("Just", new Phpurs_Data0("September")), 10 => new Phpurs_Data1("Just", new Phpurs_Data0("October")), 11 => new Phpurs_Data1("Just", new Phpurs_Data0("November")), 12 => new Phpurs_Data1("Just", new Phpurs_Data0("December")), default => new Phpurs_Data0("Nothing") };
 $__t8 = null;;
 if ((is_object($__local_var_5_4) && (($__local_var_5_4)->{'tag'} === "Just"))) {
 $__t9 = null;;
@@ -522,7 +504,7 @@ end_branch_13:;
 $__local_var_8_13 = $__t13;
 $__t15 = null;;
 if ((is_object($__local_var_8_13) && (($__local_var_8_13)->{'tag'} === "Just"))) {
-$__t15 = new Phpurs_Data1("Just", (($GLOBALS['Data_DateTime_DateTime'] ?? \PhpursThunks::eval('Data_DateTime_DateTime')))(($__local_var_8_13)->{'value0'}));
+$__t15 = new Phpurs_Data1("Just", ($GLOBALS['Data_DateTime_DateTime'])(($__local_var_8_13)->{'value0'}));
 goto end_branch_15;;
 };
 $__t15 = new Phpurs_Data0("Nothing");
@@ -700,83 +682,5 @@ goto end_branch_1;;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-$ffi_Data_DateTime = \call_user_func(function() {
-  $exports = [];
-$createUTC = function($y, $mo, $d, $h, $m, $s, $ms) {
-    $dt = new \DateTime('now', new \DateTimeZone('UTC'));
-    $dt->setDate($y, $mo + 1, $d);
-    $dt->setTime($h, $m, $s, $ms * 1000);
-    return (float)$dt->getTimestamp() * 1000 + (int)$dt->format('v');
-};
-
-$calcDiff = function($rec1, $rec2 = null) use (&$calcDiff) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$calcDiff) {
-
-            return $calcDiff(...\array_merge($__args, $more));
-        };
-    }
-
-    $msUTC1 = $createUTC($rec1->year, $rec1->month - 1, $rec1->day, $rec1->hour, $rec1->minute, $rec1->second, $rec1->millisecond);
-    $msUTC2 = $createUTC($rec2->year, $rec2->month - 1, $rec2->day, $rec2->hour, $rec2->minute, $rec2->second, $rec2->millisecond);
-    return $msUTC1 - $msUTC2;
-};
-
-$adjustImpl = function($just, $nothing = null, $offset = null, $rec = null) use (&$adjustImpl) {
-    if (\func_num_args() < 4) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$adjustImpl) {
-
-            return $adjustImpl(...\array_merge($__args, $more));
-        };
-    }
-
-    $msUTC = $createUTC($rec->year, $rec->month - 1, $rec->day, $rec->hour, $rec->minute, $rec->second, $rec->millisecond);
-    $targetMs = $msUTC + $offset;
-    
-    $seconds = floor($targetMs / 1000);
-    $ms = $targetMs - ($seconds * 1000);
-    
-    try {
-        $dt = new \DateTime("@" . $seconds, new \DateTimeZone('UTC'));
-        return $just((object)[
-            'year' => (int)$dt->format('Y'),
-            'month' => (int)$dt->format('n'),
-            'day' => (int)$dt->format('j'),
-            'hour' => (int)$dt->format('G'),
-            'minute' => (int)$dt->format('i'),
-            'second' => (int)$dt->format('s'),
-            'millisecond' => (int)$ms
-        ]);
-    } catch (\Exception $e) {
-        return $nothing;
-    }
-};
-
-$exports['createUTC'] = $createUTC;
-$exports['calcDiff'] = $calcDiff;
-$exports['adjustImpl'] = $adjustImpl;
-return $exports;
-  return $exports;
-});
-\PhpursThunks::$thunks['Data_DateTime_adjustImpl'] = function() use (&$ffi_Data_DateTime) { return $ffi_Data_DateTime['adjustImpl']; };
-\PhpursThunks::$thunks['Data_DateTime_calcDiff'] = function() use (&$ffi_Data_DateTime) { return $ffi_Data_DateTime['calcDiff']; };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+})();
 

@@ -96,39 +96,50 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Control_Monad_Writer_Class_tell'] = function() { $v = function($dict_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Control_Monad_Writer_Class_tell
+$GLOBALS['Control_Monad_Writer_Class_tell'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['tell'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Writer_Class_pass'] = function() { $v = function($dict_0 = null) {
+};
+
+// Control_Monad_Writer_Class_pass
+$GLOBALS['Control_Monad_Writer_Class_pass'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['pass'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Writer_Class_listen'] = function() { $v = function($dict_0 = null) {
+};
+
+// Control_Monad_Writer_Class_listen
+$GLOBALS['Control_Monad_Writer_Class_listen'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['listen'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Writer_Class_listens'] = function() { $v = function($dictMonadWriter_0 = null) {
+};
+
+// Control_Monad_Writer_Class_listens
+$GLOBALS['Control_Monad_Writer_Class_listens'] = function($dictMonadWriter_0 = null) {
   $__num = \func_num_args();
-  $Monad1_1_0 = (((($dictMonadWriter_0)['MonadTell1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Monad1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $Monad1_1_0 = (((($dictMonadWriter_0)['MonadTell1'])($GLOBALS['Prim_undefined']))['Monad1'])($GLOBALS['Prim_undefined']);
   $__res = (function() use ($Monad1_1_0, $dictMonadWriter_0) {
   $__fn = function($f_2 = null, $m_3 = null) use ($Monad1_1_0, $dictMonadWriter_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((($Monad1_1_0)['Bind1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['bind'])((($dictMonadWriter_0)['listen'])($m_3)))(function($v_4 = null) use ($Monad1_1_0, $f_2) {
+  $__res = ((((($Monad1_1_0)['Bind1'])($GLOBALS['Prim_undefined']))['bind'])((($dictMonadWriter_0)['listen'])($m_3)))(function($v_4 = null) use ($Monad1_1_0, $f_2) {
   $__num = \func_num_args();
-  $__res = (((($Monad1_1_0)['Applicative0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['pure'])(new Phpurs_Data2("Tuple", ($v_4)->{'value0'}, ($f_2)(($v_4)->{'value1'})));
+  $__res = (((($Monad1_1_0)['Applicative0'])($GLOBALS['Prim_undefined']))['pure'])(new Phpurs_Data2("Tuple", ($v_4)->{'value0'}, ($f_2)(($v_4)->{'value1'})));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -142,19 +153,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Writer_Class_censor'] = function() { $v = function($dictMonadWriter_0 = null) {
+};
+
+// Control_Monad_Writer_Class_censor
+$GLOBALS['Control_Monad_Writer_Class_censor'] = function($dictMonadWriter_0 = null) {
   $__num = \func_num_args();
-  $Monad1_1_0 = (((($dictMonadWriter_0)['MonadTell1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Monad1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $Monad1_1_0 = (((($dictMonadWriter_0)['MonadTell1'])($GLOBALS['Prim_undefined']))['Monad1'])($GLOBALS['Prim_undefined']);
   $__res = (function() use ($Monad1_1_0, $dictMonadWriter_0) {
   $__fn = function($f_2 = null, $m_3 = null) use ($Monad1_1_0, $dictMonadWriter_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictMonadWriter_0)['pass'])(((((($Monad1_1_0)['Bind1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['bind'])($m_3))(function($a_4 = null) use ($Monad1_1_0, $f_2) {
+  $__res = (($dictMonadWriter_0)['pass'])(((((($Monad1_1_0)['Bind1'])($GLOBALS['Prim_undefined']))['bind'])($m_3))(function($a_4 = null) use ($Monad1_1_0, $f_2) {
   $__num = \func_num_args();
-  $__res = (((($Monad1_1_0)['Applicative0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['pure'])(new Phpurs_Data2("Tuple", $a_4, $f_2));
+  $__res = (((($Monad1_1_0)['Applicative0'])($GLOBALS['Prim_undefined']))['pure'])(new Phpurs_Data2("Tuple", $a_4, $f_2));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -168,12 +181,5 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
+};
 

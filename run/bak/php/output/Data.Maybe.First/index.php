@@ -110,14 +110,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Maybe_First_First'] = function() { $v = function($x_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Maybe_First_First
+$GLOBALS['Data_Maybe_First_First'] = function($x_0 = null) {
   $__num = \func_num_args();
   $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Maybe_First_showFirst'] = function() { $v = function($dictShow_0 = null) {
+};
+
+// Data_Maybe_First_showFirst
+$GLOBALS['Data_Maybe_First_showFirst'] = function($dictShow_0 = null) {
   $__num = \func_num_args();
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
@@ -141,8 +148,10 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Maybe_First_semigroupFirst'] = function() { $v = ["append" => (function() {
+};
+
+// Data_Maybe_First_semigroupFirst
+$GLOBALS['Data_Maybe_First_semigroupFirst'] = ["append" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -161,34 +170,52 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Maybe_First_ordFirst'] = function() { $v = function($dictOrd_0 = null) {
+})()];
+
+// Data_Maybe_First_ordFirst
+$GLOBALS['Data_Maybe_First_ordFirst'] = function($dictOrd_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Maybe_ordMaybe'] ?? \PhpursThunks::eval('Data_Maybe_ordMaybe')))($dictOrd_0);
+  $__res = ($GLOBALS['Data_Maybe_ordMaybe'])($dictOrd_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Maybe_First_ord1First'] = function() { $v = ($GLOBALS['Data_Maybe_ord1Maybe'] ?? \PhpursThunks::eval('Data_Maybe_ord1Maybe')); return $v; };
-\PhpursThunks::$thunks['Data_Maybe_First_newtypeFirst'] = function() { $v = ["Coercible0" => function($dollar__unused_0 = null) {
+};
+
+// Data_Maybe_First_ord1First
+$GLOBALS['Data_Maybe_First_ord1First'] = $GLOBALS['Data_Maybe_ord1Maybe'];
+
+// Data_Maybe_First_newtypeFirst
+$GLOBALS['Data_Maybe_First_newtypeFirst'] = ["Coercible0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'));
+  $__res = $GLOBALS['Prim_undefined'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Maybe_First_monoidFirst'] = function() { $v = ["mempty" => new Phpurs_Data0("Nothing"), "Semigroup0" => function($dollar__unused_0 = null) {
+}];
+
+// Data_Maybe_First_monoidFirst
+$GLOBALS['Data_Maybe_First_monoidFirst'] = ["mempty" => new Phpurs_Data0("Nothing"), "Semigroup0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Maybe_First_semigroupFirst'] ?? \PhpursThunks::eval('Data_Maybe_First_semigroupFirst'));
+  $__res = $GLOBALS['Data_Maybe_First_semigroupFirst'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Maybe_First_monadFirst'] = function() { $v = ($GLOBALS['Data_Maybe_monadMaybe'] ?? \PhpursThunks::eval('Data_Maybe_monadMaybe')); return $v; };
-\PhpursThunks::$thunks['Data_Maybe_First_invariantFirst'] = function() { $v = ($GLOBALS['Data_Maybe_invariantMaybe'] ?? \PhpursThunks::eval('Data_Maybe_invariantMaybe')); return $v; };
-\PhpursThunks::$thunks['Data_Maybe_First_functorFirst'] = function() { $v = ($GLOBALS['Data_Maybe_functorMaybe'] ?? \PhpursThunks::eval('Data_Maybe_functorMaybe')); return $v; };
-\PhpursThunks::$thunks['Data_Maybe_First_extendFirst'] = function() { $v = ($GLOBALS['Data_Maybe_extendMaybe'] ?? \PhpursThunks::eval('Data_Maybe_extendMaybe')); return $v; };
-\PhpursThunks::$thunks['Data_Maybe_First_eqFirst'] = function() { $v = function($dictEq_0 = null) {
+}];
+
+// Data_Maybe_First_monadFirst
+$GLOBALS['Data_Maybe_First_monadFirst'] = $GLOBALS['Data_Maybe_monadMaybe'];
+
+// Data_Maybe_First_invariantFirst
+$GLOBALS['Data_Maybe_First_invariantFirst'] = $GLOBALS['Data_Maybe_invariantMaybe'];
+
+// Data_Maybe_First_functorFirst
+$GLOBALS['Data_Maybe_First_functorFirst'] = $GLOBALS['Data_Maybe_functorMaybe'];
+
+// Data_Maybe_First_extendFirst
+$GLOBALS['Data_Maybe_First_extendFirst'] = $GLOBALS['Data_Maybe_extendMaybe'];
+
+// Data_Maybe_First_eqFirst
+$GLOBALS['Data_Maybe_First_eqFirst'] = function($dictEq_0 = null) {
   $__num = \func_num_args();
   $__res = ["eq" => (function() use ($dictEq_0) {
   $__fn = function($x_1 = null, $y_2 = null) use ($dictEq_0, &$__fn) {
@@ -213,65 +240,59 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Maybe_First_eq1First'] = function() { $v = ($GLOBALS['Data_Maybe_eq1Maybe'] ?? \PhpursThunks::eval('Data_Maybe_eq1Maybe')); return $v; };
-\PhpursThunks::$thunks['Data_Maybe_First_boundedFirst'] = function() { $v = function($dictBounded_0 = null) {
+};
+
+// Data_Maybe_First_eq1First
+$GLOBALS['Data_Maybe_First_eq1First'] = $GLOBALS['Data_Maybe_eq1Maybe'];
+
+// Data_Maybe_First_boundedFirst
+$GLOBALS['Data_Maybe_First_boundedFirst'] = function($dictBounded_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Maybe_boundedMaybe'] ?? \PhpursThunks::eval('Data_Maybe_boundedMaybe')))($dictBounded_0);
+  $__res = ($GLOBALS['Data_Maybe_boundedMaybe'])($dictBounded_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Maybe_First_bindFirst'] = function() { $v = ($GLOBALS['Data_Maybe_bindMaybe'] ?? \PhpursThunks::eval('Data_Maybe_bindMaybe')); return $v; };
-\PhpursThunks::$thunks['Data_Maybe_First_applyFirst'] = function() { $v = ($GLOBALS['Data_Maybe_applyMaybe'] ?? \PhpursThunks::eval('Data_Maybe_applyMaybe')); return $v; };
-\PhpursThunks::$thunks['Data_Maybe_First_applicativeFirst'] = function() { $v = ($GLOBALS['Data_Maybe_applicativeMaybe'] ?? \PhpursThunks::eval('Data_Maybe_applicativeMaybe')); return $v; };
-\PhpursThunks::$thunks['Data_Maybe_First_altFirst'] = function() { $v = ["alt" => (($GLOBALS['Data_Maybe_First_semigroupFirst'] ?? \PhpursThunks::eval('Data_Maybe_First_semigroupFirst')))['append'], "Functor0" => function($dollar__unused_0 = null) {
+};
+
+// Data_Maybe_First_bindFirst
+$GLOBALS['Data_Maybe_First_bindFirst'] = $GLOBALS['Data_Maybe_bindMaybe'];
+
+// Data_Maybe_First_applyFirst
+$GLOBALS['Data_Maybe_First_applyFirst'] = $GLOBALS['Data_Maybe_applyMaybe'];
+
+// Data_Maybe_First_applicativeFirst
+$GLOBALS['Data_Maybe_First_applicativeFirst'] = $GLOBALS['Data_Maybe_applicativeMaybe'];
+
+// Data_Maybe_First_altFirst
+$GLOBALS['Data_Maybe_First_altFirst'] = ["alt" => ($GLOBALS['Data_Maybe_First_semigroupFirst'])['append'], "Functor0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Maybe_functorMaybe'] ?? \PhpursThunks::eval('Data_Maybe_functorMaybe'));
+  $__res = $GLOBALS['Data_Maybe_functorMaybe'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Maybe_First_plusFirst'] = function() { $v = ["empty" => new Phpurs_Data0("Nothing"), "Alt0" => function($dollar__unused_0 = null) {
+}];
+
+// Data_Maybe_First_plusFirst
+$GLOBALS['Data_Maybe_First_plusFirst'] = ["empty" => new Phpurs_Data0("Nothing"), "Alt0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Maybe_First_altFirst'] ?? \PhpursThunks::eval('Data_Maybe_First_altFirst'));
+  $__res = $GLOBALS['Data_Maybe_First_altFirst'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Maybe_First_alternativeFirst'] = function() { $v = ["Applicative0" => function($dollar__unused_0 = null) {
+}];
+
+// Data_Maybe_First_alternativeFirst
+$GLOBALS['Data_Maybe_First_alternativeFirst'] = ["Applicative0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Maybe_applicativeMaybe'] ?? \PhpursThunks::eval('Data_Maybe_applicativeMaybe'));
+  $__res = $GLOBALS['Data_Maybe_applicativeMaybe'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Plus1" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Maybe_First_plusFirst'] ?? \PhpursThunks::eval('Data_Maybe_First_plusFirst'));
+  $__res = $GLOBALS['Data_Maybe_First_plusFirst'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}];
 

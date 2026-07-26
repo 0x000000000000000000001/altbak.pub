@@ -101,13 +101,18 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Decide_choosePredicate'] = function() { $v = ["choose" => (function() {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Decide_choosePredicate
+$GLOBALS['Data_Decide_choosePredicate'] = ["choose" => (function() {
   $__fn = function($f_0 = null, $v_1 = null, $v1_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(function($v2_3 = null) use ($v1_2, $v_1) {
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v2_3 = null) use ($v1_2, $v_1) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object($v2_3) && (($v2_3)->{'tag'} === "Left"))) {
@@ -133,21 +138,23 @@ goto end_branch_0;;
   return $__fn;
 })(), "Divide0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Divide_dividePredicate'] ?? \PhpursThunks::eval('Data_Divide_dividePredicate'));
+  $__res = $GLOBALS['Data_Divide_dividePredicate'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Decide_chooseOp'] = function() { $v = function($dictSemigroup_0 = null) {
+}];
+
+// Data_Decide_chooseOp
+$GLOBALS['Data_Decide_chooseOp'] = function($dictSemigroup_0 = null) {
   $__num = \func_num_args();
-  $divideOp_1_0 = (($GLOBALS['Data_Divide_divideOp'] ?? \PhpursThunks::eval('Data_Divide_divideOp')))($dictSemigroup_0);
+  $divideOp_1_0 = ($GLOBALS['Data_Divide_divideOp'])($dictSemigroup_0);
   $__res = ["choose" => (function() {
   $__fn = function($f_2 = null, $v_3 = null, $v1_4 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(function($v2_5 = null) use ($v1_4, $v_3) {
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v2_5 = null) use ($v1_4, $v_3) {
   $__num = \func_num_args();
   $__t1 = null;;
   if ((is_object($v2_5) && (($v2_5)->{'tag'} === "Left"))) {
@@ -181,8 +188,10 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Decide_chooseEquivalence'] = function() { $v = ["choose" => (function() {
+};
+
+// Data_Decide_chooseEquivalence
+$GLOBALS['Data_Decide_chooseEquivalence'] = ["choose" => (function() {
   $__fn = function($f_0 = null, $v_1 = null, $v1_2 = null, $a_3 = null, $b_4 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 5) {
@@ -235,12 +244,14 @@ goto end_branch_1;;
   return $__fn;
 })(), "Divide0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Divide_divideEquivalence'] ?? \PhpursThunks::eval('Data_Divide_divideEquivalence'));
+  $__res = $GLOBALS['Data_Divide_divideEquivalence'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Decide_chooseComparison'] = function() { $v = ["choose" => (function() {
+}];
+
+// Data_Decide_chooseComparison
+$GLOBALS['Data_Decide_chooseComparison'] = ["choose" => (function() {
   $__fn = function($f_0 = null, $v_1 = null, $v1_2 = null, $a_3 = null, $b_4 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 5) {
@@ -293,31 +304,27 @@ goto end_branch_1;;
   return $__fn;
 })(), "Divide0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Divide_divideComparison'] ?? \PhpursThunks::eval('Data_Divide_divideComparison'));
+  $__res = $GLOBALS['Data_Divide_divideComparison'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Decide_choose'] = function() { $v = function($dict_0 = null) {
+}];
+
+// Data_Decide_choose
+$GLOBALS['Data_Decide_choose'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['choose'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Decide_chosen'] = function() { $v = function($dictDecide_0 = null) {
+};
+
+// Data_Decide_chosen
+$GLOBALS['Data_Decide_chosen'] = function($dictDecide_0 = null) {
   $__num = \func_num_args();
-  $__res = (($dictDecide_0)['choose'])((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))['identity']);
+  $__res = (($dictDecide_0)['choose'])(($GLOBALS['Control_Category_categoryFn'])['identity']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
+};
 

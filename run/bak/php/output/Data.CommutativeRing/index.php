@@ -96,30 +96,39 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_CommutativeRing_commutativeRingUnit'] = function() { $v = ["Ring0" => function($dollar__unused_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_CommutativeRing_commutativeRingUnit
+$GLOBALS['Data_CommutativeRing_commutativeRingUnit'] = ["Ring0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Ring_ringUnit'] ?? \PhpursThunks::eval('Data_Ring_ringUnit'));
+  $__res = $GLOBALS['Data_Ring_ringUnit'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_CommutativeRing_commutativeRingRecordNil'] = function() { $v = ["RingRecord0" => function($dollar__unused_0 = null) {
+}];
+
+// Data_CommutativeRing_commutativeRingRecordNil
+$GLOBALS['Data_CommutativeRing_commutativeRingRecordNil'] = ["RingRecord0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Ring_ringRecordNil'] ?? \PhpursThunks::eval('Data_Ring_ringRecordNil'));
+  $__res = $GLOBALS['Data_Ring_ringRecordNil'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_CommutativeRing_commutativeRingRecordCons'] = function() { $v = (function() {
+}];
+
+// Data_CommutativeRing_commutativeRingRecordCons
+$GLOBALS['Data_CommutativeRing_commutativeRingRecordCons'] = (function() {
   $__fn = function($dictIsSymbol_0 = null, $dollar__unused_1 = null, $dictCommutativeRingRecord_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $ringRecordCons1_3_0 = (((($GLOBALS['Data_Ring_ringRecordCons'] ?? \PhpursThunks::eval('Data_Ring_ringRecordCons')))($dictIsSymbol_0))(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))((($dictCommutativeRingRecord_2)['RingRecord0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $ringRecordCons1_3_0 = ((($GLOBALS['Data_Ring_ringRecordCons'])($dictIsSymbol_0))($GLOBALS['Prim_undefined']))((($dictCommutativeRingRecord_2)['RingRecord0'])($GLOBALS['Prim_undefined']));
   $__res = function($dictCommutativeRing_4 = null) use ($ringRecordCons1_3_0) {
   $__num = \func_num_args();
-  $ringRecordCons2_5_1 = ($ringRecordCons1_3_0)((($dictCommutativeRing_4)['Ring0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $ringRecordCons2_5_1 = ($ringRecordCons1_3_0)((($dictCommutativeRing_4)['Ring0'])($GLOBALS['Prim_undefined']));
   $__res = ["RingRecord0" => function($dollar__unused_6 = null) use ($ringRecordCons2_5_1) {
   $__num = \func_num_args();
   $__res = $ringRecordCons2_5_1;
@@ -136,14 +145,16 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_CommutativeRing_commutativeRingRecord'] = function() { $v = (function() {
+})();
+
+// Data_CommutativeRing_commutativeRingRecord
+$GLOBALS['Data_CommutativeRing_commutativeRingRecord'] = (function() {
   $__fn = function($dollar__unused_0 = null, $dictCommutativeRingRecord_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $ringRecord1_2_0 = ((($GLOBALS['Data_Ring_ringRecord'] ?? \PhpursThunks::eval('Data_Ring_ringRecord')))(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))((($dictCommutativeRingRecord_1)['RingRecord0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $ringRecord1_2_0 = (($GLOBALS['Data_Ring_ringRecord'])($GLOBALS['Prim_undefined']))((($dictCommutativeRingRecord_1)['RingRecord0'])($GLOBALS['Prim_undefined']));
   $__res = ["Ring0" => function($dollar__unused_3 = null) use ($ringRecord1_2_0) {
   $__num = \func_num_args();
   $__res = $ringRecord1_2_0;
@@ -156,31 +167,39 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_CommutativeRing_commutativeRingProxy'] = function() { $v = ["Ring0" => function($dollar__unused_0 = null) {
+})();
+
+// Data_CommutativeRing_commutativeRingProxy
+$GLOBALS['Data_CommutativeRing_commutativeRingProxy'] = ["Ring0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Ring_ringProxy'] ?? \PhpursThunks::eval('Data_Ring_ringProxy'));
+  $__res = $GLOBALS['Data_Ring_ringProxy'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_CommutativeRing_commutativeRingNumber'] = function() { $v = ["Ring0" => function($dollar__unused_0 = null) {
+}];
+
+// Data_CommutativeRing_commutativeRingNumber
+$GLOBALS['Data_CommutativeRing_commutativeRingNumber'] = ["Ring0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Ring_ringNumber'] ?? \PhpursThunks::eval('Data_Ring_ringNumber'));
+  $__res = $GLOBALS['Data_Ring_ringNumber'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_CommutativeRing_commutativeRingInt'] = function() { $v = ["Ring0" => function($dollar__unused_0 = null) {
+}];
+
+// Data_CommutativeRing_commutativeRingInt
+$GLOBALS['Data_CommutativeRing_commutativeRingInt'] = ["Ring0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Ring_ringInt'] ?? \PhpursThunks::eval('Data_Ring_ringInt'));
+  $__res = $GLOBALS['Data_Ring_ringInt'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_CommutativeRing_commutativeRingFn'] = function() { $v = function($dictCommutativeRing_0 = null) {
+}];
+
+// Data_CommutativeRing_commutativeRingFn
+$GLOBALS['Data_CommutativeRing_commutativeRingFn'] = function($dictCommutativeRing_0 = null) {
   $__num = \func_num_args();
-  $ringFn_1_0 = (($GLOBALS['Data_Ring_ringFn'] ?? \PhpursThunks::eval('Data_Ring_ringFn')))((($dictCommutativeRing_0)['Ring0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $ringFn_1_0 = ($GLOBALS['Data_Ring_ringFn'])((($dictCommutativeRing_0)['Ring0'])($GLOBALS['Prim_undefined']));
   $__res = ["Ring0" => function($dollar__unused_2 = null) use ($ringFn_1_0) {
   $__num = \func_num_args();
   $__res = $ringFn_1_0;
@@ -191,15 +210,5 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
+};
 

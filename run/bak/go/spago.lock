@@ -1,7 +1,7 @@
 {
   "workspace": {
     "packages": {
-      "ps-php-test": {
+      "ps-go-test": {
         "path": "./",
         "core": {
           "dependencies": [
@@ -11,6 +11,7 @@
             "datetime",
             "effect",
             "either",
+            "lazy",
             "maybe",
             "now",
             "partial",
@@ -673,56 +674,77 @@
     },
     "extra_packages": {
       "aff": {
-        "path": "../phpurs-aff"
+        "path": "../gopurs-aff"
       },
       "arrays": {
-        "path": "../phpurs-arrays"
+        "path": "../gopurs-arrays"
+      },
+      "assert": {
+        "path": "../gopurs-assert"
       },
       "console": {
-        "path": "../phpurs-console"
+        "path": "../gopurs-console"
       },
       "datetime": {
-        "path": "../phpurs-datetime"
+        "path": "../gopurs-datetime"
       },
       "effect": {
-        "path": "../phpurs-effect"
+        "path": "../gopurs-effect"
+      },
+      "enums": {
+        "path": "../gopurs-enums"
       },
       "exceptions": {
-        "path": "../phpurs-exceptions"
+        "path": "../gopurs-exceptions"
       },
       "foldable-traversable": {
-        "path": "../phpurs-foldable-traversable"
+        "path": "../gopurs-foldable-traversable"
+      },
+      "foreign-object": {
+        "path": "../gopurs-foreign-object"
       },
       "functions": {
-        "path": "../phpurs-functions"
+        "path": "../gopurs-functions"
+      },
+      "integers": {
+        "path": "../gopurs-integers"
+      },
+      "lazy": {
+        "path": "../gopurs-lazy"
       },
       "now": {
-        "path": "../phpurs-now"
+        "path": "../gopurs-now"
+      },
+      "numbers": {
+        "path": "../gopurs-numbers"
       },
       "partial": {
-        "path": "../phpurs-partial"
+        "path": "../gopurs-partial"
       },
       "prelude": {
-        "path": "../phpurs-prelude"
+        "path": "../gopurs-prelude"
+      },
+      "record": {
+        "path": "../gopurs-record"
       },
       "refs": {
-        "path": "../phpurs-refs"
+        "path": "../gopurs-refs"
       },
       "st": {
-        "path": "../phpurs-st"
+        "path": "../gopurs-st"
       },
       "strings": {
-        "path": "../phpurs-strings"
+        "path": "../gopurs-strings"
       },
       "unsafe-coerce": {
-        "path": "../phpurs-unsafe-coerce"
+        "path": "../gopurs-unsafe-coerce"
       }
     }
   },
   "packages": {
     "aff": {
       "type": "local",
-      "path": "../phpurs-aff",
+      "path": "../gopurs-aff",
       "dependencies": [
         "arrays",
         "bifunctors",
@@ -745,7 +767,7 @@
     },
     "arrays": {
       "type": "local",
-      "path": "../phpurs-arrays",
+      "path": "../gopurs-arrays",
       "dependencies": [
         "bifunctors",
         "control",
@@ -777,7 +799,7 @@
     },
     "console": {
       "type": "local",
-      "path": "../phpurs-console",
+      "path": "../gopurs-console",
       "dependencies": [
         "effect",
         "prelude"
@@ -816,7 +838,7 @@
     },
     "datetime": {
       "type": "local",
-      "path": "../phpurs-datetime",
+      "path": "../gopurs-datetime",
       "dependencies": [
         "bifunctors",
         "control",
@@ -850,7 +872,7 @@
     },
     "effect": {
       "type": "local",
-      "path": "../phpurs-effect",
+      "path": "../gopurs-effect",
       "dependencies": [
         "prelude"
       ]
@@ -867,9 +889,8 @@
       ]
     },
     "enums": {
-      "type": "registry",
-      "version": "6.0.1",
-      "integrity": "sha256-sdZOmLX5+5pASGpvVyT0vSD5BBYQjZiayjV5XiPutso=",
+      "type": "local",
+      "path": "../gopurs-enums",
       "dependencies": [
         "control",
         "either",
@@ -885,7 +906,7 @@
     },
     "exceptions": {
       "type": "local",
-      "path": "../phpurs-exceptions",
+      "path": "../gopurs-exceptions",
       "dependencies": [
         "effect",
         "either",
@@ -903,7 +924,7 @@
     },
     "foldable-traversable": {
       "type": "local",
-      "path": "../phpurs-foldable-traversable",
+      "path": "../gopurs-foldable-traversable",
       "dependencies": [
         "bifunctors",
         "const",
@@ -920,7 +941,7 @@
     },
     "functions": {
       "type": "local",
-      "path": "../phpurs-functions",
+      "path": "../gopurs-functions",
       "dependencies": [
         "prelude"
       ]
@@ -974,9 +995,8 @@
       ]
     },
     "integers": {
-      "type": "registry",
-      "version": "6.0.0",
-      "integrity": "sha256-Y8yozC1uHRLcruobEyv5/bMKzE1BoKJ/olHv6o+bgm8=",
+      "type": "local",
+      "path": "../gopurs-integers",
       "dependencies": [
         "maybe",
         "numbers",
@@ -993,13 +1013,11 @@
       ]
     },
     "lazy": {
-      "type": "registry",
-      "version": "6.0.0",
-      "integrity": "sha256-MHRC+1Pc+AjortBp4b/e1e6KpEpsDwaJBNBB7TOL+1I=",
+      "type": "local",
+      "path": "../gopurs-lazy",
       "dependencies": [
         "control",
         "foldable-traversable",
-        "invariant",
         "prelude"
       ]
     },
@@ -1057,20 +1075,18 @@
     },
     "now": {
       "type": "local",
-      "path": "../phpurs-now",
+      "path": "../gopurs-now",
       "dependencies": [
         "datetime",
         "effect"
       ]
     },
     "numbers": {
-      "type": "registry",
-      "version": "9.0.1",
-      "integrity": "sha256-ZydYckgwRAnRaFC7pu6fADhzdwX+UqHZrfJyet64zls=",
+      "type": "local",
+      "path": "../gopurs-numbers",
       "dependencies": [
         "functions",
-        "maybe",
-        "prelude"
+        "maybe"
       ]
     },
     "ordered-collections": {
@@ -1123,12 +1139,12 @@
     },
     "partial": {
       "type": "local",
-      "path": "../phpurs-partial",
+      "path": "../gopurs-partial",
       "dependencies": []
     },
     "prelude": {
       "type": "local",
-      "path": "../phpurs-prelude",
+      "path": "../gopurs-prelude",
       "dependencies": []
     },
     "profunctor": {
@@ -1148,7 +1164,7 @@
     },
     "refs": {
       "type": "local",
-      "path": "../phpurs-refs",
+      "path": "../gopurs-refs",
       "dependencies": [
         "effect",
         "prelude"
@@ -1164,7 +1180,7 @@
     },
     "st": {
       "type": "local",
-      "path": "../phpurs-st",
+      "path": "../gopurs-st",
       "dependencies": [
         "partial",
         "prelude",
@@ -1174,7 +1190,7 @@
     },
     "strings": {
       "type": "local",
-      "path": "../phpurs-strings",
+      "path": "../gopurs-strings",
       "dependencies": [
         "arrays",
         "control",
@@ -1261,7 +1277,7 @@
     },
     "unsafe-coerce": {
       "type": "local",
-      "path": "../phpurs-unsafe-coerce",
+      "path": "../gopurs-unsafe-coerce",
       "dependencies": []
     }
   }

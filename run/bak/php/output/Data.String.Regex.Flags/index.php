@@ -104,69 +104,86 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_String_Regex_Flags_guard'] = function() { $v = (($GLOBALS['Control_Alternative_guard'] ?? \PhpursThunks::eval('Control_Alternative_guard')))(($GLOBALS['Control_Alternative_alternativeArray'] ?? \PhpursThunks::eval('Control_Alternative_alternativeArray'))); return $v; };
-\PhpursThunks::$thunks['Data_String_Regex_Flags_eq'] = function() { $v = (($GLOBALS['Data_Eq_eqArrayImpl'] ?? \PhpursThunks::eval('Data_Eq_eqArrayImpl')))(($GLOBALS['Data_Eq_eqStringImpl'] ?? \PhpursThunks::eval('Data_Eq_eqStringImpl'))); return $v; };
-\PhpursThunks::$thunks['Data_String_Regex_Flags_RegexFlags'] = function() { $v = function($x_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_String_Regex_Flags_guard
+$GLOBALS['Data_String_Regex_Flags_guard'] = ($GLOBALS['Control_Alternative_guard'])($GLOBALS['Control_Alternative_alternativeArray']);
+
+// Data_String_Regex_Flags_eq
+$GLOBALS['Data_String_Regex_Flags_eq'] = ($GLOBALS['Data_Eq_eqArrayImpl'])($GLOBALS['Data_Eq_eqStringImpl']);
+
+// Data_String_Regex_Flags_RegexFlags
+$GLOBALS['Data_String_Regex_Flags_RegexFlags'] = function($x_0 = null) {
   $__num = \func_num_args();
   $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_String_Regex_Flags_unicode'] = function() { $v = ["global" => false, "ignoreCase" => false, "multiline" => false, "dotAll" => false, "sticky" => false, "unicode" => true]; return $v; };
-\PhpursThunks::$thunks['Data_String_Regex_Flags_sticky'] = function() { $v = ["global" => false, "ignoreCase" => false, "multiline" => false, "dotAll" => false, "sticky" => true, "unicode" => false]; return $v; };
-\PhpursThunks::$thunks['Data_String_Regex_Flags_showRegexFlags'] = function() { $v = ["show" => function($v_0 = null) {
+};
+
+// Data_String_Regex_Flags_unicode
+$GLOBALS['Data_String_Regex_Flags_unicode'] = ["global" => false, "ignoreCase" => false, "multiline" => false, "dotAll" => false, "sticky" => false, "unicode" => true];
+
+// Data_String_Regex_Flags_sticky
+$GLOBALS['Data_String_Regex_Flags_sticky'] = ["global" => false, "ignoreCase" => false, "multiline" => false, "dotAll" => false, "sticky" => true, "unicode" => false];
+
+// Data_String_Regex_Flags_showRegexFlags
+$GLOBALS['Data_String_Regex_Flags_showRegexFlags'] = ["show" => function($v_0 = null) {
   $__num = \func_num_args();
-  $usedFlags_1_0 = ((($GLOBALS['Data_Semigroup_concatArray'] ?? \PhpursThunks::eval('Data_Semigroup_concatArray')))(((($GLOBALS['Data_Semigroup_concatArray'] ?? \PhpursThunks::eval('Data_Semigroup_concatArray')))(((($GLOBALS['Data_Semigroup_concatArray'] ?? \PhpursThunks::eval('Data_Semigroup_concatArray')))(((($GLOBALS['Data_Semigroup_concatArray'] ?? \PhpursThunks::eval('Data_Semigroup_concatArray')))(((($GLOBALS['Data_Semigroup_concatArray'] ?? \PhpursThunks::eval('Data_Semigroup_concatArray')))(((($GLOBALS['Data_Semigroup_concatArray'] ?? \PhpursThunks::eval('Data_Semigroup_concatArray')))([]))(((($GLOBALS['Data_Functor_arrayMap'] ?? \PhpursThunks::eval('Data_Functor_arrayMap')))(function($v_1 = null) {
+  $usedFlags_1_0 = (($GLOBALS['Data_Semigroup_concatArray'])((($GLOBALS['Data_Semigroup_concatArray'])((($GLOBALS['Data_Semigroup_concatArray'])((($GLOBALS['Data_Semigroup_concatArray'])((($GLOBALS['Data_Semigroup_concatArray'])((($GLOBALS['Data_Semigroup_concatArray'])([]))((($GLOBALS['Data_Functor_arrayMap'])(function($v_1 = null) {
   $__num = \func_num_args();
   $__res = "global";
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))((($GLOBALS['Data_String_Regex_Flags_guard'] ?? \PhpursThunks::eval('Data_String_Regex_Flags_guard')))(($v_0)['global'])))))(((($GLOBALS['Data_Functor_arrayMap'] ?? \PhpursThunks::eval('Data_Functor_arrayMap')))(function($v_1 = null) {
+}))(($GLOBALS['Data_String_Regex_Flags_guard'])(($v_0)['global'])))))((($GLOBALS['Data_Functor_arrayMap'])(function($v_1 = null) {
   $__num = \func_num_args();
   $__res = "ignoreCase";
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))((($GLOBALS['Data_String_Regex_Flags_guard'] ?? \PhpursThunks::eval('Data_String_Regex_Flags_guard')))(($v_0)['ignoreCase'])))))(((($GLOBALS['Data_Functor_arrayMap'] ?? \PhpursThunks::eval('Data_Functor_arrayMap')))(function($v_1 = null) {
+}))(($GLOBALS['Data_String_Regex_Flags_guard'])(($v_0)['ignoreCase'])))))((($GLOBALS['Data_Functor_arrayMap'])(function($v_1 = null) {
   $__num = \func_num_args();
   $__res = "multiline";
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))((($GLOBALS['Data_String_Regex_Flags_guard'] ?? \PhpursThunks::eval('Data_String_Regex_Flags_guard')))(($v_0)['multiline'])))))(((($GLOBALS['Data_Functor_arrayMap'] ?? \PhpursThunks::eval('Data_Functor_arrayMap')))(function($v_1 = null) {
+}))(($GLOBALS['Data_String_Regex_Flags_guard'])(($v_0)['multiline'])))))((($GLOBALS['Data_Functor_arrayMap'])(function($v_1 = null) {
   $__num = \func_num_args();
   $__res = "dotAll";
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))((($GLOBALS['Data_String_Regex_Flags_guard'] ?? \PhpursThunks::eval('Data_String_Regex_Flags_guard')))(($v_0)['dotAll'])))))(((($GLOBALS['Data_Functor_arrayMap'] ?? \PhpursThunks::eval('Data_Functor_arrayMap')))(function($v_1 = null) {
+}))(($GLOBALS['Data_String_Regex_Flags_guard'])(($v_0)['dotAll'])))))((($GLOBALS['Data_Functor_arrayMap'])(function($v_1 = null) {
   $__num = \func_num_args();
   $__res = "sticky";
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))((($GLOBALS['Data_String_Regex_Flags_guard'] ?? \PhpursThunks::eval('Data_String_Regex_Flags_guard')))(($v_0)['sticky'])))))(((($GLOBALS['Data_Functor_arrayMap'] ?? \PhpursThunks::eval('Data_Functor_arrayMap')))(function($v_1 = null) {
+}))(($GLOBALS['Data_String_Regex_Flags_guard'])(($v_0)['sticky'])))))((($GLOBALS['Data_Functor_arrayMap'])(function($v_1 = null) {
   $__num = \func_num_args();
   $__res = "unicode";
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))((($GLOBALS['Data_String_Regex_Flags_guard'] ?? \PhpursThunks::eval('Data_String_Regex_Flags_guard')))(($v_0)['unicode'])));
+}))(($GLOBALS['Data_String_Regex_Flags_guard'])(($v_0)['unicode'])));
   $__t1 = null;;
-  if (((($GLOBALS['Data_String_Regex_Flags_eq'] ?? \PhpursThunks::eval('Data_String_Regex_Flags_eq')))($usedFlags_1_0))([])) {
+  if ((($GLOBALS['Data_String_Regex_Flags_eq'])($usedFlags_1_0))([])) {
 $__t1 = "noFlags";
 goto end_branch_1;;
 };
-  $__t1 = (("(" . ((($GLOBALS['Data_String_Common_joinWith'] ?? \PhpursThunks::eval('Data_String_Common_joinWith')))(" <> "))($usedFlags_1_0)) . ")");
+  $__t1 = (("(" . (($GLOBALS['Data_String_Common_joinWith'])(" <> "))($usedFlags_1_0)) . ")");
   end_branch_1:;
   $__res = $__t1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_String_Regex_Flags_semigroupRegexFlags'] = function() { $v = ["append" => (function() {
+}];
+
+// Data_String_Regex_Flags_semigroupRegexFlags
+$GLOBALS['Data_String_Regex_Flags_semigroupRegexFlags'] = ["append" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -178,78 +195,77 @@ goto end_branch_1;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_String_Regex_Flags_noFlags'] = function() { $v = ["global" => false, "ignoreCase" => false, "multiline" => false, "dotAll" => false, "sticky" => false, "unicode" => false]; return $v; };
-\PhpursThunks::$thunks['Data_String_Regex_Flags_newtypeRegexFlags'] = function() { $v = ["Coercible0" => function($dollar__unused_0 = null) {
+})()];
+
+// Data_String_Regex_Flags_noFlags
+$GLOBALS['Data_String_Regex_Flags_noFlags'] = ["global" => false, "ignoreCase" => false, "multiline" => false, "dotAll" => false, "sticky" => false, "unicode" => false];
+
+// Data_String_Regex_Flags_newtypeRegexFlags
+$GLOBALS['Data_String_Regex_Flags_newtypeRegexFlags'] = ["Coercible0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'));
+  $__res = $GLOBALS['Prim_undefined'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_String_Regex_Flags_multiline'] = function() { $v = ["global" => false, "ignoreCase" => false, "multiline" => true, "dotAll" => false, "sticky" => false, "unicode" => false]; return $v; };
-\PhpursThunks::$thunks['Data_String_Regex_Flags_monoidRegexFlags'] = function() { $v = ["mempty" => ($GLOBALS['Data_String_Regex_Flags_noFlags'] ?? \PhpursThunks::eval('Data_String_Regex_Flags_noFlags')), "Semigroup0" => function($dollar__unused_0 = null) {
+}];
+
+// Data_String_Regex_Flags_multiline
+$GLOBALS['Data_String_Regex_Flags_multiline'] = ["global" => false, "ignoreCase" => false, "multiline" => true, "dotAll" => false, "sticky" => false, "unicode" => false];
+
+// Data_String_Regex_Flags_monoidRegexFlags
+$GLOBALS['Data_String_Regex_Flags_monoidRegexFlags'] = ["mempty" => $GLOBALS['Data_String_Regex_Flags_noFlags'], "Semigroup0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_String_Regex_Flags_semigroupRegexFlags'] ?? \PhpursThunks::eval('Data_String_Regex_Flags_semigroupRegexFlags'));
+  $__res = $GLOBALS['Data_String_Regex_Flags_semigroupRegexFlags'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_String_Regex_Flags_ignoreCase'] = function() { $v = ["global" => false, "ignoreCase" => true, "multiline" => false, "dotAll" => false, "sticky" => false, "unicode" => false]; return $v; };
-\PhpursThunks::$thunks['Data_String_Regex_Flags_global'] = function() { $v = ["global" => true, "ignoreCase" => false, "multiline" => false, "dotAll" => false, "sticky" => false, "unicode" => false]; return $v; };
-\PhpursThunks::$thunks['Data_String_Regex_Flags_eqRegexFlags'] = function() { $v = ["eq" => ((((((($GLOBALS['Data_Eq_eqRowCons'] ?? \PhpursThunks::eval('Data_Eq_eqRowCons')))(((((($GLOBALS['Data_Eq_eqRowCons'] ?? \PhpursThunks::eval('Data_Eq_eqRowCons')))(((((($GLOBALS['Data_Eq_eqRowCons'] ?? \PhpursThunks::eval('Data_Eq_eqRowCons')))(((((($GLOBALS['Data_Eq_eqRowCons'] ?? \PhpursThunks::eval('Data_Eq_eqRowCons')))(((((($GLOBALS['Data_Eq_eqRowCons'] ?? \PhpursThunks::eval('Data_Eq_eqRowCons')))(((((($GLOBALS['Data_Eq_eqRowCons'] ?? \PhpursThunks::eval('Data_Eq_eqRowCons')))(($GLOBALS['Data_Eq_eqRowNil'] ?? \PhpursThunks::eval('Data_Eq_eqRowNil'))))(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))(["reflectSymbol" => function($dollar__unused_0 = null) {
+}];
+
+// Data_String_Regex_Flags_ignoreCase
+$GLOBALS['Data_String_Regex_Flags_ignoreCase'] = ["global" => false, "ignoreCase" => true, "multiline" => false, "dotAll" => false, "sticky" => false, "unicode" => false];
+
+// Data_String_Regex_Flags_global
+$GLOBALS['Data_String_Regex_Flags_global'] = ["global" => true, "ignoreCase" => false, "multiline" => false, "dotAll" => false, "sticky" => false, "unicode" => false];
+
+// Data_String_Regex_Flags_eqRegexFlags
+$GLOBALS['Data_String_Regex_Flags_eqRegexFlags'] = ["eq" => (((((($GLOBALS['Data_Eq_eqRowCons'])((((($GLOBALS['Data_Eq_eqRowCons'])((((($GLOBALS['Data_Eq_eqRowCons'])((((($GLOBALS['Data_Eq_eqRowCons'])((((($GLOBALS['Data_Eq_eqRowCons'])((((($GLOBALS['Data_Eq_eqRowCons'])($GLOBALS['Data_Eq_eqRowNil']))($GLOBALS['Prim_undefined']))(["reflectSymbol" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = "unicode";
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]))(($GLOBALS['Data_Eq_eqBoolean'] ?? \PhpursThunks::eval('Data_Eq_eqBoolean')))))(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))(["reflectSymbol" => function($dollar__unused_0 = null) {
+}]))($GLOBALS['Data_Eq_eqBoolean'])))($GLOBALS['Prim_undefined']))(["reflectSymbol" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = "sticky";
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]))(($GLOBALS['Data_Eq_eqBoolean'] ?? \PhpursThunks::eval('Data_Eq_eqBoolean')))))(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))(["reflectSymbol" => function($dollar__unused_0 = null) {
+}]))($GLOBALS['Data_Eq_eqBoolean'])))($GLOBALS['Prim_undefined']))(["reflectSymbol" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = "multiline";
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]))(($GLOBALS['Data_Eq_eqBoolean'] ?? \PhpursThunks::eval('Data_Eq_eqBoolean')))))(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))(["reflectSymbol" => function($dollar__unused_0 = null) {
+}]))($GLOBALS['Data_Eq_eqBoolean'])))($GLOBALS['Prim_undefined']))(["reflectSymbol" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = "ignoreCase";
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]))(($GLOBALS['Data_Eq_eqBoolean'] ?? \PhpursThunks::eval('Data_Eq_eqBoolean')))))(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))(["reflectSymbol" => function($dollar__unused_0 = null) {
+}]))($GLOBALS['Data_Eq_eqBoolean'])))($GLOBALS['Prim_undefined']))(["reflectSymbol" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = "global";
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]))(($GLOBALS['Data_Eq_eqBoolean'] ?? \PhpursThunks::eval('Data_Eq_eqBoolean')))))(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))(["reflectSymbol" => function($dollar__unused_0 = null) {
+}]))($GLOBALS['Data_Eq_eqBoolean'])))($GLOBALS['Prim_undefined']))(["reflectSymbol" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = "dotAll";
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]))(($GLOBALS['Data_Eq_eqBoolean'] ?? \PhpursThunks::eval('Data_Eq_eqBoolean'))))['eqRecord'])(new Phpurs_Data0("Proxy"))]; return $v; };
-\PhpursThunks::$thunks['Data_String_Regex_Flags_dotAll'] = function() { $v = ["global" => false, "ignoreCase" => false, "multiline" => false, "dotAll" => true, "sticky" => false, "unicode" => false]; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+}]))($GLOBALS['Data_Eq_eqBoolean']))['eqRecord'])(new Phpurs_Data0("Proxy"))];
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Data_String_Regex_Flags_dotAll
+$GLOBALS['Data_String_Regex_Flags_dotAll'] = ["global" => false, "ignoreCase" => false, "multiline" => false, "dotAll" => true, "sticky" => false, "unicode" => false];
 

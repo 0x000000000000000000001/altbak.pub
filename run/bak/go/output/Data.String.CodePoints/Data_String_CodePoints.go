@@ -7,11 +7,9 @@ import (
 	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
 	pkg_Data_String_Common "gopurs/output/Data.String.Common"
 	pkg_Data_Int "gopurs/output/Data.Int"
-	pkg_Control_Semigroupoid "gopurs/output/Control.Semigroupoid"
-	pkg_Data_Array "gopurs/output/Data.Array"
-	pkg_Data_String_CodeUnits "gopurs/output/Data.String.CodeUnits"
 	pkg_Data_Enum "gopurs/output/Data.Enum"
 	pkg_Data_Bounded "gopurs/output/Data.Bounded"
+	pkg_Data_String_CodeUnits "gopurs/output/Data.String.CodeUnits"
 	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
 	pkg_Data_Maybe "gopurs/output/Data.Maybe"
 	pkg_Data_String_Unsafe "gopurs/output/Data.String.Unsafe"
@@ -94,17 +92,6 @@ return gopurs_runtime.Bool(((__t_tag_1.Type == 9 && __t_tag_1.IntVal == 15274654
 	return cache_greaterThanOrEq
 }
 
-var cache_CodePoint gopurs_runtime.Value
-var once_CodePoint sync.Once
-func Get_CodePoint() gopurs_runtime.Value {
-	once_CodePoint.Do(func() {
-		cache_CodePoint = gopurs_runtime.Func(func(x_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_CodePoint(x_0_box)
-})
-	})
-	return cache_CodePoint
-}
-
 var cache_showCodePoint gopurs_runtime.Value
 var once_showCodePoint sync.Once
 func Get_showCodePoint() gopurs_runtime.Value {
@@ -182,7 +169,9 @@ var cache_length gopurs_runtime.Value
 var once_length sync.Once
 func Get_length() gopurs_runtime.Value {
 	once_length.Do(func() {
-		cache_length = gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), pkg_Data_Array.Get_length(), Get_toCodePointArray())
+		cache_length = gopurs_runtime.Func(func(x_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_length(x_0_box.StrVal())
+})
 	})
 	return cache_length
 }
@@ -213,7 +202,13 @@ var cache_fromCharCode gopurs_runtime.Value
 var once_fromCharCode sync.Once
 func Get_fromCharCode() gopurs_runtime.Value {
 	once_fromCharCode.Do(func() {
-		cache_fromCharCode = gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), pkg_Data_String_CodeUnits.Get_singleton(), gopurs_runtime.Apply3(pkg_Data_Enum.Get_toEnumWithDefaults(), pkg_Data_Enum.Get_boundedEnumChar(), gopurs_runtime.RecordGet(pkg_Data_Bounded.Get_boundedChar(), "bottom"), gopurs_runtime.RecordGet(pkg_Data_Bounded.Get_boundedChar(), "top")))
+		cache_fromCharCode = func() gopurs_runtime.Value {
+__local_var_0_0 := gopurs_runtime.Apply3(pkg_Data_Enum.Get_toEnumWithDefaults(), pkg_Data_Enum.Get_boundedEnumChar(), gopurs_runtime.RecordGet(pkg_Data_Bounded.Get_boundedChar(), "bottom"), gopurs_runtime.RecordGet(pkg_Data_Bounded.Get_boundedChar(), "top"))
+_ = __local_var_0_0
+return gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(pkg_Data_String_CodeUnits.Get_singleton(), gopurs_runtime.Apply(__local_var_0_0, x_1))
+})
+}()
 	})
 	return cache_fromCharCode
 }
@@ -392,7 +387,9 @@ var cache_codePointFromChar gopurs_runtime.Value
 var once_codePointFromChar sync.Once
 func Get_codePointFromChar() gopurs_runtime.Value {
 	once_codePointFromChar.Do(func() {
-		cache_codePointFromChar = gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), Get_CodePoint(), gopurs_runtime.RecordGet(pkg_Data_Enum.Get_boundedEnumChar(), "fromEnum"))
+		cache_codePointFromChar = gopurs_runtime.Func(func(x_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_codePointFromChar(x_0_box.StrVal())
+})
 	})
 	return cache_codePointFromChar
 }
@@ -473,12 +470,6 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_boundedEnumCodePoint(),
 }))
 	})
 	return cache_enumCodePoint
-}
-
-func Call_CodePoint(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var x_0 gopurs_runtime.Value = x_0_loop
-_ = x_0
-return x_0
 }
 
 func Call_uncons(s_0_loop string) gopurs_runtime.Value {
@@ -577,13 +568,19 @@ end_branch_1:
 return __t1
 }
 
+func Call_length(x_0_loop string) gopurs_runtime.Value {
+var x_0 string = x_0_loop
+_ = x_0
+return gopurs_runtime.Int(int64(gopurs_runtime.ArrayLength(gopurs_runtime.Apply(Get_toCodePointArray(), gopurs_runtime.Str(x_0)))))
+}
+
 func Call_lastIndexOf(p_0_loop gopurs_runtime.Value, s_1_loop string) gopurs_runtime.Value {
 var p_0 gopurs_runtime.Value = p_0_loop
 _ = p_0
 var s_1 string = s_1_loop
 _ = s_1
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Maybe.Get_functorMaybe(), "map"), gopurs_runtime.Func(func(i_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_length(), gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_take(), i_2, gopurs_runtime.Str(s_1)))
+return gopurs_runtime.Int(int64(gopurs_runtime.ArrayLength(gopurs_runtime.Apply(Get_toCodePointArray(), gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_take(), i_2, gopurs_runtime.Str(s_1))))))
 }), gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_lastIndexOf(), p_0, gopurs_runtime.Str(s_1)))
 }
 
@@ -593,7 +590,7 @@ _ = p_0
 var s_1 string = s_1_loop
 _ = s_1
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Maybe.Get_functorMaybe(), "map"), gopurs_runtime.Func(func(i_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_length(), gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_take(), i_2, gopurs_runtime.Str(s_1)))
+return gopurs_runtime.Int(int64(gopurs_runtime.ArrayLength(gopurs_runtime.Apply(Get_toCodePointArray(), gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_take(), i_2, gopurs_runtime.Str(s_1))))))
 }), gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_indexOf(), p_0, gopurs_runtime.Str(s_1)))
 }
 
@@ -664,7 +661,7 @@ _ = i_1
 var s_2 string = s_2_loop
 _ = s_2
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Maybe.Get_functorMaybe(), "map"), gopurs_runtime.Func(func(k_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_length(), gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_take(), k_3, gopurs_runtime.Str(s_2)))
+return gopurs_runtime.Int(int64(gopurs_runtime.ArrayLength(gopurs_runtime.Apply(Get_toCodePointArray(), gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_take(), k_3, gopurs_runtime.Str(s_2))))))
 }), gopurs_runtime.Apply3(pkg_Data_String_CodeUnits.Get_lastIndexOf_prime(), p_0, gopurs_runtime.Apply(pkg_Data_String_CodeUnits.Get_length(), gopurs_runtime.Apply2(Get_take(), gopurs_runtime.Int(i_1), gopurs_runtime.Str(s_2))), gopurs_runtime.Str(s_2)))
 }
 
@@ -696,7 +693,7 @@ _ = s_2
 s_prime_3_0 := gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_drop(), gopurs_runtime.Apply(pkg_Data_String_CodeUnits.Get_length(), gopurs_runtime.Apply2(Get_take(), gopurs_runtime.Int(i_1), gopurs_runtime.Str(s_2))), gopurs_runtime.Str(s_2))
 _ = s_prime_3_0
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Maybe.Get_functorMaybe(), "map"), gopurs_runtime.Func(func(k_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Int((i_1) + (gopurs_runtime.Apply(Get_length(), gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_take(), k_4, s_prime_3_0)).IntVal))
+return gopurs_runtime.Int((i_1) + (gopurs_runtime.Int(int64(gopurs_runtime.ArrayLength(gopurs_runtime.Apply(Get_toCodePointArray(), gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_take(), k_4, s_prime_3_0))))).IntVal))
 }), gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_indexOf(), p_0, s_prime_3_0))
 }
 
@@ -755,6 +752,12 @@ _ = p_0
 var s_1 string = s_1_loop
 _ = s_1
 return gopurs_runtime.Apply2(Get_take(), gopurs_runtime.Apply2(Get_countPrefix(), p_0, gopurs_runtime.Str(s_1)), gopurs_runtime.Str(s_1))
+}
+
+func Call_codePointFromChar(x_0_loop string) gopurs_runtime.Value {
+var x_0 string = x_0_loop
+_ = x_0
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Enum.Get_boundedEnumChar(), "fromEnum"), gopurs_runtime.Str(x_0))
 }
 
 func Call_codePointAtFallback(n_0_loop int64, s_1_loop string) gopurs_runtime.Value {

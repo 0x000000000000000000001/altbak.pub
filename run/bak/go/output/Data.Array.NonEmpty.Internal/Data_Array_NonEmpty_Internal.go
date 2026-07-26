@@ -13,7 +13,6 @@ import (
 	pkg_Data_Functor "gopurs/output/Data.Functor"
 	pkg_Data_FoldableWithIndex "gopurs/output/Data.FoldableWithIndex"
 	pkg_Data_Foldable "gopurs/output/Data.Foldable"
-	pkg_Data_Semigroup_Foldable "gopurs/output/Data.Semigroup.Foldable"
 	pkg_Data_Semigroup_Traversable "gopurs/output/Data.Semigroup.Traversable"
 	pkg_Data_Eq "gopurs/output/Data.Eq"
 	pkg_Control_Bind "gopurs/output/Control.Bind"
@@ -153,7 +152,17 @@ func Get_foldable1NonEmptyArray() gopurs_runtime.Value {
 		cache_foldable1NonEmptyArray = gopurs_runtime.RecordDict4("Foldable0", "foldMap1", "foldl1", "foldr1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Foldable.Get_foldableArray()
 }), gopurs_runtime.Func(func(dictSemigroup_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(pkg_Data_Semigroup_Foldable.Get_foldMap1DefaultL(), Get_foldable1NonEmptyArray(), pkg_Data_Functor.Get_functorArray(), dictSemigroup_0)
+append_1_0 := gopurs_runtime.RecordGet(dictSemigroup_0, "append")
+_ = append_1_0
+return gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Functor.Get_functorArray(), "map"), f_2)
+_ = __local_var_3_1
+__local_var_4_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_foldable1NonEmptyArray(), "foldl1"), append_1_0)
+_ = __local_var_4_2
+return gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_4_2, gopurs_runtime.Apply(__local_var_3_1, x_5))
+})
+})
 }), gopurs_runtime.Func2(func(__local_var_0 gopurs_runtime.Value, __local_var_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.UncurriedApp2(Get_foldl1Impl(), __local_var_0, __local_var_1)
 }), gopurs_runtime.Func2(func(__local_var_0 gopurs_runtime.Value, __local_var_1 gopurs_runtime.Value) gopurs_runtime.Value {

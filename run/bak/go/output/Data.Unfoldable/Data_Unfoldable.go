@@ -117,13 +117,13 @@ return Call_fromMaybe(dictUnfoldable_0_box)
 	return cache_fromMaybe
 }
 
-func Call_fromJust(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var v_0 gopurs_runtime.Value = v_0_loop
+func Call_fromJust(v_0_loop *pkg_Data_Maybe.Constructor_Just) gopurs_runtime.Value {
+var v_0 *pkg_Data_Maybe.Constructor_Just = v_0_loop
 _ = v_0
 var __t0 gopurs_runtime.Value
 {
-if (v_0.Type == 9 && v_0.IntVal == 930809136) {
-__t0 = (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(v_0.UnsafePtr).V0
+if (v_0 != nil) {
+__t0 = (v_0).V0
 goto end_branch_0
 } else {
 

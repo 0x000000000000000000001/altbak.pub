@@ -96,127 +96,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Semigroup_semigroupVoid'] = function() { $v = ["append" => function($v_0 = null) {
-  $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Void_absurd'] ?? \PhpursThunks::eval('Data_Void_absurd'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Semigroup_semigroupUnit'] = function() { $v = ["append" => (function() {
-  $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'));
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Semigroup_semigroupString'] = function() { $v = ["append" => ($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString'))]; return $v; };
-\PhpursThunks::$thunks['Data_Semigroup_semigroupRecordNil'] = function() { $v = ["appendRecord" => (function() {
-  $__fn = function($v_0 = null, $v1_1 = null, $v2_2 = null) use (&$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
-  $__res = [];
-  goto __end;;
-  __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Semigroup_semigroupProxy'] = function() { $v = ["append" => (function() {
-  $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = new Phpurs_Data0("Proxy");
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Semigroup_semigroupArray'] = function() { $v = ["append" => ($GLOBALS['Data_Semigroup_concatArray'] ?? \PhpursThunks::eval('Data_Semigroup_concatArray'))]; return $v; };
-\PhpursThunks::$thunks['Data_Semigroup_appendRecord'] = function() { $v = function($dict_0 = null) {
-  $__num = \func_num_args();
-  $__res = ($dict_0)['appendRecord'];
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Semigroup_semigroupRecord'] = function() { $v = (function() {
-  $__fn = function($dollar__unused_0 = null, $dictSemigroupRecord_1 = null) use (&$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ["append" => (($dictSemigroupRecord_1)['appendRecord'])(new Phpurs_Data0("Proxy"))];
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Semigroup_append'] = function() { $v = function($dict_0 = null) {
-  $__num = \func_num_args();
-  $__res = ($dict_0)['append'];
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Semigroup_semigroupFn'] = function() { $v = function($dictSemigroup_0 = null) {
-  $__num = \func_num_args();
-  $__res = ["append" => (function() use ($dictSemigroup_0) {
-  $__fn = function($f_1 = null, $g_2 = null, $x_3 = null) use ($dictSemigroup_0, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
-  $__res = ((($dictSemigroup_0)['append'])(($f_1)($x_3)))(($g_2)($x_3));
-  goto __end;;
-  __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})()];
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Semigroup_semigroupRecordCons'] = function() { $v = (function() {
-  $__fn = function($dictIsSymbol_0 = null, $dollar__unused_1 = null, $dictSemigroupRecord_2 = null, $dictSemigroup_3 = null) use (&$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 4) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 4);
-  }
-  $__res = ["appendRecord" => (function() use ($dictIsSymbol_0, $dictSemigroupRecord_2, $dictSemigroup_3) {
-  $__fn = function($v_4 = null, $ra_5 = null, $rb_6 = null) use ($dictIsSymbol_0, $dictSemigroupRecord_2, $dictSemigroup_3, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
-  $key_7_0 = (($dictIsSymbol_0)['reflectSymbol'])(new Phpurs_Data0("Proxy"));
-  $get_8_1 = (($GLOBALS['Record_Unsafe_unsafeGet'] ?? \PhpursThunks::eval('Record_Unsafe_unsafeGet')))($key_7_0);
-  $__res = (((($GLOBALS['Record_Unsafe_unsafeSet'] ?? \PhpursThunks::eval('Record_Unsafe_unsafeSet')))($key_7_0))(((($dictSemigroup_3)['append'])(($get_8_1)($ra_5)))(($get_8_1)($rb_6))))((((($dictSemigroupRecord_2)['appendRecord'])(new Phpurs_Data0("Proxy")))($ra_5))($rb_6));
-  goto __end;;
-  __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})()];
-  goto __end;;
-  __end:
-  return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
-  };
-  return $__fn;
-})(); return $v; };
+
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Data_Semigroup = \call_user_func(function() {
   $exports = [];
@@ -246,18 +126,150 @@ $exports['concatArray'] = $concatArray;
 return $exports;
   return $exports;
 });
-\PhpursThunks::$thunks['Data_Semigroup_concatArray'] = function() use (&$ffi_Data_Semigroup) { return $ffi_Data_Semigroup['concatArray']; };
-\PhpursThunks::$thunks['Data_Semigroup_concatString'] = function() use (&$ffi_Data_Semigroup) { return $ffi_Data_Semigroup['concatString']; };
+$GLOBALS['Data_Semigroup_concatArray'] = $ffi_Data_Semigroup['concatArray'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Semigroup_concatString'] = $ffi_Data_Semigroup['concatString'] ?? new class { public function __invoke(...$args) { return $this; } };
 
 
+// Data_Semigroup_semigroupVoid
+$GLOBALS['Data_Semigroup_semigroupVoid'] = ["append" => function($v_0 = null) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Data_Void_absurd'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
+// Data_Semigroup_semigroupUnit
+$GLOBALS['Data_Semigroup_semigroupUnit'] = ["append" => (function() {
+  $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = $GLOBALS['Data_Unit_unit'];
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})()];
 
+// Data_Semigroup_semigroupString
+$GLOBALS['Data_Semigroup_semigroupString'] = ["append" => $GLOBALS['Data_Semigroup_concatString']];
 
+// Data_Semigroup_semigroupRecordNil
+$GLOBALS['Data_Semigroup_semigroupRecordNil'] = ["appendRecord" => (function() {
+  $__fn = function($v_0 = null, $v1_1 = null, $v2_2 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 3) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  }
+  $__res = [];
+  goto __end;;
+  __end:
+  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+  };
+  return $__fn;
+})()];
 
+// Data_Semigroup_semigroupProxy
+$GLOBALS['Data_Semigroup_semigroupProxy'] = ["append" => (function() {
+  $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = new Phpurs_Data0("Proxy");
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})()];
 
+// Data_Semigroup_semigroupArray
+$GLOBALS['Data_Semigroup_semigroupArray'] = ["append" => $GLOBALS['Data_Semigroup_concatArray']];
 
+// Data_Semigroup_appendRecord
+$GLOBALS['Data_Semigroup_appendRecord'] = function($dict_0 = null) {
+  $__num = \func_num_args();
+  $__res = ($dict_0)['appendRecord'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 
+// Data_Semigroup_semigroupRecord
+$GLOBALS['Data_Semigroup_semigroupRecord'] = (function() {
+  $__fn = function($dollar__unused_0 = null, $dictSemigroupRecord_1 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ["append" => (($dictSemigroupRecord_1)['appendRecord'])(new Phpurs_Data0("Proxy"))];
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
 
+// Data_Semigroup_append
+$GLOBALS['Data_Semigroup_append'] = function($dict_0 = null) {
+  $__num = \func_num_args();
+  $__res = ($dict_0)['append'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 
+// Data_Semigroup_semigroupFn
+$GLOBALS['Data_Semigroup_semigroupFn'] = function($dictSemigroup_0 = null) {
+  $__num = \func_num_args();
+  $__res = ["append" => (function() use ($dictSemigroup_0) {
+  $__fn = function($f_1 = null, $g_2 = null, $x_3 = null) use ($dictSemigroup_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 3) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  }
+  $__res = ((($dictSemigroup_0)['append'])(($f_1)($x_3)))(($g_2)($x_3));
+  goto __end;;
+  __end:
+  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+  };
+  return $__fn;
+})()];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 
+// Data_Semigroup_semigroupRecordCons
+$GLOBALS['Data_Semigroup_semigroupRecordCons'] = (function() {
+  $__fn = function($dictIsSymbol_0 = null, $dollar__unused_1 = null, $dictSemigroupRecord_2 = null, $dictSemigroup_3 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 4) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 4);
+  }
+  $__res = ["appendRecord" => (function() use ($dictIsSymbol_0, $dictSemigroupRecord_2, $dictSemigroup_3) {
+  $__fn = function($v_4 = null, $ra_5 = null, $rb_6 = null) use ($dictIsSymbol_0, $dictSemigroupRecord_2, $dictSemigroup_3, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 3) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  }
+  $key_7_0 = (($dictIsSymbol_0)['reflectSymbol'])(new Phpurs_Data0("Proxy"));
+  $get_8_1 = ($GLOBALS['Record_Unsafe_unsafeGet'])($key_7_0);
+  $__res = ((($GLOBALS['Record_Unsafe_unsafeSet'])($key_7_0))(((($dictSemigroup_3)['append'])(($get_8_1)($ra_5)))(($get_8_1)($rb_6))))((((($dictSemigroupRecord_2)['appendRecord'])(new Phpurs_Data0("Proxy")))($ra_5))($rb_6));
+  goto __end;;
+  __end:
+  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+  };
+  return $__fn;
+})()];
+  goto __end;;
+  __end:
+  return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
+  };
+  return $__fn;
+})();
 

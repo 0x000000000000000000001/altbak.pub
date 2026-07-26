@@ -94,8 +94,15 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_List_Internal_Leaf'] = function() { $v = ($GLOBALS['__phpurs_data0_Leaf'] ??= new Phpurs_Data0("Leaf")); return $v; };
-\PhpursThunks::$thunks['Data_List_Internal_Two'] = function() { $v = (function() {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_List_Internal_Leaf
+$GLOBALS['Data_List_Internal_Leaf'] = ($GLOBALS['__phpurs_data0_Leaf'] ??= new Phpurs_Data0("Leaf"));
+
+// Data_List_Internal_Two
+$GLOBALS['Data_List_Internal_Two'] = (function() {
   $__fn = function($value0 = null, $value1 = null, $value2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -107,8 +114,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_List_Internal_Three'] = function() { $v = (function() {
+})();
+
+// Data_List_Internal_Three
+$GLOBALS['Data_List_Internal_Three'] = (function() {
   $__fn = function($value0 = null, $value1 = null, $value2 = null, $value3 = null, $value4 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 5) {
@@ -120,8 +129,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 5 ? $__res(...\array_slice(\func_get_args(), 5)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_List_Internal_TwoLeft'] = function() { $v = (function() {
+})();
+
+// Data_List_Internal_TwoLeft
+$GLOBALS['Data_List_Internal_TwoLeft'] = (function() {
   $__fn = function($value0 = null, $value1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -133,8 +144,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_List_Internal_TwoRight'] = function() { $v = (function() {
+})();
+
+// Data_List_Internal_TwoRight
+$GLOBALS['Data_List_Internal_TwoRight'] = (function() {
   $__fn = function($value0 = null, $value1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -146,8 +159,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_List_Internal_ThreeLeft'] = function() { $v = (function() {
+})();
+
+// Data_List_Internal_ThreeLeft
+$GLOBALS['Data_List_Internal_ThreeLeft'] = (function() {
   $__fn = function($value0 = null, $value1 = null, $value2 = null, $value3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
@@ -159,8 +174,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_List_Internal_ThreeMiddle'] = function() { $v = (function() {
+})();
+
+// Data_List_Internal_ThreeMiddle
+$GLOBALS['Data_List_Internal_ThreeMiddle'] = (function() {
   $__fn = function($value0 = null, $value1 = null, $value2 = null, $value3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
@@ -172,8 +189,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_List_Internal_ThreeRight'] = function() { $v = (function() {
+})();
+
+// Data_List_Internal_ThreeRight
+$GLOBALS['Data_List_Internal_ThreeRight'] = (function() {
   $__fn = function($value0 = null, $value1 = null, $value2 = null, $value3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
@@ -185,8 +204,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_List_Internal_KickUp'] = function() { $v = (function() {
+})();
+
+// Data_List_Internal_KickUp
+$GLOBALS['Data_List_Internal_KickUp'] = (function() {
   $__fn = function($value0 = null, $value1 = null, $value2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -198,8 +219,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_List_Internal_fromZipper'] = function() { $v = (function() {
+})();
+
+// Data_List_Internal_fromZipper
+$GLOBALS['Data_List_Internal_fromZipper'] = (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -277,8 +300,10 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_List_Internal_insertAndLookupBy'] = function() { $v = (function() {
+})();
+
+// Data_List_Internal_insertAndLookupBy
+$GLOBALS['Data_List_Internal_insertAndLookupBy'] = (function() {
   $__fn = function($comp_0 = null, $k_1 = null, $orig_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -304,11 +329,11 @@ goto end_branch_0;;
   if ((is_object($v_4) && (($v_4)->{'tag'} === "Cons"))) {
 $__t1 = null;;
 if ((is_object(($v_4)->{'value0'}) && ((($v_4)->{'value0'})->{'tag'} === "TwoLeft"))) {
-$__t1 = ((($GLOBALS['Data_List_Internal_fromZipper'] ?? \PhpursThunks::eval('Data_List_Internal_fromZipper')))(($v_4)->{'value1'}))(new Phpurs_Data5("Three", ($v1_5)->{'value0'}, ($v1_5)->{'value1'}, ($v1_5)->{'value2'}, (($v_4)->{'value0'})->{'value0'}, (($v_4)->{'value0'})->{'value1'}));
+$__t1 = (($GLOBALS['Data_List_Internal_fromZipper'])(($v_4)->{'value1'}))(new Phpurs_Data5("Three", ($v1_5)->{'value0'}, ($v1_5)->{'value1'}, ($v1_5)->{'value2'}, (($v_4)->{'value0'})->{'value0'}, (($v_4)->{'value0'})->{'value1'}));
 goto end_branch_1;;
 };
 if ((is_object(($v_4)->{'value0'}) && ((($v_4)->{'value0'})->{'tag'} === "TwoRight"))) {
-$__t1 = ((($GLOBALS['Data_List_Internal_fromZipper'] ?? \PhpursThunks::eval('Data_List_Internal_fromZipper')))(($v_4)->{'value1'}))(new Phpurs_Data5("Three", (($v_4)->{'value0'})->{'value0'}, (($v_4)->{'value0'})->{'value1'}, ($v1_5)->{'value0'}, ($v1_5)->{'value1'}, ($v1_5)->{'value2'}));
+$__t1 = (($GLOBALS['Data_List_Internal_fromZipper'])(($v_4)->{'value1'}))(new Phpurs_Data5("Three", (($v_4)->{'value0'})->{'value0'}, (($v_4)->{'value0'})->{'value1'}, ($v1_5)->{'value0'}, ($v1_5)->{'value1'}, ($v1_5)->{'value2'}));
 goto end_branch_1;;
 };
 if ((is_object(($v_4)->{'value0'}) && ((($v_4)->{'value0'})->{'tag'} === "ThreeLeft"))) {
@@ -456,20 +481,8 @@ goto end_branch_1;;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_List_Internal_emptySet'] = function() { $v = new Phpurs_Data0("Leaf"); return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+})();
 
-
-
-
-
-
-
-
-
-
-
-
-
+// Data_List_Internal_emptySet
+$GLOBALS['Data_List_Internal_emptySet'] = new Phpurs_Data0("Leaf");
 

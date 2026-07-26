@@ -116,7 +116,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_NonEmpty_NonEmpty'] = function() { $v = (function() {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_NonEmpty_NonEmpty
+$GLOBALS['Data_NonEmpty_NonEmpty'] = (function() {
   $__fn = function($value0 = null, $value1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -128,8 +133,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_NonEmpty_unfoldable1NonEmpty'] = function() { $v = function($dictUnfoldable_0 = null) {
+})();
+
+// Data_NonEmpty_unfoldable1NonEmpty
+$GLOBALS['Data_NonEmpty_unfoldable1NonEmpty'] = function($dictUnfoldable_0 = null) {
   $__num = \func_num_args();
   $__res = ["unfoldr1" => (function() use ($dictUnfoldable_0) {
   $__fn = function($f_1 = null, $b_2 = null) use ($dictUnfoldable_0, &$__fn) {
@@ -161,15 +168,19 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_NonEmpty_tail'] = function() { $v = function($v_0 = null) {
+};
+
+// Data_NonEmpty_tail
+$GLOBALS['Data_NonEmpty_tail'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__res = ($v_0)->{'value1'};
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_NonEmpty_singleton'] = function() { $v = function($dictPlus_0 = null) {
+};
+
+// Data_NonEmpty_singleton
+$GLOBALS['Data_NonEmpty_singleton'] = function($dictPlus_0 = null) {
   $__num = \func_num_args();
   $empty_1_0 = ($dictPlus_0)['empty'];
   $__res = function($a_2 = null) use ($empty_1_0) {
@@ -182,8 +193,10 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_NonEmpty_showNonEmpty'] = function() { $v = (function() {
+};
+
+// Data_NonEmpty_showNonEmpty
+$GLOBALS['Data_NonEmpty_showNonEmpty'] = (function() {
   $__fn = function($dictShow_0 = null, $dictShow1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -201,8 +214,10 @@ goto end_branch_1;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_NonEmpty_semigroupNonEmpty'] = function() { $v = (function() {
+})();
+
+// Data_NonEmpty_semigroupNonEmpty
+$GLOBALS['Data_NonEmpty_semigroupNonEmpty'] = (function() {
   $__fn = function($dictApplicative_0 = null, $dictSemigroup_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -226,28 +241,34 @@ goto end_branch_1;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_NonEmpty_oneOf'] = function() { $v = (function() {
+})();
+
+// Data_NonEmpty_oneOf
+$GLOBALS['Data_NonEmpty_oneOf'] = (function() {
   $__fn = function($dictAlternative_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((((($dictAlternative_0)['Plus1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Alt0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['alt'])((((($dictAlternative_0)['Applicative0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['pure'])(($v_1)->{'value0'})))(($v_1)->{'value1'});
+  $__res = ((((((($dictAlternative_0)['Plus1'])($GLOBALS['Prim_undefined']))['Alt0'])($GLOBALS['Prim_undefined']))['alt'])((((($dictAlternative_0)['Applicative0'])($GLOBALS['Prim_undefined']))['pure'])(($v_1)->{'value0'})))(($v_1)->{'value1'});
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_NonEmpty_head'] = function() { $v = function($v_0 = null) {
+})();
+
+// Data_NonEmpty_head
+$GLOBALS['Data_NonEmpty_head'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__res = ($v_0)->{'value0'};
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_NonEmpty_functorNonEmpty'] = function() { $v = function($dictFunctor_0 = null) {
+};
+
+// Data_NonEmpty_functorNonEmpty
+$GLOBALS['Data_NonEmpty_functorNonEmpty'] = function($dictFunctor_0 = null) {
   $__num = \func_num_args();
   $__res = ["map" => (function() use ($dictFunctor_0) {
   $__fn = function($f_1 = null, $m_2 = null) use ($dictFunctor_0, &$__fn) {
@@ -265,10 +286,12 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_NonEmpty_functorWithIndex'] = function() { $v = function($dictFunctorWithIndex_0 = null) {
+};
+
+// Data_NonEmpty_functorWithIndex
+$GLOBALS['Data_NonEmpty_functorWithIndex'] = function($dictFunctorWithIndex_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictFunctorWithIndex_0)['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_1_0 = (($dictFunctorWithIndex_0)['Functor0'])($GLOBALS['Prim_undefined']);
   $functorNonEmpty1_2_1 = ["map" => (function() use ($__local_var_1_0) {
   $__fn = function($f_2 = null, $m_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -288,7 +311,7 @@ goto end_branch_1;;
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("NonEmpty", (($f_3)(new Phpurs_Data0("Nothing")))(($v_4)->{'value0'}), ((($dictFunctorWithIndex_0)['mapWithIndex'])(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($f_3))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just')))))(($v_4)->{'value1'}));
+  $__res = new Phpurs_Data2("NonEmpty", (($f_3)(new Phpurs_Data0("Nothing")))(($v_4)->{'value0'}), ((($dictFunctorWithIndex_0)['mapWithIndex'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_3))($GLOBALS['Data_Maybe_Just'])))(($v_4)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -304,8 +327,10 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_NonEmpty_fromNonEmpty'] = function() { $v = (function() {
+};
+
+// Data_NonEmpty_fromNonEmpty
+$GLOBALS['Data_NonEmpty_fromNonEmpty'] = (function() {
   $__fn = function($f_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -317,8 +342,10 @@ goto end_branch_1;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_NonEmpty_foldableNonEmpty'] = function() { $v = function($dictFoldable_0 = null) {
+})();
+
+// Data_NonEmpty_foldableNonEmpty
+$GLOBALS['Data_NonEmpty_foldableNonEmpty'] = function($dictFoldable_0 = null) {
   $__num = \func_num_args();
   $__res = ["foldMap" => function($dictMonoid_1 = null) use ($dictFoldable_0) {
   $__num = \func_num_args();
@@ -329,7 +356,7 @@ goto end_branch_1;;
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((($dictMonoid_1)['Semigroup0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['append'])(($f_3)(($v_4)->{'value0'})))((($foldMap1_2_0)($f_3))(($v_4)->{'value1'}));
+  $__res = ((((($dictMonoid_1)['Semigroup0'])($GLOBALS['Prim_undefined']))['append'])(($f_3)(($v_4)->{'value0'})))((($foldMap1_2_0)($f_3))(($v_4)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -367,10 +394,12 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_NonEmpty_foldableWithIndexNonEmpty'] = function() { $v = function($dictFoldableWithIndex_0 = null) {
+};
+
+// Data_NonEmpty_foldableWithIndexNonEmpty
+$GLOBALS['Data_NonEmpty_foldableWithIndexNonEmpty'] = function($dictFoldableWithIndex_0 = null) {
   $__num = \func_num_args();
-  $foldableNonEmpty1_1_0 = (($GLOBALS['Data_NonEmpty_foldableNonEmpty'] ?? \PhpursThunks::eval('Data_NonEmpty_foldableNonEmpty')))((($dictFoldableWithIndex_0)['Foldable0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $foldableNonEmpty1_1_0 = ($GLOBALS['Data_NonEmpty_foldableNonEmpty'])((($dictFoldableWithIndex_0)['Foldable0'])($GLOBALS['Prim_undefined']));
   $__res = ["foldMapWithIndex" => function($dictMonoid_2 = null) use ($dictFoldableWithIndex_0) {
   $__num = \func_num_args();
   $foldMapWithIndex1_3_1 = (($dictFoldableWithIndex_0)['foldMapWithIndex'])($dictMonoid_2);
@@ -380,7 +409,7 @@ goto end_branch_1;;
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((($dictMonoid_2)['Semigroup0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['append'])((($f_4)(new Phpurs_Data0("Nothing")))(($v_5)->{'value0'})))((($foldMapWithIndex1_3_1)(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($f_4))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just')))))(($v_5)->{'value1'}));
+  $__res = ((((($dictMonoid_2)['Semigroup0'])($GLOBALS['Prim_undefined']))['append'])((($f_4)(new Phpurs_Data0("Nothing")))(($v_5)->{'value0'})))((($foldMapWithIndex1_3_1)((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_4))($GLOBALS['Data_Maybe_Just'])))(($v_5)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -396,7 +425,7 @@ goto end_branch_1;;
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (((($dictFoldableWithIndex_0)['foldlWithIndex'])(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($f_2))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just')))))(((($f_2)(new Phpurs_Data0("Nothing")))($b_3))(($v_4)->{'value0'})))(($v_4)->{'value1'});
+  $__res = (((($dictFoldableWithIndex_0)['foldlWithIndex'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_2))($GLOBALS['Data_Maybe_Just'])))(((($f_2)(new Phpurs_Data0("Nothing")))($b_3))(($v_4)->{'value0'})))(($v_4)->{'value1'});
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -408,7 +437,7 @@ goto end_branch_1;;
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($f_2)(new Phpurs_Data0("Nothing")))(($v_4)->{'value0'}))((((($dictFoldableWithIndex_0)['foldrWithIndex'])(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($f_2))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just')))))($b_3))(($v_4)->{'value1'}));
+  $__res = ((($f_2)(new Phpurs_Data0("Nothing")))(($v_4)->{'value0'}))((((($dictFoldableWithIndex_0)['foldrWithIndex'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_2))($GLOBALS['Data_Maybe_Just'])))($b_3))(($v_4)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -424,10 +453,12 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_NonEmpty_traversableNonEmpty'] = function() { $v = function($dictTraversable_0 = null) {
+};
+
+// Data_NonEmpty_traversableNonEmpty
+$GLOBALS['Data_NonEmpty_traversableNonEmpty'] = function($dictTraversable_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictTraversable_0)['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_1_0 = (($dictTraversable_0)['Functor0'])($GLOBALS['Prim_undefined']);
   $functorNonEmpty1_2_1 = ["map" => (function() use ($__local_var_1_0) {
   $__fn = function($f_2 = null, $m_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -441,14 +472,14 @@ goto end_branch_1;;
   };
   return $__fn;
 })()];
-  $foldableNonEmpty1_3_2 = (($GLOBALS['Data_NonEmpty_foldableNonEmpty'] ?? \PhpursThunks::eval('Data_NonEmpty_foldableNonEmpty')))((($dictTraversable_0)['Foldable1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $foldableNonEmpty1_3_2 = ($GLOBALS['Data_NonEmpty_foldableNonEmpty'])((($dictTraversable_0)['Foldable1'])($GLOBALS['Prim_undefined']));
   $__res = ["sequence" => function($dictApplicative_4 = null) use ($dictTraversable_0) {
   $__num = \func_num_args();
-  $Apply0_5_3 = (($dictApplicative_4)['Apply0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $Apply0_5_3 = (($dictApplicative_4)['Apply0'])($GLOBALS['Prim_undefined']);
   $sequence1_6_4 = (($dictTraversable_0)['sequence'])($dictApplicative_4);
   $__res = function($v_7 = null) use ($Apply0_5_3, $sequence1_6_4) {
   $__num = \func_num_args();
-  $__res = ((($Apply0_5_3)['apply'])(((((($Apply0_5_3)['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['map'])(($GLOBALS['Data_NonEmpty_NonEmpty'] ?? \PhpursThunks::eval('Data_NonEmpty_NonEmpty'))))(($v_7)->{'value0'})))(($sequence1_6_4)(($v_7)->{'value1'}));
+  $__res = ((($Apply0_5_3)['apply'])(((((($Apply0_5_3)['Functor0'])($GLOBALS['Prim_undefined']))['map'])($GLOBALS['Data_NonEmpty_NonEmpty']))(($v_7)->{'value0'})))(($sequence1_6_4)(($v_7)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -458,7 +489,7 @@ goto end_branch_1;;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "traverse" => function($dictApplicative_4 = null) use ($dictTraversable_0) {
   $__num = \func_num_args();
-  $Apply0_5_5 = (($dictApplicative_4)['Apply0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $Apply0_5_5 = (($dictApplicative_4)['Apply0'])($GLOBALS['Prim_undefined']);
   $traverse1_6_6 = (($dictTraversable_0)['traverse'])($dictApplicative_4);
   $__res = (function() use ($Apply0_5_5, $traverse1_6_6) {
   $__fn = function($f_7 = null, $v_8 = null) use ($Apply0_5_5, $traverse1_6_6, &$__fn) {
@@ -466,7 +497,7 @@ goto end_branch_1;;
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($Apply0_5_5)['apply'])(((((($Apply0_5_5)['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['map'])(($GLOBALS['Data_NonEmpty_NonEmpty'] ?? \PhpursThunks::eval('Data_NonEmpty_NonEmpty'))))(($f_7)(($v_8)->{'value0'}))))((($traverse1_6_6)($f_7))(($v_8)->{'value1'}));
+  $__res = ((($Apply0_5_5)['apply'])(((((($Apply0_5_5)['Functor0'])($GLOBALS['Prim_undefined']))['map'])($GLOBALS['Data_NonEmpty_NonEmpty']))(($f_7)(($v_8)->{'value0'}))))((($traverse1_6_6)($f_7))(($v_8)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -492,15 +523,17 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_NonEmpty_traversableWithIndexNonEmpty'] = function() { $v = function($dictTraversableWithIndex_0 = null) {
+};
+
+// Data_NonEmpty_traversableWithIndexNonEmpty
+$GLOBALS['Data_NonEmpty_traversableWithIndexNonEmpty'] = function($dictTraversableWithIndex_0 = null) {
   $__num = \func_num_args();
-  $functorWithIndex1_1_0 = (($GLOBALS['Data_NonEmpty_functorWithIndex'] ?? \PhpursThunks::eval('Data_NonEmpty_functorWithIndex')))((($dictTraversableWithIndex_0)['FunctorWithIndex0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $foldableWithIndexNonEmpty1_2_1 = (($GLOBALS['Data_NonEmpty_foldableWithIndexNonEmpty'] ?? \PhpursThunks::eval('Data_NonEmpty_foldableWithIndexNonEmpty')))((($dictTraversableWithIndex_0)['FoldableWithIndex1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $traversableNonEmpty1_3_2 = (($GLOBALS['Data_NonEmpty_traversableNonEmpty'] ?? \PhpursThunks::eval('Data_NonEmpty_traversableNonEmpty')))((($dictTraversableWithIndex_0)['Traversable2'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $functorWithIndex1_1_0 = ($GLOBALS['Data_NonEmpty_functorWithIndex'])((($dictTraversableWithIndex_0)['FunctorWithIndex0'])($GLOBALS['Prim_undefined']));
+  $foldableWithIndexNonEmpty1_2_1 = ($GLOBALS['Data_NonEmpty_foldableWithIndexNonEmpty'])((($dictTraversableWithIndex_0)['FoldableWithIndex1'])($GLOBALS['Prim_undefined']));
+  $traversableNonEmpty1_3_2 = ($GLOBALS['Data_NonEmpty_traversableNonEmpty'])((($dictTraversableWithIndex_0)['Traversable2'])($GLOBALS['Prim_undefined']));
   $__res = ["traverseWithIndex" => function($dictApplicative_4 = null) use ($dictTraversableWithIndex_0) {
   $__num = \func_num_args();
-  $Apply0_5_3 = (($dictApplicative_4)['Apply0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $Apply0_5_3 = (($dictApplicative_4)['Apply0'])($GLOBALS['Prim_undefined']);
   $traverseWithIndex1_6_4 = (($dictTraversableWithIndex_0)['traverseWithIndex'])($dictApplicative_4);
   $__res = (function() use ($Apply0_5_3, $traverseWithIndex1_6_4) {
   $__fn = function($f_7 = null, $v_8 = null) use ($Apply0_5_3, $traverseWithIndex1_6_4, &$__fn) {
@@ -508,7 +541,7 @@ goto end_branch_1;;
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($Apply0_5_3)['apply'])(((((($Apply0_5_3)['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['map'])(($GLOBALS['Data_NonEmpty_NonEmpty'] ?? \PhpursThunks::eval('Data_NonEmpty_NonEmpty'))))((($f_7)(new Phpurs_Data0("Nothing")))(($v_8)->{'value0'}))))((($traverseWithIndex1_6_4)(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($f_7))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just')))))(($v_8)->{'value1'}));
+  $__res = ((($Apply0_5_3)['apply'])(((((($Apply0_5_3)['Functor0'])($GLOBALS['Prim_undefined']))['map'])($GLOBALS['Data_NonEmpty_NonEmpty']))((($f_7)(new Phpurs_Data0("Nothing")))(($v_8)->{'value0'}))))((($traverseWithIndex1_6_4)((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_7))($GLOBALS['Data_Maybe_Just'])))(($v_8)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -540,10 +573,12 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_NonEmpty_foldable1NonEmpty'] = function() { $v = function($dictFoldable_0 = null) {
+};
+
+// Data_NonEmpty_foldable1NonEmpty
+$GLOBALS['Data_NonEmpty_foldable1NonEmpty'] = function($dictFoldable_0 = null) {
   $__num = \func_num_args();
-  $foldableNonEmpty1_1_0 = (($GLOBALS['Data_NonEmpty_foldableNonEmpty'] ?? \PhpursThunks::eval('Data_NonEmpty_foldableNonEmpty')))($dictFoldable_0);
+  $foldableNonEmpty1_1_0 = ($GLOBALS['Data_NonEmpty_foldableNonEmpty'])($dictFoldable_0);
   $__res = ["foldMap1" => (function() use ($dictFoldable_0) {
   $__fn = function($dictSemigroup_2 = null, $f_3 = null, $v_4 = null) use ($dictFoldable_0, &$__fn) {
   $__num = \func_num_args();
@@ -578,7 +613,7 @@ goto end_branch_1;;
   $__local_var_5_2 = (((($dictFoldable_0)['foldr'])(function($a1_5 = null) use ($f_2) {
   $__num = \func_num_args();
   $__local_var_6_2 = ($f_2)($a1_5);
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just'))))(function($v2_7 = null) use ($__local_var_6_2, $a1_5) {
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Maybe_Just']))(function($v2_7 = null) use ($__local_var_6_2, $a1_5) {
   $__num = \func_num_args();
   $__t3 = null;;
   if ((is_object($v2_7) && (($v2_7)->{'tag'} === "Nothing"))) {
@@ -641,15 +676,19 @@ goto end_branch_5;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_NonEmpty_foldl1'] = function() { $v = function($dictFoldable_0 = null) {
+};
+
+// Data_NonEmpty_foldl1
+$GLOBALS['Data_NonEmpty_foldl1'] = function($dictFoldable_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_NonEmpty_foldable1NonEmpty'] ?? \PhpursThunks::eval('Data_NonEmpty_foldable1NonEmpty')))($dictFoldable_0))['foldl1'];
+  $__res = (($GLOBALS['Data_NonEmpty_foldable1NonEmpty'])($dictFoldable_0))['foldl1'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_NonEmpty_eqNonEmpty'] = function() { $v = (function() {
+};
+
+// Data_NonEmpty_eqNonEmpty
+$GLOBALS['Data_NonEmpty_eqNonEmpty'] = (function() {
   $__fn = function($dictEq1_0 = null, $dictEq_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -674,14 +713,16 @@ goto end_branch_5;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_NonEmpty_ordNonEmpty'] = function() { $v = function($dictOrd1_0 = null) {
+})();
+
+// Data_NonEmpty_ordNonEmpty
+$GLOBALS['Data_NonEmpty_ordNonEmpty'] = function($dictOrd1_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictOrd1_0)['Eq10'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_1_0 = (($dictOrd1_0)['Eq10'])($GLOBALS['Prim_undefined']);
   $__res = function($dictOrd_2 = null) use ($__local_var_1_0, $dictOrd1_0) {
   $__num = \func_num_args();
   $compare11_3_1 = (($dictOrd1_0)['compare1'])($dictOrd_2);
-  $__local_var_4_2 = (($dictOrd_2)['Eq0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_4_2 = (($dictOrd_2)['Eq0'])($GLOBALS['Prim_undefined']);
   $eq11_5_3 = (($__local_var_1_0)['eq1'])($__local_var_4_2);
   $eqNonEmpty2_6_4 = ["eq" => (function() use ($__local_var_4_2, $eq11_5_3) {
   $__fn = function($x_6 = null, $y_7 = null) use ($__local_var_4_2, $eq11_5_3, &$__fn) {
@@ -734,8 +775,10 @@ goto end_branch_6;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_NonEmpty_eq1NonEmpty'] = function() { $v = function($dictEq1_0 = null) {
+};
+
+// Data_NonEmpty_eq1NonEmpty
+$GLOBALS['Data_NonEmpty_eq1NonEmpty'] = function($dictEq1_0 = null) {
   $__num = \func_num_args();
   $__res = ["eq1" => function($dictEq_1 = null) use ($dictEq1_0) {
   $__num = \func_num_args();
@@ -760,11 +803,13 @@ goto end_branch_6;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_NonEmpty_ord1NonEmpty'] = function() { $v = function($dictOrd1_0 = null) {
+};
+
+// Data_NonEmpty_ord1NonEmpty
+$GLOBALS['Data_NonEmpty_ord1NonEmpty'] = function($dictOrd1_0 = null) {
   $__num = \func_num_args();
-  $ordNonEmpty1_1_0 = (($GLOBALS['Data_NonEmpty_ordNonEmpty'] ?? \PhpursThunks::eval('Data_NonEmpty_ordNonEmpty')))($dictOrd1_0);
-  $__local_var_2_1 = (($dictOrd1_0)['Eq10'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $ordNonEmpty1_1_0 = ($GLOBALS['Data_NonEmpty_ordNonEmpty'])($dictOrd1_0);
+  $__local_var_2_1 = (($dictOrd1_0)['Eq10'])($GLOBALS['Prim_undefined']);
   $eq1NonEmpty1_3_2 = ["eq1" => function($dictEq_3 = null) use ($__local_var_2_1) {
   $__num = \func_num_args();
   $eq11_4_2 = (($__local_var_2_1)['eq1'])($dictEq_3);
@@ -801,28 +846,5 @@ goto end_branch_6;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+};
 

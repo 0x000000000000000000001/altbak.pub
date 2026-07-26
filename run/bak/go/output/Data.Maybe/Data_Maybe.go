@@ -675,16 +675,16 @@ return semigroupMaybe1_1_0
 }), gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: nil})
 }
 
-func Call_maybe_prime(v_0_loop gopurs_runtime.Value, v1_1_loop gopurs_runtime.Value, v2_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_maybe_prime(v_0_loop gopurs_runtime.Value, v1_1_loop gopurs_runtime.Value, v2_2_loop *Constructor_Just) gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 var v1_1 gopurs_runtime.Value = v1_1_loop
 _ = v1_1
-var v2_2 gopurs_runtime.Value = v2_2_loop
+var v2_2 *Constructor_Just = v2_2_loop
 _ = v2_2
 var __t0 gopurs_runtime.Value
 {
-if (v2_2.Type == 9 && v2_2.IntVal == 3589588149) {
+if (v2_2 == nil) {
 __t0 = gopurs_runtime.Apply(v_0, pkg_Data_Unit.Get_unit())
 goto end_branch_0
 } else {
@@ -692,8 +692,8 @@ goto end_branch_0
 }
 }
 {
-if (v2_2.Type == 9 && v2_2.IntVal == 930809136) {
-__t0 = gopurs_runtime.Apply(v1_1, (*Constructor_Just[gopurs_runtime.Value])(v2_2.UnsafePtr).V0)
+if (v2_2 != nil) {
+__t0 = gopurs_runtime.Apply(v1_1, (v2_2).V0)
 goto end_branch_0
 } else {
 
@@ -706,16 +706,16 @@ end_branch_0:
 return __t0
 }
 
-func Call_maybe(v_0_loop gopurs_runtime.Value, v1_1_loop gopurs_runtime.Value, v2_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_maybe(v_0_loop gopurs_runtime.Value, v1_1_loop gopurs_runtime.Value, v2_2_loop *Constructor_Just) gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 var v1_1 gopurs_runtime.Value = v1_1_loop
 _ = v1_1
-var v2_2 gopurs_runtime.Value = v2_2_loop
+var v2_2 *Constructor_Just = v2_2_loop
 _ = v2_2
 var __t0 gopurs_runtime.Value
 {
-if (v2_2.Type == 9 && v2_2.IntVal == 3589588149) {
+if (v2_2 == nil) {
 __t0 = v_0
 goto end_branch_0
 } else {
@@ -723,8 +723,8 @@ goto end_branch_0
 }
 }
 {
-if (v2_2.Type == 9 && v2_2.IntVal == 930809136) {
-__t0 = gopurs_runtime.Apply(v1_1, (*Constructor_Just[gopurs_runtime.Value])(v2_2.UnsafePtr).V0)
+if (v2_2 != nil) {
+__t0 = gopurs_runtime.Apply(v1_1, (v2_2).V0)
 goto end_branch_0
 } else {
 
@@ -737,12 +737,12 @@ end_branch_0:
 return __t0
 }
 
-func Call_isNothing(v2_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var v2_0 gopurs_runtime.Value = v2_0_loop
+func Call_isNothing(v2_0_loop *Constructor_Just) gopurs_runtime.Value {
+var v2_0 *Constructor_Just = v2_0_loop
 _ = v2_0
 var __t0 gopurs_runtime.Value
 {
-if (v2_0.Type == 9 && v2_0.IntVal == 3589588149) {
+if (v2_0 == nil) {
 __t0 = gopurs_runtime.Bool(true)
 goto end_branch_0
 } else {
@@ -750,7 +750,7 @@ goto end_branch_0
 }
 }
 {
-if (v2_0.Type == 9 && v2_0.IntVal == 930809136) {
+if (v2_0 != nil) {
 __t0 = gopurs_runtime.Bool(false)
 goto end_branch_0
 } else {
@@ -764,12 +764,12 @@ end_branch_0:
 return __t0
 }
 
-func Call_isJust(v2_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var v2_0 gopurs_runtime.Value = v2_0_loop
+func Call_isJust(v2_0_loop *Constructor_Just) gopurs_runtime.Value {
+var v2_0 *Constructor_Just = v2_0_loop
 _ = v2_0
 var __t0 gopurs_runtime.Value
 {
-if (v2_0.Type == 9 && v2_0.IntVal == 3589588149) {
+if (v2_0 == nil) {
 __t0 = gopurs_runtime.Bool(false)
 goto end_branch_0
 } else {
@@ -777,7 +777,7 @@ goto end_branch_0
 }
 }
 {
-if (v2_0.Type == 9 && v2_0.IntVal == 930809136) {
+if (v2_0 != nil) {
 __t0 = gopurs_runtime.Bool(true)
 goto end_branch_0
 } else {
@@ -797,14 +797,14 @@ _ = a_0
 return gopurs_runtime.Apply2(Get_maybe_prime(), a_0, Get_identity())
 }
 
-func Call_fromMaybe(a_0_loop gopurs_runtime.Value, v2_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_fromMaybe(a_0_loop gopurs_runtime.Value, v2_1_loop *Constructor_Just) gopurs_runtime.Value {
 var a_0 gopurs_runtime.Value = a_0_loop
 _ = a_0
-var v2_1 gopurs_runtime.Value = v2_1_loop
+var v2_1 *Constructor_Just = v2_1_loop
 _ = v2_1
 var __t0 gopurs_runtime.Value
 {
-if (v2_1.Type == 9 && v2_1.IntVal == 3589588149) {
+if (v2_1 == nil) {
 __t0 = a_0
 goto end_branch_0
 } else {
@@ -812,8 +812,8 @@ goto end_branch_0
 }
 }
 {
-if (v2_1.Type == 9 && v2_1.IntVal == 930809136) {
-__t0 = (*Constructor_Just[gopurs_runtime.Value])(v2_1.UnsafePtr).V0
+if (v2_1 != nil) {
+__t0 = (v2_1).V0
 goto end_branch_0
 } else {
 
@@ -826,15 +826,15 @@ end_branch_0:
 return __t0
 }
 
-func Call_fromJust(_dollar__unused_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_fromJust(_dollar__unused_0_loop gopurs_runtime.Value, v_1_loop *Constructor_Just) gopurs_runtime.Value {
 var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
-var v_1 gopurs_runtime.Value = v_1_loop
+var v_1 *Constructor_Just = v_1_loop
 _ = v_1
 var __t0 gopurs_runtime.Value
 {
-if (v_1.Type == 9 && v_1.IntVal == 930809136) {
-__t0 = (*Constructor_Just[gopurs_runtime.Value])(v_1.UnsafePtr).V0
+if (v_1 != nil) {
+__t0 = (v_1).V0
 goto end_branch_0
 } else {
 

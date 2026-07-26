@@ -100,14 +100,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Monoid_Endo_Endo'] = function() { $v = function($x_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Monoid_Endo_Endo
+$GLOBALS['Data_Monoid_Endo_Endo'] = function($x_0 = null) {
   $__num = \func_num_args();
   $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Monoid_Endo_showEndo'] = function() { $v = function($dictShow_0 = null) {
+};
+
+// Data_Monoid_Endo_showEndo
+$GLOBALS['Data_Monoid_Endo_showEndo'] = function($dictShow_0 = null) {
   $__num = \func_num_args();
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
@@ -119,8 +126,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Monoid_Endo_semigroupEndo'] = function() { $v = function($dictSemigroupoid_0 = null) {
+};
+
+// Data_Monoid_Endo_semigroupEndo
+$GLOBALS['Data_Monoid_Endo_semigroupEndo'] = function($dictSemigroupoid_0 = null) {
   $__num = \func_num_args();
   $__res = ["append" => (function() use ($dictSemigroupoid_0) {
   $__fn = function($v_1 = null, $v1_2 = null) use ($dictSemigroupoid_0, &$__fn) {
@@ -138,17 +147,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Monoid_Endo_ordEndo'] = function() { $v = function($dictOrd_0 = null) {
+};
+
+// Data_Monoid_Endo_ordEndo
+$GLOBALS['Data_Monoid_Endo_ordEndo'] = function($dictOrd_0 = null) {
   $__num = \func_num_args();
   $__res = $dictOrd_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Monoid_Endo_monoidEndo'] = function() { $v = function($dictCategory_0 = null) {
+};
+
+// Data_Monoid_Endo_monoidEndo
+$GLOBALS['Data_Monoid_Endo_monoidEndo'] = function($dictCategory_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictCategory_0)['Semigroupoid0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_1_0 = (($dictCategory_0)['Semigroupoid0'])($GLOBALS['Prim_undefined']);
   $semigroupEndo1_2_1 = ["append" => (function() use ($__local_var_1_0) {
   $__fn = function($v_2 = null, $v1_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -172,28 +185,23 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Monoid_Endo_eqEndo'] = function() { $v = function($dictEq_0 = null) {
+};
+
+// Data_Monoid_Endo_eqEndo
+$GLOBALS['Data_Monoid_Endo_eqEndo'] = function($dictEq_0 = null) {
   $__num = \func_num_args();
   $__res = $dictEq_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Monoid_Endo_boundedEndo'] = function() { $v = function($dictBounded_0 = null) {
+};
+
+// Data_Monoid_Endo_boundedEndo
+$GLOBALS['Data_Monoid_Endo_boundedEndo'] = function($dictBounded_0 = null) {
   $__num = \func_num_args();
   $__res = $dictBounded_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
+};
 

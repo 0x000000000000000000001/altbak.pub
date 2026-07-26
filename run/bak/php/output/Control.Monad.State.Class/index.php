@@ -94,14 +94,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Control_Monad_State_Class_state'] = function() { $v = function($dict_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Control_Monad_State_Class_state
+$GLOBALS['Control_Monad_State_Class_state'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['state'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_State_Class_put'] = function() { $v = (function() {
+};
+
+// Control_Monad_State_Class_put
+$GLOBALS['Control_Monad_State_Class_put'] = (function() {
   $__fn = function($dictMonadState_0 = null, $s_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -109,7 +116,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   }
   $__res = (($dictMonadState_0)['state'])(function($v_2 = null) use ($s_1) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Tuple", ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')), $s_1);
+  $__res = new Phpurs_Data2("Tuple", $GLOBALS['Data_Unit_unit'], $s_1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -119,8 +126,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Control_Monad_State_Class_modify_'] = function() { $v = (function() {
+})();
+
+// Control_Monad_State_Class_modify_
+$GLOBALS['Control_Monad_State_Class_modify_'] = (function() {
   $__fn = function($dictMonadState_0 = null, $f_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -128,7 +137,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   }
   $__res = (($dictMonadState_0)['state'])(function($s_2 = null) use ($f_1) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Tuple", ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')), ($f_1)($s_2));
+  $__res = new Phpurs_Data2("Tuple", $GLOBALS['Data_Unit_unit'], ($f_1)($s_2));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -138,8 +147,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Control_Monad_State_Class_modify'] = function() { $v = (function() {
+})();
+
+// Control_Monad_State_Class_modify
+$GLOBALS['Control_Monad_State_Class_modify'] = (function() {
   $__fn = function($dictMonadState_0 = null, $f_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -158,8 +169,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Control_Monad_State_Class_gets'] = function() { $v = (function() {
+})();
+
+// Control_Monad_State_Class_gets
+$GLOBALS['Control_Monad_State_Class_gets'] = (function() {
   $__fn = function($dictMonadState_0 = null, $f_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -177,8 +190,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Control_Monad_State_Class_get'] = function() { $v = function($dictMonadState_0 = null) {
+})();
+
+// Control_Monad_State_Class_get
+$GLOBALS['Control_Monad_State_Class_get'] = function($dictMonadState_0 = null) {
   $__num = \func_num_args();
   $__res = (($dictMonadState_0)['state'])(function($s_1 = null) {
   $__num = \func_num_args();
@@ -190,13 +205,5 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
+};
 

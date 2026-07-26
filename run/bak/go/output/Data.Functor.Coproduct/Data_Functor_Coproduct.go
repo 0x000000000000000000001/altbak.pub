@@ -6,7 +6,6 @@ import (
 	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
 	pkg_Data_Either "gopurs/output/Data.Either"
 	pkg_Data_Bifunctor "gopurs/output/Data.Bifunctor"
-	pkg_Control_Semigroupoid "gopurs/output/Control.Semigroupoid"
 	unsafe "unsafe"
 )
 
@@ -451,15 +450,19 @@ _ = functorCoproduct2_3_1
 return gopurs_runtime.RecordDict2("Functor0", "extend", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return functorCoproduct2_3_1
 }), gopurs_runtime.Func(func(f_4 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_5_2 := gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), pkg_Data_Either.Get_Left(), gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictExtend_0.UnsafePtr)).V0, gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), f_4, gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), Get_Coproduct(), pkg_Data_Either.Get_Left()))))
+__local_var_5_2 := gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictExtend_0.UnsafePtr)).V0, gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(f_4, gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value]{x_5})})
+}))
 _ = __local_var_5_2
-__local_var_6_3 := gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), pkg_Data_Either.Get_Right(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictExtend1_2, "extend"), gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), f_4, gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), Get_Coproduct(), pkg_Data_Either.Get_Right()))))
+__local_var_6_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictExtend1_2, "extend"), gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(f_4, gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{x_6})})
+}))
 _ = __local_var_6_3
-return gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), Get_Coproduct(), gopurs_runtime.Func(func(v2_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v2_7 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t4 gopurs_runtime.Value
 {
 if (v2_7.Type == 9 && v2_7.IntVal == 3711209382) {
-__t4 = gopurs_runtime.Apply(__local_var_5_2, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(v2_7.UnsafePtr).V0)
+__t4 = gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Apply(__local_var_5_2, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(v2_7.UnsafePtr).V0)})}
 goto end_branch_4
 } else {
 
@@ -467,7 +470,7 @@ goto end_branch_4
 }
 {
 if (v2_7.Type == 9 && v2_7.IntVal == 2465973597) {
-__t4 = gopurs_runtime.Apply(__local_var_6_3, (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(v2_7.UnsafePtr).V0)
+__t4 = gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Apply(__local_var_6_3, (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(v2_7.UnsafePtr).V0)})}
 goto end_branch_4
 } else {
 
@@ -478,7 +481,7 @@ __t4 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_4:
 return __t4
-}))
+})
 }))
 })
 }

@@ -100,21 +100,30 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Test_Polymorphism_mempty_'] = function() { $v = function($dict_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Test_Polymorphism_mempty_
+$GLOBALS['Test_Polymorphism_mempty_'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['mempty_'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Test_Polymorphism_mappend_'] = function() { $v = function($dict_0 = null) {
+};
+
+// Test_Polymorphism_mappend_
+$GLOBALS['Test_Polymorphism_mappend_'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['mappend_'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Test_Polymorphism_polyLoop'] = function() { $v = function($dictMonoidish_0 = null) {
+};
+
+// Test_Polymorphism_polyLoop
+$GLOBALS['Test_Polymorphism_polyLoop'] = function($dictMonoidish_0 = null) {
   $__num = \func_num_args();
   $mempty_1_1_0 = ($dictMonoidish_0)['mempty_'];
   $__res = (function() use ($dictMonoidish_0, $mempty_1_1_0) {
@@ -169,8 +178,10 @@ break;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Test_Polymorphism_intMonoidish'] = function() { $v = ["mempty_" => 1, "mappend_" => (function() {
+};
+
+// Test_Polymorphism_intMonoidish
+$GLOBALS['Test_Polymorphism_intMonoidish'] = ["mempty_" => 1, "mappend_" => (function() {
   $__fn = function($x_0 = null, $y_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -182,9 +193,13 @@ break;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Test_Polymorphism_describe'] = function() { $v = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))("Polymorphism (10M Type Class Dict Lookups):"); return $v; };
-\PhpursThunks::$thunks['Test_Polymorphism_act'] = function() { $v = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))((($GLOBALS['Bench_opaque'] ?? \PhpursThunks::eval('Bench_opaque')))(10000000)))(function($dummy_0 = null) {
+})()];
+
+// Test_Polymorphism_describe
+$GLOBALS['Test_Polymorphism_describe'] = ($GLOBALS['Effect_Console_log'])("Polymorphism (10M Type Class Dict Lookups):");
+
+// Test_Polymorphism_act
+$GLOBALS['Test_Polymorphism_act'] = (($GLOBALS['Effect_bindE'])(($GLOBALS['Bench_opaque'])(10000000)))(function($dummy_0 = null) {
   $__num = \func_num_args();
   $go_1_0 = null;
   $go_1_0 = (function() use (&$go_1_0) {
@@ -222,17 +237,9 @@ break;
   };
   return $__fn;
 })();
-  $__res = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))((($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))((($go_1_0)($dummy_0))(0)));
+  $__res = ($GLOBALS['Effect_Console_log'])(($GLOBALS['Data_Show_showIntImpl'])((($go_1_0)($dummy_0))(0)));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}); return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
+});
 

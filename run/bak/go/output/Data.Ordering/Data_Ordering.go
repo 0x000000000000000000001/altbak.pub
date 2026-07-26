@@ -117,7 +117,7 @@ var once_invert sync.Once
 func Get_invert() gopurs_runtime.Value {
 	once_invert.Do(func() {
 		cache_invert = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_invert(v_0_box)
+return Call_invert(v_0_box.IntVal)
 })
 	})
 	return cache_invert
@@ -170,12 +170,12 @@ type Constructor_EQ struct {
 }
 
 
-func Call_invert(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var v_0 gopurs_runtime.Value = v_0_loop
+func Call_invert(v_0_loop int64) gopurs_runtime.Value {
+var v_0 int64 = v_0_loop
 _ = v_0
 var __t0 gopurs_runtime.Value
 {
-if (v_0.Type == 9 && v_0.IntVal == 380165415) {
+if (v_0 == 380165415) {
 __t0 = gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: nil}
 goto end_branch_0
 } else {
@@ -183,7 +183,7 @@ goto end_branch_0
 }
 }
 {
-if (v_0.Type == 9 && v_0.IntVal == 902936544) {
+if (v_0 == 902936544) {
 __t0 = gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil}
 goto end_branch_0
 } else {
@@ -191,7 +191,7 @@ goto end_branch_0
 }
 }
 {
-if (v_0.Type == 9 && v_0.IntVal == 1527465420) {
+if (v_0 == 1527465420) {
 __t0 = gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: nil}
 goto end_branch_0
 } else {

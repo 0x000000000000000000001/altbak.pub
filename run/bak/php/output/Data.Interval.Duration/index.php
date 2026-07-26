@@ -104,21 +104,42 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Interval_Duration_Second'] = function() { $v = ($GLOBALS['__phpurs_data0_Second'] ??= new Phpurs_Data0("Second")); return $v; };
-\PhpursThunks::$thunks['Data_Interval_Duration_Minute'] = function() { $v = ($GLOBALS['__phpurs_data0_Minute'] ??= new Phpurs_Data0("Minute")); return $v; };
-\PhpursThunks::$thunks['Data_Interval_Duration_Hour'] = function() { $v = ($GLOBALS['__phpurs_data0_Hour'] ??= new Phpurs_Data0("Hour")); return $v; };
-\PhpursThunks::$thunks['Data_Interval_Duration_Day'] = function() { $v = ($GLOBALS['__phpurs_data0_Day'] ??= new Phpurs_Data0("Day")); return $v; };
-\PhpursThunks::$thunks['Data_Interval_Duration_Week'] = function() { $v = ($GLOBALS['__phpurs_data0_Week'] ??= new Phpurs_Data0("Week")); return $v; };
-\PhpursThunks::$thunks['Data_Interval_Duration_Month'] = function() { $v = ($GLOBALS['__phpurs_data0_Month'] ??= new Phpurs_Data0("Month")); return $v; };
-\PhpursThunks::$thunks['Data_Interval_Duration_Year'] = function() { $v = ($GLOBALS['__phpurs_data0_Year'] ??= new Phpurs_Data0("Year")); return $v; };
-\PhpursThunks::$thunks['Data_Interval_Duration_Duration'] = function() { $v = function($x_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Interval_Duration_Second
+$GLOBALS['Data_Interval_Duration_Second'] = ($GLOBALS['__phpurs_data0_Second'] ??= new Phpurs_Data0("Second"));
+
+// Data_Interval_Duration_Minute
+$GLOBALS['Data_Interval_Duration_Minute'] = ($GLOBALS['__phpurs_data0_Minute'] ??= new Phpurs_Data0("Minute"));
+
+// Data_Interval_Duration_Hour
+$GLOBALS['Data_Interval_Duration_Hour'] = ($GLOBALS['__phpurs_data0_Hour'] ??= new Phpurs_Data0("Hour"));
+
+// Data_Interval_Duration_Day
+$GLOBALS['Data_Interval_Duration_Day'] = ($GLOBALS['__phpurs_data0_Day'] ??= new Phpurs_Data0("Day"));
+
+// Data_Interval_Duration_Week
+$GLOBALS['Data_Interval_Duration_Week'] = ($GLOBALS['__phpurs_data0_Week'] ??= new Phpurs_Data0("Week"));
+
+// Data_Interval_Duration_Month
+$GLOBALS['Data_Interval_Duration_Month'] = ($GLOBALS['__phpurs_data0_Month'] ??= new Phpurs_Data0("Month"));
+
+// Data_Interval_Duration_Year
+$GLOBALS['Data_Interval_Duration_Year'] = ($GLOBALS['__phpurs_data0_Year'] ??= new Phpurs_Data0("Year"));
+
+// Data_Interval_Duration_Duration
+$GLOBALS['Data_Interval_Duration_Duration'] = function($x_0 = null) {
   $__num = \func_num_args();
   $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Interval_Duration_showDurationComponent'] = function() { $v = ["show" => function($v_0 = null) {
+};
+
+// Data_Interval_Duration_showDurationComponent
+$GLOBALS['Data_Interval_Duration_showDurationComponent'] = ["show" => function($v_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object($v_0) && (($v_0)->{'tag'} === "Minute"))) {
@@ -156,23 +177,31 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Interval_Duration_show'] = function() { $v = (((($GLOBALS['Data_Map_Internal_showMap'] ?? \PhpursThunks::eval('Data_Map_Internal_showMap')))(($GLOBALS['Data_Interval_Duration_showDurationComponent'] ?? \PhpursThunks::eval('Data_Interval_Duration_showDurationComponent'))))(($GLOBALS['Data_Show_showNumber'] ?? \PhpursThunks::eval('Data_Show_showNumber'))))['show']; return $v; };
-\PhpursThunks::$thunks['Data_Interval_Duration_showDuration'] = function() { $v = ["show" => function($v_0 = null) {
+}];
+
+// Data_Interval_Duration_show
+$GLOBALS['Data_Interval_Duration_show'] = ((($GLOBALS['Data_Map_Internal_showMap'])($GLOBALS['Data_Interval_Duration_showDurationComponent']))($GLOBALS['Data_Show_showNumber']))['show'];
+
+// Data_Interval_Duration_showDuration
+$GLOBALS['Data_Interval_Duration_showDuration'] = ["show" => function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = (("(Duration " . (($GLOBALS['Data_Interval_Duration_show'] ?? \PhpursThunks::eval('Data_Interval_Duration_show')))($v_0)) . ")");
+  $__res = (("(Duration " . ($GLOBALS['Data_Interval_Duration_show'])($v_0)) . ")");
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Interval_Duration_newtypeDuration'] = function() { $v = ["Coercible0" => function($dollar__unused_0 = null) {
+}];
+
+// Data_Interval_Duration_newtypeDuration
+$GLOBALS['Data_Interval_Duration_newtypeDuration'] = ["Coercible0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'));
+  $__res = $GLOBALS['Prim_undefined'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Interval_Duration_eqDurationComponent'] = function() { $v = ["eq" => (function() {
+}];
+
+// Data_Interval_Duration_eqDurationComponent
+$GLOBALS['Data_Interval_Duration_eqDurationComponent'] = ["eq" => (function() {
   $__fn = function($x_0 = null, $y_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -211,9 +240,13 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Interval_Duration_eq'] = function() { $v = (((($GLOBALS['Data_Map_Internal_eqMap'] ?? \PhpursThunks::eval('Data_Map_Internal_eqMap')))(($GLOBALS['Data_Interval_Duration_eqDurationComponent'] ?? \PhpursThunks::eval('Data_Interval_Duration_eqDurationComponent'))))(($GLOBALS['Data_Eq_eqNumber'] ?? \PhpursThunks::eval('Data_Eq_eqNumber'))))['eq']; return $v; };
-\PhpursThunks::$thunks['Data_Interval_Duration_ordDurationComponent'] = function() { $v = ["compare" => (function() {
+})()];
+
+// Data_Interval_Duration_eq
+$GLOBALS['Data_Interval_Duration_eq'] = ((($GLOBALS['Data_Map_Internal_eqMap'])($GLOBALS['Data_Interval_Duration_eqDurationComponent']))($GLOBALS['Data_Eq_eqNumber']))['eq'];
+
+// Data_Interval_Duration_ordDurationComponent
+$GLOBALS['Data_Interval_Duration_ordDurationComponent'] = ["compare" => (function() {
   $__fn = function($x_0 = null, $y_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -325,52 +358,62 @@ goto end_branch_0;;
   return $__fn;
 })(), "Eq0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Interval_Duration_eqDurationComponent'] ?? \PhpursThunks::eval('Data_Interval_Duration_eqDurationComponent'));
+  $__res = $GLOBALS['Data_Interval_Duration_eqDurationComponent'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Interval_Duration_compare'] = function() { $v = (((($GLOBALS['Data_Map_Internal_ordMap'] ?? \PhpursThunks::eval('Data_Map_Internal_ordMap')))(($GLOBALS['Data_Interval_Duration_ordDurationComponent'] ?? \PhpursThunks::eval('Data_Interval_Duration_ordDurationComponent'))))(($GLOBALS['Data_Ord_ordNumber'] ?? \PhpursThunks::eval('Data_Ord_ordNumber'))))['compare']; return $v; };
-\PhpursThunks::$thunks['Data_Interval_Duration_semigroupDuration'] = function() { $v = ["append" => (function() {
+}];
+
+// Data_Interval_Duration_compare
+$GLOBALS['Data_Interval_Duration_compare'] = ((($GLOBALS['Data_Map_Internal_ordMap'])($GLOBALS['Data_Interval_Duration_ordDurationComponent']))($GLOBALS['Data_Ord_ordNumber']))['compare'];
+
+// Data_Interval_Duration_semigroupDuration
+$GLOBALS['Data_Interval_Duration_semigroupDuration'] = ["append" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_Map_Internal_unsafeUnionWith'] ?? \PhpursThunks::eval('Data_Map_Internal_unsafeUnionWith')))((($GLOBALS['Data_Interval_Duration_ordDurationComponent'] ?? \PhpursThunks::eval('Data_Interval_Duration_ordDurationComponent')))['compare'], ($GLOBALS['Data_Semiring_numAdd'] ?? \PhpursThunks::eval('Data_Semiring_numAdd')), $v_0, $v1_1);
+  $__res = ($GLOBALS['Data_Map_Internal_unsafeUnionWith'])(($GLOBALS['Data_Interval_Duration_ordDurationComponent'])['compare'], $GLOBALS['Data_Semiring_numAdd'], $v_0, $v1_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Interval_Duration_monoidDuration'] = function() { $v = ["mempty" => new Phpurs_Data0("Leaf"), "Semigroup0" => function($dollar__unused_0 = null) {
+})()];
+
+// Data_Interval_Duration_monoidDuration
+$GLOBALS['Data_Interval_Duration_monoidDuration'] = ["mempty" => new Phpurs_Data0("Leaf"), "Semigroup0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Interval_Duration_semigroupDuration'] ?? \PhpursThunks::eval('Data_Interval_Duration_semigroupDuration'));
+  $__res = $GLOBALS['Data_Interval_Duration_semigroupDuration'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Interval_Duration_eqDuration'] = function() { $v = ["eq" => (function() {
+}];
+
+// Data_Interval_Duration_eqDuration
+$GLOBALS['Data_Interval_Duration_eqDuration'] = ["eq" => (function() {
   $__fn = function($x_0 = null, $y_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_Interval_Duration_eq'] ?? \PhpursThunks::eval('Data_Interval_Duration_eq')))($x_0))($y_1);
+  $__res = (($GLOBALS['Data_Interval_Duration_eq'])($x_0))($y_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Interval_Duration_ordDuration'] = function() { $v = ["compare" => (function() {
+})()];
+
+// Data_Interval_Duration_ordDuration
+$GLOBALS['Data_Interval_Duration_ordDuration'] = ["compare" => (function() {
   $__fn = function($x_0 = null, $y_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_Interval_Duration_compare'] ?? \PhpursThunks::eval('Data_Interval_Duration_compare')))($x_0))($y_1);
+  $__res = (($GLOBALS['Data_Interval_Duration_compare'])($x_0))($y_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -378,19 +421,23 @@ goto end_branch_0;;
   return $__fn;
 })(), "Eq0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Interval_Duration_eqDuration'] ?? \PhpursThunks::eval('Data_Interval_Duration_eqDuration'));
+  $__res = $GLOBALS['Data_Interval_Duration_eqDuration'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Interval_Duration_hour'] = function() { $v = function($v_0 = null) {
+}];
+
+// Data_Interval_Duration_hour
+$GLOBALS['Data_Interval_Duration_hour'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__res = new Phpurs_Data6("Node", 1, 1, new Phpurs_Data0("Hour"), $v_0, new Phpurs_Data0("Leaf"), new Phpurs_Data0("Leaf"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Interval_Duration_millisecond'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(function($v_0 = null) {
+};
+
+// Data_Interval_Duration_millisecond
+$GLOBALS['Data_Interval_Duration_millisecond'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v_0 = null) {
   $__num = \func_num_args();
   $__res = new Phpurs_Data6("Node", 1, 1, new Phpurs_Data0("Second"), $v_0, new Phpurs_Data0("Leaf"), new Phpurs_Data0("Leaf"));
   goto __end;;
@@ -402,77 +449,59 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}); return $v; };
-\PhpursThunks::$thunks['Data_Interval_Duration_minute'] = function() { $v = function($v_0 = null) {
+});
+
+// Data_Interval_Duration_minute
+$GLOBALS['Data_Interval_Duration_minute'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__res = new Phpurs_Data6("Node", 1, 1, new Phpurs_Data0("Minute"), $v_0, new Phpurs_Data0("Leaf"), new Phpurs_Data0("Leaf"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Interval_Duration_month'] = function() { $v = function($v_0 = null) {
+};
+
+// Data_Interval_Duration_month
+$GLOBALS['Data_Interval_Duration_month'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__res = new Phpurs_Data6("Node", 1, 1, new Phpurs_Data0("Month"), $v_0, new Phpurs_Data0("Leaf"), new Phpurs_Data0("Leaf"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Interval_Duration_second'] = function() { $v = function($v_0 = null) {
+};
+
+// Data_Interval_Duration_second
+$GLOBALS['Data_Interval_Duration_second'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__res = new Phpurs_Data6("Node", 1, 1, new Phpurs_Data0("Second"), $v_0, new Phpurs_Data0("Leaf"), new Phpurs_Data0("Leaf"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Interval_Duration_week'] = function() { $v = function($v_0 = null) {
+};
+
+// Data_Interval_Duration_week
+$GLOBALS['Data_Interval_Duration_week'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__res = new Phpurs_Data6("Node", 1, 1, new Phpurs_Data0("Week"), $v_0, new Phpurs_Data0("Leaf"), new Phpurs_Data0("Leaf"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Interval_Duration_year'] = function() { $v = function($v_0 = null) {
+};
+
+// Data_Interval_Duration_year
+$GLOBALS['Data_Interval_Duration_year'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__res = new Phpurs_Data6("Node", 1, 1, new Phpurs_Data0("Year"), $v_0, new Phpurs_Data0("Leaf"), new Phpurs_Data0("Leaf"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Interval_Duration_day'] = function() { $v = function($v_0 = null) {
+};
+
+// Data_Interval_Duration_day
+$GLOBALS['Data_Interval_Duration_day'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__res = new Phpurs_Data6("Node", 1, 1, new Phpurs_Data0("Day"), $v_0, new Phpurs_Data0("Leaf"), new Phpurs_Data0("Leaf"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+};
 

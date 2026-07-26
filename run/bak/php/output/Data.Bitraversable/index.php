@@ -106,14 +106,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Bitraversable_bitraverse'] = function() { $v = function($dict_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Bitraversable_bitraverse
+$GLOBALS['Data_Bitraversable_bitraverse'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['bitraverse'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Bitraversable_lfor'] = function() { $v = (function() {
+};
+
+// Data_Bitraversable_lfor
+$GLOBALS['Data_Bitraversable_lfor'] = (function() {
   $__fn = function($dictBitraversable_0 = null, $dictApplicative_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -139,8 +146,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Bitraversable_ltraverse'] = function() { $v = (function() {
+})();
+
+// Data_Bitraversable_ltraverse
+$GLOBALS['Data_Bitraversable_ltraverse'] = (function() {
   $__fn = function($dictBitraversable_0 = null, $dictApplicative_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -160,8 +169,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Bitraversable_rfor'] = function() { $v = (function() {
+})();
+
+// Data_Bitraversable_rfor
+$GLOBALS['Data_Bitraversable_rfor'] = (function() {
   $__fn = function($dictBitraversable_0 = null, $dictApplicative_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -187,8 +198,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Bitraversable_rtraverse'] = function() { $v = (function() {
+})();
+
+// Data_Bitraversable_rtraverse
+$GLOBALS['Data_Bitraversable_rtraverse'] = (function() {
   $__fn = function($dictBitraversable_0 = null, $dictApplicative_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -200,17 +213,19 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Bitraversable_bitraversableTuple'] = function() { $v = ["bitraverse" => function($dictApplicative_0 = null) {
+})();
+
+// Data_Bitraversable_bitraversableTuple
+$GLOBALS['Data_Bitraversable_bitraversableTuple'] = ["bitraverse" => function($dictApplicative_0 = null) {
   $__num = \func_num_args();
-  $Apply0_1_0 = (($dictApplicative_0)['Apply0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $Apply0_1_0 = (($dictApplicative_0)['Apply0'])($GLOBALS['Prim_undefined']);
   $__res = (function() use ($Apply0_1_0) {
   $__fn = function($f_2 = null, $g_3 = null, $v_4 = null) use ($Apply0_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($Apply0_1_0)['apply'])(((((($Apply0_1_0)['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['map'])(($GLOBALS['Data_Tuple_Tuple'] ?? \PhpursThunks::eval('Data_Tuple_Tuple'))))(($f_2)(($v_4)->{'value0'}))))(($g_3)(($v_4)->{'value1'}));
+  $__res = ((($Apply0_1_0)['apply'])(((((($Apply0_1_0)['Functor0'])($GLOBALS['Prim_undefined']))['map'])($GLOBALS['Data_Tuple_Tuple']))(($f_2)(($v_4)->{'value0'}))))(($g_3)(($v_4)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -222,10 +237,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "bisequence" => function($dictApplicative_0 = null) {
   $__num = \func_num_args();
-  $Apply0_1_1 = (($dictApplicative_0)['Apply0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $Apply0_1_1 = (($dictApplicative_0)['Apply0'])($GLOBALS['Prim_undefined']);
   $__res = function($v_2 = null) use ($Apply0_1_1) {
   $__num = \func_num_args();
-  $__res = ((($Apply0_1_1)['apply'])(((((($Apply0_1_1)['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['map'])(($GLOBALS['Data_Tuple_Tuple'] ?? \PhpursThunks::eval('Data_Tuple_Tuple'))))(($v_2)->{'value0'})))(($v_2)->{'value1'});
+  $__res = ((($Apply0_1_1)['apply'])(((((($Apply0_1_1)['Functor0'])($GLOBALS['Prim_undefined']))['map'])($GLOBALS['Data_Tuple_Tuple']))(($v_2)->{'value0'})))(($v_2)->{'value1'});
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -235,20 +250,22 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bifunctor0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Bifunctor_bifunctorTuple'] ?? \PhpursThunks::eval('Data_Bifunctor_bifunctorTuple'));
+  $__res = $GLOBALS['Data_Bifunctor_bifunctorTuple'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bifoldable1" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Bifoldable_bifoldableTuple'] ?? \PhpursThunks::eval('Data_Bifoldable_bifoldableTuple'));
+  $__res = $GLOBALS['Data_Bifoldable_bifoldableTuple'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Bitraversable_bitraversableJoker'] = function() { $v = function($dictTraversable_0 = null) {
+}];
+
+// Data_Bitraversable_bitraversableJoker
+$GLOBALS['Data_Bitraversable_bitraversableJoker'] = function($dictTraversable_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictTraversable_0)['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_1_0 = (($dictTraversable_0)['Functor0'])($GLOBALS['Prim_undefined']);
   $bifunctorJoker_2_1 = ["bimap" => (function() use ($__local_var_1_0) {
   $__fn = function($v_2 = null, $g_3 = null, $v1_4 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -262,7 +279,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   };
   return $__fn;
 })()];
-  $__local_var_3_2 = (($dictTraversable_0)['Foldable1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_3_2 = (($dictTraversable_0)['Foldable1'])($GLOBALS['Prim_undefined']);
   $bifoldableJoker_4_3 = ["bifoldr" => (function() use ($__local_var_3_2) {
   $__fn = function($v_4 = null, $r_5 = null, $u_6 = null, $v1_7 = null) use ($__local_var_3_2, &$__fn) {
   $__num = \func_num_args();
@@ -316,7 +333,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((((((($dictApplicative_5)['Apply0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['map'])(($GLOBALS['Data_Functor_Joker_Joker'] ?? \PhpursThunks::eval('Data_Functor_Joker_Joker'))))((($traverse1_6_5)($r_8))($v1_9));
+  $__res = ((((((($dictApplicative_5)['Apply0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']))['map'])($GLOBALS['Data_Functor_Joker_Joker']))((($traverse1_6_5)($r_8))($v1_9));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -331,7 +348,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   $sequence1_6_6 = (($dictTraversable_0)['sequence'])($dictApplicative_5);
   $__res = function($v_7 = null) use ($dictApplicative_5, $sequence1_6_6) {
   $__num = \func_num_args();
-  $__res = ((((((($dictApplicative_5)['Apply0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['map'])(($GLOBALS['Data_Functor_Joker_Joker'] ?? \PhpursThunks::eval('Data_Functor_Joker_Joker'))))(($sequence1_6_6)($v_7));
+  $__res = ((((((($dictApplicative_5)['Apply0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']))['map'])($GLOBALS['Data_Functor_Joker_Joker']))(($sequence1_6_6)($v_7));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -355,10 +372,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Bitraversable_bitraversableEither'] = function() { $v = ["bitraverse" => function($dictApplicative_0 = null) {
+};
+
+// Data_Bitraversable_bitraversableEither
+$GLOBALS['Data_Bitraversable_bitraversableEither'] = ["bitraverse" => function($dictApplicative_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (((($dictApplicative_0)['Apply0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_1_0 = (((($dictApplicative_0)['Apply0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']);
   $__res = (function() use ($__local_var_1_0) {
   $__fn = function($v_2 = null, $v1_3 = null, $v2_4 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -367,11 +386,11 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   }
   $__t1 = null;;
   if ((is_object($v2_4) && (($v2_4)->{'tag'} === "Left"))) {
-$__t1 = ((($__local_var_1_0)['map'])(($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left'))))(($v_2)(($v2_4)->{'value0'}));
+$__t1 = ((($__local_var_1_0)['map'])($GLOBALS['Data_Either_Left']))(($v_2)(($v2_4)->{'value0'}));
 goto end_branch_1;;
 };
   if ((is_object($v2_4) && (($v2_4)->{'tag'} === "Right"))) {
-$__t1 = ((($__local_var_1_0)['map'])(($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right'))))(($v1_3)(($v2_4)->{'value0'}));
+$__t1 = ((($__local_var_1_0)['map'])($GLOBALS['Data_Either_Right']))(($v1_3)(($v2_4)->{'value0'}));
 goto end_branch_1;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -389,16 +408,16 @@ goto end_branch_1;;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "bisequence" => function($dictApplicative_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_2 = (((($dictApplicative_0)['Apply0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_1_2 = (((($dictApplicative_0)['Apply0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']);
   $__res = function($v_2 = null) use ($__local_var_1_2) {
   $__num = \func_num_args();
   $__t3 = null;;
   if ((is_object($v_2) && (($v_2)->{'tag'} === "Left"))) {
-$__t3 = ((($__local_var_1_2)['map'])(($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left'))))(($v_2)->{'value0'});
+$__t3 = ((($__local_var_1_2)['map'])($GLOBALS['Data_Either_Left']))(($v_2)->{'value0'});
 goto end_branch_3;;
 };
   if ((is_object($v_2) && (($v_2)->{'tag'} === "Right"))) {
-$__t3 = ((($__local_var_1_2)['map'])(($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right'))))(($v_2)->{'value0'});
+$__t3 = ((($__local_var_1_2)['map'])($GLOBALS['Data_Either_Right']))(($v_2)->{'value0'});
 goto end_branch_3;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -414,24 +433,26 @@ goto end_branch_3;;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bifunctor0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Bifunctor_bifunctorEither'] ?? \PhpursThunks::eval('Data_Bifunctor_bifunctorEither'));
+  $__res = $GLOBALS['Data_Bifunctor_bifunctorEither'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bifoldable1" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Bifoldable_bifoldableEither'] ?? \PhpursThunks::eval('Data_Bifoldable_bifoldableEither'));
+  $__res = $GLOBALS['Data_Bifoldable_bifoldableEither'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Bitraversable_bitraversableConst'] = function() { $v = ["bitraverse" => (function() {
+}];
+
+// Data_Bitraversable_bitraversableConst
+$GLOBALS['Data_Bitraversable_bitraversableConst'] = ["bitraverse" => (function() {
   $__fn = function($dictApplicative_0 = null, $f_1 = null, $v_2 = null, $v1_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ((((((($dictApplicative_0)['Apply0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['map'])(($GLOBALS['Data_Const_Const'] ?? \PhpursThunks::eval('Data_Const_Const'))))(($f_1)($v1_3));
+  $__res = ((((((($dictApplicative_0)['Apply0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']))['map'])($GLOBALS['Data_Const_Const']))(($f_1)($v1_3));
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -443,7 +464,7 @@ goto end_branch_3;;
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((((($dictApplicative_0)['Apply0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['map'])(($GLOBALS['Data_Const_Const'] ?? \PhpursThunks::eval('Data_Const_Const'))))($v_1);
+  $__res = ((((((($dictApplicative_0)['Apply0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']))['map'])($GLOBALS['Data_Const_Const']))($v_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -451,20 +472,22 @@ goto end_branch_3;;
   return $__fn;
 })(), "Bifunctor0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Bifunctor_bifunctorConst'] ?? \PhpursThunks::eval('Data_Bifunctor_bifunctorConst'));
+  $__res = $GLOBALS['Data_Bifunctor_bifunctorConst'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bifoldable1" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Bifoldable_bifoldableConst'] ?? \PhpursThunks::eval('Data_Bifoldable_bifoldableConst'));
+  $__res = $GLOBALS['Data_Bifoldable_bifoldableConst'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Bitraversable_bitraversableClown'] = function() { $v = function($dictTraversable_0 = null) {
+}];
+
+// Data_Bitraversable_bitraversableClown
+$GLOBALS['Data_Bitraversable_bitraversableClown'] = function($dictTraversable_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictTraversable_0)['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_1_0 = (($dictTraversable_0)['Functor0'])($GLOBALS['Prim_undefined']);
   $bifunctorClown_2_1 = ["bimap" => (function() use ($__local_var_1_0) {
   $__fn = function($f_2 = null, $v_3 = null, $v1_4 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -478,7 +501,7 @@ goto end_branch_3;;
   };
   return $__fn;
 })()];
-  $__local_var_3_2 = (($dictTraversable_0)['Foldable1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_3_2 = (($dictTraversable_0)['Foldable1'])($GLOBALS['Prim_undefined']);
   $bifoldableClown_4_3 = ["bifoldr" => (function() use ($__local_var_3_2) {
   $__fn = function($l_4 = null, $v_5 = null, $u_6 = null, $v1_7 = null) use ($__local_var_3_2, &$__fn) {
   $__num = \func_num_args();
@@ -532,7 +555,7 @@ goto end_branch_3;;
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((((((($dictApplicative_5)['Apply0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['map'])(($GLOBALS['Data_Functor_Clown_Clown'] ?? \PhpursThunks::eval('Data_Functor_Clown_Clown'))))((($traverse1_6_5)($l_7))($v1_9));
+  $__res = ((((((($dictApplicative_5)['Apply0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']))['map'])($GLOBALS['Data_Functor_Clown_Clown']))((($traverse1_6_5)($l_7))($v1_9));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -547,7 +570,7 @@ goto end_branch_3;;
   $sequence1_6_6 = (($dictTraversable_0)['sequence'])($dictApplicative_5);
   $__res = function($v_7 = null) use ($dictApplicative_5, $sequence1_6_6) {
   $__num = \func_num_args();
-  $__res = ((((((($dictApplicative_5)['Apply0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['map'])(($GLOBALS['Data_Functor_Clown_Clown'] ?? \PhpursThunks::eval('Data_Functor_Clown_Clown'))))(($sequence1_6_6)($v_7));
+  $__res = ((((((($dictApplicative_5)['Apply0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']))['map'])($GLOBALS['Data_Functor_Clown_Clown']))(($sequence1_6_6)($v_7));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -571,30 +594,36 @@ goto end_branch_3;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Bitraversable_bisequenceDefault'] = function() { $v = (function() {
+};
+
+// Data_Bitraversable_bisequenceDefault
+$GLOBALS['Data_Bitraversable_bisequenceDefault'] = (function() {
   $__fn = function($dictBitraversable_0 = null, $dictApplicative_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($dictBitraversable_0)['bitraverse'])($dictApplicative_1))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))['identity']))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))['identity']);
+  $__res = (((($dictBitraversable_0)['bitraverse'])($dictApplicative_1))(($GLOBALS['Control_Category_categoryFn'])['identity']))(($GLOBALS['Control_Category_categoryFn'])['identity']);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Bitraversable_bisequence'] = function() { $v = function($dict_0 = null) {
+})();
+
+// Data_Bitraversable_bisequence
+$GLOBALS['Data_Bitraversable_bisequence'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['bisequence'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Bitraversable_bitraversableFlip'] = function() { $v = function($dictBitraversable_0 = null) {
+};
+
+// Data_Bitraversable_bitraversableFlip
+$GLOBALS['Data_Bitraversable_bitraversableFlip'] = function($dictBitraversable_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictBitraversable_0)['Bifunctor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_1_0 = (($dictBitraversable_0)['Bifunctor0'])($GLOBALS['Prim_undefined']);
   $bifunctorFlip_2_1 = ["bimap" => (function() use ($__local_var_1_0) {
   $__fn = function($f_2 = null, $g_3 = null, $v_4 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -608,7 +637,7 @@ goto end_branch_3;;
   };
   return $__fn;
 })()];
-  $__local_var_3_2 = (($dictBitraversable_0)['Bifoldable1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_3_2 = (($dictBitraversable_0)['Bifoldable1'])($GLOBALS['Prim_undefined']);
   $bifoldableFlip_4_3 = ["bifoldr" => (function() use ($__local_var_3_2) {
   $__fn = function($r_4 = null, $l_5 = null, $u_6 = null, $v_7 = null) use ($__local_var_3_2, &$__fn) {
   $__num = \func_num_args();
@@ -662,7 +691,7 @@ goto end_branch_3;;
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((((((($dictApplicative_5)['Apply0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['map'])(($GLOBALS['Data_Functor_Flip_Flip'] ?? \PhpursThunks::eval('Data_Functor_Flip_Flip'))))(((($bitraverse2_6_5)($l_8))($r_7))($v_9));
+  $__res = ((((((($dictApplicative_5)['Apply0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']))['map'])($GLOBALS['Data_Functor_Flip_Flip']))(((($bitraverse2_6_5)($l_8))($r_7))($v_9));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -677,7 +706,7 @@ goto end_branch_3;;
   $bisequence2_6_6 = (($dictBitraversable_0)['bisequence'])($dictApplicative_5);
   $__res = function($v_7 = null) use ($bisequence2_6_6, $dictApplicative_5) {
   $__num = \func_num_args();
-  $__res = ((((((($dictApplicative_5)['Apply0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['map'])(($GLOBALS['Data_Functor_Flip_Flip'] ?? \PhpursThunks::eval('Data_Functor_Flip_Flip'))))(($bisequence2_6_6)($v_7));
+  $__res = ((((((($dictApplicative_5)['Apply0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']))['map'])($GLOBALS['Data_Functor_Flip_Flip']))(($bisequence2_6_6)($v_7));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -701,14 +730,16 @@ goto end_branch_3;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Bitraversable_bitraversableProduct2'] = function() { $v = function($dictBitraversable_0 = null) {
+};
+
+// Data_Bitraversable_bitraversableProduct2
+$GLOBALS['Data_Bitraversable_bitraversableProduct2'] = function($dictBitraversable_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictBitraversable_0)['Bifunctor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $bifoldableProduct2_2_1 = (($GLOBALS['Data_Bifoldable_bifoldableProduct2'] ?? \PhpursThunks::eval('Data_Bifoldable_bifoldableProduct2')))((($dictBitraversable_0)['Bifoldable1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $__local_var_1_0 = (($dictBitraversable_0)['Bifunctor0'])($GLOBALS['Prim_undefined']);
+  $bifoldableProduct2_2_1 = ($GLOBALS['Data_Bifoldable_bifoldableProduct2'])((($dictBitraversable_0)['Bifoldable1'])($GLOBALS['Prim_undefined']));
   $__res = function($dictBitraversable1_3 = null) use ($__local_var_1_0, $bifoldableProduct2_2_1, $dictBitraversable_0) {
   $__num = \func_num_args();
-  $__local_var_4_2 = (($dictBitraversable1_3)['Bifunctor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_4_2 = (($dictBitraversable1_3)['Bifunctor0'])($GLOBALS['Prim_undefined']);
   $bifunctorProduct21_5_3 = ["bimap" => (function() use ($__local_var_1_0, $__local_var_4_2) {
   $__fn = function($f_5 = null, $g_6 = null, $v_7 = null) use ($__local_var_1_0, $__local_var_4_2, &$__fn) {
   $__num = \func_num_args();
@@ -722,10 +753,10 @@ goto end_branch_3;;
   };
   return $__fn;
 })()];
-  $bifoldableProduct21_6_4 = ($bifoldableProduct2_2_1)((($dictBitraversable1_3)['Bifoldable1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $bifoldableProduct21_6_4 = ($bifoldableProduct2_2_1)((($dictBitraversable1_3)['Bifoldable1'])($GLOBALS['Prim_undefined']));
   $__res = ["bitraverse" => function($dictApplicative_7 = null) use ($dictBitraversable1_3, $dictBitraversable_0) {
   $__num = \func_num_args();
-  $Apply0_8_5 = (($dictApplicative_7)['Apply0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $Apply0_8_5 = (($dictApplicative_7)['Apply0'])($GLOBALS['Prim_undefined']);
   $bitraverse3_9_6 = (($dictBitraversable_0)['bitraverse'])($dictApplicative_7);
   $bitraverse4_10_7 = (($dictBitraversable1_3)['bitraverse'])($dictApplicative_7);
   $__res = (function() use ($Apply0_8_5, $bitraverse3_9_6, $bitraverse4_10_7) {
@@ -734,7 +765,7 @@ goto end_branch_3;;
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($Apply0_8_5)['apply'])(((((($Apply0_8_5)['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['map'])(($GLOBALS['Data_Functor_Product2_Product2'] ?? \PhpursThunks::eval('Data_Functor_Product2_Product2'))))(((($bitraverse3_9_6)($l_11))($r_12))(($v_13)->{'value0'}))))(((($bitraverse4_10_7)($l_11))($r_12))(($v_13)->{'value1'}));
+  $__res = ((($Apply0_8_5)['apply'])(((((($Apply0_8_5)['Functor0'])($GLOBALS['Prim_undefined']))['map'])($GLOBALS['Data_Functor_Product2_Product2']))(((($bitraverse3_9_6)($l_11))($r_12))(($v_13)->{'value0'}))))(((($bitraverse4_10_7)($l_11))($r_12))(($v_13)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -746,12 +777,12 @@ goto end_branch_3;;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "bisequence" => function($dictApplicative_7 = null) use ($dictBitraversable1_3, $dictBitraversable_0) {
   $__num = \func_num_args();
-  $Apply0_8_8 = (($dictApplicative_7)['Apply0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $Apply0_8_8 = (($dictApplicative_7)['Apply0'])($GLOBALS['Prim_undefined']);
   $bisequence3_9_9 = (($dictBitraversable_0)['bisequence'])($dictApplicative_7);
   $bisequence4_10_10 = (($dictBitraversable1_3)['bisequence'])($dictApplicative_7);
   $__res = function($v_11 = null) use ($Apply0_8_8, $bisequence3_9_9, $bisequence4_10_10) {
   $__num = \func_num_args();
-  $__res = ((($Apply0_8_8)['apply'])(((((($Apply0_8_8)['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['map'])(($GLOBALS['Data_Functor_Product2_Product2'] ?? \PhpursThunks::eval('Data_Functor_Product2_Product2'))))(($bisequence3_9_9)(($v_11)->{'value0'}))))(($bisequence4_10_10)(($v_11)->{'value1'}));
+  $__res = ((($Apply0_8_8)['apply'])(((((($Apply0_8_8)['Functor0'])($GLOBALS['Prim_undefined']))['map'])($GLOBALS['Data_Functor_Product2_Product2']))(($bisequence3_9_9)(($v_11)->{'value0'}))))(($bisequence4_10_10)(($v_11)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -779,8 +810,10 @@ goto end_branch_3;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Bitraversable_bitraverseDefault'] = function() { $v = (function() {
+};
+
+// Data_Bitraversable_bitraverseDefault
+$GLOBALS['Data_Bitraversable_bitraverseDefault'] = (function() {
   $__fn = function($dictBitraversable_0 = null, $dictApplicative_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -793,7 +826,7 @@ goto end_branch_3;;
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ($bisequence2_2_0)((((((($dictBitraversable_0)['Bifunctor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['bimap'])($f_3))($g_4))($t_5));
+  $__res = ($bisequence2_2_0)((((((($dictBitraversable_0)['Bifunctor0'])($GLOBALS['Prim_undefined']))['bimap'])($f_3))($g_4))($t_5));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -805,8 +838,10 @@ goto end_branch_3;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Bitraversable_bifor'] = function() { $v = (function() {
+})();
+
+// Data_Bitraversable_bifor
+$GLOBALS['Data_Bitraversable_bifor'] = (function() {
   $__fn = function($dictBitraversable_0 = null, $dictApplicative_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -831,23 +866,5 @@ goto end_branch_3;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+})();
 

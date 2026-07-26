@@ -93,17 +93,41 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Reflectable_reifiableString'] = function() { $v = []; return $v; };
-\PhpursThunks::$thunks['Data_Reflectable_reifiableOrdering'] = function() { $v = []; return $v; };
-\PhpursThunks::$thunks['Data_Reflectable_reifiableInt'] = function() { $v = []; return $v; };
-\PhpursThunks::$thunks['Data_Reflectable_reifiableBoolean'] = function() { $v = []; return $v; };
-\PhpursThunks::$thunks['Data_Reflectable_reifyType'] = function() { $v = (function() {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+$ffi_Data_Reflectable = \call_user_func(function() {
+  $exports = [];
+$unsafeCoerce = function ($arg) {
+    return $arg;
+};
+
+$exports['unsafeCoerce'] = $unsafeCoerce;
+return $exports;
+  return $exports;
+});
+$GLOBALS['Data_Reflectable_unsafeCoerce'] = $ffi_Data_Reflectable['unsafeCoerce'] ?? new class { public function __invoke(...$args) { return $this; } };
+
+
+// Data_Reflectable_reifiableString
+$GLOBALS['Data_Reflectable_reifiableString'] = [];
+
+// Data_Reflectable_reifiableOrdering
+$GLOBALS['Data_Reflectable_reifiableOrdering'] = [];
+
+// Data_Reflectable_reifiableInt
+$GLOBALS['Data_Reflectable_reifiableInt'] = [];
+
+// Data_Reflectable_reifiableBoolean
+$GLOBALS['Data_Reflectable_reifiableBoolean'] = [];
+
+// Data_Reflectable_reifyType
+$GLOBALS['Data_Reflectable_reifyType'] = (function() {
   $__fn = function($dollar__unused_0 = null, $s_1 = null, $f_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (((($GLOBALS['Data_Reflectable_unsafeCoerce'] ?? \PhpursThunks::eval('Data_Reflectable_unsafeCoerce')))(function($dictReflectable_3 = null) use ($f_2) {
+  $__res = ((($GLOBALS['Data_Reflectable_unsafeCoerce'])(function($dictReflectable_3 = null) use ($f_2) {
   $__num = \func_num_args();
   $__res = ($f_2)($dictReflectable_3);
   goto __end;;
@@ -121,31 +145,14 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Reflectable_reflectType'] = function() { $v = function($dict_0 = null) {
+})();
+
+// Data_Reflectable_reflectType
+$GLOBALS['Data_Reflectable_reflectType'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['reflectType'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-$ffi_Data_Reflectable = \call_user_func(function() {
-  $exports = [];
-$unsafeCoerce = function ($arg) {
-    return $arg;
 };
-
-$exports['unsafeCoerce'] = $unsafeCoerce;
-return $exports;
-  return $exports;
-});
-\PhpursThunks::$thunks['Data_Reflectable_unsafeCoerce'] = function() use (&$ffi_Data_Reflectable) { return $ffi_Data_Reflectable['unsafeCoerce']; };
-
-
-
-
-
-
-
 

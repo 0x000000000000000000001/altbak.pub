@@ -101,14 +101,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Equivalence_Equivalence'] = function() { $v = function($x_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Equivalence_Equivalence
+$GLOBALS['Data_Equivalence_Equivalence'] = function($x_0 = null) {
   $__num = \func_num_args();
   $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Equivalence_semigroupEquivalence'] = function() { $v = ["append" => (function() {
+};
+
+// Data_Equivalence_semigroupEquivalence
+$GLOBALS['Data_Equivalence_semigroupEquivalence'] = ["append" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null, $a_2 = null, $b_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
@@ -120,15 +127,19 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Equivalence_newtypeEquivalence'] = function() { $v = ["Coercible0" => function($dollar__unused_0 = null) {
+})()];
+
+// Data_Equivalence_newtypeEquivalence
+$GLOBALS['Data_Equivalence_newtypeEquivalence'] = ["Coercible0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'));
+  $__res = $GLOBALS['Prim_undefined'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Equivalence_monoidEquivalence'] = function() { $v = ["mempty" => (function() {
+}];
+
+// Data_Equivalence_monoidEquivalence
+$GLOBALS['Data_Equivalence_monoidEquivalence'] = ["mempty" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -142,19 +153,23 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(), "Semigroup0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Equivalence_semigroupEquivalence'] ?? \PhpursThunks::eval('Data_Equivalence_semigroupEquivalence'));
+  $__res = $GLOBALS['Data_Equivalence_semigroupEquivalence'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Equivalence_defaultEquivalence'] = function() { $v = function($dictEq_0 = null) {
+}];
+
+// Data_Equivalence_defaultEquivalence
+$GLOBALS['Data_Equivalence_defaultEquivalence'] = function($dictEq_0 = null) {
   $__num = \func_num_args();
   $__res = ($dictEq_0)['eq'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Equivalence_contravariantEquivalence'] = function() { $v = ["cmap" => (function() {
+};
+
+// Data_Equivalence_contravariantEquivalence
+$GLOBALS['Data_Equivalence_contravariantEquivalence'] = ["cmap" => (function() {
   $__fn = function($f_0 = null, $v_1 = null, $x_2 = null, $y_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
@@ -166,8 +181,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Equivalence_comparisonEquivalence'] = function() { $v = (function() {
+})()];
+
+// Data_Equivalence_comparisonEquivalence
+$GLOBALS['Data_Equivalence_comparisonEquivalence'] = (function() {
   $__fn = function($v_0 = null, $a_1 = null, $b_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -179,14 +196,5 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
+})();
 

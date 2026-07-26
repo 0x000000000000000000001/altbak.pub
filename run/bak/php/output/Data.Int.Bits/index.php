@@ -93,6 +93,13 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 }
 
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+$GLOBALS['Data_Int_Bits_and'] = new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Int_Bits_complement'] = new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Int_Bits_or'] = new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Int_Bits_shl'] = new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Int_Bits_shr'] = new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Int_Bits_xor'] = new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Int_Bits_zshr'] = new class { public function __invoke(...$args) { return $this; } };
 
 
 

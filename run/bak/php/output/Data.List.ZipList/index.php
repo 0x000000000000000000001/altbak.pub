@@ -112,19 +112,28 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_List_ZipList_ZipList'] = function() { $v = function($x_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_List_ZipList_ZipList
+$GLOBALS['Data_List_ZipList_ZipList'] = function($x_0 = null) {
   $__num = \func_num_args();
   $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_List_ZipList_traversableZipList'] = function() { $v = ($GLOBALS['Data_List_Lazy_Types_traversableList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_traversableList')); return $v; };
-\PhpursThunks::$thunks['Data_List_ZipList_showZipList'] = function() { $v = function($dictShow_0 = null) {
+};
+
+// Data_List_ZipList_traversableZipList
+$GLOBALS['Data_List_ZipList_traversableZipList'] = $GLOBALS['Data_List_Lazy_Types_traversableList'];
+
+// Data_List_ZipList_showZipList
+$GLOBALS['Data_List_ZipList_showZipList'] = function($dictShow_0 = null) {
   $__num = \func_num_args();
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = (("(ZipList " . (((($GLOBALS['Data_List_Lazy_Types_showList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_showList')))($dictShow_0))['show'])($v_1)) . ")");
+  $__res = (("(ZipList " . ((($GLOBALS['Data_List_Lazy_Types_showList'])($dictShow_0))['show'])($v_1)) . ")");
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -132,39 +141,55 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_List_ZipList_semigroupZipList'] = function() { $v = ($GLOBALS['Data_List_Lazy_Types_semigroupList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_semigroupList')); return $v; };
-\PhpursThunks::$thunks['Data_List_ZipList_ordZipList'] = function() { $v = function($dictOrd_0 = null) {
+};
+
+// Data_List_ZipList_semigroupZipList
+$GLOBALS['Data_List_ZipList_semigroupZipList'] = $GLOBALS['Data_List_Lazy_Types_semigroupList'];
+
+// Data_List_ZipList_ordZipList
+$GLOBALS['Data_List_ZipList_ordZipList'] = function($dictOrd_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_List_Lazy_Types_ordList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_ordList')))($dictOrd_0);
+  $__res = ($GLOBALS['Data_List_Lazy_Types_ordList'])($dictOrd_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_List_ZipList_newtypeZipList'] = function() { $v = ["Coercible0" => function($dollar__unused_0 = null) {
+};
+
+// Data_List_ZipList_newtypeZipList
+$GLOBALS['Data_List_ZipList_newtypeZipList'] = ["Coercible0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'));
+  $__res = $GLOBALS['Prim_undefined'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_List_ZipList_monoidZipList'] = function() { $v = ($GLOBALS['Data_List_Lazy_Types_monoidList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_monoidList')); return $v; };
-\PhpursThunks::$thunks['Data_List_ZipList_functorZipList'] = function() { $v = ($GLOBALS['Data_List_Lazy_Types_functorList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_functorList')); return $v; };
-\PhpursThunks::$thunks['Data_List_ZipList_foldableZipList'] = function() { $v = ($GLOBALS['Data_List_Lazy_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_foldableList')); return $v; };
-\PhpursThunks::$thunks['Data_List_ZipList_eqZipList'] = function() { $v = function($dictEq_0 = null) {
+}];
+
+// Data_List_ZipList_monoidZipList
+$GLOBALS['Data_List_ZipList_monoidZipList'] = $GLOBALS['Data_List_Lazy_Types_monoidList'];
+
+// Data_List_ZipList_functorZipList
+$GLOBALS['Data_List_ZipList_functorZipList'] = $GLOBALS['Data_List_Lazy_Types_functorList'];
+
+// Data_List_ZipList_foldableZipList
+$GLOBALS['Data_List_ZipList_foldableZipList'] = $GLOBALS['Data_List_Lazy_Types_foldableList'];
+
+// Data_List_ZipList_eqZipList
+$GLOBALS['Data_List_ZipList_eqZipList'] = function($dictEq_0 = null) {
   $__num = \func_num_args();
-  $__res = ["eq" => ((($GLOBALS['Data_List_Lazy_Types_eq1List'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_eq1List')))['eq1'])($dictEq_0)];
+  $__res = ["eq" => (($GLOBALS['Data_List_Lazy_Types_eq1List'])['eq1'])($dictEq_0)];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_List_ZipList_applyZipList'] = function() { $v = ["apply" => (function() {
+};
+
+// Data_List_ZipList_applyZipList
+$GLOBALS['Data_List_ZipList_applyZipList'] = ["apply" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($GLOBALS['Data_List_Lazy_zipWith'] ?? \PhpursThunks::eval('Data_List_Lazy_zipWith')))(($GLOBALS['Data_Function_apply'] ?? \PhpursThunks::eval('Data_Function_apply'))))($v_0))($v1_1);
+  $__res = ((($GLOBALS['Data_List_Lazy_zipWith'])($GLOBALS['Data_Function_apply']))($v_0))($v1_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -172,16 +197,18 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(), "Functor0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_List_Lazy_Types_functorList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_functorList'));
+  $__res = $GLOBALS['Data_List_Lazy_Types_functorList'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_List_ZipList_zipListIsNotBind'] = function() { $v = function($dollar__unused_0 = null) {
+}];
+
+// Data_List_ZipList_zipListIsNotBind
+$GLOBALS['Data_List_ZipList_zipListIsNotBind'] = function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ["bind" => (($GLOBALS['Partial__crashWith'] ?? \PhpursThunks::eval('Partial__crashWith')))("bind: unreachable"), "Apply0" => function($dollar__unused_1 = null) {
+  $__res = ["bind" => ($GLOBALS['Partial__crashWith'])("bind: unreachable"), "Apply0" => function($dollar__unused_1 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_List_ZipList_applyZipList'] ?? \PhpursThunks::eval('Data_List_ZipList_applyZipList'));
+  $__res = $GLOBALS['Data_List_ZipList_applyZipList'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -189,21 +216,25 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_List_ZipList_applicativeZipList'] = function() { $v = ["pure" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_List_ZipList_ZipList'] ?? \PhpursThunks::eval('Data_List_ZipList_ZipList'))))(($GLOBALS['Data_List_Lazy_repeat'] ?? \PhpursThunks::eval('Data_List_Lazy_repeat'))), "Apply0" => function($dollar__unused_0 = null) {
+};
+
+// Data_List_ZipList_applicativeZipList
+$GLOBALS['Data_List_ZipList_applicativeZipList'] = ["pure" => (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_List_ZipList_ZipList']))($GLOBALS['Data_List_Lazy_repeat']), "Apply0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_List_ZipList_applyZipList'] ?? \PhpursThunks::eval('Data_List_ZipList_applyZipList'));
+  $__res = $GLOBALS['Data_List_ZipList_applyZipList'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_List_ZipList_altZipList'] = function() { $v = ["alt" => (function() {
+}];
+
+// Data_List_ZipList_altZipList
+$GLOBALS['Data_List_ZipList_altZipList'] = ["alt" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($GLOBALS['Data_List_Lazy_Types_semigroupList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_semigroupList')))['append'])($v_0))(((($GLOBALS['Data_List_Lazy_drop'] ?? \PhpursThunks::eval('Data_List_Lazy_drop')))((($GLOBALS['Data_List_Lazy_length'] ?? \PhpursThunks::eval('Data_List_Lazy_length')))($v_0)))($v1_1));
+  $__res = ((($GLOBALS['Data_List_Lazy_Types_semigroupList'])['append'])($v_0))((($GLOBALS['Data_List_Lazy_drop'])(($GLOBALS['Data_List_Lazy_length'])($v_0)))($v1_1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -211,47 +242,33 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(), "Functor0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_List_Lazy_Types_functorList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_functorList'));
+  $__res = $GLOBALS['Data_List_Lazy_Types_functorList'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_List_ZipList_plusZipList'] = function() { $v = ["empty" => ($GLOBALS['Data_List_Lazy_Types_nil'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_nil')), "Alt0" => function($dollar__unused_0 = null) {
+}];
+
+// Data_List_ZipList_plusZipList
+$GLOBALS['Data_List_ZipList_plusZipList'] = ["empty" => $GLOBALS['Data_List_Lazy_Types_nil'], "Alt0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_List_ZipList_altZipList'] ?? \PhpursThunks::eval('Data_List_ZipList_altZipList'));
+  $__res = $GLOBALS['Data_List_ZipList_altZipList'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_List_ZipList_alternativeZipList'] = function() { $v = ["Applicative0" => function($dollar__unused_0 = null) {
+}];
+
+// Data_List_ZipList_alternativeZipList
+$GLOBALS['Data_List_ZipList_alternativeZipList'] = ["Applicative0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_List_ZipList_applicativeZipList'] ?? \PhpursThunks::eval('Data_List_ZipList_applicativeZipList'));
+  $__res = $GLOBALS['Data_List_ZipList_applicativeZipList'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Plus1" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_List_ZipList_plusZipList'] ?? \PhpursThunks::eval('Data_List_ZipList_plusZipList'));
+  $__res = $GLOBALS['Data_List_ZipList_plusZipList'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}];
 

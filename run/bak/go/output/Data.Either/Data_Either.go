@@ -6,7 +6,6 @@ import (
 	pkg_Data_Generic_Rep "gopurs/output/Data.Generic.Rep"
 	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
 	pkg_Data_Maybe "gopurs/output/Data.Maybe"
-	pkg_Control_Semigroupoid "gopurs/output/Control.Semigroupoid"
 	pkg_Data_Unit "gopurs/output/Data.Unit"
 	unsafe "unsafe"
 )
@@ -48,8 +47,8 @@ var cache_note_prime gopurs_runtime.Value
 var once_note_prime sync.Once
 func Get_note_prime() gopurs_runtime.Value {
 	once_note_prime.Do(func() {
-		cache_note_prime = gopurs_runtime.Func(func(f_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_note_prime(f_0_box)
+		cache_note_prime = gopurs_runtime.Func2(func(f_0_box gopurs_runtime.Value, v2_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_note_prime(f_0_box, v2_1_box)
 })
 	})
 	return cache_note_prime
@@ -533,20 +532,43 @@ return __t0
 }))
 }
 
-func Call_note_prime(f_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_note_prime(f_0_loop gopurs_runtime.Value, v2_1_loop *pkg_Data_Maybe.Constructor_Just) gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
-return gopurs_runtime.Apply2(pkg_Data_Maybe.Get_maybe_prime(), gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), Get_Left(), f_0), Get_Right())
-}
-
-func Call_note(a_0_loop gopurs_runtime.Value, v2_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var a_0 gopurs_runtime.Value = a_0_loop
-_ = a_0
-var v2_1 gopurs_runtime.Value = v2_1_loop
+var v2_1 *pkg_Data_Maybe.Constructor_Just = v2_1_loop
 _ = v2_1
 var __t0 gopurs_runtime.Value
 {
-if (v2_1.Type == 9 && v2_1.IntVal == 3589588149) {
+if (v2_1 == nil) {
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Apply(f_0, pkg_Data_Unit.Get_unit())})}
+goto end_branch_0
+} else {
+
+}
+}
+{
+if (v2_1 != nil) {
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{(v2_1).V0})}
+goto end_branch_0
+} else {
+
+}
+}
+{
+__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_0:
+return __t0
+}
+
+func Call_note(a_0_loop gopurs_runtime.Value, v2_1_loop *pkg_Data_Maybe.Constructor_Just) gopurs_runtime.Value {
+var a_0 gopurs_runtime.Value = a_0_loop
+_ = a_0
+var v2_1 *pkg_Data_Maybe.Constructor_Just = v2_1_loop
+_ = v2_1
+var __t0 gopurs_runtime.Value
+{
+if (v2_1 == nil) {
 __t0 = gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value]{a_0})}
 goto end_branch_0
 } else {
@@ -554,8 +576,8 @@ goto end_branch_0
 }
 }
 {
-if (v2_1.Type == 9 && v2_1.IntVal == 930809136) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{(*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(v2_1.UnsafePtr).V0})}
+if (v2_1 != nil) {
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{(v2_1).V0})}
 goto end_branch_0
 } else {
 

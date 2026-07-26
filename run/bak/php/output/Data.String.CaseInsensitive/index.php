@@ -99,47 +99,60 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_String_CaseInsensitive_CaseInsensitiveString'] = function() { $v = function($x_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_String_CaseInsensitive_CaseInsensitiveString
+$GLOBALS['Data_String_CaseInsensitive_CaseInsensitiveString'] = function($x_0 = null) {
   $__num = \func_num_args();
   $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_String_CaseInsensitive_showCaseInsensitiveString'] = function() { $v = ["show" => function($v_0 = null) {
+};
+
+// Data_String_CaseInsensitive_showCaseInsensitiveString
+$GLOBALS['Data_String_CaseInsensitive_showCaseInsensitiveString'] = ["show" => function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = (("(CaseInsensitiveString " . (($GLOBALS['Data_Show_showStringImpl'] ?? \PhpursThunks::eval('Data_Show_showStringImpl')))($v_0)) . ")");
+  $__res = (("(CaseInsensitiveString " . ($GLOBALS['Data_Show_showStringImpl'])($v_0)) . ")");
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_String_CaseInsensitive_newtypeCaseInsensitiveString'] = function() { $v = ["Coercible0" => function($dollar__unused_0 = null) {
+}];
+
+// Data_String_CaseInsensitive_newtypeCaseInsensitiveString
+$GLOBALS['Data_String_CaseInsensitive_newtypeCaseInsensitiveString'] = ["Coercible0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'));
+  $__res = $GLOBALS['Prim_undefined'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_String_CaseInsensitive_eqCaseInsensitiveString'] = function() { $v = ["eq" => (function() {
+}];
+
+// Data_String_CaseInsensitive_eqCaseInsensitiveString
+$GLOBALS['Data_String_CaseInsensitive_eqCaseInsensitiveString'] = ["eq" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_String_Common_toLower'] ?? \PhpursThunks::eval('Data_String_Common_toLower')))($v_0) === (($GLOBALS['Data_String_Common_toLower'] ?? \PhpursThunks::eval('Data_String_Common_toLower')))($v1_1));
+  $__res = (($GLOBALS['Data_String_Common_toLower'])($v_0) === ($GLOBALS['Data_String_Common_toLower'])($v1_1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_String_CaseInsensitive_ordCaseInsensitiveString'] = function() { $v = ["compare" => (function() {
+})()];
+
+// Data_String_CaseInsensitive_ordCaseInsensitiveString
+$GLOBALS['Data_String_CaseInsensitive_ordCaseInsensitiveString'] = ["compare" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($GLOBALS['Data_Ord_ordString'] ?? \PhpursThunks::eval('Data_Ord_ordString')))['compare'])((($GLOBALS['Data_String_Common_toLower'] ?? \PhpursThunks::eval('Data_String_Common_toLower')))($v_0)))((($GLOBALS['Data_String_Common_toLower'] ?? \PhpursThunks::eval('Data_String_Common_toLower')))($v1_1));
+  $__res = ((($GLOBALS['Data_Ord_ordString'])['compare'])(($GLOBALS['Data_String_Common_toLower'])($v_0)))(($GLOBALS['Data_String_Common_toLower'])($v1_1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -147,16 +160,9 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(), "Eq0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_String_CaseInsensitive_eqCaseInsensitiveString'] ?? \PhpursThunks::eval('Data_String_CaseInsensitive_eqCaseInsensitiveString'));
+  $__res = $GLOBALS['Data_String_CaseInsensitive_eqCaseInsensitiveString'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
+}];
 

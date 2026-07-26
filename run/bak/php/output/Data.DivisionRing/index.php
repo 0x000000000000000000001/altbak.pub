@@ -94,40 +94,51 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_DivisionRing_recip'] = function() { $v = function($dict_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_DivisionRing_recip
+$GLOBALS['Data_DivisionRing_recip'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['recip'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_DivisionRing_rightDiv'] = function() { $v = (function() {
+};
+
+// Data_DivisionRing_rightDiv
+$GLOBALS['Data_DivisionRing_rightDiv'] = (function() {
   $__fn = function($dictDivisionRing_0 = null, $a_1 = null, $b_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((((((($dictDivisionRing_0)['Ring0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Semiring0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['mul'])($a_1))((($dictDivisionRing_0)['recip'])($b_2));
+  $__res = ((((((($dictDivisionRing_0)['Ring0'])($GLOBALS['Prim_undefined']))['Semiring0'])($GLOBALS['Prim_undefined']))['mul'])($a_1))((($dictDivisionRing_0)['recip'])($b_2));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_DivisionRing_leftDiv'] = function() { $v = (function() {
+})();
+
+// Data_DivisionRing_leftDiv
+$GLOBALS['Data_DivisionRing_leftDiv'] = (function() {
   $__fn = function($dictDivisionRing_0 = null, $a_1 = null, $b_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((((((($dictDivisionRing_0)['Ring0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Semiring0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['mul'])((($dictDivisionRing_0)['recip'])($b_2)))($a_1);
+  $__res = ((((((($dictDivisionRing_0)['Ring0'])($GLOBALS['Prim_undefined']))['Semiring0'])($GLOBALS['Prim_undefined']))['mul'])((($dictDivisionRing_0)['recip'])($b_2)))($a_1);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_DivisionRing_divisionringNumber'] = function() { $v = ["recip" => function($x_0 = null) {
+})();
+
+// Data_DivisionRing_divisionringNumber
+$GLOBALS['Data_DivisionRing_divisionringNumber'] = ["recip" => function($x_0 = null) {
   $__num = \func_num_args();
   $__res = (1.0 / $x_0);
   goto __end;;
@@ -135,15 +146,9 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Ring0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Ring_ringNumber'] ?? \PhpursThunks::eval('Data_Ring_ringNumber'));
+  $__res = $GLOBALS['Data_Ring_ringNumber'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
+}];
 

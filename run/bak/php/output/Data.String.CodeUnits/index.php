@@ -99,146 +99,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_String_CodeUnits_uncons'] = function() { $v = function($v_0 = null) {
-  $__num = \func_num_args();
-  $__t0 = null;;
-  switch ($v_0) {
-case "":
-$__t0 = new Phpurs_Data0("Nothing");
-goto end_branch_0;;
-break;
-default:
-;
-break;
-};
-  $__t0 = new Phpurs_Data1("Just", ["head" => ((($GLOBALS['Data_String_Unsafe_charAt'] ?? \PhpursThunks::eval('Data_String_Unsafe_charAt')))(0))($v_0), "tail" => ((($GLOBALS['Data_String_CodeUnits_drop'] ?? \PhpursThunks::eval('Data_String_CodeUnits_drop')))(1))($v_0)]);
-  end_branch_0:;
-  $__res = $__t0;
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_String_CodeUnits_toChar'] = function() { $v = ((($GLOBALS['Data_String_CodeUnits__toChar'] ?? \PhpursThunks::eval('Data_String_CodeUnits__toChar')))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just'))))(new Phpurs_Data0("Nothing")); return $v; };
-\PhpursThunks::$thunks['Data_String_CodeUnits_takeWhile'] = function() { $v = (function() {
-  $__fn = function($p_0 = null, $s_1 = null) use (&$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ((($GLOBALS['Data_String_CodeUnits_take'] ?? \PhpursThunks::eval('Data_String_CodeUnits_take')))(((($GLOBALS['Data_String_CodeUnits_countPrefix'] ?? \PhpursThunks::eval('Data_String_CodeUnits_countPrefix')))($p_0))($s_1)))($s_1);
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_String_CodeUnits_takeRight'] = function() { $v = (function() {
-  $__fn = function($i_0 = null, $s_1 = null) use (&$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ((($GLOBALS['Data_String_CodeUnits_drop'] ?? \PhpursThunks::eval('Data_String_CodeUnits_drop')))(((($GLOBALS['Data_String_CodeUnits_length'] ?? \PhpursThunks::eval('Data_String_CodeUnits_length')))($s_1) - $i_0)))($s_1);
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_String_CodeUnits_stripSuffix'] = function() { $v = (function() {
-  $__fn = function($v_0 = null, $str_1 = null) use (&$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $v1_2_0 = ((($GLOBALS['Data_String_CodeUnits_splitAt'] ?? \PhpursThunks::eval('Data_String_CodeUnits_splitAt')))(((($GLOBALS['Data_String_CodeUnits_length'] ?? \PhpursThunks::eval('Data_String_CodeUnits_length')))($str_1) - (($GLOBALS['Data_String_CodeUnits_length'] ?? \PhpursThunks::eval('Data_String_CodeUnits_length')))($v_0))))($str_1);
-  $__t1 = null;;
-  if ((($v1_2_0)['after'] === $v_0)) {
-$__t1 = new Phpurs_Data1("Just", ($v1_2_0)['before']);
-goto end_branch_1;;
-};
-  $__t1 = new Phpurs_Data0("Nothing");
-  end_branch_1:;
-  $__res = $__t1;
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_String_CodeUnits_stripPrefix'] = function() { $v = (function() {
-  $__fn = function($v_0 = null, $str_1 = null) use (&$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $v1_2_0 = ((($GLOBALS['Data_String_CodeUnits_splitAt'] ?? \PhpursThunks::eval('Data_String_CodeUnits_splitAt')))((($GLOBALS['Data_String_CodeUnits_length'] ?? \PhpursThunks::eval('Data_String_CodeUnits_length')))($v_0)))($str_1);
-  $__t1 = null;;
-  if ((($v1_2_0)['before'] === $v_0)) {
-$__t1 = new Phpurs_Data1("Just", ($v1_2_0)['after']);
-goto end_branch_1;;
-};
-  $__t1 = new Phpurs_Data0("Nothing");
-  end_branch_1:;
-  $__res = $__t1;
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_String_CodeUnits_startsWith'] = function() { $v = function($pat_0 = null) {
-  $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Maybe_isJust'] ?? \PhpursThunks::eval('Data_Maybe_isJust'))))((($GLOBALS['Data_String_CodeUnits_stripPrefix'] ?? \PhpursThunks::eval('Data_String_CodeUnits_stripPrefix')))($pat_0));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_String_CodeUnits_lastIndexOf__prime__'] = function() { $v = ((($GLOBALS['Data_String_CodeUnits__lastIndexOfStartingAt'] ?? \PhpursThunks::eval('Data_String_CodeUnits__lastIndexOfStartingAt')))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just'))))(new Phpurs_Data0("Nothing")); return $v; };
-\PhpursThunks::$thunks['Data_String_CodeUnits_lastIndexOf'] = function() { $v = ((($GLOBALS['Data_String_CodeUnits__lastIndexOf'] ?? \PhpursThunks::eval('Data_String_CodeUnits__lastIndexOf')))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just'))))(new Phpurs_Data0("Nothing")); return $v; };
-\PhpursThunks::$thunks['Data_String_CodeUnits_indexOf__prime__'] = function() { $v = ((($GLOBALS['Data_String_CodeUnits__indexOfStartingAt'] ?? \PhpursThunks::eval('Data_String_CodeUnits__indexOfStartingAt')))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just'))))(new Phpurs_Data0("Nothing")); return $v; };
-\PhpursThunks::$thunks['Data_String_CodeUnits_indexOf'] = function() { $v = ((($GLOBALS['Data_String_CodeUnits__indexOf'] ?? \PhpursThunks::eval('Data_String_CodeUnits__indexOf')))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just'))))(new Phpurs_Data0("Nothing")); return $v; };
-\PhpursThunks::$thunks['Data_String_CodeUnits_endsWith'] = function() { $v = function($pat_0 = null) {
-  $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Maybe_isJust'] ?? \PhpursThunks::eval('Data_Maybe_isJust'))))((($GLOBALS['Data_String_CodeUnits_stripSuffix'] ?? \PhpursThunks::eval('Data_String_CodeUnits_stripSuffix')))($pat_0));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_String_CodeUnits_dropWhile'] = function() { $v = (function() {
-  $__fn = function($p_0 = null, $s_1 = null) use (&$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ((($GLOBALS['Data_String_CodeUnits_drop'] ?? \PhpursThunks::eval('Data_String_CodeUnits_drop')))(((($GLOBALS['Data_String_CodeUnits_countPrefix'] ?? \PhpursThunks::eval('Data_String_CodeUnits_countPrefix')))($p_0))($s_1)))($s_1);
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_String_CodeUnits_dropRight'] = function() { $v = (function() {
-  $__fn = function($i_0 = null, $s_1 = null) use (&$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ((($GLOBALS['Data_String_CodeUnits_take'] ?? \PhpursThunks::eval('Data_String_CodeUnits_take')))(((($GLOBALS['Data_String_CodeUnits_length'] ?? \PhpursThunks::eval('Data_String_CodeUnits_length')))($s_1) - $i_0)))($s_1);
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_String_CodeUnits_contains'] = function() { $v = function($pat_0 = null) {
-  $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Maybe_isJust'] ?? \PhpursThunks::eval('Data_Maybe_isJust'))))((($GLOBALS['Data_String_CodeUnits_indexOf'] ?? \PhpursThunks::eval('Data_String_CodeUnits_indexOf')))($pat_0));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_String_CodeUnits_charAt'] = function() { $v = ((($GLOBALS['Data_String_CodeUnits__charAt'] ?? \PhpursThunks::eval('Data_String_CodeUnits__charAt')))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just'))))(new Phpurs_Data0("Nothing")); return $v; };
+
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Data_String_CodeUnits = \call_user_func(function() {
   $exports = [];
@@ -431,36 +292,166 @@ $exports['splitAt'] = $splitAt;
 return $exports;
   return $exports;
 });
-\PhpursThunks::$thunks['Data_String_CodeUnits__charAt'] = function() use (&$ffi_Data_String_CodeUnits) { return $ffi_Data_String_CodeUnits['_charAt']; };
-\PhpursThunks::$thunks['Data_String_CodeUnits__indexOf'] = function() use (&$ffi_Data_String_CodeUnits) { return $ffi_Data_String_CodeUnits['_indexOf']; };
-\PhpursThunks::$thunks['Data_String_CodeUnits__indexOfStartingAt'] = function() use (&$ffi_Data_String_CodeUnits) { return $ffi_Data_String_CodeUnits['_indexOfStartingAt']; };
-\PhpursThunks::$thunks['Data_String_CodeUnits__lastIndexOf'] = function() use (&$ffi_Data_String_CodeUnits) { return $ffi_Data_String_CodeUnits['_lastIndexOf']; };
-\PhpursThunks::$thunks['Data_String_CodeUnits__lastIndexOfStartingAt'] = function() use (&$ffi_Data_String_CodeUnits) { return $ffi_Data_String_CodeUnits['_lastIndexOfStartingAt']; };
-\PhpursThunks::$thunks['Data_String_CodeUnits__toChar'] = function() use (&$ffi_Data_String_CodeUnits) { return $ffi_Data_String_CodeUnits['_toChar']; };
-\PhpursThunks::$thunks['Data_String_CodeUnits_countPrefix'] = function() use (&$ffi_Data_String_CodeUnits) { return $ffi_Data_String_CodeUnits['countPrefix']; };
-\PhpursThunks::$thunks['Data_String_CodeUnits_drop'] = function() use (&$ffi_Data_String_CodeUnits) { return $ffi_Data_String_CodeUnits['drop']; };
-\PhpursThunks::$thunks['Data_String_CodeUnits_fromCharArray'] = function() use (&$ffi_Data_String_CodeUnits) { return $ffi_Data_String_CodeUnits['fromCharArray']; };
-\PhpursThunks::$thunks['Data_String_CodeUnits_length'] = function() use (&$ffi_Data_String_CodeUnits) { return $ffi_Data_String_CodeUnits['length']; };
-\PhpursThunks::$thunks['Data_String_CodeUnits_singleton'] = function() use (&$ffi_Data_String_CodeUnits) { return $ffi_Data_String_CodeUnits['singleton']; };
-\PhpursThunks::$thunks['Data_String_CodeUnits_slice'] = function() use (&$ffi_Data_String_CodeUnits) { return $ffi_Data_String_CodeUnits['slice']; };
-\PhpursThunks::$thunks['Data_String_CodeUnits_splitAt'] = function() use (&$ffi_Data_String_CodeUnits) { return $ffi_Data_String_CodeUnits['splitAt']; };
-\PhpursThunks::$thunks['Data_String_CodeUnits_take'] = function() use (&$ffi_Data_String_CodeUnits) { return $ffi_Data_String_CodeUnits['take']; };
-\PhpursThunks::$thunks['Data_String_CodeUnits_toCharArray'] = function() use (&$ffi_Data_String_CodeUnits) { return $ffi_Data_String_CodeUnits['toCharArray']; };
+$GLOBALS['Data_String_CodeUnits__charAt'] = $ffi_Data_String_CodeUnits['_charAt'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_String_CodeUnits__indexOf'] = $ffi_Data_String_CodeUnits['_indexOf'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_String_CodeUnits__indexOfStartingAt'] = $ffi_Data_String_CodeUnits['_indexOfStartingAt'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_String_CodeUnits__lastIndexOf'] = $ffi_Data_String_CodeUnits['_lastIndexOf'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_String_CodeUnits__lastIndexOfStartingAt'] = $ffi_Data_String_CodeUnits['_lastIndexOfStartingAt'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_String_CodeUnits__toChar'] = $ffi_Data_String_CodeUnits['_toChar'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_String_CodeUnits_countPrefix'] = $ffi_Data_String_CodeUnits['countPrefix'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_String_CodeUnits_drop'] = $ffi_Data_String_CodeUnits['drop'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_String_CodeUnits_fromCharArray'] = $ffi_Data_String_CodeUnits['fromCharArray'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_String_CodeUnits_length'] = $ffi_Data_String_CodeUnits['length'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_String_CodeUnits_singleton'] = $ffi_Data_String_CodeUnits['singleton'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_String_CodeUnits_slice'] = $ffi_Data_String_CodeUnits['slice'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_String_CodeUnits_splitAt'] = $ffi_Data_String_CodeUnits['splitAt'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_String_CodeUnits_take'] = $ffi_Data_String_CodeUnits['take'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_String_CodeUnits_toCharArray'] = $ffi_Data_String_CodeUnits['toCharArray'] ?? new class { public function __invoke(...$args) { return $this; } };
 
 
+// Data_String_CodeUnits_uncons
+$GLOBALS['Data_String_CodeUnits_uncons'] = function($v_0 = null) {
+  $__num = \func_num_args();
+  $__res = match ($v_0) { "" => new Phpurs_Data0("Nothing"), default => new Phpurs_Data1("Just", ["head" => (($GLOBALS['Data_String_Unsafe_charAt'])(0))($v_0), "tail" => (($GLOBALS['Data_String_CodeUnits_drop'])(1))($v_0)]) };
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 
+// Data_String_CodeUnits_toChar
+$GLOBALS['Data_String_CodeUnits_toChar'] = (($GLOBALS['Data_String_CodeUnits__toChar'])($GLOBALS['Data_Maybe_Just']))(new Phpurs_Data0("Nothing"));
 
+// Data_String_CodeUnits_takeWhile
+$GLOBALS['Data_String_CodeUnits_takeWhile'] = (function() {
+  $__fn = function($p_0 = null, $s_1 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = (($GLOBALS['Data_String_CodeUnits_take'])((($GLOBALS['Data_String_CodeUnits_countPrefix'])($p_0))($s_1)))($s_1);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
 
+// Data_String_CodeUnits_takeRight
+$GLOBALS['Data_String_CodeUnits_takeRight'] = (function() {
+  $__fn = function($i_0 = null, $s_1 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = (($GLOBALS['Data_String_CodeUnits_drop'])((($GLOBALS['Data_String_CodeUnits_length'])($s_1) - $i_0)))($s_1);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
 
+// Data_String_CodeUnits_stripSuffix
+$GLOBALS['Data_String_CodeUnits_stripSuffix'] = (function() {
+  $__fn = function($v_0 = null, $str_1 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $v1_2_0 = (($GLOBALS['Data_String_CodeUnits_splitAt'])((($GLOBALS['Data_String_CodeUnits_length'])($str_1) - ($GLOBALS['Data_String_CodeUnits_length'])($v_0))))($str_1);
+  $__res = match (($v1_2_0)['after']) { $v_0 => new Phpurs_Data1("Just", ($v1_2_0)['before']), default => new Phpurs_Data0("Nothing") };
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
 
+// Data_String_CodeUnits_stripPrefix
+$GLOBALS['Data_String_CodeUnits_stripPrefix'] = (function() {
+  $__fn = function($v_0 = null, $str_1 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $v1_2_0 = (($GLOBALS['Data_String_CodeUnits_splitAt'])(($GLOBALS['Data_String_CodeUnits_length'])($v_0)))($str_1);
+  $__res = match (($v1_2_0)['before']) { $v_0 => new Phpurs_Data1("Just", ($v1_2_0)['after']), default => new Phpurs_Data0("Nothing") };
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
 
+// Data_String_CodeUnits_startsWith
+$GLOBALS['Data_String_CodeUnits_startsWith'] = function($pat_0 = null) {
+  $__num = \func_num_args();
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Maybe_isJust']))(($GLOBALS['Data_String_CodeUnits_stripPrefix'])($pat_0));
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 
+// Data_String_CodeUnits_lastIndexOf'
+$GLOBALS['Data_String_CodeUnits_lastIndexOf__prime__'] = (($GLOBALS['Data_String_CodeUnits__lastIndexOfStartingAt'])($GLOBALS['Data_Maybe_Just']))(new Phpurs_Data0("Nothing"));
 
+// Data_String_CodeUnits_lastIndexOf
+$GLOBALS['Data_String_CodeUnits_lastIndexOf'] = (($GLOBALS['Data_String_CodeUnits__lastIndexOf'])($GLOBALS['Data_Maybe_Just']))(new Phpurs_Data0("Nothing"));
 
+// Data_String_CodeUnits_indexOf'
+$GLOBALS['Data_String_CodeUnits_indexOf__prime__'] = (($GLOBALS['Data_String_CodeUnits__indexOfStartingAt'])($GLOBALS['Data_Maybe_Just']))(new Phpurs_Data0("Nothing"));
 
+// Data_String_CodeUnits_indexOf
+$GLOBALS['Data_String_CodeUnits_indexOf'] = (($GLOBALS['Data_String_CodeUnits__indexOf'])($GLOBALS['Data_Maybe_Just']))(new Phpurs_Data0("Nothing"));
 
+// Data_String_CodeUnits_endsWith
+$GLOBALS['Data_String_CodeUnits_endsWith'] = function($pat_0 = null) {
+  $__num = \func_num_args();
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Maybe_isJust']))(($GLOBALS['Data_String_CodeUnits_stripSuffix'])($pat_0));
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 
+// Data_String_CodeUnits_dropWhile
+$GLOBALS['Data_String_CodeUnits_dropWhile'] = (function() {
+  $__fn = function($p_0 = null, $s_1 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = (($GLOBALS['Data_String_CodeUnits_drop'])((($GLOBALS['Data_String_CodeUnits_countPrefix'])($p_0))($s_1)))($s_1);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
 
+// Data_String_CodeUnits_dropRight
+$GLOBALS['Data_String_CodeUnits_dropRight'] = (function() {
+  $__fn = function($i_0 = null, $s_1 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = (($GLOBALS['Data_String_CodeUnits_take'])((($GLOBALS['Data_String_CodeUnits_length'])($s_1) - $i_0)))($s_1);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
 
+// Data_String_CodeUnits_contains
+$GLOBALS['Data_String_CodeUnits_contains'] = function($pat_0 = null) {
+  $__num = \func_num_args();
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Maybe_isJust']))(($GLOBALS['Data_String_CodeUnits_indexOf'])($pat_0));
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 
+// Data_String_CodeUnits_charAt
+$GLOBALS['Data_String_CodeUnits_charAt'] = (($GLOBALS['Data_String_CodeUnits__charAt'])($GLOBALS['Data_Maybe_Just']))(new Phpurs_Data0("Nothing"));
 

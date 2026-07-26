@@ -91,7 +91,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Void_absurd'] = function() { $v = function($a_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Void_absurd
+$GLOBALS['Data_Void_absurd'] = function($a_0 = null) {
   $__num = \func_num_args();
   $spin_1_0 = null;
   $spin_1_0 = function($v_2 = null) use (&$spin_1_0) {
@@ -111,8 +116,5 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
+};
 

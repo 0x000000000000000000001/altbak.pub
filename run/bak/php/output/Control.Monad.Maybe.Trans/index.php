@@ -118,35 +118,48 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Control_Monad_Maybe_Trans_MaybeT'] = function() { $v = function($x_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Control_Monad_Maybe_Trans_MaybeT
+$GLOBALS['Control_Monad_Maybe_Trans_MaybeT'] = function($x_0 = null) {
   $__num = \func_num_args();
   $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Maybe_Trans_runMaybeT'] = function() { $v = function($v_0 = null) {
+};
+
+// Control_Monad_Maybe_Trans_runMaybeT
+$GLOBALS['Control_Monad_Maybe_Trans_runMaybeT'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__res = $v_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Maybe_Trans_newtypeMaybeT'] = function() { $v = ["Coercible0" => function($dollar__unused_0 = null) {
+};
+
+// Control_Monad_Maybe_Trans_newtypeMaybeT
+$GLOBALS['Control_Monad_Maybe_Trans_newtypeMaybeT'] = ["Coercible0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'));
+  $__res = $GLOBALS['Prim_undefined'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Maybe_Trans_monadTransMaybeT'] = function() { $v = ["lift" => function($dictMonad_0 = null) {
+}];
+
+// Control_Monad_Maybe_Trans_monadTransMaybeT
+$GLOBALS['Control_Monad_Maybe_Trans_monadTransMaybeT'] = ["lift" => function($dictMonad_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Control_Monad_Maybe_Trans_MaybeT'] ?? \PhpursThunks::eval('Control_Monad_Maybe_Trans_MaybeT'))))(((($GLOBALS['Control_Monad_liftM1'] ?? \PhpursThunks::eval('Control_Monad_liftM1')))($dictMonad_0))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just'))));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_Maybe_Trans_MaybeT']))((($GLOBALS['Control_Monad_liftM1'])($dictMonad_0))($GLOBALS['Data_Maybe_Just']));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Maybe_Trans_mapMaybeT'] = function() { $v = (function() {
+}];
+
+// Control_Monad_Maybe_Trans_mapMaybeT
+$GLOBALS['Control_Monad_Maybe_Trans_mapMaybeT'] = (function() {
   $__fn = function($f_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -158,8 +171,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Control_Monad_Maybe_Trans_functorMaybeT'] = function() { $v = function($dictFunctor_0 = null) {
+})();
+
+// Control_Monad_Maybe_Trans_functorMaybeT
+$GLOBALS['Control_Monad_Maybe_Trans_functorMaybeT'] = function($dictFunctor_0 = null) {
   $__num = \func_num_args();
   $__res = ["map" => (function() use ($dictFunctor_0) {
   $__fn = function($f_1 = null, $v_2 = null) use ($dictFunctor_0, &$__fn) {
@@ -190,18 +205,20 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Maybe_Trans_monadMaybeT'] = function() { $v = function($dictMonad_0 = null) {
+};
+
+// Control_Monad_Maybe_Trans_monadMaybeT
+$GLOBALS['Control_Monad_Maybe_Trans_monadMaybeT'] = function($dictMonad_0 = null) {
   $__num = \func_num_args();
   $__res = ["Applicative0" => function($dollar__unused_1 = null) use ($dictMonad_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Monad_Maybe_Trans_applicativeMaybeT'] ?? \PhpursThunks::eval('Control_Monad_Maybe_Trans_applicativeMaybeT')))($dictMonad_0);
+  $__res = ($GLOBALS['Control_Monad_Maybe_Trans_applicativeMaybeT'])($dictMonad_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bind1" => function($dollar__unused_1 = null) use ($dictMonad_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Monad_Maybe_Trans_bindMaybeT'] ?? \PhpursThunks::eval('Control_Monad_Maybe_Trans_bindMaybeT')))($dictMonad_0);
+  $__res = ($GLOBALS['Control_Monad_Maybe_Trans_bindMaybeT'])($dictMonad_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -209,8 +226,10 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Maybe_Trans_bindMaybeT'] = function() { $v = function($dictMonad_0 = null) {
+};
+
+// Control_Monad_Maybe_Trans_bindMaybeT
+$GLOBALS['Control_Monad_Maybe_Trans_bindMaybeT'] = function($dictMonad_0 = null) {
   $__num = \func_num_args();
   $__res = ["bind" => (function() use ($dictMonad_0) {
   $__fn = function($v_1 = null, $f_2 = null) use ($dictMonad_0, &$__fn) {
@@ -218,11 +237,11 @@ goto end_branch_0;;
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((($dictMonad_0)['Bind1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['bind'])($v_1))(function($v1_3 = null) use ($dictMonad_0, $f_2) {
+  $__res = ((((($dictMonad_0)['Bind1'])($GLOBALS['Prim_undefined']))['bind'])($v_1))(function($v1_3 = null) use ($dictMonad_0, $f_2) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object($v1_3) && (($v1_3)->{'tag'} === "Nothing"))) {
-$__t0 = (((($dictMonad_0)['Applicative0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['pure'])(new Phpurs_Data0("Nothing"));
+$__t0 = (((($dictMonad_0)['Applicative0'])($GLOBALS['Prim_undefined']))['pure'])(new Phpurs_Data0("Nothing"));
 goto end_branch_0;;
 };
   if ((is_object($v1_3) && (($v1_3)->{'tag'} === "Just"))) {
@@ -244,7 +263,7 @@ goto end_branch_0;;
   return $__fn;
 })(), "Apply0" => function($dollar__unused_1 = null) use ($dictMonad_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Monad_Maybe_Trans_applyMaybeT'] ?? \PhpursThunks::eval('Control_Monad_Maybe_Trans_applyMaybeT')))($dictMonad_0);
+  $__res = ($GLOBALS['Control_Monad_Maybe_Trans_applyMaybeT'])($dictMonad_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -252,10 +271,12 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Maybe_Trans_applyMaybeT'] = function() { $v = function($dictMonad_0 = null) {
+};
+
+// Control_Monad_Maybe_Trans_applyMaybeT
+$GLOBALS['Control_Monad_Maybe_Trans_applyMaybeT'] = function($dictMonad_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (((((($dictMonad_0)['Bind1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Apply0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_1_0 = (((((($dictMonad_0)['Bind1'])($GLOBALS['Prim_undefined']))['Apply0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']);
   $functorMaybeT1_2_1 = ["map" => (function() use ($__local_var_1_0) {
   $__fn = function($f_2 = null, $v_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -282,15 +303,15 @@ goto end_branch_1;;
   };
   return $__fn;
 })()];
-  $__res = ["apply" => (($GLOBALS['Control_Monad_ap'] ?? \PhpursThunks::eval('Control_Monad_ap')))(["Applicative0" => function($dollar__unused_3 = null) use ($dictMonad_0) {
+  $__res = ["apply" => ($GLOBALS['Control_Monad_ap'])(["Applicative0" => function($dollar__unused_3 = null) use ($dictMonad_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Monad_Maybe_Trans_applicativeMaybeT'] ?? \PhpursThunks::eval('Control_Monad_Maybe_Trans_applicativeMaybeT')))($dictMonad_0);
+  $__res = ($GLOBALS['Control_Monad_Maybe_Trans_applicativeMaybeT'])($dictMonad_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bind1" => function($dollar__unused_3 = null) use ($dictMonad_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Monad_Maybe_Trans_bindMaybeT'] ?? \PhpursThunks::eval('Control_Monad_Maybe_Trans_bindMaybeT')))($dictMonad_0);
+  $__res = ($GLOBALS['Control_Monad_Maybe_Trans_bindMaybeT'])($dictMonad_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -304,12 +325,14 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Maybe_Trans_applicativeMaybeT'] = function() { $v = function($dictMonad_0 = null) {
+};
+
+// Control_Monad_Maybe_Trans_applicativeMaybeT
+$GLOBALS['Control_Monad_Maybe_Trans_applicativeMaybeT'] = function($dictMonad_0 = null) {
   $__num = \func_num_args();
-  $__res = ["pure" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Control_Monad_Maybe_Trans_MaybeT'] ?? \PhpursThunks::eval('Control_Monad_Maybe_Trans_MaybeT'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(((($dictMonad_0)['Applicative0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['pure']))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just')))), "Apply0" => function($dollar__unused_1 = null) use ($dictMonad_0) {
+  $__res = ["pure" => (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_Maybe_Trans_MaybeT']))((($GLOBALS['Control_Semigroupoid_composeImpl'])(((($dictMonad_0)['Applicative0'])($GLOBALS['Prim_undefined']))['pure']))($GLOBALS['Data_Maybe_Just'])), "Apply0" => function($dollar__unused_1 = null) use ($dictMonad_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Monad_Maybe_Trans_applyMaybeT'] ?? \PhpursThunks::eval('Control_Monad_Maybe_Trans_applyMaybeT')))($dictMonad_0);
+  $__res = ($GLOBALS['Control_Monad_Maybe_Trans_applyMaybeT'])($dictMonad_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -317,10 +340,12 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Maybe_Trans_semigroupMaybeT'] = function() { $v = function($dictMonad_0 = null) {
+};
+
+// Control_Monad_Maybe_Trans_semigroupMaybeT
+$GLOBALS['Control_Monad_Maybe_Trans_semigroupMaybeT'] = function($dictMonad_0 = null) {
   $__num = \func_num_args();
-  $lift2_1_0 = (($GLOBALS['Control_Apply_lift2'] ?? \PhpursThunks::eval('Control_Apply_lift2')))((($GLOBALS['Control_Monad_Maybe_Trans_applyMaybeT'] ?? \PhpursThunks::eval('Control_Monad_Maybe_Trans_applyMaybeT')))($dictMonad_0));
+  $lift2_1_0 = ($GLOBALS['Control_Apply_lift2'])(($GLOBALS['Control_Monad_Maybe_Trans_applyMaybeT'])($dictMonad_0));
   $__res = function($dictSemigroup_2 = null) use ($lift2_1_0) {
   $__num = \func_num_args();
   $__res = ["append" => ($lift2_1_0)(($dictSemigroup_2)['append'])];
@@ -331,24 +356,26 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Maybe_Trans_monadAskMaybeT'] = function() { $v = function($dictMonadAsk_0 = null) {
+};
+
+// Control_Monad_Maybe_Trans_monadAskMaybeT
+$GLOBALS['Control_Monad_Maybe_Trans_monadAskMaybeT'] = function($dictMonadAsk_0 = null) {
   $__num = \func_num_args();
-  $Monad0_1_0 = (($dictMonadAsk_0)['Monad0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $Monad0_1_0 = (($dictMonadAsk_0)['Monad0'])($GLOBALS['Prim_undefined']);
   $monadMaybeT1_2_1 = ["Applicative0" => function($dollar__unused_2 = null) use ($Monad0_1_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Monad_Maybe_Trans_applicativeMaybeT'] ?? \PhpursThunks::eval('Control_Monad_Maybe_Trans_applicativeMaybeT')))($Monad0_1_0);
+  $__res = ($GLOBALS['Control_Monad_Maybe_Trans_applicativeMaybeT'])($Monad0_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bind1" => function($dollar__unused_2 = null) use ($Monad0_1_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Monad_Maybe_Trans_bindMaybeT'] ?? \PhpursThunks::eval('Control_Monad_Maybe_Trans_bindMaybeT')))($Monad0_1_0);
+  $__res = ($GLOBALS['Control_Monad_Maybe_Trans_bindMaybeT'])($Monad0_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = ["ask" => (((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Control_Monad_Maybe_Trans_MaybeT'] ?? \PhpursThunks::eval('Control_Monad_Maybe_Trans_MaybeT'))))(((($GLOBALS['Control_Monad_liftM1'] ?? \PhpursThunks::eval('Control_Monad_liftM1')))($Monad0_1_0))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just')))))(($dictMonadAsk_0)['ask']), "Monad0" => function($dollar__unused_3 = null) use ($monadMaybeT1_2_1) {
+  $__res = ["ask" => ((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_Maybe_Trans_MaybeT']))((($GLOBALS['Control_Monad_liftM1'])($Monad0_1_0))($GLOBALS['Data_Maybe_Just'])))(($dictMonadAsk_0)['ask']), "Monad0" => function($dollar__unused_3 = null) use ($monadMaybeT1_2_1) {
   $__num = \func_num_args();
   $__res = $monadMaybeT1_2_1;
   goto __end;;
@@ -358,10 +385,12 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Maybe_Trans_monadReaderMaybeT'] = function() { $v = function($dictMonadReader_0 = null) {
+};
+
+// Control_Monad_Maybe_Trans_monadReaderMaybeT
+$GLOBALS['Control_Monad_Maybe_Trans_monadReaderMaybeT'] = function($dictMonadReader_0 = null) {
   $__num = \func_num_args();
-  $monadAskMaybeT1_1_0 = (($GLOBALS['Control_Monad_Maybe_Trans_monadAskMaybeT'] ?? \PhpursThunks::eval('Control_Monad_Maybe_Trans_monadAskMaybeT')))((($dictMonadReader_0)['MonadAsk0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $monadAskMaybeT1_1_0 = ($GLOBALS['Control_Monad_Maybe_Trans_monadAskMaybeT'])((($dictMonadReader_0)['MonadAsk0'])($GLOBALS['Prim_undefined']));
   $__res = ["local" => function($f_2 = null) use ($dictMonadReader_0) {
   $__num = \func_num_args();
   $__res = (($dictMonadReader_0)['local'])($f_2);
@@ -378,19 +407,21 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Maybe_Trans_monadContMaybeT'] = function() { $v = function($dictMonadCont_0 = null) {
+};
+
+// Control_Monad_Maybe_Trans_monadContMaybeT
+$GLOBALS['Control_Monad_Maybe_Trans_monadContMaybeT'] = function($dictMonadCont_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictMonadCont_0)['Monad0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_1_0 = (($dictMonadCont_0)['Monad0'])($GLOBALS['Prim_undefined']);
   $monadMaybeT1_2_1 = ["Applicative0" => function($dollar__unused_2 = null) use ($__local_var_1_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Monad_Maybe_Trans_applicativeMaybeT'] ?? \PhpursThunks::eval('Control_Monad_Maybe_Trans_applicativeMaybeT')))($__local_var_1_0);
+  $__res = ($GLOBALS['Control_Monad_Maybe_Trans_applicativeMaybeT'])($__local_var_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bind1" => function($dollar__unused_2 = null) use ($__local_var_1_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Monad_Maybe_Trans_bindMaybeT'] ?? \PhpursThunks::eval('Control_Monad_Maybe_Trans_bindMaybeT')))($__local_var_1_0);
+  $__res = ($GLOBALS['Control_Monad_Maybe_Trans_bindMaybeT'])($__local_var_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -423,24 +454,26 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Maybe_Trans_monadEffectMaybe'] = function() { $v = function($dictMonadEffect_0 = null) {
+};
+
+// Control_Monad_Maybe_Trans_monadEffectMaybe
+$GLOBALS['Control_Monad_Maybe_Trans_monadEffectMaybe'] = function($dictMonadEffect_0 = null) {
   $__num = \func_num_args();
-  $Monad0_1_0 = (($dictMonadEffect_0)['Monad0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $Monad0_1_0 = (($dictMonadEffect_0)['Monad0'])($GLOBALS['Prim_undefined']);
   $monadMaybeT1_2_1 = ["Applicative0" => function($dollar__unused_2 = null) use ($Monad0_1_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Monad_Maybe_Trans_applicativeMaybeT'] ?? \PhpursThunks::eval('Control_Monad_Maybe_Trans_applicativeMaybeT')))($Monad0_1_0);
+  $__res = ($GLOBALS['Control_Monad_Maybe_Trans_applicativeMaybeT'])($Monad0_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bind1" => function($dollar__unused_2 = null) use ($Monad0_1_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Monad_Maybe_Trans_bindMaybeT'] ?? \PhpursThunks::eval('Control_Monad_Maybe_Trans_bindMaybeT')))($Monad0_1_0);
+  $__res = ($GLOBALS['Control_Monad_Maybe_Trans_bindMaybeT'])($Monad0_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = ["liftEffect" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Control_Monad_Maybe_Trans_MaybeT'] ?? \PhpursThunks::eval('Control_Monad_Maybe_Trans_MaybeT'))))(((($GLOBALS['Control_Monad_liftM1'] ?? \PhpursThunks::eval('Control_Monad_liftM1')))($Monad0_1_0))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just'))))))(($dictMonadEffect_0)['liftEffect']), "Monad0" => function($dollar__unused_3 = null) use ($monadMaybeT1_2_1) {
+  $__res = ["liftEffect" => (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_Maybe_Trans_MaybeT']))((($GLOBALS['Control_Monad_liftM1'])($Monad0_1_0))($GLOBALS['Data_Maybe_Just']))))(($dictMonadEffect_0)['liftEffect']), "Monad0" => function($dollar__unused_3 = null) use ($monadMaybeT1_2_1) {
   $__num = \func_num_args();
   $__res = $monadMaybeT1_2_1;
   goto __end;;
@@ -450,28 +483,30 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Maybe_Trans_monadRecMaybeT'] = function() { $v = function($dictMonadRec_0 = null) {
+};
+
+// Control_Monad_Maybe_Trans_monadRecMaybeT
+$GLOBALS['Control_Monad_Maybe_Trans_monadRecMaybeT'] = function($dictMonadRec_0 = null) {
   $__num = \func_num_args();
-  $Monad0_1_0 = (($dictMonadRec_0)['Monad0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $Monad0_1_0 = (($dictMonadRec_0)['Monad0'])($GLOBALS['Prim_undefined']);
   $monadMaybeT1_2_1 = ["Applicative0" => function($dollar__unused_2 = null) use ($Monad0_1_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Monad_Maybe_Trans_applicativeMaybeT'] ?? \PhpursThunks::eval('Control_Monad_Maybe_Trans_applicativeMaybeT')))($Monad0_1_0);
+  $__res = ($GLOBALS['Control_Monad_Maybe_Trans_applicativeMaybeT'])($Monad0_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bind1" => function($dollar__unused_2 = null) use ($Monad0_1_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Monad_Maybe_Trans_bindMaybeT'] ?? \PhpursThunks::eval('Control_Monad_Maybe_Trans_bindMaybeT')))($Monad0_1_0);
+  $__res = ($GLOBALS['Control_Monad_Maybe_Trans_bindMaybeT'])($Monad0_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
   $__res = ["tailRecM" => function($f_3 = null) use ($Monad0_1_0, $dictMonadRec_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Control_Monad_Maybe_Trans_MaybeT'] ?? \PhpursThunks::eval('Control_Monad_Maybe_Trans_MaybeT'))))((($dictMonadRec_0)['tailRecM'])(function($a_4 = null) use ($Monad0_1_0, $f_3) {
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_Maybe_Trans_MaybeT']))((($dictMonadRec_0)['tailRecM'])(function($a_4 = null) use ($Monad0_1_0, $f_3) {
   $__num = \func_num_args();
-  $__res = ((((($Monad0_1_0)['Bind1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['bind'])(($f_3)($a_4)))(function($m__prime___5 = null) use ($Monad0_1_0) {
+  $__res = ((((($Monad0_1_0)['Bind1'])($GLOBALS['Prim_undefined']))['bind'])(($f_3)($a_4)))(function($m__prime___5 = null) use ($Monad0_1_0) {
   $__num = \func_num_args();
   $__t2 = null;;
   if ((is_object($m__prime___5) && (($m__prime___5)->{'tag'} === "Nothing"))) {
@@ -497,7 +532,7 @@ goto end_branch_2;;
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
   $__t2 = null;
   end_branch_2:;
-  $__res = (((($Monad0_1_0)['Applicative0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['pure'])($__t2);
+  $__res = (((($Monad0_1_0)['Applicative0'])($GLOBALS['Prim_undefined']))['pure'])($__t2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -519,20 +554,22 @@ goto end_branch_2;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Maybe_Trans_monadStateMaybeT'] = function() { $v = function($dictMonadState_0 = null) {
+};
+
+// Control_Monad_Maybe_Trans_monadStateMaybeT
+$GLOBALS['Control_Monad_Maybe_Trans_monadStateMaybeT'] = function($dictMonadState_0 = null) {
   $__num = \func_num_args();
-  $Monad0_1_0 = (($dictMonadState_0)['Monad0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $lift1_2_1 = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Control_Monad_Maybe_Trans_MaybeT'] ?? \PhpursThunks::eval('Control_Monad_Maybe_Trans_MaybeT'))))(((($GLOBALS['Control_Monad_liftM1'] ?? \PhpursThunks::eval('Control_Monad_liftM1')))($Monad0_1_0))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just'))));
+  $Monad0_1_0 = (($dictMonadState_0)['Monad0'])($GLOBALS['Prim_undefined']);
+  $lift1_2_1 = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_Maybe_Trans_MaybeT']))((($GLOBALS['Control_Monad_liftM1'])($Monad0_1_0))($GLOBALS['Data_Maybe_Just']));
   $monadMaybeT1_3_2 = ["Applicative0" => function($dollar__unused_3 = null) use ($Monad0_1_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Monad_Maybe_Trans_applicativeMaybeT'] ?? \PhpursThunks::eval('Control_Monad_Maybe_Trans_applicativeMaybeT')))($Monad0_1_0);
+  $__res = ($GLOBALS['Control_Monad_Maybe_Trans_applicativeMaybeT'])($Monad0_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bind1" => function($dollar__unused_3 = null) use ($Monad0_1_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Monad_Maybe_Trans_bindMaybeT'] ?? \PhpursThunks::eval('Control_Monad_Maybe_Trans_bindMaybeT')))($Monad0_1_0);
+  $__res = ($GLOBALS['Control_Monad_Maybe_Trans_bindMaybeT'])($Monad0_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -553,25 +590,27 @@ goto end_branch_2;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Maybe_Trans_monadTellMaybeT'] = function() { $v = function($dictMonadTell_0 = null) {
+};
+
+// Control_Monad_Maybe_Trans_monadTellMaybeT
+$GLOBALS['Control_Monad_Maybe_Trans_monadTellMaybeT'] = function($dictMonadTell_0 = null) {
   $__num = \func_num_args();
-  $Monad1_1_0 = (($dictMonadTell_0)['Monad1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $Semigroup0_2_1 = (($dictMonadTell_0)['Semigroup0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $Monad1_1_0 = (($dictMonadTell_0)['Monad1'])($GLOBALS['Prim_undefined']);
+  $Semigroup0_2_1 = (($dictMonadTell_0)['Semigroup0'])($GLOBALS['Prim_undefined']);
   $monadMaybeT1_3_2 = ["Applicative0" => function($dollar__unused_3 = null) use ($Monad1_1_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Monad_Maybe_Trans_applicativeMaybeT'] ?? \PhpursThunks::eval('Control_Monad_Maybe_Trans_applicativeMaybeT')))($Monad1_1_0);
+  $__res = ($GLOBALS['Control_Monad_Maybe_Trans_applicativeMaybeT'])($Monad1_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bind1" => function($dollar__unused_3 = null) use ($Monad1_1_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Monad_Maybe_Trans_bindMaybeT'] ?? \PhpursThunks::eval('Control_Monad_Maybe_Trans_bindMaybeT')))($Monad1_1_0);
+  $__res = ($GLOBALS['Control_Monad_Maybe_Trans_bindMaybeT'])($Monad1_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = ["tell" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Control_Monad_Maybe_Trans_MaybeT'] ?? \PhpursThunks::eval('Control_Monad_Maybe_Trans_MaybeT'))))(((($GLOBALS['Control_Monad_liftM1'] ?? \PhpursThunks::eval('Control_Monad_liftM1')))($Monad1_1_0))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just'))))))(($dictMonadTell_0)['tell']), "Semigroup0" => function($dollar__unused_4 = null) use ($Semigroup0_2_1) {
+  $__res = ["tell" => (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_Maybe_Trans_MaybeT']))((($GLOBALS['Control_Monad_liftM1'])($Monad1_1_0))($GLOBALS['Data_Maybe_Just']))))(($dictMonadTell_0)['tell']), "Semigroup0" => function($dollar__unused_4 = null) use ($Semigroup0_2_1) {
   $__num = \func_num_args();
   $__res = $Semigroup0_2_1;
   goto __end;;
@@ -587,15 +626,17 @@ goto end_branch_2;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Maybe_Trans_monadWriterMaybeT'] = function() { $v = function($dictMonadWriter_0 = null) {
+};
+
+// Control_Monad_Maybe_Trans_monadWriterMaybeT
+$GLOBALS['Control_Monad_Maybe_Trans_monadWriterMaybeT'] = function($dictMonadWriter_0 = null) {
   $__num = \func_num_args();
-  $MonadTell1_1_0 = (($dictMonadWriter_0)['MonadTell1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $Monad1_2_1 = (($MonadTell1_1_0)['Monad1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $__local_var_3_2 = (($Monad1_2_1)['Bind1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $__local_var_4_3 = (($Monad1_2_1)['Applicative0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $Monoid0_5_4 = (($dictMonadWriter_0)['Monoid0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $monadTellMaybeT1_6_5 = (($GLOBALS['Control_Monad_Maybe_Trans_monadTellMaybeT'] ?? \PhpursThunks::eval('Control_Monad_Maybe_Trans_monadTellMaybeT')))($MonadTell1_1_0);
+  $MonadTell1_1_0 = (($dictMonadWriter_0)['MonadTell1'])($GLOBALS['Prim_undefined']);
+  $Monad1_2_1 = (($MonadTell1_1_0)['Monad1'])($GLOBALS['Prim_undefined']);
+  $__local_var_3_2 = (($Monad1_2_1)['Bind1'])($GLOBALS['Prim_undefined']);
+  $__local_var_4_3 = (($Monad1_2_1)['Applicative0'])($GLOBALS['Prim_undefined']);
+  $Monoid0_5_4 = (($dictMonadWriter_0)['Monoid0'])($GLOBALS['Prim_undefined']);
+  $monadTellMaybeT1_6_5 = ($GLOBALS['Control_Monad_Maybe_Trans_monadTellMaybeT'])($MonadTell1_1_0);
   $__res = ["listen" => function($v_7 = null) use ($__local_var_3_2, $__local_var_4_3, $dictMonadWriter_0) {
   $__num = \func_num_args();
   $__res = ((($__local_var_3_2)['bind'])((($dictMonadWriter_0)['listen'])($v_7)))(function($v_8 = null) use ($__local_var_4_3) {
@@ -621,7 +662,7 @@ goto end_branch_6;;
   $__num = \func_num_args();
   $__t7 = null;;
   if ((is_object($a_8) && (($a_8)->{'tag'} === "Nothing"))) {
-$__t7 = new Phpurs_Data2("Tuple", new Phpurs_Data0("Nothing"), (($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))['identity']);
+$__t7 = new Phpurs_Data2("Tuple", new Phpurs_Data0("Nothing"), ($GLOBALS['Control_Category_categoryFn'])['identity']);
 goto end_branch_7;;
 };
   if ((is_object($a_8) && (($a_8)->{'tag'} === "Just"))) {
@@ -655,20 +696,22 @@ goto end_branch_7;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Maybe_Trans_monadThrowMaybeT'] = function() { $v = function($dictMonadThrow_0 = null) {
+};
+
+// Control_Monad_Maybe_Trans_monadThrowMaybeT
+$GLOBALS['Control_Monad_Maybe_Trans_monadThrowMaybeT'] = function($dictMonadThrow_0 = null) {
   $__num = \func_num_args();
-  $Monad0_1_0 = (($dictMonadThrow_0)['Monad0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $lift1_2_1 = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Control_Monad_Maybe_Trans_MaybeT'] ?? \PhpursThunks::eval('Control_Monad_Maybe_Trans_MaybeT'))))(((($GLOBALS['Control_Monad_liftM1'] ?? \PhpursThunks::eval('Control_Monad_liftM1')))($Monad0_1_0))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just'))));
+  $Monad0_1_0 = (($dictMonadThrow_0)['Monad0'])($GLOBALS['Prim_undefined']);
+  $lift1_2_1 = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_Maybe_Trans_MaybeT']))((($GLOBALS['Control_Monad_liftM1'])($Monad0_1_0))($GLOBALS['Data_Maybe_Just']));
   $monadMaybeT1_3_2 = ["Applicative0" => function($dollar__unused_3 = null) use ($Monad0_1_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Monad_Maybe_Trans_applicativeMaybeT'] ?? \PhpursThunks::eval('Control_Monad_Maybe_Trans_applicativeMaybeT')))($Monad0_1_0);
+  $__res = ($GLOBALS['Control_Monad_Maybe_Trans_applicativeMaybeT'])($Monad0_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bind1" => function($dollar__unused_3 = null) use ($Monad0_1_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Monad_Maybe_Trans_bindMaybeT'] ?? \PhpursThunks::eval('Control_Monad_Maybe_Trans_bindMaybeT')))($Monad0_1_0);
+  $__res = ($GLOBALS['Control_Monad_Maybe_Trans_bindMaybeT'])($Monad0_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -689,10 +732,12 @@ goto end_branch_7;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Maybe_Trans_monadErrorMaybeT'] = function() { $v = function($dictMonadError_0 = null) {
+};
+
+// Control_Monad_Maybe_Trans_monadErrorMaybeT
+$GLOBALS['Control_Monad_Maybe_Trans_monadErrorMaybeT'] = function($dictMonadError_0 = null) {
   $__num = \func_num_args();
-  $monadThrowMaybeT1_1_0 = (($GLOBALS['Control_Monad_Maybe_Trans_monadThrowMaybeT'] ?? \PhpursThunks::eval('Control_Monad_Maybe_Trans_monadThrowMaybeT')))((($dictMonadError_0)['MonadThrow0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $monadThrowMaybeT1_1_0 = ($GLOBALS['Control_Monad_Maybe_Trans_monadThrowMaybeT'])((($dictMonadError_0)['MonadThrow0'])($GLOBALS['Prim_undefined']));
   $__res = ["catchError" => (function() use ($dictMonadError_0) {
   $__fn = function($v_2 = null, $h_3 = null) use ($dictMonadError_0, &$__fn) {
   $__num = \func_num_args();
@@ -721,24 +766,26 @@ goto end_branch_7;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Maybe_Trans_monadSTMaybeT'] = function() { $v = function($dictMonadST_0 = null) {
+};
+
+// Control_Monad_Maybe_Trans_monadSTMaybeT
+$GLOBALS['Control_Monad_Maybe_Trans_monadSTMaybeT'] = function($dictMonadST_0 = null) {
   $__num = \func_num_args();
-  $Monad0_1_0 = (($dictMonadST_0)['Monad0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $Monad0_1_0 = (($dictMonadST_0)['Monad0'])($GLOBALS['Prim_undefined']);
   $monadMaybeT1_2_1 = ["Applicative0" => function($dollar__unused_2 = null) use ($Monad0_1_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Monad_Maybe_Trans_applicativeMaybeT'] ?? \PhpursThunks::eval('Control_Monad_Maybe_Trans_applicativeMaybeT')))($Monad0_1_0);
+  $__res = ($GLOBALS['Control_Monad_Maybe_Trans_applicativeMaybeT'])($Monad0_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bind1" => function($dollar__unused_2 = null) use ($Monad0_1_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Monad_Maybe_Trans_bindMaybeT'] ?? \PhpursThunks::eval('Control_Monad_Maybe_Trans_bindMaybeT')))($Monad0_1_0);
+  $__res = ($GLOBALS['Control_Monad_Maybe_Trans_bindMaybeT'])($Monad0_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = ["liftST" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Control_Monad_Maybe_Trans_MaybeT'] ?? \PhpursThunks::eval('Control_Monad_Maybe_Trans_MaybeT'))))(((($GLOBALS['Control_Monad_liftM1'] ?? \PhpursThunks::eval('Control_Monad_liftM1')))($Monad0_1_0))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just'))))))(($dictMonadST_0)['liftST']), "Monad0" => function($dollar__unused_3 = null) use ($monadMaybeT1_2_1) {
+  $__res = ["liftST" => (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_Maybe_Trans_MaybeT']))((($GLOBALS['Control_Monad_liftM1'])($Monad0_1_0))($GLOBALS['Data_Maybe_Just']))))(($dictMonadST_0)['liftST']), "Monad0" => function($dollar__unused_3 = null) use ($monadMaybeT1_2_1) {
   $__num = \func_num_args();
   $__res = $monadMaybeT1_2_1;
   goto __end;;
@@ -748,14 +795,16 @@ goto end_branch_7;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Maybe_Trans_monoidMaybeT'] = function() { $v = function($dictMonad_0 = null) {
+};
+
+// Control_Monad_Maybe_Trans_monoidMaybeT
+$GLOBALS['Control_Monad_Maybe_Trans_monoidMaybeT'] = function($dictMonad_0 = null) {
   $__num = \func_num_args();
-  $semigroupMaybeT1_1_0 = (($GLOBALS['Control_Monad_Maybe_Trans_semigroupMaybeT'] ?? \PhpursThunks::eval('Control_Monad_Maybe_Trans_semigroupMaybeT')))($dictMonad_0);
+  $semigroupMaybeT1_1_0 = ($GLOBALS['Control_Monad_Maybe_Trans_semigroupMaybeT'])($dictMonad_0);
   $__res = function($dictMonoid_2 = null) use ($dictMonad_0, $semigroupMaybeT1_1_0) {
   $__num = \func_num_args();
-  $semigroupMaybeT2_3_1 = ($semigroupMaybeT1_1_0)((($dictMonoid_2)['Semigroup0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = ["mempty" => (((($GLOBALS['Control_Monad_Maybe_Trans_applicativeMaybeT'] ?? \PhpursThunks::eval('Control_Monad_Maybe_Trans_applicativeMaybeT')))($dictMonad_0))['pure'])(($dictMonoid_2)['mempty']), "Semigroup0" => function($dollar__unused_4 = null) use ($semigroupMaybeT2_3_1) {
+  $semigroupMaybeT2_3_1 = ($semigroupMaybeT1_1_0)((($dictMonoid_2)['Semigroup0'])($GLOBALS['Prim_undefined']));
+  $__res = ["mempty" => ((($GLOBALS['Control_Monad_Maybe_Trans_applicativeMaybeT'])($dictMonad_0))['pure'])(($dictMonoid_2)['mempty']), "Semigroup0" => function($dollar__unused_4 = null) use ($semigroupMaybeT2_3_1) {
   $__num = \func_num_args();
   $__res = $semigroupMaybeT2_3_1;
   goto __end;;
@@ -769,11 +818,13 @@ goto end_branch_7;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Maybe_Trans_altMaybeT'] = function() { $v = function($dictMonad_0 = null) {
+};
+
+// Control_Monad_Maybe_Trans_altMaybeT
+$GLOBALS['Control_Monad_Maybe_Trans_altMaybeT'] = function($dictMonad_0 = null) {
   $__num = \func_num_args();
-  $Bind1_1_0 = (($dictMonad_0)['Bind1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $__local_var_2_1 = (((($Bind1_1_0)['Apply0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $Bind1_1_0 = (($dictMonad_0)['Bind1'])($GLOBALS['Prim_undefined']);
+  $__local_var_2_1 = (((($Bind1_1_0)['Apply0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']);
   $functorMaybeT1_3_2 = ["map" => (function() use ($__local_var_2_1) {
   $__fn = function($f_3 = null, $v_4 = null) use ($__local_var_2_1, &$__fn) {
   $__num = \func_num_args();
@@ -813,7 +864,7 @@ goto end_branch_2;;
 $__t4 = $v1_5;
 goto end_branch_4;;
 };
-  $__t4 = (((($dictMonad_0)['Applicative0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['pure'])($m_6);
+  $__t4 = (((($dictMonad_0)['Applicative0'])($GLOBALS['Prim_undefined']))['pure'])($m_6);
   end_branch_4:;
   $__res = $__t4;
   goto __end;;
@@ -835,11 +886,13 @@ goto end_branch_4;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Maybe_Trans_plusMaybeT'] = function() { $v = function($dictMonad_0 = null) {
+};
+
+// Control_Monad_Maybe_Trans_plusMaybeT
+$GLOBALS['Control_Monad_Maybe_Trans_plusMaybeT'] = function($dictMonad_0 = null) {
   $__num = \func_num_args();
-  $altMaybeT1_1_0 = (($GLOBALS['Control_Monad_Maybe_Trans_altMaybeT'] ?? \PhpursThunks::eval('Control_Monad_Maybe_Trans_altMaybeT')))($dictMonad_0);
-  $__res = ["empty" => (((($dictMonad_0)['Applicative0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['pure'])(new Phpurs_Data0("Nothing")), "Alt0" => function($dollar__unused_2 = null) use ($altMaybeT1_1_0) {
+  $altMaybeT1_1_0 = ($GLOBALS['Control_Monad_Maybe_Trans_altMaybeT'])($dictMonad_0);
+  $__res = ["empty" => (((($dictMonad_0)['Applicative0'])($GLOBALS['Prim_undefined']))['pure'])(new Phpurs_Data0("Nothing")), "Alt0" => function($dollar__unused_2 = null) use ($altMaybeT1_1_0) {
   $__num = \func_num_args();
   $__res = $altMaybeT1_1_0;
   goto __end;;
@@ -849,11 +902,13 @@ goto end_branch_4;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Maybe_Trans_alternativeMaybeT'] = function() { $v = function($dictMonad_0 = null) {
+};
+
+// Control_Monad_Maybe_Trans_alternativeMaybeT
+$GLOBALS['Control_Monad_Maybe_Trans_alternativeMaybeT'] = function($dictMonad_0 = null) {
   $__num = \func_num_args();
-  $applicativeMaybeT1_1_0 = (($GLOBALS['Control_Monad_Maybe_Trans_applicativeMaybeT'] ?? \PhpursThunks::eval('Control_Monad_Maybe_Trans_applicativeMaybeT')))($dictMonad_0);
-  $plusMaybeT1_2_1 = (($GLOBALS['Control_Monad_Maybe_Trans_plusMaybeT'] ?? \PhpursThunks::eval('Control_Monad_Maybe_Trans_plusMaybeT')))($dictMonad_0);
+  $applicativeMaybeT1_1_0 = ($GLOBALS['Control_Monad_Maybe_Trans_applicativeMaybeT'])($dictMonad_0);
+  $plusMaybeT1_2_1 = ($GLOBALS['Control_Monad_Maybe_Trans_plusMaybeT'])($dictMonad_0);
   $__res = ["Applicative0" => function($dollar__unused_3 = null) use ($applicativeMaybeT1_1_0) {
   $__num = \func_num_args();
   $__res = $applicativeMaybeT1_1_0;
@@ -870,23 +925,25 @@ goto end_branch_4;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Maybe_Trans_monadPlusMaybeT'] = function() { $v = function($dictMonad_0 = null) {
+};
+
+// Control_Monad_Maybe_Trans_monadPlusMaybeT
+$GLOBALS['Control_Monad_Maybe_Trans_monadPlusMaybeT'] = function($dictMonad_0 = null) {
   $__num = \func_num_args();
   $monadMaybeT1_1_0 = ["Applicative0" => function($dollar__unused_1 = null) use ($dictMonad_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Monad_Maybe_Trans_applicativeMaybeT'] ?? \PhpursThunks::eval('Control_Monad_Maybe_Trans_applicativeMaybeT')))($dictMonad_0);
+  $__res = ($GLOBALS['Control_Monad_Maybe_Trans_applicativeMaybeT'])($dictMonad_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bind1" => function($dollar__unused_1 = null) use ($dictMonad_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Monad_Maybe_Trans_bindMaybeT'] ?? \PhpursThunks::eval('Control_Monad_Maybe_Trans_bindMaybeT')))($dictMonad_0);
+  $__res = ($GLOBALS['Control_Monad_Maybe_Trans_bindMaybeT'])($dictMonad_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $alternativeMaybeT1_2_1 = (($GLOBALS['Control_Monad_Maybe_Trans_alternativeMaybeT'] ?? \PhpursThunks::eval('Control_Monad_Maybe_Trans_alternativeMaybeT')))($dictMonad_0);
+  $alternativeMaybeT1_2_1 = ($GLOBALS['Control_Monad_Maybe_Trans_alternativeMaybeT'])($dictMonad_0);
   $__res = ["Monad0" => function($dollar__unused_3 = null) use ($monadMaybeT1_1_0) {
   $__num = \func_num_args();
   $__res = $monadMaybeT1_1_0;
@@ -903,34 +960,5 @@ goto end_branch_4;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+};
 

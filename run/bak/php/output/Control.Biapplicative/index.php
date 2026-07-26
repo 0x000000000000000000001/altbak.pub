@@ -93,22 +93,25 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Control_Biapplicative_bipure'] = function() { $v = function($dict_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Control_Biapplicative_bipure
+$GLOBALS['Control_Biapplicative_bipure'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['bipure'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Biapplicative_biapplicativeTuple'] = function() { $v = ["bipure" => ($GLOBALS['Data_Tuple_Tuple'] ?? \PhpursThunks::eval('Data_Tuple_Tuple')), "Biapply0" => function($dollar__unused_0 = null) {
+};
+
+// Control_Biapplicative_biapplicativeTuple
+$GLOBALS['Control_Biapplicative_biapplicativeTuple'] = ["bipure" => $GLOBALS['Data_Tuple_Tuple'], "Biapply0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Biapply_biapplyTuple'] ?? \PhpursThunks::eval('Control_Biapply_biapplyTuple'));
+  $__res = $GLOBALS['Control_Biapply_biapplyTuple'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
+}];
 

@@ -110,15 +110,69 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_DateTime_Instant_negateDuration'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))['identity']))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Time_Duration_negate'] ?? \PhpursThunks::eval('Data_Time_Duration_negate'))))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))['identity'])); return $v; };
-\PhpursThunks::$thunks['Data_DateTime_Instant_unInstant'] = function() { $v = function($v_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+$ffi_Data_DateTime_Instant = \call_user_func(function() {
+  $exports = [];
+$fromDateTimeImpl = function($y, $mo = null, $d = null, $h = null, $mi = null, $s = null, $ms = null) use (&$fromDateTimeImpl) {
+    if (\func_num_args() < 7) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$fromDateTimeImpl) {
+
+            return $fromDateTimeImpl(...\array_merge($__args, $more));
+        };
+    }
+    $dt = new \DateTime('now', new \DateTimeZone('UTC'));
+    $dt->setDate($y, $mo, $d);
+    $dt->setTime($h, $mi, $s, $ms * 1000);
+    return (float)$dt->getTimestamp() * 1000 + (int)$dt->format('v');
+};
+
+$toDateTimeImpl = function($ctor, $instant = null) use (&$toDateTimeImpl) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$toDateTimeImpl) {
+
+            return $toDateTimeImpl(...\array_merge($__args, $more));
+        };
+    }
+    $seconds = floor($instant / 1000);
+    $ms = $instant - ($seconds * 1000);
+    $dt = new \DateTime("@" . $seconds, new \DateTimeZone('UTC'));
+    
+    return $ctor
+        ((int)$dt->format('Y'))
+        ((int)$dt->format('n'))
+        ((int)$dt->format('j'))
+        ((int)$dt->format('G'))
+        ((int)$dt->format('i'))
+        ((int)$dt->format('s'))
+        ((int)$ms);
+};
+
+$exports['fromDateTimeImpl'] = $fromDateTimeImpl;
+$exports['toDateTimeImpl'] = $toDateTimeImpl;
+return $exports;
+  return $exports;
+});
+$GLOBALS['Data_DateTime_Instant_fromDateTimeImpl'] = $ffi_Data_DateTime_Instant['fromDateTimeImpl'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_DateTime_Instant_toDateTimeImpl'] = $ffi_Data_DateTime_Instant['toDateTimeImpl'] ?? new class { public function __invoke(...$args) { return $this; } };
+
+
+// Data_DateTime_Instant_negateDuration
+$GLOBALS['Data_DateTime_Instant_negateDuration'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Control_Category_categoryFn'])['identity']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Time_Duration_negate']))(($GLOBALS['Control_Category_categoryFn'])['identity']));
+
+// Data_DateTime_Instant_unInstant
+$GLOBALS['Data_DateTime_Instant_unInstant'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__res = $v_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_DateTime_Instant_toDateTime'] = function() { $v = (($GLOBALS['Data_DateTime_Instant_toDateTimeImpl'] ?? \PhpursThunks::eval('Data_DateTime_Instant_toDateTimeImpl')))((function() {
+};
+
+// Data_DateTime_Instant_toDateTime
+$GLOBALS['Data_DateTime_Instant_toDateTime'] = ($GLOBALS['Data_DateTime_Instant_toDateTimeImpl'])((function() {
   $__fn = function($y_0 = null, $mo_1 = null, $d_2 = null, $h_3 = null, $mi_4 = null, $s_5 = null, $ms_6 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 7) {
@@ -236,22 +290,28 @@ break;
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
   $__t0 = null;
   end_branch_0:;
-  $__res = new Phpurs_Data2("DateTime", (((($GLOBALS['Data_Date_canonicalDate'] ?? \PhpursThunks::eval('Data_Date_canonicalDate')))($y_0))($__t0))($d_2), new Phpurs_Data4("Time", $h_3, $mi_4, $s_5, $ms_6));
+  $__res = new Phpurs_Data2("DateTime", ((($GLOBALS['Data_Date_canonicalDate'])($y_0))($__t0))($d_2), new Phpurs_Data4("Time", $h_3, $mi_4, $s_5, $ms_6));
   goto __end;;
   __end:
   return $__num > 7 ? $__res(...\array_slice(\func_get_args(), 7)) : $__res;
   };
   return $__fn;
-})()); return $v; };
-\PhpursThunks::$thunks['Data_DateTime_Instant_showInstant'] = function() { $v = ["show" => function($v_0 = null) {
+})());
+
+// Data_DateTime_Instant_showInstant
+$GLOBALS['Data_DateTime_Instant_showInstant'] = ["show" => function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = (("(Instant (Milliseconds " . (($GLOBALS['Data_Show_showNumberImpl'] ?? \PhpursThunks::eval('Data_Show_showNumberImpl')))($v_0)) . "))");
+  $__res = (("(Instant (Milliseconds " . ($GLOBALS['Data_Show_showNumberImpl'])($v_0)) . "))");
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_DateTime_Instant_ordDateTime'] = function() { $v = ($GLOBALS['Data_Ord_ordNumber'] ?? \PhpursThunks::eval('Data_Ord_ordNumber')); return $v; };
-\PhpursThunks::$thunks['Data_DateTime_Instant_instant'] = function() { $v = function($v_0 = null) {
+}];
+
+// Data_DateTime_Instant_ordDateTime
+$GLOBALS['Data_DateTime_Instant_ordDateTime'] = $GLOBALS['Data_Ord_ordNumber'];
+
+// Data_DateTime_Instant_instant
+$GLOBALS['Data_DateTime_Instant_instant'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((($v_0 >= -8639977881600000.0) && ($v_0 <= 8639977881599999.0))) {
@@ -264,8 +324,10 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_DateTime_Instant_fromDateTime'] = function() { $v = function($v_0 = null) {
+};
+
+// Data_DateTime_Instant_fromDateTime
+$GLOBALS['Data_DateTime_Instant_fromDateTime'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object((($v_0)->{'value0'})->{'value1'}) && (((($v_0)->{'value0'})->{'value1'})->{'tag'} === "January"))) {
@@ -319,12 +381,14 @@ goto end_branch_0;;
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
   $__t0 = null;
   end_branch_0:;
-  $__res = (($GLOBALS['Data_DateTime_Instant_fromDateTimeImpl'] ?? \PhpursThunks::eval('Data_DateTime_Instant_fromDateTimeImpl')))((($v_0)->{'value0'})->{'value0'}, $__t0, (($v_0)->{'value0'})->{'value2'}, (($v_0)->{'value1'})->{'value0'}, (($v_0)->{'value1'})->{'value1'}, (($v_0)->{'value1'})->{'value2'}, (($v_0)->{'value1'})->{'value3'});
+  $__res = ($GLOBALS['Data_DateTime_Instant_fromDateTimeImpl'])((($v_0)->{'value0'})->{'value0'}, $__t0, (($v_0)->{'value0'})->{'value2'}, (($v_0)->{'value1'})->{'value0'}, (($v_0)->{'value1'})->{'value1'}, (($v_0)->{'value1'})->{'value2'}, (($v_0)->{'value1'})->{'value3'});
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_DateTime_Instant_fromDate'] = function() { $v = function($d_0 = null) {
+};
+
+// Data_DateTime_Instant_fromDate
+$GLOBALS['Data_DateTime_Instant_fromDate'] = function($d_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object(($d_0)->{'value1'}) && ((($d_0)->{'value1'})->{'tag'} === "January"))) {
@@ -378,88 +442,36 @@ goto end_branch_0;;
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
   $__t0 = null;
   end_branch_0:;
-  $__res = (($GLOBALS['Data_DateTime_Instant_fromDateTimeImpl'] ?? \PhpursThunks::eval('Data_DateTime_Instant_fromDateTimeImpl')))(($d_0)->{'value0'}, $__t0, ($d_0)->{'value2'}, 0, 0, 0, 0);
+  $__res = ($GLOBALS['Data_DateTime_Instant_fromDateTimeImpl'])(($d_0)->{'value0'}, $__t0, ($d_0)->{'value2'}, 0, 0, 0, 0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_DateTime_Instant_eqDateTime'] = function() { $v = ($GLOBALS['Data_Eq_eqNumber'] ?? \PhpursThunks::eval('Data_Eq_eqNumber')); return $v; };
-\PhpursThunks::$thunks['Data_DateTime_Instant_diff'] = function() { $v = (function() {
+};
+
+// Data_DateTime_Instant_eqDateTime
+$GLOBALS['Data_DateTime_Instant_eqDateTime'] = $GLOBALS['Data_Eq_eqNumber'];
+
+// Data_DateTime_Instant_diff
+$GLOBALS['Data_DateTime_Instant_diff'] = (function() {
   $__fn = function($dictDuration_0 = null, $dt1_1 = null, $dt2_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($dictDuration_0)['toDuration'])(($dt1_1 + (($GLOBALS['Data_DateTime_Instant_negateDuration'] ?? \PhpursThunks::eval('Data_DateTime_Instant_negateDuration')))($dt2_2)));
+  $__res = (($dictDuration_0)['toDuration'])(($dt1_1 + ($GLOBALS['Data_DateTime_Instant_negateDuration'])($dt2_2)));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_DateTime_Instant_boundedInstant'] = function() { $v = ["bottom" => -8639977881600000.0, "top" => 8639977881599999.0, "Ord0" => function($dollar__unused_0 = null) {
+})();
+
+// Data_DateTime_Instant_boundedInstant
+$GLOBALS['Data_DateTime_Instant_boundedInstant'] = ["bottom" => -8639977881600000.0, "top" => 8639977881599999.0, "Ord0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Ord_ordNumber'] ?? \PhpursThunks::eval('Data_Ord_ordNumber'));
+  $__res = $GLOBALS['Data_Ord_ordNumber'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-$ffi_Data_DateTime_Instant = \call_user_func(function() {
-  $exports = [];
-$fromDateTimeImpl = function($y, $mo = null, $d = null, $h = null, $mi = null, $s = null, $ms = null) use (&$fromDateTimeImpl) {
-    if (\func_num_args() < 7) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$fromDateTimeImpl) {
-
-            return $fromDateTimeImpl(...\array_merge($__args, $more));
-        };
-    }
-    $dt = new \DateTime('now', new \DateTimeZone('UTC'));
-    $dt->setDate($y, $mo, $d);
-    $dt->setTime($h, $mi, $s, $ms * 1000);
-    return (float)$dt->getTimestamp() * 1000 + (int)$dt->format('v');
-};
-
-$toDateTimeImpl = function($ctor, $instant = null) use (&$toDateTimeImpl) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$toDateTimeImpl) {
-
-            return $toDateTimeImpl(...\array_merge($__args, $more));
-        };
-    }
-    $seconds = floor($instant / 1000);
-    $ms = $instant - ($seconds * 1000);
-    $dt = new \DateTime("@" . $seconds, new \DateTimeZone('UTC'));
-    
-    return $ctor
-        ((int)$dt->format('Y'))
-        ((int)$dt->format('n'))
-        ((int)$dt->format('j'))
-        ((int)$dt->format('G'))
-        ((int)$dt->format('i'))
-        ((int)$dt->format('s'))
-        ((int)$ms);
-};
-
-$exports['fromDateTimeImpl'] = $fromDateTimeImpl;
-$exports['toDateTimeImpl'] = $toDateTimeImpl;
-return $exports;
-  return $exports;
-});
-\PhpursThunks::$thunks['Data_DateTime_Instant_fromDateTimeImpl'] = function() use (&$ffi_Data_DateTime_Instant) { return $ffi_Data_DateTime_Instant['fromDateTimeImpl']; };
-\PhpursThunks::$thunks['Data_DateTime_Instant_toDateTimeImpl'] = function() use (&$ffi_Data_DateTime_Instant) { return $ffi_Data_DateTime_Instant['toDateTimeImpl']; };
-
-
-
-
-
-
-
-
-
-
-
-
+}];
 

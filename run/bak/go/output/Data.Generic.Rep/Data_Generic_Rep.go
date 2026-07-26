@@ -145,7 +145,7 @@ var once_repOf sync.Once
 func Get_repOf() gopurs_runtime.Value {
 	once_repOf.Do(func() {
 		cache_repOf = gopurs_runtime.Func2(func(dictGeneric_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_repOf(dictGeneric_0_box, v_1_box)
+return Call_repOf(dictGeneric_0_box, v_1_box.IntVal)
 })
 	})
 	return cache_repOf
@@ -260,10 +260,10 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_sem
 }))
 }
 
-func Call_repOf(dictGeneric_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_repOf(dictGeneric_0_loop gopurs_runtime.Value, v_1_loop int64) gopurs_runtime.Value {
 var dictGeneric_0 gopurs_runtime.Value = dictGeneric_0_loop
 _ = dictGeneric_0
-var v_1 gopurs_runtime.Value = v_1_loop
+var v_1 int64 = v_1_loop
 _ = v_1
 return gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}
 }

@@ -93,22 +93,25 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Control_Comonad_Trans_Class_lower'] = function() { $v = function($dict_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Control_Comonad_Trans_Class_lower
+$GLOBALS['Control_Comonad_Trans_Class_lower'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['lower'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Trans_Class_comonadTransIdentityT'] = function() { $v = ["lower" => function($dictComonad_0 = null) {
+};
+
+// Control_Comonad_Trans_Class_comonadTransIdentityT
+$GLOBALS['Control_Comonad_Trans_Class_comonadTransIdentityT'] = ["lower" => function($dictComonad_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Monad_Identity_Trans_runIdentityT'] ?? \PhpursThunks::eval('Control_Monad_Identity_Trans_runIdentityT'));
+  $__res = $GLOBALS['Control_Monad_Identity_Trans_runIdentityT'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
+}];
 

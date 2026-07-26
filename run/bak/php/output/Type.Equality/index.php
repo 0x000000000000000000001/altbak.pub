@@ -91,7 +91,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Type_Equality_refl'] = function() { $v = ["proof" => function($a_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Type_Equality_refl
+$GLOBALS['Type_Equality_refl'] = ["proof" => function($a_0 = null) {
   $__num = \func_num_args();
   $__res = $a_0;
   goto __end;;
@@ -99,19 +104,23 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Coercible0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'));
+  $__res = $GLOBALS['Prim_undefined'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Type_Equality_proof'] = function() { $v = function($dict_0 = null) {
+}];
+
+// Type_Equality_proof
+$GLOBALS['Type_Equality_proof'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['proof'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Type_Equality_to'] = function() { $v = function($dictTypeEquals_0 = null) {
+};
+
+// Type_Equality_to
+$GLOBALS['Type_Equality_to'] = function($dictTypeEquals_0 = null) {
   $__num = \func_num_args();
   $__res = (($dictTypeEquals_0)['proof'])(function($a_1 = null) {
   $__num = \func_num_args();
@@ -123,8 +132,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Type_Equality_from'] = function() { $v = function($dictTypeEquals_0 = null) {
+};
+
+// Type_Equality_from
+$GLOBALS['Type_Equality_from'] = function($dictTypeEquals_0 = null) {
   $__num = \func_num_args();
   $__res = (($dictTypeEquals_0)['proof'])(function($a_1 = null) {
   $__num = \func_num_args();
@@ -136,11 +147,5 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
+};
 

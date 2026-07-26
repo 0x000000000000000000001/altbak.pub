@@ -95,7 +95,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Function_on'] = function() { $v = (function() {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Function_on
+$GLOBALS['Data_Function_on'] = (function() {
   $__fn = function($f_0 = null, $g_1 = null, $x_2 = null, $y_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
@@ -107,8 +112,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Function_flip'] = function() { $v = (function() {
+})();
+
+// Data_Function_flip
+$GLOBALS['Data_Function_flip'] = (function() {
   $__fn = function($f_0 = null, $b_1 = null, $a_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -120,8 +127,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Function_const'] = function() { $v = (function() {
+})();
+
+// Data_Function_const
+$GLOBALS['Data_Function_const'] = (function() {
   $__fn = function($a_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -133,8 +142,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Function_applyN'] = function() { $v = function($f_0 = null) {
+})();
+
+// Data_Function_applyN
+$GLOBALS['Data_Function_applyN'] = function($f_0 = null) {
   $__num = \func_num_args();
   $go_1_0 = null;
   $go_1_0 = (function() use ($f_0, &$go_1_0) {
@@ -171,8 +182,10 @@ goto end_branch_2;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Function_applyFlipped'] = function() { $v = (function() {
+};
+
+// Data_Function_applyFlipped
+$GLOBALS['Data_Function_applyFlipped'] = (function() {
   $__fn = function($x_0 = null, $f_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -184,8 +197,10 @@ goto end_branch_2;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Function_apply'] = function() { $v = (function() {
+})();
+
+// Data_Function_apply
+$GLOBALS['Data_Function_apply'] = (function() {
   $__fn = function($f_0 = null, $x_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -197,13 +212,5 @@ goto end_branch_2;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
+})();
 

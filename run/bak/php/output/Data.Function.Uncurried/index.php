@@ -91,20 +91,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Function_Uncurried_runFn1'] = function() { $v = function($f_0 = null) {
-  $__num = \func_num_args();
-  $__res = $f_0;
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Function_Uncurried_mkFn1'] = function() { $v = function($f_0 = null) {
-  $__num = \func_num_args();
-  $__res = $f_0;
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
+
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Data_Function_Uncurried = \call_user_func(function() {
   $exports = [];
@@ -353,27 +340,43 @@ $exports['runFn10'] = $runFn10;
 return $exports;
   return $exports;
 });
-\PhpursThunks::$thunks['Data_Function_Uncurried_mkFn0'] = function() use (&$ffi_Data_Function_Uncurried) { return $ffi_Data_Function_Uncurried['mkFn0']; };
-\PhpursThunks::$thunks['Data_Function_Uncurried_mkFn10'] = function() use (&$ffi_Data_Function_Uncurried) { return $ffi_Data_Function_Uncurried['mkFn10']; };
-\PhpursThunks::$thunks['Data_Function_Uncurried_mkFn2'] = function() use (&$ffi_Data_Function_Uncurried) { return $ffi_Data_Function_Uncurried['mkFn2']; };
-\PhpursThunks::$thunks['Data_Function_Uncurried_mkFn3'] = function() use (&$ffi_Data_Function_Uncurried) { return $ffi_Data_Function_Uncurried['mkFn3']; };
-\PhpursThunks::$thunks['Data_Function_Uncurried_mkFn4'] = function() use (&$ffi_Data_Function_Uncurried) { return $ffi_Data_Function_Uncurried['mkFn4']; };
-\PhpursThunks::$thunks['Data_Function_Uncurried_mkFn5'] = function() use (&$ffi_Data_Function_Uncurried) { return $ffi_Data_Function_Uncurried['mkFn5']; };
-\PhpursThunks::$thunks['Data_Function_Uncurried_mkFn6'] = function() use (&$ffi_Data_Function_Uncurried) { return $ffi_Data_Function_Uncurried['mkFn6']; };
-\PhpursThunks::$thunks['Data_Function_Uncurried_mkFn7'] = function() use (&$ffi_Data_Function_Uncurried) { return $ffi_Data_Function_Uncurried['mkFn7']; };
-\PhpursThunks::$thunks['Data_Function_Uncurried_mkFn8'] = function() use (&$ffi_Data_Function_Uncurried) { return $ffi_Data_Function_Uncurried['mkFn8']; };
-\PhpursThunks::$thunks['Data_Function_Uncurried_mkFn9'] = function() use (&$ffi_Data_Function_Uncurried) { return $ffi_Data_Function_Uncurried['mkFn9']; };
-\PhpursThunks::$thunks['Data_Function_Uncurried_runFn0'] = function() use (&$ffi_Data_Function_Uncurried) { return $ffi_Data_Function_Uncurried['runFn0']; };
-\PhpursThunks::$thunks['Data_Function_Uncurried_runFn10'] = function() use (&$ffi_Data_Function_Uncurried) { return $ffi_Data_Function_Uncurried['runFn10']; };
-\PhpursThunks::$thunks['Data_Function_Uncurried_runFn2'] = function() use (&$ffi_Data_Function_Uncurried) { return $ffi_Data_Function_Uncurried['runFn2']; };
-\PhpursThunks::$thunks['Data_Function_Uncurried_runFn3'] = function() use (&$ffi_Data_Function_Uncurried) { return $ffi_Data_Function_Uncurried['runFn3']; };
-\PhpursThunks::$thunks['Data_Function_Uncurried_runFn4'] = function() use (&$ffi_Data_Function_Uncurried) { return $ffi_Data_Function_Uncurried['runFn4']; };
-\PhpursThunks::$thunks['Data_Function_Uncurried_runFn5'] = function() use (&$ffi_Data_Function_Uncurried) { return $ffi_Data_Function_Uncurried['runFn5']; };
-\PhpursThunks::$thunks['Data_Function_Uncurried_runFn6'] = function() use (&$ffi_Data_Function_Uncurried) { return $ffi_Data_Function_Uncurried['runFn6']; };
-\PhpursThunks::$thunks['Data_Function_Uncurried_runFn7'] = function() use (&$ffi_Data_Function_Uncurried) { return $ffi_Data_Function_Uncurried['runFn7']; };
-\PhpursThunks::$thunks['Data_Function_Uncurried_runFn8'] = function() use (&$ffi_Data_Function_Uncurried) { return $ffi_Data_Function_Uncurried['runFn8']; };
-\PhpursThunks::$thunks['Data_Function_Uncurried_runFn9'] = function() use (&$ffi_Data_Function_Uncurried) { return $ffi_Data_Function_Uncurried['runFn9']; };
+$GLOBALS['Data_Function_Uncurried_mkFn0'] = $ffi_Data_Function_Uncurried['mkFn0'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Function_Uncurried_mkFn10'] = $ffi_Data_Function_Uncurried['mkFn10'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Function_Uncurried_mkFn2'] = $ffi_Data_Function_Uncurried['mkFn2'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Function_Uncurried_mkFn3'] = $ffi_Data_Function_Uncurried['mkFn3'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Function_Uncurried_mkFn4'] = $ffi_Data_Function_Uncurried['mkFn4'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Function_Uncurried_mkFn5'] = $ffi_Data_Function_Uncurried['mkFn5'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Function_Uncurried_mkFn6'] = $ffi_Data_Function_Uncurried['mkFn6'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Function_Uncurried_mkFn7'] = $ffi_Data_Function_Uncurried['mkFn7'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Function_Uncurried_mkFn8'] = $ffi_Data_Function_Uncurried['mkFn8'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Function_Uncurried_mkFn9'] = $ffi_Data_Function_Uncurried['mkFn9'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Function_Uncurried_runFn0'] = $ffi_Data_Function_Uncurried['runFn0'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Function_Uncurried_runFn10'] = $ffi_Data_Function_Uncurried['runFn10'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Function_Uncurried_runFn2'] = $ffi_Data_Function_Uncurried['runFn2'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Function_Uncurried_runFn3'] = $ffi_Data_Function_Uncurried['runFn3'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Function_Uncurried_runFn4'] = $ffi_Data_Function_Uncurried['runFn4'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Function_Uncurried_runFn5'] = $ffi_Data_Function_Uncurried['runFn5'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Function_Uncurried_runFn6'] = $ffi_Data_Function_Uncurried['runFn6'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Function_Uncurried_runFn7'] = $ffi_Data_Function_Uncurried['runFn7'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Function_Uncurried_runFn8'] = $ffi_Data_Function_Uncurried['runFn8'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Function_Uncurried_runFn9'] = $ffi_Data_Function_Uncurried['runFn9'] ?? new class { public function __invoke(...$args) { return $this; } };
 
 
+// Data_Function_Uncurried_runFn1
+$GLOBALS['Data_Function_Uncurried_runFn1'] = function($f_0 = null) {
+  $__num = \func_num_args();
+  $__res = $f_0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 
+// Data_Function_Uncurried_mkFn1
+$GLOBALS['Data_Function_Uncurried_mkFn1'] = function($f_0 = null) {
+  $__num = \func_num_args();
+  $__res = $f_0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 

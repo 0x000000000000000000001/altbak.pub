@@ -108,20 +108,27 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Enum_Generic_genericToEnum__prime__'] = function() { $v = function($dict_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Enum_Generic_genericToEnum'
+$GLOBALS['Data_Enum_Generic_genericToEnum__prime__'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['genericToEnum__prime__'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Enum_Generic_genericToEnum'] = function() { $v = (function() {
+};
+
+// Data_Enum_Generic_genericToEnum
+$GLOBALS['Data_Enum_Generic_genericToEnum'] = (function() {
   $__fn = function($dictGeneric_0 = null, $dictGenericBoundedEnum_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(function($v1_2 = null) use ($dictGeneric_0) {
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v1_2 = null) use ($dictGeneric_0) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object($v1_2) && (($v1_2)->{'tag'} === "Just"))) {
@@ -140,20 +147,24 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Enum_Generic_genericSucc__prime__'] = function() { $v = function($dict_0 = null) {
+})();
+
+// Data_Enum_Generic_genericSucc'
+$GLOBALS['Data_Enum_Generic_genericSucc__prime__'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['genericSucc__prime__'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Enum_Generic_genericSucc'] = function() { $v = function($dictGeneric_0 = null) {
+};
+
+// Data_Enum_Generic_genericSucc
+$GLOBALS['Data_Enum_Generic_genericSucc'] = function($dictGeneric_0 = null) {
   $__num = \func_num_args();
   $from_1_0 = ($dictGeneric_0)['from'];
   $__res = function($dictGenericEnum_2 = null) use ($dictGeneric_0, $from_1_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(function($v1_3 = null) use ($dictGeneric_0) {
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v1_3 = null) use ($dictGeneric_0) {
   $__num = \func_num_args();
   $__t1 = null;;
   if ((is_object($v1_3) && (($v1_3)->{'tag'} === "Just"))) {
@@ -166,7 +177,7 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($dictGenericEnum_2)['genericSucc__prime__']))($from_1_0));
+}))((($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictGenericEnum_2)['genericSucc__prime__']))($from_1_0));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -174,20 +185,24 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Enum_Generic_genericPred__prime__'] = function() { $v = function($dict_0 = null) {
+};
+
+// Data_Enum_Generic_genericPred'
+$GLOBALS['Data_Enum_Generic_genericPred__prime__'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['genericPred__prime__'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Enum_Generic_genericPred'] = function() { $v = function($dictGeneric_0 = null) {
+};
+
+// Data_Enum_Generic_genericPred
+$GLOBALS['Data_Enum_Generic_genericPred'] = function($dictGeneric_0 = null) {
   $__num = \func_num_args();
   $from_1_0 = ($dictGeneric_0)['from'];
   $__res = function($dictGenericEnum_2 = null) use ($dictGeneric_0, $from_1_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(function($v1_3 = null) use ($dictGeneric_0) {
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v1_3 = null) use ($dictGeneric_0) {
   $__num = \func_num_args();
   $__t1 = null;;
   if ((is_object($v1_3) && (($v1_3)->{'tag'} === "Just"))) {
@@ -200,7 +215,7 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($dictGenericEnum_2)['genericPred__prime__']))($from_1_0));
+}))((($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictGenericEnum_2)['genericPred__prime__']))($from_1_0));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -208,20 +223,24 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Enum_Generic_genericFromEnum__prime__'] = function() { $v = function($dict_0 = null) {
+};
+
+// Data_Enum_Generic_genericFromEnum'
+$GLOBALS['Data_Enum_Generic_genericFromEnum__prime__'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['genericFromEnum__prime__'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Enum_Generic_genericFromEnum'] = function() { $v = function($dictGeneric_0 = null) {
+};
+
+// Data_Enum_Generic_genericFromEnum
+$GLOBALS['Data_Enum_Generic_genericFromEnum'] = function($dictGeneric_0 = null) {
   $__num = \func_num_args();
   $from_1_0 = ($dictGeneric_0)['from'];
   $__res = function($dictGenericBoundedEnum_2 = null) use ($from_1_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($dictGenericBoundedEnum_2)['genericFromEnum__prime__']))($from_1_0);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictGenericBoundedEnum_2)['genericFromEnum__prime__']))($from_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -229,8 +248,10 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Enum_Generic_genericEnumSum'] = function() { $v = (function() {
+};
+
+// Data_Enum_Generic_genericEnumSum
+$GLOBALS['Data_Enum_Generic_genericEnumSum'] = (function() {
   $__fn = function($dictGenericEnum_0 = null, $dictGenericTop_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -334,8 +355,10 @@ goto end_branch_7;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Enum_Generic_genericEnumProduct'] = function() { $v = (function() {
+})();
+
+// Data_Enum_Generic_genericEnumProduct
+$GLOBALS['Data_Enum_Generic_genericEnumProduct'] = (function() {
   $__fn = function($dictGenericEnum_0 = null, $dictGenericTop_1 = null, $dictGenericBottom_2 = null, $dictGenericEnum1_3 = null, $dictGenericTop1_4 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 5) {
@@ -409,8 +432,10 @@ goto end_branch_7;;
   return $__num > 5 ? $__res(...\array_slice(\func_get_args(), 5)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Enum_Generic_genericEnumNoArguments'] = function() { $v = ["genericPred__prime__" => function($v_0 = null) {
+})();
+
+// Data_Enum_Generic_genericEnumNoArguments
+$GLOBALS['Data_Enum_Generic_genericEnumNoArguments'] = ["genericPred__prime__" => function($v_0 = null) {
   $__num = \func_num_args();
   $__res = new Phpurs_Data0("Nothing");
   goto __end;;
@@ -422,8 +447,10 @@ goto end_branch_7;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Enum_Generic_genericEnumConstructor'] = function() { $v = function($dictGenericEnum_0 = null) {
+}];
+
+// Data_Enum_Generic_genericEnumConstructor
+$GLOBALS['Data_Enum_Generic_genericEnumConstructor'] = function($dictGenericEnum_0 = null) {
   $__num = \func_num_args();
   $__res = ["genericPred__prime__" => function($v_1 = null) use ($dictGenericEnum_0) {
   $__num = \func_num_args();
@@ -457,8 +484,10 @@ goto end_branch_3;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Enum_Generic_genericEnumArgument'] = function() { $v = function($dictEnum_0 = null) {
+};
+
+// Data_Enum_Generic_genericEnumArgument
+$GLOBALS['Data_Enum_Generic_genericEnumArgument'] = function($dictEnum_0 = null) {
   $__num = \func_num_args();
   $__res = ["genericPred__prime__" => function($v_1 = null) use ($dictEnum_0) {
   $__num = \func_num_args();
@@ -492,15 +521,19 @@ goto end_branch_3;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Enum_Generic_genericCardinality__prime__'] = function() { $v = function($dict_0 = null) {
+};
+
+// Data_Enum_Generic_genericCardinality'
+$GLOBALS['Data_Enum_Generic_genericCardinality__prime__'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['genericCardinality__prime__'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Enum_Generic_genericCardinality'] = function() { $v = (function() {
+};
+
+// Data_Enum_Generic_genericCardinality
+$GLOBALS['Data_Enum_Generic_genericCardinality'] = (function() {
   $__fn = function($dictGeneric_0 = null, $dictGenericBoundedEnum_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -512,8 +545,10 @@ goto end_branch_3;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Enum_Generic_genericBoundedEnumSum'] = function() { $v = function($dictGenericBoundedEnum_0 = null) {
+})();
+
+// Data_Enum_Generic_genericBoundedEnumSum
+$GLOBALS['Data_Enum_Generic_genericBoundedEnumSum'] = function($dictGenericBoundedEnum_0 = null) {
   $__num = \func_num_args();
   $genericCardinality__prime__1_1_0 = ($dictGenericBoundedEnum_0)['genericCardinality__prime__'];
   $__res = function($dictGenericBoundedEnum1_2 = null) use ($dictGenericBoundedEnum_0, $genericCardinality__prime__1_1_0) {
@@ -573,8 +608,10 @@ goto end_branch_6;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Enum_Generic_genericBoundedEnumProduct'] = function() { $v = function($dictGenericBoundedEnum_0 = null) {
+};
+
+// Data_Enum_Generic_genericBoundedEnumProduct
+$GLOBALS['Data_Enum_Generic_genericBoundedEnumProduct'] = function($dictGenericBoundedEnum_0 = null) {
   $__num = \func_num_args();
   $genericCardinality__prime__1_1_0 = ($dictGenericBoundedEnum_0)['genericCardinality__prime__'];
   $__res = function($dictGenericBoundedEnum1_2 = null) use ($dictGenericBoundedEnum_0, $genericCardinality__prime__1_1_0) {
@@ -585,7 +622,7 @@ goto end_branch_6;;
   $__local_var_5_2 = (($dictGenericBoundedEnum_0)['genericToEnum__prime__'])(($n_4 / $genericCardinality__prime__2_3_1));
   $__t3 = null;;
   if ((is_object($__local_var_5_2) && (($__local_var_5_2)->{'tag'} === "Just"))) {
-$__local_var_6_4 = (($dictGenericBoundedEnum1_2)['genericToEnum__prime__'])(((($GLOBALS['Data_EuclideanRing_intMod'] ?? \PhpursThunks::eval('Data_EuclideanRing_intMod')))($n_4))($genericCardinality__prime__2_3_1));
+$__local_var_6_4 = (($dictGenericBoundedEnum1_2)['genericToEnum__prime__'])((($GLOBALS['Data_EuclideanRing_intMod'])($n_4))($genericCardinality__prime__2_3_1));
 $__t5 = null;;
 if ((is_object($__local_var_6_4) && (($__local_var_6_4)->{'tag'} === "Just"))) {
 $__t5 = new Phpurs_Data1("Just", new Phpurs_Data2("Product", ($__local_var_5_2)->{'value0'}, ($__local_var_6_4)->{'value0'}));
@@ -616,22 +653,12 @@ goto end_branch_3;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Enum_Generic_genericBoundedEnumNoArguments'] = function() { $v = ["genericCardinality__prime__" => 1, "genericToEnum__prime__" => function($i_0 = null) {
-  $__num = \func_num_args();
-  $__t0 = null;;
-  switch ($i_0) {
-case 0:
-$__t0 = new Phpurs_Data1("Just", new Phpurs_Data0("NoArguments"));
-goto end_branch_0;;
-break;
-default:
-;
-break;
 };
-  $__t0 = new Phpurs_Data0("Nothing");
-  end_branch_0:;
-  $__res = $__t0;
+
+// Data_Enum_Generic_genericBoundedEnumNoArguments
+$GLOBALS['Data_Enum_Generic_genericBoundedEnumNoArguments'] = ["genericCardinality__prime__" => 1, "genericToEnum__prime__" => function($i_0 = null) {
+  $__num = \func_num_args();
+  $__res = match ($i_0) { 0 => new Phpurs_Data1("Just", new Phpurs_Data0("NoArguments")), default => new Phpurs_Data0("Nothing") };
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -641,8 +668,10 @@ break;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Enum_Generic_genericBoundedEnumConstructor'] = function() { $v = function($dictGenericBoundedEnum_0 = null) {
+}];
+
+// Data_Enum_Generic_genericBoundedEnumConstructor
+$GLOBALS['Data_Enum_Generic_genericBoundedEnumConstructor'] = function($dictGenericBoundedEnum_0 = null) {
   $__num = \func_num_args();
   $__res = ["genericCardinality__prime__" => ($dictGenericBoundedEnum_0)['genericCardinality__prime__'], "genericToEnum__prime__" => function($i_1 = null) use ($dictGenericBoundedEnum_0) {
   $__num = \func_num_args();
@@ -668,8 +697,10 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Enum_Generic_genericBoundedEnumArgument'] = function() { $v = function($dictBoundedEnum_0 = null) {
+};
+
+// Data_Enum_Generic_genericBoundedEnumArgument
+$GLOBALS['Data_Enum_Generic_genericBoundedEnumArgument'] = function($dictBoundedEnum_0 = null) {
   $__num = \func_num_args();
   $__res = ["genericCardinality__prime__" => ($dictBoundedEnum_0)['cardinality'], "genericToEnum__prime__" => function($i_1 = null) use ($dictBoundedEnum_0) {
   $__num = \func_num_args();
@@ -695,27 +726,5 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+};
 

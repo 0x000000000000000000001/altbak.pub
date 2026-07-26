@@ -111,14 +111,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Functor_App_App'] = function() { $v = function($x_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Functor_App_App
+$GLOBALS['Data_Functor_App_App'] = function($x_0 = null) {
   $__num = \func_num_args();
   $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_App_showApp'] = function() { $v = function($dictShow_0 = null) {
+};
+
+// Data_Functor_App_showApp
+$GLOBALS['Data_Functor_App_showApp'] = function($dictShow_0 = null) {
   $__num = \func_num_args();
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
@@ -130,8 +137,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_App_semigroupApp'] = function() { $v = (function() {
+};
+
+// Data_Functor_App_semigroupApp
+$GLOBALS['Data_Functor_App_semigroupApp'] = (function() {
   $__fn = function($dictApply_0 = null, $dictSemigroup_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -144,7 +153,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((($GLOBALS['Control_Apply_lift2'] ?? \PhpursThunks::eval('Control_Apply_lift2')))($dictApply_0))($append1_2_0))($v_3))($v1_4);
+  $__res = (((($GLOBALS['Control_Apply_lift2'])($dictApply_0))($append1_2_0))($v_3))($v1_4);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -156,27 +165,33 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Functor_App_plusApp'] = function() { $v = function($dictPlus_0 = null) {
+})();
+
+// Data_Functor_App_plusApp
+$GLOBALS['Data_Functor_App_plusApp'] = function($dictPlus_0 = null) {
   $__num = \func_num_args();
   $__res = $dictPlus_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_App_newtypeApp'] = function() { $v = ["Coercible0" => function($dollar__unused_0 = null) {
+};
+
+// Data_Functor_App_newtypeApp
+$GLOBALS['Data_Functor_App_newtypeApp'] = ["Coercible0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'));
+  $__res = $GLOBALS['Prim_undefined'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Functor_App_monoidApp'] = function() { $v = function($dictApplicative_0 = null) {
+}];
+
+// Data_Functor_App_monoidApp
+$GLOBALS['Data_Functor_App_monoidApp'] = function($dictApplicative_0 = null) {
   $__num = \func_num_args();
-  $semigroupApp1_1_0 = (($GLOBALS['Data_Functor_App_semigroupApp'] ?? \PhpursThunks::eval('Data_Functor_App_semigroupApp')))((($dictApplicative_0)['Apply0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $semigroupApp1_1_0 = ($GLOBALS['Data_Functor_App_semigroupApp'])((($dictApplicative_0)['Apply0'])($GLOBALS['Prim_undefined']));
   $__res = function($dictMonoid_2 = null) use ($dictApplicative_0, $semigroupApp1_1_0) {
   $__num = \func_num_args();
-  $semigroupApp2_3_1 = ($semigroupApp1_1_0)((($dictMonoid_2)['Semigroup0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $semigroupApp2_3_1 = ($semigroupApp1_1_0)((($dictMonoid_2)['Semigroup0'])($GLOBALS['Prim_undefined']));
   $__res = ["mempty" => (($dictApplicative_0)['pure'])(($dictMonoid_2)['mempty']), "Semigroup0" => function($dollar__unused_4 = null) use ($semigroupApp2_3_1) {
   $__num = \func_num_args();
   $__res = $semigroupApp2_3_1;
@@ -191,31 +206,43 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_App_monadPlusApp'] = function() { $v = function($dictMonadPlus_0 = null) {
+};
+
+// Data_Functor_App_monadPlusApp
+$GLOBALS['Data_Functor_App_monadPlusApp'] = function($dictMonadPlus_0 = null) {
   $__num = \func_num_args();
   $__res = $dictMonadPlus_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_App_monadApp'] = function() { $v = function($dictMonad_0 = null) {
+};
+
+// Data_Functor_App_monadApp
+$GLOBALS['Data_Functor_App_monadApp'] = function($dictMonad_0 = null) {
   $__num = \func_num_args();
   $__res = $dictMonad_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_App_lazyApp'] = function() { $v = function($dictLazy_0 = null) {
+};
+
+// Data_Functor_App_lazyApp
+$GLOBALS['Data_Functor_App_lazyApp'] = function($dictLazy_0 = null) {
   $__num = \func_num_args();
   $__res = $dictLazy_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_App_hoistLowerApp'] = function() { $v = ($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')); return $v; };
-\PhpursThunks::$thunks['Data_Functor_App_hoistLiftApp'] = function() { $v = ($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')); return $v; };
-\PhpursThunks::$thunks['Data_Functor_App_hoistApp'] = function() { $v = (function() {
+};
+
+// Data_Functor_App_hoistLowerApp
+$GLOBALS['Data_Functor_App_hoistLowerApp'] = $GLOBALS['Unsafe_Coerce_unsafeCoerce'];
+
+// Data_Functor_App_hoistLiftApp
+$GLOBALS['Data_Functor_App_hoistLiftApp'] = $GLOBALS['Unsafe_Coerce_unsafeCoerce'];
+
+// Data_Functor_App_hoistApp
+$GLOBALS['Data_Functor_App_hoistApp'] = (function() {
   $__fn = function($f_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -227,22 +254,28 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Functor_App_functorApp'] = function() { $v = function($dictFunctor_0 = null) {
+})();
+
+// Data_Functor_App_functorApp
+$GLOBALS['Data_Functor_App_functorApp'] = function($dictFunctor_0 = null) {
   $__num = \func_num_args();
   $__res = $dictFunctor_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_App_extendApp'] = function() { $v = function($dictExtend_0 = null) {
+};
+
+// Data_Functor_App_extendApp
+$GLOBALS['Data_Functor_App_extendApp'] = function($dictExtend_0 = null) {
   $__num = \func_num_args();
   $__res = $dictExtend_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_App_eqApp'] = function() { $v = (function() {
+};
+
+// Data_Functor_App_eqApp
+$GLOBALS['Data_Functor_App_eqApp'] = (function() {
   $__fn = function($dictEq1_0 = null, $dictEq_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -267,14 +300,16 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Functor_App_ordApp'] = function() { $v = function($dictOrd1_0 = null) {
+})();
+
+// Data_Functor_App_ordApp
+$GLOBALS['Data_Functor_App_ordApp'] = function($dictOrd1_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictOrd1_0)['Eq10'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_1_0 = (($dictOrd1_0)['Eq10'])($GLOBALS['Prim_undefined']);
   $__res = function($dictOrd_2 = null) use ($__local_var_1_0, $dictOrd1_0) {
   $__num = \func_num_args();
   $compare11_3_1 = (($dictOrd1_0)['compare1'])($dictOrd_2);
-  $eq11_4_2 = (($__local_var_1_0)['eq1'])((($dictOrd_2)['Eq0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $eq11_4_2 = (($__local_var_1_0)['eq1'])((($dictOrd_2)['Eq0'])($GLOBALS['Prim_undefined']));
   $eqApp2_5_3 = ["eq" => (function() use ($eq11_4_2) {
   $__fn = function($x_5 = null, $y_6 = null) use ($eq11_4_2, &$__fn) {
   $__num = \func_num_args();
@@ -314,8 +349,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_App_eq1App'] = function() { $v = function($dictEq1_0 = null) {
+};
+
+// Data_Functor_App_eq1App
+$GLOBALS['Data_Functor_App_eq1App'] = function($dictEq1_0 = null) {
   $__num = \func_num_args();
   $__res = ["eq1" => function($dictEq_1 = null) use ($dictEq1_0) {
   $__num = \func_num_args();
@@ -327,11 +364,13 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_App_ord1App'] = function() { $v = function($dictOrd1_0 = null) {
+};
+
+// Data_Functor_App_ord1App
+$GLOBALS['Data_Functor_App_ord1App'] = function($dictOrd1_0 = null) {
   $__num = \func_num_args();
-  $ordApp1_1_0 = (($GLOBALS['Data_Functor_App_ordApp'] ?? \PhpursThunks::eval('Data_Functor_App_ordApp')))($dictOrd1_0);
-  $__local_var_2_1 = (($dictOrd1_0)['Eq10'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $ordApp1_1_0 = ($GLOBALS['Data_Functor_App_ordApp'])($dictOrd1_0);
+  $__local_var_2_1 = (($dictOrd1_0)['Eq10'])($GLOBALS['Prim_undefined']);
   $eq1App1_3_2 = ["eq1" => function($dictEq_3 = null) use ($__local_var_2_1) {
   $__num = \func_num_args();
   $__res = (($__local_var_2_1)['eq1'])($dictEq_3);
@@ -355,73 +394,59 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_App_comonadApp'] = function() { $v = function($dictComonad_0 = null) {
+};
+
+// Data_Functor_App_comonadApp
+$GLOBALS['Data_Functor_App_comonadApp'] = function($dictComonad_0 = null) {
   $__num = \func_num_args();
   $__res = $dictComonad_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_App_bindApp'] = function() { $v = function($dictBind_0 = null) {
+};
+
+// Data_Functor_App_bindApp
+$GLOBALS['Data_Functor_App_bindApp'] = function($dictBind_0 = null) {
   $__num = \func_num_args();
   $__res = $dictBind_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_App_applyApp'] = function() { $v = function($dictApply_0 = null) {
+};
+
+// Data_Functor_App_applyApp
+$GLOBALS['Data_Functor_App_applyApp'] = function($dictApply_0 = null) {
   $__num = \func_num_args();
   $__res = $dictApply_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_App_applicativeApp'] = function() { $v = function($dictApplicative_0 = null) {
+};
+
+// Data_Functor_App_applicativeApp
+$GLOBALS['Data_Functor_App_applicativeApp'] = function($dictApplicative_0 = null) {
   $__num = \func_num_args();
   $__res = $dictApplicative_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_App_alternativeApp'] = function() { $v = function($dictAlternative_0 = null) {
+};
+
+// Data_Functor_App_alternativeApp
+$GLOBALS['Data_Functor_App_alternativeApp'] = function($dictAlternative_0 = null) {
   $__num = \func_num_args();
   $__res = $dictAlternative_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_App_altApp'] = function() { $v = function($dictAlt_0 = null) {
+};
+
+// Data_Functor_App_altApp
+$GLOBALS['Data_Functor_App_altApp'] = function($dictAlt_0 = null) {
   $__num = \func_num_args();
   $__res = $dictAlt_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+};
 

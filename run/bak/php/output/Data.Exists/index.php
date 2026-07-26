@@ -91,10 +91,13 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Exists_runExists'] = function() { $v = ($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')); return $v; };
-\PhpursThunks::$thunks['Data_Exists_mkExists'] = function() { $v = ($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')); return $v; };
+
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+// Data_Exists_runExists
+$GLOBALS['Data_Exists_runExists'] = $GLOBALS['Unsafe_Coerce_unsafeCoerce'];
 
+// Data_Exists_mkExists
+$GLOBALS['Data_Exists_mkExists'] = $GLOBALS['Unsafe_Coerce_unsafeCoerce'];
 

@@ -95,7 +95,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Functor_Contravariant_contravariantConst'] = function() { $v = ["cmap" => (function() {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Functor_Contravariant_contravariantConst
+$GLOBALS['Data_Functor_Contravariant_contravariantConst'] = ["cmap" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -107,15 +112,19 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Contravariant_cmap'] = function() { $v = function($dict_0 = null) {
+})()];
+
+// Data_Functor_Contravariant_cmap
+$GLOBALS['Data_Functor_Contravariant_cmap'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['cmap'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Contravariant_cmapFlipped'] = function() { $v = (function() {
+};
+
+// Data_Functor_Contravariant_cmapFlipped
+$GLOBALS['Data_Functor_Contravariant_cmapFlipped'] = (function() {
   $__fn = function($dictContravariant_0 = null, $x_1 = null, $f_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -127,21 +136,25 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Functor_Contravariant_coerce'] = function() { $v = (function() {
+})();
+
+// Data_Functor_Contravariant_coerce
+$GLOBALS['Data_Functor_Contravariant_coerce'] = (function() {
   $__fn = function($dictContravariant_0 = null, $dictFunctor_1 = null, $a_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($dictFunctor_1)['map'])(($GLOBALS['Data_Void_absurd'] ?? \PhpursThunks::eval('Data_Void_absurd'))))(((($dictContravariant_0)['cmap'])(($GLOBALS['Data_Void_absurd'] ?? \PhpursThunks::eval('Data_Void_absurd'))))($a_2));
+  $__res = ((($dictFunctor_1)['map'])($GLOBALS['Data_Void_absurd']))(((($dictContravariant_0)['cmap'])($GLOBALS['Data_Void_absurd']))($a_2));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Functor_Contravariant_imapC'] = function() { $v = (function() {
+})();
+
+// Data_Functor_Contravariant_imapC
+$GLOBALS['Data_Functor_Contravariant_imapC'] = (function() {
   $__fn = function($dictContravariant_0 = null, $v_1 = null, $f_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -153,12 +166,5 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
+})();
 

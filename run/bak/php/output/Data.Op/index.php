@@ -98,27 +98,36 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Op_Op'] = function() { $v = function($x_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Op_Op
+$GLOBALS['Data_Op_Op'] = function($x_0 = null) {
   $__num = \func_num_args();
   $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Op_semigroupoidOp'] = function() { $v = ["compose" => (function() {
+};
+
+// Data_Op_semigroupoidOp
+$GLOBALS['Data_Op_semigroupoidOp'] = ["compose" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($v1_1))($v_0);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($v1_1))($v_0);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Op_semigroupOp'] = function() { $v = function($dictSemigroup_0 = null) {
+})()];
+
+// Data_Op_semigroupOp
+$GLOBALS['Data_Op_semigroupOp'] = function($dictSemigroup_0 = null) {
   $__num = \func_num_args();
   $__res = ["append" => (function() use ($dictSemigroup_0) {
   $__fn = function($f_1 = null, $g_2 = null, $x_3 = null) use ($dictSemigroup_0, &$__fn) {
@@ -136,48 +145,47 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Op_newtypeOp'] = function() { $v = ["Coercible0" => function($dollar__unused_0 = null) {
+};
+
+// Data_Op_newtypeOp
+$GLOBALS['Data_Op_newtypeOp'] = ["Coercible0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'));
+  $__res = $GLOBALS['Prim_undefined'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Op_monoidOp'] = function() { $v = function($dictMonoid_0 = null) {
+}];
+
+// Data_Op_monoidOp
+$GLOBALS['Data_Op_monoidOp'] = function($dictMonoid_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Monoid_monoidFn'] ?? \PhpursThunks::eval('Data_Monoid_monoidFn')))($dictMonoid_0);
+  $__res = ($GLOBALS['Data_Monoid_monoidFn'])($dictMonoid_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Op_contravariantOp'] = function() { $v = ["cmap" => (function() {
+};
+
+// Data_Op_contravariantOp
+$GLOBALS['Data_Op_contravariantOp'] = ["cmap" => (function() {
   $__fn = function($f_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($v_1))($f_0);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($v_1))($f_0);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Op_categoryOp'] = function() { $v = ["identity" => (($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))['identity'], "Semigroupoid0" => function($dollar__unused_0 = null) {
+})()];
+
+// Data_Op_categoryOp
+$GLOBALS['Data_Op_categoryOp'] = ["identity" => ($GLOBALS['Control_Category_categoryFn'])['identity'], "Semigroupoid0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Op_semigroupoidOp'] ?? \PhpursThunks::eval('Data_Op_semigroupoidOp'));
+  $__res = $GLOBALS['Data_Op_semigroupoidOp'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
+}];
 

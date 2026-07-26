@@ -100,21 +100,30 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Decidable_lose'] = function() { $v = function($dict_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Decidable_lose
+$GLOBALS['Data_Decidable_lose'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['lose'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Decidable_lost'] = function() { $v = function($dictDecidable_0 = null) {
+};
+
+// Data_Decidable_lost
+$GLOBALS['Data_Decidable_lost'] = function($dictDecidable_0 = null) {
   $__num = \func_num_args();
-  $__res = (($dictDecidable_0)['lose'])((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))['identity']);
+  $__res = (($dictDecidable_0)['lose'])(($GLOBALS['Control_Category_categoryFn'])['identity']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Decidable_decidablePredicate'] = function() { $v = ["lose" => (function() {
+};
+
+// Data_Decidable_decidablePredicate
+$GLOBALS['Data_Decidable_decidablePredicate'] = ["lose" => (function() {
   $__fn = function($f_0 = null, $a_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -142,21 +151,23 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(), "Decide0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Decide_choosePredicate'] ?? \PhpursThunks::eval('Data_Decide_choosePredicate'));
+  $__res = $GLOBALS['Data_Decide_choosePredicate'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Divisible1" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Divisible_divisiblePredicate'] ?? \PhpursThunks::eval('Data_Divisible_divisiblePredicate'));
+  $__res = $GLOBALS['Data_Divisible_divisiblePredicate'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Decidable_decidableOp'] = function() { $v = function($dictMonoid_0 = null) {
+}];
+
+// Data_Decidable_decidableOp
+$GLOBALS['Data_Decidable_decidableOp'] = function($dictMonoid_0 = null) {
   $__num = \func_num_args();
-  $chooseOp_1_0 = (($GLOBALS['Data_Decide_chooseOp'] ?? \PhpursThunks::eval('Data_Decide_chooseOp')))((($dictMonoid_0)['Semigroup0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $divisibleOp_2_1 = (($GLOBALS['Data_Divisible_divisibleOp'] ?? \PhpursThunks::eval('Data_Divisible_divisibleOp')))($dictMonoid_0);
+  $chooseOp_1_0 = ($GLOBALS['Data_Decide_chooseOp'])((($dictMonoid_0)['Semigroup0'])($GLOBALS['Prim_undefined']));
+  $divisibleOp_2_1 = ($GLOBALS['Data_Divisible_divisibleOp'])($dictMonoid_0);
   $__res = ["lose" => (function() {
   $__fn = function($f_3 = null, $a_4 = null) use (&$__fn) {
   $__num = \func_num_args();
@@ -199,8 +210,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Decidable_decidableEquivalence'] = function() { $v = ["lose" => (function() {
+};
+
+// Data_Decidable_decidableEquivalence
+$GLOBALS['Data_Decidable_decidableEquivalence'] = ["lose" => (function() {
   $__fn = function($f_0 = null, $a_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -228,18 +241,20 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(), "Decide0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Decide_chooseEquivalence'] ?? \PhpursThunks::eval('Data_Decide_chooseEquivalence'));
+  $__res = $GLOBALS['Data_Decide_chooseEquivalence'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Divisible1" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Divisible_divisibleEquivalence'] ?? \PhpursThunks::eval('Data_Divisible_divisibleEquivalence'));
+  $__res = $GLOBALS['Data_Divisible_divisibleEquivalence'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Decidable_decidableComparison'] = function() { $v = ["lose" => (function() {
+}];
+
+// Data_Decidable_decidableComparison
+$GLOBALS['Data_Decidable_decidableComparison'] = ["lose" => (function() {
   $__fn = function($f_0 = null, $a_1 = null, $v_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -267,23 +282,15 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(), "Decide0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Decide_chooseComparison'] ?? \PhpursThunks::eval('Data_Decide_chooseComparison'));
+  $__res = $GLOBALS['Data_Decide_chooseComparison'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Divisible1" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Divisible_divisibleComparison'] ?? \PhpursThunks::eval('Data_Divisible_divisibleComparison'));
+  $__res = $GLOBALS['Data_Divisible_divisibleComparison'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
+}];
 

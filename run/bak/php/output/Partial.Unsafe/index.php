@@ -92,14 +92,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Partial_Unsafe_unsafePartial'] = function() { $v = ($GLOBALS['Partial_Unsafe__unsafePartial'] ?? \PhpursThunks::eval('Partial_Unsafe__unsafePartial')); return $v; };
-\PhpursThunks::$thunks['Partial_Unsafe_unsafeCrashWith'] = function() { $v = function($msg_0 = null) {
-  $__num = \func_num_args();
-  $__res = (($GLOBALS['Partial__crashWith'] ?? \PhpursThunks::eval('Partial__crashWith')))($msg_0);
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
+
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Partial_Unsafe = \call_user_func(function() {
   $exports = [];
@@ -109,8 +102,18 @@ $exports['_unsafePartial'] = $_unsafePartial;
 return $exports;
   return $exports;
 });
-\PhpursThunks::$thunks['Partial_Unsafe__unsafePartial'] = function() use (&$ffi_Partial_Unsafe) { return $ffi_Partial_Unsafe['_unsafePartial']; };
+$GLOBALS['Partial_Unsafe__unsafePartial'] = $ffi_Partial_Unsafe['_unsafePartial'] ?? new class { public function __invoke(...$args) { return $this; } };
 
 
+// Partial_Unsafe_unsafePartial
+$GLOBALS['Partial_Unsafe_unsafePartial'] = $GLOBALS['Partial_Unsafe__unsafePartial'];
 
+// Partial_Unsafe_unsafeCrashWith
+$GLOBALS['Partial_Unsafe_unsafeCrashWith'] = function($msg_0 = null) {
+  $__num = \func_num_args();
+  $__res = ($GLOBALS['Partial__crashWith'])($msg_0);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 

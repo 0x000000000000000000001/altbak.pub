@@ -95,20 +95,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Array_ST_Partial_poke'] = function() { $v = function($dollar__unused_0 = null) {
-  $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Monad_ST_Uncurried_runSTFn3'] ?? \PhpursThunks::eval('Control_Monad_ST_Uncurried_runSTFn3')))(($GLOBALS['Data_Array_ST_Partial_pokeImpl'] ?? \PhpursThunks::eval('Data_Array_ST_Partial_pokeImpl')));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_ST_Partial_peek'] = function() { $v = function($dollar__unused_0 = null) {
-  $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Monad_ST_Uncurried_runSTFn2'] ?? \PhpursThunks::eval('Control_Monad_ST_Uncurried_runSTFn2')))(($GLOBALS['Data_Array_ST_Partial_peekImpl'] ?? \PhpursThunks::eval('Data_Array_ST_Partial_peekImpl')));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
+
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Data_Array_ST_Partial = \call_user_func(function() {
   $exports = [];
@@ -140,9 +127,25 @@ $exports['pokeImpl'] = $pokeImpl;
 return $exports;
   return $exports;
 });
-\PhpursThunks::$thunks['Data_Array_ST_Partial_peekImpl'] = function() use (&$ffi_Data_Array_ST_Partial) { return $ffi_Data_Array_ST_Partial['peekImpl']; };
-\PhpursThunks::$thunks['Data_Array_ST_Partial_pokeImpl'] = function() use (&$ffi_Data_Array_ST_Partial) { return $ffi_Data_Array_ST_Partial['pokeImpl']; };
+$GLOBALS['Data_Array_ST_Partial_peekImpl'] = $ffi_Data_Array_ST_Partial['peekImpl'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Array_ST_Partial_pokeImpl'] = $ffi_Data_Array_ST_Partial['pokeImpl'] ?? new class { public function __invoke(...$args) { return $this; } };
 
 
+// Data_Array_ST_Partial_poke
+$GLOBALS['Data_Array_ST_Partial_poke'] = function($dollar__unused_0 = null) {
+  $__num = \func_num_args();
+  $__res = ($GLOBALS['Control_Monad_ST_Uncurried_runSTFn3'])($GLOBALS['Data_Array_ST_Partial_pokeImpl']);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 
+// Data_Array_ST_Partial_peek
+$GLOBALS['Data_Array_ST_Partial_peek'] = function($dollar__unused_0 = null) {
+  $__num = \func_num_args();
+  $__res = ($GLOBALS['Control_Monad_ST_Uncurried_runSTFn2'])($GLOBALS['Data_Array_ST_Partial_peekImpl']);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 

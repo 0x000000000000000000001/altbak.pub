@@ -95,111 +95,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Functor_map'] = function() { $v = function($dict_0 = null) {
-  $__num = \func_num_args();
-  $__res = ($dict_0)['map'];
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_mapFlipped'] = function() { $v = (function() {
-  $__fn = function($dictFunctor_0 = null, $fa_1 = null, $f_2 = null) use (&$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
-  $__res = ((($dictFunctor_0)['map'])($f_2))($fa_1);
-  goto __end;;
-  __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Functor_void'] = function() { $v = function($dictFunctor_0 = null) {
-  $__num = \func_num_args();
-  $__res = (($dictFunctor_0)['map'])(function($v_1 = null) {
-  $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_voidLeft'] = function() { $v = (function() {
-  $__fn = function($dictFunctor_0 = null, $f_1 = null, $x_2 = null) use (&$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
-  $__res = ((($dictFunctor_0)['map'])(function($v_3 = null) use ($x_2) {
-  $__num = \func_num_args();
-  $__res = $x_2;
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))($f_1);
-  goto __end;;
-  __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Functor_voidRight'] = function() { $v = (function() {
-  $__fn = function($dictFunctor_0 = null, $x_1 = null) use (&$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = (($dictFunctor_0)['map'])(function($v_2 = null) use ($x_1) {
-  $__num = \func_num_args();
-  $__res = $x_1;
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Functor_functorProxy'] = function() { $v = ["map" => (function() {
-  $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = new Phpurs_Data0("Proxy");
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Functor_functorFn'] = function() { $v = ["map" => ($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl'))]; return $v; };
-\PhpursThunks::$thunks['Data_Functor_functorArray'] = function() { $v = ["map" => ($GLOBALS['Data_Functor_arrayMap'] ?? \PhpursThunks::eval('Data_Functor_arrayMap'))]; return $v; };
-\PhpursThunks::$thunks['Data_Functor_flap'] = function() { $v = (function() {
-  $__fn = function($dictFunctor_0 = null, $ff_1 = null, $x_2 = null) use (&$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
-  $__res = ((($dictFunctor_0)['map'])(function($f_3 = null) use ($x_2) {
-  $__num = \func_num_args();
-  $__res = ($f_3)($x_2);
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))($ff_1);
-  goto __end;;
-  __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})(); return $v; };
+
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Data_Functor = \call_user_func(function() {
   $exports = [];
@@ -218,15 +114,129 @@ $exports['arrayMap'] = $arrayMap;
 return $exports;
   return $exports;
 });
-\PhpursThunks::$thunks['Data_Functor_arrayMap'] = function() use (&$ffi_Data_Functor) { return $ffi_Data_Functor['arrayMap']; };
+$GLOBALS['Data_Functor_arrayMap'] = $ffi_Data_Functor['arrayMap'] ?? new class { public function __invoke(...$args) { return $this; } };
 
 
+// Data_Functor_map
+$GLOBALS['Data_Functor_map'] = function($dict_0 = null) {
+  $__num = \func_num_args();
+  $__res = ($dict_0)['map'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 
+// Data_Functor_mapFlipped
+$GLOBALS['Data_Functor_mapFlipped'] = (function() {
+  $__fn = function($dictFunctor_0 = null, $fa_1 = null, $f_2 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 3) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  }
+  $__res = ((($dictFunctor_0)['map'])($f_2))($fa_1);
+  goto __end;;
+  __end:
+  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+  };
+  return $__fn;
+})();
 
+// Data_Functor_void
+$GLOBALS['Data_Functor_void'] = function($dictFunctor_0 = null) {
+  $__num = \func_num_args();
+  $__res = (($dictFunctor_0)['map'])(function($v_1 = null) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Data_Unit_unit'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 
+// Data_Functor_voidLeft
+$GLOBALS['Data_Functor_voidLeft'] = (function() {
+  $__fn = function($dictFunctor_0 = null, $f_1 = null, $x_2 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 3) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  }
+  $__res = ((($dictFunctor_0)['map'])(function($v_3 = null) use ($x_2) {
+  $__num = \func_num_args();
+  $__res = $x_2;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}))($f_1);
+  goto __end;;
+  __end:
+  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+  };
+  return $__fn;
+})();
 
+// Data_Functor_voidRight
+$GLOBALS['Data_Functor_voidRight'] = (function() {
+  $__fn = function($dictFunctor_0 = null, $x_1 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = (($dictFunctor_0)['map'])(function($v_2 = null) use ($x_1) {
+  $__num = \func_num_args();
+  $__res = $x_1;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
 
+// Data_Functor_functorProxy
+$GLOBALS['Data_Functor_functorProxy'] = ["map" => (function() {
+  $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = new Phpurs_Data0("Proxy");
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})()];
 
+// Data_Functor_functorFn
+$GLOBALS['Data_Functor_functorFn'] = ["map" => $GLOBALS['Control_Semigroupoid_composeImpl']];
 
+// Data_Functor_functorArray
+$GLOBALS['Data_Functor_functorArray'] = ["map" => $GLOBALS['Data_Functor_arrayMap']];
 
+// Data_Functor_flap
+$GLOBALS['Data_Functor_flap'] = (function() {
+  $__fn = function($dictFunctor_0 = null, $ff_1 = null, $x_2 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 3) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  }
+  $__res = ((($dictFunctor_0)['map'])(function($f_3 = null) use ($x_2) {
+  $__num = \func_num_args();
+  $__res = ($f_3)($x_2);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}))($ff_1);
+  goto __end;;
+  __end:
+  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+  };
+  return $__fn;
+})();
 

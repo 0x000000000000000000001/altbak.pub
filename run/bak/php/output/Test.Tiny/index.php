@@ -93,14 +93,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Test_Tiny_Circle'] = function() { $v = function($value0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Test_Tiny_Circle
+$GLOBALS['Test_Tiny_Circle'] = function($value0 = null) {
   $__num = \func_num_args();
   $__res = new Phpurs_Data1("Circle", $value0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Test_Tiny_Rect'] = function() { $v = (function() {
+};
+
+// Test_Tiny_Rect
+$GLOBALS['Test_Tiny_Rect'] = (function() {
   $__fn = function($value0 = null, $value1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -112,8 +119,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Test_Tiny_area'] = function() { $v = function($v_0 = null) {
+})();
+
+// Test_Tiny_area
+$GLOBALS['Test_Tiny_area'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object($v_0) && (($v_0)->{'tag'} === "Circle"))) {
@@ -131,10 +140,5 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
+};
 

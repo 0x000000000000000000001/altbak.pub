@@ -95,7 +95,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Eq_Generic_genericEqNoConstructors'] = function() { $v = ["genericEq__prime__" => (function() {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Eq_Generic_genericEqNoConstructors
+$GLOBALS['Data_Eq_Generic_genericEqNoConstructors'] = ["genericEq__prime__" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -107,8 +112,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Eq_Generic_genericEqNoArguments'] = function() { $v = ["genericEq__prime__" => (function() {
+})()];
+
+// Data_Eq_Generic_genericEqNoArguments
+$GLOBALS['Data_Eq_Generic_genericEqNoArguments'] = ["genericEq__prime__" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -120,8 +127,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Eq_Generic_genericEqArgument'] = function() { $v = function($dictEq_0 = null) {
+})()];
+
+// Data_Eq_Generic_genericEqArgument
+$GLOBALS['Data_Eq_Generic_genericEqArgument'] = function($dictEq_0 = null) {
   $__num = \func_num_args();
   $__res = ["genericEq__prime__" => (function() use ($dictEq_0) {
   $__fn = function($v_1 = null, $v1_2 = null) use ($dictEq_0, &$__fn) {
@@ -139,15 +148,19 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Eq_Generic_genericEq__prime__'] = function() { $v = function($dict_0 = null) {
+};
+
+// Data_Eq_Generic_genericEq'
+$GLOBALS['Data_Eq_Generic_genericEq__prime__'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['genericEq__prime__'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Eq_Generic_genericEqConstructor'] = function() { $v = function($dictGenericEq_0 = null) {
+};
+
+// Data_Eq_Generic_genericEqConstructor
+$GLOBALS['Data_Eq_Generic_genericEqConstructor'] = function($dictGenericEq_0 = null) {
   $__num = \func_num_args();
   $__res = ["genericEq__prime__" => (function() use ($dictGenericEq_0) {
   $__fn = function($v_1 = null, $v1_2 = null) use ($dictGenericEq_0, &$__fn) {
@@ -165,8 +178,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Eq_Generic_genericEqProduct'] = function() { $v = (function() {
+};
+
+// Data_Eq_Generic_genericEqProduct
+$GLOBALS['Data_Eq_Generic_genericEqProduct'] = (function() {
   $__fn = function($dictGenericEq_0 = null, $dictGenericEq1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -190,8 +205,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Eq_Generic_genericEqSum'] = function() { $v = (function() {
+})();
+
+// Data_Eq_Generic_genericEqSum
+$GLOBALS['Data_Eq_Generic_genericEqSum'] = (function() {
   $__fn = function($dictGenericEq_0 = null, $dictGenericEq1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -222,8 +239,10 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Eq_Generic_genericEq'] = function() { $v = (function() {
+})();
+
+// Data_Eq_Generic_genericEq
+$GLOBALS['Data_Eq_Generic_genericEq'] = (function() {
   $__fn = function($dictGeneric_0 = null, $dictGenericEq_1 = null, $x_2 = null, $y_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
@@ -235,15 +254,5 @@ goto end_branch_0;;
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
+})();
 

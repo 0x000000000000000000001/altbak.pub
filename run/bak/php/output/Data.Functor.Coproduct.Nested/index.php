@@ -96,71 +96,96 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Functor_Coproduct_Nested_in9'] = function() { $v = function($v_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Functor_Coproduct_Nested_in9
+$GLOBALS['Data_Functor_Coproduct_Nested_in9'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__res = new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Left", $v_0)))))))));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Coproduct_Nested_in8'] = function() { $v = function($v_0 = null) {
+};
+
+// Data_Functor_Coproduct_Nested_in8
+$GLOBALS['Data_Functor_Coproduct_Nested_in8'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__res = new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Left", $v_0))))))));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Coproduct_Nested_in7'] = function() { $v = function($v_0 = null) {
+};
+
+// Data_Functor_Coproduct_Nested_in7
+$GLOBALS['Data_Functor_Coproduct_Nested_in7'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__res = new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Left", $v_0)))))));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Coproduct_Nested_in6'] = function() { $v = function($v_0 = null) {
+};
+
+// Data_Functor_Coproduct_Nested_in6
+$GLOBALS['Data_Functor_Coproduct_Nested_in6'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__res = new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Left", $v_0))))));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Coproduct_Nested_in5'] = function() { $v = function($v_0 = null) {
+};
+
+// Data_Functor_Coproduct_Nested_in5
+$GLOBALS['Data_Functor_Coproduct_Nested_in5'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__res = new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Left", $v_0)))));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Coproduct_Nested_in4'] = function() { $v = function($v_0 = null) {
+};
+
+// Data_Functor_Coproduct_Nested_in4
+$GLOBALS['Data_Functor_Coproduct_Nested_in4'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__res = new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Left", $v_0))));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Coproduct_Nested_in3'] = function() { $v = function($v_0 = null) {
+};
+
+// Data_Functor_Coproduct_Nested_in3
+$GLOBALS['Data_Functor_Coproduct_Nested_in3'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__res = new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Left", $v_0)));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Coproduct_Nested_in2'] = function() { $v = function($v_0 = null) {
+};
+
+// Data_Functor_Coproduct_Nested_in2
+$GLOBALS['Data_Functor_Coproduct_Nested_in2'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__res = new Phpurs_Data1("Right", new Phpurs_Data1("Left", $v_0));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Coproduct_Nested_in10'] = function() { $v = function($v_0 = null) {
+};
+
+// Data_Functor_Coproduct_Nested_in10
+$GLOBALS['Data_Functor_Coproduct_Nested_in10'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__res = new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Left", $v_0))))))))));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Coproduct_Nested_in1'] = function() { $v = ($GLOBALS['Data_Functor_Coproduct_left'] ?? \PhpursThunks::eval('Data_Functor_Coproduct_left')); return $v; };
-\PhpursThunks::$thunks['Data_Functor_Coproduct_Nested_coproduct9'] = function() { $v = (function() {
+};
+
+// Data_Functor_Coproduct_Nested_in1
+$GLOBALS['Data_Functor_Coproduct_Nested_in1'] = $GLOBALS['Data_Functor_Coproduct_left'];
+
+// Data_Functor_Coproduct_Nested_coproduct9
+$GLOBALS['Data_Functor_Coproduct_Nested_coproduct9'] = (function() {
   $__fn = function($a_0 = null, $b_1 = null, $c_2 = null, $d_3 = null, $e_4 = null, $f_5 = null, $g_6 = null, $h_7 = null, $i_8 = null, $y_9 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 10) {
@@ -294,8 +319,10 @@ goto end_branch_0;;
   return $__num > 10 ? $__res(...\array_slice(\func_get_args(), 10)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Functor_Coproduct_Nested_coproduct8'] = function() { $v = (function() {
+})();
+
+// Data_Functor_Coproduct_Nested_coproduct8
+$GLOBALS['Data_Functor_Coproduct_Nested_coproduct8'] = (function() {
   $__fn = function($a_0 = null, $b_1 = null, $c_2 = null, $d_3 = null, $e_4 = null, $f_5 = null, $g_6 = null, $h_7 = null, $y_8 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 9) {
@@ -417,8 +444,10 @@ goto end_branch_0;;
   return $__num > 9 ? $__res(...\array_slice(\func_get_args(), 9)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Functor_Coproduct_Nested_coproduct7'] = function() { $v = (function() {
+})();
+
+// Data_Functor_Coproduct_Nested_coproduct7
+$GLOBALS['Data_Functor_Coproduct_Nested_coproduct7'] = (function() {
   $__fn = function($a_0 = null, $b_1 = null, $c_2 = null, $d_3 = null, $e_4 = null, $f_5 = null, $g_6 = null, $y_7 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 8) {
@@ -528,8 +557,10 @@ goto end_branch_0;;
   return $__num > 8 ? $__res(...\array_slice(\func_get_args(), 8)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Functor_Coproduct_Nested_coproduct6'] = function() { $v = (function() {
+})();
+
+// Data_Functor_Coproduct_Nested_coproduct6
+$GLOBALS['Data_Functor_Coproduct_Nested_coproduct6'] = (function() {
   $__fn = function($a_0 = null, $b_1 = null, $c_2 = null, $d_3 = null, $e_4 = null, $f_5 = null, $y_6 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 7) {
@@ -627,8 +658,10 @@ goto end_branch_0;;
   return $__num > 7 ? $__res(...\array_slice(\func_get_args(), 7)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Functor_Coproduct_Nested_coproduct5'] = function() { $v = (function() {
+})();
+
+// Data_Functor_Coproduct_Nested_coproduct5
+$GLOBALS['Data_Functor_Coproduct_Nested_coproduct5'] = (function() {
   $__fn = function($a_0 = null, $b_1 = null, $c_2 = null, $d_3 = null, $e_4 = null, $y_5 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 6) {
@@ -714,8 +747,10 @@ goto end_branch_0;;
   return $__num > 6 ? $__res(...\array_slice(\func_get_args(), 6)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Functor_Coproduct_Nested_coproduct4'] = function() { $v = (function() {
+})();
+
+// Data_Functor_Coproduct_Nested_coproduct4
+$GLOBALS['Data_Functor_Coproduct_Nested_coproduct4'] = (function() {
   $__fn = function($a_0 = null, $b_1 = null, $c_2 = null, $d_3 = null, $y_4 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 5) {
@@ -789,8 +824,10 @@ goto end_branch_0;;
   return $__num > 5 ? $__res(...\array_slice(\func_get_args(), 5)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Functor_Coproduct_Nested_coproduct3'] = function() { $v = (function() {
+})();
+
+// Data_Functor_Coproduct_Nested_coproduct3
+$GLOBALS['Data_Functor_Coproduct_Nested_coproduct3'] = (function() {
   $__fn = function($a_0 = null, $b_1 = null, $c_2 = null, $y_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
@@ -852,8 +889,10 @@ goto end_branch_0;;
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Functor_Coproduct_Nested_coproduct2'] = function() { $v = (function() {
+})();
+
+// Data_Functor_Coproduct_Nested_coproduct2
+$GLOBALS['Data_Functor_Coproduct_Nested_coproduct2'] = (function() {
   $__fn = function($a_0 = null, $b_1 = null, $y_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -903,8 +942,10 @@ goto end_branch_0;;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Functor_Coproduct_Nested_coproduct10'] = function() { $v = (function() {
+})();
+
+// Data_Functor_Coproduct_Nested_coproduct10
+$GLOBALS['Data_Functor_Coproduct_Nested_coproduct10'] = (function() {
   $__fn = function($a_0 = null, $b_1 = null, $c_2 = null, $d_3 = null, $e_4 = null, $f_5 = null, $g_6 = null, $h_7 = null, $i_8 = null, $j_9 = null, $y_10 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 11) {
@@ -1050,8 +1091,10 @@ goto end_branch_0;;
   return $__num > 11 ? $__res(...\array_slice(\func_get_args(), 11)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Functor_Coproduct_Nested_coproduct1'] = function() { $v = function($y_0 = null) {
+})();
+
+// Data_Functor_Coproduct_Nested_coproduct1
+$GLOBALS['Data_Functor_Coproduct_Nested_coproduct1'] = function($y_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object($y_0) && (($y_0)->{'tag'} === "Left"))) {
@@ -1083,8 +1126,10 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Coproduct_Nested_at9'] = function() { $v = (function() {
+};
+
+// Data_Functor_Coproduct_Nested_at9
+$GLOBALS['Data_Functor_Coproduct_Nested_at9'] = (function() {
   $__fn = function($b_0 = null, $f_1 = null, $y_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -1103,8 +1148,10 @@ goto end_branch_0;;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Functor_Coproduct_Nested_at8'] = function() { $v = (function() {
+})();
+
+// Data_Functor_Coproduct_Nested_at8
+$GLOBALS['Data_Functor_Coproduct_Nested_at8'] = (function() {
   $__fn = function($b_0 = null, $f_1 = null, $y_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -1123,8 +1170,10 @@ goto end_branch_0;;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Functor_Coproduct_Nested_at7'] = function() { $v = (function() {
+})();
+
+// Data_Functor_Coproduct_Nested_at7
+$GLOBALS['Data_Functor_Coproduct_Nested_at7'] = (function() {
   $__fn = function($b_0 = null, $f_1 = null, $y_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -1143,8 +1192,10 @@ goto end_branch_0;;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Functor_Coproduct_Nested_at6'] = function() { $v = (function() {
+})();
+
+// Data_Functor_Coproduct_Nested_at6
+$GLOBALS['Data_Functor_Coproduct_Nested_at6'] = (function() {
   $__fn = function($b_0 = null, $f_1 = null, $y_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -1163,8 +1214,10 @@ goto end_branch_0;;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Functor_Coproduct_Nested_at5'] = function() { $v = (function() {
+})();
+
+// Data_Functor_Coproduct_Nested_at5
+$GLOBALS['Data_Functor_Coproduct_Nested_at5'] = (function() {
   $__fn = function($b_0 = null, $f_1 = null, $y_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -1183,8 +1236,10 @@ goto end_branch_0;;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Functor_Coproduct_Nested_at4'] = function() { $v = (function() {
+})();
+
+// Data_Functor_Coproduct_Nested_at4
+$GLOBALS['Data_Functor_Coproduct_Nested_at4'] = (function() {
   $__fn = function($b_0 = null, $f_1 = null, $y_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -1203,8 +1258,10 @@ goto end_branch_0;;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Functor_Coproduct_Nested_at3'] = function() { $v = (function() {
+})();
+
+// Data_Functor_Coproduct_Nested_at3
+$GLOBALS['Data_Functor_Coproduct_Nested_at3'] = (function() {
   $__fn = function($b_0 = null, $f_1 = null, $y_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -1223,8 +1280,10 @@ goto end_branch_0;;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Functor_Coproduct_Nested_at2'] = function() { $v = (function() {
+})();
+
+// Data_Functor_Coproduct_Nested_at2
+$GLOBALS['Data_Functor_Coproduct_Nested_at2'] = (function() {
   $__fn = function($b_0 = null, $f_1 = null, $y_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -1243,8 +1302,10 @@ goto end_branch_0;;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Functor_Coproduct_Nested_at10'] = function() { $v = (function() {
+})();
+
+// Data_Functor_Coproduct_Nested_at10
+$GLOBALS['Data_Functor_Coproduct_Nested_at10'] = (function() {
   $__fn = function($b_0 = null, $f_1 = null, $y_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -1263,8 +1324,10 @@ goto end_branch_0;;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Functor_Coproduct_Nested_at1'] = function() { $v = (function() {
+})();
+
+// Data_Functor_Coproduct_Nested_at1
+$GLOBALS['Data_Functor_Coproduct_Nested_at1'] = (function() {
   $__fn = function($b_0 = null, $f_1 = null, $y_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -1283,37 +1346,5 @@ goto end_branch_0;;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+})();
 

@@ -94,22 +94,25 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Effect_Class_monadEffectEffect'] = function() { $v = ["liftEffect" => (($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))['identity'], "Monad0" => function($dollar__unused_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Effect_Class_monadEffectEffect
+$GLOBALS['Effect_Class_monadEffectEffect'] = ["liftEffect" => ($GLOBALS['Control_Category_categoryFn'])['identity'], "Monad0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_monadEffect'] ?? \PhpursThunks::eval('Effect_monadEffect'));
+  $__res = $GLOBALS['Effect_monadEffect'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Effect_Class_liftEffect'] = function() { $v = function($dict_0 = null) {
+}];
+
+// Effect_Class_liftEffect
+$GLOBALS['Effect_Class_liftEffect'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['liftEffect'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
+};
 

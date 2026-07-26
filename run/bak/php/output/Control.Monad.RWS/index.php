@@ -102,8 +102,15 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Control_Monad_RWS_withRWS'] = function() { $v = ($GLOBALS['Control_Monad_RWS_Trans_withRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_withRWST')); return $v; };
-\PhpursThunks::$thunks['Control_Monad_RWS_rws'] = function() { $v = (function() {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Control_Monad_RWS_withRWS
+$GLOBALS['Control_Monad_RWS_withRWS'] = $GLOBALS['Control_Monad_RWS_Trans_withRWST'];
+
+// Control_Monad_RWS_rws
+$GLOBALS['Control_Monad_RWS_rws'] = (function() {
   $__fn = function($f_0 = null, $r_1 = null, $s_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -115,8 +122,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Control_Monad_RWS_runRWS'] = function() { $v = (function() {
+})();
+
+// Control_Monad_RWS_runRWS
+$GLOBALS['Control_Monad_RWS_runRWS'] = (function() {
   $__fn = function($m_0 = null, $r_1 = null, $s_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -128,10 +137,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Control_Monad_RWS_mapRWS'] = function() { $v = function($f_0 = null) {
+})();
+
+// Control_Monad_RWS_mapRWS
+$GLOBALS['Control_Monad_RWS_mapRWS'] = function($f_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Identity_Identity'] ?? \PhpursThunks::eval('Data_Identity_Identity'))))($f_0)))(($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')));
+  $__local_var_1_0 = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Identity_Identity']))($f_0)))($GLOBALS['Unsafe_Coerce_unsafeCoerce']);
   $__res = (function() use ($__local_var_1_0) {
   $__fn = function($v_2 = null, $r_3 = null, $s_4 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -148,39 +159,35 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_RWS_execRWS'] = function() { $v = (function() {
+};
+
+// Control_Monad_RWS_execRWS
+$GLOBALS['Control_Monad_RWS_execRWS'] = (function() {
   $__fn = function($m_0 = null, $r_1 = null, $s_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((((($GLOBALS['Control_Monad_RWS_Trans_execRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_execRWST')))(($GLOBALS['Data_Identity_monadIdentity'] ?? \PhpursThunks::eval('Data_Identity_monadIdentity'))))($m_0))($r_1))($s_2);
+  $__res = (((($GLOBALS['Control_Monad_RWS_Trans_execRWST'])($GLOBALS['Data_Identity_monadIdentity']))($m_0))($r_1))($s_2);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Control_Monad_RWS_evalRWS'] = function() { $v = (function() {
+})();
+
+// Control_Monad_RWS_evalRWS
+$GLOBALS['Control_Monad_RWS_evalRWS'] = (function() {
   $__fn = function($m_0 = null, $r_1 = null, $s_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((((($GLOBALS['Control_Monad_RWS_Trans_evalRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_evalRWST')))(($GLOBALS['Data_Identity_monadIdentity'] ?? \PhpursThunks::eval('Data_Identity_monadIdentity'))))($m_0))($r_1))($s_2);
+  $__res = (((($GLOBALS['Control_Monad_RWS_Trans_evalRWST'])($GLOBALS['Data_Identity_monadIdentity']))($m_0))($r_1))($s_2);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
+})();
 

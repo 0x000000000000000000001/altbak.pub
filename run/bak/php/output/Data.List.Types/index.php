@@ -128,8 +128,15 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_List_Types_Nil'] = function() { $v = ($GLOBALS['__phpurs_data0_Nil'] ??= new Phpurs_Data0("Nil")); return $v; };
-\PhpursThunks::$thunks['Data_List_Types_Cons'] = function() { $v = (function() {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_List_Types_Nil
+$GLOBALS['Data_List_Types_Nil'] = ($GLOBALS['__phpurs_data0_Nil'] ??= new Phpurs_Data0("Nil"));
+
+// Data_List_Types_Cons
+$GLOBALS['Data_List_Types_Cons'] = (function() {
   $__fn = function($value0 = null, $value1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -141,29 +148,37 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_List_Types_NonEmptyList'] = function() { $v = function($x_0 = null) {
+})();
+
+// Data_List_Types_NonEmptyList
+$GLOBALS['Data_List_Types_NonEmptyList'] = function($x_0 = null) {
   $__num = \func_num_args();
   $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_List_Types_toList'] = function() { $v = function($v_0 = null) {
+};
+
+// Data_List_Types_toList
+$GLOBALS['Data_List_Types_toList'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__res = new Phpurs_Data2("Cons", ($v_0)->{'value0'}, ($v_0)->{'value1'});
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_List_Types_newtypeNonEmptyList'] = function() { $v = ["Coercible0" => function($dollar__unused_0 = null) {
+};
+
+// Data_List_Types_newtypeNonEmptyList
+$GLOBALS['Data_List_Types_newtypeNonEmptyList'] = ["Coercible0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'));
+  $__res = $GLOBALS['Prim_undefined'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_List_Types_nelCons'] = function() { $v = (function() {
+}];
+
+// Data_List_Types_nelCons
+$GLOBALS['Data_List_Types_nelCons'] = (function() {
   $__fn = function($a_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -175,8 +190,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_List_Types_listMap'] = function() { $v = function($f_0 = null) {
+})();
+
+// Data_List_Types_listMap
+$GLOBALS['Data_List_Types_listMap'] = function($f_0 = null) {
   $__num = \func_num_args();
   $chunkedRevMap_1_0 = null;
   $chunkedRevMap_1_0 = (function() use (&$chunkedRevMap_1_0, $f_0) {
@@ -269,22 +286,28 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_List_Types_functorList'] = function() { $v = ["map" => ($GLOBALS['Data_List_Types_listMap'] ?? \PhpursThunks::eval('Data_List_Types_listMap'))]; return $v; };
-\PhpursThunks::$thunks['Data_List_Types_functorNonEmptyList'] = function() { $v = ["map" => (function() {
+};
+
+// Data_List_Types_functorList
+$GLOBALS['Data_List_Types_functorList'] = ["map" => $GLOBALS['Data_List_Types_listMap']];
+
+// Data_List_Types_functorNonEmptyList
+$GLOBALS['Data_List_Types_functorNonEmptyList'] = ["map" => (function() {
   $__fn = function($f_0 = null, $m_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("NonEmpty", ($f_0)(($m_1)->{'value0'}), ((($GLOBALS['Data_List_Types_listMap'] ?? \PhpursThunks::eval('Data_List_Types_listMap')))($f_0))(($m_1)->{'value1'}));
+  $__res = new Phpurs_Data2("NonEmpty", ($f_0)(($m_1)->{'value0'}), (($GLOBALS['Data_List_Types_listMap'])($f_0))(($m_1)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_List_Types_foldableList'] = function() { $v = ["foldr" => (function() {
+})()];
+
+// Data_List_Types_foldableList
+$GLOBALS['Data_List_Types_foldableList'] = ["foldr" => (function() {
   $__fn = function($f_0 = null, $b_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -326,7 +349,7 @@ goto end_branch_0;;
   };
   return $__fn;
 })();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((((($GLOBALS['Data_List_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Types_foldableList')))['foldl'])((function() use ($f_0) {
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(((($GLOBALS['Data_List_Types_foldableList'])['foldl'])((function() use ($f_0) {
   $__fn = function($b_2 = null, $a_3 = null) use ($f_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -391,9 +414,9 @@ goto end_branch_1;;
   $mempty_1_2 = ($dictMonoid_0)['mempty'];
   $__res = function($f_2 = null) use ($dictMonoid_0, $mempty_1_2) {
   $__num = \func_num_args();
-  $__res = (((($GLOBALS['Data_List_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Types_foldableList')))['foldl'])(function($acc_3 = null) use ($dictMonoid_0, $f_2) {
+  $__res = ((($GLOBALS['Data_List_Types_foldableList'])['foldl'])(function($acc_3 = null) use ($dictMonoid_0, $f_2) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((((($dictMonoid_0)['Semigroup0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['append'])($acc_3)))($f_2);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((((($dictMonoid_0)['Semigroup0'])($GLOBALS['Prim_undefined']))['append'])($acc_3)))($f_2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -405,10 +428,16 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_List_Types_intercalate'] = function() { $v = ((($GLOBALS['Data_Foldable_intercalate'] ?? \PhpursThunks::eval('Data_Foldable_intercalate')))(($GLOBALS['Data_List_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Types_foldableList'))))(($GLOBALS['Data_Monoid_monoidString'] ?? \PhpursThunks::eval('Data_Monoid_monoidString'))); return $v; };
-\PhpursThunks::$thunks['Data_List_Types_foldableNonEmptyList'] = function() { $v = (($GLOBALS['Data_NonEmpty_foldableNonEmpty'] ?? \PhpursThunks::eval('Data_NonEmpty_foldableNonEmpty')))(($GLOBALS['Data_List_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Types_foldableList'))); return $v; };
-\PhpursThunks::$thunks['Data_List_Types_foldableWithIndexList'] = function() { $v = ["foldrWithIndex" => (function() {
+}];
+
+// Data_List_Types_intercalate
+$GLOBALS['Data_List_Types_intercalate'] = (($GLOBALS['Data_Foldable_intercalate'])($GLOBALS['Data_List_Types_foldableList']))($GLOBALS['Data_Monoid_monoidString']);
+
+// Data_List_Types_foldableNonEmptyList
+$GLOBALS['Data_List_Types_foldableNonEmptyList'] = ($GLOBALS['Data_NonEmpty_foldableNonEmpty'])($GLOBALS['Data_List_Types_foldableList']);
+
+// Data_List_Types_foldableWithIndexList
+$GLOBALS['Data_List_Types_foldableWithIndexList'] = ["foldrWithIndex" => (function() {
   $__fn = function($f_0 = null, $b_1 = null, $xs_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -535,7 +564,7 @@ goto end_branch_3;;
   };
   return $__fn;
 })();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Tuple_snd'] ?? \PhpursThunks::eval('Data_Tuple_snd'))))(($go_2_3)(new Phpurs_Data2("Tuple", 0, $acc_1)));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Tuple_snd']))(($go_2_3)(new Phpurs_Data2("Tuple", 0, $acc_1)));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -546,13 +575,13 @@ goto end_branch_3;;
   $mempty_1_4 = ($dictMonoid_0)['mempty'];
   $__res = function($f_2 = null) use ($dictMonoid_0, $mempty_1_4) {
   $__num = \func_num_args();
-  $__res = (((($GLOBALS['Data_List_Types_foldableWithIndexList'] ?? \PhpursThunks::eval('Data_List_Types_foldableWithIndexList')))['foldlWithIndex'])((function() use ($dictMonoid_0, $f_2) {
+  $__res = ((($GLOBALS['Data_List_Types_foldableWithIndexList'])['foldlWithIndex'])((function() use ($dictMonoid_0, $f_2) {
   $__fn = function($i_3 = null, $acc_4 = null) use ($dictMonoid_0, $f_2, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((((($dictMonoid_0)['Semigroup0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['append'])($acc_4)))(($f_2)($i_3));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((((($dictMonoid_0)['Semigroup0'])($GLOBALS['Prim_undefined']))['append'])($acc_4)))(($f_2)($i_3));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -568,22 +597,26 @@ goto end_branch_3;;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Foldable0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_List_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Types_foldableList'));
+  $__res = $GLOBALS['Data_List_Types_foldableList'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_List_Types_foldableWithIndexNonEmpty'] = function() { $v = (($GLOBALS['Data_NonEmpty_foldableWithIndexNonEmpty'] ?? \PhpursThunks::eval('Data_NonEmpty_foldableWithIndexNonEmpty')))(($GLOBALS['Data_List_Types_foldableWithIndexList'] ?? \PhpursThunks::eval('Data_List_Types_foldableWithIndexList'))); return $v; };
-\PhpursThunks::$thunks['Data_List_Types_foldableWithIndexNonEmptyList'] = function() { $v = ["foldMapWithIndex" => function($dictMonoid_0 = null) {
+}];
+
+// Data_List_Types_foldableWithIndexNonEmpty
+$GLOBALS['Data_List_Types_foldableWithIndexNonEmpty'] = ($GLOBALS['Data_NonEmpty_foldableWithIndexNonEmpty'])($GLOBALS['Data_List_Types_foldableWithIndexList']);
+
+// Data_List_Types_foldableWithIndexNonEmptyList
+$GLOBALS['Data_List_Types_foldableWithIndexNonEmptyList'] = ["foldMapWithIndex" => function($dictMonoid_0 = null) {
   $__num = \func_num_args();
-  $foldMapWithIndex1_1_0 = ((($GLOBALS['Data_List_Types_foldableWithIndexNonEmpty'] ?? \PhpursThunks::eval('Data_List_Types_foldableWithIndexNonEmpty')))['foldMapWithIndex'])($dictMonoid_0);
+  $foldMapWithIndex1_1_0 = (($GLOBALS['Data_List_Types_foldableWithIndexNonEmpty'])['foldMapWithIndex'])($dictMonoid_0);
   $__res = (function() use ($foldMapWithIndex1_1_0) {
   $__fn = function($f_2 = null, $v_3 = null) use ($foldMapWithIndex1_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($foldMapWithIndex1_1_0)(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($f_2))(function($v2_4 = null) {
+  $__res = (($foldMapWithIndex1_1_0)((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_2))(function($v2_4 = null) {
   $__num = \func_num_args();
   $__t1 = null;;
   if ((is_object($v2_4) && (($v2_4)->{'tag'} === "Nothing"))) {
@@ -617,7 +650,7 @@ goto end_branch_1;;
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((((($GLOBALS['Data_List_Types_foldableWithIndexNonEmpty'] ?? \PhpursThunks::eval('Data_List_Types_foldableWithIndexNonEmpty')))['foldlWithIndex'])(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($f_0))(function($v2_3 = null) {
+  $__res = (((($GLOBALS['Data_List_Types_foldableWithIndexNonEmpty'])['foldlWithIndex'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_0))(function($v2_3 = null) {
   $__num = \func_num_args();
   $__t2 = null;;
   if ((is_object($v2_3) && (($v2_3)->{'tag'} === "Nothing"))) {
@@ -647,7 +680,7 @@ goto end_branch_2;;
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((((($GLOBALS['Data_List_Types_foldableWithIndexNonEmpty'] ?? \PhpursThunks::eval('Data_List_Types_foldableWithIndexNonEmpty')))['foldrWithIndex'])(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($f_0))(function($v2_3 = null) {
+  $__res = (((($GLOBALS['Data_List_Types_foldableWithIndexNonEmpty'])['foldrWithIndex'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_0))(function($v2_3 = null) {
   $__num = \func_num_args();
   $__t3 = null;;
   if ((is_object($v2_3) && (($v2_3)->{'tag'} === "Nothing"))) {
@@ -673,14 +706,16 @@ goto end_branch_3;;
   return $__fn;
 })(), "Foldable0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_List_Types_foldableNonEmptyList'] ?? \PhpursThunks::eval('Data_List_Types_foldableNonEmptyList'));
+  $__res = $GLOBALS['Data_List_Types_foldableNonEmptyList'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_List_Types_functorWithIndexList'] = function() { $v = ["mapWithIndex" => function($f_0 = null) {
+}];
+
+// Data_List_Types_functorWithIndexList
+$GLOBALS['Data_List_Types_functorWithIndexList'] = ["mapWithIndex" => function($f_0 = null) {
   $__num = \func_num_args();
-  $__res = (((($GLOBALS['Data_List_Types_foldableWithIndexList'] ?? \PhpursThunks::eval('Data_List_Types_foldableWithIndexList')))['foldrWithIndex'])((function() use ($f_0) {
+  $__res = ((($GLOBALS['Data_List_Types_foldableWithIndexList'])['foldrWithIndex'])((function() use ($f_0) {
   $__fn = function($i_1 = null, $x_2 = null, $acc_3 = null) use ($f_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -698,19 +733,23 @@ goto end_branch_3;;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Functor0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_List_Types_functorList'] ?? \PhpursThunks::eval('Data_List_Types_functorList'));
+  $__res = $GLOBALS['Data_List_Types_functorList'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_List_Types_mapWithIndex'] = function() { $v = ((($GLOBALS['Data_NonEmpty_functorWithIndex'] ?? \PhpursThunks::eval('Data_NonEmpty_functorWithIndex')))(($GLOBALS['Data_List_Types_functorWithIndexList'] ?? \PhpursThunks::eval('Data_List_Types_functorWithIndexList'))))['mapWithIndex']; return $v; };
-\PhpursThunks::$thunks['Data_List_Types_functorWithIndexNonEmptyList'] = function() { $v = ["mapWithIndex" => (function() {
+}];
+
+// Data_List_Types_mapWithIndex
+$GLOBALS['Data_List_Types_mapWithIndex'] = (($GLOBALS['Data_NonEmpty_functorWithIndex'])($GLOBALS['Data_List_Types_functorWithIndexList']))['mapWithIndex'];
+
+// Data_List_Types_functorWithIndexNonEmptyList
+$GLOBALS['Data_List_Types_functorWithIndexNonEmptyList'] = ["mapWithIndex" => (function() {
   $__fn = function($fn_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_List_Types_mapWithIndex'] ?? \PhpursThunks::eval('Data_List_Types_mapWithIndex')))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($fn_0))(function($v2_2 = null) {
+  $__res = (($GLOBALS['Data_List_Types_mapWithIndex'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($fn_0))(function($v2_2 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object($v2_2) && (($v2_2)->{'tag'} === "Nothing"))) {
@@ -736,45 +775,53 @@ goto end_branch_0;;
   return $__fn;
 })(), "Functor0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_List_Types_functorNonEmptyList'] ?? \PhpursThunks::eval('Data_List_Types_functorNonEmptyList'));
+  $__res = $GLOBALS['Data_List_Types_functorNonEmptyList'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_List_Types_semigroupList'] = function() { $v = ["append" => (function() {
+}];
+
+// Data_List_Types_semigroupList
+$GLOBALS['Data_List_Types_semigroupList'] = ["append" => (function() {
   $__fn = function($xs_0 = null, $ys_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((($GLOBALS['Data_List_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Types_foldableList')))['foldr'])(($GLOBALS['Data_List_Types_Cons'] ?? \PhpursThunks::eval('Data_List_Types_Cons'))))($ys_1))($xs_0);
+  $__res = (((($GLOBALS['Data_List_Types_foldableList'])['foldr'])($GLOBALS['Data_List_Types_Cons']))($ys_1))($xs_0);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_List_Types_monoidList'] = function() { $v = ["mempty" => new Phpurs_Data0("Nil"), "Semigroup0" => function($dollar__unused_0 = null) {
+})()];
+
+// Data_List_Types_monoidList
+$GLOBALS['Data_List_Types_monoidList'] = ["mempty" => new Phpurs_Data0("Nil"), "Semigroup0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_List_Types_semigroupList'] ?? \PhpursThunks::eval('Data_List_Types_semigroupList'));
+  $__res = $GLOBALS['Data_List_Types_semigroupList'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_List_Types_semigroupNonEmptyList'] = function() { $v = ["append" => (function() {
+}];
+
+// Data_List_Types_semigroupNonEmptyList
+$GLOBALS['Data_List_Types_semigroupNonEmptyList'] = ["append" => (function() {
   $__fn = function($v_0 = null, $as__prime___1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("NonEmpty", ($v_0)->{'value0'}, ((((($GLOBALS['Data_List_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Types_foldableList')))['foldr'])(($GLOBALS['Data_List_Types_Cons'] ?? \PhpursThunks::eval('Data_List_Types_Cons'))))(new Phpurs_Data2("Cons", ($as__prime___1)->{'value0'}, ($as__prime___1)->{'value1'})))(($v_0)->{'value1'}));
+  $__res = new Phpurs_Data2("NonEmpty", ($v_0)->{'value0'}, (((($GLOBALS['Data_List_Types_foldableList'])['foldr'])($GLOBALS['Data_List_Types_Cons']))(new Phpurs_Data2("Cons", ($as__prime___1)->{'value0'}, ($as__prime___1)->{'value1'})))(($v_0)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_List_Types_showList'] = function() { $v = function($dictShow_0 = null) {
+})()];
+
+// Data_List_Types_showList
+$GLOBALS['Data_List_Types_showList'] = function($dictShow_0 = null) {
   $__num = \func_num_args();
   $show_1_0 = ($dictShow_0)['show'];
   $__res = ["show" => function($v_2 = null) use ($show_1_0) {
@@ -784,7 +831,7 @@ goto end_branch_0;;
 $__t1 = "Nil";
 goto end_branch_1;;
 };
-  $__t1 = (("(" . ((($GLOBALS['Data_List_Types_intercalate'] ?? \PhpursThunks::eval('Data_List_Types_intercalate')))(" : "))(((($GLOBALS['Data_List_Types_listMap'] ?? \PhpursThunks::eval('Data_List_Types_listMap')))($show_1_0))($v_2))) . " : Nil)");
+  $__t1 = (("(" . (($GLOBALS['Data_List_Types_intercalate'])(" : "))((($GLOBALS['Data_List_Types_listMap'])($show_1_0))($v_2))) . " : Nil)");
   end_branch_1:;
   $__res = $__t1;
   goto __end;;
@@ -794,10 +841,12 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_List_Types_showNonEmptyList'] = function() { $v = function($dictShow_0 = null) {
+};
+
+// Data_List_Types_showNonEmptyList
+$GLOBALS['Data_List_Types_showNonEmptyList'] = function($dictShow_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($GLOBALS['Data_List_Types_showList'] ?? \PhpursThunks::eval('Data_List_Types_showList')))($dictShow_0);
+  $__local_var_1_0 = ($GLOBALS['Data_List_Types_showList'])($dictShow_0);
   $__res = ["show" => function($v_2 = null) use ($__local_var_1_0, $dictShow_0) {
   $__num = \func_num_args();
   $__res = (((("(NonEmptyList (NonEmpty " . (($dictShow_0)['show'])(($v_2)->{'value0'})) . " ") . (($__local_var_1_0)['show'])(($v_2)->{'value1'})) . "))");
@@ -808,10 +857,12 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_List_Types_traversableList'] = function() { $v = ["traverse" => function($dictApplicative_0 = null) {
+};
+
+// Data_List_Types_traversableList
+$GLOBALS['Data_List_Types_traversableList'] = ["traverse" => function($dictApplicative_0 = null) {
   $__num = \func_num_args();
-  $Apply0_1_0 = (($dictApplicative_0)['Apply0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $Apply0_1_0 = (($dictApplicative_0)['Apply0'])($GLOBALS['Prim_undefined']);
   $__res = function($f_2 = null) use ($Apply0_1_0, $dictApplicative_0) {
   $__num = \func_num_args();
   $go_3_1 = null;
@@ -868,7 +919,7 @@ $__t2 = $b_4;
 goto end_branch_2;;
 };
   if ((is_object($v_5) && (($v_5)->{'tag'} === "Cons"))) {
-$__tco_3 = (((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((((($GLOBALS['Control_Apply_lift2'] ?? \PhpursThunks::eval('Control_Apply_lift2')))($Apply0_1_0))((function() {
+$__tco_3 = ((($GLOBALS['Control_Semigroupoid_composeImpl'])(((($GLOBALS['Control_Apply_lift2'])($Apply0_1_0))((function() {
   $__fn = function($b_6 = null, $a_7 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -898,7 +949,7 @@ goto end_branch_2;;
   };
   return $__fn;
 })();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((((($Apply0_1_0)['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['map'])(($go_3_1)(new Phpurs_Data0("Nil")))))(($go_3_2)((($dictApplicative_0)['pure'])(new Phpurs_Data0("Nil"))));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((((($Apply0_1_0)['Functor0'])($GLOBALS['Prim_undefined']))['map'])(($go_3_1)(new Phpurs_Data0("Nil")))))(($go_3_2)((($dictApplicative_0)['pure'])(new Phpurs_Data0("Nil"))));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -908,27 +959,31 @@ goto end_branch_2;;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "sequence" => function($dictApplicative_0 = null) {
   $__num = \func_num_args();
-  $__res = (((($GLOBALS['Data_List_Types_traversableList'] ?? \PhpursThunks::eval('Data_List_Types_traversableList')))['traverse'])($dictApplicative_0))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))['identity']);
+  $__res = ((($GLOBALS['Data_List_Types_traversableList'])['traverse'])($dictApplicative_0))(($GLOBALS['Control_Category_categoryFn'])['identity']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Functor0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_List_Types_functorList'] ?? \PhpursThunks::eval('Data_List_Types_functorList'));
+  $__res = $GLOBALS['Data_List_Types_functorList'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Foldable1" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_List_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Types_foldableList'));
+  $__res = $GLOBALS['Data_List_Types_foldableList'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_List_Types_traversableNonEmptyList'] = function() { $v = (($GLOBALS['Data_NonEmpty_traversableNonEmpty'] ?? \PhpursThunks::eval('Data_NonEmpty_traversableNonEmpty')))(($GLOBALS['Data_List_Types_traversableList'] ?? \PhpursThunks::eval('Data_List_Types_traversableList'))); return $v; };
-\PhpursThunks::$thunks['Data_List_Types_traversableWithIndexList'] = function() { $v = ["traverseWithIndex" => function($dictApplicative_0 = null) {
+}];
+
+// Data_List_Types_traversableNonEmptyList
+$GLOBALS['Data_List_Types_traversableNonEmptyList'] = ($GLOBALS['Data_NonEmpty_traversableNonEmpty'])($GLOBALS['Data_List_Types_traversableList']);
+
+// Data_List_Types_traversableWithIndexList
+$GLOBALS['Data_List_Types_traversableWithIndexList'] = ["traverseWithIndex" => function($dictApplicative_0 = null) {
   $__num = \func_num_args();
-  $Apply0_1_0 = (($dictApplicative_0)['Apply0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $Apply0_1_0 = (($dictApplicative_0)['Apply0'])($GLOBALS['Prim_undefined']);
   $__res = function($f_2 = null) use ($Apply0_1_0, $dictApplicative_0) {
   $__num = \func_num_args();
   $go_3_1 = null;
@@ -967,13 +1022,13 @@ goto end_branch_1;;
   };
   return $__fn;
 })();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((((($Apply0_1_0)['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['map'])(($go_3_1)(new Phpurs_Data0("Nil")))))((((($GLOBALS['Data_List_Types_foldableWithIndexList'] ?? \PhpursThunks::eval('Data_List_Types_foldableWithIndexList')))['foldlWithIndex'])((function() use ($Apply0_1_0, $f_2) {
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((((($Apply0_1_0)['Functor0'])($GLOBALS['Prim_undefined']))['map'])(($go_3_1)(new Phpurs_Data0("Nil")))))(((($GLOBALS['Data_List_Types_foldableWithIndexList'])['foldlWithIndex'])((function() use ($Apply0_1_0, $f_2) {
   $__fn = function($i_3 = null, $acc_4 = null) use ($Apply0_1_0, $f_2, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((((($GLOBALS['Control_Apply_lift2'] ?? \PhpursThunks::eval('Control_Apply_lift2')))($Apply0_1_0))((function() {
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(((($GLOBALS['Control_Apply_lift2'])($Apply0_1_0))((function() {
   $__fn = function($b_5 = null, $a_6 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -1001,34 +1056,38 @@ goto end_branch_1;;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "FunctorWithIndex0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_List_Types_functorWithIndexList'] ?? \PhpursThunks::eval('Data_List_Types_functorWithIndexList'));
+  $__res = $GLOBALS['Data_List_Types_functorWithIndexList'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "FoldableWithIndex1" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_List_Types_foldableWithIndexList'] ?? \PhpursThunks::eval('Data_List_Types_foldableWithIndexList'));
+  $__res = $GLOBALS['Data_List_Types_foldableWithIndexList'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Traversable2" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_List_Types_traversableList'] ?? \PhpursThunks::eval('Data_List_Types_traversableList'));
+  $__res = $GLOBALS['Data_List_Types_traversableList'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_List_Types_traverseWithIndex'] = function() { $v = ((($GLOBALS['Data_NonEmpty_traversableWithIndexNonEmpty'] ?? \PhpursThunks::eval('Data_NonEmpty_traversableWithIndexNonEmpty')))(($GLOBALS['Data_List_Types_traversableWithIndexList'] ?? \PhpursThunks::eval('Data_List_Types_traversableWithIndexList'))))['traverseWithIndex']; return $v; };
-\PhpursThunks::$thunks['Data_List_Types_traversableWithIndexNonEmptyList'] = function() { $v = ["traverseWithIndex" => function($dictApplicative_0 = null) {
+}];
+
+// Data_List_Types_traverseWithIndex
+$GLOBALS['Data_List_Types_traverseWithIndex'] = (($GLOBALS['Data_NonEmpty_traversableWithIndexNonEmpty'])($GLOBALS['Data_List_Types_traversableWithIndexList']))['traverseWithIndex'];
+
+// Data_List_Types_traversableWithIndexNonEmptyList
+$GLOBALS['Data_List_Types_traversableWithIndexNonEmptyList'] = ["traverseWithIndex" => function($dictApplicative_0 = null) {
   $__num = \func_num_args();
-  $traverseWithIndex1_1_0 = (($GLOBALS['Data_List_Types_traverseWithIndex'] ?? \PhpursThunks::eval('Data_List_Types_traverseWithIndex')))($dictApplicative_0);
+  $traverseWithIndex1_1_0 = ($GLOBALS['Data_List_Types_traverseWithIndex'])($dictApplicative_0);
   $__res = (function() use ($dictApplicative_0, $traverseWithIndex1_1_0) {
   $__fn = function($f_2 = null, $v_3 = null) use ($dictApplicative_0, $traverseWithIndex1_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((((($dictApplicative_0)['Apply0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['map'])(($GLOBALS['Data_List_Types_NonEmptyList'] ?? \PhpursThunks::eval('Data_List_Types_NonEmptyList'))))((($traverseWithIndex1_1_0)(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($f_2))(function($v2_4 = null) {
+  $__res = ((((((($dictApplicative_0)['Apply0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']))['map'])($GLOBALS['Data_List_Types_NonEmptyList']))((($traverseWithIndex1_1_0)((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_2))(function($v2_4 = null) {
   $__num = \func_num_args();
   $__t1 = null;;
   if ((is_object($v2_4) && (($v2_4)->{'tag'} === "Nothing"))) {
@@ -1058,24 +1117,26 @@ goto end_branch_1;;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "FunctorWithIndex0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_List_Types_functorWithIndexNonEmptyList'] ?? \PhpursThunks::eval('Data_List_Types_functorWithIndexNonEmptyList'));
+  $__res = $GLOBALS['Data_List_Types_functorWithIndexNonEmptyList'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "FoldableWithIndex1" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_List_Types_foldableWithIndexNonEmptyList'] ?? \PhpursThunks::eval('Data_List_Types_foldableWithIndexNonEmptyList'));
+  $__res = $GLOBALS['Data_List_Types_foldableWithIndexNonEmptyList'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Traversable2" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_List_Types_traversableNonEmptyList'] ?? \PhpursThunks::eval('Data_List_Types_traversableNonEmptyList'));
+  $__res = $GLOBALS['Data_List_Types_traversableNonEmptyList'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_List_Types_unfoldable1List'] = function() { $v = ["unfoldr1" => (function() {
+}];
+
+// Data_List_Types_unfoldable1List
+$GLOBALS['Data_List_Types_unfoldable1List'] = ["unfoldr1" => (function() {
   $__fn = function($f_0 = null, $b_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -1160,8 +1221,10 @@ goto end_branch_1;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_List_Types_unfoldableList'] = function() { $v = ["unfoldr" => (function() {
+})()];
+
+// Data_List_Types_unfoldableList
+$GLOBALS['Data_List_Types_unfoldableList'] = ["unfoldr" => (function() {
   $__fn = function($f_0 = null, $b_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -1248,12 +1311,14 @@ goto end_branch_1;;
   return $__fn;
 })(), "Unfoldable10" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_List_Types_unfoldable1List'] ?? \PhpursThunks::eval('Data_List_Types_unfoldable1List'));
+  $__res = $GLOBALS['Data_List_Types_unfoldable1List'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_List_Types_unfoldable1NonEmptyList'] = function() { $v = ["unfoldr1" => (function() {
+}];
+
+// Data_List_Types_unfoldable1NonEmptyList
+$GLOBALS['Data_List_Types_unfoldable1NonEmptyList'] = ["unfoldr1" => (function() {
   $__fn = function($f_0 = null, $b_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -1333,15 +1398,19 @@ goto end_branch_1;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_List_Types_foldable1NonEmptyList'] = function() { $v = (($GLOBALS['Data_NonEmpty_foldable1NonEmpty'] ?? \PhpursThunks::eval('Data_NonEmpty_foldable1NonEmpty')))(($GLOBALS['Data_List_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Types_foldableList'))); return $v; };
-\PhpursThunks::$thunks['Data_List_Types_extendNonEmptyList'] = function() { $v = ["extend" => (function() {
+})()];
+
+// Data_List_Types_foldable1NonEmptyList
+$GLOBALS['Data_List_Types_foldable1NonEmptyList'] = ($GLOBALS['Data_NonEmpty_foldable1NonEmpty'])($GLOBALS['Data_List_Types_foldableList']);
+
+// Data_List_Types_extendNonEmptyList
+$GLOBALS['Data_List_Types_extendNonEmptyList'] = ["extend" => (function() {
   $__fn = function($f_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("NonEmpty", ($f_0)($v_1), (((((($GLOBALS['Data_List_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Types_foldableList')))['foldr'])((function() use ($f_0) {
+  $__res = new Phpurs_Data2("NonEmpty", ($f_0)($v_1), ((((($GLOBALS['Data_List_Types_foldableList'])['foldr'])((function() use ($f_0) {
   $__fn = function($a_2 = null, $v1_3 = null) use ($f_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -1361,12 +1430,14 @@ goto end_branch_1;;
   return $__fn;
 })(), "Functor0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_List_Types_functorNonEmptyList'] ?? \PhpursThunks::eval('Data_List_Types_functorNonEmptyList'));
+  $__res = $GLOBALS['Data_List_Types_functorNonEmptyList'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_List_Types_extendList'] = function() { $v = ["extend" => (function() {
+}];
+
+// Data_List_Types_extendList
+$GLOBALS['Data_List_Types_extendList'] = ["extend" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -1378,7 +1449,7 @@ $__t0 = new Phpurs_Data0("Nil");
 goto end_branch_0;;
 };
   if ((is_object($v1_1) && (($v1_1)->{'tag'} === "Cons"))) {
-$__t0 = new Phpurs_Data2("Cons", ($v_0)($v1_1), (((((($GLOBALS['Data_List_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Types_foldableList')))['foldr'])((function() use ($v_0) {
+$__t0 = new Phpurs_Data2("Cons", ($v_0)($v1_1), ((((($GLOBALS['Data_List_Types_foldableList'])['foldr'])((function() use ($v_0) {
   $__fn = function($a__prime___2 = null, $v2_3 = null) use ($v_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -1404,12 +1475,14 @@ goto end_branch_0;;
   return $__fn;
 })(), "Functor0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_List_Types_functorList'] ?? \PhpursThunks::eval('Data_List_Types_functorList'));
+  $__res = $GLOBALS['Data_List_Types_functorList'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_List_Types_eq1List'] = function() { $v = ["eq1" => (function() {
+}];
+
+// Data_List_Types_eq1List
+$GLOBALS['Data_List_Types_eq1List'] = ["eq1" => (function() {
   $__fn = function($dictEq_0 = null, $xs_1 = null, $ys_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -1446,8 +1519,10 @@ goto end_branch_1;;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_List_Types_eq1NonEmptyList'] = function() { $v = ["eq1" => (function() {
+})()];
+
+// Data_List_Types_eq1NonEmptyList
+$GLOBALS['Data_List_Types_eq1NonEmptyList'] = ["eq1" => (function() {
   $__fn = function($dictEq_0 = null, $x_1 = null, $y_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -1484,8 +1559,10 @@ goto end_branch_1;;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_List_Types_eqList'] = function() { $v = function($dictEq_0 = null) {
+})()];
+
+// Data_List_Types_eqList
+$GLOBALS['Data_List_Types_eqList'] = function($dictEq_0 = null) {
   $__num = \func_num_args();
   $__res = ["eq" => (function() use ($dictEq_0) {
   $__fn = function($xs_1 = null, $ys_2 = null) use ($dictEq_0, &$__fn) {
@@ -1528,8 +1605,10 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_List_Types_eqNonEmptyList'] = function() { $v = function($dictEq_0 = null) {
+};
+
+// Data_List_Types_eqNonEmptyList
+$GLOBALS['Data_List_Types_eqNonEmptyList'] = function($dictEq_0 = null) {
   $__num = \func_num_args();
   $__res = ["eq" => (function() use ($dictEq_0) {
   $__fn = function($x_1 = null, $y_2 = null) use ($dictEq_0, &$__fn) {
@@ -1572,8 +1651,10 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_List_Types_ord1List'] = function() { $v = ["compare1" => (function() {
+};
+
+// Data_List_Types_ord1List
+$GLOBALS['Data_List_Types_ord1List'] = ["compare1" => (function() {
   $__fn = function($dictOrd_0 = null, $xs_1 = null, $ys_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -1642,16 +1723,22 @@ goto end_branch_0;;
   return $__fn;
 })(), "Eq10" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_List_Types_eq1List'] ?? \PhpursThunks::eval('Data_List_Types_eq1List'));
+  $__res = $GLOBALS['Data_List_Types_eq1List'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_List_Types_ordNonEmpty'] = function() { $v = (($GLOBALS['Data_NonEmpty_ordNonEmpty'] ?? \PhpursThunks::eval('Data_NonEmpty_ordNonEmpty')))(($GLOBALS['Data_List_Types_ord1List'] ?? \PhpursThunks::eval('Data_List_Types_ord1List'))); return $v; };
-\PhpursThunks::$thunks['Data_List_Types_ord1NonEmptyList'] = function() { $v = (($GLOBALS['Data_NonEmpty_ord1NonEmpty'] ?? \PhpursThunks::eval('Data_NonEmpty_ord1NonEmpty')))(($GLOBALS['Data_List_Types_ord1List'] ?? \PhpursThunks::eval('Data_List_Types_ord1List'))); return $v; };
-\PhpursThunks::$thunks['Data_List_Types_ordList'] = function() { $v = function($dictOrd_0 = null) {
+}];
+
+// Data_List_Types_ordNonEmpty
+$GLOBALS['Data_List_Types_ordNonEmpty'] = ($GLOBALS['Data_NonEmpty_ordNonEmpty'])($GLOBALS['Data_List_Types_ord1List']);
+
+// Data_List_Types_ord1NonEmptyList
+$GLOBALS['Data_List_Types_ord1NonEmptyList'] = ($GLOBALS['Data_NonEmpty_ord1NonEmpty'])($GLOBALS['Data_List_Types_ord1List']);
+
+// Data_List_Types_ordList
+$GLOBALS['Data_List_Types_ordList'] = function($dictOrd_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictOrd_0)['Eq0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_1_0 = (($dictOrd_0)['Eq0'])($GLOBALS['Prim_undefined']);
   $eqList1_2_1 = ["eq" => (function() use ($__local_var_1_0) {
   $__fn = function($xs_2 = null, $ys_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -1767,15 +1854,19 @@ goto end_branch_4;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_List_Types_ordNonEmptyList'] = function() { $v = function($dictOrd_0 = null) {
+};
+
+// Data_List_Types_ordNonEmptyList
+$GLOBALS['Data_List_Types_ordNonEmptyList'] = function($dictOrd_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_List_Types_ordNonEmpty'] ?? \PhpursThunks::eval('Data_List_Types_ordNonEmpty')))($dictOrd_0);
+  $__res = ($GLOBALS['Data_List_Types_ordNonEmpty'])($dictOrd_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_List_Types_comonadNonEmptyList'] = function() { $v = ["extract" => function($v_0 = null) {
+};
+
+// Data_List_Types_comonadNonEmptyList
+$GLOBALS['Data_List_Types_comonadNonEmptyList'] = ["extract" => function($v_0 = null) {
   $__num = \func_num_args();
   $__res = ($v_0)->{'value0'};
   goto __end;;
@@ -1783,12 +1874,14 @@ goto end_branch_4;;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Extend0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_List_Types_extendNonEmptyList'] ?? \PhpursThunks::eval('Data_List_Types_extendNonEmptyList'));
+  $__res = $GLOBALS['Data_List_Types_extendNonEmptyList'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_List_Types_applyList'] = function() { $v = ["apply" => (function() {
+}];
+
+// Data_List_Types_applyList
+$GLOBALS['Data_List_Types_applyList'] = ["apply" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -1800,7 +1893,7 @@ $__t0 = new Phpurs_Data0("Nil");
 goto end_branch_0;;
 };
   if ((is_object($v_0) && (($v_0)->{'tag'} === "Cons"))) {
-$__t0 = ((((($GLOBALS['Data_List_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Types_foldableList')))['foldr'])(($GLOBALS['Data_List_Types_Cons'] ?? \PhpursThunks::eval('Data_List_Types_Cons'))))((((($GLOBALS['Data_List_Types_applyList'] ?? \PhpursThunks::eval('Data_List_Types_applyList')))['apply'])(($v_0)->{'value1'}))($v1_1)))(((($GLOBALS['Data_List_Types_listMap'] ?? \PhpursThunks::eval('Data_List_Types_listMap')))(($v_0)->{'value0'}))($v1_1));
+$__t0 = (((($GLOBALS['Data_List_Types_foldableList'])['foldr'])($GLOBALS['Data_List_Types_Cons']))(((($GLOBALS['Data_List_Types_applyList'])['apply'])(($v_0)->{'value1'}))($v1_1)))((($GLOBALS['Data_List_Types_listMap'])(($v_0)->{'value0'}))($v1_1));
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -1814,18 +1907,20 @@ goto end_branch_0;;
   return $__fn;
 })(), "Functor0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_List_Types_functorList'] ?? \PhpursThunks::eval('Data_List_Types_functorList'));
+  $__res = $GLOBALS['Data_List_Types_functorList'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_List_Types_applyNonEmptyList'] = function() { $v = ["apply" => (function() {
+}];
+
+// Data_List_Types_applyNonEmptyList
+$GLOBALS['Data_List_Types_applyNonEmptyList'] = ["apply" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("NonEmpty", (($v_0)->{'value0'})(($v1_1)->{'value0'}), ((((($GLOBALS['Data_List_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Types_foldableList')))['foldr'])(($GLOBALS['Data_List_Types_Cons'] ?? \PhpursThunks::eval('Data_List_Types_Cons'))))((((($GLOBALS['Data_List_Types_applyList'] ?? \PhpursThunks::eval('Data_List_Types_applyList')))['apply'])(new Phpurs_Data2("Cons", ($v_0)->{'value0'}, ($v_0)->{'value1'})))(($v1_1)->{'value1'})))((((($GLOBALS['Data_List_Types_applyList'] ?? \PhpursThunks::eval('Data_List_Types_applyList')))['apply'])(($v_0)->{'value1'}))(new Phpurs_Data2("Cons", ($v1_1)->{'value0'}, new Phpurs_Data0("Nil")))));
+  $__res = new Phpurs_Data2("NonEmpty", (($v_0)->{'value0'})(($v1_1)->{'value0'}), (((($GLOBALS['Data_List_Types_foldableList'])['foldr'])($GLOBALS['Data_List_Types_Cons']))(((($GLOBALS['Data_List_Types_applyList'])['apply'])(new Phpurs_Data2("Cons", ($v_0)->{'value0'}, ($v_0)->{'value1'})))(($v1_1)->{'value1'})))(((($GLOBALS['Data_List_Types_applyList'])['apply'])(($v_0)->{'value1'}))(new Phpurs_Data2("Cons", ($v1_1)->{'value0'}, new Phpurs_Data0("Nil")))));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1833,12 +1928,14 @@ goto end_branch_0;;
   return $__fn;
 })(), "Functor0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_List_Types_functorNonEmptyList'] ?? \PhpursThunks::eval('Data_List_Types_functorNonEmptyList'));
+  $__res = $GLOBALS['Data_List_Types_functorNonEmptyList'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_List_Types_bindList'] = function() { $v = ["bind" => (function() {
+}];
+
+// Data_List_Types_bindList
+$GLOBALS['Data_List_Types_bindList'] = ["bind" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -1850,7 +1947,7 @@ $__t0 = new Phpurs_Data0("Nil");
 goto end_branch_0;;
 };
   if ((is_object($v_0) && (($v_0)->{'tag'} === "Cons"))) {
-$__t0 = ((((($GLOBALS['Data_List_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Types_foldableList')))['foldr'])(($GLOBALS['Data_List_Types_Cons'] ?? \PhpursThunks::eval('Data_List_Types_Cons'))))((((($GLOBALS['Data_List_Types_bindList'] ?? \PhpursThunks::eval('Data_List_Types_bindList')))['bind'])(($v_0)->{'value1'}))($v1_1)))(($v1_1)(($v_0)->{'value0'}));
+$__t0 = (((($GLOBALS['Data_List_Types_foldableList'])['foldr'])($GLOBALS['Data_List_Types_Cons']))(((($GLOBALS['Data_List_Types_bindList'])['bind'])(($v_0)->{'value1'}))($v1_1)))(($v1_1)(($v_0)->{'value0'}));
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -1864,19 +1961,21 @@ goto end_branch_0;;
   return $__fn;
 })(), "Apply0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_List_Types_applyList'] ?? \PhpursThunks::eval('Data_List_Types_applyList'));
+  $__res = $GLOBALS['Data_List_Types_applyList'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_List_Types_bindNonEmptyList'] = function() { $v = ["bind" => (function() {
+}];
+
+// Data_List_Types_bindNonEmptyList
+$GLOBALS['Data_List_Types_bindNonEmptyList'] = ["bind" => (function() {
   $__fn = function($v_0 = null, $f_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $v1_2_0 = ($f_1)(($v_0)->{'value0'});
-  $__res = new Phpurs_Data2("NonEmpty", ($v1_2_0)->{'value0'}, ((((($GLOBALS['Data_List_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Types_foldableList')))['foldr'])(($GLOBALS['Data_List_Types_Cons'] ?? \PhpursThunks::eval('Data_List_Types_Cons'))))((((($GLOBALS['Data_List_Types_bindList'] ?? \PhpursThunks::eval('Data_List_Types_bindList')))['bind'])(($v_0)->{'value1'}))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_List_Types_toList'] ?? \PhpursThunks::eval('Data_List_Types_toList'))))($f_1))))(($v1_2_0)->{'value1'}));
+  $__res = new Phpurs_Data2("NonEmpty", ($v1_2_0)->{'value0'}, (((($GLOBALS['Data_List_Types_foldableList'])['foldr'])($GLOBALS['Data_List_Types_Cons']))(((($GLOBALS['Data_List_Types_bindList'])['bind'])(($v_0)->{'value1'}))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_List_Types_toList']))($f_1))))(($v1_2_0)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1884,12 +1983,14 @@ goto end_branch_0;;
   return $__fn;
 })(), "Apply0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_List_Types_applyNonEmptyList'] ?? \PhpursThunks::eval('Data_List_Types_applyNonEmptyList'));
+  $__res = $GLOBALS['Data_List_Types_applyNonEmptyList'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_List_Types_applicativeList'] = function() { $v = ["pure" => function($a_0 = null) {
+}];
+
+// Data_List_Types_applicativeList
+$GLOBALS['Data_List_Types_applicativeList'] = ["pure" => function($a_0 = null) {
   $__num = \func_num_args();
   $__res = new Phpurs_Data2("Cons", $a_0, new Phpurs_Data0("Nil"));
   goto __end;;
@@ -1897,72 +1998,86 @@ goto end_branch_0;;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Apply0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_List_Types_applyList'] ?? \PhpursThunks::eval('Data_List_Types_applyList'));
+  $__res = $GLOBALS['Data_List_Types_applyList'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_List_Types_monadList'] = function() { $v = ["Applicative0" => function($dollar__unused_0 = null) {
+}];
+
+// Data_List_Types_monadList
+$GLOBALS['Data_List_Types_monadList'] = ["Applicative0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_List_Types_applicativeList'] ?? \PhpursThunks::eval('Data_List_Types_applicativeList'));
+  $__res = $GLOBALS['Data_List_Types_applicativeList'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bind1" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_List_Types_bindList'] ?? \PhpursThunks::eval('Data_List_Types_bindList'));
+  $__res = $GLOBALS['Data_List_Types_bindList'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_List_Types_altNonEmptyList'] = function() { $v = ["alt" => (($GLOBALS['Data_List_Types_semigroupNonEmptyList'] ?? \PhpursThunks::eval('Data_List_Types_semigroupNonEmptyList')))['append'], "Functor0" => function($dollar__unused_0 = null) {
+}];
+
+// Data_List_Types_altNonEmptyList
+$GLOBALS['Data_List_Types_altNonEmptyList'] = ["alt" => ($GLOBALS['Data_List_Types_semigroupNonEmptyList'])['append'], "Functor0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_List_Types_functorNonEmptyList'] ?? \PhpursThunks::eval('Data_List_Types_functorNonEmptyList'));
+  $__res = $GLOBALS['Data_List_Types_functorNonEmptyList'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_List_Types_altList'] = function() { $v = ["alt" => (($GLOBALS['Data_List_Types_semigroupList'] ?? \PhpursThunks::eval('Data_List_Types_semigroupList')))['append'], "Functor0" => function($dollar__unused_0 = null) {
+}];
+
+// Data_List_Types_altList
+$GLOBALS['Data_List_Types_altList'] = ["alt" => ($GLOBALS['Data_List_Types_semigroupList'])['append'], "Functor0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_List_Types_functorList'] ?? \PhpursThunks::eval('Data_List_Types_functorList'));
+  $__res = $GLOBALS['Data_List_Types_functorList'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_List_Types_plusList'] = function() { $v = ["empty" => new Phpurs_Data0("Nil"), "Alt0" => function($dollar__unused_0 = null) {
+}];
+
+// Data_List_Types_plusList
+$GLOBALS['Data_List_Types_plusList'] = ["empty" => new Phpurs_Data0("Nil"), "Alt0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_List_Types_altList'] ?? \PhpursThunks::eval('Data_List_Types_altList'));
+  $__res = $GLOBALS['Data_List_Types_altList'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_List_Types_alternativeList'] = function() { $v = ["Applicative0" => function($dollar__unused_0 = null) {
+}];
+
+// Data_List_Types_alternativeList
+$GLOBALS['Data_List_Types_alternativeList'] = ["Applicative0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_List_Types_applicativeList'] ?? \PhpursThunks::eval('Data_List_Types_applicativeList'));
+  $__res = $GLOBALS['Data_List_Types_applicativeList'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Plus1" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_List_Types_plusList'] ?? \PhpursThunks::eval('Data_List_Types_plusList'));
+  $__res = $GLOBALS['Data_List_Types_plusList'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_List_Types_monadPlusList'] = function() { $v = ["Monad0" => function($dollar__unused_0 = null) {
+}];
+
+// Data_List_Types_monadPlusList
+$GLOBALS['Data_List_Types_monadPlusList'] = ["Monad0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_List_Types_monadList'] ?? \PhpursThunks::eval('Data_List_Types_monadList'));
+  $__res = $GLOBALS['Data_List_Types_monadList'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Alternative1" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_List_Types_alternativeList'] ?? \PhpursThunks::eval('Data_List_Types_alternativeList'));
+  $__res = $GLOBALS['Data_List_Types_alternativeList'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_List_Types_applicativeNonEmptyList'] = function() { $v = ["pure" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_List_Types_NonEmptyList'] ?? \PhpursThunks::eval('Data_List_Types_NonEmptyList'))))(function($a_0 = null) {
+}];
+
+// Data_List_Types_applicativeNonEmptyList
+$GLOBALS['Data_List_Types_applicativeNonEmptyList'] = ["pure" => (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_List_Types_NonEmptyList']))(function($a_0 = null) {
   $__num = \func_num_args();
   $__res = new Phpurs_Data2("NonEmpty", $a_0, new Phpurs_Data0("Nil"));
   goto __end;;
@@ -1970,27 +2085,31 @@ goto end_branch_0;;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }), "Apply0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_List_Types_applyNonEmptyList'] ?? \PhpursThunks::eval('Data_List_Types_applyNonEmptyList'));
+  $__res = $GLOBALS['Data_List_Types_applyNonEmptyList'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_List_Types_monadNonEmptyList'] = function() { $v = ["Applicative0" => function($dollar__unused_0 = null) {
+}];
+
+// Data_List_Types_monadNonEmptyList
+$GLOBALS['Data_List_Types_monadNonEmptyList'] = ["Applicative0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_List_Types_applicativeNonEmptyList'] ?? \PhpursThunks::eval('Data_List_Types_applicativeNonEmptyList'));
+  $__res = $GLOBALS['Data_List_Types_applicativeNonEmptyList'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bind1" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_List_Types_bindNonEmptyList'] ?? \PhpursThunks::eval('Data_List_Types_bindNonEmptyList'));
+  $__res = $GLOBALS['Data_List_Types_bindNonEmptyList'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_List_Types_traversable1NonEmptyList'] = function() { $v = ["traverse1" => function($dictApply_0 = null) {
+}];
+
+// Data_List_Types_traversable1NonEmptyList
+$GLOBALS['Data_List_Types_traversable1NonEmptyList'] = ["traverse1" => function($dictApply_0 = null) {
   $__num = \func_num_args();
-  $Functor0_1_0 = (($dictApply_0)['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $Functor0_1_0 = (($dictApply_0)['Functor0'])($GLOBALS['Prim_undefined']);
   $__res = (function() use ($Functor0_1_0, $dictApply_0) {
   $__fn = function($f_2 = null, $v_3 = null) use ($Functor0_1_0, $dictApply_0, &$__fn) {
   $__num = \func_num_args();
@@ -2015,7 +2134,7 @@ $__t2 = $b_5;
 goto end_branch_2;;
 };
   if ((is_object($v_6) && (($v_6)->{'tag'} === "Cons"))) {
-$__tco_3 = (((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((((($GLOBALS['Control_Apply_lift2'] ?? \PhpursThunks::eval('Control_Apply_lift2')))($dictApply_0))((function() {
+$__tco_3 = ((($GLOBALS['Control_Semigroupoid_composeImpl'])(((($GLOBALS['Control_Apply_lift2'])($dictApply_0))((function() {
   $__fn = function($b_7 = null, $a_8 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -2083,11 +2202,11 @@ goto end_branch_1;;
   };
   return $__fn;
 })();
-  $__res = (($go_5_1)(((($GLOBALS['Data_List_Types_applicativeNonEmptyList'] ?? \PhpursThunks::eval('Data_List_Types_applicativeNonEmptyList')))['pure'])(($v1_4)->{'value0'})))(($v1_4)->{'value1'});
+  $__res = (($go_5_1)((($GLOBALS['Data_List_Types_applicativeNonEmptyList'])['pure'])(($v1_4)->{'value0'})))(($v1_4)->{'value1'});
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))((($go_4_2)(((($Functor0_1_0)['map'])((($GLOBALS['Data_List_Types_applicativeNonEmptyList'] ?? \PhpursThunks::eval('Data_List_Types_applicativeNonEmptyList')))['pure']))(($f_2)(($v_3)->{'value0'}))))(($v_3)->{'value1'}));
+}))((($go_4_2)(((($Functor0_1_0)['map'])(($GLOBALS['Data_List_Types_applicativeNonEmptyList'])['pure']))(($f_2)(($v_3)->{'value0'}))))(($v_3)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -2099,81 +2218,21 @@ goto end_branch_1;;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "sequence1" => function($dictApply_0 = null) {
   $__num = \func_num_args();
-  $__res = (((($GLOBALS['Data_List_Types_traversable1NonEmptyList'] ?? \PhpursThunks::eval('Data_List_Types_traversable1NonEmptyList')))['traverse1'])($dictApply_0))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))['identity']);
+  $__res = ((($GLOBALS['Data_List_Types_traversable1NonEmptyList'])['traverse1'])($dictApply_0))(($GLOBALS['Control_Category_categoryFn'])['identity']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Foldable10" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_List_Types_foldable1NonEmptyList'] ?? \PhpursThunks::eval('Data_List_Types_foldable1NonEmptyList'));
+  $__res = $GLOBALS['Data_List_Types_foldable1NonEmptyList'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Traversable1" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_List_Types_traversableNonEmptyList'] ?? \PhpursThunks::eval('Data_List_Types_traversableNonEmptyList'));
+  $__res = $GLOBALS['Data_List_Types_traversableNonEmptyList'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}];
 

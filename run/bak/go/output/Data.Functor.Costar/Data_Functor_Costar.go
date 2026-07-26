@@ -3,7 +3,6 @@ package Data_Functor_Costar
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Control_Semigroupoid "gopurs/output/Control.Semigroupoid"
 	pkg_Data_Tuple "gopurs/output/Data.Tuple"
 	pkg_Data_Profunctor "gopurs/output/Data.Profunctor"
 	unsafe "unsafe"
@@ -79,8 +78,8 @@ var cache_functorCostar gopurs_runtime.Value
 var once_functorCostar sync.Once
 func Get_functorCostar() gopurs_runtime.Value {
 	once_functorCostar.Do(func() {
-		cache_functorCostar = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), f_0, v_1)
+		cache_functorCostar = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(f_0, gopurs_runtime.Apply(v_1, x_2))
 }))
 	})
 	return cache_functorCostar
@@ -104,7 +103,13 @@ func Get_distributiveCostar() gopurs_runtime.Value {
 		cache_distributiveCostar = gopurs_runtime.RecordDict3("Functor0", "collect", "distribute", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_functorCostar()
 }), gopurs_runtime.Func2(func(dictFunctor_0 gopurs_runtime.Value, f_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_distributiveCostar(), "distribute"), dictFunctor_0), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctor_0, "map"), f_1))
+__local_var_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_distributiveCostar(), "distribute"), dictFunctor_0)
+_ = __local_var_2_0
+__local_var_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctor_0, "map"), f_1)
+_ = __local_var_3_1
+return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_2_0, gopurs_runtime.Apply(__local_var_3_1, x_4))
+})
 }), gopurs_runtime.Func3(func(dictFunctor_0 gopurs_runtime.Value, f_1 gopurs_runtime.Value, a_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(v_3, a_2)
@@ -217,7 +222,11 @@ func Call_profunctorCostar(dictFunctor_0_loop gopurs_runtime.Value) gopurs_runti
 var dictFunctor_0 gopurs_runtime.Value = dictFunctor_0_loop
 _ = dictFunctor_0
 return gopurs_runtime.RecordDict1("dimap", gopurs_runtime.Func3(func(f_1 gopurs_runtime.Value, g_2 gopurs_runtime.Value, v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), g_2, v_3), gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictFunctor_0.UnsafePtr)).V0, f_1))
+__local_var_4_0 := gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictFunctor_0.UnsafePtr)).V0, f_1)
+_ = __local_var_4_0
+return gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(g_2, gopurs_runtime.Apply(v_3, gopurs_runtime.Apply(__local_var_4_0, x_5)))
+})
 }))
 }
 
@@ -226,7 +235,13 @@ var dictComonad_0 gopurs_runtime.Value = dictComonad_0_loop
 _ = dictComonad_0
 Functor0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonad_0, "Extend0_NOT_FOUND"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{})
 _ = Functor0_1_0
-profunctorCostar1_2_1 := gopurs_runtime.Apply(Get_profunctorCostar(), Functor0_1_0)
+profunctorCostar1_2_1 := gopurs_runtime.RecordDict1("dimap", gopurs_runtime.Func3(func(f_2 gopurs_runtime.Value, g_3 gopurs_runtime.Value, v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_5_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Functor0_1_0, "map"), f_2)
+_ = __local_var_5_2
+return gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(g_3, gopurs_runtime.Apply(v_4, gopurs_runtime.Apply(__local_var_5_2, x_6)))
+})
+}))
 _ = profunctorCostar1_2_1
 return gopurs_runtime.RecordDict3("Profunctor0", "first", "second", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return profunctorCostar1_2_1
@@ -248,7 +263,13 @@ return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(pkg_Data_Profunctor.Get_pr
 func Call_closedCostar(dictFunctor_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictFunctor_0 gopurs_runtime.Value = dictFunctor_0_loop
 _ = dictFunctor_0
-profunctorCostar1_1_0 := gopurs_runtime.Apply(Get_profunctorCostar(), dictFunctor_0)
+profunctorCostar1_1_0 := gopurs_runtime.RecordDict1("dimap", gopurs_runtime.Func3(func(f_1 gopurs_runtime.Value, g_2 gopurs_runtime.Value, v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_4_1 := gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictFunctor_0.UnsafePtr)).V0, f_1)
+_ = __local_var_4_1
+return gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(g_2, gopurs_runtime.Apply(v_3, gopurs_runtime.Apply(__local_var_4_1, x_5)))
+})
+}))
 _ = profunctorCostar1_1_0
 return gopurs_runtime.RecordDict2("Profunctor0", "closed", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return profunctorCostar1_1_0
@@ -277,7 +298,11 @@ func Call_bifunctorCostar(dictContravariant_0_loop gopurs_runtime.Value) gopurs_
 var dictContravariant_0 gopurs_runtime.Value = dictContravariant_0_loop
 _ = dictContravariant_0
 return gopurs_runtime.RecordDict1("bimap", gopurs_runtime.Func3(func(f_1 gopurs_runtime.Value, g_2 gopurs_runtime.Value, v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), g_2, v_3), gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictContravariant_0.UnsafePtr)).V0, f_1))
+__local_var_4_0 := gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictContravariant_0.UnsafePtr)).V0, f_1)
+_ = __local_var_4_0
+return gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(g_2, gopurs_runtime.Apply(v_3, gopurs_runtime.Apply(__local_var_4_0, x_5)))
+})
 }))
 }
 

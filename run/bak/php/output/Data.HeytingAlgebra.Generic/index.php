@@ -95,14 +95,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_HeytingAlgebra_Generic_genericTT__prime__'] = function() { $v = function($dict_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_HeytingAlgebra_Generic_genericTT'
+$GLOBALS['Data_HeytingAlgebra_Generic_genericTT__prime__'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['genericTT__prime__'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_HeytingAlgebra_Generic_genericTT'] = function() { $v = (function() {
+};
+
+// Data_HeytingAlgebra_Generic_genericTT
+$GLOBALS['Data_HeytingAlgebra_Generic_genericTT'] = (function() {
   $__fn = function($dictGeneric_0 = null, $dictGenericHeytingAlgebra_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -114,15 +121,19 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_HeytingAlgebra_Generic_genericNot__prime__'] = function() { $v = function($dict_0 = null) {
+})();
+
+// Data_HeytingAlgebra_Generic_genericNot'
+$GLOBALS['Data_HeytingAlgebra_Generic_genericNot__prime__'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['genericNot__prime__'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_HeytingAlgebra_Generic_genericNot'] = function() { $v = (function() {
+};
+
+// Data_HeytingAlgebra_Generic_genericNot
+$GLOBALS['Data_HeytingAlgebra_Generic_genericNot'] = (function() {
   $__fn = function($dictGeneric_0 = null, $dictGenericHeytingAlgebra_1 = null, $x_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -134,15 +145,19 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_HeytingAlgebra_Generic_genericImplies__prime__'] = function() { $v = function($dict_0 = null) {
+})();
+
+// Data_HeytingAlgebra_Generic_genericImplies'
+$GLOBALS['Data_HeytingAlgebra_Generic_genericImplies__prime__'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['genericImplies__prime__'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_HeytingAlgebra_Generic_genericImplies'] = function() { $v = (function() {
+};
+
+// Data_HeytingAlgebra_Generic_genericImplies
+$GLOBALS['Data_HeytingAlgebra_Generic_genericImplies'] = (function() {
   $__fn = function($dictGeneric_0 = null, $dictGenericHeytingAlgebra_1 = null, $x_2 = null, $y_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
@@ -154,8 +169,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_HeytingAlgebra_Generic_genericHeytingAlgebraNoArguments'] = function() { $v = ["genericFF__prime__" => new Phpurs_Data0("NoArguments"), "genericTT__prime__" => new Phpurs_Data0("NoArguments"), "genericImplies__prime__" => (function() {
+})();
+
+// Data_HeytingAlgebra_Generic_genericHeytingAlgebraNoArguments
+$GLOBALS['Data_HeytingAlgebra_Generic_genericHeytingAlgebraNoArguments'] = ["genericFF__prime__" => new Phpurs_Data0("NoArguments"), "genericTT__prime__" => new Phpurs_Data0("NoArguments"), "genericImplies__prime__" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -197,8 +214,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_HeytingAlgebra_Generic_genericHeytingAlgebraArgument'] = function() { $v = function($dictHeytingAlgebra_0 = null) {
+}];
+
+// Data_HeytingAlgebra_Generic_genericHeytingAlgebraArgument
+$GLOBALS['Data_HeytingAlgebra_Generic_genericHeytingAlgebraArgument'] = function($dictHeytingAlgebra_0 = null) {
   $__num = \func_num_args();
   $__res = ["genericFF__prime__" => ($dictHeytingAlgebra_0)['ff'], "genericTT__prime__" => ($dictHeytingAlgebra_0)['tt'], "genericImplies__prime__" => (function() use ($dictHeytingAlgebra_0) {
   $__fn = function($v_1 = null, $v1_2 = null) use ($dictHeytingAlgebra_0, &$__fn) {
@@ -246,15 +265,19 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_HeytingAlgebra_Generic_genericFF__prime__'] = function() { $v = function($dict_0 = null) {
+};
+
+// Data_HeytingAlgebra_Generic_genericFF'
+$GLOBALS['Data_HeytingAlgebra_Generic_genericFF__prime__'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['genericFF__prime__'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_HeytingAlgebra_Generic_genericFF'] = function() { $v = (function() {
+};
+
+// Data_HeytingAlgebra_Generic_genericFF
+$GLOBALS['Data_HeytingAlgebra_Generic_genericFF'] = (function() {
   $__fn = function($dictGeneric_0 = null, $dictGenericHeytingAlgebra_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -266,15 +289,19 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_HeytingAlgebra_Generic_genericDisj__prime__'] = function() { $v = function($dict_0 = null) {
+})();
+
+// Data_HeytingAlgebra_Generic_genericDisj'
+$GLOBALS['Data_HeytingAlgebra_Generic_genericDisj__prime__'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['genericDisj__prime__'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_HeytingAlgebra_Generic_genericDisj'] = function() { $v = (function() {
+};
+
+// Data_HeytingAlgebra_Generic_genericDisj
+$GLOBALS['Data_HeytingAlgebra_Generic_genericDisj'] = (function() {
   $__fn = function($dictGeneric_0 = null, $dictGenericHeytingAlgebra_1 = null, $x_2 = null, $y_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
@@ -286,15 +313,19 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_HeytingAlgebra_Generic_genericConj__prime__'] = function() { $v = function($dict_0 = null) {
+})();
+
+// Data_HeytingAlgebra_Generic_genericConj'
+$GLOBALS['Data_HeytingAlgebra_Generic_genericConj__prime__'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['genericConj__prime__'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_HeytingAlgebra_Generic_genericHeytingAlgebraConstructor'] = function() { $v = function($dictGenericHeytingAlgebra_0 = null) {
+};
+
+// Data_HeytingAlgebra_Generic_genericHeytingAlgebraConstructor
+$GLOBALS['Data_HeytingAlgebra_Generic_genericHeytingAlgebraConstructor'] = function($dictGenericHeytingAlgebra_0 = null) {
   $__num = \func_num_args();
   $__res = ["genericFF__prime__" => ($dictGenericHeytingAlgebra_0)['genericFF__prime__'], "genericTT__prime__" => ($dictGenericHeytingAlgebra_0)['genericTT__prime__'], "genericImplies__prime__" => (function() use ($dictGenericHeytingAlgebra_0) {
   $__fn = function($v_1 = null, $v1_2 = null) use ($dictGenericHeytingAlgebra_0, &$__fn) {
@@ -342,8 +373,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_HeytingAlgebra_Generic_genericHeytingAlgebraProduct'] = function() { $v = function($dictGenericHeytingAlgebra_0 = null) {
+};
+
+// Data_HeytingAlgebra_Generic_genericHeytingAlgebraProduct
+$GLOBALS['Data_HeytingAlgebra_Generic_genericHeytingAlgebraProduct'] = function($dictGenericHeytingAlgebra_0 = null) {
   $__num = \func_num_args();
   $genericFF__prime__1_1_0 = ($dictGenericHeytingAlgebra_0)['genericFF__prime__'];
   $genericTT__prime__1_2_1 = ($dictGenericHeytingAlgebra_0)['genericTT__prime__'];
@@ -399,8 +432,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_HeytingAlgebra_Generic_genericConj'] = function() { $v = (function() {
+};
+
+// Data_HeytingAlgebra_Generic_genericConj
+$GLOBALS['Data_HeytingAlgebra_Generic_genericConj'] = (function() {
   $__fn = function($dictGeneric_0 = null, $dictGenericHeytingAlgebra_1 = null, $x_2 = null, $y_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
@@ -412,23 +447,5 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+})();
 

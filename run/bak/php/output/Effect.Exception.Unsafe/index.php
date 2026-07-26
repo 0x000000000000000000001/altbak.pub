@@ -94,10 +94,13 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Effect_Exception_Unsafe_unsafeThrowException'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Effect_Unsafe_unsafePerformEffect'] ?? \PhpursThunks::eval('Effect_Unsafe_unsafePerformEffect'))))(($GLOBALS['Effect_Exception_throwException'] ?? \PhpursThunks::eval('Effect_Exception_throwException'))); return $v; };
-\PhpursThunks::$thunks['Effect_Exception_Unsafe_unsafeThrow'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Effect_Exception_Unsafe_unsafeThrowException'] ?? \PhpursThunks::eval('Effect_Exception_Unsafe_unsafeThrowException'))))(($GLOBALS['Effect_Exception_error'] ?? \PhpursThunks::eval('Effect_Exception_error'))); return $v; };
+
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+// Effect_Exception_Unsafe_unsafeThrowException
+$GLOBALS['Effect_Exception_Unsafe_unsafeThrowException'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Effect_Unsafe_unsafePerformEffect']))($GLOBALS['Effect_Exception_throwException']);
 
+// Effect_Exception_Unsafe_unsafeThrow
+$GLOBALS['Effect_Exception_Unsafe_unsafeThrow'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Effect_Exception_Unsafe_unsafeThrowException']))($GLOBALS['Effect_Exception_error']);
 

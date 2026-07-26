@@ -97,14 +97,38 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Show_Generic_genericShowArgsNoArguments'] = function() { $v = ["genericShowArgs" => function($v_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+$ffi_Data_Show_Generic = \call_user_func(function() {
+  $exports = [];
+$intercalate = function ($separator, $xs = null) use (&$intercalate) {
+    if (func_num_args() < 2) {
+        $__args = func_get_args();
+        return function (...$more) use ($__args, &$intercalate) {
+            return $intercalate(...array_merge($__args, $more));
+        };
+    }
+    return implode($separator, $xs);
+};
+
+$exports['intercalate'] = $intercalate;
+return $exports;
+  return $exports;
+});
+$GLOBALS['Data_Show_Generic_intercalate'] = $ffi_Data_Show_Generic['intercalate'] ?? new class { public function __invoke(...$args) { return $this; } };
+
+
+// Data_Show_Generic_genericShowArgsNoArguments
+$GLOBALS['Data_Show_Generic_genericShowArgsNoArguments'] = ["genericShowArgs" => function($v_0 = null) {
   $__num = \func_num_args();
   $__res = [];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Show_Generic_genericShowArgsArgument'] = function() { $v = function($dictShow_0 = null) {
+}];
+
+// Data_Show_Generic_genericShowArgsArgument
+$GLOBALS['Data_Show_Generic_genericShowArgsArgument'] = function($dictShow_0 = null) {
   $__num = \func_num_args();
   $__res = ["genericShowArgs" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
@@ -116,15 +140,19 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Show_Generic_genericShowArgs'] = function() { $v = function($dict_0 = null) {
+};
+
+// Data_Show_Generic_genericShowArgs
+$GLOBALS['Data_Show_Generic_genericShowArgs'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['genericShowArgs'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Show_Generic_genericShowArgsProduct'] = function() { $v = (function() {
+};
+
+// Data_Show_Generic_genericShowArgsProduct
+$GLOBALS['Data_Show_Generic_genericShowArgsProduct'] = (function() {
   $__fn = function($dictGenericShowArgs_0 = null, $dictGenericShowArgs1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -132,7 +160,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   }
   $__res = ["genericShowArgs" => function($v_2 = null) use ($dictGenericShowArgs1_1, $dictGenericShowArgs_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semigroup_concatArray'] ?? \PhpursThunks::eval('Data_Semigroup_concatArray')))((($dictGenericShowArgs_0)['genericShowArgs'])(($v_2)->{'value0'})))((($dictGenericShowArgs1_1)['genericShowArgs'])(($v_2)->{'value1'}));
+  $__res = (($GLOBALS['Data_Semigroup_concatArray'])((($dictGenericShowArgs_0)['genericShowArgs'])(($v_2)->{'value0'})))((($dictGenericShowArgs1_1)['genericShowArgs'])(($v_2)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -142,8 +170,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Show_Generic_genericShowConstructor'] = function() { $v = (function() {
+})();
+
+// Data_Show_Generic_genericShowConstructor
+$GLOBALS['Data_Show_Generic_genericShowConstructor'] = (function() {
   $__fn = function($dictGenericShowArgs_0 = null, $dictIsSymbol_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -153,19 +183,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   $__num = \func_num_args();
   $ctor_3_0 = (($dictIsSymbol_1)['reflectSymbol'])(new Phpurs_Data0("Proxy"));
   $v1_4_1 = (($dictGenericShowArgs_0)['genericShowArgs'])($v_2);
-  $__t2 = null;;
-  switch (count($v1_4_1)) {
-case 0:
-$__t2 = $ctor_3_0;
-goto end_branch_2;;
-break;
-default:
-;
-break;
-};
-  $__t2 = (("(" . ((($GLOBALS['Data_Show_Generic_intercalate'] ?? \PhpursThunks::eval('Data_Show_Generic_intercalate')))(" "))(((($GLOBALS['Data_Semigroup_concatArray'] ?? \PhpursThunks::eval('Data_Semigroup_concatArray')))([$ctor_3_0]))($v1_4_1))) . ")");
-  end_branch_2:;
-  $__res = $__t2;
+  $__res = match (count($v1_4_1)) { 0 => $ctor_3_0, default => (("(" . (($GLOBALS['Data_Show_Generic_intercalate'])(" "))((($GLOBALS['Data_Semigroup_concatArray'])([$ctor_3_0]))($v1_4_1))) . ")") };
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -175,22 +193,28 @@ break;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Show_Generic_genericShow__prime__'] = function() { $v = function($dict_0 = null) {
+})();
+
+// Data_Show_Generic_genericShow'
+$GLOBALS['Data_Show_Generic_genericShow__prime__'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['genericShow__prime__'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Show_Generic_genericShowNoConstructors'] = function() { $v = ["genericShow__prime__" => function($a_0 = null) {
+};
+
+// Data_Show_Generic_genericShowNoConstructors
+$GLOBALS['Data_Show_Generic_genericShowNoConstructors'] = ["genericShow__prime__" => function($a_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Show_Generic_genericShowNoConstructors'] ?? \PhpursThunks::eval('Data_Show_Generic_genericShowNoConstructors')))['genericShow__prime__'])($a_0);
+  $__res = (($GLOBALS['Data_Show_Generic_genericShowNoConstructors'])['genericShow__prime__'])($a_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Show_Generic_genericShowSum'] = function() { $v = (function() {
+}];
+
+// Data_Show_Generic_genericShowSum
+$GLOBALS['Data_Show_Generic_genericShowSum'] = (function() {
   $__fn = function($dictGenericShow_0 = null, $dictGenericShow1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -220,8 +244,10 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Show_Generic_genericShow'] = function() { $v = (function() {
+})();
+
+// Data_Show_Generic_genericShow
+$GLOBALS['Data_Show_Generic_genericShow'] = (function() {
   $__fn = function($dictGeneric_0 = null, $dictGenericShow_1 = null, $x_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -233,33 +259,5 @@ goto end_branch_0;;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-$ffi_Data_Show_Generic = \call_user_func(function() {
-  $exports = [];
-$intercalate = function ($separator, $xs = null) use (&$intercalate) {
-    if (func_num_args() < 2) {
-        $__args = func_get_args();
-        return function (...$more) use ($__args, &$intercalate) {
-            return $intercalate(...array_merge($__args, $more));
-        };
-    }
-    return implode($separator, $xs);
-};
-
-$exports['intercalate'] = $intercalate;
-return $exports;
-  return $exports;
-});
-\PhpursThunks::$thunks['Data_Show_Generic_intercalate'] = function() use (&$ffi_Data_Show_Generic) { return $ffi_Data_Show_Generic['intercalate']; };
-
-
-
-
-
-
-
-
-
-
+})();
 

@@ -95,14 +95,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Ring_Generic_genericSub__prime__'] = function() { $v = function($dict_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Ring_Generic_genericSub'
+$GLOBALS['Data_Ring_Generic_genericSub__prime__'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['genericSub__prime__'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Ring_Generic_genericSub'] = function() { $v = (function() {
+};
+
+// Data_Ring_Generic_genericSub
+$GLOBALS['Data_Ring_Generic_genericSub'] = (function() {
   $__fn = function($dictGeneric_0 = null, $dictGenericRing_1 = null, $x_2 = null, $y_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
@@ -114,8 +121,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Ring_Generic_genericRingProduct'] = function() { $v = (function() {
+})();
+
+// Data_Ring_Generic_genericRingProduct
+$GLOBALS['Data_Ring_Generic_genericRingProduct'] = (function() {
   $__fn = function($dictGenericRing_0 = null, $dictGenericRing1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -139,8 +148,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Ring_Generic_genericRingNoArguments'] = function() { $v = ["genericSub__prime__" => (function() {
+})();
+
+// Data_Ring_Generic_genericRingNoArguments
+$GLOBALS['Data_Ring_Generic_genericRingNoArguments'] = ["genericSub__prime__" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -152,8 +163,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Ring_Generic_genericRingConstructor'] = function() { $v = function($dictGenericRing_0 = null) {
+})()];
+
+// Data_Ring_Generic_genericRingConstructor
+$GLOBALS['Data_Ring_Generic_genericRingConstructor'] = function($dictGenericRing_0 = null) {
   $__num = \func_num_args();
   $__res = ["genericSub__prime__" => (function() use ($dictGenericRing_0) {
   $__fn = function($v_1 = null, $v1_2 = null) use ($dictGenericRing_0, &$__fn) {
@@ -171,8 +184,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Ring_Generic_genericRingArgument'] = function() { $v = function($dictRing_0 = null) {
+};
+
+// Data_Ring_Generic_genericRingArgument
+$GLOBALS['Data_Ring_Generic_genericRingArgument'] = function($dictRing_0 = null) {
   $__num = \func_num_args();
   $__res = ["genericSub__prime__" => (function() use ($dictRing_0) {
   $__fn = function($v_1 = null, $v1_2 = null) use ($dictRing_0, &$__fn) {
@@ -190,13 +205,5 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
+};
 

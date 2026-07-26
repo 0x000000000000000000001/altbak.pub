@@ -109,9 +109,89 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Int_Even'] = function() { $v = ($GLOBALS['__phpurs_data0_Even'] ??= new Phpurs_Data0("Even")); return $v; };
-\PhpursThunks::$thunks['Data_Int_Odd'] = function() { $v = ($GLOBALS['__phpurs_data0_Odd'] ??= new Phpurs_Data0("Odd")); return $v; };
-\PhpursThunks::$thunks['Data_Int_showParity'] = function() { $v = ["show" => function($v_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+$ffi_Data_Int = \call_user_func(function() {
+  $exports = [];
+$exports['fromNumberImpl'] = function($just) {
+  return function($nothing) use ($just) {
+    return function($n) use ($just, $nothing) {
+      if (\is_int($n) || (\is_float($n) && \floor($n) == $n && !\is_infinite($n) && !\is_nan($n))) {
+        return $just((int)$n);
+      }
+      return $nothing;
+    };
+  };
+};
+
+$exports['toNumber'] = function($n) {
+  return (float)$n;
+};
+
+$exports['fromStringAsImpl'] = function($just) {
+  return function($nothing) use ($just) {
+    return function($radix) use ($just, $nothing) {
+      return function($s) use ($just, $nothing, $radix) {
+        $i = \intval($s, $radix);
+        // intval returns 0 on failure for some invalid strings in older PHP,
+        // but we should just try to convert back to check or just return $just.
+        // Actually, PHP doesn't have a direct equivalent to JS pattern matching here easily,
+        // so we'll just check if it's numeric in that base
+        if (\preg_match('/^[\+\-]?[0-9a-zA-Z]+$/', $s)) {
+            $parsed = \intval($s, $radix);
+            // intval bounds checking
+            if (\strval($parsed) === $s || \base_convert(\strval($parsed), 10, $radix) === \strtolower(\ltrim($s, '+'))) {
+                return $just($parsed);
+            }
+        }
+        return $nothing;
+      };
+    };
+  };
+};
+
+$exports['toStringAs'] = function($radix) {
+  return function($i) use ($radix) {
+    return \base_convert((string)$i, 10, $radix);
+  };
+};
+
+$exports['quot'] = function($x) {
+  return function($y) use ($x) {
+    return \intdiv($x, $y);
+  };
+};
+
+$exports['rem'] = function($x) {
+  return function($y) use ($x) {
+    return $x % $y;
+  };
+};
+
+$exports['pow'] = function($x) {
+  return function($y) use ($x) {
+    return (int)\pow($x, $y);
+  };
+};
+  return $exports;
+});
+$GLOBALS['Data_Int_fromNumberImpl'] = $ffi_Data_Int['fromNumberImpl'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Int_fromStringAsImpl'] = $ffi_Data_Int['fromStringAsImpl'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Int_pow'] = $ffi_Data_Int['pow'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Int_quot'] = $ffi_Data_Int['quot'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Int_rem'] = $ffi_Data_Int['rem'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Int_toNumber'] = $ffi_Data_Int['toNumber'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Int_toStringAs'] = $ffi_Data_Int['toStringAs'] ?? new class { public function __invoke(...$args) { return $this; } };
+
+
+// Data_Int_Even
+$GLOBALS['Data_Int_Even'] = ($GLOBALS['__phpurs_data0_Even'] ??= new Phpurs_Data0("Even"));
+
+// Data_Int_Odd
+$GLOBALS['Data_Int_Odd'] = ($GLOBALS['__phpurs_data0_Odd'] ??= new Phpurs_Data0("Odd"));
+
+// Data_Int_showParity
+$GLOBALS['Data_Int_showParity'] = ["show" => function($v_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object($v_0) && (($v_0)->{'tag'} === "Even"))) {
@@ -129,8 +209,10 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Int_radix'] = function() { $v = function($n_0 = null) {
+}];
+
+// Data_Int_radix
+$GLOBALS['Data_Int_radix'] = function($n_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((($n_0 >= 2) && ($n_0 <= 36))) {
@@ -143,35 +225,49 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Int_odd'] = function() { $v = function($x_0 = null) {
+};
+
+// Data_Int_odd
+$GLOBALS['Data_Int_odd'] = function($x_0 = null) {
   $__num = \func_num_args();
   $__res = (($x_0 & 1) !== 0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Int_octal'] = function() { $v = 8; return $v; };
-\PhpursThunks::$thunks['Data_Int_hexadecimal'] = function() { $v = 16; return $v; };
-\PhpursThunks::$thunks['Data_Int_fromStringAs'] = function() { $v = ((($GLOBALS['Data_Int_fromStringAsImpl'] ?? \PhpursThunks::eval('Data_Int_fromStringAsImpl')))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just'))))(new Phpurs_Data0("Nothing")); return $v; };
-\PhpursThunks::$thunks['Data_Int_fromString'] = function() { $v = (($GLOBALS['Data_Int_fromStringAs'] ?? \PhpursThunks::eval('Data_Int_fromStringAs')))(10); return $v; };
-\PhpursThunks::$thunks['Data_Int_fromNumber'] = function() { $v = ((($GLOBALS['Data_Int_fromNumberImpl'] ?? \PhpursThunks::eval('Data_Int_fromNumberImpl')))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just'))))(new Phpurs_Data0("Nothing")); return $v; };
-\PhpursThunks::$thunks['Data_Int_unsafeClamp'] = function() { $v = function($x_0 = null) {
+};
+
+// Data_Int_octal
+$GLOBALS['Data_Int_octal'] = 8;
+
+// Data_Int_hexadecimal
+$GLOBALS['Data_Int_hexadecimal'] = 16;
+
+// Data_Int_fromStringAs
+$GLOBALS['Data_Int_fromStringAs'] = (($GLOBALS['Data_Int_fromStringAsImpl'])($GLOBALS['Data_Maybe_Just']))(new Phpurs_Data0("Nothing"));
+
+// Data_Int_fromString
+$GLOBALS['Data_Int_fromString'] = ($GLOBALS['Data_Int_fromStringAs'])(10);
+
+// Data_Int_fromNumber
+$GLOBALS['Data_Int_fromNumber'] = (($GLOBALS['Data_Int_fromNumberImpl'])($GLOBALS['Data_Maybe_Just']))(new Phpurs_Data0("Nothing"));
+
+// Data_Int_unsafeClamp
+$GLOBALS['Data_Int_unsafeClamp'] = function($x_0 = null) {
   $__num = \func_num_args();
   $__t2 = null;;
-  if (( ! (($GLOBALS['Data_Number_isFinite'] ?? \PhpursThunks::eval('Data_Number_isFinite')))($x_0))) {
+  if (( ! ($GLOBALS['Data_Number_isFinite'])($x_0))) {
 $__t2 = 0;
 goto end_branch_2;;
 };
-  if (($x_0 >= (($GLOBALS['Data_Int_toNumber'] ?? \PhpursThunks::eval('Data_Int_toNumber')))(($GLOBALS['Data_Bounded_topInt'] ?? \PhpursThunks::eval('Data_Bounded_topInt'))))) {
-$__t2 = ($GLOBALS['Data_Bounded_topInt'] ?? \PhpursThunks::eval('Data_Bounded_topInt'));
+  if (($x_0 >= ($GLOBALS['Data_Int_toNumber'])($GLOBALS['Data_Bounded_topInt']))) {
+$__t2 = $GLOBALS['Data_Bounded_topInt'];
 goto end_branch_2;;
 };
-  if (($x_0 <= (($GLOBALS['Data_Int_toNumber'] ?? \PhpursThunks::eval('Data_Int_toNumber')))(($GLOBALS['Data_Bounded_bottomInt'] ?? \PhpursThunks::eval('Data_Bounded_bottomInt'))))) {
-$__t2 = ($GLOBALS['Data_Bounded_bottomInt'] ?? \PhpursThunks::eval('Data_Bounded_bottomInt'));
+  if (($x_0 <= ($GLOBALS['Data_Int_toNumber'])($GLOBALS['Data_Bounded_bottomInt']))) {
+$__t2 = $GLOBALS['Data_Bounded_bottomInt'];
 goto end_branch_2;;
 };
-  $__local_var_1_0 = (($GLOBALS['Data_Int_fromNumber'] ?? \PhpursThunks::eval('Data_Int_fromNumber')))($x_0);
+  $__local_var_1_0 = ($GLOBALS['Data_Int_fromNumber'])($x_0);
   $__t1 = null;;
   if ((is_object($__local_var_1_0) && (($__local_var_1_0)->{'tag'} === "Nothing"))) {
 $__t1 = 0;
@@ -190,37 +286,37 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Int_round'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Int_unsafeClamp'] ?? \PhpursThunks::eval('Data_Int_unsafeClamp'))))(($GLOBALS['Data_Number_round'] ?? \PhpursThunks::eval('Data_Number_round'))); return $v; };
-\PhpursThunks::$thunks['Data_Int_trunc'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Int_unsafeClamp'] ?? \PhpursThunks::eval('Data_Int_unsafeClamp'))))(($GLOBALS['Data_Number_trunc'] ?? \PhpursThunks::eval('Data_Number_trunc'))); return $v; };
-\PhpursThunks::$thunks['Data_Int_floor'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Int_unsafeClamp'] ?? \PhpursThunks::eval('Data_Int_unsafeClamp'))))(($GLOBALS['Data_Number_floor'] ?? \PhpursThunks::eval('Data_Number_floor'))); return $v; };
-\PhpursThunks::$thunks['Data_Int_even'] = function() { $v = function($x_0 = null) {
+};
+
+// Data_Int_round
+$GLOBALS['Data_Int_round'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Int_unsafeClamp']))($GLOBALS['Data_Number_round']);
+
+// Data_Int_trunc
+$GLOBALS['Data_Int_trunc'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Int_unsafeClamp']))($GLOBALS['Data_Number_trunc']);
+
+// Data_Int_floor
+$GLOBALS['Data_Int_floor'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Int_unsafeClamp']))($GLOBALS['Data_Number_floor']);
+
+// Data_Int_even
+$GLOBALS['Data_Int_even'] = function($x_0 = null) {
   $__num = \func_num_args();
   $__res = (($x_0 & 1) === 0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Int_parity'] = function() { $v = function($n_0 = null) {
-  $__num = \func_num_args();
-  $__t0 = null;;
-  switch (($n_0 & 1)) {
-case 0:
-$__t0 = new Phpurs_Data0("Even");
-goto end_branch_0;;
-break;
-default:
-;
-break;
 };
-  $__t0 = new Phpurs_Data0("Odd");
-  end_branch_0:;
-  $__res = $__t0;
+
+// Data_Int_parity
+$GLOBALS['Data_Int_parity'] = function($n_0 = null) {
+  $__num = \func_num_args();
+  $__res = match (($n_0 & 1)) { 0 => new Phpurs_Data0("Even"), default => new Phpurs_Data0("Odd") };
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Int_eqParity'] = function() { $v = ["eq" => (function() {
+};
+
+// Data_Int_eqParity
+$GLOBALS['Data_Int_eqParity'] = ["eq" => (function() {
   $__fn = function($x_0 = null, $y_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -239,8 +335,10 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Int_ordParity'] = function() { $v = ["compare" => (function() {
+})()];
+
+// Data_Int_ordParity
+$GLOBALS['Data_Int_ordParity'] = ["compare" => (function() {
   $__fn = function($x_0 = null, $y_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -277,12 +375,14 @@ goto end_branch_0;;
   return $__fn;
 })(), "Eq0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Int_eqParity'] ?? \PhpursThunks::eval('Data_Int_eqParity'));
+  $__res = $GLOBALS['Data_Int_eqParity'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Int_semiringParity'] = function() { $v = ["zero" => new Phpurs_Data0("Even"), "add" => (function() {
+}];
+
+// Data_Int_semiringParity
+$GLOBALS['Data_Int_semiringParity'] = ["zero" => new Phpurs_Data0("Even"), "add" => (function() {
   $__fn = function($x_0 = null, $y_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -329,30 +429,40 @@ goto end_branch_2;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Int_ringParity'] = function() { $v = ["sub" => (($GLOBALS['Data_Int_semiringParity'] ?? \PhpursThunks::eval('Data_Int_semiringParity')))['add'], "Semiring0" => function($dollar__unused_0 = null) {
+})()];
+
+// Data_Int_ringParity
+$GLOBALS['Data_Int_ringParity'] = ["sub" => ($GLOBALS['Data_Int_semiringParity'])['add'], "Semiring0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Int_semiringParity'] ?? \PhpursThunks::eval('Data_Int_semiringParity'));
+  $__res = $GLOBALS['Data_Int_semiringParity'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Int_divisionRingParity'] = function() { $v = ["recip" => (($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))['identity'], "Ring0" => function($dollar__unused_0 = null) {
+}];
+
+// Data_Int_divisionRingParity
+$GLOBALS['Data_Int_divisionRingParity'] = ["recip" => ($GLOBALS['Control_Category_categoryFn'])['identity'], "Ring0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Int_ringParity'] ?? \PhpursThunks::eval('Data_Int_ringParity'));
+  $__res = $GLOBALS['Data_Int_ringParity'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Int_decimal'] = function() { $v = 10; return $v; };
-\PhpursThunks::$thunks['Data_Int_commutativeRingParity'] = function() { $v = ["Ring0" => function($dollar__unused_0 = null) {
+}];
+
+// Data_Int_decimal
+$GLOBALS['Data_Int_decimal'] = 10;
+
+// Data_Int_commutativeRingParity
+$GLOBALS['Data_Int_commutativeRingParity'] = ["Ring0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Int_ringParity'] ?? \PhpursThunks::eval('Data_Int_ringParity'));
+  $__res = $GLOBALS['Data_Int_ringParity'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Int_euclideanRingParity'] = function() { $v = ["degree" => function($v_0 = null) {
+}];
+
+// Data_Int_euclideanRingParity
+$GLOBALS['Data_Int_euclideanRingParity'] = ["degree" => function($v_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object($v_0) && (($v_0)->{'tag'} === "Even"))) {
@@ -396,49 +506,27 @@ goto end_branch_0;;
   return $__fn;
 })(), "CommutativeRing0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Int_commutativeRingParity'] ?? \PhpursThunks::eval('Data_Int_commutativeRingParity'));
+  $__res = $GLOBALS['Data_Int_commutativeRingParity'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Int_ceil'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Int_unsafeClamp'] ?? \PhpursThunks::eval('Data_Int_unsafeClamp'))))(($GLOBALS['Data_Number_ceil'] ?? \PhpursThunks::eval('Data_Number_ceil'))); return $v; };
-\PhpursThunks::$thunks['Data_Int_boundedParity'] = function() { $v = ["bottom" => new Phpurs_Data0("Even"), "top" => new Phpurs_Data0("Odd"), "Ord0" => function($dollar__unused_0 = null) {
+}];
+
+// Data_Int_ceil
+$GLOBALS['Data_Int_ceil'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Int_unsafeClamp']))($GLOBALS['Data_Number_ceil']);
+
+// Data_Int_boundedParity
+$GLOBALS['Data_Int_boundedParity'] = ["bottom" => new Phpurs_Data0("Even"), "top" => new Phpurs_Data0("Odd"), "Ord0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Int_ordParity'] ?? \PhpursThunks::eval('Data_Int_ordParity'));
+  $__res = $GLOBALS['Data_Int_ordParity'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Int_binary'] = function() { $v = 2; return $v; };
-\PhpursThunks::$thunks['Data_Int_base36'] = function() { $v = 36; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+}];
 
+// Data_Int_binary
+$GLOBALS['Data_Int_binary'] = 2;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Data_Int_base36
+$GLOBALS['Data_Int_base36'] = 36;
 

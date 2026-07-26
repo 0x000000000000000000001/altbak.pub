@@ -97,24 +97,31 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Bifunctor_bimap'] = function() { $v = function($dict_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Bifunctor_bimap
+$GLOBALS['Data_Bifunctor_bimap'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['bimap'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Bifunctor_bivoid'] = function() { $v = function($dictBifunctor_0 = null) {
+};
+
+// Data_Bifunctor_bivoid
+$GLOBALS['Data_Bifunctor_bivoid'] = function($dictBifunctor_0 = null) {
   $__num = \func_num_args();
   $__res = ((($dictBifunctor_0)['bimap'])(function($v_1 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'));
+  $__res = $GLOBALS['Data_Unit_unit'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }))(function($v_1 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'));
+  $__res = $GLOBALS['Data_Unit_unit'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -122,28 +129,34 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Bifunctor_lmap'] = function() { $v = (function() {
+};
+
+// Data_Bifunctor_lmap
+$GLOBALS['Data_Bifunctor_lmap'] = (function() {
   $__fn = function($dictBifunctor_0 = null, $f_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictBifunctor_0)['bimap'])($f_1))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))['identity']);
+  $__res = ((($dictBifunctor_0)['bimap'])($f_1))(($GLOBALS['Control_Category_categoryFn'])['identity']);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Bifunctor_rmap'] = function() { $v = function($dictBifunctor_0 = null) {
+})();
+
+// Data_Bifunctor_rmap
+$GLOBALS['Data_Bifunctor_rmap'] = function($dictBifunctor_0 = null) {
   $__num = \func_num_args();
-  $__res = (($dictBifunctor_0)['bimap'])((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))['identity']);
+  $__res = (($dictBifunctor_0)['bimap'])(($GLOBALS['Control_Category_categoryFn'])['identity']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Bifunctor_bifunctorTuple'] = function() { $v = ["bimap" => (function() {
+};
+
+// Data_Bifunctor_bifunctorTuple
+$GLOBALS['Data_Bifunctor_bifunctorTuple'] = ["bimap" => (function() {
   $__fn = function($f_0 = null, $g_1 = null, $v_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -155,8 +168,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Bifunctor_bifunctorEither'] = function() { $v = ["bimap" => (function() {
+})()];
+
+// Data_Bifunctor_bifunctorEither
+$GLOBALS['Data_Bifunctor_bifunctorEither'] = ["bimap" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null, $v2_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -180,8 +195,10 @@ goto end_branch_0;;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Bifunctor_bifunctorConst'] = function() { $v = ["bimap" => (function() {
+})()];
+
+// Data_Bifunctor_bifunctorConst
+$GLOBALS['Data_Bifunctor_bifunctorConst'] = ["bimap" => (function() {
   $__fn = function($f_0 = null, $v_1 = null, $v1_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -193,14 +210,5 @@ goto end_branch_0;;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
+})()];
 

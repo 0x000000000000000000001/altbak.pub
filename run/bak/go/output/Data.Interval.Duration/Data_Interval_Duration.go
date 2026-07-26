@@ -9,7 +9,6 @@ import (
 	pkg_Data_Eq "gopurs/output/Data.Eq"
 	pkg_Data_Ord "gopurs/output/Data.Ord"
 	pkg_Data_Semiring "gopurs/output/Data.Semiring"
-	pkg_Control_Semigroupoid "gopurs/output/Control.Semigroupoid"
 	pkg_Data_EuclideanRing "gopurs/output/Data.EuclideanRing"
 	unsafe "unsafe"
 )
@@ -534,11 +533,9 @@ var cache_millisecond gopurs_runtime.Value
 var once_millisecond sync.Once
 func Get_millisecond() gopurs_runtime.Value {
 	once_millisecond.Do(func() {
-		cache_millisecond = gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value]{1, 1, gopurs_runtime.Value{Type: 9, IntVal: 3908053364, UnsafePtr: nil}, v_0, gopurs_runtime.Value{Type: 9, IntVal: 687041424, UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: 687041424, UnsafePtr: nil}})}
-}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingNumber(), "div"), v_0, gopurs_runtime.Float(1000.0))
-}))
+		cache_millisecond = gopurs_runtime.Func(func(x_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_millisecond(x_0_box.FloatVal())
+})
 	})
 	return cache_millisecond
 }
@@ -654,6 +651,12 @@ func Call_hour(v_0_loop float64) gopurs_runtime.Value {
 var v_0 float64 = v_0_loop
 _ = v_0
 return gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value]{1, 1, gopurs_runtime.Value{Type: 9, IntVal: 1292308612, UnsafePtr: nil}, gopurs_runtime.Float(v_0), gopurs_runtime.Value{Type: 9, IntVal: 687041424, UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: 687041424, UnsafePtr: nil}})}
+}
+
+func Call_millisecond(x_0_loop float64) gopurs_runtime.Value {
+var x_0 float64 = x_0_loop
+_ = x_0
+return gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value]{1, 1, gopurs_runtime.Value{Type: 9, IntVal: 3908053364, UnsafePtr: nil}, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingNumber(), "div"), gopurs_runtime.Float(x_0), gopurs_runtime.Float(1000.0)), gopurs_runtime.Value{Type: 9, IntVal: 687041424, UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: 687041424, UnsafePtr: nil}})}
 }
 
 func Call_minute(v_0_loop float64) gopurs_runtime.Value {

@@ -4,9 +4,6 @@ import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
 	pkg_Control_Monad_State_Trans "gopurs/output/Control.Monad.State.Trans"
-	pkg_Control_Semigroupoid "gopurs/output/Control.Semigroupoid"
-	pkg_Unsafe_Coerce "gopurs/output/Unsafe.Coerce"
-	pkg_Data_Identity "gopurs/output/Data.Identity"
 	pkg_Data_Tuple "gopurs/output/Data.Tuple"
 )
 
@@ -23,8 +20,8 @@ var cache_runState gopurs_runtime.Value
 var once_runState sync.Once
 func Get_runState() gopurs_runtime.Value {
 	once_runState.Do(func() {
-		cache_runState = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_runState(v_0_box)
+		cache_runState = gopurs_runtime.Func2(func(v_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_runState(v_0_box, x_1_box)
 })
 	})
 	return cache_runState
@@ -34,8 +31,8 @@ var cache_mapState gopurs_runtime.Value
 var once_mapState sync.Once
 func Get_mapState() gopurs_runtime.Value {
 	once_mapState.Do(func() {
-		cache_mapState = gopurs_runtime.Func(func(f_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_mapState(f_0_box)
+		cache_mapState = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_mapState(f_0_box, v_1_box, x_2_box)
 })
 	})
 	return cache_mapState
@@ -63,16 +60,22 @@ return Call_evalState(v_0_box, s_1_box)
 	return cache_evalState
 }
 
-func Call_runState(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_runState(v_0_loop gopurs_runtime.Value, x_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-return gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), pkg_Unsafe_Coerce.Get_unsafeCoerce(), v_0)
+var x_1 gopurs_runtime.Value = x_1_loop
+_ = x_1
+return gopurs_runtime.Apply(v_0, x_1)
 }
 
-func Call_mapState(f_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_mapState(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
-return gopurs_runtime.Apply(pkg_Control_Monad_State_Trans.Get_mapStateT(), gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), pkg_Data_Identity.Get_Identity(), gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), f_0, pkg_Unsafe_Coerce.Get_unsafeCoerce())))
+var v_1 gopurs_runtime.Value = v_1_loop
+_ = v_1
+var x_2 gopurs_runtime.Value = x_2_loop
+_ = x_2
+return gopurs_runtime.Apply(f_0, gopurs_runtime.Apply(v_1, x_2))
 }
 
 func Call_execState(v_0_loop gopurs_runtime.Value, s_1_loop gopurs_runtime.Value) gopurs_runtime.Value {

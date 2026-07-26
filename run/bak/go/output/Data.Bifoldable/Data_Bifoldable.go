@@ -7,14 +7,8 @@ import (
 	pkg_Data_Tuple "gopurs/output/Data.Tuple"
 	pkg_Data_Either "gopurs/output/Data.Either"
 	pkg_Control_Apply "gopurs/output/Control.Apply"
-	pkg_Control_Semigroupoid "gopurs/output/Control.Semigroupoid"
 	pkg_Data_Unit "gopurs/output/Data.Unit"
-	pkg_Data_Monoid_Dual "gopurs/output/Data.Monoid.Dual"
-	pkg_Data_Monoid_Endo "gopurs/output/Data.Monoid.Endo"
 	pkg_Data_Functor_Product2 "gopurs/output/Data.Functor.Product2"
-	pkg_Unsafe_Coerce "gopurs/output/Unsafe.Coerce"
-	pkg_Data_Monoid_Disj "gopurs/output/Data.Monoid.Disj"
-	pkg_Data_Monoid_Conj "gopurs/output/Data.Monoid.Conj"
 )
 
 var cache_identity gopurs_runtime.Value
@@ -389,7 +383,11 @@ return pkg_Control_Apply.Get_identity()
 })
 _ = applySecond_3_1
 return gopurs_runtime.Func2(func(f_4 gopurs_runtime.Value, g_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(((*gopurs_runtime.RecordData3)(dictBifoldable_0.UnsafePtr)).V2, gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), applySecond_3_1, f_4), gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), applySecond_3_1, g_5), gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictApplicative_1.UnsafePtr)).V0, pkg_Data_Unit.Get_unit()))
+return gopurs_runtime.Apply3(((*gopurs_runtime.RecordData3)(dictBifoldable_0.UnsafePtr)).V2, gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(applySecond_3_1, gopurs_runtime.Apply(f_4, x_6))
+}), gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(applySecond_3_1, gopurs_runtime.Apply(g_5, x_6))
+}), gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictApplicative_1.UnsafePtr)).V0, pkg_Data_Unit.Get_unit()))
 })
 }
 
@@ -456,12 +454,16 @@ var dictBifoldable_0 gopurs_runtime.Value = dictBifoldable_0_loop
 _ = dictBifoldable_0
 var dictMonoid_1 gopurs_runtime.Value = dictMonoid_1_loop
 _ = dictMonoid_1
-append_2_0 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_1, "Semigroup0_NOT_FOUND"), gopurs_runtime.Value{}), "append")
-_ = append_2_0
+__local_var_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_1, "Semigroup0_NOT_FOUND"), gopurs_runtime.Value{})
+_ = __local_var_2_0
 mempty_3_1 := ((*gopurs_runtime.RecordData1)(dictMonoid_1.UnsafePtr)).V0
 _ = mempty_3_1
 return gopurs_runtime.Func2(func(f_4 gopurs_runtime.Value, g_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(((*gopurs_runtime.RecordData3)(dictBifoldable_0.UnsafePtr)).V2, gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), append_2_0, f_4), gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), append_2_0, g_5), mempty_3_1)
+return gopurs_runtime.Apply3(((*gopurs_runtime.RecordData3)(dictBifoldable_0.UnsafePtr)).V2, gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_0, "append"), gopurs_runtime.Apply(f_4, x_6))
+}), gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_0, "append"), gopurs_runtime.Apply(g_5, x_6))
+}), mempty_3_1)
 })
 }
 
@@ -511,11 +513,11 @@ _ = dictBifoldable_0
 bifoldMap1_1_0 := gopurs_runtime.Apply(((*gopurs_runtime.RecordData3)(dictBifoldable_0.UnsafePtr)).V0, Get_monoidDual())
 _ = bifoldMap1_1_0
 return gopurs_runtime.Func4(func(f_2 gopurs_runtime.Value, g_3 gopurs_runtime.Value, z_4 gopurs_runtime.Value, p_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply4(bifoldMap1_1_0, gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), pkg_Data_Monoid_Dual.Get_Dual(), gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), pkg_Data_Monoid_Endo.Get_Endo(), gopurs_runtime.Func2(func(b_6 gopurs_runtime.Value, a_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(f_2, a_7, b_6)
-}))), gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), pkg_Data_Monoid_Dual.Get_Dual(), gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), pkg_Data_Monoid_Endo.Get_Endo(), gopurs_runtime.Func2(func(b_6 gopurs_runtime.Value, a_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(g_3, a_7, b_6)
-}))), p_5, z_4)
+return gopurs_runtime.Apply4(bifoldMap1_1_0, gopurs_runtime.Func2(func(x_6 gopurs_runtime.Value, a_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(f_2, a_7, x_6)
+}), gopurs_runtime.Func2(func(x_6 gopurs_runtime.Value, a_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(g_3, a_7, x_6)
+}), p_5, z_4)
 })
 }
 
@@ -525,7 +527,11 @@ _ = dictBifoldable_0
 bifoldMap1_1_0 := gopurs_runtime.Apply(((*gopurs_runtime.RecordData3)(dictBifoldable_0.UnsafePtr)).V0, Get_monoidEndo())
 _ = bifoldMap1_1_0
 return gopurs_runtime.Func4(func(f_2 gopurs_runtime.Value, g_3 gopurs_runtime.Value, z_4 gopurs_runtime.Value, p_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply4(bifoldMap1_1_0, gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), pkg_Data_Monoid_Endo.Get_Endo(), f_2), gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), pkg_Data_Monoid_Endo.Get_Endo(), g_3), p_5, z_4)
+return gopurs_runtime.Apply4(bifoldMap1_1_0, gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(f_2, x_6)
+}), gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(g_3, x_6)
+}), p_5, z_4)
 })
 }
 
@@ -577,7 +583,11 @@ return semigroupDisj1_3_2
 }), gopurs_runtime.RecordGet(__local_var_2_1, "ff")))
 _ = bifoldMap2_2_0
 return gopurs_runtime.Func2(func(p_3 gopurs_runtime.Value, q_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), pkg_Unsafe_Coerce.Get_unsafeCoerce(), gopurs_runtime.Apply2(bifoldMap2_2_0, gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), pkg_Data_Monoid_Disj.Get_Disj(), p_3), gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), pkg_Data_Monoid_Disj.Get_Disj(), q_4)))
+return gopurs_runtime.Apply2(bifoldMap2_2_0, gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(p_3, x_5)
+}), gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(q_4, x_5)
+}))
 })
 }
 
@@ -597,7 +607,11 @@ return semigroupConj1_3_2
 }), gopurs_runtime.RecordGet(__local_var_2_1, "tt")))
 _ = bifoldMap2_2_0
 return gopurs_runtime.Func2(func(p_3 gopurs_runtime.Value, q_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), pkg_Unsafe_Coerce.Get_unsafeCoerce(), gopurs_runtime.Apply2(bifoldMap2_2_0, gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), pkg_Data_Monoid_Conj.Get_Conj(), p_3), gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), pkg_Data_Monoid_Conj.Get_Conj(), q_4)))
+return gopurs_runtime.Apply2(bifoldMap2_2_0, gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(p_3, x_5)
+}), gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(q_4, x_5)
+}))
 })
 }
 

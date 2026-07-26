@@ -98,9 +98,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Effect_Now_nowTime'] = function() { $v = (((($GLOBALS['Effect_applyEffect'] ?? \PhpursThunks::eval('Effect_applyEffect')))['apply'])((($GLOBALS['Effect_pureE'] ?? \PhpursThunks::eval('Effect_pureE')))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_DateTime_time'] ?? \PhpursThunks::eval('Data_DateTime_time'))))(($GLOBALS['Data_DateTime_Instant_toDateTime'] ?? \PhpursThunks::eval('Data_DateTime_Instant_toDateTime'))))))(($GLOBALS['Effect_Now_now'] ?? \PhpursThunks::eval('Effect_Now_now'))); return $v; };
-\PhpursThunks::$thunks['Effect_Now_nowDateTime'] = function() { $v = (((($GLOBALS['Effect_applyEffect'] ?? \PhpursThunks::eval('Effect_applyEffect')))['apply'])((($GLOBALS['Effect_pureE'] ?? \PhpursThunks::eval('Effect_pureE')))(($GLOBALS['Data_DateTime_Instant_toDateTime'] ?? \PhpursThunks::eval('Data_DateTime_Instant_toDateTime')))))(($GLOBALS['Effect_Now_now'] ?? \PhpursThunks::eval('Effect_Now_now'))); return $v; };
-\PhpursThunks::$thunks['Effect_Now_nowDate'] = function() { $v = (((($GLOBALS['Effect_applyEffect'] ?? \PhpursThunks::eval('Effect_applyEffect')))['apply'])((($GLOBALS['Effect_pureE'] ?? \PhpursThunks::eval('Effect_pureE')))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_DateTime_date'] ?? \PhpursThunks::eval('Data_DateTime_date'))))(($GLOBALS['Data_DateTime_Instant_toDateTime'] ?? \PhpursThunks::eval('Data_DateTime_Instant_toDateTime'))))))(($GLOBALS['Effect_Now_now'] ?? \PhpursThunks::eval('Effect_Now_now'))); return $v; };
+
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Effect_Now = \call_user_func(function() {
   $exports = [];
@@ -117,10 +115,16 @@ $exports['getTimezoneOffset'] = $getTimezoneOffset;
 return $exports;
   return $exports;
 });
-\PhpursThunks::$thunks['Effect_Now_getTimezoneOffset'] = function() use (&$ffi_Effect_Now) { return $ffi_Effect_Now['getTimezoneOffset']; };
-\PhpursThunks::$thunks['Effect_Now_now'] = function() use (&$ffi_Effect_Now) { return $ffi_Effect_Now['now']; };
+$GLOBALS['Effect_Now_getTimezoneOffset'] = $ffi_Effect_Now['getTimezoneOffset'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Effect_Now_now'] = $ffi_Effect_Now['now'] ?? new class { public function __invoke(...$args) { return $this; } };
 
 
+// Effect_Now_nowTime
+$GLOBALS['Effect_Now_nowTime'] = ((($GLOBALS['Effect_applyEffect'])['apply'])(($GLOBALS['Effect_pureE'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_DateTime_time']))($GLOBALS['Data_DateTime_Instant_toDateTime']))))($GLOBALS['Effect_Now_now']);
 
+// Effect_Now_nowDateTime
+$GLOBALS['Effect_Now_nowDateTime'] = ((($GLOBALS['Effect_applyEffect'])['apply'])(($GLOBALS['Effect_pureE'])($GLOBALS['Data_DateTime_Instant_toDateTime'])))($GLOBALS['Effect_Now_now']);
 
+// Effect_Now_nowDate
+$GLOBALS['Effect_Now_nowDate'] = ((($GLOBALS['Effect_applyEffect'])['apply'])(($GLOBALS['Effect_pureE'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_DateTime_date']))($GLOBALS['Data_DateTime_Instant_toDateTime']))))($GLOBALS['Effect_Now_now']);
 

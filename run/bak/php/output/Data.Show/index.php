@@ -97,144 +97,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Show_showVoid'] = function() { $v = ["show" => ($GLOBALS['Data_Void_absurd'] ?? \PhpursThunks::eval('Data_Void_absurd'))]; return $v; };
-\PhpursThunks::$thunks['Data_Show_showUnit'] = function() { $v = ["show" => function($v_0 = null) {
-  $__num = \func_num_args();
-  $__res = "unit";
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Show_showString'] = function() { $v = ["show" => ($GLOBALS['Data_Show_showStringImpl'] ?? \PhpursThunks::eval('Data_Show_showStringImpl'))]; return $v; };
-\PhpursThunks::$thunks['Data_Show_showRecordFieldsNil'] = function() { $v = ["showRecordFields" => (function() {
-  $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = "";
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Show_showRecordFields'] = function() { $v = function($dict_0 = null) {
-  $__num = \func_num_args();
-  $__res = ($dict_0)['showRecordFields'];
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Show_showRecord'] = function() { $v = (function() {
-  $__fn = function($dollar__unused_0 = null, $dollar__unused_1 = null, $dictShowRecordFields_2 = null) use (&$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
-  $__res = ["show" => function($record_3 = null) use ($dictShowRecordFields_2) {
-  $__num = \func_num_args();
-  $__res = (("{" . ((($dictShowRecordFields_2)['showRecordFields'])(new Phpurs_Data0("Proxy")))($record_3)) . "}");
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}];
-  goto __end;;
-  __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Show_showProxy'] = function() { $v = ["show" => function($v_0 = null) {
-  $__num = \func_num_args();
-  $__res = "Proxy";
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Show_showNumber'] = function() { $v = ["show" => ($GLOBALS['Data_Show_showNumberImpl'] ?? \PhpursThunks::eval('Data_Show_showNumberImpl'))]; return $v; };
-\PhpursThunks::$thunks['Data_Show_showInt'] = function() { $v = ["show" => ($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl'))]; return $v; };
-\PhpursThunks::$thunks['Data_Show_showChar'] = function() { $v = ["show" => ($GLOBALS['Data_Show_showCharImpl'] ?? \PhpursThunks::eval('Data_Show_showCharImpl'))]; return $v; };
-\PhpursThunks::$thunks['Data_Show_showBoolean'] = function() { $v = ["show" => function($v_0 = null) {
-  $__num = \func_num_args();
-  $__t0 = null;;
-  if ($v_0) {
-$__t0 = "true";
-goto end_branch_0;;
-};
-  $__t0 = "false";
-  end_branch_0:;
-  $__res = $__t0;
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Show_show'] = function() { $v = function($dict_0 = null) {
-  $__num = \func_num_args();
-  $__res = ($dict_0)['show'];
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Show_showArray'] = function() { $v = function($dictShow_0 = null) {
-  $__num = \func_num_args();
-  $__res = ["show" => (($GLOBALS['Data_Show_showArrayImpl'] ?? \PhpursThunks::eval('Data_Show_showArrayImpl')))(($dictShow_0)['show'])];
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Show_showRecordFieldsCons'] = function() { $v = (function() {
-  $__fn = function($dictIsSymbol_0 = null, $dictShowRecordFields_1 = null, $dictShow_2 = null) use (&$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
-  $__res = ["showRecordFields" => (function() use ($dictIsSymbol_0, $dictShowRecordFields_1, $dictShow_2) {
-  $__fn = function($v_3 = null, $record_4 = null) use ($dictIsSymbol_0, $dictShowRecordFields_1, $dictShow_2, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $key_5_0 = (($dictIsSymbol_0)['reflectSymbol'])(new Phpurs_Data0("Proxy"));
-  $__res = (((((" " . $key_5_0) . ": ") . (($dictShow_2)['show'])(((($GLOBALS['Record_Unsafe_unsafeGet'] ?? \PhpursThunks::eval('Record_Unsafe_unsafeGet')))($key_5_0))($record_4))) . ",") . ((($dictShowRecordFields_1)['showRecordFields'])(new Phpurs_Data0("Proxy")))($record_4));
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
-  goto __end;;
-  __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Show_showRecordFieldsConsNil'] = function() { $v = (function() {
-  $__fn = function($dictIsSymbol_0 = null, $dictShow_1 = null) use (&$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ["showRecordFields" => (function() use ($dictIsSymbol_0, $dictShow_1) {
-  $__fn = function($v_2 = null, $record_3 = null) use ($dictIsSymbol_0, $dictShow_1, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $key_4_0 = (($dictIsSymbol_0)['reflectSymbol'])(new Phpurs_Data0("Proxy"));
-  $__res = ((((" " . $key_4_0) . ": ") . (($dictShow_1)['show'])(((($GLOBALS['Record_Unsafe_unsafeGet'] ?? \PhpursThunks::eval('Record_Unsafe_unsafeGet')))($key_4_0))($record_3))) . " ");
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(); return $v; };
+
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Data_Show = \call_user_func(function() {
   $exports = [];
@@ -269,25 +132,178 @@ $exports['showArrayImpl'] = $showArrayImpl;
 return $exports;
   return $exports;
 });
-\PhpursThunks::$thunks['Data_Show_showArrayImpl'] = function() use (&$ffi_Data_Show) { return $ffi_Data_Show['showArrayImpl']; };
-\PhpursThunks::$thunks['Data_Show_showCharImpl'] = function() use (&$ffi_Data_Show) { return $ffi_Data_Show['showCharImpl']; };
-\PhpursThunks::$thunks['Data_Show_showIntImpl'] = function() use (&$ffi_Data_Show) { return $ffi_Data_Show['showIntImpl']; };
-\PhpursThunks::$thunks['Data_Show_showNumberImpl'] = function() use (&$ffi_Data_Show) { return $ffi_Data_Show['showNumberImpl']; };
-\PhpursThunks::$thunks['Data_Show_showStringImpl'] = function() use (&$ffi_Data_Show) { return $ffi_Data_Show['showStringImpl']; };
+$GLOBALS['Data_Show_showArrayImpl'] = $ffi_Data_Show['showArrayImpl'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Show_showCharImpl'] = $ffi_Data_Show['showCharImpl'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Show_showIntImpl'] = $ffi_Data_Show['showIntImpl'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Show_showNumberImpl'] = $ffi_Data_Show['showNumberImpl'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Show_showStringImpl'] = $ffi_Data_Show['showStringImpl'] ?? new class { public function __invoke(...$args) { return $this; } };
 
 
+// Data_Show_showVoid
+$GLOBALS['Data_Show_showVoid'] = ["show" => $GLOBALS['Data_Void_absurd']];
 
+// Data_Show_showUnit
+$GLOBALS['Data_Show_showUnit'] = ["show" => function($v_0 = null) {
+  $__num = \func_num_args();
+  $__res = "unit";
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
+// Data_Show_showString
+$GLOBALS['Data_Show_showString'] = ["show" => $GLOBALS['Data_Show_showStringImpl']];
 
+// Data_Show_showRecordFieldsNil
+$GLOBALS['Data_Show_showRecordFieldsNil'] = ["showRecordFields" => (function() {
+  $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = "";
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})()];
 
+// Data_Show_showRecordFields
+$GLOBALS['Data_Show_showRecordFields'] = function($dict_0 = null) {
+  $__num = \func_num_args();
+  $__res = ($dict_0)['showRecordFields'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 
+// Data_Show_showRecord
+$GLOBALS['Data_Show_showRecord'] = (function() {
+  $__fn = function($dollar__unused_0 = null, $dollar__unused_1 = null, $dictShowRecordFields_2 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 3) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  }
+  $__res = ["show" => function($record_3 = null) use ($dictShowRecordFields_2) {
+  $__num = \func_num_args();
+  $__res = (("{" . ((($dictShowRecordFields_2)['showRecordFields'])(new Phpurs_Data0("Proxy")))($record_3)) . "}");
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+  goto __end;;
+  __end:
+  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+  };
+  return $__fn;
+})();
 
+// Data_Show_showProxy
+$GLOBALS['Data_Show_showProxy'] = ["show" => function($v_0 = null) {
+  $__num = \func_num_args();
+  $__res = "Proxy";
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
+// Data_Show_showNumber
+$GLOBALS['Data_Show_showNumber'] = ["show" => $GLOBALS['Data_Show_showNumberImpl']];
 
+// Data_Show_showInt
+$GLOBALS['Data_Show_showInt'] = ["show" => $GLOBALS['Data_Show_showIntImpl']];
 
+// Data_Show_showChar
+$GLOBALS['Data_Show_showChar'] = ["show" => $GLOBALS['Data_Show_showCharImpl']];
 
+// Data_Show_showBoolean
+$GLOBALS['Data_Show_showBoolean'] = ["show" => function($v_0 = null) {
+  $__num = \func_num_args();
+  $__t0 = null;;
+  if ($v_0) {
+$__t0 = "true";
+goto end_branch_0;;
+};
+  $__t0 = "false";
+  end_branch_0:;
+  $__res = $__t0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
+// Data_Show_show
+$GLOBALS['Data_Show_show'] = function($dict_0 = null) {
+  $__num = \func_num_args();
+  $__res = ($dict_0)['show'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 
+// Data_Show_showArray
+$GLOBALS['Data_Show_showArray'] = function($dictShow_0 = null) {
+  $__num = \func_num_args();
+  $__res = ["show" => ($GLOBALS['Data_Show_showArrayImpl'])(($dictShow_0)['show'])];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 
+// Data_Show_showRecordFieldsCons
+$GLOBALS['Data_Show_showRecordFieldsCons'] = (function() {
+  $__fn = function($dictIsSymbol_0 = null, $dictShowRecordFields_1 = null, $dictShow_2 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 3) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  }
+  $__res = ["showRecordFields" => (function() use ($dictIsSymbol_0, $dictShowRecordFields_1, $dictShow_2) {
+  $__fn = function($v_3 = null, $record_4 = null) use ($dictIsSymbol_0, $dictShowRecordFields_1, $dictShow_2, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $key_5_0 = (($dictIsSymbol_0)['reflectSymbol'])(new Phpurs_Data0("Proxy"));
+  $__res = (((((" " . $key_5_0) . ": ") . (($dictShow_2)['show'])((($GLOBALS['Record_Unsafe_unsafeGet'])($key_5_0))($record_4))) . ",") . ((($dictShowRecordFields_1)['showRecordFields'])(new Phpurs_Data0("Proxy")))($record_4));
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})()];
+  goto __end;;
+  __end:
+  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+  };
+  return $__fn;
+})();
 
+// Data_Show_showRecordFieldsConsNil
+$GLOBALS['Data_Show_showRecordFieldsConsNil'] = (function() {
+  $__fn = function($dictIsSymbol_0 = null, $dictShow_1 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ["showRecordFields" => (function() use ($dictIsSymbol_0, $dictShow_1) {
+  $__fn = function($v_2 = null, $record_3 = null) use ($dictIsSymbol_0, $dictShow_1, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $key_4_0 = (($dictIsSymbol_0)['reflectSymbol'])(new Phpurs_Data0("Proxy"));
+  $__res = ((((" " . $key_4_0) . ": ") . (($dictShow_1)['show'])((($GLOBALS['Record_Unsafe_unsafeGet'])($key_4_0))($record_3))) . " ");
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})()];
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
 

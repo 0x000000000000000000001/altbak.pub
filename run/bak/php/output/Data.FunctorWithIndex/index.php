@@ -113,14 +113,46 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_FunctorWithIndex_mapWithIndex'] = function() { $v = function($dict_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+$ffi_Data_FunctorWithIndex = \call_user_func(function() {
+  $exports = [];
+$mapWithIndexArray = function($f, $xs = null) use (&$mapWithIndexArray) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$mapWithIndexArray) {
+            return $mapWithIndexArray(...\array_merge($__args, $more));
+        };
+    }
+    
+    $len = \count($xs);
+    $result = array_fill(0, $len, null);
+    for ($i = 0; $i < $len; $i++) {
+        $f1 = $f($i);
+        $result[$i] = $f1($xs[$i]);
+    }
+    return $result;
+};
+
+$exports['mapWithIndexArray'] = $mapWithIndexArray;
+
+return $exports;
+  return $exports;
+});
+$GLOBALS['Data_FunctorWithIndex_mapWithIndexArray'] = $ffi_Data_FunctorWithIndex['mapWithIndexArray'] ?? new class { public function __invoke(...$args) { return $this; } };
+
+
+// Data_FunctorWithIndex_mapWithIndex
+$GLOBALS['Data_FunctorWithIndex_mapWithIndex'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['mapWithIndex'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_FunctorWithIndex_mapDefault'] = function() { $v = (function() {
+};
+
+// Data_FunctorWithIndex_mapDefault
+$GLOBALS['Data_FunctorWithIndex_mapDefault'] = (function() {
   $__fn = function($dictFunctorWithIndex_0 = null, $f_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -138,10 +170,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_FunctorWithIndex_functorWithIndexTuple'] = function() { $v = ["mapWithIndex" => function($f_0 = null) {
+})();
+
+// Data_FunctorWithIndex_functorWithIndexTuple
+$GLOBALS['Data_FunctorWithIndex_functorWithIndexTuple'] = ["mapWithIndex" => function($f_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = ($f_0)(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')));
+  $__local_var_1_0 = ($f_0)($GLOBALS['Data_Unit_unit']);
   $__res = function($m_2 = null) use ($__local_var_1_0) {
   $__num = \func_num_args();
   $__res = new Phpurs_Data2("Tuple", ($m_2)->{'value0'}, ($__local_var_1_0)(($m_2)->{'value1'}));
@@ -154,17 +188,19 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Functor0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Tuple_functorTuple'] ?? \PhpursThunks::eval('Data_Tuple_functorTuple'));
+  $__res = $GLOBALS['Data_Tuple_functorTuple'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_FunctorWithIndex_functorWithIndexProduct'] = function() { $v = function($dictFunctorWithIndex_0 = null) {
+}];
+
+// Data_FunctorWithIndex_functorWithIndexProduct
+$GLOBALS['Data_FunctorWithIndex_functorWithIndexProduct'] = function($dictFunctorWithIndex_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictFunctorWithIndex_0)['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_1_0 = (($dictFunctorWithIndex_0)['Functor0'])($GLOBALS['Prim_undefined']);
   $__res = function($dictFunctorWithIndex1_2 = null) use ($__local_var_1_0, $dictFunctorWithIndex_0) {
   $__num = \func_num_args();
-  $__local_var_3_1 = (($dictFunctorWithIndex1_2)['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_3_1 = (($dictFunctorWithIndex1_2)['Functor0'])($GLOBALS['Prim_undefined']);
   $functorProduct1_4_2 = ["map" => (function() use ($__local_var_1_0, $__local_var_3_1) {
   $__fn = function($f_4 = null, $v_5 = null) use ($__local_var_1_0, $__local_var_3_1, &$__fn) {
   $__num = \func_num_args();
@@ -184,7 +220,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", ((($dictFunctorWithIndex_0)['mapWithIndex'])(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($f_5))(($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left')))))(($v_6)->{'value0'}), ((($dictFunctorWithIndex1_2)['mapWithIndex'])(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($f_5))(($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right')))))(($v_6)->{'value1'}));
+  $__res = new Phpurs_Data2("Tuple", ((($dictFunctorWithIndex_0)['mapWithIndex'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_5))($GLOBALS['Data_Either_Left'])))(($v_6)->{'value0'}), ((($dictFunctorWithIndex1_2)['mapWithIndex'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_5))($GLOBALS['Data_Either_Right'])))(($v_6)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -204,23 +240,27 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_FunctorWithIndex_functorWithIndexMultiplicative'] = function() { $v = ["mapWithIndex" => function($f_0 = null) {
+};
+
+// Data_FunctorWithIndex_functorWithIndexMultiplicative
+$GLOBALS['Data_FunctorWithIndex_functorWithIndexMultiplicative'] = ["mapWithIndex" => function($f_0 = null) {
   $__num = \func_num_args();
-  $__res = ($f_0)(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')));
+  $__res = ($f_0)($GLOBALS['Data_Unit_unit']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Functor0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Monoid_Multiplicative_functorMultiplicative'] ?? \PhpursThunks::eval('Data_Monoid_Multiplicative_functorMultiplicative'));
+  $__res = $GLOBALS['Data_Monoid_Multiplicative_functorMultiplicative'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_FunctorWithIndex_functorWithIndexMaybe'] = function() { $v = ["mapWithIndex" => function($f_0 = null) {
+}];
+
+// Data_FunctorWithIndex_functorWithIndexMaybe
+$GLOBALS['Data_FunctorWithIndex_functorWithIndexMaybe'] = ["mapWithIndex" => function($f_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = ($f_0)(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')));
+  $__local_var_1_0 = ($f_0)($GLOBALS['Data_Unit_unit']);
   $__res = function($v1_2 = null) use ($__local_var_1_0) {
   $__num = \func_num_args();
   $__t1 = null;;
@@ -240,14 +280,16 @@ goto end_branch_1;;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Functor0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Maybe_functorMaybe'] ?? \PhpursThunks::eval('Data_Maybe_functorMaybe'));
+  $__res = $GLOBALS['Data_Maybe_functorMaybe'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_FunctorWithIndex_functorWithIndexLast'] = function() { $v = ["mapWithIndex" => function($f_0 = null) {
+}];
+
+// Data_FunctorWithIndex_functorWithIndexLast
+$GLOBALS['Data_FunctorWithIndex_functorWithIndexLast'] = ["mapWithIndex" => function($f_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = ($f_0)(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')));
+  $__local_var_1_0 = ($f_0)($GLOBALS['Data_Unit_unit']);
   $__res = function($v1_2 = null) use ($__local_var_1_0) {
   $__num = \func_num_args();
   $__t1 = null;;
@@ -267,18 +309,20 @@ goto end_branch_1;;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Functor0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Maybe_functorMaybe'] ?? \PhpursThunks::eval('Data_Maybe_functorMaybe'));
+  $__res = $GLOBALS['Data_Maybe_functorMaybe'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_FunctorWithIndex_functorWithIndexIdentity'] = function() { $v = ["mapWithIndex" => (function() {
+}];
+
+// Data_FunctorWithIndex_functorWithIndexIdentity
+$GLOBALS['Data_FunctorWithIndex_functorWithIndexIdentity'] = ["mapWithIndex" => (function() {
   $__fn = function($f_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($f_0)(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'))))($v_1);
+  $__res = (($f_0)($GLOBALS['Data_Unit_unit']))($v_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -286,14 +330,16 @@ goto end_branch_1;;
   return $__fn;
 })(), "Functor0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Identity_functorIdentity'] ?? \PhpursThunks::eval('Data_Identity_functorIdentity'));
+  $__res = $GLOBALS['Data_Identity_functorIdentity'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_FunctorWithIndex_functorWithIndexFirst'] = function() { $v = ["mapWithIndex" => function($f_0 = null) {
+}];
+
+// Data_FunctorWithIndex_functorWithIndexFirst
+$GLOBALS['Data_FunctorWithIndex_functorWithIndexFirst'] = ["mapWithIndex" => function($f_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = ($f_0)(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')));
+  $__local_var_1_0 = ($f_0)($GLOBALS['Data_Unit_unit']);
   $__res = function($v1_2 = null) use ($__local_var_1_0) {
   $__num = \func_num_args();
   $__t1 = null;;
@@ -313,14 +359,16 @@ goto end_branch_1;;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Functor0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Maybe_functorMaybe'] ?? \PhpursThunks::eval('Data_Maybe_functorMaybe'));
+  $__res = $GLOBALS['Data_Maybe_functorMaybe'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_FunctorWithIndex_functorWithIndexEither'] = function() { $v = ["mapWithIndex" => function($f_0 = null) {
+}];
+
+// Data_FunctorWithIndex_functorWithIndexEither
+$GLOBALS['Data_FunctorWithIndex_functorWithIndexEither'] = ["mapWithIndex" => function($f_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = ($f_0)(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')));
+  $__local_var_1_0 = ($f_0)($GLOBALS['Data_Unit_unit']);
   $__res = function($m_2 = null) use ($__local_var_1_0) {
   $__num = \func_num_args();
   $__t1 = null;;
@@ -345,43 +393,49 @@ goto end_branch_1;;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Functor0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Either_functorEither'] ?? \PhpursThunks::eval('Data_Either_functorEither'));
+  $__res = $GLOBALS['Data_Either_functorEither'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_FunctorWithIndex_functorWithIndexDual'] = function() { $v = ["mapWithIndex" => function($f_0 = null) {
+}];
+
+// Data_FunctorWithIndex_functorWithIndexDual
+$GLOBALS['Data_FunctorWithIndex_functorWithIndexDual'] = ["mapWithIndex" => function($f_0 = null) {
   $__num = \func_num_args();
-  $__res = ($f_0)(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Functor0" => function($dollar__unused_0 = null) {
-  $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Monoid_Dual_functorDual'] ?? \PhpursThunks::eval('Data_Monoid_Dual_functorDual'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_FunctorWithIndex_functorWithIndexDisj'] = function() { $v = ["mapWithIndex" => function($f_0 = null) {
-  $__num = \func_num_args();
-  $__res = ($f_0)(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')));
+  $__res = ($f_0)($GLOBALS['Data_Unit_unit']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Functor0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Monoid_Disj_functorDisj'] ?? \PhpursThunks::eval('Data_Monoid_Disj_functorDisj'));
+  $__res = $GLOBALS['Data_Monoid_Dual_functorDual'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_FunctorWithIndex_functorWithIndexCoproduct'] = function() { $v = function($dictFunctorWithIndex_0 = null) {
+}];
+
+// Data_FunctorWithIndex_functorWithIndexDisj
+$GLOBALS['Data_FunctorWithIndex_functorWithIndexDisj'] = ["mapWithIndex" => function($f_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictFunctorWithIndex_0)['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__res = ($f_0)($GLOBALS['Data_Unit_unit']);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Functor0" => function($dollar__unused_0 = null) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Data_Monoid_Disj_functorDisj'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+
+// Data_FunctorWithIndex_functorWithIndexCoproduct
+$GLOBALS['Data_FunctorWithIndex_functorWithIndexCoproduct'] = function($dictFunctorWithIndex_0 = null) {
+  $__num = \func_num_args();
+  $__local_var_1_0 = (($dictFunctorWithIndex_0)['Functor0'])($GLOBALS['Prim_undefined']);
   $__res = function($dictFunctorWithIndex1_2 = null) use ($__local_var_1_0, $dictFunctorWithIndex_0) {
   $__num = \func_num_args();
-  $__local_var_3_1 = (($dictFunctorWithIndex1_2)['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_3_1 = (($dictFunctorWithIndex1_2)['Functor0'])($GLOBALS['Prim_undefined']);
   $functorCoproduct1_4_2 = ["map" => (function() use ($__local_var_1_0, $__local_var_3_1) {
   $__fn = function($f_4 = null, $v_5 = null) use ($__local_var_1_0, $__local_var_3_1, &$__fn) {
   $__num = \func_num_args();
@@ -415,8 +469,8 @@ goto end_branch_4;;
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__local_var_7_6 = (($dictFunctorWithIndex_0)['mapWithIndex'])(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($f_5))(($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left'))));
-  $__local_var_8_7 = (($dictFunctorWithIndex1_2)['mapWithIndex'])(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($f_5))(($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right'))));
+  $__local_var_7_6 = (($dictFunctorWithIndex_0)['mapWithIndex'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_5))($GLOBALS['Data_Either_Left']));
+  $__local_var_8_7 = (($dictFunctorWithIndex1_2)['mapWithIndex'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_5))($GLOBALS['Data_Either_Right']));
   $__t8 = null;;
   if ((is_object($v_6) && (($v_6)->{'tag'} === "Left"))) {
 $__t8 = new Phpurs_Data1("Left", ($__local_var_7_6)(($v_6)->{'value0'}));
@@ -449,8 +503,10 @@ goto end_branch_8;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_FunctorWithIndex_functorWithIndexConst'] = function() { $v = ["mapWithIndex" => (function() {
+};
+
+// Data_FunctorWithIndex_functorWithIndexConst
+$GLOBALS['Data_FunctorWithIndex_functorWithIndexConst'] = ["mapWithIndex" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -464,31 +520,35 @@ goto end_branch_8;;
   return $__fn;
 })(), "Functor0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Const_functorConst'] ?? \PhpursThunks::eval('Data_Const_functorConst'));
+  $__res = $GLOBALS['Data_Const_functorConst'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_FunctorWithIndex_functorWithIndexConj'] = function() { $v = ["mapWithIndex" => function($f_0 = null) {
+}];
+
+// Data_FunctorWithIndex_functorWithIndexConj
+$GLOBALS['Data_FunctorWithIndex_functorWithIndexConj'] = ["mapWithIndex" => function($f_0 = null) {
   $__num = \func_num_args();
-  $__res = ($f_0)(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')));
+  $__res = ($f_0)($GLOBALS['Data_Unit_unit']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Functor0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Monoid_Conj_functorConj'] ?? \PhpursThunks::eval('Data_Monoid_Conj_functorConj'));
+  $__res = $GLOBALS['Data_Monoid_Conj_functorConj'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_FunctorWithIndex_functorWithIndexCompose'] = function() { $v = function($dictFunctorWithIndex_0 = null) {
+}];
+
+// Data_FunctorWithIndex_functorWithIndexCompose
+$GLOBALS['Data_FunctorWithIndex_functorWithIndexCompose'] = function($dictFunctorWithIndex_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictFunctorWithIndex_0)['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_1_0 = (($dictFunctorWithIndex_0)['Functor0'])($GLOBALS['Prim_undefined']);
   $__res = function($dictFunctorWithIndex1_2 = null) use ($__local_var_1_0, $dictFunctorWithIndex_0) {
   $__num = \func_num_args();
   $mapWithIndex2_3_1 = ($dictFunctorWithIndex1_2)['mapWithIndex'];
-  $__local_var_4_2 = (($dictFunctorWithIndex1_2)['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_4_2 = (($dictFunctorWithIndex1_2)['Functor0'])($GLOBALS['Prim_undefined']);
   $functorCompose1_5_3 = ["map" => (function() use ($__local_var_1_0, $__local_var_4_2) {
   $__fn = function($f_5 = null, $v_6 = null) use ($__local_var_1_0, $__local_var_4_2, &$__fn) {
   $__num = \func_num_args();
@@ -508,7 +568,7 @@ goto end_branch_8;;
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictFunctorWithIndex_0)['mapWithIndex'])(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($mapWithIndex2_3_1))((function() use ($f_6) {
+  $__res = ((($dictFunctorWithIndex_0)['mapWithIndex'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($mapWithIndex2_3_1))((function() use ($f_6) {
   $__fn = function($a_8 = null, $b_9 = null) use ($f_6, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -540,17 +600,21 @@ goto end_branch_8;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_FunctorWithIndex_functorWithIndexArray'] = function() { $v = ["mapWithIndex" => ($GLOBALS['Data_FunctorWithIndex_mapWithIndexArray'] ?? \PhpursThunks::eval('Data_FunctorWithIndex_mapWithIndexArray')), "Functor0" => function($dollar__unused_0 = null) {
+};
+
+// Data_FunctorWithIndex_functorWithIndexArray
+$GLOBALS['Data_FunctorWithIndex_functorWithIndexArray'] = ["mapWithIndex" => $GLOBALS['Data_FunctorWithIndex_mapWithIndexArray'], "Functor0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Functor_functorArray'] ?? \PhpursThunks::eval('Data_Functor_functorArray'));
+  $__res = $GLOBALS['Data_Functor_functorArray'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_FunctorWithIndex_functorWithIndexApp'] = function() { $v = function($dictFunctorWithIndex_0 = null) {
+}];
+
+// Data_FunctorWithIndex_functorWithIndexApp
+$GLOBALS['Data_FunctorWithIndex_functorWithIndexApp'] = function($dictFunctorWithIndex_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictFunctorWithIndex_0)['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_1_0 = (($dictFunctorWithIndex_0)['Functor0'])($GLOBALS['Prim_undefined']);
   $__res = ["mapWithIndex" => (function() use ($dictFunctorWithIndex_0) {
   $__fn = function($f_2 = null, $v_3 = null) use ($dictFunctorWithIndex_0, &$__fn) {
   $__num = \func_num_args();
@@ -573,64 +637,20 @@ goto end_branch_8;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_FunctorWithIndex_functorWithIndexAdditive'] = function() { $v = ["mapWithIndex" => function($f_0 = null) {
+};
+
+// Data_FunctorWithIndex_functorWithIndexAdditive
+$GLOBALS['Data_FunctorWithIndex_functorWithIndexAdditive'] = ["mapWithIndex" => function($f_0 = null) {
   $__num = \func_num_args();
-  $__res = ($f_0)(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')));
+  $__res = ($f_0)($GLOBALS['Data_Unit_unit']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Functor0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Monoid_Additive_functorAdditive'] ?? \PhpursThunks::eval('Data_Monoid_Additive_functorAdditive'));
+  $__res = $GLOBALS['Data_Monoid_Additive_functorAdditive'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-$ffi_Data_FunctorWithIndex = \call_user_func(function() {
-  $exports = [];
-$mapWithIndexArray = function($f, $xs = null) use (&$mapWithIndexArray) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$mapWithIndexArray) {
-            return $mapWithIndexArray(...\array_merge($__args, $more));
-        };
-    }
-    
-    $len = \count($xs);
-    $result = array_fill(0, $len, null);
-    for ($i = 0; $i < $len; $i++) {
-        $f1 = $f($i);
-        $result[$i] = $f1($xs[$i]);
-    }
-    return $result;
-};
-
-$exports['mapWithIndexArray'] = $mapWithIndexArray;
-
-return $exports;
-  return $exports;
-});
-\PhpursThunks::$thunks['Data_FunctorWithIndex_mapWithIndexArray'] = function() use (&$ffi_Data_FunctorWithIndex) { return $ffi_Data_FunctorWithIndex['mapWithIndexArray']; };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}];
 

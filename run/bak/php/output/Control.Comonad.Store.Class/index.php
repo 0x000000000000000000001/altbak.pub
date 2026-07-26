@@ -102,21 +102,30 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Control_Comonad_Store_Class_pos'] = function() { $v = function($dict_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Control_Comonad_Store_Class_pos
+$GLOBALS['Control_Comonad_Store_Class_pos'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['pos'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Store_Class_peek'] = function() { $v = function($dict_0 = null) {
+};
+
+// Control_Comonad_Store_Class_peek
+$GLOBALS['Control_Comonad_Store_Class_peek'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['peek'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Store_Class_peeks'] = function() { $v = (function() {
+};
+
+// Control_Comonad_Store_Class_peeks
+$GLOBALS['Control_Comonad_Store_Class_peeks'] = (function() {
   $__fn = function($dictComonadStore_0 = null, $f_1 = null, $x_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -128,13 +137,15 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Store_Class_seeks'] = function() { $v = function($dictComonadStore_0 = null) {
+})();
+
+// Control_Comonad_Store_Class_seeks
+$GLOBALS['Control_Comonad_Store_Class_seeks'] = function($dictComonadStore_0 = null) {
   $__num = \func_num_args();
-  $duplicate_1_0 = (((((($dictComonadStore_0)['Comonad0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Extend0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['extend'])((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))['identity']);
+  $duplicate_1_0 = (((((($dictComonadStore_0)['Comonad0'])($GLOBALS['Prim_undefined']))['Extend0'])($GLOBALS['Prim_undefined']))['extend'])(($GLOBALS['Control_Category_categoryFn'])['identity']);
   $__res = function($f_2 = null) use ($dictComonadStore_0, $duplicate_1_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(function($x_3 = null) use ($dictComonadStore_0, $f_2) {
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(function($x_3 = null) use ($dictComonadStore_0, $f_2) {
   $__num = \func_num_args();
   $__res = ((($dictComonadStore_0)['peek'])(($f_2)((($dictComonadStore_0)['pos'])($x_3))))($x_3);
   goto __end;;
@@ -148,13 +159,15 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Store_Class_seek'] = function() { $v = function($dictComonadStore_0 = null) {
+};
+
+// Control_Comonad_Store_Class_seek
+$GLOBALS['Control_Comonad_Store_Class_seek'] = function($dictComonadStore_0 = null) {
   $__num = \func_num_args();
-  $duplicate_1_0 = (((((($dictComonadStore_0)['Comonad0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Extend0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['extend'])((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))['identity']);
+  $duplicate_1_0 = (((((($dictComonadStore_0)['Comonad0'])($GLOBALS['Prim_undefined']))['Extend0'])($GLOBALS['Prim_undefined']))['extend'])(($GLOBALS['Control_Category_categoryFn'])['identity']);
   $__res = function($s_2 = null) use ($dictComonadStore_0, $duplicate_1_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($dictComonadStore_0)['peek'])($s_2)))($duplicate_1_0);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($dictComonadStore_0)['peek'])($s_2)))($duplicate_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -162,8 +175,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Store_Class_experiment'] = function() { $v = (function() {
+};
+
+// Control_Comonad_Store_Class_experiment
+$GLOBALS['Control_Comonad_Store_Class_experiment'] = (function() {
   $__fn = function($dictComonadStore_0 = null, $dictFunctor_1 = null, $f_2 = null, $x_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
@@ -181,19 +196,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Store_Class_comonadStoreTracedT'] = function() { $v = function($dictComonadStore_0 = null) {
+})();
+
+// Control_Comonad_Store_Class_comonadStoreTracedT
+$GLOBALS['Control_Comonad_Store_Class_comonadStoreTracedT'] = function($dictComonadStore_0 = null) {
   $__num = \func_num_args();
   $pos1_1_0 = ($dictComonadStore_0)['pos'];
-  $Comonad0_2_1 = (($dictComonadStore_0)['Comonad0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $comonadTracedT_3_2 = (($GLOBALS['Control_Comonad_Traced_Trans_comonadTracedT'] ?? \PhpursThunks::eval('Control_Comonad_Traced_Trans_comonadTracedT')))($Comonad0_2_1);
+  $Comonad0_2_1 = (($dictComonadStore_0)['Comonad0'])($GLOBALS['Prim_undefined']);
+  $comonadTracedT_3_2 = ($GLOBALS['Control_Comonad_Traced_Trans_comonadTracedT'])($Comonad0_2_1);
   $__res = function($dictMonoid_4 = null) use ($Comonad0_2_1, $comonadTracedT_3_2, $dictComonadStore_0, $pos1_1_0) {
   $__num = \func_num_args();
-  $lower1_5_3 = (((($GLOBALS['Control_Comonad_Traced_Trans_comonadTransTracedT'] ?? \PhpursThunks::eval('Control_Comonad_Traced_Trans_comonadTransTracedT')))($dictMonoid_4))['lower'])($Comonad0_2_1);
+  $lower1_5_3 = ((($GLOBALS['Control_Comonad_Traced_Trans_comonadTransTracedT'])($dictMonoid_4))['lower'])($Comonad0_2_1);
   $comonadTracedT1_6_4 = ($comonadTracedT_3_2)($dictMonoid_4);
-  $__res = ["pos" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($pos1_1_0))($lower1_5_3), "peek" => function($s_7 = null) use ($dictComonadStore_0, $lower1_5_3) {
+  $__res = ["pos" => (($GLOBALS['Control_Semigroupoid_composeImpl'])($pos1_1_0))($lower1_5_3), "peek" => function($s_7 = null) use ($dictComonadStore_0, $lower1_5_3) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($dictComonadStore_0)['peek'])($s_7)))($lower1_5_3);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($dictComonadStore_0)['peek'])($s_7)))($lower1_5_3);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -211,10 +228,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Store_Class_comonadStoreStoreT'] = function() { $v = function($dictComonad_0 = null) {
+};
+
+// Control_Comonad_Store_Class_comonadStoreStoreT
+$GLOBALS['Control_Comonad_Store_Class_comonadStoreStoreT'] = function($dictComonad_0 = null) {
   $__num = \func_num_args();
-  $comonadStoreT_1_0 = (($GLOBALS['Control_Comonad_Store_Trans_comonadStoreT'] ?? \PhpursThunks::eval('Control_Comonad_Store_Trans_comonadStoreT')))($dictComonad_0);
+  $comonadStoreT_1_0 = ($GLOBALS['Control_Comonad_Store_Trans_comonadStoreT'])($dictComonad_0);
   $__res = ["pos" => function($v_2 = null) {
   $__num = \func_num_args();
   $__res = ($v_2)->{'value1'};
@@ -243,11 +262,13 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Store_Class_comonadStoreEnvT'] = function() { $v = function($dictComonadStore_0 = null) {
+};
+
+// Control_Comonad_Store_Class_comonadStoreEnvT
+$GLOBALS['Control_Comonad_Store_Class_comonadStoreEnvT'] = function($dictComonadStore_0 = null) {
   $__num = \func_num_args();
-  $comonadEnvT_1_0 = (($GLOBALS['Control_Comonad_Env_Trans_comonadEnvT'] ?? \PhpursThunks::eval('Control_Comonad_Env_Trans_comonadEnvT')))((($dictComonadStore_0)['Comonad0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = ["pos" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($dictComonadStore_0)['pos']))(function($v_2 = null) {
+  $comonadEnvT_1_0 = ($GLOBALS['Control_Comonad_Env_Trans_comonadEnvT'])((($dictComonadStore_0)['Comonad0'])($GLOBALS['Prim_undefined']));
+  $__res = ["pos" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictComonadStore_0)['pos']))(function($v_2 = null) {
   $__num = \func_num_args();
   $__res = ($v_2)->{'value1'};
   goto __end;;
@@ -255,7 +276,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }), "peek" => function($s_2 = null) use ($dictComonadStore_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($dictComonadStore_0)['peek'])($s_2)))(function($v_3 = null) {
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($dictComonadStore_0)['peek'])($s_2)))(function($v_3 = null) {
   $__num = \func_num_args();
   $__res = ($v_3)->{'value1'};
   goto __end;;
@@ -275,16 +296,5 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
-
+};
 

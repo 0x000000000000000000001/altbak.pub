@@ -99,14 +99,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Comparison_Comparison'] = function() { $v = function($x_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Comparison_Comparison
+$GLOBALS['Data_Comparison_Comparison'] = function($x_0 = null) {
   $__num = \func_num_args();
   $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Comparison_semigroupComparison'] = function() { $v = ["append" => (function() {
+};
+
+// Data_Comparison_semigroupComparison
+$GLOBALS['Data_Comparison_semigroupComparison'] = ["append" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null, $x_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -144,15 +151,19 @@ goto end_branch_4;;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Comparison_newtypeComparison'] = function() { $v = ["Coercible0" => function($dollar__unused_0 = null) {
+})()];
+
+// Data_Comparison_newtypeComparison
+$GLOBALS['Data_Comparison_newtypeComparison'] = ["Coercible0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'));
+  $__res = $GLOBALS['Prim_undefined'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Comparison_monoidComparison'] = function() { $v = ["mempty" => (function() {
+}];
+
+// Data_Comparison_monoidComparison
+$GLOBALS['Data_Comparison_monoidComparison'] = ["mempty" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -166,19 +177,23 @@ goto end_branch_4;;
   return $__fn;
 })(), "Semigroup0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Comparison_semigroupComparison'] ?? \PhpursThunks::eval('Data_Comparison_semigroupComparison'));
+  $__res = $GLOBALS['Data_Comparison_semigroupComparison'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Comparison_defaultComparison'] = function() { $v = function($dictOrd_0 = null) {
+}];
+
+// Data_Comparison_defaultComparison
+$GLOBALS['Data_Comparison_defaultComparison'] = function($dictOrd_0 = null) {
   $__num = \func_num_args();
   $__res = ($dictOrd_0)['compare'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Comparison_contravariantComparison'] = function() { $v = ["cmap" => (function() {
+};
+
+// Data_Comparison_contravariantComparison
+$GLOBALS['Data_Comparison_contravariantComparison'] = ["cmap" => (function() {
   $__fn = function($f_0 = null, $v_1 = null, $x_2 = null, $y_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
@@ -190,13 +205,5 @@ goto end_branch_4;;
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
+})()];
 

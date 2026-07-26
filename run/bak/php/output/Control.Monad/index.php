@@ -97,16 +97,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Control_Monad_whenM'] = function() { $v = function($dictMonad_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Control_Monad_whenM
+$GLOBALS['Control_Monad_whenM'] = function($dictMonad_0 = null) {
   $__num = \func_num_args();
-  $when_1_0 = (($GLOBALS['Control_Applicative_when'] ?? \PhpursThunks::eval('Control_Applicative_when')))((($dictMonad_0)['Applicative0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $when_1_0 = ($GLOBALS['Control_Applicative_when'])((($dictMonad_0)['Applicative0'])($GLOBALS['Prim_undefined']));
   $__res = (function() use ($dictMonad_0, $when_1_0) {
   $__fn = function($mb_2 = null, $m_3 = null) use ($dictMonad_0, $when_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((($dictMonad_0)['Bind1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['bind'])($mb_2))(function($b_4 = null) use ($m_3, $when_1_0) {
+  $__res = ((((($dictMonad_0)['Bind1'])($GLOBALS['Prim_undefined']))['bind'])($mb_2))(function($b_4 = null) use ($m_3, $when_1_0) {
   $__num = \func_num_args();
   $__res = (($when_1_0)($b_4))($m_3);
   goto __end;;
@@ -122,17 +127,19 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_unlessM'] = function() { $v = function($dictMonad_0 = null) {
+};
+
+// Control_Monad_unlessM
+$GLOBALS['Control_Monad_unlessM'] = function($dictMonad_0 = null) {
   $__num = \func_num_args();
-  $unless_1_0 = (($GLOBALS['Control_Applicative_unless'] ?? \PhpursThunks::eval('Control_Applicative_unless')))((($dictMonad_0)['Applicative0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $unless_1_0 = ($GLOBALS['Control_Applicative_unless'])((($dictMonad_0)['Applicative0'])($GLOBALS['Prim_undefined']));
   $__res = (function() use ($dictMonad_0, $unless_1_0) {
   $__fn = function($mb_2 = null, $m_3 = null) use ($dictMonad_0, $unless_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((($dictMonad_0)['Bind1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['bind'])($mb_2))(function($b_4 = null) use ($m_3, $unless_1_0) {
+  $__res = ((((($dictMonad_0)['Bind1'])($GLOBALS['Prim_undefined']))['bind'])($mb_2))(function($b_4 = null) use ($m_3, $unless_1_0) {
   $__num = \func_num_args();
   $__res = (($unless_1_0)($b_4))($m_3);
   goto __end;;
@@ -148,55 +155,63 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_monadProxy'] = function() { $v = ["Applicative0" => function($dollar__unused_0 = null) {
+};
+
+// Control_Monad_monadProxy
+$GLOBALS['Control_Monad_monadProxy'] = ["Applicative0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Applicative_applicativeProxy'] ?? \PhpursThunks::eval('Control_Applicative_applicativeProxy'));
+  $__res = $GLOBALS['Control_Applicative_applicativeProxy'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bind1" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Bind_bindProxy'] ?? \PhpursThunks::eval('Control_Bind_bindProxy'));
+  $__res = $GLOBALS['Control_Bind_bindProxy'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Control_Monad_monadFn'] = function() { $v = ["Applicative0" => function($dollar__unused_0 = null) {
+}];
+
+// Control_Monad_monadFn
+$GLOBALS['Control_Monad_monadFn'] = ["Applicative0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Applicative_applicativeFn'] ?? \PhpursThunks::eval('Control_Applicative_applicativeFn'));
+  $__res = $GLOBALS['Control_Applicative_applicativeFn'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bind1" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Bind_bindFn'] ?? \PhpursThunks::eval('Control_Bind_bindFn'));
+  $__res = $GLOBALS['Control_Bind_bindFn'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Control_Monad_monadArray'] = function() { $v = ["Applicative0" => function($dollar__unused_0 = null) {
+}];
+
+// Control_Monad_monadArray
+$GLOBALS['Control_Monad_monadArray'] = ["Applicative0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Applicative_applicativeArray'] ?? \PhpursThunks::eval('Control_Applicative_applicativeArray'));
+  $__res = $GLOBALS['Control_Applicative_applicativeArray'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bind1" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Bind_bindArray'] ?? \PhpursThunks::eval('Control_Bind_bindArray'));
+  $__res = $GLOBALS['Control_Bind_bindArray'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Control_Monad_liftM1'] = function() { $v = (function() {
+}];
+
+// Control_Monad_liftM1
+$GLOBALS['Control_Monad_liftM1'] = (function() {
   $__fn = function($dictMonad_0 = null, $f_1 = null, $a_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((((($dictMonad_0)['Bind1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['bind'])($a_2))(function($a__prime___3 = null) use ($dictMonad_0, $f_1) {
+  $__res = ((((($dictMonad_0)['Bind1'])($GLOBALS['Prim_undefined']))['bind'])($a_2))(function($a__prime___3 = null) use ($dictMonad_0, $f_1) {
   $__num = \func_num_args();
-  $__res = (((($dictMonad_0)['Applicative0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['pure'])(($f_1)($a__prime___3));
+  $__res = (((($dictMonad_0)['Applicative0'])($GLOBALS['Prim_undefined']))['pure'])(($f_1)($a__prime___3));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -206,10 +221,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Control_Monad_ap'] = function() { $v = function($dictMonad_0 = null) {
+})();
+
+// Control_Monad_ap
+$GLOBALS['Control_Monad_ap'] = function($dictMonad_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictMonad_0)['Bind1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_1_0 = (($dictMonad_0)['Bind1'])($GLOBALS['Prim_undefined']);
   $__res = (function() use ($__local_var_1_0, $dictMonad_0) {
   $__fn = function($f_2 = null, $a_3 = null) use ($__local_var_1_0, $dictMonad_0, &$__fn) {
   $__num = \func_num_args();
@@ -220,7 +237,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   $__num = \func_num_args();
   $__res = ((($__local_var_1_0)['bind'])($a_3))(function($a__prime___5 = null) use ($dictMonad_0, $f__prime___4) {
   $__num = \func_num_args();
-  $__res = (((($dictMonad_0)['Applicative0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['pure'])(($f__prime___4)($a__prime___5));
+  $__res = (((($dictMonad_0)['Applicative0'])($GLOBALS['Prim_undefined']))['pure'])(($f__prime___4)($a__prime___5));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -238,14 +255,5 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
+};
 

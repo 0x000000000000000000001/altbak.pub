@@ -116,73 +116,92 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Control_Monad_Reader_Trans_ReaderT'] = function() { $v = function($x_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Control_Monad_Reader_Trans_ReaderT
+$GLOBALS['Control_Monad_Reader_Trans_ReaderT'] = function($x_0 = null) {
   $__num = \func_num_args();
   $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Reader_Trans_withReaderT'] = function() { $v = (function() {
+};
+
+// Control_Monad_Reader_Trans_withReaderT
+$GLOBALS['Control_Monad_Reader_Trans_withReaderT'] = (function() {
   $__fn = function($f_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($v_1))($f_0);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($v_1))($f_0);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Control_Monad_Reader_Trans_runReaderT'] = function() { $v = function($v_0 = null) {
+})();
+
+// Control_Monad_Reader_Trans_runReaderT
+$GLOBALS['Control_Monad_Reader_Trans_runReaderT'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__res = $v_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Reader_Trans_newtypeReaderT'] = function() { $v = ["Coercible0" => function($dollar__unused_0 = null) {
+};
+
+// Control_Monad_Reader_Trans_newtypeReaderT
+$GLOBALS['Control_Monad_Reader_Trans_newtypeReaderT'] = ["Coercible0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'));
+  $__res = $GLOBALS['Prim_undefined'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Reader_Trans_monadTransReaderT'] = function() { $v = ["lift" => function($dictMonad_0 = null) {
+}];
+
+// Control_Monad_Reader_Trans_monadTransReaderT
+$GLOBALS['Control_Monad_Reader_Trans_monadTransReaderT'] = ["lift" => function($dictMonad_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Control_Monad_Reader_Trans_ReaderT'] ?? \PhpursThunks::eval('Control_Monad_Reader_Trans_ReaderT'))))(($GLOBALS['Data_Function_const'] ?? \PhpursThunks::eval('Data_Function_const')));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_Reader_Trans_ReaderT']))($GLOBALS['Data_Function_const']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Reader_Trans_mapReaderT'] = function() { $v = (function() {
+}];
+
+// Control_Monad_Reader_Trans_mapReaderT
+$GLOBALS['Control_Monad_Reader_Trans_mapReaderT'] = (function() {
   $__fn = function($f_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($f_0))($v_1);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($f_0))($v_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Control_Monad_Reader_Trans_functorReaderT'] = function() { $v = function($dictFunctor_0 = null) {
+})();
+
+// Control_Monad_Reader_Trans_functorReaderT
+$GLOBALS['Control_Monad_Reader_Trans_functorReaderT'] = function($dictFunctor_0 = null) {
   $__num = \func_num_args();
-  $__res = ["map" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Control_Monad_Reader_Trans_mapReaderT'] ?? \PhpursThunks::eval('Control_Monad_Reader_Trans_mapReaderT'))))(($dictFunctor_0)['map'])];
+  $__res = ["map" => (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_Reader_Trans_mapReaderT']))(($dictFunctor_0)['map'])];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Reader_Trans_distributiveReaderT'] = function() { $v = function($dictDistributive_0 = null) {
+};
+
+// Control_Monad_Reader_Trans_distributiveReaderT
+$GLOBALS['Control_Monad_Reader_Trans_distributiveReaderT'] = function($dictDistributive_0 = null) {
   $__num = \func_num_args();
   $__tco_var_Control_Monad_Reader_Trans_distributiveReaderT_dictDistributive_0 = $dictDistributive_0;
   tco_loop_Control_Monad_Reader_Trans_distributiveReaderT:;
   $dictDistributive_0 = $__tco_var_Control_Monad_Reader_Trans_distributiveReaderT_dictDistributive_0;
-  $functorReaderT1_1_0 = ["map" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Control_Monad_Reader_Trans_mapReaderT'] ?? \PhpursThunks::eval('Control_Monad_Reader_Trans_mapReaderT'))))(((($dictDistributive_0)['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['map'])];
+  $functorReaderT1_1_0 = ["map" => (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_Reader_Trans_mapReaderT']))(((($dictDistributive_0)['Functor0'])($GLOBALS['Prim_undefined']))['map'])];
   $__res = ["distribute" => function($dictFunctor_2 = null) use ($dictDistributive_0) {
   $__num = \func_num_args();
   $collect1_3_1 = (($dictDistributive_0)['collect'])($dictFunctor_2);
@@ -214,7 +233,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((((($GLOBALS['Control_Monad_Reader_Trans_distributiveReaderT'] ?? \PhpursThunks::eval('Control_Monad_Reader_Trans_distributiveReaderT')))($dictDistributive_0))['distribute'])($dictFunctor_2)))((($dictFunctor_2)['map'])($f_3));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(((($GLOBALS['Control_Monad_Reader_Trans_distributiveReaderT'])($dictDistributive_0))['distribute'])($dictFunctor_2)))((($dictFunctor_2)['map'])($f_3));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -230,10 +249,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Reader_Trans_applyReaderT'] = function() { $v = function($dictApply_0 = null) {
+};
+
+// Control_Monad_Reader_Trans_applyReaderT
+$GLOBALS['Control_Monad_Reader_Trans_applyReaderT'] = function($dictApply_0 = null) {
   $__num = \func_num_args();
-  $functorReaderT1_1_0 = ["map" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Control_Monad_Reader_Trans_mapReaderT'] ?? \PhpursThunks::eval('Control_Monad_Reader_Trans_mapReaderT'))))(((($dictApply_0)['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['map'])];
+  $functorReaderT1_1_0 = ["map" => (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_Reader_Trans_mapReaderT']))(((($dictApply_0)['Functor0'])($GLOBALS['Prim_undefined']))['map'])];
   $__res = ["apply" => (function() use ($dictApply_0) {
   $__fn = function($v_2 = null, $v1_3 = null, $r_4 = null) use ($dictApply_0, &$__fn) {
   $__num = \func_num_args();
@@ -256,10 +277,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Reader_Trans_bindReaderT'] = function() { $v = function($dictBind_0 = null) {
+};
+
+// Control_Monad_Reader_Trans_bindReaderT
+$GLOBALS['Control_Monad_Reader_Trans_bindReaderT'] = function($dictBind_0 = null) {
   $__num = \func_num_args();
-  $applyReaderT1_1_0 = (($GLOBALS['Control_Monad_Reader_Trans_applyReaderT'] ?? \PhpursThunks::eval('Control_Monad_Reader_Trans_applyReaderT')))((($dictBind_0)['Apply0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $applyReaderT1_1_0 = ($GLOBALS['Control_Monad_Reader_Trans_applyReaderT'])((($dictBind_0)['Apply0'])($GLOBALS['Prim_undefined']));
   $__res = ["bind" => (function() use ($dictBind_0) {
   $__fn = function($v_2 = null, $k_3 = null, $r_4 = null) use ($dictBind_0, &$__fn) {
   $__num = \func_num_args();
@@ -288,10 +311,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Reader_Trans_semigroupReaderT'] = function() { $v = function($dictApply_0 = null) {
+};
+
+// Control_Monad_Reader_Trans_semigroupReaderT
+$GLOBALS['Control_Monad_Reader_Trans_semigroupReaderT'] = function($dictApply_0 = null) {
   $__num = \func_num_args();
-  $lift2_1_0 = (($GLOBALS['Control_Apply_lift2'] ?? \PhpursThunks::eval('Control_Apply_lift2')))((($GLOBALS['Control_Monad_Reader_Trans_applyReaderT'] ?? \PhpursThunks::eval('Control_Monad_Reader_Trans_applyReaderT')))($dictApply_0));
+  $lift2_1_0 = ($GLOBALS['Control_Apply_lift2'])(($GLOBALS['Control_Monad_Reader_Trans_applyReaderT'])($dictApply_0));
   $__res = function($dictSemigroup_2 = null) use ($lift2_1_0) {
   $__num = \func_num_args();
   $__res = ["append" => ($lift2_1_0)(($dictSemigroup_2)['append'])];
@@ -302,11 +327,13 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Reader_Trans_applicativeReaderT'] = function() { $v = function($dictApplicative_0 = null) {
+};
+
+// Control_Monad_Reader_Trans_applicativeReaderT
+$GLOBALS['Control_Monad_Reader_Trans_applicativeReaderT'] = function($dictApplicative_0 = null) {
   $__num = \func_num_args();
-  $applyReaderT1_1_0 = (($GLOBALS['Control_Monad_Reader_Trans_applyReaderT'] ?? \PhpursThunks::eval('Control_Monad_Reader_Trans_applyReaderT')))((($dictApplicative_0)['Apply0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = ["pure" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Control_Monad_Reader_Trans_ReaderT'] ?? \PhpursThunks::eval('Control_Monad_Reader_Trans_ReaderT'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Function_const'] ?? \PhpursThunks::eval('Data_Function_const'))))(($dictApplicative_0)['pure'])), "Apply0" => function($dollar__unused_2 = null) use ($applyReaderT1_1_0) {
+  $applyReaderT1_1_0 = ($GLOBALS['Control_Monad_Reader_Trans_applyReaderT'])((($dictApplicative_0)['Apply0'])($GLOBALS['Prim_undefined']));
+  $__res = ["pure" => (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_Reader_Trans_ReaderT']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Function_const']))(($dictApplicative_0)['pure'])), "Apply0" => function($dollar__unused_2 = null) use ($applyReaderT1_1_0) {
   $__num = \func_num_args();
   $__res = $applyReaderT1_1_0;
   goto __end;;
@@ -316,11 +343,13 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Reader_Trans_monadReaderT'] = function() { $v = function($dictMonad_0 = null) {
+};
+
+// Control_Monad_Reader_Trans_monadReaderT
+$GLOBALS['Control_Monad_Reader_Trans_monadReaderT'] = function($dictMonad_0 = null) {
   $__num = \func_num_args();
-  $applicativeReaderT1_1_0 = (($GLOBALS['Control_Monad_Reader_Trans_applicativeReaderT'] ?? \PhpursThunks::eval('Control_Monad_Reader_Trans_applicativeReaderT')))((($dictMonad_0)['Applicative0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $bindReaderT1_2_1 = (($GLOBALS['Control_Monad_Reader_Trans_bindReaderT'] ?? \PhpursThunks::eval('Control_Monad_Reader_Trans_bindReaderT')))((($dictMonad_0)['Bind1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $applicativeReaderT1_1_0 = ($GLOBALS['Control_Monad_Reader_Trans_applicativeReaderT'])((($dictMonad_0)['Applicative0'])($GLOBALS['Prim_undefined']));
+  $bindReaderT1_2_1 = ($GLOBALS['Control_Monad_Reader_Trans_bindReaderT'])((($dictMonad_0)['Bind1'])($GLOBALS['Prim_undefined']));
   $__res = ["Applicative0" => function($dollar__unused_3 = null) use ($applicativeReaderT1_1_0) {
   $__num = \func_num_args();
   $__res = $applicativeReaderT1_1_0;
@@ -337,32 +366,36 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Reader_Trans_monadAskReaderT'] = function() { $v = function($dictMonad_0 = null) {
+};
+
+// Control_Monad_Reader_Trans_monadAskReaderT
+$GLOBALS['Control_Monad_Reader_Trans_monadAskReaderT'] = function($dictMonad_0 = null) {
   $__num = \func_num_args();
-  $monadReaderT1_1_0 = (($GLOBALS['Control_Monad_Reader_Trans_monadReaderT'] ?? \PhpursThunks::eval('Control_Monad_Reader_Trans_monadReaderT')))($dictMonad_0);
-  $__res = ["ask" => ((($dictMonad_0)['Applicative0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['pure'], "Monad0" => function($dollar__unused_2 = null) use ($monadReaderT1_1_0) {
-  $__num = \func_num_args();
-  $__res = $monadReaderT1_1_0;
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}];
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Reader_Trans_monadReaderReaderT'] = function() { $v = function($dictMonad_0 = null) {
-  $__num = \func_num_args();
-  $monadReaderT1_1_0 = (($GLOBALS['Control_Monad_Reader_Trans_monadReaderT'] ?? \PhpursThunks::eval('Control_Monad_Reader_Trans_monadReaderT')))($dictMonad_0);
-  $monadAskReaderT1_2_1 = ["ask" => ((($dictMonad_0)['Applicative0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['pure'], "Monad0" => function($dollar__unused_2 = null) use ($monadReaderT1_1_0) {
+  $monadReaderT1_1_0 = ($GLOBALS['Control_Monad_Reader_Trans_monadReaderT'])($dictMonad_0);
+  $__res = ["ask" => ((($dictMonad_0)['Applicative0'])($GLOBALS['Prim_undefined']))['pure'], "Monad0" => function($dollar__unused_2 = null) use ($monadReaderT1_1_0) {
   $__num = \func_num_args();
   $__res = $monadReaderT1_1_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = ["local" => ($GLOBALS['Control_Monad_Reader_Trans_withReaderT'] ?? \PhpursThunks::eval('Control_Monad_Reader_Trans_withReaderT')), "MonadAsk0" => function($dollar__unused_3 = null) use ($monadAskReaderT1_2_1) {
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+
+// Control_Monad_Reader_Trans_monadReaderReaderT
+$GLOBALS['Control_Monad_Reader_Trans_monadReaderReaderT'] = function($dictMonad_0 = null) {
+  $__num = \func_num_args();
+  $monadReaderT1_1_0 = ($GLOBALS['Control_Monad_Reader_Trans_monadReaderT'])($dictMonad_0);
+  $monadAskReaderT1_2_1 = ["ask" => ((($dictMonad_0)['Applicative0'])($GLOBALS['Prim_undefined']))['pure'], "Monad0" => function($dollar__unused_2 = null) use ($monadReaderT1_1_0) {
+  $__num = \func_num_args();
+  $__res = $monadReaderT1_1_0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+  $__res = ["local" => $GLOBALS['Control_Monad_Reader_Trans_withReaderT'], "MonadAsk0" => function($dollar__unused_3 = null) use ($monadAskReaderT1_2_1) {
   $__num = \func_num_args();
   $__res = $monadAskReaderT1_2_1;
   goto __end;;
@@ -372,10 +405,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Reader_Trans_monadContReaderT'] = function() { $v = function($dictMonadCont_0 = null) {
+};
+
+// Control_Monad_Reader_Trans_monadContReaderT
+$GLOBALS['Control_Monad_Reader_Trans_monadContReaderT'] = function($dictMonadCont_0 = null) {
   $__num = \func_num_args();
-  $monadReaderT1_1_0 = (($GLOBALS['Control_Monad_Reader_Trans_monadReaderT'] ?? \PhpursThunks::eval('Control_Monad_Reader_Trans_monadReaderT')))((($dictMonadCont_0)['Monad0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $monadReaderT1_1_0 = ($GLOBALS['Control_Monad_Reader_Trans_monadReaderT'])((($dictMonadCont_0)['Monad0'])($GLOBALS['Prim_undefined']));
   $__res = ["callCC" => (function() use ($dictMonadCont_0) {
   $__fn = function($f_2 = null, $r_3 = null) use ($dictMonadCont_0, &$__fn) {
   $__num = \func_num_args();
@@ -384,7 +419,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   }
   $__res = (($dictMonadCont_0)['callCC'])(function($c_4 = null) use ($f_2, $r_3) {
   $__num = \func_num_args();
-  $__res = (($f_2)(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Control_Monad_Reader_Trans_ReaderT'] ?? \PhpursThunks::eval('Control_Monad_Reader_Trans_ReaderT'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Function_const'] ?? \PhpursThunks::eval('Data_Function_const'))))($c_4))))($r_3);
+  $__res = (($f_2)((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_Reader_Trans_ReaderT']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Function_const']))($c_4))))($r_3);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -404,11 +439,13 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Reader_Trans_monadEffectReader'] = function() { $v = function($dictMonadEffect_0 = null) {
+};
+
+// Control_Monad_Reader_Trans_monadEffectReader
+$GLOBALS['Control_Monad_Reader_Trans_monadEffectReader'] = function($dictMonadEffect_0 = null) {
   $__num = \func_num_args();
-  $monadReaderT1_1_0 = (($GLOBALS['Control_Monad_Reader_Trans_monadReaderT'] ?? \PhpursThunks::eval('Control_Monad_Reader_Trans_monadReaderT')))((($dictMonadEffect_0)['Monad0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = ["liftEffect" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Control_Monad_Reader_Trans_ReaderT'] ?? \PhpursThunks::eval('Control_Monad_Reader_Trans_ReaderT'))))(($GLOBALS['Data_Function_const'] ?? \PhpursThunks::eval('Data_Function_const')))))(($dictMonadEffect_0)['liftEffect']), "Monad0" => function($dollar__unused_2 = null) use ($monadReaderT1_1_0) {
+  $monadReaderT1_1_0 = ($GLOBALS['Control_Monad_Reader_Trans_monadReaderT'])((($dictMonadEffect_0)['Monad0'])($GLOBALS['Prim_undefined']));
+  $__res = ["liftEffect" => (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_Reader_Trans_ReaderT']))($GLOBALS['Data_Function_const'])))(($dictMonadEffect_0)['liftEffect']), "Monad0" => function($dollar__unused_2 = null) use ($monadReaderT1_1_0) {
   $__num = \func_num_args();
   $__res = $monadReaderT1_1_0;
   goto __end;;
@@ -418,13 +455,15 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Reader_Trans_monadRecReaderT'] = function() { $v = function($dictMonadRec_0 = null) {
+};
+
+// Control_Monad_Reader_Trans_monadRecReaderT
+$GLOBALS['Control_Monad_Reader_Trans_monadRecReaderT'] = function($dictMonadRec_0 = null) {
   $__num = \func_num_args();
-  $Monad0_1_0 = (($dictMonadRec_0)['Monad0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $__local_var_2_1 = (($Monad0_1_0)['Bind1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $pure_3_2 = ((($Monad0_1_0)['Applicative0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['pure'];
-  $monadReaderT1_4_3 = (($GLOBALS['Control_Monad_Reader_Trans_monadReaderT'] ?? \PhpursThunks::eval('Control_Monad_Reader_Trans_monadReaderT')))($Monad0_1_0);
+  $Monad0_1_0 = (($dictMonadRec_0)['Monad0'])($GLOBALS['Prim_undefined']);
+  $__local_var_2_1 = (($Monad0_1_0)['Bind1'])($GLOBALS['Prim_undefined']);
+  $pure_3_2 = ((($Monad0_1_0)['Applicative0'])($GLOBALS['Prim_undefined']))['pure'];
+  $monadReaderT1_4_3 = ($GLOBALS['Control_Monad_Reader_Trans_monadReaderT'])($Monad0_1_0);
   $__res = ["tailRecM" => (function() use ($__local_var_2_1, $dictMonadRec_0, $pure_3_2) {
   $__fn = function($k_5 = null, $a_6 = null, $r_7 = null) use ($__local_var_2_1, $dictMonadRec_0, $pure_3_2, &$__fn) {
   $__num = \func_num_args();
@@ -453,11 +492,13 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Reader_Trans_monadStateReaderT'] = function() { $v = function($dictMonadState_0 = null) {
+};
+
+// Control_Monad_Reader_Trans_monadStateReaderT
+$GLOBALS['Control_Monad_Reader_Trans_monadStateReaderT'] = function($dictMonadState_0 = null) {
   $__num = \func_num_args();
-  $monadReaderT1_1_0 = (($GLOBALS['Control_Monad_Reader_Trans_monadReaderT'] ?? \PhpursThunks::eval('Control_Monad_Reader_Trans_monadReaderT')))((($dictMonadState_0)['Monad0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = ["state" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Control_Monad_Reader_Trans_ReaderT'] ?? \PhpursThunks::eval('Control_Monad_Reader_Trans_ReaderT'))))(($GLOBALS['Data_Function_const'] ?? \PhpursThunks::eval('Data_Function_const')))))(($dictMonadState_0)['state']), "Monad0" => function($dollar__unused_2 = null) use ($monadReaderT1_1_0) {
+  $monadReaderT1_1_0 = ($GLOBALS['Control_Monad_Reader_Trans_monadReaderT'])((($dictMonadState_0)['Monad0'])($GLOBALS['Prim_undefined']));
+  $__res = ["state" => (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_Reader_Trans_ReaderT']))($GLOBALS['Data_Function_const'])))(($dictMonadState_0)['state']), "Monad0" => function($dollar__unused_2 = null) use ($monadReaderT1_1_0) {
   $__num = \func_num_args();
   $__res = $monadReaderT1_1_0;
   goto __end;;
@@ -467,12 +508,14 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Reader_Trans_monadTellReaderT'] = function() { $v = function($dictMonadTell_0 = null) {
+};
+
+// Control_Monad_Reader_Trans_monadTellReaderT
+$GLOBALS['Control_Monad_Reader_Trans_monadTellReaderT'] = function($dictMonadTell_0 = null) {
   $__num = \func_num_args();
-  $Semigroup0_1_0 = (($dictMonadTell_0)['Semigroup0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $monadReaderT1_2_1 = (($GLOBALS['Control_Monad_Reader_Trans_monadReaderT'] ?? \PhpursThunks::eval('Control_Monad_Reader_Trans_monadReaderT')))((($dictMonadTell_0)['Monad1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = ["tell" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Control_Monad_Reader_Trans_ReaderT'] ?? \PhpursThunks::eval('Control_Monad_Reader_Trans_ReaderT'))))(($GLOBALS['Data_Function_const'] ?? \PhpursThunks::eval('Data_Function_const')))))(($dictMonadTell_0)['tell']), "Semigroup0" => function($dollar__unused_3 = null) use ($Semigroup0_1_0) {
+  $Semigroup0_1_0 = (($dictMonadTell_0)['Semigroup0'])($GLOBALS['Prim_undefined']);
+  $monadReaderT1_2_1 = ($GLOBALS['Control_Monad_Reader_Trans_monadReaderT'])((($dictMonadTell_0)['Monad1'])($GLOBALS['Prim_undefined']));
+  $__res = ["tell" => (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_Reader_Trans_ReaderT']))($GLOBALS['Data_Function_const'])))(($dictMonadTell_0)['tell']), "Semigroup0" => function($dollar__unused_3 = null) use ($Semigroup0_1_0) {
   $__num = \func_num_args();
   $__res = $Semigroup0_1_0;
   goto __end;;
@@ -488,12 +531,14 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Reader_Trans_monadWriterReaderT'] = function() { $v = function($dictMonadWriter_0 = null) {
+};
+
+// Control_Monad_Reader_Trans_monadWriterReaderT
+$GLOBALS['Control_Monad_Reader_Trans_monadWriterReaderT'] = function($dictMonadWriter_0 = null) {
   $__num = \func_num_args();
-  $Monoid0_1_0 = (($dictMonadWriter_0)['Monoid0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $monadTellReaderT1_2_1 = (($GLOBALS['Control_Monad_Reader_Trans_monadTellReaderT'] ?? \PhpursThunks::eval('Control_Monad_Reader_Trans_monadTellReaderT')))((($dictMonadWriter_0)['MonadTell1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = ["listen" => (($GLOBALS['Control_Monad_Reader_Trans_mapReaderT'] ?? \PhpursThunks::eval('Control_Monad_Reader_Trans_mapReaderT')))(($dictMonadWriter_0)['listen']), "pass" => (($GLOBALS['Control_Monad_Reader_Trans_mapReaderT'] ?? \PhpursThunks::eval('Control_Monad_Reader_Trans_mapReaderT')))(($dictMonadWriter_0)['pass']), "Monoid0" => function($dollar__unused_3 = null) use ($Monoid0_1_0) {
+  $Monoid0_1_0 = (($dictMonadWriter_0)['Monoid0'])($GLOBALS['Prim_undefined']);
+  $monadTellReaderT1_2_1 = ($GLOBALS['Control_Monad_Reader_Trans_monadTellReaderT'])((($dictMonadWriter_0)['MonadTell1'])($GLOBALS['Prim_undefined']));
+  $__res = ["listen" => ($GLOBALS['Control_Monad_Reader_Trans_mapReaderT'])(($dictMonadWriter_0)['listen']), "pass" => ($GLOBALS['Control_Monad_Reader_Trans_mapReaderT'])(($dictMonadWriter_0)['pass']), "Monoid0" => function($dollar__unused_3 = null) use ($Monoid0_1_0) {
   $__num = \func_num_args();
   $__res = $Monoid0_1_0;
   goto __end;;
@@ -509,11 +554,13 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Reader_Trans_monadThrowReaderT'] = function() { $v = function($dictMonadThrow_0 = null) {
+};
+
+// Control_Monad_Reader_Trans_monadThrowReaderT
+$GLOBALS['Control_Monad_Reader_Trans_monadThrowReaderT'] = function($dictMonadThrow_0 = null) {
   $__num = \func_num_args();
-  $monadReaderT1_1_0 = (($GLOBALS['Control_Monad_Reader_Trans_monadReaderT'] ?? \PhpursThunks::eval('Control_Monad_Reader_Trans_monadReaderT')))((($dictMonadThrow_0)['Monad0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = ["throwError" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Control_Monad_Reader_Trans_ReaderT'] ?? \PhpursThunks::eval('Control_Monad_Reader_Trans_ReaderT'))))(($GLOBALS['Data_Function_const'] ?? \PhpursThunks::eval('Data_Function_const')))))(($dictMonadThrow_0)['throwError']), "Monad0" => function($dollar__unused_2 = null) use ($monadReaderT1_1_0) {
+  $monadReaderT1_1_0 = ($GLOBALS['Control_Monad_Reader_Trans_monadReaderT'])((($dictMonadThrow_0)['Monad0'])($GLOBALS['Prim_undefined']));
+  $__res = ["throwError" => (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_Reader_Trans_ReaderT']))($GLOBALS['Data_Function_const'])))(($dictMonadThrow_0)['throwError']), "Monad0" => function($dollar__unused_2 = null) use ($monadReaderT1_1_0) {
   $__num = \func_num_args();
   $__res = $monadReaderT1_1_0;
   goto __end;;
@@ -523,10 +570,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Reader_Trans_monadErrorReaderT'] = function() { $v = function($dictMonadError_0 = null) {
+};
+
+// Control_Monad_Reader_Trans_monadErrorReaderT
+$GLOBALS['Control_Monad_Reader_Trans_monadErrorReaderT'] = function($dictMonadError_0 = null) {
   $__num = \func_num_args();
-  $monadThrowReaderT1_1_0 = (($GLOBALS['Control_Monad_Reader_Trans_monadThrowReaderT'] ?? \PhpursThunks::eval('Control_Monad_Reader_Trans_monadThrowReaderT')))((($dictMonadError_0)['MonadThrow0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $monadThrowReaderT1_1_0 = ($GLOBALS['Control_Monad_Reader_Trans_monadThrowReaderT'])((($dictMonadError_0)['MonadThrow0'])($GLOBALS['Prim_undefined']));
   $__res = ["catchError" => (function() use ($dictMonadError_0) {
   $__fn = function($v_2 = null, $h_3 = null, $r_4 = null) use ($dictMonadError_0, &$__fn) {
   $__num = \func_num_args();
@@ -555,11 +604,13 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Reader_Trans_monadSTReaderT'] = function() { $v = function($dictMonadST_0 = null) {
+};
+
+// Control_Monad_Reader_Trans_monadSTReaderT
+$GLOBALS['Control_Monad_Reader_Trans_monadSTReaderT'] = function($dictMonadST_0 = null) {
   $__num = \func_num_args();
-  $monadReaderT1_1_0 = (($GLOBALS['Control_Monad_Reader_Trans_monadReaderT'] ?? \PhpursThunks::eval('Control_Monad_Reader_Trans_monadReaderT')))((($dictMonadST_0)['Monad0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = ["liftST" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Control_Monad_Reader_Trans_ReaderT'] ?? \PhpursThunks::eval('Control_Monad_Reader_Trans_ReaderT'))))(($GLOBALS['Data_Function_const'] ?? \PhpursThunks::eval('Data_Function_const')))))(($dictMonadST_0)['liftST']), "Monad0" => function($dollar__unused_2 = null) use ($monadReaderT1_1_0) {
+  $monadReaderT1_1_0 = ($GLOBALS['Control_Monad_Reader_Trans_monadReaderT'])((($dictMonadST_0)['Monad0'])($GLOBALS['Prim_undefined']));
+  $__res = ["liftST" => (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_Reader_Trans_ReaderT']))($GLOBALS['Data_Function_const'])))(($dictMonadST_0)['liftST']), "Monad0" => function($dollar__unused_2 = null) use ($monadReaderT1_1_0) {
   $__num = \func_num_args();
   $__res = $monadReaderT1_1_0;
   goto __end;;
@@ -569,14 +620,16 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Reader_Trans_monoidReaderT'] = function() { $v = function($dictApplicative_0 = null) {
+};
+
+// Control_Monad_Reader_Trans_monoidReaderT
+$GLOBALS['Control_Monad_Reader_Trans_monoidReaderT'] = function($dictApplicative_0 = null) {
   $__num = \func_num_args();
-  $semigroupReaderT1_1_0 = (($GLOBALS['Control_Monad_Reader_Trans_semigroupReaderT'] ?? \PhpursThunks::eval('Control_Monad_Reader_Trans_semigroupReaderT')))((($dictApplicative_0)['Apply0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $semigroupReaderT1_1_0 = ($GLOBALS['Control_Monad_Reader_Trans_semigroupReaderT'])((($dictApplicative_0)['Apply0'])($GLOBALS['Prim_undefined']));
   $__res = function($dictMonoid_2 = null) use ($dictApplicative_0, $semigroupReaderT1_1_0) {
   $__num = \func_num_args();
-  $semigroupReaderT2_3_1 = ($semigroupReaderT1_1_0)((($dictMonoid_2)['Semigroup0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = ["mempty" => (((($GLOBALS['Control_Monad_Reader_Trans_applicativeReaderT'] ?? \PhpursThunks::eval('Control_Monad_Reader_Trans_applicativeReaderT')))($dictApplicative_0))['pure'])(($dictMonoid_2)['mempty']), "Semigroup0" => function($dollar__unused_4 = null) use ($semigroupReaderT2_3_1) {
+  $semigroupReaderT2_3_1 = ($semigroupReaderT1_1_0)((($dictMonoid_2)['Semigroup0'])($GLOBALS['Prim_undefined']));
+  $__res = ["mempty" => ((($GLOBALS['Control_Monad_Reader_Trans_applicativeReaderT'])($dictApplicative_0))['pure'])(($dictMonoid_2)['mempty']), "Semigroup0" => function($dollar__unused_4 = null) use ($semigroupReaderT2_3_1) {
   $__num = \func_num_args();
   $__res = $semigroupReaderT2_3_1;
   goto __end;;
@@ -590,10 +643,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Reader_Trans_altReaderT'] = function() { $v = function($dictAlt_0 = null) {
+};
+
+// Control_Monad_Reader_Trans_altReaderT
+$GLOBALS['Control_Monad_Reader_Trans_altReaderT'] = function($dictAlt_0 = null) {
   $__num = \func_num_args();
-  $functorReaderT1_1_0 = ["map" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Control_Monad_Reader_Trans_mapReaderT'] ?? \PhpursThunks::eval('Control_Monad_Reader_Trans_mapReaderT'))))(((($dictAlt_0)['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['map'])];
+  $functorReaderT1_1_0 = ["map" => (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_Reader_Trans_mapReaderT']))(((($dictAlt_0)['Functor0'])($GLOBALS['Prim_undefined']))['map'])];
   $__res = ["alt" => (function() use ($dictAlt_0) {
   $__fn = function($v_2 = null, $v1_3 = null, $r_4 = null) use ($dictAlt_0, &$__fn) {
   $__num = \func_num_args();
@@ -616,10 +671,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Reader_Trans_plusReaderT'] = function() { $v = function($dictPlus_0 = null) {
+};
+
+// Control_Monad_Reader_Trans_plusReaderT
+$GLOBALS['Control_Monad_Reader_Trans_plusReaderT'] = function($dictPlus_0 = null) {
   $__num = \func_num_args();
-  $altReaderT1_1_0 = (($GLOBALS['Control_Monad_Reader_Trans_altReaderT'] ?? \PhpursThunks::eval('Control_Monad_Reader_Trans_altReaderT')))((($dictPlus_0)['Alt0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $altReaderT1_1_0 = ($GLOBALS['Control_Monad_Reader_Trans_altReaderT'])((($dictPlus_0)['Alt0'])($GLOBALS['Prim_undefined']));
   $__local_var_2_1 = ($dictPlus_0)['empty'];
   $__res = ["empty" => function($v_3 = null) use ($__local_var_2_1) {
   $__num = \func_num_args();
@@ -637,11 +694,13 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Reader_Trans_alternativeReaderT'] = function() { $v = function($dictAlternative_0 = null) {
+};
+
+// Control_Monad_Reader_Trans_alternativeReaderT
+$GLOBALS['Control_Monad_Reader_Trans_alternativeReaderT'] = function($dictAlternative_0 = null) {
   $__num = \func_num_args();
-  $applicativeReaderT1_1_0 = (($GLOBALS['Control_Monad_Reader_Trans_applicativeReaderT'] ?? \PhpursThunks::eval('Control_Monad_Reader_Trans_applicativeReaderT')))((($dictAlternative_0)['Applicative0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $plusReaderT1_2_1 = (($GLOBALS['Control_Monad_Reader_Trans_plusReaderT'] ?? \PhpursThunks::eval('Control_Monad_Reader_Trans_plusReaderT')))((($dictAlternative_0)['Plus1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $applicativeReaderT1_1_0 = ($GLOBALS['Control_Monad_Reader_Trans_applicativeReaderT'])((($dictAlternative_0)['Applicative0'])($GLOBALS['Prim_undefined']));
+  $plusReaderT1_2_1 = ($GLOBALS['Control_Monad_Reader_Trans_plusReaderT'])((($dictAlternative_0)['Plus1'])($GLOBALS['Prim_undefined']));
   $__res = ["Applicative0" => function($dollar__unused_3 = null) use ($applicativeReaderT1_1_0) {
   $__num = \func_num_args();
   $__res = $applicativeReaderT1_1_0;
@@ -658,11 +717,13 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Reader_Trans_monadPlusReaderT'] = function() { $v = function($dictMonadPlus_0 = null) {
+};
+
+// Control_Monad_Reader_Trans_monadPlusReaderT
+$GLOBALS['Control_Monad_Reader_Trans_monadPlusReaderT'] = function($dictMonadPlus_0 = null) {
   $__num = \func_num_args();
-  $monadReaderT1_1_0 = (($GLOBALS['Control_Monad_Reader_Trans_monadReaderT'] ?? \PhpursThunks::eval('Control_Monad_Reader_Trans_monadReaderT')))((($dictMonadPlus_0)['Monad0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $alternativeReaderT1_2_1 = (($GLOBALS['Control_Monad_Reader_Trans_alternativeReaderT'] ?? \PhpursThunks::eval('Control_Monad_Reader_Trans_alternativeReaderT')))((($dictMonadPlus_0)['Alternative1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $monadReaderT1_1_0 = ($GLOBALS['Control_Monad_Reader_Trans_monadReaderT'])((($dictMonadPlus_0)['Monad0'])($GLOBALS['Prim_undefined']));
+  $alternativeReaderT1_2_1 = ($GLOBALS['Control_Monad_Reader_Trans_alternativeReaderT'])((($dictMonadPlus_0)['Alternative1'])($GLOBALS['Prim_undefined']));
   $__res = ["Monad0" => function($dollar__unused_3 = null) use ($monadReaderT1_1_0) {
   $__num = \func_num_args();
   $__res = $monadReaderT1_1_0;
@@ -679,36 +740,5 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+};
 

@@ -93,32 +93,68 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Number_tau'] = function() { $v = 6.283185307179586; return $v; };
-\PhpursThunks::$thunks['Data_Number_sqrt2'] = function() { $v = 1.4142135623730951; return $v; };
-\PhpursThunks::$thunks['Data_Number_sqrt1_2'] = function() { $v = 0.7071067811865476; return $v; };
-\PhpursThunks::$thunks['Data_Number_pi'] = function() { $v = 3.141592653589793; return $v; };
-\PhpursThunks::$thunks['Data_Number_log2e'] = function() { $v = 1.4426950408889634; return $v; };
-\PhpursThunks::$thunks['Data_Number_log10e'] = function() { $v = 0.4342944819032518; return $v; };
-\PhpursThunks::$thunks['Data_Number_ln2'] = function() { $v = 0.6931471805599453; return $v; };
-\PhpursThunks::$thunks['Data_Number_ln10'] = function() { $v = 2.302585092994046; return $v; };
-\PhpursThunks::$thunks['Data_Number_fromString'] = function() { $v = function($str_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+$GLOBALS['Data_Number_abs'] = new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Number_acos'] = new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Number_asin'] = new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Number_atan'] = new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Number_atan2'] = new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Number_ceil'] = new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Number_cos'] = new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Number_exp'] = new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Number_floor'] = new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Number_fromStringImpl'] = new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Number_infinity'] = new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Number_isFinite'] = new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Number_isNaN'] = new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Number_log'] = new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Number_max'] = new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Number_min'] = new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Number_nan'] = new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Number_pow'] = new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Number_remainder'] = new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Number_round'] = new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Number_sign'] = new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Number_sin'] = new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Number_sqrt'] = new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Number_tan'] = new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Number_trunc'] = new class { public function __invoke(...$args) { return $this; } };
+
+
+// Data_Number_tau
+$GLOBALS['Data_Number_tau'] = 6.283185307179586;
+
+// Data_Number_sqrt2
+$GLOBALS['Data_Number_sqrt2'] = 1.4142135623730951;
+
+// Data_Number_sqrt1_2
+$GLOBALS['Data_Number_sqrt1_2'] = 0.7071067811865476;
+
+// Data_Number_pi
+$GLOBALS['Data_Number_pi'] = 3.141592653589793;
+
+// Data_Number_log2e
+$GLOBALS['Data_Number_log2e'] = 1.4426950408889634;
+
+// Data_Number_log10e
+$GLOBALS['Data_Number_log10e'] = 0.4342944819032518;
+
+// Data_Number_ln2
+$GLOBALS['Data_Number_ln2'] = 0.6931471805599453;
+
+// Data_Number_ln10
+$GLOBALS['Data_Number_ln10'] = 2.302585092994046;
+
+// Data_Number_fromString
+$GLOBALS['Data_Number_fromString'] = function($str_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Number_fromStringImpl'] ?? \PhpursThunks::eval('Data_Number_fromStringImpl')))($str_0, ($GLOBALS['Data_Number_isFinite'] ?? \PhpursThunks::eval('Data_Number_isFinite')), ($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just')), new Phpurs_Data0("Nothing"));
+  $__res = ($GLOBALS['Data_Number_fromStringImpl'])($str_0, $GLOBALS['Data_Number_isFinite'], $GLOBALS['Data_Maybe_Just'], new Phpurs_Data0("Nothing"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Number_e'] = function() { $v = 2.718281828459045; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+};
 
-
-
-
-
-
-
-
-
-
-
+// Data_Number_e
+$GLOBALS['Data_Number_e'] = 2.718281828459045;
 

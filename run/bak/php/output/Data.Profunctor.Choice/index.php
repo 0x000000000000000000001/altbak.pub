@@ -98,21 +98,30 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Profunctor_Choice_right'] = function() { $v = function($dict_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Profunctor_Choice_right
+$GLOBALS['Data_Profunctor_Choice_right'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['right'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Profunctor_Choice_left'] = function() { $v = function($dict_0 = null) {
+};
+
+// Data_Profunctor_Choice_left
+$GLOBALS['Data_Profunctor_Choice_left'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['left'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Profunctor_Choice_splitChoice'] = function() { $v = (function() {
+};
+
+// Data_Profunctor_Choice_splitChoice
+$GLOBALS['Data_Profunctor_Choice_splitChoice'] = (function() {
   $__fn = function($dictSemigroupoid_0 = null, $dictChoice_1 = null, $l_2 = null, $r_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
@@ -124,14 +133,16 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Profunctor_Choice_fanin'] = function() { $v = (function() {
+})();
+
+// Data_Profunctor_Choice_fanin
+$GLOBALS['Data_Profunctor_Choice_fanin'] = (function() {
   $__fn = function($dictSemigroupoid_0 = null, $dictChoice_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $rmap_2_0 = (($GLOBALS['Data_Profunctor_rmap'] ?? \PhpursThunks::eval('Data_Profunctor_rmap')))((($dictChoice_1)['Profunctor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $rmap_2_0 = ($GLOBALS['Data_Profunctor_rmap'])((($dictChoice_1)['Profunctor0'])($GLOBALS['Prim_undefined']));
   $__res = (function() use ($dictChoice_1, $dictSemigroupoid_0, $rmap_2_0) {
   $__fn = function($l_3 = null, $r_4 = null) use ($dictChoice_1, $dictSemigroupoid_0, $rmap_2_0, &$__fn) {
   $__num = \func_num_args();
@@ -168,8 +179,10 @@ goto end_branch_1;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Profunctor_Choice_choiceFn'] = function() { $v = ["left" => (function() {
+})();
+
+// Data_Profunctor_Choice_choiceFn
+$GLOBALS['Data_Profunctor_Choice_choiceFn'] = ["left" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -193,18 +206,11 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "right" => (($GLOBALS['Data_Either_functorEither'] ?? \PhpursThunks::eval('Data_Either_functorEither')))['map'], "Profunctor0" => function($dollar__unused_0 = null) {
+})(), "right" => ($GLOBALS['Data_Either_functorEither'])['map'], "Profunctor0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Profunctor_profunctorFn'] ?? \PhpursThunks::eval('Data_Profunctor_profunctorFn'));
+  $__res = $GLOBALS['Data_Profunctor_profunctorFn'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
+}];
 

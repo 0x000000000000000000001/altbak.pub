@@ -4,7 +4,6 @@ import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
 	pkg_Data_Ord "gopurs/output/Data.Ord"
-	pkg_Control_Semigroupoid "gopurs/output/Control.Semigroupoid"
 	unsafe "unsafe"
 )
 
@@ -135,7 +134,13 @@ var cache_precision gopurs_runtime.Value
 var once_precision sync.Once
 func Get_precision() gopurs_runtime.Value {
 	once_precision.Do(func() {
-		cache_precision = gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), Get_Precision(), gopurs_runtime.Apply2(Get_clamp(), gopurs_runtime.Int(1), gopurs_runtime.Int(21)))
+		cache_precision = func() gopurs_runtime.Value {
+__local_var_0_0 := gopurs_runtime.Apply2(Get_clamp(), gopurs_runtime.Int(1), gopurs_runtime.Int(21))
+_ = __local_var_0_0
+return gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1786680275, UnsafePtr: unsafe.Pointer(&Constructor_Precision{gopurs_runtime.Apply(__local_var_0_0, x_1).IntVal})}
+})
+}()
 	})
 	return cache_precision
 }
@@ -144,7 +149,13 @@ var cache_fixed gopurs_runtime.Value
 var once_fixed sync.Once
 func Get_fixed() gopurs_runtime.Value {
 	once_fixed.Do(func() {
-		cache_fixed = gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), Get_Fixed(), gopurs_runtime.Apply2(Get_clamp(), gopurs_runtime.Int(0), gopurs_runtime.Int(20)))
+		cache_fixed = func() gopurs_runtime.Value {
+__local_var_0_0 := gopurs_runtime.Apply2(Get_clamp(), gopurs_runtime.Int(0), gopurs_runtime.Int(20))
+_ = __local_var_0_0
+return gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1390206259, UnsafePtr: unsafe.Pointer(&Constructor_Fixed{gopurs_runtime.Apply(__local_var_0_0, x_1).IntVal})}
+})
+}()
 	})
 	return cache_fixed
 }
@@ -153,7 +164,13 @@ var cache_exponential gopurs_runtime.Value
 var once_exponential sync.Once
 func Get_exponential() gopurs_runtime.Value {
 	once_exponential.Do(func() {
-		cache_exponential = gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), Get_Exponential(), gopurs_runtime.Apply2(Get_clamp(), gopurs_runtime.Int(0), gopurs_runtime.Int(20)))
+		cache_exponential = func() gopurs_runtime.Value {
+__local_var_0_0 := gopurs_runtime.Apply2(Get_clamp(), gopurs_runtime.Int(0), gopurs_runtime.Int(20))
+_ = __local_var_0_0
+return gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1734244434, UnsafePtr: unsafe.Pointer(&Constructor_Exponential{gopurs_runtime.Apply(__local_var_0_0, x_1).IntVal})}
+})
+}()
 	})
 	return cache_exponential
 }

@@ -20,7 +20,6 @@ import (
 	pkg_Data_Functor_Compose "gopurs/output/Data.Functor.Compose"
 	pkg_Data_Functor_App "gopurs/output/Data.Functor.App"
 	pkg_Data_Functor_Coproduct "gopurs/output/Data.Functor.Coproduct"
-	pkg_Control_Semigroupoid "gopurs/output/Control.Semigroupoid"
 	pkg_Data_Functor_Product "gopurs/output/Data.Functor.Product"
 	pkg_Data_Traversable_Accum_Internal "gopurs/output/Data.Traversable.Accum.Internal"
 	unsafe "unsafe"
@@ -638,69 +637,85 @@ return functorCoproduct1_4_2
 }), gopurs_runtime.Func(func(dictApplicative_6 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_7_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_6, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{})
 _ = __local_var_7_4
-__local_var_8_5 := gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_7_4, "map"), gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), pkg_Data_Functor_Coproduct.Get_Coproduct(), pkg_Data_Either.Get_Left())), gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictTraversable_0.UnsafePtr)).V0, dictApplicative_6))
+__local_var_8_5 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_7_4, "map"), gopurs_runtime.Func(func(x_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value]{x_8})}
+}))
 _ = __local_var_8_5
-__local_var_9_6 := gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_7_4, "map"), gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), pkg_Data_Functor_Coproduct.Get_Coproduct(), pkg_Data_Either.Get_Right())), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTraversable1_3, "sequence"), dictApplicative_6))
+__local_var_9_6 := gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictTraversable_0.UnsafePtr)).V0, dictApplicative_6)
 _ = __local_var_9_6
-return gopurs_runtime.Func(func(v2_10 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t7 gopurs_runtime.Value
+__local_var_10_7 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_7_4, "map"), gopurs_runtime.Func(func(x_10 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{x_10})}
+}))
+_ = __local_var_10_7
+__local_var_11_8 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTraversable1_3, "sequence"), dictApplicative_6)
+_ = __local_var_11_8
+return gopurs_runtime.Func(func(v2_12 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t9 gopurs_runtime.Value
 {
-if (v2_10.Type == 9 && v2_10.IntVal == 3711209382) {
-__t7 = gopurs_runtime.Apply(__local_var_8_5, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(v2_10.UnsafePtr).V0)
-goto end_branch_7
+if (v2_12.Type == 9 && v2_12.IntVal == 3711209382) {
+__t9 = gopurs_runtime.Apply(__local_var_8_5, gopurs_runtime.Apply(__local_var_9_6, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(v2_12.UnsafePtr).V0))
+goto end_branch_9
 } else {
 
 }
 }
 {
-if (v2_10.Type == 9 && v2_10.IntVal == 2465973597) {
-__t7 = gopurs_runtime.Apply(__local_var_9_6, (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(v2_10.UnsafePtr).V0)
-goto end_branch_7
+if (v2_12.Type == 9 && v2_12.IntVal == 2465973597) {
+__t9 = gopurs_runtime.Apply(__local_var_10_7, gopurs_runtime.Apply(__local_var_11_8, (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(v2_12.UnsafePtr).V0))
+goto end_branch_9
 } else {
 
 }
 }
 {
-__t7 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t9 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
-end_branch_7:
-return __t7
+end_branch_9:
+return __t9
 })
 }), gopurs_runtime.Func(func(dictApplicative_6 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_7_8 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_6, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{})
-_ = __local_var_7_8
-traverse4_8_9 := gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictTraversable_0.UnsafePtr)).V1, dictApplicative_6)
-_ = traverse4_8_9
-traverse5_9_10 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTraversable1_3, "traverse"), dictApplicative_6)
-_ = traverse5_9_10
+__local_var_7_10 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_6, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{})
+_ = __local_var_7_10
+traverse4_8_11 := gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictTraversable_0.UnsafePtr)).V1, dictApplicative_6)
+_ = traverse4_8_11
+traverse5_9_12 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTraversable1_3, "traverse"), dictApplicative_6)
+_ = traverse5_9_12
 return gopurs_runtime.Func(func(f_10 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_11_11 := gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_7_8, "map"), gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), pkg_Data_Functor_Coproduct.Get_Coproduct(), pkg_Data_Either.Get_Left())), gopurs_runtime.Apply(traverse4_8_9, f_10))
-_ = __local_var_11_11
-__local_var_12_12 := gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_7_8, "map"), gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), pkg_Data_Functor_Coproduct.Get_Coproduct(), pkg_Data_Either.Get_Right())), gopurs_runtime.Apply(traverse5_9_10, f_10))
-_ = __local_var_12_12
-return gopurs_runtime.Func(func(v2_13 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t13 gopurs_runtime.Value
+__local_var_11_13 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_7_10, "map"), gopurs_runtime.Func(func(x_11 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value]{x_11})}
+}))
+_ = __local_var_11_13
+__local_var_12_14 := gopurs_runtime.Apply(traverse4_8_11, f_10)
+_ = __local_var_12_14
+__local_var_13_15 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_7_10, "map"), gopurs_runtime.Func(func(x_13 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{x_13})}
+}))
+_ = __local_var_13_15
+__local_var_14_16 := gopurs_runtime.Apply(traverse5_9_12, f_10)
+_ = __local_var_14_16
+return gopurs_runtime.Func(func(v2_15 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t17 gopurs_runtime.Value
 {
-if (v2_13.Type == 9 && v2_13.IntVal == 3711209382) {
-__t13 = gopurs_runtime.Apply(__local_var_11_11, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(v2_13.UnsafePtr).V0)
-goto end_branch_13
+if (v2_15.Type == 9 && v2_15.IntVal == 3711209382) {
+__t17 = gopurs_runtime.Apply(__local_var_11_13, gopurs_runtime.Apply(__local_var_12_14, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(v2_15.UnsafePtr).V0))
+goto end_branch_17
 } else {
 
 }
 }
 {
-if (v2_13.Type == 9 && v2_13.IntVal == 2465973597) {
-__t13 = gopurs_runtime.Apply(__local_var_12_12, (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(v2_13.UnsafePtr).V0)
-goto end_branch_13
+if (v2_15.Type == 9 && v2_15.IntVal == 2465973597) {
+__t17 = gopurs_runtime.Apply(__local_var_13_15, gopurs_runtime.Apply(__local_var_14_16, (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(v2_15.UnsafePtr).V0))
+goto end_branch_17
 } else {
 
 }
 }
 {
-__t13 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t17 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
-end_branch_13:
-return __t13
+end_branch_17:
+return __t17
 })
 })
 }))

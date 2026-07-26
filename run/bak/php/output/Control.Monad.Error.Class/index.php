@@ -102,14 +102,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Control_Monad_Error_Class_throwError'] = function() { $v = function($dict_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Control_Monad_Error_Class_throwError
+$GLOBALS['Control_Monad_Error_Class_throwError'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['throwError'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Error_Class_monadThrowMaybe'] = function() { $v = ["throwError" => function($v_0 = null) {
+};
+
+// Control_Monad_Error_Class_monadThrowMaybe
+$GLOBALS['Control_Monad_Error_Class_monadThrowMaybe'] = ["throwError" => function($v_0 = null) {
   $__num = \func_num_args();
   $__res = new Phpurs_Data0("Nothing");
   goto __end;;
@@ -117,26 +124,32 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Monad0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Maybe_monadMaybe'] ?? \PhpursThunks::eval('Data_Maybe_monadMaybe'));
+  $__res = $GLOBALS['Data_Maybe_monadMaybe'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Error_Class_monadThrowEither'] = function() { $v = ["throwError" => ($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left')), "Monad0" => function($dollar__unused_0 = null) {
+}];
+
+// Control_Monad_Error_Class_monadThrowEither
+$GLOBALS['Control_Monad_Error_Class_monadThrowEither'] = ["throwError" => $GLOBALS['Data_Either_Left'], "Monad0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Either_monadEither'] ?? \PhpursThunks::eval('Data_Either_monadEither'));
+  $__res = $GLOBALS['Data_Either_monadEither'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Error_Class_monadThrowEffect'] = function() { $v = ["throwError" => ($GLOBALS['Effect_Exception_throwException'] ?? \PhpursThunks::eval('Effect_Exception_throwException')), "Monad0" => function($dollar__unused_0 = null) {
+}];
+
+// Control_Monad_Error_Class_monadThrowEffect
+$GLOBALS['Control_Monad_Error_Class_monadThrowEffect'] = ["throwError" => $GLOBALS['Effect_Exception_throwException'], "Monad0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_monadEffect'] ?? \PhpursThunks::eval('Effect_monadEffect'));
+  $__res = $GLOBALS['Effect_monadEffect'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Error_Class_monadErrorMaybe'] = function() { $v = ["catchError" => (function() {
+}];
+
+// Control_Monad_Error_Class_monadErrorMaybe
+$GLOBALS['Control_Monad_Error_Class_monadErrorMaybe'] = ["catchError" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -144,7 +157,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   }
   $__t0 = null;;
   if ((is_object($v_0) && (($v_0)->{'tag'} === "Nothing"))) {
-$__t0 = ($v1_1)(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')));
+$__t0 = ($v1_1)($GLOBALS['Data_Unit_unit']);
 goto end_branch_0;;
 };
   if ((is_object($v_0) && (($v_0)->{'tag'} === "Just"))) {
@@ -162,12 +175,14 @@ goto end_branch_0;;
   return $__fn;
 })(), "MonadThrow0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Monad_Error_Class_monadThrowMaybe'] ?? \PhpursThunks::eval('Control_Monad_Error_Class_monadThrowMaybe'));
+  $__res = $GLOBALS['Control_Monad_Error_Class_monadThrowMaybe'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Error_Class_monadErrorEither'] = function() { $v = ["catchError" => (function() {
+}];
+
+// Control_Monad_Error_Class_monadErrorEither
+$GLOBALS['Control_Monad_Error_Class_monadErrorEither'] = ["catchError" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -193,18 +208,20 @@ goto end_branch_0;;
   return $__fn;
 })(), "MonadThrow0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Monad_Error_Class_monadThrowEither'] ?? \PhpursThunks::eval('Control_Monad_Error_Class_monadThrowEither'));
+  $__res = $GLOBALS['Control_Monad_Error_Class_monadThrowEither'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Error_Class_monadErrorEffect'] = function() { $v = ["catchError" => (function() {
+}];
+
+// Control_Monad_Error_Class_monadErrorEffect
+$GLOBALS['Control_Monad_Error_Class_monadErrorEffect'] = ["catchError" => (function() {
   $__fn = function($b_0 = null, $a_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Effect_Exception_catchException'] ?? \PhpursThunks::eval('Effect_Exception_catchException')))($a_1))($b_0);
+  $__res = (($GLOBALS['Effect_Exception_catchException'])($a_1))($b_0);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -212,14 +229,16 @@ goto end_branch_0;;
   return $__fn;
 })(), "MonadThrow0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Monad_Error_Class_monadThrowEffect'] ?? \PhpursThunks::eval('Control_Monad_Error_Class_monadThrowEffect'));
+  $__res = $GLOBALS['Control_Monad_Error_Class_monadThrowEffect'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Error_Class_liftMaybe'] = function() { $v = function($dictMonadThrow_0 = null) {
+}];
+
+// Control_Monad_Error_Class_liftMaybe
+$GLOBALS['Control_Monad_Error_Class_liftMaybe'] = function($dictMonadThrow_0 = null) {
   $__num = \func_num_args();
-  $pure_1_0 = ((((($dictMonadThrow_0)['Monad0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Applicative0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['pure'];
+  $pure_1_0 = ((((($dictMonadThrow_0)['Monad0'])($GLOBALS['Prim_undefined']))['Applicative0'])($GLOBALS['Prim_undefined']))['pure'];
   $__res = function($error_2 = null) use ($dictMonadThrow_0, $pure_1_0) {
   $__num = \func_num_args();
   $__local_var_3_1 = (($dictMonadThrow_0)['throwError'])($error_2);
@@ -249,10 +268,12 @@ goto end_branch_2;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Error_Class_liftEither'] = function() { $v = function($dictMonadThrow_0 = null) {
+};
+
+// Control_Monad_Error_Class_liftEither
+$GLOBALS['Control_Monad_Error_Class_liftEither'] = function($dictMonadThrow_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = ((((($dictMonadThrow_0)['Monad0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Applicative0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['pure'];
+  $__local_var_1_0 = ((((($dictMonadThrow_0)['Monad0'])($GLOBALS['Prim_undefined']))['Applicative0'])($GLOBALS['Prim_undefined']))['pure'];
   $__res = function($v2_2 = null) use ($__local_var_1_0, $dictMonadThrow_0) {
   $__num = \func_num_args();
   $__t1 = null;;
@@ -275,15 +296,19 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Error_Class_catchError'] = function() { $v = function($dict_0 = null) {
+};
+
+// Control_Monad_Error_Class_catchError
+$GLOBALS['Control_Monad_Error_Class_catchError'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['catchError'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Error_Class_catchJust'] = function() { $v = (function() {
+};
+
+// Control_Monad_Error_Class_catchJust
+$GLOBALS['Control_Monad_Error_Class_catchJust'] = (function() {
   $__fn = function($dictMonadError_0 = null, $p_1 = null, $act_2 = null, $handler_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
@@ -294,7 +319,7 @@ goto end_branch_1;;
   $v_5_0 = ($p_1)($e_4);
   $__t1 = null;;
   if ((is_object($v_5_0) && (($v_5_0)->{'tag'} === "Nothing"))) {
-$__t1 = (((($dictMonadError_0)['MonadThrow0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['throwError'])($e_4);
+$__t1 = (((($dictMonadError_0)['MonadThrow0'])($GLOBALS['Prim_undefined']))['throwError'])($e_4);
 goto end_branch_1;;
 };
   if ((is_object($v_5_0) && (($v_5_0)->{'tag'} === "Just"))) {
@@ -314,14 +339,16 @@ goto end_branch_1;;
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Control_Monad_Error_Class_try'] = function() { $v = function($dictMonadError_0 = null) {
+})();
+
+// Control_Monad_Error_Class_try
+$GLOBALS['Control_Monad_Error_Class_try'] = function($dictMonadError_0 = null) {
   $__num = \func_num_args();
-  $Monad0_1_0 = (((($dictMonadError_0)['MonadThrow0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Monad0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $pure_2_1 = ((($Monad0_1_0)['Applicative0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['pure'];
+  $Monad0_1_0 = (((($dictMonadError_0)['MonadThrow0'])($GLOBALS['Prim_undefined']))['Monad0'])($GLOBALS['Prim_undefined']);
+  $pure_2_1 = ((($Monad0_1_0)['Applicative0'])($GLOBALS['Prim_undefined']))['pure'];
   $__res = function($a_3 = null) use ($Monad0_1_0, $dictMonadError_0, $pure_2_1) {
   $__num = \func_num_args();
-  $__res = ((($dictMonadError_0)['catchError'])(((((((((($Monad0_1_0)['Bind1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Apply0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['map'])(($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right'))))($a_3)))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($pure_2_1))(($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left'))));
+  $__res = ((($dictMonadError_0)['catchError'])(((((((((($Monad0_1_0)['Bind1'])($GLOBALS['Prim_undefined']))['Apply0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']))['map'])($GLOBALS['Data_Either_Right']))($a_3)))((($GLOBALS['Control_Semigroupoid_composeImpl'])($pure_2_1))($GLOBALS['Data_Either_Left']));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -329,13 +356,15 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Error_Class_withResource'] = function() { $v = function($dictMonadError_0 = null) {
+};
+
+// Control_Monad_Error_Class_withResource
+$GLOBALS['Control_Monad_Error_Class_withResource'] = function($dictMonadError_0 = null) {
   $__num = \func_num_args();
-  $MonadThrow0_1_0 = (($dictMonadError_0)['MonadThrow0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $Monad0_2_1 = (($MonadThrow0_1_0)['Monad0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $Bind1_3_2 = (($Monad0_2_1)['Bind1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $try1_4_3 = (($GLOBALS['Control_Monad_Error_Class_try'] ?? \PhpursThunks::eval('Control_Monad_Error_Class_try')))($dictMonadError_0);
+  $MonadThrow0_1_0 = (($dictMonadError_0)['MonadThrow0'])($GLOBALS['Prim_undefined']);
+  $Monad0_2_1 = (($MonadThrow0_1_0)['Monad0'])($GLOBALS['Prim_undefined']);
+  $Bind1_3_2 = (($Monad0_2_1)['Bind1'])($GLOBALS['Prim_undefined']);
+  $try1_4_3 = ($GLOBALS['Control_Monad_Error_Class_try'])($dictMonadError_0);
   $__res = (function() use ($Bind1_3_2, $Monad0_2_1, $MonadThrow0_1_0, $try1_4_3) {
   $__fn = function($acquire_5 = null, $release_6 = null, $kleisli_7 = null) use ($Bind1_3_2, $Monad0_2_1, $MonadThrow0_1_0, $try1_4_3, &$__fn) {
   $__num = \func_num_args();
@@ -354,7 +383,7 @@ $__t4 = (($MonadThrow0_1_0)['throwError'])(($result_9)->{'value0'});
 goto end_branch_4;;
 };
   if ((is_object($result_9) && (($result_9)->{'tag'} === "Right"))) {
-$__t4 = (((($Monad0_2_1)['Applicative0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['pure'])(($result_9)->{'value0'});
+$__t4 = (((($Monad0_2_1)['Applicative0'])($GLOBALS['Prim_undefined']))['pure'])(($result_9)->{'value0'});
 goto end_branch_4;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -382,20 +411,5 @@ goto end_branch_4;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+};
 

@@ -112,11 +112,16 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Interval_show'] = function() { $v = function($v_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Interval_show
+$GLOBALS['Data_Interval_show'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object($v_0) && (($v_0)->{'tag'} === "Just"))) {
-$__t0 = (("(Just " . (($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))(($v_0)->{'value0'})) . ")");
+$__t0 = (("(Just " . ($GLOBALS['Data_Show_showIntImpl'])(($v_0)->{'value0'})) . ")");
 goto end_branch_0;;
 };
   if ((is_object($v_0) && (($v_0)->{'tag'} === "Nothing"))) {
@@ -130,9 +135,13 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Interval_compare'] = function() { $v = ((($GLOBALS['Data_Maybe_ordMaybe'] ?? \PhpursThunks::eval('Data_Maybe_ordMaybe')))(($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt'))))['compare']; return $v; };
-\PhpursThunks::$thunks['Data_Interval_StartEnd'] = function() { $v = (function() {
+};
+
+// Data_Interval_compare
+$GLOBALS['Data_Interval_compare'] = (($GLOBALS['Data_Maybe_ordMaybe'])($GLOBALS['Data_Ord_ordInt']))['compare'];
+
+// Data_Interval_StartEnd
+$GLOBALS['Data_Interval_StartEnd'] = (function() {
   $__fn = function($value0 = null, $value1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -144,8 +153,10 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Interval_DurationEnd'] = function() { $v = (function() {
+})();
+
+// Data_Interval_DurationEnd
+$GLOBALS['Data_Interval_DurationEnd'] = (function() {
   $__fn = function($value0 = null, $value1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -157,8 +168,10 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Interval_StartDuration'] = function() { $v = (function() {
+})();
+
+// Data_Interval_StartDuration
+$GLOBALS['Data_Interval_StartDuration'] = (function() {
   $__fn = function($value0 = null, $value1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -170,15 +183,19 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Interval_DurationOnly'] = function() { $v = function($value0 = null) {
+})();
+
+// Data_Interval_DurationOnly
+$GLOBALS['Data_Interval_DurationOnly'] = function($value0 = null) {
   $__num = \func_num_args();
   $__res = new Phpurs_Data1("DurationOnly", $value0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Interval_RecurringInterval'] = function() { $v = (function() {
+};
+
+// Data_Interval_RecurringInterval
+$GLOBALS['Data_Interval_RecurringInterval'] = (function() {
   $__fn = function($value0 = null, $value1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -190,8 +207,10 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Interval_showInterval'] = function() { $v = (function() {
+})();
+
+// Data_Interval_showInterval
+$GLOBALS['Data_Interval_showInterval'] = (function() {
   $__fn = function($dictShow_0 = null, $dictShow1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -229,8 +248,10 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Interval_showRecurringInterval'] = function() { $v = (function() {
+})();
+
+// Data_Interval_showRecurringInterval
+$GLOBALS['Data_Interval_showRecurringInterval'] = (function() {
   $__fn = function($dictShow_0 = null, $dictShow1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -238,7 +259,7 @@ goto end_branch_0;;
   }
   $__res = ["show" => function($v_2 = null) use ($dictShow1_1, $dictShow_0) {
   $__num = \func_num_args();
-  $__res = (((("(RecurringInterval " . (($GLOBALS['Data_Interval_show'] ?? \PhpursThunks::eval('Data_Interval_show')))(($v_2)->{'value0'})) . " ") . ((((($GLOBALS['Data_Interval_showInterval'] ?? \PhpursThunks::eval('Data_Interval_showInterval')))($dictShow_0))($dictShow1_1))['show'])(($v_2)->{'value1'})) . ")");
+  $__res = (((("(RecurringInterval " . ($GLOBALS['Data_Interval_show'])(($v_2)->{'value0'})) . " ") . (((($GLOBALS['Data_Interval_showInterval'])($dictShow_0))($dictShow1_1))['show'])(($v_2)->{'value1'})) . ")");
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -248,28 +269,34 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Interval_over'] = function() { $v = (function() {
+})();
+
+// Data_Interval_over
+$GLOBALS['Data_Interval_over'] = (function() {
   $__fn = function($dictFunctor_0 = null, $f_1 = null, $v_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($dictFunctor_0)['map'])((($GLOBALS['Data_Interval_RecurringInterval'] ?? \PhpursThunks::eval('Data_Interval_RecurringInterval')))(($v_2)->{'value0'})))(($f_1)(($v_2)->{'value1'}));
+  $__res = ((($dictFunctor_0)['map'])(($GLOBALS['Data_Interval_RecurringInterval'])(($v_2)->{'value0'})))(($f_1)(($v_2)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Interval_interval'] = function() { $v = function($v_0 = null) {
+})();
+
+// Data_Interval_interval
+$GLOBALS['Data_Interval_interval'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__res = ($v_0)->{'value1'};
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Interval_foldableInterval'] = function() { $v = ["foldl" => (function() {
+};
+
+// Data_Interval_foldableInterval
+$GLOBALS['Data_Interval_foldableInterval'] = ["foldl" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null, $v2_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -298,24 +325,26 @@ goto end_branch_0;;
   return $__fn;
 })(), "foldr" => function($x_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Foldable_foldrDefault'] ?? \PhpursThunks::eval('Data_Foldable_foldrDefault')))(($GLOBALS['Data_Interval_foldableInterval'] ?? \PhpursThunks::eval('Data_Interval_foldableInterval'))))($x_0);
+  $__res = (($GLOBALS['Data_Foldable_foldrDefault'])($GLOBALS['Data_Interval_foldableInterval']))($x_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "foldMap" => function($dictMonoid_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Foldable_foldMapDefaultL'] ?? \PhpursThunks::eval('Data_Foldable_foldMapDefaultL')))(($GLOBALS['Data_Interval_foldableInterval'] ?? \PhpursThunks::eval('Data_Interval_foldableInterval'))))($dictMonoid_0);
+  $__res = (($GLOBALS['Data_Foldable_foldMapDefaultL'])($GLOBALS['Data_Interval_foldableInterval']))($dictMonoid_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Interval_foldableRecurringInterval'] = function() { $v = ["foldl" => (function() {
+}];
+
+// Data_Interval_foldableRecurringInterval
+$GLOBALS['Data_Interval_foldableRecurringInterval'] = ["foldl" => (function() {
   $__fn = function($f_0 = null, $i_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(function($v2_2 = null) use ($f_0, $i_1) {
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v2_2 = null) use ($f_0, $i_1) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object($v2_2) && (($v2_2)->{'tag'} === "StartEnd"))) {
@@ -336,7 +365,7 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(($GLOBALS['Data_Interval_interval'] ?? \PhpursThunks::eval('Data_Interval_interval')));
+}))($GLOBALS['Data_Interval_interval']);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -348,7 +377,7 @@ goto end_branch_0;;
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((((($GLOBALS['Data_Foldable_foldrDefault'] ?? \PhpursThunks::eval('Data_Foldable_foldrDefault')))(($GLOBALS['Data_Interval_foldableInterval'] ?? \PhpursThunks::eval('Data_Interval_foldableInterval'))))($f_0))($i_1)))(($GLOBALS['Data_Interval_interval'] ?? \PhpursThunks::eval('Data_Interval_interval')));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(((($GLOBALS['Data_Foldable_foldrDefault'])($GLOBALS['Data_Interval_foldableInterval']))($f_0))($i_1)))($GLOBALS['Data_Interval_interval']);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -356,12 +385,14 @@ goto end_branch_0;;
   return $__fn;
 })(), "foldMap" => function($dictMonoid_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Foldable_foldMapDefaultL'] ?? \PhpursThunks::eval('Data_Foldable_foldMapDefaultL')))(($GLOBALS['Data_Interval_foldableRecurringInterval'] ?? \PhpursThunks::eval('Data_Interval_foldableRecurringInterval'))))($dictMonoid_0);
+  $__res = (($GLOBALS['Data_Foldable_foldMapDefaultL'])($GLOBALS['Data_Interval_foldableRecurringInterval']))($dictMonoid_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Interval_eqInterval'] = function() { $v = (function() {
+}];
+
+// Data_Interval_eqInterval
+$GLOBALS['Data_Interval_eqInterval'] = (function() {
   $__fn = function($dictEq_0 = null, $dictEq1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -400,8 +431,10 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Interval_eqRecurringInterval'] = function() { $v = (function() {
+})();
+
+// Data_Interval_eqRecurringInterval
+$GLOBALS['Data_Interval_eqRecurringInterval'] = (function() {
   $__fn = function($dictEq_0 = null, $dictEq1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -420,7 +453,7 @@ goto end_branch_0;;
 };
   $__t0 = ((is_object(($x_2)->{'value0'}) && ((($x_2)->{'value0'})->{'tag'} === "Just")) && ((is_object(($y_3)->{'value0'}) && ((($y_3)->{'value0'})->{'tag'} === "Just")) && ((($x_2)->{'value0'})->{'value0'} === (($y_3)->{'value0'})->{'value0'})));
   end_branch_0:;
-  $__res = ($__t0 && (((((($GLOBALS['Data_Interval_eqInterval'] ?? \PhpursThunks::eval('Data_Interval_eqInterval')))($dictEq_0))($dictEq1_1))['eq'])(($x_2)->{'value1'}))(($y_3)->{'value1'}));
+  $__res = ($__t0 && ((((($GLOBALS['Data_Interval_eqInterval'])($dictEq_0))($dictEq1_1))['eq'])(($x_2)->{'value1'}))(($y_3)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -432,13 +465,15 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Interval_ordInterval'] = function() { $v = function($dictOrd_0 = null) {
+})();
+
+// Data_Interval_ordInterval
+$GLOBALS['Data_Interval_ordInterval'] = function($dictOrd_0 = null) {
   $__num = \func_num_args();
-  $eqInterval1_1_0 = (($GLOBALS['Data_Interval_eqInterval'] ?? \PhpursThunks::eval('Data_Interval_eqInterval')))((($dictOrd_0)['Eq0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $eqInterval1_1_0 = ($GLOBALS['Data_Interval_eqInterval'])((($dictOrd_0)['Eq0'])($GLOBALS['Prim_undefined']));
   $__res = function($dictOrd1_2 = null) use ($dictOrd_0, $eqInterval1_1_0) {
   $__num = \func_num_args();
-  $eqInterval2_3_1 = ($eqInterval1_1_0)((($dictOrd1_2)['Eq0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $eqInterval2_3_1 = ($eqInterval1_1_0)((($dictOrd1_2)['Eq0'])($GLOBALS['Prim_undefined']));
   $__res = ["compare" => (function() use ($dictOrd1_2, $dictOrd_0) {
   $__fn = function($x_4 = null, $y_5 = null) use ($dictOrd1_2, $dictOrd_0, &$__fn) {
   $__num = \func_num_args();
@@ -554,21 +589,23 @@ goto end_branch_2;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Interval_ordRecurringInterval'] = function() { $v = function($dictOrd_0 = null) {
+};
+
+// Data_Interval_ordRecurringInterval
+$GLOBALS['Data_Interval_ordRecurringInterval'] = function($dictOrd_0 = null) {
   $__num = \func_num_args();
-  $ordInterval1_1_0 = (($GLOBALS['Data_Interval_ordInterval'] ?? \PhpursThunks::eval('Data_Interval_ordInterval')))($dictOrd_0);
-  $eqRecurringInterval1_2_1 = (($GLOBALS['Data_Interval_eqRecurringInterval'] ?? \PhpursThunks::eval('Data_Interval_eqRecurringInterval')))((($dictOrd_0)['Eq0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $ordInterval1_1_0 = ($GLOBALS['Data_Interval_ordInterval'])($dictOrd_0);
+  $eqRecurringInterval1_2_1 = ($GLOBALS['Data_Interval_eqRecurringInterval'])((($dictOrd_0)['Eq0'])($GLOBALS['Prim_undefined']));
   $__res = function($dictOrd1_3 = null) use ($eqRecurringInterval1_2_1, $ordInterval1_1_0) {
   $__num = \func_num_args();
-  $eqRecurringInterval2_4_2 = ($eqRecurringInterval1_2_1)((($dictOrd1_3)['Eq0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $eqRecurringInterval2_4_2 = ($eqRecurringInterval1_2_1)((($dictOrd1_3)['Eq0'])($GLOBALS['Prim_undefined']));
   $__res = ["compare" => (function() use ($dictOrd1_3, $ordInterval1_1_0) {
   $__fn = function($x_5 = null, $y_6 = null) use ($dictOrd1_3, $ordInterval1_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $v_7_3 = ((($GLOBALS['Data_Interval_compare'] ?? \PhpursThunks::eval('Data_Interval_compare')))(($x_5)->{'value0'}))(($y_6)->{'value0'});
+  $v_7_3 = (($GLOBALS['Data_Interval_compare'])(($x_5)->{'value0'}))(($y_6)->{'value0'});
   $__t4 = null;;
   if ((is_object($v_7_3) && (($v_7_3)->{'tag'} === "LT"))) {
 $__t4 = new Phpurs_Data0("LT");
@@ -600,8 +637,10 @@ goto end_branch_4;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Interval_bifunctorInterval'] = function() { $v = ["bimap" => (function() {
+};
+
+// Data_Interval_bifunctorInterval
+$GLOBALS['Data_Interval_bifunctorInterval'] = ["bimap" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null, $v2_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -633,8 +672,10 @@ goto end_branch_0;;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Interval_bifunctorRecurringInterval'] = function() { $v = ["bimap" => (function() {
+})()];
+
+// Data_Interval_bifunctorRecurringInterval
+$GLOBALS['Data_Interval_bifunctorRecurringInterval'] = ["bimap" => (function() {
   $__fn = function($f_0 = null, $g_1 = null, $v_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -666,8 +707,10 @@ goto end_branch_0;;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Interval_functorInterval'] = function() { $v = ["map" => (function() {
+})()];
+
+// Data_Interval_functorInterval
+$GLOBALS['Data_Interval_functorInterval'] = ["map" => (function() {
   $__fn = function($v1_0 = null, $v2_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -699,8 +742,10 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Interval_extendInterval'] = function() { $v = ["extend" => (function() {
+})()];
+
+// Data_Interval_extendInterval
+$GLOBALS['Data_Interval_extendInterval'] = ["extend" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -734,12 +779,14 @@ goto end_branch_0;;
   return $__fn;
 })(), "Functor0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Interval_functorInterval'] ?? \PhpursThunks::eval('Data_Interval_functorInterval'));
+  $__res = $GLOBALS['Data_Interval_functorInterval'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Interval_functorRecurringInterval'] = function() { $v = ["map" => (function() {
+}];
+
+// Data_Interval_functorRecurringInterval
+$GLOBALS['Data_Interval_functorRecurringInterval'] = ["map" => (function() {
   $__fn = function($f_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -771,8 +818,10 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Interval_extendRecurringInterval'] = function() { $v = ["extend" => (function() {
+})()];
+
+// Data_Interval_extendRecurringInterval
+$GLOBALS['Data_Interval_extendRecurringInterval'] = ["extend" => (function() {
   $__fn = function($f_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -807,15 +856,17 @@ goto end_branch_1;;
   return $__fn;
 })(), "Functor0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Interval_functorRecurringInterval'] ?? \PhpursThunks::eval('Data_Interval_functorRecurringInterval'));
+  $__res = $GLOBALS['Data_Interval_functorRecurringInterval'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Interval_traversableInterval'] = function() { $v = ["traverse" => function($dictApplicative_0 = null) {
+}];
+
+// Data_Interval_traversableInterval
+$GLOBALS['Data_Interval_traversableInterval'] = ["traverse" => function($dictApplicative_0 = null) {
   $__num = \func_num_args();
-  $Apply0_1_0 = (($dictApplicative_0)['Apply0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $Functor0_2_1 = (($Apply0_1_0)['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $Apply0_1_0 = (($dictApplicative_0)['Apply0'])($GLOBALS['Prim_undefined']);
+  $Functor0_2_1 = (($Apply0_1_0)['Functor0'])($GLOBALS['Prim_undefined']);
   $__res = (function() use ($Apply0_1_0, $Functor0_2_1, $dictApplicative_0) {
   $__fn = function($v_3 = null, $v1_4 = null) use ($Apply0_1_0, $Functor0_2_1, $dictApplicative_0, &$__fn) {
   $__num = \func_num_args();
@@ -824,11 +875,11 @@ goto end_branch_1;;
   }
   $__t2 = null;;
   if ((is_object($v1_4) && (($v1_4)->{'tag'} === "StartEnd"))) {
-$__t2 = ((($Apply0_1_0)['apply'])(((($Functor0_2_1)['map'])(($GLOBALS['Data_Interval_StartEnd'] ?? \PhpursThunks::eval('Data_Interval_StartEnd'))))(($v_3)(($v1_4)->{'value0'}))))(($v_3)(($v1_4)->{'value1'}));
+$__t2 = ((($Apply0_1_0)['apply'])(((($Functor0_2_1)['map'])($GLOBALS['Data_Interval_StartEnd']))(($v_3)(($v1_4)->{'value0'}))))(($v_3)(($v1_4)->{'value1'}));
 goto end_branch_2;;
 };
   if ((is_object($v1_4) && (($v1_4)->{'tag'} === "DurationEnd"))) {
-$__t2 = ((($Functor0_2_1)['map'])((($GLOBALS['Data_Interval_DurationEnd'] ?? \PhpursThunks::eval('Data_Interval_DurationEnd')))(($v1_4)->{'value0'})))(($v_3)(($v1_4)->{'value1'}));
+$__t2 = ((($Functor0_2_1)['map'])(($GLOBALS['Data_Interval_DurationEnd'])(($v1_4)->{'value0'})))(($v_3)(($v1_4)->{'value1'}));
 goto end_branch_2;;
 };
   if ((is_object($v1_4) && (($v1_4)->{'tag'} === "StartDuration"))) {
@@ -861,27 +912,29 @@ goto end_branch_2;;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "sequence" => function($dictApplicative_0 = null) {
   $__num = \func_num_args();
-  $__res = (((($GLOBALS['Data_Interval_traversableInterval'] ?? \PhpursThunks::eval('Data_Interval_traversableInterval')))['traverse'])($dictApplicative_0))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))['identity']);
+  $__res = ((($GLOBALS['Data_Interval_traversableInterval'])['traverse'])($dictApplicative_0))(($GLOBALS['Control_Category_categoryFn'])['identity']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Functor0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Interval_functorInterval'] ?? \PhpursThunks::eval('Data_Interval_functorInterval'));
+  $__res = $GLOBALS['Data_Interval_functorInterval'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Foldable1" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Interval_foldableInterval'] ?? \PhpursThunks::eval('Data_Interval_foldableInterval'));
+  $__res = $GLOBALS['Data_Interval_foldableInterval'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Interval_traversableRecurringInterval'] = function() { $v = ["traverse" => function($dictApplicative_0 = null) {
+}];
+
+// Data_Interval_traversableRecurringInterval
+$GLOBALS['Data_Interval_traversableRecurringInterval'] = ["traverse" => function($dictApplicative_0 = null) {
   $__num = \func_num_args();
-  $over1_1_0 = (($GLOBALS['Data_Interval_over'] ?? \PhpursThunks::eval('Data_Interval_over')))((((($dictApplicative_0)['Apply0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $traverse1_2_1 = ((($GLOBALS['Data_Interval_traversableInterval'] ?? \PhpursThunks::eval('Data_Interval_traversableInterval')))['traverse'])($dictApplicative_0);
+  $over1_1_0 = ($GLOBALS['Data_Interval_over'])((((($dictApplicative_0)['Apply0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']));
+  $traverse1_2_1 = (($GLOBALS['Data_Interval_traversableInterval'])['traverse'])($dictApplicative_0);
   $__res = (function() use ($over1_1_0, $traverse1_2_1) {
   $__fn = function($f_3 = null, $i_4 = null) use ($over1_1_0, $traverse1_2_1, &$__fn) {
   $__num = \func_num_args();
@@ -900,24 +953,26 @@ goto end_branch_2;;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "sequence" => function($dictApplicative_0 = null) {
   $__num = \func_num_args();
-  $__res = (((($GLOBALS['Data_Interval_traversableRecurringInterval'] ?? \PhpursThunks::eval('Data_Interval_traversableRecurringInterval')))['traverse'])($dictApplicative_0))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))['identity']);
+  $__res = ((($GLOBALS['Data_Interval_traversableRecurringInterval'])['traverse'])($dictApplicative_0))(($GLOBALS['Control_Category_categoryFn'])['identity']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Functor0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Interval_functorRecurringInterval'] ?? \PhpursThunks::eval('Data_Interval_functorRecurringInterval'));
+  $__res = $GLOBALS['Data_Interval_functorRecurringInterval'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Foldable1" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Interval_foldableRecurringInterval'] ?? \PhpursThunks::eval('Data_Interval_foldableRecurringInterval'));
+  $__res = $GLOBALS['Data_Interval_foldableRecurringInterval'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Interval_bifoldableInterval'] = function() { $v = ["bifoldl" => (function() {
+}];
+
+// Data_Interval_bifoldableInterval
+$GLOBALS['Data_Interval_bifoldableInterval'] = ["bifoldl" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null, $v2_2 = null, $v3_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
@@ -951,24 +1006,26 @@ goto end_branch_0;;
   return $__fn;
 })(), "bifoldr" => function($x_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Bifoldable_bifoldrDefault'] ?? \PhpursThunks::eval('Data_Bifoldable_bifoldrDefault')))(($GLOBALS['Data_Interval_bifoldableInterval'] ?? \PhpursThunks::eval('Data_Interval_bifoldableInterval'))))($x_0);
+  $__res = (($GLOBALS['Data_Bifoldable_bifoldrDefault'])($GLOBALS['Data_Interval_bifoldableInterval']))($x_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "bifoldMap" => function($dictMonoid_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Bifoldable_bifoldMapDefaultL'] ?? \PhpursThunks::eval('Data_Bifoldable_bifoldMapDefaultL')))(($GLOBALS['Data_Interval_bifoldableInterval'] ?? \PhpursThunks::eval('Data_Interval_bifoldableInterval'))))($dictMonoid_0);
+  $__res = (($GLOBALS['Data_Bifoldable_bifoldMapDefaultL'])($GLOBALS['Data_Interval_bifoldableInterval']))($dictMonoid_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Interval_bifoldableRecurringInterval'] = function() { $v = ["bifoldl" => (function() {
+}];
+
+// Data_Interval_bifoldableRecurringInterval
+$GLOBALS['Data_Interval_bifoldableRecurringInterval'] = ["bifoldl" => (function() {
   $__fn = function($f_0 = null, $g_1 = null, $i_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(function($v3_3 = null) use ($f_0, $g_1, $i_2) {
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v3_3 = null) use ($f_0, $g_1, $i_2) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object($v3_3) && (($v3_3)->{'tag'} === "StartEnd"))) {
@@ -994,7 +1051,7 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(($GLOBALS['Data_Interval_interval'] ?? \PhpursThunks::eval('Data_Interval_interval')));
+}))($GLOBALS['Data_Interval_interval']);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -1006,7 +1063,7 @@ goto end_branch_0;;
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(((((($GLOBALS['Data_Bifoldable_bifoldrDefault'] ?? \PhpursThunks::eval('Data_Bifoldable_bifoldrDefault')))(($GLOBALS['Data_Interval_bifoldableInterval'] ?? \PhpursThunks::eval('Data_Interval_bifoldableInterval'))))($f_0))($g_1))($i_2)))(($GLOBALS['Data_Interval_interval'] ?? \PhpursThunks::eval('Data_Interval_interval')));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((((($GLOBALS['Data_Bifoldable_bifoldrDefault'])($GLOBALS['Data_Interval_bifoldableInterval']))($f_0))($g_1))($i_2)))($GLOBALS['Data_Interval_interval']);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -1014,15 +1071,17 @@ goto end_branch_0;;
   return $__fn;
 })(), "bifoldMap" => function($dictMonoid_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Bifoldable_bifoldMapDefaultL'] ?? \PhpursThunks::eval('Data_Bifoldable_bifoldMapDefaultL')))(($GLOBALS['Data_Interval_bifoldableRecurringInterval'] ?? \PhpursThunks::eval('Data_Interval_bifoldableRecurringInterval'))))($dictMonoid_0);
+  $__res = (($GLOBALS['Data_Bifoldable_bifoldMapDefaultL'])($GLOBALS['Data_Interval_bifoldableRecurringInterval']))($dictMonoid_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Interval_bitraversableInterval'] = function() { $v = ["bitraverse" => function($dictApplicative_0 = null) {
+}];
+
+// Data_Interval_bitraversableInterval
+$GLOBALS['Data_Interval_bitraversableInterval'] = ["bitraverse" => function($dictApplicative_0 = null) {
   $__num = \func_num_args();
-  $Apply0_1_0 = (($dictApplicative_0)['Apply0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $__local_var_2_1 = (($Apply0_1_0)['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $Apply0_1_0 = (($dictApplicative_0)['Apply0'])($GLOBALS['Prim_undefined']);
+  $__local_var_2_1 = (($Apply0_1_0)['Functor0'])($GLOBALS['Prim_undefined']);
   $__res = (function() use ($Apply0_1_0, $__local_var_2_1) {
   $__fn = function($v_3 = null, $v1_4 = null, $v2_5 = null) use ($Apply0_1_0, $__local_var_2_1, &$__fn) {
   $__num = \func_num_args();
@@ -1031,19 +1090,19 @@ goto end_branch_0;;
   }
   $__t2 = null;;
   if ((is_object($v2_5) && (($v2_5)->{'tag'} === "StartEnd"))) {
-$__t2 = ((($Apply0_1_0)['apply'])(((($__local_var_2_1)['map'])(($GLOBALS['Data_Interval_StartEnd'] ?? \PhpursThunks::eval('Data_Interval_StartEnd'))))(($v1_4)(($v2_5)->{'value0'}))))(($v1_4)(($v2_5)->{'value1'}));
+$__t2 = ((($Apply0_1_0)['apply'])(((($__local_var_2_1)['map'])($GLOBALS['Data_Interval_StartEnd']))(($v1_4)(($v2_5)->{'value0'}))))(($v1_4)(($v2_5)->{'value1'}));
 goto end_branch_2;;
 };
   if ((is_object($v2_5) && (($v2_5)->{'tag'} === "DurationEnd"))) {
-$__t2 = ((($Apply0_1_0)['apply'])(((($__local_var_2_1)['map'])(($GLOBALS['Data_Interval_DurationEnd'] ?? \PhpursThunks::eval('Data_Interval_DurationEnd'))))(($v_3)(($v2_5)->{'value0'}))))(($v1_4)(($v2_5)->{'value1'}));
+$__t2 = ((($Apply0_1_0)['apply'])(((($__local_var_2_1)['map'])($GLOBALS['Data_Interval_DurationEnd']))(($v_3)(($v2_5)->{'value0'}))))(($v1_4)(($v2_5)->{'value1'}));
 goto end_branch_2;;
 };
   if ((is_object($v2_5) && (($v2_5)->{'tag'} === "StartDuration"))) {
-$__t2 = ((($Apply0_1_0)['apply'])(((($__local_var_2_1)['map'])(($GLOBALS['Data_Interval_StartDuration'] ?? \PhpursThunks::eval('Data_Interval_StartDuration'))))(($v1_4)(($v2_5)->{'value0'}))))(($v_3)(($v2_5)->{'value1'}));
+$__t2 = ((($Apply0_1_0)['apply'])(((($__local_var_2_1)['map'])($GLOBALS['Data_Interval_StartDuration']))(($v1_4)(($v2_5)->{'value0'}))))(($v_3)(($v2_5)->{'value1'}));
 goto end_branch_2;;
 };
   if ((is_object($v2_5) && (($v2_5)->{'tag'} === "DurationOnly"))) {
-$__t2 = ((($__local_var_2_1)['map'])(($GLOBALS['Data_Interval_DurationOnly'] ?? \PhpursThunks::eval('Data_Interval_DurationOnly'))))(($v_3)(($v2_5)->{'value0'}));
+$__t2 = ((($__local_var_2_1)['map'])($GLOBALS['Data_Interval_DurationOnly']))(($v_3)(($v2_5)->{'value0'}));
 goto end_branch_2;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -1061,27 +1120,29 @@ goto end_branch_2;;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "bisequence" => function($dictApplicative_0 = null) {
   $__num = \func_num_args();
-  $__res = ((((($GLOBALS['Data_Interval_bitraversableInterval'] ?? \PhpursThunks::eval('Data_Interval_bitraversableInterval')))['bitraverse'])($dictApplicative_0))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))['identity']))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))['identity']);
+  $__res = (((($GLOBALS['Data_Interval_bitraversableInterval'])['bitraverse'])($dictApplicative_0))(($GLOBALS['Control_Category_categoryFn'])['identity']))(($GLOBALS['Control_Category_categoryFn'])['identity']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bifunctor0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Interval_bifunctorInterval'] ?? \PhpursThunks::eval('Data_Interval_bifunctorInterval'));
+  $__res = $GLOBALS['Data_Interval_bifunctorInterval'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bifoldable1" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Interval_bifoldableInterval'] ?? \PhpursThunks::eval('Data_Interval_bifoldableInterval'));
+  $__res = $GLOBALS['Data_Interval_bifoldableInterval'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Interval_bitraversableRecurringInterval'] = function() { $v = ["bitraverse" => function($dictApplicative_0 = null) {
+}];
+
+// Data_Interval_bitraversableRecurringInterval
+$GLOBALS['Data_Interval_bitraversableRecurringInterval'] = ["bitraverse" => function($dictApplicative_0 = null) {
   $__num = \func_num_args();
-  $over1_1_0 = (($GLOBALS['Data_Interval_over'] ?? \PhpursThunks::eval('Data_Interval_over')))((((($dictApplicative_0)['Apply0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $bitraverse1_2_1 = ((($GLOBALS['Data_Interval_bitraversableInterval'] ?? \PhpursThunks::eval('Data_Interval_bitraversableInterval')))['bitraverse'])($dictApplicative_0);
+  $over1_1_0 = ($GLOBALS['Data_Interval_over'])((((($dictApplicative_0)['Apply0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']));
+  $bitraverse1_2_1 = (($GLOBALS['Data_Interval_bitraversableInterval'])['bitraverse'])($dictApplicative_0);
   $__res = (function() use ($bitraverse1_2_1, $over1_1_0) {
   $__fn = function($l_3 = null, $r_4 = null, $i_5 = null) use ($bitraverse1_2_1, $over1_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -1100,52 +1161,21 @@ goto end_branch_2;;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "bisequence" => function($dictApplicative_0 = null) {
   $__num = \func_num_args();
-  $__res = ((((($GLOBALS['Data_Interval_bitraversableRecurringInterval'] ?? \PhpursThunks::eval('Data_Interval_bitraversableRecurringInterval')))['bitraverse'])($dictApplicative_0))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))['identity']))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))['identity']);
+  $__res = (((($GLOBALS['Data_Interval_bitraversableRecurringInterval'])['bitraverse'])($dictApplicative_0))(($GLOBALS['Control_Category_categoryFn'])['identity']))(($GLOBALS['Control_Category_categoryFn'])['identity']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bifunctor0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Interval_bifunctorRecurringInterval'] ?? \PhpursThunks::eval('Data_Interval_bifunctorRecurringInterval'));
+  $__res = $GLOBALS['Data_Interval_bifunctorRecurringInterval'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bifoldable1" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Interval_bifoldableRecurringInterval'] ?? \PhpursThunks::eval('Data_Interval_bifoldableRecurringInterval'));
+  $__res = $GLOBALS['Data_Interval_bifoldableRecurringInterval'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}];
 

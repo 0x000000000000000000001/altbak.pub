@@ -91,12 +91,16 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Spago_Generated_BuildInfo_spagoVersion'] = function() { $v = "1.0.4"; return $v; };
-\PhpursThunks::$thunks['Spago_Generated_BuildInfo_pursVersion'] = function() { $v = "0.15.16"; return $v; };
-\PhpursThunks::$thunks['Spago_Generated_BuildInfo_packages'] = function() { $v = ["ps-php-test" => "0.0.0"]; return $v; };
+
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+// Spago_Generated_BuildInfo_spagoVersion
+$GLOBALS['Spago_Generated_BuildInfo_spagoVersion'] = "1.0.4";
 
+// Spago_Generated_BuildInfo_pursVersion
+$GLOBALS['Spago_Generated_BuildInfo_pursVersion'] = "0.15.16";
 
+// Spago_Generated_BuildInfo_packages
+$GLOBALS['Spago_Generated_BuildInfo_packages'] = ["ps-php-test" => "0.0.0"];
 

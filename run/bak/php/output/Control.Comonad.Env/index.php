@@ -98,15 +98,24 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Control_Comonad_Env_withEnv'] = function() { $v = ($GLOBALS['Control_Comonad_Env_Trans_withEnvT'] ?? \PhpursThunks::eval('Control_Comonad_Env_Trans_withEnvT')); return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Env_runEnv'] = function() { $v = function($v_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Control_Comonad_Env_withEnv
+$GLOBALS['Control_Comonad_Env_withEnv'] = $GLOBALS['Control_Comonad_Env_Trans_withEnvT'];
+
+// Control_Comonad_Env_runEnv
+$GLOBALS['Control_Comonad_Env_runEnv'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__res = new Phpurs_Data2("Tuple", ($v_0)->{'value0'}, ($v_0)->{'value1'});
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Env_mapEnv'] = function() { $v = (function() {
+};
+
+// Control_Comonad_Env_mapEnv
+$GLOBALS['Control_Comonad_Env_mapEnv'] = (function() {
   $__fn = function($f_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -118,8 +127,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Env_env'] = function() { $v = (function() {
+})();
+
+// Control_Comonad_Env_env
+$GLOBALS['Control_Comonad_Env_env'] = (function() {
   $__fn = function($e_0 = null, $a_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -131,11 +142,5 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
+})();
 

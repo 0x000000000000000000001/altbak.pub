@@ -103,8 +103,15 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Test_Primes_Nil'] = function() { $v = ($GLOBALS['__phpurs_data0_Nil'] ??= new Phpurs_Data0("Nil")); return $v; };
-\PhpursThunks::$thunks['Test_Primes_Cons'] = function() { $v = (function() {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Test_Primes_Nil
+$GLOBALS['Test_Primes_Nil'] = ($GLOBALS['__phpurs_data0_Nil'] ??= new Phpurs_Data0("Nil"));
+
+// Test_Primes_Cons
+$GLOBALS['Test_Primes_Cons'] = (function() {
   $__fn = function($value0 = null, $value1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -116,8 +123,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Test_Primes_sumList'] = function() { $v = function($lst_0 = null) {
+})();
+
+// Test_Primes_sumList
+$GLOBALS['Test_Primes_sumList'] = function($lst_0 = null) {
   $__num = \func_num_args();
   $go_1_0 = null;
   $go_1_0 = (function() use (&$go_1_0) {
@@ -159,8 +168,10 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Test_Primes_reverse'] = function() { $v = function($lst_0 = null) {
+};
+
+// Test_Primes_reverse
+$GLOBALS['Test_Primes_reverse'] = function($lst_0 = null) {
   $__num = \func_num_args();
   $go_1_0 = null;
   $go_1_0 = (function() use (&$go_1_0) {
@@ -202,8 +213,10 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Test_Primes_range'] = function() { $v = (function() {
+};
+
+// Test_Primes_range
+$GLOBALS['Test_Primes_range'] = (function() {
   $__fn = function($start_0 = null, $end_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -246,8 +259,10 @@ goto end_branch_2;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Test_Primes_filter'] = function() { $v = (function() {
+})();
+
+// Test_Primes_filter
+$GLOBALS['Test_Primes_filter'] = (function() {
   $__fn = function($p_0 = null, $lst_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -343,8 +358,10 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Test_Primes_sieve'] = function() { $v = function($v_0 = null) {
+})();
+
+// Test_Primes_sieve
+$GLOBALS['Test_Primes_sieve'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__tco_var_Test_Primes_sieve_v_0 = $v_0;
   tco_loop_Test_Primes_sieve:;
@@ -411,7 +428,7 @@ goto end_branch_2;;
 };
   if ((is_object($v_3) && (($v_3)->{'tag'} === "Cons"))) {
 $__t6 = null;;
-if ((((($GLOBALS['Data_EuclideanRing_intMod'] ?? \PhpursThunks::eval('Data_EuclideanRing_intMod')))(($v_3)->{'value0'}))($__local_var_1_1) !== 0)) {
+if (((($GLOBALS['Data_EuclideanRing_intMod'])(($v_3)->{'value0'}))($__local_var_1_1) !== 0)) {
 $__tco_7 = ($v_3)->{'value1'};
 $__tco_8 = new Phpurs_Data2("Cons", ($v_3)->{'value0'}, $v1_4);
 $__tco_var_go_2_2_2_v_3 = $__tco_7;
@@ -440,7 +457,7 @@ goto end_branch_2;;
   };
   return $__fn;
 })();
-$__t0 = new Phpurs_Data2("Cons", $__local_var_1_1, (($GLOBALS['Test_Primes_sieve'] ?? \PhpursThunks::eval('Test_Primes_sieve')))((($go_2_2)(($v_0)->{'value1'}))(new Phpurs_Data0("Nil"))));
+$__t0 = new Phpurs_Data2("Cons", $__local_var_1_1, ($GLOBALS['Test_Primes_sieve'])((($go_2_2)(($v_0)->{'value1'}))(new Phpurs_Data0("Nil"))));
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -450,9 +467,13 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Test_Primes_describe'] = function() { $v = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))("Prime Sieve (sum primes up to 500):"); return $v; };
-\PhpursThunks::$thunks['Test_Primes_act'] = function() { $v = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))((($GLOBALS['Bench_opaque'] ?? \PhpursThunks::eval('Bench_opaque')))(500)))(function($dummy_0 = null) {
+};
+
+// Test_Primes_describe
+$GLOBALS['Test_Primes_describe'] = ($GLOBALS['Effect_Console_log'])("Prime Sieve (sum primes up to 500):");
+
+// Test_Primes_act
+$GLOBALS['Test_Primes_act'] = (($GLOBALS['Effect_bindE'])(($GLOBALS['Bench_opaque'])(500)))(function($dummy_0 = null) {
   $__num = \func_num_args();
   $go_1_0 = null;
   $go_1_0 = (function() use (&$go_1_0) {
@@ -521,20 +542,9 @@ goto end_branch_3;;
   };
   return $__fn;
 })();
-  $__res = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))((($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))((($go_1_0)((($GLOBALS['Test_Primes_sieve'] ?? \PhpursThunks::eval('Test_Primes_sieve')))((($go_2_1)($dummy_0))(new Phpurs_Data0("Nil")))))(0)));
+  $__res = ($GLOBALS['Effect_Console_log'])(($GLOBALS['Data_Show_showIntImpl'])((($go_1_0)(($GLOBALS['Test_Primes_sieve'])((($go_2_1)($dummy_0))(new Phpurs_Data0("Nil")))))(0)));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}); return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
-
+});
 

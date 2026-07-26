@@ -9,7 +9,9 @@ var cache_semigroupoidFn gopurs_runtime.Value
 var once_semigroupoidFn sync.Once
 func Get_semigroupoidFn() gopurs_runtime.Value {
 	once_semigroupoidFn.Do(func() {
-		cache_semigroupoidFn = gopurs_runtime.RecordDict1("compose", Get_composeImpl())
+		cache_semigroupoidFn = gopurs_runtime.RecordDict1("compose", gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, g_1 gopurs_runtime.Value, x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(f_0, gopurs_runtime.Apply(g_1, x_2))
+}))
 	})
 	return cache_semigroupoidFn
 }
@@ -52,6 +54,4 @@ _ = g_2
 return gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictSemigroupoid_0.UnsafePtr)).V0, g_2, f_1)
 }
 
-func Get_composeImpl() gopurs_runtime.Value {
-	return _Gopurs_ComposeImpl
-}
+

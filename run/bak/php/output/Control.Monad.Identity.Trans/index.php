@@ -118,140 +118,183 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Control_Monad_Identity_Trans_IdentityT'] = function() { $v = function($x_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Control_Monad_Identity_Trans_IdentityT
+$GLOBALS['Control_Monad_Identity_Trans_IdentityT'] = function($x_0 = null) {
   $__num = \func_num_args();
   $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Identity_Trans_monadSTIdentityT'] = function() { $v = function($dictMonadST_0 = null) {
+};
+
+// Control_Monad_Identity_Trans_monadSTIdentityT
+$GLOBALS['Control_Monad_Identity_Trans_monadSTIdentityT'] = function($dictMonadST_0 = null) {
   $__num = \func_num_args();
   $__res = $dictMonadST_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Identity_Trans_traversableIdentityT'] = function() { $v = function($dictTraversable_0 = null) {
+};
+
+// Control_Monad_Identity_Trans_traversableIdentityT
+$GLOBALS['Control_Monad_Identity_Trans_traversableIdentityT'] = function($dictTraversable_0 = null) {
   $__num = \func_num_args();
   $__res = $dictTraversable_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Identity_Trans_runIdentityT'] = function() { $v = function($v_0 = null) {
+};
+
+// Control_Monad_Identity_Trans_runIdentityT
+$GLOBALS['Control_Monad_Identity_Trans_runIdentityT'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__res = $v_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Identity_Trans_plusIdentityT'] = function() { $v = function($dictPlus_0 = null) {
+};
+
+// Control_Monad_Identity_Trans_plusIdentityT
+$GLOBALS['Control_Monad_Identity_Trans_plusIdentityT'] = function($dictPlus_0 = null) {
   $__num = \func_num_args();
   $__res = $dictPlus_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Identity_Trans_newtypeIdentityT'] = function() { $v = ["Coercible0" => function($dollar__unused_0 = null) {
+};
+
+// Control_Monad_Identity_Trans_newtypeIdentityT
+$GLOBALS['Control_Monad_Identity_Trans_newtypeIdentityT'] = ["Coercible0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'));
+  $__res = $GLOBALS['Prim_undefined'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Identity_Trans_monadWriterIdentityT'] = function() { $v = function($dictMonadWriter_0 = null) {
+}];
+
+// Control_Monad_Identity_Trans_monadWriterIdentityT
+$GLOBALS['Control_Monad_Identity_Trans_monadWriterIdentityT'] = function($dictMonadWriter_0 = null) {
   $__num = \func_num_args();
   $__res = $dictMonadWriter_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Identity_Trans_monadTransIdentityT'] = function() { $v = ["lift" => function($dictMonad_0 = null) {
+};
+
+// Control_Monad_Identity_Trans_monadTransIdentityT
+$GLOBALS['Control_Monad_Identity_Trans_monadTransIdentityT'] = ["lift" => function($dictMonad_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Monad_Identity_Trans_IdentityT'] ?? \PhpursThunks::eval('Control_Monad_Identity_Trans_IdentityT'));
+  $__res = $GLOBALS['Control_Monad_Identity_Trans_IdentityT'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Identity_Trans_monadThrowIdentityT'] = function() { $v = function($dictMonadThrow_0 = null) {
+}];
+
+// Control_Monad_Identity_Trans_monadThrowIdentityT
+$GLOBALS['Control_Monad_Identity_Trans_monadThrowIdentityT'] = function($dictMonadThrow_0 = null) {
   $__num = \func_num_args();
   $__res = $dictMonadThrow_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Identity_Trans_monadTellIdentityT'] = function() { $v = function($dictMonadTell_0 = null) {
+};
+
+// Control_Monad_Identity_Trans_monadTellIdentityT
+$GLOBALS['Control_Monad_Identity_Trans_monadTellIdentityT'] = function($dictMonadTell_0 = null) {
   $__num = \func_num_args();
   $__res = $dictMonadTell_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Identity_Trans_monadStateIdentityT'] = function() { $v = function($dictMonadState_0 = null) {
+};
+
+// Control_Monad_Identity_Trans_monadStateIdentityT
+$GLOBALS['Control_Monad_Identity_Trans_monadStateIdentityT'] = function($dictMonadState_0 = null) {
   $__num = \func_num_args();
   $__res = $dictMonadState_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Identity_Trans_monadRecIdentityT'] = function() { $v = function($dictMonadRec_0 = null) {
+};
+
+// Control_Monad_Identity_Trans_monadRecIdentityT
+$GLOBALS['Control_Monad_Identity_Trans_monadRecIdentityT'] = function($dictMonadRec_0 = null) {
   $__num = \func_num_args();
   $__res = $dictMonadRec_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Identity_Trans_monadReaderIdentityT'] = function() { $v = function($dictMonadReader_0 = null) {
+};
+
+// Control_Monad_Identity_Trans_monadReaderIdentityT
+$GLOBALS['Control_Monad_Identity_Trans_monadReaderIdentityT'] = function($dictMonadReader_0 = null) {
   $__num = \func_num_args();
   $__res = $dictMonadReader_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Identity_Trans_monadPlusIdentityT'] = function() { $v = function($dictMonadPlus_0 = null) {
+};
+
+// Control_Monad_Identity_Trans_monadPlusIdentityT
+$GLOBALS['Control_Monad_Identity_Trans_monadPlusIdentityT'] = function($dictMonadPlus_0 = null) {
   $__num = \func_num_args();
   $__res = $dictMonadPlus_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Identity_Trans_monadIdentityT'] = function() { $v = function($dictMonad_0 = null) {
+};
+
+// Control_Monad_Identity_Trans_monadIdentityT
+$GLOBALS['Control_Monad_Identity_Trans_monadIdentityT'] = function($dictMonad_0 = null) {
   $__num = \func_num_args();
   $__res = $dictMonad_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Identity_Trans_monadErrorIdentityT'] = function() { $v = function($dictMonadError_0 = null) {
+};
+
+// Control_Monad_Identity_Trans_monadErrorIdentityT
+$GLOBALS['Control_Monad_Identity_Trans_monadErrorIdentityT'] = function($dictMonadError_0 = null) {
   $__num = \func_num_args();
   $__res = $dictMonadError_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Identity_Trans_monadEffectIdentityT'] = function() { $v = function($dictMonadEffect_0 = null) {
+};
+
+// Control_Monad_Identity_Trans_monadEffectIdentityT
+$GLOBALS['Control_Monad_Identity_Trans_monadEffectIdentityT'] = function($dictMonadEffect_0 = null) {
   $__num = \func_num_args();
   $__res = $dictMonadEffect_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Identity_Trans_monadContIdentityT'] = function() { $v = function($dictMonadCont_0 = null) {
+};
+
+// Control_Monad_Identity_Trans_monadContIdentityT
+$GLOBALS['Control_Monad_Identity_Trans_monadContIdentityT'] = function($dictMonadCont_0 = null) {
   $__num = \func_num_args();
   $__res = $dictMonadCont_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Identity_Trans_monadAskIdentityT'] = function() { $v = function($dictMonadAsk_0 = null) {
+};
+
+// Control_Monad_Identity_Trans_monadAskIdentityT
+$GLOBALS['Control_Monad_Identity_Trans_monadAskIdentityT'] = function($dictMonadAsk_0 = null) {
   $__num = \func_num_args();
   $__res = $dictMonadAsk_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Identity_Trans_mapIdentityT'] = function() { $v = (function() {
+};
+
+// Control_Monad_Identity_Trans_mapIdentityT
+$GLOBALS['Control_Monad_Identity_Trans_mapIdentityT'] = (function() {
   $__fn = function($f_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -263,31 +306,37 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Control_Monad_Identity_Trans_functorIdentityT'] = function() { $v = function($dictFunctor_0 = null) {
+})();
+
+// Control_Monad_Identity_Trans_functorIdentityT
+$GLOBALS['Control_Monad_Identity_Trans_functorIdentityT'] = function($dictFunctor_0 = null) {
   $__num = \func_num_args();
   $__res = $dictFunctor_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Identity_Trans_foldableIdentityT'] = function() { $v = function($dictFoldable_0 = null) {
+};
+
+// Control_Monad_Identity_Trans_foldableIdentityT
+$GLOBALS['Control_Monad_Identity_Trans_foldableIdentityT'] = function($dictFoldable_0 = null) {
   $__num = \func_num_args();
   $__res = $dictFoldable_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Identity_Trans_extendIdentityI'] = function() { $v = function($dictExtend_0 = null) {
+};
+
+// Control_Monad_Identity_Trans_extendIdentityI
+$GLOBALS['Control_Monad_Identity_Trans_extendIdentityI'] = function($dictExtend_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictExtend_0)['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_1_0 = (($dictExtend_0)['Functor0'])($GLOBALS['Prim_undefined']);
   $__res = ["extend" => (function() use ($dictExtend_0) {
   $__fn = function($f_2 = null, $v_3 = null) use ($dictExtend_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictExtend_0)['extend'])(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($f_2))(($GLOBALS['Control_Monad_Identity_Trans_IdentityT'] ?? \PhpursThunks::eval('Control_Monad_Identity_Trans_IdentityT')))))($v_3);
+  $__res = ((($dictExtend_0)['extend'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_2))($GLOBALS['Control_Monad_Identity_Trans_IdentityT'])))($v_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -303,8 +352,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Identity_Trans_eqIdentityT'] = function() { $v = (function() {
+};
+
+// Control_Monad_Identity_Trans_eqIdentityT
+$GLOBALS['Control_Monad_Identity_Trans_eqIdentityT'] = (function() {
   $__fn = function($dictEq1_0 = null, $dictEq_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -329,14 +380,16 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Control_Monad_Identity_Trans_ordIdentityT'] = function() { $v = function($dictOrd1_0 = null) {
+})();
+
+// Control_Monad_Identity_Trans_ordIdentityT
+$GLOBALS['Control_Monad_Identity_Trans_ordIdentityT'] = function($dictOrd1_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictOrd1_0)['Eq10'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_1_0 = (($dictOrd1_0)['Eq10'])($GLOBALS['Prim_undefined']);
   $__res = function($dictOrd_2 = null) use ($__local_var_1_0, $dictOrd1_0) {
   $__num = \func_num_args();
   $compare11_3_1 = (($dictOrd1_0)['compare1'])($dictOrd_2);
-  $eq11_4_2 = (($__local_var_1_0)['eq1'])((($dictOrd_2)['Eq0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $eq11_4_2 = (($__local_var_1_0)['eq1'])((($dictOrd_2)['Eq0'])($GLOBALS['Prim_undefined']));
   $eqIdentityT2_5_3 = ["eq" => (function() use ($eq11_4_2) {
   $__fn = function($x_5 = null, $y_6 = null) use ($eq11_4_2, &$__fn) {
   $__num = \func_num_args();
@@ -376,8 +429,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Identity_Trans_eq1IdentityT'] = function() { $v = function($dictEq1_0 = null) {
+};
+
+// Control_Monad_Identity_Trans_eq1IdentityT
+$GLOBALS['Control_Monad_Identity_Trans_eq1IdentityT'] = function($dictEq1_0 = null) {
   $__num = \func_num_args();
   $__res = ["eq1" => function($dictEq_1 = null) use ($dictEq1_0) {
   $__num = \func_num_args();
@@ -389,11 +444,13 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Identity_Trans_ord1IdentityT'] = function() { $v = function($dictOrd1_0 = null) {
+};
+
+// Control_Monad_Identity_Trans_ord1IdentityT
+$GLOBALS['Control_Monad_Identity_Trans_ord1IdentityT'] = function($dictOrd1_0 = null) {
   $__num = \func_num_args();
-  $ordIdentityT1_1_0 = (($GLOBALS['Control_Monad_Identity_Trans_ordIdentityT'] ?? \PhpursThunks::eval('Control_Monad_Identity_Trans_ordIdentityT')))($dictOrd1_0);
-  $__local_var_2_1 = (($dictOrd1_0)['Eq10'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $ordIdentityT1_1_0 = ($GLOBALS['Control_Monad_Identity_Trans_ordIdentityT'])($dictOrd1_0);
+  $__local_var_2_1 = (($dictOrd1_0)['Eq10'])($GLOBALS['Prim_undefined']);
   $eq1IdentityT1_3_2 = ["eq1" => function($dictEq_3 = null) use ($__local_var_2_1) {
   $__num = \func_num_args();
   $__res = (($__local_var_2_1)['eq1'])($dictEq_3);
@@ -417,11 +474,13 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Identity_Trans_comonadIdentityT'] = function() { $v = function($dictComonad_0 = null) {
+};
+
+// Control_Monad_Identity_Trans_comonadIdentityT
+$GLOBALS['Control_Monad_Identity_Trans_comonadIdentityT'] = function($dictComonad_0 = null) {
   $__num = \func_num_args();
-  $extendIdentityI1_1_0 = (($GLOBALS['Control_Monad_Identity_Trans_extendIdentityI'] ?? \PhpursThunks::eval('Control_Monad_Identity_Trans_extendIdentityI')))((($dictComonad_0)['Extend0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = ["extract" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($dictComonad_0)['extract']))(($GLOBALS['Control_Monad_Identity_Trans_runIdentityT'] ?? \PhpursThunks::eval('Control_Monad_Identity_Trans_runIdentityT'))), "Extend0" => function($dollar__unused_2 = null) use ($extendIdentityI1_1_0) {
+  $extendIdentityI1_1_0 = ($GLOBALS['Control_Monad_Identity_Trans_extendIdentityI'])((($dictComonad_0)['Extend0'])($GLOBALS['Prim_undefined']));
+  $__res = ["extract" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictComonad_0)['extract']))($GLOBALS['Control_Monad_Identity_Trans_runIdentityT']), "Extend0" => function($dollar__unused_2 = null) use ($extendIdentityI1_1_0) {
   $__num = \func_num_args();
   $__res = $extendIdentityI1_1_0;
   goto __end;;
@@ -431,75 +490,50 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Identity_Trans_bindIdentityT'] = function() { $v = function($dictBind_0 = null) {
+};
+
+// Control_Monad_Identity_Trans_bindIdentityT
+$GLOBALS['Control_Monad_Identity_Trans_bindIdentityT'] = function($dictBind_0 = null) {
   $__num = \func_num_args();
   $__res = $dictBind_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Identity_Trans_applyIdentityT'] = function() { $v = function($dictApply_0 = null) {
+};
+
+// Control_Monad_Identity_Trans_applyIdentityT
+$GLOBALS['Control_Monad_Identity_Trans_applyIdentityT'] = function($dictApply_0 = null) {
   $__num = \func_num_args();
   $__res = $dictApply_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Identity_Trans_applicativeIdentityT'] = function() { $v = function($dictApplicative_0 = null) {
+};
+
+// Control_Monad_Identity_Trans_applicativeIdentityT
+$GLOBALS['Control_Monad_Identity_Trans_applicativeIdentityT'] = function($dictApplicative_0 = null) {
   $__num = \func_num_args();
   $__res = $dictApplicative_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Identity_Trans_alternativeIdentityT'] = function() { $v = function($dictAlternative_0 = null) {
+};
+
+// Control_Monad_Identity_Trans_alternativeIdentityT
+$GLOBALS['Control_Monad_Identity_Trans_alternativeIdentityT'] = function($dictAlternative_0 = null) {
   $__num = \func_num_args();
   $__res = $dictAlternative_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Identity_Trans_altIdentityT'] = function() { $v = function($dictAlt_0 = null) {
+};
+
+// Control_Monad_Identity_Trans_altIdentityT
+$GLOBALS['Control_Monad_Identity_Trans_altIdentityT'] = function($dictAlt_0 = null) {
   $__num = \func_num_args();
   $__res = $dictAlt_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+};
 

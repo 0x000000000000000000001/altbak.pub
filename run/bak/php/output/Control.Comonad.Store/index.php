@@ -98,7 +98,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Control_Comonad_Store_store'] = function() { $v = (function() {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Control_Comonad_Store_store
+$GLOBALS['Control_Comonad_Store_store'] = (function() {
   $__fn = function($f_0 = null, $x_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -110,16 +115,14 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Store_runStore'] = function() { $v = function($v_0 = null) {
+})();
+
+// Control_Comonad_Store_runStore
+$GLOBALS['Control_Comonad_Store_runStore'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__res = new Phpurs_Data2("Tuple", ($v_0)->{'value0'}, ($v_0)->{'value1'});
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
+};
 

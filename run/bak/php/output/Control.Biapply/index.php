@@ -95,7 +95,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Control_Biapply_biapplyTuple'] = function() { $v = ["biapply" => (function() {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Control_Biapply_biapplyTuple
+$GLOBALS['Control_Biapply_biapplyTuple'] = ["biapply" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -109,33 +114,37 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(), "Bifunctor0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Bifunctor_bifunctorTuple'] ?? \PhpursThunks::eval('Data_Bifunctor_bifunctorTuple'));
+  $__res = $GLOBALS['Data_Bifunctor_bifunctorTuple'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Control_Biapply_biapply'] = function() { $v = function($dict_0 = null) {
+}];
+
+// Control_Biapply_biapply
+$GLOBALS['Control_Biapply_biapply'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['biapply'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Biapply_biapplyFirst'] = function() { $v = (function() {
+};
+
+// Control_Biapply_biapplyFirst
+$GLOBALS['Control_Biapply_biapplyFirst'] = (function() {
   $__fn = function($dictBiapply_0 = null, $a_1 = null, $b_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($dictBiapply_0)['biapply'])((((((($dictBiapply_0)['Bifunctor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['bimap'])(function($v_3 = null) {
+  $__res = ((($dictBiapply_0)['biapply'])((((((($dictBiapply_0)['Bifunctor0'])($GLOBALS['Prim_undefined']))['bimap'])(function($v_3 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))['identity'];
+  $__res = ($GLOBALS['Control_Category_categoryFn'])['identity'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }))(function($v_3 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))['identity'];
+  $__res = ($GLOBALS['Control_Category_categoryFn'])['identity'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -145,52 +154,50 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Control_Biapply_biapplySecond'] = function() { $v = (function() {
+})();
+
+// Control_Biapply_biapplySecond
+$GLOBALS['Control_Biapply_biapplySecond'] = (function() {
   $__fn = function($dictBiapply_0 = null, $a_1 = null, $b_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($dictBiapply_0)['biapply'])((((((($dictBiapply_0)['Bifunctor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['bimap'])(($GLOBALS['Data_Function_const'] ?? \PhpursThunks::eval('Data_Function_const'))))(($GLOBALS['Data_Function_const'] ?? \PhpursThunks::eval('Data_Function_const'))))($a_1)))($b_2);
+  $__res = ((($dictBiapply_0)['biapply'])((((((($dictBiapply_0)['Bifunctor0'])($GLOBALS['Prim_undefined']))['bimap'])($GLOBALS['Data_Function_const']))($GLOBALS['Data_Function_const']))($a_1)))($b_2);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Control_Biapply_bilift2'] = function() { $v = (function() {
+})();
+
+// Control_Biapply_bilift2
+$GLOBALS['Control_Biapply_bilift2'] = (function() {
   $__fn = function($dictBiapply_0 = null, $f_1 = null, $g_2 = null, $a_3 = null, $b_4 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 5) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 5);
   }
-  $__res = ((($dictBiapply_0)['biapply'])((((((($dictBiapply_0)['Bifunctor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['bimap'])($f_1))($g_2))($a_3)))($b_4);
+  $__res = ((($dictBiapply_0)['biapply'])((((((($dictBiapply_0)['Bifunctor0'])($GLOBALS['Prim_undefined']))['bimap'])($f_1))($g_2))($a_3)))($b_4);
   goto __end;;
   __end:
   return $__num > 5 ? $__res(...\array_slice(\func_get_args(), 5)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Control_Biapply_bilift3'] = function() { $v = (function() {
+})();
+
+// Control_Biapply_bilift3
+$GLOBALS['Control_Biapply_bilift3'] = (function() {
   $__fn = function($dictBiapply_0 = null, $f_1 = null, $g_2 = null, $a_3 = null, $b_4 = null, $c_5 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 6) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 6);
   }
-  $__res = ((($dictBiapply_0)['biapply'])(((($dictBiapply_0)['biapply'])((((((($dictBiapply_0)['Bifunctor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['bimap'])($f_1))($g_2))($a_3)))($b_4)))($c_5);
+  $__res = ((($dictBiapply_0)['biapply'])(((($dictBiapply_0)['biapply'])((((((($dictBiapply_0)['Bifunctor0'])($GLOBALS['Prim_undefined']))['bimap'])($f_1))($g_2))($a_3)))($b_4)))($c_5);
   goto __end;;
   __end:
   return $__num > 6 ? $__res(...\array_slice(\func_get_args(), 6)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
+})();
 

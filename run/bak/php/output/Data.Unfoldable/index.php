@@ -102,7 +102,13 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Unfoldable_fromJust'] = function() { $v = function($v_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+$GLOBALS['Data_Unfoldable_unfoldrArrayImpl'] = new class { public function __invoke(...$args) { return $this; } };
+
+
+// Data_Unfoldable_fromJust
+$GLOBALS['Data_Unfoldable_fromJust'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object($v_0) && (($v_0)->{'tag'} === "Just"))) {
@@ -116,15 +122,19 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Unfoldable_unfoldr'] = function() { $v = function($dict_0 = null) {
+};
+
+// Data_Unfoldable_unfoldr
+$GLOBALS['Data_Unfoldable_unfoldr'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['unfoldr'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Unfoldable_unfoldableMaybe'] = function() { $v = ["unfoldr" => (function() {
+};
+
+// Data_Unfoldable_unfoldableMaybe
+$GLOBALS['Data_Unfoldable_unfoldableMaybe'] = ["unfoldr" => (function() {
   $__fn = function($f_0 = null, $b_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -146,19 +156,23 @@ goto end_branch_1;;
   return $__fn;
 })(), "Unfoldable10" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Unfoldable1_unfoldable1Maybe'] ?? \PhpursThunks::eval('Data_Unfoldable1_unfoldable1Maybe'));
+  $__res = $GLOBALS['Data_Unfoldable1_unfoldable1Maybe'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Unfoldable_unfoldableArray'] = function() { $v = ["unfoldr" => ((((($GLOBALS['Data_Unfoldable_unfoldrArrayImpl'] ?? \PhpursThunks::eval('Data_Unfoldable_unfoldrArrayImpl')))(($GLOBALS['Data_Maybe_isNothing'] ?? \PhpursThunks::eval('Data_Maybe_isNothing'))))(($GLOBALS['Data_Unfoldable_fromJust'] ?? \PhpursThunks::eval('Data_Unfoldable_fromJust'))))(($GLOBALS['Data_Tuple_fst'] ?? \PhpursThunks::eval('Data_Tuple_fst'))))(($GLOBALS['Data_Tuple_snd'] ?? \PhpursThunks::eval('Data_Tuple_snd'))), "Unfoldable10" => function($dollar__unused_0 = null) {
+}];
+
+// Data_Unfoldable_unfoldableArray
+$GLOBALS['Data_Unfoldable_unfoldableArray'] = ["unfoldr" => (((($GLOBALS['Data_Unfoldable_unfoldrArrayImpl'])($GLOBALS['Data_Maybe_isNothing']))($GLOBALS['Data_Unfoldable_fromJust']))($GLOBALS['Data_Tuple_fst']))($GLOBALS['Data_Tuple_snd']), "Unfoldable10" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Unfoldable1_unfoldable1Array'] ?? \PhpursThunks::eval('Data_Unfoldable1_unfoldable1Array'));
+  $__res = $GLOBALS['Data_Unfoldable1_unfoldable1Array'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Unfoldable_replicate'] = function() { $v = (function() {
+}];
+
+// Data_Unfoldable_replicate
+$GLOBALS['Data_Unfoldable_replicate'] = (function() {
   $__fn = function($dictUnfoldable_0 = null, $n_1 = null, $v_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -183,8 +197,10 @@ goto end_branch_0;;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Unfoldable_replicateA'] = function() { $v = (function() {
+})();
+
+// Data_Unfoldable_replicateA
+$GLOBALS['Data_Unfoldable_replicateA'] = (function() {
   $__fn = function($dictApplicative_0 = null, $dictUnfoldable_1 = null, $dictTraversable_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -222,8 +238,10 @@ goto end_branch_1;;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Unfoldable_none'] = function() { $v = function($dictUnfoldable_0 = null) {
+})();
+
+// Data_Unfoldable_none
+$GLOBALS['Data_Unfoldable_none'] = function($dictUnfoldable_0 = null) {
   $__num = \func_num_args();
   $__res = ((($dictUnfoldable_0)['unfoldr'])(function($v_1 = null) {
   $__num = \func_num_args();
@@ -231,12 +249,14 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')));
+}))($GLOBALS['Data_Unit_unit']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Unfoldable_fromMaybe'] = function() { $v = function($dictUnfoldable_0 = null) {
+};
+
+// Data_Unfoldable_fromMaybe
+$GLOBALS['Data_Unfoldable_fromMaybe'] = function($dictUnfoldable_0 = null) {
   $__num = \func_num_args();
   $__res = (($dictUnfoldable_0)['unfoldr'])(function($b_1 = null) {
   $__num = \func_num_args();
@@ -255,15 +275,5 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
+};
 

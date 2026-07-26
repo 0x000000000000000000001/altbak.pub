@@ -6,7 +6,6 @@ import (
 	pkg_Data_Maybe "gopurs/output/Data.Maybe"
 	pkg_Data_String_Unsafe "gopurs/output/Data.String.Unsafe"
 	pkg_Data_Eq "gopurs/output/Data.Eq"
-	pkg_Control_Semigroupoid "gopurs/output/Control.Semigroupoid"
 	unsafe "unsafe"
 )
 
@@ -78,8 +77,8 @@ var cache_startsWith gopurs_runtime.Value
 var once_startsWith sync.Once
 func Get_startsWith() gopurs_runtime.Value {
 	once_startsWith.Do(func() {
-		cache_startsWith = gopurs_runtime.Func(func(pat_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_startsWith(pat_0_box)
+		cache_startsWith = gopurs_runtime.Func2(func(pat_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_startsWith(pat_0_box, x_1_box.StrVal())
 })
 	})
 	return cache_startsWith
@@ -125,8 +124,8 @@ var cache_endsWith gopurs_runtime.Value
 var once_endsWith sync.Once
 func Get_endsWith() gopurs_runtime.Value {
 	once_endsWith.Do(func() {
-		cache_endsWith = gopurs_runtime.Func(func(pat_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_endsWith(pat_0_box)
+		cache_endsWith = gopurs_runtime.Func2(func(pat_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_endsWith(pat_0_box, x_1_box.StrVal())
 })
 	})
 	return cache_endsWith
@@ -255,16 +254,66 @@ end_branch_1:
 return __t1
 }
 
-func Call_startsWith(pat_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_startsWith(pat_0_loop gopurs_runtime.Value, x_1_loop string) gopurs_runtime.Value {
 var pat_0 gopurs_runtime.Value = pat_0_loop
 _ = pat_0
-return gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), pkg_Data_Maybe.Get_isJust(), gopurs_runtime.Apply(Get_stripPrefix(), pat_0))
+var x_1 string = x_1_loop
+_ = x_1
+__local_var_2_0 := Call_stripPrefix(pat_0, x_1)
+_ = __local_var_2_0
+var __t1 gopurs_runtime.Value
+{
+if (__local_var_2_0.Type == 9 && __local_var_2_0.IntVal == 3589588149) {
+__t1 = gopurs_runtime.Bool(false)
+goto end_branch_1
+} else {
+
+}
+}
+{
+if (__local_var_2_0.Type == 9 && __local_var_2_0.IntVal == 930809136) {
+__t1 = gopurs_runtime.Bool(true)
+goto end_branch_1
+} else {
+
+}
+}
+{
+__t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_1:
+return __t1
 }
 
-func Call_endsWith(pat_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_endsWith(pat_0_loop gopurs_runtime.Value, x_1_loop string) gopurs_runtime.Value {
 var pat_0 gopurs_runtime.Value = pat_0_loop
 _ = pat_0
-return gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), pkg_Data_Maybe.Get_isJust(), gopurs_runtime.Apply(Get_stripSuffix(), pat_0))
+var x_1 string = x_1_loop
+_ = x_1
+__local_var_2_0 := Call_stripSuffix(pat_0, x_1)
+_ = __local_var_2_0
+var __t1 gopurs_runtime.Value
+{
+if (__local_var_2_0.Type == 9 && __local_var_2_0.IntVal == 3589588149) {
+__t1 = gopurs_runtime.Bool(false)
+goto end_branch_1
+} else {
+
+}
+}
+{
+if (__local_var_2_0.Type == 9 && __local_var_2_0.IntVal == 930809136) {
+__t1 = gopurs_runtime.Bool(true)
+goto end_branch_1
+} else {
+
+}
+}
+{
+__t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_1:
+return __t1
 }
 
 func Call_dropWhile(p_0_loop gopurs_runtime.Value, s_1_loop string) gopurs_runtime.Value {
@@ -286,7 +335,34 @@ return gopurs_runtime.Apply2(Get_take(), gopurs_runtime.Int((gopurs_runtime.Appl
 func Call_contains(pat_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var pat_0 gopurs_runtime.Value = pat_0_loop
 _ = pat_0
-return gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), pkg_Data_Maybe.Get_isJust(), gopurs_runtime.Apply(Get_indexOf(), pat_0))
+__local_var_1_0 := gopurs_runtime.Apply(Get_indexOf(), pat_0)
+_ = __local_var_1_0
+return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_3_1 := gopurs_runtime.Apply(__local_var_1_0, x_2)
+_ = __local_var_3_1
+var __t2 gopurs_runtime.Value
+{
+if (__local_var_3_1.Type == 9 && __local_var_3_1.IntVal == 3589588149) {
+__t2 = gopurs_runtime.Bool(false)
+goto end_branch_2
+} else {
+
+}
+}
+{
+if (__local_var_3_1.Type == 9 && __local_var_3_1.IntVal == 930809136) {
+__t2 = gopurs_runtime.Bool(true)
+goto end_branch_2
+} else {
+
+}
+}
+{
+__t2 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_2:
+return __t2
+})
 }
 
 func Get__charAt() gopurs_runtime.Value {

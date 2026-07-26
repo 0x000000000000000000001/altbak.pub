@@ -93,7 +93,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_List_Partial_tail'] = function() { $v = (function() {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_List_Partial_tail
+$GLOBALS['Data_List_Partial_tail'] = (function() {
   $__fn = function($dollar__unused_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -113,8 +118,10 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_List_Partial_last'] = function() { $v = (function() {
+})();
+
+// Data_List_Partial_last
+$GLOBALS['Data_List_Partial_last'] = (function() {
   $__fn = function($dollar__unused_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -132,7 +139,7 @@ if ((is_object(($v_1)->{'value1'}) && ((($v_1)->{'value1'})->{'tag'} === "Nil"))
 $__t3 = ($v_1)->{'value0'};
 goto end_branch_3;;
 };
-$__tco_1 = ($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'));
+$__tco_1 = $GLOBALS['Prim_undefined'];
 $__tco_2 = ($v_1)->{'value1'};
 $__tco_var_Data_List_Partial_last_dollar__unused_0 = $__tco_1;
 $__tco_var_Data_List_Partial_last_v_1 = $__tco_2;
@@ -151,8 +158,10 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_List_Partial_init'] = function() { $v = (function() {
+})();
+
+// Data_List_Partial_init
+$GLOBALS['Data_List_Partial_init'] = (function() {
   $__fn = function($dollar__unused_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -170,7 +179,7 @@ if ((is_object(($v_1)->{'value1'}) && ((($v_1)->{'value1'})->{'tag'} === "Nil"))
 $__t1 = new Phpurs_Data0("Nil");
 goto end_branch_1;;
 };
-$__t1 = new Phpurs_Data2("Cons", ($v_1)->{'value0'}, ((($GLOBALS['Data_List_Partial_init'] ?? \PhpursThunks::eval('Data_List_Partial_init')))(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))(($v_1)->{'value1'}));
+$__t1 = new Phpurs_Data2("Cons", ($v_1)->{'value0'}, (($GLOBALS['Data_List_Partial_init'])($GLOBALS['Prim_undefined']))(($v_1)->{'value1'}));
 end_branch_1:;
 $__t0 = $__t1;
 goto end_branch_0;;
@@ -184,8 +193,10 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_List_Partial_head'] = function() { $v = (function() {
+})();
+
+// Data_List_Partial_head
+$GLOBALS['Data_List_Partial_head'] = (function() {
   $__fn = function($dollar__unused_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -205,11 +216,5 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
+})();
 

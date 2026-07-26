@@ -104,14 +104,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Monoid_Multiplicative_Multiplicative'] = function() { $v = function($x_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Monoid_Multiplicative_Multiplicative
+$GLOBALS['Data_Monoid_Multiplicative_Multiplicative'] = function($x_0 = null) {
   $__num = \func_num_args();
   $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Monoid_Multiplicative_showMultiplicative'] = function() { $v = function($dictShow_0 = null) {
+};
+
+// Data_Monoid_Multiplicative_showMultiplicative
+$GLOBALS['Data_Monoid_Multiplicative_showMultiplicative'] = function($dictShow_0 = null) {
   $__num = \func_num_args();
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
@@ -123,8 +130,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Monoid_Multiplicative_semigroupMultiplicative'] = function() { $v = function($dictSemiring_0 = null) {
+};
+
+// Data_Monoid_Multiplicative_semigroupMultiplicative
+$GLOBALS['Data_Monoid_Multiplicative_semigroupMultiplicative'] = function($dictSemiring_0 = null) {
   $__num = \func_num_args();
   $__res = ["append" => (function() use ($dictSemiring_0) {
   $__fn = function($v_1 = null, $v1_2 = null) use ($dictSemiring_0, &$__fn) {
@@ -142,15 +151,19 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Monoid_Multiplicative_ordMultiplicative'] = function() { $v = function($dictOrd_0 = null) {
+};
+
+// Data_Monoid_Multiplicative_ordMultiplicative
+$GLOBALS['Data_Monoid_Multiplicative_ordMultiplicative'] = function($dictOrd_0 = null) {
   $__num = \func_num_args();
   $__res = $dictOrd_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Monoid_Multiplicative_monoidMultiplicative'] = function() { $v = function($dictSemiring_0 = null) {
+};
+
+// Data_Monoid_Multiplicative_monoidMultiplicative
+$GLOBALS['Data_Monoid_Multiplicative_monoidMultiplicative'] = function($dictSemiring_0 = null) {
   $__num = \func_num_args();
   $semigroupMultiplicative1_1_0 = ["append" => (function() use ($dictSemiring_0) {
   $__fn = function($v_1 = null, $v1_2 = null) use ($dictSemiring_0, &$__fn) {
@@ -175,8 +188,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Monoid_Multiplicative_functorMultiplicative'] = function() { $v = ["map" => (function() {
+};
+
+// Data_Monoid_Multiplicative_functorMultiplicative
+$GLOBALS['Data_Monoid_Multiplicative_functorMultiplicative'] = ["map" => (function() {
   $__fn = function($f_0 = null, $m_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -188,22 +203,28 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Monoid_Multiplicative_eqMultiplicative'] = function() { $v = function($dictEq_0 = null) {
+})()];
+
+// Data_Monoid_Multiplicative_eqMultiplicative
+$GLOBALS['Data_Monoid_Multiplicative_eqMultiplicative'] = function($dictEq_0 = null) {
   $__num = \func_num_args();
   $__res = $dictEq_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Monoid_Multiplicative_eq1Multiplicative'] = function() { $v = ["eq1" => function($dictEq_0 = null) {
+};
+
+// Data_Monoid_Multiplicative_eq1Multiplicative
+$GLOBALS['Data_Monoid_Multiplicative_eq1Multiplicative'] = ["eq1" => function($dictEq_0 = null) {
   $__num = \func_num_args();
   $__res = ($dictEq_0)['eq'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Monoid_Multiplicative_ord1Multiplicative'] = function() { $v = ["compare1" => function($dictOrd_0 = null) {
+}];
+
+// Data_Monoid_Multiplicative_ord1Multiplicative
+$GLOBALS['Data_Monoid_Multiplicative_ord1Multiplicative'] = ["compare1" => function($dictOrd_0 = null) {
   $__num = \func_num_args();
   $__res = ($dictOrd_0)['compare'];
   goto __end;;
@@ -211,19 +232,23 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Eq10" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Monoid_Multiplicative_eq1Multiplicative'] ?? \PhpursThunks::eval('Data_Monoid_Multiplicative_eq1Multiplicative'));
+  $__res = $GLOBALS['Data_Monoid_Multiplicative_eq1Multiplicative'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Monoid_Multiplicative_boundedMultiplicative'] = function() { $v = function($dictBounded_0 = null) {
+}];
+
+// Data_Monoid_Multiplicative_boundedMultiplicative
+$GLOBALS['Data_Monoid_Multiplicative_boundedMultiplicative'] = function($dictBounded_0 = null) {
   $__num = \func_num_args();
   $__res = $dictBounded_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Monoid_Multiplicative_applyMultiplicative'] = function() { $v = ["apply" => (function() {
+};
+
+// Data_Monoid_Multiplicative_applyMultiplicative
+$GLOBALS['Data_Monoid_Multiplicative_applyMultiplicative'] = ["apply" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -237,12 +262,14 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(), "Functor0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Monoid_Multiplicative_functorMultiplicative'] ?? \PhpursThunks::eval('Data_Monoid_Multiplicative_functorMultiplicative'));
+  $__res = $GLOBALS['Data_Monoid_Multiplicative_functorMultiplicative'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Monoid_Multiplicative_bindMultiplicative'] = function() { $v = ["bind" => (function() {
+}];
+
+// Data_Monoid_Multiplicative_bindMultiplicative
+$GLOBALS['Data_Monoid_Multiplicative_bindMultiplicative'] = ["bind" => (function() {
   $__fn = function($v_0 = null, $f_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -256,45 +283,33 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(), "Apply0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Monoid_Multiplicative_applyMultiplicative'] ?? \PhpursThunks::eval('Data_Monoid_Multiplicative_applyMultiplicative'));
+  $__res = $GLOBALS['Data_Monoid_Multiplicative_applyMultiplicative'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Monoid_Multiplicative_applicativeMultiplicative'] = function() { $v = ["pure" => ($GLOBALS['Data_Monoid_Multiplicative_Multiplicative'] ?? \PhpursThunks::eval('Data_Monoid_Multiplicative_Multiplicative')), "Apply0" => function($dollar__unused_0 = null) {
+}];
+
+// Data_Monoid_Multiplicative_applicativeMultiplicative
+$GLOBALS['Data_Monoid_Multiplicative_applicativeMultiplicative'] = ["pure" => $GLOBALS['Data_Monoid_Multiplicative_Multiplicative'], "Apply0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Monoid_Multiplicative_applyMultiplicative'] ?? \PhpursThunks::eval('Data_Monoid_Multiplicative_applyMultiplicative'));
+  $__res = $GLOBALS['Data_Monoid_Multiplicative_applyMultiplicative'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Monoid_Multiplicative_monadMultiplicative'] = function() { $v = ["Applicative0" => function($dollar__unused_0 = null) {
+}];
+
+// Data_Monoid_Multiplicative_monadMultiplicative
+$GLOBALS['Data_Monoid_Multiplicative_monadMultiplicative'] = ["Applicative0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Monoid_Multiplicative_applicativeMultiplicative'] ?? \PhpursThunks::eval('Data_Monoid_Multiplicative_applicativeMultiplicative'));
+  $__res = $GLOBALS['Data_Monoid_Multiplicative_applicativeMultiplicative'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bind1" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Monoid_Multiplicative_bindMultiplicative'] ?? \PhpursThunks::eval('Data_Monoid_Multiplicative_bindMultiplicative'));
+  $__res = $GLOBALS['Data_Monoid_Multiplicative_bindMultiplicative'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}];
 

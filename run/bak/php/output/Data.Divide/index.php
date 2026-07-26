@@ -102,7 +102,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Divide_dividePredicate'] = function() { $v = ["divide" => (function() {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Divide_dividePredicate
+$GLOBALS['Data_Divide_dividePredicate'] = ["divide" => (function() {
   $__fn = function($f_0 = null, $v_1 = null, $v1_2 = null, $a_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
@@ -117,12 +122,14 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(), "Contravariant0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Predicate_contravariantPredicate'] ?? \PhpursThunks::eval('Data_Predicate_contravariantPredicate'));
+  $__res = $GLOBALS['Data_Predicate_contravariantPredicate'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Divide_divideOp'] = function() { $v = function($dictSemigroup_0 = null) {
+}];
+
+// Data_Divide_divideOp
+$GLOBALS['Data_Divide_divideOp'] = function($dictSemigroup_0 = null) {
   $__num = \func_num_args();
   $__res = ["divide" => (function() use ($dictSemigroup_0) {
   $__fn = function($f_1 = null, $v_2 = null, $v1_3 = null, $a_4 = null) use ($dictSemigroup_0, &$__fn) {
@@ -139,7 +146,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(), "Contravariant0" => function($dollar__unused_1 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Op_contravariantOp'] ?? \PhpursThunks::eval('Data_Op_contravariantOp'));
+  $__res = $GLOBALS['Data_Op_contravariantOp'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -147,8 +154,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Divide_divideEquivalence'] = function() { $v = ["divide" => (function() {
+};
+
+// Data_Divide_divideEquivalence
+$GLOBALS['Data_Divide_divideEquivalence'] = ["divide" => (function() {
   $__fn = function($f_0 = null, $v_1 = null, $v1_2 = null, $a_3 = null, $b_4 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 5) {
@@ -164,12 +173,14 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(), "Contravariant0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Equivalence_contravariantEquivalence'] ?? \PhpursThunks::eval('Data_Equivalence_contravariantEquivalence'));
+  $__res = $GLOBALS['Data_Equivalence_contravariantEquivalence'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Divide_divideComparison'] = function() { $v = ["divide" => (function() {
+}];
+
+// Data_Divide_divideComparison
+$GLOBALS['Data_Divide_divideComparison'] = ["divide" => (function() {
   $__fn = function($f_0 = null, $v_1 = null, $v1_2 = null, $a_3 = null, $b_4 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 5) {
@@ -203,31 +214,27 @@ goto end_branch_4;;
   return $__fn;
 })(), "Contravariant0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Comparison_contravariantComparison'] ?? \PhpursThunks::eval('Data_Comparison_contravariantComparison'));
+  $__res = $GLOBALS['Data_Comparison_contravariantComparison'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Divide_divide'] = function() { $v = function($dict_0 = null) {
+}];
+
+// Data_Divide_divide
+$GLOBALS['Data_Divide_divide'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['divide'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Divide_divided'] = function() { $v = function($dictDivide_0 = null) {
+};
+
+// Data_Divide_divided
+$GLOBALS['Data_Divide_divided'] = function($dictDivide_0 = null) {
   $__num = \func_num_args();
-  $__res = (($dictDivide_0)['divide'])((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))['identity']);
+  $__res = (($dictDivide_0)['divide'])(($GLOBALS['Control_Category_categoryFn'])['identity']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
+};
 

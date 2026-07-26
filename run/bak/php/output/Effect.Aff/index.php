@@ -123,826 +123,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Effect_Aff_void'] = function() { $v = ((($GLOBALS['Control_Applicative_liftA1'] ?? \PhpursThunks::eval('Control_Applicative_liftA1')))(($GLOBALS['Effect_applicativeEffect'] ?? \PhpursThunks::eval('Effect_applicativeEffect'))))(function($v_0 = null) {
-  $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}); return $v; };
-\PhpursThunks::$thunks['Effect_Aff_Canceler'] = function() { $v = function($x_0 = null) {
-  $__num = \func_num_args();
-  $__res = $x_0;
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_unsafeFromRight'] = function() { $v = function($v_0 = null) {
-  $__num = \func_num_args();
-  $__t0 = null;;
-  if ((is_object($v_0) && (($v_0)->{'tag'} === "Right"))) {
-$__t0 = ($v_0)->{'value0'};
-goto end_branch_0;;
-};
-  if ((is_object($v_0) && (($v_0)->{'tag'} === "Left"))) {
-$__t0 = (($GLOBALS['Partial__crashWith'] ?? \PhpursThunks::eval('Partial__crashWith')))("unsafeFromRight: Left");
-goto end_branch_0;;
-};
-  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t0 = null;
-  end_branch_0:;
-  $__res = $__t0;
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_unsafeFromLeft'] = function() { $v = function($v_0 = null) {
-  $__num = \func_num_args();
-  $__t0 = null;;
-  if ((is_object($v_0) && (($v_0)->{'tag'} === "Left"))) {
-$__t0 = ($v_0)->{'value0'};
-goto end_branch_0;;
-};
-  if ((is_object($v_0) && (($v_0)->{'tag'} === "Right"))) {
-$__t0 = (($GLOBALS['Partial__crashWith'] ?? \PhpursThunks::eval('Partial__crashWith')))("unsafeFromLeft: Right");
-goto end_branch_0;;
-};
-  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t0 = null;
-  end_branch_0:;
-  $__res = $__t0;
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_suspendAff'] = function() { $v = (($GLOBALS['Effect_Aff__fork'] ?? \PhpursThunks::eval('Effect_Aff__fork')))(false); return $v; };
-\PhpursThunks::$thunks['Effect_Aff_newtypeCanceler'] = function() { $v = ["Coercible0" => function($dollar__unused_0 = null) {
-  $__num = \func_num_args();
-  $__res = ($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_isLeft'] = function() { $v = function($v_0 = null) {
-  $__num = \func_num_args();
-  $__t0 = null;;
-  if ((is_object($v_0) && (($v_0)->{'tag'} === "Left"))) {
-$__t0 = true;
-goto end_branch_0;;
-};
-  if ((is_object($v_0) && (($v_0)->{'tag'} === "Right"))) {
-$__t0 = false;
-goto end_branch_0;;
-};
-  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t0 = null;
-  end_branch_0:;
-  $__res = $__t0;
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_makeAff'] = function() { $v = function($k_0 = null) {
-  $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_Aff__makeAff'] ?? \PhpursThunks::eval('Effect_Aff__makeAff')))(($GLOBALS['Effect_Aff_isLeft'] ?? \PhpursThunks::eval('Effect_Aff_isLeft')), ($GLOBALS['Effect_Aff_unsafeFromLeft'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromLeft')), ($GLOBALS['Effect_Aff_unsafeFromRight'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromRight')), ($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left')), ($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right')), $k_0);
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_makeFiber'] = function() { $v = function($aff_0 = null) {
-  $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_Aff__makeFiber'] ?? \PhpursThunks::eval('Effect_Aff__makeFiber')))(($GLOBALS['Effect_Aff_isLeft'] ?? \PhpursThunks::eval('Effect_Aff_isLeft')), ($GLOBALS['Effect_Aff_unsafeFromLeft'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromLeft')), ($GLOBALS['Effect_Aff_unsafeFromRight'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromRight')), ($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left')), ($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right')), $aff_0);
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_launchAff'] = function() { $v = function($aff_0 = null) {
-  $__num = \func_num_args();
-  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))((($GLOBALS['Effect_Aff__makeFiber'] ?? \PhpursThunks::eval('Effect_Aff__makeFiber')))(($GLOBALS['Effect_Aff_isLeft'] ?? \PhpursThunks::eval('Effect_Aff_isLeft')), ($GLOBALS['Effect_Aff_unsafeFromLeft'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromLeft')), ($GLOBALS['Effect_Aff_unsafeFromRight'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromRight')), ($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left')), ($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right')), $aff_0)))(function($fiber_1 = null) {
-  $__num = \func_num_args();
-  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($fiber_1)['run']))(function($dollar__unused_2 = null) use ($fiber_1) {
-  $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_pureE'] ?? \PhpursThunks::eval('Effect_pureE')))($fiber_1);
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_launchAff_'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Effect_Aff_void'] ?? \PhpursThunks::eval('Effect_Aff_void'))))(($GLOBALS['Effect_Aff_launchAff'] ?? \PhpursThunks::eval('Effect_Aff_launchAff'))); return $v; };
-\PhpursThunks::$thunks['Effect_Aff_launchSuspendedAff'] = function() { $v = ($GLOBALS['Effect_Aff_makeFiber'] ?? \PhpursThunks::eval('Effect_Aff_makeFiber')); return $v; };
-\PhpursThunks::$thunks['Effect_Aff_functorParAff'] = function() { $v = ["map" => ($GLOBALS['Effect_Aff__parAffMap'] ?? \PhpursThunks::eval('Effect_Aff__parAffMap'))]; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_functorAff'] = function() { $v = ["map" => ($GLOBALS['Effect_Aff__map'] ?? \PhpursThunks::eval('Effect_Aff__map'))]; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_forkAff'] = function() { $v = (($GLOBALS['Effect_Aff__fork'] ?? \PhpursThunks::eval('Effect_Aff__fork')))(true); return $v; };
-\PhpursThunks::$thunks['Effect_Aff_delay'] = function() { $v = function($v_0 = null) {
-  $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_Aff__delay'] ?? \PhpursThunks::eval('Effect_Aff__delay')))(($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right')), $v_0);
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_bracket'] = function() { $v = (function() {
-  $__fn = function($acquire_0 = null, $completed_1 = null) use (&$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ((($GLOBALS['Effect_Aff_generalBracket'] ?? \PhpursThunks::eval('Effect_Aff_generalBracket')))($acquire_0))(["killed" => function($v_2 = null) use ($completed_1) {
-  $__num = \func_num_args();
-  $__res = $completed_1;
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "failed" => function($v_2 = null) use ($completed_1) {
-  $__num = \func_num_args();
-  $__res = $completed_1;
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "completed" => function($v_2 = null) use ($completed_1) {
-  $__num = \func_num_args();
-  $__res = $completed_1;
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]);
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Effect_Aff_applyParAff'] = function() { $v = ["apply" => ($GLOBALS['Effect_Aff__parAffApply'] ?? \PhpursThunks::eval('Effect_Aff__parAffApply')), "Functor0" => function($dollar__unused_0 = null) {
-  $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_Aff_functorParAff'] ?? \PhpursThunks::eval('Effect_Aff_functorParAff'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_semigroupParAff'] = function() { $v = function($dictSemigroup_0 = null) {
-  $__num = \func_num_args();
-  $__res = ["append" => ((($GLOBALS['Control_Apply_lift2'] ?? \PhpursThunks::eval('Control_Apply_lift2')))(($GLOBALS['Effect_Aff_applyParAff'] ?? \PhpursThunks::eval('Effect_Aff_applyParAff'))))(($dictSemigroup_0)['append'])];
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_monadAff'] = function() { $v = ["Applicative0" => function($dollar__unused_0 = null) {
-  $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_Aff_applicativeAff'] ?? \PhpursThunks::eval('Effect_Aff_applicativeAff'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Bind1" => function($dollar__unused_0 = null) {
-  $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_Aff_bindAff'] ?? \PhpursThunks::eval('Effect_Aff_bindAff'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_bindAff'] = function() { $v = ["bind" => ($GLOBALS['Effect_Aff__bind'] ?? \PhpursThunks::eval('Effect_Aff__bind')), "Apply0" => function($dollar__unused_0 = null) {
-  $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_Aff_applyAff'] ?? \PhpursThunks::eval('Effect_Aff_applyAff'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_applyAff'] = function() { $v = ["apply" => (($GLOBALS['Control_Monad_ap'] ?? \PhpursThunks::eval('Control_Monad_ap')))(($GLOBALS['Effect_Aff_monadAff'] ?? \PhpursThunks::eval('Effect_Aff_monadAff'))), "Functor0" => function($dollar__unused_0 = null) {
-  $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_Aff_functorAff'] ?? \PhpursThunks::eval('Effect_Aff_functorAff'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_applicativeAff'] = function() { $v = ["pure" => ($GLOBALS['Effect_Aff__pure'] ?? \PhpursThunks::eval('Effect_Aff__pure')), "Apply0" => function($dollar__unused_0 = null) {
-  $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_Aff_applyAff'] ?? \PhpursThunks::eval('Effect_Aff_applyAff'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_cancelWith'] = function() { $v = (function() {
-  $__fn = function($aff_0 = null, $v_1 = null) use (&$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = (((($GLOBALS['Effect_Aff_generalBracket'] ?? \PhpursThunks::eval('Effect_Aff_generalBracket')))((($GLOBALS['Effect_Aff__pure'] ?? \PhpursThunks::eval('Effect_Aff__pure')))(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')))))(["killed" => (function() use ($v_1) {
-  $__fn = function($e_2 = null, $v1_3 = null) use ($v_1, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ($v_1)($e_2);
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "failed" => function($v_2 = null) {
-  $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_Aff__pure'] ?? \PhpursThunks::eval('Effect_Aff__pure'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "completed" => function($v_2 = null) {
-  $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_Aff__pure'] ?? \PhpursThunks::eval('Effect_Aff__pure'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]))(function($v_2 = null) use ($aff_0) {
-  $__num = \func_num_args();
-  $__res = $aff_0;
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Effect_Aff_finally'] = function() { $v = (function() {
-  $__fn = function($fin_0 = null, $a_1 = null) use (&$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = (((($GLOBALS['Effect_Aff_generalBracket'] ?? \PhpursThunks::eval('Effect_Aff_generalBracket')))((($GLOBALS['Effect_Aff__pure'] ?? \PhpursThunks::eval('Effect_Aff__pure')))(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')))))(["killed" => (function() use ($fin_0) {
-  $__fn = function($v_2 = null, $v_3 = null) use ($fin_0, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = $fin_0;
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "failed" => (function() use ($fin_0) {
-  $__fn = function($v_2 = null, $v_3 = null) use ($fin_0, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = $fin_0;
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "completed" => (function() use ($fin_0) {
-  $__fn = function($v_2 = null, $v_3 = null) use ($fin_0, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = $fin_0;
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()]))(function($v_2 = null) use ($a_1) {
-  $__num = \func_num_args();
-  $__res = $a_1;
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Effect_Aff_invincible'] = function() { $v = function($a_0 = null) {
-  $__num = \func_num_args();
-  $__local_var_1_0 = (($GLOBALS['Effect_Aff__pure'] ?? \PhpursThunks::eval('Effect_Aff__pure')))(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')));
-  $__res = (((($GLOBALS['Effect_Aff_generalBracket'] ?? \PhpursThunks::eval('Effect_Aff_generalBracket')))($a_0))(["killed" => (function() use ($__local_var_1_0) {
-  $__fn = function($v_2 = null, $v_3 = null) use ($__local_var_1_0, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = $__local_var_1_0;
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "failed" => (function() use ($__local_var_1_0) {
-  $__fn = function($v_2 = null, $v_3 = null) use ($__local_var_1_0, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = $__local_var_1_0;
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "completed" => (function() use ($__local_var_1_0) {
-  $__fn = function($v_2 = null, $v_3 = null) use ($__local_var_1_0, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = $__local_var_1_0;
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()]))(($GLOBALS['Effect_Aff__pure'] ?? \PhpursThunks::eval('Effect_Aff__pure')));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_lazyAff'] = function() { $v = ["defer" => function($f_0 = null) {
-  $__num = \func_num_args();
-  $__res = ((($GLOBALS['Effect_Aff__bind'] ?? \PhpursThunks::eval('Effect_Aff__bind')))((($GLOBALS['Effect_Aff__pure'] ?? \PhpursThunks::eval('Effect_Aff__pure')))(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')))))($f_0);
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_parallelAff'] = function() { $v = ["parallel" => ($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')), "sequential" => ($GLOBALS['Effect_Aff__sequential'] ?? \PhpursThunks::eval('Effect_Aff__sequential')), "Apply0" => function($dollar__unused_0 = null) {
-  $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_Aff_applyAff'] ?? \PhpursThunks::eval('Effect_Aff_applyAff'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Apply1" => function($dollar__unused_0 = null) {
-  $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_Aff_applyParAff'] ?? \PhpursThunks::eval('Effect_Aff_applyParAff'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_applicativeParAff'] = function() { $v = ["pure" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce'))))(($GLOBALS['Effect_Aff__pure'] ?? \PhpursThunks::eval('Effect_Aff__pure'))), "Apply0" => function($dollar__unused_0 = null) {
-  $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_Aff_applyParAff'] ?? \PhpursThunks::eval('Effect_Aff_applyParAff'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_parSequence_'] = function() { $v = (((($GLOBALS['Control_Parallel_parSequence_'] ?? \PhpursThunks::eval('Control_Parallel_parSequence_')))(($GLOBALS['Effect_Aff_parallelAff'] ?? \PhpursThunks::eval('Effect_Aff_parallelAff'))))(($GLOBALS['Effect_Aff_applicativeParAff'] ?? \PhpursThunks::eval('Effect_Aff_applicativeParAff'))))(($GLOBALS['Data_Foldable_foldableArray'] ?? \PhpursThunks::eval('Data_Foldable_foldableArray'))); return $v; };
-\PhpursThunks::$thunks['Effect_Aff_monoidParAff'] = function() { $v = function($dictMonoid_0 = null) {
-  $__num = \func_num_args();
-  $__res = ["mempty" => ((($GLOBALS['Effect_Aff_applicativeParAff'] ?? \PhpursThunks::eval('Effect_Aff_applicativeParAff')))['pure'])(($dictMonoid_0)['mempty']), "Semigroup0" => function($dollar__unused_1 = null) use ($dictMonoid_0) {
-  $__num = \func_num_args();
-  $__res = ["append" => ((($GLOBALS['Control_Apply_lift2'] ?? \PhpursThunks::eval('Control_Apply_lift2')))(($GLOBALS['Effect_Aff_applyParAff'] ?? \PhpursThunks::eval('Effect_Aff_applyParAff'))))(((($dictMonoid_0)['Semigroup0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['append'])];
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}];
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_semigroupCanceler'] = function() { $v = ["append" => (function() {
-  $__fn = function($v_0 = null, $v1_1 = null, $err_2 = null) use (&$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
-  $__res = (($GLOBALS['Effect_Aff_parSequence_'] ?? \PhpursThunks::eval('Effect_Aff_parSequence_')))([($v_0)($err_2), ($v1_1)($err_2)]);
-  goto __end;;
-  __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_semigroupAff'] = function() { $v = function($dictSemigroup_0 = null) {
-  $__num = \func_num_args();
-  $__res = ["append" => ((($GLOBALS['Control_Apply_lift2'] ?? \PhpursThunks::eval('Control_Apply_lift2')))(($GLOBALS['Effect_Aff_applyAff'] ?? \PhpursThunks::eval('Effect_Aff_applyAff'))))(($dictSemigroup_0)['append'])];
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_monadEffectAff'] = function() { $v = ["liftEffect" => ($GLOBALS['Effect_Aff__liftEffect'] ?? \PhpursThunks::eval('Effect_Aff__liftEffect')), "Monad0" => function($dollar__unused_0 = null) {
-  $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_Aff_monadAff'] ?? \PhpursThunks::eval('Effect_Aff_monadAff'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_effectCanceler'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Effect_Aff_Canceler'] ?? \PhpursThunks::eval('Effect_Aff_Canceler'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Function_const'] ?? \PhpursThunks::eval('Data_Function_const'))))(($GLOBALS['Effect_Aff__liftEffect'] ?? \PhpursThunks::eval('Effect_Aff__liftEffect')))); return $v; };
-\PhpursThunks::$thunks['Effect_Aff_joinFiber'] = function() { $v = function($v_0 = null) {
-  $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_Aff__makeAff'] ?? \PhpursThunks::eval('Effect_Aff__makeAff')))(($GLOBALS['Effect_Aff_isLeft'] ?? \PhpursThunks::eval('Effect_Aff_isLeft')), ($GLOBALS['Effect_Aff_unsafeFromLeft'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromLeft')), ($GLOBALS['Effect_Aff_unsafeFromRight'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromRight')), ($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left')), ($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right')), function($k_1 = null) use ($v_0) {
-  $__num = \func_num_args();
-  $__res = (((($GLOBALS['Effect_applyEffect'] ?? \PhpursThunks::eval('Effect_applyEffect')))['apply'])((($GLOBALS['Effect_pureE'] ?? \PhpursThunks::eval('Effect_pureE')))(($GLOBALS['Effect_Aff_effectCanceler'] ?? \PhpursThunks::eval('Effect_Aff_effectCanceler')))))((($v_0)['join'])($k_1));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_functorFiber'] = function() { $v = ["map" => (function() {
-  $__fn = function($f_0 = null, $t_1 = null) use (&$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = (($GLOBALS['Effect_Unsafe_unsafePerformEffect'] ?? \PhpursThunks::eval('Effect_Unsafe_unsafePerformEffect')))((($GLOBALS['Effect_Aff__makeFiber'] ?? \PhpursThunks::eval('Effect_Aff__makeFiber')))(($GLOBALS['Effect_Aff_isLeft'] ?? \PhpursThunks::eval('Effect_Aff_isLeft')), ($GLOBALS['Effect_Aff_unsafeFromLeft'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromLeft')), ($GLOBALS['Effect_Aff_unsafeFromRight'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromRight')), ($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left')), ($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right')), ((($GLOBALS['Effect_Aff__map'] ?? \PhpursThunks::eval('Effect_Aff__map')))($f_0))((($GLOBALS['Effect_Aff_joinFiber'] ?? \PhpursThunks::eval('Effect_Aff_joinFiber')))($t_1))));
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_applyFiber'] = function() { $v = ["apply" => (function() {
-  $__fn = function($t1_0 = null, $t2_1 = null) use (&$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = (($GLOBALS['Effect_Unsafe_unsafePerformEffect'] ?? \PhpursThunks::eval('Effect_Unsafe_unsafePerformEffect')))((($GLOBALS['Effect_Aff__makeFiber'] ?? \PhpursThunks::eval('Effect_Aff__makeFiber')))(($GLOBALS['Effect_Aff_isLeft'] ?? \PhpursThunks::eval('Effect_Aff_isLeft')), ($GLOBALS['Effect_Aff_unsafeFromLeft'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromLeft')), ($GLOBALS['Effect_Aff_unsafeFromRight'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromRight')), ($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left')), ($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right')), (((($GLOBALS['Effect_Aff_applyAff'] ?? \PhpursThunks::eval('Effect_Aff_applyAff')))['apply'])((($GLOBALS['Effect_Aff_joinFiber'] ?? \PhpursThunks::eval('Effect_Aff_joinFiber')))($t1_0)))((($GLOBALS['Effect_Aff_joinFiber'] ?? \PhpursThunks::eval('Effect_Aff_joinFiber')))($t2_1))));
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Functor0" => function($dollar__unused_0 = null) {
-  $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_Aff_functorFiber'] ?? \PhpursThunks::eval('Effect_Aff_functorFiber'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_applicativeFiber'] = function() { $v = ["pure" => function($a_0 = null) {
-  $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_Unsafe_unsafePerformEffect'] ?? \PhpursThunks::eval('Effect_Unsafe_unsafePerformEffect')))((($GLOBALS['Effect_Aff__makeFiber'] ?? \PhpursThunks::eval('Effect_Aff__makeFiber')))(($GLOBALS['Effect_Aff_isLeft'] ?? \PhpursThunks::eval('Effect_Aff_isLeft')), ($GLOBALS['Effect_Aff_unsafeFromLeft'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromLeft')), ($GLOBALS['Effect_Aff_unsafeFromRight'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromRight')), ($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left')), ($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right')), (($GLOBALS['Effect_Aff__pure'] ?? \PhpursThunks::eval('Effect_Aff__pure')))($a_0)));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Apply0" => function($dollar__unused_0 = null) {
-  $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_Aff_applyFiber'] ?? \PhpursThunks::eval('Effect_Aff_applyFiber'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_killFiber'] = function() { $v = (function() {
-  $__fn = function($e_0 = null, $v_1 = null) use (&$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ((($GLOBALS['Effect_Aff__bind'] ?? \PhpursThunks::eval('Effect_Aff__bind')))((($GLOBALS['Effect_Aff__liftEffect'] ?? \PhpursThunks::eval('Effect_Aff__liftEffect')))(($v_1)['isSuspended'])))(function($suspended_2 = null) use ($e_0, $v_1) {
-  $__num = \func_num_args();
-  $__t0 = null;;
-  if ($suspended_2) {
-$__local_var_3_1 = (($GLOBALS['Effect_pureE'] ?? \PhpursThunks::eval('Effect_pureE')))(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')));
-$__t0 = (($GLOBALS['Effect_Aff__liftEffect'] ?? \PhpursThunks::eval('Effect_Aff__liftEffect')))((((($GLOBALS['Effect_applyEffect'] ?? \PhpursThunks::eval('Effect_applyEffect')))['apply'])((($GLOBALS['Effect_pureE'] ?? \PhpursThunks::eval('Effect_pureE')))(function($v_4 = null) {
-  $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-})))((($v_1)['kill'])($e_0, function($v_4 = null) use ($__local_var_3_1) {
-  $__num = \func_num_args();
-  $__res = $__local_var_3_1;
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-})));
-goto end_branch_0;;
-};
-  $__t0 = (($GLOBALS['Effect_Aff__makeAff'] ?? \PhpursThunks::eval('Effect_Aff__makeAff')))(($GLOBALS['Effect_Aff_isLeft'] ?? \PhpursThunks::eval('Effect_Aff_isLeft')), ($GLOBALS['Effect_Aff_unsafeFromLeft'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromLeft')), ($GLOBALS['Effect_Aff_unsafeFromRight'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromRight')), ($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left')), ($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right')), function($k_3 = null) use ($e_0, $v_1) {
-  $__num = \func_num_args();
-  $__res = (((($GLOBALS['Effect_applyEffect'] ?? \PhpursThunks::eval('Effect_applyEffect')))['apply'])((($GLOBALS['Effect_pureE'] ?? \PhpursThunks::eval('Effect_pureE')))(($GLOBALS['Effect_Aff_effectCanceler'] ?? \PhpursThunks::eval('Effect_Aff_effectCanceler')))))((($v_1)['kill'])($e_0, $k_3));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  end_branch_0:;
-  $__res = $__t0;
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Effect_Aff_fiberCanceler'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Effect_Aff_Canceler'] ?? \PhpursThunks::eval('Effect_Aff_Canceler'))))((function() {
-  $__fn = function($b_0 = null, $a_1 = null) use (&$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ((($GLOBALS['Effect_Aff_killFiber'] ?? \PhpursThunks::eval('Effect_Aff_killFiber')))($a_1))($b_0);
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()); return $v; };
-\PhpursThunks::$thunks['Effect_Aff_supervise'] = function() { $v = function($aff_0 = null) {
-  $__num = \func_num_args();
-  $killError_1_0 = (($GLOBALS['Effect_Exception_error'] ?? \PhpursThunks::eval('Effect_Exception_error')))("[Aff] Child fiber outlived parent");
-  $__res = (((($GLOBALS['Effect_Aff_generalBracket'] ?? \PhpursThunks::eval('Effect_Aff_generalBracket')))((($GLOBALS['Effect_Aff__liftEffect'] ?? \PhpursThunks::eval('Effect_Aff__liftEffect')))(((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))((($GLOBALS['Effect_Aff__makeSupervisedFiber'] ?? \PhpursThunks::eval('Effect_Aff__makeSupervisedFiber')))(($GLOBALS['Effect_Aff_isLeft'] ?? \PhpursThunks::eval('Effect_Aff_isLeft')), ($GLOBALS['Effect_Aff_unsafeFromLeft'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromLeft')), ($GLOBALS['Effect_Aff_unsafeFromRight'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromRight')), ($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left')), ($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right')), $aff_0)))(function($sup_2 = null) {
-  $__num = \func_num_args();
-  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))((($sup_2)['fiber'])['run']))(function($dollar__unused_3 = null) use ($sup_2) {
-  $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_pureE'] ?? \PhpursThunks::eval('Effect_pureE')))($sup_2);
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))))(["killed" => (function() {
-  $__fn = function($err_2 = null, $sup_3 = null) use (&$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = (($GLOBALS['Effect_Aff_parSequence_'] ?? \PhpursThunks::eval('Effect_Aff_parSequence_')))([((($GLOBALS['Effect_Aff_killFiber'] ?? \PhpursThunks::eval('Effect_Aff_killFiber')))($err_2))(($sup_3)['fiber']), (($GLOBALS['Effect_Aff__makeAff'] ?? \PhpursThunks::eval('Effect_Aff__makeAff')))(($GLOBALS['Effect_Aff_isLeft'] ?? \PhpursThunks::eval('Effect_Aff_isLeft')), ($GLOBALS['Effect_Aff_unsafeFromLeft'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromLeft')), ($GLOBALS['Effect_Aff_unsafeFromRight'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromRight')), ($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left')), ($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right')), function($k_4 = null) use ($err_2, $sup_3) {
-  $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_Aff__killAll'] ?? \PhpursThunks::eval('Effect_Aff__killAll')))($err_2, ($sup_3)['supervisor'], ($k_4)(new Phpurs_Data1("Right", ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')))));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-})]);
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "failed" => (function() use ($killError_1_0) {
-  $__fn = function($v_2 = null, $sup_3 = null) use ($killError_1_0, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = (($GLOBALS['Effect_Aff__makeAff'] ?? \PhpursThunks::eval('Effect_Aff__makeAff')))(($GLOBALS['Effect_Aff_isLeft'] ?? \PhpursThunks::eval('Effect_Aff_isLeft')), ($GLOBALS['Effect_Aff_unsafeFromLeft'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromLeft')), ($GLOBALS['Effect_Aff_unsafeFromRight'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromRight')), ($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left')), ($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right')), function($k_4 = null) use ($killError_1_0, $sup_3) {
-  $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_Aff__killAll'] ?? \PhpursThunks::eval('Effect_Aff__killAll')))($killError_1_0, ($sup_3)['supervisor'], ($k_4)(new Phpurs_Data1("Right", ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')))));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "completed" => (function() use ($killError_1_0) {
-  $__fn = function($v_2 = null, $sup_3 = null) use ($killError_1_0, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = (($GLOBALS['Effect_Aff__makeAff'] ?? \PhpursThunks::eval('Effect_Aff__makeAff')))(($GLOBALS['Effect_Aff_isLeft'] ?? \PhpursThunks::eval('Effect_Aff_isLeft')), ($GLOBALS['Effect_Aff_unsafeFromLeft'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromLeft')), ($GLOBALS['Effect_Aff_unsafeFromRight'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromRight')), ($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left')), ($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right')), function($k_4 = null) use ($killError_1_0, $sup_3) {
-  $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_Aff__killAll'] ?? \PhpursThunks::eval('Effect_Aff__killAll')))($killError_1_0, ($sup_3)['supervisor'], ($k_4)(new Phpurs_Data1("Right", ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')))));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()]))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Effect_Aff_joinFiber'] ?? \PhpursThunks::eval('Effect_Aff_joinFiber'))))(function($v_2 = null) {
-  $__num = \func_num_args();
-  $__res = ($v_2)['fiber'];
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_monadSTAff'] = function() { $v = ["liftST" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Effect_Aff__liftEffect'] ?? \PhpursThunks::eval('Effect_Aff__liftEffect'))))(($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce'))), "Monad0" => function($dollar__unused_0 = null) {
-  $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_Aff_monadAff'] ?? \PhpursThunks::eval('Effect_Aff_monadAff'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_monadThrowAff'] = function() { $v = ["throwError" => ($GLOBALS['Effect_Aff__throwError'] ?? \PhpursThunks::eval('Effect_Aff__throwError')), "Monad0" => function($dollar__unused_0 = null) {
-  $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_Aff_monadAff'] ?? \PhpursThunks::eval('Effect_Aff_monadAff'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_monadErrorAff'] = function() { $v = ["catchError" => ($GLOBALS['Effect_Aff__catchError'] ?? \PhpursThunks::eval('Effect_Aff__catchError')), "MonadThrow0" => function($dollar__unused_0 = null) {
-  $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_Aff_monadThrowAff'] ?? \PhpursThunks::eval('Effect_Aff_monadThrowAff'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_try'] = function() { $v = (($GLOBALS['Control_Monad_Error_Class_try'] ?? \PhpursThunks::eval('Control_Monad_Error_Class_try')))(($GLOBALS['Effect_Aff_monadErrorAff'] ?? \PhpursThunks::eval('Effect_Aff_monadErrorAff'))); return $v; };
-\PhpursThunks::$thunks['Effect_Aff_attempt'] = function() { $v = ($GLOBALS['Effect_Aff_try'] ?? \PhpursThunks::eval('Effect_Aff_try')); return $v; };
-\PhpursThunks::$thunks['Effect_Aff_runAff'] = function() { $v = (function() {
-  $__fn = function($k_0 = null, $aff_1 = null) use (&$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = (($GLOBALS['Effect_Aff_launchAff'] ?? \PhpursThunks::eval('Effect_Aff_launchAff')))(((($GLOBALS['Effect_Aff__bind'] ?? \PhpursThunks::eval('Effect_Aff__bind')))((($GLOBALS['Effect_Aff_try'] ?? \PhpursThunks::eval('Effect_Aff_try')))($aff_1)))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Effect_Aff__liftEffect'] ?? \PhpursThunks::eval('Effect_Aff__liftEffect'))))($k_0)));
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Effect_Aff_runAff_'] = function() { $v = (function() {
-  $__fn = function($k_0 = null, $aff_1 = null) use (&$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = (((($GLOBALS['Effect_applyEffect'] ?? \PhpursThunks::eval('Effect_applyEffect')))['apply'])((($GLOBALS['Effect_pureE'] ?? \PhpursThunks::eval('Effect_pureE')))(function($v_2 = null) {
-  $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-})))(((($GLOBALS['Effect_Aff_runAff'] ?? \PhpursThunks::eval('Effect_Aff_runAff')))($k_0))($aff_1));
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Effect_Aff_runSuspendedAff'] = function() { $v = (function() {
-  $__fn = function($k_0 = null, $aff_1 = null) use (&$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = (($GLOBALS['Effect_Aff__makeFiber'] ?? \PhpursThunks::eval('Effect_Aff__makeFiber')))(($GLOBALS['Effect_Aff_isLeft'] ?? \PhpursThunks::eval('Effect_Aff_isLeft')), ($GLOBALS['Effect_Aff_unsafeFromLeft'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromLeft')), ($GLOBALS['Effect_Aff_unsafeFromRight'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromRight')), ($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left')), ($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right')), ((($GLOBALS['Effect_Aff__bind'] ?? \PhpursThunks::eval('Effect_Aff__bind')))((($GLOBALS['Effect_Aff_try'] ?? \PhpursThunks::eval('Effect_Aff_try')))($aff_1)))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Effect_Aff__liftEffect'] ?? \PhpursThunks::eval('Effect_Aff__liftEffect'))))($k_0)));
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Effect_Aff_monadRecAff'] = function() { $v = ["tailRecM" => function($k_0 = null) {
-  $__num = \func_num_args();
-  $go_1_0 = null;
-  $go_1_0 = function($a_2 = null) use (&$go_1_0, $k_0) {
-  $__num = \func_num_args();
-  $__res = ((($GLOBALS['Effect_Aff__bind'] ?? \PhpursThunks::eval('Effect_Aff__bind')))(($k_0)($a_2)))(function($res_3 = null) use (&$go_1_0) {
-  $__num = \func_num_args();
-  $__t1 = null;;
-  if ((is_object($res_3) && (($res_3)->{'tag'} === "Done"))) {
-$__t1 = (($GLOBALS['Effect_Aff__pure'] ?? \PhpursThunks::eval('Effect_Aff__pure')))(($res_3)->{'value0'});
-goto end_branch_1;;
-};
-  if ((is_object($res_3) && (($res_3)->{'tag'} === "Loop"))) {
-$__t1 = ($go_1_0)(($res_3)->{'value0'});
-goto end_branch_1;;
-};
-  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t1 = null;
-  end_branch_1:;
-  $__res = $__t1;
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
-  $__res = $go_1_0;
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Monad0" => function($dollar__unused_0 = null) {
-  $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_Aff_monadAff'] ?? \PhpursThunks::eval('Effect_Aff_monadAff'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_monoidAff'] = function() { $v = function($dictMonoid_0 = null) {
-  $__num = \func_num_args();
-  $__res = ["mempty" => (($GLOBALS['Effect_Aff__pure'] ?? \PhpursThunks::eval('Effect_Aff__pure')))(($dictMonoid_0)['mempty']), "Semigroup0" => function($dollar__unused_1 = null) use ($dictMonoid_0) {
-  $__num = \func_num_args();
-  $__res = ["append" => ((($GLOBALS['Control_Apply_lift2'] ?? \PhpursThunks::eval('Control_Apply_lift2')))(($GLOBALS['Effect_Aff_applyAff'] ?? \PhpursThunks::eval('Effect_Aff_applyAff'))))(((($dictMonoid_0)['Semigroup0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['append'])];
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}];
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_nonCanceler'] = function() { $v = (function() use (&$__fn) {
-$__local_var_0_0 = (($GLOBALS['Effect_Aff__pure'] ?? \PhpursThunks::eval('Effect_Aff__pure')))(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')));
-return function($v_1 = null) use ($__local_var_0_0) {
-  $__num = \func_num_args();
-  $__res = $__local_var_0_0;
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
-})(); return $v; };
-\PhpursThunks::$thunks['Effect_Aff_monoidCanceler'] = function() { $v = ["mempty" => ($GLOBALS['Effect_Aff_nonCanceler'] ?? \PhpursThunks::eval('Effect_Aff_nonCanceler')), "Semigroup0" => function($dollar__unused_0 = null) {
-  $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_Aff_semigroupCanceler'] ?? \PhpursThunks::eval('Effect_Aff_semigroupCanceler'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_never'] = function() { $v = (($GLOBALS['Effect_Aff__makeAff'] ?? \PhpursThunks::eval('Effect_Aff__makeAff')))(($GLOBALS['Effect_Aff_isLeft'] ?? \PhpursThunks::eval('Effect_Aff_isLeft')), ($GLOBALS['Effect_Aff_unsafeFromLeft'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromLeft')), ($GLOBALS['Effect_Aff_unsafeFromRight'] ?? \PhpursThunks::eval('Effect_Aff_unsafeFromRight')), ($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left')), ($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right')), function($v_0 = null) {
-  $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_pureE'] ?? \PhpursThunks::eval('Effect_pureE')))(($GLOBALS['Effect_Aff_nonCanceler'] ?? \PhpursThunks::eval('Effect_Aff_nonCanceler')));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}); return $v; };
-\PhpursThunks::$thunks['Effect_Aff_apathize'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Effect_Aff__map'] ?? \PhpursThunks::eval('Effect_Aff__map')))(function($v_0 = null) {
-  $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-})))(($GLOBALS['Effect_Aff_try'] ?? \PhpursThunks::eval('Effect_Aff_try'))); return $v; };
-\PhpursThunks::$thunks['Effect_Aff_altParAff'] = function() { $v = ["alt" => ($GLOBALS['Effect_Aff__parAffAlt'] ?? \PhpursThunks::eval('Effect_Aff__parAffAlt')), "Functor0" => function($dollar__unused_0 = null) {
-  $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_Aff_functorParAff'] ?? \PhpursThunks::eval('Effect_Aff_functorParAff'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_altAff'] = function() { $v = ["alt" => (function() {
-  $__fn = function($a1_0 = null, $a2_1 = null) use (&$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ((($GLOBALS['Effect_Aff__catchError'] ?? \PhpursThunks::eval('Effect_Aff__catchError')))($a1_0))(function($v_2 = null) use ($a2_1) {
-  $__num = \func_num_args();
-  $__res = $a2_1;
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Functor0" => function($dollar__unused_0 = null) {
-  $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_Aff_functorAff'] ?? \PhpursThunks::eval('Effect_Aff_functorAff'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_plusAff'] = function() { $v = ["empty" => (($GLOBALS['Effect_Aff__throwError'] ?? \PhpursThunks::eval('Effect_Aff__throwError')))((($GLOBALS['Effect_Exception_error'] ?? \PhpursThunks::eval('Effect_Exception_error')))("Always fails")), "Alt0" => function($dollar__unused_0 = null) {
-  $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_Aff_altAff'] ?? \PhpursThunks::eval('Effect_Aff_altAff'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_plusParAff'] = function() { $v = ["empty" => (($GLOBALS['Effect_Aff_plusAff'] ?? \PhpursThunks::eval('Effect_Aff_plusAff')))['empty'], "Alt0" => function($dollar__unused_0 = null) {
-  $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_Aff_altParAff'] ?? \PhpursThunks::eval('Effect_Aff_altParAff'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_alternativeParAff'] = function() { $v = ["Applicative0" => function($dollar__unused_0 = null) {
-  $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_Aff_applicativeParAff'] ?? \PhpursThunks::eval('Effect_Aff_applicativeParAff'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Plus1" => function($dollar__unused_0 = null) {
-  $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_Aff_plusParAff'] ?? \PhpursThunks::eval('Effect_Aff_plusParAff'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
+
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Effect_Aff = \call_user_func(function() {
   $exports = [];
@@ -1393,83 +574,964 @@ $exports['_parAffAlt'] = $_parAffAlt;
 return $exports;
   return $exports;
 });
-\PhpursThunks::$thunks['Effect_Aff__bind'] = function() use (&$ffi_Effect_Aff) { return $ffi_Effect_Aff['_bind']; };
-\PhpursThunks::$thunks['Effect_Aff__catchError'] = function() use (&$ffi_Effect_Aff) { return $ffi_Effect_Aff['_catchError']; };
-\PhpursThunks::$thunks['Effect_Aff__delay'] = function() use (&$ffi_Effect_Aff) { return $ffi_Effect_Aff['_delay']; };
-\PhpursThunks::$thunks['Effect_Aff__fork'] = function() use (&$ffi_Effect_Aff) { return $ffi_Effect_Aff['_fork']; };
-\PhpursThunks::$thunks['Effect_Aff__killAll'] = function() use (&$ffi_Effect_Aff) { return $ffi_Effect_Aff['_killAll']; };
-\PhpursThunks::$thunks['Effect_Aff__liftEffect'] = function() use (&$ffi_Effect_Aff) { return $ffi_Effect_Aff['_liftEffect']; };
-\PhpursThunks::$thunks['Effect_Aff__makeAff'] = function() use (&$ffi_Effect_Aff) { return $ffi_Effect_Aff['_makeAff']; };
-\PhpursThunks::$thunks['Effect_Aff__makeFiber'] = function() use (&$ffi_Effect_Aff) { return $ffi_Effect_Aff['_makeFiber']; };
-\PhpursThunks::$thunks['Effect_Aff__makeSupervisedFiber'] = function() use (&$ffi_Effect_Aff) { return $ffi_Effect_Aff['_makeSupervisedFiber']; };
-\PhpursThunks::$thunks['Effect_Aff__map'] = function() use (&$ffi_Effect_Aff) { return $ffi_Effect_Aff['_map']; };
-\PhpursThunks::$thunks['Effect_Aff__parAffAlt'] = function() use (&$ffi_Effect_Aff) { return $ffi_Effect_Aff['_parAffAlt']; };
-\PhpursThunks::$thunks['Effect_Aff__parAffApply'] = function() use (&$ffi_Effect_Aff) { return $ffi_Effect_Aff['_parAffApply']; };
-\PhpursThunks::$thunks['Effect_Aff__parAffMap'] = function() use (&$ffi_Effect_Aff) { return $ffi_Effect_Aff['_parAffMap']; };
-\PhpursThunks::$thunks['Effect_Aff__pure'] = function() use (&$ffi_Effect_Aff) { return $ffi_Effect_Aff['_pure']; };
-\PhpursThunks::$thunks['Effect_Aff__sequential'] = function() use (&$ffi_Effect_Aff) { return $ffi_Effect_Aff['_sequential']; };
-\PhpursThunks::$thunks['Effect_Aff__throwError'] = function() use (&$ffi_Effect_Aff) { return $ffi_Effect_Aff['_throwError']; };
-\PhpursThunks::$thunks['Effect_Aff_generalBracket'] = function() use (&$ffi_Effect_Aff) { return $ffi_Effect_Aff['generalBracket']; };
+$GLOBALS['Effect_Aff__bind'] = $ffi_Effect_Aff['_bind'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Effect_Aff__catchError'] = $ffi_Effect_Aff['_catchError'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Effect_Aff__delay'] = $ffi_Effect_Aff['_delay'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Effect_Aff__fork'] = $ffi_Effect_Aff['_fork'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Effect_Aff__killAll'] = $ffi_Effect_Aff['_killAll'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Effect_Aff__liftEffect'] = $ffi_Effect_Aff['_liftEffect'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Effect_Aff__makeAff'] = $ffi_Effect_Aff['_makeAff'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Effect_Aff__makeFiber'] = $ffi_Effect_Aff['_makeFiber'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Effect_Aff__makeSupervisedFiber'] = $ffi_Effect_Aff['_makeSupervisedFiber'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Effect_Aff__map'] = $ffi_Effect_Aff['_map'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Effect_Aff__parAffAlt'] = $ffi_Effect_Aff['_parAffAlt'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Effect_Aff__parAffApply'] = $ffi_Effect_Aff['_parAffApply'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Effect_Aff__parAffMap'] = $ffi_Effect_Aff['_parAffMap'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Effect_Aff__pure'] = $ffi_Effect_Aff['_pure'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Effect_Aff__sequential'] = $ffi_Effect_Aff['_sequential'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Effect_Aff__throwError'] = $ffi_Effect_Aff['_throwError'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Effect_Aff_generalBracket'] = $ffi_Effect_Aff['generalBracket'] ?? new class { public function __invoke(...$args) { return $this; } };
 
 
+// Effect_Aff_void
+$GLOBALS['Effect_Aff_void'] = (($GLOBALS['Control_Applicative_liftA1'])($GLOBALS['Effect_applicativeEffect']))(function($v_0 = null) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Data_Unit_unit'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
 
+// Effect_Aff_Canceler
+$GLOBALS['Effect_Aff_Canceler'] = function($x_0 = null) {
+  $__num = \func_num_args();
+  $__res = $x_0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 
+// Effect_Aff_unsafeFromRight
+$GLOBALS['Effect_Aff_unsafeFromRight'] = function($v_0 = null) {
+  $__num = \func_num_args();
+  $__t0 = null;;
+  if ((is_object($v_0) && (($v_0)->{'tag'} === "Right"))) {
+$__t0 = ($v_0)->{'value0'};
+goto end_branch_0;;
+};
+  if ((is_object($v_0) && (($v_0)->{'tag'} === "Left"))) {
+$__t0 = ($GLOBALS['Partial__crashWith'])("unsafeFromRight: Left");
+goto end_branch_0;;
+};
+  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+  $__t0 = null;
+  end_branch_0:;
+  $__res = $__t0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 
+// Effect_Aff_unsafeFromLeft
+$GLOBALS['Effect_Aff_unsafeFromLeft'] = function($v_0 = null) {
+  $__num = \func_num_args();
+  $__t0 = null;;
+  if ((is_object($v_0) && (($v_0)->{'tag'} === "Left"))) {
+$__t0 = ($v_0)->{'value0'};
+goto end_branch_0;;
+};
+  if ((is_object($v_0) && (($v_0)->{'tag'} === "Right"))) {
+$__t0 = ($GLOBALS['Partial__crashWith'])("unsafeFromLeft: Right");
+goto end_branch_0;;
+};
+  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+  $__t0 = null;
+  end_branch_0:;
+  $__res = $__t0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 
+// Effect_Aff_suspendAff
+$GLOBALS['Effect_Aff_suspendAff'] = ($GLOBALS['Effect_Aff__fork'])(false);
 
+// Effect_Aff_newtypeCanceler
+$GLOBALS['Effect_Aff_newtypeCanceler'] = ["Coercible0" => function($dollar__unused_0 = null) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Prim_undefined'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
+// Effect_Aff_isLeft
+$GLOBALS['Effect_Aff_isLeft'] = function($v_0 = null) {
+  $__num = \func_num_args();
+  $__t0 = null;;
+  if ((is_object($v_0) && (($v_0)->{'tag'} === "Left"))) {
+$__t0 = true;
+goto end_branch_0;;
+};
+  if ((is_object($v_0) && (($v_0)->{'tag'} === "Right"))) {
+$__t0 = false;
+goto end_branch_0;;
+};
+  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+  $__t0 = null;
+  end_branch_0:;
+  $__res = $__t0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 
+// Effect_Aff_makeAff
+$GLOBALS['Effect_Aff_makeAff'] = function($k_0 = null) {
+  $__num = \func_num_args();
+  $__res = ($GLOBALS['Effect_Aff__makeAff'])($GLOBALS['Effect_Aff_isLeft'], $GLOBALS['Effect_Aff_unsafeFromLeft'], $GLOBALS['Effect_Aff_unsafeFromRight'], $GLOBALS['Data_Either_Left'], $GLOBALS['Data_Either_Right'], $k_0);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 
+// Effect_Aff_makeFiber
+$GLOBALS['Effect_Aff_makeFiber'] = function($aff_0 = null) {
+  $__num = \func_num_args();
+  $__res = ($GLOBALS['Effect_Aff__makeFiber'])($GLOBALS['Effect_Aff_isLeft'], $GLOBALS['Effect_Aff_unsafeFromLeft'], $GLOBALS['Effect_Aff_unsafeFromRight'], $GLOBALS['Data_Either_Left'], $GLOBALS['Data_Either_Right'], $aff_0);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 
+// Effect_Aff_launchAff
+$GLOBALS['Effect_Aff_launchAff'] = function($aff_0 = null) {
+  $__num = \func_num_args();
+  $__res = (($GLOBALS['Effect_bindE'])(($GLOBALS['Effect_Aff__makeFiber'])($GLOBALS['Effect_Aff_isLeft'], $GLOBALS['Effect_Aff_unsafeFromLeft'], $GLOBALS['Effect_Aff_unsafeFromRight'], $GLOBALS['Data_Either_Left'], $GLOBALS['Data_Either_Right'], $aff_0)))(function($fiber_1 = null) {
+  $__num = \func_num_args();
+  $__res = (($GLOBALS['Effect_bindE'])(($fiber_1)['run']))(function($dollar__unused_2 = null) use ($fiber_1) {
+  $__num = \func_num_args();
+  $__res = ($GLOBALS['Effect_pureE'])($fiber_1);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 
+// Effect_Aff_launchAff_
+$GLOBALS['Effect_Aff_launchAff_'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Effect_Aff_void']))($GLOBALS['Effect_Aff_launchAff']);
 
+// Effect_Aff_launchSuspendedAff
+$GLOBALS['Effect_Aff_launchSuspendedAff'] = $GLOBALS['Effect_Aff_makeFiber'];
 
+// Effect_Aff_functorParAff
+$GLOBALS['Effect_Aff_functorParAff'] = ["map" => $GLOBALS['Effect_Aff__parAffMap']];
 
+// Effect_Aff_functorAff
+$GLOBALS['Effect_Aff_functorAff'] = ["map" => $GLOBALS['Effect_Aff__map']];
 
+// Effect_Aff_forkAff
+$GLOBALS['Effect_Aff_forkAff'] = ($GLOBALS['Effect_Aff__fork'])(true);
 
+// Effect_Aff_delay
+$GLOBALS['Effect_Aff_delay'] = function($v_0 = null) {
+  $__num = \func_num_args();
+  $__res = ($GLOBALS['Effect_Aff__delay'])($GLOBALS['Data_Either_Right'], $v_0);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 
+// Effect_Aff_bracket
+$GLOBALS['Effect_Aff_bracket'] = (function() {
+  $__fn = function($acquire_0 = null, $completed_1 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = (($GLOBALS['Effect_Aff_generalBracket'])($acquire_0))(["killed" => function($v_2 = null) use ($completed_1) {
+  $__num = \func_num_args();
+  $__res = $completed_1;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "failed" => function($v_2 = null) use ($completed_1) {
+  $__num = \func_num_args();
+  $__res = $completed_1;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "completed" => function($v_2 = null) use ($completed_1) {
+  $__num = \func_num_args();
+  $__res = $completed_1;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}]);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
 
+// Effect_Aff_applyParAff
+$GLOBALS['Effect_Aff_applyParAff'] = ["apply" => $GLOBALS['Effect_Aff__parAffApply'], "Functor0" => function($dollar__unused_0 = null) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Effect_Aff_functorParAff'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
+// Effect_Aff_semigroupParAff
+$GLOBALS['Effect_Aff_semigroupParAff'] = function($dictSemigroup_0 = null) {
+  $__num = \func_num_args();
+  $__res = ["append" => (($GLOBALS['Control_Apply_lift2'])($GLOBALS['Effect_Aff_applyParAff']))(($dictSemigroup_0)['append'])];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 
+// Effect_Aff_monadAff
+$GLOBALS['Effect_Aff_monadAff'] = ["Applicative0" => function($dollar__unused_0 = null) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Effect_Aff_applicativeAff'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Bind1" => function($dollar__unused_0 = null) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Effect_Aff_bindAff'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
+// Effect_Aff_bindAff
+$GLOBALS['Effect_Aff_bindAff'] = ["bind" => $GLOBALS['Effect_Aff__bind'], "Apply0" => function($dollar__unused_0 = null) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Effect_Aff_applyAff'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
+// Effect_Aff_applyAff
+$GLOBALS['Effect_Aff_applyAff'] = ["apply" => ($GLOBALS['Control_Monad_ap'])($GLOBALS['Effect_Aff_monadAff']), "Functor0" => function($dollar__unused_0 = null) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Effect_Aff_functorAff'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
+// Effect_Aff_applicativeAff
+$GLOBALS['Effect_Aff_applicativeAff'] = ["pure" => $GLOBALS['Effect_Aff__pure'], "Apply0" => function($dollar__unused_0 = null) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Effect_Aff_applyAff'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
+// Effect_Aff_cancelWith
+$GLOBALS['Effect_Aff_cancelWith'] = (function() {
+  $__fn = function($aff_0 = null, $v_1 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ((($GLOBALS['Effect_Aff_generalBracket'])(($GLOBALS['Effect_Aff__pure'])($GLOBALS['Data_Unit_unit'])))(["killed" => (function() use ($v_1) {
+  $__fn = function($e_2 = null, $v1_3 = null) use ($v_1, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ($v_1)($e_2);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})(), "failed" => function($v_2 = null) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Effect_Aff__pure'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "completed" => function($v_2 = null) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Effect_Aff__pure'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}]))(function($v_2 = null) use ($aff_0) {
+  $__num = \func_num_args();
+  $__res = $aff_0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
 
+// Effect_Aff_finally
+$GLOBALS['Effect_Aff_finally'] = (function() {
+  $__fn = function($fin_0 = null, $a_1 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ((($GLOBALS['Effect_Aff_generalBracket'])(($GLOBALS['Effect_Aff__pure'])($GLOBALS['Data_Unit_unit'])))(["killed" => (function() use ($fin_0) {
+  $__fn = function($v_2 = null, $v_3 = null) use ($fin_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = $fin_0;
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})(), "failed" => (function() use ($fin_0) {
+  $__fn = function($v_2 = null, $v_3 = null) use ($fin_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = $fin_0;
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})(), "completed" => (function() use ($fin_0) {
+  $__fn = function($v_2 = null, $v_3 = null) use ($fin_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = $fin_0;
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})()]))(function($v_2 = null) use ($a_1) {
+  $__num = \func_num_args();
+  $__res = $a_1;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
 
+// Effect_Aff_invincible
+$GLOBALS['Effect_Aff_invincible'] = function($a_0 = null) {
+  $__num = \func_num_args();
+  $__local_var_1_0 = ($GLOBALS['Effect_Aff__pure'])($GLOBALS['Data_Unit_unit']);
+  $__res = ((($GLOBALS['Effect_Aff_generalBracket'])($a_0))(["killed" => (function() use ($__local_var_1_0) {
+  $__fn = function($v_2 = null, $v_3 = null) use ($__local_var_1_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = $__local_var_1_0;
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})(), "failed" => (function() use ($__local_var_1_0) {
+  $__fn = function($v_2 = null, $v_3 = null) use ($__local_var_1_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = $__local_var_1_0;
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})(), "completed" => (function() use ($__local_var_1_0) {
+  $__fn = function($v_2 = null, $v_3 = null) use ($__local_var_1_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = $__local_var_1_0;
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})()]))($GLOBALS['Effect_Aff__pure']);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 
+// Effect_Aff_lazyAff
+$GLOBALS['Effect_Aff_lazyAff'] = ["defer" => function($f_0 = null) {
+  $__num = \func_num_args();
+  $__res = (($GLOBALS['Effect_Aff__bind'])(($GLOBALS['Effect_Aff__pure'])($GLOBALS['Data_Unit_unit'])))($f_0);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
+// Effect_Aff_parallelAff
+$GLOBALS['Effect_Aff_parallelAff'] = ["parallel" => $GLOBALS['Unsafe_Coerce_unsafeCoerce'], "sequential" => $GLOBALS['Effect_Aff__sequential'], "Apply0" => function($dollar__unused_0 = null) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Effect_Aff_applyAff'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Apply1" => function($dollar__unused_0 = null) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Effect_Aff_applyParAff'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
+// Effect_Aff_applicativeParAff
+$GLOBALS['Effect_Aff_applicativeParAff'] = ["pure" => (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce']))($GLOBALS['Effect_Aff__pure']), "Apply0" => function($dollar__unused_0 = null) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Effect_Aff_applyParAff'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
+// Effect_Aff_parSequence_
+$GLOBALS['Effect_Aff_parSequence_'] = ((($GLOBALS['Control_Parallel_parSequence_'])($GLOBALS['Effect_Aff_parallelAff']))($GLOBALS['Effect_Aff_applicativeParAff']))($GLOBALS['Data_Foldable_foldableArray']);
 
+// Effect_Aff_monoidParAff
+$GLOBALS['Effect_Aff_monoidParAff'] = function($dictMonoid_0 = null) {
+  $__num = \func_num_args();
+  $__res = ["mempty" => (($GLOBALS['Effect_Aff_applicativeParAff'])['pure'])(($dictMonoid_0)['mempty']), "Semigroup0" => function($dollar__unused_1 = null) use ($dictMonoid_0) {
+  $__num = \func_num_args();
+  $__res = ["append" => (($GLOBALS['Control_Apply_lift2'])($GLOBALS['Effect_Aff_applyParAff']))(((($dictMonoid_0)['Semigroup0'])($GLOBALS['Prim_undefined']))['append'])];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 
+// Effect_Aff_semigroupCanceler
+$GLOBALS['Effect_Aff_semigroupCanceler'] = ["append" => (function() {
+  $__fn = function($v_0 = null, $v1_1 = null, $err_2 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 3) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  }
+  $__res = ($GLOBALS['Effect_Aff_parSequence_'])([($v_0)($err_2), ($v1_1)($err_2)]);
+  goto __end;;
+  __end:
+  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+  };
+  return $__fn;
+})()];
 
+// Effect_Aff_semigroupAff
+$GLOBALS['Effect_Aff_semigroupAff'] = function($dictSemigroup_0 = null) {
+  $__num = \func_num_args();
+  $__res = ["append" => (($GLOBALS['Control_Apply_lift2'])($GLOBALS['Effect_Aff_applyAff']))(($dictSemigroup_0)['append'])];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 
+// Effect_Aff_monadEffectAff
+$GLOBALS['Effect_Aff_monadEffectAff'] = ["liftEffect" => $GLOBALS['Effect_Aff__liftEffect'], "Monad0" => function($dollar__unused_0 = null) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Effect_Aff_monadAff'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
+// Effect_Aff_effectCanceler
+$GLOBALS['Effect_Aff_effectCanceler'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Effect_Aff_Canceler']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Function_const']))($GLOBALS['Effect_Aff__liftEffect']));
 
+// Effect_Aff_joinFiber
+$GLOBALS['Effect_Aff_joinFiber'] = function($v_0 = null) {
+  $__num = \func_num_args();
+  $__res = ($GLOBALS['Effect_Aff__makeAff'])($GLOBALS['Effect_Aff_isLeft'], $GLOBALS['Effect_Aff_unsafeFromLeft'], $GLOBALS['Effect_Aff_unsafeFromRight'], $GLOBALS['Data_Either_Left'], $GLOBALS['Data_Either_Right'], function($k_1 = null) use ($v_0) {
+  $__num = \func_num_args();
+  $__res = ((($GLOBALS['Effect_applyEffect'])['apply'])(($GLOBALS['Effect_pureE'])($GLOBALS['Effect_Aff_effectCanceler'])))((($v_0)['join'])($k_1));
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 
+// Effect_Aff_functorFiber
+$GLOBALS['Effect_Aff_functorFiber'] = ["map" => (function() {
+  $__fn = function($f_0 = null, $t_1 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ($GLOBALS['Effect_Unsafe_unsafePerformEffect'])(($GLOBALS['Effect_Aff__makeFiber'])($GLOBALS['Effect_Aff_isLeft'], $GLOBALS['Effect_Aff_unsafeFromLeft'], $GLOBALS['Effect_Aff_unsafeFromRight'], $GLOBALS['Data_Either_Left'], $GLOBALS['Data_Either_Right'], (($GLOBALS['Effect_Aff__map'])($f_0))(($GLOBALS['Effect_Aff_joinFiber'])($t_1))));
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})()];
 
+// Effect_Aff_applyFiber
+$GLOBALS['Effect_Aff_applyFiber'] = ["apply" => (function() {
+  $__fn = function($t1_0 = null, $t2_1 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ($GLOBALS['Effect_Unsafe_unsafePerformEffect'])(($GLOBALS['Effect_Aff__makeFiber'])($GLOBALS['Effect_Aff_isLeft'], $GLOBALS['Effect_Aff_unsafeFromLeft'], $GLOBALS['Effect_Aff_unsafeFromRight'], $GLOBALS['Data_Either_Left'], $GLOBALS['Data_Either_Right'], ((($GLOBALS['Effect_Aff_applyAff'])['apply'])(($GLOBALS['Effect_Aff_joinFiber'])($t1_0)))(($GLOBALS['Effect_Aff_joinFiber'])($t2_1))));
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})(), "Functor0" => function($dollar__unused_0 = null) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Effect_Aff_functorFiber'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
+// Effect_Aff_applicativeFiber
+$GLOBALS['Effect_Aff_applicativeFiber'] = ["pure" => function($a_0 = null) {
+  $__num = \func_num_args();
+  $__res = ($GLOBALS['Effect_Unsafe_unsafePerformEffect'])(($GLOBALS['Effect_Aff__makeFiber'])($GLOBALS['Effect_Aff_isLeft'], $GLOBALS['Effect_Aff_unsafeFromLeft'], $GLOBALS['Effect_Aff_unsafeFromRight'], $GLOBALS['Data_Either_Left'], $GLOBALS['Data_Either_Right'], ($GLOBALS['Effect_Aff__pure'])($a_0)));
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Apply0" => function($dollar__unused_0 = null) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Effect_Aff_applyFiber'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
+// Effect_Aff_killFiber
+$GLOBALS['Effect_Aff_killFiber'] = (function() {
+  $__fn = function($e_0 = null, $v_1 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = (($GLOBALS['Effect_Aff__bind'])(($GLOBALS['Effect_Aff__liftEffect'])(($v_1)['isSuspended'])))(function($suspended_2 = null) use ($e_0, $v_1) {
+  $__num = \func_num_args();
+  $__t0 = null;;
+  if ($suspended_2) {
+$__local_var_3_1 = ($GLOBALS['Effect_pureE'])($GLOBALS['Data_Unit_unit']);
+$__t0 = ($GLOBALS['Effect_Aff__liftEffect'])(((($GLOBALS['Effect_applyEffect'])['apply'])(($GLOBALS['Effect_pureE'])(function($v_4 = null) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Data_Unit_unit'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+})))((($v_1)['kill'])($e_0, function($v_4 = null) use ($__local_var_3_1) {
+  $__num = \func_num_args();
+  $__res = $__local_var_3_1;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+})));
+goto end_branch_0;;
+};
+  $__t0 = ($GLOBALS['Effect_Aff__makeAff'])($GLOBALS['Effect_Aff_isLeft'], $GLOBALS['Effect_Aff_unsafeFromLeft'], $GLOBALS['Effect_Aff_unsafeFromRight'], $GLOBALS['Data_Either_Left'], $GLOBALS['Data_Either_Right'], function($k_3 = null) use ($e_0, $v_1) {
+  $__num = \func_num_args();
+  $__res = ((($GLOBALS['Effect_applyEffect'])['apply'])(($GLOBALS['Effect_pureE'])($GLOBALS['Effect_Aff_effectCanceler'])))((($v_1)['kill'])($e_0, $k_3));
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
+  end_branch_0:;
+  $__res = $__t0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
 
+// Effect_Aff_fiberCanceler
+$GLOBALS['Effect_Aff_fiberCanceler'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Effect_Aff_Canceler']))((function() {
+  $__fn = function($b_0 = null, $a_1 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = (($GLOBALS['Effect_Aff_killFiber'])($a_1))($b_0);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})());
 
+// Effect_Aff_supervise
+$GLOBALS['Effect_Aff_supervise'] = function($aff_0 = null) {
+  $__num = \func_num_args();
+  $killError_1_0 = ($GLOBALS['Effect_Exception_error'])("[Aff] Child fiber outlived parent");
+  $__res = ((($GLOBALS['Effect_Aff_generalBracket'])(($GLOBALS['Effect_Aff__liftEffect'])((($GLOBALS['Effect_bindE'])(($GLOBALS['Effect_Aff__makeSupervisedFiber'])($GLOBALS['Effect_Aff_isLeft'], $GLOBALS['Effect_Aff_unsafeFromLeft'], $GLOBALS['Effect_Aff_unsafeFromRight'], $GLOBALS['Data_Either_Left'], $GLOBALS['Data_Either_Right'], $aff_0)))(function($sup_2 = null) {
+  $__num = \func_num_args();
+  $__res = (($GLOBALS['Effect_bindE'])((($sup_2)['fiber'])['run']))(function($dollar__unused_3 = null) use ($sup_2) {
+  $__num = \func_num_args();
+  $__res = ($GLOBALS['Effect_pureE'])($sup_2);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}))))(["killed" => (function() {
+  $__fn = function($err_2 = null, $sup_3 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ($GLOBALS['Effect_Aff_parSequence_'])([(($GLOBALS['Effect_Aff_killFiber'])($err_2))(($sup_3)['fiber']), ($GLOBALS['Effect_Aff__makeAff'])($GLOBALS['Effect_Aff_isLeft'], $GLOBALS['Effect_Aff_unsafeFromLeft'], $GLOBALS['Effect_Aff_unsafeFromRight'], $GLOBALS['Data_Either_Left'], $GLOBALS['Data_Either_Right'], function($k_4 = null) use ($err_2, $sup_3) {
+  $__num = \func_num_args();
+  $__res = ($GLOBALS['Effect_Aff__killAll'])($err_2, ($sup_3)['supervisor'], ($k_4)(new Phpurs_Data1("Right", $GLOBALS['Data_Unit_unit'])));
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+})]);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})(), "failed" => (function() use ($killError_1_0) {
+  $__fn = function($v_2 = null, $sup_3 = null) use ($killError_1_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ($GLOBALS['Effect_Aff__makeAff'])($GLOBALS['Effect_Aff_isLeft'], $GLOBALS['Effect_Aff_unsafeFromLeft'], $GLOBALS['Effect_Aff_unsafeFromRight'], $GLOBALS['Data_Either_Left'], $GLOBALS['Data_Either_Right'], function($k_4 = null) use ($killError_1_0, $sup_3) {
+  $__num = \func_num_args();
+  $__res = ($GLOBALS['Effect_Aff__killAll'])($killError_1_0, ($sup_3)['supervisor'], ($k_4)(new Phpurs_Data1("Right", $GLOBALS['Data_Unit_unit'])));
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})(), "completed" => (function() use ($killError_1_0) {
+  $__fn = function($v_2 = null, $sup_3 = null) use ($killError_1_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ($GLOBALS['Effect_Aff__makeAff'])($GLOBALS['Effect_Aff_isLeft'], $GLOBALS['Effect_Aff_unsafeFromLeft'], $GLOBALS['Effect_Aff_unsafeFromRight'], $GLOBALS['Data_Either_Left'], $GLOBALS['Data_Either_Right'], function($k_4 = null) use ($killError_1_0, $sup_3) {
+  $__num = \func_num_args();
+  $__res = ($GLOBALS['Effect_Aff__killAll'])($killError_1_0, ($sup_3)['supervisor'], ($k_4)(new Phpurs_Data1("Right", $GLOBALS['Data_Unit_unit'])));
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})()]))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Effect_Aff_joinFiber']))(function($v_2 = null) {
+  $__num = \func_num_args();
+  $__res = ($v_2)['fiber'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}));
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 
+// Effect_Aff_monadSTAff
+$GLOBALS['Effect_Aff_monadSTAff'] = ["liftST" => (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Effect_Aff__liftEffect']))($GLOBALS['Unsafe_Coerce_unsafeCoerce']), "Monad0" => function($dollar__unused_0 = null) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Effect_Aff_monadAff'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
+// Effect_Aff_monadThrowAff
+$GLOBALS['Effect_Aff_monadThrowAff'] = ["throwError" => $GLOBALS['Effect_Aff__throwError'], "Monad0" => function($dollar__unused_0 = null) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Effect_Aff_monadAff'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
+// Effect_Aff_monadErrorAff
+$GLOBALS['Effect_Aff_monadErrorAff'] = ["catchError" => $GLOBALS['Effect_Aff__catchError'], "MonadThrow0" => function($dollar__unused_0 = null) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Effect_Aff_monadThrowAff'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
+// Effect_Aff_try
+$GLOBALS['Effect_Aff_try'] = ($GLOBALS['Control_Monad_Error_Class_try'])($GLOBALS['Effect_Aff_monadErrorAff']);
 
+// Effect_Aff_attempt
+$GLOBALS['Effect_Aff_attempt'] = $GLOBALS['Effect_Aff_try'];
 
+// Effect_Aff_runAff
+$GLOBALS['Effect_Aff_runAff'] = (function() {
+  $__fn = function($k_0 = null, $aff_1 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ($GLOBALS['Effect_Aff_launchAff'])((($GLOBALS['Effect_Aff__bind'])(($GLOBALS['Effect_Aff_try'])($aff_1)))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Effect_Aff__liftEffect']))($k_0)));
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
 
+// Effect_Aff_runAff_
+$GLOBALS['Effect_Aff_runAff_'] = (function() {
+  $__fn = function($k_0 = null, $aff_1 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ((($GLOBALS['Effect_applyEffect'])['apply'])(($GLOBALS['Effect_pureE'])(function($v_2 = null) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Data_Unit_unit'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+})))((($GLOBALS['Effect_Aff_runAff'])($k_0))($aff_1));
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
 
+// Effect_Aff_runSuspendedAff
+$GLOBALS['Effect_Aff_runSuspendedAff'] = (function() {
+  $__fn = function($k_0 = null, $aff_1 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ($GLOBALS['Effect_Aff__makeFiber'])($GLOBALS['Effect_Aff_isLeft'], $GLOBALS['Effect_Aff_unsafeFromLeft'], $GLOBALS['Effect_Aff_unsafeFromRight'], $GLOBALS['Data_Either_Left'], $GLOBALS['Data_Either_Right'], (($GLOBALS['Effect_Aff__bind'])(($GLOBALS['Effect_Aff_try'])($aff_1)))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Effect_Aff__liftEffect']))($k_0)));
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
 
+// Effect_Aff_monadRecAff
+$GLOBALS['Effect_Aff_monadRecAff'] = ["tailRecM" => function($k_0 = null) {
+  $__num = \func_num_args();
+  $go_1_0 = null;
+  $go_1_0 = function($a_2 = null) use (&$go_1_0, $k_0) {
+  $__num = \func_num_args();
+  $__res = (($GLOBALS['Effect_Aff__bind'])(($k_0)($a_2)))(function($res_3 = null) use (&$go_1_0) {
+  $__num = \func_num_args();
+  $__t1 = null;;
+  if ((is_object($res_3) && (($res_3)->{'tag'} === "Done"))) {
+$__t1 = ($GLOBALS['Effect_Aff__pure'])(($res_3)->{'value0'});
+goto end_branch_1;;
+};
+  if ((is_object($res_3) && (($res_3)->{'tag'} === "Loop"))) {
+$__t1 = ($go_1_0)(($res_3)->{'value0'});
+goto end_branch_1;;
+};
+  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+  $__t1 = null;
+  end_branch_1:;
+  $__res = $__t1;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  $__res = $go_1_0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Monad0" => function($dollar__unused_0 = null) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Effect_Aff_monadAff'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
+// Effect_Aff_monoidAff
+$GLOBALS['Effect_Aff_monoidAff'] = function($dictMonoid_0 = null) {
+  $__num = \func_num_args();
+  $__res = ["mempty" => ($GLOBALS['Effect_Aff__pure'])(($dictMonoid_0)['mempty']), "Semigroup0" => function($dollar__unused_1 = null) use ($dictMonoid_0) {
+  $__num = \func_num_args();
+  $__res = ["append" => (($GLOBALS['Control_Apply_lift2'])($GLOBALS['Effect_Aff_applyAff']))(((($dictMonoid_0)['Semigroup0'])($GLOBALS['Prim_undefined']))['append'])];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 
+// Effect_Aff_nonCanceler
+$GLOBALS['Effect_Aff_nonCanceler'] = (function() use (&$__fn) {
+$__local_var_0_0 = ($GLOBALS['Effect_Aff__pure'])($GLOBALS['Data_Unit_unit']);
+return function($v_1 = null) use ($__local_var_0_0) {
+  $__num = \func_num_args();
+  $__res = $__local_var_0_0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+})();
 
+// Effect_Aff_monoidCanceler
+$GLOBALS['Effect_Aff_monoidCanceler'] = ["mempty" => $GLOBALS['Effect_Aff_nonCanceler'], "Semigroup0" => function($dollar__unused_0 = null) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Effect_Aff_semigroupCanceler'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
+// Effect_Aff_never
+$GLOBALS['Effect_Aff_never'] = ($GLOBALS['Effect_Aff__makeAff'])($GLOBALS['Effect_Aff_isLeft'], $GLOBALS['Effect_Aff_unsafeFromLeft'], $GLOBALS['Effect_Aff_unsafeFromRight'], $GLOBALS['Data_Either_Left'], $GLOBALS['Data_Either_Right'], function($v_0 = null) {
+  $__num = \func_num_args();
+  $__res = ($GLOBALS['Effect_pureE'])($GLOBALS['Effect_Aff_nonCanceler']);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
 
+// Effect_Aff_apathize
+$GLOBALS['Effect_Aff_apathize'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Effect_Aff__map'])(function($v_0 = null) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Data_Unit_unit'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+})))($GLOBALS['Effect_Aff_try']);
 
+// Effect_Aff_altParAff
+$GLOBALS['Effect_Aff_altParAff'] = ["alt" => $GLOBALS['Effect_Aff__parAffAlt'], "Functor0" => function($dollar__unused_0 = null) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Effect_Aff_functorParAff'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
+// Effect_Aff_altAff
+$GLOBALS['Effect_Aff_altAff'] = ["alt" => (function() {
+  $__fn = function($a1_0 = null, $a2_1 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = (($GLOBALS['Effect_Aff__catchError'])($a1_0))(function($v_2 = null) use ($a2_1) {
+  $__num = \func_num_args();
+  $__res = $a2_1;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})(), "Functor0" => function($dollar__unused_0 = null) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Effect_Aff_functorAff'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
+// Effect_Aff_plusAff
+$GLOBALS['Effect_Aff_plusAff'] = ["empty" => ($GLOBALS['Effect_Aff__throwError'])(($GLOBALS['Effect_Exception_error'])("Always fails")), "Alt0" => function($dollar__unused_0 = null) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Effect_Aff_altAff'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
+// Effect_Aff_plusParAff
+$GLOBALS['Effect_Aff_plusParAff'] = ["empty" => ($GLOBALS['Effect_Aff_plusAff'])['empty'], "Alt0" => function($dollar__unused_0 = null) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Effect_Aff_altParAff'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
+// Effect_Aff_alternativeParAff
+$GLOBALS['Effect_Aff_alternativeParAff'] = ["Applicative0" => function($dollar__unused_0 = null) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Effect_Aff_applicativeParAff'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Plus1" => function($dollar__unused_0 = null) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Effect_Aff_plusParAff'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 

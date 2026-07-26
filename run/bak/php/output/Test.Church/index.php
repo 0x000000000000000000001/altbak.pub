@@ -100,7 +100,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Test_Church_zeroC'] = function() { $v = (function() {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Test_Church_zeroC
+$GLOBALS['Test_Church_zeroC'] = (function() {
   $__fn = function($v_0 = null, $x_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -112,8 +117,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Test_Church_toInt'] = function() { $v = function($n_0 = null) {
+})();
+
+// Test_Church_toInt
+$GLOBALS['Test_Church_toInt'] = function($n_0 = null) {
   $__num = \func_num_args();
   $__res = (($n_0)(function($x_1 = null) {
   $__num = \func_num_args();
@@ -125,8 +132,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Test_Church_succC'] = function() { $v = (function() {
+};
+
+// Test_Church_succC
+$GLOBALS['Test_Church_succC'] = (function() {
   $__fn = function($n_0 = null, $f_1 = null, $x_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -138,8 +147,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Test_Church_mulC'] = function() { $v = (function() {
+})();
+
+// Test_Church_mulC
+$GLOBALS['Test_Church_mulC'] = (function() {
   $__fn = function($m_0 = null, $n_1 = null, $f_2 = null, $x_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
@@ -151,8 +162,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Test_Church_fromInt'] = function() { $v = function($v_0 = null) {
+})();
+
+// Test_Church_fromInt
+$GLOBALS['Test_Church_fromInt'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__tco_var_Test_Church_fromInt_v_0 = $v_0;
   tco_loop_Test_Church_fromInt:;
@@ -160,14 +173,14 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   $__t1 = null;;
   switch ($v_0) {
 case 0:
-$__t1 = ($GLOBALS['Test_Church_zeroC'] ?? \PhpursThunks::eval('Test_Church_zeroC'));
+$__t1 = $GLOBALS['Test_Church_zeroC'];
 goto end_branch_1;;
 break;
 default:
 ;
 break;
 };
-  $__local_var_1_0 = (($GLOBALS['Test_Church_fromInt'] ?? \PhpursThunks::eval('Test_Church_fromInt')))(($v_0 - 1));
+  $__local_var_1_0 = ($GLOBALS['Test_Church_fromInt'])(($v_0 - 1));
   $__t1 = (function() use ($__local_var_1_0) {
   $__fn = function($f_2 = null, $x_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -186,19 +199,25 @@ break;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Test_Church_describe'] = function() { $v = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))("Church Numerals (100k Closure Applications):"); return $v; };
-\PhpursThunks::$thunks['Test_Church_c10'] = function() { $v = function($n_0 = null) {
+};
+
+// Test_Church_describe
+$GLOBALS['Test_Church_describe'] = ($GLOBALS['Effect_Console_log'])("Church Numerals (100k Closure Applications):");
+
+// Test_Church_c10
+$GLOBALS['Test_Church_c10'] = function($n_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Test_Church_fromInt'] ?? \PhpursThunks::eval('Test_Church_fromInt')))($n_0);
+  $__res = ($GLOBALS['Test_Church_fromInt'])($n_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Test_Church_c100'] = function() { $v = function($n_0 = null) {
+};
+
+// Test_Church_c100
+$GLOBALS['Test_Church_c100'] = function($n_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($GLOBALS['Test_Church_fromInt'] ?? \PhpursThunks::eval('Test_Church_fromInt')))($n_0);
-  $__local_var_2_1 = (($GLOBALS['Test_Church_fromInt'] ?? \PhpursThunks::eval('Test_Church_fromInt')))($n_0);
+  $__local_var_1_0 = ($GLOBALS['Test_Church_fromInt'])($n_0);
+  $__local_var_2_1 = ($GLOBALS['Test_Church_fromInt'])($n_0);
   $__res = (function() use ($__local_var_1_0, $__local_var_2_1) {
   $__fn = function($f_3 = null, $x_4 = null) use ($__local_var_1_0, $__local_var_2_1, &$__fn) {
   $__num = \func_num_args();
@@ -215,11 +234,13 @@ break;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Test_Church_c10k'] = function() { $v = function($n_0 = null) {
+};
+
+// Test_Church_c10k
+$GLOBALS['Test_Church_c10k'] = function($n_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($GLOBALS['Test_Church_c100'] ?? \PhpursThunks::eval('Test_Church_c100')))($n_0);
-  $__local_var_2_1 = (($GLOBALS['Test_Church_c100'] ?? \PhpursThunks::eval('Test_Church_c100')))($n_0);
+  $__local_var_1_0 = ($GLOBALS['Test_Church_c100'])($n_0);
+  $__local_var_2_1 = ($GLOBALS['Test_Church_c100'])($n_0);
   $__res = (function() use ($__local_var_1_0, $__local_var_2_1) {
   $__fn = function($f_3 = null, $x_4 = null) use ($__local_var_1_0, $__local_var_2_1, &$__fn) {
   $__num = \func_num_args();
@@ -236,11 +257,13 @@ break;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Test_Church_c100k'] = function() { $v = function($n_0 = null) {
+};
+
+// Test_Church_c100k
+$GLOBALS['Test_Church_c100k'] = function($n_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($GLOBALS['Test_Church_c10k'] ?? \PhpursThunks::eval('Test_Church_c10k')))($n_0);
-  $__local_var_2_1 = (($GLOBALS['Test_Church_fromInt'] ?? \PhpursThunks::eval('Test_Church_fromInt')))($n_0);
+  $__local_var_1_0 = ($GLOBALS['Test_Church_c10k'])($n_0);
+  $__local_var_2_1 = ($GLOBALS['Test_Church_fromInt'])($n_0);
   $__res = (function() use ($__local_var_1_0, $__local_var_2_1) {
   $__fn = function($f_3 = null, $x_4 = null) use ($__local_var_1_0, $__local_var_2_1, &$__fn) {
   $__num = \func_num_args();
@@ -257,8 +280,10 @@ break;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Test_Church_addC'] = function() { $v = (function() {
+};
+
+// Test_Church_addC
+$GLOBALS['Test_Church_addC'] = (function() {
   $__fn = function($m_0 = null, $n_1 = null, $f_2 = null, $x_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
@@ -270,10 +295,12 @@ break;
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Test_Church_act'] = function() { $v = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))((($GLOBALS['Bench_opaque'] ?? \PhpursThunks::eval('Bench_opaque')))(10)))(function($dummy_0 = null) {
+})();
+
+// Test_Church_act
+$GLOBALS['Test_Church_act'] = (($GLOBALS['Effect_bindE'])(($GLOBALS['Bench_opaque'])(10)))(function($dummy_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))((($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))((((($GLOBALS['Test_Church_c100k'] ?? \PhpursThunks::eval('Test_Church_c100k')))($dummy_0))(function($x_1 = null) {
+  $__res = ($GLOBALS['Effect_Console_log'])(($GLOBALS['Data_Show_showIntImpl'])(((($GLOBALS['Test_Church_c100k'])($dummy_0))(function($x_1 = null) {
   $__num = \func_num_args();
   $__res = ($x_1 + 1);
   goto __end;;
@@ -283,19 +310,5 @@ break;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}); return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
-
-
-
-
+});
 

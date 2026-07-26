@@ -91,8 +91,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Type_Proxy_Proxy'] = function() { $v = ($GLOBALS['__phpurs_data0_Proxy'] ??= new Phpurs_Data0("Proxy")); return $v; };
+
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+// Type_Proxy_Proxy
+$GLOBALS['Type_Proxy_Proxy'] = ($GLOBALS['__phpurs_data0_Proxy'] ??= new Phpurs_Data0("Proxy"));
 

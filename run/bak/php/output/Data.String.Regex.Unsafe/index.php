@@ -95,16 +95,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_String_Regex_Unsafe_unsafeRegex'] = function() { $v = (function() {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_String_Regex_Unsafe_unsafeRegex
+$GLOBALS['Data_String_Regex_Unsafe_unsafeRegex'] = (function() {
   $__fn = function($s_0 = null, $f_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__local_var_2_0 = ((($GLOBALS['Data_String_Regex_regex'] ?? \PhpursThunks::eval('Data_String_Regex_regex')))($s_0))($f_1);
+  $__local_var_2_0 = (($GLOBALS['Data_String_Regex_regex'])($s_0))($f_1);
   $__t1 = null;;
   if ((is_object($__local_var_2_0) && (($__local_var_2_0)->{'tag'} === "Left"))) {
-$__t1 = (($GLOBALS['Partial__crashWith'] ?? \PhpursThunks::eval('Partial__crashWith')))(($__local_var_2_0)->{'value0'});
+$__t1 = ($GLOBALS['Partial__crashWith'])(($__local_var_2_0)->{'value0'});
 goto end_branch_1;;
 };
   if ((is_object($__local_var_2_0) && (($__local_var_2_0)->{'tag'} === "Right"))) {
@@ -120,8 +125,5 @@ goto end_branch_1;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
+})();
 

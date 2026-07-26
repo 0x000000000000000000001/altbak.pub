@@ -5,7 +5,6 @@ import (
 	sync "sync"
 	pkg_Data_Ord "gopurs/output/Data.Ord"
 	pkg_Data_Maybe "gopurs/output/Data.Maybe"
-	pkg_Control_Semigroupoid "gopurs/output/Control.Semigroupoid"
 	pkg_Data_Generic_Rep "gopurs/output/Data.Generic.Rep"
 	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
 	pkg_Data_EuclideanRing "gopurs/output/Data.EuclideanRing"
@@ -125,8 +124,8 @@ var cache_genericFromEnum gopurs_runtime.Value
 var once_genericFromEnum sync.Once
 func Get_genericFromEnum() gopurs_runtime.Value {
 	once_genericFromEnum.Do(func() {
-		cache_genericFromEnum = gopurs_runtime.Func(func(dictGeneric_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_genericFromEnum(dictGeneric_0_box)
+		cache_genericFromEnum = gopurs_runtime.Func3(func(dictGeneric_0_box gopurs_runtime.Value, dictGenericBoundedEnum_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_genericFromEnum(dictGeneric_0_box, dictGenericBoundedEnum_1_box, x_2_box)
 })
 	})
 	return cache_genericFromEnum
@@ -293,7 +292,11 @@ _ = dictGeneric_0
 to_1_0 := ((*gopurs_runtime.RecordData2)(dictGeneric_0.UnsafePtr)).V1
 _ = to_1_0
 return gopurs_runtime.Func(func(dictGenericBoundedEnum_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Maybe.Get_functorMaybe(), "map"), to_1_0), gopurs_runtime.RecordGet(dictGenericBoundedEnum_2, "genericToEnum'"))
+__local_var_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Maybe.Get_functorMaybe(), "map"), to_1_0)
+_ = __local_var_3_1
+return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_3_1, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericBoundedEnum_2, "genericToEnum'"), x_4))
+})
 })
 }
 
@@ -308,10 +311,12 @@ var dictGeneric_0 gopurs_runtime.Value = dictGeneric_0_loop
 _ = dictGeneric_0
 to_1_0 := ((*gopurs_runtime.RecordData2)(dictGeneric_0.UnsafePtr)).V1
 _ = to_1_0
-from_2_1 := ((*gopurs_runtime.RecordData2)(dictGeneric_0.UnsafePtr)).V0
-_ = from_2_1
-return gopurs_runtime.Func(func(dictGenericEnum_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Maybe.Get_functorMaybe(), "map"), to_1_0), gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), gopurs_runtime.RecordGet(dictGenericEnum_3, "genericSucc'"), from_2_1))
+return gopurs_runtime.Func(func(dictGenericEnum_2 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Maybe.Get_functorMaybe(), "map"), to_1_0)
+_ = __local_var_3_1
+return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_3_1, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericEnum_2, "genericSucc'"), gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictGeneric_0.UnsafePtr)).V0, x_4)))
+})
 })
 }
 
@@ -326,10 +331,12 @@ var dictGeneric_0 gopurs_runtime.Value = dictGeneric_0_loop
 _ = dictGeneric_0
 to_1_0 := ((*gopurs_runtime.RecordData2)(dictGeneric_0.UnsafePtr)).V1
 _ = to_1_0
-from_2_1 := ((*gopurs_runtime.RecordData2)(dictGeneric_0.UnsafePtr)).V0
-_ = from_2_1
-return gopurs_runtime.Func(func(dictGenericEnum_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Maybe.Get_functorMaybe(), "map"), to_1_0), gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), gopurs_runtime.RecordGet(dictGenericEnum_3, "genericPred'"), from_2_1))
+return gopurs_runtime.Func(func(dictGenericEnum_2 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Maybe.Get_functorMaybe(), "map"), to_1_0)
+_ = __local_var_3_1
+return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_3_1, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericEnum_2, "genericPred'"), gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictGeneric_0.UnsafePtr)).V0, x_4)))
+})
 })
 }
 
@@ -339,14 +346,14 @@ _ = dict_0
 return ((*gopurs_runtime.RecordData3)(dict_0.UnsafePtr)).V1
 }
 
-func Call_genericFromEnum(dictGeneric_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_genericFromEnum(dictGeneric_0_loop gopurs_runtime.Value, dictGenericBoundedEnum_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictGeneric_0 gopurs_runtime.Value = dictGeneric_0_loop
 _ = dictGeneric_0
-from_1_0 := ((*gopurs_runtime.RecordData2)(dictGeneric_0.UnsafePtr)).V0
-_ = from_1_0
-return gopurs_runtime.Func(func(dictGenericBoundedEnum_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), gopurs_runtime.RecordGet(dictGenericBoundedEnum_2, "genericFromEnum'"), from_1_0)
-})
+var dictGenericBoundedEnum_1 gopurs_runtime.Value = dictGenericBoundedEnum_1_loop
+_ = dictGenericBoundedEnum_1
+var x_2 gopurs_runtime.Value = x_2_loop
+_ = x_2
+return gopurs_runtime.Apply(((*gopurs_runtime.RecordData3)(dictGenericBoundedEnum_1.UnsafePtr)).V1, gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictGeneric_0.UnsafePtr)).V0, x_2))
 }
 
 func Call_genericEnumSum(dictGenericEnum_0_loop gopurs_runtime.Value, dictGenericTop_1_loop gopurs_runtime.Value) gopurs_runtime.Value {

@@ -116,7 +116,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Control_Monad_RWS_Trans_RWSResult'] = function() { $v = (function() {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Control_Monad_RWS_Trans_RWSResult
+$GLOBALS['Control_Monad_RWS_Trans_RWSResult'] = (function() {
   $__fn = function($value0 = null, $value1 = null, $value2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -128,15 +133,19 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Control_Monad_RWS_Trans_RWST'] = function() { $v = function($x_0 = null) {
+})();
+
+// Control_Monad_RWS_Trans_RWST
+$GLOBALS['Control_Monad_RWS_Trans_RWST'] = function($x_0 = null) {
   $__num = \func_num_args();
   $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_RWS_Trans_withRWST'] = function() { $v = (function() {
+};
+
+// Control_Monad_RWS_Trans_withRWST
+$GLOBALS['Control_Monad_RWS_Trans_withRWST'] = (function() {
   $__fn = function($f_0 = null, $m_1 = null, $r_2 = null, $s_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
@@ -149,22 +158,28 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Control_Monad_RWS_Trans_runRWST'] = function() { $v = function($v_0 = null) {
+})();
+
+// Control_Monad_RWS_Trans_runRWST
+$GLOBALS['Control_Monad_RWS_Trans_runRWST'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__res = $v_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_RWS_Trans_newtypeRWST'] = function() { $v = ["Coercible0" => function($dollar__unused_0 = null) {
+};
+
+// Control_Monad_RWS_Trans_newtypeRWST
+$GLOBALS['Control_Monad_RWS_Trans_newtypeRWST'] = ["Coercible0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'));
+  $__res = $GLOBALS['Prim_undefined'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Control_Monad_RWS_Trans_monadTransRWST'] = function() { $v = function($dictMonoid_0 = null) {
+}];
+
+// Control_Monad_RWS_Trans_monadTransRWST
+$GLOBALS['Control_Monad_RWS_Trans_monadTransRWST'] = function($dictMonoid_0 = null) {
   $__num = \func_num_args();
   $mempty_1_0 = ($dictMonoid_0)['mempty'];
   $__res = ["lift" => (function() use ($mempty_1_0) {
@@ -173,9 +188,9 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ((((($dictMonad_2)['Bind1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['bind'])($m_3))(function($a_6 = null) use ($dictMonad_2, $mempty_1_0, $s_5) {
+  $__res = ((((($dictMonad_2)['Bind1'])($GLOBALS['Prim_undefined']))['bind'])($m_3))(function($a_6 = null) use ($dictMonad_2, $mempty_1_0, $s_5) {
   $__num = \func_num_args();
-  $__res = (((($dictMonad_2)['Applicative0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['pure'])(new Phpurs_Data3("RWSResult", $s_5, $a_6, $mempty_1_0));
+  $__res = (((($dictMonad_2)['Applicative0'])($GLOBALS['Prim_undefined']))['pure'])(new Phpurs_Data3("RWSResult", $s_5, $a_6, $mempty_1_0));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -189,8 +204,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_RWS_Trans_mapRWST'] = function() { $v = (function() {
+};
+
+// Control_Monad_RWS_Trans_mapRWST
+$GLOBALS['Control_Monad_RWS_Trans_mapRWST'] = (function() {
   $__fn = function($f_0 = null, $v_1 = null, $r_2 = null, $s_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
@@ -202,21 +219,25 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Control_Monad_RWS_Trans_lazyRWST'] = function() { $v = ["defer" => (function() {
+})();
+
+// Control_Monad_RWS_Trans_lazyRWST
+$GLOBALS['Control_Monad_RWS_Trans_lazyRWST'] = ["defer" => (function() {
   $__fn = function($f_0 = null, $r_1 = null, $s_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($f_0)(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'))))($r_1))($s_2);
+  $__res = ((($f_0)($GLOBALS['Data_Unit_unit']))($r_1))($s_2);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Control_Monad_RWS_Trans_functorRWST'] = function() { $v = function($dictFunctor_0 = null) {
+})()];
+
+// Control_Monad_RWS_Trans_functorRWST
+$GLOBALS['Control_Monad_RWS_Trans_functorRWST'] = function($dictFunctor_0 = null) {
   $__num = \func_num_args();
   $__res = ["map" => (function() use ($dictFunctor_0) {
   $__fn = function($f_1 = null, $v_2 = null, $r_3 = null, $s_4 = null) use ($dictFunctor_0, &$__fn) {
@@ -240,16 +261,18 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_RWS_Trans_execRWST'] = function() { $v = (function() {
+};
+
+// Control_Monad_RWS_Trans_execRWST
+$GLOBALS['Control_Monad_RWS_Trans_execRWST'] = (function() {
   $__fn = function($dictMonad_0 = null, $v_1 = null, $r_2 = null, $s_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ((((($dictMonad_0)['Bind1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['bind'])((($v_1)($r_2))($s_3)))(function($v1_4 = null) use ($dictMonad_0) {
+  $__res = ((((($dictMonad_0)['Bind1'])($GLOBALS['Prim_undefined']))['bind'])((($v_1)($r_2))($s_3)))(function($v1_4 = null) use ($dictMonad_0) {
   $__num = \func_num_args();
-  $__res = (((($dictMonad_0)['Applicative0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['pure'])(new Phpurs_Data2("Tuple", ($v1_4)->{'value0'}, ($v1_4)->{'value2'}));
+  $__res = (((($dictMonad_0)['Applicative0'])($GLOBALS['Prim_undefined']))['pure'])(new Phpurs_Data2("Tuple", ($v1_4)->{'value0'}, ($v1_4)->{'value2'}));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -259,16 +282,18 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Control_Monad_RWS_Trans_evalRWST'] = function() { $v = (function() {
+})();
+
+// Control_Monad_RWS_Trans_evalRWST
+$GLOBALS['Control_Monad_RWS_Trans_evalRWST'] = (function() {
   $__fn = function($dictMonad_0 = null, $v_1 = null, $r_2 = null, $s_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ((((($dictMonad_0)['Bind1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['bind'])((($v_1)($r_2))($s_3)))(function($v1_4 = null) use ($dictMonad_0) {
+  $__res = ((((($dictMonad_0)['Bind1'])($GLOBALS['Prim_undefined']))['bind'])((($v_1)($r_2))($s_3)))(function($v1_4 = null) use ($dictMonad_0) {
   $__num = \func_num_args();
-  $__res = (((($dictMonad_0)['Applicative0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['pure'])(new Phpurs_Data2("Tuple", ($v1_4)->{'value1'}, ($v1_4)->{'value2'}));
+  $__res = (((($dictMonad_0)['Applicative0'])($GLOBALS['Prim_undefined']))['pure'])(new Phpurs_Data2("Tuple", ($v1_4)->{'value1'}, ($v1_4)->{'value2'}));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -278,10 +303,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Control_Monad_RWS_Trans_applyRWST'] = function() { $v = function($dictBind_0 = null) {
+})();
+
+// Control_Monad_RWS_Trans_applyRWST
+$GLOBALS['Control_Monad_RWS_Trans_applyRWST'] = function($dictBind_0 = null) {
   $__num = \func_num_args();
-  $Functor0_1_0 = (((($dictBind_0)['Apply0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $Functor0_1_0 = (((($dictBind_0)['Apply0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']);
   $functorRWST1_2_1 = ["map" => (function() use ($Functor0_1_0) {
   $__fn = function($f_2 = null, $v_3 = null, $r_4 = null, $s_5 = null) use ($Functor0_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -314,7 +341,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   $__local_var_9_2 = ($v2_8)->{'value2'};
   $__res = ((($Functor0_1_0)['map'])(function($v3_10 = null) use ($__local_var_9_2, $dictMonoid_3, $v2_8) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data3("RWSResult", ($v3_10)->{'value0'}, (($v2_8)->{'value1'})(($v3_10)->{'value1'}), ((((($dictMonoid_3)['Semigroup0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['append'])($__local_var_9_2))(($v3_10)->{'value2'}));
+  $__res = new Phpurs_Data3("RWSResult", ($v3_10)->{'value0'}, (($v2_8)->{'value1'})(($v3_10)->{'value1'}), ((((($dictMonoid_3)['Semigroup0'])($GLOBALS['Prim_undefined']))['append'])($__local_var_9_2))(($v3_10)->{'value2'}));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -342,11 +369,13 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_RWS_Trans_bindRWST'] = function() { $v = function($dictBind_0 = null) {
+};
+
+// Control_Monad_RWS_Trans_bindRWST
+$GLOBALS['Control_Monad_RWS_Trans_bindRWST'] = function($dictBind_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (((($dictBind_0)['Apply0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $applyRWST1_2_1 = (($GLOBALS['Control_Monad_RWS_Trans_applyRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_applyRWST')))($dictBind_0);
+  $__local_var_1_0 = (((($dictBind_0)['Apply0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']);
+  $applyRWST1_2_1 = ($GLOBALS['Control_Monad_RWS_Trans_applyRWST'])($dictBind_0);
   $__res = function($dictMonoid_3 = null) use ($__local_var_1_0, $applyRWST1_2_1, $dictBind_0) {
   $__num = \func_num_args();
   $applyRWST2_4_2 = ($applyRWST1_2_1)($dictMonoid_3);
@@ -361,7 +390,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   $__local_var_10_3 = ($v1_9)->{'value2'};
   $__res = ((($__local_var_1_0)['map'])(function($v3_11 = null) use ($__local_var_10_3, $dictMonoid_3) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data3("RWSResult", ($v3_11)->{'value0'}, ($v3_11)->{'value1'}, ((((($dictMonoid_3)['Semigroup0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['append'])($__local_var_10_3))(($v3_11)->{'value2'}));
+  $__res = new Phpurs_Data3("RWSResult", ($v3_11)->{'value0'}, ($v3_11)->{'value1'}, ((((($dictMonoid_3)['Semigroup0'])($GLOBALS['Prim_undefined']))['append'])($__local_var_10_3))(($v3_11)->{'value2'}));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -389,13 +418,15 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_RWS_Trans_semigroupRWST'] = function() { $v = function($dictBind_0 = null) {
+};
+
+// Control_Monad_RWS_Trans_semigroupRWST
+$GLOBALS['Control_Monad_RWS_Trans_semigroupRWST'] = function($dictBind_0 = null) {
   $__num = \func_num_args();
-  $applyRWST1_1_0 = (($GLOBALS['Control_Monad_RWS_Trans_applyRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_applyRWST')))($dictBind_0);
+  $applyRWST1_1_0 = ($GLOBALS['Control_Monad_RWS_Trans_applyRWST'])($dictBind_0);
   $__res = function($dictMonoid_2 = null) use ($applyRWST1_1_0) {
   $__num = \func_num_args();
-  $lift2_3_1 = (($GLOBALS['Control_Apply_lift2'] ?? \PhpursThunks::eval('Control_Apply_lift2')))(($applyRWST1_1_0)($dictMonoid_2));
+  $lift2_3_1 = ($GLOBALS['Control_Apply_lift2'])(($applyRWST1_1_0)($dictMonoid_2));
   $__res = function($dictSemigroup_4 = null) use ($lift2_3_1) {
   $__num = \func_num_args();
   $__res = ["append" => ($lift2_3_1)(($dictSemigroup_4)['append'])];
@@ -410,10 +441,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_RWS_Trans_applicativeRWST'] = function() { $v = function($dictMonad_0 = null) {
+};
+
+// Control_Monad_RWS_Trans_applicativeRWST
+$GLOBALS['Control_Monad_RWS_Trans_applicativeRWST'] = function($dictMonad_0 = null) {
   $__num = \func_num_args();
-  $applyRWST1_1_0 = (($GLOBALS['Control_Monad_RWS_Trans_applyRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_applyRWST')))((($dictMonad_0)['Bind1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $applyRWST1_1_0 = ($GLOBALS['Control_Monad_RWS_Trans_applyRWST'])((($dictMonad_0)['Bind1'])($GLOBALS['Prim_undefined']));
   $__res = function($dictMonoid_2 = null) use ($applyRWST1_1_0, $dictMonad_0) {
   $__num = \func_num_args();
   $mempty_3_1 = ($dictMonoid_2)['mempty'];
@@ -424,7 +457,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (((($dictMonad_0)['Applicative0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['pure'])(new Phpurs_Data3("RWSResult", $s_7, $a_5, $mempty_3_1));
+  $__res = (((($dictMonad_0)['Applicative0'])($GLOBALS['Prim_undefined']))['pure'])(new Phpurs_Data3("RWSResult", $s_7, $a_5, $mempty_3_1));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -444,11 +477,13 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_RWS_Trans_monadRWST'] = function() { $v = function($dictMonad_0 = null) {
+};
+
+// Control_Monad_RWS_Trans_monadRWST
+$GLOBALS['Control_Monad_RWS_Trans_monadRWST'] = function($dictMonad_0 = null) {
   $__num = \func_num_args();
-  $applicativeRWST1_1_0 = (($GLOBALS['Control_Monad_RWS_Trans_applicativeRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_applicativeRWST')))($dictMonad_0);
-  $bindRWST1_2_1 = (($GLOBALS['Control_Monad_RWS_Trans_bindRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_bindRWST')))((($dictMonad_0)['Bind1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $applicativeRWST1_1_0 = ($GLOBALS['Control_Monad_RWS_Trans_applicativeRWST'])($dictMonad_0);
+  $bindRWST1_2_1 = ($GLOBALS['Control_Monad_RWS_Trans_bindRWST'])((($dictMonad_0)['Bind1'])($GLOBALS['Prim_undefined']));
   $__res = function($dictMonoid_3 = null) use ($applicativeRWST1_1_0, $bindRWST1_2_1) {
   $__num = \func_num_args();
   $applicativeRWST2_4_2 = ($applicativeRWST1_1_0)($dictMonoid_3);
@@ -473,10 +508,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_RWS_Trans_monadAskRWST'] = function() { $v = function($dictMonad_0 = null) {
+};
+
+// Control_Monad_RWS_Trans_monadAskRWST
+$GLOBALS['Control_Monad_RWS_Trans_monadAskRWST'] = function($dictMonad_0 = null) {
   $__num = \func_num_args();
-  $monadRWST1_1_0 = (($GLOBALS['Control_Monad_RWS_Trans_monadRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_monadRWST')))($dictMonad_0);
+  $monadRWST1_1_0 = ($GLOBALS['Control_Monad_RWS_Trans_monadRWST'])($dictMonad_0);
   $__res = function($dictMonoid_2 = null) use ($dictMonad_0, $monadRWST1_1_0) {
   $__num = \func_num_args();
   $mempty_3_1 = ($dictMonoid_2)['mempty'];
@@ -487,7 +524,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($dictMonad_0)['Applicative0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['pure'])(new Phpurs_Data3("RWSResult", $s_6, $r_5, $mempty_3_1));
+  $__res = (((($dictMonad_0)['Applicative0'])($GLOBALS['Prim_undefined']))['pure'])(new Phpurs_Data3("RWSResult", $s_6, $r_5, $mempty_3_1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -507,10 +544,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_RWS_Trans_monadReaderRWST'] = function() { $v = function($dictMonad_0 = null) {
+};
+
+// Control_Monad_RWS_Trans_monadReaderRWST
+$GLOBALS['Control_Monad_RWS_Trans_monadReaderRWST'] = function($dictMonad_0 = null) {
   $__num = \func_num_args();
-  $monadAskRWST1_1_0 = (($GLOBALS['Control_Monad_RWS_Trans_monadAskRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_monadAskRWST')))($dictMonad_0);
+  $monadAskRWST1_1_0 = ($GLOBALS['Control_Monad_RWS_Trans_monadAskRWST'])($dictMonad_0);
   $__res = function($dictMonoid_2 = null) use ($monadAskRWST1_1_0) {
   $__num = \func_num_args();
   $monadAskRWST2_3_1 = ($monadAskRWST1_1_0)($dictMonoid_2);
@@ -540,16 +579,18 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_RWS_Trans_monadEffectRWS'] = function() { $v = (function() {
+};
+
+// Control_Monad_RWS_Trans_monadEffectRWS
+$GLOBALS['Control_Monad_RWS_Trans_monadEffectRWS'] = (function() {
   $__fn = function($dictMonoid_0 = null, $dictMonadEffect_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $Monad0_2_0 = (($dictMonadEffect_1)['Monad0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $monadRWST1_3_1 = ((($GLOBALS['Control_Monad_RWS_Trans_monadRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_monadRWST')))($Monad0_2_0))($dictMonoid_0);
-  $__res = ["liftEffect" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((((($GLOBALS['Control_Monad_RWS_Trans_monadTransRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_monadTransRWST')))($dictMonoid_0))['lift'])($Monad0_2_0)))(($dictMonadEffect_1)['liftEffect']), "Monad0" => function($dollar__unused_4 = null) use ($monadRWST1_3_1) {
+  $Monad0_2_0 = (($dictMonadEffect_1)['Monad0'])($GLOBALS['Prim_undefined']);
+  $monadRWST1_3_1 = (($GLOBALS['Control_Monad_RWS_Trans_monadRWST'])($Monad0_2_0))($dictMonoid_0);
+  $__res = ["liftEffect" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(((($GLOBALS['Control_Monad_RWS_Trans_monadTransRWST'])($dictMonoid_0))['lift'])($Monad0_2_0)))(($dictMonadEffect_1)['liftEffect']), "Monad0" => function($dollar__unused_4 = null) use ($monadRWST1_3_1) {
   $__num = \func_num_args();
   $__res = $monadRWST1_3_1;
   goto __end;;
@@ -561,14 +602,16 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Control_Monad_RWS_Trans_monadRecRWST'] = function() { $v = function($dictMonadRec_0 = null) {
+})();
+
+// Control_Monad_RWS_Trans_monadRecRWST
+$GLOBALS['Control_Monad_RWS_Trans_monadRecRWST'] = function($dictMonadRec_0 = null) {
   $__num = \func_num_args();
-  $Monad0_1_0 = (($dictMonadRec_0)['Monad0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $monadRWST1_2_1 = (($GLOBALS['Control_Monad_RWS_Trans_monadRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_monadRWST')))($Monad0_1_0);
+  $Monad0_1_0 = (($dictMonadRec_0)['Monad0'])($GLOBALS['Prim_undefined']);
+  $monadRWST1_2_1 = ($GLOBALS['Control_Monad_RWS_Trans_monadRWST'])($Monad0_1_0);
   $__res = function($dictMonoid_3 = null) use ($Monad0_1_0, $dictMonadRec_0, $monadRWST1_2_1) {
   $__num = \func_num_args();
-  $__local_var_4_2 = (($dictMonoid_3)['Semigroup0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_4_2 = (($dictMonoid_3)['Semigroup0'])($GLOBALS['Prim_undefined']);
   $mempty_5_3 = ($dictMonoid_3)['mempty'];
   $monadRWST2_6_4 = ($monadRWST1_2_1)($dictMonoid_3);
   $__res = ["tailRecM" => (function() use ($Monad0_1_0, $__local_var_4_2, $dictMonadRec_0, $mempty_5_3) {
@@ -580,7 +623,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   $__res = ((($dictMonadRec_0)['tailRecM'])(function($v_11 = null) use ($Monad0_1_0, $__local_var_4_2, $k_7, $r_9) {
   $__num = \func_num_args();
   $__local_var_12_5 = ($v_11)->{'value2'};
-  $__res = ((((($Monad0_1_0)['Bind1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['bind'])(((($k_7)(($v_11)->{'value1'}))($r_9))(($v_11)->{'value0'})))(function($v2_13 = null) use ($Monad0_1_0, $__local_var_12_5, $__local_var_4_2) {
+  $__res = ((((($Monad0_1_0)['Bind1'])($GLOBALS['Prim_undefined']))['bind'])(((($k_7)(($v_11)->{'value1'}))($r_9))(($v_11)->{'value0'})))(function($v2_13 = null) use ($Monad0_1_0, $__local_var_12_5, $__local_var_4_2) {
   $__num = \func_num_args();
   $__t6 = null;;
   if ((is_object(($v2_13)->{'value1'}) && ((($v2_13)->{'value1'})->{'tag'} === "Loop"))) {
@@ -594,7 +637,7 @@ goto end_branch_6;;
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
   $__t6 = null;
   end_branch_6:;
-  $__res = (((($Monad0_1_0)['Applicative0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['pure'])($__t6);
+  $__res = (((($Monad0_1_0)['Applicative0'])($GLOBALS['Prim_undefined']))['pure'])($__t6);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -622,10 +665,12 @@ goto end_branch_6;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_RWS_Trans_monadStateRWST'] = function() { $v = function($dictMonad_0 = null) {
+};
+
+// Control_Monad_RWS_Trans_monadStateRWST
+$GLOBALS['Control_Monad_RWS_Trans_monadStateRWST'] = function($dictMonad_0 = null) {
   $__num = \func_num_args();
-  $monadRWST1_1_0 = (($GLOBALS['Control_Monad_RWS_Trans_monadRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_monadRWST')))($dictMonad_0);
+  $monadRWST1_1_0 = ($GLOBALS['Control_Monad_RWS_Trans_monadRWST'])($dictMonad_0);
   $__res = function($dictMonoid_2 = null) use ($dictMonad_0, $monadRWST1_1_0) {
   $__num = \func_num_args();
   $mempty_3_1 = ($dictMonoid_2)['mempty'];
@@ -637,7 +682,7 @@ goto end_branch_6;;
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   $v1_8_3 = ($f_5)($s_7);
-  $__res = (((($dictMonad_0)['Applicative0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['pure'])(new Phpurs_Data3("RWSResult", ($v1_8_3)->{'value1'}, ($v1_8_3)->{'value0'}, $mempty_3_1));
+  $__res = (((($dictMonad_0)['Applicative0'])($GLOBALS['Prim_undefined']))['pure'])(new Phpurs_Data3("RWSResult", ($v1_8_3)->{'value1'}, ($v1_8_3)->{'value0'}, $mempty_3_1));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -657,13 +702,15 @@ goto end_branch_6;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_RWS_Trans_monadTellRWST'] = function() { $v = function($dictMonad_0 = null) {
+};
+
+// Control_Monad_RWS_Trans_monadTellRWST
+$GLOBALS['Control_Monad_RWS_Trans_monadTellRWST'] = function($dictMonad_0 = null) {
   $__num = \func_num_args();
-  $monadRWST1_1_0 = (($GLOBALS['Control_Monad_RWS_Trans_monadRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_monadRWST')))($dictMonad_0);
+  $monadRWST1_1_0 = ($GLOBALS['Control_Monad_RWS_Trans_monadRWST'])($dictMonad_0);
   $__res = function($dictMonoid_2 = null) use ($dictMonad_0, $monadRWST1_1_0) {
   $__num = \func_num_args();
-  $Semigroup0_3_1 = (($dictMonoid_2)['Semigroup0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $Semigroup0_3_1 = (($dictMonoid_2)['Semigroup0'])($GLOBALS['Prim_undefined']);
   $monadRWST2_4_2 = ($monadRWST1_1_0)($dictMonoid_2);
   $__res = ["tell" => (function() use ($dictMonad_0) {
   $__fn = function($w_5 = null, $v_6 = null, $s_7 = null) use ($dictMonad_0, &$__fn) {
@@ -671,7 +718,7 @@ goto end_branch_6;;
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (((($dictMonad_0)['Applicative0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['pure'])(new Phpurs_Data3("RWSResult", $s_7, ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')), $w_5));
+  $__res = (((($dictMonad_0)['Applicative0'])($GLOBALS['Prim_undefined']))['pure'])(new Phpurs_Data3("RWSResult", $s_7, $GLOBALS['Data_Unit_unit'], $w_5));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -697,12 +744,14 @@ goto end_branch_6;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_RWS_Trans_monadWriterRWST'] = function() { $v = function($dictMonad_0 = null) {
+};
+
+// Control_Monad_RWS_Trans_monadWriterRWST
+$GLOBALS['Control_Monad_RWS_Trans_monadWriterRWST'] = function($dictMonad_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictMonad_0)['Bind1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $__local_var_2_1 = (($dictMonad_0)['Applicative0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $monadTellRWST1_3_2 = (($GLOBALS['Control_Monad_RWS_Trans_monadTellRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_monadTellRWST')))($dictMonad_0);
+  $__local_var_1_0 = (($dictMonad_0)['Bind1'])($GLOBALS['Prim_undefined']);
+  $__local_var_2_1 = (($dictMonad_0)['Applicative0'])($GLOBALS['Prim_undefined']);
+  $monadTellRWST1_3_2 = ($GLOBALS['Control_Monad_RWS_Trans_monadTellRWST'])($dictMonad_0);
   $__res = function($dictMonoid_4 = null) use ($__local_var_1_0, $__local_var_2_1, $monadTellRWST1_3_2) {
   $__num = \func_num_args();
   $monadTellRWST2_5_3 = ($monadTellRWST1_3_2)($dictMonoid_4);
@@ -762,14 +811,16 @@ goto end_branch_6;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_RWS_Trans_monadThrowRWST'] = function() { $v = function($dictMonadThrow_0 = null) {
+};
+
+// Control_Monad_RWS_Trans_monadThrowRWST
+$GLOBALS['Control_Monad_RWS_Trans_monadThrowRWST'] = function($dictMonadThrow_0 = null) {
   $__num = \func_num_args();
-  $Monad0_1_0 = (($dictMonadThrow_0)['Monad0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $monadRWST1_2_1 = (($GLOBALS['Control_Monad_RWS_Trans_monadRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_monadRWST')))($Monad0_1_0);
+  $Monad0_1_0 = (($dictMonadThrow_0)['Monad0'])($GLOBALS['Prim_undefined']);
+  $monadRWST1_2_1 = ($GLOBALS['Control_Monad_RWS_Trans_monadRWST'])($Monad0_1_0);
   $__res = function($dictMonoid_3 = null) use ($Monad0_1_0, $dictMonadThrow_0, $monadRWST1_2_1) {
   $__num = \func_num_args();
-  $lift_4_2 = (((($GLOBALS['Control_Monad_RWS_Trans_monadTransRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_monadTransRWST')))($dictMonoid_3))['lift'])($Monad0_1_0);
+  $lift_4_2 = ((($GLOBALS['Control_Monad_RWS_Trans_monadTransRWST'])($dictMonoid_3))['lift'])($Monad0_1_0);
   $monadRWST2_5_3 = ($monadRWST1_2_1)($dictMonoid_3);
   $__res = ["throwError" => function($e_6 = null) use ($dictMonadThrow_0, $lift_4_2) {
   $__num = \func_num_args();
@@ -791,10 +842,12 @@ goto end_branch_6;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_RWS_Trans_monadErrorRWST'] = function() { $v = function($dictMonadError_0 = null) {
+};
+
+// Control_Monad_RWS_Trans_monadErrorRWST
+$GLOBALS['Control_Monad_RWS_Trans_monadErrorRWST'] = function($dictMonadError_0 = null) {
   $__num = \func_num_args();
-  $monadThrowRWST1_1_0 = (($GLOBALS['Control_Monad_RWS_Trans_monadThrowRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_monadThrowRWST')))((($dictMonadError_0)['MonadThrow0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $monadThrowRWST1_1_0 = ($GLOBALS['Control_Monad_RWS_Trans_monadThrowRWST'])((($dictMonadError_0)['MonadThrow0'])($GLOBALS['Prim_undefined']));
   $__res = function($dictMonoid_2 = null) use ($dictMonadError_0, $monadThrowRWST1_1_0) {
   $__num = \func_num_args();
   $monadThrowRWST2_3_1 = ($monadThrowRWST1_1_0)($dictMonoid_2);
@@ -830,16 +883,18 @@ goto end_branch_6;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_RWS_Trans_monadSTRWST'] = function() { $v = (function() {
+};
+
+// Control_Monad_RWS_Trans_monadSTRWST
+$GLOBALS['Control_Monad_RWS_Trans_monadSTRWST'] = (function() {
   $__fn = function($dictMonoid_0 = null, $dictMonadST_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $Monad0_2_0 = (($dictMonadST_1)['Monad0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $monadRWST1_3_1 = ((($GLOBALS['Control_Monad_RWS_Trans_monadRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_monadRWST')))($Monad0_2_0))($dictMonoid_0);
-  $__res = ["liftST" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((((($GLOBALS['Control_Monad_RWS_Trans_monadTransRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_monadTransRWST')))($dictMonoid_0))['lift'])($Monad0_2_0)))(($dictMonadST_1)['liftST']), "Monad0" => function($dollar__unused_4 = null) use ($monadRWST1_3_1) {
+  $Monad0_2_0 = (($dictMonadST_1)['Monad0'])($GLOBALS['Prim_undefined']);
+  $monadRWST1_3_1 = (($GLOBALS['Control_Monad_RWS_Trans_monadRWST'])($Monad0_2_0))($dictMonoid_0);
+  $__res = ["liftST" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(((($GLOBALS['Control_Monad_RWS_Trans_monadTransRWST'])($dictMonoid_0))['lift'])($Monad0_2_0)))(($dictMonadST_1)['liftST']), "Monad0" => function($dollar__unused_4 = null) use ($monadRWST1_3_1) {
   $__num = \func_num_args();
   $__res = $monadRWST1_3_1;
   goto __end;;
@@ -851,17 +906,19 @@ goto end_branch_6;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Control_Monad_RWS_Trans_monoidRWST'] = function() { $v = function($dictMonad_0 = null) {
+})();
+
+// Control_Monad_RWS_Trans_monoidRWST
+$GLOBALS['Control_Monad_RWS_Trans_monoidRWST'] = function($dictMonad_0 = null) {
   $__num = \func_num_args();
-  $applicativeRWST1_1_0 = (($GLOBALS['Control_Monad_RWS_Trans_applicativeRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_applicativeRWST')))($dictMonad_0);
-  $semigroupRWST1_2_1 = (($GLOBALS['Control_Monad_RWS_Trans_semigroupRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_semigroupRWST')))((($dictMonad_0)['Bind1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $applicativeRWST1_1_0 = ($GLOBALS['Control_Monad_RWS_Trans_applicativeRWST'])($dictMonad_0);
+  $semigroupRWST1_2_1 = ($GLOBALS['Control_Monad_RWS_Trans_semigroupRWST'])((($dictMonad_0)['Bind1'])($GLOBALS['Prim_undefined']));
   $__res = function($dictMonoid_3 = null) use ($applicativeRWST1_1_0, $semigroupRWST1_2_1) {
   $__num = \func_num_args();
   $semigroupRWST2_4_2 = ($semigroupRWST1_2_1)($dictMonoid_3);
   $__res = function($dictMonoid1_5 = null) use ($applicativeRWST1_1_0, $dictMonoid_3, $semigroupRWST2_4_2) {
   $__num = \func_num_args();
-  $semigroupRWST3_6_3 = ($semigroupRWST2_4_2)((($dictMonoid1_5)['Semigroup0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $semigroupRWST3_6_3 = ($semigroupRWST2_4_2)((($dictMonoid1_5)['Semigroup0'])($GLOBALS['Prim_undefined']));
   $__res = ["mempty" => ((($applicativeRWST1_1_0)($dictMonoid_3))['pure'])(($dictMonoid1_5)['mempty']), "Semigroup0" => function($dollar__unused_7 = null) use ($semigroupRWST3_6_3) {
   $__num = \func_num_args();
   $__res = $semigroupRWST3_6_3;
@@ -880,10 +937,12 @@ goto end_branch_6;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_RWS_Trans_altRWST'] = function() { $v = function($dictAlt_0 = null) {
+};
+
+// Control_Monad_RWS_Trans_altRWST
+$GLOBALS['Control_Monad_RWS_Trans_altRWST'] = function($dictAlt_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictAlt_0)['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_1_0 = (($dictAlt_0)['Functor0'])($GLOBALS['Prim_undefined']);
   $functorRWST1_2_1 = ["map" => (function() use ($__local_var_1_0) {
   $__fn = function($f_2 = null, $v_3 = null, $r_4 = null, $s_5 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -925,11 +984,13 @@ goto end_branch_6;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_RWS_Trans_plusRWST'] = function() { $v = function($dictPlus_0 = null) {
+};
+
+// Control_Monad_RWS_Trans_plusRWST
+$GLOBALS['Control_Monad_RWS_Trans_plusRWST'] = function($dictPlus_0 = null) {
   $__num = \func_num_args();
   $empty_1_0 = ($dictPlus_0)['empty'];
-  $altRWST1_2_1 = (($GLOBALS['Control_Monad_RWS_Trans_altRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_altRWST')))((($dictPlus_0)['Alt0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $altRWST1_2_1 = ($GLOBALS['Control_Monad_RWS_Trans_altRWST'])((($dictPlus_0)['Alt0'])($GLOBALS['Prim_undefined']));
   $__res = ["empty" => (function() use ($empty_1_0) {
   $__fn = function($v_3 = null, $v1_4 = null) use ($empty_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -952,17 +1013,19 @@ goto end_branch_6;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_RWS_Trans_alternativeRWST'] = function() { $v = (function() {
+};
+
+// Control_Monad_RWS_Trans_alternativeRWST
+$GLOBALS['Control_Monad_RWS_Trans_alternativeRWST'] = (function() {
   $__fn = function($dictMonoid_0 = null, $dictAlternative_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $plusRWST1_2_0 = (($GLOBALS['Control_Monad_RWS_Trans_plusRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_plusRWST')))((($dictAlternative_1)['Plus1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $plusRWST1_2_0 = ($GLOBALS['Control_Monad_RWS_Trans_plusRWST'])((($dictAlternative_1)['Plus1'])($GLOBALS['Prim_undefined']));
   $__res = function($dictMonad_3 = null) use ($dictMonoid_0, $plusRWST1_2_0) {
   $__num = \func_num_args();
-  $applicativeRWST1_4_1 = ((($GLOBALS['Control_Monad_RWS_Trans_applicativeRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_applicativeRWST')))($dictMonad_3))($dictMonoid_0);
+  $applicativeRWST1_4_1 = (($GLOBALS['Control_Monad_RWS_Trans_applicativeRWST'])($dictMonad_3))($dictMonoid_0);
   $__res = ["Applicative0" => function($dollar__unused_5 = null) use ($applicativeRWST1_4_1) {
   $__num = \func_num_args();
   $__res = $applicativeRWST1_4_1;
@@ -985,37 +1048,5 @@ goto end_branch_6;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+})();
 

@@ -109,14 +109,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Monoid_Alternate_Alternate'] = function() { $v = function($x_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Monoid_Alternate_Alternate
+$GLOBALS['Data_Monoid_Alternate_Alternate'] = function($x_0 = null) {
   $__num = \func_num_args();
   $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Monoid_Alternate_showAlternate'] = function() { $v = function($dictShow_0 = null) {
+};
+
+// Data_Monoid_Alternate_showAlternate
+$GLOBALS['Data_Monoid_Alternate_showAlternate'] = function($dictShow_0 = null) {
   $__num = \func_num_args();
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
@@ -128,8 +135,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Monoid_Alternate_semigroupAlternate'] = function() { $v = function($dictAlt_0 = null) {
+};
+
+// Data_Monoid_Alternate_semigroupAlternate
+$GLOBALS['Data_Monoid_Alternate_semigroupAlternate'] = function($dictAlt_0 = null) {
   $__num = \func_num_args();
   $__res = ["append" => (function() use ($dictAlt_0) {
   $__fn = function($v_1 = null, $v1_2 = null) use ($dictAlt_0, &$__fn) {
@@ -147,38 +156,48 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Monoid_Alternate_plusAlternate'] = function() { $v = function($dictPlus_0 = null) {
+};
+
+// Data_Monoid_Alternate_plusAlternate
+$GLOBALS['Data_Monoid_Alternate_plusAlternate'] = function($dictPlus_0 = null) {
   $__num = \func_num_args();
   $__res = $dictPlus_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Monoid_Alternate_ordAlternate'] = function() { $v = function($dictOrd_0 = null) {
+};
+
+// Data_Monoid_Alternate_ordAlternate
+$GLOBALS['Data_Monoid_Alternate_ordAlternate'] = function($dictOrd_0 = null) {
   $__num = \func_num_args();
   $__res = $dictOrd_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Monoid_Alternate_ord1Alternate'] = function() { $v = function($dictOrd1_0 = null) {
+};
+
+// Data_Monoid_Alternate_ord1Alternate
+$GLOBALS['Data_Monoid_Alternate_ord1Alternate'] = function($dictOrd1_0 = null) {
   $__num = \func_num_args();
   $__res = $dictOrd1_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Monoid_Alternate_newtypeAlternate'] = function() { $v = ["Coercible0" => function($dollar__unused_0 = null) {
+};
+
+// Data_Monoid_Alternate_newtypeAlternate
+$GLOBALS['Data_Monoid_Alternate_newtypeAlternate'] = ["Coercible0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'));
+  $__res = $GLOBALS['Prim_undefined'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Monoid_Alternate_monoidAlternate'] = function() { $v = function($dictPlus_0 = null) {
+}];
+
+// Data_Monoid_Alternate_monoidAlternate
+$GLOBALS['Data_Monoid_Alternate_monoidAlternate'] = function($dictPlus_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictPlus_0)['Alt0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_1_0 = (($dictPlus_0)['Alt0'])($GLOBALS['Prim_undefined']);
   $semigroupAlternate1_2_1 = ["append" => (function() use ($__local_var_1_0) {
   $__fn = function($v_2 = null, $v1_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -202,111 +221,113 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Monoid_Alternate_monadAlternate'] = function() { $v = function($dictMonad_0 = null) {
+};
+
+// Data_Monoid_Alternate_monadAlternate
+$GLOBALS['Data_Monoid_Alternate_monadAlternate'] = function($dictMonad_0 = null) {
   $__num = \func_num_args();
   $__res = $dictMonad_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Monoid_Alternate_functorAlternate'] = function() { $v = function($dictFunctor_0 = null) {
+};
+
+// Data_Monoid_Alternate_functorAlternate
+$GLOBALS['Data_Monoid_Alternate_functorAlternate'] = function($dictFunctor_0 = null) {
   $__num = \func_num_args();
   $__res = $dictFunctor_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Monoid_Alternate_extendAlternate'] = function() { $v = function($dictExtend_0 = null) {
+};
+
+// Data_Monoid_Alternate_extendAlternate
+$GLOBALS['Data_Monoid_Alternate_extendAlternate'] = function($dictExtend_0 = null) {
   $__num = \func_num_args();
   $__res = $dictExtend_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Monoid_Alternate_eqAlternate'] = function() { $v = function($dictEq_0 = null) {
+};
+
+// Data_Monoid_Alternate_eqAlternate
+$GLOBALS['Data_Monoid_Alternate_eqAlternate'] = function($dictEq_0 = null) {
   $__num = \func_num_args();
   $__res = $dictEq_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Monoid_Alternate_eq1Alternate'] = function() { $v = function($dictEq1_0 = null) {
+};
+
+// Data_Monoid_Alternate_eq1Alternate
+$GLOBALS['Data_Monoid_Alternate_eq1Alternate'] = function($dictEq1_0 = null) {
   $__num = \func_num_args();
   $__res = $dictEq1_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Monoid_Alternate_comonadAlternate'] = function() { $v = function($dictComonad_0 = null) {
+};
+
+// Data_Monoid_Alternate_comonadAlternate
+$GLOBALS['Data_Monoid_Alternate_comonadAlternate'] = function($dictComonad_0 = null) {
   $__num = \func_num_args();
   $__res = $dictComonad_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Monoid_Alternate_boundedAlternate'] = function() { $v = function($dictBounded_0 = null) {
+};
+
+// Data_Monoid_Alternate_boundedAlternate
+$GLOBALS['Data_Monoid_Alternate_boundedAlternate'] = function($dictBounded_0 = null) {
   $__num = \func_num_args();
   $__res = $dictBounded_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Monoid_Alternate_bindAlternate'] = function() { $v = function($dictBind_0 = null) {
+};
+
+// Data_Monoid_Alternate_bindAlternate
+$GLOBALS['Data_Monoid_Alternate_bindAlternate'] = function($dictBind_0 = null) {
   $__num = \func_num_args();
   $__res = $dictBind_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Monoid_Alternate_applyAlternate'] = function() { $v = function($dictApply_0 = null) {
+};
+
+// Data_Monoid_Alternate_applyAlternate
+$GLOBALS['Data_Monoid_Alternate_applyAlternate'] = function($dictApply_0 = null) {
   $__num = \func_num_args();
   $__res = $dictApply_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Monoid_Alternate_applicativeAlternate'] = function() { $v = function($dictApplicative_0 = null) {
+};
+
+// Data_Monoid_Alternate_applicativeAlternate
+$GLOBALS['Data_Monoid_Alternate_applicativeAlternate'] = function($dictApplicative_0 = null) {
   $__num = \func_num_args();
   $__res = $dictApplicative_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Monoid_Alternate_alternativeAlternate'] = function() { $v = function($dictAlternative_0 = null) {
+};
+
+// Data_Monoid_Alternate_alternativeAlternate
+$GLOBALS['Data_Monoid_Alternate_alternativeAlternate'] = function($dictAlternative_0 = null) {
   $__num = \func_num_args();
   $__res = $dictAlternative_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Monoid_Alternate_altAlternate'] = function() { $v = function($dictAlt_0 = null) {
+};
+
+// Data_Monoid_Alternate_altAlternate
+$GLOBALS['Data_Monoid_Alternate_altAlternate'] = function($dictAlt_0 = null) {
   $__num = \func_num_args();
   $__res = $dictAlt_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+};
 

@@ -99,26 +99,31 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Control_Monad_Writer_writer'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Control_Monad_Writer_Trans_WriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_WriterT'))))(($GLOBALS['Data_Identity_Identity'] ?? \PhpursThunks::eval('Data_Identity_Identity'))); return $v; };
-\PhpursThunks::$thunks['Control_Monad_Writer_runWriter'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce'))))(($GLOBALS['Control_Monad_Writer_Trans_runWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_runWriterT'))); return $v; };
-\PhpursThunks::$thunks['Control_Monad_Writer_mapWriter'] = function() { $v = function($f_0 = null) {
-  $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Identity_Identity'] ?? \PhpursThunks::eval('Data_Identity_Identity'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($f_0))(($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce'))));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Writer_execWriter'] = function() { $v = function($m_0 = null) {
-  $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Monad_Writer_runWriter'] ?? \PhpursThunks::eval('Control_Monad_Writer_runWriter')))($m_0))->{'value1'};
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
+
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+// Control_Monad_Writer_writer
+$GLOBALS['Control_Monad_Writer_writer'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_Writer_Trans_WriterT']))($GLOBALS['Data_Identity_Identity']);
 
+// Control_Monad_Writer_runWriter
+$GLOBALS['Control_Monad_Writer_runWriter'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce']))($GLOBALS['Control_Monad_Writer_Trans_runWriterT']);
 
+// Control_Monad_Writer_mapWriter
+$GLOBALS['Control_Monad_Writer_mapWriter'] = function($f_0 = null) {
+  $__num = \func_num_args();
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Identity_Identity']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_0))($GLOBALS['Unsafe_Coerce_unsafeCoerce']));
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 
+// Control_Monad_Writer_execWriter
+$GLOBALS['Control_Monad_Writer_execWriter'] = function($m_0 = null) {
+  $__num = \func_num_args();
+  $__res = (($GLOBALS['Control_Monad_Writer_runWriter'])($m_0))->{'value1'};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 

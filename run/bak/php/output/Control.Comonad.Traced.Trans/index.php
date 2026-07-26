@@ -100,28 +100,39 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Control_Comonad_Traced_Trans_TracedT'] = function() { $v = function($x_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Control_Comonad_Traced_Trans_TracedT
+$GLOBALS['Control_Comonad_Traced_Trans_TracedT'] = function($x_0 = null) {
   $__num = \func_num_args();
   $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Traced_Trans_runTracedT'] = function() { $v = function($v_0 = null) {
+};
+
+// Control_Comonad_Traced_Trans_runTracedT
+$GLOBALS['Control_Comonad_Traced_Trans_runTracedT'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__res = $v_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Traced_Trans_newtypeTracedT'] = function() { $v = ["Coercible0" => function($dollar__unused_0 = null) {
+};
+
+// Control_Comonad_Traced_Trans_newtypeTracedT
+$GLOBALS['Control_Comonad_Traced_Trans_newtypeTracedT'] = ["Coercible0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'));
+  $__res = $GLOBALS['Prim_undefined'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Traced_Trans_functorTracedT'] = function() { $v = function($dictFunctor_0 = null) {
+}];
+
+// Control_Comonad_Traced_Trans_functorTracedT
+$GLOBALS['Control_Comonad_Traced_Trans_functorTracedT'] = function($dictFunctor_0 = null) {
   $__num = \func_num_args();
   $__res = ["map" => (function() use ($dictFunctor_0) {
   $__fn = function($f_1 = null, $v_2 = null) use ($dictFunctor_0, &$__fn) {
@@ -151,10 +162,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Traced_Trans_extendTracedT'] = function() { $v = function($dictExtend_0 = null) {
+};
+
+// Control_Comonad_Traced_Trans_extendTracedT
+$GLOBALS['Control_Comonad_Traced_Trans_extendTracedT'] = function($dictExtend_0 = null) {
   $__num = \func_num_args();
-  $Functor0_1_0 = (($dictExtend_0)['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $Functor0_1_0 = (($dictExtend_0)['Functor0'])($GLOBALS['Prim_undefined']);
   $functorTracedT1_2_1 = ["map" => (function() use ($Functor0_1_0) {
   $__fn = function($f_2 = null, $v_3 = null) use ($Functor0_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -232,8 +245,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Traced_Trans_comonadTransTracedT'] = function() { $v = function($dictMonoid_0 = null) {
+};
+
+// Control_Comonad_Traced_Trans_comonadTransTracedT
+$GLOBALS['Control_Comonad_Traced_Trans_comonadTransTracedT'] = function($dictMonoid_0 = null) {
   $__num = \func_num_args();
   $mempty_1_0 = ($dictMonoid_0)['mempty'];
   $__res = ["lower" => (function() use ($mempty_1_0) {
@@ -242,7 +257,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((((($dictComonad_2)['Extend0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['map'])(function($f_4 = null) use ($mempty_1_0) {
+  $__res = ((((((($dictComonad_2)['Extend0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']))['map'])(function($f_4 = null) use ($mempty_1_0) {
   $__num = \func_num_args();
   $__res = ($f_4)($mempty_1_0);
   goto __end;;
@@ -258,14 +273,16 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Traced_Trans_comonadTracedT'] = function() { $v = function($dictComonad_0 = null) {
+};
+
+// Control_Comonad_Traced_Trans_comonadTracedT
+$GLOBALS['Control_Comonad_Traced_Trans_comonadTracedT'] = function($dictComonad_0 = null) {
   $__num = \func_num_args();
-  $extendTracedT1_1_0 = (($GLOBALS['Control_Comonad_Traced_Trans_extendTracedT'] ?? \PhpursThunks::eval('Control_Comonad_Traced_Trans_extendTracedT')))((($dictComonad_0)['Extend0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $extendTracedT1_1_0 = ($GLOBALS['Control_Comonad_Traced_Trans_extendTracedT'])((($dictComonad_0)['Extend0'])($GLOBALS['Prim_undefined']));
   $__res = function($dictMonoid_2 = null) use ($dictComonad_0, $extendTracedT1_1_0) {
   $__num = \func_num_args();
   $mempty_3_1 = ($dictMonoid_2)['mempty'];
-  $extendTracedT2_4_2 = ($extendTracedT1_1_0)((($dictMonoid_2)['Semigroup0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $extendTracedT2_4_2 = ($extendTracedT1_1_0)((($dictMonoid_2)['Semigroup0'])($GLOBALS['Prim_undefined']));
   $__res = ["extract" => function($v_5 = null) use ($dictComonad_0, $mempty_3_1) {
   $__num = \func_num_args();
   $__res = ((($dictComonad_0)['extract'])($v_5))($mempty_3_1);
@@ -286,14 +303,5 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
+};
 

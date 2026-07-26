@@ -117,8 +117,8 @@ $exports['char'] = $char;
 return $exports;
   return $exports;
 });
-\PhpursThunks::$thunks['Data_String_Unsafe_char'] = function() use (&$ffi_Data_String_Unsafe) { return $ffi_Data_String_Unsafe['char']; };
-\PhpursThunks::$thunks['Data_String_Unsafe_charAt'] = function() use (&$ffi_Data_String_Unsafe) { return $ffi_Data_String_Unsafe['charAt']; };
+$GLOBALS['Data_String_Unsafe_char'] = $ffi_Data_String_Unsafe['char'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_String_Unsafe_charAt'] = $ffi_Data_String_Unsafe['charAt'] ?? new class { public function __invoke(...$args) { return $this; } };
 
 
 

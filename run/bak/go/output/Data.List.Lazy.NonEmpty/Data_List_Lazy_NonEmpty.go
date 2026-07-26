@@ -6,7 +6,6 @@ import (
 	pkg_Data_List_Lazy_Types "gopurs/output/Data.List.Lazy.Types"
 	pkg_Data_Unit "gopurs/output/Data.Unit"
 	pkg_Data_NonEmpty "gopurs/output/Data.NonEmpty"
-	pkg_Control_Semigroupoid "gopurs/output/Control.Semigroupoid"
 	pkg_Data_Maybe "gopurs/output/Data.Maybe"
 	pkg_Data_Tuple "gopurs/output/Data.Tuple"
 	pkg_Data_List_Lazy "gopurs/output/Data.List.Lazy"
@@ -212,11 +211,15 @@ return gopurs_runtime.Value{Type: 9, IntVal: 218341868, UnsafePtr: unsafe.Pointe
 func Call_toUnfoldable(dictUnfoldable_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictUnfoldable_0 gopurs_runtime.Value = dictUnfoldable_0_loop
 _ = dictUnfoldable_0
-return gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictUnfoldable_0.UnsafePtr)).V0, gopurs_runtime.Func(func(xs_1 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_1_0 := gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictUnfoldable_0.UnsafePtr)).V0, gopurs_runtime.Func(func(xs_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Maybe.Get_functorMaybe(), "map"), gopurs_runtime.Func(func(rec_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.RecordGet(rec_2, "head"), gopurs_runtime.RecordGet(rec_2, "tail")})}
 }), gopurs_runtime.Apply(pkg_Data_List_Lazy.Get_uncons(), xs_1))
-})), Get_toList())
+}))
+_ = __local_var_1_0
+return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_1_0, gopurs_runtime.Apply(Get_toList(), x_2))
+})
 }
 
 func Call_tail(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -329,7 +332,7 @@ return (*pkg_Data_NonEmpty.Constructor_NonEmpty[gopurs_runtime.Value, gopurs_run
 func Call_fromList(l_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var l_0 gopurs_runtime.Value = l_0_loop
 _ = l_0
-v_1_0 := gopurs_runtime.Apply(pkg_Data_List_Lazy_Types.Get_step(), l_0)
+v_1_0 := gopurs_runtime.Apply(l_0, pkg_Data_Unit.Get_unit())
 _ = v_1_0
 var __t1 gopurs_runtime.Value
 {
@@ -364,7 +367,11 @@ return __t1
 func Call_fromFoldable(dictFoldable_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictFoldable_0 gopurs_runtime.Value = dictFoldable_0_loop
 _ = dictFoldable_0
-return gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), Get_fromList(), gopurs_runtime.Apply2(((*gopurs_runtime.RecordData3)(dictFoldable_0.UnsafePtr)).V2, pkg_Data_List_Lazy_Types.Get_cons(), pkg_Data_List_Lazy_Types.Get_nil()))
+__local_var_1_0 := gopurs_runtime.Apply2(((*gopurs_runtime.RecordData3)(dictFoldable_0.UnsafePtr)).V2, pkg_Data_List_Lazy_Types.Get_cons(), pkg_Data_List_Lazy_Types.Get_nil())
+_ = __local_var_1_0
+return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(Get_fromList(), gopurs_runtime.Apply(__local_var_1_0, x_2))
+})
 }
 
 func Call_cons(y_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value, v1_2_loop gopurs_runtime.Value) gopurs_runtime.Value {

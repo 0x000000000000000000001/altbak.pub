@@ -95,14 +95,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_String_Common_null'] = function() { $v = function($s_0 = null) {
-  $__num = \func_num_args();
-  $__res = ($s_0 === "");
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_String_Common_localeCompare'] = function() { $v = (((($GLOBALS['Data_String_Common__localeCompare'] ?? \PhpursThunks::eval('Data_String_Common__localeCompare')))(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT")); return $v; };
+
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Data_String_Common = \call_user_func(function() {
   $exports = [];
@@ -192,15 +185,25 @@ $exports['joinWith'] = $joinWith;
 return $exports;
   return $exports;
 });
-\PhpursThunks::$thunks['Data_String_Common__localeCompare'] = function() use (&$ffi_Data_String_Common) { return $ffi_Data_String_Common['_localeCompare']; };
-\PhpursThunks::$thunks['Data_String_Common_joinWith'] = function() use (&$ffi_Data_String_Common) { return $ffi_Data_String_Common['joinWith']; };
-\PhpursThunks::$thunks['Data_String_Common_replace'] = function() use (&$ffi_Data_String_Common) { return $ffi_Data_String_Common['replace']; };
-\PhpursThunks::$thunks['Data_String_Common_replaceAll'] = function() use (&$ffi_Data_String_Common) { return $ffi_Data_String_Common['replaceAll']; };
-\PhpursThunks::$thunks['Data_String_Common_split'] = function() use (&$ffi_Data_String_Common) { return $ffi_Data_String_Common['split']; };
-\PhpursThunks::$thunks['Data_String_Common_toLower'] = function() use (&$ffi_Data_String_Common) { return $ffi_Data_String_Common['toLower']; };
-\PhpursThunks::$thunks['Data_String_Common_toUpper'] = function() use (&$ffi_Data_String_Common) { return $ffi_Data_String_Common['toUpper']; };
-\PhpursThunks::$thunks['Data_String_Common_trim'] = function() use (&$ffi_Data_String_Common) { return $ffi_Data_String_Common['trim']; };
+$GLOBALS['Data_String_Common__localeCompare'] = $ffi_Data_String_Common['_localeCompare'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_String_Common_joinWith'] = $ffi_Data_String_Common['joinWith'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_String_Common_replace'] = $ffi_Data_String_Common['replace'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_String_Common_replaceAll'] = $ffi_Data_String_Common['replaceAll'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_String_Common_split'] = $ffi_Data_String_Common['split'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_String_Common_toLower'] = $ffi_Data_String_Common['toLower'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_String_Common_toUpper'] = $ffi_Data_String_Common['toUpper'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_String_Common_trim'] = $ffi_Data_String_Common['trim'] ?? new class { public function __invoke(...$args) { return $this; } };
 
 
+// Data_String_Common_null
+$GLOBALS['Data_String_Common_null'] = function($s_0 = null) {
+  $__num = \func_num_args();
+  $__res = ($s_0 === "");
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 
+// Data_String_Common_localeCompare
+$GLOBALS['Data_String_Common_localeCompare'] = ((($GLOBALS['Data_String_Common__localeCompare'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT"));
 

@@ -98,14 +98,39 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Control_Bind_discard'] = function() { $v = function($dict_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+$ffi_Control_Bind = \call_user_func(function() {
+  $exports = [];
+$arrayBind = function($xs, $f = null) use (&$arrayBind) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$arrayBind) {
+
+            return $arrayBind(...\array_merge($__args, $more));
+        };
+    }
+    $r = []; foreach($xs as $x) { foreach($f($x) as $y) { $r[] = $y; } } return $r;
+};
+
+$exports['arrayBind'] = $arrayBind;
+return $exports;
+  return $exports;
+});
+$GLOBALS['Control_Bind_arrayBind'] = $ffi_Control_Bind['arrayBind'] ?? new class { public function __invoke(...$args) { return $this; } };
+
+
+// Control_Bind_discard
+$GLOBALS['Control_Bind_discard'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['discard'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Bind_bindProxy'] = function() { $v = ["bind" => (function() {
+};
+
+// Control_Bind_bindProxy
+$GLOBALS['Control_Bind_bindProxy'] = ["bind" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -119,12 +144,14 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(), "Apply0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Apply_applyProxy'] ?? \PhpursThunks::eval('Control_Apply_applyProxy'));
+  $__res = $GLOBALS['Control_Apply_applyProxy'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Control_Bind_bindFn'] = function() { $v = ["bind" => (function() {
+}];
+
+// Control_Bind_bindFn
+$GLOBALS['Control_Bind_bindFn'] = ["bind" => (function() {
   $__fn = function($m_0 = null, $f_1 = null, $x_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -138,26 +165,32 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(), "Apply0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Apply_applyFn'] ?? \PhpursThunks::eval('Control_Apply_applyFn'));
+  $__res = $GLOBALS['Control_Apply_applyFn'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Control_Bind_bindArray'] = function() { $v = ["bind" => ($GLOBALS['Control_Bind_arrayBind'] ?? \PhpursThunks::eval('Control_Bind_arrayBind')), "Apply0" => function($dollar__unused_0 = null) {
+}];
+
+// Control_Bind_bindArray
+$GLOBALS['Control_Bind_bindArray'] = ["bind" => $GLOBALS['Control_Bind_arrayBind'], "Apply0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Apply_applyArray'] ?? \PhpursThunks::eval('Control_Apply_applyArray'));
+  $__res = $GLOBALS['Control_Apply_applyArray'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Control_Bind_bind'] = function() { $v = function($dict_0 = null) {
+}];
+
+// Control_Bind_bind
+$GLOBALS['Control_Bind_bind'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['bind'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Bind_bindFlipped'] = function() { $v = (function() {
+};
+
+// Control_Bind_bindFlipped
+$GLOBALS['Control_Bind_bindFlipped'] = (function() {
   $__fn = function($dictBind_0 = null, $b_1 = null, $a_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -169,8 +202,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Control_Bind_composeKleisliFlipped'] = function() { $v = (function() {
+})();
+
+// Control_Bind_composeKleisliFlipped
+$GLOBALS['Control_Bind_composeKleisliFlipped'] = (function() {
   $__fn = function($dictBind_0 = null, $f_1 = null, $g_2 = null, $a_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
@@ -182,8 +217,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Control_Bind_composeKleisli'] = function() { $v = (function() {
+})();
+
+// Control_Bind_composeKleisli
+$GLOBALS['Control_Bind_composeKleisli'] = (function() {
   $__fn = function($dictBind_0 = null, $f_1 = null, $g_2 = null, $a_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
@@ -195,22 +232,28 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Control_Bind_discardProxy'] = function() { $v = ["discard" => function($dictBind_0 = null) {
+})();
+
+// Control_Bind_discardProxy
+$GLOBALS['Control_Bind_discardProxy'] = ["discard" => function($dictBind_0 = null) {
   $__num = \func_num_args();
   $__res = ($dictBind_0)['bind'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Control_Bind_discardUnit'] = function() { $v = ["discard" => function($dictBind_0 = null) {
+}];
+
+// Control_Bind_discardUnit
+$GLOBALS['Control_Bind_discardUnit'] = ["discard" => function($dictBind_0 = null) {
   $__num = \func_num_args();
   $__res = ($dictBind_0)['bind'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Control_Bind_ifM'] = function() { $v = (function() {
+}];
+
+// Control_Bind_ifM
+$GLOBALS['Control_Bind_ifM'] = (function() {
   $__fn = function($dictBind_0 = null, $cond_1 = null, $t_2 = null, $f_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
@@ -235,50 +278,20 @@ goto end_branch_0;;
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Control_Bind_join'] = function() { $v = (function() {
+})();
+
+// Control_Bind_join
+$GLOBALS['Control_Bind_join'] = (function() {
   $__fn = function($dictBind_0 = null, $m_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictBind_0)['bind'])($m_1))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))['identity']);
+  $__res = ((($dictBind_0)['bind'])($m_1))(($GLOBALS['Control_Category_categoryFn'])['identity']);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-$ffi_Control_Bind = \call_user_func(function() {
-  $exports = [];
-$arrayBind = function($xs, $f = null) use (&$arrayBind) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$arrayBind) {
-
-            return $arrayBind(...\array_merge($__args, $more));
-        };
-    }
-    $r = []; foreach($xs as $x) { foreach($f($x) as $y) { $r[] = $y; } } return $r;
-};
-
-$exports['arrayBind'] = $arrayBind;
-return $exports;
-  return $exports;
-});
-\PhpursThunks::$thunks['Control_Bind_arrayBind'] = function() use (&$ffi_Control_Bind) { return $ffi_Control_Bind['arrayBind']; };
-
-
-
-
-
-
-
-
-
-
-
-
-
+})();
 

@@ -103,8 +103,15 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Test_ListOps_Nil'] = function() { $v = ($GLOBALS['__phpurs_data0_Nil'] ??= new Phpurs_Data0("Nil")); return $v; };
-\PhpursThunks::$thunks['Test_ListOps_Cons'] = function() { $v = (function() {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Test_ListOps_Nil
+$GLOBALS['Test_ListOps_Nil'] = ($GLOBALS['__phpurs_data0_Nil'] ??= new Phpurs_Data0("Nil"));
+
+// Test_ListOps_Cons
+$GLOBALS['Test_ListOps_Cons'] = (function() {
   $__fn = function($value0 = null, $value1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -116,8 +123,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Test_ListOps_range'] = function() { $v = (function() {
+})();
+
+// Test_ListOps_range
+$GLOBALS['Test_ListOps_range'] = (function() {
   $__fn = function($start_0 = null, $end_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -160,8 +169,10 @@ goto end_branch_2;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Test_ListOps_foldl'] = function() { $v = (function() {
+})();
+
+// Test_ListOps_foldl
+$GLOBALS['Test_ListOps_foldl'] = (function() {
   $__fn = function($v_0 = null, $v1_1 = null, $v2_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -199,8 +210,10 @@ goto end_branch_0;;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Test_ListOps_filterEvens'] = function() { $v = function($lst_0 = null) {
+})();
+
+// Test_ListOps_filterEvens
+$GLOBALS['Test_ListOps_filterEvens'] = function($lst_0 = null) {
   $__num = \func_num_args();
   $go_1_0 = null;
   $go_1_0 = (function() use (&$go_1_0) {
@@ -221,7 +234,7 @@ goto end_branch_0;;
 };
   if ((is_object($v_2) && (($v_2)->{'tag'} === "Cons"))) {
 $__t3 = null;;
-switch (((($GLOBALS['Data_EuclideanRing_intMod'] ?? \PhpursThunks::eval('Data_EuclideanRing_intMod')))(($v_2)->{'value0'}))(2)) {
+switch ((($GLOBALS['Data_EuclideanRing_intMod'])(($v_2)->{'value0'}))(2)) {
 case 0:
 $__tco_4 = ($v_2)->{'value1'};
 $__tco_5 = new Phpurs_Data2("Cons", ($v_2)->{'value0'}, $v1_3);
@@ -259,8 +272,10 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Test_ListOps_sumEvens'] = function() { $v = function($n_0 = null) {
+};
+
+// Test_ListOps_sumEvens
+$GLOBALS['Test_ListOps_sumEvens'] = function($n_0 = null) {
   $__num = \func_num_args();
   $go_1_0 = null;
   $go_1_0 = (function() use (&$go_1_0) {
@@ -293,27 +308,21 @@ goto end_branch_2;;
   };
   return $__fn;
 })();
-  $__res = (((($GLOBALS['Test_ListOps_foldl'] ?? \PhpursThunks::eval('Test_ListOps_foldl')))(($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd'))))(0))((($GLOBALS['Test_ListOps_filterEvens'] ?? \PhpursThunks::eval('Test_ListOps_filterEvens')))((($go_1_0)($n_0))(new Phpurs_Data0("Nil"))));
+  $__res = ((($GLOBALS['Test_ListOps_foldl'])($GLOBALS['Data_Semiring_intAdd']))(0))(($GLOBALS['Test_ListOps_filterEvens'])((($go_1_0)($n_0))(new Phpurs_Data0("Nil"))));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Test_ListOps_describe'] = function() { $v = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))("List Processing (900 elements):"); return $v; };
-\PhpursThunks::$thunks['Test_ListOps_act'] = function() { $v = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))((($GLOBALS['Bench_opaque'] ?? \PhpursThunks::eval('Bench_opaque')))(900)))(function($dummy_0 = null) {
+};
+
+// Test_ListOps_describe
+$GLOBALS['Test_ListOps_describe'] = ($GLOBALS['Effect_Console_log'])("List Processing (900 elements):");
+
+// Test_ListOps_act
+$GLOBALS['Test_ListOps_act'] = (($GLOBALS['Effect_bindE'])(($GLOBALS['Bench_opaque'])(900)))(function($dummy_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))((($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))((($GLOBALS['Test_ListOps_sumEvens'] ?? \PhpursThunks::eval('Test_ListOps_sumEvens')))($dummy_0)));
+  $__res = ($GLOBALS['Effect_Console_log'])(($GLOBALS['Data_Show_showIntImpl'])(($GLOBALS['Test_ListOps_sumEvens'])($dummy_0)));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}); return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
+});
 

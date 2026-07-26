@@ -95,46 +95,93 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Semiring_zeroRecord'] = function() { $v = function($dict_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+$ffi_Data_Semiring = \call_user_func(function() {
+  $exports = [];
+$intAdd = function($a, $b = null) use (&$intAdd) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$intAdd) {
+
+            return $intAdd(...\array_merge($__args, $more));
+        };
+    }
+    return $a + $b;
+};
+$intMul = function($a, $b = null) use (&$intMul) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$intMul) {
+
+            return $intMul(...\array_merge($__args, $more));
+        };
+    }
+    return $a * $b;
+};
+$numAdd = $intAdd;
+$numMul = $intMul;
+
+$exports['intAdd'] = $intAdd;
+$exports['intMul'] = $intMul;
+$exports['numAdd'] = $numAdd;
+$exports['numMul'] = $numMul;
+return $exports;
+  return $exports;
+});
+$GLOBALS['Data_Semiring_intAdd'] = $ffi_Data_Semiring['intAdd'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Semiring_intMul'] = $ffi_Data_Semiring['intMul'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Semiring_numAdd'] = $ffi_Data_Semiring['numAdd'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Semiring_numMul'] = $ffi_Data_Semiring['numMul'] ?? new class { public function __invoke(...$args) { return $this; } };
+
+
+// Data_Semiring_zeroRecord
+$GLOBALS['Data_Semiring_zeroRecord'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['zeroRecord'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Semiring_zero'] = function() { $v = function($dict_0 = null) {
+};
+
+// Data_Semiring_zero
+$GLOBALS['Data_Semiring_zero'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['zero'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Semiring_semiringUnit'] = function() { $v = ["add" => (function() {
+};
+
+// Data_Semiring_semiringUnit
+$GLOBALS['Data_Semiring_semiringUnit'] = ["add" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'));
+  $__res = $GLOBALS['Data_Unit_unit'];
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "zero" => ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')), "mul" => (function() {
+})(), "zero" => $GLOBALS['Data_Unit_unit'], "mul" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'));
+  $__res = $GLOBALS['Data_Unit_unit'];
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "one" => ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'))]; return $v; };
-\PhpursThunks::$thunks['Data_Semiring_semiringRecordNil'] = function() { $v = ["addRecord" => (function() {
+})(), "one" => $GLOBALS['Data_Unit_unit']];
+
+// Data_Semiring_semiringRecordNil
+$GLOBALS['Data_Semiring_semiringRecordNil'] = ["addRecord" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null, $v2_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -182,8 +229,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Semiring_semiringProxy'] = function() { $v = ["add" => (function() {
+})()];
+
+// Data_Semiring_semiringProxy
+$GLOBALS['Data_Semiring_semiringProxy'] = ["add" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -207,45 +256,61 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "one" => new Phpurs_Data0("Proxy"), "zero" => new Phpurs_Data0("Proxy")]; return $v; };
-\PhpursThunks::$thunks['Data_Semiring_semiringNumber'] = function() { $v = ["add" => ($GLOBALS['Data_Semiring_numAdd'] ?? \PhpursThunks::eval('Data_Semiring_numAdd')), "zero" => 0.0, "mul" => ($GLOBALS['Data_Semiring_numMul'] ?? \PhpursThunks::eval('Data_Semiring_numMul')), "one" => 1.0]; return $v; };
-\PhpursThunks::$thunks['Data_Semiring_semiringInt'] = function() { $v = ["add" => ($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')), "zero" => 0, "mul" => ($GLOBALS['Data_Semiring_intMul'] ?? \PhpursThunks::eval('Data_Semiring_intMul')), "one" => 1]; return $v; };
-\PhpursThunks::$thunks['Data_Semiring_oneRecord'] = function() { $v = function($dict_0 = null) {
+})(), "one" => new Phpurs_Data0("Proxy"), "zero" => new Phpurs_Data0("Proxy")];
+
+// Data_Semiring_semiringNumber
+$GLOBALS['Data_Semiring_semiringNumber'] = ["add" => $GLOBALS['Data_Semiring_numAdd'], "zero" => 0.0, "mul" => $GLOBALS['Data_Semiring_numMul'], "one" => 1.0];
+
+// Data_Semiring_semiringInt
+$GLOBALS['Data_Semiring_semiringInt'] = ["add" => $GLOBALS['Data_Semiring_intAdd'], "zero" => 0, "mul" => $GLOBALS['Data_Semiring_intMul'], "one" => 1];
+
+// Data_Semiring_oneRecord
+$GLOBALS['Data_Semiring_oneRecord'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['oneRecord'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Semiring_one'] = function() { $v = function($dict_0 = null) {
+};
+
+// Data_Semiring_one
+$GLOBALS['Data_Semiring_one'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['one'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Semiring_mulRecord'] = function() { $v = function($dict_0 = null) {
+};
+
+// Data_Semiring_mulRecord
+$GLOBALS['Data_Semiring_mulRecord'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['mulRecord'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Semiring_mul'] = function() { $v = function($dict_0 = null) {
+};
+
+// Data_Semiring_mul
+$GLOBALS['Data_Semiring_mul'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['mul'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Semiring_addRecord'] = function() { $v = function($dict_0 = null) {
+};
+
+// Data_Semiring_addRecord
+$GLOBALS['Data_Semiring_addRecord'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['addRecord'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Semiring_semiringRecord'] = function() { $v = (function() {
+};
+
+// Data_Semiring_semiringRecord
+$GLOBALS['Data_Semiring_semiringRecord'] = (function() {
   $__fn = function($dollar__unused_0 = null, $dictSemiringRecord_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -257,15 +322,19 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Semiring_add'] = function() { $v = function($dict_0 = null) {
+})();
+
+// Data_Semiring_add
+$GLOBALS['Data_Semiring_add'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['add'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Semiring_semiringFn'] = function() { $v = function($dictSemiring_0 = null) {
+};
+
+// Data_Semiring_semiringFn
+$GLOBALS['Data_Semiring_semiringFn'] = function($dictSemiring_0 = null) {
   $__num = \func_num_args();
   $zero1_1_0 = ($dictSemiring_0)['zero'];
   $one1_2_1 = ($dictSemiring_0)['one'];
@@ -309,8 +378,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Semiring_semiringRecordCons'] = function() { $v = (function() {
+};
+
+// Data_Semiring_semiringRecordCons
+$GLOBALS['Data_Semiring_semiringRecordCons'] = (function() {
   $__fn = function($dictIsSymbol_0 = null, $dollar__unused_1 = null, $dictSemiringRecord_2 = null, $dictSemiring_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
@@ -325,8 +396,8 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   $key_9_2 = (($dictIsSymbol_0)['reflectSymbol'])(new Phpurs_Data0("Proxy"));
-  $get_10_3 = (($GLOBALS['Record_Unsafe_unsafeGet'] ?? \PhpursThunks::eval('Record_Unsafe_unsafeGet')))($key_9_2);
-  $__res = (((($GLOBALS['Record_Unsafe_unsafeSet'] ?? \PhpursThunks::eval('Record_Unsafe_unsafeSet')))($key_9_2))(((($dictSemiring_3)['add'])(($get_10_3)($ra_7)))(($get_10_3)($rb_8))))((((($dictSemiringRecord_2)['addRecord'])(new Phpurs_Data0("Proxy")))($ra_7))($rb_8));
+  $get_10_3 = ($GLOBALS['Record_Unsafe_unsafeGet'])($key_9_2);
+  $__res = ((($GLOBALS['Record_Unsafe_unsafeSet'])($key_9_2))(((($dictSemiring_3)['add'])(($get_10_3)($ra_7)))(($get_10_3)($rb_8))))((((($dictSemiringRecord_2)['addRecord'])(new Phpurs_Data0("Proxy")))($ra_7))($rb_8));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -339,8 +410,8 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   $key_9_4 = (($dictIsSymbol_0)['reflectSymbol'])(new Phpurs_Data0("Proxy"));
-  $get_10_5 = (($GLOBALS['Record_Unsafe_unsafeGet'] ?? \PhpursThunks::eval('Record_Unsafe_unsafeGet')))($key_9_4);
-  $__res = (((($GLOBALS['Record_Unsafe_unsafeSet'] ?? \PhpursThunks::eval('Record_Unsafe_unsafeSet')))($key_9_4))(((($dictSemiring_3)['mul'])(($get_10_5)($ra_7)))(($get_10_5)($rb_8))))((((($dictSemiringRecord_2)['mulRecord'])(new Phpurs_Data0("Proxy")))($ra_7))($rb_8));
+  $get_10_5 = ($GLOBALS['Record_Unsafe_unsafeGet'])($key_9_4);
+  $__res = ((($GLOBALS['Record_Unsafe_unsafeSet'])($key_9_4))(((($dictSemiring_3)['mul'])(($get_10_5)($ra_7)))(($get_10_5)($rb_8))))((((($dictSemiringRecord_2)['mulRecord'])(new Phpurs_Data0("Proxy")))($ra_7))($rb_8));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -352,7 +423,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($GLOBALS['Record_Unsafe_unsafeSet'] ?? \PhpursThunks::eval('Record_Unsafe_unsafeSet')))((($dictIsSymbol_0)['reflectSymbol'])(new Phpurs_Data0("Proxy"))))($one1_4_0))(((($dictSemiringRecord_2)['oneRecord'])(new Phpurs_Data0("Proxy")))(new Phpurs_Data0("Proxy")));
+  $__res = ((($GLOBALS['Record_Unsafe_unsafeSet'])((($dictIsSymbol_0)['reflectSymbol'])(new Phpurs_Data0("Proxy"))))($one1_4_0))(((($dictSemiringRecord_2)['oneRecord'])(new Phpurs_Data0("Proxy")))(new Phpurs_Data0("Proxy")));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -364,7 +435,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($GLOBALS['Record_Unsafe_unsafeSet'] ?? \PhpursThunks::eval('Record_Unsafe_unsafeSet')))((($dictIsSymbol_0)['reflectSymbol'])(new Phpurs_Data0("Proxy"))))($zero1_5_1))(((($dictSemiringRecord_2)['zeroRecord'])(new Phpurs_Data0("Proxy")))(new Phpurs_Data0("Proxy")));
+  $__res = ((($GLOBALS['Record_Unsafe_unsafeSet'])((($dictIsSymbol_0)['reflectSymbol'])(new Phpurs_Data0("Proxy"))))($zero1_5_1))(((($dictSemiringRecord_2)['zeroRecord'])(new Phpurs_Data0("Proxy")))(new Phpurs_Data0("Proxy")));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -376,59 +447,5 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-$ffi_Data_Semiring = \call_user_func(function() {
-  $exports = [];
-$intAdd = function($a, $b = null) use (&$intAdd) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$intAdd) {
-
-            return $intAdd(...\array_merge($__args, $more));
-        };
-    }
-    return $a + $b;
-};
-$intMul = function($a, $b = null) use (&$intMul) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$intMul) {
-
-            return $intMul(...\array_merge($__args, $more));
-        };
-    }
-    return $a * $b;
-};
-$numAdd = $intAdd;
-$numMul = $intMul;
-
-$exports['intAdd'] = $intAdd;
-$exports['intMul'] = $intMul;
-$exports['numAdd'] = $numAdd;
-$exports['numMul'] = $numMul;
-return $exports;
-  return $exports;
-});
-\PhpursThunks::$thunks['Data_Semiring_intAdd'] = function() use (&$ffi_Data_Semiring) { return $ffi_Data_Semiring['intAdd']; };
-\PhpursThunks::$thunks['Data_Semiring_intMul'] = function() use (&$ffi_Data_Semiring) { return $ffi_Data_Semiring['intMul']; };
-\PhpursThunks::$thunks['Data_Semiring_numAdd'] = function() use (&$ffi_Data_Semiring) { return $ffi_Data_Semiring['numAdd']; };
-\PhpursThunks::$thunks['Data_Semiring_numMul'] = function() use (&$ffi_Data_Semiring) { return $ffi_Data_Semiring['numMul']; };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+})();
 

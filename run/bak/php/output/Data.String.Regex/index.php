@@ -103,122 +103,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_String_Regex_showRegex'] = function() { $v = ["show" => ($GLOBALS['Data_String_Regex_showRegexImpl'] ?? \PhpursThunks::eval('Data_String_Regex_showRegexImpl'))]; return $v; };
-\PhpursThunks::$thunks['Data_String_Regex_search'] = function() { $v = ((($GLOBALS['Data_String_Regex__search'] ?? \PhpursThunks::eval('Data_String_Regex__search')))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just'))))(new Phpurs_Data0("Nothing")); return $v; };
-\PhpursThunks::$thunks['Data_String_Regex_replace__prime__'] = function() { $v = ((($GLOBALS['Data_String_Regex__replaceBy'] ?? \PhpursThunks::eval('Data_String_Regex__replaceBy')))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just'))))(new Phpurs_Data0("Nothing")); return $v; };
-\PhpursThunks::$thunks['Data_String_Regex_renderFlags'] = function() { $v = function($v_0 = null) {
-  $__num = \func_num_args();
-  $__t0 = null;;
-  if (($v_0)['global']) {
-$__t0 = "g";
-goto end_branch_0;;
-};
-  $__t0 = "";
-  end_branch_0:;
-  $__t1 = null;;
-  if (($v_0)['ignoreCase']) {
-$__t1 = "i";
-goto end_branch_1;;
-};
-  $__t1 = "";
-  end_branch_1:;
-  $__t2 = null;;
-  if (($v_0)['multiline']) {
-$__t2 = "m";
-goto end_branch_2;;
-};
-  $__t2 = "";
-  end_branch_2:;
-  $__t3 = null;;
-  if (($v_0)['dotAll']) {
-$__t3 = "s";
-goto end_branch_3;;
-};
-  $__t3 = "";
-  end_branch_3:;
-  $__t4 = null;;
-  if (($v_0)['sticky']) {
-$__t4 = "y";
-goto end_branch_4;;
-};
-  $__t4 = "";
-  end_branch_4:;
-  $__t5 = null;;
-  if (($v_0)['unicode']) {
-$__t5 = "u";
-goto end_branch_5;;
-};
-  $__t5 = "";
-  end_branch_5:;
-  $__res = ((((($__t0 . $__t1) . $__t2) . $__t3) . $__t4) . $__t5);
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_String_Regex_regex'] = function() { $v = (function() {
-  $__fn = function($s_0 = null, $f_1 = null) use (&$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__t0 = null;;
-  if (($f_1)['global']) {
-$__t0 = "g";
-goto end_branch_0;;
-};
-  $__t0 = "";
-  end_branch_0:;
-  $__t1 = null;;
-  if (($f_1)['ignoreCase']) {
-$__t1 = "i";
-goto end_branch_1;;
-};
-  $__t1 = "";
-  end_branch_1:;
-  $__t2 = null;;
-  if (($f_1)['multiline']) {
-$__t2 = "m";
-goto end_branch_2;;
-};
-  $__t2 = "";
-  end_branch_2:;
-  $__t3 = null;;
-  if (($f_1)['dotAll']) {
-$__t3 = "s";
-goto end_branch_3;;
-};
-  $__t3 = "";
-  end_branch_3:;
-  $__t4 = null;;
-  if (($f_1)['sticky']) {
-$__t4 = "y";
-goto end_branch_4;;
-};
-  $__t4 = "";
-  end_branch_4:;
-  $__t5 = null;;
-  if (($f_1)['unicode']) {
-$__t5 = "u";
-goto end_branch_5;;
-};
-  $__t5 = "";
-  end_branch_5:;
-  $__res = ((((($GLOBALS['Data_String_Regex_regexImpl'] ?? \PhpursThunks::eval('Data_String_Regex_regexImpl')))(($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left'))))(($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right'))))($s_0))(((((($__t0 . $__t1) . $__t2) . $__t3) . $__t4) . $__t5));
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_String_Regex_parseFlags'] = function() { $v = function($s_0 = null) {
-  $__num = \func_num_args();
-  $__res = ["global" => (((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Maybe_isJust'] ?? \PhpursThunks::eval('Data_Maybe_isJust'))))((($GLOBALS['Data_String_CodeUnits_indexOf'] ?? \PhpursThunks::eval('Data_String_CodeUnits_indexOf')))("g")))($s_0), "ignoreCase" => (((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Maybe_isJust'] ?? \PhpursThunks::eval('Data_Maybe_isJust'))))((($GLOBALS['Data_String_CodeUnits_indexOf'] ?? \PhpursThunks::eval('Data_String_CodeUnits_indexOf')))("i")))($s_0), "multiline" => (((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Maybe_isJust'] ?? \PhpursThunks::eval('Data_Maybe_isJust'))))((($GLOBALS['Data_String_CodeUnits_indexOf'] ?? \PhpursThunks::eval('Data_String_CodeUnits_indexOf')))("m")))($s_0), "dotAll" => (((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Maybe_isJust'] ?? \PhpursThunks::eval('Data_Maybe_isJust'))))((($GLOBALS['Data_String_CodeUnits_indexOf'] ?? \PhpursThunks::eval('Data_String_CodeUnits_indexOf')))("s")))($s_0), "sticky" => (((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Maybe_isJust'] ?? \PhpursThunks::eval('Data_Maybe_isJust'))))((($GLOBALS['Data_String_CodeUnits_indexOf'] ?? \PhpursThunks::eval('Data_String_CodeUnits_indexOf')))("y")))($s_0), "unicode" => (((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Maybe_isJust'] ?? \PhpursThunks::eval('Data_Maybe_isJust'))))((($GLOBALS['Data_String_CodeUnits_indexOf'] ?? \PhpursThunks::eval('Data_String_CodeUnits_indexOf')))("u")))($s_0)];
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_String_Regex_match'] = function() { $v = ((($GLOBALS['Data_String_Regex__match'] ?? \PhpursThunks::eval('Data_String_Regex__match')))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just'))))(new Phpurs_Data0("Nothing")); return $v; };
-\PhpursThunks::$thunks['Data_String_Regex_flags'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_String_Regex_Flags_RegexFlags'] ?? \PhpursThunks::eval('Data_String_Regex_Flags_RegexFlags'))))(($GLOBALS['Data_String_Regex_flagsImpl'] ?? \PhpursThunks::eval('Data_String_Regex_flagsImpl'))); return $v; };
+
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Data_String_Regex = \call_user_func(function() {
   $exports = [];
@@ -367,23 +252,147 @@ $exports['split'] = $split;
 return $exports;
   return $exports;
 });
-\PhpursThunks::$thunks['Data_String_Regex__match'] = function() use (&$ffi_Data_String_Regex) { return $ffi_Data_String_Regex['_match']; };
-\PhpursThunks::$thunks['Data_String_Regex__replaceBy'] = function() use (&$ffi_Data_String_Regex) { return $ffi_Data_String_Regex['_replaceBy']; };
-\PhpursThunks::$thunks['Data_String_Regex__search'] = function() use (&$ffi_Data_String_Regex) { return $ffi_Data_String_Regex['_search']; };
-\PhpursThunks::$thunks['Data_String_Regex_flagsImpl'] = function() use (&$ffi_Data_String_Regex) { return $ffi_Data_String_Regex['flagsImpl']; };
-\PhpursThunks::$thunks['Data_String_Regex_regexImpl'] = function() use (&$ffi_Data_String_Regex) { return $ffi_Data_String_Regex['regexImpl']; };
-\PhpursThunks::$thunks['Data_String_Regex_replace'] = function() use (&$ffi_Data_String_Regex) { return $ffi_Data_String_Regex['replace']; };
-\PhpursThunks::$thunks['Data_String_Regex_showRegexImpl'] = function() use (&$ffi_Data_String_Regex) { return $ffi_Data_String_Regex['showRegexImpl']; };
-\PhpursThunks::$thunks['Data_String_Regex_source'] = function() use (&$ffi_Data_String_Regex) { return $ffi_Data_String_Regex['source']; };
-\PhpursThunks::$thunks['Data_String_Regex_split'] = function() use (&$ffi_Data_String_Regex) { return $ffi_Data_String_Regex['split']; };
-\PhpursThunks::$thunks['Data_String_Regex_test'] = function() use (&$ffi_Data_String_Regex) { return $ffi_Data_String_Regex['test']; };
+$GLOBALS['Data_String_Regex__match'] = $ffi_Data_String_Regex['_match'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_String_Regex__replaceBy'] = $ffi_Data_String_Regex['_replaceBy'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_String_Regex__search'] = $ffi_Data_String_Regex['_search'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_String_Regex_flagsImpl'] = $ffi_Data_String_Regex['flagsImpl'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_String_Regex_regexImpl'] = $ffi_Data_String_Regex['regexImpl'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_String_Regex_replace'] = $ffi_Data_String_Regex['replace'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_String_Regex_showRegexImpl'] = $ffi_Data_String_Regex['showRegexImpl'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_String_Regex_source'] = $ffi_Data_String_Regex['source'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_String_Regex_split'] = $ffi_Data_String_Regex['split'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_String_Regex_test'] = $ffi_Data_String_Regex['test'] ?? new class { public function __invoke(...$args) { return $this; } };
 
 
+// Data_String_Regex_showRegex
+$GLOBALS['Data_String_Regex_showRegex'] = ["show" => $GLOBALS['Data_String_Regex_showRegexImpl']];
 
+// Data_String_Regex_search
+$GLOBALS['Data_String_Regex_search'] = (($GLOBALS['Data_String_Regex__search'])($GLOBALS['Data_Maybe_Just']))(new Phpurs_Data0("Nothing"));
 
+// Data_String_Regex_replace'
+$GLOBALS['Data_String_Regex_replace__prime__'] = (($GLOBALS['Data_String_Regex__replaceBy'])($GLOBALS['Data_Maybe_Just']))(new Phpurs_Data0("Nothing"));
 
+// Data_String_Regex_renderFlags
+$GLOBALS['Data_String_Regex_renderFlags'] = function($v_0 = null) {
+  $__num = \func_num_args();
+  $__t0 = null;;
+  if (($v_0)['global']) {
+$__t0 = "g";
+goto end_branch_0;;
+};
+  $__t0 = "";
+  end_branch_0:;
+  $__t1 = null;;
+  if (($v_0)['ignoreCase']) {
+$__t1 = "i";
+goto end_branch_1;;
+};
+  $__t1 = "";
+  end_branch_1:;
+  $__t2 = null;;
+  if (($v_0)['multiline']) {
+$__t2 = "m";
+goto end_branch_2;;
+};
+  $__t2 = "";
+  end_branch_2:;
+  $__t3 = null;;
+  if (($v_0)['dotAll']) {
+$__t3 = "s";
+goto end_branch_3;;
+};
+  $__t3 = "";
+  end_branch_3:;
+  $__t4 = null;;
+  if (($v_0)['sticky']) {
+$__t4 = "y";
+goto end_branch_4;;
+};
+  $__t4 = "";
+  end_branch_4:;
+  $__t5 = null;;
+  if (($v_0)['unicode']) {
+$__t5 = "u";
+goto end_branch_5;;
+};
+  $__t5 = "";
+  end_branch_5:;
+  $__res = ((((($__t0 . $__t1) . $__t2) . $__t3) . $__t4) . $__t5);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 
+// Data_String_Regex_regex
+$GLOBALS['Data_String_Regex_regex'] = (function() {
+  $__fn = function($s_0 = null, $f_1 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__t0 = null;;
+  if (($f_1)['global']) {
+$__t0 = "g";
+goto end_branch_0;;
+};
+  $__t0 = "";
+  end_branch_0:;
+  $__t1 = null;;
+  if (($f_1)['ignoreCase']) {
+$__t1 = "i";
+goto end_branch_1;;
+};
+  $__t1 = "";
+  end_branch_1:;
+  $__t2 = null;;
+  if (($f_1)['multiline']) {
+$__t2 = "m";
+goto end_branch_2;;
+};
+  $__t2 = "";
+  end_branch_2:;
+  $__t3 = null;;
+  if (($f_1)['dotAll']) {
+$__t3 = "s";
+goto end_branch_3;;
+};
+  $__t3 = "";
+  end_branch_3:;
+  $__t4 = null;;
+  if (($f_1)['sticky']) {
+$__t4 = "y";
+goto end_branch_4;;
+};
+  $__t4 = "";
+  end_branch_4:;
+  $__t5 = null;;
+  if (($f_1)['unicode']) {
+$__t5 = "u";
+goto end_branch_5;;
+};
+  $__t5 = "";
+  end_branch_5:;
+  $__res = (((($GLOBALS['Data_String_Regex_regexImpl'])($GLOBALS['Data_Either_Left']))($GLOBALS['Data_Either_Right']))($s_0))(((((($__t0 . $__t1) . $__t2) . $__t3) . $__t4) . $__t5));
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
 
+// Data_String_Regex_parseFlags
+$GLOBALS['Data_String_Regex_parseFlags'] = function($s_0 = null) {
+  $__num = \func_num_args();
+  $__res = ["global" => ((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Maybe_isJust']))(($GLOBALS['Data_String_CodeUnits_indexOf'])("g")))($s_0), "ignoreCase" => ((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Maybe_isJust']))(($GLOBALS['Data_String_CodeUnits_indexOf'])("i")))($s_0), "multiline" => ((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Maybe_isJust']))(($GLOBALS['Data_String_CodeUnits_indexOf'])("m")))($s_0), "dotAll" => ((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Maybe_isJust']))(($GLOBALS['Data_String_CodeUnits_indexOf'])("s")))($s_0), "sticky" => ((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Maybe_isJust']))(($GLOBALS['Data_String_CodeUnits_indexOf'])("y")))($s_0), "unicode" => ((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Maybe_isJust']))(($GLOBALS['Data_String_CodeUnits_indexOf'])("u")))($s_0)];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 
+// Data_String_Regex_match
+$GLOBALS['Data_String_Regex_match'] = (($GLOBALS['Data_String_Regex__match'])($GLOBALS['Data_Maybe_Just']))(new Phpurs_Data0("Nothing"));
 
+// Data_String_Regex_flags
+$GLOBALS['Data_String_Regex_flags'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_Regex_Flags_RegexFlags']))($GLOBALS['Data_String_Regex_flagsImpl']);
 

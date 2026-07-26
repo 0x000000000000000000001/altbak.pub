@@ -99,7 +99,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Profunctor_Split_SplitF'] = function() { $v = (function() {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Profunctor_Split_SplitF
+$GLOBALS['Data_Profunctor_Split_SplitF'] = (function() {
   $__fn = function($value0 = null, $value1 = null, $value2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -111,8 +116,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Profunctor_Split_unSplit'] = function() { $v = (function() {
+})();
+
+// Data_Profunctor_Split_unSplit
+$GLOBALS['Data_Profunctor_Split_unSplit'] = (function() {
   $__fn = function($f_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -124,8 +131,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Profunctor_Split_split'] = function() { $v = (function() {
+})();
+
+// Data_Profunctor_Split_split
+$GLOBALS['Data_Profunctor_Split_split'] = (function() {
   $__fn = function($f_0 = null, $g_1 = null, $fx_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -137,21 +146,25 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Profunctor_Split_profunctorSplit'] = function() { $v = ["dimap" => (function() {
+})();
+
+// Data_Profunctor_Split_profunctorSplit
+$GLOBALS['Data_Profunctor_Split_profunctorSplit'] = ["dimap" => (function() {
   $__fn = function($f_0 = null, $g_1 = null, $v_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = new Phpurs_Data3("SplitF", ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($v_2)->{'value0'}))($f_0), ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($g_1))(($v_2)->{'value1'}), ($v_2)->{'value2'});
+  $__res = new Phpurs_Data3("SplitF", (($GLOBALS['Control_Semigroupoid_composeImpl'])(($v_2)->{'value0'}))($f_0), (($GLOBALS['Control_Semigroupoid_composeImpl'])($g_1))(($v_2)->{'value1'}), ($v_2)->{'value2'});
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Profunctor_Split_lowerSplit'] = function() { $v = (function() {
+})()];
+
+// Data_Profunctor_Split_lowerSplit
+$GLOBALS['Data_Profunctor_Split_lowerSplit'] = (function() {
   $__fn = function($dictInvariant_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -163,15 +176,19 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Profunctor_Split_liftSplit'] = function() { $v = function($fx_0 = null) {
+})();
+
+// Data_Profunctor_Split_liftSplit
+$GLOBALS['Data_Profunctor_Split_liftSplit'] = function($fx_0 = null) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data3("SplitF", (($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))['identity'], (($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))['identity'], $fx_0);
+  $__res = new Phpurs_Data3("SplitF", ($GLOBALS['Control_Category_categoryFn'])['identity'], ($GLOBALS['Control_Category_categoryFn'])['identity'], $fx_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Profunctor_Split_hoistSplit'] = function() { $v = (function() {
+};
+
+// Data_Profunctor_Split_hoistSplit
+$GLOBALS['Data_Profunctor_Split_hoistSplit'] = (function() {
   $__fn = function($nat_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -179,7 +196,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   }
   $__local_var_2_0 = ($v_1)->{'value0'};
   $__local_var_3_1 = ($v_1)->{'value1'};
-  $__res = (((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(function($fx_4 = null) use ($__local_var_2_0, $__local_var_3_1) {
+  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'])(function($fx_4 = null) use ($__local_var_2_0, $__local_var_3_1) {
   $__num = \func_num_args();
   $__res = new Phpurs_Data3("SplitF", $__local_var_2_0, $__local_var_3_1, $fx_4);
   goto __end;;
@@ -191,28 +208,20 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Profunctor_Split_functorSplit'] = function() { $v = ["map" => (function() {
+})();
+
+// Data_Profunctor_Split_functorSplit
+$GLOBALS['Data_Profunctor_Split_functorSplit'] = ["map" => (function() {
   $__fn = function($f_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data3("SplitF", ($v_1)->{'value0'}, ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($f_0))(($v_1)->{'value1'}), ($v_1)->{'value2'});
+  $__res = new Phpurs_Data3("SplitF", ($v_1)->{'value0'}, (($GLOBALS['Control_Semigroupoid_composeImpl'])($f_0))(($v_1)->{'value1'}), ($v_1)->{'value2'});
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
+})()];
 

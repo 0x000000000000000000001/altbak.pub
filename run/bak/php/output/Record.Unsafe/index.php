@@ -151,10 +151,10 @@ $exports['unsafeDelete'] = $unsafeDelete;
 return $exports;
   return $exports;
 });
-\PhpursThunks::$thunks['Record_Unsafe_unsafeDelete'] = function() use (&$ffi_Record_Unsafe) { return $ffi_Record_Unsafe['unsafeDelete']; };
-\PhpursThunks::$thunks['Record_Unsafe_unsafeGet'] = function() use (&$ffi_Record_Unsafe) { return $ffi_Record_Unsafe['unsafeGet']; };
-\PhpursThunks::$thunks['Record_Unsafe_unsafeHas'] = function() use (&$ffi_Record_Unsafe) { return $ffi_Record_Unsafe['unsafeHas']; };
-\PhpursThunks::$thunks['Record_Unsafe_unsafeSet'] = function() use (&$ffi_Record_Unsafe) { return $ffi_Record_Unsafe['unsafeSet']; };
+$GLOBALS['Record_Unsafe_unsafeDelete'] = $ffi_Record_Unsafe['unsafeDelete'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Record_Unsafe_unsafeGet'] = $ffi_Record_Unsafe['unsafeGet'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Record_Unsafe_unsafeHas'] = $ffi_Record_Unsafe['unsafeHas'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Record_Unsafe_unsafeSet'] = $ffi_Record_Unsafe['unsafeSet'] ?? new class { public function __invoke(...$args) { return $this; } };
 
 
 

@@ -92,10 +92,13 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Char_toCharCode'] = function() { $v = ($GLOBALS['Data_Enum_toCharCode'] ?? \PhpursThunks::eval('Data_Enum_toCharCode')); return $v; };
-\PhpursThunks::$thunks['Data_Char_fromCharCode'] = function() { $v = ($GLOBALS['Data_Enum_charToEnum'] ?? \PhpursThunks::eval('Data_Enum_charToEnum')); return $v; };
+
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+// Data_Char_toCharCode
+$GLOBALS['Data_Char_toCharCode'] = $GLOBALS['Data_Enum_toCharCode'];
 
+// Data_Char_fromCharCode
+$GLOBALS['Data_Char_fromCharCode'] = $GLOBALS['Data_Enum_charToEnum'];
 

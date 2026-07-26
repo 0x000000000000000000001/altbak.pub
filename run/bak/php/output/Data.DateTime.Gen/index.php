@@ -97,15 +97,17 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_DateTime_Gen_genDateTime'] = function() { $v = function($dictMonadGen_0 = null) {
-  $__num = \func_num_args();
-  $Apply0_1_0 = (((((($dictMonadGen_0)['Monad0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Bind1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Apply0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $__res = ((($Apply0_1_0)['apply'])(((((($Apply0_1_0)['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['map'])(($GLOBALS['Data_DateTime_DateTime'] ?? \PhpursThunks::eval('Data_DateTime_DateTime'))))((($GLOBALS['Data_Date_Gen_genDate'] ?? \PhpursThunks::eval('Data_Date_Gen_genDate')))($dictMonadGen_0))))((($GLOBALS['Data_Time_Gen_genTime'] ?? \PhpursThunks::eval('Data_Time_Gen_genTime')))($dictMonadGen_0));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
+
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+// Data_DateTime_Gen_genDateTime
+$GLOBALS['Data_DateTime_Gen_genDateTime'] = function($dictMonadGen_0 = null) {
+  $__num = \func_num_args();
+  $Apply0_1_0 = (((((($dictMonadGen_0)['Monad0'])($GLOBALS['Prim_undefined']))['Bind1'])($GLOBALS['Prim_undefined']))['Apply0'])($GLOBALS['Prim_undefined']);
+  $__res = ((($Apply0_1_0)['apply'])(((((($Apply0_1_0)['Functor0'])($GLOBALS['Prim_undefined']))['map'])($GLOBALS['Data_DateTime_DateTime']))(($GLOBALS['Data_Date_Gen_genDate'])($dictMonadGen_0))))(($GLOBALS['Data_Time_Gen_genTime'])($dictMonadGen_0));
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 

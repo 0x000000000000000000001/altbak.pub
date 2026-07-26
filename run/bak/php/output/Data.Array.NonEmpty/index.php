@@ -118,13 +118,18 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Array_NonEmpty_max'] = function() { $v = (function() {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Array_NonEmpty_max
+$GLOBALS['Data_Array_NonEmpty_max'] = (function() {
   $__fn = function($x_0 = null, $y_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $v_2_0 = (((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))['compare'])($x_0))($y_1);
+  $v_2_0 = ((($GLOBALS['Data_Ord_ordInt'])['compare'])($x_0))($y_1);
   $__t1 = null;;
   if ((is_object($v_2_0) && (($v_2_0)->{'tag'} === "LT"))) {
 $__t1 = $y_1;
@@ -147,8 +152,10 @@ goto end_branch_1;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_fromJust'] = function() { $v = function($v_0 = null) {
+})();
+
+// Data_Array_NonEmpty_fromJust
+$GLOBALS['Data_Array_NonEmpty_fromJust'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object($v_0) && (($v_0)->{'tag'} === "Just"))) {
@@ -162,8 +169,10 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_unsafeIndex1'] = function() { $v = (function() {
+};
+
+// Data_Array_NonEmpty_unsafeIndex1
+$GLOBALS['Data_Array_NonEmpty_unsafeIndex1'] = (function() {
   $__fn = function($__local_var_0 = null, $__local_var_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -175,259 +184,309 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_transpose'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Array_transpose'] ?? \PhpursThunks::eval('Data_Array_transpose'))))(($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_toArray'] = function() { $v = function($v_0 = null) {
+})();
+
+// Data_Array_NonEmpty_transpose
+$GLOBALS['Data_Array_NonEmpty_transpose'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_transpose']))($GLOBALS['Unsafe_Coerce_unsafeCoerce']));
+
+// Data_Array_NonEmpty_toArray
+$GLOBALS['Data_Array_NonEmpty_toArray'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__res = $v_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_unionBy__prime__'] = function() { $v = (function() {
+};
+
+// Data_Array_NonEmpty_unionBy'
+$GLOBALS['Data_Array_NonEmpty_unionBy__prime__'] = (function() {
   $__fn = function($eq_0 = null, $xs_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_Internal_NonEmptyArray'))))(((($GLOBALS['Data_Array_unionBy'] ?? \PhpursThunks::eval('Data_Array_unionBy')))($eq_0))($xs_1));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray']))((($GLOBALS['Data_Array_unionBy'])($eq_0))($xs_1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_union__prime__'] = function() { $v = function($dictEq_0 = null) {
+})();
+
+// Data_Array_NonEmpty_union'
+$GLOBALS['Data_Array_NonEmpty_union__prime__'] = function($dictEq_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Array_NonEmpty_unionBy__prime__'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_unionBy__prime__')))(($dictEq_0)['eq']);
+  $__res = ($GLOBALS['Data_Array_NonEmpty_unionBy__prime__'])(($dictEq_0)['eq']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_unionBy'] = function() { $v = (function() {
+};
+
+// Data_Array_NonEmpty_unionBy
+$GLOBALS['Data_Array_NonEmpty_unionBy'] = (function() {
   $__fn = function($eq_0 = null, $xs_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_Internal_NonEmptyArray'))))(((($GLOBALS['Data_Array_unionBy'] ?? \PhpursThunks::eval('Data_Array_unionBy')))($eq_0))($xs_1))))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray')));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray']))((($GLOBALS['Data_Array_unionBy'])($eq_0))($xs_1))))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_union'] = function() { $v = function($dictEq_0 = null) {
+})();
+
+// Data_Array_NonEmpty_union
+$GLOBALS['Data_Array_NonEmpty_union'] = function($dictEq_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Array_NonEmpty_unionBy'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_unionBy')))(($dictEq_0)['eq']);
+  $__res = ($GLOBALS['Data_Array_NonEmpty_unionBy'])(($dictEq_0)['eq']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_unzip'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(function($v_0 = null) {
+};
+
+// Data_Array_NonEmpty_unzip
+$GLOBALS['Data_Array_NonEmpty_unzip'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v_0 = null) {
   $__num = \func_num_args();
   $__res = new Phpurs_Data2("Tuple", ($v_0)->{'value0'}, ($v_0)->{'value1'});
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Array_unzip'] ?? \PhpursThunks::eval('Data_Array_unzip'))))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray')))); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_updateAt'] = function() { $v = (function() {
+}))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_unzip']))($GLOBALS['Data_Array_NonEmpty_toArray']));
+
+// Data_Array_NonEmpty_updateAt
+$GLOBALS['Data_Array_NonEmpty_updateAt'] = (function() {
   $__fn = function($i_0 = null, $x_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(((($GLOBALS['Data_Array_updateAt'] ?? \PhpursThunks::eval('Data_Array_updateAt')))($i_0))($x_1)))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray'))));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce']))((($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Array_updateAt'])($i_0))($x_1)))($GLOBALS['Data_Array_NonEmpty_toArray']));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_zip'] = function() { $v = (function() {
+})();
+
+// Data_Array_NonEmpty_zip
+$GLOBALS['Data_Array_NonEmpty_zip'] = (function() {
   $__fn = function($xs_0 = null, $ys_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_Array_zipWithImpl'] ?? \PhpursThunks::eval('Data_Array_zipWithImpl')))(($GLOBALS['Data_Tuple_Tuple'] ?? \PhpursThunks::eval('Data_Tuple_Tuple')), $xs_0, $ys_1);
+  $__res = ($GLOBALS['Data_Array_zipWithImpl'])($GLOBALS['Data_Tuple_Tuple'], $xs_0, $ys_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_zipWith'] = function() { $v = (function() {
+})();
+
+// Data_Array_NonEmpty_zipWith
+$GLOBALS['Data_Array_NonEmpty_zipWith'] = (function() {
   $__fn = function($f_0 = null, $xs_1 = null, $ys_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($GLOBALS['Data_Array_zipWithImpl'] ?? \PhpursThunks::eval('Data_Array_zipWithImpl')))($f_0, $xs_1, $ys_2);
+  $__res = ($GLOBALS['Data_Array_zipWithImpl'])($f_0, $xs_1, $ys_2);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_zipWithA'] = function() { $v = function($dictApplicative_0 = null) {
+})();
+
+// Data_Array_NonEmpty_zipWithA
+$GLOBALS['Data_Array_NonEmpty_zipWithA'] = function($dictApplicative_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Array_zipWithA'] ?? \PhpursThunks::eval('Data_Array_zipWithA')))($dictApplicative_0);
+  $__res = ($GLOBALS['Data_Array_zipWithA'])($dictApplicative_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_splitAt'] = function() { $v = (function() {
+};
+
+// Data_Array_NonEmpty_splitAt
+$GLOBALS['Data_Array_NonEmpty_splitAt'] = (function() {
   $__fn = function($i_0 = null, $xs_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_Array_splitAt'] ?? \PhpursThunks::eval('Data_Array_splitAt')))($i_0))($xs_1);
+  $__res = (($GLOBALS['Data_Array_splitAt'])($i_0))($xs_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_some'] = function() { $v = (function() {
+})();
+
+// Data_Array_NonEmpty_some
+$GLOBALS['Data_Array_NonEmpty_some'] = (function() {
   $__fn = function($dictAlternative_0 = null, $dictLazy_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce'))))(((($GLOBALS['Data_Array_some'] ?? \PhpursThunks::eval('Data_Array_some')))($dictAlternative_0))($dictLazy_1));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce']))((($GLOBALS['Data_Array_some'])($dictAlternative_0))($dictLazy_1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_snoc__prime__'] = function() { $v = (function() {
+})();
+
+// Data_Array_NonEmpty_snoc'
+$GLOBALS['Data_Array_NonEmpty_snoc__prime__'] = (function() {
   $__fn = function($xs_0 = null, $x_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Control_Monad_ST_Internal_run'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_run')))(((($GLOBALS['Data_Array_ST_withArray'] ?? \PhpursThunks::eval('Data_Array_ST_withArray')))((($GLOBALS['Data_Array_ST_push'] ?? \PhpursThunks::eval('Data_Array_ST_push')))($x_1)))($xs_0));
+  $__res = ($GLOBALS['Control_Monad_ST_Internal_run'])((($GLOBALS['Data_Array_ST_withArray'])(($GLOBALS['Data_Array_ST_push'])($x_1)))($xs_0));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_snoc'] = function() { $v = (function() {
+})();
+
+// Data_Array_NonEmpty_snoc
+$GLOBALS['Data_Array_NonEmpty_snoc'] = (function() {
   $__fn = function($xs_0 = null, $x_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Control_Monad_ST_Internal_run'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_run')))(((($GLOBALS['Data_Array_ST_withArray'] ?? \PhpursThunks::eval('Data_Array_ST_withArray')))((($GLOBALS['Data_Array_ST_push'] ?? \PhpursThunks::eval('Data_Array_ST_push')))($x_1)))($xs_0));
+  $__res = ($GLOBALS['Control_Monad_ST_Internal_run'])((($GLOBALS['Data_Array_ST_withArray'])(($GLOBALS['Data_Array_ST_push'])($x_1)))($xs_0));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_singleton'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_Internal_NonEmptyArray'))))(($GLOBALS['Data_Array_singleton'] ?? \PhpursThunks::eval('Data_Array_singleton'))); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_replicate'] = function() { $v = (function() {
+})();
+
+// Data_Array_NonEmpty_singleton
+$GLOBALS['Data_Array_NonEmpty_singleton'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray']))($GLOBALS['Data_Array_singleton']);
+
+// Data_Array_NonEmpty_replicate
+$GLOBALS['Data_Array_NonEmpty_replicate'] = (function() {
   $__fn = function($i_0 = null, $x_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_Array_replicateImpl'] ?? \PhpursThunks::eval('Data_Array_replicateImpl')))(((($GLOBALS['Data_Array_NonEmpty_max'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_max')))(1))($i_0), $x_1);
+  $__res = ($GLOBALS['Data_Array_replicateImpl'])((($GLOBALS['Data_Array_NonEmpty_max'])(1))($i_0), $x_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_range'] = function() { $v = (function() {
+})();
+
+// Data_Array_NonEmpty_range
+$GLOBALS['Data_Array_NonEmpty_range'] = (function() {
   $__fn = function($x_0 = null, $y_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_Array_rangeImpl'] ?? \PhpursThunks::eval('Data_Array_rangeImpl')))($x_0, $y_1);
+  $__res = ($GLOBALS['Data_Array_rangeImpl'])($x_0, $y_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_prependArray'] = function() { $v = (function() {
+})();
+
+// Data_Array_NonEmpty_prependArray
+$GLOBALS['Data_Array_NonEmpty_prependArray'] = (function() {
   $__fn = function($xs_0 = null, $ys_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_Semigroup_concatArray'] ?? \PhpursThunks::eval('Data_Semigroup_concatArray')))($xs_0))($ys_1);
+  $__res = (($GLOBALS['Data_Semigroup_concatArray'])($xs_0))($ys_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_modifyAt'] = function() { $v = (function() {
+})();
+
+// Data_Array_NonEmpty_modifyAt
+$GLOBALS['Data_Array_NonEmpty_modifyAt'] = (function() {
   $__fn = function($i_0 = null, $f_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(((($GLOBALS['Data_Array_modifyAt'] ?? \PhpursThunks::eval('Data_Array_modifyAt')))($i_0))($f_1)))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray'))));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce']))((($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Array_modifyAt'])($i_0))($f_1)))($GLOBALS['Data_Array_NonEmpty_toArray']));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_intersectBy__prime__'] = function() { $v = (function() {
+})();
+
+// Data_Array_NonEmpty_intersectBy'
+$GLOBALS['Data_Array_NonEmpty_intersectBy__prime__'] = (function() {
   $__fn = function($eq_0 = null, $xs_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_Array_intersectBy'] ?? \PhpursThunks::eval('Data_Array_intersectBy')))($eq_0))($xs_1);
+  $__res = (($GLOBALS['Data_Array_intersectBy'])($eq_0))($xs_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_intersectBy'] = function() { $v = (function() {
+})();
+
+// Data_Array_NonEmpty_intersectBy
+$GLOBALS['Data_Array_NonEmpty_intersectBy'] = (function() {
   $__fn = function($eq_0 = null, $xs_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(((($GLOBALS['Data_Array_NonEmpty_intersectBy__prime__'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_intersectBy__prime__')))($eq_0))($xs_1)))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray')));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Array_NonEmpty_intersectBy__prime__'])($eq_0))($xs_1)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_intersect__prime__'] = function() { $v = function($dictEq_0 = null) {
+})();
+
+// Data_Array_NonEmpty_intersect'
+$GLOBALS['Data_Array_NonEmpty_intersect__prime__'] = function($dictEq_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Array_NonEmpty_intersectBy__prime__'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_intersectBy__prime__')))(($dictEq_0)['eq']);
+  $__res = ($GLOBALS['Data_Array_NonEmpty_intersectBy__prime__'])(($dictEq_0)['eq']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_intersect'] = function() { $v = function($dictEq_0 = null) {
+};
+
+// Data_Array_NonEmpty_intersect
+$GLOBALS['Data_Array_NonEmpty_intersect'] = function($dictEq_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Array_NonEmpty_intersectBy'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_intersectBy')))(($dictEq_0)['eq']);
+  $__res = ($GLOBALS['Data_Array_NonEmpty_intersectBy'])(($dictEq_0)['eq']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_intercalate'] = function() { $v = function($dictSemigroup_0 = null) {
+};
+
+// Data_Array_NonEmpty_intercalate
+$GLOBALS['Data_Array_NonEmpty_intercalate'] = function($dictSemigroup_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = ((($GLOBALS['Data_Semigroup_Foldable_intercalateMap'] ?? \PhpursThunks::eval('Data_Semigroup_Foldable_intercalateMap')))(($GLOBALS['Data_Array_NonEmpty_Internal_foldable1NonEmptyArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_Internal_foldable1NonEmptyArray'))))($dictSemigroup_0);
+  $__local_var_1_0 = (($GLOBALS['Data_Semigroup_Foldable_intercalateMap'])($GLOBALS['Data_Array_NonEmpty_Internal_foldable1NonEmptyArray']))($dictSemigroup_0);
   $__res = function($a_2 = null) use ($__local_var_1_0) {
   $__num = \func_num_args();
-  $__res = (($__local_var_1_0)($a_2))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))['identity']);
+  $__res = (($__local_var_1_0)($a_2))(($GLOBALS['Control_Category_categoryFn'])['identity']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -435,26 +494,30 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_insertAt'] = function() { $v = (function() {
+};
+
+// Data_Array_NonEmpty_insertAt
+$GLOBALS['Data_Array_NonEmpty_insertAt'] = (function() {
   $__fn = function($i_0 = null, $x_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(((($GLOBALS['Data_Array_insertAt'] ?? \PhpursThunks::eval('Data_Array_insertAt')))($i_0))($x_1)))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray'))));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce']))((($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Array_insertAt'])($i_0))($x_1)))($GLOBALS['Data_Array_NonEmpty_toArray']));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_fromFoldable1'] = function() { $v = function($dictFoldable1_0 = null) {
+})();
+
+// Data_Array_NonEmpty_fromFoldable1
+$GLOBALS['Data_Array_NonEmpty_fromFoldable1'] = function($dictFoldable1_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = ((($dictFoldable1_0)['Foldable0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['foldr'];
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_Internal_NonEmptyArray'))))(function($__local_var_2 = null) use ($__local_var_1_0) {
+  $__local_var_1_0 = ((($dictFoldable1_0)['Foldable0'])($GLOBALS['Prim_undefined']))['foldr'];
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray']))(function($__local_var_2 = null) use ($__local_var_1_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Array_fromFoldableImpl'] ?? \PhpursThunks::eval('Data_Array_fromFoldableImpl')))($__local_var_1_0, $__local_var_2);
+  $__res = ($GLOBALS['Data_Array_fromFoldableImpl'])($__local_var_1_0, $__local_var_2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -462,8 +525,10 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_fromArray'] = function() { $v = function($xs_0 = null) {
+};
+
+// Data_Array_NonEmpty_fromArray
+$GLOBALS['Data_Array_NonEmpty_fromArray'] = function($xs_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((count($xs_0) > 0)) {
@@ -476,13 +541,15 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_fromFoldable'] = function() { $v = function($dictFoldable_0 = null) {
+};
+
+// Data_Array_NonEmpty_fromFoldable
+$GLOBALS['Data_Array_NonEmpty_fromFoldable'] = function($dictFoldable_0 = null) {
   $__num = \func_num_args();
   $__local_var_1_0 = ($dictFoldable_0)['foldr'];
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Array_NonEmpty_fromArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_fromArray'))))(function($__local_var_2 = null) use ($__local_var_1_0) {
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_fromArray']))(function($__local_var_2 = null) use ($__local_var_1_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Array_fromFoldableImpl'] ?? \PhpursThunks::eval('Data_Array_fromFoldableImpl')))($__local_var_1_0, $__local_var_2);
+  $__res = ($GLOBALS['Data_Array_fromFoldableImpl'])($__local_var_1_0, $__local_var_2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -490,158 +557,210 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_transpose__prime__'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Array_NonEmpty_fromArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_fromArray'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Array_transpose'] ?? \PhpursThunks::eval('Data_Array_transpose'))))(($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_foldr1'] = function() { $v = (($GLOBALS['Data_Array_NonEmpty_Internal_foldable1NonEmptyArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_Internal_foldable1NonEmptyArray')))['foldr1']; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_foldl1'] = function() { $v = (($GLOBALS['Data_Array_NonEmpty_Internal_foldable1NonEmptyArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_Internal_foldable1NonEmptyArray')))['foldl1']; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_foldMap1'] = function() { $v = function($dictSemigroup_0 = null) {
+};
+
+// Data_Array_NonEmpty_transpose'
+$GLOBALS['Data_Array_NonEmpty_transpose__prime__'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_fromArray']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_transpose']))($GLOBALS['Unsafe_Coerce_unsafeCoerce']));
+
+// Data_Array_NonEmpty_foldr1
+$GLOBALS['Data_Array_NonEmpty_foldr1'] = ($GLOBALS['Data_Array_NonEmpty_Internal_foldable1NonEmptyArray'])['foldr1'];
+
+// Data_Array_NonEmpty_foldl1
+$GLOBALS['Data_Array_NonEmpty_foldl1'] = ($GLOBALS['Data_Array_NonEmpty_Internal_foldable1NonEmptyArray'])['foldl1'];
+
+// Data_Array_NonEmpty_foldMap1
+$GLOBALS['Data_Array_NonEmpty_foldMap1'] = function($dictSemigroup_0 = null) {
   $__num = \func_num_args();
-  $__res = (((($GLOBALS['Data_Semigroup_Foldable_foldMap1DefaultL'] ?? \PhpursThunks::eval('Data_Semigroup_Foldable_foldMap1DefaultL')))(($GLOBALS['Data_Array_NonEmpty_Internal_foldable1NonEmptyArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_Internal_foldable1NonEmptyArray'))))(($GLOBALS['Data_Functor_functorArray'] ?? \PhpursThunks::eval('Data_Functor_functorArray'))))($dictSemigroup_0);
+  $__res = ((($GLOBALS['Data_Semigroup_Foldable_foldMap1DefaultL'])($GLOBALS['Data_Array_NonEmpty_Internal_foldable1NonEmptyArray']))($GLOBALS['Data_Functor_functorArray']))($dictSemigroup_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_fold1'] = function() { $v = function($dictSemigroup_0 = null) {
+};
+
+// Data_Array_NonEmpty_fold1
+$GLOBALS['Data_Array_NonEmpty_fold1'] = function($dictSemigroup_0 = null) {
   $__num = \func_num_args();
-  $__res = ((((($GLOBALS['Data_Semigroup_Foldable_foldMap1DefaultL'] ?? \PhpursThunks::eval('Data_Semigroup_Foldable_foldMap1DefaultL')))(($GLOBALS['Data_Array_NonEmpty_Internal_foldable1NonEmptyArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_Internal_foldable1NonEmptyArray'))))(($GLOBALS['Data_Functor_functorArray'] ?? \PhpursThunks::eval('Data_Functor_functorArray'))))($dictSemigroup_0))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))['identity']);
+  $__res = (((($GLOBALS['Data_Semigroup_Foldable_foldMap1DefaultL'])($GLOBALS['Data_Array_NonEmpty_Internal_foldable1NonEmptyArray']))($GLOBALS['Data_Functor_functorArray']))($dictSemigroup_0))(($GLOBALS['Control_Category_categoryFn'])['identity']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_difference__prime__'] = function() { $v = function($dictEq_0 = null) {
+};
+
+// Data_Array_NonEmpty_difference'
+$GLOBALS['Data_Array_NonEmpty_difference__prime__'] = function($dictEq_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Foldable_foldrArray'] ?? \PhpursThunks::eval('Data_Foldable_foldrArray')))((($GLOBALS['Data_Array_delete'] ?? \PhpursThunks::eval('Data_Array_delete')))($dictEq_0));
+  $__res = ($GLOBALS['Data_Foldable_foldrArray'])(($GLOBALS['Data_Array_delete'])($dictEq_0));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_cons__prime__'] = function() { $v = (function() {
+};
+
+// Data_Array_NonEmpty_cons'
+$GLOBALS['Data_Array_NonEmpty_cons__prime__'] = (function() {
   $__fn = function($x_0 = null, $xs_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_Semigroup_concatArray'] ?? \PhpursThunks::eval('Data_Semigroup_concatArray')))([$x_0]))($xs_1);
+  $__res = (($GLOBALS['Data_Semigroup_concatArray'])([$x_0]))($xs_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_fromNonEmpty'] = function() { $v = function($v_0 = null) {
+})();
+
+// Data_Array_NonEmpty_fromNonEmpty
+$GLOBALS['Data_Array_NonEmpty_fromNonEmpty'] = function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semigroup_concatArray'] ?? \PhpursThunks::eval('Data_Semigroup_concatArray')))([($v_0)->{'value0'}]))(($v_0)->{'value1'});
+  $__res = (($GLOBALS['Data_Semigroup_concatArray'])([($v_0)->{'value0'}]))(($v_0)->{'value1'});
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_concatMap'] = function() { $v = (function() {
+};
+
+// Data_Array_NonEmpty_concatMap
+$GLOBALS['Data_Array_NonEmpty_concatMap'] = (function() {
   $__fn = function($b_0 = null, $a_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Bind_arrayBind'] ?? \PhpursThunks::eval('Control_Bind_arrayBind')))($a_1))($b_0);
+  $__res = (($GLOBALS['Control_Bind_arrayBind'])($a_1))($b_0);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_concat'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_Internal_NonEmptyArray'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Array_concat'] ?? \PhpursThunks::eval('Data_Array_concat'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray'))))((($GLOBALS['Data_Functor_arrayMap'] ?? \PhpursThunks::eval('Data_Functor_arrayMap')))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray')))))); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_appendArray'] = function() { $v = (function() {
+})();
+
+// Data_Array_NonEmpty_concat
+$GLOBALS['Data_Array_NonEmpty_concat'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_concat']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_toArray']))(($GLOBALS['Data_Functor_arrayMap'])($GLOBALS['Data_Array_NonEmpty_toArray']))));
+
+// Data_Array_NonEmpty_appendArray
+$GLOBALS['Data_Array_NonEmpty_appendArray'] = (function() {
   $__fn = function($xs_0 = null, $ys_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_Semigroup_concatArray'] ?? \PhpursThunks::eval('Data_Semigroup_concatArray')))($xs_0))($ys_1);
+  $__res = (($GLOBALS['Data_Semigroup_concatArray'])($xs_0))($ys_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_alterAt'] = function() { $v = (function() {
+})();
+
+// Data_Array_NonEmpty_alterAt
+$GLOBALS['Data_Array_NonEmpty_alterAt'] = (function() {
   $__fn = function($i_0 = null, $f_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(((($GLOBALS['Data_Array_alterAt'] ?? \PhpursThunks::eval('Data_Array_alterAt')))($i_0))($f_1)))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray')));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Array_alterAt'])($i_0))($f_1)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_head'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Array_NonEmpty_fromJust'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_fromJust'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Array_head'] ?? \PhpursThunks::eval('Data_Array_head'))))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray')))); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_init'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Array_NonEmpty_fromJust'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_fromJust'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Array_init'] ?? \PhpursThunks::eval('Data_Array_init'))))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray')))); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_last'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Array_NonEmpty_fromJust'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_fromJust'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Array_last'] ?? \PhpursThunks::eval('Data_Array_last'))))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray')))); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_tail'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Array_NonEmpty_fromJust'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_fromJust'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Array_tail'] ?? \PhpursThunks::eval('Data_Array_tail'))))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray')))); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_uncons'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Array_NonEmpty_fromJust'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_fromJust'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Array_uncons'] ?? \PhpursThunks::eval('Data_Array_uncons'))))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray')))); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_toNonEmpty'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(function($v_0 = null) {
+})();
+
+// Data_Array_NonEmpty_head
+$GLOBALS['Data_Array_NonEmpty_head'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_fromJust']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_head']))($GLOBALS['Data_Array_NonEmpty_toArray']));
+
+// Data_Array_NonEmpty_init
+$GLOBALS['Data_Array_NonEmpty_init'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_fromJust']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_init']))($GLOBALS['Data_Array_NonEmpty_toArray']));
+
+// Data_Array_NonEmpty_last
+$GLOBALS['Data_Array_NonEmpty_last'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_fromJust']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_last']))($GLOBALS['Data_Array_NonEmpty_toArray']));
+
+// Data_Array_NonEmpty_tail
+$GLOBALS['Data_Array_NonEmpty_tail'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_fromJust']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_tail']))($GLOBALS['Data_Array_NonEmpty_toArray']));
+
+// Data_Array_NonEmpty_uncons
+$GLOBALS['Data_Array_NonEmpty_uncons'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_fromJust']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_uncons']))($GLOBALS['Data_Array_NonEmpty_toArray']));
+
+// Data_Array_NonEmpty_toNonEmpty
+$GLOBALS['Data_Array_NonEmpty_toNonEmpty'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v_0 = null) {
   $__num = \func_num_args();
   $__res = new Phpurs_Data2("NonEmpty", ($v_0)['head'], ($v_0)['tail']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(($GLOBALS['Data_Array_NonEmpty_uncons'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_uncons'))); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_unsnoc'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Array_NonEmpty_fromJust'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_fromJust'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Array_unsnoc'] ?? \PhpursThunks::eval('Data_Array_unsnoc'))))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray')))); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_all'] = function() { $v = function($p_0 = null) {
+}))($GLOBALS['Data_Array_NonEmpty_uncons']);
+
+// Data_Array_NonEmpty_unsnoc
+$GLOBALS['Data_Array_NonEmpty_unsnoc'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_fromJust']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_unsnoc']))($GLOBALS['Data_Array_NonEmpty_toArray']));
+
+// Data_Array_NonEmpty_all
+$GLOBALS['Data_Array_NonEmpty_all'] = function($p_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Data_Array_all'] ?? \PhpursThunks::eval('Data_Array_all')))($p_0)))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray')));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_all'])($p_0)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_any'] = function() { $v = function($p_0 = null) {
+};
+
+// Data_Array_NonEmpty_any
+$GLOBALS['Data_Array_NonEmpty_any'] = function($p_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Data_Array_any'] ?? \PhpursThunks::eval('Data_Array_any')))($p_0)))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray')));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_any'])($p_0)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_catMaybes'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Data_Array_mapMaybe'] ?? \PhpursThunks::eval('Data_Array_mapMaybe')))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))['identity'])))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray'))); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_delete'] = function() { $v = (function() {
+};
+
+// Data_Array_NonEmpty_catMaybes
+$GLOBALS['Data_Array_NonEmpty_catMaybes'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_mapMaybe'])(($GLOBALS['Control_Category_categoryFn'])['identity'])))($GLOBALS['Data_Array_NonEmpty_toArray']);
+
+// Data_Array_NonEmpty_delete
+$GLOBALS['Data_Array_NonEmpty_delete'] = (function() {
   $__fn = function($dictEq_0 = null, $x_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(((($GLOBALS['Data_Array_delete'] ?? \PhpursThunks::eval('Data_Array_delete')))($dictEq_0))($x_1)))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray')));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Array_delete'])($dictEq_0))($x_1)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_deleteAt'] = function() { $v = function($i_0 = null) {
+})();
+
+// Data_Array_NonEmpty_deleteAt
+$GLOBALS['Data_Array_NonEmpty_deleteAt'] = function($i_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Data_Array_deleteAt'] ?? \PhpursThunks::eval('Data_Array_deleteAt')))($i_0)))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray')));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_deleteAt'])($i_0)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_deleteBy'] = function() { $v = (function() {
+};
+
+// Data_Array_NonEmpty_deleteBy
+$GLOBALS['Data_Array_NonEmpty_deleteBy'] = (function() {
   $__fn = function($f_0 = null, $x_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(((($GLOBALS['Data_Array_deleteBy'] ?? \PhpursThunks::eval('Data_Array_deleteBy')))($f_0))($x_1)))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray')));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Array_deleteBy'])($f_0))($x_1)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_difference'] = function() { $v = function($dictEq_0 = null) {
+})();
+
+// Data_Array_NonEmpty_difference
+$GLOBALS['Data_Array_NonEmpty_difference'] = function($dictEq_0 = null) {
   $__num = \func_num_args();
-  $difference__prime__1_1_0 = (($GLOBALS['Data_Foldable_foldrArray'] ?? \PhpursThunks::eval('Data_Foldable_foldrArray')))((($GLOBALS['Data_Array_delete'] ?? \PhpursThunks::eval('Data_Array_delete')))($dictEq_0));
+  $difference__prime__1_1_0 = ($GLOBALS['Data_Foldable_foldrArray'])(($GLOBALS['Data_Array_delete'])($dictEq_0));
   $__res = function($xs_2 = null) use ($difference__prime__1_1_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($difference__prime__1_1_0)($xs_2)))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray')));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($difference__prime__1_1_0)($xs_2)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -649,80 +768,96 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_drop'] = function() { $v = function($i_0 = null) {
+};
+
+// Data_Array_NonEmpty_drop
+$GLOBALS['Data_Array_NonEmpty_drop'] = function($i_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Data_Array_drop'] ?? \PhpursThunks::eval('Data_Array_drop')))($i_0)))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray')));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_drop'])($i_0)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_dropEnd'] = function() { $v = function($i_0 = null) {
+};
+
+// Data_Array_NonEmpty_dropEnd
+$GLOBALS['Data_Array_NonEmpty_dropEnd'] = function($i_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Data_Array_dropEnd'] ?? \PhpursThunks::eval('Data_Array_dropEnd')))($i_0)))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray')));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_dropEnd'])($i_0)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_dropWhile'] = function() { $v = function($f_0 = null) {
+};
+
+// Data_Array_NonEmpty_dropWhile
+$GLOBALS['Data_Array_NonEmpty_dropWhile'] = function($f_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Data_Array_dropWhile'] ?? \PhpursThunks::eval('Data_Array_dropWhile')))($f_0)))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray')));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_dropWhile'])($f_0)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_elem'] = function() { $v = (function() {
+};
+
+// Data_Array_NonEmpty_elem
+$GLOBALS['Data_Array_NonEmpty_elem'] = (function() {
   $__fn = function($dictEq_0 = null, $x_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(((($GLOBALS['Data_Array_elem'] ?? \PhpursThunks::eval('Data_Array_elem')))($dictEq_0))($x_1)))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray')));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Array_elem'])($dictEq_0))($x_1)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_elemIndex'] = function() { $v = (function() {
+})();
+
+// Data_Array_NonEmpty_elemIndex
+$GLOBALS['Data_Array_NonEmpty_elemIndex'] = (function() {
   $__fn = function($dictEq_0 = null, $x_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(((($GLOBALS['Data_Array_elemIndex'] ?? \PhpursThunks::eval('Data_Array_elemIndex')))($dictEq_0))($x_1)))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray')));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Array_elemIndex'])($dictEq_0))($x_1)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_elemLastIndex'] = function() { $v = (function() {
+})();
+
+// Data_Array_NonEmpty_elemLastIndex
+$GLOBALS['Data_Array_NonEmpty_elemLastIndex'] = (function() {
   $__fn = function($dictEq_0 = null, $x_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(((($GLOBALS['Data_Array_elemLastIndex'] ?? \PhpursThunks::eval('Data_Array_elemLastIndex')))($dictEq_0))($x_1)))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray')));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Array_elemLastIndex'])($dictEq_0))($x_1)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_filter'] = function() { $v = function($f_0 = null) {
+})();
+
+// Data_Array_NonEmpty_filter
+$GLOBALS['Data_Array_NonEmpty_filter'] = function($f_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Data_Array_filter'] ?? \PhpursThunks::eval('Data_Array_filter')))($f_0)))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray')));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_filter'])($f_0)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_filterA'] = function() { $v = function($dictApplicative_0 = null) {
+};
+
+// Data_Array_NonEmpty_filterA
+$GLOBALS['Data_Array_NonEmpty_filterA'] = function($dictApplicative_0 = null) {
   $__num = \func_num_args();
-  $filterA1_1_0 = (($GLOBALS['Data_Array_filterA'] ?? \PhpursThunks::eval('Data_Array_filterA')))($dictApplicative_0);
+  $filterA1_1_0 = ($GLOBALS['Data_Array_filterA'])($dictApplicative_0);
   $__res = function($f_2 = null) use ($filterA1_1_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($filterA1_1_0)($f_2)))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray')));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($filterA1_1_0)($f_2)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -730,58 +865,70 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_find'] = function() { $v = function($p_0 = null) {
+};
+
+// Data_Array_NonEmpty_find
+$GLOBALS['Data_Array_NonEmpty_find'] = function($p_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Data_Array_find'] ?? \PhpursThunks::eval('Data_Array_find')))($p_0)))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray')));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_find'])($p_0)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_findIndex'] = function() { $v = function($p_0 = null) {
+};
+
+// Data_Array_NonEmpty_findIndex
+$GLOBALS['Data_Array_NonEmpty_findIndex'] = function($p_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Data_Array_findIndex'] ?? \PhpursThunks::eval('Data_Array_findIndex')))($p_0)))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray')));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_findIndex'])($p_0)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_findLastIndex'] = function() { $v = function($x_0 = null) {
+};
+
+// Data_Array_NonEmpty_findLastIndex
+$GLOBALS['Data_Array_NonEmpty_findLastIndex'] = function($x_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Data_Array_findLastIndex'] ?? \PhpursThunks::eval('Data_Array_findLastIndex')))($x_0)))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray')));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_findLastIndex'])($x_0)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_findMap'] = function() { $v = function($p_0 = null) {
+};
+
+// Data_Array_NonEmpty_findMap
+$GLOBALS['Data_Array_NonEmpty_findMap'] = function($p_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Data_Array_findMap'] ?? \PhpursThunks::eval('Data_Array_findMap')))($p_0)))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray')));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_findMap'])($p_0)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_foldM'] = function() { $v = (function() {
+};
+
+// Data_Array_NonEmpty_foldM
+$GLOBALS['Data_Array_NonEmpty_foldM'] = (function() {
   $__fn = function($dictMonad_0 = null, $f_1 = null, $acc_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((((($GLOBALS['Data_Array_foldM'] ?? \PhpursThunks::eval('Data_Array_foldM')))($dictMonad_0))($f_1))($acc_2)))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray')));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(((($GLOBALS['Data_Array_foldM'])($dictMonad_0))($f_1))($acc_2)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_foldRecM'] = function() { $v = function($dictMonadRec_0 = null) {
+})();
+
+// Data_Array_NonEmpty_foldRecM
+$GLOBALS['Data_Array_NonEmpty_foldRecM'] = function($dictMonadRec_0 = null) {
   $__num = \func_num_args();
-  $foldRecM1_1_0 = (($GLOBALS['Data_Array_foldRecM'] ?? \PhpursThunks::eval('Data_Array_foldRecM')))($dictMonadRec_0);
+  $foldRecM1_1_0 = ($GLOBALS['Data_Array_foldRecM'])($dictMonadRec_0);
   $__res = (function() use ($foldRecM1_1_0) {
   $__fn = function($f_2 = null, $acc_3 = null) use ($foldRecM1_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($foldRecM1_1_0)($f_2))($acc_3)))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray')));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($foldRecM1_1_0)($f_2))($acc_3)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -791,80 +938,102 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_index'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Array_index'] ?? \PhpursThunks::eval('Data_Array_index'))))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray'))); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_length'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Array_length'] ?? \PhpursThunks::eval('Data_Array_length'))))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray'))); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_mapMaybe'] = function() { $v = function($f_0 = null) {
+};
+
+// Data_Array_NonEmpty_index
+$GLOBALS['Data_Array_NonEmpty_index'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_index']))($GLOBALS['Data_Array_NonEmpty_toArray']);
+
+// Data_Array_NonEmpty_length
+$GLOBALS['Data_Array_NonEmpty_length'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_length']))($GLOBALS['Data_Array_NonEmpty_toArray']);
+
+// Data_Array_NonEmpty_mapMaybe
+$GLOBALS['Data_Array_NonEmpty_mapMaybe'] = function($f_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Data_Array_mapMaybe'] ?? \PhpursThunks::eval('Data_Array_mapMaybe')))($f_0)))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray')));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_mapMaybe'])($f_0)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_notElem'] = function() { $v = (function() {
+};
+
+// Data_Array_NonEmpty_notElem
+$GLOBALS['Data_Array_NonEmpty_notElem'] = (function() {
   $__fn = function($dictEq_0 = null, $x_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(((($GLOBALS['Data_Array_notElem'] ?? \PhpursThunks::eval('Data_Array_notElem')))($dictEq_0))($x_1)))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray')));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Array_notElem'])($dictEq_0))($x_1)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_partition'] = function() { $v = function($f_0 = null) {
+})();
+
+// Data_Array_NonEmpty_partition
+$GLOBALS['Data_Array_NonEmpty_partition'] = function($f_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Data_Array_partition'] ?? \PhpursThunks::eval('Data_Array_partition')))($f_0)))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray')));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_partition'])($f_0)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_slice'] = function() { $v = (function() {
+};
+
+// Data_Array_NonEmpty_slice
+$GLOBALS['Data_Array_NonEmpty_slice'] = (function() {
   $__fn = function($start_0 = null, $end_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(((($GLOBALS['Data_Array_slice'] ?? \PhpursThunks::eval('Data_Array_slice')))($start_0))($end_1)))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray')));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Array_slice'])($start_0))($end_1)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_span'] = function() { $v = function($f_0 = null) {
+})();
+
+// Data_Array_NonEmpty_span
+$GLOBALS['Data_Array_NonEmpty_span'] = function($f_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Data_Array_span'] ?? \PhpursThunks::eval('Data_Array_span')))($f_0)))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray')));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_span'])($f_0)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_take'] = function() { $v = function($i_0 = null) {
+};
+
+// Data_Array_NonEmpty_take
+$GLOBALS['Data_Array_NonEmpty_take'] = function($i_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Data_Array_take'] ?? \PhpursThunks::eval('Data_Array_take')))($i_0)))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray')));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_take'])($i_0)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_takeEnd'] = function() { $v = function($i_0 = null) {
+};
+
+// Data_Array_NonEmpty_takeEnd
+$GLOBALS['Data_Array_NonEmpty_takeEnd'] = function($i_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Data_Array_takeEnd'] ?? \PhpursThunks::eval('Data_Array_takeEnd')))($i_0)))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray')));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_takeEnd'])($i_0)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_takeWhile'] = function() { $v = function($f_0 = null) {
+};
+
+// Data_Array_NonEmpty_takeWhile
+$GLOBALS['Data_Array_NonEmpty_takeWhile'] = function($f_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Data_Array_takeWhile'] ?? \PhpursThunks::eval('Data_Array_takeWhile')))($f_0)))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray')));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_takeWhile'])($f_0)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_toUnfoldable'] = function() { $v = function($dictUnfoldable_0 = null) {
+};
+
+// Data_Array_NonEmpty_toUnfoldable
+$GLOBALS['Data_Array_NonEmpty_toUnfoldable'] = function($dictUnfoldable_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(function($xs_1 = null) use ($dictUnfoldable_0) {
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(function($xs_1 = null) use ($dictUnfoldable_0) {
   $__num = \func_num_args();
   $len_2_0 = count($xs_1);
   $__res = ((($dictUnfoldable_0)['unfoldr'])(function($i_3 = null) use ($len_2_0, $xs_1) {
@@ -884,103 +1053,123 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray')));
+}))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_cons'] = function() { $v = function($x_0 = null) {
+};
+
+// Data_Array_NonEmpty_cons
+$GLOBALS['Data_Array_NonEmpty_cons'] = function($x_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_Internal_NonEmptyArray'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Data_Array_cons'] ?? \PhpursThunks::eval('Data_Array_cons')))($x_0)))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray'))));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray']))((($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_cons'])($x_0)))($GLOBALS['Data_Array_NonEmpty_toArray']));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_group'] = function() { $v = function($dictEq_0 = null) {
+};
+
+// Data_Array_NonEmpty_group
+$GLOBALS['Data_Array_NonEmpty_group'] = function($dictEq_0 = null) {
   $__num = \func_num_args();
   $eq2_1_0 = ($dictEq_0)['eq'];
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_Internal_NonEmptyArray'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(function($xs_2 = null) use ($eq2_1_0) {
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray']))((($GLOBALS['Control_Semigroupoid_composeImpl'])(function($xs_2 = null) use ($eq2_1_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Array_groupBy'] ?? \PhpursThunks::eval('Data_Array_groupBy')))($eq2_1_0))($xs_2);
+  $__res = (($GLOBALS['Data_Array_groupBy'])($eq2_1_0))($xs_2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray'))));
+}))($GLOBALS['Data_Array_NonEmpty_toArray']));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_groupAllBy'] = function() { $v = function($op_0 = null) {
+};
+
+// Data_Array_NonEmpty_groupAllBy
+$GLOBALS['Data_Array_NonEmpty_groupAllBy'] = function($op_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_Internal_NonEmptyArray'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Data_Array_groupAllBy'] ?? \PhpursThunks::eval('Data_Array_groupAllBy')))($op_0)))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray'))));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray']))((($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_groupAllBy'])($op_0)))($GLOBALS['Data_Array_NonEmpty_toArray']));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_groupAll'] = function() { $v = function($dictOrd_0 = null) {
+};
+
+// Data_Array_NonEmpty_groupAll
+$GLOBALS['Data_Array_NonEmpty_groupAll'] = function($dictOrd_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_Internal_NonEmptyArray'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Data_Array_groupAllBy'] ?? \PhpursThunks::eval('Data_Array_groupAllBy')))(($dictOrd_0)['compare'])))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray'))));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray']))((($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_groupAllBy'])(($dictOrd_0)['compare'])))($GLOBALS['Data_Array_NonEmpty_toArray']));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_groupBy'] = function() { $v = function($op_0 = null) {
+};
+
+// Data_Array_NonEmpty_groupBy
+$GLOBALS['Data_Array_NonEmpty_groupBy'] = function($op_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_Internal_NonEmptyArray'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Data_Array_groupBy'] ?? \PhpursThunks::eval('Data_Array_groupBy')))($op_0)))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray'))));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray']))((($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_groupBy'])($op_0)))($GLOBALS['Data_Array_NonEmpty_toArray']));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_insert'] = function() { $v = (function() {
+};
+
+// Data_Array_NonEmpty_insert
+$GLOBALS['Data_Array_NonEmpty_insert'] = (function() {
   $__fn = function($dictOrd_0 = null, $x_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_Internal_NonEmptyArray'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(((($GLOBALS['Data_Array_insert'] ?? \PhpursThunks::eval('Data_Array_insert')))($dictOrd_0))($x_1)))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray'))));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray']))((($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Array_insert'])($dictOrd_0))($x_1)))($GLOBALS['Data_Array_NonEmpty_toArray']));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_insertBy'] = function() { $v = (function() {
+})();
+
+// Data_Array_NonEmpty_insertBy
+$GLOBALS['Data_Array_NonEmpty_insertBy'] = (function() {
   $__fn = function($f_0 = null, $x_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_Internal_NonEmptyArray'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(((($GLOBALS['Data_Array_insertBy'] ?? \PhpursThunks::eval('Data_Array_insertBy')))($f_0))($x_1)))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray'))));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray']))((($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Array_insertBy'])($f_0))($x_1)))($GLOBALS['Data_Array_NonEmpty_toArray']));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_intersperse'] = function() { $v = function($x_0 = null) {
+})();
+
+// Data_Array_NonEmpty_intersperse
+$GLOBALS['Data_Array_NonEmpty_intersperse'] = function($x_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_Internal_NonEmptyArray'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Data_Array_intersperse'] ?? \PhpursThunks::eval('Data_Array_intersperse')))($x_0)))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray'))));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray']))((($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_intersperse'])($x_0)))($GLOBALS['Data_Array_NonEmpty_toArray']));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_mapWithIndex'] = function() { $v = function($f_0 = null) {
+};
+
+// Data_Array_NonEmpty_mapWithIndex
+$GLOBALS['Data_Array_NonEmpty_mapWithIndex'] = function($f_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_Internal_NonEmptyArray'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Data_FunctorWithIndex_mapWithIndexArray'] ?? \PhpursThunks::eval('Data_FunctorWithIndex_mapWithIndexArray')))($f_0)))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray'))));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray']))((($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_FunctorWithIndex_mapWithIndexArray'])($f_0)))($GLOBALS['Data_Array_NonEmpty_toArray']));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_modifyAtIndices'] = function() { $v = function($dictFoldable_0 = null) {
+};
+
+// Data_Array_NonEmpty_modifyAtIndices
+$GLOBALS['Data_Array_NonEmpty_modifyAtIndices'] = function($dictFoldable_0 = null) {
   $__num = \func_num_args();
-  $modifyAtIndices1_1_0 = (($GLOBALS['Data_Array_modifyAtIndices'] ?? \PhpursThunks::eval('Data_Array_modifyAtIndices')))($dictFoldable_0);
+  $modifyAtIndices1_1_0 = ($GLOBALS['Data_Array_modifyAtIndices'])($dictFoldable_0);
   $__res = (function() use ($modifyAtIndices1_1_0) {
   $__fn = function($is_2 = null, $f_3 = null) use ($modifyAtIndices1_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_Internal_NonEmptyArray'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($modifyAtIndices1_1_0)($is_2))($f_3)))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray'))));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray']))((($GLOBALS['Control_Semigroupoid_composeImpl'])((($modifyAtIndices1_1_0)($is_2))($f_3)))($GLOBALS['Data_Array_NonEmpty_toArray']));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -990,102 +1179,124 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_nub'] = function() { $v = function($dictOrd_0 = null) {
+};
+
+// Data_Array_NonEmpty_nub
+$GLOBALS['Data_Array_NonEmpty_nub'] = function($dictOrd_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_Internal_NonEmptyArray'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Data_Array_nub'] ?? \PhpursThunks::eval('Data_Array_nub')))($dictOrd_0)))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray'))));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray']))((($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_nub'])($dictOrd_0)))($GLOBALS['Data_Array_NonEmpty_toArray']));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_nubBy'] = function() { $v = function($f_0 = null) {
+};
+
+// Data_Array_NonEmpty_nubBy
+$GLOBALS['Data_Array_NonEmpty_nubBy'] = function($f_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_Internal_NonEmptyArray'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Data_Array_nubBy'] ?? \PhpursThunks::eval('Data_Array_nubBy')))($f_0)))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray'))));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray']))((($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_nubBy'])($f_0)))($GLOBALS['Data_Array_NonEmpty_toArray']));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_nubByEq'] = function() { $v = function($f_0 = null) {
+};
+
+// Data_Array_NonEmpty_nubByEq
+$GLOBALS['Data_Array_NonEmpty_nubByEq'] = function($f_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_Internal_NonEmptyArray'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Data_Array_nubByEq'] ?? \PhpursThunks::eval('Data_Array_nubByEq')))($f_0)))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray'))));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray']))((($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_nubByEq'])($f_0)))($GLOBALS['Data_Array_NonEmpty_toArray']));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_nubEq'] = function() { $v = function($dictEq_0 = null) {
+};
+
+// Data_Array_NonEmpty_nubEq
+$GLOBALS['Data_Array_NonEmpty_nubEq'] = function($dictEq_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_Internal_NonEmptyArray'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Data_Array_nubEq'] ?? \PhpursThunks::eval('Data_Array_nubEq')))($dictEq_0)))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray'))));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray']))((($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_nubEq'])($dictEq_0)))($GLOBALS['Data_Array_NonEmpty_toArray']));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_reverse'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_Internal_NonEmptyArray'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Array_reverse'] ?? \PhpursThunks::eval('Data_Array_reverse'))))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray')))); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_scanl'] = function() { $v = (function() {
+};
+
+// Data_Array_NonEmpty_reverse
+$GLOBALS['Data_Array_NonEmpty_reverse'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_reverse']))($GLOBALS['Data_Array_NonEmpty_toArray']));
+
+// Data_Array_NonEmpty_scanl
+$GLOBALS['Data_Array_NonEmpty_scanl'] = (function() {
   $__fn = function($f_0 = null, $x_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_Internal_NonEmptyArray'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(((($GLOBALS['Data_Array_scanl'] ?? \PhpursThunks::eval('Data_Array_scanl')))($f_0))($x_1)))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray'))));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray']))((($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Array_scanl'])($f_0))($x_1)))($GLOBALS['Data_Array_NonEmpty_toArray']));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_scanr'] = function() { $v = (function() {
+})();
+
+// Data_Array_NonEmpty_scanr
+$GLOBALS['Data_Array_NonEmpty_scanr'] = (function() {
   $__fn = function($f_0 = null, $x_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_Internal_NonEmptyArray'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(((($GLOBALS['Data_Array_scanr'] ?? \PhpursThunks::eval('Data_Array_scanr')))($f_0))($x_1)))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray'))));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray']))((($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Array_scanr'])($f_0))($x_1)))($GLOBALS['Data_Array_NonEmpty_toArray']));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_sort'] = function() { $v = function($dictOrd_0 = null) {
+})();
+
+// Data_Array_NonEmpty_sort
+$GLOBALS['Data_Array_NonEmpty_sort'] = function($dictOrd_0 = null) {
   $__num = \func_num_args();
   $compare_1_0 = ($dictOrd_0)['compare'];
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_Internal_NonEmptyArray'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(function($xs_2 = null) use ($compare_1_0) {
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray']))((($GLOBALS['Control_Semigroupoid_composeImpl'])(function($xs_2 = null) use ($compare_1_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Array_sortBy'] ?? \PhpursThunks::eval('Data_Array_sortBy')))($compare_1_0))($xs_2);
+  $__res = (($GLOBALS['Data_Array_sortBy'])($compare_1_0))($xs_2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray'))));
+}))($GLOBALS['Data_Array_NonEmpty_toArray']));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_sortBy'] = function() { $v = function($f_0 = null) {
+};
+
+// Data_Array_NonEmpty_sortBy
+$GLOBALS['Data_Array_NonEmpty_sortBy'] = function($f_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_Internal_NonEmptyArray'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Data_Array_sortBy'] ?? \PhpursThunks::eval('Data_Array_sortBy')))($f_0)))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray'))));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray']))((($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_sortBy'])($f_0)))($GLOBALS['Data_Array_NonEmpty_toArray']));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_sortWith'] = function() { $v = (function() {
+};
+
+// Data_Array_NonEmpty_sortWith
+$GLOBALS['Data_Array_NonEmpty_sortWith'] = (function() {
   $__fn = function($dictOrd_0 = null, $f_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_Internal_NonEmptyArray'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(((($GLOBALS['Data_Array_sortWith'] ?? \PhpursThunks::eval('Data_Array_sortWith')))($dictOrd_0))($f_1)))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray'))));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray']))((($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Array_sortWith'])($dictOrd_0))($f_1)))($GLOBALS['Data_Array_NonEmpty_toArray']));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_updateAtIndices'] = function() { $v = function($dictFoldable_0 = null) {
+})();
+
+// Data_Array_NonEmpty_updateAtIndices
+$GLOBALS['Data_Array_NonEmpty_updateAtIndices'] = function($dictFoldable_0 = null) {
   $__num = \func_num_args();
-  $updateAtIndices1_1_0 = (($GLOBALS['Data_Array_updateAtIndices'] ?? \PhpursThunks::eval('Data_Array_updateAtIndices')))($dictFoldable_0);
+  $updateAtIndices1_1_0 = ($GLOBALS['Data_Array_updateAtIndices'])($dictFoldable_0);
   $__res = function($pairs_2 = null) use ($updateAtIndices1_1_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_Internal_NonEmptyArray'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($updateAtIndices1_1_0)($pairs_2)))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray'))));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray']))((($GLOBALS['Control_Semigroupoid_composeImpl'])(($updateAtIndices1_1_0)($pairs_2)))($GLOBALS['Data_Array_NonEmpty_toArray']));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1093,22 +1304,28 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_unsafeIndex'] = function() { $v = function($dollar__unused_0 = null) {
+};
+
+// Data_Array_NonEmpty_unsafeIndex
+$GLOBALS['Data_Array_NonEmpty_unsafeIndex'] = function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Array_NonEmpty_unsafeIndex1'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_unsafeIndex1'))))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray')));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_unsafeIndex1']))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_unsafeIndex2'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Array_NonEmpty_unsafeIndex1'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_unsafeIndex1'))))(($GLOBALS['Data_Array_NonEmpty_toArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_toArray'))); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_toUnfoldable1'] = function() { $v = (function() {
+};
+
+// Data_Array_NonEmpty_unsafeIndex2
+$GLOBALS['Data_Array_NonEmpty_unsafeIndex2'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_unsafeIndex1']))($GLOBALS['Data_Array_NonEmpty_toArray']);
+
+// Data_Array_NonEmpty_toUnfoldable1
+$GLOBALS['Data_Array_NonEmpty_toUnfoldable1'] = (function() {
   $__fn = function($dictUnfoldable1_0 = null, $xs_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $len_2_0 = (($GLOBALS['Data_Array_NonEmpty_length'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_length')))($xs_1);
+  $len_2_0 = ($GLOBALS['Data_Array_NonEmpty_length'])($xs_1);
   $__res = ((($dictUnfoldable1_0)['unfoldr1'])(function($i_3 = null) use ($len_2_0, $xs_1) {
   $__num = \func_num_args();
   $__t1 = null;;
@@ -1118,7 +1335,7 @@ goto end_branch_1;;
 };
   $__t1 = new Phpurs_Data0("Nothing");
   end_branch_1:;
-  $__res = new Phpurs_Data2("Tuple", ((($GLOBALS['Data_Array_NonEmpty_unsafeIndex2'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_unsafeIndex2')))($xs_1))($i_3), $__t1);
+  $__res = new Phpurs_Data2("Tuple", (($GLOBALS['Data_Array_NonEmpty_unsafeIndex2'])($xs_1))($i_3), $__t1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1128,114 +1345,5 @@ goto end_branch_1;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+})();
 

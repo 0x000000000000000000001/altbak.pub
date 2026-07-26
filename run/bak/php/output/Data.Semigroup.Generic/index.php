@@ -94,7 +94,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Semigroup_Generic_genericSemigroupNoConstructors'] = function() { $v = ["genericAppend__prime__" => (function() {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Semigroup_Generic_genericSemigroupNoConstructors
+$GLOBALS['Data_Semigroup_Generic_genericSemigroupNoConstructors'] = ["genericAppend__prime__" => (function() {
   $__fn = function($a_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -106,8 +111,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Semigroup_Generic_genericSemigroupNoArguments'] = function() { $v = ["genericAppend__prime__" => (function() {
+})()];
+
+// Data_Semigroup_Generic_genericSemigroupNoArguments
+$GLOBALS['Data_Semigroup_Generic_genericSemigroupNoArguments'] = ["genericAppend__prime__" => (function() {
   $__fn = function($a_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -119,8 +126,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Semigroup_Generic_genericSemigroupArgument'] = function() { $v = function($dictSemigroup_0 = null) {
+})()];
+
+// Data_Semigroup_Generic_genericSemigroupArgument
+$GLOBALS['Data_Semigroup_Generic_genericSemigroupArgument'] = function($dictSemigroup_0 = null) {
   $__num = \func_num_args();
   $__res = ["genericAppend__prime__" => (function() use ($dictSemigroup_0) {
   $__fn = function($v_1 = null, $v1_2 = null) use ($dictSemigroup_0, &$__fn) {
@@ -138,15 +147,19 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Semigroup_Generic_genericAppend__prime__'] = function() { $v = function($dict_0 = null) {
+};
+
+// Data_Semigroup_Generic_genericAppend'
+$GLOBALS['Data_Semigroup_Generic_genericAppend__prime__'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['genericAppend__prime__'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Semigroup_Generic_genericSemigroupConstructor'] = function() { $v = function($dictGenericSemigroup_0 = null) {
+};
+
+// Data_Semigroup_Generic_genericSemigroupConstructor
+$GLOBALS['Data_Semigroup_Generic_genericSemigroupConstructor'] = function($dictGenericSemigroup_0 = null) {
   $__num = \func_num_args();
   $__res = ["genericAppend__prime__" => (function() use ($dictGenericSemigroup_0) {
   $__fn = function($v_1 = null, $v1_2 = null) use ($dictGenericSemigroup_0, &$__fn) {
@@ -164,8 +177,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Semigroup_Generic_genericSemigroupProduct'] = function() { $v = (function() {
+};
+
+// Data_Semigroup_Generic_genericSemigroupProduct
+$GLOBALS['Data_Semigroup_Generic_genericSemigroupProduct'] = (function() {
   $__fn = function($dictGenericSemigroup_0 = null, $dictGenericSemigroup1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -189,8 +204,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Semigroup_Generic_genericAppend'] = function() { $v = (function() {
+})();
+
+// Data_Semigroup_Generic_genericAppend
+$GLOBALS['Data_Semigroup_Generic_genericAppend'] = (function() {
   $__fn = function($dictGeneric_0 = null, $dictGenericSemigroup_1 = null, $x_2 = null, $y_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
@@ -202,14 +219,5 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
+})();
 

@@ -113,29 +113,40 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Bifoldable_monoidEndo'] = function() { $v = (($GLOBALS['Data_Monoid_Endo_monoidEndo'] ?? \PhpursThunks::eval('Data_Monoid_Endo_monoidEndo')))(($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn'))); return $v; };
-\PhpursThunks::$thunks['Data_Bifoldable_monoidDual'] = function() { $v = (($GLOBALS['Data_Monoid_Dual_monoidDual'] ?? \PhpursThunks::eval('Data_Monoid_Dual_monoidDual')))(($GLOBALS['Data_Bifoldable_monoidEndo'] ?? \PhpursThunks::eval('Data_Bifoldable_monoidEndo'))); return $v; };
-\PhpursThunks::$thunks['Data_Bifoldable_bifoldr'] = function() { $v = function($dict_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Bifoldable_monoidEndo
+$GLOBALS['Data_Bifoldable_monoidEndo'] = ($GLOBALS['Data_Monoid_Endo_monoidEndo'])($GLOBALS['Control_Category_categoryFn']);
+
+// Data_Bifoldable_monoidDual
+$GLOBALS['Data_Bifoldable_monoidDual'] = ($GLOBALS['Data_Monoid_Dual_monoidDual'])($GLOBALS['Data_Bifoldable_monoidEndo']);
+
+// Data_Bifoldable_bifoldr
+$GLOBALS['Data_Bifoldable_bifoldr'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['bifoldr'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Bifoldable_bitraverse_'] = function() { $v = (function() {
+};
+
+// Data_Bifoldable_bitraverse_
+$GLOBALS['Data_Bifoldable_bitraverse_'] = (function() {
   $__fn = function($dictBifoldable_0 = null, $dictApplicative_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $applySecond_2_0 = (($GLOBALS['Control_Apply_applySecond'] ?? \PhpursThunks::eval('Control_Apply_applySecond')))((($dictApplicative_1)['Apply0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $applySecond_2_0 = ($GLOBALS['Control_Apply_applySecond'])((($dictApplicative_1)['Apply0'])($GLOBALS['Prim_undefined']));
   $__res = (function() use ($applySecond_2_0, $dictApplicative_1, $dictBifoldable_0) {
   $__fn = function($f_3 = null, $g_4 = null) use ($applySecond_2_0, $dictApplicative_1, $dictBifoldable_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($dictBifoldable_0)['bifoldr'])(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($applySecond_2_0))($f_3)))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($applySecond_2_0))($g_4)))((($dictApplicative_1)['pure'])(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'))));
+  $__res = (((($dictBifoldable_0)['bifoldr'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($applySecond_2_0))($f_3)))((($GLOBALS['Control_Semigroupoid_composeImpl'])($applySecond_2_0))($g_4)))((($dictApplicative_1)['pure'])($GLOBALS['Data_Unit_unit']));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -147,14 +158,16 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Bifoldable_bifor_'] = function() { $v = (function() {
+})();
+
+// Data_Bifoldable_bifor_
+$GLOBALS['Data_Bifoldable_bifor_'] = (function() {
   $__fn = function($dictBifoldable_0 = null, $dictApplicative_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $bitraverse_2_2_0 = ((($GLOBALS['Data_Bifoldable_bitraverse_'] ?? \PhpursThunks::eval('Data_Bifoldable_bitraverse_')))($dictBifoldable_0))($dictApplicative_1);
+  $bitraverse_2_2_0 = (($GLOBALS['Data_Bifoldable_bitraverse_'])($dictBifoldable_0))($dictApplicative_1);
   $__res = (function() use ($bitraverse_2_2_0) {
   $__fn = function($t_3 = null, $f_4 = null, $g_5 = null) use ($bitraverse_2_2_0, &$__fn) {
   $__num = \func_num_args();
@@ -173,34 +186,40 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Bifoldable_bisequence_'] = function() { $v = (function() {
+})();
+
+// Data_Bifoldable_bisequence_
+$GLOBALS['Data_Bifoldable_bisequence_'] = (function() {
   $__fn = function($dictBifoldable_0 = null, $dictApplicative_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((($GLOBALS['Data_Bifoldable_bitraverse_'] ?? \PhpursThunks::eval('Data_Bifoldable_bitraverse_')))($dictBifoldable_0))($dictApplicative_1))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))['identity']))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))['identity']);
+  $__res = (((($GLOBALS['Data_Bifoldable_bitraverse_'])($dictBifoldable_0))($dictApplicative_1))(($GLOBALS['Control_Category_categoryFn'])['identity']))(($GLOBALS['Control_Category_categoryFn'])['identity']);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Bifoldable_bifoldl'] = function() { $v = function($dict_0 = null) {
+})();
+
+// Data_Bifoldable_bifoldl
+$GLOBALS['Data_Bifoldable_bifoldl'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['bifoldl'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Bifoldable_bifoldableTuple'] = function() { $v = ["bifoldMap" => (function() {
+};
+
+// Data_Bifoldable_bifoldableTuple
+$GLOBALS['Data_Bifoldable_bifoldableTuple'] = ["bifoldMap" => (function() {
   $__fn = function($dictMonoid_0 = null, $f_1 = null, $g_2 = null, $v_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ((((($dictMonoid_0)['Semigroup0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['append'])(($f_1)(($v_3)->{'value0'})))(($g_2)(($v_3)->{'value1'}));
+  $__res = ((((($dictMonoid_0)['Semigroup0'])($GLOBALS['Prim_undefined']))['append'])(($f_1)(($v_3)->{'value0'})))(($g_2)(($v_3)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -230,8 +249,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Bifoldable_bifoldableJoker'] = function() { $v = function($dictFoldable_0 = null) {
+})()];
+
+// Data_Bifoldable_bifoldableJoker
+$GLOBALS['Data_Bifoldable_bifoldableJoker'] = function($dictFoldable_0 = null) {
   $__num = \func_num_args();
   $__res = ["bifoldr" => (function() use ($dictFoldable_0) {
   $__fn = function($v_1 = null, $r_2 = null, $u_3 = null, $v1_4 = null) use ($dictFoldable_0, &$__fn) {
@@ -280,8 +301,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Bifoldable_bifoldableEither'] = function() { $v = ["bifoldr" => (function() {
+};
+
+// Data_Bifoldable_bifoldableEither
+$GLOBALS['Data_Bifoldable_bifoldableEither'] = ["bifoldr" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null, $v2_2 = null, $v3_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
@@ -353,8 +376,10 @@ goto end_branch_2;;
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Bifoldable_bifoldableConst'] = function() { $v = ["bifoldr" => (function() {
+})()];
+
+// Data_Bifoldable_bifoldableConst
+$GLOBALS['Data_Bifoldable_bifoldableConst'] = ["bifoldr" => (function() {
   $__fn = function($f_0 = null, $v_1 = null, $z_2 = null, $v1_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
@@ -390,8 +415,10 @@ goto end_branch_2;;
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Bifoldable_bifoldableClown'] = function() { $v = function($dictFoldable_0 = null) {
+})()];
+
+// Data_Bifoldable_bifoldableClown
+$GLOBALS['Data_Bifoldable_bifoldableClown'] = function($dictFoldable_0 = null) {
   $__num = \func_num_args();
   $__res = ["bifoldr" => (function() use ($dictFoldable_0) {
   $__fn = function($l_1 = null, $v_2 = null, $u_3 = null, $v1_4 = null) use ($dictFoldable_0, &$__fn) {
@@ -440,14 +467,16 @@ goto end_branch_2;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Bifoldable_bifoldMapDefaultR'] = function() { $v = (function() {
+};
+
+// Data_Bifoldable_bifoldMapDefaultR
+$GLOBALS['Data_Bifoldable_bifoldMapDefaultR'] = (function() {
   $__fn = function($dictBifoldable_0 = null, $dictMonoid_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $append_2_0 = ((($dictMonoid_1)['Semigroup0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['append'];
+  $append_2_0 = ((($dictMonoid_1)['Semigroup0'])($GLOBALS['Prim_undefined']))['append'];
   $mempty_3_1 = ($dictMonoid_1)['mempty'];
   $__res = (function() use ($append_2_0, $dictBifoldable_0, $mempty_3_1) {
   $__fn = function($f_4 = null, $g_5 = null) use ($append_2_0, $dictBifoldable_0, $mempty_3_1, &$__fn) {
@@ -455,7 +484,7 @@ goto end_branch_2;;
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($dictBifoldable_0)['bifoldr'])(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($append_2_0))($f_4)))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($append_2_0))($g_5)))($mempty_3_1);
+  $__res = (((($dictBifoldable_0)['bifoldr'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($append_2_0))($f_4)))((($GLOBALS['Control_Semigroupoid_composeImpl'])($append_2_0))($g_5)))($mempty_3_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -467,14 +496,16 @@ goto end_branch_2;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Bifoldable_bifoldMapDefaultL'] = function() { $v = (function() {
+})();
+
+// Data_Bifoldable_bifoldMapDefaultL
+$GLOBALS['Data_Bifoldable_bifoldMapDefaultL'] = (function() {
   $__fn = function($dictBifoldable_0 = null, $dictMonoid_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__local_var_2_0 = (($dictMonoid_1)['Semigroup0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_2_0 = (($dictMonoid_1)['Semigroup0'])($GLOBALS['Prim_undefined']);
   $mempty_3_1 = ($dictMonoid_1)['mempty'];
   $__res = (function() use ($__local_var_2_0, $dictBifoldable_0, $mempty_3_1) {
   $__fn = function($f_4 = null, $g_5 = null) use ($__local_var_2_0, $dictBifoldable_0, $mempty_3_1, &$__fn) {
@@ -518,15 +549,19 @@ goto end_branch_2;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Bifoldable_bifoldMap'] = function() { $v = function($dict_0 = null) {
+})();
+
+// Data_Bifoldable_bifoldMap
+$GLOBALS['Data_Bifoldable_bifoldMap'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['bifoldMap'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Bifoldable_bifoldableFlip'] = function() { $v = function($dictBifoldable_0 = null) {
+};
+
+// Data_Bifoldable_bifoldableFlip
+$GLOBALS['Data_Bifoldable_bifoldableFlip'] = function($dictBifoldable_0 = null) {
   $__num = \func_num_args();
   $__res = ["bifoldr" => (function() use ($dictBifoldable_0) {
   $__fn = function($r_1 = null, $l_2 = null, $u_3 = null, $v_4 = null) use ($dictBifoldable_0, &$__fn) {
@@ -575,17 +610,19 @@ goto end_branch_2;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Bifoldable_bifoldlDefault'] = function() { $v = function($dictBifoldable_0 = null) {
+};
+
+// Data_Bifoldable_bifoldlDefault
+$GLOBALS['Data_Bifoldable_bifoldlDefault'] = function($dictBifoldable_0 = null) {
   $__num = \func_num_args();
-  $bifoldMap1_1_0 = (($dictBifoldable_0)['bifoldMap'])(($GLOBALS['Data_Bifoldable_monoidDual'] ?? \PhpursThunks::eval('Data_Bifoldable_monoidDual')));
+  $bifoldMap1_1_0 = (($dictBifoldable_0)['bifoldMap'])($GLOBALS['Data_Bifoldable_monoidDual']);
   $__res = (function() use ($bifoldMap1_1_0) {
   $__fn = function($f_2 = null, $g_3 = null, $z_4 = null, $p_5 = null) use ($bifoldMap1_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = (((($bifoldMap1_1_0)(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Monoid_Dual_Dual'] ?? \PhpursThunks::eval('Data_Monoid_Dual_Dual'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Monoid_Endo_Endo'] ?? \PhpursThunks::eval('Data_Monoid_Endo_Endo'))))((function() use ($f_2) {
+  $__res = (((($bifoldMap1_1_0)((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Monoid_Dual_Dual']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Monoid_Endo_Endo']))((function() use ($f_2) {
   $__fn = function($b_6 = null, $a_7 = null) use ($f_2, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -597,7 +634,7 @@ goto end_branch_2;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Monoid_Dual_Dual'] ?? \PhpursThunks::eval('Data_Monoid_Dual_Dual'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Monoid_Endo_Endo'] ?? \PhpursThunks::eval('Data_Monoid_Endo_Endo'))))((function() use ($g_3) {
+})()))))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Monoid_Dual_Dual']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Monoid_Endo_Endo']))((function() use ($g_3) {
   $__fn = function($b_6 = null, $a_7 = null) use ($g_3, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -619,17 +656,19 @@ goto end_branch_2;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Bifoldable_bifoldrDefault'] = function() { $v = function($dictBifoldable_0 = null) {
+};
+
+// Data_Bifoldable_bifoldrDefault
+$GLOBALS['Data_Bifoldable_bifoldrDefault'] = function($dictBifoldable_0 = null) {
   $__num = \func_num_args();
-  $bifoldMap1_1_0 = (($dictBifoldable_0)['bifoldMap'])(($GLOBALS['Data_Bifoldable_monoidEndo'] ?? \PhpursThunks::eval('Data_Bifoldable_monoidEndo')));
+  $bifoldMap1_1_0 = (($dictBifoldable_0)['bifoldMap'])($GLOBALS['Data_Bifoldable_monoidEndo']);
   $__res = (function() use ($bifoldMap1_1_0) {
   $__fn = function($f_2 = null, $g_3 = null, $z_4 = null, $p_5 = null) use ($bifoldMap1_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = (((($bifoldMap1_1_0)(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Monoid_Endo_Endo'] ?? \PhpursThunks::eval('Data_Monoid_Endo_Endo'))))($f_2)))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Monoid_Endo_Endo'] ?? \PhpursThunks::eval('Data_Monoid_Endo_Endo'))))($g_3)))($p_5))($z_4);
+  $__res = (((($bifoldMap1_1_0)((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Monoid_Endo_Endo']))($f_2)))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Monoid_Endo_Endo']))($g_3)))($p_5))($z_4);
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -639,8 +678,10 @@ goto end_branch_2;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Bifoldable_bifoldableProduct2'] = function() { $v = (function() {
+};
+
+// Data_Bifoldable_bifoldableProduct2
+$GLOBALS['Data_Bifoldable_bifoldableProduct2'] = (function() {
   $__fn = function($dictBifoldable_0 = null, $dictBifoldable1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -657,7 +698,7 @@ goto end_branch_2;;
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = (((((($GLOBALS['Data_Bifoldable_bifoldrDefault'] ?? \PhpursThunks::eval('Data_Bifoldable_bifoldrDefault')))(((($GLOBALS['Data_Bifoldable_bifoldableProduct2'] ?? \PhpursThunks::eval('Data_Bifoldable_bifoldableProduct2')))($dictBifoldable_0))($dictBifoldable1_1)))($l_2))($r_3))($u_4))($m_5);
+  $__res = ((((($GLOBALS['Data_Bifoldable_bifoldrDefault'])((($GLOBALS['Data_Bifoldable_bifoldableProduct2'])($dictBifoldable_0))($dictBifoldable1_1)))($l_2))($r_3))($u_4))($m_5);
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -669,7 +710,7 @@ goto end_branch_2;;
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = (((((($GLOBALS['Data_Bifoldable_bifoldlDefault'] ?? \PhpursThunks::eval('Data_Bifoldable_bifoldlDefault')))(((($GLOBALS['Data_Bifoldable_bifoldableProduct2'] ?? \PhpursThunks::eval('Data_Bifoldable_bifoldableProduct2')))($dictBifoldable_0))($dictBifoldable1_1)))($l_2))($r_3))($u_4))($m_5);
+  $__res = ((((($GLOBALS['Data_Bifoldable_bifoldlDefault'])((($GLOBALS['Data_Bifoldable_bifoldableProduct2'])($dictBifoldable_0))($dictBifoldable1_1)))($l_2))($r_3))($u_4))($m_5);
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -685,7 +726,7 @@ goto end_branch_2;;
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((((($dictMonoid_2)['Semigroup0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['append'])(((($bifoldMap3_3_0)($l_5))($r_6))(($v_7)->{'value0'})))(((($bifoldMap4_4_1)($l_5))($r_6))(($v_7)->{'value1'}));
+  $__res = ((((($dictMonoid_2)['Semigroup0'])($GLOBALS['Prim_undefined']))['append'])(((($bifoldMap3_3_0)($l_5))($r_6))(($v_7)->{'value0'})))(((($bifoldMap4_4_1)($l_5))($r_6))(($v_7)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -701,27 +742,31 @@ goto end_branch_2;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Bifoldable_bifold'] = function() { $v = (function() {
+})();
+
+// Data_Bifoldable_bifold
+$GLOBALS['Data_Bifoldable_bifold'] = (function() {
   $__fn = function($dictBifoldable_0 = null, $dictMonoid_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($dictBifoldable_0)['bifoldMap'])($dictMonoid_1))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))['identity']))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))['identity']);
+  $__res = (((($dictBifoldable_0)['bifoldMap'])($dictMonoid_1))(($GLOBALS['Control_Category_categoryFn'])['identity']))(($GLOBALS['Control_Category_categoryFn'])['identity']);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Bifoldable_biany'] = function() { $v = (function() {
+})();
+
+// Data_Bifoldable_biany
+$GLOBALS['Data_Bifoldable_biany'] = (function() {
   $__fn = function($dictBifoldable_0 = null, $dictBooleanAlgebra_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__local_var_2_0 = (($dictBooleanAlgebra_1)['HeytingAlgebra0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_2_0 = (($dictBooleanAlgebra_1)['HeytingAlgebra0'])($GLOBALS['Prim_undefined']);
   $semigroupDisj1_3_1 = ["append" => (function() use ($__local_var_2_0) {
   $__fn = function($v_3 = null, $v1_4 = null) use ($__local_var_2_0, &$__fn) {
   $__num = \func_num_args();
@@ -748,7 +793,7 @@ goto end_branch_2;;
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce'))))((($bifoldMap2_2_0)(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Monoid_Disj_Disj'] ?? \PhpursThunks::eval('Data_Monoid_Disj_Disj'))))($p_3)))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Monoid_Disj_Disj'] ?? \PhpursThunks::eval('Data_Monoid_Disj_Disj'))))($q_4)));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce']))((($bifoldMap2_2_0)((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Monoid_Disj_Disj']))($p_3)))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Monoid_Disj_Disj']))($q_4)));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -760,14 +805,16 @@ goto end_branch_2;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Bifoldable_biall'] = function() { $v = (function() {
+})();
+
+// Data_Bifoldable_biall
+$GLOBALS['Data_Bifoldable_biall'] = (function() {
   $__fn = function($dictBifoldable_0 = null, $dictBooleanAlgebra_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__local_var_2_0 = (($dictBooleanAlgebra_1)['HeytingAlgebra0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_2_0 = (($dictBooleanAlgebra_1)['HeytingAlgebra0'])($GLOBALS['Prim_undefined']);
   $semigroupConj1_3_1 = ["append" => (function() use ($__local_var_2_0) {
   $__fn = function($v_3 = null, $v1_4 = null) use ($__local_var_2_0, &$__fn) {
   $__num = \func_num_args();
@@ -794,7 +841,7 @@ goto end_branch_2;;
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce'))))((($bifoldMap2_2_0)(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Monoid_Conj_Conj'] ?? \PhpursThunks::eval('Data_Monoid_Conj_Conj'))))($p_3)))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Monoid_Conj_Conj'] ?? \PhpursThunks::eval('Data_Monoid_Conj_Conj'))))($q_4)));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce']))((($bifoldMap2_2_0)((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Monoid_Conj_Conj']))($p_3)))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Monoid_Conj_Conj']))($q_4)));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -806,29 +853,5 @@ goto end_branch_2;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+})();
 

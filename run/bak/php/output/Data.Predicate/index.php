@@ -97,21 +97,30 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Predicate_Predicate'] = function() { $v = function($x_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Predicate_Predicate
+$GLOBALS['Data_Predicate_Predicate'] = function($x_0 = null) {
   $__num = \func_num_args();
   $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Predicate_newtypePredicate'] = function() { $v = ["Coercible0" => function($dollar__unused_0 = null) {
+};
+
+// Data_Predicate_newtypePredicate
+$GLOBALS['Data_Predicate_newtypePredicate'] = ["Coercible0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'));
+  $__res = $GLOBALS['Prim_undefined'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Predicate_heytingAlgebraPredicate'] = function() { $v = ["ff" => function($v_0 = null) {
+}];
+
+// Data_Predicate_heytingAlgebraPredicate
+$GLOBALS['Data_Predicate_heytingAlgebraPredicate'] = ["ff" => function($v_0 = null) {
   $__num = \func_num_args();
   $__res = false;
   goto __end;;
@@ -171,26 +180,23 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Predicate_contravariantPredicate'] = function() { $v = ["cmap" => (function() {
+})()];
+
+// Data_Predicate_contravariantPredicate
+$GLOBALS['Data_Predicate_contravariantPredicate'] = ["cmap" => (function() {
   $__fn = function($f_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($v_1))($f_0);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($v_1))($f_0);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Predicate_booleanAlgebraPredicate'] = function() { $v = (($GLOBALS['Data_BooleanAlgebra_booleanAlgebraFn'] ?? \PhpursThunks::eval('Data_BooleanAlgebra_booleanAlgebraFn')))(($GLOBALS['Data_BooleanAlgebra_booleanAlgebraBoolean'] ?? \PhpursThunks::eval('Data_BooleanAlgebra_booleanAlgebraBoolean'))); return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+})()];
 
-
-
-
-
-
+// Data_Predicate_booleanAlgebraPredicate
+$GLOBALS['Data_Predicate_booleanAlgebraPredicate'] = ($GLOBALS['Data_BooleanAlgebra_booleanAlgebraFn'])($GLOBALS['Data_BooleanAlgebra_booleanAlgebraBoolean']);
 

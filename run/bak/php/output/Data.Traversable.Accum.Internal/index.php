@@ -96,35 +96,48 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Traversable_Accum_Internal_StateR'] = function() { $v = function($x_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Traversable_Accum_Internal_StateR
+$GLOBALS['Data_Traversable_Accum_Internal_StateR'] = function($x_0 = null) {
   $__num = \func_num_args();
   $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Traversable_Accum_Internal_StateL'] = function() { $v = function($x_0 = null) {
+};
+
+// Data_Traversable_Accum_Internal_StateL
+$GLOBALS['Data_Traversable_Accum_Internal_StateL'] = function($x_0 = null) {
   $__num = \func_num_args();
   $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Traversable_Accum_Internal_stateR'] = function() { $v = function($v_0 = null) {
+};
+
+// Data_Traversable_Accum_Internal_stateR
+$GLOBALS['Data_Traversable_Accum_Internal_stateR'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__res = $v_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Traversable_Accum_Internal_stateL'] = function() { $v = function($v_0 = null) {
+};
+
+// Data_Traversable_Accum_Internal_stateL
+$GLOBALS['Data_Traversable_Accum_Internal_stateL'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__res = $v_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Traversable_Accum_Internal_functorStateR'] = function() { $v = ["map" => (function() {
+};
+
+// Data_Traversable_Accum_Internal_functorStateR
+$GLOBALS['Data_Traversable_Accum_Internal_functorStateR'] = ["map" => (function() {
   $__fn = function($f_0 = null, $k_1 = null, $s_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -137,8 +150,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Traversable_Accum_Internal_functorStateL'] = function() { $v = ["map" => (function() {
+})()];
+
+// Data_Traversable_Accum_Internal_functorStateL
+$GLOBALS['Data_Traversable_Accum_Internal_functorStateL'] = ["map" => (function() {
   $__fn = function($f_0 = null, $k_1 = null, $s_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -151,8 +166,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Traversable_Accum_Internal_applyStateR'] = function() { $v = ["apply" => (function() {
+})()];
+
+// Data_Traversable_Accum_Internal_applyStateR
+$GLOBALS['Data_Traversable_Accum_Internal_applyStateR'] = ["apply" => (function() {
   $__fn = function($f_0 = null, $x_1 = null, $s_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -168,12 +185,14 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(), "Functor0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Traversable_Accum_Internal_functorStateR'] ?? \PhpursThunks::eval('Data_Traversable_Accum_Internal_functorStateR'));
+  $__res = $GLOBALS['Data_Traversable_Accum_Internal_functorStateR'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Traversable_Accum_Internal_applyStateL'] = function() { $v = ["apply" => (function() {
+}];
+
+// Data_Traversable_Accum_Internal_applyStateL
+$GLOBALS['Data_Traversable_Accum_Internal_applyStateL'] = ["apply" => (function() {
   $__fn = function($f_0 = null, $x_1 = null, $s_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -189,12 +208,14 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(), "Functor0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Traversable_Accum_Internal_functorStateL'] ?? \PhpursThunks::eval('Data_Traversable_Accum_Internal_functorStateL'));
+  $__res = $GLOBALS['Data_Traversable_Accum_Internal_functorStateL'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Traversable_Accum_Internal_applicativeStateR'] = function() { $v = ["pure" => (function() {
+}];
+
+// Data_Traversable_Accum_Internal_applicativeStateR
+$GLOBALS['Data_Traversable_Accum_Internal_applicativeStateR'] = ["pure" => (function() {
   $__fn = function($a_0 = null, $s_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -208,12 +229,14 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(), "Apply0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Traversable_Accum_Internal_applyStateR'] ?? \PhpursThunks::eval('Data_Traversable_Accum_Internal_applyStateR'));
+  $__res = $GLOBALS['Data_Traversable_Accum_Internal_applyStateR'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Traversable_Accum_Internal_applicativeStateL'] = function() { $v = ["pure" => (function() {
+}];
+
+// Data_Traversable_Accum_Internal_applicativeStateL
+$GLOBALS['Data_Traversable_Accum_Internal_applicativeStateL'] = ["pure" => (function() {
   $__fn = function($a_0 = null, $s_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -227,21 +250,9 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(), "Apply0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Traversable_Accum_Internal_applyStateL'] ?? \PhpursThunks::eval('Data_Traversable_Accum_Internal_applyStateL'));
+  $__res = $GLOBALS['Data_Traversable_Accum_Internal_applyStateL'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
-
-
+}];
 

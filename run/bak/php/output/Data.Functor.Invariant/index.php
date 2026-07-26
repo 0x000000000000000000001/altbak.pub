@@ -100,7 +100,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Functor_Invariant_invariantMultiplicative'] = function() { $v = ["imap" => (function() {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Functor_Invariant_invariantMultiplicative
+$GLOBALS['Data_Functor_Invariant_invariantMultiplicative'] = ["imap" => (function() {
   $__fn = function($f_0 = null, $v_1 = null, $v1_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -112,21 +117,25 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Invariant_invariantEndo'] = function() { $v = ["imap" => (function() {
+})()];
+
+// Data_Functor_Invariant_invariantEndo
+$GLOBALS['Data_Functor_Invariant_invariantEndo'] = ["imap" => (function() {
   $__fn = function($ab_0 = null, $ba_1 = null, $v_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($ab_0))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($v_2))($ba_1));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($ab_0))((($GLOBALS['Control_Semigroupoid_composeImpl'])($v_2))($ba_1));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Invariant_invariantDual'] = function() { $v = ["imap" => (function() {
+})()];
+
+// Data_Functor_Invariant_invariantDual
+$GLOBALS['Data_Functor_Invariant_invariantDual'] = ["imap" => (function() {
   $__fn = function($f_0 = null, $v_1 = null, $v1_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -138,8 +147,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Invariant_invariantDisj'] = function() { $v = ["imap" => (function() {
+})()];
+
+// Data_Functor_Invariant_invariantDisj
+$GLOBALS['Data_Functor_Invariant_invariantDisj'] = ["imap" => (function() {
   $__fn = function($f_0 = null, $v_1 = null, $v1_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -151,8 +162,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Invariant_invariantConj'] = function() { $v = ["imap" => (function() {
+})()];
+
+// Data_Functor_Invariant_invariantConj
+$GLOBALS['Data_Functor_Invariant_invariantConj'] = ["imap" => (function() {
   $__fn = function($f_0 = null, $v_1 = null, $v1_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -164,8 +177,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Invariant_invariantAdditive'] = function() { $v = ["imap" => (function() {
+})()];
+
+// Data_Functor_Invariant_invariantAdditive
+$GLOBALS['Data_Functor_Invariant_invariantAdditive'] = ["imap" => (function() {
   $__fn = function($f_0 = null, $v_1 = null, $v1_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -177,8 +192,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Invariant_imapF'] = function() { $v = (function() {
+})()];
+
+// Data_Functor_Invariant_imapF
+$GLOBALS['Data_Functor_Invariant_imapF'] = (function() {
   $__fn = function($dictFunctor_0 = null, $f_1 = null, $v_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -190,41 +207,49 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Functor_Invariant_invariantArray'] = function() { $v = ["imap" => (function() {
+})();
+
+// Data_Functor_Invariant_invariantArray
+$GLOBALS['Data_Functor_Invariant_invariantArray'] = ["imap" => (function() {
   $__fn = function($f_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_Functor_arrayMap'] ?? \PhpursThunks::eval('Data_Functor_arrayMap')))($f_0);
+  $__res = ($GLOBALS['Data_Functor_arrayMap'])($f_0);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Invariant_invariantFn'] = function() { $v = ["imap" => (function() {
+})()];
+
+// Data_Functor_Invariant_invariantFn
+$GLOBALS['Data_Functor_Invariant_invariantFn'] = ["imap" => (function() {
   $__fn = function($f_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($f_0);
+  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($f_0);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Invariant_imap'] = function() { $v = function($dict_0 = null) {
+})()];
+
+// Data_Functor_Invariant_imap
+$GLOBALS['Data_Functor_Invariant_imap'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['imap'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Invariant_invariantAlternate'] = function() { $v = function($dictInvariant_0 = null) {
+};
+
+// Data_Functor_Invariant_invariantAlternate
+$GLOBALS['Data_Functor_Invariant_invariantAlternate'] = function($dictInvariant_0 = null) {
   $__num = \func_num_args();
   $__res = ["imap" => (function() use ($dictInvariant_0) {
   $__fn = function($f_1 = null, $g_2 = null, $v_3 = null) use ($dictInvariant_0, &$__fn) {
@@ -242,18 +267,5 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
-
-
-
+};
 

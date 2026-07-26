@@ -122,7 +122,7 @@ type Constructor_Nil[T_a any] struct {
 
 type Constructor_Cons[T_a any] struct {
 	V0 T_a
-	V1 gopurs_runtime.Value
+	V1 *Constructor_Cons
 }
 
 
@@ -168,7 +168,7 @@ return __t1
 return gopurs_runtime.Apply2(go__2_0, gopurs_runtime.Int(end_1), gopurs_runtime.Value{Type: 9, IntVal: 63553145, UnsafePtr: nil})
 }
 
-func Call_foldl(v_0_loop gopurs_runtime.Value, v1_1_loop gopurs_runtime.Value, v2_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_foldl(v_0_loop gopurs_runtime.Value, v1_1_loop gopurs_runtime.Value, v2_2_loop *Constructor_Cons) gopurs_runtime.Value {
 foldl:
 for {
 if false { continue foldl }
@@ -176,11 +176,11 @@ var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 var v1_1 gopurs_runtime.Value = v1_1_loop
 _ = v1_1
-var v2_2 gopurs_runtime.Value = v2_2_loop
+var v2_2 *Constructor_Cons = v2_2_loop
 _ = v2_2
 var __t0 gopurs_runtime.Value
 {
-if (v2_2.Type == 9 && v2_2.IntVal == 63553145) {
+if (v2_2 == nil) {
 __t0 = v1_1
 goto end_branch_0
 } else {
@@ -188,10 +188,10 @@ goto end_branch_0
 }
 }
 {
-if (v2_2.Type == 9 && v2_2.IntVal == 1127792131) {
+if (v2_2 != nil) {
 v_0_loop = v_0
-v1_1_loop = gopurs_runtime.Apply2(v_0, v1_1, (*Constructor_Cons[gopurs_runtime.Value])(v2_2.UnsafePtr).V0)
-v2_2_loop = (*Constructor_Cons[gopurs_runtime.Value])(v2_2.UnsafePtr).V1
+v1_1_loop = gopurs_runtime.Apply2(v_0, v1_1, (v2_2).V0)
+v2_2_loop = (v2_2).V1
 continue foldl
 __t0 = gopurs_runtime.Value{}
 goto end_branch_0
@@ -207,8 +207,8 @@ return __t0
 }
 }
 
-func Call_filterEvens(lst_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var lst_0 gopurs_runtime.Value = lst_0_loop
+func Call_filterEvens(lst_0_loop *Constructor_Cons) gopurs_runtime.Value {
+var lst_0 *Constructor_Cons = lst_0_loop
 _ = lst_0
 var go__1_0 gopurs_runtime.Value
 go__1_0 = gopurs_runtime.Func(func(v_2_loop_val gopurs_runtime.Value) gopurs_runtime.Value {

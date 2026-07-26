@@ -102,14 +102,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Profunctor_Join_Join'] = function() { $v = function($x_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Profunctor_Join_Join
+$GLOBALS['Data_Profunctor_Join_Join'] = function($x_0 = null) {
   $__num = \func_num_args();
   $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Profunctor_Join_showJoin'] = function() { $v = function($dictShow_0 = null) {
+};
+
+// Data_Profunctor_Join_showJoin
+$GLOBALS['Data_Profunctor_Join_showJoin'] = function($dictShow_0 = null) {
   $__num = \func_num_args();
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
@@ -121,8 +128,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Profunctor_Join_semigroupJoin'] = function() { $v = function($dictSemigroupoid_0 = null) {
+};
+
+// Data_Profunctor_Join_semigroupJoin
+$GLOBALS['Data_Profunctor_Join_semigroupJoin'] = function($dictSemigroupoid_0 = null) {
   $__num = \func_num_args();
   $__res = ["append" => (function() use ($dictSemigroupoid_0) {
   $__fn = function($v_1 = null, $v1_2 = null) use ($dictSemigroupoid_0, &$__fn) {
@@ -140,24 +149,30 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Profunctor_Join_ordJoin'] = function() { $v = function($dictOrd_0 = null) {
+};
+
+// Data_Profunctor_Join_ordJoin
+$GLOBALS['Data_Profunctor_Join_ordJoin'] = function($dictOrd_0 = null) {
   $__num = \func_num_args();
   $__res = $dictOrd_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Profunctor_Join_newtypeJoin'] = function() { $v = ["Coercible0" => function($dollar__unused_0 = null) {
+};
+
+// Data_Profunctor_Join_newtypeJoin
+$GLOBALS['Data_Profunctor_Join_newtypeJoin'] = ["Coercible0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'));
+  $__res = $GLOBALS['Prim_undefined'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Profunctor_Join_monoidJoin'] = function() { $v = function($dictCategory_0 = null) {
+}];
+
+// Data_Profunctor_Join_monoidJoin
+$GLOBALS['Data_Profunctor_Join_monoidJoin'] = function($dictCategory_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictCategory_0)['Semigroupoid0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_1_0 = (($dictCategory_0)['Semigroupoid0'])($GLOBALS['Prim_undefined']);
   $semigroupJoin1_2_1 = ["append" => (function() use ($__local_var_1_0) {
   $__fn = function($v_2 = null, $v1_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -181,8 +196,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Profunctor_Join_invariantJoin'] = function() { $v = function($dictProfunctor_0 = null) {
+};
+
+// Data_Profunctor_Join_invariantJoin
+$GLOBALS['Data_Profunctor_Join_invariantJoin'] = function($dictProfunctor_0 = null) {
   $__num = \func_num_args();
   $__res = ["imap" => (function() use ($dictProfunctor_0) {
   $__fn = function($f_1 = null, $g_2 = null, $v_3 = null) use ($dictProfunctor_0, &$__fn) {
@@ -200,22 +217,14 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Profunctor_Join_eqJoin'] = function() { $v = function($dictEq_0 = null) {
+};
+
+// Data_Profunctor_Join_eqJoin
+$GLOBALS['Data_Profunctor_Join_eqJoin'] = function($dictEq_0 = null) {
   $__num = \func_num_args();
   $__res = $dictEq_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
+};
 

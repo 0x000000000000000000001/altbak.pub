@@ -94,8 +94,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Control_Monad_ST_Global_toEffect'] = function() { $v = ($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')); return $v; };
+
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+// Control_Monad_ST_Global_toEffect
+$GLOBALS['Control_Monad_ST_Global_toEffect'] = $GLOBALS['Unsafe_Coerce_unsafeCoerce'];
 

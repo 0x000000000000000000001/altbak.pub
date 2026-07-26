@@ -91,8 +91,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Boolean_otherwise'] = function() { $v = true; return $v; };
+
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+// Data_Boolean_otherwise
+$GLOBALS['Data_Boolean_otherwise'] = true;
 

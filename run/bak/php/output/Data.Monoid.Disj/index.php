@@ -105,14 +105,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Monoid_Disj_Disj'] = function() { $v = function($x_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Monoid_Disj_Disj
+$GLOBALS['Data_Monoid_Disj_Disj'] = function($x_0 = null) {
   $__num = \func_num_args();
   $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Monoid_Disj_showDisj'] = function() { $v = function($dictShow_0 = null) {
+};
+
+// Data_Monoid_Disj_showDisj
+$GLOBALS['Data_Monoid_Disj_showDisj'] = function($dictShow_0 = null) {
   $__num = \func_num_args();
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
@@ -124,8 +131,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Monoid_Disj_semiringDisj'] = function() { $v = function($dictHeytingAlgebra_0 = null) {
+};
+
+// Data_Monoid_Disj_semiringDisj
+$GLOBALS['Data_Monoid_Disj_semiringDisj'] = function($dictHeytingAlgebra_0 = null) {
   $__num = \func_num_args();
   $__res = ["zero" => ($dictHeytingAlgebra_0)['ff'], "one" => ($dictHeytingAlgebra_0)['tt'], "add" => (function() use ($dictHeytingAlgebra_0) {
   $__fn = function($v_1 = null, $v1_2 = null) use ($dictHeytingAlgebra_0, &$__fn) {
@@ -155,8 +164,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Monoid_Disj_semigroupDisj'] = function() { $v = function($dictHeytingAlgebra_0 = null) {
+};
+
+// Data_Monoid_Disj_semigroupDisj
+$GLOBALS['Data_Monoid_Disj_semigroupDisj'] = function($dictHeytingAlgebra_0 = null) {
   $__num = \func_num_args();
   $__res = ["append" => (function() use ($dictHeytingAlgebra_0) {
   $__fn = function($v_1 = null, $v1_2 = null) use ($dictHeytingAlgebra_0, &$__fn) {
@@ -174,15 +185,19 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Monoid_Disj_ordDisj'] = function() { $v = function($dictOrd_0 = null) {
+};
+
+// Data_Monoid_Disj_ordDisj
+$GLOBALS['Data_Monoid_Disj_ordDisj'] = function($dictOrd_0 = null) {
   $__num = \func_num_args();
   $__res = $dictOrd_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Monoid_Disj_monoidDisj'] = function() { $v = function($dictHeytingAlgebra_0 = null) {
+};
+
+// Data_Monoid_Disj_monoidDisj
+$GLOBALS['Data_Monoid_Disj_monoidDisj'] = function($dictHeytingAlgebra_0 = null) {
   $__num = \func_num_args();
   $semigroupDisj1_1_0 = ["append" => (function() use ($dictHeytingAlgebra_0) {
   $__fn = function($v_1 = null, $v1_2 = null) use ($dictHeytingAlgebra_0, &$__fn) {
@@ -207,8 +222,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Monoid_Disj_functorDisj'] = function() { $v = ["map" => (function() {
+};
+
+// Data_Monoid_Disj_functorDisj
+$GLOBALS['Data_Monoid_Disj_functorDisj'] = ["map" => (function() {
   $__fn = function($f_0 = null, $m_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -220,22 +237,28 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Monoid_Disj_eqDisj'] = function() { $v = function($dictEq_0 = null) {
+})()];
+
+// Data_Monoid_Disj_eqDisj
+$GLOBALS['Data_Monoid_Disj_eqDisj'] = function($dictEq_0 = null) {
   $__num = \func_num_args();
   $__res = $dictEq_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Monoid_Disj_eq1Disj'] = function() { $v = ["eq1" => function($dictEq_0 = null) {
+};
+
+// Data_Monoid_Disj_eq1Disj
+$GLOBALS['Data_Monoid_Disj_eq1Disj'] = ["eq1" => function($dictEq_0 = null) {
   $__num = \func_num_args();
   $__res = ($dictEq_0)['eq'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Monoid_Disj_ord1Disj'] = function() { $v = ["compare1" => function($dictOrd_0 = null) {
+}];
+
+// Data_Monoid_Disj_ord1Disj
+$GLOBALS['Data_Monoid_Disj_ord1Disj'] = ["compare1" => function($dictOrd_0 = null) {
   $__num = \func_num_args();
   $__res = ($dictOrd_0)['compare'];
   goto __end;;
@@ -243,19 +266,23 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Eq10" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Monoid_Disj_eq1Disj'] ?? \PhpursThunks::eval('Data_Monoid_Disj_eq1Disj'));
+  $__res = $GLOBALS['Data_Monoid_Disj_eq1Disj'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Monoid_Disj_boundedDisj'] = function() { $v = function($dictBounded_0 = null) {
+}];
+
+// Data_Monoid_Disj_boundedDisj
+$GLOBALS['Data_Monoid_Disj_boundedDisj'] = function($dictBounded_0 = null) {
   $__num = \func_num_args();
   $__res = $dictBounded_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Monoid_Disj_applyDisj'] = function() { $v = ["apply" => (function() {
+};
+
+// Data_Monoid_Disj_applyDisj
+$GLOBALS['Data_Monoid_Disj_applyDisj'] = ["apply" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -269,12 +296,14 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(), "Functor0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Monoid_Disj_functorDisj'] ?? \PhpursThunks::eval('Data_Monoid_Disj_functorDisj'));
+  $__res = $GLOBALS['Data_Monoid_Disj_functorDisj'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Monoid_Disj_bindDisj'] = function() { $v = ["bind" => (function() {
+}];
+
+// Data_Monoid_Disj_bindDisj
+$GLOBALS['Data_Monoid_Disj_bindDisj'] = ["bind" => (function() {
   $__fn = function($v_0 = null, $f_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -288,46 +317,33 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(), "Apply0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Monoid_Disj_applyDisj'] ?? \PhpursThunks::eval('Data_Monoid_Disj_applyDisj'));
+  $__res = $GLOBALS['Data_Monoid_Disj_applyDisj'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Monoid_Disj_applicativeDisj'] = function() { $v = ["pure" => ($GLOBALS['Data_Monoid_Disj_Disj'] ?? \PhpursThunks::eval('Data_Monoid_Disj_Disj')), "Apply0" => function($dollar__unused_0 = null) {
+}];
+
+// Data_Monoid_Disj_applicativeDisj
+$GLOBALS['Data_Monoid_Disj_applicativeDisj'] = ["pure" => $GLOBALS['Data_Monoid_Disj_Disj'], "Apply0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Monoid_Disj_applyDisj'] ?? \PhpursThunks::eval('Data_Monoid_Disj_applyDisj'));
+  $__res = $GLOBALS['Data_Monoid_Disj_applyDisj'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Monoid_Disj_monadDisj'] = function() { $v = ["Applicative0" => function($dollar__unused_0 = null) {
+}];
+
+// Data_Monoid_Disj_monadDisj
+$GLOBALS['Data_Monoid_Disj_monadDisj'] = ["Applicative0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Monoid_Disj_applicativeDisj'] ?? \PhpursThunks::eval('Data_Monoid_Disj_applicativeDisj'));
+  $__res = $GLOBALS['Data_Monoid_Disj_applicativeDisj'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bind1" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Monoid_Disj_bindDisj'] ?? \PhpursThunks::eval('Data_Monoid_Disj_bindDisj'));
+  $__res = $GLOBALS['Data_Monoid_Disj_bindDisj'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}];
 

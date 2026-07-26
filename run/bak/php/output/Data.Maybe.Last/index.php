@@ -110,14 +110,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Maybe_Last_Last'] = function() { $v = function($x_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Maybe_Last_Last
+$GLOBALS['Data_Maybe_Last_Last'] = function($x_0 = null) {
   $__num = \func_num_args();
   $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Maybe_Last_showLast'] = function() { $v = function($dictShow_0 = null) {
+};
+
+// Data_Maybe_Last_showLast
+$GLOBALS['Data_Maybe_Last_showLast'] = function($dictShow_0 = null) {
   $__num = \func_num_args();
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
@@ -141,8 +148,10 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Maybe_Last_semigroupLast'] = function() { $v = ["append" => (function() {
+};
+
+// Data_Maybe_Last_semigroupLast
+$GLOBALS['Data_Maybe_Last_semigroupLast'] = ["append" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -166,34 +175,52 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Maybe_Last_ordLast'] = function() { $v = function($dictOrd_0 = null) {
+})()];
+
+// Data_Maybe_Last_ordLast
+$GLOBALS['Data_Maybe_Last_ordLast'] = function($dictOrd_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Maybe_ordMaybe'] ?? \PhpursThunks::eval('Data_Maybe_ordMaybe')))($dictOrd_0);
+  $__res = ($GLOBALS['Data_Maybe_ordMaybe'])($dictOrd_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Maybe_Last_ord1Last'] = function() { $v = ($GLOBALS['Data_Maybe_ord1Maybe'] ?? \PhpursThunks::eval('Data_Maybe_ord1Maybe')); return $v; };
-\PhpursThunks::$thunks['Data_Maybe_Last_newtypeLast'] = function() { $v = ["Coercible0" => function($dollar__unused_0 = null) {
+};
+
+// Data_Maybe_Last_ord1Last
+$GLOBALS['Data_Maybe_Last_ord1Last'] = $GLOBALS['Data_Maybe_ord1Maybe'];
+
+// Data_Maybe_Last_newtypeLast
+$GLOBALS['Data_Maybe_Last_newtypeLast'] = ["Coercible0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'));
+  $__res = $GLOBALS['Prim_undefined'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Maybe_Last_monoidLast'] = function() { $v = ["mempty" => new Phpurs_Data0("Nothing"), "Semigroup0" => function($dollar__unused_0 = null) {
+}];
+
+// Data_Maybe_Last_monoidLast
+$GLOBALS['Data_Maybe_Last_monoidLast'] = ["mempty" => new Phpurs_Data0("Nothing"), "Semigroup0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Maybe_Last_semigroupLast'] ?? \PhpursThunks::eval('Data_Maybe_Last_semigroupLast'));
+  $__res = $GLOBALS['Data_Maybe_Last_semigroupLast'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Maybe_Last_monadLast'] = function() { $v = ($GLOBALS['Data_Maybe_monadMaybe'] ?? \PhpursThunks::eval('Data_Maybe_monadMaybe')); return $v; };
-\PhpursThunks::$thunks['Data_Maybe_Last_invariantLast'] = function() { $v = ($GLOBALS['Data_Maybe_invariantMaybe'] ?? \PhpursThunks::eval('Data_Maybe_invariantMaybe')); return $v; };
-\PhpursThunks::$thunks['Data_Maybe_Last_functorLast'] = function() { $v = ($GLOBALS['Data_Maybe_functorMaybe'] ?? \PhpursThunks::eval('Data_Maybe_functorMaybe')); return $v; };
-\PhpursThunks::$thunks['Data_Maybe_Last_extendLast'] = function() { $v = ($GLOBALS['Data_Maybe_extendMaybe'] ?? \PhpursThunks::eval('Data_Maybe_extendMaybe')); return $v; };
-\PhpursThunks::$thunks['Data_Maybe_Last_eqLast'] = function() { $v = function($dictEq_0 = null) {
+}];
+
+// Data_Maybe_Last_monadLast
+$GLOBALS['Data_Maybe_Last_monadLast'] = $GLOBALS['Data_Maybe_monadMaybe'];
+
+// Data_Maybe_Last_invariantLast
+$GLOBALS['Data_Maybe_Last_invariantLast'] = $GLOBALS['Data_Maybe_invariantMaybe'];
+
+// Data_Maybe_Last_functorLast
+$GLOBALS['Data_Maybe_Last_functorLast'] = $GLOBALS['Data_Maybe_functorMaybe'];
+
+// Data_Maybe_Last_extendLast
+$GLOBALS['Data_Maybe_Last_extendLast'] = $GLOBALS['Data_Maybe_extendMaybe'];
+
+// Data_Maybe_Last_eqLast
+$GLOBALS['Data_Maybe_Last_eqLast'] = function($dictEq_0 = null) {
   $__num = \func_num_args();
   $__res = ["eq" => (function() use ($dictEq_0) {
   $__fn = function($x_1 = null, $y_2 = null) use ($dictEq_0, &$__fn) {
@@ -218,65 +245,59 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Maybe_Last_eq1Last'] = function() { $v = ($GLOBALS['Data_Maybe_eq1Maybe'] ?? \PhpursThunks::eval('Data_Maybe_eq1Maybe')); return $v; };
-\PhpursThunks::$thunks['Data_Maybe_Last_boundedLast'] = function() { $v = function($dictBounded_0 = null) {
+};
+
+// Data_Maybe_Last_eq1Last
+$GLOBALS['Data_Maybe_Last_eq1Last'] = $GLOBALS['Data_Maybe_eq1Maybe'];
+
+// Data_Maybe_Last_boundedLast
+$GLOBALS['Data_Maybe_Last_boundedLast'] = function($dictBounded_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Maybe_boundedMaybe'] ?? \PhpursThunks::eval('Data_Maybe_boundedMaybe')))($dictBounded_0);
+  $__res = ($GLOBALS['Data_Maybe_boundedMaybe'])($dictBounded_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Maybe_Last_bindLast'] = function() { $v = ($GLOBALS['Data_Maybe_bindMaybe'] ?? \PhpursThunks::eval('Data_Maybe_bindMaybe')); return $v; };
-\PhpursThunks::$thunks['Data_Maybe_Last_applyLast'] = function() { $v = ($GLOBALS['Data_Maybe_applyMaybe'] ?? \PhpursThunks::eval('Data_Maybe_applyMaybe')); return $v; };
-\PhpursThunks::$thunks['Data_Maybe_Last_applicativeLast'] = function() { $v = ($GLOBALS['Data_Maybe_applicativeMaybe'] ?? \PhpursThunks::eval('Data_Maybe_applicativeMaybe')); return $v; };
-\PhpursThunks::$thunks['Data_Maybe_Last_altLast'] = function() { $v = ["alt" => (($GLOBALS['Data_Maybe_Last_semigroupLast'] ?? \PhpursThunks::eval('Data_Maybe_Last_semigroupLast')))['append'], "Functor0" => function($dollar__unused_0 = null) {
+};
+
+// Data_Maybe_Last_bindLast
+$GLOBALS['Data_Maybe_Last_bindLast'] = $GLOBALS['Data_Maybe_bindMaybe'];
+
+// Data_Maybe_Last_applyLast
+$GLOBALS['Data_Maybe_Last_applyLast'] = $GLOBALS['Data_Maybe_applyMaybe'];
+
+// Data_Maybe_Last_applicativeLast
+$GLOBALS['Data_Maybe_Last_applicativeLast'] = $GLOBALS['Data_Maybe_applicativeMaybe'];
+
+// Data_Maybe_Last_altLast
+$GLOBALS['Data_Maybe_Last_altLast'] = ["alt" => ($GLOBALS['Data_Maybe_Last_semigroupLast'])['append'], "Functor0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Maybe_functorMaybe'] ?? \PhpursThunks::eval('Data_Maybe_functorMaybe'));
+  $__res = $GLOBALS['Data_Maybe_functorMaybe'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Maybe_Last_plusLast'] = function() { $v = ["empty" => new Phpurs_Data0("Nothing"), "Alt0" => function($dollar__unused_0 = null) {
+}];
+
+// Data_Maybe_Last_plusLast
+$GLOBALS['Data_Maybe_Last_plusLast'] = ["empty" => new Phpurs_Data0("Nothing"), "Alt0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Maybe_Last_altLast'] ?? \PhpursThunks::eval('Data_Maybe_Last_altLast'));
+  $__res = $GLOBALS['Data_Maybe_Last_altLast'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Maybe_Last_alternativeLast'] = function() { $v = ["Applicative0" => function($dollar__unused_0 = null) {
+}];
+
+// Data_Maybe_Last_alternativeLast
+$GLOBALS['Data_Maybe_Last_alternativeLast'] = ["Applicative0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Maybe_applicativeMaybe'] ?? \PhpursThunks::eval('Data_Maybe_applicativeMaybe'));
+  $__res = $GLOBALS['Data_Maybe_applicativeMaybe'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Plus1" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Maybe_Last_plusLast'] ?? \PhpursThunks::eval('Data_Maybe_Last_plusLast'));
+  $__res = $GLOBALS['Data_Maybe_Last_plusLast'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}];
 

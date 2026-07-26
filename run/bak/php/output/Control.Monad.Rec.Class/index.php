@@ -108,28 +108,39 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Control_Monad_Rec_Class_Loop'] = function() { $v = function($value0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Control_Monad_Rec_Class_Loop
+$GLOBALS['Control_Monad_Rec_Class_Loop'] = function($value0 = null) {
   $__num = \func_num_args();
   $__res = new Phpurs_Data1("Loop", $value0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Rec_Class_Done'] = function() { $v = function($value0 = null) {
+};
+
+// Control_Monad_Rec_Class_Done
+$GLOBALS['Control_Monad_Rec_Class_Done'] = function($value0 = null) {
   $__num = \func_num_args();
   $__res = new Phpurs_Data1("Done", $value0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Rec_Class_tailRecM'] = function() { $v = function($dict_0 = null) {
+};
+
+// Control_Monad_Rec_Class_tailRecM
+$GLOBALS['Control_Monad_Rec_Class_tailRecM'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['tailRecM'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Rec_Class_tailRecM2'] = function() { $v = (function() {
+};
+
+// Control_Monad_Rec_Class_tailRecM2
+$GLOBALS['Control_Monad_Rec_Class_tailRecM2'] = (function() {
   $__fn = function($dictMonadRec_0 = null, $f_1 = null, $a_2 = null, $b_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
@@ -147,8 +158,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Control_Monad_Rec_Class_tailRecM3'] = function() { $v = (function() {
+})();
+
+// Control_Monad_Rec_Class_tailRecM3
+$GLOBALS['Control_Monad_Rec_Class_tailRecM3'] = (function() {
   $__fn = function($dictMonadRec_0 = null, $f_1 = null, $a_2 = null, $b_3 = null, $c_4 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 5) {
@@ -166,10 +179,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 5 ? $__res(...\array_slice(\func_get_args(), 5)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Control_Monad_Rec_Class_untilJust'] = function() { $v = function($dictMonadRec_0 = null) {
+})();
+
+// Control_Monad_Rec_Class_untilJust
+$GLOBALS['Control_Monad_Rec_Class_untilJust'] = function($dictMonadRec_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (((((((($dictMonadRec_0)['Monad0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Bind1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Apply0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_1_0 = (((((((($dictMonadRec_0)['Monad0'])($GLOBALS['Prim_undefined']))['Bind1'])($GLOBALS['Prim_undefined']))['Apply0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']);
   $__res = function($m_2 = null) use ($__local_var_1_0, $dictMonadRec_0) {
   $__num = \func_num_args();
   $__res = ((($dictMonadRec_0)['tailRecM'])(function($v_3 = null) use ($__local_var_1_0, $m_2) {
@@ -178,7 +193,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   $__num = \func_num_args();
   $__t1 = null;;
   if ((is_object($v1_4) && (($v1_4)->{'tag'} === "Nothing"))) {
-$__t1 = new Phpurs_Data1("Loop", ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')));
+$__t1 = new Phpurs_Data1("Loop", $GLOBALS['Data_Unit_unit']);
 goto end_branch_1;;
 };
   if ((is_object($v1_4) && (($v1_4)->{'tag'} === "Just"))) {
@@ -196,7 +211,7 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')));
+}))($GLOBALS['Data_Unit_unit']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -204,13 +219,15 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Rec_Class_whileJust'] = function() { $v = function($dictMonoid_0 = null) {
+};
+
+// Control_Monad_Rec_Class_whileJust
+$GLOBALS['Control_Monad_Rec_Class_whileJust'] = function($dictMonoid_0 = null) {
   $__num = \func_num_args();
   $mempty_1_0 = ($dictMonoid_0)['mempty'];
   $__res = function($dictMonadRec_2 = null) use ($dictMonoid_0, $mempty_1_0) {
   $__num = \func_num_args();
-  $__local_var_3_1 = (((((((($dictMonadRec_2)['Monad0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Bind1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Apply0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_3_1 = (((((((($dictMonadRec_2)['Monad0'])($GLOBALS['Prim_undefined']))['Bind1'])($GLOBALS['Prim_undefined']))['Apply0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']);
   $__res = function($m_4 = null) use ($__local_var_3_1, $dictMonadRec_2, $dictMonoid_0, $mempty_1_0) {
   $__num = \func_num_args();
   $__res = ((($dictMonadRec_2)['tailRecM'])(function($v_5 = null) use ($__local_var_3_1, $dictMonoid_0, $m_4) {
@@ -223,7 +240,7 @@ $__t2 = new Phpurs_Data1("Done", $v_5);
 goto end_branch_2;;
 };
   if ((is_object($v1_6) && (($v1_6)->{'tag'} === "Just"))) {
-$__t2 = new Phpurs_Data1("Loop", ((((($dictMonoid_0)['Semigroup0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['append'])($v_5))(($v1_6)->{'value0'}));
+$__t2 = new Phpurs_Data1("Loop", ((((($dictMonoid_0)['Semigroup0'])($GLOBALS['Prim_undefined']))['append'])($v_5))(($v1_6)->{'value0'}));
 goto end_branch_2;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -249,8 +266,10 @@ goto end_branch_2;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Rec_Class_tailRec'] = function() { $v = function($f_0 = null) {
+};
+
+// Control_Monad_Rec_Class_tailRec
+$GLOBALS['Control_Monad_Rec_Class_tailRec'] = function($f_0 = null) {
   $__num = \func_num_args();
   $go_1_0 = null;
   $go_1_0 = function($v_2 = null) use ($f_0, &$go_1_0) {
@@ -278,18 +297,20 @@ goto end_branch_0;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($go_1_0))($f_0);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($go_1_0))($f_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Rec_Class_tailRec2'] = function() { $v = (function() {
+};
+
+// Control_Monad_Rec_Class_tailRec2
+$GLOBALS['Control_Monad_Rec_Class_tailRec2'] = (function() {
   $__fn = function($f_0 = null, $a_1 = null, $b_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($GLOBALS['Control_Monad_Rec_Class_tailRec'] ?? \PhpursThunks::eval('Control_Monad_Rec_Class_tailRec')))(function($o_3 = null) use ($f_0) {
+  $__res = (($GLOBALS['Control_Monad_Rec_Class_tailRec'])(function($o_3 = null) use ($f_0) {
   $__num = \func_num_args();
   $__res = (($f_0)(($o_3)['a']))(($o_3)['b']);
   goto __end;;
@@ -301,14 +322,16 @@ goto end_branch_0;;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Control_Monad_Rec_Class_tailRec3'] = function() { $v = (function() {
+})();
+
+// Control_Monad_Rec_Class_tailRec3
+$GLOBALS['Control_Monad_Rec_Class_tailRec3'] = (function() {
   $__fn = function($f_0 = null, $a_1 = null, $b_2 = null, $c_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ((($GLOBALS['Control_Monad_Rec_Class_tailRec'] ?? \PhpursThunks::eval('Control_Monad_Rec_Class_tailRec')))(function($o_4 = null) use ($f_0) {
+  $__res = (($GLOBALS['Control_Monad_Rec_Class_tailRec'])(function($o_4 = null) use ($f_0) {
   $__num = \func_num_args();
   $__res = ((($f_0)(($o_4)['a']))(($o_4)['b']))(($o_4)['c']);
   goto __end;;
@@ -320,14 +343,16 @@ goto end_branch_0;;
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Control_Monad_Rec_Class_monadRecMaybe'] = function() { $v = ["tailRecM" => (function() {
+})();
+
+// Control_Monad_Rec_Class_monadRecMaybe
+$GLOBALS['Control_Monad_Rec_Class_monadRecMaybe'] = ["tailRecM" => (function() {
   $__fn = function($f_0 = null, $a0_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Monad_Rec_Class_tailRec'] ?? \PhpursThunks::eval('Control_Monad_Rec_Class_tailRec')))(function($v_2 = null) use ($f_0) {
+  $__res = (($GLOBALS['Control_Monad_Rec_Class_tailRec'])(function($v_2 = null) use ($f_0) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object($v_2) && (($v_2)->{'tag'} === "Nothing"))) {
@@ -365,14 +390,16 @@ goto end_branch_0;;
   return $__fn;
 })(), "Monad0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Maybe_monadMaybe'] ?? \PhpursThunks::eval('Data_Maybe_monadMaybe'));
+  $__res = $GLOBALS['Data_Maybe_monadMaybe'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Rec_Class_monadRecIdentity'] = function() { $v = ["tailRecM" => function($f_0 = null) {
+}];
+
+// Control_Monad_Rec_Class_monadRecIdentity
+$GLOBALS['Control_Monad_Rec_Class_monadRecIdentity'] = ["tailRecM" => function($f_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Identity_Identity'] ?? \PhpursThunks::eval('Data_Identity_Identity'))))((($GLOBALS['Control_Monad_Rec_Class_tailRec'] ?? \PhpursThunks::eval('Control_Monad_Rec_Class_tailRec')))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(function($v_1 = null) {
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Identity_Identity']))(($GLOBALS['Control_Monad_Rec_Class_tailRec'])((($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v_1 = null) {
   $__num = \func_num_args();
   $__res = $v_1;
   goto __end;;
@@ -384,18 +411,20 @@ goto end_branch_0;;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Monad0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Identity_monadIdentity'] ?? \PhpursThunks::eval('Data_Identity_monadIdentity'));
+  $__res = $GLOBALS['Data_Identity_monadIdentity'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Rec_Class_monadRecFunction'] = function() { $v = ["tailRecM" => (function() {
+}];
+
+// Control_Monad_Rec_Class_monadRecFunction
+$GLOBALS['Control_Monad_Rec_Class_monadRecFunction'] = ["tailRecM" => (function() {
   $__fn = function($f_0 = null, $a0_1 = null, $e_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($GLOBALS['Control_Monad_Rec_Class_tailRec'] ?? \PhpursThunks::eval('Control_Monad_Rec_Class_tailRec')))(function($a_3 = null) use ($e_2, $f_0) {
+  $__res = (($GLOBALS['Control_Monad_Rec_Class_tailRec'])(function($a_3 = null) use ($e_2, $f_0) {
   $__num = \func_num_args();
   $__res = (($f_0)($a_3))($e_2);
   goto __end;;
@@ -409,18 +438,20 @@ goto end_branch_0;;
   return $__fn;
 })(), "Monad0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Monad_monadFn'] ?? \PhpursThunks::eval('Control_Monad_monadFn'));
+  $__res = $GLOBALS['Control_Monad_monadFn'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Rec_Class_monadRecEither'] = function() { $v = ["tailRecM" => (function() {
+}];
+
+// Control_Monad_Rec_Class_monadRecEither
+$GLOBALS['Control_Monad_Rec_Class_monadRecEither'] = ["tailRecM" => (function() {
   $__fn = function($f_0 = null, $a0_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Monad_Rec_Class_tailRec'] ?? \PhpursThunks::eval('Control_Monad_Rec_Class_tailRec')))(function($v_2 = null) use ($f_0) {
+  $__res = (($GLOBALS['Control_Monad_Rec_Class_tailRec'])(function($v_2 = null) use ($f_0) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object($v_2) && (($v_2)->{'tag'} === "Left"))) {
@@ -458,28 +489,30 @@ goto end_branch_0;;
   return $__fn;
 })(), "Monad0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Either_monadEither'] ?? \PhpursThunks::eval('Data_Either_monadEither'));
+  $__res = $GLOBALS['Data_Either_monadEither'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Rec_Class_monadRecEffect'] = function() { $v = ["tailRecM" => (function() {
+}];
+
+// Control_Monad_Rec_Class_monadRecEffect
+$GLOBALS['Control_Monad_Rec_Class_monadRecEffect'] = ["tailRecM" => (function() {
   $__fn = function($f_0 = null, $a_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($f_0)($a_1)))(($GLOBALS['Effect_Ref__new'] ?? \PhpursThunks::eval('Effect_Ref__new')))))(function($r_2 = null) use ($f_0) {
+  $__res = (($GLOBALS['Effect_bindE'])((($GLOBALS['Effect_bindE'])(($f_0)($a_1)))($GLOBALS['Effect_Ref__new'])))(function($r_2 = null) use ($f_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))((($GLOBALS['Effect_untilE'] ?? \PhpursThunks::eval('Effect_untilE')))(((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))((($GLOBALS['Effect_Ref_read'] ?? \PhpursThunks::eval('Effect_Ref_read')))($r_2)))(function($v_3 = null) use ($f_0, $r_2) {
+  $__res = (($GLOBALS['Effect_bindE'])(($GLOBALS['Effect_untilE'])((($GLOBALS['Effect_bindE'])(($GLOBALS['Effect_Ref_read'])($r_2)))(function($v_3 = null) use ($f_0, $r_2) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object($v_3) && (($v_3)->{'tag'} === "Loop"))) {
-$__t0 = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($f_0)(($v_3)->{'value0'})))(function($e_4 = null) use ($r_2) {
+$__t0 = (($GLOBALS['Effect_bindE'])(($f_0)(($v_3)->{'value0'})))(function($e_4 = null) use ($r_2) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(((($GLOBALS['Effect_Ref_write'] ?? \PhpursThunks::eval('Effect_Ref_write')))($e_4))($r_2)))(function($dollar__unused_5 = null) {
+  $__res = (($GLOBALS['Effect_bindE'])((($GLOBALS['Effect_Ref_write'])($e_4))($r_2)))(function($dollar__unused_5 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_pureE'] ?? \PhpursThunks::eval('Effect_pureE')))(false);
+  $__res = ($GLOBALS['Effect_pureE'])(false);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -491,7 +524,7 @@ $__t0 = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))(($f
 goto end_branch_0;;
 };
   if ((is_object($v_3) && (($v_3)->{'tag'} === "Done"))) {
-$__t0 = (($GLOBALS['Effect_pureE'] ?? \PhpursThunks::eval('Effect_pureE')))(true);
+$__t0 = ($GLOBALS['Effect_pureE'])(true);
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -503,7 +536,7 @@ goto end_branch_0;;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }))))(function($dollar__unused_3 = null) use ($r_2) {
   $__num = \func_num_args();
-  $__res = (((($GLOBALS['Effect_applyEffect'] ?? \PhpursThunks::eval('Effect_applyEffect')))['apply'])((($GLOBALS['Effect_pureE'] ?? \PhpursThunks::eval('Effect_pureE')))(function($v_4 = null) {
+  $__res = ((($GLOBALS['Effect_applyEffect'])['apply'])(($GLOBALS['Effect_pureE'])(function($v_4 = null) {
   $__num = \func_num_args();
   $__t1 = null;;
   if ((is_object($v_4) && (($v_4)->{'tag'} === "Done"))) {
@@ -517,7 +550,7 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-})))((($GLOBALS['Effect_Ref_read'] ?? \PhpursThunks::eval('Effect_Ref_read')))($r_2));
+})))(($GLOBALS['Effect_Ref_read'])($r_2));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -533,12 +566,14 @@ goto end_branch_1;;
   return $__fn;
 })(), "Monad0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_monadEffect'] ?? \PhpursThunks::eval('Effect_monadEffect'));
+  $__res = $GLOBALS['Effect_monadEffect'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Rec_Class_loop3'] = function() { $v = (function() {
+}];
+
+// Control_Monad_Rec_Class_loop3
+$GLOBALS['Control_Monad_Rec_Class_loop3'] = (function() {
   $__fn = function($a_0 = null, $b_1 = null, $c_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -550,8 +585,10 @@ goto end_branch_1;;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Control_Monad_Rec_Class_loop2'] = function() { $v = (function() {
+})();
+
+// Control_Monad_Rec_Class_loop2
+$GLOBALS['Control_Monad_Rec_Class_loop2'] = (function() {
   $__fn = function($a_0 = null, $b_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -563,8 +600,10 @@ goto end_branch_1;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Control_Monad_Rec_Class_functorStep'] = function() { $v = ["map" => (function() {
+})();
+
+// Control_Monad_Rec_Class_functorStep
+$GLOBALS['Control_Monad_Rec_Class_functorStep'] = ["map" => (function() {
   $__fn = function($f_0 = null, $m_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -588,10 +627,12 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Rec_Class_forever'] = function() { $v = function($dictMonadRec_0 = null) {
+})()];
+
+// Control_Monad_Rec_Class_forever
+$GLOBALS['Control_Monad_Rec_Class_forever'] = function($dictMonadRec_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (((((((($dictMonadRec_0)['Monad0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Bind1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Apply0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_1_0 = (((((((($dictMonadRec_0)['Monad0'])($GLOBALS['Prim_undefined']))['Bind1'])($GLOBALS['Prim_undefined']))['Apply0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']);
   $__res = function($ma_2 = null) use ($__local_var_1_0, $dictMonadRec_0) {
   $__num = \func_num_args();
   $__res = ((($dictMonadRec_0)['tailRecM'])(function($u_3 = null) use ($__local_var_1_0, $ma_2) {
@@ -606,7 +647,7 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')));
+}))($GLOBALS['Data_Unit_unit']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -614,8 +655,10 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Monad_Rec_Class_bifunctorStep'] = function() { $v = ["bimap" => (function() {
+};
+
+// Control_Monad_Rec_Class_bifunctorStep
+$GLOBALS['Control_Monad_Rec_Class_bifunctorStep'] = ["bimap" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null, $v2_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -639,27 +682,5 @@ goto end_branch_0;;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+})()];
 

@@ -102,24 +102,31 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Test_ArrayOps_range'] = function() { $v = (function() {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Test_ArrayOps_range
+$GLOBALS['Test_ArrayOps_range'] = (function() {
   $__fn = function($start_0 = null, $end_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_Array_rangeImpl'] ?? \PhpursThunks::eval('Data_Array_rangeImpl')))($start_0, $end_1);
+  $__res = ($GLOBALS['Data_Array_rangeImpl'])($start_0, $end_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Test_ArrayOps_filterEvens'] = function() { $v = function($arr_0 = null) {
+})();
+
+// Test_ArrayOps_filterEvens
+$GLOBALS['Test_ArrayOps_filterEvens'] = function($arr_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Array_filterImpl'] ?? \PhpursThunks::eval('Data_Array_filterImpl')))(function($x_1 = null) {
+  $__res = ($GLOBALS['Data_Array_filterImpl'])(function($x_1 = null) {
   $__num = \func_num_args();
-  $__res = (((($GLOBALS['Data_EuclideanRing_intMod'] ?? \PhpursThunks::eval('Data_EuclideanRing_intMod')))($x_1))(2) === 0);
+  $__res = ((($GLOBALS['Data_EuclideanRing_intMod'])($x_1))(2) === 0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -127,33 +134,32 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Test_ArrayOps_sumEvens'] = function() { $v = function($n_0 = null) {
+};
+
+// Test_ArrayOps_sumEvens
+$GLOBALS['Test_ArrayOps_sumEvens'] = function($n_0 = null) {
   $__num = \func_num_args();
-  $__res = (((($GLOBALS['Data_Foldable_foldlArray'] ?? \PhpursThunks::eval('Data_Foldable_foldlArray')))(($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd'))))(0))((($GLOBALS['Data_Array_filterImpl'] ?? \PhpursThunks::eval('Data_Array_filterImpl')))(function($x_1 = null) {
+  $__res = ((($GLOBALS['Data_Foldable_foldlArray'])($GLOBALS['Data_Semiring_intAdd']))(0))(($GLOBALS['Data_Array_filterImpl'])(function($x_1 = null) {
   $__num = \func_num_args();
-  $__res = (((($GLOBALS['Data_EuclideanRing_intMod'] ?? \PhpursThunks::eval('Data_EuclideanRing_intMod')))($x_1))(2) === 0);
+  $__res = ((($GLOBALS['Data_EuclideanRing_intMod'])($x_1))(2) === 0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, (($GLOBALS['Data_Array_rangeImpl'] ?? \PhpursThunks::eval('Data_Array_rangeImpl')))(1, $n_0)));
+}, ($GLOBALS['Data_Array_rangeImpl'])(1, $n_0)));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Test_ArrayOps_describe'] = function() { $v = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))("Array Processing (900 elements):"); return $v; };
-\PhpursThunks::$thunks['Test_ArrayOps_act'] = function() { $v = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))((($GLOBALS['Bench_opaque'] ?? \PhpursThunks::eval('Bench_opaque')))(900)))(function($dummy_0 = null) {
+};
+
+// Test_ArrayOps_describe
+$GLOBALS['Test_ArrayOps_describe'] = ($GLOBALS['Effect_Console_log'])("Array Processing (900 elements):");
+
+// Test_ArrayOps_act
+$GLOBALS['Test_ArrayOps_act'] = (($GLOBALS['Effect_bindE'])(($GLOBALS['Bench_opaque'])(900)))(function($dummy_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))((($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))((($GLOBALS['Test_ArrayOps_sumEvens'] ?? \PhpursThunks::eval('Test_ArrayOps_sumEvens')))($dummy_0)));
+  $__res = ($GLOBALS['Effect_Console_log'])(($GLOBALS['Data_Show_showIntImpl'])(($GLOBALS['Test_ArrayOps_sumEvens'])($dummy_0)));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}); return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
+});
 

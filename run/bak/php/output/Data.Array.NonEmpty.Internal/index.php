@@ -111,125 +111,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Array_NonEmpty_Internal_NonEmptyArray'] = function() { $v = function($x_0 = null) {
-  $__num = \func_num_args();
-  $__res = $x_0;
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_Internal_unfoldable1NonEmptyArray'] = function() { $v = ($GLOBALS['Data_Unfoldable1_unfoldable1Array'] ?? \PhpursThunks::eval('Data_Unfoldable1_unfoldable1Array')); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_Internal_traversableWithIndexNonEmptyArray'] = function() { $v = ($GLOBALS['Data_TraversableWithIndex_traversableWithIndexArray'] ?? \PhpursThunks::eval('Data_TraversableWithIndex_traversableWithIndexArray')); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_Internal_traversableNonEmptyArray'] = function() { $v = ($GLOBALS['Data_Traversable_traversableArray'] ?? \PhpursThunks::eval('Data_Traversable_traversableArray')); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_Internal_showNonEmptyArray'] = function() { $v = function($dictShow_0 = null) {
-  $__num = \func_num_args();
-  $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
-  $__num = \func_num_args();
-  $__res = (("(NonEmptyArray " . ((($GLOBALS['Data_Show_showArrayImpl'] ?? \PhpursThunks::eval('Data_Show_showArrayImpl')))(($dictShow_0)['show']))($v_1)) . ")");
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}];
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_Internal_semigroupNonEmptyArray'] = function() { $v = ($GLOBALS['Data_Semigroup_semigroupArray'] ?? \PhpursThunks::eval('Data_Semigroup_semigroupArray')); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_Internal_ordNonEmptyArray'] = function() { $v = function($dictOrd_0 = null) {
-  $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Ord_ordArray'] ?? \PhpursThunks::eval('Data_Ord_ordArray')))($dictOrd_0);
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_Internal_ord1NonEmptyArray'] = function() { $v = ($GLOBALS['Data_Ord_ord1Array'] ?? \PhpursThunks::eval('Data_Ord_ord1Array')); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_Internal_monadNonEmptyArray'] = function() { $v = ($GLOBALS['Control_Monad_monadArray'] ?? \PhpursThunks::eval('Control_Monad_monadArray')); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_Internal_functorWithIndexNonEmptyArray'] = function() { $v = ($GLOBALS['Data_FunctorWithIndex_functorWithIndexArray'] ?? \PhpursThunks::eval('Data_FunctorWithIndex_functorWithIndexArray')); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_Internal_functorNonEmptyArray'] = function() { $v = ($GLOBALS['Data_Functor_functorArray'] ?? \PhpursThunks::eval('Data_Functor_functorArray')); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_Internal_foldableWithIndexNonEmptyArray'] = function() { $v = ($GLOBALS['Data_FoldableWithIndex_foldableWithIndexArray'] ?? \PhpursThunks::eval('Data_FoldableWithIndex_foldableWithIndexArray')); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_Internal_foldableNonEmptyArray'] = function() { $v = ($GLOBALS['Data_Foldable_foldableArray'] ?? \PhpursThunks::eval('Data_Foldable_foldableArray')); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_Internal_foldable1NonEmptyArray'] = function() { $v = ["foldMap1" => function($dictSemigroup_0 = null) {
-  $__num = \func_num_args();
-  $__res = (((($GLOBALS['Data_Semigroup_Foldable_foldMap1DefaultL'] ?? \PhpursThunks::eval('Data_Semigroup_Foldable_foldMap1DefaultL')))(($GLOBALS['Data_Array_NonEmpty_Internal_foldable1NonEmptyArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_Internal_foldable1NonEmptyArray'))))(($GLOBALS['Data_Functor_functorArray'] ?? \PhpursThunks::eval('Data_Functor_functorArray'))))($dictSemigroup_0);
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "foldr1" => (function() {
-  $__fn = function($__local_var_0 = null, $__local_var_1 = null) use (&$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = (($GLOBALS['Data_Array_NonEmpty_Internal_foldr1Impl'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_Internal_foldr1Impl')))($__local_var_0, $__local_var_1);
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "foldl1" => (function() {
-  $__fn = function($__local_var_0 = null, $__local_var_1 = null) use (&$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = (($GLOBALS['Data_Array_NonEmpty_Internal_foldl1Impl'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_Internal_foldl1Impl')))($__local_var_0, $__local_var_1);
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Foldable0" => function($dollar__unused_0 = null) {
-  $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Foldable_foldableArray'] ?? \PhpursThunks::eval('Data_Foldable_foldableArray'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_Internal_traversable1NonEmptyArray'] = function() { $v = ["traverse1" => function($dictApply_0 = null) {
-  $__num = \func_num_args();
-  $apply_1_0 = ($dictApply_0)['apply'];
-  $map_2_1 = ((($dictApply_0)['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['map'];
-  $__res = function($f_3 = null) use ($apply_1_0, $map_2_1) {
-  $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Array_NonEmpty_Internal_traverse1Impl'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_Internal_traverse1Impl')))($apply_1_0, $map_2_1, $f_3);
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "sequence1" => function($dictApply_0 = null) {
-  $__num = \func_num_args();
-  $__res = (((($GLOBALS['Data_Array_NonEmpty_Internal_traversable1NonEmptyArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_Internal_traversable1NonEmptyArray')))['traverse1'])($dictApply_0))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))['identity']);
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Foldable10" => function($dollar__unused_0 = null) {
-  $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Array_NonEmpty_Internal_foldable1NonEmptyArray'] ?? \PhpursThunks::eval('Data_Array_NonEmpty_Internal_foldable1NonEmptyArray'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Traversable1" => function($dollar__unused_0 = null) {
-  $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Traversable_traversableArray'] ?? \PhpursThunks::eval('Data_Traversable_traversableArray'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_Internal_eqNonEmptyArray'] = function() { $v = function($dictEq_0 = null) {
-  $__num = \func_num_args();
-  $__res = ["eq" => (($GLOBALS['Data_Eq_eqArrayImpl'] ?? \PhpursThunks::eval('Data_Eq_eqArrayImpl')))(($dictEq_0)['eq'])];
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_Internal_eq1NonEmptyArray'] = function() { $v = ($GLOBALS['Data_Eq_eq1Array'] ?? \PhpursThunks::eval('Data_Eq_eq1Array')); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_Internal_bindNonEmptyArray'] = function() { $v = ($GLOBALS['Control_Bind_bindArray'] ?? \PhpursThunks::eval('Control_Bind_bindArray')); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_Internal_applyNonEmptyArray'] = function() { $v = ($GLOBALS['Control_Apply_applyArray'] ?? \PhpursThunks::eval('Control_Apply_applyArray')); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_Internal_applicativeNonEmptyArray'] = function() { $v = ($GLOBALS['Control_Applicative_applicativeArray'] ?? \PhpursThunks::eval('Control_Applicative_applicativeArray')); return $v; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_Internal_altNonEmptyArray'] = function() { $v = ($GLOBALS['Control_Alt_altArray'] ?? \PhpursThunks::eval('Control_Alt_altArray')); return $v; };
+
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Data_Array_NonEmpty_Internal = \call_user_func(function() {
   $exports = [];
@@ -336,29 +218,169 @@ $exports['traverse1Impl'] = $traverse1Impl;
 return $exports;
   return $exports;
 });
-\PhpursThunks::$thunks['Data_Array_NonEmpty_Internal_foldl1Impl'] = function() use (&$ffi_Data_Array_NonEmpty_Internal) { return $ffi_Data_Array_NonEmpty_Internal['foldl1Impl']; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_Internal_foldr1Impl'] = function() use (&$ffi_Data_Array_NonEmpty_Internal) { return $ffi_Data_Array_NonEmpty_Internal['foldr1Impl']; };
-\PhpursThunks::$thunks['Data_Array_NonEmpty_Internal_traverse1Impl'] = function() use (&$ffi_Data_Array_NonEmpty_Internal) { return $ffi_Data_Array_NonEmpty_Internal['traverse1Impl']; };
+$GLOBALS['Data_Array_NonEmpty_Internal_foldl1Impl'] = $ffi_Data_Array_NonEmpty_Internal['foldl1Impl'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Array_NonEmpty_Internal_foldr1Impl'] = $ffi_Data_Array_NonEmpty_Internal['foldr1Impl'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Array_NonEmpty_Internal_traverse1Impl'] = $ffi_Data_Array_NonEmpty_Internal['traverse1Impl'] ?? new class { public function __invoke(...$args) { return $this; } };
 
 
+// Data_Array_NonEmpty_Internal_NonEmptyArray
+$GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray'] = function($x_0 = null) {
+  $__num = \func_num_args();
+  $__res = $x_0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 
+// Data_Array_NonEmpty_Internal_unfoldable1NonEmptyArray
+$GLOBALS['Data_Array_NonEmpty_Internal_unfoldable1NonEmptyArray'] = $GLOBALS['Data_Unfoldable1_unfoldable1Array'];
 
+// Data_Array_NonEmpty_Internal_traversableWithIndexNonEmptyArray
+$GLOBALS['Data_Array_NonEmpty_Internal_traversableWithIndexNonEmptyArray'] = $GLOBALS['Data_TraversableWithIndex_traversableWithIndexArray'];
 
+// Data_Array_NonEmpty_Internal_traversableNonEmptyArray
+$GLOBALS['Data_Array_NonEmpty_Internal_traversableNonEmptyArray'] = $GLOBALS['Data_Traversable_traversableArray'];
 
+// Data_Array_NonEmpty_Internal_showNonEmptyArray
+$GLOBALS['Data_Array_NonEmpty_Internal_showNonEmptyArray'] = function($dictShow_0 = null) {
+  $__num = \func_num_args();
+  $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
+  $__num = \func_num_args();
+  $__res = (("(NonEmptyArray " . (($GLOBALS['Data_Show_showArrayImpl'])(($dictShow_0)['show']))($v_1)) . ")");
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 
+// Data_Array_NonEmpty_Internal_semigroupNonEmptyArray
+$GLOBALS['Data_Array_NonEmpty_Internal_semigroupNonEmptyArray'] = $GLOBALS['Data_Semigroup_semigroupArray'];
 
+// Data_Array_NonEmpty_Internal_ordNonEmptyArray
+$GLOBALS['Data_Array_NonEmpty_Internal_ordNonEmptyArray'] = function($dictOrd_0 = null) {
+  $__num = \func_num_args();
+  $__res = ($GLOBALS['Data_Ord_ordArray'])($dictOrd_0);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 
+// Data_Array_NonEmpty_Internal_ord1NonEmptyArray
+$GLOBALS['Data_Array_NonEmpty_Internal_ord1NonEmptyArray'] = $GLOBALS['Data_Ord_ord1Array'];
 
+// Data_Array_NonEmpty_Internal_monadNonEmptyArray
+$GLOBALS['Data_Array_NonEmpty_Internal_monadNonEmptyArray'] = $GLOBALS['Control_Monad_monadArray'];
 
+// Data_Array_NonEmpty_Internal_functorWithIndexNonEmptyArray
+$GLOBALS['Data_Array_NonEmpty_Internal_functorWithIndexNonEmptyArray'] = $GLOBALS['Data_FunctorWithIndex_functorWithIndexArray'];
 
+// Data_Array_NonEmpty_Internal_functorNonEmptyArray
+$GLOBALS['Data_Array_NonEmpty_Internal_functorNonEmptyArray'] = $GLOBALS['Data_Functor_functorArray'];
 
+// Data_Array_NonEmpty_Internal_foldableWithIndexNonEmptyArray
+$GLOBALS['Data_Array_NonEmpty_Internal_foldableWithIndexNonEmptyArray'] = $GLOBALS['Data_FoldableWithIndex_foldableWithIndexArray'];
 
+// Data_Array_NonEmpty_Internal_foldableNonEmptyArray
+$GLOBALS['Data_Array_NonEmpty_Internal_foldableNonEmptyArray'] = $GLOBALS['Data_Foldable_foldableArray'];
 
+// Data_Array_NonEmpty_Internal_foldable1NonEmptyArray
+$GLOBALS['Data_Array_NonEmpty_Internal_foldable1NonEmptyArray'] = ["foldMap1" => function($dictSemigroup_0 = null) {
+  $__num = \func_num_args();
+  $__res = ((($GLOBALS['Data_Semigroup_Foldable_foldMap1DefaultL'])($GLOBALS['Data_Array_NonEmpty_Internal_foldable1NonEmptyArray']))($GLOBALS['Data_Functor_functorArray']))($dictSemigroup_0);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "foldr1" => (function() {
+  $__fn = function($__local_var_0 = null, $__local_var_1 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ($GLOBALS['Data_Array_NonEmpty_Internal_foldr1Impl'])($__local_var_0, $__local_var_1);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})(), "foldl1" => (function() {
+  $__fn = function($__local_var_0 = null, $__local_var_1 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ($GLOBALS['Data_Array_NonEmpty_Internal_foldl1Impl'])($__local_var_0, $__local_var_1);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})(), "Foldable0" => function($dollar__unused_0 = null) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Data_Foldable_foldableArray'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
+// Data_Array_NonEmpty_Internal_traversable1NonEmptyArray
+$GLOBALS['Data_Array_NonEmpty_Internal_traversable1NonEmptyArray'] = ["traverse1" => function($dictApply_0 = null) {
+  $__num = \func_num_args();
+  $apply_1_0 = ($dictApply_0)['apply'];
+  $map_2_1 = ((($dictApply_0)['Functor0'])($GLOBALS['Prim_undefined']))['map'];
+  $__res = function($f_3 = null) use ($apply_1_0, $map_2_1) {
+  $__num = \func_num_args();
+  $__res = ($GLOBALS['Data_Array_NonEmpty_Internal_traverse1Impl'])($apply_1_0, $map_2_1, $f_3);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "sequence1" => function($dictApply_0 = null) {
+  $__num = \func_num_args();
+  $__res = ((($GLOBALS['Data_Array_NonEmpty_Internal_traversable1NonEmptyArray'])['traverse1'])($dictApply_0))(($GLOBALS['Control_Category_categoryFn'])['identity']);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Foldable10" => function($dollar__unused_0 = null) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Data_Array_NonEmpty_Internal_foldable1NonEmptyArray'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Traversable1" => function($dollar__unused_0 = null) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Data_Traversable_traversableArray'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
+// Data_Array_NonEmpty_Internal_eqNonEmptyArray
+$GLOBALS['Data_Array_NonEmpty_Internal_eqNonEmptyArray'] = function($dictEq_0 = null) {
+  $__num = \func_num_args();
+  $__res = ["eq" => ($GLOBALS['Data_Eq_eqArrayImpl'])(($dictEq_0)['eq'])];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 
+// Data_Array_NonEmpty_Internal_eq1NonEmptyArray
+$GLOBALS['Data_Array_NonEmpty_Internal_eq1NonEmptyArray'] = $GLOBALS['Data_Eq_eq1Array'];
 
+// Data_Array_NonEmpty_Internal_bindNonEmptyArray
+$GLOBALS['Data_Array_NonEmpty_Internal_bindNonEmptyArray'] = $GLOBALS['Control_Bind_bindArray'];
 
+// Data_Array_NonEmpty_Internal_applyNonEmptyArray
+$GLOBALS['Data_Array_NonEmpty_Internal_applyNonEmptyArray'] = $GLOBALS['Control_Apply_applyArray'];
 
+// Data_Array_NonEmpty_Internal_applicativeNonEmptyArray
+$GLOBALS['Data_Array_NonEmpty_Internal_applicativeNonEmptyArray'] = $GLOBALS['Control_Applicative_applicativeArray'];
 
+// Data_Array_NonEmpty_Internal_altNonEmptyArray
+$GLOBALS['Data_Array_NonEmpty_Internal_altNonEmptyArray'] = $GLOBALS['Control_Alt_altArray'];
 

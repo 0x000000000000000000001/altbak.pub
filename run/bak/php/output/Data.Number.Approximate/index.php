@@ -98,21 +98,30 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Number_Approximate_Tolerance'] = function() { $v = function($x_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Number_Approximate_Tolerance
+$GLOBALS['Data_Number_Approximate_Tolerance'] = function($x_0 = null) {
   $__num = \func_num_args();
   $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Number_Approximate_Fraction'] = function() { $v = function($x_0 = null) {
+};
+
+// Data_Number_Approximate_Fraction
+$GLOBALS['Data_Number_Approximate_Fraction'] = function($x_0 = null) {
   $__num = \func_num_args();
   $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Number_Approximate_eqRelative'] = function() { $v = (function() {
+};
+
+// Data_Number_Approximate_eqRelative
+$GLOBALS['Data_Number_Approximate_eqRelative'] = (function() {
   $__fn = function($v_0 = null, $v1_1 = null, $v2_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -121,7 +130,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   $__t0 = null;;
   switch ($v1_1) {
 case 0.0:
-$__t0 = ((($GLOBALS['Data_Number_abs'] ?? \PhpursThunks::eval('Data_Number_abs')))($v2_2) <= $v_0);
+$__t0 = (($GLOBALS['Data_Number_abs'])($v2_2) <= $v_0);
 goto end_branch_0;;
 break;
 default:
@@ -130,14 +139,14 @@ break;
 };
   switch ($v2_2) {
 case 0.0:
-$__t0 = ((($GLOBALS['Data_Number_abs'] ?? \PhpursThunks::eval('Data_Number_abs')))($v1_1) <= $v_0);
+$__t0 = (($GLOBALS['Data_Number_abs'])($v1_1) <= $v_0);
 goto end_branch_0;;
 break;
 default:
 ;
 break;
 };
-  $__t0 = ((($GLOBALS['Data_Number_abs'] ?? \PhpursThunks::eval('Data_Number_abs')))(($v1_1 - $v2_2)) <= (($v_0 * (($GLOBALS['Data_Number_abs'] ?? \PhpursThunks::eval('Data_Number_abs')))(($v1_1 + $v2_2))) / 2.0));
+  $__t0 = (($GLOBALS['Data_Number_abs'])(($v1_1 - $v2_2)) <= (($v_0 * ($GLOBALS['Data_Number_abs'])(($v1_1 + $v2_2))) / 2.0));
   end_branch_0:;
   $__res = $__t0;
   goto __end;;
@@ -145,40 +154,38 @@ break;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Number_Approximate_eqApproximate'] = function() { $v = (($GLOBALS['Data_Number_Approximate_eqRelative'] ?? \PhpursThunks::eval('Data_Number_Approximate_eqRelative')))(0.000001); return $v; };
-\PhpursThunks::$thunks['Data_Number_Approximate_neqApproximate'] = function() { $v = (function() {
+})();
+
+// Data_Number_Approximate_eqApproximate
+$GLOBALS['Data_Number_Approximate_eqApproximate'] = ($GLOBALS['Data_Number_Approximate_eqRelative'])(0.000001);
+
+// Data_Number_Approximate_neqApproximate
+$GLOBALS['Data_Number_Approximate_neqApproximate'] = (function() {
   $__fn = function($x_0 = null, $y_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ( ! (((($GLOBALS['Data_Number_Approximate_eqRelative'] ?? \PhpursThunks::eval('Data_Number_Approximate_eqRelative')))(0.000001))($x_0))($y_1));
+  $__res = ( ! ((($GLOBALS['Data_Number_Approximate_eqRelative'])(0.000001))($x_0))($y_1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Number_Approximate_eqAbsolute'] = function() { $v = (function() {
+})();
+
+// Data_Number_Approximate_eqAbsolute
+$GLOBALS['Data_Number_Approximate_eqAbsolute'] = (function() {
   $__fn = function($v_0 = null, $x_1 = null, $y_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($GLOBALS['Data_Number_abs'] ?? \PhpursThunks::eval('Data_Number_abs')))(($x_1 - $y_2)) <= $v_0);
+  $__res = (($GLOBALS['Data_Number_abs'])(($x_1 - $y_2)) <= $v_0);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
+})();
 

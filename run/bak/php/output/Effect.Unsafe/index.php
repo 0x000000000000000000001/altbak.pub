@@ -102,7 +102,7 @@ $exports['unsafePerformEffect'] = function($f) {
 return $exports;
   return $exports;
 });
-\PhpursThunks::$thunks['Effect_Unsafe_unsafePerformEffect'] = function() use (&$ffi_Effect_Unsafe) { return $ffi_Effect_Unsafe['unsafePerformEffect']; };
+$GLOBALS['Effect_Unsafe_unsafePerformEffect'] = $ffi_Effect_Unsafe['unsafePerformEffect'] ?? new class { public function __invoke(...$args) { return $this; } };
 
 
 

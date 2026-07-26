@@ -93,22 +93,25 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Profunctor_Cochoice_unright'] = function() { $v = function($dict_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Profunctor_Cochoice_unright
+$GLOBALS['Data_Profunctor_Cochoice_unright'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['unright'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Profunctor_Cochoice_unleft'] = function() { $v = function($dict_0 = null) {
+};
+
+// Data_Profunctor_Cochoice_unleft
+$GLOBALS['Data_Profunctor_Cochoice_unleft'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['unleft'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
+};
 

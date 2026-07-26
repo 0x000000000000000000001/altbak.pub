@@ -105,25 +105,34 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Effect_Aff_Class_monadAffAff'] = function() { $v = ["liftAff" => (($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))['identity'], "MonadEffect0" => function($dollar__unused_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Effect_Aff_Class_monadAffAff
+$GLOBALS['Effect_Aff_Class_monadAffAff'] = ["liftAff" => ($GLOBALS['Control_Category_categoryFn'])['identity'], "MonadEffect0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_Aff_monadEffectAff'] ?? \PhpursThunks::eval('Effect_Aff_monadEffectAff'));
+  $__res = $GLOBALS['Effect_Aff_monadEffectAff'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_Class_liftAff'] = function() { $v = function($dict_0 = null) {
+}];
+
+// Effect_Aff_Class_liftAff
+$GLOBALS['Effect_Aff_Class_liftAff'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['liftAff'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_Class_monadAffContT'] = function() { $v = function($dictMonadAff_0 = null) {
+};
+
+// Effect_Aff_Class_monadAffContT
+$GLOBALS['Effect_Aff_Class_monadAffContT'] = function($dictMonadAff_0 = null) {
   $__num = \func_num_args();
-  $MonadEffect0_1_0 = (($dictMonadAff_0)['MonadEffect0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $monadEffectContT_2_1 = (($GLOBALS['Control_Monad_Cont_Trans_monadEffectContT'] ?? \PhpursThunks::eval('Control_Monad_Cont_Trans_monadEffectContT')))($MonadEffect0_1_0);
-  $__res = ["liftAff" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(((((($MonadEffect0_1_0)['Monad0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Bind1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['bind']))(($dictMonadAff_0)['liftAff']), "MonadEffect0" => function($dollar__unused_3 = null) use ($monadEffectContT_2_1) {
+  $MonadEffect0_1_0 = (($dictMonadAff_0)['MonadEffect0'])($GLOBALS['Prim_undefined']);
+  $monadEffectContT_2_1 = ($GLOBALS['Control_Monad_Cont_Trans_monadEffectContT'])($MonadEffect0_1_0);
+  $__res = ["liftAff" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(((((($MonadEffect0_1_0)['Monad0'])($GLOBALS['Prim_undefined']))['Bind1'])($GLOBALS['Prim_undefined']))['bind']))(($dictMonadAff_0)['liftAff']), "MonadEffect0" => function($dollar__unused_3 = null) use ($monadEffectContT_2_1) {
   $__num = \func_num_args();
   $__res = $monadEffectContT_2_1;
   goto __end;;
@@ -133,12 +142,14 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_Class_monadAffExceptT'] = function() { $v = function($dictMonadAff_0 = null) {
+};
+
+// Effect_Aff_Class_monadAffExceptT
+$GLOBALS['Effect_Aff_Class_monadAffExceptT'] = function($dictMonadAff_0 = null) {
   $__num = \func_num_args();
-  $MonadEffect0_1_0 = (($dictMonadAff_0)['MonadEffect0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $monadEffectExceptT_2_1 = (($GLOBALS['Control_Monad_Except_Trans_monadEffectExceptT'] ?? \PhpursThunks::eval('Control_Monad_Except_Trans_monadEffectExceptT')))($MonadEffect0_1_0);
-  $__res = ["liftAff" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(((($GLOBALS['Control_Monad_Except_Trans_monadTransExceptT'] ?? \PhpursThunks::eval('Control_Monad_Except_Trans_monadTransExceptT')))['lift'])((($MonadEffect0_1_0)['Monad0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))))(($dictMonadAff_0)['liftAff']), "MonadEffect0" => function($dollar__unused_3 = null) use ($monadEffectExceptT_2_1) {
+  $MonadEffect0_1_0 = (($dictMonadAff_0)['MonadEffect0'])($GLOBALS['Prim_undefined']);
+  $monadEffectExceptT_2_1 = ($GLOBALS['Control_Monad_Except_Trans_monadEffectExceptT'])($MonadEffect0_1_0);
+  $__res = ["liftAff" => (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_Except_Trans_monadTransExceptT'])['lift'])((($MonadEffect0_1_0)['Monad0'])($GLOBALS['Prim_undefined']))))(($dictMonadAff_0)['liftAff']), "MonadEffect0" => function($dollar__unused_3 = null) use ($monadEffectExceptT_2_1) {
   $__num = \func_num_args();
   $__res = $monadEffectExceptT_2_1;
   goto __end;;
@@ -148,12 +159,14 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_Class_monadAffListT'] = function() { $v = function($dictMonadAff_0 = null) {
+};
+
+// Effect_Aff_Class_monadAffListT
+$GLOBALS['Effect_Aff_Class_monadAffListT'] = function($dictMonadAff_0 = null) {
   $__num = \func_num_args();
-  $MonadEffect0_1_0 = (($dictMonadAff_0)['MonadEffect0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $monadEffectListT_2_1 = (($GLOBALS['Control_Monad_List_Trans_monadEffectListT'] ?? \PhpursThunks::eval('Control_Monad_List_Trans_monadEffectListT')))($MonadEffect0_1_0);
-  $__res = ["liftAff" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Control_Monad_List_Trans_fromEffect'] ?? \PhpursThunks::eval('Control_Monad_List_Trans_fromEffect')))((((($MonadEffect0_1_0)['Monad0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Applicative0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))))(($dictMonadAff_0)['liftAff']), "MonadEffect0" => function($dollar__unused_3 = null) use ($monadEffectListT_2_1) {
+  $MonadEffect0_1_0 = (($dictMonadAff_0)['MonadEffect0'])($GLOBALS['Prim_undefined']);
+  $monadEffectListT_2_1 = ($GLOBALS['Control_Monad_List_Trans_monadEffectListT'])($MonadEffect0_1_0);
+  $__res = ["liftAff" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Control_Monad_List_Trans_fromEffect'])((((($MonadEffect0_1_0)['Monad0'])($GLOBALS['Prim_undefined']))['Applicative0'])($GLOBALS['Prim_undefined']))))(($dictMonadAff_0)['liftAff']), "MonadEffect0" => function($dollar__unused_3 = null) use ($monadEffectListT_2_1) {
   $__num = \func_num_args();
   $__res = $monadEffectListT_2_1;
   goto __end;;
@@ -163,12 +176,14 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_Class_monadAffMaybe'] = function() { $v = function($dictMonadAff_0 = null) {
+};
+
+// Effect_Aff_Class_monadAffMaybe
+$GLOBALS['Effect_Aff_Class_monadAffMaybe'] = function($dictMonadAff_0 = null) {
   $__num = \func_num_args();
-  $MonadEffect0_1_0 = (($dictMonadAff_0)['MonadEffect0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $monadEffectMaybe_2_1 = (($GLOBALS['Control_Monad_Maybe_Trans_monadEffectMaybe'] ?? \PhpursThunks::eval('Control_Monad_Maybe_Trans_monadEffectMaybe')))($MonadEffect0_1_0);
-  $__res = ["liftAff" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Control_Monad_Maybe_Trans_MaybeT'] ?? \PhpursThunks::eval('Control_Monad_Maybe_Trans_MaybeT'))))(((($GLOBALS['Control_Monad_liftM1'] ?? \PhpursThunks::eval('Control_Monad_liftM1')))((($MonadEffect0_1_0)['Monad0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')))))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just'))))))(($dictMonadAff_0)['liftAff']), "MonadEffect0" => function($dollar__unused_3 = null) use ($monadEffectMaybe_2_1) {
+  $MonadEffect0_1_0 = (($dictMonadAff_0)['MonadEffect0'])($GLOBALS['Prim_undefined']);
+  $monadEffectMaybe_2_1 = ($GLOBALS['Control_Monad_Maybe_Trans_monadEffectMaybe'])($MonadEffect0_1_0);
+  $__res = ["liftAff" => (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_Maybe_Trans_MaybeT']))((($GLOBALS['Control_Monad_liftM1'])((($MonadEffect0_1_0)['Monad0'])($GLOBALS['Prim_undefined'])))($GLOBALS['Data_Maybe_Just']))))(($dictMonadAff_0)['liftAff']), "MonadEffect0" => function($dollar__unused_3 = null) use ($monadEffectMaybe_2_1) {
   $__num = \func_num_args();
   $__res = $monadEffectMaybe_2_1;
   goto __end;;
@@ -178,16 +193,18 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_Class_monadAffRWS'] = function() { $v = function($dictMonadAff_0 = null) {
+};
+
+// Effect_Aff_Class_monadAffRWS
+$GLOBALS['Effect_Aff_Class_monadAffRWS'] = function($dictMonadAff_0 = null) {
   $__num = \func_num_args();
-  $MonadEffect0_1_0 = (($dictMonadAff_0)['MonadEffect0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $Monad0_2_1 = (($MonadEffect0_1_0)['Monad0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $MonadEffect0_1_0 = (($dictMonadAff_0)['MonadEffect0'])($GLOBALS['Prim_undefined']);
+  $Monad0_2_1 = (($MonadEffect0_1_0)['Monad0'])($GLOBALS['Prim_undefined']);
   $liftAff1_3_2 = ($dictMonadAff_0)['liftAff'];
   $__res = function($dictMonoid_4 = null) use ($Monad0_2_1, $MonadEffect0_1_0, $liftAff1_3_2) {
   $__num = \func_num_args();
-  $monadEffectRWS_5_3 = ((($GLOBALS['Control_Monad_RWS_Trans_monadEffectRWS'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_monadEffectRWS')))($dictMonoid_4))($MonadEffect0_1_0);
-  $__res = ["liftAff" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((((($GLOBALS['Control_Monad_RWS_Trans_monadTransRWST'] ?? \PhpursThunks::eval('Control_Monad_RWS_Trans_monadTransRWST')))($dictMonoid_4))['lift'])($Monad0_2_1)))($liftAff1_3_2), "MonadEffect0" => function($dollar__unused_6 = null) use ($monadEffectRWS_5_3) {
+  $monadEffectRWS_5_3 = (($GLOBALS['Control_Monad_RWS_Trans_monadEffectRWS'])($dictMonoid_4))($MonadEffect0_1_0);
+  $__res = ["liftAff" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(((($GLOBALS['Control_Monad_RWS_Trans_monadTransRWST'])($dictMonoid_4))['lift'])($Monad0_2_1)))($liftAff1_3_2), "MonadEffect0" => function($dollar__unused_6 = null) use ($monadEffectRWS_5_3) {
   $__num = \func_num_args();
   $__res = $monadEffectRWS_5_3;
   goto __end;;
@@ -201,11 +218,13 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_Class_monadAffReader'] = function() { $v = function($dictMonadAff_0 = null) {
+};
+
+// Effect_Aff_Class_monadAffReader
+$GLOBALS['Effect_Aff_Class_monadAffReader'] = function($dictMonadAff_0 = null) {
   $__num = \func_num_args();
-  $monadEffectReader_1_0 = (($GLOBALS['Control_Monad_Reader_Trans_monadEffectReader'] ?? \PhpursThunks::eval('Control_Monad_Reader_Trans_monadEffectReader')))((($dictMonadAff_0)['MonadEffect0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = ["liftAff" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Control_Monad_Reader_Trans_ReaderT'] ?? \PhpursThunks::eval('Control_Monad_Reader_Trans_ReaderT'))))(($GLOBALS['Data_Function_const'] ?? \PhpursThunks::eval('Data_Function_const')))))(($dictMonadAff_0)['liftAff']), "MonadEffect0" => function($dollar__unused_2 = null) use ($monadEffectReader_1_0) {
+  $monadEffectReader_1_0 = ($GLOBALS['Control_Monad_Reader_Trans_monadEffectReader'])((($dictMonadAff_0)['MonadEffect0'])($GLOBALS['Prim_undefined']));
+  $__res = ["liftAff" => (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_Reader_Trans_ReaderT']))($GLOBALS['Data_Function_const'])))(($dictMonadAff_0)['liftAff']), "MonadEffect0" => function($dollar__unused_2 = null) use ($monadEffectReader_1_0) {
   $__num = \func_num_args();
   $__res = $monadEffectReader_1_0;
   goto __end;;
@@ -215,12 +234,14 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_Class_monadAffState'] = function() { $v = function($dictMonadAff_0 = null) {
+};
+
+// Effect_Aff_Class_monadAffState
+$GLOBALS['Effect_Aff_Class_monadAffState'] = function($dictMonadAff_0 = null) {
   $__num = \func_num_args();
-  $MonadEffect0_1_0 = (($dictMonadAff_0)['MonadEffect0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $monadEffectState_2_1 = (($GLOBALS['Control_Monad_State_Trans_monadEffectState'] ?? \PhpursThunks::eval('Control_Monad_State_Trans_monadEffectState')))($MonadEffect0_1_0);
-  $__res = ["liftAff" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(((($GLOBALS['Control_Monad_State_Trans_monadTransStateT'] ?? \PhpursThunks::eval('Control_Monad_State_Trans_monadTransStateT')))['lift'])((($MonadEffect0_1_0)['Monad0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))))(($dictMonadAff_0)['liftAff']), "MonadEffect0" => function($dollar__unused_3 = null) use ($monadEffectState_2_1) {
+  $MonadEffect0_1_0 = (($dictMonadAff_0)['MonadEffect0'])($GLOBALS['Prim_undefined']);
+  $monadEffectState_2_1 = ($GLOBALS['Control_Monad_State_Trans_monadEffectState'])($MonadEffect0_1_0);
+  $__res = ["liftAff" => (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_State_Trans_monadTransStateT'])['lift'])((($MonadEffect0_1_0)['Monad0'])($GLOBALS['Prim_undefined']))))(($dictMonadAff_0)['liftAff']), "MonadEffect0" => function($dollar__unused_3 = null) use ($monadEffectState_2_1) {
   $__num = \func_num_args();
   $__res = $monadEffectState_2_1;
   goto __end;;
@@ -230,16 +251,18 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Effect_Aff_Class_monadAffWriter'] = function() { $v = function($dictMonadAff_0 = null) {
+};
+
+// Effect_Aff_Class_monadAffWriter
+$GLOBALS['Effect_Aff_Class_monadAffWriter'] = function($dictMonadAff_0 = null) {
   $__num = \func_num_args();
-  $MonadEffect0_1_0 = (($dictMonadAff_0)['MonadEffect0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $Monad0_2_1 = (($MonadEffect0_1_0)['Monad0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $MonadEffect0_1_0 = (($dictMonadAff_0)['MonadEffect0'])($GLOBALS['Prim_undefined']);
+  $Monad0_2_1 = (($MonadEffect0_1_0)['Monad0'])($GLOBALS['Prim_undefined']);
   $liftAff1_3_2 = ($dictMonadAff_0)['liftAff'];
   $__res = function($dictMonoid_4 = null) use ($Monad0_2_1, $MonadEffect0_1_0, $liftAff1_3_2) {
   $__num = \func_num_args();
-  $monadEffectWriter_5_3 = ((($GLOBALS['Control_Monad_Writer_Trans_monadEffectWriter'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_monadEffectWriter')))($dictMonoid_4))($MonadEffect0_1_0);
-  $__res = ["liftAff" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((((($GLOBALS['Control_Monad_Writer_Trans_monadTransWriterT'] ?? \PhpursThunks::eval('Control_Monad_Writer_Trans_monadTransWriterT')))($dictMonoid_4))['lift'])($Monad0_2_1)))($liftAff1_3_2), "MonadEffect0" => function($dollar__unused_6 = null) use ($monadEffectWriter_5_3) {
+  $monadEffectWriter_5_3 = (($GLOBALS['Control_Monad_Writer_Trans_monadEffectWriter'])($dictMonoid_4))($MonadEffect0_1_0);
+  $__res = ["liftAff" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(((($GLOBALS['Control_Monad_Writer_Trans_monadTransWriterT'])($dictMonoid_4))['lift'])($Monad0_2_1)))($liftAff1_3_2), "MonadEffect0" => function($dollar__unused_6 = null) use ($monadEffectWriter_5_3) {
   $__num = \func_num_args();
   $__res = $monadEffectWriter_5_3;
   goto __end;;
@@ -253,17 +276,5 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
-
-
+};
 

@@ -102,14 +102,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Semigroup_First_First'] = function() { $v = function($x_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Semigroup_First_First
+$GLOBALS['Data_Semigroup_First_First'] = function($x_0 = null) {
   $__num = \func_num_args();
   $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Semigroup_First_showFirst'] = function() { $v = function($dictShow_0 = null) {
+};
+
+// Data_Semigroup_First_showFirst
+$GLOBALS['Data_Semigroup_First_showFirst'] = function($dictShow_0 = null) {
   $__num = \func_num_args();
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
@@ -121,8 +128,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Semigroup_First_semigroupFirst'] = function() { $v = ["append" => (function() {
+};
+
+// Data_Semigroup_First_semigroupFirst
+$GLOBALS['Data_Semigroup_First_semigroupFirst'] = ["append" => (function() {
   $__fn = function($x_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -134,15 +143,19 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Semigroup_First_ordFirst'] = function() { $v = function($dictOrd_0 = null) {
+})()];
+
+// Data_Semigroup_First_ordFirst
+$GLOBALS['Data_Semigroup_First_ordFirst'] = function($dictOrd_0 = null) {
   $__num = \func_num_args();
   $__res = $dictOrd_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Semigroup_First_functorFirst'] = function() { $v = ["map" => (function() {
+};
+
+// Data_Semigroup_First_functorFirst
+$GLOBALS['Data_Semigroup_First_functorFirst'] = ["map" => (function() {
   $__fn = function($f_0 = null, $m_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -154,22 +167,28 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Semigroup_First_eqFirst'] = function() { $v = function($dictEq_0 = null) {
+})()];
+
+// Data_Semigroup_First_eqFirst
+$GLOBALS['Data_Semigroup_First_eqFirst'] = function($dictEq_0 = null) {
   $__num = \func_num_args();
   $__res = $dictEq_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Semigroup_First_eq1First'] = function() { $v = ["eq1" => function($dictEq_0 = null) {
+};
+
+// Data_Semigroup_First_eq1First
+$GLOBALS['Data_Semigroup_First_eq1First'] = ["eq1" => function($dictEq_0 = null) {
   $__num = \func_num_args();
   $__res = ($dictEq_0)['eq'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Semigroup_First_ord1First'] = function() { $v = ["compare1" => function($dictOrd_0 = null) {
+}];
+
+// Data_Semigroup_First_ord1First
+$GLOBALS['Data_Semigroup_First_ord1First'] = ["compare1" => function($dictOrd_0 = null) {
   $__num = \func_num_args();
   $__res = ($dictOrd_0)['compare'];
   goto __end;;
@@ -177,19 +196,23 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Eq10" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Semigroup_First_eq1First'] ?? \PhpursThunks::eval('Data_Semigroup_First_eq1First'));
+  $__res = $GLOBALS['Data_Semigroup_First_eq1First'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Semigroup_First_boundedFirst'] = function() { $v = function($dictBounded_0 = null) {
+}];
+
+// Data_Semigroup_First_boundedFirst
+$GLOBALS['Data_Semigroup_First_boundedFirst'] = function($dictBounded_0 = null) {
   $__num = \func_num_args();
   $__res = $dictBounded_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Semigroup_First_applyFirst'] = function() { $v = ["apply" => (function() {
+};
+
+// Data_Semigroup_First_applyFirst
+$GLOBALS['Data_Semigroup_First_applyFirst'] = ["apply" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -203,12 +226,14 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(), "Functor0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Semigroup_First_functorFirst'] ?? \PhpursThunks::eval('Data_Semigroup_First_functorFirst'));
+  $__res = $GLOBALS['Data_Semigroup_First_functorFirst'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Semigroup_First_bindFirst'] = function() { $v = ["bind" => (function() {
+}];
+
+// Data_Semigroup_First_bindFirst
+$GLOBALS['Data_Semigroup_First_bindFirst'] = ["bind" => (function() {
   $__fn = function($v_0 = null, $f_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -222,44 +247,33 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(), "Apply0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Semigroup_First_applyFirst'] ?? \PhpursThunks::eval('Data_Semigroup_First_applyFirst'));
+  $__res = $GLOBALS['Data_Semigroup_First_applyFirst'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Semigroup_First_applicativeFirst'] = function() { $v = ["pure" => ($GLOBALS['Data_Semigroup_First_First'] ?? \PhpursThunks::eval('Data_Semigroup_First_First')), "Apply0" => function($dollar__unused_0 = null) {
+}];
+
+// Data_Semigroup_First_applicativeFirst
+$GLOBALS['Data_Semigroup_First_applicativeFirst'] = ["pure" => $GLOBALS['Data_Semigroup_First_First'], "Apply0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Semigroup_First_applyFirst'] ?? \PhpursThunks::eval('Data_Semigroup_First_applyFirst'));
+  $__res = $GLOBALS['Data_Semigroup_First_applyFirst'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Semigroup_First_monadFirst'] = function() { $v = ["Applicative0" => function($dollar__unused_0 = null) {
+}];
+
+// Data_Semigroup_First_monadFirst
+$GLOBALS['Data_Semigroup_First_monadFirst'] = ["Applicative0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Semigroup_First_applicativeFirst'] ?? \PhpursThunks::eval('Data_Semigroup_First_applicativeFirst'));
+  $__res = $GLOBALS['Data_Semigroup_First_applicativeFirst'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bind1" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Semigroup_First_bindFirst'] ?? \PhpursThunks::eval('Data_Semigroup_First_bindFirst'));
+  $__res = $GLOBALS['Data_Semigroup_First_bindFirst'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}];
 

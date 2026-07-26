@@ -92,14 +92,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Control_Category_identity'] = function() { $v = function($dict_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Control_Category_identity
+$GLOBALS['Control_Category_identity'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['identity'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Category_categoryFn'] = function() { $v = ["identity" => function($x_0 = null) {
+};
+
+// Control_Category_categoryFn
+$GLOBALS['Control_Category_categoryFn'] = ["identity" => function($x_0 = null) {
   $__num = \func_num_args();
   $__res = $x_0;
   goto __end;;
@@ -107,13 +114,9 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Semigroupoid0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Semigroupoid_semigroupoidFn'] ?? \PhpursThunks::eval('Control_Semigroupoid_semigroupoidFn'));
+  $__res = $GLOBALS['Control_Semigroupoid_semigroupoidFn'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
+}];
 

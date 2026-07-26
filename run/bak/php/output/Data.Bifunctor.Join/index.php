@@ -103,14 +103,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Bifunctor_Join_Join'] = function() { $v = function($x_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Bifunctor_Join_Join
+$GLOBALS['Data_Bifunctor_Join_Join'] = function($x_0 = null) {
   $__num = \func_num_args();
   $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Bifunctor_Join_showJoin'] = function() { $v = function($dictShow_0 = null) {
+};
+
+// Data_Bifunctor_Join_showJoin
+$GLOBALS['Data_Bifunctor_Join_showJoin'] = function($dictShow_0 = null) {
   $__num = \func_num_args();
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
@@ -122,29 +129,37 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Bifunctor_Join_ordJoin'] = function() { $v = function($dictOrd_0 = null) {
+};
+
+// Data_Bifunctor_Join_ordJoin
+$GLOBALS['Data_Bifunctor_Join_ordJoin'] = function($dictOrd_0 = null) {
   $__num = \func_num_args();
   $__res = $dictOrd_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Bifunctor_Join_newtypeJoin'] = function() { $v = ["Coercible0" => function($dollar__unused_0 = null) {
+};
+
+// Data_Bifunctor_Join_newtypeJoin
+$GLOBALS['Data_Bifunctor_Join_newtypeJoin'] = ["Coercible0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'));
+  $__res = $GLOBALS['Prim_undefined'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Bifunctor_Join_eqJoin'] = function() { $v = function($dictEq_0 = null) {
+}];
+
+// Data_Bifunctor_Join_eqJoin
+$GLOBALS['Data_Bifunctor_Join_eqJoin'] = function($dictEq_0 = null) {
   $__num = \func_num_args();
   $__res = $dictEq_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Bifunctor_Join_bifunctorJoin'] = function() { $v = function($dictBifunctor_0 = null) {
+};
+
+// Data_Bifunctor_Join_bifunctorJoin
+$GLOBALS['Data_Bifunctor_Join_bifunctorJoin'] = function($dictBifunctor_0 = null) {
   $__num = \func_num_args();
   $__res = ["map" => (function() use ($dictBifunctor_0) {
   $__fn = function($f_1 = null, $v_2 = null) use ($dictBifunctor_0, &$__fn) {
@@ -162,10 +177,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Bifunctor_Join_biapplyJoin'] = function() { $v = function($dictBiapply_0 = null) {
+};
+
+// Data_Bifunctor_Join_biapplyJoin
+$GLOBALS['Data_Bifunctor_Join_biapplyJoin'] = function($dictBiapply_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictBiapply_0)['Bifunctor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_1_0 = (($dictBiapply_0)['Bifunctor0'])($GLOBALS['Prim_undefined']);
   $bifunctorJoin1_2_1 = ["map" => (function() use ($__local_var_1_0) {
   $__fn = function($f_2 = null, $v_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -201,10 +218,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Bifunctor_Join_biapplicativeJoin'] = function() { $v = function($dictBiapplicative_0 = null) {
+};
+
+// Data_Bifunctor_Join_biapplicativeJoin
+$GLOBALS['Data_Bifunctor_Join_biapplicativeJoin'] = function($dictBiapplicative_0 = null) {
   $__num = \func_num_args();
-  $biapplyJoin1_1_0 = (($GLOBALS['Data_Bifunctor_Join_biapplyJoin'] ?? \PhpursThunks::eval('Data_Bifunctor_Join_biapplyJoin')))((($dictBiapplicative_0)['Biapply0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $biapplyJoin1_1_0 = ($GLOBALS['Data_Bifunctor_Join_biapplyJoin'])((($dictBiapplicative_0)['Biapply0'])($GLOBALS['Prim_undefined']));
   $__res = ["pure" => function($a_2 = null) use ($dictBiapplicative_0) {
   $__num = \func_num_args();
   $__res = ((($dictBiapplicative_0)['bipure'])($a_2))($a_2);
@@ -221,15 +240,5 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
+};
 

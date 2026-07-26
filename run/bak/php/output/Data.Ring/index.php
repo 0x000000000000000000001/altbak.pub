@@ -96,27 +96,57 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Ring_subRecord'] = function() { $v = function($dict_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+$ffi_Data_Ring = \call_user_func(function() {
+  $exports = [];
+$intSub = function($a, $b = null) use (&$intSub) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$intSub) {
+
+            return $intSub(...\array_merge($__args, $more));
+        };
+    }
+    return $a - $b;
+};
+$numSub = $intSub;
+
+$exports['intSub'] = $intSub;
+$exports['numSub'] = $numSub;
+return $exports;
+  return $exports;
+});
+$GLOBALS['Data_Ring_intSub'] = $ffi_Data_Ring['intSub'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Ring_numSub'] = $ffi_Data_Ring['numSub'] ?? new class { public function __invoke(...$args) { return $this; } };
+
+
+// Data_Ring_subRecord
+$GLOBALS['Data_Ring_subRecord'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['subRecord'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Ring_sub'] = function() { $v = function($dict_0 = null) {
+};
+
+// Data_Ring_sub
+$GLOBALS['Data_Ring_sub'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['sub'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Ring_ringUnit'] = function() { $v = ["sub" => (function() {
+};
+
+// Data_Ring_ringUnit
+$GLOBALS['Data_Ring_ringUnit'] = ["sub" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'));
+  $__res = $GLOBALS['Data_Unit_unit'];
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -124,12 +154,14 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(), "Semiring0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Semiring_semiringUnit'] ?? \PhpursThunks::eval('Data_Semiring_semiringUnit'));
+  $__res = $GLOBALS['Data_Semiring_semiringUnit'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Ring_ringRecordNil'] = function() { $v = ["subRecord" => (function() {
+}];
+
+// Data_Ring_ringRecordNil
+$GLOBALS['Data_Ring_ringRecordNil'] = ["subRecord" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null, $v2_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -143,21 +175,23 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(), "SemiringRecord0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Semiring_semiringRecordNil'] ?? \PhpursThunks::eval('Data_Semiring_semiringRecordNil'));
+  $__res = $GLOBALS['Data_Semiring_semiringRecordNil'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Ring_ringRecordCons'] = function() { $v = (function() {
+}];
+
+// Data_Ring_ringRecordCons
+$GLOBALS['Data_Ring_ringRecordCons'] = (function() {
   $__fn = function($dictIsSymbol_0 = null, $dollar__unused_1 = null, $dictRingRecord_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $semiringRecordCons1_3_0 = (((($GLOBALS['Data_Semiring_semiringRecordCons'] ?? \PhpursThunks::eval('Data_Semiring_semiringRecordCons')))($dictIsSymbol_0))(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))((($dictRingRecord_2)['SemiringRecord0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $semiringRecordCons1_3_0 = ((($GLOBALS['Data_Semiring_semiringRecordCons'])($dictIsSymbol_0))($GLOBALS['Prim_undefined']))((($dictRingRecord_2)['SemiringRecord0'])($GLOBALS['Prim_undefined']));
   $__res = function($dictRing_4 = null) use ($dictIsSymbol_0, $dictRingRecord_2, $semiringRecordCons1_3_0) {
   $__num = \func_num_args();
-  $semiringRecordCons2_5_1 = ($semiringRecordCons1_3_0)((($dictRing_4)['Semiring0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $semiringRecordCons2_5_1 = ($semiringRecordCons1_3_0)((($dictRing_4)['Semiring0'])($GLOBALS['Prim_undefined']));
   $__res = ["subRecord" => (function() use ($dictIsSymbol_0, $dictRingRecord_2, $dictRing_4) {
   $__fn = function($v_6 = null, $ra_7 = null, $rb_8 = null) use ($dictIsSymbol_0, $dictRingRecord_2, $dictRing_4, &$__fn) {
   $__num = \func_num_args();
@@ -165,8 +199,8 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   $key_9_2 = (($dictIsSymbol_0)['reflectSymbol'])(new Phpurs_Data0("Proxy"));
-  $get_10_3 = (($GLOBALS['Record_Unsafe_unsafeGet'] ?? \PhpursThunks::eval('Record_Unsafe_unsafeGet')))($key_9_2);
-  $__res = (((($GLOBALS['Record_Unsafe_unsafeSet'] ?? \PhpursThunks::eval('Record_Unsafe_unsafeSet')))($key_9_2))(((($dictRing_4)['sub'])(($get_10_3)($ra_7)))(($get_10_3)($rb_8))))((((($dictRingRecord_2)['subRecord'])(new Phpurs_Data0("Proxy")))($ra_7))($rb_8));
+  $get_10_3 = ($GLOBALS['Record_Unsafe_unsafeGet'])($key_9_2);
+  $__res = ((($GLOBALS['Record_Unsafe_unsafeSet'])($key_9_2))(((($dictRing_4)['sub'])(($get_10_3)($ra_7)))(($get_10_3)($rb_8))))((((($dictRingRecord_2)['subRecord'])(new Phpurs_Data0("Proxy")))($ra_7))($rb_8));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -188,14 +222,16 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Ring_ringRecord'] = function() { $v = (function() {
+})();
+
+// Data_Ring_ringRecord
+$GLOBALS['Data_Ring_ringRecord'] = (function() {
   $__fn = function($dollar__unused_0 = null, $dictRingRecord_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__local_var_2_0 = (($dictRingRecord_1)['SemiringRecord0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_2_0 = (($dictRingRecord_1)['SemiringRecord0'])($GLOBALS['Prim_undefined']);
   $semiringRecord1_3_1 = ["add" => (($__local_var_2_0)['addRecord'])(new Phpurs_Data0("Proxy")), "mul" => (($__local_var_2_0)['mulRecord'])(new Phpurs_Data0("Proxy")), "one" => ((($__local_var_2_0)['oneRecord'])(new Phpurs_Data0("Proxy")))(new Phpurs_Data0("Proxy")), "zero" => ((($__local_var_2_0)['zeroRecord'])(new Phpurs_Data0("Proxy")))(new Phpurs_Data0("Proxy"))];
   $__res = ["sub" => (($dictRingRecord_1)['subRecord'])(new Phpurs_Data0("Proxy")), "Semiring0" => function($dollar__unused_4 = null) use ($semiringRecord1_3_1) {
   $__num = \func_num_args();
@@ -209,8 +245,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Ring_ringProxy'] = function() { $v = ["sub" => (function() {
+})();
+
+// Data_Ring_ringProxy
+$GLOBALS['Data_Ring_ringProxy'] = ["sub" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -224,28 +262,34 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(), "Semiring0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Semiring_semiringProxy'] ?? \PhpursThunks::eval('Data_Semiring_semiringProxy'));
+  $__res = $GLOBALS['Data_Semiring_semiringProxy'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Ring_ringNumber'] = function() { $v = ["sub" => ($GLOBALS['Data_Ring_numSub'] ?? \PhpursThunks::eval('Data_Ring_numSub')), "Semiring0" => function($dollar__unused_0 = null) {
+}];
+
+// Data_Ring_ringNumber
+$GLOBALS['Data_Ring_ringNumber'] = ["sub" => $GLOBALS['Data_Ring_numSub'], "Semiring0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Semiring_semiringNumber'] ?? \PhpursThunks::eval('Data_Semiring_semiringNumber'));
+  $__res = $GLOBALS['Data_Semiring_semiringNumber'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Ring_ringInt'] = function() { $v = ["sub" => ($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')), "Semiring0" => function($dollar__unused_0 = null) {
+}];
+
+// Data_Ring_ringInt
+$GLOBALS['Data_Ring_ringInt'] = ["sub" => $GLOBALS['Data_Ring_intSub'], "Semiring0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Semiring_semiringInt'] ?? \PhpursThunks::eval('Data_Semiring_semiringInt'));
+  $__res = $GLOBALS['Data_Semiring_semiringInt'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Ring_ringFn'] = function() { $v = function($dictRing_0 = null) {
+}];
+
+// Data_Ring_ringFn
+$GLOBALS['Data_Ring_ringFn'] = function($dictRing_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictRing_0)['Semiring0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_1_0 = (($dictRing_0)['Semiring0'])($GLOBALS['Prim_undefined']);
   $zero1_2_1 = ($__local_var_1_0)['zero'];
   $one1_3_2 = ($__local_var_1_0)['one'];
   $semiringFn_3_2 = ["add" => (function() use ($__local_var_1_0) {
@@ -307,10 +351,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Ring_negate'] = function() { $v = function($dictRing_0 = null) {
+};
+
+// Data_Ring_negate
+$GLOBALS['Data_Ring_negate'] = function($dictRing_0 = null) {
   $__num = \func_num_args();
-  $zero_1_0 = ((($dictRing_0)['Semiring0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['zero'];
+  $zero_1_0 = ((($dictRing_0)['Semiring0'])($GLOBALS['Prim_undefined']))['zero'];
   $__res = function($a_2 = null) use ($dictRing_0, $zero_1_0) {
   $__num = \func_num_args();
   $__res = ((($dictRing_0)['sub'])($zero_1_0))($a_2);
@@ -321,39 +367,5 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-$ffi_Data_Ring = \call_user_func(function() {
-  $exports = [];
-$intSub = function($a, $b = null) use (&$intSub) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$intSub) {
-
-            return $intSub(...\array_merge($__args, $more));
-        };
-    }
-    return $a - $b;
 };
-$numSub = $intSub;
-
-$exports['intSub'] = $intSub;
-$exports['numSub'] = $numSub;
-return $exports;
-  return $exports;
-});
-\PhpursThunks::$thunks['Data_Ring_intSub'] = function() use (&$ffi_Data_Ring) { return $ffi_Data_Ring['intSub']; };
-\PhpursThunks::$thunks['Data_Ring_numSub'] = function() use (&$ffi_Data_Ring) { return $ffi_Data_Ring['numSub']; };
-
-
-
-
-
-
-
-
-
-
-
-
 

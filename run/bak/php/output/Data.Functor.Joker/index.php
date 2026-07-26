@@ -110,14 +110,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Functor_Joker_Joker'] = function() { $v = function($x_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Functor_Joker_Joker
+$GLOBALS['Data_Functor_Joker_Joker'] = function($x_0 = null) {
   $__num = \func_num_args();
   $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Joker_showJoker'] = function() { $v = function($dictShow_0 = null) {
+};
+
+// Data_Functor_Joker_showJoker
+$GLOBALS['Data_Functor_Joker_showJoker'] = function($dictShow_0 = null) {
   $__num = \func_num_args();
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
@@ -129,8 +136,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Joker_profunctorJoker'] = function() { $v = function($dictFunctor_0 = null) {
+};
+
+// Data_Functor_Joker_profunctorJoker
+$GLOBALS['Data_Functor_Joker_profunctorJoker'] = function($dictFunctor_0 = null) {
   $__num = \func_num_args();
   $__res = ["dimap" => (function() use ($dictFunctor_0) {
   $__fn = function($v_1 = null, $g_2 = null, $v1_3 = null) use ($dictFunctor_0, &$__fn) {
@@ -148,22 +157,28 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Joker_ordJoker'] = function() { $v = function($dictOrd_0 = null) {
+};
+
+// Data_Functor_Joker_ordJoker
+$GLOBALS['Data_Functor_Joker_ordJoker'] = function($dictOrd_0 = null) {
   $__num = \func_num_args();
   $__res = $dictOrd_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Joker_newtypeJoker'] = function() { $v = ["Coercible0" => function($dollar__unused_0 = null) {
+};
+
+// Data_Functor_Joker_newtypeJoker
+$GLOBALS['Data_Functor_Joker_newtypeJoker'] = ["Coercible0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'));
+  $__res = $GLOBALS['Prim_undefined'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Joker_hoistJoker'] = function() { $v = (function() {
+}];
+
+// Data_Functor_Joker_hoistJoker
+$GLOBALS['Data_Functor_Joker_hoistJoker'] = (function() {
   $__fn = function($f_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -175,8 +190,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Functor_Joker_functorJoker'] = function() { $v = function($dictFunctor_0 = null) {
+})();
+
+// Data_Functor_Joker_functorJoker
+$GLOBALS['Data_Functor_Joker_functorJoker'] = function($dictFunctor_0 = null) {
   $__num = \func_num_args();
   $__res = ["map" => (function() use ($dictFunctor_0) {
   $__fn = function($f_1 = null, $v_2 = null) use ($dictFunctor_0, &$__fn) {
@@ -194,15 +211,19 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Joker_eqJoker'] = function() { $v = function($dictEq_0 = null) {
+};
+
+// Data_Functor_Joker_eqJoker
+$GLOBALS['Data_Functor_Joker_eqJoker'] = function($dictEq_0 = null) {
   $__num = \func_num_args();
   $__res = $dictEq_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Joker_choiceJoker'] = function() { $v = function($dictFunctor_0 = null) {
+};
+
+// Data_Functor_Joker_choiceJoker
+$GLOBALS['Data_Functor_Joker_choiceJoker'] = function($dictFunctor_0 = null) {
   $__num = \func_num_args();
   $profunctorJoker1_1_0 = ["dimap" => (function() use ($dictFunctor_0) {
   $__fn = function($v_1 = null, $g_2 = null, $v1_3 = null) use ($dictFunctor_0, &$__fn) {
@@ -219,13 +240,13 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 })()];
   $__res = ["left" => function($v_2 = null) use ($dictFunctor_0) {
   $__num = \func_num_args();
-  $__res = ((($dictFunctor_0)['map'])(($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left'))))($v_2);
+  $__res = ((($dictFunctor_0)['map'])($GLOBALS['Data_Either_Left']))($v_2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "right" => function($v_2 = null) use ($dictFunctor_0) {
   $__num = \func_num_args();
-  $__res = ((($dictFunctor_0)['map'])(($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right'))))($v_2);
+  $__res = ((($dictFunctor_0)['map'])($GLOBALS['Data_Either_Right']))($v_2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -239,8 +260,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Joker_bifunctorJoker'] = function() { $v = function($dictFunctor_0 = null) {
+};
+
+// Data_Functor_Joker_bifunctorJoker
+$GLOBALS['Data_Functor_Joker_bifunctorJoker'] = function($dictFunctor_0 = null) {
   $__num = \func_num_args();
   $__res = ["bimap" => (function() use ($dictFunctor_0) {
   $__fn = function($v_1 = null, $g_2 = null, $v1_3 = null) use ($dictFunctor_0, &$__fn) {
@@ -258,10 +281,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Joker_biapplyJoker'] = function() { $v = function($dictApply_0 = null) {
+};
+
+// Data_Functor_Joker_biapplyJoker
+$GLOBALS['Data_Functor_Joker_biapplyJoker'] = function($dictApply_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictApply_0)['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_1_0 = (($dictApply_0)['Functor0'])($GLOBALS['Prim_undefined']);
   $bifunctorJoker1_2_1 = ["bimap" => (function() use ($__local_var_1_0) {
   $__fn = function($v_2 = null, $g_3 = null, $v1_4 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -297,10 +322,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Joker_biapplicativeJoker'] = function() { $v = function($dictApplicative_0 = null) {
+};
+
+// Data_Functor_Joker_biapplicativeJoker
+$GLOBALS['Data_Functor_Joker_biapplicativeJoker'] = function($dictApplicative_0 = null) {
   $__num = \func_num_args();
-  $biapplyJoker1_1_0 = (($GLOBALS['Data_Functor_Joker_biapplyJoker'] ?? \PhpursThunks::eval('Data_Functor_Joker_biapplyJoker')))((($dictApplicative_0)['Apply0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $biapplyJoker1_1_0 = ($GLOBALS['Data_Functor_Joker_biapplyJoker'])((($dictApplicative_0)['Apply0'])($GLOBALS['Prim_undefined']));
   $__res = ["bipure" => (function() use ($dictApplicative_0) {
   $__fn = function($v_2 = null, $b_3 = null) use ($dictApplicative_0, &$__fn) {
   $__num = \func_num_args();
@@ -323,10 +350,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Joker_applyJoker'] = function() { $v = function($dictApply_0 = null) {
+};
+
+// Data_Functor_Joker_applyJoker
+$GLOBALS['Data_Functor_Joker_applyJoker'] = function($dictApply_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictApply_0)['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_1_0 = (($dictApply_0)['Functor0'])($GLOBALS['Prim_undefined']);
   $functorJoker1_2_1 = ["map" => (function() use ($__local_var_1_0) {
   $__fn = function($f_2 = null, $v_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -362,17 +391,19 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Joker_bindJoker'] = function() { $v = function($dictBind_0 = null) {
+};
+
+// Data_Functor_Joker_bindJoker
+$GLOBALS['Data_Functor_Joker_bindJoker'] = function($dictBind_0 = null) {
   $__num = \func_num_args();
-  $applyJoker1_1_0 = (($GLOBALS['Data_Functor_Joker_applyJoker'] ?? \PhpursThunks::eval('Data_Functor_Joker_applyJoker')))((($dictBind_0)['Apply0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $applyJoker1_1_0 = ($GLOBALS['Data_Functor_Joker_applyJoker'])((($dictBind_0)['Apply0'])($GLOBALS['Prim_undefined']));
   $__res = ["bind" => (function() use ($dictBind_0) {
   $__fn = function($v_2 = null, $amb_3 = null) use ($dictBind_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictBind_0)['bind'])($v_2))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce'))))($amb_3));
+  $__res = ((($dictBind_0)['bind'])($v_2))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce']))($amb_3));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -388,11 +419,13 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Joker_applicativeJoker'] = function() { $v = function($dictApplicative_0 = null) {
+};
+
+// Data_Functor_Joker_applicativeJoker
+$GLOBALS['Data_Functor_Joker_applicativeJoker'] = function($dictApplicative_0 = null) {
   $__num = \func_num_args();
-  $applyJoker1_1_0 = (($GLOBALS['Data_Functor_Joker_applyJoker'] ?? \PhpursThunks::eval('Data_Functor_Joker_applyJoker')))((($dictApplicative_0)['Apply0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = ["pure" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Functor_Joker_Joker'] ?? \PhpursThunks::eval('Data_Functor_Joker_Joker'))))(($dictApplicative_0)['pure']), "Apply0" => function($dollar__unused_2 = null) use ($applyJoker1_1_0) {
+  $applyJoker1_1_0 = ($GLOBALS['Data_Functor_Joker_applyJoker'])((($dictApplicative_0)['Apply0'])($GLOBALS['Prim_undefined']));
+  $__res = ["pure" => (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Functor_Joker_Joker']))(($dictApplicative_0)['pure']), "Apply0" => function($dollar__unused_2 = null) use ($applyJoker1_1_0) {
   $__num = \func_num_args();
   $__res = $applyJoker1_1_0;
   goto __end;;
@@ -402,11 +435,13 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Joker_monadJoker'] = function() { $v = function($dictMonad_0 = null) {
+};
+
+// Data_Functor_Joker_monadJoker
+$GLOBALS['Data_Functor_Joker_monadJoker'] = function($dictMonad_0 = null) {
   $__num = \func_num_args();
-  $applicativeJoker1_1_0 = (($GLOBALS['Data_Functor_Joker_applicativeJoker'] ?? \PhpursThunks::eval('Data_Functor_Joker_applicativeJoker')))((($dictMonad_0)['Applicative0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $bindJoker1_2_1 = (($GLOBALS['Data_Functor_Joker_bindJoker'] ?? \PhpursThunks::eval('Data_Functor_Joker_bindJoker')))((($dictMonad_0)['Bind1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $applicativeJoker1_1_0 = ($GLOBALS['Data_Functor_Joker_applicativeJoker'])((($dictMonad_0)['Applicative0'])($GLOBALS['Prim_undefined']));
+  $bindJoker1_2_1 = ($GLOBALS['Data_Functor_Joker_bindJoker'])((($dictMonad_0)['Bind1'])($GLOBALS['Prim_undefined']));
   $__res = ["Applicative0" => function($dollar__unused_3 = null) use ($applicativeJoker1_1_0) {
   $__num = \func_num_args();
   $__res = $applicativeJoker1_1_0;
@@ -423,23 +458,5 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+};
 

@@ -100,28 +100,39 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Control_Comonad_Store_Trans_StoreT'] = function() { $v = function($x_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Control_Comonad_Store_Trans_StoreT
+$GLOBALS['Control_Comonad_Store_Trans_StoreT'] = function($x_0 = null) {
   $__num = \func_num_args();
   $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Store_Trans_runStoreT'] = function() { $v = function($v_0 = null) {
+};
+
+// Control_Comonad_Store_Trans_runStoreT
+$GLOBALS['Control_Comonad_Store_Trans_runStoreT'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__res = $v_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Store_Trans_newtypeStoreT'] = function() { $v = ["Coercible0" => function($dollar__unused_0 = null) {
+};
+
+// Control_Comonad_Store_Trans_newtypeStoreT
+$GLOBALS['Control_Comonad_Store_Trans_newtypeStoreT'] = ["Coercible0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'));
+  $__res = $GLOBALS['Prim_undefined'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Store_Trans_functorStoreT'] = function() { $v = function($dictFunctor_0 = null) {
+}];
+
+// Control_Comonad_Store_Trans_functorStoreT
+$GLOBALS['Control_Comonad_Store_Trans_functorStoreT'] = function($dictFunctor_0 = null) {
   $__num = \func_num_args();
   $__res = ["map" => (function() use ($dictFunctor_0) {
   $__fn = function($f_1 = null, $v_2 = null) use ($dictFunctor_0, &$__fn) {
@@ -131,7 +142,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   }
   $__res = new Phpurs_Data2("Tuple", ((($dictFunctor_0)['map'])(function($h_3 = null) use ($f_1) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($f_1))($h_3);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($f_1))($h_3);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -145,10 +156,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Store_Trans_extendStoreT'] = function() { $v = function($dictExtend_0 = null) {
+};
+
+// Control_Comonad_Store_Trans_extendStoreT
+$GLOBALS['Control_Comonad_Store_Trans_extendStoreT'] = function($dictExtend_0 = null) {
   $__num = \func_num_args();
-  $functorStoreT1_1_0 = (($GLOBALS['Control_Comonad_Store_Trans_functorStoreT'] ?? \PhpursThunks::eval('Control_Comonad_Store_Trans_functorStoreT')))((($dictExtend_0)['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $functorStoreT1_1_0 = ($GLOBALS['Control_Comonad_Store_Trans_functorStoreT'])((($dictExtend_0)['Functor0'])($GLOBALS['Prim_undefined']));
   $__res = ["extend" => (function() use ($dictExtend_0) {
   $__fn = function($f_2 = null, $v_3 = null) use ($dictExtend_0, &$__fn) {
   $__num = \func_num_args();
@@ -183,15 +196,17 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Store_Trans_comonadTransStoreT'] = function() { $v = ["lower" => (function() {
+};
+
+// Control_Comonad_Store_Trans_comonadTransStoreT
+$GLOBALS['Control_Comonad_Store_Trans_comonadTransStoreT'] = ["lower" => (function() {
   $__fn = function($dictComonad_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__local_var_2_0 = ($v_1)->{'value1'};
-  $__res = ((((((($dictComonad_0)['Extend0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['map'])(function($v1_3 = null) use ($__local_var_2_0) {
+  $__res = ((((((($dictComonad_0)['Extend0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']))['map'])(function($v1_3 = null) use ($__local_var_2_0) {
   $__num = \func_num_args();
   $__res = ($v1_3)($__local_var_2_0);
   goto __end;;
@@ -203,10 +218,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Store_Trans_comonadStoreT'] = function() { $v = function($dictComonad_0 = null) {
+})()];
+
+// Control_Comonad_Store_Trans_comonadStoreT
+$GLOBALS['Control_Comonad_Store_Trans_comonadStoreT'] = function($dictComonad_0 = null) {
   $__num = \func_num_args();
-  $extendStoreT1_1_0 = (($GLOBALS['Control_Comonad_Store_Trans_extendStoreT'] ?? \PhpursThunks::eval('Control_Comonad_Store_Trans_extendStoreT')))((($dictComonad_0)['Extend0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $extendStoreT1_1_0 = ($GLOBALS['Control_Comonad_Store_Trans_extendStoreT'])((($dictComonad_0)['Extend0'])($GLOBALS['Prim_undefined']));
   $__res = ["extract" => function($v_2 = null) use ($dictComonad_0) {
   $__num = \func_num_args();
   $__res = ((($dictComonad_0)['extract'])(($v_2)->{'value0'}))(($v_2)->{'value1'});
@@ -223,14 +240,5 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
+};
 

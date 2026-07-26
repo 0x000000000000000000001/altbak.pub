@@ -100,14 +100,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Test_AstTree_Val'] = function() { $v = function($value0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Test_AstTree_Val
+$GLOBALS['Test_AstTree_Val'] = function($value0 = null) {
   $__num = \func_num_args();
   $__res = new Phpurs_Data1("Val", $value0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Test_AstTree_Add'] = function() { $v = (function() {
+};
+
+// Test_AstTree_Add
+$GLOBALS['Test_AstTree_Add'] = (function() {
   $__fn = function($value0 = null, $value1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -119,8 +126,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Test_AstTree_Mul'] = function() { $v = (function() {
+})();
+
+// Test_AstTree_Mul
+$GLOBALS['Test_AstTree_Mul'] = (function() {
   $__fn = function($value0 = null, $value1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -132,8 +141,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Test_AstTree_Sub'] = function() { $v = (function() {
+})();
+
+// Test_AstTree_Sub
+$GLOBALS['Test_AstTree_Sub'] = (function() {
   $__fn = function($value0 = null, $value1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -145,8 +156,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Test_AstTree_eval'] = function() { $v = function($v_0 = null) {
+})();
+
+// Test_AstTree_eval
+$GLOBALS['Test_AstTree_eval'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__tco_var_Test_AstTree_eval_v_0 = $v_0;
   tco_loop_Test_AstTree_eval:;
@@ -157,15 +170,15 @@ $__t0 = ($v_0)->{'value0'};
 goto end_branch_0;;
 };
   if ((is_object($v_0) && (($v_0)->{'tag'} === "Add"))) {
-$__t0 = ((($GLOBALS['Test_AstTree_eval'] ?? \PhpursThunks::eval('Test_AstTree_eval')))(($v_0)->{'value0'}) + (($GLOBALS['Test_AstTree_eval'] ?? \PhpursThunks::eval('Test_AstTree_eval')))(($v_0)->{'value1'}));
+$__t0 = (($GLOBALS['Test_AstTree_eval'])(($v_0)->{'value0'}) + ($GLOBALS['Test_AstTree_eval'])(($v_0)->{'value1'}));
 goto end_branch_0;;
 };
   if ((is_object($v_0) && (($v_0)->{'tag'} === "Mul"))) {
-$__t0 = ((($GLOBALS['Test_AstTree_eval'] ?? \PhpursThunks::eval('Test_AstTree_eval')))(($v_0)->{'value0'}) * (($GLOBALS['Test_AstTree_eval'] ?? \PhpursThunks::eval('Test_AstTree_eval')))(($v_0)->{'value1'}));
+$__t0 = (($GLOBALS['Test_AstTree_eval'])(($v_0)->{'value0'}) * ($GLOBALS['Test_AstTree_eval'])(($v_0)->{'value1'}));
 goto end_branch_0;;
 };
   if ((is_object($v_0) && (($v_0)->{'tag'} === "Sub"))) {
-$__t0 = ((($GLOBALS['Test_AstTree_eval'] ?? \PhpursThunks::eval('Test_AstTree_eval')))(($v_0)->{'value0'}) - (($GLOBALS['Test_AstTree_eval'] ?? \PhpursThunks::eval('Test_AstTree_eval')))(($v_0)->{'value1'}));
+$__t0 = (($GLOBALS['Test_AstTree_eval'])(($v_0)->{'value0'}) - ($GLOBALS['Test_AstTree_eval'])(($v_0)->{'value1'}));
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -175,45 +188,29 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Test_AstTree_describe'] = function() { $v = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))("AST Evaluation:"); return $v; };
-\PhpursThunks::$thunks['Test_AstTree_buildTree'] = function() { $v = function($v_0 = null) {
+};
+
+// Test_AstTree_describe
+$GLOBALS['Test_AstTree_describe'] = ($GLOBALS['Effect_Console_log'])("AST Evaluation:");
+
+// Test_AstTree_buildTree
+$GLOBALS['Test_AstTree_buildTree'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__tco_var_Test_AstTree_buildTree_v_0 = $v_0;
   tco_loop_Test_AstTree_buildTree:;
   $v_0 = $__tco_var_Test_AstTree_buildTree_v_0;
-  $__t0 = null;;
-  switch ($v_0) {
-case 0:
-$__t0 = new Phpurs_Data1("Val", 1);
-goto end_branch_0;;
-break;
-default:
-;
-break;
+  $__res = match ($v_0) { 0 => new Phpurs_Data1("Val", 1), default => new Phpurs_Data2("Add", new Phpurs_Data2("Mul", new Phpurs_Data1("Val", $v_0), ($GLOBALS['Test_AstTree_buildTree'])(($v_0 - 1))), new Phpurs_Data2("Sub", ($GLOBALS['Test_AstTree_buildTree'])(($v_0 - 1)), new Phpurs_Data1("Val", 1))) };
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__t0 = new Phpurs_Data2("Add", new Phpurs_Data2("Mul", new Phpurs_Data1("Val", $v_0), (($GLOBALS['Test_AstTree_buildTree'] ?? \PhpursThunks::eval('Test_AstTree_buildTree')))(($v_0 - 1))), new Phpurs_Data2("Sub", (($GLOBALS['Test_AstTree_buildTree'] ?? \PhpursThunks::eval('Test_AstTree_buildTree')))(($v_0 - 1)), new Phpurs_Data1("Val", 1)));
-  end_branch_0:;
-  $__res = $__t0;
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Test_AstTree_act'] = function() { $v = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))((($GLOBALS['Bench_opaque'] ?? \PhpursThunks::eval('Bench_opaque')))(3)))(function($dummy_0 = null) {
+
+// Test_AstTree_act
+$GLOBALS['Test_AstTree_act'] = (($GLOBALS['Effect_bindE'])(($GLOBALS['Bench_opaque'])(3)))(function($dummy_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))((($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))((($GLOBALS['Test_AstTree_eval'] ?? \PhpursThunks::eval('Test_AstTree_eval')))((($GLOBALS['Test_AstTree_buildTree'] ?? \PhpursThunks::eval('Test_AstTree_buildTree')))($dummy_0))));
+  $__res = ($GLOBALS['Effect_Console_log'])(($GLOBALS['Data_Show_showIntImpl'])(($GLOBALS['Test_AstTree_eval'])(($GLOBALS['Test_AstTree_buildTree'])($dummy_0))));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}); return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
+});
 

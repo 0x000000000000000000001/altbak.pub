@@ -6,9 +6,9 @@ import (
 	pkg_Data_List_Lazy_Types "gopurs/output/Data.List.Lazy.Types"
 	pkg_Data_List_Lazy "gopurs/output/Data.List.Lazy"
 	pkg_Data_Function "gopurs/output/Data.Function"
-	pkg_Control_Semigroupoid "gopurs/output/Control.Semigroupoid"
 	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
 	pkg_Partial "gopurs/output/Partial"
+	unsafe "unsafe"
 )
 
 var cache_ZipList gopurs_runtime.Value
@@ -141,7 +141,14 @@ func Get_applicativeZipList() gopurs_runtime.Value {
 	once_applicativeZipList.Do(func() {
 		cache_applicativeZipList = gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_applyZipList()
-}), gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), Get_ZipList(), pkg_Data_List_Lazy.Get_repeat()))
+}), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
+var go__1_0 gopurs_runtime.Value
+_ = go__1_0
+go__1_0 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_List_Lazy_Types.Get_lazyList(), "defer"), gopurs_runtime.Func2(func(v_2 gopurs_runtime.Value, v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 218341868, UnsafePtr: unsafe.Pointer(&pkg_Data_List_Lazy_Types.Constructor_Cons[gopurs_runtime.Value]{x_0, go__1_0})}
+}))
+return go__1_0
+}))
 	})
 	return cache_applicativeZipList
 }

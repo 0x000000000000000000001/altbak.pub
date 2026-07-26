@@ -91,20 +91,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Partial_crashWith'] = function() { $v = function($dollar__unused_0 = null) {
-  $__num = \func_num_args();
-  $__res = ($GLOBALS['Partial__crashWith'] ?? \PhpursThunks::eval('Partial__crashWith'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Partial_crash'] = function() { $v = function($dollar__unused_0 = null) {
-  $__num = \func_num_args();
-  $__res = (($GLOBALS['Partial__crashWith'] ?? \PhpursThunks::eval('Partial__crashWith')))("Partial.crash: partial function");
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
+
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Partial = \call_user_func(function() {
   $exports = [];
@@ -115,8 +102,24 @@ $exports['_crashWith'] = function ($msg) {
 return $exports;
   return $exports;
 });
-\PhpursThunks::$thunks['Partial__crashWith'] = function() use (&$ffi_Partial) { return $ffi_Partial['_crashWith']; };
+$GLOBALS['Partial__crashWith'] = $ffi_Partial['_crashWith'] ?? new class { public function __invoke(...$args) { return $this; } };
 
 
+// Partial_crashWith
+$GLOBALS['Partial_crashWith'] = function($dollar__unused_0 = null) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Partial__crashWith'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 
+// Partial_crash
+$GLOBALS['Partial_crash'] = function($dollar__unused_0 = null) {
+  $__num = \func_num_args();
+  $__res = ($GLOBALS['Partial__crashWith'])("Partial.crash: partial function");
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 

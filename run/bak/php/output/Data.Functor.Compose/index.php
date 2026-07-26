@@ -106,14 +106,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Functor_Compose_Compose'] = function() { $v = function($x_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Functor_Compose_Compose
+$GLOBALS['Data_Functor_Compose_Compose'] = function($x_0 = null) {
   $__num = \func_num_args();
   $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Compose_showCompose'] = function() { $v = function($dictShow_0 = null) {
+};
+
+// Data_Functor_Compose_showCompose
+$GLOBALS['Data_Functor_Compose_showCompose'] = function($dictShow_0 = null) {
   $__num = \func_num_args();
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
@@ -125,15 +132,19 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Compose_newtypeCompose'] = function() { $v = ["Coercible0" => function($dollar__unused_0 = null) {
+};
+
+// Data_Functor_Compose_newtypeCompose
+$GLOBALS['Data_Functor_Compose_newtypeCompose'] = ["Coercible0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'));
+  $__res = $GLOBALS['Prim_undefined'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Compose_functorCompose'] = function() { $v = (function() {
+}];
+
+// Data_Functor_Compose_functorCompose
+$GLOBALS['Data_Functor_Compose_functorCompose'] = (function() {
   $__fn = function($dictFunctor_0 = null, $dictFunctor1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -157,8 +168,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Functor_Compose_eqCompose'] = function() { $v = (function() {
+})();
+
+// Data_Functor_Compose_eqCompose
+$GLOBALS['Data_Functor_Compose_eqCompose'] = (function() {
   $__fn = function($dictEq1_0 = null, $dictEq11_1 = null, $dictEq_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -196,18 +209,20 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Functor_Compose_ordCompose'] = function() { $v = function($dictOrd1_0 = null) {
+})();
+
+// Data_Functor_Compose_ordCompose
+$GLOBALS['Data_Functor_Compose_ordCompose'] = function($dictOrd1_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictOrd1_0)['Eq10'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_1_0 = (($dictOrd1_0)['Eq10'])($GLOBALS['Prim_undefined']);
   $__res = function($dictOrd11_2 = null) use ($__local_var_1_0, $dictOrd1_0) {
   $__num = \func_num_args();
-  $ordApp_3_1 = (($GLOBALS['Data_Functor_App_ordApp'] ?? \PhpursThunks::eval('Data_Functor_App_ordApp')))($dictOrd11_2);
-  $__local_var_4_2 = (($dictOrd11_2)['Eq10'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $ordApp_3_1 = ($GLOBALS['Data_Functor_App_ordApp'])($dictOrd11_2);
+  $__local_var_4_2 = (($dictOrd11_2)['Eq10'])($GLOBALS['Prim_undefined']);
   $__res = function($dictOrd_5 = null) use ($__local_var_1_0, $__local_var_4_2, $dictOrd1_0, $ordApp_3_1) {
   $__num = \func_num_args();
   $compare11_6_3 = (($dictOrd1_0)['compare1'])(($ordApp_3_1)($dictOrd_5));
-  $eq11_7_4 = (($__local_var_4_2)['eq1'])((($dictOrd_5)['Eq0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $eq11_7_4 = (($__local_var_4_2)['eq1'])((($dictOrd_5)['Eq0'])($GLOBALS['Prim_undefined']));
   $eq11_7_4 = (($__local_var_1_0)['eq1'])(["eq" => (function() use ($eq11_7_4) {
   $__fn = function($x_8 = null, $y_9 = null) use ($eq11_7_4, &$__fn) {
   $__num = \func_num_args();
@@ -264,8 +279,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Compose_eq1Compose'] = function() { $v = (function() {
+};
+
+// Data_Functor_Compose_eq1Compose
+$GLOBALS['Data_Functor_Compose_eq1Compose'] = (function() {
   $__fn = function($dictEq1_0 = null, $dictEq11_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -296,15 +313,17 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Functor_Compose_ord1Compose'] = function() { $v = function($dictOrd1_0 = null) {
+})();
+
+// Data_Functor_Compose_ord1Compose
+$GLOBALS['Data_Functor_Compose_ord1Compose'] = function($dictOrd1_0 = null) {
   $__num = \func_num_args();
-  $ordCompose1_1_0 = (($GLOBALS['Data_Functor_Compose_ordCompose'] ?? \PhpursThunks::eval('Data_Functor_Compose_ordCompose')))($dictOrd1_0);
-  $__local_var_2_1 = (($dictOrd1_0)['Eq10'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $ordCompose1_1_0 = ($GLOBALS['Data_Functor_Compose_ordCompose'])($dictOrd1_0);
+  $__local_var_2_1 = (($dictOrd1_0)['Eq10'])($GLOBALS['Prim_undefined']);
   $__res = function($dictOrd11_3 = null) use ($__local_var_2_1, $ordCompose1_1_0) {
   $__num = \func_num_args();
   $ordCompose2_4_2 = ($ordCompose1_1_0)($dictOrd11_3);
-  $__local_var_5_3 = (($dictOrd11_3)['Eq10'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_5_3 = (($dictOrd11_3)['Eq10'])($GLOBALS['Prim_undefined']);
   $eq1Compose2_6_4 = ["eq1" => function($dictEq_6 = null) use ($__local_var_2_1, $__local_var_5_3) {
   $__num = \func_num_args();
   $eq11_7_4 = (($__local_var_5_3)['eq1'])($dictEq_6);
@@ -345,8 +364,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Compose_bihoistCompose'] = function() { $v = (function() {
+};
+
+// Data_Functor_Compose_bihoistCompose
+$GLOBALS['Data_Functor_Compose_bihoistCompose'] = (function() {
   $__fn = function($dictFunctor_0 = null, $natF_1 = null, $natG_2 = null, $v_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
@@ -358,14 +379,16 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Functor_Compose_applyCompose'] = function() { $v = function($dictApply_0 = null) {
+})();
+
+// Data_Functor_Compose_applyCompose
+$GLOBALS['Data_Functor_Compose_applyCompose'] = function($dictApply_0 = null) {
   $__num = \func_num_args();
-  $Functor0_1_0 = (($dictApply_0)['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $Functor0_1_0 = (($dictApply_0)['Functor0'])($GLOBALS['Prim_undefined']);
   $__res = function($dictApply1_2 = null) use ($Functor0_1_0, $dictApply_0) {
   $__num = \func_num_args();
   $apply1_3_1 = ($dictApply1_2)['apply'];
-  $__local_var_4_2 = (($dictApply1_2)['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_4_2 = (($dictApply1_2)['Functor0'])($GLOBALS['Prim_undefined']);
   $functorCompose2_5_3 = ["map" => (function() use ($Functor0_1_0, $__local_var_4_2) {
   $__fn = function($f_5 = null, $v_6 = null) use ($Functor0_1_0, $__local_var_4_2, &$__fn) {
   $__num = \func_num_args();
@@ -405,15 +428,17 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Compose_applicativeCompose'] = function() { $v = function($dictApplicative_0 = null) {
+};
+
+// Data_Functor_Compose_applicativeCompose
+$GLOBALS['Data_Functor_Compose_applicativeCompose'] = function($dictApplicative_0 = null) {
   $__num = \func_num_args();
   $pure_1_0 = ($dictApplicative_0)['pure'];
-  $applyCompose1_2_1 = (($GLOBALS['Data_Functor_Compose_applyCompose'] ?? \PhpursThunks::eval('Data_Functor_Compose_applyCompose')))((($dictApplicative_0)['Apply0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $applyCompose1_2_1 = ($GLOBALS['Data_Functor_Compose_applyCompose'])((($dictApplicative_0)['Apply0'])($GLOBALS['Prim_undefined']));
   $__res = function($dictApplicative1_3 = null) use ($applyCompose1_2_1, $pure_1_0) {
   $__num = \func_num_args();
-  $applyCompose2_4_2 = ($applyCompose1_2_1)((($dictApplicative1_3)['Apply0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $__res = ["pure" => ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Functor_Compose_Compose'] ?? \PhpursThunks::eval('Data_Functor_Compose_Compose'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($pure_1_0))(($dictApplicative1_3)['pure'])), "Apply0" => function($dollar__unused_5 = null) use ($applyCompose2_4_2) {
+  $applyCompose2_4_2 = ($applyCompose1_2_1)((($dictApplicative1_3)['Apply0'])($GLOBALS['Prim_undefined']));
+  $__res = ["pure" => (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Functor_Compose_Compose']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($pure_1_0))(($dictApplicative1_3)['pure'])), "Apply0" => function($dollar__unused_5 = null) use ($applyCompose2_4_2) {
   $__num = \func_num_args();
   $__res = $applyCompose2_4_2;
   goto __end;;
@@ -427,10 +452,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Compose_altCompose'] = function() { $v = function($dictAlt_0 = null) {
+};
+
+// Data_Functor_Compose_altCompose
+$GLOBALS['Data_Functor_Compose_altCompose'] = function($dictAlt_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictAlt_0)['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_1_0 = (($dictAlt_0)['Functor0'])($GLOBALS['Prim_undefined']);
   $__res = function($dictFunctor_2 = null) use ($__local_var_1_0, $dictAlt_0) {
   $__num = \func_num_args();
   $functorCompose2_3_1 = ["map" => (function() use ($__local_var_1_0, $dictFunctor_2) {
@@ -472,11 +499,13 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Compose_plusCompose'] = function() { $v = function($dictPlus_0 = null) {
+};
+
+// Data_Functor_Compose_plusCompose
+$GLOBALS['Data_Functor_Compose_plusCompose'] = function($dictPlus_0 = null) {
   $__num = \func_num_args();
   $empty_1_0 = ($dictPlus_0)['empty'];
-  $altCompose1_2_1 = (($GLOBALS['Data_Functor_Compose_altCompose'] ?? \PhpursThunks::eval('Data_Functor_Compose_altCompose')))((($dictPlus_0)['Alt0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $altCompose1_2_1 = ($GLOBALS['Data_Functor_Compose_altCompose'])((($dictPlus_0)['Alt0'])($GLOBALS['Prim_undefined']));
   $__res = function($dictFunctor_3 = null) use ($altCompose1_2_1, $empty_1_0) {
   $__num = \func_num_args();
   $altCompose2_4_2 = ($altCompose1_2_1)($dictFunctor_3);
@@ -494,15 +523,17 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Compose_alternativeCompose'] = function() { $v = function($dictAlternative_0 = null) {
+};
+
+// Data_Functor_Compose_alternativeCompose
+$GLOBALS['Data_Functor_Compose_alternativeCompose'] = function($dictAlternative_0 = null) {
   $__num = \func_num_args();
-  $applicativeCompose1_1_0 = (($GLOBALS['Data_Functor_Compose_applicativeCompose'] ?? \PhpursThunks::eval('Data_Functor_Compose_applicativeCompose')))((($dictAlternative_0)['Applicative0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $plusCompose1_2_1 = (($GLOBALS['Data_Functor_Compose_plusCompose'] ?? \PhpursThunks::eval('Data_Functor_Compose_plusCompose')))((($dictAlternative_0)['Plus1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $applicativeCompose1_1_0 = ($GLOBALS['Data_Functor_Compose_applicativeCompose'])((($dictAlternative_0)['Applicative0'])($GLOBALS['Prim_undefined']));
+  $plusCompose1_2_1 = ($GLOBALS['Data_Functor_Compose_plusCompose'])((($dictAlternative_0)['Plus1'])($GLOBALS['Prim_undefined']));
   $__res = function($dictApplicative_3 = null) use ($applicativeCompose1_1_0, $plusCompose1_2_1) {
   $__num = \func_num_args();
   $applicativeCompose2_4_2 = ($applicativeCompose1_1_0)($dictApplicative_3);
-  $plusCompose2_5_3 = ($plusCompose1_2_1)((((($dictApplicative_3)['Apply0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $plusCompose2_5_3 = ($plusCompose1_2_1)((((($dictApplicative_3)['Apply0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']));
   $__res = ["Applicative0" => function($dollar__unused_6 = null) use ($applicativeCompose2_4_2) {
   $__num = \func_num_args();
   $__res = $applicativeCompose2_4_2;
@@ -523,21 +554,5 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+};
 

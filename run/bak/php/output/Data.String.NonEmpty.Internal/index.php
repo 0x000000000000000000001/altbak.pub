@@ -109,7 +109,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_String_NonEmpty_Internal_fromJust'] = function() { $v = function($v_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_String_NonEmpty_Internal_fromJust
+$GLOBALS['Data_String_NonEmpty_Internal_fromJust'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object($v_0) && (($v_0)->{'tag'} === "Just"))) {
@@ -123,85 +128,109 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_String_NonEmpty_Internal_NonEmptyString'] = function() { $v = function($x_0 = null) {
+};
+
+// Data_String_NonEmpty_Internal_NonEmptyString
+$GLOBALS['Data_String_NonEmpty_Internal_NonEmptyString'] = function($x_0 = null) {
   $__num = \func_num_args();
   $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_String_NonEmpty_Internal_NonEmptyReplacement'] = function() { $v = function($x_0 = null) {
+};
+
+// Data_String_NonEmpty_Internal_NonEmptyReplacement
+$GLOBALS['Data_String_NonEmpty_Internal_NonEmptyReplacement'] = function($x_0 = null) {
   $__num = \func_num_args();
   $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_String_NonEmpty_Internal_toUpper'] = function() { $v = function($v_0 = null) {
+};
+
+// Data_String_NonEmpty_Internal_toUpper
+$GLOBALS['Data_String_NonEmpty_Internal_toUpper'] = function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_String_Common_toUpper'] ?? \PhpursThunks::eval('Data_String_Common_toUpper')))($v_0);
+  $__res = ($GLOBALS['Data_String_Common_toUpper'])($v_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_String_NonEmpty_Internal_toString'] = function() { $v = function($v_0 = null) {
+};
+
+// Data_String_NonEmpty_Internal_toString
+$GLOBALS['Data_String_NonEmpty_Internal_toString'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__res = $v_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_String_NonEmpty_Internal_toLower'] = function() { $v = function($v_0 = null) {
+};
+
+// Data_String_NonEmpty_Internal_toLower
+$GLOBALS['Data_String_NonEmpty_Internal_toLower'] = function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_String_Common_toLower'] ?? \PhpursThunks::eval('Data_String_Common_toLower')))($v_0);
+  $__res = ($GLOBALS['Data_String_Common_toLower'])($v_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_String_NonEmpty_Internal_showNonEmptyString'] = function() { $v = ["show" => function($v_0 = null) {
+};
+
+// Data_String_NonEmpty_Internal_showNonEmptyString
+$GLOBALS['Data_String_NonEmpty_Internal_showNonEmptyString'] = ["show" => function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = (("(NonEmptyString.unsafeFromString " . (($GLOBALS['Data_Show_showStringImpl'] ?? \PhpursThunks::eval('Data_Show_showStringImpl')))($v_0)) . ")");
+  $__res = (("(NonEmptyString.unsafeFromString " . ($GLOBALS['Data_Show_showStringImpl'])($v_0)) . ")");
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_String_NonEmpty_Internal_showNonEmptyReplacement'] = function() { $v = ["show" => function($v_0 = null) {
+}];
+
+// Data_String_NonEmpty_Internal_showNonEmptyReplacement
+$GLOBALS['Data_String_NonEmpty_Internal_showNonEmptyReplacement'] = ["show" => function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = (("(NonEmptyReplacement (NonEmptyString.unsafeFromString " . (($GLOBALS['Data_Show_showStringImpl'] ?? \PhpursThunks::eval('Data_Show_showStringImpl')))($v_0)) . "))");
+  $__res = (("(NonEmptyReplacement (NonEmptyString.unsafeFromString " . ($GLOBALS['Data_Show_showStringImpl'])($v_0)) . "))");
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_String_NonEmpty_Internal_semigroupNonEmptyString'] = function() { $v = ($GLOBALS['Data_Semigroup_semigroupString'] ?? \PhpursThunks::eval('Data_Semigroup_semigroupString')); return $v; };
-\PhpursThunks::$thunks['Data_String_NonEmpty_Internal_semigroupNonEmptyReplacement'] = function() { $v = ($GLOBALS['Data_Semigroup_semigroupString'] ?? \PhpursThunks::eval('Data_Semigroup_semigroupString')); return $v; };
-\PhpursThunks::$thunks['Data_String_NonEmpty_Internal_replaceAll'] = function() { $v = (function() {
+}];
+
+// Data_String_NonEmpty_Internal_semigroupNonEmptyString
+$GLOBALS['Data_String_NonEmpty_Internal_semigroupNonEmptyString'] = $GLOBALS['Data_Semigroup_semigroupString'];
+
+// Data_String_NonEmpty_Internal_semigroupNonEmptyReplacement
+$GLOBALS['Data_String_NonEmpty_Internal_semigroupNonEmptyReplacement'] = $GLOBALS['Data_Semigroup_semigroupString'];
+
+// Data_String_NonEmpty_Internal_replaceAll
+$GLOBALS['Data_String_NonEmpty_Internal_replaceAll'] = (function() {
   $__fn = function($pat_0 = null, $v_1 = null, $v1_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (((($GLOBALS['Data_String_Common_replaceAll'] ?? \PhpursThunks::eval('Data_String_Common_replaceAll')))($pat_0))($v_1))($v1_2);
+  $__res = ((($GLOBALS['Data_String_Common_replaceAll'])($pat_0))($v_1))($v1_2);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_String_NonEmpty_Internal_replace'] = function() { $v = (function() {
+})();
+
+// Data_String_NonEmpty_Internal_replace
+$GLOBALS['Data_String_NonEmpty_Internal_replace'] = (function() {
   $__fn = function($pat_0 = null, $v_1 = null, $v1_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (((($GLOBALS['Data_String_Common_replace'] ?? \PhpursThunks::eval('Data_String_Common_replace')))($pat_0))($v_1))($v1_2);
+  $__res = ((($GLOBALS['Data_String_Common_replace'])($pat_0))($v_1))($v1_2);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_String_NonEmpty_Internal_prependString'] = function() { $v = (function() {
+})();
+
+// Data_String_NonEmpty_Internal_prependString
+$GLOBALS['Data_String_NonEmpty_Internal_prependString'] = (function() {
   $__fn = function($s1_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -213,10 +242,16 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_String_NonEmpty_Internal_ordNonEmptyString'] = function() { $v = ($GLOBALS['Data_Ord_ordString'] ?? \PhpursThunks::eval('Data_Ord_ordString')); return $v; };
-\PhpursThunks::$thunks['Data_String_NonEmpty_Internal_ordNonEmptyReplacement'] = function() { $v = ($GLOBALS['Data_Ord_ordString'] ?? \PhpursThunks::eval('Data_Ord_ordString')); return $v; };
-\PhpursThunks::$thunks['Data_String_NonEmpty_Internal_nonEmptyNonEmpty'] = function() { $v = function($dictIsSymbol_0 = null) {
+})();
+
+// Data_String_NonEmpty_Internal_ordNonEmptyString
+$GLOBALS['Data_String_NonEmpty_Internal_ordNonEmptyString'] = $GLOBALS['Data_Ord_ordString'];
+
+// Data_String_NonEmpty_Internal_ordNonEmptyReplacement
+$GLOBALS['Data_String_NonEmpty_Internal_ordNonEmptyReplacement'] = $GLOBALS['Data_Ord_ordString'];
+
+// Data_String_NonEmpty_Internal_nonEmptyNonEmpty
+$GLOBALS['Data_String_NonEmpty_Internal_nonEmptyNonEmpty'] = function($dictIsSymbol_0 = null) {
   $__num = \func_num_args();
   $__res = ["nes" => function($p_1 = null) use ($dictIsSymbol_0) {
   $__num = \func_num_args();
@@ -228,15 +263,19 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_String_NonEmpty_Internal_nes'] = function() { $v = function($dict_0 = null) {
+};
+
+// Data_String_NonEmpty_Internal_nes
+$GLOBALS['Data_String_NonEmpty_Internal_nes'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['nes'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_String_NonEmpty_Internal_makeNonEmptyBad'] = function() { $v = function($dollar__unused_0 = null) {
+};
+
+// Data_String_NonEmpty_Internal_makeNonEmptyBad
+$GLOBALS['Data_String_NonEmpty_Internal_makeNonEmptyBad'] = function($dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = ["nes" => function($v_1 = null) {
   $__num = \func_num_args();
@@ -248,21 +287,25 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_String_NonEmpty_Internal_localeCompare'] = function() { $v = (function() {
+};
+
+// Data_String_NonEmpty_Internal_localeCompare
+$GLOBALS['Data_String_NonEmpty_Internal_localeCompare'] = (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_String_Common_localeCompare'] ?? \PhpursThunks::eval('Data_String_Common_localeCompare')))($v_0))($v1_1);
+  $__res = (($GLOBALS['Data_String_Common_localeCompare'])($v_0))($v1_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_String_NonEmpty_Internal_liftS'] = function() { $v = (function() {
+})();
+
+// Data_String_NonEmpty_Internal_liftS
+$GLOBALS['Data_String_NonEmpty_Internal_liftS'] = (function() {
   $__fn = function($f_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -274,14 +317,18 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_String_NonEmpty_Internal_startsWith'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_String_NonEmpty_Internal_liftS'] ?? \PhpursThunks::eval('Data_String_NonEmpty_Internal_liftS'))))(($GLOBALS['Data_String_CodeUnits_startsWith'] ?? \PhpursThunks::eval('Data_String_CodeUnits_startsWith'))); return $v; };
-\PhpursThunks::$thunks['Data_String_NonEmpty_Internal_joinWith1'] = function() { $v = function($dictFoldable1_0 = null) {
+})();
+
+// Data_String_NonEmpty_Internal_startsWith
+$GLOBALS['Data_String_NonEmpty_Internal_startsWith'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_Internal_liftS']))($GLOBALS['Data_String_CodeUnits_startsWith']);
+
+// Data_String_NonEmpty_Internal_joinWith1
+$GLOBALS['Data_String_NonEmpty_Internal_joinWith1'] = function($dictFoldable1_0 = null) {
   $__num = \func_num_args();
-  $intercalate_1_0 = ((($GLOBALS['Data_Foldable_intercalate'] ?? \PhpursThunks::eval('Data_Foldable_intercalate')))((($dictFoldable1_0)['Foldable0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')))))(($GLOBALS['Data_Monoid_monoidString'] ?? \PhpursThunks::eval('Data_Monoid_monoidString')));
+  $intercalate_1_0 = (($GLOBALS['Data_Foldable_intercalate'])((($dictFoldable1_0)['Foldable0'])($GLOBALS['Prim_undefined'])))($GLOBALS['Data_Monoid_monoidString']);
   $__res = function($v_2 = null) use ($intercalate_1_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_String_NonEmpty_Internal_NonEmptyString'] ?? \PhpursThunks::eval('Data_String_NonEmpty_Internal_NonEmptyString'))))(($intercalate_1_0)($v_2));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_Internal_NonEmptyString']))(($intercalate_1_0)($v_2));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -289,13 +336,15 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_String_NonEmpty_Internal_joinWith'] = function() { $v = function($dictFoldable_0 = null) {
+};
+
+// Data_String_NonEmpty_Internal_joinWith
+$GLOBALS['Data_String_NonEmpty_Internal_joinWith'] = function($dictFoldable_0 = null) {
   $__num = \func_num_args();
-  $intercalate_1_0 = ((($GLOBALS['Data_Foldable_intercalate'] ?? \PhpursThunks::eval('Data_Foldable_intercalate')))($dictFoldable_0))(($GLOBALS['Data_Monoid_monoidString'] ?? \PhpursThunks::eval('Data_Monoid_monoidString')));
+  $intercalate_1_0 = (($GLOBALS['Data_Foldable_intercalate'])($dictFoldable_0))($GLOBALS['Data_Monoid_monoidString']);
   $__res = function($splice_2 = null) use ($intercalate_1_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($intercalate_1_0)($splice_2)))(($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($intercalate_1_0)($splice_2)))($GLOBALS['Unsafe_Coerce_unsafeCoerce']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -303,13 +352,15 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_String_NonEmpty_Internal_join1With'] = function() { $v = function($dictFoldable1_0 = null) {
+};
+
+// Data_String_NonEmpty_Internal_join1With
+$GLOBALS['Data_String_NonEmpty_Internal_join1With'] = function($dictFoldable1_0 = null) {
   $__num = \func_num_args();
-  $joinWith2_1_0 = (($GLOBALS['Data_String_NonEmpty_Internal_joinWith'] ?? \PhpursThunks::eval('Data_String_NonEmpty_Internal_joinWith')))((($dictFoldable1_0)['Foldable0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $joinWith2_1_0 = ($GLOBALS['Data_String_NonEmpty_Internal_joinWith'])((($dictFoldable1_0)['Foldable0'])($GLOBALS['Prim_undefined']));
   $__res = function($splice_2 = null) use ($joinWith2_1_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_String_NonEmpty_Internal_NonEmptyString'] ?? \PhpursThunks::eval('Data_String_NonEmpty_Internal_NonEmptyString'))))(($joinWith2_1_0)($splice_2));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_Internal_NonEmptyString']))(($joinWith2_1_0)($splice_2));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -317,48 +368,28 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_String_NonEmpty_Internal_fromString'] = function() { $v = function($v_0 = null) {
+};
+
+// Data_String_NonEmpty_Internal_fromString
+$GLOBALS['Data_String_NonEmpty_Internal_fromString'] = function($v_0 = null) {
   $__num = \func_num_args();
-  $__t0 = null;;
-  switch ($v_0) {
-case "":
-$__t0 = new Phpurs_Data0("Nothing");
-goto end_branch_0;;
-break;
-default:
-;
-break;
-};
-  $__t0 = new Phpurs_Data1("Just", $v_0);
-  end_branch_0:;
-  $__res = $__t0;
+  $__res = match ($v_0) { "" => new Phpurs_Data0("Nothing"), default => new Phpurs_Data1("Just", $v_0) };
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_String_NonEmpty_Internal_stripPrefix'] = function() { $v = (function() {
+};
+
+// Data_String_NonEmpty_Internal_stripPrefix
+$GLOBALS['Data_String_NonEmpty_Internal_stripPrefix'] = (function() {
   $__fn = function($pat_0 = null, $a_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__local_var_2_0 = ((($GLOBALS['Data_String_CodeUnits_stripPrefix'] ?? \PhpursThunks::eval('Data_String_CodeUnits_stripPrefix')))($pat_0))($a_1);
+  $__local_var_2_0 = (($GLOBALS['Data_String_CodeUnits_stripPrefix'])($pat_0))($a_1);
   $__t1 = null;;
   if ((is_object($__local_var_2_0) && (($__local_var_2_0)->{'tag'} === "Just"))) {
-$__t2 = null;;
-switch (($__local_var_2_0)->{'value0'}) {
-case "":
-$__t2 = new Phpurs_Data0("Nothing");
-goto end_branch_2;;
-break;
-default:
-;
-break;
-};
-$__t2 = new Phpurs_Data1("Just", ($__local_var_2_0)->{'value0'});
-end_branch_2:;
-$__t1 = $__t2;
+$__t1 = match (($__local_var_2_0)->{'value0'}) { "" => new Phpurs_Data0("Nothing"), default => new Phpurs_Data1("Just", ($__local_var_2_0)->{'value0'}) };
 goto end_branch_1;;
 };
   if ((is_object($__local_var_2_0) && (($__local_var_2_0)->{'tag'} === "Nothing"))) {
@@ -374,29 +405,19 @@ goto end_branch_1;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_String_NonEmpty_Internal_stripSuffix'] = function() { $v = (function() {
+})();
+
+// Data_String_NonEmpty_Internal_stripSuffix
+$GLOBALS['Data_String_NonEmpty_Internal_stripSuffix'] = (function() {
   $__fn = function($pat_0 = null, $a_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__local_var_2_0 = ((($GLOBALS['Data_String_CodeUnits_stripSuffix'] ?? \PhpursThunks::eval('Data_String_CodeUnits_stripSuffix')))($pat_0))($a_1);
+  $__local_var_2_0 = (($GLOBALS['Data_String_CodeUnits_stripSuffix'])($pat_0))($a_1);
   $__t1 = null;;
   if ((is_object($__local_var_2_0) && (($__local_var_2_0)->{'tag'} === "Just"))) {
-$__t2 = null;;
-switch (($__local_var_2_0)->{'value0'}) {
-case "":
-$__t2 = new Phpurs_Data0("Nothing");
-goto end_branch_2;;
-break;
-default:
-;
-break;
-};
-$__t2 = new Phpurs_Data1("Just", ($__local_var_2_0)->{'value0'});
-end_branch_2:;
-$__t1 = $__t2;
+$__t1 = match (($__local_var_2_0)->{'value0'}) { "" => new Phpurs_Data0("Nothing"), default => new Phpurs_Data1("Just", ($__local_var_2_0)->{'value0'}) };
 goto end_branch_1;;
 };
   if ((is_object($__local_var_2_0) && (($__local_var_2_0)->{'tag'} === "Nothing"))) {
@@ -412,39 +433,41 @@ goto end_branch_1;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_String_NonEmpty_Internal_trim'] = function() { $v = function($v_0 = null) {
+})();
+
+// Data_String_NonEmpty_Internal_trim
+$GLOBALS['Data_String_NonEmpty_Internal_trim'] = function($v_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($GLOBALS['Data_String_Common_trim'] ?? \PhpursThunks::eval('Data_String_Common_trim')))($v_0);
-  $__t1 = null;;
-  switch ($__local_var_1_0) {
-case "":
-$__t1 = new Phpurs_Data0("Nothing");
-goto end_branch_1;;
-break;
-default:
-;
-break;
+  $__local_var_1_0 = ($GLOBALS['Data_String_Common_trim'])($v_0);
+  $__res = match ($__local_var_1_0) { "" => new Phpurs_Data0("Nothing"), default => new Phpurs_Data1("Just", $__local_var_1_0) };
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__t1 = new Phpurs_Data1("Just", $__local_var_1_0);
-  end_branch_1:;
-  $__res = $__t1;
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_String_NonEmpty_Internal_unsafeFromString'] = function() { $v = function($dollar__unused_0 = null) {
+
+// Data_String_NonEmpty_Internal_unsafeFromString
+$GLOBALS['Data_String_NonEmpty_Internal_unsafeFromString'] = function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_String_NonEmpty_Internal_fromJust'] ?? \PhpursThunks::eval('Data_String_NonEmpty_Internal_fromJust'))))(($GLOBALS['Data_String_NonEmpty_Internal_fromString'] ?? \PhpursThunks::eval('Data_String_NonEmpty_Internal_fromString')));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_Internal_fromJust']))($GLOBALS['Data_String_NonEmpty_Internal_fromString']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_String_NonEmpty_Internal_eqNonEmptyString'] = function() { $v = ($GLOBALS['Data_Eq_eqString'] ?? \PhpursThunks::eval('Data_Eq_eqString')); return $v; };
-\PhpursThunks::$thunks['Data_String_NonEmpty_Internal_eqNonEmptyReplacement'] = function() { $v = ($GLOBALS['Data_Eq_eqString'] ?? \PhpursThunks::eval('Data_Eq_eqString')); return $v; };
-\PhpursThunks::$thunks['Data_String_NonEmpty_Internal_endsWith'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_String_NonEmpty_Internal_liftS'] ?? \PhpursThunks::eval('Data_String_NonEmpty_Internal_liftS'))))(($GLOBALS['Data_String_CodeUnits_endsWith'] ?? \PhpursThunks::eval('Data_String_CodeUnits_endsWith'))); return $v; };
-\PhpursThunks::$thunks['Data_String_NonEmpty_Internal_contains'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_String_NonEmpty_Internal_liftS'] ?? \PhpursThunks::eval('Data_String_NonEmpty_Internal_liftS'))))(($GLOBALS['Data_String_CodeUnits_contains'] ?? \PhpursThunks::eval('Data_String_CodeUnits_contains'))); return $v; };
-\PhpursThunks::$thunks['Data_String_NonEmpty_Internal_appendString'] = function() { $v = (function() {
+};
+
+// Data_String_NonEmpty_Internal_eqNonEmptyString
+$GLOBALS['Data_String_NonEmpty_Internal_eqNonEmptyString'] = $GLOBALS['Data_Eq_eqString'];
+
+// Data_String_NonEmpty_Internal_eqNonEmptyReplacement
+$GLOBALS['Data_String_NonEmpty_Internal_eqNonEmptyReplacement'] = $GLOBALS['Data_Eq_eqString'];
+
+// Data_String_NonEmpty_Internal_endsWith
+$GLOBALS['Data_String_NonEmpty_Internal_endsWith'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_Internal_liftS']))($GLOBALS['Data_String_CodeUnits_endsWith']);
+
+// Data_String_NonEmpty_Internal_contains
+$GLOBALS['Data_String_NonEmpty_Internal_contains'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_Internal_liftS']))($GLOBALS['Data_String_CodeUnits_contains']);
+
+// Data_String_NonEmpty_Internal_appendString
+$GLOBALS['Data_String_NonEmpty_Internal_appendString'] = (function() {
   $__fn = function($v_0 = null, $s2_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -456,41 +479,5 @@ break;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+})();
 

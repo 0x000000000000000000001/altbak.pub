@@ -95,7 +95,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Ord_Generic_genericOrdNoConstructors'] = function() { $v = ["genericCompare__prime__" => (function() {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Ord_Generic_genericOrdNoConstructors
+$GLOBALS['Data_Ord_Generic_genericOrdNoConstructors'] = ["genericCompare__prime__" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -107,8 +112,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Ord_Generic_genericOrdNoArguments'] = function() { $v = ["genericCompare__prime__" => (function() {
+})()];
+
+// Data_Ord_Generic_genericOrdNoArguments
+$GLOBALS['Data_Ord_Generic_genericOrdNoArguments'] = ["genericCompare__prime__" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -120,8 +127,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Ord_Generic_genericOrdArgument'] = function() { $v = function($dictOrd_0 = null) {
+})()];
+
+// Data_Ord_Generic_genericOrdArgument
+$GLOBALS['Data_Ord_Generic_genericOrdArgument'] = function($dictOrd_0 = null) {
   $__num = \func_num_args();
   $__res = ["genericCompare__prime__" => (function() use ($dictOrd_0) {
   $__fn = function($v_1 = null, $v1_2 = null) use ($dictOrd_0, &$__fn) {
@@ -139,15 +148,19 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Ord_Generic_genericCompare__prime__'] = function() { $v = function($dict_0 = null) {
+};
+
+// Data_Ord_Generic_genericCompare'
+$GLOBALS['Data_Ord_Generic_genericCompare__prime__'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['genericCompare__prime__'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Ord_Generic_genericOrdConstructor'] = function() { $v = function($dictGenericOrd_0 = null) {
+};
+
+// Data_Ord_Generic_genericOrdConstructor
+$GLOBALS['Data_Ord_Generic_genericOrdConstructor'] = function($dictGenericOrd_0 = null) {
   $__num = \func_num_args();
   $__res = ["genericCompare__prime__" => (function() use ($dictGenericOrd_0) {
   $__fn = function($v_1 = null, $v1_2 = null) use ($dictGenericOrd_0, &$__fn) {
@@ -165,8 +178,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Ord_Generic_genericOrdProduct'] = function() { $v = (function() {
+};
+
+// Data_Ord_Generic_genericOrdProduct
+$GLOBALS['Data_Ord_Generic_genericOrdProduct'] = (function() {
   $__fn = function($dictGenericOrd_0 = null, $dictGenericOrd1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -198,8 +213,10 @@ goto end_branch_1;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Ord_Generic_genericOrdSum'] = function() { $v = (function() {
+})();
+
+// Data_Ord_Generic_genericOrdSum
+$GLOBALS['Data_Ord_Generic_genericOrdSum'] = (function() {
   $__fn = function($dictGenericOrd_0 = null, $dictGenericOrd1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -259,8 +276,10 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Ord_Generic_genericCompare'] = function() { $v = (function() {
+})();
+
+// Data_Ord_Generic_genericCompare
+$GLOBALS['Data_Ord_Generic_genericCompare'] = (function() {
   $__fn = function($dictGeneric_0 = null, $dictGenericOrd_1 = null, $x_2 = null, $y_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
@@ -272,15 +291,5 @@ goto end_branch_0;;
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
+})();
 

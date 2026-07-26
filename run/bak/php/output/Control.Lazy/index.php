@@ -92,34 +92,45 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Control_Lazy_lazyUnit'] = function() { $v = ["defer" => function($v_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Control_Lazy_lazyUnit
+$GLOBALS['Control_Lazy_lazyUnit'] = ["defer" => function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'));
+  $__res = $GLOBALS['Data_Unit_unit'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Control_Lazy_lazyFn'] = function() { $v = ["defer" => (function() {
+}];
+
+// Control_Lazy_lazyFn
+$GLOBALS['Control_Lazy_lazyFn'] = ["defer" => (function() {
   $__fn = function($f_0 = null, $x_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($f_0)(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'))))($x_1);
+  $__res = (($f_0)($GLOBALS['Data_Unit_unit']))($x_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Control_Lazy_defer'] = function() { $v = function($dict_0 = null) {
+})()];
+
+// Control_Lazy_defer
+$GLOBALS['Control_Lazy_defer'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['defer'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Lazy_fix'] = function() { $v = (function() {
+};
+
+// Control_Lazy_fix
+$GLOBALS['Control_Lazy_fix'] = (function() {
   $__fn = function($dictLazy_0 = null, $f_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -139,11 +150,5 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
+})();
 

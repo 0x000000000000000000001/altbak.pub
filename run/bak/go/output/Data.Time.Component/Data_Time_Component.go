@@ -9,7 +9,6 @@ import (
 	pkg_Data_Eq "gopurs/output/Data.Eq"
 	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
 	pkg_Data_Maybe "gopurs/output/Data.Maybe"
-	pkg_Control_Semigroupoid "gopurs/output/Control.Semigroupoid"
 	unsafe "unsafe"
 )
 
@@ -249,11 +248,11 @@ func Get_enumSecond() gopurs_runtime.Value {
 	once_enumSecond.Do(func() {
 		cache_enumSecond = gopurs_runtime.RecordDict3("Ord0", "pred", "succ", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_ordSecond()
-}), gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), gopurs_runtime.RecordGet(Get_boundedEnumSecond(), "toEnum"), gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Int((v_0.IntVal) - (1))
-}), gopurs_runtime.RecordGet(Get_boundedEnumSecond(), "fromEnum"))), gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), gopurs_runtime.RecordGet(Get_boundedEnumSecond(), "toEnum"), gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Int((v_0.IntVal) + (1))
-}), gopurs_runtime.RecordGet(Get_boundedEnumSecond(), "fromEnum"))))
+}), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_boundedEnumSecond(), "toEnum"), gopurs_runtime.Int((gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_boundedEnumSecond(), "fromEnum"), x_0).IntVal) - (1)))
+}), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_boundedEnumSecond(), "toEnum"), gopurs_runtime.Int((gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_boundedEnumSecond(), "fromEnum"), x_0).IntVal) + (1)))
+}))
 	})
 	return cache_enumSecond
 }
@@ -294,11 +293,11 @@ func Get_enumMinute() gopurs_runtime.Value {
 	once_enumMinute.Do(func() {
 		cache_enumMinute = gopurs_runtime.RecordDict3("Ord0", "pred", "succ", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_ordMinute()
-}), gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), gopurs_runtime.RecordGet(Get_boundedEnumMinute(), "toEnum"), gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Int((v_0.IntVal) - (1))
-}), gopurs_runtime.RecordGet(Get_boundedEnumMinute(), "fromEnum"))), gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), gopurs_runtime.RecordGet(Get_boundedEnumMinute(), "toEnum"), gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Int((v_0.IntVal) + (1))
-}), gopurs_runtime.RecordGet(Get_boundedEnumMinute(), "fromEnum"))))
+}), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_boundedEnumMinute(), "toEnum"), gopurs_runtime.Int((gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_boundedEnumMinute(), "fromEnum"), x_0).IntVal) - (1)))
+}), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_boundedEnumMinute(), "toEnum"), gopurs_runtime.Int((gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_boundedEnumMinute(), "fromEnum"), x_0).IntVal) + (1)))
+}))
 	})
 	return cache_enumMinute
 }
@@ -339,11 +338,11 @@ func Get_enumMillisecond() gopurs_runtime.Value {
 	once_enumMillisecond.Do(func() {
 		cache_enumMillisecond = gopurs_runtime.RecordDict3("Ord0", "pred", "succ", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_ordMillisecond()
-}), gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), gopurs_runtime.RecordGet(Get_boundedEnumMillisecond(), "toEnum"), gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Int((v_0.IntVal) - (1))
-}), gopurs_runtime.RecordGet(Get_boundedEnumMillisecond(), "fromEnum"))), gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), gopurs_runtime.RecordGet(Get_boundedEnumMillisecond(), "toEnum"), gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Int((v_0.IntVal) + (1))
-}), gopurs_runtime.RecordGet(Get_boundedEnumMillisecond(), "fromEnum"))))
+}), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_boundedEnumMillisecond(), "toEnum"), gopurs_runtime.Int((gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_boundedEnumMillisecond(), "fromEnum"), x_0).IntVal) - (1)))
+}), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_boundedEnumMillisecond(), "toEnum"), gopurs_runtime.Int((gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_boundedEnumMillisecond(), "fromEnum"), x_0).IntVal) + (1)))
+}))
 	})
 	return cache_enumMillisecond
 }
@@ -384,11 +383,11 @@ func Get_enumHour() gopurs_runtime.Value {
 	once_enumHour.Do(func() {
 		cache_enumHour = gopurs_runtime.RecordDict3("Ord0", "pred", "succ", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_ordHour()
-}), gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), gopurs_runtime.RecordGet(Get_boundedEnumHour(), "toEnum"), gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Int((v_0.IntVal) - (1))
-}), gopurs_runtime.RecordGet(Get_boundedEnumHour(), "fromEnum"))), gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), gopurs_runtime.RecordGet(Get_boundedEnumHour(), "toEnum"), gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Int((v_0.IntVal) + (1))
-}), gopurs_runtime.RecordGet(Get_boundedEnumHour(), "fromEnum"))))
+}), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_boundedEnumHour(), "toEnum"), gopurs_runtime.Int((gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_boundedEnumHour(), "fromEnum"), x_0).IntVal) - (1)))
+}), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_boundedEnumHour(), "toEnum"), gopurs_runtime.Int((gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_boundedEnumHour(), "fromEnum"), x_0).IntVal) + (1)))
+}))
 	})
 	return cache_enumHour
 }

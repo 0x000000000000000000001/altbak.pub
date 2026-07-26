@@ -93,29 +93,42 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Bounded_Generic_genericTopNoArguments'] = function() { $v = ["genericTop__prime__" => new Phpurs_Data0("NoArguments")]; return $v; };
-\PhpursThunks::$thunks['Data_Bounded_Generic_genericTopArgument'] = function() { $v = function($dictBounded_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Bounded_Generic_genericTopNoArguments
+$GLOBALS['Data_Bounded_Generic_genericTopNoArguments'] = ["genericTop__prime__" => new Phpurs_Data0("NoArguments")];
+
+// Data_Bounded_Generic_genericTopArgument
+$GLOBALS['Data_Bounded_Generic_genericTopArgument'] = function($dictBounded_0 = null) {
   $__num = \func_num_args();
   $__res = ["genericTop__prime__" => ($dictBounded_0)['top']];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Bounded_Generic_genericTop__prime__'] = function() { $v = function($dict_0 = null) {
+};
+
+// Data_Bounded_Generic_genericTop'
+$GLOBALS['Data_Bounded_Generic_genericTop__prime__'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['genericTop__prime__'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Bounded_Generic_genericTopConstructor'] = function() { $v = function($dictGenericTop_0 = null) {
+};
+
+// Data_Bounded_Generic_genericTopConstructor
+$GLOBALS['Data_Bounded_Generic_genericTopConstructor'] = function($dictGenericTop_0 = null) {
   $__num = \func_num_args();
   $__res = ["genericTop__prime__" => ($dictGenericTop_0)['genericTop__prime__']];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Bounded_Generic_genericTopProduct'] = function() { $v = function($dictGenericTop_0 = null) {
+};
+
+// Data_Bounded_Generic_genericTopProduct
+$GLOBALS['Data_Bounded_Generic_genericTopProduct'] = function($dictGenericTop_0 = null) {
   $__num = \func_num_args();
   $genericTop__prime__1_1_0 = ($dictGenericTop_0)['genericTop__prime__'];
   $__res = function($dictGenericTop1_2 = null) use ($genericTop__prime__1_1_0) {
@@ -128,15 +141,19 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Bounded_Generic_genericTopSum'] = function() { $v = function($dictGenericTop_0 = null) {
+};
+
+// Data_Bounded_Generic_genericTopSum
+$GLOBALS['Data_Bounded_Generic_genericTopSum'] = function($dictGenericTop_0 = null) {
   $__num = \func_num_args();
   $__res = ["genericTop__prime__" => new Phpurs_Data1("Inr", ($dictGenericTop_0)['genericTop__prime__'])];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Bounded_Generic_genericTop'] = function() { $v = (function() {
+};
+
+// Data_Bounded_Generic_genericTop
+$GLOBALS['Data_Bounded_Generic_genericTop'] = (function() {
   $__fn = function($dictGeneric_0 = null, $dictGenericTop_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -148,30 +165,40 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Bounded_Generic_genericBottomNoArguments'] = function() { $v = ["genericBottom__prime__" => new Phpurs_Data0("NoArguments")]; return $v; };
-\PhpursThunks::$thunks['Data_Bounded_Generic_genericBottomArgument'] = function() { $v = function($dictBounded_0 = null) {
+})();
+
+// Data_Bounded_Generic_genericBottomNoArguments
+$GLOBALS['Data_Bounded_Generic_genericBottomNoArguments'] = ["genericBottom__prime__" => new Phpurs_Data0("NoArguments")];
+
+// Data_Bounded_Generic_genericBottomArgument
+$GLOBALS['Data_Bounded_Generic_genericBottomArgument'] = function($dictBounded_0 = null) {
   $__num = \func_num_args();
   $__res = ["genericBottom__prime__" => ($dictBounded_0)['bottom']];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Bounded_Generic_genericBottom__prime__'] = function() { $v = function($dict_0 = null) {
+};
+
+// Data_Bounded_Generic_genericBottom'
+$GLOBALS['Data_Bounded_Generic_genericBottom__prime__'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['genericBottom__prime__'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Bounded_Generic_genericBottomConstructor'] = function() { $v = function($dictGenericBottom_0 = null) {
+};
+
+// Data_Bounded_Generic_genericBottomConstructor
+$GLOBALS['Data_Bounded_Generic_genericBottomConstructor'] = function($dictGenericBottom_0 = null) {
   $__num = \func_num_args();
   $__res = ["genericBottom__prime__" => ($dictGenericBottom_0)['genericBottom__prime__']];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Bounded_Generic_genericBottomProduct'] = function() { $v = function($dictGenericBottom_0 = null) {
+};
+
+// Data_Bounded_Generic_genericBottomProduct
+$GLOBALS['Data_Bounded_Generic_genericBottomProduct'] = function($dictGenericBottom_0 = null) {
   $__num = \func_num_args();
   $genericBottom__prime__1_1_0 = ($dictGenericBottom_0)['genericBottom__prime__'];
   $__res = function($dictGenericBottom1_2 = null) use ($genericBottom__prime__1_1_0) {
@@ -184,15 +211,19 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Bounded_Generic_genericBottomSum'] = function() { $v = function($dictGenericBottom_0 = null) {
+};
+
+// Data_Bounded_Generic_genericBottomSum
+$GLOBALS['Data_Bounded_Generic_genericBottomSum'] = function($dictGenericBottom_0 = null) {
   $__num = \func_num_args();
   $__res = ["genericBottom__prime__" => new Phpurs_Data1("Inl", ($dictGenericBottom_0)['genericBottom__prime__'])];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Bounded_Generic_genericBottom'] = function() { $v = (function() {
+};
+
+// Data_Bounded_Generic_genericBottom
+$GLOBALS['Data_Bounded_Generic_genericBottom'] = (function() {
   $__fn = function($dictGeneric_0 = null, $dictGenericBottom_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -204,21 +235,5 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+})();
 

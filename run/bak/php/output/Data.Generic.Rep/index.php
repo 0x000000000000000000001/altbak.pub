@@ -96,21 +96,30 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Generic_Rep_Inl'] = function() { $v = function($value0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Generic_Rep_Inl
+$GLOBALS['Data_Generic_Rep_Inl'] = function($value0 = null) {
   $__num = \func_num_args();
   $__res = new Phpurs_Data1("Inl", $value0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Generic_Rep_Inr'] = function() { $v = function($value0 = null) {
+};
+
+// Data_Generic_Rep_Inr
+$GLOBALS['Data_Generic_Rep_Inr'] = function($value0 = null) {
   $__num = \func_num_args();
   $__res = new Phpurs_Data1("Inr", $value0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Generic_Rep_Product'] = function() { $v = (function() {
+};
+
+// Data_Generic_Rep_Product
+$GLOBALS['Data_Generic_Rep_Product'] = (function() {
   $__fn = function($value0 = null, $value1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -122,30 +131,40 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Generic_Rep_NoArguments'] = function() { $v = ($GLOBALS['__phpurs_data0_NoArguments'] ??= new Phpurs_Data0("NoArguments")); return $v; };
-\PhpursThunks::$thunks['Data_Generic_Rep_Constructor'] = function() { $v = function($x_0 = null) {
+})();
+
+// Data_Generic_Rep_NoArguments
+$GLOBALS['Data_Generic_Rep_NoArguments'] = ($GLOBALS['__phpurs_data0_NoArguments'] ??= new Phpurs_Data0("NoArguments"));
+
+// Data_Generic_Rep_Constructor
+$GLOBALS['Data_Generic_Rep_Constructor'] = function($x_0 = null) {
   $__num = \func_num_args();
   $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Generic_Rep_Argument'] = function() { $v = function($x_0 = null) {
+};
+
+// Data_Generic_Rep_Argument
+$GLOBALS['Data_Generic_Rep_Argument'] = function($x_0 = null) {
   $__num = \func_num_args();
   $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Generic_Rep_to'] = function() { $v = function($dict_0 = null) {
+};
+
+// Data_Generic_Rep_to
+$GLOBALS['Data_Generic_Rep_to'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['to'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Generic_Rep_showSum'] = function() { $v = (function() {
+};
+
+// Data_Generic_Rep_showSum
+$GLOBALS['Data_Generic_Rep_showSum'] = (function() {
   $__fn = function($dictShow_0 = null, $dictShow1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -175,8 +194,10 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Generic_Rep_showProduct'] = function() { $v = (function() {
+})();
+
+// Data_Generic_Rep_showProduct
+$GLOBALS['Data_Generic_Rep_showProduct'] = (function() {
   $__fn = function($dictShow_0 = null, $dictShow1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -194,15 +215,19 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Generic_Rep_showNoArguments'] = function() { $v = ["show" => function($v_0 = null) {
+})();
+
+// Data_Generic_Rep_showNoArguments
+$GLOBALS['Data_Generic_Rep_showNoArguments'] = ["show" => function($v_0 = null) {
   $__num = \func_num_args();
   $__res = "NoArguments";
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Generic_Rep_showConstructor'] = function() { $v = (function() {
+}];
+
+// Data_Generic_Rep_showConstructor
+$GLOBALS['Data_Generic_Rep_showConstructor'] = (function() {
   $__fn = function($dictIsSymbol_0 = null, $dictShow_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -210,7 +235,7 @@ goto end_branch_0;;
   }
   $__res = ["show" => function($v_2 = null) use ($dictIsSymbol_0, $dictShow_1) {
   $__num = \func_num_args();
-  $__res = (((("(Constructor @" . (($GLOBALS['Data_Show_showStringImpl'] ?? \PhpursThunks::eval('Data_Show_showStringImpl')))((($dictIsSymbol_0)['reflectSymbol'])(new Phpurs_Data0("Proxy")))) . " ") . (($dictShow_1)['show'])($v_2)) . ")");
+  $__res = (((("(Constructor @" . ($GLOBALS['Data_Show_showStringImpl'])((($dictIsSymbol_0)['reflectSymbol'])(new Phpurs_Data0("Proxy")))) . " ") . (($dictShow_1)['show'])($v_2)) . ")");
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -220,8 +245,10 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Generic_Rep_showArgument'] = function() { $v = function($dictShow_0 = null) {
+})();
+
+// Data_Generic_Rep_showArgument
+$GLOBALS['Data_Generic_Rep_showArgument'] = function($dictShow_0 = null) {
   $__num = \func_num_args();
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
@@ -233,8 +260,10 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Generic_Rep_repOf'] = function() { $v = (function() {
+};
+
+// Data_Generic_Rep_repOf
+$GLOBALS['Data_Generic_Rep_repOf'] = (function() {
   $__fn = function($dictGeneric_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -246,28 +275,14 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Generic_Rep_from'] = function() { $v = function($dict_0 = null) {
+})();
+
+// Data_Generic_Rep_from
+$GLOBALS['Data_Generic_Rep_from'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['from'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+};
 

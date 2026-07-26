@@ -111,14 +111,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Functor_Costar_Costar'] = function() { $v = function($x_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Functor_Costar_Costar
+$GLOBALS['Data_Functor_Costar_Costar'] = function($x_0 = null) {
   $__num = \func_num_args();
   $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Costar_semigroupoidCostar'] = function() { $v = function($dictExtend_0 = null) {
+};
+
+// Data_Functor_Costar_semigroupoidCostar
+$GLOBALS['Data_Functor_Costar_semigroupoidCostar'] = function($dictExtend_0 = null) {
   $__num = \func_num_args();
   $__res = ["compose" => (function() use ($dictExtend_0) {
   $__fn = function($v_1 = null, $v1_2 = null, $w_3 = null) use ($dictExtend_0, &$__fn) {
@@ -136,8 +143,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Costar_profunctorCostar'] = function() { $v = function($dictFunctor_0 = null) {
+};
+
+// Data_Functor_Costar_profunctorCostar
+$GLOBALS['Data_Functor_Costar_profunctorCostar'] = function($dictFunctor_0 = null) {
   $__num = \func_num_args();
   $__res = ["dimap" => (function() use ($dictFunctor_0) {
   $__fn = function($f_1 = null, $g_2 = null, $v_3 = null) use ($dictFunctor_0, &$__fn) {
@@ -145,7 +154,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($g_2))($v_3)))((($dictFunctor_0)['map'])($f_1));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($g_2))($v_3)))((($dictFunctor_0)['map'])($f_1));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -155,18 +164,20 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Costar_strongCostar'] = function() { $v = function($dictComonad_0 = null) {
+};
+
+// Data_Functor_Costar_strongCostar
+$GLOBALS['Data_Functor_Costar_strongCostar'] = function($dictComonad_0 = null) {
   $__num = \func_num_args();
-  $Functor0_1_0 = (((($dictComonad_0)['Extend0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
-  $profunctorCostar1_2_1 = (($GLOBALS['Data_Functor_Costar_profunctorCostar'] ?? \PhpursThunks::eval('Data_Functor_Costar_profunctorCostar')))($Functor0_1_0);
+  $Functor0_1_0 = (((($dictComonad_0)['Extend0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']);
+  $profunctorCostar1_2_1 = ($GLOBALS['Data_Functor_Costar_profunctorCostar'])($Functor0_1_0);
   $__res = ["first" => (function() use ($Functor0_1_0, $dictComonad_0) {
   $__fn = function($v_3 = null, $x_4 = null) use ($Functor0_1_0, $dictComonad_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", ($v_3)(((($Functor0_1_0)['map'])(($GLOBALS['Data_Tuple_fst'] ?? \PhpursThunks::eval('Data_Tuple_fst'))))($x_4)), ((($dictComonad_0)['extract'])($x_4))->{'value1'});
+  $__res = new Phpurs_Data2("Tuple", ($v_3)(((($Functor0_1_0)['map'])($GLOBALS['Data_Tuple_fst']))($x_4)), ((($dictComonad_0)['extract'])($x_4))->{'value1'});
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -178,7 +189,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", ((($dictComonad_0)['extract'])($x_4))->{'value0'}, ($v_3)(((($Functor0_1_0)['map'])(($GLOBALS['Data_Tuple_snd'] ?? \PhpursThunks::eval('Data_Tuple_snd'))))($x_4)));
+  $__res = new Phpurs_Data2("Tuple", ((($dictComonad_0)['extract'])($x_4))->{'value0'}, ($v_3)(((($Functor0_1_0)['map'])($GLOBALS['Data_Tuple_snd']))($x_4)));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -194,54 +205,64 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Costar_newtypeCostar'] = function() { $v = ["Coercible0" => function($dollar__unused_0 = null) {
+};
+
+// Data_Functor_Costar_newtypeCostar
+$GLOBALS['Data_Functor_Costar_newtypeCostar'] = ["Coercible0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'));
+  $__res = $GLOBALS['Prim_undefined'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Costar_hoistCostar'] = function() { $v = (function() {
+}];
+
+// Data_Functor_Costar_hoistCostar
+$GLOBALS['Data_Functor_Costar_hoistCostar'] = (function() {
   $__fn = function($f_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))['identity']))($v_1)))($f_0);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Control_Category_categoryFn'])['identity']))($v_1)))($f_0);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Functor_Costar_functorCostar'] = function() { $v = ["map" => (function() {
+})();
+
+// Data_Functor_Costar_functorCostar
+$GLOBALS['Data_Functor_Costar_functorCostar'] = ["map" => (function() {
   $__fn = function($f_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($f_0))($v_1);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($f_0))($v_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Costar_invariantCostar'] = function() { $v = ["imap" => (function() {
+})()];
+
+// Data_Functor_Costar_invariantCostar
+$GLOBALS['Data_Functor_Costar_invariantCostar'] = ["imap" => (function() {
   $__fn = function($f_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_Functor_Costar_functorCostar'] ?? \PhpursThunks::eval('Data_Functor_Costar_functorCostar')))['map'])($f_0);
+  $__res = (($GLOBALS['Data_Functor_Costar_functorCostar'])['map'])($f_0);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Costar_distributiveCostar'] = function() { $v = ["distribute" => (function() {
+})()];
+
+// Data_Functor_Costar_distributiveCostar
+$GLOBALS['Data_Functor_Costar_distributiveCostar'] = ["distribute" => (function() {
   $__fn = function($dictFunctor_0 = null, $f_1 = null, $a_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -265,7 +286,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(((($GLOBALS['Data_Functor_Costar_distributiveCostar'] ?? \PhpursThunks::eval('Data_Functor_Costar_distributiveCostar')))['distribute'])($dictFunctor_0)))((($dictFunctor_0)['map'])($f_1));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Functor_Costar_distributiveCostar'])['distribute'])($dictFunctor_0)))((($dictFunctor_0)['map'])($f_1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -273,14 +294,16 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(), "Functor0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Functor_Costar_functorCostar'] ?? \PhpursThunks::eval('Data_Functor_Costar_functorCostar'));
+  $__res = $GLOBALS['Data_Functor_Costar_functorCostar'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Costar_closedCostar'] = function() { $v = function($dictFunctor_0 = null) {
+}];
+
+// Data_Functor_Costar_closedCostar
+$GLOBALS['Data_Functor_Costar_closedCostar'] = function($dictFunctor_0 = null) {
   $__num = \func_num_args();
-  $profunctorCostar1_1_0 = (($GLOBALS['Data_Functor_Costar_profunctorCostar'] ?? \PhpursThunks::eval('Data_Functor_Costar_profunctorCostar')))($dictFunctor_0);
+  $profunctorCostar1_1_0 = ($GLOBALS['Data_Functor_Costar_profunctorCostar'])($dictFunctor_0);
   $__res = ["closed" => (function() use ($dictFunctor_0) {
   $__fn = function($v_2 = null, $g_3 = null, $x_4 = null) use ($dictFunctor_0, &$__fn) {
   $__num = \func_num_args();
@@ -309,10 +332,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Costar_categoryCostar'] = function() { $v = function($dictComonad_0 = null) {
+};
+
+// Data_Functor_Costar_categoryCostar
+$GLOBALS['Data_Functor_Costar_categoryCostar'] = function($dictComonad_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictComonad_0)['Extend0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_1_0 = (($dictComonad_0)['Extend0'])($GLOBALS['Prim_undefined']);
   $semigroupoidCostar1_2_1 = ["compose" => (function() use ($__local_var_1_0) {
   $__fn = function($v_2 = null, $v1_3 = null, $w_4 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -336,8 +361,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Costar_bifunctorCostar'] = function() { $v = function($dictContravariant_0 = null) {
+};
+
+// Data_Functor_Costar_bifunctorCostar
+$GLOBALS['Data_Functor_Costar_bifunctorCostar'] = function($dictContravariant_0 = null) {
   $__num = \func_num_args();
   $__res = ["bimap" => (function() use ($dictContravariant_0) {
   $__fn = function($f_1 = null, $g_2 = null, $v_3 = null) use ($dictContravariant_0, &$__fn) {
@@ -345,7 +372,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($g_2))($v_3)))((($dictContravariant_0)['cmap'])($f_1));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($g_2))($v_3)))((($dictContravariant_0)['cmap'])($f_1));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -355,8 +382,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Costar_applyCostar'] = function() { $v = ["apply" => (function() {
+};
+
+// Data_Functor_Costar_applyCostar
+$GLOBALS['Data_Functor_Costar_applyCostar'] = ["apply" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null, $a_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -370,12 +399,14 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(), "Functor0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Functor_Costar_functorCostar'] ?? \PhpursThunks::eval('Data_Functor_Costar_functorCostar'));
+  $__res = $GLOBALS['Data_Functor_Costar_functorCostar'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Costar_bindCostar'] = function() { $v = ["bind" => (function() {
+}];
+
+// Data_Functor_Costar_bindCostar
+$GLOBALS['Data_Functor_Costar_bindCostar'] = ["bind" => (function() {
   $__fn = function($v_0 = null, $f_1 = null, $x_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -389,12 +420,14 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(), "Apply0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Functor_Costar_applyCostar'] ?? \PhpursThunks::eval('Data_Functor_Costar_applyCostar'));
+  $__res = $GLOBALS['Data_Functor_Costar_applyCostar'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Costar_applicativeCostar'] = function() { $v = ["pure" => (function() {
+}];
+
+// Data_Functor_Costar_applicativeCostar
+$GLOBALS['Data_Functor_Costar_applicativeCostar'] = ["pure" => (function() {
   $__fn = function($a_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -408,40 +441,24 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__fn;
 })(), "Apply0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Functor_Costar_applyCostar'] ?? \PhpursThunks::eval('Data_Functor_Costar_applyCostar'));
+  $__res = $GLOBALS['Data_Functor_Costar_applyCostar'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Functor_Costar_monadCostar'] = function() { $v = ["Applicative0" => function($dollar__unused_0 = null) {
+}];
+
+// Data_Functor_Costar_monadCostar
+$GLOBALS['Data_Functor_Costar_monadCostar'] = ["Applicative0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Functor_Costar_applicativeCostar'] ?? \PhpursThunks::eval('Data_Functor_Costar_applicativeCostar'));
+  $__res = $GLOBALS['Data_Functor_Costar_applicativeCostar'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bind1" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Functor_Costar_bindCostar'] ?? \PhpursThunks::eval('Data_Functor_Costar_bindCostar'));
+  $__res = $GLOBALS['Data_Functor_Costar_bindCostar'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}];
 

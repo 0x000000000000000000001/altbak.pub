@@ -94,13 +94,22 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Number_Format_clamp'] = function() { $v = (function() {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+$GLOBALS['Data_Number_Format_toExponentialNative'] = new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Number_Format_toFixedNative'] = new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Number_Format_toPrecisionNative'] = new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Number_Format_toString'] = new class { public function __invoke(...$args) { return $this; } };
+
+
+// Data_Number_Format_clamp
+$GLOBALS['Data_Number_Format_clamp'] = (function() {
   $__fn = function($low_0 = null, $hi_1 = null, $x_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $v_3_0 = (((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))['compare'])($low_0))($x_2);
+  $v_3_0 = ((($GLOBALS['Data_Ord_ordInt'])['compare'])($low_0))($x_2);
   $__t1 = null;;
   if ((is_object($v_3_0) && (($v_3_0)->{'tag'} === "LT"))) {
 $__t1 = $x_2;
@@ -118,7 +127,7 @@ goto end_branch_1;;
   $__t1 = null;
   end_branch_1:;
   $__local_var_4_1 = $__t1;
-  $v_5_3 = (((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))['compare'])($hi_1))($__local_var_4_1);
+  $v_5_3 = ((($GLOBALS['Data_Ord_ordInt'])['compare'])($hi_1))($__local_var_4_1);
   $__t4 = null;;
   if ((is_object($v_5_3) && (($v_5_3)->{'tag'} === "LT"))) {
 $__t4 = $hi_1;
@@ -141,41 +150,49 @@ goto end_branch_4;;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Data_Number_Format_Precision'] = function() { $v = function($value0 = null) {
+})();
+
+// Data_Number_Format_Precision
+$GLOBALS['Data_Number_Format_Precision'] = function($value0 = null) {
   $__num = \func_num_args();
   $__res = new Phpurs_Data1("Precision", $value0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Number_Format_Fixed'] = function() { $v = function($value0 = null) {
+};
+
+// Data_Number_Format_Fixed
+$GLOBALS['Data_Number_Format_Fixed'] = function($value0 = null) {
   $__num = \func_num_args();
   $__res = new Phpurs_Data1("Fixed", $value0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Number_Format_Exponential'] = function() { $v = function($value0 = null) {
+};
+
+// Data_Number_Format_Exponential
+$GLOBALS['Data_Number_Format_Exponential'] = function($value0 = null) {
   $__num = \func_num_args();
   $__res = new Phpurs_Data1("Exponential", $value0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Number_Format_toStringWith'] = function() { $v = function($v_0 = null) {
+};
+
+// Data_Number_Format_toStringWith
+$GLOBALS['Data_Number_Format_toStringWith'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object($v_0) && (($v_0)->{'tag'} === "Precision"))) {
-$__t0 = (($GLOBALS['Data_Number_Format_toPrecisionNative'] ?? \PhpursThunks::eval('Data_Number_Format_toPrecisionNative')))(($v_0)->{'value0'});
+$__t0 = ($GLOBALS['Data_Number_Format_toPrecisionNative'])(($v_0)->{'value0'});
 goto end_branch_0;;
 };
   if ((is_object($v_0) && (($v_0)->{'tag'} === "Fixed"))) {
-$__t0 = (($GLOBALS['Data_Number_Format_toFixedNative'] ?? \PhpursThunks::eval('Data_Number_Format_toFixedNative')))(($v_0)->{'value0'});
+$__t0 = ($GLOBALS['Data_Number_Format_toFixedNative'])(($v_0)->{'value0'});
 goto end_branch_0;;
 };
   if ((is_object($v_0) && (($v_0)->{'tag'} === "Exponential"))) {
-$__t0 = (($GLOBALS['Data_Number_Format_toExponentialNative'] ?? \PhpursThunks::eval('Data_Number_Format_toExponentialNative')))(($v_0)->{'value0'});
+$__t0 = ($GLOBALS['Data_Number_Format_toExponentialNative'])(($v_0)->{'value0'});
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -185,18 +202,14 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Number_Format_precision'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Number_Format_Precision'] ?? \PhpursThunks::eval('Data_Number_Format_Precision'))))(((($GLOBALS['Data_Number_Format_clamp'] ?? \PhpursThunks::eval('Data_Number_Format_clamp')))(1))(21)); return $v; };
-\PhpursThunks::$thunks['Data_Number_Format_fixed'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Number_Format_Fixed'] ?? \PhpursThunks::eval('Data_Number_Format_Fixed'))))(((($GLOBALS['Data_Number_Format_clamp'] ?? \PhpursThunks::eval('Data_Number_Format_clamp')))(0))(20)); return $v; };
-\PhpursThunks::$thunks['Data_Number_Format_exponential'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Number_Format_Exponential'] ?? \PhpursThunks::eval('Data_Number_Format_Exponential'))))(((($GLOBALS['Data_Number_Format_clamp'] ?? \PhpursThunks::eval('Data_Number_Format_clamp')))(0))(20)); return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+};
 
+// Data_Number_Format_precision
+$GLOBALS['Data_Number_Format_precision'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Number_Format_Precision']))((($GLOBALS['Data_Number_Format_clamp'])(1))(21));
 
+// Data_Number_Format_fixed
+$GLOBALS['Data_Number_Format_fixed'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Number_Format_Fixed']))((($GLOBALS['Data_Number_Format_clamp'])(0))(20));
 
-
-
-
-
-
-
+// Data_Number_Format_exponential
+$GLOBALS['Data_Number_Format_exponential'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Number_Format_Exponential']))((($GLOBALS['Data_Number_Format_clamp'])(0))(20));
 

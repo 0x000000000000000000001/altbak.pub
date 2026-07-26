@@ -93,29 +93,42 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Monoid_Generic_genericMonoidNoArguments'] = function() { $v = ["genericMempty__prime__" => new Phpurs_Data0("NoArguments")]; return $v; };
-\PhpursThunks::$thunks['Data_Monoid_Generic_genericMonoidArgument'] = function() { $v = function($dictMonoid_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Monoid_Generic_genericMonoidNoArguments
+$GLOBALS['Data_Monoid_Generic_genericMonoidNoArguments'] = ["genericMempty__prime__" => new Phpurs_Data0("NoArguments")];
+
+// Data_Monoid_Generic_genericMonoidArgument
+$GLOBALS['Data_Monoid_Generic_genericMonoidArgument'] = function($dictMonoid_0 = null) {
   $__num = \func_num_args();
   $__res = ["genericMempty__prime__" => ($dictMonoid_0)['mempty']];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Monoid_Generic_genericMempty__prime__'] = function() { $v = function($dict_0 = null) {
+};
+
+// Data_Monoid_Generic_genericMempty'
+$GLOBALS['Data_Monoid_Generic_genericMempty__prime__'] = function($dict_0 = null) {
   $__num = \func_num_args();
   $__res = ($dict_0)['genericMempty__prime__'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Monoid_Generic_genericMonoidConstructor'] = function() { $v = function($dictGenericMonoid_0 = null) {
+};
+
+// Data_Monoid_Generic_genericMonoidConstructor
+$GLOBALS['Data_Monoid_Generic_genericMonoidConstructor'] = function($dictGenericMonoid_0 = null) {
   $__num = \func_num_args();
   $__res = ["genericMempty__prime__" => ($dictGenericMonoid_0)['genericMempty__prime__']];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Monoid_Generic_genericMonoidProduct'] = function() { $v = function($dictGenericMonoid_0 = null) {
+};
+
+// Data_Monoid_Generic_genericMonoidProduct
+$GLOBALS['Data_Monoid_Generic_genericMonoidProduct'] = function($dictGenericMonoid_0 = null) {
   $__num = \func_num_args();
   $genericMempty__prime__1_1_0 = ($dictGenericMonoid_0)['genericMempty__prime__'];
   $__res = function($dictGenericMonoid1_2 = null) use ($genericMempty__prime__1_1_0) {
@@ -128,8 +141,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Monoid_Generic_genericMempty'] = function() { $v = (function() {
+};
+
+// Data_Monoid_Generic_genericMempty
+$GLOBALS['Data_Monoid_Generic_genericMempty'] = (function() {
   $__fn = function($dictGeneric_0 = null, $dictGenericMonoid_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -141,13 +156,5 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
+})();
 

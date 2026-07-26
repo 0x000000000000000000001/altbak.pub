@@ -105,14 +105,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Control_Comonad_Env_Trans_EnvT'] = function() { $v = function($x_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Control_Comonad_Env_Trans_EnvT
+$GLOBALS['Control_Comonad_Env_Trans_EnvT'] = function($x_0 = null) {
   $__num = \func_num_args();
   $__res = $x_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Env_Trans_withEnvT'] = function() { $v = (function() {
+};
+
+// Control_Comonad_Env_Trans_withEnvT
+$GLOBALS['Control_Comonad_Env_Trans_withEnvT'] = (function() {
   $__fn = function($f_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -124,22 +131,28 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Env_Trans_runEnvT'] = function() { $v = function($v_0 = null) {
+})();
+
+// Control_Comonad_Env_Trans_runEnvT
+$GLOBALS['Control_Comonad_Env_Trans_runEnvT'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__res = $v_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Env_Trans_newtypeEnvT'] = function() { $v = ["Coercible0" => function($dollar__unused_0 = null) {
+};
+
+// Control_Comonad_Env_Trans_newtypeEnvT
+$GLOBALS['Control_Comonad_Env_Trans_newtypeEnvT'] = ["Coercible0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'));
+  $__res = $GLOBALS['Prim_undefined'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Env_Trans_mapEnvT'] = function() { $v = (function() {
+}];
+
+// Control_Comonad_Env_Trans_mapEnvT
+$GLOBALS['Control_Comonad_Env_Trans_mapEnvT'] = (function() {
   $__fn = function($f_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -151,8 +164,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(); return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Env_Trans_functorEnvT'] = function() { $v = function($dictFunctor_0 = null) {
+})();
+
+// Control_Comonad_Env_Trans_functorEnvT
+$GLOBALS['Control_Comonad_Env_Trans_functorEnvT'] = function($dictFunctor_0 = null) {
   $__num = \func_num_args();
   $__res = ["map" => (function() use ($dictFunctor_0) {
   $__fn = function($f_1 = null, $v_2 = null) use ($dictFunctor_0, &$__fn) {
@@ -170,10 +185,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Env_Trans_functorWithIndexEnvT'] = function() { $v = function($dictFunctorWithIndex_0 = null) {
+};
+
+// Control_Comonad_Env_Trans_functorWithIndexEnvT
+$GLOBALS['Control_Comonad_Env_Trans_functorWithIndexEnvT'] = function($dictFunctorWithIndex_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictFunctorWithIndex_0)['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_1_0 = (($dictFunctorWithIndex_0)['Functor0'])($GLOBALS['Prim_undefined']);
   $functorEnvT1_2_1 = ["map" => (function() use ($__local_var_1_0) {
   $__fn = function($f_2 = null, $v_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -209,8 +226,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Env_Trans_foldableEnvT'] = function() { $v = function($dictFoldable_0 = null) {
+};
+
+// Control_Comonad_Env_Trans_foldableEnvT
+$GLOBALS['Control_Comonad_Env_Trans_foldableEnvT'] = function($dictFoldable_0 = null) {
   $__num = \func_num_args();
   $__res = ["foldl" => (function() use ($dictFoldable_0) {
   $__fn = function($fn_1 = null, $a_2 = null, $v_3 = null) use ($dictFoldable_0, &$__fn) {
@@ -259,10 +278,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Env_Trans_foldableWithIndexEnvT'] = function() { $v = function($dictFoldableWithIndex_0 = null) {
+};
+
+// Control_Comonad_Env_Trans_foldableWithIndexEnvT
+$GLOBALS['Control_Comonad_Env_Trans_foldableWithIndexEnvT'] = function($dictFoldableWithIndex_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictFoldableWithIndex_0)['Foldable0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_1_0 = (($dictFoldableWithIndex_0)['Foldable0'])($GLOBALS['Prim_undefined']);
   $foldableEnvT1_2_1 = ["foldl" => (function() use ($__local_var_1_0) {
   $__fn = function($fn_2 = null, $a_3 = null, $v_4 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -360,10 +381,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Env_Trans_traversableEnvT'] = function() { $v = function($dictTraversable_0 = null) {
+};
+
+// Control_Comonad_Env_Trans_traversableEnvT
+$GLOBALS['Control_Comonad_Env_Trans_traversableEnvT'] = function($dictTraversable_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictTraversable_0)['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_1_0 = (($dictTraversable_0)['Functor0'])($GLOBALS['Prim_undefined']);
   $functorEnvT1_2_1 = ["map" => (function() use ($__local_var_1_0) {
   $__fn = function($f_2 = null, $v_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -377,7 +400,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   };
   return $__fn;
 })()];
-  $__local_var_3_2 = (($dictTraversable_0)['Foldable1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $__local_var_3_2 = (($dictTraversable_0)['Foldable1'])($GLOBALS['Prim_undefined']);
   $foldableEnvT1_4_3 = ["foldl" => (function() use ($__local_var_3_2) {
   $__fn = function($fn_4 = null, $a_5 = null, $v_6 = null) use ($__local_var_3_2, &$__fn) {
   $__num = \func_num_args();
@@ -427,7 +450,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   $sequence1_6_5 = (($dictTraversable_0)['sequence'])($dictApplicative_5);
   $__res = function($v_7 = null) use ($dictApplicative_5, $sequence1_6_5) {
   $__num = \func_num_args();
-  $__res = ((((((($dictApplicative_5)['Apply0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['map'])(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Control_Comonad_Env_Trans_EnvT'] ?? \PhpursThunks::eval('Control_Comonad_Env_Trans_EnvT'))))((($GLOBALS['Data_Tuple_Tuple'] ?? \PhpursThunks::eval('Data_Tuple_Tuple')))(($v_7)->{'value0'}))))(($sequence1_6_5)(($v_7)->{'value1'}));
+  $__res = ((((((($dictApplicative_5)['Apply0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']))['map'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Comonad_Env_Trans_EnvT']))(($GLOBALS['Data_Tuple_Tuple'])(($v_7)->{'value0'}))))(($sequence1_6_5)(($v_7)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -444,7 +467,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((((($dictApplicative_5)['Apply0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['map'])(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Control_Comonad_Env_Trans_EnvT'] ?? \PhpursThunks::eval('Control_Comonad_Env_Trans_EnvT'))))((($GLOBALS['Data_Tuple_Tuple'] ?? \PhpursThunks::eval('Data_Tuple_Tuple')))(($v_8)->{'value0'}))))((($traverse1_6_6)($f_7))(($v_8)->{'value1'}));
+  $__res = ((((((($dictApplicative_5)['Apply0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']))['map'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Comonad_Env_Trans_EnvT']))(($GLOBALS['Data_Tuple_Tuple'])(($v_8)->{'value0'}))))((($traverse1_6_6)($f_7))(($v_8)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -470,12 +493,14 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Env_Trans_traversableWithIndexEnvT'] = function() { $v = function($dictTraversableWithIndex_0 = null) {
+};
+
+// Control_Comonad_Env_Trans_traversableWithIndexEnvT
+$GLOBALS['Control_Comonad_Env_Trans_traversableWithIndexEnvT'] = function($dictTraversableWithIndex_0 = null) {
   $__num = \func_num_args();
-  $functorWithIndexEnvT1_1_0 = (($GLOBALS['Control_Comonad_Env_Trans_functorWithIndexEnvT'] ?? \PhpursThunks::eval('Control_Comonad_Env_Trans_functorWithIndexEnvT')))((($dictTraversableWithIndex_0)['FunctorWithIndex0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $foldableWithIndexEnvT1_2_1 = (($GLOBALS['Control_Comonad_Env_Trans_foldableWithIndexEnvT'] ?? \PhpursThunks::eval('Control_Comonad_Env_Trans_foldableWithIndexEnvT')))((($dictTraversableWithIndex_0)['FoldableWithIndex1'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
-  $traversableEnvT1_3_2 = (($GLOBALS['Control_Comonad_Env_Trans_traversableEnvT'] ?? \PhpursThunks::eval('Control_Comonad_Env_Trans_traversableEnvT')))((($dictTraversableWithIndex_0)['Traversable2'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $functorWithIndexEnvT1_1_0 = ($GLOBALS['Control_Comonad_Env_Trans_functorWithIndexEnvT'])((($dictTraversableWithIndex_0)['FunctorWithIndex0'])($GLOBALS['Prim_undefined']));
+  $foldableWithIndexEnvT1_2_1 = ($GLOBALS['Control_Comonad_Env_Trans_foldableWithIndexEnvT'])((($dictTraversableWithIndex_0)['FoldableWithIndex1'])($GLOBALS['Prim_undefined']));
+  $traversableEnvT1_3_2 = ($GLOBALS['Control_Comonad_Env_Trans_traversableEnvT'])((($dictTraversableWithIndex_0)['Traversable2'])($GLOBALS['Prim_undefined']));
   $__res = ["traverseWithIndex" => function($dictApplicative_4 = null) use ($dictTraversableWithIndex_0) {
   $__num = \func_num_args();
   $traverseWithIndex1_5_3 = (($dictTraversableWithIndex_0)['traverseWithIndex'])($dictApplicative_4);
@@ -485,7 +510,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((((($dictApplicative_4)['Apply0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))['map'])(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Control_Comonad_Env_Trans_EnvT'] ?? \PhpursThunks::eval('Control_Comonad_Env_Trans_EnvT'))))((($GLOBALS['Data_Tuple_Tuple'] ?? \PhpursThunks::eval('Data_Tuple_Tuple')))(($v_7)->{'value0'}))))((($traverseWithIndex1_5_3)($f_6))(($v_7)->{'value1'}));
+  $__res = ((((((($dictApplicative_4)['Apply0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']))['map'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Comonad_Env_Trans_EnvT']))(($GLOBALS['Data_Tuple_Tuple'])(($v_7)->{'value0'}))))((($traverseWithIndex1_5_3)($f_6))(($v_7)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -517,10 +542,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Env_Trans_extendEnvT'] = function() { $v = function($dictExtend_0 = null) {
+};
+
+// Control_Comonad_Env_Trans_extendEnvT
+$GLOBALS['Control_Comonad_Env_Trans_extendEnvT'] = function($dictExtend_0 = null) {
   $__num = \func_num_args();
-  $Functor0_1_0 = (($dictExtend_0)['Functor0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $Functor0_1_0 = (($dictExtend_0)['Functor0'])($GLOBALS['Prim_undefined']);
   $functorEnvT1_2_1 = ["map" => (function() use ($Functor0_1_0) {
   $__fn = function($f_2 = null, $v_3 = null) use ($Functor0_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -540,7 +567,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", ($v_4)->{'value0'}, ((($Functor0_1_0)['map'])($f_3))(((($dictExtend_0)['extend'])(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Control_Comonad_Env_Trans_EnvT'] ?? \PhpursThunks::eval('Control_Comonad_Env_Trans_EnvT'))))((($GLOBALS['Data_Tuple_Tuple'] ?? \PhpursThunks::eval('Data_Tuple_Tuple')))(($v_4)->{'value0'}))))(($v_4)->{'value1'})));
+  $__res = new Phpurs_Data2("Tuple", ($v_4)->{'value0'}, ((($Functor0_1_0)['map'])($f_3))(((($dictExtend_0)['extend'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Comonad_Env_Trans_EnvT']))(($GLOBALS['Data_Tuple_Tuple'])(($v_4)->{'value0'}))))(($v_4)->{'value1'})));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -556,8 +583,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Env_Trans_comonadTransEnvT'] = function() { $v = ["lower" => (function() {
+};
+
+// Control_Comonad_Env_Trans_comonadTransEnvT
+$GLOBALS['Control_Comonad_Env_Trans_comonadTransEnvT'] = ["lower" => (function() {
   $__fn = function($dictComonad_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -569,10 +598,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Control_Comonad_Env_Trans_comonadEnvT'] = function() { $v = function($dictComonad_0 = null) {
+})()];
+
+// Control_Comonad_Env_Trans_comonadEnvT
+$GLOBALS['Control_Comonad_Env_Trans_comonadEnvT'] = function($dictComonad_0 = null) {
   $__num = \func_num_args();
-  $extendEnvT1_1_0 = (($GLOBALS['Control_Comonad_Env_Trans_extendEnvT'] ?? \PhpursThunks::eval('Control_Comonad_Env_Trans_extendEnvT')))((($dictComonad_0)['Extend0'])(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))));
+  $extendEnvT1_1_0 = ($GLOBALS['Control_Comonad_Env_Trans_extendEnvT'])((($dictComonad_0)['Extend0'])($GLOBALS['Prim_undefined']));
   $__res = ["extract" => function($v_2 = null) use ($dictComonad_0) {
   $__num = \func_num_args();
   $__res = (($dictComonad_0)['extract'])(($v_2)->{'value1'});
@@ -589,21 +620,5 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+};
 

@@ -7,7 +7,6 @@ import (
 	pkg_Data_Tuple "gopurs/output/Data.Tuple"
 	pkg_Control_Monad_Gen "gopurs/output/Control.Monad.Gen"
 	pkg_Data_NonEmpty "gopurs/output/Data.NonEmpty"
-	pkg_Control_Semigroupoid "gopurs/output/Control.Semigroupoid"
 	pkg_Data_Maybe "gopurs/output/Data.Maybe"
 	pkg_Data_Identity "gopurs/output/Data.Identity"
 	pkg_Data_Either "gopurs/output/Data.Either"
@@ -159,9 +158,11 @@ return gopurs_runtime.Func(func(dictUnfoldable_4 gopurs_runtime.Value) gopurs_ru
 unfoldable2_5_2 := gopurs_runtime.Apply(unfoldable1_3_1, dictUnfoldable_4)
 _ = unfoldable2_5_2
 return gopurs_runtime.Func(func(gen_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Apply0_2_0, "apply"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Apply0_2_0, "Functor0"), gopurs_runtime.Value{}), "map"), pkg_Data_NonEmpty.Get_NonEmpty(), gen_6), gopurs_runtime.Apply2(((*gopurs_runtime.RecordData5)(dictMonadGen_1.UnsafePtr)).V3, gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), gopurs_runtime.Apply(Get_max(), gopurs_runtime.Int(0)), gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Int((v_7.IntVal) - (1))
-})), gopurs_runtime.Apply(unfoldable2_5_2, gen_6)))
+__local_var_7_3 := gopurs_runtime.Apply(Get_max(), gopurs_runtime.Int(0))
+_ = __local_var_7_3
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Apply0_2_0, "apply"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Apply0_2_0, "Functor0"), gopurs_runtime.Value{}), "map"), pkg_Data_NonEmpty.Get_NonEmpty(), gen_6), gopurs_runtime.Apply2(((*gopurs_runtime.RecordData5)(dictMonadGen_1.UnsafePtr)).V3, gopurs_runtime.Func(func(x_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_7_3, gopurs_runtime.Int((x_8.IntVal) - (1)))
+}), gopurs_runtime.Apply(unfoldable2_5_2, gen_6)))
 })
 })
 }

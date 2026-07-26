@@ -5,10 +5,9 @@ import (
 	sync "sync"
 	pkg_Data_Ord "gopurs/output/Data.Ord"
 	pkg_Data_Maybe "gopurs/output/Data.Maybe"
-	pkg_Control_Semigroupoid "gopurs/output/Control.Semigroupoid"
-	pkg_Data_Number "gopurs/output/Data.Number"
 	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
 	pkg_Data_Eq "gopurs/output/Data.Eq"
+	pkg_Data_Number "gopurs/output/Data.Number"
 	pkg_Data_Bounded "gopurs/output/Data.Bounded"
 	unsafe "unsafe"
 )
@@ -177,7 +176,9 @@ var cache_round gopurs_runtime.Value
 var once_round sync.Once
 func Get_round() gopurs_runtime.Value {
 	once_round.Do(func() {
-		cache_round = gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), Get_unsafeClamp(), pkg_Data_Number.Get_round())
+		cache_round = gopurs_runtime.Func(func(x_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_round(x_0_box.FloatVal())
+})
 	})
 	return cache_round
 }
@@ -186,7 +187,9 @@ var cache_trunc gopurs_runtime.Value
 var once_trunc sync.Once
 func Get_trunc() gopurs_runtime.Value {
 	once_trunc.Do(func() {
-		cache_trunc = gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), Get_unsafeClamp(), pkg_Data_Number.Get_trunc())
+		cache_trunc = gopurs_runtime.Func(func(x_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_trunc(x_0_box.FloatVal())
+})
 	})
 	return cache_trunc
 }
@@ -195,7 +198,9 @@ var cache_floor gopurs_runtime.Value
 var once_floor sync.Once
 func Get_floor() gopurs_runtime.Value {
 	once_floor.Do(func() {
-		cache_floor = gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), Get_unsafeClamp(), pkg_Data_Number.Get_floor())
+		cache_floor = gopurs_runtime.Func(func(x_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_floor(x_0_box.FloatVal())
+})
 	})
 	return cache_floor
 }
@@ -426,7 +431,9 @@ var cache_ceil gopurs_runtime.Value
 var once_ceil sync.Once
 func Get_ceil() gopurs_runtime.Value {
 	once_ceil.Do(func() {
-		cache_ceil = gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), Get_unsafeClamp(), pkg_Data_Number.Get_ceil())
+		cache_ceil = gopurs_runtime.Func(func(x_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_ceil(x_0_box.FloatVal())
+})
 	})
 	return cache_ceil
 }
@@ -553,6 +560,24 @@ end_branch_2:
 return __t2
 }
 
+func Call_round(x_0_loop float64) gopurs_runtime.Value {
+var x_0 float64 = x_0_loop
+_ = x_0
+return gopurs_runtime.Apply(Get_unsafeClamp(), gopurs_runtime.Apply(pkg_Data_Number.Get_round(), gopurs_runtime.Float(x_0)))
+}
+
+func Call_trunc(x_0_loop float64) gopurs_runtime.Value {
+var x_0 float64 = x_0_loop
+_ = x_0
+return gopurs_runtime.Apply(Get_unsafeClamp(), gopurs_runtime.Apply(pkg_Data_Number.Get_trunc(), gopurs_runtime.Float(x_0)))
+}
+
+func Call_floor(x_0_loop float64) gopurs_runtime.Value {
+var x_0 float64 = x_0_loop
+_ = x_0
+return gopurs_runtime.Apply(Get_unsafeClamp(), gopurs_runtime.Apply(pkg_Data_Number.Get_floor(), gopurs_runtime.Float(x_0)))
+}
+
 func Call_even(x_0_loop int64) bool {
 var x_0 int64 = x_0_loop
 _ = x_0
@@ -576,6 +601,12 @@ __t0 = gopurs_runtime.Value{Type: 9, IntVal: 658452902, UnsafePtr: nil}
 }
 end_branch_0:
 return __t0
+}
+
+func Call_ceil(x_0_loop float64) gopurs_runtime.Value {
+var x_0 float64 = x_0_loop
+_ = x_0
+return gopurs_runtime.Apply(Get_unsafeClamp(), gopurs_runtime.Apply(pkg_Data_Number.Get_ceil(), gopurs_runtime.Float(x_0)))
 }
 
 func Get_fromNumberImpl() gopurs_runtime.Value {

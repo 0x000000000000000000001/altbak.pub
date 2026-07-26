@@ -352,24 +352,24 @@ type Constructor_Tuple[T_a any, T_b any] struct {
 }
 
 
-func Call_uncurry(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_uncurry(f_0_loop gopurs_runtime.Value, v_1_loop *Constructor_Tuple) gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
-var v_1 gopurs_runtime.Value = v_1_loop
+var v_1 *Constructor_Tuple = v_1_loop
 _ = v_1
-return gopurs_runtime.Apply2(f_0, (*Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V0, (*Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V1)
+return gopurs_runtime.Apply2(f_0, (v_1).V0, (v_1).V1)
 }
 
-func Call_swap(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var v_0 gopurs_runtime.Value = v_0_loop
+func Call_swap(v_0_loop *Constructor_Tuple) gopurs_runtime.Value {
+var v_0 *Constructor_Tuple = v_0_loop
 _ = v_0
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{(*Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_0.UnsafePtr).V1, (*Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_0.UnsafePtr).V0})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{(v_0).V1, (v_0).V0})}
 }
 
-func Call_snd(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var v_0 gopurs_runtime.Value = v_0_loop
+func Call_snd(v_0_loop *Constructor_Tuple) gopurs_runtime.Value {
+var v_0 *Constructor_Tuple = v_0_loop
 _ = v_0
-return (*Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_0.UnsafePtr).V1
+return (v_0).V1
 }
 
 func Call_showTuple(dictShow_0_loop gopurs_runtime.Value, dictShow1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -476,10 +476,10 @@ return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Point
 })
 }
 
-func Call_fst(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var v_0 gopurs_runtime.Value = v_0_loop
+func Call_fst(v_0_loop *Constructor_Tuple) gopurs_runtime.Value {
+var v_0 *Constructor_Tuple = v_0_loop
 _ = v_0
-return (*Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_0.UnsafePtr).V0
+return (v_0).V0
 }
 
 func Call_lazyTuple(dictLazy_0_loop gopurs_runtime.Value, dictLazy1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {

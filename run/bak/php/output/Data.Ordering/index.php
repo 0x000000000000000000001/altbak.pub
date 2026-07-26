@@ -94,10 +94,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Ordering_LT'] = function() { $v = ($GLOBALS['__phpurs_data0_LT'] ??= new Phpurs_Data0("LT")); return $v; };
-\PhpursThunks::$thunks['Data_Ordering_GT'] = function() { $v = ($GLOBALS['__phpurs_data0_GT'] ??= new Phpurs_Data0("GT")); return $v; };
-\PhpursThunks::$thunks['Data_Ordering_EQ'] = function() { $v = ($GLOBALS['__phpurs_data0_EQ'] ??= new Phpurs_Data0("EQ")); return $v; };
-\PhpursThunks::$thunks['Data_Ordering_showOrdering'] = function() { $v = ["show" => function($v_0 = null) {
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+// Data_Ordering_LT
+$GLOBALS['Data_Ordering_LT'] = ($GLOBALS['__phpurs_data0_LT'] ??= new Phpurs_Data0("LT"));
+
+// Data_Ordering_GT
+$GLOBALS['Data_Ordering_GT'] = ($GLOBALS['__phpurs_data0_GT'] ??= new Phpurs_Data0("GT"));
+
+// Data_Ordering_EQ
+$GLOBALS['Data_Ordering_EQ'] = ($GLOBALS['__phpurs_data0_EQ'] ??= new Phpurs_Data0("EQ"));
+
+// Data_Ordering_showOrdering
+$GLOBALS['Data_Ordering_showOrdering'] = ["show" => function($v_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object($v_0) && (($v_0)->{'tag'} === "LT"))) {
@@ -119,8 +130,10 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
-\PhpursThunks::$thunks['Data_Ordering_semigroupOrdering'] = function() { $v = ["append" => (function() {
+}];
+
+// Data_Ordering_semigroupOrdering
+$GLOBALS['Data_Ordering_semigroupOrdering'] = ["append" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -148,8 +161,10 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-\PhpursThunks::$thunks['Data_Ordering_invert'] = function() { $v = function($v_0 = null) {
+})()];
+
+// Data_Ordering_invert
+$GLOBALS['Data_Ordering_invert'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object($v_0) && (($v_0)->{'tag'} === "GT"))) {
@@ -171,8 +186,10 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Ordering_eqOrdering'] = function() { $v = ["eq" => (function() {
+};
+
+// Data_Ordering_eqOrdering
+$GLOBALS['Data_Ordering_eqOrdering'] = ["eq" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -195,14 +212,5 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]; return $v; };
-$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
-
-
-
-
-
-
-
+})()];
 
