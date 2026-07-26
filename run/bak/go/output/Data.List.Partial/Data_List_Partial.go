@@ -59,7 +59,7 @@ _ = v_1
 var __t0 gopurs_runtime.Value
 {
 if (v_1.Type == 9 && v_1.IntVal == 1358893437) {
-__t0 = (*pkg_Data_List_Types.Constructor_Cons)(v_1.UnsafePtr).V1
+__t0 = (*pkg_Data_List_Types.Constructor_Cons[gopurs_runtime.Value])(v_1.UnsafePtr).V1
 goto end_branch_0
 } else {
 
@@ -85,9 +85,9 @@ var __t0 gopurs_runtime.Value
 if (v_1.Type == 9 && v_1.IntVal == 1358893437) {
 var __t1 gopurs_runtime.Value
 {
-var __t_tag_2 gopurs_runtime.Value = (*pkg_Data_List_Types.Constructor_Cons)(v_1.UnsafePtr).V1
+var __t_tag_2 gopurs_runtime.Value = (*pkg_Data_List_Types.Constructor_Cons[gopurs_runtime.Value])(v_1.UnsafePtr).V1
 if (__t_tag_2.Type == 9 && __t_tag_2.IntVal == 786377863) {
-__t1 = (*pkg_Data_List_Types.Constructor_Cons)(v_1.UnsafePtr).V0
+__t1 = (*pkg_Data_List_Types.Constructor_Cons[gopurs_runtime.Value])(v_1.UnsafePtr).V0
 goto end_branch_1
 } else {
 
@@ -95,7 +95,7 @@ goto end_branch_1
 }
 {
 _dollar__unused_0_loop = gopurs_runtime.Value{}
-v_1_loop = (*pkg_Data_List_Types.Constructor_Cons)(v_1.UnsafePtr).V1
+v_1_loop = (*pkg_Data_List_Types.Constructor_Cons[gopurs_runtime.Value])(v_1.UnsafePtr).V1
 continue last
 __t1 = gopurs_runtime.Value{}
 }
@@ -127,7 +127,7 @@ var __t0 gopurs_runtime.Value
 if (v_1.Type == 9 && v_1.IntVal == 1358893437) {
 var __t1 gopurs_runtime.Value
 {
-var __t_tag_2 gopurs_runtime.Value = (*pkg_Data_List_Types.Constructor_Cons)(v_1.UnsafePtr).V1
+var __t_tag_2 gopurs_runtime.Value = (*pkg_Data_List_Types.Constructor_Cons[gopurs_runtime.Value])(v_1.UnsafePtr).V1
 if (__t_tag_2.Type == 9 && __t_tag_2.IntVal == 786377863) {
 __t1 = gopurs_runtime.Value{Type: 9, IntVal: 786377863, UnsafePtr: nil}
 goto end_branch_1
@@ -136,7 +136,7 @@ goto end_branch_1
 }
 }
 {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(&pkg_Data_List_Types.Constructor_Cons{(*pkg_Data_List_Types.Constructor_Cons)(v_1.UnsafePtr).V0, gopurs_runtime.Apply2(Get_init_(), gopurs_runtime.Value{}, (*pkg_Data_List_Types.Constructor_Cons)(v_1.UnsafePtr).V1)})}
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(&pkg_Data_List_Types.Constructor_Cons[gopurs_runtime.Value]{(*pkg_Data_List_Types.Constructor_Cons[gopurs_runtime.Value])(v_1.UnsafePtr).V0, gopurs_runtime.Apply2(Get_init_(), gopurs_runtime.Value{}, (*pkg_Data_List_Types.Constructor_Cons[gopurs_runtime.Value])(v_1.UnsafePtr).V1)})}
 }
 end_branch_1:
 __t0 = __t1
@@ -161,7 +161,7 @@ _ = v_1
 var __t0 gopurs_runtime.Value
 {
 if (v_1.Type == 9 && v_1.IntVal == 1358893437) {
-__t0 = (*pkg_Data_List_Types.Constructor_Cons)(v_1.UnsafePtr).V0
+__t0 = (*pkg_Data_List_Types.Constructor_Cons[gopurs_runtime.Value])(v_1.UnsafePtr).V0
 goto end_branch_0
 } else {
 

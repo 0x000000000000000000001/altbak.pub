@@ -3,6 +3,7 @@ package Data_Profunctor
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
+	pkg_Control_Semigroupoid "gopurs/output/Control.Semigroupoid"
 	pkg_Unsafe_Coerce "gopurs/output/Unsafe.Coerce"
 )
 
@@ -21,8 +22,8 @@ var cache_profunctorFn gopurs_runtime.Value
 var once_profunctorFn sync.Once
 func Get_profunctorFn() gopurs_runtime.Value {
 	once_profunctorFn.Do(func() {
-		cache_profunctorFn = gopurs_runtime.RecordDict1("dimap", gopurs_runtime.Func4(func(a2b_0 gopurs_runtime.Value, c2d_1 gopurs_runtime.Value, b2c_2 gopurs_runtime.Value, x_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(c2d_1, gopurs_runtime.Apply(b2c_2, gopurs_runtime.Apply(a2b_0, x_3)))
+		cache_profunctorFn = gopurs_runtime.RecordDict1("dimap", gopurs_runtime.Func3(func(a2b_0 gopurs_runtime.Value, c2d_1 gopurs_runtime.Value, b2c_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), c2d_1, b2c_2), a2b_0)
 }))
 	})
 	return cache_profunctorFn

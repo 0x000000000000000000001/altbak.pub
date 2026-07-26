@@ -4,6 +4,7 @@ import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
 	pkg_Data_Divide "gopurs/output/Data.Divide"
+	pkg_Control_Semigroupoid "gopurs/output/Control.Semigroupoid"
 	pkg_Data_Either "gopurs/output/Data.Either"
 )
 
@@ -24,31 +25,31 @@ func Get_choosePredicate() gopurs_runtime.Value {
 	once_choosePredicate.Do(func() {
 		cache_choosePredicate = gopurs_runtime.RecordDict2("Divide0", "choose", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Divide.Get_dividePredicate()
-}), gopurs_runtime.Func4(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, v1_2 gopurs_runtime.Value, x_3 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_4_0 := gopurs_runtime.Apply(f_0, x_3)
-_ = __local_var_4_0
-var __t1 gopurs_runtime.Value
+}), gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), gopurs_runtime.Func(func(v2_3 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t0 gopurs_runtime.Value
 {
-if (__local_var_4_0.Type == 9 && __local_var_4_0.IntVal == 3711209382) {
-__t1 = gopurs_runtime.Apply(v_1, (*pkg_Data_Either.Constructor_Left)(__local_var_4_0.UnsafePtr).V0)
-goto end_branch_1
+if (v2_3.Type == 9 && v2_3.IntVal == 3711209382) {
+__t0 = gopurs_runtime.Apply(v_1, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(v2_3.UnsafePtr).V0)
+goto end_branch_0
 } else {
 
 }
 }
 {
-if (__local_var_4_0.Type == 9 && __local_var_4_0.IntVal == 2465973597) {
-__t1 = gopurs_runtime.Apply(v1_2, (*pkg_Data_Either.Constructor_Right)(__local_var_4_0.UnsafePtr).V0)
-goto end_branch_1
+if (v2_3.Type == 9 && v2_3.IntVal == 2465973597) {
+__t0 = gopurs_runtime.Apply(v1_2, (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(v2_3.UnsafePtr).V0)
+goto end_branch_0
 } else {
 
 }
 }
 {
-__t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
-end_branch_1:
-return __t1
+end_branch_0:
+return __t0
+}), f_0)
 }))
 	})
 	return cache_choosePredicate
@@ -82,7 +83,7 @@ _ = v3_6_2
 var __t3 gopurs_runtime.Value
 {
 if (v3_6_2.Type == 9 && v3_6_2.IntVal == 3711209382) {
-__t3 = gopurs_runtime.Apply2(v_1, (*pkg_Data_Either.Constructor_Left)(v2_5_0.UnsafePtr).V0, (*pkg_Data_Either.Constructor_Left)(v3_6_2.UnsafePtr).V0)
+__t3 = gopurs_runtime.Apply2(v_1, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(v2_5_0.UnsafePtr).V0, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(v3_6_2.UnsafePtr).V0)
 goto end_branch_3
 } else {
 
@@ -121,7 +122,7 @@ goto end_branch_5
 }
 {
 if (v3_6_4.Type == 9 && v3_6_4.IntVal == 2465973597) {
-__t5 = gopurs_runtime.Apply2(v1_2, (*pkg_Data_Either.Constructor_Right)(v2_5_0.UnsafePtr).V0, (*pkg_Data_Either.Constructor_Right)(v3_6_4.UnsafePtr).V0)
+__t5 = gopurs_runtime.Apply2(v1_2, (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(v2_5_0.UnsafePtr).V0, (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(v3_6_4.UnsafePtr).V0)
 goto end_branch_5
 } else {
 
@@ -164,7 +165,7 @@ _ = v3_6_2
 var __t3 gopurs_runtime.Value
 {
 if (v3_6_2.Type == 9 && v3_6_2.IntVal == 3711209382) {
-__t3 = gopurs_runtime.Apply2(v_1, (*pkg_Data_Either.Constructor_Left)(v2_5_0.UnsafePtr).V0, (*pkg_Data_Either.Constructor_Left)(v3_6_2.UnsafePtr).V0)
+__t3 = gopurs_runtime.Apply2(v_1, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(v2_5_0.UnsafePtr).V0, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(v3_6_2.UnsafePtr).V0)
 goto end_branch_3
 } else {
 
@@ -203,7 +204,7 @@ goto end_branch_5
 }
 {
 if (v3_6_4.Type == 9 && v3_6_4.IntVal == 2465973597) {
-__t5 = gopurs_runtime.Apply2(v1_2, (*pkg_Data_Either.Constructor_Right)(v2_5_0.UnsafePtr).V0, (*pkg_Data_Either.Constructor_Right)(v3_6_4.UnsafePtr).V0)
+__t5 = gopurs_runtime.Apply2(v1_2, (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(v2_5_0.UnsafePtr).V0, (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(v3_6_4.UnsafePtr).V0)
 goto end_branch_5
 } else {
 
@@ -264,31 +265,31 @@ divideOp_1_0 := gopurs_runtime.Apply(pkg_Data_Divide.Get_divideOp(), dictSemigro
 _ = divideOp_1_0
 return gopurs_runtime.RecordDict2("Divide0", "choose", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return divideOp_1_0
-}), gopurs_runtime.Func4(func(f_2 gopurs_runtime.Value, v_3 gopurs_runtime.Value, v1_4 gopurs_runtime.Value, x_5 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_6_1 := gopurs_runtime.Apply(f_2, x_5)
-_ = __local_var_6_1
-var __t2 gopurs_runtime.Value
+}), gopurs_runtime.Func3(func(f_2 gopurs_runtime.Value, v_3 gopurs_runtime.Value, v1_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), gopurs_runtime.Func(func(v2_5 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t1 gopurs_runtime.Value
 {
-if (__local_var_6_1.Type == 9 && __local_var_6_1.IntVal == 3711209382) {
-__t2 = gopurs_runtime.Apply(v_3, (*pkg_Data_Either.Constructor_Left)(__local_var_6_1.UnsafePtr).V0)
-goto end_branch_2
+if (v2_5.Type == 9 && v2_5.IntVal == 3711209382) {
+__t1 = gopurs_runtime.Apply(v_3, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(v2_5.UnsafePtr).V0)
+goto end_branch_1
 } else {
 
 }
 }
 {
-if (__local_var_6_1.Type == 9 && __local_var_6_1.IntVal == 2465973597) {
-__t2 = gopurs_runtime.Apply(v1_4, (*pkg_Data_Either.Constructor_Right)(__local_var_6_1.UnsafePtr).V0)
-goto end_branch_2
+if (v2_5.Type == 9 && v2_5.IntVal == 2465973597) {
+__t1 = gopurs_runtime.Apply(v1_4, (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(v2_5.UnsafePtr).V0)
+goto end_branch_1
 } else {
 
 }
 }
 {
-__t2 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
-end_branch_2:
-return __t2
+end_branch_1:
+return __t1
+}), f_2)
 }))
 }
 

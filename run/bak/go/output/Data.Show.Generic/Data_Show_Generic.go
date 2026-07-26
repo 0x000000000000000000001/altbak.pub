@@ -126,7 +126,7 @@ _ = dictGenericShowArgs_0
 var dictGenericShowArgs1_1 gopurs_runtime.Value = dictGenericShowArgs1_1_loop
 _ = dictGenericShowArgs1_1
 return gopurs_runtime.RecordDict1("genericShowArgs", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupArray(), "append"), gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictGenericShowArgs_0.UnsafePtr)).V0, (*pkg_Data_Generic_Rep.Constructor_Product)(v_2.UnsafePtr).V0), gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictGenericShowArgs1_1.UnsafePtr)).V0, (*pkg_Data_Generic_Rep.Constructor_Product)(v_2.UnsafePtr).V1))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupArray(), "append"), gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictGenericShowArgs_0.UnsafePtr)).V0, (*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0), gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictGenericShowArgs1_1.UnsafePtr)).V0, (*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V1))
 }))
 }
 
@@ -172,7 +172,7 @@ return gopurs_runtime.RecordDict1("genericShow'", gopurs_runtime.Func(func(v_2 g
 var __t0 gopurs_runtime.Value
 {
 if (v_2.Type == 9 && v_2.IntVal == 3478632216) {
-__t0 = gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictGenericShow_0.UnsafePtr)).V0, (*pkg_Data_Generic_Rep.Constructor_Inl)(v_2.UnsafePtr).V0)
+__t0 = gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictGenericShow_0.UnsafePtr)).V0, (*pkg_Data_Generic_Rep.Constructor_Inl[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0)
 goto end_branch_0
 } else {
 
@@ -180,7 +180,7 @@ goto end_branch_0
 }
 {
 if (v_2.Type == 9 && v_2.IntVal == 492034566) {
-__t0 = gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictGenericShow1_1.UnsafePtr)).V0, (*pkg_Data_Generic_Rep.Constructor_Inr)(v_2.UnsafePtr).V0)
+__t0 = gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictGenericShow1_1.UnsafePtr)).V0, (*pkg_Data_Generic_Rep.Constructor_Inr[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0)
 goto end_branch_0
 } else {
 

@@ -3,6 +3,7 @@ package Data_Op
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
+	pkg_Control_Semigroupoid "gopurs/output/Control.Semigroupoid"
 )
 
 var cache_Op gopurs_runtime.Value
@@ -20,8 +21,8 @@ var cache_semigroupoidOp gopurs_runtime.Value
 var once_semigroupoidOp sync.Once
 func Get_semigroupoidOp() gopurs_runtime.Value {
 	once_semigroupoidOp.Do(func() {
-		cache_semigroupoidOp = gopurs_runtime.RecordDict1("compose", gopurs_runtime.Func3(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value, x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(v1_1, gopurs_runtime.Apply(v_0, x_2))
+		cache_semigroupoidOp = gopurs_runtime.RecordDict1("compose", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), v1_1, v_0)
 }))
 	})
 	return cache_semigroupoidOp
@@ -64,8 +65,8 @@ var cache_contravariantOp gopurs_runtime.Value
 var once_contravariantOp sync.Once
 func Get_contravariantOp() gopurs_runtime.Value {
 	once_contravariantOp.Do(func() {
-		cache_contravariantOp = gopurs_runtime.RecordDict1("cmap", gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(v_1, gopurs_runtime.Apply(f_0, x_2))
+		cache_contravariantOp = gopurs_runtime.RecordDict1("cmap", gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), v_1, f_0)
 }))
 	})
 	return cache_contravariantOp

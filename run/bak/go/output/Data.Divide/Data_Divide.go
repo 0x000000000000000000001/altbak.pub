@@ -32,7 +32,7 @@ return pkg_Data_Predicate.Get_contravariantPredicate()
 }), gopurs_runtime.Func4(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, v1_2 gopurs_runtime.Value, a_3 gopurs_runtime.Value) gopurs_runtime.Value {
 v2_4_0 := gopurs_runtime.Apply(f_0, a_3)
 _ = v2_4_0
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "conj"), gopurs_runtime.Apply(v_1, (*pkg_Data_Tuple.Constructor_Tuple)(v2_4_0.UnsafePtr).V0), gopurs_runtime.Apply(v1_2, (*pkg_Data_Tuple.Constructor_Tuple)(v2_4_0.UnsafePtr).V1))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "conj"), gopurs_runtime.Apply(v_1, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v2_4_0.UnsafePtr).V0), gopurs_runtime.Apply(v1_2, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v2_4_0.UnsafePtr).V1))
 }))
 	})
 	return cache_dividePredicate
@@ -60,7 +60,7 @@ v2_5_0 := gopurs_runtime.Apply(f_0, a_3)
 _ = v2_5_0
 v3_6_1 := gopurs_runtime.Apply(f_0, b_4)
 _ = v3_6_1
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "conj"), gopurs_runtime.Apply2(v_1, (*pkg_Data_Tuple.Constructor_Tuple)(v2_5_0.UnsafePtr).V0, (*pkg_Data_Tuple.Constructor_Tuple)(v3_6_1.UnsafePtr).V0), gopurs_runtime.Apply2(v1_2, (*pkg_Data_Tuple.Constructor_Tuple)(v2_5_0.UnsafePtr).V1, (*pkg_Data_Tuple.Constructor_Tuple)(v3_6_1.UnsafePtr).V1))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "conj"), gopurs_runtime.Apply2(v_1, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v2_5_0.UnsafePtr).V0, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v3_6_1.UnsafePtr).V0), gopurs_runtime.Apply2(v1_2, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v2_5_0.UnsafePtr).V1, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v3_6_1.UnsafePtr).V1))
 }))
 	})
 	return cache_divideEquivalence
@@ -77,7 +77,7 @@ v2_5_0 := gopurs_runtime.Apply(f_0, a_3)
 _ = v2_5_0
 v3_6_1 := gopurs_runtime.Apply(f_0, b_4)
 _ = v3_6_1
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ordering.Get_semigroupOrdering(), "append"), gopurs_runtime.Apply2(v_1, (*pkg_Data_Tuple.Constructor_Tuple)(v2_5_0.UnsafePtr).V0, (*pkg_Data_Tuple.Constructor_Tuple)(v3_6_1.UnsafePtr).V0), gopurs_runtime.Apply2(v1_2, (*pkg_Data_Tuple.Constructor_Tuple)(v2_5_0.UnsafePtr).V1, (*pkg_Data_Tuple.Constructor_Tuple)(v3_6_1.UnsafePtr).V1))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ordering.Get_semigroupOrdering(), "append"), gopurs_runtime.Apply2(v_1, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v2_5_0.UnsafePtr).V0, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v3_6_1.UnsafePtr).V0), gopurs_runtime.Apply2(v1_2, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v2_5_0.UnsafePtr).V1, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v3_6_1.UnsafePtr).V1))
 }))
 	})
 	return cache_divideComparison
@@ -119,7 +119,7 @@ return pkg_Data_Op.Get_contravariantOp()
 }), gopurs_runtime.Func4(func(f_1 gopurs_runtime.Value, v_2 gopurs_runtime.Value, v1_3 gopurs_runtime.Value, a_4 gopurs_runtime.Value) gopurs_runtime.Value {
 v2_5_0 := gopurs_runtime.Apply(f_1, a_4)
 _ = v2_5_0
-return gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictSemigroup_0.UnsafePtr)).V0, gopurs_runtime.Apply(v_2, (*pkg_Data_Tuple.Constructor_Tuple)(v2_5_0.UnsafePtr).V0), gopurs_runtime.Apply(v1_3, (*pkg_Data_Tuple.Constructor_Tuple)(v2_5_0.UnsafePtr).V1))
+return gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictSemigroup_0.UnsafePtr)).V0, gopurs_runtime.Apply(v_2, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v2_5_0.UnsafePtr).V0), gopurs_runtime.Apply(v1_3, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v2_5_0.UnsafePtr).V1))
 }))
 }
 

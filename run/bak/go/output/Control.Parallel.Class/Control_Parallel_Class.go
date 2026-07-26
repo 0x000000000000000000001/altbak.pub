@@ -4,6 +4,9 @@ import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
 	pkg_Data_Tuple "gopurs/output/Data.Tuple"
+	pkg_Data_Profunctor_Star "gopurs/output/Data.Profunctor.Star"
+	pkg_Control_Semigroupoid "gopurs/output/Control.Semigroupoid"
+	pkg_Control_Monad_Reader_Trans "gopurs/output/Control.Monad.Reader.Trans"
 	pkg_Data_Maybe "gopurs/output/Data.Maybe"
 	pkg_Control_Monad_Maybe_Trans "gopurs/output/Control.Monad.Maybe.Trans"
 	pkg_Data_Either "gopurs/output/Data.Either"
@@ -229,7 +232,7 @@ Functor0_3_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApply_2, "Func
 _ = Functor0_3_2
 functorWriterT1_4_3 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Functor0_3_2, "map"), gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple{gopurs_runtime.Apply(f_4, (*pkg_Data_Tuple.Constructor_Tuple)(v_5.UnsafePtr).V0), (*pkg_Data_Tuple.Constructor_Tuple)(v_5.UnsafePtr).V1})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Apply(f_4, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_5.UnsafePtr).V0), (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_5.UnsafePtr).V1})}
 }))
 }))
 _ = functorWriterT1_4_3
@@ -237,7 +240,7 @@ return gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(
 return functorWriterT1_4_3
 }), gopurs_runtime.Func2(func(v_5 gopurs_runtime.Value, v1_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictApply_2, "apply"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Functor0_3_2, "map"), gopurs_runtime.Func2(func(v3_7 gopurs_runtime.Value, v4_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple{gopurs_runtime.Apply((*pkg_Data_Tuple.Constructor_Tuple)(v3_7.UnsafePtr).V0, (*pkg_Data_Tuple.Constructor_Tuple)(v4_8.UnsafePtr).V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "append"), (*pkg_Data_Tuple.Constructor_Tuple)(v3_7.UnsafePtr).V1, (*pkg_Data_Tuple.Constructor_Tuple)(v4_8.UnsafePtr).V1)})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Apply((*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v3_7.UnsafePtr).V0, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v4_8.UnsafePtr).V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "append"), (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v3_7.UnsafePtr).V1, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v4_8.UnsafePtr).V1)})}
 }), v_5), v1_6)
 }))
 })
@@ -262,101 +265,37 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictParallel_3, "sequential
 func Call_monadParStar(dictParallel_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictParallel_0 gopurs_runtime.Value = dictParallel_0_loop
 _ = dictParallel_0
-__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictParallel_0, "Apply0_NOT_FOUND"), gopurs_runtime.Value{})
-_ = __local_var_1_0
-__local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_0, "Functor0"), gopurs_runtime.Value{})
-_ = __local_var_2_1
-functorStar1_3_3 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func2(func(f_3 gopurs_runtime.Value, v_4 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_5_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_1, "map"), f_3)
-_ = __local_var_5_4
-return gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(__local_var_5_4, gopurs_runtime.Apply(v_4, x_6))
-})
-}))
-_ = functorStar1_3_3
-applyStar_3_2 := gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return functorStar1_3_3
-}), gopurs_runtime.Func3(func(v_4 gopurs_runtime.Value, v1_5 gopurs_runtime.Value, a_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "apply"), gopurs_runtime.Apply(v_4, a_6), gopurs_runtime.Apply(v1_5, a_6))
-}))
+parallel1_1_0 := ((*gopurs_runtime.RecordData2)(dictParallel_0.UnsafePtr)).V0
+_ = parallel1_1_0
+sequential1_2_1 := ((*gopurs_runtime.RecordData2)(dictParallel_0.UnsafePtr)).V1
+_ = sequential1_2_1
+applyStar_3_2 := gopurs_runtime.Apply(pkg_Data_Profunctor_Star.Get_applyStar(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictParallel_0, "Apply0_NOT_FOUND"), gopurs_runtime.Value{}))
 _ = applyStar_3_2
-__local_var_4_5 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictParallel_0, "Apply1_NOT_FOUND"), gopurs_runtime.Value{})
-_ = __local_var_4_5
-__local_var_5_6 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_4_5, "Functor0"), gopurs_runtime.Value{})
-_ = __local_var_5_6
-functorStar1_6_8 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func2(func(f_6 gopurs_runtime.Value, v_7 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_8_9 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_5_6, "map"), f_6)
-_ = __local_var_8_9
-return gopurs_runtime.Func(func(x_9 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(__local_var_8_9, gopurs_runtime.Apply(v_7, x_9))
-})
-}))
-_ = functorStar1_6_8
-applyStar1_6_7 := gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return functorStar1_6_8
-}), gopurs_runtime.Func3(func(v_7 gopurs_runtime.Value, v1_8 gopurs_runtime.Value, a_9 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_4_5, "apply"), gopurs_runtime.Apply(v_7, a_9), gopurs_runtime.Apply(v1_8, a_9))
-}))
-_ = applyStar1_6_7
-return gopurs_runtime.RecordDict4("Apply0", "Apply1", "parallel", "sequential", gopurs_runtime.Func(func(_dollar__unused_7 gopurs_runtime.Value) gopurs_runtime.Value {
+applyStar1_4_3 := gopurs_runtime.Apply(pkg_Data_Profunctor_Star.Get_applyStar(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictParallel_0, "Apply1_NOT_FOUND"), gopurs_runtime.Value{}))
+_ = applyStar1_4_3
+return gopurs_runtime.RecordDict4("Apply0", "Apply1", "parallel", "sequential", gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return applyStar_3_2
-}), gopurs_runtime.Func(func(_dollar__unused_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return applyStar1_6_7
-}), gopurs_runtime.Func2(func(v_7 gopurs_runtime.Value, x_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictParallel_0.UnsafePtr)).V0, gopurs_runtime.Apply(v_7, x_8))
-}), gopurs_runtime.Func2(func(v_7 gopurs_runtime.Value, x_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictParallel_0.UnsafePtr)).V1, gopurs_runtime.Apply(v_7, x_8))
+}), gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return applyStar1_4_3
+}), gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), parallel1_1_0, v_5)
+}), gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), sequential1_2_1, v_5)
 }))
 }
 
 func Call_monadParReaderT(dictParallel_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictParallel_0 gopurs_runtime.Value = dictParallel_0_loop
 _ = dictParallel_0
-__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictParallel_0, "Apply0_NOT_FOUND"), gopurs_runtime.Value{})
-_ = __local_var_1_0
-__local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_0, "Functor0"), gopurs_runtime.Value{})
-_ = __local_var_2_1
-functorReaderT1_3_3 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_4_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_1, "map"), x_3)
-_ = __local_var_4_4
-return gopurs_runtime.Func2(func(v_5 gopurs_runtime.Value, x_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(__local_var_4_4, gopurs_runtime.Apply(v_5, x_6))
-})
-}))
-_ = functorReaderT1_3_3
-applyReaderT_3_2 := gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return functorReaderT1_3_3
-}), gopurs_runtime.Func3(func(v_4 gopurs_runtime.Value, v1_5 gopurs_runtime.Value, r_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "apply"), gopurs_runtime.Apply(v_4, r_6), gopurs_runtime.Apply(v1_5, r_6))
-}))
-_ = applyReaderT_3_2
-__local_var_4_5 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictParallel_0, "Apply1_NOT_FOUND"), gopurs_runtime.Value{})
-_ = __local_var_4_5
-__local_var_5_6 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_4_5, "Functor0"), gopurs_runtime.Value{})
-_ = __local_var_5_6
-functorReaderT1_6_8 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_7_9 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_5_6, "map"), x_6)
-_ = __local_var_7_9
-return gopurs_runtime.Func2(func(v_8 gopurs_runtime.Value, x_9 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(__local_var_7_9, gopurs_runtime.Apply(v_8, x_9))
-})
-}))
-_ = functorReaderT1_6_8
-applyReaderT1_6_7 := gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return functorReaderT1_6_8
-}), gopurs_runtime.Func3(func(v_7 gopurs_runtime.Value, v1_8 gopurs_runtime.Value, r_9 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_4_5, "apply"), gopurs_runtime.Apply(v_7, r_9), gopurs_runtime.Apply(v1_8, r_9))
-}))
-_ = applyReaderT1_6_7
-return gopurs_runtime.RecordDict4("Apply0", "Apply1", "parallel", "sequential", gopurs_runtime.Func(func(_dollar__unused_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return applyReaderT_3_2
-}), gopurs_runtime.Func(func(_dollar__unused_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return applyReaderT1_6_7
-}), gopurs_runtime.Func2(func(v_7 gopurs_runtime.Value, x_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictParallel_0.UnsafePtr)).V0, gopurs_runtime.Apply(v_7, x_8))
-}), gopurs_runtime.Func2(func(v_7 gopurs_runtime.Value, x_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictParallel_0.UnsafePtr)).V1, gopurs_runtime.Apply(v_7, x_8))
-}))
+applyReaderT_1_0 := gopurs_runtime.Apply(pkg_Control_Monad_Reader_Trans.Get_applyReaderT(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictParallel_0, "Apply0_NOT_FOUND"), gopurs_runtime.Value{}))
+_ = applyReaderT_1_0
+applyReaderT1_2_1 := gopurs_runtime.Apply(pkg_Control_Monad_Reader_Trans.Get_applyReaderT(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictParallel_0, "Apply1_NOT_FOUND"), gopurs_runtime.Value{}))
+_ = applyReaderT1_2_1
+return gopurs_runtime.RecordDict4("Apply0", "Apply1", "parallel", "sequential", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return applyReaderT_1_0
+}), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return applyReaderT1_2_1
+}), gopurs_runtime.Apply(pkg_Control_Monad_Reader_Trans.Get_mapReaderT(), ((*gopurs_runtime.RecordData2)(dictParallel_0.UnsafePtr)).V0), gopurs_runtime.Apply(pkg_Control_Monad_Reader_Trans.Get_mapReaderT(), ((*gopurs_runtime.RecordData2)(dictParallel_0.UnsafePtr)).V1))
 }
 
 func Call_monadParMaybeT(dictParallel_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -430,14 +369,18 @@ return gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictParallel_0.Unsafe
 func Call_monadParCostar(dictParallel_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictParallel_0 gopurs_runtime.Value = dictParallel_0_loop
 _ = dictParallel_0
-return gopurs_runtime.RecordDict4("Apply0", "Apply1", "parallel", "sequential", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
+sequential1_1_0 := ((*gopurs_runtime.RecordData2)(dictParallel_0.UnsafePtr)).V1
+_ = sequential1_1_0
+parallel1_2_1 := ((*gopurs_runtime.RecordData2)(dictParallel_0.UnsafePtr)).V0
+_ = parallel1_2_1
+return gopurs_runtime.RecordDict4("Apply0", "Apply1", "parallel", "sequential", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Functor_Costar.Get_applyCostar()
-}), gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Functor_Costar.Get_applyCostar()
-}), gopurs_runtime.Func2(func(v_1 gopurs_runtime.Value, x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(v_1, gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictParallel_0.UnsafePtr)).V1, x_2))
-}), gopurs_runtime.Func2(func(v_1 gopurs_runtime.Value, x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(v_1, gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictParallel_0.UnsafePtr)).V0, x_2))
+}), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), v_3, sequential1_1_0)
+}), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), v_3, parallel1_2_1)
 }))
 }
 
@@ -472,14 +415,12 @@ return v_3
 func Call_functorParCont(dictMonadEffect_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadEffect_0 gopurs_runtime.Value = dictMonadEffect_0_loop
 _ = dictMonadEffect_0
-return gopurs_runtime.RecordDict1("map", gopurs_runtime.Func2(func(f_1 gopurs_runtime.Value, x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_3_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(Get_monadParParCont(), dictMonadEffect_0), "sequential"), x_2)
-_ = __local_var_3_0
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(Get_monadParParCont(), dictMonadEffect_0), "parallel"), gopurs_runtime.Func(func(k_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(__local_var_3_0, gopurs_runtime.Func(func(a_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(k_4, gopurs_runtime.Apply(f_1, a_5))
+return gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), gopurs_runtime.RecordGet(gopurs_runtime.Apply(Get_monadParParCont(), dictMonadEffect_0), "parallel"), gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), gopurs_runtime.Func2(func(v_2 gopurs_runtime.Value, k_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(v_2, gopurs_runtime.Func(func(a_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(k_3, gopurs_runtime.Apply(f_1, a_4))
 }))
-}))
+}), gopurs_runtime.RecordGet(gopurs_runtime.Apply(Get_monadParParCont(), dictMonadEffect_0), "sequential")))
 }))
 }
 
@@ -511,8 +452,8 @@ var __t4 gopurs_runtime.Value
 {
 if (mb_9.Type == 9 && mb_9.IntVal == 3589588149) {
 __t4 = gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictMonadEffect_0.UnsafePtr)).V0, gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-*(ra_6.PtrVal().(*gopurs_runtime.Value)) = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just{a_8})}
-return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just{a_8})}
+*(ra_6.PtrVal().(*gopurs_runtime.Value)) = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{a_8})}
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{a_8})}
 }))
 goto end_branch_4
 } else {
@@ -521,7 +462,7 @@ goto end_branch_4
 }
 {
 if (mb_9.Type == 9 && mb_9.IntVal == 930809136) {
-__t4 = gopurs_runtime.Apply(k_5, gopurs_runtime.Apply(a_8, (*pkg_Data_Maybe.Constructor_Just)(mb_9.UnsafePtr).V0))
+__t4 = gopurs_runtime.Apply(k_5, gopurs_runtime.Apply(a_8, (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(mb_9.UnsafePtr).V0))
 goto end_branch_4
 } else {
 
@@ -542,8 +483,8 @@ var __t5 gopurs_runtime.Value
 {
 if (ma_10.Type == 9 && ma_10.IntVal == 3589588149) {
 __t5 = gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictMonadEffect_0.UnsafePtr)).V0, gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-*(rb_7.PtrVal().(*gopurs_runtime.Value)) = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just{b_9})}
-return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just{b_9})}
+*(rb_7.PtrVal().(*gopurs_runtime.Value)) = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{b_9})}
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{b_9})}
 }))
 goto end_branch_5
 } else {
@@ -552,7 +493,7 @@ goto end_branch_5
 }
 {
 if (ma_10.Type == 9 && ma_10.IntVal == 930809136) {
-__t5 = gopurs_runtime.Apply(k_5, gopurs_runtime.Apply((*pkg_Data_Maybe.Constructor_Just)(ma_10.UnsafePtr).V0, b_9))
+__t5 = gopurs_runtime.Apply(k_5, gopurs_runtime.Apply((*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(ma_10.UnsafePtr).V0, b_9))
 goto end_branch_5
 } else {
 
@@ -578,11 +519,9 @@ applyParCont1_1_0 := gopurs_runtime.Apply(Get_applyParCont(), dictMonadEffect_0)
 _ = applyParCont1_1_0
 return gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return applyParCont1_1_0
-}), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(Get_monadParParCont(), dictMonadEffect_0), "parallel"), gopurs_runtime.Func(func(k_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(k_3, x_2)
-}))
-}))
+}), gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), gopurs_runtime.RecordGet(gopurs_runtime.Apply(Get_monadParParCont(), dictMonadEffect_0), "parallel"), gopurs_runtime.Func2(func(a_2 gopurs_runtime.Value, k_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(k_3, a_2)
+})))
 }
 
 func Call_altParCont(dictMonadEffect_0_loop gopurs_runtime.Value) gopurs_runtime.Value {

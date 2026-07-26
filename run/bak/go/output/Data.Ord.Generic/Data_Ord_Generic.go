@@ -122,12 +122,12 @@ _ = dictGenericOrd_0
 var dictGenericOrd1_1 gopurs_runtime.Value = dictGenericOrd1_1_loop
 _ = dictGenericOrd1_1
 return gopurs_runtime.RecordDict1("genericCompare'", gopurs_runtime.Func2(func(v_2 gopurs_runtime.Value, v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
-v2_4_0 := gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictGenericOrd_0.UnsafePtr)).V0, (*pkg_Data_Generic_Rep.Constructor_Product)(v_2.UnsafePtr).V0, (*pkg_Data_Generic_Rep.Constructor_Product)(v1_3.UnsafePtr).V0)
+v2_4_0 := gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictGenericOrd_0.UnsafePtr)).V0, (*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0, (*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v1_3.UnsafePtr).V0)
 _ = v2_4_0
 var __t1 gopurs_runtime.Value
 {
 if (v2_4_0.Type == 9 && v2_4_0.IntVal == 902936544) {
-__t1 = gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictGenericOrd1_1.UnsafePtr)).V0, (*pkg_Data_Generic_Rep.Constructor_Product)(v_2.UnsafePtr).V1, (*pkg_Data_Generic_Rep.Constructor_Product)(v1_3.UnsafePtr).V1)
+__t1 = gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictGenericOrd1_1.UnsafePtr)).V0, (*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V1, (*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v1_3.UnsafePtr).V1)
 goto end_branch_1
 } else {
 
@@ -153,7 +153,7 @@ if (v_2.Type == 9 && v_2.IntVal == 3478632216) {
 var __t1 gopurs_runtime.Value
 {
 if (v1_3.Type == 9 && v1_3.IntVal == 3478632216) {
-__t1 = gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictGenericOrd_0.UnsafePtr)).V0, (*pkg_Data_Generic_Rep.Constructor_Inl)(v_2.UnsafePtr).V0, (*pkg_Data_Generic_Rep.Constructor_Inl)(v1_3.UnsafePtr).V0)
+__t1 = gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictGenericOrd_0.UnsafePtr)).V0, (*pkg_Data_Generic_Rep.Constructor_Inl[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0, (*pkg_Data_Generic_Rep.Constructor_Inl[gopurs_runtime.Value, gopurs_runtime.Value])(v1_3.UnsafePtr).V0)
 goto end_branch_1
 } else {
 
@@ -182,7 +182,7 @@ if (v_2.Type == 9 && v_2.IntVal == 492034566) {
 var __t2 gopurs_runtime.Value
 {
 if (v1_3.Type == 9 && v1_3.IntVal == 492034566) {
-__t2 = gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictGenericOrd1_1.UnsafePtr)).V0, (*pkg_Data_Generic_Rep.Constructor_Inr)(v_2.UnsafePtr).V0, (*pkg_Data_Generic_Rep.Constructor_Inr)(v1_3.UnsafePtr).V0)
+__t2 = gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictGenericOrd1_1.UnsafePtr)).V0, (*pkg_Data_Generic_Rep.Constructor_Inr[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0, (*pkg_Data_Generic_Rep.Constructor_Inr[gopurs_runtime.Value, gopurs_runtime.Value])(v1_3.UnsafePtr).V0)
 goto end_branch_2
 } else {
 

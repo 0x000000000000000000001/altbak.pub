@@ -8,6 +8,7 @@ import (
 	pkg_Data_Tuple "gopurs/output/Data.Tuple"
 	pkg_Control_Apply "gopurs/output/Control.Apply"
 	pkg_Data_Ordering "gopurs/output/Data.Ordering"
+	pkg_Control_Semigroupoid "gopurs/output/Control.Semigroupoid"
 	pkg_Unsafe_Coerce "gopurs/output/Unsafe.Coerce"
 	pkg_Data_Unit "gopurs/output/Data.Unit"
 	unsafe "unsafe"
@@ -24,17 +25,39 @@ return Call_identity(x_0_box)
 	return cache_identity
 }
 
+var cache_JoinWith gopurs_runtime.Value
+var once_JoinWith sync.Once
+func Get_JoinWith() gopurs_runtime.Value {
+	once_JoinWith.Do(func() {
+		cache_JoinWith = gopurs_runtime.Func(func(x_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_JoinWith(x_0_box)
+})
+	})
+	return cache_JoinWith
+}
+
 var cache_FoldRight1 gopurs_runtime.Value
 var once_FoldRight1 sync.Once
 func Get_FoldRight1() gopurs_runtime.Value {
 	once_FoldRight1.Do(func() {
 		cache_FoldRight1 = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 3805997843, UnsafePtr: unsafe.Pointer(&Constructor_FoldRight1{value0, value1})}
+return gopurs_runtime.Value{Type: 9, IntVal: 3805997843, UnsafePtr: unsafe.Pointer(&Constructor_FoldRight1[gopurs_runtime.Value]{value0, value1})}
 })
 })
 	})
 	return cache_FoldRight1
+}
+
+var cache_Act gopurs_runtime.Value
+var once_Act sync.Once
+func Get_Act() gopurs_runtime.Value {
+	once_Act.Do(func() {
+		cache_Act = gopurs_runtime.Func(func(x_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_Act(x_0_box)
+})
+	})
+	return cache_Act
 }
 
 var cache_semigroupAct gopurs_runtime.Value
@@ -46,6 +69,17 @@ return Call_semigroupAct(dictApply_0_box)
 })
 	})
 	return cache_semigroupAct
+}
+
+var cache_runFoldRight1 gopurs_runtime.Value
+var once_runFoldRight1 sync.Once
+func Get_runFoldRight1() gopurs_runtime.Value {
+	once_runFoldRight1.Do(func() {
+		cache_runFoldRight1 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_runFoldRight1(v_0_box)
+})
+	})
+	return cache_runFoldRight1
 }
 
 var cache_mkFoldRight1 gopurs_runtime.Value
@@ -108,11 +142,11 @@ func Get_foldableTuple() gopurs_runtime.Value {
 		cache_foldableTuple = gopurs_runtime.RecordDict4("Foldable0", "foldMap1", "foldl1", "foldr1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Foldable.Get_foldableTuple()
 }), gopurs_runtime.Func3(func(dictSemigroup_0 gopurs_runtime.Value, f_1 gopurs_runtime.Value, v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(f_1, (*pkg_Data_Tuple.Constructor_Tuple)(v_2.UnsafePtr).V1)
+return gopurs_runtime.Apply(f_1, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V1)
 }), gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return (*pkg_Data_Tuple.Constructor_Tuple)(v1_1.UnsafePtr).V1
+return (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v1_1.UnsafePtr).V1
 }), gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return (*pkg_Data_Tuple.Constructor_Tuple)(v1_1.UnsafePtr).V1
+return (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v1_1.UnsafePtr).V1
 }))
 	})
 	return cache_foldableTuple
@@ -174,11 +208,11 @@ var once_foldRight1Semigroup sync.Once
 func Get_foldRight1Semigroup() gopurs_runtime.Value {
 	once_foldRight1Semigroup.Do(func() {
 		cache_foldRight1Semigroup = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_2_0 := (*Constructor_FoldRight1)(v_0.UnsafePtr).V1
+__local_var_2_0 := (*Constructor_FoldRight1[gopurs_runtime.Value])(v_0.UnsafePtr).V1
 _ = __local_var_2_0
-return gopurs_runtime.Value{Type: 9, IntVal: 3805997843, UnsafePtr: unsafe.Pointer(&Constructor_FoldRight1{gopurs_runtime.Func2(func(a_3 gopurs_runtime.Value, f_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2((*Constructor_FoldRight1)(v_0.UnsafePtr).V0, gopurs_runtime.Apply2(f_4, __local_var_2_0, gopurs_runtime.Apply2((*Constructor_FoldRight1)(v1_1.UnsafePtr).V0, a_3, f_4)), f_4)
-}), (*Constructor_FoldRight1)(v1_1.UnsafePtr).V1})}
+return gopurs_runtime.Value{Type: 9, IntVal: 3805997843, UnsafePtr: unsafe.Pointer(&Constructor_FoldRight1[gopurs_runtime.Value]{gopurs_runtime.Func2(func(a_3 gopurs_runtime.Value, f_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2((*Constructor_FoldRight1[gopurs_runtime.Value])(v_0.UnsafePtr).V0, gopurs_runtime.Apply2(f_4, __local_var_2_0, gopurs_runtime.Apply2((*Constructor_FoldRight1[gopurs_runtime.Value])(v1_1.UnsafePtr).V0, a_3, f_4)), f_4)
+}), (*Constructor_FoldRight1[gopurs_runtime.Value])(v1_1.UnsafePtr).V1})}
 }))
 	})
 	return cache_foldRight1Semigroup
@@ -338,13 +372,25 @@ return Call_fold1(dictFoldable1_0_box, dictSemigroup_1_box)
 	return cache_fold1
 }
 
-type Constructor_FoldRight1 struct {
+type Constructor_FoldRight1[T_a any] struct {
 	V0 gopurs_runtime.Value
-	V1 gopurs_runtime.Value
+	V1 T_a
 }
 
 
 func Call_identity(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var x_0 gopurs_runtime.Value = x_0_loop
+_ = x_0
+return x_0
+}
+
+func Call_JoinWith(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var x_0 gopurs_runtime.Value = x_0_loop
+_ = x_0
+return x_0
+}
+
+func Call_Act(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
 return x_0
@@ -358,6 +404,12 @@ return gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictApply_0.UnsafePt
 return pkg_Control_Apply.Get_identity()
 }), v_1), v1_2)
 }))
+}
+
+func Call_runFoldRight1(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var v_0 gopurs_runtime.Value = v_0_loop
+_ = v_0
+return gopurs_runtime.Apply((*Constructor_FoldRight1[gopurs_runtime.Value])(v_0.UnsafePtr).V0, (*Constructor_FoldRight1[gopurs_runtime.Value])(v_0.UnsafePtr).V1)
 }
 
 func Call_foldr1(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -428,13 +480,7 @@ _ = dictSemigroup_2
 append_3_0 := ((*gopurs_runtime.RecordData1)(dictSemigroup_2.UnsafePtr)).V0
 _ = append_3_0
 return gopurs_runtime.Func(func(f_4 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_5_1 := gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictFunctor_1.UnsafePtr)).V0, f_4)
-_ = __local_var_5_1
-__local_var_6_2 := gopurs_runtime.Apply(((*gopurs_runtime.RecordData3)(dictFoldable1_0.UnsafePtr)).V2, append_3_0)
-_ = __local_var_6_2
-return gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(__local_var_6_2, gopurs_runtime.Apply(__local_var_5_1, x_7))
-})
+return gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), gopurs_runtime.Apply(((*gopurs_runtime.RecordData3)(dictFoldable1_0.UnsafePtr)).V2, append_3_0), gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictFunctor_1.UnsafePtr)).V0, f_4))
 })
 }
 
@@ -448,13 +494,7 @@ _ = dictSemigroup_2
 append_3_0 := ((*gopurs_runtime.RecordData1)(dictSemigroup_2.UnsafePtr)).V0
 _ = append_3_0
 return gopurs_runtime.Func(func(f_4 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_5_1 := gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictFunctor_1.UnsafePtr)).V0, f_4)
-_ = __local_var_5_1
-__local_var_6_2 := gopurs_runtime.Apply(((*gopurs_runtime.RecordData3)(dictFoldable1_0.UnsafePtr)).V1, append_3_0)
-_ = __local_var_6_2
-return gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(__local_var_6_2, gopurs_runtime.Apply(__local_var_5_1, x_7))
-})
+return gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), gopurs_runtime.Apply(((*gopurs_runtime.RecordData3)(dictFoldable1_0.UnsafePtr)).V1, append_3_0), gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictFunctor_1.UnsafePtr)).V0, f_4))
 })
 }
 
@@ -467,26 +507,20 @@ return ((*gopurs_runtime.RecordData3)(dict_0.UnsafePtr)).V0
 func Call_foldl1Default(dictFoldable1_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictFoldable1_0 gopurs_runtime.Value = dictFoldable1_0_loop
 _ = dictFoldable1_0
-__local_var_1_0 := gopurs_runtime.Apply2(((*gopurs_runtime.RecordData3)(dictFoldable1_0.UnsafePtr)).V0, Get_semigroupDual(), Get_mkFoldRight1())
+__local_var_1_0 := gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), Get_runFoldRight1(), gopurs_runtime.Apply2(((*gopurs_runtime.RecordData3)(dictFoldable1_0.UnsafePtr)).V0, Get_semigroupDual(), Get_mkFoldRight1()))
 _ = __local_var_1_0
-return gopurs_runtime.Func2(func(x_2 gopurs_runtime.Value, a_3 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_4_1 := gopurs_runtime.Apply(__local_var_1_0, a_3)
-_ = __local_var_4_1
-return gopurs_runtime.Apply2((*Constructor_FoldRight1)(__local_var_4_1.UnsafePtr).V0, (*Constructor_FoldRight1)(__local_var_4_1.UnsafePtr).V1, gopurs_runtime.Func2(func(b_5 gopurs_runtime.Value, a_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(x_2, a_6, b_5)
-}))
-})
+return gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), gopurs_runtime.Func2(func(b_2 gopurs_runtime.Value, a_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(__local_var_1_0, a_3, b_2)
+}), pkg_Data_Function.Get_flip())
 }
 
 func Call_foldr1Default(dictFoldable1_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictFoldable1_0 gopurs_runtime.Value = dictFoldable1_0_loop
 _ = dictFoldable1_0
-__local_var_1_0 := gopurs_runtime.Apply2(((*gopurs_runtime.RecordData3)(dictFoldable1_0.UnsafePtr)).V0, Get_foldRight1Semigroup(), Get_mkFoldRight1())
+__local_var_1_0 := gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), Get_runFoldRight1(), gopurs_runtime.Apply2(((*gopurs_runtime.RecordData3)(dictFoldable1_0.UnsafePtr)).V0, Get_foldRight1Semigroup(), Get_mkFoldRight1()))
 _ = __local_var_1_0
 return gopurs_runtime.Func2(func(b_2 gopurs_runtime.Value, a_3 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_4_1 := gopurs_runtime.Apply(__local_var_1_0, a_3)
-_ = __local_var_4_1
-return gopurs_runtime.Apply2((*Constructor_FoldRight1)(__local_var_4_1.UnsafePtr).V0, (*Constructor_FoldRight1)(__local_var_4_1.UnsafePtr).V1, b_2)
+return gopurs_runtime.Apply2(__local_var_1_0, a_3, b_2)
 })
 }
 
@@ -500,13 +534,7 @@ return gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictSemigroup_1.Unsa
 })))
 _ = foldMap12_2_0
 return gopurs_runtime.Func3(func(j_3 gopurs_runtime.Value, f_4 gopurs_runtime.Value, foldable_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(foldMap12_2_0, gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_7_1 := gopurs_runtime.Apply(f_4, x_6)
-_ = __local_var_7_1
-return gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return __local_var_7_1
-})
-}), foldable_5, j_3)
+return gopurs_runtime.Apply3(foldMap12_2_0, gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), Get_JoinWith(), gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), pkg_Data_Function.Get_const_(), f_4)), foldable_5, j_3)
 })
 }
 
@@ -515,14 +543,10 @@ var dictFoldable1_0 gopurs_runtime.Value = dictFoldable1_0_loop
 _ = dictFoldable1_0
 var dictSemigroup_1 gopurs_runtime.Value = dictSemigroup_1_loop
 _ = dictSemigroup_1
-foldMap12_2_0 := gopurs_runtime.Apply(((*gopurs_runtime.RecordData3)(dictFoldable1_0.UnsafePtr)).V0, gopurs_runtime.RecordDict1("append", gopurs_runtime.Func3(func(v_2 gopurs_runtime.Value, v1_3 gopurs_runtime.Value, j_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictSemigroup_1.UnsafePtr)).V0, gopurs_runtime.Apply(v_2, j_4), gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictSemigroup_1.UnsafePtr)).V0, j_4, gopurs_runtime.Apply(v1_3, j_4)))
-})))
-_ = foldMap12_2_0
-return gopurs_runtime.Func2(func(a_3 gopurs_runtime.Value, foldable_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(foldMap12_2_0, gopurs_runtime.Func2(func(x_5 gopurs_runtime.Value, v_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return x_5
-}), foldable_4, a_3)
+__local_var_2_0 := Call_intercalateMap(dictFoldable1_0, dictSemigroup_1)
+_ = __local_var_2_0
+return gopurs_runtime.Func(func(a_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(__local_var_2_0, a_3, Get_identity())
 })
 }
 
@@ -624,9 +648,7 @@ _ = foldMap12_3_1
 return gopurs_runtime.Func2(func(f_4 gopurs_runtime.Value, t_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_0, "map"), gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Unit.Get_unit()
-}), gopurs_runtime.Apply2(foldMap12_3_1, gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(f_4, x_6)
-}), t_5))
+}), gopurs_runtime.Apply2(foldMap12_3_1, gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), Get_Act(), f_4), t_5))
 })
 }
 

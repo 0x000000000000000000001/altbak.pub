@@ -10,6 +10,7 @@ import (
 	pkg_Data_Ord "gopurs/output/Data.Ord"
 	pkg_Data_Eq "gopurs/output/Data.Eq"
 	pkg_Data_EuclideanRing "gopurs/output/Data.EuclideanRing"
+	pkg_Control_Semigroupoid "gopurs/output/Control.Semigroupoid"
 )
 
 var cache_negate gopurs_runtime.Value
@@ -384,8 +385,8 @@ var cache_negateDuration gopurs_runtime.Value
 var once_negateDuration sync.Once
 func Get_negateDuration() gopurs_runtime.Value {
 	once_negateDuration.Do(func() {
-		cache_negateDuration = gopurs_runtime.Func2(func(dictDuration_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_negateDuration(dictDuration_0_box, x_1_box)
+		cache_negateDuration = gopurs_runtime.Func(func(dictDuration_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_negateDuration(dictDuration_0_box)
 })
 	})
 	return cache_negateDuration
@@ -501,8 +502,8 @@ var cache_convertDuration gopurs_runtime.Value
 var once_convertDuration sync.Once
 func Get_convertDuration() gopurs_runtime.Value {
 	once_convertDuration.Do(func() {
-		cache_convertDuration = gopurs_runtime.Func3(func(dictDuration_0_box gopurs_runtime.Value, dictDuration1_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_convertDuration(dictDuration_0_box, dictDuration1_1_box, x_2_box)
+		cache_convertDuration = gopurs_runtime.Func(func(dictDuration_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_convertDuration(dictDuration_0_box)
 })
 	})
 	return cache_convertDuration
@@ -556,22 +557,20 @@ _ = dict_0
 return ((*gopurs_runtime.RecordData2)(dict_0.UnsafePtr)).V0
 }
 
-func Call_negateDuration(dictDuration_0_loop gopurs_runtime.Value, x_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_negateDuration(dictDuration_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictDuration_0 gopurs_runtime.Value = dictDuration_0_loop
 _ = dictDuration_0
-var x_1 gopurs_runtime.Value = x_1_loop
-_ = x_1
-return gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictDuration_0.UnsafePtr)).V1, gopurs_runtime.Apply(Get_negate(), gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictDuration_0.UnsafePtr)).V0, x_1)))
+return gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), ((*gopurs_runtime.RecordData2)(dictDuration_0.UnsafePtr)).V1, gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), Get_negate(), ((*gopurs_runtime.RecordData2)(dictDuration_0.UnsafePtr)).V0))
 }
 
-func Call_convertDuration(dictDuration_0_loop gopurs_runtime.Value, dictDuration1_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_convertDuration(dictDuration_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictDuration_0 gopurs_runtime.Value = dictDuration_0_loop
 _ = dictDuration_0
-var dictDuration1_1 gopurs_runtime.Value = dictDuration1_1_loop
-_ = dictDuration1_1
-var x_2 gopurs_runtime.Value = x_2_loop
-_ = x_2
-return gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictDuration1_1.UnsafePtr)).V1, gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictDuration_0.UnsafePtr)).V0, x_2))
+fromDuration1_1_0 := ((*gopurs_runtime.RecordData2)(dictDuration_0.UnsafePtr)).V0
+_ = fromDuration1_1_0
+return gopurs_runtime.Func(func(dictDuration1_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), gopurs_runtime.RecordGet(dictDuration1_2, "toDuration"), fromDuration1_1_0)
+})
 }
 
 

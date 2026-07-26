@@ -4,6 +4,8 @@ import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
 	pkg_Data_Maybe "gopurs/output/Data.Maybe"
+	pkg_Control_Semigroupoid "gopurs/output/Control.Semigroupoid"
+	pkg_Data_String_Regex_Flags "gopurs/output/Data.String.Regex.Flags"
 	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
 	pkg_Data_Either "gopurs/output/Data.Either"
 	pkg_Data_String_CodeUnits "gopurs/output/Data.String.CodeUnits"
@@ -82,9 +84,7 @@ var cache_flags gopurs_runtime.Value
 var once_flags sync.Once
 func Get_flags() gopurs_runtime.Value {
 	once_flags.Do(func() {
-		cache_flags = gopurs_runtime.Func(func(x_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_flags(x_0_box)
-})
+		cache_flags = gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), pkg_Data_String_Regex_Flags.Get_RegexFlags(), Get_flagsImpl())
 	})
 	return cache_flags
 }
@@ -184,13 +184,7 @@ return gopurs_runtime.Apply4(Get_regexImpl(), pkg_Data_Either.Get_Left(), pkg_Da
 func Call_parseFlags(s_0_loop string) gopurs_runtime.Value {
 var s_0 string = s_0_loop
 _ = s_0
-return gopurs_runtime.RecordDict([]string{"dotAll", "global", "ignoreCase", "multiline", "sticky", "unicode"}, []gopurs_runtime.Value{gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_contains(), gopurs_runtime.Str("s"), gopurs_runtime.Str(s_0)), gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_contains(), gopurs_runtime.Str("g"), gopurs_runtime.Str(s_0)), gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_contains(), gopurs_runtime.Str("i"), gopurs_runtime.Str(s_0)), gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_contains(), gopurs_runtime.Str("m"), gopurs_runtime.Str(s_0)), gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_contains(), gopurs_runtime.Str("y"), gopurs_runtime.Str(s_0)), gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_contains(), gopurs_runtime.Str("u"), gopurs_runtime.Str(s_0))})
-}
-
-func Call_flags(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var x_0 gopurs_runtime.Value = x_0_loop
-_ = x_0
-return gopurs_runtime.Apply(Get_flagsImpl(), x_0)
+return gopurs_runtime.RecordDict([]string{"dotAll", "global", "ignoreCase", "multiline", "sticky", "unicode"}, []gopurs_runtime.Value{gopurs_runtime.Apply3(pkg_Control_Semigroupoid.Get_composeImpl(), pkg_Data_Maybe.Get_isJust(), gopurs_runtime.Apply(pkg_Data_String_CodeUnits.Get_indexOf(), gopurs_runtime.Str("s")), gopurs_runtime.Str(s_0)), gopurs_runtime.Apply3(pkg_Control_Semigroupoid.Get_composeImpl(), pkg_Data_Maybe.Get_isJust(), gopurs_runtime.Apply(pkg_Data_String_CodeUnits.Get_indexOf(), gopurs_runtime.Str("g")), gopurs_runtime.Str(s_0)), gopurs_runtime.Apply3(pkg_Control_Semigroupoid.Get_composeImpl(), pkg_Data_Maybe.Get_isJust(), gopurs_runtime.Apply(pkg_Data_String_CodeUnits.Get_indexOf(), gopurs_runtime.Str("i")), gopurs_runtime.Str(s_0)), gopurs_runtime.Apply3(pkg_Control_Semigroupoid.Get_composeImpl(), pkg_Data_Maybe.Get_isJust(), gopurs_runtime.Apply(pkg_Data_String_CodeUnits.Get_indexOf(), gopurs_runtime.Str("m")), gopurs_runtime.Str(s_0)), gopurs_runtime.Apply3(pkg_Control_Semigroupoid.Get_composeImpl(), pkg_Data_Maybe.Get_isJust(), gopurs_runtime.Apply(pkg_Data_String_CodeUnits.Get_indexOf(), gopurs_runtime.Str("y")), gopurs_runtime.Str(s_0)), gopurs_runtime.Apply3(pkg_Control_Semigroupoid.Get_composeImpl(), pkg_Data_Maybe.Get_isJust(), gopurs_runtime.Apply(pkg_Data_String_CodeUnits.Get_indexOf(), gopurs_runtime.Str("u")), gopurs_runtime.Str(s_0))})
 }
 
 func Get__match() gopurs_runtime.Value {

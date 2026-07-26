@@ -4,13 +4,14 @@ import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
 	pkg_Data_Ring "gopurs/output/Data.Ring"
+	pkg_Control_Semigroupoid "gopurs/output/Control.Semigroupoid"
+	pkg_Data_Time_Duration "gopurs/output/Data.Time.Duration"
 	pkg_Data_Date_Component "gopurs/output/Data.Date.Component"
 	pkg_Data_Maybe "gopurs/output/Data.Maybe"
 	pkg_Data_DateTime "gopurs/output/Data.DateTime"
 	pkg_Data_Date "gopurs/output/Data.Date"
 	pkg_Data_Time "gopurs/output/Data.Time"
 	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
-	pkg_Data_Time_Duration "gopurs/output/Data.Time.Duration"
 	pkg_Data_Ord "gopurs/output/Data.Ord"
 	pkg_Data_Eq "gopurs/output/Data.Eq"
 	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
@@ -31,6 +32,15 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ring.Get_ringNumb
 }()
 	})
 	return cache_negate
+}
+
+var cache_negateDuration gopurs_runtime.Value
+var once_negateDuration sync.Once
+func Get_negateDuration() gopurs_runtime.Value {
+	once_negateDuration.Do(func() {
+		cache_negateDuration = gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_durationMilliseconds(), "toDuration"), gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), pkg_Data_Time_Duration.Get_negate(), gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_durationMilliseconds(), "fromDuration")))
+	})
+	return cache_negateDuration
 }
 
 var cache_unInstant gopurs_runtime.Value
@@ -55,7 +65,7 @@ _ = __local_var_7_0
 var __t1 gopurs_runtime.Value
 {
 if (__local_var_7_0.Type == 9 && __local_var_7_0.IntVal == 930809136) {
-__t1 = (*pkg_Data_Maybe.Constructor_Just)(__local_var_7_0.UnsafePtr).V0
+__t1 = (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(__local_var_7_0.UnsafePtr).V0
 goto end_branch_1
 } else {
 
@@ -168,7 +178,7 @@ _ = v_0
 var __t0 gopurs_runtime.Value
 {
 if (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "conj"), gopurs_runtime.Bool((v_0.FloatVal()) >= (gopurs_runtime.Apply(Get_negate(), gopurs_runtime.Float(8639977881600000.0)).FloatVal())), gopurs_runtime.Bool((v_0.FloatVal()) <= (8639977881599999.0))).IntVal) != (0) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just{v_0})}
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{v_0})}
 goto end_branch_0
 } else {
 
@@ -200,7 +210,7 @@ var dt1_1 gopurs_runtime.Value = dt1_1_loop
 _ = dt1_1
 var dt2_2 gopurs_runtime.Value = dt2_2_loop
 _ = dt2_2
-return gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictDuration_0.UnsafePtr)).V1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_semigroupMilliseconds(), "append"), dt1_1, gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_durationMilliseconds(), "toDuration"), gopurs_runtime.Apply(pkg_Data_Time_Duration.Get_negate(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_durationMilliseconds(), "fromDuration"), dt2_2)))))
+return gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictDuration_0.UnsafePtr)).V1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_semigroupMilliseconds(), "append"), dt1_1, gopurs_runtime.Apply(Get_negateDuration(), dt2_2)))
 }
 
 func Get_fromDateTimeImpl() gopurs_runtime.Value {

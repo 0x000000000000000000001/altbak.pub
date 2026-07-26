@@ -3,6 +3,7 @@ package Data_Functor_Invariant
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
+	pkg_Control_Semigroupoid "gopurs/output/Control.Semigroupoid"
 	pkg_Data_Functor "gopurs/output/Data.Functor"
 )
 
@@ -21,8 +22,8 @@ var cache_invariantEndo gopurs_runtime.Value
 var once_invariantEndo sync.Once
 func Get_invariantEndo() gopurs_runtime.Value {
 	once_invariantEndo.Do(func() {
-		cache_invariantEndo = gopurs_runtime.RecordDict1("imap", gopurs_runtime.Func4(func(ab_0 gopurs_runtime.Value, ba_1 gopurs_runtime.Value, v_2 gopurs_runtime.Value, x_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(ab_0, gopurs_runtime.Apply(v_2, gopurs_runtime.Apply(ba_1, x_3)))
+		cache_invariantEndo = gopurs_runtime.RecordDict1("imap", gopurs_runtime.Func3(func(ab_0 gopurs_runtime.Value, ba_1 gopurs_runtime.Value, v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), ab_0, gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), v_2, ba_1))
 }))
 	})
 	return cache_invariantEndo

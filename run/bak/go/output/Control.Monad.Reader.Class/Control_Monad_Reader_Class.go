@@ -4,6 +4,7 @@ import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
 	pkg_Control_Monad "gopurs/output/Control.Monad"
+	pkg_Control_Semigroupoid "gopurs/output/Control.Semigroupoid"
 )
 
 var cache_monadAskFun gopurs_runtime.Value
@@ -25,8 +26,8 @@ func Get_monadReaderFun() gopurs_runtime.Value {
 	once_monadReaderFun.Do(func() {
 		cache_monadReaderFun = gopurs_runtime.RecordDict2("MonadAsk0", "local", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_monadAskFun()
-}), gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, g_1 gopurs_runtime.Value, x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(g_1, gopurs_runtime.Apply(f_0, x_2))
+}), gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, g_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), g_1, f_0)
 }))
 	})
 	return cache_monadReaderFun

@@ -255,7 +255,7 @@ _ = y_10
 var __t0 gopurs_runtime.Value
 {
 if (y_10.Type == 9 && y_10.IntVal == 3711209382) {
-__t0 = gopurs_runtime.Apply(a_0, (*pkg_Data_Either.Constructor_Left)(y_10.UnsafePtr).V0)
+__t0 = gopurs_runtime.Apply(a_0, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(y_10.UnsafePtr).V0)
 goto end_branch_0
 } else {
 
@@ -265,120 +265,120 @@ goto end_branch_0
 if (y_10.Type == 9 && y_10.IntVal == 2465973597) {
 var __t1 gopurs_runtime.Value
 {
-var __t_tag_2 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)(y_10.UnsafePtr).V0
+var __t_tag_2 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_10.UnsafePtr).V0
 if (__t_tag_2.Type == 9 && __t_tag_2.IntVal == 3711209382) {
-__t1 = gopurs_runtime.Apply(b_1, (*pkg_Data_Either.Constructor_Left)((*pkg_Data_Either.Constructor_Right)(y_10.UnsafePtr).V0.UnsafePtr).V0)
+__t1 = gopurs_runtime.Apply(b_1, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_10.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_1
 } else {
 
 }
 }
 {
-var __t_tag_3 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)(y_10.UnsafePtr).V0
+var __t_tag_3 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_10.UnsafePtr).V0
 if (__t_tag_3.Type == 9 && __t_tag_3.IntVal == 2465973597) {
 var __t4 gopurs_runtime.Value
 {
-var __t_tag_5 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_10.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_5 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_10.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_5.Type == 9 && __t_tag_5.IntVal == 3711209382) {
-__t4 = gopurs_runtime.Apply(c_2, (*pkg_Data_Either.Constructor_Left)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_10.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
+__t4 = gopurs_runtime.Apply(c_2, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_10.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_4
 } else {
 
 }
 }
 {
-var __t_tag_6 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_10.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_6 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_10.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_6.Type == 9 && __t_tag_6.IntVal == 2465973597) {
 var __t7 gopurs_runtime.Value
 {
-var __t_tag_8 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_10.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_8 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_10.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_8.Type == 9 && __t_tag_8.IntVal == 3711209382) {
-__t7 = gopurs_runtime.Apply(d_3, (*pkg_Data_Either.Constructor_Left)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_10.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
+__t7 = gopurs_runtime.Apply(d_3, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_10.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_7
 } else {
 
 }
 }
 {
-var __t_tag_9 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_10.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_9 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_10.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_9.Type == 9 && __t_tag_9.IntVal == 2465973597) {
 var __t10 gopurs_runtime.Value
 {
-var __t_tag_11 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_10.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_11 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_10.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_11.Type == 9 && __t_tag_11.IntVal == 3711209382) {
-__t10 = gopurs_runtime.Apply(e_4, (*pkg_Data_Either.Constructor_Left)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_10.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
+__t10 = gopurs_runtime.Apply(e_4, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_10.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_10
 } else {
 
 }
 }
 {
-var __t_tag_12 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_10.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_12 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_10.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_12.Type == 9 && __t_tag_12.IntVal == 2465973597) {
 var __t13 gopurs_runtime.Value
 {
-var __t_tag_14 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_10.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_14 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_10.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_14.Type == 9 && __t_tag_14.IntVal == 3711209382) {
-__t13 = gopurs_runtime.Apply(f_5, (*pkg_Data_Either.Constructor_Left)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_10.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
+__t13 = gopurs_runtime.Apply(f_5, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_10.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_13
 } else {
 
 }
 }
 {
-var __t_tag_15 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_10.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_15 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_10.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_15.Type == 9 && __t_tag_15.IntVal == 2465973597) {
 var __t16 gopurs_runtime.Value
 {
-var __t_tag_17 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_10.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_17 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_10.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_17.Type == 9 && __t_tag_17.IntVal == 3711209382) {
-__t16 = gopurs_runtime.Apply(g_6, (*pkg_Data_Either.Constructor_Left)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_10.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
+__t16 = gopurs_runtime.Apply(g_6, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_10.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_16
 } else {
 
 }
 }
 {
-var __t_tag_18 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_10.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_18 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_10.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_18.Type == 9 && __t_tag_18.IntVal == 2465973597) {
 var __t19 gopurs_runtime.Value
 {
-var __t_tag_20 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_10.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_20 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_10.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_20.Type == 9 && __t_tag_20.IntVal == 3711209382) {
-__t19 = gopurs_runtime.Apply(h_7, (*pkg_Data_Either.Constructor_Left)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_10.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
+__t19 = gopurs_runtime.Apply(h_7, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_10.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_19
 } else {
 
 }
 }
 {
-var __t_tag_21 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_10.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_21 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_10.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_21.Type == 9 && __t_tag_21.IntVal == 2465973597) {
 var __t22 gopurs_runtime.Value
 {
-var __t_tag_23 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_10.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_23 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_10.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_23.Type == 9 && __t_tag_23.IntVal == 3711209382) {
-__t22 = gopurs_runtime.Apply(i_8, (*pkg_Data_Either.Constructor_Left)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_10.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
+__t22 = gopurs_runtime.Apply(i_8, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_10.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_22
 } else {
 
 }
 }
 {
-var __t_tag_24 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_10.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_24 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_10.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_24.Type == 9 && __t_tag_24.IntVal == 2465973597) {
 var __t25 gopurs_runtime.Value
 {
-var __t_tag_26 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_10.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_26 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_10.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_26.Type == 9 && __t_tag_26.IntVal == 3711209382) {
-__t25 = gopurs_runtime.Apply(j_9, (*pkg_Data_Either.Constructor_Left)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_10.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
+__t25 = gopurs_runtime.Apply(j_9, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_10.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_25
 } else {
 
 }
 }
 {
-var __t_tag_27 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_10.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_27 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_10.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_27.Type == 9 && __t_tag_27.IntVal == 2465973597) {
 var spin_11_28 gopurs_runtime.Value
 spin_11_28 = gopurs_runtime.Func(func(v_12_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
@@ -395,7 +395,7 @@ return gopurs_runtime.Value{}
 }
 }()
 })
-__t25 = gopurs_runtime.Apply(spin_11_28, (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_10.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
+__t25 = gopurs_runtime.Apply(spin_11_28, (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_10.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_25
 } else {
 
@@ -636,55 +636,55 @@ return Call_at1(b_0_box, f_1_box, y_2_box)
 func Call_in9(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-return gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right{gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Left{v_0})}})}})}})}})}})}})}})}})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value]{v_0})}})}})}})}})}})}})}})}})}
 }
 
 func Call_in8(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-return gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right{gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Left{v_0})}})}})}})}})}})}})}})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value]{v_0})}})}})}})}})}})}})}})}
 }
 
 func Call_in7(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-return gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right{gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Left{v_0})}})}})}})}})}})}})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value]{v_0})}})}})}})}})}})}})}
 }
 
 func Call_in6(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-return gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right{gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Left{v_0})}})}})}})}})}})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value]{v_0})}})}})}})}})}})}
 }
 
 func Call_in5(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-return gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right{gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Left{v_0})}})}})}})}})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value]{v_0})}})}})}})}})}
 }
 
 func Call_in4(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-return gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right{gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Left{v_0})}})}})}})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value]{v_0})}})}})}})}
 }
 
 func Call_in3(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-return gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right{gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Left{v_0})}})}})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value]{v_0})}})}})}
 }
 
 func Call_in2(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-return gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right{gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Left{v_0})}})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value]{v_0})}})}
 }
 
 func Call_in10(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-return gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right{gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Left{v_0})}})}})}})}})}})}})}})}})}})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value]{v_0})}})}})}})}})}})}})}})}})}})}
 }
 
 func Call_either9(a_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, c_2_loop gopurs_runtime.Value, d_3_loop gopurs_runtime.Value, e_4_loop gopurs_runtime.Value, f_5_loop gopurs_runtime.Value, g_6_loop gopurs_runtime.Value, h_7_loop gopurs_runtime.Value, i_8_loop gopurs_runtime.Value, y_9_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -711,7 +711,7 @@ _ = y_9
 var __t0 gopurs_runtime.Value
 {
 if (y_9.Type == 9 && y_9.IntVal == 3711209382) {
-__t0 = gopurs_runtime.Apply(a_0, (*pkg_Data_Either.Constructor_Left)(y_9.UnsafePtr).V0)
+__t0 = gopurs_runtime.Apply(a_0, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(y_9.UnsafePtr).V0)
 goto end_branch_0
 } else {
 
@@ -721,107 +721,107 @@ goto end_branch_0
 if (y_9.Type == 9 && y_9.IntVal == 2465973597) {
 var __t1 gopurs_runtime.Value
 {
-var __t_tag_2 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)(y_9.UnsafePtr).V0
+var __t_tag_2 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_9.UnsafePtr).V0
 if (__t_tag_2.Type == 9 && __t_tag_2.IntVal == 3711209382) {
-__t1 = gopurs_runtime.Apply(b_1, (*pkg_Data_Either.Constructor_Left)((*pkg_Data_Either.Constructor_Right)(y_9.UnsafePtr).V0.UnsafePtr).V0)
+__t1 = gopurs_runtime.Apply(b_1, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_9.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_1
 } else {
 
 }
 }
 {
-var __t_tag_3 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)(y_9.UnsafePtr).V0
+var __t_tag_3 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_9.UnsafePtr).V0
 if (__t_tag_3.Type == 9 && __t_tag_3.IntVal == 2465973597) {
 var __t4 gopurs_runtime.Value
 {
-var __t_tag_5 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_9.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_5 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_9.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_5.Type == 9 && __t_tag_5.IntVal == 3711209382) {
-__t4 = gopurs_runtime.Apply(c_2, (*pkg_Data_Either.Constructor_Left)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_9.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
+__t4 = gopurs_runtime.Apply(c_2, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_9.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_4
 } else {
 
 }
 }
 {
-var __t_tag_6 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_9.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_6 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_9.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_6.Type == 9 && __t_tag_6.IntVal == 2465973597) {
 var __t7 gopurs_runtime.Value
 {
-var __t_tag_8 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_9.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_8 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_9.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_8.Type == 9 && __t_tag_8.IntVal == 3711209382) {
-__t7 = gopurs_runtime.Apply(d_3, (*pkg_Data_Either.Constructor_Left)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_9.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
+__t7 = gopurs_runtime.Apply(d_3, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_9.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_7
 } else {
 
 }
 }
 {
-var __t_tag_9 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_9.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_9 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_9.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_9.Type == 9 && __t_tag_9.IntVal == 2465973597) {
 var __t10 gopurs_runtime.Value
 {
-var __t_tag_11 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_9.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_11 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_9.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_11.Type == 9 && __t_tag_11.IntVal == 3711209382) {
-__t10 = gopurs_runtime.Apply(e_4, (*pkg_Data_Either.Constructor_Left)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_9.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
+__t10 = gopurs_runtime.Apply(e_4, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_9.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_10
 } else {
 
 }
 }
 {
-var __t_tag_12 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_9.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_12 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_9.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_12.Type == 9 && __t_tag_12.IntVal == 2465973597) {
 var __t13 gopurs_runtime.Value
 {
-var __t_tag_14 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_9.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_14 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_9.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_14.Type == 9 && __t_tag_14.IntVal == 3711209382) {
-__t13 = gopurs_runtime.Apply(f_5, (*pkg_Data_Either.Constructor_Left)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_9.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
+__t13 = gopurs_runtime.Apply(f_5, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_9.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_13
 } else {
 
 }
 }
 {
-var __t_tag_15 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_9.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_15 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_9.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_15.Type == 9 && __t_tag_15.IntVal == 2465973597) {
 var __t16 gopurs_runtime.Value
 {
-var __t_tag_17 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_9.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_17 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_9.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_17.Type == 9 && __t_tag_17.IntVal == 3711209382) {
-__t16 = gopurs_runtime.Apply(g_6, (*pkg_Data_Either.Constructor_Left)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_9.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
+__t16 = gopurs_runtime.Apply(g_6, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_9.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_16
 } else {
 
 }
 }
 {
-var __t_tag_18 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_9.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_18 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_9.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_18.Type == 9 && __t_tag_18.IntVal == 2465973597) {
 var __t19 gopurs_runtime.Value
 {
-var __t_tag_20 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_9.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_20 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_9.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_20.Type == 9 && __t_tag_20.IntVal == 3711209382) {
-__t19 = gopurs_runtime.Apply(h_7, (*pkg_Data_Either.Constructor_Left)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_9.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
+__t19 = gopurs_runtime.Apply(h_7, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_9.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_19
 } else {
 
 }
 }
 {
-var __t_tag_21 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_9.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_21 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_9.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_21.Type == 9 && __t_tag_21.IntVal == 2465973597) {
 var __t22 gopurs_runtime.Value
 {
-var __t_tag_23 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_9.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_23 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_9.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_23.Type == 9 && __t_tag_23.IntVal == 3711209382) {
-__t22 = gopurs_runtime.Apply(i_8, (*pkg_Data_Either.Constructor_Left)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_9.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
+__t22 = gopurs_runtime.Apply(i_8, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_9.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_22
 } else {
 
 }
 }
 {
-var __t_tag_24 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_9.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_24 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_9.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_24.Type == 9 && __t_tag_24.IntVal == 2465973597) {
 var spin_10_25 gopurs_runtime.Value
 spin_10_25 = gopurs_runtime.Func(func(v_11_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
@@ -838,7 +838,7 @@ return gopurs_runtime.Value{}
 }
 }()
 })
-__t22 = gopurs_runtime.Apply(spin_10_25, (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_9.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
+__t22 = gopurs_runtime.Apply(spin_10_25, (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_9.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_22
 } else {
 
@@ -953,7 +953,7 @@ _ = y_8
 var __t0 gopurs_runtime.Value
 {
 if (y_8.Type == 9 && y_8.IntVal == 3711209382) {
-__t0 = gopurs_runtime.Apply(a_0, (*pkg_Data_Either.Constructor_Left)(y_8.UnsafePtr).V0)
+__t0 = gopurs_runtime.Apply(a_0, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(y_8.UnsafePtr).V0)
 goto end_branch_0
 } else {
 
@@ -963,94 +963,94 @@ goto end_branch_0
 if (y_8.Type == 9 && y_8.IntVal == 2465973597) {
 var __t1 gopurs_runtime.Value
 {
-var __t_tag_2 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)(y_8.UnsafePtr).V0
+var __t_tag_2 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_8.UnsafePtr).V0
 if (__t_tag_2.Type == 9 && __t_tag_2.IntVal == 3711209382) {
-__t1 = gopurs_runtime.Apply(b_1, (*pkg_Data_Either.Constructor_Left)((*pkg_Data_Either.Constructor_Right)(y_8.UnsafePtr).V0.UnsafePtr).V0)
+__t1 = gopurs_runtime.Apply(b_1, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_8.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_1
 } else {
 
 }
 }
 {
-var __t_tag_3 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)(y_8.UnsafePtr).V0
+var __t_tag_3 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_8.UnsafePtr).V0
 if (__t_tag_3.Type == 9 && __t_tag_3.IntVal == 2465973597) {
 var __t4 gopurs_runtime.Value
 {
-var __t_tag_5 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_8.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_5 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_8.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_5.Type == 9 && __t_tag_5.IntVal == 3711209382) {
-__t4 = gopurs_runtime.Apply(c_2, (*pkg_Data_Either.Constructor_Left)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_8.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
+__t4 = gopurs_runtime.Apply(c_2, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_8.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_4
 } else {
 
 }
 }
 {
-var __t_tag_6 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_8.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_6 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_8.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_6.Type == 9 && __t_tag_6.IntVal == 2465973597) {
 var __t7 gopurs_runtime.Value
 {
-var __t_tag_8 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_8.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_8 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_8.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_8.Type == 9 && __t_tag_8.IntVal == 3711209382) {
-__t7 = gopurs_runtime.Apply(d_3, (*pkg_Data_Either.Constructor_Left)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_8.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
+__t7 = gopurs_runtime.Apply(d_3, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_8.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_7
 } else {
 
 }
 }
 {
-var __t_tag_9 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_8.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_9 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_8.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_9.Type == 9 && __t_tag_9.IntVal == 2465973597) {
 var __t10 gopurs_runtime.Value
 {
-var __t_tag_11 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_8.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_11 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_8.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_11.Type == 9 && __t_tag_11.IntVal == 3711209382) {
-__t10 = gopurs_runtime.Apply(e_4, (*pkg_Data_Either.Constructor_Left)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_8.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
+__t10 = gopurs_runtime.Apply(e_4, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_8.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_10
 } else {
 
 }
 }
 {
-var __t_tag_12 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_8.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_12 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_8.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_12.Type == 9 && __t_tag_12.IntVal == 2465973597) {
 var __t13 gopurs_runtime.Value
 {
-var __t_tag_14 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_8.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_14 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_8.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_14.Type == 9 && __t_tag_14.IntVal == 3711209382) {
-__t13 = gopurs_runtime.Apply(f_5, (*pkg_Data_Either.Constructor_Left)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_8.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
+__t13 = gopurs_runtime.Apply(f_5, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_8.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_13
 } else {
 
 }
 }
 {
-var __t_tag_15 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_8.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_15 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_8.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_15.Type == 9 && __t_tag_15.IntVal == 2465973597) {
 var __t16 gopurs_runtime.Value
 {
-var __t_tag_17 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_8.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_17 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_8.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_17.Type == 9 && __t_tag_17.IntVal == 3711209382) {
-__t16 = gopurs_runtime.Apply(g_6, (*pkg_Data_Either.Constructor_Left)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_8.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
+__t16 = gopurs_runtime.Apply(g_6, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_8.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_16
 } else {
 
 }
 }
 {
-var __t_tag_18 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_8.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_18 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_8.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_18.Type == 9 && __t_tag_18.IntVal == 2465973597) {
 var __t19 gopurs_runtime.Value
 {
-var __t_tag_20 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_8.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_20 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_8.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_20.Type == 9 && __t_tag_20.IntVal == 3711209382) {
-__t19 = gopurs_runtime.Apply(h_7, (*pkg_Data_Either.Constructor_Left)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_8.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
+__t19 = gopurs_runtime.Apply(h_7, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_8.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_19
 } else {
 
 }
 }
 {
-var __t_tag_21 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_8.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_21 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_8.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_21.Type == 9 && __t_tag_21.IntVal == 2465973597) {
 var spin_9_22 gopurs_runtime.Value
 spin_9_22 = gopurs_runtime.Func(func(v_10_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
@@ -1067,7 +1067,7 @@ return gopurs_runtime.Value{}
 }
 }()
 })
-__t19 = gopurs_runtime.Apply(spin_9_22, (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_8.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
+__t19 = gopurs_runtime.Apply(spin_9_22, (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_8.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_19
 } else {
 
@@ -1170,7 +1170,7 @@ _ = y_7
 var __t0 gopurs_runtime.Value
 {
 if (y_7.Type == 9 && y_7.IntVal == 3711209382) {
-__t0 = gopurs_runtime.Apply(a_0, (*pkg_Data_Either.Constructor_Left)(y_7.UnsafePtr).V0)
+__t0 = gopurs_runtime.Apply(a_0, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(y_7.UnsafePtr).V0)
 goto end_branch_0
 } else {
 
@@ -1180,81 +1180,81 @@ goto end_branch_0
 if (y_7.Type == 9 && y_7.IntVal == 2465973597) {
 var __t1 gopurs_runtime.Value
 {
-var __t_tag_2 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)(y_7.UnsafePtr).V0
+var __t_tag_2 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_7.UnsafePtr).V0
 if (__t_tag_2.Type == 9 && __t_tag_2.IntVal == 3711209382) {
-__t1 = gopurs_runtime.Apply(b_1, (*pkg_Data_Either.Constructor_Left)((*pkg_Data_Either.Constructor_Right)(y_7.UnsafePtr).V0.UnsafePtr).V0)
+__t1 = gopurs_runtime.Apply(b_1, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_7.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_1
 } else {
 
 }
 }
 {
-var __t_tag_3 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)(y_7.UnsafePtr).V0
+var __t_tag_3 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_7.UnsafePtr).V0
 if (__t_tag_3.Type == 9 && __t_tag_3.IntVal == 2465973597) {
 var __t4 gopurs_runtime.Value
 {
-var __t_tag_5 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_7.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_5 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_7.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_5.Type == 9 && __t_tag_5.IntVal == 3711209382) {
-__t4 = gopurs_runtime.Apply(c_2, (*pkg_Data_Either.Constructor_Left)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_7.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
+__t4 = gopurs_runtime.Apply(c_2, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_7.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_4
 } else {
 
 }
 }
 {
-var __t_tag_6 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_7.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_6 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_7.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_6.Type == 9 && __t_tag_6.IntVal == 2465973597) {
 var __t7 gopurs_runtime.Value
 {
-var __t_tag_8 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_7.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_8 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_7.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_8.Type == 9 && __t_tag_8.IntVal == 3711209382) {
-__t7 = gopurs_runtime.Apply(d_3, (*pkg_Data_Either.Constructor_Left)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_7.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
+__t7 = gopurs_runtime.Apply(d_3, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_7.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_7
 } else {
 
 }
 }
 {
-var __t_tag_9 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_7.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_9 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_7.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_9.Type == 9 && __t_tag_9.IntVal == 2465973597) {
 var __t10 gopurs_runtime.Value
 {
-var __t_tag_11 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_7.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_11 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_7.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_11.Type == 9 && __t_tag_11.IntVal == 3711209382) {
-__t10 = gopurs_runtime.Apply(e_4, (*pkg_Data_Either.Constructor_Left)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_7.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
+__t10 = gopurs_runtime.Apply(e_4, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_7.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_10
 } else {
 
 }
 }
 {
-var __t_tag_12 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_7.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_12 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_7.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_12.Type == 9 && __t_tag_12.IntVal == 2465973597) {
 var __t13 gopurs_runtime.Value
 {
-var __t_tag_14 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_7.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_14 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_7.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_14.Type == 9 && __t_tag_14.IntVal == 3711209382) {
-__t13 = gopurs_runtime.Apply(f_5, (*pkg_Data_Either.Constructor_Left)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_7.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
+__t13 = gopurs_runtime.Apply(f_5, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_7.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_13
 } else {
 
 }
 }
 {
-var __t_tag_15 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_7.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_15 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_7.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_15.Type == 9 && __t_tag_15.IntVal == 2465973597) {
 var __t16 gopurs_runtime.Value
 {
-var __t_tag_17 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_7.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_17 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_7.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_17.Type == 9 && __t_tag_17.IntVal == 3711209382) {
-__t16 = gopurs_runtime.Apply(g_6, (*pkg_Data_Either.Constructor_Left)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_7.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
+__t16 = gopurs_runtime.Apply(g_6, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_7.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_16
 } else {
 
 }
 }
 {
-var __t_tag_18 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_7.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_18 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_7.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_18.Type == 9 && __t_tag_18.IntVal == 2465973597) {
 var spin_8_19 gopurs_runtime.Value
 spin_8_19 = gopurs_runtime.Func(func(v_9_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
@@ -1271,7 +1271,7 @@ return gopurs_runtime.Value{}
 }
 }()
 })
-__t16 = gopurs_runtime.Apply(spin_8_19, (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_7.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
+__t16 = gopurs_runtime.Apply(spin_8_19, (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_7.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_16
 } else {
 
@@ -1362,7 +1362,7 @@ _ = y_6
 var __t0 gopurs_runtime.Value
 {
 if (y_6.Type == 9 && y_6.IntVal == 3711209382) {
-__t0 = gopurs_runtime.Apply(a_0, (*pkg_Data_Either.Constructor_Left)(y_6.UnsafePtr).V0)
+__t0 = gopurs_runtime.Apply(a_0, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(y_6.UnsafePtr).V0)
 goto end_branch_0
 } else {
 
@@ -1372,68 +1372,68 @@ goto end_branch_0
 if (y_6.Type == 9 && y_6.IntVal == 2465973597) {
 var __t1 gopurs_runtime.Value
 {
-var __t_tag_2 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)(y_6.UnsafePtr).V0
+var __t_tag_2 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_6.UnsafePtr).V0
 if (__t_tag_2.Type == 9 && __t_tag_2.IntVal == 3711209382) {
-__t1 = gopurs_runtime.Apply(b_1, (*pkg_Data_Either.Constructor_Left)((*pkg_Data_Either.Constructor_Right)(y_6.UnsafePtr).V0.UnsafePtr).V0)
+__t1 = gopurs_runtime.Apply(b_1, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_6.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_1
 } else {
 
 }
 }
 {
-var __t_tag_3 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)(y_6.UnsafePtr).V0
+var __t_tag_3 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_6.UnsafePtr).V0
 if (__t_tag_3.Type == 9 && __t_tag_3.IntVal == 2465973597) {
 var __t4 gopurs_runtime.Value
 {
-var __t_tag_5 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_6.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_5 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_6.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_5.Type == 9 && __t_tag_5.IntVal == 3711209382) {
-__t4 = gopurs_runtime.Apply(c_2, (*pkg_Data_Either.Constructor_Left)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_6.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
+__t4 = gopurs_runtime.Apply(c_2, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_6.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_4
 } else {
 
 }
 }
 {
-var __t_tag_6 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_6.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_6 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_6.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_6.Type == 9 && __t_tag_6.IntVal == 2465973597) {
 var __t7 gopurs_runtime.Value
 {
-var __t_tag_8 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_6.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_8 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_6.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_8.Type == 9 && __t_tag_8.IntVal == 3711209382) {
-__t7 = gopurs_runtime.Apply(d_3, (*pkg_Data_Either.Constructor_Left)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_6.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
+__t7 = gopurs_runtime.Apply(d_3, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_6.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_7
 } else {
 
 }
 }
 {
-var __t_tag_9 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_6.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_9 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_6.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_9.Type == 9 && __t_tag_9.IntVal == 2465973597) {
 var __t10 gopurs_runtime.Value
 {
-var __t_tag_11 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_6.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_11 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_6.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_11.Type == 9 && __t_tag_11.IntVal == 3711209382) {
-__t10 = gopurs_runtime.Apply(e_4, (*pkg_Data_Either.Constructor_Left)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_6.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
+__t10 = gopurs_runtime.Apply(e_4, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_6.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_10
 } else {
 
 }
 }
 {
-var __t_tag_12 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_6.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_12 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_6.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_12.Type == 9 && __t_tag_12.IntVal == 2465973597) {
 var __t13 gopurs_runtime.Value
 {
-var __t_tag_14 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_6.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_14 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_6.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_14.Type == 9 && __t_tag_14.IntVal == 3711209382) {
-__t13 = gopurs_runtime.Apply(f_5, (*pkg_Data_Either.Constructor_Left)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_6.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
+__t13 = gopurs_runtime.Apply(f_5, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_6.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_13
 } else {
 
 }
 }
 {
-var __t_tag_15 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_6.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_15 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_6.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_15.Type == 9 && __t_tag_15.IntVal == 2465973597) {
 var spin_7_16 gopurs_runtime.Value
 spin_7_16 = gopurs_runtime.Func(func(v_8_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
@@ -1450,7 +1450,7 @@ return gopurs_runtime.Value{}
 }
 }()
 })
-__t13 = gopurs_runtime.Apply(spin_7_16, (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_6.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
+__t13 = gopurs_runtime.Apply(spin_7_16, (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_6.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_13
 } else {
 
@@ -1529,7 +1529,7 @@ _ = y_5
 var __t0 gopurs_runtime.Value
 {
 if (y_5.Type == 9 && y_5.IntVal == 3711209382) {
-__t0 = gopurs_runtime.Apply(a_0, (*pkg_Data_Either.Constructor_Left)(y_5.UnsafePtr).V0)
+__t0 = gopurs_runtime.Apply(a_0, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(y_5.UnsafePtr).V0)
 goto end_branch_0
 } else {
 
@@ -1539,55 +1539,55 @@ goto end_branch_0
 if (y_5.Type == 9 && y_5.IntVal == 2465973597) {
 var __t1 gopurs_runtime.Value
 {
-var __t_tag_2 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)(y_5.UnsafePtr).V0
+var __t_tag_2 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_5.UnsafePtr).V0
 if (__t_tag_2.Type == 9 && __t_tag_2.IntVal == 3711209382) {
-__t1 = gopurs_runtime.Apply(b_1, (*pkg_Data_Either.Constructor_Left)((*pkg_Data_Either.Constructor_Right)(y_5.UnsafePtr).V0.UnsafePtr).V0)
+__t1 = gopurs_runtime.Apply(b_1, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_5.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_1
 } else {
 
 }
 }
 {
-var __t_tag_3 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)(y_5.UnsafePtr).V0
+var __t_tag_3 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_5.UnsafePtr).V0
 if (__t_tag_3.Type == 9 && __t_tag_3.IntVal == 2465973597) {
 var __t4 gopurs_runtime.Value
 {
-var __t_tag_5 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_5.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_5 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_5.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_5.Type == 9 && __t_tag_5.IntVal == 3711209382) {
-__t4 = gopurs_runtime.Apply(c_2, (*pkg_Data_Either.Constructor_Left)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_5.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
+__t4 = gopurs_runtime.Apply(c_2, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_5.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_4
 } else {
 
 }
 }
 {
-var __t_tag_6 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_5.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_6 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_5.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_6.Type == 9 && __t_tag_6.IntVal == 2465973597) {
 var __t7 gopurs_runtime.Value
 {
-var __t_tag_8 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_5.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_8 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_5.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_8.Type == 9 && __t_tag_8.IntVal == 3711209382) {
-__t7 = gopurs_runtime.Apply(d_3, (*pkg_Data_Either.Constructor_Left)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_5.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
+__t7 = gopurs_runtime.Apply(d_3, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_5.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_7
 } else {
 
 }
 }
 {
-var __t_tag_9 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_5.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_9 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_5.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_9.Type == 9 && __t_tag_9.IntVal == 2465973597) {
 var __t10 gopurs_runtime.Value
 {
-var __t_tag_11 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_5.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_11 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_5.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_11.Type == 9 && __t_tag_11.IntVal == 3711209382) {
-__t10 = gopurs_runtime.Apply(e_4, (*pkg_Data_Either.Constructor_Left)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_5.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
+__t10 = gopurs_runtime.Apply(e_4, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_5.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_10
 } else {
 
 }
 }
 {
-var __t_tag_12 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_5.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_12 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_5.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_12.Type == 9 && __t_tag_12.IntVal == 2465973597) {
 var spin_6_13 gopurs_runtime.Value
 spin_6_13 = gopurs_runtime.Func(func(v_7_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
@@ -1604,7 +1604,7 @@ return gopurs_runtime.Value{}
 }
 }()
 })
-__t10 = gopurs_runtime.Apply(spin_6_13, (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_5.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
+__t10 = gopurs_runtime.Apply(spin_6_13, (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_5.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_10
 } else {
 
@@ -1671,7 +1671,7 @@ _ = y_4
 var __t0 gopurs_runtime.Value
 {
 if (y_4.Type == 9 && y_4.IntVal == 3711209382) {
-__t0 = gopurs_runtime.Apply(a_0, (*pkg_Data_Either.Constructor_Left)(y_4.UnsafePtr).V0)
+__t0 = gopurs_runtime.Apply(a_0, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(y_4.UnsafePtr).V0)
 goto end_branch_0
 } else {
 
@@ -1681,42 +1681,42 @@ goto end_branch_0
 if (y_4.Type == 9 && y_4.IntVal == 2465973597) {
 var __t1 gopurs_runtime.Value
 {
-var __t_tag_2 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)(y_4.UnsafePtr).V0
+var __t_tag_2 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_4.UnsafePtr).V0
 if (__t_tag_2.Type == 9 && __t_tag_2.IntVal == 3711209382) {
-__t1 = gopurs_runtime.Apply(b_1, (*pkg_Data_Either.Constructor_Left)((*pkg_Data_Either.Constructor_Right)(y_4.UnsafePtr).V0.UnsafePtr).V0)
+__t1 = gopurs_runtime.Apply(b_1, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_4.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_1
 } else {
 
 }
 }
 {
-var __t_tag_3 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)(y_4.UnsafePtr).V0
+var __t_tag_3 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_4.UnsafePtr).V0
 if (__t_tag_3.Type == 9 && __t_tag_3.IntVal == 2465973597) {
 var __t4 gopurs_runtime.Value
 {
-var __t_tag_5 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_4.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_5 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_4.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_5.Type == 9 && __t_tag_5.IntVal == 3711209382) {
-__t4 = gopurs_runtime.Apply(c_2, (*pkg_Data_Either.Constructor_Left)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_4.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
+__t4 = gopurs_runtime.Apply(c_2, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_4.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_4
 } else {
 
 }
 }
 {
-var __t_tag_6 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_4.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_6 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_4.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_6.Type == 9 && __t_tag_6.IntVal == 2465973597) {
 var __t7 gopurs_runtime.Value
 {
-var __t_tag_8 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_4.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_8 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_4.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_8.Type == 9 && __t_tag_8.IntVal == 3711209382) {
-__t7 = gopurs_runtime.Apply(d_3, (*pkg_Data_Either.Constructor_Left)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_4.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
+__t7 = gopurs_runtime.Apply(d_3, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_4.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_7
 } else {
 
 }
 }
 {
-var __t_tag_9 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_4.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_9 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_4.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_9.Type == 9 && __t_tag_9.IntVal == 2465973597) {
 var spin_5_10 gopurs_runtime.Value
 spin_5_10 = gopurs_runtime.Func(func(v_6_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
@@ -1733,7 +1733,7 @@ return gopurs_runtime.Value{}
 }
 }()
 })
-__t7 = gopurs_runtime.Apply(spin_5_10, (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_4.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
+__t7 = gopurs_runtime.Apply(spin_5_10, (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_4.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_7
 } else {
 
@@ -1788,7 +1788,7 @@ _ = y_3
 var __t0 gopurs_runtime.Value
 {
 if (y_3.Type == 9 && y_3.IntVal == 3711209382) {
-__t0 = gopurs_runtime.Apply(a_0, (*pkg_Data_Either.Constructor_Left)(y_3.UnsafePtr).V0)
+__t0 = gopurs_runtime.Apply(a_0, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(y_3.UnsafePtr).V0)
 goto end_branch_0
 } else {
 
@@ -1798,29 +1798,29 @@ goto end_branch_0
 if (y_3.Type == 9 && y_3.IntVal == 2465973597) {
 var __t1 gopurs_runtime.Value
 {
-var __t_tag_2 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)(y_3.UnsafePtr).V0
+var __t_tag_2 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_3.UnsafePtr).V0
 if (__t_tag_2.Type == 9 && __t_tag_2.IntVal == 3711209382) {
-__t1 = gopurs_runtime.Apply(b_1, (*pkg_Data_Either.Constructor_Left)((*pkg_Data_Either.Constructor_Right)(y_3.UnsafePtr).V0.UnsafePtr).V0)
+__t1 = gopurs_runtime.Apply(b_1, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_3.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_1
 } else {
 
 }
 }
 {
-var __t_tag_3 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)(y_3.UnsafePtr).V0
+var __t_tag_3 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_3.UnsafePtr).V0
 if (__t_tag_3.Type == 9 && __t_tag_3.IntVal == 2465973597) {
 var __t4 gopurs_runtime.Value
 {
-var __t_tag_5 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_3.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_5 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_3.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_5.Type == 9 && __t_tag_5.IntVal == 3711209382) {
-__t4 = gopurs_runtime.Apply(c_2, (*pkg_Data_Either.Constructor_Left)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_3.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
+__t4 = gopurs_runtime.Apply(c_2, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_3.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_4
 } else {
 
 }
 }
 {
-var __t_tag_6 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_3.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_6 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_3.UnsafePtr).V0.UnsafePtr).V0
 if (__t_tag_6.Type == 9 && __t_tag_6.IntVal == 2465973597) {
 var spin_4_7 gopurs_runtime.Value
 spin_4_7 = gopurs_runtime.Func(func(v_5_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
@@ -1837,7 +1837,7 @@ return gopurs_runtime.Value{}
 }
 }()
 })
-__t4 = gopurs_runtime.Apply(spin_4_7, (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_3.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
+__t4 = gopurs_runtime.Apply(spin_4_7, (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_3.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_4
 } else {
 
@@ -1880,7 +1880,7 @@ _ = y_2
 var __t0 gopurs_runtime.Value
 {
 if (y_2.Type == 9 && y_2.IntVal == 3711209382) {
-__t0 = gopurs_runtime.Apply(a_0, (*pkg_Data_Either.Constructor_Left)(y_2.UnsafePtr).V0)
+__t0 = gopurs_runtime.Apply(a_0, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0)
 goto end_branch_0
 } else {
 
@@ -1890,16 +1890,16 @@ goto end_branch_0
 if (y_2.Type == 9 && y_2.IntVal == 2465973597) {
 var __t1 gopurs_runtime.Value
 {
-var __t_tag_2 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0
+var __t_tag_2 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0
 if (__t_tag_2.Type == 9 && __t_tag_2.IntVal == 3711209382) {
-__t1 = gopurs_runtime.Apply(b_1, (*pkg_Data_Either.Constructor_Left)((*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0.UnsafePtr).V0)
+__t1 = gopurs_runtime.Apply(b_1, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_1
 } else {
 
 }
 }
 {
-var __t_tag_3 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0
+var __t_tag_3 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0
 if (__t_tag_3.Type == 9 && __t_tag_3.IntVal == 2465973597) {
 var spin_3_4 gopurs_runtime.Value
 spin_3_4 = gopurs_runtime.Func(func(v_4_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
@@ -1916,7 +1916,7 @@ return gopurs_runtime.Value{}
 }
 }()
 })
-__t1 = gopurs_runtime.Apply(spin_3_4, (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0.UnsafePtr).V0)
+__t1 = gopurs_runtime.Apply(spin_3_4, (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_1
 } else {
 
@@ -1945,7 +1945,7 @@ _ = y_0
 var __t0 gopurs_runtime.Value
 {
 if (y_0.Type == 9 && y_0.IntVal == 3711209382) {
-__t0 = (*pkg_Data_Either.Constructor_Left)(y_0.UnsafePtr).V0
+__t0 = (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(y_0.UnsafePtr).V0
 goto end_branch_0
 } else {
 
@@ -1968,7 +1968,7 @@ return gopurs_runtime.Value{}
 }
 }()
 })
-__t0 = gopurs_runtime.Apply(spin_1_1, (*pkg_Data_Either.Constructor_Right)(y_0.UnsafePtr).V0)
+__t0 = gopurs_runtime.Apply(spin_1_1, (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_0.UnsafePtr).V0)
 goto end_branch_0
 } else {
 
@@ -1993,35 +1993,35 @@ var __t0 gopurs_runtime.Value
 var __t_and_16 bool = false
 if (y_2.Type == 9 && y_2.IntVal == 2465973597) {
 
-var __t_tag_1 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0
+var __t_tag_1 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0
 var __t_and_15 bool = false
 if (__t_tag_1.Type == 9 && __t_tag_1.IntVal == 2465973597) {
 
-var __t_tag_2 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_2 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0.UnsafePtr).V0
 var __t_and_14 bool = false
 if (__t_tag_2.Type == 9 && __t_tag_2.IntVal == 2465973597) {
 
-var __t_tag_3 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_3 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 var __t_and_13 bool = false
 if (__t_tag_3.Type == 9 && __t_tag_3.IntVal == 2465973597) {
 
-var __t_tag_4 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_4 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 var __t_and_12 bool = false
 if (__t_tag_4.Type == 9 && __t_tag_4.IntVal == 2465973597) {
 
-var __t_tag_5 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_5 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 var __t_and_11 bool = false
 if (__t_tag_5.Type == 9 && __t_tag_5.IntVal == 2465973597) {
 
-var __t_tag_6 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_6 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 var __t_and_10 bool = false
 if (__t_tag_6.Type == 9 && __t_tag_6.IntVal == 2465973597) {
 
-var __t_tag_7 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_7 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 var __t_and_9 bool = false
 if (__t_tag_7.Type == 9 && __t_tag_7.IntVal == 2465973597) {
 
-var __t_tag_8 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_8 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 __t_and_9 = (__t_tag_8.Type == 9 && __t_tag_8.IntVal == 3711209382)
 }
 __t_and_10 = __t_and_9
@@ -2039,7 +2039,7 @@ __t_and_15 = __t_and_14
 __t_and_16 = __t_and_15
 }
 if __t_and_16 {
-__t0 = gopurs_runtime.Apply(f_1, (*pkg_Data_Either.Constructor_Left)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
+__t0 = gopurs_runtime.Apply(f_1, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_0
 } else {
 
@@ -2064,31 +2064,31 @@ var __t0 gopurs_runtime.Value
 var __t_and_14 bool = false
 if (y_2.Type == 9 && y_2.IntVal == 2465973597) {
 
-var __t_tag_1 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0
+var __t_tag_1 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0
 var __t_and_13 bool = false
 if (__t_tag_1.Type == 9 && __t_tag_1.IntVal == 2465973597) {
 
-var __t_tag_2 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_2 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0.UnsafePtr).V0
 var __t_and_12 bool = false
 if (__t_tag_2.Type == 9 && __t_tag_2.IntVal == 2465973597) {
 
-var __t_tag_3 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_3 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 var __t_and_11 bool = false
 if (__t_tag_3.Type == 9 && __t_tag_3.IntVal == 2465973597) {
 
-var __t_tag_4 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_4 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 var __t_and_10 bool = false
 if (__t_tag_4.Type == 9 && __t_tag_4.IntVal == 2465973597) {
 
-var __t_tag_5 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_5 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 var __t_and_9 bool = false
 if (__t_tag_5.Type == 9 && __t_tag_5.IntVal == 2465973597) {
 
-var __t_tag_6 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_6 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 var __t_and_8 bool = false
 if (__t_tag_6.Type == 9 && __t_tag_6.IntVal == 2465973597) {
 
-var __t_tag_7 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_7 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 __t_and_8 = (__t_tag_7.Type == 9 && __t_tag_7.IntVal == 3711209382)
 }
 __t_and_9 = __t_and_8
@@ -2104,7 +2104,7 @@ __t_and_13 = __t_and_12
 __t_and_14 = __t_and_13
 }
 if __t_and_14 {
-__t0 = gopurs_runtime.Apply(f_1, (*pkg_Data_Either.Constructor_Left)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
+__t0 = gopurs_runtime.Apply(f_1, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_0
 } else {
 
@@ -2129,27 +2129,27 @@ var __t0 gopurs_runtime.Value
 var __t_and_12 bool = false
 if (y_2.Type == 9 && y_2.IntVal == 2465973597) {
 
-var __t_tag_1 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0
+var __t_tag_1 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0
 var __t_and_11 bool = false
 if (__t_tag_1.Type == 9 && __t_tag_1.IntVal == 2465973597) {
 
-var __t_tag_2 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_2 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0.UnsafePtr).V0
 var __t_and_10 bool = false
 if (__t_tag_2.Type == 9 && __t_tag_2.IntVal == 2465973597) {
 
-var __t_tag_3 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_3 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 var __t_and_9 bool = false
 if (__t_tag_3.Type == 9 && __t_tag_3.IntVal == 2465973597) {
 
-var __t_tag_4 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_4 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 var __t_and_8 bool = false
 if (__t_tag_4.Type == 9 && __t_tag_4.IntVal == 2465973597) {
 
-var __t_tag_5 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_5 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 var __t_and_7 bool = false
 if (__t_tag_5.Type == 9 && __t_tag_5.IntVal == 2465973597) {
 
-var __t_tag_6 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_6 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 __t_and_7 = (__t_tag_6.Type == 9 && __t_tag_6.IntVal == 3711209382)
 }
 __t_and_8 = __t_and_7
@@ -2163,7 +2163,7 @@ __t_and_11 = __t_and_10
 __t_and_12 = __t_and_11
 }
 if __t_and_12 {
-__t0 = gopurs_runtime.Apply(f_1, (*pkg_Data_Either.Constructor_Left)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
+__t0 = gopurs_runtime.Apply(f_1, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_0
 } else {
 
@@ -2188,23 +2188,23 @@ var __t0 gopurs_runtime.Value
 var __t_and_10 bool = false
 if (y_2.Type == 9 && y_2.IntVal == 2465973597) {
 
-var __t_tag_1 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0
+var __t_tag_1 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0
 var __t_and_9 bool = false
 if (__t_tag_1.Type == 9 && __t_tag_1.IntVal == 2465973597) {
 
-var __t_tag_2 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_2 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0.UnsafePtr).V0
 var __t_and_8 bool = false
 if (__t_tag_2.Type == 9 && __t_tag_2.IntVal == 2465973597) {
 
-var __t_tag_3 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_3 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 var __t_and_7 bool = false
 if (__t_tag_3.Type == 9 && __t_tag_3.IntVal == 2465973597) {
 
-var __t_tag_4 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_4 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 var __t_and_6 bool = false
 if (__t_tag_4.Type == 9 && __t_tag_4.IntVal == 2465973597) {
 
-var __t_tag_5 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_5 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 __t_and_6 = (__t_tag_5.Type == 9 && __t_tag_5.IntVal == 3711209382)
 }
 __t_and_7 = __t_and_6
@@ -2216,7 +2216,7 @@ __t_and_9 = __t_and_8
 __t_and_10 = __t_and_9
 }
 if __t_and_10 {
-__t0 = gopurs_runtime.Apply(f_1, (*pkg_Data_Either.Constructor_Left)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
+__t0 = gopurs_runtime.Apply(f_1, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_0
 } else {
 
@@ -2241,19 +2241,19 @@ var __t0 gopurs_runtime.Value
 var __t_and_8 bool = false
 if (y_2.Type == 9 && y_2.IntVal == 2465973597) {
 
-var __t_tag_1 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0
+var __t_tag_1 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0
 var __t_and_7 bool = false
 if (__t_tag_1.Type == 9 && __t_tag_1.IntVal == 2465973597) {
 
-var __t_tag_2 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_2 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0.UnsafePtr).V0
 var __t_and_6 bool = false
 if (__t_tag_2.Type == 9 && __t_tag_2.IntVal == 2465973597) {
 
-var __t_tag_3 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_3 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 var __t_and_5 bool = false
 if (__t_tag_3.Type == 9 && __t_tag_3.IntVal == 2465973597) {
 
-var __t_tag_4 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_4 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 __t_and_5 = (__t_tag_4.Type == 9 && __t_tag_4.IntVal == 3711209382)
 }
 __t_and_6 = __t_and_5
@@ -2263,7 +2263,7 @@ __t_and_7 = __t_and_6
 __t_and_8 = __t_and_7
 }
 if __t_and_8 {
-__t0 = gopurs_runtime.Apply(f_1, (*pkg_Data_Either.Constructor_Left)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
+__t0 = gopurs_runtime.Apply(f_1, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_0
 } else {
 
@@ -2288,15 +2288,15 @@ var __t0 gopurs_runtime.Value
 var __t_and_6 bool = false
 if (y_2.Type == 9 && y_2.IntVal == 2465973597) {
 
-var __t_tag_1 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0
+var __t_tag_1 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0
 var __t_and_5 bool = false
 if (__t_tag_1.Type == 9 && __t_tag_1.IntVal == 2465973597) {
 
-var __t_tag_2 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_2 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0.UnsafePtr).V0
 var __t_and_4 bool = false
 if (__t_tag_2.Type == 9 && __t_tag_2.IntVal == 2465973597) {
 
-var __t_tag_3 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_3 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 __t_and_4 = (__t_tag_3.Type == 9 && __t_tag_3.IntVal == 3711209382)
 }
 __t_and_5 = __t_and_4
@@ -2304,7 +2304,7 @@ __t_and_5 = __t_and_4
 __t_and_6 = __t_and_5
 }
 if __t_and_6 {
-__t0 = gopurs_runtime.Apply(f_1, (*pkg_Data_Either.Constructor_Left)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
+__t0 = gopurs_runtime.Apply(f_1, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_0
 } else {
 
@@ -2329,17 +2329,17 @@ var __t0 gopurs_runtime.Value
 var __t_and_4 bool = false
 if (y_2.Type == 9 && y_2.IntVal == 2465973597) {
 
-var __t_tag_1 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0
+var __t_tag_1 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0
 var __t_and_3 bool = false
 if (__t_tag_1.Type == 9 && __t_tag_1.IntVal == 2465973597) {
 
-var __t_tag_2 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_2 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0.UnsafePtr).V0
 __t_and_3 = (__t_tag_2.Type == 9 && __t_tag_2.IntVal == 3711209382)
 }
 __t_and_4 = __t_and_3
 }
 if __t_and_4 {
-__t0 = gopurs_runtime.Apply(f_1, (*pkg_Data_Either.Constructor_Left)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
+__t0 = gopurs_runtime.Apply(f_1, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_0
 } else {
 
@@ -2364,11 +2364,11 @@ var __t0 gopurs_runtime.Value
 var __t_and_2 bool = false
 if (y_2.Type == 9 && y_2.IntVal == 2465973597) {
 
-var __t_tag_1 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0
+var __t_tag_1 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0
 __t_and_2 = (__t_tag_1.Type == 9 && __t_tag_1.IntVal == 3711209382)
 }
 if __t_and_2 {
-__t0 = gopurs_runtime.Apply(f_1, (*pkg_Data_Either.Constructor_Left)((*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0.UnsafePtr).V0)
+__t0 = gopurs_runtime.Apply(f_1, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_0
 } else {
 
@@ -2393,39 +2393,39 @@ var __t0 gopurs_runtime.Value
 var __t_and_18 bool = false
 if (y_2.Type == 9 && y_2.IntVal == 2465973597) {
 
-var __t_tag_1 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0
+var __t_tag_1 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0
 var __t_and_17 bool = false
 if (__t_tag_1.Type == 9 && __t_tag_1.IntVal == 2465973597) {
 
-var __t_tag_2 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_2 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0.UnsafePtr).V0
 var __t_and_16 bool = false
 if (__t_tag_2.Type == 9 && __t_tag_2.IntVal == 2465973597) {
 
-var __t_tag_3 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_3 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 var __t_and_15 bool = false
 if (__t_tag_3.Type == 9 && __t_tag_3.IntVal == 2465973597) {
 
-var __t_tag_4 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_4 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 var __t_and_14 bool = false
 if (__t_tag_4.Type == 9 && __t_tag_4.IntVal == 2465973597) {
 
-var __t_tag_5 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_5 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 var __t_and_13 bool = false
 if (__t_tag_5.Type == 9 && __t_tag_5.IntVal == 2465973597) {
 
-var __t_tag_6 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_6 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 var __t_and_12 bool = false
 if (__t_tag_6.Type == 9 && __t_tag_6.IntVal == 2465973597) {
 
-var __t_tag_7 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_7 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 var __t_and_11 bool = false
 if (__t_tag_7.Type == 9 && __t_tag_7.IntVal == 2465973597) {
 
-var __t_tag_8 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_8 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 var __t_and_10 bool = false
 if (__t_tag_8.Type == 9 && __t_tag_8.IntVal == 2465973597) {
 
-var __t_tag_9 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
+var __t_tag_9 gopurs_runtime.Value = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0
 __t_and_10 = (__t_tag_9.Type == 9 && __t_tag_9.IntVal == 3711209382)
 }
 __t_and_11 = __t_and_10
@@ -2445,7 +2445,7 @@ __t_and_17 = __t_and_16
 __t_and_18 = __t_and_17
 }
 if __t_and_18 {
-__t0 = gopurs_runtime.Apply(f_1, (*pkg_Data_Either.Constructor_Left)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)((*pkg_Data_Either.Constructor_Right)(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
+__t0 = gopurs_runtime.Apply(f_1, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0.UnsafePtr).V0)
 goto end_branch_0
 } else {
 
@@ -2468,7 +2468,7 @@ _ = y_2
 var __t0 gopurs_runtime.Value
 {
 if (y_2.Type == 9 && y_2.IntVal == 3711209382) {
-__t0 = gopurs_runtime.Apply(f_1, (*pkg_Data_Either.Constructor_Left)(y_2.UnsafePtr).V0)
+__t0 = gopurs_runtime.Apply(f_1, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(y_2.UnsafePtr).V0)
 goto end_branch_0
 } else {
 

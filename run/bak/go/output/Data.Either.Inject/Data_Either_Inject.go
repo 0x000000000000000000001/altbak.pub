@@ -5,6 +5,7 @@ import (
 	sync "sync"
 	pkg_Data_Maybe "gopurs/output/Data.Maybe"
 	pkg_Data_Either "gopurs/output/Data.Either"
+	pkg_Control_Semigroupoid "gopurs/output/Control.Semigroupoid"
 	unsafe "unsafe"
 )
 
@@ -38,7 +39,7 @@ func Get_injectLeft() gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
 if (v2_0.Type == 9 && v2_0.IntVal == 3711209382) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just{(*pkg_Data_Either.Constructor_Left)(v2_0.UnsafePtr).V0})}
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{(*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(v2_0.UnsafePtr).V0})}
 goto end_branch_0
 } else {
 
@@ -99,9 +100,7 @@ return ((*gopurs_runtime.RecordData2)(dict_0.UnsafePtr)).V0
 func Call_injectRight(dictInject_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictInject_0 gopurs_runtime.Value = dictInject_0_loop
 _ = dictInject_0
-return gopurs_runtime.RecordDict2("inj", "prj", gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right{gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictInject_0.UnsafePtr)).V0, x_1)})}
-}), gopurs_runtime.Func(func(v2_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict2("inj", "prj", gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), pkg_Data_Either.Get_Right(), ((*gopurs_runtime.RecordData2)(dictInject_0.UnsafePtr)).V0), gopurs_runtime.Func(func(v2_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
 if (v2_1.Type == 9 && v2_1.IntVal == 3711209382) {
@@ -113,7 +112,7 @@ goto end_branch_0
 }
 {
 if (v2_1.Type == 9 && v2_1.IntVal == 2465973597) {
-__t0 = gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictInject_0.UnsafePtr)).V1, (*pkg_Data_Either.Constructor_Right)(v2_1.UnsafePtr).V0)
+__t0 = gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictInject_0.UnsafePtr)).V1, (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(v2_1.UnsafePtr).V0)
 goto end_branch_0
 } else {
 

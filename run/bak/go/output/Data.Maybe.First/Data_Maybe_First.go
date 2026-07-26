@@ -254,7 +254,7 @@ goto end_branch_2
 }
 }
 {
-__t2 = gopurs_runtime.Bool(((x_2.Type == 9 && x_2.IntVal == 930809136)) && (((y_3.Type == 9 && y_3.IntVal == 930809136)) && ((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "eq"), (*pkg_Data_Maybe.Constructor_Just)(x_2.UnsafePtr).V0, (*pkg_Data_Maybe.Constructor_Just)(y_3.UnsafePtr).V0).IntVal) != (0))))
+__t2 = gopurs_runtime.Bool(((x_2.Type == 9 && x_2.IntVal == 930809136)) && (((y_3.Type == 9 && y_3.IntVal == 930809136)) && ((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "eq"), (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(x_2.UnsafePtr).V0, (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(y_3.UnsafePtr).V0).IntVal) != (0))))
 }
 end_branch_2:
 return __t2
@@ -295,7 +295,7 @@ goto end_branch_3
 }
 {
 if ((x_3.Type == 9 && x_3.IntVal == 930809136)) && ((y_4.Type == 9 && y_4.IntVal == 930809136)) {
-__t3 = gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictOrd_0.UnsafePtr)).V0, (*pkg_Data_Maybe.Constructor_Just)(x_3.UnsafePtr).V0, (*pkg_Data_Maybe.Constructor_Just)(y_4.UnsafePtr).V0)
+__t3 = gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictOrd_0.UnsafePtr)).V0, (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(x_3.UnsafePtr).V0, (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(y_4.UnsafePtr).V0)
 goto end_branch_3
 } else {
 
@@ -323,7 +323,7 @@ goto end_branch_0
 }
 }
 {
-__t0 = gopurs_runtime.Bool(((x_1.Type == 9 && x_1.IntVal == 930809136)) && (((y_2.Type == 9 && y_2.IntVal == 930809136)) && ((gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictEq_0.UnsafePtr)).V0, (*pkg_Data_Maybe.Constructor_Just)(x_1.UnsafePtr).V0, (*pkg_Data_Maybe.Constructor_Just)(y_2.UnsafePtr).V0).IntVal) != (0))))
+__t0 = gopurs_runtime.Bool(((x_1.Type == 9 && x_1.IntVal == 930809136)) && (((y_2.Type == 9 && y_2.IntVal == 930809136)) && ((gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictEq_0.UnsafePtr)).V0, (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(x_1.UnsafePtr).V0, (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(y_2.UnsafePtr).V0).IntVal) != (0))))
 }
 end_branch_0:
 return __t0

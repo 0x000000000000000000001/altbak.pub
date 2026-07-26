@@ -44,7 +44,7 @@ func Get_Cons() gopurs_runtime.Value {
 	once_Cons.Do(func() {
 		cache_Cons = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(&Constructor_Cons{value0, value1})}
+return gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(&Constructor_Cons[gopurs_runtime.Value]{value0, value1})}
 })
 })
 	})
@@ -115,13 +115,13 @@ return gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(g
 	return cache_act
 }
 
-type Constructor_Nil struct {
+type Constructor_Nil[T_a any] struct {
 	
 }
 
 
-type Constructor_Cons struct {
-	V0 gopurs_runtime.Value
+type Constructor_Cons[T_a any] struct {
+	V0 T_a
 	V1 gopurs_runtime.Value
 }
 
@@ -155,7 +155,7 @@ goto end_branch_1
 }
 {
 curr_3_loop = gopurs_runtime.Int((curr_3.IntVal) - (1))
-acc_4_loop = gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(&Constructor_Cons{curr_3, acc_4})}
+acc_4_loop = gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(&Constructor_Cons[gopurs_runtime.Value]{curr_3, acc_4})}
 continue go__2_0
 __t1 = gopurs_runtime.Value{}
 }
@@ -190,8 +190,8 @@ goto end_branch_0
 {
 if (v2_2.Type == 9 && v2_2.IntVal == 1127792131) {
 v_0_loop = v_0
-v1_1_loop = gopurs_runtime.Apply2(v_0, v1_1, (*Constructor_Cons)(v2_2.UnsafePtr).V0)
-v2_2_loop = (*Constructor_Cons)(v2_2.UnsafePtr).V1
+v1_1_loop = gopurs_runtime.Apply2(v_0, v1_1, (*Constructor_Cons[gopurs_runtime.Value])(v2_2.UnsafePtr).V0)
+v2_2_loop = (*Constructor_Cons[gopurs_runtime.Value])(v2_2.UnsafePtr).V1
 continue foldl
 __t0 = gopurs_runtime.Value{}
 goto end_branch_0
@@ -236,9 +236,9 @@ goto end_branch_1
 if (v_2.Type == 9 && v_2.IntVal == 1127792131) {
 var __t2 gopurs_runtime.Value
 {
-if (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingInt(), "mod"), (*Constructor_Cons)(v_2.UnsafePtr).V0, gopurs_runtime.Int(2)).IntVal) == (0) {
-v_2_loop = (*Constructor_Cons)(v_2.UnsafePtr).V1
-v1_3_loop = gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(&Constructor_Cons{(*Constructor_Cons)(v_2.UnsafePtr).V0, v1_3})}
+if (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingInt(), "mod"), (*Constructor_Cons[gopurs_runtime.Value])(v_2.UnsafePtr).V0, gopurs_runtime.Int(2)).IntVal) == (0) {
+v_2_loop = (*Constructor_Cons[gopurs_runtime.Value])(v_2.UnsafePtr).V1
+v1_3_loop = gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(&Constructor_Cons[gopurs_runtime.Value]{(*Constructor_Cons[gopurs_runtime.Value])(v_2.UnsafePtr).V0, v1_3})}
 continue go__1_0
 __t2 = gopurs_runtime.Value{}
 goto end_branch_2
@@ -247,7 +247,7 @@ goto end_branch_2
 }
 }
 {
-v_2_loop = (*Constructor_Cons)(v_2.UnsafePtr).V1
+v_2_loop = (*Constructor_Cons[gopurs_runtime.Value])(v_2.UnsafePtr).V1
 v1_3_loop = v1_3
 continue go__1_0
 __t2 = gopurs_runtime.Value{}

@@ -34,8 +34,8 @@ var cache_mapCont gopurs_runtime.Value
 var once_mapCont sync.Once
 func Get_mapCont() gopurs_runtime.Value {
 	once_mapCont.Do(func() {
-		cache_mapCont = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value, k_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_mapCont(f_0_box, v_1_box, k_2_box)
+		cache_mapCont = gopurs_runtime.Func(func(f_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_mapCont(f_0_box)
 })
 	})
 	return cache_mapCont
@@ -55,12 +55,10 @@ return Call_cont(f_0_box, c_1_box)
 func Call_withCont(f_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
-__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Control_Semigroupoid.Get_semigroupoidFn(), "compose"), pkg_Data_Identity.Get_Identity())
+__local_var_1_0 := gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Control_Semigroupoid.Get_semigroupoidFn(), "compose"), pkg_Data_Identity.Get_Identity()), gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), f_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Control_Semigroupoid.Get_semigroupoidFn(), "compose"), pkg_Unsafe_Coerce.Get_unsafeCoerce())))
 _ = __local_var_1_0
-__local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Control_Semigroupoid.Get_semigroupoidFn(), "compose"), pkg_Unsafe_Coerce.Get_unsafeCoerce())
-_ = __local_var_2_1
-return gopurs_runtime.Func2(func(v_3 gopurs_runtime.Value, k_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(v_3, gopurs_runtime.Apply(__local_var_1_0, gopurs_runtime.Apply(f_0, gopurs_runtime.Apply(__local_var_2_1, k_4))))
+return gopurs_runtime.Func2(func(v_2 gopurs_runtime.Value, k_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(v_2, gopurs_runtime.Apply(__local_var_1_0, k_3))
 })
 }
 
@@ -69,19 +67,17 @@ var cc_0 gopurs_runtime.Value = cc_0_loop
 _ = cc_0
 var k_1 gopurs_runtime.Value = k_1_loop
 _ = k_1
-return gopurs_runtime.Apply(cc_0, gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(k_1, x_2)
-}))
+return gopurs_runtime.Apply(cc_0, gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), pkg_Data_Identity.Get_Identity(), k_1))
 }
 
-func Call_mapCont(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value, k_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_mapCont(f_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
-var v_1 gopurs_runtime.Value = v_1_loop
-_ = v_1
-var k_2 gopurs_runtime.Value = k_2_loop
-_ = k_2
-return gopurs_runtime.Apply(f_0, gopurs_runtime.Apply(v_1, k_2))
+__local_var_1_0 := gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), pkg_Data_Identity.Get_Identity(), gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), f_0, pkg_Unsafe_Coerce.Get_unsafeCoerce()))
+_ = __local_var_1_0
+return gopurs_runtime.Func2(func(v_2 gopurs_runtime.Value, k_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_1_0, gopurs_runtime.Apply(v_2, k_3))
+})
 }
 
 func Call_cont(f_0_loop gopurs_runtime.Value, c_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -89,9 +85,7 @@ var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var c_1 gopurs_runtime.Value = c_1_loop
 _ = c_1
-return gopurs_runtime.Apply(f_0, gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(c_1, x_2)
-}))
+return gopurs_runtime.Apply(f_0, gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), pkg_Unsafe_Coerce.Get_unsafeCoerce(), c_1))
 }
 
 

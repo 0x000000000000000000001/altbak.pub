@@ -29,7 +29,7 @@ _ = __local_var_2_0
 var __t1 gopurs_runtime.Value
 {
 if (__local_var_2_0.Type == 9 && __local_var_2_0.IntVal == 3711209382) {
-__t1 = gopurs_runtime.Apply(pkg_Partial.Get__crashWith(), (*pkg_Data_Either.Constructor_Left)(__local_var_2_0.UnsafePtr).V0)
+__t1 = gopurs_runtime.Apply(pkg_Partial.Get__crashWith(), (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(__local_var_2_0.UnsafePtr).V0)
 goto end_branch_1
 } else {
 
@@ -37,7 +37,7 @@ goto end_branch_1
 }
 {
 if (__local_var_2_0.Type == 9 && __local_var_2_0.IntVal == 2465973597) {
-__t1 = (*pkg_Data_Either.Constructor_Right)(__local_var_2_0.UnsafePtr).V0
+__t1 = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(__local_var_2_0.UnsafePtr).V0
 goto end_branch_1
 } else {
 

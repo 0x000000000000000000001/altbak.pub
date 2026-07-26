@@ -4,6 +4,8 @@ import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
 	pkg_Data_Map_Internal "gopurs/output/Data.Map.Internal"
+	pkg_Control_Semigroupoid "gopurs/output/Control.Semigroupoid"
+	pkg_Data_Set "gopurs/output/Data.Set"
 	pkg_Data_Unit "gopurs/output/Data.Unit"
 	pkg_Data_Function "gopurs/output/Data.Function"
 )
@@ -118,9 +120,9 @@ var cache_keys gopurs_runtime.Value
 var once_keys sync.Once
 func Get_keys() gopurs_runtime.Value {
 	once_keys.Do(func() {
-		cache_keys = gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Map_Internal.Get_functorMap(), "map"), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_keys = gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), pkg_Data_Set.Get_Set(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Map_Internal.Get_functorMap(), "map"), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Unit.Get_unit()
-}))
+})))
 	})
 	return cache_keys
 }

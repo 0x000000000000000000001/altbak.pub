@@ -314,7 +314,7 @@ return gopurs_runtime.UncurriedApp4(Get_peekImpl(), pkg_Data_Maybe.Get_Just(), g
 var __t0 gopurs_runtime.Value
 {
 if (entry_3.Type == 9 && entry_3.IntVal == 930809136) {
-__local_var_4_1 := gopurs_runtime.Apply(f_1, (*pkg_Data_Maybe.Constructor_Just)(entry_3.UnsafePtr).V0)
+__local_var_4_1 := gopurs_runtime.Apply(f_1, (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(entry_3.UnsafePtr).V0)
 _ = __local_var_4_1
 __t0 = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.UncurriedApp3(Get_pokeImpl(), gopurs_runtime.Int(i_0), __local_var_4_1, xs_2)

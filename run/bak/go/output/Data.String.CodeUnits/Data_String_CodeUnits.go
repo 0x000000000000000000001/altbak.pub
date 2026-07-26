@@ -6,6 +6,7 @@ import (
 	pkg_Data_Maybe "gopurs/output/Data.Maybe"
 	pkg_Data_String_Unsafe "gopurs/output/Data.String.Unsafe"
 	pkg_Data_Eq "gopurs/output/Data.Eq"
+	pkg_Control_Semigroupoid "gopurs/output/Control.Semigroupoid"
 	unsafe "unsafe"
 )
 
@@ -77,8 +78,8 @@ var cache_startsWith gopurs_runtime.Value
 var once_startsWith sync.Once
 func Get_startsWith() gopurs_runtime.Value {
 	once_startsWith.Do(func() {
-		cache_startsWith = gopurs_runtime.Func2(func(pat_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_startsWith(pat_0_box, x_1_box.StrVal())
+		cache_startsWith = gopurs_runtime.Func(func(pat_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_startsWith(pat_0_box)
 })
 	})
 	return cache_startsWith
@@ -124,8 +125,8 @@ var cache_endsWith gopurs_runtime.Value
 var once_endsWith sync.Once
 func Get_endsWith() gopurs_runtime.Value {
 	once_endsWith.Do(func() {
-		cache_endsWith = gopurs_runtime.Func2(func(pat_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_endsWith(pat_0_box, x_1_box.StrVal())
+		cache_endsWith = gopurs_runtime.Func(func(pat_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_endsWith(pat_0_box)
 })
 	})
 	return cache_endsWith
@@ -186,7 +187,7 @@ goto end_branch_0
 }
 }
 {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just{gopurs_runtime.RecordDict2("head", "tail", gopurs_runtime.Apply2(pkg_Data_String_Unsafe.Get_charAt(), gopurs_runtime.Int(0), gopurs_runtime.Str(v_0)), gopurs_runtime.Apply2(Get_drop(), gopurs_runtime.Int(1), gopurs_runtime.Str(v_0)))})}
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{gopurs_runtime.RecordDict2("head", "tail", gopurs_runtime.Apply2(pkg_Data_String_Unsafe.Get_charAt(), gopurs_runtime.Int(0), gopurs_runtime.Str(v_0)), gopurs_runtime.Apply2(Get_drop(), gopurs_runtime.Int(1), gopurs_runtime.Str(v_0)))})}
 }
 end_branch_0:
 return __t0
@@ -218,7 +219,7 @@ _ = v1_2_0
 var __t1 gopurs_runtime.Value
 {
 if (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Eq.Get_eqString(), "eq"), gopurs_runtime.RecordGet(v1_2_0, "after"), v_0).IntVal) != (0) {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just{gopurs_runtime.RecordGet(v1_2_0, "before")})}
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{gopurs_runtime.RecordGet(v1_2_0, "before")})}
 goto end_branch_1
 } else {
 
@@ -241,7 +242,7 @@ _ = v1_2_0
 var __t1 gopurs_runtime.Value
 {
 if (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Eq.Get_eqString(), "eq"), gopurs_runtime.RecordGet(v1_2_0, "before"), v_0).IntVal) != (0) {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just{gopurs_runtime.RecordGet(v1_2_0, "after")})}
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{gopurs_runtime.RecordGet(v1_2_0, "after")})}
 goto end_branch_1
 } else {
 
@@ -254,66 +255,16 @@ end_branch_1:
 return __t1
 }
 
-func Call_startsWith(pat_0_loop gopurs_runtime.Value, x_1_loop string) gopurs_runtime.Value {
+func Call_startsWith(pat_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var pat_0 gopurs_runtime.Value = pat_0_loop
 _ = pat_0
-var x_1 string = x_1_loop
-_ = x_1
-__local_var_2_0 := Call_stripPrefix(pat_0, x_1)
-_ = __local_var_2_0
-var __t1 gopurs_runtime.Value
-{
-if (__local_var_2_0.Type == 9 && __local_var_2_0.IntVal == 3589588149) {
-__t1 = gopurs_runtime.Bool(false)
-goto end_branch_1
-} else {
-
-}
-}
-{
-if (__local_var_2_0.Type == 9 && __local_var_2_0.IntVal == 930809136) {
-__t1 = gopurs_runtime.Bool(true)
-goto end_branch_1
-} else {
-
-}
-}
-{
-__t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
-}
-end_branch_1:
-return __t1
+return gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), pkg_Data_Maybe.Get_isJust(), gopurs_runtime.Apply(Get_stripPrefix(), pat_0))
 }
 
-func Call_endsWith(pat_0_loop gopurs_runtime.Value, x_1_loop string) gopurs_runtime.Value {
+func Call_endsWith(pat_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var pat_0 gopurs_runtime.Value = pat_0_loop
 _ = pat_0
-var x_1 string = x_1_loop
-_ = x_1
-__local_var_2_0 := Call_stripSuffix(pat_0, x_1)
-_ = __local_var_2_0
-var __t1 gopurs_runtime.Value
-{
-if (__local_var_2_0.Type == 9 && __local_var_2_0.IntVal == 3589588149) {
-__t1 = gopurs_runtime.Bool(false)
-goto end_branch_1
-} else {
-
-}
-}
-{
-if (__local_var_2_0.Type == 9 && __local_var_2_0.IntVal == 930809136) {
-__t1 = gopurs_runtime.Bool(true)
-goto end_branch_1
-} else {
-
-}
-}
-{
-__t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
-}
-end_branch_1:
-return __t1
+return gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), pkg_Data_Maybe.Get_isJust(), gopurs_runtime.Apply(Get_stripSuffix(), pat_0))
 }
 
 func Call_dropWhile(p_0_loop gopurs_runtime.Value, s_1_loop string) gopurs_runtime.Value {
@@ -335,34 +286,7 @@ return gopurs_runtime.Apply2(Get_take(), gopurs_runtime.Int((gopurs_runtime.Appl
 func Call_contains(pat_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var pat_0 gopurs_runtime.Value = pat_0_loop
 _ = pat_0
-__local_var_1_0 := gopurs_runtime.Apply(Get_indexOf(), pat_0)
-_ = __local_var_1_0
-return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_3_1 := gopurs_runtime.Apply(__local_var_1_0, x_2)
-_ = __local_var_3_1
-var __t2 gopurs_runtime.Value
-{
-if (__local_var_3_1.Type == 9 && __local_var_3_1.IntVal == 3589588149) {
-__t2 = gopurs_runtime.Bool(false)
-goto end_branch_2
-} else {
-
-}
-}
-{
-if (__local_var_3_1.Type == 9 && __local_var_3_1.IntVal == 930809136) {
-__t2 = gopurs_runtime.Bool(true)
-goto end_branch_2
-} else {
-
-}
-}
-{
-__t2 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
-}
-end_branch_2:
-return __t2
-})
+return gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), pkg_Data_Maybe.Get_isJust(), gopurs_runtime.Apply(Get_indexOf(), pat_0))
 }
 
 func Get__charAt() gopurs_runtime.Value {

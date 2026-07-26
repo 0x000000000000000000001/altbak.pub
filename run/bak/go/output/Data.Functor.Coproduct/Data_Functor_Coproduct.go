@@ -6,6 +6,7 @@ import (
 	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
 	pkg_Data_Either "gopurs/output/Data.Either"
 	pkg_Data_Bifunctor "gopurs/output/Data.Bifunctor"
+	pkg_Control_Semigroupoid "gopurs/output/Control.Semigroupoid"
 	unsafe "unsafe"
 )
 
@@ -178,7 +179,7 @@ return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_2 gopurs_ru
 var __t0 gopurs_runtime.Value
 {
 if (v_2.Type == 9 && v_2.IntVal == 3711209382) {
-__t0 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Str("(left "), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictShow_0.UnsafePtr)).V0, (*pkg_Data_Either.Constructor_Left)(v_2.UnsafePtr).V0), gopurs_runtime.Str(")")))
+__t0 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Str("(left "), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictShow_0.UnsafePtr)).V0, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0), gopurs_runtime.Str(")")))
 goto end_branch_0
 } else {
 
@@ -186,7 +187,7 @@ goto end_branch_0
 }
 {
 if (v_2.Type == 9 && v_2.IntVal == 2465973597) {
-__t0 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Str("(right "), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictShow1_1.UnsafePtr)).V0, (*pkg_Data_Either.Constructor_Right)(v_2.UnsafePtr).V0), gopurs_runtime.Str(")")))
+__t0 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Str("(right "), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictShow1_1.UnsafePtr)).V0, (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0), gopurs_runtime.Str(")")))
 goto end_branch_0
 } else {
 
@@ -203,13 +204,13 @@ return __t0
 func Call_right(ga_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var ga_0 gopurs_runtime.Value = ga_0_loop
 _ = ga_0
-return gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right{ga_0})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{ga_0})}
 }
 
 func Call_left(fa_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var fa_0 gopurs_runtime.Value = fa_0_loop
 _ = fa_0
-return gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Left{fa_0})}
+return gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value]{fa_0})}
 }
 
 func Call_functorCoproduct(dictFunctor_0_loop gopurs_runtime.Value, dictFunctor1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -236,14 +237,14 @@ return gopurs_runtime.Func2(func(v_5 gopurs_runtime.Value, v1_6 gopurs_runtime.V
 var __t2 gopurs_runtime.Value
 {
 if (v_5.Type == 9 && v_5.IntVal == 3711209382) {
-__t2 = gopurs_runtime.Bool(((v1_6.Type == 9 && v1_6.IntVal == 3711209382)) && ((gopurs_runtime.Apply2(eq12_3_0, (*pkg_Data_Either.Constructor_Left)(v_5.UnsafePtr).V0, (*pkg_Data_Either.Constructor_Left)(v1_6.UnsafePtr).V0).IntVal) != (0)))
+__t2 = gopurs_runtime.Bool(((v1_6.Type == 9 && v1_6.IntVal == 3711209382)) && ((gopurs_runtime.Apply2(eq12_3_0, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(v_5.UnsafePtr).V0, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(v1_6.UnsafePtr).V0).IntVal) != (0)))
 goto end_branch_2
 } else {
 
 }
 }
 {
-__t2 = gopurs_runtime.Bool(((v_5.Type == 9 && v_5.IntVal == 2465973597)) && (((v1_6.Type == 9 && v1_6.IntVal == 2465973597)) && ((gopurs_runtime.Apply2(eq13_4_1, (*pkg_Data_Either.Constructor_Right)(v_5.UnsafePtr).V0, (*pkg_Data_Either.Constructor_Right)(v1_6.UnsafePtr).V0).IntVal) != (0))))
+__t2 = gopurs_runtime.Bool(((v_5.Type == 9 && v_5.IntVal == 2465973597)) && (((v1_6.Type == 9 && v1_6.IntVal == 2465973597)) && ((gopurs_runtime.Apply2(eq13_4_1, (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(v_5.UnsafePtr).V0, (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(v1_6.UnsafePtr).V0).IntVal) != (0))))
 }
 end_branch_2:
 return __t2
@@ -266,14 +267,14 @@ return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func2(func(v_5 gopurs_run
 var __t2 gopurs_runtime.Value
 {
 if (v_5.Type == 9 && v_5.IntVal == 3711209382) {
-__t2 = gopurs_runtime.Bool(((v1_6.Type == 9 && v1_6.IntVal == 3711209382)) && ((gopurs_runtime.Apply2(eq12_3_0, (*pkg_Data_Either.Constructor_Left)(v_5.UnsafePtr).V0, (*pkg_Data_Either.Constructor_Left)(v1_6.UnsafePtr).V0).IntVal) != (0)))
+__t2 = gopurs_runtime.Bool(((v1_6.Type == 9 && v1_6.IntVal == 3711209382)) && ((gopurs_runtime.Apply2(eq12_3_0, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(v_5.UnsafePtr).V0, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(v1_6.UnsafePtr).V0).IntVal) != (0)))
 goto end_branch_2
 } else {
 
 }
 }
 {
-__t2 = gopurs_runtime.Bool(((v_5.Type == 9 && v_5.IntVal == 2465973597)) && (((v1_6.Type == 9 && v1_6.IntVal == 2465973597)) && ((gopurs_runtime.Apply2(eq13_4_1, (*pkg_Data_Either.Constructor_Right)(v_5.UnsafePtr).V0, (*pkg_Data_Either.Constructor_Right)(v1_6.UnsafePtr).V0).IntVal) != (0))))
+__t2 = gopurs_runtime.Bool(((v_5.Type == 9 && v_5.IntVal == 2465973597)) && (((v1_6.Type == 9 && v1_6.IntVal == 2465973597)) && ((gopurs_runtime.Apply2(eq13_4_1, (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(v_5.UnsafePtr).V0, (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(v1_6.UnsafePtr).V0).IntVal) != (0))))
 }
 end_branch_2:
 return __t2
@@ -297,14 +298,14 @@ return gopurs_runtime.Func2(func(v_7 gopurs_runtime.Value, v1_8 gopurs_runtime.V
 var __t5 gopurs_runtime.Value
 {
 if (v_7.Type == 9 && v_7.IntVal == 3711209382) {
-__t5 = gopurs_runtime.Bool(((v1_8.Type == 9 && v1_8.IntVal == 3711209382)) && ((gopurs_runtime.Apply2(eq12_5_3, (*pkg_Data_Either.Constructor_Left)(v_7.UnsafePtr).V0, (*pkg_Data_Either.Constructor_Left)(v1_8.UnsafePtr).V0).IntVal) != (0)))
+__t5 = gopurs_runtime.Bool(((v1_8.Type == 9 && v1_8.IntVal == 3711209382)) && ((gopurs_runtime.Apply2(eq12_5_3, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(v_7.UnsafePtr).V0, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(v1_8.UnsafePtr).V0).IntVal) != (0)))
 goto end_branch_5
 } else {
 
 }
 }
 {
-__t5 = gopurs_runtime.Bool(((v_7.Type == 9 && v_7.IntVal == 2465973597)) && (((v1_8.Type == 9 && v1_8.IntVal == 2465973597)) && ((gopurs_runtime.Apply2(eq13_6_4, (*pkg_Data_Either.Constructor_Right)(v_7.UnsafePtr).V0, (*pkg_Data_Either.Constructor_Right)(v1_8.UnsafePtr).V0).IntVal) != (0))))
+__t5 = gopurs_runtime.Bool(((v_7.Type == 9 && v_7.IntVal == 2465973597)) && (((v1_8.Type == 9 && v1_8.IntVal == 2465973597)) && ((gopurs_runtime.Apply2(eq13_6_4, (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(v_7.UnsafePtr).V0, (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(v1_8.UnsafePtr).V0).IntVal) != (0))))
 }
 end_branch_5:
 return __t5
@@ -325,7 +326,7 @@ if (v_8.Type == 9 && v_8.IntVal == 3711209382) {
 var __t9 gopurs_runtime.Value
 {
 if (v1_9.Type == 9 && v1_9.IntVal == 3711209382) {
-__t9 = gopurs_runtime.Apply2(compare12_6_6, (*pkg_Data_Either.Constructor_Left)(v_8.UnsafePtr).V0, (*pkg_Data_Either.Constructor_Left)(v1_9.UnsafePtr).V0)
+__t9 = gopurs_runtime.Apply2(compare12_6_6, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(v_8.UnsafePtr).V0, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(v1_9.UnsafePtr).V0)
 goto end_branch_9
 } else {
 
@@ -351,7 +352,7 @@ goto end_branch_8
 }
 {
 if ((v_8.Type == 9 && v_8.IntVal == 2465973597)) && ((v1_9.Type == 9 && v1_9.IntVal == 2465973597)) {
-__t8 = gopurs_runtime.Apply2(compare13_7_7, (*pkg_Data_Either.Constructor_Right)(v_8.UnsafePtr).V0, (*pkg_Data_Either.Constructor_Right)(v1_9.UnsafePtr).V0)
+__t8 = gopurs_runtime.Apply2(compare13_7_7, (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(v_8.UnsafePtr).V0, (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(v1_9.UnsafePtr).V0)
 goto end_branch_8
 } else {
 
@@ -388,14 +389,14 @@ eqCoproduct3_7_4 := gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func2(func(v
 var __t7 gopurs_runtime.Value
 {
 if (v_9.Type == 9 && v_9.IntVal == 3711209382) {
-__t7 = gopurs_runtime.Bool(((v1_10.Type == 9 && v1_10.IntVal == 3711209382)) && ((gopurs_runtime.Apply2(eq12_7_5, (*pkg_Data_Either.Constructor_Left)(v_9.UnsafePtr).V0, (*pkg_Data_Either.Constructor_Left)(v1_10.UnsafePtr).V0).IntVal) != (0)))
+__t7 = gopurs_runtime.Bool(((v1_10.Type == 9 && v1_10.IntVal == 3711209382)) && ((gopurs_runtime.Apply2(eq12_7_5, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(v_9.UnsafePtr).V0, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(v1_10.UnsafePtr).V0).IntVal) != (0)))
 goto end_branch_7
 } else {
 
 }
 }
 {
-__t7 = gopurs_runtime.Bool(((v_9.Type == 9 && v_9.IntVal == 2465973597)) && (((v1_10.Type == 9 && v1_10.IntVal == 2465973597)) && ((gopurs_runtime.Apply2(eq13_8_6, (*pkg_Data_Either.Constructor_Right)(v_9.UnsafePtr).V0, (*pkg_Data_Either.Constructor_Right)(v1_10.UnsafePtr).V0).IntVal) != (0))))
+__t7 = gopurs_runtime.Bool(((v_9.Type == 9 && v_9.IntVal == 2465973597)) && (((v1_10.Type == 9 && v1_10.IntVal == 2465973597)) && ((gopurs_runtime.Apply2(eq13_8_6, (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(v_9.UnsafePtr).V0, (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(v1_10.UnsafePtr).V0).IntVal) != (0))))
 }
 end_branch_7:
 return __t7
@@ -418,7 +419,7 @@ _ = v2_2
 var __t0 gopurs_runtime.Value
 {
 if (v2_2.Type == 9 && v2_2.IntVal == 3711209382) {
-__t0 = gopurs_runtime.Apply(v_0, (*pkg_Data_Either.Constructor_Left)(v2_2.UnsafePtr).V0)
+__t0 = gopurs_runtime.Apply(v_0, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(v2_2.UnsafePtr).V0)
 goto end_branch_0
 } else {
 
@@ -426,7 +427,7 @@ goto end_branch_0
 }
 {
 if (v2_2.Type == 9 && v2_2.IntVal == 2465973597) {
-__t0 = gopurs_runtime.Apply(v1_1, (*pkg_Data_Either.Constructor_Right)(v2_2.UnsafePtr).V0)
+__t0 = gopurs_runtime.Apply(v1_1, (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(v2_2.UnsafePtr).V0)
 goto end_branch_0
 } else {
 
@@ -450,19 +451,15 @@ _ = functorCoproduct2_3_1
 return gopurs_runtime.RecordDict2("Functor0", "extend", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return functorCoproduct2_3_1
 }), gopurs_runtime.Func(func(f_4 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_5_2 := gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictExtend_0.UnsafePtr)).V0, gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(f_4, gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Left{x_5})})
-}))
+__local_var_5_2 := gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), pkg_Data_Either.Get_Left(), gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictExtend_0.UnsafePtr)).V0, gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), f_4, gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), Get_Coproduct(), pkg_Data_Either.Get_Left()))))
 _ = __local_var_5_2
-__local_var_6_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictExtend1_2, "extend"), gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(f_4, gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right{x_6})})
-}))
+__local_var_6_3 := gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), pkg_Data_Either.Get_Right(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictExtend1_2, "extend"), gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), f_4, gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), Get_Coproduct(), pkg_Data_Either.Get_Right()))))
 _ = __local_var_6_3
-return gopurs_runtime.Func(func(v2_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), Get_Coproduct(), gopurs_runtime.Func(func(v2_7 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t4 gopurs_runtime.Value
 {
 if (v2_7.Type == 9 && v2_7.IntVal == 3711209382) {
-__t4 = gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Left{gopurs_runtime.Apply(__local_var_5_2, (*pkg_Data_Either.Constructor_Left)(v2_7.UnsafePtr).V0)})}
+__t4 = gopurs_runtime.Apply(__local_var_5_2, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(v2_7.UnsafePtr).V0)
 goto end_branch_4
 } else {
 
@@ -470,7 +467,7 @@ goto end_branch_4
 }
 {
 if (v2_7.Type == 9 && v2_7.IntVal == 2465973597) {
-__t4 = gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right{gopurs_runtime.Apply(__local_var_6_3, (*pkg_Data_Either.Constructor_Right)(v2_7.UnsafePtr).V0)})}
+__t4 = gopurs_runtime.Apply(__local_var_6_3, (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(v2_7.UnsafePtr).V0)
 goto end_branch_4
 } else {
 
@@ -481,7 +478,7 @@ __t4 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_4:
 return __t4
-})
+}))
 }))
 })
 }
@@ -500,7 +497,7 @@ return extendCoproduct2_3_1
 var __t2 gopurs_runtime.Value
 {
 if (v2_4.Type == 9 && v2_4.IntVal == 3711209382) {
-__t2 = gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictComonad_0.UnsafePtr)).V0, (*pkg_Data_Either.Constructor_Left)(v2_4.UnsafePtr).V0)
+__t2 = gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictComonad_0.UnsafePtr)).V0, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(v2_4.UnsafePtr).V0)
 goto end_branch_2
 } else {
 
@@ -508,7 +505,7 @@ goto end_branch_2
 }
 {
 if (v2_4.Type == 9 && v2_4.IntVal == 2465973597) {
-__t2 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonad1_2, "extract"), (*pkg_Data_Either.Constructor_Right)(v2_4.UnsafePtr).V0)
+__t2 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonad1_2, "extract"), (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(v2_4.UnsafePtr).V0)
 goto end_branch_2
 } else {
 

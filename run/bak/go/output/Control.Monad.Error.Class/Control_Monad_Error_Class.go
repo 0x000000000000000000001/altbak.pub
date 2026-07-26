@@ -8,6 +8,7 @@ import (
 	pkg_Effect "gopurs/output/Effect"
 	pkg_Effect_Exception "gopurs/output/Effect.Exception"
 	pkg_Data_Unit "gopurs/output/Data.Unit"
+	pkg_Control_Semigroupoid "gopurs/output/Control.Semigroupoid"
 	pkg_Control_Bind "gopurs/output/Control.Bind"
 	unsafe "unsafe"
 )
@@ -76,7 +77,7 @@ goto end_branch_0
 }
 {
 if (v_0.Type == 9 && v_0.IntVal == 930809136) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just{(*pkg_Data_Maybe.Constructor_Just)(v_0.UnsafePtr).V0})}
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{(*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(v_0.UnsafePtr).V0})}
 goto end_branch_0
 } else {
 
@@ -102,7 +103,7 @@ return Get_monadThrowEither()
 var __t0 gopurs_runtime.Value
 {
 if (v_0.Type == 9 && v_0.IntVal == 3711209382) {
-__t0 = gopurs_runtime.Apply(v1_1, (*pkg_Data_Either.Constructor_Left)(v_0.UnsafePtr).V0)
+__t0 = gopurs_runtime.Apply(v1_1, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(v_0.UnsafePtr).V0)
 goto end_branch_0
 } else {
 
@@ -110,7 +111,7 @@ goto end_branch_0
 }
 {
 if (v_0.Type == 9 && v_0.IntVal == 2465973597) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right{(*pkg_Data_Either.Constructor_Right)(v_0.UnsafePtr).V0})}
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{(*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(v_0.UnsafePtr).V0})}
 goto end_branch_0
 } else {
 
@@ -231,7 +232,7 @@ goto end_branch_2
 }
 {
 if (v2_4.Type == 9 && v2_4.IntVal == 930809136) {
-__t2 = gopurs_runtime.Apply(pure_1_0, (*pkg_Data_Maybe.Constructor_Just)(v2_4.UnsafePtr).V0)
+__t2 = gopurs_runtime.Apply(pure_1_0, (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(v2_4.UnsafePtr).V0)
 goto end_branch_2
 } else {
 
@@ -255,7 +256,7 @@ return gopurs_runtime.Func(func(v2_2 gopurs_runtime.Value) gopurs_runtime.Value 
 var __t1 gopurs_runtime.Value
 {
 if (v2_2.Type == 9 && v2_2.IntVal == 3711209382) {
-__t1 = gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictMonadThrow_0.UnsafePtr)).V0, (*pkg_Data_Either.Constructor_Left)(v2_2.UnsafePtr).V0)
+__t1 = gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictMonadThrow_0.UnsafePtr)).V0, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(v2_2.UnsafePtr).V0)
 goto end_branch_1
 } else {
 
@@ -263,7 +264,7 @@ goto end_branch_1
 }
 {
 if (v2_2.Type == 9 && v2_2.IntVal == 2465973597) {
-__t1 = gopurs_runtime.Apply(__local_var_1_0, (*pkg_Data_Either.Constructor_Right)(v2_2.UnsafePtr).V0)
+__t1 = gopurs_runtime.Apply(__local_var_1_0, (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(v2_2.UnsafePtr).V0)
 goto end_branch_1
 } else {
 
@@ -306,7 +307,7 @@ goto end_branch_1
 }
 {
 if (v_5_0.Type == 9 && v_5_0.IntVal == 930809136) {
-__t1 = gopurs_runtime.Apply(handler_3, (*pkg_Data_Maybe.Constructor_Just)(v_5_0.UnsafePtr).V0)
+__t1 = gopurs_runtime.Apply(handler_3, (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(v_5_0.UnsafePtr).V0)
 goto end_branch_1
 } else {
 
@@ -325,10 +326,10 @@ var dictMonadError_0 gopurs_runtime.Value = dictMonadError_0_loop
 _ = dictMonadError_0
 Monad0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadError_0, "MonadThrow0_NOT_FOUND"), gopurs_runtime.Value{}), "Monad0"), gopurs_runtime.Value{})
 _ = Monad0_1_0
-return gopurs_runtime.Func(func(a_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictMonadError_0.UnsafePtr)).V0, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Bind1"), gopurs_runtime.Value{}), "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), pkg_Data_Either.Get_Right(), a_2), gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Left{x_3})})
-}))
+pure_2_1 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Applicative0"), gopurs_runtime.Value{}), "pure")
+_ = pure_2_1
+return gopurs_runtime.Func(func(a_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictMonadError_0.UnsafePtr)).V0, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Bind1"), gopurs_runtime.Value{}), "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), pkg_Data_Either.Get_Right(), a_3), gopurs_runtime.Apply2(pkg_Control_Semigroupoid.Get_composeImpl(), pure_2_1, pkg_Data_Either.Get_Left()))
 })
 }
 
@@ -352,7 +353,7 @@ return gopurs_runtime.Apply2(discard1_5_4, gopurs_runtime.Apply(release_7, resou
 var __t5 gopurs_runtime.Value
 {
 if (result_10.Type == 9 && result_10.IntVal == 3711209382) {
-__t5 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(MonadThrow0_1_0, "throwError"), (*pkg_Data_Either.Constructor_Left)(result_10.UnsafePtr).V0)
+__t5 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(MonadThrow0_1_0, "throwError"), (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(result_10.UnsafePtr).V0)
 goto end_branch_5
 } else {
 
@@ -360,7 +361,7 @@ goto end_branch_5
 }
 {
 if (result_10.Type == 9 && result_10.IntVal == 2465973597) {
-__t5 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_2_1, "Applicative0"), gopurs_runtime.Value{}), "pure"), (*pkg_Data_Either.Constructor_Right)(result_10.UnsafePtr).V0)
+__t5 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_2_1, "Applicative0"), gopurs_runtime.Value{}), "pure"), (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(result_10.UnsafePtr).V0)
 goto end_branch_5
 } else {
 
