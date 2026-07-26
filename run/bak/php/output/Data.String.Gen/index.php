@@ -107,35 +107,38 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
 // Data_String_Gen_max
-$GLOBALS['Data_String_Gen_max'] = (function() {
-  $__fn = function($x_0 = null, $y_1 = null) use (&$__fn) {
+$GLOBALS['Data_String_Gen_max'] = (function() use (&$__fn) {
+$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT"));
+return (function() use ($__local_var_0_0) {
+  $__fn = function($x_1 = null, $y_2 = null) use ($__local_var_0_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $v_2_0 = ((($GLOBALS['Data_Ord_ordInt'])['compare'])($x_0))($y_1);
-  $__t1 = null;;
-  if ((is_object($v_2_0) && (($v_2_0)->{'tag'} === "LT"))) {
-$__t1 = $y_1;
-goto end_branch_1;;
+  $v_3_1 = (($__local_var_0_0)($x_1))($y_2);
+  $__t2 = null;;
+  if ((is_object($v_3_1) && (($v_3_1)->{'tag'} === "LT"))) {
+$__t2 = $y_2;
+goto end_branch_2;;
 };
-  if ((is_object($v_2_0) && (($v_2_0)->{'tag'} === "EQ"))) {
-$__t1 = $x_0;
-goto end_branch_1;;
+  if ((is_object($v_3_1) && (($v_3_1)->{'tag'} === "EQ"))) {
+$__t2 = $x_1;
+goto end_branch_2;;
 };
-  if ((is_object($v_2_0) && (($v_2_0)->{'tag'} === "GT"))) {
-$__t1 = $x_0;
-goto end_branch_1;;
+  if ((is_object($v_3_1) && (($v_3_1)->{'tag'} === "GT"))) {
+$__t2 = $x_1;
+goto end_branch_2;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t1 = null;
-  end_branch_1:;
-  $__res = $__t1;
+  $__t2 = null;
+  end_branch_2:;
+  $__res = $__t2;
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
+})();
 })();
 
 // Data_String_Gen_genString

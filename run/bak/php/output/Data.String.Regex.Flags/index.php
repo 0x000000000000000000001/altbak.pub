@@ -228,43 +228,19 @@ $GLOBALS['Data_String_Regex_Flags_ignoreCase'] = ["global" => false, "ignoreCase
 $GLOBALS['Data_String_Regex_Flags_global'] = ["global" => true, "ignoreCase" => false, "multiline" => false, "dotAll" => false, "sticky" => false, "unicode" => false];
 
 // Data_String_Regex_Flags_eqRegexFlags
-$GLOBALS['Data_String_Regex_Flags_eqRegexFlags'] = ["eq" => (((((($GLOBALS['Data_Eq_eqRowCons'])((((($GLOBALS['Data_Eq_eqRowCons'])((((($GLOBALS['Data_Eq_eqRowCons'])((((($GLOBALS['Data_Eq_eqRowCons'])((((($GLOBALS['Data_Eq_eqRowCons'])((((($GLOBALS['Data_Eq_eqRowCons'])($GLOBALS['Data_Eq_eqRowNil']))(null))(["reflectSymbol" => function($_dollar__unused_0 = null) {
+$GLOBALS['Data_String_Regex_Flags_eqRegexFlags'] = ["eq" => (function() {
+  $__fn = function($ra_0 = null, $rb_1 = null) use (&$__fn) {
   $__num = \func_num_args();
-  $__res = "unicode";
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(((($GLOBALS['Data_Eq_eqBoolean'])['eq'])(($ra_0)['dotAll']))(($rb_1)['dotAll'])))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(((($GLOBALS['Data_Eq_eqBoolean'])['eq'])(($ra_0)['global']))(($rb_1)['global'])))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(((($GLOBALS['Data_Eq_eqBoolean'])['eq'])(($ra_0)['ignoreCase']))(($rb_1)['ignoreCase'])))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(((($GLOBALS['Data_Eq_eqBoolean'])['eq'])(($ra_0)['multiline']))(($rb_1)['multiline'])))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(((($GLOBALS['Data_Eq_eqBoolean'])['eq'])(($ra_0)['sticky']))(($rb_1)['sticky'])))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(((($GLOBALS['Data_Eq_eqBoolean'])['eq'])(($ra_0)['unicode']))(($rb_1)['unicode'])))((((($GLOBALS['Data_Eq_eqRowNil'])['eqRecord'])(new Phpurs_Data0("Proxy")))($ra_0))($rb_1)))))));
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]))($GLOBALS['Data_Eq_eqBoolean'])))(null))(["reflectSymbol" => function($_dollar__unused_0 = null) {
-  $__num = \func_num_args();
-  $__res = "sticky";
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]))($GLOBALS['Data_Eq_eqBoolean'])))(null))(["reflectSymbol" => function($_dollar__unused_0 = null) {
-  $__num = \func_num_args();
-  $__res = "multiline";
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]))($GLOBALS['Data_Eq_eqBoolean'])))(null))(["reflectSymbol" => function($_dollar__unused_0 = null) {
-  $__num = \func_num_args();
-  $__res = "ignoreCase";
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]))($GLOBALS['Data_Eq_eqBoolean'])))(null))(["reflectSymbol" => function($_dollar__unused_0 = null) {
-  $__num = \func_num_args();
-  $__res = "global";
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]))($GLOBALS['Data_Eq_eqBoolean'])))(null))(["reflectSymbol" => function($_dollar__unused_0 = null) {
-  $__num = \func_num_args();
-  $__res = "dotAll";
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]))($GLOBALS['Data_Eq_eqBoolean']))['eqRecord'])(new Phpurs_Data0("Proxy"))];
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})()];
 
 // Data_String_Regex_Flags_dotAll
 $GLOBALS['Data_String_Regex_Flags_dotAll'] = ["global" => false, "ignoreCase" => false, "multiline" => false, "dotAll" => true, "sticky" => false, "unicode" => false];

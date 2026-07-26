@@ -138,7 +138,7 @@ $GLOBALS['Data_Predicate_heytingAlgebraPredicate'] = ["ff" => function($v_0 = nu
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['implies'])(($f_0)($a_2)))(($g_1)($a_2));
+  $__res = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['disj'])((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['not'])(($f_0)($a_2))))(($g_1)($a_2));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -189,7 +189,7 @@ $GLOBALS['Data_Predicate_contravariantPredicate'] = ["cmap" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($v_1))($f_0);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($v_1))($f_0);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

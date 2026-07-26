@@ -602,7 +602,7 @@ $GLOBALS['Control_Monad_RWS_Trans_monadEffectRWS'] = function($dictMonoid_0 = nu
   $__num = \func_num_args();
   $Monad0_3_1 = (($dictMonadEffect_2)['Monad0'])(null);
   $monadRWST1_4_2 = (($GLOBALS['Control_Monad_RWS_Trans_monadRWST'])($Monad0_3_1))($dictMonoid_0);
-  $__res = ["liftEffect" => ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((function() use ($Monad0_3_1, $mempty_1_0) {
+  $__res = ["liftEffect" => (($GLOBALS['Control_Semigroupoid_composeImpl'])((function() use ($Monad0_3_1, $mempty_1_0) {
   $__fn = function($m_5 = null, $v_6 = null, $s_7 = null) use ($Monad0_3_1, $mempty_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -944,7 +944,7 @@ $GLOBALS['Control_Monad_RWS_Trans_monadSTRWST'] = function($dictMonoid_0 = null)
   $__num = \func_num_args();
   $Monad0_3_1 = (($dictMonadST_2)['Monad0'])(null);
   $monadRWST1_4_2 = (($GLOBALS['Control_Monad_RWS_Trans_monadRWST'])($Monad0_3_1))($dictMonoid_0);
-  $__res = ["liftST" => ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((function() use ($Monad0_3_1, $mempty_1_0) {
+  $__res = ["liftST" => (($GLOBALS['Control_Semigroupoid_composeImpl'])((function() use ($Monad0_3_1, $mempty_1_0) {
   $__fn = function($m_5 = null, $v_6 = null, $s_7 = null) use ($Monad0_3_1, $mempty_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {

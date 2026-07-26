@@ -118,6 +118,15 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+// Data_Maybe_identity
+$GLOBALS['Data_Maybe_identity'] = function($x_0 = null) {
+  $__num = \func_num_args();
+  $__res = $x_0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+
 // Data_Maybe_Nothing
 $GLOBALS['Data_Maybe_Nothing'] = ($GLOBALS['__phpurs_data0_Nothing'] ??= new Phpurs_Data0("Nothing"));
 
@@ -428,7 +437,7 @@ $GLOBALS['Data_Maybe_invariantMaybe'] = ["imap" => (function() {
 // Data_Maybe_fromMaybe'
 $GLOBALS['Data_Maybe_fromMaybe__prime__'] = function($a_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Maybe_maybe__prime__'])($a_0))(($GLOBALS['Control_Category_categoryFn'])['identity']);
+  $__res = (($GLOBALS['Data_Maybe_maybe__prime__'])($a_0))($GLOBALS['Data_Maybe_identity']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -447,7 +456,7 @@ $__t0 = $a_0;
 goto end_branch_0;;
 };
   if ((is_object($v2_1) && (($v2_1)->{'tag'} === "Just"))) {
-$__t0 = (($GLOBALS['Control_Category_categoryFn'])['identity'])(($v2_1)->{'value0'});
+$__t0 = ($v2_1)->{'value0'};
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);

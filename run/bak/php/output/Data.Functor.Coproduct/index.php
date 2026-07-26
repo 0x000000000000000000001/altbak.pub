@@ -465,9 +465,9 @@ $GLOBALS['Data_Functor_Coproduct_extendCoproduct'] = function($dictExtend_0 = nu
   $functorCoproduct2_3_1 = ($functorCoproduct1_1_0)((($dictExtend1_2)['Functor0'])(null));
   $__res = ["extend" => function($f_4 = null) use ($dictExtend1_2, $dictExtend_0) {
   $__num = \func_num_args();
-  $__local_var_5_2 = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Either_Left']))((($dictExtend_0)['extend'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($f_4))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Functor_Coproduct_Coproduct']))($GLOBALS['Data_Either_Left']))));
-  $__local_var_6_3 = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Either_Right']))((($dictExtend1_2)['extend'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($f_4))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Functor_Coproduct_Coproduct']))($GLOBALS['Data_Either_Right']))));
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Functor_Coproduct_Coproduct']))(function($v2_7 = null) use ($__local_var_5_2, $__local_var_6_3) {
+  $__local_var_5_2 = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Either_Left']))((($dictExtend_0)['extend'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_4))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Functor_Coproduct_Coproduct']))($GLOBALS['Data_Either_Left']))));
+  $__local_var_6_3 = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Either_Right']))((($dictExtend1_2)['extend'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_4))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Functor_Coproduct_Coproduct']))($GLOBALS['Data_Either_Right']))));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Functor_Coproduct_Coproduct']))(function($v2_7 = null) use ($__local_var_5_2, $__local_var_6_3) {
   $__num = \func_num_args();
   $__t4 = null;;
   if ((is_object($v2_7) && (($v2_7)->{'tag'} === "Left"))) {

@@ -106,6 +106,15 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+// Data_Divide_identity
+$GLOBALS['Data_Divide_identity'] = function($x_0 = null) {
+  $__num = \func_num_args();
+  $__res = $x_0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+
 // Data_Divide_dividePredicate
 $GLOBALS['Data_Divide_dividePredicate'] = ["divide" => (function() {
   $__fn = function($f_0 = null, $v_1 = null, $v1_2 = null, $a_3 = null) use (&$__fn) {
@@ -214,7 +223,7 @@ $GLOBALS['Data_Divide_divide'] = function($dict_0 = null) {
 // Data_Divide_divided
 $GLOBALS['Data_Divide_divided'] = function($dictDivide_0 = null) {
   $__num = \func_num_args();
-  $__res = (($dictDivide_0)['divide'])(($GLOBALS['Control_Category_categoryFn'])['identity']);
+  $__res = (($dictDivide_0)['divide'])($GLOBALS['Data_Divide_identity']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

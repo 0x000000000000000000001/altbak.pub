@@ -102,7 +102,13 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
 // Control_Monad_ST_Class_monadSTST
-$GLOBALS['Control_Monad_ST_Class_monadSTST'] = ["liftST" => ($GLOBALS['Control_Category_categoryFn'])['identity'], "Monad0" => function($_dollar__unused_0 = null) {
+$GLOBALS['Control_Monad_ST_Class_monadSTST'] = ["liftST" => function($x_0 = null) {
+  $__num = \func_num_args();
+  $__res = $x_0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Monad0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Control_Monad_ST_Internal_monadST'];
   goto __end;;

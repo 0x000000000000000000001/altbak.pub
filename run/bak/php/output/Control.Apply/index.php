@@ -117,6 +117,15 @@ return $exports;
 $GLOBALS['Control_Apply_arrayApply'] = $ffi_Control_Apply['arrayApply'] ?? new class { public function __invoke(...$args) { return $this; } };
 
 
+// Control_Apply_identity
+$GLOBALS['Control_Apply_identity'] = function($x_0 = null) {
+  $__num = \func_num_args();
+  $__res = $x_0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+
 // Control_Apply_applyProxy
 $GLOBALS['Control_Apply_applyProxy'] = ["apply" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
@@ -201,7 +210,7 @@ $GLOBALS['Control_Apply_applySecond'] = (function() {
   }
   $__res = ((($dictApply_0)['apply'])(((((($dictApply_0)['Functor0'])(null))['map'])(function($v_3 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Category_categoryFn'])['identity'];
+  $__res = $GLOBALS['Control_Apply_identity'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

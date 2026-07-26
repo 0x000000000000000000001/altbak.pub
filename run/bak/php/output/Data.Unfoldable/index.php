@@ -151,6 +151,24 @@ goto end_branch_0;;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
 
+// Data_Unfoldable_lessThanOrEq
+$GLOBALS['Data_Unfoldable_lessThanOrEq'] = (function() use (&$__fn) {
+$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT"));
+return (function() use ($__local_var_0_0) {
+  $__fn = function($a1_1 = null, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ( ! (is_object((($__local_var_0_0)($a1_1))($a2_2)) && (((($__local_var_0_0)($a1_1))($a2_2))->{'tag'} === "GT")));
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
+})();
+
 // Data_Unfoldable_unfoldr
 $GLOBALS['Data_Unfoldable_unfoldr'] = function($dict_0 = null) {
   $__num = \func_num_args();
@@ -200,11 +218,11 @@ $GLOBALS['Data_Unfoldable_replicate'] = (function() {
   $__res = ((($dictUnfoldable_0)['unfoldr'])(function($i_3 = null) use ($v_2) {
   $__num = \func_num_args();
   $__t0 = null;;
-  if (($i_3 <= 0)) {
+  if ((($GLOBALS['Data_Unfoldable_lessThanOrEq'])($i_3))(0)) {
 $__t0 = new Phpurs_Data0("Nothing");
 goto end_branch_0;;
 };
-  $__t0 = new Phpurs_Data1("Just", new Phpurs_Data2("Tuple", $v_2, ((($GLOBALS['Data_Ring_ringInt'])['sub'])($i_3))(1)));
+  $__t0 = new Phpurs_Data1("Just", new Phpurs_Data2("Tuple", $v_2, ($i_3 - 1)));
   end_branch_0:;
   $__res = $__t0;
   goto __end;;

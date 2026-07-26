@@ -136,13 +136,35 @@ $GLOBALS['Test_LazyEvaluation_buildThunks'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = match ($v_0) { 0 => $v1_1, default => (($GLOBALS['Test_LazyEvaluation_buildThunks'])(((($GLOBALS['Data_Ring_ringInt'])['sub'])($v_0))(1)))(function($v2_2 = null) use ($v1_1) {
+  $__tco_var_Test_LazyEvaluation_buildThunks_v_0 = $v_0;
+  $__tco_var_Test_LazyEvaluation_buildThunks_v1_1 = $v1_1;
+  tco_loop_Test_LazyEvaluation_buildThunks:;
+  $v_0 = $__tco_var_Test_LazyEvaluation_buildThunks_v_0;
+  $v1_1 = $__tco_var_Test_LazyEvaluation_buildThunks_v1_1;
+  $__t2 = null;;
+  switch ($v_0) {
+case 0:
+$__t2 = $v1_1;
+goto end_branch_2;;
+break;
+default:
+;
+break;
+};
+  $__tco_0 = ($v_0 - 1);
+  $__tco_1 = function($v2_2 = null) use ($v1_1) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semiring_semiringInt'])['add'])(($v1_1)($GLOBALS['Data_Unit_unit'])))(1);
+  $__res = (($v1_1)($GLOBALS['Data_Unit_unit']) + 1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}) };
+};
+  $__tco_var_Test_LazyEvaluation_buildThunks_v_0 = $__tco_0;
+  $__tco_var_Test_LazyEvaluation_buildThunks_v1_1 = $__tco_1;
+  goto tco_loop_Test_LazyEvaluation_buildThunks;;
+  $__t2 = null;
+  end_branch_2:;
+  $__res = $__t2;
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -157,13 +179,35 @@ $GLOBALS['Test_LazyEvaluation_runManyTimes'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = match ($v_0) { 0 => $v1_1, default => (($GLOBALS['Test_LazyEvaluation_runManyTimes'])(((($GLOBALS['Data_Ring_ringInt'])['sub'])($v_0))(1)))(((($GLOBALS['Data_Semiring_semiringInt'])['add'])($v1_1))(((($GLOBALS['Test_LazyEvaluation_buildThunks'])(1000))(function($v2_2 = null) {
+  $__tco_var_Test_LazyEvaluation_runManyTimes_v_0 = $v_0;
+  $__tco_var_Test_LazyEvaluation_runManyTimes_v1_1 = $v1_1;
+  tco_loop_Test_LazyEvaluation_runManyTimes:;
+  $v_0 = $__tco_var_Test_LazyEvaluation_runManyTimes_v_0;
+  $v1_1 = $__tco_var_Test_LazyEvaluation_runManyTimes_v1_1;
+  $__t2 = null;;
+  switch ($v_0) {
+case 0:
+$__t2 = $v1_1;
+goto end_branch_2;;
+break;
+default:
+;
+break;
+};
+  $__tco_0 = ($v_0 - 1);
+  $__tco_1 = ($v1_1 + ((($GLOBALS['Test_LazyEvaluation_buildThunks'])(1000))(function($v2_2 = null) {
   $__num = \func_num_args();
   $__res = 0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))($GLOBALS['Data_Unit_unit']))) };
+}))($GLOBALS['Data_Unit_unit']));
+  $__tco_var_Test_LazyEvaluation_runManyTimes_v_0 = $__tco_0;
+  $__tco_var_Test_LazyEvaluation_runManyTimes_v1_1 = $__tco_1;
+  goto tco_loop_Test_LazyEvaluation_runManyTimes;;
+  $__t2 = null;
+  end_branch_2:;
+  $__res = $__t2;
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

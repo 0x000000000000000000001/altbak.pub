@@ -200,6 +200,73 @@ goto end_branch_0;;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
 
+// Data_Date_greaterThan
+$GLOBALS['Data_Date_greaterThan'] = (function() {
+  $__fn = function($a1_0 = null, $a2_1 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__t0 = null;;
+  if ((is_object($a1_0) && (($a1_0)->{'tag'} === "Nothing"))) {
+$__t0 = false;
+goto end_branch_0;;
+};
+  if ((is_object($a2_1) && (($a2_1)->{'tag'} === "Nothing"))) {
+$__t0 = true;
+goto end_branch_0;;
+};
+  if (((is_object($a1_0) && (($a1_0)->{'tag'} === "Just")) && (is_object($a2_1) && (($a2_1)->{'tag'} === "Just")))) {
+$__t0 = (is_object(((($GLOBALS['Data_Date_Component_ordDay'])['compare'])(($a1_0)->{'value0'}))(($a2_1)->{'value0'})) && ((((($GLOBALS['Data_Date_Component_ordDay'])['compare'])(($a1_0)->{'value0'}))(($a2_1)->{'value0'}))->{'tag'} === "GT"));
+goto end_branch_0;;
+};
+  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+  $__t0 = null;
+  end_branch_0:;
+  $__res = $__t0;
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
+
+// Data_Date_lessThan
+$GLOBALS['Data_Date_lessThan'] = (function() use (&$__fn) {
+$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT"));
+return (function() use ($__local_var_0_0) {
+  $__fn = function($a1_1 = null, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = (is_object((($__local_var_0_0)($a1_1))($a2_2)) && (((($__local_var_0_0)($a1_1))($a2_2))->{'tag'} === "LT"));
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
+})();
+
+// Data_Date_greaterThan1
+$GLOBALS['Data_Date_greaterThan1'] = (function() use (&$__fn) {
+$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT"));
+return (function() use ($__local_var_0_0) {
+  $__fn = function($a1_1 = null, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = (is_object((($__local_var_0_0)($a1_1))($a2_2)) && (((($__local_var_0_0)($a1_1))($a2_2))->{'tag'} === "GT"));
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
+})();
+
 // Data_Date_Date
 $GLOBALS['Data_Date_Date'] = (function() {
   $__fn = function($value0 = null, $value1 = null, $value2 = null) use (&$__fn) {
@@ -229,7 +296,8 @@ $GLOBALS['Data_Date_weekday'] = function($v_0 = null) {
   $__num = \func_num_args();
   $n_1_0 = ($GLOBALS['Data_Date_calcWeekday'])(($v_0)->{'value0'}, (($GLOBALS['Data_Date_Component_boundedEnumMonth'])['fromEnum'])(($v_0)->{'value1'}), ($v_0)->{'value2'});
   $__t3 = null;;
-  if (((($GLOBALS['Data_Eq_eqInt'])['eq'])($n_1_0))(0)) {
+  switch ($n_1_0) {
+case 0:
 $__local_var_2_4 = (($GLOBALS['Data_Date_Component_boundedEnumWeekday'])['toEnum'])(7);
 $__t5 = null;;
 if ((is_object($__local_var_2_4) && (($__local_var_2_4)->{'tag'} === "Just"))) {
@@ -241,6 +309,10 @@ $__t5 = null;
 end_branch_5:;
 $__t3 = $__t5;
 goto end_branch_3;;
+break;
+default:
+;
+break;
 };
   $__local_var_2_1 = (($GLOBALS['Data_Date_Component_boundedEnumWeekday'])['toEnum'])($n_1_0);
   $__t2 = null;;
@@ -281,7 +353,7 @@ $GLOBALS['Data_Date_month'] = function($v_0 = null) {
 $GLOBALS['Data_Date_isLeapYear'] = function($y_0 = null) {
   $__num = \func_num_args();
   $y_prime_1_0 = (($GLOBALS['Data_Date_Component_boundedEnumYear'])['fromEnum'])($y_0);
-  $__res = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(((($GLOBALS['Data_Eq_eqInt'])['eq'])(((($GLOBALS['Data_EuclideanRing_euclideanRingInt'])['mod'])($y_prime_1_0))(4)))(0)))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['disj'])(((($GLOBALS['Data_Eq_eqInt'])['eq'])(((($GLOBALS['Data_EuclideanRing_euclideanRingInt'])['mod'])($y_prime_1_0))(400)))(0)))((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['not'])(((($GLOBALS['Data_Eq_eqInt'])['eq'])(((($GLOBALS['Data_EuclideanRing_euclideanRingInt'])['mod'])($y_prime_1_0))(100)))(0))));
+  $__res = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])((((($GLOBALS['Data_EuclideanRing_euclideanRingInt'])['mod'])($y_prime_1_0))(4) === 0)))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['disj'])((((($GLOBALS['Data_EuclideanRing_euclideanRingInt'])['mod'])($y_prime_1_0))(400) === 0)))((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['not'])((((($GLOBALS['Data_EuclideanRing_euclideanRingInt'])['mod'])($y_prime_1_0))(100) === 0))));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -294,7 +366,7 @@ $GLOBALS['Data_Date_lastDayOfMonth'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $unsafeDay_2_0 = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Date_fromJust']))(($GLOBALS['Data_Date_Component_boundedEnumDay'])['toEnum']);
+  $unsafeDay_2_0 = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Date_fromJust']))(($GLOBALS['Data_Date_Component_boundedEnumDay'])['toEnum']);
   $__t1 = null;;
   if ((is_object($m_1) && (($m_1)->{'tag'} === "January"))) {
 $__t1 = ($unsafeDay_2_0)(31);
@@ -369,7 +441,7 @@ $GLOBALS['Data_Date_eqDate'] = ["eq" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(((($GLOBALS['Data_Eq_eqInt'])['eq'])(($x_0)->{'value0'}))(($y_1)->{'value0'})))(((($GLOBALS['Data_Date_Component_eqMonth'])['eq'])(($x_0)->{'value1'}))(($y_1)->{'value1'}))))(((($GLOBALS['Data_Eq_eqInt'])['eq'])(($x_0)->{'value2'}))(($y_1)->{'value2'}));
+  $__res = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(((($GLOBALS['Data_Date_Component_eqYear'])['eq'])(($x_0)->{'value0'}))(($y_1)->{'value0'})))(((($GLOBALS['Data_Date_Component_eqMonth'])['eq'])(($x_0)->{'value1'}))(($y_1)->{'value1'}))))(((($GLOBALS['Data_Date_Component_eqDay'])['eq'])(($x_0)->{'value2'}))(($y_1)->{'value2'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -384,7 +456,7 @@ $GLOBALS['Data_Date_ordDate'] = ["compare" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $v_2_0 = ((($GLOBALS['Data_Ord_ordInt'])['compare'])(($x_0)->{'value0'}))(($y_1)->{'value0'});
+  $v_2_0 = ((($GLOBALS['Data_Date_Component_ordYear'])['compare'])(($x_0)->{'value0'}))(($y_1)->{'value0'});
   $__t3 = null;;
   if ((is_object($v_2_0) && (($v_2_0)->{'tag'} === "LT"))) {
 $__t3 = new Phpurs_Data0("LT");
@@ -404,7 +476,7 @@ goto end_branch_2;;
 $__t2 = new Phpurs_Data0("GT");
 goto end_branch_2;;
 };
-  $__t2 = ((($GLOBALS['Data_Ord_ordInt'])['compare'])(($x_0)->{'value2'}))(($y_1)->{'value2'});
+  $__t2 = ((($GLOBALS['Data_Date_Component_ordDay'])['compare'])(($x_0)->{'value2'}))(($y_1)->{'value2'});
   end_branch_2:;
   $__t3 = $__t2;
   end_branch_3:;
@@ -428,213 +500,198 @@ $GLOBALS['Data_Date_enumDate'] = ["succ" => function($v_0 = null) {
   $sm_1_0 = (($GLOBALS['Data_Date_Component_enumMonth'])['succ'])(($v_0)->{'value1'});
   $v1_2_1 = (($GLOBALS['Data_Date_Component_enumDay'])['succ'])(($v_0)->{'value2'});
   $__t2 = null;;
-  if ((function() use ($v1_2_1, $v_0, &$__fn) {
-$__local_var_3_3 = (($GLOBALS['Data_Date_lastDayOfMonth'])(($v_0)->{'value0'}))(($v_0)->{'value1'});
-$__t4 = null;;
-if ((is_object($v1_2_1) && (($v1_2_1)->{'tag'} === "Nothing"))) {
-$__t4 = false;
-goto end_branch_4;;
-};
-if ((is_object($v1_2_1) && (($v1_2_1)->{'tag'} === "Just"))) {
-$__t4 = (($v1_2_1)->{'value0'} > $__local_var_3_3);
-goto end_branch_4;;
-};
-throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t4 = null;
-end_branch_4:;
-return $__t4;
-})()) {
+  if ((($GLOBALS['Data_Date_greaterThan'])($v1_2_1))(new Phpurs_Data1("Just", (($GLOBALS['Data_Date_lastDayOfMonth'])(($v_0)->{'value0'}))(($v_0)->{'value1'})))) {
 $__t2 = new Phpurs_Data0("Nothing");
 goto end_branch_2;;
 };
   $__t2 = $v1_2_1;
   end_branch_2:;
   $sd_3_2 = $__t2;
-  $__t6 = null;;
+  $__t4 = null;;
   if ((function() use ($sd_3_2, $sm_1_0, &$__fn) {
-$__t7 = null;;
+$__t5 = null;;
 if ((is_object($sd_3_2) && (($sd_3_2)->{'tag'} === "Nothing"))) {
-$__t7 = true;
-goto end_branch_7;;
+$__t5 = true;
+goto end_branch_5;;
 };
 if ((is_object($sd_3_2) && (($sd_3_2)->{'tag'} === "Just"))) {
-$__t7 = false;
-goto end_branch_7;;
+$__t5 = false;
+goto end_branch_5;;
 };
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t7 = null;
-end_branch_7:;
-$__t8 = null;;
+$__t5 = null;
+end_branch_5:;
+$__t6 = null;;
 if ((is_object($sm_1_0) && (($sm_1_0)->{'tag'} === "Nothing"))) {
+$__t6 = true;
+goto end_branch_6;;
+};
+if ((is_object($sm_1_0) && (($sm_1_0)->{'tag'} === "Just"))) {
+$__t6 = false;
+goto end_branch_6;;
+};
+throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+$__t6 = null;
+end_branch_6:;
+return ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])($__t5))($__t6);
+})()) {
+$__t4 = (($GLOBALS['Data_Date_Component_enumYear'])['succ'])(($v_0)->{'value0'});
+goto end_branch_4;;
+};
+  $__t4 = new Phpurs_Data1("Just", ($v_0)->{'value0'});
+  end_branch_4:;
+  $__t7 = null;;
+  if ((function() use ($sd_3_2, &$__fn) {
+$__t8 = null;;
+if ((is_object($sd_3_2) && (($sd_3_2)->{'tag'} === "Nothing"))) {
 $__t8 = true;
 goto end_branch_8;;
 };
-if ((is_object($sm_1_0) && (($sm_1_0)->{'tag'} === "Just"))) {
+if ((is_object($sd_3_2) && (($sd_3_2)->{'tag'} === "Just"))) {
 $__t8 = false;
 goto end_branch_8;;
 };
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t8 = null;
 end_branch_8:;
-return ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])($__t7))($__t8);
+return $__t8;
 })()) {
-$__t6 = (($GLOBALS['Data_Date_Component_enumYear'])['succ'])(($v_0)->{'value0'});
-goto end_branch_6;;
-};
-  $__t6 = new Phpurs_Data1("Just", ($v_0)->{'value0'});
-  end_branch_6:;
-  $__t9 = null;;
-  if ((function() use ($sd_3_2, &$__fn) {
-$__t10 = null;;
-if ((is_object($sd_3_2) && (($sd_3_2)->{'tag'} === "Nothing"))) {
-$__t10 = true;
-goto end_branch_10;;
-};
-if ((is_object($sd_3_2) && (($sd_3_2)->{'tag'} === "Just"))) {
-$__t10 = false;
-goto end_branch_10;;
-};
-throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t10 = null;
-end_branch_10:;
-return $__t10;
-})()) {
-$__t11 = null;;
+$__t9 = null;;
 if ((is_object($sm_1_0) && (($sm_1_0)->{'tag'} === "Nothing"))) {
-$__t11 = new Phpurs_Data0("January");
-goto end_branch_11;;
+$__t9 = new Phpurs_Data0("January");
+goto end_branch_9;;
 };
 if ((is_object($sm_1_0) && (($sm_1_0)->{'tag'} === "Just"))) {
-$__t11 = (($GLOBALS['Control_Category_categoryFn'])['identity'])(($sm_1_0)->{'value0'});
+$__t9 = ($sm_1_0)->{'value0'};
+goto end_branch_9;;
+};
+throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+$__t9 = null;
+end_branch_9:;
+$__t7 = $__t9;
+goto end_branch_7;;
+};
+  $__t7 = ($v_0)->{'value1'};
+  end_branch_7:;
+  $__t10 = null;;
+  if ((function() use ($sd_3_2, &$__fn) {
+$__t11 = null;;
+if ((is_object($sd_3_2) && (($sd_3_2)->{'tag'} === "Nothing"))) {
+$__t11 = true;
+goto end_branch_11;;
+};
+if ((is_object($sd_3_2) && (($sd_3_2)->{'tag'} === "Just"))) {
+$__t11 = false;
 goto end_branch_11;;
 };
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t11 = null;
 end_branch_11:;
-$__t9 = $__t11;
-goto end_branch_9;;
-};
-  $__t9 = ($v_0)->{'value1'};
-  end_branch_9:;
-  $__t12 = null;;
-  if ((function() use ($sd_3_2, &$__fn) {
-$__t13 = null;;
-if ((is_object($sd_3_2) && (($sd_3_2)->{'tag'} === "Nothing"))) {
-$__t13 = true;
-goto end_branch_13;;
-};
-if ((is_object($sd_3_2) && (($sd_3_2)->{'tag'} === "Just"))) {
-$__t13 = false;
-goto end_branch_13;;
-};
-throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t13 = null;
-end_branch_13:;
-return $__t13;
+return $__t11;
 })()) {
-$__t12 = (($GLOBALS['Data_Date_Component_boundedEnumDay'])['toEnum'])(1);
-goto end_branch_12;;
+$__t10 = (($GLOBALS['Data_Date_Component_boundedEnumDay'])['toEnum'])(1);
+goto end_branch_10;;
 };
-  $__t12 = $sd_3_2;
-  end_branch_12:;
-  $__res = ((($GLOBALS['Data_Maybe_applyMaybe'])['apply'])(((($GLOBALS['Data_Maybe_applyMaybe'])['apply'])(((($GLOBALS['Data_Maybe_functorMaybe'])['map'])($GLOBALS['Data_Date_Date']))($__t6)))((($GLOBALS['Data_Maybe_applicativeMaybe'])['pure'])($__t9))))($__t12);
+  $__t10 = $sd_3_2;
+  end_branch_10:;
+  $__res = ((($GLOBALS['Data_Maybe_applyMaybe'])['apply'])(((($GLOBALS['Data_Maybe_applyMaybe'])['apply'])(((($GLOBALS['Data_Maybe_functorMaybe'])['map'])($GLOBALS['Data_Date_Date']))($__t4)))((($GLOBALS['Data_Maybe_applicativeMaybe'])['pure'])($__t7))))($__t10);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "pred" => function($v_0 = null) {
   $__num = \func_num_args();
-  $pm_1_14 = (($GLOBALS['Data_Date_Component_enumMonth'])['pred'])(($v_0)->{'value1'});
-  $pd_2_15 = (($GLOBALS['Data_Date_Component_enumDay'])['pred'])(($v_0)->{'value2'});
-  $__t16 = null;;
-  if ((function() use ($pd_2_15, &$__fn) {
-$__t17 = null;;
-if ((is_object($pd_2_15) && (($pd_2_15)->{'tag'} === "Nothing"))) {
-$__t17 = true;
-goto end_branch_17;;
+  $pm_1_12 = (($GLOBALS['Data_Date_Component_enumMonth'])['pred'])(($v_0)->{'value1'});
+  $pd_2_13 = (($GLOBALS['Data_Date_Component_enumDay'])['pred'])(($v_0)->{'value2'});
+  $__t14 = null;;
+  if ((function() use ($pd_2_13, &$__fn) {
+$__t15 = null;;
+if ((is_object($pd_2_13) && (($pd_2_13)->{'tag'} === "Nothing"))) {
+$__t15 = true;
+goto end_branch_15;;
 };
-if ((is_object($pd_2_15) && (($pd_2_15)->{'tag'} === "Just"))) {
-$__t17 = false;
-goto end_branch_17;;
+if ((is_object($pd_2_13) && (($pd_2_13)->{'tag'} === "Just"))) {
+$__t15 = false;
+goto end_branch_15;;
 };
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t17 = null;
-end_branch_17:;
-return $__t17;
+$__t15 = null;
+end_branch_15:;
+return $__t15;
 })()) {
-$__t18 = null;;
-if ((is_object($pm_1_14) && (($pm_1_14)->{'tag'} === "Nothing"))) {
-$__t18 = new Phpurs_Data0("December");
-goto end_branch_18;;
-};
-if ((is_object($pm_1_14) && (($pm_1_14)->{'tag'} === "Just"))) {
-$__t18 = (($GLOBALS['Control_Category_categoryFn'])['identity'])(($pm_1_14)->{'value0'});
-goto end_branch_18;;
-};
-throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t18 = null;
-end_branch_18:;
-$__t16 = $__t18;
+$__t16 = null;;
+if ((is_object($pm_1_12) && (($pm_1_12)->{'tag'} === "Nothing"))) {
+$__t16 = new Phpurs_Data0("December");
 goto end_branch_16;;
 };
-  $__t16 = ($v_0)->{'value1'};
-  end_branch_16:;
-  $m_prime_3_16 = $__t16;
-  $l_4_20 = (($GLOBALS['Data_Date_lastDayOfMonth'])(($v_0)->{'value0'}))($m_prime_3_16);
-  $__t21 = null;;
-  if ((function() use ($pd_2_15, $pm_1_14, &$__fn) {
-$__t22 = null;;
-if ((is_object($pd_2_15) && (($pd_2_15)->{'tag'} === "Nothing"))) {
-$__t22 = true;
-goto end_branch_22;;
-};
-if ((is_object($pd_2_15) && (($pd_2_15)->{'tag'} === "Just"))) {
-$__t22 = false;
-goto end_branch_22;;
+if ((is_object($pm_1_12) && (($pm_1_12)->{'tag'} === "Just"))) {
+$__t16 = ($pm_1_12)->{'value0'};
+goto end_branch_16;;
 };
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t22 = null;
-end_branch_22:;
+$__t16 = null;
+end_branch_16:;
+$__t14 = $__t16;
+goto end_branch_14;;
+};
+  $__t14 = ($v_0)->{'value1'};
+  end_branch_14:;
+  $m_prime_3_14 = $__t14;
+  $l_4_18 = (($GLOBALS['Data_Date_lastDayOfMonth'])(($v_0)->{'value0'}))($m_prime_3_14);
+  $__t19 = null;;
+  if ((function() use ($pd_2_13, $pm_1_12, &$__fn) {
+$__t20 = null;;
+if ((is_object($pd_2_13) && (($pd_2_13)->{'tag'} === "Nothing"))) {
+$__t20 = true;
+goto end_branch_20;;
+};
+if ((is_object($pd_2_13) && (($pd_2_13)->{'tag'} === "Just"))) {
+$__t20 = false;
+goto end_branch_20;;
+};
+throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+$__t20 = null;
+end_branch_20:;
+$__t21 = null;;
+if ((is_object($pm_1_12) && (($pm_1_12)->{'tag'} === "Nothing"))) {
+$__t21 = true;
+goto end_branch_21;;
+};
+if ((is_object($pm_1_12) && (($pm_1_12)->{'tag'} === "Just"))) {
+$__t21 = false;
+goto end_branch_21;;
+};
+throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+$__t21 = null;
+end_branch_21:;
+return ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])($__t20))($__t21);
+})()) {
+$__t19 = (($GLOBALS['Data_Date_Component_enumYear'])['pred'])(($v_0)->{'value0'});
+goto end_branch_19;;
+};
+  $__t19 = new Phpurs_Data1("Just", ($v_0)->{'value0'});
+  end_branch_19:;
+  $__t22 = null;;
+  if ((function() use ($pd_2_13, &$__fn) {
 $__t23 = null;;
-if ((is_object($pm_1_14) && (($pm_1_14)->{'tag'} === "Nothing"))) {
+if ((is_object($pd_2_13) && (($pd_2_13)->{'tag'} === "Nothing"))) {
 $__t23 = true;
 goto end_branch_23;;
 };
-if ((is_object($pm_1_14) && (($pm_1_14)->{'tag'} === "Just"))) {
+if ((is_object($pd_2_13) && (($pd_2_13)->{'tag'} === "Just"))) {
 $__t23 = false;
 goto end_branch_23;;
 };
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t23 = null;
 end_branch_23:;
-return ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])($__t22))($__t23);
+return $__t23;
 })()) {
-$__t21 = (($GLOBALS['Data_Date_Component_enumYear'])['pred'])(($v_0)->{'value0'});
-goto end_branch_21;;
+$__t22 = new Phpurs_Data1("Just", $l_4_18);
+goto end_branch_22;;
 };
-  $__t21 = new Phpurs_Data1("Just", ($v_0)->{'value0'});
-  end_branch_21:;
-  $__t24 = null;;
-  if ((function() use ($pd_2_15, &$__fn) {
-$__t25 = null;;
-if ((is_object($pd_2_15) && (($pd_2_15)->{'tag'} === "Nothing"))) {
-$__t25 = true;
-goto end_branch_25;;
-};
-if ((is_object($pd_2_15) && (($pd_2_15)->{'tag'} === "Just"))) {
-$__t25 = false;
-goto end_branch_25;;
-};
-throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t25 = null;
-end_branch_25:;
-return $__t25;
-})()) {
-$__t24 = new Phpurs_Data1("Just", $l_4_20);
-goto end_branch_24;;
-};
-  $__t24 = $pd_2_15;
-  end_branch_24:;
-  $__res = ((($GLOBALS['Data_Maybe_applyMaybe'])['apply'])(((($GLOBALS['Data_Maybe_applyMaybe'])['apply'])(((($GLOBALS['Data_Maybe_functorMaybe'])['map'])($GLOBALS['Data_Date_Date']))($__t21)))((($GLOBALS['Data_Maybe_applicativeMaybe'])['pure'])($m_prime_3_16))))($__t24);
+  $__t22 = $pd_2_13;
+  end_branch_22:;
+  $__res = ((($GLOBALS['Data_Maybe_applyMaybe'])['apply'])(((($GLOBALS['Data_Maybe_applyMaybe'])['apply'])(((($GLOBALS['Data_Maybe_functorMaybe'])['map'])($GLOBALS['Data_Date_Date']))($__t19)))((($GLOBALS['Data_Maybe_applicativeMaybe'])['pure'])($m_prime_3_14))))($__t22);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -761,8 +818,8 @@ default:
 ;
 break;
 };
-  $j_5_1 = ((($GLOBALS['Data_Semiring_semiringInt'])['add'])($v1_3))((($GLOBALS['Data_Date_Component_boundedEnumDay'])['fromEnum'])(($v2_4)->{'value2'}));
-  $low_6_2 = ($j_5_1 < 1);
+  $j_5_1 = ($v1_3 + (($GLOBALS['Data_Date_Component_boundedEnumDay'])['fromEnum'])(($v2_4)->{'value2'}));
+  $low_6_2 = (($GLOBALS['Data_Date_lessThan'])($j_5_1))(1);
   $__t3 = null;;
   if ($low_6_2) {
 $__local_var_7_4 = (($GLOBALS['Data_Date_Component_enumMonth'])['pred'])(($v2_4)->{'value1'});
@@ -772,7 +829,7 @@ $__t5 = new Phpurs_Data0("December");
 goto end_branch_5;;
 };
 if ((is_object($__local_var_7_4) && (($__local_var_7_4)->{'tag'} === "Just"))) {
-$__t5 = (($GLOBALS['Control_Category_categoryFn'])['identity'])(($__local_var_7_4)->{'value0'});
+$__t5 = ($__local_var_7_4)->{'value0'};
 goto end_branch_5;;
 };
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -784,7 +841,7 @@ goto end_branch_3;;
   $__t3 = ($v2_4)->{'value1'};
   end_branch_3:;
   $l_7_3 = (($GLOBALS['Data_Date_lastDayOfMonth'])(($v2_4)->{'value0'}))($__t3);
-  $hi_8_7 = ($j_5_1 > (($GLOBALS['Data_Date_Component_boundedEnumDay'])['fromEnum'])($l_7_3));
+  $hi_8_7 = (($GLOBALS['Data_Date_greaterThan1'])($j_5_1))((($GLOBALS['Data_Date_Component_boundedEnumDay'])['fromEnum'])($l_7_3));
   $__t8 = null;;
   if ($low_6_2) {
 $__t8 = ((($GLOBALS['Data_Maybe_bindMaybe'])['bind'])(((($GLOBALS['Data_Maybe_functorMaybe'])['map'])((($GLOBALS['Data_Date_Date'])(($v2_4)->{'value0'}))(($v2_4)->{'value1'})))((($GLOBALS['Data_Date_Component_boundedEnumDay'])['toEnum'])(1))))(($GLOBALS['Data_Date_enumDate'])['pred']);
@@ -802,7 +859,7 @@ $__t9 = $j_5_1;
 goto end_branch_9;;
 };
   if ($hi_8_7) {
-$__t9 = ((($GLOBALS['Data_Ring_ringInt'])['sub'])(((($GLOBALS['Data_Ring_ringInt'])['sub'])($j_5_1))((($GLOBALS['Data_Date_Component_boundedEnumDay'])['fromEnum'])($l_7_3))))(1);
+$__t9 = (($j_5_1 - (($GLOBALS['Data_Date_Component_boundedEnumDay'])['fromEnum'])($l_7_3)) - 1);
 goto end_branch_9;;
 };
   $__t9 = 0;

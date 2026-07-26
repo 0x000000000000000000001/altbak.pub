@@ -9,7 +9,7 @@ TEST_NAME=""
 while [[ $# -gt 0 ]]
 do
   case "$1" in
-    --clean)
+    -c|--clean)
     CLEAN=1
     shift
     ;;

@@ -114,6 +114,15 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+// Data_Set_identity
+$GLOBALS['Data_Set_identity'] = function($x_0 = null) {
+  $__num = \func_num_args();
+  $__res = $x_0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+
 // Data_Set_Set
 $GLOBALS['Data_Set_Set'] = function($x_0 = null) {
   $__num = \func_num_args();
@@ -206,14 +215,14 @@ $GLOBALS['Data_Set_toList'] = function($v_0 = null) {
 // Data_Set_toUnfoldable
 $GLOBALS['Data_Set_toUnfoldable'] = function($dictUnfoldable_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(($GLOBALS['Data_List_toUnfoldable'])($dictUnfoldable_0)))($GLOBALS['Data_Set_toList']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_List_toUnfoldable'])($dictUnfoldable_0)))($GLOBALS['Data_Set_toList']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
 
 // Data_Set_toUnfoldable1
-$GLOBALS['Data_Set_toUnfoldable1'] = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(($GLOBALS['Data_List_toUnfoldable'])($GLOBALS['Data_Unfoldable_unfoldableArray'])))($GLOBALS['Data_Set_toList']);
+$GLOBALS['Data_Set_toUnfoldable1'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_List_toUnfoldable'])($GLOBALS['Data_Unfoldable_unfoldableArray'])))($GLOBALS['Data_Set_toList']);
 
 // Data_Set_size
 $GLOBALS['Data_Set_size'] = $GLOBALS['Data_Map_Internal_size'];
@@ -374,7 +383,7 @@ $GLOBALS['Data_Set_foldableSet'] = ["foldMap" => function($dictMonoid_0 = null) 
   $foldMap1_1_0 = (($GLOBALS['Data_List_Types_foldableList'])['foldMap'])($dictMonoid_0);
   $__res = function($f_2 = null) use ($foldMap1_1_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(($foldMap1_1_0)($f_2)))($GLOBALS['Data_Set_toList']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($foldMap1_1_0)($f_2)))($GLOBALS['Data_Set_toList']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -388,7 +397,7 @@ $GLOBALS['Data_Set_foldableSet'] = ["foldMap" => function($dictMonoid_0 = null) 
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(((($GLOBALS['Data_List_Types_foldableList'])['foldl'])($f_0))($x_1)))($GLOBALS['Data_Set_toList']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(((($GLOBALS['Data_List_Types_foldableList'])['foldl'])($f_0))($x_1)))($GLOBALS['Data_Set_toList']);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -400,7 +409,7 @@ $GLOBALS['Data_Set_foldableSet'] = ["foldMap" => function($dictMonoid_0 = null) 
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(((($GLOBALS['Data_List_Types_foldableList'])['foldr'])($f_0))($x_1)))($GLOBALS['Data_Set_toList']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(((($GLOBALS['Data_List_Types_foldableList'])['foldr'])($f_0))($x_1)))($GLOBALS['Data_Set_toList']);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -771,7 +780,7 @@ goto end_branch_2;;
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
   $__t2 = null;
   end_branch_2:;
-  $__res = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(((($GLOBALS['Data_Eq_eqBoolean'])['eq'])(((($GLOBALS['Data_Eq_eqInt'])['eq'])($__t1))($__t2)))(false)))((is_object(($GLOBALS['Data_Map_Internal_unsafeDifference'])($compare_1_0, $s1_2, $s2_3)) && ((($GLOBALS['Data_Map_Internal_unsafeDifference'])($compare_1_0, $s1_2, $s2_3))->{'tag'} === "Leaf")));
+  $__res = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(((($GLOBALS['Data_Eq_eqBoolean'])['eq'])(($__t1 === $__t2)))(false)))((is_object(($GLOBALS['Data_Map_Internal_unsafeDifference'])($compare_1_0, $s1_2, $s2_3)) && ((($GLOBALS['Data_Map_Internal_unsafeDifference'])($compare_1_0, $s1_2, $s2_3))->{'tag'} === "Leaf")));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -804,7 +813,7 @@ $GLOBALS['Data_Set_checkValid'] = function($dictOrd_0 = null) {
 // Data_Set_catMaybes
 $GLOBALS['Data_Set_catMaybes'] = function($dictOrd_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Set_mapMaybe'])($dictOrd_0))(($GLOBALS['Control_Category_categoryFn'])['identity']);
+  $__res = (($GLOBALS['Data_Set_mapMaybe'])($dictOrd_0))($GLOBALS['Data_Set_identity']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

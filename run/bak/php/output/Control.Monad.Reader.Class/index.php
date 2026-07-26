@@ -101,7 +101,13 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
 // Control_Monad_Reader_Class_monadAskFun
-$GLOBALS['Control_Monad_Reader_Class_monadAskFun'] = ["ask" => ($GLOBALS['Control_Category_categoryFn'])['identity'], "Monad0" => function($_dollar__unused_0 = null) {
+$GLOBALS['Control_Monad_Reader_Class_monadAskFun'] = ["ask" => function($x_0 = null) {
+  $__num = \func_num_args();
+  $__res = $x_0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Monad0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Control_Monad_monadFn'];
   goto __end;;
@@ -116,7 +122,7 @@ $GLOBALS['Control_Monad_Reader_Class_monadReaderFun'] = ["local" => (function() 
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($g_1))($f_0);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($g_1))($f_0);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

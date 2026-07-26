@@ -162,6 +162,11 @@ $GLOBALS['Data_EuclideanRing_gcd'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
+  $__tco_var_Data_EuclideanRing_gcd_dictEq_0 = $dictEq_0;
+  $__tco_var_Data_EuclideanRing_gcd_dictEuclideanRing_1 = $dictEuclideanRing_1;
+  tco_loop_Data_EuclideanRing_gcd:;
+  $dictEq_0 = $__tco_var_Data_EuclideanRing_gcd_dictEq_0;
+  $dictEuclideanRing_1 = $__tco_var_Data_EuclideanRing_gcd_dictEuclideanRing_1;
   $zero_2_0 = ((((((($dictEuclideanRing_1)['CommutativeRing0'])(null))['Ring0'])(null))['Semiring0'])(null))['zero'];
   $__res = (function() use ($dictEq_0, $dictEuclideanRing_1, $zero_2_0) {
   $__fn = function($a_3 = null, $b_4 = null) use ($dictEq_0, $dictEuclideanRing_1, $zero_2_0, &$__fn) {

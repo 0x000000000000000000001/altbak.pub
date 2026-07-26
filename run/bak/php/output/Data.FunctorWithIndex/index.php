@@ -200,7 +200,7 @@ $GLOBALS['Data_FunctorWithIndex_functorWithIndexProduct'] = function($dictFuncto
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($GLOBALS['Data_Bifunctor_bifunctorTuple'])['bimap'])((($dictFunctorWithIndex_0)['mapWithIndex'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($f_4))($GLOBALS['Data_Either_Left']))))((($dictFunctorWithIndex1_2)['mapWithIndex'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($f_4))($GLOBALS['Data_Either_Right']))))($v_5);
+  $__res = (((($GLOBALS['Data_Bifunctor_bifunctorTuple'])['bimap'])((($dictFunctorWithIndex_0)['mapWithIndex'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_4))($GLOBALS['Data_Either_Left']))))((($dictFunctorWithIndex1_2)['mapWithIndex'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_4))($GLOBALS['Data_Either_Right']))))($v_5);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -361,7 +361,7 @@ $GLOBALS['Data_FunctorWithIndex_functorWithIndexCoproduct'] = function($dictFunc
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($GLOBALS['Data_Bifunctor_bifunctorEither'])['bimap'])((($dictFunctorWithIndex_0)['mapWithIndex'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($f_4))($GLOBALS['Data_Either_Left']))))((($dictFunctorWithIndex1_2)['mapWithIndex'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($f_4))($GLOBALS['Data_Either_Right']))))($v_5);
+  $__res = (((($GLOBALS['Data_Bifunctor_bifunctorEither'])['bimap'])((($dictFunctorWithIndex_0)['mapWithIndex'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_4))($GLOBALS['Data_Either_Left']))))((($dictFunctorWithIndex1_2)['mapWithIndex'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_4))($GLOBALS['Data_Either_Right']))))($v_5);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -446,7 +446,7 @@ $GLOBALS['Data_FunctorWithIndex_functorWithIndexCompose'] = function($dictFuncto
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictFunctorWithIndex_0)['mapWithIndex'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($mapWithIndex2_3_1))((function() use ($f_6) {
+  $__res = ((($dictFunctorWithIndex_0)['mapWithIndex'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($mapWithIndex2_3_1))((function() use ($f_6) {
   $__fn = function($a_8 = null, $b_9 = null) use ($f_6, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {

@@ -124,7 +124,7 @@ goto end_branch_2;;
 };
   $__t2 = 364;
   end_branch_2:;
-  $__res = ((($Bind1_2_1)['bind'])(((((((($Bind1_2_1)['Apply0'])(null))['Functor0'])(null))['map'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Time_Duration_Days']))($GLOBALS['Data_Int_toNumber'])))(((($dictMonadGen_0)['chooseInt'])(0))($__t2))))(function($days_4 = null) use ($Monad0_1_0, $year_3) {
+  $__res = ((($Bind1_2_1)['bind'])(((((((($Bind1_2_1)['Apply0'])(null))['Functor0'])(null))['map'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Time_Duration_Days']))($GLOBALS['Data_Int_toNumber'])))(((($dictMonadGen_0)['chooseInt'])(0))($__t2))))(function($days_4 = null) use ($Monad0_1_0, $year_3) {
   $__num = \func_num_args();
   $__local_var_5_3 = ((($GLOBALS['Data_Maybe_bindMaybe'])['bind'])(((($GLOBALS['Data_Date_exactDate'])($year_3))(($GLOBALS['Data_Date_Component_boundedMonth'])['bottom']))(($GLOBALS['Data_Date_Component_boundedDay'])['bottom'])))(function($janFirst_5 = null) use ($days_4) {
   $__num = \func_num_args();

@@ -234,7 +234,7 @@ $GLOBALS['Data_Map_monoidSemigroupMap'] = function($dictOrd_0 = null) {
 };
 
 // Data_Map_keys
-$GLOBALS['Data_Map_keys'] = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Set_Set']))((($GLOBALS['Data_Map_Internal_functorMap'])['map'])(function($v_0 = null) {
+$GLOBALS['Data_Map_keys'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Set_Set']))((($GLOBALS['Data_Map_Internal_functorMap'])['map'])(function($v_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Unit_unit'];
   goto __end;;
@@ -303,7 +303,7 @@ $GLOBALS['Data_Map_applySemigroupMap'] = function($dictOrd_0 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Data_Map_Internal_unsafeIntersectionWith'])($compare_1_0, ($GLOBALS['Control_Category_categoryFn'])['identity'], $m1_2, $m2_3);
+  $__res = ($GLOBALS['Data_Map_Internal_unsafeIntersectionWith'])($compare_1_0, $GLOBALS['Data_Map_Internal_identity'], $m1_2, $m2_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

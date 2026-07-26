@@ -155,7 +155,7 @@ $GLOBALS['Data_Array_ST_Iterator_next'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__res = ((($GLOBALS['Control_Monad_ST_Internal_bindST'])['bind'])((($GLOBALS['Control_Monad_ST_Internal_modifyImpl'])(function($s_3 = null) {
   $__num = \func_num_args();
-  $s_prime_4_1 = ((($GLOBALS['Data_Semiring_semiringInt'])['add'])($s_3))(1);
+  $s_prime_4_1 = ($s_3 + 1);
   $__res = ["state" => $s_prime_4_1, "value" => $s_prime_4_1];
   goto __end;;
   __end:
@@ -189,7 +189,7 @@ $GLOBALS['Data_Array_ST_Iterator_pushWhile'] = (function() {
   $__num = \func_num_args();
   $__t0 = null;;
   if (((is_object($mx_4) && (($mx_4)->{'tag'} === "Just")) && ($p_0)(($mx_4)->{'value0'}))) {
-$__t0 = ((($GLOBALS['Control_Monad_ST_Internal_bindST'])['bind'])((($GLOBALS['Data_Array_ST_push'])(($mx_4)->{'value0'}))($array_2)))(function($_dollar__unused_5 = null) use ($iter_1) {
+$__t0 = ((($GLOBALS['Control_Monad_ST_Internal_bindST'])['bind'])(((($GLOBALS['Control_Monad_ST_Uncurried_runSTFn2'])($GLOBALS['Data_Array_ST_pushImpl']))(($mx_4)->{'value0'}))($array_2)))(function($_dollar__unused_5 = null) use ($iter_1) {
   $__num = \func_num_args();
   $__res = ($GLOBALS['Data_Array_ST_Iterator_void'])(($GLOBALS['Data_Array_ST_Iterator_next'])($iter_1));
   goto __end;;
@@ -274,5 +274,5 @@ goto end_branch_0;;
 })();
 
 // Data_Array_ST_Iterator_exhausted
-$GLOBALS['Data_Array_ST_Iterator_exhausted'] = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($GLOBALS['Control_Monad_ST_Internal_functorST'])['map'])($GLOBALS['Data_Maybe_isNothing'])))($GLOBALS['Data_Array_ST_Iterator_peek']);
+$GLOBALS['Data_Array_ST_Iterator_exhausted'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_ST_Internal_functorST'])['map'])($GLOBALS['Data_Maybe_isNothing'])))($GLOBALS['Data_Array_ST_Iterator_peek']);
 

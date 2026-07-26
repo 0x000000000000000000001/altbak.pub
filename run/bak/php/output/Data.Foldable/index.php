@@ -171,6 +171,15 @@ $GLOBALS['Data_Foldable_foldlArray'] = $ffi_Data_Foldable['foldlArray'] ?? new c
 $GLOBALS['Data_Foldable_foldrArray'] = $ffi_Data_Foldable['foldrArray'] ?? new class { public function __invoke(...$args) { return $this; } };
 
 
+// Data_Foldable_identity
+$GLOBALS['Data_Foldable_identity'] = function($x_0 = null) {
+  $__num = \func_num_args();
+  $__res = $x_0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+
 // Data_Foldable_monoidEndo
 $GLOBALS['Data_Foldable_monoidEndo'] = (function() use (&$__fn) {
 $__local_var_0_0 = (($GLOBALS['Control_Category_categoryFn'])['Semigroupoid0'])(null);
@@ -187,7 +196,13 @@ $semigroupEndo1_1_1 = ["append" => (function() use ($__local_var_0_0) {
   };
   return $__fn;
 })()];
-return ["mempty" => ($GLOBALS['Control_Category_categoryFn'])['identity'], "Semigroup0" => function($_dollar__unused_2 = null) use ($semigroupEndo1_1_1) {
+return ["mempty" => function($x_2 = null) {
+  $__num = \func_num_args();
+  $__res = $x_2;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Semigroup0" => function($_dollar__unused_2 = null) use ($semigroupEndo1_1_1) {
   $__num = \func_num_args();
   $__res = $semigroupEndo1_1_1;
   goto __end;;
@@ -251,7 +266,7 @@ $GLOBALS['Data_Foldable_indexr'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(function($v_2 = null) {
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v_2 = null) {
   $__num = \func_num_args();
   $__res = ($v_2)['elem'];
   goto __end;;
@@ -268,11 +283,11 @@ $GLOBALS['Data_Foldable_indexr'] = (function() {
 $__t0 = $cursor_3;
 goto end_branch_0;;
 };
-  if (((($GLOBALS['Data_Eq_eqInt'])['eq'])(($cursor_3)['pos']))($idx_1)) {
+  if ((($cursor_3)['pos'] === $idx_1)) {
 $__t0 = ["elem" => new Phpurs_Data1("Just", $a_2), "pos" => ($cursor_3)['pos']];
 goto end_branch_0;;
 };
-  $__t0 = ["pos" => ((($GLOBALS['Data_Semiring_semiringInt'])['add'])(($cursor_3)['pos']))(1), "elem" => ($cursor_3)['elem']];
+  $__t0 = ["pos" => (($cursor_3)['pos'] + 1), "elem" => ($cursor_3)['elem']];
   end_branch_0:;
   $__res = $__t0;
   goto __end;;
@@ -335,7 +350,7 @@ $GLOBALS['Data_Foldable_oneOfMap'] = (function() {
   $empty_3_1 = ($dictPlus_1)['empty'];
   $__res = function($f_4 = null) use ($alt_2_0, $dictFoldable_0, $empty_3_1) {
   $__num = \func_num_args();
-  $__res = ((($dictFoldable_0)['foldr'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($alt_2_0))($f_4)))($empty_3_1);
+  $__res = ((($dictFoldable_0)['foldr'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($alt_2_0))($f_4)))($empty_3_1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -350,14 +365,32 @@ $GLOBALS['Data_Foldable_oneOfMap'] = (function() {
 // Data_Foldable_traverse_
 $GLOBALS['Data_Foldable_traverse_'] = function($dictApplicative_0 = null) {
   $__num = \func_num_args();
-  $applySecond_1_0 = ($GLOBALS['Control_Apply_applySecond'])((($dictApplicative_0)['Apply0'])(null));
-  $__res = (function() use ($applySecond_1_0, $dictApplicative_0) {
-  $__fn = function($dictFoldable_2 = null, $f_3 = null) use ($applySecond_1_0, $dictApplicative_0, &$__fn) {
+  $__local_var_1_0 = (($dictApplicative_0)['Apply0'])(null);
+  $__res = (function() use ($__local_var_1_0, $dictApplicative_0) {
+  $__fn = function($dictFoldable_2 = null, $f_3 = null) use ($__local_var_1_0, $dictApplicative_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictFoldable_2)['foldr'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($applySecond_1_0))($f_3)))((($dictApplicative_0)['pure'])($GLOBALS['Data_Unit_unit']));
+  $__res = ((($dictFoldable_2)['foldr'])((($GLOBALS['Control_Semigroupoid_composeImpl'])((function() use ($__local_var_1_0) {
+  $__fn = function($a_4 = null, $b_5 = null) use ($__local_var_1_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ((($__local_var_1_0)['apply'])(((((($__local_var_1_0)['Functor0'])(null))['map'])(function($v_6 = null) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Control_Apply_identity'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}))($a_4)))($b_5);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})()))($f_3)))((($dictApplicative_0)['pure'])($GLOBALS['Data_Unit_unit']));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -404,7 +437,7 @@ $GLOBALS['Data_Foldable_sequence_'] = function($dictApplicative_0 = null) {
   $traverse_1_1_0 = ($GLOBALS['Data_Foldable_traverse_'])($dictApplicative_0);
   $__res = function($dictFoldable_2 = null) use ($traverse_1_1_0) {
   $__num = \func_num_args();
-  $__res = (($traverse_1_1_0)($dictFoldable_2))(($GLOBALS['Control_Category_categoryFn'])['identity']);
+  $__res = (($traverse_1_1_0)($dictFoldable_2))($GLOBALS['Data_Foldable_identity']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -430,7 +463,7 @@ $GLOBALS['Data_Foldable_indexl'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(function($v_2 = null) {
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v_2 = null) {
   $__num = \func_num_args();
   $__res = ($v_2)['elem'];
   goto __end;;
@@ -447,11 +480,11 @@ $GLOBALS['Data_Foldable_indexl'] = (function() {
 $__t0 = $cursor_2;
 goto end_branch_0;;
 };
-  if (((($GLOBALS['Data_Eq_eqInt'])['eq'])(($cursor_2)['pos']))($idx_1)) {
+  if ((($cursor_2)['pos'] === $idx_1)) {
 $__t0 = ["elem" => new Phpurs_Data1("Just", $a_3), "pos" => ($cursor_2)['pos']];
 goto end_branch_0;;
 };
-  $__t0 = ["pos" => ((($GLOBALS['Data_Semiring_semiringInt'])['add'])(($cursor_2)['pos']))(1), "elem" => ($cursor_2)['elem']];
+  $__t0 = ["pos" => (($cursor_2)['pos'] + 1), "elem" => ($cursor_2)['elem']];
   end_branch_0:;
   $__res = $__t0;
   goto __end;;
@@ -1932,7 +1965,7 @@ $GLOBALS['Data_Foldable_lookup'] = function($dictFoldable_0 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Unsafe_Coerce_unsafeCoerce']))(($foldMap2_1_0)(function($v_4 = null) use ($a_3, $dictEq_2) {
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce']))(($foldMap2_1_0)(function($v_4 = null) use ($a_3, $dictEq_2) {
   $__num = \func_num_args();
   $__t1 = null;;
   if (((($dictEq_2)['eq'])($a_3))(($v_4)->{'value0'})) {
@@ -2000,7 +2033,7 @@ $GLOBALS['Data_Foldable_surround'] = function($dictFoldable_0 = null) {
   $surroundMap2_3_1 = ($surroundMap1_1_0)($dictSemigroup_2);
   $__res = function($d_4 = null) use ($surroundMap2_3_1) {
   $__num = \func_num_args();
-  $__res = (($surroundMap2_3_1)($d_4))(($GLOBALS['Control_Category_categoryFn'])['identity']);
+  $__res = (($surroundMap2_3_1)($d_4))($GLOBALS['Data_Foldable_identity']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -2054,7 +2087,7 @@ $GLOBALS['Data_Foldable_fold'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictFoldable_0)['foldMap'])($dictMonoid_1))(($GLOBALS['Control_Category_categoryFn'])['identity']);
+  $__res = ((($dictFoldable_0)['foldMap'])($dictMonoid_1))($GLOBALS['Data_Foldable_identity']);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -2189,7 +2222,7 @@ $GLOBALS['Data_Foldable_elem'] = function($dictFoldable_0 = null) {
 }]);
   $__res = function($dictEq_2 = null) use ($any1_1_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($any1_1_0))(($dictEq_2)['eq']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($any1_1_0))(($dictEq_2)['eq']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -2208,7 +2241,7 @@ $GLOBALS['Data_Foldable_notElem'] = function($dictFoldable_0 = null) {
   $elem2_3_1 = ($elem1_1_0)($dictEq_2);
   $__res = function($x_4 = null) use ($elem2_3_1) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['not']))(($elem2_3_1)($x_4));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['not']))(($elem2_3_1)($x_4));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -2248,7 +2281,7 @@ $GLOBALS['Data_Foldable_or'] = (function() {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]))(($GLOBALS['Control_Category_categoryFn'])['identity']);
+}]))($GLOBALS['Data_Foldable_identity']);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -2316,7 +2349,7 @@ $GLOBALS['Data_Foldable_and'] = (function() {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]))(($GLOBALS['Control_Category_categoryFn'])['identity']);
+}]))($GLOBALS['Data_Foldable_identity']);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

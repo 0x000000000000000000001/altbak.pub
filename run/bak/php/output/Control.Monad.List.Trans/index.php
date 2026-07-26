@@ -122,6 +122,15 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+// Control_Monad_List_Trans_identity
+$GLOBALS['Control_Monad_List_Trans_identity'] = function($x_0 = null) {
+  $__num = \func_num_args();
+  $__res = $x_0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+
 // Control_Monad_List_Trans_Yield
 $GLOBALS['Control_Monad_List_Trans_Yield'] = (function() {
   $__fn = function($value0 = null, $value1 = null) use (&$__fn) {
@@ -180,7 +189,7 @@ $GLOBALS['Control_Monad_List_Trans_wrapEffect'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictFunctor_0)['map'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Control_Monad_List_Trans_Skip']))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Lazy_defer']))($GLOBALS['Data_Function_const']))))($v_1);
+  $__res = ((($dictFunctor_0)['map'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_List_Trans_Skip']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Lazy_defer']))($GLOBALS['Data_Function_const']))))($v_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -195,6 +204,13 @@ $GLOBALS['Control_Monad_List_Trans_unfold'] = (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
+  $__tco_var_Control_Monad_List_Trans_unfold_dictMonad_0 = $dictMonad_0;
+  $__tco_var_Control_Monad_List_Trans_unfold_f_1 = $f_1;
+  $__tco_var_Control_Monad_List_Trans_unfold_z_2 = $z_2;
+  tco_loop_Control_Monad_List_Trans_unfold:;
+  $dictMonad_0 = $__tco_var_Control_Monad_List_Trans_unfold_dictMonad_0;
+  $f_1 = $__tco_var_Control_Monad_List_Trans_unfold_f_1;
+  $z_2 = $__tco_var_Control_Monad_List_Trans_unfold_z_2;
   $__res = ((((((((($dictMonad_0)['Bind1'])(null))['Apply0'])(null))['Functor0'])(null))['map'])(function($v_3 = null) use ($dictMonad_0, $f_1) {
   $__num = \func_num_args();
   $__t0 = null;;
@@ -231,6 +247,9 @@ goto end_branch_0;;
 // Control_Monad_List_Trans_uncons
 $GLOBALS['Control_Monad_List_Trans_uncons'] = function($dictMonad_0 = null) {
   $__num = \func_num_args();
+  $__tco_var_Control_Monad_List_Trans_uncons_dictMonad_0 = $dictMonad_0;
+  tco_loop_Control_Monad_List_Trans_uncons:;
+  $dictMonad_0 = $__tco_var_Control_Monad_List_Trans_uncons_dictMonad_0;
   $__local_var_1_0 = (($dictMonad_0)['Applicative0'])(null);
   $__res = function($v_2 = null) use ($__local_var_1_0, $dictMonad_0) {
   $__num = \func_num_args();
@@ -285,6 +304,9 @@ $GLOBALS['Control_Monad_List_Trans_tail'] = function($dictMonad_0 = null) {
 // Control_Monad_List_Trans_takeWhile
 $GLOBALS['Control_Monad_List_Trans_takeWhile'] = function($dictApplicative_0 = null) {
   $__num = \func_num_args();
+  $__tco_var_Control_Monad_List_Trans_takeWhile_dictApplicative_0 = $dictApplicative_0;
+  tco_loop_Control_Monad_List_Trans_takeWhile:;
+  $dictApplicative_0 = $__tco_var_Control_Monad_List_Trans_takeWhile_dictApplicative_0;
   $__local_var_1_0 = (((($dictApplicative_0)['Apply0'])(null))['Functor0'])(null);
   $__res = (function() use ($__local_var_1_0, $dictApplicative_0) {
   $__fn = function($f_2 = null, $v_3 = null) use ($__local_var_1_0, $dictApplicative_0, &$__fn) {
@@ -447,6 +469,9 @@ $GLOBALS['Control_Monad_List_Trans_singleton'] = function($dictApplicative_0 = n
 // Control_Monad_List_Trans_take
 $GLOBALS['Control_Monad_List_Trans_take'] = function($dictApplicative_0 = null) {
   $__num = \func_num_args();
+  $__tco_var_Control_Monad_List_Trans_take_dictApplicative_0 = $dictApplicative_0;
+  tco_loop_Control_Monad_List_Trans_take:;
+  $dictApplicative_0 = $__tco_var_Control_Monad_List_Trans_take_dictApplicative_0;
   $nil1_1_0 = (($dictApplicative_0)['pure'])(new Phpurs_Data0("Done"));
   $__local_var_2_1 = (((($dictApplicative_0)['Apply0'])(null))['Functor0'])(null);
   $__res = (function() use ($__local_var_2_1, $dictApplicative_0, $nil1_1_0) {
@@ -459,7 +484,7 @@ $GLOBALS['Control_Monad_List_Trans_take'] = function($dictApplicative_0 = null) 
   $__num = \func_num_args();
   $__t2 = null;;
   if ((is_object($v2_5) && (($v2_5)->{'tag'} === "Yield"))) {
-$__t2 = new Phpurs_Data2("Yield", ($v2_5)->{'value0'}, ((($GLOBALS['Data_Lazy_functorLazy'])['map'])((($GLOBALS['Control_Monad_List_Trans_take'])($dictApplicative_0))(((($GLOBALS['Data_Ring_ringInt'])['sub'])($v_3))(1))))(($v2_5)->{'value1'}));
+$__t2 = new Phpurs_Data2("Yield", ($v2_5)->{'value0'}, ((($GLOBALS['Data_Lazy_functorLazy'])['map'])((($GLOBALS['Control_Monad_List_Trans_take'])($dictApplicative_0))(($v_3 - 1))))(($v2_5)->{'value1'}));
 goto end_branch_2;;
 };
   if ((is_object($v2_5) && (($v2_5)->{'tag'} === "Skip"))) {
@@ -492,6 +517,9 @@ goto end_branch_2;;
 // Control_Monad_List_Trans_zipWith'
 $GLOBALS['Control_Monad_List_Trans_zipWith__prime__'] = function($dictMonad_0 = null) {
   $__num = \func_num_args();
+  $__tco_var_Control_Monad_List_Trans_zipWith__prime___dictMonad_0 = $dictMonad_0;
+  tco_loop_Control_Monad_List_Trans_zipWith__prime__:;
+  $dictMonad_0 = $__tco_var_Control_Monad_List_Trans_zipWith__prime___dictMonad_0;
   $Applicative0_1_0 = (($dictMonad_0)['Applicative0'])(null);
   $nil1_2_1 = (($Applicative0_1_0)['pure'])(new Phpurs_Data0("Done"));
   $Bind1_3_2 = (($dictMonad_0)['Bind1'])(null);
@@ -503,7 +531,7 @@ $GLOBALS['Control_Monad_List_Trans_zipWith__prime__'] = function($dictMonad_0 = 
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($GLOBALS['Control_Monad_List_Trans_wrapEffect'])($Functor0_4_3))(((($Bind1_3_2)['bind'])(($uncons1_5_4)($fa_7)))(function($ua_9 = null) use ($Applicative0_1_0, $Bind1_3_2, $Functor0_4_3, $dictMonad_0, $f_6, $fb_8, $nil1_2_1, $uncons1_5_4) {
+  $__res = ((($Functor0_4_3)['map'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_List_Trans_Skip']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Lazy_defer']))($GLOBALS['Data_Function_const']))))(((($Bind1_3_2)['bind'])(($uncons1_5_4)($fa_7)))(function($ua_9 = null) use ($Applicative0_1_0, $Bind1_3_2, $Functor0_4_3, $dictMonad_0, $f_6, $fb_8, $nil1_2_1, $uncons1_5_4) {
   $__num = \func_num_args();
   $__res = ((($Bind1_3_2)['bind'])(($uncons1_5_4)($fb_8)))(function($ub_10 = null) use ($Applicative0_1_0, $Functor0_4_3, $dictMonad_0, $f_6, $nil1_2_1, $ua_9) {
   $__num = \func_num_args();
@@ -602,6 +630,13 @@ $GLOBALS['Control_Monad_List_Trans_mapMaybe'] = (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
+  $__tco_var_Control_Monad_List_Trans_mapMaybe_dictFunctor_0 = $dictFunctor_0;
+  $__tco_var_Control_Monad_List_Trans_mapMaybe_f_1 = $f_1;
+  $__tco_var_Control_Monad_List_Trans_mapMaybe_v_2 = $v_2;
+  tco_loop_Control_Monad_List_Trans_mapMaybe:;
+  $dictFunctor_0 = $__tco_var_Control_Monad_List_Trans_mapMaybe_dictFunctor_0;
+  $f_1 = $__tco_var_Control_Monad_List_Trans_mapMaybe_f_1;
+  $v_2 = $__tco_var_Control_Monad_List_Trans_mapMaybe_v_2;
   $__res = ((($dictFunctor_0)['map'])(function($v_3 = null) use ($dictFunctor_0, $f_1) {
   $__num = \func_num_args();
   $__t0 = null;;
@@ -613,7 +648,7 @@ $__t2 = $GLOBALS['Control_Monad_List_Trans_Skip'];
 goto end_branch_2;;
 };
 if ((is_object($__local_var_4_1) && (($__local_var_4_1)->{'tag'} === "Just"))) {
-$__t2 = (($GLOBALS['Control_Category_categoryFn'])['identity'])(($__local_var_4_1)->{'value0'});
+$__t2 = ($__local_var_4_1)->{'value0'};
 goto end_branch_2;;
 };
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -669,7 +704,7 @@ $GLOBALS['Control_Monad_List_Trans_iterate'] = (function() {
 // Control_Monad_List_Trans_repeat
 $GLOBALS['Control_Monad_List_Trans_repeat'] = function($dictMonad_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Monad_List_Trans_iterate'])($dictMonad_0))(($GLOBALS['Control_Category_categoryFn'])['identity']);
+  $__res = (($GLOBALS['Control_Monad_List_Trans_iterate'])($dictMonad_0))($GLOBALS['Control_Monad_List_Trans_identity']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -694,6 +729,9 @@ $GLOBALS['Control_Monad_List_Trans_head'] = function($dictMonad_0 = null) {
 // Control_Monad_List_Trans_functorListT
 $GLOBALS['Control_Monad_List_Trans_functorListT'] = function($dictFunctor_0 = null) {
   $__num = \func_num_args();
+  $__tco_var_Control_Monad_List_Trans_functorListT_dictFunctor_0 = $dictFunctor_0;
+  tco_loop_Control_Monad_List_Trans_functorListT:;
+  $dictFunctor_0 = $__tco_var_Control_Monad_List_Trans_functorListT_dictFunctor_0;
   $__res = ["map" => (function() use ($dictFunctor_0) {
   $__fn = function($f_1 = null, $v_2 = null) use ($dictFunctor_0, &$__fn) {
   $__num = \func_num_args();
@@ -1031,6 +1069,13 @@ $GLOBALS['Control_Monad_List_Trans_filter'] = (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
+  $__tco_var_Control_Monad_List_Trans_filter_dictFunctor_0 = $dictFunctor_0;
+  $__tco_var_Control_Monad_List_Trans_filter_f_1 = $f_1;
+  $__tco_var_Control_Monad_List_Trans_filter_v_2 = $v_2;
+  tco_loop_Control_Monad_List_Trans_filter:;
+  $dictFunctor_0 = $__tco_var_Control_Monad_List_Trans_filter_dictFunctor_0;
+  $f_1 = $__tco_var_Control_Monad_List_Trans_filter_f_1;
+  $v_2 = $__tco_var_Control_Monad_List_Trans_filter_v_2;
   $__res = ((($dictFunctor_0)['map'])(function($v_3 = null) use ($dictFunctor_0, $f_1) {
   $__num = \func_num_args();
   $__t0 = null;;
@@ -1072,6 +1117,9 @@ goto end_branch_0;;
 // Control_Monad_List_Trans_dropWhile
 $GLOBALS['Control_Monad_List_Trans_dropWhile'] = function($dictApplicative_0 = null) {
   $__num = \func_num_args();
+  $__tco_var_Control_Monad_List_Trans_dropWhile_dictApplicative_0 = $dictApplicative_0;
+  tco_loop_Control_Monad_List_Trans_dropWhile:;
+  $dictApplicative_0 = $__tco_var_Control_Monad_List_Trans_dropWhile_dictApplicative_0;
   $__local_var_1_0 = (((($dictApplicative_0)['Apply0'])(null))['Functor0'])(null);
   $__res = (function() use ($__local_var_1_0, $dictApplicative_0) {
   $__fn = function($f_2 = null, $v_3 = null) use ($__local_var_1_0, $dictApplicative_0, &$__fn) {
@@ -1123,6 +1171,9 @@ goto end_branch_1;;
 // Control_Monad_List_Trans_drop
 $GLOBALS['Control_Monad_List_Trans_drop'] = function($dictApplicative_0 = null) {
   $__num = \func_num_args();
+  $__tco_var_Control_Monad_List_Trans_drop_dictApplicative_0 = $dictApplicative_0;
+  tco_loop_Control_Monad_List_Trans_drop:;
+  $dictApplicative_0 = $__tco_var_Control_Monad_List_Trans_drop_dictApplicative_0;
   $__local_var_1_0 = (((($dictApplicative_0)['Apply0'])(null))['Functor0'])(null);
   $__res = (function() use ($__local_var_1_0, $dictApplicative_0) {
   $__fn = function($v_2 = null, $v1_3 = null) use ($__local_var_1_0, $dictApplicative_0, &$__fn) {
@@ -1134,7 +1185,7 @@ $GLOBALS['Control_Monad_List_Trans_drop'] = function($dictApplicative_0 = null) 
   $__num = \func_num_args();
   $__t1 = null;;
   if ((is_object($v2_4) && (($v2_4)->{'tag'} === "Yield"))) {
-$__t1 = new Phpurs_Data1("Skip", ((($GLOBALS['Data_Lazy_functorLazy'])['map'])((($GLOBALS['Control_Monad_List_Trans_drop'])($dictApplicative_0))(((($GLOBALS['Data_Ring_ringInt'])['sub'])($v_2))(1))))(($v2_4)->{'value1'}));
+$__t1 = new Phpurs_Data1("Skip", ((($GLOBALS['Data_Lazy_functorLazy'])['map'])((($GLOBALS['Control_Monad_List_Trans_drop'])($dictApplicative_0))(($v_2 - 1))))(($v2_4)->{'value1'}));
 goto end_branch_1;;
 };
   if ((is_object($v2_4) && (($v2_4)->{'tag'} === "Skip"))) {
@@ -1376,7 +1427,7 @@ $GLOBALS['Control_Monad_List_Trans_monoidListT'] = function($dictApplicative_0 =
 // Control_Monad_List_Trans_catMaybes
 $GLOBALS['Control_Monad_List_Trans_catMaybes'] = function($dictFunctor_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Monad_List_Trans_mapMaybe'])($dictFunctor_0))(($GLOBALS['Control_Category_categoryFn'])['identity']);
+  $__res = (($GLOBALS['Control_Monad_List_Trans_mapMaybe'])($dictFunctor_0))($GLOBALS['Control_Monad_List_Trans_identity']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1546,7 +1597,7 @@ $GLOBALS['Control_Monad_List_Trans_monadEffectListT'] = function($dictMonadEffec
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = ["liftEffect" => ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($GLOBALS['Control_Monad_List_Trans_monadTransListT'])['lift'])($Monad0_1_0)))(($dictMonadEffect_0)['liftEffect']), "Monad0" => function($_dollar__unused_3 = null) use ($monadListT1_2_1) {
+  $__res = ["liftEffect" => (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_List_Trans_monadTransListT'])['lift'])($Monad0_1_0)))(($dictMonadEffect_0)['liftEffect']), "Monad0" => function($_dollar__unused_3 = null) use ($monadListT1_2_1) {
   $__num = \func_num_args();
   $__res = $monadListT1_2_1;
   goto __end;;
@@ -1581,7 +1632,7 @@ $GLOBALS['Control_Monad_List_Trans_monadSTListT'] = function($dictMonadST_0 = nu
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = ["liftST" => ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($GLOBALS['Control_Monad_List_Trans_monadTransListT'])['lift'])($Monad0_1_0)))(($dictMonadST_0)['liftST']), "Monad0" => function($_dollar__unused_3 = null) use ($monadListT1_2_1) {
+  $__res = ["liftST" => (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_List_Trans_monadTransListT'])['lift'])($Monad0_1_0)))(($dictMonadST_0)['liftST']), "Monad0" => function($_dollar__unused_3 = null) use ($monadListT1_2_1) {
   $__num = \func_num_args();
   $__res = $monadListT1_2_1;
   goto __end;;

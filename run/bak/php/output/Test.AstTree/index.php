@@ -161,21 +161,24 @@ $GLOBALS['Test_AstTree_Sub'] = (function() {
 // Test_AstTree_eval
 $GLOBALS['Test_AstTree_eval'] = function($v_0 = null) {
   $__num = \func_num_args();
+  $__tco_var_Test_AstTree_eval_v_0 = $v_0;
+  tco_loop_Test_AstTree_eval:;
+  $v_0 = $__tco_var_Test_AstTree_eval_v_0;
   $__t0 = null;;
   if ((is_object($v_0) && (($v_0)->{'tag'} === "Val"))) {
 $__t0 = ($v_0)->{'value0'};
 goto end_branch_0;;
 };
   if ((is_object($v_0) && (($v_0)->{'tag'} === "Add"))) {
-$__t0 = ((($GLOBALS['Data_Semiring_semiringInt'])['add'])(($GLOBALS['Test_AstTree_eval'])(($v_0)->{'value0'})))(($GLOBALS['Test_AstTree_eval'])(($v_0)->{'value1'}));
+$__t0 = (($GLOBALS['Test_AstTree_eval'])(($v_0)->{'value0'}) + ($GLOBALS['Test_AstTree_eval'])(($v_0)->{'value1'}));
 goto end_branch_0;;
 };
   if ((is_object($v_0) && (($v_0)->{'tag'} === "Mul"))) {
-$__t0 = ((($GLOBALS['Data_Semiring_semiringInt'])['mul'])(($GLOBALS['Test_AstTree_eval'])(($v_0)->{'value0'})))(($GLOBALS['Test_AstTree_eval'])(($v_0)->{'value1'}));
+$__t0 = (($GLOBALS['Test_AstTree_eval'])(($v_0)->{'value0'}) * ($GLOBALS['Test_AstTree_eval'])(($v_0)->{'value1'}));
 goto end_branch_0;;
 };
   if ((is_object($v_0) && (($v_0)->{'tag'} === "Sub"))) {
-$__t0 = ((($GLOBALS['Data_Ring_ringInt'])['sub'])(($GLOBALS['Test_AstTree_eval'])(($v_0)->{'value0'})))(($GLOBALS['Test_AstTree_eval'])(($v_0)->{'value1'}));
+$__t0 = (($GLOBALS['Test_AstTree_eval'])(($v_0)->{'value0'}) - ($GLOBALS['Test_AstTree_eval'])(($v_0)->{'value1'}));
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -193,7 +196,10 @@ $GLOBALS['Test_AstTree_describe'] = ($GLOBALS['Effect_Console_log'])("AST Evalua
 // Test_AstTree_buildTree
 $GLOBALS['Test_AstTree_buildTree'] = function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = match ($v_0) { 0 => new Phpurs_Data1("Val", 1), default => new Phpurs_Data2("Add", new Phpurs_Data2("Mul", new Phpurs_Data1("Val", $v_0), ($GLOBALS['Test_AstTree_buildTree'])(((($GLOBALS['Data_Ring_ringInt'])['sub'])($v_0))(1))), new Phpurs_Data2("Sub", ($GLOBALS['Test_AstTree_buildTree'])(((($GLOBALS['Data_Ring_ringInt'])['sub'])($v_0))(1)), new Phpurs_Data1("Val", 1))) };
+  $__tco_var_Test_AstTree_buildTree_v_0 = $v_0;
+  tco_loop_Test_AstTree_buildTree:;
+  $v_0 = $__tco_var_Test_AstTree_buildTree_v_0;
+  $__res = match ($v_0) { 0 => new Phpurs_Data1("Val", 1), default => new Phpurs_Data2("Add", new Phpurs_Data2("Mul", new Phpurs_Data1("Val", $v_0), ($GLOBALS['Test_AstTree_buildTree'])(($v_0 - 1))), new Phpurs_Data2("Sub", ($GLOBALS['Test_AstTree_buildTree'])(($v_0 - 1)), new Phpurs_Data1("Val", 1))) };
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

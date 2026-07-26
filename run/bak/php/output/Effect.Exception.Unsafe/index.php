@@ -99,8 +99,8 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
 // Effect_Exception_Unsafe_unsafeThrowException
-$GLOBALS['Effect_Exception_Unsafe_unsafeThrowException'] = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Effect_Unsafe_unsafePerformEffect']))($GLOBALS['Effect_Exception_throwException']);
+$GLOBALS['Effect_Exception_Unsafe_unsafeThrowException'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Effect_Unsafe_unsafePerformEffect']))($GLOBALS['Effect_Exception_throwException']);
 
 // Effect_Exception_Unsafe_unsafeThrow
-$GLOBALS['Effect_Exception_Unsafe_unsafeThrow'] = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Effect_Exception_Unsafe_unsafeThrowException']))($GLOBALS['Effect_Exception_error']);
+$GLOBALS['Effect_Exception_Unsafe_unsafeThrow'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Effect_Exception_Unsafe_unsafeThrowException']))($GLOBALS['Effect_Exception_error']);
 

@@ -104,6 +104,15 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+// Data_Semigroup_Traversable_identity
+$GLOBALS['Data_Semigroup_Traversable_identity'] = function($x_0 = null) {
+  $__num = \func_num_args();
+  $__res = $x_0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+
 // Data_Semigroup_Traversable_traverse1
 $GLOBALS['Data_Semigroup_Traversable_traverse1'] = function($dict_0 = null) {
   $__num = \func_num_args();
@@ -198,7 +207,7 @@ $GLOBALS['Data_Semigroup_Traversable_sequence1Default'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictTraversable1_0)['traverse1'])($dictApply_1))(($GLOBALS['Control_Category_categoryFn'])['identity']);
+  $__res = ((($dictTraversable1_0)['traverse1'])($dictApply_1))($GLOBALS['Data_Semigroup_Traversable_identity']);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -221,7 +230,7 @@ $GLOBALS['Data_Semigroup_Traversable_traversableDual'] = ["traverse1" => (functi
   return $__fn;
 })(), "sequence1" => function($dictApply_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semigroup_Traversable_traversableDual'])['traverse1'])($dictApply_0))(($GLOBALS['Control_Category_categoryFn'])['identity']);
+  $__res = ((($GLOBALS['Data_Semigroup_Traversable_traversableDual'])['traverse1'])($dictApply_0))($GLOBALS['Data_Semigroup_Traversable_identity']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -254,7 +263,7 @@ $GLOBALS['Data_Semigroup_Traversable_traversableMultiplicative'] = ["traverse1" 
   return $__fn;
 })(), "sequence1" => function($dictApply_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semigroup_Traversable_traversableMultiplicative'])['traverse1'])($dictApply_0))(($GLOBALS['Control_Category_categoryFn'])['identity']);
+  $__res = ((($GLOBALS['Data_Semigroup_Traversable_traversableMultiplicative'])['traverse1'])($dictApply_0))($GLOBALS['Data_Semigroup_Traversable_identity']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

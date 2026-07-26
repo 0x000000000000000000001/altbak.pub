@@ -142,7 +142,7 @@ $GLOBALS['Control_Comonad_Traced_Class_lowerTrack'] = (function() {
   $lower1_2_0 = (($dictComonadTrans_0)['lower'])((($dictComonadTraced_1)['Comonad0'])(null));
   $__res = function($m_3 = null) use ($dictComonadTraced_1, $lower1_2_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($dictComonadTraced_1)['track'])($m_3)))($lower1_2_0);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($dictComonadTraced_1)['track'])($m_3)))($lower1_2_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -300,7 +300,7 @@ $GLOBALS['Control_Comonad_Traced_Class_censor'] = (function() {
   }
   $__res = ((($dictFunctor_0)['map'])(function($v1_3 = null) use ($f_1) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($v1_3))($f_1);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($v1_3))($f_1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

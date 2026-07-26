@@ -600,7 +600,7 @@ $GLOBALS['Control_Comonad_Env_Trans_extendEnvT'] = function($dictExtend_0 = null
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", ($v_4)->{'value0'}, ((($Functor0_1_0)['map'])($f_3))(((($dictExtend_0)['extend'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Control_Comonad_Env_Trans_EnvT']))(($GLOBALS['Data_Tuple_Tuple'])(($v_4)->{'value0'}))))(($v_4)->{'value1'})));
+  $__res = new Phpurs_Data2("Tuple", ($v_4)->{'value0'}, ((($Functor0_1_0)['map'])($f_3))(((($dictExtend_0)['extend'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Comonad_Env_Trans_EnvT']))(($GLOBALS['Data_Tuple_Tuple'])(($v_4)->{'value0'}))))(($v_4)->{'value1'})));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

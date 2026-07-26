@@ -111,7 +111,13 @@ $GLOBALS['Data_Either_Inject_prj'] = function($dict_0 = null) {
 };
 
 // Data_Either_Inject_injectReflexive
-$GLOBALS['Data_Either_Inject_injectReflexive'] = ["inj" => ($GLOBALS['Control_Category_categoryFn'])['identity'], "prj" => $GLOBALS['Data_Maybe_Just']];
+$GLOBALS['Data_Either_Inject_injectReflexive'] = ["inj" => function($x_0 = null) {
+  $__num = \func_num_args();
+  $__res = $x_0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "prj" => $GLOBALS['Data_Maybe_Just']];
 
 // Data_Either_Inject_injectLeft
 $GLOBALS['Data_Either_Inject_injectLeft'] = ["inj" => $GLOBALS['Data_Either_Left'], "prj" => function($v2_0 = null) {
@@ -146,7 +152,7 @@ $GLOBALS['Data_Either_Inject_inj'] = function($dict_0 = null) {
 // Data_Either_Inject_injectRight
 $GLOBALS['Data_Either_Inject_injectRight'] = function($dictInject_0 = null) {
   $__num = \func_num_args();
-  $__res = ["inj" => ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Either_Right']))(($dictInject_0)['inj']), "prj" => function($v2_1 = null) use ($dictInject_0) {
+  $__res = ["inj" => (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Either_Right']))(($dictInject_0)['inj']), "prj" => function($v2_1 = null) use ($dictInject_0) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object($v2_1) && (($v2_1)->{'tag'} === "Left"))) {

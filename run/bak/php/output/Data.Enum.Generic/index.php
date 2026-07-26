@@ -112,6 +112,42 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+// Data_Enum_Generic_greaterThanOrEq
+$GLOBALS['Data_Enum_Generic_greaterThanOrEq'] = (function() use (&$__fn) {
+$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT"));
+return (function() use ($__local_var_0_0) {
+  $__fn = function($a1_1 = null, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ( ! (is_object((($__local_var_0_0)($a1_1))($a2_2)) && (((($__local_var_0_0)($a1_1))($a2_2))->{'tag'} === "LT")));
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
+})();
+
+// Data_Enum_Generic_lessThan
+$GLOBALS['Data_Enum_Generic_lessThan'] = (function() use (&$__fn) {
+$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT"));
+return (function() use ($__local_var_0_0) {
+  $__fn = function($a1_1 = null, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = (is_object((($__local_var_0_0)($a1_1))($a2_2)) && (((($__local_var_0_0)($a1_1))($a2_2))->{'tag'} === "LT"));
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
+})();
+
 // Data_Enum_Generic_genericToEnum'
 $GLOBALS['Data_Enum_Generic_genericToEnum__prime__'] = function($dict_0 = null) {
   $__num = \func_num_args();
@@ -127,7 +163,7 @@ $GLOBALS['Data_Enum_Generic_genericToEnum'] = function($dictGeneric_0 = null) {
   $to_1_0 = ($dictGeneric_0)['to'];
   $__res = function($dictGenericBoundedEnum_2 = null) use ($to_1_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($GLOBALS['Data_Maybe_functorMaybe'])['map'])($to_1_0)))(($dictGenericBoundedEnum_2)['genericToEnum__prime__']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Maybe_functorMaybe'])['map'])($to_1_0)))(($dictGenericBoundedEnum_2)['genericToEnum__prime__']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -153,7 +189,7 @@ $GLOBALS['Data_Enum_Generic_genericSucc'] = function($dictGeneric_0 = null) {
   $from_2_1 = ($dictGeneric_0)['from'];
   $__res = function($dictGenericEnum_3 = null) use ($from_2_1, $to_1_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($GLOBALS['Data_Maybe_functorMaybe'])['map'])($to_1_0)))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(($dictGenericEnum_3)['genericSucc__prime__']))($from_2_1));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Maybe_functorMaybe'])['map'])($to_1_0)))((($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictGenericEnum_3)['genericSucc__prime__']))($from_2_1));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -179,7 +215,7 @@ $GLOBALS['Data_Enum_Generic_genericPred'] = function($dictGeneric_0 = null) {
   $from_2_1 = ($dictGeneric_0)['from'];
   $__res = function($dictGenericEnum_3 = null) use ($from_2_1, $to_1_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($GLOBALS['Data_Maybe_functorMaybe'])['map'])($to_1_0)))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(($dictGenericEnum_3)['genericPred__prime__']))($from_2_1));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Maybe_functorMaybe'])['map'])($to_1_0)))((($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictGenericEnum_3)['genericPred__prime__']))($from_2_1));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -204,7 +240,7 @@ $GLOBALS['Data_Enum_Generic_genericFromEnum'] = function($dictGeneric_0 = null) 
   $from_1_0 = ($dictGeneric_0)['from'];
   $__res = function($dictGenericBoundedEnum_2 = null) use ($from_1_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(($dictGenericBoundedEnum_2)['genericFromEnum__prime__']))($from_1_0);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictGenericBoundedEnum_2)['genericFromEnum__prime__']))($from_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -465,14 +501,14 @@ $GLOBALS['Data_Enum_Generic_genericBoundedEnumSum'] = function($dictGenericBound
   $genericCardinality_prime1_1_0 = ($dictGenericBoundedEnum_0)['genericCardinality__prime__'];
   $__res = function($dictGenericBoundedEnum1_2 = null) use ($dictGenericBoundedEnum_0, $genericCardinality_prime1_1_0) {
   $__num = \func_num_args();
-  $__res = ["genericCardinality__prime__" => ((($GLOBALS['Data_Semiring_semiringInt'])['add'])($genericCardinality_prime1_1_0))(($dictGenericBoundedEnum1_2)['genericCardinality__prime__']), "genericToEnum__prime__" => function($n_3 = null) use ($dictGenericBoundedEnum1_2, $dictGenericBoundedEnum_0, $genericCardinality_prime1_1_0) {
+  $__res = ["genericCardinality__prime__" => ($genericCardinality_prime1_1_0 + ($dictGenericBoundedEnum1_2)['genericCardinality__prime__']), "genericToEnum__prime__" => function($n_3 = null) use ($dictGenericBoundedEnum1_2, $dictGenericBoundedEnum_0, $genericCardinality_prime1_1_0) {
   $__num = \func_num_args();
   $__t1 = null;;
-  if (((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(($n_3 >= 0)))(($n_3 < $genericCardinality_prime1_1_0))) {
+  if (((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])((($GLOBALS['Data_Enum_Generic_greaterThanOrEq'])($n_3))(0)))((($GLOBALS['Data_Enum_Generic_lessThan'])($n_3))($genericCardinality_prime1_1_0))) {
 $__t1 = ((($GLOBALS['Data_Maybe_functorMaybe'])['map'])($GLOBALS['Data_Generic_Rep_Inl']))((($dictGenericBoundedEnum_0)['genericToEnum__prime__'])($n_3));
 goto end_branch_1;;
 };
-  $__t1 = ((($GLOBALS['Data_Maybe_functorMaybe'])['map'])($GLOBALS['Data_Generic_Rep_Inr']))((($dictGenericBoundedEnum1_2)['genericToEnum__prime__'])(((($GLOBALS['Data_Ring_ringInt'])['sub'])($n_3))($genericCardinality_prime1_1_0)));
+  $__t1 = ((($GLOBALS['Data_Maybe_functorMaybe'])['map'])($GLOBALS['Data_Generic_Rep_Inr']))((($dictGenericBoundedEnum1_2)['genericToEnum__prime__'])(($n_3 - $genericCardinality_prime1_1_0)));
   end_branch_1:;
   $__res = $__t1;
   goto __end;;
@@ -486,7 +522,7 @@ $__t2 = (($dictGenericBoundedEnum_0)['genericFromEnum__prime__'])(($v_3)->{'valu
 goto end_branch_2;;
 };
   if ((is_object($v_3) && (($v_3)->{'tag'} === "Inr"))) {
-$__t2 = ((($GLOBALS['Data_Semiring_semiringInt'])['add'])((($dictGenericBoundedEnum1_2)['genericFromEnum__prime__'])(($v_3)->{'value0'})))($genericCardinality_prime1_1_0);
+$__t2 = ((($dictGenericBoundedEnum1_2)['genericFromEnum__prime__'])(($v_3)->{'value0'}) + $genericCardinality_prime1_1_0);
 goto end_branch_2;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -513,7 +549,7 @@ $GLOBALS['Data_Enum_Generic_genericBoundedEnumProduct'] = function($dictGenericB
   $__res = function($dictGenericBoundedEnum1_2 = null) use ($dictGenericBoundedEnum_0, $genericCardinality_prime1_1_0) {
   $__num = \func_num_args();
   $genericCardinality_prime2_3_1 = ($dictGenericBoundedEnum1_2)['genericCardinality__prime__'];
-  $__res = ["genericCardinality__prime__" => ((($GLOBALS['Data_Semiring_semiringInt'])['mul'])($genericCardinality_prime1_1_0))($genericCardinality_prime2_3_1), "genericToEnum__prime__" => function($n_4 = null) use ($dictGenericBoundedEnum1_2, $dictGenericBoundedEnum_0, $genericCardinality_prime2_3_1) {
+  $__res = ["genericCardinality__prime__" => ($genericCardinality_prime1_1_0 * $genericCardinality_prime2_3_1), "genericToEnum__prime__" => function($n_4 = null) use ($dictGenericBoundedEnum1_2, $dictGenericBoundedEnum_0, $genericCardinality_prime2_3_1) {
   $__num = \func_num_args();
   $__res = ((($GLOBALS['Data_Maybe_applyMaybe'])['apply'])(((($GLOBALS['Data_Maybe_functorMaybe'])['map'])($GLOBALS['Data_Generic_Rep_Product']))((($dictGenericBoundedEnum_0)['genericToEnum__prime__'])(((($GLOBALS['Data_EuclideanRing_euclideanRingInt'])['div'])($n_4))($genericCardinality_prime2_3_1)))))((($dictGenericBoundedEnum1_2)['genericToEnum__prime__'])(((($GLOBALS['Data_EuclideanRing_euclideanRingInt'])['mod'])($n_4))($genericCardinality_prime2_3_1)));
   goto __end;;
@@ -521,7 +557,7 @@ $GLOBALS['Data_Enum_Generic_genericBoundedEnumProduct'] = function($dictGenericB
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "genericFromEnum__prime__" => function($v1_4 = null) use ($dictGenericBoundedEnum1_2, $dictGenericBoundedEnum_0, $genericCardinality_prime2_3_1) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semiring_semiringInt'])['add'])(((($GLOBALS['Data_Semiring_semiringInt'])['mul'])((($dictGenericBoundedEnum_0)['genericFromEnum__prime__'])(($v1_4)->{'value0'})))($genericCardinality_prime2_3_1)))((($dictGenericBoundedEnum1_2)['genericFromEnum__prime__'])(($v1_4)->{'value1'}));
+  $__res = (((($dictGenericBoundedEnum_0)['genericFromEnum__prime__'])(($v1_4)->{'value0'}) * $genericCardinality_prime2_3_1) + (($dictGenericBoundedEnum1_2)['genericFromEnum__prime__'])(($v1_4)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -538,14 +574,7 @@ $GLOBALS['Data_Enum_Generic_genericBoundedEnumProduct'] = function($dictGenericB
 // Data_Enum_Generic_genericBoundedEnumNoArguments
 $GLOBALS['Data_Enum_Generic_genericBoundedEnumNoArguments'] = ["genericCardinality__prime__" => 1, "genericToEnum__prime__" => function($i_0 = null) {
   $__num = \func_num_args();
-  $__t0 = null;;
-  if (((($GLOBALS['Data_Eq_eqInt'])['eq'])($i_0))(0)) {
-$__t0 = new Phpurs_Data1("Just", new Phpurs_Data0("NoArguments"));
-goto end_branch_0;;
-};
-  $__t0 = new Phpurs_Data0("Nothing");
-  end_branch_0:;
-  $__res = $__t0;
+  $__res = match ($i_0) { 0 => new Phpurs_Data1("Just", new Phpurs_Data0("NoArguments")), default => new Phpurs_Data0("Nothing") };
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

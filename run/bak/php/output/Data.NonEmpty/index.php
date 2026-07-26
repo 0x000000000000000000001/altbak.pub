@@ -298,7 +298,7 @@ $GLOBALS['Data_NonEmpty_functorWithIndex'] = function($dictFunctorWithIndex_0 = 
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("NonEmpty", (($f_3)(new Phpurs_Data0("Nothing")))(($v_4)->{'value0'}), ((($dictFunctorWithIndex_0)['mapWithIndex'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($f_3))($GLOBALS['Data_Maybe_Just'])))(($v_4)->{'value1'}));
+  $__res = new Phpurs_Data2("NonEmpty", (($f_3)(new Phpurs_Data0("Nothing")))(($v_4)->{'value0'}), ((($dictFunctorWithIndex_0)['mapWithIndex'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_3))($GLOBALS['Data_Maybe_Just'])))(($v_4)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -440,7 +440,7 @@ $GLOBALS['Data_NonEmpty_foldableWithIndexNonEmpty'] = function($dictFoldableWith
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((($dictMonoid_3)['Semigroup0'])(null))['append'])((($f_5)(new Phpurs_Data0("Nothing")))(($v_6)->{'value0'})))((($foldMapWithIndex1_4_3)(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($f_5))($GLOBALS['Data_Maybe_Just'])))(($v_6)->{'value1'}));
+  $__res = ((((($dictMonoid_3)['Semigroup0'])(null))['append'])((($f_5)(new Phpurs_Data0("Nothing")))(($v_6)->{'value0'})))((($foldMapWithIndex1_4_3)((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_5))($GLOBALS['Data_Maybe_Just'])))(($v_6)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -456,7 +456,7 @@ $GLOBALS['Data_NonEmpty_foldableWithIndexNonEmpty'] = function($dictFoldableWith
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (((($dictFoldableWithIndex_0)['foldlWithIndex'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($f_3))($GLOBALS['Data_Maybe_Just'])))(((($f_3)(new Phpurs_Data0("Nothing")))($b_4))(($v_5)->{'value0'})))(($v_5)->{'value1'});
+  $__res = (((($dictFoldableWithIndex_0)['foldlWithIndex'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_3))($GLOBALS['Data_Maybe_Just'])))(((($f_3)(new Phpurs_Data0("Nothing")))($b_4))(($v_5)->{'value0'})))(($v_5)->{'value1'});
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -468,7 +468,7 @@ $GLOBALS['Data_NonEmpty_foldableWithIndexNonEmpty'] = function($dictFoldableWith
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($f_3)(new Phpurs_Data0("Nothing")))(($v_5)->{'value0'}))((((($dictFoldableWithIndex_0)['foldrWithIndex'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($f_3))($GLOBALS['Data_Maybe_Just'])))($b_4))(($v_5)->{'value1'}));
+  $__res = ((($f_3)(new Phpurs_Data0("Nothing")))(($v_5)->{'value0'}))((((($dictFoldableWithIndex_0)['foldrWithIndex'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_3))($GLOBALS['Data_Maybe_Just'])))($b_4))(($v_5)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -616,7 +616,7 @@ $GLOBALS['Data_NonEmpty_traversableWithIndexNonEmpty'] = function($dictTraversab
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($Apply0_5_3)['apply'])(((((($Apply0_5_3)['Functor0'])(null))['map'])($GLOBALS['Data_NonEmpty_NonEmpty']))((($f_7)(new Phpurs_Data0("Nothing")))(($v_8)->{'value0'}))))((($traverseWithIndex1_6_4)(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($f_7))($GLOBALS['Data_Maybe_Just'])))(($v_8)->{'value1'}));
+  $__res = ((($Apply0_5_3)['apply'])(((((($Apply0_5_3)['Functor0'])(null))['map'])($GLOBALS['Data_NonEmpty_NonEmpty']))((($f_7)(new Phpurs_Data0("Nothing")))(($v_8)->{'value0'}))))((($traverseWithIndex1_6_4)((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_7))($GLOBALS['Data_Maybe_Just'])))(($v_8)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -731,7 +731,7 @@ $GLOBALS['Data_NonEmpty_foldable1NonEmpty'] = function($dictFoldable_0 = null) {
   $__local_var_5_3 = (((($dictFoldable_0)['foldr'])(function($a1_5 = null) use ($f_2) {
   $__num = \func_num_args();
   $__local_var_6_3 = ($f_2)($a1_5);
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Maybe_Just']))(function($v2_7 = null) use ($__local_var_6_3, $a1_5) {
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Maybe_Just']))(function($v2_7 = null) use ($__local_var_6_3, $a1_5) {
   $__num = \func_num_args();
   $__t4 = null;;
   if ((is_object($v2_7) && (($v2_7)->{'tag'} === "Nothing"))) {

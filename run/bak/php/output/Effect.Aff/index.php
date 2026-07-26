@@ -729,7 +729,7 @@ $GLOBALS['Effect_Aff_launchAff'] = function($aff_0 = null) {
 };
 
 // Effect_Aff_launchAff_
-$GLOBALS['Effect_Aff_launchAff_'] = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Effect_Aff_void']))($GLOBALS['Effect_Aff_launchAff']);
+$GLOBALS['Effect_Aff_launchAff_'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Effect_Aff_void']))($GLOBALS['Effect_Aff_launchAff']);
 
 // Effect_Aff_launchSuspendedAff
 $GLOBALS['Effect_Aff_launchSuspendedAff'] = $GLOBALS['Effect_Aff_makeFiber'];
@@ -1075,7 +1075,7 @@ $GLOBALS['Effect_Aff_parallelAff'] = ["parallel" => $GLOBALS['Unsafe_Coerce_unsa
 }];
 
 // Effect_Aff_applicativeParAff
-$GLOBALS['Effect_Aff_applicativeParAff'] = ["pure" => ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(($GLOBALS['Effect_Aff_parallelAff'])['parallel']))(($GLOBALS['Effect_Aff_applicativeAff'])['pure']), "Apply0" => function($_dollar__unused_0 = null) {
+$GLOBALS['Effect_Aff_applicativeParAff'] = ["pure" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Effect_Aff_parallelAff'])['parallel']))(($GLOBALS['Effect_Aff_applicativeAff'])['pure']), "Apply0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Effect_Aff_applyParAff'];
   goto __end;;
@@ -1135,7 +1135,7 @@ $GLOBALS['Effect_Aff_monadEffectAff'] = ["liftEffect" => $GLOBALS['Effect_Aff__l
 }];
 
 // Effect_Aff_effectCanceler
-$GLOBALS['Effect_Aff_effectCanceler'] = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Effect_Aff_Canceler']))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Function_const']))(($GLOBALS['Effect_Aff_monadEffectAff'])['liftEffect']));
+$GLOBALS['Effect_Aff_effectCanceler'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Effect_Aff_Canceler']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Function_const']))(($GLOBALS['Effect_Aff_monadEffectAff'])['liftEffect']));
 
 // Effect_Aff_joinFiber
 $GLOBALS['Effect_Aff_joinFiber'] = function($v_0 = null) {
@@ -1245,7 +1245,7 @@ goto end_branch_0;;
 })();
 
 // Effect_Aff_fiberCanceler
-$GLOBALS['Effect_Aff_fiberCanceler'] = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Effect_Aff_Canceler']))((function() {
+$GLOBALS['Effect_Aff_fiberCanceler'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Effect_Aff_Canceler']))((function() {
   $__fn = function($b_0 = null, $a_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -1329,7 +1329,7 @@ $GLOBALS['Effect_Aff_supervise'] = function($aff_0 = null) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Effect_Aff_joinFiber']))(function($v_2 = null) {
+})()]))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Effect_Aff_joinFiber']))(function($v_2 = null) {
   $__num = \func_num_args();
   $__res = ($v_2)['fiber'];
   goto __end;;
@@ -1342,7 +1342,7 @@ $GLOBALS['Effect_Aff_supervise'] = function($aff_0 = null) {
 };
 
 // Effect_Aff_monadSTAff
-$GLOBALS['Effect_Aff_monadSTAff'] = ["liftST" => ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(($GLOBALS['Effect_Aff_monadEffectAff'])['liftEffect']))(($GLOBALS['Control_Monad_ST_Class_monadSTEffect'])['liftST']), "Monad0" => function($_dollar__unused_0 = null) {
+$GLOBALS['Effect_Aff_monadSTAff'] = ["liftST" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Effect_Aff_monadEffectAff'])['liftEffect']))(($GLOBALS['Control_Monad_ST_Class_monadSTEffect'])['liftST']), "Monad0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Effect_Aff_monadAff'];
   goto __end;;
@@ -1381,7 +1381,7 @@ $GLOBALS['Effect_Aff_runAff'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Effect_Aff_launchAff'])(((($GLOBALS['Effect_Aff_bindAff'])['bind'])(($GLOBALS['Effect_Aff_try'])($aff_1)))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(($GLOBALS['Effect_Aff_monadEffectAff'])['liftEffect']))($k_0)));
+  $__res = ($GLOBALS['Effect_Aff_launchAff'])(((($GLOBALS['Effect_Aff_bindAff'])['bind'])(($GLOBALS['Effect_Aff_try'])($aff_1)))((($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Effect_Aff_monadEffectAff'])['liftEffect']))($k_0)));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1411,7 +1411,7 @@ $GLOBALS['Effect_Aff_runSuspendedAff'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Effect_Aff__makeFiber'])($GLOBALS['Effect_Aff_isLeft'], $GLOBALS['Effect_Aff_unsafeFromLeft'], $GLOBALS['Effect_Aff_unsafeFromRight'], $GLOBALS['Data_Either_Left'], $GLOBALS['Data_Either_Right'], ((($GLOBALS['Effect_Aff_bindAff'])['bind'])(($GLOBALS['Effect_Aff_try'])($aff_1)))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(($GLOBALS['Effect_Aff_monadEffectAff'])['liftEffect']))($k_0)));
+  $__res = ($GLOBALS['Effect_Aff__makeFiber'])($GLOBALS['Effect_Aff_isLeft'], $GLOBALS['Effect_Aff_unsafeFromLeft'], $GLOBALS['Effect_Aff_unsafeFromRight'], $GLOBALS['Data_Either_Left'], $GLOBALS['Data_Either_Right'], ((($GLOBALS['Effect_Aff_bindAff'])['bind'])(($GLOBALS['Effect_Aff_try'])($aff_1)))((($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Effect_Aff_monadEffectAff'])['liftEffect']))($k_0)));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1506,7 +1506,7 @@ $GLOBALS['Effect_Aff_never'] = ($GLOBALS['Effect_Aff__makeAff'])($GLOBALS['Effec
 });
 
 // Effect_Aff_apathize
-$GLOBALS['Effect_Aff_apathize'] = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($GLOBALS['Effect_Aff_functorAff'])['map'])(function($v_0 = null) {
+$GLOBALS['Effect_Aff_apathize'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Effect_Aff_functorAff'])['map'])(function($v_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Unit_unit'];
   goto __end;;

@@ -134,7 +134,7 @@ $GLOBALS['Data_Array_Partial_init'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Data_Array_sliceImpl'])(0, ((($GLOBALS['Data_Ring_ringInt'])['sub'])(count($xs_1)))(1), $xs_1);
+  $__res = ($GLOBALS['Data_Array_sliceImpl'])(0, (count($xs_1) - 1), $xs_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

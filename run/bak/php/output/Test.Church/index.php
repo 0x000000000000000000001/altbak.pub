@@ -124,7 +124,7 @@ $GLOBALS['Test_Church_toInt'] = function($n_0 = null) {
   $__num = \func_num_args();
   $__res = (($n_0)(function($x_1 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semiring_semiringInt'])['add'])($x_1))(1);
+  $__res = ($x_1 + 1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -167,6 +167,9 @@ $GLOBALS['Test_Church_mulC'] = (function() {
 // Test_Church_fromInt
 $GLOBALS['Test_Church_fromInt'] = function($v_0 = null) {
   $__num = \func_num_args();
+  $__tco_var_Test_Church_fromInt_v_0 = $v_0;
+  tco_loop_Test_Church_fromInt:;
+  $v_0 = $__tco_var_Test_Church_fromInt_v_0;
   $__t1 = null;;
   switch ($v_0) {
 case 0:
@@ -177,7 +180,7 @@ default:
 ;
 break;
 };
-  $__local_var_1_0 = ($GLOBALS['Test_Church_fromInt'])(((($GLOBALS['Data_Ring_ringInt'])['sub'])($v_0))(1));
+  $__local_var_1_0 = ($GLOBALS['Test_Church_fromInt'])(($v_0 - 1));
   $__t1 = (function() use ($__local_var_1_0) {
   $__fn = function($f_2 = null, $x_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -299,7 +302,7 @@ $GLOBALS['Test_Church_act'] = ((($GLOBALS['Effect_bindEffect'])['bind'])(($GLOBA
   $__num = \func_num_args();
   $__res = ($GLOBALS['Effect_Console_log'])((($GLOBALS['Data_Show_showInt'])['show'])(((($GLOBALS['Test_Church_c100k'])($dummy_0))(function($x_1 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semiring_semiringInt'])['add'])($x_1))(1);
+  $__res = ($x_1 + 1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

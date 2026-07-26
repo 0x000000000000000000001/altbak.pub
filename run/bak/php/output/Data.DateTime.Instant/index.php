@@ -172,7 +172,7 @@ return function($a_1 = null) use ($zero_0_0) {
 })();
 
 // Data_DateTime_Instant_negateDuration
-$GLOBALS['Data_DateTime_Instant_negateDuration'] = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(($GLOBALS['Data_Time_Duration_durationMilliseconds'])['toDuration']))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Time_Duration_negate']))(($GLOBALS['Data_Time_Duration_durationMilliseconds'])['fromDuration']));
+$GLOBALS['Data_DateTime_Instant_negateDuration'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Time_Duration_durationMilliseconds'])['toDuration']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Time_Duration_negate']))(($GLOBALS['Data_Time_Duration_durationMilliseconds'])['fromDuration']));
 
 // Data_DateTime_Instant_unInstant
 $GLOBALS['Data_DateTime_Instant_unInstant'] = function($v_0 = null) {

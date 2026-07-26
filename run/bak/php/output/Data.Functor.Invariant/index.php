@@ -126,7 +126,7 @@ $GLOBALS['Data_Functor_Invariant_invariantEndo'] = ["imap" => (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($ab_0))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($v_2))($ba_1));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($ab_0))((($GLOBALS['Control_Semigroupoid_composeImpl'])($v_2))($ba_1));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;

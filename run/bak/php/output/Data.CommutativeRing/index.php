@@ -199,7 +199,13 @@ $GLOBALS['Data_CommutativeRing_commutativeRingNumber'] = ["Ring0" => function($_
 // Data_CommutativeRing_commutativeRingInt
 $GLOBALS['Data_CommutativeRing_commutativeRingInt'] = ["Ring0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = $GLOBALS['Data_Ring_ringInt'];
+  $__res = ["sub" => $GLOBALS['Data_Ring_intSub'], "Semiring0" => function($_dollar__unused_1 = null) {
+  $__num = \func_num_args();
+  $__res = ["add" => $GLOBALS['Data_Semiring_intAdd'], "zero" => 0, "mul" => $GLOBALS['Data_Semiring_intMul'], "one" => 1];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

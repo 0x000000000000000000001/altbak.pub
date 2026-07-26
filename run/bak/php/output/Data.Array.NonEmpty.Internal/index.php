@@ -342,7 +342,7 @@ $GLOBALS['Data_Array_NonEmpty_Internal_traversable1NonEmptyArray'] = ["traverse1
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "sequence1" => function($dictApply_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Array_NonEmpty_Internal_traversable1NonEmptyArray'])['traverse1'])($dictApply_0))(($GLOBALS['Control_Category_categoryFn'])['identity']);
+  $__res = ((($GLOBALS['Data_Array_NonEmpty_Internal_traversable1NonEmptyArray'])['traverse1'])($dictApply_0))($GLOBALS['Data_Semigroup_Traversable_identity']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

@@ -234,7 +234,7 @@ $GLOBALS['Control_Comonad_Env_Class_comonadAskStoreT'] = function($dictComonadAs
   $__num = \func_num_args();
   $Comonad0_1_0 = (($dictComonadAsk_0)['Comonad0'])(null);
   $comonadStoreT_2_1 = ($GLOBALS['Control_Comonad_Store_Trans_comonadStoreT'])($Comonad0_1_0);
-  $__res = ["ask" => ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(($dictComonadAsk_0)['ask']))((($GLOBALS['Control_Comonad_Store_Trans_comonadTransStoreT'])['lower'])($Comonad0_1_0)), "Comonad0" => function($_dollar__unused_3 = null) use ($comonadStoreT_2_1) {
+  $__res = ["ask" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictComonadAsk_0)['ask']))((($GLOBALS['Control_Comonad_Store_Trans_comonadTransStoreT'])['lower'])($Comonad0_1_0)), "Comonad0" => function($_dollar__unused_3 = null) use ($comonadStoreT_2_1) {
   $__num = \func_num_args();
   $__res = $comonadStoreT_2_1;
   goto __end;;
@@ -284,7 +284,7 @@ $GLOBALS['Control_Comonad_Env_Class_comonadAskTracedT'] = function($dictComonadA
   $__num = \func_num_args();
   $comonadTracedT1_5_3 = ($comonadTracedT_3_2)($dictMonoid_4);
   $mempty_6_4 = ($dictMonoid_4)['mempty'];
-  $__res = ["ask" => ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($ask1_1_0))(function($v_7 = null) use ($Comonad0_2_1, $mempty_6_4) {
+  $__res = ["ask" => (($GLOBALS['Control_Semigroupoid_composeImpl'])($ask1_1_0))(function($v_7 = null) use ($Comonad0_2_1, $mempty_6_4) {
   $__num = \func_num_args();
   $__res = ((((((($Comonad0_2_1)['Extend0'])(null))['Functor0'])(null))['map'])(function($f_8 = null) use ($mempty_6_4) {
   $__num = \func_num_args();

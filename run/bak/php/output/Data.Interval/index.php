@@ -119,64 +119,45 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 // Data_Interval_show
 $GLOBALS['Data_Interval_show'] = (($GLOBALS['Data_Maybe_showMaybe'])($GLOBALS['Data_Show_showInt']))['show'];
 
-// Data_Interval_eq
-$GLOBALS['Data_Interval_eq'] = (function() {
-  $__fn = function($x_0 = null, $y_1 = null) use (&$__fn) {
+// Data_Interval_compare
+$GLOBALS['Data_Interval_compare'] = (function() use (&$__fn) {
+$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT"));
+return (function() use ($__local_var_0_0) {
+  $__fn = function($x_1 = null, $y_2 = null) use ($__local_var_0_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__t0 = null;;
-  if ((is_object($x_0) && (($x_0)->{'tag'} === "Nothing"))) {
-$__t0 = (is_object($y_1) && (($y_1)->{'tag'} === "Nothing"));
-goto end_branch_0;;
+  $__t1 = null;;
+  if ((is_object($x_1) && (($x_1)->{'tag'} === "Nothing"))) {
+$__t2 = null;;
+if ((is_object($y_2) && (($y_2)->{'tag'} === "Nothing"))) {
+$__t2 = new Phpurs_Data0("EQ");
+goto end_branch_2;;
 };
-  $__t0 = ((is_object($x_0) && (($x_0)->{'tag'} === "Just")) && ((is_object($y_1) && (($y_1)->{'tag'} === "Just")) && ((($GLOBALS['Data_Eq_eqInt'])['eq'])(($x_0)->{'value0'}))(($y_1)->{'value0'})));
-  end_branch_0:;
-  $__res = $__t0;
+$__t2 = new Phpurs_Data0("LT");
+end_branch_2:;
+$__t1 = $__t2;
+goto end_branch_1;;
+};
+  if ((is_object($y_2) && (($y_2)->{'tag'} === "Nothing"))) {
+$__t1 = new Phpurs_Data0("GT");
+goto end_branch_1;;
+};
+  if (((is_object($x_1) && (($x_1)->{'tag'} === "Just")) && (is_object($y_2) && (($y_2)->{'tag'} === "Just")))) {
+$__t1 = (($__local_var_0_0)(($x_1)->{'value0'}))(($y_2)->{'value0'});
+goto end_branch_1;;
+};
+  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+  $__t1 = null;
+  end_branch_1:;
+  $__res = $__t1;
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })();
-
-// Data_Interval_compare
-$GLOBALS['Data_Interval_compare'] = (function() {
-  $__fn = function($x_0 = null, $y_1 = null) use (&$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__t0 = null;;
-  if ((is_object($x_0) && (($x_0)->{'tag'} === "Nothing"))) {
-$__t1 = null;;
-if ((is_object($y_1) && (($y_1)->{'tag'} === "Nothing"))) {
-$__t1 = new Phpurs_Data0("EQ");
-goto end_branch_1;;
-};
-$__t1 = new Phpurs_Data0("LT");
-end_branch_1:;
-$__t0 = $__t1;
-goto end_branch_0;;
-};
-  if ((is_object($y_1) && (($y_1)->{'tag'} === "Nothing"))) {
-$__t0 = new Phpurs_Data0("GT");
-goto end_branch_0;;
-};
-  if (((is_object($x_0) && (($x_0)->{'tag'} === "Just")) && (is_object($y_1) && (($y_1)->{'tag'} === "Just")))) {
-$__t0 = ((($GLOBALS['Data_Ord_ordInt'])['compare'])(($x_0)->{'value0'}))(($y_1)->{'value0'});
-goto end_branch_0;;
-};
-  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t0 = null;
-  end_branch_0:;
-  $__res = $__t0;
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
 })();
 
 // Data_Interval_StartEnd
@@ -402,7 +383,7 @@ $GLOBALS['Data_Interval_foldableRecurringInterval'] = ["foldl" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(((($GLOBALS['Data_Interval_foldableInterval'])['foldl'])($f_0))($i_1)))($GLOBALS['Data_Interval_interval']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(((($GLOBALS['Data_Interval_foldableInterval'])['foldl'])($f_0))($i_1)))($GLOBALS['Data_Interval_interval']);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -414,7 +395,7 @@ $GLOBALS['Data_Interval_foldableRecurringInterval'] = ["foldl" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(((($GLOBALS['Data_Interval_foldableInterval'])['foldr'])($f_0))($i_1)))($GLOBALS['Data_Interval_interval']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(((($GLOBALS['Data_Interval_foldableInterval'])['foldr'])($f_0))($i_1)))($GLOBALS['Data_Interval_interval']);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -502,7 +483,14 @@ $GLOBALS['Data_Interval_eqRecurringInterval'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])((($GLOBALS['Data_Interval_eq'])(($x_2)->{'value0'}))(($y_3)->{'value0'})))(((((($GLOBALS['Data_Interval_eqInterval'])($dictEq_0))($dictEq1_1))['eq'])(($x_2)->{'value1'}))(($y_3)->{'value1'}));
+  $__t0 = null;;
+  if ((is_object(($x_2)->{'value0'}) && ((($x_2)->{'value0'})->{'tag'} === "Nothing"))) {
+$__t0 = (is_object(($y_3)->{'value0'}) && ((($y_3)->{'value0'})->{'tag'} === "Nothing"));
+goto end_branch_0;;
+};
+  $__t0 = ((is_object(($x_2)->{'value0'}) && ((($x_2)->{'value0'})->{'tag'} === "Just")) && ((is_object(($y_3)->{'value0'}) && ((($y_3)->{'value0'})->{'tag'} === "Just")) && ((($x_2)->{'value0'})->{'value0'} === (($y_3)->{'value0'})->{'value0'})));
+  end_branch_0:;
+  $__res = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])($__t0))(((((($GLOBALS['Data_Interval_eqInterval'])($dictEq_0))($dictEq1_1))['eq'])(($x_2)->{'value1'}))(($y_3)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -739,7 +727,13 @@ $GLOBALS['Data_Interval_bifunctorRecurringInterval'] = ["bimap" => (function() {
 })()];
 
 // Data_Interval_functorInterval
-$GLOBALS['Data_Interval_functorInterval'] = ["map" => (($GLOBALS['Data_Interval_bifunctorInterval'])['bimap'])(($GLOBALS['Control_Category_categoryFn'])['identity'])];
+$GLOBALS['Data_Interval_functorInterval'] = ["map" => (($GLOBALS['Data_Interval_bifunctorInterval'])['bimap'])(function($x_0 = null) {
+  $__num = \func_num_args();
+  $__res = $x_0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+})];
 
 // Data_Interval_extendInterval
 $GLOBALS['Data_Interval_extendInterval'] = ["extend" => (function() {
@@ -875,7 +869,7 @@ goto end_branch_2;;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "sequence" => function($dictApplicative_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Interval_traversableInterval'])['traverse'])($dictApplicative_0))(($GLOBALS['Control_Category_categoryFn'])['identity']);
+  $__res = ((($GLOBALS['Data_Interval_traversableInterval'])['traverse'])($dictApplicative_0))($GLOBALS['Data_Traversable_identity']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -916,7 +910,7 @@ $GLOBALS['Data_Interval_traversableRecurringInterval'] = ["traverse" => function
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "sequence" => function($dictApplicative_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Interval_traversableRecurringInterval'])['traverse'])($dictApplicative_0))(($GLOBALS['Control_Category_categoryFn'])['identity']);
+  $__res = ((($GLOBALS['Data_Interval_traversableRecurringInterval'])['traverse'])($dictApplicative_0))($GLOBALS['Data_Traversable_identity']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1026,7 +1020,7 @@ $GLOBALS['Data_Interval_bifoldableRecurringInterval'] = ["bifoldl" => (function(
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((((($GLOBALS['Data_Interval_bifoldableInterval'])['bifoldl'])($f_0))($g_1))($i_2)))($GLOBALS['Data_Interval_interval']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((((($GLOBALS['Data_Interval_bifoldableInterval'])['bifoldl'])($f_0))($g_1))($i_2)))($GLOBALS['Data_Interval_interval']);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -1038,7 +1032,7 @@ $GLOBALS['Data_Interval_bifoldableRecurringInterval'] = ["bifoldl" => (function(
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((((($GLOBALS['Data_Interval_bifoldableInterval'])['bifoldr'])($f_0))($g_1))($i_2)))($GLOBALS['Data_Interval_interval']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((((($GLOBALS['Data_Interval_bifoldableInterval'])['bifoldr'])($f_0))($g_1))($i_2)))($GLOBALS['Data_Interval_interval']);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -1133,7 +1127,7 @@ goto end_branch_2;;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "bisequence" => function($dictApplicative_0 = null) {
   $__num = \func_num_args();
-  $__res = (((($GLOBALS['Data_Interval_bitraversableInterval'])['bitraverse'])($dictApplicative_0))(($GLOBALS['Control_Category_categoryFn'])['identity']))(($GLOBALS['Control_Category_categoryFn'])['identity']);
+  $__res = (((($GLOBALS['Data_Interval_bitraversableInterval'])['bitraverse'])($dictApplicative_0))($GLOBALS['Data_Bitraversable_identity']))($GLOBALS['Data_Bitraversable_identity']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1174,7 +1168,7 @@ $GLOBALS['Data_Interval_bitraversableRecurringInterval'] = ["bitraverse" => func
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "bisequence" => function($dictApplicative_0 = null) {
   $__num = \func_num_args();
-  $__res = (((($GLOBALS['Data_Interval_bitraversableRecurringInterval'])['bitraverse'])($dictApplicative_0))(($GLOBALS['Control_Category_categoryFn'])['identity']))(($GLOBALS['Control_Category_categoryFn'])['identity']);
+  $__res = (((($GLOBALS['Data_Interval_bitraversableRecurringInterval'])['bitraverse'])($dictApplicative_0))($GLOBALS['Data_Bitraversable_identity']))($GLOBALS['Data_Bitraversable_identity']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

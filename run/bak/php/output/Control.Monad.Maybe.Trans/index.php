@@ -122,6 +122,15 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+// Control_Monad_Maybe_Trans_identity
+$GLOBALS['Control_Monad_Maybe_Trans_identity'] = function($x_0 = null) {
+  $__num = \func_num_args();
+  $__res = $x_0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+
 // Control_Monad_Maybe_Trans_MaybeT
 $GLOBALS['Control_Monad_Maybe_Trans_MaybeT'] = function($x_0 = null) {
   $__num = \func_num_args();
@@ -152,7 +161,7 @@ $GLOBALS['Control_Monad_Maybe_Trans_newtypeMaybeT'] = ["Coercible0" => function(
 // Control_Monad_Maybe_Trans_monadTransMaybeT
 $GLOBALS['Control_Monad_Maybe_Trans_monadTransMaybeT'] = ["lift" => function($dictMonad_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Control_Monad_Maybe_Trans_MaybeT']))(function($a_1 = null) use ($dictMonad_0) {
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_Maybe_Trans_MaybeT']))(function($a_1 = null) use ($dictMonad_0) {
   $__num = \func_num_args();
   $__res = ((((($dictMonad_0)['Bind1'])(null))['bind'])($a_1))(function($a_prime_2 = null) use ($dictMonad_0) {
   $__num = \func_num_args();
@@ -329,7 +338,7 @@ $GLOBALS['Control_Monad_Maybe_Trans_applyMaybeT'] = function($dictMonad_0 = null
 // Control_Monad_Maybe_Trans_applicativeMaybeT
 $GLOBALS['Control_Monad_Maybe_Trans_applicativeMaybeT'] = function($dictMonad_0 = null) {
   $__num = \func_num_args();
-  $__res = ["pure" => ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Control_Monad_Maybe_Trans_MaybeT']))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(((($dictMonad_0)['Applicative0'])(null))['pure']))($GLOBALS['Data_Maybe_Just'])), "Apply0" => function($_dollar__unused_1 = null) use ($dictMonad_0) {
+  $__res = ["pure" => (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_Maybe_Trans_MaybeT']))((($GLOBALS['Control_Semigroupoid_composeImpl'])(((($dictMonad_0)['Applicative0'])(null))['pure']))($GLOBALS['Data_Maybe_Just'])), "Apply0" => function($_dollar__unused_1 = null) use ($dictMonad_0) {
   $__num = \func_num_args();
   $__res = ($GLOBALS['Control_Monad_Maybe_Trans_applyMaybeT'])($dictMonad_0);
   goto __end;;
@@ -485,7 +494,7 @@ $GLOBALS['Control_Monad_Maybe_Trans_monadEffectMaybe'] = function($dictMonadEffe
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = ["liftEffect" => ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($GLOBALS['Control_Monad_Maybe_Trans_monadTransMaybeT'])['lift'])($Monad0_1_0)))(($dictMonadEffect_0)['liftEffect']), "Monad0" => function($_dollar__unused_3 = null) use ($monadMaybeT1_2_1) {
+  $__res = ["liftEffect" => (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_Maybe_Trans_monadTransMaybeT'])['lift'])($Monad0_1_0)))(($dictMonadEffect_0)['liftEffect']), "Monad0" => function($_dollar__unused_3 = null) use ($monadMaybeT1_2_1) {
   $__num = \func_num_args();
   $__res = $monadMaybeT1_2_1;
   goto __end;;
@@ -516,7 +525,7 @@ $GLOBALS['Control_Monad_Maybe_Trans_monadRecMaybeT'] = function($dictMonadRec_0 
 }];
   $__res = ["tailRecM" => function($f_3 = null) use ($Monad0_1_0, $dictMonadRec_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Control_Monad_Maybe_Trans_MaybeT']))((($dictMonadRec_0)['tailRecM'])(function($a_4 = null) use ($Monad0_1_0, $f_3) {
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_Maybe_Trans_MaybeT']))((($dictMonadRec_0)['tailRecM'])(function($a_4 = null) use ($Monad0_1_0, $f_3) {
   $__num = \func_num_args();
   $__res = ((((($Monad0_1_0)['Bind1'])(null))['bind'])(($f_3)($a_4)))(function($m_prime_5 = null) use ($Monad0_1_0) {
   $__num = \func_num_args();
@@ -622,7 +631,7 @@ $GLOBALS['Control_Monad_Maybe_Trans_monadTellMaybeT'] = function($dictMonadTell_
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = ["tell" => ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($GLOBALS['Control_Monad_Maybe_Trans_monadTransMaybeT'])['lift'])($Monad1_1_0)))(($dictMonadTell_0)['tell']), "Semigroup0" => function($_dollar__unused_4 = null) use ($Semigroup0_2_1) {
+  $__res = ["tell" => (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_Maybe_Trans_monadTransMaybeT'])['lift'])($Monad1_1_0)))(($dictMonadTell_0)['tell']), "Semigroup0" => function($_dollar__unused_4 = null) use ($Semigroup0_2_1) {
   $__num = \func_num_args();
   $__res = $Semigroup0_2_1;
   goto __end;;
@@ -674,7 +683,7 @@ $GLOBALS['Control_Monad_Maybe_Trans_monadWriterMaybeT'] = function($dictMonadWri
   $__num = \func_num_args();
   $__t7 = null;;
   if ((is_object($a_8) && (($a_8)->{'tag'} === "Nothing"))) {
-$__t7 = new Phpurs_Data2("Tuple", new Phpurs_Data0("Nothing"), ($GLOBALS['Control_Category_categoryFn'])['identity']);
+$__t7 = new Phpurs_Data2("Tuple", new Phpurs_Data0("Nothing"), $GLOBALS['Control_Monad_Maybe_Trans_identity']);
 goto end_branch_7;;
 };
   if ((is_object($a_8) && (($a_8)->{'tag'} === "Just"))) {
@@ -797,7 +806,7 @@ $GLOBALS['Control_Monad_Maybe_Trans_monadSTMaybeT'] = function($dictMonadST_0 = 
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = ["liftST" => ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($GLOBALS['Control_Monad_Maybe_Trans_monadTransMaybeT'])['lift'])($Monad0_1_0)))(($dictMonadST_0)['liftST']), "Monad0" => function($_dollar__unused_3 = null) use ($monadMaybeT1_2_1) {
+  $__res = ["liftST" => (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_Maybe_Trans_monadTransMaybeT'])['lift'])($Monad0_1_0)))(($dictMonadST_0)['liftST']), "Monad0" => function($_dollar__unused_3 = null) use ($monadMaybeT1_2_1) {
   $__num = \func_num_args();
   $__res = $monadMaybeT1_2_1;
   goto __end;;

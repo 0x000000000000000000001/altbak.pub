@@ -135,12 +135,12 @@ goto end_branch_0;;
 })();
 
 // Control_Monad_Except_runExcept
-$GLOBALS['Control_Monad_Except_runExcept'] = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Unsafe_Coerce_unsafeCoerce']))($GLOBALS['Control_Monad_Except_Trans_runExceptT']);
+$GLOBALS['Control_Monad_Except_runExcept'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce']))($GLOBALS['Control_Monad_Except_Trans_runExceptT']);
 
 // Control_Monad_Except_mapExcept
 $GLOBALS['Control_Monad_Except_mapExcept'] = function($f_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Identity_Identity']))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($f_0))($GLOBALS['Unsafe_Coerce_unsafeCoerce']));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Identity_Identity']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_0))($GLOBALS['Unsafe_Coerce_unsafeCoerce']));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

@@ -126,7 +126,7 @@ $GLOBALS['Test_ArrayOps_filterEvens'] = function($arr_0 = null) {
   $__num = \func_num_args();
   $__res = ($GLOBALS['Data_Array_filterImpl'])(function($x_1 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Eq_eqInt'])['eq'])(((($GLOBALS['Data_EuclideanRing_euclideanRingInt'])['mod'])($x_1))(2)))(0);
+  $__res = (((($GLOBALS['Data_EuclideanRing_euclideanRingInt'])['mod'])($x_1))(2) === 0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -139,7 +139,13 @@ $GLOBALS['Test_ArrayOps_filterEvens'] = function($arr_0 = null) {
 // Test_ArrayOps_sumEvens
 $GLOBALS['Test_ArrayOps_sumEvens'] = function($n_0 = null) {
   $__num = \func_num_args();
-  $__res = (((($GLOBALS['Data_Foldable_foldableArray'])['foldl'])(($GLOBALS['Data_Semiring_semiringInt'])['add']))(0))(($GLOBALS['Test_ArrayOps_filterEvens'])(($GLOBALS['Data_Array_rangeImpl'])(1, $n_0)));
+  $__res = (((($GLOBALS['Data_Foldable_foldableArray'])['foldl'])($GLOBALS['Data_Semiring_intAdd']))(0))(($GLOBALS['Data_Array_filterImpl'])(function($x_1 = null) {
+  $__num = \func_num_args();
+  $__res = (((($GLOBALS['Data_EuclideanRing_euclideanRingInt'])['mod'])($x_1))(2) === 0);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, ($GLOBALS['Data_Array_rangeImpl'])(1, $n_0)));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -151,7 +157,7 @@ $GLOBALS['Test_ArrayOps_describe'] = ($GLOBALS['Effect_Console_log'])("Array Pro
 // Test_ArrayOps_act
 $GLOBALS['Test_ArrayOps_act'] = ((($GLOBALS['Effect_bindEffect'])['bind'])(($GLOBALS['Bench_opaque'])(900)))(function($dummy_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_Console_log'])((($GLOBALS['Data_Show_showInt'])['show'])((((($GLOBALS['Data_Foldable_foldableArray'])['foldl'])(($GLOBALS['Data_Semiring_semiringInt'])['add']))(0))(($GLOBALS['Test_ArrayOps_filterEvens'])(($GLOBALS['Data_Array_rangeImpl'])(1, $dummy_0)))));
+  $__res = ($GLOBALS['Effect_Console_log'])((($GLOBALS['Data_Show_showInt'])['show'])(($GLOBALS['Test_ArrayOps_sumEvens'])($dummy_0)));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

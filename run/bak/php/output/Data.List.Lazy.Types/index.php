@@ -131,6 +131,15 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+// Data_List_Lazy_Types_identity
+$GLOBALS['Data_List_Lazy_Types_identity'] = function($x_0 = null) {
+  $__num = \func_num_args();
+  $__res = $x_0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+
 // Data_List_Lazy_Types_List
 $GLOBALS['Data_List_Lazy_Types_List'] = function($x_0 = null) {
   $__num = \func_num_args();
@@ -195,7 +204,7 @@ $GLOBALS['Data_List_Lazy_Types_newtypeList'] = ["Coercible0" => function($_dolla
 }];
 
 // Data_List_Lazy_Types_step
-$GLOBALS['Data_List_Lazy_Types_step'] = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Lazy_force']))($GLOBALS['Unsafe_Coerce_unsafeCoerce']);
+$GLOBALS['Data_List_Lazy_Types_step'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Lazy_force']))($GLOBALS['Unsafe_Coerce_unsafeCoerce']);
 
 // Data_List_Lazy_Types_semigroupList
 $GLOBALS['Data_List_Lazy_Types_semigroupList'] = ["append" => (function() {
@@ -242,7 +251,7 @@ $GLOBALS['Data_List_Lazy_Types_monoidList'] = ["mempty" => $GLOBALS['Data_List_L
 // Data_List_Lazy_Types_lazyList
 $GLOBALS['Data_List_Lazy_Types_lazyList'] = ["defer" => function($f_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Lazy_defer'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_List_Lazy_Types_step']))($f_0));
+  $__res = ($GLOBALS['Data_Lazy_defer'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_List_Lazy_Types_step']))($f_0));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -960,7 +969,7 @@ $GLOBALS['Data_List_Lazy_Types_foldableWithIndexList'] = ["foldrWithIndex" => (f
   $__local_var_5_1 = ($v1_3)->{'value0'};
   $__res = function($a_6 = null) use ($__local_var_4_0, $__local_var_5_1) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Tuple", ((($GLOBALS['Data_Semiring_semiringInt'])['add'])($__local_var_5_1))(1), ($GLOBALS['Data_Lazy_defer'])(function($v_7 = null) use ($__local_var_4_0, $a_6) {
+  $__res = new Phpurs_Data2("Tuple", ($__local_var_5_1 + 1), ($GLOBALS['Data_Lazy_defer'])(function($v_7 = null) use ($__local_var_4_0, $a_6) {
   $__num = \func_num_args();
   $__res = new Phpurs_Data2("Cons", $a_6, $__local_var_4_0);
   goto __end;;
@@ -981,7 +990,7 @@ $GLOBALS['Data_List_Lazy_Types_foldableWithIndexList'] = ["foldrWithIndex" => (f
   $__local_var_6_4 = ($v1_4)->{'value0'};
   $__res = function($a_7 = null) use ($__local_var_5_3, $__local_var_6_4, $f_0) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Tuple", ((($GLOBALS['Data_Ring_ringInt'])['sub'])($__local_var_6_4))(1), ((($f_0)(((($GLOBALS['Data_Ring_ringInt'])['sub'])($__local_var_6_4))(1)))($a_7))($__local_var_5_3));
+  $__res = new Phpurs_Data2("Tuple", ($__local_var_6_4 - 1), ((($f_0)(($__local_var_6_4 - 1)))($a_7))($__local_var_5_3));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1001,13 +1010,13 @@ $GLOBALS['Data_List_Lazy_Types_foldableWithIndexList'] = ["foldrWithIndex" => (f
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Tuple_snd']))(((($GLOBALS['Data_List_Lazy_Types_foldableList'])['foldl'])(function($v_2 = null) use ($f_0) {
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Tuple_snd']))(((($GLOBALS['Data_List_Lazy_Types_foldableList'])['foldl'])(function($v_2 = null) use ($f_0) {
   $__num = \func_num_args();
   $__local_var_3_5 = ($v_2)->{'value1'};
   $__local_var_4_6 = ($v_2)->{'value0'};
   $__res = function($a_5 = null) use ($__local_var_3_5, $__local_var_4_6, $f_0) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Tuple", ((($GLOBALS['Data_Semiring_semiringInt'])['add'])($__local_var_4_6))(1), ((($f_0)($__local_var_4_6))($__local_var_3_5))($a_5));
+  $__res = new Phpurs_Data2("Tuple", ($__local_var_4_6 + 1), ((($f_0)($__local_var_4_6))($__local_var_3_5))($a_5));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1032,7 +1041,7 @@ $GLOBALS['Data_List_Lazy_Types_foldableWithIndexList'] = ["foldrWithIndex" => (f
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((((($dictMonoid_0)['Semigroup0'])(null))['append'])($acc_4)))(($f_2)($i_3));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((((($dictMonoid_0)['Semigroup0'])(null))['append'])($acc_4)))(($f_2)($i_3));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1067,22 +1076,21 @@ $GLOBALS['Data_List_Lazy_Types_foldableWithIndexNonEmptyList'] = ["foldMapWithIn
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__local_var_4_1 = (($GLOBALS['Data_Semiring_semiringInt'])['add'])(1);
-  $__res = (($foldMapWithIndex1_1_0)(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($f_2))(function($v2_5 = null) use ($__local_var_4_1) {
+  $__res = (($foldMapWithIndex1_1_0)((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_2))(function($v2_4 = null) {
   $__num = \func_num_args();
-  $__t2 = null;;
-  if ((is_object($v2_5) && (($v2_5)->{'tag'} === "Nothing"))) {
-$__t2 = 0;
-goto end_branch_2;;
+  $__t1 = null;;
+  if ((is_object($v2_4) && (($v2_4)->{'tag'} === "Nothing"))) {
+$__t1 = 0;
+goto end_branch_1;;
 };
-  if ((is_object($v2_5) && (($v2_5)->{'tag'} === "Just"))) {
-$__t2 = ($__local_var_4_1)(($v2_5)->{'value0'});
-goto end_branch_2;;
+  if ((is_object($v2_4) && (($v2_4)->{'tag'} === "Just"))) {
+$__t1 = (1 + ($v2_4)->{'value0'});
+goto end_branch_1;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t2 = null;
-  end_branch_2:;
-  $__res = $__t2;
+  $__t1 = null;
+  end_branch_1:;
+  $__res = $__t1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1102,22 +1110,21 @@ goto end_branch_2;;
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__local_var_3_3 = (($GLOBALS['Data_Semiring_semiringInt'])['add'])(1);
-  $__res = (((($GLOBALS['Data_List_Lazy_Types_foldableWithIndexNonEmpty'])['foldlWithIndex'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($f_0))(function($v2_4 = null) use ($__local_var_3_3) {
+  $__res = (((($GLOBALS['Data_List_Lazy_Types_foldableWithIndexNonEmpty'])['foldlWithIndex'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_0))(function($v2_3 = null) {
   $__num = \func_num_args();
-  $__t4 = null;;
-  if ((is_object($v2_4) && (($v2_4)->{'tag'} === "Nothing"))) {
-$__t4 = 0;
-goto end_branch_4;;
+  $__t2 = null;;
+  if ((is_object($v2_3) && (($v2_3)->{'tag'} === "Nothing"))) {
+$__t2 = 0;
+goto end_branch_2;;
 };
-  if ((is_object($v2_4) && (($v2_4)->{'tag'} === "Just"))) {
-$__t4 = ($__local_var_3_3)(($v2_4)->{'value0'});
-goto end_branch_4;;
+  if ((is_object($v2_3) && (($v2_3)->{'tag'} === "Just"))) {
+$__t2 = (1 + ($v2_3)->{'value0'});
+goto end_branch_2;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t4 = null;
-  end_branch_4:;
-  $__res = $__t4;
+  $__t2 = null;
+  end_branch_2:;
+  $__res = $__t2;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1133,22 +1140,21 @@ goto end_branch_4;;
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__local_var_3_5 = (($GLOBALS['Data_Semiring_semiringInt'])['add'])(1);
-  $__res = (((($GLOBALS['Data_List_Lazy_Types_foldableWithIndexNonEmpty'])['foldrWithIndex'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($f_0))(function($v2_4 = null) use ($__local_var_3_5) {
+  $__res = (((($GLOBALS['Data_List_Lazy_Types_foldableWithIndexNonEmpty'])['foldrWithIndex'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_0))(function($v2_3 = null) {
   $__num = \func_num_args();
-  $__t6 = null;;
-  if ((is_object($v2_4) && (($v2_4)->{'tag'} === "Nothing"))) {
-$__t6 = 0;
-goto end_branch_6;;
+  $__t3 = null;;
+  if ((is_object($v2_3) && (($v2_3)->{'tag'} === "Nothing"))) {
+$__t3 = 0;
+goto end_branch_3;;
 };
-  if ((is_object($v2_4) && (($v2_4)->{'tag'} === "Just"))) {
-$__t6 = ($__local_var_3_5)(($v2_4)->{'value0'});
-goto end_branch_6;;
+  if ((is_object($v2_3) && (($v2_3)->{'tag'} === "Just"))) {
+$__t3 = (1 + ($v2_3)->{'value0'});
+goto end_branch_3;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t6 = null;
-  end_branch_6:;
-  $__res = $__t6;
+  $__t3 = null;
+  end_branch_3:;
+  $__res = $__t3;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1212,22 +1218,21 @@ $GLOBALS['Data_List_Lazy_Types_functorWithIndexNonEmptyList'] = ["mapWithIndex" 
   }
   $__res = ($GLOBALS['Data_Lazy_defer'])(function($v1_2 = null) use ($f_0, $v_1) {
   $__num = \func_num_args();
-  $__local_var_3_0 = (($GLOBALS['Data_Semiring_semiringInt'])['add'])(1);
-  $__res = (($GLOBALS['Data_List_Lazy_Types_mapWithIndex'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($f_0))(function($v2_4 = null) use ($__local_var_3_0) {
+  $__res = (($GLOBALS['Data_List_Lazy_Types_mapWithIndex'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_0))(function($v2_3 = null) {
   $__num = \func_num_args();
-  $__t1 = null;;
-  if ((is_object($v2_4) && (($v2_4)->{'tag'} === "Nothing"))) {
-$__t1 = 0;
-goto end_branch_1;;
+  $__t0 = null;;
+  if ((is_object($v2_3) && (($v2_3)->{'tag'} === "Nothing"))) {
+$__t0 = 0;
+goto end_branch_0;;
 };
-  if ((is_object($v2_4) && (($v2_4)->{'tag'} === "Just"))) {
-$__t1 = ($__local_var_3_0)(($v2_4)->{'value0'});
-goto end_branch_1;;
+  if ((is_object($v2_3) && (($v2_3)->{'tag'} === "Just"))) {
+$__t0 = (1 + ($v2_3)->{'value0'});
+goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t1 = null;
-  end_branch_1:;
-  $__res = $__t1;
+  $__t0 = null;
+  end_branch_0:;
+  $__res = $__t0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1325,7 +1330,7 @@ $GLOBALS['Data_List_Lazy_Types_traversableList'] = ["traverse" => function($dict
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "sequence" => function($dictApplicative_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_List_Lazy_Types_traversableList'])['traverse'])($dictApplicative_0))(($GLOBALS['Control_Category_categoryFn'])['identity']);
+  $__res = ((($GLOBALS['Data_List_Lazy_Types_traversableList'])['traverse'])($dictApplicative_0))($GLOBALS['Data_List_Lazy_Types_identity']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1476,7 +1481,6 @@ $GLOBALS['Data_List_Lazy_Types_traversableWithIndexNonEmptyList'] = ["traverseWi
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__local_var_4_1 = (($GLOBALS['Data_Semiring_semiringInt'])['add'])(1);
   $__res = ((((((($dictApplicative_0)['Apply0'])(null))['Functor0'])(null))['map'])(function($xxs_4 = null) {
   $__num = \func_num_args();
   $__res = ($GLOBALS['Data_Lazy_defer'])(function($v1_5 = null) use ($xxs_4) {
@@ -1489,21 +1493,21 @@ $GLOBALS['Data_List_Lazy_Types_traversableWithIndexNonEmptyList'] = ["traverseWi
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))((($traverseWithIndex1_1_0)(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($f_2))(function($v2_5 = null) use ($__local_var_4_1) {
+}))((($traverseWithIndex1_1_0)((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_2))(function($v2_4 = null) {
   $__num = \func_num_args();
-  $__t2 = null;;
-  if ((is_object($v2_5) && (($v2_5)->{'tag'} === "Nothing"))) {
-$__t2 = 0;
-goto end_branch_2;;
+  $__t1 = null;;
+  if ((is_object($v2_4) && (($v2_4)->{'tag'} === "Nothing"))) {
+$__t1 = 0;
+goto end_branch_1;;
 };
-  if ((is_object($v2_5) && (($v2_5)->{'tag'} === "Just"))) {
-$__t2 = ($__local_var_4_1)(($v2_5)->{'value0'});
-goto end_branch_2;;
+  if ((is_object($v2_4) && (($v2_4)->{'tag'} === "Just"))) {
+$__t1 = (1 + ($v2_4)->{'value0'});
+goto end_branch_1;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t2 = null;
-  end_branch_2:;
-  $__res = $__t2;
+  $__t1 = null;
+  end_branch_1:;
+  $__res = $__t1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1851,7 +1855,7 @@ $GLOBALS['Data_List_Lazy_Types_bindNonEmptyList'] = ["bind" => (function() {
   $__local_var_6_4 = ($v2_4_2)->{'value1'};
   $__res = ($GLOBALS['Data_Lazy_defer'])(function($v3_7 = null) use ($__local_var_3_1, $__local_var_5_3, $__local_var_6_4, $f_1) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("NonEmpty", $__local_var_5_3, ((($GLOBALS['Data_List_Lazy_Types_semigroupList'])['append'])($__local_var_6_4))(((($GLOBALS['Data_List_Lazy_Types_bindList'])['bind'])($__local_var_3_1))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_List_Lazy_Types_toList']))($f_1))));
+  $__res = new Phpurs_Data2("NonEmpty", $__local_var_5_3, ((($GLOBALS['Data_List_Lazy_Types_semigroupList'])['append'])($__local_var_6_4))(((($GLOBALS['Data_List_Lazy_Types_bindList'])['bind'])($__local_var_3_1))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_List_Lazy_Types_toList']))($f_1))));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

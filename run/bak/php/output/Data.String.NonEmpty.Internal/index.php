@@ -320,7 +320,7 @@ $GLOBALS['Data_String_NonEmpty_Internal_liftS'] = (function() {
 })();
 
 // Data_String_NonEmpty_Internal_startsWith
-$GLOBALS['Data_String_NonEmpty_Internal_startsWith'] = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_String_NonEmpty_Internal_liftS']))($GLOBALS['Data_String_CodeUnits_startsWith']);
+$GLOBALS['Data_String_NonEmpty_Internal_startsWith'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_Internal_liftS']))($GLOBALS['Data_String_CodeUnits_startsWith']);
 
 // Data_String_NonEmpty_Internal_joinWith1
 $GLOBALS['Data_String_NonEmpty_Internal_joinWith1'] = function($dictFoldable1_0 = null) {
@@ -329,7 +329,7 @@ $GLOBALS['Data_String_NonEmpty_Internal_joinWith1'] = function($dictFoldable1_0 
   $__local_var_2_1 = (($GLOBALS['Data_Monoid_monoidString'])['Semigroup0'])(null);
   $__res = function($v_3 = null) use ($__local_var_1_0, $__local_var_2_1) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_String_NonEmpty_Internal_NonEmptyString']))(function($xs_4 = null) use ($__local_var_1_0, $__local_var_2_1, $v_3) {
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_Internal_NonEmptyString']))(function($xs_4 = null) use ($__local_var_1_0, $__local_var_2_1, $v_3) {
   $__num = \func_num_args();
   $__res = ((((($__local_var_1_0)['foldl'])((function() use ($__local_var_2_1, $v_3) {
   $__fn = function($v_5 = null, $v1_6 = null) use ($__local_var_2_1, $v_3, &$__fn) {
@@ -370,7 +370,7 @@ $GLOBALS['Data_String_NonEmpty_Internal_joinWith'] = function($dictFoldable_0 = 
   $__local_var_1_0 = (($GLOBALS['Data_Monoid_monoidString'])['Semigroup0'])(null);
   $__res = function($splice_2 = null) use ($__local_var_1_0, $dictFoldable_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(function($xs_3 = null) use ($__local_var_1_0, $dictFoldable_0, $splice_2) {
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(function($xs_3 = null) use ($__local_var_1_0, $dictFoldable_0, $splice_2) {
   $__num = \func_num_args();
   $__res = ((((($dictFoldable_0)['foldl'])((function() use ($__local_var_1_0, $splice_2) {
   $__fn = function($v_4 = null, $v1_5 = null) use ($__local_var_1_0, $splice_2, &$__fn) {
@@ -411,7 +411,7 @@ $GLOBALS['Data_String_NonEmpty_Internal_join1With'] = function($dictFoldable1_0 
   $joinWith2_1_0 = ($GLOBALS['Data_String_NonEmpty_Internal_joinWith'])((($dictFoldable1_0)['Foldable0'])(null));
   $__res = function($splice_2 = null) use ($joinWith2_1_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_String_NonEmpty_Internal_NonEmptyString']))(($joinWith2_1_0)($splice_2));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_Internal_NonEmptyString']))(($joinWith2_1_0)($splice_2));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -473,7 +473,7 @@ $GLOBALS['Data_String_NonEmpty_Internal_trim'] = function($v_0 = null) {
 // Data_String_NonEmpty_Internal_unsafeFromString
 $GLOBALS['Data_String_NonEmpty_Internal_unsafeFromString'] = function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_String_NonEmpty_Internal_fromJust']))($GLOBALS['Data_String_NonEmpty_Internal_fromString']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_Internal_fromJust']))($GLOBALS['Data_String_NonEmpty_Internal_fromString']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -486,10 +486,10 @@ $GLOBALS['Data_String_NonEmpty_Internal_eqNonEmptyString'] = $GLOBALS['Data_Eq_e
 $GLOBALS['Data_String_NonEmpty_Internal_eqNonEmptyReplacement'] = $GLOBALS['Data_Eq_eqString'];
 
 // Data_String_NonEmpty_Internal_endsWith
-$GLOBALS['Data_String_NonEmpty_Internal_endsWith'] = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_String_NonEmpty_Internal_liftS']))($GLOBALS['Data_String_CodeUnits_endsWith']);
+$GLOBALS['Data_String_NonEmpty_Internal_endsWith'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_Internal_liftS']))($GLOBALS['Data_String_CodeUnits_endsWith']);
 
 // Data_String_NonEmpty_Internal_contains
-$GLOBALS['Data_String_NonEmpty_Internal_contains'] = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_String_NonEmpty_Internal_liftS']))($GLOBALS['Data_String_CodeUnits_contains']);
+$GLOBALS['Data_String_NonEmpty_Internal_contains'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_Internal_liftS']))($GLOBALS['Data_String_CodeUnits_contains']);
 
 // Data_String_NonEmpty_Internal_appendString
 $GLOBALS['Data_String_NonEmpty_Internal_appendString'] = (function() {

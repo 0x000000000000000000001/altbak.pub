@@ -215,7 +215,13 @@ $GLOBALS['Data_Bounded_boundedNumber'] = ["top" => $GLOBALS['Data_Bounded_topNum
 // Data_Bounded_boundedInt
 $GLOBALS['Data_Bounded_boundedInt'] = ["top" => $GLOBALS['Data_Bounded_topInt'], "bottom" => $GLOBALS['Data_Bounded_bottomInt'], "Ord0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = $GLOBALS['Data_Ord_ordInt'];
+  $__res = ["compare" => ((($GLOBALS['Data_Ord_ordIntImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT")), "Eq0" => function($_dollar__unused_1 = null) {
+  $__num = \func_num_args();
+  $__res = ["eq" => $GLOBALS['Data_Eq_eqIntImpl']];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -303,34 +309,78 @@ $GLOBALS['Data_Bounded_boundedRecordCons'] = (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $ordRecordCons_8_3 = (((($GLOBALS['Data_Ord_ordRecordCons'])((($dictBoundedRecord_7)['OrdRecord0'])(null)))(null))($dictIsSymbol_0))($Ord0_4_2);
+  $__local_var_8_3 = (($dictBoundedRecord_7)['OrdRecord0'])(null);
+  $__local_var_9_4 = (($__local_var_8_3)['EqRecord0'])(null);
+  $__local_var_10_5 = (($Ord0_4_2)['Eq0'])(null);
+  $eqRowCons2_11_6 = ["eqRecord" => (function() use ($__local_var_10_5, $__local_var_9_4, $dictIsSymbol_0) {
+  $__fn = function($v_11 = null, $ra_12 = null, $rb_13 = null) use ($__local_var_10_5, $__local_var_9_4, $dictIsSymbol_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 3) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  }
+  $get_14_6 = ($GLOBALS['Record_Unsafe_unsafeGet'])((($dictIsSymbol_0)['reflectSymbol'])(new Phpurs_Data0("Proxy")));
+  $__res = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(((($__local_var_10_5)['eq'])(($get_14_6)($ra_12)))(($get_14_6)($rb_13))))((((($__local_var_9_4)['eqRecord'])(new Phpurs_Data0("Proxy")))($ra_12))($rb_13));
+  goto __end;;
+  __end:
+  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+  };
+  return $__fn;
+})()];
+  $ordRecordCons_11_6 = ["compareRecord" => (function() use ($Ord0_4_2, $__local_var_8_3, $dictIsSymbol_0) {
+  $__fn = function($v_12 = null, $ra_13 = null, $rb_14 = null) use ($Ord0_4_2, $__local_var_8_3, $dictIsSymbol_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 3) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  }
+  $key_15_8 = (($dictIsSymbol_0)['reflectSymbol'])(new Phpurs_Data0("Proxy"));
+  $left_16_9 = ((($Ord0_4_2)['compare'])((($GLOBALS['Record_Unsafe_unsafeGet'])($key_15_8))($ra_13)))((($GLOBALS['Record_Unsafe_unsafeGet'])($key_15_8))($rb_14));
+  $__t10 = null;;
+  if (((($GLOBALS['Data_Eq_eqBoolean'])['eq'])(((($GLOBALS['Data_Ordering_eqOrdering'])['eq'])($left_16_9))(new Phpurs_Data0("EQ"))))(false)) {
+$__t10 = $left_16_9;
+goto end_branch_10;;
+};
+  $__t10 = (((($__local_var_8_3)['compareRecord'])(new Phpurs_Data0("Proxy")))($ra_13))($rb_14);
+  end_branch_10:;
+  $__res = $__t10;
+  goto __end;;
+  __end:
+  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+  };
+  return $__fn;
+})(), "EqRecord0" => function($_dollar__unused_12 = null) use ($eqRowCons2_11_6) {
+  $__num = \func_num_args();
+  $__res = $eqRowCons2_11_6;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
   $__res = ["topRecord" => (function() use ($dictBoundedRecord_7, $dictIsSymbol_0, $top1_2_0) {
-  $__fn = function($v_9 = null, $rowProxy_10 = null) use ($dictBoundedRecord_7, $dictIsSymbol_0, $top1_2_0, &$__fn) {
+  $__fn = function($v_12 = null, $rowProxy_13 = null) use ($dictBoundedRecord_7, $dictIsSymbol_0, $top1_2_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Record_Unsafe_unsafeSet'])((($dictIsSymbol_0)['reflectSymbol'])(new Phpurs_Data0("Proxy"))))($top1_2_0))(((($dictBoundedRecord_7)['topRecord'])(new Phpurs_Data0("Proxy")))($rowProxy_10));
+  $__res = ((($GLOBALS['Record_Unsafe_unsafeSet'])((($dictIsSymbol_0)['reflectSymbol'])(new Phpurs_Data0("Proxy"))))($top1_2_0))(((($dictBoundedRecord_7)['topRecord'])(new Phpurs_Data0("Proxy")))($rowProxy_13));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })(), "bottomRecord" => (function() use ($bottom1_3_1, $dictBoundedRecord_7, $dictIsSymbol_0) {
-  $__fn = function($v_9 = null, $rowProxy_10 = null) use ($bottom1_3_1, $dictBoundedRecord_7, $dictIsSymbol_0, &$__fn) {
+  $__fn = function($v_12 = null, $rowProxy_13 = null) use ($bottom1_3_1, $dictBoundedRecord_7, $dictIsSymbol_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Record_Unsafe_unsafeSet'])((($dictIsSymbol_0)['reflectSymbol'])(new Phpurs_Data0("Proxy"))))($bottom1_3_1))(((($dictBoundedRecord_7)['bottomRecord'])(new Phpurs_Data0("Proxy")))($rowProxy_10));
+  $__res = ((($GLOBALS['Record_Unsafe_unsafeSet'])((($dictIsSymbol_0)['reflectSymbol'])(new Phpurs_Data0("Proxy"))))($bottom1_3_1))(((($dictBoundedRecord_7)['bottomRecord'])(new Phpurs_Data0("Proxy")))($rowProxy_13));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "OrdRecord0" => function($_dollar__unused_9 = null) use ($ordRecordCons_8_3) {
+})(), "OrdRecord0" => function($_dollar__unused_12 = null) use ($ordRecordCons_11_6) {
   $__num = \func_num_args();
-  $__res = $ordRecordCons_8_3;
+  $__res = $ordRecordCons_11_6;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

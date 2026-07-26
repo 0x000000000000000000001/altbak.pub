@@ -119,7 +119,7 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
 // Data_Time_negateDuration
-$GLOBALS['Data_Time_negateDuration'] = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(($GLOBALS['Data_Time_Duration_durationMilliseconds'])['toDuration']))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Time_Duration_negate']))(($GLOBALS['Data_Time_Duration_durationMilliseconds'])['fromDuration']));
+$GLOBALS['Data_Time_negateDuration'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Time_Duration_durationMilliseconds'])['toDuration']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Time_Duration_negate']))(($GLOBALS['Data_Time_Duration_durationMilliseconds'])['fromDuration']));
 
 // Data_Time_negate
 $GLOBALS['Data_Time_negate'] = (function() use (&$__fn) {
@@ -290,7 +290,7 @@ $GLOBALS['Data_Time_eqTime'] = ["eq" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(((($GLOBALS['Data_Eq_eqInt'])['eq'])(($x_0)->{'value0'}))(($y_1)->{'value0'})))(((($GLOBALS['Data_Eq_eqInt'])['eq'])(($x_0)->{'value1'}))(($y_1)->{'value1'}))))(((($GLOBALS['Data_Eq_eqInt'])['eq'])(($x_0)->{'value2'}))(($y_1)->{'value2'}))))(((($GLOBALS['Data_Eq_eqInt'])['eq'])(($x_0)->{'value3'}))(($y_1)->{'value3'}));
+  $__res = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(((($GLOBALS['Data_Time_Component_eqHour'])['eq'])(($x_0)->{'value0'}))(($y_1)->{'value0'})))(((($GLOBALS['Data_Time_Component_eqMinute'])['eq'])(($x_0)->{'value1'}))(($y_1)->{'value1'}))))(((($GLOBALS['Data_Time_Component_eqSecond'])['eq'])(($x_0)->{'value2'}))(($y_1)->{'value2'}))))(((($GLOBALS['Data_Time_Component_eqMillisecond'])['eq'])(($x_0)->{'value3'}))(($y_1)->{'value3'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -305,7 +305,7 @@ $GLOBALS['Data_Time_ordTime'] = ["compare" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $v_2_0 = ((($GLOBALS['Data_Ord_ordInt'])['compare'])(($x_0)->{'value0'}))(($y_1)->{'value0'});
+  $v_2_0 = ((($GLOBALS['Data_Time_Component_ordHour'])['compare'])(($x_0)->{'value0'}))(($y_1)->{'value0'});
   $__t5 = null;;
   if ((is_object($v_2_0) && (($v_2_0)->{'tag'} === "LT"))) {
 $__t5 = new Phpurs_Data0("LT");
@@ -315,7 +315,7 @@ goto end_branch_5;;
 $__t5 = new Phpurs_Data0("GT");
 goto end_branch_5;;
 };
-  $v1_3_1 = ((($GLOBALS['Data_Ord_ordInt'])['compare'])(($x_0)->{'value1'}))(($y_1)->{'value1'});
+  $v1_3_1 = ((($GLOBALS['Data_Time_Component_ordMinute'])['compare'])(($x_0)->{'value1'}))(($y_1)->{'value1'});
   $__t4 = null;;
   if ((is_object($v1_3_1) && (($v1_3_1)->{'tag'} === "LT"))) {
 $__t4 = new Phpurs_Data0("LT");
@@ -325,7 +325,7 @@ goto end_branch_4;;
 $__t4 = new Phpurs_Data0("GT");
 goto end_branch_4;;
 };
-  $v2_4_2 = ((($GLOBALS['Data_Ord_ordInt'])['compare'])(($x_0)->{'value2'}))(($y_1)->{'value2'});
+  $v2_4_2 = ((($GLOBALS['Data_Time_Component_ordSecond'])['compare'])(($x_0)->{'value2'}))(($y_1)->{'value2'});
   $__t3 = null;;
   if ((is_object($v2_4_2) && (($v2_4_2)->{'tag'} === "LT"))) {
 $__t3 = new Phpurs_Data0("LT");
@@ -335,7 +335,7 @@ goto end_branch_3;;
 $__t3 = new Phpurs_Data0("GT");
 goto end_branch_3;;
 };
-  $__t3 = ((($GLOBALS['Data_Ord_ordInt'])['compare'])(($x_0)->{'value3'}))(($y_1)->{'value3'});
+  $__t3 = ((($GLOBALS['Data_Time_Component_ordMillisecond'])['compare'])(($x_0)->{'value3'}))(($y_1)->{'value3'});
   end_branch_3:;
   $__t4 = $__t3;
   end_branch_4:;

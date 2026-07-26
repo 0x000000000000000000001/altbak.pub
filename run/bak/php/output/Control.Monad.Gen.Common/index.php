@@ -113,35 +113,38 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
 // Control_Monad_Gen_Common_max
-$GLOBALS['Control_Monad_Gen_Common_max'] = (function() {
-  $__fn = function($x_0 = null, $y_1 = null) use (&$__fn) {
+$GLOBALS['Control_Monad_Gen_Common_max'] = (function() use (&$__fn) {
+$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT"));
+return (function() use ($__local_var_0_0) {
+  $__fn = function($x_1 = null, $y_2 = null) use ($__local_var_0_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $v_2_0 = ((($GLOBALS['Data_Ord_ordInt'])['compare'])($x_0))($y_1);
-  $__t1 = null;;
-  if ((is_object($v_2_0) && (($v_2_0)->{'tag'} === "LT"))) {
-$__t1 = $y_1;
-goto end_branch_1;;
+  $v_3_1 = (($__local_var_0_0)($x_1))($y_2);
+  $__t2 = null;;
+  if ((is_object($v_3_1) && (($v_3_1)->{'tag'} === "LT"))) {
+$__t2 = $y_2;
+goto end_branch_2;;
 };
-  if ((is_object($v_2_0) && (($v_2_0)->{'tag'} === "EQ"))) {
-$__t1 = $x_0;
-goto end_branch_1;;
+  if ((is_object($v_3_1) && (($v_3_1)->{'tag'} === "EQ"))) {
+$__t2 = $x_1;
+goto end_branch_2;;
 };
-  if ((is_object($v_2_0) && (($v_2_0)->{'tag'} === "GT"))) {
-$__t1 = $x_0;
-goto end_branch_1;;
+  if ((is_object($v_3_1) && (($v_3_1)->{'tag'} === "GT"))) {
+$__t2 = $x_1;
+goto end_branch_2;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t1 = null;
-  end_branch_1:;
-  $__res = $__t1;
+  $__t2 = null;
+  end_branch_2:;
+  $__res = $__t2;
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
+})();
 })();
 
 // Control_Monad_Gen_Common_genTuple
@@ -173,9 +176,9 @@ $GLOBALS['Control_Monad_Gen_Common_genNonEmpty'] = (function() {
   $unfoldable2_5_2 = ($unfoldable1_3_1)($dictUnfoldable_4);
   $__res = function($gen_6 = null) use ($Apply0_2_0, $dictMonadGen_1, $unfoldable2_5_2) {
   $__num = \func_num_args();
-  $__res = ((($Apply0_2_0)['apply'])(((((($Apply0_2_0)['Functor0'])(null))['map'])($GLOBALS['Data_NonEmpty_NonEmpty']))($gen_6)))(((($dictMonadGen_1)['resize'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(($GLOBALS['Control_Monad_Gen_Common_max'])(0)))(function($v_7 = null) {
+  $__res = ((($Apply0_2_0)['apply'])(((((($Apply0_2_0)['Functor0'])(null))['map'])($GLOBALS['Data_NonEmpty_NonEmpty']))($gen_6)))(((($dictMonadGen_1)['resize'])((($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Control_Monad_Gen_Common_max'])(0)))(function($v_7 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Ring_ringInt'])['sub'])($v_7))(1);
+  $__res = ($v_7 - 1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

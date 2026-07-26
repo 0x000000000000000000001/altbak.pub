@@ -151,16 +151,58 @@ goto end_branch_0;;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
 
-// Data_Unfoldable1_negate
-$GLOBALS['Data_Unfoldable1_negate'] = (function() use (&$__fn) {
-$zero_0_0 = ((($GLOBALS['Data_Ring_ringInt'])['Semiring0'])(null))['zero'];
-return function($a_1 = null) use ($zero_0_0) {
+// Data_Unfoldable1_lessThanOrEq
+$GLOBALS['Data_Unfoldable1_lessThanOrEq'] = (function() use (&$__fn) {
+$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT"));
+return (function() use ($__local_var_0_0) {
+  $__fn = function($a1_1 = null, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Ring_ringInt'])['sub'])($zero_0_0))($a_1);
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ( ! (is_object((($__local_var_0_0)($a1_1))($a2_2)) && (((($__local_var_0_0)($a1_1))($a2_2))->{'tag'} === "GT")));
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
+})();
+
+// Data_Unfoldable1_greaterThanOrEq
+$GLOBALS['Data_Unfoldable1_greaterThanOrEq'] = (function() use (&$__fn) {
+$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT"));
+return (function() use ($__local_var_0_0) {
+  $__fn = function($a1_1 = null, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ( ! (is_object((($__local_var_0_0)($a1_1))($a2_2)) && (((($__local_var_0_0)($a1_1))($a2_2))->{'tag'} === "LT")));
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
+})();
+
+// Data_Unfoldable1_greaterThan
+$GLOBALS['Data_Unfoldable1_greaterThan'] = (function() use (&$__fn) {
+$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT"));
+return (function() use ($__local_var_0_0) {
+  $__fn = function($a1_1 = null, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = (is_object((($__local_var_0_0)($a1_1))($a2_2)) && (((($__local_var_0_0)($a1_1))($a2_2))->{'tag'} === "GT"));
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
 })();
 
 // Data_Unfoldable1_unfoldr1
@@ -200,17 +242,17 @@ $GLOBALS['Data_Unfoldable1_replicate1'] = (function() {
   $__res = ((($dictUnfoldable1_0)['unfoldr1'])(function($i_3 = null) use ($v_2) {
   $__num = \func_num_args();
   $__t0 = null;;
-  if (($i_3 <= 0)) {
+  if ((($GLOBALS['Data_Unfoldable1_lessThanOrEq'])($i_3))(0)) {
 $__t0 = new Phpurs_Data2("Tuple", $v_2, new Phpurs_Data0("Nothing"));
 goto end_branch_0;;
 };
-  $__t0 = new Phpurs_Data2("Tuple", $v_2, new Phpurs_Data1("Just", ((($GLOBALS['Data_Ring_ringInt'])['sub'])($i_3))(1)));
+  $__t0 = new Phpurs_Data2("Tuple", $v_2, new Phpurs_Data1("Just", ($i_3 - 1)));
   end_branch_0:;
   $__res = $__t0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(((($GLOBALS['Data_Ring_ringInt'])['sub'])($n_1))(1));
+}))(($n_1 - 1));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -263,24 +305,17 @@ $GLOBALS['Data_Unfoldable1_range'] = (function() {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   $__t0 = null;;
-  if (($end_2 >= $start_1)) {
+  if ((($GLOBALS['Data_Unfoldable1_greaterThanOrEq'])($end_2))($start_1)) {
 $__t0 = 1;
 goto end_branch_0;;
 };
-  $__t0 = ($GLOBALS['Data_Unfoldable1_negate'])(1);
+  $__t0 = -1;
   end_branch_0:;
   $__local_var_3_0 = $__t0;
   $__res = ((($dictUnfoldable1_0)['unfoldr1'])(function($i_4 = null) use ($__local_var_3_0, $end_2) {
   $__num = \func_num_args();
-  $i_prime_5_2 = ((($GLOBALS['Data_Semiring_semiringInt'])['add'])($i_4))($__local_var_3_0);
-  $__t3 = null;;
-  if (((($GLOBALS['Data_Eq_eqInt'])['eq'])($i_4))($end_2)) {
-$__t3 = new Phpurs_Data0("Nothing");
-goto end_branch_3;;
-};
-  $__t3 = new Phpurs_Data1("Just", $i_prime_5_2);
-  end_branch_3:;
-  $__res = new Phpurs_Data2("Tuple", $i_4, $__t3);
+  $i_prime_5_2 = ($i_4 + $__local_var_3_0);
+  $__res = new Phpurs_Data2("Tuple", $i_4, match ($i_4) { $end_2 => new Phpurs_Data0("Nothing"), default => new Phpurs_Data1("Just", $i_prime_5_2) });
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -302,8 +337,8 @@ $GLOBALS['Data_Unfoldable1_iterateN'] = (function() {
   $__res = ((($dictUnfoldable1_0)['unfoldr1'])(function($v_4 = null) use ($f_2) {
   $__num = \func_num_args();
   $__t0 = null;;
-  if ((($v_4)->{'value1'} > 0)) {
-$__t0 = new Phpurs_Data1("Just", new Phpurs_Data2("Tuple", ($f_2)(($v_4)->{'value0'}), ((($GLOBALS['Data_Ring_ringInt'])['sub'])(($v_4)->{'value1'}))(1)));
+  if ((($GLOBALS['Data_Unfoldable1_greaterThan'])(($v_4)->{'value1'}))(0)) {
+$__t0 = new Phpurs_Data1("Just", new Phpurs_Data2("Tuple", ($f_2)(($v_4)->{'value0'}), (($v_4)->{'value1'} - 1)));
 goto end_branch_0;;
 };
   $__t0 = new Phpurs_Data0("Nothing");
@@ -312,7 +347,7 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(new Phpurs_Data2("Tuple", $s_3, ((($GLOBALS['Data_Ring_ringInt'])['sub'])($n_1))(1)));
+}))(new Phpurs_Data2("Tuple", $s_3, ($n_1 - 1)));
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;

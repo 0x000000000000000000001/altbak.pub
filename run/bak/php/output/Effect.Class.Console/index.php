@@ -109,7 +109,7 @@ $GLOBALS['Effect_Class_Console_warnShow'] = function($dictMonadEffect_0 = null) 
   $liftEffect_1_0 = ($dictMonadEffect_0)['liftEffect'];
   $__res = function($dictShow_2 = null) use ($liftEffect_1_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($liftEffect_1_0))(($GLOBALS['Effect_Console_warnShow'])($dictShow_2));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($liftEffect_1_0))(($GLOBALS['Effect_Console_warnShow'])($dictShow_2));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -122,7 +122,7 @@ $GLOBALS['Effect_Class_Console_warnShow'] = function($dictMonadEffect_0 = null) 
 // Effect_Class_Console_warn
 $GLOBALS['Effect_Class_Console_warn'] = function($dictMonadEffect_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(($dictMonadEffect_0)['liftEffect']))($GLOBALS['Effect_Console_warn']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictMonadEffect_0)['liftEffect']))($GLOBALS['Effect_Console_warn']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -131,7 +131,7 @@ $GLOBALS['Effect_Class_Console_warn'] = function($dictMonadEffect_0 = null) {
 // Effect_Class_Console_timeLog
 $GLOBALS['Effect_Class_Console_timeLog'] = function($dictMonadEffect_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(($dictMonadEffect_0)['liftEffect']))($GLOBALS['Effect_Console_timeLog']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictMonadEffect_0)['liftEffect']))($GLOBALS['Effect_Console_timeLog']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -140,7 +140,7 @@ $GLOBALS['Effect_Class_Console_timeLog'] = function($dictMonadEffect_0 = null) {
 // Effect_Class_Console_timeEnd
 $GLOBALS['Effect_Class_Console_timeEnd'] = function($dictMonadEffect_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(($dictMonadEffect_0)['liftEffect']))($GLOBALS['Effect_Console_timeEnd']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictMonadEffect_0)['liftEffect']))($GLOBALS['Effect_Console_timeEnd']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -149,7 +149,7 @@ $GLOBALS['Effect_Class_Console_timeEnd'] = function($dictMonadEffect_0 = null) {
 // Effect_Class_Console_time
 $GLOBALS['Effect_Class_Console_time'] = function($dictMonadEffect_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(($dictMonadEffect_0)['liftEffect']))($GLOBALS['Effect_Console_time']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictMonadEffect_0)['liftEffect']))($GLOBALS['Effect_Console_time']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -161,7 +161,7 @@ $GLOBALS['Effect_Class_Console_logShow'] = function($dictMonadEffect_0 = null) {
   $liftEffect_1_0 = ($dictMonadEffect_0)['liftEffect'];
   $__res = function($dictShow_2 = null) use ($liftEffect_1_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($liftEffect_1_0))(($GLOBALS['Effect_Console_logShow'])($dictShow_2));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($liftEffect_1_0))(($GLOBALS['Effect_Console_logShow'])($dictShow_2));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -174,7 +174,7 @@ $GLOBALS['Effect_Class_Console_logShow'] = function($dictMonadEffect_0 = null) {
 // Effect_Class_Console_log
 $GLOBALS['Effect_Class_Console_log'] = function($dictMonadEffect_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(($dictMonadEffect_0)['liftEffect']))($GLOBALS['Effect_Console_log']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictMonadEffect_0)['liftEffect']))($GLOBALS['Effect_Console_log']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -186,7 +186,7 @@ $GLOBALS['Effect_Class_Console_infoShow'] = function($dictMonadEffect_0 = null) 
   $liftEffect_1_0 = ($dictMonadEffect_0)['liftEffect'];
   $__res = function($dictShow_2 = null) use ($liftEffect_1_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($liftEffect_1_0))(($GLOBALS['Effect_Console_infoShow'])($dictShow_2));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($liftEffect_1_0))(($GLOBALS['Effect_Console_infoShow'])($dictShow_2));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -199,7 +199,7 @@ $GLOBALS['Effect_Class_Console_infoShow'] = function($dictMonadEffect_0 = null) 
 // Effect_Class_Console_info
 $GLOBALS['Effect_Class_Console_info'] = function($dictMonadEffect_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(($dictMonadEffect_0)['liftEffect']))($GLOBALS['Effect_Console_info']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictMonadEffect_0)['liftEffect']))($GLOBALS['Effect_Console_info']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -217,7 +217,7 @@ $GLOBALS['Effect_Class_Console_groupEnd'] = function($dictMonadEffect_0 = null) 
 // Effect_Class_Console_groupCollapsed
 $GLOBALS['Effect_Class_Console_groupCollapsed'] = function($dictMonadEffect_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(($dictMonadEffect_0)['liftEffect']))($GLOBALS['Effect_Console_groupCollapsed']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictMonadEffect_0)['liftEffect']))($GLOBALS['Effect_Console_groupCollapsed']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -226,7 +226,7 @@ $GLOBALS['Effect_Class_Console_groupCollapsed'] = function($dictMonadEffect_0 = 
 // Effect_Class_Console_group
 $GLOBALS['Effect_Class_Console_group'] = function($dictMonadEffect_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(($dictMonadEffect_0)['liftEffect']))($GLOBALS['Effect_Console_group']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictMonadEffect_0)['liftEffect']))($GLOBALS['Effect_Console_group']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -238,7 +238,7 @@ $GLOBALS['Effect_Class_Console_grouped'] = function($dictMonadEffect_0 = null) {
   $Monad0_1_0 = (($dictMonadEffect_0)['Monad0'])(null);
   $Bind1_2_1 = (($Monad0_1_0)['Bind1'])(null);
   $discard1_3_2 = (($GLOBALS['Control_Bind_discardUnit'])['discard'])($Bind1_2_1);
-  $group1_4_3 = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(($dictMonadEffect_0)['liftEffect']))($GLOBALS['Effect_Console_group']);
+  $group1_4_3 = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictMonadEffect_0)['liftEffect']))($GLOBALS['Effect_Console_group']);
   $groupEnd1_5_4 = (($dictMonadEffect_0)['liftEffect'])($GLOBALS['Effect_Console_groupEnd']);
   $__res = (function() use ($Bind1_2_1, $Monad0_1_0, $discard1_3_2, $group1_4_3, $groupEnd1_5_4) {
   $__fn = function($name_6 = null, $inner_7 = null) use ($Bind1_2_1, $Monad0_1_0, $discard1_3_2, $group1_4_3, $groupEnd1_5_4, &$__fn) {
@@ -282,7 +282,7 @@ $GLOBALS['Effect_Class_Console_errorShow'] = function($dictMonadEffect_0 = null)
   $liftEffect_1_0 = ($dictMonadEffect_0)['liftEffect'];
   $__res = function($dictShow_2 = null) use ($liftEffect_1_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($liftEffect_1_0))(($GLOBALS['Effect_Console_errorShow'])($dictShow_2));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($liftEffect_1_0))(($GLOBALS['Effect_Console_errorShow'])($dictShow_2));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -295,7 +295,7 @@ $GLOBALS['Effect_Class_Console_errorShow'] = function($dictMonadEffect_0 = null)
 // Effect_Class_Console_error
 $GLOBALS['Effect_Class_Console_error'] = function($dictMonadEffect_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(($dictMonadEffect_0)['liftEffect']))($GLOBALS['Effect_Console_error']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictMonadEffect_0)['liftEffect']))($GLOBALS['Effect_Console_error']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -307,7 +307,7 @@ $GLOBALS['Effect_Class_Console_debugShow'] = function($dictMonadEffect_0 = null)
   $liftEffect_1_0 = ($dictMonadEffect_0)['liftEffect'];
   $__res = function($dictShow_2 = null) use ($liftEffect_1_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($liftEffect_1_0))(($GLOBALS['Effect_Console_debugShow'])($dictShow_2));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($liftEffect_1_0))(($GLOBALS['Effect_Console_debugShow'])($dictShow_2));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -320,7 +320,7 @@ $GLOBALS['Effect_Class_Console_debugShow'] = function($dictMonadEffect_0 = null)
 // Effect_Class_Console_debug
 $GLOBALS['Effect_Class_Console_debug'] = function($dictMonadEffect_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(($dictMonadEffect_0)['liftEffect']))($GLOBALS['Effect_Console_debug']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictMonadEffect_0)['liftEffect']))($GLOBALS['Effect_Console_debug']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

@@ -110,7 +110,13 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
 // Effect_Aff_Class_monadAffAff
-$GLOBALS['Effect_Aff_Class_monadAffAff'] = ["liftAff" => ($GLOBALS['Control_Category_categoryFn'])['identity'], "MonadEffect0" => function($_dollar__unused_0 = null) {
+$GLOBALS['Effect_Aff_Class_monadAffAff'] = ["liftAff" => function($x_0 = null) {
+  $__num = \func_num_args();
+  $__res = $x_0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "MonadEffect0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Effect_Aff_monadEffectAff'];
   goto __end;;
@@ -132,7 +138,7 @@ $GLOBALS['Effect_Aff_Class_monadAffContT'] = function($dictMonadAff_0 = null) {
   $__num = \func_num_args();
   $MonadEffect0_1_0 = (($dictMonadAff_0)['MonadEffect0'])(null);
   $monadEffectContT_2_1 = ($GLOBALS['Control_Monad_Cont_Trans_monadEffectContT'])($MonadEffect0_1_0);
-  $__res = ["liftAff" => ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($GLOBALS['Control_Monad_Cont_Trans_monadTransContT'])['lift'])((($MonadEffect0_1_0)['Monad0'])(null))))(($dictMonadAff_0)['liftAff']), "MonadEffect0" => function($_dollar__unused_3 = null) use ($monadEffectContT_2_1) {
+  $__res = ["liftAff" => (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_Cont_Trans_monadTransContT'])['lift'])((($MonadEffect0_1_0)['Monad0'])(null))))(($dictMonadAff_0)['liftAff']), "MonadEffect0" => function($_dollar__unused_3 = null) use ($monadEffectContT_2_1) {
   $__num = \func_num_args();
   $__res = $monadEffectContT_2_1;
   goto __end;;
@@ -149,7 +155,7 @@ $GLOBALS['Effect_Aff_Class_monadAffExceptT'] = function($dictMonadAff_0 = null) 
   $__num = \func_num_args();
   $MonadEffect0_1_0 = (($dictMonadAff_0)['MonadEffect0'])(null);
   $monadEffectExceptT_2_1 = ($GLOBALS['Control_Monad_Except_Trans_monadEffectExceptT'])($MonadEffect0_1_0);
-  $__res = ["liftAff" => ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($GLOBALS['Control_Monad_Except_Trans_monadTransExceptT'])['lift'])((($MonadEffect0_1_0)['Monad0'])(null))))(($dictMonadAff_0)['liftAff']), "MonadEffect0" => function($_dollar__unused_3 = null) use ($monadEffectExceptT_2_1) {
+  $__res = ["liftAff" => (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_Except_Trans_monadTransExceptT'])['lift'])((($MonadEffect0_1_0)['Monad0'])(null))))(($dictMonadAff_0)['liftAff']), "MonadEffect0" => function($_dollar__unused_3 = null) use ($monadEffectExceptT_2_1) {
   $__num = \func_num_args();
   $__res = $monadEffectExceptT_2_1;
   goto __end;;
@@ -166,7 +172,7 @@ $GLOBALS['Effect_Aff_Class_monadAffListT'] = function($dictMonadAff_0 = null) {
   $__num = \func_num_args();
   $MonadEffect0_1_0 = (($dictMonadAff_0)['MonadEffect0'])(null);
   $monadEffectListT_2_1 = ($GLOBALS['Control_Monad_List_Trans_monadEffectListT'])($MonadEffect0_1_0);
-  $__res = ["liftAff" => ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($GLOBALS['Control_Monad_List_Trans_monadTransListT'])['lift'])((($MonadEffect0_1_0)['Monad0'])(null))))(($dictMonadAff_0)['liftAff']), "MonadEffect0" => function($_dollar__unused_3 = null) use ($monadEffectListT_2_1) {
+  $__res = ["liftAff" => (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_List_Trans_monadTransListT'])['lift'])((($MonadEffect0_1_0)['Monad0'])(null))))(($dictMonadAff_0)['liftAff']), "MonadEffect0" => function($_dollar__unused_3 = null) use ($monadEffectListT_2_1) {
   $__num = \func_num_args();
   $__res = $monadEffectListT_2_1;
   goto __end;;
@@ -183,7 +189,7 @@ $GLOBALS['Effect_Aff_Class_monadAffMaybe'] = function($dictMonadAff_0 = null) {
   $__num = \func_num_args();
   $MonadEffect0_1_0 = (($dictMonadAff_0)['MonadEffect0'])(null);
   $monadEffectMaybe_2_1 = ($GLOBALS['Control_Monad_Maybe_Trans_monadEffectMaybe'])($MonadEffect0_1_0);
-  $__res = ["liftAff" => ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($GLOBALS['Control_Monad_Maybe_Trans_monadTransMaybeT'])['lift'])((($MonadEffect0_1_0)['Monad0'])(null))))(($dictMonadAff_0)['liftAff']), "MonadEffect0" => function($_dollar__unused_3 = null) use ($monadEffectMaybe_2_1) {
+  $__res = ["liftAff" => (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_Maybe_Trans_monadTransMaybeT'])['lift'])((($MonadEffect0_1_0)['Monad0'])(null))))(($dictMonadAff_0)['liftAff']), "MonadEffect0" => function($_dollar__unused_3 = null) use ($monadEffectMaybe_2_1) {
   $__num = \func_num_args();
   $__res = $monadEffectMaybe_2_1;
   goto __end;;
@@ -205,7 +211,7 @@ $GLOBALS['Effect_Aff_Class_monadAffRWS'] = function($dictMonadAff_0 = null) {
   $__num = \func_num_args();
   $monadEffectRWS_5_3 = (($GLOBALS['Control_Monad_RWS_Trans_monadEffectRWS'])($dictMonoid_4))($MonadEffect0_1_0);
   $mempty_6_4 = ($dictMonoid_4)['mempty'];
-  $__res = ["liftAff" => ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((function() use ($Monad0_2_1, $mempty_6_4) {
+  $__res = ["liftAff" => (($GLOBALS['Control_Semigroupoid_composeImpl'])((function() use ($Monad0_2_1, $mempty_6_4) {
   $__fn = function($m_7 = null, $v_8 = null, $s_9 = null) use ($Monad0_2_1, $mempty_6_4, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -244,7 +250,7 @@ $GLOBALS['Effect_Aff_Class_monadAffReader'] = function($dictMonadAff_0 = null) {
   $__num = \func_num_args();
   $MonadEffect0_1_0 = (($dictMonadAff_0)['MonadEffect0'])(null);
   $monadEffectReader_2_1 = ($GLOBALS['Control_Monad_Reader_Trans_monadEffectReader'])($MonadEffect0_1_0);
-  $__res = ["liftAff" => ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($GLOBALS['Control_Monad_Reader_Trans_monadTransReaderT'])['lift'])((($MonadEffect0_1_0)['Monad0'])(null))))(($dictMonadAff_0)['liftAff']), "MonadEffect0" => function($_dollar__unused_3 = null) use ($monadEffectReader_2_1) {
+  $__res = ["liftAff" => (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_Reader_Trans_monadTransReaderT'])['lift'])((($MonadEffect0_1_0)['Monad0'])(null))))(($dictMonadAff_0)['liftAff']), "MonadEffect0" => function($_dollar__unused_3 = null) use ($monadEffectReader_2_1) {
   $__num = \func_num_args();
   $__res = $monadEffectReader_2_1;
   goto __end;;
@@ -261,7 +267,7 @@ $GLOBALS['Effect_Aff_Class_monadAffState'] = function($dictMonadAff_0 = null) {
   $__num = \func_num_args();
   $MonadEffect0_1_0 = (($dictMonadAff_0)['MonadEffect0'])(null);
   $monadEffectState_2_1 = ($GLOBALS['Control_Monad_State_Trans_monadEffectState'])($MonadEffect0_1_0);
-  $__res = ["liftAff" => ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($GLOBALS['Control_Monad_State_Trans_monadTransStateT'])['lift'])((($MonadEffect0_1_0)['Monad0'])(null))))(($dictMonadAff_0)['liftAff']), "MonadEffect0" => function($_dollar__unused_3 = null) use ($monadEffectState_2_1) {
+  $__res = ["liftAff" => (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_State_Trans_monadTransStateT'])['lift'])((($MonadEffect0_1_0)['Monad0'])(null))))(($dictMonadAff_0)['liftAff']), "MonadEffect0" => function($_dollar__unused_3 = null) use ($monadEffectState_2_1) {
   $__num = \func_num_args();
   $__res = $monadEffectState_2_1;
   goto __end;;
@@ -283,7 +289,7 @@ $GLOBALS['Effect_Aff_Class_monadAffWriter'] = function($dictMonadAff_0 = null) {
   $__num = \func_num_args();
   $monadEffectWriter_5_3 = (($GLOBALS['Control_Monad_Writer_Trans_monadEffectWriter'])($dictMonoid_4))($MonadEffect0_1_0);
   $mempty_6_4 = ($dictMonoid_4)['mempty'];
-  $__res = ["liftAff" => ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(function($m_7 = null) use ($Monad0_2_1, $mempty_6_4) {
+  $__res = ["liftAff" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(function($m_7 = null) use ($Monad0_2_1, $mempty_6_4) {
   $__num = \func_num_args();
   $__res = ((((($Monad0_2_1)['Bind1'])(null))['bind'])($m_7))(function($a_8 = null) use ($Monad0_2_1, $mempty_6_4) {
   $__num = \func_num_args();

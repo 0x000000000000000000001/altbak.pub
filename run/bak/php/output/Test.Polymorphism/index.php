@@ -154,7 +154,7 @@ default:
 ;
 break;
 };
-  $__tco_1 = ((($GLOBALS['Data_Ring_ringInt'])['sub'])($v_5))(1);
+  $__tco_1 = ($v_5 - 1);
   $__tco_2 = ((($dictMonoidish_0)['mappend_'])($v1_6))($mempty_1_1_0);
   $__tco_var_go__4_1_1_v_5 = $__tco_1;
   $__tco_var_go__4_1_1_v1_6 = $__tco_2;
@@ -187,7 +187,7 @@ $GLOBALS['Test_Polymorphism_intMonoidish'] = ["mempty_" => 1, "mappend_" => (fun
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_Semiring_semiringInt'])['add'])($x_0))($y_1);
+  $__res = ($x_0 + $y_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -195,16 +195,49 @@ $GLOBALS['Test_Polymorphism_intMonoidish'] = ["mempty_" => 1, "mappend_" => (fun
   return $__fn;
 })()];
 
-// Test_Polymorphism_polyLoop1
-$GLOBALS['Test_Polymorphism_polyLoop1'] = ($GLOBALS['Test_Polymorphism_polyLoop'])($GLOBALS['Test_Polymorphism_intMonoidish']);
-
 // Test_Polymorphism_describe
 $GLOBALS['Test_Polymorphism_describe'] = ($GLOBALS['Effect_Console_log'])("Polymorphism (10M Type Class Dict Lookups):");
 
 // Test_Polymorphism_act
 $GLOBALS['Test_Polymorphism_act'] = ((($GLOBALS['Effect_bindEffect'])['bind'])(($GLOBALS['Bench_opaque'])(10000000)))(function($dummy_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_Console_log'])((($GLOBALS['Data_Show_showInt'])['show'])((($GLOBALS['Test_Polymorphism_polyLoop1'])($dummy_0))(0)));
+  $go__1_0 = null;
+  $go__1_0 = (function() use (&$go__1_0) {
+  $__fn = function($v_2 = null, $v1_3 = null) use (&$go__1_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__tco_var_go__1_0_0_v_2 = $v_2;
+  $__tco_var_go__1_0_0_v1_3 = $v1_3;
+  tco_loop_go__1_0_0:;
+  $v_2 = $__tco_var_go__1_0_0_v_2;
+  $v1_3 = $__tco_var_go__1_0_0_v1_3;
+  $__t2 = null;;
+  switch ($v_2) {
+case 0:
+$__t2 = $v1_3;
+goto end_branch_2;;
+break;
+default:
+;
+break;
+};
+  $__tco_0 = ($v_2 - 1);
+  $__tco_1 = ($v1_3 + 1);
+  $__tco_var_go__1_0_0_v_2 = $__tco_0;
+  $__tco_var_go__1_0_0_v1_3 = $__tco_1;
+  goto tco_loop_go__1_0_0;;
+  $__t2 = null;
+  end_branch_2:;
+  $__res = $__t2;
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
+  $__res = ($GLOBALS['Effect_Console_log'])((($GLOBALS['Data_Show_showInt'])['show'])((($go__1_0)($dummy_0))(0)));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

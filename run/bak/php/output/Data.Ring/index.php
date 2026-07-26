@@ -280,7 +280,7 @@ $GLOBALS['Data_Ring_ringNumber'] = ["sub" => $GLOBALS['Data_Ring_numSub'], "Semi
 // Data_Ring_ringInt
 $GLOBALS['Data_Ring_ringInt'] = ["sub" => $GLOBALS['Data_Ring_intSub'], "Semiring0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = $GLOBALS['Data_Semiring_semiringInt'];
+  $__res = ["add" => $GLOBALS['Data_Semiring_intAdd'], "zero" => 0, "mul" => $GLOBALS['Data_Semiring_intMul'], "one" => 1];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

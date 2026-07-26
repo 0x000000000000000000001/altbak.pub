@@ -104,6 +104,15 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+// Data_Decidable_identity
+$GLOBALS['Data_Decidable_identity'] = function($x_0 = null) {
+  $__num = \func_num_args();
+  $__res = $x_0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+
 // Data_Decidable_lose
 $GLOBALS['Data_Decidable_lose'] = function($dict_0 = null) {
   $__num = \func_num_args();
@@ -116,7 +125,7 @@ $GLOBALS['Data_Decidable_lose'] = function($dict_0 = null) {
 // Data_Decidable_lost
 $GLOBALS['Data_Decidable_lost'] = function($dictDecidable_0 = null) {
   $__num = \func_num_args();
-  $__res = (($dictDecidable_0)['lose'])(($GLOBALS['Control_Category_categoryFn'])['identity']);
+  $__res = (($dictDecidable_0)['lose'])($GLOBALS['Data_Decidable_identity']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

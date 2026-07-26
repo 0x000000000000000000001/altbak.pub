@@ -182,7 +182,7 @@ $GLOBALS['Data_Functor_Flip_functorFlip'] = function($dictBifunctor_0 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($dictBifunctor_0)['bimap'])($f_1))(($GLOBALS['Control_Category_categoryFn'])['identity']))($v_2);
+  $__res = (((($dictBifunctor_0)['bimap'])($f_1))($GLOBALS['Data_Bifunctor_identity']))($v_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -212,7 +212,7 @@ $GLOBALS['Data_Functor_Flip_contravariantFlip'] = function($dictProfunctor_0 = n
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($dictProfunctor_0)['dimap'])($f_1))(($GLOBALS['Control_Category_categoryFn'])['identity']))($v_2);
+  $__res = (((($dictProfunctor_0)['dimap'])($f_1))($GLOBALS['Data_Profunctor_identity']))($v_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

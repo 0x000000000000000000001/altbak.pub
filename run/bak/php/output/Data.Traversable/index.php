@@ -175,6 +175,15 @@ return $exports;
 $GLOBALS['Data_Traversable_traverseArrayImpl'] = $ffi_Data_Traversable['traverseArrayImpl'] ?? new class { public function __invoke(...$args) { return $this; } };
 
 
+// Data_Traversable_identity
+$GLOBALS['Data_Traversable_identity'] = function($x_0 = null) {
+  $__num = \func_num_args();
+  $__res = $x_0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+
 // Data_Traversable_traverse
 $GLOBALS['Data_Traversable_traverse'] = function($dict_0 = null) {
   $__num = \func_num_args();
@@ -586,6 +595,9 @@ $GLOBALS['Data_Traversable_traversableConj'] = ["traverse" => (function() {
 // Data_Traversable_traversableCompose
 $GLOBALS['Data_Traversable_traversableCompose'] = function($dictTraversable_0 = null) {
   $__num = \func_num_args();
+  $__tco_var_Data_Traversable_traversableCompose_dictTraversable_0 = $dictTraversable_0;
+  tco_loop_Data_Traversable_traversableCompose:;
+  $dictTraversable_0 = $__tco_var_Data_Traversable_traversableCompose_dictTraversable_0;
   $__local_var_1_0 = (($dictTraversable_0)['Functor0'])(null);
   $__local_var_2_1 = (($dictTraversable_0)['Foldable1'])(null);
   $__res = function($dictTraversable1_3 = null) use ($__local_var_1_0, $__local_var_2_1, $dictTraversable_0) {
@@ -685,7 +697,7 @@ $GLOBALS['Data_Traversable_traversableCompose'] = function($dictTraversable_0 = 
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "sequence" => function($dictApplicative_8 = null) use ($dictTraversable1_3, $dictTraversable_0) {
   $__num = \func_num_args();
-  $__res = ((((($GLOBALS['Data_Traversable_traversableCompose'])($dictTraversable_0))($dictTraversable1_3))['traverse'])($dictApplicative_8))(($GLOBALS['Control_Category_categoryFn'])['identity']);
+  $__res = ((((($GLOBALS['Data_Traversable_traversableCompose'])($dictTraversable_0))($dictTraversable1_3))['traverse'])($dictApplicative_8))($GLOBALS['Data_Traversable_identity']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -757,7 +769,7 @@ $GLOBALS['Data_Traversable_sequenceDefault'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictTraversable_0)['traverse'])($dictApplicative_1))(($GLOBALS['Control_Category_categoryFn'])['identity']);
+  $__res = ((($dictTraversable_0)['traverse'])($dictApplicative_1))($GLOBALS['Data_Traversable_identity']);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -775,7 +787,7 @@ $GLOBALS['Data_Traversable_traversableArray'] = ["traverse" => function($dictApp
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "sequence" => function($dictApplicative_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Traversable_traversableArray'])['traverse'])($dictApplicative_0))(($GLOBALS['Control_Category_categoryFn'])['identity']);
+  $__res = ((($GLOBALS['Data_Traversable_traversableArray'])['traverse'])($dictApplicative_0))($GLOBALS['Data_Traversable_identity']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -904,8 +916,8 @@ $GLOBALS['Data_Traversable_traversableCoproduct'] = function($dictTraversable_0 
   $traverse5_9_6 = (($dictTraversable1_3)['traverse'])($dictApplicative_6);
   $__res = function($f_10 = null) use ($__local_var_7_4, $traverse4_8_5, $traverse5_9_6) {
   $__num = \func_num_args();
-  $__local_var_11_7 = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($__local_var_7_4)['map'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Functor_Coproduct_Coproduct']))($GLOBALS['Data_Either_Left']))))(($traverse4_8_5)($f_10));
-  $__local_var_12_8 = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($__local_var_7_4)['map'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Functor_Coproduct_Coproduct']))($GLOBALS['Data_Either_Right']))))(($traverse5_9_6)($f_10));
+  $__local_var_11_7 = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($__local_var_7_4)['map'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Functor_Coproduct_Coproduct']))($GLOBALS['Data_Either_Left']))))(($traverse4_8_5)($f_10));
+  $__local_var_12_8 = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($__local_var_7_4)['map'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Functor_Coproduct_Coproduct']))($GLOBALS['Data_Either_Right']))))(($traverse5_9_6)($f_10));
   $__res = function($v2_13 = null) use ($__local_var_11_7, $__local_var_12_8) {
   $__num = \func_num_args();
   $__t9 = null;;
@@ -935,8 +947,8 @@ goto end_branch_9;;
 }, "sequence" => function($dictApplicative_6 = null) use ($dictTraversable1_3, $dictTraversable_0) {
   $__num = \func_num_args();
   $__local_var_7_10 = (((($dictApplicative_6)['Apply0'])(null))['Functor0'])(null);
-  $__local_var_8_11 = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($__local_var_7_10)['map'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Functor_Coproduct_Coproduct']))($GLOBALS['Data_Either_Left']))))((($dictTraversable_0)['sequence'])($dictApplicative_6));
-  $__local_var_9_12 = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($__local_var_7_10)['map'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Functor_Coproduct_Coproduct']))($GLOBALS['Data_Either_Right']))))((($dictTraversable1_3)['sequence'])($dictApplicative_6));
+  $__local_var_8_11 = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($__local_var_7_10)['map'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Functor_Coproduct_Coproduct']))($GLOBALS['Data_Either_Left']))))((($dictTraversable_0)['sequence'])($dictApplicative_6));
+  $__local_var_9_12 = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($__local_var_7_10)['map'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Functor_Coproduct_Coproduct']))($GLOBALS['Data_Either_Right']))))((($dictTraversable1_3)['sequence'])($dictApplicative_6));
   $__res = function($v2_10 = null) use ($__local_var_8_11, $__local_var_9_12) {
   $__num = \func_num_args();
   $__t13 = null;;

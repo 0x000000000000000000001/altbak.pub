@@ -133,7 +133,7 @@ $GLOBALS['Data_TraversableWithIndex_traverseWithIndexDefault'] = (function() {
   $sequence1_2_0 = (((($dictTraversableWithIndex_0)['Traversable2'])(null))['sequence'])($dictApplicative_1);
   $__res = function($f_3 = null) use ($dictTraversableWithIndex_0, $sequence1_2_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($sequence1_2_0))((((($dictTraversableWithIndex_0)['FunctorWithIndex0'])(null))['mapWithIndex'])($f_3));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($sequence1_2_0))((((($dictTraversableWithIndex_0)['FunctorWithIndex0'])(null))['mapWithIndex'])($f_3));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -237,7 +237,7 @@ $GLOBALS['Data_TraversableWithIndex_traversableWithIndexProduct'] = function($di
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($__local_var_9_6)['apply'])(((((($__local_var_9_6)['Functor0'])(null))['map'])($GLOBALS['Data_Functor_Product_product']))((($traverseWithIndex3_10_7)(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($f_12))($GLOBALS['Data_Either_Left'])))(($v_13)->{'value0'}))))((($traverseWithIndex4_11_8)(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($f_12))($GLOBALS['Data_Either_Right'])))(($v_13)->{'value1'}));
+  $__res = ((($__local_var_9_6)['apply'])(((((($__local_var_9_6)['Functor0'])(null))['map'])($GLOBALS['Data_Functor_Product_product']))((($traverseWithIndex3_10_7)((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_12))($GLOBALS['Data_Either_Left'])))(($v_13)->{'value0'}))))((($traverseWithIndex4_11_8)((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_12))($GLOBALS['Data_Either_Right'])))(($v_13)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -575,8 +575,8 @@ $GLOBALS['Data_TraversableWithIndex_traversableWithIndexCoproduct'] = function($
   $traverseWithIndex4_11_8 = (($dictTraversableWithIndex1_4)['traverseWithIndex'])($dictApplicative_8);
   $__res = function($f_12 = null) use ($__local_var_9_6, $traverseWithIndex3_10_7, $traverseWithIndex4_11_8) {
   $__num = \func_num_args();
-  $__local_var_13_9 = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($__local_var_9_6)['map'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Functor_Coproduct_Coproduct']))($GLOBALS['Data_Either_Left']))))(($traverseWithIndex3_10_7)(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($f_12))($GLOBALS['Data_Either_Left'])));
-  $__local_var_14_10 = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($__local_var_9_6)['map'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Functor_Coproduct_Coproduct']))($GLOBALS['Data_Either_Right']))))(($traverseWithIndex4_11_8)(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($f_12))($GLOBALS['Data_Either_Right'])));
+  $__local_var_13_9 = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($__local_var_9_6)['map'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Functor_Coproduct_Coproduct']))($GLOBALS['Data_Either_Left']))))(($traverseWithIndex3_10_7)((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_12))($GLOBALS['Data_Either_Left'])));
+  $__local_var_14_10 = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($__local_var_9_6)['map'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Functor_Coproduct_Coproduct']))($GLOBALS['Data_Either_Right']))))(($traverseWithIndex4_11_8)((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_12))($GLOBALS['Data_Either_Right'])));
   $__res = function($v2_15 = null) use ($__local_var_13_9, $__local_var_14_10) {
   $__num = \func_num_args();
   $__t11 = null;;
@@ -719,7 +719,7 @@ $GLOBALS['Data_TraversableWithIndex_traversableWithIndexCompose'] = function($di
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((((($dictApplicative_8)['Apply0'])(null))['Functor0'])(null))['map'])($GLOBALS['Data_Functor_Compose_Compose']))((($traverseWithIndex3_9_6)(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($traverseWithIndex4_10_7))((function() use ($f_11) {
+  $__res = ((((((($dictApplicative_8)['Apply0'])(null))['Functor0'])(null))['map'])($GLOBALS['Data_Functor_Compose_Compose']))((($traverseWithIndex3_9_6)((($GLOBALS['Control_Semigroupoid_composeImpl'])($traverseWithIndex4_10_7))((function() use ($f_11) {
   $__fn = function($a_13 = null, $b_14 = null) use ($f_11, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {

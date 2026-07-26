@@ -506,7 +506,7 @@ $GLOBALS['Data_Functor_Compose_applicativeCompose'] = function($dictApplicative_
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = ["pure" => ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Functor_Compose_Compose']))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($pure_1_0))(($dictApplicative1_4)['pure'])), "Apply0" => function($_dollar__unused_8 = null) use ($applyCompose2_7_5) {
+  $__res = ["pure" => (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Functor_Compose_Compose']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($pure_1_0))(($dictApplicative1_4)['pure'])), "Apply0" => function($_dollar__unused_8 = null) use ($applyCompose2_7_5) {
   $__num = \func_num_args();
   $__res = $applyCompose2_7_5;
   goto __end;;

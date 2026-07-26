@@ -145,8 +145,62 @@ $GLOBALS['Data_Enum_fromCharCode'] = $ffi_Data_Enum['fromCharCode'] ?? new class
 $GLOBALS['Data_Enum_toCharCode'] = $ffi_Data_Enum['toCharCode'] ?? new class { public function __invoke(...$args) { return $this; } };
 
 
+// Data_Enum_lessThan
+$GLOBALS['Data_Enum_lessThan'] = (function() use (&$__fn) {
+$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT"));
+return (function() use ($__local_var_0_0) {
+  $__fn = function($a1_1 = null, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = (is_object((($__local_var_0_0)($a1_1))($a2_2)) && (((($__local_var_0_0)($a1_1))($a2_2))->{'tag'} === "LT"));
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
+})();
+
+// Data_Enum_greaterThan
+$GLOBALS['Data_Enum_greaterThan'] = (function() use (&$__fn) {
+$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT"));
+return (function() use ($__local_var_0_0) {
+  $__fn = function($a1_1 = null, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = (is_object((($__local_var_0_0)($a1_1))($a2_2)) && (((($__local_var_0_0)($a1_1))($a2_2))->{'tag'} === "GT"));
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
+})();
+
 // Data_Enum_guard
 $GLOBALS['Data_Enum_guard'] = ($GLOBALS['Control_Alternative_guard'])($GLOBALS['Data_Maybe_alternativeMaybe']);
+
+// Data_Enum_lessThanOrEq
+$GLOBALS['Data_Enum_lessThanOrEq'] = (function() use (&$__fn) {
+$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT"));
+return (function() use ($__local_var_0_0) {
+  $__fn = function($a1_1 = null, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ( ! (is_object((($__local_var_0_0)($a1_1))($a2_2)) && (((($__local_var_0_0)($a1_1))($a2_2))->{'tag'} === "GT")));
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
+})();
 
 // Data_Enum_fromJust
 $GLOBALS['Data_Enum_fromJust'] = function($v_0 = null) {
@@ -164,6 +218,24 @@ goto end_branch_0;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
+
+// Data_Enum_greaterThanOrEq
+$GLOBALS['Data_Enum_greaterThanOrEq'] = (function() use (&$__fn) {
+$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT"));
+return (function() use ($__local_var_0_0) {
+  $__fn = function($a1_1 = null, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ( ! (is_object((($__local_var_0_0)($a1_1))($a2_2)) && (((($__local_var_0_0)($a1_1))($a2_2))->{'tag'} === "LT")));
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
+})();
 
 // Data_Enum_Cardinality
 $GLOBALS['Data_Enum_Cardinality'] = function($x_0 = null) {
@@ -193,20 +265,25 @@ $GLOBALS['Data_Enum_succ'] = function($dict_0 = null) {
 };
 
 // Data_Enum_upFromIncluding
-$GLOBALS['Data_Enum_upFromIncluding'] = function($dictEnum_0 = null) {
+$GLOBALS['Data_Enum_upFromIncluding'] = (function() {
+  $__fn = function($dictEnum_0 = null, $dictUnfoldable1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
-  $succ1_1_0 = ($dictEnum_0)['succ'];
-  $__res = function($dictUnfoldable1_2 = null) use ($succ1_1_0) {
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = (($dictUnfoldable1_1)['unfoldr1'])(function($x_2 = null) use ($dictEnum_0) {
   $__num = \func_num_args();
-  $__res = (($dictUnfoldable1_2)['unfoldr1'])(((($GLOBALS['Control_Apply_applyFn'])['apply'])($GLOBALS['Data_Tuple_Tuple']))($succ1_1_0));
+  $__res = new Phpurs_Data2("Tuple", $x_2, (($dictEnum_0)['succ'])($x_2));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+});
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
 
 // Data_Enum_showCardinality
 $GLOBALS['Data_Enum_showCardinality'] = ["show" => function($v_0 = null) {
@@ -227,7 +304,13 @@ $GLOBALS['Data_Enum_pred'] = function($dict_0 = null) {
 };
 
 // Data_Enum_ordCardinality
-$GLOBALS['Data_Enum_ordCardinality'] = $GLOBALS['Data_Ord_ordInt'];
+$GLOBALS['Data_Enum_ordCardinality'] = ["compare" => ((($GLOBALS['Data_Ord_ordIntImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT")), "Eq0" => function($_dollar__unused_0 = null) {
+  $__num = \func_num_args();
+  $__res = ["eq" => $GLOBALS['Data_Eq_eqIntImpl']];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_Enum_newtypeCardinality
 $GLOBALS['Data_Enum_newtypeCardinality'] = ["Coercible0" => function($_dollar__unused_0 = null) {
@@ -265,7 +348,7 @@ goto end_branch_2;;
 };
   if ((is_object($v_5_1) && (($v_5_1)->{'tag'} === "Nothing"))) {
 $__t3 = null;;
-if (($x_4 < (($dictBoundedEnum_0)['fromEnum'])($bottom2_1_0))) {
+if ((($GLOBALS['Data_Enum_lessThan'])($x_4))((($dictBoundedEnum_0)['fromEnum'])($bottom2_1_0))) {
 $__t3 = $low_2;
 goto end_branch_3;;
 };
@@ -290,7 +373,7 @@ goto end_branch_2;;
 };
 
 // Data_Enum_eqCardinality
-$GLOBALS['Data_Enum_eqCardinality'] = $GLOBALS['Data_Eq_eqInt'];
+$GLOBALS['Data_Enum_eqCardinality'] = ["eq" => $GLOBALS['Data_Eq_eqIntImpl']];
 
 // Data_Enum_enumUnit
 $GLOBALS['Data_Enum_enumUnit'] = ["succ" => function($v_0 = null) {
@@ -333,7 +416,7 @@ $GLOBALS['Data_Enum_enumTuple'] = function($dictEnum_0 = null) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }))((($dictEnum_0)['succ'])(($v_8)->{'value0'}));
-  $__local_var_10_7 = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Maybe_Just']))(($GLOBALS['Data_Tuple_Tuple'])(($v_8)->{'value0'}));
+  $__local_var_10_7 = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Maybe_Just']))(($GLOBALS['Data_Tuple_Tuple'])(($v_8)->{'value0'}));
   $__local_var_11_8 = (($Enum1_5_3)['succ'])(($v_8)->{'value1'});
   $__t9 = null;;
   if ((is_object($__local_var_11_8) && (($__local_var_11_8)->{'tag'} === "Nothing"))) {
@@ -360,7 +443,7 @@ goto end_branch_9;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }))((($dictEnum_0)['pred'])(($v_8)->{'value0'}));
-  $__local_var_10_11 = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Maybe_Just']))(($GLOBALS['Data_Tuple_Tuple'])(($v_8)->{'value0'}));
+  $__local_var_10_11 = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Maybe_Just']))(($GLOBALS['Data_Tuple_Tuple'])(($v_8)->{'value0'}));
   $__local_var_11_12 = (($Enum1_5_3)['pred'])(($v_8)->{'value1'});
   $__t13 = null;;
   if ((is_object($__local_var_11_12) && (($__local_var_11_12)->{'tag'} === "Nothing"))) {
@@ -568,8 +651,8 @@ goto end_branch_10;;
 $GLOBALS['Data_Enum_enumInt'] = ["succ" => function($n_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
-  if (($n_0 < ($GLOBALS['Data_Bounded_boundedInt'])['top'])) {
-$__t0 = new Phpurs_Data1("Just", ((($GLOBALS['Data_Semiring_semiringInt'])['add'])($n_0))(1));
+  if ((($GLOBALS['Data_Enum_lessThan'])($n_0))(($GLOBALS['Data_Bounded_boundedInt'])['top'])) {
+$__t0 = new Phpurs_Data1("Just", ($n_0 + 1));
 goto end_branch_0;;
 };
   $__t0 = new Phpurs_Data0("Nothing");
@@ -581,8 +664,8 @@ goto end_branch_0;;
 }, "pred" => function($n_0 = null) {
   $__num = \func_num_args();
   $__t1 = null;;
-  if (($n_0 > ($GLOBALS['Data_Bounded_boundedInt'])['bottom'])) {
-$__t1 = new Phpurs_Data1("Just", ((($GLOBALS['Data_Ring_ringInt'])['sub'])($n_0))(1));
+  if ((($GLOBALS['Data_Enum_greaterThan'])($n_0))(($GLOBALS['Data_Bounded_boundedInt'])['bottom'])) {
+$__t1 = new Phpurs_Data1("Just", ($n_0 - 1));
 goto end_branch_1;;
 };
   $__t1 = new Phpurs_Data0("Nothing");
@@ -593,7 +676,13 @@ goto end_branch_1;;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Ord0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = $GLOBALS['Data_Ord_ordInt'];
+  $__res = ["compare" => ((($GLOBALS['Data_Ord_ordIntImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT")), "Eq0" => function($_dollar__unused_1 = null) {
+  $__num = \func_num_args();
+  $__res = ["eq" => $GLOBALS['Data_Eq_eqIntImpl']];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -683,13 +772,13 @@ $GLOBALS['Data_Enum_enumFromThenTo'] = (function() {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   $a_prime_7_1 = (($dictBoundedEnum_2)['fromEnum'])($a_4);
-  $__local_var_8_2 = ((($GLOBALS['Data_Ring_ringInt'])['sub'])((($dictBoundedEnum_2)['fromEnum'])($b_5)))($a_prime_7_1);
+  $__local_var_8_2 = ((($dictBoundedEnum_2)['fromEnum'])($b_5) - $a_prime_7_1);
   $__local_var_9_3 = (($dictBoundedEnum_2)['fromEnum'])($c_6);
-  $__res = ((($dictFunctor_1)['map'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Enum_fromJust']))($toEnum1_3_0)))(((($dictUnfoldable_0)['unfoldr'])(function($e_10 = null) use ($__local_var_8_2, $__local_var_9_3) {
+  $__res = ((($dictFunctor_1)['map'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Enum_fromJust']))($toEnum1_3_0)))(((($dictUnfoldable_0)['unfoldr'])(function($e_10 = null) use ($__local_var_8_2, $__local_var_9_3) {
   $__num = \func_num_args();
   $__t4 = null;;
-  if (($e_10 <= $__local_var_9_3)) {
-$__t4 = new Phpurs_Data1("Just", new Phpurs_Data2("Tuple", $e_10, ((($GLOBALS['Data_Semiring_semiringInt'])['add'])($e_10))($__local_var_8_2)));
+  if ((($GLOBALS['Data_Enum_lessThanOrEq'])($e_10))($__local_var_9_3)) {
+$__t4 = new Phpurs_Data1("Just", new Phpurs_Data2("Tuple", $e_10, ($e_10 + $__local_var_8_2)));
 goto end_branch_4;;
 };
   $__t4 = new Phpurs_Data0("Nothing");
@@ -727,7 +816,7 @@ $GLOBALS['Data_Enum_enumEither'] = function($dictBoundedEnum_0 = null) {
   $__num = \func_num_args();
   $__t6 = null;;
   if ((is_object($v_8) && (($v_8)->{'tag'} === "Left"))) {
-$__local_var_9_7 = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Maybe_Just']))($GLOBALS['Data_Either_Left']);
+$__local_var_9_7 = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Maybe_Just']))($GLOBALS['Data_Either_Left']);
 $__local_var_10_8 = (($Enum1_1_0)['succ'])(($v_8)->{'value0'});
 $__t9 = null;;
 if ((is_object($__local_var_10_8) && (($__local_var_10_8)->{'tag'} === "Nothing"))) {
@@ -745,7 +834,7 @@ $__t6 = $__t9;
 goto end_branch_6;;
 };
   if ((is_object($v_8) && (($v_8)->{'tag'} === "Right"))) {
-$__local_var_9_10 = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Maybe_Just']))($GLOBALS['Data_Either_Right']);
+$__local_var_9_10 = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Maybe_Just']))($GLOBALS['Data_Either_Right']);
 $__local_var_10_11 = (($Enum11_6_4)['succ'])(($v_8)->{'value0'});
 $__t12 = null;;
 if ((is_object($__local_var_10_11) && (($__local_var_10_11)->{'tag'} === "Nothing"))) {
@@ -773,7 +862,7 @@ goto end_branch_6;;
   $__num = \func_num_args();
   $__t13 = null;;
   if ((is_object($v_8) && (($v_8)->{'tag'} === "Left"))) {
-$__local_var_9_14 = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Maybe_Just']))($GLOBALS['Data_Either_Left']);
+$__local_var_9_14 = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Maybe_Just']))($GLOBALS['Data_Either_Left']);
 $__local_var_10_15 = (($Enum1_1_0)['pred'])(($v_8)->{'value0'});
 $__t16 = null;;
 if ((is_object($__local_var_10_15) && (($__local_var_10_15)->{'tag'} === "Nothing"))) {
@@ -791,7 +880,7 @@ $__t13 = $__t16;
 goto end_branch_13;;
 };
   if ((is_object($v_8) && (($v_8)->{'tag'} === "Right"))) {
-$__local_var_9_17 = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Maybe_Just']))($GLOBALS['Data_Either_Right']);
+$__local_var_9_17 = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Maybe_Just']))($GLOBALS['Data_Either_Right']);
 $__local_var_10_18 = (($Enum11_6_4)['pred'])(($v_8)->{'value0'});
 $__t19 = null;;
 if ((is_object($__local_var_10_18) && (($__local_var_10_18)->{'tag'} === "Nothing"))) {
@@ -867,20 +956,25 @@ goto end_branch_1;;
 }];
 
 // Data_Enum_downFromIncluding
-$GLOBALS['Data_Enum_downFromIncluding'] = function($dictEnum_0 = null) {
+$GLOBALS['Data_Enum_downFromIncluding'] = (function() {
+  $__fn = function($dictEnum_0 = null, $dictUnfoldable1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
-  $pred1_1_0 = ($dictEnum_0)['pred'];
-  $__res = function($dictUnfoldable1_2 = null) use ($pred1_1_0) {
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = (($dictUnfoldable1_1)['unfoldr1'])(function($x_2 = null) use ($dictEnum_0) {
   $__num = \func_num_args();
-  $__res = (($dictUnfoldable1_2)['unfoldr1'])(((($GLOBALS['Control_Apply_applyFn'])['apply'])($GLOBALS['Data_Tuple_Tuple']))($pred1_1_0));
+  $__res = new Phpurs_Data2("Tuple", $x_2, (($dictEnum_0)['pred'])($x_2));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+});
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
 
 // Data_Enum_diag
 $GLOBALS['Data_Enum_diag'] = function($a_0 = null) {
@@ -897,7 +991,7 @@ $GLOBALS['Data_Enum_downFrom'] = function($dictEnum_0 = null) {
   $pred1_1_0 = ($dictEnum_0)['pred'];
   $__res = function($dictUnfoldable_2 = null) use ($pred1_1_0) {
   $__num = \func_num_args();
-  $__res = (($dictUnfoldable_2)['unfoldr'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($GLOBALS['Data_Maybe_functorMaybe'])['map'])($GLOBALS['Data_Enum_diag'])))($pred1_1_0));
+  $__res = (($dictUnfoldable_2)['unfoldr'])((($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Maybe_functorMaybe'])['map'])($GLOBALS['Data_Enum_diag'])))($pred1_1_0));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -913,7 +1007,7 @@ $GLOBALS['Data_Enum_upFrom'] = function($dictEnum_0 = null) {
   $succ1_1_0 = ($dictEnum_0)['succ'];
   $__res = function($dictUnfoldable_2 = null) use ($succ1_1_0) {
   $__num = \func_num_args();
-  $__res = (($dictUnfoldable_2)['unfoldr'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($GLOBALS['Data_Maybe_functorMaybe'])['map'])($GLOBALS['Data_Enum_diag'])))($succ1_1_0));
+  $__res = (($dictUnfoldable_2)['unfoldr'])((($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Maybe_functorMaybe'])['map'])($GLOBALS['Data_Enum_diag'])))($succ1_1_0));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -946,14 +1040,19 @@ $GLOBALS['Data_Enum_defaultToEnum'] = function($dictBounded_0 = null) {
   $i_5 = $__tco_var_go__4_1_1_i_5;
   $x_6 = $__tco_var_go__4_1_1_x_6;
   $__t5 = null;;
-  if (((($GLOBALS['Data_Eq_eqInt'])['eq'])($i_5))(0)) {
+  switch ($i_5) {
+case 0:
 $__t5 = new Phpurs_Data1("Just", $x_6);
 goto end_branch_5;;
+break;
+default:
+;
+break;
 };
   $v_7_1 = (($dictEnum_2)['succ'])($x_6);
   $__t2 = null;;
   if ((is_object($v_7_1) && (($v_7_1)->{'tag'} === "Just"))) {
-$__tco_3 = ((($GLOBALS['Data_Ring_ringInt'])['sub'])($i_5))(1);
+$__tco_3 = ($i_5 - 1);
 $__tco_4 = ($v_7_1)->{'value0'};
 $__tco_var_go__4_1_1_i_5 = $__tco_3;
 $__tco_var_go__4_1_1_x_6 = $__tco_4;
@@ -978,7 +1077,7 @@ goto end_branch_2;;
   return $__fn;
 })();
   $__t2 = null;;
-  if (($i_prime_3 < 0)) {
+  if ((($GLOBALS['Data_Enum_lessThan'])($i_prime_3))(0)) {
 $__t2 = new Phpurs_Data0("Nothing");
 goto end_branch_2;;
 };
@@ -1003,7 +1102,7 @@ $GLOBALS['Data_Enum_defaultSucc'] = (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ($toEnum_prime_0)(((($GLOBALS['Data_Semiring_semiringInt'])['add'])(($fromEnum_prime_1)($a_2)))(1));
+  $__res = ($toEnum_prime_0)((($fromEnum_prime_1)($a_2) + 1));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -1018,7 +1117,7 @@ $GLOBALS['Data_Enum_defaultPred'] = (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ($toEnum_prime_0)(((($GLOBALS['Data_Ring_ringInt'])['sub'])(($fromEnum_prime_1)($a_2)))(1));
+  $__res = ($toEnum_prime_0)((($fromEnum_prime_1)($a_2) - 1));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -1044,7 +1143,7 @@ $GLOBALS['Data_Enum_defaultFromEnum'] = function($dictEnum_0 = null) {
   $v_4_0 = (($dictEnum_0)['pred'])($x_3);
   $__t1 = null;;
   if ((is_object($v_4_0) && (($v_4_0)->{'tag'} === "Just"))) {
-$__tco_2 = ((($GLOBALS['Data_Semiring_semiringInt'])['add'])($i_2))(1);
+$__tco_2 = ($i_2 + 1);
 $__tco_3 = ($v_4_0)->{'value0'};
 $__tco_var_go__1_0_0_i_2 = $__tco_2;
 $__tco_var_go__1_0_0_x_3 = $__tco_3;
@@ -1093,7 +1192,7 @@ $GLOBALS['Data_Enum_defaultCardinality'] = function($dictBounded_0 = null) {
   $v_6_1 = (($dictEnum_2)['succ'])($x_5);
   $__t2 = null;;
   if ((is_object($v_6_1) && (($v_6_1)->{'tag'} === "Just"))) {
-$__tco_3 = ((($GLOBALS['Data_Semiring_semiringInt'])['add'])($i_4))(1);
+$__tco_3 = ($i_4 + 1);
 $__tco_4 = ($v_6_1)->{'value0'};
 $__tco_var_go__3_1_1_i_4 = $__tco_3;
 $__tco_var_go__3_1_1_x_5 = $__tco_4;
@@ -1129,7 +1228,7 @@ goto end_branch_2;;
 $GLOBALS['Data_Enum_charToEnum'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
-  if (((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(($v_0 >= ($GLOBALS['Data_Enum_toCharCode'])(($GLOBALS['Data_Bounded_boundedChar'])['bottom']))))(($v_0 <= ($GLOBALS['Data_Enum_toCharCode'])(($GLOBALS['Data_Bounded_boundedChar'])['top'])))) {
+  if (((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])((($GLOBALS['Data_Enum_greaterThanOrEq'])($v_0))(($GLOBALS['Data_Enum_toCharCode'])(($GLOBALS['Data_Bounded_boundedChar'])['bottom']))))((($GLOBALS['Data_Enum_lessThanOrEq'])($v_0))(($GLOBALS['Data_Enum_toCharCode'])(($GLOBALS['Data_Bounded_boundedChar'])['top'])))) {
 $__t0 = new Phpurs_Data1("Just", ($GLOBALS['Data_Enum_fromCharCode'])($v_0));
 goto end_branch_0;;
 };
@@ -1142,7 +1241,19 @@ goto end_branch_0;;
 };
 
 // Data_Enum_enumChar
-$GLOBALS['Data_Enum_enumChar'] = ["succ" => (($GLOBALS['Data_Enum_defaultSucc'])($GLOBALS['Data_Enum_charToEnum']))($GLOBALS['Data_Enum_toCharCode']), "pred" => (($GLOBALS['Data_Enum_defaultPred'])($GLOBALS['Data_Enum_charToEnum']))($GLOBALS['Data_Enum_toCharCode']), "Ord0" => function($_dollar__unused_0 = null) {
+$GLOBALS['Data_Enum_enumChar'] = ["succ" => function($a_0 = null) {
+  $__num = \func_num_args();
+  $__res = ($GLOBALS['Data_Enum_charToEnum'])((($GLOBALS['Data_Enum_toCharCode'])($a_0) + 1));
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "pred" => function($a_0 = null) {
+  $__num = \func_num_args();
+  $__res = ($GLOBALS['Data_Enum_charToEnum'])((($GLOBALS['Data_Enum_toCharCode'])($a_0) - 1));
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Ord0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Ord_ordChar'];
   goto __end;;
@@ -1230,7 +1341,7 @@ goto end_branch_1;;
 }];
 
 // Data_Enum_boundedEnumChar
-$GLOBALS['Data_Enum_boundedEnumChar'] = ["cardinality" => ((($GLOBALS['Data_Ring_ringInt'])['sub'])(($GLOBALS['Data_Enum_toCharCode'])(($GLOBALS['Data_Bounded_boundedChar'])['top'])))(($GLOBALS['Data_Enum_toCharCode'])(($GLOBALS['Data_Bounded_boundedChar'])['bottom'])), "toEnum" => $GLOBALS['Data_Enum_charToEnum'], "fromEnum" => $GLOBALS['Data_Enum_toCharCode'], "Bounded0" => function($_dollar__unused_0 = null) {
+$GLOBALS['Data_Enum_boundedEnumChar'] = ["cardinality" => (($GLOBALS['Data_Enum_toCharCode'])(($GLOBALS['Data_Bounded_boundedChar'])['top']) - ($GLOBALS['Data_Enum_toCharCode'])(($GLOBALS['Data_Bounded_boundedChar'])['bottom'])), "toEnum" => $GLOBALS['Data_Enum_charToEnum'], "fromEnum" => $GLOBALS['Data_Enum_toCharCode'], "Bounded0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Bounded_boundedChar'];
   goto __end;;

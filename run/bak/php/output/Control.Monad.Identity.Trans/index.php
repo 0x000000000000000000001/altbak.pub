@@ -336,7 +336,7 @@ $GLOBALS['Control_Monad_Identity_Trans_extendIdentityI'] = function($dictExtend_
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictExtend_0)['extend'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($f_2))($GLOBALS['Control_Monad_Identity_Trans_IdentityT'])))($v_3);
+  $__res = ((($dictExtend_0)['extend'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_2))($GLOBALS['Control_Monad_Identity_Trans_IdentityT'])))($v_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -513,7 +513,7 @@ $GLOBALS['Control_Monad_Identity_Trans_ord1IdentityT'] = function($dictOrd1_0 = 
 $GLOBALS['Control_Monad_Identity_Trans_comonadIdentityT'] = function($dictComonad_0 = null) {
   $__num = \func_num_args();
   $extendIdentityI1_1_0 = ($GLOBALS['Control_Monad_Identity_Trans_extendIdentityI'])((($dictComonad_0)['Extend0'])(null));
-  $__res = ["extract" => ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(($dictComonad_0)['extract']))($GLOBALS['Control_Monad_Identity_Trans_runIdentityT']), "Extend0" => function($_dollar__unused_2 = null) use ($extendIdentityI1_1_0) {
+  $__res = ["extract" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictComonad_0)['extract']))($GLOBALS['Control_Monad_Identity_Trans_runIdentityT']), "Extend0" => function($_dollar__unused_2 = null) use ($extendIdentityI1_1_0) {
   $__num = \func_num_args();
   $__res = $extendIdentityI1_1_0;
   goto __end;;

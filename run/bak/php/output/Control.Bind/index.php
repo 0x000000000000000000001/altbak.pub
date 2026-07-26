@@ -120,6 +120,15 @@ return $exports;
 $GLOBALS['Control_Bind_arrayBind'] = $ffi_Control_Bind['arrayBind'] ?? new class { public function __invoke(...$args) { return $this; } };
 
 
+// Control_Bind_identity
+$GLOBALS['Control_Bind_identity'] = function($x_0 = null) {
+  $__num = \func_num_args();
+  $__res = $x_0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+
 // Control_Bind_discard
 $GLOBALS['Control_Bind_discard'] = function($dict_0 = null) {
   $__num = \func_num_args();
@@ -287,7 +296,7 @@ $GLOBALS['Control_Bind_join'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictBind_0)['bind'])($m_1))(($GLOBALS['Control_Category_categoryFn'])['identity']);
+  $__res = ((($dictBind_0)['bind'])($m_1))($GLOBALS['Control_Bind_identity']);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

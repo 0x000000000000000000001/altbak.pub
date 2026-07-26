@@ -469,7 +469,7 @@ $GLOBALS['Data_Functor_Joker_bindJoker'] = function($dictBind_0 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictBind_0)['bind'])($v_4))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Unsafe_Coerce_unsafeCoerce']))($amb_5));
+  $__res = ((($dictBind_0)['bind'])($v_4))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce']))($amb_5));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -524,7 +524,7 @@ $GLOBALS['Data_Functor_Joker_applicativeJoker'] = function($dictApplicative_0 = 
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = ["pure" => ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Functor_Joker_Joker']))(($dictApplicative_0)['pure']), "Apply0" => function($_dollar__unused_4 = null) use ($applyJoker1_3_2) {
+  $__res = ["pure" => (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Functor_Joker_Joker']))(($dictApplicative_0)['pure']), "Apply0" => function($_dollar__unused_4 = null) use ($applyJoker1_3_2) {
   $__num = \func_num_args();
   $__res = $applyJoker1_3_2;
   goto __end;;

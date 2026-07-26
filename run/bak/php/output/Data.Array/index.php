@@ -522,16 +522,40 @@ $GLOBALS['Data_Array_zipWithImpl'] = $ffi_Data_Array['zipWithImpl'] ?? new class
 // Data_Array_traverse_
 $GLOBALS['Data_Array_traverse_'] = ($GLOBALS['Data_Foldable_traverse_'])($GLOBALS['Control_Monad_ST_Internal_applicativeST']);
 
-// Data_Array_negate
-$GLOBALS['Data_Array_negate'] = (function() use (&$__fn) {
-$zero_0_0 = ((($GLOBALS['Data_Ring_ringInt'])['Semiring0'])(null))['zero'];
-return function($a_1 = null) use ($zero_0_0) {
+// Data_Array_lessThan
+$GLOBALS['Data_Array_lessThan'] = (function() use (&$__fn) {
+$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT"));
+return (function() use ($__local_var_0_0) {
+  $__fn = function($a1_1 = null, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Ring_ringInt'])['sub'])($zero_0_0))($a_1);
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = (is_object((($__local_var_0_0)($a1_1))($a2_2)) && (((($__local_var_0_0)($a1_1))($a2_2))->{'tag'} === "LT"));
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
+})();
+
+// Data_Array_lessThanOrEq
+$GLOBALS['Data_Array_lessThanOrEq'] = (function() use (&$__fn) {
+$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT"));
+return (function() use ($__local_var_0_0) {
+  $__fn = function($a1_1 = null, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ( ! (is_object((($__local_var_0_0)($a1_1))($a2_2)) && (((($__local_var_0_0)($a1_1))($a2_2))->{'tag'} === "GT")));
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
 })();
 
 // Data_Array_discard
@@ -605,6 +629,24 @@ goto end_branch_0;;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
 
+// Data_Array_greaterThanOrEq
+$GLOBALS['Data_Array_greaterThanOrEq'] = (function() use (&$__fn) {
+$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT"));
+return (function() use ($__local_var_0_0) {
+  $__fn = function($a1_1 = null, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ( ! (is_object((($__local_var_0_0)($a1_1))($a2_2)) && (((($__local_var_0_0)($a1_1))($a2_2))->{'tag'} === "LT")));
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
+})();
+
 // Data_Array_zipWith
 $GLOBALS['Data_Array_zipWith'] = (function() {
   $__fn = function($__local_var_0 = null, $__local_var_1 = null, $__local_var_2 = null) use (&$__fn) {
@@ -659,7 +701,7 @@ $GLOBALS['Data_Array_updateAtIndices'] = function($dictFoldable_0 = null) {
   $__num = \func_num_args();
   $__res = (($traverse_1_1_0)(function($v_5 = null) use ($res_4) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Array_ST_poke'])(($v_5)->{'value0'}))(($v_5)->{'value1'}))($res_4);
+  $__res = (((($GLOBALS['Control_Monad_ST_Uncurried_runSTFn3'])($GLOBALS['Data_Array_ST_pokeImpl']))(($v_5)->{'value0'}))(($v_5)->{'value1'}))($res_4);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -747,8 +789,8 @@ $GLOBALS['Data_Array_toUnfoldable'] = (function() {
   $__res = ((($dictUnfoldable_0)['unfoldr'])(function($i_3 = null) use ($len_2_0, $xs_1) {
   $__num = \func_num_args();
   $__t1 = null;;
-  if (($i_3 < $len_2_0)) {
-$__t1 = new Phpurs_Data1("Just", new Phpurs_Data2("Tuple", ($xs_1)[0], ((($GLOBALS['Data_Semiring_semiringInt'])['add'])($i_3))(1)));
+  if ((($GLOBALS['Data_Array_lessThan'])($i_3))($len_2_0)) {
+$__t1 = new Phpurs_Data1("Just", new Phpurs_Data2("Tuple", ($xs_1)[0], ($i_3 + 1)));
 goto end_branch_1;;
 };
   $__t1 = new Phpurs_Data0("Nothing");
@@ -811,7 +853,7 @@ $__t0 = 0;
 goto end_branch_0;;
 };
   if ((is_object($v_2) && (($v_2)->{'tag'} === "LT"))) {
-$__t0 = ($GLOBALS['Data_Array_negate'])(1);
+$__t0 = -1;
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -910,7 +952,7 @@ $GLOBALS['Data_Array_splitAt'] = (function() {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__t0 = null;;
-  if (($v_0 <= 0)) {
+  if ((($GLOBALS['Data_Array_lessThanOrEq'])($v_0))(0)) {
 $__t0 = ["before" => [], "after" => $v1_1];
 goto end_branch_0;;
 };
@@ -932,7 +974,7 @@ $GLOBALS['Data_Array_take'] = (function() {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__t0 = null;;
-  if (($n_0 < 1)) {
+  if ((($GLOBALS['Data_Array_lessThan'])($n_0))(1)) {
 $__t0 = [];
 goto end_branch_0;;
 };
@@ -1033,7 +1075,7 @@ $GLOBALS['Data_Array_partition'] = (function() {
 // Data_Array_null
 $GLOBALS['Data_Array_null'] = function($xs_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Eq_eqInt'])['eq'])(count($xs_0)))(0);
+  $__res = (count($xs_0) === 0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1085,19 +1127,19 @@ $GLOBALS['Data_Array_intersperse'] = (function() {
   }
   $v_2_0 = count($arr_1);
   $__t1 = null;;
-  if (($v_2_0 < 2)) {
+  if ((($GLOBALS['Data_Array_lessThan'])($v_2_0))(2)) {
 $__t1 = $arr_1;
 goto end_branch_1;;
 };
   $__t1 = ($GLOBALS['Control_Monad_ST_Internal_run'])(((($GLOBALS['Control_Monad_ST_Internal_bindST'])['bind'])(((($GLOBALS['Control_Monad_ST_Internal_bindST'])['bind'])($GLOBALS['Data_Array_ST_new']))(function($out_3 = null) use ($a_0, $arr_1, $v_2_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bindST'])['bind'])((($GLOBALS['Data_Array_ST_push'])(($arr_1)[0]))($out_3)))(function($_dollar__unused_4 = null) use ($a_0, $arr_1, $out_3, $v_2_0) {
+  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bindST'])['bind'])(((($GLOBALS['Control_Monad_ST_Uncurried_runSTFn2'])($GLOBALS['Data_Array_ST_pushImpl']))(($arr_1)[0]))($out_3)))(function($_dollar__unused_4 = null) use ($a_0, $arr_1, $out_3, $v_2_0) {
   $__num = \func_num_args();
   $__res = (($GLOBALS['Data_Array_discard'])(((($GLOBALS['Control_Monad_ST_Internal_for'])(1))($v_2_0))(function($idx_5 = null) use ($a_0, $arr_1, $out_3) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bindST'])['bind'])((($GLOBALS['Data_Array_ST_push'])($a_0))($out_3)))(function($_dollar__unused_6 = null) use ($arr_1, $idx_5, $out_3) {
+  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bindST'])['bind'])(((($GLOBALS['Control_Monad_ST_Uncurried_runSTFn2'])($GLOBALS['Data_Array_ST_pushImpl']))($a_0))($out_3)))(function($_dollar__unused_6 = null) use ($arr_1, $idx_5, $out_3) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Array_void'])((($GLOBALS['Data_Array_ST_push'])(($arr_1)[0]))($out_3));
+  $__res = ($GLOBALS['Data_Array_void'])(((($GLOBALS['Control_Monad_ST_Uncurried_runSTFn2'])($GLOBALS['Data_Array_ST_pushImpl']))(($arr_1)[0]))($out_3));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1156,14 +1198,7 @@ $GLOBALS['Data_Array_insertAt'] = (function() {
 // Data_Array_init
 $GLOBALS['Data_Array_init'] = function($xs_0 = null) {
   $__num = \func_num_args();
-  $__t0 = null;;
-  if (((($GLOBALS['Data_Eq_eqInt'])['eq'])(count($xs_0)))(0)) {
-$__t0 = new Phpurs_Data0("Nothing");
-goto end_branch_0;;
-};
-  $__t0 = new Phpurs_Data1("Just", ($GLOBALS['Data_Array_sliceImpl'])(($GLOBALS['Data_Semiring_semiringInt'])['zero'], ((($GLOBALS['Data_Ring_ringInt'])['sub'])(count($xs_0)))(($GLOBALS['Data_Semiring_semiringInt'])['one']), $xs_0));
-  end_branch_0:;
-  $__res = $__t0;
+  $__res = match (count($xs_0)) { 0 => new Phpurs_Data0("Nothing"), default => new Phpurs_Data1("Just", ($GLOBALS['Data_Array_sliceImpl'])(0, (count($xs_0) - 1), $xs_0)) };
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1187,7 +1222,7 @@ $GLOBALS['Data_Array_index'] = (function() {
 // Data_Array_last
 $GLOBALS['Data_Array_last'] = function($xs_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Array_indexImpl'])($GLOBALS['Data_Maybe_Just'], new Phpurs_Data0("Nothing"), $xs_0, ((($GLOBALS['Data_Ring_ringInt'])['sub'])(count($xs_0)))(1));
+  $__res = ($GLOBALS['Data_Array_indexImpl'])($GLOBALS['Data_Maybe_Just'], new Phpurs_Data0("Nothing"), $xs_0, (count($xs_0) - 1));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1208,7 +1243,7 @@ $GLOBALS['Data_Array_unsnoc'] = function($xs_0 = null) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))(($GLOBALS['Data_Array_init'])($xs_0))))(($GLOBALS['Data_Array_indexImpl'])($GLOBALS['Data_Maybe_Just'], new Phpurs_Data0("Nothing"), $xs_0, ((($GLOBALS['Data_Ring_ringInt'])['sub'])(count($xs_0)))(1)));
+})()))(match (count($xs_0)) { 0 => new Phpurs_Data0("Nothing"), default => new Phpurs_Data1("Just", ($GLOBALS['Data_Array_sliceImpl'])(0, (count($xs_0) - 1), $xs_0)) })))(($GLOBALS['Data_Array_indexImpl'])($GLOBALS['Data_Maybe_Just'], new Phpurs_Data0("Nothing"), $xs_0, (count($xs_0) - 1)));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1260,7 +1295,7 @@ $GLOBALS['Data_Array_span'] = (function() {
   if ((is_object($v_4_0) && (($v_4_0)->{'tag'} === "Just"))) {
 $__t2 = null;;
 if (($p_0)(($v_4_0)->{'value0'})) {
-$__tco_3 = ((($GLOBALS['Data_Semiring_semiringInt'])['add'])($i_3))(1);
+$__tco_3 = ($i_3 + 1);
 $__tco_var_go__2_0_0_i_3 = $__tco_3;
 goto tco_loop_go__2_0_0;;
 $__t2 = null;
@@ -1337,9 +1372,9 @@ $GLOBALS['Data_Array_unzip'] = function($xs_0 = null) {
   $__res = (($GLOBALS['Data_Array_discard'])((($GLOBALS['Data_Array_ST_Iterator_iterate'])($iter_3))(function($v_4 = null) use ($fsts_1, $snds_2) {
   $__num = \func_num_args();
   $__local_var_5_0 = ($v_4)->{'value1'};
-  $__res = (($GLOBALS['Data_Array_discard'])(($GLOBALS['Data_Array_void'])((($GLOBALS['Data_Array_ST_push'])(($v_4)->{'value0'}))($fsts_1))))(function($_dollar__unused_6 = null) use ($__local_var_5_0, $snds_2) {
+  $__res = (($GLOBALS['Data_Array_discard'])(($GLOBALS['Data_Array_void'])(((($GLOBALS['Control_Monad_ST_Uncurried_runSTFn2'])($GLOBALS['Data_Array_ST_pushImpl']))(($v_4)->{'value0'}))($fsts_1))))(function($_dollar__unused_6 = null) use ($__local_var_5_0, $snds_2) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Array_void'])((($GLOBALS['Data_Array_ST_push'])($__local_var_5_0))($snds_2));
+  $__res = ($GLOBALS['Data_Array_void'])(((($GLOBALS['Control_Monad_ST_Uncurried_runSTFn2'])($GLOBALS['Data_Array_ST_pushImpl']))($__local_var_5_0))($snds_2));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1349,9 +1384,9 @@ $GLOBALS['Data_Array_unzip'] = function($xs_0 = null) {
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 })))(function($_dollar__unused_4 = null) use ($fsts_1, $snds_2) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bindST'])['bind'])(($GLOBALS['Data_Array_ST_unsafeFreeze'])($fsts_1)))(function($fsts_prime_5 = null) use ($snds_2) {
+  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bindST'])['bind'])((($GLOBALS['Control_Monad_ST_Uncurried_runSTFn1'])($GLOBALS['Data_Array_ST_unsafeFreezeImpl']))($fsts_1)))(function($fsts_prime_5 = null) use ($snds_2) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bindST'])['bind'])(($GLOBALS['Data_Array_ST_unsafeFreeze'])($snds_2)))(function($snds_prime_6 = null) use ($fsts_prime_5) {
+  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bindST'])['bind'])((($GLOBALS['Control_Monad_ST_Uncurried_runSTFn1'])($GLOBALS['Data_Array_ST_unsafeFreezeImpl']))($snds_2)))(function($snds_prime_6 = null) use ($fsts_prime_5) {
   $__num = \func_num_args();
   $__res = (($GLOBALS['Control_Monad_ST_Internal_applicativeST'])['pure'])(new Phpurs_Data2("Tuple", $fsts_prime_5, $snds_prime_6));
   goto __end;;
@@ -1419,14 +1454,20 @@ $__t2 = [];
 goto end_branch_2;;
 };
   if ((is_object($v_3_1) && (($v_3_1)->{'tag'} === "Just"))) {
-$__t2 = ((($GLOBALS['Data_Functor_functorArray'])['map'])($GLOBALS['Data_Tuple_snd']))(((($GLOBALS['Data_Array_sortWith'])($GLOBALS['Data_Ord_ordInt']))($GLOBALS['Data_Tuple_fst']))(($GLOBALS['Control_Monad_ST_Internal_run'])(((($GLOBALS['Control_Monad_ST_Internal_bindST'])['bind'])(($GLOBALS['Data_Array_ST_unsafeThaw'])([($v_3_1)->{'value0'}])))(function($result_4 = null) use ($comp_0, $indexedAndSorted_2_0) {
+$__t2 = ((($GLOBALS['Data_Functor_functorArray'])['map'])($GLOBALS['Data_Tuple_snd']))(((($GLOBALS['Data_Array_sortWith'])(["compare" => ((($GLOBALS['Data_Ord_ordIntImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT")), "Eq0" => function($_dollar__unused_4 = null) {
+  $__num = \func_num_args();
+  $__res = ["eq" => $GLOBALS['Data_Eq_eqIntImpl']];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}]))($GLOBALS['Data_Tuple_fst']))(($GLOBALS['Control_Monad_ST_Internal_run'])(((($GLOBALS['Control_Monad_ST_Internal_bindST'])['bind'])((($GLOBALS['Control_Monad_ST_Uncurried_runSTFn1'])($GLOBALS['Data_Array_ST_unsafeThawImpl']))([($v_3_1)->{'value0'}])))(function($result_4 = null) use ($comp_0, $indexedAndSorted_2_0) {
   $__num = \func_num_args();
   $__res = (($GLOBALS['Data_Array_discard'])((($GLOBALS['Control_Monad_ST_Internal_foreach'])($indexedAndSorted_2_0))(function($v1_5 = null) use ($comp_0, $result_4) {
   $__num = \func_num_args();
   $__local_var_6_3 = ($v1_5)->{'value1'};
-  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bindST'])['bind'])(((($GLOBALS['Control_Monad_ST_Internal_functorST'])['map'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Tuple_snd']))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Array_fromJust']))($GLOBALS['Data_Array_last']))))(($GLOBALS['Data_Array_ST_unsafeFreeze'])($result_4))))(function($lst_7 = null) use ($__local_var_6_3, $comp_0, $result_4, $v1_5) {
+  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bindST'])['bind'])(((($GLOBALS['Control_Monad_ST_Internal_functorST'])['map'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Tuple_snd']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_fromJust']))($GLOBALS['Data_Array_last']))))((($GLOBALS['Control_Monad_ST_Uncurried_runSTFn1'])($GLOBALS['Data_Array_ST_unsafeFreezeImpl']))($result_4))))(function($lst_7 = null) use ($__local_var_6_3, $comp_0, $result_4, $v1_5) {
   $__num = \func_num_args();
-  $__local_var_8_4 = ($GLOBALS['Data_Array_void'])((($GLOBALS['Data_Array_ST_push'])($v1_5))($result_4));
+  $__local_var_8_4 = ($GLOBALS['Data_Array_void'])(((($GLOBALS['Control_Monad_ST_Uncurried_runSTFn2'])($GLOBALS['Data_Array_ST_pushImpl']))($v1_5))($result_4));
   $__t5 = null;;
   if (((($GLOBALS['Data_Eq_eqBoolean'])['eq'])(((($GLOBALS['Data_Ordering_eqOrdering'])['eq'])((($comp_0)($lst_7))($__local_var_6_3)))(new Phpurs_Data0("EQ"))))(false)) {
 $__t5 = $__local_var_8_4;
@@ -1444,7 +1485,7 @@ goto end_branch_5;;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 })))(function($_dollar__unused_5 = null) use ($result_4) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Array_ST_unsafeFreeze'])($result_4);
+  $__res = (($GLOBALS['Control_Monad_ST_Uncurried_runSTFn1'])($GLOBALS['Data_Array_ST_unsafeFreezeImpl']))($result_4);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1496,13 +1537,13 @@ $GLOBALS['Data_Array_groupBy'] = (function() {
   $__num = \func_num_args();
   $__res = ($GLOBALS['Data_Array_void'])(((($GLOBALS['Control_Monad_ST_Internal_bindST'])['bind'])($GLOBALS['Data_Array_ST_new']))(function($sub1_5 = null) use ($iter_3, $op_0, $result_2, $x_4) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bindST'])['bind'])((($GLOBALS['Data_Array_ST_push'])($x_4))($sub1_5)))(function($_dollar__unused_6 = null) use ($iter_3, $op_0, $result_2, $sub1_5, $x_4) {
+  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bindST'])['bind'])(((($GLOBALS['Control_Monad_ST_Uncurried_runSTFn2'])($GLOBALS['Data_Array_ST_pushImpl']))($x_4))($sub1_5)))(function($_dollar__unused_6 = null) use ($iter_3, $op_0, $result_2, $sub1_5, $x_4) {
   $__num = \func_num_args();
   $__res = (($GLOBALS['Data_Array_discard'])(((($GLOBALS['Data_Array_ST_Iterator_pushWhile'])(($op_0)($x_4)))($iter_3))($sub1_5)))(function($_dollar__unused_7 = null) use ($result_2, $sub1_5) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bindST'])['bind'])(($GLOBALS['Data_Array_ST_unsafeFreeze'])($sub1_5)))(function($grp_8 = null) use ($result_2) {
+  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bindST'])['bind'])((($GLOBALS['Control_Monad_ST_Uncurried_runSTFn1'])($GLOBALS['Data_Array_ST_unsafeFreezeImpl']))($sub1_5)))(function($grp_8 = null) use ($result_2) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Array_ST_push'])($grp_8))($result_2);
+  $__res = ((($GLOBALS['Control_Monad_ST_Uncurried_runSTFn2'])($GLOBALS['Data_Array_ST_pushImpl']))($grp_8))($result_2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1524,7 +1565,7 @@ $GLOBALS['Data_Array_groupBy'] = (function() {
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 })))(function($_dollar__unused_4 = null) use ($result_2) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Array_ST_unsafeFreeze'])($result_2);
+  $__res = (($GLOBALS['Control_Monad_ST_Uncurried_runSTFn1'])($GLOBALS['Data_Array_ST_unsafeFreezeImpl']))($result_2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1547,7 +1588,7 @@ $GLOBALS['Data_Array_groupBy'] = (function() {
 // Data_Array_groupAllBy
 $GLOBALS['Data_Array_groupAllBy'] = function($cmp_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(($GLOBALS['Data_Array_groupBy'])((function() use ($cmp_0) {
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_groupBy'])((function() use ($cmp_0) {
   $__fn = function($x_1 = null, $y_2 = null) use ($cmp_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -1671,7 +1712,7 @@ $__t4 = $allArrays_3;
 goto end_branch_4;;
 };
   if ((is_object($v_4_0) && (($v_4_0)->{'tag'} === "Just"))) {
-$__tco_5 = ((($GLOBALS['Data_Semiring_semiringInt'])['add'])($idx_2))(1);
+$__tco_5 = ($idx_2 + 1);
 $__tco_6 = ($GLOBALS['Control_Monad_ST_Internal_run'])((($GLOBALS['Data_Array_ST_withArray'])(($GLOBALS['Data_Array_ST_push'])(($v_4_0)->{'value0'})))($allArrays_3));
 $__tco_var_go__1_0_0_idx_2 = $__tco_5;
 $__tco_var_go__1_0_0_allArrays_3 = $__tco_6;
@@ -1709,13 +1750,13 @@ $GLOBALS['Data_Array_foldRecM'] = function($dictMonadRec_0 = null) {
   $__res = ((($dictMonadRec_0)['tailRecM'])(function($o_6 = null) use ($Monad0_1_0, $__local_var_2_1, $array_5, $f_3) {
   $__num = \func_num_args();
   $__t2 = null;;
-  if ((($o_6)['b'] >= count($array_5))) {
+  if ((($GLOBALS['Data_Array_greaterThanOrEq'])(($o_6)['b']))(count($array_5))) {
 $__t2 = (($__local_var_2_1)['pure'])(new Phpurs_Data1("Done", ($o_6)['a']));
 goto end_branch_2;;
 };
   $__t2 = ((((($Monad0_1_0)['Bind1'])(null))['bind'])((($f_3)(($o_6)['a']))(($array_5)[0])))(function($res_prime_7 = null) use ($__local_var_2_1, $o_6) {
   $__num = \func_num_args();
-  $__res = (($__local_var_2_1)['pure'])(new Phpurs_Data1("Loop", ["a" => $res_prime_7, "b" => ((($GLOBALS['Data_Semiring_semiringInt'])['add'])(($o_6)['b']))(1)]));
+  $__res = (($__local_var_2_1)['pure'])(new Phpurs_Data1("Loop", ["a" => $res_prime_7, "b" => (($o_6)['b'] + 1)]));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1753,6 +1794,15 @@ $GLOBALS['Data_Array_foldM'] = (function() {
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
+  $__tco_var_Data_Array_foldM_dictMonad_0 = $dictMonad_0;
+  $__tco_var_Data_Array_foldM_f_1 = $f_1;
+  $__tco_var_Data_Array_foldM_b_2 = $b_2;
+  $__tco_var_Data_Array_foldM___local_var_3 = $__local_var_3;
+  tco_loop_Data_Array_foldM:;
+  $dictMonad_0 = $__tco_var_Data_Array_foldM_dictMonad_0;
+  $f_1 = $__tco_var_Data_Array_foldM_f_1;
+  $b_2 = $__tco_var_Data_Array_foldM_b_2;
+  $__local_var_3 = $__tco_var_Data_Array_foldM___local_var_3;
   $__res = ($GLOBALS['Data_Array_unconsImpl'])(function($v_4 = null) use ($b_2, $dictMonad_0) {
   $__num = \func_num_args();
   $__res = (((($dictMonad_0)['Applicative0'])(null))['pure'])($b_2);
@@ -1788,7 +1838,7 @@ $GLOBALS['Data_Array_foldM'] = (function() {
 // Data_Array_fold
 $GLOBALS['Data_Array_fold'] = function($dictMonoid_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Foldable_foldableArray'])['foldMap'])($dictMonoid_0))(($GLOBALS['Control_Category_categoryFn'])['identity']);
+  $__res = ((($GLOBALS['Data_Foldable_foldableArray'])['foldMap'])($dictMonoid_0))($GLOBALS['Data_Foldable_identity']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1844,7 +1894,7 @@ $__t1 = 0;
 goto end_branch_1;;
 };
   if ((is_object($__local_var_3_0) && (($__local_var_3_0)->{'tag'} === "Just"))) {
-$__t1 = ((($GLOBALS['Data_Semiring_semiringInt'])['add'])(($__local_var_3_0)->{'value0'}))(1);
+$__t1 = (($__local_var_3_0)->{'value0'} + 1);
 goto end_branch_1;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -2102,9 +2152,9 @@ $GLOBALS['Data_Array_dropEnd'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__local_var_2_0 = ((($GLOBALS['Data_Ring_ringInt'])['sub'])(count($xs_1)))($n_0);
+  $__local_var_2_0 = (count($xs_1) - $n_0);
   $__t1 = null;;
-  if (($__local_var_2_0 < 1)) {
+  if ((($GLOBALS['Data_Array_lessThan'])($__local_var_2_0))(1)) {
 $__t1 = [];
 goto end_branch_1;;
 };
@@ -2126,7 +2176,7 @@ $GLOBALS['Data_Array_drop'] = (function() {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__t0 = null;;
-  if (($n_0 < 1)) {
+  if ((($GLOBALS['Data_Array_lessThan'])($n_0))(1)) {
 $__t0 = $xs_1;
 goto end_branch_0;;
 };
@@ -2147,9 +2197,9 @@ $GLOBALS['Data_Array_takeEnd'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__local_var_2_0 = ((($GLOBALS['Data_Ring_ringInt'])['sub'])(count($xs_1)))($n_0);
+  $__local_var_2_0 = (count($xs_1) - $n_0);
   $__t1 = null;;
-  if (($__local_var_2_0 < 1)) {
+  if ((($GLOBALS['Data_Array_lessThan'])($__local_var_2_0))(1)) {
 $__t1 = $xs_1;
 goto end_branch_1;;
 };
@@ -2314,7 +2364,7 @@ $GLOBALS['Data_Array_concatMap'] = (function() {
 // Data_Array_mapMaybe
 $GLOBALS['Data_Array_mapMaybe'] = function($f_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Array_concatMap'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(function($v2_1 = null) {
+  $__res = ($GLOBALS['Data_Array_concatMap'])((($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v2_1 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object($v2_1) && (($v2_1)->{'tag'} === "Nothing"))) {
@@ -2345,7 +2395,7 @@ $GLOBALS['Data_Array_filterA'] = function($dictApplicative_0 = null) {
   $__local_var_2_1 = (((($dictApplicative_0)['Apply0'])(null))['Functor0'])(null);
   $__res = function($p_3 = null) use ($__local_var_2_1, $traverse1_1_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($__local_var_2_1)['map'])(($GLOBALS['Data_Array_mapMaybe'])(function($v_4 = null) {
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($__local_var_2_1)['map'])(($GLOBALS['Data_Array_mapMaybe'])(function($v_4 = null) {
   $__num = \func_num_args();
   $__t2 = null;;
   if (($v_4)->{'value1'}) {
@@ -2375,7 +2425,13 @@ goto end_branch_2;;
 };
 
 // Data_Array_catMaybes
-$GLOBALS['Data_Array_catMaybes'] = ($GLOBALS['Data_Array_mapMaybe'])(($GLOBALS['Control_Category_categoryFn'])['identity']);
+$GLOBALS['Data_Array_catMaybes'] = ($GLOBALS['Data_Array_mapMaybe'])(function($x_0 = null) {
+  $__num = \func_num_args();
+  $__res = $x_0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
 
 // Data_Array_any
 $GLOBALS['Data_Array_any'] = (function() {
@@ -2403,15 +2459,15 @@ $GLOBALS['Data_Array_nubByEq'] = (function() {
   $__num = \func_num_args();
   $__res = (($GLOBALS['Data_Array_discard'])((($GLOBALS['Control_Monad_ST_Internal_foreach'])($xs_1))(function($x_3 = null) use ($arr_2, $eq2_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bindST'])['bind'])(((($GLOBALS['Control_Monad_ST_Internal_functorST'])['map'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['not']))(($GLOBALS['Data_Array_any'])(function($v_4 = null) use ($eq2_0, $x_3) {
+  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bindST'])['bind'])(((($GLOBALS['Control_Monad_ST_Internal_functorST'])['map'])((($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['not']))(($GLOBALS['Data_Array_any'])(function($v_4 = null) use ($eq2_0, $x_3) {
   $__num = \func_num_args();
   $__res = (($eq2_0)($v_4))($x_3);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))))(($GLOBALS['Data_Array_ST_unsafeFreeze'])($arr_2))))(function($e_4 = null) use ($arr_2, $x_3) {
+}))))((($GLOBALS['Control_Monad_ST_Uncurried_runSTFn1'])($GLOBALS['Data_Array_ST_unsafeFreezeImpl']))($arr_2))))(function($e_4 = null) use ($arr_2, $x_3) {
   $__num = \func_num_args();
-  $__local_var_5_0 = ($GLOBALS['Data_Array_void'])((($GLOBALS['Data_Array_ST_push'])($x_3))($arr_2));
+  $__local_var_5_0 = ($GLOBALS['Data_Array_void'])(((($GLOBALS['Control_Monad_ST_Uncurried_runSTFn2'])($GLOBALS['Data_Array_ST_pushImpl']))($x_3))($arr_2));
   $__t1 = null;;
   if ($e_4) {
 $__t1 = $__local_var_5_0;
@@ -2429,7 +2485,7 @@ goto end_branch_1;;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 })))(function($_dollar__unused_3 = null) use ($arr_2) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Array_ST_unsafeFreeze'])($arr_2);
+  $__res = (($GLOBALS['Control_Monad_ST_Uncurried_runSTFn1'])($GLOBALS['Data_Array_ST_unsafeFreezeImpl']))($arr_2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

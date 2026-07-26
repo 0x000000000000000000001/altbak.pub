@@ -107,7 +107,10 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 // Test_Fib_fib
 $GLOBALS['Test_Fib_fib'] = function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = match ($v_0) { 0 => 0, 1 => 1, default => ((($GLOBALS['Data_Semiring_semiringInt'])['add'])(($GLOBALS['Test_Fib_fib'])(((($GLOBALS['Data_Ring_ringInt'])['sub'])($v_0))(1))))(($GLOBALS['Test_Fib_fib'])(((($GLOBALS['Data_Ring_ringInt'])['sub'])($v_0))(2))) };
+  $__tco_var_Test_Fib_fib_v_0 = $v_0;
+  tco_loop_Test_Fib_fib:;
+  $v_0 = $__tco_var_Test_Fib_fib_v_0;
+  $__res = match ($v_0) { 0 => 0, 1 => 1, default => (($GLOBALS['Test_Fib_fib'])(($v_0 - 1)) + ($GLOBALS['Test_Fib_fib'])(($v_0 - 2))) };
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

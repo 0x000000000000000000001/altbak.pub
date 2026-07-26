@@ -142,10 +142,10 @@ $GLOBALS['Control_Comonad_Store_Class_peeks'] = (function() {
 // Control_Comonad_Store_Class_seeks
 $GLOBALS['Control_Comonad_Store_Class_seeks'] = function($dictComonadStore_0 = null) {
   $__num = \func_num_args();
-  $duplicate_1_0 = (((((($dictComonadStore_0)['Comonad0'])(null))['Extend0'])(null))['extend'])(($GLOBALS['Control_Category_categoryFn'])['identity']);
+  $duplicate_1_0 = (((((($dictComonadStore_0)['Comonad0'])(null))['Extend0'])(null))['extend'])($GLOBALS['Control_Extend_identity']);
   $__res = function($f_2 = null) use ($dictComonadStore_0, $duplicate_1_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(function($x_3 = null) use ($dictComonadStore_0, $f_2) {
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(function($x_3 = null) use ($dictComonadStore_0, $f_2) {
   $__num = \func_num_args();
   $__res = ((($dictComonadStore_0)['peek'])(($f_2)((($dictComonadStore_0)['pos'])($x_3))))($x_3);
   goto __end;;
@@ -164,10 +164,10 @@ $GLOBALS['Control_Comonad_Store_Class_seeks'] = function($dictComonadStore_0 = n
 // Control_Comonad_Store_Class_seek
 $GLOBALS['Control_Comonad_Store_Class_seek'] = function($dictComonadStore_0 = null) {
   $__num = \func_num_args();
-  $duplicate_1_0 = (((((($dictComonadStore_0)['Comonad0'])(null))['Extend0'])(null))['extend'])(($GLOBALS['Control_Category_categoryFn'])['identity']);
+  $duplicate_1_0 = (((((($dictComonadStore_0)['Comonad0'])(null))['Extend0'])(null))['extend'])($GLOBALS['Control_Extend_identity']);
   $__res = function($s_2 = null) use ($dictComonadStore_0, $duplicate_1_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($dictComonadStore_0)['peek'])($s_2)))($duplicate_1_0);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($dictComonadStore_0)['peek'])($s_2)))($duplicate_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -221,9 +221,9 @@ $GLOBALS['Control_Comonad_Store_Class_comonadStoreTracedT'] = function($dictComo
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
   $comonadTracedT1_7_5 = ($comonadTracedT_3_2)($dictMonoid_4);
-  $__res = ["pos" => ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($pos1_1_0))($lower1_6_4), "peek" => function($s_8 = null) use ($dictComonadStore_0, $lower1_6_4) {
+  $__res = ["pos" => (($GLOBALS['Control_Semigroupoid_composeImpl'])($pos1_1_0))($lower1_6_4), "peek" => function($s_8 = null) use ($dictComonadStore_0, $lower1_6_4) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($dictComonadStore_0)['peek'])($s_8)))($lower1_6_4);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($dictComonadStore_0)['peek'])($s_8)))($lower1_6_4);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -283,9 +283,9 @@ $GLOBALS['Control_Comonad_Store_Class_comonadStoreEnvT'] = function($dictComonad
   $Comonad0_1_0 = (($dictComonadStore_0)['Comonad0'])(null);
   $lower1_2_1 = (($GLOBALS['Control_Comonad_Env_Trans_comonadTransEnvT'])['lower'])($Comonad0_1_0);
   $comonadEnvT_3_2 = ($GLOBALS['Control_Comonad_Env_Trans_comonadEnvT'])($Comonad0_1_0);
-  $__res = ["pos" => ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(($dictComonadStore_0)['pos']))($lower1_2_1), "peek" => function($s_4 = null) use ($dictComonadStore_0, $lower1_2_1) {
+  $__res = ["pos" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictComonadStore_0)['pos']))($lower1_2_1), "peek" => function($s_4 = null) use ($dictComonadStore_0, $lower1_2_1) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($dictComonadStore_0)['peek'])($s_4)))($lower1_2_1);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($dictComonadStore_0)['peek'])($s_4)))($lower1_2_1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

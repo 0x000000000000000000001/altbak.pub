@@ -126,6 +126,24 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+// Data_List_Lazy_lessThanOrEq
+$GLOBALS['Data_List_Lazy_lessThanOrEq'] = (function() use (&$__fn) {
+$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT"));
+return (function() use ($__local_var_0_0) {
+  $__fn = function($a1_1 = null, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ( ! (is_object((($__local_var_0_0)($a1_1))($a2_2)) && (((($__local_var_0_0)($a1_1))($a2_2))->{'tag'} === "GT")));
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
+})();
+
 // Data_List_Lazy_tailRecM2
 $GLOBALS['Data_List_Lazy_tailRecM2'] = (function() {
   $__fn = function($f_0 = null, $a_1 = null, $b_2 = null) use (&$__fn) {
@@ -145,6 +163,60 @@ $GLOBALS['Data_List_Lazy_tailRecM2'] = (function() {
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
+})();
+
+// Data_List_Lazy_lessThan
+$GLOBALS['Data_List_Lazy_lessThan'] = (function() use (&$__fn) {
+$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT"));
+return (function() use ($__local_var_0_0) {
+  $__fn = function($a1_1 = null, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = (is_object((($__local_var_0_0)($a1_1))($a2_2)) && (((($__local_var_0_0)($a1_1))($a2_2))->{'tag'} === "LT"));
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
+})();
+
+// Data_List_Lazy_greaterThan
+$GLOBALS['Data_List_Lazy_greaterThan'] = (function() use (&$__fn) {
+$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT"));
+return (function() use ($__local_var_0_0) {
+  $__fn = function($a1_1 = null, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = (is_object((($__local_var_0_0)($a1_1))($a2_2)) && (((($__local_var_0_0)($a1_1))($a2_2))->{'tag'} === "GT"));
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
+})();
+
+// Data_List_Lazy_greaterThanOrEq
+$GLOBALS['Data_List_Lazy_greaterThanOrEq'] = (function() use (&$__fn) {
+$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT"));
+return (function() use ($__local_var_0_0) {
+  $__fn = function($a1_1 = null, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ( ! (is_object((($__local_var_0_0)($a1_1))($a2_2)) && (((($__local_var_0_0)($a1_1))($a2_2))->{'tag'} === "LT")));
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
 })();
 
 // Data_List_Lazy_any
@@ -171,6 +243,15 @@ return (($GLOBALS['Data_List_Lazy_Types_foldableList'])['foldMap'])(["mempty" =>
 }]);
 })();
 
+// Data_List_Lazy_identity
+$GLOBALS['Data_List_Lazy_identity'] = function($x_0 = null) {
+  $__num = \func_num_args();
+  $__res = $x_0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+
 // Data_List_Lazy_Pattern
 $GLOBALS['Data_List_Lazy_Pattern'] = function($x_0 = null) {
   $__num = \func_num_args();
@@ -187,6 +268,13 @@ $GLOBALS['Data_List_Lazy_zipWith'] = (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
+  $__tco_var_Data_List_Lazy_zipWith_f_0 = $f_0;
+  $__tco_var_Data_List_Lazy_zipWith_xs_1 = $xs_1;
+  $__tco_var_Data_List_Lazy_zipWith_ys_2 = $ys_2;
+  tco_loop_Data_List_Lazy_zipWith:;
+  $f_0 = $__tco_var_Data_List_Lazy_zipWith_f_0;
+  $xs_1 = $__tco_var_Data_List_Lazy_zipWith_xs_1;
+  $ys_2 = $__tco_var_Data_List_Lazy_zipWith_ys_2;
   $__res = ((($GLOBALS['Data_Lazy_applyLazy'])['apply'])(((($GLOBALS['Data_Lazy_functorLazy'])['map'])((function() use ($f_0) {
   $__fn = function($v_3 = null, $v1_4 = null) use ($f_0, &$__fn) {
   $__num = \func_num_args();
@@ -255,6 +343,13 @@ $GLOBALS['Data_List_Lazy_updateAt'] = (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
+  $__tco_var_Data_List_Lazy_updateAt_n_0 = $n_0;
+  $__tco_var_Data_List_Lazy_updateAt_x_1 = $x_1;
+  $__tco_var_Data_List_Lazy_updateAt_xs_2 = $xs_2;
+  tco_loop_Data_List_Lazy_updateAt:;
+  $n_0 = $__tco_var_Data_List_Lazy_updateAt_n_0;
+  $x_1 = $__tco_var_Data_List_Lazy_updateAt_x_1;
+  $xs_2 = $__tco_var_Data_List_Lazy_updateAt_xs_2;
   $__res = ((($GLOBALS['Data_Lazy_functorLazy'])['map'])(function($v1_3 = null) use ($n_0, $x_1) {
   $__num = \func_num_args();
   $__t0 = null;;
@@ -263,7 +358,7 @@ $__t0 = new Phpurs_Data0("Nil");
 goto end_branch_0;;
 };
   if ((is_object($v1_3) && (($v1_3)->{'tag'} === "Cons"))) {
-$__t0 = match ($n_0) { 0 => new Phpurs_Data2("Cons", $x_1, ($v1_3)->{'value1'}), default => new Phpurs_Data2("Cons", ($v1_3)->{'value0'}, ((($GLOBALS['Data_List_Lazy_updateAt'])(((($GLOBALS['Data_Ring_ringInt'])['sub'])($n_0))(1)))($x_1))(($v1_3)->{'value1'})) };
+$__t0 = match ($n_0) { 0 => new Phpurs_Data2("Cons", $x_1, ($v1_3)->{'value1'}), default => new Phpurs_Data2("Cons", ($v1_3)->{'value0'}, ((($GLOBALS['Data_List_Lazy_updateAt'])(($n_0 - 1)))($x_1))(($v1_3)->{'value1'})) };
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -358,7 +453,10 @@ $GLOBALS['Data_List_Lazy_toUnfoldable'] = function($dictUnfoldable_0 = null) {
 // Data_List_Lazy_takeWhile
 $GLOBALS['Data_List_Lazy_takeWhile'] = function($p_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_List_Lazy_Types_List']))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($GLOBALS['Data_Lazy_functorLazy'])['map'])(function($v_1 = null) use ($p_0) {
+  $__tco_var_Data_List_Lazy_takeWhile_p_0 = $p_0;
+  tco_loop_Data_List_Lazy_takeWhile:;
+  $p_0 = $__tco_var_Data_List_Lazy_takeWhile_p_0;
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_List_Lazy_Types_List']))((($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Lazy_functorLazy'])['map'])(function($v_1 = null) use ($p_0) {
   $__num = \func_num_args();
   $__t0 = null;;
   if (((is_object($v_1) && (($v_1)->{'tag'} === "Cons")) && ($p_0)(($v_1)->{'value0'}))) {
@@ -380,8 +478,11 @@ goto end_branch_0;;
 // Data_List_Lazy_take
 $GLOBALS['Data_List_Lazy_take'] = function($n_0 = null) {
   $__num = \func_num_args();
+  $__tco_var_Data_List_Lazy_take_n_0 = $n_0;
+  tco_loop_Data_List_Lazy_take:;
+  $n_0 = $__tco_var_Data_List_Lazy_take_n_0;
   $__t1 = null;;
-  if (($n_0 <= 0)) {
+  if ((($GLOBALS['Data_List_Lazy_lessThanOrEq'])($n_0))(0)) {
 $__t1 = function($v_1 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_List_Lazy_Types_nil'];
@@ -391,7 +492,7 @@ $__t1 = function($v_1 = null) {
 };
 goto end_branch_1;;
 };
-  $__t1 = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_List_Lazy_Types_List']))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($GLOBALS['Data_Lazy_functorLazy'])['map'])(function($v1_1 = null) use ($n_0) {
+  $__t1 = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_List_Lazy_Types_List']))((($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Lazy_functorLazy'])['map'])(function($v1_1 = null) use ($n_0) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object($v1_1) && (($v1_1)->{'tag'} === "Nil"))) {
@@ -399,7 +500,7 @@ $__t0 = new Phpurs_Data0("Nil");
 goto end_branch_0;;
 };
   if ((is_object($v1_1) && (($v1_1)->{'tag'} === "Cons"))) {
-$__t0 = new Phpurs_Data2("Cons", ($v1_1)->{'value0'}, (($GLOBALS['Data_List_Lazy_take'])(((($GLOBALS['Data_Ring_ringInt'])['sub'])($n_0))(1)))(($v1_1)->{'value1'}));
+$__t0 = new Phpurs_Data2("Cons", ($v1_1)->{'value0'}, (($GLOBALS['Data_List_Lazy_take'])(($n_0 - 1)))(($v1_1)->{'value1'}));
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -487,6 +588,11 @@ $GLOBALS['Data_List_Lazy_span'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
+  $__tco_var_Data_List_Lazy_span_p_0 = $p_0;
+  $__tco_var_Data_List_Lazy_span_xs_1 = $xs_1;
+  tco_loop_Data_List_Lazy_span:;
+  $p_0 = $__tco_var_Data_List_Lazy_span_p_0;
+  $xs_1 = $__tco_var_Data_List_Lazy_span_xs_1;
   $v_2_0 = ($GLOBALS['Data_List_Lazy_uncons'])($xs_1);
   $__t1 = null;;
   if (((is_object($v_2_0) && (($v_2_0)->{'tag'} === "Just")) && ($p_0)((($v_2_0)->{'value0'})['head']))) {
@@ -570,6 +676,13 @@ $GLOBALS['Data_List_Lazy_scanlLazy'] = (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
+  $__tco_var_Data_List_Lazy_scanlLazy_f_0 = $f_0;
+  $__tco_var_Data_List_Lazy_scanlLazy_acc_1 = $acc_1;
+  $__tco_var_Data_List_Lazy_scanlLazy_xs_2 = $xs_2;
+  tco_loop_Data_List_Lazy_scanlLazy:;
+  $f_0 = $__tco_var_Data_List_Lazy_scanlLazy_f_0;
+  $acc_1 = $__tco_var_Data_List_Lazy_scanlLazy_acc_1;
+  $xs_2 = $__tco_var_Data_List_Lazy_scanlLazy_xs_2;
   $__res = ((($GLOBALS['Data_Lazy_functorLazy'])['map'])(function($v_3 = null) use ($acc_1, $f_0) {
   $__num = \func_num_args();
   $__t0 = null;;
@@ -633,6 +746,9 @@ $GLOBALS['Data_List_Lazy_reverse'] = function($xs_0 = null) {
 // Data_List_Lazy_replicateM
 $GLOBALS['Data_List_Lazy_replicateM'] = function($dictMonad_0 = null) {
   $__num = \func_num_args();
+  $__tco_var_Data_List_Lazy_replicateM_dictMonad_0 = $dictMonad_0;
+  tco_loop_Data_List_Lazy_replicateM:;
+  $dictMonad_0 = $__tco_var_Data_List_Lazy_replicateM_dictMonad_0;
   $__local_var_1_0 = (($dictMonad_0)['Applicative0'])(null);
   $__local_var_2_1 = (($dictMonad_0)['Bind1'])(null);
   $__res = (function() use ($__local_var_1_0, $__local_var_2_1, $dictMonad_0) {
@@ -642,13 +758,13 @@ $GLOBALS['Data_List_Lazy_replicateM'] = function($dictMonad_0 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__t2 = null;;
-  if (($n_3 < ($GLOBALS['Data_Semiring_semiringInt'])['one'])) {
+  if ((($GLOBALS['Data_List_Lazy_lessThan'])($n_3))(1)) {
 $__t2 = (($__local_var_1_0)['pure'])($GLOBALS['Data_List_Lazy_Types_nil']);
 goto end_branch_2;;
 };
   $__t2 = ((($__local_var_2_1)['bind'])($m_4))(function($a_5 = null) use ($__local_var_1_0, $__local_var_2_1, $dictMonad_0, $m_4, $n_3) {
   $__num = \func_num_args();
-  $__res = ((($__local_var_2_1)['bind'])(((($GLOBALS['Data_List_Lazy_replicateM'])($dictMonad_0))(((($GLOBALS['Data_Ring_ringInt'])['sub'])($n_3))(($GLOBALS['Data_Semiring_semiringInt'])['one'])))($m_4)))(function($as_6 = null) use ($__local_var_1_0, $a_5) {
+  $__res = ((($__local_var_2_1)['bind'])(((($GLOBALS['Data_List_Lazy_replicateM'])($dictMonad_0))(($n_3 - 1)))($m_4)))(function($as_6 = null) use ($__local_var_1_0, $a_5) {
   $__num = \func_num_args();
   $__res = (($__local_var_1_0)['pure'])(($GLOBALS['Data_Lazy_defer'])(function($v_7 = null) use ($a_5, $as_6) {
   $__num = \func_num_args();
@@ -738,12 +854,12 @@ $GLOBALS['Data_List_Lazy_range'] = (function() {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__t1 = null;;
-  if (($start_0 > $end_1)) {
+  if ((($GLOBALS['Data_List_Lazy_greaterThan'])($start_0))($end_1)) {
 $__t1 = ((($GLOBALS['Data_List_Lazy_Types_unfoldableList'])['unfoldr'])(function($x_2 = null) use ($end_1) {
   $__num = \func_num_args();
   $__t2 = null;;
-  if (($x_2 >= $end_1)) {
-$__t2 = new Phpurs_Data1("Just", new Phpurs_Data2("Tuple", $x_2, ((($GLOBALS['Data_Ring_ringInt'])['sub'])($x_2))(1)));
+  if ((($GLOBALS['Data_List_Lazy_greaterThanOrEq'])($x_2))($end_1)) {
+$__t2 = new Phpurs_Data1("Just", new Phpurs_Data2("Tuple", $x_2, ($x_2 - 1)));
 goto end_branch_2;;
 };
   $__t2 = new Phpurs_Data0("Nothing");
@@ -758,8 +874,8 @@ goto end_branch_1;;
   $__t1 = ((($GLOBALS['Data_List_Lazy_Types_unfoldableList'])['unfoldr'])(function($x_2 = null) use ($end_1) {
   $__num = \func_num_args();
   $__t0 = null;;
-  if (($x_2 <= $end_1)) {
-$__t0 = new Phpurs_Data1("Just", new Phpurs_Data2("Tuple", $x_2, ((($GLOBALS['Data_Semiring_semiringInt'])['add'])($x_2))(1)));
+  if ((($GLOBALS['Data_List_Lazy_lessThanOrEq'])($x_2))($end_1)) {
+$__t0 = new Phpurs_Data1("Just", new Phpurs_Data2("Tuple", $x_2, ($x_2 + 1)));
 goto end_branch_0;;
 };
   $__t0 = new Phpurs_Data0("Nothing");
@@ -819,7 +935,7 @@ goto end_branch_0;;
 };
 
 // Data_List_Lazy_null
-$GLOBALS['Data_List_Lazy_null'] = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Maybe_isNothing']))($GLOBALS['Data_List_Lazy_uncons']);
+$GLOBALS['Data_List_Lazy_null'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Maybe_isNothing']))($GLOBALS['Data_List_Lazy_uncons']);
 
 // Data_List_Lazy_nubBy
 $GLOBALS['Data_List_Lazy_nubBy'] = function($p_0 = null) {
@@ -899,8 +1015,11 @@ $GLOBALS['Data_List_Lazy_newtypePattern'] = ["Coercible0" => function($_dollar__
 // Data_List_Lazy_mapMaybe
 $GLOBALS['Data_List_Lazy_mapMaybe'] = function($f_0 = null) {
   $__num = \func_num_args();
+  $__tco_var_Data_List_Lazy_mapMaybe_f_0 = $f_0;
+  tco_loop_Data_List_Lazy_mapMaybe:;
+  $f_0 = $__tco_var_Data_List_Lazy_mapMaybe_f_0;
   $go__1_0 = null;
-  $go__1_0 = function($v_2 = null) use ($f_0, &$go__1_0) {
+  $go__1_0 = function($v_2 = null) use (&$__tco_var_Data_List_Lazy_mapMaybe_f_0, $f_0, &$go__1_0) {
   $__num = \func_num_args();
   $__tco_var_go__1_0_0_v_2 = $v_2;
   tco_loop_go__1_0_0:;
@@ -938,7 +1057,7 @@ goto end_branch_0;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_List_Lazy_Types_List']))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($GLOBALS['Data_Lazy_functorLazy'])['map'])($go__1_0)))($GLOBALS['Unsafe_Coerce_unsafeCoerce']));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_List_Lazy_Types_List']))((($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Lazy_functorLazy'])['map'])($go__1_0)))($GLOBALS['Unsafe_Coerce_unsafeCoerce']));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -987,7 +1106,7 @@ $GLOBALS['Data_List_Lazy_length'] = ((($GLOBALS['Data_List_Lazy_Types_foldableLi
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_Semiring_semiringInt'])['add'])($l_0))(1);
+  $__res = ($l_0 + 1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1025,7 +1144,7 @@ goto end_branch_0;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-return ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($go__0_0))($GLOBALS['Data_List_Lazy_Types_step']);
+return (($GLOBALS['Control_Semigroupoid_composeImpl'])($go__0_0))($GLOBALS['Data_List_Lazy_Types_step']);
 })();
 
 // Data_List_Lazy_iterate
@@ -1065,6 +1184,13 @@ $GLOBALS['Data_List_Lazy_insertAt'] = (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
+  $__tco_var_Data_List_Lazy_insertAt_v_0 = $v_0;
+  $__tco_var_Data_List_Lazy_insertAt_v1_1 = $v1_1;
+  $__tco_var_Data_List_Lazy_insertAt_v2_2 = $v2_2;
+  tco_loop_Data_List_Lazy_insertAt:;
+  $v_0 = $__tco_var_Data_List_Lazy_insertAt_v_0;
+  $v1_1 = $__tco_var_Data_List_Lazy_insertAt_v1_1;
+  $v2_2 = $__tco_var_Data_List_Lazy_insertAt_v2_2;
   $__res = match ($v_0) { 0 => ($GLOBALS['Data_Lazy_defer'])(function($v_3 = null) use ($v1_1, $v2_2) {
   $__num = \func_num_args();
   $__res = new Phpurs_Data2("Cons", $v1_1, $v2_2);
@@ -1079,7 +1205,7 @@ $__t0 = new Phpurs_Data2("Cons", $v1_1, $GLOBALS['Data_List_Lazy_Types_nil']);
 goto end_branch_0;;
 };
   if ((is_object($v3_3) && (($v3_3)->{'tag'} === "Cons"))) {
-$__t0 = new Phpurs_Data2("Cons", ($v3_3)->{'value0'}, ((($GLOBALS['Data_List_Lazy_insertAt'])(((($GLOBALS['Data_Ring_ringInt'])['sub'])($v_0))(1)))($v1_1))(($v3_3)->{'value1'}));
+$__t0 = new Phpurs_Data2("Cons", ($v3_3)->{'value0'}, ((($GLOBALS['Data_List_Lazy_insertAt'])(($v_0 - 1)))($v1_1))(($v3_3)->{'value1'}));
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -1121,7 +1247,7 @@ goto end_branch_1;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-return ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($go__0_0))($GLOBALS['Data_List_Lazy_Types_step']);
+return (($GLOBALS['Control_Semigroupoid_composeImpl'])($go__0_0))($GLOBALS['Data_List_Lazy_Types_step']);
 })();
 
 // Data_List_Lazy_index
@@ -1156,7 +1282,7 @@ default:
 break;
 };
 $__tco_1 = ($GLOBALS['Data_List_Lazy_Types_step'])(($v_2)->{'value1'});
-$__tco_2 = ((($GLOBALS['Data_Ring_ringInt'])['sub'])($v1_3))(1);
+$__tco_2 = ($v1_3 - 1);
 $__tco_var_go__1_0_0_v_2 = $__tco_1;
 $__tco_var_go__1_0_0_v1_3 = $__tco_2;
 goto tco_loop_go__1_0_0;;
@@ -1199,6 +1325,9 @@ $GLOBALS['Data_List_Lazy_head'] = function($xs_0 = null) {
 // Data_List_Lazy_transpose
 $GLOBALS['Data_List_Lazy_transpose'] = function($xs_0 = null) {
   $__num = \func_num_args();
+  $__tco_var_Data_List_Lazy_transpose_xs_0 = $xs_0;
+  tco_loop_Data_List_Lazy_transpose:;
+  $xs_0 = $__tco_var_Data_List_Lazy_transpose_xs_0;
   $v_1_0 = ($GLOBALS['Data_List_Lazy_uncons'])($xs_0);
   $__t1 = null;;
   if ((is_object($v_1_0) && (($v_1_0)->{'tag'} === "Nothing"))) {
@@ -1209,31 +1338,34 @@ goto end_branch_1;;
 $v1_2_2 = ($GLOBALS['Data_List_Lazy_uncons'])((($v_1_0)->{'value0'})['head']);
 $__t3 = null;;
 if ((is_object($v1_2_2) && (($v1_2_2)->{'tag'} === "Nothing"))) {
-$__t3 = ($GLOBALS['Data_List_Lazy_transpose'])((($v_1_0)->{'value0'})['tail']);
+$__tco_4 = (($v_1_0)->{'value0'})['tail'];
+$__tco_var_Data_List_Lazy_transpose_xs_0 = $__tco_4;
+goto tco_loop_Data_List_Lazy_transpose;;
+$__t3 = null;
 goto end_branch_3;;
 };
 if ((is_object($v1_2_2) && (($v1_2_2)->{'tag'} === "Just"))) {
-$__local_var_3_4 = (($v1_2_2)->{'value0'})['head'];
-$__local_var_4_5 = (($v1_2_2)->{'value0'})['tail'];
-$__local_var_5_6 = (($GLOBALS['Data_List_Lazy_mapMaybe'])($GLOBALS['Data_List_Lazy_head']))((($v_1_0)->{'value0'})['tail']);
-$__local_var_6_7 = ($GLOBALS['Data_Lazy_defer'])(function($v_6 = null) use ($__local_var_3_4, $__local_var_5_6) {
+$__local_var_3_5 = (($v1_2_2)->{'value0'})['head'];
+$__local_var_4_6 = (($v1_2_2)->{'value0'})['tail'];
+$__local_var_5_7 = (($GLOBALS['Data_List_Lazy_mapMaybe'])($GLOBALS['Data_List_Lazy_head']))((($v_1_0)->{'value0'})['tail']);
+$__local_var_6_8 = ($GLOBALS['Data_Lazy_defer'])(function($v_6 = null) use ($__local_var_3_5, $__local_var_5_7) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Cons", $__local_var_3_4, $__local_var_5_6);
+  $__res = new Phpurs_Data2("Cons", $__local_var_3_5, $__local_var_5_7);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 });
-$__local_var_7_8 = (($GLOBALS['Data_List_Lazy_mapMaybe'])($GLOBALS['Data_List_Lazy_tail']))((($v_1_0)->{'value0'})['tail']);
-$__local_var_7_8 = ($GLOBALS['Data_List_Lazy_transpose'])(($GLOBALS['Data_Lazy_defer'])(function($v_8 = null) use ($__local_var_4_5, $__local_var_7_8) {
+$__local_var_7_9 = (($GLOBALS['Data_List_Lazy_mapMaybe'])($GLOBALS['Data_List_Lazy_tail']))((($v_1_0)->{'value0'})['tail']);
+$__local_var_7_9 = ($GLOBALS['Data_List_Lazy_transpose'])(($GLOBALS['Data_Lazy_defer'])(function($v_8 = null) use ($__local_var_4_6, $__local_var_7_9) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Cons", $__local_var_4_5, $__local_var_7_8);
+  $__res = new Phpurs_Data2("Cons", $__local_var_4_6, $__local_var_7_9);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }));
-$__t3 = ($GLOBALS['Data_Lazy_defer'])(function($v_8 = null) use ($__local_var_6_7, $__local_var_7_8) {
+$__t3 = ($GLOBALS['Data_Lazy_defer'])(function($v_8 = null) use ($__local_var_6_8, $__local_var_7_9) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Cons", $__local_var_6_7, $__local_var_7_8);
+  $__res = new Phpurs_Data2("Cons", $__local_var_6_8, $__local_var_7_9);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1258,7 +1390,10 @@ goto end_branch_1;;
 // Data_List_Lazy_groupBy
 $GLOBALS['Data_List_Lazy_groupBy'] = function($eq_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_List_Lazy_Types_List']))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($GLOBALS['Data_Lazy_functorLazy'])['map'])(function($v_1 = null) use ($eq_0) {
+  $__tco_var_Data_List_Lazy_groupBy_eq_0 = $eq_0;
+  tco_loop_Data_List_Lazy_groupBy:;
+  $eq_0 = $__tco_var_Data_List_Lazy_groupBy_eq_0;
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_List_Lazy_Types_List']))((($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Lazy_functorLazy'])['map'])(function($v_1 = null) use ($eq_0) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object($v_1) && (($v_1)->{'tag'} === "Nil"))) {
@@ -1301,7 +1436,7 @@ $GLOBALS['Data_List_Lazy_group'] = function($dictEq_0 = null) {
 };
 
 // Data_List_Lazy_fromStep
-$GLOBALS['Data_List_Lazy_fromStep'] = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_List_Lazy_Types_List']))(($GLOBALS['Data_Lazy_applicativeLazy'])['pure']);
+$GLOBALS['Data_List_Lazy_fromStep'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_List_Lazy_Types_List']))(($GLOBALS['Data_Lazy_applicativeLazy'])['pure']);
 
 // Data_List_Lazy_insertBy
 $GLOBALS['Data_List_Lazy_insertBy'] = (function() {
@@ -1310,6 +1445,13 @@ $GLOBALS['Data_List_Lazy_insertBy'] = (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
+  $__tco_var_Data_List_Lazy_insertBy_cmp_0 = $cmp_0;
+  $__tco_var_Data_List_Lazy_insertBy_x_1 = $x_1;
+  $__tco_var_Data_List_Lazy_insertBy_xs_2 = $xs_2;
+  tco_loop_Data_List_Lazy_insertBy:;
+  $cmp_0 = $__tco_var_Data_List_Lazy_insertBy_cmp_0;
+  $x_1 = $__tco_var_Data_List_Lazy_insertBy_x_1;
+  $xs_2 = $__tco_var_Data_List_Lazy_insertBy_xs_2;
   $__res = ((($GLOBALS['Data_Lazy_functorLazy'])['map'])(function($v_3 = null) use ($cmp_0, $x_1) {
   $__num = \func_num_args();
   $__t0 = null;;
@@ -1412,6 +1554,15 @@ $GLOBALS['Data_List_Lazy_foldM'] = (function() {
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
+  $__tco_var_Data_List_Lazy_foldM_dictMonad_0 = $dictMonad_0;
+  $__tco_var_Data_List_Lazy_foldM_f_1 = $f_1;
+  $__tco_var_Data_List_Lazy_foldM_b_2 = $b_2;
+  $__tco_var_Data_List_Lazy_foldM_xs_3 = $xs_3;
+  tco_loop_Data_List_Lazy_foldM:;
+  $dictMonad_0 = $__tco_var_Data_List_Lazy_foldM_dictMonad_0;
+  $f_1 = $__tco_var_Data_List_Lazy_foldM_f_1;
+  $b_2 = $__tco_var_Data_List_Lazy_foldM_b_2;
+  $xs_3 = $__tco_var_Data_List_Lazy_foldM_xs_3;
   $v_4_0 = ($GLOBALS['Data_List_Lazy_uncons'])($xs_3);
   $__t1 = null;;
   if ((is_object($v_4_0) && (($v_4_0)->{'tag'} === "Nothing"))) {
@@ -1457,7 +1608,7 @@ $GLOBALS['Data_List_Lazy_findIndex'] = function($fn_0 = null) {
 $__t1 = (($GLOBALS['Data_Maybe_applicativeMaybe'])['pure'])($n_2);
 goto end_branch_1;;
 };
-  $__t1 = (($go__1_0)(((($GLOBALS['Data_Semiring_semiringInt'])['add'])($n_2))(1)))(($o_4)['tail']);
+  $__t1 = (($go__1_0)(($n_2 + 1)))(($o_4)['tail']);
   end_branch_1:;
   $__res = $__t1;
   goto __end;;
@@ -1485,7 +1636,7 @@ $GLOBALS['Data_List_Lazy_findLastIndex'] = (function() {
   }
   $__res = ((($GLOBALS['Data_Maybe_functorMaybe'])['map'])(function($v_2 = null) use ($xs_1) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Ring_ringInt'])['sub'])(((($GLOBALS['Data_Ring_ringInt'])['sub'])(($GLOBALS['Data_List_Lazy_length'])($xs_1)))(1)))($v_2);
+  $__res = ((($GLOBALS['Data_List_Lazy_length'])($xs_1) - 1) - $v_2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1500,6 +1651,9 @@ $GLOBALS['Data_List_Lazy_findLastIndex'] = (function() {
 // Data_List_Lazy_filterM
 $GLOBALS['Data_List_Lazy_filterM'] = function($dictMonad_0 = null) {
   $__num = \func_num_args();
+  $__tco_var_Data_List_Lazy_filterM_dictMonad_0 = $dictMonad_0;
+  tco_loop_Data_List_Lazy_filterM:;
+  $dictMonad_0 = $__tco_var_Data_List_Lazy_filterM_dictMonad_0;
   $__local_var_1_0 = (($dictMonad_0)['Applicative0'])(null);
   $__local_var_2_1 = (($dictMonad_0)['Bind1'])(null);
   $__res = (function() use ($__local_var_1_0, $__local_var_2_1, $dictMonad_0) {
@@ -1563,8 +1717,11 @@ goto end_branch_3;;
 // Data_List_Lazy_filter
 $GLOBALS['Data_List_Lazy_filter'] = function($p_0 = null) {
   $__num = \func_num_args();
+  $__tco_var_Data_List_Lazy_filter_p_0 = $p_0;
+  tco_loop_Data_List_Lazy_filter:;
+  $p_0 = $__tco_var_Data_List_Lazy_filter_p_0;
   $go__1_0 = null;
-  $go__1_0 = function($v_2 = null) use (&$go__1_0, $p_0) {
+  $go__1_0 = function($v_2 = null) use (&$__tco_var_Data_List_Lazy_filter_p_0, &$go__1_0, $p_0) {
   $__num = \func_num_args();
   $__tco_var_go__1_0_0_v_2 = $v_2;
   tco_loop_go__1_0_0:;
@@ -1596,7 +1753,7 @@ goto end_branch_0;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_List_Lazy_Types_List']))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($GLOBALS['Data_Lazy_functorLazy'])['map'])($go__1_0)))($GLOBALS['Unsafe_Coerce_unsafeCoerce']));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_List_Lazy_Types_List']))((($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Lazy_functorLazy'])['map'])($go__1_0)))($GLOBALS['Unsafe_Coerce_unsafeCoerce']));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1635,7 +1792,10 @@ $GLOBALS['Data_List_Lazy_intersect'] = function($dictEq_0 = null) {
 // Data_List_Lazy_nubByEq
 $GLOBALS['Data_List_Lazy_nubByEq'] = function($eq_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_List_Lazy_Types_List']))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($GLOBALS['Data_Lazy_functorLazy'])['map'])(function($v_1 = null) use ($eq_0) {
+  $__tco_var_Data_List_Lazy_nubByEq_eq_0 = $eq_0;
+  tco_loop_Data_List_Lazy_nubByEq:;
+  $eq_0 = $__tco_var_Data_List_Lazy_nubByEq_eq_0;
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_List_Lazy_Types_List']))((($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Lazy_functorLazy'])['map'])(function($v_1 = null) use ($eq_0) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object($v_1) && (($v_1)->{'tag'} === "Nil"))) {
@@ -1803,7 +1963,7 @@ goto end_branch_0;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($go__1_0))($GLOBALS['Data_List_Lazy_Types_step']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($go__1_0))($GLOBALS['Data_List_Lazy_Types_step']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1839,7 +1999,7 @@ $__t0 = new Phpurs_Data0("Nil");
 goto end_branch_0;;
 };
   if ((is_object($v1_3) && (($v1_3)->{'tag'} === "Cons"))) {
-$__tco_1 = ((($GLOBALS['Data_Ring_ringInt'])['sub'])($v_2))(1);
+$__tco_1 = ($v_2 - 1);
 $__tco_2 = ($GLOBALS['Data_List_Lazy_Types_step'])(($v1_3)->{'value1'});
 $__tco_var_go__1_0_0_v_2 = $__tco_1;
 $__tco_var_go__1_0_0_v1_3 = $__tco_2;
@@ -1857,7 +2017,7 @@ goto end_branch_0;;
   };
   return $__fn;
 })();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_List_Lazy_Types_List']))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($GLOBALS['Data_Lazy_functorLazy'])['map'])(($go__1_0)($n_0))))($GLOBALS['Unsafe_Coerce_unsafeCoerce']));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_List_Lazy_Types_List']))((($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Lazy_functorLazy'])['map'])(($go__1_0)($n_0))))($GLOBALS['Unsafe_Coerce_unsafeCoerce']));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1870,7 +2030,7 @@ $GLOBALS['Data_List_Lazy_slice'] = (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($GLOBALS['Data_List_Lazy_take'])(((($GLOBALS['Data_Ring_ringInt'])['sub'])($end_1))($start_0)))((($GLOBALS['Data_List_Lazy_drop'])($start_0))($xs_2));
+  $__res = (($GLOBALS['Data_List_Lazy_take'])(($end_1 - $start_0)))((($GLOBALS['Data_List_Lazy_drop'])($start_0))($xs_2));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -1885,6 +2045,13 @@ $GLOBALS['Data_List_Lazy_deleteBy'] = (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
+  $__tco_var_Data_List_Lazy_deleteBy_eq_0 = $eq_0;
+  $__tco_var_Data_List_Lazy_deleteBy_x_1 = $x_1;
+  $__tco_var_Data_List_Lazy_deleteBy_xs_2 = $xs_2;
+  tco_loop_Data_List_Lazy_deleteBy:;
+  $eq_0 = $__tco_var_Data_List_Lazy_deleteBy_eq_0;
+  $x_1 = $__tco_var_Data_List_Lazy_deleteBy_x_1;
+  $xs_2 = $__tco_var_Data_List_Lazy_deleteBy_xs_2;
   $__res = ((($GLOBALS['Data_Lazy_functorLazy'])['map'])(function($v_3 = null) use ($eq_0, $x_1) {
   $__num = \func_num_args();
   $__t0 = null;;
@@ -1961,6 +2128,11 @@ $GLOBALS['Data_List_Lazy_deleteAt'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
+  $__tco_var_Data_List_Lazy_deleteAt_n_0 = $n_0;
+  $__tco_var_Data_List_Lazy_deleteAt_xs_1 = $xs_1;
+  tco_loop_Data_List_Lazy_deleteAt:;
+  $n_0 = $__tco_var_Data_List_Lazy_deleteAt_n_0;
+  $xs_1 = $__tco_var_Data_List_Lazy_deleteAt_xs_1;
   $__res = ((($GLOBALS['Data_Lazy_functorLazy'])['map'])(function($v1_2 = null) use ($n_0) {
   $__num = \func_num_args();
   $__t0 = null;;
@@ -1969,7 +2141,7 @@ $__t0 = new Phpurs_Data0("Nil");
 goto end_branch_0;;
 };
   if ((is_object($v1_2) && (($v1_2)->{'tag'} === "Cons"))) {
-$__t0 = match ($n_0) { 0 => ($GLOBALS['Data_List_Lazy_Types_step'])(($v1_2)->{'value1'}), default => new Phpurs_Data2("Cons", ($v1_2)->{'value0'}, (($GLOBALS['Data_List_Lazy_deleteAt'])(((($GLOBALS['Data_Ring_ringInt'])['sub'])($n_0))(1)))(($v1_2)->{'value1'})) };
+$__t0 = match ($n_0) { 0 => ($GLOBALS['Data_List_Lazy_Types_step'])(($v1_2)->{'value1'}), default => new Phpurs_Data2("Cons", ($v1_2)->{'value0'}, (($GLOBALS['Data_List_Lazy_deleteAt'])(($n_0 - 1)))(($v1_2)->{'value1'})) };
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -2052,14 +2224,14 @@ $GLOBALS['Data_List_Lazy_concatMap'] = (function() {
 // Data_List_Lazy_concat
 $GLOBALS['Data_List_Lazy_concat'] = function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_List_Lazy_Types_bindList'])['bind'])($v_0))(($GLOBALS['Control_Category_categoryFn'])['identity']);
+  $__res = ((($GLOBALS['Data_List_Lazy_Types_bindList'])['bind'])($v_0))($GLOBALS['Data_List_Lazy_identity']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
 
 // Data_List_Lazy_catMaybes
-$GLOBALS['Data_List_Lazy_catMaybes'] = ($GLOBALS['Data_List_Lazy_mapMaybe'])(($GLOBALS['Control_Category_categoryFn'])['identity']);
+$GLOBALS['Data_List_Lazy_catMaybes'] = ($GLOBALS['Data_List_Lazy_mapMaybe'])($GLOBALS['Data_List_Lazy_identity']);
 
 // Data_List_Lazy_alterAt
 $GLOBALS['Data_List_Lazy_alterAt'] = (function() {
@@ -2068,6 +2240,13 @@ $GLOBALS['Data_List_Lazy_alterAt'] = (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
+  $__tco_var_Data_List_Lazy_alterAt_n_0 = $n_0;
+  $__tco_var_Data_List_Lazy_alterAt_f_1 = $f_1;
+  $__tco_var_Data_List_Lazy_alterAt_xs_2 = $xs_2;
+  tco_loop_Data_List_Lazy_alterAt:;
+  $n_0 = $__tco_var_Data_List_Lazy_alterAt_n_0;
+  $f_1 = $__tco_var_Data_List_Lazy_alterAt_f_1;
+  $xs_2 = $__tco_var_Data_List_Lazy_alterAt_xs_2;
   $__res = ((($GLOBALS['Data_Lazy_functorLazy'])['map'])(function($v1_3 = null) use ($f_1, $n_0) {
   $__num = \func_num_args();
   $__t0 = null;;
@@ -2099,7 +2278,7 @@ default:
 ;
 break;
 };
-$__t1 = new Phpurs_Data2("Cons", ($v1_3)->{'value0'}, ((($GLOBALS['Data_List_Lazy_alterAt'])(((($GLOBALS['Data_Ring_ringInt'])['sub'])($n_0))(1)))($f_1))(($v1_3)->{'value1'}));
+$__t1 = new Phpurs_Data2("Cons", ($v1_3)->{'value0'}, ((($GLOBALS['Data_List_Lazy_alterAt'])(($n_0 - 1)))($f_1))(($v1_3)->{'value1'}));
 end_branch_1:;
 $__t0 = $__t1;
 goto end_branch_0;;
@@ -2126,7 +2305,7 @@ $GLOBALS['Data_List_Lazy_modifyAt'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_List_Lazy_alterAt'])($n_0))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Maybe_Just']))($f_1));
+  $__res = (($GLOBALS['Data_List_Lazy_alterAt'])($n_0))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Maybe_Just']))($f_1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

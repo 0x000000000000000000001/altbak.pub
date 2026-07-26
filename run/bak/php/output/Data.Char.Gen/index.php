@@ -104,42 +104,7 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
 // Data_Char_Gen_toEnumWithDefaults
-$GLOBALS['Data_Char_Gen_toEnumWithDefaults'] = (function() use (&$__fn) {
-$bottom2_0_0 = ((($GLOBALS['Data_Enum_boundedEnumChar'])['Bounded0'])(null))['bottom'];
-return (function() use ($bottom2_0_0) {
-  $__fn = function($low_1 = null, $high_2 = null, $x_3 = null) use ($bottom2_0_0, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
-  $v_4_1 = (($GLOBALS['Data_Enum_boundedEnumChar'])['toEnum'])($x_3);
-  $__t2 = null;;
-  if ((is_object($v_4_1) && (($v_4_1)->{'tag'} === "Just"))) {
-$__t2 = ($v_4_1)->{'value0'};
-goto end_branch_2;;
-};
-  if ((is_object($v_4_1) && (($v_4_1)->{'tag'} === "Nothing"))) {
-$__t3 = null;;
-if (($x_3 < (($GLOBALS['Data_Enum_boundedEnumChar'])['fromEnum'])($bottom2_0_0))) {
-$__t3 = $low_1;
-goto end_branch_3;;
-};
-$__t3 = $high_2;
-end_branch_3:;
-$__t2 = $__t3;
-goto end_branch_2;;
-};
-  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t2 = null;
-  end_branch_2:;
-  $__res = $__t2;
-  goto __end;;
-  __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
-})();
+$GLOBALS['Data_Char_Gen_toEnumWithDefaults'] = ($GLOBALS['Data_Enum_toEnumWithDefaults'])($GLOBALS['Data_Enum_boundedEnumChar']);
 
 // Data_Char_Gen_foldable1NonEmpty
 $GLOBALS['Data_Char_Gen_foldable1NonEmpty'] = ($GLOBALS['Data_NonEmpty_foldable1NonEmpty'])($GLOBALS['Data_Foldable_foldableArray']);

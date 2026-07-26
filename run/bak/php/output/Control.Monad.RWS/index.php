@@ -184,7 +184,7 @@ $GLOBALS['Control_Monad_RWS_runRWS'] = (function() {
 // Control_Monad_RWS_mapRWS
 $GLOBALS['Control_Monad_RWS_mapRWS'] = function($f_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Identity_Identity']))($f_0)))($GLOBALS['Unsafe_Coerce_unsafeCoerce']);
+  $__local_var_1_0 = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Identity_Identity']))($f_0)))($GLOBALS['Unsafe_Coerce_unsafeCoerce']);
   $__res = (function() use ($__local_var_1_0) {
   $__fn = function($v_2 = null, $r_3 = null, $s_4 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();

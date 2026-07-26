@@ -99,6 +99,15 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+// Control_Biapply_identity
+$GLOBALS['Control_Biapply_identity'] = function($x_0 = null) {
+  $__num = \func_num_args();
+  $__res = $x_0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+
 // Control_Biapply_biapplyTuple
 $GLOBALS['Control_Biapply_biapplyTuple'] = ["biapply" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
@@ -136,19 +145,19 @@ $GLOBALS['Control_Biapply_biapplyFirst'] = (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($dictBiapply_0)['biapply'])(((($GLOBALS['Control_Category_categoryFn'])['identity'])(((((($dictBiapply_0)['Bifunctor0'])(null))['bimap'])(function($v_3 = null) {
+  $__res = ((($dictBiapply_0)['biapply'])((((((($dictBiapply_0)['Bifunctor0'])(null))['bimap'])(function($v_3 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Category_categoryFn'])['identity'];
+  $__res = $GLOBALS['Control_Biapply_identity'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }))(function($v_3 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Category_categoryFn'])['identity'];
+  $__res = $GLOBALS['Control_Biapply_identity'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-})))($a_1)))($b_2);
+}))($a_1)))($b_2);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -163,7 +172,7 @@ $GLOBALS['Control_Biapply_biapplySecond'] = (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($dictBiapply_0)['biapply'])(((($GLOBALS['Control_Category_categoryFn'])['identity'])(((((($dictBiapply_0)['Bifunctor0'])(null))['bimap'])($GLOBALS['Data_Function_const']))($GLOBALS['Data_Function_const'])))($a_1)))($b_2);
+  $__res = ((($dictBiapply_0)['biapply'])((((((($dictBiapply_0)['Bifunctor0'])(null))['bimap'])($GLOBALS['Data_Function_const']))($GLOBALS['Data_Function_const']))($a_1)))($b_2);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -178,7 +187,7 @@ $GLOBALS['Control_Biapply_bilift2'] = (function() {
   if ($__num < 5) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 5);
   }
-  $__res = ((($dictBiapply_0)['biapply'])(((($GLOBALS['Control_Category_categoryFn'])['identity'])(((((($dictBiapply_0)['Bifunctor0'])(null))['bimap'])($f_1))($g_2)))($a_3)))($b_4);
+  $__res = ((($dictBiapply_0)['biapply'])((((((($dictBiapply_0)['Bifunctor0'])(null))['bimap'])($f_1))($g_2))($a_3)))($b_4);
   goto __end;;
   __end:
   return $__num > 5 ? $__res(...\array_slice(\func_get_args(), 5)) : $__res;
@@ -193,7 +202,7 @@ $GLOBALS['Control_Biapply_bilift3'] = (function() {
   if ($__num < 6) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 6);
   }
-  $__res = ((($dictBiapply_0)['biapply'])(((($dictBiapply_0)['biapply'])(((($GLOBALS['Control_Category_categoryFn'])['identity'])(((((($dictBiapply_0)['Bifunctor0'])(null))['bimap'])($f_1))($g_2)))($a_3)))($b_4)))($c_5);
+  $__res = ((($dictBiapply_0)['biapply'])(((($dictBiapply_0)['biapply'])((((((($dictBiapply_0)['Bifunctor0'])(null))['bimap'])($f_1))($g_2))($a_3)))($b_4)))($c_5);
   goto __end;;
   __end:
   return $__num > 6 ? $__res(...\array_slice(\func_get_args(), 6)) : $__res;

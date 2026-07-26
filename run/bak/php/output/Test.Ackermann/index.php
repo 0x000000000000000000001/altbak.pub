@@ -114,11 +114,16 @@ $GLOBALS['Test_Ackermann_ackermann'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__t0 = null;;
+  $__tco_var_Test_Ackermann_ackermann_v_0 = $v_0;
+  $__tco_var_Test_Ackermann_ackermann_v1_1 = $v1_1;
+  tco_loop_Test_Ackermann_ackermann:;
+  $v_0 = $__tco_var_Test_Ackermann_ackermann_v_0;
+  $v1_1 = $__tco_var_Test_Ackermann_ackermann_v1_1;
+  $__t2 = null;;
   switch ($v_0) {
 case 0:
-$__t0 = ((($GLOBALS['Data_Semiring_semiringInt'])['add'])($v1_1))(1);
-goto end_branch_0;;
+$__t2 = ($v1_1 + 1);
+goto end_branch_2;;
 break;
 default:
 ;
@@ -126,16 +131,26 @@ break;
 };
   switch ($v1_1) {
 case 0:
-$__t0 = (($GLOBALS['Test_Ackermann_ackermann'])(((($GLOBALS['Data_Ring_ringInt'])['sub'])($v_0))(1)))(1);
-goto end_branch_0;;
+$__tco_3 = ($v_0 - 1);
+$__tco_4 = 1;
+$__tco_var_Test_Ackermann_ackermann_v_0 = $__tco_3;
+$__tco_var_Test_Ackermann_ackermann_v1_1 = $__tco_4;
+goto tco_loop_Test_Ackermann_ackermann;;
+$__t2 = null;
+goto end_branch_2;;
 break;
 default:
 ;
 break;
 };
-  $__t0 = (($GLOBALS['Test_Ackermann_ackermann'])(((($GLOBALS['Data_Ring_ringInt'])['sub'])($v_0))(1)))((($GLOBALS['Test_Ackermann_ackermann'])($v_0))(((($GLOBALS['Data_Ring_ringInt'])['sub'])($v1_1))(1)));
-  end_branch_0:;
-  $__res = $__t0;
+  $__tco_0 = ($v_0 - 1);
+  $__tco_1 = (($GLOBALS['Test_Ackermann_ackermann'])($v_0))(($v1_1 - 1));
+  $__tco_var_Test_Ackermann_ackermann_v_0 = $__tco_0;
+  $__tco_var_Test_Ackermann_ackermann_v1_1 = $__tco_1;
+  goto tco_loop_Test_Ackermann_ackermann;;
+  $__t2 = null;
+  end_branch_2:;
+  $__res = $__t2;
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

@@ -110,6 +110,15 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+// Data_Bitraversable_identity
+$GLOBALS['Data_Bitraversable_identity'] = function($x_0 = null) {
+  $__num = \func_num_args();
+  $__res = $x_0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+
 // Data_Bitraversable_bitraverse
 $GLOBALS['Data_Bitraversable_bitraverse'] = function($dict_0 = null) {
   $__num = \func_num_args();
@@ -603,7 +612,7 @@ $GLOBALS['Data_Bitraversable_bisequenceDefault'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($dictBitraversable_0)['bitraverse'])($dictApplicative_1))(($GLOBALS['Control_Category_categoryFn'])['identity']))(($GLOBALS['Control_Category_categoryFn'])['identity']);
+  $__res = (((($dictBitraversable_0)['bitraverse'])($dictApplicative_1))($GLOBALS['Data_Bitraversable_identity']))($GLOBALS['Data_Bitraversable_identity']);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

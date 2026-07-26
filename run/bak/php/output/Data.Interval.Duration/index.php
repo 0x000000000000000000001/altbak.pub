@@ -437,7 +437,7 @@ $GLOBALS['Data_Interval_Duration_hour'] = function($v_0 = null) {
 };
 
 // Data_Interval_Duration_millisecond
-$GLOBALS['Data_Interval_Duration_millisecond'] = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(function($v_0 = null) {
+$GLOBALS['Data_Interval_Duration_millisecond'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v_0 = null) {
   $__num = \func_num_args();
   $__res = new Phpurs_Data6("Node", 1, 1, new Phpurs_Data0("Second"), $v_0, new Phpurs_Data0("Leaf"), new Phpurs_Data0("Leaf"));
   goto __end;;

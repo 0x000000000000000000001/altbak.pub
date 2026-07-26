@@ -433,7 +433,7 @@ $GLOBALS['Data_Lazy_traversableLazy'] = ["traverse" => (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((((((($dictApplicative_0)['Apply0'])(null))['Functor0'])(null))['map'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Lazy_defer']))($GLOBALS['Data_Function_const'])))(($f_1)(($GLOBALS['Data_Lazy_force'])($l_2)));
+  $__res = ((((((($dictApplicative_0)['Apply0'])(null))['Functor0'])(null))['map'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Lazy_defer']))($GLOBALS['Data_Function_const'])))(($f_1)(($GLOBALS['Data_Lazy_force'])($l_2)));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -445,7 +445,7 @@ $GLOBALS['Data_Lazy_traversableLazy'] = ["traverse" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((((($dictApplicative_0)['Apply0'])(null))['Functor0'])(null))['map'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Lazy_defer']))($GLOBALS['Data_Function_const'])))(($GLOBALS['Data_Lazy_force'])($l_1));
+  $__res = ((((((($dictApplicative_0)['Apply0'])(null))['Functor0'])(null))['map'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Lazy_defer']))($GLOBALS['Data_Function_const'])))(($GLOBALS['Data_Lazy_force'])($l_1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -551,7 +551,7 @@ $GLOBALS['Data_Lazy_traversable1Lazy'] = ["traverse1" => (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((((($dictApply_0)['Functor0'])(null))['map'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Lazy_defer']))($GLOBALS['Data_Function_const'])))(($f_1)(($GLOBALS['Data_Lazy_force'])($l_2)));
+  $__res = ((((($dictApply_0)['Functor0'])(null))['map'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Lazy_defer']))($GLOBALS['Data_Function_const'])))(($f_1)(($GLOBALS['Data_Lazy_force'])($l_2)));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -563,7 +563,7 @@ $GLOBALS['Data_Lazy_traversable1Lazy'] = ["traverse1" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((($dictApply_0)['Functor0'])(null))['map'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Lazy_defer']))($GLOBALS['Data_Function_const'])))(($GLOBALS['Data_Lazy_force'])($l_1));
+  $__res = ((((($dictApply_0)['Functor0'])(null))['map'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Lazy_defer']))($GLOBALS['Data_Function_const'])))(($GLOBALS['Data_Lazy_force'])($l_1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -731,7 +731,7 @@ $GLOBALS['Data_Lazy_commutativeRingLazy'] = function($dictCommutativeRing_0 = nu
 $GLOBALS['Data_Lazy_euclideanRingLazy'] = function($dictEuclideanRing_0 = null) {
   $__num = \func_num_args();
   $ringLazy1_1_0 = ($GLOBALS['Data_Lazy_ringLazy'])((((($dictEuclideanRing_0)['CommutativeRing0'])(null))['Ring0'])(null));
-  $__res = ["degree" => ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(($dictEuclideanRing_0)['degree']))($GLOBALS['Data_Lazy_force']), "div" => (function() use ($dictEuclideanRing_0) {
+  $__res = ["degree" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictEuclideanRing_0)['degree']))($GLOBALS['Data_Lazy_force']), "div" => (function() use ($dictEuclideanRing_0) {
   $__fn = function($a_2 = null, $b_3 = null) use ($dictEuclideanRing_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {

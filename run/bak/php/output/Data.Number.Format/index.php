@@ -103,53 +103,56 @@ $GLOBALS['Data_Number_Format_toString'] = new class { public function __invoke(.
 
 
 // Data_Number_Format_clamp
-$GLOBALS['Data_Number_Format_clamp'] = (function() {
-  $__fn = function($low_0 = null, $hi_1 = null, $x_2 = null) use (&$__fn) {
+$GLOBALS['Data_Number_Format_clamp'] = (function() use (&$__fn) {
+$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT"));
+return (function() use ($__local_var_0_0) {
+  $__fn = function($low_1 = null, $hi_2 = null, $x_3 = null) use ($__local_var_0_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $v_3_0 = ((($GLOBALS['Data_Ord_ordInt'])['compare'])($low_0))($x_2);
-  $__t1 = null;;
-  if ((is_object($v_3_0) && (($v_3_0)->{'tag'} === "LT"))) {
-$__t1 = $x_2;
-goto end_branch_1;;
+  $v_4_1 = (($__local_var_0_0)($low_1))($x_3);
+  $__t2 = null;;
+  if ((is_object($v_4_1) && (($v_4_1)->{'tag'} === "LT"))) {
+$__t2 = $x_3;
+goto end_branch_2;;
 };
-  if ((is_object($v_3_0) && (($v_3_0)->{'tag'} === "EQ"))) {
-$__t1 = $low_0;
-goto end_branch_1;;
+  if ((is_object($v_4_1) && (($v_4_1)->{'tag'} === "EQ"))) {
+$__t2 = $low_1;
+goto end_branch_2;;
 };
-  if ((is_object($v_3_0) && (($v_3_0)->{'tag'} === "GT"))) {
-$__t1 = $low_0;
-goto end_branch_1;;
-};
-  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t1 = null;
-  end_branch_1:;
-  $__local_var_4_1 = $__t1;
-  $v_5_3 = ((($GLOBALS['Data_Ord_ordInt'])['compare'])($hi_1))($__local_var_4_1);
-  $__t4 = null;;
-  if ((is_object($v_5_3) && (($v_5_3)->{'tag'} === "LT"))) {
-$__t4 = $hi_1;
-goto end_branch_4;;
-};
-  if ((is_object($v_5_3) && (($v_5_3)->{'tag'} === "EQ"))) {
-$__t4 = $hi_1;
-goto end_branch_4;;
-};
-  if ((is_object($v_5_3) && (($v_5_3)->{'tag'} === "GT"))) {
-$__t4 = $__local_var_4_1;
-goto end_branch_4;;
+  if ((is_object($v_4_1) && (($v_4_1)->{'tag'} === "GT"))) {
+$__t2 = $low_1;
+goto end_branch_2;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t4 = null;
-  end_branch_4:;
-  $__res = $__t4;
+  $__t2 = null;
+  end_branch_2:;
+  $__local_var_5_2 = $__t2;
+  $v_6_4 = (($__local_var_0_0)($hi_2))($__local_var_5_2);
+  $__t5 = null;;
+  if ((is_object($v_6_4) && (($v_6_4)->{'tag'} === "LT"))) {
+$__t5 = $hi_2;
+goto end_branch_5;;
+};
+  if ((is_object($v_6_4) && (($v_6_4)->{'tag'} === "EQ"))) {
+$__t5 = $hi_2;
+goto end_branch_5;;
+};
+  if ((is_object($v_6_4) && (($v_6_4)->{'tag'} === "GT"))) {
+$__t5 = $__local_var_5_2;
+goto end_branch_5;;
+};
+  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+  $__t5 = null;
+  end_branch_5:;
+  $__res = $__t5;
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
+})();
 })();
 
 // Data_Number_Format_Precision
@@ -205,11 +208,11 @@ goto end_branch_0;;
 };
 
 // Data_Number_Format_precision
-$GLOBALS['Data_Number_Format_precision'] = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Number_Format_Precision']))((($GLOBALS['Data_Number_Format_clamp'])(1))(21));
+$GLOBALS['Data_Number_Format_precision'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Number_Format_Precision']))((($GLOBALS['Data_Number_Format_clamp'])(1))(21));
 
 // Data_Number_Format_fixed
-$GLOBALS['Data_Number_Format_fixed'] = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Number_Format_Fixed']))((($GLOBALS['Data_Number_Format_clamp'])(0))(20));
+$GLOBALS['Data_Number_Format_fixed'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Number_Format_Fixed']))((($GLOBALS['Data_Number_Format_clamp'])(0))(20));
 
 // Data_Number_Format_exponential
-$GLOBALS['Data_Number_Format_exponential'] = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Number_Format_Exponential']))((($GLOBALS['Data_Number_Format_clamp'])(0))(20));
+$GLOBALS['Data_Number_Format_exponential'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Number_Format_Exponential']))((($GLOBALS['Data_Number_Format_clamp'])(0))(20));
 

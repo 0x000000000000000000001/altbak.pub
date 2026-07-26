@@ -107,6 +107,24 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+// Test_ListOps_lessThan
+$GLOBALS['Test_ListOps_lessThan'] = (function() use (&$__fn) {
+$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT"));
+return (function() use ($__local_var_0_0) {
+  $__fn = function($a1_1 = null, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = (is_object((($__local_var_0_0)($a1_1))($a2_2)) && (((($__local_var_0_0)($a1_1))($a2_2))->{'tag'} === "LT"));
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
+})();
+
 // Test_ListOps_Nil
 $GLOBALS['Test_ListOps_Nil'] = ($GLOBALS['__phpurs_data0_Nil'] ??= new Phpurs_Data0("Nil"));
 
@@ -145,11 +163,11 @@ $GLOBALS['Test_ListOps_range'] = (function() {
   $curr_3 = $__tco_var_go__2_0_0_curr_3;
   $acc_4 = $__tco_var_go__2_0_0_acc_4;
   $__t2 = null;;
-  if (($curr_3 < $start_0)) {
+  if ((($GLOBALS['Test_ListOps_lessThan'])($curr_3))($start_0)) {
 $__t2 = $acc_4;
 goto end_branch_2;;
 };
-  $__tco_0 = ((($GLOBALS['Data_Ring_ringInt'])['sub'])($curr_3))(1);
+  $__tco_0 = ($curr_3 - 1);
   $__tco_1 = new Phpurs_Data2("Cons", $curr_3, $acc_4);
   $__tco_var_go__2_0_0_curr_3 = $__tco_0;
   $__tco_var_go__2_0_0_acc_4 = $__tco_1;
@@ -178,13 +196,27 @@ $GLOBALS['Test_ListOps_foldl'] = (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
+  $__tco_var_Test_ListOps_foldl_v_0 = $v_0;
+  $__tco_var_Test_ListOps_foldl_v1_1 = $v1_1;
+  $__tco_var_Test_ListOps_foldl_v2_2 = $v2_2;
+  tco_loop_Test_ListOps_foldl:;
+  $v_0 = $__tco_var_Test_ListOps_foldl_v_0;
+  $v1_1 = $__tco_var_Test_ListOps_foldl_v1_1;
+  $v2_2 = $__tco_var_Test_ListOps_foldl_v2_2;
   $__t0 = null;;
   if ((is_object($v2_2) && (($v2_2)->{'tag'} === "Nil"))) {
 $__t0 = $v1_1;
 goto end_branch_0;;
 };
   if ((is_object($v2_2) && (($v2_2)->{'tag'} === "Cons"))) {
-$__t0 = ((($GLOBALS['Test_ListOps_foldl'])($v_0))((($v_0)($v1_1))(($v2_2)->{'value0'})))(($v2_2)->{'value1'});
+$__tco_1 = $v_0;
+$__tco_2 = (($v_0)($v1_1))(($v2_2)->{'value0'});
+$__tco_3 = ($v2_2)->{'value1'};
+$__tco_var_Test_ListOps_foldl_v_0 = $__tco_1;
+$__tco_var_Test_ListOps_foldl_v1_1 = $__tco_2;
+$__tco_var_Test_ListOps_foldl_v2_2 = $__tco_3;
+goto tco_loop_Test_ListOps_foldl;;
+$__t0 = null;
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -220,7 +252,8 @@ goto end_branch_0;;
 };
   if ((is_object($v_2) && (($v_2)->{'tag'} === "Cons"))) {
 $__t3 = null;;
-if (((($GLOBALS['Data_Eq_eqInt'])['eq'])(((($GLOBALS['Data_EuclideanRing_euclideanRingInt'])['mod'])(($v_2)->{'value0'}))(2)))(0)) {
+switch (((($GLOBALS['Data_EuclideanRing_euclideanRingInt'])['mod'])(($v_2)->{'value0'}))(2)) {
+case 0:
 $__tco_4 = ($v_2)->{'value1'};
 $__tco_5 = new Phpurs_Data2("Cons", ($v_2)->{'value0'}, $v1_3);
 $__tco_var_go__1_0_0_v_2 = $__tco_4;
@@ -228,6 +261,10 @@ $__tco_var_go__1_0_0_v1_3 = $__tco_5;
 goto tco_loop_go__1_0_0;;
 $__t3 = null;
 goto end_branch_3;;
+break;
+default:
+;
+break;
 };
 $__tco_1 = ($v_2)->{'value1'};
 $__tco_2 = $v1_3;
@@ -258,7 +295,7 @@ goto end_branch_0;;
 // Test_ListOps_sumEvens
 $GLOBALS['Test_ListOps_sumEvens'] = function($n_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Test_ListOps_foldl'])(($GLOBALS['Data_Semiring_semiringInt'])['add']))(0))(($GLOBALS['Test_ListOps_filterEvens'])((($GLOBALS['Test_ListOps_range'])(1))($n_0)));
+  $__res = ((($GLOBALS['Test_ListOps_foldl'])($GLOBALS['Data_Semiring_intAdd']))(0))(($GLOBALS['Test_ListOps_filterEvens'])((($GLOBALS['Test_ListOps_range'])(1))($n_0)));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -270,7 +307,7 @@ $GLOBALS['Test_ListOps_describe'] = ($GLOBALS['Effect_Console_log'])("List Proce
 // Test_ListOps_act
 $GLOBALS['Test_ListOps_act'] = ((($GLOBALS['Effect_bindEffect'])['bind'])(($GLOBALS['Bench_opaque'])(900)))(function($dummy_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_Console_log'])((($GLOBALS['Data_Show_showInt'])['show'])(((($GLOBALS['Test_ListOps_foldl'])(($GLOBALS['Data_Semiring_semiringInt'])['add']))(0))(($GLOBALS['Test_ListOps_filterEvens'])((($GLOBALS['Test_ListOps_range'])(1))($dummy_0)))));
+  $__res = ($GLOBALS['Effect_Console_log'])((($GLOBALS['Data_Show_showInt'])['show'])(((($GLOBALS['Test_ListOps_foldl'])($GLOBALS['Data_Semiring_intAdd']))(0))(($GLOBALS['Test_ListOps_filterEvens'])((($GLOBALS['Test_ListOps_range'])(1))($dummy_0)))));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

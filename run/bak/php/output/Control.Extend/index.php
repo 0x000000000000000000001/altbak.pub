@@ -99,6 +99,15 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $GLOBALS['Control_Extend_arrayExtend'] = new class { public function __invoke(...$args) { return $this; } };
 
 
+// Control_Extend_identity
+$GLOBALS['Control_Extend_identity'] = function($x_0 = null) {
+  $__num = \func_num_args();
+  $__res = $x_0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+
 // Control_Extend_extendFn
 $GLOBALS['Control_Extend_extendFn'] = function($dictSemigroup_0 = null) {
   $__num = \func_num_args();
@@ -168,7 +177,7 @@ $GLOBALS['Control_Extend_extendFlipped'] = (function() {
 // Control_Extend_duplicate
 $GLOBALS['Control_Extend_duplicate'] = function($dictExtend_0 = null) {
   $__num = \func_num_args();
-  $__res = (($dictExtend_0)['extend'])(($GLOBALS['Control_Category_categoryFn'])['identity']);
+  $__res = (($dictExtend_0)['extend'])($GLOBALS['Control_Extend_identity']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

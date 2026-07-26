@@ -138,7 +138,7 @@ $GLOBALS['Control_Monad_State_Trans_withStateT'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($v_1))($f_0);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($v_1))($f_0);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -192,7 +192,7 @@ $GLOBALS['Control_Monad_State_Trans_mapStateT'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($f_0))($v_1);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($f_0))($v_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -475,7 +475,7 @@ $GLOBALS['Control_Monad_State_Trans_monadAskStateT'] = function($dictMonadAsk_0 
 $GLOBALS['Control_Monad_State_Trans_monadReaderStateT'] = function($dictMonadReader_0 = null) {
   $__num = \func_num_args();
   $monadAskStateT1_1_0 = ($GLOBALS['Control_Monad_State_Trans_monadAskStateT'])((($dictMonadReader_0)['MonadAsk0'])(null));
-  $__res = ["local" => ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Control_Monad_State_Trans_mapStateT']))(($dictMonadReader_0)['local']), "MonadAsk0" => function($_dollar__unused_2 = null) use ($monadAskStateT1_1_0) {
+  $__res = ["local" => (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_State_Trans_mapStateT']))(($dictMonadReader_0)['local']), "MonadAsk0" => function($_dollar__unused_2 = null) use ($monadAskStateT1_1_0) {
   $__num = \func_num_args();
   $__res = $monadAskStateT1_1_0;
   goto __end;;
@@ -563,7 +563,7 @@ $GLOBALS['Control_Monad_State_Trans_monadEffectState'] = function($dictMonadEffe
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = ["liftEffect" => ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($GLOBALS['Control_Monad_State_Trans_monadTransStateT'])['lift'])($Monad0_1_0)))(($dictMonadEffect_0)['liftEffect']), "Monad0" => function($_dollar__unused_3 = null) use ($monadStateT1_2_1) {
+  $__res = ["liftEffect" => (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_State_Trans_monadTransStateT'])['lift'])($Monad0_1_0)))(($dictMonadEffect_0)['liftEffect']), "Monad0" => function($_dollar__unused_3 = null) use ($monadStateT1_2_1) {
   $__num = \func_num_args();
   $__res = $monadStateT1_2_1;
   goto __end;;
@@ -659,7 +659,7 @@ $GLOBALS['Control_Monad_State_Trans_monadStateStateT'] = function($dictMonad_0 =
 }];
   $__res = ["state" => function($f_3 = null) use ($pure_1_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($pure_1_0))($f_3);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($pure_1_0))($f_3);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -693,7 +693,7 @@ $GLOBALS['Control_Monad_State_Trans_monadTellStateT'] = function($dictMonadTell_
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = ["tell" => ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($GLOBALS['Control_Monad_State_Trans_monadTransStateT'])['lift'])($Monad1_1_0)))(($dictMonadTell_0)['tell']), "Semigroup0" => function($_dollar__unused_4 = null) use ($Semigroup0_2_1) {
+  $__res = ["tell" => (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_State_Trans_monadTransStateT'])['lift'])($Monad1_1_0)))(($dictMonadTell_0)['tell']), "Semigroup0" => function($_dollar__unused_4 = null) use ($Semigroup0_2_1) {
   $__num = \func_num_args();
   $__res = $Semigroup0_2_1;
   goto __end;;
@@ -861,7 +861,7 @@ $GLOBALS['Control_Monad_State_Trans_monadSTStateT'] = function($dictMonadST_0 = 
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = ["liftST" => ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($GLOBALS['Control_Monad_State_Trans_monadTransStateT'])['lift'])($Monad0_1_0)))(($dictMonadST_0)['liftST']), "Monad0" => function($_dollar__unused_3 = null) use ($monadStateT1_2_1) {
+  $__res = ["liftST" => (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_State_Trans_monadTransStateT'])['lift'])($Monad0_1_0)))(($dictMonadST_0)['liftST']), "Monad0" => function($_dollar__unused_3 = null) use ($monadStateT1_2_1) {
   $__num = \func_num_args();
   $__res = $monadStateT1_2_1;
   goto __end;;

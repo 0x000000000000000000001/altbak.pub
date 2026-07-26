@@ -101,7 +101,7 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
 // Control_Comonad_Traced_traced
-$GLOBALS['Control_Comonad_Traced_traced'] = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Control_Comonad_Traced_Trans_TracedT']))($GLOBALS['Data_Identity_Identity']);
+$GLOBALS['Control_Comonad_Traced_traced'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Comonad_Traced_Trans_TracedT']))($GLOBALS['Data_Identity_Identity']);
 
 // Control_Comonad_Traced_runTraced
 $GLOBALS['Control_Comonad_Traced_runTraced'] = function($v_0 = null) {

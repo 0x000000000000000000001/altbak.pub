@@ -113,7 +113,7 @@ $__t1 = ($GLOBALS['Partial__crashWith'])(($__local_var_2_0)->{'value0'});
 goto end_branch_1;;
 };
   if ((is_object($__local_var_2_0) && (($__local_var_2_0)->{'tag'} === "Right"))) {
-$__t1 = (($GLOBALS['Control_Category_categoryFn'])['identity'])(($__local_var_2_0)->{'value0'});
+$__t1 = ($__local_var_2_0)->{'value0'};
 goto end_branch_1;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);

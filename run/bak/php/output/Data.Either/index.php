@@ -169,7 +169,7 @@ goto end_branch_0;;
 // Data_Either_note'
 $GLOBALS['Data_Either_note__prime__'] = function($f_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Maybe_maybe__prime__'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Either_Left']))($f_0)))($GLOBALS['Data_Either_Right']);
+  $__res = (($GLOBALS['Data_Maybe_maybe__prime__'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Either_Left']))($f_0)))($GLOBALS['Data_Either_Right']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

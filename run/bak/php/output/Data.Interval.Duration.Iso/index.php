@@ -176,6 +176,24 @@ goto end_branch_0;;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
 
+// Data_Interval_Duration_Iso_greaterThan
+$GLOBALS['Data_Interval_Duration_Iso_greaterThan'] = (function() use (&$__fn) {
+$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT"));
+return (function() use ($__local_var_0_0) {
+  $__fn = function($a1_1 = null, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = (is_object((($__local_var_0_0)($a1_1))($a2_2)) && (((($__local_var_0_0)($a1_1))($a2_2))->{'tag'} === "GT"));
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
+})();
+
 // Data_Interval_Duration_Iso_foldMap1
 $GLOBALS['Data_Interval_Duration_Iso_foldMap1'] = (($GLOBALS['Data_List_Types_foldableList'])['foldMap'])($GLOBALS['Data_List_Types_monoidList']);
 
@@ -231,11 +249,11 @@ return ((($GLOBALS['Data_Foldable_foldableArray'])['foldMap'])(["mempty" => func
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]))(($GLOBALS['Control_Category_categoryFn'])['identity']);
+}]))($GLOBALS['Data_Foldable_identity']);
 })();
 
 // Data_Interval_Duration_Iso_toUnfoldable
-$GLOBALS['Data_Interval_Duration_Iso_toUnfoldable'] = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($GLOBALS['Data_List_Types_unfoldableList'])['unfoldr'])($GLOBALS['Data_Map_Internal_stepUnfoldr'])))($GLOBALS['Data_Map_Internal_toMapIter']);
+$GLOBALS['Data_Interval_Duration_Iso_toUnfoldable'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_List_Types_unfoldableList'])['unfoldr'])($GLOBALS['Data_Map_Internal_stepUnfoldr'])))($GLOBALS['Data_Map_Internal_toMapIter']);
 
 // Data_Interval_Duration_Iso_IsEmpty
 $GLOBALS['Data_Interval_Duration_Iso_IsEmpty'] = ($GLOBALS['__phpurs_data0_IsEmpty'] ??= new Phpurs_Data0("IsEmpty"));
@@ -497,17 +515,17 @@ $__t2 = null;
 end_branch_2:;
 $__t3 = null;;
 if ((is_object(($v_0)['asMap']) && ((($v_0)['asMap'])->{'tag'} === "Leaf"))) {
-$__t3 = false;
+$__t3 = 0;
 goto end_branch_3;;
 };
 if ((is_object(($v_0)['asMap']) && ((($v_0)['asMap'])->{'tag'} === "Node"))) {
-$__t3 = ((($v_0)['asMap'])->{'value1'} > 1);
+$__t3 = (($v_0)['asMap'])->{'value1'};
 goto end_branch_3;;
 };
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t3 = null;
 end_branch_3:;
-return ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])($__t2))($__t3);
+return ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])($__t2))((($GLOBALS['Data_Interval_Duration_Iso_greaterThan'])($__t3))(1));
 })()) {
 $__t0 = (($GLOBALS['Data_List_Types_applicativeList'])['pure'])(new Phpurs_Data0("InvalidWeekComponentUsage"));
 goto end_branch_0;;
@@ -545,7 +563,7 @@ goto end_branch_0;;
 // Data_Interval_Duration_Iso_checkFractionalUse
 $GLOBALS['Data_Interval_Duration_Iso_checkFractionalUse'] = function($v_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($GLOBALS['Data_List_span'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(function($a_1 = null) {
+  $__local_var_1_0 = (($GLOBALS['Data_List_span'])((($GLOBALS['Control_Semigroupoid_composeImpl'])(function($a_1 = null) {
   $__num = \func_num_args();
   $__res = (($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['not'])(((($GLOBALS['Data_Eq_eqBoolean'])['eq'])(((($GLOBALS['Data_Eq_eqNumber'])['eq'])(($GLOBALS['Data_Number_floor'])($a_1)))($a_1)))(false));
   goto __end;;
@@ -553,7 +571,7 @@ $GLOBALS['Data_Interval_Duration_Iso_checkFractionalUse'] = function($v_0 = null
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }))($GLOBALS['Data_Tuple_snd'])))(($v_0)['asList']);
   $__t1 = null;;
-  if (((is_object(($__local_var_1_0)['rest']) && ((($__local_var_1_0)['rest'])->{'tag'} === "Cons")) && ((($GLOBALS['Data_Interval_Duration_Iso_foldMap2'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Monoid_Additive_Additive']))($GLOBALS['Data_Number_abs'])))($GLOBALS['Data_Tuple_snd'])))((($__local_var_1_0)['rest'])->{'value1'}) > 0.0))) {
+  if (((is_object(($__local_var_1_0)['rest']) && ((($__local_var_1_0)['rest'])->{'tag'} === "Cons")) && ((($GLOBALS['Data_Interval_Duration_Iso_foldMap2'])((($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Monoid_Additive_Additive']))($GLOBALS['Data_Number_abs'])))($GLOBALS['Data_Tuple_snd'])))((($__local_var_1_0)['rest'])->{'value1'}) > 0.0))) {
 $__t1 = (($GLOBALS['Data_List_Types_applicativeList'])['pure'])(new Phpurs_Data1("InvalidFractionalUse", ((($__local_var_1_0)['rest'])->{'value0'})->{'value0'}));
 goto end_branch_1;;
 };

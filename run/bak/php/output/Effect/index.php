@@ -275,7 +275,20 @@ $GLOBALS['Effect_lift2'] = (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($GLOBALS['Effect_applyEffect'])['apply'])(((((($GLOBALS['Effect_applyEffect'])['Functor0'])(null))['map'])($f_0))($a_1)))($b_2);
+  $__local_var_3_0 = (($GLOBALS['Effect_monadEffect'])['Bind1'])(null);
+  $__res = ((($__local_var_3_0)['bind'])(((((($GLOBALS['Effect_applyEffect'])['Functor0'])(null))['map'])($f_0))($a_1)))(function($f_prime_4 = null) use ($__local_var_3_0, $b_2) {
+  $__num = \func_num_args();
+  $__res = ((($__local_var_3_0)['bind'])($b_2))(function($a_prime_5 = null) use ($f_prime_4) {
+  $__num = \func_num_args();
+  $__res = (((($GLOBALS['Effect_monadEffect'])['Applicative0'])(null))['pure'])(($f_prime_4)($a_prime_5));
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;

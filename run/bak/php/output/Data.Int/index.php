@@ -219,6 +219,42 @@ $GLOBALS['Data_Int_toNumber'] = $ffi_Data_Int['toNumber'] ?? new class { public 
 $GLOBALS['Data_Int_toStringAs'] = $ffi_Data_Int['toStringAs'] ?? new class { public function __invoke(...$args) { return $this; } };
 
 
+// Data_Int_greaterThanOrEq
+$GLOBALS['Data_Int_greaterThanOrEq'] = (function() use (&$__fn) {
+$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT"));
+return (function() use ($__local_var_0_0) {
+  $__fn = function($a1_1 = null, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ( ! (is_object((($__local_var_0_0)($a1_1))($a2_2)) && (((($__local_var_0_0)($a1_1))($a2_2))->{'tag'} === "LT")));
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
+})();
+
+// Data_Int_lessThanOrEq
+$GLOBALS['Data_Int_lessThanOrEq'] = (function() use (&$__fn) {
+$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT"));
+return (function() use ($__local_var_0_0) {
+  $__fn = function($a1_1 = null, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ( ! (is_object((($__local_var_0_0)($a1_1))($a2_2)) && (((($__local_var_0_0)($a1_1))($a2_2))->{'tag'} === "GT")));
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
+})();
+
 // Data_Int_Even
 $GLOBALS['Data_Int_Even'] = ($GLOBALS['__phpurs_data0_Even'] ??= new Phpurs_Data0("Even"));
 
@@ -250,7 +286,7 @@ goto end_branch_0;;
 $GLOBALS['Data_Int_radix'] = function($n_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
-  if (((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(($n_0 >= 2)))(($n_0 <= 36))) {
+  if (((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])((($GLOBALS['Data_Int_greaterThanOrEq'])($n_0))(2)))((($GLOBALS['Data_Int_lessThanOrEq'])($n_0))(36))) {
 $__t0 = new Phpurs_Data1("Just", $n_0);
 goto end_branch_0;;
 };
@@ -265,7 +301,7 @@ goto end_branch_0;;
 // Data_Int_odd
 $GLOBALS['Data_Int_odd'] = function($x_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Eq_eqBoolean'])['eq'])(((($GLOBALS['Data_Eq_eqInt'])['eq'])(($x_0 & 1)))(0)))(false);
+  $__res = ((($GLOBALS['Data_Eq_eqBoolean'])['eq'])((($x_0 & 1) === 0)))(false);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -309,7 +345,7 @@ $__t1 = 0;
 goto end_branch_1;;
 };
   if ((is_object($__local_var_1_0) && (($__local_var_1_0)->{'tag'} === "Just"))) {
-$__t1 = (($GLOBALS['Control_Category_categoryFn'])['identity'])(($__local_var_1_0)->{'value0'});
+$__t1 = ($__local_var_1_0)->{'value0'};
 goto end_branch_1;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -324,18 +360,18 @@ goto end_branch_1;;
 };
 
 // Data_Int_round
-$GLOBALS['Data_Int_round'] = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Int_unsafeClamp']))($GLOBALS['Data_Number_round']);
+$GLOBALS['Data_Int_round'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Int_unsafeClamp']))($GLOBALS['Data_Number_round']);
 
 // Data_Int_trunc
-$GLOBALS['Data_Int_trunc'] = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Int_unsafeClamp']))($GLOBALS['Data_Number_trunc']);
+$GLOBALS['Data_Int_trunc'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Int_unsafeClamp']))($GLOBALS['Data_Number_trunc']);
 
 // Data_Int_floor
-$GLOBALS['Data_Int_floor'] = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Int_unsafeClamp']))($GLOBALS['Data_Number_floor']);
+$GLOBALS['Data_Int_floor'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Int_unsafeClamp']))($GLOBALS['Data_Number_floor']);
 
 // Data_Int_even
 $GLOBALS['Data_Int_even'] = function($x_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Eq_eqInt'])['eq'])(($x_0 & 1)))(0);
+  $__res = (($x_0 & 1) === 0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -344,14 +380,7 @@ $GLOBALS['Data_Int_even'] = function($x_0 = null) {
 // Data_Int_parity
 $GLOBALS['Data_Int_parity'] = function($n_0 = null) {
   $__num = \func_num_args();
-  $__t0 = null;;
-  if (((($GLOBALS['Data_Eq_eqInt'])['eq'])(($n_0 & 1)))(0)) {
-$__t0 = new Phpurs_Data0("Even");
-goto end_branch_0;;
-};
-  $__t0 = new Phpurs_Data0("Odd");
-  end_branch_0:;
-  $__res = $__t0;
+  $__res = match (($n_0 & 1)) { 0 => new Phpurs_Data0("Even"), default => new Phpurs_Data0("Odd") };
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -474,7 +503,13 @@ $GLOBALS['Data_Int_ringParity'] = ["sub" => ($GLOBALS['Data_Int_semiringParity']
 }];
 
 // Data_Int_divisionRingParity
-$GLOBALS['Data_Int_divisionRingParity'] = ["recip" => ($GLOBALS['Control_Category_categoryFn'])['identity'], "Ring0" => function($_dollar__unused_0 = null) {
+$GLOBALS['Data_Int_divisionRingParity'] = ["recip" => function($x_0 = null) {
+  $__num = \func_num_args();
+  $__res = $x_0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Ring0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Int_ringParity'];
   goto __end;;
@@ -546,7 +581,7 @@ goto end_branch_0;;
 }];
 
 // Data_Int_ceil
-$GLOBALS['Data_Int_ceil'] = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Int_unsafeClamp']))($GLOBALS['Data_Number_ceil']);
+$GLOBALS['Data_Int_ceil'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Int_unsafeClamp']))($GLOBALS['Data_Number_ceil']);
 
 // Data_Int_boundedParity
 $GLOBALS['Data_Int_boundedParity'] = ["bottom" => new Phpurs_Data0("Even"), "top" => new Phpurs_Data0("Odd"), "Ord0" => function($_dollar__unused_0 = null) {

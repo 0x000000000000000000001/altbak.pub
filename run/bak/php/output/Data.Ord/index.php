@@ -166,18 +166,6 @@ $GLOBALS['Data_Ord_ordNumberImpl'] = $ffi_Data_Ord['ordNumberImpl'] ?? new class
 $GLOBALS['Data_Ord_ordStringImpl'] = $ffi_Data_Ord['ordStringImpl'] ?? new class { public function __invoke(...$args) { return $this; } };
 
 
-// Data_Ord_negate
-$GLOBALS['Data_Ord_negate'] = (function() use (&$__fn) {
-$zero_0_0 = ((($GLOBALS['Data_Ring_ringInt'])['Semiring0'])(null))['zero'];
-return function($a_1 = null) use ($zero_0_0) {
-  $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Ring_ringInt'])['sub'])($zero_0_0))($a_1);
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
-})();
-
 // Data_Ord_ordVoid
 $GLOBALS['Data_Ord_ordVoid'] = ["compare" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
@@ -350,7 +338,7 @@ $GLOBALS['Data_Ord_ordNumber'] = ["compare" => ((($GLOBALS['Data_Ord_ordNumberIm
 // Data_Ord_ordInt
 $GLOBALS['Data_Ord_ordInt'] = ["compare" => ((($GLOBALS['Data_Ord_ordIntImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT")), "Eq0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = $GLOBALS['Data_Eq_eqInt'];
+  $__res = ["eq" => $GLOBALS['Data_Eq_eqIntImpl']];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -422,6 +410,9 @@ $GLOBALS['Data_Ord_compare'] = function($dict_0 = null) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
+
+// Data_Ord_compare2
+$GLOBALS['Data_Ord_compare2'] = ((($GLOBALS['Data_Ord_ordIntImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT"));
 
 // Data_Ord_comparing
 $GLOBALS['Data_Ord_comparing'] = (function() {
@@ -608,7 +599,7 @@ $GLOBALS['Data_Ord_ordArray'] = function($dictOrd_0 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_Ord_ordInt'])['compare'])(0))(((($GLOBALS['Data_Ord_ordArrayImpl'])((function() use ($dictOrd_0) {
+  $__res = (($GLOBALS['Data_Ord_compare2'])(0))(((($GLOBALS['Data_Ord_ordArrayImpl'])((function() use ($dictOrd_0) {
   $__fn = function($x_4 = null, $y_5 = null) use ($dictOrd_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -625,7 +616,7 @@ $__t2 = 1;
 goto end_branch_2;;
 };
   if ((is_object($v_6_1) && (($v_6_1)->{'tag'} === "GT"))) {
-$__t2 = ($GLOBALS['Data_Ord_negate'])(1);
+$__t2 = -1;
 goto end_branch_2;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);

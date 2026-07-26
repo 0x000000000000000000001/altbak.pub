@@ -142,7 +142,7 @@ $GLOBALS['Control_Comonad_Store_Trans_functorStoreT'] = function($dictFunctor_0 
   }
   $__res = new Phpurs_Data2("Tuple", ((($dictFunctor_0)['map'])(function($h_3 = null) use ($f_1) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($f_1))($h_3);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($f_1))($h_3);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

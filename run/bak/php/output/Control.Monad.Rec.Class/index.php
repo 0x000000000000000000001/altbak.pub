@@ -300,7 +300,7 @@ goto end_branch_0;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($go__1_0))($f_0);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($go__1_0))($f_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -402,7 +402,7 @@ goto end_branch_0;;
 // Control_Monad_Rec_Class_monadRecIdentity
 $GLOBALS['Control_Monad_Rec_Class_monadRecIdentity'] = ["tailRecM" => function($f_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Identity_Identity']))(($GLOBALS['Control_Monad_Rec_Class_tailRec'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(function($v_1 = null) {
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Identity_Identity']))(($GLOBALS['Control_Monad_Rec_Class_tailRec'])((($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v_1 = null) {
   $__num = \func_num_args();
   $__res = $v_1;
   goto __end;;

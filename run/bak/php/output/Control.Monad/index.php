@@ -104,16 +104,23 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 // Control_Monad_whenM
 $GLOBALS['Control_Monad_whenM'] = function($dictMonad_0 = null) {
   $__num = \func_num_args();
-  $when_1_0 = ($GLOBALS['Control_Applicative_when'])((($dictMonad_0)['Applicative0'])(null));
-  $__res = (function() use ($dictMonad_0, $when_1_0) {
-  $__fn = function($mb_2 = null, $m_3 = null) use ($dictMonad_0, $when_1_0, &$__fn) {
+  $__local_var_1_0 = (($dictMonad_0)['Applicative0'])(null);
+  $__res = (function() use ($__local_var_1_0, $dictMonad_0) {
+  $__fn = function($mb_2 = null, $m_3 = null) use ($__local_var_1_0, $dictMonad_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((($dictMonad_0)['Bind1'])(null))['bind'])($mb_2))(function($b_4 = null) use ($m_3, $when_1_0) {
+  $__res = ((((($dictMonad_0)['Bind1'])(null))['bind'])($mb_2))(function($b_4 = null) use ($__local_var_1_0, $m_3) {
   $__num = \func_num_args();
-  $__res = (($when_1_0)($b_4))($m_3);
+  $__t1 = null;;
+  if ($b_4) {
+$__t1 = $m_3;
+goto end_branch_1;;
+};
+  $__t1 = (($__local_var_1_0)['pure'])($GLOBALS['Data_Unit_unit']);
+  end_branch_1:;
+  $__res = $__t1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -132,16 +139,28 @@ $GLOBALS['Control_Monad_whenM'] = function($dictMonad_0 = null) {
 // Control_Monad_unlessM
 $GLOBALS['Control_Monad_unlessM'] = function($dictMonad_0 = null) {
   $__num = \func_num_args();
-  $unless_1_0 = ($GLOBALS['Control_Applicative_unless'])((($dictMonad_0)['Applicative0'])(null));
-  $__res = (function() use ($dictMonad_0, $unless_1_0) {
-  $__fn = function($mb_2 = null, $m_3 = null) use ($dictMonad_0, $unless_1_0, &$__fn) {
+  $__local_var_1_0 = (($dictMonad_0)['Applicative0'])(null);
+  $__res = (function() use ($__local_var_1_0, $dictMonad_0) {
+  $__fn = function($mb_2 = null, $m_3 = null) use ($__local_var_1_0, $dictMonad_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((($dictMonad_0)['Bind1'])(null))['bind'])($mb_2))(function($b_4 = null) use ($m_3, $unless_1_0) {
+  $__res = ((((($dictMonad_0)['Bind1'])(null))['bind'])($mb_2))(function($b_4 = null) use ($__local_var_1_0, $m_3) {
   $__num = \func_num_args();
-  $__res = (($unless_1_0)($b_4))($m_3);
+  $__t1 = null;;
+  if (( ! $b_4)) {
+$__t1 = $m_3;
+goto end_branch_1;;
+};
+  if ($b_4) {
+$__t1 = (($__local_var_1_0)['pure'])($GLOBALS['Data_Unit_unit']);
+goto end_branch_1;;
+};
+  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+  $__t1 = null;
+  end_branch_1:;
+  $__res = $__t1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

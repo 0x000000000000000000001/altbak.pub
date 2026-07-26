@@ -348,7 +348,7 @@ $GLOBALS['Control_Monad_Error_Class_try'] = function($dictMonadError_0 = null) {
   $pure_2_1 = ((($Monad0_1_0)['Applicative0'])(null))['pure'];
   $__res = function($a_3 = null) use ($Monad0_1_0, $dictMonadError_0, $pure_2_1) {
   $__num = \func_num_args();
-  $__res = ((($dictMonadError_0)['catchError'])(((((((((($Monad0_1_0)['Bind1'])(null))['Apply0'])(null))['Functor0'])(null))['map'])($GLOBALS['Data_Either_Right']))($a_3)))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($pure_2_1))($GLOBALS['Data_Either_Left']));
+  $__res = ((($dictMonadError_0)['catchError'])(((((((((($Monad0_1_0)['Bind1'])(null))['Apply0'])(null))['Functor0'])(null))['map'])($GLOBALS['Data_Either_Right']))($a_3)))((($GLOBALS['Control_Semigroupoid_composeImpl'])($pure_2_1))($GLOBALS['Data_Either_Left']));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

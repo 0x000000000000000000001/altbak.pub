@@ -154,7 +154,7 @@ $GLOBALS['Data_Functor_Costar_profunctorCostar'] = function($dictFunctor_0 = nul
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($g_2))($v_3)))((($dictFunctor_0)['map'])($f_1));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($g_2))($v_3)))((($dictFunctor_0)['map'])($f_1));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -223,7 +223,7 @@ $GLOBALS['Data_Functor_Costar_hoistCostar'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($GLOBALS['Data_Profunctor_profunctorFn'])['dimap'])($f_0))(($GLOBALS['Control_Category_categoryFn'])['identity']))($v_1);
+  $__res = (((($GLOBALS['Data_Profunctor_profunctorFn'])['dimap'])($f_0))($GLOBALS['Data_Profunctor_identity']))($v_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -238,7 +238,7 @@ $GLOBALS['Data_Functor_Costar_functorCostar'] = ["map" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($f_0))($v_1);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($f_0))($v_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -286,7 +286,7 @@ $GLOBALS['Data_Functor_Costar_distributiveCostar'] = ["distribute" => (function(
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($GLOBALS['Data_Functor_Costar_distributiveCostar'])['distribute'])($dictFunctor_0)))((($dictFunctor_0)['map'])($f_1));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Functor_Costar_distributiveCostar'])['distribute'])($dictFunctor_0)))((($dictFunctor_0)['map'])($f_1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -372,7 +372,7 @@ $GLOBALS['Data_Functor_Costar_bifunctorCostar'] = function($dictContravariant_0 
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($g_2))($v_3)))((($dictContravariant_0)['cmap'])($f_1));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($g_2))($v_3)))((($dictContravariant_0)['cmap'])($f_1));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;

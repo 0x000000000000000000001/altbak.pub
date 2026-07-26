@@ -101,6 +101,15 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+// Data_Bifunctor_identity
+$GLOBALS['Data_Bifunctor_identity'] = function($x_0 = null) {
+  $__num = \func_num_args();
+  $__res = $x_0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+
 // Data_Bifunctor_bimap
 $GLOBALS['Data_Bifunctor_bimap'] = function($dict_0 = null) {
   $__num = \func_num_args();
@@ -138,7 +147,7 @@ $GLOBALS['Data_Bifunctor_lmap'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictBifunctor_0)['bimap'])($f_1))(($GLOBALS['Control_Category_categoryFn'])['identity']);
+  $__res = ((($dictBifunctor_0)['bimap'])($f_1))($GLOBALS['Data_Bifunctor_identity']);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -149,7 +158,7 @@ $GLOBALS['Data_Bifunctor_lmap'] = (function() {
 // Data_Bifunctor_rmap
 $GLOBALS['Data_Bifunctor_rmap'] = function($dictBifunctor_0 = null) {
   $__num = \func_num_args();
-  $__res = (($dictBifunctor_0)['bimap'])(($GLOBALS['Control_Category_categoryFn'])['identity']);
+  $__res = (($dictBifunctor_0)['bimap'])($GLOBALS['Data_Bifunctor_identity']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

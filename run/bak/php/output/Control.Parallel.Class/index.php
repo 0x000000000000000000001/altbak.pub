@@ -257,13 +257,13 @@ $GLOBALS['Control_Parallel_Class_monadParStar'] = function($dictParallel_0 = nul
   $applyStar1_4_3 = ($GLOBALS['Data_Profunctor_Star_applyStar'])((($dictParallel_0)['Apply1'])(null));
   $__res = ["parallel" => function($v_5 = null) use ($parallel1_1_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($parallel1_1_0))($v_5);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($parallel1_1_0))($v_5);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "sequential" => function($v_5 = null) use ($sequential1_2_1) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($sequential1_2_1))($v_5);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($sequential1_2_1))($v_5);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -465,13 +465,13 @@ $GLOBALS['Control_Parallel_Class_monadParCostar'] = function($dictParallel_0 = n
   $parallel1_2_1 = ($dictParallel_0)['parallel'];
   $__res = ["parallel" => function($v_3 = null) use ($sequential1_1_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($v_3))($sequential1_1_0);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($v_3))($sequential1_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "sequential" => function($v_3 = null) use ($parallel1_2_1) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($v_3))($parallel1_2_1);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($v_3))($parallel1_2_1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -575,7 +575,7 @@ $GLOBALS['Control_Parallel_Class_functorParCont'] = function($dictMonadEffect_0 
   $__num = \func_num_args();
   $__res = ["map" => function($f_1 = null) use ($dictMonadEffect_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($GLOBALS['Control_Parallel_Class_monadParParCont'])($dictMonadEffect_0))['parallel']))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((function() use ($f_1) {
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Parallel_Class_monadParParCont'])($dictMonadEffect_0))['parallel']))((($GLOBALS['Control_Semigroupoid_composeImpl'])((function() use ($f_1) {
   $__fn = function($v_2 = null, $k_3 = null) use ($f_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -702,7 +702,7 @@ goto end_branch_3;;
 $GLOBALS['Control_Parallel_Class_applicativeParCont'] = function($dictMonadEffect_0 = null) {
   $__num = \func_num_args();
   $applyParCont1_1_0 = ($GLOBALS['Control_Parallel_Class_applyParCont'])($dictMonadEffect_0);
-  $__res = ["pure" => ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($GLOBALS['Control_Parallel_Class_monadParParCont'])($dictMonadEffect_0))['parallel']))((function() {
+  $__res = ["pure" => (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Parallel_Class_monadParParCont'])($dictMonadEffect_0))['parallel']))((function() {
   $__fn = function($a_2 = null, $k_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {

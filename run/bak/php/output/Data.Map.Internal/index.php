@@ -127,20 +127,82 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+// Data_Map_Internal_greaterThan
+$GLOBALS['Data_Map_Internal_greaterThan'] = (function() use (&$__fn) {
+$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT"));
+return (function() use ($__local_var_0_0) {
+  $__fn = function($a1_1 = null, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = (is_object((($__local_var_0_0)($a1_1))($a2_2)) && (((($__local_var_0_0)($a1_1))($a2_2))->{'tag'} === "GT"));
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
+})();
+
+// Data_Map_Internal_lessThanOrEq
+$GLOBALS['Data_Map_Internal_lessThanOrEq'] = (function() use (&$__fn) {
+$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT"));
+return (function() use ($__local_var_0_0) {
+  $__fn = function($a1_1 = null, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ( ! (is_object((($__local_var_0_0)($a1_1))($a2_2)) && (((($__local_var_0_0)($a1_1))($a2_2))->{'tag'} === "GT")));
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
+})();
+
+// Data_Map_Internal_identity
+$GLOBALS['Data_Map_Internal_identity'] = function($x_0 = null) {
+  $__num = \func_num_args();
+  $__res = $x_0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+
+// Data_Map_Internal_lessThan
+$GLOBALS['Data_Map_Internal_lessThan'] = (function() use (&$__fn) {
+$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT"));
+return (function() use ($__local_var_0_0) {
+  $__fn = function($a1_1 = null, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = (is_object((($__local_var_0_0)($a1_1))($a2_2)) && (((($__local_var_0_0)($a1_1))($a2_2))->{'tag'} === "LT"));
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
+})();
+
 // Data_Map_Internal_abs
 $GLOBALS['Data_Map_Internal_abs'] = (function() use (&$__fn) {
-$zero_0_0 = ((($GLOBALS['Data_Ring_ringInt'])['Semiring0'])(null))['zero'];
-$zero_1_1 = ((($GLOBALS['Data_Ring_ringInt'])['Semiring0'])(null))['zero'];
-return function($x_2 = null) use ($zero_0_0, $zero_1_1) {
+$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT"));
+return function($x_1 = null) use ($__local_var_0_0) {
   $__num = \func_num_args();
-  $__t2 = null;;
-  if (($x_2 >= $zero_0_0)) {
-$__t2 = $x_2;
-goto end_branch_2;;
+  $__t1 = null;;
+  if (( ! (is_object((($__local_var_0_0)($x_1))(0)) && (((($__local_var_0_0)($x_1))(0))->{'tag'} === "LT")))) {
+$__t1 = $x_1;
+goto end_branch_1;;
 };
-  $__t2 = ((($GLOBALS['Data_Ring_ringInt'])['sub'])($zero_1_1))($x_2);
-  end_branch_2:;
-  $__res = $__t2;
+  $__t1 = ( - $x_1);
+  end_branch_1:;
+  $__res = $__t1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -261,7 +323,7 @@ $__t1 = new Phpurs_Data6("Node", 1, 1, $k_0, $v_1, $l_2, $r_3);
 goto end_branch_1;;
 };
 if ((is_object($r_3) && (($r_3)->{'tag'} === "Node"))) {
-$__t1 = new Phpurs_Data6("Node", ((($GLOBALS['Data_Semiring_semiringInt'])['add'])(1))(($r_3)->{'value0'}), ((($GLOBALS['Data_Semiring_semiringInt'])['add'])(1))(($r_3)->{'value1'}), $k_0, $v_1, $l_2, $r_3);
+$__t1 = new Phpurs_Data6("Node", (1 + ($r_3)->{'value0'}), (1 + ($r_3)->{'value1'}), $k_0, $v_1, $l_2, $r_3);
 goto end_branch_1;;
 };
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -273,18 +335,18 @@ goto end_branch_0;;
   if ((is_object($l_2) && (($l_2)->{'tag'} === "Node"))) {
 $__t2 = null;;
 if ((is_object($r_3) && (($r_3)->{'tag'} === "Leaf"))) {
-$__t2 = new Phpurs_Data6("Node", ((($GLOBALS['Data_Semiring_semiringInt'])['add'])(1))(($l_2)->{'value0'}), ((($GLOBALS['Data_Semiring_semiringInt'])['add'])(1))(($l_2)->{'value1'}), $k_0, $v_1, $l_2, $r_3);
+$__t2 = new Phpurs_Data6("Node", (1 + ($l_2)->{'value0'}), (1 + ($l_2)->{'value1'}), $k_0, $v_1, $l_2, $r_3);
 goto end_branch_2;;
 };
 if ((is_object($r_3) && (($r_3)->{'tag'} === "Node"))) {
 $__t3 = null;;
-if ((($l_2)->{'value0'} > ($r_3)->{'value0'})) {
-$__t3 = ($l_2)->{'value0'};
+if ((($GLOBALS['Data_Map_Internal_greaterThan'])(($l_2)->{'value0'}))(($r_3)->{'value0'})) {
+$__t3 = (1 + ($l_2)->{'value0'});
 goto end_branch_3;;
 };
-$__t3 = ($r_3)->{'value0'};
+$__t3 = (1 + ($r_3)->{'value0'});
 end_branch_3:;
-$__t2 = new Phpurs_Data6("Node", ((($GLOBALS['Data_Semiring_semiringInt'])['add'])(1))($__t3), ((($GLOBALS['Data_Semiring_semiringInt'])['add'])(((($GLOBALS['Data_Semiring_semiringInt'])['add'])(1))(($l_2)->{'value1'})))(($r_3)->{'value1'}), $k_0, $v_1, $l_2, $r_3);
+$__t2 = new Phpurs_Data6("Node", $__t3, ((1 + ($l_2)->{'value1'}) + ($r_3)->{'value1'}), $k_0, $v_1, $l_2, $r_3);
 goto end_branch_2;;
 };
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -408,22 +470,22 @@ if ((is_object($r_3) && (($r_3)->{'tag'} === "Leaf"))) {
 $__t1 = new Phpurs_Data6("Node", 1, 1, $k_0, $v_1, new Phpurs_Data0("Leaf"), new Phpurs_Data0("Leaf"));
 goto end_branch_1;;
 };
-if (((is_object($r_3) && (($r_3)->{'tag'} === "Node")) && (($r_3)->{'value0'} > 1))) {
+if (((is_object($r_3) && (($r_3)->{'tag'} === "Node")) && (($GLOBALS['Data_Map_Internal_greaterThan'])(($r_3)->{'value0'}))(1))) {
 $__t2 = null;;
 if ((function() use ($r_3, &$__fn) {
 $__t3 = null;;
 if ((is_object(($r_3)->{'value5'}) && ((($r_3)->{'value5'})->{'tag'} === "Leaf"))) {
-$__t3 = ((($r_3)->{'value4'})->{'value0'} > 0);
+$__t3 = 0;
 goto end_branch_3;;
 };
 if ((is_object(($r_3)->{'value5'}) && ((($r_3)->{'value5'})->{'tag'} === "Node"))) {
-$__t3 = ((($r_3)->{'value4'})->{'value0'} > (($r_3)->{'value5'})->{'value0'});
+$__t3 = (($r_3)->{'value5'})->{'value0'};
 goto end_branch_3;;
 };
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t3 = null;
 end_branch_3:;
-return ((is_object(($r_3)->{'value4'}) && ((($r_3)->{'value4'})->{'tag'} === "Node")) && $__t3);
+return ((is_object(($r_3)->{'value4'}) && ((($r_3)->{'value4'})->{'tag'} === "Node")) && (($GLOBALS['Data_Map_Internal_greaterThan'])((($r_3)->{'value4'})->{'value0'}))($__t3));
 })()) {
 $__t2 = ($GLOBALS['Data_Map_Internal_unsafeNode'])((($r_3)->{'value4'})->{'value2'}, (($r_3)->{'value4'})->{'value3'}, ($GLOBALS['Data_Map_Internal_unsafeNode'])($k_0, $v_1, $l_2, (($r_3)->{'value4'})->{'value4'}), ($GLOBALS['Data_Map_Internal_unsafeNode'])(($r_3)->{'value2'}, ($r_3)->{'value3'}, (($r_3)->{'value4'})->{'value5'}, ($r_3)->{'value5'}));
 goto end_branch_2;;
@@ -442,22 +504,22 @@ goto end_branch_0;;
 $__t4 = null;;
 if ((is_object($r_3) && (($r_3)->{'tag'} === "Node"))) {
 $__t5 = null;;
-if ((($r_3)->{'value0'} > ((($GLOBALS['Data_Semiring_semiringInt'])['add'])(($l_2)->{'value0'}))(1))) {
+if ((($GLOBALS['Data_Map_Internal_greaterThan'])(($r_3)->{'value0'}))((($l_2)->{'value0'} + 1))) {
 $__t6 = null;;
 if ((function() use ($r_3, &$__fn) {
 $__t7 = null;;
 if ((is_object(($r_3)->{'value5'}) && ((($r_3)->{'value5'})->{'tag'} === "Leaf"))) {
-$__t7 = ((($r_3)->{'value4'})->{'value0'} > 0);
+$__t7 = 0;
 goto end_branch_7;;
 };
 if ((is_object(($r_3)->{'value5'}) && ((($r_3)->{'value5'})->{'tag'} === "Node"))) {
-$__t7 = ((($r_3)->{'value4'})->{'value0'} > (($r_3)->{'value5'})->{'value0'});
+$__t7 = (($r_3)->{'value5'})->{'value0'};
 goto end_branch_7;;
 };
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t7 = null;
 end_branch_7:;
-return ((is_object(($r_3)->{'value4'}) && ((($r_3)->{'value4'})->{'tag'} === "Node")) && $__t7);
+return ((is_object(($r_3)->{'value4'}) && ((($r_3)->{'value4'})->{'tag'} === "Node")) && (($GLOBALS['Data_Map_Internal_greaterThan'])((($r_3)->{'value4'})->{'value0'}))($__t7));
 })()) {
 $__t6 = ($GLOBALS['Data_Map_Internal_unsafeNode'])((($r_3)->{'value4'})->{'value2'}, (($r_3)->{'value4'})->{'value3'}, ($GLOBALS['Data_Map_Internal_unsafeNode'])($k_0, $v_1, $l_2, (($r_3)->{'value4'})->{'value4'}), ($GLOBALS['Data_Map_Internal_unsafeNode'])(($r_3)->{'value2'}, ($r_3)->{'value3'}, (($r_3)->{'value4'})->{'value5'}, ($r_3)->{'value5'}));
 goto end_branch_6;;
@@ -467,22 +529,22 @@ end_branch_6:;
 $__t5 = $__t6;
 goto end_branch_5;;
 };
-if ((($l_2)->{'value0'} > ((($GLOBALS['Data_Semiring_semiringInt'])['add'])(($r_3)->{'value0'}))(1))) {
+if ((($GLOBALS['Data_Map_Internal_greaterThan'])(($l_2)->{'value0'}))((($r_3)->{'value0'} + 1))) {
 $__t8 = null;;
 if ((function() use ($l_2, &$__fn) {
 $__t9 = null;;
 if ((is_object(($l_2)->{'value4'}) && ((($l_2)->{'value4'})->{'tag'} === "Leaf"))) {
-$__t9 = (0 <= (($l_2)->{'value5'})->{'value0'});
+$__t9 = 0;
 goto end_branch_9;;
 };
 if ((is_object(($l_2)->{'value4'}) && ((($l_2)->{'value4'})->{'tag'} === "Node"))) {
-$__t9 = ((($l_2)->{'value4'})->{'value0'} <= (($l_2)->{'value5'})->{'value0'});
+$__t9 = (($l_2)->{'value4'})->{'value0'};
 goto end_branch_9;;
 };
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t9 = null;
 end_branch_9:;
-return ((is_object(($l_2)->{'value5'}) && ((($l_2)->{'value5'})->{'tag'} === "Node")) && $__t9);
+return ((is_object(($l_2)->{'value5'}) && ((($l_2)->{'value5'})->{'tag'} === "Node")) && (($GLOBALS['Data_Map_Internal_lessThanOrEq'])($__t9))((($l_2)->{'value5'})->{'value0'}));
 })()) {
 $__t8 = ($GLOBALS['Data_Map_Internal_unsafeNode'])((($l_2)->{'value5'})->{'value2'}, (($l_2)->{'value5'})->{'value3'}, ($GLOBALS['Data_Map_Internal_unsafeNode'])(($l_2)->{'value2'}, ($l_2)->{'value3'}, ($l_2)->{'value4'}, (($l_2)->{'value5'})->{'value4'}), ($GLOBALS['Data_Map_Internal_unsafeNode'])($k_0, $v_1, (($l_2)->{'value5'})->{'value5'}, $r_3));
 goto end_branch_8;;
@@ -497,22 +559,22 @@ end_branch_5:;
 $__t4 = $__t5;
 goto end_branch_4;;
 };
-if (((is_object($r_3) && (($r_3)->{'tag'} === "Leaf")) && (($l_2)->{'value0'} > 1))) {
+if (((is_object($r_3) && (($r_3)->{'tag'} === "Leaf")) && (($GLOBALS['Data_Map_Internal_greaterThan'])(($l_2)->{'value0'}))(1))) {
 $__t10 = null;;
 if ((function() use ($l_2, &$__fn) {
 $__t11 = null;;
 if ((is_object(($l_2)->{'value4'}) && ((($l_2)->{'value4'})->{'tag'} === "Leaf"))) {
-$__t11 = (0 <= (($l_2)->{'value5'})->{'value0'});
+$__t11 = 0;
 goto end_branch_11;;
 };
 if ((is_object(($l_2)->{'value4'}) && ((($l_2)->{'value4'})->{'tag'} === "Node"))) {
-$__t11 = ((($l_2)->{'value4'})->{'value0'} <= (($l_2)->{'value5'})->{'value0'});
+$__t11 = (($l_2)->{'value4'})->{'value0'};
 goto end_branch_11;;
 };
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t11 = null;
 end_branch_11:;
-return ((is_object(($l_2)->{'value5'}) && ((($l_2)->{'value5'})->{'tag'} === "Node")) && $__t11);
+return ((is_object(($l_2)->{'value5'}) && ((($l_2)->{'value5'})->{'tag'} === "Node")) && (($GLOBALS['Data_Map_Internal_lessThanOrEq'])($__t11))((($l_2)->{'value5'})->{'value0'}));
 })()) {
 $__t10 = ($GLOBALS['Data_Map_Internal_unsafeNode'])((($l_2)->{'value5'})->{'value2'}, (($l_2)->{'value5'})->{'value3'}, ($GLOBALS['Data_Map_Internal_unsafeNode'])(($l_2)->{'value2'}, ($l_2)->{'value3'}, ($l_2)->{'value4'}, (($l_2)->{'value5'})->{'value4'}), ($GLOBALS['Data_Map_Internal_unsafeNode'])($k_0, $v_1, (($l_2)->{'value5'})->{'value5'}, $r_3));
 goto end_branch_10;;
@@ -545,6 +607,13 @@ $GLOBALS['Data_Map_Internal_unsafeSplit'] = (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
+  $__tco_var_Data_Map_Internal_unsafeSplit_comp_0 = $comp_0;
+  $__tco_var_Data_Map_Internal_unsafeSplit_k_1 = $k_1;
+  $__tco_var_Data_Map_Internal_unsafeSplit_m_2 = $m_2;
+  tco_loop_Data_Map_Internal_unsafeSplit:;
+  $comp_0 = $__tco_var_Data_Map_Internal_unsafeSplit_comp_0;
+  $k_1 = $__tco_var_Data_Map_Internal_unsafeSplit_k_1;
+  $m_2 = $__tco_var_Data_Map_Internal_unsafeSplit_m_2;
   $__t0 = null;;
   if ((is_object($m_2) && (($m_2)->{'tag'} === "Leaf"))) {
 $__t0 = new Phpurs_Data3("Split", new Phpurs_Data0("Nothing"), new Phpurs_Data0("Leaf"), new Phpurs_Data0("Leaf"));
@@ -591,6 +660,15 @@ $GLOBALS['Data_Map_Internal_unsafeSplitLast'] = (function() {
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
+  $__tco_var_Data_Map_Internal_unsafeSplitLast_k_0 = $k_0;
+  $__tco_var_Data_Map_Internal_unsafeSplitLast_v_1 = $v_1;
+  $__tco_var_Data_Map_Internal_unsafeSplitLast_l_2 = $l_2;
+  $__tco_var_Data_Map_Internal_unsafeSplitLast_r_3 = $r_3;
+  tco_loop_Data_Map_Internal_unsafeSplitLast:;
+  $k_0 = $__tco_var_Data_Map_Internal_unsafeSplitLast_k_0;
+  $v_1 = $__tco_var_Data_Map_Internal_unsafeSplitLast_v_1;
+  $l_2 = $__tco_var_Data_Map_Internal_unsafeSplitLast_l_2;
+  $r_3 = $__tco_var_Data_Map_Internal_unsafeSplitLast_r_3;
   $__t0 = null;;
   if ((is_object($r_3) && (($r_3)->{'tag'} === "Leaf"))) {
 $__t0 = new Phpurs_Data3("SplitLast", $k_0, $v_1, $l_2);
@@ -647,6 +725,13 @@ $GLOBALS['Data_Map_Internal_unsafeDifference'] = (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
+  $__tco_var_Data_Map_Internal_unsafeDifference_comp_0 = $comp_0;
+  $__tco_var_Data_Map_Internal_unsafeDifference_l_1 = $l_1;
+  $__tco_var_Data_Map_Internal_unsafeDifference_r_2 = $r_2;
+  tco_loop_Data_Map_Internal_unsafeDifference:;
+  $comp_0 = $__tco_var_Data_Map_Internal_unsafeDifference_comp_0;
+  $l_1 = $__tco_var_Data_Map_Internal_unsafeDifference_l_1;
+  $r_2 = $__tco_var_Data_Map_Internal_unsafeDifference_r_2;
   $__t0 = null;;
   if ((is_object($l_1) && (($l_1)->{'tag'} === "Leaf"))) {
 $__t0 = new Phpurs_Data0("Leaf");
@@ -679,6 +764,15 @@ $GLOBALS['Data_Map_Internal_unsafeIntersectionWith'] = (function() {
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
+  $__tco_var_Data_Map_Internal_unsafeIntersectionWith_comp_0 = $comp_0;
+  $__tco_var_Data_Map_Internal_unsafeIntersectionWith_app_1 = $app_1;
+  $__tco_var_Data_Map_Internal_unsafeIntersectionWith_l_2 = $l_2;
+  $__tco_var_Data_Map_Internal_unsafeIntersectionWith_r_3 = $r_3;
+  tco_loop_Data_Map_Internal_unsafeIntersectionWith:;
+  $comp_0 = $__tco_var_Data_Map_Internal_unsafeIntersectionWith_comp_0;
+  $app_1 = $__tco_var_Data_Map_Internal_unsafeIntersectionWith_app_1;
+  $l_2 = $__tco_var_Data_Map_Internal_unsafeIntersectionWith_l_2;
+  $r_3 = $__tco_var_Data_Map_Internal_unsafeIntersectionWith_r_3;
   $__t0 = null;;
   if ((is_object($l_2) && (($l_2)->{'tag'} === "Leaf"))) {
 $__t0 = new Phpurs_Data0("Leaf");
@@ -725,6 +819,15 @@ $GLOBALS['Data_Map_Internal_unsafeUnionWith'] = (function() {
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
+  $__tco_var_Data_Map_Internal_unsafeUnionWith_comp_0 = $comp_0;
+  $__tco_var_Data_Map_Internal_unsafeUnionWith_app_1 = $app_1;
+  $__tco_var_Data_Map_Internal_unsafeUnionWith_l_2 = $l_2;
+  $__tco_var_Data_Map_Internal_unsafeUnionWith_r_3 = $r_3;
+  tco_loop_Data_Map_Internal_unsafeUnionWith:;
+  $comp_0 = $__tco_var_Data_Map_Internal_unsafeUnionWith_comp_0;
+  $app_1 = $__tco_var_Data_Map_Internal_unsafeUnionWith_app_1;
+  $l_2 = $__tco_var_Data_Map_Internal_unsafeUnionWith_l_2;
+  $r_3 = $__tco_var_Data_Map_Internal_unsafeUnionWith_r_3;
   $__t0 = null;;
   if ((is_object($l_2) && (($l_2)->{'tag'} === "Leaf"))) {
 $__t0 = $r_3;
@@ -1094,7 +1197,7 @@ goto end_branch_1;;
 // Data_Map_Internal_mapMaybe
 $GLOBALS['Data_Map_Internal_mapMaybe'] = function($dictOrd_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(($GLOBALS['Data_Map_Internal_mapMaybeWithKey'])($dictOrd_0)))($GLOBALS['Data_Function_const']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Map_Internal_mapMaybeWithKey'])($dictOrd_0)))($GLOBALS['Data_Function_const']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1353,7 +1456,7 @@ $GLOBALS['Data_Map_Internal_stepUnfoldrUnordered'] = ((($GLOBALS['Data_Map_Inter
 // Data_Map_Internal_toUnfoldableUnordered
 $GLOBALS['Data_Map_Internal_toUnfoldableUnordered'] = function($dictUnfoldable_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($dictUnfoldable_0)['unfoldr'])($GLOBALS['Data_Map_Internal_stepUnfoldrUnordered'])))($GLOBALS['Data_Map_Internal_toMapIter']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($dictUnfoldable_0)['unfoldr'])($GLOBALS['Data_Map_Internal_stepUnfoldrUnordered'])))($GLOBALS['Data_Map_Internal_toMapIter']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1701,14 +1804,14 @@ $GLOBALS['Data_Map_Internal_stepUnfoldr'] = ((($GLOBALS['Data_Map_Internal_stepW
 // Data_Map_Internal_toUnfoldable
 $GLOBALS['Data_Map_Internal_toUnfoldable'] = function($dictUnfoldable_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($dictUnfoldable_0)['unfoldr'])($GLOBALS['Data_Map_Internal_stepUnfoldr'])))($GLOBALS['Data_Map_Internal_toMapIter']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($dictUnfoldable_0)['unfoldr'])($GLOBALS['Data_Map_Internal_stepUnfoldr'])))($GLOBALS['Data_Map_Internal_toMapIter']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
 
 // Data_Map_Internal_toUnfoldable1
-$GLOBALS['Data_Map_Internal_toUnfoldable1'] = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($GLOBALS['Data_Unfoldable_unfoldableArray'])['unfoldr'])($GLOBALS['Data_Map_Internal_stepUnfoldr'])))($GLOBALS['Data_Map_Internal_toMapIter']);
+$GLOBALS['Data_Map_Internal_toUnfoldable1'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Unfoldable_unfoldableArray'])['unfoldr'])($GLOBALS['Data_Map_Internal_stepUnfoldr'])))($GLOBALS['Data_Map_Internal_toMapIter']);
 
 // Data_Map_Internal_showMap
 $GLOBALS['Data_Map_Internal_showMap'] = (function() {
@@ -2376,7 +2479,7 @@ goto end_branch_2;;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "sequence" => function($dictApplicative_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Map_Internal_traversableMap'])['traverse'])($dictApplicative_0))(($GLOBALS['Control_Category_categoryFn'])['identity']);
+  $__res = ((($GLOBALS['Data_Map_Internal_traversableMap'])['traverse'])($dictApplicative_0))($GLOBALS['Data_Map_Internal_identity']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -2657,20 +2760,26 @@ $GLOBALS['Data_Map_Internal_foldSubmap'] = (function() {
 // Data_Map_Internal_findMin
 $GLOBALS['Data_Map_Internal_findMin'] = function($v_0 = null) {
   $__num = \func_num_args();
+  $__tco_var_Data_Map_Internal_findMin_v_0 = $v_0;
+  tco_loop_Data_Map_Internal_findMin:;
+  $v_0 = $__tco_var_Data_Map_Internal_findMin_v_0;
   $__t0 = null;;
   if ((is_object($v_0) && (($v_0)->{'tag'} === "Leaf"))) {
 $__t0 = new Phpurs_Data0("Nothing");
 goto end_branch_0;;
 };
   if ((is_object($v_0) && (($v_0)->{'tag'} === "Node"))) {
-$__t1 = null;;
+$__t2 = null;;
 if ((is_object(($v_0)->{'value4'}) && ((($v_0)->{'value4'})->{'tag'} === "Leaf"))) {
-$__t1 = new Phpurs_Data1("Just", ["key" => ($v_0)->{'value2'}, "value" => ($v_0)->{'value3'}]);
-goto end_branch_1;;
+$__t2 = new Phpurs_Data1("Just", ["key" => ($v_0)->{'value2'}, "value" => ($v_0)->{'value3'}]);
+goto end_branch_2;;
 };
-$__t1 = ($GLOBALS['Data_Map_Internal_findMin'])(($v_0)->{'value4'});
-end_branch_1:;
-$__t0 = $__t1;
+$__tco_1 = ($v_0)->{'value4'};
+$__tco_var_Data_Map_Internal_findMin_v_0 = $__tco_1;
+goto tco_loop_Data_Map_Internal_findMin;;
+$__t2 = null;
+end_branch_2:;
+$__t0 = $__t2;
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -2745,20 +2854,26 @@ goto end_branch_1;;
 // Data_Map_Internal_findMax
 $GLOBALS['Data_Map_Internal_findMax'] = function($v_0 = null) {
   $__num = \func_num_args();
+  $__tco_var_Data_Map_Internal_findMax_v_0 = $v_0;
+  tco_loop_Data_Map_Internal_findMax:;
+  $v_0 = $__tco_var_Data_Map_Internal_findMax_v_0;
   $__t0 = null;;
   if ((is_object($v_0) && (($v_0)->{'tag'} === "Leaf"))) {
 $__t0 = new Phpurs_Data0("Nothing");
 goto end_branch_0;;
 };
   if ((is_object($v_0) && (($v_0)->{'tag'} === "Node"))) {
-$__t1 = null;;
+$__t2 = null;;
 if ((is_object(($v_0)->{'value5'}) && ((($v_0)->{'value5'})->{'tag'} === "Leaf"))) {
-$__t1 = new Phpurs_Data1("Just", ["key" => ($v_0)->{'value2'}, "value" => ($v_0)->{'value3'}]);
-goto end_branch_1;;
+$__t2 = new Phpurs_Data1("Just", ["key" => ($v_0)->{'value2'}, "value" => ($v_0)->{'value3'}]);
+goto end_branch_2;;
 };
-$__t1 = ($GLOBALS['Data_Map_Internal_findMax'])(($v_0)->{'value5'});
-end_branch_1:;
-$__t0 = $__t1;
+$__tco_1 = ($v_0)->{'value5'};
+$__tco_var_Data_Map_Internal_findMax_v_0 = $__tco_1;
+goto tco_loop_Data_Map_Internal_findMax;;
+$__t2 = null;
+end_branch_2:;
+$__t0 = $__t2;
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -2917,7 +3032,7 @@ goto end_branch_1;;
 // Data_Map_Internal_filter
 $GLOBALS['Data_Map_Internal_filter'] = function($dictOrd_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(($GLOBALS['Data_Map_Internal_filterWithKey'])($dictOrd_0)))($GLOBALS['Data_Function_const']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Map_Internal_filterWithKey'])($dictOrd_0)))($GLOBALS['Data_Function_const']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -2942,7 +3057,7 @@ $__t0 = (is_object($ys_3) && (($ys_3)->{'tag'} === "Leaf"));
 goto end_branch_0;;
 };
   if ((is_object($xs_2) && (($xs_2)->{'tag'} === "Node"))) {
-$__t0 = ((is_object($ys_3) && (($ys_3)->{'tag'} === "Node")) && (((($GLOBALS['Data_Eq_eqInt'])['eq'])(($xs_2)->{'value1'}))(($ys_3)->{'value1'}) && ((((($GLOBALS['Data_Map_Internal_eqMapIter'])($dictEq_0))($dictEq1_1))['eq'])(new Phpurs_Data2("IterNode", $xs_2, new Phpurs_Data0("IterLeaf"))))(new Phpurs_Data2("IterNode", $ys_3, new Phpurs_Data0("IterLeaf")))));
+$__t0 = ((is_object($ys_3) && (($ys_3)->{'tag'} === "Node")) && ((($xs_2)->{'value1'} === ($ys_3)->{'value1'}) && ((((($GLOBALS['Data_Map_Internal_eqMapIter'])($dictEq_0))($dictEq1_1))['eq'])(new Phpurs_Data2("IterNode", $xs_2, new Phpurs_Data0("IterLeaf"))))(new Phpurs_Data2("IterNode", $ys_3, new Phpurs_Data0("IterLeaf")))));
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -3343,7 +3458,7 @@ $__t3 = true;
 goto end_branch_3;;
 };
 if ((is_object(($v_2)->{'value5'}) && ((($v_2)->{'value5'})->{'tag'} === "Node"))) {
-$__t3 = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(((($GLOBALS['Data_Eq_eqInt'])['eq'])(($v_2)->{'value0'}))(2)))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(((($GLOBALS['Data_Eq_eqInt'])['eq'])((($v_2)->{'value5'})->{'value0'}))(1)))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])((($v_2)->{'value1'} > (($v_2)->{'value5'})->{'value1'})))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])((is_object(((($dictOrd_0)['compare'])((($v_2)->{'value5'})->{'value2'}))(($v_2)->{'value2'})) && ((((($dictOrd_0)['compare'])((($v_2)->{'value5'})->{'value2'}))(($v_2)->{'value2'}))->{'tag'} === "GT"))))(($go__1_0)(($v_2)->{'value5'})))));
+$__t3 = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])((($v_2)->{'value0'} === 2)))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(((($v_2)->{'value5'})->{'value0'} === 1)))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])((($GLOBALS['Data_Map_Internal_greaterThan'])(($v_2)->{'value1'}))((($v_2)->{'value5'})->{'value1'})))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])((is_object(((($dictOrd_0)['compare'])((($v_2)->{'value5'})->{'value2'}))(($v_2)->{'value2'})) && ((((($dictOrd_0)['compare'])((($v_2)->{'value5'})->{'value2'}))(($v_2)->{'value2'}))->{'tag'} === "GT"))))(($go__1_0)(($v_2)->{'value5'})))));
 goto end_branch_3;;
 };
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -3355,11 +3470,11 @@ goto end_branch_2;;
 if ((is_object(($v_2)->{'value4'}) && ((($v_2)->{'value4'})->{'tag'} === "Node"))) {
 $__t4 = null;;
 if ((is_object(($v_2)->{'value5'}) && ((($v_2)->{'value5'})->{'tag'} === "Leaf"))) {
-$__t4 = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(((($GLOBALS['Data_Eq_eqInt'])['eq'])(($v_2)->{'value0'}))(2)))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(((($GLOBALS['Data_Eq_eqInt'])['eq'])((($v_2)->{'value4'})->{'value0'}))(1)))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])((($v_2)->{'value1'} > (($v_2)->{'value4'})->{'value1'})))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])((is_object(((($dictOrd_0)['compare'])((($v_2)->{'value4'})->{'value2'}))(($v_2)->{'value2'})) && ((((($dictOrd_0)['compare'])((($v_2)->{'value4'})->{'value2'}))(($v_2)->{'value2'}))->{'tag'} === "LT"))))(($go__1_0)(($v_2)->{'value4'})))));
+$__t4 = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])((($v_2)->{'value0'} === 2)))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(((($v_2)->{'value4'})->{'value0'} === 1)))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])((($GLOBALS['Data_Map_Internal_greaterThan'])(($v_2)->{'value1'}))((($v_2)->{'value4'})->{'value1'})))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])((is_object(((($dictOrd_0)['compare'])((($v_2)->{'value4'})->{'value2'}))(($v_2)->{'value2'})) && ((((($dictOrd_0)['compare'])((($v_2)->{'value4'})->{'value2'}))(($v_2)->{'value2'}))->{'tag'} === "LT"))))(($go__1_0)(($v_2)->{'value4'})))));
 goto end_branch_4;;
 };
 if ((is_object(($v_2)->{'value5'}) && ((($v_2)->{'value5'})->{'tag'} === "Node"))) {
-$__t4 = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])((($v_2)->{'value0'} > (($v_2)->{'value5'})->{'value0'})))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])((is_object(((($dictOrd_0)['compare'])((($v_2)->{'value5'})->{'value2'}))(($v_2)->{'value2'})) && ((((($dictOrd_0)['compare'])((($v_2)->{'value5'})->{'value2'}))(($v_2)->{'value2'}))->{'tag'} === "GT"))))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])((($v_2)->{'value0'} > (($v_2)->{'value4'})->{'value0'})))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])((is_object(((($dictOrd_0)['compare'])((($v_2)->{'value4'})->{'value2'}))(($v_2)->{'value2'})) && ((((($dictOrd_0)['compare'])((($v_2)->{'value4'})->{'value2'}))(($v_2)->{'value2'}))->{'tag'} === "LT"))))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])((($GLOBALS['Data_Map_Internal_abs'])(((($GLOBALS['Data_Ring_ringInt'])['sub'])((($v_2)->{'value5'})->{'value0'}))((($v_2)->{'value4'})->{'value0'})) < 2)))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(((($GLOBALS['Data_Eq_eqInt'])['eq'])(((($GLOBALS['Data_Semiring_semiringInt'])['add'])(((($GLOBALS['Data_Semiring_semiringInt'])['add'])((($v_2)->{'value5'})->{'value1'}))((($v_2)->{'value4'})->{'value1'})))(1)))(($v_2)->{'value1'})))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(($go__1_0)(($v_2)->{'value4'})))(($go__1_0)(($v_2)->{'value5'}))))))));
+$__t4 = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])((($GLOBALS['Data_Map_Internal_greaterThan'])(($v_2)->{'value0'}))((($v_2)->{'value5'})->{'value0'})))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])((is_object(((($dictOrd_0)['compare'])((($v_2)->{'value5'})->{'value2'}))(($v_2)->{'value2'})) && ((((($dictOrd_0)['compare'])((($v_2)->{'value5'})->{'value2'}))(($v_2)->{'value2'}))->{'tag'} === "GT"))))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])((($GLOBALS['Data_Map_Internal_greaterThan'])(($v_2)->{'value0'}))((($v_2)->{'value4'})->{'value0'})))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])((is_object(((($dictOrd_0)['compare'])((($v_2)->{'value4'})->{'value2'}))(($v_2)->{'value2'})) && ((((($dictOrd_0)['compare'])((($v_2)->{'value4'})->{'value2'}))(($v_2)->{'value2'}))->{'tag'} === "LT"))))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])((($GLOBALS['Data_Map_Internal_lessThan'])(($GLOBALS['Data_Map_Internal_abs'])(((($v_2)->{'value5'})->{'value0'} - (($v_2)->{'value4'})->{'value0'}))))(2)))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(((((($v_2)->{'value5'})->{'value1'} + (($v_2)->{'value4'})->{'value1'}) + 1) === ($v_2)->{'value1'})))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(($go__1_0)(($v_2)->{'value4'})))(($go__1_0)(($v_2)->{'value5'}))))))));
 goto end_branch_4;;
 };
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -3391,7 +3506,7 @@ goto end_branch_1;;
 // Data_Map_Internal_catMaybes
 $GLOBALS['Data_Map_Internal_catMaybes'] = function($dictOrd_0 = null) {
   $__num = \func_num_args();
-  $__res = (((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(($GLOBALS['Data_Map_Internal_mapMaybeWithKey'])($dictOrd_0)))($GLOBALS['Data_Function_const']))(($GLOBALS['Control_Category_categoryFn'])['identity']);
+  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Map_Internal_mapMaybeWithKey'])($dictOrd_0)))($GLOBALS['Data_Function_const']))($GLOBALS['Data_Map_Internal_identity']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -3407,7 +3522,7 @@ $GLOBALS['Data_Map_Internal_applyMap'] = function($dictOrd_0 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Data_Map_Internal_unsafeIntersectionWith'])($compare_1_0, ($GLOBALS['Control_Category_categoryFn'])['identity'], $m1_2, $m2_3);
+  $__res = ($GLOBALS['Data_Map_Internal_unsafeIntersectionWith'])($compare_1_0, $GLOBALS['Data_Map_Internal_identity'], $m1_2, $m2_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -3435,7 +3550,7 @@ $GLOBALS['Data_Map_Internal_bindMap'] = function($dictOrd_0 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Data_Map_Internal_unsafeIntersectionWith'])($compare_1_0, ($GLOBALS['Control_Category_categoryFn'])['identity'], $m1_2, $m2_3);
+  $__res = ($GLOBALS['Data_Map_Internal_unsafeIntersectionWith'])($compare_1_0, $GLOBALS['Data_Map_Internal_identity'], $m1_2, $m2_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -3502,7 +3617,7 @@ goto end_branch_2;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($go__5_2))($f_3);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($go__5_2))($f_3);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

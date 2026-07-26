@@ -205,6 +205,9 @@ $GLOBALS['Test_StateMonad_modify'] = (function() {
 // Test_StateMonad_chainModifications
 $GLOBALS['Test_StateMonad_chainModifications'] = function($v_0 = null) {
   $__num = \func_num_args();
+  $__tco_var_Test_StateMonad_chainModifications_v_0 = $v_0;
+  tco_loop_Test_StateMonad_chainModifications:;
+  $v_0 = $__tco_var_Test_StateMonad_chainModifications_v_0;
   $__res = match ($v_0) { 0 => function($s_1 = null) {
   $__num = \func_num_args();
   $__res = ["val" => $GLOBALS['Data_Unit_unit'], "state" => $s_1];
@@ -213,7 +216,7 @@ $GLOBALS['Test_StateMonad_chainModifications'] = function($v_0 = null) {
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, default => function($s_1 = null) use ($v_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Test_StateMonad_chainModifications'])(((($GLOBALS['Data_Ring_ringInt'])['sub'])($v_0))(1)))(((($GLOBALS['Data_Semiring_semiringInt'])['add'])($s_1))(1));
+  $__res = (($GLOBALS['Test_StateMonad_chainModifications'])(($v_0 - 1)))(($s_1 + 1));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -230,7 +233,29 @@ $GLOBALS['Test_StateMonad_runManyTimes'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = match ($v_0) { 0 => $v1_1, default => (($GLOBALS['Test_StateMonad_runManyTimes'])(((($GLOBALS['Data_Ring_ringInt'])['sub'])($v_0))(1)))(((($GLOBALS['Data_Semiring_semiringInt'])['add'])($v1_1))(((($GLOBALS['Test_StateMonad_chainModifications'])(60))(0))['state'])) };
+  $__tco_var_Test_StateMonad_runManyTimes_v_0 = $v_0;
+  $__tco_var_Test_StateMonad_runManyTimes_v1_1 = $v1_1;
+  tco_loop_Test_StateMonad_runManyTimes:;
+  $v_0 = $__tco_var_Test_StateMonad_runManyTimes_v_0;
+  $v1_1 = $__tco_var_Test_StateMonad_runManyTimes_v1_1;
+  $__t2 = null;;
+  switch ($v_0) {
+case 0:
+$__t2 = $v1_1;
+goto end_branch_2;;
+break;
+default:
+;
+break;
+};
+  $__tco_0 = ($v_0 - 1);
+  $__tco_1 = ($v1_1 + ((($GLOBALS['Test_StateMonad_chainModifications'])(60))(0))['state']);
+  $__tco_var_Test_StateMonad_runManyTimes_v_0 = $__tco_0;
+  $__tco_var_Test_StateMonad_runManyTimes_v1_1 = $__tco_1;
+  goto tco_loop_Test_StateMonad_runManyTimes;;
+  $__t2 = null;
+  end_branch_2:;
+  $__res = $__t2;
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

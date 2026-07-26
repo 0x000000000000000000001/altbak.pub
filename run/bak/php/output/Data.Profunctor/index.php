@@ -99,6 +99,15 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+// Data_Profunctor_identity
+$GLOBALS['Data_Profunctor_identity'] = function($x_0 = null) {
+  $__num = \func_num_args();
+  $__res = $x_0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+
 // Data_Profunctor_profunctorFn
 $GLOBALS['Data_Profunctor_profunctorFn'] = ["dimap" => (function() {
   $__fn = function($a2b_0 = null, $c2d_1 = null, $b2c_2 = null) use (&$__fn) {
@@ -106,7 +115,7 @@ $GLOBALS['Data_Profunctor_profunctorFn'] = ["dimap" => (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($c2d_1))($b2c_2)))($a2b_0);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($c2d_1))($b2c_2)))($a2b_0);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -130,7 +139,7 @@ $GLOBALS['Data_Profunctor_lcmap'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictProfunctor_0)['dimap'])($a2b_1))(($GLOBALS['Control_Category_categoryFn'])['identity']);
+  $__res = ((($dictProfunctor_0)['dimap'])($a2b_1))($GLOBALS['Data_Profunctor_identity']);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -145,7 +154,7 @@ $GLOBALS['Data_Profunctor_rmap'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictProfunctor_0)['dimap'])(($GLOBALS['Control_Category_categoryFn'])['identity']))($b2c_1);
+  $__res = ((($dictProfunctor_0)['dimap'])($GLOBALS['Data_Profunctor_identity']))($b2c_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -193,7 +202,7 @@ $GLOBALS['Data_Profunctor_arr'] = function($dictCategory_0 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($dictProfunctor_2)['dimap'])(($GLOBALS['Control_Category_categoryFn'])['identity']))($f_3))($identity1_1_0);
+  $__res = (((($dictProfunctor_2)['dimap'])($GLOBALS['Data_Profunctor_identity']))($f_3))($identity1_1_0);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

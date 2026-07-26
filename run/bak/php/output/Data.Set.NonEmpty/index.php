@@ -161,13 +161,13 @@ $GLOBALS['Data_Set_NonEmpty_toUnfoldable1'] = function($dictUnfoldable1_0 = null
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 });
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($dictUnfoldable1_0)['unfoldr1'])(function($v_2 = null) use ($stepNext_1_0) {
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($dictUnfoldable1_0)['unfoldr1'])(function($v_2 = null) use ($stepNext_1_0) {
   $__num = \func_num_args();
   $__res = ((($GLOBALS['Data_Tuple_functorTuple'])['map'])($stepNext_1_0))($v_2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-})))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(((($GLOBALS['Data_Map_Internal_stepWith'])($GLOBALS['Data_Map_Internal_iterMapL']))((function() {
+})))((($GLOBALS['Control_Semigroupoid_composeImpl'])(((($GLOBALS['Data_Map_Internal_stepWith'])($GLOBALS['Data_Map_Internal_iterMapL']))((function() {
   $__fn = function($k_2 = null, $v_3 = null, $next_4 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -185,7 +185,7 @@ $GLOBALS['Data_Set_NonEmpty_toUnfoldable1'] = function($dictUnfoldable1_0 = null
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-})))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Map_Internal_toMapIter']))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Set_toMap']))($GLOBALS['Unsafe_Coerce_unsafeCoerce']))));
+})))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Map_Internal_toMapIter']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Set_toMap']))($GLOBALS['Unsafe_Coerce_unsafeCoerce']))));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -200,7 +200,7 @@ $GLOBALS['Data_Set_NonEmpty_toUnfoldable12'] = ($GLOBALS['Data_Set_NonEmpty_toUn
 // Data_Set_NonEmpty_toUnfoldable
 $GLOBALS['Data_Set_NonEmpty_toUnfoldable'] = function($dictUnfoldable_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(($GLOBALS['Data_List_toUnfoldable'])($dictUnfoldable_0)))($GLOBALS['Data_Set_toList']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_List_toUnfoldable'])($dictUnfoldable_0)))($GLOBALS['Data_Set_toList']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -518,7 +518,7 @@ $GLOBALS['Data_Set_NonEmpty_fromFoldable'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Set_NonEmpty_fromSet']))(((($dictFoldable_0)['foldl'])((function() use ($dictOrd_1) {
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Set_NonEmpty_fromSet']))(((($dictFoldable_0)['foldl'])((function() use ($dictOrd_1) {
   $__fn = function($m_2 = null, $a_3 = null) use ($dictOrd_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -547,7 +547,7 @@ $GLOBALS['Data_Set_NonEmpty_foldable1NonEmptySet'] = ["foldMap1" => function($di
   $foldMap11_1_0 = (($GLOBALS['Data_List_Types_foldable1NonEmptyList'])['foldMap1'])($dictSemigroup_0);
   $__res = function($f_2 = null) use ($foldMap11_1_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(($foldMap11_1_0)($f_2)))($GLOBALS['Data_Set_NonEmpty_toUnfoldable12']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($foldMap11_1_0)($f_2)))($GLOBALS['Data_Set_NonEmpty_toUnfoldable12']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -557,13 +557,13 @@ $GLOBALS['Data_Set_NonEmpty_foldable1NonEmptySet'] = ["foldMap1" => function($di
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "foldr1" => function($f_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($GLOBALS['Data_List_Types_foldable1NonEmptyList'])['foldr1'])($f_0)))($GLOBALS['Data_Set_NonEmpty_toUnfoldable12']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_List_Types_foldable1NonEmptyList'])['foldr1'])($f_0)))($GLOBALS['Data_Set_NonEmpty_toUnfoldable12']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "foldl1" => function($f_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($GLOBALS['Data_List_Types_foldable1NonEmptyList'])['foldl1'])($f_0)))($GLOBALS['Data_Set_NonEmpty_toUnfoldable12']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_List_Types_foldable1NonEmptyList'])['foldl1'])($f_0)))($GLOBALS['Data_Set_NonEmpty_toUnfoldable12']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

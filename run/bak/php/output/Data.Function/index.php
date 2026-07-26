@@ -99,6 +99,24 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+// Data_Function_lessThanOrEq
+$GLOBALS['Data_Function_lessThanOrEq'] = (function() use (&$__fn) {
+$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT"));
+return (function() use ($__local_var_0_0) {
+  $__fn = function($a1_1 = null, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ( ! (is_object((($__local_var_0_0)($a1_1))($a2_2)) && (((($__local_var_0_0)($a1_1))($a2_2))->{'tag'} === "GT")));
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
+})();
+
 // Data_Function_on
 $GLOBALS['Data_Function_on'] = (function() {
   $__fn = function($f_0 = null, $g_1 = null, $x_2 = null, $y_3 = null) use (&$__fn) {
@@ -160,11 +178,11 @@ $GLOBALS['Data_Function_applyN'] = function($f_0 = null) {
   $n_2 = $__tco_var_go__1_0_0_n_2;
   $acc_3 = $__tco_var_go__1_0_0_acc_3;
   $__t2 = null;;
-  if (($n_2 <= 0)) {
+  if ((($GLOBALS['Data_Function_lessThanOrEq'])($n_2))(0)) {
 $__t2 = $acc_3;
 goto end_branch_2;;
 };
-  $__tco_0 = ((($GLOBALS['Data_Ring_ringInt'])['sub'])($n_2))(1);
+  $__tco_0 = ($n_2 - 1);
   $__tco_1 = ($f_0)($acc_3);
   $__tco_var_go__1_0_0_n_2 = $__tco_0;
   $__tco_var_go__1_0_0_acc_3 = $__tco_1;

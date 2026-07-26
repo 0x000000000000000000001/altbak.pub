@@ -122,6 +122,15 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+// Control_Monad_Except_Trans_identity
+$GLOBALS['Control_Monad_Except_Trans_identity'] = function($x_0 = null) {
+  $__num = \func_num_args();
+  $__res = $x_0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+
 // Control_Monad_Except_Trans_ExceptT
 $GLOBALS['Control_Monad_Except_Trans_ExceptT'] = function($x_0 = null) {
   $__num = \func_num_args();
@@ -236,7 +245,7 @@ $GLOBALS['Control_Monad_Except_Trans_functorExceptT'] = function($dictFunctor_0 
 // Control_Monad_Except_Trans_except
 $GLOBALS['Control_Monad_Except_Trans_except'] = function($dictApplicative_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Control_Monad_Except_Trans_ExceptT']))(($dictApplicative_0)['pure']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_Except_Trans_ExceptT']))(($dictApplicative_0)['pure']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -273,7 +282,7 @@ $GLOBALS['Control_Monad_Except_Trans_bindExceptT'] = function($dictMonad_0 = nul
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__local_var_4_1 = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($pure_1_0))($GLOBALS['Data_Either_Left']);
+  $__local_var_4_1 = (($GLOBALS['Control_Semigroupoid_composeImpl'])($pure_1_0))($GLOBALS['Data_Either_Left']);
   $__res = ((((($dictMonad_0)['Bind1'])(null))['bind'])($v_2))(function($v2_5 = null) use ($__local_var_4_1, $k_3) {
   $__num = \func_num_args();
   $__t2 = null;;
@@ -361,7 +370,7 @@ $GLOBALS['Control_Monad_Except_Trans_applyExceptT'] = function($dictMonad_0 = nu
 // Control_Monad_Except_Trans_applicativeExceptT
 $GLOBALS['Control_Monad_Except_Trans_applicativeExceptT'] = function($dictMonad_0 = null) {
   $__num = \func_num_args();
-  $__res = ["pure" => ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Control_Monad_Except_Trans_ExceptT']))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(((($dictMonad_0)['Applicative0'])(null))['pure']))($GLOBALS['Data_Either_Right'])), "Apply0" => function($_dollar__unused_1 = null) use ($dictMonad_0) {
+  $__res = ["pure" => (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_Except_Trans_ExceptT']))((($GLOBALS['Control_Semigroupoid_composeImpl'])(((($dictMonad_0)['Applicative0'])(null))['pure']))($GLOBALS['Data_Either_Right'])), "Apply0" => function($_dollar__unused_1 = null) use ($dictMonad_0) {
   $__num = \func_num_args();
   $__res = ($GLOBALS['Control_Monad_Except_Trans_applyExceptT'])($dictMonad_0);
   goto __end;;
@@ -517,7 +526,7 @@ $GLOBALS['Control_Monad_Except_Trans_monadEffectExceptT'] = function($dictMonadE
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = ["liftEffect" => ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($GLOBALS['Control_Monad_Except_Trans_monadTransExceptT'])['lift'])($Monad0_1_0)))(($dictMonadEffect_0)['liftEffect']), "Monad0" => function($_dollar__unused_3 = null) use ($monadExceptT1_2_1) {
+  $__res = ["liftEffect" => (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_Except_Trans_monadTransExceptT'])['lift'])($Monad0_1_0)))(($dictMonadEffect_0)['liftEffect']), "Monad0" => function($_dollar__unused_3 = null) use ($monadExceptT1_2_1) {
   $__num = \func_num_args();
   $__res = $monadExceptT1_2_1;
   goto __end;;
@@ -548,7 +557,7 @@ $GLOBALS['Control_Monad_Except_Trans_monadRecExceptT'] = function($dictMonadRec_
 }];
   $__res = ["tailRecM" => function($f_3 = null) use ($Monad0_1_0, $dictMonadRec_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Control_Monad_Except_Trans_ExceptT']))((($dictMonadRec_0)['tailRecM'])(function($a_4 = null) use ($Monad0_1_0, $f_3) {
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_Except_Trans_ExceptT']))((($dictMonadRec_0)['tailRecM'])(function($a_4 = null) use ($Monad0_1_0, $f_3) {
   $__num = \func_num_args();
   $__res = ((((($Monad0_1_0)['Bind1'])(null))['bind'])(($f_3)($a_4)))(function($m_prime_5 = null) use ($Monad0_1_0) {
   $__num = \func_num_args();
@@ -654,7 +663,7 @@ $GLOBALS['Control_Monad_Except_Trans_monadTellExceptT'] = function($dictMonadTel
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = ["tell" => ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($GLOBALS['Control_Monad_Except_Trans_monadTransExceptT'])['lift'])($Monad1_1_0)))(($dictMonadTell_0)['tell']), "Semigroup0" => function($_dollar__unused_4 = null) use ($Semigroup0_2_1) {
+  $__res = ["tell" => (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_Except_Trans_monadTransExceptT'])['lift'])($Monad1_1_0)))(($dictMonadTell_0)['tell']), "Semigroup0" => function($_dollar__unused_4 = null) use ($Semigroup0_2_1) {
   $__num = \func_num_args();
   $__res = $Semigroup0_2_1;
   goto __end;;
@@ -706,7 +715,7 @@ $GLOBALS['Control_Monad_Except_Trans_monadWriterExceptT'] = function($dictMonadW
   $__num = \func_num_args();
   $__t7 = null;;
   if ((is_object($a_8) && (($a_8)->{'tag'} === "Left"))) {
-$__t7 = new Phpurs_Data2("Tuple", new Phpurs_Data1("Left", ($a_8)->{'value0'}), ($GLOBALS['Control_Category_categoryFn'])['identity']);
+$__t7 = new Phpurs_Data2("Tuple", new Phpurs_Data1("Left", ($a_8)->{'value0'}), $GLOBALS['Control_Monad_Except_Trans_identity']);
 goto end_branch_7;;
 };
   if ((is_object($a_8) && (($a_8)->{'tag'} === "Right"))) {
@@ -758,7 +767,7 @@ $GLOBALS['Control_Monad_Except_Trans_monadThrowExceptT'] = function($dictMonad_0
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = ["throwError" => ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Control_Monad_Except_Trans_ExceptT']))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(((($dictMonad_0)['Applicative0'])(null))['pure']))($GLOBALS['Data_Either_Left'])), "Monad0" => function($_dollar__unused_2 = null) use ($monadExceptT1_1_0) {
+  $__res = ["throwError" => (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_Except_Trans_ExceptT']))((($GLOBALS['Control_Semigroupoid_composeImpl'])(((($dictMonad_0)['Applicative0'])(null))['pure']))($GLOBALS['Data_Either_Left'])), "Monad0" => function($_dollar__unused_2 = null) use ($monadExceptT1_1_0) {
   $__num = \func_num_args();
   $__res = $monadExceptT1_1_0;
   goto __end;;
@@ -781,7 +790,7 @@ $GLOBALS['Control_Monad_Except_Trans_monadErrorExceptT'] = function($dictMonad_0
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__local_var_5_2 = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($pure_1_0))($GLOBALS['Data_Either_Right']);
+  $__local_var_5_2 = (($GLOBALS['Control_Semigroupoid_composeImpl'])($pure_1_0))($GLOBALS['Data_Either_Right']);
   $__res = ((((($dictMonad_0)['Bind1'])(null))['bind'])($v_3))(function($v2_6 = null) use ($__local_var_5_2, $k_4) {
   $__num = \func_num_args();
   $__t3 = null;;
@@ -835,7 +844,7 @@ $GLOBALS['Control_Monad_Except_Trans_monadSTExceptT'] = function($dictMonadST_0 
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = ["liftST" => ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($GLOBALS['Control_Monad_Except_Trans_monadTransExceptT'])['lift'])($Monad0_1_0)))(($dictMonadST_0)['liftST']), "Monad0" => function($_dollar__unused_3 = null) use ($monadExceptT1_2_1) {
+  $__res = ["liftST" => (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_Except_Trans_monadTransExceptT'])['lift'])($Monad0_1_0)))(($dictMonadST_0)['liftST']), "Monad0" => function($_dollar__unused_3 = null) use ($monadExceptT1_2_1) {
   $__num = \func_num_args();
   $__res = $monadExceptT1_2_1;
   goto __end;;

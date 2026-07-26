@@ -292,18 +292,6 @@ $GLOBALS['Data_Array_ST_unsafeThawImpl'] = $ffi_Data_Array_ST['unsafeThawImpl'] 
 $GLOBALS['Data_Array_ST_unshiftAllImpl'] = $ffi_Data_Array_ST['unshiftAllImpl'] ?? new class { public function __invoke(...$args) { return $this; } };
 
 
-// Data_Array_ST_negate
-$GLOBALS['Data_Array_ST_negate'] = (function() use (&$__fn) {
-$zero_0_0 = ((($GLOBALS['Data_Ring_ringInt'])['Semiring0'])(null))['zero'];
-return function($a_1 = null) use ($zero_0_0) {
-  $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Ring_ringInt'])['sub'])($zero_0_0))($a_1);
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
-})();
-
 // Data_Array_ST_unshiftAll
 $GLOBALS['Data_Array_ST_unshiftAll'] = ($GLOBALS['Control_Monad_ST_Uncurried_runSTFn2'])($GLOBALS['Data_Array_ST_unshiftAllImpl']);
 
@@ -335,11 +323,11 @@ $GLOBALS['Data_Array_ST_withArray'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bindST'])['bind'])(($GLOBALS['Data_Array_ST_thaw'])($xs_1)))(function($result_2 = null) use ($f_0) {
+  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bindST'])['bind'])((($GLOBALS['Control_Monad_ST_Uncurried_runSTFn1'])($GLOBALS['Data_Array_ST_thawImpl']))($xs_1)))(function($result_2 = null) use ($f_0) {
   $__num = \func_num_args();
   $__res = ((($GLOBALS['Control_Monad_ST_Internal_bindST'])['bind'])(($f_0)($result_2)))(function($_dollar__unused_3 = null) use ($result_2) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Array_ST_unsafeFreeze'])($result_2);
+  $__res = (($GLOBALS['Control_Monad_ST_Uncurried_runSTFn1'])($GLOBALS['Data_Array_ST_unsafeFreezeImpl']))($result_2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -373,7 +361,7 @@ $__t0 = 0;
 goto end_branch_0;;
 };
   if ((is_object($v_1) && (($v_1)->{'tag'} === "LT"))) {
-$__t0 = ($GLOBALS['Data_Array_ST_negate'])(1);
+$__t0 = -1;
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -459,11 +447,11 @@ $GLOBALS['Data_Array_ST_modify'] = (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bindST'])['bind'])((($GLOBALS['Data_Array_ST_peek'])($i_0))($xs_2)))(function($entry_3 = null) use ($f_1, $i_0, $xs_2) {
+  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bindST'])['bind'])(((((($GLOBALS['Control_Monad_ST_Uncurried_runSTFn4'])($GLOBALS['Data_Array_ST_peekImpl']))($GLOBALS['Data_Maybe_Just']))(new Phpurs_Data0("Nothing")))($i_0))($xs_2)))(function($entry_3 = null) use ($f_1, $i_0, $xs_2) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object($entry_3) && (($entry_3)->{'tag'} === "Just"))) {
-$__t0 = ((($GLOBALS['Data_Array_ST_poke'])($i_0))(($f_1)(($entry_3)->{'value0'})))($xs_2);
+$__t0 = (((($GLOBALS['Control_Monad_ST_Uncurried_runSTFn3'])($GLOBALS['Data_Array_ST_pokeImpl']))($i_0))(($f_1)(($entry_3)->{'value0'})))($xs_2);
 goto end_branch_0;;
 };
   if ((is_object($entry_3) && (($entry_3)->{'tag'} === "Nothing"))) {

@@ -153,11 +153,11 @@ $GLOBALS['Data_Profunctor_Choice_fanin'] = (function() {
   $__num = \func_num_args();
   $__t1 = null;;
   if ((is_object($v2_5) && (($v2_5)->{'tag'} === "Left"))) {
-$__t1 = (($GLOBALS['Control_Category_categoryFn'])['identity'])(($v2_5)->{'value0'});
+$__t1 = ($v2_5)->{'value0'};
 goto end_branch_1;;
 };
   if ((is_object($v2_5) && (($v2_5)->{'tag'} === "Right"))) {
-$__t1 = (($GLOBALS['Control_Category_categoryFn'])['identity'])(($v2_5)->{'value0'});
+$__t1 = ($v2_5)->{'value0'};
 goto end_branch_1;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);

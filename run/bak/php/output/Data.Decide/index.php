@@ -105,6 +105,15 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+// Data_Decide_identity
+$GLOBALS['Data_Decide_identity'] = function($x_0 = null) {
+  $__num = \func_num_args();
+  $__res = $x_0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+
 // Data_Decide_choosePredicate
 $GLOBALS['Data_Decide_choosePredicate'] = ["choose" => (function() {
   $__fn = function($f_0 = null, $v_1 = null, $v1_2 = null) use (&$__fn) {
@@ -112,7 +121,7 @@ $GLOBALS['Data_Decide_choosePredicate'] = ["choose" => (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(function($v2_3 = null) use ($v1_2, $v_1) {
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v2_3 = null) use ($v1_2, $v_1) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object($v2_3) && (($v2_3)->{'tag'} === "Left"))) {
@@ -154,7 +163,7 @@ $GLOBALS['Data_Decide_chooseOp'] = function($dictSemigroup_0 = null) {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(function($v2_5 = null) use ($v1_4, $v_3) {
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v2_5 = null) use ($v1_4, $v_3) {
   $__num = \func_num_args();
   $__t1 = null;;
   if ((is_object($v2_5) && (($v2_5)->{'tag'} === "Left"))) {
@@ -322,7 +331,7 @@ $GLOBALS['Data_Decide_choose'] = function($dict_0 = null) {
 // Data_Decide_chosen
 $GLOBALS['Data_Decide_chosen'] = function($dictDecide_0 = null) {
   $__num = \func_num_args();
-  $__res = (($dictDecide_0)['choose'])(($GLOBALS['Control_Category_categoryFn'])['identity']);
+  $__res = (($dictDecide_0)['choose'])($GLOBALS['Data_Decide_identity']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

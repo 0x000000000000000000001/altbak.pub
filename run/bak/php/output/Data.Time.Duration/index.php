@@ -119,6 +119,15 @@ return function($a_1 = null) use ($zero_0_0) {
 };
 })();
 
+// Data_Time_Duration_identity
+$GLOBALS['Data_Time_Duration_identity'] = function($x_0 = null) {
+  $__num = \func_num_args();
+  $__res = $x_0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+
 // Data_Time_Duration_Seconds
 $GLOBALS['Data_Time_Duration_Seconds'] = function($x_0 = null) {
   $__num = \func_num_args();
@@ -410,7 +419,7 @@ $GLOBALS['Data_Time_Duration_fromDuration'] = function($dict_0 = null) {
 // Data_Time_Duration_negateDuration
 $GLOBALS['Data_Time_Duration_negateDuration'] = function($dictDuration_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(($dictDuration_0)['toDuration']))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Time_Duration_negate']))(($dictDuration_0)['fromDuration']));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictDuration_0)['toDuration']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Time_Duration_negate']))(($dictDuration_0)['fromDuration']));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -462,7 +471,7 @@ $GLOBALS['Data_Time_Duration_durationMinutes'] = ["fromDuration" => function($v_
 }];
 
 // Data_Time_Duration_durationMilliseconds
-$GLOBALS['Data_Time_Duration_durationMilliseconds'] = ["fromDuration" => ($GLOBALS['Control_Category_categoryFn'])['identity'], "toDuration" => ($GLOBALS['Control_Category_categoryFn'])['identity']];
+$GLOBALS['Data_Time_Duration_durationMilliseconds'] = ["fromDuration" => $GLOBALS['Data_Time_Duration_identity'], "toDuration" => $GLOBALS['Data_Time_Duration_identity']];
 
 // Data_Time_Duration_durationHours
 $GLOBALS['Data_Time_Duration_durationHours'] = ["fromDuration" => function($v_0 = null) {
@@ -500,7 +509,7 @@ $GLOBALS['Data_Time_Duration_convertDuration'] = function($dictDuration_0 = null
   $fromDuration1_1_0 = ($dictDuration_0)['fromDuration'];
   $__res = function($dictDuration1_2 = null) use ($fromDuration1_1_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(($dictDuration1_2)['toDuration']))($fromDuration1_1_0);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictDuration1_2)['toDuration']))($fromDuration1_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
