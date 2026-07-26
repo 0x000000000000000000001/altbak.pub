@@ -19,48 +19,48 @@ workspace:
     registry: 77.7.0
   extraPackages:
     prelude:
-      path: "../cspurs-prelude"
+      path: "../sharpurs-prelude"
     effect:
-      path: "../cspurs-effect"
+      path: "../sharpurs-effect"
     console:
-      path: "../cspurs-console"
+      path: "../sharpurs-console"
     aff:
-      path: "../cspurs-aff"
+      path: "../sharpurs-aff"
     now:
-      path: "../cspurs-now"
+      path: "../sharpurs-now"
     datetime:
-      path: "../cspurs-datetime"
+      path: "../sharpurs-datetime"
     exceptions:
-      path: "../cspurs-exceptions"
+      path: "../sharpurs-exceptions"
     foldable-traversable:
-      path: "../cspurs-foldable-traversable"
+      path: "../sharpurs-foldable-traversable"
     st:
-      path: "../cspurs-st"
+      path: "../sharpurs-st"
     refs:
-      path: "../cspurs-refs"
+      path: "../sharpurs-refs"
     unsafe-coerce:
-      path: "../cspurs-unsafe-coerce"
+      path: "../sharpurs-unsafe-coerce"
     functions:
-      path: "../cspurs-functions"
+      path: "../sharpurs-functions"
     partial:
-      path: "../cspurs-partial"
+      path: "../sharpurs-partial"
     arrays:
-      path: "../cspurs-arrays"
+      path: "../sharpurs-arrays"
     strings:
-      path: "../cspurs-strings"
+      path: "../sharpurs-strings"
     integers:
-      path: "../cspurs-integers"
+      path: "../sharpurs-integers"
     enums:
-      path: "../cspurs-enums"
+      path: "../sharpurs-enums"
     foreign-object:
-      path: "../cspurs-foreign-object"
+      path: "../sharpurs-foreign-object"
     numbers:
-      path: "../cspurs-numbers"
+      path: "../sharpurs-numbers"
     record:
-      path: "../cspurs-record"
+      path: "../sharpurs-record"
     assert:
-      path: "../cspurs-assert"
+      path: "../sharpurs-assert"
     lazy:
-      path: "../cspurs-lazy"
+      path: "../sharpurs-lazy"
   backend:
     cmd: "../csharpurs/bin/csharpurs"

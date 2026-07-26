@@ -105,7 +105,7 @@ var cache_singleton gopurs_runtime.Value
 var once_singleton sync.Once
 func Get_singleton() gopurs_runtime.Value {
 	once_singleton.Do(func() {
-		cache_singleton = pkg_Data_Set.Get_singleton__gopurs_runtime_Value()
+		cache_singleton = pkg_Data_Set.Get_singleton__gopurs_runtime_Value_2050718518()
 	})
 	return cache_singleton
 }
