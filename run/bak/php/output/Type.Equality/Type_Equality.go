@@ -1,0 +1,76 @@
+package Type_Equality
+
+import (
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
+)
+
+var cache_refl gopurs_runtime.Value
+var once_refl sync.Once
+func Get_refl() gopurs_runtime.Value {
+	once_refl.Do(func() {
+		cache_refl = gopurs_runtime.RecordDict2("Coercible0", "proof", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{}
+}), gopurs_runtime.Func(func(a_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return a_0
+}))
+	})
+	return cache_refl
+}
+
+var cache_proof gopurs_runtime.Value
+var once_proof sync.Once
+func Get_proof() gopurs_runtime.Value {
+	once_proof.Do(func() {
+		cache_proof = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_proof(dict_0_box)
+})
+	})
+	return cache_proof
+}
+
+var cache_to gopurs_runtime.Value
+var once_to sync.Once
+func Get_to() gopurs_runtime.Value {
+	once_to.Do(func() {
+		cache_to = gopurs_runtime.Func(func(dictTypeEquals_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_to(dictTypeEquals_0_box)
+})
+	})
+	return cache_to
+}
+
+var cache_from gopurs_runtime.Value
+var once_from sync.Once
+func Get_from() gopurs_runtime.Value {
+	once_from.Do(func() {
+		cache_from = gopurs_runtime.Func(func(dictTypeEquals_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_from(dictTypeEquals_0_box)
+})
+	})
+	return cache_from
+}
+
+func Call_proof(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return ((*gopurs_runtime.RecordData1)(dict_0.UnsafePtr)).V0
+}
+
+func Call_to(dictTypeEquals_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictTypeEquals_0 gopurs_runtime.Value = dictTypeEquals_0_loop
+_ = dictTypeEquals_0
+return gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictTypeEquals_0.UnsafePtr)).V0, gopurs_runtime.Func(func(a_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return a_1
+}))
+}
+
+func Call_from(dictTypeEquals_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictTypeEquals_0 gopurs_runtime.Value = dictTypeEquals_0_loop
+_ = dictTypeEquals_0
+return gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictTypeEquals_0.UnsafePtr)).V0, gopurs_runtime.Func(func(a_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return a_1
+}))
+}
+
+

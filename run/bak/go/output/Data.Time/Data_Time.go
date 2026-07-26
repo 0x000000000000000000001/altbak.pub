@@ -322,54 +322,54 @@ type Constructor_Time struct {
 }
 
 
-func Call_setSecond(s_0_loop gopurs_runtime.Value, v_1_loop *Constructor_Time) gopurs_runtime.Value {
+func Call_setSecond(s_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var s_0 gopurs_runtime.Value = s_0_loop
 _ = s_0
-var v_1 *Constructor_Time = v_1_loop
+var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
-return gopurs_runtime.Value{Type: 9, IntVal: 922918650, UnsafePtr: unsafe.Pointer(&Constructor_Time{(v_1).V0, (v_1).V1, s_0, (v_1).V3})}
+return gopurs_runtime.Value{Type: 9, IntVal: 922918650, UnsafePtr: unsafe.Pointer(&Constructor_Time{(*Constructor_Time)(v_1.UnsafePtr).V0, (*Constructor_Time)(v_1.UnsafePtr).V1, s_0, (*Constructor_Time)(v_1.UnsafePtr).V3})}
 }
 
-func Call_setMinute(m_0_loop gopurs_runtime.Value, v_1_loop *Constructor_Time) gopurs_runtime.Value {
+func Call_setMinute(m_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var m_0 gopurs_runtime.Value = m_0_loop
 _ = m_0
-var v_1 *Constructor_Time = v_1_loop
+var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
-return gopurs_runtime.Value{Type: 9, IntVal: 922918650, UnsafePtr: unsafe.Pointer(&Constructor_Time{(v_1).V0, m_0, (v_1).V2, (v_1).V3})}
+return gopurs_runtime.Value{Type: 9, IntVal: 922918650, UnsafePtr: unsafe.Pointer(&Constructor_Time{(*Constructor_Time)(v_1.UnsafePtr).V0, m_0, (*Constructor_Time)(v_1.UnsafePtr).V2, (*Constructor_Time)(v_1.UnsafePtr).V3})}
 }
 
-func Call_setMillisecond(ms_0_loop gopurs_runtime.Value, v_1_loop *Constructor_Time) gopurs_runtime.Value {
+func Call_setMillisecond(ms_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var ms_0 gopurs_runtime.Value = ms_0_loop
 _ = ms_0
-var v_1 *Constructor_Time = v_1_loop
+var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
-return gopurs_runtime.Value{Type: 9, IntVal: 922918650, UnsafePtr: unsafe.Pointer(&Constructor_Time{(v_1).V0, (v_1).V1, (v_1).V2, ms_0})}
+return gopurs_runtime.Value{Type: 9, IntVal: 922918650, UnsafePtr: unsafe.Pointer(&Constructor_Time{(*Constructor_Time)(v_1.UnsafePtr).V0, (*Constructor_Time)(v_1.UnsafePtr).V1, (*Constructor_Time)(v_1.UnsafePtr).V2, ms_0})}
 }
 
-func Call_setHour(h_0_loop gopurs_runtime.Value, v_1_loop *Constructor_Time) gopurs_runtime.Value {
+func Call_setHour(h_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var h_0 gopurs_runtime.Value = h_0_loop
 _ = h_0
-var v_1 *Constructor_Time = v_1_loop
+var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
-return gopurs_runtime.Value{Type: 9, IntVal: 922918650, UnsafePtr: unsafe.Pointer(&Constructor_Time{h_0, (v_1).V1, (v_1).V2, (v_1).V3})}
+return gopurs_runtime.Value{Type: 9, IntVal: 922918650, UnsafePtr: unsafe.Pointer(&Constructor_Time{h_0, (*Constructor_Time)(v_1.UnsafePtr).V1, (*Constructor_Time)(v_1.UnsafePtr).V2, (*Constructor_Time)(v_1.UnsafePtr).V3})}
 }
 
-func Call_second(v_0_loop *Constructor_Time) gopurs_runtime.Value {
-var v_0 *Constructor_Time = v_0_loop
+func Call_second(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-return (v_0).V2
+return (*Constructor_Time)(v_0.UnsafePtr).V2
 }
 
-func Call_minute(v_0_loop *Constructor_Time) gopurs_runtime.Value {
-var v_0 *Constructor_Time = v_0_loop
+func Call_minute(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-return (v_0).V1
+return (*Constructor_Time)(v_0.UnsafePtr).V1
 }
 
-func Call_millisecond(v_0_loop *Constructor_Time) gopurs_runtime.Value {
-var v_0 *Constructor_Time = v_0_loop
+func Call_millisecond(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-return (v_0).V3
+return (*Constructor_Time)(v_0.UnsafePtr).V3
 }
 
 func Call_millisToTime(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -399,34 +399,34 @@ end_branch_4:
 return __t4
 }
 
-func Call_hour(v_0_loop *Constructor_Time) gopurs_runtime.Value {
-var v_0 *Constructor_Time = v_0_loop
+func Call_hour(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-return (v_0).V0
+return (*Constructor_Time)(v_0.UnsafePtr).V0
 }
 
-func Call_timeToMillis(t_0_loop *Constructor_Time) gopurs_runtime.Value {
-var t_0 *Constructor_Time = t_0_loop
+func Call_timeToMillis(t_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var t_0 gopurs_runtime.Value = t_0_loop
 _ = t_0
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semiring.Get_semiringNumber(), "add"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semiring.Get_semiringNumber(), "add"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semiring.Get_semiringNumber(), "add"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semiring.Get_semiringNumber(), "mul"), gopurs_runtime.Float(3600000.0), gopurs_runtime.Apply(pkg_Data_Int.Get_toNumber(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_boundedEnumHour(), "fromEnum"), (t_0).V0))), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semiring.Get_semiringNumber(), "mul"), gopurs_runtime.Float(60000.0), gopurs_runtime.Apply(pkg_Data_Int.Get_toNumber(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_boundedEnumMinute(), "fromEnum"), (t_0).V1)))), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semiring.Get_semiringNumber(), "mul"), gopurs_runtime.Float(1000.0), gopurs_runtime.Apply(pkg_Data_Int.Get_toNumber(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_boundedEnumSecond(), "fromEnum"), (t_0).V2)))), gopurs_runtime.Apply(pkg_Data_Int.Get_toNumber(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_boundedEnumMillisecond(), "fromEnum"), (t_0).V3)))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semiring.Get_semiringNumber(), "add"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semiring.Get_semiringNumber(), "add"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semiring.Get_semiringNumber(), "add"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semiring.Get_semiringNumber(), "mul"), gopurs_runtime.Float(3600000.0), gopurs_runtime.Apply(pkg_Data_Int.Get_toNumber(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_boundedEnumHour(), "fromEnum"), (*Constructor_Time)(t_0.UnsafePtr).V0))), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semiring.Get_semiringNumber(), "mul"), gopurs_runtime.Float(60000.0), gopurs_runtime.Apply(pkg_Data_Int.Get_toNumber(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_boundedEnumMinute(), "fromEnum"), (*Constructor_Time)(t_0.UnsafePtr).V1)))), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semiring.Get_semiringNumber(), "mul"), gopurs_runtime.Float(1000.0), gopurs_runtime.Apply(pkg_Data_Int.Get_toNumber(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_boundedEnumSecond(), "fromEnum"), (*Constructor_Time)(t_0.UnsafePtr).V2)))), gopurs_runtime.Apply(pkg_Data_Int.Get_toNumber(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_boundedEnumMillisecond(), "fromEnum"), (*Constructor_Time)(t_0.UnsafePtr).V3)))
 }
 
-func Call_diff(dictDuration_0_loop gopurs_runtime.Value, t1_1_loop *Constructor_Time, t2_2_loop *Constructor_Time) gopurs_runtime.Value {
+func Call_diff(dictDuration_0_loop gopurs_runtime.Value, t1_1_loop gopurs_runtime.Value, t2_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictDuration_0 gopurs_runtime.Value = dictDuration_0_loop
 _ = dictDuration_0
-var t1_1 *Constructor_Time = t1_1_loop
+var t1_1 gopurs_runtime.Value = t1_1_loop
 _ = t1_1
-var t2_2 *Constructor_Time = t2_2_loop
+var t2_2 gopurs_runtime.Value = t2_2_loop
 _ = t2_2
 return gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictDuration_0.UnsafePtr)).V1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_semigroupMilliseconds(), "append"), gopurs_runtime.Apply(Get_timeToMillis(), t1_1), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_durationMilliseconds(), "toDuration"), gopurs_runtime.Apply(pkg_Data_Time_Duration.Get_negate(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_durationMilliseconds(), "fromDuration"), gopurs_runtime.Apply(Get_timeToMillis(), t2_2))))))
 }
 
-func Call_adjust(dictDuration_0_loop gopurs_runtime.Value, d_1_loop gopurs_runtime.Value, t_2_loop *Constructor_Time) gopurs_runtime.Value {
+func Call_adjust(dictDuration_0_loop gopurs_runtime.Value, d_1_loop gopurs_runtime.Value, t_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictDuration_0 gopurs_runtime.Value = dictDuration_0_loop
 _ = dictDuration_0
 var d_1 gopurs_runtime.Value = d_1_loop
 _ = d_1
-var t_2 *Constructor_Time = t_2_loop
+var t_2 gopurs_runtime.Value = t_2_loop
 _ = t_2
 d_prime_3_0 := gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictDuration_0.UnsafePtr)).V0, d_1)
 _ = d_prime_3_0

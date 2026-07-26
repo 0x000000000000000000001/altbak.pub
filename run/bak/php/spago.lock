@@ -687,6 +687,9 @@
       "effect": {
         "path": "../phpurs-effect"
       },
+      "enums": {
+        "path": "../phpurs-enums"
+      },
       "exceptions": {
         "path": "../phpurs-exceptions"
       },
@@ -695,6 +698,12 @@
       },
       "functions": {
         "path": "../phpurs-functions"
+      },
+      "integers": {
+        "path": "../phpurs-integers"
+      },
+      "math": {
+        "path": "../phpurs-math"
       },
       "now": {
         "path": "../phpurs-now"
@@ -713,6 +722,9 @@
       },
       "strings": {
         "path": "../phpurs-strings"
+      },
+      "unfoldable": {
+        "path": "../phpurs-unfoldable"
       },
       "unsafe-coerce": {
         "path": "../phpurs-unsafe-coerce"
@@ -867,9 +879,8 @@
       ]
     },
     "enums": {
-      "type": "registry",
-      "version": "6.0.1",
-      "integrity": "sha256-sdZOmLX5+5pASGpvVyT0vSD5BBYQjZiayjV5XiPutso=",
+      "type": "local",
+      "path": "../phpurs-enums",
       "dependencies": [
         "control",
         "either",
@@ -974,9 +985,8 @@
       ]
     },
     "integers": {
-      "type": "registry",
-      "version": "6.0.0",
-      "integrity": "sha256-Y8yozC1uHRLcruobEyv5/bMKzE1BoKJ/olHv6o+bgm8=",
+      "type": "local",
+      "path": "../phpurs-integers",
       "dependencies": [
         "maybe",
         "numbers",
@@ -1248,9 +1258,8 @@
       "dependencies": []
     },
     "unfoldable": {
-      "type": "registry",
-      "version": "6.0.0",
-      "integrity": "sha256-BK/6By1sKp/ztk+9CF3q43SV0QDTLVdsGqFerKHSmbg=",
+      "type": "local",
+      "path": "../phpurs-unfoldable",
       "dependencies": [
         "foldable-traversable",
         "maybe",

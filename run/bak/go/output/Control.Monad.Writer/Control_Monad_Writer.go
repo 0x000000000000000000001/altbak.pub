@@ -3,8 +3,8 @@ package Control_Monad_Writer
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Tuple "gopurs/output/Data.Tuple"
 	pkg_Data_Identity "gopurs/output/Data.Identity"
+	pkg_Data_Tuple "gopurs/output/Data.Tuple"
 )
 
 var cache_writer gopurs_runtime.Value
@@ -51,8 +51,8 @@ return Call_execWriter(m_0_box)
 	return cache_execWriter
 }
 
-func Call_writer(x_0_loop *pkg_Data_Tuple.Constructor_Tuple) gopurs_runtime.Value {
-var x_0 *pkg_Data_Tuple.Constructor_Tuple = x_0_loop
+func Call_writer(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Identity.Get_applicativeIdentity(), "pure"), x_0)
 }

@@ -1,0 +1,66 @@
+package:
+  name: ps-cs-test
+  dependencies:
+    - aff
+    - console
+    - effect
+    - prelude
+    - datetime
+    - strings
+    - arrays
+    - partial
+    - st
+    - maybe
+    - either
+    - now
+    - lazy
+workspace:
+  packageSet:
+    registry: 77.7.0
+  extraPackages:
+    prelude:
+      path: "../cspurs-prelude"
+    effect:
+      path: "../cspurs-effect"
+    console:
+      path: "../cspurs-console"
+    aff:
+      path: "../cspurs-aff"
+    now:
+      path: "../cspurs-now"
+    datetime:
+      path: "../cspurs-datetime"
+    exceptions:
+      path: "../cspurs-exceptions"
+    foldable-traversable:
+      path: "../cspurs-foldable-traversable"
+    st:
+      path: "../cspurs-st"
+    refs:
+      path: "../cspurs-refs"
+    unsafe-coerce:
+      path: "../cspurs-unsafe-coerce"
+    functions:
+      path: "../cspurs-functions"
+    partial:
+      path: "../cspurs-partial"
+    arrays:
+      path: "../cspurs-arrays"
+    strings:
+      path: "../cspurs-strings"
+    integers:
+      path: "../cspurs-integers"
+    enums:
+      path: "../cspurs-enums"
+    foreign-object:
+      path: "../cspurs-foreign-object"
+    numbers:
+      path: "../cspurs-numbers"
+    record:
+      path: "../cspurs-record"
+    assert:
+      path: "../cspurs-assert"
+    lazy:
+      path: "../cspurs-lazy"
+  backend:
+    cmd: "../csharpurs/bin/csharpurs"

@@ -8,8 +8,8 @@ import (
 	pkg_Data_Map_Internal "gopurs/output/Data.Map.Internal"
 	pkg_Data_List_Types "gopurs/output/Data.List.Types"
 	pkg_Data_Eq "gopurs/output/Data.Eq"
-	pkg_Data_Maybe "gopurs/output/Data.Maybe"
 	pkg_Data_Function "gopurs/output/Data.Function"
+	pkg_Data_Maybe "gopurs/output/Data.Maybe"
 	pkg_Data_Unit "gopurs/output/Data.Unit"
 	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
 	pkg_Data_Show "gopurs/output/Data.Show"
@@ -431,8 +431,8 @@ return Call_catMaybes(dictOrd_0_box)
 	return cache_catMaybes
 }
 
-func Call_identity(x_0_loop *pkg_Data_Maybe.Constructor_Just) *pkg_Data_Maybe.Constructor_Just {
-var x_0 *pkg_Data_Maybe.Constructor_Just = x_0_loop
+func Call_identity(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
 return x_0
 }

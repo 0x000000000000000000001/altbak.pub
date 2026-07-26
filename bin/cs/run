@@ -1,0 +1,84 @@
+#!/usr/bin/env bash
+set -e
+cd "$(dirname "$0")/../.."
+
+CLEAN=0
+MODE="pure"
+TEST_NAME=""
+
+while [[ $# -gt 0 ]]
+do
+  case "$1" in
+    --clean)
+    CLEAN=1
+    shift
+    ;;
+    --test)
+    MODE="test"
+    TEST_NAME="$2"
+    shift 2
+    ;;
+    --x)
+    MODE="x"
+    shift
+    ;;
+    *)
+    shift
+    ;;
+  esac
+done
+
+if [ "$CLEAN" == "1" ]; then
+  rm -rf run/bak/cs/output/* run/bak/cs/spago/*
+fi
+mkdir -p run/bak/cs/output run/bak/cs/spago
+rm -rf output .spago spago.yaml spago.lock
+ln -s run/bak/cs/output output
+ln -s run/bak/cs/spago .spago
+ln -s run/bak/cs/spago.cs.yaml spago.yaml
+touch run/bak/cs/spago.lock && ln -s run/bak/cs/spago.lock spago.lock
+
+ENTRY_POINT="App"
+
+if [ "$MODE" == "test" ]; then
+  ENTRY_POINT="AppX"
+  cat <<EOF > src/AppX.purs
+module AppX where
+import Prelude
+import Effect (Effect)
+import Bench (runBench)
+import Test.$TEST_NAME as $TEST_NAME
+
+main :: Effect Unit
+main = void $ runBench $TEST_NAME.describe $TEST_NAME.act
+EOF
+  trap "rm -f src/AppX.purs" EXIT
+elif [ "$MODE" == "x" ]; then
+  ENTRY_POINT="AppX"
+  cp -r srx/Test/* src/Test/
+  cp srx/AppX.purs src/
+  trap "rm -rf src/Test/STArray.purs src/Test/AffOperations.purs src/Test/StringOps.purs src/Test/FileOps src/AppX.purs" EXIT
+fi
+
+export PATH="$PWD/run/bak/js/node_modules/.bin:$PATH"
+
+if [ "$CLEAN" == "1" ]; then
+  echo "=== Rebuilding csharpurs backend ==="
+  (cd ../csharpurs && npm run build --silent)
+fi
+
+echo 'Building...'
+spago build > /dev/null 2>&1
+
+# Generate C# code
+node ../csharpurs/bin/csharpurs.js
+
+echo "=== C# ==="
+if [ -d "output/csharp" ]; then
+    cd output/csharp
+    dotnet new console --force > /dev/null 2>&1
+    dotnet run
+    cd ../..
+else
+    echo "No output/csharp generated."
+fi

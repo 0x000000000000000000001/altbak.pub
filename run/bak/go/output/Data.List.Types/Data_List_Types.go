@@ -1341,7 +1341,7 @@ type Constructor_Nil[T_a any] struct {
 
 type Constructor_Cons[T_a any] struct {
 	V0 T_a
-	V1 *Constructor_Cons
+	V1 gopurs_runtime.Value
 }
 
 

@@ -737,7 +737,7 @@ type Constructor_DurationOnly[T_d any, T_a any] struct {
 
 
 type Constructor_RecurringInterval[T_d any, T_a any] struct {
-	V0 *pkg_Data_Maybe.Constructor_Just
+	V0 gopurs_runtime.Value
 	V1 gopurs_runtime.Value
 }
 
@@ -799,14 +799,14 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_sem
 }))
 }
 
-func Call_over(dictFunctor_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value, v_2_loop *Constructor_RecurringInterval) gopurs_runtime.Value {
+func Call_over(dictFunctor_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value, v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictFunctor_0 gopurs_runtime.Value = dictFunctor_0_loop
 _ = dictFunctor_0
 var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
-var v_2 *Constructor_RecurringInterval = v_2_loop
+var v_2 gopurs_runtime.Value = v_2_loop
 _ = v_2
-return gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictFunctor_0.UnsafePtr)).V0, gopurs_runtime.Apply(Get_RecurringInterval(), (v_2).V0), gopurs_runtime.Apply(f_1, (v_2).V1))
+return gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictFunctor_0.UnsafePtr)).V0, gopurs_runtime.Apply(Get_RecurringInterval(), (*Constructor_RecurringInterval[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0), gopurs_runtime.Apply(f_1, (*Constructor_RecurringInterval[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V1))
 }
 
 func Call_eqInterval(dictEq_0_loop gopurs_runtime.Value, dictEq1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {

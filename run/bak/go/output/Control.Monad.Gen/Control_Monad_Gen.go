@@ -197,7 +197,7 @@ return Call_choose(dictMonadGen_0_box)
 
 type Constructor_Cons[T_a any] struct {
 	V0 T_a
-	V1 *Constructor_Cons
+	V1 gopurs_runtime.Value
 }
 
 
@@ -364,12 +364,12 @@ return gopurs_runtime.Apply2(fromIndex1_3_1, n_5, xs_4)
 })
 }
 
-func Call_freqSemigroup(v_0_loop *pkg_Data_Tuple.Constructor_Tuple) gopurs_runtime.Value {
-var v_0 *pkg_Data_Tuple.Constructor_Tuple = v_0_loop
+func Call_freqSemigroup(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-__local_var_1_0 := (v_0).V0
+__local_var_1_0 := (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_0.UnsafePtr).V0
 _ = __local_var_1_0
-__local_var_2_1 := (v_0).V1
+__local_var_2_1 := (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_0.UnsafePtr).V1
 _ = __local_var_2_1
 return gopurs_runtime.Func(func(pos_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t2 gopurs_runtime.Value

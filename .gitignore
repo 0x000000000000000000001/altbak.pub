@@ -7,7 +7,6 @@ generated-docs/
 .psc*
 .purs*
 .psa*
-.agents/
 .vscode/
 vendor/
 var/

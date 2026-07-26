@@ -1539,8 +1539,8 @@ type Constructor_Node[T_k any, T_v any] struct {
 	V1 int64
 	V2 T_k
 	V3 T_v
-	V4 *Constructor_Node
-	V5 *Constructor_Node
+	V4 gopurs_runtime.Value
+	V5 gopurs_runtime.Value
 }
 
 
@@ -1557,7 +1557,7 @@ type Constructor_IterEmit[T_k any, T_v any] struct {
 
 
 type Constructor_IterNode[T_k any, T_v any] struct {
-	V0 *Constructor_Node
+	V0 gopurs_runtime.Value
 	V1 gopurs_runtime.Value
 }
 
@@ -1575,16 +1575,16 @@ type Constructor_IterNext[T_k any, T_v any] struct {
 
 
 type Constructor_Split[T_k any, T_v any] struct {
-	V0 *pkg_Data_Maybe.Constructor_Just
-	V1 *Constructor_Node
-	V2 *Constructor_Node
+	V0 gopurs_runtime.Value
+	V1 gopurs_runtime.Value
+	V2 gopurs_runtime.Value
 }
 
 
 type Constructor_SplitLast[T_k any, T_v any] struct {
 	V0 T_k
 	V1 T_v
-	V2 *Constructor_Node
+	V2 gopurs_runtime.Value
 }
 
 
@@ -1682,8 +1682,8 @@ end_branch_0:
 return __t0
 }
 
-func Call_toMapIter(a_0_loop *Constructor_Node) gopurs_runtime.Value {
-var a_0 *Constructor_Node = a_0_loop
+func Call_toMapIter(a_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var a_0 gopurs_runtime.Value = a_0_loop
 _ = a_0
 return gopurs_runtime.Value{Type: 9, IntVal: 2861335956, UnsafePtr: unsafe.Pointer(&Constructor_IterNode[gopurs_runtime.Value, gopurs_runtime.Value]{a_0, gopurs_runtime.Value{Type: 9, IntVal: 2509360378, UnsafePtr: nil}})}
 }
@@ -1742,12 +1742,12 @@ return __t1
 return go__3_0
 }
 
-func Call_size(v_0_loop *Constructor_Node) gopurs_runtime.Value {
-var v_0 *Constructor_Node = v_0_loop
+func Call_size(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 var __t0 gopurs_runtime.Value
 {
-if (v_0 == nil) {
+if (v_0.Type == 9 && v_0.IntVal == 687041424) {
 __t0 = gopurs_runtime.Int(0)
 goto end_branch_0
 } else {
@@ -1755,8 +1755,8 @@ goto end_branch_0
 }
 }
 {
-if (v_0 != nil) {
-__t0 = gopurs_runtime.Int((v_0).V1)
+if (v_0.Type == 9 && v_0.IntVal == 324739070) {
+__t0 = gopurs_runtime.Int((*Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(v_0.UnsafePtr).V1)
 goto end_branch_0
 } else {
 
@@ -2933,14 +2933,14 @@ return __t1
 return go__2_0
 }
 
-func Call_iterMapU(iter_0_loop gopurs_runtime.Value, v_1_loop *Constructor_Node) gopurs_runtime.Value {
+func Call_iterMapU(iter_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var iter_0 gopurs_runtime.Value = iter_0_loop
 _ = iter_0
-var v_1 *Constructor_Node = v_1_loop
+var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
 var __t0 gopurs_runtime.Value
 {
-if (v_1 == nil) {
+if (v_1.Type == 9 && v_1.IntVal == 687041424) {
 __t0 = iter_0
 goto end_branch_0
 } else {
@@ -2948,23 +2948,23 @@ goto end_branch_0
 }
 }
 {
-if (v_1 != nil) {
+if (v_1.Type == 9 && v_1.IntVal == 324739070) {
 var __t1 gopurs_runtime.Value
 {
-var __t_tag_2 gopurs_runtime.Value = (v_1).V4
+var __t_tag_2 gopurs_runtime.Value = (*Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V4
 if (__t_tag_2.Type == 9 && __t_tag_2.IntVal == 687041424) {
 var __t3 gopurs_runtime.Value
 {
-var __t_tag_4 gopurs_runtime.Value = (v_1).V5
+var __t_tag_4 gopurs_runtime.Value = (*Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V5
 if (__t_tag_4.Type == 9 && __t_tag_4.IntVal == 687041424) {
-__t3 = gopurs_runtime.Value{Type: 9, IntVal: 1343415489, UnsafePtr: unsafe.Pointer(&Constructor_IterEmit[gopurs_runtime.Value, gopurs_runtime.Value]{(v_1).V2, (v_1).V3, iter_0})}
+__t3 = gopurs_runtime.Value{Type: 9, IntVal: 1343415489, UnsafePtr: unsafe.Pointer(&Constructor_IterEmit[gopurs_runtime.Value, gopurs_runtime.Value]{(*Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V2, (*Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V3, iter_0})}
 goto end_branch_3
 } else {
 
 }
 }
 {
-__t3 = gopurs_runtime.Value{Type: 9, IntVal: 1343415489, UnsafePtr: unsafe.Pointer(&Constructor_IterEmit[gopurs_runtime.Value, gopurs_runtime.Value]{(v_1).V2, (v_1).V3, gopurs_runtime.Value{Type: 9, IntVal: 2861335956, UnsafePtr: unsafe.Pointer(&Constructor_IterNode[gopurs_runtime.Value, gopurs_runtime.Value]{(v_1).V5, iter_0})}})}
+__t3 = gopurs_runtime.Value{Type: 9, IntVal: 1343415489, UnsafePtr: unsafe.Pointer(&Constructor_IterEmit[gopurs_runtime.Value, gopurs_runtime.Value]{(*Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V2, (*Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V3, gopurs_runtime.Value{Type: 9, IntVal: 2861335956, UnsafePtr: unsafe.Pointer(&Constructor_IterNode[gopurs_runtime.Value, gopurs_runtime.Value]{(*Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V5, iter_0})}})}
 }
 end_branch_3:
 __t1 = __t3
@@ -2974,16 +2974,16 @@ goto end_branch_1
 }
 }
 {
-var __t_tag_5 gopurs_runtime.Value = (v_1).V5
+var __t_tag_5 gopurs_runtime.Value = (*Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V5
 if (__t_tag_5.Type == 9 && __t_tag_5.IntVal == 687041424) {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 1343415489, UnsafePtr: unsafe.Pointer(&Constructor_IterEmit[gopurs_runtime.Value, gopurs_runtime.Value]{(v_1).V2, (v_1).V3, gopurs_runtime.Value{Type: 9, IntVal: 2861335956, UnsafePtr: unsafe.Pointer(&Constructor_IterNode[gopurs_runtime.Value, gopurs_runtime.Value]{(v_1).V4, iter_0})}})}
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 1343415489, UnsafePtr: unsafe.Pointer(&Constructor_IterEmit[gopurs_runtime.Value, gopurs_runtime.Value]{(*Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V2, (*Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V3, gopurs_runtime.Value{Type: 9, IntVal: 2861335956, UnsafePtr: unsafe.Pointer(&Constructor_IterNode[gopurs_runtime.Value, gopurs_runtime.Value]{(*Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V4, iter_0})}})}
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 1343415489, UnsafePtr: unsafe.Pointer(&Constructor_IterEmit[gopurs_runtime.Value, gopurs_runtime.Value]{(v_1).V2, (v_1).V3, gopurs_runtime.Value{Type: 9, IntVal: 2861335956, UnsafePtr: unsafe.Pointer(&Constructor_IterNode[gopurs_runtime.Value, gopurs_runtime.Value]{(v_1).V4, gopurs_runtime.Value{Type: 9, IntVal: 2861335956, UnsafePtr: unsafe.Pointer(&Constructor_IterNode[gopurs_runtime.Value, gopurs_runtime.Value]{(v_1).V5, iter_0})}})}})}
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 1343415489, UnsafePtr: unsafe.Pointer(&Constructor_IterEmit[gopurs_runtime.Value, gopurs_runtime.Value]{(*Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V2, (*Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V3, gopurs_runtime.Value{Type: 9, IntVal: 2861335956, UnsafePtr: unsafe.Pointer(&Constructor_IterNode[gopurs_runtime.Value, gopurs_runtime.Value]{(*Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V4, gopurs_runtime.Value{Type: 9, IntVal: 2861335956, UnsafePtr: unsafe.Pointer(&Constructor_IterNode[gopurs_runtime.Value, gopurs_runtime.Value]{(*Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V5, iter_0})}})}})}
 }
 end_branch_1:
 __t0 = __t1
@@ -3329,10 +3329,10 @@ return __t1
 return go__2_0
 }
 
-func Call_isEmpty(v_0_loop *Constructor_Node) bool {
-var v_0 *Constructor_Node = v_0_loop
+func Call_isEmpty(v_0_loop gopurs_runtime.Value) bool {
+var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-return (v_0 == nil)
+return (v_0.Type == 9 && v_0.IntVal == 687041424)
 }
 
 func Call_intersectionWith(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -3591,23 +3591,23 @@ end_branch_7:
 return __t7
 }
 
-func Call_foldSubmapBy(dictOrd_0_loop gopurs_runtime.Value, appendFn_1_loop gopurs_runtime.Value, memptyValue_2_loop gopurs_runtime.Value, kmin_3_loop *pkg_Data_Maybe.Constructor_Just, kmax_4_loop *pkg_Data_Maybe.Constructor_Just, f_5_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_foldSubmapBy(dictOrd_0_loop gopurs_runtime.Value, appendFn_1_loop gopurs_runtime.Value, memptyValue_2_loop gopurs_runtime.Value, kmin_3_loop gopurs_runtime.Value, kmax_4_loop gopurs_runtime.Value, f_5_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
 var appendFn_1 gopurs_runtime.Value = appendFn_1_loop
 _ = appendFn_1
 var memptyValue_2 gopurs_runtime.Value = memptyValue_2_loop
 _ = memptyValue_2
-var kmin_3 *pkg_Data_Maybe.Constructor_Just = kmin_3_loop
+var kmin_3 gopurs_runtime.Value = kmin_3_loop
 _ = kmin_3
-var kmax_4 *pkg_Data_Maybe.Constructor_Just = kmax_4_loop
+var kmax_4 gopurs_runtime.Value = kmax_4_loop
 _ = kmax_4
 var f_5 gopurs_runtime.Value = f_5_loop
 _ = f_5
 var __t1 gopurs_runtime.Value
 {
-if (kmin_3 != nil) {
-__local_var_6_2 := (kmin_3).V0
+if (kmin_3.Type == 9 && kmin_3.IntVal == 930809136) {
+__local_var_6_2 := (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(kmin_3.UnsafePtr).V0
 _ = __local_var_6_2
 __t1 = gopurs_runtime.Func(func(k_7 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t_tag_3 gopurs_runtime.Value = gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictOrd_0.UnsafePtr)).V0, k_7, __local_var_6_2)
@@ -3619,7 +3619,7 @@ goto end_branch_1
 }
 }
 {
-if (kmin_3 == nil) {
+if (kmin_3.Type == 9 && kmin_3.IntVal == 3589588149) {
 __t1 = gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Bool(false)
 })
@@ -3636,8 +3636,8 @@ tooSmall_6_0 := __t1
 _ = tooSmall_6_0
 var __t5 gopurs_runtime.Value
 {
-if (kmax_4 != nil) {
-__local_var_7_6 := (kmax_4).V0
+if (kmax_4.Type == 9 && kmax_4.IntVal == 930809136) {
+__local_var_7_6 := (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(kmax_4.UnsafePtr).V0
 _ = __local_var_7_6
 __t5 = gopurs_runtime.Func(func(k_8 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t_tag_7 gopurs_runtime.Value = gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictOrd_0.UnsafePtr)).V0, k_8, __local_var_7_6)
@@ -3649,7 +3649,7 @@ goto end_branch_5
 }
 }
 {
-if (kmax_4 == nil) {
+if (kmax_4.Type == 9 && kmax_4.IntVal == 3589588149) {
 __t5 = gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Bool(false)
 })
@@ -3666,13 +3666,13 @@ tooLarge_7_4 := __t5
 _ = tooLarge_7_4
 var __t9 gopurs_runtime.Value
 {
-if (kmin_3 != nil) {
+if (kmin_3.Type == 9 && kmin_3.IntVal == 930809136) {
 var __t10 gopurs_runtime.Value
 {
-if (kmax_4 != nil) {
-__local_var_8_11 := (kmax_4).V0
+if (kmax_4.Type == 9 && kmax_4.IntVal == 930809136) {
+__local_var_8_11 := (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(kmax_4.UnsafePtr).V0
 _ = __local_var_8_11
-__local_var_9_12 := (kmin_3).V0
+__local_var_9_12 := (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(kmin_3.UnsafePtr).V0
 _ = __local_var_9_12
 __t10 = gopurs_runtime.Func(func(k_10 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t_tag_13 gopurs_runtime.Value = gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictOrd_0.UnsafePtr)).V0, __local_var_9_12, k_10)
@@ -3685,8 +3685,8 @@ goto end_branch_10
 }
 }
 {
-if (kmax_4 == nil) {
-__local_var_8_15 := (kmin_3).V0
+if (kmax_4.Type == 9 && kmax_4.IntVal == 3589588149) {
+__local_var_8_15 := (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(kmin_3.UnsafePtr).V0
 _ = __local_var_8_15
 __t10 = gopurs_runtime.Func(func(k_9 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t_tag_16 gopurs_runtime.Value = gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictOrd_0.UnsafePtr)).V0, __local_var_8_15, k_9)
@@ -3708,11 +3708,11 @@ goto end_branch_9
 }
 }
 {
-if (kmin_3 == nil) {
+if (kmin_3.Type == 9 && kmin_3.IntVal == 3589588149) {
 var __t17 gopurs_runtime.Value
 {
-if (kmax_4 != nil) {
-__local_var_8_18 := (kmax_4).V0
+if (kmax_4.Type == 9 && kmax_4.IntVal == 930809136) {
+__local_var_8_18 := (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(kmax_4.UnsafePtr).V0
 _ = __local_var_8_18
 __t17 = gopurs_runtime.Func(func(k_9 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t_tag_19 gopurs_runtime.Value = gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictOrd_0.UnsafePtr)).V0, k_9, __local_var_8_18)
@@ -3724,7 +3724,7 @@ goto end_branch_17
 }
 }
 {
-if (kmax_4 == nil) {
+if (kmax_4.Type == 9 && kmax_4.IntVal == 3589588149) {
 __t17 = gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Bool(true)
 })
@@ -3825,15 +3825,15 @@ _ = dictMonoid_1
 return gopurs_runtime.Apply3(Get_foldSubmapBy(), dictOrd_0, gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_1, "Semigroup0_NOT_FOUND"), gopurs_runtime.Value{}), "append"), ((*gopurs_runtime.RecordData1)(dictMonoid_1.UnsafePtr)).V0)
 }
 
-func Call_findMin(v_0_loop *Constructor_Node) gopurs_runtime.Value {
+func Call_findMin(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 findMin:
 for {
 if false { continue findMin }
-var v_0 *Constructor_Node = v_0_loop
+var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 var __t0 gopurs_runtime.Value
 {
-if (v_0 == nil) {
+if (v_0.Type == 9 && v_0.IntVal == 687041424) {
 __t0 = gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: nil}
 goto end_branch_0
 } else {
@@ -3841,19 +3841,19 @@ goto end_branch_0
 }
 }
 {
-if (v_0 != nil) {
+if (v_0.Type == 9 && v_0.IntVal == 324739070) {
 var __t1 gopurs_runtime.Value
 {
-var __t_tag_2 gopurs_runtime.Value = (v_0).V4
+var __t_tag_2 gopurs_runtime.Value = (*Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(v_0.UnsafePtr).V4
 if (__t_tag_2.Type == 9 && __t_tag_2.IntVal == 687041424) {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{gopurs_runtime.RecordDict2("key", "value", (v_0).V2, (v_0).V3)})}
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{gopurs_runtime.RecordDict2("key", "value", (*Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(v_0.UnsafePtr).V2, (*Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(v_0.UnsafePtr).V3)})}
 goto end_branch_1
 } else {
 
 }
 }
 {
-v_0_loop = (v_0).V4
+v_0_loop = (*Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(v_0.UnsafePtr).V4
 continue findMin
 __t1 = gopurs_runtime.Value{}
 }
@@ -3952,15 +3952,15 @@ return __t1
 return go__2_0
 }
 
-func Call_findMax(v_0_loop *Constructor_Node) gopurs_runtime.Value {
+func Call_findMax(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 findMax:
 for {
 if false { continue findMax }
-var v_0 *Constructor_Node = v_0_loop
+var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 var __t0 gopurs_runtime.Value
 {
-if (v_0 == nil) {
+if (v_0.Type == 9 && v_0.IntVal == 687041424) {
 __t0 = gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: nil}
 goto end_branch_0
 } else {
@@ -3968,19 +3968,19 @@ goto end_branch_0
 }
 }
 {
-if (v_0 != nil) {
+if (v_0.Type == 9 && v_0.IntVal == 324739070) {
 var __t1 gopurs_runtime.Value
 {
-var __t_tag_2 gopurs_runtime.Value = (v_0).V5
+var __t_tag_2 gopurs_runtime.Value = (*Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(v_0.UnsafePtr).V5
 if (__t_tag_2.Type == 9 && __t_tag_2.IntVal == 687041424) {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{gopurs_runtime.RecordDict2("key", "value", (v_0).V2, (v_0).V3)})}
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{gopurs_runtime.RecordDict2("key", "value", (*Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(v_0.UnsafePtr).V2, (*Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(v_0.UnsafePtr).V3)})}
 goto end_branch_1
 } else {
 
 }
 }
 {
-v_0_loop = (v_0).V5
+v_0_loop = (*Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(v_0.UnsafePtr).V5
 continue findMax
 __t1 = gopurs_runtime.Value{}
 }
