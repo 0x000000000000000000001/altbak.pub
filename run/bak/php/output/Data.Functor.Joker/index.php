@@ -114,40 +114,56 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_Functor_Joker_Joker
-$GLOBALS['Data_Functor_Joker_Joker'] = function($x_0 = null) {
+function majData_majFunctor_majJoker_majJoker($x_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majJoker_majJoker';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $x_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_Joker_Joker'] = __NAMESPACE__ . '\\majData_majFunctor_majJoker_majJoker';
 
 // Data_Functor_Joker_showJoker
-$GLOBALS['Data_Functor_Joker_showJoker'] = function($dictShow_0 = null) {
+function majData_majFunctor_majJoker_showmajJoker($dictShow_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majJoker_showmajJoker';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Joker "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1)))(")"));
+  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Joker ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1), ")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_Joker_showJoker'] = __NAMESPACE__ . '\\majData_majFunctor_majJoker_showmajJoker';
 
 // Data_Functor_Joker_profunctorJoker
-$GLOBALS['Data_Functor_Joker_profunctorJoker'] = function($dictFunctor_0 = null) {
+function majData_majFunctor_majJoker_profunctormajJoker($dictFunctor_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majJoker_profunctormajJoker';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["dimap" => (function() use ($dictFunctor_0) {
   $__fn = function($v_1 = null, $g_2 = null, $v1_3 = null) use ($dictFunctor_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($dictFunctor_0)['map'])($g_2))($v1_3);
+  $__res = (($dictFunctor_0)['map'])($g_2, $v1_3);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -156,17 +172,23 @@ $GLOBALS['Data_Functor_Joker_profunctorJoker'] = function($dictFunctor_0 = null)
 })()];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_Joker_profunctorJoker'] = __NAMESPACE__ . '\\majData_majFunctor_majJoker_profunctormajJoker';
 
 // Data_Functor_Joker_ordJoker
-$GLOBALS['Data_Functor_Joker_ordJoker'] = function($dictOrd_0 = null) {
+function majData_majFunctor_majJoker_ordmajJoker($dictOrd_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majJoker_ordmajJoker';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictOrd_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_Joker_ordJoker'] = __NAMESPACE__ . '\\majData_majFunctor_majJoker_ordmajJoker';
 
 // Data_Functor_Joker_newtypeJoker
 $GLOBALS['Data_Functor_Joker_newtypeJoker'] = ["Coercible0" => function($_dollar__unused_0 = null) {
@@ -178,30 +200,33 @@ $GLOBALS['Data_Functor_Joker_newtypeJoker'] = ["Coercible0" => function($_dollar
 }];
 
 // Data_Functor_Joker_hoistJoker
-$GLOBALS['Data_Functor_Joker_hoistJoker'] = (function() {
-  $__fn = function($f_0 = null, $v_1 = null) use (&$__fn) {
+function majData_majFunctor_majJoker_hoistmajJoker($f_0, $v_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majJoker_hoistmajJoker';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__res = ($f_0)($v_1);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Functor_Joker_hoistJoker'] = __NAMESPACE__ . '\\majData_majFunctor_majJoker_hoistmajJoker';
 
 // Data_Functor_Joker_functorJoker
-$GLOBALS['Data_Functor_Joker_functorJoker'] = function($dictFunctor_0 = null) {
+function majData_majFunctor_majJoker_functormajJoker($dictFunctor_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majJoker_functormajJoker';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["map" => (function() use ($dictFunctor_0) {
   $__fn = function($f_1 = null, $v_2 = null) use ($dictFunctor_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictFunctor_0)['map'])($f_1))($v_2);
+  $__res = (($dictFunctor_0)['map'])($f_1, $v_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -210,28 +235,38 @@ $GLOBALS['Data_Functor_Joker_functorJoker'] = function($dictFunctor_0 = null) {
 })()];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_Joker_functorJoker'] = __NAMESPACE__ . '\\majData_majFunctor_majJoker_functormajJoker';
 
 // Data_Functor_Joker_eqJoker
-$GLOBALS['Data_Functor_Joker_eqJoker'] = function($dictEq_0 = null) {
+function majData_majFunctor_majJoker_eqmajJoker($dictEq_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majJoker_eqmajJoker';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictEq_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_Joker_eqJoker'] = __NAMESPACE__ . '\\majData_majFunctor_majJoker_eqmajJoker';
 
 // Data_Functor_Joker_choiceJoker
-$GLOBALS['Data_Functor_Joker_choiceJoker'] = function($dictFunctor_0 = null) {
+function majData_majFunctor_majJoker_choicemajJoker($dictFunctor_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majJoker_choicemajJoker';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $profunctorJoker1_1_0 = ["dimap" => (function() use ($dictFunctor_0) {
   $__fn = function($v_1 = null, $g_2 = null, $v1_3 = null) use ($dictFunctor_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($dictFunctor_0)['map'])($g_2))($v1_3);
+  $__res = (($dictFunctor_0)['map'])($g_2, $v1_3);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -240,13 +275,13 @@ $GLOBALS['Data_Functor_Joker_choiceJoker'] = function($dictFunctor_0 = null) {
 })()];
   $__res = ["left" => function($v_2 = null) use ($dictFunctor_0) {
   $__num = \func_num_args();
-  $__res = ((($dictFunctor_0)['map'])($GLOBALS['Data_Either_Left']))($v_2);
+  $__res = (($dictFunctor_0)['map'])($GLOBALS['Data_Either_Left'], $v_2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "right" => function($v_2 = null) use ($dictFunctor_0) {
   $__num = \func_num_args();
-  $__res = ((($dictFunctor_0)['map'])($GLOBALS['Data_Either_Right']))($v_2);
+  $__res = (($dictFunctor_0)['map'])($GLOBALS['Data_Either_Right'], $v_2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -259,19 +294,24 @@ $GLOBALS['Data_Functor_Joker_choiceJoker'] = function($dictFunctor_0 = null) {
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_Joker_choiceJoker'] = __NAMESPACE__ . '\\majData_majFunctor_majJoker_choicemajJoker';
 
 // Data_Functor_Joker_bifunctorJoker
-$GLOBALS['Data_Functor_Joker_bifunctorJoker'] = function($dictFunctor_0 = null) {
+function majData_majFunctor_majJoker_bifunctormajJoker($dictFunctor_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majJoker_bifunctormajJoker';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["bimap" => (function() use ($dictFunctor_0) {
   $__fn = function($v_1 = null, $g_2 = null, $v1_3 = null) use ($dictFunctor_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($dictFunctor_0)['map'])($g_2))($v1_3);
+  $__res = (($dictFunctor_0)['map'])($g_2, $v1_3);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -280,12 +320,17 @@ $GLOBALS['Data_Functor_Joker_bifunctorJoker'] = function($dictFunctor_0 = null) 
 })()];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_Joker_bifunctorJoker'] = __NAMESPACE__ . '\\majData_majFunctor_majJoker_bifunctormajJoker';
 
 // Data_Functor_Joker_biapplyJoker
-$GLOBALS['Data_Functor_Joker_biapplyJoker'] = function($dictApply_0 = null) {
+function majData_majFunctor_majJoker_biapplymajJoker($dictApply_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majJoker_biapplymajJoker';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__local_var_1_0 = (($dictApply_0)['Functor0'])(null);
   $bifunctorJoker1_2_1 = ["bimap" => (function() use ($__local_var_1_0) {
   $__fn = function($v_2 = null, $g_3 = null, $v1_4 = null) use ($__local_var_1_0, &$__fn) {
@@ -293,7 +338,7 @@ $GLOBALS['Data_Functor_Joker_biapplyJoker'] = function($dictApply_0 = null) {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($__local_var_1_0)['map'])($g_3))($v1_4);
+  $__res = (($__local_var_1_0)['map'])($g_3, $v1_4);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -306,7 +351,7 @@ $GLOBALS['Data_Functor_Joker_biapplyJoker'] = function($dictApply_0 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictApply_0)['apply'])($v_3))($v1_4);
+  $__res = (($dictApply_0)['apply'])($v_3, $v1_4);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -321,12 +366,17 @@ $GLOBALS['Data_Functor_Joker_biapplyJoker'] = function($dictApply_0 = null) {
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_Joker_biapplyJoker'] = __NAMESPACE__ . '\\majData_majFunctor_majJoker_biapplymajJoker';
 
 // Data_Functor_Joker_biapplicativeJoker
-$GLOBALS['Data_Functor_Joker_biapplicativeJoker'] = function($dictApplicative_0 = null) {
+function majData_majFunctor_majJoker_biapplicativemajJoker($dictApplicative_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majJoker_biapplicativemajJoker';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__local_var_1_0 = (($dictApplicative_0)['Apply0'])(null);
   $__local_var_2_1 = (($__local_var_1_0)['Functor0'])(null);
   $bifunctorJoker1_3_2 = ["bimap" => (function() use ($__local_var_2_1) {
@@ -335,7 +385,7 @@ $GLOBALS['Data_Functor_Joker_biapplicativeJoker'] = function($dictApplicative_0 
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($__local_var_2_1)['map'])($g_4))($v1_5);
+  $__res = (($__local_var_2_1)['map'])($g_4, $v1_5);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -348,7 +398,7 @@ $GLOBALS['Data_Functor_Joker_biapplicativeJoker'] = function($dictApplicative_0 
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($__local_var_1_0)['apply'])($v_4))($v1_5);
+  $__res = (($__local_var_1_0)['apply'])($v_4, $v1_5);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -382,12 +432,17 @@ $GLOBALS['Data_Functor_Joker_biapplicativeJoker'] = function($dictApplicative_0 
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_Joker_biapplicativeJoker'] = __NAMESPACE__ . '\\majData_majFunctor_majJoker_biapplicativemajJoker';
 
 // Data_Functor_Joker_applyJoker
-$GLOBALS['Data_Functor_Joker_applyJoker'] = function($dictApply_0 = null) {
+function majData_majFunctor_majJoker_applymajJoker($dictApply_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majJoker_applymajJoker';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__local_var_1_0 = (($dictApply_0)['Functor0'])(null);
   $functorJoker1_2_1 = ["map" => (function() use ($__local_var_1_0) {
   $__fn = function($f_2 = null, $v_3 = null) use ($__local_var_1_0, &$__fn) {
@@ -395,7 +450,7 @@ $GLOBALS['Data_Functor_Joker_applyJoker'] = function($dictApply_0 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($__local_var_1_0)['map'])($f_2))($v_3);
+  $__res = (($__local_var_1_0)['map'])($f_2, $v_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -408,7 +463,7 @@ $GLOBALS['Data_Functor_Joker_applyJoker'] = function($dictApply_0 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictApply_0)['apply'])($v_3))($v1_4);
+  $__res = (($dictApply_0)['apply'])($v_3, $v1_4);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -423,12 +478,17 @@ $GLOBALS['Data_Functor_Joker_applyJoker'] = function($dictApply_0 = null) {
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_Joker_applyJoker'] = __NAMESPACE__ . '\\majData_majFunctor_majJoker_applymajJoker';
 
 // Data_Functor_Joker_bindJoker
-$GLOBALS['Data_Functor_Joker_bindJoker'] = function($dictBind_0 = null) {
+function majData_majFunctor_majJoker_bindmajJoker($dictBind_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majJoker_bindmajJoker';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__local_var_1_0 = (($dictBind_0)['Apply0'])(null);
   $__local_var_2_1 = (($__local_var_1_0)['Functor0'])(null);
   $functorJoker1_3_2 = ["map" => (function() use ($__local_var_2_1) {
@@ -437,7 +497,7 @@ $GLOBALS['Data_Functor_Joker_bindJoker'] = function($dictBind_0 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($__local_var_2_1)['map'])($f_3))($v_4);
+  $__res = (($__local_var_2_1)['map'])($f_3, $v_4);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -450,7 +510,7 @@ $GLOBALS['Data_Functor_Joker_bindJoker'] = function($dictBind_0 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($__local_var_1_0)['apply'])($v_4))($v1_5);
+  $__res = (($__local_var_1_0)['apply'])($v_4, $v1_5);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -469,7 +529,7 @@ $GLOBALS['Data_Functor_Joker_bindJoker'] = function($dictBind_0 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictBind_0)['bind'])($v_4))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce']))($amb_5));
+  $__res = (($dictBind_0)['bind'])($v_4, ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce'], $amb_5));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -484,12 +544,17 @@ $GLOBALS['Data_Functor_Joker_bindJoker'] = function($dictBind_0 = null) {
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_Joker_bindJoker'] = __NAMESPACE__ . '\\majData_majFunctor_majJoker_bindmajJoker';
 
 // Data_Functor_Joker_applicativeJoker
-$GLOBALS['Data_Functor_Joker_applicativeJoker'] = function($dictApplicative_0 = null) {
+function majData_majFunctor_majJoker_applicativemajJoker($dictApplicative_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majJoker_applicativemajJoker';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__local_var_1_0 = (($dictApplicative_0)['Apply0'])(null);
   $__local_var_2_1 = (($__local_var_1_0)['Functor0'])(null);
   $functorJoker1_3_2 = ["map" => (function() use ($__local_var_2_1) {
@@ -498,7 +563,7 @@ $GLOBALS['Data_Functor_Joker_applicativeJoker'] = function($dictApplicative_0 = 
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($__local_var_2_1)['map'])($f_3))($v_4);
+  $__res = (($__local_var_2_1)['map'])($f_3, $v_4);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -511,7 +576,7 @@ $GLOBALS['Data_Functor_Joker_applicativeJoker'] = function($dictApplicative_0 = 
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($__local_var_1_0)['apply'])($v_4))($v1_5);
+  $__res = (($__local_var_1_0)['apply'])($v_4, $v1_5);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -524,7 +589,7 @@ $GLOBALS['Data_Functor_Joker_applicativeJoker'] = function($dictApplicative_0 = 
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = ["pure" => (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Functor_Joker_Joker']))(($dictApplicative_0)['pure']), "Apply0" => function($_dollar__unused_4 = null) use ($applyJoker1_3_2) {
+  $__res = ["pure" => ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Functor_Joker_Joker'], ($dictApplicative_0)['pure']), "Apply0" => function($_dollar__unused_4 = null) use ($applyJoker1_3_2) {
   $__num = \func_num_args();
   $__res = $applyJoker1_3_2;
   goto __end;;
@@ -533,12 +598,17 @@ $GLOBALS['Data_Functor_Joker_applicativeJoker'] = function($dictApplicative_0 = 
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_Joker_applicativeJoker'] = __NAMESPACE__ . '\\majData_majFunctor_majJoker_applicativemajJoker';
 
 // Data_Functor_Joker_monadJoker
-$GLOBALS['Data_Functor_Joker_monadJoker'] = function($dictMonad_0 = null) {
+function majData_majFunctor_majJoker_monadmajJoker($dictMonad_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majJoker_monadmajJoker';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $applicativeJoker1_1_0 = ($GLOBALS['Data_Functor_Joker_applicativeJoker'])((($dictMonad_0)['Applicative0'])(null));
   $bindJoker1_2_1 = ($GLOBALS['Data_Functor_Joker_bindJoker'])((($dictMonad_0)['Bind1'])(null));
   $__res = ["Applicative0" => function($_dollar__unused_3 = null) use ($applicativeJoker1_1_0) {
@@ -556,6 +626,7 @@ $GLOBALS['Data_Functor_Joker_monadJoker'] = function($dictMonad_0 = null) {
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_Joker_monadJoker'] = __NAMESPACE__ . '\\majData_majFunctor_majJoker_monadmajJoker';
 

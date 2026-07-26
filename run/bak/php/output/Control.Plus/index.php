@@ -97,6 +97,8 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Control_Plus_plusArray
 $GLOBALS['Control_Plus_plusArray'] = ["empty" => [], "Alt0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
@@ -107,11 +109,16 @@ $GLOBALS['Control_Plus_plusArray'] = ["empty" => [], "Alt0" => function($_dollar
 }];
 
 // Control_Plus_empty
-$GLOBALS['Control_Plus_empty'] = function($dict_0 = null) {
+function majControl_majPlus_empty($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majPlus_empty';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['empty'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Plus_empty'] = __NAMESPACE__ . '\\majControl_majPlus_empty';
 

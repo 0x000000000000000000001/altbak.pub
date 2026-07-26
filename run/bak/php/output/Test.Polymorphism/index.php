@@ -104,27 +104,43 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Test_Polymorphism_mempty_
-$GLOBALS['Test_Polymorphism_mempty_'] = function($dict_0 = null) {
+function majTest_majPolymorphism_mempty_($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majTest_majPolymorphism_mempty_';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['mempty_'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Test_Polymorphism_mempty_'] = __NAMESPACE__ . '\\majTest_majPolymorphism_mempty_';
 
 // Test_Polymorphism_mappend_
-$GLOBALS['Test_Polymorphism_mappend_'] = function($dict_0 = null) {
+function majTest_majPolymorphism_mappend_($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majTest_majPolymorphism_mappend_';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['mappend_'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Test_Polymorphism_mappend_'] = __NAMESPACE__ . '\\majTest_majPolymorphism_mappend_';
 
 // Test_Polymorphism_polyLoop
-$GLOBALS['Test_Polymorphism_polyLoop'] = function($dictMonoidish_0 = null) {
+function majTest_majPolymorphism_polymajLoop($dictMonoidish_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majTest_majPolymorphism_polymajLoop';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $mempty_1_1_0 = ($dictMonoidish_0)['mempty_'];
   $__res = (function() use ($dictMonoidish_0, $mempty_1_1_0) {
   $__fn = function($n_init_2 = null, $acc_init_3 = null) use ($dictMonoidish_0, $mempty_1_1_0, &$__fn) {
@@ -155,7 +171,7 @@ default:
 break;
 };
   $__tco_1 = ($v_5 - 1);
-  $__tco_2 = ((($dictMonoidish_0)['mappend_'])($v1_6))($mempty_1_1_0);
+  $__tco_2 = (($dictMonoidish_0)['mappend_'])($v1_6, $mempty_1_1_0);
   $__tco_var_go__4_1_1_v_5 = $__tco_1;
   $__tco_var_go__4_1_1_v1_6 = $__tco_2;
   goto tco_loop_go__4_1_1;;
@@ -168,7 +184,7 @@ break;
   };
   return $__fn;
 })();
-  $__res = (($go__4_1)($n_init_2))($acc_init_3);
+  $__res = ($go__4_1)($n_init_2, $acc_init_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -177,8 +193,9 @@ break;
 })();
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Test_Polymorphism_polyLoop'] = __NAMESPACE__ . '\\majTest_majPolymorphism_polymajLoop';
 
 // Test_Polymorphism_intMonoidish
 $GLOBALS['Test_Polymorphism_intMonoidish'] = ["mempty_" => 1, "mappend_" => (function() {
@@ -199,7 +216,7 @@ $GLOBALS['Test_Polymorphism_intMonoidish'] = ["mempty_" => 1, "mappend_" => (fun
 $GLOBALS['Test_Polymorphism_describe'] = ($GLOBALS['Effect_Console_log'])("Polymorphism (10M Type Class Dict Lookups):");
 
 // Test_Polymorphism_act
-$GLOBALS['Test_Polymorphism_act'] = ((($GLOBALS['Effect_bindEffect'])['bind'])(($GLOBALS['Bench_opaque'])(10000000)))(function($dummy_0 = null) {
+$GLOBALS['Test_Polymorphism_act'] = (($GLOBALS['Effect_bindEffect'])['bind'])(($GLOBALS['Bench_opaque'])(10000000), function($dummy_0 = null) {
   $__num = \func_num_args();
   $go__1_0 = null;
   $go__1_0 = (function() use (&$go__1_0) {
@@ -237,7 +254,7 @@ break;
   };
   return $__fn;
 })();
-  $__res = ($GLOBALS['Effect_Console_log'])((($GLOBALS['Data_Show_showInt'])['show'])((($go__1_0)($dummy_0))(0)));
+  $__res = ($GLOBALS['Effect_Console_log'])((($GLOBALS['Data_Show_showInt'])['show'])(($go__1_0)($dummy_0, 0)));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

@@ -104,32 +104,49 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_Decidable_identity
-$GLOBALS['Data_Decidable_identity'] = function($x_0 = null) {
+function majData_majDecidable_identity($x_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majDecidable_identity';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $x_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Decidable_identity'] = __NAMESPACE__ . '\\majData_majDecidable_identity';
 
 // Data_Decidable_lose
-$GLOBALS['Data_Decidable_lose'] = function($dict_0 = null) {
+function majData_majDecidable_lose($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majDecidable_lose';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['lose'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Decidable_lose'] = __NAMESPACE__ . '\\majData_majDecidable_lose';
 
 // Data_Decidable_lost
-$GLOBALS['Data_Decidable_lost'] = function($dictDecidable_0 = null) {
+function majData_majDecidable_lost($dictDecidable_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majDecidable_lost';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = (($dictDecidable_0)['lose'])($GLOBALS['Data_Decidable_identity']);
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Decidable_lost'] = __NAMESPACE__ . '\\majData_majDecidable_lost';
 
 // Data_Decidable_decidablePredicate
 $GLOBALS['Data_Decidable_decidablePredicate'] = ["lose" => (function() {
@@ -173,8 +190,12 @@ $GLOBALS['Data_Decidable_decidablePredicate'] = ["lose" => (function() {
 }];
 
 // Data_Decidable_decidableOp
-$GLOBALS['Data_Decidable_decidableOp'] = function($dictMonoid_0 = null) {
+function majData_majDecidable_decidablemajOp($dictMonoid_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majDecidable_decidablemajOp';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $chooseOp_1_0 = ($GLOBALS['Data_Decide_chooseOp'])((($dictMonoid_0)['Semigroup0'])(null));
   $divisibleOp_2_1 = ($GLOBALS['Data_Divisible_divisibleOp'])($dictMonoid_0);
   $__res = ["lose" => (function() {
@@ -218,8 +239,9 @@ $GLOBALS['Data_Decidable_decidableOp'] = function($dictMonoid_0 = null) {
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Decidable_decidableOp'] = __NAMESPACE__ . '\\majData_majDecidable_decidablemajOp';
 
 // Data_Decidable_decidableEquivalence
 $GLOBALS['Data_Decidable_decidableEquivalence'] = ["lose" => (function() {

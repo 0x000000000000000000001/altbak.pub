@@ -125,7 +125,7 @@ var once_genericFromEnum sync.Once
 func Get_genericFromEnum() gopurs_runtime.Value {
 	once_genericFromEnum.Do(func() {
 		cache_genericFromEnum = gopurs_runtime.Func3(func(dictGeneric_0_box gopurs_runtime.Value, dictGenericBoundedEnum_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_genericFromEnum(dictGeneric_0_box, dictGenericBoundedEnum_1_box, x_2_box)
+return gopurs_runtime.Int(Call_genericFromEnum(dictGeneric_0_box, dictGenericBoundedEnum_1_box, x_2_box))
 })
 	})
 	return cache_genericFromEnum
@@ -346,14 +346,14 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "genericFromEnum'")
 }
 
-func Call_genericFromEnum(dictGeneric_0_loop gopurs_runtime.Value, dictGenericBoundedEnum_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_genericFromEnum(dictGeneric_0_loop gopurs_runtime.Value, dictGenericBoundedEnum_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) int64 {
 var dictGeneric_0 gopurs_runtime.Value = dictGeneric_0_loop
 _ = dictGeneric_0
 var dictGenericBoundedEnum_1 gopurs_runtime.Value = dictGenericBoundedEnum_1_loop
 _ = dictGenericBoundedEnum_1
 var x_2 gopurs_runtime.Value = x_2_loop
 _ = x_2
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericBoundedEnum_1, "genericFromEnum'"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGeneric_0, "from"), x_2))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericBoundedEnum_1, "genericFromEnum'"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGeneric_0, "from"), x_2)).IntVal
 }
 
 func Call_genericEnumSum(dictGenericEnum_0_loop gopurs_runtime.Value, dictGenericTop_1_loop gopurs_runtime.Value) gopurs_runtime.Value {

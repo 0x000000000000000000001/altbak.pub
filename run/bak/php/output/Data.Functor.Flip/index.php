@@ -110,40 +110,56 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_Functor_Flip_Flip
-$GLOBALS['Data_Functor_Flip_Flip'] = function($x_0 = null) {
+function majData_majFunctor_majFlip_majFlip($x_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majFlip_majFlip';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $x_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_Flip_Flip'] = __NAMESPACE__ . '\\majData_majFunctor_majFlip_majFlip';
 
 // Data_Functor_Flip_showFlip
-$GLOBALS['Data_Functor_Flip_showFlip'] = function($dictShow_0 = null) {
+function majData_majFunctor_majFlip_showmajFlip($dictShow_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majFlip_showmajFlip';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Flip "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1)))(")"));
+  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Flip ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1), ")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_Flip_showFlip'] = __NAMESPACE__ . '\\majData_majFunctor_majFlip_showmajFlip';
 
 // Data_Functor_Flip_semigroupoidFlip
-$GLOBALS['Data_Functor_Flip_semigroupoidFlip'] = function($dictSemigroupoid_0 = null) {
+function majData_majFunctor_majFlip_semigroupoidmajFlip($dictSemigroupoid_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majFlip_semigroupoidmajFlip';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["compose" => (function() use ($dictSemigroupoid_0) {
   $__fn = function($v_1 = null, $v1_2 = null) use ($dictSemigroupoid_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictSemigroupoid_0)['compose'])($v1_2))($v_1);
+  $__res = (($dictSemigroupoid_0)['compose'])($v1_2, $v_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -152,17 +168,23 @@ $GLOBALS['Data_Functor_Flip_semigroupoidFlip'] = function($dictSemigroupoid_0 = 
 })()];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_Flip_semigroupoidFlip'] = __NAMESPACE__ . '\\majData_majFunctor_majFlip_semigroupoidmajFlip';
 
 // Data_Functor_Flip_ordFlip
-$GLOBALS['Data_Functor_Flip_ordFlip'] = function($dictOrd_0 = null) {
+function majData_majFunctor_majFlip_ordmajFlip($dictOrd_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majFlip_ordmajFlip';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictOrd_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_Flip_ordFlip'] = __NAMESPACE__ . '\\majData_majFunctor_majFlip_ordmajFlip';
 
 // Data_Functor_Flip_newtypeFlip
 $GLOBALS['Data_Functor_Flip_newtypeFlip'] = ["Coercible0" => function($_dollar__unused_0 = null) {
@@ -174,15 +196,19 @@ $GLOBALS['Data_Functor_Flip_newtypeFlip'] = ["Coercible0" => function($_dollar__
 }];
 
 // Data_Functor_Flip_functorFlip
-$GLOBALS['Data_Functor_Flip_functorFlip'] = function($dictBifunctor_0 = null) {
+function majData_majFunctor_majFlip_functormajFlip($dictBifunctor_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majFlip_functormajFlip';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["map" => (function() use ($dictBifunctor_0) {
   $__fn = function($f_1 = null, $v_2 = null) use ($dictBifunctor_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($dictBifunctor_0)['bimap'])($f_1))($GLOBALS['Data_Bifunctor_identity']))($v_2);
+  $__res = (($dictBifunctor_0)['bimap'])($f_1, $GLOBALS['Data_Bifunctor_identity'], $v_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -191,28 +217,38 @@ $GLOBALS['Data_Functor_Flip_functorFlip'] = function($dictBifunctor_0 = null) {
 })()];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_Flip_functorFlip'] = __NAMESPACE__ . '\\majData_majFunctor_majFlip_functormajFlip';
 
 // Data_Functor_Flip_eqFlip
-$GLOBALS['Data_Functor_Flip_eqFlip'] = function($dictEq_0 = null) {
+function majData_majFunctor_majFlip_eqmajFlip($dictEq_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majFlip_eqmajFlip';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictEq_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_Flip_eqFlip'] = __NAMESPACE__ . '\\majData_majFunctor_majFlip_eqmajFlip';
 
 // Data_Functor_Flip_contravariantFlip
-$GLOBALS['Data_Functor_Flip_contravariantFlip'] = function($dictProfunctor_0 = null) {
+function majData_majFunctor_majFlip_contravariantmajFlip($dictProfunctor_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majFlip_contravariantmajFlip';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["cmap" => (function() use ($dictProfunctor_0) {
   $__fn = function($f_1 = null, $v_2 = null) use ($dictProfunctor_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($dictProfunctor_0)['dimap'])($f_1))($GLOBALS['Data_Profunctor_identity']))($v_2);
+  $__res = (($dictProfunctor_0)['dimap'])($f_1, $GLOBALS['Data_Profunctor_identity'], $v_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -221,12 +257,17 @@ $GLOBALS['Data_Functor_Flip_contravariantFlip'] = function($dictProfunctor_0 = n
 })()];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_Flip_contravariantFlip'] = __NAMESPACE__ . '\\majData_majFunctor_majFlip_contravariantmajFlip';
 
 // Data_Functor_Flip_categoryFlip
-$GLOBALS['Data_Functor_Flip_categoryFlip'] = function($dictCategory_0 = null) {
+function majData_majFunctor_majFlip_categorymajFlip($dictCategory_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majFlip_categorymajFlip';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__local_var_1_0 = (($dictCategory_0)['Semigroupoid0'])(null);
   $semigroupoidFlip1_2_1 = ["compose" => (function() use ($__local_var_1_0) {
   $__fn = function($v_2 = null, $v1_3 = null) use ($__local_var_1_0, &$__fn) {
@@ -234,7 +275,7 @@ $GLOBALS['Data_Functor_Flip_categoryFlip'] = function($dictCategory_0 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($__local_var_1_0)['compose'])($v1_3))($v_2);
+  $__res = (($__local_var_1_0)['compose'])($v1_3, $v_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -250,19 +291,24 @@ $GLOBALS['Data_Functor_Flip_categoryFlip'] = function($dictCategory_0 = null) {
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_Flip_categoryFlip'] = __NAMESPACE__ . '\\majData_majFunctor_majFlip_categorymajFlip';
 
 // Data_Functor_Flip_bifunctorFlip
-$GLOBALS['Data_Functor_Flip_bifunctorFlip'] = function($dictBifunctor_0 = null) {
+function majData_majFunctor_majFlip_bifunctormajFlip($dictBifunctor_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majFlip_bifunctormajFlip';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["bimap" => (function() use ($dictBifunctor_0) {
   $__fn = function($f_1 = null, $g_2 = null, $v_3 = null) use ($dictBifunctor_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (((($dictBifunctor_0)['bimap'])($g_2))($f_1))($v_3);
+  $__res = (($dictBifunctor_0)['bimap'])($g_2, $f_1, $v_3);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -271,12 +317,17 @@ $GLOBALS['Data_Functor_Flip_bifunctorFlip'] = function($dictBifunctor_0 = null) 
 })()];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_Flip_bifunctorFlip'] = __NAMESPACE__ . '\\majData_majFunctor_majFlip_bifunctormajFlip';
 
 // Data_Functor_Flip_biapplyFlip
-$GLOBALS['Data_Functor_Flip_biapplyFlip'] = function($dictBiapply_0 = null) {
+function majData_majFunctor_majFlip_biapplymajFlip($dictBiapply_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majFlip_biapplymajFlip';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__local_var_1_0 = (($dictBiapply_0)['Bifunctor0'])(null);
   $bifunctorFlip1_2_1 = ["bimap" => (function() use ($__local_var_1_0) {
   $__fn = function($f_2 = null, $g_3 = null, $v_4 = null) use ($__local_var_1_0, &$__fn) {
@@ -284,7 +335,7 @@ $GLOBALS['Data_Functor_Flip_biapplyFlip'] = function($dictBiapply_0 = null) {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (((($__local_var_1_0)['bimap'])($g_3))($f_2))($v_4);
+  $__res = (($__local_var_1_0)['bimap'])($g_3, $f_2, $v_4);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -297,7 +348,7 @@ $GLOBALS['Data_Functor_Flip_biapplyFlip'] = function($dictBiapply_0 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictBiapply_0)['biapply'])($v_3))($v1_4);
+  $__res = (($dictBiapply_0)['biapply'])($v_3, $v1_4);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -312,12 +363,17 @@ $GLOBALS['Data_Functor_Flip_biapplyFlip'] = function($dictBiapply_0 = null) {
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_Flip_biapplyFlip'] = __NAMESPACE__ . '\\majData_majFunctor_majFlip_biapplymajFlip';
 
 // Data_Functor_Flip_biapplicativeFlip
-$GLOBALS['Data_Functor_Flip_biapplicativeFlip'] = function($dictBiapplicative_0 = null) {
+function majData_majFunctor_majFlip_biapplicativemajFlip($dictBiapplicative_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majFlip_biapplicativemajFlip';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__local_var_1_0 = (($dictBiapplicative_0)['Biapply0'])(null);
   $__local_var_2_1 = (($__local_var_1_0)['Bifunctor0'])(null);
   $bifunctorFlip1_3_2 = ["bimap" => (function() use ($__local_var_2_1) {
@@ -326,7 +382,7 @@ $GLOBALS['Data_Functor_Flip_biapplicativeFlip'] = function($dictBiapplicative_0 
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (((($__local_var_2_1)['bimap'])($g_4))($f_3))($v_5);
+  $__res = (($__local_var_2_1)['bimap'])($g_4, $f_3, $v_5);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -339,7 +395,7 @@ $GLOBALS['Data_Functor_Flip_biapplicativeFlip'] = function($dictBiapplicative_0 
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($__local_var_1_0)['biapply'])($v_4))($v1_5);
+  $__res = (($__local_var_1_0)['biapply'])($v_4, $v1_5);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -358,7 +414,7 @@ $GLOBALS['Data_Functor_Flip_biapplicativeFlip'] = function($dictBiapplicative_0 
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictBiapplicative_0)['bipure'])($b_5))($a_4);
+  $__res = (($dictBiapplicative_0)['bipure'])($b_5, $a_4);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -373,6 +429,7 @@ $GLOBALS['Data_Functor_Flip_biapplicativeFlip'] = function($dictBiapplicative_0 
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_Flip_biapplicativeFlip'] = __NAMESPACE__ . '\\majData_majFunctor_majFlip_biapplicativemajFlip';
 

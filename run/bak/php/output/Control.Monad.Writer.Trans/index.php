@@ -121,23 +121,35 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Control_Monad_Writer_Trans_WriterT
-$GLOBALS['Control_Monad_Writer_Trans_WriterT'] = function($x_0 = null) {
+function majControl_majMonad_majWriter_majTrans_majWritermajT($x_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majWriter_majTrans_majWritermajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $x_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_Writer_Trans_WriterT'] = __NAMESPACE__ . '\\majControl_majMonad_majWriter_majTrans_majWritermajT';
 
 // Control_Monad_Writer_Trans_runWriterT
-$GLOBALS['Control_Monad_Writer_Trans_runWriterT'] = function($v_0 = null) {
+function majControl_majMonad_majWriter_majTrans_runmajWritermajT($v_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majWriter_majTrans_runmajWritermajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $v_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_Writer_Trans_runWriterT'] = __NAMESPACE__ . '\\majControl_majMonad_majWriter_majTrans_runmajWritermajT';
 
 // Control_Monad_Writer_Trans_newtypeWriterT
 $GLOBALS['Control_Monad_Writer_Trans_newtypeWriterT'] = ["Coercible0" => function($_dollar__unused_0 = null) {
@@ -149,8 +161,12 @@ $GLOBALS['Control_Monad_Writer_Trans_newtypeWriterT'] = ["Coercible0" => functio
 }];
 
 // Control_Monad_Writer_Trans_monadTransWriterT
-$GLOBALS['Control_Monad_Writer_Trans_monadTransWriterT'] = function($dictMonoid_0 = null) {
+function majControl_majMonad_majWriter_majTrans_monadmajTransmajWritermajT($dictMonoid_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majWriter_majTrans_monadmajTransmajWritermajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $mempty_1_0 = ($dictMonoid_0)['mempty'];
   $__res = ["lift" => (function() use ($mempty_1_0) {
   $__fn = function($dictMonad_2 = null, $m_3 = null) use ($mempty_1_0, &$__fn) {
@@ -158,9 +174,9 @@ $GLOBALS['Control_Monad_Writer_Trans_monadTransWriterT'] = function($dictMonoid_
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((($dictMonad_2)['Bind1'])(null))['bind'])($m_3))(function($a_4 = null) use ($dictMonad_2, $mempty_1_0) {
+  $__res = (((($dictMonad_2)['Bind1'])(null))['bind'])($m_3, function($a_4 = null) use ($dictMonad_2, $mempty_1_0) {
   $__num = \func_num_args();
-  $__res = (((($dictMonad_2)['Applicative0'])(null))['pure'])(new Phpurs_Data2("Tuple", $a_4, $mempty_1_0));
+  $__res = (((($dictMonad_2)['Applicative0'])(null))['pure'])(new \Data\Tuple\Data_Tuple_Tuple($a_4, $mempty_1_0));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -173,32 +189,36 @@ $GLOBALS['Control_Monad_Writer_Trans_monadTransWriterT'] = function($dictMonoid_
 })()];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_Writer_Trans_monadTransWriterT'] = __NAMESPACE__ . '\\majControl_majMonad_majWriter_majTrans_monadmajTransmajWritermajT';
 
 // Control_Monad_Writer_Trans_mapWriterT
-$GLOBALS['Control_Monad_Writer_Trans_mapWriterT'] = (function() {
-  $__fn = function($f_0 = null, $v_1 = null) use (&$__fn) {
+function majControl_majMonad_majWriter_majTrans_mapmajWritermajT($f_0, $v_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majWriter_majTrans_mapmajWritermajT';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__res = ($f_0)($v_1);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Control_Monad_Writer_Trans_mapWriterT'] = __NAMESPACE__ . '\\majControl_majMonad_majWriter_majTrans_mapmajWritermajT';
 
 // Control_Monad_Writer_Trans_functorWriterT
-$GLOBALS['Control_Monad_Writer_Trans_functorWriterT'] = function($dictFunctor_0 = null) {
+function majControl_majMonad_majWriter_majTrans_functormajWritermajT($dictFunctor_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majWriter_majTrans_functormajWritermajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["map" => function($f_1 = null) use ($dictFunctor_0) {
   $__num = \func_num_args();
   $__res = (($dictFunctor_0)['map'])(function($v_2 = null) use ($f_1) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Tuple", ($f_1)(($v_2)->{'value0'}), ($v_2)->{'value1'});
+  $__res = new \Data\Tuple\Data_Tuple_Tuple(($f_1)(($v_2)->{'value0'}), ($v_2)->{'value1'});
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -209,28 +229,28 @@ $GLOBALS['Control_Monad_Writer_Trans_functorWriterT'] = function($dictFunctor_0 
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_Writer_Trans_functorWriterT'] = __NAMESPACE__ . '\\majControl_majMonad_majWriter_majTrans_functormajWritermajT';
 
 // Control_Monad_Writer_Trans_execWriterT
-$GLOBALS['Control_Monad_Writer_Trans_execWriterT'] = (function() {
-  $__fn = function($dictFunctor_0 = null, $v_1 = null) use (&$__fn) {
+function majControl_majMonad_majWriter_majTrans_execmajWritermajT($dictFunctor_0, $v_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majWriter_majTrans_execmajWritermajT';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictFunctor_0)['map'])($GLOBALS['Data_Tuple_snd']))($v_1);
+  $__res = (($dictFunctor_0)['map'])($GLOBALS['Data_Tuple_snd'], $v_1);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Control_Monad_Writer_Trans_execWriterT'] = __NAMESPACE__ . '\\majControl_majMonad_majWriter_majTrans_execmajWritermajT';
 
 // Control_Monad_Writer_Trans_applyWriterT
-$GLOBALS['Control_Monad_Writer_Trans_applyWriterT'] = (function() {
-  $__fn = function($dictSemigroup_0 = null, $dictApply_1 = null) use (&$__fn) {
+function majControl_majMonad_majWriter_majTrans_applymajWritermajT($dictSemigroup_0, $dictApply_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majWriter_majTrans_applymajWritermajT';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
@@ -239,7 +259,7 @@ $GLOBALS['Control_Monad_Writer_Trans_applyWriterT'] = (function() {
   $__num = \func_num_args();
   $__res = (($Functor0_2_0)['map'])(function($v_4 = null) use ($f_3) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Tuple", ($f_3)(($v_4)->{'value0'}), ($v_4)->{'value1'});
+  $__res = new \Data\Tuple\Data_Tuple_Tuple(($f_3)(($v_4)->{'value0'}), ($v_4)->{'value1'});
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -254,19 +274,19 @@ $GLOBALS['Control_Monad_Writer_Trans_applyWriterT'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictApply_1)['apply'])(((($Functor0_2_0)['map'])((function() use ($dictSemigroup_0) {
+  $__res = (($dictApply_1)['apply'])((($Functor0_2_0)['map'])((function() use ($dictSemigroup_0) {
   $__fn = function($v3_6 = null, $v4_7 = null) use ($dictSemigroup_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", (($v3_6)->{'value0'})(($v4_7)->{'value0'}), ((($dictSemigroup_0)['append'])(($v3_6)->{'value1'}))(($v4_7)->{'value1'}));
+  $__res = new \Data\Tuple\Data_Tuple_Tuple((($v3_6)->{'value0'})(($v4_7)->{'value0'}), (($dictSemigroup_0)['append'])(($v3_6)->{'value1'}, ($v4_7)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))($v_4)))($v1_5);
+})(), $v_4), $v1_5);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -281,15 +301,14 @@ $GLOBALS['Control_Monad_Writer_Trans_applyWriterT'] = (function() {
 }];
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Control_Monad_Writer_Trans_applyWriterT'] = __NAMESPACE__ . '\\majControl_majMonad_majWriter_majTrans_applymajWritermajT';
 
 // Control_Monad_Writer_Trans_bindWriterT
-$GLOBALS['Control_Monad_Writer_Trans_bindWriterT'] = (function() {
-  $__fn = function($dictSemigroup_0 = null, $dictBind_1 = null) use (&$__fn) {
+function majControl_majMonad_majWriter_majTrans_bindmajWritermajT($dictSemigroup_0, $dictBind_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majWriter_majTrans_bindmajWritermajT';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
@@ -299,7 +318,7 @@ $GLOBALS['Control_Monad_Writer_Trans_bindWriterT'] = (function() {
   $__num = \func_num_args();
   $__res = (($Functor0_3_1)['map'])(function($v_5 = null) use ($f_4) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Tuple", ($f_4)(($v_5)->{'value0'}), ($v_5)->{'value1'});
+  $__res = new \Data\Tuple\Data_Tuple_Tuple(($f_4)(($v_5)->{'value0'}), ($v_5)->{'value1'});
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -314,19 +333,19 @@ $GLOBALS['Control_Monad_Writer_Trans_bindWriterT'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($Apply0_2_0)['apply'])(((($Functor0_3_1)['map'])((function() use ($dictSemigroup_0) {
+  $__res = (($Apply0_2_0)['apply'])((($Functor0_3_1)['map'])((function() use ($dictSemigroup_0) {
   $__fn = function($v3_7 = null, $v4_8 = null) use ($dictSemigroup_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", (($v3_7)->{'value0'})(($v4_8)->{'value0'}), ((($dictSemigroup_0)['append'])(($v3_7)->{'value1'}))(($v4_8)->{'value1'}));
+  $__res = new \Data\Tuple\Data_Tuple_Tuple((($v3_7)->{'value0'})(($v4_8)->{'value0'}), (($dictSemigroup_0)['append'])(($v3_7)->{'value1'}, ($v4_8)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))($v_5)))($v1_6);
+})(), $v_5), $v1_6);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -345,16 +364,16 @@ $GLOBALS['Control_Monad_Writer_Trans_bindWriterT'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictBind_1)['bind'])($v_6))(function($v1_8 = null) use ($Apply0_2_0, $dictSemigroup_0, $k_7) {
+  $__res = (($dictBind_1)['bind'])($v_6, function($v1_8 = null) use ($Apply0_2_0, $dictSemigroup_0, $k_7) {
   $__num = \func_num_args();
   $__local_var_9_4 = ($v1_8)->{'value1'};
-  $__res = ((((($Apply0_2_0)['Functor0'])(null))['map'])(function($v3_10 = null) use ($__local_var_9_4, $dictSemigroup_0) {
+  $__res = (((($Apply0_2_0)['Functor0'])(null))['map'])(function($v3_10 = null) use ($__local_var_9_4, $dictSemigroup_0) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Tuple", ($v3_10)->{'value0'}, ((($dictSemigroup_0)['append'])($__local_var_9_4))(($v3_10)->{'value1'}));
+  $__res = new \Data\Tuple\Data_Tuple_Tuple(($v3_10)->{'value0'}, (($dictSemigroup_0)['append'])($__local_var_9_4, ($v3_10)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(($k_7)(($v1_8)->{'value0'}));
+}, ($k_7)(($v1_8)->{'value0'}));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -373,15 +392,14 @@ $GLOBALS['Control_Monad_Writer_Trans_bindWriterT'] = (function() {
 }];
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Control_Monad_Writer_Trans_bindWriterT'] = __NAMESPACE__ . '\\majControl_majMonad_majWriter_majTrans_bindmajWritermajT';
 
 // Control_Monad_Writer_Trans_semigroupWriterT
-$GLOBALS['Control_Monad_Writer_Trans_semigroupWriterT'] = (function() {
-  $__fn = function($dictApply_0 = null, $dictSemigroup_1 = null) use (&$__fn) {
+function majControl_majMonad_majWriter_majTrans_semigroupmajWritermajT($dictApply_0, $dictSemigroup_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majWriter_majTrans_semigroupmajWritermajT';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
@@ -394,25 +412,25 @@ $GLOBALS['Control_Monad_Writer_Trans_semigroupWriterT'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictApply_0)['apply'])(((($Functor0_2_0)['map'])((function() use ($dictSemigroup_1) {
+  $__res = (($dictApply_0)['apply'])((($Functor0_2_0)['map'])((function() use ($dictSemigroup_1) {
   $__fn = function($v3_6 = null, $v4_7 = null) use ($dictSemigroup_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", (($v3_6)->{'value0'})(($v4_7)->{'value0'}), ((($dictSemigroup_1)['append'])(($v3_6)->{'value1'}))(($v4_7)->{'value1'}));
+  $__res = new \Data\Tuple\Data_Tuple_Tuple((($v3_6)->{'value0'})(($v4_7)->{'value0'}), (($dictSemigroup_1)['append'])(($v3_6)->{'value1'}, ($v4_7)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))(((($Functor0_2_0)['map'])(function($v_6 = null) use ($dictSemigroup1_3) {
+})(), (($Functor0_2_0)['map'])(function($v_6 = null) use ($dictSemigroup1_3) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Tuple", (($dictSemigroup1_3)['append'])(($v_6)->{'value0'}), ($v_6)->{'value1'});
+  $__res = new \Data\Tuple\Data_Tuple_Tuple((($dictSemigroup1_3)['append'])(($v_6)->{'value0'}), ($v_6)->{'value1'});
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))($a_4))))($b_5);
+}, $a_4)), $b_5);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -425,14 +443,17 @@ $GLOBALS['Control_Monad_Writer_Trans_semigroupWriterT'] = (function() {
 };
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Control_Monad_Writer_Trans_semigroupWriterT'] = __NAMESPACE__ . '\\majControl_majMonad_majWriter_majTrans_semigroupmajWritermajT';
 
 // Control_Monad_Writer_Trans_applicativeWriterT
-$GLOBALS['Control_Monad_Writer_Trans_applicativeWriterT'] = function($dictMonoid_0 = null) {
+function majControl_majMonad_majWriter_majTrans_applicativemajWritermajT($dictMonoid_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majWriter_majTrans_applicativemajWritermajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $mempty_1_0 = ($dictMonoid_0)['mempty'];
   $__local_var_2_1 = (($dictMonoid_0)['Semigroup0'])(null);
   $__res = function($dictApplicative_3 = null) use ($__local_var_2_1, $mempty_1_0) {
@@ -443,7 +464,7 @@ $GLOBALS['Control_Monad_Writer_Trans_applicativeWriterT'] = function($dictMonoid
   $__num = \func_num_args();
   $__res = (($Functor0_5_3)['map'])(function($v_7 = null) use ($f_6) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Tuple", ($f_6)(($v_7)->{'value0'}), ($v_7)->{'value1'});
+  $__res = new \Data\Tuple\Data_Tuple_Tuple(($f_6)(($v_7)->{'value0'}), ($v_7)->{'value1'});
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -458,19 +479,19 @@ $GLOBALS['Control_Monad_Writer_Trans_applicativeWriterT'] = function($dictMonoid
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($__local_var_4_2)['apply'])(((($Functor0_5_3)['map'])((function() use ($__local_var_2_1) {
+  $__res = (($__local_var_4_2)['apply'])((($Functor0_5_3)['map'])((function() use ($__local_var_2_1) {
   $__fn = function($v3_9 = null, $v4_10 = null) use ($__local_var_2_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", (($v3_9)->{'value0'})(($v4_10)->{'value0'}), ((($__local_var_2_1)['append'])(($v3_9)->{'value1'}))(($v4_10)->{'value1'}));
+  $__res = new \Data\Tuple\Data_Tuple_Tuple((($v3_9)->{'value0'})(($v4_10)->{'value0'}), (($__local_var_2_1)['append'])(($v3_9)->{'value1'}, ($v4_10)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))($v_7)))($v1_8);
+})(), $v_7), $v1_8);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -485,7 +506,7 @@ $GLOBALS['Control_Monad_Writer_Trans_applicativeWriterT'] = function($dictMonoid
 }];
   $__res = ["pure" => function($a_7 = null) use ($dictApplicative_3, $mempty_1_0) {
   $__num = \func_num_args();
-  $__res = (($dictApplicative_3)['pure'])(new Phpurs_Data2("Tuple", $a_7, $mempty_1_0));
+  $__res = (($dictApplicative_3)['pure'])(new \Data\Tuple\Data_Tuple_Tuple($a_7, $mempty_1_0));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -502,12 +523,17 @@ $GLOBALS['Control_Monad_Writer_Trans_applicativeWriterT'] = function($dictMonoid
 };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_Writer_Trans_applicativeWriterT'] = __NAMESPACE__ . '\\majControl_majMonad_majWriter_majTrans_applicativemajWritermajT';
 
 // Control_Monad_Writer_Trans_monadWriterT
-$GLOBALS['Control_Monad_Writer_Trans_monadWriterT'] = function($dictMonoid_0 = null) {
+function majControl_majMonad_majWriter_majTrans_monadmajWritermajT($dictMonoid_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majWriter_majTrans_monadmajWritermajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $applicativeWriterT1_1_0 = ($GLOBALS['Control_Monad_Writer_Trans_applicativeWriterT'])($dictMonoid_0);
   $bindWriterT1_2_1 = ($GLOBALS['Control_Monad_Writer_Trans_bindWriterT'])((($dictMonoid_0)['Semigroup0'])(null));
   $__res = function($dictMonad_3 = null) use ($applicativeWriterT1_1_0, $bindWriterT1_2_1) {
@@ -533,21 +559,26 @@ $GLOBALS['Control_Monad_Writer_Trans_monadWriterT'] = function($dictMonoid_0 = n
 };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_Writer_Trans_monadWriterT'] = __NAMESPACE__ . '\\majControl_majMonad_majWriter_majTrans_monadmajWritermajT';
 
 // Control_Monad_Writer_Trans_monadAskWriterT
-$GLOBALS['Control_Monad_Writer_Trans_monadAskWriterT'] = function($dictMonoid_0 = null) {
+function majControl_majMonad_majWriter_majTrans_monadmajAskmajWritermajT($dictMonoid_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majWriter_majTrans_monadmajAskmajWritermajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $mempty_1_0 = ($dictMonoid_0)['mempty'];
   $monadWriterT1_2_1 = ($GLOBALS['Control_Monad_Writer_Trans_monadWriterT'])($dictMonoid_0);
   $__res = function($dictMonadAsk_3 = null) use ($mempty_1_0, $monadWriterT1_2_1) {
   $__num = \func_num_args();
   $Monad0_4_2 = (($dictMonadAsk_3)['Monad0'])(null);
   $monadWriterT2_5_3 = ($monadWriterT1_2_1)($Monad0_4_2);
-  $__res = ["ask" => ((((($Monad0_4_2)['Bind1'])(null))['bind'])(($dictMonadAsk_3)['ask']))(function($a_6 = null) use ($Monad0_4_2, $mempty_1_0) {
+  $__res = ["ask" => (((($Monad0_4_2)['Bind1'])(null))['bind'])(($dictMonadAsk_3)['ask'], function($a_6 = null) use ($Monad0_4_2, $mempty_1_0) {
   $__num = \func_num_args();
-  $__res = (((($Monad0_4_2)['Applicative0'])(null))['pure'])(new Phpurs_Data2("Tuple", $a_6, $mempty_1_0));
+  $__res = (((($Monad0_4_2)['Applicative0'])(null))['pure'])(new \Data\Tuple\Data_Tuple_Tuple($a_6, $mempty_1_0));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -564,12 +595,17 @@ $GLOBALS['Control_Monad_Writer_Trans_monadAskWriterT'] = function($dictMonoid_0 
 };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_Writer_Trans_monadAskWriterT'] = __NAMESPACE__ . '\\majControl_majMonad_majWriter_majTrans_monadmajAskmajWritermajT';
 
 // Control_Monad_Writer_Trans_monadReaderWriterT
-$GLOBALS['Control_Monad_Writer_Trans_monadReaderWriterT'] = function($dictMonoid_0 = null) {
+function majControl_majMonad_majWriter_majTrans_monadmajReadermajWritermajT($dictMonoid_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majWriter_majTrans_monadmajReadermajWritermajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $monadAskWriterT1_1_0 = ($GLOBALS['Control_Monad_Writer_Trans_monadAskWriterT'])($dictMonoid_0);
   $__res = function($dictMonadReader_2 = null) use ($monadAskWriterT1_1_0) {
   $__num = \func_num_args();
@@ -593,12 +629,17 @@ $GLOBALS['Control_Monad_Writer_Trans_monadReaderWriterT'] = function($dictMonoid
 };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_Writer_Trans_monadReaderWriterT'] = __NAMESPACE__ . '\\majControl_majMonad_majWriter_majTrans_monadmajReadermajWritermajT';
 
 // Control_Monad_Writer_Trans_monadContWriterT
-$GLOBALS['Control_Monad_Writer_Trans_monadContWriterT'] = function($dictMonoid_0 = null) {
+function majControl_majMonad_majWriter_majTrans_monadmajContmajWritermajT($dictMonoid_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majWriter_majTrans_monadmajContmajWritermajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $mempty_1_0 = ($dictMonoid_0)['mempty'];
   $monadWriterT1_2_1 = ($GLOBALS['Control_Monad_Writer_Trans_monadWriterT'])($dictMonoid_0);
   $__res = function($dictMonadCont_3 = null) use ($mempty_1_0, $monadWriterT1_2_1) {
@@ -610,7 +651,7 @@ $GLOBALS['Control_Monad_Writer_Trans_monadContWriterT'] = function($dictMonoid_0
   $__num = \func_num_args();
   $__res = ($f_5)(function($a_7 = null) use ($c_6, $mempty_1_0) {
   $__num = \func_num_args();
-  $__res = ($c_6)(new Phpurs_Data2("Tuple", $a_7, $mempty_1_0));
+  $__res = ($c_6)(new \Data\Tuple\Data_Tuple_Tuple($a_7, $mempty_1_0));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -635,23 +676,28 @@ $GLOBALS['Control_Monad_Writer_Trans_monadContWriterT'] = function($dictMonoid_0
 };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_Writer_Trans_monadContWriterT'] = __NAMESPACE__ . '\\majControl_majMonad_majWriter_majTrans_monadmajContmajWritermajT';
 
 // Control_Monad_Writer_Trans_monadEffectWriter
-$GLOBALS['Control_Monad_Writer_Trans_monadEffectWriter'] = function($dictMonoid_0 = null) {
+function majControl_majMonad_majWriter_majTrans_monadmajEffectmajWriter($dictMonoid_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majWriter_majTrans_monadmajEffectmajWriter';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $mempty_1_0 = ($dictMonoid_0)['mempty'];
   $monadWriterT1_2_1 = ($GLOBALS['Control_Monad_Writer_Trans_monadWriterT'])($dictMonoid_0);
   $__res = function($dictMonadEffect_3 = null) use ($mempty_1_0, $monadWriterT1_2_1) {
   $__num = \func_num_args();
   $Monad0_4_2 = (($dictMonadEffect_3)['Monad0'])(null);
   $monadWriterT2_5_3 = ($monadWriterT1_2_1)($Monad0_4_2);
-  $__res = ["liftEffect" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(function($m_6 = null) use ($Monad0_4_2, $mempty_1_0) {
+  $__res = ["liftEffect" => ($GLOBALS['Control_Semigroupoid_composeImpl'])(function($m_6 = null) use ($Monad0_4_2, $mempty_1_0) {
   $__num = \func_num_args();
-  $__res = ((((($Monad0_4_2)['Bind1'])(null))['bind'])($m_6))(function($a_7 = null) use ($Monad0_4_2, $mempty_1_0) {
+  $__res = (((($Monad0_4_2)['Bind1'])(null))['bind'])($m_6, function($a_7 = null) use ($Monad0_4_2, $mempty_1_0) {
   $__num = \func_num_args();
-  $__res = (((($Monad0_4_2)['Applicative0'])(null))['pure'])(new Phpurs_Data2("Tuple", $a_7, $mempty_1_0));
+  $__res = (((($Monad0_4_2)['Applicative0'])(null))['pure'])(new \Data\Tuple\Data_Tuple_Tuple($a_7, $mempty_1_0));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -659,7 +705,7 @@ $GLOBALS['Control_Monad_Writer_Trans_monadEffectWriter'] = function($dictMonoid_
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(($dictMonadEffect_3)['liftEffect']), "Monad0" => function($_dollar__unused_6 = null) use ($monadWriterT2_5_3) {
+}, ($dictMonadEffect_3)['liftEffect']), "Monad0" => function($_dollar__unused_6 = null) use ($monadWriterT2_5_3) {
   $__num = \func_num_args();
   $__res = $monadWriterT2_5_3;
   goto __end;;
@@ -672,12 +718,17 @@ $GLOBALS['Control_Monad_Writer_Trans_monadEffectWriter'] = function($dictMonoid_
 };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_Writer_Trans_monadEffectWriter'] = __NAMESPACE__ . '\\majControl_majMonad_majWriter_majTrans_monadmajEffectmajWriter';
 
 // Control_Monad_Writer_Trans_monadRecWriterT
-$GLOBALS['Control_Monad_Writer_Trans_monadRecWriterT'] = function($dictMonoid_0 = null) {
+function majControl_majMonad_majWriter_majTrans_monadmajRecmajWritermajT($dictMonoid_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majWriter_majTrans_monadmajRecmajWritermajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__local_var_1_0 = (($dictMonoid_0)['Semigroup0'])(null);
   $mempty_2_1 = ($dictMonoid_0)['mempty'];
   $monadWriterT1_3_2 = ($GLOBALS['Control_Monad_Writer_Trans_monadWriterT'])($dictMonoid_0);
@@ -691,18 +742,18 @@ $GLOBALS['Control_Monad_Writer_Trans_monadRecWriterT'] = function($dictMonoid_0 
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictMonadRec_4)['tailRecM'])(function($v_9 = null) use ($Monad0_5_3, $__local_var_1_0, $f_7) {
+  $__res = (($dictMonadRec_4)['tailRecM'])(function($v_9 = null) use ($Monad0_5_3, $__local_var_1_0, $f_7) {
   $__num = \func_num_args();
   $__local_var_10_5 = ($v_9)->{'value1'};
-  $__res = ((((($Monad0_5_3)['Bind1'])(null))['bind'])(($f_7)(($v_9)->{'value0'})))(function($v2_11 = null) use ($Monad0_5_3, $__local_var_1_0, $__local_var_10_5) {
+  $__res = (((($Monad0_5_3)['Bind1'])(null))['bind'])(($f_7)(($v_9)->{'value0'}), function($v2_11 = null) use ($Monad0_5_3, $__local_var_1_0, $__local_var_10_5) {
   $__num = \func_num_args();
   $__t6 = null;;
-  if ((is_object(($v2_11)->{'value0'}) && ((($v2_11)->{'value0'})->{'tag'} === "Loop"))) {
-$__t6 = new Phpurs_Data1("Loop", new Phpurs_Data2("Tuple", (($v2_11)->{'value0'})->{'value0'}, ((($__local_var_1_0)['append'])($__local_var_10_5))(($v2_11)->{'value1'})));
+  if (($v2_11)->{'value0'} instanceof \Control\Monad\Rec\Class\Control_Monad_Rec_Class_Loop) {
+$__t6 = new \Control\Monad\Rec\Class\Control_Monad_Rec_Class_Loop(new \Data\Tuple\Data_Tuple_Tuple((($v2_11)->{'value0'})->{'value0'}, (($__local_var_1_0)['append'])($__local_var_10_5, ($v2_11)->{'value1'})));
 goto end_branch_6;;
 };
-  if ((is_object(($v2_11)->{'value0'}) && ((($v2_11)->{'value0'})->{'tag'} === "Done"))) {
-$__t6 = new Phpurs_Data1("Done", new Phpurs_Data2("Tuple", (($v2_11)->{'value0'})->{'value0'}, ((($__local_var_1_0)['append'])($__local_var_10_5))(($v2_11)->{'value1'})));
+  if (($v2_11)->{'value0'} instanceof \Control\Monad\Rec\Class\Control_Monad_Rec_Class_Done) {
+$__t6 = new \Control\Monad\Rec\Class\Control_Monad_Rec_Class_Done(new \Data\Tuple\Data_Tuple_Tuple((($v2_11)->{'value0'})->{'value0'}, (($__local_var_1_0)['append'])($__local_var_10_5, ($v2_11)->{'value1'})));
 goto end_branch_6;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -716,7 +767,7 @@ goto end_branch_6;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(new Phpurs_Data2("Tuple", $a_8, $mempty_2_1));
+}, new \Data\Tuple\Data_Tuple_Tuple($a_8, $mempty_2_1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -735,12 +786,17 @@ goto end_branch_6;;
 };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_Writer_Trans_monadRecWriterT'] = __NAMESPACE__ . '\\majControl_majMonad_majWriter_majTrans_monadmajRecmajWritermajT';
 
 // Control_Monad_Writer_Trans_monadStateWriterT
-$GLOBALS['Control_Monad_Writer_Trans_monadStateWriterT'] = function($dictMonoid_0 = null) {
+function majControl_majMonad_majWriter_majTrans_monadmajStatemajWritermajT($dictMonoid_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majWriter_majTrans_monadmajStatemajWritermajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $mempty_1_0 = ($dictMonoid_0)['mempty'];
   $monadWriterT1_2_1 = ($GLOBALS['Control_Monad_Writer_Trans_monadWriterT'])($dictMonoid_0);
   $__res = function($dictMonadState_3 = null) use ($mempty_1_0, $monadWriterT1_2_1) {
@@ -749,9 +805,9 @@ $GLOBALS['Control_Monad_Writer_Trans_monadStateWriterT'] = function($dictMonoid_
   $monadWriterT2_5_3 = ($monadWriterT1_2_1)($Monad0_4_2);
   $__res = ["state" => function($f_6 = null) use ($Monad0_4_2, $dictMonadState_3, $mempty_1_0) {
   $__num = \func_num_args();
-  $__res = ((((($Monad0_4_2)['Bind1'])(null))['bind'])((($dictMonadState_3)['state'])($f_6)))(function($a_7 = null) use ($Monad0_4_2, $mempty_1_0) {
+  $__res = (((($Monad0_4_2)['Bind1'])(null))['bind'])((($dictMonadState_3)['state'])($f_6), function($a_7 = null) use ($Monad0_4_2, $mempty_1_0) {
   $__num = \func_num_args();
-  $__res = (((($Monad0_4_2)['Applicative0'])(null))['pure'])(new Phpurs_Data2("Tuple", $a_7, $mempty_1_0));
+  $__res = (((($Monad0_4_2)['Applicative0'])(null))['pure'])(new \Data\Tuple\Data_Tuple_Tuple($a_7, $mempty_1_0));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -772,18 +828,23 @@ $GLOBALS['Control_Monad_Writer_Trans_monadStateWriterT'] = function($dictMonoid_
 };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_Writer_Trans_monadStateWriterT'] = __NAMESPACE__ . '\\majControl_majMonad_majWriter_majTrans_monadmajStatemajWritermajT';
 
 // Control_Monad_Writer_Trans_monadTellWriterT
-$GLOBALS['Control_Monad_Writer_Trans_monadTellWriterT'] = function($dictMonoid_0 = null) {
+function majControl_majMonad_majWriter_majTrans_monadmajTellmajWritermajT($dictMonoid_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majWriter_majTrans_monadmajTellmajWritermajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $Semigroup0_1_0 = (($dictMonoid_0)['Semigroup0'])(null);
   $monadWriterT1_2_1 = ($GLOBALS['Control_Monad_Writer_Trans_monadWriterT'])($dictMonoid_0);
   $__res = function($dictMonad_3 = null) use ($Semigroup0_1_0, $monadWriterT1_2_1) {
   $__num = \func_num_args();
   $monadWriterT2_4_2 = ($monadWriterT1_2_1)($dictMonad_3);
-  $__res = ["tell" => (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_Writer_Trans_WriterT']))((($GLOBALS['Control_Semigroupoid_composeImpl'])(((($dictMonad_3)['Applicative0'])(null))['pure']))(($GLOBALS['Data_Tuple_Tuple'])($GLOBALS['Data_Unit_unit']))), "Semigroup0" => function($_dollar__unused_5 = null) use ($Semigroup0_1_0) {
+  $__res = ["tell" => ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_Writer_Trans_WriterT'], ($GLOBALS['Control_Semigroupoid_composeImpl'])(((($dictMonad_3)['Applicative0'])(null))['pure'], ($GLOBALS['Data_Tuple_Tuple'])($GLOBALS['Data_Unit_unit']))), "Semigroup0" => function($_dollar__unused_5 = null) use ($Semigroup0_1_0) {
   $__num = \func_num_args();
   $__res = $Semigroup0_1_0;
   goto __end;;
@@ -802,12 +863,17 @@ $GLOBALS['Control_Monad_Writer_Trans_monadTellWriterT'] = function($dictMonoid_0
 };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_Writer_Trans_monadTellWriterT'] = __NAMESPACE__ . '\\majControl_majMonad_majWriter_majTrans_monadmajTellmajWritermajT';
 
 // Control_Monad_Writer_Trans_monadWriterWriterT
-$GLOBALS['Control_Monad_Writer_Trans_monadWriterWriterT'] = function($dictMonoid_0 = null) {
+function majControl_majMonad_majWriter_majTrans_monadmajWritermajWritermajT($dictMonoid_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majWriter_majTrans_monadmajWritermajWritermajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $monadTellWriterT1_1_0 = ($GLOBALS['Control_Monad_Writer_Trans_monadTellWriterT'])($dictMonoid_0);
   $__res = function($dictMonad_2 = null) use ($dictMonoid_0, $monadTellWriterT1_1_0) {
   $__num = \func_num_args();
@@ -816,9 +882,9 @@ $GLOBALS['Control_Monad_Writer_Trans_monadWriterWriterT'] = function($dictMonoid
   $monadTellWriterT2_5_3 = ($monadTellWriterT1_1_0)($dictMonad_2);
   $__res = ["listen" => function($v_6 = null) use ($__local_var_3_1, $__local_var_4_2) {
   $__num = \func_num_args();
-  $__res = ((($__local_var_3_1)['bind'])($v_6))(function($v1_7 = null) use ($__local_var_4_2) {
+  $__res = (($__local_var_3_1)['bind'])($v_6, function($v1_7 = null) use ($__local_var_4_2) {
   $__num = \func_num_args();
-  $__res = (($__local_var_4_2)['pure'])(new Phpurs_Data2("Tuple", new Phpurs_Data2("Tuple", ($v1_7)->{'value0'}, ($v1_7)->{'value1'}), ($v1_7)->{'value1'}));
+  $__res = (($__local_var_4_2)['pure'])(new \Data\Tuple\Data_Tuple_Tuple(new \Data\Tuple\Data_Tuple_Tuple(($v1_7)->{'value0'}, ($v1_7)->{'value1'}), ($v1_7)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -828,9 +894,9 @@ $GLOBALS['Control_Monad_Writer_Trans_monadWriterWriterT'] = function($dictMonoid
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "pass" => function($v_6 = null) use ($__local_var_3_1, $__local_var_4_2) {
   $__num = \func_num_args();
-  $__res = ((($__local_var_3_1)['bind'])($v_6))(function($v1_7 = null) use ($__local_var_4_2) {
+  $__res = (($__local_var_3_1)['bind'])($v_6, function($v1_7 = null) use ($__local_var_4_2) {
   $__num = \func_num_args();
-  $__res = (($__local_var_4_2)['pure'])(new Phpurs_Data2("Tuple", (($v1_7)->{'value0'})->{'value0'}, ((($v1_7)->{'value0'})->{'value1'})(($v1_7)->{'value1'})));
+  $__res = (($__local_var_4_2)['pure'])(new \Data\Tuple\Data_Tuple_Tuple((($v1_7)->{'value0'})->{'value0'}, ((($v1_7)->{'value0'})->{'value1'})(($v1_7)->{'value1'})));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -857,12 +923,17 @@ $GLOBALS['Control_Monad_Writer_Trans_monadWriterWriterT'] = function($dictMonoid
 };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_Writer_Trans_monadWriterWriterT'] = __NAMESPACE__ . '\\majControl_majMonad_majWriter_majTrans_monadmajWritermajWritermajT';
 
 // Control_Monad_Writer_Trans_monadThrowWriterT
-$GLOBALS['Control_Monad_Writer_Trans_monadThrowWriterT'] = function($dictMonoid_0 = null) {
+function majControl_majMonad_majWriter_majTrans_monadmajThrowmajWritermajT($dictMonoid_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majWriter_majTrans_monadmajThrowmajWritermajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $mempty_1_0 = ($dictMonoid_0)['mempty'];
   $monadWriterT1_2_1 = ($GLOBALS['Control_Monad_Writer_Trans_monadWriterT'])($dictMonoid_0);
   $__res = function($dictMonadThrow_3 = null) use ($mempty_1_0, $monadWriterT1_2_1) {
@@ -871,9 +942,9 @@ $GLOBALS['Control_Monad_Writer_Trans_monadThrowWriterT'] = function($dictMonoid_
   $monadWriterT2_5_3 = ($monadWriterT1_2_1)($Monad0_4_2);
   $__res = ["throwError" => function($e_6 = null) use ($Monad0_4_2, $dictMonadThrow_3, $mempty_1_0) {
   $__num = \func_num_args();
-  $__res = ((((($Monad0_4_2)['Bind1'])(null))['bind'])((($dictMonadThrow_3)['throwError'])($e_6)))(function($a_7 = null) use ($Monad0_4_2, $mempty_1_0) {
+  $__res = (((($Monad0_4_2)['Bind1'])(null))['bind'])((($dictMonadThrow_3)['throwError'])($e_6), function($a_7 = null) use ($Monad0_4_2, $mempty_1_0) {
   $__num = \func_num_args();
-  $__res = (((($Monad0_4_2)['Applicative0'])(null))['pure'])(new Phpurs_Data2("Tuple", $a_7, $mempty_1_0));
+  $__res = (((($Monad0_4_2)['Applicative0'])(null))['pure'])(new \Data\Tuple\Data_Tuple_Tuple($a_7, $mempty_1_0));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -894,12 +965,17 @@ $GLOBALS['Control_Monad_Writer_Trans_monadThrowWriterT'] = function($dictMonoid_
 };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_Writer_Trans_monadThrowWriterT'] = __NAMESPACE__ . '\\majControl_majMonad_majWriter_majTrans_monadmajThrowmajWritermajT';
 
 // Control_Monad_Writer_Trans_monadErrorWriterT
-$GLOBALS['Control_Monad_Writer_Trans_monadErrorWriterT'] = function($dictMonoid_0 = null) {
+function majControl_majMonad_majWriter_majTrans_monadmajErrormajWritermajT($dictMonoid_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majWriter_majTrans_monadmajErrormajWritermajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $monadThrowWriterT1_1_0 = ($GLOBALS['Control_Monad_Writer_Trans_monadThrowWriterT'])($dictMonoid_0);
   $__res = function($dictMonadError_2 = null) use ($monadThrowWriterT1_1_0) {
   $__num = \func_num_args();
@@ -910,7 +986,7 @@ $GLOBALS['Control_Monad_Writer_Trans_monadErrorWriterT'] = function($dictMonoid_
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictMonadError_2)['catchError'])($v_4))(function($e_6 = null) use ($h_5) {
+  $__res = (($dictMonadError_2)['catchError'])($v_4, function($e_6 = null) use ($h_5) {
   $__num = \func_num_args();
   $__res = ($h_5)($e_6);
   goto __end;;
@@ -935,23 +1011,28 @@ $GLOBALS['Control_Monad_Writer_Trans_monadErrorWriterT'] = function($dictMonoid_
 };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_Writer_Trans_monadErrorWriterT'] = __NAMESPACE__ . '\\majControl_majMonad_majWriter_majTrans_monadmajErrormajWritermajT';
 
 // Control_Monad_Writer_Trans_monadSTWriterT
-$GLOBALS['Control_Monad_Writer_Trans_monadSTWriterT'] = function($dictMonoid_0 = null) {
+function majControl_majMonad_majWriter_majTrans_monadmajSmajTmajWritermajT($dictMonoid_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majWriter_majTrans_monadmajSmajTmajWritermajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $mempty_1_0 = ($dictMonoid_0)['mempty'];
   $monadWriterT1_2_1 = ($GLOBALS['Control_Monad_Writer_Trans_monadWriterT'])($dictMonoid_0);
   $__res = function($dictMonadST_3 = null) use ($mempty_1_0, $monadWriterT1_2_1) {
   $__num = \func_num_args();
   $Monad0_4_2 = (($dictMonadST_3)['Monad0'])(null);
   $monadWriterT2_5_3 = ($monadWriterT1_2_1)($Monad0_4_2);
-  $__res = ["liftST" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(function($m_6 = null) use ($Monad0_4_2, $mempty_1_0) {
+  $__res = ["liftST" => ($GLOBALS['Control_Semigroupoid_composeImpl'])(function($m_6 = null) use ($Monad0_4_2, $mempty_1_0) {
   $__num = \func_num_args();
-  $__res = ((((($Monad0_4_2)['Bind1'])(null))['bind'])($m_6))(function($a_7 = null) use ($Monad0_4_2, $mempty_1_0) {
+  $__res = (((($Monad0_4_2)['Bind1'])(null))['bind'])($m_6, function($a_7 = null) use ($Monad0_4_2, $mempty_1_0) {
   $__num = \func_num_args();
-  $__res = (((($Monad0_4_2)['Applicative0'])(null))['pure'])(new Phpurs_Data2("Tuple", $a_7, $mempty_1_0));
+  $__res = (((($Monad0_4_2)['Applicative0'])(null))['pure'])(new \Data\Tuple\Data_Tuple_Tuple($a_7, $mempty_1_0));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -959,7 +1040,7 @@ $GLOBALS['Control_Monad_Writer_Trans_monadSTWriterT'] = function($dictMonoid_0 =
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(($dictMonadST_3)['liftST']), "Monad0" => function($_dollar__unused_6 = null) use ($monadWriterT2_5_3) {
+}, ($dictMonadST_3)['liftST']), "Monad0" => function($_dollar__unused_6 = null) use ($monadWriterT2_5_3) {
   $__num = \func_num_args();
   $__res = $monadWriterT2_5_3;
   goto __end;;
@@ -972,12 +1053,17 @@ $GLOBALS['Control_Monad_Writer_Trans_monadSTWriterT'] = function($dictMonoid_0 =
 };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_Writer_Trans_monadSTWriterT'] = __NAMESPACE__ . '\\majControl_majMonad_majWriter_majTrans_monadmajSmajTmajWritermajT';
 
 // Control_Monad_Writer_Trans_monoidWriterT
-$GLOBALS['Control_Monad_Writer_Trans_monoidWriterT'] = function($dictApplicative_0 = null) {
+function majControl_majMonad_majWriter_majTrans_monoidmajWritermajT($dictApplicative_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majWriter_majTrans_monoidmajWritermajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__local_var_1_0 = (($dictApplicative_0)['Apply0'])(null);
   $__res = function($dictMonoid_2 = null) use ($__local_var_1_0, $dictApplicative_0) {
   $__num = \func_num_args();
@@ -992,32 +1078,32 @@ $GLOBALS['Control_Monad_Writer_Trans_monoidWriterT'] = function($dictApplicative
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($__local_var_1_0)['apply'])(((($Functor0_4_2)['map'])((function() use ($__local_var_3_1) {
+  $__res = (($__local_var_1_0)['apply'])((($Functor0_4_2)['map'])((function() use ($__local_var_3_1) {
   $__fn = function($v3_9 = null, $v4_10 = null) use ($__local_var_3_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", (($v3_9)->{'value0'})(($v4_10)->{'value0'}), ((($__local_var_3_1)['append'])(($v3_9)->{'value1'}))(($v4_10)->{'value1'}));
+  $__res = new \Data\Tuple\Data_Tuple_Tuple((($v3_9)->{'value0'})(($v4_10)->{'value0'}), (($__local_var_3_1)['append'])(($v3_9)->{'value1'}, ($v4_10)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))(((($Functor0_4_2)['map'])(function($v_9 = null) use ($__local_var_6_3) {
+})(), (($Functor0_4_2)['map'])(function($v_9 = null) use ($__local_var_6_3) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Tuple", (($__local_var_6_3)['append'])(($v_9)->{'value0'}), ($v_9)->{'value1'});
+  $__res = new \Data\Tuple\Data_Tuple_Tuple((($__local_var_6_3)['append'])(($v_9)->{'value0'}), ($v_9)->{'value1'});
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))($a_7))))($b_8);
+}, $a_7)), $b_8);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()];
-  $__res = ["mempty" => (((($GLOBALS['Control_Monad_Writer_Trans_applicativeWriterT'])($dictMonoid_2))($dictApplicative_0))['pure'])(($dictMonoid1_5)['mempty']), "Semigroup0" => function($_dollar__unused_8 = null) use ($semigroupWriterT3_7_4) {
+  $__res = ["mempty" => ((($GLOBALS['Control_Monad_Writer_Trans_applicativeWriterT'])($dictMonoid_2, $dictApplicative_0))['pure'])(($dictMonoid1_5)['mempty']), "Semigroup0" => function($_dollar__unused_8 = null) use ($semigroupWriterT3_7_4) {
   $__num = \func_num_args();
   $__res = $semigroupWriterT3_7_4;
   goto __end;;
@@ -1034,18 +1120,23 @@ $GLOBALS['Control_Monad_Writer_Trans_monoidWriterT'] = function($dictApplicative
 };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_Writer_Trans_monoidWriterT'] = __NAMESPACE__ . '\\majControl_majMonad_majWriter_majTrans_monoidmajWritermajT';
 
 // Control_Monad_Writer_Trans_altWriterT
-$GLOBALS['Control_Monad_Writer_Trans_altWriterT'] = function($dictAlt_0 = null) {
+function majControl_majMonad_majWriter_majTrans_altmajWritermajT($dictAlt_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majWriter_majTrans_altmajWritermajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__local_var_1_0 = (($dictAlt_0)['Functor0'])(null);
   $functorWriterT1_2_1 = ["map" => function($f_2 = null) use ($__local_var_1_0) {
   $__num = \func_num_args();
   $__res = (($__local_var_1_0)['map'])(function($v_3 = null) use ($f_2) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Tuple", ($f_2)(($v_3)->{'value0'}), ($v_3)->{'value1'});
+  $__res = new \Data\Tuple\Data_Tuple_Tuple(($f_2)(($v_3)->{'value0'}), ($v_3)->{'value1'});
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1060,7 +1151,7 @@ $GLOBALS['Control_Monad_Writer_Trans_altWriterT'] = function($dictAlt_0 = null) 
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictAlt_0)['alt'])($v_3))($v1_4);
+  $__res = (($dictAlt_0)['alt'])($v_3, $v1_4);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1075,19 +1166,24 @@ $GLOBALS['Control_Monad_Writer_Trans_altWriterT'] = function($dictAlt_0 = null) 
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_Writer_Trans_altWriterT'] = __NAMESPACE__ . '\\majControl_majMonad_majWriter_majTrans_altmajWritermajT';
 
 // Control_Monad_Writer_Trans_plusWriterT
-$GLOBALS['Control_Monad_Writer_Trans_plusWriterT'] = function($dictPlus_0 = null) {
+function majControl_majMonad_majWriter_majTrans_plusmajWritermajT($dictPlus_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majWriter_majTrans_plusmajWritermajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__local_var_1_0 = (($dictPlus_0)['Alt0'])(null);
   $__local_var_2_1 = (($__local_var_1_0)['Functor0'])(null);
   $functorWriterT1_3_2 = ["map" => function($f_3 = null) use ($__local_var_2_1) {
   $__num = \func_num_args();
   $__res = (($__local_var_2_1)['map'])(function($v_4 = null) use ($f_3) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Tuple", ($f_3)(($v_4)->{'value0'}), ($v_4)->{'value1'});
+  $__res = new \Data\Tuple\Data_Tuple_Tuple(($f_3)(($v_4)->{'value0'}), ($v_4)->{'value1'});
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1102,7 +1198,7 @@ $GLOBALS['Control_Monad_Writer_Trans_plusWriterT'] = function($dictPlus_0 = null
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($__local_var_1_0)['alt'])($v_4))($v1_5);
+  $__res = (($__local_var_1_0)['alt'])($v_4, $v1_5);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1124,12 +1220,17 @@ $GLOBALS['Control_Monad_Writer_Trans_plusWriterT'] = function($dictPlus_0 = null
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_Writer_Trans_plusWriterT'] = __NAMESPACE__ . '\\majControl_majMonad_majWriter_majTrans_plusmajWritermajT';
 
 // Control_Monad_Writer_Trans_alternativeWriterT
-$GLOBALS['Control_Monad_Writer_Trans_alternativeWriterT'] = function($dictMonoid_0 = null) {
+function majControl_majMonad_majWriter_majTrans_alternativemajWritermajT($dictMonoid_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majWriter_majTrans_alternativemajWritermajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $applicativeWriterT1_1_0 = ($GLOBALS['Control_Monad_Writer_Trans_applicativeWriterT'])($dictMonoid_0);
   $__res = function($dictAlternative_2 = null) use ($applicativeWriterT1_1_0) {
   $__num = \func_num_args();
@@ -1141,7 +1242,7 @@ $GLOBALS['Control_Monad_Writer_Trans_alternativeWriterT'] = function($dictMonoid
   $__num = \func_num_args();
   $__res = (($__local_var_6_4)['map'])(function($v_8 = null) use ($f_7) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Tuple", ($f_7)(($v_8)->{'value0'}), ($v_8)->{'value1'});
+  $__res = new \Data\Tuple\Data_Tuple_Tuple(($f_7)(($v_8)->{'value0'}), ($v_8)->{'value1'});
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1156,7 +1257,7 @@ $GLOBALS['Control_Monad_Writer_Trans_alternativeWriterT'] = function($dictMonoid
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($__local_var_5_3)['alt'])($v_8))($v1_9);
+  $__res = (($__local_var_5_3)['alt'])($v_8, $v1_9);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1195,12 +1296,17 @@ $GLOBALS['Control_Monad_Writer_Trans_alternativeWriterT'] = function($dictMonoid
 };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_Writer_Trans_alternativeWriterT'] = __NAMESPACE__ . '\\majControl_majMonad_majWriter_majTrans_alternativemajWritermajT';
 
 // Control_Monad_Writer_Trans_monadPlusWriterT
-$GLOBALS['Control_Monad_Writer_Trans_monadPlusWriterT'] = function($dictMonoid_0 = null) {
+function majControl_majMonad_majWriter_majTrans_monadmajPlusmajWritermajT($dictMonoid_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majWriter_majTrans_monadmajPlusmajWritermajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $monadWriterT1_1_0 = ($GLOBALS['Control_Monad_Writer_Trans_monadWriterT'])($dictMonoid_0);
   $alternativeWriterT1_2_1 = ($GLOBALS['Control_Monad_Writer_Trans_alternativeWriterT'])($dictMonoid_0);
   $__res = function($dictMonadPlus_3 = null) use ($alternativeWriterT1_2_1, $monadWriterT1_1_0) {
@@ -1226,6 +1332,7 @@ $GLOBALS['Control_Monad_Writer_Trans_monadPlusWriterT'] = function($dictMonoid_0
 };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_Writer_Trans_monadPlusWriterT'] = __NAMESPACE__ . '\\majControl_majMonad_majWriter_majTrans_monadmajPlusmajWritermajT';
 

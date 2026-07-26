@@ -107,39 +107,45 @@ return $exports;
 $GLOBALS['Data_Symbol_unsafeCoerce'] = $ffi_Data_Symbol['unsafeCoerce'] ?? new class { public function __invoke(...$args) { return $this; } };
 
 
+
+
 // Data_Symbol_reifySymbol
-$GLOBALS['Data_Symbol_reifySymbol'] = (function() {
-  $__fn = function($s_0 = null, $f_1 = null) use (&$__fn) {
+function majData_majSymbol_reifymajSymbol($s_0, $f_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majSymbol_reifymajSymbol';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_Symbol_unsafeCoerce'])(function($dictIsSymbol_2 = null) use ($f_1) {
+  $__res = ($GLOBALS['Data_Symbol_unsafeCoerce'])(function($dictIsSymbol_2 = null) use ($f_1) {
   $__num = \func_num_args();
   $__res = ($f_1)($dictIsSymbol_2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(["reflectSymbol" => function($v_2 = null) use ($s_0) {
+}, ["reflectSymbol" => function($v_2 = null) use ($s_0) {
   $__num = \func_num_args();
   $__res = $s_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]))(new Phpurs_Data0("Proxy"));
+}], new \Type\Proxy\Type_Proxy_Proxy());
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Symbol_reifySymbol'] = __NAMESPACE__ . '\\majData_majSymbol_reifymajSymbol';
 
 // Data_Symbol_reflectSymbol
-$GLOBALS['Data_Symbol_reflectSymbol'] = function($dict_0 = null) {
+function majData_majSymbol_reflectmajSymbol($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majSymbol_reflectmajSymbol';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['reflectSymbol'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Symbol_reflectSymbol'] = __NAMESPACE__ . '\\majData_majSymbol_reflectmajSymbol';
 

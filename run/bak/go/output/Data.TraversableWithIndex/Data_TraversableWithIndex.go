@@ -705,7 +705,7 @@ return gopurs_runtime.Apply3(f_2, i_5, s_7, a_6)
 func Call_scanrWithIndex(dictTraversableWithIndex_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictTraversableWithIndex_0 gopurs_runtime.Value = dictTraversableWithIndex_0_loop
 _ = dictTraversableWithIndex_0
-mapAccumRWithIndex1_1_0 := gopurs_runtime.Apply(Get_mapAccumRWithIndex(), dictTraversableWithIndex_0)
+mapAccumRWithIndex1_1_0 := Call_mapAccumRWithIndex(dictTraversableWithIndex_0)
 _ = mapAccumRWithIndex1_1_0
 return gopurs_runtime.Func3(func(f_2 gopurs_runtime.Value, b0_3 gopurs_runtime.Value, xs_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordGet(gopurs_runtime.Apply3(mapAccumRWithIndex1_1_0, gopurs_runtime.Func3(func(i_5 gopurs_runtime.Value, b_6 gopurs_runtime.Value, a_7 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -731,7 +731,7 @@ return gopurs_runtime.Apply3(f_2, i_5, s_7, a_6)
 func Call_scanlWithIndex(dictTraversableWithIndex_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictTraversableWithIndex_0 gopurs_runtime.Value = dictTraversableWithIndex_0_loop
 _ = dictTraversableWithIndex_0
-mapAccumLWithIndex1_1_0 := gopurs_runtime.Apply(Get_mapAccumLWithIndex(), dictTraversableWithIndex_0)
+mapAccumLWithIndex1_1_0 := Call_mapAccumLWithIndex(dictTraversableWithIndex_0)
 _ = mapAccumLWithIndex1_1_0
 return gopurs_runtime.Func3(func(f_2 gopurs_runtime.Value, b0_3 gopurs_runtime.Value, xs_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordGet(gopurs_runtime.Apply3(mapAccumLWithIndex1_1_0, gopurs_runtime.Func3(func(i_5 gopurs_runtime.Value, b_6 gopurs_runtime.Value, a_7 gopurs_runtime.Value) gopurs_runtime.Value {

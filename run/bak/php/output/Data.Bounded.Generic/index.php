@@ -97,143 +97,193 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_Bounded_Generic_genericTopNoArguments
-$GLOBALS['Data_Bounded_Generic_genericTopNoArguments'] = ["genericTop__prime__" => new Phpurs_Data0("NoArguments")];
+$GLOBALS['Data_Bounded_Generic_genericTopNoArguments'] = ["genericTop__prime__" => new \Data\Generic\Rep\Data_Generic_Rep_NoArguments()];
 
 // Data_Bounded_Generic_genericTopArgument
-$GLOBALS['Data_Bounded_Generic_genericTopArgument'] = function($dictBounded_0 = null) {
+function majData_majBounded_majGeneric_genericmajTopmajArgument($dictBounded_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majBounded_majGeneric_genericmajTopmajArgument';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["genericTop__prime__" => ($dictBounded_0)['top']];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Bounded_Generic_genericTopArgument'] = __NAMESPACE__ . '\\majData_majBounded_majGeneric_genericmajTopmajArgument';
 
 // Data_Bounded_Generic_genericTop'
-$GLOBALS['Data_Bounded_Generic_genericTop__prime__'] = function($dict_0 = null) {
+function majData_majBounded_majGeneric_genericmajTop__prime__($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majBounded_majGeneric_genericmajTop__prime__';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['genericTop__prime__'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Bounded_Generic_genericTop__prime__'] = __NAMESPACE__ . '\\majData_majBounded_majGeneric_genericmajTop__prime__';
 
 // Data_Bounded_Generic_genericTopConstructor
-$GLOBALS['Data_Bounded_Generic_genericTopConstructor'] = function($dictGenericTop_0 = null) {
+function majData_majBounded_majGeneric_genericmajTopmajConstructor($dictGenericTop_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majBounded_majGeneric_genericmajTopmajConstructor';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["genericTop__prime__" => ($dictGenericTop_0)['genericTop__prime__']];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Bounded_Generic_genericTopConstructor'] = __NAMESPACE__ . '\\majData_majBounded_majGeneric_genericmajTopmajConstructor';
 
 // Data_Bounded_Generic_genericTopProduct
-$GLOBALS['Data_Bounded_Generic_genericTopProduct'] = function($dictGenericTop_0 = null) {
+function majData_majBounded_majGeneric_genericmajTopmajProduct($dictGenericTop_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majBounded_majGeneric_genericmajTopmajProduct';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $genericTop_prime1_1_0 = ($dictGenericTop_0)['genericTop__prime__'];
   $__res = function($dictGenericTop1_2 = null) use ($genericTop_prime1_1_0) {
   $__num = \func_num_args();
-  $__res = ["genericTop__prime__" => new Phpurs_Data2("Product", $genericTop_prime1_1_0, ($dictGenericTop1_2)['genericTop__prime__'])];
+  $__res = ["genericTop__prime__" => new \Data\Generic\Rep\Data_Generic_Rep_Product($genericTop_prime1_1_0, ($dictGenericTop1_2)['genericTop__prime__'])];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Bounded_Generic_genericTopProduct'] = __NAMESPACE__ . '\\majData_majBounded_majGeneric_genericmajTopmajProduct';
 
 // Data_Bounded_Generic_genericTopSum
-$GLOBALS['Data_Bounded_Generic_genericTopSum'] = function($dictGenericTop_0 = null) {
+function majData_majBounded_majGeneric_genericmajTopmajSum($dictGenericTop_0) {
   $__num = \func_num_args();
-  $__res = ["genericTop__prime__" => new Phpurs_Data1("Inr", ($dictGenericTop_0)['genericTop__prime__'])];
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majBounded_majGeneric_genericmajTopmajSum';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ["genericTop__prime__" => new \Data\Generic\Rep\Data_Generic_Rep_Inr(($dictGenericTop_0)['genericTop__prime__'])];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Bounded_Generic_genericTopSum'] = __NAMESPACE__ . '\\majData_majBounded_majGeneric_genericmajTopmajSum';
 
 // Data_Bounded_Generic_genericTop
-$GLOBALS['Data_Bounded_Generic_genericTop'] = (function() {
-  $__fn = function($dictGeneric_0 = null, $dictGenericTop_1 = null) use (&$__fn) {
+function majData_majBounded_majGeneric_genericmajTop($dictGeneric_0, $dictGenericTop_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majBounded_majGeneric_genericmajTop';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__res = (($dictGeneric_0)['to'])(($dictGenericTop_1)['genericTop__prime__']);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Bounded_Generic_genericTop'] = __NAMESPACE__ . '\\majData_majBounded_majGeneric_genericmajTop';
 
 // Data_Bounded_Generic_genericBottomNoArguments
-$GLOBALS['Data_Bounded_Generic_genericBottomNoArguments'] = ["genericBottom__prime__" => new Phpurs_Data0("NoArguments")];
+$GLOBALS['Data_Bounded_Generic_genericBottomNoArguments'] = ["genericBottom__prime__" => new \Data\Generic\Rep\Data_Generic_Rep_NoArguments()];
 
 // Data_Bounded_Generic_genericBottomArgument
-$GLOBALS['Data_Bounded_Generic_genericBottomArgument'] = function($dictBounded_0 = null) {
+function majData_majBounded_majGeneric_genericmajBottommajArgument($dictBounded_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majBounded_majGeneric_genericmajBottommajArgument';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["genericBottom__prime__" => ($dictBounded_0)['bottom']];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Bounded_Generic_genericBottomArgument'] = __NAMESPACE__ . '\\majData_majBounded_majGeneric_genericmajBottommajArgument';
 
 // Data_Bounded_Generic_genericBottom'
-$GLOBALS['Data_Bounded_Generic_genericBottom__prime__'] = function($dict_0 = null) {
+function majData_majBounded_majGeneric_genericmajBottom__prime__($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majBounded_majGeneric_genericmajBottom__prime__';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['genericBottom__prime__'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Bounded_Generic_genericBottom__prime__'] = __NAMESPACE__ . '\\majData_majBounded_majGeneric_genericmajBottom__prime__';
 
 // Data_Bounded_Generic_genericBottomConstructor
-$GLOBALS['Data_Bounded_Generic_genericBottomConstructor'] = function($dictGenericBottom_0 = null) {
+function majData_majBounded_majGeneric_genericmajBottommajConstructor($dictGenericBottom_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majBounded_majGeneric_genericmajBottommajConstructor';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["genericBottom__prime__" => ($dictGenericBottom_0)['genericBottom__prime__']];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Bounded_Generic_genericBottomConstructor'] = __NAMESPACE__ . '\\majData_majBounded_majGeneric_genericmajBottommajConstructor';
 
 // Data_Bounded_Generic_genericBottomProduct
-$GLOBALS['Data_Bounded_Generic_genericBottomProduct'] = function($dictGenericBottom_0 = null) {
+function majData_majBounded_majGeneric_genericmajBottommajProduct($dictGenericBottom_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majBounded_majGeneric_genericmajBottommajProduct';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $genericBottom_prime1_1_0 = ($dictGenericBottom_0)['genericBottom__prime__'];
   $__res = function($dictGenericBottom1_2 = null) use ($genericBottom_prime1_1_0) {
   $__num = \func_num_args();
-  $__res = ["genericBottom__prime__" => new Phpurs_Data2("Product", $genericBottom_prime1_1_0, ($dictGenericBottom1_2)['genericBottom__prime__'])];
+  $__res = ["genericBottom__prime__" => new \Data\Generic\Rep\Data_Generic_Rep_Product($genericBottom_prime1_1_0, ($dictGenericBottom1_2)['genericBottom__prime__'])];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Bounded_Generic_genericBottomProduct'] = __NAMESPACE__ . '\\majData_majBounded_majGeneric_genericmajBottommajProduct';
 
 // Data_Bounded_Generic_genericBottomSum
-$GLOBALS['Data_Bounded_Generic_genericBottomSum'] = function($dictGenericBottom_0 = null) {
+function majData_majBounded_majGeneric_genericmajBottommajSum($dictGenericBottom_0) {
   $__num = \func_num_args();
-  $__res = ["genericBottom__prime__" => new Phpurs_Data1("Inl", ($dictGenericBottom_0)['genericBottom__prime__'])];
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majBounded_majGeneric_genericmajBottommajSum';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ["genericBottom__prime__" => new \Data\Generic\Rep\Data_Generic_Rep_Inl(($dictGenericBottom_0)['genericBottom__prime__'])];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Bounded_Generic_genericBottomSum'] = __NAMESPACE__ . '\\majData_majBounded_majGeneric_genericmajBottommajSum';
 
 // Data_Bounded_Generic_genericBottom
-$GLOBALS['Data_Bounded_Generic_genericBottom'] = (function() {
-  $__fn = function($dictGeneric_0 = null, $dictGenericBottom_1 = null) use (&$__fn) {
+function majData_majBounded_majGeneric_genericmajBottom($dictGeneric_0, $dictGenericBottom_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majBounded_majGeneric_genericmajBottom';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__res = (($dictGeneric_0)['to'])(($dictGenericBottom_1)['genericBottom__prime__']);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Bounded_Generic_genericBottom'] = __NAMESPACE__ . '\\majData_majBounded_majGeneric_genericmajBottom';
 

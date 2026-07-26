@@ -104,40 +104,56 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_Monoid_Endo_Endo
-$GLOBALS['Data_Monoid_Endo_Endo'] = function($x_0 = null) {
+function majData_majMonoid_majEndo_majEndo($x_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMonoid_majEndo_majEndo';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $x_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Monoid_Endo_Endo'] = __NAMESPACE__ . '\\majData_majMonoid_majEndo_majEndo';
 
 // Data_Monoid_Endo_showEndo
-$GLOBALS['Data_Monoid_Endo_showEndo'] = function($dictShow_0 = null) {
+function majData_majMonoid_majEndo_showmajEndo($dictShow_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMonoid_majEndo_showmajEndo';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Endo "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1)))(")"));
+  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Endo ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1), ")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Monoid_Endo_showEndo'] = __NAMESPACE__ . '\\majData_majMonoid_majEndo_showmajEndo';
 
 // Data_Monoid_Endo_semigroupEndo
-$GLOBALS['Data_Monoid_Endo_semigroupEndo'] = function($dictSemigroupoid_0 = null) {
+function majData_majMonoid_majEndo_semigroupmajEndo($dictSemigroupoid_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMonoid_majEndo_semigroupmajEndo';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["append" => (function() use ($dictSemigroupoid_0) {
   $__fn = function($v_1 = null, $v1_2 = null) use ($dictSemigroupoid_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictSemigroupoid_0)['compose'])($v_1))($v1_2);
+  $__res = (($dictSemigroupoid_0)['compose'])($v_1, $v1_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -146,21 +162,31 @@ $GLOBALS['Data_Monoid_Endo_semigroupEndo'] = function($dictSemigroupoid_0 = null
 })()];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Monoid_Endo_semigroupEndo'] = __NAMESPACE__ . '\\majData_majMonoid_majEndo_semigroupmajEndo';
 
 // Data_Monoid_Endo_ordEndo
-$GLOBALS['Data_Monoid_Endo_ordEndo'] = function($dictOrd_0 = null) {
+function majData_majMonoid_majEndo_ordmajEndo($dictOrd_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMonoid_majEndo_ordmajEndo';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictOrd_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Monoid_Endo_ordEndo'] = __NAMESPACE__ . '\\majData_majMonoid_majEndo_ordmajEndo';
 
 // Data_Monoid_Endo_monoidEndo
-$GLOBALS['Data_Monoid_Endo_monoidEndo'] = function($dictCategory_0 = null) {
+function majData_majMonoid_majEndo_monoidmajEndo($dictCategory_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMonoid_majEndo_monoidmajEndo';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__local_var_1_0 = (($dictCategory_0)['Semigroupoid0'])(null);
   $semigroupEndo1_2_1 = ["append" => (function() use ($__local_var_1_0) {
   $__fn = function($v_2 = null, $v1_3 = null) use ($__local_var_1_0, &$__fn) {
@@ -168,7 +194,7 @@ $GLOBALS['Data_Monoid_Endo_monoidEndo'] = function($dictCategory_0 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($__local_var_1_0)['compose'])($v_2))($v1_3);
+  $__res = (($__local_var_1_0)['compose'])($v_2, $v1_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -184,24 +210,35 @@ $GLOBALS['Data_Monoid_Endo_monoidEndo'] = function($dictCategory_0 = null) {
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Monoid_Endo_monoidEndo'] = __NAMESPACE__ . '\\majData_majMonoid_majEndo_monoidmajEndo';
 
 // Data_Monoid_Endo_eqEndo
-$GLOBALS['Data_Monoid_Endo_eqEndo'] = function($dictEq_0 = null) {
+function majData_majMonoid_majEndo_eqmajEndo($dictEq_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMonoid_majEndo_eqmajEndo';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictEq_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Monoid_Endo_eqEndo'] = __NAMESPACE__ . '\\majData_majMonoid_majEndo_eqmajEndo';
 
 // Data_Monoid_Endo_boundedEndo
-$GLOBALS['Data_Monoid_Endo_boundedEndo'] = function($dictBounded_0 = null) {
+function majData_majMonoid_majEndo_boundedmajEndo($dictBounded_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMonoid_majEndo_boundedmajEndo';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictBounded_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Monoid_Endo_boundedEndo'] = __NAMESPACE__ . '\\majData_majMonoid_majEndo_boundedmajEndo';
 

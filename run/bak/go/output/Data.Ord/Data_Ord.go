@@ -371,7 +371,7 @@ func Get_ord1Array() gopurs_runtime.Value {
 		cache_ord1Array = gopurs_runtime.RecordDict2("Eq10", "compare1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Eq.Get_eq1Array()
 }), gopurs_runtime.Func(func(dictOrd_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(gopurs_runtime.Apply(Get_ordArray(), dictOrd_0), "compare")
+return gopurs_runtime.RecordGet(Call_ordArray(dictOrd_0), "compare")
 }))
 	})
 	return cache_ord1Array
@@ -404,7 +404,7 @@ var once_between sync.Once
 func Get_between() gopurs_runtime.Value {
 	once_between.Do(func() {
 		cache_between = gopurs_runtime.Func4(func(dictOrd_0_box gopurs_runtime.Value, low_1_box gopurs_runtime.Value, hi_2_box gopurs_runtime.Value, x_3_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_between(dictOrd_0_box, low_1_box, hi_2_box, x_3_box)
+return gopurs_runtime.Bool(Call_between(dictOrd_0_box, low_1_box, hi_2_box, x_3_box))
 })
 	})
 	return cache_between
@@ -788,7 +788,7 @@ end_branch_4:
 return __t4
 }
 
-func Call_between(dictOrd_0_loop gopurs_runtime.Value, low_1_loop gopurs_runtime.Value, hi_2_loop gopurs_runtime.Value, x_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_between(dictOrd_0_loop gopurs_runtime.Value, low_1_loop gopurs_runtime.Value, hi_2_loop gopurs_runtime.Value, x_3_loop gopurs_runtime.Value) bool {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
 var low_1 gopurs_runtime.Value = low_1_loop
@@ -812,7 +812,7 @@ var __t_tag_0 gopurs_runtime.Value = gopurs_runtime.Apply2(gopurs_runtime.Record
 __t1 = gopurs_runtime.Bool(((__t_tag_0.Type == 9 && __t_tag_0.IntVal == 380165415)) != (true))
 }
 end_branch_1:
-return __t1
+return (__t1.IntVal) != (0)
 }
 
 func Call_abs(dictOrd_0_loop gopurs_runtime.Value, dictRing_1_loop gopurs_runtime.Value) gopurs_runtime.Value {

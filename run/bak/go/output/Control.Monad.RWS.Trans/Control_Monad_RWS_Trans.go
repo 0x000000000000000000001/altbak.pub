@@ -469,7 +469,7 @@ var dictBind_0 gopurs_runtime.Value = dictBind_0_loop
 _ = dictBind_0
 __local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBind_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{})
 _ = __local_var_1_0
-applyRWST1_2_1 := gopurs_runtime.Apply(Get_applyRWST(), dictBind_0)
+applyRWST1_2_1 := Call_applyRWST(dictBind_0)
 _ = applyRWST1_2_1
 return gopurs_runtime.Func(func(dictMonoid_3 gopurs_runtime.Value) gopurs_runtime.Value {
 applyRWST2_4_2 := gopurs_runtime.Apply(applyRWST1_2_1, dictMonoid_3)
@@ -491,7 +491,7 @@ return gopurs_runtime.Value{Type: 9, IntVal: 2367475031, UnsafePtr: unsafe.Point
 func Call_semigroupRWST(dictBind_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictBind_0 gopurs_runtime.Value = dictBind_0_loop
 _ = dictBind_0
-applyRWST1_1_0 := gopurs_runtime.Apply(Get_applyRWST(), dictBind_0)
+applyRWST1_1_0 := Call_applyRWST(dictBind_0)
 _ = applyRWST1_1_0
 return gopurs_runtime.Func(func(dictMonoid_2 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_3_1 := gopurs_runtime.Apply(applyRWST1_1_0, dictMonoid_2)
@@ -509,7 +509,7 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_1, "apply"),
 func Call_applicativeRWST(dictMonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
-applyRWST1_1_0 := gopurs_runtime.Apply(Get_applyRWST(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Bind1"), gopurs_runtime.Value{}))
+applyRWST1_1_0 := Call_applyRWST(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Bind1"), gopurs_runtime.Value{}))
 _ = applyRWST1_1_0
 return gopurs_runtime.Func(func(dictMonoid_2 gopurs_runtime.Value) gopurs_runtime.Value {
 mempty_3_1 := gopurs_runtime.RecordGet(dictMonoid_2, "mempty")
@@ -527,9 +527,9 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs
 func Call_monadRWST(dictMonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
-applicativeRWST1_1_0 := gopurs_runtime.Apply(Get_applicativeRWST(), dictMonad_0)
+applicativeRWST1_1_0 := Call_applicativeRWST(dictMonad_0)
 _ = applicativeRWST1_1_0
-bindRWST1_2_1 := gopurs_runtime.Apply(Get_bindRWST(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Bind1"), gopurs_runtime.Value{}))
+bindRWST1_2_1 := Call_bindRWST(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Bind1"), gopurs_runtime.Value{}))
 _ = bindRWST1_2_1
 return gopurs_runtime.Func(func(dictMonoid_3 gopurs_runtime.Value) gopurs_runtime.Value {
 applicativeRWST2_4_2 := gopurs_runtime.Apply(applicativeRWST1_1_0, dictMonoid_3)
@@ -547,7 +547,7 @@ return bindRWST2_5_3
 func Call_monadAskRWST(dictMonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
-monadRWST1_1_0 := gopurs_runtime.Apply(Get_monadRWST(), dictMonad_0)
+monadRWST1_1_0 := Call_monadRWST(dictMonad_0)
 _ = monadRWST1_1_0
 return gopurs_runtime.Func(func(dictMonoid_2 gopurs_runtime.Value) gopurs_runtime.Value {
 mempty_3_1 := gopurs_runtime.RecordGet(dictMonoid_2, "mempty")
@@ -565,7 +565,7 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs
 func Call_monadReaderRWST(dictMonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
-monadAskRWST1_1_0 := gopurs_runtime.Apply(Get_monadAskRWST(), dictMonad_0)
+monadAskRWST1_1_0 := Call_monadAskRWST(dictMonad_0)
 _ = monadAskRWST1_1_0
 return gopurs_runtime.Func(func(dictMonoid_2 gopurs_runtime.Value) gopurs_runtime.Value {
 monadAskRWST2_3_1 := gopurs_runtime.Apply(monadAskRWST1_1_0, dictMonoid_2)
@@ -586,7 +586,7 @@ _ = mempty_1_0
 return gopurs_runtime.Func(func(dictMonadEffect_2 gopurs_runtime.Value) gopurs_runtime.Value {
 Monad0_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_2, "Monad0"), gopurs_runtime.Value{})
 _ = Monad0_3_1
-monadRWST1_4_2 := gopurs_runtime.Apply2(Get_monadRWST(), Monad0_3_1, dictMonoid_0)
+monadRWST1_4_2 := gopurs_runtime.Apply(Call_monadRWST(Monad0_3_1), dictMonoid_0)
 _ = monadRWST1_4_2
 return gopurs_runtime.RecordDict2("Monad0", "liftEffect", gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return monadRWST1_4_2
@@ -607,7 +607,7 @@ var dictMonadRec_0 gopurs_runtime.Value = dictMonadRec_0_loop
 _ = dictMonadRec_0
 Monad0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadRec_0, "Monad0"), gopurs_runtime.Value{})
 _ = Monad0_1_0
-monadRWST1_2_1 := gopurs_runtime.Apply(Get_monadRWST(), Monad0_1_0)
+monadRWST1_2_1 := Call_monadRWST(Monad0_1_0)
 _ = monadRWST1_2_1
 return gopurs_runtime.Func(func(dictMonoid_3 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_4_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_3, "Semigroup0"), gopurs_runtime.Value{})
@@ -656,7 +656,7 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs
 func Call_monadStateRWST(dictMonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
-monadRWST1_1_0 := gopurs_runtime.Apply(Get_monadRWST(), dictMonad_0)
+monadRWST1_1_0 := Call_monadRWST(dictMonad_0)
 _ = monadRWST1_1_0
 return gopurs_runtime.Func(func(dictMonoid_2 gopurs_runtime.Value) gopurs_runtime.Value {
 mempty_3_1 := gopurs_runtime.RecordGet(dictMonoid_2, "mempty")
@@ -676,7 +676,7 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs
 func Call_monadTellRWST(dictMonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
-monadRWST1_1_0 := gopurs_runtime.Apply(Get_monadRWST(), dictMonad_0)
+monadRWST1_1_0 := Call_monadRWST(dictMonad_0)
 _ = monadRWST1_1_0
 return gopurs_runtime.Func(func(dictMonoid_2 gopurs_runtime.Value) gopurs_runtime.Value {
 Semigroup0_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_2, "Semigroup0"), gopurs_runtime.Value{})
@@ -700,7 +700,7 @@ __local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "B
 _ = __local_var_1_0
 __local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Applicative0"), gopurs_runtime.Value{})
 _ = __local_var_2_1
-monadTellRWST1_3_2 := gopurs_runtime.Apply(Get_monadTellRWST(), dictMonad_0)
+monadTellRWST1_3_2 := Call_monadTellRWST(dictMonad_0)
 _ = monadTellRWST1_3_2
 return gopurs_runtime.Func(func(dictMonoid_4 gopurs_runtime.Value) gopurs_runtime.Value {
 monadTellRWST2_5_3 := gopurs_runtime.Apply(monadTellRWST1_3_2, dictMonoid_4)
@@ -726,7 +726,7 @@ var dictMonadThrow_0 gopurs_runtime.Value = dictMonadThrow_0_loop
 _ = dictMonadThrow_0
 Monad0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadThrow_0, "Monad0"), gopurs_runtime.Value{})
 _ = Monad0_1_0
-monadRWST1_2_1 := gopurs_runtime.Apply(Get_monadRWST(), Monad0_1_0)
+monadRWST1_2_1 := Call_monadRWST(Monad0_1_0)
 _ = monadRWST1_2_1
 return gopurs_runtime.Func(func(dictMonoid_3 gopurs_runtime.Value) gopurs_runtime.Value {
 mempty_4_2 := gopurs_runtime.RecordGet(dictMonoid_3, "mempty")
@@ -750,7 +750,7 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs
 func Call_monadErrorRWST(dictMonadError_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadError_0 gopurs_runtime.Value = dictMonadError_0_loop
 _ = dictMonadError_0
-monadThrowRWST1_1_0 := gopurs_runtime.Apply(Get_monadThrowRWST(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadError_0, "MonadThrow0"), gopurs_runtime.Value{}))
+monadThrowRWST1_1_0 := Call_monadThrowRWST(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadError_0, "MonadThrow0"), gopurs_runtime.Value{}))
 _ = monadThrowRWST1_1_0
 return gopurs_runtime.Func(func(dictMonoid_2 gopurs_runtime.Value) gopurs_runtime.Value {
 monadThrowRWST2_3_1 := gopurs_runtime.Apply(monadThrowRWST1_1_0, dictMonoid_2)
@@ -773,7 +773,7 @@ _ = mempty_1_0
 return gopurs_runtime.Func(func(dictMonadST_2 gopurs_runtime.Value) gopurs_runtime.Value {
 Monad0_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadST_2, "Monad0"), gopurs_runtime.Value{})
 _ = Monad0_3_1
-monadRWST1_4_2 := gopurs_runtime.Apply2(Get_monadRWST(), Monad0_3_1, dictMonoid_0)
+monadRWST1_4_2 := gopurs_runtime.Apply(Call_monadRWST(Monad0_3_1), dictMonoid_0)
 _ = monadRWST1_4_2
 return gopurs_runtime.RecordDict2("Monad0", "liftST", gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return monadRWST1_4_2
@@ -792,9 +792,9 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs
 func Call_monoidRWST(dictMonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
-applicativeRWST1_1_0 := gopurs_runtime.Apply(Get_applicativeRWST(), dictMonad_0)
+applicativeRWST1_1_0 := Call_applicativeRWST(dictMonad_0)
 _ = applicativeRWST1_1_0
-semigroupRWST1_2_1 := gopurs_runtime.Apply(Get_semigroupRWST(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Bind1"), gopurs_runtime.Value{}))
+semigroupRWST1_2_1 := Call_semigroupRWST(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Bind1"), gopurs_runtime.Value{}))
 _ = semigroupRWST1_2_1
 return gopurs_runtime.Func(func(dictMonoid_3 gopurs_runtime.Value) gopurs_runtime.Value {
 semigroupRWST2_4_2 := gopurs_runtime.Apply(semigroupRWST1_2_1, dictMonoid_3)
@@ -887,7 +887,7 @@ return empty_3_1
 }))
 _ = plusRWST1_4_2
 return gopurs_runtime.Func(func(dictMonad_5 gopurs_runtime.Value) gopurs_runtime.Value {
-applicativeRWST1_6_7 := gopurs_runtime.Apply2(Get_applicativeRWST(), dictMonad_5, dictMonoid_0)
+applicativeRWST1_6_7 := gopurs_runtime.Apply(Call_applicativeRWST(dictMonad_5), dictMonoid_0)
 _ = applicativeRWST1_6_7
 return gopurs_runtime.RecordDict2("Applicative0", "Plus1", gopurs_runtime.Func(func(_dollar__unused_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return applicativeRWST1_6_7

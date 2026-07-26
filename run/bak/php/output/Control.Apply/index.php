@@ -117,14 +117,21 @@ return $exports;
 $GLOBALS['Control_Apply_arrayApply'] = $ffi_Control_Apply['arrayApply'] ?? new class { public function __invoke(...$args) { return $this; } };
 
 
+
+
 // Control_Apply_identity
-$GLOBALS['Control_Apply_identity'] = function($x_0 = null) {
+function majControl_majApply_identity($x_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majApply_identity';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $x_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Apply_identity'] = __NAMESPACE__ . '\\majControl_majApply_identity';
 
 // Control_Apply_applyProxy
 $GLOBALS['Control_Apply_applyProxy'] = ["apply" => (function() {
@@ -133,7 +140,7 @@ $GLOBALS['Control_Apply_applyProxy'] = ["apply" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data0("Proxy");
+  $__res = new \Type\Proxy\Type_Proxy_Proxy();
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -154,7 +161,7 @@ $GLOBALS['Control_Apply_applyFn'] = ["apply" => (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($f_0)($x_2))(($g_1)($x_2));
+  $__res = ($f_0)($x_2, ($g_1)($x_2));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -178,107 +185,106 @@ $GLOBALS['Control_Apply_applyArray'] = ["apply" => $GLOBALS['Control_Apply_array
 }];
 
 // Control_Apply_apply
-$GLOBALS['Control_Apply_apply'] = function($dict_0 = null) {
+function majControl_majApply_apply($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majApply_apply';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['apply'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Apply_apply'] = __NAMESPACE__ . '\\majControl_majApply_apply';
 
 // Control_Apply_applyFirst
-$GLOBALS['Control_Apply_applyFirst'] = (function() {
-  $__fn = function($dictApply_0 = null, $a_1 = null, $b_2 = null) use (&$__fn) {
+function majControl_majApply_applymajFirst($dictApply_0, $a_1 = null, $b_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majApply_applymajFirst';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($dictApply_0)['apply'])(((((($dictApply_0)['Functor0'])(null))['map'])($GLOBALS['Data_Function_const']))($a_1)))($b_2);
+  $__res = (($dictApply_0)['apply'])((((($dictApply_0)['Functor0'])(null))['map'])($GLOBALS['Data_Function_const'], $a_1), $b_2);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Control_Apply_applyFirst'] = __NAMESPACE__ . '\\majControl_majApply_applymajFirst';
 
 // Control_Apply_applySecond
-$GLOBALS['Control_Apply_applySecond'] = (function() {
-  $__fn = function($dictApply_0 = null, $a_1 = null, $b_2 = null) use (&$__fn) {
+function majControl_majApply_applymajSecond($dictApply_0, $a_1 = null, $b_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majApply_applymajSecond';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($dictApply_0)['apply'])(((((($dictApply_0)['Functor0'])(null))['map'])(function($v_3 = null) {
+  $__res = (($dictApply_0)['apply'])((((($dictApply_0)['Functor0'])(null))['map'])(function($v_3 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Control_Apply_identity'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))($a_1)))($b_2);
+}, $a_1), $b_2);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Control_Apply_applySecond'] = __NAMESPACE__ . '\\majControl_majApply_applymajSecond';
 
 // Control_Apply_lift2
-$GLOBALS['Control_Apply_lift2'] = (function() {
-  $__fn = function($dictApply_0 = null, $f_1 = null, $a_2 = null, $b_3 = null) use (&$__fn) {
+function majControl_majApply_lift2($dictApply_0, $f_1 = null, $a_2 = null, $b_3 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majApply_lift2';
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ((($dictApply_0)['apply'])(((((($dictApply_0)['Functor0'])(null))['map'])($f_1))($a_2)))($b_3);
+  $__res = (($dictApply_0)['apply'])((((($dictApply_0)['Functor0'])(null))['map'])($f_1, $a_2), $b_3);
   goto __end;;
   __end:
-  return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
-  };
-  return $__fn;
-})();
+  return 4 < $__num ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
+}
+$GLOBALS['Control_Apply_lift2'] = __NAMESPACE__ . '\\majControl_majApply_lift2';
 
 // Control_Apply_lift3
-$GLOBALS['Control_Apply_lift3'] = (function() {
-  $__fn = function($dictApply_0 = null, $f_1 = null, $a_2 = null, $b_3 = null, $c_4 = null) use (&$__fn) {
+function majControl_majApply_lift3($dictApply_0, $f_1 = null, $a_2 = null, $b_3 = null, $c_4 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majApply_lift3';
   if ($__num < 5) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 5);
   }
-  $__res = ((($dictApply_0)['apply'])(((($dictApply_0)['apply'])(((((($dictApply_0)['Functor0'])(null))['map'])($f_1))($a_2)))($b_3)))($c_4);
+  $__res = (($dictApply_0)['apply'])((($dictApply_0)['apply'])((((($dictApply_0)['Functor0'])(null))['map'])($f_1, $a_2), $b_3), $c_4);
   goto __end;;
   __end:
-  return $__num > 5 ? $__res(...\array_slice(\func_get_args(), 5)) : $__res;
-  };
-  return $__fn;
-})();
+  return 5 < $__num ? $__res(...\array_slice(\func_get_args(), 5)) : $__res;
+}
+$GLOBALS['Control_Apply_lift3'] = __NAMESPACE__ . '\\majControl_majApply_lift3';
 
 // Control_Apply_lift4
-$GLOBALS['Control_Apply_lift4'] = (function() {
-  $__fn = function($dictApply_0 = null, $f_1 = null, $a_2 = null, $b_3 = null, $c_4 = null, $d_5 = null) use (&$__fn) {
+function majControl_majApply_lift4($dictApply_0, $f_1 = null, $a_2 = null, $b_3 = null, $c_4 = null, $d_5 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majApply_lift4';
   if ($__num < 6) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 6);
   }
-  $__res = ((($dictApply_0)['apply'])(((($dictApply_0)['apply'])(((($dictApply_0)['apply'])(((((($dictApply_0)['Functor0'])(null))['map'])($f_1))($a_2)))($b_3)))($c_4)))($d_5);
+  $__res = (($dictApply_0)['apply'])((($dictApply_0)['apply'])((($dictApply_0)['apply'])((((($dictApply_0)['Functor0'])(null))['map'])($f_1, $a_2), $b_3), $c_4), $d_5);
   goto __end;;
   __end:
-  return $__num > 6 ? $__res(...\array_slice(\func_get_args(), 6)) : $__res;
-  };
-  return $__fn;
-})();
+  return 6 < $__num ? $__res(...\array_slice(\func_get_args(), 6)) : $__res;
+}
+$GLOBALS['Control_Apply_lift4'] = __NAMESPACE__ . '\\majControl_majApply_lift4';
 
 // Control_Apply_lift5
-$GLOBALS['Control_Apply_lift5'] = (function() {
-  $__fn = function($dictApply_0 = null, $f_1 = null, $a_2 = null, $b_3 = null, $c_4 = null, $d_5 = null, $e_6 = null) use (&$__fn) {
+function majControl_majApply_lift5($dictApply_0, $f_1 = null, $a_2 = null, $b_3 = null, $c_4 = null, $d_5 = null, $e_6 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majApply_lift5';
   if ($__num < 7) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 7);
   }
-  $__res = ((($dictApply_0)['apply'])(((($dictApply_0)['apply'])(((($dictApply_0)['apply'])(((($dictApply_0)['apply'])(((((($dictApply_0)['Functor0'])(null))['map'])($f_1))($a_2)))($b_3)))($c_4)))($d_5)))($e_6);
+  $__res = (($dictApply_0)['apply'])((($dictApply_0)['apply'])((($dictApply_0)['apply'])((($dictApply_0)['apply'])((((($dictApply_0)['Functor0'])(null))['map'])($f_1, $a_2), $b_3), $c_4), $d_5), $e_6);
   goto __end;;
   __end:
-  return $__num > 7 ? $__res(...\array_slice(\func_get_args(), 7)) : $__res;
-  };
-  return $__fn;
-})();
+  return 7 < $__num ? $__res(...\array_slice(\func_get_args(), 7)) : $__res;
+}
+$GLOBALS['Control_Apply_lift5'] = __NAMESPACE__ . '\\majControl_majApply_lift5';
 

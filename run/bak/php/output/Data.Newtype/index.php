@@ -104,173 +104,175 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_Newtype_wrap
-$GLOBALS['Data_Newtype_wrap'] = function($_dollar__unused_0 = null) {
+function majData_majNewtype_wrap($_dollar__unused_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majNewtype_wrap';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $GLOBALS['Unsafe_Coerce_unsafeCoerce'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Newtype_wrap'] = __NAMESPACE__ . '\\majData_majNewtype_wrap';
 
 // Data_Newtype_unwrap
-$GLOBALS['Data_Newtype_unwrap'] = function($_dollar__unused_0 = null) {
+function majData_majNewtype_unwrap($_dollar__unused_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majNewtype_unwrap';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $GLOBALS['Unsafe_Coerce_unsafeCoerce'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Newtype_unwrap'] = __NAMESPACE__ . '\\majData_majNewtype_unwrap';
 
 // Data_Newtype_underF2
-$GLOBALS['Data_Newtype_underF2'] = (function() {
-  $__fn = function($_dollar__unused_0 = null, $_dollar__unused_1 = null, $_dollar__unused_2 = null, $_dollar__unused_3 = null, $v_4 = null) use (&$__fn) {
+function majData_majNewtype_undermajF2($_dollar__unused_0, $_dollar__unused_1 = null, $_dollar__unused_2 = null, $_dollar__unused_3 = null, $v_4 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majNewtype_undermajF2';
   if ($__num < 5) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 5);
   }
   $__res = $GLOBALS['Unsafe_Coerce_unsafeCoerce'];
   goto __end;;
   __end:
-  return $__num > 5 ? $__res(...\array_slice(\func_get_args(), 5)) : $__res;
-  };
-  return $__fn;
-})();
+  return 5 < $__num ? $__res(...\array_slice(\func_get_args(), 5)) : $__res;
+}
+$GLOBALS['Data_Newtype_underF2'] = __NAMESPACE__ . '\\majData_majNewtype_undermajF2';
 
 // Data_Newtype_underF
-$GLOBALS['Data_Newtype_underF'] = (function() {
-  $__fn = function($_dollar__unused_0 = null, $_dollar__unused_1 = null, $_dollar__unused_2 = null, $_dollar__unused_3 = null, $v_4 = null) use (&$__fn) {
+function majData_majNewtype_undermajF($_dollar__unused_0, $_dollar__unused_1 = null, $_dollar__unused_2 = null, $_dollar__unused_3 = null, $v_4 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majNewtype_undermajF';
   if ($__num < 5) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 5);
   }
   $__res = $GLOBALS['Unsafe_Coerce_unsafeCoerce'];
   goto __end;;
   __end:
-  return $__num > 5 ? $__res(...\array_slice(\func_get_args(), 5)) : $__res;
-  };
-  return $__fn;
-})();
+  return 5 < $__num ? $__res(...\array_slice(\func_get_args(), 5)) : $__res;
+}
+$GLOBALS['Data_Newtype_underF'] = __NAMESPACE__ . '\\majData_majNewtype_undermajF';
 
 // Data_Newtype_under2
-$GLOBALS['Data_Newtype_under2'] = (function() {
-  $__fn = function($_dollar__unused_0 = null, $_dollar__unused_1 = null, $v_2 = null) use (&$__fn) {
+function majData_majNewtype_under2($_dollar__unused_0, $_dollar__unused_1 = null, $v_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majNewtype_under2';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   $__res = $GLOBALS['Unsafe_Coerce_unsafeCoerce'];
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_Newtype_under2'] = __NAMESPACE__ . '\\majData_majNewtype_under2';
 
 // Data_Newtype_under
-$GLOBALS['Data_Newtype_under'] = (function() {
-  $__fn = function($_dollar__unused_0 = null, $_dollar__unused_1 = null, $v_2 = null) use (&$__fn) {
+function majData_majNewtype_under($_dollar__unused_0, $_dollar__unused_1 = null, $v_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majNewtype_under';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   $__res = $GLOBALS['Unsafe_Coerce_unsafeCoerce'];
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_Newtype_under'] = __NAMESPACE__ . '\\majData_majNewtype_under';
 
 // Data_Newtype_un
-$GLOBALS['Data_Newtype_un'] = (function() {
-  $__fn = function($_dollar__unused_0 = null, $v_1 = null) use (&$__fn) {
+function majData_majNewtype_un($_dollar__unused_0, $v_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majNewtype_un';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__res = $GLOBALS['Unsafe_Coerce_unsafeCoerce'];
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Newtype_un'] = __NAMESPACE__ . '\\majData_majNewtype_un';
 
 // Data_Newtype_traverse
-$GLOBALS['Data_Newtype_traverse'] = (function() {
-  $__fn = function($_dollar__unused_0 = null, $_dollar__unused_1 = null, $v_2 = null) use (&$__fn) {
+function majData_majNewtype_traverse($_dollar__unused_0, $_dollar__unused_1 = null, $v_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majNewtype_traverse';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   $__res = $GLOBALS['Unsafe_Coerce_unsafeCoerce'];
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_Newtype_traverse'] = __NAMESPACE__ . '\\majData_majNewtype_traverse';
 
 // Data_Newtype_overF2
-$GLOBALS['Data_Newtype_overF2'] = (function() {
-  $__fn = function($_dollar__unused_0 = null, $_dollar__unused_1 = null, $_dollar__unused_2 = null, $_dollar__unused_3 = null, $v_4 = null) use (&$__fn) {
+function majData_majNewtype_overmajF2($_dollar__unused_0, $_dollar__unused_1 = null, $_dollar__unused_2 = null, $_dollar__unused_3 = null, $v_4 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majNewtype_overmajF2';
   if ($__num < 5) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 5);
   }
   $__res = $GLOBALS['Unsafe_Coerce_unsafeCoerce'];
   goto __end;;
   __end:
-  return $__num > 5 ? $__res(...\array_slice(\func_get_args(), 5)) : $__res;
-  };
-  return $__fn;
-})();
+  return 5 < $__num ? $__res(...\array_slice(\func_get_args(), 5)) : $__res;
+}
+$GLOBALS['Data_Newtype_overF2'] = __NAMESPACE__ . '\\majData_majNewtype_overmajF2';
 
 // Data_Newtype_overF
-$GLOBALS['Data_Newtype_overF'] = (function() {
-  $__fn = function($_dollar__unused_0 = null, $_dollar__unused_1 = null, $_dollar__unused_2 = null, $_dollar__unused_3 = null, $v_4 = null) use (&$__fn) {
+function majData_majNewtype_overmajF($_dollar__unused_0, $_dollar__unused_1 = null, $_dollar__unused_2 = null, $_dollar__unused_3 = null, $v_4 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majNewtype_overmajF';
   if ($__num < 5) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 5);
   }
   $__res = $GLOBALS['Unsafe_Coerce_unsafeCoerce'];
   goto __end;;
   __end:
-  return $__num > 5 ? $__res(...\array_slice(\func_get_args(), 5)) : $__res;
-  };
-  return $__fn;
-})();
+  return 5 < $__num ? $__res(...\array_slice(\func_get_args(), 5)) : $__res;
+}
+$GLOBALS['Data_Newtype_overF'] = __NAMESPACE__ . '\\majData_majNewtype_overmajF';
 
 // Data_Newtype_over2
-$GLOBALS['Data_Newtype_over2'] = (function() {
-  $__fn = function($_dollar__unused_0 = null, $_dollar__unused_1 = null, $v_2 = null) use (&$__fn) {
+function majData_majNewtype_over2($_dollar__unused_0, $_dollar__unused_1 = null, $v_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majNewtype_over2';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   $__res = $GLOBALS['Unsafe_Coerce_unsafeCoerce'];
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_Newtype_over2'] = __NAMESPACE__ . '\\majData_majNewtype_over2';
 
 // Data_Newtype_over
-$GLOBALS['Data_Newtype_over'] = (function() {
-  $__fn = function($_dollar__unused_0 = null, $_dollar__unused_1 = null, $v_2 = null) use (&$__fn) {
+function majData_majNewtype_over($_dollar__unused_0, $_dollar__unused_1 = null, $v_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majNewtype_over';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   $__res = $GLOBALS['Unsafe_Coerce_unsafeCoerce'];
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_Newtype_over'] = __NAMESPACE__ . '\\majData_majNewtype_over';
 
 // Data_Newtype_newtypeMultiplicative
 $GLOBALS['Data_Newtype_newtypeMultiplicative'] = ["Coercible0" => function($_dollar__unused_0 = null) {
@@ -345,62 +347,58 @@ $GLOBALS['Data_Newtype_newtypeAdditive'] = ["Coercible0" => function($_dollar__u
 }];
 
 // Data_Newtype_modify
-$GLOBALS['Data_Newtype_modify'] = (function() {
-  $__fn = function($_dollar__unused_0 = null, $fn_1 = null, $t_2 = null) use (&$__fn) {
+function majData_majNewtype_modify($_dollar__unused_0, $fn_1 = null, $t_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majNewtype_modify';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   $__res = ($fn_1)($t_2);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_Newtype_modify'] = __NAMESPACE__ . '\\majData_majNewtype_modify';
 
 // Data_Newtype_collect
-$GLOBALS['Data_Newtype_collect'] = (function() {
-  $__fn = function($_dollar__unused_0 = null, $_dollar__unused_1 = null, $v_2 = null) use (&$__fn) {
+function majData_majNewtype_collect($_dollar__unused_0, $_dollar__unused_1 = null, $v_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majNewtype_collect';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   $__res = $GLOBALS['Unsafe_Coerce_unsafeCoerce'];
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_Newtype_collect'] = __NAMESPACE__ . '\\majData_majNewtype_collect';
 
 // Data_Newtype_alaF
-$GLOBALS['Data_Newtype_alaF'] = (function() {
-  $__fn = function($_dollar__unused_0 = null, $_dollar__unused_1 = null, $_dollar__unused_2 = null, $_dollar__unused_3 = null, $v_4 = null) use (&$__fn) {
+function majData_majNewtype_alamajF($_dollar__unused_0, $_dollar__unused_1 = null, $_dollar__unused_2 = null, $_dollar__unused_3 = null, $v_4 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majNewtype_alamajF';
   if ($__num < 5) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 5);
   }
   $__res = $GLOBALS['Unsafe_Coerce_unsafeCoerce'];
   goto __end;;
   __end:
-  return $__num > 5 ? $__res(...\array_slice(\func_get_args(), 5)) : $__res;
-  };
-  return $__fn;
-})();
+  return 5 < $__num ? $__res(...\array_slice(\func_get_args(), 5)) : $__res;
+}
+$GLOBALS['Data_Newtype_alaF'] = __NAMESPACE__ . '\\majData_majNewtype_alamajF';
 
 // Data_Newtype_ala
-$GLOBALS['Data_Newtype_ala'] = (function() {
-  $__fn = function($_dollar__unused_0 = null, $_dollar__unused_1 = null, $_dollar__unused_2 = null, $v_3 = null, $f_4 = null) use (&$__fn) {
+function majData_majNewtype_ala($_dollar__unused_0, $_dollar__unused_1 = null, $_dollar__unused_2 = null, $v_3 = null, $f_4 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majNewtype_ala';
   if ($__num < 5) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 5);
   }
   $__res = ($f_4)($GLOBALS['Unsafe_Coerce_unsafeCoerce']);
   goto __end;;
   __end:
-  return $__num > 5 ? $__res(...\array_slice(\func_get_args(), 5)) : $__res;
-  };
-  return $__fn;
-})();
+  return 5 < $__num ? $__res(...\array_slice(\func_get_args(), 5)) : $__res;
+}
+$GLOBALS['Data_Newtype_ala'] = __NAMESPACE__ . '\\majData_majNewtype_ala';
 

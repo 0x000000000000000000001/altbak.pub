@@ -104,13 +104,15 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Test_Ackermann_describe
 $GLOBALS['Test_Ackermann_describe'] = ($GLOBALS['Effect_Console_log'])("Ackermann (3, 4):");
 
 // Test_Ackermann_ackermann
-$GLOBALS['Test_Ackermann_ackermann'] = (function() {
-  $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
+function majTest_majAckermann_ackermann($v_0, $v1_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majTest_majAckermann_ackermann';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
@@ -144,7 +146,7 @@ default:
 break;
 };
   $__tco_0 = ($v_0 - 1);
-  $__tco_1 = (($GLOBALS['Test_Ackermann_ackermann'])($v_0))(($v1_1 - 1));
+  $__tco_1 = ($GLOBALS['Test_Ackermann_ackermann'])($v_0, ($v1_1 - 1));
   $__tco_var_Test_Ackermann_ackermann_v_0 = $__tco_0;
   $__tco_var_Test_Ackermann_ackermann_v1_1 = $__tco_1;
   goto tco_loop_Test_Ackermann_ackermann;;
@@ -153,15 +155,14 @@ break;
   $__res = $__t2;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Test_Ackermann_ackermann'] = __NAMESPACE__ . '\\majTest_majAckermann_ackermann';
 
 // Test_Ackermann_act
-$GLOBALS['Test_Ackermann_act'] = ((($GLOBALS['Effect_bindEffect'])['bind'])(($GLOBALS['Bench_opaque'])(3)))(function($dummy_0 = null) {
+$GLOBALS['Test_Ackermann_act'] = (($GLOBALS['Effect_bindEffect'])['bind'])(($GLOBALS['Bench_opaque'])(3), function($dummy_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_Console_log'])((($GLOBALS['Data_Show_showInt'])['show'])((($GLOBALS['Test_Ackermann_ackermann'])($dummy_0))(4)));
+  $__res = ($GLOBALS['Effect_Console_log'])((($GLOBALS['Data_Show_showInt'])['show'])(($GLOBALS['Test_Ackermann_ackermann'])($dummy_0, 4)));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

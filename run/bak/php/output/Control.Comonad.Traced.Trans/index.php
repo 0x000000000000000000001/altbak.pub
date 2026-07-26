@@ -104,23 +104,35 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Control_Comonad_Traced_Trans_TracedT
-$GLOBALS['Control_Comonad_Traced_Trans_TracedT'] = function($x_0 = null) {
+function majControl_majComonad_majTraced_majTrans_majTracedmajT($x_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majComonad_majTraced_majTrans_majTracedmajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $x_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Comonad_Traced_Trans_TracedT'] = __NAMESPACE__ . '\\majControl_majComonad_majTraced_majTrans_majTracedmajT';
 
 // Control_Comonad_Traced_Trans_runTracedT
-$GLOBALS['Control_Comonad_Traced_Trans_runTracedT'] = function($v_0 = null) {
+function majControl_majComonad_majTraced_majTrans_runmajTracedmajT($v_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majComonad_majTraced_majTrans_runmajTracedmajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $v_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Comonad_Traced_Trans_runTracedT'] = __NAMESPACE__ . '\\majControl_majComonad_majTraced_majTrans_runmajTracedmajT';
 
 // Control_Comonad_Traced_Trans_newtypeTracedT
 $GLOBALS['Control_Comonad_Traced_Trans_newtypeTracedT'] = ["Coercible0" => function($_dollar__unused_0 = null) {
@@ -132,15 +144,19 @@ $GLOBALS['Control_Comonad_Traced_Trans_newtypeTracedT'] = ["Coercible0" => funct
 }];
 
 // Control_Comonad_Traced_Trans_functorTracedT
-$GLOBALS['Control_Comonad_Traced_Trans_functorTracedT'] = function($dictFunctor_0 = null) {
+function majControl_majComonad_majTraced_majTrans_functormajTracedmajT($dictFunctor_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majComonad_majTraced_majTrans_functormajTracedmajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["map" => (function() use ($dictFunctor_0) {
   $__fn = function($f_1 = null, $v_2 = null) use ($dictFunctor_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictFunctor_0)['map'])((function() use ($f_1) {
+  $__res = (($dictFunctor_0)['map'])((function() use ($f_1) {
   $__fn = function($g_3 = null, $t_4 = null) use ($f_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -152,7 +168,7 @@ $GLOBALS['Control_Comonad_Traced_Trans_functorTracedT'] = function($dictFunctor_
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))($v_2);
+})(), $v_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -161,12 +177,17 @@ $GLOBALS['Control_Comonad_Traced_Trans_functorTracedT'] = function($dictFunctor_
 })()];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Comonad_Traced_Trans_functorTracedT'] = __NAMESPACE__ . '\\majControl_majComonad_majTraced_majTrans_functormajTracedmajT';
 
 // Control_Comonad_Traced_Trans_extendTracedT
-$GLOBALS['Control_Comonad_Traced_Trans_extendTracedT'] = function($dictExtend_0 = null) {
+function majControl_majComonad_majTraced_majTrans_extendmajTracedmajT($dictExtend_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majComonad_majTraced_majTrans_extendmajTracedmajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $Functor0_1_0 = (($dictExtend_0)['Functor0'])(null);
   $functorTracedT1_2_1 = ["map" => (function() use ($Functor0_1_0) {
   $__fn = function($f_2 = null, $v_3 = null) use ($Functor0_1_0, &$__fn) {
@@ -174,7 +195,7 @@ $GLOBALS['Control_Comonad_Traced_Trans_extendTracedT'] = function($dictExtend_0 
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($Functor0_1_0)['map'])((function() use ($f_2) {
+  $__res = (($Functor0_1_0)['map'])((function() use ($f_2) {
   $__fn = function($g_4 = null, $t_5 = null) use ($f_2, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -186,7 +207,7 @@ $GLOBALS['Control_Comonad_Traced_Trans_extendTracedT'] = function($dictExtend_0 
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))($v_3);
+})(), $v_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -201,31 +222,31 @@ $GLOBALS['Control_Comonad_Traced_Trans_extendTracedT'] = function($dictExtend_0 
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictExtend_0)['extend'])((function() use ($Functor0_1_0, $dictSemigroup_3, $f_4) {
+  $__res = (($dictExtend_0)['extend'])((function() use ($Functor0_1_0, $dictSemigroup_3, $f_4) {
   $__fn = function($w_prime_6 = null, $t_7 = null) use ($Functor0_1_0, $dictSemigroup_3, $f_4, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($f_4)(((($Functor0_1_0)['map'])((function() use ($dictSemigroup_3, $t_7) {
+  $__res = ($f_4)((($Functor0_1_0)['map'])((function() use ($dictSemigroup_3, $t_7) {
   $__fn = function($h_8 = null, $t_prime_9 = null) use ($dictSemigroup_3, $t_7, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($h_8)(((($dictSemigroup_3)['append'])($t_7))($t_prime_9));
+  $__res = ($h_8)((($dictSemigroup_3)['append'])($t_7, $t_prime_9));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))($w_prime_6));
+})(), $w_prime_6));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))($v_5);
+})(), $v_5);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -244,12 +265,17 @@ $GLOBALS['Control_Comonad_Traced_Trans_extendTracedT'] = function($dictExtend_0 
 };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Comonad_Traced_Trans_extendTracedT'] = __NAMESPACE__ . '\\majControl_majComonad_majTraced_majTrans_extendmajTracedmajT';
 
 // Control_Comonad_Traced_Trans_comonadTransTracedT
-$GLOBALS['Control_Comonad_Traced_Trans_comonadTransTracedT'] = function($dictMonoid_0 = null) {
+function majControl_majComonad_majTraced_majTrans_comonadmajTransmajTracedmajT($dictMonoid_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majComonad_majTraced_majTrans_comonadmajTransmajTracedmajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $mempty_1_0 = ($dictMonoid_0)['mempty'];
   $__res = ["lower" => (function() use ($mempty_1_0) {
   $__fn = function($dictComonad_2 = null, $v_3 = null) use ($mempty_1_0, &$__fn) {
@@ -257,13 +283,13 @@ $GLOBALS['Control_Comonad_Traced_Trans_comonadTransTracedT'] = function($dictMon
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((((($dictComonad_2)['Extend0'])(null))['Functor0'])(null))['map'])(function($f_4 = null) use ($mempty_1_0) {
+  $__res = (((((($dictComonad_2)['Extend0'])(null))['Functor0'])(null))['map'])(function($f_4 = null) use ($mempty_1_0) {
   $__num = \func_num_args();
   $__res = ($f_4)($mempty_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))($v_3);
+}, $v_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -272,12 +298,17 @@ $GLOBALS['Control_Comonad_Traced_Trans_comonadTransTracedT'] = function($dictMon
 })()];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Comonad_Traced_Trans_comonadTransTracedT'] = __NAMESPACE__ . '\\majControl_majComonad_majTraced_majTrans_comonadmajTransmajTracedmajT';
 
 // Control_Comonad_Traced_Trans_comonadTracedT
-$GLOBALS['Control_Comonad_Traced_Trans_comonadTracedT'] = function($dictComonad_0 = null) {
+function majControl_majComonad_majTraced_majTrans_comonadmajTracedmajT($dictComonad_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majComonad_majTraced_majTrans_comonadmajTracedmajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__local_var_1_0 = (($dictComonad_0)['Extend0'])(null);
   $Functor0_2_1 = (($__local_var_1_0)['Functor0'])(null);
   $functorTracedT1_3_2 = ["map" => (function() use ($Functor0_2_1) {
@@ -286,7 +317,7 @@ $GLOBALS['Control_Comonad_Traced_Trans_comonadTracedT'] = function($dictComonad_
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($Functor0_2_1)['map'])((function() use ($f_3) {
+  $__res = (($Functor0_2_1)['map'])((function() use ($f_3) {
   $__fn = function($g_5 = null, $t_6 = null) use ($f_3, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -298,7 +329,7 @@ $GLOBALS['Control_Comonad_Traced_Trans_comonadTracedT'] = function($dictComonad_
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))($v_4);
+})(), $v_4);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -313,31 +344,31 @@ $GLOBALS['Control_Comonad_Traced_Trans_comonadTracedT'] = function($dictComonad_
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($__local_var_1_0)['extend'])((function() use ($Functor0_2_1, $dictSemigroup_4, $f_5) {
+  $__res = (($__local_var_1_0)['extend'])((function() use ($Functor0_2_1, $dictSemigroup_4, $f_5) {
   $__fn = function($w_prime_7 = null, $t_8 = null) use ($Functor0_2_1, $dictSemigroup_4, $f_5, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($f_5)(((($Functor0_2_1)['map'])((function() use ($dictSemigroup_4, $t_8) {
+  $__res = ($f_5)((($Functor0_2_1)['map'])((function() use ($dictSemigroup_4, $t_8) {
   $__fn = function($h_9 = null, $t_prime_10 = null) use ($dictSemigroup_4, $t_8, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($h_9)(((($dictSemigroup_4)['append'])($t_8))($t_prime_10));
+  $__res = ($h_9)((($dictSemigroup_4)['append'])($t_8, $t_prime_10));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))($w_prime_7));
+})(), $w_prime_7));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))($v_6);
+})(), $v_6);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -360,7 +391,7 @@ $GLOBALS['Control_Comonad_Traced_Trans_comonadTracedT'] = function($dictComonad_
   $extendTracedT2_6_5 = ($extendTracedT1_3_2)((($dictMonoid_4)['Semigroup0'])(null));
   $__res = ["extract" => function($v_7 = null) use ($dictComonad_0, $mempty_5_4) {
   $__num = \func_num_args();
-  $__res = ((($dictComonad_0)['extract'])($v_7))($mempty_5_4);
+  $__res = (($dictComonad_0)['extract'])($v_7, $mempty_5_4);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -377,6 +408,7 @@ $GLOBALS['Control_Comonad_Traced_Trans_comonadTracedT'] = function($dictComonad_
 };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Comonad_Traced_Trans_comonadTracedT'] = __NAMESPACE__ . '\\majControl_majComonad_majTraced_majTrans_comonadmajTracedmajT';
 

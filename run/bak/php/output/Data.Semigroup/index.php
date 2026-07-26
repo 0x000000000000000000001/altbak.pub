@@ -130,6 +130,8 @@ $GLOBALS['Data_Semigroup_concatArray'] = $ffi_Data_Semigroup['concatArray'] ?? n
 $GLOBALS['Data_Semigroup_concatString'] = $ffi_Data_Semigroup['concatString'] ?? new class { public function __invoke(...$args) { return $this; } };
 
 
+
+
 // Data_Semigroup_semigroupVoid
 $GLOBALS['Data_Semigroup_semigroupVoid'] = ["append" => function($v_0 = null) {
   $__num = \func_num_args();
@@ -179,7 +181,7 @@ $GLOBALS['Data_Semigroup_semigroupProxy'] = ["append" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data0("Proxy");
+  $__res = new \Type\Proxy\Type_Proxy_Proxy();
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -191,48 +193,61 @@ $GLOBALS['Data_Semigroup_semigroupProxy'] = ["append" => (function() {
 $GLOBALS['Data_Semigroup_semigroupArray'] = ["append" => $GLOBALS['Data_Semigroup_concatArray']];
 
 // Data_Semigroup_appendRecord
-$GLOBALS['Data_Semigroup_appendRecord'] = function($dict_0 = null) {
+function majData_majSemigroup_appendmajRecord($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majSemigroup_appendmajRecord';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['appendRecord'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Semigroup_appendRecord'] = __NAMESPACE__ . '\\majData_majSemigroup_appendmajRecord';
 
 // Data_Semigroup_semigroupRecord
-$GLOBALS['Data_Semigroup_semigroupRecord'] = (function() {
-  $__fn = function($_dollar__unused_0 = null, $dictSemigroupRecord_1 = null) use (&$__fn) {
+function majData_majSemigroup_semigroupmajRecord($_dollar__unused_0, $dictSemigroupRecord_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majSemigroup_semigroupmajRecord';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ["append" => (($dictSemigroupRecord_1)['appendRecord'])(new Phpurs_Data0("Proxy"))];
+  $__res = ["append" => (($dictSemigroupRecord_1)['appendRecord'])(new \Type\Proxy\Type_Proxy_Proxy())];
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Semigroup_semigroupRecord'] = __NAMESPACE__ . '\\majData_majSemigroup_semigroupmajRecord';
 
 // Data_Semigroup_append
-$GLOBALS['Data_Semigroup_append'] = function($dict_0 = null) {
+function majData_majSemigroup_append($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majSemigroup_append';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['append'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Semigroup_append'] = __NAMESPACE__ . '\\majData_majSemigroup_append';
 
 // Data_Semigroup_semigroupFn
-$GLOBALS['Data_Semigroup_semigroupFn'] = function($dictSemigroup_0 = null) {
+function majData_majSemigroup_semigroupmajFn($dictSemigroup_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majSemigroup_semigroupmajFn';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["append" => (function() use ($dictSemigroup_0) {
   $__fn = function($f_1 = null, $g_2 = null, $x_3 = null) use ($dictSemigroup_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($dictSemigroup_0)['append'])(($f_1)($x_3)))(($g_2)($x_3));
+  $__res = (($dictSemigroup_0)['append'])(($f_1)($x_3), ($g_2)($x_3));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -241,13 +256,14 @@ $GLOBALS['Data_Semigroup_semigroupFn'] = function($dictSemigroup_0 = null) {
 })()];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Semigroup_semigroupFn'] = __NAMESPACE__ . '\\majData_majSemigroup_semigroupmajFn';
 
 // Data_Semigroup_semigroupRecordCons
-$GLOBALS['Data_Semigroup_semigroupRecordCons'] = (function() {
-  $__fn = function($dictIsSymbol_0 = null, $_dollar__unused_1 = null, $dictSemigroupRecord_2 = null, $dictSemigroup_3 = null) use (&$__fn) {
+function majData_majSemigroup_semigroupmajRecordmajCons($dictIsSymbol_0, $_dollar__unused_1 = null, $dictSemigroupRecord_2 = null, $dictSemigroup_3 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majSemigroup_semigroupmajRecordmajCons';
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
@@ -257,9 +273,9 @@ $GLOBALS['Data_Semigroup_semigroupRecordCons'] = (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $key_7_0 = (($dictIsSymbol_0)['reflectSymbol'])(new Phpurs_Data0("Proxy"));
+  $key_7_0 = (($dictIsSymbol_0)['reflectSymbol'])(new \Type\Proxy\Type_Proxy_Proxy());
   $get_8_1 = ($GLOBALS['Record_Unsafe_unsafeGet'])($key_7_0);
-  $__res = ((($GLOBALS['Record_Unsafe_unsafeSet'])($key_7_0))(((($dictSemigroup_3)['append'])(($get_8_1)($ra_5)))(($get_8_1)($rb_6))))((((($dictSemigroupRecord_2)['appendRecord'])(new Phpurs_Data0("Proxy")))($ra_5))($rb_6));
+  $__res = ($GLOBALS['Record_Unsafe_unsafeSet'])($key_7_0, (($dictSemigroup_3)['append'])(($get_8_1)($ra_5), ($get_8_1)($rb_6)), (($dictSemigroupRecord_2)['appendRecord'])(new \Type\Proxy\Type_Proxy_Proxy(), $ra_5, $rb_6));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -268,8 +284,7 @@ $GLOBALS['Data_Semigroup_semigroupRecordCons'] = (function() {
 })()];
   goto __end;;
   __end:
-  return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
-  };
-  return $__fn;
-})();
+  return 4 < $__num ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
+}
+$GLOBALS['Data_Semigroup_semigroupRecordCons'] = __NAMESPACE__ . '\\majData_majSemigroup_semigroupmajRecordmajCons';
 

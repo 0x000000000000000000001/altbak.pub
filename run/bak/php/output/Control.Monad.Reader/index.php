@@ -101,24 +101,50 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
+// Control_Monad_Reader_withReader_closure
+$GLOBALS['Control_Monad_Reader_withReader_closure'] = $GLOBALS['Control_Monad_Reader_Trans_withReaderT'];
+
 // Control_Monad_Reader_withReader
-$GLOBALS['Control_Monad_Reader_withReader'] = $GLOBALS['Control_Monad_Reader_Trans_withReaderT'];
+function majControl_majMonad_majReader_withmajReader($v_0, $v_1 = null) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majReader_withmajReader';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ($GLOBALS['Control_Monad_Reader_withReader_closure'])($v_0, $v_1);
+  goto __end;;
+  __end:
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Control_Monad_Reader_withReader'] = __NAMESPACE__ . '\\majControl_majMonad_majReader_withmajReader';
 
 // Control_Monad_Reader_runReader
-$GLOBALS['Control_Monad_Reader_runReader'] = function($v_0 = null) {
+function majControl_majMonad_majReader_runmajReader($v_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce']))($v_0);
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majReader_runmajReader';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce'], $v_0);
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_Reader_runReader'] = __NAMESPACE__ . '\\majControl_majMonad_majReader_runmajReader';
 
 // Control_Monad_Reader_mapReader
-$GLOBALS['Control_Monad_Reader_mapReader'] = function($f_0 = null) {
+function majControl_majMonad_majReader_mapmajReader($f_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Monad_Reader_Trans_mapReaderT'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Identity_Identity']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_0))($GLOBALS['Unsafe_Coerce_unsafeCoerce'])));
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majReader_mapmajReader';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ($GLOBALS['Control_Monad_Reader_Trans_mapReaderT'])(($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Identity_Identity'], ($GLOBALS['Control_Semigroupoid_composeImpl'])($f_0, $GLOBALS['Unsafe_Coerce_unsafeCoerce'])));
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_Reader_mapReader'] = __NAMESPACE__ . '\\majControl_majMonad_majReader_mapmajReader';
 

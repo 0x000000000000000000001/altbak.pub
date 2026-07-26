@@ -1068,7 +1068,7 @@ return __t2
 func Call_ordRecurringInterval(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-ordInterval1_1_0 := gopurs_runtime.Apply(Get_ordInterval(), dictOrd_0)
+ordInterval1_1_0 := Call_ordInterval(dictOrd_0)
 _ = ordInterval1_1_0
 eqRecurringInterval1_2_1 := gopurs_runtime.Apply(Get_eqRecurringInterval(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd_0, "Eq0"), gopurs_runtime.Value{}))
 _ = eqRecurringInterval1_2_1

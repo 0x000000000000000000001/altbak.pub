@@ -100,10 +100,16 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Control_Monad_Cont_withCont
-$GLOBALS['Control_Monad_Cont_withCont'] = function($f_0 = null) {
+function majControl_majMonad_majCont_withmajCont($f_0) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Identity_Identity'])))((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_0))((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Unsafe_Coerce_unsafeCoerce'])));
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majCont_withmajCont';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__local_var_1_0 = ($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Identity_Identity']), ($GLOBALS['Control_Semigroupoid_composeImpl'])($f_0, (($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Unsafe_Coerce_unsafeCoerce'])));
   $__res = (function() use ($__local_var_1_0) {
   $__fn = function($v_2 = null, $k_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -119,28 +125,32 @@ $GLOBALS['Control_Monad_Cont_withCont'] = function($f_0 = null) {
 })();
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_Cont_withCont'] = __NAMESPACE__ . '\\majControl_majMonad_majCont_withmajCont';
 
 // Control_Monad_Cont_runCont
-$GLOBALS['Control_Monad_Cont_runCont'] = (function() {
-  $__fn = function($cc_0 = null, $k_1 = null) use (&$__fn) {
+function majControl_majMonad_majCont_runmajCont($cc_0, $k_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majCont_runmajCont';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($cc_0)((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Identity_Identity']))($k_1));
+  $__res = ($cc_0)(($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Identity_Identity'], $k_1));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Control_Monad_Cont_runCont'] = __NAMESPACE__ . '\\majControl_majMonad_majCont_runmajCont';
 
 // Control_Monad_Cont_mapCont
-$GLOBALS['Control_Monad_Cont_mapCont'] = function($f_0 = null) {
+function majControl_majMonad_majCont_mapmajCont($f_0) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Identity_Identity']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_0))($GLOBALS['Unsafe_Coerce_unsafeCoerce']));
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majCont_mapmajCont';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__local_var_1_0 = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Identity_Identity'], ($GLOBALS['Control_Semigroupoid_composeImpl'])($f_0, $GLOBALS['Unsafe_Coerce_unsafeCoerce']));
   $__res = (function() use ($__local_var_1_0) {
   $__fn = function($v_2 = null, $k_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -156,21 +166,21 @@ $GLOBALS['Control_Monad_Cont_mapCont'] = function($f_0 = null) {
 })();
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_Cont_mapCont'] = __NAMESPACE__ . '\\majControl_majMonad_majCont_mapmajCont';
 
 // Control_Monad_Cont_cont
-$GLOBALS['Control_Monad_Cont_cont'] = (function() {
-  $__fn = function($f_0 = null, $c_1 = null) use (&$__fn) {
+function majControl_majMonad_majCont_cont($f_0, $c_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majCont_cont';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($f_0)((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce']))($c_1));
+  $__res = ($f_0)(($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce'], $c_1));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Control_Monad_Cont_cont'] = __NAMESPACE__ . '\\majControl_majMonad_majCont_cont';
 

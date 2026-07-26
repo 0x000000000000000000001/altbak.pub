@@ -134,11 +134,17 @@ return $exports;
 $GLOBALS['Data_Unfoldable_unfoldrArrayImpl'] = $ffi_Data_Unfoldable['unfoldrArrayImpl'] ?? new class { public function __invoke(...$args) { return $this; } };
 
 
+
+
 // Data_Unfoldable_fromJust
-$GLOBALS['Data_Unfoldable_fromJust'] = function($v_0 = null) {
+function majData_majUnfoldable_frommajJust($v_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majUnfoldable_frommajJust';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__t0 = null;;
-  if ((is_object($v_0) && (($v_0)->{'tag'} === "Just"))) {
+  if ($v_0 instanceof \Data\Maybe\Data_Maybe_Just) {
 $__t0 = ($v_0)->{'value0'};
 goto end_branch_0;;
 };
@@ -148,19 +154,20 @@ goto end_branch_0;;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Unfoldable_fromJust'] = __NAMESPACE__ . '\\majData_majUnfoldable_frommajJust';
 
 // Data_Unfoldable_lessThanOrEq
 $GLOBALS['Data_Unfoldable_lessThanOrEq'] = (function() use (&$__fn) {
-$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT"));
+$__local_var_0_0 = ($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT(), new \Data\Ordering\Data_Ordering_EQ(), new \Data\Ordering\Data_Ordering_GT());
 return (function() use ($__local_var_0_0) {
   $__fn = function($a1_1 = null, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ( ! (is_object((($__local_var_0_0)($a1_1))($a2_2)) && (((($__local_var_0_0)($a1_1))($a2_2))->{'tag'} === "GT")));
+  $__res = ( ! ($__local_var_0_0)($a1_1, $a2_2) instanceof \Data\Ordering\Data_Ordering_GT);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -170,13 +177,18 @@ return (function() use ($__local_var_0_0) {
 })();
 
 // Data_Unfoldable_unfoldr
-$GLOBALS['Data_Unfoldable_unfoldr'] = function($dict_0 = null) {
+function majData_majUnfoldable_unfoldr($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majUnfoldable_unfoldr';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['unfoldr'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Unfoldable_unfoldr'] = __NAMESPACE__ . '\\majData_majUnfoldable_unfoldr';
 
 // Data_Unfoldable_unfoldableMaybe
 $GLOBALS['Data_Unfoldable_unfoldableMaybe'] = ["unfoldr" => (function() {
@@ -185,7 +197,7 @@ $GLOBALS['Data_Unfoldable_unfoldableMaybe'] = ["unfoldr" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_Maybe_functorMaybe'])['map'])($GLOBALS['Data_Tuple_fst']))(($f_0)($b_1));
+  $__res = (($GLOBALS['Data_Maybe_functorMaybe'])['map'])($GLOBALS['Data_Tuple_fst'], ($f_0)($b_1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -200,7 +212,7 @@ $GLOBALS['Data_Unfoldable_unfoldableMaybe'] = ["unfoldr" => (function() {
 }];
 
 // Data_Unfoldable_unfoldableArray
-$GLOBALS['Data_Unfoldable_unfoldableArray'] = ["unfoldr" => (((($GLOBALS['Data_Unfoldable_unfoldrArrayImpl'])($GLOBALS['Data_Maybe_isNothing']))($GLOBALS['Data_Unfoldable_fromJust']))($GLOBALS['Data_Tuple_fst']))($GLOBALS['Data_Tuple_snd']), "Unfoldable10" => function($_dollar__unused_0 = null) {
+$GLOBALS['Data_Unfoldable_unfoldableArray'] = ["unfoldr" => ($GLOBALS['Data_Unfoldable_unfoldrArrayImpl'])($GLOBALS['Data_Maybe_isNothing'], $GLOBALS['Data_Unfoldable_fromJust'], $GLOBALS['Data_Tuple_fst'], $GLOBALS['Data_Tuple_snd']), "Unfoldable10" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Unfoldable1_unfoldable1Array'];
   goto __end;;
@@ -209,37 +221,36 @@ $GLOBALS['Data_Unfoldable_unfoldableArray'] = ["unfoldr" => (((($GLOBALS['Data_U
 }];
 
 // Data_Unfoldable_replicate
-$GLOBALS['Data_Unfoldable_replicate'] = (function() {
-  $__fn = function($dictUnfoldable_0 = null, $n_1 = null, $v_2 = null) use (&$__fn) {
+function majData_majUnfoldable_replicate($dictUnfoldable_0, $n_1 = null, $v_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majUnfoldable_replicate';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($dictUnfoldable_0)['unfoldr'])(function($i_3 = null) use ($v_2) {
+  $__res = (($dictUnfoldable_0)['unfoldr'])(function($i_3 = null) use ($v_2) {
   $__num = \func_num_args();
   $__t0 = null;;
-  if ((($GLOBALS['Data_Unfoldable_lessThanOrEq'])($i_3))(0)) {
-$__t0 = new Phpurs_Data0("Nothing");
+  if (($GLOBALS['Data_Unfoldable_lessThanOrEq'])($i_3, 0)) {
+$__t0 = new \Data\Maybe\Data_Maybe_Nothing();
 goto end_branch_0;;
 };
-  $__t0 = new Phpurs_Data1("Just", new Phpurs_Data2("Tuple", $v_2, ($i_3 - 1)));
+  $__t0 = new \Data\Maybe\Data_Maybe_Just(new \Data\Tuple\Data_Tuple_Tuple($v_2, ($i_3 - 1)));
   end_branch_0:;
   $__res = $__t0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))($n_1);
+}, $n_1);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_Unfoldable_replicate'] = __NAMESPACE__ . '\\majData_majUnfoldable_replicate';
 
 // Data_Unfoldable_replicateA
-$GLOBALS['Data_Unfoldable_replicateA'] = (function() {
-  $__fn = function($dictApplicative_0 = null, $dictUnfoldable_1 = null, $dictTraversable_2 = null) use (&$__fn) {
+function majData_majUnfoldable_replicatemajA($dictApplicative_0, $dictUnfoldable_1 = null, $dictTraversable_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majUnfoldable_replicatemajA';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
@@ -250,7 +261,7 @@ $GLOBALS['Data_Unfoldable_replicateA'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($sequence_3_0)(((($GLOBALS['Data_Unfoldable_replicate'])($dictUnfoldable_1))($n_4))($m_5));
+  $__res = ($sequence_3_0)(($GLOBALS['Data_Unfoldable_replicate'])($dictUnfoldable_1, $n_4, $m_5));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -259,44 +270,53 @@ $GLOBALS['Data_Unfoldable_replicateA'] = (function() {
 })();
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_Unfoldable_replicateA'] = __NAMESPACE__ . '\\majData_majUnfoldable_replicatemajA';
 
 // Data_Unfoldable_none
-$GLOBALS['Data_Unfoldable_none'] = function($dictUnfoldable_0 = null) {
+function majData_majUnfoldable_none($dictUnfoldable_0) {
   $__num = \func_num_args();
-  $__res = ((($dictUnfoldable_0)['unfoldr'])(function($v_1 = null) {
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majUnfoldable_none';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = (($dictUnfoldable_0)['unfoldr'])(function($v_1 = null) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data0("Nothing");
+  $__res = new \Data\Maybe\Data_Maybe_Nothing();
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))($GLOBALS['Data_Unit_unit']);
+}, $GLOBALS['Data_Unit_unit']);
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Unfoldable_none'] = __NAMESPACE__ . '\\majData_majUnfoldable_none';
 
 // Data_Unfoldable_fromMaybe
-$GLOBALS['Data_Unfoldable_fromMaybe'] = function($dictUnfoldable_0 = null) {
+function majData_majUnfoldable_frommajMaybe($dictUnfoldable_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majUnfoldable_frommajMaybe';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = (($dictUnfoldable_0)['unfoldr'])(function($b_1 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Maybe_functorMaybe'])['map'])(function($a_2 = null) {
+  $__res = (($GLOBALS['Data_Maybe_functorMaybe'])['map'])(function($a_2 = null) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Tuple", $a_2, new Phpurs_Data0("Nothing"));
+  $__res = new \Data\Tuple\Data_Tuple_Tuple($a_2, new \Data\Maybe\Data_Maybe_Nothing());
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))($b_1);
+}, $b_1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 });
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Unfoldable_fromMaybe'] = __NAMESPACE__ . '\\majData_majUnfoldable_frommajMaybe';
 

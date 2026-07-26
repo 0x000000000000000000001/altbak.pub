@@ -108,6 +108,8 @@ return $exports;
 $GLOBALS['Data_Reflectable_unsafeCoerce'] = $ffi_Data_Reflectable['unsafeCoerce'] ?? new class { public function __invoke(...$args) { return $this; } };
 
 
+
+
 // Data_Reflectable_reifiableString
 $GLOBALS['Data_Reflectable_reifiableString'] = [];
 
@@ -121,38 +123,42 @@ $GLOBALS['Data_Reflectable_reifiableInt'] = [];
 $GLOBALS['Data_Reflectable_reifiableBoolean'] = [];
 
 // Data_Reflectable_reifyType
-$GLOBALS['Data_Reflectable_reifyType'] = (function() {
-  $__fn = function($_dollar__unused_0 = null, $s_1 = null, $f_2 = null) use (&$__fn) {
+function majData_majReflectable_reifymajType($_dollar__unused_0, $s_1 = null, $f_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majReflectable_reifymajType';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($GLOBALS['Data_Reflectable_unsafeCoerce'])(function($dictReflectable_3 = null) use ($f_2) {
+  $__res = ($GLOBALS['Data_Reflectable_unsafeCoerce'])(function($dictReflectable_3 = null) use ($f_2) {
   $__num = \func_num_args();
   $__res = ($f_2)($dictReflectable_3);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(["reflectType" => function($v_3 = null) use ($s_1) {
+}, ["reflectType" => function($v_3 = null) use ($s_1) {
   $__num = \func_num_args();
   $__res = $s_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]))(new Phpurs_Data0("Proxy"));
+}], new \Type\Proxy\Type_Proxy_Proxy());
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_Reflectable_reifyType'] = __NAMESPACE__ . '\\majData_majReflectable_reifymajType';
 
 // Data_Reflectable_reflectType
-$GLOBALS['Data_Reflectable_reflectType'] = function($dict_0 = null) {
+function majData_majReflectable_reflectmajType($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majReflectable_reflectmajType';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['reflectType'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Reflectable_reflectType'] = __NAMESPACE__ . '\\majData_majReflectable_reflectmajType';
 

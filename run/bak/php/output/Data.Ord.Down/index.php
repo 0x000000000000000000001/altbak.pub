@@ -103,29 +103,41 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_Ord_Down_Down
-$GLOBALS['Data_Ord_Down_Down'] = function($x_0 = null) {
+function majData_majOrd_majDown_majDown($x_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majOrd_majDown_majDown';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $x_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Ord_Down_Down'] = __NAMESPACE__ . '\\majData_majOrd_majDown_majDown';
 
 // Data_Ord_Down_showDown
-$GLOBALS['Data_Ord_Down_showDown'] = function($dictShow_0 = null) {
+function majData_majOrd_majDown_showmajDown($dictShow_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majOrd_majDown_showmajDown';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Down "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1)))(")"));
+  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Down ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1), ")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Ord_Down_showDown'] = __NAMESPACE__ . '\\majData_majOrd_majDown_showmajDown';
 
 // Data_Ord_Down_newtypeDown
 $GLOBALS['Data_Ord_Down_newtypeDown'] = ["Coercible0" => function($_dollar__unused_0 = null) {
@@ -137,17 +149,26 @@ $GLOBALS['Data_Ord_Down_newtypeDown'] = ["Coercible0" => function($_dollar__unus
 }];
 
 // Data_Ord_Down_eqDown
-$GLOBALS['Data_Ord_Down_eqDown'] = function($dictEq_0 = null) {
+function majData_majOrd_majDown_eqmajDown($dictEq_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majOrd_majDown_eqmajDown';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictEq_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Ord_Down_eqDown'] = __NAMESPACE__ . '\\majData_majOrd_majDown_eqmajDown';
 
 // Data_Ord_Down_ordDown
-$GLOBALS['Data_Ord_Down_ordDown'] = function($dictOrd_0 = null) {
+function majData_majOrd_majDown_ordmajDown($dictOrd_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majOrd_majDown_ordmajDown';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__local_var_1_0 = (($dictOrd_0)['Eq0'])(null);
   $__res = ["compare" => (function() use ($dictOrd_0) {
   $__fn = function($v_2 = null, $v1_3 = null) use ($dictOrd_0, &$__fn) {
@@ -155,18 +176,18 @@ $GLOBALS['Data_Ord_Down_ordDown'] = function($dictOrd_0 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__local_var_4_1 = ((($dictOrd_0)['compare'])($v_2))($v1_3);
+  $__local_var_4_1 = (($dictOrd_0)['compare'])($v_2, $v1_3);
   $__t2 = null;;
-  if ((is_object($__local_var_4_1) && (($__local_var_4_1)->{'tag'} === "GT"))) {
-$__t2 = new Phpurs_Data0("LT");
+  if ($__local_var_4_1 instanceof \Data\Ordering\Data_Ordering_GT) {
+$__t2 = new \Data\Ordering\Data_Ordering_LT();
 goto end_branch_2;;
 };
-  if ((is_object($__local_var_4_1) && (($__local_var_4_1)->{'tag'} === "EQ"))) {
-$__t2 = new Phpurs_Data0("EQ");
+  if ($__local_var_4_1 instanceof \Data\Ordering\Data_Ordering_EQ) {
+$__t2 = new \Data\Ordering\Data_Ordering_EQ();
 goto end_branch_2;;
 };
-  if ((is_object($__local_var_4_1) && (($__local_var_4_1)->{'tag'} === "LT"))) {
-$__t2 = new Phpurs_Data0("GT");
+  if ($__local_var_4_1 instanceof \Data\Ordering\Data_Ordering_LT) {
+$__t2 = new \Data\Ordering\Data_Ordering_GT();
 goto end_branch_2;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -187,12 +208,17 @@ goto end_branch_2;;
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Ord_Down_ordDown'] = __NAMESPACE__ . '\\majData_majOrd_majDown_ordmajDown';
 
 // Data_Ord_Down_boundedDown
-$GLOBALS['Data_Ord_Down_boundedDown'] = function($dictBounded_0 = null) {
+function majData_majOrd_majDown_boundedmajDown($dictBounded_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majOrd_majDown_boundedmajDown';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__local_var_1_0 = (($dictBounded_0)['Ord0'])(null);
   $__local_var_2_1 = (($__local_var_1_0)['Eq0'])(null);
   $ordDown1_3_2 = ["compare" => (function() use ($__local_var_1_0) {
@@ -201,18 +227,18 @@ $GLOBALS['Data_Ord_Down_boundedDown'] = function($dictBounded_0 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__local_var_5_2 = ((($__local_var_1_0)['compare'])($v_3))($v1_4);
+  $__local_var_5_2 = (($__local_var_1_0)['compare'])($v_3, $v1_4);
   $__t3 = null;;
-  if ((is_object($__local_var_5_2) && (($__local_var_5_2)->{'tag'} === "GT"))) {
-$__t3 = new Phpurs_Data0("LT");
+  if ($__local_var_5_2 instanceof \Data\Ordering\Data_Ordering_GT) {
+$__t3 = new \Data\Ordering\Data_Ordering_LT();
 goto end_branch_3;;
 };
-  if ((is_object($__local_var_5_2) && (($__local_var_5_2)->{'tag'} === "EQ"))) {
-$__t3 = new Phpurs_Data0("EQ");
+  if ($__local_var_5_2 instanceof \Data\Ordering\Data_Ordering_EQ) {
+$__t3 = new \Data\Ordering\Data_Ordering_EQ();
 goto end_branch_3;;
 };
-  if ((is_object($__local_var_5_2) && (($__local_var_5_2)->{'tag'} === "LT"))) {
-$__t3 = new Phpurs_Data0("GT");
+  if ($__local_var_5_2 instanceof \Data\Ordering\Data_Ordering_LT) {
+$__t3 = new \Data\Ordering\Data_Ordering_GT();
 goto end_branch_3;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -240,6 +266,7 @@ goto end_branch_3;;
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Ord_Down_boundedDown'] = __NAMESPACE__ . '\\majData_majOrd_majDown_boundedmajDown';
 

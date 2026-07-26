@@ -101,9 +101,15 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Control_Alternative_guard
-$GLOBALS['Control_Alternative_guard'] = function($dictAlternative_0 = null) {
+function majControl_majAlternative_guard($dictAlternative_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majAlternative_guard';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $empty_1_0 = ((($dictAlternative_0)['Plus1'])(null))['empty'];
   $__res = function($v_2 = null) use ($dictAlternative_0, $empty_1_0) {
   $__num = \func_num_args();
@@ -121,8 +127,9 @@ goto end_branch_1;;
 };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Alternative_guard'] = __NAMESPACE__ . '\\majControl_majAlternative_guard';
 
 // Control_Alternative_alternativeArray
 $GLOBALS['Control_Alternative_alternativeArray'] = ["Applicative0" => function($_dollar__unused_0 = null) {

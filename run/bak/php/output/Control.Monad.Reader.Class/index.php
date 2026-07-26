@@ -100,6 +100,8 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Control_Monad_Reader_Class_monadAskFun
 $GLOBALS['Control_Monad_Reader_Class_monadAskFun'] = ["ask" => function($x_0 = null) {
   $__num = \func_num_args();
@@ -122,7 +124,7 @@ $GLOBALS['Control_Monad_Reader_Class_monadReaderFun'] = ["local" => (function() 
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($g_1))($f_0);
+  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($g_1, $f_0);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -137,36 +139,51 @@ $GLOBALS['Control_Monad_Reader_Class_monadReaderFun'] = ["local" => (function() 
 }];
 
 // Control_Monad_Reader_Class_local
-$GLOBALS['Control_Monad_Reader_Class_local'] = function($dict_0 = null) {
+function majControl_majMonad_majReader_majClass_local($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majReader_majClass_local';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['local'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_Reader_Class_local'] = __NAMESPACE__ . '\\majControl_majMonad_majReader_majClass_local';
 
 // Control_Monad_Reader_Class_ask
-$GLOBALS['Control_Monad_Reader_Class_ask'] = function($dict_0 = null) {
+function majControl_majMonad_majReader_majClass_ask($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majReader_majClass_ask';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['ask'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_Reader_Class_ask'] = __NAMESPACE__ . '\\majControl_majMonad_majReader_majClass_ask';
 
 // Control_Monad_Reader_Class_asks
-$GLOBALS['Control_Monad_Reader_Class_asks'] = function($dictMonadAsk_0 = null) {
+function majControl_majMonad_majReader_majClass_asks($dictMonadAsk_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majReader_majClass_asks';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $ask1_1_0 = ($dictMonadAsk_0)['ask'];
   $__res = function($f_2 = null) use ($ask1_1_0, $dictMonadAsk_0) {
   $__num = \func_num_args();
-  $__res = ((((((((((($dictMonadAsk_0)['Monad0'])(null))['Bind1'])(null))['Apply0'])(null))['Functor0'])(null))['map'])($f_2))($ask1_1_0);
+  $__res = (((((((((($dictMonadAsk_0)['Monad0'])(null))['Bind1'])(null))['Apply0'])(null))['Functor0'])(null))['map'])($f_2, $ask1_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_Reader_Class_asks'] = __NAMESPACE__ . '\\majControl_majMonad_majReader_majClass_asks';
 

@@ -95,9 +95,15 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_Void_absurd
-$GLOBALS['Data_Void_absurd'] = function($a_0 = null) {
+function majData_majVoid_absurd($a_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majVoid_absurd';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $spin_1_0 = null;
   $spin_1_0 = function($v_2 = null) use (&$spin_1_0) {
   $__num = \func_num_args();
@@ -115,6 +121,7 @@ $GLOBALS['Data_Void_absurd'] = function($a_0 = null) {
   $__res = ($spin_1_0)($a_0);
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Void_absurd'] = __NAMESPACE__ . '\\majData_majVoid_absurd';
 

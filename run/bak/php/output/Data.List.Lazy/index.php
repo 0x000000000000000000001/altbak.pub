@@ -126,16 +126,18 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_List_Lazy_lessThanOrEq
 $GLOBALS['Data_List_Lazy_lessThanOrEq'] = (function() use (&$__fn) {
-$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT"));
+$__local_var_0_0 = ($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT(), new \Data\Ordering\Data_Ordering_EQ(), new \Data\Ordering\Data_Ordering_GT());
 return (function() use ($__local_var_0_0) {
   $__fn = function($a1_1 = null, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ( ! (is_object((($__local_var_0_0)($a1_1))($a2_2)) && (((($__local_var_0_0)($a1_1))($a2_2))->{'tag'} === "GT")));
+  $__res = ( ! ($__local_var_0_0)($a1_1, $a2_2) instanceof \Data\Ordering\Data_Ordering_GT);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -145,36 +147,35 @@ return (function() use ($__local_var_0_0) {
 })();
 
 // Data_List_Lazy_tailRecM2
-$GLOBALS['Data_List_Lazy_tailRecM2'] = (function() {
-  $__fn = function($f_0 = null, $a_1 = null, $b_2 = null) use (&$__fn) {
+function majData_majList_majLazy_tailmajRecmajM2($f_0, $a_1 = null, $b_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_tailmajRecmajM2';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($GLOBALS['Control_Monad_Rec_Class_monadRecMaybe'])['tailRecM'])(function($o_3 = null) use ($f_0) {
+  $__res = (($GLOBALS['Control_Monad_Rec_Class_monadRecMaybe'])['tailRecM'])(function($o_3 = null) use ($f_0) {
   $__num = \func_num_args();
-  $__res = (($f_0)(($o_3)['a']))(($o_3)['b']);
+  $__res = ($f_0)(($o_3)['a'], ($o_3)['b']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(["a" => $a_1, "b" => $b_2]);
+}, ["a" => $a_1, "b" => $b_2]);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_tailRecM2'] = __NAMESPACE__ . '\\majData_majList_majLazy_tailmajRecmajM2';
 
 // Data_List_Lazy_lessThan
 $GLOBALS['Data_List_Lazy_lessThan'] = (function() use (&$__fn) {
-$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT"));
+$__local_var_0_0 = ($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT(), new \Data\Ordering\Data_Ordering_EQ(), new \Data\Ordering\Data_Ordering_GT());
 return (function() use ($__local_var_0_0) {
   $__fn = function($a1_1 = null, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (is_object((($__local_var_0_0)($a1_1))($a2_2)) && (((($__local_var_0_0)($a1_1))($a2_2))->{'tag'} === "LT"));
+  $__res = ($__local_var_0_0)($a1_1, $a2_2) instanceof \Data\Ordering\Data_Ordering_LT;
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -185,14 +186,14 @@ return (function() use ($__local_var_0_0) {
 
 // Data_List_Lazy_greaterThan
 $GLOBALS['Data_List_Lazy_greaterThan'] = (function() use (&$__fn) {
-$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT"));
+$__local_var_0_0 = ($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT(), new \Data\Ordering\Data_Ordering_EQ(), new \Data\Ordering\Data_Ordering_GT());
 return (function() use ($__local_var_0_0) {
   $__fn = function($a1_1 = null, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (is_object((($__local_var_0_0)($a1_1))($a2_2)) && (((($__local_var_0_0)($a1_1))($a2_2))->{'tag'} === "GT"));
+  $__res = ($__local_var_0_0)($a1_1, $a2_2) instanceof \Data\Ordering\Data_Ordering_GT;
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -203,14 +204,14 @@ return (function() use ($__local_var_0_0) {
 
 // Data_List_Lazy_greaterThanOrEq
 $GLOBALS['Data_List_Lazy_greaterThanOrEq'] = (function() use (&$__fn) {
-$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT"));
+$__local_var_0_0 = ($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT(), new \Data\Ordering\Data_Ordering_EQ(), new \Data\Ordering\Data_Ordering_GT());
 return (function() use ($__local_var_0_0) {
   $__fn = function($a1_1 = null, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ( ! (is_object((($__local_var_0_0)($a1_1))($a2_2)) && (((($__local_var_0_0)($a1_1))($a2_2))->{'tag'} === "LT")));
+  $__res = ( ! ($__local_var_0_0)($a1_1, $a2_2) instanceof \Data\Ordering\Data_Ordering_LT);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -227,7 +228,7 @@ $semigroupDisj1_0_0 = ["append" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['disj'])($v_0))($v1_1);
+  $__res = (($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['disj'])($v_0, $v1_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -244,27 +245,37 @@ return (($GLOBALS['Data_List_Lazy_Types_foldableList'])['foldMap'])(["mempty" =>
 })();
 
 // Data_List_Lazy_identity
-$GLOBALS['Data_List_Lazy_identity'] = function($x_0 = null) {
+function majData_majList_majLazy_identity($x_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_identity';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $x_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_identity'] = __NAMESPACE__ . '\\majData_majList_majLazy_identity';
 
 // Data_List_Lazy_Pattern
-$GLOBALS['Data_List_Lazy_Pattern'] = function($x_0 = null) {
+function majData_majList_majLazy_majPattern($x_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_majPattern';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $x_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_Pattern'] = __NAMESPACE__ . '\\majData_majList_majLazy_majPattern';
 
 // Data_List_Lazy_zipWith
-$GLOBALS['Data_List_Lazy_zipWith'] = (function() {
-  $__fn = function($f_0 = null, $xs_1 = null, $ys_2 = null) use (&$__fn) {
+function majData_majList_majLazy_zipmajWith($f_0, $xs_1 = null, $ys_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_zipmajWith';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
@@ -275,23 +286,23 @@ $GLOBALS['Data_List_Lazy_zipWith'] = (function() {
   $f_0 = $__tco_var_Data_List_Lazy_zipWith_f_0;
   $xs_1 = $__tco_var_Data_List_Lazy_zipWith_xs_1;
   $ys_2 = $__tco_var_Data_List_Lazy_zipWith_ys_2;
-  $__res = ((($GLOBALS['Data_Lazy_applyLazy'])['apply'])(((($GLOBALS['Data_Lazy_functorLazy'])['map'])((function() use ($f_0) {
+  $__res = (($GLOBALS['Data_Lazy_applyLazy'])['apply'])((($GLOBALS['Data_Lazy_functorLazy'])['map'])((function() use ($f_0) {
   $__fn = function($v_3 = null, $v1_4 = null) use ($f_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__t0 = null;;
-  if ((is_object($v_3) && (($v_3)->{'tag'} === "Nil"))) {
-$__t0 = new Phpurs_Data0("Nil");
+  if ($v_3 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Nil) {
+$__t0 = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Nil();
 goto end_branch_0;;
 };
-  if ((is_object($v1_4) && (($v1_4)->{'tag'} === "Nil"))) {
-$__t0 = new Phpurs_Data0("Nil");
+  if ($v1_4 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Nil) {
+$__t0 = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Nil();
 goto end_branch_0;;
 };
-  if (((is_object($v_3) && (($v_3)->{'tag'} === "Cons")) && (is_object($v1_4) && (($v1_4)->{'tag'} === "Cons")))) {
-$__t0 = new Phpurs_Data2("Cons", (($f_0)(($v_3)->{'value0'}))(($v1_4)->{'value0'}), ((($GLOBALS['Data_List_Lazy_zipWith'])($f_0))(($v_3)->{'value1'}))(($v1_4)->{'value1'}));
+  if (($v_3 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons && $v1_4 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons)) {
+$__t0 = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons(($f_0)(($v_3)->{'value0'}, ($v1_4)->{'value0'}), ($GLOBALS['Data_List_Lazy_zipWith'])($f_0, ($v_3)->{'value1'}, ($v1_4)->{'value1'}));
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -303,17 +314,20 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))($xs_1)))($ys_2);
+})(), $xs_1), $ys_2);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_zipWith'] = __NAMESPACE__ . '\\majData_majList_majLazy_zipmajWith';
 
 // Data_List_Lazy_zipWithA
-$GLOBALS['Data_List_Lazy_zipWithA'] = function($dictApplicative_0 = null) {
+function majData_majList_majLazy_zipmajWithmajA($dictApplicative_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_zipmajWithmajA';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $sequence1_1_0 = (($GLOBALS['Data_List_Lazy_Types_traversableList'])['sequence'])($dictApplicative_0);
   $__res = (function() use ($sequence1_1_0) {
   $__fn = function($f_2 = null, $xs_3 = null, $ys_4 = null) use ($sequence1_1_0, &$__fn) {
@@ -321,7 +335,7 @@ $GLOBALS['Data_List_Lazy_zipWithA'] = function($dictApplicative_0 = null) {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ($sequence1_1_0)(((($GLOBALS['Data_List_Lazy_zipWith'])($f_2))($xs_3))($ys_4));
+  $__res = ($sequence1_1_0)(($GLOBALS['Data_List_Lazy_zipWith'])($f_2, $xs_3, $ys_4));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -330,16 +344,31 @@ $GLOBALS['Data_List_Lazy_zipWithA'] = function($dictApplicative_0 = null) {
 })();
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_zipWithA'] = __NAMESPACE__ . '\\majData_majList_majLazy_zipmajWithmajA';
+
+// Data_List_Lazy_zip_closure
+$GLOBALS['Data_List_Lazy_zip_closure'] = ($GLOBALS['Data_List_Lazy_zipWith'])($GLOBALS['Data_Tuple_Tuple']);
 
 // Data_List_Lazy_zip
-$GLOBALS['Data_List_Lazy_zip'] = ($GLOBALS['Data_List_Lazy_zipWith'])($GLOBALS['Data_Tuple_Tuple']);
+function majData_majList_majLazy_zip($v_0, $v_1 = null) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_zip';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ($GLOBALS['Data_List_Lazy_zip_closure'])($v_0, $v_1);
+  goto __end;;
+  __end:
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_zip'] = __NAMESPACE__ . '\\majData_majList_majLazy_zip';
 
 // Data_List_Lazy_updateAt
-$GLOBALS['Data_List_Lazy_updateAt'] = (function() {
-  $__fn = function($n_0 = null, $x_1 = null, $xs_2 = null) use (&$__fn) {
+function majData_majList_majLazy_updatemajAt($n_0, $x_1 = null, $xs_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_updatemajAt';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
@@ -350,15 +379,15 @@ $GLOBALS['Data_List_Lazy_updateAt'] = (function() {
   $n_0 = $__tco_var_Data_List_Lazy_updateAt_n_0;
   $x_1 = $__tco_var_Data_List_Lazy_updateAt_x_1;
   $xs_2 = $__tco_var_Data_List_Lazy_updateAt_xs_2;
-  $__res = ((($GLOBALS['Data_Lazy_functorLazy'])['map'])(function($v1_3 = null) use ($n_0, $x_1) {
+  $__res = (($GLOBALS['Data_Lazy_functorLazy'])['map'])(function($v1_3 = null) use ($n_0, $x_1) {
   $__num = \func_num_args();
   $__t0 = null;;
-  if ((is_object($v1_3) && (($v1_3)->{'tag'} === "Nil"))) {
-$__t0 = new Phpurs_Data0("Nil");
+  if ($v1_3 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Nil) {
+$__t0 = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Nil();
 goto end_branch_0;;
 };
-  if ((is_object($v1_3) && (($v1_3)->{'tag'} === "Cons"))) {
-$__t0 = match ($n_0) { 0 => new Phpurs_Data2("Cons", $x_1, ($v1_3)->{'value1'}), default => new Phpurs_Data2("Cons", ($v1_3)->{'value0'}, ((($GLOBALS['Data_List_Lazy_updateAt'])(($n_0 - 1)))($x_1))(($v1_3)->{'value1'})) };
+  if ($v1_3 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons) {
+$__t0 = match ($n_0) { 0 => new \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons($x_1, ($v1_3)->{'value1'}), default => new \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons(($v1_3)->{'value0'}, ($GLOBALS['Data_List_Lazy_updateAt'])(($n_0 - 1), $x_1, ($v1_3)->{'value1'})) };
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -368,16 +397,15 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))($xs_2);
+}, $xs_2);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_updateAt'] = __NAMESPACE__ . '\\majData_majList_majLazy_updatemajAt';
 
-// Data_List_Lazy_unzip
-$GLOBALS['Data_List_Lazy_unzip'] = ((($GLOBALS['Data_List_Lazy_Types_foldableList'])['foldr'])(function($v_0 = null) {
+// Data_List_Lazy_unzip_closure
+$GLOBALS['Data_List_Lazy_unzip_closure'] = (($GLOBALS['Data_List_Lazy_Types_foldableList'])['foldr'])(function($v_0 = null) {
   $__num = \func_num_args();
   $__local_var_1_0 = ($v_0)->{'value0'};
   $__local_var_2_1 = ($v_0)->{'value1'};
@@ -385,15 +413,15 @@ $GLOBALS['Data_List_Lazy_unzip'] = ((($GLOBALS['Data_List_Lazy_Types_foldableLis
   $__num = \func_num_args();
   $__local_var_4_2 = ($v1_3)->{'value0'};
   $__local_var_5_3 = ($v1_3)->{'value1'};
-  $__res = new Phpurs_Data2("Tuple", ($GLOBALS['Data_Lazy_defer'])(function($v_6 = null) use ($__local_var_1_0, $__local_var_4_2) {
+  $__res = new \Data\Tuple\Data_Tuple_Tuple(($GLOBALS['Data_Lazy_defer'])(function($v_6 = null) use ($__local_var_1_0, $__local_var_4_2) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Cons", $__local_var_1_0, $__local_var_4_2);
+  $__res = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons($__local_var_1_0, $__local_var_4_2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }), ($GLOBALS['Data_Lazy_defer'])(function($v_6 = null) use ($__local_var_2_1, $__local_var_5_3) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Cons", $__local_var_2_1, $__local_var_5_3);
+  $__res = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons($__local_var_2_1, $__local_var_5_3);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -405,19 +433,37 @@ $GLOBALS['Data_List_Lazy_unzip'] = ((($GLOBALS['Data_List_Lazy_Types_foldableLis
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(new Phpurs_Data2("Tuple", $GLOBALS['Data_List_Lazy_Types_nil'], $GLOBALS['Data_List_Lazy_Types_nil']));
+}, new \Data\Tuple\Data_Tuple_Tuple($GLOBALS['Data_List_Lazy_Types_nil'], $GLOBALS['Data_List_Lazy_Types_nil']));
+
+// Data_List_Lazy_unzip
+function majData_majList_majLazy_unzip($v_0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_unzip';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ($GLOBALS['Data_List_Lazy_unzip_closure'])($v_0);
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_unzip'] = __NAMESPACE__ . '\\majData_majList_majLazy_unzip';
 
 // Data_List_Lazy_uncons
-$GLOBALS['Data_List_Lazy_uncons'] = function($xs_0 = null) {
+function majData_majList_majLazy_uncons($xs_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_uncons';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $v_1_0 = ($GLOBALS['Data_List_Lazy_Types_step'])($xs_0);
   $__t1 = null;;
-  if ((is_object($v_1_0) && (($v_1_0)->{'tag'} === "Nil"))) {
-$__t1 = new Phpurs_Data0("Nothing");
+  if ($v_1_0 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Nil) {
+$__t1 = new \Data\Maybe\Data_Maybe_Nothing();
 goto end_branch_1;;
 };
-  if ((is_object($v_1_0) && (($v_1_0)->{'tag'} === "Cons"))) {
-$__t1 = new Phpurs_Data1("Just", ["head" => ($v_1_0)->{'value0'}, "tail" => ($v_1_0)->{'value1'}]);
+  if ($v_1_0 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons) {
+$__t1 = new \Data\Maybe\Data_Maybe_Just(["head" => ($v_1_0)->{'value0'}, "tail" => ($v_1_0)->{'value1'}]);
 goto end_branch_1;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -426,63 +472,78 @@ goto end_branch_1;;
   $__res = $__t1;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_uncons'] = __NAMESPACE__ . '\\majData_majList_majLazy_uncons';
 
 // Data_List_Lazy_toUnfoldable
-$GLOBALS['Data_List_Lazy_toUnfoldable'] = function($dictUnfoldable_0 = null) {
+function majData_majList_majLazy_tomajUnfoldable($dictUnfoldable_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_tomajUnfoldable';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = (($dictUnfoldable_0)['unfoldr'])(function($xs_1 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Maybe_functorMaybe'])['map'])(function($rec_2 = null) {
+  $__res = (($GLOBALS['Data_Maybe_functorMaybe'])['map'])(function($rec_2 = null) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Tuple", ($rec_2)['head'], ($rec_2)['tail']);
+  $__res = new \Data\Tuple\Data_Tuple_Tuple(($rec_2)['head'], ($rec_2)['tail']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(($GLOBALS['Data_List_Lazy_uncons'])($xs_1));
+}, ($GLOBALS['Data_List_Lazy_uncons'])($xs_1));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 });
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_toUnfoldable'] = __NAMESPACE__ . '\\majData_majList_majLazy_tomajUnfoldable';
 
 // Data_List_Lazy_takeWhile
-$GLOBALS['Data_List_Lazy_takeWhile'] = function($p_0 = null) {
+function majData_majList_majLazy_takemajWhile($p_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_takemajWhile';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__tco_var_Data_List_Lazy_takeWhile_p_0 = $p_0;
   tco_loop_Data_List_Lazy_takeWhile:;
   $p_0 = $__tco_var_Data_List_Lazy_takeWhile_p_0;
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_List_Lazy_Types_List']))((($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Lazy_functorLazy'])['map'])(function($v_1 = null) use ($p_0) {
+  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_List_Lazy_Types_List'], ($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Lazy_functorLazy'])['map'])(function($v_1 = null) use ($p_0) {
   $__num = \func_num_args();
   $__t0 = null;;
-  if (((is_object($v_1) && (($v_1)->{'tag'} === "Cons")) && ($p_0)(($v_1)->{'value0'}))) {
-$__t0 = new Phpurs_Data2("Cons", ($v_1)->{'value0'}, (($GLOBALS['Data_List_Lazy_takeWhile'])($p_0))(($v_1)->{'value1'}));
+  if (($v_1 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons && ($p_0)(($v_1)->{'value0'}))) {
+$__t0 = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons(($v_1)->{'value0'}, ($GLOBALS['Data_List_Lazy_takeWhile'])($p_0, ($v_1)->{'value1'}));
 goto end_branch_0;;
 };
-  $__t0 = new Phpurs_Data0("Nil");
+  $__t0 = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Nil();
   end_branch_0:;
   $__res = $__t0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-})))($GLOBALS['Unsafe_Coerce_unsafeCoerce']));
+}), $GLOBALS['Unsafe_Coerce_unsafeCoerce']));
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_takeWhile'] = __NAMESPACE__ . '\\majData_majList_majLazy_takemajWhile';
 
 // Data_List_Lazy_take
-$GLOBALS['Data_List_Lazy_take'] = function($n_0 = null) {
+function majData_majList_majLazy_take($n_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_take';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__tco_var_Data_List_Lazy_take_n_0 = $n_0;
   tco_loop_Data_List_Lazy_take:;
   $n_0 = $__tco_var_Data_List_Lazy_take_n_0;
   $__t1 = null;;
-  if ((($GLOBALS['Data_List_Lazy_lessThanOrEq'])($n_0))(0)) {
+  if (($GLOBALS['Data_List_Lazy_lessThanOrEq'])($n_0, 0)) {
 $__t1 = function($v_1 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_List_Lazy_Types_nil'];
@@ -492,15 +553,15 @@ $__t1 = function($v_1 = null) {
 };
 goto end_branch_1;;
 };
-  $__t1 = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_List_Lazy_Types_List']))((($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Lazy_functorLazy'])['map'])(function($v1_1 = null) use ($n_0) {
+  $__t1 = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_List_Lazy_Types_List'], ($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Lazy_functorLazy'])['map'])(function($v1_1 = null) use ($n_0) {
   $__num = \func_num_args();
   $__t0 = null;;
-  if ((is_object($v1_1) && (($v1_1)->{'tag'} === "Nil"))) {
-$__t0 = new Phpurs_Data0("Nil");
+  if ($v1_1 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Nil) {
+$__t0 = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Nil();
 goto end_branch_0;;
 };
-  if ((is_object($v1_1) && (($v1_1)->{'tag'} === "Cons"))) {
-$__t0 = new Phpurs_Data2("Cons", ($v1_1)->{'value0'}, (($GLOBALS['Data_List_Lazy_take'])(($n_0 - 1)))(($v1_1)->{'value1'}));
+  if ($v1_1 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons) {
+$__t0 = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons(($v1_1)->{'value0'}, ($GLOBALS['Data_List_Lazy_take'])(($n_0 - 1), ($v1_1)->{'value1'}));
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -510,37 +571,43 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-})))($GLOBALS['Unsafe_Coerce_unsafeCoerce']));
+}), $GLOBALS['Unsafe_Coerce_unsafeCoerce']));
   end_branch_1:;
   $__res = $__t1;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_take'] = __NAMESPACE__ . '\\majData_majList_majLazy_take';
 
 // Data_List_Lazy_tail
-$GLOBALS['Data_List_Lazy_tail'] = function($xs_0 = null) {
+function majData_majList_majLazy_tail($xs_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Maybe_functorMaybe'])['map'])(function($v_1 = null) {
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_tail';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = (($GLOBALS['Data_Maybe_functorMaybe'])['map'])(function($v_1 = null) {
   $__num = \func_num_args();
   $__res = ($v_1)['tail'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(($GLOBALS['Data_List_Lazy_uncons'])($xs_0));
+}, ($GLOBALS['Data_List_Lazy_uncons'])($xs_0));
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_tail'] = __NAMESPACE__ . '\\majData_majList_majLazy_tail';
 
 // Data_List_Lazy_stripPrefix
-$GLOBALS['Data_List_Lazy_stripPrefix'] = (function() {
-  $__fn = function($dictEq_0 = null, $v_1 = null, $s_2 = null) use (&$__fn) {
+function majData_majList_majLazy_stripmajPrefix($dictEq_0, $v_1 = null, $s_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_stripmajPrefix';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($GLOBALS['Data_List_Lazy_tailRecM2'])((function() use ($dictEq_0) {
+  $__res = ($GLOBALS['Data_List_Lazy_tailRecM2'])((function() use ($dictEq_0) {
   $__fn = function($prefix_3 = null, $input_4 = null) use ($dictEq_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -548,18 +615,18 @@ $GLOBALS['Data_List_Lazy_stripPrefix'] = (function() {
   }
   $v1_5_0 = ($GLOBALS['Data_List_Lazy_Types_step'])($prefix_3);
   $__t1 = null;;
-  if ((is_object($v1_5_0) && (($v1_5_0)->{'tag'} === "Nil"))) {
-$__t1 = new Phpurs_Data1("Just", new Phpurs_Data1("Done", $input_4));
+  if ($v1_5_0 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Nil) {
+$__t1 = new \Data\Maybe\Data_Maybe_Just(new \Control\Monad\Rec\Class\Control_Monad_Rec_Class_Done($input_4));
 goto end_branch_1;;
 };
-  if ((is_object($v1_5_0) && (($v1_5_0)->{'tag'} === "Cons"))) {
+  if ($v1_5_0 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons) {
 $v2_6_2 = ($GLOBALS['Data_List_Lazy_Types_step'])($input_4);
 $__t3 = null;;
-if (((is_object($v2_6_2) && (($v2_6_2)->{'tag'} === "Cons")) && ((($dictEq_0)['eq'])(($v1_5_0)->{'value0'}))(($v2_6_2)->{'value0'}))) {
-$__t3 = new Phpurs_Data1("Just", new Phpurs_Data1("Loop", ["a" => ($v1_5_0)->{'value1'}, "b" => ($v2_6_2)->{'value1'}]));
+if (($v2_6_2 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons && (($dictEq_0)['eq'])(($v1_5_0)->{'value0'}, ($v2_6_2)->{'value0'}))) {
+$__t3 = new \Data\Maybe\Data_Maybe_Just(new \Control\Monad\Rec\Class\Control_Monad_Rec_Class_Loop(["a" => ($v1_5_0)->{'value1'}, "b" => ($v2_6_2)->{'value1'}]));
 goto end_branch_3;;
 };
-$__t3 = new Phpurs_Data0("Nothing");
+$__t3 = new \Data\Maybe\Data_Maybe_Nothing();
 end_branch_3:;
 $__t1 = $__t3;
 goto end_branch_1;;
@@ -573,18 +640,17 @@ goto end_branch_1;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))($v_1))($s_2);
+})(), $v_1, $s_2);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_stripPrefix'] = __NAMESPACE__ . '\\majData_majList_majLazy_stripmajPrefix';
 
 // Data_List_Lazy_span
-$GLOBALS['Data_List_Lazy_span'] = (function() {
-  $__fn = function($p_0 = null, $xs_1 = null) use (&$__fn) {
+function majData_majList_majLazy_span($p_0, $xs_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_span';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
@@ -595,13 +661,13 @@ $GLOBALS['Data_List_Lazy_span'] = (function() {
   $xs_1 = $__tco_var_Data_List_Lazy_span_xs_1;
   $v_2_0 = ($GLOBALS['Data_List_Lazy_uncons'])($xs_1);
   $__t1 = null;;
-  if (((is_object($v_2_0) && (($v_2_0)->{'tag'} === "Just")) && ($p_0)((($v_2_0)->{'value0'})['head']))) {
+  if (($v_2_0 instanceof \Data\Maybe\Data_Maybe_Just && ($p_0)((($v_2_0)->{'value0'})['head']))) {
 $__local_var_3_2 = (($v_2_0)->{'value0'})['head'];
-$v1_4_3 = (($GLOBALS['Data_List_Lazy_span'])($p_0))((($v_2_0)->{'value0'})['tail']);
+$v1_4_3 = ($GLOBALS['Data_List_Lazy_span'])($p_0, (($v_2_0)->{'value0'})['tail']);
 $__local_var_5_4 = ($v1_4_3)['init'];
 $__t1 = ["init" => ($GLOBALS['Data_Lazy_defer'])(function($v_6 = null) use ($__local_var_3_2, $__local_var_5_4) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Cons", $__local_var_3_2, $__local_var_5_4);
+  $__res = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons($__local_var_3_2, $__local_var_5_4);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -613,66 +679,74 @@ goto end_branch_1;;
   $__res = $__t1;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_span'] = __NAMESPACE__ . '\\majData_majList_majLazy_span';
 
 // Data_List_Lazy_snoc
-$GLOBALS['Data_List_Lazy_snoc'] = (function() {
-  $__fn = function($xs_0 = null, $x_1 = null) use (&$__fn) {
+function majData_majList_majLazy_snoc($xs_0, $x_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_snoc';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($GLOBALS['Data_List_Lazy_Types_foldableList'])['foldr'])($GLOBALS['Data_List_Lazy_Types_cons']))(($GLOBALS['Data_Lazy_defer'])(function($v_2 = null) use ($x_1) {
+  $__res = (($GLOBALS['Data_List_Lazy_Types_foldableList'])['foldr'])($GLOBALS['Data_List_Lazy_Types_cons'], ($GLOBALS['Data_Lazy_defer'])(function($v_2 = null) use ($x_1) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Cons", $x_1, $GLOBALS['Data_List_Lazy_Types_nil']);
+  $__res = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons($x_1, $GLOBALS['Data_List_Lazy_Types_nil']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-})))($xs_0);
+}), $xs_0);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_snoc'] = __NAMESPACE__ . '\\majData_majList_majLazy_snoc';
 
 // Data_List_Lazy_singleton
-$GLOBALS['Data_List_Lazy_singleton'] = function($a_0 = null) {
+function majData_majList_majLazy_singleton($a_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_singleton';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($GLOBALS['Data_Lazy_defer'])(function($v_1 = null) use ($a_0) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Cons", $a_0, $GLOBALS['Data_List_Lazy_Types_nil']);
+  $__res = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons($a_0, $GLOBALS['Data_List_Lazy_Types_nil']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 });
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_singleton'] = __NAMESPACE__ . '\\majData_majList_majLazy_singleton';
 
 // Data_List_Lazy_showPattern
-$GLOBALS['Data_List_Lazy_showPattern'] = function($dictShow_0 = null) {
+function majData_majList_majLazy_showmajPattern($dictShow_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_showmajPattern';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Pattern "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])(((($GLOBALS['Data_List_Lazy_Types_showList'])($dictShow_0))['show'])($v_1)))(")"));
+  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Pattern ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])(((($GLOBALS['Data_List_Lazy_Types_showList'])($dictShow_0))['show'])($v_1), ")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_showPattern'] = __NAMESPACE__ . '\\majData_majList_majLazy_showmajPattern';
 
 // Data_List_Lazy_scanlLazy
-$GLOBALS['Data_List_Lazy_scanlLazy'] = (function() {
-  $__fn = function($f_0 = null, $acc_1 = null, $xs_2 = null) use (&$__fn) {
+function majData_majList_majLazy_scanlmajLazy($f_0, $acc_1 = null, $xs_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_scanlmajLazy';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
@@ -683,16 +757,16 @@ $GLOBALS['Data_List_Lazy_scanlLazy'] = (function() {
   $f_0 = $__tco_var_Data_List_Lazy_scanlLazy_f_0;
   $acc_1 = $__tco_var_Data_List_Lazy_scanlLazy_acc_1;
   $xs_2 = $__tco_var_Data_List_Lazy_scanlLazy_xs_2;
-  $__res = ((($GLOBALS['Data_Lazy_functorLazy'])['map'])(function($v_3 = null) use ($acc_1, $f_0) {
+  $__res = (($GLOBALS['Data_Lazy_functorLazy'])['map'])(function($v_3 = null) use ($acc_1, $f_0) {
   $__num = \func_num_args();
   $__t0 = null;;
-  if ((is_object($v_3) && (($v_3)->{'tag'} === "Nil"))) {
-$__t0 = new Phpurs_Data0("Nil");
+  if ($v_3 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Nil) {
+$__t0 = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Nil();
 goto end_branch_0;;
 };
-  if ((is_object($v_3) && (($v_3)->{'tag'} === "Cons"))) {
-$acc_prime_4_1 = (($f_0)($acc_1))(($v_3)->{'value0'});
-$__t0 = new Phpurs_Data2("Cons", $acc_prime_4_1, ((($GLOBALS['Data_List_Lazy_scanlLazy'])($f_0))($acc_prime_4_1))(($v_3)->{'value1'}));
+  if ($v_3 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons) {
+$acc_prime_4_1 = ($f_0)($acc_1, ($v_3)->{'value0'});
+$__t0 = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons($acc_prime_4_1, ($GLOBALS['Data_List_Lazy_scanlLazy'])($f_0, $acc_prime_4_1, ($v_3)->{'value1'}));
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -702,20 +776,23 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))($xs_2);
+}, $xs_2);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_scanlLazy'] = __NAMESPACE__ . '\\majData_majList_majLazy_scanlmajLazy';
 
 // Data_List_Lazy_reverse
-$GLOBALS['Data_List_Lazy_reverse'] = function($xs_0 = null) {
+function majData_majList_majLazy_reverse($xs_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_reverse';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = (($GLOBALS['Data_List_Lazy_Types_lazyList'])['defer'])(function($v_1 = null) use ($xs_0) {
   $__num = \func_num_args();
-  $__res = (((($GLOBALS['Data_List_Lazy_Types_foldableList'])['foldl'])((function() {
+  $__res = (($GLOBALS['Data_List_Lazy_Types_foldableList'])['foldl'])((function() {
   $__fn = function($b_2 = null, $a_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -723,7 +800,7 @@ $GLOBALS['Data_List_Lazy_reverse'] = function($xs_0 = null) {
   }
   $__res = ($GLOBALS['Data_Lazy_defer'])(function($v_4 = null) use ($a_3, $b_2) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Cons", $a_3, $b_2);
+  $__res = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons($a_3, $b_2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -733,19 +810,24 @@ $GLOBALS['Data_List_Lazy_reverse'] = function($xs_0 = null) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))($GLOBALS['Data_List_Lazy_Types_nil']))($xs_0);
+})(), $GLOBALS['Data_List_Lazy_Types_nil'], $xs_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 });
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_reverse'] = __NAMESPACE__ . '\\majData_majList_majLazy_reverse';
 
 // Data_List_Lazy_replicateM
-$GLOBALS['Data_List_Lazy_replicateM'] = function($dictMonad_0 = null) {
+function majData_majList_majLazy_replicatemajM($dictMonad_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_replicatemajM';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__tco_var_Data_List_Lazy_replicateM_dictMonad_0 = $dictMonad_0;
   tco_loop_Data_List_Lazy_replicateM:;
   $dictMonad_0 = $__tco_var_Data_List_Lazy_replicateM_dictMonad_0;
@@ -758,17 +840,17 @@ $GLOBALS['Data_List_Lazy_replicateM'] = function($dictMonad_0 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__t2 = null;;
-  if ((($GLOBALS['Data_List_Lazy_lessThan'])($n_3))(1)) {
+  if (($GLOBALS['Data_List_Lazy_lessThan'])($n_3, 1)) {
 $__t2 = (($__local_var_1_0)['pure'])($GLOBALS['Data_List_Lazy_Types_nil']);
 goto end_branch_2;;
 };
-  $__t2 = ((($__local_var_2_1)['bind'])($m_4))(function($a_5 = null) use ($__local_var_1_0, $__local_var_2_1, $dictMonad_0, $m_4, $n_3) {
+  $__t2 = (($__local_var_2_1)['bind'])($m_4, function($a_5 = null) use ($__local_var_1_0, $__local_var_2_1, $dictMonad_0, $m_4, $n_3) {
   $__num = \func_num_args();
-  $__res = ((($__local_var_2_1)['bind'])(((($GLOBALS['Data_List_Lazy_replicateM'])($dictMonad_0))(($n_3 - 1)))($m_4)))(function($as_6 = null) use ($__local_var_1_0, $a_5) {
+  $__res = (($__local_var_2_1)['bind'])(($GLOBALS['Data_List_Lazy_replicateM'])($dictMonad_0, ($n_3 - 1), $m_4), function($as_6 = null) use ($__local_var_1_0, $a_5) {
   $__num = \func_num_args();
   $__res = (($__local_var_1_0)['pure'])(($GLOBALS['Data_Lazy_defer'])(function($v_7 = null) use ($a_5, $as_6) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Cons", $a_5, $as_6);
+  $__res = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons($a_5, $as_6);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -791,18 +873,23 @@ goto end_branch_2;;
 })();
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_replicateM'] = __NAMESPACE__ . '\\majData_majList_majLazy_replicatemajM';
 
 // Data_List_Lazy_repeat
-$GLOBALS['Data_List_Lazy_repeat'] = function($x_0 = null) {
+function majData_majList_majLazy_repeat($x_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_repeat';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $go__1_0 = null;
   $go__1_0 = (($GLOBALS['Data_List_Lazy_Types_lazyList'])['defer'])(function($v_2 = null) use (&$go__1_0, $x_0) {
   $__num = \func_num_args();
   $__res = ($GLOBALS['Data_Lazy_defer'])(function($v_3 = null) use (&$go__1_0, $x_0) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Cons", $x_0, $go__1_0);
+  $__res = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons($x_0, $go__1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -814,13 +901,14 @@ $GLOBALS['Data_List_Lazy_repeat'] = function($x_0 = null) {
   $__res = $go__1_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_repeat'] = __NAMESPACE__ . '\\majData_majList_majLazy_repeat';
 
 // Data_List_Lazy_replicate
-$GLOBALS['Data_List_Lazy_replicate'] = (function() {
-  $__fn = function($i_0 = null, $xs_1 = null) use (&$__fn) {
+function majData_majList_majLazy_replicate($i_0, $xs_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_replicate';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
@@ -829,7 +917,7 @@ $GLOBALS['Data_List_Lazy_replicate'] = (function() {
   $__num = \func_num_args();
   $__res = ($GLOBALS['Data_Lazy_defer'])(function($v_4 = null) use (&$go__2_0, $xs_1) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Cons", $xs_1, $go__2_0);
+  $__res = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons($xs_1, $go__2_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -838,66 +926,68 @@ $GLOBALS['Data_List_Lazy_replicate'] = (function() {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 });
-  $__res = (($GLOBALS['Data_List_Lazy_take'])($i_0))($go__2_0);
+  $__res = ($GLOBALS['Data_List_Lazy_take'])($i_0, $go__2_0);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_replicate'] = __NAMESPACE__ . '\\majData_majList_majLazy_replicate';
 
 // Data_List_Lazy_range
-$GLOBALS['Data_List_Lazy_range'] = (function() {
-  $__fn = function($start_0 = null, $end_1 = null) use (&$__fn) {
+function majData_majList_majLazy_range($start_0, $end_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_range';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__t1 = null;;
-  if ((($GLOBALS['Data_List_Lazy_greaterThan'])($start_0))($end_1)) {
-$__t1 = ((($GLOBALS['Data_List_Lazy_Types_unfoldableList'])['unfoldr'])(function($x_2 = null) use ($end_1) {
+  if (($GLOBALS['Data_List_Lazy_greaterThan'])($start_0, $end_1)) {
+$__t1 = (($GLOBALS['Data_List_Lazy_Types_unfoldableList'])['unfoldr'])(function($x_2 = null) use ($end_1) {
   $__num = \func_num_args();
   $__t2 = null;;
-  if ((($GLOBALS['Data_List_Lazy_greaterThanOrEq'])($x_2))($end_1)) {
-$__t2 = new Phpurs_Data1("Just", new Phpurs_Data2("Tuple", $x_2, ($x_2 - 1)));
+  if (($GLOBALS['Data_List_Lazy_greaterThanOrEq'])($x_2, $end_1)) {
+$__t2 = new \Data\Maybe\Data_Maybe_Just(new \Data\Tuple\Data_Tuple_Tuple($x_2, ($x_2 - 1)));
 goto end_branch_2;;
 };
-  $__t2 = new Phpurs_Data0("Nothing");
+  $__t2 = new \Data\Maybe\Data_Maybe_Nothing();
   end_branch_2:;
   $__res = $__t2;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))($start_0);
+}, $start_0);
 goto end_branch_1;;
 };
-  $__t1 = ((($GLOBALS['Data_List_Lazy_Types_unfoldableList'])['unfoldr'])(function($x_2 = null) use ($end_1) {
+  $__t1 = (($GLOBALS['Data_List_Lazy_Types_unfoldableList'])['unfoldr'])(function($x_2 = null) use ($end_1) {
   $__num = \func_num_args();
   $__t0 = null;;
-  if ((($GLOBALS['Data_List_Lazy_lessThanOrEq'])($x_2))($end_1)) {
-$__t0 = new Phpurs_Data1("Just", new Phpurs_Data2("Tuple", $x_2, ($x_2 + 1)));
+  if (($GLOBALS['Data_List_Lazy_lessThanOrEq'])($x_2, $end_1)) {
+$__t0 = new \Data\Maybe\Data_Maybe_Just(new \Data\Tuple\Data_Tuple_Tuple($x_2, ($x_2 + 1)));
 goto end_branch_0;;
 };
-  $__t0 = new Phpurs_Data0("Nothing");
+  $__t0 = new \Data\Maybe\Data_Maybe_Nothing();
   end_branch_0:;
   $__res = $__t0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))($start_0);
+}, $start_0);
   end_branch_1:;
   $__res = $__t1;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_range'] = __NAMESPACE__ . '\\majData_majList_majLazy_range';
 
 // Data_List_Lazy_partition
-$GLOBALS['Data_List_Lazy_partition'] = function($f_0 = null) {
+function majData_majList_majLazy_partition($f_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_List_Lazy_Types_foldableList'])['foldr'])((function() use ($f_0) {
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_partition';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = (($GLOBALS['Data_List_Lazy_Types_foldableList'])['foldr'])((function() use ($f_0) {
   $__fn = function($x_1 = null, $v_2 = null) use ($f_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -907,7 +997,7 @@ $GLOBALS['Data_List_Lazy_partition'] = function($f_0 = null) {
   if (($f_0)($x_1)) {
 $__t0 = ["yes" => ($GLOBALS['Data_Lazy_defer'])(function($v_3 = null) use ($v_2, $x_1) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Cons", $x_1, ($v_2)['yes']);
+  $__res = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons($x_1, ($v_2)['yes']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -916,7 +1006,7 @@ goto end_branch_0;;
 };
   $__t0 = ["yes" => ($v_2)['yes'], "no" => ($GLOBALS['Data_Lazy_defer'])(function($v_3 = null) use ($v_2, $x_1) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Cons", $x_1, ($v_2)['no']);
+  $__res = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons($x_1, ($v_2)['no']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -928,18 +1018,37 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))(["yes" => $GLOBALS['Data_List_Lazy_Types_nil'], "no" => $GLOBALS['Data_List_Lazy_Types_nil']]);
+})(), ["yes" => $GLOBALS['Data_List_Lazy_Types_nil'], "no" => $GLOBALS['Data_List_Lazy_Types_nil']]);
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_partition'] = __NAMESPACE__ . '\\majData_majList_majLazy_partition';
+
+// Data_List_Lazy_null_closure
+$GLOBALS['Data_List_Lazy_null_closure'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Maybe_isNothing'], $GLOBALS['Data_List_Lazy_uncons']);
 
 // Data_List_Lazy_null
-$GLOBALS['Data_List_Lazy_null'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Maybe_isNothing']))($GLOBALS['Data_List_Lazy_uncons']);
+function majData_majList_majLazy_null($v_0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_null';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ($GLOBALS['Data_List_Lazy_null_closure'])($v_0);
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_null'] = __NAMESPACE__ . '\\majData_majList_majLazy_null';
 
 // Data_List_Lazy_nubBy
-$GLOBALS['Data_List_Lazy_nubBy'] = function($p_0 = null) {
+function majData_majList_majLazy_nubmajBy($p_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_nubmajBy';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $goStep_1_0 = null;
   $go__1_0 = null;
   $goStep_1_0 = (function() use (&$go__1_0, $p_0) {
@@ -949,18 +1058,18 @@ $GLOBALS['Data_List_Lazy_nubBy'] = function($p_0 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__t1 = null;;
-  if ((is_object($v1_3) && (($v1_3)->{'tag'} === "Nil"))) {
-$__t1 = new Phpurs_Data0("Nil");
+  if ($v1_3 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Nil) {
+$__t1 = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Nil();
 goto end_branch_1;;
 };
-  if ((is_object($v1_3) && (($v1_3)->{'tag'} === "Cons"))) {
-$v2_4_2 = ((($GLOBALS['Data_List_Internal_insertAndLookupBy'])($p_0))(($v1_3)->{'value0'}))($v_2);
+  if ($v1_3 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons) {
+$v2_4_2 = ($GLOBALS['Data_List_Internal_insertAndLookupBy'])($p_0, ($v1_3)->{'value0'}, $v_2);
 $__t3 = null;;
 if (($v2_4_2)['found']) {
-$__t3 = ($GLOBALS['Data_List_Lazy_Types_step'])((($go__1_0)(($v2_4_2)['result']))(($v1_3)->{'value1'}));
+$__t3 = ($GLOBALS['Data_List_Lazy_Types_step'])(($go__1_0)(($v2_4_2)['result'], ($v1_3)->{'value1'}));
 goto end_branch_3;;
 };
-$__t3 = new Phpurs_Data2("Cons", ($v1_3)->{'value0'}, (($go__1_0)(($v2_4_2)['result']))(($v1_3)->{'value1'}));
+$__t3 = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons(($v1_3)->{'value0'}, ($go__1_0)(($v2_4_2)['result'], ($v1_3)->{'value1'}));
 end_branch_3:;
 $__t1 = $__t3;
 goto end_branch_1;;
@@ -981,27 +1090,33 @@ goto end_branch_1;;
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_Lazy_functorLazy'])['map'])(($goStep_1_0)($s_2)))($v_3);
+  $__res = (($GLOBALS['Data_Lazy_functorLazy'])['map'])(($goStep_1_0)($s_2), $v_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })();
-  $__res = ($go__1_0)(new Phpurs_Data0("Leaf"));
+  $__res = ($go__1_0)(new \Data\List\Internal\Data_List_Internal_Leaf());
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_nubBy'] = __NAMESPACE__ . '\\majData_majList_majLazy_nubmajBy';
 
 // Data_List_Lazy_nub
-$GLOBALS['Data_List_Lazy_nub'] = function($dictOrd_0 = null) {
+function majData_majList_majLazy_nub($dictOrd_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_nub';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($GLOBALS['Data_List_Lazy_nubBy'])(($dictOrd_0)['compare']);
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_nub'] = __NAMESPACE__ . '\\majData_majList_majLazy_nub';
 
 // Data_List_Lazy_newtypePattern
 $GLOBALS['Data_List_Lazy_newtypePattern'] = ["Coercible0" => function($_dollar__unused_0 = null) {
@@ -1013,8 +1128,12 @@ $GLOBALS['Data_List_Lazy_newtypePattern'] = ["Coercible0" => function($_dollar__
 }];
 
 // Data_List_Lazy_mapMaybe
-$GLOBALS['Data_List_Lazy_mapMaybe'] = function($f_0 = null) {
+function majData_majList_majLazy_mapmajMaybe($f_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_mapmajMaybe';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__tco_var_Data_List_Lazy_mapMaybe_f_0 = $f_0;
   tco_loop_Data_List_Lazy_mapMaybe:;
   $f_0 = $__tco_var_Data_List_Lazy_mapMaybe_f_0;
@@ -1025,22 +1144,22 @@ $GLOBALS['Data_List_Lazy_mapMaybe'] = function($f_0 = null) {
   tco_loop_go__1_0_0:;
   $v_2 = $__tco_var_go__1_0_0_v_2;
   $__t0 = null;;
-  if ((is_object($v_2) && (($v_2)->{'tag'} === "Nil"))) {
-$__t0 = new Phpurs_Data0("Nil");
+  if ($v_2 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Nil) {
+$__t0 = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Nil();
 goto end_branch_0;;
 };
-  if ((is_object($v_2) && (($v_2)->{'tag'} === "Cons"))) {
+  if ($v_2 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons) {
 $v1_3_1 = ($f_0)(($v_2)->{'value0'});
 $__t2 = null;;
-if ((is_object($v1_3_1) && (($v1_3_1)->{'tag'} === "Nothing"))) {
+if ($v1_3_1 instanceof \Data\Maybe\Data_Maybe_Nothing) {
 $__tco_3 = ($GLOBALS['Data_List_Lazy_Types_step'])(($v_2)->{'value1'});
 $__tco_var_go__1_0_0_v_2 = $__tco_3;
 goto tco_loop_go__1_0_0;;
 $__t2 = null;
 goto end_branch_2;;
 };
-if ((is_object($v1_3_1) && (($v1_3_1)->{'tag'} === "Just"))) {
-$__t2 = new Phpurs_Data2("Cons", ($v1_3_1)->{'value0'}, (($GLOBALS['Data_List_Lazy_mapMaybe'])($f_0))(($v_2)->{'value1'}));
+if ($v1_3_1 instanceof \Data\Maybe\Data_Maybe_Just) {
+$__t2 = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons(($v1_3_1)->{'value0'}, ($GLOBALS['Data_List_Lazy_mapMaybe'])($f_0, ($v_2)->{'value1'}));
 goto end_branch_2;;
 };
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -1057,50 +1176,49 @@ goto end_branch_0;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_List_Lazy_Types_List']))((($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Lazy_functorLazy'])['map'])($go__1_0)))($GLOBALS['Unsafe_Coerce_unsafeCoerce']));
+  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_List_Lazy_Types_List'], ($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Lazy_functorLazy'])['map'])($go__1_0), $GLOBALS['Unsafe_Coerce_unsafeCoerce']));
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_mapMaybe'] = __NAMESPACE__ . '\\majData_majList_majLazy_mapmajMaybe';
 
 // Data_List_Lazy_some
-$GLOBALS['Data_List_Lazy_some'] = (function() {
-  $__fn = function($dictAlternative_0 = null, $dictLazy_1 = null, $v_2 = null) use (&$__fn) {
+function majData_majList_majLazy_some($dictAlternative_0, $dictLazy_1 = null, $v_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_some';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((((((($dictAlternative_0)['Applicative0'])(null))['Apply0'])(null))['apply'])(((((((((($dictAlternative_0)['Plus1'])(null))['Alt0'])(null))['Functor0'])(null))['map'])($GLOBALS['Data_List_Lazy_Types_cons']))($v_2)))((($dictLazy_1)['defer'])(function($v1_3 = null) use ($dictAlternative_0, $dictLazy_1, $v_2) {
+  $__res = (((((($dictAlternative_0)['Applicative0'])(null))['Apply0'])(null))['apply'])((((((((($dictAlternative_0)['Plus1'])(null))['Alt0'])(null))['Functor0'])(null))['map'])($GLOBALS['Data_List_Lazy_Types_cons'], $v_2), (($dictLazy_1)['defer'])(function($v1_3 = null) use ($dictAlternative_0, $dictLazy_1, $v_2) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_List_Lazy_many'])($dictAlternative_0))($dictLazy_1))($v_2);
+  $__res = ($GLOBALS['Data_List_Lazy_many'])($dictAlternative_0, $dictLazy_1, $v_2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }));
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_some'] = __NAMESPACE__ . '\\majData_majList_majLazy_some';
 
 // Data_List_Lazy_many
-$GLOBALS['Data_List_Lazy_many'] = (function() {
-  $__fn = function($dictAlternative_0 = null, $dictLazy_1 = null, $v_2 = null) use (&$__fn) {
+function majData_majList_majLazy_many($dictAlternative_0, $dictLazy_1 = null, $v_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_many';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((((((($dictAlternative_0)['Plus1'])(null))['Alt0'])(null))['alt'])(((($GLOBALS['Data_List_Lazy_some'])($dictAlternative_0))($dictLazy_1))($v_2)))((((($dictAlternative_0)['Applicative0'])(null))['pure'])($GLOBALS['Data_List_Lazy_Types_nil']));
+  $__res = (((((($dictAlternative_0)['Plus1'])(null))['Alt0'])(null))['alt'])(($GLOBALS['Data_List_Lazy_some'])($dictAlternative_0, $dictLazy_1, $v_2), (((($dictAlternative_0)['Applicative0'])(null))['pure'])($GLOBALS['Data_List_Lazy_Types_nil']));
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_many'] = __NAMESPACE__ . '\\majData_majList_majLazy_many';
 
-// Data_List_Lazy_length
-$GLOBALS['Data_List_Lazy_length'] = ((($GLOBALS['Data_List_Lazy_Types_foldableList'])['foldl'])((function() {
+// Data_List_Lazy_length_closure
+$GLOBALS['Data_List_Lazy_length_closure'] = (($GLOBALS['Data_List_Lazy_Types_foldableList'])['foldl'])((function() {
   $__fn = function($l_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -1112,10 +1230,24 @@ $GLOBALS['Data_List_Lazy_length'] = ((($GLOBALS['Data_List_Lazy_Types_foldableLi
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))(0);
+})(), 0);
 
-// Data_List_Lazy_last
-$GLOBALS['Data_List_Lazy_last'] = (function() use (&$__fn) {
+// Data_List_Lazy_length
+function majData_majList_majLazy_length($v_0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_length';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ($GLOBALS['Data_List_Lazy_length_closure'])($v_0);
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_length'] = __NAMESPACE__ . '\\majData_majList_majLazy_length';
+
+// Data_List_Lazy_last_closure
+$GLOBALS['Data_List_Lazy_last_closure'] = (function() use (&$__fn) {
 $go__0_0 = null;
 $go__0_0 = function($v_1 = null) use (&$go__0_0) {
   $__num = \func_num_args();
@@ -1123,10 +1255,10 @@ $go__0_0 = function($v_1 = null) use (&$go__0_0) {
   tco_loop_go__0_0_0:;
   $v_1 = $__tco_var_go__0_0_0_v_1;
   $__t0 = null;;
-  if ((is_object($v_1) && (($v_1)->{'tag'} === "Cons"))) {
+  if ($v_1 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons) {
 $__t2 = null;;
 if (($GLOBALS['Data_List_Lazy_null'])(($v_1)->{'value1'})) {
-$__t2 = new Phpurs_Data1("Just", ($v_1)->{'value0'});
+$__t2 = new \Data\Maybe\Data_Maybe_Just(($v_1)->{'value0'});
 goto end_branch_2;;
 };
 $__tco_1 = ($GLOBALS['Data_List_Lazy_Types_step'])(($v_1)->{'value1'});
@@ -1137,30 +1269,44 @@ end_branch_2:;
 $__t0 = $__t2;
 goto end_branch_0;;
 };
-  $__t0 = new Phpurs_Data0("Nothing");
+  $__t0 = new \Data\Maybe\Data_Maybe_Nothing();
   end_branch_0:;
   $__res = $__t0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-return (($GLOBALS['Control_Semigroupoid_composeImpl'])($go__0_0))($GLOBALS['Data_List_Lazy_Types_step']);
+return ($GLOBALS['Control_Semigroupoid_composeImpl'])($go__0_0, $GLOBALS['Data_List_Lazy_Types_step']);
 })();
 
-// Data_List_Lazy_iterate
-$GLOBALS['Data_List_Lazy_iterate'] = (function() {
-  $__fn = function($f_0 = null, $x_1 = null) use (&$__fn) {
+// Data_List_Lazy_last
+function majData_majList_majLazy_last($v_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_last';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ($GLOBALS['Data_List_Lazy_last_closure'])($v_0);
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_last'] = __NAMESPACE__ . '\\majData_majList_majLazy_last';
+
+// Data_List_Lazy_iterate
+function majData_majList_majLazy_iterate($f_0, $x_1 = null) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_iterate';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $go__2_0 = null;
   $go__2_0 = (($GLOBALS['Data_List_Lazy_Types_lazyList'])['defer'])(function($v_3 = null) use ($f_0, &$go__2_0, $x_1) {
   $__num = \func_num_args();
-  $__local_var_4_1 = ((($GLOBALS['Data_List_Lazy_Types_functorList'])['map'])($f_0))($go__2_0);
+  $__local_var_4_1 = (($GLOBALS['Data_List_Lazy_Types_functorList'])['map'])($f_0, $go__2_0);
   $__res = ($GLOBALS['Data_Lazy_defer'])(function($v_5 = null) use ($__local_var_4_1, $x_1) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Cons", $x_1, $__local_var_4_1);
+  $__res = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons($x_1, $__local_var_4_1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1172,15 +1318,14 @@ $GLOBALS['Data_List_Lazy_iterate'] = (function() {
   $__res = $go__2_0;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_iterate'] = __NAMESPACE__ . '\\majData_majList_majLazy_iterate';
 
 // Data_List_Lazy_insertAt
-$GLOBALS['Data_List_Lazy_insertAt'] = (function() {
-  $__fn = function($v_0 = null, $v1_1 = null, $v2_2 = null) use (&$__fn) {
+function majData_majList_majLazy_insertmajAt($v_0, $v1_1 = null, $v2_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_insertmajAt';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
@@ -1193,19 +1338,19 @@ $GLOBALS['Data_List_Lazy_insertAt'] = (function() {
   $v2_2 = $__tco_var_Data_List_Lazy_insertAt_v2_2;
   $__res = match ($v_0) { 0 => ($GLOBALS['Data_Lazy_defer'])(function($v_3 = null) use ($v1_1, $v2_2) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Cons", $v1_1, $v2_2);
+  $__res = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons($v1_1, $v2_2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}), default => ((($GLOBALS['Data_Lazy_functorLazy'])['map'])(function($v3_3 = null) use ($v1_1, $v_0) {
+}), default => (($GLOBALS['Data_Lazy_functorLazy'])['map'])(function($v3_3 = null) use ($v1_1, $v_0) {
   $__num = \func_num_args();
   $__t0 = null;;
-  if ((is_object($v3_3) && (($v3_3)->{'tag'} === "Nil"))) {
-$__t0 = new Phpurs_Data2("Cons", $v1_1, $GLOBALS['Data_List_Lazy_Types_nil']);
+  if ($v3_3 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Nil) {
+$__t0 = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons($v1_1, $GLOBALS['Data_List_Lazy_Types_nil']);
 goto end_branch_0;;
 };
-  if ((is_object($v3_3) && (($v3_3)->{'tag'} === "Cons"))) {
-$__t0 = new Phpurs_Data2("Cons", ($v3_3)->{'value0'}, ((($GLOBALS['Data_List_Lazy_insertAt'])(($v_0 - 1)))($v1_1))(($v3_3)->{'value1'}));
+  if ($v3_3 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons) {
+$__t0 = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons(($v3_3)->{'value0'}, ($GLOBALS['Data_List_Lazy_insertAt'])(($v_0 - 1), $v1_1, ($v3_3)->{'value1'}));
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -1215,44 +1360,61 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))($v2_2) };
+}, $v2_2) };
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_insertAt'] = __NAMESPACE__ . '\\majData_majList_majLazy_insertmajAt';
 
-// Data_List_Lazy_init
-$GLOBALS['Data_List_Lazy_init'] = (function() use (&$__fn) {
+// Data_List_Lazy_init_closure
+$GLOBALS['Data_List_Lazy_init_closure'] = (function() use (&$__fn) {
 $go__0_0 = null;
 $go__0_0 = function($v_1 = null) use (&$go__0_0) {
   $__num = \func_num_args();
   $__t1 = null;;
-  if ((is_object($v_1) && (($v_1)->{'tag'} === "Cons"))) {
+  if ($v_1 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons) {
 $__t2 = null;;
 if (($GLOBALS['Data_List_Lazy_null'])(($v_1)->{'value1'})) {
-$__t2 = new Phpurs_Data1("Just", $GLOBALS['Data_List_Lazy_Types_nil']);
+$__t2 = new \Data\Maybe\Data_Maybe_Just($GLOBALS['Data_List_Lazy_Types_nil']);
 goto end_branch_2;;
 };
-$__t2 = ((($GLOBALS['Data_Maybe_functorMaybe'])['map'])(($GLOBALS['Data_List_Lazy_Types_cons'])(($v_1)->{'value0'})))(($go__0_0)(($GLOBALS['Data_List_Lazy_Types_step'])(($v_1)->{'value1'})));
+$__t2 = (($GLOBALS['Data_Maybe_functorMaybe'])['map'])(($GLOBALS['Data_List_Lazy_Types_cons'])(($v_1)->{'value0'}), ($go__0_0)(($GLOBALS['Data_List_Lazy_Types_step'])(($v_1)->{'value1'})));
 end_branch_2:;
 $__t1 = $__t2;
 goto end_branch_1;;
 };
-  $__t1 = new Phpurs_Data0("Nothing");
+  $__t1 = new \Data\Maybe\Data_Maybe_Nothing();
   end_branch_1:;
   $__res = $__t1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-return (($GLOBALS['Control_Semigroupoid_composeImpl'])($go__0_0))($GLOBALS['Data_List_Lazy_Types_step']);
+return ($GLOBALS['Control_Semigroupoid_composeImpl'])($go__0_0, $GLOBALS['Data_List_Lazy_Types_step']);
 })();
 
-// Data_List_Lazy_index
-$GLOBALS['Data_List_Lazy_index'] = function($xs_0 = null) {
+// Data_List_Lazy_init
+function majData_majList_majLazy_init($v_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_init';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ($GLOBALS['Data_List_Lazy_init_closure'])($v_0);
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_init'] = __NAMESPACE__ . '\\majData_majList_majLazy_init';
+
+// Data_List_Lazy_index
+function majData_majList_majLazy_index($xs_0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_index';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $go__1_0 = null;
   $go__1_0 = (function() use (&$go__1_0) {
   $__fn = function($v_2 = null, $v1_3 = null) use (&$go__1_0, &$__fn) {
@@ -1266,15 +1428,15 @@ $GLOBALS['Data_List_Lazy_index'] = function($xs_0 = null) {
   $v_2 = $__tco_var_go__1_0_0_v_2;
   $v1_3 = $__tco_var_go__1_0_0_v1_3;
   $__t0 = null;;
-  if ((is_object($v_2) && (($v_2)->{'tag'} === "Nil"))) {
-$__t0 = new Phpurs_Data0("Nothing");
+  if ($v_2 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Nil) {
+$__t0 = new \Data\Maybe\Data_Maybe_Nothing();
 goto end_branch_0;;
 };
-  if ((is_object($v_2) && (($v_2)->{'tag'} === "Cons"))) {
+  if ($v_2 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons) {
 $__t3 = null;;
 switch ($v1_3) {
 case 0:
-$__t3 = new Phpurs_Data1("Just", ($v_2)->{'value0'});
+$__t3 = new \Data\Maybe\Data_Maybe_Just(($v_2)->{'value0'});
 goto end_branch_3;;
 break;
 default:
@@ -1304,68 +1466,78 @@ goto end_branch_0;;
   $__res = ($go__1_0)(($GLOBALS['Data_List_Lazy_Types_step'])($xs_0));
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_index'] = __NAMESPACE__ . '\\majData_majList_majLazy_index';
 
 // Data_List_Lazy_head
-$GLOBALS['Data_List_Lazy_head'] = function($xs_0 = null) {
+function majData_majList_majLazy_head($xs_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Maybe_functorMaybe'])['map'])(function($v_1 = null) {
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_head';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = (($GLOBALS['Data_Maybe_functorMaybe'])['map'])(function($v_1 = null) {
   $__num = \func_num_args();
   $__res = ($v_1)['head'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(($GLOBALS['Data_List_Lazy_uncons'])($xs_0));
+}, ($GLOBALS['Data_List_Lazy_uncons'])($xs_0));
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_head'] = __NAMESPACE__ . '\\majData_majList_majLazy_head';
 
 // Data_List_Lazy_transpose
-$GLOBALS['Data_List_Lazy_transpose'] = function($xs_0 = null) {
+function majData_majList_majLazy_transpose($xs_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_transpose';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__tco_var_Data_List_Lazy_transpose_xs_0 = $xs_0;
   tco_loop_Data_List_Lazy_transpose:;
   $xs_0 = $__tco_var_Data_List_Lazy_transpose_xs_0;
   $v_1_0 = ($GLOBALS['Data_List_Lazy_uncons'])($xs_0);
   $__t1 = null;;
-  if ((is_object($v_1_0) && (($v_1_0)->{'tag'} === "Nothing"))) {
+  if ($v_1_0 instanceof \Data\Maybe\Data_Maybe_Nothing) {
 $__t1 = $xs_0;
 goto end_branch_1;;
 };
-  if ((is_object($v_1_0) && (($v_1_0)->{'tag'} === "Just"))) {
+  if ($v_1_0 instanceof \Data\Maybe\Data_Maybe_Just) {
 $v1_2_2 = ($GLOBALS['Data_List_Lazy_uncons'])((($v_1_0)->{'value0'})['head']);
 $__t3 = null;;
-if ((is_object($v1_2_2) && (($v1_2_2)->{'tag'} === "Nothing"))) {
+if ($v1_2_2 instanceof \Data\Maybe\Data_Maybe_Nothing) {
 $__tco_4 = (($v_1_0)->{'value0'})['tail'];
 $__tco_var_Data_List_Lazy_transpose_xs_0 = $__tco_4;
 goto tco_loop_Data_List_Lazy_transpose;;
 $__t3 = null;
 goto end_branch_3;;
 };
-if ((is_object($v1_2_2) && (($v1_2_2)->{'tag'} === "Just"))) {
+if ($v1_2_2 instanceof \Data\Maybe\Data_Maybe_Just) {
 $__local_var_3_5 = (($v1_2_2)->{'value0'})['head'];
 $__local_var_4_6 = (($v1_2_2)->{'value0'})['tail'];
-$__local_var_5_7 = (($GLOBALS['Data_List_Lazy_mapMaybe'])($GLOBALS['Data_List_Lazy_head']))((($v_1_0)->{'value0'})['tail']);
+$__local_var_5_7 = ($GLOBALS['Data_List_Lazy_mapMaybe'])($GLOBALS['Data_List_Lazy_head'], (($v_1_0)->{'value0'})['tail']);
 $__local_var_6_8 = ($GLOBALS['Data_Lazy_defer'])(function($v_6 = null) use ($__local_var_3_5, $__local_var_5_7) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Cons", $__local_var_3_5, $__local_var_5_7);
+  $__res = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons($__local_var_3_5, $__local_var_5_7);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 });
-$__local_var_7_9 = (($GLOBALS['Data_List_Lazy_mapMaybe'])($GLOBALS['Data_List_Lazy_tail']))((($v_1_0)->{'value0'})['tail']);
+$__local_var_7_9 = ($GLOBALS['Data_List_Lazy_mapMaybe'])($GLOBALS['Data_List_Lazy_tail'], (($v_1_0)->{'value0'})['tail']);
 $__local_var_7_9 = ($GLOBALS['Data_List_Lazy_transpose'])(($GLOBALS['Data_Lazy_defer'])(function($v_8 = null) use ($__local_var_4_6, $__local_var_7_9) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Cons", $__local_var_4_6, $__local_var_7_9);
+  $__res = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons($__local_var_4_6, $__local_var_7_9);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }));
 $__t3 = ($GLOBALS['Data_Lazy_defer'])(function($v_8 = null) use ($__local_var_6_8, $__local_var_7_9) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Cons", $__local_var_6_8, $__local_var_7_9);
+  $__res = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons($__local_var_6_8, $__local_var_7_9);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1384,33 +1556,38 @@ goto end_branch_1;;
   $__res = $__t1;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_transpose'] = __NAMESPACE__ . '\\majData_majList_majLazy_transpose';
 
 // Data_List_Lazy_groupBy
-$GLOBALS['Data_List_Lazy_groupBy'] = function($eq_0 = null) {
+function majData_majList_majLazy_groupmajBy($eq_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_groupmajBy';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__tco_var_Data_List_Lazy_groupBy_eq_0 = $eq_0;
   tco_loop_Data_List_Lazy_groupBy:;
   $eq_0 = $__tco_var_Data_List_Lazy_groupBy_eq_0;
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_List_Lazy_Types_List']))((($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Lazy_functorLazy'])['map'])(function($v_1 = null) use ($eq_0) {
+  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_List_Lazy_Types_List'], ($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Lazy_functorLazy'])['map'])(function($v_1 = null) use ($eq_0) {
   $__num = \func_num_args();
   $__t0 = null;;
-  if ((is_object($v_1) && (($v_1)->{'tag'} === "Nil"))) {
-$__t0 = new Phpurs_Data0("Nil");
+  if ($v_1 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Nil) {
+$__t0 = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Nil();
 goto end_branch_0;;
 };
-  if ((is_object($v_1) && (($v_1)->{'tag'} === "Cons"))) {
+  if ($v_1 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons) {
 $__local_var_2_1 = ($v_1)->{'value0'};
-$v1_3_2 = (($GLOBALS['Data_List_Lazy_span'])(($eq_0)($__local_var_2_1)))(($v_1)->{'value1'});
+$v1_3_2 = ($GLOBALS['Data_List_Lazy_span'])(($eq_0)($__local_var_2_1), ($v_1)->{'value1'});
 $__local_var_4_3 = ($v1_3_2)['init'];
-$__t0 = new Phpurs_Data2("Cons", ($GLOBALS['Data_Lazy_defer'])(function($v2_5 = null) use ($__local_var_2_1, $__local_var_4_3) {
+$__t0 = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons(($GLOBALS['Data_Lazy_defer'])(function($v2_5 = null) use ($__local_var_2_1, $__local_var_4_3) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("NonEmpty", $__local_var_2_1, $__local_var_4_3);
+  $__res = new \Data\NonEmpty\Data_NonEmpty_NonEmpty($__local_var_2_1, $__local_var_4_3);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}), (($GLOBALS['Data_List_Lazy_groupBy'])($eq_0))(($v1_3_2)['rest']));
+}), ($GLOBALS['Data_List_Lazy_groupBy'])($eq_0, ($v1_3_2)['rest']));
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -1420,28 +1597,48 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-})))($GLOBALS['Unsafe_Coerce_unsafeCoerce']));
+}), $GLOBALS['Unsafe_Coerce_unsafeCoerce']));
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_groupBy'] = __NAMESPACE__ . '\\majData_majList_majLazy_groupmajBy';
 
 // Data_List_Lazy_group
-$GLOBALS['Data_List_Lazy_group'] = function($dictEq_0 = null) {
+function majData_majList_majLazy_group($dictEq_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_group';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($GLOBALS['Data_List_Lazy_groupBy'])(($dictEq_0)['eq']);
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_group'] = __NAMESPACE__ . '\\majData_majList_majLazy_group';
+
+// Data_List_Lazy_fromStep_closure
+$GLOBALS['Data_List_Lazy_fromStep_closure'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_List_Lazy_Types_List'], ($GLOBALS['Data_Lazy_applicativeLazy'])['pure']);
 
 // Data_List_Lazy_fromStep
-$GLOBALS['Data_List_Lazy_fromStep'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_List_Lazy_Types_List']))(($GLOBALS['Data_Lazy_applicativeLazy'])['pure']);
+function majData_majList_majLazy_frommajStep($v_0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_frommajStep';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ($GLOBALS['Data_List_Lazy_fromStep_closure'])($v_0);
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_fromStep'] = __NAMESPACE__ . '\\majData_majList_majLazy_frommajStep';
 
 // Data_List_Lazy_insertBy
-$GLOBALS['Data_List_Lazy_insertBy'] = (function() {
-  $__fn = function($cmp_0 = null, $x_1 = null, $xs_2 = null) use (&$__fn) {
+function majData_majList_majLazy_insertmajBy($cmp_0, $x_1 = null, $xs_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_insertmajBy';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
@@ -1452,20 +1649,20 @@ $GLOBALS['Data_List_Lazy_insertBy'] = (function() {
   $cmp_0 = $__tco_var_Data_List_Lazy_insertBy_cmp_0;
   $x_1 = $__tco_var_Data_List_Lazy_insertBy_x_1;
   $xs_2 = $__tco_var_Data_List_Lazy_insertBy_xs_2;
-  $__res = ((($GLOBALS['Data_Lazy_functorLazy'])['map'])(function($v_3 = null) use ($cmp_0, $x_1) {
+  $__res = (($GLOBALS['Data_Lazy_functorLazy'])['map'])(function($v_3 = null) use ($cmp_0, $x_1) {
   $__num = \func_num_args();
   $__t0 = null;;
-  if ((is_object($v_3) && (($v_3)->{'tag'} === "Nil"))) {
-$__t0 = new Phpurs_Data2("Cons", $x_1, $GLOBALS['Data_List_Lazy_Types_nil']);
+  if ($v_3 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Nil) {
+$__t0 = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons($x_1, $GLOBALS['Data_List_Lazy_Types_nil']);
 goto end_branch_0;;
 };
-  if ((is_object($v_3) && (($v_3)->{'tag'} === "Cons"))) {
+  if ($v_3 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons) {
 $__t1 = null;;
-if ((is_object((($cmp_0)($x_1))(($v_3)->{'value0'})) && (((($cmp_0)($x_1))(($v_3)->{'value0'}))->{'tag'} === "GT"))) {
-$__t1 = new Phpurs_Data2("Cons", ($v_3)->{'value0'}, ((($GLOBALS['Data_List_Lazy_insertBy'])($cmp_0))($x_1))(($v_3)->{'value1'}));
+if (($cmp_0)($x_1, ($v_3)->{'value0'}) instanceof \Data\Ordering\Data_Ordering_GT) {
+$__t1 = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons(($v_3)->{'value0'}, ($GLOBALS['Data_List_Lazy_insertBy'])($cmp_0, $x_1, ($v_3)->{'value1'}));
 goto end_branch_1;;
 };
-$__t1 = new Phpurs_Data2("Cons", $x_1, ($GLOBALS['Data_List_Lazy_fromStep'])($v_3));
+$__t1 = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons($x_1, ($GLOBALS['Data_List_Lazy_fromStep'])($v_3));
 end_branch_1:;
 $__t0 = $__t1;
 goto end_branch_0;;
@@ -1477,36 +1674,45 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))($xs_2);
+}, $xs_2);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_insertBy'] = __NAMESPACE__ . '\\majData_majList_majLazy_insertmajBy';
 
 // Data_List_Lazy_insert
-$GLOBALS['Data_List_Lazy_insert'] = function($dictOrd_0 = null) {
+function majData_majList_majLazy_insert($dictOrd_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_insert';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($GLOBALS['Data_List_Lazy_insertBy'])(($dictOrd_0)['compare']);
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_insert'] = __NAMESPACE__ . '\\majData_majList_majLazy_insert';
 
 // Data_List_Lazy_fromFoldable
-$GLOBALS['Data_List_Lazy_fromFoldable'] = function($dictFoldable_0 = null) {
+function majData_majList_majLazy_frommajFoldable($dictFoldable_0) {
   $__num = \func_num_args();
-  $__res = ((($dictFoldable_0)['foldr'])($GLOBALS['Data_List_Lazy_Types_cons']))($GLOBALS['Data_List_Lazy_Types_nil']);
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_frommajFoldable';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = (($dictFoldable_0)['foldr'])($GLOBALS['Data_List_Lazy_Types_cons'], $GLOBALS['Data_List_Lazy_Types_nil']);
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_fromFoldable'] = __NAMESPACE__ . '\\majData_majList_majLazy_frommajFoldable';
 
 // Data_List_Lazy_foldrLazy
-$GLOBALS['Data_List_Lazy_foldrLazy'] = (function() {
-  $__fn = function($dictLazy_0 = null, $op_1 = null, $z_2 = null) use (&$__fn) {
+function majData_majList_majLazy_foldrmajLazy($dictLazy_0, $op_1 = null, $z_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_foldrmajLazy';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
@@ -1515,19 +1721,19 @@ $GLOBALS['Data_List_Lazy_foldrLazy'] = (function() {
   $__num = \func_num_args();
   $v_5_1 = ($GLOBALS['Data_List_Lazy_Types_step'])($xs_4);
   $__t2 = null;;
-  if ((is_object($v_5_1) && (($v_5_1)->{'tag'} === "Cons"))) {
+  if ($v_5_1 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons) {
 $__local_var_6_3 = ($v_5_1)->{'value0'};
 $__local_var_7_4 = ($v_5_1)->{'value1'};
 $__t2 = (($dictLazy_0)['defer'])(function($v1_8 = null) use ($__local_var_6_3, $__local_var_7_4, &$go__3_0, $op_1) {
   $__num = \func_num_args();
-  $__res = (($op_1)($__local_var_6_3))(($go__3_0)($__local_var_7_4));
+  $__res = ($op_1)($__local_var_6_3, ($go__3_0)($__local_var_7_4));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 });
 goto end_branch_2;;
 };
-  if ((is_object($v_5_1) && (($v_5_1)->{'tag'} === "Nil"))) {
+  if ($v_5_1 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Nil) {
 $__t2 = $z_2;
 goto end_branch_2;;
 };
@@ -1542,15 +1748,14 @@ goto end_branch_2;;
   $__res = $go__3_0;
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_foldrLazy'] = __NAMESPACE__ . '\\majData_majList_majLazy_foldrmajLazy';
 
 // Data_List_Lazy_foldM
-$GLOBALS['Data_List_Lazy_foldM'] = (function() {
-  $__fn = function($dictMonad_0 = null, $f_1 = null, $b_2 = null, $xs_3 = null) use (&$__fn) {
+function majData_majList_majLazy_foldmajM($dictMonad_0, $f_1 = null, $b_2 = null, $xs_3 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_foldmajM';
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
@@ -1565,15 +1770,15 @@ $GLOBALS['Data_List_Lazy_foldM'] = (function() {
   $xs_3 = $__tco_var_Data_List_Lazy_foldM_xs_3;
   $v_4_0 = ($GLOBALS['Data_List_Lazy_uncons'])($xs_3);
   $__t1 = null;;
-  if ((is_object($v_4_0) && (($v_4_0)->{'tag'} === "Nothing"))) {
+  if ($v_4_0 instanceof \Data\Maybe\Data_Maybe_Nothing) {
 $__t1 = (((($dictMonad_0)['Applicative0'])(null))['pure'])($b_2);
 goto end_branch_1;;
 };
-  if ((is_object($v_4_0) && (($v_4_0)->{'tag'} === "Just"))) {
+  if ($v_4_0 instanceof \Data\Maybe\Data_Maybe_Just) {
 $__local_var_5_2 = (($v_4_0)->{'value0'})['tail'];
-$__t1 = ((((($dictMonad_0)['Bind1'])(null))['bind'])((($f_1)($b_2))((($v_4_0)->{'value0'})['head'])))(function($b_prime_6 = null) use ($__local_var_5_2, $dictMonad_0, $f_1) {
+$__t1 = (((($dictMonad_0)['Bind1'])(null))['bind'])(($f_1)($b_2, (($v_4_0)->{'value0'})['head']), function($b_prime_6 = null) use ($__local_var_5_2, $dictMonad_0, $f_1) {
   $__num = \func_num_args();
-  $__res = (((($GLOBALS['Data_List_Lazy_foldM'])($dictMonad_0))($f_1))($b_prime_6))($__local_var_5_2);
+  $__res = ($GLOBALS['Data_List_Lazy_foldM'])($dictMonad_0, $f_1, $b_prime_6, $__local_var_5_2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1586,14 +1791,17 @@ goto end_branch_1;;
   $__res = $__t1;
   goto __end;;
   __end:
-  return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
-  };
-  return $__fn;
-})();
+  return 4 < $__num ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_foldM'] = __NAMESPACE__ . '\\majData_majList_majLazy_foldmajM';
 
 // Data_List_Lazy_findIndex
-$GLOBALS['Data_List_Lazy_findIndex'] = function($fn_0 = null) {
+function majData_majList_majLazy_findmajIndex($fn_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_findmajIndex';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $go__1_0 = null;
   $go__1_0 = (function() use ($fn_0, &$go__1_0) {
   $__fn = function($n_2 = null, $list_3 = null) use ($fn_0, &$go__1_0, &$__fn) {
@@ -1601,14 +1809,14 @@ $GLOBALS['Data_List_Lazy_findIndex'] = function($fn_0 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_Maybe_bindMaybe'])['bind'])(($GLOBALS['Data_List_Lazy_uncons'])($list_3)))(function($o_4 = null) use ($fn_0, &$go__1_0, $n_2) {
+  $__res = (($GLOBALS['Data_Maybe_bindMaybe'])['bind'])(($GLOBALS['Data_List_Lazy_uncons'])($list_3), function($o_4 = null) use ($fn_0, &$go__1_0, $n_2) {
   $__num = \func_num_args();
   $__t1 = null;;
   if (($fn_0)(($o_4)['head'])) {
 $__t1 = (($GLOBALS['Data_Maybe_applicativeMaybe'])['pure'])($n_2);
 goto end_branch_1;;
 };
-  $__t1 = (($go__1_0)(($n_2 + 1)))(($o_4)['tail']);
+  $__t1 = ($go__1_0)(($n_2 + 1), ($o_4)['tail']);
   end_branch_1:;
   $__res = $__t1;
   goto __end;;
@@ -1624,33 +1832,37 @@ goto end_branch_1;;
   $__res = ($go__1_0)(0);
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_findIndex'] = __NAMESPACE__ . '\\majData_majList_majLazy_findmajIndex';
 
 // Data_List_Lazy_findLastIndex
-$GLOBALS['Data_List_Lazy_findLastIndex'] = (function() {
-  $__fn = function($fn_0 = null, $xs_1 = null) use (&$__fn) {
+function majData_majList_majLazy_findmajLastmajIndex($fn_0, $xs_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_findmajLastmajIndex';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_Maybe_functorMaybe'])['map'])(function($v_2 = null) use ($xs_1) {
+  $__res = (($GLOBALS['Data_Maybe_functorMaybe'])['map'])(function($v_2 = null) use ($xs_1) {
   $__num = \func_num_args();
   $__res = ((($GLOBALS['Data_List_Lazy_length'])($xs_1) - 1) - $v_2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))((($GLOBALS['Data_List_Lazy_findIndex'])($fn_0))(($GLOBALS['Data_List_Lazy_reverse'])($xs_1)));
+}, ($GLOBALS['Data_List_Lazy_findIndex'])($fn_0, ($GLOBALS['Data_List_Lazy_reverse'])($xs_1)));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_findLastIndex'] = __NAMESPACE__ . '\\majData_majList_majLazy_findmajLastmajIndex';
 
 // Data_List_Lazy_filterM
-$GLOBALS['Data_List_Lazy_filterM'] = function($dictMonad_0 = null) {
+function majData_majList_majLazy_filtermajM($dictMonad_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_filtermajM';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__tco_var_Data_List_Lazy_filterM_dictMonad_0 = $dictMonad_0;
   tco_loop_Data_List_Lazy_filterM:;
   $dictMonad_0 = $__tco_var_Data_List_Lazy_filterM_dictMonad_0;
@@ -1664,22 +1876,22 @@ $GLOBALS['Data_List_Lazy_filterM'] = function($dictMonad_0 = null) {
   }
   $v_5_2 = ($GLOBALS['Data_List_Lazy_uncons'])($list_4);
   $__t3 = null;;
-  if ((is_object($v_5_2) && (($v_5_2)->{'tag'} === "Nothing"))) {
+  if ($v_5_2 instanceof \Data\Maybe\Data_Maybe_Nothing) {
 $__t3 = (($__local_var_1_0)['pure'])($GLOBALS['Data_List_Lazy_Types_nil']);
 goto end_branch_3;;
 };
-  if ((is_object($v_5_2) && (($v_5_2)->{'tag'} === "Just"))) {
+  if ($v_5_2 instanceof \Data\Maybe\Data_Maybe_Just) {
 $__local_var_6_4 = (($v_5_2)->{'value0'})['head'];
 $__local_var_7_5 = (($v_5_2)->{'value0'})['tail'];
-$__t3 = ((($__local_var_2_1)['bind'])(($p_3)($__local_var_6_4)))(function($b_8 = null) use ($__local_var_1_0, $__local_var_2_1, $__local_var_6_4, $__local_var_7_5, $dictMonad_0, $p_3) {
+$__t3 = (($__local_var_2_1)['bind'])(($p_3)($__local_var_6_4), function($b_8 = null) use ($__local_var_1_0, $__local_var_2_1, $__local_var_6_4, $__local_var_7_5, $dictMonad_0, $p_3) {
   $__num = \func_num_args();
-  $__res = ((($__local_var_2_1)['bind'])(((($GLOBALS['Data_List_Lazy_filterM'])($dictMonad_0))($p_3))($__local_var_7_5)))(function($xs_prime_9 = null) use ($__local_var_1_0, $__local_var_6_4, $b_8) {
+  $__res = (($__local_var_2_1)['bind'])(($GLOBALS['Data_List_Lazy_filterM'])($dictMonad_0, $p_3, $__local_var_7_5), function($xs_prime_9 = null) use ($__local_var_1_0, $__local_var_6_4, $b_8) {
   $__num = \func_num_args();
   $__t6 = null;;
   if ($b_8) {
 $__t6 = ($GLOBALS['Data_Lazy_defer'])(function($v_10 = null) use ($__local_var_6_4, $xs_prime_9) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Cons", $__local_var_6_4, $xs_prime_9);
+  $__res = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons($__local_var_6_4, $xs_prime_9);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1711,12 +1923,17 @@ goto end_branch_3;;
 })();
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_filterM'] = __NAMESPACE__ . '\\majData_majList_majLazy_filtermajM';
 
 // Data_List_Lazy_filter
-$GLOBALS['Data_List_Lazy_filter'] = function($p_0 = null) {
+function majData_majList_majLazy_filter($p_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_filter';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__tco_var_Data_List_Lazy_filter_p_0 = $p_0;
   tco_loop_Data_List_Lazy_filter:;
   $p_0 = $__tco_var_Data_List_Lazy_filter_p_0;
@@ -1727,14 +1944,14 @@ $GLOBALS['Data_List_Lazy_filter'] = function($p_0 = null) {
   tco_loop_go__1_0_0:;
   $v_2 = $__tco_var_go__1_0_0_v_2;
   $__t0 = null;;
-  if ((is_object($v_2) && (($v_2)->{'tag'} === "Nil"))) {
-$__t0 = new Phpurs_Data0("Nil");
+  if ($v_2 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Nil) {
+$__t0 = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Nil();
 goto end_branch_0;;
 };
-  if ((is_object($v_2) && (($v_2)->{'tag'} === "Cons"))) {
+  if ($v_2 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons) {
 $__t2 = null;;
 if (($p_0)(($v_2)->{'value0'})) {
-$__t2 = new Phpurs_Data2("Cons", ($v_2)->{'value0'}, (($GLOBALS['Data_List_Lazy_filter'])($p_0))(($v_2)->{'value1'}));
+$__t2 = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons(($v_2)->{'value0'}, ($GLOBALS['Data_List_Lazy_filter'])($p_0, ($v_2)->{'value1'}));
 goto end_branch_2;;
 };
 $__tco_1 = ($GLOBALS['Data_List_Lazy_Types_step'])(($v_2)->{'value1'});
@@ -1753,64 +1970,73 @@ goto end_branch_0;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_List_Lazy_Types_List']))((($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Lazy_functorLazy'])['map'])($go__1_0)))($GLOBALS['Unsafe_Coerce_unsafeCoerce']));
+  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_List_Lazy_Types_List'], ($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Lazy_functorLazy'])['map'])($go__1_0), $GLOBALS['Unsafe_Coerce_unsafeCoerce']));
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_filter'] = __NAMESPACE__ . '\\majData_majList_majLazy_filter';
 
 // Data_List_Lazy_intersectBy
-$GLOBALS['Data_List_Lazy_intersectBy'] = (function() {
-  $__fn = function($eq_0 = null, $xs_1 = null, $ys_2 = null) use (&$__fn) {
+function majData_majList_majLazy_intersectmajBy($eq_0, $xs_1 = null, $ys_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_intersectmajBy';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($GLOBALS['Data_List_Lazy_filter'])(function($x_3 = null) use ($eq_0, $ys_2) {
+  $__res = ($GLOBALS['Data_List_Lazy_filter'])(function($x_3 = null) use ($eq_0, $ys_2) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_List_Lazy_any'])(($eq_0)($x_3)))($ys_2);
+  $__res = ($GLOBALS['Data_List_Lazy_any'])(($eq_0)($x_3), $ys_2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))($xs_1);
+}, $xs_1);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_intersectBy'] = __NAMESPACE__ . '\\majData_majList_majLazy_intersectmajBy';
 
 // Data_List_Lazy_intersect
-$GLOBALS['Data_List_Lazy_intersect'] = function($dictEq_0 = null) {
+function majData_majList_majLazy_intersect($dictEq_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_intersect';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($GLOBALS['Data_List_Lazy_intersectBy'])(($dictEq_0)['eq']);
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_intersect'] = __NAMESPACE__ . '\\majData_majList_majLazy_intersect';
 
 // Data_List_Lazy_nubByEq
-$GLOBALS['Data_List_Lazy_nubByEq'] = function($eq_0 = null) {
+function majData_majList_majLazy_nubmajBymajEq($eq_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_nubmajBymajEq';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__tco_var_Data_List_Lazy_nubByEq_eq_0 = $eq_0;
   tco_loop_Data_List_Lazy_nubByEq:;
   $eq_0 = $__tco_var_Data_List_Lazy_nubByEq_eq_0;
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_List_Lazy_Types_List']))((($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Lazy_functorLazy'])['map'])(function($v_1 = null) use ($eq_0) {
+  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_List_Lazy_Types_List'], ($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Lazy_functorLazy'])['map'])(function($v_1 = null) use ($eq_0) {
   $__num = \func_num_args();
   $__t0 = null;;
-  if ((is_object($v_1) && (($v_1)->{'tag'} === "Nil"))) {
-$__t0 = new Phpurs_Data0("Nil");
+  if ($v_1 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Nil) {
+$__t0 = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Nil();
 goto end_branch_0;;
 };
-  if ((is_object($v_1) && (($v_1)->{'tag'} === "Cons"))) {
+  if ($v_1 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons) {
 $__local_var_2_1 = ($v_1)->{'value0'};
-$__t0 = new Phpurs_Data2("Cons", $__local_var_2_1, (($GLOBALS['Data_List_Lazy_nubByEq'])($eq_0))((($GLOBALS['Data_List_Lazy_filter'])(function($y_3 = null) use ($__local_var_2_1, $eq_0) {
+$__t0 = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons($__local_var_2_1, ($GLOBALS['Data_List_Lazy_nubByEq'])($eq_0, ($GLOBALS['Data_List_Lazy_filter'])(function($y_3 = null) use ($__local_var_2_1, $eq_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['not'])((($eq_0)($__local_var_2_1))($y_3));
+  $__res = (($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['not'])(($eq_0)($__local_var_2_1, $y_3));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(($v_1)->{'value1'})));
+}, ($v_1)->{'value1'})));
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -1820,31 +2046,41 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-})))($GLOBALS['Unsafe_Coerce_unsafeCoerce']));
+}), $GLOBALS['Unsafe_Coerce_unsafeCoerce']));
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_nubByEq'] = __NAMESPACE__ . '\\majData_majList_majLazy_nubmajBymajEq';
 
 // Data_List_Lazy_nubEq
-$GLOBALS['Data_List_Lazy_nubEq'] = function($dictEq_0 = null) {
+function majData_majList_majLazy_nubmajEq($dictEq_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_nubmajEq';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($GLOBALS['Data_List_Lazy_nubByEq'])(($dictEq_0)['eq']);
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_nubEq'] = __NAMESPACE__ . '\\majData_majList_majLazy_nubmajEq';
 
 // Data_List_Lazy_eqPattern
-$GLOBALS['Data_List_Lazy_eqPattern'] = function($dictEq_0 = null) {
+function majData_majList_majLazy_eqmajPattern($dictEq_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_eqmajPattern';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["eq" => (function() use ($dictEq_0) {
   $__fn = function($x_1 = null, $y_2 = null) use ($dictEq_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($GLOBALS['Data_List_Lazy_Types_eq1List'])['eq1'])($dictEq_0))($x_1))($y_2);
+  $__res = (($GLOBALS['Data_List_Lazy_Types_eq1List'])['eq1'])($dictEq_0, $x_1, $y_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1853,12 +2089,17 @@ $GLOBALS['Data_List_Lazy_eqPattern'] = function($dictEq_0 = null) {
 })()];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_eqPattern'] = __NAMESPACE__ . '\\majData_majList_majLazy_eqmajPattern';
 
 // Data_List_Lazy_ordPattern
-$GLOBALS['Data_List_Lazy_ordPattern'] = function($dictOrd_0 = null) {
+function majData_majList_majLazy_ordmajPattern($dictOrd_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_ordmajPattern';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__local_var_1_0 = (($dictOrd_0)['Eq0'])(null);
   $eqPattern1_2_1 = ["eq" => (function() use ($__local_var_1_0) {
   $__fn = function($x_2 = null, $y_3 = null) use ($__local_var_1_0, &$__fn) {
@@ -1866,7 +2107,7 @@ $GLOBALS['Data_List_Lazy_ordPattern'] = function($dictOrd_0 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($GLOBALS['Data_List_Lazy_Types_eq1List'])['eq1'])($__local_var_1_0))($x_2))($y_3);
+  $__res = (($GLOBALS['Data_List_Lazy_Types_eq1List'])['eq1'])($__local_var_1_0, $x_2, $y_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1879,7 +2120,7 @@ $GLOBALS['Data_List_Lazy_ordPattern'] = function($dictOrd_0 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($GLOBALS['Data_List_Lazy_Types_ordList'])($dictOrd_0))['compare'])($x_3))($y_4);
+  $__res = ((($GLOBALS['Data_List_Lazy_Types_ordList'])($dictOrd_0))['compare'])($x_3, $y_4);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1894,54 +2135,57 @@ $GLOBALS['Data_List_Lazy_ordPattern'] = function($dictOrd_0 = null) {
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_ordPattern'] = __NAMESPACE__ . '\\majData_majList_majLazy_ordmajPattern';
 
 // Data_List_Lazy_elemLastIndex
-$GLOBALS['Data_List_Lazy_elemLastIndex'] = (function() {
-  $__fn = function($dictEq_0 = null, $x_1 = null) use (&$__fn) {
+function majData_majList_majLazy_elemmajLastmajIndex($dictEq_0, $x_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_elemmajLastmajIndex';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__res = ($GLOBALS['Data_List_Lazy_findLastIndex'])(function($v_2 = null) use ($dictEq_0, $x_1) {
   $__num = \func_num_args();
-  $__res = ((($dictEq_0)['eq'])($v_2))($x_1);
+  $__res = (($dictEq_0)['eq'])($v_2, $x_1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 });
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_elemLastIndex'] = __NAMESPACE__ . '\\majData_majList_majLazy_elemmajLastmajIndex';
 
 // Data_List_Lazy_elemIndex
-$GLOBALS['Data_List_Lazy_elemIndex'] = (function() {
-  $__fn = function($dictEq_0 = null, $x_1 = null) use (&$__fn) {
+function majData_majList_majLazy_elemmajIndex($dictEq_0, $x_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_elemmajIndex';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__res = ($GLOBALS['Data_List_Lazy_findIndex'])(function($v_2 = null) use ($dictEq_0, $x_1) {
   $__num = \func_num_args();
-  $__res = ((($dictEq_0)['eq'])($v_2))($x_1);
+  $__res = (($dictEq_0)['eq'])($v_2, $x_1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 });
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_elemIndex'] = __NAMESPACE__ . '\\majData_majList_majLazy_elemmajIndex';
 
 // Data_List_Lazy_dropWhile
-$GLOBALS['Data_List_Lazy_dropWhile'] = function($p_0 = null) {
+function majData_majList_majLazy_dropmajWhile($p_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_dropmajWhile';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $go__1_0 = null;
   $go__1_0 = function($v_2 = null) use (&$go__1_0, $p_0) {
   $__num = \func_num_args();
@@ -1949,7 +2193,7 @@ $GLOBALS['Data_List_Lazy_dropWhile'] = function($p_0 = null) {
   tco_loop_go__1_0_0:;
   $v_2 = $__tco_var_go__1_0_0_v_2;
   $__t0 = null;;
-  if (((is_object($v_2) && (($v_2)->{'tag'} === "Cons")) && ($p_0)(($v_2)->{'value0'}))) {
+  if (($v_2 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons && ($p_0)(($v_2)->{'value0'}))) {
 $__tco_1 = ($GLOBALS['Data_List_Lazy_Types_step'])(($v_2)->{'value1'});
 $__tco_var_go__1_0_0_v_2 = $__tco_1;
 goto tco_loop_go__1_0_0;;
@@ -1963,15 +2207,20 @@ goto end_branch_0;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($go__1_0))($GLOBALS['Data_List_Lazy_Types_step']);
+  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($go__1_0, $GLOBALS['Data_List_Lazy_Types_step']);
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_dropWhile'] = __NAMESPACE__ . '\\majData_majList_majLazy_dropmajWhile';
 
 // Data_List_Lazy_drop
-$GLOBALS['Data_List_Lazy_drop'] = function($n_0 = null) {
+function majData_majList_majLazy_drop($n_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_drop';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $go__1_0 = null;
   $go__1_0 = (function() use (&$go__1_0) {
   $__fn = function($v_2 = null, $v1_3 = null) use (&$go__1_0, &$__fn) {
@@ -1994,11 +2243,11 @@ default:
 ;
 break;
 };
-  if ((is_object($v1_3) && (($v1_3)->{'tag'} === "Nil"))) {
-$__t0 = new Phpurs_Data0("Nil");
+  if ($v1_3 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Nil) {
+$__t0 = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Nil();
 goto end_branch_0;;
 };
-  if ((is_object($v1_3) && (($v1_3)->{'tag'} === "Cons"))) {
+  if ($v1_3 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons) {
 $__tco_1 = ($v_2 - 1);
 $__tco_2 = ($GLOBALS['Data_List_Lazy_Types_step'])(($v1_3)->{'value1'});
 $__tco_var_go__1_0_0_v_2 = $__tco_1;
@@ -2017,31 +2266,31 @@ goto end_branch_0;;
   };
   return $__fn;
 })();
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_List_Lazy_Types_List']))((($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Lazy_functorLazy'])['map'])(($go__1_0)($n_0))))($GLOBALS['Unsafe_Coerce_unsafeCoerce']));
+  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_List_Lazy_Types_List'], ($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Lazy_functorLazy'])['map'])(($go__1_0)($n_0)), $GLOBALS['Unsafe_Coerce_unsafeCoerce']));
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_drop'] = __NAMESPACE__ . '\\majData_majList_majLazy_drop';
 
 // Data_List_Lazy_slice
-$GLOBALS['Data_List_Lazy_slice'] = (function() {
-  $__fn = function($start_0 = null, $end_1 = null, $xs_2 = null) use (&$__fn) {
+function majData_majList_majLazy_slice($start_0, $end_1 = null, $xs_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_slice';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($GLOBALS['Data_List_Lazy_take'])(($end_1 - $start_0)))((($GLOBALS['Data_List_Lazy_drop'])($start_0))($xs_2));
+  $__res = ($GLOBALS['Data_List_Lazy_take'])(($end_1 - $start_0), ($GLOBALS['Data_List_Lazy_drop'])($start_0, $xs_2));
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_slice'] = __NAMESPACE__ . '\\majData_majList_majLazy_slice';
 
 // Data_List_Lazy_deleteBy
-$GLOBALS['Data_List_Lazy_deleteBy'] = (function() {
-  $__fn = function($eq_0 = null, $x_1 = null, $xs_2 = null) use (&$__fn) {
+function majData_majList_majLazy_deletemajBy($eq_0, $x_1 = null, $xs_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_deletemajBy';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
@@ -2052,20 +2301,20 @@ $GLOBALS['Data_List_Lazy_deleteBy'] = (function() {
   $eq_0 = $__tco_var_Data_List_Lazy_deleteBy_eq_0;
   $x_1 = $__tco_var_Data_List_Lazy_deleteBy_x_1;
   $xs_2 = $__tco_var_Data_List_Lazy_deleteBy_xs_2;
-  $__res = ((($GLOBALS['Data_Lazy_functorLazy'])['map'])(function($v_3 = null) use ($eq_0, $x_1) {
+  $__res = (($GLOBALS['Data_Lazy_functorLazy'])['map'])(function($v_3 = null) use ($eq_0, $x_1) {
   $__num = \func_num_args();
   $__t0 = null;;
-  if ((is_object($v_3) && (($v_3)->{'tag'} === "Nil"))) {
-$__t0 = new Phpurs_Data0("Nil");
+  if ($v_3 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Nil) {
+$__t0 = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Nil();
 goto end_branch_0;;
 };
-  if ((is_object($v_3) && (($v_3)->{'tag'} === "Cons"))) {
+  if ($v_3 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons) {
 $__t1 = null;;
-if ((($eq_0)($x_1))(($v_3)->{'value0'})) {
+if (($eq_0)($x_1, ($v_3)->{'value0'})) {
 $__t1 = ($GLOBALS['Data_List_Lazy_Types_step'])(($v_3)->{'value1'});
 goto end_branch_1;;
 };
-$__t1 = new Phpurs_Data2("Cons", ($v_3)->{'value0'}, ((($GLOBALS['Data_List_Lazy_deleteBy'])($eq_0))($x_1))(($v_3)->{'value1'}));
+$__t1 = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons(($v_3)->{'value0'}, ($GLOBALS['Data_List_Lazy_deleteBy'])($eq_0, $x_1, ($v_3)->{'value1'}));
 end_branch_1:;
 $__t0 = $__t1;
 goto end_branch_0;;
@@ -2077,54 +2326,57 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))($xs_2);
+}, $xs_2);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_deleteBy'] = __NAMESPACE__ . '\\majData_majList_majLazy_deletemajBy';
 
 // Data_List_Lazy_unionBy
-$GLOBALS['Data_List_Lazy_unionBy'] = (function() {
-  $__fn = function($eq_0 = null, $xs_1 = null, $ys_2 = null) use (&$__fn) {
+function majData_majList_majLazy_unionmajBy($eq_0, $xs_1 = null, $ys_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_unionmajBy';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($GLOBALS['Data_List_Lazy_Types_semigroupList'])['append'])($xs_1))((((($GLOBALS['Data_List_Lazy_Types_foldableList'])['foldl'])((function() use ($eq_0) {
+  $__res = (($GLOBALS['Data_List_Lazy_Types_semigroupList'])['append'])($xs_1, (($GLOBALS['Data_List_Lazy_Types_foldableList'])['foldl'])((function() use ($eq_0) {
   $__fn = function($b_3 = null, $a_4 = null) use ($eq_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_List_Lazy_deleteBy'])($eq_0))($a_4))($b_3);
+  $__res = ($GLOBALS['Data_List_Lazy_deleteBy'])($eq_0, $a_4, $b_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))((($GLOBALS['Data_List_Lazy_nubByEq'])($eq_0))($ys_2)))($xs_1));
+})(), ($GLOBALS['Data_List_Lazy_nubByEq'])($eq_0, $ys_2), $xs_1));
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_unionBy'] = __NAMESPACE__ . '\\majData_majList_majLazy_unionmajBy';
 
 // Data_List_Lazy_union
-$GLOBALS['Data_List_Lazy_union'] = function($dictEq_0 = null) {
+function majData_majList_majLazy_union($dictEq_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_union';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($GLOBALS['Data_List_Lazy_unionBy'])(($dictEq_0)['eq']);
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_union'] = __NAMESPACE__ . '\\majData_majList_majLazy_union';
 
 // Data_List_Lazy_deleteAt
-$GLOBALS['Data_List_Lazy_deleteAt'] = (function() {
-  $__fn = function($n_0 = null, $xs_1 = null) use (&$__fn) {
+function majData_majList_majLazy_deletemajAt($n_0, $xs_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_deletemajAt';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
@@ -2133,15 +2385,15 @@ $GLOBALS['Data_List_Lazy_deleteAt'] = (function() {
   tco_loop_Data_List_Lazy_deleteAt:;
   $n_0 = $__tco_var_Data_List_Lazy_deleteAt_n_0;
   $xs_1 = $__tco_var_Data_List_Lazy_deleteAt_xs_1;
-  $__res = ((($GLOBALS['Data_Lazy_functorLazy'])['map'])(function($v1_2 = null) use ($n_0) {
+  $__res = (($GLOBALS['Data_Lazy_functorLazy'])['map'])(function($v1_2 = null) use ($n_0) {
   $__num = \func_num_args();
   $__t0 = null;;
-  if ((is_object($v1_2) && (($v1_2)->{'tag'} === "Nil"))) {
-$__t0 = new Phpurs_Data0("Nil");
+  if ($v1_2 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Nil) {
+$__t0 = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Nil();
 goto end_branch_0;;
 };
-  if ((is_object($v1_2) && (($v1_2)->{'tag'} === "Cons"))) {
-$__t0 = match ($n_0) { 0 => ($GLOBALS['Data_List_Lazy_Types_step'])(($v1_2)->{'value1'}), default => new Phpurs_Data2("Cons", ($v1_2)->{'value0'}, (($GLOBALS['Data_List_Lazy_deleteAt'])(($n_0 - 1)))(($v1_2)->{'value1'})) };
+  if ($v1_2 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons) {
+$__t0 = match ($n_0) { 0 => ($GLOBALS['Data_List_Lazy_Types_step'])(($v1_2)->{'value1'}), default => new \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons(($v1_2)->{'value0'}, ($GLOBALS['Data_List_Lazy_deleteAt'])(($n_0 - 1), ($v1_2)->{'value1'})) };
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -2151,33 +2403,41 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))($xs_1);
+}, $xs_1);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_deleteAt'] = __NAMESPACE__ . '\\majData_majList_majLazy_deletemajAt';
 
 // Data_List_Lazy_delete
-$GLOBALS['Data_List_Lazy_delete'] = function($dictEq_0 = null) {
+function majData_majList_majLazy_delete($dictEq_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_delete';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($GLOBALS['Data_List_Lazy_deleteBy'])(($dictEq_0)['eq']);
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_delete'] = __NAMESPACE__ . '\\majData_majList_majLazy_delete';
 
 // Data_List_Lazy_difference
-$GLOBALS['Data_List_Lazy_difference'] = function($dictEq_0 = null) {
+function majData_majList_majLazy_difference($dictEq_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_difference';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = (($GLOBALS['Data_List_Lazy_Types_foldableList'])['foldl'])((function() use ($dictEq_0) {
   $__fn = function($b_1 = null, $a_2 = null) use ($dictEq_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_List_Lazy_deleteBy'])(($dictEq_0)['eq']))($a_2))($b_1);
+  $__res = ($GLOBALS['Data_List_Lazy_deleteBy'])(($dictEq_0)['eq'], $a_2, $b_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -2186,16 +2446,21 @@ $GLOBALS['Data_List_Lazy_difference'] = function($dictEq_0 = null) {
 })());
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_difference'] = __NAMESPACE__ . '\\majData_majList_majLazy_difference';
 
 // Data_List_Lazy_cycle
-$GLOBALS['Data_List_Lazy_cycle'] = function($xs_0 = null) {
+function majData_majList_majLazy_cycle($xs_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_cycle';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $go__1_0 = null;
   $go__1_0 = (($GLOBALS['Data_List_Lazy_Types_lazyList'])['defer'])(function($v_2 = null) use (&$go__1_0, $xs_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_List_Lazy_Types_semigroupList'])['append'])($xs_0))($go__1_0);
+  $__res = (($GLOBALS['Data_List_Lazy_Types_semigroupList'])['append'])($xs_0, $go__1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -2203,40 +2468,59 @@ $GLOBALS['Data_List_Lazy_cycle'] = function($xs_0 = null) {
   $__res = $go__1_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_cycle'] = __NAMESPACE__ . '\\majData_majList_majLazy_cycle';
 
 // Data_List_Lazy_concatMap
-$GLOBALS['Data_List_Lazy_concatMap'] = (function() {
-  $__fn = function($b_0 = null, $a_1 = null) use (&$__fn) {
+function majData_majList_majLazy_concatmajMap($b_0, $a_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_concatmajMap';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_List_Lazy_Types_bindList'])['bind'])($a_1))($b_0);
+  $__res = (($GLOBALS['Data_List_Lazy_Types_bindList'])['bind'])($a_1, $b_0);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_concatMap'] = __NAMESPACE__ . '\\majData_majList_majLazy_concatmajMap';
 
 // Data_List_Lazy_concat
-$GLOBALS['Data_List_Lazy_concat'] = function($v_0 = null) {
+function majData_majList_majLazy_concat($v_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_List_Lazy_Types_bindList'])['bind'])($v_0))($GLOBALS['Data_List_Lazy_identity']);
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_concat';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = (($GLOBALS['Data_List_Lazy_Types_bindList'])['bind'])($v_0, $GLOBALS['Data_List_Lazy_identity']);
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_concat'] = __NAMESPACE__ . '\\majData_majList_majLazy_concat';
+
+// Data_List_Lazy_catMaybes_closure
+$GLOBALS['Data_List_Lazy_catMaybes_closure'] = ($GLOBALS['Data_List_Lazy_mapMaybe'])($GLOBALS['Data_List_Lazy_identity']);
 
 // Data_List_Lazy_catMaybes
-$GLOBALS['Data_List_Lazy_catMaybes'] = ($GLOBALS['Data_List_Lazy_mapMaybe'])($GLOBALS['Data_List_Lazy_identity']);
+function majData_majList_majLazy_catmajMaybes($v_0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_catmajMaybes';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ($GLOBALS['Data_List_Lazy_catMaybes_closure'])($v_0);
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_catMaybes'] = __NAMESPACE__ . '\\majData_majList_majLazy_catmajMaybes';
 
 // Data_List_Lazy_alterAt
-$GLOBALS['Data_List_Lazy_alterAt'] = (function() {
-  $__fn = function($n_0 = null, $f_1 = null, $xs_2 = null) use (&$__fn) {
+function majData_majList_majLazy_altermajAt($n_0, $f_1 = null, $xs_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_altermajAt';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
@@ -2247,25 +2531,25 @@ $GLOBALS['Data_List_Lazy_alterAt'] = (function() {
   $n_0 = $__tco_var_Data_List_Lazy_alterAt_n_0;
   $f_1 = $__tco_var_Data_List_Lazy_alterAt_f_1;
   $xs_2 = $__tco_var_Data_List_Lazy_alterAt_xs_2;
-  $__res = ((($GLOBALS['Data_Lazy_functorLazy'])['map'])(function($v1_3 = null) use ($f_1, $n_0) {
+  $__res = (($GLOBALS['Data_Lazy_functorLazy'])['map'])(function($v1_3 = null) use ($f_1, $n_0) {
   $__num = \func_num_args();
   $__t0 = null;;
-  if ((is_object($v1_3) && (($v1_3)->{'tag'} === "Nil"))) {
-$__t0 = new Phpurs_Data0("Nil");
+  if ($v1_3 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Nil) {
+$__t0 = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Nil();
 goto end_branch_0;;
 };
-  if ((is_object($v1_3) && (($v1_3)->{'tag'} === "Cons"))) {
+  if ($v1_3 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons) {
 $__t1 = null;;
 switch ($n_0) {
 case 0:
 $v2_4_2 = ($f_1)(($v1_3)->{'value0'});
 $__t3 = null;;
-if ((is_object($v2_4_2) && (($v2_4_2)->{'tag'} === "Nothing"))) {
+if ($v2_4_2 instanceof \Data\Maybe\Data_Maybe_Nothing) {
 $__t3 = ($GLOBALS['Data_List_Lazy_Types_step'])(($v1_3)->{'value1'});
 goto end_branch_3;;
 };
-if ((is_object($v2_4_2) && (($v2_4_2)->{'tag'} === "Just"))) {
-$__t3 = new Phpurs_Data2("Cons", ($v2_4_2)->{'value0'}, ($v1_3)->{'value1'});
+if ($v2_4_2 instanceof \Data\Maybe\Data_Maybe_Just) {
+$__t3 = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons(($v2_4_2)->{'value0'}, ($v1_3)->{'value1'});
 goto end_branch_3;;
 };
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -2278,7 +2562,7 @@ default:
 ;
 break;
 };
-$__t1 = new Phpurs_Data2("Cons", ($v1_3)->{'value0'}, ((($GLOBALS['Data_List_Lazy_alterAt'])(($n_0 - 1)))($f_1))(($v1_3)->{'value1'}));
+$__t1 = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons(($v1_3)->{'value0'}, ($GLOBALS['Data_List_Lazy_alterAt'])(($n_0 - 1), $f_1, ($v1_3)->{'value1'}));
 end_branch_1:;
 $__t0 = $__t1;
 goto end_branch_0;;
@@ -2290,26 +2574,24 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))($xs_2);
+}, $xs_2);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_alterAt'] = __NAMESPACE__ . '\\majData_majList_majLazy_altermajAt';
 
 // Data_List_Lazy_modifyAt
-$GLOBALS['Data_List_Lazy_modifyAt'] = (function() {
-  $__fn = function($n_0 = null, $f_1 = null) use (&$__fn) {
+function majData_majList_majLazy_modifymajAt($n_0, $f_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majLazy_modifymajAt';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_List_Lazy_alterAt'])($n_0))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Maybe_Just']))($f_1));
+  $__res = ($GLOBALS['Data_List_Lazy_alterAt'])($n_0, ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Maybe_Just'], $f_1));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_List_Lazy_modifyAt'] = __NAMESPACE__ . '\\majData_majList_majLazy_modifymajAt';
 

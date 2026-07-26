@@ -136,7 +136,7 @@ var once_fromList sync.Once
 func Get_fromList() gopurs_runtime.Value {
 	once_fromList.Do(func() {
 		cache_fromList = gopurs_runtime.Func(func(l_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_fromList(l_0_box)
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_fromList(l_0_box))}
 })
 	})
 	return cache_fromList
@@ -218,7 +218,7 @@ return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Point
 }))
 _ = __local_var_1_0
 return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(__local_var_1_0, gopurs_runtime.Apply(Get_toList(), x_2))
+return gopurs_runtime.Apply(__local_var_1_0, Call_toList(x_2))
 })
 }
 
@@ -329,7 +329,7 @@ _ = v_0
 return (*pkg_Data_NonEmpty.Constructor_NonEmpty[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Apply(v_0, pkg_Data_Unit.Get_unit()).UnsafePtr).V0
 }
 
-func Call_fromList(l_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_fromList(l_0_loop gopurs_runtime.Value) *pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value] {
 var l_0 gopurs_runtime.Value = l_0_loop
 _ = l_0
 v_1_0 := gopurs_runtime.Apply(l_0, pkg_Data_Unit.Get_unit())
@@ -361,7 +361,7 @@ goto end_branch_1
 __t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_1:
-return __t1
+return (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(__t1.UnsafePtr)
 }
 
 func Call_fromFoldable(dictFoldable_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -370,7 +370,7 @@ _ = dictFoldable_0
 __local_var_1_0 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFoldable_0, "foldr"), pkg_Data_List_Lazy_Types.Get_cons(), pkg_Data_List_Lazy_Types.Get_nil())
 _ = __local_var_1_0
 return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_fromList(), gopurs_runtime.Apply(__local_var_1_0, x_2))
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_fromList(gopurs_runtime.Apply(__local_var_1_0, x_2)))}
 })
 }
 

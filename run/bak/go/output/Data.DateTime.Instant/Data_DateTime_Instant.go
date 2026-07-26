@@ -97,7 +97,7 @@ var once_instant sync.Once
 func Get_instant() gopurs_runtime.Value {
 	once_instant.Do(func() {
 		cache_instant = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_instant(v_0_box)
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_instant(v_0_box))}
 })
 	})
 	return cache_instant
@@ -162,7 +162,7 @@ _ = v_0
 return v_0
 }
 
-func Call_instant(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_instant(v_0_loop gopurs_runtime.Value) *pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value] {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 var __t0 gopurs_runtime.Value
@@ -178,7 +178,7 @@ goto end_branch_0
 __t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}
 }
 end_branch_0:
-return __t0
+return (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(__t0.UnsafePtr)
 }
 
 func Call_fromDateTime(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {

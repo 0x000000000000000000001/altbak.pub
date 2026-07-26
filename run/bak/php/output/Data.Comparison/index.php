@@ -103,10 +103,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_Comparison_append
-$GLOBALS['Data_Comparison_append'] = (function() {
-  $__fn = function($f_0 = null, $g_1 = null, $x_2 = null) use (&$__fn) {
+function majData_majComparison_append($f_0, $g_1 = null, $x_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majComparison_append';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
@@ -114,26 +116,30 @@ $GLOBALS['Data_Comparison_append'] = (function() {
   $__local_var_4_1 = ($g_1)($x_2);
   $__res = function($x_5 = null) use ($__local_var_3_0, $__local_var_4_1) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Ordering_semigroupOrdering'])['append'])(($__local_var_3_0)($x_5)))(($__local_var_4_1)($x_5));
+  $__res = (($GLOBALS['Data_Ordering_semigroupOrdering'])['append'])(($__local_var_3_0)($x_5), ($__local_var_4_1)($x_5));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_Comparison_append'] = __NAMESPACE__ . '\\majData_majComparison_append';
 
 // Data_Comparison_Comparison
-$GLOBALS['Data_Comparison_Comparison'] = function($x_0 = null) {
+function majData_majComparison_majComparison($x_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majComparison_majComparison';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $x_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Comparison_Comparison'] = __NAMESPACE__ . '\\majData_majComparison_majComparison';
 
 // Data_Comparison_semigroupComparison
 $GLOBALS['Data_Comparison_semigroupComparison'] = ["append" => (function() {
@@ -142,7 +148,7 @@ $GLOBALS['Data_Comparison_semigroupComparison'] = ["append" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_Comparison_append'])($v_0))($v1_1);
+  $__res = ($GLOBALS['Data_Comparison_append'])($v_0, $v1_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -166,7 +172,7 @@ $GLOBALS['Data_Comparison_monoidComparison'] = ["mempty" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data0("EQ");
+  $__res = new \Data\Ordering\Data_Ordering_EQ();
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -181,13 +187,18 @@ $GLOBALS['Data_Comparison_monoidComparison'] = ["mempty" => (function() {
 }];
 
 // Data_Comparison_defaultComparison
-$GLOBALS['Data_Comparison_defaultComparison'] = function($dictOrd_0 = null) {
+function majData_majComparison_defaultmajComparison($dictOrd_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majComparison_defaultmajComparison';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dictOrd_0)['compare'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Comparison_defaultComparison'] = __NAMESPACE__ . '\\majData_majComparison_defaultmajComparison';
 
 // Data_Comparison_contravariantComparison
 $GLOBALS['Data_Comparison_contravariantComparison'] = ["cmap" => (function() {
@@ -196,7 +207,7 @@ $GLOBALS['Data_Comparison_contravariantComparison'] = ["cmap" => (function() {
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = (($v_1)(($f_0)($x_2)))(($f_0)($y_3));
+  $__res = ($v_1)(($f_0)($x_2), ($f_0)($y_3));
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;

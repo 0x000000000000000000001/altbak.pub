@@ -119,12 +119,14 @@ $GLOBALS['Effect_Now_getTimezoneOffset'] = $ffi_Effect_Now['getTimezoneOffset'] 
 $GLOBALS['Effect_Now_now'] = $ffi_Effect_Now['now'] ?? new class { public function __invoke(...$args) { return $this; } };
 
 
+
+
 // Effect_Now_nowTime
-$GLOBALS['Effect_Now_nowTime'] = ((($GLOBALS['Effect_functorEffect'])['map'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_DateTime_time']))($GLOBALS['Data_DateTime_Instant_toDateTime'])))($GLOBALS['Effect_Now_now']);
+$GLOBALS['Effect_Now_nowTime'] = (($GLOBALS['Effect_functorEffect'])['map'])(($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_DateTime_time'], $GLOBALS['Data_DateTime_Instant_toDateTime']), $GLOBALS['Effect_Now_now']);
 
 // Effect_Now_nowDateTime
-$GLOBALS['Effect_Now_nowDateTime'] = ((($GLOBALS['Effect_functorEffect'])['map'])($GLOBALS['Data_DateTime_Instant_toDateTime']))($GLOBALS['Effect_Now_now']);
+$GLOBALS['Effect_Now_nowDateTime'] = (($GLOBALS['Effect_functorEffect'])['map'])($GLOBALS['Data_DateTime_Instant_toDateTime'], $GLOBALS['Effect_Now_now']);
 
 // Effect_Now_nowDate
-$GLOBALS['Effect_Now_nowDate'] = ((($GLOBALS['Effect_functorEffect'])['map'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_DateTime_date']))($GLOBALS['Data_DateTime_Instant_toDateTime'])))($GLOBALS['Effect_Now_now']);
+$GLOBALS['Effect_Now_nowDate'] = (($GLOBALS['Effect_functorEffect'])['map'])(($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_DateTime_date'], $GLOBALS['Data_DateTime_Instant_toDateTime']), $GLOBALS['Effect_Now_now']);
 

@@ -110,12 +110,18 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_Date_Gen_genDate
-$GLOBALS['Data_Date_Gen_genDate'] = function($dictMonadGen_0 = null) {
+function majData_majDate_majGen_genmajDate($dictMonadGen_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majDate_majGen_genmajDate';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $Monad0_1_0 = (($dictMonadGen_0)['Monad0'])(null);
   $Bind1_2_1 = (($Monad0_1_0)['Bind1'])(null);
-  $__res = ((($Bind1_2_1)['bind'])(($GLOBALS['Data_Date_Component_Gen_genYear'])($dictMonadGen_0)))(function($year_3 = null) use ($Bind1_2_1, $Monad0_1_0, $dictMonadGen_0) {
+  $__res = (($Bind1_2_1)['bind'])(($GLOBALS['Data_Date_Component_Gen_genYear'])($dictMonadGen_0), function($year_3 = null) use ($Bind1_2_1, $Monad0_1_0, $dictMonadGen_0) {
   $__num = \func_num_args();
   $__t2 = null;;
   if (($GLOBALS['Data_Date_isLeapYear'])($year_3)) {
@@ -124,17 +130,17 @@ goto end_branch_2;;
 };
   $__t2 = 364;
   end_branch_2:;
-  $__res = ((($Bind1_2_1)['bind'])(((((((($Bind1_2_1)['Apply0'])(null))['Functor0'])(null))['map'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Time_Duration_Days']))($GLOBALS['Data_Int_toNumber'])))(((($dictMonadGen_0)['chooseInt'])(0))($__t2))))(function($days_4 = null) use ($Monad0_1_0, $year_3) {
+  $__res = (($Bind1_2_1)['bind'])((((((($Bind1_2_1)['Apply0'])(null))['Functor0'])(null))['map'])(($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Time_Duration_Days'], $GLOBALS['Data_Int_toNumber']), (($dictMonadGen_0)['chooseInt'])(0, $__t2)), function($days_4 = null) use ($Monad0_1_0, $year_3) {
   $__num = \func_num_args();
-  $__local_var_5_3 = ((($GLOBALS['Data_Maybe_bindMaybe'])['bind'])(((($GLOBALS['Data_Date_exactDate'])($year_3))(($GLOBALS['Data_Date_Component_boundedMonth'])['bottom']))(($GLOBALS['Data_Date_Component_boundedDay'])['bottom'])))(function($janFirst_5 = null) use ($days_4) {
+  $__local_var_5_3 = (($GLOBALS['Data_Maybe_bindMaybe'])['bind'])(($GLOBALS['Data_Date_exactDate'])($year_3, ($GLOBALS['Data_Date_Component_boundedMonth'])['bottom'], ($GLOBALS['Data_Date_Component_boundedDay'])['bottom']), function($janFirst_5 = null) use ($days_4) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Date_adjust'])($days_4))($janFirst_5);
+  $__res = ($GLOBALS['Data_Date_adjust'])($days_4, $janFirst_5);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 });
   $__t4 = null;;
-  if ((is_object($__local_var_5_3) && (($__local_var_5_3)->{'tag'} === "Just"))) {
+  if ($__local_var_5_3 instanceof \Data\Maybe\Data_Maybe_Just) {
 $__t4 = ($__local_var_5_3)->{'value0'};
 goto end_branch_4;;
 };
@@ -152,6 +158,7 @@ goto end_branch_4;;
 });
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Date_Gen_genDate'] = __NAMESPACE__ . '\\majData_majDate_majGen_genmajDate';
 

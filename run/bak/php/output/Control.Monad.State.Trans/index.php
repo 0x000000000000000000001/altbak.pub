@@ -122,38 +122,49 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Control_Monad_State_Trans_StateT
-$GLOBALS['Control_Monad_State_Trans_StateT'] = function($x_0 = null) {
+function majControl_majMonad_majState_majTrans_majStatemajT($x_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majState_majTrans_majStatemajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $x_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_State_Trans_StateT'] = __NAMESPACE__ . '\\majControl_majMonad_majState_majTrans_majStatemajT';
 
 // Control_Monad_State_Trans_withStateT
-$GLOBALS['Control_Monad_State_Trans_withStateT'] = (function() {
-  $__fn = function($f_0 = null, $v_1 = null) use (&$__fn) {
+function majControl_majMonad_majState_majTrans_withmajStatemajT($f_0, $v_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majState_majTrans_withmajStatemajT';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($v_1))($f_0);
+  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($v_1, $f_0);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Control_Monad_State_Trans_withStateT'] = __NAMESPACE__ . '\\majControl_majMonad_majState_majTrans_withmajStatemajT';
 
 // Control_Monad_State_Trans_runStateT
-$GLOBALS['Control_Monad_State_Trans_runStateT'] = function($v_0 = null) {
+function majControl_majMonad_majState_majTrans_runmajStatemajT($v_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majState_majTrans_runmajStatemajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $v_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_State_Trans_runStateT'] = __NAMESPACE__ . '\\majControl_majMonad_majState_majTrans_runmajStatemajT';
 
 // Control_Monad_State_Trans_newtypeStateT
 $GLOBALS['Control_Monad_State_Trans_newtypeStateT'] = ["Coercible0" => function($_dollar__unused_0 = null) {
@@ -171,9 +182,9 @@ $GLOBALS['Control_Monad_State_Trans_monadTransStateT'] = ["lift" => (function() 
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((((($dictMonad_0)['Bind1'])(null))['bind'])($m_1))(function($x_3 = null) use ($dictMonad_0, $s_2) {
+  $__res = (((($dictMonad_0)['Bind1'])(null))['bind'])($m_1, function($x_3 = null) use ($dictMonad_0, $s_2) {
   $__num = \func_num_args();
-  $__res = (((($dictMonad_0)['Applicative0'])(null))['pure'])(new Phpurs_Data2("Tuple", $x_3, $s_2));
+  $__res = (((($dictMonad_0)['Applicative0'])(null))['pure'])(new \Data\Tuple\Data_Tuple_Tuple($x_3, $s_2));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -186,19 +197,18 @@ $GLOBALS['Control_Monad_State_Trans_monadTransStateT'] = ["lift" => (function() 
 })()];
 
 // Control_Monad_State_Trans_mapStateT
-$GLOBALS['Control_Monad_State_Trans_mapStateT'] = (function() {
-  $__fn = function($f_0 = null, $v_1 = null) use (&$__fn) {
+function majControl_majMonad_majState_majTrans_mapmajStatemajT($f_0, $v_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majState_majTrans_mapmajStatemajT';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($f_0))($v_1);
+  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($f_0, $v_1);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Control_Monad_State_Trans_mapStateT'] = __NAMESPACE__ . '\\majControl_majMonad_majState_majTrans_mapmajStatemajT';
 
 // Control_Monad_State_Trans_lazyStateT
 $GLOBALS['Control_Monad_State_Trans_lazyStateT'] = ["defer" => (function() {
@@ -207,7 +217,7 @@ $GLOBALS['Control_Monad_State_Trans_lazyStateT'] = ["defer" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($f_0)($GLOBALS['Data_Unit_unit']))($s_1);
+  $__res = ($f_0)($GLOBALS['Data_Unit_unit'], $s_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -216,21 +226,25 @@ $GLOBALS['Control_Monad_State_Trans_lazyStateT'] = ["defer" => (function() {
 })()];
 
 // Control_Monad_State_Trans_functorStateT
-$GLOBALS['Control_Monad_State_Trans_functorStateT'] = function($dictFunctor_0 = null) {
+function majControl_majMonad_majState_majTrans_functormajStatemajT($dictFunctor_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majState_majTrans_functormajStatemajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["map" => (function() use ($dictFunctor_0) {
   $__fn = function($f_1 = null, $v_2 = null, $s_3 = null) use ($dictFunctor_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($dictFunctor_0)['map'])(function($v1_4 = null) use ($f_1) {
+  $__res = (($dictFunctor_0)['map'])(function($v1_4 = null) use ($f_1) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Tuple", ($f_1)(($v1_4)->{'value0'}), ($v1_4)->{'value1'});
+  $__res = new \Data\Tuple\Data_Tuple_Tuple(($f_1)(($v1_4)->{'value0'}), ($v1_4)->{'value1'});
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(($v_2)($s_3));
+}, ($v_2)($s_3));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -239,42 +253,45 @@ $GLOBALS['Control_Monad_State_Trans_functorStateT'] = function($dictFunctor_0 = 
 })()];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_State_Trans_functorStateT'] = __NAMESPACE__ . '\\majControl_majMonad_majState_majTrans_functormajStatemajT';
 
 // Control_Monad_State_Trans_execStateT
-$GLOBALS['Control_Monad_State_Trans_execStateT'] = (function() {
-  $__fn = function($dictFunctor_0 = null, $v_1 = null, $s_2 = null) use (&$__fn) {
+function majControl_majMonad_majState_majTrans_execmajStatemajT($dictFunctor_0, $v_1 = null, $s_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majState_majTrans_execmajStatemajT';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($dictFunctor_0)['map'])($GLOBALS['Data_Tuple_snd']))(($v_1)($s_2));
+  $__res = (($dictFunctor_0)['map'])($GLOBALS['Data_Tuple_snd'], ($v_1)($s_2));
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Control_Monad_State_Trans_execStateT'] = __NAMESPACE__ . '\\majControl_majMonad_majState_majTrans_execmajStatemajT';
 
 // Control_Monad_State_Trans_evalStateT
-$GLOBALS['Control_Monad_State_Trans_evalStateT'] = (function() {
-  $__fn = function($dictFunctor_0 = null, $v_1 = null, $s_2 = null) use (&$__fn) {
+function majControl_majMonad_majState_majTrans_evalmajStatemajT($dictFunctor_0, $v_1 = null, $s_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majState_majTrans_evalmajStatemajT';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($dictFunctor_0)['map'])($GLOBALS['Data_Tuple_fst']))(($v_1)($s_2));
+  $__res = (($dictFunctor_0)['map'])($GLOBALS['Data_Tuple_fst'], ($v_1)($s_2));
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Control_Monad_State_Trans_evalStateT'] = __NAMESPACE__ . '\\majControl_majMonad_majState_majTrans_evalmajStatemajT';
 
 // Control_Monad_State_Trans_monadStateT
-$GLOBALS['Control_Monad_State_Trans_monadStateT'] = function($dictMonad_0 = null) {
+function majControl_majMonad_majState_majTrans_monadmajStatemajT($dictMonad_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majState_majTrans_monadmajStatemajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["Applicative0" => function($_dollar__unused_1 = null) use ($dictMonad_0) {
   $__num = \func_num_args();
   $__res = ($GLOBALS['Control_Monad_State_Trans_applicativeStateT'])($dictMonad_0);
@@ -290,21 +307,26 @@ $GLOBALS['Control_Monad_State_Trans_monadStateT'] = function($dictMonad_0 = null
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_State_Trans_monadStateT'] = __NAMESPACE__ . '\\majControl_majMonad_majState_majTrans_monadmajStatemajT';
 
 // Control_Monad_State_Trans_bindStateT
-$GLOBALS['Control_Monad_State_Trans_bindStateT'] = function($dictMonad_0 = null) {
+function majControl_majMonad_majState_majTrans_bindmajStatemajT($dictMonad_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majState_majTrans_bindmajStatemajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["bind" => (function() use ($dictMonad_0) {
   $__fn = function($v_1 = null, $f_2 = null, $s_3 = null) use ($dictMonad_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((((($dictMonad_0)['Bind1'])(null))['bind'])(($v_1)($s_3)))(function($v1_4 = null) use ($f_2) {
+  $__res = (((($dictMonad_0)['Bind1'])(null))['bind'])(($v_1)($s_3), function($v1_4 = null) use ($f_2) {
   $__num = \func_num_args();
-  $__res = (($f_2)(($v1_4)->{'value0'}))(($v1_4)->{'value1'});
+  $__res = ($f_2)(($v1_4)->{'value0'}, ($v1_4)->{'value1'});
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -323,12 +345,17 @@ $GLOBALS['Control_Monad_State_Trans_bindStateT'] = function($dictMonad_0 = null)
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_State_Trans_bindStateT'] = __NAMESPACE__ . '\\majControl_majMonad_majState_majTrans_bindmajStatemajT';
 
 // Control_Monad_State_Trans_applyStateT
-$GLOBALS['Control_Monad_State_Trans_applyStateT'] = function($dictMonad_0 = null) {
+function majControl_majMonad_majState_majTrans_applymajStatemajT($dictMonad_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majState_majTrans_applymajStatemajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__local_var_1_0 = (((((($dictMonad_0)['Bind1'])(null))['Apply0'])(null))['Functor0'])(null);
   $functorStateT1_2_1 = ["map" => (function() use ($__local_var_1_0) {
   $__fn = function($f_2 = null, $v_3 = null, $s_4 = null) use ($__local_var_1_0, &$__fn) {
@@ -336,13 +363,13 @@ $GLOBALS['Control_Monad_State_Trans_applyStateT'] = function($dictMonad_0 = null
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($__local_var_1_0)['map'])(function($v1_5 = null) use ($f_2) {
+  $__res = (($__local_var_1_0)['map'])(function($v1_5 = null) use ($f_2) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Tuple", ($f_2)(($v1_5)->{'value0'}), ($v1_5)->{'value1'});
+  $__res = new \Data\Tuple\Data_Tuple_Tuple(($f_2)(($v1_5)->{'value0'}), ($v1_5)->{'value1'});
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(($v_3)($s_4));
+}, ($v_3)($s_4));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -356,9 +383,9 @@ $GLOBALS['Control_Monad_State_Trans_applyStateT'] = function($dictMonad_0 = null
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($__local_var_3_2)['bind'])($f_4))(function($f_prime_6 = null) use ($__local_var_3_2, $a_5, $dictMonad_0) {
+  $__res = (($__local_var_3_2)['bind'])($f_4, function($f_prime_6 = null) use ($__local_var_3_2, $a_5, $dictMonad_0) {
   $__num = \func_num_args();
-  $__res = ((($__local_var_3_2)['bind'])($a_5))(function($a_prime_7 = null) use ($dictMonad_0, $f_prime_6) {
+  $__res = (($__local_var_3_2)['bind'])($a_5, function($a_prime_7 = null) use ($dictMonad_0, $f_prime_6) {
   $__num = \func_num_args();
   $__res = ((($GLOBALS['Control_Monad_State_Trans_applicativeStateT'])($dictMonad_0))['pure'])(($f_prime_6)($a_prime_7));
   goto __end;;
@@ -383,19 +410,24 @@ $GLOBALS['Control_Monad_State_Trans_applyStateT'] = function($dictMonad_0 = null
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_State_Trans_applyStateT'] = __NAMESPACE__ . '\\majControl_majMonad_majState_majTrans_applymajStatemajT';
 
 // Control_Monad_State_Trans_applicativeStateT
-$GLOBALS['Control_Monad_State_Trans_applicativeStateT'] = function($dictMonad_0 = null) {
+function majControl_majMonad_majState_majTrans_applicativemajStatemajT($dictMonad_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majState_majTrans_applicativemajStatemajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["pure" => (function() use ($dictMonad_0) {
   $__fn = function($a_1 = null, $s_2 = null) use ($dictMonad_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($dictMonad_0)['Applicative0'])(null))['pure'])(new Phpurs_Data2("Tuple", $a_1, $s_2));
+  $__res = (((($dictMonad_0)['Applicative0'])(null))['pure'])(new \Data\Tuple\Data_Tuple_Tuple($a_1, $s_2));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -410,12 +442,17 @@ $GLOBALS['Control_Monad_State_Trans_applicativeStateT'] = function($dictMonad_0 
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_State_Trans_applicativeStateT'] = __NAMESPACE__ . '\\majControl_majMonad_majState_majTrans_applicativemajStatemajT';
 
 // Control_Monad_State_Trans_semigroupStateT
-$GLOBALS['Control_Monad_State_Trans_semigroupStateT'] = function($dictMonad_0 = null) {
+function majControl_majMonad_majState_majTrans_semigroupmajStatemajT($dictMonad_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majState_majTrans_semigroupmajStatemajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__local_var_1_0 = ($GLOBALS['Control_Monad_State_Trans_applyStateT'])($dictMonad_0);
   $__res = function($dictSemigroup_2 = null) use ($__local_var_1_0) {
   $__num = \func_num_args();
@@ -426,7 +463,7 @@ $GLOBALS['Control_Monad_State_Trans_semigroupStateT'] = function($dictMonad_0 = 
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($__local_var_1_0)['apply'])(((((($__local_var_1_0)['Functor0'])(null))['map'])($__local_var_3_1))($a_4)))($b_5);
+  $__res = (($__local_var_1_0)['apply'])((((($__local_var_1_0)['Functor0'])(null))['map'])($__local_var_3_1, $a_4), $b_5);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -439,12 +476,17 @@ $GLOBALS['Control_Monad_State_Trans_semigroupStateT'] = function($dictMonad_0 = 
 };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_State_Trans_semigroupStateT'] = __NAMESPACE__ . '\\majControl_majMonad_majState_majTrans_semigroupmajStatemajT';
 
 // Control_Monad_State_Trans_monadAskStateT
-$GLOBALS['Control_Monad_State_Trans_monadAskStateT'] = function($dictMonadAsk_0 = null) {
+function majControl_majMonad_majState_majTrans_monadmajAskmajStatemajT($dictMonadAsk_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majState_majTrans_monadmajAskmajStatemajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $Monad0_1_0 = (($dictMonadAsk_0)['Monad0'])(null);
   $monadStateT1_2_1 = ["Applicative0" => function($_dollar__unused_2 = null) use ($Monad0_1_0) {
   $__num = \func_num_args();
@@ -459,7 +501,7 @@ $GLOBALS['Control_Monad_State_Trans_monadAskStateT'] = function($dictMonadAsk_0 
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = ["ask" => ((($GLOBALS['Control_Monad_State_Trans_monadTransStateT'])['lift'])($Monad0_1_0))(($dictMonadAsk_0)['ask']), "Monad0" => function($_dollar__unused_3 = null) use ($monadStateT1_2_1) {
+  $__res = ["ask" => (($GLOBALS['Control_Monad_State_Trans_monadTransStateT'])['lift'])($Monad0_1_0, ($dictMonadAsk_0)['ask']), "Monad0" => function($_dollar__unused_3 = null) use ($monadStateT1_2_1) {
   $__num = \func_num_args();
   $__res = $monadStateT1_2_1;
   goto __end;;
@@ -468,14 +510,19 @@ $GLOBALS['Control_Monad_State_Trans_monadAskStateT'] = function($dictMonadAsk_0 
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_State_Trans_monadAskStateT'] = __NAMESPACE__ . '\\majControl_majMonad_majState_majTrans_monadmajAskmajStatemajT';
 
 // Control_Monad_State_Trans_monadReaderStateT
-$GLOBALS['Control_Monad_State_Trans_monadReaderStateT'] = function($dictMonadReader_0 = null) {
+function majControl_majMonad_majState_majTrans_monadmajReadermajStatemajT($dictMonadReader_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majState_majTrans_monadmajReadermajStatemajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $monadAskStateT1_1_0 = ($GLOBALS['Control_Monad_State_Trans_monadAskStateT'])((($dictMonadReader_0)['MonadAsk0'])(null));
-  $__res = ["local" => (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_State_Trans_mapStateT']))(($dictMonadReader_0)['local']), "MonadAsk0" => function($_dollar__unused_2 = null) use ($monadAskStateT1_1_0) {
+  $__res = ["local" => ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_State_Trans_mapStateT'], ($dictMonadReader_0)['local']), "MonadAsk0" => function($_dollar__unused_2 = null) use ($monadAskStateT1_1_0) {
   $__num = \func_num_args();
   $__res = $monadAskStateT1_1_0;
   goto __end;;
@@ -484,12 +531,17 @@ $GLOBALS['Control_Monad_State_Trans_monadReaderStateT'] = function($dictMonadRea
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_State_Trans_monadReaderStateT'] = __NAMESPACE__ . '\\majControl_majMonad_majState_majTrans_monadmajReadermajStatemajT';
 
 // Control_Monad_State_Trans_monadContStateT
-$GLOBALS['Control_Monad_State_Trans_monadContStateT'] = function($dictMonadCont_0 = null) {
+function majControl_majMonad_majState_majTrans_monadmajContmajStatemajT($dictMonadCont_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majState_majTrans_monadmajContmajStatemajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__local_var_1_0 = (($dictMonadCont_0)['Monad0'])(null);
   $monadStateT1_2_1 = ["Applicative0" => function($_dollar__unused_2 = null) use ($__local_var_1_0) {
   $__num = \func_num_args();
@@ -512,19 +564,19 @@ $GLOBALS['Control_Monad_State_Trans_monadContStateT'] = function($dictMonadCont_
   }
   $__res = (($dictMonadCont_0)['callCC'])(function($c_5 = null) use ($f_3, $s_4) {
   $__num = \func_num_args();
-  $__res = (($f_3)((function() use ($c_5) {
+  $__res = ($f_3)((function() use ($c_5) {
   $__fn = function($a_6 = null, $s_prime_7 = null) use ($c_5, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($c_5)(new Phpurs_Data2("Tuple", $a_6, $s_prime_7));
+  $__res = ($c_5)(new \Data\Tuple\Data_Tuple_Tuple($a_6, $s_prime_7));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))($s_4);
+})(), $s_4);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -543,12 +595,17 @@ $GLOBALS['Control_Monad_State_Trans_monadContStateT'] = function($dictMonadCont_
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_State_Trans_monadContStateT'] = __NAMESPACE__ . '\\majControl_majMonad_majState_majTrans_monadmajContmajStatemajT';
 
 // Control_Monad_State_Trans_monadEffectState
-$GLOBALS['Control_Monad_State_Trans_monadEffectState'] = function($dictMonadEffect_0 = null) {
+function majControl_majMonad_majState_majTrans_monadmajEffectmajState($dictMonadEffect_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majState_majTrans_monadmajEffectmajState';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $Monad0_1_0 = (($dictMonadEffect_0)['Monad0'])(null);
   $monadStateT1_2_1 = ["Applicative0" => function($_dollar__unused_2 = null) use ($Monad0_1_0) {
   $__num = \func_num_args();
@@ -563,7 +620,7 @@ $GLOBALS['Control_Monad_State_Trans_monadEffectState'] = function($dictMonadEffe
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = ["liftEffect" => (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_State_Trans_monadTransStateT'])['lift'])($Monad0_1_0)))(($dictMonadEffect_0)['liftEffect']), "Monad0" => function($_dollar__unused_3 = null) use ($monadStateT1_2_1) {
+  $__res = ["liftEffect" => ($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_State_Trans_monadTransStateT'])['lift'])($Monad0_1_0), ($dictMonadEffect_0)['liftEffect']), "Monad0" => function($_dollar__unused_3 = null) use ($monadStateT1_2_1) {
   $__num = \func_num_args();
   $__res = $monadStateT1_2_1;
   goto __end;;
@@ -572,12 +629,17 @@ $GLOBALS['Control_Monad_State_Trans_monadEffectState'] = function($dictMonadEffe
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_State_Trans_monadEffectState'] = __NAMESPACE__ . '\\majControl_majMonad_majState_majTrans_monadmajEffectmajState';
 
 // Control_Monad_State_Trans_monadRecStateT
-$GLOBALS['Control_Monad_State_Trans_monadRecStateT'] = function($dictMonadRec_0 = null) {
+function majControl_majMonad_majState_majTrans_monadmajRecmajStatemajT($dictMonadRec_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majState_majTrans_monadmajRecmajStatemajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $Monad0_1_0 = (($dictMonadRec_0)['Monad0'])(null);
   $monadStateT1_2_1 = ["Applicative0" => function($_dollar__unused_2 = null) use ($Monad0_1_0) {
   $__num = \func_num_args();
@@ -598,17 +660,17 @@ $GLOBALS['Control_Monad_State_Trans_monadRecStateT'] = function($dictMonadRec_0 
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($dictMonadRec_0)['tailRecM'])(function($v_6 = null) use ($Monad0_1_0, $f_3) {
+  $__res = (($dictMonadRec_0)['tailRecM'])(function($v_6 = null) use ($Monad0_1_0, $f_3) {
   $__num = \func_num_args();
-  $__res = ((((($Monad0_1_0)['Bind1'])(null))['bind'])((($f_3)(($v_6)->{'value0'}))(($v_6)->{'value1'})))(function($v2_7 = null) use ($Monad0_1_0) {
+  $__res = (((($Monad0_1_0)['Bind1'])(null))['bind'])(($f_3)(($v_6)->{'value0'}, ($v_6)->{'value1'}), function($v2_7 = null) use ($Monad0_1_0) {
   $__num = \func_num_args();
   $__t2 = null;;
-  if ((is_object(($v2_7)->{'value0'}) && ((($v2_7)->{'value0'})->{'tag'} === "Loop"))) {
-$__t2 = new Phpurs_Data1("Loop", new Phpurs_Data2("Tuple", (($v2_7)->{'value0'})->{'value0'}, ($v2_7)->{'value1'}));
+  if (($v2_7)->{'value0'} instanceof \Control\Monad\Rec\Class\Control_Monad_Rec_Class_Loop) {
+$__t2 = new \Control\Monad\Rec\Class\Control_Monad_Rec_Class_Loop(new \Data\Tuple\Data_Tuple_Tuple((($v2_7)->{'value0'})->{'value0'}, ($v2_7)->{'value1'}));
 goto end_branch_2;;
 };
-  if ((is_object(($v2_7)->{'value0'}) && ((($v2_7)->{'value0'})->{'tag'} === "Done"))) {
-$__t2 = new Phpurs_Data1("Done", new Phpurs_Data2("Tuple", (($v2_7)->{'value0'})->{'value0'}, ($v2_7)->{'value1'}));
+  if (($v2_7)->{'value0'} instanceof \Control\Monad\Rec\Class\Control_Monad_Rec_Class_Done) {
+$__t2 = new \Control\Monad\Rec\Class\Control_Monad_Rec_Class_Done(new \Data\Tuple\Data_Tuple_Tuple((($v2_7)->{'value0'})->{'value0'}, ($v2_7)->{'value1'}));
 goto end_branch_2;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -622,7 +684,7 @@ goto end_branch_2;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(new Phpurs_Data2("Tuple", $a_4, $s_5));
+}, new \Data\Tuple\Data_Tuple_Tuple($a_4, $s_5));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -637,12 +699,17 @@ goto end_branch_2;;
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_State_Trans_monadRecStateT'] = __NAMESPACE__ . '\\majControl_majMonad_majState_majTrans_monadmajRecmajStatemajT';
 
 // Control_Monad_State_Trans_monadStateStateT
-$GLOBALS['Control_Monad_State_Trans_monadStateStateT'] = function($dictMonad_0 = null) {
+function majControl_majMonad_majState_majTrans_monadmajStatemajStatemajT($dictMonad_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majState_majTrans_monadmajStatemajStatemajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $pure_1_0 = ((($dictMonad_0)['Applicative0'])(null))['pure'];
   $monadStateT1_2_1 = ["Applicative0" => function($_dollar__unused_2 = null) use ($dictMonad_0) {
   $__num = \func_num_args();
@@ -659,7 +726,7 @@ $GLOBALS['Control_Monad_State_Trans_monadStateStateT'] = function($dictMonad_0 =
 }];
   $__res = ["state" => function($f_3 = null) use ($pure_1_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($pure_1_0))($f_3);
+  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($pure_1_0, $f_3);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -672,12 +739,17 @@ $GLOBALS['Control_Monad_State_Trans_monadStateStateT'] = function($dictMonad_0 =
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_State_Trans_monadStateStateT'] = __NAMESPACE__ . '\\majControl_majMonad_majState_majTrans_monadmajStatemajStatemajT';
 
 // Control_Monad_State_Trans_monadTellStateT
-$GLOBALS['Control_Monad_State_Trans_monadTellStateT'] = function($dictMonadTell_0 = null) {
+function majControl_majMonad_majState_majTrans_monadmajTellmajStatemajT($dictMonadTell_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majState_majTrans_monadmajTellmajStatemajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $Monad1_1_0 = (($dictMonadTell_0)['Monad1'])(null);
   $Semigroup0_2_1 = (($dictMonadTell_0)['Semigroup0'])(null);
   $monadStateT1_3_2 = ["Applicative0" => function($_dollar__unused_3 = null) use ($Monad1_1_0) {
@@ -693,7 +765,7 @@ $GLOBALS['Control_Monad_State_Trans_monadTellStateT'] = function($dictMonadTell_
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = ["tell" => (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_State_Trans_monadTransStateT'])['lift'])($Monad1_1_0)))(($dictMonadTell_0)['tell']), "Semigroup0" => function($_dollar__unused_4 = null) use ($Semigroup0_2_1) {
+  $__res = ["tell" => ($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_State_Trans_monadTransStateT'])['lift'])($Monad1_1_0), ($dictMonadTell_0)['tell']), "Semigroup0" => function($_dollar__unused_4 = null) use ($Semigroup0_2_1) {
   $__num = \func_num_args();
   $__res = $Semigroup0_2_1;
   goto __end;;
@@ -708,12 +780,17 @@ $GLOBALS['Control_Monad_State_Trans_monadTellStateT'] = function($dictMonadTell_
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_State_Trans_monadTellStateT'] = __NAMESPACE__ . '\\majControl_majMonad_majState_majTrans_monadmajTellmajStatemajT';
 
 // Control_Monad_State_Trans_monadWriterStateT
-$GLOBALS['Control_Monad_State_Trans_monadWriterStateT'] = function($dictMonadWriter_0 = null) {
+function majControl_majMonad_majState_majTrans_monadmajWritermajStatemajT($dictMonadWriter_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majState_majTrans_monadmajWritermajStatemajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $MonadTell1_1_0 = (($dictMonadWriter_0)['MonadTell1'])(null);
   $Monad1_2_1 = (($MonadTell1_1_0)['Monad1'])(null);
   $__local_var_3_2 = (($Monad1_2_1)['Bind1'])(null);
@@ -726,9 +803,9 @@ $GLOBALS['Control_Monad_State_Trans_monadWriterStateT'] = function($dictMonadWri
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($__local_var_3_2)['bind'])((($dictMonadWriter_0)['listen'])(($m_7)($s_8))))(function($v_9 = null) use ($__local_var_4_3) {
+  $__res = (($__local_var_3_2)['bind'])((($dictMonadWriter_0)['listen'])(($m_7)($s_8)), function($v_9 = null) use ($__local_var_4_3) {
   $__num = \func_num_args();
-  $__res = (($__local_var_4_3)['pure'])(new Phpurs_Data2("Tuple", new Phpurs_Data2("Tuple", (($v_9)->{'value0'})->{'value0'}, ($v_9)->{'value1'}), (($v_9)->{'value0'})->{'value1'}));
+  $__res = (($__local_var_4_3)['pure'])(new \Data\Tuple\Data_Tuple_Tuple(new \Data\Tuple\Data_Tuple_Tuple((($v_9)->{'value0'})->{'value0'}, ($v_9)->{'value1'}), (($v_9)->{'value0'})->{'value1'}));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -744,9 +821,9 @@ $GLOBALS['Control_Monad_State_Trans_monadWriterStateT'] = function($dictMonadWri
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictMonadWriter_0)['pass'])(((($__local_var_3_2)['bind'])(($m_7)($s_8)))(function($v_9 = null) use ($__local_var_4_3) {
+  $__res = (($dictMonadWriter_0)['pass'])((($__local_var_3_2)['bind'])(($m_7)($s_8), function($v_9 = null) use ($__local_var_4_3) {
   $__num = \func_num_args();
-  $__res = (($__local_var_4_3)['pure'])(new Phpurs_Data2("Tuple", new Phpurs_Data2("Tuple", (($v_9)->{'value0'})->{'value0'}, ($v_9)->{'value1'}), (($v_9)->{'value0'})->{'value1'}));
+  $__res = (($__local_var_4_3)['pure'])(new \Data\Tuple\Data_Tuple_Tuple(new \Data\Tuple\Data_Tuple_Tuple((($v_9)->{'value0'})->{'value0'}, ($v_9)->{'value1'}), (($v_9)->{'value0'})->{'value1'}));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -771,12 +848,17 @@ $GLOBALS['Control_Monad_State_Trans_monadWriterStateT'] = function($dictMonadWri
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_State_Trans_monadWriterStateT'] = __NAMESPACE__ . '\\majControl_majMonad_majState_majTrans_monadmajWritermajStatemajT';
 
 // Control_Monad_State_Trans_monadThrowStateT
-$GLOBALS['Control_Monad_State_Trans_monadThrowStateT'] = function($dictMonadThrow_0 = null) {
+function majControl_majMonad_majState_majTrans_monadmajThrowmajStatemajT($dictMonadThrow_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majState_majTrans_monadmajThrowmajStatemajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $Monad0_1_0 = (($dictMonadThrow_0)['Monad0'])(null);
   $lift1_2_1 = (($GLOBALS['Control_Monad_State_Trans_monadTransStateT'])['lift'])($Monad0_1_0);
   $monadStateT1_3_2 = ["Applicative0" => function($_dollar__unused_3 = null) use ($Monad0_1_0) {
@@ -807,12 +889,17 @@ $GLOBALS['Control_Monad_State_Trans_monadThrowStateT'] = function($dictMonadThro
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_State_Trans_monadThrowStateT'] = __NAMESPACE__ . '\\majControl_majMonad_majState_majTrans_monadmajThrowmajStatemajT';
 
 // Control_Monad_State_Trans_monadErrorStateT
-$GLOBALS['Control_Monad_State_Trans_monadErrorStateT'] = function($dictMonadError_0 = null) {
+function majControl_majMonad_majState_majTrans_monadmajErrormajStatemajT($dictMonadError_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majState_majTrans_monadmajErrormajStatemajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $monadThrowStateT1_1_0 = ($GLOBALS['Control_Monad_State_Trans_monadThrowStateT'])((($dictMonadError_0)['MonadThrow0'])(null));
   $__res = ["catchError" => (function() use ($dictMonadError_0) {
   $__fn = function($v_2 = null, $h_3 = null, $s_4 = null) use ($dictMonadError_0, &$__fn) {
@@ -820,9 +907,9 @@ $GLOBALS['Control_Monad_State_Trans_monadErrorStateT'] = function($dictMonadErro
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($dictMonadError_0)['catchError'])(($v_2)($s_4)))(function($e_5 = null) use ($h_3, $s_4) {
+  $__res = (($dictMonadError_0)['catchError'])(($v_2)($s_4), function($e_5 = null) use ($h_3, $s_4) {
   $__num = \func_num_args();
-  $__res = (($h_3)($e_5))($s_4);
+  $__res = ($h_3)($e_5, $s_4);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -841,12 +928,17 @@ $GLOBALS['Control_Monad_State_Trans_monadErrorStateT'] = function($dictMonadErro
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_State_Trans_monadErrorStateT'] = __NAMESPACE__ . '\\majControl_majMonad_majState_majTrans_monadmajErrormajStatemajT';
 
 // Control_Monad_State_Trans_monadSTStateT
-$GLOBALS['Control_Monad_State_Trans_monadSTStateT'] = function($dictMonadST_0 = null) {
+function majControl_majMonad_majState_majTrans_monadmajSmajTmajStatemajT($dictMonadST_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majState_majTrans_monadmajSmajTmajStatemajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $Monad0_1_0 = (($dictMonadST_0)['Monad0'])(null);
   $monadStateT1_2_1 = ["Applicative0" => function($_dollar__unused_2 = null) use ($Monad0_1_0) {
   $__num = \func_num_args();
@@ -861,7 +953,7 @@ $GLOBALS['Control_Monad_State_Trans_monadSTStateT'] = function($dictMonadST_0 = 
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = ["liftST" => (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_State_Trans_monadTransStateT'])['lift'])($Monad0_1_0)))(($dictMonadST_0)['liftST']), "Monad0" => function($_dollar__unused_3 = null) use ($monadStateT1_2_1) {
+  $__res = ["liftST" => ($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_State_Trans_monadTransStateT'])['lift'])($Monad0_1_0), ($dictMonadST_0)['liftST']), "Monad0" => function($_dollar__unused_3 = null) use ($monadStateT1_2_1) {
   $__num = \func_num_args();
   $__res = $monadStateT1_2_1;
   goto __end;;
@@ -870,12 +962,17 @@ $GLOBALS['Control_Monad_State_Trans_monadSTStateT'] = function($dictMonadST_0 = 
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_State_Trans_monadSTStateT'] = __NAMESPACE__ . '\\majControl_majMonad_majState_majTrans_monadmajSmajTmajStatemajT';
 
 // Control_Monad_State_Trans_monoidStateT
-$GLOBALS['Control_Monad_State_Trans_monoidStateT'] = function($dictMonad_0 = null) {
+function majControl_majMonad_majState_majTrans_monoidmajStatemajT($dictMonad_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majState_majTrans_monoidmajStatemajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $semigroupStateT1_1_0 = ($GLOBALS['Control_Monad_State_Trans_semigroupStateT'])($dictMonad_0);
   $__res = function($dictMonoid_2 = null) use ($dictMonad_0, $semigroupStateT1_1_0) {
   $__num = \func_num_args();
@@ -893,13 +990,14 @@ $GLOBALS['Control_Monad_State_Trans_monoidStateT'] = function($dictMonad_0 = nul
 };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_State_Trans_monoidStateT'] = __NAMESPACE__ . '\\majControl_majMonad_majState_majTrans_monoidmajStatemajT';
 
 // Control_Monad_State_Trans_altStateT
-$GLOBALS['Control_Monad_State_Trans_altStateT'] = (function() {
-  $__fn = function($dictMonad_0 = null, $dictAlt_1 = null) use (&$__fn) {
+function majControl_majMonad_majState_majTrans_altmajStatemajT($dictMonad_0, $dictAlt_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majState_majTrans_altmajStatemajT';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
@@ -910,13 +1008,13 @@ $GLOBALS['Control_Monad_State_Trans_altStateT'] = (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($__local_var_2_0)['map'])(function($v1_6 = null) use ($f_3) {
+  $__res = (($__local_var_2_0)['map'])(function($v1_6 = null) use ($f_3) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Tuple", ($f_3)(($v1_6)->{'value0'}), ($v1_6)->{'value1'});
+  $__res = new \Data\Tuple\Data_Tuple_Tuple(($f_3)(($v1_6)->{'value0'}), ($v1_6)->{'value1'});
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(($v_4)($s_5));
+}, ($v_4)($s_5));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -929,7 +1027,7 @@ $GLOBALS['Control_Monad_State_Trans_altStateT'] = (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($dictAlt_1)['alt'])(($v_4)($s_6)))(($v1_5)($s_6));
+  $__res = (($dictAlt_1)['alt'])(($v_4)($s_6), ($v1_5)($s_6));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -944,15 +1042,14 @@ $GLOBALS['Control_Monad_State_Trans_altStateT'] = (function() {
 }];
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Control_Monad_State_Trans_altStateT'] = __NAMESPACE__ . '\\majControl_majMonad_majState_majTrans_altmajStatemajT';
 
 // Control_Monad_State_Trans_plusStateT
-$GLOBALS['Control_Monad_State_Trans_plusStateT'] = (function() {
-  $__fn = function($dictMonad_0 = null, $dictPlus_1 = null) use (&$__fn) {
+function majControl_majMonad_majState_majTrans_plusmajStatemajT($dictMonad_0, $dictPlus_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majState_majTrans_plusmajStatemajT';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
@@ -965,13 +1062,13 @@ $GLOBALS['Control_Monad_State_Trans_plusStateT'] = (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($__local_var_4_2)['map'])(function($v1_8 = null) use ($f_5) {
+  $__res = (($__local_var_4_2)['map'])(function($v1_8 = null) use ($f_5) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Tuple", ($f_5)(($v1_8)->{'value0'}), ($v1_8)->{'value1'});
+  $__res = new \Data\Tuple\Data_Tuple_Tuple(($f_5)(($v1_8)->{'value0'}), ($v1_8)->{'value1'});
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(($v_6)($s_7));
+}, ($v_6)($s_7));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -984,7 +1081,7 @@ $GLOBALS['Control_Monad_State_Trans_plusStateT'] = (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($__local_var_3_1)['alt'])(($v_6)($s_8)))(($v1_7)($s_8));
+  $__res = (($__local_var_3_1)['alt'])(($v_6)($s_8), ($v1_7)($s_8));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -1012,14 +1109,17 @@ $GLOBALS['Control_Monad_State_Trans_plusStateT'] = (function() {
 }];
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Control_Monad_State_Trans_plusStateT'] = __NAMESPACE__ . '\\majControl_majMonad_majState_majTrans_plusmajStatemajT';
 
 // Control_Monad_State_Trans_alternativeStateT
-$GLOBALS['Control_Monad_State_Trans_alternativeStateT'] = function($dictMonad_0 = null) {
+function majControl_majMonad_majState_majTrans_alternativemajStatemajT($dictMonad_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majState_majTrans_alternativemajStatemajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $applicativeStateT1_1_0 = ($GLOBALS['Control_Monad_State_Trans_applicativeStateT'])($dictMonad_0);
   $__res = function($dictAlternative_2 = null) use ($applicativeStateT1_1_0) {
   $__num = \func_num_args();
@@ -1033,13 +1133,13 @@ $GLOBALS['Control_Monad_State_Trans_alternativeStateT'] = function($dictMonad_0 
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($__local_var_6_4)['map'])(function($v1_10 = null) use ($f_7) {
+  $__res = (($__local_var_6_4)['map'])(function($v1_10 = null) use ($f_7) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Tuple", ($f_7)(($v1_10)->{'value0'}), ($v1_10)->{'value1'});
+  $__res = new \Data\Tuple\Data_Tuple_Tuple(($f_7)(($v1_10)->{'value0'}), ($v1_10)->{'value1'});
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(($v_8)($s_9));
+}, ($v_8)($s_9));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -1052,7 +1152,7 @@ $GLOBALS['Control_Monad_State_Trans_alternativeStateT'] = function($dictMonad_0 
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($__local_var_5_3)['alt'])(($v_8)($s_10)))(($v1_9)($s_10));
+  $__res = (($__local_var_5_3)['alt'])(($v_8)($s_10), ($v1_9)($s_10));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -1097,12 +1197,17 @@ $GLOBALS['Control_Monad_State_Trans_alternativeStateT'] = function($dictMonad_0 
 };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_State_Trans_alternativeStateT'] = __NAMESPACE__ . '\\majControl_majMonad_majState_majTrans_alternativemajStatemajT';
 
 // Control_Monad_State_Trans_monadPlusStateT
-$GLOBALS['Control_Monad_State_Trans_monadPlusStateT'] = function($dictMonadPlus_0 = null) {
+function majControl_majMonad_majState_majTrans_monadmajPlusmajStatemajT($dictMonadPlus_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majState_majTrans_monadmajPlusmajStatemajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $Monad0_1_0 = (($dictMonadPlus_0)['Monad0'])(null);
   $monadStateT1_2_1 = ["Applicative0" => function($_dollar__unused_2 = null) use ($Monad0_1_0) {
   $__num = \func_num_args();
@@ -1117,7 +1222,7 @@ $GLOBALS['Control_Monad_State_Trans_monadPlusStateT'] = function($dictMonadPlus_
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $alternativeStateT1_3_2 = (($GLOBALS['Control_Monad_State_Trans_alternativeStateT'])($Monad0_1_0))((($dictMonadPlus_0)['Alternative1'])(null));
+  $alternativeStateT1_3_2 = ($GLOBALS['Control_Monad_State_Trans_alternativeStateT'])($Monad0_1_0, (($dictMonadPlus_0)['Alternative1'])(null));
   $__res = ["Monad0" => function($_dollar__unused_4 = null) use ($monadStateT1_2_1) {
   $__num = \func_num_args();
   $__res = $monadStateT1_2_1;
@@ -1133,6 +1238,7 @@ $GLOBALS['Control_Monad_State_Trans_monadPlusStateT'] = function($dictMonadPlus_
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_State_Trans_monadPlusStateT'] = __NAMESPACE__ . '\\majControl_majMonad_majState_majTrans_monadmajPlusmajStatemajT';
 

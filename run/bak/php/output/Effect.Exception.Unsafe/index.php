@@ -98,9 +98,39 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
+// Effect_Exception_Unsafe_unsafeThrowException_closure
+$GLOBALS['Effect_Exception_Unsafe_unsafeThrowException_closure'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Effect_Unsafe_unsafePerformEffect'], $GLOBALS['Effect_Exception_throwException']);
+
 // Effect_Exception_Unsafe_unsafeThrowException
-$GLOBALS['Effect_Exception_Unsafe_unsafeThrowException'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Effect_Unsafe_unsafePerformEffect']))($GLOBALS['Effect_Exception_throwException']);
+function majEffect_majException_majUnsafe_unsafemajThrowmajException($v_0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majEffect_majException_majUnsafe_unsafemajThrowmajException';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ($GLOBALS['Effect_Exception_Unsafe_unsafeThrowException_closure'])($v_0);
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Effect_Exception_Unsafe_unsafeThrowException'] = __NAMESPACE__ . '\\majEffect_majException_majUnsafe_unsafemajThrowmajException';
+
+// Effect_Exception_Unsafe_unsafeThrow_closure
+$GLOBALS['Effect_Exception_Unsafe_unsafeThrow_closure'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Effect_Exception_Unsafe_unsafeThrowException'], $GLOBALS['Effect_Exception_error']);
 
 // Effect_Exception_Unsafe_unsafeThrow
-$GLOBALS['Effect_Exception_Unsafe_unsafeThrow'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Effect_Exception_Unsafe_unsafeThrowException']))($GLOBALS['Effect_Exception_error']);
+function majEffect_majException_majUnsafe_unsafemajThrow($v_0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majEffect_majException_majUnsafe_unsafemajThrow';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ($GLOBALS['Effect_Exception_Unsafe_unsafeThrow_closure'])($v_0);
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Effect_Exception_Unsafe_unsafeThrow'] = __NAMESPACE__ . '\\majEffect_majException_majUnsafe_unsafemajThrow';
 

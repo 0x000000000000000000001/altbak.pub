@@ -97,15 +97,17 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_List_Partial_tail
-$GLOBALS['Data_List_Partial_tail'] = (function() {
-  $__fn = function($_dollar__unused_0 = null, $v_1 = null) use (&$__fn) {
+function majData_majList_majPartial_tail($_dollar__unused_0, $v_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majPartial_tail';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__t0 = null;;
-  if ((is_object($v_1) && (($v_1)->{'tag'} === "Cons"))) {
+  if ($v_1 instanceof \Data\List\Types\Data_List_Types_Cons) {
 $__t0 = ($v_1)->{'value1'};
 goto end_branch_0;;
 };
@@ -115,15 +117,14 @@ goto end_branch_0;;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_List_Partial_tail'] = __NAMESPACE__ . '\\majData_majList_majPartial_tail';
 
 // Data_List_Partial_last
-$GLOBALS['Data_List_Partial_last'] = (function() {
-  $__fn = function($_dollar__unused_0 = null, $v_1 = null) use (&$__fn) {
+function majData_majList_majPartial_last($_dollar__unused_0, $v_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majPartial_last';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
@@ -133,9 +134,9 @@ $GLOBALS['Data_List_Partial_last'] = (function() {
   $_dollar__unused_0 = $__tco_var_Data_List_Partial_last__dollar__unused_0;
   $v_1 = $__tco_var_Data_List_Partial_last_v_1;
   $__t0 = null;;
-  if ((is_object($v_1) && (($v_1)->{'tag'} === "Cons"))) {
+  if ($v_1 instanceof \Data\List\Types\Data_List_Types_Cons) {
 $__t3 = null;;
-if ((is_object(($v_1)->{'value1'}) && ((($v_1)->{'value1'})->{'tag'} === "Nil"))) {
+if (($v_1)->{'value1'} instanceof \Data\List\Types\Data_List_Types_Nil) {
 $__t3 = ($v_1)->{'value0'};
 goto end_branch_3;;
 };
@@ -155,15 +156,14 @@ goto end_branch_0;;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_List_Partial_last'] = __NAMESPACE__ . '\\majData_majList_majPartial_last';
 
 // Data_List_Partial_init
-$GLOBALS['Data_List_Partial_init'] = (function() {
-  $__fn = function($_dollar__unused_0 = null, $v_1 = null) use (&$__fn) {
+function majData_majList_majPartial_init($_dollar__unused_0, $v_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majPartial_init';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
@@ -173,13 +173,13 @@ $GLOBALS['Data_List_Partial_init'] = (function() {
   $_dollar__unused_0 = $__tco_var_Data_List_Partial_init__dollar__unused_0;
   $v_1 = $__tco_var_Data_List_Partial_init_v_1;
   $__t0 = null;;
-  if ((is_object($v_1) && (($v_1)->{'tag'} === "Cons"))) {
+  if ($v_1 instanceof \Data\List\Types\Data_List_Types_Cons) {
 $__t1 = null;;
-if ((is_object(($v_1)->{'value1'}) && ((($v_1)->{'value1'})->{'tag'} === "Nil"))) {
-$__t1 = new Phpurs_Data0("Nil");
+if (($v_1)->{'value1'} instanceof \Data\List\Types\Data_List_Types_Nil) {
+$__t1 = new \Data\List\Types\Data_List_Types_Nil();
 goto end_branch_1;;
 };
-$__t1 = new Phpurs_Data2("Cons", ($v_1)->{'value0'}, (($GLOBALS['Data_List_Partial_init'])(null))(($v_1)->{'value1'}));
+$__t1 = new \Data\List\Types\Data_List_Types_Cons(($v_1)->{'value0'}, ($GLOBALS['Data_List_Partial_init'])(null, ($v_1)->{'value1'}));
 end_branch_1:;
 $__t0 = $__t1;
 goto end_branch_0;;
@@ -190,20 +190,19 @@ goto end_branch_0;;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_List_Partial_init'] = __NAMESPACE__ . '\\majData_majList_majPartial_init';
 
 // Data_List_Partial_head
-$GLOBALS['Data_List_Partial_head'] = (function() {
-  $__fn = function($_dollar__unused_0 = null, $v_1 = null) use (&$__fn) {
+function majData_majList_majPartial_head($_dollar__unused_0, $v_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majPartial_head';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__t0 = null;;
-  if ((is_object($v_1) && (($v_1)->{'tag'} === "Cons"))) {
+  if ($v_1 instanceof \Data\List\Types\Data_List_Types_Cons) {
 $__t0 = ($v_1)->{'value0'};
 goto end_branch_0;;
 };
@@ -213,8 +212,7 @@ goto end_branch_0;;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_List_Partial_head'] = __NAMESPACE__ . '\\majData_majList_majPartial_head';
 

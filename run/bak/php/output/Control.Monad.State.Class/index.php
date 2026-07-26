@@ -98,112 +98,120 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Control_Monad_State_Class_state
-$GLOBALS['Control_Monad_State_Class_state'] = function($dict_0 = null) {
+function majControl_majMonad_majState_majClass_state($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majState_majClass_state';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['state'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_State_Class_state'] = __NAMESPACE__ . '\\majControl_majMonad_majState_majClass_state';
 
 // Control_Monad_State_Class_put
-$GLOBALS['Control_Monad_State_Class_put'] = (function() {
-  $__fn = function($dictMonadState_0 = null, $s_1 = null) use (&$__fn) {
+function majControl_majMonad_majState_majClass_put($dictMonadState_0, $s_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majState_majClass_put';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__res = (($dictMonadState_0)['state'])(function($v_2 = null) use ($s_1) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Tuple", $GLOBALS['Data_Unit_unit'], $s_1);
+  $__res = new \Data\Tuple\Data_Tuple_Tuple($GLOBALS['Data_Unit_unit'], $s_1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 });
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Control_Monad_State_Class_put'] = __NAMESPACE__ . '\\majControl_majMonad_majState_majClass_put';
 
 // Control_Monad_State_Class_modify_
-$GLOBALS['Control_Monad_State_Class_modify_'] = (function() {
-  $__fn = function($dictMonadState_0 = null, $f_1 = null) use (&$__fn) {
+function majControl_majMonad_majState_majClass_modify_($dictMonadState_0, $f_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majState_majClass_modify_';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__res = (($dictMonadState_0)['state'])(function($s_2 = null) use ($f_1) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Tuple", $GLOBALS['Data_Unit_unit'], ($f_1)($s_2));
+  $__res = new \Data\Tuple\Data_Tuple_Tuple($GLOBALS['Data_Unit_unit'], ($f_1)($s_2));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 });
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Control_Monad_State_Class_modify_'] = __NAMESPACE__ . '\\majControl_majMonad_majState_majClass_modify_';
 
 // Control_Monad_State_Class_modify
-$GLOBALS['Control_Monad_State_Class_modify'] = (function() {
-  $__fn = function($dictMonadState_0 = null, $f_1 = null) use (&$__fn) {
+function majControl_majMonad_majState_majClass_modify($dictMonadState_0, $f_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majState_majClass_modify';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__res = (($dictMonadState_0)['state'])(function($s_2 = null) use ($f_1) {
   $__num = \func_num_args();
   $s_prime_3_0 = ($f_1)($s_2);
-  $__res = new Phpurs_Data2("Tuple", $s_prime_3_0, $s_prime_3_0);
+  $__res = new \Data\Tuple\Data_Tuple_Tuple($s_prime_3_0, $s_prime_3_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 });
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Control_Monad_State_Class_modify'] = __NAMESPACE__ . '\\majControl_majMonad_majState_majClass_modify';
 
 // Control_Monad_State_Class_gets
-$GLOBALS['Control_Monad_State_Class_gets'] = (function() {
-  $__fn = function($dictMonadState_0 = null, $f_1 = null) use (&$__fn) {
+function majControl_majMonad_majState_majClass_gets($dictMonadState_0, $f_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majState_majClass_gets';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__res = (($dictMonadState_0)['state'])(function($s_2 = null) use ($f_1) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Tuple", ($f_1)($s_2), $s_2);
+  $__res = new \Data\Tuple\Data_Tuple_Tuple(($f_1)($s_2), $s_2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 });
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Control_Monad_State_Class_gets'] = __NAMESPACE__ . '\\majControl_majMonad_majState_majClass_gets';
 
 // Control_Monad_State_Class_get
-$GLOBALS['Control_Monad_State_Class_get'] = function($dictMonadState_0 = null) {
+function majControl_majMonad_majState_majClass_get($dictMonadState_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majState_majClass_get';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = (($dictMonadState_0)['state'])(function($s_1 = null) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Tuple", $s_1, $s_1);
+  $__res = new \Data\Tuple\Data_Tuple_Tuple($s_1, $s_1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 });
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_State_Class_get'] = __NAMESPACE__ . '\\majControl_majMonad_majState_majClass_get';
 

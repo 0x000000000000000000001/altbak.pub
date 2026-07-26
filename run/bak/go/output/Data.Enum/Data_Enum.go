@@ -497,7 +497,7 @@ var once_defaultSucc sync.Once
 func Get_defaultSucc() gopurs_runtime.Value {
 	once_defaultSucc.Do(func() {
 		cache_defaultSucc = gopurs_runtime.Func3(func(toEnum_prime_0_box gopurs_runtime.Value, fromEnum_prime_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_defaultSucc(toEnum_prime_0_box, fromEnum_prime_1_box, a_2_box)
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_defaultSucc(toEnum_prime_0_box, fromEnum_prime_1_box, a_2_box))}
 })
 	})
 	return cache_defaultSucc
@@ -508,7 +508,7 @@ var once_defaultPred sync.Once
 func Get_defaultPred() gopurs_runtime.Value {
 	once_defaultPred.Do(func() {
 		cache_defaultPred = gopurs_runtime.Func3(func(toEnum_prime_0_box gopurs_runtime.Value, fromEnum_prime_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_defaultPred(toEnum_prime_0_box, fromEnum_prime_1_box, a_2_box)
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_defaultPred(toEnum_prime_0_box, fromEnum_prime_1_box, a_2_box))}
 })
 	})
 	return cache_defaultPred
@@ -541,7 +541,7 @@ var once_charToEnum sync.Once
 func Get_charToEnum() gopurs_runtime.Value {
 	once_charToEnum.Do(func() {
 		cache_charToEnum = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_charToEnum(v_0_box.IntVal)
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_charToEnum(v_0_box.IntVal))}
 })
 	})
 	return cache_charToEnum
@@ -554,9 +554,9 @@ func Get_enumChar() gopurs_runtime.Value {
 		cache_enumChar = gopurs_runtime.RecordDict3("Ord0", "pred", "succ", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Ord.Get_ordChar()
 }), gopurs_runtime.Func(func(a_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_charToEnum(), gopurs_runtime.Int((gopurs_runtime.Apply(Get_toCharCode(), a_0).IntVal) - (1)))
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_charToEnum((gopurs_runtime.Apply(Get_toCharCode(), a_0).IntVal) - (1)))}
 }), gopurs_runtime.Func(func(a_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_charToEnum(), gopurs_runtime.Int((gopurs_runtime.Apply(Get_toCharCode(), a_0).IntVal) + (1)))
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_charToEnum((gopurs_runtime.Apply(Get_toCharCode(), a_0).IntVal) + (1)))}
 }))
 	})
 	return cache_enumChar
@@ -1427,24 +1427,24 @@ return __t5
 })
 }
 
-func Call_defaultSucc(toEnum_prime_0_loop gopurs_runtime.Value, fromEnum_prime_1_loop gopurs_runtime.Value, a_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_defaultSucc(toEnum_prime_0_loop gopurs_runtime.Value, fromEnum_prime_1_loop gopurs_runtime.Value, a_2_loop gopurs_runtime.Value) *pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value] {
 var toEnum_prime_0 gopurs_runtime.Value = toEnum_prime_0_loop
 _ = toEnum_prime_0
 var fromEnum_prime_1 gopurs_runtime.Value = fromEnum_prime_1_loop
 _ = fromEnum_prime_1
 var a_2 gopurs_runtime.Value = a_2_loop
 _ = a_2
-return gopurs_runtime.Apply(toEnum_prime_0, gopurs_runtime.Int((gopurs_runtime.Apply(fromEnum_prime_1, a_2).IntVal) + (1)))
+return (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(gopurs_runtime.Apply(toEnum_prime_0, gopurs_runtime.Int((gopurs_runtime.Apply(fromEnum_prime_1, a_2).IntVal) + (1))).UnsafePtr)
 }
 
-func Call_defaultPred(toEnum_prime_0_loop gopurs_runtime.Value, fromEnum_prime_1_loop gopurs_runtime.Value, a_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_defaultPred(toEnum_prime_0_loop gopurs_runtime.Value, fromEnum_prime_1_loop gopurs_runtime.Value, a_2_loop gopurs_runtime.Value) *pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value] {
 var toEnum_prime_0 gopurs_runtime.Value = toEnum_prime_0_loop
 _ = toEnum_prime_0
 var fromEnum_prime_1 gopurs_runtime.Value = fromEnum_prime_1_loop
 _ = fromEnum_prime_1
 var a_2 gopurs_runtime.Value = a_2_loop
 _ = a_2
-return gopurs_runtime.Apply(toEnum_prime_0, gopurs_runtime.Int((gopurs_runtime.Apply(fromEnum_prime_1, a_2).IntVal) - (1)))
+return (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(gopurs_runtime.Apply(toEnum_prime_0, gopurs_runtime.Int((gopurs_runtime.Apply(fromEnum_prime_1, a_2).IntVal) - (1))).UnsafePtr)
 }
 
 func Call_defaultFromEnum(dictEnum_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -1551,7 +1551,7 @@ return gopurs_runtime.Apply2(go__3_1, gopurs_runtime.Int(1), bottom2_1_0)
 })
 }
 
-func Call_charToEnum(v_0_loop int64) gopurs_runtime.Value {
+func Call_charToEnum(v_0_loop int64) *pkg_Data_Maybe.Constructor_Just[string] {
 var v_0 int64 = v_0_loop
 _ = v_0
 var __t0 gopurs_runtime.Value
@@ -1567,7 +1567,7 @@ goto end_branch_0
 __t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}
 }
 end_branch_0:
-return __t0
+return (*pkg_Data_Maybe.Constructor_Just[string])(__t0.UnsafePtr)
 }
 
 func Call_cardinality(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {

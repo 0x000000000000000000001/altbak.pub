@@ -102,28 +102,40 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_Number_Approximate_Tolerance
-$GLOBALS['Data_Number_Approximate_Tolerance'] = function($x_0 = null) {
+function majData_majNumber_majApproximate_majTolerance($x_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majNumber_majApproximate_majTolerance';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $x_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Number_Approximate_Tolerance'] = __NAMESPACE__ . '\\majData_majNumber_majApproximate_majTolerance';
 
 // Data_Number_Approximate_Fraction
-$GLOBALS['Data_Number_Approximate_Fraction'] = function($x_0 = null) {
+function majData_majNumber_majApproximate_majFraction($x_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majNumber_majApproximate_majFraction';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $x_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Number_Approximate_Fraction'] = __NAMESPACE__ . '\\majData_majNumber_majApproximate_majFraction';
 
 // Data_Number_Approximate_eqRelative
-$GLOBALS['Data_Number_Approximate_eqRelative'] = (function() {
-  $__fn = function($v_0 = null, $v1_1 = null, $v2_2 = null) use (&$__fn) {
+function majData_majNumber_majApproximate_eqmajRelative($v_0, $v1_1 = null, $v2_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majNumber_majApproximate_eqmajRelative';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
@@ -146,46 +158,57 @@ default:
 ;
 break;
 };
-  $__t0 = (($GLOBALS['Data_Number_abs'])(((($GLOBALS['Data_Ring_ringNumber'])['sub'])($v1_1))($v2_2)) <= ((($GLOBALS['Data_EuclideanRing_euclideanRingNumber'])['div'])(((($GLOBALS['Data_Semiring_semiringNumber'])['mul'])($v_0))(($GLOBALS['Data_Number_abs'])(((($GLOBALS['Data_Semiring_semiringNumber'])['add'])($v1_1))($v2_2)))))(2.0));
+  $__t0 = (($GLOBALS['Data_Number_abs'])((($GLOBALS['Data_Ring_ringNumber'])['sub'])($v1_1, $v2_2)) <= (($GLOBALS['Data_EuclideanRing_euclideanRingNumber'])['div'])((($GLOBALS['Data_Semiring_semiringNumber'])['mul'])($v_0, ($GLOBALS['Data_Number_abs'])((($GLOBALS['Data_Semiring_semiringNumber'])['add'])($v1_1, $v2_2))), 2.0));
   end_branch_0:;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_Number_Approximate_eqRelative'] = __NAMESPACE__ . '\\majData_majNumber_majApproximate_eqmajRelative';
+
+// Data_Number_Approximate_eqApproximate_closure
+$GLOBALS['Data_Number_Approximate_eqApproximate_closure'] = ($GLOBALS['Data_Number_Approximate_eqRelative'])(0.000001);
 
 // Data_Number_Approximate_eqApproximate
-$GLOBALS['Data_Number_Approximate_eqApproximate'] = ($GLOBALS['Data_Number_Approximate_eqRelative'])(0.000001);
-
-// Data_Number_Approximate_neqApproximate
-$GLOBALS['Data_Number_Approximate_neqApproximate'] = (function() {
-  $__fn = function($x_0 = null, $y_1 = null) use (&$__fn) {
+function majData_majNumber_majApproximate_eqmajApproximate($v_0, $v_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majNumber_majApproximate_eqmajApproximate';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['not'])(((($GLOBALS['Data_Number_Approximate_eqRelative'])(0.000001))($x_0))($y_1));
+  $__res = ($GLOBALS['Data_Number_Approximate_eqApproximate_closure'])($v_0, $v_1);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Number_Approximate_eqApproximate'] = __NAMESPACE__ . '\\majData_majNumber_majApproximate_eqmajApproximate';
+
+// Data_Number_Approximate_neqApproximate
+function majData_majNumber_majApproximate_neqmajApproximate($x_0, $y_1 = null) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majNumber_majApproximate_neqmajApproximate';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = (($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['not'])(($GLOBALS['Data_Number_Approximate_eqRelative'])(0.000001, $x_0, $y_1));
+  goto __end;;
+  __end:
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Number_Approximate_neqApproximate'] = __NAMESPACE__ . '\\majData_majNumber_majApproximate_neqmajApproximate';
 
 // Data_Number_Approximate_eqAbsolute
-$GLOBALS['Data_Number_Approximate_eqAbsolute'] = (function() {
-  $__fn = function($v_0 = null, $x_1 = null, $y_2 = null) use (&$__fn) {
+function majData_majNumber_majApproximate_eqmajAbsolute($v_0, $x_1 = null, $y_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majNumber_majApproximate_eqmajAbsolute';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($GLOBALS['Data_Number_abs'])(((($GLOBALS['Data_Ring_ringNumber'])['sub'])($x_1))($y_2)) <= $v_0);
+  $__res = (($GLOBALS['Data_Number_abs'])((($GLOBALS['Data_Ring_ringNumber'])['sub'])($x_1, $y_2)) <= $v_0);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_Number_Approximate_eqAbsolute'] = __NAMESPACE__ . '\\majData_majNumber_majApproximate_eqmajAbsolute';
 

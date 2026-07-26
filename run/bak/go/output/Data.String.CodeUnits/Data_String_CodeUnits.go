@@ -14,7 +14,7 @@ var once_uncons sync.Once
 func Get_uncons() gopurs_runtime.Value {
 	once_uncons.Do(func() {
 		cache_uncons = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_uncons(v_0_box.StrVal())
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_uncons(v_0_box.StrVal()))}
 })
 	})
 	return cache_uncons
@@ -34,7 +34,7 @@ var once_takeWhile sync.Once
 func Get_takeWhile() gopurs_runtime.Value {
 	once_takeWhile.Do(func() {
 		cache_takeWhile = gopurs_runtime.Func2(func(p_0_box gopurs_runtime.Value, s_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_takeWhile(p_0_box, s_1_box.StrVal())
+return gopurs_runtime.Str(Call_takeWhile(p_0_box, s_1_box.StrVal()))
 })
 	})
 	return cache_takeWhile
@@ -45,7 +45,7 @@ var once_takeRight sync.Once
 func Get_takeRight() gopurs_runtime.Value {
 	once_takeRight.Do(func() {
 		cache_takeRight = gopurs_runtime.Func2(func(i_0_box gopurs_runtime.Value, s_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_takeRight(i_0_box.IntVal, s_1_box.StrVal())
+return gopurs_runtime.Str(Call_takeRight(i_0_box.IntVal, s_1_box.StrVal()))
 })
 	})
 	return cache_takeRight
@@ -56,7 +56,7 @@ var once_stripSuffix sync.Once
 func Get_stripSuffix() gopurs_runtime.Value {
 	once_stripSuffix.Do(func() {
 		cache_stripSuffix = gopurs_runtime.Func2(func(v_0_box gopurs_runtime.Value, str_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_stripSuffix(v_0_box, str_1_box.StrVal())
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_stripSuffix(v_0_box, str_1_box.StrVal()))}
 })
 	})
 	return cache_stripSuffix
@@ -67,7 +67,7 @@ var once_stripPrefix sync.Once
 func Get_stripPrefix() gopurs_runtime.Value {
 	once_stripPrefix.Do(func() {
 		cache_stripPrefix = gopurs_runtime.Func2(func(v_0_box gopurs_runtime.Value, str_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_stripPrefix(v_0_box, str_1_box.StrVal())
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_stripPrefix(v_0_box, str_1_box.StrVal()))}
 })
 	})
 	return cache_stripPrefix
@@ -78,7 +78,7 @@ var once_startsWith sync.Once
 func Get_startsWith() gopurs_runtime.Value {
 	once_startsWith.Do(func() {
 		cache_startsWith = gopurs_runtime.Func2(func(pat_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_startsWith(pat_0_box, x_1_box.StrVal())
+return gopurs_runtime.Bool(Call_startsWith(pat_0_box, x_1_box.StrVal()))
 })
 	})
 	return cache_startsWith
@@ -125,7 +125,7 @@ var once_endsWith sync.Once
 func Get_endsWith() gopurs_runtime.Value {
 	once_endsWith.Do(func() {
 		cache_endsWith = gopurs_runtime.Func2(func(pat_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_endsWith(pat_0_box, x_1_box.StrVal())
+return gopurs_runtime.Bool(Call_endsWith(pat_0_box, x_1_box.StrVal()))
 })
 	})
 	return cache_endsWith
@@ -136,7 +136,7 @@ var once_dropWhile sync.Once
 func Get_dropWhile() gopurs_runtime.Value {
 	once_dropWhile.Do(func() {
 		cache_dropWhile = gopurs_runtime.Func2(func(p_0_box gopurs_runtime.Value, s_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_dropWhile(p_0_box, s_1_box.StrVal())
+return gopurs_runtime.Str(Call_dropWhile(p_0_box, s_1_box.StrVal()))
 })
 	})
 	return cache_dropWhile
@@ -147,7 +147,7 @@ var once_dropRight sync.Once
 func Get_dropRight() gopurs_runtime.Value {
 	once_dropRight.Do(func() {
 		cache_dropRight = gopurs_runtime.Func2(func(i_0_box gopurs_runtime.Value, s_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_dropRight(i_0_box.IntVal, s_1_box.StrVal())
+return gopurs_runtime.Str(Call_dropRight(i_0_box.IntVal, s_1_box.StrVal()))
 })
 	})
 	return cache_dropRight
@@ -173,7 +173,7 @@ func Get_charAt() gopurs_runtime.Value {
 	return cache_charAt
 }
 
-func Call_uncons(v_0_loop string) gopurs_runtime.Value {
+func Call_uncons(v_0_loop string) *pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value] {
 var v_0 string = v_0_loop
 _ = v_0
 var __t0 gopurs_runtime.Value
@@ -189,26 +189,26 @@ goto end_branch_0
 __t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{gopurs_runtime.RecordDict2("head", "tail", gopurs_runtime.Apply2(pkg_Data_String_Unsafe.Get_charAt(), gopurs_runtime.Int(0), gopurs_runtime.Str(v_0)), gopurs_runtime.Apply2(Get_drop(), gopurs_runtime.Int(1), gopurs_runtime.Str(v_0)))})}
 }
 end_branch_0:
-return __t0
+return (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(__t0.UnsafePtr)
 }
 
-func Call_takeWhile(p_0_loop gopurs_runtime.Value, s_1_loop string) gopurs_runtime.Value {
+func Call_takeWhile(p_0_loop gopurs_runtime.Value, s_1_loop string) string {
 var p_0 gopurs_runtime.Value = p_0_loop
 _ = p_0
 var s_1 string = s_1_loop
 _ = s_1
-return gopurs_runtime.Apply2(Get_take(), gopurs_runtime.Apply2(Get_countPrefix(), p_0, gopurs_runtime.Str(s_1)), gopurs_runtime.Str(s_1))
+return gopurs_runtime.Apply2(Get_take(), gopurs_runtime.Apply2(Get_countPrefix(), p_0, gopurs_runtime.Str(s_1)), gopurs_runtime.Str(s_1)).StrVal()
 }
 
-func Call_takeRight(i_0_loop int64, s_1_loop string) gopurs_runtime.Value {
+func Call_takeRight(i_0_loop int64, s_1_loop string) string {
 var i_0 int64 = i_0_loop
 _ = i_0
 var s_1 string = s_1_loop
 _ = s_1
-return gopurs_runtime.Apply2(Get_drop(), gopurs_runtime.Int((gopurs_runtime.Apply(Get_length(), gopurs_runtime.Str(s_1)).IntVal) - (i_0)), gopurs_runtime.Str(s_1))
+return gopurs_runtime.Apply2(Get_drop(), gopurs_runtime.Int((gopurs_runtime.Apply(Get_length(), gopurs_runtime.Str(s_1)).IntVal) - (i_0)), gopurs_runtime.Str(s_1)).StrVal()
 }
 
-func Call_stripSuffix(v_0_loop gopurs_runtime.Value, str_1_loop string) gopurs_runtime.Value {
+func Call_stripSuffix(v_0_loop gopurs_runtime.Value, str_1_loop string) *pkg_Data_Maybe.Constructor_Just[string] {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 var str_1 string = str_1_loop
@@ -228,10 +228,10 @@ goto end_branch_1
 __t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}
 }
 end_branch_1:
-return __t1
+return (*pkg_Data_Maybe.Constructor_Just[string])(__t1.UnsafePtr)
 }
 
-func Call_stripPrefix(v_0_loop gopurs_runtime.Value, str_1_loop string) gopurs_runtime.Value {
+func Call_stripPrefix(v_0_loop gopurs_runtime.Value, str_1_loop string) *pkg_Data_Maybe.Constructor_Just[string] {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 var str_1 string = str_1_loop
@@ -251,15 +251,15 @@ goto end_branch_1
 __t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}
 }
 end_branch_1:
-return __t1
+return (*pkg_Data_Maybe.Constructor_Just[string])(__t1.UnsafePtr)
 }
 
-func Call_startsWith(pat_0_loop gopurs_runtime.Value, x_1_loop string) gopurs_runtime.Value {
+func Call_startsWith(pat_0_loop gopurs_runtime.Value, x_1_loop string) bool {
 var pat_0 gopurs_runtime.Value = pat_0_loop
 _ = pat_0
 var x_1 string = x_1_loop
 _ = x_1
-__local_var_2_0 := Call_stripPrefix(pat_0, x_1)
+__local_var_2_0 := gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_stripPrefix(pat_0, x_1))}
 _ = __local_var_2_0
 var __t1 gopurs_runtime.Value
 {
@@ -282,15 +282,15 @@ goto end_branch_1
 __t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_1:
-return __t1
+return (__t1.IntVal) != (0)
 }
 
-func Call_endsWith(pat_0_loop gopurs_runtime.Value, x_1_loop string) gopurs_runtime.Value {
+func Call_endsWith(pat_0_loop gopurs_runtime.Value, x_1_loop string) bool {
 var pat_0 gopurs_runtime.Value = pat_0_loop
 _ = pat_0
 var x_1 string = x_1_loop
 _ = x_1
-__local_var_2_0 := Call_stripSuffix(pat_0, x_1)
+__local_var_2_0 := gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_stripSuffix(pat_0, x_1))}
 _ = __local_var_2_0
 var __t1 gopurs_runtime.Value
 {
@@ -313,23 +313,23 @@ goto end_branch_1
 __t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_1:
-return __t1
+return (__t1.IntVal) != (0)
 }
 
-func Call_dropWhile(p_0_loop gopurs_runtime.Value, s_1_loop string) gopurs_runtime.Value {
+func Call_dropWhile(p_0_loop gopurs_runtime.Value, s_1_loop string) string {
 var p_0 gopurs_runtime.Value = p_0_loop
 _ = p_0
 var s_1 string = s_1_loop
 _ = s_1
-return gopurs_runtime.Apply2(Get_drop(), gopurs_runtime.Apply2(Get_countPrefix(), p_0, gopurs_runtime.Str(s_1)), gopurs_runtime.Str(s_1))
+return gopurs_runtime.Apply2(Get_drop(), gopurs_runtime.Apply2(Get_countPrefix(), p_0, gopurs_runtime.Str(s_1)), gopurs_runtime.Str(s_1)).StrVal()
 }
 
-func Call_dropRight(i_0_loop int64, s_1_loop string) gopurs_runtime.Value {
+func Call_dropRight(i_0_loop int64, s_1_loop string) string {
 var i_0 int64 = i_0_loop
 _ = i_0
 var s_1 string = s_1_loop
 _ = s_1
-return gopurs_runtime.Apply2(Get_take(), gopurs_runtime.Int((gopurs_runtime.Apply(Get_length(), gopurs_runtime.Str(s_1)).IntVal) - (i_0)), gopurs_runtime.Str(s_1))
+return gopurs_runtime.Apply2(Get_take(), gopurs_runtime.Int((gopurs_runtime.Apply(Get_length(), gopurs_runtime.Str(s_1)).IntVal) - (i_0)), gopurs_runtime.Str(s_1)).StrVal()
 }
 
 func Call_contains(pat_0_loop gopurs_runtime.Value) gopurs_runtime.Value {

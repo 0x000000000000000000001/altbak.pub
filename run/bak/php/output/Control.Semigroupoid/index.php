@@ -151,30 +151,36 @@ return $exports;
 $GLOBALS['Control_Semigroupoid_composeImpl'] = $ffi_Control_Semigroupoid['composeImpl'] ?? new class { public function __invoke(...$args) { return $this; } };
 
 
+
+
 // Control_Semigroupoid_semigroupoidFn
 $GLOBALS['Control_Semigroupoid_semigroupoidFn'] = ["compose" => $GLOBALS['Control_Semigroupoid_composeImpl']];
 
 // Control_Semigroupoid_compose
-$GLOBALS['Control_Semigroupoid_compose'] = function($dict_0 = null) {
+function majControl_majSemigroupoid_compose($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majSemigroupoid_compose';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['compose'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Semigroupoid_compose'] = __NAMESPACE__ . '\\majControl_majSemigroupoid_compose';
 
 // Control_Semigroupoid_composeFlipped
-$GLOBALS['Control_Semigroupoid_composeFlipped'] = (function() {
-  $__fn = function($dictSemigroupoid_0 = null, $f_1 = null, $g_2 = null) use (&$__fn) {
+function majControl_majSemigroupoid_composemajFlipped($dictSemigroupoid_0, $f_1 = null, $g_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majSemigroupoid_composemajFlipped';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($dictSemigroupoid_0)['compose'])($g_2))($f_1);
+  $__res = (($dictSemigroupoid_0)['compose'])($g_2, $f_1);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Control_Semigroupoid_composeFlipped'] = __NAMESPACE__ . '\\majControl_majSemigroupoid_composemajFlipped';
 

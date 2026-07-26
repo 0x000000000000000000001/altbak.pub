@@ -103,14 +103,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+final class Data_Profunctor_Split_SplitF { public function __construct(public \Closure $value0, public \Closure $value1, public mixed $value2) {} }
+
 // Data_Profunctor_Split_identity
-$GLOBALS['Data_Profunctor_Split_identity'] = function($x_0 = null) {
+function majData_majProfunctor_majSplit_identity($x_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majProfunctor_majSplit_identity';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $x_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Profunctor_Split_identity'] = __NAMESPACE__ . '\\majData_majProfunctor_majSplit_identity';
 
 // Data_Profunctor_Split_SplitF
 $GLOBALS['Data_Profunctor_Split_SplitF'] = (function() {
@@ -119,7 +126,7 @@ $GLOBALS['Data_Profunctor_Split_SplitF'] = (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = new Phpurs_Data3("SplitF", $value0, $value1, $value2);
+  $__res = new \Data\Profunctor\Split\Data_Profunctor_Split_SplitF($value0, $value1, $value2);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -128,34 +135,32 @@ $GLOBALS['Data_Profunctor_Split_SplitF'] = (function() {
 })();
 
 // Data_Profunctor_Split_unSplit
-$GLOBALS['Data_Profunctor_Split_unSplit'] = (function() {
-  $__fn = function($f_0 = null, $v_1 = null) use (&$__fn) {
+function majData_majProfunctor_majSplit_unmajSplit($f_0, $v_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majProfunctor_majSplit_unmajSplit';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($f_0)(($v_1)->{'value0'}))(($v_1)->{'value1'}))(($v_1)->{'value2'});
+  $__res = ($f_0)(($v_1)->{'value0'}, ($v_1)->{'value1'}, ($v_1)->{'value2'});
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Profunctor_Split_unSplit'] = __NAMESPACE__ . '\\majData_majProfunctor_majSplit_unmajSplit';
 
 // Data_Profunctor_Split_split
-$GLOBALS['Data_Profunctor_Split_split'] = (function() {
-  $__fn = function($f_0 = null, $g_1 = null, $fx_2 = null) use (&$__fn) {
+function majData_majProfunctor_majSplit_split($f_0, $g_1 = null, $fx_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majProfunctor_majSplit_split';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = new Phpurs_Data3("SplitF", $f_0, $g_1, $fx_2);
+  $__res = new \Data\Profunctor\Split\Data_Profunctor_Split_SplitF($f_0, $g_1, $fx_2);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_Profunctor_Split_split'] = __NAMESPACE__ . '\\majData_majProfunctor_majSplit_split';
 
 // Data_Profunctor_Split_profunctorSplit
 $GLOBALS['Data_Profunctor_Split_profunctorSplit'] = ["dimap" => (function() {
@@ -164,7 +169,7 @@ $GLOBALS['Data_Profunctor_Split_profunctorSplit'] = ["dimap" => (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = new Phpurs_Data3("SplitF", (($GLOBALS['Control_Semigroupoid_composeImpl'])(($v_2)->{'value0'}))($f_0), (($GLOBALS['Control_Semigroupoid_composeImpl'])($g_1))(($v_2)->{'value1'}), ($v_2)->{'value2'});
+  $__res = new \Data\Profunctor\Split\Data_Profunctor_Split_SplitF(($GLOBALS['Control_Semigroupoid_composeImpl'])(($v_2)->{'value0'}, $f_0), ($GLOBALS['Control_Semigroupoid_composeImpl'])($g_1, ($v_2)->{'value1'}), ($v_2)->{'value2'});
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -173,51 +178,54 @@ $GLOBALS['Data_Profunctor_Split_profunctorSplit'] = ["dimap" => (function() {
 })()];
 
 // Data_Profunctor_Split_lowerSplit
-$GLOBALS['Data_Profunctor_Split_lowerSplit'] = (function() {
-  $__fn = function($dictInvariant_0 = null, $v_1 = null) use (&$__fn) {
+function majData_majProfunctor_majSplit_lowermajSplit($dictInvariant_0, $v_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majProfunctor_majSplit_lowermajSplit';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($dictInvariant_0)['imap'])(($v_1)->{'value1'}))(($v_1)->{'value0'}))(($v_1)->{'value2'});
+  $__res = (($dictInvariant_0)['imap'])(($v_1)->{'value1'}, ($v_1)->{'value0'}, ($v_1)->{'value2'});
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Profunctor_Split_lowerSplit'] = __NAMESPACE__ . '\\majData_majProfunctor_majSplit_lowermajSplit';
 
 // Data_Profunctor_Split_liftSplit
-$GLOBALS['Data_Profunctor_Split_liftSplit'] = function($fx_0 = null) {
+function majData_majProfunctor_majSplit_liftmajSplit($fx_0) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data3("SplitF", $GLOBALS['Data_Profunctor_Split_identity'], $GLOBALS['Data_Profunctor_Split_identity'], $fx_0);
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majProfunctor_majSplit_liftmajSplit';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = new \Data\Profunctor\Split\Data_Profunctor_Split_SplitF($GLOBALS['Data_Profunctor_Split_identity'], $GLOBALS['Data_Profunctor_Split_identity'], $fx_0);
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Profunctor_Split_liftSplit'] = __NAMESPACE__ . '\\majData_majProfunctor_majSplit_liftmajSplit';
 
 // Data_Profunctor_Split_hoistSplit
-$GLOBALS['Data_Profunctor_Split_hoistSplit'] = (function() {
-  $__fn = function($nat_0 = null, $v_1 = null) use (&$__fn) {
+function majData_majProfunctor_majSplit_hoistmajSplit($nat_0, $v_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majProfunctor_majSplit_hoistmajSplit';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__local_var_2_0 = ($v_1)->{'value0'};
   $__local_var_3_1 = ($v_1)->{'value1'};
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'])(function($fx_4 = null) use ($__local_var_2_0, $__local_var_3_1) {
+  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(function($fx_4 = null) use ($__local_var_2_0, $__local_var_3_1) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data3("SplitF", $__local_var_2_0, $__local_var_3_1, $fx_4);
+  $__res = new \Data\Profunctor\Split\Data_Profunctor_Split_SplitF($__local_var_2_0, $__local_var_3_1, $fx_4);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))($nat_0))(($v_1)->{'value2'});
+}, $nat_0, ($v_1)->{'value2'});
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Profunctor_Split_hoistSplit'] = __NAMESPACE__ . '\\majData_majProfunctor_majSplit_hoistmajSplit';
 
 // Data_Profunctor_Split_functorSplit
 $GLOBALS['Data_Profunctor_Split_functorSplit'] = ["map" => (function() {
@@ -226,7 +234,7 @@ $GLOBALS['Data_Profunctor_Split_functorSplit'] = ["map" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data3("SplitF", ($v_1)->{'value0'}, (($GLOBALS['Control_Semigroupoid_composeImpl'])($f_0))(($v_1)->{'value1'}), ($v_1)->{'value2'});
+  $__res = new \Data\Profunctor\Split\Data_Profunctor_Split_SplitF(($v_1)->{'value0'}, ($GLOBALS['Control_Semigroupoid_composeImpl'])($f_0, ($v_1)->{'value1'}), ($v_1)->{'value2'});
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

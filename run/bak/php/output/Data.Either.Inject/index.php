@@ -101,14 +101,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_Either_Inject_prj
-$GLOBALS['Data_Either_Inject_prj'] = function($dict_0 = null) {
+function majData_majEither_majInject_prj($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majEither_majInject_prj';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['prj'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Either_Inject_prj'] = __NAMESPACE__ . '\\majData_majEither_majInject_prj';
 
 // Data_Either_Inject_injectReflexive
 $GLOBALS['Data_Either_Inject_injectReflexive'] = ["inj" => function($x_0 = null) {
@@ -123,12 +130,12 @@ $GLOBALS['Data_Either_Inject_injectReflexive'] = ["inj" => function($x_0 = null)
 $GLOBALS['Data_Either_Inject_injectLeft'] = ["inj" => $GLOBALS['Data_Either_Left'], "prj" => function($v2_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
-  if ((is_object($v2_0) && (($v2_0)->{'tag'} === "Left"))) {
-$__t0 = new Phpurs_Data1("Just", ($v2_0)->{'value0'});
+  if ($v2_0 instanceof \Data\Either\Data_Either_Left) {
+$__t0 = new \Data\Maybe\Data_Maybe_Just(($v2_0)->{'value0'});
 goto end_branch_0;;
 };
-  if ((is_object($v2_0) && (($v2_0)->{'tag'} === "Right"))) {
-$__t0 = new Phpurs_Data0("Nothing");
+  if ($v2_0 instanceof \Data\Either\Data_Either_Right) {
+$__t0 = new \Data\Maybe\Data_Maybe_Nothing();
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -141,25 +148,34 @@ goto end_branch_0;;
 }];
 
 // Data_Either_Inject_inj
-$GLOBALS['Data_Either_Inject_inj'] = function($dict_0 = null) {
+function majData_majEither_majInject_inj($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majEither_majInject_inj';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['inj'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Either_Inject_inj'] = __NAMESPACE__ . '\\majData_majEither_majInject_inj';
 
 // Data_Either_Inject_injectRight
-$GLOBALS['Data_Either_Inject_injectRight'] = function($dictInject_0 = null) {
+function majData_majEither_majInject_injectmajRight($dictInject_0) {
   $__num = \func_num_args();
-  $__res = ["inj" => (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Either_Right']))(($dictInject_0)['inj']), "prj" => function($v2_1 = null) use ($dictInject_0) {
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majEither_majInject_injectmajRight';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ["inj" => ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Either_Right'], ($dictInject_0)['inj']), "prj" => function($v2_1 = null) use ($dictInject_0) {
   $__num = \func_num_args();
   $__t0 = null;;
-  if ((is_object($v2_1) && (($v2_1)->{'tag'} === "Left"))) {
-$__t0 = new Phpurs_Data0("Nothing");
+  if ($v2_1 instanceof \Data\Either\Data_Either_Left) {
+$__t0 = new \Data\Maybe\Data_Maybe_Nothing();
 goto end_branch_0;;
 };
-  if ((is_object($v2_1) && (($v2_1)->{'tag'} === "Right"))) {
+  if ($v2_1 instanceof \Data\Either\Data_Either_Right) {
 $__t0 = (($dictInject_0)['prj'])(($v2_1)->{'value0'});
 goto end_branch_0;;
 };
@@ -173,6 +189,7 @@ goto end_branch_0;;
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Either_Inject_injectRight'] = __NAMESPACE__ . '\\majData_majEither_majInject_injectmajRight';
 

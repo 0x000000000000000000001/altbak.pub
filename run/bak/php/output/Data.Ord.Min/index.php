@@ -103,50 +103,66 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_Ord_Min_Min
-$GLOBALS['Data_Ord_Min_Min'] = function($x_0 = null) {
+function majData_majOrd_majMin_majMin($x_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majOrd_majMin_majMin';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $x_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Ord_Min_Min'] = __NAMESPACE__ . '\\majData_majOrd_majMin_majMin';
 
 // Data_Ord_Min_showMin
-$GLOBALS['Data_Ord_Min_showMin'] = function($dictShow_0 = null) {
+function majData_majOrd_majMin_showmajMin($dictShow_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majOrd_majMin_showmajMin';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Min "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1)))(")"));
+  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Min ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1), ")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Ord_Min_showMin'] = __NAMESPACE__ . '\\majData_majOrd_majMin_showmajMin';
 
 // Data_Ord_Min_semigroupMin
-$GLOBALS['Data_Ord_Min_semigroupMin'] = function($dictOrd_0 = null) {
+function majData_majOrd_majMin_semigroupmajMin($dictOrd_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majOrd_majMin_semigroupmajMin';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["append" => (function() use ($dictOrd_0) {
   $__fn = function($v_1 = null, $v1_2 = null) use ($dictOrd_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $v_3_0 = ((($dictOrd_0)['compare'])($v_1))($v1_2);
+  $v_3_0 = (($dictOrd_0)['compare'])($v_1, $v1_2);
   $__t1 = null;;
-  if ((is_object($v_3_0) && (($v_3_0)->{'tag'} === "LT"))) {
+  if ($v_3_0 instanceof \Data\Ordering\Data_Ordering_LT) {
 $__t1 = $v_1;
 goto end_branch_1;;
 };
-  if ((is_object($v_3_0) && (($v_3_0)->{'tag'} === "EQ"))) {
+  if ($v_3_0 instanceof \Data\Ordering\Data_Ordering_EQ) {
 $__t1 = $v_1;
 goto end_branch_1;;
 };
-  if ((is_object($v_3_0) && (($v_3_0)->{'tag'} === "GT"))) {
+  if ($v_3_0 instanceof \Data\Ordering\Data_Ordering_GT) {
 $__t1 = $v1_2;
 goto end_branch_1;;
 };
@@ -162,8 +178,9 @@ goto end_branch_1;;
 })()];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Ord_Min_semigroupMin'] = __NAMESPACE__ . '\\majData_majOrd_majMin_semigroupmajMin';
 
 // Data_Ord_Min_newtypeMin
 $GLOBALS['Data_Ord_Min_newtypeMin'] = ["Coercible0" => function($_dollar__unused_0 = null) {
@@ -175,8 +192,12 @@ $GLOBALS['Data_Ord_Min_newtypeMin'] = ["Coercible0" => function($_dollar__unused
 }];
 
 // Data_Ord_Min_monoidMin
-$GLOBALS['Data_Ord_Min_monoidMin'] = function($dictBounded_0 = null) {
+function majData_majOrd_majMin_monoidmajMin($dictBounded_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majOrd_majMin_monoidmajMin';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__local_var_1_0 = (($dictBounded_0)['Ord0'])(null);
   $semigroupMin1_2_1 = ["append" => (function() use ($__local_var_1_0) {
   $__fn = function($v_2 = null, $v1_3 = null) use ($__local_var_1_0, &$__fn) {
@@ -184,17 +205,17 @@ $GLOBALS['Data_Ord_Min_monoidMin'] = function($dictBounded_0 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $v_4_1 = ((($__local_var_1_0)['compare'])($v_2))($v1_3);
+  $v_4_1 = (($__local_var_1_0)['compare'])($v_2, $v1_3);
   $__t2 = null;;
-  if ((is_object($v_4_1) && (($v_4_1)->{'tag'} === "LT"))) {
+  if ($v_4_1 instanceof \Data\Ordering\Data_Ordering_LT) {
 $__t2 = $v_2;
 goto end_branch_2;;
 };
-  if ((is_object($v_4_1) && (($v_4_1)->{'tag'} === "EQ"))) {
+  if ($v_4_1 instanceof \Data\Ordering\Data_Ordering_EQ) {
 $__t2 = $v_2;
 goto end_branch_2;;
 };
-  if ((is_object($v_4_1) && (($v_4_1)->{'tag'} === "GT"))) {
+  if ($v_4_1 instanceof \Data\Ordering\Data_Ordering_GT) {
 $__t2 = $v1_3;
 goto end_branch_2;;
 };
@@ -217,21 +238,31 @@ goto end_branch_2;;
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Ord_Min_monoidMin'] = __NAMESPACE__ . '\\majData_majOrd_majMin_monoidmajMin';
 
 // Data_Ord_Min_eqMin
-$GLOBALS['Data_Ord_Min_eqMin'] = function($dictEq_0 = null) {
+function majData_majOrd_majMin_eqmajMin($dictEq_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majOrd_majMin_eqmajMin';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictEq_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Ord_Min_eqMin'] = __NAMESPACE__ . '\\majData_majOrd_majMin_eqmajMin';
 
 // Data_Ord_Min_ordMin
-$GLOBALS['Data_Ord_Min_ordMin'] = function($dictOrd_0 = null) {
+function majData_majOrd_majMin_ordmajMin($dictOrd_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majOrd_majMin_ordmajMin';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__local_var_1_0 = (($dictOrd_0)['Eq0'])(null);
   $__res = ["compare" => (function() use ($dictOrd_0) {
   $__fn = function($v_2 = null, $v1_3 = null) use ($dictOrd_0, &$__fn) {
@@ -239,7 +270,7 @@ $GLOBALS['Data_Ord_Min_ordMin'] = function($dictOrd_0 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictOrd_0)['compare'])($v_2))($v1_3);
+  $__res = (($dictOrd_0)['compare'])($v_2, $v1_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -254,6 +285,7 @@ $GLOBALS['Data_Ord_Min_ordMin'] = function($dictOrd_0 = null) {
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Ord_Min_ordMin'] = __NAMESPACE__ . '\\majData_majOrd_majMin_ordmajMin';
 

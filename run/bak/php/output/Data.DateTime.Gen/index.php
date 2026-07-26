@@ -101,13 +101,20 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_DateTime_Gen_genDateTime
-$GLOBALS['Data_DateTime_Gen_genDateTime'] = function($dictMonadGen_0 = null) {
+function majData_majDatemajTime_majGen_genmajDatemajTime($dictMonadGen_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majDatemajTime_majGen_genmajDatemajTime';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $Apply0_1_0 = (((((($dictMonadGen_0)['Monad0'])(null))['Bind1'])(null))['Apply0'])(null);
-  $__res = ((($Apply0_1_0)['apply'])(((((($Apply0_1_0)['Functor0'])(null))['map'])($GLOBALS['Data_DateTime_DateTime']))(($GLOBALS['Data_Date_Gen_genDate'])($dictMonadGen_0))))(($GLOBALS['Data_Time_Gen_genTime'])($dictMonadGen_0));
+  $__res = (($Apply0_1_0)['apply'])((((($Apply0_1_0)['Functor0'])(null))['map'])($GLOBALS['Data_DateTime_DateTime'], ($GLOBALS['Data_Date_Gen_genDate'])($dictMonadGen_0)), ($GLOBALS['Data_Time_Gen_genTime'])($dictMonadGen_0));
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_DateTime_Gen_genDateTime'] = __NAMESPACE__ . '\\majData_majDatemajTime_majGen_genmajDatemajTime';
 

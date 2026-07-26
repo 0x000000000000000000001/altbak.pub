@@ -100,41 +100,63 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_Traversable_Accum_Internal_StateR
-$GLOBALS['Data_Traversable_Accum_Internal_StateR'] = function($x_0 = null) {
+function majData_majTraversable_majAccum_majInternal_majStatemajR($x_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTraversable_majAccum_majInternal_majStatemajR';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $x_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Traversable_Accum_Internal_StateR'] = __NAMESPACE__ . '\\majData_majTraversable_majAccum_majInternal_majStatemajR';
 
 // Data_Traversable_Accum_Internal_StateL
-$GLOBALS['Data_Traversable_Accum_Internal_StateL'] = function($x_0 = null) {
+function majData_majTraversable_majAccum_majInternal_majStatemajL($x_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTraversable_majAccum_majInternal_majStatemajL';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $x_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Traversable_Accum_Internal_StateL'] = __NAMESPACE__ . '\\majData_majTraversable_majAccum_majInternal_majStatemajL';
 
 // Data_Traversable_Accum_Internal_stateR
-$GLOBALS['Data_Traversable_Accum_Internal_stateR'] = function($v_0 = null) {
+function majData_majTraversable_majAccum_majInternal_statemajR($v_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTraversable_majAccum_majInternal_statemajR';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $v_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Traversable_Accum_Internal_stateR'] = __NAMESPACE__ . '\\majData_majTraversable_majAccum_majInternal_statemajR';
 
 // Data_Traversable_Accum_Internal_stateL
-$GLOBALS['Data_Traversable_Accum_Internal_stateL'] = function($v_0 = null) {
+function majData_majTraversable_majAccum_majInternal_statemajL($v_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTraversable_majAccum_majInternal_statemajL';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $v_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Traversable_Accum_Internal_stateL'] = __NAMESPACE__ . '\\majData_majTraversable_majAccum_majInternal_statemajL';
 
 // Data_Traversable_Accum_Internal_functorStateR
 $GLOBALS['Data_Traversable_Accum_Internal_functorStateR'] = ["map" => (function() {

@@ -105,106 +105,117 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Test_StateMonad_State
-$GLOBALS['Test_StateMonad_State'] = function($x_0 = null) {
+function majTest_majStatemajMonad_majState($x_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majTest_majStatemajMonad_majState';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $x_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Test_StateMonad_State'] = __NAMESPACE__ . '\\majTest_majStatemajMonad_majState';
 
 // Test_StateMonad_runState
-$GLOBALS['Test_StateMonad_runState'] = (function() {
-  $__fn = function($v_0 = null, $s_1 = null) use (&$__fn) {
+function majTest_majStatemajMonad_runmajState($v_0, $s_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majTest_majStatemajMonad_runmajState';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__res = ($v_0)($s_1);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Test_StateMonad_runState'] = __NAMESPACE__ . '\\majTest_majStatemajMonad_runmajState';
 
 // Test_StateMonad_put
-$GLOBALS['Test_StateMonad_put'] = (function() {
-  $__fn = function($s_0 = null, $v_1 = null) use (&$__fn) {
+function majTest_majStatemajMonad_put($s_0, $v_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majTest_majStatemajMonad_put';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__res = ["val" => $GLOBALS['Data_Unit_unit'], "state" => $s_0];
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Test_StateMonad_put'] = __NAMESPACE__ . '\\majTest_majStatemajMonad_put';
 
 // Test_StateMonad_pureState
-$GLOBALS['Test_StateMonad_pureState'] = (function() {
-  $__fn = function($a_0 = null, $s_1 = null) use (&$__fn) {
+function majTest_majStatemajMonad_puremajState($a_0, $s_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majTest_majStatemajMonad_puremajState';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__res = ["val" => $a_0, "state" => $s_1];
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Test_StateMonad_pureState'] = __NAMESPACE__ . '\\majTest_majStatemajMonad_puremajState';
 
 // Test_StateMonad_get
-$GLOBALS['Test_StateMonad_get'] = function($s_0 = null) {
+function majTest_majStatemajMonad_get($s_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majTest_majStatemajMonad_get';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["val" => $s_0, "state" => $s_0];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Test_StateMonad_get'] = __NAMESPACE__ . '\\majTest_majStatemajMonad_get';
 
 // Test_StateMonad_describe
 $GLOBALS['Test_StateMonad_describe'] = ($GLOBALS['Effect_Console_log'])("State Monad (1.2k Binds, 60 Stack Depth):");
 
 // Test_StateMonad_bindState
-$GLOBALS['Test_StateMonad_bindState'] = (function() {
-  $__fn = function($v_0 = null, $g_1 = null, $s_2 = null) use (&$__fn) {
+function majTest_majStatemajMonad_bindmajState($v_0, $g_1 = null, $s_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majTest_majStatemajMonad_bindmajState';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   $r1_3_0 = ($v_0)($s_2);
-  $__res = (($g_1)(($r1_3_0)['val']))(($r1_3_0)['state']);
+  $__res = ($g_1)(($r1_3_0)['val'], ($r1_3_0)['state']);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Test_StateMonad_bindState'] = __NAMESPACE__ . '\\majTest_majStatemajMonad_bindmajState';
 
 // Test_StateMonad_modify
-$GLOBALS['Test_StateMonad_modify'] = (function() {
-  $__fn = function($f_0 = null, $s_1 = null) use (&$__fn) {
+function majTest_majStatemajMonad_modify($f_0, $s_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majTest_majStatemajMonad_modify';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__res = ["val" => $GLOBALS['Data_Unit_unit'], "state" => ($f_0)($s_1)];
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Test_StateMonad_modify'] = __NAMESPACE__ . '\\majTest_majStatemajMonad_modify';
 
 // Test_StateMonad_chainModifications
-$GLOBALS['Test_StateMonad_chainModifications'] = function($v_0 = null) {
+function majTest_majStatemajMonad_chainmajModifications($v_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majTest_majStatemajMonad_chainmajModifications';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__tco_var_Test_StateMonad_chainModifications_v_0 = $v_0;
   tco_loop_Test_StateMonad_chainModifications:;
   $v_0 = $__tco_var_Test_StateMonad_chainModifications_v_0;
@@ -216,20 +227,21 @@ $GLOBALS['Test_StateMonad_chainModifications'] = function($v_0 = null) {
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, default => function($s_1 = null) use ($v_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Test_StateMonad_chainModifications'])(($v_0 - 1)))(($s_1 + 1));
+  $__res = ($GLOBALS['Test_StateMonad_chainModifications'])(($v_0 - 1), ($s_1 + 1));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 } };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Test_StateMonad_chainModifications'] = __NAMESPACE__ . '\\majTest_majStatemajMonad_chainmajModifications';
 
 // Test_StateMonad_runManyTimes
-$GLOBALS['Test_StateMonad_runManyTimes'] = (function() {
-  $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
+function majTest_majStatemajMonad_runmajManymajTimes($v_0, $v1_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majTest_majStatemajMonad_runmajManymajTimes';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
@@ -249,7 +261,7 @@ default:
 break;
 };
   $__tco_0 = ($v_0 - 1);
-  $__tco_1 = ($v1_1 + ((($GLOBALS['Test_StateMonad_chainModifications'])(60))(0))['state']);
+  $__tco_1 = ($v1_1 + (($GLOBALS['Test_StateMonad_chainModifications'])(60, 0))['state']);
   $__tco_var_Test_StateMonad_runManyTimes_v_0 = $__tco_0;
   $__tco_var_Test_StateMonad_runManyTimes_v1_1 = $__tco_1;
   goto tco_loop_Test_StateMonad_runManyTimes;;
@@ -258,15 +270,14 @@ break;
   $__res = $__t2;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Test_StateMonad_runManyTimes'] = __NAMESPACE__ . '\\majTest_majStatemajMonad_runmajManymajTimes';
 
 // Test_StateMonad_act
-$GLOBALS['Test_StateMonad_act'] = ((($GLOBALS['Effect_bindEffect'])['bind'])(($GLOBALS['Bench_opaque'])(20)))(function($dummy_0 = null) {
+$GLOBALS['Test_StateMonad_act'] = (($GLOBALS['Effect_bindEffect'])['bind'])(($GLOBALS['Bench_opaque'])(20), function($dummy_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_Console_log'])((($GLOBALS['Data_Show_showInt'])['show'])((($GLOBALS['Test_StateMonad_runManyTimes'])($dummy_0))(0)));
+  $__res = ($GLOBALS['Effect_Console_log'])((($GLOBALS['Data_Show_showInt'])['show'])(($GLOBALS['Test_StateMonad_runManyTimes'])($dummy_0, 0)));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

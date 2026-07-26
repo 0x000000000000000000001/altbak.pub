@@ -116,44 +116,61 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_List_ZipList_ZipList
-$GLOBALS['Data_List_ZipList_ZipList'] = function($x_0 = null) {
+function majData_majList_majZipmajList_majZipmajList($x_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majZipmajList_majZipmajList';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $x_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_ZipList_ZipList'] = __NAMESPACE__ . '\\majData_majList_majZipmajList_majZipmajList';
 
 // Data_List_ZipList_traversableZipList
 $GLOBALS['Data_List_ZipList_traversableZipList'] = $GLOBALS['Data_List_Lazy_Types_traversableList'];
 
 // Data_List_ZipList_showZipList
-$GLOBALS['Data_List_ZipList_showZipList'] = function($dictShow_0 = null) {
+function majData_majList_majZipmajList_showmajZipmajList($dictShow_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majZipmajList_showmajZipmajList';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(ZipList "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])(((($GLOBALS['Data_List_Lazy_Types_showList'])($dictShow_0))['show'])($v_1)))(")"));
+  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(ZipList ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])(((($GLOBALS['Data_List_Lazy_Types_showList'])($dictShow_0))['show'])($v_1), ")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_ZipList_showZipList'] = __NAMESPACE__ . '\\majData_majList_majZipmajList_showmajZipmajList';
 
 // Data_List_ZipList_semigroupZipList
 $GLOBALS['Data_List_ZipList_semigroupZipList'] = $GLOBALS['Data_List_Lazy_Types_semigroupList'];
 
 // Data_List_ZipList_ordZipList
-$GLOBALS['Data_List_ZipList_ordZipList'] = function($dictOrd_0 = null) {
+function majData_majList_majZipmajList_ordmajZipmajList($dictOrd_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majZipmajList_ordmajZipmajList';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($GLOBALS['Data_List_Lazy_Types_ordList'])($dictOrd_0);
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_ZipList_ordZipList'] = __NAMESPACE__ . '\\majData_majList_majZipmajList_ordmajZipmajList';
 
 // Data_List_ZipList_newtypeZipList
 $GLOBALS['Data_List_ZipList_newtypeZipList'] = ["Coercible0" => function($_dollar__unused_0 = null) {
@@ -174,13 +191,18 @@ $GLOBALS['Data_List_ZipList_functorZipList'] = $GLOBALS['Data_List_Lazy_Types_fu
 $GLOBALS['Data_List_ZipList_foldableZipList'] = $GLOBALS['Data_List_Lazy_Types_foldableList'];
 
 // Data_List_ZipList_eqZipList
-$GLOBALS['Data_List_ZipList_eqZipList'] = function($dictEq_0 = null) {
+function majData_majList_majZipmajList_eqmajZipmajList($dictEq_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majZipmajList_eqmajZipmajList';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["eq" => (($GLOBALS['Data_List_Lazy_Types_eq1List'])['eq1'])($dictEq_0)];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_ZipList_eqZipList'] = __NAMESPACE__ . '\\majData_majList_majZipmajList_eqmajZipmajList';
 
 // Data_List_ZipList_applyZipList
 $GLOBALS['Data_List_ZipList_applyZipList'] = ["apply" => (function() {
@@ -189,7 +211,7 @@ $GLOBALS['Data_List_ZipList_applyZipList'] = ["apply" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_List_Lazy_zipWith'])($GLOBALS['Data_Function_apply']))($v_0))($v1_1);
+  $__res = ($GLOBALS['Data_List_Lazy_zipWith'])($GLOBALS['Data_Function_apply'], $v_0, $v1_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -204,8 +226,12 @@ $GLOBALS['Data_List_ZipList_applyZipList'] = ["apply" => (function() {
 }];
 
 // Data_List_ZipList_zipListIsNotBind
-$GLOBALS['Data_List_ZipList_zipListIsNotBind'] = function($_dollar__unused_0 = null) {
+function majData_majList_majZipmajList_zipmajListmajIsmajNotmajBind($_dollar__unused_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majZipmajList_zipmajListmajIsmajNotmajBind';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["bind" => ($GLOBALS['Partial__crashWith'])("bind: unreachable"), "Apply0" => function($_dollar__unused_1 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_List_ZipList_applyZipList'];
@@ -215,11 +241,12 @@ $GLOBALS['Data_List_ZipList_zipListIsNotBind'] = function($_dollar__unused_0 = n
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_ZipList_zipListIsNotBind'] = __NAMESPACE__ . '\\majData_majList_majZipmajList_zipmajListmajIsmajNotmajBind';
 
 // Data_List_ZipList_applicativeZipList
-$GLOBALS['Data_List_ZipList_applicativeZipList'] = ["pure" => (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_List_ZipList_ZipList']))($GLOBALS['Data_List_Lazy_repeat']), "Apply0" => function($_dollar__unused_0 = null) {
+$GLOBALS['Data_List_ZipList_applicativeZipList'] = ["pure" => ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_List_ZipList_ZipList'], $GLOBALS['Data_List_Lazy_repeat']), "Apply0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_List_ZipList_applyZipList'];
   goto __end;;
@@ -234,7 +261,7 @@ $GLOBALS['Data_List_ZipList_altZipList'] = ["alt" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_List_Lazy_Types_semigroupList'])['append'])($v_0))((($GLOBALS['Data_List_Lazy_drop'])(($GLOBALS['Data_List_Lazy_length'])($v_0)))($v1_1));
+  $__res = (($GLOBALS['Data_List_Lazy_Types_semigroupList'])['append'])($v_0, ($GLOBALS['Data_List_Lazy_drop'])(($GLOBALS['Data_List_Lazy_length'])($v_0), $v1_1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

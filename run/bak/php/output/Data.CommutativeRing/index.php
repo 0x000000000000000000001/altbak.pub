@@ -100,6 +100,8 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_CommutativeRing_commutativeRingUnit
 $GLOBALS['Data_CommutativeRing_commutativeRingUnit'] = ["Ring0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
@@ -119,13 +121,13 @@ $GLOBALS['Data_CommutativeRing_commutativeRingRecordNil'] = ["RingRecord0" => fu
 }];
 
 // Data_CommutativeRing_commutativeRingRecordCons
-$GLOBALS['Data_CommutativeRing_commutativeRingRecordCons'] = (function() {
-  $__fn = function($dictIsSymbol_0 = null, $_dollar__unused_1 = null, $dictCommutativeRingRecord_2 = null) use (&$__fn) {
+function majData_majCommutativemajRing_commutativemajRingmajRecordmajCons($dictIsSymbol_0, $_dollar__unused_1 = null, $dictCommutativeRingRecord_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majCommutativemajRing_commutativemajRingmajRecordmajCons';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $ringRecordCons1_3_0 = ((($GLOBALS['Data_Ring_ringRecordCons'])($dictIsSymbol_0))(null))((($dictCommutativeRingRecord_2)['RingRecord0'])(null));
+  $ringRecordCons1_3_0 = ($GLOBALS['Data_Ring_ringRecordCons'])($dictIsSymbol_0, null, (($dictCommutativeRingRecord_2)['RingRecord0'])(null));
   $__res = function($dictCommutativeRing_4 = null) use ($ringRecordCons1_3_0) {
   $__num = \func_num_args();
   $ringRecordCons2_5_1 = ($ringRecordCons1_3_0)((($dictCommutativeRing_4)['Ring0'])(null));
@@ -142,22 +144,21 @@ $GLOBALS['Data_CommutativeRing_commutativeRingRecordCons'] = (function() {
 };
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_CommutativeRing_commutativeRingRecordCons'] = __NAMESPACE__ . '\\majData_majCommutativemajRing_commutativemajRingmajRecordmajCons';
 
 // Data_CommutativeRing_commutativeRingRecord
-$GLOBALS['Data_CommutativeRing_commutativeRingRecord'] = (function() {
-  $__fn = function($_dollar__unused_0 = null, $dictCommutativeRingRecord_1 = null) use (&$__fn) {
+function majData_majCommutativemajRing_commutativemajRingmajRecord($_dollar__unused_0, $dictCommutativeRingRecord_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majCommutativemajRing_commutativemajRingmajRecord';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__local_var_2_0 = (($dictCommutativeRingRecord_1)['RingRecord0'])(null);
   $__local_var_3_1 = (($__local_var_2_0)['SemiringRecord0'])(null);
-  $semiringRecord1_4_2 = ["add" => (($__local_var_3_1)['addRecord'])(new Phpurs_Data0("Proxy")), "mul" => (($__local_var_3_1)['mulRecord'])(new Phpurs_Data0("Proxy")), "one" => ((($__local_var_3_1)['oneRecord'])(new Phpurs_Data0("Proxy")))(new Phpurs_Data0("Proxy")), "zero" => ((($__local_var_3_1)['zeroRecord'])(new Phpurs_Data0("Proxy")))(new Phpurs_Data0("Proxy"))];
-  $ringRecord1_4_2 = ["sub" => (($__local_var_2_0)['subRecord'])(new Phpurs_Data0("Proxy")), "Semiring0" => function($_dollar__unused_5 = null) use ($semiringRecord1_4_2) {
+  $semiringRecord1_4_2 = ["add" => (($__local_var_3_1)['addRecord'])(new \Type\Proxy\Type_Proxy_Proxy()), "mul" => (($__local_var_3_1)['mulRecord'])(new \Type\Proxy\Type_Proxy_Proxy()), "one" => (($__local_var_3_1)['oneRecord'])(new \Type\Proxy\Type_Proxy_Proxy(), new \Type\Proxy\Type_Proxy_Proxy()), "zero" => (($__local_var_3_1)['zeroRecord'])(new \Type\Proxy\Type_Proxy_Proxy(), new \Type\Proxy\Type_Proxy_Proxy())];
+  $ringRecord1_4_2 = ["sub" => (($__local_var_2_0)['subRecord'])(new \Type\Proxy\Type_Proxy_Proxy()), "Semiring0" => function($_dollar__unused_5 = null) use ($semiringRecord1_4_2) {
   $__num = \func_num_args();
   $__res = $semiringRecord1_4_2;
   goto __end;;
@@ -173,10 +174,9 @@ $GLOBALS['Data_CommutativeRing_commutativeRingRecord'] = (function() {
 }];
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_CommutativeRing_commutativeRingRecord'] = __NAMESPACE__ . '\\majData_majCommutativemajRing_commutativemajRingmajRecord';
 
 // Data_CommutativeRing_commutativeRingProxy
 $GLOBALS['Data_CommutativeRing_commutativeRingProxy'] = ["Ring0" => function($_dollar__unused_0 = null) {
@@ -212,8 +212,12 @@ $GLOBALS['Data_CommutativeRing_commutativeRingInt'] = ["Ring0" => function($_dol
 }];
 
 // Data_CommutativeRing_commutativeRingFn
-$GLOBALS['Data_CommutativeRing_commutativeRingFn'] = function($dictCommutativeRing_0 = null) {
+function majData_majCommutativemajRing_commutativemajRingmajFn($dictCommutativeRing_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majCommutativemajRing_commutativemajRingmajFn';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__local_var_1_0 = (($dictCommutativeRing_0)['Ring0'])(null);
   $__local_var_2_1 = (($__local_var_1_0)['Semiring0'])(null);
   $zero1_3_2 = ($__local_var_2_1)['zero'];
@@ -224,7 +228,7 @@ $GLOBALS['Data_CommutativeRing_commutativeRingFn'] = function($dictCommutativeRi
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($__local_var_2_1)['add'])(($f_5)($x_7)))(($g_6)($x_7));
+  $__res = (($__local_var_2_1)['add'])(($f_5)($x_7), ($g_6)($x_7));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -242,7 +246,7 @@ $GLOBALS['Data_CommutativeRing_commutativeRingFn'] = function($dictCommutativeRi
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($__local_var_2_1)['mul'])(($f_5)($x_7)))(($g_6)($x_7));
+  $__res = (($__local_var_2_1)['mul'])(($f_5)($x_7), ($g_6)($x_7));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -261,7 +265,7 @@ $GLOBALS['Data_CommutativeRing_commutativeRingFn'] = function($dictCommutativeRi
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($__local_var_1_0)['sub'])(($f_6)($x_8)))(($g_7)($x_8));
+  $__res = (($__local_var_1_0)['sub'])(($f_6)($x_8), ($g_7)($x_8));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -283,6 +287,7 @@ $GLOBALS['Data_CommutativeRing_commutativeRingFn'] = function($dictCommutativeRi
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_CommutativeRing_commutativeRingFn'] = __NAMESPACE__ . '\\majData_majCommutativemajRing_commutativemajRingmajFn';
 

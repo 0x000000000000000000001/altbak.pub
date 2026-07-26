@@ -108,19 +108,26 @@ return $exports;
 
 
 
+
+
 // Control_Applicative_pure
-$GLOBALS['Control_Applicative_pure'] = function($dict_0 = null) {
+function majControl_majApplicative_pure($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majApplicative_pure';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['pure'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Applicative_pure'] = __NAMESPACE__ . '\\majControl_majApplicative_pure';
 
 // Control_Applicative_unless
-$GLOBALS['Control_Applicative_unless'] = (function() {
-  $__fn = function($dictApplicative_0 = null, $v_1 = null, $v1_2 = null) use (&$__fn) {
+function majControl_majApplicative_unless($dictApplicative_0, $v_1 = null, $v1_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majApplicative_unless';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
@@ -139,15 +146,14 @@ goto end_branch_0;;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Control_Applicative_unless'] = __NAMESPACE__ . '\\majControl_majApplicative_unless';
 
 // Control_Applicative_when
-$GLOBALS['Control_Applicative_when'] = (function() {
-  $__fn = function($dictApplicative_0 = null, $v_1 = null, $v1_2 = null) use (&$__fn) {
+function majControl_majApplicative_when($dictApplicative_0, $v_1 = null, $v1_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majApplicative_when';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
@@ -161,30 +167,28 @@ goto end_branch_0;;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Control_Applicative_when'] = __NAMESPACE__ . '\\majControl_majApplicative_when';
 
 // Control_Applicative_liftA1
-$GLOBALS['Control_Applicative_liftA1'] = (function() {
-  $__fn = function($dictApplicative_0 = null, $f_1 = null, $a_2 = null) use (&$__fn) {
+function majControl_majApplicative_liftmajA1($dictApplicative_0, $f_1 = null, $a_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majApplicative_liftmajA1';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((((($dictApplicative_0)['Apply0'])(null))['apply'])((($dictApplicative_0)['pure'])($f_1)))($a_2);
+  $__res = (((($dictApplicative_0)['Apply0'])(null))['apply'])((($dictApplicative_0)['pure'])($f_1), $a_2);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Control_Applicative_liftA1'] = __NAMESPACE__ . '\\majControl_majApplicative_liftmajA1';
 
 // Control_Applicative_applicativeProxy
 $GLOBALS['Control_Applicative_applicativeProxy'] = ["pure" => function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data0("Proxy");
+  $__res = new \Type\Proxy\Type_Proxy_Proxy();
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

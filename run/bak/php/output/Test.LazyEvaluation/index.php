@@ -105,34 +105,60 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Test_LazyEvaluation_Lazy
-$GLOBALS['Test_LazyEvaluation_Lazy'] = function($x_0 = null) {
+function majTest_majLazymajEvaluation_majLazy($x_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majTest_majLazymajEvaluation_majLazy';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $x_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Test_LazyEvaluation_Lazy'] = __NAMESPACE__ . '\\majTest_majLazymajEvaluation_majLazy';
 
 // Test_LazyEvaluation_force
-$GLOBALS['Test_LazyEvaluation_force'] = function($v_0 = null) {
+function majTest_majLazymajEvaluation_force($v_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majTest_majLazymajEvaluation_force';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($v_0)($GLOBALS['Data_Unit_unit']);
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Test_LazyEvaluation_force'] = __NAMESPACE__ . '\\majTest_majLazymajEvaluation_force';
 
 // Test_LazyEvaluation_describe
 $GLOBALS['Test_LazyEvaluation_describe'] = ($GLOBALS['Effect_Console_log'])("Lazy Evaluation (1M Thunks Forced, 1k Depth):");
 
+// Test_LazyEvaluation_defer_closure
+$GLOBALS['Test_LazyEvaluation_defer_closure'] = $GLOBALS['Test_LazyEvaluation_Lazy'];
+
 // Test_LazyEvaluation_defer
-$GLOBALS['Test_LazyEvaluation_defer'] = $GLOBALS['Test_LazyEvaluation_Lazy'];
+function majTest_majLazymajEvaluation_defer($v_0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majTest_majLazymajEvaluation_defer';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ($GLOBALS['Test_LazyEvaluation_defer_closure'])($v_0);
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Test_LazyEvaluation_defer'] = __NAMESPACE__ . '\\majTest_majLazymajEvaluation_defer';
 
 // Test_LazyEvaluation_buildThunks
-$GLOBALS['Test_LazyEvaluation_buildThunks'] = (function() {
-  $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
+function majTest_majLazymajEvaluation_buildmajThunks($v_0, $v1_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majTest_majLazymajEvaluation_buildmajThunks';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
@@ -167,15 +193,14 @@ break;
   $__res = $__t2;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Test_LazyEvaluation_buildThunks'] = __NAMESPACE__ . '\\majTest_majLazymajEvaluation_buildmajThunks';
 
 // Test_LazyEvaluation_runManyTimes
-$GLOBALS['Test_LazyEvaluation_runManyTimes'] = (function() {
-  $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
+function majTest_majLazymajEvaluation_runmajManymajTimes($v_0, $v1_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majTest_majLazymajEvaluation_runmajManymajTimes';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
@@ -195,13 +220,13 @@ default:
 break;
 };
   $__tco_0 = ($v_0 - 1);
-  $__tco_1 = ($v1_1 + ((($GLOBALS['Test_LazyEvaluation_buildThunks'])(1000))(function($v2_2 = null) {
+  $__tco_1 = ($v1_1 + ($GLOBALS['Test_LazyEvaluation_buildThunks'])(1000, function($v2_2 = null) {
   $__num = \func_num_args();
   $__res = 0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))($GLOBALS['Data_Unit_unit']));
+}, $GLOBALS['Data_Unit_unit']));
   $__tco_var_Test_LazyEvaluation_runManyTimes_v_0 = $__tco_0;
   $__tco_var_Test_LazyEvaluation_runManyTimes_v1_1 = $__tco_1;
   goto tco_loop_Test_LazyEvaluation_runManyTimes;;
@@ -210,15 +235,14 @@ break;
   $__res = $__t2;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Test_LazyEvaluation_runManyTimes'] = __NAMESPACE__ . '\\majTest_majLazymajEvaluation_runmajManymajTimes';
 
 // Test_LazyEvaluation_act
-$GLOBALS['Test_LazyEvaluation_act'] = ((($GLOBALS['Effect_bindEffect'])['bind'])(($GLOBALS['Bench_opaque'])(1000)))(function($dummy_0 = null) {
+$GLOBALS['Test_LazyEvaluation_act'] = (($GLOBALS['Effect_bindEffect'])['bind'])(($GLOBALS['Bench_opaque'])(1000), function($dummy_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_Console_log'])((($GLOBALS['Data_Show_showInt'])['show'])((($GLOBALS['Test_LazyEvaluation_runManyTimes'])($dummy_0))(0)));
+  $__res = ($GLOBALS['Effect_Console_log'])((($GLOBALS['Data_Show_showInt'])['show'])(($GLOBALS['Test_LazyEvaluation_runManyTimes'])($dummy_0, 0)));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

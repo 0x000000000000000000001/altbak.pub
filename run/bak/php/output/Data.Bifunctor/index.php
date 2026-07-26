@@ -101,34 +101,50 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_Bifunctor_identity
-$GLOBALS['Data_Bifunctor_identity'] = function($x_0 = null) {
+function majData_majBifunctor_identity($x_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majBifunctor_identity';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $x_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Bifunctor_identity'] = __NAMESPACE__ . '\\majData_majBifunctor_identity';
 
 // Data_Bifunctor_bimap
-$GLOBALS['Data_Bifunctor_bimap'] = function($dict_0 = null) {
+function majData_majBifunctor_bimap($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majBifunctor_bimap';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['bimap'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Bifunctor_bimap'] = __NAMESPACE__ . '\\majData_majBifunctor_bimap';
 
 // Data_Bifunctor_bivoid
-$GLOBALS['Data_Bifunctor_bivoid'] = function($dictBifunctor_0 = null) {
+function majData_majBifunctor_bivoid($dictBifunctor_0) {
   $__num = \func_num_args();
-  $__res = ((($dictBifunctor_0)['bimap'])(function($v_1 = null) {
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majBifunctor_bivoid';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = (($dictBifunctor_0)['bimap'])(function($v_1 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Unit_unit'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(function($v_1 = null) {
+}, function($v_1 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Unit_unit'];
   goto __end;;
@@ -137,32 +153,37 @@ $GLOBALS['Data_Bifunctor_bivoid'] = function($dictBifunctor_0 = null) {
 });
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Bifunctor_bivoid'] = __NAMESPACE__ . '\\majData_majBifunctor_bivoid';
 
 // Data_Bifunctor_lmap
-$GLOBALS['Data_Bifunctor_lmap'] = (function() {
-  $__fn = function($dictBifunctor_0 = null, $f_1 = null) use (&$__fn) {
+function majData_majBifunctor_lmap($dictBifunctor_0, $f_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majBifunctor_lmap';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictBifunctor_0)['bimap'])($f_1))($GLOBALS['Data_Bifunctor_identity']);
+  $__res = (($dictBifunctor_0)['bimap'])($f_1, $GLOBALS['Data_Bifunctor_identity']);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Bifunctor_lmap'] = __NAMESPACE__ . '\\majData_majBifunctor_lmap';
 
 // Data_Bifunctor_rmap
-$GLOBALS['Data_Bifunctor_rmap'] = function($dictBifunctor_0 = null) {
+function majData_majBifunctor_rmap($dictBifunctor_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majBifunctor_rmap';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = (($dictBifunctor_0)['bimap'])($GLOBALS['Data_Bifunctor_identity']);
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Bifunctor_rmap'] = __NAMESPACE__ . '\\majData_majBifunctor_rmap';
 
 // Data_Bifunctor_bifunctorTuple
 $GLOBALS['Data_Bifunctor_bifunctorTuple'] = ["bimap" => (function() {
@@ -171,7 +192,7 @@ $GLOBALS['Data_Bifunctor_bifunctorTuple'] = ["bimap" => (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = new Phpurs_Data2("Tuple", ($f_0)(($v_2)->{'value0'}), ($g_1)(($v_2)->{'value1'}));
+  $__res = new \Data\Tuple\Data_Tuple_Tuple(($f_0)(($v_2)->{'value0'}), ($g_1)(($v_2)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -187,12 +208,12 @@ $GLOBALS['Data_Bifunctor_bifunctorEither'] = ["bimap" => (function() {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   $__t0 = null;;
-  if ((is_object($v2_2) && (($v2_2)->{'tag'} === "Left"))) {
-$__t0 = new Phpurs_Data1("Left", ($v_0)(($v2_2)->{'value0'}));
+  if ($v2_2 instanceof \Data\Either\Data_Either_Left) {
+$__t0 = new \Data\Either\Data_Either_Left(($v_0)(($v2_2)->{'value0'}));
 goto end_branch_0;;
 };
-  if ((is_object($v2_2) && (($v2_2)->{'tag'} === "Right"))) {
-$__t0 = new Phpurs_Data1("Right", ($v1_1)(($v2_2)->{'value0'}));
+  if ($v2_2 instanceof \Data\Either\Data_Either_Right) {
+$__t0 = new \Data\Either\Data_Either_Right(($v1_1)(($v2_2)->{'value0'}));
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);

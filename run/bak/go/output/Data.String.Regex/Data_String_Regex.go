@@ -41,7 +41,7 @@ var once_renderFlags sync.Once
 func Get_renderFlags() gopurs_runtime.Value {
 	once_renderFlags.Do(func() {
 		cache_renderFlags = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_renderFlags(v_0_box)
+return gopurs_runtime.Str(Call_renderFlags(v_0_box))
 })
 	})
 	return cache_renderFlags
@@ -89,7 +89,7 @@ return Call_flags(x_0_box)
 	return cache_flags
 }
 
-func Call_renderFlags(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_renderFlags(v_0_loop gopurs_runtime.Value) string {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 var __t0 gopurs_runtime.Value
@@ -170,7 +170,7 @@ goto end_branch_5
 __t5 = gopurs_runtime.Str("")
 }
 end_branch_5:
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), __t0, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), __t1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), __t2, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), __t3, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), __t4, __t5)))))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), __t0, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), __t1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), __t2, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), __t3, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), __t4, __t5))))).StrVal()
 }
 
 func Call_regex(s_0_loop string, f_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -178,7 +178,7 @@ var s_0 string = s_0_loop
 _ = s_0
 var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
-return gopurs_runtime.Apply4(Get_regexImpl(), pkg_Data_Either.Get_Left(), pkg_Data_Either.Get_Right(), gopurs_runtime.Str(s_0), gopurs_runtime.Apply(Get_renderFlags(), f_1))
+return gopurs_runtime.Apply4(Get_regexImpl(), pkg_Data_Either.Get_Left(), pkg_Data_Either.Get_Right(), gopurs_runtime.Str(s_0), gopurs_runtime.Str(Call_renderFlags(f_1)))
 }
 
 func Call_parseFlags(s_0_loop string) gopurs_runtime.Value {

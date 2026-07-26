@@ -102,45 +102,64 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
+// Control_Comonad_Env_withEnv_closure
+$GLOBALS['Control_Comonad_Env_withEnv_closure'] = $GLOBALS['Control_Comonad_Env_Trans_withEnvT'];
+
 // Control_Comonad_Env_withEnv
-$GLOBALS['Control_Comonad_Env_withEnv'] = $GLOBALS['Control_Comonad_Env_Trans_withEnvT'];
+function majControl_majComonad_majEnv_withmajEnv($v_0, $v_1 = null) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majComonad_majEnv_withmajEnv';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ($GLOBALS['Control_Comonad_Env_withEnv_closure'])($v_0, $v_1);
+  goto __end;;
+  __end:
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Control_Comonad_Env_withEnv'] = __NAMESPACE__ . '\\majControl_majComonad_majEnv_withmajEnv';
 
 // Control_Comonad_Env_runEnv
-$GLOBALS['Control_Comonad_Env_runEnv'] = function($v_0 = null) {
+function majControl_majComonad_majEnv_runmajEnv($v_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Tuple_functorTuple'])['map'])($GLOBALS['Unsafe_Coerce_unsafeCoerce']))($v_0);
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majComonad_majEnv_runmajEnv';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = (($GLOBALS['Data_Tuple_functorTuple'])['map'])($GLOBALS['Unsafe_Coerce_unsafeCoerce'], $v_0);
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Comonad_Env_runEnv'] = __NAMESPACE__ . '\\majControl_majComonad_majEnv_runmajEnv';
 
 // Control_Comonad_Env_mapEnv
-$GLOBALS['Control_Comonad_Env_mapEnv'] = (function() {
-  $__fn = function($f_0 = null, $v_1 = null) use (&$__fn) {
+function majControl_majComonad_majEnv_mapmajEnv($f_0, $v_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majComonad_majEnv_mapmajEnv';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", ($v_1)->{'value0'}, ((($GLOBALS['Data_Identity_functorIdentity'])['map'])($f_0))(($v_1)->{'value1'}));
+  $__res = new \Data\Tuple\Data_Tuple_Tuple(($v_1)->{'value0'}, (($GLOBALS['Data_Identity_functorIdentity'])['map'])($f_0, ($v_1)->{'value1'}));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Control_Comonad_Env_mapEnv'] = __NAMESPACE__ . '\\majControl_majComonad_majEnv_mapmajEnv';
 
 // Control_Comonad_Env_env
-$GLOBALS['Control_Comonad_Env_env'] = (function() {
-  $__fn = function($e_0 = null, $a_1 = null) use (&$__fn) {
+function majControl_majComonad_majEnv_env($e_0, $a_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majComonad_majEnv_env';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", $e_0, $a_1);
+  $__res = new \Data\Tuple\Data_Tuple_Tuple($e_0, $a_1);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Control_Comonad_Env_env'] = __NAMESPACE__ . '\\majControl_majComonad_majEnv_env';
 

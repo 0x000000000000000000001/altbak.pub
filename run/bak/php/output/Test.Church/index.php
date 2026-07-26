@@ -104,69 +104,77 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Test_Church_zeroC
-$GLOBALS['Test_Church_zeroC'] = (function() {
-  $__fn = function($v_0 = null, $x_1 = null) use (&$__fn) {
+function majTest_majChurch_zeromajC($v_0, $x_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majTest_majChurch_zeromajC';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__res = $x_1;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Test_Church_zeroC'] = __NAMESPACE__ . '\\majTest_majChurch_zeromajC';
 
 // Test_Church_toInt
-$GLOBALS['Test_Church_toInt'] = function($n_0 = null) {
+function majTest_majChurch_tomajInt($n_0) {
   $__num = \func_num_args();
-  $__res = (($n_0)(function($x_1 = null) {
+  $__fn = __NAMESPACE__ . '\\' . 'majTest_majChurch_tomajInt';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ($n_0)(function($x_1 = null) {
   $__num = \func_num_args();
   $__res = ($x_1 + 1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(0);
+}, 0);
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Test_Church_toInt'] = __NAMESPACE__ . '\\majTest_majChurch_tomajInt';
 
 // Test_Church_succC
-$GLOBALS['Test_Church_succC'] = (function() {
-  $__fn = function($n_0 = null, $f_1 = null, $x_2 = null) use (&$__fn) {
+function majTest_majChurch_succmajC($n_0, $f_1 = null, $x_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majTest_majChurch_succmajC';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ($f_1)((($n_0)($f_1))($x_2));
+  $__res = ($f_1)(($n_0)($f_1, $x_2));
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Test_Church_succC'] = __NAMESPACE__ . '\\majTest_majChurch_succmajC';
 
 // Test_Church_mulC
-$GLOBALS['Test_Church_mulC'] = (function() {
-  $__fn = function($m_0 = null, $n_1 = null, $f_2 = null, $x_3 = null) use (&$__fn) {
+function majTest_majChurch_mulmajC($m_0, $n_1 = null, $f_2 = null, $x_3 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majTest_majChurch_mulmajC';
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = (($m_0)(($n_1)($f_2)))($x_3);
+  $__res = ($m_0)(($n_1)($f_2), $x_3);
   goto __end;;
   __end:
-  return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
-  };
-  return $__fn;
-})();
+  return 4 < $__num ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
+}
+$GLOBALS['Test_Church_mulC'] = __NAMESPACE__ . '\\majTest_majChurch_mulmajC';
 
 // Test_Church_fromInt
-$GLOBALS['Test_Church_fromInt'] = function($v_0 = null) {
+function majTest_majChurch_frommajInt($v_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majTest_majChurch_frommajInt';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__tco_var_Test_Church_fromInt_v_0 = $v_0;
   tco_loop_Test_Church_fromInt:;
   $v_0 = $__tco_var_Test_Church_fromInt_v_0;
@@ -187,7 +195,7 @@ break;
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($f_2)((($__local_var_1_0)($f_2))($x_3));
+  $__res = ($f_2)(($__local_var_1_0)($f_2, $x_3));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -198,24 +206,34 @@ break;
   $__res = $__t1;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Test_Church_fromInt'] = __NAMESPACE__ . '\\majTest_majChurch_frommajInt';
 
 // Test_Church_describe
 $GLOBALS['Test_Church_describe'] = ($GLOBALS['Effect_Console_log'])("Church Numerals (100k Closure Applications):");
 
 // Test_Church_c10
-$GLOBALS['Test_Church_c10'] = function($n_0 = null) {
+function majTest_majChurch_c10($n_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majTest_majChurch_c10';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($GLOBALS['Test_Church_fromInt'])($n_0);
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Test_Church_c10'] = __NAMESPACE__ . '\\majTest_majChurch_c10';
 
 // Test_Church_c100
-$GLOBALS['Test_Church_c100'] = function($n_0 = null) {
+function majTest_majChurch_c100($n_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majTest_majChurch_c100';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__local_var_1_0 = ($GLOBALS['Test_Church_fromInt'])($n_0);
   $__local_var_2_1 = ($GLOBALS['Test_Church_fromInt'])($n_0);
   $__res = (function() use ($__local_var_1_0, $__local_var_2_1) {
@@ -224,7 +242,7 @@ $GLOBALS['Test_Church_c100'] = function($n_0 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($__local_var_1_0)(($__local_var_2_1)($f_3)))($x_4);
+  $__res = ($__local_var_1_0)(($__local_var_2_1)($f_3), $x_4);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -233,12 +251,17 @@ $GLOBALS['Test_Church_c100'] = function($n_0 = null) {
 })();
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Test_Church_c100'] = __NAMESPACE__ . '\\majTest_majChurch_c100';
 
 // Test_Church_c10k
-$GLOBALS['Test_Church_c10k'] = function($n_0 = null) {
+function majTest_majChurch_c10k($n_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majTest_majChurch_c10k';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__local_var_1_0 = ($GLOBALS['Test_Church_c100'])($n_0);
   $__local_var_2_1 = ($GLOBALS['Test_Church_c100'])($n_0);
   $__res = (function() use ($__local_var_1_0, $__local_var_2_1) {
@@ -247,7 +270,7 @@ $GLOBALS['Test_Church_c10k'] = function($n_0 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($__local_var_1_0)(($__local_var_2_1)($f_3)))($x_4);
+  $__res = ($__local_var_1_0)(($__local_var_2_1)($f_3), $x_4);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -256,12 +279,17 @@ $GLOBALS['Test_Church_c10k'] = function($n_0 = null) {
 })();
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Test_Church_c10k'] = __NAMESPACE__ . '\\majTest_majChurch_c10k';
 
 // Test_Church_c100k
-$GLOBALS['Test_Church_c100k'] = function($n_0 = null) {
+function majTest_majChurch_c100k($n_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majTest_majChurch_c100k';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__local_var_1_0 = ($GLOBALS['Test_Church_c10k'])($n_0);
   $__local_var_2_1 = ($GLOBALS['Test_Church_fromInt'])($n_0);
   $__res = (function() use ($__local_var_1_0, $__local_var_2_1) {
@@ -270,7 +298,7 @@ $GLOBALS['Test_Church_c100k'] = function($n_0 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($__local_var_1_0)(($__local_var_2_1)($f_3)))($x_4);
+  $__res = ($__local_var_1_0)(($__local_var_2_1)($f_3), $x_4);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -279,34 +307,34 @@ $GLOBALS['Test_Church_c100k'] = function($n_0 = null) {
 })();
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Test_Church_c100k'] = __NAMESPACE__ . '\\majTest_majChurch_c100k';
 
 // Test_Church_addC
-$GLOBALS['Test_Church_addC'] = (function() {
-  $__fn = function($m_0 = null, $n_1 = null, $f_2 = null, $x_3 = null) use (&$__fn) {
+function majTest_majChurch_addmajC($m_0, $n_1 = null, $f_2 = null, $x_3 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majTest_majChurch_addmajC';
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = (($m_0)($f_2))((($n_1)($f_2))($x_3));
+  $__res = ($m_0)($f_2, ($n_1)($f_2, $x_3));
   goto __end;;
   __end:
-  return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
-  };
-  return $__fn;
-})();
+  return 4 < $__num ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
+}
+$GLOBALS['Test_Church_addC'] = __NAMESPACE__ . '\\majTest_majChurch_addmajC';
 
 // Test_Church_act
-$GLOBALS['Test_Church_act'] = ((($GLOBALS['Effect_bindEffect'])['bind'])(($GLOBALS['Bench_opaque'])(10)))(function($dummy_0 = null) {
+$GLOBALS['Test_Church_act'] = (($GLOBALS['Effect_bindEffect'])['bind'])(($GLOBALS['Bench_opaque'])(10), function($dummy_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_Console_log'])((($GLOBALS['Data_Show_showInt'])['show'])(((($GLOBALS['Test_Church_c100k'])($dummy_0))(function($x_1 = null) {
+  $__res = ($GLOBALS['Effect_Console_log'])((($GLOBALS['Data_Show_showInt'])['show'])(($GLOBALS['Test_Church_c100k'])($dummy_0, function($x_1 = null) {
   $__num = \func_num_args();
   $__res = ($x_1 + 1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(0)));
+}, 0)));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

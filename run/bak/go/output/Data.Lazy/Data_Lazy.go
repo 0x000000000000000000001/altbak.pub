@@ -133,7 +133,7 @@ func Get_ord1Lazy() gopurs_runtime.Value {
 		cache_ord1Lazy = gopurs_runtime.RecordDict2("Eq10", "compare1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_eq1Lazy()
 }), gopurs_runtime.Func(func(dictOrd_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(gopurs_runtime.Apply(Get_ordLazy(), dictOrd_0), "compare")
+return gopurs_runtime.RecordGet(Call_ordLazy(dictOrd_0), "compare")
 }))
 	})
 	return cache_ord1Lazy
@@ -531,7 +531,7 @@ return zero_1_0
 func Call_ringLazy(dictRing_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictRing_0 gopurs_runtime.Value = dictRing_0_loop
 _ = dictRing_0
-semiringLazy1_1_0 := gopurs_runtime.Apply(Get_semiringLazy(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictRing_0, "Semiring0"), gopurs_runtime.Value{}))
+semiringLazy1_1_0 := Call_semiringLazy(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictRing_0, "Semiring0"), gopurs_runtime.Value{}))
 _ = semiringLazy1_1_0
 return gopurs_runtime.RecordDict2("Semiring0", "sub", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return semiringLazy1_1_0
@@ -543,7 +543,7 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictRing_0, "sub"), gopurs
 func Call_commutativeRingLazy(dictCommutativeRing_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictCommutativeRing_0 gopurs_runtime.Value = dictCommutativeRing_0_loop
 _ = dictCommutativeRing_0
-ringLazy1_1_0 := gopurs_runtime.Apply(Get_ringLazy(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictCommutativeRing_0, "Ring0"), gopurs_runtime.Value{}))
+ringLazy1_1_0 := Call_ringLazy(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictCommutativeRing_0, "Ring0"), gopurs_runtime.Value{}))
 _ = ringLazy1_1_0
 return gopurs_runtime.RecordDict1("Ring0", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return ringLazy1_1_0
@@ -553,7 +553,7 @@ return ringLazy1_1_0
 func Call_euclideanRingLazy(dictEuclideanRing_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictEuclideanRing_0 gopurs_runtime.Value = dictEuclideanRing_0_loop
 _ = dictEuclideanRing_0
-ringLazy1_1_0 := gopurs_runtime.Apply(Get_ringLazy(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEuclideanRing_0, "CommutativeRing0"), gopurs_runtime.Value{}), "Ring0"), gopurs_runtime.Value{}))
+ringLazy1_1_0 := Call_ringLazy(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEuclideanRing_0, "CommutativeRing0"), gopurs_runtime.Value{}), "Ring0"), gopurs_runtime.Value{}))
 _ = ringLazy1_1_0
 return gopurs_runtime.RecordDict4("CommutativeRing0", "degree", "div", "mod", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict1("Ring0", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -575,7 +575,7 @@ top_1_0 := gopurs_runtime.RecordGet(dictBounded_0, "top")
 _ = top_1_0
 bottom_2_1 := gopurs_runtime.RecordGet(dictBounded_0, "bottom")
 _ = bottom_2_1
-ordLazy1_3_2 := gopurs_runtime.Apply(Get_ordLazy(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBounded_0, "Ord0"), gopurs_runtime.Value{}))
+ordLazy1_3_2 := Call_ordLazy(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBounded_0, "Ord0"), gopurs_runtime.Value{}))
 _ = ordLazy1_3_2
 return gopurs_runtime.RecordDict3("Ord0", "bottom", "top", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return ordLazy1_3_2
@@ -619,7 +619,7 @@ return tt_2_1
 func Call_booleanAlgebraLazy(dictBooleanAlgebra_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictBooleanAlgebra_0 gopurs_runtime.Value = dictBooleanAlgebra_0_loop
 _ = dictBooleanAlgebra_0
-heytingAlgebraLazy1_1_0 := gopurs_runtime.Apply(Get_heytingAlgebraLazy(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBooleanAlgebra_0, "HeytingAlgebra0"), gopurs_runtime.Value{}))
+heytingAlgebraLazy1_1_0 := Call_heytingAlgebraLazy(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBooleanAlgebra_0, "HeytingAlgebra0"), gopurs_runtime.Value{}))
 _ = heytingAlgebraLazy1_1_0
 return gopurs_runtime.RecordDict1("HeytingAlgebra0", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return heytingAlgebraLazy1_1_0

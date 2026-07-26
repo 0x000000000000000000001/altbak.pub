@@ -52,7 +52,7 @@ var once_toString sync.Once
 func Get_toString() gopurs_runtime.Value {
 	once_toString.Do(func() {
 		cache_toString = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_toString(v_0_box)
+return gopurs_runtime.Str(Call_toString(v_0_box))
 })
 	})
 	return cache_toString
@@ -220,7 +220,7 @@ var once_startsWith sync.Once
 func Get_startsWith() gopurs_runtime.Value {
 	once_startsWith.Do(func() {
 		cache_startsWith = gopurs_runtime.Func2(func(x_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_startsWith(x_0_box, v_1_box)
+return gopurs_runtime.Bool(Call_startsWith(x_0_box, v_1_box))
 })
 	})
 	return cache_startsWith
@@ -264,7 +264,7 @@ var once_fromString sync.Once
 func Get_fromString() gopurs_runtime.Value {
 	once_fromString.Do(func() {
 		cache_fromString = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_fromString(v_0_box.StrVal())
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_fromString(v_0_box.StrVal()))}
 })
 	})
 	return cache_fromString
@@ -275,7 +275,7 @@ var once_stripPrefix sync.Once
 func Get_stripPrefix() gopurs_runtime.Value {
 	once_stripPrefix.Do(func() {
 		cache_stripPrefix = gopurs_runtime.Func2(func(pat_0_box gopurs_runtime.Value, a_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_stripPrefix(pat_0_box, a_1_box)
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_stripPrefix(pat_0_box, a_1_box))}
 })
 	})
 	return cache_stripPrefix
@@ -286,7 +286,7 @@ var once_stripSuffix sync.Once
 func Get_stripSuffix() gopurs_runtime.Value {
 	once_stripSuffix.Do(func() {
 		cache_stripSuffix = gopurs_runtime.Func2(func(pat_0_box gopurs_runtime.Value, a_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_stripSuffix(pat_0_box, a_1_box)
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_stripSuffix(pat_0_box, a_1_box))}
 })
 	})
 	return cache_stripSuffix
@@ -297,7 +297,7 @@ var once_trim sync.Once
 func Get_trim() gopurs_runtime.Value {
 	once_trim.Do(func() {
 		cache_trim = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_trim(v_0_box)
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_trim(v_0_box))}
 })
 	})
 	return cache_trim
@@ -337,7 +337,7 @@ var once_endsWith sync.Once
 func Get_endsWith() gopurs_runtime.Value {
 	once_endsWith.Do(func() {
 		cache_endsWith = gopurs_runtime.Func2(func(x_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_endsWith(x_0_box, v_1_box)
+return gopurs_runtime.Bool(Call_endsWith(x_0_box, v_1_box))
 })
 	})
 	return cache_endsWith
@@ -383,10 +383,10 @@ _ = v_0
 return gopurs_runtime.Apply(pkg_Data_String_Common.Get_toUpper(), v_0)
 }
 
-func Call_toString(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_toString(v_0_loop gopurs_runtime.Value) string {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-return v_0
+return v_0.StrVal()
 }
 
 func Call_toLower(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -461,7 +461,7 @@ _ = v_1
 return gopurs_runtime.Apply(f_0, v_1)
 }
 
-func Call_startsWith(x_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_startsWith(x_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) bool {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
 var v_1 gopurs_runtime.Value = v_1_loop
@@ -489,7 +489,7 @@ goto end_branch_1
 __t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_1:
-return __t1
+return (__t1.IntVal) != (0)
 }
 
 func Call_joinWith1(dictFoldable1_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -547,10 +547,10 @@ return __t1
 func Call_join1With(dictFoldable1_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictFoldable1_0 gopurs_runtime.Value = dictFoldable1_0_loop
 _ = dictFoldable1_0
-return gopurs_runtime.Apply(Get_joinWith(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFoldable1_0, "Foldable0"), gopurs_runtime.Value{}))
+return Call_joinWith(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFoldable1_0, "Foldable0"), gopurs_runtime.Value{}))
 }
 
-func Call_fromString(v_0_loop string) gopurs_runtime.Value {
+func Call_fromString(v_0_loop string) *pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value] {
 var v_0 string = v_0_loop
 _ = v_0
 var __t0 gopurs_runtime.Value
@@ -566,26 +566,26 @@ goto end_branch_0
 __t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{gopurs_runtime.Str(v_0)})}
 }
 end_branch_0:
-return __t0
+return (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(__t0.UnsafePtr)
 }
 
-func Call_stripPrefix(pat_0_loop gopurs_runtime.Value, a_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_stripPrefix(pat_0_loop gopurs_runtime.Value, a_1_loop gopurs_runtime.Value) *pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value] {
 var pat_0 gopurs_runtime.Value = pat_0_loop
 _ = pat_0
 var a_1 gopurs_runtime.Value = a_1_loop
 _ = a_1
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Maybe.Get_bindMaybe(), "bind"), gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_stripPrefix(), pat_0, a_1), Get_fromString())
+return (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Maybe.Get_bindMaybe(), "bind"), gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_stripPrefix(), pat_0, a_1), Get_fromString()).UnsafePtr)
 }
 
-func Call_stripSuffix(pat_0_loop gopurs_runtime.Value, a_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_stripSuffix(pat_0_loop gopurs_runtime.Value, a_1_loop gopurs_runtime.Value) *pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value] {
 var pat_0 gopurs_runtime.Value = pat_0_loop
 _ = pat_0
 var a_1 gopurs_runtime.Value = a_1_loop
 _ = a_1
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Maybe.Get_bindMaybe(), "bind"), gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_stripSuffix(), pat_0, a_1), Get_fromString())
+return (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Maybe.Get_bindMaybe(), "bind"), gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_stripSuffix(), pat_0, a_1), Get_fromString()).UnsafePtr)
 }
 
-func Call_trim(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_trim(v_0_loop gopurs_runtime.Value) *pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value] {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 __local_var_1_0 := gopurs_runtime.Apply(pkg_Data_String_Common.Get_trim(), v_0)
@@ -603,7 +603,7 @@ goto end_branch_1
 __t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{__local_var_1_0})}
 }
 end_branch_1:
-return __t1
+return (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(__t1.UnsafePtr)
 }
 
 func Call_unsafeFromString(_dollar__unused_0_loop gopurs_runtime.Value, x_1_loop string) gopurs_runtime.Value {
@@ -627,7 +627,7 @@ end_branch_0:
 return __t0
 }
 
-func Call_endsWith(x_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_endsWith(x_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) bool {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
 var v_1 gopurs_runtime.Value = v_1_loop
@@ -655,7 +655,7 @@ goto end_branch_1
 __t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_1:
-return __t1
+return (__t1.IntVal) != (0)
 }
 
 func Call_contains(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {

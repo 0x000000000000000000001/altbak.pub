@@ -155,20 +155,55 @@ $GLOBALS['Effect_Exception_stackImpl'] = $ffi_Effect_Exception['stackImpl'] ?? n
 $GLOBALS['Effect_Exception_throwException'] = $ffi_Effect_Exception['throwException'] ?? new class { public function __invoke(...$args) { return $this; } };
 
 
+
+
 // Effect_Exception_try
-$GLOBALS['Effect_Exception_try'] = function($action_0 = null) {
+function majEffect_majException_try($action_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_Exception_catchException'])((($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Effect_applicativeEffect'])['pure']))($GLOBALS['Data_Either_Left'])))(((($GLOBALS['Effect_functorEffect'])['map'])($GLOBALS['Data_Either_Right']))($action_0));
+  $__fn = __NAMESPACE__ . '\\' . 'majEffect_majException_try';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ($GLOBALS['Effect_Exception_catchException'])(($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Effect_applicativeEffect'])['pure'], $GLOBALS['Data_Either_Left']), (($GLOBALS['Effect_functorEffect'])['map'])($GLOBALS['Data_Either_Right'], $action_0));
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Effect_Exception_try'] = __NAMESPACE__ . '\\majEffect_majException_try';
+
+// Effect_Exception_throw_closure
+$GLOBALS['Effect_Exception_throw_closure'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Effect_Exception_throwException'], $GLOBALS['Effect_Exception_error']);
 
 // Effect_Exception_throw
-$GLOBALS['Effect_Exception_throw'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Effect_Exception_throwException']))($GLOBALS['Effect_Exception_error']);
+function majEffect_majException_throw($v_0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majEffect_majException_throw';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ($GLOBALS['Effect_Exception_throw_closure'])($v_0);
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Effect_Exception_throw'] = __NAMESPACE__ . '\\majEffect_majException_throw';
+
+// Effect_Exception_stack_closure
+$GLOBALS['Effect_Exception_stack_closure'] = ($GLOBALS['Effect_Exception_stackImpl'])($GLOBALS['Data_Maybe_Just'], new \Data\Maybe\Data_Maybe_Nothing());
 
 // Effect_Exception_stack
-$GLOBALS['Effect_Exception_stack'] = (($GLOBALS['Effect_Exception_stackImpl'])($GLOBALS['Data_Maybe_Just']))(new Phpurs_Data0("Nothing"));
+function majEffect_majException_stack($v_0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majEffect_majException_stack';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ($GLOBALS['Effect_Exception_stack_closure'])($v_0);
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Effect_Exception_stack'] = __NAMESPACE__ . '\\majEffect_majException_stack';
 
 // Effect_Exception_showError
 $GLOBALS['Effect_Exception_showError'] = ["show" => $GLOBALS['Effect_Exception_showErrorImpl']];

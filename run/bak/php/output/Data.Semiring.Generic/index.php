@@ -99,29 +99,35 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_Semiring_Generic_genericZero'
-$GLOBALS['Data_Semiring_Generic_genericZero__prime__'] = function($dict_0 = null) {
+function majData_majSemiring_majGeneric_genericmajZero__prime__($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majSemiring_majGeneric_genericmajZero__prime__';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['genericZero__prime__'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Semiring_Generic_genericZero__prime__'] = __NAMESPACE__ . '\\majData_majSemiring_majGeneric_genericmajZero__prime__';
 
 // Data_Semiring_Generic_genericZero
-$GLOBALS['Data_Semiring_Generic_genericZero'] = (function() {
-  $__fn = function($dictGeneric_0 = null, $dictGenericSemiring_1 = null) use (&$__fn) {
+function majData_majSemiring_majGeneric_genericmajZero($dictGeneric_0, $dictGenericSemiring_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majSemiring_majGeneric_genericmajZero';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__res = (($dictGeneric_0)['to'])(($dictGenericSemiring_1)['genericZero__prime__']);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Semiring_Generic_genericZero'] = __NAMESPACE__ . '\\majData_majSemiring_majGeneric_genericmajZero';
 
 // Data_Semiring_Generic_genericSemiringNoArguments
 $GLOBALS['Data_Semiring_Generic_genericSemiringNoArguments'] = ["genericAdd__prime__" => (function() {
@@ -130,36 +136,40 @@ $GLOBALS['Data_Semiring_Generic_genericSemiringNoArguments'] = ["genericAdd__pri
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data0("NoArguments");
+  $__res = new \Data\Generic\Rep\Data_Generic_Rep_NoArguments();
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "genericZero__prime__" => new Phpurs_Data0("NoArguments"), "genericMul__prime__" => (function() {
+})(), "genericZero__prime__" => new \Data\Generic\Rep\Data_Generic_Rep_NoArguments(), "genericMul__prime__" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data0("NoArguments");
+  $__res = new \Data\Generic\Rep\Data_Generic_Rep_NoArguments();
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "genericOne__prime__" => new Phpurs_Data0("NoArguments")];
+})(), "genericOne__prime__" => new \Data\Generic\Rep\Data_Generic_Rep_NoArguments()];
 
 // Data_Semiring_Generic_genericSemiringArgument
-$GLOBALS['Data_Semiring_Generic_genericSemiringArgument'] = function($dictSemiring_0 = null) {
+function majData_majSemiring_majGeneric_genericmajSemiringmajArgument($dictSemiring_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majSemiring_majGeneric_genericmajSemiringmajArgument';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["genericAdd__prime__" => (function() use ($dictSemiring_0) {
   $__fn = function($v_1 = null, $v1_2 = null) use ($dictSemiring_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictSemiring_0)['add'])($v_1))($v1_2);
+  $__res = (($dictSemiring_0)['add'])($v_1, $v1_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -171,7 +181,7 @@ $GLOBALS['Data_Semiring_Generic_genericSemiringArgument'] = function($dictSemiri
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictSemiring_0)['mul'])($v_1))($v1_2);
+  $__res = (($dictSemiring_0)['mul'])($v_1, $v1_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -180,76 +190,94 @@ $GLOBALS['Data_Semiring_Generic_genericSemiringArgument'] = function($dictSemiri
 })(), "genericOne__prime__" => ($dictSemiring_0)['one']];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Semiring_Generic_genericSemiringArgument'] = __NAMESPACE__ . '\\majData_majSemiring_majGeneric_genericmajSemiringmajArgument';
 
 // Data_Semiring_Generic_genericOne'
-$GLOBALS['Data_Semiring_Generic_genericOne__prime__'] = function($dict_0 = null) {
+function majData_majSemiring_majGeneric_genericmajOne__prime__($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majSemiring_majGeneric_genericmajOne__prime__';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['genericOne__prime__'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Semiring_Generic_genericOne__prime__'] = __NAMESPACE__ . '\\majData_majSemiring_majGeneric_genericmajOne__prime__';
 
 // Data_Semiring_Generic_genericOne
-$GLOBALS['Data_Semiring_Generic_genericOne'] = (function() {
-  $__fn = function($dictGeneric_0 = null, $dictGenericSemiring_1 = null) use (&$__fn) {
+function majData_majSemiring_majGeneric_genericmajOne($dictGeneric_0, $dictGenericSemiring_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majSemiring_majGeneric_genericmajOne';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__res = (($dictGeneric_0)['to'])(($dictGenericSemiring_1)['genericOne__prime__']);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Semiring_Generic_genericOne'] = __NAMESPACE__ . '\\majData_majSemiring_majGeneric_genericmajOne';
 
 // Data_Semiring_Generic_genericMul'
-$GLOBALS['Data_Semiring_Generic_genericMul__prime__'] = function($dict_0 = null) {
+function majData_majSemiring_majGeneric_genericmajMul__prime__($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majSemiring_majGeneric_genericmajMul__prime__';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['genericMul__prime__'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Semiring_Generic_genericMul__prime__'] = __NAMESPACE__ . '\\majData_majSemiring_majGeneric_genericmajMul__prime__';
 
 // Data_Semiring_Generic_genericMul
-$GLOBALS['Data_Semiring_Generic_genericMul'] = (function() {
-  $__fn = function($dictGeneric_0 = null, $dictGenericSemiring_1 = null, $x_2 = null, $y_3 = null) use (&$__fn) {
+function majData_majSemiring_majGeneric_genericmajMul($dictGeneric_0, $dictGenericSemiring_1 = null, $x_2 = null, $y_3 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majSemiring_majGeneric_genericmajMul';
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = (($dictGeneric_0)['to'])(((($dictGenericSemiring_1)['genericMul__prime__'])((($dictGeneric_0)['from'])($x_2)))((($dictGeneric_0)['from'])($y_3)));
+  $__res = (($dictGeneric_0)['to'])((($dictGenericSemiring_1)['genericMul__prime__'])((($dictGeneric_0)['from'])($x_2), (($dictGeneric_0)['from'])($y_3)));
   goto __end;;
   __end:
-  return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
-  };
-  return $__fn;
-})();
+  return 4 < $__num ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
+}
+$GLOBALS['Data_Semiring_Generic_genericMul'] = __NAMESPACE__ . '\\majData_majSemiring_majGeneric_genericmajMul';
 
 // Data_Semiring_Generic_genericAdd'
-$GLOBALS['Data_Semiring_Generic_genericAdd__prime__'] = function($dict_0 = null) {
+function majData_majSemiring_majGeneric_genericmajAdd__prime__($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majSemiring_majGeneric_genericmajAdd__prime__';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['genericAdd__prime__'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Semiring_Generic_genericAdd__prime__'] = __NAMESPACE__ . '\\majData_majSemiring_majGeneric_genericmajAdd__prime__';
 
 // Data_Semiring_Generic_genericSemiringConstructor
-$GLOBALS['Data_Semiring_Generic_genericSemiringConstructor'] = function($dictGenericSemiring_0 = null) {
+function majData_majSemiring_majGeneric_genericmajSemiringmajConstructor($dictGenericSemiring_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majSemiring_majGeneric_genericmajSemiringmajConstructor';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["genericAdd__prime__" => (function() use ($dictGenericSemiring_0) {
   $__fn = function($v_1 = null, $v1_2 = null) use ($dictGenericSemiring_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictGenericSemiring_0)['genericAdd__prime__'])($v_1))($v1_2);
+  $__res = (($dictGenericSemiring_0)['genericAdd__prime__'])($v_1, $v1_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -261,7 +289,7 @@ $GLOBALS['Data_Semiring_Generic_genericSemiringConstructor'] = function($dictGen
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictGenericSemiring_0)['genericMul__prime__'])($v_1))($v1_2);
+  $__res = (($dictGenericSemiring_0)['genericMul__prime__'])($v_1, $v1_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -270,12 +298,17 @@ $GLOBALS['Data_Semiring_Generic_genericSemiringConstructor'] = function($dictGen
 })(), "genericOne__prime__" => ($dictGenericSemiring_0)['genericOne__prime__']];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Semiring_Generic_genericSemiringConstructor'] = __NAMESPACE__ . '\\majData_majSemiring_majGeneric_genericmajSemiringmajConstructor';
 
 // Data_Semiring_Generic_genericSemiringProduct
-$GLOBALS['Data_Semiring_Generic_genericSemiringProduct'] = function($dictGenericSemiring_0 = null) {
+function majData_majSemiring_majGeneric_genericmajSemiringmajProduct($dictGenericSemiring_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majSemiring_majGeneric_genericmajSemiringmajProduct';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $genericZero_prime1_1_0 = ($dictGenericSemiring_0)['genericZero__prime__'];
   $genericOne_prime1_2_1 = ($dictGenericSemiring_0)['genericOne__prime__'];
   $__res = function($dictGenericSemiring1_3 = null) use ($dictGenericSemiring_0, $genericOne_prime1_2_1, $genericZero_prime1_1_0) {
@@ -286,46 +319,46 @@ $GLOBALS['Data_Semiring_Generic_genericSemiringProduct'] = function($dictGeneric
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Product", ((($dictGenericSemiring_0)['genericAdd__prime__'])(($v_4)->{'value0'}))(($v1_5)->{'value0'}), ((($dictGenericSemiring1_3)['genericAdd__prime__'])(($v_4)->{'value1'}))(($v1_5)->{'value1'}));
+  $__res = new \Data\Generic\Rep\Data_Generic_Rep_Product((($dictGenericSemiring_0)['genericAdd__prime__'])(($v_4)->{'value0'}, ($v1_5)->{'value0'}), (($dictGenericSemiring1_3)['genericAdd__prime__'])(($v_4)->{'value1'}, ($v1_5)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "genericZero__prime__" => new Phpurs_Data2("Product", $genericZero_prime1_1_0, ($dictGenericSemiring1_3)['genericZero__prime__']), "genericMul__prime__" => (function() use ($dictGenericSemiring1_3, $dictGenericSemiring_0) {
+})(), "genericZero__prime__" => new \Data\Generic\Rep\Data_Generic_Rep_Product($genericZero_prime1_1_0, ($dictGenericSemiring1_3)['genericZero__prime__']), "genericMul__prime__" => (function() use ($dictGenericSemiring1_3, $dictGenericSemiring_0) {
   $__fn = function($v_4 = null, $v1_5 = null) use ($dictGenericSemiring1_3, $dictGenericSemiring_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Product", ((($dictGenericSemiring_0)['genericMul__prime__'])(($v_4)->{'value0'}))(($v1_5)->{'value0'}), ((($dictGenericSemiring1_3)['genericMul__prime__'])(($v_4)->{'value1'}))(($v1_5)->{'value1'}));
+  $__res = new \Data\Generic\Rep\Data_Generic_Rep_Product((($dictGenericSemiring_0)['genericMul__prime__'])(($v_4)->{'value0'}, ($v1_5)->{'value0'}), (($dictGenericSemiring1_3)['genericMul__prime__'])(($v_4)->{'value1'}, ($v1_5)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "genericOne__prime__" => new Phpurs_Data2("Product", $genericOne_prime1_2_1, ($dictGenericSemiring1_3)['genericOne__prime__'])];
+})(), "genericOne__prime__" => new \Data\Generic\Rep\Data_Generic_Rep_Product($genericOne_prime1_2_1, ($dictGenericSemiring1_3)['genericOne__prime__'])];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Semiring_Generic_genericSemiringProduct'] = __NAMESPACE__ . '\\majData_majSemiring_majGeneric_genericmajSemiringmajProduct';
 
 // Data_Semiring_Generic_genericAdd
-$GLOBALS['Data_Semiring_Generic_genericAdd'] = (function() {
-  $__fn = function($dictGeneric_0 = null, $dictGenericSemiring_1 = null, $x_2 = null, $y_3 = null) use (&$__fn) {
+function majData_majSemiring_majGeneric_genericmajAdd($dictGeneric_0, $dictGenericSemiring_1 = null, $x_2 = null, $y_3 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majSemiring_majGeneric_genericmajAdd';
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = (($dictGeneric_0)['to'])(((($dictGenericSemiring_1)['genericAdd__prime__'])((($dictGeneric_0)['from'])($x_2)))((($dictGeneric_0)['from'])($y_3)));
+  $__res = (($dictGeneric_0)['to'])((($dictGenericSemiring_1)['genericAdd__prime__'])((($dictGeneric_0)['from'])($x_2), (($dictGeneric_0)['from'])($y_3)));
   goto __end;;
   __end:
-  return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
-  };
-  return $__fn;
-})();
+  return 4 < $__num ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
+}
+$GLOBALS['Data_Semiring_Generic_genericAdd'] = __NAMESPACE__ . '\\majData_majSemiring_majGeneric_genericmajAdd';
 

@@ -102,28 +102,34 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Control_Comonad_Store_store
-$GLOBALS['Control_Comonad_Store_store'] = (function() {
-  $__fn = function($f_0 = null, $x_1 = null) use (&$__fn) {
+function majControl_majComonad_majStore_store($f_0, $x_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majComonad_majStore_store';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", $f_0, $x_1);
+  $__res = new \Data\Tuple\Data_Tuple_Tuple($f_0, $x_1);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Control_Comonad_Store_store'] = __NAMESPACE__ . '\\majControl_majComonad_majStore_store';
 
 // Control_Comonad_Store_runStore
-$GLOBALS['Control_Comonad_Store_runStore'] = function($v_0 = null) {
+function majControl_majComonad_majStore_runmajStore($v_0) {
   $__num = \func_num_args();
-  $__local_var_1_0 = ((($GLOBALS['Data_Tuple_functorTuple'])['map'])($GLOBALS['Unsafe_Coerce_unsafeCoerce']))(new Phpurs_Data2("Tuple", ($v_0)->{'value1'}, ($v_0)->{'value0'}));
-  $__res = new Phpurs_Data2("Tuple", ($__local_var_1_0)->{'value1'}, ($__local_var_1_0)->{'value0'});
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majComonad_majStore_runmajStore';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__local_var_1_0 = (($GLOBALS['Data_Tuple_functorTuple'])['map'])($GLOBALS['Unsafe_Coerce_unsafeCoerce'], new \Data\Tuple\Data_Tuple_Tuple(($v_0)->{'value1'}, ($v_0)->{'value0'}));
+  $__res = new \Data\Tuple\Data_Tuple_Tuple(($__local_var_1_0)->{'value1'}, ($__local_var_1_0)->{'value0'});
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Comonad_Store_runStore'] = __NAMESPACE__ . '\\majControl_majComonad_majStore_runmajStore';
 

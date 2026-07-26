@@ -463,7 +463,7 @@ _ = applyContT_2_1
 return gopurs_runtime.RecordDict4("Apply0", "Apply1", "parallel", "sequential", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return applyContT_2_1
 }), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_applyParCont(), dictMonadEffect_0)
+return Call_applyParCont(dictMonadEffect_0)
 }), Get_ParCont(), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return v_3
 }))
@@ -473,9 +473,9 @@ func Call_functorParCont(dictMonadEffect_0_loop gopurs_runtime.Value) gopurs_run
 var dictMonadEffect_0 gopurs_runtime.Value = dictMonadEffect_0_loop
 _ = dictMonadEffect_0
 return gopurs_runtime.RecordDict1("map", gopurs_runtime.Func2(func(f_1 gopurs_runtime.Value, x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_3_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(Get_monadParParCont(), dictMonadEffect_0), "sequential"), x_2)
+__local_var_3_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Call_monadParParCont(dictMonadEffect_0), "sequential"), x_2)
 _ = __local_var_3_0
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(Get_monadParParCont(), dictMonadEffect_0), "parallel"), gopurs_runtime.Func(func(k_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Call_monadParParCont(dictMonadEffect_0), "parallel"), gopurs_runtime.Func(func(k_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(__local_var_3_0, gopurs_runtime.Func(func(a_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(k_4, gopurs_runtime.Apply(f_1, a_5))
 }))
@@ -491,7 +491,7 @@ _ = Bind1_1_0
 discard1_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Control_Bind.Get_discardUnit(), "discard"), Bind1_1_0)
 _ = discard1_2_1
 return gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_functorParCont(), dictMonadEffect_0)
+return Call_functorParCont(dictMonadEffect_0)
 }), gopurs_runtime.Func3(func(v_3 gopurs_runtime.Value, v1_4 gopurs_runtime.Value, k_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Bind1_1_0, "bind"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 __local_ref_2 := gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}
@@ -574,12 +574,12 @@ return __t5
 func Call_applicativeParCont(dictMonadEffect_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadEffect_0 gopurs_runtime.Value = dictMonadEffect_0_loop
 _ = dictMonadEffect_0
-applyParCont1_1_0 := gopurs_runtime.Apply(Get_applyParCont(), dictMonadEffect_0)
+applyParCont1_1_0 := Call_applyParCont(dictMonadEffect_0)
 _ = applyParCont1_1_0
 return gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return applyParCont1_1_0
 }), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(Get_monadParParCont(), dictMonadEffect_0), "parallel"), gopurs_runtime.Func(func(k_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Call_monadParParCont(dictMonadEffect_0), "parallel"), gopurs_runtime.Func(func(k_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(k_3, x_2)
 }))
 }))
@@ -596,7 +596,7 @@ discard1_3_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Control_Bind.G
 _ = discard1_3_2
 __local_var_4_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Applicative0"), gopurs_runtime.Value{})
 _ = __local_var_4_3
-functorParCont1_5_4 := gopurs_runtime.Apply(Get_functorParCont(), dictMonadEffect_0)
+functorParCont1_5_4 := Call_functorParCont(dictMonadEffect_0)
 _ = functorParCont1_5_4
 return gopurs_runtime.RecordDict2("Functor0", "alt", gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return functorParCont1_5_4
@@ -664,7 +664,7 @@ return __t7
 func Call_plusParCont(dictMonadEffect_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadEffect_0 gopurs_runtime.Value = dictMonadEffect_0_loop
 _ = dictMonadEffect_0
-altParCont1_1_0 := gopurs_runtime.Apply(Get_altParCont(), dictMonadEffect_0)
+altParCont1_1_0 := Call_altParCont(dictMonadEffect_0)
 _ = altParCont1_1_0
 return gopurs_runtime.RecordDict2("Alt0", "empty", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return altParCont1_1_0
@@ -676,9 +676,9 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs
 func Call_alternativeParCont(dictMonadEffect_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadEffect_0 gopurs_runtime.Value = dictMonadEffect_0_loop
 _ = dictMonadEffect_0
-applicativeParCont1_1_0 := gopurs_runtime.Apply(Get_applicativeParCont(), dictMonadEffect_0)
+applicativeParCont1_1_0 := Call_applicativeParCont(dictMonadEffect_0)
 _ = applicativeParCont1_1_0
-plusParCont1_2_1 := gopurs_runtime.Apply(Get_plusParCont(), dictMonadEffect_0)
+plusParCont1_2_1 := Call_plusParCont(dictMonadEffect_0)
 _ = plusParCont1_2_1
 return gopurs_runtime.RecordDict2("Applicative0", "Plus1", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return applicativeParCont1_1_0

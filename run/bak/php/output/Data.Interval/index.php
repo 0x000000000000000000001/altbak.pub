@@ -116,12 +116,18 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+final class Data_Interval_StartEnd { public function __construct(public mixed $value0, public mixed $value1) {} }
+final class Data_Interval_DurationEnd { public function __construct(public mixed $value0, public mixed $value1) {} }
+final class Data_Interval_StartDuration { public function __construct(public mixed $value0, public mixed $value1) {} }
+final class Data_Interval_DurationOnly { public function __construct(public mixed $value0) {} }
+final class Data_Interval_RecurringInterval { public function __construct(public mixed $value0, public mixed $value1) {} }
+
 // Data_Interval_show
 $GLOBALS['Data_Interval_show'] = (($GLOBALS['Data_Maybe_showMaybe'])($GLOBALS['Data_Show_showInt']))['show'];
 
 // Data_Interval_compare
 $GLOBALS['Data_Interval_compare'] = (function() use (&$__fn) {
-$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT"));
+$__local_var_0_0 = ($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT(), new \Data\Ordering\Data_Ordering_EQ(), new \Data\Ordering\Data_Ordering_GT());
 return (function() use ($__local_var_0_0) {
   $__fn = function($x_1 = null, $y_2 = null) use ($__local_var_0_0, &$__fn) {
   $__num = \func_num_args();
@@ -129,23 +135,23 @@ return (function() use ($__local_var_0_0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__t1 = null;;
-  if ((is_object($x_1) && (($x_1)->{'tag'} === "Nothing"))) {
+  if ($x_1 instanceof \Data\Maybe\Data_Maybe_Nothing) {
 $__t2 = null;;
-if ((is_object($y_2) && (($y_2)->{'tag'} === "Nothing"))) {
-$__t2 = new Phpurs_Data0("EQ");
+if ($y_2 instanceof \Data\Maybe\Data_Maybe_Nothing) {
+$__t2 = new \Data\Ordering\Data_Ordering_EQ();
 goto end_branch_2;;
 };
-$__t2 = new Phpurs_Data0("LT");
+$__t2 = new \Data\Ordering\Data_Ordering_LT();
 end_branch_2:;
 $__t1 = $__t2;
 goto end_branch_1;;
 };
-  if ((is_object($y_2) && (($y_2)->{'tag'} === "Nothing"))) {
-$__t1 = new Phpurs_Data0("GT");
+  if ($y_2 instanceof \Data\Maybe\Data_Maybe_Nothing) {
+$__t1 = new \Data\Ordering\Data_Ordering_GT();
 goto end_branch_1;;
 };
-  if (((is_object($x_1) && (($x_1)->{'tag'} === "Just")) && (is_object($y_2) && (($y_2)->{'tag'} === "Just")))) {
-$__t1 = (($__local_var_0_0)(($x_1)->{'value0'}))(($y_2)->{'value0'});
+  if (($x_1 instanceof \Data\Maybe\Data_Maybe_Just && $y_2 instanceof \Data\Maybe\Data_Maybe_Just)) {
+$__t1 = ($__local_var_0_0)(($x_1)->{'value0'}, ($y_2)->{'value0'});
 goto end_branch_1;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -167,7 +173,7 @@ $GLOBALS['Data_Interval_StartEnd'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("StartEnd", $value0, $value1);
+  $__res = new \Data\Interval\Data_Interval_StartEnd($value0, $value1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -182,7 +188,7 @@ $GLOBALS['Data_Interval_DurationEnd'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("DurationEnd", $value0, $value1);
+  $__res = new \Data\Interval\Data_Interval_DurationEnd($value0, $value1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -197,7 +203,7 @@ $GLOBALS['Data_Interval_StartDuration'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("StartDuration", $value0, $value1);
+  $__res = new \Data\Interval\Data_Interval_StartDuration($value0, $value1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -208,7 +214,7 @@ $GLOBALS['Data_Interval_StartDuration'] = (function() {
 // Data_Interval_DurationOnly
 $GLOBALS['Data_Interval_DurationOnly'] = function($value0 = null) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data1("DurationOnly", $value0);
+  $__res = new \Data\Interval\Data_Interval_DurationOnly($value0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -221,7 +227,7 @@ $GLOBALS['Data_Interval_RecurringInterval'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("RecurringInterval", $value0, $value1);
+  $__res = new \Data\Interval\Data_Interval_RecurringInterval($value0, $value1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -230,29 +236,29 @@ $GLOBALS['Data_Interval_RecurringInterval'] = (function() {
 })();
 
 // Data_Interval_showInterval
-$GLOBALS['Data_Interval_showInterval'] = (function() {
-  $__fn = function($dictShow_0 = null, $dictShow1_1 = null) use (&$__fn) {
+function majData_majInterval_showmajInterval($dictShow_0, $dictShow1_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majInterval_showmajInterval';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__res = ["show" => function($v_2 = null) use ($dictShow1_1, $dictShow_0) {
   $__num = \func_num_args();
   $__t0 = null;;
-  if ((is_object($v_2) && (($v_2)->{'tag'} === "StartEnd"))) {
-$__t0 = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(StartEnd "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow1_1)['show'])(($v_2)->{'value0'})))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])(" "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow1_1)['show'])(($v_2)->{'value1'})))(")"))));
+  if ($v_2 instanceof \Data\Interval\Data_Interval_StartEnd) {
+$__t0 = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(StartEnd ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow1_1)['show'])(($v_2)->{'value0'}), (($GLOBALS['Data_Semigroup_semigroupString'])['append'])(" ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow1_1)['show'])(($v_2)->{'value1'}), ")"))));
 goto end_branch_0;;
 };
-  if ((is_object($v_2) && (($v_2)->{'tag'} === "DurationEnd"))) {
-$__t0 = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(DurationEnd "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])(($v_2)->{'value0'})))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])(" "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow1_1)['show'])(($v_2)->{'value1'})))(")"))));
+  if ($v_2 instanceof \Data\Interval\Data_Interval_DurationEnd) {
+$__t0 = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(DurationEnd ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])(($v_2)->{'value0'}), (($GLOBALS['Data_Semigroup_semigroupString'])['append'])(" ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow1_1)['show'])(($v_2)->{'value1'}), ")"))));
 goto end_branch_0;;
 };
-  if ((is_object($v_2) && (($v_2)->{'tag'} === "StartDuration"))) {
-$__t0 = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(StartDuration "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow1_1)['show'])(($v_2)->{'value0'})))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])(" "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])(($v_2)->{'value1'})))(")"))));
+  if ($v_2 instanceof \Data\Interval\Data_Interval_StartDuration) {
+$__t0 = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(StartDuration ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow1_1)['show'])(($v_2)->{'value0'}), (($GLOBALS['Data_Semigroup_semigroupString'])['append'])(" ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])(($v_2)->{'value1'}), ")"))));
 goto end_branch_0;;
 };
-  if ((is_object($v_2) && (($v_2)->{'tag'} === "DurationOnly"))) {
-$__t0 = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(DurationOnly "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])(($v_2)->{'value0'})))(")"));
+  if ($v_2 instanceof \Data\Interval\Data_Interval_DurationOnly) {
+$__t0 = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(DurationOnly ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])(($v_2)->{'value0'}), ")"));
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -265,55 +271,57 @@ goto end_branch_0;;
 }];
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Interval_showInterval'] = __NAMESPACE__ . '\\majData_majInterval_showmajInterval';
 
 // Data_Interval_showRecurringInterval
-$GLOBALS['Data_Interval_showRecurringInterval'] = (function() {
-  $__fn = function($dictShow_0 = null, $dictShow1_1 = null) use (&$__fn) {
+function majData_majInterval_showmajRecurringmajInterval($dictShow_0, $dictShow1_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majInterval_showmajRecurringmajInterval';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__res = ["show" => function($v_2 = null) use ($dictShow1_1, $dictShow_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(RecurringInterval "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])(($GLOBALS['Data_Interval_show'])(($v_2)->{'value0'})))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])(" "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((((($GLOBALS['Data_Interval_showInterval'])($dictShow_0))($dictShow1_1))['show'])(($v_2)->{'value1'})))(")"))));
+  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(RecurringInterval ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])(($GLOBALS['Data_Interval_show'])(($v_2)->{'value0'}), (($GLOBALS['Data_Semigroup_semigroupString'])['append'])(" ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])(((($GLOBALS['Data_Interval_showInterval'])($dictShow_0, $dictShow1_1))['show'])(($v_2)->{'value1'}), ")"))));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Interval_showRecurringInterval'] = __NAMESPACE__ . '\\majData_majInterval_showmajRecurringmajInterval';
 
 // Data_Interval_over
-$GLOBALS['Data_Interval_over'] = (function() {
-  $__fn = function($dictFunctor_0 = null, $f_1 = null, $v_2 = null) use (&$__fn) {
+function majData_majInterval_over($dictFunctor_0, $f_1 = null, $v_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majInterval_over';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($dictFunctor_0)['map'])(($GLOBALS['Data_Interval_RecurringInterval'])(($v_2)->{'value0'})))(($f_1)(($v_2)->{'value1'}));
+  $__res = (($dictFunctor_0)['map'])(($GLOBALS['Data_Interval_RecurringInterval'])(($v_2)->{'value0'}), ($f_1)(($v_2)->{'value1'}));
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_Interval_over'] = __NAMESPACE__ . '\\majData_majInterval_over';
 
 // Data_Interval_interval
-$GLOBALS['Data_Interval_interval'] = function($v_0 = null) {
+function majData_majInterval_interval($v_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majInterval_interval';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($v_0)->{'value1'};
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Interval_interval'] = __NAMESPACE__ . '\\majData_majInterval_interval';
 
 // Data_Interval_foldableInterval
 $GLOBALS['Data_Interval_foldableInterval'] = ["foldl" => (function() {
@@ -323,16 +331,16 @@ $GLOBALS['Data_Interval_foldableInterval'] = ["foldl" => (function() {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   $__t0 = null;;
-  if ((is_object($v2_2) && (($v2_2)->{'tag'} === "StartEnd"))) {
-$__t0 = (($v_0)((($v_0)($v1_1))(($v2_2)->{'value0'})))(($v2_2)->{'value1'});
+  if ($v2_2 instanceof \Data\Interval\Data_Interval_StartEnd) {
+$__t0 = ($v_0)(($v_0)($v1_1, ($v2_2)->{'value0'}), ($v2_2)->{'value1'});
 goto end_branch_0;;
 };
-  if ((is_object($v2_2) && (($v2_2)->{'tag'} === "DurationEnd"))) {
-$__t0 = (($v_0)($v1_1))(($v2_2)->{'value1'});
+  if ($v2_2 instanceof \Data\Interval\Data_Interval_DurationEnd) {
+$__t0 = ($v_0)($v1_1, ($v2_2)->{'value1'});
 goto end_branch_0;;
 };
-  if ((is_object($v2_2) && (($v2_2)->{'tag'} === "StartDuration"))) {
-$__t0 = (($v_0)($v1_1))(($v2_2)->{'value0'});
+  if ($v2_2 instanceof \Data\Interval\Data_Interval_StartDuration) {
+$__t0 = ($v_0)($v1_1, ($v2_2)->{'value0'});
 goto end_branch_0;;
 };
   $__t0 = $v1_1;
@@ -345,7 +353,7 @@ goto end_branch_0;;
   return $__fn;
 })(), "foldr" => function($x_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Foldable_foldrDefault'])($GLOBALS['Data_Interval_foldableInterval']))($x_0);
+  $__res = ($GLOBALS['Data_Foldable_foldrDefault'])($GLOBALS['Data_Interval_foldableInterval'], $x_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -354,19 +362,19 @@ goto end_branch_0;;
   $mempty_1_1 = ($dictMonoid_0)['mempty'];
   $__res = function($f_2 = null) use ($dictMonoid_0, $mempty_1_1) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Interval_foldableInterval'])['foldl'])((function() use ($dictMonoid_0, $f_2) {
+  $__res = (($GLOBALS['Data_Interval_foldableInterval'])['foldl'])((function() use ($dictMonoid_0, $f_2) {
   $__fn = function($acc_3 = null, $x_4 = null) use ($dictMonoid_0, $f_2, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((($dictMonoid_0)['Semigroup0'])(null))['append'])($acc_3))(($f_2)($x_4));
+  $__res = (((($dictMonoid_0)['Semigroup0'])(null))['append'])($acc_3, ($f_2)($x_4));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))($mempty_1_1);
+})(), $mempty_1_1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -383,7 +391,7 @@ $GLOBALS['Data_Interval_foldableRecurringInterval'] = ["foldl" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(((($GLOBALS['Data_Interval_foldableInterval'])['foldl'])($f_0))($i_1)))($GLOBALS['Data_Interval_interval']);
+  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Interval_foldableInterval'])['foldl'])($f_0, $i_1), $GLOBALS['Data_Interval_interval']);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -395,7 +403,7 @@ $GLOBALS['Data_Interval_foldableRecurringInterval'] = ["foldl" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(((($GLOBALS['Data_Interval_foldableInterval'])['foldr'])($f_0))($i_1)))($GLOBALS['Data_Interval_interval']);
+  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Interval_foldableInterval'])['foldr'])($f_0, $i_1), $GLOBALS['Data_Interval_interval']);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -406,19 +414,19 @@ $GLOBALS['Data_Interval_foldableRecurringInterval'] = ["foldl" => (function() {
   $mempty_1_0 = ($dictMonoid_0)['mempty'];
   $__res = function($f_2 = null) use ($dictMonoid_0, $mempty_1_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Interval_foldableRecurringInterval'])['foldl'])((function() use ($dictMonoid_0, $f_2) {
+  $__res = (($GLOBALS['Data_Interval_foldableRecurringInterval'])['foldl'])((function() use ($dictMonoid_0, $f_2) {
   $__fn = function($acc_3 = null, $x_4 = null) use ($dictMonoid_0, $f_2, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((($dictMonoid_0)['Semigroup0'])(null))['append'])($acc_3))(($f_2)($x_4));
+  $__res = (((($dictMonoid_0)['Semigroup0'])(null))['append'])($acc_3, ($f_2)($x_4));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))($mempty_1_0);
+})(), $mempty_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -429,9 +437,9 @@ $GLOBALS['Data_Interval_foldableRecurringInterval'] = ["foldl" => (function() {
 }];
 
 // Data_Interval_eqInterval
-$GLOBALS['Data_Interval_eqInterval'] = (function() {
-  $__fn = function($dictEq_0 = null, $dictEq1_1 = null) use (&$__fn) {
+function majData_majInterval_eqmajInterval($dictEq_0, $dictEq1_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majInterval_eqmajInterval';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
@@ -442,19 +450,19 @@ $GLOBALS['Data_Interval_eqInterval'] = (function() {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__t0 = null;;
-  if ((is_object($x_2) && (($x_2)->{'tag'} === "StartEnd"))) {
-$__t0 = ((is_object($y_3) && (($y_3)->{'tag'} === "StartEnd")) && ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(((($dictEq1_1)['eq'])(($x_2)->{'value0'}))(($y_3)->{'value0'})))(((($dictEq1_1)['eq'])(($x_2)->{'value1'}))(($y_3)->{'value1'})));
+  if ($x_2 instanceof \Data\Interval\Data_Interval_StartEnd) {
+$__t0 = ($y_3 instanceof \Data\Interval\Data_Interval_StartEnd && (($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])((($dictEq1_1)['eq'])(($x_2)->{'value0'}, ($y_3)->{'value0'}), (($dictEq1_1)['eq'])(($x_2)->{'value1'}, ($y_3)->{'value1'})));
 goto end_branch_0;;
 };
-  if ((is_object($x_2) && (($x_2)->{'tag'} === "DurationEnd"))) {
-$__t0 = ((is_object($y_3) && (($y_3)->{'tag'} === "DurationEnd")) && ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(((($dictEq_0)['eq'])(($x_2)->{'value0'}))(($y_3)->{'value0'})))(((($dictEq1_1)['eq'])(($x_2)->{'value1'}))(($y_3)->{'value1'})));
+  if ($x_2 instanceof \Data\Interval\Data_Interval_DurationEnd) {
+$__t0 = ($y_3 instanceof \Data\Interval\Data_Interval_DurationEnd && (($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])((($dictEq_0)['eq'])(($x_2)->{'value0'}, ($y_3)->{'value0'}), (($dictEq1_1)['eq'])(($x_2)->{'value1'}, ($y_3)->{'value1'})));
 goto end_branch_0;;
 };
-  if ((is_object($x_2) && (($x_2)->{'tag'} === "StartDuration"))) {
-$__t0 = ((is_object($y_3) && (($y_3)->{'tag'} === "StartDuration")) && ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(((($dictEq1_1)['eq'])(($x_2)->{'value0'}))(($y_3)->{'value0'})))(((($dictEq_0)['eq'])(($x_2)->{'value1'}))(($y_3)->{'value1'})));
+  if ($x_2 instanceof \Data\Interval\Data_Interval_StartDuration) {
+$__t0 = ($y_3 instanceof \Data\Interval\Data_Interval_StartDuration && (($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])((($dictEq1_1)['eq'])(($x_2)->{'value0'}, ($y_3)->{'value0'}), (($dictEq_0)['eq'])(($x_2)->{'value1'}, ($y_3)->{'value1'})));
 goto end_branch_0;;
 };
-  $__t0 = ((is_object($x_2) && (($x_2)->{'tag'} === "DurationOnly")) && ((is_object($y_3) && (($y_3)->{'tag'} === "DurationOnly")) && ((($dictEq_0)['eq'])(($x_2)->{'value0'}))(($y_3)->{'value0'})));
+  $__t0 = ($x_2 instanceof \Data\Interval\Data_Interval_DurationOnly && ($y_3 instanceof \Data\Interval\Data_Interval_DurationOnly && (($dictEq_0)['eq'])(($x_2)->{'value0'}, ($y_3)->{'value0'})));
   end_branch_0:;
   $__res = $__t0;
   goto __end;;
@@ -465,15 +473,14 @@ goto end_branch_0;;
 })()];
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Interval_eqInterval'] = __NAMESPACE__ . '\\majData_majInterval_eqmajInterval';
 
 // Data_Interval_eqRecurringInterval
-$GLOBALS['Data_Interval_eqRecurringInterval'] = (function() {
-  $__fn = function($dictEq_0 = null, $dictEq1_1 = null) use (&$__fn) {
+function majData_majInterval_eqmajRecurringmajInterval($dictEq_0, $dictEq1_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majInterval_eqmajRecurringmajInterval';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
@@ -484,13 +491,13 @@ $GLOBALS['Data_Interval_eqRecurringInterval'] = (function() {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__t0 = null;;
-  if ((is_object(($x_2)->{'value0'}) && ((($x_2)->{'value0'})->{'tag'} === "Nothing"))) {
-$__t0 = (is_object(($y_3)->{'value0'}) && ((($y_3)->{'value0'})->{'tag'} === "Nothing"));
+  if (($x_2)->{'value0'} instanceof \Data\Maybe\Data_Maybe_Nothing) {
+$__t0 = ($y_3)->{'value0'} instanceof \Data\Maybe\Data_Maybe_Nothing;
 goto end_branch_0;;
 };
-  $__t0 = ((is_object(($x_2)->{'value0'}) && ((($x_2)->{'value0'})->{'tag'} === "Just")) && ((is_object(($y_3)->{'value0'}) && ((($y_3)->{'value0'})->{'tag'} === "Just")) && ((($x_2)->{'value0'})->{'value0'} === (($y_3)->{'value0'})->{'value0'})));
+  $__t0 = (($x_2)->{'value0'} instanceof \Data\Maybe\Data_Maybe_Just && (($y_3)->{'value0'} instanceof \Data\Maybe\Data_Maybe_Just && ((($x_2)->{'value0'})->{'value0'} === (($y_3)->{'value0'})->{'value0'})));
   end_branch_0:;
-  $__res = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])($__t0))(((((($GLOBALS['Data_Interval_eqInterval'])($dictEq_0))($dictEq1_1))['eq'])(($x_2)->{'value1'}))(($y_3)->{'value1'}));
+  $__res = (($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])($__t0, ((($GLOBALS['Data_Interval_eqInterval'])($dictEq_0, $dictEq1_1))['eq'])(($x_2)->{'value1'}, ($y_3)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -499,14 +506,17 @@ goto end_branch_0;;
 })()];
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Interval_eqRecurringInterval'] = __NAMESPACE__ . '\\majData_majInterval_eqmajRecurringmajInterval';
 
 // Data_Interval_ordInterval
-$GLOBALS['Data_Interval_ordInterval'] = function($dictOrd_0 = null) {
+function majData_majInterval_ordmajInterval($dictOrd_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majInterval_ordmajInterval';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $eqInterval1_1_0 = ($GLOBALS['Data_Interval_eqInterval'])((($dictOrd_0)['Eq0'])(null));
   $__res = function($dictOrd1_2 = null) use ($dictOrd_0, $eqInterval1_1_0) {
   $__num = \func_num_args();
@@ -518,89 +528,89 @@ $GLOBALS['Data_Interval_ordInterval'] = function($dictOrd_0 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__t2 = null;;
-  if ((is_object($x_4) && (($x_4)->{'tag'} === "StartEnd"))) {
+  if ($x_4 instanceof \Data\Interval\Data_Interval_StartEnd) {
 $__t3 = null;;
-if ((is_object($y_5) && (($y_5)->{'tag'} === "StartEnd"))) {
-$v_6_4 = ((($dictOrd1_2)['compare'])(($x_4)->{'value0'}))(($y_5)->{'value0'});
+if ($y_5 instanceof \Data\Interval\Data_Interval_StartEnd) {
+$v_6_4 = (($dictOrd1_2)['compare'])(($x_4)->{'value0'}, ($y_5)->{'value0'});
 $__t5 = null;;
-if ((is_object($v_6_4) && (($v_6_4)->{'tag'} === "LT"))) {
-$__t5 = new Phpurs_Data0("LT");
+if ($v_6_4 instanceof \Data\Ordering\Data_Ordering_LT) {
+$__t5 = new \Data\Ordering\Data_Ordering_LT();
 goto end_branch_5;;
 };
-if ((is_object($v_6_4) && (($v_6_4)->{'tag'} === "GT"))) {
-$__t5 = new Phpurs_Data0("GT");
+if ($v_6_4 instanceof \Data\Ordering\Data_Ordering_GT) {
+$__t5 = new \Data\Ordering\Data_Ordering_GT();
 goto end_branch_5;;
 };
-$__t5 = ((($dictOrd1_2)['compare'])(($x_4)->{'value1'}))(($y_5)->{'value1'});
+$__t5 = (($dictOrd1_2)['compare'])(($x_4)->{'value1'}, ($y_5)->{'value1'});
 end_branch_5:;
 $__t3 = $__t5;
 goto end_branch_3;;
 };
-$__t3 = new Phpurs_Data0("LT");
+$__t3 = new \Data\Ordering\Data_Ordering_LT();
 end_branch_3:;
 $__t2 = $__t3;
 goto end_branch_2;;
 };
-  if ((is_object($y_5) && (($y_5)->{'tag'} === "StartEnd"))) {
-$__t2 = new Phpurs_Data0("GT");
+  if ($y_5 instanceof \Data\Interval\Data_Interval_StartEnd) {
+$__t2 = new \Data\Ordering\Data_Ordering_GT();
 goto end_branch_2;;
 };
-  if ((is_object($x_4) && (($x_4)->{'tag'} === "DurationEnd"))) {
+  if ($x_4 instanceof \Data\Interval\Data_Interval_DurationEnd) {
 $__t6 = null;;
-if ((is_object($y_5) && (($y_5)->{'tag'} === "DurationEnd"))) {
-$v_6_7 = ((($dictOrd_0)['compare'])(($x_4)->{'value0'}))(($y_5)->{'value0'});
+if ($y_5 instanceof \Data\Interval\Data_Interval_DurationEnd) {
+$v_6_7 = (($dictOrd_0)['compare'])(($x_4)->{'value0'}, ($y_5)->{'value0'});
 $__t8 = null;;
-if ((is_object($v_6_7) && (($v_6_7)->{'tag'} === "LT"))) {
-$__t8 = new Phpurs_Data0("LT");
+if ($v_6_7 instanceof \Data\Ordering\Data_Ordering_LT) {
+$__t8 = new \Data\Ordering\Data_Ordering_LT();
 goto end_branch_8;;
 };
-if ((is_object($v_6_7) && (($v_6_7)->{'tag'} === "GT"))) {
-$__t8 = new Phpurs_Data0("GT");
+if ($v_6_7 instanceof \Data\Ordering\Data_Ordering_GT) {
+$__t8 = new \Data\Ordering\Data_Ordering_GT();
 goto end_branch_8;;
 };
-$__t8 = ((($dictOrd1_2)['compare'])(($x_4)->{'value1'}))(($y_5)->{'value1'});
+$__t8 = (($dictOrd1_2)['compare'])(($x_4)->{'value1'}, ($y_5)->{'value1'});
 end_branch_8:;
 $__t6 = $__t8;
 goto end_branch_6;;
 };
-$__t6 = new Phpurs_Data0("LT");
+$__t6 = new \Data\Ordering\Data_Ordering_LT();
 end_branch_6:;
 $__t2 = $__t6;
 goto end_branch_2;;
 };
-  if ((is_object($y_5) && (($y_5)->{'tag'} === "DurationEnd"))) {
-$__t2 = new Phpurs_Data0("GT");
+  if ($y_5 instanceof \Data\Interval\Data_Interval_DurationEnd) {
+$__t2 = new \Data\Ordering\Data_Ordering_GT();
 goto end_branch_2;;
 };
-  if ((is_object($x_4) && (($x_4)->{'tag'} === "StartDuration"))) {
+  if ($x_4 instanceof \Data\Interval\Data_Interval_StartDuration) {
 $__t9 = null;;
-if ((is_object($y_5) && (($y_5)->{'tag'} === "StartDuration"))) {
-$v_6_10 = ((($dictOrd1_2)['compare'])(($x_4)->{'value0'}))(($y_5)->{'value0'});
+if ($y_5 instanceof \Data\Interval\Data_Interval_StartDuration) {
+$v_6_10 = (($dictOrd1_2)['compare'])(($x_4)->{'value0'}, ($y_5)->{'value0'});
 $__t11 = null;;
-if ((is_object($v_6_10) && (($v_6_10)->{'tag'} === "LT"))) {
-$__t11 = new Phpurs_Data0("LT");
+if ($v_6_10 instanceof \Data\Ordering\Data_Ordering_LT) {
+$__t11 = new \Data\Ordering\Data_Ordering_LT();
 goto end_branch_11;;
 };
-if ((is_object($v_6_10) && (($v_6_10)->{'tag'} === "GT"))) {
-$__t11 = new Phpurs_Data0("GT");
+if ($v_6_10 instanceof \Data\Ordering\Data_Ordering_GT) {
+$__t11 = new \Data\Ordering\Data_Ordering_GT();
 goto end_branch_11;;
 };
-$__t11 = ((($dictOrd_0)['compare'])(($x_4)->{'value1'}))(($y_5)->{'value1'});
+$__t11 = (($dictOrd_0)['compare'])(($x_4)->{'value1'}, ($y_5)->{'value1'});
 end_branch_11:;
 $__t9 = $__t11;
 goto end_branch_9;;
 };
-$__t9 = new Phpurs_Data0("LT");
+$__t9 = new \Data\Ordering\Data_Ordering_LT();
 end_branch_9:;
 $__t2 = $__t9;
 goto end_branch_2;;
 };
-  if ((is_object($y_5) && (($y_5)->{'tag'} === "StartDuration"))) {
-$__t2 = new Phpurs_Data0("GT");
+  if ($y_5 instanceof \Data\Interval\Data_Interval_StartDuration) {
+$__t2 = new \Data\Ordering\Data_Ordering_GT();
 goto end_branch_2;;
 };
-  if (((is_object($x_4) && (($x_4)->{'tag'} === "DurationOnly")) && (is_object($y_5) && (($y_5)->{'tag'} === "DurationOnly")))) {
-$__t2 = ((($dictOrd_0)['compare'])(($x_4)->{'value0'}))(($y_5)->{'value0'});
+  if (($x_4 instanceof \Data\Interval\Data_Interval_DurationOnly && $y_5 instanceof \Data\Interval\Data_Interval_DurationOnly)) {
+$__t2 = (($dictOrd_0)['compare'])(($x_4)->{'value0'}, ($y_5)->{'value0'});
 goto end_branch_2;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -625,12 +635,17 @@ goto end_branch_2;;
 };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Interval_ordInterval'] = __NAMESPACE__ . '\\majData_majInterval_ordmajInterval';
 
 // Data_Interval_ordRecurringInterval
-$GLOBALS['Data_Interval_ordRecurringInterval'] = function($dictOrd_0 = null) {
+function majData_majInterval_ordmajRecurringmajInterval($dictOrd_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majInterval_ordmajRecurringmajInterval';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $ordInterval1_1_0 = ($GLOBALS['Data_Interval_ordInterval'])($dictOrd_0);
   $eqRecurringInterval1_2_1 = ($GLOBALS['Data_Interval_eqRecurringInterval'])((($dictOrd_0)['Eq0'])(null));
   $__res = function($dictOrd1_3 = null) use ($eqRecurringInterval1_2_1, $ordInterval1_1_0) {
@@ -642,17 +657,17 @@ $GLOBALS['Data_Interval_ordRecurringInterval'] = function($dictOrd_0 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $v_7_3 = (($GLOBALS['Data_Interval_compare'])(($x_5)->{'value0'}))(($y_6)->{'value0'});
+  $v_7_3 = ($GLOBALS['Data_Interval_compare'])(($x_5)->{'value0'}, ($y_6)->{'value0'});
   $__t4 = null;;
-  if ((is_object($v_7_3) && (($v_7_3)->{'tag'} === "LT"))) {
-$__t4 = new Phpurs_Data0("LT");
+  if ($v_7_3 instanceof \Data\Ordering\Data_Ordering_LT) {
+$__t4 = new \Data\Ordering\Data_Ordering_LT();
 goto end_branch_4;;
 };
-  if ((is_object($v_7_3) && (($v_7_3)->{'tag'} === "GT"))) {
-$__t4 = new Phpurs_Data0("GT");
+  if ($v_7_3 instanceof \Data\Ordering\Data_Ordering_GT) {
+$__t4 = new \Data\Ordering\Data_Ordering_GT();
 goto end_branch_4;;
 };
-  $__t4 = (((($ordInterval1_1_0)($dictOrd1_3))['compare'])(($x_5)->{'value1'}))(($y_6)->{'value1'});
+  $__t4 = ((($ordInterval1_1_0)($dictOrd1_3))['compare'])(($x_5)->{'value1'}, ($y_6)->{'value1'});
   end_branch_4:;
   $__res = $__t4;
   goto __end;;
@@ -673,8 +688,9 @@ goto end_branch_4;;
 };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Interval_ordRecurringInterval'] = __NAMESPACE__ . '\\majData_majInterval_ordmajRecurringmajInterval';
 
 // Data_Interval_bifunctorInterval
 $GLOBALS['Data_Interval_bifunctorInterval'] = ["bimap" => (function() {
@@ -684,20 +700,20 @@ $GLOBALS['Data_Interval_bifunctorInterval'] = ["bimap" => (function() {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   $__t0 = null;;
-  if ((is_object($v2_2) && (($v2_2)->{'tag'} === "StartEnd"))) {
-$__t0 = new Phpurs_Data2("StartEnd", ($v1_1)(($v2_2)->{'value0'}), ($v1_1)(($v2_2)->{'value1'}));
+  if ($v2_2 instanceof \Data\Interval\Data_Interval_StartEnd) {
+$__t0 = new \Data\Interval\Data_Interval_StartEnd(($v1_1)(($v2_2)->{'value0'}), ($v1_1)(($v2_2)->{'value1'}));
 goto end_branch_0;;
 };
-  if ((is_object($v2_2) && (($v2_2)->{'tag'} === "DurationEnd"))) {
-$__t0 = new Phpurs_Data2("DurationEnd", ($v_0)(($v2_2)->{'value0'}), ($v1_1)(($v2_2)->{'value1'}));
+  if ($v2_2 instanceof \Data\Interval\Data_Interval_DurationEnd) {
+$__t0 = new \Data\Interval\Data_Interval_DurationEnd(($v_0)(($v2_2)->{'value0'}), ($v1_1)(($v2_2)->{'value1'}));
 goto end_branch_0;;
 };
-  if ((is_object($v2_2) && (($v2_2)->{'tag'} === "StartDuration"))) {
-$__t0 = new Phpurs_Data2("StartDuration", ($v1_1)(($v2_2)->{'value0'}), ($v_0)(($v2_2)->{'value1'}));
+  if ($v2_2 instanceof \Data\Interval\Data_Interval_StartDuration) {
+$__t0 = new \Data\Interval\Data_Interval_StartDuration(($v1_1)(($v2_2)->{'value0'}), ($v_0)(($v2_2)->{'value1'}));
 goto end_branch_0;;
 };
-  if ((is_object($v2_2) && (($v2_2)->{'tag'} === "DurationOnly"))) {
-$__t0 = new Phpurs_Data1("DurationOnly", ($v_0)(($v2_2)->{'value0'}));
+  if ($v2_2 instanceof \Data\Interval\Data_Interval_DurationOnly) {
+$__t0 = new \Data\Interval\Data_Interval_DurationOnly(($v_0)(($v2_2)->{'value0'}));
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -718,7 +734,7 @@ $GLOBALS['Data_Interval_bifunctorRecurringInterval'] = ["bimap" => (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = new Phpurs_Data2("RecurringInterval", ($v_2)->{'value0'}, (((($GLOBALS['Data_Interval_bifunctorInterval'])['bimap'])($f_0))($g_1))(($v_2)->{'value1'}));
+  $__res = new \Data\Interval\Data_Interval_RecurringInterval(($v_2)->{'value0'}, (($GLOBALS['Data_Interval_bifunctorInterval'])['bimap'])($f_0, $g_1, ($v_2)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -743,20 +759,20 @@ $GLOBALS['Data_Interval_extendInterval'] = ["extend" => (function() {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__t0 = null;;
-  if ((is_object($v1_1) && (($v1_1)->{'tag'} === "StartEnd"))) {
-$__t0 = new Phpurs_Data2("StartEnd", ($v_0)($v1_1), ($v_0)($v1_1));
+  if ($v1_1 instanceof \Data\Interval\Data_Interval_StartEnd) {
+$__t0 = new \Data\Interval\Data_Interval_StartEnd(($v_0)($v1_1), ($v_0)($v1_1));
 goto end_branch_0;;
 };
-  if ((is_object($v1_1) && (($v1_1)->{'tag'} === "DurationEnd"))) {
-$__t0 = new Phpurs_Data2("DurationEnd", ($v1_1)->{'value0'}, ($v_0)($v1_1));
+  if ($v1_1 instanceof \Data\Interval\Data_Interval_DurationEnd) {
+$__t0 = new \Data\Interval\Data_Interval_DurationEnd(($v1_1)->{'value0'}, ($v_0)($v1_1));
 goto end_branch_0;;
 };
-  if ((is_object($v1_1) && (($v1_1)->{'tag'} === "StartDuration"))) {
-$__t0 = new Phpurs_Data2("StartDuration", ($v_0)($v1_1), ($v1_1)->{'value1'});
+  if ($v1_1 instanceof \Data\Interval\Data_Interval_StartDuration) {
+$__t0 = new \Data\Interval\Data_Interval_StartDuration(($v_0)($v1_1), ($v1_1)->{'value1'});
 goto end_branch_0;;
 };
-  if ((is_object($v1_1) && (($v1_1)->{'tag'} === "DurationOnly"))) {
-$__t0 = new Phpurs_Data1("DurationOnly", ($v1_1)->{'value0'});
+  if ($v1_1 instanceof \Data\Interval\Data_Interval_DurationOnly) {
+$__t0 = new \Data\Interval\Data_Interval_DurationOnly(($v1_1)->{'value0'});
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -783,7 +799,7 @@ $GLOBALS['Data_Interval_functorRecurringInterval'] = ["map" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("RecurringInterval", ($v_1)->{'value0'}, ((($GLOBALS['Data_Interval_functorInterval'])['map'])($f_0))(($v_1)->{'value1'}));
+  $__res = new \Data\Interval\Data_Interval_RecurringInterval(($v_1)->{'value0'}, (($GLOBALS['Data_Interval_functorInterval'])['map'])($f_0, ($v_1)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -799,13 +815,13 @@ $GLOBALS['Data_Interval_extendRecurringInterval'] = ["extend" => (function() {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__local_var_2_0 = ($f_0)($v_1);
-  $__res = new Phpurs_Data2("RecurringInterval", ($v_1)->{'value0'}, ((($GLOBALS['Data_Interval_extendInterval'])['extend'])(function($v_3 = null) use ($__local_var_2_0) {
+  $__res = new \Data\Interval\Data_Interval_RecurringInterval(($v_1)->{'value0'}, (($GLOBALS['Data_Interval_extendInterval'])['extend'])(function($v_3 = null) use ($__local_var_2_0) {
   $__num = \func_num_args();
   $__res = $__local_var_2_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(($v_1)->{'value1'}));
+}, ($v_1)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -831,27 +847,27 @@ $GLOBALS['Data_Interval_traversableInterval'] = ["traverse" => function($dictApp
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__t2 = null;;
-  if ((is_object($v1_4) && (($v1_4)->{'tag'} === "StartEnd"))) {
-$__t2 = ((($Apply0_1_0)['apply'])(((($Functor0_2_1)['map'])($GLOBALS['Data_Interval_StartEnd']))(($v_3)(($v1_4)->{'value0'}))))(($v_3)(($v1_4)->{'value1'}));
+  if ($v1_4 instanceof \Data\Interval\Data_Interval_StartEnd) {
+$__t2 = (($Apply0_1_0)['apply'])((($Functor0_2_1)['map'])($GLOBALS['Data_Interval_StartEnd'], ($v_3)(($v1_4)->{'value0'})), ($v_3)(($v1_4)->{'value1'}));
 goto end_branch_2;;
 };
-  if ((is_object($v1_4) && (($v1_4)->{'tag'} === "DurationEnd"))) {
-$__t2 = ((($Functor0_2_1)['map'])(($GLOBALS['Data_Interval_DurationEnd'])(($v1_4)->{'value0'})))(($v_3)(($v1_4)->{'value1'}));
+  if ($v1_4 instanceof \Data\Interval\Data_Interval_DurationEnd) {
+$__t2 = (($Functor0_2_1)['map'])(($GLOBALS['Data_Interval_DurationEnd'])(($v1_4)->{'value0'}), ($v_3)(($v1_4)->{'value1'}));
 goto end_branch_2;;
 };
-  if ((is_object($v1_4) && (($v1_4)->{'tag'} === "StartDuration"))) {
+  if ($v1_4 instanceof \Data\Interval\Data_Interval_StartDuration) {
 $__local_var_5_3 = ($v1_4)->{'value1'};
-$__t2 = ((($Functor0_2_1)['map'])(function($v2_6 = null) use ($__local_var_5_3) {
+$__t2 = (($Functor0_2_1)['map'])(function($v2_6 = null) use ($__local_var_5_3) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("StartDuration", $v2_6, $__local_var_5_3);
+  $__res = new \Data\Interval\Data_Interval_StartDuration($v2_6, $__local_var_5_3);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(($v_3)(($v1_4)->{'value0'}));
+}, ($v_3)(($v1_4)->{'value0'}));
 goto end_branch_2;;
 };
-  if ((is_object($v1_4) && (($v1_4)->{'tag'} === "DurationOnly"))) {
-$__t2 = (($dictApplicative_0)['pure'])(new Phpurs_Data1("DurationOnly", ($v1_4)->{'value0'}));
+  if ($v1_4 instanceof \Data\Interval\Data_Interval_DurationOnly) {
+$__t2 = (($dictApplicative_0)['pure'])(new \Data\Interval\Data_Interval_DurationOnly(($v1_4)->{'value0'}));
 goto end_branch_2;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -869,7 +885,7 @@ goto end_branch_2;;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "sequence" => function($dictApplicative_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Interval_traversableInterval'])['traverse'])($dictApplicative_0))($GLOBALS['Data_Traversable_identity']);
+  $__res = (($GLOBALS['Data_Interval_traversableInterval'])['traverse'])($dictApplicative_0, $GLOBALS['Data_Traversable_identity']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -898,7 +914,7 @@ $GLOBALS['Data_Interval_traversableRecurringInterval'] = ["traverse" => function
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($over1_1_0)(($traverse1_2_1)($f_3)))($i_4);
+  $__res = ($over1_1_0)(($traverse1_2_1)($f_3), $i_4);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -910,7 +926,7 @@ $GLOBALS['Data_Interval_traversableRecurringInterval'] = ["traverse" => function
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "sequence" => function($dictApplicative_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Interval_traversableRecurringInterval'])['traverse'])($dictApplicative_0))($GLOBALS['Data_Traversable_identity']);
+  $__res = (($GLOBALS['Data_Interval_traversableRecurringInterval'])['traverse'])($dictApplicative_0, $GLOBALS['Data_Traversable_identity']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -936,20 +952,20 @@ $GLOBALS['Data_Interval_bifoldableInterval'] = ["bifoldl" => (function() {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
   $__t0 = null;;
-  if ((is_object($v3_3) && (($v3_3)->{'tag'} === "StartEnd"))) {
-$__t0 = (($v1_1)((($v1_1)($v2_2))(($v3_3)->{'value0'})))(($v3_3)->{'value1'});
+  if ($v3_3 instanceof \Data\Interval\Data_Interval_StartEnd) {
+$__t0 = ($v1_1)(($v1_1)($v2_2, ($v3_3)->{'value0'}), ($v3_3)->{'value1'});
 goto end_branch_0;;
 };
-  if ((is_object($v3_3) && (($v3_3)->{'tag'} === "DurationEnd"))) {
-$__t0 = (($v1_1)((($v_0)($v2_2))(($v3_3)->{'value0'})))(($v3_3)->{'value1'});
+  if ($v3_3 instanceof \Data\Interval\Data_Interval_DurationEnd) {
+$__t0 = ($v1_1)(($v_0)($v2_2, ($v3_3)->{'value0'}), ($v3_3)->{'value1'});
 goto end_branch_0;;
 };
-  if ((is_object($v3_3) && (($v3_3)->{'tag'} === "StartDuration"))) {
-$__t0 = (($v1_1)((($v_0)($v2_2))(($v3_3)->{'value1'})))(($v3_3)->{'value0'});
+  if ($v3_3 instanceof \Data\Interval\Data_Interval_StartDuration) {
+$__t0 = ($v1_1)(($v_0)($v2_2, ($v3_3)->{'value1'}), ($v3_3)->{'value0'});
 goto end_branch_0;;
 };
-  if ((is_object($v3_3) && (($v3_3)->{'tag'} === "DurationOnly"))) {
-$__t0 = (($v_0)($v2_2))(($v3_3)->{'value0'});
+  if ($v3_3 instanceof \Data\Interval\Data_Interval_DurationOnly) {
+$__t0 = ($v_0)($v2_2, ($v3_3)->{'value0'});
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -963,7 +979,7 @@ goto end_branch_0;;
   return $__fn;
 })(), "bifoldr" => function($x_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Bifoldable_bifoldrDefault'])($GLOBALS['Data_Interval_bifoldableInterval']))($x_0);
+  $__res = ($GLOBALS['Data_Bifoldable_bifoldrDefault'])($GLOBALS['Data_Interval_bifoldableInterval'], $x_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -977,31 +993,31 @@ goto end_branch_0;;
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($GLOBALS['Data_Interval_bifoldableInterval'])['bifoldl'])((function() use ($__local_var_1_1, $f_3) {
+  $__res = (($GLOBALS['Data_Interval_bifoldableInterval'])['bifoldl'])((function() use ($__local_var_1_1, $f_3) {
   $__fn = function($m_5 = null, $a_6 = null) use ($__local_var_1_1, $f_3, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($__local_var_1_1)['append'])($m_5))(($f_3)($a_6));
+  $__res = (($__local_var_1_1)['append'])($m_5, ($f_3)($a_6));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))((function() use ($__local_var_1_1, $g_4) {
+})(), (function() use ($__local_var_1_1, $g_4) {
   $__fn = function($m_5 = null, $b_6 = null) use ($__local_var_1_1, $g_4, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($__local_var_1_1)['append'])($m_5))(($g_4)($b_6));
+  $__res = (($__local_var_1_1)['append'])($m_5, ($g_4)($b_6));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))($mempty_2_2);
+})(), $mempty_2_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1020,7 +1036,7 @@ $GLOBALS['Data_Interval_bifoldableRecurringInterval'] = ["bifoldl" => (function(
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((((($GLOBALS['Data_Interval_bifoldableInterval'])['bifoldl'])($f_0))($g_1))($i_2)))($GLOBALS['Data_Interval_interval']);
+  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Interval_bifoldableInterval'])['bifoldl'])($f_0, $g_1, $i_2), $GLOBALS['Data_Interval_interval']);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -1032,7 +1048,7 @@ $GLOBALS['Data_Interval_bifoldableRecurringInterval'] = ["bifoldl" => (function(
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((((($GLOBALS['Data_Interval_bifoldableInterval'])['bifoldr'])($f_0))($g_1))($i_2)))($GLOBALS['Data_Interval_interval']);
+  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Interval_bifoldableInterval'])['bifoldr'])($f_0, $g_1, $i_2), $GLOBALS['Data_Interval_interval']);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -1048,31 +1064,31 @@ $GLOBALS['Data_Interval_bifoldableRecurringInterval'] = ["bifoldl" => (function(
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($GLOBALS['Data_Interval_bifoldableRecurringInterval'])['bifoldl'])((function() use ($__local_var_1_0, $f_3) {
+  $__res = (($GLOBALS['Data_Interval_bifoldableRecurringInterval'])['bifoldl'])((function() use ($__local_var_1_0, $f_3) {
   $__fn = function($m_5 = null, $a_6 = null) use ($__local_var_1_0, $f_3, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($__local_var_1_0)['append'])($m_5))(($f_3)($a_6));
+  $__res = (($__local_var_1_0)['append'])($m_5, ($f_3)($a_6));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))((function() use ($__local_var_1_0, $g_4) {
+})(), (function() use ($__local_var_1_0, $g_4) {
   $__fn = function($m_5 = null, $b_6 = null) use ($__local_var_1_0, $g_4, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($__local_var_1_0)['append'])($m_5))(($g_4)($b_6));
+  $__res = (($__local_var_1_0)['append'])($m_5, ($g_4)($b_6));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))($mempty_2_1);
+})(), $mempty_2_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1096,20 +1112,20 @@ $GLOBALS['Data_Interval_bitraversableInterval'] = ["bitraverse" => function($dic
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   $__t2 = null;;
-  if ((is_object($v2_5) && (($v2_5)->{'tag'} === "StartEnd"))) {
-$__t2 = ((($Apply0_1_0)['apply'])(((($__local_var_2_1)['map'])($GLOBALS['Data_Interval_StartEnd']))(($v1_4)(($v2_5)->{'value0'}))))(($v1_4)(($v2_5)->{'value1'}));
+  if ($v2_5 instanceof \Data\Interval\Data_Interval_StartEnd) {
+$__t2 = (($Apply0_1_0)['apply'])((($__local_var_2_1)['map'])($GLOBALS['Data_Interval_StartEnd'], ($v1_4)(($v2_5)->{'value0'})), ($v1_4)(($v2_5)->{'value1'}));
 goto end_branch_2;;
 };
-  if ((is_object($v2_5) && (($v2_5)->{'tag'} === "DurationEnd"))) {
-$__t2 = ((($Apply0_1_0)['apply'])(((($__local_var_2_1)['map'])($GLOBALS['Data_Interval_DurationEnd']))(($v_3)(($v2_5)->{'value0'}))))(($v1_4)(($v2_5)->{'value1'}));
+  if ($v2_5 instanceof \Data\Interval\Data_Interval_DurationEnd) {
+$__t2 = (($Apply0_1_0)['apply'])((($__local_var_2_1)['map'])($GLOBALS['Data_Interval_DurationEnd'], ($v_3)(($v2_5)->{'value0'})), ($v1_4)(($v2_5)->{'value1'}));
 goto end_branch_2;;
 };
-  if ((is_object($v2_5) && (($v2_5)->{'tag'} === "StartDuration"))) {
-$__t2 = ((($Apply0_1_0)['apply'])(((($__local_var_2_1)['map'])($GLOBALS['Data_Interval_StartDuration']))(($v1_4)(($v2_5)->{'value0'}))))(($v_3)(($v2_5)->{'value1'}));
+  if ($v2_5 instanceof \Data\Interval\Data_Interval_StartDuration) {
+$__t2 = (($Apply0_1_0)['apply'])((($__local_var_2_1)['map'])($GLOBALS['Data_Interval_StartDuration'], ($v1_4)(($v2_5)->{'value0'})), ($v_3)(($v2_5)->{'value1'}));
 goto end_branch_2;;
 };
-  if ((is_object($v2_5) && (($v2_5)->{'tag'} === "DurationOnly"))) {
-$__t2 = ((($__local_var_2_1)['map'])($GLOBALS['Data_Interval_DurationOnly']))(($v_3)(($v2_5)->{'value0'}));
+  if ($v2_5 instanceof \Data\Interval\Data_Interval_DurationOnly) {
+$__t2 = (($__local_var_2_1)['map'])($GLOBALS['Data_Interval_DurationOnly'], ($v_3)(($v2_5)->{'value0'}));
 goto end_branch_2;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -1127,7 +1143,7 @@ goto end_branch_2;;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "bisequence" => function($dictApplicative_0 = null) {
   $__num = \func_num_args();
-  $__res = (((($GLOBALS['Data_Interval_bitraversableInterval'])['bitraverse'])($dictApplicative_0))($GLOBALS['Data_Bitraversable_identity']))($GLOBALS['Data_Bitraversable_identity']);
+  $__res = (($GLOBALS['Data_Interval_bitraversableInterval'])['bitraverse'])($dictApplicative_0, $GLOBALS['Data_Bitraversable_identity'], $GLOBALS['Data_Bitraversable_identity']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1156,7 +1172,7 @@ $GLOBALS['Data_Interval_bitraversableRecurringInterval'] = ["bitraverse" => func
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($over1_1_0)((($bitraverse1_2_1)($l_3))($r_4)))($i_5);
+  $__res = ($over1_1_0)(($bitraverse1_2_1)($l_3, $r_4), $i_5);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -1168,7 +1184,7 @@ $GLOBALS['Data_Interval_bitraversableRecurringInterval'] = ["bitraverse" => func
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "bisequence" => function($dictApplicative_0 = null) {
   $__num = \func_num_args();
-  $__res = (((($GLOBALS['Data_Interval_bitraversableRecurringInterval'])['bitraverse'])($dictApplicative_0))($GLOBALS['Data_Bitraversable_identity']))($GLOBALS['Data_Bitraversable_identity']);
+  $__res = (($GLOBALS['Data_Interval_bitraversableRecurringInterval'])['bitraverse'])($dictApplicative_0, $GLOBALS['Data_Bitraversable_identity'], $GLOBALS['Data_Bitraversable_identity']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

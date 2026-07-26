@@ -98,49 +98,54 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_DivisionRing_recip
-$GLOBALS['Data_DivisionRing_recip'] = function($dict_0 = null) {
+function majData_majDivisionmajRing_recip($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majDivisionmajRing_recip';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['recip'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_DivisionRing_recip'] = __NAMESPACE__ . '\\majData_majDivisionmajRing_recip';
 
 // Data_DivisionRing_rightDiv
-$GLOBALS['Data_DivisionRing_rightDiv'] = (function() {
-  $__fn = function($dictDivisionRing_0 = null, $a_1 = null, $b_2 = null) use (&$__fn) {
+function majData_majDivisionmajRing_rightmajDiv($dictDivisionRing_0, $a_1 = null, $b_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majDivisionmajRing_rightmajDiv';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((((((($dictDivisionRing_0)['Ring0'])(null))['Semiring0'])(null))['mul'])($a_1))((($dictDivisionRing_0)['recip'])($b_2));
+  $__res = (((((($dictDivisionRing_0)['Ring0'])(null))['Semiring0'])(null))['mul'])($a_1, (($dictDivisionRing_0)['recip'])($b_2));
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_DivisionRing_rightDiv'] = __NAMESPACE__ . '\\majData_majDivisionmajRing_rightmajDiv';
 
 // Data_DivisionRing_leftDiv
-$GLOBALS['Data_DivisionRing_leftDiv'] = (function() {
-  $__fn = function($dictDivisionRing_0 = null, $a_1 = null, $b_2 = null) use (&$__fn) {
+function majData_majDivisionmajRing_leftmajDiv($dictDivisionRing_0, $a_1 = null, $b_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majDivisionmajRing_leftmajDiv';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((((((($dictDivisionRing_0)['Ring0'])(null))['Semiring0'])(null))['mul'])((($dictDivisionRing_0)['recip'])($b_2)))($a_1);
+  $__res = (((((($dictDivisionRing_0)['Ring0'])(null))['Semiring0'])(null))['mul'])((($dictDivisionRing_0)['recip'])($b_2), $a_1);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_DivisionRing_leftDiv'] = __NAMESPACE__ . '\\majData_majDivisionmajRing_leftmajDiv';
 
 // Data_DivisionRing_divisionringNumber
 $GLOBALS['Data_DivisionRing_divisionringNumber'] = ["recip" => function($x_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_EuclideanRing_euclideanRingNumber'])['div'])(1.0))($x_0);
+  $__res = (($GLOBALS['Data_EuclideanRing_euclideanRingNumber'])['div'])(1.0, $x_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

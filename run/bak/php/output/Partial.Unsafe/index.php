@@ -105,15 +105,36 @@ return $exports;
 $GLOBALS['Partial_Unsafe__unsafePartial'] = $ffi_Partial_Unsafe['_unsafePartial'] ?? new class { public function __invoke(...$args) { return $this; } };
 
 
+
+
+// Partial_Unsafe_unsafePartial_closure
+$GLOBALS['Partial_Unsafe_unsafePartial_closure'] = $GLOBALS['Partial_Unsafe__unsafePartial'];
+
 // Partial_Unsafe_unsafePartial
-$GLOBALS['Partial_Unsafe_unsafePartial'] = $GLOBALS['Partial_Unsafe__unsafePartial'];
+function majPartial_majUnsafe_unsafemajPartial($v_0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majPartial_majUnsafe_unsafemajPartial';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ($GLOBALS['Partial_Unsafe_unsafePartial_closure'])($v_0);
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Partial_Unsafe_unsafePartial'] = __NAMESPACE__ . '\\majPartial_majUnsafe_unsafemajPartial';
 
 // Partial_Unsafe_unsafeCrashWith
-$GLOBALS['Partial_Unsafe_unsafeCrashWith'] = function($msg_0 = null) {
+function majPartial_majUnsafe_unsafemajCrashmajWith($msg_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majPartial_majUnsafe_unsafemajCrashmajWith';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($GLOBALS['Partial__crashWith'])($msg_0);
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Partial_Unsafe_unsafeCrashWith'] = __NAMESPACE__ . '\\majPartial_majUnsafe_unsafemajCrashmajWith';
 

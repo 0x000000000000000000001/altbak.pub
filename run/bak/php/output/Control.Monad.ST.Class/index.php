@@ -101,6 +101,8 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Control_Monad_ST_Class_monadSTST
 $GLOBALS['Control_Monad_ST_Class_monadSTST'] = ["liftST" => function($x_0 = null) {
   $__num = \func_num_args();
@@ -126,11 +128,16 @@ $GLOBALS['Control_Monad_ST_Class_monadSTEffect'] = ["liftST" => $GLOBALS['Unsafe
 }];
 
 // Control_Monad_ST_Class_liftST
-$GLOBALS['Control_Monad_ST_Class_liftST'] = function($dict_0 = null) {
+function majControl_majMonad_majSmajT_majClass_liftmajSmajT($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majSmajT_majClass_liftmajSmajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['liftST'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_ST_Class_liftST'] = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majClass_liftmajSmajT';
 

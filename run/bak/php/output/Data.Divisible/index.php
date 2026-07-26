@@ -104,6 +104,8 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_Divisible_divisiblePredicate
 $GLOBALS['Data_Divisible_divisiblePredicate'] = ["conquer" => function($v_0 = null) {
   $__num = \func_num_args();
@@ -120,8 +122,12 @@ $GLOBALS['Data_Divisible_divisiblePredicate'] = ["conquer" => function($v_0 = nu
 }];
 
 // Data_Divisible_divisibleOp
-$GLOBALS['Data_Divisible_divisibleOp'] = function($dictMonoid_0 = null) {
+function majData_majDivisible_divisiblemajOp($dictMonoid_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majDivisible_divisiblemajOp';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $divideOp_1_0 = ($GLOBALS['Data_Divide_divideOp'])((($dictMonoid_0)['Semigroup0'])(null));
   $__local_var_2_1 = ($dictMonoid_0)['mempty'];
   $__res = ["conquer" => function($v_3 = null) use ($__local_var_2_1) {
@@ -139,8 +145,9 @@ $GLOBALS['Data_Divisible_divisibleOp'] = function($dictMonoid_0 = null) {
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Divisible_divisibleOp'] = __NAMESPACE__ . '\\majData_majDivisible_divisiblemajOp';
 
 // Data_Divisible_divisibleEquivalence
 $GLOBALS['Data_Divisible_divisibleEquivalence'] = ["conquer" => (function() {
@@ -170,7 +177,7 @@ $GLOBALS['Data_Divisible_divisibleComparison'] = ["conquer" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data0("EQ");
+  $__res = new \Data\Ordering\Data_Ordering_EQ();
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -185,11 +192,16 @@ $GLOBALS['Data_Divisible_divisibleComparison'] = ["conquer" => (function() {
 }];
 
 // Data_Divisible_conquer
-$GLOBALS['Data_Divisible_conquer'] = function($dict_0 = null) {
+function majData_majDivisible_conquer($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majDivisible_conquer';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['conquer'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Divisible_conquer'] = __NAMESPACE__ . '\\majData_majDivisible_conquer';
 

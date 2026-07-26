@@ -98,6 +98,8 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Effect_Class_monadEffectEffect
 $GLOBALS['Effect_Class_monadEffectEffect'] = ["liftEffect" => function($x_0 = null) {
   $__num = \func_num_args();
@@ -114,11 +116,16 @@ $GLOBALS['Effect_Class_monadEffectEffect'] = ["liftEffect" => function($x_0 = nu
 }];
 
 // Effect_Class_liftEffect
-$GLOBALS['Effect_Class_liftEffect'] = function($dict_0 = null) {
+function majEffect_majClass_liftmajEffect($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majEffect_majClass_liftmajEffect';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['liftEffect'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Effect_Class_liftEffect'] = __NAMESPACE__ . '\\majEffect_majClass_liftmajEffect';
 

@@ -321,9 +321,9 @@ return functorEnvT1_3_3
 return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{(*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_5.UnsafePtr).V0, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "mapWithIndex"), f_4, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_5.UnsafePtr).V1)})}
 }))
 _ = functorWithIndexEnvT1_3_2
-foldableWithIndexEnvT1_4_4 := gopurs_runtime.Apply(Get_foldableWithIndexEnvT(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTraversableWithIndex_0, "FoldableWithIndex1"), gopurs_runtime.Value{}))
+foldableWithIndexEnvT1_4_4 := Call_foldableWithIndexEnvT(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTraversableWithIndex_0, "FoldableWithIndex1"), gopurs_runtime.Value{}))
 _ = foldableWithIndexEnvT1_4_4
-traversableEnvT1_5_5 := gopurs_runtime.Apply(Get_traversableEnvT(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTraversableWithIndex_0, "Traversable2"), gopurs_runtime.Value{}))
+traversableEnvT1_5_5 := Call_traversableEnvT(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTraversableWithIndex_0, "Traversable2"), gopurs_runtime.Value{}))
 _ = traversableEnvT1_5_5
 return gopurs_runtime.RecordDict4("FoldableWithIndex1", "FunctorWithIndex0", "Traversable2", "traverseWithIndex", gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return foldableWithIndexEnvT1_4_4
@@ -359,7 +359,7 @@ return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Point
 func Call_comonadEnvT(dictComonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictComonad_0 gopurs_runtime.Value = dictComonad_0_loop
 _ = dictComonad_0
-extendEnvT1_1_0 := gopurs_runtime.Apply(Get_extendEnvT(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonad_0, "Extend0"), gopurs_runtime.Value{}))
+extendEnvT1_1_0 := Call_extendEnvT(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonad_0, "Extend0"), gopurs_runtime.Value{}))
 _ = extendEnvT1_1_0
 return gopurs_runtime.RecordDict2("Extend0", "extract", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return extendEnvT1_1_0

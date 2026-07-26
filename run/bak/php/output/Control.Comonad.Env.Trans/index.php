@@ -109,38 +109,49 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Control_Comonad_Env_Trans_EnvT
-$GLOBALS['Control_Comonad_Env_Trans_EnvT'] = function($x_0 = null) {
+function majControl_majComonad_majEnv_majTrans_majEnvmajT($x_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majComonad_majEnv_majTrans_majEnvmajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $x_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Comonad_Env_Trans_EnvT'] = __NAMESPACE__ . '\\majControl_majComonad_majEnv_majTrans_majEnvmajT';
 
 // Control_Comonad_Env_Trans_withEnvT
-$GLOBALS['Control_Comonad_Env_Trans_withEnvT'] = (function() {
-  $__fn = function($f_0 = null, $v_1 = null) use (&$__fn) {
+function majControl_majComonad_majEnv_majTrans_withmajEnvmajT($f_0, $v_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majComonad_majEnv_majTrans_withmajEnvmajT';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", ($f_0)(($v_1)->{'value0'}), ($v_1)->{'value1'});
+  $__res = new \Data\Tuple\Data_Tuple_Tuple(($f_0)(($v_1)->{'value0'}), ($v_1)->{'value1'});
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Control_Comonad_Env_Trans_withEnvT'] = __NAMESPACE__ . '\\majControl_majComonad_majEnv_majTrans_withmajEnvmajT';
 
 // Control_Comonad_Env_Trans_runEnvT
-$GLOBALS['Control_Comonad_Env_Trans_runEnvT'] = function($v_0 = null) {
+function majControl_majComonad_majEnv_majTrans_runmajEnvmajT($v_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majComonad_majEnv_majTrans_runmajEnvmajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $v_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Comonad_Env_Trans_runEnvT'] = __NAMESPACE__ . '\\majControl_majComonad_majEnv_majTrans_runmajEnvmajT';
 
 // Control_Comonad_Env_Trans_newtypeEnvT
 $GLOBALS['Control_Comonad_Env_Trans_newtypeEnvT'] = ["Coercible0" => function($_dollar__unused_0 = null) {
@@ -152,30 +163,33 @@ $GLOBALS['Control_Comonad_Env_Trans_newtypeEnvT'] = ["Coercible0" => function($_
 }];
 
 // Control_Comonad_Env_Trans_mapEnvT
-$GLOBALS['Control_Comonad_Env_Trans_mapEnvT'] = (function() {
-  $__fn = function($f_0 = null, $v_1 = null) use (&$__fn) {
+function majControl_majComonad_majEnv_majTrans_mapmajEnvmajT($f_0, $v_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majComonad_majEnv_majTrans_mapmajEnvmajT';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", ($v_1)->{'value0'}, ($f_0)(($v_1)->{'value1'}));
+  $__res = new \Data\Tuple\Data_Tuple_Tuple(($v_1)->{'value0'}, ($f_0)(($v_1)->{'value1'}));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Control_Comonad_Env_Trans_mapEnvT'] = __NAMESPACE__ . '\\majControl_majComonad_majEnv_majTrans_mapmajEnvmajT';
 
 // Control_Comonad_Env_Trans_functorEnvT
-$GLOBALS['Control_Comonad_Env_Trans_functorEnvT'] = function($dictFunctor_0 = null) {
+function majControl_majComonad_majEnv_majTrans_functormajEnvmajT($dictFunctor_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majComonad_majEnv_majTrans_functormajEnvmajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["map" => (function() use ($dictFunctor_0) {
   $__fn = function($f_1 = null, $v_2 = null) use ($dictFunctor_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", ($v_2)->{'value0'}, ((($dictFunctor_0)['map'])($f_1))(($v_2)->{'value1'}));
+  $__res = new \Data\Tuple\Data_Tuple_Tuple(($v_2)->{'value0'}, (($dictFunctor_0)['map'])($f_1, ($v_2)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -184,12 +198,17 @@ $GLOBALS['Control_Comonad_Env_Trans_functorEnvT'] = function($dictFunctor_0 = nu
 })()];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Comonad_Env_Trans_functorEnvT'] = __NAMESPACE__ . '\\majControl_majComonad_majEnv_majTrans_functormajEnvmajT';
 
 // Control_Comonad_Env_Trans_functorWithIndexEnvT
-$GLOBALS['Control_Comonad_Env_Trans_functorWithIndexEnvT'] = function($dictFunctorWithIndex_0 = null) {
+function majControl_majComonad_majEnv_majTrans_functormajWithmajIndexmajEnvmajT($dictFunctorWithIndex_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majComonad_majEnv_majTrans_functormajWithmajIndexmajEnvmajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__local_var_1_0 = (($dictFunctorWithIndex_0)['Functor0'])(null);
   $functorEnvT1_2_1 = ["map" => (function() use ($__local_var_1_0) {
   $__fn = function($f_2 = null, $v_3 = null) use ($__local_var_1_0, &$__fn) {
@@ -197,7 +216,7 @@ $GLOBALS['Control_Comonad_Env_Trans_functorWithIndexEnvT'] = function($dictFunct
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", ($v_3)->{'value0'}, ((($__local_var_1_0)['map'])($f_2))(($v_3)->{'value1'}));
+  $__res = new \Data\Tuple\Data_Tuple_Tuple(($v_3)->{'value0'}, (($__local_var_1_0)['map'])($f_2, ($v_3)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -210,7 +229,7 @@ $GLOBALS['Control_Comonad_Env_Trans_functorWithIndexEnvT'] = function($dictFunct
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", ($v_4)->{'value0'}, ((($dictFunctorWithIndex_0)['mapWithIndex'])($f_3))(($v_4)->{'value1'}));
+  $__res = new \Data\Tuple\Data_Tuple_Tuple(($v_4)->{'value0'}, (($dictFunctorWithIndex_0)['mapWithIndex'])($f_3, ($v_4)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -225,19 +244,24 @@ $GLOBALS['Control_Comonad_Env_Trans_functorWithIndexEnvT'] = function($dictFunct
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Comonad_Env_Trans_functorWithIndexEnvT'] = __NAMESPACE__ . '\\majControl_majComonad_majEnv_majTrans_functormajWithmajIndexmajEnvmajT';
 
 // Control_Comonad_Env_Trans_foldableEnvT
-$GLOBALS['Control_Comonad_Env_Trans_foldableEnvT'] = function($dictFoldable_0 = null) {
+function majControl_majComonad_majEnv_majTrans_foldablemajEnvmajT($dictFoldable_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majComonad_majEnv_majTrans_foldablemajEnvmajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["foldl" => (function() use ($dictFoldable_0) {
   $__fn = function($fn_1 = null, $a_2 = null, $v_3 = null) use ($dictFoldable_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (((($dictFoldable_0)['foldl'])($fn_1))($a_2))(($v_3)->{'value1'});
+  $__res = (($dictFoldable_0)['foldl'])($fn_1, $a_2, ($v_3)->{'value1'});
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -249,7 +273,7 @@ $GLOBALS['Control_Comonad_Env_Trans_foldableEnvT'] = function($dictFoldable_0 = 
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (((($dictFoldable_0)['foldr'])($fn_1))($a_2))(($v_3)->{'value1'});
+  $__res = (($dictFoldable_0)['foldr'])($fn_1, $a_2, ($v_3)->{'value1'});
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -264,7 +288,7 @@ $GLOBALS['Control_Comonad_Env_Trans_foldableEnvT'] = function($dictFoldable_0 = 
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($foldMap1_2_0)($fn_3))(($v_4)->{'value1'});
+  $__res = ($foldMap1_2_0)($fn_3, ($v_4)->{'value1'});
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -277,12 +301,17 @@ $GLOBALS['Control_Comonad_Env_Trans_foldableEnvT'] = function($dictFoldable_0 = 
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Comonad_Env_Trans_foldableEnvT'] = __NAMESPACE__ . '\\majControl_majComonad_majEnv_majTrans_foldablemajEnvmajT';
 
 // Control_Comonad_Env_Trans_foldableWithIndexEnvT
-$GLOBALS['Control_Comonad_Env_Trans_foldableWithIndexEnvT'] = function($dictFoldableWithIndex_0 = null) {
+function majControl_majComonad_majEnv_majTrans_foldablemajWithmajIndexmajEnvmajT($dictFoldableWithIndex_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majComonad_majEnv_majTrans_foldablemajWithmajIndexmajEnvmajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__local_var_1_0 = (($dictFoldableWithIndex_0)['Foldable0'])(null);
   $foldableEnvT1_2_1 = ["foldl" => (function() use ($__local_var_1_0) {
   $__fn = function($fn_2 = null, $a_3 = null, $v_4 = null) use ($__local_var_1_0, &$__fn) {
@@ -290,7 +319,7 @@ $GLOBALS['Control_Comonad_Env_Trans_foldableWithIndexEnvT'] = function($dictFold
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (((($__local_var_1_0)['foldl'])($fn_2))($a_3))(($v_4)->{'value1'});
+  $__res = (($__local_var_1_0)['foldl'])($fn_2, $a_3, ($v_4)->{'value1'});
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -302,7 +331,7 @@ $GLOBALS['Control_Comonad_Env_Trans_foldableWithIndexEnvT'] = function($dictFold
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (((($__local_var_1_0)['foldr'])($fn_2))($a_3))(($v_4)->{'value1'});
+  $__res = (($__local_var_1_0)['foldr'])($fn_2, $a_3, ($v_4)->{'value1'});
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -317,7 +346,7 @@ $GLOBALS['Control_Comonad_Env_Trans_foldableWithIndexEnvT'] = function($dictFold
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($foldMap1_3_1)($fn_4))(($v_5)->{'value1'});
+  $__res = ($foldMap1_3_1)($fn_4, ($v_5)->{'value1'});
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -334,7 +363,7 @@ $GLOBALS['Control_Comonad_Env_Trans_foldableWithIndexEnvT'] = function($dictFold
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (((($dictFoldableWithIndex_0)['foldlWithIndex'])($f_3))($a_4))(($v_5)->{'value1'});
+  $__res = (($dictFoldableWithIndex_0)['foldlWithIndex'])($f_3, $a_4, ($v_5)->{'value1'});
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -346,7 +375,7 @@ $GLOBALS['Control_Comonad_Env_Trans_foldableWithIndexEnvT'] = function($dictFold
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (((($dictFoldableWithIndex_0)['foldrWithIndex'])($f_3))($a_4))(($v_5)->{'value1'});
+  $__res = (($dictFoldableWithIndex_0)['foldrWithIndex'])($f_3, $a_4, ($v_5)->{'value1'});
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -361,7 +390,7 @@ $GLOBALS['Control_Comonad_Env_Trans_foldableWithIndexEnvT'] = function($dictFold
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($foldMapWithIndex1_4_3)($f_5))(($v_6)->{'value1'});
+  $__res = ($foldMapWithIndex1_4_3)($f_5, ($v_6)->{'value1'});
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -380,12 +409,17 @@ $GLOBALS['Control_Comonad_Env_Trans_foldableWithIndexEnvT'] = function($dictFold
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Comonad_Env_Trans_foldableWithIndexEnvT'] = __NAMESPACE__ . '\\majControl_majComonad_majEnv_majTrans_foldablemajWithmajIndexmajEnvmajT';
 
 // Control_Comonad_Env_Trans_traversableEnvT
-$GLOBALS['Control_Comonad_Env_Trans_traversableEnvT'] = function($dictTraversable_0 = null) {
+function majControl_majComonad_majEnv_majTrans_traversablemajEnvmajT($dictTraversable_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majComonad_majEnv_majTrans_traversablemajEnvmajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__local_var_1_0 = (($dictTraversable_0)['Functor0'])(null);
   $functorEnvT1_2_1 = ["map" => (function() use ($__local_var_1_0) {
   $__fn = function($f_2 = null, $v_3 = null) use ($__local_var_1_0, &$__fn) {
@@ -393,7 +427,7 @@ $GLOBALS['Control_Comonad_Env_Trans_traversableEnvT'] = function($dictTraversabl
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", ($v_3)->{'value0'}, ((($__local_var_1_0)['map'])($f_2))(($v_3)->{'value1'}));
+  $__res = new \Data\Tuple\Data_Tuple_Tuple(($v_3)->{'value0'}, (($__local_var_1_0)['map'])($f_2, ($v_3)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -407,7 +441,7 @@ $GLOBALS['Control_Comonad_Env_Trans_traversableEnvT'] = function($dictTraversabl
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (((($__local_var_3_2)['foldl'])($fn_4))($a_5))(($v_6)->{'value1'});
+  $__res = (($__local_var_3_2)['foldl'])($fn_4, $a_5, ($v_6)->{'value1'});
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -419,7 +453,7 @@ $GLOBALS['Control_Comonad_Env_Trans_traversableEnvT'] = function($dictTraversabl
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (((($__local_var_3_2)['foldr'])($fn_4))($a_5))(($v_6)->{'value1'});
+  $__res = (($__local_var_3_2)['foldr'])($fn_4, $a_5, ($v_6)->{'value1'});
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -434,7 +468,7 @@ $GLOBALS['Control_Comonad_Env_Trans_traversableEnvT'] = function($dictTraversabl
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($foldMap1_5_3)($fn_6))(($v_7)->{'value1'});
+  $__res = ($foldMap1_5_3)($fn_6, ($v_7)->{'value1'});
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -450,7 +484,7 @@ $GLOBALS['Control_Comonad_Env_Trans_traversableEnvT'] = function($dictTraversabl
   $sequence1_6_5 = (($dictTraversable_0)['sequence'])($dictApplicative_5);
   $__res = function($v_7 = null) use ($dictApplicative_5, $sequence1_6_5) {
   $__num = \func_num_args();
-  $__res = ((((((($dictApplicative_5)['Apply0'])(null))['Functor0'])(null))['map'])(((($GLOBALS['Data_Functor_functorFn'])['map'])($GLOBALS['Control_Comonad_Env_Trans_EnvT']))(($GLOBALS['Data_Tuple_Tuple'])(($v_7)->{'value0'}))))(($sequence1_6_5)(($v_7)->{'value1'}));
+  $__res = (((((($dictApplicative_5)['Apply0'])(null))['Functor0'])(null))['map'])((($GLOBALS['Data_Functor_functorFn'])['map'])($GLOBALS['Control_Comonad_Env_Trans_EnvT'], ($GLOBALS['Data_Tuple_Tuple'])(($v_7)->{'value0'})), ($sequence1_6_5)(($v_7)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -467,7 +501,7 @@ $GLOBALS['Control_Comonad_Env_Trans_traversableEnvT'] = function($dictTraversabl
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((((($dictApplicative_5)['Apply0'])(null))['Functor0'])(null))['map'])(((($GLOBALS['Data_Functor_functorFn'])['map'])($GLOBALS['Control_Comonad_Env_Trans_EnvT']))(($GLOBALS['Data_Tuple_Tuple'])(($v_8)->{'value0'}))))((($traverse1_6_6)($f_7))(($v_8)->{'value1'}));
+  $__res = (((((($dictApplicative_5)['Apply0'])(null))['Functor0'])(null))['map'])((($GLOBALS['Data_Functor_functorFn'])['map'])($GLOBALS['Control_Comonad_Env_Trans_EnvT'], ($GLOBALS['Data_Tuple_Tuple'])(($v_8)->{'value0'})), ($traverse1_6_6)($f_7, ($v_8)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -492,12 +526,17 @@ $GLOBALS['Control_Comonad_Env_Trans_traversableEnvT'] = function($dictTraversabl
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Comonad_Env_Trans_traversableEnvT'] = __NAMESPACE__ . '\\majControl_majComonad_majEnv_majTrans_traversablemajEnvmajT';
 
 // Control_Comonad_Env_Trans_traversableWithIndexEnvT
-$GLOBALS['Control_Comonad_Env_Trans_traversableWithIndexEnvT'] = function($dictTraversableWithIndex_0 = null) {
+function majControl_majComonad_majEnv_majTrans_traversablemajWithmajIndexmajEnvmajT($dictTraversableWithIndex_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majComonad_majEnv_majTrans_traversablemajWithmajIndexmajEnvmajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__local_var_1_0 = (($dictTraversableWithIndex_0)['FunctorWithIndex0'])(null);
   $__local_var_2_1 = (($__local_var_1_0)['Functor0'])(null);
   $functorEnvT1_3_2 = ["map" => (function() use ($__local_var_2_1) {
@@ -506,7 +545,7 @@ $GLOBALS['Control_Comonad_Env_Trans_traversableWithIndexEnvT'] = function($dictT
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", ($v_4)->{'value0'}, ((($__local_var_2_1)['map'])($f_3))(($v_4)->{'value1'}));
+  $__res = new \Data\Tuple\Data_Tuple_Tuple(($v_4)->{'value0'}, (($__local_var_2_1)['map'])($f_3, ($v_4)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -519,7 +558,7 @@ $GLOBALS['Control_Comonad_Env_Trans_traversableWithIndexEnvT'] = function($dictT
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", ($v_5)->{'value0'}, ((($__local_var_1_0)['mapWithIndex'])($f_4))(($v_5)->{'value1'}));
+  $__res = new \Data\Tuple\Data_Tuple_Tuple(($v_5)->{'value0'}, (($__local_var_1_0)['mapWithIndex'])($f_4, ($v_5)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -543,7 +582,7 @@ $GLOBALS['Control_Comonad_Env_Trans_traversableWithIndexEnvT'] = function($dictT
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((((($dictApplicative_6)['Apply0'])(null))['Functor0'])(null))['map'])(((($GLOBALS['Data_Functor_functorFn'])['map'])($GLOBALS['Control_Comonad_Env_Trans_EnvT']))(($GLOBALS['Data_Tuple_Tuple'])(($v_9)->{'value0'}))))((($traverseWithIndex1_7_6)($f_8))(($v_9)->{'value1'}));
+  $__res = (((((($dictApplicative_6)['Apply0'])(null))['Functor0'])(null))['map'])((($GLOBALS['Data_Functor_functorFn'])['map'])($GLOBALS['Control_Comonad_Env_Trans_EnvT'], ($GLOBALS['Data_Tuple_Tuple'])(($v_9)->{'value0'})), ($traverseWithIndex1_7_6)($f_8, ($v_9)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -574,12 +613,17 @@ $GLOBALS['Control_Comonad_Env_Trans_traversableWithIndexEnvT'] = function($dictT
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Comonad_Env_Trans_traversableWithIndexEnvT'] = __NAMESPACE__ . '\\majControl_majComonad_majEnv_majTrans_traversablemajWithmajIndexmajEnvmajT';
 
 // Control_Comonad_Env_Trans_extendEnvT
-$GLOBALS['Control_Comonad_Env_Trans_extendEnvT'] = function($dictExtend_0 = null) {
+function majControl_majComonad_majEnv_majTrans_extendmajEnvmajT($dictExtend_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majComonad_majEnv_majTrans_extendmajEnvmajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $Functor0_1_0 = (($dictExtend_0)['Functor0'])(null);
   $functorEnvT1_2_1 = ["map" => (function() use ($Functor0_1_0) {
   $__fn = function($f_2 = null, $v_3 = null) use ($Functor0_1_0, &$__fn) {
@@ -587,7 +631,7 @@ $GLOBALS['Control_Comonad_Env_Trans_extendEnvT'] = function($dictExtend_0 = null
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", ($v_3)->{'value0'}, ((($Functor0_1_0)['map'])($f_2))(($v_3)->{'value1'}));
+  $__res = new \Data\Tuple\Data_Tuple_Tuple(($v_3)->{'value0'}, (($Functor0_1_0)['map'])($f_2, ($v_3)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -600,7 +644,7 @@ $GLOBALS['Control_Comonad_Env_Trans_extendEnvT'] = function($dictExtend_0 = null
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", ($v_4)->{'value0'}, ((($Functor0_1_0)['map'])($f_3))(((($dictExtend_0)['extend'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Comonad_Env_Trans_EnvT']))(($GLOBALS['Data_Tuple_Tuple'])(($v_4)->{'value0'}))))(($v_4)->{'value1'})));
+  $__res = new \Data\Tuple\Data_Tuple_Tuple(($v_4)->{'value0'}, (($Functor0_1_0)['map'])($f_3, (($dictExtend_0)['extend'])(($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Comonad_Env_Trans_EnvT'], ($GLOBALS['Data_Tuple_Tuple'])(($v_4)->{'value0'})), ($v_4)->{'value1'})));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -615,8 +659,9 @@ $GLOBALS['Control_Comonad_Env_Trans_extendEnvT'] = function($dictExtend_0 = null
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Comonad_Env_Trans_extendEnvT'] = __NAMESPACE__ . '\\majControl_majComonad_majEnv_majTrans_extendmajEnvmajT';
 
 // Control_Comonad_Env_Trans_comonadTransEnvT
 $GLOBALS['Control_Comonad_Env_Trans_comonadTransEnvT'] = ["lower" => (function() {
@@ -634,8 +679,12 @@ $GLOBALS['Control_Comonad_Env_Trans_comonadTransEnvT'] = ["lower" => (function()
 })()];
 
 // Control_Comonad_Env_Trans_comonadEnvT
-$GLOBALS['Control_Comonad_Env_Trans_comonadEnvT'] = function($dictComonad_0 = null) {
+function majControl_majComonad_majEnv_majTrans_comonadmajEnvmajT($dictComonad_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majComonad_majEnv_majTrans_comonadmajEnvmajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $extendEnvT1_1_0 = ($GLOBALS['Control_Comonad_Env_Trans_extendEnvT'])((($dictComonad_0)['Extend0'])(null));
   $__res = ["extract" => function($v_2 = null) use ($dictComonad_0) {
   $__num = \func_num_args();
@@ -652,6 +701,7 @@ $GLOBALS['Control_Comonad_Env_Trans_comonadEnvT'] = function($dictComonad_0 = nu
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Comonad_Env_Trans_comonadEnvT'] = __NAMESPACE__ . '\\majControl_majComonad_majEnv_majTrans_comonadmajEnvmajT';
 

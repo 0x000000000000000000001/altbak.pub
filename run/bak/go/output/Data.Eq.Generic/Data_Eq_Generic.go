@@ -89,7 +89,7 @@ var once_genericEq sync.Once
 func Get_genericEq() gopurs_runtime.Value {
 	once_genericEq.Do(func() {
 		cache_genericEq = gopurs_runtime.Func4(func(dictGeneric_0_box gopurs_runtime.Value, dictGenericEq_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value, y_3_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_genericEq(dictGeneric_0_box, dictGenericEq_1_box, x_2_box, y_3_box)
+return gopurs_runtime.Bool(Call_genericEq(dictGeneric_0_box, dictGenericEq_1_box, x_2_box, y_3_box))
 })
 	})
 	return cache_genericEq
@@ -150,7 +150,7 @@ return __t0
 }))
 }
 
-func Call_genericEq(dictGeneric_0_loop gopurs_runtime.Value, dictGenericEq_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value, y_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_genericEq(dictGeneric_0_loop gopurs_runtime.Value, dictGenericEq_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value, y_3_loop gopurs_runtime.Value) bool {
 var dictGeneric_0 gopurs_runtime.Value = dictGeneric_0_loop
 _ = dictGeneric_0
 var dictGenericEq_1 gopurs_runtime.Value = dictGenericEq_1_loop
@@ -159,7 +159,7 @@ var x_2 gopurs_runtime.Value = x_2_loop
 _ = x_2
 var y_3 gopurs_runtime.Value = y_3_loop
 _ = y_3
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericEq_1, "genericEq'"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGeneric_0, "from"), x_2), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGeneric_0, "from"), y_3))
+return (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericEq_1, "genericEq'"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGeneric_0, "from"), x_2), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGeneric_0, "from"), y_3)).IntVal) != (0)
 }
 
 

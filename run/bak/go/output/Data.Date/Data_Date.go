@@ -120,7 +120,7 @@ var once_isLeapYear sync.Once
 func Get_isLeapYear() gopurs_runtime.Value {
 	once_isLeapYear.Do(func() {
 		cache_isLeapYear = gopurs_runtime.Func(func(y_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_isLeapYear(y_0_box)
+return gopurs_runtime.Bool(Call_isLeapYear(y_0_box))
 })
 	})
 	return cache_isLeapYear
@@ -575,7 +575,7 @@ var once_exactDate sync.Once
 func Get_exactDate() gopurs_runtime.Value {
 	once_exactDate.Do(func() {
 		cache_exactDate = gopurs_runtime.Func3(func(y_0_box gopurs_runtime.Value, m_1_box gopurs_runtime.Value, d_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_exactDate(y_0_box, m_1_box, d_2_box)
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_exactDate(y_0_box, m_1_box, d_2_box))}
 })
 	})
 	return cache_exactDate
@@ -597,7 +597,7 @@ var once_adjust sync.Once
 func Get_adjust() gopurs_runtime.Value {
 	once_adjust.Do(func() {
 		cache_adjust = gopurs_runtime.Func2(func(v_0_box gopurs_runtime.Value, date_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_adjust(v_0_box, date_1_box)
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_adjust(v_0_box, date_1_box))}
 })
 	})
 	return cache_adjust
@@ -711,12 +711,12 @@ _ = v_0
 return (*Constructor_Date)(v_0.UnsafePtr).V1
 }
 
-func Call_isLeapYear(y_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_isLeapYear(y_0_loop gopurs_runtime.Value) bool {
 var y_0 gopurs_runtime.Value = y_0_loop
 _ = y_0
 y_prime_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Date_Component.Get_boundedEnumYear(), "fromEnum"), y_0)
 _ = y_prime_1_0
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "conj"), gopurs_runtime.Bool((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingInt(), "mod"), y_prime_1_0, gopurs_runtime.Int(4)).IntVal) == (0)), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "disj"), gopurs_runtime.Bool((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingInt(), "mod"), y_prime_1_0, gopurs_runtime.Int(400)).IntVal) == (0)), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "not"), gopurs_runtime.Bool((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingInt(), "mod"), y_prime_1_0, gopurs_runtime.Int(100)).IntVal) == (0)))))
+return (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "conj"), gopurs_runtime.Bool((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingInt(), "mod"), y_prime_1_0, gopurs_runtime.Int(4)).IntVal) == (0)), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "disj"), gopurs_runtime.Bool((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingInt(), "mod"), y_prime_1_0, gopurs_runtime.Int(400)).IntVal) == (0)), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "not"), gopurs_runtime.Bool((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingInt(), "mod"), y_prime_1_0, gopurs_runtime.Int(100)).IntVal) == (0))))).IntVal) != (0)
 }
 
 func Call_lastDayOfMonth(y_0_loop gopurs_runtime.Value, m_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -752,7 +752,7 @@ goto end_branch_0
 if (m_1.Type == 9 && m_1.IntVal == 2455627378) {
 var __t5 gopurs_runtime.Value
 {
-if (gopurs_runtime.Apply(Get_isLeapYear(), y_0).IntVal) != (0) {
+if (gopurs_runtime.Bool(Call_isLeapYear(y_0)).IntVal) != (0) {
 __local_var_2_6 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Date_Component.Get_boundedEnumDay(), "toEnum"), gopurs_runtime.Int(29))
 _ = __local_var_2_6
 var __t7 gopurs_runtime.Value
@@ -1079,7 +1079,7 @@ return gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointe
 }), y_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Date_Component.Get_boundedEnumMonth(), "fromEnum"), m_1), d_2)
 }
 
-func Call_exactDate(y_0_loop gopurs_runtime.Value, m_1_loop gopurs_runtime.Value, d_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_exactDate(y_0_loop gopurs_runtime.Value, m_1_loop gopurs_runtime.Value, d_2_loop gopurs_runtime.Value) *pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value] {
 var y_0 gopurs_runtime.Value = y_0_loop
 _ = y_0
 var m_1 gopurs_runtime.Value = m_1_loop
@@ -1099,10 +1099,10 @@ goto end_branch_0
 __t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}
 }
 end_branch_0:
-return __t0
+return (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(__t0.UnsafePtr)
 }
 
-func Call_adjust(v_0_loop gopurs_runtime.Value, date_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_adjust(v_0_loop gopurs_runtime.Value, date_1_loop gopurs_runtime.Value) *pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value] {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 var date_1 gopurs_runtime.Value = date_1_loop
@@ -1211,9 +1211,9 @@ __t10 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Maybe.Get_bindMa
 end_branch_10:
 return __t10
 })
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Maybe.Get_bindMaybe(), "bind"), gopurs_runtime.Apply(pkg_Data_Int.Get_fromNumber(), v_0), gopurs_runtime.Func(func(a_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Maybe.Get_bindMaybe(), "bind"), gopurs_runtime.Apply(pkg_Data_Int.Get_fromNumber(), v_0), gopurs_runtime.Func(func(a_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(adj_2_0, a_3, date_1)
-}))
+})).UnsafePtr)
 }
 
 func Get_calcDiff() gopurs_runtime.Value {

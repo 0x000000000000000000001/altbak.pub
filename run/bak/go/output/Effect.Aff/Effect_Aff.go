@@ -837,7 +837,7 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Effect.Get_applicativeE
 func Call_launchAff_(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
-return gopurs_runtime.Apply(Get_void(), gopurs_runtime.Apply(Get_launchAff(), x_0))
+return gopurs_runtime.Apply(Get_void(), Call_launchAff(x_0))
 }
 
 func Call_delay(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -1036,7 +1036,7 @@ var k_0 gopurs_runtime.Value = k_0_loop
 _ = k_0
 var aff_1 gopurs_runtime.Value = aff_1_loop
 _ = aff_1
-return gopurs_runtime.Apply(Get_launchAff(), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_bindAff(), "bind"), gopurs_runtime.Apply(Get_try(), aff_1), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_launchAff(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_bindAff(), "bind"), gopurs_runtime.Apply(Get_try(), aff_1), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_monadEffectAff(), "liftEffect"), gopurs_runtime.Apply(k_0, x_2))
 })))
 }

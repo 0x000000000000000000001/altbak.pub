@@ -95,6 +95,8 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+final class Type_Proxy_Proxy { public function __construct() {} }
+
 // Type_Proxy_Proxy
-$GLOBALS['Type_Proxy_Proxy'] = ($GLOBALS['__phpurs_data0_Proxy'] ??= new Phpurs_Data0("Proxy"));
+$GLOBALS['Type_Proxy_Proxy'] = ($GLOBALS['__phpurs_data0_Proxy'] ??= new \Type\Proxy\Type_Proxy_Proxy());
 

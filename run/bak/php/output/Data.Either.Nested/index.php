@@ -96,151 +96,212 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_Either_Nested_in9
-$GLOBALS['Data_Either_Nested_in9'] = function($v_0 = null) {
+function majData_majEither_majNested_in9($v_0) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Left", $v_0)))))))));
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majEither_majNested_in9';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = new \Data\Either\Data_Either_Right(new \Data\Either\Data_Either_Right(new \Data\Either\Data_Either_Right(new \Data\Either\Data_Either_Right(new \Data\Either\Data_Either_Right(new \Data\Either\Data_Either_Right(new \Data\Either\Data_Either_Right(new \Data\Either\Data_Either_Right(new \Data\Either\Data_Either_Left($v_0)))))))));
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Either_Nested_in9'] = __NAMESPACE__ . '\\majData_majEither_majNested_in9';
 
 // Data_Either_Nested_in8
-$GLOBALS['Data_Either_Nested_in8'] = function($v_0 = null) {
+function majData_majEither_majNested_in8($v_0) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Left", $v_0))))))));
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majEither_majNested_in8';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = new \Data\Either\Data_Either_Right(new \Data\Either\Data_Either_Right(new \Data\Either\Data_Either_Right(new \Data\Either\Data_Either_Right(new \Data\Either\Data_Either_Right(new \Data\Either\Data_Either_Right(new \Data\Either\Data_Either_Right(new \Data\Either\Data_Either_Left($v_0))))))));
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Either_Nested_in8'] = __NAMESPACE__ . '\\majData_majEither_majNested_in8';
 
 // Data_Either_Nested_in7
-$GLOBALS['Data_Either_Nested_in7'] = function($v_0 = null) {
+function majData_majEither_majNested_in7($v_0) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Left", $v_0)))))));
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majEither_majNested_in7';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = new \Data\Either\Data_Either_Right(new \Data\Either\Data_Either_Right(new \Data\Either\Data_Either_Right(new \Data\Either\Data_Either_Right(new \Data\Either\Data_Either_Right(new \Data\Either\Data_Either_Right(new \Data\Either\Data_Either_Left($v_0)))))));
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Either_Nested_in7'] = __NAMESPACE__ . '\\majData_majEither_majNested_in7';
 
 // Data_Either_Nested_in6
-$GLOBALS['Data_Either_Nested_in6'] = function($v_0 = null) {
+function majData_majEither_majNested_in6($v_0) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Left", $v_0))))));
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majEither_majNested_in6';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = new \Data\Either\Data_Either_Right(new \Data\Either\Data_Either_Right(new \Data\Either\Data_Either_Right(new \Data\Either\Data_Either_Right(new \Data\Either\Data_Either_Right(new \Data\Either\Data_Either_Left($v_0))))));
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Either_Nested_in6'] = __NAMESPACE__ . '\\majData_majEither_majNested_in6';
 
 // Data_Either_Nested_in5
-$GLOBALS['Data_Either_Nested_in5'] = function($v_0 = null) {
+function majData_majEither_majNested_in5($v_0) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Left", $v_0)))));
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majEither_majNested_in5';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = new \Data\Either\Data_Either_Right(new \Data\Either\Data_Either_Right(new \Data\Either\Data_Either_Right(new \Data\Either\Data_Either_Right(new \Data\Either\Data_Either_Left($v_0)))));
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Either_Nested_in5'] = __NAMESPACE__ . '\\majData_majEither_majNested_in5';
 
 // Data_Either_Nested_in4
-$GLOBALS['Data_Either_Nested_in4'] = function($v_0 = null) {
+function majData_majEither_majNested_in4($v_0) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Left", $v_0))));
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majEither_majNested_in4';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = new \Data\Either\Data_Either_Right(new \Data\Either\Data_Either_Right(new \Data\Either\Data_Either_Right(new \Data\Either\Data_Either_Left($v_0))));
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Either_Nested_in4'] = __NAMESPACE__ . '\\majData_majEither_majNested_in4';
 
 // Data_Either_Nested_in3
-$GLOBALS['Data_Either_Nested_in3'] = function($v_0 = null) {
+function majData_majEither_majNested_in3($v_0) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Left", $v_0)));
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majEither_majNested_in3';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = new \Data\Either\Data_Either_Right(new \Data\Either\Data_Either_Right(new \Data\Either\Data_Either_Left($v_0)));
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Either_Nested_in3'] = __NAMESPACE__ . '\\majData_majEither_majNested_in3';
 
 // Data_Either_Nested_in2
-$GLOBALS['Data_Either_Nested_in2'] = function($v_0 = null) {
+function majData_majEither_majNested_in2($v_0) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data1("Right", new Phpurs_Data1("Left", $v_0));
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majEither_majNested_in2';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = new \Data\Either\Data_Either_Right(new \Data\Either\Data_Either_Left($v_0));
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Either_Nested_in2'] = __NAMESPACE__ . '\\majData_majEither_majNested_in2';
 
 // Data_Either_Nested_in10
-$GLOBALS['Data_Either_Nested_in10'] = function($v_0 = null) {
+function majData_majEither_majNested_in10($v_0) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Right", new Phpurs_Data1("Left", $v_0))))))))));
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majEither_majNested_in10';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = new \Data\Either\Data_Either_Right(new \Data\Either\Data_Either_Right(new \Data\Either\Data_Either_Right(new \Data\Either\Data_Either_Right(new \Data\Either\Data_Either_Right(new \Data\Either\Data_Either_Right(new \Data\Either\Data_Either_Right(new \Data\Either\Data_Either_Right(new \Data\Either\Data_Either_Right(new \Data\Either\Data_Either_Left($v_0))))))))));
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Either_Nested_in10'] = __NAMESPACE__ . '\\majData_majEither_majNested_in10';
+
+// Data_Either_Nested_in1_closure
+$GLOBALS['Data_Either_Nested_in1_closure'] = $GLOBALS['Data_Either_Left'];
 
 // Data_Either_Nested_in1
-$GLOBALS['Data_Either_Nested_in1'] = $GLOBALS['Data_Either_Left'];
+function majData_majEither_majNested_in1($v_0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majEither_majNested_in1';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ($GLOBALS['Data_Either_Nested_in1_closure'])($v_0);
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Either_Nested_in1'] = __NAMESPACE__ . '\\majData_majEither_majNested_in1';
 
 // Data_Either_Nested_either9
-$GLOBALS['Data_Either_Nested_either9'] = (function() {
-  $__fn = function($a_0 = null, $b_1 = null, $c_2 = null, $d_3 = null, $e_4 = null, $f_5 = null, $g_6 = null, $h_7 = null, $i_8 = null, $y_9 = null) use (&$__fn) {
+function majData_majEither_majNested_either9($a_0, $b_1 = null, $c_2 = null, $d_3 = null, $e_4 = null, $f_5 = null, $g_6 = null, $h_7 = null, $i_8 = null, $y_9 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majEither_majNested_either9';
   if ($__num < 10) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 10);
   }
   $__t0 = null;;
-  if ((is_object($y_9) && (($y_9)->{'tag'} === "Left"))) {
+  if ($y_9 instanceof \Data\Either\Data_Either_Left) {
 $__t0 = ($a_0)(($y_9)->{'value0'});
 goto end_branch_0;;
 };
-  if ((is_object($y_9) && (($y_9)->{'tag'} === "Right"))) {
+  if ($y_9 instanceof \Data\Either\Data_Either_Right) {
 $__t1 = null;;
-if ((is_object(($y_9)->{'value0'}) && ((($y_9)->{'value0'})->{'tag'} === "Left"))) {
+if (($y_9)->{'value0'} instanceof \Data\Either\Data_Either_Left) {
 $__t1 = ($b_1)((($y_9)->{'value0'})->{'value0'});
 goto end_branch_1;;
 };
-if ((is_object(($y_9)->{'value0'}) && ((($y_9)->{'value0'})->{'tag'} === "Right"))) {
+if (($y_9)->{'value0'} instanceof \Data\Either\Data_Either_Right) {
 $__t2 = null;;
-if ((is_object((($y_9)->{'value0'})->{'value0'}) && (((($y_9)->{'value0'})->{'value0'})->{'tag'} === "Left"))) {
+if ((($y_9)->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Left) {
 $__t2 = ($c_2)(((($y_9)->{'value0'})->{'value0'})->{'value0'});
 goto end_branch_2;;
 };
-if ((is_object((($y_9)->{'value0'})->{'value0'}) && (((($y_9)->{'value0'})->{'value0'})->{'tag'} === "Right"))) {
+if ((($y_9)->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right) {
 $__t3 = null;;
-if ((is_object(((($y_9)->{'value0'})->{'value0'})->{'value0'}) && ((((($y_9)->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Left"))) {
+if (((($y_9)->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Left) {
 $__t3 = ($d_3)((((($y_9)->{'value0'})->{'value0'})->{'value0'})->{'value0'});
 goto end_branch_3;;
 };
-if ((is_object(((($y_9)->{'value0'})->{'value0'})->{'value0'}) && ((((($y_9)->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Right"))) {
+if (((($y_9)->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right) {
 $__t4 = null;;
-if ((is_object((((($y_9)->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && (((((($y_9)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Left"))) {
+if ((((($y_9)->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Left) {
 $__t4 = ($e_4)(((((($y_9)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'});
 goto end_branch_4;;
 };
-if ((is_object((((($y_9)->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && (((((($y_9)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Right"))) {
+if ((((($y_9)->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right) {
 $__t5 = null;;
-if ((is_object(((((($y_9)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && ((((((($y_9)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Left"))) {
+if (((((($y_9)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Left) {
 $__t5 = ($f_5)((((((($y_9)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'});
 goto end_branch_5;;
 };
-if ((is_object(((((($y_9)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && ((((((($y_9)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Right"))) {
+if (((((($y_9)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right) {
 $__t6 = null;;
-if ((is_object((((((($y_9)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && (((((((($y_9)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Left"))) {
+if ((((((($y_9)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Left) {
 $__t6 = ($g_6)(((((((($y_9)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'});
 goto end_branch_6;;
 };
-if ((is_object((((((($y_9)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && (((((((($y_9)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Right"))) {
+if ((((((($y_9)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right) {
 $__t7 = null;;
-if ((is_object(((((((($y_9)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && ((((((((($y_9)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Left"))) {
+if (((((((($y_9)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Left) {
 $__t7 = ($h_7)((((((((($y_9)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'});
 goto end_branch_7;;
 };
-if ((is_object(((((((($y_9)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && ((((((((($y_9)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Right"))) {
+if (((((((($y_9)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right) {
 $__t8 = null;;
-if ((is_object((((((((($y_9)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && (((((((((($y_9)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Left"))) {
+if ((((((((($y_9)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Left) {
 $__t8 = ($i_8)(((((((((($y_9)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'});
 goto end_branch_8;;
 };
-if ((is_object((((((((($y_9)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && (((((((((($y_9)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Right"))) {
+if ((((((((($y_9)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right) {
 $spin_10_9 = null;
 $spin_10_9 = function($v_11 = null) use (&$spin_10_9) {
   $__num = \func_num_args();
@@ -312,66 +373,65 @@ goto end_branch_0;;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 10 ? $__res(...\array_slice(\func_get_args(), 10)) : $__res;
-  };
-  return $__fn;
-})();
+  return 10 < $__num ? $__res(...\array_slice(\func_get_args(), 10)) : $__res;
+}
+$GLOBALS['Data_Either_Nested_either9'] = __NAMESPACE__ . '\\majData_majEither_majNested_either9';
 
 // Data_Either_Nested_either8
-$GLOBALS['Data_Either_Nested_either8'] = (function() {
-  $__fn = function($a_0 = null, $b_1 = null, $c_2 = null, $d_3 = null, $e_4 = null, $f_5 = null, $g_6 = null, $h_7 = null, $y_8 = null) use (&$__fn) {
+function majData_majEither_majNested_either8($a_0, $b_1 = null, $c_2 = null, $d_3 = null, $e_4 = null, $f_5 = null, $g_6 = null, $h_7 = null, $y_8 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majEither_majNested_either8';
   if ($__num < 9) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 9);
   }
   $__t0 = null;;
-  if ((is_object($y_8) && (($y_8)->{'tag'} === "Left"))) {
+  if ($y_8 instanceof \Data\Either\Data_Either_Left) {
 $__t0 = ($a_0)(($y_8)->{'value0'});
 goto end_branch_0;;
 };
-  if ((is_object($y_8) && (($y_8)->{'tag'} === "Right"))) {
+  if ($y_8 instanceof \Data\Either\Data_Either_Right) {
 $__t1 = null;;
-if ((is_object(($y_8)->{'value0'}) && ((($y_8)->{'value0'})->{'tag'} === "Left"))) {
+if (($y_8)->{'value0'} instanceof \Data\Either\Data_Either_Left) {
 $__t1 = ($b_1)((($y_8)->{'value0'})->{'value0'});
 goto end_branch_1;;
 };
-if ((is_object(($y_8)->{'value0'}) && ((($y_8)->{'value0'})->{'tag'} === "Right"))) {
+if (($y_8)->{'value0'} instanceof \Data\Either\Data_Either_Right) {
 $__t2 = null;;
-if ((is_object((($y_8)->{'value0'})->{'value0'}) && (((($y_8)->{'value0'})->{'value0'})->{'tag'} === "Left"))) {
+if ((($y_8)->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Left) {
 $__t2 = ($c_2)(((($y_8)->{'value0'})->{'value0'})->{'value0'});
 goto end_branch_2;;
 };
-if ((is_object((($y_8)->{'value0'})->{'value0'}) && (((($y_8)->{'value0'})->{'value0'})->{'tag'} === "Right"))) {
+if ((($y_8)->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right) {
 $__t3 = null;;
-if ((is_object(((($y_8)->{'value0'})->{'value0'})->{'value0'}) && ((((($y_8)->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Left"))) {
+if (((($y_8)->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Left) {
 $__t3 = ($d_3)((((($y_8)->{'value0'})->{'value0'})->{'value0'})->{'value0'});
 goto end_branch_3;;
 };
-if ((is_object(((($y_8)->{'value0'})->{'value0'})->{'value0'}) && ((((($y_8)->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Right"))) {
+if (((($y_8)->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right) {
 $__t4 = null;;
-if ((is_object((((($y_8)->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && (((((($y_8)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Left"))) {
+if ((((($y_8)->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Left) {
 $__t4 = ($e_4)(((((($y_8)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'});
 goto end_branch_4;;
 };
-if ((is_object((((($y_8)->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && (((((($y_8)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Right"))) {
+if ((((($y_8)->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right) {
 $__t5 = null;;
-if ((is_object(((((($y_8)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && ((((((($y_8)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Left"))) {
+if (((((($y_8)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Left) {
 $__t5 = ($f_5)((((((($y_8)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'});
 goto end_branch_5;;
 };
-if ((is_object(((((($y_8)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && ((((((($y_8)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Right"))) {
+if (((((($y_8)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right) {
 $__t6 = null;;
-if ((is_object((((((($y_8)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && (((((((($y_8)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Left"))) {
+if ((((((($y_8)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Left) {
 $__t6 = ($g_6)(((((((($y_8)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'});
 goto end_branch_6;;
 };
-if ((is_object((((((($y_8)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && (((((((($y_8)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Right"))) {
+if ((((((($y_8)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right) {
 $__t7 = null;;
-if ((is_object(((((((($y_8)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && ((((((((($y_8)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Left"))) {
+if (((((((($y_8)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Left) {
 $__t7 = ($h_7)((((((((($y_8)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'});
 goto end_branch_7;;
 };
-if ((is_object(((((((($y_8)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && ((((((((($y_8)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Right"))) {
+if (((((((($y_8)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right) {
 $spin_9_8 = null;
 $spin_9_8 = function($v_10 = null) use (&$spin_9_8) {
   $__num = \func_num_args();
@@ -437,60 +497,59 @@ goto end_branch_0;;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 9 ? $__res(...\array_slice(\func_get_args(), 9)) : $__res;
-  };
-  return $__fn;
-})();
+  return 9 < $__num ? $__res(...\array_slice(\func_get_args(), 9)) : $__res;
+}
+$GLOBALS['Data_Either_Nested_either8'] = __NAMESPACE__ . '\\majData_majEither_majNested_either8';
 
 // Data_Either_Nested_either7
-$GLOBALS['Data_Either_Nested_either7'] = (function() {
-  $__fn = function($a_0 = null, $b_1 = null, $c_2 = null, $d_3 = null, $e_4 = null, $f_5 = null, $g_6 = null, $y_7 = null) use (&$__fn) {
+function majData_majEither_majNested_either7($a_0, $b_1 = null, $c_2 = null, $d_3 = null, $e_4 = null, $f_5 = null, $g_6 = null, $y_7 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majEither_majNested_either7';
   if ($__num < 8) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 8);
   }
   $__t0 = null;;
-  if ((is_object($y_7) && (($y_7)->{'tag'} === "Left"))) {
+  if ($y_7 instanceof \Data\Either\Data_Either_Left) {
 $__t0 = ($a_0)(($y_7)->{'value0'});
 goto end_branch_0;;
 };
-  if ((is_object($y_7) && (($y_7)->{'tag'} === "Right"))) {
+  if ($y_7 instanceof \Data\Either\Data_Either_Right) {
 $__t1 = null;;
-if ((is_object(($y_7)->{'value0'}) && ((($y_7)->{'value0'})->{'tag'} === "Left"))) {
+if (($y_7)->{'value0'} instanceof \Data\Either\Data_Either_Left) {
 $__t1 = ($b_1)((($y_7)->{'value0'})->{'value0'});
 goto end_branch_1;;
 };
-if ((is_object(($y_7)->{'value0'}) && ((($y_7)->{'value0'})->{'tag'} === "Right"))) {
+if (($y_7)->{'value0'} instanceof \Data\Either\Data_Either_Right) {
 $__t2 = null;;
-if ((is_object((($y_7)->{'value0'})->{'value0'}) && (((($y_7)->{'value0'})->{'value0'})->{'tag'} === "Left"))) {
+if ((($y_7)->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Left) {
 $__t2 = ($c_2)(((($y_7)->{'value0'})->{'value0'})->{'value0'});
 goto end_branch_2;;
 };
-if ((is_object((($y_7)->{'value0'})->{'value0'}) && (((($y_7)->{'value0'})->{'value0'})->{'tag'} === "Right"))) {
+if ((($y_7)->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right) {
 $__t3 = null;;
-if ((is_object(((($y_7)->{'value0'})->{'value0'})->{'value0'}) && ((((($y_7)->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Left"))) {
+if (((($y_7)->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Left) {
 $__t3 = ($d_3)((((($y_7)->{'value0'})->{'value0'})->{'value0'})->{'value0'});
 goto end_branch_3;;
 };
-if ((is_object(((($y_7)->{'value0'})->{'value0'})->{'value0'}) && ((((($y_7)->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Right"))) {
+if (((($y_7)->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right) {
 $__t4 = null;;
-if ((is_object((((($y_7)->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && (((((($y_7)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Left"))) {
+if ((((($y_7)->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Left) {
 $__t4 = ($e_4)(((((($y_7)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'});
 goto end_branch_4;;
 };
-if ((is_object((((($y_7)->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && (((((($y_7)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Right"))) {
+if ((((($y_7)->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right) {
 $__t5 = null;;
-if ((is_object(((((($y_7)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && ((((((($y_7)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Left"))) {
+if (((((($y_7)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Left) {
 $__t5 = ($f_5)((((((($y_7)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'});
 goto end_branch_5;;
 };
-if ((is_object(((((($y_7)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && ((((((($y_7)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Right"))) {
+if (((((($y_7)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right) {
 $__t6 = null;;
-if ((is_object((((((($y_7)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && (((((((($y_7)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Left"))) {
+if ((((((($y_7)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Left) {
 $__t6 = ($g_6)(((((((($y_7)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'});
 goto end_branch_6;;
 };
-if ((is_object((((((($y_7)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && (((((((($y_7)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Right"))) {
+if ((((((($y_7)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right) {
 $spin_8_7 = null;
 $spin_8_7 = function($v_9 = null) use (&$spin_8_7) {
   $__num = \func_num_args();
@@ -550,54 +609,53 @@ goto end_branch_0;;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 8 ? $__res(...\array_slice(\func_get_args(), 8)) : $__res;
-  };
-  return $__fn;
-})();
+  return 8 < $__num ? $__res(...\array_slice(\func_get_args(), 8)) : $__res;
+}
+$GLOBALS['Data_Either_Nested_either7'] = __NAMESPACE__ . '\\majData_majEither_majNested_either7';
 
 // Data_Either_Nested_either6
-$GLOBALS['Data_Either_Nested_either6'] = (function() {
-  $__fn = function($a_0 = null, $b_1 = null, $c_2 = null, $d_3 = null, $e_4 = null, $f_5 = null, $y_6 = null) use (&$__fn) {
+function majData_majEither_majNested_either6($a_0, $b_1 = null, $c_2 = null, $d_3 = null, $e_4 = null, $f_5 = null, $y_6 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majEither_majNested_either6';
   if ($__num < 7) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 7);
   }
   $__t0 = null;;
-  if ((is_object($y_6) && (($y_6)->{'tag'} === "Left"))) {
+  if ($y_6 instanceof \Data\Either\Data_Either_Left) {
 $__t0 = ($a_0)(($y_6)->{'value0'});
 goto end_branch_0;;
 };
-  if ((is_object($y_6) && (($y_6)->{'tag'} === "Right"))) {
+  if ($y_6 instanceof \Data\Either\Data_Either_Right) {
 $__t1 = null;;
-if ((is_object(($y_6)->{'value0'}) && ((($y_6)->{'value0'})->{'tag'} === "Left"))) {
+if (($y_6)->{'value0'} instanceof \Data\Either\Data_Either_Left) {
 $__t1 = ($b_1)((($y_6)->{'value0'})->{'value0'});
 goto end_branch_1;;
 };
-if ((is_object(($y_6)->{'value0'}) && ((($y_6)->{'value0'})->{'tag'} === "Right"))) {
+if (($y_6)->{'value0'} instanceof \Data\Either\Data_Either_Right) {
 $__t2 = null;;
-if ((is_object((($y_6)->{'value0'})->{'value0'}) && (((($y_6)->{'value0'})->{'value0'})->{'tag'} === "Left"))) {
+if ((($y_6)->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Left) {
 $__t2 = ($c_2)(((($y_6)->{'value0'})->{'value0'})->{'value0'});
 goto end_branch_2;;
 };
-if ((is_object((($y_6)->{'value0'})->{'value0'}) && (((($y_6)->{'value0'})->{'value0'})->{'tag'} === "Right"))) {
+if ((($y_6)->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right) {
 $__t3 = null;;
-if ((is_object(((($y_6)->{'value0'})->{'value0'})->{'value0'}) && ((((($y_6)->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Left"))) {
+if (((($y_6)->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Left) {
 $__t3 = ($d_3)((((($y_6)->{'value0'})->{'value0'})->{'value0'})->{'value0'});
 goto end_branch_3;;
 };
-if ((is_object(((($y_6)->{'value0'})->{'value0'})->{'value0'}) && ((((($y_6)->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Right"))) {
+if (((($y_6)->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right) {
 $__t4 = null;;
-if ((is_object((((($y_6)->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && (((((($y_6)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Left"))) {
+if ((((($y_6)->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Left) {
 $__t4 = ($e_4)(((((($y_6)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'});
 goto end_branch_4;;
 };
-if ((is_object((((($y_6)->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && (((((($y_6)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Right"))) {
+if ((((($y_6)->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right) {
 $__t5 = null;;
-if ((is_object(((((($y_6)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && ((((((($y_6)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Left"))) {
+if (((((($y_6)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Left) {
 $__t5 = ($f_5)((((((($y_6)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'});
 goto end_branch_5;;
 };
-if ((is_object(((((($y_6)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && ((((((($y_6)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Right"))) {
+if (((((($y_6)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right) {
 $spin_7_6 = null;
 $spin_7_6 = function($v_8 = null) use (&$spin_7_6) {
   $__num = \func_num_args();
@@ -651,48 +709,47 @@ goto end_branch_0;;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 7 ? $__res(...\array_slice(\func_get_args(), 7)) : $__res;
-  };
-  return $__fn;
-})();
+  return 7 < $__num ? $__res(...\array_slice(\func_get_args(), 7)) : $__res;
+}
+$GLOBALS['Data_Either_Nested_either6'] = __NAMESPACE__ . '\\majData_majEither_majNested_either6';
 
 // Data_Either_Nested_either5
-$GLOBALS['Data_Either_Nested_either5'] = (function() {
-  $__fn = function($a_0 = null, $b_1 = null, $c_2 = null, $d_3 = null, $e_4 = null, $y_5 = null) use (&$__fn) {
+function majData_majEither_majNested_either5($a_0, $b_1 = null, $c_2 = null, $d_3 = null, $e_4 = null, $y_5 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majEither_majNested_either5';
   if ($__num < 6) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 6);
   }
   $__t0 = null;;
-  if ((is_object($y_5) && (($y_5)->{'tag'} === "Left"))) {
+  if ($y_5 instanceof \Data\Either\Data_Either_Left) {
 $__t0 = ($a_0)(($y_5)->{'value0'});
 goto end_branch_0;;
 };
-  if ((is_object($y_5) && (($y_5)->{'tag'} === "Right"))) {
+  if ($y_5 instanceof \Data\Either\Data_Either_Right) {
 $__t1 = null;;
-if ((is_object(($y_5)->{'value0'}) && ((($y_5)->{'value0'})->{'tag'} === "Left"))) {
+if (($y_5)->{'value0'} instanceof \Data\Either\Data_Either_Left) {
 $__t1 = ($b_1)((($y_5)->{'value0'})->{'value0'});
 goto end_branch_1;;
 };
-if ((is_object(($y_5)->{'value0'}) && ((($y_5)->{'value0'})->{'tag'} === "Right"))) {
+if (($y_5)->{'value0'} instanceof \Data\Either\Data_Either_Right) {
 $__t2 = null;;
-if ((is_object((($y_5)->{'value0'})->{'value0'}) && (((($y_5)->{'value0'})->{'value0'})->{'tag'} === "Left"))) {
+if ((($y_5)->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Left) {
 $__t2 = ($c_2)(((($y_5)->{'value0'})->{'value0'})->{'value0'});
 goto end_branch_2;;
 };
-if ((is_object((($y_5)->{'value0'})->{'value0'}) && (((($y_5)->{'value0'})->{'value0'})->{'tag'} === "Right"))) {
+if ((($y_5)->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right) {
 $__t3 = null;;
-if ((is_object(((($y_5)->{'value0'})->{'value0'})->{'value0'}) && ((((($y_5)->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Left"))) {
+if (((($y_5)->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Left) {
 $__t3 = ($d_3)((((($y_5)->{'value0'})->{'value0'})->{'value0'})->{'value0'});
 goto end_branch_3;;
 };
-if ((is_object(((($y_5)->{'value0'})->{'value0'})->{'value0'}) && ((((($y_5)->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Right"))) {
+if (((($y_5)->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right) {
 $__t4 = null;;
-if ((is_object((((($y_5)->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && (((((($y_5)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Left"))) {
+if ((((($y_5)->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Left) {
 $__t4 = ($e_4)(((((($y_5)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'});
 goto end_branch_4;;
 };
-if ((is_object((((($y_5)->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && (((((($y_5)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Right"))) {
+if ((((($y_5)->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right) {
 $spin_6_5 = null;
 $spin_6_5 = function($v_7 = null) use (&$spin_6_5) {
   $__num = \func_num_args();
@@ -740,42 +797,41 @@ goto end_branch_0;;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 6 ? $__res(...\array_slice(\func_get_args(), 6)) : $__res;
-  };
-  return $__fn;
-})();
+  return 6 < $__num ? $__res(...\array_slice(\func_get_args(), 6)) : $__res;
+}
+$GLOBALS['Data_Either_Nested_either5'] = __NAMESPACE__ . '\\majData_majEither_majNested_either5';
 
 // Data_Either_Nested_either4
-$GLOBALS['Data_Either_Nested_either4'] = (function() {
-  $__fn = function($a_0 = null, $b_1 = null, $c_2 = null, $d_3 = null, $y_4 = null) use (&$__fn) {
+function majData_majEither_majNested_either4($a_0, $b_1 = null, $c_2 = null, $d_3 = null, $y_4 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majEither_majNested_either4';
   if ($__num < 5) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 5);
   }
   $__t0 = null;;
-  if ((is_object($y_4) && (($y_4)->{'tag'} === "Left"))) {
+  if ($y_4 instanceof \Data\Either\Data_Either_Left) {
 $__t0 = ($a_0)(($y_4)->{'value0'});
 goto end_branch_0;;
 };
-  if ((is_object($y_4) && (($y_4)->{'tag'} === "Right"))) {
+  if ($y_4 instanceof \Data\Either\Data_Either_Right) {
 $__t1 = null;;
-if ((is_object(($y_4)->{'value0'}) && ((($y_4)->{'value0'})->{'tag'} === "Left"))) {
+if (($y_4)->{'value0'} instanceof \Data\Either\Data_Either_Left) {
 $__t1 = ($b_1)((($y_4)->{'value0'})->{'value0'});
 goto end_branch_1;;
 };
-if ((is_object(($y_4)->{'value0'}) && ((($y_4)->{'value0'})->{'tag'} === "Right"))) {
+if (($y_4)->{'value0'} instanceof \Data\Either\Data_Either_Right) {
 $__t2 = null;;
-if ((is_object((($y_4)->{'value0'})->{'value0'}) && (((($y_4)->{'value0'})->{'value0'})->{'tag'} === "Left"))) {
+if ((($y_4)->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Left) {
 $__t2 = ($c_2)(((($y_4)->{'value0'})->{'value0'})->{'value0'});
 goto end_branch_2;;
 };
-if ((is_object((($y_4)->{'value0'})->{'value0'}) && (((($y_4)->{'value0'})->{'value0'})->{'tag'} === "Right"))) {
+if ((($y_4)->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right) {
 $__t3 = null;;
-if ((is_object(((($y_4)->{'value0'})->{'value0'})->{'value0'}) && ((((($y_4)->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Left"))) {
+if (((($y_4)->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Left) {
 $__t3 = ($d_3)((((($y_4)->{'value0'})->{'value0'})->{'value0'})->{'value0'});
 goto end_branch_3;;
 };
-if ((is_object(((($y_4)->{'value0'})->{'value0'})->{'value0'}) && ((((($y_4)->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Right"))) {
+if (((($y_4)->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right) {
 $spin_5_4 = null;
 $spin_5_4 = function($v_6 = null) use (&$spin_5_4) {
   $__num = \func_num_args();
@@ -817,36 +873,35 @@ goto end_branch_0;;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 5 ? $__res(...\array_slice(\func_get_args(), 5)) : $__res;
-  };
-  return $__fn;
-})();
+  return 5 < $__num ? $__res(...\array_slice(\func_get_args(), 5)) : $__res;
+}
+$GLOBALS['Data_Either_Nested_either4'] = __NAMESPACE__ . '\\majData_majEither_majNested_either4';
 
 // Data_Either_Nested_either3
-$GLOBALS['Data_Either_Nested_either3'] = (function() {
-  $__fn = function($a_0 = null, $b_1 = null, $c_2 = null, $y_3 = null) use (&$__fn) {
+function majData_majEither_majNested_either3($a_0, $b_1 = null, $c_2 = null, $y_3 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majEither_majNested_either3';
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
   $__t0 = null;;
-  if ((is_object($y_3) && (($y_3)->{'tag'} === "Left"))) {
+  if ($y_3 instanceof \Data\Either\Data_Either_Left) {
 $__t0 = ($a_0)(($y_3)->{'value0'});
 goto end_branch_0;;
 };
-  if ((is_object($y_3) && (($y_3)->{'tag'} === "Right"))) {
+  if ($y_3 instanceof \Data\Either\Data_Either_Right) {
 $__t1 = null;;
-if ((is_object(($y_3)->{'value0'}) && ((($y_3)->{'value0'})->{'tag'} === "Left"))) {
+if (($y_3)->{'value0'} instanceof \Data\Either\Data_Either_Left) {
 $__t1 = ($b_1)((($y_3)->{'value0'})->{'value0'});
 goto end_branch_1;;
 };
-if ((is_object(($y_3)->{'value0'}) && ((($y_3)->{'value0'})->{'tag'} === "Right"))) {
+if (($y_3)->{'value0'} instanceof \Data\Either\Data_Either_Right) {
 $__t2 = null;;
-if ((is_object((($y_3)->{'value0'})->{'value0'}) && (((($y_3)->{'value0'})->{'value0'})->{'tag'} === "Left"))) {
+if ((($y_3)->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Left) {
 $__t2 = ($c_2)(((($y_3)->{'value0'})->{'value0'})->{'value0'});
 goto end_branch_2;;
 };
-if ((is_object((($y_3)->{'value0'})->{'value0'}) && (((($y_3)->{'value0'})->{'value0'})->{'tag'} === "Right"))) {
+if ((($y_3)->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right) {
 $spin_4_3 = null;
 $spin_4_3 = function($v_5 = null) use (&$spin_4_3) {
   $__num = \func_num_args();
@@ -882,30 +937,29 @@ goto end_branch_0;;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
-  };
-  return $__fn;
-})();
+  return 4 < $__num ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
+}
+$GLOBALS['Data_Either_Nested_either3'] = __NAMESPACE__ . '\\majData_majEither_majNested_either3';
 
 // Data_Either_Nested_either2
-$GLOBALS['Data_Either_Nested_either2'] = (function() {
-  $__fn = function($a_0 = null, $b_1 = null, $y_2 = null) use (&$__fn) {
+function majData_majEither_majNested_either2($a_0, $b_1 = null, $y_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majEither_majNested_either2';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   $__t0 = null;;
-  if ((is_object($y_2) && (($y_2)->{'tag'} === "Left"))) {
+  if ($y_2 instanceof \Data\Either\Data_Either_Left) {
 $__t0 = ($a_0)(($y_2)->{'value0'});
 goto end_branch_0;;
 };
-  if ((is_object($y_2) && (($y_2)->{'tag'} === "Right"))) {
+  if ($y_2 instanceof \Data\Either\Data_Either_Right) {
 $__t1 = null;;
-if ((is_object(($y_2)->{'value0'}) && ((($y_2)->{'value0'})->{'tag'} === "Left"))) {
+if (($y_2)->{'value0'} instanceof \Data\Either\Data_Either_Left) {
 $__t1 = ($b_1)((($y_2)->{'value0'})->{'value0'});
 goto end_branch_1;;
 };
-if ((is_object(($y_2)->{'value0'}) && ((($y_2)->{'value0'})->{'tag'} === "Right"))) {
+if (($y_2)->{'value0'} instanceof \Data\Either\Data_Either_Right) {
 $spin_3_2 = null;
 $spin_3_2 = function($v_4 = null) use (&$spin_3_2) {
   $__num = \func_num_args();
@@ -935,78 +989,77 @@ goto end_branch_0;;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_Either_Nested_either2'] = __NAMESPACE__ . '\\majData_majEither_majNested_either2';
 
 // Data_Either_Nested_either10
-$GLOBALS['Data_Either_Nested_either10'] = (function() {
-  $__fn = function($a_0 = null, $b_1 = null, $c_2 = null, $d_3 = null, $e_4 = null, $f_5 = null, $g_6 = null, $h_7 = null, $i_8 = null, $j_9 = null, $y_10 = null) use (&$__fn) {
+function majData_majEither_majNested_either10($a_0, $b_1 = null, $c_2 = null, $d_3 = null, $e_4 = null, $f_5 = null, $g_6 = null, $h_7 = null, $i_8 = null, $j_9 = null, $y_10 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majEither_majNested_either10';
   if ($__num < 11) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 11);
   }
   $__t0 = null;;
-  if ((is_object($y_10) && (($y_10)->{'tag'} === "Left"))) {
+  if ($y_10 instanceof \Data\Either\Data_Either_Left) {
 $__t0 = ($a_0)(($y_10)->{'value0'});
 goto end_branch_0;;
 };
-  if ((is_object($y_10) && (($y_10)->{'tag'} === "Right"))) {
+  if ($y_10 instanceof \Data\Either\Data_Either_Right) {
 $__t1 = null;;
-if ((is_object(($y_10)->{'value0'}) && ((($y_10)->{'value0'})->{'tag'} === "Left"))) {
+if (($y_10)->{'value0'} instanceof \Data\Either\Data_Either_Left) {
 $__t1 = ($b_1)((($y_10)->{'value0'})->{'value0'});
 goto end_branch_1;;
 };
-if ((is_object(($y_10)->{'value0'}) && ((($y_10)->{'value0'})->{'tag'} === "Right"))) {
+if (($y_10)->{'value0'} instanceof \Data\Either\Data_Either_Right) {
 $__t2 = null;;
-if ((is_object((($y_10)->{'value0'})->{'value0'}) && (((($y_10)->{'value0'})->{'value0'})->{'tag'} === "Left"))) {
+if ((($y_10)->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Left) {
 $__t2 = ($c_2)(((($y_10)->{'value0'})->{'value0'})->{'value0'});
 goto end_branch_2;;
 };
-if ((is_object((($y_10)->{'value0'})->{'value0'}) && (((($y_10)->{'value0'})->{'value0'})->{'tag'} === "Right"))) {
+if ((($y_10)->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right) {
 $__t3 = null;;
-if ((is_object(((($y_10)->{'value0'})->{'value0'})->{'value0'}) && ((((($y_10)->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Left"))) {
+if (((($y_10)->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Left) {
 $__t3 = ($d_3)((((($y_10)->{'value0'})->{'value0'})->{'value0'})->{'value0'});
 goto end_branch_3;;
 };
-if ((is_object(((($y_10)->{'value0'})->{'value0'})->{'value0'}) && ((((($y_10)->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Right"))) {
+if (((($y_10)->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right) {
 $__t4 = null;;
-if ((is_object((((($y_10)->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && (((((($y_10)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Left"))) {
+if ((((($y_10)->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Left) {
 $__t4 = ($e_4)(((((($y_10)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'});
 goto end_branch_4;;
 };
-if ((is_object((((($y_10)->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && (((((($y_10)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Right"))) {
+if ((((($y_10)->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right) {
 $__t5 = null;;
-if ((is_object(((((($y_10)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && ((((((($y_10)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Left"))) {
+if (((((($y_10)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Left) {
 $__t5 = ($f_5)((((((($y_10)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'});
 goto end_branch_5;;
 };
-if ((is_object(((((($y_10)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && ((((((($y_10)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Right"))) {
+if (((((($y_10)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right) {
 $__t6 = null;;
-if ((is_object((((((($y_10)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && (((((((($y_10)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Left"))) {
+if ((((((($y_10)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Left) {
 $__t6 = ($g_6)(((((((($y_10)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'});
 goto end_branch_6;;
 };
-if ((is_object((((((($y_10)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && (((((((($y_10)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Right"))) {
+if ((((((($y_10)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right) {
 $__t7 = null;;
-if ((is_object(((((((($y_10)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && ((((((((($y_10)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Left"))) {
+if (((((((($y_10)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Left) {
 $__t7 = ($h_7)((((((((($y_10)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'});
 goto end_branch_7;;
 };
-if ((is_object(((((((($y_10)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && ((((((((($y_10)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Right"))) {
+if (((((((($y_10)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right) {
 $__t8 = null;;
-if ((is_object((((((((($y_10)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && (((((((((($y_10)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Left"))) {
+if ((((((((($y_10)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Left) {
 $__t8 = ($i_8)(((((((((($y_10)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'});
 goto end_branch_8;;
 };
-if ((is_object((((((((($y_10)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && (((((((((($y_10)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Right"))) {
+if ((((((((($y_10)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right) {
 $__t9 = null;;
-if ((is_object(((((((((($y_10)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && ((((((((((($y_10)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Left"))) {
+if (((((((((($y_10)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Left) {
 $__t9 = ($j_9)((((((((((($y_10)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'});
 goto end_branch_9;;
 };
-if ((is_object(((((((((($y_10)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && ((((((((((($y_10)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Right"))) {
+if (((((((((($y_10)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right) {
 $spin_11_10 = null;
 $spin_11_10 = function($v_12 = null) use (&$spin_11_10) {
   $__num = \func_num_args();
@@ -1084,20 +1137,23 @@ goto end_branch_0;;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 11 ? $__res(...\array_slice(\func_get_args(), 11)) : $__res;
-  };
-  return $__fn;
-})();
+  return 11 < $__num ? $__res(...\array_slice(\func_get_args(), 11)) : $__res;
+}
+$GLOBALS['Data_Either_Nested_either10'] = __NAMESPACE__ . '\\majData_majEither_majNested_either10';
 
 // Data_Either_Nested_either1
-$GLOBALS['Data_Either_Nested_either1'] = function($y_0 = null) {
+function majData_majEither_majNested_either1($y_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majEither_majNested_either1';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__t0 = null;;
-  if ((is_object($y_0) && (($y_0)->{'tag'} === "Left"))) {
+  if ($y_0 instanceof \Data\Either\Data_Either_Left) {
 $__t0 = ($y_0)->{'value0'};
 goto end_branch_0;;
 };
-  if ((is_object($y_0) && (($y_0)->{'tag'} === "Right"))) {
+  if ($y_0 instanceof \Data\Either\Data_Either_Right) {
 $spin_1_1 = null;
 $spin_1_1 = function($v_2 = null) use (&$spin_1_1) {
   $__num = \func_num_args();
@@ -1121,18 +1177,19 @@ goto end_branch_0;;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Either_Nested_either1'] = __NAMESPACE__ . '\\majData_majEither_majNested_either1';
 
 // Data_Either_Nested_at9
-$GLOBALS['Data_Either_Nested_at9'] = (function() {
-  $__fn = function($b_0 = null, $f_1 = null, $y_2 = null) use (&$__fn) {
+function majData_majEither_majNested_at9($b_0, $f_1 = null, $y_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majEither_majNested_at9';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   $__t0 = null;;
-  if (((is_object($y_2) && (($y_2)->{'tag'} === "Right")) && ((is_object(($y_2)->{'value0'}) && ((($y_2)->{'value0'})->{'tag'} === "Right")) && ((is_object((($y_2)->{'value0'})->{'value0'}) && (((($y_2)->{'value0'})->{'value0'})->{'tag'} === "Right")) && ((is_object(((($y_2)->{'value0'})->{'value0'})->{'value0'}) && ((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Right")) && ((is_object((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && (((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Right")) && ((is_object(((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && ((((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Right")) && ((is_object((((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && (((((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Right")) && ((is_object(((((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && ((((((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Right")) && (is_object((((((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && (((((((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Left"))))))))))) {
+  if (($y_2 instanceof \Data\Either\Data_Either_Right && (($y_2)->{'value0'} instanceof \Data\Either\Data_Either_Right && ((($y_2)->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right && (((($y_2)->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right && ((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right && (((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right && ((((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right && (((((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right && (((((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Left))))))))) {
 $__t0 = ($f_1)(((((((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'});
 goto end_branch_0;;
 };
@@ -1141,20 +1198,19 @@ goto end_branch_0;;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_Either_Nested_at9'] = __NAMESPACE__ . '\\majData_majEither_majNested_at9';
 
 // Data_Either_Nested_at8
-$GLOBALS['Data_Either_Nested_at8'] = (function() {
-  $__fn = function($b_0 = null, $f_1 = null, $y_2 = null) use (&$__fn) {
+function majData_majEither_majNested_at8($b_0, $f_1 = null, $y_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majEither_majNested_at8';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   $__t0 = null;;
-  if (((is_object($y_2) && (($y_2)->{'tag'} === "Right")) && ((is_object(($y_2)->{'value0'}) && ((($y_2)->{'value0'})->{'tag'} === "Right")) && ((is_object((($y_2)->{'value0'})->{'value0'}) && (((($y_2)->{'value0'})->{'value0'})->{'tag'} === "Right")) && ((is_object(((($y_2)->{'value0'})->{'value0'})->{'value0'}) && ((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Right")) && ((is_object((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && (((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Right")) && ((is_object(((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && ((((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Right")) && ((is_object((((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && (((((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Right")) && (is_object(((((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && ((((((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Left")))))))))) {
+  if (($y_2 instanceof \Data\Either\Data_Either_Right && (($y_2)->{'value0'} instanceof \Data\Either\Data_Either_Right && ((($y_2)->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right && (((($y_2)->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right && ((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right && (((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right && ((((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right && ((((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Left)))))))) {
 $__t0 = ($f_1)((((((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'});
 goto end_branch_0;;
 };
@@ -1163,20 +1219,19 @@ goto end_branch_0;;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_Either_Nested_at8'] = __NAMESPACE__ . '\\majData_majEither_majNested_at8';
 
 // Data_Either_Nested_at7
-$GLOBALS['Data_Either_Nested_at7'] = (function() {
-  $__fn = function($b_0 = null, $f_1 = null, $y_2 = null) use (&$__fn) {
+function majData_majEither_majNested_at7($b_0, $f_1 = null, $y_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majEither_majNested_at7';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   $__t0 = null;;
-  if (((is_object($y_2) && (($y_2)->{'tag'} === "Right")) && ((is_object(($y_2)->{'value0'}) && ((($y_2)->{'value0'})->{'tag'} === "Right")) && ((is_object((($y_2)->{'value0'})->{'value0'}) && (((($y_2)->{'value0'})->{'value0'})->{'tag'} === "Right")) && ((is_object(((($y_2)->{'value0'})->{'value0'})->{'value0'}) && ((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Right")) && ((is_object((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && (((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Right")) && ((is_object(((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && ((((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Right")) && (is_object((((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && (((((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Left"))))))))) {
+  if (($y_2 instanceof \Data\Either\Data_Either_Right && (($y_2)->{'value0'} instanceof \Data\Either\Data_Either_Right && ((($y_2)->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right && (((($y_2)->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right && ((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right && (((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right && (((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Left))))))) {
 $__t0 = ($f_1)(((((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'});
 goto end_branch_0;;
 };
@@ -1185,20 +1240,19 @@ goto end_branch_0;;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_Either_Nested_at7'] = __NAMESPACE__ . '\\majData_majEither_majNested_at7';
 
 // Data_Either_Nested_at6
-$GLOBALS['Data_Either_Nested_at6'] = (function() {
-  $__fn = function($b_0 = null, $f_1 = null, $y_2 = null) use (&$__fn) {
+function majData_majEither_majNested_at6($b_0, $f_1 = null, $y_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majEither_majNested_at6';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   $__t0 = null;;
-  if (((is_object($y_2) && (($y_2)->{'tag'} === "Right")) && ((is_object(($y_2)->{'value0'}) && ((($y_2)->{'value0'})->{'tag'} === "Right")) && ((is_object((($y_2)->{'value0'})->{'value0'}) && (((($y_2)->{'value0'})->{'value0'})->{'tag'} === "Right")) && ((is_object(((($y_2)->{'value0'})->{'value0'})->{'value0'}) && ((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Right")) && ((is_object((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && (((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Right")) && (is_object(((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && ((((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Left")))))))) {
+  if (($y_2 instanceof \Data\Either\Data_Either_Right && (($y_2)->{'value0'} instanceof \Data\Either\Data_Either_Right && ((($y_2)->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right && (((($y_2)->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right && ((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right && ((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Left)))))) {
 $__t0 = ($f_1)((((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'});
 goto end_branch_0;;
 };
@@ -1207,20 +1261,19 @@ goto end_branch_0;;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_Either_Nested_at6'] = __NAMESPACE__ . '\\majData_majEither_majNested_at6';
 
 // Data_Either_Nested_at5
-$GLOBALS['Data_Either_Nested_at5'] = (function() {
-  $__fn = function($b_0 = null, $f_1 = null, $y_2 = null) use (&$__fn) {
+function majData_majEither_majNested_at5($b_0, $f_1 = null, $y_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majEither_majNested_at5';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   $__t0 = null;;
-  if (((is_object($y_2) && (($y_2)->{'tag'} === "Right")) && ((is_object(($y_2)->{'value0'}) && ((($y_2)->{'value0'})->{'tag'} === "Right")) && ((is_object((($y_2)->{'value0'})->{'value0'}) && (((($y_2)->{'value0'})->{'value0'})->{'tag'} === "Right")) && ((is_object(((($y_2)->{'value0'})->{'value0'})->{'value0'}) && ((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Right")) && (is_object((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && (((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Left"))))))) {
+  if (($y_2 instanceof \Data\Either\Data_Either_Right && (($y_2)->{'value0'} instanceof \Data\Either\Data_Either_Right && ((($y_2)->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right && (((($y_2)->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right && (((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Left))))) {
 $__t0 = ($f_1)(((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'});
 goto end_branch_0;;
 };
@@ -1229,20 +1282,19 @@ goto end_branch_0;;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_Either_Nested_at5'] = __NAMESPACE__ . '\\majData_majEither_majNested_at5';
 
 // Data_Either_Nested_at4
-$GLOBALS['Data_Either_Nested_at4'] = (function() {
-  $__fn = function($b_0 = null, $f_1 = null, $y_2 = null) use (&$__fn) {
+function majData_majEither_majNested_at4($b_0, $f_1 = null, $y_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majEither_majNested_at4';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   $__t0 = null;;
-  if (((is_object($y_2) && (($y_2)->{'tag'} === "Right")) && ((is_object(($y_2)->{'value0'}) && ((($y_2)->{'value0'})->{'tag'} === "Right")) && ((is_object((($y_2)->{'value0'})->{'value0'}) && (((($y_2)->{'value0'})->{'value0'})->{'tag'} === "Right")) && (is_object(((($y_2)->{'value0'})->{'value0'})->{'value0'}) && ((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Left")))))) {
+  if (($y_2 instanceof \Data\Either\Data_Either_Right && (($y_2)->{'value0'} instanceof \Data\Either\Data_Either_Right && ((($y_2)->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right && ((($y_2)->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Left)))) {
 $__t0 = ($f_1)((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'});
 goto end_branch_0;;
 };
@@ -1251,20 +1303,19 @@ goto end_branch_0;;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_Either_Nested_at4'] = __NAMESPACE__ . '\\majData_majEither_majNested_at4';
 
 // Data_Either_Nested_at3
-$GLOBALS['Data_Either_Nested_at3'] = (function() {
-  $__fn = function($b_0 = null, $f_1 = null, $y_2 = null) use (&$__fn) {
+function majData_majEither_majNested_at3($b_0, $f_1 = null, $y_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majEither_majNested_at3';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   $__t0 = null;;
-  if (((is_object($y_2) && (($y_2)->{'tag'} === "Right")) && ((is_object(($y_2)->{'value0'}) && ((($y_2)->{'value0'})->{'tag'} === "Right")) && (is_object((($y_2)->{'value0'})->{'value0'}) && (((($y_2)->{'value0'})->{'value0'})->{'tag'} === "Left"))))) {
+  if (($y_2 instanceof \Data\Either\Data_Either_Right && (($y_2)->{'value0'} instanceof \Data\Either\Data_Either_Right && (($y_2)->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Left))) {
 $__t0 = ($f_1)(((($y_2)->{'value0'})->{'value0'})->{'value0'});
 goto end_branch_0;;
 };
@@ -1273,20 +1324,19 @@ goto end_branch_0;;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_Either_Nested_at3'] = __NAMESPACE__ . '\\majData_majEither_majNested_at3';
 
 // Data_Either_Nested_at2
-$GLOBALS['Data_Either_Nested_at2'] = (function() {
-  $__fn = function($b_0 = null, $f_1 = null, $y_2 = null) use (&$__fn) {
+function majData_majEither_majNested_at2($b_0, $f_1 = null, $y_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majEither_majNested_at2';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   $__t0 = null;;
-  if (((is_object($y_2) && (($y_2)->{'tag'} === "Right")) && (is_object(($y_2)->{'value0'}) && ((($y_2)->{'value0'})->{'tag'} === "Left")))) {
+  if (($y_2 instanceof \Data\Either\Data_Either_Right && ($y_2)->{'value0'} instanceof \Data\Either\Data_Either_Left)) {
 $__t0 = ($f_1)((($y_2)->{'value0'})->{'value0'});
 goto end_branch_0;;
 };
@@ -1295,20 +1345,19 @@ goto end_branch_0;;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_Either_Nested_at2'] = __NAMESPACE__ . '\\majData_majEither_majNested_at2';
 
 // Data_Either_Nested_at10
-$GLOBALS['Data_Either_Nested_at10'] = (function() {
-  $__fn = function($b_0 = null, $f_1 = null, $y_2 = null) use (&$__fn) {
+function majData_majEither_majNested_at10($b_0, $f_1 = null, $y_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majEither_majNested_at10';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   $__t0 = null;;
-  if (((is_object($y_2) && (($y_2)->{'tag'} === "Right")) && ((is_object(($y_2)->{'value0'}) && ((($y_2)->{'value0'})->{'tag'} === "Right")) && ((is_object((($y_2)->{'value0'})->{'value0'}) && (((($y_2)->{'value0'})->{'value0'})->{'tag'} === "Right")) && ((is_object(((($y_2)->{'value0'})->{'value0'})->{'value0'}) && ((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Right")) && ((is_object((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && (((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Right")) && ((is_object(((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && ((((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Right")) && ((is_object((((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && (((((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Right")) && ((is_object(((((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && ((((((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Right")) && ((is_object((((((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && (((((((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Right")) && (is_object(((((((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'}) && ((((((((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'tag'} === "Left")))))))))))) {
+  if (($y_2 instanceof \Data\Either\Data_Either_Right && (($y_2)->{'value0'} instanceof \Data\Either\Data_Either_Right && ((($y_2)->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right && (((($y_2)->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right && ((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right && (((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right && ((((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right && (((((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right && ((((((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Right && ((((((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'} instanceof \Data\Either\Data_Either_Left)))))))))) {
 $__t0 = ($f_1)((((((((((($y_2)->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'})->{'value0'});
 goto end_branch_0;;
 };
@@ -1317,20 +1366,19 @@ goto end_branch_0;;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_Either_Nested_at10'] = __NAMESPACE__ . '\\majData_majEither_majNested_at10';
 
 // Data_Either_Nested_at1
-$GLOBALS['Data_Either_Nested_at1'] = (function() {
-  $__fn = function($b_0 = null, $f_1 = null, $y_2 = null) use (&$__fn) {
+function majData_majEither_majNested_at1($b_0, $f_1 = null, $y_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majEither_majNested_at1';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   $__t0 = null;;
-  if ((is_object($y_2) && (($y_2)->{'tag'} === "Left"))) {
+  if ($y_2 instanceof \Data\Either\Data_Either_Left) {
 $__t0 = ($f_1)(($y_2)->{'value0'});
 goto end_branch_0;;
 };
@@ -1339,8 +1387,7 @@ goto end_branch_0;;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_Either_Nested_at1'] = __NAMESPACE__ . '\\majData_majEither_majNested_at1';
 

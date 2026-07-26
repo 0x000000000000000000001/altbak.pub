@@ -114,38 +114,55 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_Const_Const
-$GLOBALS['Data_Const_Const'] = function($x_0 = null) {
+function majData_majConst_majConst($x_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majConst_majConst';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $x_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Const_Const'] = __NAMESPACE__ . '\\majData_majConst_majConst';
 
 // Data_Const_showConst
-$GLOBALS['Data_Const_showConst'] = function($dictShow_0 = null) {
+function majData_majConst_showmajConst($dictShow_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majConst_showmajConst';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Const "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1)))(")"));
+  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Const ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1), ")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Const_showConst'] = __NAMESPACE__ . '\\majData_majConst_showmajConst';
 
 // Data_Const_semiringConst
-$GLOBALS['Data_Const_semiringConst'] = function($dictSemiring_0 = null) {
+function majData_majConst_semiringmajConst($dictSemiring_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majConst_semiringmajConst';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictSemiring_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Const_semiringConst'] = __NAMESPACE__ . '\\majData_majConst_semiringmajConst';
 
 // Data_Const_semigroupoidConst
 $GLOBALS['Data_Const_semigroupoidConst'] = ["compose" => (function() {
@@ -163,31 +180,46 @@ $GLOBALS['Data_Const_semigroupoidConst'] = ["compose" => (function() {
 })()];
 
 // Data_Const_semigroupConst
-$GLOBALS['Data_Const_semigroupConst'] = function($dictSemigroup_0 = null) {
+function majData_majConst_semigroupmajConst($dictSemigroup_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majConst_semigroupmajConst';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictSemigroup_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Const_semigroupConst'] = __NAMESPACE__ . '\\majData_majConst_semigroupmajConst';
 
 // Data_Const_ringConst
-$GLOBALS['Data_Const_ringConst'] = function($dictRing_0 = null) {
+function majData_majConst_ringmajConst($dictRing_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majConst_ringmajConst';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictRing_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Const_ringConst'] = __NAMESPACE__ . '\\majData_majConst_ringmajConst';
 
 // Data_Const_ordConst
-$GLOBALS['Data_Const_ordConst'] = function($dictOrd_0 = null) {
+function majData_majConst_ordmajConst($dictOrd_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majConst_ordmajConst';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictOrd_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Const_ordConst'] = __NAMESPACE__ . '\\majData_majConst_ordmajConst';
 
 // Data_Const_newtypeConst
 $GLOBALS['Data_Const_newtypeConst'] = ["Coercible0" => function($_dollar__unused_0 = null) {
@@ -199,22 +231,32 @@ $GLOBALS['Data_Const_newtypeConst'] = ["Coercible0" => function($_dollar__unused
 }];
 
 // Data_Const_monoidConst
-$GLOBALS['Data_Const_monoidConst'] = function($dictMonoid_0 = null) {
+function majData_majConst_monoidmajConst($dictMonoid_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majConst_monoidmajConst';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictMonoid_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Const_monoidConst'] = __NAMESPACE__ . '\\majData_majConst_monoidmajConst';
 
 // Data_Const_heytingAlgebraConst
-$GLOBALS['Data_Const_heytingAlgebraConst'] = function($dictHeytingAlgebra_0 = null) {
+function majData_majConst_heytingmajAlgebramajConst($dictHeytingAlgebra_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majConst_heytingmajAlgebramajConst';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictHeytingAlgebra_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Const_heytingAlgebraConst'] = __NAMESPACE__ . '\\majData_majConst_heytingmajAlgebramajConst';
 
 // Data_Const_functorConst
 $GLOBALS['Data_Const_functorConst'] = ["map" => (function() {
@@ -247,26 +289,40 @@ $GLOBALS['Data_Const_invariantConst'] = ["imap" => (function() {
 })()];
 
 // Data_Const_euclideanRingConst
-$GLOBALS['Data_Const_euclideanRingConst'] = function($dictEuclideanRing_0 = null) {
+function majData_majConst_euclideanmajRingmajConst($dictEuclideanRing_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majConst_euclideanmajRingmajConst';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictEuclideanRing_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Const_euclideanRingConst'] = __NAMESPACE__ . '\\majData_majConst_euclideanmajRingmajConst';
 
 // Data_Const_eqConst
-$GLOBALS['Data_Const_eqConst'] = function($dictEq_0 = null) {
+function majData_majConst_eqmajConst($dictEq_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majConst_eqmajConst';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictEq_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Const_eqConst'] = __NAMESPACE__ . '\\majData_majConst_eqmajConst';
 
 // Data_Const_eq1Const
-$GLOBALS['Data_Const_eq1Const'] = function($dictEq_0 = null) {
+function majData_majConst_eq1majConst($dictEq_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majConst_eq1majConst';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $eq_1_0 = ($dictEq_0)['eq'];
   $__res = ["eq1" => function($dictEq1_2 = null) use ($eq_1_0) {
   $__num = \func_num_args();
@@ -277,12 +333,17 @@ $GLOBALS['Data_Const_eq1Const'] = function($dictEq_0 = null) {
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Const_eq1Const'] = __NAMESPACE__ . '\\majData_majConst_eq1majConst';
 
 // Data_Const_ord1Const
-$GLOBALS['Data_Const_ord1Const'] = function($dictOrd_0 = null) {
+function majData_majConst_ord1majConst($dictOrd_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majConst_ord1majConst';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $compare_1_0 = ($dictOrd_0)['compare'];
   $eq_2_1 = ((($dictOrd_0)['Eq0'])(null))['eq'];
   $__res = ["compare1" => function($dictOrd1_3 = null) use ($compare_1_0) {
@@ -306,46 +367,66 @@ $GLOBALS['Data_Const_ord1Const'] = function($dictOrd_0 = null) {
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Const_ord1Const'] = __NAMESPACE__ . '\\majData_majConst_ord1majConst';
 
 // Data_Const_commutativeRingConst
-$GLOBALS['Data_Const_commutativeRingConst'] = function($dictCommutativeRing_0 = null) {
+function majData_majConst_commutativemajRingmajConst($dictCommutativeRing_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majConst_commutativemajRingmajConst';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictCommutativeRing_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Const_commutativeRingConst'] = __NAMESPACE__ . '\\majData_majConst_commutativemajRingmajConst';
 
 // Data_Const_boundedConst
-$GLOBALS['Data_Const_boundedConst'] = function($dictBounded_0 = null) {
+function majData_majConst_boundedmajConst($dictBounded_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majConst_boundedmajConst';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictBounded_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Const_boundedConst'] = __NAMESPACE__ . '\\majData_majConst_boundedmajConst';
 
 // Data_Const_booleanAlgebraConst
-$GLOBALS['Data_Const_booleanAlgebraConst'] = function($dictBooleanAlgebra_0 = null) {
+function majData_majConst_booleanmajAlgebramajConst($dictBooleanAlgebra_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majConst_booleanmajAlgebramajConst';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictBooleanAlgebra_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Const_booleanAlgebraConst'] = __NAMESPACE__ . '\\majData_majConst_booleanmajAlgebramajConst';
 
 // Data_Const_applyConst
-$GLOBALS['Data_Const_applyConst'] = function($dictSemigroup_0 = null) {
+function majData_majConst_applymajConst($dictSemigroup_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majConst_applymajConst';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["apply" => (function() use ($dictSemigroup_0) {
   $__fn = function($v_1 = null, $v1_2 = null) use ($dictSemigroup_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictSemigroup_0)['append'])($v_1))($v1_2);
+  $__res = (($dictSemigroup_0)['append'])($v_1, $v1_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -360,12 +441,17 @@ $GLOBALS['Data_Const_applyConst'] = function($dictSemigroup_0 = null) {
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Const_applyConst'] = __NAMESPACE__ . '\\majData_majConst_applymajConst';
 
 // Data_Const_applicativeConst
-$GLOBALS['Data_Const_applicativeConst'] = function($dictMonoid_0 = null) {
+function majData_majConst_applicativemajConst($dictMonoid_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majConst_applicativemajConst';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $mempty_1_0 = ($dictMonoid_0)['mempty'];
   $__local_var_2_1 = (($dictMonoid_0)['Semigroup0'])(null);
   $applyConst1_3_2 = ["apply" => (function() use ($__local_var_2_1) {
@@ -374,7 +460,7 @@ $GLOBALS['Data_Const_applicativeConst'] = function($dictMonoid_0 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($__local_var_2_1)['append'])($v_3))($v1_4);
+  $__res = (($__local_var_2_1)['append'])($v_3, $v1_4);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -402,6 +488,7 @@ $GLOBALS['Data_Const_applicativeConst'] = function($dictMonoid_0 = null) {
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Const_applicativeConst'] = __NAMESPACE__ . '\\majData_majConst_applicativemajConst';
 

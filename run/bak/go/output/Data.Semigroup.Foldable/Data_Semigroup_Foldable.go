@@ -619,7 +619,7 @@ var dictApply_1 gopurs_runtime.Value = dictApply_1_loop
 _ = dictApply_1
 __local_var_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApply_1, "Functor0"), gopurs_runtime.Value{})
 _ = __local_var_2_0
-foldMap12_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFoldable1_0, "foldMap1"), gopurs_runtime.Apply(Get_semigroupAct(), dictApply_1))
+foldMap12_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFoldable1_0, "foldMap1"), Call_semigroupAct(dictApply_1))
 _ = foldMap12_3_1
 return gopurs_runtime.Func2(func(f_4 gopurs_runtime.Value, t_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_0, "map"), gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {

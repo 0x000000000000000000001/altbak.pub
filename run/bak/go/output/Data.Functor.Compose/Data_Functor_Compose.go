@@ -263,7 +263,7 @@ return gopurs_runtime.Apply2(eq11_3_0, x_4, y_5)
 func Call_ord1Compose(dictOrd1_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictOrd1_0 gopurs_runtime.Value = dictOrd1_0_loop
 _ = dictOrd1_0
-ordCompose1_1_0 := gopurs_runtime.Apply(Get_ordCompose(), dictOrd1_0)
+ordCompose1_1_0 := Call_ordCompose(dictOrd1_0)
 _ = ordCompose1_1_0
 __local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd1_0, "Eq10"), gopurs_runtime.Value{})
 _ = __local_var_2_1
@@ -401,7 +401,7 @@ return altCompose2_6_4
 func Call_alternativeCompose(dictAlternative_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictAlternative_0 gopurs_runtime.Value = dictAlternative_0_loop
 _ = dictAlternative_0
-applicativeCompose1_1_0 := gopurs_runtime.Apply(Get_applicativeCompose(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictAlternative_0, "Applicative0"), gopurs_runtime.Value{}))
+applicativeCompose1_1_0 := Call_applicativeCompose(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictAlternative_0, "Applicative0"), gopurs_runtime.Value{}))
 _ = applicativeCompose1_1_0
 __local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictAlternative_0, "Plus1"), gopurs_runtime.Value{})
 _ = __local_var_2_1

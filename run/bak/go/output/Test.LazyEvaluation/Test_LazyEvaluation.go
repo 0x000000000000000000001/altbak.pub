@@ -66,7 +66,7 @@ var once_runManyTimes sync.Once
 func Get_runManyTimes() gopurs_runtime.Value {
 	once_runManyTimes.Do(func() {
 		cache_runManyTimes = gopurs_runtime.Func2(func(v_0_box gopurs_runtime.Value, v1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_runManyTimes(v_0_box.IntVal, v1_1_box.IntVal)
+return gopurs_runtime.Int(Call_runManyTimes(v_0_box.IntVal, v1_1_box.IntVal))
 })
 	})
 	return cache_runManyTimes
@@ -77,7 +77,7 @@ var once_act sync.Once
 func Get_act() gopurs_runtime.Value {
 	once_act.Do(func() {
 		cache_act = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Effect.Get_bindEffect(), "bind"), gopurs_runtime.Apply(pkg_Bench.Get_opaque(), gopurs_runtime.Int(1000)), gopurs_runtime.Func(func(dummy_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Show.Get_showInt(), "show"), Call_runManyTimes(dummy_0.IntVal, 0)))
+return gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Show.Get_showInt(), "show"), gopurs_runtime.Int(Call_runManyTimes(dummy_0.IntVal, 0))))
 }))
 	})
 	return cache_act
@@ -125,7 +125,7 @@ return __t0
 }
 }
 
-func Call_runManyTimes(v_0_loop int64, v1_1_loop int64) gopurs_runtime.Value {
+func Call_runManyTimes(v_0_loop int64, v1_1_loop int64) int64 {
 runManyTimes:
 for {
 if false { continue runManyTimes }
@@ -151,7 +151,7 @@ continue runManyTimes
 __t0 = gopurs_runtime.Value{}
 }
 end_branch_0:
-return __t0
+return __t0.IntVal
 }
 }
 

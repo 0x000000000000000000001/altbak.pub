@@ -45,7 +45,7 @@ var cache_toUnfoldable11 gopurs_runtime.Value
 var once_toUnfoldable11 sync.Once
 func Get_toUnfoldable11() gopurs_runtime.Value {
 	once_toUnfoldable11.Do(func() {
-		cache_toUnfoldable11 = gopurs_runtime.Apply(Get_toUnfoldable1(), pkg_Data_Unfoldable1.Get_unfoldable1Array())
+		cache_toUnfoldable11 = Call_toUnfoldable1(pkg_Data_Unfoldable1.Get_unfoldable1Array())
 	})
 	return cache_toUnfoldable11
 }
@@ -54,7 +54,7 @@ var cache_toUnfoldable12 gopurs_runtime.Value
 var once_toUnfoldable12 sync.Once
 func Get_toUnfoldable12() gopurs_runtime.Value {
 	once_toUnfoldable12.Do(func() {
-		cache_toUnfoldable12 = gopurs_runtime.Apply(Get_toUnfoldable1(), pkg_Data_List_Types.Get_unfoldable1NonEmptyList())
+		cache_toUnfoldable12 = Call_toUnfoldable1(pkg_Data_List_Types.Get_unfoldable1NonEmptyList())
 	})
 	return cache_toUnfoldable12
 }
@@ -234,7 +234,7 @@ var once_fromSet sync.Once
 func Get_fromSet() gopurs_runtime.Value {
 	once_fromSet.Do(func() {
 		cache_fromSet = gopurs_runtime.Func(func(s_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_fromSet(s_0_box)
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_fromSet(s_0_box))}
 })
 	})
 	return cache_fromSet
@@ -362,7 +362,7 @@ var once_delete_ sync.Once
 func Get_delete_() gopurs_runtime.Value {
 	once_delete_.Do(func() {
 		cache_delete_ = gopurs_runtime.Func3(func(dictOrd_0_box gopurs_runtime.Value, a_1_box gopurs_runtime.Value, v_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_delete_(dictOrd_0_box, a_1_box, v_2_box)
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_delete_(dictOrd_0_box, a_1_box, v_2_box))}
 })
 	})
 	return cache_delete_
@@ -611,7 +611,7 @@ _ = dictOrd_0
 return gopurs_runtime.Apply(pkg_Data_Set.Get_insert(), dictOrd_0)
 }
 
-func Call_fromSet(s_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_fromSet(s_0_loop gopurs_runtime.Value) *pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value] {
 var s_0 gopurs_runtime.Value = s_0_loop
 _ = s_0
 var __t0 gopurs_runtime.Value
@@ -627,7 +627,7 @@ goto end_branch_0
 __t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{s_0})}
 }
 end_branch_0:
-return __t0
+return (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(__t0.UnsafePtr)
 }
 
 func Call_intersection(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -735,7 +735,7 @@ return __t2
 })
 }
 
-func Call_delete_(dictOrd_0_loop gopurs_runtime.Value, a_1_loop gopurs_runtime.Value, v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_delete_(dictOrd_0_loop gopurs_runtime.Value, a_1_loop gopurs_runtime.Value, v_2_loop gopurs_runtime.Value) *pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value] {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
 var a_1 gopurs_runtime.Value = a_1_loop
@@ -757,7 +757,7 @@ goto end_branch_1
 __t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{__local_var_3_0})}
 }
 end_branch_1:
-return __t1
+return (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(__t1.UnsafePtr)
 }
 
 func Call_cons(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {

@@ -98,28 +98,32 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+final class Data_Ordering_LT { public function __construct() {} }
+final class Data_Ordering_GT { public function __construct() {} }
+final class Data_Ordering_EQ { public function __construct() {} }
+
 // Data_Ordering_LT
-$GLOBALS['Data_Ordering_LT'] = ($GLOBALS['__phpurs_data0_LT'] ??= new Phpurs_Data0("LT"));
+$GLOBALS['Data_Ordering_LT'] = ($GLOBALS['__phpurs_data0_LT'] ??= new \Data\Ordering\Data_Ordering_LT());
 
 // Data_Ordering_GT
-$GLOBALS['Data_Ordering_GT'] = ($GLOBALS['__phpurs_data0_GT'] ??= new Phpurs_Data0("GT"));
+$GLOBALS['Data_Ordering_GT'] = ($GLOBALS['__phpurs_data0_GT'] ??= new \Data\Ordering\Data_Ordering_GT());
 
 // Data_Ordering_EQ
-$GLOBALS['Data_Ordering_EQ'] = ($GLOBALS['__phpurs_data0_EQ'] ??= new Phpurs_Data0("EQ"));
+$GLOBALS['Data_Ordering_EQ'] = ($GLOBALS['__phpurs_data0_EQ'] ??= new \Data\Ordering\Data_Ordering_EQ());
 
 // Data_Ordering_showOrdering
 $GLOBALS['Data_Ordering_showOrdering'] = ["show" => function($v_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
-  if ((is_object($v_0) && (($v_0)->{'tag'} === "LT"))) {
+  if ($v_0 instanceof \Data\Ordering\Data_Ordering_LT) {
 $__t0 = "LT";
 goto end_branch_0;;
 };
-  if ((is_object($v_0) && (($v_0)->{'tag'} === "GT"))) {
+  if ($v_0 instanceof \Data\Ordering\Data_Ordering_GT) {
 $__t0 = "GT";
 goto end_branch_0;;
 };
-  if ((is_object($v_0) && (($v_0)->{'tag'} === "EQ"))) {
+  if ($v_0 instanceof \Data\Ordering\Data_Ordering_EQ) {
 $__t0 = "EQ";
 goto end_branch_0;;
 };
@@ -140,15 +144,15 @@ $GLOBALS['Data_Ordering_semigroupOrdering'] = ["append" => (function() {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__t0 = null;;
-  if ((is_object($v_0) && (($v_0)->{'tag'} === "LT"))) {
-$__t0 = new Phpurs_Data0("LT");
+  if ($v_0 instanceof \Data\Ordering\Data_Ordering_LT) {
+$__t0 = new \Data\Ordering\Data_Ordering_LT();
 goto end_branch_0;;
 };
-  if ((is_object($v_0) && (($v_0)->{'tag'} === "GT"))) {
-$__t0 = new Phpurs_Data0("GT");
+  if ($v_0 instanceof \Data\Ordering\Data_Ordering_GT) {
+$__t0 = new \Data\Ordering\Data_Ordering_GT();
 goto end_branch_0;;
 };
-  if ((is_object($v_0) && (($v_0)->{'tag'} === "EQ"))) {
+  if ($v_0 instanceof \Data\Ordering\Data_Ordering_EQ) {
 $__t0 = $v1_1;
 goto end_branch_0;;
 };
@@ -164,19 +168,23 @@ goto end_branch_0;;
 })()];
 
 // Data_Ordering_invert
-$GLOBALS['Data_Ordering_invert'] = function($v_0 = null) {
+function majData_majOrdering_invert($v_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majOrdering_invert';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__t0 = null;;
-  if ((is_object($v_0) && (($v_0)->{'tag'} === "GT"))) {
-$__t0 = new Phpurs_Data0("LT");
+  if ($v_0 instanceof \Data\Ordering\Data_Ordering_GT) {
+$__t0 = new \Data\Ordering\Data_Ordering_LT();
 goto end_branch_0;;
 };
-  if ((is_object($v_0) && (($v_0)->{'tag'} === "EQ"))) {
-$__t0 = new Phpurs_Data0("EQ");
+  if ($v_0 instanceof \Data\Ordering\Data_Ordering_EQ) {
+$__t0 = new \Data\Ordering\Data_Ordering_EQ();
 goto end_branch_0;;
 };
-  if ((is_object($v_0) && (($v_0)->{'tag'} === "LT"))) {
-$__t0 = new Phpurs_Data0("GT");
+  if ($v_0 instanceof \Data\Ordering\Data_Ordering_LT) {
+$__t0 = new \Data\Ordering\Data_Ordering_GT();
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -185,8 +193,9 @@ goto end_branch_0;;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Ordering_invert'] = __NAMESPACE__ . '\\majData_majOrdering_invert';
 
 // Data_Ordering_eqOrdering
 $GLOBALS['Data_Ordering_eqOrdering'] = ["eq" => (function() {
@@ -196,15 +205,15 @@ $GLOBALS['Data_Ordering_eqOrdering'] = ["eq" => (function() {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__t0 = null;;
-  if ((is_object($v_0) && (($v_0)->{'tag'} === "LT"))) {
-$__t0 = (is_object($v1_1) && (($v1_1)->{'tag'} === "LT"));
+  if ($v_0 instanceof \Data\Ordering\Data_Ordering_LT) {
+$__t0 = $v1_1 instanceof \Data\Ordering\Data_Ordering_LT;
 goto end_branch_0;;
 };
-  if ((is_object($v_0) && (($v_0)->{'tag'} === "GT"))) {
-$__t0 = (is_object($v1_1) && (($v1_1)->{'tag'} === "GT"));
+  if ($v_0 instanceof \Data\Ordering\Data_Ordering_GT) {
+$__t0 = $v1_1 instanceof \Data\Ordering\Data_Ordering_GT;
 goto end_branch_0;;
 };
-  $__t0 = ((is_object($v_0) && (($v_0)->{'tag'} === "EQ")) && (is_object($v1_1) && (($v1_1)->{'tag'} === "EQ")));
+  $__t0 = ($v_0 instanceof \Data\Ordering\Data_Ordering_EQ && $v1_1 instanceof \Data\Ordering\Data_Ordering_EQ);
   end_branch_0:;
   $__res = $__t0;
   goto __end;;

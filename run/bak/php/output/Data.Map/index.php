@@ -115,14 +115,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_Map_SemigroupMap
-$GLOBALS['Data_Map_SemigroupMap'] = function($x_0 = null) {
+function majData_majMap_majSemigroupmajMap($x_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMap_majSemigroupmajMap';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $x_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Map_SemigroupMap'] = __NAMESPACE__ . '\\majData_majMap_majSemigroupmajMap';
 
 // Data_Map_traversableWithIndexSemigroupMap
 $GLOBALS['Data_Map_traversableWithIndexSemigroupMap'] = $GLOBALS['Data_Map_Internal_traversableWithIndexMap'];
@@ -131,23 +138,26 @@ $GLOBALS['Data_Map_traversableWithIndexSemigroupMap'] = $GLOBALS['Data_Map_Inter
 $GLOBALS['Data_Map_traversableSemigroupMap'] = $GLOBALS['Data_Map_Internal_traversableMap'];
 
 // Data_Map_showSemigroupMap
-$GLOBALS['Data_Map_showSemigroupMap'] = (function() {
-  $__fn = function($dictShow_0 = null, $dictShow1_1 = null) use (&$__fn) {
+function majData_majMap_showmajSemigroupmajMap($dictShow_0, $dictShow1_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMap_showmajSemigroupmajMap';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_Map_Internal_showMap'])($dictShow_0))($dictShow1_1);
+  $__res = ($GLOBALS['Data_Map_Internal_showMap'])($dictShow_0, $dictShow1_1);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Map_showSemigroupMap'] = __NAMESPACE__ . '\\majData_majMap_showmajSemigroupmajMap';
 
 // Data_Map_semigroupSemigroupMap
-$GLOBALS['Data_Map_semigroupSemigroupMap'] = function($dictOrd_0 = null) {
+function majData_majMap_semigroupmajSemigroupmajMap($dictOrd_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMap_semigroupmajSemigroupmajMap';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $compare_1_0 = ($dictOrd_0)['compare'];
   $__res = function($dictSemigroup_2 = null) use ($compare_1_0) {
   $__num = \func_num_args();
@@ -171,35 +181,51 @@ $GLOBALS['Data_Map_semigroupSemigroupMap'] = function($dictOrd_0 = null) {
 };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Map_semigroupSemigroupMap'] = __NAMESPACE__ . '\\majData_majMap_semigroupmajSemigroupmajMap';
 
 // Data_Map_plusSemigroupMap
-$GLOBALS['Data_Map_plusSemigroupMap'] = function($dictOrd_0 = null) {
+function majData_majMap_plusmajSemigroupmajMap($dictOrd_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMap_plusmajSemigroupmajMap';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($GLOBALS['Data_Map_Internal_plusMap'])($dictOrd_0);
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Map_plusSemigroupMap'] = __NAMESPACE__ . '\\majData_majMap_plusmajSemigroupmajMap';
 
 // Data_Map_ordSemigroupMap
-$GLOBALS['Data_Map_ordSemigroupMap'] = function($dictOrd_0 = null) {
+function majData_majMap_ordmajSemigroupmajMap($dictOrd_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMap_ordmajSemigroupmajMap';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($GLOBALS['Data_Map_Internal_ordMap'])($dictOrd_0);
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Map_ordSemigroupMap'] = __NAMESPACE__ . '\\majData_majMap_ordmajSemigroupmajMap';
 
 // Data_Map_ord1SemigroupMap
-$GLOBALS['Data_Map_ord1SemigroupMap'] = function($dictOrd_0 = null) {
+function majData_majMap_ord1majSemigroupmajMap($dictOrd_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMap_ord1majSemigroupmajMap';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($GLOBALS['Data_Map_Internal_ord1Map'])($dictOrd_0);
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Map_ord1SemigroupMap'] = __NAMESPACE__ . '\\majData_majMap_ord1majSemigroupmajMap';
 
 // Data_Map_newtypeSemigroupMap
 $GLOBALS['Data_Map_newtypeSemigroupMap'] = ["Coercible0" => function($_dollar__unused_0 = null) {
@@ -211,13 +237,17 @@ $GLOBALS['Data_Map_newtypeSemigroupMap'] = ["Coercible0" => function($_dollar__u
 }];
 
 // Data_Map_monoidSemigroupMap
-$GLOBALS['Data_Map_monoidSemigroupMap'] = function($dictOrd_0 = null) {
+function majData_majMap_monoidmajSemigroupmajMap($dictOrd_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMap_monoidmajSemigroupmajMap';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $semigroupSemigroupMap1_1_0 = ($GLOBALS['Data_Map_semigroupSemigroupMap'])($dictOrd_0);
   $__res = function($dictSemigroup_2 = null) use ($semigroupSemigroupMap1_1_0) {
   $__num = \func_num_args();
   $semigroupSemigroupMap2_3_1 = ($semigroupSemigroupMap1_1_0)($dictSemigroup_2);
-  $__res = ["mempty" => new Phpurs_Data0("Leaf"), "Semigroup0" => function($_dollar__unused_4 = null) use ($semigroupSemigroupMap2_3_1) {
+  $__res = ["mempty" => new \Data\Map\Internal\Data_Map_Internal_Leaf(), "Semigroup0" => function($_dollar__unused_4 = null) use ($semigroupSemigroupMap2_3_1) {
   $__num = \func_num_args();
   $__res = $semigroupSemigroupMap2_3_1;
   goto __end;;
@@ -230,17 +260,32 @@ $GLOBALS['Data_Map_monoidSemigroupMap'] = function($dictOrd_0 = null) {
 };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Map_monoidSemigroupMap'] = __NAMESPACE__ . '\\majData_majMap_monoidmajSemigroupmajMap';
 
-// Data_Map_keys
-$GLOBALS['Data_Map_keys'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Set_Set']))((($GLOBALS['Data_Map_Internal_functorMap'])['map'])(function($v_0 = null) {
+// Data_Map_keys_closure
+$GLOBALS['Data_Map_keys_closure'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Set_Set'], (($GLOBALS['Data_Map_Internal_functorMap'])['map'])(function($v_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Unit_unit'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }));
+
+// Data_Map_keys
+function majData_majMap_keys($v_0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMap_keys';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ($GLOBALS['Data_Map_keys_closure'])($v_0);
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Map_keys'] = __NAMESPACE__ . '\\majData_majMap_keys';
 
 // Data_Map_functorWithIndexSemigroupMap
 $GLOBALS['Data_Map_functorWithIndexSemigroupMap'] = $GLOBALS['Data_Map_Internal_functorWithIndexMap'];
@@ -255,47 +300,60 @@ $GLOBALS['Data_Map_foldableWithIndexSemigroupMap'] = $GLOBALS['Data_Map_Internal
 $GLOBALS['Data_Map_foldableSemigroupMap'] = $GLOBALS['Data_Map_Internal_foldableMap'];
 
 // Data_Map_eqSemigroupMap
-$GLOBALS['Data_Map_eqSemigroupMap'] = (function() {
-  $__fn = function($dictEq_0 = null, $dictEq1_1 = null) use (&$__fn) {
+function majData_majMap_eqmajSemigroupmajMap($dictEq_0, $dictEq1_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMap_eqmajSemigroupmajMap';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_Map_Internal_eqMap'])($dictEq_0))($dictEq1_1);
+  $__res = ($GLOBALS['Data_Map_Internal_eqMap'])($dictEq_0, $dictEq1_1);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Map_eqSemigroupMap'] = __NAMESPACE__ . '\\majData_majMap_eqmajSemigroupmajMap';
 
 // Data_Map_eq1SemigroupMap
-$GLOBALS['Data_Map_eq1SemigroupMap'] = function($dictEq_0 = null) {
+function majData_majMap_eq1majSemigroupmajMap($dictEq_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMap_eq1majSemigroupmajMap';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["eq1" => function($dictEq1_1 = null) use ($dictEq_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Map_Internal_eqMap'])($dictEq_0))($dictEq1_1))['eq'];
+  $__res = (($GLOBALS['Data_Map_Internal_eqMap'])($dictEq_0, $dictEq1_1))['eq'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Map_eq1SemigroupMap'] = __NAMESPACE__ . '\\majData_majMap_eq1majSemigroupmajMap';
 
 // Data_Map_bindSemigroupMap
-$GLOBALS['Data_Map_bindSemigroupMap'] = function($dictOrd_0 = null) {
+function majData_majMap_bindmajSemigroupmajMap($dictOrd_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMap_bindmajSemigroupmajMap';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($GLOBALS['Data_Map_Internal_bindMap'])($dictOrd_0);
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Map_bindSemigroupMap'] = __NAMESPACE__ . '\\majData_majMap_bindmajSemigroupmajMap';
 
 // Data_Map_applySemigroupMap
-$GLOBALS['Data_Map_applySemigroupMap'] = function($dictOrd_0 = null) {
+function majData_majMap_applymajSemigroupmajMap($dictOrd_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMap_applymajSemigroupmajMap';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $compare_1_0 = ($dictOrd_0)['compare'];
   $__res = ["apply" => (function() use ($compare_1_0) {
   $__fn = function($m1_2 = null, $m2_3 = null) use ($compare_1_0, &$__fn) {
@@ -318,12 +376,17 @@ $GLOBALS['Data_Map_applySemigroupMap'] = function($dictOrd_0 = null) {
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Map_applySemigroupMap'] = __NAMESPACE__ . '\\majData_majMap_applymajSemigroupmajMap';
 
 // Data_Map_altSemigroupMap
-$GLOBALS['Data_Map_altSemigroupMap'] = function($dictOrd_0 = null) {
+function majData_majMap_altmajSemigroupmajMap($dictOrd_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMap_altmajSemigroupmajMap';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $compare_1_0 = ($dictOrd_0)['compare'];
   $__res = ["alt" => (function() use ($compare_1_0) {
   $__fn = function($m1_2 = null, $m2_3 = null) use ($compare_1_0, &$__fn) {
@@ -346,6 +409,7 @@ $GLOBALS['Data_Map_altSemigroupMap'] = function($dictOrd_0 = null) {
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Map_altSemigroupMap'] = __NAMESPACE__ . '\\majData_majMap_altmajSemigroupmajMap';
 

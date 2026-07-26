@@ -106,19 +106,26 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Control_Monad_Error_Class_throwError
-$GLOBALS['Control_Monad_Error_Class_throwError'] = function($dict_0 = null) {
+function majControl_majMonad_majError_majClass_throwmajError($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majError_majClass_throwmajError';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['throwError'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_Error_Class_throwError'] = __NAMESPACE__ . '\\majControl_majMonad_majError_majClass_throwmajError';
 
 // Control_Monad_Error_Class_monadThrowMaybe
 $GLOBALS['Control_Monad_Error_Class_monadThrowMaybe'] = ["throwError" => function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data0("Nothing");
+  $__res = new \Data\Maybe\Data_Maybe_Nothing();
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -156,12 +163,12 @@ $GLOBALS['Control_Monad_Error_Class_monadErrorMaybe'] = ["catchError" => (functi
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__t0 = null;;
-  if ((is_object($v_0) && (($v_0)->{'tag'} === "Nothing"))) {
+  if ($v_0 instanceof \Data\Maybe\Data_Maybe_Nothing) {
 $__t0 = ($v1_1)($GLOBALS['Data_Unit_unit']);
 goto end_branch_0;;
 };
-  if ((is_object($v_0) && (($v_0)->{'tag'} === "Just"))) {
-$__t0 = new Phpurs_Data1("Just", ($v_0)->{'value0'});
+  if ($v_0 instanceof \Data\Maybe\Data_Maybe_Just) {
+$__t0 = new \Data\Maybe\Data_Maybe_Just(($v_0)->{'value0'});
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -189,12 +196,12 @@ $GLOBALS['Control_Monad_Error_Class_monadErrorEither'] = ["catchError" => (funct
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__t0 = null;;
-  if ((is_object($v_0) && (($v_0)->{'tag'} === "Left"))) {
+  if ($v_0 instanceof \Data\Either\Data_Either_Left) {
 $__t0 = ($v1_1)(($v_0)->{'value0'});
 goto end_branch_0;;
 };
-  if ((is_object($v_0) && (($v_0)->{'tag'} === "Right"))) {
-$__t0 = new Phpurs_Data1("Right", ($v_0)->{'value0'});
+  if ($v_0 instanceof \Data\Either\Data_Either_Right) {
+$__t0 = new \Data\Either\Data_Either_Right(($v_0)->{'value0'});
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -221,7 +228,7 @@ $GLOBALS['Control_Monad_Error_Class_monadErrorEffect'] = ["catchError" => (funct
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Effect_Exception_catchException'])($a_1))($b_0);
+  $__res = ($GLOBALS['Effect_Exception_catchException'])($a_1, $b_0);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -236,8 +243,12 @@ $GLOBALS['Control_Monad_Error_Class_monadErrorEffect'] = ["catchError" => (funct
 }];
 
 // Control_Monad_Error_Class_liftMaybe
-$GLOBALS['Control_Monad_Error_Class_liftMaybe'] = function($dictMonadThrow_0 = null) {
+function majControl_majMonad_majError_majClass_liftmajMaybe($dictMonadThrow_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majError_majClass_liftmajMaybe';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $pure_1_0 = ((((($dictMonadThrow_0)['Monad0'])(null))['Applicative0'])(null))['pure'];
   $__res = function($error_2 = null) use ($dictMonadThrow_0, $pure_1_0) {
   $__num = \func_num_args();
@@ -245,11 +256,11 @@ $GLOBALS['Control_Monad_Error_Class_liftMaybe'] = function($dictMonadThrow_0 = n
   $__res = function($v2_4 = null) use ($__local_var_3_1, $pure_1_0) {
   $__num = \func_num_args();
   $__t2 = null;;
-  if ((is_object($v2_4) && (($v2_4)->{'tag'} === "Nothing"))) {
+  if ($v2_4 instanceof \Data\Maybe\Data_Maybe_Nothing) {
 $__t2 = $__local_var_3_1;
 goto end_branch_2;;
 };
-  if ((is_object($v2_4) && (($v2_4)->{'tag'} === "Just"))) {
+  if ($v2_4 instanceof \Data\Maybe\Data_Maybe_Just) {
 $__t2 = ($pure_1_0)(($v2_4)->{'value0'});
 goto end_branch_2;;
 };
@@ -267,21 +278,26 @@ goto end_branch_2;;
 };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_Error_Class_liftMaybe'] = __NAMESPACE__ . '\\majControl_majMonad_majError_majClass_liftmajMaybe';
 
 // Control_Monad_Error_Class_liftEither
-$GLOBALS['Control_Monad_Error_Class_liftEither'] = function($dictMonadThrow_0 = null) {
+function majControl_majMonad_majError_majClass_liftmajEither($dictMonadThrow_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majError_majClass_liftmajEither';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__local_var_1_0 = ((((($dictMonadThrow_0)['Monad0'])(null))['Applicative0'])(null))['pure'];
   $__res = function($v2_2 = null) use ($__local_var_1_0, $dictMonadThrow_0) {
   $__num = \func_num_args();
   $__t1 = null;;
-  if ((is_object($v2_2) && (($v2_2)->{'tag'} === "Left"))) {
+  if ($v2_2 instanceof \Data\Either\Data_Either_Left) {
 $__t1 = (($dictMonadThrow_0)['throwError'])(($v2_2)->{'value0'});
 goto end_branch_1;;
 };
-  if ((is_object($v2_2) && (($v2_2)->{'tag'} === "Right"))) {
+  if ($v2_2 instanceof \Data\Either\Data_Either_Right) {
 $__t1 = ($__local_var_1_0)(($v2_2)->{'value0'});
 goto end_branch_1;;
 };
@@ -295,34 +311,40 @@ goto end_branch_1;;
 };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_Error_Class_liftEither'] = __NAMESPACE__ . '\\majControl_majMonad_majError_majClass_liftmajEither';
 
 // Control_Monad_Error_Class_catchError
-$GLOBALS['Control_Monad_Error_Class_catchError'] = function($dict_0 = null) {
+function majControl_majMonad_majError_majClass_catchmajError($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majError_majClass_catchmajError';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['catchError'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_Error_Class_catchError'] = __NAMESPACE__ . '\\majControl_majMonad_majError_majClass_catchmajError';
 
 // Control_Monad_Error_Class_catchJust
-$GLOBALS['Control_Monad_Error_Class_catchJust'] = (function() {
-  $__fn = function($dictMonadError_0 = null, $p_1 = null, $act_2 = null, $handler_3 = null) use (&$__fn) {
+function majControl_majMonad_majError_majClass_catchmajJust($dictMonadError_0, $p_1 = null, $act_2 = null, $handler_3 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majError_majClass_catchmajJust';
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ((($dictMonadError_0)['catchError'])($act_2))(function($e_4 = null) use ($dictMonadError_0, $handler_3, $p_1) {
+  $__res = (($dictMonadError_0)['catchError'])($act_2, function($e_4 = null) use ($dictMonadError_0, $handler_3, $p_1) {
   $__num = \func_num_args();
   $v_5_0 = ($p_1)($e_4);
   $__t1 = null;;
-  if ((is_object($v_5_0) && (($v_5_0)->{'tag'} === "Nothing"))) {
+  if ($v_5_0 instanceof \Data\Maybe\Data_Maybe_Nothing) {
 $__t1 = (((($dictMonadError_0)['MonadThrow0'])(null))['throwError'])($e_4);
 goto end_branch_1;;
 };
-  if ((is_object($v_5_0) && (($v_5_0)->{'tag'} === "Just"))) {
+  if ($v_5_0 instanceof \Data\Maybe\Data_Maybe_Just) {
 $__t1 = ($handler_3)(($v_5_0)->{'value0'});
 goto end_branch_1;;
 };
@@ -336,31 +358,39 @@ goto end_branch_1;;
 });
   goto __end;;
   __end:
-  return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
-  };
-  return $__fn;
-})();
+  return 4 < $__num ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
+}
+$GLOBALS['Control_Monad_Error_Class_catchJust'] = __NAMESPACE__ . '\\majControl_majMonad_majError_majClass_catchmajJust';
 
 // Control_Monad_Error_Class_try
-$GLOBALS['Control_Monad_Error_Class_try'] = function($dictMonadError_0 = null) {
+function majControl_majMonad_majError_majClass_try($dictMonadError_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majError_majClass_try';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $Monad0_1_0 = (((($dictMonadError_0)['MonadThrow0'])(null))['Monad0'])(null);
   $pure_2_1 = ((($Monad0_1_0)['Applicative0'])(null))['pure'];
   $__res = function($a_3 = null) use ($Monad0_1_0, $dictMonadError_0, $pure_2_1) {
   $__num = \func_num_args();
-  $__res = ((($dictMonadError_0)['catchError'])(((((((((($Monad0_1_0)['Bind1'])(null))['Apply0'])(null))['Functor0'])(null))['map'])($GLOBALS['Data_Either_Right']))($a_3)))((($GLOBALS['Control_Semigroupoid_composeImpl'])($pure_2_1))($GLOBALS['Data_Either_Left']));
+  $__res = (($dictMonadError_0)['catchError'])((((((((($Monad0_1_0)['Bind1'])(null))['Apply0'])(null))['Functor0'])(null))['map'])($GLOBALS['Data_Either_Right'], $a_3), ($GLOBALS['Control_Semigroupoid_composeImpl'])($pure_2_1, $GLOBALS['Data_Either_Left']));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_Error_Class_try'] = __NAMESPACE__ . '\\majControl_majMonad_majError_majClass_try';
 
 // Control_Monad_Error_Class_withResource
-$GLOBALS['Control_Monad_Error_Class_withResource'] = function($dictMonadError_0 = null) {
+function majControl_majMonad_majError_majClass_withmajResource($dictMonadError_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majError_majClass_withmajResource';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $MonadThrow0_1_0 = (($dictMonadError_0)['MonadThrow0'])(null);
   $Monad0_2_1 = (($MonadThrow0_1_0)['Monad0'])(null);
   $Bind1_3_2 = (($Monad0_2_1)['Bind1'])(null);
@@ -372,18 +402,18 @@ $GLOBALS['Control_Monad_Error_Class_withResource'] = function($dictMonadError_0 
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($Bind1_3_2)['bind'])($acquire_6))(function($resource_9 = null) use ($Bind1_3_2, $Monad0_2_1, $MonadThrow0_1_0, $discard1_5_4, $kleisli_8, $release_7, $try1_4_3) {
+  $__res = (($Bind1_3_2)['bind'])($acquire_6, function($resource_9 = null) use ($Bind1_3_2, $Monad0_2_1, $MonadThrow0_1_0, $discard1_5_4, $kleisli_8, $release_7, $try1_4_3) {
   $__num = \func_num_args();
-  $__res = ((($Bind1_3_2)['bind'])(($try1_4_3)(($kleisli_8)($resource_9))))(function($result_10 = null) use ($Monad0_2_1, $MonadThrow0_1_0, $discard1_5_4, $release_7, $resource_9) {
+  $__res = (($Bind1_3_2)['bind'])(($try1_4_3)(($kleisli_8)($resource_9)), function($result_10 = null) use ($Monad0_2_1, $MonadThrow0_1_0, $discard1_5_4, $release_7, $resource_9) {
   $__num = \func_num_args();
-  $__res = (($discard1_5_4)(($release_7)($resource_9)))(function($_dollar__unused_11 = null) use ($Monad0_2_1, $MonadThrow0_1_0, $result_10) {
+  $__res = ($discard1_5_4)(($release_7)($resource_9), function($_dollar__unused_11 = null) use ($Monad0_2_1, $MonadThrow0_1_0, $result_10) {
   $__num = \func_num_args();
   $__t5 = null;;
-  if ((is_object($result_10) && (($result_10)->{'tag'} === "Left"))) {
+  if ($result_10 instanceof \Data\Either\Data_Either_Left) {
 $__t5 = (($MonadThrow0_1_0)['throwError'])(($result_10)->{'value0'});
 goto end_branch_5;;
 };
-  if ((is_object($result_10) && (($result_10)->{'tag'} === "Right"))) {
+  if ($result_10 instanceof \Data\Either\Data_Either_Right) {
 $__t5 = (((($Monad0_2_1)['Applicative0'])(null))['pure'])(($result_10)->{'value0'});
 goto end_branch_5;;
 };
@@ -411,6 +441,7 @@ goto end_branch_5;;
 })();
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_Error_Class_withResource'] = __NAMESPACE__ . '\\majControl_majMonad_majError_majClass_withmajResource';
 

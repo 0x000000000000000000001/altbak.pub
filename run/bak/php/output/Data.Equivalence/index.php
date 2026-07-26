@@ -105,14 +105,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_Equivalence_Equivalence
-$GLOBALS['Data_Equivalence_Equivalence'] = function($x_0 = null) {
+function majData_majEquivalence_majEquivalence($x_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majEquivalence_majEquivalence';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $x_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Equivalence_Equivalence'] = __NAMESPACE__ . '\\majData_majEquivalence_majEquivalence';
 
 // Data_Equivalence_semigroupEquivalence
 $GLOBALS['Data_Equivalence_semigroupEquivalence'] = ["append" => (function() {
@@ -121,7 +128,7 @@ $GLOBALS['Data_Equivalence_semigroupEquivalence'] = ["append" => (function() {
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])((($v_0)($a_2))($b_3)))((($v1_1)($a_2))($b_3));
+  $__res = (($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(($v_0)($a_2, $b_3), ($v1_1)($a_2, $b_3));
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -160,13 +167,18 @@ $GLOBALS['Data_Equivalence_monoidEquivalence'] = ["mempty" => (function() {
 }];
 
 // Data_Equivalence_defaultEquivalence
-$GLOBALS['Data_Equivalence_defaultEquivalence'] = function($dictEq_0 = null) {
+function majData_majEquivalence_defaultmajEquivalence($dictEq_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majEquivalence_defaultmajEquivalence';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dictEq_0)['eq'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Equivalence_defaultEquivalence'] = __NAMESPACE__ . '\\majData_majEquivalence_defaultmajEquivalence';
 
 // Data_Equivalence_contravariantEquivalence
 $GLOBALS['Data_Equivalence_contravariantEquivalence'] = ["cmap" => (function() {
@@ -175,7 +187,7 @@ $GLOBALS['Data_Equivalence_contravariantEquivalence'] = ["cmap" => (function() {
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = (($v_1)(($f_0)($x_2)))(($f_0)($y_3));
+  $__res = ($v_1)(($f_0)($x_2), ($f_0)($y_3));
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -184,17 +196,16 @@ $GLOBALS['Data_Equivalence_contravariantEquivalence'] = ["cmap" => (function() {
 })()];
 
 // Data_Equivalence_comparisonEquivalence
-$GLOBALS['Data_Equivalence_comparisonEquivalence'] = (function() {
-  $__fn = function($v_0 = null, $a_1 = null, $b_2 = null) use (&$__fn) {
+function majData_majEquivalence_comparisonmajEquivalence($v_0, $a_1 = null, $b_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majEquivalence_comparisonmajEquivalence';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($GLOBALS['Data_Ordering_eqOrdering'])['eq'])((($v_0)($a_1))($b_2)))(new Phpurs_Data0("EQ"));
+  $__res = (($GLOBALS['Data_Ordering_eqOrdering'])['eq'])(($v_0)($a_1, $b_2), new \Data\Ordering\Data_Ordering_EQ());
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_Equivalence_comparisonEquivalence'] = __NAMESPACE__ . '\\majData_majEquivalence_comparisonmajEquivalence';
 

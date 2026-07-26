@@ -97,6 +97,8 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Control_Alt_altArray
 $GLOBALS['Control_Alt_altArray'] = ["alt" => ($GLOBALS['Data_Semigroup_semigroupArray'])['append'], "Functor0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
@@ -107,11 +109,16 @@ $GLOBALS['Control_Alt_altArray'] = ["alt" => ($GLOBALS['Data_Semigroup_semigroup
 }];
 
 // Control_Alt_alt
-$GLOBALS['Control_Alt_alt'] = function($dict_0 = null) {
+function majControl_majAlt_alt($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majAlt_alt';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['alt'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Alt_alt'] = __NAMESPACE__ . '\\majControl_majAlt_alt';
 

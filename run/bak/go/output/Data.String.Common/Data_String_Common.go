@@ -11,7 +11,7 @@ var once_null sync.Once
 func Get_null() gopurs_runtime.Value {
 	once_null.Do(func() {
 		cache_null = gopurs_runtime.Func(func(s_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_null(s_0_box.StrVal())
+return gopurs_runtime.Bool(Call_null(s_0_box.StrVal()))
 })
 	})
 	return cache_null
@@ -26,10 +26,10 @@ func Get_localeCompare() gopurs_runtime.Value {
 	return cache_localeCompare
 }
 
-func Call_null(s_0_loop string) gopurs_runtime.Value {
+func Call_null(s_0_loop string) bool {
 var s_0 string = s_0_loop
 _ = s_0
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Eq.Get_eqString(), "eq"), gopurs_runtime.Str(s_0), gopurs_runtime.Str(""))
+return (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Eq.Get_eqString(), "eq"), gopurs_runtime.Str(s_0), gopurs_runtime.Str("")).IntVal) != (0)
 }
 
 func Get__localeCompare() gopurs_runtime.Value {

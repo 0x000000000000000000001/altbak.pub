@@ -99,18 +99,29 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $GLOBALS['Control_Extend_arrayExtend'] = new class { public function __invoke(...$args) { return $this; } };
 
 
+
+
 // Control_Extend_identity
-$GLOBALS['Control_Extend_identity'] = function($x_0 = null) {
+function majControl_majExtend_identity($x_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majExtend_identity';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $x_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Extend_identity'] = __NAMESPACE__ . '\\majControl_majExtend_identity';
 
 // Control_Extend_extendFn
-$GLOBALS['Control_Extend_extendFn'] = function($dictSemigroup_0 = null) {
+function majControl_majExtend_extendmajFn($dictSemigroup_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majExtend_extendmajFn';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["extend" => (function() use ($dictSemigroup_0) {
   $__fn = function($f_1 = null, $g_2 = null, $w_3 = null) use ($dictSemigroup_0, &$__fn) {
   $__num = \func_num_args();
@@ -119,7 +130,7 @@ $GLOBALS['Control_Extend_extendFn'] = function($dictSemigroup_0 = null) {
   }
   $__res = ($f_1)(function($w_prime_4 = null) use ($dictSemigroup_0, $g_2, $w_3) {
   $__num = \func_num_args();
-  $__res = ($g_2)(((($dictSemigroup_0)['append'])($w_3))($w_prime_4));
+  $__res = ($g_2)((($dictSemigroup_0)['append'])($w_3, $w_prime_4));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -138,8 +149,9 @@ $GLOBALS['Control_Extend_extendFn'] = function($dictSemigroup_0 = null) {
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Extend_extendFn'] = __NAMESPACE__ . '\\majControl_majExtend_extendmajFn';
 
 // Control_Extend_extendArray
 $GLOBALS['Control_Extend_extendArray'] = ["extend" => $GLOBALS['Control_Extend_arrayExtend'], "Functor0" => function($_dollar__unused_0 = null) {
@@ -151,65 +163,72 @@ $GLOBALS['Control_Extend_extendArray'] = ["extend" => $GLOBALS['Control_Extend_a
 }];
 
 // Control_Extend_extend
-$GLOBALS['Control_Extend_extend'] = function($dict_0 = null) {
+function majControl_majExtend_extend($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majExtend_extend';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['extend'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Extend_extend'] = __NAMESPACE__ . '\\majControl_majExtend_extend';
 
 // Control_Extend_extendFlipped
-$GLOBALS['Control_Extend_extendFlipped'] = (function() {
-  $__fn = function($dictExtend_0 = null, $w_1 = null, $f_2 = null) use (&$__fn) {
+function majControl_majExtend_extendmajFlipped($dictExtend_0, $w_1 = null, $f_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majExtend_extendmajFlipped';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($dictExtend_0)['extend'])($f_2))($w_1);
+  $__res = (($dictExtend_0)['extend'])($f_2, $w_1);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Control_Extend_extendFlipped'] = __NAMESPACE__ . '\\majControl_majExtend_extendmajFlipped';
 
 // Control_Extend_duplicate
-$GLOBALS['Control_Extend_duplicate'] = function($dictExtend_0 = null) {
+function majControl_majExtend_duplicate($dictExtend_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majExtend_duplicate';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = (($dictExtend_0)['extend'])($GLOBALS['Control_Extend_identity']);
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Extend_duplicate'] = __NAMESPACE__ . '\\majControl_majExtend_duplicate';
 
 // Control_Extend_composeCoKleisliFlipped
-$GLOBALS['Control_Extend_composeCoKleisliFlipped'] = (function() {
-  $__fn = function($dictExtend_0 = null, $f_1 = null, $g_2 = null, $w_3 = null) use (&$__fn) {
+function majControl_majExtend_composemajComajKleislimajFlipped($dictExtend_0, $f_1 = null, $g_2 = null, $w_3 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majExtend_composemajComajKleislimajFlipped';
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ($f_1)(((($dictExtend_0)['extend'])($g_2))($w_3));
+  $__res = ($f_1)((($dictExtend_0)['extend'])($g_2, $w_3));
   goto __end;;
   __end:
-  return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
-  };
-  return $__fn;
-})();
+  return 4 < $__num ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
+}
+$GLOBALS['Control_Extend_composeCoKleisliFlipped'] = __NAMESPACE__ . '\\majControl_majExtend_composemajComajKleislimajFlipped';
 
 // Control_Extend_composeCoKleisli
-$GLOBALS['Control_Extend_composeCoKleisli'] = (function() {
-  $__fn = function($dictExtend_0 = null, $f_1 = null, $g_2 = null, $w_3 = null) use (&$__fn) {
+function majControl_majExtend_composemajComajKleisli($dictExtend_0, $f_1 = null, $g_2 = null, $w_3 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majExtend_composemajComajKleisli';
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ($g_2)(((($dictExtend_0)['extend'])($f_1))($w_3));
+  $__res = ($g_2)((($dictExtend_0)['extend'])($f_1, $w_3));
   goto __end;;
   __end:
-  return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
-  };
-  return $__fn;
-})();
+  return 4 < $__num ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
+}
+$GLOBALS['Control_Extend_composeCoKleisli'] = __NAMESPACE__ . '\\majControl_majExtend_composemajComajKleisli';
 

@@ -99,14 +99,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Control_Biapply_identity
-$GLOBALS['Control_Biapply_identity'] = function($x_0 = null) {
+function majControl_majBiapply_identity($x_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majBiapply_identity';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $x_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Biapply_identity'] = __NAMESPACE__ . '\\majControl_majBiapply_identity';
 
 // Control_Biapply_biapplyTuple
 $GLOBALS['Control_Biapply_biapplyTuple'] = ["biapply" => (function() {
@@ -115,7 +122,7 @@ $GLOBALS['Control_Biapply_biapplyTuple'] = ["biapply" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", (($v_0)->{'value0'})(($v1_1)->{'value0'}), (($v_0)->{'value1'})(($v1_1)->{'value1'}));
+  $__res = new \Data\Tuple\Data_Tuple_Tuple((($v_0)->{'value0'})(($v1_1)->{'value0'}), (($v_0)->{'value1'})(($v1_1)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -130,83 +137,84 @@ $GLOBALS['Control_Biapply_biapplyTuple'] = ["biapply" => (function() {
 }];
 
 // Control_Biapply_biapply
-$GLOBALS['Control_Biapply_biapply'] = function($dict_0 = null) {
+function majControl_majBiapply_biapply($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majBiapply_biapply';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['biapply'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Biapply_biapply'] = __NAMESPACE__ . '\\majControl_majBiapply_biapply';
 
 // Control_Biapply_biapplyFirst
-$GLOBALS['Control_Biapply_biapplyFirst'] = (function() {
-  $__fn = function($dictBiapply_0 = null, $a_1 = null, $b_2 = null) use (&$__fn) {
+function majControl_majBiapply_biapplymajFirst($dictBiapply_0, $a_1 = null, $b_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majBiapply_biapplymajFirst';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($dictBiapply_0)['biapply'])((((((($dictBiapply_0)['Bifunctor0'])(null))['bimap'])(function($v_3 = null) {
+  $__res = (($dictBiapply_0)['biapply'])((((($dictBiapply_0)['Bifunctor0'])(null))['bimap'])(function($v_3 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Control_Biapply_identity'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(function($v_3 = null) {
+}, function($v_3 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Control_Biapply_identity'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))($a_1)))($b_2);
+}, $a_1), $b_2);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Control_Biapply_biapplyFirst'] = __NAMESPACE__ . '\\majControl_majBiapply_biapplymajFirst';
 
 // Control_Biapply_biapplySecond
-$GLOBALS['Control_Biapply_biapplySecond'] = (function() {
-  $__fn = function($dictBiapply_0 = null, $a_1 = null, $b_2 = null) use (&$__fn) {
+function majControl_majBiapply_biapplymajSecond($dictBiapply_0, $a_1 = null, $b_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majBiapply_biapplymajSecond';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($dictBiapply_0)['biapply'])((((((($dictBiapply_0)['Bifunctor0'])(null))['bimap'])($GLOBALS['Data_Function_const']))($GLOBALS['Data_Function_const']))($a_1)))($b_2);
+  $__res = (($dictBiapply_0)['biapply'])((((($dictBiapply_0)['Bifunctor0'])(null))['bimap'])($GLOBALS['Data_Function_const'], $GLOBALS['Data_Function_const'], $a_1), $b_2);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Control_Biapply_biapplySecond'] = __NAMESPACE__ . '\\majControl_majBiapply_biapplymajSecond';
 
 // Control_Biapply_bilift2
-$GLOBALS['Control_Biapply_bilift2'] = (function() {
-  $__fn = function($dictBiapply_0 = null, $f_1 = null, $g_2 = null, $a_3 = null, $b_4 = null) use (&$__fn) {
+function majControl_majBiapply_bilift2($dictBiapply_0, $f_1 = null, $g_2 = null, $a_3 = null, $b_4 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majBiapply_bilift2';
   if ($__num < 5) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 5);
   }
-  $__res = ((($dictBiapply_0)['biapply'])((((((($dictBiapply_0)['Bifunctor0'])(null))['bimap'])($f_1))($g_2))($a_3)))($b_4);
+  $__res = (($dictBiapply_0)['biapply'])((((($dictBiapply_0)['Bifunctor0'])(null))['bimap'])($f_1, $g_2, $a_3), $b_4);
   goto __end;;
   __end:
-  return $__num > 5 ? $__res(...\array_slice(\func_get_args(), 5)) : $__res;
-  };
-  return $__fn;
-})();
+  return 5 < $__num ? $__res(...\array_slice(\func_get_args(), 5)) : $__res;
+}
+$GLOBALS['Control_Biapply_bilift2'] = __NAMESPACE__ . '\\majControl_majBiapply_bilift2';
 
 // Control_Biapply_bilift3
-$GLOBALS['Control_Biapply_bilift3'] = (function() {
-  $__fn = function($dictBiapply_0 = null, $f_1 = null, $g_2 = null, $a_3 = null, $b_4 = null, $c_5 = null) use (&$__fn) {
+function majControl_majBiapply_bilift3($dictBiapply_0, $f_1 = null, $g_2 = null, $a_3 = null, $b_4 = null, $c_5 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majBiapply_bilift3';
   if ($__num < 6) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 6);
   }
-  $__res = ((($dictBiapply_0)['biapply'])(((($dictBiapply_0)['biapply'])((((((($dictBiapply_0)['Bifunctor0'])(null))['bimap'])($f_1))($g_2))($a_3)))($b_4)))($c_5);
+  $__res = (($dictBiapply_0)['biapply'])((($dictBiapply_0)['biapply'])((((($dictBiapply_0)['Bifunctor0'])(null))['bimap'])($f_1, $g_2, $a_3), $b_4), $c_5);
   goto __end;;
   __end:
-  return $__num > 6 ? $__res(...\array_slice(\func_get_args(), 6)) : $__res;
-  };
-  return $__fn;
-})();
+  return 6 < $__num ? $__res(...\array_slice(\func_get_args(), 6)) : $__res;
+}
+$GLOBALS['Control_Biapply_bilift3'] = __NAMESPACE__ . '\\majControl_majBiapply_bilift3';
 

@@ -265,7 +265,7 @@ return gopurs_runtime.Apply(pkg_Data_Map_Internal.Get_ord1Map(), dictOrd_0)
 func Call_monoidSemigroupMap(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-semigroupSemigroupMap1_1_0 := gopurs_runtime.Apply(Get_semigroupSemigroupMap(), dictOrd_0)
+semigroupSemigroupMap1_1_0 := Call_semigroupSemigroupMap(dictOrd_0)
 _ = semigroupSemigroupMap1_1_0
 return gopurs_runtime.Func(func(dictSemigroup_2 gopurs_runtime.Value) gopurs_runtime.Value {
 semigroupSemigroupMap2_3_1 := gopurs_runtime.Apply(semigroupSemigroupMap1_1_0, dictSemigroup_2)

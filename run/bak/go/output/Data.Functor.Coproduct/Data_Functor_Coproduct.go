@@ -370,7 +370,7 @@ return __t8
 func Call_ordCoproduct(dictOrd1_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictOrd1_0 gopurs_runtime.Value = dictOrd1_0_loop
 _ = dictOrd1_0
-ord1Coproduct1_1_0 := gopurs_runtime.Apply(Get_ord1Coproduct(), dictOrd1_0)
+ord1Coproduct1_1_0 := Call_ord1Coproduct(dictOrd1_0)
 _ = ord1Coproduct1_1_0
 __local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd1_0, "Eq10"), gopurs_runtime.Value{})
 _ = __local_var_2_1
@@ -489,7 +489,7 @@ return __t4
 func Call_comonadCoproduct(dictComonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictComonad_0 gopurs_runtime.Value = dictComonad_0_loop
 _ = dictComonad_0
-extendCoproduct1_1_0 := gopurs_runtime.Apply(Get_extendCoproduct(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonad_0, "Extend0"), gopurs_runtime.Value{}))
+extendCoproduct1_1_0 := Call_extendCoproduct(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonad_0, "Extend0"), gopurs_runtime.Value{}))
 _ = extendCoproduct1_1_0
 return gopurs_runtime.Func(func(dictComonad1_2 gopurs_runtime.Value) gopurs_runtime.Value {
 extendCoproduct2_3_1 := gopurs_runtime.Apply(extendCoproduct1_1_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonad1_2, "Extend0"), gopurs_runtime.Value{}))

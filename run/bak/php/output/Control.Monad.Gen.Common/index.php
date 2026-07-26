@@ -112,26 +112,28 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Control_Monad_Gen_Common_max
 $GLOBALS['Control_Monad_Gen_Common_max'] = (function() use (&$__fn) {
-$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT"));
+$__local_var_0_0 = ($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT(), new \Data\Ordering\Data_Ordering_EQ(), new \Data\Ordering\Data_Ordering_GT());
 return (function() use ($__local_var_0_0) {
   $__fn = function($x_1 = null, $y_2 = null) use ($__local_var_0_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $v_3_1 = (($__local_var_0_0)($x_1))($y_2);
+  $v_3_1 = ($__local_var_0_0)($x_1, $y_2);
   $__t2 = null;;
-  if ((is_object($v_3_1) && (($v_3_1)->{'tag'} === "LT"))) {
+  if ($v_3_1 instanceof \Data\Ordering\Data_Ordering_LT) {
 $__t2 = $y_2;
 goto end_branch_2;;
 };
-  if ((is_object($v_3_1) && (($v_3_1)->{'tag'} === "EQ"))) {
+  if ($v_3_1 instanceof \Data\Ordering\Data_Ordering_EQ) {
 $__t2 = $x_1;
 goto end_branch_2;;
 };
-  if ((is_object($v_3_1) && (($v_3_1)->{'tag'} === "GT"))) {
+  if ($v_3_1 instanceof \Data\Ordering\Data_Ordering_GT) {
 $__t2 = $x_1;
 goto end_branch_2;;
 };
@@ -148,41 +150,40 @@ goto end_branch_2;;
 })();
 
 // Control_Monad_Gen_Common_genTuple
-$GLOBALS['Control_Monad_Gen_Common_genTuple'] = (function() {
-  $__fn = function($dictApply_0 = null, $a_1 = null, $b_2 = null) use (&$__fn) {
+function majControl_majMonad_majGen_majCommon_genmajTuple($dictApply_0, $a_1 = null, $b_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majGen_majCommon_genmajTuple';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($dictApply_0)['apply'])(((((($dictApply_0)['Functor0'])(null))['map'])($GLOBALS['Data_Tuple_Tuple']))($a_1)))($b_2);
+  $__res = (($dictApply_0)['apply'])((((($dictApply_0)['Functor0'])(null))['map'])($GLOBALS['Data_Tuple_Tuple'], $a_1), $b_2);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Control_Monad_Gen_Common_genTuple'] = __NAMESPACE__ . '\\majControl_majMonad_majGen_majCommon_genmajTuple';
 
 // Control_Monad_Gen_Common_genNonEmpty
-$GLOBALS['Control_Monad_Gen_Common_genNonEmpty'] = (function() {
-  $__fn = function($dictMonadRec_0 = null, $dictMonadGen_1 = null) use (&$__fn) {
+function majControl_majMonad_majGen_majCommon_genmajNonmajEmpty($dictMonadRec_0, $dictMonadGen_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majGen_majCommon_genmajNonmajEmpty';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $Apply0_2_0 = (((((($dictMonadGen_1)['Monad0'])(null))['Bind1'])(null))['Apply0'])(null);
-  $unfoldable1_3_1 = (($GLOBALS['Control_Monad_Gen_unfoldable'])($dictMonadRec_0))($dictMonadGen_1);
+  $unfoldable1_3_1 = ($GLOBALS['Control_Monad_Gen_unfoldable'])($dictMonadRec_0, $dictMonadGen_1);
   $__res = function($dictUnfoldable_4 = null) use ($Apply0_2_0, $dictMonadGen_1, $unfoldable1_3_1) {
   $__num = \func_num_args();
   $unfoldable2_5_2 = ($unfoldable1_3_1)($dictUnfoldable_4);
   $__res = function($gen_6 = null) use ($Apply0_2_0, $dictMonadGen_1, $unfoldable2_5_2) {
   $__num = \func_num_args();
-  $__res = ((($Apply0_2_0)['apply'])(((((($Apply0_2_0)['Functor0'])(null))['map'])($GLOBALS['Data_NonEmpty_NonEmpty']))($gen_6)))(((($dictMonadGen_1)['resize'])((($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Control_Monad_Gen_Common_max'])(0)))(function($v_7 = null) {
+  $__res = (($Apply0_2_0)['apply'])((((($Apply0_2_0)['Functor0'])(null))['map'])($GLOBALS['Data_NonEmpty_NonEmpty'], $gen_6), (($dictMonadGen_1)['resize'])(($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Control_Monad_Gen_Common_max'])(0), function($v_7 = null) {
   $__num = \func_num_args();
   $__res = ($v_7 - 1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-})))(($unfoldable2_5_2)($gen_6)));
+}), ($unfoldable2_5_2)($gen_6)));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -193,14 +194,17 @@ $GLOBALS['Control_Monad_Gen_Common_genNonEmpty'] = (function() {
 };
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Control_Monad_Gen_Common_genNonEmpty'] = __NAMESPACE__ . '\\majControl_majMonad_majGen_majCommon_genmajNonmajEmpty';
 
 // Control_Monad_Gen_Common_genMaybe'
-$GLOBALS['Control_Monad_Gen_Common_genMaybe__prime__'] = function($dictMonadGen_0 = null) {
+function majControl_majMonad_majGen_majCommon_genmajMaybe__prime__($dictMonadGen_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majGen_majCommon_genmajMaybe__prime__';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $Monad0_1_0 = (($dictMonadGen_0)['Monad0'])(null);
   $Bind1_2_1 = (($Monad0_1_0)['Bind1'])(null);
   $__res = (function() use ($Bind1_2_1, $Monad0_1_0, $dictMonadGen_0) {
@@ -209,14 +213,14 @@ $GLOBALS['Control_Monad_Gen_Common_genMaybe__prime__'] = function($dictMonadGen_
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($Bind1_2_1)['bind'])(((($dictMonadGen_0)['chooseFloat'])(0.0))(1.0)))(function($n_5 = null) use ($Bind1_2_1, $Monad0_1_0, $bias_3, $gen_4) {
+  $__res = (($Bind1_2_1)['bind'])((($dictMonadGen_0)['chooseFloat'])(0.0, 1.0), function($n_5 = null) use ($Bind1_2_1, $Monad0_1_0, $bias_3, $gen_4) {
   $__num = \func_num_args();
   $__t2 = null;;
   if (($n_5 < $bias_3)) {
-$__t2 = ((((((($Bind1_2_1)['Apply0'])(null))['Functor0'])(null))['map'])($GLOBALS['Data_Maybe_Just']))($gen_4);
+$__t2 = (((((($Bind1_2_1)['Apply0'])(null))['Functor0'])(null))['map'])($GLOBALS['Data_Maybe_Just'], $gen_4);
 goto end_branch_2;;
 };
-  $__t2 = (((($Monad0_1_0)['Applicative0'])(null))['pure'])(new Phpurs_Data0("Nothing"));
+  $__t2 = (((($Monad0_1_0)['Applicative0'])(null))['pure'])(new \Data\Maybe\Data_Maybe_Nothing());
   end_branch_2:;
   $__res = $__t2;
   goto __end;;
@@ -231,30 +235,45 @@ goto end_branch_2;;
 })();
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_Gen_Common_genMaybe__prime__'] = __NAMESPACE__ . '\\majControl_majMonad_majGen_majCommon_genmajMaybe__prime__';
 
 // Control_Monad_Gen_Common_genMaybe
-$GLOBALS['Control_Monad_Gen_Common_genMaybe'] = function($dictMonadGen_0 = null) {
+function majControl_majMonad_majGen_majCommon_genmajMaybe($dictMonadGen_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Monad_Gen_Common_genMaybe__prime__'])($dictMonadGen_0))(0.75);
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majGen_majCommon_genmajMaybe';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ($GLOBALS['Control_Monad_Gen_Common_genMaybe__prime__'])($dictMonadGen_0, 0.75);
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_Gen_Common_genMaybe'] = __NAMESPACE__ . '\\majControl_majMonad_majGen_majCommon_genmajMaybe';
 
 // Control_Monad_Gen_Common_genIdentity
-$GLOBALS['Control_Monad_Gen_Common_genIdentity'] = function($dictFunctor_0 = null) {
+function majControl_majMonad_majGen_majCommon_genmajIdentity($dictFunctor_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majGen_majCommon_genmajIdentity';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = (($dictFunctor_0)['map'])($GLOBALS['Data_Identity_Identity']);
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_Gen_Common_genIdentity'] = __NAMESPACE__ . '\\majControl_majMonad_majGen_majCommon_genmajIdentity';
 
 // Control_Monad_Gen_Common_genEither'
-$GLOBALS['Control_Monad_Gen_Common_genEither__prime__'] = function($dictMonadGen_0 = null) {
+function majControl_majMonad_majGen_majCommon_genmajEither__prime__($dictMonadGen_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majGen_majCommon_genmajEither__prime__';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $Bind1_1_0 = (((($dictMonadGen_0)['Monad0'])(null))['Bind1'])(null);
   $__local_var_2_1 = (((($Bind1_1_0)['Apply0'])(null))['Functor0'])(null);
   $__res = (function() use ($Bind1_1_0, $__local_var_2_1, $dictMonadGen_0) {
@@ -263,14 +282,14 @@ $GLOBALS['Control_Monad_Gen_Common_genEither__prime__'] = function($dictMonadGen
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($Bind1_1_0)['bind'])(((($dictMonadGen_0)['chooseFloat'])(0.0))(1.0)))(function($n_6 = null) use ($__local_var_2_1, $bias_3, $genA_4, $genB_5) {
+  $__res = (($Bind1_1_0)['bind'])((($dictMonadGen_0)['chooseFloat'])(0.0, 1.0), function($n_6 = null) use ($__local_var_2_1, $bias_3, $genA_4, $genB_5) {
   $__num = \func_num_args();
   $__t2 = null;;
   if (($n_6 < $bias_3)) {
-$__t2 = ((($__local_var_2_1)['map'])($GLOBALS['Data_Either_Left']))($genA_4);
+$__t2 = (($__local_var_2_1)['map'])($GLOBALS['Data_Either_Left'], $genA_4);
 goto end_branch_2;;
 };
-  $__t2 = ((($__local_var_2_1)['map'])($GLOBALS['Data_Either_Right']))($genB_5);
+  $__t2 = (($__local_var_2_1)['map'])($GLOBALS['Data_Either_Right'], $genB_5);
   end_branch_2:;
   $__res = $__t2;
   goto __end;;
@@ -285,15 +304,21 @@ goto end_branch_2;;
 })();
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_Gen_Common_genEither__prime__'] = __NAMESPACE__ . '\\majControl_majMonad_majGen_majCommon_genmajEither__prime__';
 
 // Control_Monad_Gen_Common_genEither
-$GLOBALS['Control_Monad_Gen_Common_genEither'] = function($dictMonadGen_0 = null) {
+function majControl_majMonad_majGen_majCommon_genmajEither($dictMonadGen_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Monad_Gen_Common_genEither__prime__'])($dictMonadGen_0))(0.5);
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majGen_majCommon_genmajEither';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ($GLOBALS['Control_Monad_Gen_Common_genEither__prime__'])($dictMonadGen_0, 0.5);
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_Gen_Common_genEither'] = __NAMESPACE__ . '\\majControl_majMonad_majGen_majCommon_genmajEither';
 

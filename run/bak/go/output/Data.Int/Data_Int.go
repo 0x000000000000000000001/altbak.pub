@@ -99,7 +99,7 @@ var once_radix sync.Once
 func Get_radix() gopurs_runtime.Value {
 	once_radix.Do(func() {
 		cache_radix = gopurs_runtime.Func(func(n_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_radix(n_0_box.IntVal)
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_radix(n_0_box.IntVal))}
 })
 	})
 	return cache_radix
@@ -110,7 +110,7 @@ var once_odd sync.Once
 func Get_odd() gopurs_runtime.Value {
 	once_odd.Do(func() {
 		cache_odd = gopurs_runtime.Func(func(x_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_odd(x_0_box.IntVal)
+return gopurs_runtime.Bool(Call_odd(x_0_box.IntVal))
 })
 	})
 	return cache_odd
@@ -166,7 +166,7 @@ var once_unsafeClamp sync.Once
 func Get_unsafeClamp() gopurs_runtime.Value {
 	once_unsafeClamp.Do(func() {
 		cache_unsafeClamp = gopurs_runtime.Func(func(x_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_unsafeClamp(x_0_box.FloatVal())
+return gopurs_runtime.Int(Call_unsafeClamp(x_0_box.FloatVal()))
 })
 	})
 	return cache_unsafeClamp
@@ -177,7 +177,7 @@ var once_round sync.Once
 func Get_round() gopurs_runtime.Value {
 	once_round.Do(func() {
 		cache_round = gopurs_runtime.Func(func(x_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_round(x_0_box.FloatVal())
+return gopurs_runtime.Int(Call_round(x_0_box.FloatVal()))
 })
 	})
 	return cache_round
@@ -188,7 +188,7 @@ var once_trunc sync.Once
 func Get_trunc() gopurs_runtime.Value {
 	once_trunc.Do(func() {
 		cache_trunc = gopurs_runtime.Func(func(x_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_trunc(x_0_box.FloatVal())
+return gopurs_runtime.Int(Call_trunc(x_0_box.FloatVal()))
 })
 	})
 	return cache_trunc
@@ -199,7 +199,7 @@ var once_floor sync.Once
 func Get_floor() gopurs_runtime.Value {
 	once_floor.Do(func() {
 		cache_floor = gopurs_runtime.Func(func(x_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_floor(x_0_box.FloatVal())
+return gopurs_runtime.Int(Call_floor(x_0_box.FloatVal()))
 })
 	})
 	return cache_floor
@@ -432,7 +432,7 @@ var once_ceil sync.Once
 func Get_ceil() gopurs_runtime.Value {
 	once_ceil.Do(func() {
 		cache_ceil = gopurs_runtime.Func(func(x_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_ceil(x_0_box.FloatVal())
+return gopurs_runtime.Int(Call_ceil(x_0_box.FloatVal()))
 })
 	})
 	return cache_ceil
@@ -477,7 +477,7 @@ type Constructor_Odd struct {
 }
 
 
-func Call_radix(n_0_loop int64) gopurs_runtime.Value {
+func Call_radix(n_0_loop int64) *pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value] {
 var n_0 int64 = n_0_loop
 _ = n_0
 var __t0 gopurs_runtime.Value
@@ -493,16 +493,16 @@ goto end_branch_0
 __t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}
 }
 end_branch_0:
-return __t0
+return (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(__t0.UnsafePtr)
 }
 
-func Call_odd(x_0_loop int64) gopurs_runtime.Value {
+func Call_odd(x_0_loop int64) bool {
 var x_0 int64 = x_0_loop
 _ = x_0
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Eq.Get_eqBoolean(), "eq"), gopurs_runtime.Bool(((x_0) & (1)) == (0)), gopurs_runtime.Bool(false))
+return (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Eq.Get_eqBoolean(), "eq"), gopurs_runtime.Bool(((x_0) & (1)) == (0)), gopurs_runtime.Bool(false)).IntVal) != (0)
 }
 
-func Call_unsafeClamp(x_0_loop float64) gopurs_runtime.Value {
+func Call_unsafeClamp(x_0_loop float64) int64 {
 var x_0 float64 = x_0_loop
 _ = x_0
 var __t2 gopurs_runtime.Value
@@ -557,25 +557,25 @@ end_branch_1:
 __t2 = __t1
 }
 end_branch_2:
-return __t2
+return __t2.IntVal
 }
 
-func Call_round(x_0_loop float64) gopurs_runtime.Value {
+func Call_round(x_0_loop float64) int64 {
 var x_0 float64 = x_0_loop
 _ = x_0
-return gopurs_runtime.Apply(Get_unsafeClamp(), gopurs_runtime.Apply(pkg_Data_Number.Get_round(), gopurs_runtime.Float(x_0)))
+return gopurs_runtime.Int(Call_unsafeClamp(gopurs_runtime.Apply(pkg_Data_Number.Get_round(), gopurs_runtime.Float(x_0)).FloatVal())).IntVal
 }
 
-func Call_trunc(x_0_loop float64) gopurs_runtime.Value {
+func Call_trunc(x_0_loop float64) int64 {
 var x_0 float64 = x_0_loop
 _ = x_0
-return gopurs_runtime.Apply(Get_unsafeClamp(), gopurs_runtime.Apply(pkg_Data_Number.Get_trunc(), gopurs_runtime.Float(x_0)))
+return gopurs_runtime.Int(Call_unsafeClamp(gopurs_runtime.Apply(pkg_Data_Number.Get_trunc(), gopurs_runtime.Float(x_0)).FloatVal())).IntVal
 }
 
-func Call_floor(x_0_loop float64) gopurs_runtime.Value {
+func Call_floor(x_0_loop float64) int64 {
 var x_0 float64 = x_0_loop
 _ = x_0
-return gopurs_runtime.Apply(Get_unsafeClamp(), gopurs_runtime.Apply(pkg_Data_Number.Get_floor(), gopurs_runtime.Float(x_0)))
+return gopurs_runtime.Int(Call_unsafeClamp(gopurs_runtime.Apply(pkg_Data_Number.Get_floor(), gopurs_runtime.Float(x_0)).FloatVal())).IntVal
 }
 
 func Call_even(x_0_loop int64) bool {
@@ -603,10 +603,10 @@ end_branch_0:
 return __t0
 }
 
-func Call_ceil(x_0_loop float64) gopurs_runtime.Value {
+func Call_ceil(x_0_loop float64) int64 {
 var x_0 float64 = x_0_loop
 _ = x_0
-return gopurs_runtime.Apply(Get_unsafeClamp(), gopurs_runtime.Apply(pkg_Data_Number.Get_ceil(), gopurs_runtime.Float(x_0)))
+return gopurs_runtime.Int(Call_unsafeClamp(gopurs_runtime.Apply(pkg_Data_Number.Get_ceil(), gopurs_runtime.Float(x_0)).FloatVal())).IntVal
 }
 
 func Get_fromNumberImpl() gopurs_runtime.Value {

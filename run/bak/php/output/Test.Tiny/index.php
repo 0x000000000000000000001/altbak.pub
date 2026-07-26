@@ -97,10 +97,13 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+final class Test_Tiny_Circle { public function __construct(public int $value0) {} }
+final class Test_Tiny_Rect { public function __construct(public int $value0, public int $value1) {} }
+
 // Test_Tiny_Circle
 $GLOBALS['Test_Tiny_Circle'] = function($value0 = null) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data1("Circle", $value0);
+  $__res = new \Test\Tiny\Test_Tiny_Circle($value0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -113,7 +116,7 @@ $GLOBALS['Test_Tiny_Rect'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Rect", $value0, $value1);
+  $__res = new \Test\Tiny\Test_Tiny_Rect($value0, $value1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -122,14 +125,18 @@ $GLOBALS['Test_Tiny_Rect'] = (function() {
 })();
 
 // Test_Tiny_area
-$GLOBALS['Test_Tiny_area'] = function($v_0 = null) {
+function majTest_majTiny_area($v_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majTest_majTiny_area';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__t0 = null;;
-  if ((is_object($v_0) && (($v_0)->{'tag'} === "Circle"))) {
+  if ($v_0 instanceof \Test\Tiny\Test_Tiny_Circle) {
 $__t0 = (($v_0)->{'value0'} * ($v_0)->{'value0'});
 goto end_branch_0;;
 };
-  if ((is_object($v_0) && (($v_0)->{'tag'} === "Rect"))) {
+  if ($v_0 instanceof \Test\Tiny\Test_Tiny_Rect) {
 $__t0 = (($v_0)->{'value0'} * ($v_0)->{'value1'});
 goto end_branch_0;;
 };
@@ -139,6 +146,7 @@ goto end_branch_0;;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Test_Tiny_area'] = __NAMESPACE__ . '\\majTest_majTiny_area';
 

@@ -99,6 +99,8 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_Ord_Generic_genericOrdNoConstructors
 $GLOBALS['Data_Ord_Generic_genericOrdNoConstructors'] = ["genericCompare__prime__" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
@@ -106,7 +108,7 @@ $GLOBALS['Data_Ord_Generic_genericOrdNoConstructors'] = ["genericCompare__prime_
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data0("EQ");
+  $__res = new \Data\Ordering\Data_Ordering_EQ();
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -121,7 +123,7 @@ $GLOBALS['Data_Ord_Generic_genericOrdNoArguments'] = ["genericCompare__prime__" 
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data0("EQ");
+  $__res = new \Data\Ordering\Data_Ordering_EQ();
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -130,15 +132,19 @@ $GLOBALS['Data_Ord_Generic_genericOrdNoArguments'] = ["genericCompare__prime__" 
 })()];
 
 // Data_Ord_Generic_genericOrdArgument
-$GLOBALS['Data_Ord_Generic_genericOrdArgument'] = function($dictOrd_0 = null) {
+function majData_majOrd_majGeneric_genericmajOrdmajArgument($dictOrd_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majOrd_majGeneric_genericmajOrdmajArgument';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["genericCompare__prime__" => (function() use ($dictOrd_0) {
   $__fn = function($v_1 = null, $v1_2 = null) use ($dictOrd_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictOrd_0)['compare'])($v_1))($v1_2);
+  $__res = (($dictOrd_0)['compare'])($v_1, $v1_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -147,28 +153,38 @@ $GLOBALS['Data_Ord_Generic_genericOrdArgument'] = function($dictOrd_0 = null) {
 })()];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Ord_Generic_genericOrdArgument'] = __NAMESPACE__ . '\\majData_majOrd_majGeneric_genericmajOrdmajArgument';
 
 // Data_Ord_Generic_genericCompare'
-$GLOBALS['Data_Ord_Generic_genericCompare__prime__'] = function($dict_0 = null) {
+function majData_majOrd_majGeneric_genericmajCompare__prime__($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majOrd_majGeneric_genericmajCompare__prime__';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['genericCompare__prime__'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Ord_Generic_genericCompare__prime__'] = __NAMESPACE__ . '\\majData_majOrd_majGeneric_genericmajCompare__prime__';
 
 // Data_Ord_Generic_genericOrdConstructor
-$GLOBALS['Data_Ord_Generic_genericOrdConstructor'] = function($dictGenericOrd_0 = null) {
+function majData_majOrd_majGeneric_genericmajOrdmajConstructor($dictGenericOrd_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majOrd_majGeneric_genericmajOrdmajConstructor';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["genericCompare__prime__" => (function() use ($dictGenericOrd_0) {
   $__fn = function($v_1 = null, $v1_2 = null) use ($dictGenericOrd_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictGenericOrd_0)['genericCompare__prime__'])($v_1))($v1_2);
+  $__res = (($dictGenericOrd_0)['genericCompare__prime__'])($v_1, $v1_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -177,13 +193,14 @@ $GLOBALS['Data_Ord_Generic_genericOrdConstructor'] = function($dictGenericOrd_0 
 })()];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Ord_Generic_genericOrdConstructor'] = __NAMESPACE__ . '\\majData_majOrd_majGeneric_genericmajOrdmajConstructor';
 
 // Data_Ord_Generic_genericOrdProduct
-$GLOBALS['Data_Ord_Generic_genericOrdProduct'] = (function() {
-  $__fn = function($dictGenericOrd_0 = null, $dictGenericOrd1_1 = null) use (&$__fn) {
+function majData_majOrd_majGeneric_genericmajOrdmajProduct($dictGenericOrd_0, $dictGenericOrd1_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majOrd_majGeneric_genericmajOrdmajProduct';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
@@ -193,10 +210,10 @@ $GLOBALS['Data_Ord_Generic_genericOrdProduct'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $v2_4_0 = ((($dictGenericOrd_0)['genericCompare__prime__'])(($v_2)->{'value0'}))(($v1_3)->{'value0'});
+  $v2_4_0 = (($dictGenericOrd_0)['genericCompare__prime__'])(($v_2)->{'value0'}, ($v1_3)->{'value0'});
   $__t1 = null;;
-  if ((is_object($v2_4_0) && (($v2_4_0)->{'tag'} === "EQ"))) {
-$__t1 = ((($dictGenericOrd1_1)['genericCompare__prime__'])(($v_2)->{'value1'}))(($v1_3)->{'value1'});
+  if ($v2_4_0 instanceof \Data\Ordering\Data_Ordering_EQ) {
+$__t1 = (($dictGenericOrd1_1)['genericCompare__prime__'])(($v_2)->{'value1'}, ($v1_3)->{'value1'});
 goto end_branch_1;;
 };
   $__t1 = $v2_4_0;
@@ -210,15 +227,14 @@ goto end_branch_1;;
 })()];
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Ord_Generic_genericOrdProduct'] = __NAMESPACE__ . '\\majData_majOrd_majGeneric_genericmajOrdmajProduct';
 
 // Data_Ord_Generic_genericOrdSum
-$GLOBALS['Data_Ord_Generic_genericOrdSum'] = (function() {
-  $__fn = function($dictGenericOrd_0 = null, $dictGenericOrd1_1 = null) use (&$__fn) {
+function majData_majOrd_majGeneric_genericmajOrdmajSum($dictGenericOrd_0, $dictGenericOrd1_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majOrd_majGeneric_genericmajOrdmajSum';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
@@ -229,14 +245,14 @@ $GLOBALS['Data_Ord_Generic_genericOrdSum'] = (function() {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__t0 = null;;
-  if ((is_object($v_2) && (($v_2)->{'tag'} === "Inl"))) {
+  if ($v_2 instanceof \Data\Generic\Rep\Data_Generic_Rep_Inl) {
 $__t1 = null;;
-if ((is_object($v1_3) && (($v1_3)->{'tag'} === "Inl"))) {
-$__t1 = ((($dictGenericOrd_0)['genericCompare__prime__'])(($v_2)->{'value0'}))(($v1_3)->{'value0'});
+if ($v1_3 instanceof \Data\Generic\Rep\Data_Generic_Rep_Inl) {
+$__t1 = (($dictGenericOrd_0)['genericCompare__prime__'])(($v_2)->{'value0'}, ($v1_3)->{'value0'});
 goto end_branch_1;;
 };
-if ((is_object($v1_3) && (($v1_3)->{'tag'} === "Inr"))) {
-$__t1 = new Phpurs_Data0("LT");
+if ($v1_3 instanceof \Data\Generic\Rep\Data_Generic_Rep_Inr) {
+$__t1 = new \Data\Ordering\Data_Ordering_LT();
 goto end_branch_1;;
 };
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -245,14 +261,14 @@ end_branch_1:;
 $__t0 = $__t1;
 goto end_branch_0;;
 };
-  if ((is_object($v_2) && (($v_2)->{'tag'} === "Inr"))) {
+  if ($v_2 instanceof \Data\Generic\Rep\Data_Generic_Rep_Inr) {
 $__t2 = null;;
-if ((is_object($v1_3) && (($v1_3)->{'tag'} === "Inr"))) {
-$__t2 = ((($dictGenericOrd1_1)['genericCompare__prime__'])(($v_2)->{'value0'}))(($v1_3)->{'value0'});
+if ($v1_3 instanceof \Data\Generic\Rep\Data_Generic_Rep_Inr) {
+$__t2 = (($dictGenericOrd1_1)['genericCompare__prime__'])(($v_2)->{'value0'}, ($v1_3)->{'value0'});
 goto end_branch_2;;
 };
-if ((is_object($v1_3) && (($v1_3)->{'tag'} === "Inl"))) {
-$__t2 = new Phpurs_Data0("GT");
+if ($v1_3 instanceof \Data\Generic\Rep\Data_Generic_Rep_Inl) {
+$__t2 = new \Data\Ordering\Data_Ordering_GT();
 goto end_branch_2;;
 };
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -273,23 +289,21 @@ goto end_branch_0;;
 })()];
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Ord_Generic_genericOrdSum'] = __NAMESPACE__ . '\\majData_majOrd_majGeneric_genericmajOrdmajSum';
 
 // Data_Ord_Generic_genericCompare
-$GLOBALS['Data_Ord_Generic_genericCompare'] = (function() {
-  $__fn = function($dictGeneric_0 = null, $dictGenericOrd_1 = null, $x_2 = null, $y_3 = null) use (&$__fn) {
+function majData_majOrd_majGeneric_genericmajCompare($dictGeneric_0, $dictGenericOrd_1 = null, $x_2 = null, $y_3 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majOrd_majGeneric_genericmajCompare';
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ((($dictGenericOrd_1)['genericCompare__prime__'])((($dictGeneric_0)['from'])($x_2)))((($dictGeneric_0)['from'])($y_3));
+  $__res = (($dictGenericOrd_1)['genericCompare__prime__'])((($dictGeneric_0)['from'])($x_2), (($dictGeneric_0)['from'])($y_3));
   goto __end;;
   __end:
-  return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
-  };
-  return $__fn;
-})();
+  return 4 < $__num ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
+}
+$GLOBALS['Data_Ord_Generic_genericCompare'] = __NAMESPACE__ . '\\majData_majOrd_majGeneric_genericmajCompare';
 

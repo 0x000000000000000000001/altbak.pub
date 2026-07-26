@@ -103,6 +103,8 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Control_MonadPlus_monadPlusArray
 $GLOBALS['Control_MonadPlus_monadPlusArray'] = ["Monad0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();

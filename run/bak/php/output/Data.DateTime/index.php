@@ -177,6 +177,8 @@ $GLOBALS['Data_DateTime_adjustImpl'] = $ffi_Data_DateTime['adjustImpl'] ?? new c
 $GLOBALS['Data_DateTime_calcDiff'] = $ffi_Data_DateTime['calcDiff'] ?? new class { public function __invoke(...$args) { return $this; } };
 
 
+final class Data_DateTime_DateTime { public function __construct(public mixed $value0, public mixed $value1) {} }
+
 // Data_DateTime_DateTime
 $GLOBALS['Data_DateTime_DateTime'] = (function() {
   $__fn = function($value0 = null, $value1 = null) use (&$__fn) {
@@ -184,7 +186,7 @@ $GLOBALS['Data_DateTime_DateTime'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("DateTime", $value0, $value1);
+  $__res = new \Data\DateTime\Data_DateTime_DateTime($value0, $value1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -193,98 +195,104 @@ $GLOBALS['Data_DateTime_DateTime'] = (function() {
 })();
 
 // Data_DateTime_toRecord
-$GLOBALS['Data_DateTime_toRecord'] = function($v_0 = null) {
+function majData_majDatemajTime_tomajRecord($v_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majDatemajTime_tomajRecord';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["year" => (($GLOBALS['Data_Date_Component_boundedEnumYear'])['fromEnum'])((($v_0)->{'value0'})->{'value0'}), "month" => (($GLOBALS['Data_Date_Component_boundedEnumMonth'])['fromEnum'])((($v_0)->{'value0'})->{'value1'}), "day" => (($GLOBALS['Data_Date_Component_boundedEnumDay'])['fromEnum'])((($v_0)->{'value0'})->{'value2'}), "hour" => (($GLOBALS['Data_Time_Component_boundedEnumHour'])['fromEnum'])((($v_0)->{'value1'})->{'value0'}), "minute" => (($GLOBALS['Data_Time_Component_boundedEnumMinute'])['fromEnum'])((($v_0)->{'value1'})->{'value1'}), "second" => (($GLOBALS['Data_Time_Component_boundedEnumSecond'])['fromEnum'])((($v_0)->{'value1'})->{'value2'}), "millisecond" => (($GLOBALS['Data_Time_Component_boundedEnumMillisecond'])['fromEnum'])((($v_0)->{'value1'})->{'value3'})];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_DateTime_toRecord'] = __NAMESPACE__ . '\\majData_majDatemajTime_tomajRecord';
 
 // Data_DateTime_time
-$GLOBALS['Data_DateTime_time'] = function($v_0 = null) {
+function majData_majDatemajTime_time($v_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majDatemajTime_time';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($v_0)->{'value1'};
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_DateTime_time'] = __NAMESPACE__ . '\\majData_majDatemajTime_time';
 
 // Data_DateTime_showDateTime
 $GLOBALS['Data_DateTime_showDateTime'] = ["show" => function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(DateTime "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($GLOBALS['Data_Date_showDate'])['show'])(($v_0)->{'value0'})))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])(" "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($GLOBALS['Data_Time_showTime'])['show'])(($v_0)->{'value1'})))(")"))));
+  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(DateTime ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($GLOBALS['Data_Date_showDate'])['show'])(($v_0)->{'value0'}), (($GLOBALS['Data_Semigroup_semigroupString'])['append'])(" ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($GLOBALS['Data_Time_showTime'])['show'])(($v_0)->{'value1'}), ")"))));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
 
 // Data_DateTime_modifyTimeF
-$GLOBALS['Data_DateTime_modifyTimeF'] = (function() {
-  $__fn = function($dictFunctor_0 = null, $f_1 = null, $v_2 = null) use (&$__fn) {
+function majData_majDatemajTime_modifymajTimemajF($dictFunctor_0, $f_1 = null, $v_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majDatemajTime_modifymajTimemajF';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($dictFunctor_0)['map'])(($GLOBALS['Data_DateTime_DateTime'])(($v_2)->{'value0'})))(($f_1)(($v_2)->{'value1'}));
+  $__res = (($dictFunctor_0)['map'])(($GLOBALS['Data_DateTime_DateTime'])(($v_2)->{'value0'}), ($f_1)(($v_2)->{'value1'}));
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_DateTime_modifyTimeF'] = __NAMESPACE__ . '\\majData_majDatemajTime_modifymajTimemajF';
 
 // Data_DateTime_modifyTime
-$GLOBALS['Data_DateTime_modifyTime'] = (function() {
-  $__fn = function($f_0 = null, $v_1 = null) use (&$__fn) {
+function majData_majDatemajTime_modifymajTime($f_0, $v_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majDatemajTime_modifymajTime';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("DateTime", ($v_1)->{'value0'}, ($f_0)(($v_1)->{'value1'}));
+  $__res = new \Data\DateTime\Data_DateTime_DateTime(($v_1)->{'value0'}, ($f_0)(($v_1)->{'value1'}));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_DateTime_modifyTime'] = __NAMESPACE__ . '\\majData_majDatemajTime_modifymajTime';
 
 // Data_DateTime_modifyDateF
-$GLOBALS['Data_DateTime_modifyDateF'] = (function() {
-  $__fn = function($dictFunctor_0 = null, $f_1 = null, $v_2 = null) use (&$__fn) {
+function majData_majDatemajTime_modifymajDatemajF($dictFunctor_0, $f_1 = null, $v_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majDatemajTime_modifymajDatemajF';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   $__local_var_3_0 = ($v_2)->{'value1'};
-  $__res = ((($dictFunctor_0)['map'])(function($a_4 = null) use ($__local_var_3_0) {
+  $__res = (($dictFunctor_0)['map'])(function($a_4 = null) use ($__local_var_3_0) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("DateTime", $a_4, $__local_var_3_0);
+  $__res = new \Data\DateTime\Data_DateTime_DateTime($a_4, $__local_var_3_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(($f_1)(($v_2)->{'value0'}));
+}, ($f_1)(($v_2)->{'value0'}));
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_DateTime_modifyDateF'] = __NAMESPACE__ . '\\majData_majDatemajTime_modifymajDatemajF';
 
 // Data_DateTime_modifyDate
-$GLOBALS['Data_DateTime_modifyDate'] = (function() {
-  $__fn = function($f_0 = null, $v_1 = null) use (&$__fn) {
+function majData_majDatemajTime_modifymajDate($f_0, $v_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majDatemajTime_modifymajDate';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("DateTime", ($f_0)(($v_1)->{'value0'}), ($v_1)->{'value1'});
+  $__res = new \Data\DateTime\Data_DateTime_DateTime(($f_0)(($v_1)->{'value0'}), ($v_1)->{'value1'});
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_DateTime_modifyDate'] = __NAMESPACE__ . '\\majData_majDatemajTime_modifymajDate';
 
 // Data_DateTime_eqDateTime
 $GLOBALS['Data_DateTime_eqDateTime'] = ["eq" => (function() {
@@ -293,7 +301,7 @@ $GLOBALS['Data_DateTime_eqDateTime'] = ["eq" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(((($GLOBALS['Data_Date_eqDate'])['eq'])(($x_0)->{'value0'}))(($y_1)->{'value0'})))(((($GLOBALS['Data_Time_eqTime'])['eq'])(($x_0)->{'value1'}))(($y_1)->{'value1'}));
+  $__res = (($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])((($GLOBALS['Data_Date_eqDate'])['eq'])(($x_0)->{'value0'}, ($y_1)->{'value0'}), (($GLOBALS['Data_Time_eqTime'])['eq'])(($x_0)->{'value1'}, ($y_1)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -308,17 +316,17 @@ $GLOBALS['Data_DateTime_ordDateTime'] = ["compare" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $v_2_0 = ((($GLOBALS['Data_Date_ordDate'])['compare'])(($x_0)->{'value0'}))(($y_1)->{'value0'});
+  $v_2_0 = (($GLOBALS['Data_Date_ordDate'])['compare'])(($x_0)->{'value0'}, ($y_1)->{'value0'});
   $__t1 = null;;
-  if ((is_object($v_2_0) && (($v_2_0)->{'tag'} === "LT"))) {
-$__t1 = new Phpurs_Data0("LT");
+  if ($v_2_0 instanceof \Data\Ordering\Data_Ordering_LT) {
+$__t1 = new \Data\Ordering\Data_Ordering_LT();
 goto end_branch_1;;
 };
-  if ((is_object($v_2_0) && (($v_2_0)->{'tag'} === "GT"))) {
-$__t1 = new Phpurs_Data0("GT");
+  if ($v_2_0 instanceof \Data\Ordering\Data_Ordering_GT) {
+$__t1 = new \Data\Ordering\Data_Ordering_GT();
 goto end_branch_1;;
 };
-  $__t1 = ((($GLOBALS['Data_Time_ordTime'])['compare'])(($x_0)->{'value1'}))(($y_1)->{'value1'});
+  $__t1 = (($GLOBALS['Data_Time_ordTime'])['compare'])(($x_0)->{'value1'}, ($y_1)->{'value1'});
   end_branch_1:;
   $__res = $__t1;
   goto __end;;
@@ -335,31 +343,35 @@ goto end_branch_1;;
 }];
 
 // Data_DateTime_diff
-$GLOBALS['Data_DateTime_diff'] = (function() {
-  $__fn = function($dictDuration_0 = null, $dt1_1 = null, $dt2_2 = null) use (&$__fn) {
+function majData_majDatemajTime_diff($dictDuration_0, $dt1_1 = null, $dt2_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majDatemajTime_diff';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   $__res = (($dictDuration_0)['toDuration'])(($GLOBALS['Data_DateTime_calcDiff'])(($GLOBALS['Data_DateTime_toRecord'])($dt1_1), ($GLOBALS['Data_DateTime_toRecord'])($dt2_2)));
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_DateTime_diff'] = __NAMESPACE__ . '\\majData_majDatemajTime_diff';
 
 // Data_DateTime_date
-$GLOBALS['Data_DateTime_date'] = function($v_0 = null) {
+function majData_majDatemajTime_date($v_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majDatemajTime_date';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($v_0)->{'value0'};
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_DateTime_date'] = __NAMESPACE__ . '\\majData_majDatemajTime_date';
 
 // Data_DateTime_boundedDateTime
-$GLOBALS['Data_DateTime_boundedDateTime'] = ["bottom" => new Phpurs_Data2("DateTime", ($GLOBALS['Data_Date_boundedDate'])['bottom'], ($GLOBALS['Data_Time_boundedTime'])['bottom']), "top" => new Phpurs_Data2("DateTime", ($GLOBALS['Data_Date_boundedDate'])['top'], ($GLOBALS['Data_Time_boundedTime'])['top']), "Ord0" => function($_dollar__unused_0 = null) {
+$GLOBALS['Data_DateTime_boundedDateTime'] = ["bottom" => new \Data\DateTime\Data_DateTime_DateTime(($GLOBALS['Data_Date_boundedDate'])['bottom'], ($GLOBALS['Data_Time_boundedTime'])['bottom']), "top" => new \Data\DateTime\Data_DateTime_DateTime(($GLOBALS['Data_Date_boundedDate'])['top'], ($GLOBALS['Data_Time_boundedTime'])['top']), "Ord0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_DateTime_ordDateTime'];
   goto __end;;
@@ -368,23 +380,22 @@ $GLOBALS['Data_DateTime_boundedDateTime'] = ["bottom" => new Phpurs_Data2("DateT
 }];
 
 // Data_DateTime_adjust
-$GLOBALS['Data_DateTime_adjust'] = (function() {
-  $__fn = function($dictDuration_0 = null, $d_1 = null, $dt_2 = null) use (&$__fn) {
+function majData_majDatemajTime_adjust($dictDuration_0, $d_1 = null, $dt_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majDatemajTime_adjust';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($GLOBALS['Data_Maybe_bindMaybe'])['bind'])((((($GLOBALS['Data_DateTime_adjustImpl'])($GLOBALS['Data_Maybe_Just']))(new Phpurs_Data0("Nothing")))((($dictDuration_0)['fromDuration'])($d_1)))(($GLOBALS['Data_DateTime_toRecord'])($dt_2))))(function($rec_3 = null) {
+  $__res = (($GLOBALS['Data_Maybe_bindMaybe'])['bind'])(($GLOBALS['Data_DateTime_adjustImpl'])($GLOBALS['Data_Maybe_Just'], new \Data\Maybe\Data_Maybe_Nothing(), (($dictDuration_0)['fromDuration'])($d_1), ($GLOBALS['Data_DateTime_toRecord'])($dt_2)), function($rec_3 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Maybe_applyMaybe'])['apply'])(((($GLOBALS['Data_Maybe_functorMaybe'])['map'])($GLOBALS['Data_DateTime_DateTime']))(((($GLOBALS['Data_Maybe_bindMaybe'])['bind'])(((($GLOBALS['Data_Maybe_applyMaybe'])['apply'])(((($GLOBALS['Data_Maybe_applyMaybe'])['apply'])(((($GLOBALS['Data_Maybe_functorMaybe'])['map'])($GLOBALS['Data_Date_exactDate']))((($GLOBALS['Data_Date_Component_boundedEnumYear'])['toEnum'])(($rec_3)['year']))))((($GLOBALS['Data_Date_Component_boundedEnumMonth'])['toEnum'])(($rec_3)['month']))))((($GLOBALS['Data_Date_Component_boundedEnumDay'])['toEnum'])(($rec_3)['day']))))($GLOBALS['Control_Bind_identity']))))(((($GLOBALS['Data_Maybe_applyMaybe'])['apply'])(((($GLOBALS['Data_Maybe_applyMaybe'])['apply'])(((($GLOBALS['Data_Maybe_applyMaybe'])['apply'])(((($GLOBALS['Data_Maybe_functorMaybe'])['map'])($GLOBALS['Data_Time_Time']))((($GLOBALS['Data_Time_Component_boundedEnumHour'])['toEnum'])(($rec_3)['hour']))))((($GLOBALS['Data_Time_Component_boundedEnumMinute'])['toEnum'])(($rec_3)['minute']))))((($GLOBALS['Data_Time_Component_boundedEnumSecond'])['toEnum'])(($rec_3)['second']))))((($GLOBALS['Data_Time_Component_boundedEnumMillisecond'])['toEnum'])(($rec_3)['millisecond'])));
+  $__res = (($GLOBALS['Data_Maybe_applyMaybe'])['apply'])((($GLOBALS['Data_Maybe_functorMaybe'])['map'])($GLOBALS['Data_DateTime_DateTime'], (($GLOBALS['Data_Maybe_bindMaybe'])['bind'])((($GLOBALS['Data_Maybe_applyMaybe'])['apply'])((($GLOBALS['Data_Maybe_applyMaybe'])['apply'])((($GLOBALS['Data_Maybe_functorMaybe'])['map'])($GLOBALS['Data_Date_exactDate'], (($GLOBALS['Data_Date_Component_boundedEnumYear'])['toEnum'])(($rec_3)['year'])), (($GLOBALS['Data_Date_Component_boundedEnumMonth'])['toEnum'])(($rec_3)['month'])), (($GLOBALS['Data_Date_Component_boundedEnumDay'])['toEnum'])(($rec_3)['day'])), $GLOBALS['Control_Bind_identity'])), (($GLOBALS['Data_Maybe_applyMaybe'])['apply'])((($GLOBALS['Data_Maybe_applyMaybe'])['apply'])((($GLOBALS['Data_Maybe_applyMaybe'])['apply'])((($GLOBALS['Data_Maybe_functorMaybe'])['map'])($GLOBALS['Data_Time_Time'], (($GLOBALS['Data_Time_Component_boundedEnumHour'])['toEnum'])(($rec_3)['hour'])), (($GLOBALS['Data_Time_Component_boundedEnumMinute'])['toEnum'])(($rec_3)['minute'])), (($GLOBALS['Data_Time_Component_boundedEnumSecond'])['toEnum'])(($rec_3)['second'])), (($GLOBALS['Data_Time_Component_boundedEnumMillisecond'])['toEnum'])(($rec_3)['millisecond'])));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 });
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_DateTime_adjust'] = __NAMESPACE__ . '\\majData_majDatemajTime_adjust';
 

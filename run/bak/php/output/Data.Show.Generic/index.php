@@ -118,6 +118,8 @@ return $exports;
 $GLOBALS['Data_Show_Generic_intercalate'] = $ffi_Data_Show_Generic['intercalate'] ?? new class { public function __invoke(...$args) { return $this; } };
 
 
+
+
 // Data_Show_Generic_genericShowArgsNoArguments
 $GLOBALS['Data_Show_Generic_genericShowArgsNoArguments'] = ["genericShowArgs" => function($v_0 = null) {
   $__num = \func_num_args();
@@ -128,8 +130,12 @@ $GLOBALS['Data_Show_Generic_genericShowArgsNoArguments'] = ["genericShowArgs" =>
 }];
 
 // Data_Show_Generic_genericShowArgsArgument
-$GLOBALS['Data_Show_Generic_genericShowArgsArgument'] = function($dictShow_0 = null) {
+function majData_majShow_majGeneric_genericmajShowmajArgsmajArgument($dictShow_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majShow_majGeneric_genericmajShowmajArgsmajArgument';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["genericShowArgs" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
   $__res = [(($dictShow_0)['show'])($v_1)];
@@ -139,70 +145,79 @@ $GLOBALS['Data_Show_Generic_genericShowArgsArgument'] = function($dictShow_0 = n
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Show_Generic_genericShowArgsArgument'] = __NAMESPACE__ . '\\majData_majShow_majGeneric_genericmajShowmajArgsmajArgument';
 
 // Data_Show_Generic_genericShowArgs
-$GLOBALS['Data_Show_Generic_genericShowArgs'] = function($dict_0 = null) {
+function majData_majShow_majGeneric_genericmajShowmajArgs($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majShow_majGeneric_genericmajShowmajArgs';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['genericShowArgs'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Show_Generic_genericShowArgs'] = __NAMESPACE__ . '\\majData_majShow_majGeneric_genericmajShowmajArgs';
 
 // Data_Show_Generic_genericShowArgsProduct
-$GLOBALS['Data_Show_Generic_genericShowArgsProduct'] = (function() {
-  $__fn = function($dictGenericShowArgs_0 = null, $dictGenericShowArgs1_1 = null) use (&$__fn) {
+function majData_majShow_majGeneric_genericmajShowmajArgsmajProduct($dictGenericShowArgs_0, $dictGenericShowArgs1_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majShow_majGeneric_genericmajShowmajArgsmajProduct';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__res = ["genericShowArgs" => function($v_2 = null) use ($dictGenericShowArgs1_1, $dictGenericShowArgs_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semigroup_semigroupArray'])['append'])((($dictGenericShowArgs_0)['genericShowArgs'])(($v_2)->{'value0'})))((($dictGenericShowArgs1_1)['genericShowArgs'])(($v_2)->{'value1'}));
+  $__res = (($GLOBALS['Data_Semigroup_semigroupArray'])['append'])((($dictGenericShowArgs_0)['genericShowArgs'])(($v_2)->{'value0'}), (($dictGenericShowArgs1_1)['genericShowArgs'])(($v_2)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Show_Generic_genericShowArgsProduct'] = __NAMESPACE__ . '\\majData_majShow_majGeneric_genericmajShowmajArgsmajProduct';
 
 // Data_Show_Generic_genericShowConstructor
-$GLOBALS['Data_Show_Generic_genericShowConstructor'] = (function() {
-  $__fn = function($dictGenericShowArgs_0 = null, $dictIsSymbol_1 = null) use (&$__fn) {
+function majData_majShow_majGeneric_genericmajShowmajConstructor($dictGenericShowArgs_0, $dictIsSymbol_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majShow_majGeneric_genericmajShowmajConstructor';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__res = ["genericShow__prime__" => function($v_2 = null) use ($dictGenericShowArgs_0, $dictIsSymbol_1) {
   $__num = \func_num_args();
-  $ctor_3_0 = (($dictIsSymbol_1)['reflectSymbol'])(new Phpurs_Data0("Proxy"));
+  $ctor_3_0 = (($dictIsSymbol_1)['reflectSymbol'])(new \Type\Proxy\Type_Proxy_Proxy());
   $v1_4_1 = (($dictGenericShowArgs_0)['genericShowArgs'])($v_2);
-  $__res = match (count($v1_4_1)) { 0 => $ctor_3_0, default => ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("("))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($GLOBALS['Data_Show_Generic_intercalate'])(" "))(((($GLOBALS['Data_Semigroup_semigroupArray'])['append'])([$ctor_3_0]))($v1_4_1))))(")")) };
+  $__res = match (count($v1_4_1)) { 0 => $ctor_3_0, default => (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])(($GLOBALS['Data_Show_Generic_intercalate'])(" ", (($GLOBALS['Data_Semigroup_semigroupArray'])['append'])([$ctor_3_0], $v1_4_1)), ")")) };
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Show_Generic_genericShowConstructor'] = __NAMESPACE__ . '\\majData_majShow_majGeneric_genericmajShowmajConstructor';
 
 // Data_Show_Generic_genericShow'
-$GLOBALS['Data_Show_Generic_genericShow__prime__'] = function($dict_0 = null) {
+function majData_majShow_majGeneric_genericmajShow__prime__($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majShow_majGeneric_genericmajShow__prime__';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['genericShow__prime__'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Show_Generic_genericShow__prime__'] = __NAMESPACE__ . '\\majData_majShow_majGeneric_genericmajShow__prime__';
 
 // Data_Show_Generic_genericShowNoConstructors
 $GLOBALS['Data_Show_Generic_genericShowNoConstructors'] = ["genericShow__prime__" => function($a_0 = null) {
@@ -214,20 +229,20 @@ $GLOBALS['Data_Show_Generic_genericShowNoConstructors'] = ["genericShow__prime__
 }];
 
 // Data_Show_Generic_genericShowSum
-$GLOBALS['Data_Show_Generic_genericShowSum'] = (function() {
-  $__fn = function($dictGenericShow_0 = null, $dictGenericShow1_1 = null) use (&$__fn) {
+function majData_majShow_majGeneric_genericmajShowmajSum($dictGenericShow_0, $dictGenericShow1_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majShow_majGeneric_genericmajShowmajSum';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__res = ["genericShow__prime__" => function($v_2 = null) use ($dictGenericShow1_1, $dictGenericShow_0) {
   $__num = \func_num_args();
   $__t0 = null;;
-  if ((is_object($v_2) && (($v_2)->{'tag'} === "Inl"))) {
+  if ($v_2 instanceof \Data\Generic\Rep\Data_Generic_Rep_Inl) {
 $__t0 = (($dictGenericShow_0)['genericShow__prime__'])(($v_2)->{'value0'});
 goto end_branch_0;;
 };
-  if ((is_object($v_2) && (($v_2)->{'tag'} === "Inr"))) {
+  if ($v_2 instanceof \Data\Generic\Rep\Data_Generic_Rep_Inr) {
 $__t0 = (($dictGenericShow1_1)['genericShow__prime__'])(($v_2)->{'value0'});
 goto end_branch_0;;
 };
@@ -241,23 +256,21 @@ goto end_branch_0;;
 }];
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Show_Generic_genericShowSum'] = __NAMESPACE__ . '\\majData_majShow_majGeneric_genericmajShowmajSum';
 
 // Data_Show_Generic_genericShow
-$GLOBALS['Data_Show_Generic_genericShow'] = (function() {
-  $__fn = function($dictGeneric_0 = null, $dictGenericShow_1 = null, $x_2 = null) use (&$__fn) {
+function majData_majShow_majGeneric_genericmajShow($dictGeneric_0, $dictGenericShow_1 = null, $x_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majShow_majGeneric_genericmajShow';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   $__res = (($dictGenericShow_1)['genericShow__prime__'])((($dictGeneric_0)['from'])($x_2));
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_Show_Generic_genericShow'] = __NAMESPACE__ . '\\majData_majShow_majGeneric_genericmajShow';
 

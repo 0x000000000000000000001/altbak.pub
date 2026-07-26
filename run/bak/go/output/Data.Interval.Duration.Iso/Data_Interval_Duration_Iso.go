@@ -225,7 +225,7 @@ var once_prettyError sync.Once
 func Get_prettyError() gopurs_runtime.Value {
 	once_prettyError.Do(func() {
 		cache_prettyError = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_prettyError(v_0_box)
+return gopurs_runtime.Str(Call_prettyError(v_0_box))
 })
 	})
 	return cache_prettyError
@@ -413,7 +413,7 @@ var once_checkWeekUsage sync.Once
 func Get_checkWeekUsage() gopurs_runtime.Value {
 	once_checkWeekUsage.Do(func() {
 		cache_checkWeekUsage = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_checkWeekUsage(v_0_box)
+return gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(Call_checkWeekUsage(v_0_box))}
 })
 	})
 	return cache_checkWeekUsage
@@ -424,7 +424,7 @@ var once_checkNegativeValues sync.Once
 func Get_checkNegativeValues() gopurs_runtime.Value {
 	once_checkNegativeValues.Do(func() {
 		cache_checkNegativeValues = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_checkNegativeValues(v_0_box)
+return gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(Call_checkNegativeValues(v_0_box))}
 })
 	})
 	return cache_checkNegativeValues
@@ -435,7 +435,7 @@ var once_checkFractionalUse sync.Once
 func Get_checkFractionalUse() gopurs_runtime.Value {
 	once_checkFractionalUse.Do(func() {
 		cache_checkFractionalUse = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_checkFractionalUse(v_0_box)
+return gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(Call_checkFractionalUse(v_0_box))}
 })
 	})
 	return cache_checkFractionalUse
@@ -446,7 +446,7 @@ var once_checkEmptiness sync.Once
 func Get_checkEmptiness() gopurs_runtime.Value {
 	once_checkEmptiness.Do(func() {
 		cache_checkEmptiness = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_checkEmptiness(v_0_box)
+return gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(Call_checkEmptiness(v_0_box))}
 })
 	})
 	return cache_checkEmptiness
@@ -457,7 +457,7 @@ var once_checkValidIsoDuration sync.Once
 func Get_checkValidIsoDuration() gopurs_runtime.Value {
 	once_checkValidIsoDuration.Do(func() {
 		cache_checkValidIsoDuration = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_checkValidIsoDuration(v_0_box)
+return gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(Call_checkValidIsoDuration(v_0_box))}
 })
 	})
 	return cache_checkValidIsoDuration
@@ -575,7 +575,7 @@ _ = v_0
 return v_0
 }
 
-func Call_prettyError(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_prettyError(v_0_loop gopurs_runtime.Value) string {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 var __t0 gopurs_runtime.Value
@@ -615,15 +615,15 @@ goto end_branch_0
 __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_0:
-return __t0
+return __t0.StrVal()
 }
 
-func Call_checkWeekUsage(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_checkWeekUsage(v_0_loop gopurs_runtime.Value) *pkg_Data_List_Types.Constructor_Cons[gopurs_runtime.Value] {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 var __t0 gopurs_runtime.Value
 {
-__local_var_1_1 := gopurs_runtime.Apply2(Get_lookup(), gopurs_runtime.Value{Type: 9, IntVal: 401302776, UnsafePtr: nil}, gopurs_runtime.RecordGet(v_0, "asMap"))
+__local_var_1_1 := gopurs_runtime.Apply(Call_lookup(gopurs_runtime.Value{Type: 9, IntVal: 401302776, UnsafePtr: nil}), gopurs_runtime.RecordGet(v_0, "asMap"))
 _ = __local_var_1_1
 var __t2 gopurs_runtime.Value
 {
@@ -680,13 +680,13 @@ goto end_branch_0
 __t0 = gopurs_runtime.RecordGet(pkg_Data_List_Types.Get_plusList(), "empty")
 }
 end_branch_0:
-return __t0
+return (*pkg_Data_List_Types.Constructor_Cons[gopurs_runtime.Value])(__t0.UnsafePtr)
 }
 
-func Call_checkNegativeValues(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_checkNegativeValues(v_0_loop gopurs_runtime.Value) *pkg_Data_List_Types.Constructor_Cons[gopurs_runtime.Value] {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-return gopurs_runtime.Apply2(Get_foldMap1(), gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return (*pkg_Data_List_Types.Constructor_Cons[gopurs_runtime.Value])(gopurs_runtime.Apply2(Get_foldMap1(), gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
 if ((*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v1_1.UnsafePtr).V1.FloatVal()) >= (0.0) {
@@ -701,10 +701,10 @@ __t0 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_List_Types.Get_app
 }
 end_branch_0:
 return __t0
-}), gopurs_runtime.RecordGet(v_0, "asList"))
+}), gopurs_runtime.RecordGet(v_0, "asList")).UnsafePtr)
 }
 
-func Call_checkFractionalUse(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_checkFractionalUse(v_0_loop gopurs_runtime.Value) *pkg_Data_List_Types.Constructor_Cons[gopurs_runtime.Value] {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 __local_var_1_0 := gopurs_runtime.Apply2(pkg_Data_List.Get_span(), gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -727,10 +727,10 @@ goto end_branch_1
 __t1 = gopurs_runtime.RecordGet(pkg_Data_List_Types.Get_plusList(), "empty")
 }
 end_branch_1:
-return __t1
+return (*pkg_Data_List_Types.Constructor_Cons[gopurs_runtime.Value])(__t1.UnsafePtr)
 }
 
-func Call_checkEmptiness(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_checkEmptiness(v_0_loop gopurs_runtime.Value) *pkg_Data_List_Types.Constructor_Cons[gopurs_runtime.Value] {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 var __t0 gopurs_runtime.Value
@@ -747,10 +747,10 @@ goto end_branch_0
 __t0 = gopurs_runtime.RecordGet(pkg_Data_List_Types.Get_plusList(), "empty")
 }
 end_branch_0:
-return __t0
+return (*pkg_Data_List_Types.Constructor_Cons[gopurs_runtime.Value])(__t0.UnsafePtr)
 }
 
-func Call_checkValidIsoDuration(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_checkValidIsoDuration(v_0_loop gopurs_runtime.Value) *pkg_Data_List_Types.Constructor_Cons[gopurs_runtime.Value] {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 var go__1_0 gopurs_runtime.Value
@@ -795,13 +795,13 @@ return __t1
 }()
 })
 })
-return gopurs_runtime.Apply2(Get_fold(), gopurs_runtime.Array([]gopurs_runtime.Value{Get_checkWeekUsage(), Get_checkEmptiness(), Get_checkFractionalUse(), Get_checkNegativeValues()}), gopurs_runtime.RecordDict2("asList", "asMap", gopurs_runtime.Apply2(go__1_0, gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: nil}, gopurs_runtime.Apply(Get_toUnfoldable(), v_0)), v_0))
+return (*pkg_Data_List_Types.Constructor_Cons[gopurs_runtime.Value])(gopurs_runtime.Apply2(Get_fold(), gopurs_runtime.Array([]gopurs_runtime.Value{Get_checkWeekUsage(), Get_checkEmptiness(), Get_checkFractionalUse(), Get_checkNegativeValues()}), gopurs_runtime.RecordDict2("asList", "asMap", gopurs_runtime.Apply2(go__1_0, gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: nil}, gopurs_runtime.Apply(Get_toUnfoldable(), v_0)), v_0)).UnsafePtr)
 }
 
 func Call_mkIsoDuration(d_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var d_0 gopurs_runtime.Value = d_0_loop
 _ = d_0
-__local_var_1_0 := gopurs_runtime.Apply(Get_checkValidIsoDuration(), d_0)
+__local_var_1_0 := gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(Call_checkValidIsoDuration(d_0))}
 _ = __local_var_1_0
 var __t1 gopurs_runtime.Value
 {

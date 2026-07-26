@@ -102,43 +102,54 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_Profunctor_Choice_right
-$GLOBALS['Data_Profunctor_Choice_right'] = function($dict_0 = null) {
+function majData_majProfunctor_majChoice_right($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majProfunctor_majChoice_right';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['right'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Profunctor_Choice_right'] = __NAMESPACE__ . '\\majData_majProfunctor_majChoice_right';
 
 // Data_Profunctor_Choice_left
-$GLOBALS['Data_Profunctor_Choice_left'] = function($dict_0 = null) {
+function majData_majProfunctor_majChoice_left($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majProfunctor_majChoice_left';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['left'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Profunctor_Choice_left'] = __NAMESPACE__ . '\\majData_majProfunctor_majChoice_left';
 
 // Data_Profunctor_Choice_splitChoice
-$GLOBALS['Data_Profunctor_Choice_splitChoice'] = (function() {
-  $__fn = function($dictSemigroupoid_0 = null, $dictChoice_1 = null, $l_2 = null, $r_3 = null) use (&$__fn) {
+function majData_majProfunctor_majChoice_splitmajChoice($dictSemigroupoid_0, $dictChoice_1 = null, $l_2 = null, $r_3 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majProfunctor_majChoice_splitmajChoice';
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ((($dictSemigroupoid_0)['compose'])((($dictChoice_1)['right'])($r_3)))((($dictChoice_1)['left'])($l_2));
+  $__res = (($dictSemigroupoid_0)['compose'])((($dictChoice_1)['right'])($r_3), (($dictChoice_1)['left'])($l_2));
   goto __end;;
   __end:
-  return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
-  };
-  return $__fn;
-})();
+  return 4 < $__num ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
+}
+$GLOBALS['Data_Profunctor_Choice_splitChoice'] = __NAMESPACE__ . '\\majData_majProfunctor_majChoice_splitmajChoice';
 
 // Data_Profunctor_Choice_fanin
-$GLOBALS['Data_Profunctor_Choice_fanin'] = (function() {
-  $__fn = function($dictSemigroupoid_0 = null, $dictChoice_1 = null) use (&$__fn) {
+function majData_majProfunctor_majChoice_fanin($dictSemigroupoid_0, $dictChoice_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majProfunctor_majChoice_fanin';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
@@ -149,14 +160,14 @@ $GLOBALS['Data_Profunctor_Choice_fanin'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($rmap_2_0)(function($v2_5 = null) {
+  $__res = ($rmap_2_0)(function($v2_5 = null) {
   $__num = \func_num_args();
   $__t1 = null;;
-  if ((is_object($v2_5) && (($v2_5)->{'tag'} === "Left"))) {
+  if ($v2_5 instanceof \Data\Either\Data_Either_Left) {
 $__t1 = ($v2_5)->{'value0'};
 goto end_branch_1;;
 };
-  if ((is_object($v2_5) && (($v2_5)->{'tag'} === "Right"))) {
+  if ($v2_5 instanceof \Data\Either\Data_Either_Right) {
 $__t1 = ($v2_5)->{'value0'};
 goto end_branch_1;;
 };
@@ -167,7 +178,7 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(((($dictSemigroupoid_0)['compose'])((($dictChoice_1)['right'])($r_4)))((($dictChoice_1)['left'])($l_3)));
+}, (($dictSemigroupoid_0)['compose'])((($dictChoice_1)['right'])($r_4), (($dictChoice_1)['left'])($l_3)));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -176,10 +187,9 @@ goto end_branch_1;;
 })();
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Profunctor_Choice_fanin'] = __NAMESPACE__ . '\\majData_majProfunctor_majChoice_fanin';
 
 // Data_Profunctor_Choice_choiceFn
 $GLOBALS['Data_Profunctor_Choice_choiceFn'] = ["left" => (function() {
@@ -189,12 +199,12 @@ $GLOBALS['Data_Profunctor_Choice_choiceFn'] = ["left" => (function() {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__t0 = null;;
-  if ((is_object($v1_1) && (($v1_1)->{'tag'} === "Left"))) {
-$__t0 = new Phpurs_Data1("Left", ($v_0)(($v1_1)->{'value0'}));
+  if ($v1_1 instanceof \Data\Either\Data_Either_Left) {
+$__t0 = new \Data\Either\Data_Either_Left(($v_0)(($v1_1)->{'value0'}));
 goto end_branch_0;;
 };
-  if ((is_object($v1_1) && (($v1_1)->{'tag'} === "Right"))) {
-$__t0 = new Phpurs_Data1("Right", ($v1_1)->{'value0'});
+  if ($v1_1 instanceof \Data\Either\Data_Either_Right) {
+$__t0 = new \Data\Either\Data_Either_Right(($v1_1)->{'value0'});
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);

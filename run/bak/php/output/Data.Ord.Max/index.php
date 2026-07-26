@@ -103,50 +103,66 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_Ord_Max_Max
-$GLOBALS['Data_Ord_Max_Max'] = function($x_0 = null) {
+function majData_majOrd_majMax_majMax($x_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majOrd_majMax_majMax';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $x_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Ord_Max_Max'] = __NAMESPACE__ . '\\majData_majOrd_majMax_majMax';
 
 // Data_Ord_Max_showMax
-$GLOBALS['Data_Ord_Max_showMax'] = function($dictShow_0 = null) {
+function majData_majOrd_majMax_showmajMax($dictShow_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majOrd_majMax_showmajMax';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Max "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1)))(")"));
+  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Max ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1), ")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Ord_Max_showMax'] = __NAMESPACE__ . '\\majData_majOrd_majMax_showmajMax';
 
 // Data_Ord_Max_semigroupMax
-$GLOBALS['Data_Ord_Max_semigroupMax'] = function($dictOrd_0 = null) {
+function majData_majOrd_majMax_semigroupmajMax($dictOrd_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majOrd_majMax_semigroupmajMax';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["append" => (function() use ($dictOrd_0) {
   $__fn = function($v_1 = null, $v1_2 = null) use ($dictOrd_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $v_3_0 = ((($dictOrd_0)['compare'])($v_1))($v1_2);
+  $v_3_0 = (($dictOrd_0)['compare'])($v_1, $v1_2);
   $__t1 = null;;
-  if ((is_object($v_3_0) && (($v_3_0)->{'tag'} === "LT"))) {
+  if ($v_3_0 instanceof \Data\Ordering\Data_Ordering_LT) {
 $__t1 = $v1_2;
 goto end_branch_1;;
 };
-  if ((is_object($v_3_0) && (($v_3_0)->{'tag'} === "EQ"))) {
+  if ($v_3_0 instanceof \Data\Ordering\Data_Ordering_EQ) {
 $__t1 = $v_1;
 goto end_branch_1;;
 };
-  if ((is_object($v_3_0) && (($v_3_0)->{'tag'} === "GT"))) {
+  if ($v_3_0 instanceof \Data\Ordering\Data_Ordering_GT) {
 $__t1 = $v_1;
 goto end_branch_1;;
 };
@@ -162,8 +178,9 @@ goto end_branch_1;;
 })()];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Ord_Max_semigroupMax'] = __NAMESPACE__ . '\\majData_majOrd_majMax_semigroupmajMax';
 
 // Data_Ord_Max_newtypeMax
 $GLOBALS['Data_Ord_Max_newtypeMax'] = ["Coercible0" => function($_dollar__unused_0 = null) {
@@ -175,8 +192,12 @@ $GLOBALS['Data_Ord_Max_newtypeMax'] = ["Coercible0" => function($_dollar__unused
 }];
 
 // Data_Ord_Max_monoidMax
-$GLOBALS['Data_Ord_Max_monoidMax'] = function($dictBounded_0 = null) {
+function majData_majOrd_majMax_monoidmajMax($dictBounded_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majOrd_majMax_monoidmajMax';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__local_var_1_0 = (($dictBounded_0)['Ord0'])(null);
   $semigroupMax1_2_1 = ["append" => (function() use ($__local_var_1_0) {
   $__fn = function($v_2 = null, $v1_3 = null) use ($__local_var_1_0, &$__fn) {
@@ -184,17 +205,17 @@ $GLOBALS['Data_Ord_Max_monoidMax'] = function($dictBounded_0 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $v_4_1 = ((($__local_var_1_0)['compare'])($v_2))($v1_3);
+  $v_4_1 = (($__local_var_1_0)['compare'])($v_2, $v1_3);
   $__t2 = null;;
-  if ((is_object($v_4_1) && (($v_4_1)->{'tag'} === "LT"))) {
+  if ($v_4_1 instanceof \Data\Ordering\Data_Ordering_LT) {
 $__t2 = $v1_3;
 goto end_branch_2;;
 };
-  if ((is_object($v_4_1) && (($v_4_1)->{'tag'} === "EQ"))) {
+  if ($v_4_1 instanceof \Data\Ordering\Data_Ordering_EQ) {
 $__t2 = $v_2;
 goto end_branch_2;;
 };
-  if ((is_object($v_4_1) && (($v_4_1)->{'tag'} === "GT"))) {
+  if ($v_4_1 instanceof \Data\Ordering\Data_Ordering_GT) {
 $__t2 = $v_2;
 goto end_branch_2;;
 };
@@ -217,21 +238,31 @@ goto end_branch_2;;
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Ord_Max_monoidMax'] = __NAMESPACE__ . '\\majData_majOrd_majMax_monoidmajMax';
 
 // Data_Ord_Max_eqMax
-$GLOBALS['Data_Ord_Max_eqMax'] = function($dictEq_0 = null) {
+function majData_majOrd_majMax_eqmajMax($dictEq_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majOrd_majMax_eqmajMax';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictEq_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Ord_Max_eqMax'] = __NAMESPACE__ . '\\majData_majOrd_majMax_eqmajMax';
 
 // Data_Ord_Max_ordMax
-$GLOBALS['Data_Ord_Max_ordMax'] = function($dictOrd_0 = null) {
+function majData_majOrd_majMax_ordmajMax($dictOrd_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majOrd_majMax_ordmajMax';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__local_var_1_0 = (($dictOrd_0)['Eq0'])(null);
   $__res = ["compare" => (function() use ($dictOrd_0) {
   $__fn = function($v_2 = null, $v1_3 = null) use ($dictOrd_0, &$__fn) {
@@ -239,7 +270,7 @@ $GLOBALS['Data_Ord_Max_ordMax'] = function($dictOrd_0 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictOrd_0)['compare'])($v_2))($v1_3);
+  $__res = (($dictOrd_0)['compare'])($v_2, $v1_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -254,6 +285,7 @@ $GLOBALS['Data_Ord_Max_ordMax'] = function($dictOrd_0 = null) {
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Ord_Max_ordMax'] = __NAMESPACE__ . '\\majData_majOrd_majMax_ordmajMax';
 

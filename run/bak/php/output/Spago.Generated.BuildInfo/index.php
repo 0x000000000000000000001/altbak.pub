@@ -95,6 +95,8 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Spago_Generated_BuildInfo_spagoVersion
 $GLOBALS['Spago_Generated_BuildInfo_spagoVersion'] = "1.0.4";
 

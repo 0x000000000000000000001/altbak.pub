@@ -97,687 +97,705 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_Tuple_Nested_uncurry9
-$GLOBALS['Data_Tuple_Nested_uncurry9'] = (function() {
-  $__fn = function($f_prime_0 = null, $v_1 = null) use (&$__fn) {
+function majData_majTuple_majNested_uncurry9($f_prime_0, $v_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTuple_majNested_uncurry9';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((((((($f_prime_0)(($v_1)->{'value0'}))((($v_1)->{'value1'})->{'value0'}))(((($v_1)->{'value1'})->{'value1'})->{'value0'}))((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value0'}))(((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))(((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))((((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))(((((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'});
+  $__res = ($f_prime_0)(($v_1)->{'value0'}, (($v_1)->{'value1'})->{'value0'}, ((($v_1)->{'value1'})->{'value1'})->{'value0'}, (((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value0'}, ((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, (((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, ((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, (((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, ((((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'});
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Tuple_Nested_uncurry9'] = __NAMESPACE__ . '\\majData_majTuple_majNested_uncurry9';
 
 // Data_Tuple_Nested_uncurry8
-$GLOBALS['Data_Tuple_Nested_uncurry8'] = (function() {
-  $__fn = function($f_prime_0 = null, $v_1 = null) use (&$__fn) {
+function majData_majTuple_majNested_uncurry8($f_prime_0, $v_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTuple_majNested_uncurry8';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((((((($f_prime_0)(($v_1)->{'value0'}))((($v_1)->{'value1'})->{'value0'}))(((($v_1)->{'value1'})->{'value1'})->{'value0'}))((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value0'}))(((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))(((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))((((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'});
+  $__res = ($f_prime_0)(($v_1)->{'value0'}, (($v_1)->{'value1'})->{'value0'}, ((($v_1)->{'value1'})->{'value1'})->{'value0'}, (((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value0'}, ((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, (((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, ((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, (((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'});
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Tuple_Nested_uncurry8'] = __NAMESPACE__ . '\\majData_majTuple_majNested_uncurry8';
 
 // Data_Tuple_Nested_uncurry7
-$GLOBALS['Data_Tuple_Nested_uncurry7'] = (function() {
-  $__fn = function($f_prime_0 = null, $v_1 = null) use (&$__fn) {
+function majData_majTuple_majNested_uncurry7($f_prime_0, $v_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTuple_majNested_uncurry7';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((((($f_prime_0)(($v_1)->{'value0'}))((($v_1)->{'value1'})->{'value0'}))(((($v_1)->{'value1'})->{'value1'})->{'value0'}))((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value0'}))(((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))(((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'});
+  $__res = ($f_prime_0)(($v_1)->{'value0'}, (($v_1)->{'value1'})->{'value0'}, ((($v_1)->{'value1'})->{'value1'})->{'value0'}, (((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value0'}, ((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, (((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, ((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'});
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Tuple_Nested_uncurry7'] = __NAMESPACE__ . '\\majData_majTuple_majNested_uncurry7';
 
 // Data_Tuple_Nested_uncurry6
-$GLOBALS['Data_Tuple_Nested_uncurry6'] = (function() {
-  $__fn = function($f_prime_0 = null, $v_1 = null) use (&$__fn) {
+function majData_majTuple_majNested_uncurry6($f_prime_0, $v_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTuple_majNested_uncurry6';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((((($f_prime_0)(($v_1)->{'value0'}))((($v_1)->{'value1'})->{'value0'}))(((($v_1)->{'value1'})->{'value1'})->{'value0'}))((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value0'}))(((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'});
+  $__res = ($f_prime_0)(($v_1)->{'value0'}, (($v_1)->{'value1'})->{'value0'}, ((($v_1)->{'value1'})->{'value1'})->{'value0'}, (((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value0'}, ((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, (((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'});
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Tuple_Nested_uncurry6'] = __NAMESPACE__ . '\\majData_majTuple_majNested_uncurry6';
 
 // Data_Tuple_Nested_uncurry5
-$GLOBALS['Data_Tuple_Nested_uncurry5'] = (function() {
-  $__fn = function($f_0 = null, $v_1 = null) use (&$__fn) {
+function majData_majTuple_majNested_uncurry5($f_0, $v_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTuple_majNested_uncurry5';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((($f_0)(($v_1)->{'value0'}))((($v_1)->{'value1'})->{'value0'}))(((($v_1)->{'value1'})->{'value1'})->{'value0'}))((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value0'}))(((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'});
+  $__res = ($f_0)(($v_1)->{'value0'}, (($v_1)->{'value1'})->{'value0'}, ((($v_1)->{'value1'})->{'value1'})->{'value0'}, (((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value0'}, ((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'});
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Tuple_Nested_uncurry5'] = __NAMESPACE__ . '\\majData_majTuple_majNested_uncurry5';
 
 // Data_Tuple_Nested_uncurry4
-$GLOBALS['Data_Tuple_Nested_uncurry4'] = (function() {
-  $__fn = function($f_0 = null, $v_1 = null) use (&$__fn) {
+function majData_majTuple_majNested_uncurry4($f_0, $v_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTuple_majNested_uncurry4';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($f_0)(($v_1)->{'value0'}))((($v_1)->{'value1'})->{'value0'}))(((($v_1)->{'value1'})->{'value1'})->{'value0'}))((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value0'});
+  $__res = ($f_0)(($v_1)->{'value0'}, (($v_1)->{'value1'})->{'value0'}, ((($v_1)->{'value1'})->{'value1'})->{'value0'}, (((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value0'});
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Tuple_Nested_uncurry4'] = __NAMESPACE__ . '\\majData_majTuple_majNested_uncurry4';
 
 // Data_Tuple_Nested_uncurry3
-$GLOBALS['Data_Tuple_Nested_uncurry3'] = (function() {
-  $__fn = function($f_0 = null, $v_1 = null) use (&$__fn) {
+function majData_majTuple_majNested_uncurry3($f_0, $v_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTuple_majNested_uncurry3';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($f_0)(($v_1)->{'value0'}))((($v_1)->{'value1'})->{'value0'}))(((($v_1)->{'value1'})->{'value1'})->{'value0'});
+  $__res = ($f_0)(($v_1)->{'value0'}, (($v_1)->{'value1'})->{'value0'}, ((($v_1)->{'value1'})->{'value1'})->{'value0'});
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Tuple_Nested_uncurry3'] = __NAMESPACE__ . '\\majData_majTuple_majNested_uncurry3';
 
 // Data_Tuple_Nested_uncurry2
-$GLOBALS['Data_Tuple_Nested_uncurry2'] = (function() {
-  $__fn = function($f_0 = null, $v_1 = null) use (&$__fn) {
+function majData_majTuple_majNested_uncurry2($f_0, $v_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTuple_majNested_uncurry2';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($f_0)(($v_1)->{'value0'}))((($v_1)->{'value1'})->{'value0'});
+  $__res = ($f_0)(($v_1)->{'value0'}, (($v_1)->{'value1'})->{'value0'});
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Tuple_Nested_uncurry2'] = __NAMESPACE__ . '\\majData_majTuple_majNested_uncurry2';
 
 // Data_Tuple_Nested_uncurry10
-$GLOBALS['Data_Tuple_Nested_uncurry10'] = (function() {
-  $__fn = function($f_prime_0 = null, $v_1 = null) use (&$__fn) {
+function majData_majTuple_majNested_uncurry10($f_prime_0, $v_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTuple_majNested_uncurry10';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((((((((($f_prime_0)(($v_1)->{'value0'}))((($v_1)->{'value1'})->{'value0'}))(((($v_1)->{'value1'})->{'value1'})->{'value0'}))((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value0'}))(((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))(((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))((((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))(((((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))((((((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'});
+  $__res = ($f_prime_0)(($v_1)->{'value0'}, (($v_1)->{'value1'})->{'value0'}, ((($v_1)->{'value1'})->{'value1'})->{'value0'}, (((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value0'}, ((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, (((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, ((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, (((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, ((((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, (((((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'});
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Tuple_Nested_uncurry10'] = __NAMESPACE__ . '\\majData_majTuple_majNested_uncurry10';
 
 // Data_Tuple_Nested_uncurry1
-$GLOBALS['Data_Tuple_Nested_uncurry1'] = (function() {
-  $__fn = function($f_0 = null, $v_1 = null) use (&$__fn) {
+function majData_majTuple_majNested_uncurry1($f_0, $v_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTuple_majNested_uncurry1';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__res = ($f_0)(($v_1)->{'value0'});
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Tuple_Nested_uncurry1'] = __NAMESPACE__ . '\\majData_majTuple_majNested_uncurry1';
 
 // Data_Tuple_Nested_tuple9
-$GLOBALS['Data_Tuple_Nested_tuple9'] = (function() {
-  $__fn = function($a_0 = null, $b_1 = null, $c_2 = null, $d_3 = null, $e_4 = null, $f_5 = null, $g_6 = null, $h_7 = null, $i_8 = null) use (&$__fn) {
+function majData_majTuple_majNested_tuple9($a_0, $b_1 = null, $c_2 = null, $d_3 = null, $e_4 = null, $f_5 = null, $g_6 = null, $h_7 = null, $i_8 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTuple_majNested_tuple9';
   if ($__num < 9) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 9);
   }
-  $__res = new Phpurs_Data2("Tuple", $a_0, new Phpurs_Data2("Tuple", $b_1, new Phpurs_Data2("Tuple", $c_2, new Phpurs_Data2("Tuple", $d_3, new Phpurs_Data2("Tuple", $e_4, new Phpurs_Data2("Tuple", $f_5, new Phpurs_Data2("Tuple", $g_6, new Phpurs_Data2("Tuple", $h_7, new Phpurs_Data2("Tuple", $i_8, $GLOBALS['Data_Unit_unit'])))))))));
+  $__res = new \Data\Tuple\Data_Tuple_Tuple($a_0, new \Data\Tuple\Data_Tuple_Tuple($b_1, new \Data\Tuple\Data_Tuple_Tuple($c_2, new \Data\Tuple\Data_Tuple_Tuple($d_3, new \Data\Tuple\Data_Tuple_Tuple($e_4, new \Data\Tuple\Data_Tuple_Tuple($f_5, new \Data\Tuple\Data_Tuple_Tuple($g_6, new \Data\Tuple\Data_Tuple_Tuple($h_7, new \Data\Tuple\Data_Tuple_Tuple($i_8, $GLOBALS['Data_Unit_unit'])))))))));
   goto __end;;
   __end:
-  return $__num > 9 ? $__res(...\array_slice(\func_get_args(), 9)) : $__res;
-  };
-  return $__fn;
-})();
+  return 9 < $__num ? $__res(...\array_slice(\func_get_args(), 9)) : $__res;
+}
+$GLOBALS['Data_Tuple_Nested_tuple9'] = __NAMESPACE__ . '\\majData_majTuple_majNested_tuple9';
 
 // Data_Tuple_Nested_tuple8
-$GLOBALS['Data_Tuple_Nested_tuple8'] = (function() {
-  $__fn = function($a_0 = null, $b_1 = null, $c_2 = null, $d_3 = null, $e_4 = null, $f_5 = null, $g_6 = null, $h_7 = null) use (&$__fn) {
+function majData_majTuple_majNested_tuple8($a_0, $b_1 = null, $c_2 = null, $d_3 = null, $e_4 = null, $f_5 = null, $g_6 = null, $h_7 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTuple_majNested_tuple8';
   if ($__num < 8) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 8);
   }
-  $__res = new Phpurs_Data2("Tuple", $a_0, new Phpurs_Data2("Tuple", $b_1, new Phpurs_Data2("Tuple", $c_2, new Phpurs_Data2("Tuple", $d_3, new Phpurs_Data2("Tuple", $e_4, new Phpurs_Data2("Tuple", $f_5, new Phpurs_Data2("Tuple", $g_6, new Phpurs_Data2("Tuple", $h_7, $GLOBALS['Data_Unit_unit']))))))));
+  $__res = new \Data\Tuple\Data_Tuple_Tuple($a_0, new \Data\Tuple\Data_Tuple_Tuple($b_1, new \Data\Tuple\Data_Tuple_Tuple($c_2, new \Data\Tuple\Data_Tuple_Tuple($d_3, new \Data\Tuple\Data_Tuple_Tuple($e_4, new \Data\Tuple\Data_Tuple_Tuple($f_5, new \Data\Tuple\Data_Tuple_Tuple($g_6, new \Data\Tuple\Data_Tuple_Tuple($h_7, $GLOBALS['Data_Unit_unit']))))))));
   goto __end;;
   __end:
-  return $__num > 8 ? $__res(...\array_slice(\func_get_args(), 8)) : $__res;
-  };
-  return $__fn;
-})();
+  return 8 < $__num ? $__res(...\array_slice(\func_get_args(), 8)) : $__res;
+}
+$GLOBALS['Data_Tuple_Nested_tuple8'] = __NAMESPACE__ . '\\majData_majTuple_majNested_tuple8';
 
 // Data_Tuple_Nested_tuple7
-$GLOBALS['Data_Tuple_Nested_tuple7'] = (function() {
-  $__fn = function($a_0 = null, $b_1 = null, $c_2 = null, $d_3 = null, $e_4 = null, $f_5 = null, $g_6 = null) use (&$__fn) {
+function majData_majTuple_majNested_tuple7($a_0, $b_1 = null, $c_2 = null, $d_3 = null, $e_4 = null, $f_5 = null, $g_6 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTuple_majNested_tuple7';
   if ($__num < 7) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 7);
   }
-  $__res = new Phpurs_Data2("Tuple", $a_0, new Phpurs_Data2("Tuple", $b_1, new Phpurs_Data2("Tuple", $c_2, new Phpurs_Data2("Tuple", $d_3, new Phpurs_Data2("Tuple", $e_4, new Phpurs_Data2("Tuple", $f_5, new Phpurs_Data2("Tuple", $g_6, $GLOBALS['Data_Unit_unit'])))))));
+  $__res = new \Data\Tuple\Data_Tuple_Tuple($a_0, new \Data\Tuple\Data_Tuple_Tuple($b_1, new \Data\Tuple\Data_Tuple_Tuple($c_2, new \Data\Tuple\Data_Tuple_Tuple($d_3, new \Data\Tuple\Data_Tuple_Tuple($e_4, new \Data\Tuple\Data_Tuple_Tuple($f_5, new \Data\Tuple\Data_Tuple_Tuple($g_6, $GLOBALS['Data_Unit_unit'])))))));
   goto __end;;
   __end:
-  return $__num > 7 ? $__res(...\array_slice(\func_get_args(), 7)) : $__res;
-  };
-  return $__fn;
-})();
+  return 7 < $__num ? $__res(...\array_slice(\func_get_args(), 7)) : $__res;
+}
+$GLOBALS['Data_Tuple_Nested_tuple7'] = __NAMESPACE__ . '\\majData_majTuple_majNested_tuple7';
 
 // Data_Tuple_Nested_tuple6
-$GLOBALS['Data_Tuple_Nested_tuple6'] = (function() {
-  $__fn = function($a_0 = null, $b_1 = null, $c_2 = null, $d_3 = null, $e_4 = null, $f_5 = null) use (&$__fn) {
+function majData_majTuple_majNested_tuple6($a_0, $b_1 = null, $c_2 = null, $d_3 = null, $e_4 = null, $f_5 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTuple_majNested_tuple6';
   if ($__num < 6) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 6);
   }
-  $__res = new Phpurs_Data2("Tuple", $a_0, new Phpurs_Data2("Tuple", $b_1, new Phpurs_Data2("Tuple", $c_2, new Phpurs_Data2("Tuple", $d_3, new Phpurs_Data2("Tuple", $e_4, new Phpurs_Data2("Tuple", $f_5, $GLOBALS['Data_Unit_unit']))))));
+  $__res = new \Data\Tuple\Data_Tuple_Tuple($a_0, new \Data\Tuple\Data_Tuple_Tuple($b_1, new \Data\Tuple\Data_Tuple_Tuple($c_2, new \Data\Tuple\Data_Tuple_Tuple($d_3, new \Data\Tuple\Data_Tuple_Tuple($e_4, new \Data\Tuple\Data_Tuple_Tuple($f_5, $GLOBALS['Data_Unit_unit']))))));
   goto __end;;
   __end:
-  return $__num > 6 ? $__res(...\array_slice(\func_get_args(), 6)) : $__res;
-  };
-  return $__fn;
-})();
+  return 6 < $__num ? $__res(...\array_slice(\func_get_args(), 6)) : $__res;
+}
+$GLOBALS['Data_Tuple_Nested_tuple6'] = __NAMESPACE__ . '\\majData_majTuple_majNested_tuple6';
 
 // Data_Tuple_Nested_tuple5
-$GLOBALS['Data_Tuple_Nested_tuple5'] = (function() {
-  $__fn = function($a_0 = null, $b_1 = null, $c_2 = null, $d_3 = null, $e_4 = null) use (&$__fn) {
+function majData_majTuple_majNested_tuple5($a_0, $b_1 = null, $c_2 = null, $d_3 = null, $e_4 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTuple_majNested_tuple5';
   if ($__num < 5) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 5);
   }
-  $__res = new Phpurs_Data2("Tuple", $a_0, new Phpurs_Data2("Tuple", $b_1, new Phpurs_Data2("Tuple", $c_2, new Phpurs_Data2("Tuple", $d_3, new Phpurs_Data2("Tuple", $e_4, $GLOBALS['Data_Unit_unit'])))));
+  $__res = new \Data\Tuple\Data_Tuple_Tuple($a_0, new \Data\Tuple\Data_Tuple_Tuple($b_1, new \Data\Tuple\Data_Tuple_Tuple($c_2, new \Data\Tuple\Data_Tuple_Tuple($d_3, new \Data\Tuple\Data_Tuple_Tuple($e_4, $GLOBALS['Data_Unit_unit'])))));
   goto __end;;
   __end:
-  return $__num > 5 ? $__res(...\array_slice(\func_get_args(), 5)) : $__res;
-  };
-  return $__fn;
-})();
+  return 5 < $__num ? $__res(...\array_slice(\func_get_args(), 5)) : $__res;
+}
+$GLOBALS['Data_Tuple_Nested_tuple5'] = __NAMESPACE__ . '\\majData_majTuple_majNested_tuple5';
 
 // Data_Tuple_Nested_tuple4
-$GLOBALS['Data_Tuple_Nested_tuple4'] = (function() {
-  $__fn = function($a_0 = null, $b_1 = null, $c_2 = null, $d_3 = null) use (&$__fn) {
+function majData_majTuple_majNested_tuple4($a_0, $b_1 = null, $c_2 = null, $d_3 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTuple_majNested_tuple4';
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = new Phpurs_Data2("Tuple", $a_0, new Phpurs_Data2("Tuple", $b_1, new Phpurs_Data2("Tuple", $c_2, new Phpurs_Data2("Tuple", $d_3, $GLOBALS['Data_Unit_unit']))));
+  $__res = new \Data\Tuple\Data_Tuple_Tuple($a_0, new \Data\Tuple\Data_Tuple_Tuple($b_1, new \Data\Tuple\Data_Tuple_Tuple($c_2, new \Data\Tuple\Data_Tuple_Tuple($d_3, $GLOBALS['Data_Unit_unit']))));
   goto __end;;
   __end:
-  return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
-  };
-  return $__fn;
-})();
+  return 4 < $__num ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
+}
+$GLOBALS['Data_Tuple_Nested_tuple4'] = __NAMESPACE__ . '\\majData_majTuple_majNested_tuple4';
 
 // Data_Tuple_Nested_tuple3
-$GLOBALS['Data_Tuple_Nested_tuple3'] = (function() {
-  $__fn = function($a_0 = null, $b_1 = null, $c_2 = null) use (&$__fn) {
+function majData_majTuple_majNested_tuple3($a_0, $b_1 = null, $c_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTuple_majNested_tuple3';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = new Phpurs_Data2("Tuple", $a_0, new Phpurs_Data2("Tuple", $b_1, new Phpurs_Data2("Tuple", $c_2, $GLOBALS['Data_Unit_unit'])));
+  $__res = new \Data\Tuple\Data_Tuple_Tuple($a_0, new \Data\Tuple\Data_Tuple_Tuple($b_1, new \Data\Tuple\Data_Tuple_Tuple($c_2, $GLOBALS['Data_Unit_unit'])));
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_Tuple_Nested_tuple3'] = __NAMESPACE__ . '\\majData_majTuple_majNested_tuple3';
 
 // Data_Tuple_Nested_tuple2
-$GLOBALS['Data_Tuple_Nested_tuple2'] = (function() {
-  $__fn = function($a_0 = null, $b_1 = null) use (&$__fn) {
+function majData_majTuple_majNested_tuple2($a_0, $b_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTuple_majNested_tuple2';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", $a_0, new Phpurs_Data2("Tuple", $b_1, $GLOBALS['Data_Unit_unit']));
+  $__res = new \Data\Tuple\Data_Tuple_Tuple($a_0, new \Data\Tuple\Data_Tuple_Tuple($b_1, $GLOBALS['Data_Unit_unit']));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Tuple_Nested_tuple2'] = __NAMESPACE__ . '\\majData_majTuple_majNested_tuple2';
 
 // Data_Tuple_Nested_tuple10
-$GLOBALS['Data_Tuple_Nested_tuple10'] = (function() {
-  $__fn = function($a_0 = null, $b_1 = null, $c_2 = null, $d_3 = null, $e_4 = null, $f_5 = null, $g_6 = null, $h_7 = null, $i_8 = null, $j_9 = null) use (&$__fn) {
+function majData_majTuple_majNested_tuple10($a_0, $b_1 = null, $c_2 = null, $d_3 = null, $e_4 = null, $f_5 = null, $g_6 = null, $h_7 = null, $i_8 = null, $j_9 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTuple_majNested_tuple10';
   if ($__num < 10) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 10);
   }
-  $__res = new Phpurs_Data2("Tuple", $a_0, new Phpurs_Data2("Tuple", $b_1, new Phpurs_Data2("Tuple", $c_2, new Phpurs_Data2("Tuple", $d_3, new Phpurs_Data2("Tuple", $e_4, new Phpurs_Data2("Tuple", $f_5, new Phpurs_Data2("Tuple", $g_6, new Phpurs_Data2("Tuple", $h_7, new Phpurs_Data2("Tuple", $i_8, new Phpurs_Data2("Tuple", $j_9, $GLOBALS['Data_Unit_unit']))))))))));
+  $__res = new \Data\Tuple\Data_Tuple_Tuple($a_0, new \Data\Tuple\Data_Tuple_Tuple($b_1, new \Data\Tuple\Data_Tuple_Tuple($c_2, new \Data\Tuple\Data_Tuple_Tuple($d_3, new \Data\Tuple\Data_Tuple_Tuple($e_4, new \Data\Tuple\Data_Tuple_Tuple($f_5, new \Data\Tuple\Data_Tuple_Tuple($g_6, new \Data\Tuple\Data_Tuple_Tuple($h_7, new \Data\Tuple\Data_Tuple_Tuple($i_8, new \Data\Tuple\Data_Tuple_Tuple($j_9, $GLOBALS['Data_Unit_unit']))))))))));
   goto __end;;
   __end:
-  return $__num > 10 ? $__res(...\array_slice(\func_get_args(), 10)) : $__res;
-  };
-  return $__fn;
-})();
+  return 10 < $__num ? $__res(...\array_slice(\func_get_args(), 10)) : $__res;
+}
+$GLOBALS['Data_Tuple_Nested_tuple10'] = __NAMESPACE__ . '\\majData_majTuple_majNested_tuple10';
 
 // Data_Tuple_Nested_tuple1
-$GLOBALS['Data_Tuple_Nested_tuple1'] = function($a_0 = null) {
+function majData_majTuple_majNested_tuple1($a_0) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Tuple", $a_0, $GLOBALS['Data_Unit_unit']);
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTuple_majNested_tuple1';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = new \Data\Tuple\Data_Tuple_Tuple($a_0, $GLOBALS['Data_Unit_unit']);
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Tuple_Nested_tuple1'] = __NAMESPACE__ . '\\majData_majTuple_majNested_tuple1';
 
 // Data_Tuple_Nested_over9
-$GLOBALS['Data_Tuple_Nested_over9'] = (function() {
-  $__fn = function($o_0 = null, $v_1 = null) use (&$__fn) {
+function majData_majTuple_majNested_over9($o_0, $v_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTuple_majNested_over9';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", ($v_1)->{'value0'}, new Phpurs_Data2("Tuple", (($v_1)->{'value1'})->{'value0'}, new Phpurs_Data2("Tuple", ((($v_1)->{'value1'})->{'value1'})->{'value0'}, new Phpurs_Data2("Tuple", (((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value0'}, new Phpurs_Data2("Tuple", ((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, new Phpurs_Data2("Tuple", (((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, new Phpurs_Data2("Tuple", ((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, new Phpurs_Data2("Tuple", (((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, new Phpurs_Data2("Tuple", ($o_0)(((((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}), ((((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})))))))));
+  $__res = new \Data\Tuple\Data_Tuple_Tuple(($v_1)->{'value0'}, new \Data\Tuple\Data_Tuple_Tuple((($v_1)->{'value1'})->{'value0'}, new \Data\Tuple\Data_Tuple_Tuple(((($v_1)->{'value1'})->{'value1'})->{'value0'}, new \Data\Tuple\Data_Tuple_Tuple((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value0'}, new \Data\Tuple\Data_Tuple_Tuple(((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, new \Data\Tuple\Data_Tuple_Tuple((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, new \Data\Tuple\Data_Tuple_Tuple(((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, new \Data\Tuple\Data_Tuple_Tuple((((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, new \Data\Tuple\Data_Tuple_Tuple(($o_0)(((((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}), ((((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})))))))));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Tuple_Nested_over9'] = __NAMESPACE__ . '\\majData_majTuple_majNested_over9';
 
 // Data_Tuple_Nested_over8
-$GLOBALS['Data_Tuple_Nested_over8'] = (function() {
-  $__fn = function($o_0 = null, $v_1 = null) use (&$__fn) {
+function majData_majTuple_majNested_over8($o_0, $v_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTuple_majNested_over8';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", ($v_1)->{'value0'}, new Phpurs_Data2("Tuple", (($v_1)->{'value1'})->{'value0'}, new Phpurs_Data2("Tuple", ((($v_1)->{'value1'})->{'value1'})->{'value0'}, new Phpurs_Data2("Tuple", (((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value0'}, new Phpurs_Data2("Tuple", ((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, new Phpurs_Data2("Tuple", (((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, new Phpurs_Data2("Tuple", ((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, new Phpurs_Data2("Tuple", ($o_0)((((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}), (((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'}))))))));
+  $__res = new \Data\Tuple\Data_Tuple_Tuple(($v_1)->{'value0'}, new \Data\Tuple\Data_Tuple_Tuple((($v_1)->{'value1'})->{'value0'}, new \Data\Tuple\Data_Tuple_Tuple(((($v_1)->{'value1'})->{'value1'})->{'value0'}, new \Data\Tuple\Data_Tuple_Tuple((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value0'}, new \Data\Tuple\Data_Tuple_Tuple(((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, new \Data\Tuple\Data_Tuple_Tuple((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, new \Data\Tuple\Data_Tuple_Tuple(((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, new \Data\Tuple\Data_Tuple_Tuple(($o_0)((((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}), (((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'}))))))));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Tuple_Nested_over8'] = __NAMESPACE__ . '\\majData_majTuple_majNested_over8';
 
 // Data_Tuple_Nested_over7
-$GLOBALS['Data_Tuple_Nested_over7'] = (function() {
-  $__fn = function($o_0 = null, $v_1 = null) use (&$__fn) {
+function majData_majTuple_majNested_over7($o_0, $v_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTuple_majNested_over7';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", ($v_1)->{'value0'}, new Phpurs_Data2("Tuple", (($v_1)->{'value1'})->{'value0'}, new Phpurs_Data2("Tuple", ((($v_1)->{'value1'})->{'value1'})->{'value0'}, new Phpurs_Data2("Tuple", (((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value0'}, new Phpurs_Data2("Tuple", ((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, new Phpurs_Data2("Tuple", (((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, new Phpurs_Data2("Tuple", ($o_0)(((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}), ((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})))))));
+  $__res = new \Data\Tuple\Data_Tuple_Tuple(($v_1)->{'value0'}, new \Data\Tuple\Data_Tuple_Tuple((($v_1)->{'value1'})->{'value0'}, new \Data\Tuple\Data_Tuple_Tuple(((($v_1)->{'value1'})->{'value1'})->{'value0'}, new \Data\Tuple\Data_Tuple_Tuple((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value0'}, new \Data\Tuple\Data_Tuple_Tuple(((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, new \Data\Tuple\Data_Tuple_Tuple((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, new \Data\Tuple\Data_Tuple_Tuple(($o_0)(((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}), ((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})))))));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Tuple_Nested_over7'] = __NAMESPACE__ . '\\majData_majTuple_majNested_over7';
 
 // Data_Tuple_Nested_over6
-$GLOBALS['Data_Tuple_Nested_over6'] = (function() {
-  $__fn = function($o_0 = null, $v_1 = null) use (&$__fn) {
+function majData_majTuple_majNested_over6($o_0, $v_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTuple_majNested_over6';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", ($v_1)->{'value0'}, new Phpurs_Data2("Tuple", (($v_1)->{'value1'})->{'value0'}, new Phpurs_Data2("Tuple", ((($v_1)->{'value1'})->{'value1'})->{'value0'}, new Phpurs_Data2("Tuple", (((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value0'}, new Phpurs_Data2("Tuple", ((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, new Phpurs_Data2("Tuple", ($o_0)((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}), (((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'}))))));
+  $__res = new \Data\Tuple\Data_Tuple_Tuple(($v_1)->{'value0'}, new \Data\Tuple\Data_Tuple_Tuple((($v_1)->{'value1'})->{'value0'}, new \Data\Tuple\Data_Tuple_Tuple(((($v_1)->{'value1'})->{'value1'})->{'value0'}, new \Data\Tuple\Data_Tuple_Tuple((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value0'}, new \Data\Tuple\Data_Tuple_Tuple(((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, new \Data\Tuple\Data_Tuple_Tuple(($o_0)((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}), (((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'}))))));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Tuple_Nested_over6'] = __NAMESPACE__ . '\\majData_majTuple_majNested_over6';
 
 // Data_Tuple_Nested_over5
-$GLOBALS['Data_Tuple_Nested_over5'] = (function() {
-  $__fn = function($o_0 = null, $v_1 = null) use (&$__fn) {
+function majData_majTuple_majNested_over5($o_0, $v_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTuple_majNested_over5';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", ($v_1)->{'value0'}, new Phpurs_Data2("Tuple", (($v_1)->{'value1'})->{'value0'}, new Phpurs_Data2("Tuple", ((($v_1)->{'value1'})->{'value1'})->{'value0'}, new Phpurs_Data2("Tuple", (((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value0'}, new Phpurs_Data2("Tuple", ($o_0)(((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}), ((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})))));
+  $__res = new \Data\Tuple\Data_Tuple_Tuple(($v_1)->{'value0'}, new \Data\Tuple\Data_Tuple_Tuple((($v_1)->{'value1'})->{'value0'}, new \Data\Tuple\Data_Tuple_Tuple(((($v_1)->{'value1'})->{'value1'})->{'value0'}, new \Data\Tuple\Data_Tuple_Tuple((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value0'}, new \Data\Tuple\Data_Tuple_Tuple(($o_0)(((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}), ((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})))));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Tuple_Nested_over5'] = __NAMESPACE__ . '\\majData_majTuple_majNested_over5';
 
 // Data_Tuple_Nested_over4
-$GLOBALS['Data_Tuple_Nested_over4'] = (function() {
-  $__fn = function($o_0 = null, $v_1 = null) use (&$__fn) {
+function majData_majTuple_majNested_over4($o_0, $v_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTuple_majNested_over4';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", ($v_1)->{'value0'}, new Phpurs_Data2("Tuple", (($v_1)->{'value1'})->{'value0'}, new Phpurs_Data2("Tuple", ((($v_1)->{'value1'})->{'value1'})->{'value0'}, new Phpurs_Data2("Tuple", ($o_0)((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value0'}), (((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'}))));
+  $__res = new \Data\Tuple\Data_Tuple_Tuple(($v_1)->{'value0'}, new \Data\Tuple\Data_Tuple_Tuple((($v_1)->{'value1'})->{'value0'}, new \Data\Tuple\Data_Tuple_Tuple(((($v_1)->{'value1'})->{'value1'})->{'value0'}, new \Data\Tuple\Data_Tuple_Tuple(($o_0)((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value0'}), (((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'}))));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Tuple_Nested_over4'] = __NAMESPACE__ . '\\majData_majTuple_majNested_over4';
 
 // Data_Tuple_Nested_over3
-$GLOBALS['Data_Tuple_Nested_over3'] = (function() {
-  $__fn = function($o_0 = null, $v_1 = null) use (&$__fn) {
+function majData_majTuple_majNested_over3($o_0, $v_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTuple_majNested_over3';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", ($v_1)->{'value0'}, new Phpurs_Data2("Tuple", (($v_1)->{'value1'})->{'value0'}, new Phpurs_Data2("Tuple", ($o_0)(((($v_1)->{'value1'})->{'value1'})->{'value0'}), ((($v_1)->{'value1'})->{'value1'})->{'value1'})));
+  $__res = new \Data\Tuple\Data_Tuple_Tuple(($v_1)->{'value0'}, new \Data\Tuple\Data_Tuple_Tuple((($v_1)->{'value1'})->{'value0'}, new \Data\Tuple\Data_Tuple_Tuple(($o_0)(((($v_1)->{'value1'})->{'value1'})->{'value0'}), ((($v_1)->{'value1'})->{'value1'})->{'value1'})));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Tuple_Nested_over3'] = __NAMESPACE__ . '\\majData_majTuple_majNested_over3';
 
 // Data_Tuple_Nested_over2
-$GLOBALS['Data_Tuple_Nested_over2'] = (function() {
-  $__fn = function($o_0 = null, $v_1 = null) use (&$__fn) {
+function majData_majTuple_majNested_over2($o_0, $v_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTuple_majNested_over2';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", ($v_1)->{'value0'}, new Phpurs_Data2("Tuple", ($o_0)((($v_1)->{'value1'})->{'value0'}), (($v_1)->{'value1'})->{'value1'}));
+  $__res = new \Data\Tuple\Data_Tuple_Tuple(($v_1)->{'value0'}, new \Data\Tuple\Data_Tuple_Tuple(($o_0)((($v_1)->{'value1'})->{'value0'}), (($v_1)->{'value1'})->{'value1'}));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Tuple_Nested_over2'] = __NAMESPACE__ . '\\majData_majTuple_majNested_over2';
 
 // Data_Tuple_Nested_over10
-$GLOBALS['Data_Tuple_Nested_over10'] = (function() {
-  $__fn = function($o_0 = null, $v_1 = null) use (&$__fn) {
+function majData_majTuple_majNested_over10($o_0, $v_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTuple_majNested_over10';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", ($v_1)->{'value0'}, new Phpurs_Data2("Tuple", (($v_1)->{'value1'})->{'value0'}, new Phpurs_Data2("Tuple", ((($v_1)->{'value1'})->{'value1'})->{'value0'}, new Phpurs_Data2("Tuple", (((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value0'}, new Phpurs_Data2("Tuple", ((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, new Phpurs_Data2("Tuple", (((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, new Phpurs_Data2("Tuple", ((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, new Phpurs_Data2("Tuple", (((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, new Phpurs_Data2("Tuple", ((((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, new Phpurs_Data2("Tuple", ($o_0)((((((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}), (((((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'}))))))))));
+  $__res = new \Data\Tuple\Data_Tuple_Tuple(($v_1)->{'value0'}, new \Data\Tuple\Data_Tuple_Tuple((($v_1)->{'value1'})->{'value0'}, new \Data\Tuple\Data_Tuple_Tuple(((($v_1)->{'value1'})->{'value1'})->{'value0'}, new \Data\Tuple\Data_Tuple_Tuple((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value0'}, new \Data\Tuple\Data_Tuple_Tuple(((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, new \Data\Tuple\Data_Tuple_Tuple((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, new \Data\Tuple\Data_Tuple_Tuple(((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, new \Data\Tuple\Data_Tuple_Tuple((((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, new \Data\Tuple\Data_Tuple_Tuple(((((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, new \Data\Tuple\Data_Tuple_Tuple(($o_0)((((((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}), (((((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'}))))))))));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Tuple_Nested_over10'] = __NAMESPACE__ . '\\majData_majTuple_majNested_over10';
 
 // Data_Tuple_Nested_over1
-$GLOBALS['Data_Tuple_Nested_over1'] = (function() {
-  $__fn = function($o_0 = null, $v_1 = null) use (&$__fn) {
+function majData_majTuple_majNested_over1($o_0, $v_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTuple_majNested_over1';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", ($o_0)(($v_1)->{'value0'}), ($v_1)->{'value1'});
+  $__res = new \Data\Tuple\Data_Tuple_Tuple(($o_0)(($v_1)->{'value0'}), ($v_1)->{'value1'});
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Tuple_Nested_over1'] = __NAMESPACE__ . '\\majData_majTuple_majNested_over1';
 
 // Data_Tuple_Nested_get9
-$GLOBALS['Data_Tuple_Nested_get9'] = function($v_0 = null) {
+function majData_majTuple_majNested_get9($v_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTuple_majNested_get9';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ((((((((($v_0)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'};
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Tuple_Nested_get9'] = __NAMESPACE__ . '\\majData_majTuple_majNested_get9';
 
 // Data_Tuple_Nested_get8
-$GLOBALS['Data_Tuple_Nested_get8'] = function($v_0 = null) {
+function majData_majTuple_majNested_get8($v_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTuple_majNested_get8';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = (((((((($v_0)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'};
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Tuple_Nested_get8'] = __NAMESPACE__ . '\\majData_majTuple_majNested_get8';
 
 // Data_Tuple_Nested_get7
-$GLOBALS['Data_Tuple_Nested_get7'] = function($v_0 = null) {
+function majData_majTuple_majNested_get7($v_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTuple_majNested_get7';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ((((((($v_0)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'};
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Tuple_Nested_get7'] = __NAMESPACE__ . '\\majData_majTuple_majNested_get7';
 
 // Data_Tuple_Nested_get6
-$GLOBALS['Data_Tuple_Nested_get6'] = function($v_0 = null) {
+function majData_majTuple_majNested_get6($v_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTuple_majNested_get6';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = (((((($v_0)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'};
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Tuple_Nested_get6'] = __NAMESPACE__ . '\\majData_majTuple_majNested_get6';
 
 // Data_Tuple_Nested_get5
-$GLOBALS['Data_Tuple_Nested_get5'] = function($v_0 = null) {
+function majData_majTuple_majNested_get5($v_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTuple_majNested_get5';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ((((($v_0)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'};
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Tuple_Nested_get5'] = __NAMESPACE__ . '\\majData_majTuple_majNested_get5';
 
 // Data_Tuple_Nested_get4
-$GLOBALS['Data_Tuple_Nested_get4'] = function($v_0 = null) {
+function majData_majTuple_majNested_get4($v_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTuple_majNested_get4';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = (((($v_0)->{'value1'})->{'value1'})->{'value1'})->{'value0'};
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Tuple_Nested_get4'] = __NAMESPACE__ . '\\majData_majTuple_majNested_get4';
 
 // Data_Tuple_Nested_get3
-$GLOBALS['Data_Tuple_Nested_get3'] = function($v_0 = null) {
+function majData_majTuple_majNested_get3($v_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTuple_majNested_get3';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ((($v_0)->{'value1'})->{'value1'})->{'value0'};
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Tuple_Nested_get3'] = __NAMESPACE__ . '\\majData_majTuple_majNested_get3';
 
 // Data_Tuple_Nested_get2
-$GLOBALS['Data_Tuple_Nested_get2'] = function($v_0 = null) {
+function majData_majTuple_majNested_get2($v_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTuple_majNested_get2';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = (($v_0)->{'value1'})->{'value0'};
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Tuple_Nested_get2'] = __NAMESPACE__ . '\\majData_majTuple_majNested_get2';
 
 // Data_Tuple_Nested_get10
-$GLOBALS['Data_Tuple_Nested_get10'] = function($v_0 = null) {
+function majData_majTuple_majNested_get10($v_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTuple_majNested_get10';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = (((((((((($v_0)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'};
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Tuple_Nested_get10'] = __NAMESPACE__ . '\\majData_majTuple_majNested_get10';
 
 // Data_Tuple_Nested_get1
-$GLOBALS['Data_Tuple_Nested_get1'] = function($v_0 = null) {
+function majData_majTuple_majNested_get1($v_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTuple_majNested_get1';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($v_0)->{'value0'};
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Tuple_Nested_get1'] = __NAMESPACE__ . '\\majData_majTuple_majNested_get1';
 
 // Data_Tuple_Nested_curry9
-$GLOBALS['Data_Tuple_Nested_curry9'] = (function() {
-  $__fn = function($z_0 = null, $f_prime_1 = null, $a_2 = null, $b_3 = null, $c_4 = null, $d_5 = null, $e_6 = null, $f_7 = null, $g_8 = null, $h_9 = null, $i_10 = null) use (&$__fn) {
+function majData_majTuple_majNested_curry9($z_0, $f_prime_1 = null, $a_2 = null, $b_3 = null, $c_4 = null, $d_5 = null, $e_6 = null, $f_7 = null, $g_8 = null, $h_9 = null, $i_10 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTuple_majNested_curry9';
   if ($__num < 11) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 11);
   }
-  $__res = ($f_prime_1)(new Phpurs_Data2("Tuple", $a_2, new Phpurs_Data2("Tuple", $b_3, new Phpurs_Data2("Tuple", $c_4, new Phpurs_Data2("Tuple", $d_5, new Phpurs_Data2("Tuple", $e_6, new Phpurs_Data2("Tuple", $f_7, new Phpurs_Data2("Tuple", $g_8, new Phpurs_Data2("Tuple", $h_9, new Phpurs_Data2("Tuple", $i_10, $z_0))))))))));
+  $__res = ($f_prime_1)(new \Data\Tuple\Data_Tuple_Tuple($a_2, new \Data\Tuple\Data_Tuple_Tuple($b_3, new \Data\Tuple\Data_Tuple_Tuple($c_4, new \Data\Tuple\Data_Tuple_Tuple($d_5, new \Data\Tuple\Data_Tuple_Tuple($e_6, new \Data\Tuple\Data_Tuple_Tuple($f_7, new \Data\Tuple\Data_Tuple_Tuple($g_8, new \Data\Tuple\Data_Tuple_Tuple($h_9, new \Data\Tuple\Data_Tuple_Tuple($i_10, $z_0))))))))));
   goto __end;;
   __end:
-  return $__num > 11 ? $__res(...\array_slice(\func_get_args(), 11)) : $__res;
-  };
-  return $__fn;
-})();
+  return 11 < $__num ? $__res(...\array_slice(\func_get_args(), 11)) : $__res;
+}
+$GLOBALS['Data_Tuple_Nested_curry9'] = __NAMESPACE__ . '\\majData_majTuple_majNested_curry9';
 
 // Data_Tuple_Nested_curry8
-$GLOBALS['Data_Tuple_Nested_curry8'] = (function() {
-  $__fn = function($z_0 = null, $f_prime_1 = null, $a_2 = null, $b_3 = null, $c_4 = null, $d_5 = null, $e_6 = null, $f_7 = null, $g_8 = null, $h_9 = null) use (&$__fn) {
+function majData_majTuple_majNested_curry8($z_0, $f_prime_1 = null, $a_2 = null, $b_3 = null, $c_4 = null, $d_5 = null, $e_6 = null, $f_7 = null, $g_8 = null, $h_9 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTuple_majNested_curry8';
   if ($__num < 10) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 10);
   }
-  $__res = ($f_prime_1)(new Phpurs_Data2("Tuple", $a_2, new Phpurs_Data2("Tuple", $b_3, new Phpurs_Data2("Tuple", $c_4, new Phpurs_Data2("Tuple", $d_5, new Phpurs_Data2("Tuple", $e_6, new Phpurs_Data2("Tuple", $f_7, new Phpurs_Data2("Tuple", $g_8, new Phpurs_Data2("Tuple", $h_9, $z_0)))))))));
+  $__res = ($f_prime_1)(new \Data\Tuple\Data_Tuple_Tuple($a_2, new \Data\Tuple\Data_Tuple_Tuple($b_3, new \Data\Tuple\Data_Tuple_Tuple($c_4, new \Data\Tuple\Data_Tuple_Tuple($d_5, new \Data\Tuple\Data_Tuple_Tuple($e_6, new \Data\Tuple\Data_Tuple_Tuple($f_7, new \Data\Tuple\Data_Tuple_Tuple($g_8, new \Data\Tuple\Data_Tuple_Tuple($h_9, $z_0)))))))));
   goto __end;;
   __end:
-  return $__num > 10 ? $__res(...\array_slice(\func_get_args(), 10)) : $__res;
-  };
-  return $__fn;
-})();
+  return 10 < $__num ? $__res(...\array_slice(\func_get_args(), 10)) : $__res;
+}
+$GLOBALS['Data_Tuple_Nested_curry8'] = __NAMESPACE__ . '\\majData_majTuple_majNested_curry8';
 
 // Data_Tuple_Nested_curry7
-$GLOBALS['Data_Tuple_Nested_curry7'] = (function() {
-  $__fn = function($z_0 = null, $f_prime_1 = null, $a_2 = null, $b_3 = null, $c_4 = null, $d_5 = null, $e_6 = null, $f_7 = null, $g_8 = null) use (&$__fn) {
+function majData_majTuple_majNested_curry7($z_0, $f_prime_1 = null, $a_2 = null, $b_3 = null, $c_4 = null, $d_5 = null, $e_6 = null, $f_7 = null, $g_8 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTuple_majNested_curry7';
   if ($__num < 9) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 9);
   }
-  $__res = ($f_prime_1)(new Phpurs_Data2("Tuple", $a_2, new Phpurs_Data2("Tuple", $b_3, new Phpurs_Data2("Tuple", $c_4, new Phpurs_Data2("Tuple", $d_5, new Phpurs_Data2("Tuple", $e_6, new Phpurs_Data2("Tuple", $f_7, new Phpurs_Data2("Tuple", $g_8, $z_0))))))));
+  $__res = ($f_prime_1)(new \Data\Tuple\Data_Tuple_Tuple($a_2, new \Data\Tuple\Data_Tuple_Tuple($b_3, new \Data\Tuple\Data_Tuple_Tuple($c_4, new \Data\Tuple\Data_Tuple_Tuple($d_5, new \Data\Tuple\Data_Tuple_Tuple($e_6, new \Data\Tuple\Data_Tuple_Tuple($f_7, new \Data\Tuple\Data_Tuple_Tuple($g_8, $z_0))))))));
   goto __end;;
   __end:
-  return $__num > 9 ? $__res(...\array_slice(\func_get_args(), 9)) : $__res;
-  };
-  return $__fn;
-})();
+  return 9 < $__num ? $__res(...\array_slice(\func_get_args(), 9)) : $__res;
+}
+$GLOBALS['Data_Tuple_Nested_curry7'] = __NAMESPACE__ . '\\majData_majTuple_majNested_curry7';
 
 // Data_Tuple_Nested_curry6
-$GLOBALS['Data_Tuple_Nested_curry6'] = (function() {
-  $__fn = function($z_0 = null, $f_prime_1 = null, $a_2 = null, $b_3 = null, $c_4 = null, $d_5 = null, $e_6 = null, $f_7 = null) use (&$__fn) {
+function majData_majTuple_majNested_curry6($z_0, $f_prime_1 = null, $a_2 = null, $b_3 = null, $c_4 = null, $d_5 = null, $e_6 = null, $f_7 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTuple_majNested_curry6';
   if ($__num < 8) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 8);
   }
-  $__res = ($f_prime_1)(new Phpurs_Data2("Tuple", $a_2, new Phpurs_Data2("Tuple", $b_3, new Phpurs_Data2("Tuple", $c_4, new Phpurs_Data2("Tuple", $d_5, new Phpurs_Data2("Tuple", $e_6, new Phpurs_Data2("Tuple", $f_7, $z_0)))))));
+  $__res = ($f_prime_1)(new \Data\Tuple\Data_Tuple_Tuple($a_2, new \Data\Tuple\Data_Tuple_Tuple($b_3, new \Data\Tuple\Data_Tuple_Tuple($c_4, new \Data\Tuple\Data_Tuple_Tuple($d_5, new \Data\Tuple\Data_Tuple_Tuple($e_6, new \Data\Tuple\Data_Tuple_Tuple($f_7, $z_0)))))));
   goto __end;;
   __end:
-  return $__num > 8 ? $__res(...\array_slice(\func_get_args(), 8)) : $__res;
-  };
-  return $__fn;
-})();
+  return 8 < $__num ? $__res(...\array_slice(\func_get_args(), 8)) : $__res;
+}
+$GLOBALS['Data_Tuple_Nested_curry6'] = __NAMESPACE__ . '\\majData_majTuple_majNested_curry6';
 
 // Data_Tuple_Nested_curry5
-$GLOBALS['Data_Tuple_Nested_curry5'] = (function() {
-  $__fn = function($z_0 = null, $f_1 = null, $a_2 = null, $b_3 = null, $c_4 = null, $d_5 = null, $e_6 = null) use (&$__fn) {
+function majData_majTuple_majNested_curry5($z_0, $f_1 = null, $a_2 = null, $b_3 = null, $c_4 = null, $d_5 = null, $e_6 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTuple_majNested_curry5';
   if ($__num < 7) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 7);
   }
-  $__res = ($f_1)(new Phpurs_Data2("Tuple", $a_2, new Phpurs_Data2("Tuple", $b_3, new Phpurs_Data2("Tuple", $c_4, new Phpurs_Data2("Tuple", $d_5, new Phpurs_Data2("Tuple", $e_6, $z_0))))));
+  $__res = ($f_1)(new \Data\Tuple\Data_Tuple_Tuple($a_2, new \Data\Tuple\Data_Tuple_Tuple($b_3, new \Data\Tuple\Data_Tuple_Tuple($c_4, new \Data\Tuple\Data_Tuple_Tuple($d_5, new \Data\Tuple\Data_Tuple_Tuple($e_6, $z_0))))));
   goto __end;;
   __end:
-  return $__num > 7 ? $__res(...\array_slice(\func_get_args(), 7)) : $__res;
-  };
-  return $__fn;
-})();
+  return 7 < $__num ? $__res(...\array_slice(\func_get_args(), 7)) : $__res;
+}
+$GLOBALS['Data_Tuple_Nested_curry5'] = __NAMESPACE__ . '\\majData_majTuple_majNested_curry5';
 
 // Data_Tuple_Nested_curry4
-$GLOBALS['Data_Tuple_Nested_curry4'] = (function() {
-  $__fn = function($z_0 = null, $f_1 = null, $a_2 = null, $b_3 = null, $c_4 = null, $d_5 = null) use (&$__fn) {
+function majData_majTuple_majNested_curry4($z_0, $f_1 = null, $a_2 = null, $b_3 = null, $c_4 = null, $d_5 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTuple_majNested_curry4';
   if ($__num < 6) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 6);
   }
-  $__res = ($f_1)(new Phpurs_Data2("Tuple", $a_2, new Phpurs_Data2("Tuple", $b_3, new Phpurs_Data2("Tuple", $c_4, new Phpurs_Data2("Tuple", $d_5, $z_0)))));
+  $__res = ($f_1)(new \Data\Tuple\Data_Tuple_Tuple($a_2, new \Data\Tuple\Data_Tuple_Tuple($b_3, new \Data\Tuple\Data_Tuple_Tuple($c_4, new \Data\Tuple\Data_Tuple_Tuple($d_5, $z_0)))));
   goto __end;;
   __end:
-  return $__num > 6 ? $__res(...\array_slice(\func_get_args(), 6)) : $__res;
-  };
-  return $__fn;
-})();
+  return 6 < $__num ? $__res(...\array_slice(\func_get_args(), 6)) : $__res;
+}
+$GLOBALS['Data_Tuple_Nested_curry4'] = __NAMESPACE__ . '\\majData_majTuple_majNested_curry4';
 
 // Data_Tuple_Nested_curry3
-$GLOBALS['Data_Tuple_Nested_curry3'] = (function() {
-  $__fn = function($z_0 = null, $f_1 = null, $a_2 = null, $b_3 = null, $c_4 = null) use (&$__fn) {
+function majData_majTuple_majNested_curry3($z_0, $f_1 = null, $a_2 = null, $b_3 = null, $c_4 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTuple_majNested_curry3';
   if ($__num < 5) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 5);
   }
-  $__res = ($f_1)(new Phpurs_Data2("Tuple", $a_2, new Phpurs_Data2("Tuple", $b_3, new Phpurs_Data2("Tuple", $c_4, $z_0))));
+  $__res = ($f_1)(new \Data\Tuple\Data_Tuple_Tuple($a_2, new \Data\Tuple\Data_Tuple_Tuple($b_3, new \Data\Tuple\Data_Tuple_Tuple($c_4, $z_0))));
   goto __end;;
   __end:
-  return $__num > 5 ? $__res(...\array_slice(\func_get_args(), 5)) : $__res;
-  };
-  return $__fn;
-})();
+  return 5 < $__num ? $__res(...\array_slice(\func_get_args(), 5)) : $__res;
+}
+$GLOBALS['Data_Tuple_Nested_curry3'] = __NAMESPACE__ . '\\majData_majTuple_majNested_curry3';
 
 // Data_Tuple_Nested_curry2
-$GLOBALS['Data_Tuple_Nested_curry2'] = (function() {
-  $__fn = function($z_0 = null, $f_1 = null, $a_2 = null, $b_3 = null) use (&$__fn) {
+function majData_majTuple_majNested_curry2($z_0, $f_1 = null, $a_2 = null, $b_3 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTuple_majNested_curry2';
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ($f_1)(new Phpurs_Data2("Tuple", $a_2, new Phpurs_Data2("Tuple", $b_3, $z_0)));
+  $__res = ($f_1)(new \Data\Tuple\Data_Tuple_Tuple($a_2, new \Data\Tuple\Data_Tuple_Tuple($b_3, $z_0)));
   goto __end;;
   __end:
-  return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
-  };
-  return $__fn;
-})();
+  return 4 < $__num ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
+}
+$GLOBALS['Data_Tuple_Nested_curry2'] = __NAMESPACE__ . '\\majData_majTuple_majNested_curry2';
 
 // Data_Tuple_Nested_curry10
-$GLOBALS['Data_Tuple_Nested_curry10'] = (function() {
-  $__fn = function($z_0 = null, $f_prime_1 = null, $a_2 = null, $b_3 = null, $c_4 = null, $d_5 = null, $e_6 = null, $f_7 = null, $g_8 = null, $h_9 = null, $i_10 = null, $j_11 = null) use (&$__fn) {
+function majData_majTuple_majNested_curry10($z_0, $f_prime_1 = null, $a_2 = null, $b_3 = null, $c_4 = null, $d_5 = null, $e_6 = null, $f_7 = null, $g_8 = null, $h_9 = null, $i_10 = null, $j_11 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTuple_majNested_curry10';
   if ($__num < 12) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 12);
   }
-  $__res = ($f_prime_1)(new Phpurs_Data2("Tuple", $a_2, new Phpurs_Data2("Tuple", $b_3, new Phpurs_Data2("Tuple", $c_4, new Phpurs_Data2("Tuple", $d_5, new Phpurs_Data2("Tuple", $e_6, new Phpurs_Data2("Tuple", $f_7, new Phpurs_Data2("Tuple", $g_8, new Phpurs_Data2("Tuple", $h_9, new Phpurs_Data2("Tuple", $i_10, new Phpurs_Data2("Tuple", $j_11, $z_0)))))))))));
+  $__res = ($f_prime_1)(new \Data\Tuple\Data_Tuple_Tuple($a_2, new \Data\Tuple\Data_Tuple_Tuple($b_3, new \Data\Tuple\Data_Tuple_Tuple($c_4, new \Data\Tuple\Data_Tuple_Tuple($d_5, new \Data\Tuple\Data_Tuple_Tuple($e_6, new \Data\Tuple\Data_Tuple_Tuple($f_7, new \Data\Tuple\Data_Tuple_Tuple($g_8, new \Data\Tuple\Data_Tuple_Tuple($h_9, new \Data\Tuple\Data_Tuple_Tuple($i_10, new \Data\Tuple\Data_Tuple_Tuple($j_11, $z_0)))))))))));
   goto __end;;
   __end:
-  return $__num > 12 ? $__res(...\array_slice(\func_get_args(), 12)) : $__res;
-  };
-  return $__fn;
-})();
+  return 12 < $__num ? $__res(...\array_slice(\func_get_args(), 12)) : $__res;
+}
+$GLOBALS['Data_Tuple_Nested_curry10'] = __NAMESPACE__ . '\\majData_majTuple_majNested_curry10';
 
 // Data_Tuple_Nested_curry1
-$GLOBALS['Data_Tuple_Nested_curry1'] = (function() {
-  $__fn = function($z_0 = null, $f_1 = null, $a_2 = null) use (&$__fn) {
+function majData_majTuple_majNested_curry1($z_0, $f_1 = null, $a_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTuple_majNested_curry1';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ($f_1)(new Phpurs_Data2("Tuple", $a_2, $z_0));
+  $__res = ($f_1)(new \Data\Tuple\Data_Tuple_Tuple($a_2, $z_0));
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_Tuple_Nested_curry1'] = __NAMESPACE__ . '\\majData_majTuple_majNested_curry1';
 

@@ -362,21 +362,33 @@ $GLOBALS['Data_Function_Uncurried_runFn8'] = $ffi_Data_Function_Uncurried['runFn
 $GLOBALS['Data_Function_Uncurried_runFn9'] = $ffi_Data_Function_Uncurried['runFn9'] ?? new class { public function __invoke(...$args) { return $this; } };
 
 
+
+
 // Data_Function_Uncurried_runFn1
-$GLOBALS['Data_Function_Uncurried_runFn1'] = function($f_0 = null) {
+function majData_majFunction_majUncurried_runmajFn1($f_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunction_majUncurried_runmajFn1';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $f_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Function_Uncurried_runFn1'] = __NAMESPACE__ . '\\majData_majFunction_majUncurried_runmajFn1';
 
 // Data_Function_Uncurried_mkFn1
-$GLOBALS['Data_Function_Uncurried_mkFn1'] = function($f_0 = null) {
+function majData_majFunction_majUncurried_mkmajFn1($f_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunction_majUncurried_mkmajFn1';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $f_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Function_Uncurried_mkFn1'] = __NAMESPACE__ . '\\majData_majFunction_majUncurried_mkmajFn1';
 

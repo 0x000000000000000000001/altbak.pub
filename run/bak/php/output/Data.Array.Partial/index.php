@@ -97,63 +97,61 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_Array_Partial_tail
-$GLOBALS['Data_Array_Partial_tail'] = (function() {
-  $__fn = function($_dollar__unused_0 = null, $xs_1 = null) use (&$__fn) {
+function majData_majArray_majPartial_tail($_dollar__unused_0, $xs_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majArray_majPartial_tail';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__res = ($GLOBALS['Data_Array_sliceImpl'])(1, count($xs_1), $xs_1);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Array_Partial_tail'] = __NAMESPACE__ . '\\majData_majArray_majPartial_tail';
 
 // Data_Array_Partial_last
-$GLOBALS['Data_Array_Partial_last'] = (function() {
-  $__fn = function($_dollar__unused_0 = null, $xs_1 = null) use (&$__fn) {
+function majData_majArray_majPartial_last($_dollar__unused_0, $xs_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majArray_majPartial_last';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__res = ($xs_1)[0];
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Array_Partial_last'] = __NAMESPACE__ . '\\majData_majArray_majPartial_last';
 
 // Data_Array_Partial_init
-$GLOBALS['Data_Array_Partial_init'] = (function() {
-  $__fn = function($_dollar__unused_0 = null, $xs_1 = null) use (&$__fn) {
+function majData_majArray_majPartial_init($_dollar__unused_0, $xs_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majArray_majPartial_init';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__res = ($GLOBALS['Data_Array_sliceImpl'])(0, (count($xs_1) - 1), $xs_1);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Array_Partial_init'] = __NAMESPACE__ . '\\majData_majArray_majPartial_init';
 
 // Data_Array_Partial_head
-$GLOBALS['Data_Array_Partial_head'] = (function() {
-  $__fn = function($_dollar__unused_0 = null, $xs_1 = null) use (&$__fn) {
+function majData_majArray_majPartial_head($_dollar__unused_0, $xs_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majArray_majPartial_head';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__res = ($xs_1)[0];
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Array_Partial_head'] = __NAMESPACE__ . '\\majData_majArray_majPartial_head';
 

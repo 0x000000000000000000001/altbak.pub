@@ -166,6 +166,8 @@ $GLOBALS['Data_Ord_ordNumberImpl'] = $ffi_Data_Ord['ordNumberImpl'] ?? new class
 $GLOBALS['Data_Ord_ordStringImpl'] = $ffi_Data_Ord['ordStringImpl'] ?? new class { public function __invoke(...$args) { return $this; } };
 
 
+
+
 // Data_Ord_ordVoid
 $GLOBALS['Data_Ord_ordVoid'] = ["compare" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
@@ -173,7 +175,7 @@ $GLOBALS['Data_Ord_ordVoid'] = ["compare" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data0("EQ");
+  $__res = new \Data\Ordering\Data_Ordering_EQ();
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -194,7 +196,7 @@ $GLOBALS['Data_Ord_ordUnit'] = ["compare" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data0("EQ");
+  $__res = new \Data\Ordering\Data_Ordering_EQ();
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -209,7 +211,7 @@ $GLOBALS['Data_Ord_ordUnit'] = ["compare" => (function() {
 }];
 
 // Data_Ord_ordString
-$GLOBALS['Data_Ord_ordString'] = ["compare" => ((($GLOBALS['Data_Ord_ordStringImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT")), "Eq0" => function($_dollar__unused_0 = null) {
+$GLOBALS['Data_Ord_ordString'] = ["compare" => ($GLOBALS['Data_Ord_ordStringImpl'])(new \Data\Ordering\Data_Ordering_LT(), new \Data\Ordering\Data_Ordering_EQ(), new \Data\Ordering\Data_Ordering_GT()), "Eq0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Eq_eqString'];
   goto __end;;
@@ -224,7 +226,7 @@ $GLOBALS['Data_Ord_ordRecordNil'] = ["compareRecord" => (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = new Phpurs_Data0("EQ");
+  $__res = new \Data\Ordering\Data_Ordering_EQ();
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -245,7 +247,7 @@ $GLOBALS['Data_Ord_ordProxy'] = ["compare" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data0("EQ");
+  $__res = new \Data\Ordering\Data_Ordering_EQ();
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -267,29 +269,29 @@ $GLOBALS['Data_Ord_ordOrdering'] = ["compare" => (function() {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__t0 = null;;
-  if ((is_object($v_0) && (($v_0)->{'tag'} === "LT"))) {
+  if ($v_0 instanceof \Data\Ordering\Data_Ordering_LT) {
 $__t1 = null;;
-if ((is_object($v1_1) && (($v1_1)->{'tag'} === "LT"))) {
-$__t1 = new Phpurs_Data0("EQ");
+if ($v1_1 instanceof \Data\Ordering\Data_Ordering_LT) {
+$__t1 = new \Data\Ordering\Data_Ordering_EQ();
 goto end_branch_1;;
 };
-$__t1 = new Phpurs_Data0("LT");
+$__t1 = new \Data\Ordering\Data_Ordering_LT();
 end_branch_1:;
 $__t0 = $__t1;
 goto end_branch_0;;
 };
-  if ((is_object($v_0) && (($v_0)->{'tag'} === "EQ"))) {
+  if ($v_0 instanceof \Data\Ordering\Data_Ordering_EQ) {
 $__t2 = null;;
-if ((is_object($v1_1) && (($v1_1)->{'tag'} === "EQ"))) {
-$__t2 = new Phpurs_Data0("EQ");
+if ($v1_1 instanceof \Data\Ordering\Data_Ordering_EQ) {
+$__t2 = new \Data\Ordering\Data_Ordering_EQ();
 goto end_branch_2;;
 };
-if ((is_object($v1_1) && (($v1_1)->{'tag'} === "LT"))) {
-$__t2 = new Phpurs_Data0("GT");
+if ($v1_1 instanceof \Data\Ordering\Data_Ordering_LT) {
+$__t2 = new \Data\Ordering\Data_Ordering_GT();
 goto end_branch_2;;
 };
-if ((is_object($v1_1) && (($v1_1)->{'tag'} === "GT"))) {
-$__t2 = new Phpurs_Data0("LT");
+if ($v1_1 instanceof \Data\Ordering\Data_Ordering_GT) {
+$__t2 = new \Data\Ordering\Data_Ordering_LT();
 goto end_branch_2;;
 };
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -298,13 +300,13 @@ end_branch_2:;
 $__t0 = $__t2;
 goto end_branch_0;;
 };
-  if ((is_object($v_0) && (($v_0)->{'tag'} === "GT"))) {
+  if ($v_0 instanceof \Data\Ordering\Data_Ordering_GT) {
 $__t3 = null;;
-if ((is_object($v1_1) && (($v1_1)->{'tag'} === "GT"))) {
-$__t3 = new Phpurs_Data0("EQ");
+if ($v1_1 instanceof \Data\Ordering\Data_Ordering_GT) {
+$__t3 = new \Data\Ordering\Data_Ordering_EQ();
 goto end_branch_3;;
 };
-$__t3 = new Phpurs_Data0("GT");
+$__t3 = new \Data\Ordering\Data_Ordering_GT();
 end_branch_3:;
 $__t0 = $__t3;
 goto end_branch_0;;
@@ -327,7 +329,7 @@ goto end_branch_0;;
 }];
 
 // Data_Ord_ordNumber
-$GLOBALS['Data_Ord_ordNumber'] = ["compare" => ((($GLOBALS['Data_Ord_ordNumberImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT")), "Eq0" => function($_dollar__unused_0 = null) {
+$GLOBALS['Data_Ord_ordNumber'] = ["compare" => ($GLOBALS['Data_Ord_ordNumberImpl'])(new \Data\Ordering\Data_Ordering_LT(), new \Data\Ordering\Data_Ordering_EQ(), new \Data\Ordering\Data_Ordering_GT()), "Eq0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Eq_eqNumber'];
   goto __end;;
@@ -336,7 +338,7 @@ $GLOBALS['Data_Ord_ordNumber'] = ["compare" => ((($GLOBALS['Data_Ord_ordNumberIm
 }];
 
 // Data_Ord_ordInt
-$GLOBALS['Data_Ord_ordInt'] = ["compare" => ((($GLOBALS['Data_Ord_ordIntImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT")), "Eq0" => function($_dollar__unused_0 = null) {
+$GLOBALS['Data_Ord_ordInt'] = ["compare" => ($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT(), new \Data\Ordering\Data_Ordering_EQ(), new \Data\Ordering\Data_Ordering_GT()), "Eq0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = ["eq" => $GLOBALS['Data_Eq_eqIntImpl']];
   goto __end;;
@@ -345,7 +347,7 @@ $GLOBALS['Data_Ord_ordInt'] = ["compare" => ((($GLOBALS['Data_Ord_ordIntImpl'])(
 }];
 
 // Data_Ord_ordChar
-$GLOBALS['Data_Ord_ordChar'] = ["compare" => ((($GLOBALS['Data_Ord_ordCharImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT")), "Eq0" => function($_dollar__unused_0 = null) {
+$GLOBALS['Data_Ord_ordChar'] = ["compare" => ($GLOBALS['Data_Ord_ordCharImpl'])(new \Data\Ordering\Data_Ordering_LT(), new \Data\Ordering\Data_Ordering_EQ(), new \Data\Ordering\Data_Ordering_GT()), "Eq0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Eq_eqChar'];
   goto __end;;
@@ -354,7 +356,7 @@ $GLOBALS['Data_Ord_ordChar'] = ["compare" => ((($GLOBALS['Data_Ord_ordCharImpl']
 }];
 
 // Data_Ord_ordBoolean
-$GLOBALS['Data_Ord_ordBoolean'] = ["compare" => ((($GLOBALS['Data_Ord_ordBooleanImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT")), "Eq0" => function($_dollar__unused_0 = null) {
+$GLOBALS['Data_Ord_ordBoolean'] = ["compare" => ($GLOBALS['Data_Ord_ordBooleanImpl'])(new \Data\Ordering\Data_Ordering_LT(), new \Data\Ordering\Data_Ordering_EQ(), new \Data\Ordering\Data_Ordering_GT()), "Eq0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Eq_eqBoolean'];
   goto __end;;
@@ -363,23 +365,28 @@ $GLOBALS['Data_Ord_ordBoolean'] = ["compare" => ((($GLOBALS['Data_Ord_ordBoolean
 }];
 
 // Data_Ord_compareRecord
-$GLOBALS['Data_Ord_compareRecord'] = function($dict_0 = null) {
+function majData_majOrd_comparemajRecord($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majOrd_comparemajRecord';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['compareRecord'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Ord_compareRecord'] = __NAMESPACE__ . '\\majData_majOrd_comparemajRecord';
 
 // Data_Ord_ordRecord
-$GLOBALS['Data_Ord_ordRecord'] = (function() {
-  $__fn = function($_dollar__unused_0 = null, $dictOrdRecord_1 = null) use (&$__fn) {
+function majData_majOrd_ordmajRecord($_dollar__unused_0, $dictOrdRecord_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majOrd_ordmajRecord';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $eqRec1_2_0 = ["eq" => (((($dictOrdRecord_1)['EqRecord0'])(null))['eqRecord'])(new Phpurs_Data0("Proxy"))];
-  $__res = ["compare" => (($dictOrdRecord_1)['compareRecord'])(new Phpurs_Data0("Proxy")), "Eq0" => function($_dollar__unused_3 = null) use ($eqRec1_2_0) {
+  $eqRec1_2_0 = ["eq" => (((($dictOrdRecord_1)['EqRecord0'])(null))['eqRecord'])(new \Type\Proxy\Type_Proxy_Proxy())];
+  $__res = ["compare" => (($dictOrdRecord_1)['compareRecord'])(new \Type\Proxy\Type_Proxy_Proxy()), "Eq0" => function($_dollar__unused_3 = null) use ($eqRec1_2_0) {
   $__num = \func_num_args();
   $__res = $eqRec1_2_0;
   goto __end;;
@@ -388,96 +395,101 @@ $GLOBALS['Data_Ord_ordRecord'] = (function() {
 }];
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Ord_ordRecord'] = __NAMESPACE__ . '\\majData_majOrd_ordmajRecord';
 
 // Data_Ord_compare1
-$GLOBALS['Data_Ord_compare1'] = function($dict_0 = null) {
+function majData_majOrd_compare1($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majOrd_compare1';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['compare1'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Ord_compare1'] = __NAMESPACE__ . '\\majData_majOrd_compare1';
 
 // Data_Ord_compare
-$GLOBALS['Data_Ord_compare'] = function($dict_0 = null) {
+function majData_majOrd_compare($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majOrd_compare';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['compare'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Ord_compare'] = __NAMESPACE__ . '\\majData_majOrd_compare';
 
 // Data_Ord_compare2
-$GLOBALS['Data_Ord_compare2'] = ((($GLOBALS['Data_Ord_ordIntImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT"));
+$GLOBALS['Data_Ord_compare2'] = ($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT(), new \Data\Ordering\Data_Ordering_EQ(), new \Data\Ordering\Data_Ordering_GT());
 
 // Data_Ord_comparing
-$GLOBALS['Data_Ord_comparing'] = (function() {
-  $__fn = function($dictOrd_0 = null, $f_1 = null, $x_2 = null, $y_3 = null) use (&$__fn) {
+function majData_majOrd_comparing($dictOrd_0, $f_1 = null, $x_2 = null, $y_3 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majOrd_comparing';
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ((($dictOrd_0)['compare'])(($f_1)($x_2)))(($f_1)($y_3));
+  $__res = (($dictOrd_0)['compare'])(($f_1)($x_2), ($f_1)($y_3));
   goto __end;;
   __end:
-  return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
-  };
-  return $__fn;
-})();
+  return 4 < $__num ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
+}
+$GLOBALS['Data_Ord_comparing'] = __NAMESPACE__ . '\\majData_majOrd_comparing';
 
 // Data_Ord_greaterThan
-$GLOBALS['Data_Ord_greaterThan'] = (function() {
-  $__fn = function($dictOrd_0 = null, $a1_1 = null, $a2_2 = null) use (&$__fn) {
+function majData_majOrd_greatermajThan($dictOrd_0, $a1_1 = null, $a2_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majOrd_greatermajThan';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (is_object(((($dictOrd_0)['compare'])($a1_1))($a2_2)) && ((((($dictOrd_0)['compare'])($a1_1))($a2_2))->{'tag'} === "GT"));
+  $__res = (($dictOrd_0)['compare'])($a1_1, $a2_2) instanceof \Data\Ordering\Data_Ordering_GT;
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_Ord_greaterThan'] = __NAMESPACE__ . '\\majData_majOrd_greatermajThan';
 
 // Data_Ord_greaterThanOrEq
-$GLOBALS['Data_Ord_greaterThanOrEq'] = (function() {
-  $__fn = function($dictOrd_0 = null, $a1_1 = null, $a2_2 = null) use (&$__fn) {
+function majData_majOrd_greatermajThanmajOrmajEq($dictOrd_0, $a1_1 = null, $a2_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majOrd_greatermajThanmajOrmajEq';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ( ! (is_object(((($dictOrd_0)['compare'])($a1_1))($a2_2)) && ((((($dictOrd_0)['compare'])($a1_1))($a2_2))->{'tag'} === "LT")));
+  $__res = ( ! (($dictOrd_0)['compare'])($a1_1, $a2_2) instanceof \Data\Ordering\Data_Ordering_LT);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_Ord_greaterThanOrEq'] = __NAMESPACE__ . '\\majData_majOrd_greatermajThanmajOrmajEq';
 
 // Data_Ord_lessThan
-$GLOBALS['Data_Ord_lessThan'] = (function() {
-  $__fn = function($dictOrd_0 = null, $a1_1 = null, $a2_2 = null) use (&$__fn) {
+function majData_majOrd_lessmajThan($dictOrd_0, $a1_1 = null, $a2_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majOrd_lessmajThan';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (is_object(((($dictOrd_0)['compare'])($a1_1))($a2_2)) && ((((($dictOrd_0)['compare'])($a1_1))($a2_2))->{'tag'} === "LT"));
+  $__res = (($dictOrd_0)['compare'])($a1_1, $a2_2) instanceof \Data\Ordering\Data_Ordering_LT;
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_Ord_lessThan'] = __NAMESPACE__ . '\\majData_majOrd_lessmajThan';
 
 // Data_Ord_signum
-$GLOBALS['Data_Ord_signum'] = (function() {
-  $__fn = function($dictOrd_0 = null, $dictRing_1 = null) use (&$__fn) {
+function majData_majOrd_signum($dictOrd_0, $dictRing_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majOrd_signum';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
@@ -488,11 +500,11 @@ $GLOBALS['Data_Ord_signum'] = (function() {
   $__res = function($x_6 = null) use ($dictOrd_0, $dictRing_1, $one_5_3, $zero_3_1, $zero_4_2) {
   $__num = \func_num_args();
   $__t4 = null;;
-  if ((is_object(((($dictOrd_0)['compare'])($x_6))($zero_3_1)) && ((((($dictOrd_0)['compare'])($x_6))($zero_3_1))->{'tag'} === "LT"))) {
-$__t4 = ((($dictRing_1)['sub'])($zero_4_2))($one_5_3);
+  if ((($dictOrd_0)['compare'])($x_6, $zero_3_1) instanceof \Data\Ordering\Data_Ordering_LT) {
+$__t4 = (($dictRing_1)['sub'])($zero_4_2, $one_5_3);
 goto end_branch_4;;
 };
-  if ((is_object(((($dictOrd_0)['compare'])($x_6))($zero_3_1)) && ((((($dictOrd_0)['compare'])($x_6))($zero_3_1))->{'tag'} === "GT"))) {
+  if ((($dictOrd_0)['compare'])($x_6, $zero_3_1) instanceof \Data\Ordering\Data_Ordering_GT) {
 $__t4 = $one_5_3;
 goto end_branch_4;;
 };
@@ -505,44 +517,42 @@ goto end_branch_4;;
 };
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Ord_signum'] = __NAMESPACE__ . '\\majData_majOrd_signum';
 
 // Data_Ord_lessThanOrEq
-$GLOBALS['Data_Ord_lessThanOrEq'] = (function() {
-  $__fn = function($dictOrd_0 = null, $a1_1 = null, $a2_2 = null) use (&$__fn) {
+function majData_majOrd_lessmajThanmajOrmajEq($dictOrd_0, $a1_1 = null, $a2_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majOrd_lessmajThanmajOrmajEq';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ( ! (is_object(((($dictOrd_0)['compare'])($a1_1))($a2_2)) && ((((($dictOrd_0)['compare'])($a1_1))($a2_2))->{'tag'} === "GT")));
+  $__res = ( ! (($dictOrd_0)['compare'])($a1_1, $a2_2) instanceof \Data\Ordering\Data_Ordering_GT);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_Ord_lessThanOrEq'] = __NAMESPACE__ . '\\majData_majOrd_lessmajThanmajOrmajEq';
 
 // Data_Ord_max
-$GLOBALS['Data_Ord_max'] = (function() {
-  $__fn = function($dictOrd_0 = null, $x_1 = null, $y_2 = null) use (&$__fn) {
+function majData_majOrd_max($dictOrd_0, $x_1 = null, $y_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majOrd_max';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $v_3_0 = ((($dictOrd_0)['compare'])($x_1))($y_2);
+  $v_3_0 = (($dictOrd_0)['compare'])($x_1, $y_2);
   $__t1 = null;;
-  if ((is_object($v_3_0) && (($v_3_0)->{'tag'} === "LT"))) {
+  if ($v_3_0 instanceof \Data\Ordering\Data_Ordering_LT) {
 $__t1 = $y_2;
 goto end_branch_1;;
 };
-  if ((is_object($v_3_0) && (($v_3_0)->{'tag'} === "EQ"))) {
+  if ($v_3_0 instanceof \Data\Ordering\Data_Ordering_EQ) {
 $__t1 = $x_1;
 goto end_branch_1;;
 };
-  if ((is_object($v_3_0) && (($v_3_0)->{'tag'} === "GT"))) {
+  if ($v_3_0 instanceof \Data\Ordering\Data_Ordering_GT) {
 $__t1 = $x_1;
 goto end_branch_1;;
 };
@@ -552,29 +562,28 @@ goto end_branch_1;;
   $__res = $__t1;
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_Ord_max'] = __NAMESPACE__ . '\\majData_majOrd_max';
 
 // Data_Ord_min
-$GLOBALS['Data_Ord_min'] = (function() {
-  $__fn = function($dictOrd_0 = null, $x_1 = null, $y_2 = null) use (&$__fn) {
+function majData_majOrd_min($dictOrd_0, $x_1 = null, $y_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majOrd_min';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $v_3_0 = ((($dictOrd_0)['compare'])($x_1))($y_2);
+  $v_3_0 = (($dictOrd_0)['compare'])($x_1, $y_2);
   $__t1 = null;;
-  if ((is_object($v_3_0) && (($v_3_0)->{'tag'} === "LT"))) {
+  if ($v_3_0 instanceof \Data\Ordering\Data_Ordering_LT) {
 $__t1 = $x_1;
 goto end_branch_1;;
 };
-  if ((is_object($v_3_0) && (($v_3_0)->{'tag'} === "EQ"))) {
+  if ($v_3_0 instanceof \Data\Ordering\Data_Ordering_EQ) {
 $__t1 = $x_1;
 goto end_branch_1;;
 };
-  if ((is_object($v_3_0) && (($v_3_0)->{'tag'} === "GT"))) {
+  if ($v_3_0 instanceof \Data\Ordering\Data_Ordering_GT) {
 $__t1 = $y_2;
 goto end_branch_1;;
 };
@@ -584,14 +593,17 @@ goto end_branch_1;;
   $__res = $__t1;
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_Ord_min'] = __NAMESPACE__ . '\\majData_majOrd_min';
 
 // Data_Ord_ordArray
-$GLOBALS['Data_Ord_ordArray'] = function($dictOrd_0 = null) {
+function majData_majOrd_ordmajArray($dictOrd_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majOrd_ordmajArray';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $eqArray_1_0 = ["eq" => ($GLOBALS['Data_Eq_eqArrayImpl'])(((($dictOrd_0)['Eq0'])(null))['eq'])];
   $__res = ["compare" => (function() use ($dictOrd_0) {
   $__fn = function($xs_2 = null, $ys_3 = null) use ($dictOrd_0, &$__fn) {
@@ -599,23 +611,23 @@ $GLOBALS['Data_Ord_ordArray'] = function($dictOrd_0 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_Ord_compare2'])(0))(((($GLOBALS['Data_Ord_ordArrayImpl'])((function() use ($dictOrd_0) {
+  $__res = ($GLOBALS['Data_Ord_compare2'])(0, ($GLOBALS['Data_Ord_ordArrayImpl'])((function() use ($dictOrd_0) {
   $__fn = function($x_4 = null, $y_5 = null) use ($dictOrd_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $v_6_1 = ((($dictOrd_0)['compare'])($x_4))($y_5);
+  $v_6_1 = (($dictOrd_0)['compare'])($x_4, $y_5);
   $__t2 = null;;
-  if ((is_object($v_6_1) && (($v_6_1)->{'tag'} === "EQ"))) {
+  if ($v_6_1 instanceof \Data\Ordering\Data_Ordering_EQ) {
 $__t2 = 0;
 goto end_branch_2;;
 };
-  if ((is_object($v_6_1) && (($v_6_1)->{'tag'} === "LT"))) {
+  if ($v_6_1 instanceof \Data\Ordering\Data_Ordering_LT) {
 $__t2 = 1;
 goto end_branch_2;;
 };
-  if ((is_object($v_6_1) && (($v_6_1)->{'tag'} === "GT"))) {
+  if ($v_6_1 instanceof \Data\Ordering\Data_Ordering_GT) {
 $__t2 = -1;
 goto end_branch_2;;
 };
@@ -628,7 +640,7 @@ goto end_branch_2;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))($xs_2))($ys_3));
+})(), $xs_2, $ys_3));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -643,8 +655,9 @@ goto end_branch_2;;
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Ord_ordArray'] = __NAMESPACE__ . '\\majData_majOrd_ordmajArray';
 
 // Data_Ord_ord1Array
 $GLOBALS['Data_Ord_ord1Array'] = ["compare1" => function($dictOrd_0 = null) {
@@ -662,9 +675,13 @@ $GLOBALS['Data_Ord_ord1Array'] = ["compare1" => function($dictOrd_0 = null) {
 }];
 
 // Data_Ord_ordRecordCons
-$GLOBALS['Data_Ord_ordRecordCons'] = function($dictOrdRecord_0 = null) {
+function majData_majOrd_ordmajRecordmajCons($dictOrdRecord_0) {
   $__num = \func_num_args();
-  $eqRowCons_1_0 = (($GLOBALS['Data_Eq_eqRowCons'])((($dictOrdRecord_0)['EqRecord0'])(null)))(null);
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majOrd_ordmajRecordmajCons';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $eqRowCons_1_0 = ($GLOBALS['Data_Eq_eqRowCons'])((($dictOrdRecord_0)['EqRecord0'])(null), null);
   $__res = (function() use ($dictOrdRecord_0, $eqRowCons_1_0) {
   $__fn = function($_dollar__unused_2 = null, $dictIsSymbol_3 = null) use ($dictOrdRecord_0, $eqRowCons_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -681,14 +698,14 @@ $GLOBALS['Data_Ord_ordRecordCons'] = function($dictOrdRecord_0 = null) {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $key_10_3 = (($dictIsSymbol_3)['reflectSymbol'])(new Phpurs_Data0("Proxy"));
-  $left_11_4 = ((($dictOrd_5)['compare'])((($GLOBALS['Record_Unsafe_unsafeGet'])($key_10_3))($ra_8)))((($GLOBALS['Record_Unsafe_unsafeGet'])($key_10_3))($rb_9));
+  $key_10_3 = (($dictIsSymbol_3)['reflectSymbol'])(new \Type\Proxy\Type_Proxy_Proxy());
+  $left_11_4 = (($dictOrd_5)['compare'])(($GLOBALS['Record_Unsafe_unsafeGet'])($key_10_3, $ra_8), ($GLOBALS['Record_Unsafe_unsafeGet'])($key_10_3, $rb_9));
   $__t5 = null;;
-  if (((($GLOBALS['Data_Eq_eqBoolean'])['eq'])(((($GLOBALS['Data_Ordering_eqOrdering'])['eq'])($left_11_4))(new Phpurs_Data0("EQ"))))(false)) {
+  if ((($GLOBALS['Data_Eq_eqBoolean'])['eq'])((($GLOBALS['Data_Ordering_eqOrdering'])['eq'])($left_11_4, new \Data\Ordering\Data_Ordering_EQ()), false)) {
 $__t5 = $left_11_4;
 goto end_branch_5;;
 };
-  $__t5 = (((($dictOrdRecord_0)['compareRecord'])(new Phpurs_Data0("Proxy")))($ra_8))($rb_9);
+  $__t5 = (($dictOrdRecord_0)['compareRecord'])(new \Type\Proxy\Type_Proxy_Proxy(), $ra_8, $rb_9);
   end_branch_5:;
   $__res = $__t5;
   goto __end;;
@@ -715,27 +732,28 @@ goto end_branch_5;;
 })();
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Ord_ordRecordCons'] = __NAMESPACE__ . '\\majData_majOrd_ordmajRecordmajCons';
 
 // Data_Ord_clamp
-$GLOBALS['Data_Ord_clamp'] = (function() {
-  $__fn = function($dictOrd_0 = null, $low_1 = null, $hi_2 = null, $x_3 = null) use (&$__fn) {
+function majData_majOrd_clamp($dictOrd_0, $low_1 = null, $hi_2 = null, $x_3 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majOrd_clamp';
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $v_4_0 = ((($dictOrd_0)['compare'])($low_1))($x_3);
+  $v_4_0 = (($dictOrd_0)['compare'])($low_1, $x_3);
   $__t1 = null;;
-  if ((is_object($v_4_0) && (($v_4_0)->{'tag'} === "LT"))) {
+  if ($v_4_0 instanceof \Data\Ordering\Data_Ordering_LT) {
 $__t1 = $x_3;
 goto end_branch_1;;
 };
-  if ((is_object($v_4_0) && (($v_4_0)->{'tag'} === "EQ"))) {
+  if ($v_4_0 instanceof \Data\Ordering\Data_Ordering_EQ) {
 $__t1 = $low_1;
 goto end_branch_1;;
 };
-  if ((is_object($v_4_0) && (($v_4_0)->{'tag'} === "GT"))) {
+  if ($v_4_0 instanceof \Data\Ordering\Data_Ordering_GT) {
 $__t1 = $low_1;
 goto end_branch_1;;
 };
@@ -743,17 +761,17 @@ goto end_branch_1;;
   $__t1 = null;
   end_branch_1:;
   $__local_var_5_1 = $__t1;
-  $v_6_3 = ((($dictOrd_0)['compare'])($hi_2))($__local_var_5_1);
+  $v_6_3 = (($dictOrd_0)['compare'])($hi_2, $__local_var_5_1);
   $__t4 = null;;
-  if ((is_object($v_6_3) && (($v_6_3)->{'tag'} === "LT"))) {
+  if ($v_6_3 instanceof \Data\Ordering\Data_Ordering_LT) {
 $__t4 = $hi_2;
 goto end_branch_4;;
 };
-  if ((is_object($v_6_3) && (($v_6_3)->{'tag'} === "EQ"))) {
+  if ($v_6_3 instanceof \Data\Ordering\Data_Ordering_EQ) {
 $__t4 = $hi_2;
 goto end_branch_4;;
 };
-  if ((is_object($v_6_3) && (($v_6_3)->{'tag'} === "GT"))) {
+  if ($v_6_3 instanceof \Data\Ordering\Data_Ordering_GT) {
 $__t4 = $__local_var_5_1;
 goto end_branch_4;;
 };
@@ -763,37 +781,35 @@ goto end_branch_4;;
   $__res = $__t4;
   goto __end;;
   __end:
-  return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
-  };
-  return $__fn;
-})();
+  return 4 < $__num ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
+}
+$GLOBALS['Data_Ord_clamp'] = __NAMESPACE__ . '\\majData_majOrd_clamp';
 
 // Data_Ord_between
-$GLOBALS['Data_Ord_between'] = (function() {
-  $__fn = function($dictOrd_0 = null, $low_1 = null, $hi_2 = null, $x_3 = null) use (&$__fn) {
+function majData_majOrd_between($dictOrd_0, $low_1 = null, $hi_2 = null, $x_3 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majOrd_between';
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
   $__t0 = null;;
-  if ((is_object(((($dictOrd_0)['compare'])($x_3))($low_1)) && ((((($dictOrd_0)['compare'])($x_3))($low_1))->{'tag'} === "LT"))) {
+  if ((($dictOrd_0)['compare'])($x_3, $low_1) instanceof \Data\Ordering\Data_Ordering_LT) {
 $__t0 = false;
 goto end_branch_0;;
 };
-  $__t0 = ( ! (is_object(((($dictOrd_0)['compare'])($x_3))($hi_2)) && ((((($dictOrd_0)['compare'])($x_3))($hi_2))->{'tag'} === "GT")));
+  $__t0 = ( ! (($dictOrd_0)['compare'])($x_3, $hi_2) instanceof \Data\Ordering\Data_Ordering_GT);
   end_branch_0:;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
-  };
-  return $__fn;
-})();
+  return 4 < $__num ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
+}
+$GLOBALS['Data_Ord_between'] = __NAMESPACE__ . '\\majData_majOrd_between';
 
 // Data_Ord_abs
-$GLOBALS['Data_Ord_abs'] = (function() {
-  $__fn = function($dictOrd_0 = null, $dictRing_1 = null) use (&$__fn) {
+function majData_majOrd_abs($dictOrd_0, $dictRing_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majOrd_abs';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
@@ -802,11 +818,11 @@ $GLOBALS['Data_Ord_abs'] = (function() {
   $__res = function($x_4 = null) use ($dictOrd_0, $dictRing_1, $zero_2_0, $zero_3_1) {
   $__num = \func_num_args();
   $__t2 = null;;
-  if (( ! (is_object(((($dictOrd_0)['compare'])($x_4))($zero_2_0)) && ((((($dictOrd_0)['compare'])($x_4))($zero_2_0))->{'tag'} === "LT")))) {
+  if (( ! (($dictOrd_0)['compare'])($x_4, $zero_2_0) instanceof \Data\Ordering\Data_Ordering_LT)) {
 $__t2 = $x_4;
 goto end_branch_2;;
 };
-  $__t2 = ((($dictRing_1)['sub'])($zero_3_1))($x_4);
+  $__t2 = (($dictRing_1)['sub'])($zero_3_1, $x_4);
   end_branch_2:;
   $__res = $__t2;
   goto __end;;
@@ -815,8 +831,7 @@ goto end_branch_2;;
 };
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Ord_abs'] = __NAMESPACE__ . '\\majData_majOrd_abs';
 

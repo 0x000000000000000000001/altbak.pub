@@ -104,23 +104,35 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Control_Comonad_Store_Trans_StoreT
-$GLOBALS['Control_Comonad_Store_Trans_StoreT'] = function($x_0 = null) {
+function majControl_majComonad_majStore_majTrans_majStoremajT($x_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majComonad_majStore_majTrans_majStoremajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $x_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Comonad_Store_Trans_StoreT'] = __NAMESPACE__ . '\\majControl_majComonad_majStore_majTrans_majStoremajT';
 
 // Control_Comonad_Store_Trans_runStoreT
-$GLOBALS['Control_Comonad_Store_Trans_runStoreT'] = function($v_0 = null) {
+function majControl_majComonad_majStore_majTrans_runmajStoremajT($v_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majComonad_majStore_majTrans_runmajStoremajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $v_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Comonad_Store_Trans_runStoreT'] = __NAMESPACE__ . '\\majControl_majComonad_majStore_majTrans_runmajStoremajT';
 
 // Control_Comonad_Store_Trans_newtypeStoreT
 $GLOBALS['Control_Comonad_Store_Trans_newtypeStoreT'] = ["Coercible0" => function($_dollar__unused_0 = null) {
@@ -132,21 +144,25 @@ $GLOBALS['Control_Comonad_Store_Trans_newtypeStoreT'] = ["Coercible0" => functio
 }];
 
 // Control_Comonad_Store_Trans_functorStoreT
-$GLOBALS['Control_Comonad_Store_Trans_functorStoreT'] = function($dictFunctor_0 = null) {
+function majControl_majComonad_majStore_majTrans_functormajStoremajT($dictFunctor_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majComonad_majStore_majTrans_functormajStoremajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["map" => (function() use ($dictFunctor_0) {
   $__fn = function($f_1 = null, $v_2 = null) use ($dictFunctor_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", ((($dictFunctor_0)['map'])(function($h_3 = null) use ($f_1) {
+  $__res = new \Data\Tuple\Data_Tuple_Tuple((($dictFunctor_0)['map'])(function($h_3 = null) use ($f_1) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($f_1))($h_3);
+  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($f_1, $h_3);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(($v_2)->{'value0'}), ($v_2)->{'value1'});
+}, ($v_2)->{'value0'}), ($v_2)->{'value1'});
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -155,12 +171,17 @@ $GLOBALS['Control_Comonad_Store_Trans_functorStoreT'] = function($dictFunctor_0 
 })()];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Comonad_Store_Trans_functorStoreT'] = __NAMESPACE__ . '\\majControl_majComonad_majStore_majTrans_functormajStoremajT';
 
 // Control_Comonad_Store_Trans_extendStoreT
-$GLOBALS['Control_Comonad_Store_Trans_extendStoreT'] = function($dictExtend_0 = null) {
+function majControl_majComonad_majStore_majTrans_extendmajStoremajT($dictExtend_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majComonad_majStore_majTrans_extendmajStoremajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $functorStoreT1_1_0 = ($GLOBALS['Control_Comonad_Store_Trans_functorStoreT'])((($dictExtend_0)['Functor0'])(null));
   $__res = ["extend" => (function() use ($dictExtend_0) {
   $__fn = function($f_2 = null, $v_3 = null) use ($dictExtend_0, &$__fn) {
@@ -168,19 +189,19 @@ $GLOBALS['Control_Comonad_Store_Trans_extendStoreT'] = function($dictExtend_0 = 
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", ((($dictExtend_0)['extend'])((function() use ($f_2) {
+  $__res = new \Data\Tuple\Data_Tuple_Tuple((($dictExtend_0)['extend'])((function() use ($f_2) {
   $__fn = function($w_prime_4 = null, $s_prime_5 = null) use ($f_2, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($f_2)(new Phpurs_Data2("Tuple", $w_prime_4, $s_prime_5));
+  $__res = ($f_2)(new \Data\Tuple\Data_Tuple_Tuple($w_prime_4, $s_prime_5));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))(($v_3)->{'value0'}), ($v_3)->{'value1'});
+})(), ($v_3)->{'value0'}), ($v_3)->{'value1'});
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -195,8 +216,9 @@ $GLOBALS['Control_Comonad_Store_Trans_extendStoreT'] = function($dictExtend_0 = 
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Comonad_Store_Trans_extendStoreT'] = __NAMESPACE__ . '\\majControl_majComonad_majStore_majTrans_extendmajStoremajT';
 
 // Control_Comonad_Store_Trans_comonadTransStoreT
 $GLOBALS['Control_Comonad_Store_Trans_comonadTransStoreT'] = ["lower" => (function() {
@@ -206,13 +228,13 @@ $GLOBALS['Control_Comonad_Store_Trans_comonadTransStoreT'] = ["lower" => (functi
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__local_var_2_0 = ($v_1)->{'value1'};
-  $__res = ((((((($dictComonad_0)['Extend0'])(null))['Functor0'])(null))['map'])(function($v1_3 = null) use ($__local_var_2_0) {
+  $__res = (((((($dictComonad_0)['Extend0'])(null))['Functor0'])(null))['map'])(function($v1_3 = null) use ($__local_var_2_0) {
   $__num = \func_num_args();
   $__res = ($v1_3)($__local_var_2_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(($v_1)->{'value0'});
+}, ($v_1)->{'value0'});
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -221,12 +243,16 @@ $GLOBALS['Control_Comonad_Store_Trans_comonadTransStoreT'] = ["lower" => (functi
 })()];
 
 // Control_Comonad_Store_Trans_comonadStoreT
-$GLOBALS['Control_Comonad_Store_Trans_comonadStoreT'] = function($dictComonad_0 = null) {
+function majControl_majComonad_majStore_majTrans_comonadmajStoremajT($dictComonad_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majComonad_majStore_majTrans_comonadmajStoremajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $extendStoreT1_1_0 = ($GLOBALS['Control_Comonad_Store_Trans_extendStoreT'])((($dictComonad_0)['Extend0'])(null));
   $__res = ["extract" => function($v_2 = null) use ($dictComonad_0) {
   $__num = \func_num_args();
-  $__res = ((($dictComonad_0)['extract'])(($v_2)->{'value0'}))(($v_2)->{'value1'});
+  $__res = (($dictComonad_0)['extract'])(($v_2)->{'value0'}, ($v_2)->{'value1'});
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -239,6 +265,7 @@ $GLOBALS['Control_Comonad_Store_Trans_comonadStoreT'] = function($dictComonad_0 
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Comonad_Store_Trans_comonadStoreT'] = __NAMESPACE__ . '\\majControl_majComonad_majStore_majTrans_comonadmajStoremajT';
 

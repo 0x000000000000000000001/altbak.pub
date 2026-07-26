@@ -108,14 +108,30 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
-// Data_Array_ST_Iterator_void
-$GLOBALS['Data_Array_ST_Iterator_void'] = (($GLOBALS['Control_Monad_ST_Internal_functorST'])['map'])(function($v_0 = null) {
+final class Data_Array_ST_Iterator_Iterator { public function __construct(public \Closure $value0, public mixed $value1) {} }
+
+// Data_Array_ST_Iterator_void_closure
+$GLOBALS['Data_Array_ST_Iterator_void_closure'] = (($GLOBALS['Control_Monad_ST_Internal_functorST'])['map'])(function($v_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Unit_unit'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 });
+
+// Data_Array_ST_Iterator_void
+function majData_majArray_majSmajT_majIterator_void($v_0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majArray_majSmajT_majIterator_void';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ($GLOBALS['Data_Array_ST_Iterator_void_closure'])($v_0);
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Array_ST_Iterator_void'] = __NAMESPACE__ . '\\majData_majArray_majSmajT_majIterator_void';
 
 // Data_Array_ST_Iterator_Iterator
 $GLOBALS['Data_Array_ST_Iterator_Iterator'] = (function() {
@@ -124,7 +140,7 @@ $GLOBALS['Data_Array_ST_Iterator_Iterator'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Iterator", $value0, $value1);
+  $__res = new \Data\Array\ST\Iterator\Data_Array_ST_Iterator_Iterator($value0, $value1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -133,9 +149,13 @@ $GLOBALS['Data_Array_ST_Iterator_Iterator'] = (function() {
 })();
 
 // Data_Array_ST_Iterator_peek
-$GLOBALS['Data_Array_ST_Iterator_peek'] = function($v_0 = null) {
+function majData_majArray_majSmajT_majIterator_peek($v_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bindST'])['bind'])(($GLOBALS['Control_Monad_ST_Internal_read'])(($v_0)->{'value1'})))(function($i_1 = null) use ($v_0) {
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majArray_majSmajT_majIterator_peek';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = (($GLOBALS['Control_Monad_ST_Internal_bindST'])['bind'])(($GLOBALS['Control_Monad_ST_Internal_read'])(($v_0)->{'value1'}), function($i_1 = null) use ($v_0) {
   $__num = \func_num_args();
   $__res = (($GLOBALS['Control_Monad_ST_Internal_applicativeST'])['pure'])((($v_0)->{'value0'})($i_1));
   goto __end;;
@@ -144,23 +164,28 @@ $GLOBALS['Data_Array_ST_Iterator_peek'] = function($v_0 = null) {
 });
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Array_ST_Iterator_peek'] = __NAMESPACE__ . '\\majData_majArray_majSmajT_majIterator_peek';
 
 // Data_Array_ST_Iterator_next
-$GLOBALS['Data_Array_ST_Iterator_next'] = function($v_0 = null) {
+function majData_majArray_majSmajT_majIterator_next($v_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majArray_majSmajT_majIterator_next';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__local_var_1_0 = ($v_0)->{'value1'};
-  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bindST'])['bind'])(($GLOBALS['Control_Monad_ST_Internal_read'])($__local_var_1_0)))(function($i_2 = null) use ($__local_var_1_0, $v_0) {
+  $__res = (($GLOBALS['Control_Monad_ST_Internal_bindST'])['bind'])(($GLOBALS['Control_Monad_ST_Internal_read'])($__local_var_1_0), function($i_2 = null) use ($__local_var_1_0, $v_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bindST'])['bind'])((($GLOBALS['Control_Monad_ST_Internal_modifyImpl'])(function($s_3 = null) {
+  $__res = (($GLOBALS['Control_Monad_ST_Internal_bindST'])['bind'])(($GLOBALS['Control_Monad_ST_Internal_modifyImpl'])(function($s_3 = null) {
   $__num = \func_num_args();
   $s_prime_4_1 = ($s_3 + 1);
   $__res = ["state" => $s_prime_4_1, "value" => $s_prime_4_1];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))($__local_var_1_0)))(function($_dollar__unused_3 = null) use ($i_2, $v_0) {
+}, $__local_var_1_0), function($_dollar__unused_3 = null) use ($i_2, $v_0) {
   $__num = \func_num_args();
   $__res = (($GLOBALS['Control_Monad_ST_Internal_applicativeST'])['pure'])((($v_0)->{'value0'})($i_2));
   goto __end;;
@@ -173,23 +198,24 @@ $GLOBALS['Data_Array_ST_Iterator_next'] = function($v_0 = null) {
 });
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Array_ST_Iterator_next'] = __NAMESPACE__ . '\\majData_majArray_majSmajT_majIterator_next';
 
 // Data_Array_ST_Iterator_pushWhile
-$GLOBALS['Data_Array_ST_Iterator_pushWhile'] = (function() {
-  $__fn = function($p_0 = null, $iter_1 = null, $array_2 = null) use (&$__fn) {
+function majData_majArray_majSmajT_majIterator_pushmajWhile($p_0, $iter_1 = null, $array_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majArray_majSmajT_majIterator_pushmajWhile';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bindST'])['bind'])(($GLOBALS['Control_Monad_ST_Internal_new'])(false)))(function($break__3 = null) use ($array_2, $iter_1, $p_0) {
+  $__res = (($GLOBALS['Control_Monad_ST_Internal_bindST'])['bind'])(($GLOBALS['Control_Monad_ST_Internal_new'])(false), function($break__3 = null) use ($array_2, $iter_1, $p_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Monad_ST_Internal_while'])(((($GLOBALS['Control_Monad_ST_Internal_functorST'])['map'])(($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['not']))(($GLOBALS['Control_Monad_ST_Internal_read'])($break__3))))(((($GLOBALS['Control_Monad_ST_Internal_bindST'])['bind'])(($GLOBALS['Data_Array_ST_Iterator_peek'])($iter_1)))(function($mx_4 = null) use ($array_2, $break__3, $iter_1, $p_0) {
+  $__res = ($GLOBALS['Control_Monad_ST_Internal_while'])((($GLOBALS['Control_Monad_ST_Internal_functorST'])['map'])(($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['not'], ($GLOBALS['Control_Monad_ST_Internal_read'])($break__3)), (($GLOBALS['Control_Monad_ST_Internal_bindST'])['bind'])(($GLOBALS['Data_Array_ST_Iterator_peek'])($iter_1), function($mx_4 = null) use ($array_2, $break__3, $iter_1, $p_0) {
   $__num = \func_num_args();
   $__t0 = null;;
-  if (((is_object($mx_4) && (($mx_4)->{'tag'} === "Just")) && ($p_0)(($mx_4)->{'value0'}))) {
-$__t0 = ((($GLOBALS['Control_Monad_ST_Internal_bindST'])['bind'])(((($GLOBALS['Control_Monad_ST_Uncurried_runSTFn2'])($GLOBALS['Data_Array_ST_pushImpl']))(($mx_4)->{'value0'}))($array_2)))(function($_dollar__unused_5 = null) use ($iter_1) {
+  if (($mx_4 instanceof \Data\Maybe\Data_Maybe_Just && ($p_0)(($mx_4)->{'value0'}))) {
+$__t0 = (($GLOBALS['Control_Monad_ST_Internal_bindST'])['bind'])(($GLOBALS['Control_Monad_ST_Uncurried_runSTFn2'])($GLOBALS['Data_Array_ST_pushImpl'], ($mx_4)->{'value0'}, $array_2), function($_dollar__unused_5 = null) use ($iter_1) {
   $__num = \func_num_args();
   $__res = ($GLOBALS['Data_Array_ST_Iterator_void'])(($GLOBALS['Data_Array_ST_Iterator_next'])($iter_1));
   goto __end;;
@@ -198,7 +224,7 @@ $__t0 = ((($GLOBALS['Control_Monad_ST_Internal_bindST'])['bind'])(((($GLOBALS['C
 });
 goto end_branch_0;;
 };
-  $__t0 = ($GLOBALS['Data_Array_ST_Iterator_void'])((($GLOBALS['Control_Monad_ST_Internal_write'])(true))($break__3));
+  $__t0 = ($GLOBALS['Data_Array_ST_Iterator_void'])(($GLOBALS['Control_Monad_ST_Internal_write'])(true, $break__3));
   end_branch_0:;
   $__res = $__t0;
   goto __end;;
@@ -211,13 +237,12 @@ goto end_branch_0;;
 });
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_Array_ST_Iterator_pushWhile'] = __NAMESPACE__ . '\\majData_majArray_majSmajT_majIterator_pushmajWhile';
 
-// Data_Array_ST_Iterator_pushAll
-$GLOBALS['Data_Array_ST_Iterator_pushAll'] = ($GLOBALS['Data_Array_ST_Iterator_pushWhile'])(function($v_0 = null) {
+// Data_Array_ST_Iterator_pushAll_closure
+$GLOBALS['Data_Array_ST_Iterator_pushAll_closure'] = ($GLOBALS['Data_Array_ST_Iterator_pushWhile'])(function($v_0 = null) {
   $__num = \func_num_args();
   $__res = true;
   goto __end;;
@@ -225,33 +250,52 @@ $GLOBALS['Data_Array_ST_Iterator_pushAll'] = ($GLOBALS['Data_Array_ST_Iterator_p
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 });
 
-// Data_Array_ST_Iterator_iterator
-$GLOBALS['Data_Array_ST_Iterator_iterator'] = function($f_0 = null) {
+// Data_Array_ST_Iterator_pushAll
+function majData_majArray_majSmajT_majIterator_pushmajAll($v_0, $v_1 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Monad_ST_Internal_functorST'])['map'])(($GLOBALS['Data_Array_ST_Iterator_Iterator'])($f_0)))(($GLOBALS['Control_Monad_ST_Internal_new'])(0));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
-
-// Data_Array_ST_Iterator_iterate
-$GLOBALS['Data_Array_ST_Iterator_iterate'] = (function() {
-  $__fn = function($iter_0 = null, $f_1 = null) use (&$__fn) {
-  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majArray_majSmajT_majIterator_pushmajAll';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bindST'])['bind'])(($GLOBALS['Control_Monad_ST_Internal_new'])(false)))(function($break__2 = null) use ($f_1, $iter_0) {
+  $__res = ($GLOBALS['Data_Array_ST_Iterator_pushAll_closure'])($v_0, $v_1);
+  goto __end;;
+  __end:
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Array_ST_Iterator_pushAll'] = __NAMESPACE__ . '\\majData_majArray_majSmajT_majIterator_pushmajAll';
+
+// Data_Array_ST_Iterator_iterator
+function majData_majArray_majSmajT_majIterator_iterator($f_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Monad_ST_Internal_while'])(((($GLOBALS['Control_Monad_ST_Internal_functorST'])['map'])(($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['not']))(($GLOBALS['Control_Monad_ST_Internal_read'])($break__2))))(((($GLOBALS['Control_Monad_ST_Internal_bindST'])['bind'])(($GLOBALS['Data_Array_ST_Iterator_next'])($iter_0)))(function($mx_3 = null) use ($break__2, $f_1) {
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majArray_majSmajT_majIterator_iterator';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = (($GLOBALS['Control_Monad_ST_Internal_functorST'])['map'])(($GLOBALS['Data_Array_ST_Iterator_Iterator'])($f_0), ($GLOBALS['Control_Monad_ST_Internal_new'])(0));
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Array_ST_Iterator_iterator'] = __NAMESPACE__ . '\\majData_majArray_majSmajT_majIterator_iterator';
+
+// Data_Array_ST_Iterator_iterate
+function majData_majArray_majSmajT_majIterator_iterate($iter_0, $f_1 = null) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majArray_majSmajT_majIterator_iterate';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = (($GLOBALS['Control_Monad_ST_Internal_bindST'])['bind'])(($GLOBALS['Control_Monad_ST_Internal_new'])(false), function($break__2 = null) use ($f_1, $iter_0) {
+  $__num = \func_num_args();
+  $__res = ($GLOBALS['Control_Monad_ST_Internal_while'])((($GLOBALS['Control_Monad_ST_Internal_functorST'])['map'])(($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['not'], ($GLOBALS['Control_Monad_ST_Internal_read'])($break__2)), (($GLOBALS['Control_Monad_ST_Internal_bindST'])['bind'])(($GLOBALS['Data_Array_ST_Iterator_next'])($iter_0), function($mx_3 = null) use ($break__2, $f_1) {
   $__num = \func_num_args();
   $__t0 = null;;
-  if ((is_object($mx_3) && (($mx_3)->{'tag'} === "Just"))) {
+  if ($mx_3 instanceof \Data\Maybe\Data_Maybe_Just) {
 $__t0 = ($f_1)(($mx_3)->{'value0'});
 goto end_branch_0;;
 };
-  if ((is_object($mx_3) && (($mx_3)->{'tag'} === "Nothing"))) {
-$__t0 = ($GLOBALS['Data_Array_ST_Iterator_void'])((($GLOBALS['Control_Monad_ST_Internal_write'])(true))($break__2));
+  if ($mx_3 instanceof \Data\Maybe\Data_Maybe_Nothing) {
+$__t0 = ($GLOBALS['Data_Array_ST_Iterator_void'])(($GLOBALS['Control_Monad_ST_Internal_write'])(true, $break__2));
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -268,11 +312,24 @@ goto end_branch_0;;
 });
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Array_ST_Iterator_iterate'] = __NAMESPACE__ . '\\majData_majArray_majSmajT_majIterator_iterate';
+
+// Data_Array_ST_Iterator_exhausted_closure
+$GLOBALS['Data_Array_ST_Iterator_exhausted_closure'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_ST_Internal_functorST'])['map'])($GLOBALS['Data_Maybe_isNothing']), $GLOBALS['Data_Array_ST_Iterator_peek']);
 
 // Data_Array_ST_Iterator_exhausted
-$GLOBALS['Data_Array_ST_Iterator_exhausted'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_ST_Internal_functorST'])['map'])($GLOBALS['Data_Maybe_isNothing'])))($GLOBALS['Data_Array_ST_Iterator_peek']);
+function majData_majArray_majSmajT_majIterator_exhausted($v_0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majArray_majSmajT_majIterator_exhausted';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ($GLOBALS['Data_Array_ST_Iterator_exhausted_closure'])($v_0);
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Array_ST_Iterator_exhausted'] = __NAMESPACE__ . '\\majData_majArray_majSmajT_majIterator_exhausted';
 

@@ -111,7 +111,7 @@ var once_isNothing sync.Once
 func Get_isNothing() gopurs_runtime.Value {
 	once_isNothing.Do(func() {
 		cache_isNothing = gopurs_runtime.Func(func(v2_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_isNothing((*Constructor_Just[gopurs_runtime.Value])(v2_0_box.UnsafePtr))
+return gopurs_runtime.Bool(Call_isNothing((*Constructor_Just[gopurs_runtime.Value])(v2_0_box.UnsafePtr)))
 })
 	})
 	return cache_isNothing
@@ -122,7 +122,7 @@ var once_isJust sync.Once
 func Get_isJust() gopurs_runtime.Value {
 	once_isJust.Do(func() {
 		cache_isJust = gopurs_runtime.Func(func(v2_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_isJust((*Constructor_Just[gopurs_runtime.Value])(v2_0_box.UnsafePtr))
+return gopurs_runtime.Bool(Call_isJust((*Constructor_Just[gopurs_runtime.Value])(v2_0_box.UnsafePtr)))
 })
 	})
 	return cache_isJust
@@ -737,7 +737,7 @@ end_branch_0:
 return __t0
 }
 
-func Call_isNothing(v2_0_loop *Constructor_Just[gopurs_runtime.Value]) gopurs_runtime.Value {
+func Call_isNothing(v2_0_loop *Constructor_Just[gopurs_runtime.Value]) bool {
 var v2_0 *Constructor_Just[gopurs_runtime.Value] = v2_0_loop
 _ = v2_0
 var __t0 gopurs_runtime.Value
@@ -761,10 +761,10 @@ goto end_branch_0
 __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_0:
-return __t0
+return (__t0.IntVal) != (0)
 }
 
-func Call_isJust(v2_0_loop *Constructor_Just[gopurs_runtime.Value]) gopurs_runtime.Value {
+func Call_isJust(v2_0_loop *Constructor_Just[gopurs_runtime.Value]) bool {
 var v2_0 *Constructor_Just[gopurs_runtime.Value] = v2_0_loop
 _ = v2_0
 var __t0 gopurs_runtime.Value
@@ -788,7 +788,7 @@ goto end_branch_0
 __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_0:
-return __t0
+return (__t0.IntVal) != (0)
 }
 
 func Call_fromMaybe_prime(a_0_loop gopurs_runtime.Value) gopurs_runtime.Value {

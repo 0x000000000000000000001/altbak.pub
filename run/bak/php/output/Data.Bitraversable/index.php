@@ -110,28 +110,40 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_Bitraversable_identity
-$GLOBALS['Data_Bitraversable_identity'] = function($x_0 = null) {
+function majData_majBitraversable_identity($x_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majBitraversable_identity';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $x_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Bitraversable_identity'] = __NAMESPACE__ . '\\majData_majBitraversable_identity';
 
 // Data_Bitraversable_bitraverse
-$GLOBALS['Data_Bitraversable_bitraverse'] = function($dict_0 = null) {
+function majData_majBitraversable_bitraverse($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majBitraversable_bitraverse';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['bitraverse'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Bitraversable_bitraverse'] = __NAMESPACE__ . '\\majData_majBitraversable_bitraverse';
 
 // Data_Bitraversable_lfor
-$GLOBALS['Data_Bitraversable_lfor'] = (function() {
-  $__fn = function($dictBitraversable_0 = null, $dictApplicative_1 = null) use (&$__fn) {
+function majData_majBitraversable_lfor($dictBitraversable_0, $dictApplicative_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majBitraversable_lfor';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
@@ -143,7 +155,7 @@ $GLOBALS['Data_Bitraversable_lfor'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($bitraverse2_2_0)($f_5))($pure_3_1))($t_4);
+  $__res = ($bitraverse2_2_0)($f_5, $pure_3_1, $t_4);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -152,15 +164,14 @@ $GLOBALS['Data_Bitraversable_lfor'] = (function() {
 })();
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Bitraversable_lfor'] = __NAMESPACE__ . '\\majData_majBitraversable_lfor';
 
 // Data_Bitraversable_ltraverse
-$GLOBALS['Data_Bitraversable_ltraverse'] = (function() {
-  $__fn = function($dictBitraversable_0 = null, $dictApplicative_1 = null) use (&$__fn) {
+function majData_majBitraversable_ltraverse($dictBitraversable_0, $dictApplicative_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majBitraversable_ltraverse';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
@@ -168,22 +179,21 @@ $GLOBALS['Data_Bitraversable_ltraverse'] = (function() {
   $pure_3_1 = ($dictApplicative_1)['pure'];
   $__res = function($f_4 = null) use ($bitraverse2_2_0, $pure_3_1) {
   $__num = \func_num_args();
-  $__res = (($bitraverse2_2_0)($f_4))($pure_3_1);
+  $__res = ($bitraverse2_2_0)($f_4, $pure_3_1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Bitraversable_ltraverse'] = __NAMESPACE__ . '\\majData_majBitraversable_ltraverse';
 
 // Data_Bitraversable_rfor
-$GLOBALS['Data_Bitraversable_rfor'] = (function() {
-  $__fn = function($dictBitraversable_0 = null, $dictApplicative_1 = null) use (&$__fn) {
+function majData_majBitraversable_rfor($dictBitraversable_0, $dictApplicative_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majBitraversable_rfor';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
@@ -195,7 +205,7 @@ $GLOBALS['Data_Bitraversable_rfor'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($bitraverse2_2_0)($pure_3_1))($f_5))($t_4);
+  $__res = ($bitraverse2_2_0)($pure_3_1, $f_5, $t_4);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -204,25 +214,23 @@ $GLOBALS['Data_Bitraversable_rfor'] = (function() {
 })();
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Bitraversable_rfor'] = __NAMESPACE__ . '\\majData_majBitraversable_rfor';
 
 // Data_Bitraversable_rtraverse
-$GLOBALS['Data_Bitraversable_rtraverse'] = (function() {
-  $__fn = function($dictBitraversable_0 = null, $dictApplicative_1 = null) use (&$__fn) {
+function majData_majBitraversable_rtraverse($dictBitraversable_0, $dictApplicative_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majBitraversable_rtraverse';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictBitraversable_0)['bitraverse'])($dictApplicative_1))(($dictApplicative_1)['pure']);
+  $__res = (($dictBitraversable_0)['bitraverse'])($dictApplicative_1, ($dictApplicative_1)['pure']);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Bitraversable_rtraverse'] = __NAMESPACE__ . '\\majData_majBitraversable_rtraverse';
 
 // Data_Bitraversable_bitraversableTuple
 $GLOBALS['Data_Bitraversable_bitraversableTuple'] = ["bitraverse" => function($dictApplicative_0 = null) {
@@ -234,7 +242,7 @@ $GLOBALS['Data_Bitraversable_bitraversableTuple'] = ["bitraverse" => function($d
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($Apply0_1_0)['apply'])(((((($Apply0_1_0)['Functor0'])(null))['map'])($GLOBALS['Data_Tuple_Tuple']))(($f_2)(($v_4)->{'value0'}))))(($g_3)(($v_4)->{'value1'}));
+  $__res = (($Apply0_1_0)['apply'])((((($Apply0_1_0)['Functor0'])(null))['map'])($GLOBALS['Data_Tuple_Tuple'], ($f_2)(($v_4)->{'value0'})), ($g_3)(($v_4)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -249,7 +257,7 @@ $GLOBALS['Data_Bitraversable_bitraversableTuple'] = ["bitraverse" => function($d
   $Apply0_1_1 = (($dictApplicative_0)['Apply0'])(null);
   $__res = function($v_2 = null) use ($Apply0_1_1) {
   $__num = \func_num_args();
-  $__res = ((($Apply0_1_1)['apply'])(((((($Apply0_1_1)['Functor0'])(null))['map'])($GLOBALS['Data_Tuple_Tuple']))(($v_2)->{'value0'})))(($v_2)->{'value1'});
+  $__res = (($Apply0_1_1)['apply'])((((($Apply0_1_1)['Functor0'])(null))['map'])($GLOBALS['Data_Tuple_Tuple'], ($v_2)->{'value0'}), ($v_2)->{'value1'});
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -272,8 +280,12 @@ $GLOBALS['Data_Bitraversable_bitraversableTuple'] = ["bitraverse" => function($d
 }];
 
 // Data_Bitraversable_bitraversableJoker
-$GLOBALS['Data_Bitraversable_bitraversableJoker'] = function($dictTraversable_0 = null) {
+function majData_majBitraversable_bitraversablemajJoker($dictTraversable_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majBitraversable_bitraversablemajJoker';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__local_var_1_0 = (($dictTraversable_0)['Functor0'])(null);
   $bifunctorJoker_2_1 = ["bimap" => (function() use ($__local_var_1_0) {
   $__fn = function($v_2 = null, $g_3 = null, $v1_4 = null) use ($__local_var_1_0, &$__fn) {
@@ -281,7 +293,7 @@ $GLOBALS['Data_Bitraversable_bitraversableJoker'] = function($dictTraversable_0 
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($__local_var_1_0)['map'])($g_3))($v1_4);
+  $__res = (($__local_var_1_0)['map'])($g_3, $v1_4);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -295,7 +307,7 @@ $GLOBALS['Data_Bitraversable_bitraversableJoker'] = function($dictTraversable_0 
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = (((($__local_var_3_2)['foldr'])($r_5))($u_6))($v1_7);
+  $__res = (($__local_var_3_2)['foldr'])($r_5, $u_6, $v1_7);
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -307,7 +319,7 @@ $GLOBALS['Data_Bitraversable_bitraversableJoker'] = function($dictTraversable_0 
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = (((($__local_var_3_2)['foldl'])($r_5))($u_6))($v1_7);
+  $__res = (($__local_var_3_2)['foldl'])($r_5, $u_6, $v1_7);
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -322,7 +334,7 @@ $GLOBALS['Data_Bitraversable_bitraversableJoker'] = function($dictTraversable_0 
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($foldMap1_5_3)($r_7))($v1_8);
+  $__res = ($foldMap1_5_3)($r_7, $v1_8);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -342,7 +354,7 @@ $GLOBALS['Data_Bitraversable_bitraversableJoker'] = function($dictTraversable_0 
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((((((($dictApplicative_5)['Apply0'])(null))['Functor0'])(null))['map'])($GLOBALS['Data_Functor_Joker_Joker']))((($traverse1_6_5)($r_8))($v1_9));
+  $__res = (((((($dictApplicative_5)['Apply0'])(null))['Functor0'])(null))['map'])($GLOBALS['Data_Functor_Joker_Joker'], ($traverse1_6_5)($r_8, $v1_9));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -357,7 +369,7 @@ $GLOBALS['Data_Bitraversable_bitraversableJoker'] = function($dictTraversable_0 
   $sequence1_6_6 = (($dictTraversable_0)['sequence'])($dictApplicative_5);
   $__res = function($v_7 = null) use ($dictApplicative_5, $sequence1_6_6) {
   $__num = \func_num_args();
-  $__res = ((((((($dictApplicative_5)['Apply0'])(null))['Functor0'])(null))['map'])($GLOBALS['Data_Functor_Joker_Joker']))(($sequence1_6_6)($v_7));
+  $__res = (((((($dictApplicative_5)['Apply0'])(null))['Functor0'])(null))['map'])($GLOBALS['Data_Functor_Joker_Joker'], ($sequence1_6_6)($v_7));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -380,8 +392,9 @@ $GLOBALS['Data_Bitraversable_bitraversableJoker'] = function($dictTraversable_0 
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Bitraversable_bitraversableJoker'] = __NAMESPACE__ . '\\majData_majBitraversable_bitraversablemajJoker';
 
 // Data_Bitraversable_bitraversableEither
 $GLOBALS['Data_Bitraversable_bitraversableEither'] = ["bitraverse" => function($dictApplicative_0 = null) {
@@ -394,12 +407,12 @@ $GLOBALS['Data_Bitraversable_bitraversableEither'] = ["bitraverse" => function($
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   $__t1 = null;;
-  if ((is_object($v2_4) && (($v2_4)->{'tag'} === "Left"))) {
-$__t1 = ((($__local_var_1_0)['map'])($GLOBALS['Data_Either_Left']))(($v_2)(($v2_4)->{'value0'}));
+  if ($v2_4 instanceof \Data\Either\Data_Either_Left) {
+$__t1 = (($__local_var_1_0)['map'])($GLOBALS['Data_Either_Left'], ($v_2)(($v2_4)->{'value0'}));
 goto end_branch_1;;
 };
-  if ((is_object($v2_4) && (($v2_4)->{'tag'} === "Right"))) {
-$__t1 = ((($__local_var_1_0)['map'])($GLOBALS['Data_Either_Right']))(($v1_3)(($v2_4)->{'value0'}));
+  if ($v2_4 instanceof \Data\Either\Data_Either_Right) {
+$__t1 = (($__local_var_1_0)['map'])($GLOBALS['Data_Either_Right'], ($v1_3)(($v2_4)->{'value0'}));
 goto end_branch_1;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -421,12 +434,12 @@ goto end_branch_1;;
   $__res = function($v_2 = null) use ($__local_var_1_2) {
   $__num = \func_num_args();
   $__t3 = null;;
-  if ((is_object($v_2) && (($v_2)->{'tag'} === "Left"))) {
-$__t3 = ((($__local_var_1_2)['map'])($GLOBALS['Data_Either_Left']))(($v_2)->{'value0'});
+  if ($v_2 instanceof \Data\Either\Data_Either_Left) {
+$__t3 = (($__local_var_1_2)['map'])($GLOBALS['Data_Either_Left'], ($v_2)->{'value0'});
 goto end_branch_3;;
 };
-  if ((is_object($v_2) && (($v_2)->{'tag'} === "Right"))) {
-$__t3 = ((($__local_var_1_2)['map'])($GLOBALS['Data_Either_Right']))(($v_2)->{'value0'});
+  if ($v_2 instanceof \Data\Either\Data_Either_Right) {
+$__t3 = (($__local_var_1_2)['map'])($GLOBALS['Data_Either_Right'], ($v_2)->{'value0'});
 goto end_branch_3;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -461,7 +474,7 @@ $GLOBALS['Data_Bitraversable_bitraversableConst'] = ["bitraverse" => (function()
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ((((((($dictApplicative_0)['Apply0'])(null))['Functor0'])(null))['map'])($GLOBALS['Data_Const_Const']))(($f_1)($v1_3));
+  $__res = (((((($dictApplicative_0)['Apply0'])(null))['Functor0'])(null))['map'])($GLOBALS['Data_Const_Const'], ($f_1)($v1_3));
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -473,7 +486,7 @@ $GLOBALS['Data_Bitraversable_bitraversableConst'] = ["bitraverse" => (function()
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((((($dictApplicative_0)['Apply0'])(null))['Functor0'])(null))['map'])($GLOBALS['Data_Const_Const']))($v_1);
+  $__res = (((((($dictApplicative_0)['Apply0'])(null))['Functor0'])(null))['map'])($GLOBALS['Data_Const_Const'], $v_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -494,8 +507,12 @@ $GLOBALS['Data_Bitraversable_bitraversableConst'] = ["bitraverse" => (function()
 }];
 
 // Data_Bitraversable_bitraversableClown
-$GLOBALS['Data_Bitraversable_bitraversableClown'] = function($dictTraversable_0 = null) {
+function majData_majBitraversable_bitraversablemajClown($dictTraversable_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majBitraversable_bitraversablemajClown';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__local_var_1_0 = (($dictTraversable_0)['Functor0'])(null);
   $bifunctorClown_2_1 = ["bimap" => (function() use ($__local_var_1_0) {
   $__fn = function($f_2 = null, $v_3 = null, $v1_4 = null) use ($__local_var_1_0, &$__fn) {
@@ -503,7 +520,7 @@ $GLOBALS['Data_Bitraversable_bitraversableClown'] = function($dictTraversable_0 
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($__local_var_1_0)['map'])($f_2))($v1_4);
+  $__res = (($__local_var_1_0)['map'])($f_2, $v1_4);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -517,7 +534,7 @@ $GLOBALS['Data_Bitraversable_bitraversableClown'] = function($dictTraversable_0 
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = (((($__local_var_3_2)['foldr'])($l_4))($u_6))($v1_7);
+  $__res = (($__local_var_3_2)['foldr'])($l_4, $u_6, $v1_7);
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -529,7 +546,7 @@ $GLOBALS['Data_Bitraversable_bitraversableClown'] = function($dictTraversable_0 
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = (((($__local_var_3_2)['foldl'])($l_4))($u_6))($v1_7);
+  $__res = (($__local_var_3_2)['foldl'])($l_4, $u_6, $v1_7);
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -544,7 +561,7 @@ $GLOBALS['Data_Bitraversable_bitraversableClown'] = function($dictTraversable_0 
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($foldMap1_5_3)($l_6))($v1_8);
+  $__res = ($foldMap1_5_3)($l_6, $v1_8);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -564,7 +581,7 @@ $GLOBALS['Data_Bitraversable_bitraversableClown'] = function($dictTraversable_0 
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((((((($dictApplicative_5)['Apply0'])(null))['Functor0'])(null))['map'])($GLOBALS['Data_Functor_Clown_Clown']))((($traverse1_6_5)($l_7))($v1_9));
+  $__res = (((((($dictApplicative_5)['Apply0'])(null))['Functor0'])(null))['map'])($GLOBALS['Data_Functor_Clown_Clown'], ($traverse1_6_5)($l_7, $v1_9));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -579,7 +596,7 @@ $GLOBALS['Data_Bitraversable_bitraversableClown'] = function($dictTraversable_0 
   $sequence1_6_6 = (($dictTraversable_0)['sequence'])($dictApplicative_5);
   $__res = function($v_7 = null) use ($dictApplicative_5, $sequence1_6_6) {
   $__num = \func_num_args();
-  $__res = ((((((($dictApplicative_5)['Apply0'])(null))['Functor0'])(null))['map'])($GLOBALS['Data_Functor_Clown_Clown']))(($sequence1_6_6)($v_7));
+  $__res = (((((($dictApplicative_5)['Apply0'])(null))['Functor0'])(null))['map'])($GLOBALS['Data_Functor_Clown_Clown'], ($sequence1_6_6)($v_7));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -602,36 +619,45 @@ $GLOBALS['Data_Bitraversable_bitraversableClown'] = function($dictTraversable_0 
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Bitraversable_bitraversableClown'] = __NAMESPACE__ . '\\majData_majBitraversable_bitraversablemajClown';
 
 // Data_Bitraversable_bisequenceDefault
-$GLOBALS['Data_Bitraversable_bisequenceDefault'] = (function() {
-  $__fn = function($dictBitraversable_0 = null, $dictApplicative_1 = null) use (&$__fn) {
+function majData_majBitraversable_bisequencemajDefault($dictBitraversable_0, $dictApplicative_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majBitraversable_bisequencemajDefault';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($dictBitraversable_0)['bitraverse'])($dictApplicative_1))($GLOBALS['Data_Bitraversable_identity']))($GLOBALS['Data_Bitraversable_identity']);
+  $__res = (($dictBitraversable_0)['bitraverse'])($dictApplicative_1, $GLOBALS['Data_Bitraversable_identity'], $GLOBALS['Data_Bitraversable_identity']);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Bitraversable_bisequenceDefault'] = __NAMESPACE__ . '\\majData_majBitraversable_bisequencemajDefault';
 
 // Data_Bitraversable_bisequence
-$GLOBALS['Data_Bitraversable_bisequence'] = function($dict_0 = null) {
+function majData_majBitraversable_bisequence($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majBitraversable_bisequence';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['bisequence'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Bitraversable_bisequence'] = __NAMESPACE__ . '\\majData_majBitraversable_bisequence';
 
 // Data_Bitraversable_bitraversableFlip
-$GLOBALS['Data_Bitraversable_bitraversableFlip'] = function($dictBitraversable_0 = null) {
+function majData_majBitraversable_bitraversablemajFlip($dictBitraversable_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majBitraversable_bitraversablemajFlip';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__local_var_1_0 = (($dictBitraversable_0)['Bifunctor0'])(null);
   $bifunctorFlip_2_1 = ["bimap" => (function() use ($__local_var_1_0) {
   $__fn = function($f_2 = null, $g_3 = null, $v_4 = null) use ($__local_var_1_0, &$__fn) {
@@ -639,7 +665,7 @@ $GLOBALS['Data_Bitraversable_bitraversableFlip'] = function($dictBitraversable_0
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (((($__local_var_1_0)['bimap'])($g_3))($f_2))($v_4);
+  $__res = (($__local_var_1_0)['bimap'])($g_3, $f_2, $v_4);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -653,7 +679,7 @@ $GLOBALS['Data_Bitraversable_bitraversableFlip'] = function($dictBitraversable_0
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ((((($__local_var_3_2)['bifoldr'])($l_5))($r_4))($u_6))($v_7);
+  $__res = (($__local_var_3_2)['bifoldr'])($l_5, $r_4, $u_6, $v_7);
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -665,7 +691,7 @@ $GLOBALS['Data_Bitraversable_bitraversableFlip'] = function($dictBitraversable_0
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ((((($__local_var_3_2)['bifoldl'])($l_5))($r_4))($u_6))($v_7);
+  $__res = (($__local_var_3_2)['bifoldl'])($l_5, $r_4, $u_6, $v_7);
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -680,7 +706,7 @@ $GLOBALS['Data_Bitraversable_bitraversableFlip'] = function($dictBitraversable_0
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($bifoldMap2_5_3)($l_7))($r_6))($v_8);
+  $__res = ($bifoldMap2_5_3)($l_7, $r_6, $v_8);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -700,7 +726,7 @@ $GLOBALS['Data_Bitraversable_bitraversableFlip'] = function($dictBitraversable_0
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((((((($dictApplicative_5)['Apply0'])(null))['Functor0'])(null))['map'])($GLOBALS['Data_Functor_Flip_Flip']))(((($bitraverse2_6_5)($l_8))($r_7))($v_9));
+  $__res = (((((($dictApplicative_5)['Apply0'])(null))['Functor0'])(null))['map'])($GLOBALS['Data_Functor_Flip_Flip'], ($bitraverse2_6_5)($l_8, $r_7, $v_9));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -715,7 +741,7 @@ $GLOBALS['Data_Bitraversable_bitraversableFlip'] = function($dictBitraversable_0
   $bisequence2_6_6 = (($dictBitraversable_0)['bisequence'])($dictApplicative_5);
   $__res = function($v_7 = null) use ($bisequence2_6_6, $dictApplicative_5) {
   $__num = \func_num_args();
-  $__res = ((((((($dictApplicative_5)['Apply0'])(null))['Functor0'])(null))['map'])($GLOBALS['Data_Functor_Flip_Flip']))(($bisequence2_6_6)($v_7));
+  $__res = (((((($dictApplicative_5)['Apply0'])(null))['Functor0'])(null))['map'])($GLOBALS['Data_Functor_Flip_Flip'], ($bisequence2_6_6)($v_7));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -738,12 +764,17 @@ $GLOBALS['Data_Bitraversable_bitraversableFlip'] = function($dictBitraversable_0
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Bitraversable_bitraversableFlip'] = __NAMESPACE__ . '\\majData_majBitraversable_bitraversablemajFlip';
 
 // Data_Bitraversable_bitraversableProduct2
-$GLOBALS['Data_Bitraversable_bitraversableProduct2'] = function($dictBitraversable_0 = null) {
+function majData_majBitraversable_bitraversablemajProduct2($dictBitraversable_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majBitraversable_bitraversablemajProduct2';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__local_var_1_0 = (($dictBitraversable_0)['Bifunctor0'])(null);
   $bifoldableProduct2_2_1 = ($GLOBALS['Data_Bifoldable_bifoldableProduct2'])((($dictBitraversable_0)['Bifoldable1'])(null));
   $__res = function($dictBitraversable1_3 = null) use ($__local_var_1_0, $bifoldableProduct2_2_1, $dictBitraversable_0) {
@@ -755,7 +786,7 @@ $GLOBALS['Data_Bitraversable_bitraversableProduct2'] = function($dictBitraversab
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = new Phpurs_Data2("Product2", (((($__local_var_1_0)['bimap'])($f_5))($g_6))(($v_7)->{'value0'}), (((($__local_var_4_2)['bimap'])($f_5))($g_6))(($v_7)->{'value1'}));
+  $__res = new \Data\Functor\Product2\Data_Functor_Product2_Product2((($__local_var_1_0)['bimap'])($f_5, $g_6, ($v_7)->{'value0'}), (($__local_var_4_2)['bimap'])($f_5, $g_6, ($v_7)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -774,7 +805,7 @@ $GLOBALS['Data_Bitraversable_bitraversableProduct2'] = function($dictBitraversab
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($Apply0_8_5)['apply'])(((((($Apply0_8_5)['Functor0'])(null))['map'])($GLOBALS['Data_Functor_Product2_Product2']))(((($bitraverse3_9_6)($l_11))($r_12))(($v_13)->{'value0'}))))(((($bitraverse4_10_7)($l_11))($r_12))(($v_13)->{'value1'}));
+  $__res = (($Apply0_8_5)['apply'])((((($Apply0_8_5)['Functor0'])(null))['map'])($GLOBALS['Data_Functor_Product2_Product2'], ($bitraverse3_9_6)($l_11, $r_12, ($v_13)->{'value0'})), ($bitraverse4_10_7)($l_11, $r_12, ($v_13)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -791,7 +822,7 @@ $GLOBALS['Data_Bitraversable_bitraversableProduct2'] = function($dictBitraversab
   $bisequence4_10_10 = (($dictBitraversable1_3)['bisequence'])($dictApplicative_7);
   $__res = function($v_11 = null) use ($Apply0_8_8, $bisequence3_9_9, $bisequence4_10_10) {
   $__num = \func_num_args();
-  $__res = ((($Apply0_8_8)['apply'])(((((($Apply0_8_8)['Functor0'])(null))['map'])($GLOBALS['Data_Functor_Product2_Product2']))(($bisequence3_9_9)(($v_11)->{'value0'}))))(($bisequence4_10_10)(($v_11)->{'value1'}));
+  $__res = (($Apply0_8_8)['apply'])((((($Apply0_8_8)['Functor0'])(null))['map'])($GLOBALS['Data_Functor_Product2_Product2'], ($bisequence3_9_9)(($v_11)->{'value0'})), ($bisequence4_10_10)(($v_11)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -818,13 +849,14 @@ $GLOBALS['Data_Bitraversable_bitraversableProduct2'] = function($dictBitraversab
 };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Bitraversable_bitraversableProduct2'] = __NAMESPACE__ . '\\majData_majBitraversable_bitraversablemajProduct2';
 
 // Data_Bitraversable_bitraverseDefault
-$GLOBALS['Data_Bitraversable_bitraverseDefault'] = (function() {
-  $__fn = function($dictBitraversable_0 = null, $dictApplicative_1 = null) use (&$__fn) {
+function majData_majBitraversable_bitraversemajDefault($dictBitraversable_0, $dictApplicative_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majBitraversable_bitraversemajDefault';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
@@ -835,7 +867,7 @@ $GLOBALS['Data_Bitraversable_bitraverseDefault'] = (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ($bisequence2_2_0)((((((($dictBitraversable_0)['Bifunctor0'])(null))['bimap'])($f_3))($g_4))($t_5));
+  $__res = ($bisequence2_2_0)((((($dictBitraversable_0)['Bifunctor0'])(null))['bimap'])($f_3, $g_4, $t_5));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -844,15 +876,14 @@ $GLOBALS['Data_Bitraversable_bitraverseDefault'] = (function() {
 })();
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Bitraversable_bitraverseDefault'] = __NAMESPACE__ . '\\majData_majBitraversable_bitraversemajDefault';
 
 // Data_Bitraversable_bifor
-$GLOBALS['Data_Bitraversable_bifor'] = (function() {
-  $__fn = function($dictBitraversable_0 = null, $dictApplicative_1 = null) use (&$__fn) {
+function majData_majBitraversable_bifor($dictBitraversable_0, $dictApplicative_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majBitraversable_bifor';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
@@ -863,7 +894,7 @@ $GLOBALS['Data_Bitraversable_bifor'] = (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($bitraverse2_2_0)($f_4))($g_5))($t_3);
+  $__res = ($bitraverse2_2_0)($f_4, $g_5, $t_3);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -872,8 +903,7 @@ $GLOBALS['Data_Bitraversable_bifor'] = (function() {
 })();
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Bitraversable_bifor'] = __NAMESPACE__ . '\\majData_majBitraversable_bifor';
 

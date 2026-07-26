@@ -99,34 +99,40 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_Ring_Generic_genericSub'
-$GLOBALS['Data_Ring_Generic_genericSub__prime__'] = function($dict_0 = null) {
+function majData_majRing_majGeneric_genericmajSub__prime__($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majRing_majGeneric_genericmajSub__prime__';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['genericSub__prime__'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Ring_Generic_genericSub__prime__'] = __NAMESPACE__ . '\\majData_majRing_majGeneric_genericmajSub__prime__';
 
 // Data_Ring_Generic_genericSub
-$GLOBALS['Data_Ring_Generic_genericSub'] = (function() {
-  $__fn = function($dictGeneric_0 = null, $dictGenericRing_1 = null, $x_2 = null, $y_3 = null) use (&$__fn) {
+function majData_majRing_majGeneric_genericmajSub($dictGeneric_0, $dictGenericRing_1 = null, $x_2 = null, $y_3 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majRing_majGeneric_genericmajSub';
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = (($dictGeneric_0)['to'])(((($dictGenericRing_1)['genericSub__prime__'])((($dictGeneric_0)['from'])($x_2)))((($dictGeneric_0)['from'])($y_3)));
+  $__res = (($dictGeneric_0)['to'])((($dictGenericRing_1)['genericSub__prime__'])((($dictGeneric_0)['from'])($x_2), (($dictGeneric_0)['from'])($y_3)));
   goto __end;;
   __end:
-  return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
-  };
-  return $__fn;
-})();
+  return 4 < $__num ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
+}
+$GLOBALS['Data_Ring_Generic_genericSub'] = __NAMESPACE__ . '\\majData_majRing_majGeneric_genericmajSub';
 
 // Data_Ring_Generic_genericRingProduct
-$GLOBALS['Data_Ring_Generic_genericRingProduct'] = (function() {
-  $__fn = function($dictGenericRing_0 = null, $dictGenericRing1_1 = null) use (&$__fn) {
+function majData_majRing_majGeneric_genericmajRingmajProduct($dictGenericRing_0, $dictGenericRing1_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majRing_majGeneric_genericmajRingmajProduct';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
@@ -136,7 +142,7 @@ $GLOBALS['Data_Ring_Generic_genericRingProduct'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Product", ((($dictGenericRing_0)['genericSub__prime__'])(($v_2)->{'value0'}))(($v1_3)->{'value0'}), ((($dictGenericRing1_1)['genericSub__prime__'])(($v_2)->{'value1'}))(($v1_3)->{'value1'}));
+  $__res = new \Data\Generic\Rep\Data_Generic_Rep_Product((($dictGenericRing_0)['genericSub__prime__'])(($v_2)->{'value0'}, ($v1_3)->{'value0'}), (($dictGenericRing1_1)['genericSub__prime__'])(($v_2)->{'value1'}, ($v1_3)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -145,10 +151,9 @@ $GLOBALS['Data_Ring_Generic_genericRingProduct'] = (function() {
 })()];
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Ring_Generic_genericRingProduct'] = __NAMESPACE__ . '\\majData_majRing_majGeneric_genericmajRingmajProduct';
 
 // Data_Ring_Generic_genericRingNoArguments
 $GLOBALS['Data_Ring_Generic_genericRingNoArguments'] = ["genericSub__prime__" => (function() {
@@ -157,7 +162,7 @@ $GLOBALS['Data_Ring_Generic_genericRingNoArguments'] = ["genericSub__prime__" =>
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data0("NoArguments");
+  $__res = new \Data\Generic\Rep\Data_Generic_Rep_NoArguments();
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -166,15 +171,19 @@ $GLOBALS['Data_Ring_Generic_genericRingNoArguments'] = ["genericSub__prime__" =>
 })()];
 
 // Data_Ring_Generic_genericRingConstructor
-$GLOBALS['Data_Ring_Generic_genericRingConstructor'] = function($dictGenericRing_0 = null) {
+function majData_majRing_majGeneric_genericmajRingmajConstructor($dictGenericRing_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majRing_majGeneric_genericmajRingmajConstructor';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["genericSub__prime__" => (function() use ($dictGenericRing_0) {
   $__fn = function($v_1 = null, $v1_2 = null) use ($dictGenericRing_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictGenericRing_0)['genericSub__prime__'])($v_1))($v1_2);
+  $__res = (($dictGenericRing_0)['genericSub__prime__'])($v_1, $v1_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -183,19 +192,24 @@ $GLOBALS['Data_Ring_Generic_genericRingConstructor'] = function($dictGenericRing
 })()];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Ring_Generic_genericRingConstructor'] = __NAMESPACE__ . '\\majData_majRing_majGeneric_genericmajRingmajConstructor';
 
 // Data_Ring_Generic_genericRingArgument
-$GLOBALS['Data_Ring_Generic_genericRingArgument'] = function($dictRing_0 = null) {
+function majData_majRing_majGeneric_genericmajRingmajArgument($dictRing_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majRing_majGeneric_genericmajRingmajArgument';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["genericSub__prime__" => (function() use ($dictRing_0) {
   $__fn = function($v_1 = null, $v1_2 = null) use ($dictRing_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictRing_0)['sub'])($v_1))($v1_2);
+  $__res = (($dictRing_0)['sub'])($v_1, $v1_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -204,6 +218,7 @@ $GLOBALS['Data_Ring_Generic_genericRingArgument'] = function($dictRing_0 = null)
 })()];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Ring_Generic_genericRingArgument'] = __NAMESPACE__ . '\\majData_majRing_majGeneric_genericmajRingmajArgument';
 

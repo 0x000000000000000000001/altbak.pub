@@ -113,11 +113,17 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_String_NonEmpty_Internal_fromJust
-$GLOBALS['Data_String_NonEmpty_Internal_fromJust'] = function($v_0 = null) {
+function majData_majString_majNonmajEmpty_majInternal_frommajJust($v_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majNonmajEmpty_majInternal_frommajJust';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__t0 = null;;
-  if ((is_object($v_0) && (($v_0)->{'tag'} === "Just"))) {
+  if ($v_0 instanceof \Data\Maybe\Data_Maybe_Just) {
 $__t0 = ($v_0)->{'value0'};
 goto end_branch_0;;
 };
@@ -127,58 +133,84 @@ goto end_branch_0;;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_String_NonEmpty_Internal_fromJust'] = __NAMESPACE__ . '\\majData_majString_majNonmajEmpty_majInternal_frommajJust';
 
 // Data_String_NonEmpty_Internal_NonEmptyString
-$GLOBALS['Data_String_NonEmpty_Internal_NonEmptyString'] = function($x_0 = null) {
+function majData_majString_majNonmajEmpty_majInternal_majNonmajEmptymajString($x_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majNonmajEmpty_majInternal_majNonmajEmptymajString';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $x_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_String_NonEmpty_Internal_NonEmptyString'] = __NAMESPACE__ . '\\majData_majString_majNonmajEmpty_majInternal_majNonmajEmptymajString';
 
 // Data_String_NonEmpty_Internal_NonEmptyReplacement
-$GLOBALS['Data_String_NonEmpty_Internal_NonEmptyReplacement'] = function($x_0 = null) {
+function majData_majString_majNonmajEmpty_majInternal_majNonmajEmptymajReplacement($x_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majNonmajEmpty_majInternal_majNonmajEmptymajReplacement';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $x_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_String_NonEmpty_Internal_NonEmptyReplacement'] = __NAMESPACE__ . '\\majData_majString_majNonmajEmpty_majInternal_majNonmajEmptymajReplacement';
 
 // Data_String_NonEmpty_Internal_toUpper
-$GLOBALS['Data_String_NonEmpty_Internal_toUpper'] = function($v_0 = null) {
+function majData_majString_majNonmajEmpty_majInternal_tomajUpper($v_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majNonmajEmpty_majInternal_tomajUpper';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($GLOBALS['Data_String_Common_toUpper'])($v_0);
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_String_NonEmpty_Internal_toUpper'] = __NAMESPACE__ . '\\majData_majString_majNonmajEmpty_majInternal_tomajUpper';
 
 // Data_String_NonEmpty_Internal_toString
-$GLOBALS['Data_String_NonEmpty_Internal_toString'] = function($v_0 = null) {
+function majData_majString_majNonmajEmpty_majInternal_tomajString($v_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majNonmajEmpty_majInternal_tomajString';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $v_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_String_NonEmpty_Internal_toString'] = __NAMESPACE__ . '\\majData_majString_majNonmajEmpty_majInternal_tomajString';
 
 // Data_String_NonEmpty_Internal_toLower
-$GLOBALS['Data_String_NonEmpty_Internal_toLower'] = function($v_0 = null) {
+function majData_majString_majNonmajEmpty_majInternal_tomajLower($v_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majNonmajEmpty_majInternal_tomajLower';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($GLOBALS['Data_String_Common_toLower'])($v_0);
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_String_NonEmpty_Internal_toLower'] = __NAMESPACE__ . '\\majData_majString_majNonmajEmpty_majInternal_tomajLower';
 
 // Data_String_NonEmpty_Internal_showNonEmptyString
 $GLOBALS['Data_String_NonEmpty_Internal_showNonEmptyString'] = ["show" => function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(NonEmptyString.unsafeFromString "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($GLOBALS['Data_Show_showString'])['show'])($v_0)))(")"));
+  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(NonEmptyString.unsafeFromString ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($GLOBALS['Data_Show_showString'])['show'])($v_0), ")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -187,7 +219,7 @@ $GLOBALS['Data_String_NonEmpty_Internal_showNonEmptyString'] = ["show" => functi
 // Data_String_NonEmpty_Internal_showNonEmptyReplacement
 $GLOBALS['Data_String_NonEmpty_Internal_showNonEmptyReplacement'] = ["show" => function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(NonEmptyReplacement "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($GLOBALS['Data_String_NonEmpty_Internal_showNonEmptyString'])['show'])($v_0)))(")"));
+  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(NonEmptyReplacement ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($GLOBALS['Data_String_NonEmpty_Internal_showNonEmptyString'])['show'])($v_0), ")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -200,49 +232,46 @@ $GLOBALS['Data_String_NonEmpty_Internal_semigroupNonEmptyString'] = $GLOBALS['Da
 $GLOBALS['Data_String_NonEmpty_Internal_semigroupNonEmptyReplacement'] = $GLOBALS['Data_Semigroup_semigroupString'];
 
 // Data_String_NonEmpty_Internal_replaceAll
-$GLOBALS['Data_String_NonEmpty_Internal_replaceAll'] = (function() {
-  $__fn = function($pat_0 = null, $v_1 = null, $v1_2 = null) use (&$__fn) {
+function majData_majString_majNonmajEmpty_majInternal_replacemajAll($pat_0, $v_1 = null, $v1_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majNonmajEmpty_majInternal_replacemajAll';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($GLOBALS['Data_String_Common_replaceAll'])($pat_0))($v_1))($v1_2);
+  $__res = ($GLOBALS['Data_String_Common_replaceAll'])($pat_0, $v_1, $v1_2);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_String_NonEmpty_Internal_replaceAll'] = __NAMESPACE__ . '\\majData_majString_majNonmajEmpty_majInternal_replacemajAll';
 
 // Data_String_NonEmpty_Internal_replace
-$GLOBALS['Data_String_NonEmpty_Internal_replace'] = (function() {
-  $__fn = function($pat_0 = null, $v_1 = null, $v1_2 = null) use (&$__fn) {
+function majData_majString_majNonmajEmpty_majInternal_replace($pat_0, $v_1 = null, $v1_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majNonmajEmpty_majInternal_replace';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($GLOBALS['Data_String_Common_replace'])($pat_0))($v_1))($v1_2);
+  $__res = ($GLOBALS['Data_String_Common_replace'])($pat_0, $v_1, $v1_2);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_String_NonEmpty_Internal_replace'] = __NAMESPACE__ . '\\majData_majString_majNonmajEmpty_majInternal_replace';
 
 // Data_String_NonEmpty_Internal_prependString
-$GLOBALS['Data_String_NonEmpty_Internal_prependString'] = (function() {
-  $__fn = function($s1_0 = null, $v_1 = null) use (&$__fn) {
+function majData_majString_majNonmajEmpty_majInternal_prependmajString($s1_0, $v_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majNonmajEmpty_majInternal_prependmajString';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])($s1_0))($v_1);
+  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])($s1_0, $v_1);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_String_NonEmpty_Internal_prependString'] = __NAMESPACE__ . '\\majData_majString_majNonmajEmpty_majInternal_prependmajString';
 
 // Data_String_NonEmpty_Internal_ordNonEmptyString
 $GLOBALS['Data_String_NonEmpty_Internal_ordNonEmptyString'] = $GLOBALS['Data_Ord_ordString'];
@@ -251,8 +280,12 @@ $GLOBALS['Data_String_NonEmpty_Internal_ordNonEmptyString'] = $GLOBALS['Data_Ord
 $GLOBALS['Data_String_NonEmpty_Internal_ordNonEmptyReplacement'] = $GLOBALS['Data_Ord_ordString'];
 
 // Data_String_NonEmpty_Internal_nonEmptyNonEmpty
-$GLOBALS['Data_String_NonEmpty_Internal_nonEmptyNonEmpty'] = function($dictIsSymbol_0 = null) {
+function majData_majString_majNonmajEmpty_majInternal_nonmajEmptymajNonmajEmpty($dictIsSymbol_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majNonmajEmpty_majInternal_nonmajEmptymajNonmajEmpty';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["nes" => function($p_1 = null) use ($dictIsSymbol_0) {
   $__num = \func_num_args();
   $__res = (($dictIsSymbol_0)['reflectSymbol'])($p_1);
@@ -262,21 +295,31 @@ $GLOBALS['Data_String_NonEmpty_Internal_nonEmptyNonEmpty'] = function($dictIsSym
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_String_NonEmpty_Internal_nonEmptyNonEmpty'] = __NAMESPACE__ . '\\majData_majString_majNonmajEmpty_majInternal_nonmajEmptymajNonmajEmpty';
 
 // Data_String_NonEmpty_Internal_nes
-$GLOBALS['Data_String_NonEmpty_Internal_nes'] = function($dict_0 = null) {
+function majData_majString_majNonmajEmpty_majInternal_nes($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majNonmajEmpty_majInternal_nes';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['nes'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_String_NonEmpty_Internal_nes'] = __NAMESPACE__ . '\\majData_majString_majNonmajEmpty_majInternal_nes';
 
 // Data_String_NonEmpty_Internal_makeNonEmptyBad
-$GLOBALS['Data_String_NonEmpty_Internal_makeNonEmptyBad'] = function($_dollar__unused_0 = null) {
+function majData_majString_majNonmajEmpty_majInternal_makemajNonmajEmptymajBad($_dollar__unused_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majNonmajEmpty_majInternal_makemajNonmajEmptymajBad';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["nes" => function($v_1 = null) {
   $__num = \func_num_args();
   $__res = "";
@@ -286,52 +329,69 @@ $GLOBALS['Data_String_NonEmpty_Internal_makeNonEmptyBad'] = function($_dollar__u
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_String_NonEmpty_Internal_makeNonEmptyBad'] = __NAMESPACE__ . '\\majData_majString_majNonmajEmpty_majInternal_makemajNonmajEmptymajBad';
 
 // Data_String_NonEmpty_Internal_localeCompare
-$GLOBALS['Data_String_NonEmpty_Internal_localeCompare'] = (function() {
-  $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
+function majData_majString_majNonmajEmpty_majInternal_localemajCompare($v_0, $v1_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majNonmajEmpty_majInternal_localemajCompare';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_String_Common_localeCompare'])($v_0))($v1_1);
+  $__res = ($GLOBALS['Data_String_Common_localeCompare'])($v_0, $v1_1);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_String_NonEmpty_Internal_localeCompare'] = __NAMESPACE__ . '\\majData_majString_majNonmajEmpty_majInternal_localemajCompare';
 
 // Data_String_NonEmpty_Internal_liftS
-$GLOBALS['Data_String_NonEmpty_Internal_liftS'] = (function() {
-  $__fn = function($f_0 = null, $v_1 = null) use (&$__fn) {
+function majData_majString_majNonmajEmpty_majInternal_liftmajS($f_0, $v_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majNonmajEmpty_majInternal_liftmajS';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__res = ($f_0)($v_1);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_String_NonEmpty_Internal_liftS'] = __NAMESPACE__ . '\\majData_majString_majNonmajEmpty_majInternal_liftmajS';
+
+// Data_String_NonEmpty_Internal_startsWith_closure
+$GLOBALS['Data_String_NonEmpty_Internal_startsWith_closure'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_Internal_liftS'], $GLOBALS['Data_String_CodeUnits_startsWith']);
 
 // Data_String_NonEmpty_Internal_startsWith
-$GLOBALS['Data_String_NonEmpty_Internal_startsWith'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_Internal_liftS']))($GLOBALS['Data_String_CodeUnits_startsWith']);
+function majData_majString_majNonmajEmpty_majInternal_startsmajWith($v_0, $v_1 = null) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majNonmajEmpty_majInternal_startsmajWith';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ($GLOBALS['Data_String_NonEmpty_Internal_startsWith_closure'])($v_0, $v_1);
+  goto __end;;
+  __end:
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_String_NonEmpty_Internal_startsWith'] = __NAMESPACE__ . '\\majData_majString_majNonmajEmpty_majInternal_startsmajWith';
 
 // Data_String_NonEmpty_Internal_joinWith1
-$GLOBALS['Data_String_NonEmpty_Internal_joinWith1'] = function($dictFoldable1_0 = null) {
+function majData_majString_majNonmajEmpty_majInternal_joinmajWith1($dictFoldable1_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majNonmajEmpty_majInternal_joinmajWith1';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__local_var_1_0 = (($dictFoldable1_0)['Foldable0'])(null);
   $__local_var_2_1 = (($GLOBALS['Data_Monoid_monoidString'])['Semigroup0'])(null);
   $__res = function($v_3 = null) use ($__local_var_1_0, $__local_var_2_1) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_Internal_NonEmptyString']))(function($xs_4 = null) use ($__local_var_1_0, $__local_var_2_1, $v_3) {
+  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_Internal_NonEmptyString'], function($xs_4 = null) use ($__local_var_1_0, $__local_var_2_1, $v_3) {
   $__num = \func_num_args();
-  $__res = ((((($__local_var_1_0)['foldl'])((function() use ($__local_var_2_1, $v_3) {
+  $__res = ((($__local_var_1_0)['foldl'])((function() use ($__local_var_2_1, $v_3) {
   $__fn = function($v_5 = null, $v1_6 = null) use ($__local_var_2_1, $v_3, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -342,7 +402,7 @@ $GLOBALS['Data_String_NonEmpty_Internal_joinWith1'] = function($dictFoldable1_0 
 $__t2 = ["init" => false, "acc" => $v1_6];
 goto end_branch_2;;
 };
-  $__t2 = ["init" => false, "acc" => ((($__local_var_2_1)['append'])(($v_5)['acc']))(((($__local_var_2_1)['append'])($v_3))($v1_6))];
+  $__t2 = ["init" => false, "acc" => (($__local_var_2_1)['append'])(($v_5)['acc'], (($__local_var_2_1)['append'])($v_3, $v1_6))];
   end_branch_2:;
   $__res = $__t2;
   goto __end;;
@@ -350,7 +410,7 @@ goto end_branch_2;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))(["init" => true, "acc" => ($GLOBALS['Data_Monoid_monoidString'])['mempty']]))($xs_4))['acc'];
+})(), ["init" => true, "acc" => ($GLOBALS['Data_Monoid_monoidString'])['mempty']], $xs_4))['acc'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -361,18 +421,23 @@ goto end_branch_2;;
 };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_String_NonEmpty_Internal_joinWith1'] = __NAMESPACE__ . '\\majData_majString_majNonmajEmpty_majInternal_joinmajWith1';
 
 // Data_String_NonEmpty_Internal_joinWith
-$GLOBALS['Data_String_NonEmpty_Internal_joinWith'] = function($dictFoldable_0 = null) {
+function majData_majString_majNonmajEmpty_majInternal_joinmajWith($dictFoldable_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majNonmajEmpty_majInternal_joinmajWith';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__local_var_1_0 = (($GLOBALS['Data_Monoid_monoidString'])['Semigroup0'])(null);
   $__res = function($splice_2 = null) use ($__local_var_1_0, $dictFoldable_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(function($xs_3 = null) use ($__local_var_1_0, $dictFoldable_0, $splice_2) {
+  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(function($xs_3 = null) use ($__local_var_1_0, $dictFoldable_0, $splice_2) {
   $__num = \func_num_args();
-  $__res = ((((($dictFoldable_0)['foldl'])((function() use ($__local_var_1_0, $splice_2) {
+  $__res = ((($dictFoldable_0)['foldl'])((function() use ($__local_var_1_0, $splice_2) {
   $__fn = function($v_4 = null, $v1_5 = null) use ($__local_var_1_0, $splice_2, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -383,7 +448,7 @@ $GLOBALS['Data_String_NonEmpty_Internal_joinWith'] = function($dictFoldable_0 = 
 $__t1 = ["init" => false, "acc" => $v1_5];
 goto end_branch_1;;
 };
-  $__t1 = ["init" => false, "acc" => ((($__local_var_1_0)['append'])(($v_4)['acc']))(((($__local_var_1_0)['append'])($splice_2))($v1_5))];
+  $__t1 = ["init" => false, "acc" => (($__local_var_1_0)['append'])(($v_4)['acc'], (($__local_var_1_0)['append'])($splice_2, $v1_5))];
   end_branch_1:;
   $__res = $__t1;
   goto __end;;
@@ -391,93 +456,112 @@ goto end_branch_1;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))(["init" => true, "acc" => ($GLOBALS['Data_Monoid_monoidString'])['mempty']]))($xs_3))['acc'];
+})(), ["init" => true, "acc" => ($GLOBALS['Data_Monoid_monoidString'])['mempty']], $xs_3))['acc'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))($GLOBALS['Unsafe_Coerce_unsafeCoerce']);
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+}, $GLOBALS['Unsafe_Coerce_unsafeCoerce']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_String_NonEmpty_Internal_joinWith'] = __NAMESPACE__ . '\\majData_majString_majNonmajEmpty_majInternal_joinmajWith';
 
 // Data_String_NonEmpty_Internal_join1With
-$GLOBALS['Data_String_NonEmpty_Internal_join1With'] = function($dictFoldable1_0 = null) {
+function majData_majString_majNonmajEmpty_majInternal_join1majWith($dictFoldable1_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majNonmajEmpty_majInternal_join1majWith';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $joinWith2_1_0 = ($GLOBALS['Data_String_NonEmpty_Internal_joinWith'])((($dictFoldable1_0)['Foldable0'])(null));
   $__res = function($splice_2 = null) use ($joinWith2_1_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_Internal_NonEmptyString']))(($joinWith2_1_0)($splice_2));
+  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_Internal_NonEmptyString'], ($joinWith2_1_0)($splice_2));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_String_NonEmpty_Internal_join1With'] = __NAMESPACE__ . '\\majData_majString_majNonmajEmpty_majInternal_join1majWith';
 
 // Data_String_NonEmpty_Internal_fromString
-$GLOBALS['Data_String_NonEmpty_Internal_fromString'] = function($v_0 = null) {
+function majData_majString_majNonmajEmpty_majInternal_frommajString($v_0) {
   $__num = \func_num_args();
-  $__res = match ($v_0) { "" => new Phpurs_Data0("Nothing"), default => new Phpurs_Data1("Just", $v_0) };
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majNonmajEmpty_majInternal_frommajString';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = match ($v_0) { "" => new \Data\Maybe\Data_Maybe_Nothing(), default => new \Data\Maybe\Data_Maybe_Just($v_0) };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_String_NonEmpty_Internal_fromString'] = __NAMESPACE__ . '\\majData_majString_majNonmajEmpty_majInternal_frommajString';
 
 // Data_String_NonEmpty_Internal_stripPrefix
-$GLOBALS['Data_String_NonEmpty_Internal_stripPrefix'] = (function() {
-  $__fn = function($pat_0 = null, $a_1 = null) use (&$__fn) {
+function majData_majString_majNonmajEmpty_majInternal_stripmajPrefix($pat_0, $a_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majNonmajEmpty_majInternal_stripmajPrefix';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_Maybe_bindMaybe'])['bind'])((($GLOBALS['Data_String_CodeUnits_stripPrefix'])($pat_0))($a_1)))($GLOBALS['Data_String_NonEmpty_Internal_fromString']);
+  $__res = (($GLOBALS['Data_Maybe_bindMaybe'])['bind'])(($GLOBALS['Data_String_CodeUnits_stripPrefix'])($pat_0, $a_1), $GLOBALS['Data_String_NonEmpty_Internal_fromString']);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_String_NonEmpty_Internal_stripPrefix'] = __NAMESPACE__ . '\\majData_majString_majNonmajEmpty_majInternal_stripmajPrefix';
 
 // Data_String_NonEmpty_Internal_stripSuffix
-$GLOBALS['Data_String_NonEmpty_Internal_stripSuffix'] = (function() {
-  $__fn = function($pat_0 = null, $a_1 = null) use (&$__fn) {
+function majData_majString_majNonmajEmpty_majInternal_stripmajSuffix($pat_0, $a_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majNonmajEmpty_majInternal_stripmajSuffix';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_Maybe_bindMaybe'])['bind'])((($GLOBALS['Data_String_CodeUnits_stripSuffix'])($pat_0))($a_1)))($GLOBALS['Data_String_NonEmpty_Internal_fromString']);
+  $__res = (($GLOBALS['Data_Maybe_bindMaybe'])['bind'])(($GLOBALS['Data_String_CodeUnits_stripSuffix'])($pat_0, $a_1), $GLOBALS['Data_String_NonEmpty_Internal_fromString']);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_String_NonEmpty_Internal_stripSuffix'] = __NAMESPACE__ . '\\majData_majString_majNonmajEmpty_majInternal_stripmajSuffix';
 
 // Data_String_NonEmpty_Internal_trim
-$GLOBALS['Data_String_NonEmpty_Internal_trim'] = function($v_0 = null) {
+function majData_majString_majNonmajEmpty_majInternal_trim($v_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majNonmajEmpty_majInternal_trim';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__local_var_1_0 = ($GLOBALS['Data_String_Common_trim'])($v_0);
-  $__res = match ($__local_var_1_0) { "" => new Phpurs_Data0("Nothing"), default => new Phpurs_Data1("Just", $__local_var_1_0) };
+  $__res = match ($__local_var_1_0) { "" => new \Data\Maybe\Data_Maybe_Nothing(), default => new \Data\Maybe\Data_Maybe_Just($__local_var_1_0) };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_String_NonEmpty_Internal_trim'] = __NAMESPACE__ . '\\majData_majString_majNonmajEmpty_majInternal_trim';
 
 // Data_String_NonEmpty_Internal_unsafeFromString
-$GLOBALS['Data_String_NonEmpty_Internal_unsafeFromString'] = function($_dollar__unused_0 = null) {
+function majData_majString_majNonmajEmpty_majInternal_unsafemajFrommajString($_dollar__unused_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_Internal_fromJust']))($GLOBALS['Data_String_NonEmpty_Internal_fromString']);
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majNonmajEmpty_majInternal_unsafemajFrommajString';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_Internal_fromJust'], $GLOBALS['Data_String_NonEmpty_Internal_fromString']);
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_String_NonEmpty_Internal_unsafeFromString'] = __NAMESPACE__ . '\\majData_majString_majNonmajEmpty_majInternal_unsafemajFrommajString';
 
 // Data_String_NonEmpty_Internal_eqNonEmptyString
 $GLOBALS['Data_String_NonEmpty_Internal_eqNonEmptyString'] = $GLOBALS['Data_Eq_eqString'];
@@ -485,24 +569,51 @@ $GLOBALS['Data_String_NonEmpty_Internal_eqNonEmptyString'] = $GLOBALS['Data_Eq_e
 // Data_String_NonEmpty_Internal_eqNonEmptyReplacement
 $GLOBALS['Data_String_NonEmpty_Internal_eqNonEmptyReplacement'] = $GLOBALS['Data_Eq_eqString'];
 
+// Data_String_NonEmpty_Internal_endsWith_closure
+$GLOBALS['Data_String_NonEmpty_Internal_endsWith_closure'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_Internal_liftS'], $GLOBALS['Data_String_CodeUnits_endsWith']);
+
 // Data_String_NonEmpty_Internal_endsWith
-$GLOBALS['Data_String_NonEmpty_Internal_endsWith'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_Internal_liftS']))($GLOBALS['Data_String_CodeUnits_endsWith']);
-
-// Data_String_NonEmpty_Internal_contains
-$GLOBALS['Data_String_NonEmpty_Internal_contains'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_Internal_liftS']))($GLOBALS['Data_String_CodeUnits_contains']);
-
-// Data_String_NonEmpty_Internal_appendString
-$GLOBALS['Data_String_NonEmpty_Internal_appendString'] = (function() {
-  $__fn = function($v_0 = null, $s2_1 = null) use (&$__fn) {
+function majData_majString_majNonmajEmpty_majInternal_endsmajWith($v_0, $v_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majNonmajEmpty_majInternal_endsmajWith';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])($v_0))($s2_1);
+  $__res = ($GLOBALS['Data_String_NonEmpty_Internal_endsWith_closure'])($v_0, $v_1);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_String_NonEmpty_Internal_endsWith'] = __NAMESPACE__ . '\\majData_majString_majNonmajEmpty_majInternal_endsmajWith';
+
+// Data_String_NonEmpty_Internal_contains_closure
+$GLOBALS['Data_String_NonEmpty_Internal_contains_closure'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_Internal_liftS'], $GLOBALS['Data_String_CodeUnits_contains']);
+
+// Data_String_NonEmpty_Internal_contains
+function majData_majString_majNonmajEmpty_majInternal_contains($v_0, $v_1 = null) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majNonmajEmpty_majInternal_contains';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ($GLOBALS['Data_String_NonEmpty_Internal_contains_closure'])($v_0, $v_1);
+  goto __end;;
+  __end:
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_String_NonEmpty_Internal_contains'] = __NAMESPACE__ . '\\majData_majString_majNonmajEmpty_majInternal_contains';
+
+// Data_String_NonEmpty_Internal_appendString
+function majData_majString_majNonmajEmpty_majInternal_appendmajString($v_0, $s2_1 = null) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majNonmajEmpty_majInternal_appendmajString';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])($v_0, $s2_1);
+  goto __end;;
+  __end:
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_String_NonEmpty_Internal_appendString'] = __NAMESPACE__ . '\\majData_majString_majNonmajEmpty_majInternal_appendmajString';
 

@@ -184,6 +184,8 @@ $GLOBALS['Effect_untilE'] = $ffi_Effect['untilE'] ?? new class { public function
 $GLOBALS['Effect_whileE'] = $ffi_Effect['whileE'] ?? new class { public function __invoke(...$args) { return $this; } };
 
 
+
+
 // Effect_monadEffect
 $GLOBALS['Effect_monadEffect'] = ["Applicative0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
@@ -217,9 +219,9 @@ return ["apply" => (function() use ($__local_var_0_0) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($__local_var_0_0)['bind'])($f_1))(function($f_prime_3 = null) use ($__local_var_0_0, $a_2) {
+  $__res = (($__local_var_0_0)['bind'])($f_1, function($f_prime_3 = null) use ($__local_var_0_0, $a_2) {
   $__num = \func_num_args();
-  $__res = ((($__local_var_0_0)['bind'])($a_2))(function($a_prime_4 = null) use ($f_prime_3) {
+  $__res = (($__local_var_0_0)['bind'])($a_2, function($a_prime_4 = null) use ($f_prime_3) {
   $__num = \func_num_args();
   $__res = (((($GLOBALS['Effect_monadEffect'])['Applicative0'])(null))['pure'])(($f_prime_3)($a_prime_4));
   goto __end;;
@@ -260,7 +262,7 @@ $GLOBALS['Effect_functorEffect'] = ["map" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((($GLOBALS['Effect_applicativeEffect'])['Apply0'])(null))['apply'])((($GLOBALS['Effect_applicativeEffect'])['pure'])($f_0)))($a_1);
+  $__res = (((($GLOBALS['Effect_applicativeEffect'])['Apply0'])(null))['apply'])((($GLOBALS['Effect_applicativeEffect'])['pure'])($f_0), $a_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -269,16 +271,16 @@ $GLOBALS['Effect_functorEffect'] = ["map" => (function() {
 })()];
 
 // Effect_lift2
-$GLOBALS['Effect_lift2'] = (function() {
-  $__fn = function($f_0 = null, $a_1 = null, $b_2 = null) use (&$__fn) {
+function majEffect_lift2($f_0, $a_1 = null, $b_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majEffect_lift2';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   $__local_var_3_0 = (($GLOBALS['Effect_monadEffect'])['Bind1'])(null);
-  $__res = ((($__local_var_3_0)['bind'])(((((($GLOBALS['Effect_applyEffect'])['Functor0'])(null))['map'])($f_0))($a_1)))(function($f_prime_4 = null) use ($__local_var_3_0, $b_2) {
+  $__res = (($__local_var_3_0)['bind'])((((($GLOBALS['Effect_applyEffect'])['Functor0'])(null))['map'])($f_0, $a_1), function($f_prime_4 = null) use ($__local_var_3_0, $b_2) {
   $__num = \func_num_args();
-  $__res = ((($__local_var_3_0)['bind'])($b_2))(function($a_prime_5 = null) use ($f_prime_4) {
+  $__res = (($__local_var_3_0)['bind'])($b_2, function($a_prime_5 = null) use ($f_prime_4) {
   $__num = \func_num_args();
   $__res = (((($GLOBALS['Effect_monadEffect'])['Applicative0'])(null))['pure'])(($f_prime_4)($a_prime_5));
   goto __end;;
@@ -291,23 +293,31 @@ $GLOBALS['Effect_lift2'] = (function() {
 });
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Effect_lift2'] = __NAMESPACE__ . '\\majEffect_lift2';
 
 // Effect_semigroupEffect
-$GLOBALS['Effect_semigroupEffect'] = function($dictSemigroup_0 = null) {
+function majEffect_semigroupmajEffect($dictSemigroup_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majEffect_semigroupmajEffect';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["append" => ($GLOBALS['Effect_lift2'])(($dictSemigroup_0)['append'])];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Effect_semigroupEffect'] = __NAMESPACE__ . '\\majEffect_semigroupmajEffect';
 
 // Effect_monoidEffect
-$GLOBALS['Effect_monoidEffect'] = function($dictMonoid_0 = null) {
+function majEffect_monoidmajEffect($dictMonoid_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majEffect_monoidmajEffect';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["mempty" => ($GLOBALS['Effect_pureE'])(($dictMonoid_0)['mempty']), "Semigroup0" => function($_dollar__unused_1 = null) use ($dictMonoid_0) {
   $__num = \func_num_args();
   $__res = ["append" => ($GLOBALS['Effect_lift2'])(((($dictMonoid_0)['Semigroup0'])(null))['append'])];
@@ -317,6 +327,7 @@ $GLOBALS['Effect_monoidEffect'] = function($dictMonoid_0 = null) {
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Effect_monoidEffect'] = __NAMESPACE__ . '\\majEffect_monoidmajEffect';
 

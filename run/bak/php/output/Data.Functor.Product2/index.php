@@ -107,6 +107,8 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+final class Data_Functor_Product2_Product2 { public function __construct(public mixed $value0, public mixed $value1) {} }
+
 // Data_Functor_Product2_Product2
 $GLOBALS['Data_Functor_Product2_Product2'] = (function() {
   $__fn = function($value0 = null, $value1 = null) use (&$__fn) {
@@ -114,7 +116,7 @@ $GLOBALS['Data_Functor_Product2_Product2'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Product2", $value0, $value1);
+  $__res = new \Data\Functor\Product2\Data_Functor_Product2_Product2($value0, $value1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -123,30 +125,29 @@ $GLOBALS['Data_Functor_Product2_Product2'] = (function() {
 })();
 
 // Data_Functor_Product2_showProduct2
-$GLOBALS['Data_Functor_Product2_showProduct2'] = (function() {
-  $__fn = function($dictShow_0 = null, $dictShow1_1 = null) use (&$__fn) {
+function majData_majFunctor_majProduct2_showmajProduct2($dictShow_0, $dictShow1_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majProduct2_showmajProduct2';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__res = ["show" => function($v_2 = null) use ($dictShow1_1, $dictShow_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Product2 "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])(($v_2)->{'value0'})))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])(" "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow1_1)['show'])(($v_2)->{'value1'})))(")"))));
+  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Product2 ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])(($v_2)->{'value0'}), (($GLOBALS['Data_Semigroup_semigroupString'])['append'])(" ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow1_1)['show'])(($v_2)->{'value1'}), ")"))));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Functor_Product2_showProduct2'] = __NAMESPACE__ . '\\majData_majFunctor_majProduct2_showmajProduct2';
 
 // Data_Functor_Product2_profunctorProduct2
-$GLOBALS['Data_Functor_Product2_profunctorProduct2'] = (function() {
-  $__fn = function($dictProfunctor_0 = null, $dictProfunctor1_1 = null) use (&$__fn) {
+function majData_majFunctor_majProduct2_profunctormajProduct2($dictProfunctor_0, $dictProfunctor1_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majProduct2_profunctormajProduct2';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
@@ -156,7 +157,7 @@ $GLOBALS['Data_Functor_Product2_profunctorProduct2'] = (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = new Phpurs_Data2("Product2", (((($dictProfunctor_0)['dimap'])($f_2))($g_3))(($v_4)->{'value0'}), (((($dictProfunctor1_1)['dimap'])($f_2))($g_3))(($v_4)->{'value1'}));
+  $__res = new \Data\Functor\Product2\Data_Functor_Product2_Product2((($dictProfunctor_0)['dimap'])($f_2, $g_3, ($v_4)->{'value0'}), (($dictProfunctor1_1)['dimap'])($f_2, $g_3, ($v_4)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -165,15 +166,14 @@ $GLOBALS['Data_Functor_Product2_profunctorProduct2'] = (function() {
 })()];
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Functor_Product2_profunctorProduct2'] = __NAMESPACE__ . '\\majData_majFunctor_majProduct2_profunctormajProduct2';
 
 // Data_Functor_Product2_functorProduct2
-$GLOBALS['Data_Functor_Product2_functorProduct2'] = (function() {
-  $__fn = function($dictFunctor_0 = null, $dictFunctor1_1 = null) use (&$__fn) {
+function majData_majFunctor_majProduct2_functormajProduct2($dictFunctor_0, $dictFunctor1_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majProduct2_functormajProduct2';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
@@ -183,7 +183,7 @@ $GLOBALS['Data_Functor_Product2_functorProduct2'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Product2", ((($dictFunctor_0)['map'])($f_2))(($v_3)->{'value0'}), ((($dictFunctor1_1)['map'])($f_2))(($v_3)->{'value1'}));
+  $__res = new \Data\Functor\Product2\Data_Functor_Product2_Product2((($dictFunctor_0)['map'])($f_2, ($v_3)->{'value0'}), (($dictFunctor1_1)['map'])($f_2, ($v_3)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -192,15 +192,14 @@ $GLOBALS['Data_Functor_Product2_functorProduct2'] = (function() {
 })()];
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Functor_Product2_functorProduct2'] = __NAMESPACE__ . '\\majData_majFunctor_majProduct2_functormajProduct2';
 
 // Data_Functor_Product2_eqProduct2
-$GLOBALS['Data_Functor_Product2_eqProduct2'] = (function() {
-  $__fn = function($dictEq_0 = null, $dictEq1_1 = null) use (&$__fn) {
+function majData_majFunctor_majProduct2_eqmajProduct2($dictEq_0, $dictEq1_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majProduct2_eqmajProduct2';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
@@ -210,7 +209,7 @@ $GLOBALS['Data_Functor_Product2_eqProduct2'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(((($dictEq_0)['eq'])(($x_2)->{'value0'}))(($y_3)->{'value0'})))(((($dictEq1_1)['eq'])(($x_2)->{'value1'}))(($y_3)->{'value1'}));
+  $__res = (($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])((($dictEq_0)['eq'])(($x_2)->{'value0'}, ($y_3)->{'value0'}), (($dictEq1_1)['eq'])(($x_2)->{'value1'}, ($y_3)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -219,14 +218,17 @@ $GLOBALS['Data_Functor_Product2_eqProduct2'] = (function() {
 })()];
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Functor_Product2_eqProduct2'] = __NAMESPACE__ . '\\majData_majFunctor_majProduct2_eqmajProduct2';
 
 // Data_Functor_Product2_ordProduct2
-$GLOBALS['Data_Functor_Product2_ordProduct2'] = function($dictOrd_0 = null) {
+function majData_majFunctor_majProduct2_ordmajProduct2($dictOrd_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majProduct2_ordmajProduct2';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $eqProduct21_1_0 = ($GLOBALS['Data_Functor_Product2_eqProduct2'])((($dictOrd_0)['Eq0'])(null));
   $__res = function($dictOrd1_2 = null) use ($dictOrd_0, $eqProduct21_1_0) {
   $__num = \func_num_args();
@@ -237,17 +239,17 @@ $GLOBALS['Data_Functor_Product2_ordProduct2'] = function($dictOrd_0 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $v_6_2 = ((($dictOrd_0)['compare'])(($x_4)->{'value0'}))(($y_5)->{'value0'});
+  $v_6_2 = (($dictOrd_0)['compare'])(($x_4)->{'value0'}, ($y_5)->{'value0'});
   $__t3 = null;;
-  if ((is_object($v_6_2) && (($v_6_2)->{'tag'} === "LT"))) {
-$__t3 = new Phpurs_Data0("LT");
+  if ($v_6_2 instanceof \Data\Ordering\Data_Ordering_LT) {
+$__t3 = new \Data\Ordering\Data_Ordering_LT();
 goto end_branch_3;;
 };
-  if ((is_object($v_6_2) && (($v_6_2)->{'tag'} === "GT"))) {
-$__t3 = new Phpurs_Data0("GT");
+  if ($v_6_2 instanceof \Data\Ordering\Data_Ordering_GT) {
+$__t3 = new \Data\Ordering\Data_Ordering_GT();
 goto end_branch_3;;
 };
-  $__t3 = ((($dictOrd1_2)['compare'])(($x_4)->{'value1'}))(($y_5)->{'value1'});
+  $__t3 = (($dictOrd1_2)['compare'])(($x_4)->{'value1'}, ($y_5)->{'value1'});
   end_branch_3:;
   $__res = $__t3;
   goto __end;;
@@ -268,13 +270,14 @@ goto end_branch_3;;
 };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_Product2_ordProduct2'] = __NAMESPACE__ . '\\majData_majFunctor_majProduct2_ordmajProduct2';
 
 // Data_Functor_Product2_bifunctorProduct2
-$GLOBALS['Data_Functor_Product2_bifunctorProduct2'] = (function() {
-  $__fn = function($dictBifunctor_0 = null, $dictBifunctor1_1 = null) use (&$__fn) {
+function majData_majFunctor_majProduct2_bifunctormajProduct2($dictBifunctor_0, $dictBifunctor1_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majProduct2_bifunctormajProduct2';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
@@ -284,7 +287,7 @@ $GLOBALS['Data_Functor_Product2_bifunctorProduct2'] = (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = new Phpurs_Data2("Product2", (((($dictBifunctor_0)['bimap'])($f_2))($g_3))(($v_4)->{'value0'}), (((($dictBifunctor1_1)['bimap'])($f_2))($g_3))(($v_4)->{'value1'}));
+  $__res = new \Data\Functor\Product2\Data_Functor_Product2_Product2((($dictBifunctor_0)['bimap'])($f_2, $g_3, ($v_4)->{'value0'}), (($dictBifunctor1_1)['bimap'])($f_2, $g_3, ($v_4)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -293,14 +296,17 @@ $GLOBALS['Data_Functor_Product2_bifunctorProduct2'] = (function() {
 })()];
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Functor_Product2_bifunctorProduct2'] = __NAMESPACE__ . '\\majData_majFunctor_majProduct2_bifunctormajProduct2';
 
 // Data_Functor_Product2_biapplyProduct2
-$GLOBALS['Data_Functor_Product2_biapplyProduct2'] = function($dictBiapply_0 = null) {
+function majData_majFunctor_majProduct2_biapplymajProduct2($dictBiapply_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majProduct2_biapplymajProduct2';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__local_var_1_0 = (($dictBiapply_0)['Bifunctor0'])(null);
   $__res = function($dictBiapply1_2 = null) use ($__local_var_1_0, $dictBiapply_0) {
   $__num = \func_num_args();
@@ -311,7 +317,7 @@ $GLOBALS['Data_Functor_Product2_biapplyProduct2'] = function($dictBiapply_0 = nu
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = new Phpurs_Data2("Product2", (((($__local_var_1_0)['bimap'])($f_4))($g_5))(($v_6)->{'value0'}), (((($__local_var_3_1)['bimap'])($f_4))($g_5))(($v_6)->{'value1'}));
+  $__res = new \Data\Functor\Product2\Data_Functor_Product2_Product2((($__local_var_1_0)['bimap'])($f_4, $g_5, ($v_6)->{'value0'}), (($__local_var_3_1)['bimap'])($f_4, $g_5, ($v_6)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -324,7 +330,7 @@ $GLOBALS['Data_Functor_Product2_biapplyProduct2'] = function($dictBiapply_0 = nu
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Product2", ((($dictBiapply_0)['biapply'])(($v_5)->{'value0'}))(($v1_6)->{'value0'}), ((($dictBiapply1_2)['biapply'])(($v_5)->{'value1'}))(($v1_6)->{'value1'}));
+  $__res = new \Data\Functor\Product2\Data_Functor_Product2_Product2((($dictBiapply_0)['biapply'])(($v_5)->{'value0'}, ($v1_6)->{'value0'}), (($dictBiapply1_2)['biapply'])(($v_5)->{'value1'}, ($v1_6)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -343,12 +349,17 @@ $GLOBALS['Data_Functor_Product2_biapplyProduct2'] = function($dictBiapply_0 = nu
 };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_Product2_biapplyProduct2'] = __NAMESPACE__ . '\\majData_majFunctor_majProduct2_biapplymajProduct2';
 
 // Data_Functor_Product2_biapplicativeProduct2
-$GLOBALS['Data_Functor_Product2_biapplicativeProduct2'] = function($dictBiapplicative_0 = null) {
+function majData_majFunctor_majProduct2_biapplicativemajProduct2($dictBiapplicative_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majProduct2_biapplicativemajProduct2';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__local_var_1_0 = (($dictBiapplicative_0)['Biapply0'])(null);
   $__local_var_2_1 = (($__local_var_1_0)['Bifunctor0'])(null);
   $__res = function($dictBiapplicative1_3 = null) use ($__local_var_1_0, $__local_var_2_1, $dictBiapplicative_0) {
@@ -361,7 +372,7 @@ $GLOBALS['Data_Functor_Product2_biapplicativeProduct2'] = function($dictBiapplic
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = new Phpurs_Data2("Product2", (((($__local_var_2_1)['bimap'])($f_6))($g_7))(($v_8)->{'value0'}), (((($__local_var_5_3)['bimap'])($f_6))($g_7))(($v_8)->{'value1'}));
+  $__res = new \Data\Functor\Product2\Data_Functor_Product2_Product2((($__local_var_2_1)['bimap'])($f_6, $g_7, ($v_8)->{'value0'}), (($__local_var_5_3)['bimap'])($f_6, $g_7, ($v_8)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -374,7 +385,7 @@ $GLOBALS['Data_Functor_Product2_biapplicativeProduct2'] = function($dictBiapplic
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Product2", ((($__local_var_1_0)['biapply'])(($v_7)->{'value0'}))(($v1_8)->{'value0'}), ((($__local_var_4_2)['biapply'])(($v_7)->{'value1'}))(($v1_8)->{'value1'}));
+  $__res = new \Data\Functor\Product2\Data_Functor_Product2_Product2((($__local_var_1_0)['biapply'])(($v_7)->{'value0'}, ($v1_8)->{'value0'}), (($__local_var_4_2)['biapply'])(($v_7)->{'value1'}, ($v1_8)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -393,7 +404,7 @@ $GLOBALS['Data_Functor_Product2_biapplicativeProduct2'] = function($dictBiapplic
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Product2", ((($dictBiapplicative_0)['bipure'])($a_7))($b_8), ((($dictBiapplicative1_3)['bipure'])($a_7))($b_8));
+  $__res = new \Data\Functor\Product2\Data_Functor_Product2_Product2((($dictBiapplicative_0)['bipure'])($a_7, $b_8), (($dictBiapplicative1_3)['bipure'])($a_7, $b_8));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -412,6 +423,7 @@ $GLOBALS['Data_Functor_Product2_biapplicativeProduct2'] = function($dictBiapplic
 };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_Product2_biapplicativeProduct2'] = __NAMESPACE__ . '\\majData_majFunctor_majProduct2_biapplicativemajProduct2';
 

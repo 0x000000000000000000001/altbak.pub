@@ -102,26 +102,30 @@ $GLOBALS['Data_Number_Format_toPrecisionNative'] = new class { public function _
 $GLOBALS['Data_Number_Format_toString'] = new class { public function __invoke(...$args) { return $this; } };
 
 
+final class Data_Number_Format_Precision { public function __construct(public int $value0) {} }
+final class Data_Number_Format_Fixed { public function __construct(public int $value0) {} }
+final class Data_Number_Format_Exponential { public function __construct(public int $value0) {} }
+
 // Data_Number_Format_clamp
 $GLOBALS['Data_Number_Format_clamp'] = (function() use (&$__fn) {
-$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT"));
+$__local_var_0_0 = ($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT(), new \Data\Ordering\Data_Ordering_EQ(), new \Data\Ordering\Data_Ordering_GT());
 return (function() use ($__local_var_0_0) {
   $__fn = function($low_1 = null, $hi_2 = null, $x_3 = null) use ($__local_var_0_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $v_4_1 = (($__local_var_0_0)($low_1))($x_3);
+  $v_4_1 = ($__local_var_0_0)($low_1, $x_3);
   $__t2 = null;;
-  if ((is_object($v_4_1) && (($v_4_1)->{'tag'} === "LT"))) {
+  if ($v_4_1 instanceof \Data\Ordering\Data_Ordering_LT) {
 $__t2 = $x_3;
 goto end_branch_2;;
 };
-  if ((is_object($v_4_1) && (($v_4_1)->{'tag'} === "EQ"))) {
+  if ($v_4_1 instanceof \Data\Ordering\Data_Ordering_EQ) {
 $__t2 = $low_1;
 goto end_branch_2;;
 };
-  if ((is_object($v_4_1) && (($v_4_1)->{'tag'} === "GT"))) {
+  if ($v_4_1 instanceof \Data\Ordering\Data_Ordering_GT) {
 $__t2 = $low_1;
 goto end_branch_2;;
 };
@@ -129,17 +133,17 @@ goto end_branch_2;;
   $__t2 = null;
   end_branch_2:;
   $__local_var_5_2 = $__t2;
-  $v_6_4 = (($__local_var_0_0)($hi_2))($__local_var_5_2);
+  $v_6_4 = ($__local_var_0_0)($hi_2, $__local_var_5_2);
   $__t5 = null;;
-  if ((is_object($v_6_4) && (($v_6_4)->{'tag'} === "LT"))) {
+  if ($v_6_4 instanceof \Data\Ordering\Data_Ordering_LT) {
 $__t5 = $hi_2;
 goto end_branch_5;;
 };
-  if ((is_object($v_6_4) && (($v_6_4)->{'tag'} === "EQ"))) {
+  if ($v_6_4 instanceof \Data\Ordering\Data_Ordering_EQ) {
 $__t5 = $hi_2;
 goto end_branch_5;;
 };
-  if ((is_object($v_6_4) && (($v_6_4)->{'tag'} === "GT"))) {
+  if ($v_6_4 instanceof \Data\Ordering\Data_Ordering_GT) {
 $__t5 = $__local_var_5_2;
 goto end_branch_5;;
 };
@@ -158,7 +162,7 @@ goto end_branch_5;;
 // Data_Number_Format_Precision
 $GLOBALS['Data_Number_Format_Precision'] = function($value0 = null) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data1("Precision", $value0);
+  $__res = new \Data\Number\Format\Data_Number_Format_Precision($value0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -167,7 +171,7 @@ $GLOBALS['Data_Number_Format_Precision'] = function($value0 = null) {
 // Data_Number_Format_Fixed
 $GLOBALS['Data_Number_Format_Fixed'] = function($value0 = null) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data1("Fixed", $value0);
+  $__res = new \Data\Number\Format\Data_Number_Format_Fixed($value0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -176,25 +180,29 @@ $GLOBALS['Data_Number_Format_Fixed'] = function($value0 = null) {
 // Data_Number_Format_Exponential
 $GLOBALS['Data_Number_Format_Exponential'] = function($value0 = null) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data1("Exponential", $value0);
+  $__res = new \Data\Number\Format\Data_Number_Format_Exponential($value0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
 
 // Data_Number_Format_toStringWith
-$GLOBALS['Data_Number_Format_toStringWith'] = function($v_0 = null) {
+function majData_majNumber_majFormat_tomajStringmajWith($v_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majNumber_majFormat_tomajStringmajWith';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__t0 = null;;
-  if ((is_object($v_0) && (($v_0)->{'tag'} === "Precision"))) {
+  if ($v_0 instanceof \Data\Number\Format\Data_Number_Format_Precision) {
 $__t0 = ($GLOBALS['Data_Number_Format_toPrecisionNative'])(($v_0)->{'value0'});
 goto end_branch_0;;
 };
-  if ((is_object($v_0) && (($v_0)->{'tag'} === "Fixed"))) {
+  if ($v_0 instanceof \Data\Number\Format\Data_Number_Format_Fixed) {
 $__t0 = ($GLOBALS['Data_Number_Format_toFixedNative'])(($v_0)->{'value0'});
 goto end_branch_0;;
 };
-  if ((is_object($v_0) && (($v_0)->{'tag'} === "Exponential"))) {
+  if ($v_0 instanceof \Data\Number\Format\Data_Number_Format_Exponential) {
 $__t0 = ($GLOBALS['Data_Number_Format_toExponentialNative'])(($v_0)->{'value0'});
 goto end_branch_0;;
 };
@@ -204,15 +212,58 @@ goto end_branch_0;;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Number_Format_toStringWith'] = __NAMESPACE__ . '\\majData_majNumber_majFormat_tomajStringmajWith';
+
+// Data_Number_Format_precision_closure
+$GLOBALS['Data_Number_Format_precision_closure'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Number_Format_Precision'], ($GLOBALS['Data_Number_Format_clamp'])(1, 21));
 
 // Data_Number_Format_precision
-$GLOBALS['Data_Number_Format_precision'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Number_Format_Precision']))((($GLOBALS['Data_Number_Format_clamp'])(1))(21));
+function majData_majNumber_majFormat_precision($v_0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majNumber_majFormat_precision';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ($GLOBALS['Data_Number_Format_precision_closure'])($v_0);
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Number_Format_precision'] = __NAMESPACE__ . '\\majData_majNumber_majFormat_precision';
+
+// Data_Number_Format_fixed_closure
+$GLOBALS['Data_Number_Format_fixed_closure'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Number_Format_Fixed'], ($GLOBALS['Data_Number_Format_clamp'])(0, 20));
 
 // Data_Number_Format_fixed
-$GLOBALS['Data_Number_Format_fixed'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Number_Format_Fixed']))((($GLOBALS['Data_Number_Format_clamp'])(0))(20));
+function majData_majNumber_majFormat_fixed($v_0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majNumber_majFormat_fixed';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ($GLOBALS['Data_Number_Format_fixed_closure'])($v_0);
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Number_Format_fixed'] = __NAMESPACE__ . '\\majData_majNumber_majFormat_fixed';
+
+// Data_Number_Format_exponential_closure
+$GLOBALS['Data_Number_Format_exponential_closure'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Number_Format_Exponential'], ($GLOBALS['Data_Number_Format_clamp'])(0, 20));
 
 // Data_Number_Format_exponential
-$GLOBALS['Data_Number_Format_exponential'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Number_Format_Exponential']))((($GLOBALS['Data_Number_Format_clamp'])(0))(20));
+function majData_majNumber_majFormat_exponential($v_0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majNumber_majFormat_exponential';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ($GLOBALS['Data_Number_Format_exponential_closure'])($v_0);
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Number_Format_exponential'] = __NAMESPACE__ . '\\majData_majNumber_majFormat_exponential';
 

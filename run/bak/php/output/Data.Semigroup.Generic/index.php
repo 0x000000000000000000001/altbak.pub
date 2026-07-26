@@ -98,6 +98,8 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_Semigroup_Generic_genericSemigroupNoConstructors
 $GLOBALS['Data_Semigroup_Generic_genericSemigroupNoConstructors'] = ["genericAppend__prime__" => (function() {
   $__fn = function($a_0 = null, $v_1 = null) use (&$__fn) {
@@ -129,15 +131,19 @@ $GLOBALS['Data_Semigroup_Generic_genericSemigroupNoArguments'] = ["genericAppend
 })()];
 
 // Data_Semigroup_Generic_genericSemigroupArgument
-$GLOBALS['Data_Semigroup_Generic_genericSemigroupArgument'] = function($dictSemigroup_0 = null) {
+function majData_majSemigroup_majGeneric_genericmajSemigroupmajArgument($dictSemigroup_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majSemigroup_majGeneric_genericmajSemigroupmajArgument';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["genericAppend__prime__" => (function() use ($dictSemigroup_0) {
   $__fn = function($v_1 = null, $v1_2 = null) use ($dictSemigroup_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictSemigroup_0)['append'])($v_1))($v1_2);
+  $__res = (($dictSemigroup_0)['append'])($v_1, $v1_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -146,28 +152,38 @@ $GLOBALS['Data_Semigroup_Generic_genericSemigroupArgument'] = function($dictSemi
 })()];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Semigroup_Generic_genericSemigroupArgument'] = __NAMESPACE__ . '\\majData_majSemigroup_majGeneric_genericmajSemigroupmajArgument';
 
 // Data_Semigroup_Generic_genericAppend'
-$GLOBALS['Data_Semigroup_Generic_genericAppend__prime__'] = function($dict_0 = null) {
+function majData_majSemigroup_majGeneric_genericmajAppend__prime__($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majSemigroup_majGeneric_genericmajAppend__prime__';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['genericAppend__prime__'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Semigroup_Generic_genericAppend__prime__'] = __NAMESPACE__ . '\\majData_majSemigroup_majGeneric_genericmajAppend__prime__';
 
 // Data_Semigroup_Generic_genericSemigroupConstructor
-$GLOBALS['Data_Semigroup_Generic_genericSemigroupConstructor'] = function($dictGenericSemigroup_0 = null) {
+function majData_majSemigroup_majGeneric_genericmajSemigroupmajConstructor($dictGenericSemigroup_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majSemigroup_majGeneric_genericmajSemigroupmajConstructor';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["genericAppend__prime__" => (function() use ($dictGenericSemigroup_0) {
   $__fn = function($v_1 = null, $v1_2 = null) use ($dictGenericSemigroup_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictGenericSemigroup_0)['genericAppend__prime__'])($v_1))($v1_2);
+  $__res = (($dictGenericSemigroup_0)['genericAppend__prime__'])($v_1, $v1_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -176,13 +192,14 @@ $GLOBALS['Data_Semigroup_Generic_genericSemigroupConstructor'] = function($dictG
 })()];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Semigroup_Generic_genericSemigroupConstructor'] = __NAMESPACE__ . '\\majData_majSemigroup_majGeneric_genericmajSemigroupmajConstructor';
 
 // Data_Semigroup_Generic_genericSemigroupProduct
-$GLOBALS['Data_Semigroup_Generic_genericSemigroupProduct'] = (function() {
-  $__fn = function($dictGenericSemigroup_0 = null, $dictGenericSemigroup1_1 = null) use (&$__fn) {
+function majData_majSemigroup_majGeneric_genericmajSemigroupmajProduct($dictGenericSemigroup_0, $dictGenericSemigroup1_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majSemigroup_majGeneric_genericmajSemigroupmajProduct';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
@@ -192,7 +209,7 @@ $GLOBALS['Data_Semigroup_Generic_genericSemigroupProduct'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Product", ((($dictGenericSemigroup_0)['genericAppend__prime__'])(($v_2)->{'value0'}))(($v1_3)->{'value0'}), ((($dictGenericSemigroup1_1)['genericAppend__prime__'])(($v_2)->{'value1'}))(($v1_3)->{'value1'}));
+  $__res = new \Data\Generic\Rep\Data_Generic_Rep_Product((($dictGenericSemigroup_0)['genericAppend__prime__'])(($v_2)->{'value0'}, ($v1_3)->{'value0'}), (($dictGenericSemigroup1_1)['genericAppend__prime__'])(($v_2)->{'value1'}, ($v1_3)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -201,23 +218,21 @@ $GLOBALS['Data_Semigroup_Generic_genericSemigroupProduct'] = (function() {
 })()];
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Semigroup_Generic_genericSemigroupProduct'] = __NAMESPACE__ . '\\majData_majSemigroup_majGeneric_genericmajSemigroupmajProduct';
 
 // Data_Semigroup_Generic_genericAppend
-$GLOBALS['Data_Semigroup_Generic_genericAppend'] = (function() {
-  $__fn = function($dictGeneric_0 = null, $dictGenericSemigroup_1 = null, $x_2 = null, $y_3 = null) use (&$__fn) {
+function majData_majSemigroup_majGeneric_genericmajAppend($dictGeneric_0, $dictGenericSemigroup_1 = null, $x_2 = null, $y_3 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majSemigroup_majGeneric_genericmajAppend';
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = (($dictGeneric_0)['to'])(((($dictGenericSemigroup_1)['genericAppend__prime__'])((($dictGeneric_0)['from'])($x_2)))((($dictGeneric_0)['from'])($y_3)));
+  $__res = (($dictGeneric_0)['to'])((($dictGenericSemigroup_1)['genericAppend__prime__'])((($dictGeneric_0)['from'])($x_2), (($dictGeneric_0)['from'])($y_3)));
   goto __end;;
   __end:
-  return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
-  };
-  return $__fn;
-})();
+  return 4 < $__num ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
+}
+$GLOBALS['Data_Semigroup_Generic_genericAppend'] = __NAMESPACE__ . '\\majData_majSemigroup_majGeneric_genericmajAppend';
 

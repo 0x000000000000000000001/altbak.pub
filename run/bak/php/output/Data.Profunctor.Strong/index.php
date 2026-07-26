@@ -100,6 +100,8 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_Profunctor_Strong_strongFn
 $GLOBALS['Data_Profunctor_Strong_strongFn'] = ["first" => (function() {
   $__fn = function($a2b_0 = null, $v_1 = null) use (&$__fn) {
@@ -107,7 +109,7 @@ $GLOBALS['Data_Profunctor_Strong_strongFn'] = ["first" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", ($a2b_0)(($v_1)->{'value0'}), ($v_1)->{'value1'});
+  $__res = new \Data\Tuple\Data_Tuple_Tuple(($a2b_0)(($v_1)->{'value0'}), ($v_1)->{'value1'});
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -122,42 +124,51 @@ $GLOBALS['Data_Profunctor_Strong_strongFn'] = ["first" => (function() {
 }];
 
 // Data_Profunctor_Strong_second
-$GLOBALS['Data_Profunctor_Strong_second'] = function($dict_0 = null) {
+function majData_majProfunctor_majStrong_second($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majProfunctor_majStrong_second';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['second'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Profunctor_Strong_second'] = __NAMESPACE__ . '\\majData_majProfunctor_majStrong_second';
 
 // Data_Profunctor_Strong_first
-$GLOBALS['Data_Profunctor_Strong_first'] = function($dict_0 = null) {
+function majData_majProfunctor_majStrong_first($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majProfunctor_majStrong_first';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['first'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Profunctor_Strong_first'] = __NAMESPACE__ . '\\majData_majProfunctor_majStrong_first';
 
 // Data_Profunctor_Strong_splitStrong
-$GLOBALS['Data_Profunctor_Strong_splitStrong'] = (function() {
-  $__fn = function($dictSemigroupoid_0 = null, $dictStrong_1 = null, $l_2 = null, $r_3 = null) use (&$__fn) {
+function majData_majProfunctor_majStrong_splitmajStrong($dictSemigroupoid_0, $dictStrong_1 = null, $l_2 = null, $r_3 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majProfunctor_majStrong_splitmajStrong';
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ((($dictSemigroupoid_0)['compose'])((($dictStrong_1)['second'])($r_3)))((($dictStrong_1)['first'])($l_2));
+  $__res = (($dictSemigroupoid_0)['compose'])((($dictStrong_1)['second'])($r_3), (($dictStrong_1)['first'])($l_2));
   goto __end;;
   __end:
-  return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
-  };
-  return $__fn;
-})();
+  return 4 < $__num ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
+}
+$GLOBALS['Data_Profunctor_Strong_splitStrong'] = __NAMESPACE__ . '\\majData_majProfunctor_majStrong_splitmajStrong';
 
 // Data_Profunctor_Strong_fanout
-$GLOBALS['Data_Profunctor_Strong_fanout'] = (function() {
-  $__fn = function($dictSemigroupoid_0 = null, $dictStrong_1 = null) use (&$__fn) {
+function majData_majProfunctor_majStrong_fanout($dictSemigroupoid_0, $dictStrong_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majProfunctor_majStrong_fanout';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
@@ -168,13 +179,13 @@ $GLOBALS['Data_Profunctor_Strong_fanout'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($lcmap_2_0)(function($a_5 = null) {
+  $__res = ($lcmap_2_0)(function($a_5 = null) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Tuple", $a_5, $a_5);
+  $__res = new \Data\Tuple\Data_Tuple_Tuple($a_5, $a_5);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(((($dictSemigroupoid_0)['compose'])((($dictStrong_1)['second'])($r_4)))((($dictStrong_1)['first'])($l_3)));
+}, (($dictSemigroupoid_0)['compose'])((($dictStrong_1)['second'])($r_4), (($dictStrong_1)['first'])($l_3)));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -183,8 +194,7 @@ $GLOBALS['Data_Profunctor_Strong_fanout'] = (function() {
 })();
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Profunctor_Strong_fanout'] = __NAMESPACE__ . '\\majData_majProfunctor_majStrong_fanout';
 

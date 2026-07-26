@@ -59,7 +59,7 @@ var once_max sync.Once
 func Get_max() gopurs_runtime.Value {
 	once_max.Do(func() {
 		cache_max = gopurs_runtime.Func2(func(x_0_box gopurs_runtime.Value, y_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_max(x_0_box.IntVal, y_1_box.IntVal)
+return gopurs_runtime.Int(Call_max(x_0_box.IntVal, y_1_box.IntVal))
 })
 	})
 	return cache_max
@@ -70,7 +70,7 @@ var once_makeBlack sync.Once
 func Get_makeBlack() gopurs_runtime.Value {
 	once_makeBlack.Do(func() {
 		cache_makeBlack = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_makeBlack((*Constructor_T)(v_0_box.UnsafePtr))
+return gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(Call_makeBlack((*Constructor_T)(v_0_box.UnsafePtr)))}
 })
 	})
 	return cache_makeBlack
@@ -90,7 +90,7 @@ var once_depth sync.Once
 func Get_depth() gopurs_runtime.Value {
 	once_depth.Do(func() {
 		cache_depth = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_depth((*Constructor_T)(v_0_box.UnsafePtr))
+return gopurs_runtime.Int(Call_depth((*Constructor_T)(v_0_box.UnsafePtr)))
 })
 	})
 	return cache_depth
@@ -101,7 +101,7 @@ var once_balance sync.Once
 func Get_balance() gopurs_runtime.Value {
 	once_balance.Do(func() {
 		cache_balance = gopurs_runtime.Func4(func(v_0_box gopurs_runtime.Value, v1_1_box gopurs_runtime.Value, v2_2_box gopurs_runtime.Value, v3_3_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_balance(v_0_box, (*Constructor_T)(v1_1_box.UnsafePtr), v2_2_box.IntVal, (*Constructor_T)(v3_3_box.UnsafePtr))
+return gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(Call_balance(v_0_box, (*Constructor_T)(v1_1_box.UnsafePtr), v2_2_box.IntVal, (*Constructor_T)(v3_3_box.UnsafePtr)))}
 })
 	})
 	return cache_balance
@@ -112,7 +112,7 @@ var once_ins sync.Once
 func Get_ins() gopurs_runtime.Value {
 	once_ins.Do(func() {
 		cache_ins = gopurs_runtime.Func2(func(v_0_box gopurs_runtime.Value, v1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_ins(v_0_box.IntVal, (*Constructor_T)(v1_1_box.UnsafePtr))
+return gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(Call_ins(v_0_box.IntVal, (*Constructor_T)(v1_1_box.UnsafePtr)))}
 })
 	})
 	return cache_ins
@@ -123,7 +123,7 @@ var once_insert sync.Once
 func Get_insert() gopurs_runtime.Value {
 	once_insert.Do(func() {
 		cache_insert = gopurs_runtime.Func2(func(x_0_box gopurs_runtime.Value, s_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_insert(x_0_box.IntVal, (*Constructor_T)(s_1_box.UnsafePtr))
+return gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(Call_insert(x_0_box.IntVal, (*Constructor_T)(s_1_box.UnsafePtr)))}
 })
 	})
 	return cache_insert
@@ -134,7 +134,7 @@ var once_buildTree sync.Once
 func Get_buildTree() gopurs_runtime.Value {
 	once_buildTree.Do(func() {
 		cache_buildTree = gopurs_runtime.Func2(func(v_0_box gopurs_runtime.Value, v1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_buildTree(v_0_box.IntVal, (*Constructor_T)(v1_1_box.UnsafePtr))
+return gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(Call_buildTree(v_0_box.IntVal, (*Constructor_T)(v1_1_box.UnsafePtr)))}
 })
 	})
 	return cache_buildTree
@@ -145,7 +145,7 @@ var once_act sync.Once
 func Get_act() gopurs_runtime.Value {
 	once_act.Do(func() {
 		cache_act = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Effect.Get_bindEffect(), "bind"), gopurs_runtime.Apply(pkg_Bench.Get_opaque(), gopurs_runtime.Int(100000)), gopurs_runtime.Func(func(dummy_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Show.Get_showInt(), "show"), gopurs_runtime.Apply(Get_depth(), Call_buildTree(dummy_0.IntVal, (*Constructor_T)(gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: nil}.UnsafePtr)))))
+return gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Show.Get_showInt(), "show"), gopurs_runtime.Int(Call_depth((*Constructor_T)(gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(Call_buildTree(dummy_0.IntVal, (*Constructor_T)(gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: nil}.UnsafePtr)))}.UnsafePtr)))))
 }))
 	})
 	return cache_act
@@ -174,7 +174,7 @@ type Constructor_T struct {
 }
 
 
-func Call_max(x_0_loop int64, y_1_loop int64) gopurs_runtime.Value {
+func Call_max(x_0_loop int64, y_1_loop int64) int64 {
 var x_0 int64 = x_0_loop
 _ = x_0
 var y_1 int64 = y_1_loop
@@ -192,10 +192,10 @@ goto end_branch_0
 __t0 = gopurs_runtime.Int(y_1)
 }
 end_branch_0:
-return __t0
+return __t0.IntVal
 }
 
-func Call_makeBlack(v_0_loop *Constructor_T) gopurs_runtime.Value {
+func Call_makeBlack(v_0_loop *Constructor_T) *Constructor_T {
 var v_0 *Constructor_T = v_0_loop
 _ = v_0
 var __t0 gopurs_runtime.Value
@@ -219,10 +219,10 @@ goto end_branch_0
 __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_0:
-return __t0
+return (*Constructor_T)(__t0.UnsafePtr)
 }
 
-func Call_depth(v_0_loop *Constructor_T) gopurs_runtime.Value {
+func Call_depth(v_0_loop *Constructor_T) int64 {
 depth:
 for {
 if false { continue depth }
@@ -239,9 +239,9 @@ goto end_branch_0
 }
 {
 if (gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(v_0)}.Type == 9 && gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(v_0)}.IntVal == 3983586014 && gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr != nil) {
-__local_var_1_1 := gopurs_runtime.Apply(Get_depth(), gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer((*Constructor_T)(gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V1)})
+__local_var_1_1 := gopurs_runtime.Int(Call_depth((*Constructor_T)(gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer((*Constructor_T)(gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V1)}.UnsafePtr)))
 _ = __local_var_1_1
-__local_var_2_2 := gopurs_runtime.Apply(Get_depth(), gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer((*Constructor_T)(gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V3)})
+__local_var_2_2 := gopurs_runtime.Int(Call_depth((*Constructor_T)(gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer((*Constructor_T)(gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V3)}.UnsafePtr)))
 _ = __local_var_2_2
 var __t3 gopurs_runtime.Value
 {
@@ -266,11 +266,11 @@ goto end_branch_0
 __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_0:
-return __t0
+return __t0.IntVal
 }
 }
 
-func Call_balance(v_0_loop gopurs_runtime.Value, v1_1_loop *Constructor_T, v2_2_loop int64, v3_3_loop *Constructor_T) gopurs_runtime.Value {
+func Call_balance(v_0_loop gopurs_runtime.Value, v1_1_loop *Constructor_T, v2_2_loop int64, v3_3_loop *Constructor_T) *Constructor_T {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 var v1_1 *Constructor_T = v1_1_loop
@@ -825,10 +825,10 @@ goto end_branch_0
 __t0 = gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Constructor_T{v_0, v1_1, v2_2, v3_3})}
 }
 end_branch_0:
-return __t0
+return (*Constructor_T)(__t0.UnsafePtr)
 }
 
-func Call_ins(v_0_loop int64, v1_1_loop *Constructor_T) gopurs_runtime.Value {
+func Call_ins(v_0_loop int64, v1_1_loop *Constructor_T) *Constructor_T {
 ins:
 for {
 if false { continue ins }
@@ -850,7 +850,7 @@ if (gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(
 var __t1 gopurs_runtime.Value
 {
 if (v_0) < (gopurs_runtime.Int((*Constructor_T)(gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(v1_1)}.UnsafePtr).V2).IntVal) {
-__t1 = Call_balance((*Constructor_T)(gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(v1_1)}.UnsafePtr).V0, (*Constructor_T)(Call_ins(v_0, (*Constructor_T)(gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer((*Constructor_T)(gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(v1_1)}.UnsafePtr).V1)}.UnsafePtr)).UnsafePtr), gopurs_runtime.Int((*Constructor_T)(gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(v1_1)}.UnsafePtr).V2).IntVal, (*Constructor_T)(gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer((*Constructor_T)(gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(v1_1)}.UnsafePtr).V3)}.UnsafePtr))
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(Call_balance((*Constructor_T)(gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(v1_1)}.UnsafePtr).V0, (*Constructor_T)(gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(Call_ins(v_0, (*Constructor_T)(gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer((*Constructor_T)(gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(v1_1)}.UnsafePtr).V1)}.UnsafePtr)))}.UnsafePtr), gopurs_runtime.Int((*Constructor_T)(gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(v1_1)}.UnsafePtr).V2).IntVal, (*Constructor_T)(gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer((*Constructor_T)(gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(v1_1)}.UnsafePtr).V3)}.UnsafePtr)))}
 goto end_branch_1
 } else {
 
@@ -858,7 +858,7 @@ goto end_branch_1
 }
 {
 if (v_0) > (gopurs_runtime.Int((*Constructor_T)(gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(v1_1)}.UnsafePtr).V2).IntVal) {
-__t1 = Call_balance((*Constructor_T)(gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(v1_1)}.UnsafePtr).V0, (*Constructor_T)(gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer((*Constructor_T)(gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(v1_1)}.UnsafePtr).V1)}.UnsafePtr), gopurs_runtime.Int((*Constructor_T)(gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(v1_1)}.UnsafePtr).V2).IntVal, (*Constructor_T)(Call_ins(v_0, (*Constructor_T)(gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer((*Constructor_T)(gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(v1_1)}.UnsafePtr).V3)}.UnsafePtr)).UnsafePtr))
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(Call_balance((*Constructor_T)(gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(v1_1)}.UnsafePtr).V0, (*Constructor_T)(gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer((*Constructor_T)(gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(v1_1)}.UnsafePtr).V1)}.UnsafePtr), gopurs_runtime.Int((*Constructor_T)(gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(v1_1)}.UnsafePtr).V2).IntVal, (*Constructor_T)(gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(Call_ins(v_0, (*Constructor_T)(gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer((*Constructor_T)(gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(v1_1)}.UnsafePtr).V3)}.UnsafePtr)))}.UnsafePtr)))}
 goto end_branch_1
 } else {
 
@@ -878,16 +878,16 @@ goto end_branch_0
 __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_0:
-return __t0
+return (*Constructor_T)(__t0.UnsafePtr)
 }
 }
 
-func Call_insert(x_0_loop int64, s_1_loop *Constructor_T) gopurs_runtime.Value {
+func Call_insert(x_0_loop int64, s_1_loop *Constructor_T) *Constructor_T {
 var x_0 int64 = x_0_loop
 _ = x_0
 var s_1 *Constructor_T = s_1_loop
 _ = s_1
-__local_var_2_0 := Call_ins(x_0, s_1)
+__local_var_2_0 := gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(Call_ins(x_0, s_1))}
 _ = __local_var_2_0
 var __t1 gopurs_runtime.Value
 {
@@ -910,10 +910,10 @@ goto end_branch_1
 __t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_1:
-return __t1
+return (*Constructor_T)(__t1.UnsafePtr)
 }
 
-func Call_buildTree(v_0_loop int64, v1_1_loop *Constructor_T) gopurs_runtime.Value {
+func Call_buildTree(v_0_loop int64, v1_1_loop *Constructor_T) *Constructor_T {
 buildTree:
 for {
 if false { continue buildTree }
@@ -932,12 +932,12 @@ goto end_branch_0
 }
 {
 v_0_loop = (v_0) - (1)
-v1_1_loop = (*Constructor_T)(Call_insert(v_0, v1_1).UnsafePtr)
+v1_1_loop = (*Constructor_T)(gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(Call_insert(v_0, v1_1))}.UnsafePtr)
 continue buildTree
 __t0 = gopurs_runtime.Value{}
 }
 end_branch_0:
-return __t0
+return (*Constructor_T)(__t0.UnsafePtr)
 }
 }
 

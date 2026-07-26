@@ -101,9 +101,15 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Control_Monad_whenM
-$GLOBALS['Control_Monad_whenM'] = function($dictMonad_0 = null) {
+function majControl_majMonad_whenmajM($dictMonad_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_whenmajM';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__local_var_1_0 = (($dictMonad_0)['Applicative0'])(null);
   $__res = (function() use ($__local_var_1_0, $dictMonad_0) {
   $__fn = function($mb_2 = null, $m_3 = null) use ($__local_var_1_0, $dictMonad_0, &$__fn) {
@@ -111,7 +117,7 @@ $GLOBALS['Control_Monad_whenM'] = function($dictMonad_0 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((($dictMonad_0)['Bind1'])(null))['bind'])($mb_2))(function($b_4 = null) use ($__local_var_1_0, $m_3) {
+  $__res = (((($dictMonad_0)['Bind1'])(null))['bind'])($mb_2, function($b_4 = null) use ($__local_var_1_0, $m_3) {
   $__num = \func_num_args();
   $__t1 = null;;
   if ($b_4) {
@@ -133,12 +139,17 @@ goto end_branch_1;;
 })();
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_whenM'] = __NAMESPACE__ . '\\majControl_majMonad_whenmajM';
 
 // Control_Monad_unlessM
-$GLOBALS['Control_Monad_unlessM'] = function($dictMonad_0 = null) {
+function majControl_majMonad_unlessmajM($dictMonad_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_unlessmajM';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__local_var_1_0 = (($dictMonad_0)['Applicative0'])(null);
   $__res = (function() use ($__local_var_1_0, $dictMonad_0) {
   $__fn = function($mb_2 = null, $m_3 = null) use ($__local_var_1_0, $dictMonad_0, &$__fn) {
@@ -146,7 +157,7 @@ $GLOBALS['Control_Monad_unlessM'] = function($dictMonad_0 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((($dictMonad_0)['Bind1'])(null))['bind'])($mb_2))(function($b_4 = null) use ($__local_var_1_0, $m_3) {
+  $__res = (((($dictMonad_0)['Bind1'])(null))['bind'])($mb_2, function($b_4 = null) use ($__local_var_1_0, $m_3) {
   $__num = \func_num_args();
   $__t1 = null;;
   if (( ! $b_4)) {
@@ -173,8 +184,9 @@ goto end_branch_1;;
 })();
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_unlessM'] = __NAMESPACE__ . '\\majControl_majMonad_unlessmajM';
 
 // Control_Monad_monadProxy
 $GLOBALS['Control_Monad_monadProxy'] = ["Applicative0" => function($_dollar__unused_0 = null) {
@@ -222,13 +234,13 @@ $GLOBALS['Control_Monad_monadArray'] = ["Applicative0" => function($_dollar__unu
 }];
 
 // Control_Monad_liftM1
-$GLOBALS['Control_Monad_liftM1'] = (function() {
-  $__fn = function($dictMonad_0 = null, $f_1 = null, $a_2 = null) use (&$__fn) {
+function majControl_majMonad_liftmajM1($dictMonad_0, $f_1 = null, $a_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_liftmajM1';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((((($dictMonad_0)['Bind1'])(null))['bind'])($a_2))(function($a_prime_3 = null) use ($dictMonad_0, $f_1) {
+  $__res = (((($dictMonad_0)['Bind1'])(null))['bind'])($a_2, function($a_prime_3 = null) use ($dictMonad_0, $f_1) {
   $__num = \func_num_args();
   $__res = (((($dictMonad_0)['Applicative0'])(null))['pure'])(($f_1)($a_prime_3));
   goto __end;;
@@ -237,14 +249,17 @@ $GLOBALS['Control_Monad_liftM1'] = (function() {
 });
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Control_Monad_liftM1'] = __NAMESPACE__ . '\\majControl_majMonad_liftmajM1';
 
 // Control_Monad_ap
-$GLOBALS['Control_Monad_ap'] = function($dictMonad_0 = null) {
+function majControl_majMonad_ap($dictMonad_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_ap';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__local_var_1_0 = (($dictMonad_0)['Bind1'])(null);
   $__res = (function() use ($__local_var_1_0, $dictMonad_0) {
   $__fn = function($f_2 = null, $a_3 = null) use ($__local_var_1_0, $dictMonad_0, &$__fn) {
@@ -252,9 +267,9 @@ $GLOBALS['Control_Monad_ap'] = function($dictMonad_0 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($__local_var_1_0)['bind'])($f_2))(function($f_prime_4 = null) use ($__local_var_1_0, $a_3, $dictMonad_0) {
+  $__res = (($__local_var_1_0)['bind'])($f_2, function($f_prime_4 = null) use ($__local_var_1_0, $a_3, $dictMonad_0) {
   $__num = \func_num_args();
-  $__res = ((($__local_var_1_0)['bind'])($a_3))(function($a_prime_5 = null) use ($dictMonad_0, $f_prime_4) {
+  $__res = (($__local_var_1_0)['bind'])($a_3, function($a_prime_5 = null) use ($dictMonad_0, $f_prime_4) {
   $__num = \func_num_args();
   $__res = (((($dictMonad_0)['Applicative0'])(null))['pure'])(($f_prime_4)($a_prime_5));
   goto __end;;
@@ -273,6 +288,7 @@ $GLOBALS['Control_Monad_ap'] = function($dictMonad_0 = null) {
 })();
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_ap'] = __NAMESPACE__ . '\\majControl_majMonad_ap';
 

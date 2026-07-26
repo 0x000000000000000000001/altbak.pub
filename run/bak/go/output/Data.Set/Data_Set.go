@@ -66,7 +66,7 @@ var once_toMap sync.Once
 func Get_toMap() gopurs_runtime.Value {
 	once_toMap.Do(func() {
 		cache_toMap = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_toMap(v_0_box)
+return gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(Call_toMap(v_0_box))}
 })
 	})
 	return cache_toMap
@@ -227,7 +227,7 @@ var once_findMin sync.Once
 func Get_findMin() gopurs_runtime.Value {
 	once_findMin.Do(func() {
 		cache_findMin = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_findMin(v_0_box)
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_findMin(v_0_box))}
 })
 	})
 	return cache_findMin
@@ -238,7 +238,7 @@ var once_findMax sync.Once
 func Get_findMax() gopurs_runtime.Value {
 	once_findMax.Do(func() {
 		cache_findMax = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_findMax(v_0_box)
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_findMax(v_0_box))}
 })
 	})
 	return cache_findMax
@@ -295,7 +295,7 @@ func Get_ord1Set() gopurs_runtime.Value {
 		cache_ord1Set = gopurs_runtime.RecordDict2("Eq10", "compare1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_eq1Set()
 }), gopurs_runtime.Func(func(dictOrd_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(gopurs_runtime.Apply(Get_ordSet(), dictOrd_0), "compare")
+return gopurs_runtime.RecordGet(Call_ordSet(dictOrd_0), "compare")
 }))
 	})
 	return cache_ord1Set
@@ -486,10 +486,10 @@ return __t1
 })
 }
 
-func Call_toMap(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_toMap(v_0_loop gopurs_runtime.Value) *pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value] {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-return v_0
+return (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(v_0.UnsafePtr)
 }
 
 func Call_toUnfoldable(dictUnfoldable_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -623,20 +623,20 @@ _ = v_2
 return gopurs_runtime.Apply4(pkg_Data_Map_Internal.Get_insert(), dictOrd_0, a_1, pkg_Data_Unit.Get_unit(), v_2)
 }
 
-func Call_findMin(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_findMin(v_0_loop gopurs_runtime.Value) *pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value] {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Maybe.Get_functorMaybe(), "map"), gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Maybe.Get_functorMaybe(), "map"), gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordGet(v1_1, "key")
-}), gopurs_runtime.Apply(pkg_Data_Map_Internal.Get_findMin(), v_0))
+}), gopurs_runtime.Apply(pkg_Data_Map_Internal.Get_findMin(), v_0)).UnsafePtr)
 }
 
-func Call_findMax(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_findMax(v_0_loop gopurs_runtime.Value) *pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value] {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Maybe.Get_functorMaybe(), "map"), gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Maybe.Get_functorMaybe(), "map"), gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordGet(v1_1, "key")
-}), gopurs_runtime.Apply(pkg_Data_Map_Internal.Get_findMax(), v_0))
+}), gopurs_runtime.Apply(pkg_Data_Map_Internal.Get_findMax(), v_0)).UnsafePtr)
 }
 
 func Call_filter(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {

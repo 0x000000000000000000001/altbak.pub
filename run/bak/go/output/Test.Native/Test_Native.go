@@ -10,13 +10,13 @@ var once_loopNative sync.Once
 func Get_loopNative() gopurs_runtime.Value {
 	once_loopNative.Do(func() {
 		cache_loopNative = gopurs_runtime.Func2(func(v_0_box gopurs_runtime.Value, v1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_loopNative(v_0_box.IntVal, v1_1_box.IntVal)
+return gopurs_runtime.Int(Call_loopNative(v_0_box.IntVal, v1_1_box.IntVal))
 })
 	})
 	return cache_loopNative
 }
 
-func Call_loopNative(v_0_loop int64, v1_1_loop int64) gopurs_runtime.Value {
+func Call_loopNative(v_0_loop int64, v1_1_loop int64) int64 {
 loopNative:
 for {
 if false { continue loopNative }
@@ -40,7 +40,7 @@ continue loopNative
 __t0 = gopurs_runtime.Value{}
 }
 end_branch_0:
-return __t0
+return __t0.IntVal
 }
 }
 

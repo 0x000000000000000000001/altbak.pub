@@ -480,7 +480,7 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_3, "pure"),
 func Call_monadWriterT(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
 _ = dictMonoid_0
-applicativeWriterT1_1_0 := gopurs_runtime.Apply(Get_applicativeWriterT(), dictMonoid_0)
+applicativeWriterT1_1_0 := Call_applicativeWriterT(dictMonoid_0)
 _ = applicativeWriterT1_1_0
 bindWriterT1_2_1 := gopurs_runtime.Apply(Get_bindWriterT(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{}))
 _ = bindWriterT1_2_1
@@ -502,7 +502,7 @@ var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
 _ = dictMonoid_0
 mempty_1_0 := gopurs_runtime.RecordGet(dictMonoid_0, "mempty")
 _ = mempty_1_0
-monadWriterT1_2_1 := gopurs_runtime.Apply(Get_monadWriterT(), dictMonoid_0)
+monadWriterT1_2_1 := Call_monadWriterT(dictMonoid_0)
 _ = monadWriterT1_2_1
 return gopurs_runtime.Func(func(dictMonadAsk_3 gopurs_runtime.Value) gopurs_runtime.Value {
 Monad0_4_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadAsk_3, "Monad0"), gopurs_runtime.Value{})
@@ -520,7 +520,7 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs
 func Call_monadReaderWriterT(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
 _ = dictMonoid_0
-monadAskWriterT1_1_0 := gopurs_runtime.Apply(Get_monadAskWriterT(), dictMonoid_0)
+monadAskWriterT1_1_0 := Call_monadAskWriterT(dictMonoid_0)
 _ = monadAskWriterT1_1_0
 return gopurs_runtime.Func(func(dictMonadReader_2 gopurs_runtime.Value) gopurs_runtime.Value {
 monadAskWriterT2_3_1 := gopurs_runtime.Apply(monadAskWriterT1_1_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadReader_2, "MonadAsk0"), gopurs_runtime.Value{}))
@@ -538,7 +538,7 @@ var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
 _ = dictMonoid_0
 mempty_1_0 := gopurs_runtime.RecordGet(dictMonoid_0, "mempty")
 _ = mempty_1_0
-monadWriterT1_2_1 := gopurs_runtime.Apply(Get_monadWriterT(), dictMonoid_0)
+monadWriterT1_2_1 := Call_monadWriterT(dictMonoid_0)
 _ = monadWriterT1_2_1
 return gopurs_runtime.Func(func(dictMonadCont_3 gopurs_runtime.Value) gopurs_runtime.Value {
 monadWriterT2_4_2 := gopurs_runtime.Apply(monadWriterT1_2_1, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadCont_3, "Monad0"), gopurs_runtime.Value{}))
@@ -560,7 +560,7 @@ var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
 _ = dictMonoid_0
 mempty_1_0 := gopurs_runtime.RecordGet(dictMonoid_0, "mempty")
 _ = mempty_1_0
-monadWriterT1_2_1 := gopurs_runtime.Apply(Get_monadWriterT(), dictMonoid_0)
+monadWriterT1_2_1 := Call_monadWriterT(dictMonoid_0)
 _ = monadWriterT1_2_1
 return gopurs_runtime.Func(func(dictMonadEffect_3 gopurs_runtime.Value) gopurs_runtime.Value {
 Monad0_4_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_3, "Monad0"), gopurs_runtime.Value{})
@@ -584,7 +584,7 @@ __local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "
 _ = __local_var_1_0
 mempty_2_1 := gopurs_runtime.RecordGet(dictMonoid_0, "mempty")
 _ = mempty_2_1
-monadWriterT1_3_2 := gopurs_runtime.Apply(Get_monadWriterT(), dictMonoid_0)
+monadWriterT1_3_2 := Call_monadWriterT(dictMonoid_0)
 _ = monadWriterT1_3_2
 return gopurs_runtime.Func(func(dictMonadRec_4 gopurs_runtime.Value) gopurs_runtime.Value {
 Monad0_5_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadRec_4, "Monad0"), gopurs_runtime.Value{})
@@ -633,7 +633,7 @@ var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
 _ = dictMonoid_0
 mempty_1_0 := gopurs_runtime.RecordGet(dictMonoid_0, "mempty")
 _ = mempty_1_0
-monadWriterT1_2_1 := gopurs_runtime.Apply(Get_monadWriterT(), dictMonoid_0)
+monadWriterT1_2_1 := Call_monadWriterT(dictMonoid_0)
 _ = monadWriterT1_2_1
 return gopurs_runtime.Func(func(dictMonadState_3 gopurs_runtime.Value) gopurs_runtime.Value {
 Monad0_4_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadState_3, "Monad0"), gopurs_runtime.Value{})
@@ -655,7 +655,7 @@ var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
 _ = dictMonoid_0
 Semigroup0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{})
 _ = Semigroup0_1_0
-monadWriterT1_2_1 := gopurs_runtime.Apply(Get_monadWriterT(), dictMonoid_0)
+monadWriterT1_2_1 := Call_monadWriterT(dictMonoid_0)
 _ = monadWriterT1_2_1
 return gopurs_runtime.Func(func(dictMonad_3 gopurs_runtime.Value) gopurs_runtime.Value {
 monadWriterT2_4_2 := gopurs_runtime.Apply(monadWriterT1_2_1, dictMonad_3)
@@ -675,7 +675,7 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs
 func Call_monadWriterWriterT(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
 _ = dictMonoid_0
-monadTellWriterT1_1_0 := gopurs_runtime.Apply(Get_monadTellWriterT(), dictMonoid_0)
+monadTellWriterT1_1_0 := Call_monadTellWriterT(dictMonoid_0)
 _ = monadTellWriterT1_1_0
 return gopurs_runtime.Func(func(dictMonad_2 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_2, "Bind1"), gopurs_runtime.Value{})
@@ -705,7 +705,7 @@ var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
 _ = dictMonoid_0
 mempty_1_0 := gopurs_runtime.RecordGet(dictMonoid_0, "mempty")
 _ = mempty_1_0
-monadWriterT1_2_1 := gopurs_runtime.Apply(Get_monadWriterT(), dictMonoid_0)
+monadWriterT1_2_1 := Call_monadWriterT(dictMonoid_0)
 _ = monadWriterT1_2_1
 return gopurs_runtime.Func(func(dictMonadThrow_3 gopurs_runtime.Value) gopurs_runtime.Value {
 Monad0_4_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadThrow_3, "Monad0"), gopurs_runtime.Value{})
@@ -725,7 +725,7 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs
 func Call_monadErrorWriterT(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
 _ = dictMonoid_0
-monadThrowWriterT1_1_0 := gopurs_runtime.Apply(Get_monadThrowWriterT(), dictMonoid_0)
+monadThrowWriterT1_1_0 := Call_monadThrowWriterT(dictMonoid_0)
 _ = monadThrowWriterT1_1_0
 return gopurs_runtime.Func(func(dictMonadError_2 gopurs_runtime.Value) gopurs_runtime.Value {
 monadThrowWriterT2_3_1 := gopurs_runtime.Apply(monadThrowWriterT1_1_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadError_2, "MonadThrow0"), gopurs_runtime.Value{}))
@@ -745,7 +745,7 @@ var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
 _ = dictMonoid_0
 mempty_1_0 := gopurs_runtime.RecordGet(dictMonoid_0, "mempty")
 _ = mempty_1_0
-monadWriterT1_2_1 := gopurs_runtime.Apply(Get_monadWriterT(), dictMonoid_0)
+monadWriterT1_2_1 := Call_monadWriterT(dictMonoid_0)
 _ = monadWriterT1_2_1
 return gopurs_runtime.Func(func(dictMonadST_3 gopurs_runtime.Value) gopurs_runtime.Value {
 Monad0_4_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadST_3, "Monad0"), gopurs_runtime.Value{})
@@ -785,7 +785,7 @@ return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Point
 _ = semigroupWriterT3_7_4
 return gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_8 gopurs_runtime.Value) gopurs_runtime.Value {
 return semigroupWriterT3_7_4
-}), gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply2(Get_applicativeWriterT(), dictMonoid_2, dictApplicative_0), "pure"), gopurs_runtime.RecordGet(dictMonoid1_5, "mempty")))
+}), gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(Call_applicativeWriterT(dictMonoid_2), dictApplicative_0), "pure"), gopurs_runtime.RecordGet(dictMonoid1_5, "mempty")))
 })
 })
 }
@@ -835,7 +835,7 @@ return altWriterT1_3_2
 func Call_alternativeWriterT(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
 _ = dictMonoid_0
-applicativeWriterT1_1_0 := gopurs_runtime.Apply(Get_applicativeWriterT(), dictMonoid_0)
+applicativeWriterT1_1_0 := Call_applicativeWriterT(dictMonoid_0)
 _ = applicativeWriterT1_1_0
 return gopurs_runtime.Func(func(dictAlternative_2 gopurs_runtime.Value) gopurs_runtime.Value {
 applicativeWriterT2_3_1 := gopurs_runtime.Apply(applicativeWriterT1_1_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictAlternative_2, "Applicative0"), gopurs_runtime.Value{}))
@@ -873,9 +873,9 @@ return plusWriterT1_6_4
 func Call_monadPlusWriterT(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
 _ = dictMonoid_0
-monadWriterT1_1_0 := gopurs_runtime.Apply(Get_monadWriterT(), dictMonoid_0)
+monadWriterT1_1_0 := Call_monadWriterT(dictMonoid_0)
 _ = monadWriterT1_1_0
-alternativeWriterT1_2_1 := gopurs_runtime.Apply(Get_alternativeWriterT(), dictMonoid_0)
+alternativeWriterT1_2_1 := Call_alternativeWriterT(dictMonoid_0)
 _ = alternativeWriterT1_2_1
 return gopurs_runtime.Func(func(dictMonadPlus_3 gopurs_runtime.Value) gopurs_runtime.Value {
 monadWriterT2_4_2 := gopurs_runtime.Apply(monadWriterT1_1_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadPlus_3, "Monad0"), gopurs_runtime.Value{}))

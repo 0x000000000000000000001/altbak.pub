@@ -1229,7 +1229,7 @@ return pkg_Control_Apply.Get_identity()
 func Call_for_(dictApplicative_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictApplicative_0 gopurs_runtime.Value = dictApplicative_0_loop
 _ = dictApplicative_0
-traverse_1_1_0 := gopurs_runtime.Apply(Get_traverse_(), dictApplicative_0)
+traverse_1_1_0 := Call_traverse_(dictApplicative_0)
 _ = traverse_1_1_0
 return gopurs_runtime.Func(func(dictFoldable_2 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_3_1 := gopurs_runtime.Apply(traverse_1_1_0, dictFoldable_2)
@@ -1243,7 +1243,7 @@ return gopurs_runtime.Apply2(__local_var_3_1, a_5, b_4)
 func Call_sequence_(dictApplicative_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictApplicative_0 gopurs_runtime.Value = dictApplicative_0_loop
 _ = dictApplicative_0
-traverse_1_1_0 := gopurs_runtime.Apply(Get_traverse_(), dictApplicative_0)
+traverse_1_1_0 := Call_traverse_(dictApplicative_0)
 _ = traverse_1_1_0
 return gopurs_runtime.Func(func(dictFoldable_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(traverse_1_1_0, dictFoldable_2, Get_identity())
@@ -1708,7 +1708,7 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup_2, "append")
 func Call_surround(dictFoldable_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictFoldable_0 gopurs_runtime.Value = dictFoldable_0_loop
 _ = dictFoldable_0
-surroundMap1_1_0 := gopurs_runtime.Apply(Get_surroundMap(), dictFoldable_0)
+surroundMap1_1_0 := Call_surroundMap(dictFoldable_0)
 _ = surroundMap1_1_0
 return gopurs_runtime.Func(func(dictSemigroup_2 gopurs_runtime.Value) gopurs_runtime.Value {
 surroundMap2_3_1 := gopurs_runtime.Apply(surroundMap1_1_0, dictSemigroup_2)
@@ -1822,7 +1822,7 @@ return gopurs_runtime.Apply(any1_1_0, gopurs_runtime.Apply(gopurs_runtime.Record
 func Call_notElem(dictFoldable_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictFoldable_0 gopurs_runtime.Value = dictFoldable_0_loop
 _ = dictFoldable_0
-elem1_1_0 := gopurs_runtime.Apply(Get_elem(), dictFoldable_0)
+elem1_1_0 := Call_elem(dictFoldable_0)
 _ = elem1_1_0
 return gopurs_runtime.Func(func(dictEq_2 gopurs_runtime.Value) gopurs_runtime.Value {
 elem2_3_1 := gopurs_runtime.Apply(elem1_1_0, dictEq_2)

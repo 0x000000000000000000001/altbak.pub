@@ -109,40 +109,56 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_Monoid_Disj_Disj
-$GLOBALS['Data_Monoid_Disj_Disj'] = function($x_0 = null) {
+function majData_majMonoid_majDisj_majDisj($x_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMonoid_majDisj_majDisj';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $x_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Monoid_Disj_Disj'] = __NAMESPACE__ . '\\majData_majMonoid_majDisj_majDisj';
 
 // Data_Monoid_Disj_showDisj
-$GLOBALS['Data_Monoid_Disj_showDisj'] = function($dictShow_0 = null) {
+function majData_majMonoid_majDisj_showmajDisj($dictShow_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMonoid_majDisj_showmajDisj';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Disj "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1)))(")"));
+  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Disj ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1), ")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Monoid_Disj_showDisj'] = __NAMESPACE__ . '\\majData_majMonoid_majDisj_showmajDisj';
 
 // Data_Monoid_Disj_semiringDisj
-$GLOBALS['Data_Monoid_Disj_semiringDisj'] = function($dictHeytingAlgebra_0 = null) {
+function majData_majMonoid_majDisj_semiringmajDisj($dictHeytingAlgebra_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMonoid_majDisj_semiringmajDisj';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["zero" => ($dictHeytingAlgebra_0)['ff'], "one" => ($dictHeytingAlgebra_0)['tt'], "add" => (function() use ($dictHeytingAlgebra_0) {
   $__fn = function($v_1 = null, $v1_2 = null) use ($dictHeytingAlgebra_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictHeytingAlgebra_0)['disj'])($v_1))($v1_2);
+  $__res = (($dictHeytingAlgebra_0)['disj'])($v_1, $v1_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -154,7 +170,7 @@ $GLOBALS['Data_Monoid_Disj_semiringDisj'] = function($dictHeytingAlgebra_0 = nul
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictHeytingAlgebra_0)['conj'])($v_1))($v1_2);
+  $__res = (($dictHeytingAlgebra_0)['conj'])($v_1, $v1_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -163,19 +179,24 @@ $GLOBALS['Data_Monoid_Disj_semiringDisj'] = function($dictHeytingAlgebra_0 = nul
 })()];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Monoid_Disj_semiringDisj'] = __NAMESPACE__ . '\\majData_majMonoid_majDisj_semiringmajDisj';
 
 // Data_Monoid_Disj_semigroupDisj
-$GLOBALS['Data_Monoid_Disj_semigroupDisj'] = function($dictHeytingAlgebra_0 = null) {
+function majData_majMonoid_majDisj_semigroupmajDisj($dictHeytingAlgebra_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMonoid_majDisj_semigroupmajDisj';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["append" => (function() use ($dictHeytingAlgebra_0) {
   $__fn = function($v_1 = null, $v1_2 = null) use ($dictHeytingAlgebra_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictHeytingAlgebra_0)['disj'])($v_1))($v1_2);
+  $__res = (($dictHeytingAlgebra_0)['disj'])($v_1, $v1_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -184,28 +205,38 @@ $GLOBALS['Data_Monoid_Disj_semigroupDisj'] = function($dictHeytingAlgebra_0 = nu
 })()];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Monoid_Disj_semigroupDisj'] = __NAMESPACE__ . '\\majData_majMonoid_majDisj_semigroupmajDisj';
 
 // Data_Monoid_Disj_ordDisj
-$GLOBALS['Data_Monoid_Disj_ordDisj'] = function($dictOrd_0 = null) {
+function majData_majMonoid_majDisj_ordmajDisj($dictOrd_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMonoid_majDisj_ordmajDisj';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictOrd_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Monoid_Disj_ordDisj'] = __NAMESPACE__ . '\\majData_majMonoid_majDisj_ordmajDisj';
 
 // Data_Monoid_Disj_monoidDisj
-$GLOBALS['Data_Monoid_Disj_monoidDisj'] = function($dictHeytingAlgebra_0 = null) {
+function majData_majMonoid_majDisj_monoidmajDisj($dictHeytingAlgebra_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMonoid_majDisj_monoidmajDisj';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $semigroupDisj1_1_0 = ["append" => (function() use ($dictHeytingAlgebra_0) {
   $__fn = function($v_1 = null, $v1_2 = null) use ($dictHeytingAlgebra_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictHeytingAlgebra_0)['disj'])($v_1))($v1_2);
+  $__res = (($dictHeytingAlgebra_0)['disj'])($v_1, $v1_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -221,8 +252,9 @@ $GLOBALS['Data_Monoid_Disj_monoidDisj'] = function($dictHeytingAlgebra_0 = null)
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Monoid_Disj_monoidDisj'] = __NAMESPACE__ . '\\majData_majMonoid_majDisj_monoidmajDisj';
 
 // Data_Monoid_Disj_functorDisj
 $GLOBALS['Data_Monoid_Disj_functorDisj'] = ["map" => (function() {
@@ -240,13 +272,18 @@ $GLOBALS['Data_Monoid_Disj_functorDisj'] = ["map" => (function() {
 })()];
 
 // Data_Monoid_Disj_eqDisj
-$GLOBALS['Data_Monoid_Disj_eqDisj'] = function($dictEq_0 = null) {
+function majData_majMonoid_majDisj_eqmajDisj($dictEq_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMonoid_majDisj_eqmajDisj';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictEq_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Monoid_Disj_eqDisj'] = __NAMESPACE__ . '\\majData_majMonoid_majDisj_eqmajDisj';
 
 // Data_Monoid_Disj_eq1Disj
 $GLOBALS['Data_Monoid_Disj_eq1Disj'] = ["eq1" => function($dictEq_0 = null) {
@@ -273,13 +310,18 @@ $GLOBALS['Data_Monoid_Disj_ord1Disj'] = ["compare1" => function($dictOrd_0 = nul
 }];
 
 // Data_Monoid_Disj_boundedDisj
-$GLOBALS['Data_Monoid_Disj_boundedDisj'] = function($dictBounded_0 = null) {
+function majData_majMonoid_majDisj_boundedmajDisj($dictBounded_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMonoid_majDisj_boundedmajDisj';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictBounded_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Monoid_Disj_boundedDisj'] = __NAMESPACE__ . '\\majData_majMonoid_majDisj_boundedmajDisj';
 
 // Data_Monoid_Disj_applyDisj
 $GLOBALS['Data_Monoid_Disj_applyDisj'] = ["apply" => (function() {

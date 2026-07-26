@@ -108,40 +108,56 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_Monoid_Additive_Additive
-$GLOBALS['Data_Monoid_Additive_Additive'] = function($x_0 = null) {
+function majData_majMonoid_majAdditive_majAdditive($x_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMonoid_majAdditive_majAdditive';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $x_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Monoid_Additive_Additive'] = __NAMESPACE__ . '\\majData_majMonoid_majAdditive_majAdditive';
 
 // Data_Monoid_Additive_showAdditive
-$GLOBALS['Data_Monoid_Additive_showAdditive'] = function($dictShow_0 = null) {
+function majData_majMonoid_majAdditive_showmajAdditive($dictShow_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMonoid_majAdditive_showmajAdditive';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Additive "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1)))(")"));
+  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Additive ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1), ")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Monoid_Additive_showAdditive'] = __NAMESPACE__ . '\\majData_majMonoid_majAdditive_showmajAdditive';
 
 // Data_Monoid_Additive_semigroupAdditive
-$GLOBALS['Data_Monoid_Additive_semigroupAdditive'] = function($dictSemiring_0 = null) {
+function majData_majMonoid_majAdditive_semigroupmajAdditive($dictSemiring_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMonoid_majAdditive_semigroupmajAdditive';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["append" => (function() use ($dictSemiring_0) {
   $__fn = function($v_1 = null, $v1_2 = null) use ($dictSemiring_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictSemiring_0)['add'])($v_1))($v1_2);
+  $__res = (($dictSemiring_0)['add'])($v_1, $v1_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -150,28 +166,38 @@ $GLOBALS['Data_Monoid_Additive_semigroupAdditive'] = function($dictSemiring_0 = 
 })()];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Monoid_Additive_semigroupAdditive'] = __NAMESPACE__ . '\\majData_majMonoid_majAdditive_semigroupmajAdditive';
 
 // Data_Monoid_Additive_ordAdditive
-$GLOBALS['Data_Monoid_Additive_ordAdditive'] = function($dictOrd_0 = null) {
+function majData_majMonoid_majAdditive_ordmajAdditive($dictOrd_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMonoid_majAdditive_ordmajAdditive';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictOrd_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Monoid_Additive_ordAdditive'] = __NAMESPACE__ . '\\majData_majMonoid_majAdditive_ordmajAdditive';
 
 // Data_Monoid_Additive_monoidAdditive
-$GLOBALS['Data_Monoid_Additive_monoidAdditive'] = function($dictSemiring_0 = null) {
+function majData_majMonoid_majAdditive_monoidmajAdditive($dictSemiring_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMonoid_majAdditive_monoidmajAdditive';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $semigroupAdditive1_1_0 = ["append" => (function() use ($dictSemiring_0) {
   $__fn = function($v_1 = null, $v1_2 = null) use ($dictSemiring_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictSemiring_0)['add'])($v_1))($v1_2);
+  $__res = (($dictSemiring_0)['add'])($v_1, $v1_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -187,8 +213,9 @@ $GLOBALS['Data_Monoid_Additive_monoidAdditive'] = function($dictSemiring_0 = nul
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Monoid_Additive_monoidAdditive'] = __NAMESPACE__ . '\\majData_majMonoid_majAdditive_monoidmajAdditive';
 
 // Data_Monoid_Additive_functorAdditive
 $GLOBALS['Data_Monoid_Additive_functorAdditive'] = ["map" => (function() {
@@ -206,13 +233,18 @@ $GLOBALS['Data_Monoid_Additive_functorAdditive'] = ["map" => (function() {
 })()];
 
 // Data_Monoid_Additive_eqAdditive
-$GLOBALS['Data_Monoid_Additive_eqAdditive'] = function($dictEq_0 = null) {
+function majData_majMonoid_majAdditive_eqmajAdditive($dictEq_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMonoid_majAdditive_eqmajAdditive';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictEq_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Monoid_Additive_eqAdditive'] = __NAMESPACE__ . '\\majData_majMonoid_majAdditive_eqmajAdditive';
 
 // Data_Monoid_Additive_eq1Additive
 $GLOBALS['Data_Monoid_Additive_eq1Additive'] = ["eq1" => function($dictEq_0 = null) {
@@ -239,13 +271,18 @@ $GLOBALS['Data_Monoid_Additive_ord1Additive'] = ["compare1" => function($dictOrd
 }];
 
 // Data_Monoid_Additive_boundedAdditive
-$GLOBALS['Data_Monoid_Additive_boundedAdditive'] = function($dictBounded_0 = null) {
+function majData_majMonoid_majAdditive_boundedmajAdditive($dictBounded_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMonoid_majAdditive_boundedmajAdditive';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictBounded_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Monoid_Additive_boundedAdditive'] = __NAMESPACE__ . '\\majData_majMonoid_majAdditive_boundedmajAdditive';
 
 // Data_Monoid_Additive_applyAdditive
 $GLOBALS['Data_Monoid_Additive_applyAdditive'] = ["apply" => (function() {

@@ -161,9 +161,15 @@ $GLOBALS['Effect_Uncurried_runEffectFn8'] = $ffi_Effect_Uncurried['runEffectFn8'
 $GLOBALS['Effect_Uncurried_runEffectFn9'] = $ffi_Effect_Uncurried['runEffectFn9'] ?? new class { public function __invoke(...$args) { return $this; } };
 
 
+
+
 // Effect_Uncurried_semigroupEffectFn9
-$GLOBALS['Effect_Uncurried_semigroupEffectFn9'] = function($dictSemigroup_0 = null) {
+function majEffect_majUncurried_semigroupmajEffectmajFn9($dictSemigroup_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majEffect_majUncurried_semigroupmajEffectmajFn9';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["append" => (function() use ($dictSemigroup_0) {
   $__fn = function($f1_1 = null, $f2_2 = null) use ($dictSemigroup_0, &$__fn) {
   $__num = \func_num_args();
@@ -176,7 +182,7 @@ $GLOBALS['Effect_Uncurried_semigroupEffectFn9'] = function($dictSemigroup_0 = nu
   if ($__num < 9) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 9);
   }
-  $__res = ((($GLOBALS['Effect_lift2'])(($dictSemigroup_0)['append']))((((((((((($GLOBALS['Effect_Uncurried_runEffectFn9'])($f1_1))($a_3))($b_4))($c_5))($d_6))($e_7))($f_8))($g_9))($h_10))($i_11)))((((((((((($GLOBALS['Effect_Uncurried_runEffectFn9'])($f2_2))($a_3))($b_4))($c_5))($d_6))($e_7))($f_8))($g_9))($h_10))($i_11));
+  $__res = ($GLOBALS['Effect_lift2'])(($dictSemigroup_0)['append'], ($GLOBALS['Effect_Uncurried_runEffectFn9'])($f1_1, $a_3, $b_4, $c_5, $d_6, $e_7, $f_8, $g_9, $h_10, $i_11), ($GLOBALS['Effect_Uncurried_runEffectFn9'])($f2_2, $a_3, $b_4, $c_5, $d_6, $e_7, $f_8, $g_9, $h_10, $i_11));
   goto __end;;
   __end:
   return $__num > 9 ? $__res(...\array_slice(\func_get_args(), 9)) : $__res;
@@ -191,12 +197,17 @@ $GLOBALS['Effect_Uncurried_semigroupEffectFn9'] = function($dictSemigroup_0 = nu
 })()];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Effect_Uncurried_semigroupEffectFn9'] = __NAMESPACE__ . '\\majEffect_majUncurried_semigroupmajEffectmajFn9';
 
 // Effect_Uncurried_semigroupEffectFn8
-$GLOBALS['Effect_Uncurried_semigroupEffectFn8'] = function($dictSemigroup_0 = null) {
+function majEffect_majUncurried_semigroupmajEffectmajFn8($dictSemigroup_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majEffect_majUncurried_semigroupmajEffectmajFn8';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["append" => (function() use ($dictSemigroup_0) {
   $__fn = function($f1_1 = null, $f2_2 = null) use ($dictSemigroup_0, &$__fn) {
   $__num = \func_num_args();
@@ -209,7 +220,7 @@ $GLOBALS['Effect_Uncurried_semigroupEffectFn8'] = function($dictSemigroup_0 = nu
   if ($__num < 8) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 8);
   }
-  $__res = ((($GLOBALS['Effect_lift2'])(($dictSemigroup_0)['append']))(((((((((($GLOBALS['Effect_Uncurried_runEffectFn8'])($f1_1))($a_3))($b_4))($c_5))($d_6))($e_7))($f_8))($g_9))($h_10)))(((((((((($GLOBALS['Effect_Uncurried_runEffectFn8'])($f2_2))($a_3))($b_4))($c_5))($d_6))($e_7))($f_8))($g_9))($h_10));
+  $__res = ($GLOBALS['Effect_lift2'])(($dictSemigroup_0)['append'], ($GLOBALS['Effect_Uncurried_runEffectFn8'])($f1_1, $a_3, $b_4, $c_5, $d_6, $e_7, $f_8, $g_9, $h_10), ($GLOBALS['Effect_Uncurried_runEffectFn8'])($f2_2, $a_3, $b_4, $c_5, $d_6, $e_7, $f_8, $g_9, $h_10));
   goto __end;;
   __end:
   return $__num > 8 ? $__res(...\array_slice(\func_get_args(), 8)) : $__res;
@@ -224,12 +235,17 @@ $GLOBALS['Effect_Uncurried_semigroupEffectFn8'] = function($dictSemigroup_0 = nu
 })()];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Effect_Uncurried_semigroupEffectFn8'] = __NAMESPACE__ . '\\majEffect_majUncurried_semigroupmajEffectmajFn8';
 
 // Effect_Uncurried_semigroupEffectFn7
-$GLOBALS['Effect_Uncurried_semigroupEffectFn7'] = function($dictSemigroup_0 = null) {
+function majEffect_majUncurried_semigroupmajEffectmajFn7($dictSemigroup_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majEffect_majUncurried_semigroupmajEffectmajFn7';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["append" => (function() use ($dictSemigroup_0) {
   $__fn = function($f1_1 = null, $f2_2 = null) use ($dictSemigroup_0, &$__fn) {
   $__num = \func_num_args();
@@ -242,7 +258,7 @@ $GLOBALS['Effect_Uncurried_semigroupEffectFn7'] = function($dictSemigroup_0 = nu
   if ($__num < 7) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 7);
   }
-  $__res = ((($GLOBALS['Effect_lift2'])(($dictSemigroup_0)['append']))((((((((($GLOBALS['Effect_Uncurried_runEffectFn7'])($f1_1))($a_3))($b_4))($c_5))($d_6))($e_7))($f_8))($g_9)))((((((((($GLOBALS['Effect_Uncurried_runEffectFn7'])($f2_2))($a_3))($b_4))($c_5))($d_6))($e_7))($f_8))($g_9));
+  $__res = ($GLOBALS['Effect_lift2'])(($dictSemigroup_0)['append'], ($GLOBALS['Effect_Uncurried_runEffectFn7'])($f1_1, $a_3, $b_4, $c_5, $d_6, $e_7, $f_8, $g_9), ($GLOBALS['Effect_Uncurried_runEffectFn7'])($f2_2, $a_3, $b_4, $c_5, $d_6, $e_7, $f_8, $g_9));
   goto __end;;
   __end:
   return $__num > 7 ? $__res(...\array_slice(\func_get_args(), 7)) : $__res;
@@ -257,12 +273,17 @@ $GLOBALS['Effect_Uncurried_semigroupEffectFn7'] = function($dictSemigroup_0 = nu
 })()];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Effect_Uncurried_semigroupEffectFn7'] = __NAMESPACE__ . '\\majEffect_majUncurried_semigroupmajEffectmajFn7';
 
 // Effect_Uncurried_semigroupEffectFn6
-$GLOBALS['Effect_Uncurried_semigroupEffectFn6'] = function($dictSemigroup_0 = null) {
+function majEffect_majUncurried_semigroupmajEffectmajFn6($dictSemigroup_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majEffect_majUncurried_semigroupmajEffectmajFn6';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["append" => (function() use ($dictSemigroup_0) {
   $__fn = function($f1_1 = null, $f2_2 = null) use ($dictSemigroup_0, &$__fn) {
   $__num = \func_num_args();
@@ -275,7 +296,7 @@ $GLOBALS['Effect_Uncurried_semigroupEffectFn6'] = function($dictSemigroup_0 = nu
   if ($__num < 6) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 6);
   }
-  $__res = ((($GLOBALS['Effect_lift2'])(($dictSemigroup_0)['append']))(((((((($GLOBALS['Effect_Uncurried_runEffectFn6'])($f1_1))($a_3))($b_4))($c_5))($d_6))($e_7))($f_8)))(((((((($GLOBALS['Effect_Uncurried_runEffectFn6'])($f2_2))($a_3))($b_4))($c_5))($d_6))($e_7))($f_8));
+  $__res = ($GLOBALS['Effect_lift2'])(($dictSemigroup_0)['append'], ($GLOBALS['Effect_Uncurried_runEffectFn6'])($f1_1, $a_3, $b_4, $c_5, $d_6, $e_7, $f_8), ($GLOBALS['Effect_Uncurried_runEffectFn6'])($f2_2, $a_3, $b_4, $c_5, $d_6, $e_7, $f_8));
   goto __end;;
   __end:
   return $__num > 6 ? $__res(...\array_slice(\func_get_args(), 6)) : $__res;
@@ -290,12 +311,17 @@ $GLOBALS['Effect_Uncurried_semigroupEffectFn6'] = function($dictSemigroup_0 = nu
 })()];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Effect_Uncurried_semigroupEffectFn6'] = __NAMESPACE__ . '\\majEffect_majUncurried_semigroupmajEffectmajFn6';
 
 // Effect_Uncurried_semigroupEffectFn5
-$GLOBALS['Effect_Uncurried_semigroupEffectFn5'] = function($dictSemigroup_0 = null) {
+function majEffect_majUncurried_semigroupmajEffectmajFn5($dictSemigroup_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majEffect_majUncurried_semigroupmajEffectmajFn5';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["append" => (function() use ($dictSemigroup_0) {
   $__fn = function($f1_1 = null, $f2_2 = null) use ($dictSemigroup_0, &$__fn) {
   $__num = \func_num_args();
@@ -308,7 +334,7 @@ $GLOBALS['Effect_Uncurried_semigroupEffectFn5'] = function($dictSemigroup_0 = nu
   if ($__num < 5) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 5);
   }
-  $__res = ((($GLOBALS['Effect_lift2'])(($dictSemigroup_0)['append']))((((((($GLOBALS['Effect_Uncurried_runEffectFn5'])($f1_1))($a_3))($b_4))($c_5))($d_6))($e_7)))((((((($GLOBALS['Effect_Uncurried_runEffectFn5'])($f2_2))($a_3))($b_4))($c_5))($d_6))($e_7));
+  $__res = ($GLOBALS['Effect_lift2'])(($dictSemigroup_0)['append'], ($GLOBALS['Effect_Uncurried_runEffectFn5'])($f1_1, $a_3, $b_4, $c_5, $d_6, $e_7), ($GLOBALS['Effect_Uncurried_runEffectFn5'])($f2_2, $a_3, $b_4, $c_5, $d_6, $e_7));
   goto __end;;
   __end:
   return $__num > 5 ? $__res(...\array_slice(\func_get_args(), 5)) : $__res;
@@ -323,12 +349,17 @@ $GLOBALS['Effect_Uncurried_semigroupEffectFn5'] = function($dictSemigroup_0 = nu
 })()];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Effect_Uncurried_semigroupEffectFn5'] = __NAMESPACE__ . '\\majEffect_majUncurried_semigroupmajEffectmajFn5';
 
 // Effect_Uncurried_semigroupEffectFn4
-$GLOBALS['Effect_Uncurried_semigroupEffectFn4'] = function($dictSemigroup_0 = null) {
+function majEffect_majUncurried_semigroupmajEffectmajFn4($dictSemigroup_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majEffect_majUncurried_semigroupmajEffectmajFn4';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["append" => (function() use ($dictSemigroup_0) {
   $__fn = function($f1_1 = null, $f2_2 = null) use ($dictSemigroup_0, &$__fn) {
   $__num = \func_num_args();
@@ -341,7 +372,7 @@ $GLOBALS['Effect_Uncurried_semigroupEffectFn4'] = function($dictSemigroup_0 = nu
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ((($GLOBALS['Effect_lift2'])(($dictSemigroup_0)['append']))(((((($GLOBALS['Effect_Uncurried_runEffectFn4'])($f1_1))($a_3))($b_4))($c_5))($d_6)))(((((($GLOBALS['Effect_Uncurried_runEffectFn4'])($f2_2))($a_3))($b_4))($c_5))($d_6));
+  $__res = ($GLOBALS['Effect_lift2'])(($dictSemigroup_0)['append'], ($GLOBALS['Effect_Uncurried_runEffectFn4'])($f1_1, $a_3, $b_4, $c_5, $d_6), ($GLOBALS['Effect_Uncurried_runEffectFn4'])($f2_2, $a_3, $b_4, $c_5, $d_6));
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -356,12 +387,17 @@ $GLOBALS['Effect_Uncurried_semigroupEffectFn4'] = function($dictSemigroup_0 = nu
 })()];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Effect_Uncurried_semigroupEffectFn4'] = __NAMESPACE__ . '\\majEffect_majUncurried_semigroupmajEffectmajFn4';
 
 // Effect_Uncurried_semigroupEffectFn3
-$GLOBALS['Effect_Uncurried_semigroupEffectFn3'] = function($dictSemigroup_0 = null) {
+function majEffect_majUncurried_semigroupmajEffectmajFn3($dictSemigroup_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majEffect_majUncurried_semigroupmajEffectmajFn3';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["append" => (function() use ($dictSemigroup_0) {
   $__fn = function($f1_1 = null, $f2_2 = null) use ($dictSemigroup_0, &$__fn) {
   $__num = \func_num_args();
@@ -374,7 +410,7 @@ $GLOBALS['Effect_Uncurried_semigroupEffectFn3'] = function($dictSemigroup_0 = nu
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($GLOBALS['Effect_lift2'])(($dictSemigroup_0)['append']))((((($GLOBALS['Effect_Uncurried_runEffectFn3'])($f1_1))($a_3))($b_4))($c_5)))((((($GLOBALS['Effect_Uncurried_runEffectFn3'])($f2_2))($a_3))($b_4))($c_5));
+  $__res = ($GLOBALS['Effect_lift2'])(($dictSemigroup_0)['append'], ($GLOBALS['Effect_Uncurried_runEffectFn3'])($f1_1, $a_3, $b_4, $c_5), ($GLOBALS['Effect_Uncurried_runEffectFn3'])($f2_2, $a_3, $b_4, $c_5));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -389,12 +425,17 @@ $GLOBALS['Effect_Uncurried_semigroupEffectFn3'] = function($dictSemigroup_0 = nu
 })()];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Effect_Uncurried_semigroupEffectFn3'] = __NAMESPACE__ . '\\majEffect_majUncurried_semigroupmajEffectmajFn3';
 
 // Effect_Uncurried_semigroupEffectFn2
-$GLOBALS['Effect_Uncurried_semigroupEffectFn2'] = function($dictSemigroup_0 = null) {
+function majEffect_majUncurried_semigroupmajEffectmajFn2($dictSemigroup_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majEffect_majUncurried_semigroupmajEffectmajFn2';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["append" => (function() use ($dictSemigroup_0) {
   $__fn = function($f1_1 = null, $f2_2 = null) use ($dictSemigroup_0, &$__fn) {
   $__num = \func_num_args();
@@ -407,7 +448,7 @@ $GLOBALS['Effect_Uncurried_semigroupEffectFn2'] = function($dictSemigroup_0 = nu
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Effect_lift2'])(($dictSemigroup_0)['append']))(((($GLOBALS['Effect_Uncurried_runEffectFn2'])($f1_1))($a_3))($b_4)))(((($GLOBALS['Effect_Uncurried_runEffectFn2'])($f2_2))($a_3))($b_4));
+  $__res = ($GLOBALS['Effect_lift2'])(($dictSemigroup_0)['append'], ($GLOBALS['Effect_Uncurried_runEffectFn2'])($f1_1, $a_3, $b_4), ($GLOBALS['Effect_Uncurried_runEffectFn2'])($f2_2, $a_3, $b_4));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -422,12 +463,17 @@ $GLOBALS['Effect_Uncurried_semigroupEffectFn2'] = function($dictSemigroup_0 = nu
 })()];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Effect_Uncurried_semigroupEffectFn2'] = __NAMESPACE__ . '\\majEffect_majUncurried_semigroupmajEffectmajFn2';
 
 // Effect_Uncurried_semigroupEffectFn10
-$GLOBALS['Effect_Uncurried_semigroupEffectFn10'] = function($dictSemigroup_0 = null) {
+function majEffect_majUncurried_semigroupmajEffectmajFn10($dictSemigroup_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majEffect_majUncurried_semigroupmajEffectmajFn10';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["append" => (function() use ($dictSemigroup_0) {
   $__fn = function($f1_1 = null, $f2_2 = null) use ($dictSemigroup_0, &$__fn) {
   $__num = \func_num_args();
@@ -440,7 +486,7 @@ $GLOBALS['Effect_Uncurried_semigroupEffectFn10'] = function($dictSemigroup_0 = n
   if ($__num < 10) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 10);
   }
-  $__res = ((($GLOBALS['Effect_lift2'])(($dictSemigroup_0)['append']))(((((((((((($GLOBALS['Effect_Uncurried_runEffectFn10'])($f1_1))($a_3))($b_4))($c_5))($d_6))($e_7))($f_8))($g_9))($h_10))($i_11))($j_12)))(((((((((((($GLOBALS['Effect_Uncurried_runEffectFn10'])($f2_2))($a_3))($b_4))($c_5))($d_6))($e_7))($f_8))($g_9))($h_10))($i_11))($j_12));
+  $__res = ($GLOBALS['Effect_lift2'])(($dictSemigroup_0)['append'], ($GLOBALS['Effect_Uncurried_runEffectFn10'])($f1_1, $a_3, $b_4, $c_5, $d_6, $e_7, $f_8, $g_9, $h_10, $i_11, $j_12), ($GLOBALS['Effect_Uncurried_runEffectFn10'])($f2_2, $a_3, $b_4, $c_5, $d_6, $e_7, $f_8, $g_9, $h_10, $i_11, $j_12));
   goto __end;;
   __end:
   return $__num > 10 ? $__res(...\array_slice(\func_get_args(), 10)) : $__res;
@@ -455,12 +501,17 @@ $GLOBALS['Effect_Uncurried_semigroupEffectFn10'] = function($dictSemigroup_0 = n
 })()];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Effect_Uncurried_semigroupEffectFn10'] = __NAMESPACE__ . '\\majEffect_majUncurried_semigroupmajEffectmajFn10';
 
 // Effect_Uncurried_semigroupEffectFn1
-$GLOBALS['Effect_Uncurried_semigroupEffectFn1'] = function($dictSemigroup_0 = null) {
+function majEffect_majUncurried_semigroupmajEffectmajFn1($dictSemigroup_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majEffect_majUncurried_semigroupmajEffectmajFn1';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["append" => (function() use ($dictSemigroup_0) {
   $__fn = function($f1_1 = null, $f2_2 = null) use ($dictSemigroup_0, &$__fn) {
   $__num = \func_num_args();
@@ -469,7 +520,7 @@ $GLOBALS['Effect_Uncurried_semigroupEffectFn1'] = function($dictSemigroup_0 = nu
   }
   $__res = ($GLOBALS['Effect_Uncurried_mkEffectFn1'])(function($a_3 = null) use ($dictSemigroup_0, $f1_1, $f2_2) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Effect_lift2'])(($dictSemigroup_0)['append']))((($GLOBALS['Effect_Uncurried_runEffectFn1'])($f1_1))($a_3)))((($GLOBALS['Effect_Uncurried_runEffectFn1'])($f2_2))($a_3));
+  $__res = ($GLOBALS['Effect_lift2'])(($dictSemigroup_0)['append'], ($GLOBALS['Effect_Uncurried_runEffectFn1'])($f1_1, $a_3), ($GLOBALS['Effect_Uncurried_runEffectFn1'])($f2_2, $a_3));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -482,12 +533,17 @@ $GLOBALS['Effect_Uncurried_semigroupEffectFn1'] = function($dictSemigroup_0 = nu
 })()];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Effect_Uncurried_semigroupEffectFn1'] = __NAMESPACE__ . '\\majEffect_majUncurried_semigroupmajEffectmajFn1';
 
 // Effect_Uncurried_monoidEffectFn9
-$GLOBALS['Effect_Uncurried_monoidEffectFn9'] = function($dictMonoid_0 = null) {
+function majEffect_majUncurried_monoidmajEffectmajFn9($dictMonoid_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majEffect_majUncurried_monoidmajEffectmajFn9';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $mempty_1_0 = (($GLOBALS['Effect_monoidEffect'])($dictMonoid_0))['mempty'];
   $semigroupEffectFn91_2_1 = ($GLOBALS['Effect_Uncurried_semigroupEffectFn9'])((($dictMonoid_0)['Semigroup0'])(null));
   $__res = ["mempty" => ($GLOBALS['Effect_Uncurried_mkEffectFn9'])((function() use ($mempty_1_0) {
@@ -511,12 +567,17 @@ $GLOBALS['Effect_Uncurried_monoidEffectFn9'] = function($dictMonoid_0 = null) {
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Effect_Uncurried_monoidEffectFn9'] = __NAMESPACE__ . '\\majEffect_majUncurried_monoidmajEffectmajFn9';
 
 // Effect_Uncurried_monoidEffectFn8
-$GLOBALS['Effect_Uncurried_monoidEffectFn8'] = function($dictMonoid_0 = null) {
+function majEffect_majUncurried_monoidmajEffectmajFn8($dictMonoid_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majEffect_majUncurried_monoidmajEffectmajFn8';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $mempty_1_0 = (($GLOBALS['Effect_monoidEffect'])($dictMonoid_0))['mempty'];
   $semigroupEffectFn81_2_1 = ($GLOBALS['Effect_Uncurried_semigroupEffectFn8'])((($dictMonoid_0)['Semigroup0'])(null));
   $__res = ["mempty" => ($GLOBALS['Effect_Uncurried_mkEffectFn8'])((function() use ($mempty_1_0) {
@@ -540,12 +601,17 @@ $GLOBALS['Effect_Uncurried_monoidEffectFn8'] = function($dictMonoid_0 = null) {
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Effect_Uncurried_monoidEffectFn8'] = __NAMESPACE__ . '\\majEffect_majUncurried_monoidmajEffectmajFn8';
 
 // Effect_Uncurried_monoidEffectFn7
-$GLOBALS['Effect_Uncurried_monoidEffectFn7'] = function($dictMonoid_0 = null) {
+function majEffect_majUncurried_monoidmajEffectmajFn7($dictMonoid_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majEffect_majUncurried_monoidmajEffectmajFn7';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $mempty_1_0 = (($GLOBALS['Effect_monoidEffect'])($dictMonoid_0))['mempty'];
   $semigroupEffectFn71_2_1 = ($GLOBALS['Effect_Uncurried_semigroupEffectFn7'])((($dictMonoid_0)['Semigroup0'])(null));
   $__res = ["mempty" => ($GLOBALS['Effect_Uncurried_mkEffectFn7'])((function() use ($mempty_1_0) {
@@ -569,12 +635,17 @@ $GLOBALS['Effect_Uncurried_monoidEffectFn7'] = function($dictMonoid_0 = null) {
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Effect_Uncurried_monoidEffectFn7'] = __NAMESPACE__ . '\\majEffect_majUncurried_monoidmajEffectmajFn7';
 
 // Effect_Uncurried_monoidEffectFn6
-$GLOBALS['Effect_Uncurried_monoidEffectFn6'] = function($dictMonoid_0 = null) {
+function majEffect_majUncurried_monoidmajEffectmajFn6($dictMonoid_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majEffect_majUncurried_monoidmajEffectmajFn6';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $mempty_1_0 = (($GLOBALS['Effect_monoidEffect'])($dictMonoid_0))['mempty'];
   $semigroupEffectFn61_2_1 = ($GLOBALS['Effect_Uncurried_semigroupEffectFn6'])((($dictMonoid_0)['Semigroup0'])(null));
   $__res = ["mempty" => ($GLOBALS['Effect_Uncurried_mkEffectFn6'])((function() use ($mempty_1_0) {
@@ -598,12 +669,17 @@ $GLOBALS['Effect_Uncurried_monoidEffectFn6'] = function($dictMonoid_0 = null) {
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Effect_Uncurried_monoidEffectFn6'] = __NAMESPACE__ . '\\majEffect_majUncurried_monoidmajEffectmajFn6';
 
 // Effect_Uncurried_monoidEffectFn5
-$GLOBALS['Effect_Uncurried_monoidEffectFn5'] = function($dictMonoid_0 = null) {
+function majEffect_majUncurried_monoidmajEffectmajFn5($dictMonoid_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majEffect_majUncurried_monoidmajEffectmajFn5';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $mempty_1_0 = (($GLOBALS['Effect_monoidEffect'])($dictMonoid_0))['mempty'];
   $semigroupEffectFn51_2_1 = ($GLOBALS['Effect_Uncurried_semigroupEffectFn5'])((($dictMonoid_0)['Semigroup0'])(null));
   $__res = ["mempty" => ($GLOBALS['Effect_Uncurried_mkEffectFn5'])((function() use ($mempty_1_0) {
@@ -627,12 +703,17 @@ $GLOBALS['Effect_Uncurried_monoidEffectFn5'] = function($dictMonoid_0 = null) {
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Effect_Uncurried_monoidEffectFn5'] = __NAMESPACE__ . '\\majEffect_majUncurried_monoidmajEffectmajFn5';
 
 // Effect_Uncurried_monoidEffectFn4
-$GLOBALS['Effect_Uncurried_monoidEffectFn4'] = function($dictMonoid_0 = null) {
+function majEffect_majUncurried_monoidmajEffectmajFn4($dictMonoid_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majEffect_majUncurried_monoidmajEffectmajFn4';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $mempty_1_0 = (($GLOBALS['Effect_monoidEffect'])($dictMonoid_0))['mempty'];
   $semigroupEffectFn41_2_1 = ($GLOBALS['Effect_Uncurried_semigroupEffectFn4'])((($dictMonoid_0)['Semigroup0'])(null));
   $__res = ["mempty" => ($GLOBALS['Effect_Uncurried_mkEffectFn4'])((function() use ($mempty_1_0) {
@@ -656,12 +737,17 @@ $GLOBALS['Effect_Uncurried_monoidEffectFn4'] = function($dictMonoid_0 = null) {
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Effect_Uncurried_monoidEffectFn4'] = __NAMESPACE__ . '\\majEffect_majUncurried_monoidmajEffectmajFn4';
 
 // Effect_Uncurried_monoidEffectFn3
-$GLOBALS['Effect_Uncurried_monoidEffectFn3'] = function($dictMonoid_0 = null) {
+function majEffect_majUncurried_monoidmajEffectmajFn3($dictMonoid_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majEffect_majUncurried_monoidmajEffectmajFn3';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $mempty_1_0 = (($GLOBALS['Effect_monoidEffect'])($dictMonoid_0))['mempty'];
   $semigroupEffectFn31_2_1 = ($GLOBALS['Effect_Uncurried_semigroupEffectFn3'])((($dictMonoid_0)['Semigroup0'])(null));
   $__res = ["mempty" => ($GLOBALS['Effect_Uncurried_mkEffectFn3'])((function() use ($mempty_1_0) {
@@ -685,12 +771,17 @@ $GLOBALS['Effect_Uncurried_monoidEffectFn3'] = function($dictMonoid_0 = null) {
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Effect_Uncurried_monoidEffectFn3'] = __NAMESPACE__ . '\\majEffect_majUncurried_monoidmajEffectmajFn3';
 
 // Effect_Uncurried_monoidEffectFn2
-$GLOBALS['Effect_Uncurried_monoidEffectFn2'] = function($dictMonoid_0 = null) {
+function majEffect_majUncurried_monoidmajEffectmajFn2($dictMonoid_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majEffect_majUncurried_monoidmajEffectmajFn2';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $mempty_1_0 = (($GLOBALS['Effect_monoidEffect'])($dictMonoid_0))['mempty'];
   $semigroupEffectFn21_2_1 = ($GLOBALS['Effect_Uncurried_semigroupEffectFn2'])((($dictMonoid_0)['Semigroup0'])(null));
   $__res = ["mempty" => ($GLOBALS['Effect_Uncurried_mkEffectFn2'])((function() use ($mempty_1_0) {
@@ -714,12 +805,17 @@ $GLOBALS['Effect_Uncurried_monoidEffectFn2'] = function($dictMonoid_0 = null) {
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Effect_Uncurried_monoidEffectFn2'] = __NAMESPACE__ . '\\majEffect_majUncurried_monoidmajEffectmajFn2';
 
 // Effect_Uncurried_monoidEffectFn10
-$GLOBALS['Effect_Uncurried_monoidEffectFn10'] = function($dictMonoid_0 = null) {
+function majEffect_majUncurried_monoidmajEffectmajFn10($dictMonoid_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majEffect_majUncurried_monoidmajEffectmajFn10';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $mempty_1_0 = (($GLOBALS['Effect_monoidEffect'])($dictMonoid_0))['mempty'];
   $semigroupEffectFn101_2_1 = ($GLOBALS['Effect_Uncurried_semigroupEffectFn10'])((($dictMonoid_0)['Semigroup0'])(null));
   $__res = ["mempty" => ($GLOBALS['Effect_Uncurried_mkEffectFn10'])((function() use ($mempty_1_0) {
@@ -743,12 +839,17 @@ $GLOBALS['Effect_Uncurried_monoidEffectFn10'] = function($dictMonoid_0 = null) {
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Effect_Uncurried_monoidEffectFn10'] = __NAMESPACE__ . '\\majEffect_majUncurried_monoidmajEffectmajFn10';
 
 // Effect_Uncurried_monoidEffectFn1
-$GLOBALS['Effect_Uncurried_monoidEffectFn1'] = function($dictMonoid_0 = null) {
+function majEffect_majUncurried_monoidmajEffectmajFn1($dictMonoid_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majEffect_majUncurried_monoidmajEffectmajFn1';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $mempty_1_0 = (($GLOBALS['Effect_monoidEffect'])($dictMonoid_0))['mempty'];
   $semigroupEffectFn11_2_1 = ($GLOBALS['Effect_Uncurried_semigroupEffectFn1'])((($dictMonoid_0)['Semigroup0'])(null));
   $__res = ["mempty" => ($GLOBALS['Effect_Uncurried_mkEffectFn1'])(function($v_3 = null) use ($mempty_1_0) {
@@ -766,6 +867,7 @@ $GLOBALS['Effect_Uncurried_monoidEffectFn1'] = function($dictMonoid_0 = null) {
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Effect_Uncurried_monoidEffectFn1'] = __NAMESPACE__ . '\\majEffect_majUncurried_monoidmajEffectmajFn1';
 

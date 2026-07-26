@@ -104,10 +104,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Test_Records_updateRec
-$GLOBALS['Test_Records_updateRec'] = (function() {
-  $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
+function majTest_majRecords_updatemajRec($v_0, $v1_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majTest_majRecords_updatemajRec';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
@@ -132,7 +134,7 @@ break;
   ($__obj1)['c'] = ((($v1_1)['b'])['c'] + 2);
   $__obj2 = (($v1_1)['b'])['d'];
   ($__obj2)['e'] = (((($v1_1)['b'])['d'])['e'] + 3);
-  ($__obj2)['f'] = (((($v1_1)['b'])['d'])['f'] + ((($GLOBALS['Data_EuclideanRing_euclideanRingInt'])['mod'])($v_0))(5));
+  ($__obj2)['f'] = (((($v1_1)['b'])['d'])['f'] + (($GLOBALS['Data_EuclideanRing_euclideanRingInt'])['mod'])($v_0, 5));
   ($__obj1)['d'] = $__obj2;
   ($__obj0)['b'] = $__obj1;
   $__tco_3 = ($v_0 - 1);
@@ -145,10 +147,9 @@ break;
   $__res = $__t5;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Test_Records_updateRec'] = __NAMESPACE__ . '\\majTest_majRecords_updatemajRec';
 
 // Test_Records_initial
 $GLOBALS['Test_Records_initial'] = ["a" => 0, "b" => ["c" => 0, "d" => ["e" => 0, "f" => 0]]];
@@ -157,9 +158,9 @@ $GLOBALS['Test_Records_initial'] = ["a" => 0, "b" => ["c" => 0, "d" => ["e" => 0
 $GLOBALS['Test_Records_describe'] = ($GLOBALS['Effect_Console_log'])("Deep Record Updates (10k iterations):");
 
 // Test_Records_act
-$GLOBALS['Test_Records_act'] = ((($GLOBALS['Effect_bindEffect'])['bind'])(($GLOBALS['Bench_opaque'])(10000)))(function($dummy_0 = null) {
+$GLOBALS['Test_Records_act'] = (($GLOBALS['Effect_bindEffect'])['bind'])(($GLOBALS['Bench_opaque'])(10000), function($dummy_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_Console_log'])((($GLOBALS['Data_Show_showInt'])['show'])(((((($GLOBALS['Test_Records_updateRec'])($dummy_0))($GLOBALS['Test_Records_initial']))['b'])['d'])['f']));
+  $__res = ($GLOBALS['Effect_Console_log'])((($GLOBALS['Data_Show_showInt'])['show'])((((($GLOBALS['Test_Records_updateRec'])($dummy_0, $GLOBALS['Test_Records_initial']))['b'])['d'])['f']));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

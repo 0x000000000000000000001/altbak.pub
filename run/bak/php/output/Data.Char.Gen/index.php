@@ -103,6 +103,8 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_Char_Gen_toEnumWithDefaults
 $GLOBALS['Data_Char_Gen_toEnumWithDefaults'] = ($GLOBALS['Data_Enum_toEnumWithDefaults'])($GLOBALS['Data_Enum_boundedEnumChar']);
 
@@ -110,65 +112,100 @@ $GLOBALS['Data_Char_Gen_toEnumWithDefaults'] = ($GLOBALS['Data_Enum_toEnumWithDe
 $GLOBALS['Data_Char_Gen_foldable1NonEmpty'] = ($GLOBALS['Data_NonEmpty_foldable1NonEmpty'])($GLOBALS['Data_Foldable_foldableArray']);
 
 // Data_Char_Gen_genUnicodeChar
-$GLOBALS['Data_Char_Gen_genUnicodeChar'] = function($dictMonadGen_0 = null) {
+function majData_majChar_majGen_genmajUnicodemajChar($dictMonadGen_0) {
   $__num = \func_num_args();
-  $__res = ((((((((((($dictMonadGen_0)['Monad0'])(null))['Bind1'])(null))['Apply0'])(null))['Functor0'])(null))['map'])((($GLOBALS['Data_Char_Gen_toEnumWithDefaults'])(($GLOBALS['Data_Bounded_boundedChar'])['bottom']))(($GLOBALS['Data_Bounded_boundedChar'])['top'])))(((($dictMonadGen_0)['chooseInt'])(0))(65536));
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majChar_majGen_genmajUnicodemajChar';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = (((((((((($dictMonadGen_0)['Monad0'])(null))['Bind1'])(null))['Apply0'])(null))['Functor0'])(null))['map'])(($GLOBALS['Data_Char_Gen_toEnumWithDefaults'])(($GLOBALS['Data_Bounded_boundedChar'])['bottom'], ($GLOBALS['Data_Bounded_boundedChar'])['top']), (($dictMonadGen_0)['chooseInt'])(0, 65536));
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Char_Gen_genUnicodeChar'] = __NAMESPACE__ . '\\majData_majChar_majGen_genmajUnicodemajChar';
 
 // Data_Char_Gen_genDigitChar
-$GLOBALS['Data_Char_Gen_genDigitChar'] = function($dictMonadGen_0 = null) {
+function majData_majChar_majGen_genmajDigitmajChar($dictMonadGen_0) {
   $__num = \func_num_args();
-  $__res = ((((((((((($dictMonadGen_0)['Monad0'])(null))['Bind1'])(null))['Apply0'])(null))['Functor0'])(null))['map'])((($GLOBALS['Data_Char_Gen_toEnumWithDefaults'])(($GLOBALS['Data_Bounded_boundedChar'])['bottom']))(($GLOBALS['Data_Bounded_boundedChar'])['top'])))(((($dictMonadGen_0)['chooseInt'])(48))(57));
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majChar_majGen_genmajDigitmajChar';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = (((((((((($dictMonadGen_0)['Monad0'])(null))['Bind1'])(null))['Apply0'])(null))['Functor0'])(null))['map'])(($GLOBALS['Data_Char_Gen_toEnumWithDefaults'])(($GLOBALS['Data_Bounded_boundedChar'])['bottom'], ($GLOBALS['Data_Bounded_boundedChar'])['top']), (($dictMonadGen_0)['chooseInt'])(48, 57));
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Char_Gen_genDigitChar'] = __NAMESPACE__ . '\\majData_majChar_majGen_genmajDigitmajChar';
 
 // Data_Char_Gen_genAsciiChar'
-$GLOBALS['Data_Char_Gen_genAsciiChar__prime__'] = function($dictMonadGen_0 = null) {
+function majData_majChar_majGen_genmajAsciimajChar__prime__($dictMonadGen_0) {
   $__num = \func_num_args();
-  $__res = ((((((((((($dictMonadGen_0)['Monad0'])(null))['Bind1'])(null))['Apply0'])(null))['Functor0'])(null))['map'])((($GLOBALS['Data_Char_Gen_toEnumWithDefaults'])(($GLOBALS['Data_Bounded_boundedChar'])['bottom']))(($GLOBALS['Data_Bounded_boundedChar'])['top'])))(((($dictMonadGen_0)['chooseInt'])(0))(127));
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majChar_majGen_genmajAsciimajChar__prime__';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = (((((((((($dictMonadGen_0)['Monad0'])(null))['Bind1'])(null))['Apply0'])(null))['Functor0'])(null))['map'])(($GLOBALS['Data_Char_Gen_toEnumWithDefaults'])(($GLOBALS['Data_Bounded_boundedChar'])['bottom'], ($GLOBALS['Data_Bounded_boundedChar'])['top']), (($dictMonadGen_0)['chooseInt'])(0, 127));
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Char_Gen_genAsciiChar__prime__'] = __NAMESPACE__ . '\\majData_majChar_majGen_genmajAsciimajChar__prime__';
 
 // Data_Char_Gen_genAsciiChar
-$GLOBALS['Data_Char_Gen_genAsciiChar'] = function($dictMonadGen_0 = null) {
+function majData_majChar_majGen_genmajAsciimajChar($dictMonadGen_0) {
   $__num = \func_num_args();
-  $__res = ((((((((((($dictMonadGen_0)['Monad0'])(null))['Bind1'])(null))['Apply0'])(null))['Functor0'])(null))['map'])((($GLOBALS['Data_Char_Gen_toEnumWithDefaults'])(($GLOBALS['Data_Bounded_boundedChar'])['bottom']))(($GLOBALS['Data_Bounded_boundedChar'])['top'])))(((($dictMonadGen_0)['chooseInt'])(32))(127));
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majChar_majGen_genmajAsciimajChar';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = (((((((((($dictMonadGen_0)['Monad0'])(null))['Bind1'])(null))['Apply0'])(null))['Functor0'])(null))['map'])(($GLOBALS['Data_Char_Gen_toEnumWithDefaults'])(($GLOBALS['Data_Bounded_boundedChar'])['bottom'], ($GLOBALS['Data_Bounded_boundedChar'])['top']), (($dictMonadGen_0)['chooseInt'])(32, 127));
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Char_Gen_genAsciiChar'] = __NAMESPACE__ . '\\majData_majChar_majGen_genmajAsciimajChar';
 
 // Data_Char_Gen_genAlphaUppercase
-$GLOBALS['Data_Char_Gen_genAlphaUppercase'] = function($dictMonadGen_0 = null) {
+function majData_majChar_majGen_genmajAlphamajUppercase($dictMonadGen_0) {
   $__num = \func_num_args();
-  $__res = ((((((((((($dictMonadGen_0)['Monad0'])(null))['Bind1'])(null))['Apply0'])(null))['Functor0'])(null))['map'])((($GLOBALS['Data_Char_Gen_toEnumWithDefaults'])(($GLOBALS['Data_Bounded_boundedChar'])['bottom']))(($GLOBALS['Data_Bounded_boundedChar'])['top'])))(((($dictMonadGen_0)['chooseInt'])(65))(90));
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majChar_majGen_genmajAlphamajUppercase';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = (((((((((($dictMonadGen_0)['Monad0'])(null))['Bind1'])(null))['Apply0'])(null))['Functor0'])(null))['map'])(($GLOBALS['Data_Char_Gen_toEnumWithDefaults'])(($GLOBALS['Data_Bounded_boundedChar'])['bottom'], ($GLOBALS['Data_Bounded_boundedChar'])['top']), (($dictMonadGen_0)['chooseInt'])(65, 90));
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Char_Gen_genAlphaUppercase'] = __NAMESPACE__ . '\\majData_majChar_majGen_genmajAlphamajUppercase';
 
 // Data_Char_Gen_genAlphaLowercase
-$GLOBALS['Data_Char_Gen_genAlphaLowercase'] = function($dictMonadGen_0 = null) {
+function majData_majChar_majGen_genmajAlphamajLowercase($dictMonadGen_0) {
   $__num = \func_num_args();
-  $__res = ((((((((((($dictMonadGen_0)['Monad0'])(null))['Bind1'])(null))['Apply0'])(null))['Functor0'])(null))['map'])((($GLOBALS['Data_Char_Gen_toEnumWithDefaults'])(($GLOBALS['Data_Bounded_boundedChar'])['bottom']))(($GLOBALS['Data_Bounded_boundedChar'])['top'])))(((($dictMonadGen_0)['chooseInt'])(97))(122));
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majChar_majGen_genmajAlphamajLowercase';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = (((((((((($dictMonadGen_0)['Monad0'])(null))['Bind1'])(null))['Apply0'])(null))['Functor0'])(null))['map'])(($GLOBALS['Data_Char_Gen_toEnumWithDefaults'])(($GLOBALS['Data_Bounded_boundedChar'])['bottom'], ($GLOBALS['Data_Bounded_boundedChar'])['top']), (($dictMonadGen_0)['chooseInt'])(97, 122));
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Char_Gen_genAlphaLowercase'] = __NAMESPACE__ . '\\majData_majChar_majGen_genmajAlphamajLowercase';
 
 // Data_Char_Gen_genAlpha
-$GLOBALS['Data_Char_Gen_genAlpha'] = function($dictMonadGen_0 = null) {
+function majData_majChar_majGen_genmajAlpha($dictMonadGen_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Monad_Gen_oneOf'])($dictMonadGen_0))($GLOBALS['Data_Char_Gen_foldable1NonEmpty']))(new Phpurs_Data2("NonEmpty", ($GLOBALS['Data_Char_Gen_genAlphaLowercase'])($dictMonadGen_0), [($GLOBALS['Data_Char_Gen_genAlphaUppercase'])($dictMonadGen_0)]));
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majChar_majGen_genmajAlpha';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ($GLOBALS['Control_Monad_Gen_oneOf'])($dictMonadGen_0, $GLOBALS['Data_Char_Gen_foldable1NonEmpty'], new \Data\NonEmpty\Data_NonEmpty_NonEmpty(($GLOBALS['Data_Char_Gen_genAlphaLowercase'])($dictMonadGen_0), [($GLOBALS['Data_Char_Gen_genAlphaUppercase'])($dictMonadGen_0)]));
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Char_Gen_genAlpha'] = __NAMESPACE__ . '\\majData_majChar_majGen_genmajAlpha';
 

@@ -679,7 +679,7 @@ return pkg_Control_Apply.Get_identity()
 func Call_forWithIndex_(dictApplicative_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictApplicative_0 gopurs_runtime.Value = dictApplicative_0_loop
 _ = dictApplicative_0
-traverseWithIndex_1_1_0 := gopurs_runtime.Apply(Get_traverseWithIndex_(), dictApplicative_0)
+traverseWithIndex_1_1_0 := Call_traverseWithIndex_(dictApplicative_0)
 _ = traverseWithIndex_1_1_0
 return gopurs_runtime.Func(func(dictFoldableWithIndex_2 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_3_1 := gopurs_runtime.Apply(traverseWithIndex_1_1_0, dictFoldableWithIndex_2)

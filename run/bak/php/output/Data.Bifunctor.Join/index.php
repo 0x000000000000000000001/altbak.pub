@@ -107,38 +107,55 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_Bifunctor_Join_Join
-$GLOBALS['Data_Bifunctor_Join_Join'] = function($x_0 = null) {
+function majData_majBifunctor_majJoin_majJoin($x_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majBifunctor_majJoin_majJoin';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $x_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Bifunctor_Join_Join'] = __NAMESPACE__ . '\\majData_majBifunctor_majJoin_majJoin';
 
 // Data_Bifunctor_Join_showJoin
-$GLOBALS['Data_Bifunctor_Join_showJoin'] = function($dictShow_0 = null) {
+function majData_majBifunctor_majJoin_showmajJoin($dictShow_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majBifunctor_majJoin_showmajJoin';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Join "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1)))(")"));
+  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Join ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1), ")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Bifunctor_Join_showJoin'] = __NAMESPACE__ . '\\majData_majBifunctor_majJoin_showmajJoin';
 
 // Data_Bifunctor_Join_ordJoin
-$GLOBALS['Data_Bifunctor_Join_ordJoin'] = function($dictOrd_0 = null) {
+function majData_majBifunctor_majJoin_ordmajJoin($dictOrd_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majBifunctor_majJoin_ordmajJoin';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictOrd_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Bifunctor_Join_ordJoin'] = __NAMESPACE__ . '\\majData_majBifunctor_majJoin_ordmajJoin';
 
 // Data_Bifunctor_Join_newtypeJoin
 $GLOBALS['Data_Bifunctor_Join_newtypeJoin'] = ["Coercible0" => function($_dollar__unused_0 = null) {
@@ -150,24 +167,33 @@ $GLOBALS['Data_Bifunctor_Join_newtypeJoin'] = ["Coercible0" => function($_dollar
 }];
 
 // Data_Bifunctor_Join_eqJoin
-$GLOBALS['Data_Bifunctor_Join_eqJoin'] = function($dictEq_0 = null) {
+function majData_majBifunctor_majJoin_eqmajJoin($dictEq_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majBifunctor_majJoin_eqmajJoin';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictEq_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Bifunctor_Join_eqJoin'] = __NAMESPACE__ . '\\majData_majBifunctor_majJoin_eqmajJoin';
 
 // Data_Bifunctor_Join_bifunctorJoin
-$GLOBALS['Data_Bifunctor_Join_bifunctorJoin'] = function($dictBifunctor_0 = null) {
+function majData_majBifunctor_majJoin_bifunctormajJoin($dictBifunctor_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majBifunctor_majJoin_bifunctormajJoin';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["map" => (function() use ($dictBifunctor_0) {
   $__fn = function($f_1 = null, $v_2 = null) use ($dictBifunctor_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($dictBifunctor_0)['bimap'])($f_1))($f_1))($v_2);
+  $__res = (($dictBifunctor_0)['bimap'])($f_1, $f_1, $v_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -176,12 +202,17 @@ $GLOBALS['Data_Bifunctor_Join_bifunctorJoin'] = function($dictBifunctor_0 = null
 })()];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Bifunctor_Join_bifunctorJoin'] = __NAMESPACE__ . '\\majData_majBifunctor_majJoin_bifunctormajJoin';
 
 // Data_Bifunctor_Join_biapplyJoin
-$GLOBALS['Data_Bifunctor_Join_biapplyJoin'] = function($dictBiapply_0 = null) {
+function majData_majBifunctor_majJoin_biapplymajJoin($dictBiapply_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majBifunctor_majJoin_biapplymajJoin';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__local_var_1_0 = (($dictBiapply_0)['Bifunctor0'])(null);
   $bifunctorJoin1_2_1 = ["map" => (function() use ($__local_var_1_0) {
   $__fn = function($f_2 = null, $v_3 = null) use ($__local_var_1_0, &$__fn) {
@@ -189,7 +220,7 @@ $GLOBALS['Data_Bifunctor_Join_biapplyJoin'] = function($dictBiapply_0 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($__local_var_1_0)['bimap'])($f_2))($f_2))($v_3);
+  $__res = (($__local_var_1_0)['bimap'])($f_2, $f_2, $v_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -202,7 +233,7 @@ $GLOBALS['Data_Bifunctor_Join_biapplyJoin'] = function($dictBiapply_0 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictBiapply_0)['biapply'])($v_3))($v1_4);
+  $__res = (($dictBiapply_0)['biapply'])($v_3, $v1_4);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -217,12 +248,17 @@ $GLOBALS['Data_Bifunctor_Join_biapplyJoin'] = function($dictBiapply_0 = null) {
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Bifunctor_Join_biapplyJoin'] = __NAMESPACE__ . '\\majData_majBifunctor_majJoin_biapplymajJoin';
 
 // Data_Bifunctor_Join_biapplicativeJoin
-$GLOBALS['Data_Bifunctor_Join_biapplicativeJoin'] = function($dictBiapplicative_0 = null) {
+function majData_majBifunctor_majJoin_biapplicativemajJoin($dictBiapplicative_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majBifunctor_majJoin_biapplicativemajJoin';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__local_var_1_0 = (($dictBiapplicative_0)['Biapply0'])(null);
   $__local_var_2_1 = (($__local_var_1_0)['Bifunctor0'])(null);
   $bifunctorJoin1_3_2 = ["map" => (function() use ($__local_var_2_1) {
@@ -231,7 +267,7 @@ $GLOBALS['Data_Bifunctor_Join_biapplicativeJoin'] = function($dictBiapplicative_
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($__local_var_2_1)['bimap'])($f_3))($f_3))($v_4);
+  $__res = (($__local_var_2_1)['bimap'])($f_3, $f_3, $v_4);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -244,7 +280,7 @@ $GLOBALS['Data_Bifunctor_Join_biapplicativeJoin'] = function($dictBiapplicative_
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($__local_var_1_0)['biapply'])($v_4))($v1_5);
+  $__res = (($__local_var_1_0)['biapply'])($v_4, $v1_5);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -259,7 +295,7 @@ $GLOBALS['Data_Bifunctor_Join_biapplicativeJoin'] = function($dictBiapplicative_
 }];
   $__res = ["pure" => function($a_4 = null) use ($dictBiapplicative_0) {
   $__num = \func_num_args();
-  $__res = ((($dictBiapplicative_0)['bipure'])($a_4))($a_4);
+  $__res = (($dictBiapplicative_0)['bipure'])($a_4, $a_4);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -272,6 +308,7 @@ $GLOBALS['Data_Bifunctor_Join_biapplicativeJoin'] = function($dictBiapplicative_
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Bifunctor_Join_biapplicativeJoin'] = __NAMESPACE__ . '\\majData_majBifunctor_majJoin_biapplicativemajJoin';
 

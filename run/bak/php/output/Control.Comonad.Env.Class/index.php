@@ -104,14 +104,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Control_Comonad_Env_Class_local
-$GLOBALS['Control_Comonad_Env_Class_local'] = function($dict_0 = null) {
+function majControl_majComonad_majEnv_majClass_local($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majComonad_majEnv_majClass_local';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['local'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Comonad_Env_Class_local'] = __NAMESPACE__ . '\\majControl_majComonad_majEnv_majClass_local';
 
 // Control_Comonad_Env_Class_comonadAskTuple
 $GLOBALS['Control_Comonad_Env_Class_comonadAskTuple'] = ["ask" => $GLOBALS['Data_Tuple_fst'], "Comonad0" => function($_dollar__unused_0 = null) {
@@ -129,7 +136,7 @@ $GLOBALS['Control_Comonad_Env_Class_comonadEnvTuple'] = ["local" => (function() 
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", ($f_0)(($v_1)->{'value0'}), ($v_1)->{'value1'});
+  $__res = new \Data\Tuple\Data_Tuple_Tuple(($f_0)(($v_1)->{'value0'}), ($v_1)->{'value1'});
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -144,8 +151,12 @@ $GLOBALS['Control_Comonad_Env_Class_comonadEnvTuple'] = ["local" => (function() 
 }];
 
 // Control_Comonad_Env_Class_comonadAskEnvT
-$GLOBALS['Control_Comonad_Env_Class_comonadAskEnvT'] = function($dictComonad_0 = null) {
+function majControl_majComonad_majEnv_majClass_comonadmajAskmajEnvmajT($dictComonad_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majComonad_majEnv_majClass_comonadmajAskmajEnvmajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $comonadEnvT_1_0 = ($GLOBALS['Control_Comonad_Env_Trans_comonadEnvT'])($dictComonad_0);
   $__res = ["ask" => function($v_2 = null) {
   $__num = \func_num_args();
@@ -162,12 +173,17 @@ $GLOBALS['Control_Comonad_Env_Class_comonadAskEnvT'] = function($dictComonad_0 =
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Comonad_Env_Class_comonadAskEnvT'] = __NAMESPACE__ . '\\majControl_majComonad_majEnv_majClass_comonadmajAskmajEnvmajT';
 
 // Control_Comonad_Env_Class_comonadEnvEnvT
-$GLOBALS['Control_Comonad_Env_Class_comonadEnvEnvT'] = function($dictComonad_0 = null) {
+function majControl_majComonad_majEnv_majClass_comonadmajEnvmajEnvmajT($dictComonad_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majComonad_majEnv_majClass_comonadmajEnvmajEnvmajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $comonadEnvT_1_0 = ($GLOBALS['Control_Comonad_Env_Trans_comonadEnvT'])($dictComonad_0);
   $__res = ["local" => (function() {
   $__fn = function($f_2 = null, $v_3 = null) use (&$__fn) {
@@ -175,7 +191,7 @@ $GLOBALS['Control_Comonad_Env_Class_comonadEnvEnvT'] = function($dictComonad_0 =
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", ($f_2)(($v_3)->{'value0'}), ($v_3)->{'value1'});
+  $__res = new \Data\Tuple\Data_Tuple_Tuple(($f_2)(($v_3)->{'value0'}), ($v_3)->{'value1'});
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -202,39 +218,48 @@ $GLOBALS['Control_Comonad_Env_Class_comonadEnvEnvT'] = function($dictComonad_0 =
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Comonad_Env_Class_comonadEnvEnvT'] = __NAMESPACE__ . '\\majControl_majComonad_majEnv_majClass_comonadmajEnvmajEnvmajT';
 
 // Control_Comonad_Env_Class_ask
-$GLOBALS['Control_Comonad_Env_Class_ask'] = function($dict_0 = null) {
+function majControl_majComonad_majEnv_majClass_ask($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majComonad_majEnv_majClass_ask';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['ask'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Comonad_Env_Class_ask'] = __NAMESPACE__ . '\\majControl_majComonad_majEnv_majClass_ask';
 
 // Control_Comonad_Env_Class_asks
-$GLOBALS['Control_Comonad_Env_Class_asks'] = (function() {
-  $__fn = function($dictComonadAsk_0 = null, $f_1 = null, $x_2 = null) use (&$__fn) {
+function majControl_majComonad_majEnv_majClass_asks($dictComonadAsk_0, $f_1 = null, $x_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majComonad_majEnv_majClass_asks';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   $__res = ($f_1)((($dictComonadAsk_0)['ask'])($x_2));
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Control_Comonad_Env_Class_asks'] = __NAMESPACE__ . '\\majControl_majComonad_majEnv_majClass_asks';
 
 // Control_Comonad_Env_Class_comonadAskStoreT
-$GLOBALS['Control_Comonad_Env_Class_comonadAskStoreT'] = function($dictComonadAsk_0 = null) {
+function majControl_majComonad_majEnv_majClass_comonadmajAskmajStoremajT($dictComonadAsk_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majComonad_majEnv_majClass_comonadmajAskmajStoremajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $Comonad0_1_0 = (($dictComonadAsk_0)['Comonad0'])(null);
   $comonadStoreT_2_1 = ($GLOBALS['Control_Comonad_Store_Trans_comonadStoreT'])($Comonad0_1_0);
-  $__res = ["ask" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictComonadAsk_0)['ask']))((($GLOBALS['Control_Comonad_Store_Trans_comonadTransStoreT'])['lower'])($Comonad0_1_0)), "Comonad0" => function($_dollar__unused_3 = null) use ($comonadStoreT_2_1) {
+  $__res = ["ask" => ($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictComonadAsk_0)['ask'], (($GLOBALS['Control_Comonad_Store_Trans_comonadTransStoreT'])['lower'])($Comonad0_1_0)), "Comonad0" => function($_dollar__unused_3 = null) use ($comonadStoreT_2_1) {
   $__num = \func_num_args();
   $__res = $comonadStoreT_2_1;
   goto __end;;
@@ -243,12 +268,17 @@ $GLOBALS['Control_Comonad_Env_Class_comonadAskStoreT'] = function($dictComonadAs
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Comonad_Env_Class_comonadAskStoreT'] = __NAMESPACE__ . '\\majControl_majComonad_majEnv_majClass_comonadmajAskmajStoremajT';
 
 // Control_Comonad_Env_Class_comonadEnvStoreT
-$GLOBALS['Control_Comonad_Env_Class_comonadEnvStoreT'] = function($dictComonadEnv_0 = null) {
+function majControl_majComonad_majEnv_majClass_comonadmajEnvmajStoremajT($dictComonadEnv_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majComonad_majEnv_majClass_comonadmajEnvmajStoremajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $comonadAskStoreT1_1_0 = ($GLOBALS['Control_Comonad_Env_Class_comonadAskStoreT'])((($dictComonadEnv_0)['ComonadAsk0'])(null));
   $__res = ["local" => (function() use ($dictComonadEnv_0) {
   $__fn = function($f_2 = null, $v_3 = null) use ($dictComonadEnv_0, &$__fn) {
@@ -256,7 +286,7 @@ $GLOBALS['Control_Comonad_Env_Class_comonadEnvStoreT'] = function($dictComonadEn
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", ((($dictComonadEnv_0)['local'])($f_2))(($v_3)->{'value0'}), ($v_3)->{'value1'});
+  $__res = new \Data\Tuple\Data_Tuple_Tuple((($dictComonadEnv_0)['local'])($f_2, ($v_3)->{'value0'}), ($v_3)->{'value1'});
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -271,12 +301,17 @@ $GLOBALS['Control_Comonad_Env_Class_comonadEnvStoreT'] = function($dictComonadEn
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Comonad_Env_Class_comonadEnvStoreT'] = __NAMESPACE__ . '\\majControl_majComonad_majEnv_majClass_comonadmajEnvmajStoremajT';
 
 // Control_Comonad_Env_Class_comonadAskTracedT
-$GLOBALS['Control_Comonad_Env_Class_comonadAskTracedT'] = function($dictComonadAsk_0 = null) {
+function majControl_majComonad_majEnv_majClass_comonadmajAskmajTracedmajT($dictComonadAsk_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majComonad_majEnv_majClass_comonadmajAskmajTracedmajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $ask1_1_0 = ($dictComonadAsk_0)['ask'];
   $Comonad0_2_1 = (($dictComonadAsk_0)['Comonad0'])(null);
   $comonadTracedT_3_2 = ($GLOBALS['Control_Comonad_Traced_Trans_comonadTracedT'])($Comonad0_2_1);
@@ -284,15 +319,15 @@ $GLOBALS['Control_Comonad_Env_Class_comonadAskTracedT'] = function($dictComonadA
   $__num = \func_num_args();
   $comonadTracedT1_5_3 = ($comonadTracedT_3_2)($dictMonoid_4);
   $mempty_6_4 = ($dictMonoid_4)['mempty'];
-  $__res = ["ask" => (($GLOBALS['Control_Semigroupoid_composeImpl'])($ask1_1_0))(function($v_7 = null) use ($Comonad0_2_1, $mempty_6_4) {
+  $__res = ["ask" => ($GLOBALS['Control_Semigroupoid_composeImpl'])($ask1_1_0, function($v_7 = null) use ($Comonad0_2_1, $mempty_6_4) {
   $__num = \func_num_args();
-  $__res = ((((((($Comonad0_2_1)['Extend0'])(null))['Functor0'])(null))['map'])(function($f_8 = null) use ($mempty_6_4) {
+  $__res = (((((($Comonad0_2_1)['Extend0'])(null))['Functor0'])(null))['map'])(function($f_8 = null) use ($mempty_6_4) {
   $__num = \func_num_args();
   $__res = ($f_8)($mempty_6_4);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))($v_7);
+}, $v_7);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -309,12 +344,17 @@ $GLOBALS['Control_Comonad_Env_Class_comonadAskTracedT'] = function($dictComonadA
 };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Comonad_Env_Class_comonadAskTracedT'] = __NAMESPACE__ . '\\majControl_majComonad_majEnv_majClass_comonadmajAskmajTracedmajT';
 
 // Control_Comonad_Env_Class_comonadEnvTracedT
-$GLOBALS['Control_Comonad_Env_Class_comonadEnvTracedT'] = function($dictComonadEnv_0 = null) {
+function majControl_majComonad_majEnv_majClass_comonadmajEnvmajTracedmajT($dictComonadEnv_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majComonad_majEnv_majClass_comonadmajEnvmajTracedmajT';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $comonadAskTracedT1_1_0 = ($GLOBALS['Control_Comonad_Env_Class_comonadAskTracedT'])((($dictComonadEnv_0)['ComonadAsk0'])(null));
   $__res = function($dictMonoid_2 = null) use ($comonadAskTracedT1_1_0, $dictComonadEnv_0) {
   $__num = \func_num_args();
@@ -325,7 +365,7 @@ $GLOBALS['Control_Comonad_Env_Class_comonadEnvTracedT'] = function($dictComonadE
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictComonadEnv_0)['local'])($f_4))($v_5);
+  $__res = (($dictComonadEnv_0)['local'])($f_4, $v_5);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -344,6 +384,7 @@ $GLOBALS['Control_Comonad_Env_Class_comonadEnvTracedT'] = function($dictComonadE
 };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Comonad_Env_Class_comonadEnvTracedT'] = __NAMESPACE__ . '\\majControl_majComonad_majEnv_majClass_comonadmajEnvmajTracedmajT';
 

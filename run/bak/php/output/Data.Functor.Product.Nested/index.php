@@ -99,237 +99,285 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_Functor_Product_Nested_product9
-$GLOBALS['Data_Functor_Product_Nested_product9'] = (function() {
-  $__fn = function($a_0 = null, $b_1 = null, $c_2 = null, $d_3 = null, $e_4 = null, $f_5 = null, $g_6 = null, $h_7 = null, $i_8 = null) use (&$__fn) {
+function majData_majFunctor_majProduct_majNested_product9($a_0, $b_1 = null, $c_2 = null, $d_3 = null, $e_4 = null, $f_5 = null, $g_6 = null, $h_7 = null, $i_8 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majProduct_majNested_product9';
   if ($__num < 9) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 9);
   }
-  $__res = new Phpurs_Data2("Tuple", $a_0, new Phpurs_Data2("Tuple", $b_1, new Phpurs_Data2("Tuple", $c_2, new Phpurs_Data2("Tuple", $d_3, new Phpurs_Data2("Tuple", $e_4, new Phpurs_Data2("Tuple", $f_5, new Phpurs_Data2("Tuple", $g_6, new Phpurs_Data2("Tuple", $h_7, new Phpurs_Data2("Tuple", $i_8, $GLOBALS['Data_Unit_unit'])))))))));
+  $__res = new \Data\Tuple\Data_Tuple_Tuple($a_0, new \Data\Tuple\Data_Tuple_Tuple($b_1, new \Data\Tuple\Data_Tuple_Tuple($c_2, new \Data\Tuple\Data_Tuple_Tuple($d_3, new \Data\Tuple\Data_Tuple_Tuple($e_4, new \Data\Tuple\Data_Tuple_Tuple($f_5, new \Data\Tuple\Data_Tuple_Tuple($g_6, new \Data\Tuple\Data_Tuple_Tuple($h_7, new \Data\Tuple\Data_Tuple_Tuple($i_8, $GLOBALS['Data_Unit_unit'])))))))));
   goto __end;;
   __end:
-  return $__num > 9 ? $__res(...\array_slice(\func_get_args(), 9)) : $__res;
-  };
-  return $__fn;
-})();
+  return 9 < $__num ? $__res(...\array_slice(\func_get_args(), 9)) : $__res;
+}
+$GLOBALS['Data_Functor_Product_Nested_product9'] = __NAMESPACE__ . '\\majData_majFunctor_majProduct_majNested_product9';
 
 // Data_Functor_Product_Nested_product8
-$GLOBALS['Data_Functor_Product_Nested_product8'] = (function() {
-  $__fn = function($a_0 = null, $b_1 = null, $c_2 = null, $d_3 = null, $e_4 = null, $f_5 = null, $g_6 = null, $h_7 = null) use (&$__fn) {
+function majData_majFunctor_majProduct_majNested_product8($a_0, $b_1 = null, $c_2 = null, $d_3 = null, $e_4 = null, $f_5 = null, $g_6 = null, $h_7 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majProduct_majNested_product8';
   if ($__num < 8) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 8);
   }
-  $__res = new Phpurs_Data2("Tuple", $a_0, new Phpurs_Data2("Tuple", $b_1, new Phpurs_Data2("Tuple", $c_2, new Phpurs_Data2("Tuple", $d_3, new Phpurs_Data2("Tuple", $e_4, new Phpurs_Data2("Tuple", $f_5, new Phpurs_Data2("Tuple", $g_6, new Phpurs_Data2("Tuple", $h_7, $GLOBALS['Data_Unit_unit']))))))));
+  $__res = new \Data\Tuple\Data_Tuple_Tuple($a_0, new \Data\Tuple\Data_Tuple_Tuple($b_1, new \Data\Tuple\Data_Tuple_Tuple($c_2, new \Data\Tuple\Data_Tuple_Tuple($d_3, new \Data\Tuple\Data_Tuple_Tuple($e_4, new \Data\Tuple\Data_Tuple_Tuple($f_5, new \Data\Tuple\Data_Tuple_Tuple($g_6, new \Data\Tuple\Data_Tuple_Tuple($h_7, $GLOBALS['Data_Unit_unit']))))))));
   goto __end;;
   __end:
-  return $__num > 8 ? $__res(...\array_slice(\func_get_args(), 8)) : $__res;
-  };
-  return $__fn;
-})();
+  return 8 < $__num ? $__res(...\array_slice(\func_get_args(), 8)) : $__res;
+}
+$GLOBALS['Data_Functor_Product_Nested_product8'] = __NAMESPACE__ . '\\majData_majFunctor_majProduct_majNested_product8';
 
 // Data_Functor_Product_Nested_product7
-$GLOBALS['Data_Functor_Product_Nested_product7'] = (function() {
-  $__fn = function($a_0 = null, $b_1 = null, $c_2 = null, $d_3 = null, $e_4 = null, $f_5 = null, $g_6 = null) use (&$__fn) {
+function majData_majFunctor_majProduct_majNested_product7($a_0, $b_1 = null, $c_2 = null, $d_3 = null, $e_4 = null, $f_5 = null, $g_6 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majProduct_majNested_product7';
   if ($__num < 7) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 7);
   }
-  $__res = new Phpurs_Data2("Tuple", $a_0, new Phpurs_Data2("Tuple", $b_1, new Phpurs_Data2("Tuple", $c_2, new Phpurs_Data2("Tuple", $d_3, new Phpurs_Data2("Tuple", $e_4, new Phpurs_Data2("Tuple", $f_5, new Phpurs_Data2("Tuple", $g_6, $GLOBALS['Data_Unit_unit'])))))));
+  $__res = new \Data\Tuple\Data_Tuple_Tuple($a_0, new \Data\Tuple\Data_Tuple_Tuple($b_1, new \Data\Tuple\Data_Tuple_Tuple($c_2, new \Data\Tuple\Data_Tuple_Tuple($d_3, new \Data\Tuple\Data_Tuple_Tuple($e_4, new \Data\Tuple\Data_Tuple_Tuple($f_5, new \Data\Tuple\Data_Tuple_Tuple($g_6, $GLOBALS['Data_Unit_unit'])))))));
   goto __end;;
   __end:
-  return $__num > 7 ? $__res(...\array_slice(\func_get_args(), 7)) : $__res;
-  };
-  return $__fn;
-})();
+  return 7 < $__num ? $__res(...\array_slice(\func_get_args(), 7)) : $__res;
+}
+$GLOBALS['Data_Functor_Product_Nested_product7'] = __NAMESPACE__ . '\\majData_majFunctor_majProduct_majNested_product7';
 
 // Data_Functor_Product_Nested_product6
-$GLOBALS['Data_Functor_Product_Nested_product6'] = (function() {
-  $__fn = function($a_0 = null, $b_1 = null, $c_2 = null, $d_3 = null, $e_4 = null, $f_5 = null) use (&$__fn) {
+function majData_majFunctor_majProduct_majNested_product6($a_0, $b_1 = null, $c_2 = null, $d_3 = null, $e_4 = null, $f_5 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majProduct_majNested_product6';
   if ($__num < 6) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 6);
   }
-  $__res = new Phpurs_Data2("Tuple", $a_0, new Phpurs_Data2("Tuple", $b_1, new Phpurs_Data2("Tuple", $c_2, new Phpurs_Data2("Tuple", $d_3, new Phpurs_Data2("Tuple", $e_4, new Phpurs_Data2("Tuple", $f_5, $GLOBALS['Data_Unit_unit']))))));
+  $__res = new \Data\Tuple\Data_Tuple_Tuple($a_0, new \Data\Tuple\Data_Tuple_Tuple($b_1, new \Data\Tuple\Data_Tuple_Tuple($c_2, new \Data\Tuple\Data_Tuple_Tuple($d_3, new \Data\Tuple\Data_Tuple_Tuple($e_4, new \Data\Tuple\Data_Tuple_Tuple($f_5, $GLOBALS['Data_Unit_unit']))))));
   goto __end;;
   __end:
-  return $__num > 6 ? $__res(...\array_slice(\func_get_args(), 6)) : $__res;
-  };
-  return $__fn;
-})();
+  return 6 < $__num ? $__res(...\array_slice(\func_get_args(), 6)) : $__res;
+}
+$GLOBALS['Data_Functor_Product_Nested_product6'] = __NAMESPACE__ . '\\majData_majFunctor_majProduct_majNested_product6';
 
 // Data_Functor_Product_Nested_product5
-$GLOBALS['Data_Functor_Product_Nested_product5'] = (function() {
-  $__fn = function($a_0 = null, $b_1 = null, $c_2 = null, $d_3 = null, $e_4 = null) use (&$__fn) {
+function majData_majFunctor_majProduct_majNested_product5($a_0, $b_1 = null, $c_2 = null, $d_3 = null, $e_4 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majProduct_majNested_product5';
   if ($__num < 5) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 5);
   }
-  $__res = new Phpurs_Data2("Tuple", $a_0, new Phpurs_Data2("Tuple", $b_1, new Phpurs_Data2("Tuple", $c_2, new Phpurs_Data2("Tuple", $d_3, new Phpurs_Data2("Tuple", $e_4, $GLOBALS['Data_Unit_unit'])))));
+  $__res = new \Data\Tuple\Data_Tuple_Tuple($a_0, new \Data\Tuple\Data_Tuple_Tuple($b_1, new \Data\Tuple\Data_Tuple_Tuple($c_2, new \Data\Tuple\Data_Tuple_Tuple($d_3, new \Data\Tuple\Data_Tuple_Tuple($e_4, $GLOBALS['Data_Unit_unit'])))));
   goto __end;;
   __end:
-  return $__num > 5 ? $__res(...\array_slice(\func_get_args(), 5)) : $__res;
-  };
-  return $__fn;
-})();
+  return 5 < $__num ? $__res(...\array_slice(\func_get_args(), 5)) : $__res;
+}
+$GLOBALS['Data_Functor_Product_Nested_product5'] = __NAMESPACE__ . '\\majData_majFunctor_majProduct_majNested_product5';
 
 // Data_Functor_Product_Nested_product4
-$GLOBALS['Data_Functor_Product_Nested_product4'] = (function() {
-  $__fn = function($a_0 = null, $b_1 = null, $c_2 = null, $d_3 = null) use (&$__fn) {
+function majData_majFunctor_majProduct_majNested_product4($a_0, $b_1 = null, $c_2 = null, $d_3 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majProduct_majNested_product4';
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = new Phpurs_Data2("Tuple", $a_0, new Phpurs_Data2("Tuple", $b_1, new Phpurs_Data2("Tuple", $c_2, new Phpurs_Data2("Tuple", $d_3, $GLOBALS['Data_Unit_unit']))));
+  $__res = new \Data\Tuple\Data_Tuple_Tuple($a_0, new \Data\Tuple\Data_Tuple_Tuple($b_1, new \Data\Tuple\Data_Tuple_Tuple($c_2, new \Data\Tuple\Data_Tuple_Tuple($d_3, $GLOBALS['Data_Unit_unit']))));
   goto __end;;
   __end:
-  return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
-  };
-  return $__fn;
-})();
+  return 4 < $__num ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
+}
+$GLOBALS['Data_Functor_Product_Nested_product4'] = __NAMESPACE__ . '\\majData_majFunctor_majProduct_majNested_product4';
 
 // Data_Functor_Product_Nested_product3
-$GLOBALS['Data_Functor_Product_Nested_product3'] = (function() {
-  $__fn = function($a_0 = null, $b_1 = null, $c_2 = null) use (&$__fn) {
+function majData_majFunctor_majProduct_majNested_product3($a_0, $b_1 = null, $c_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majProduct_majNested_product3';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = new Phpurs_Data2("Tuple", $a_0, new Phpurs_Data2("Tuple", $b_1, new Phpurs_Data2("Tuple", $c_2, $GLOBALS['Data_Unit_unit'])));
+  $__res = new \Data\Tuple\Data_Tuple_Tuple($a_0, new \Data\Tuple\Data_Tuple_Tuple($b_1, new \Data\Tuple\Data_Tuple_Tuple($c_2, $GLOBALS['Data_Unit_unit'])));
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_Functor_Product_Nested_product3'] = __NAMESPACE__ . '\\majData_majFunctor_majProduct_majNested_product3';
 
 // Data_Functor_Product_Nested_product2
-$GLOBALS['Data_Functor_Product_Nested_product2'] = (function() {
-  $__fn = function($a_0 = null, $b_1 = null) use (&$__fn) {
+function majData_majFunctor_majProduct_majNested_product2($a_0, $b_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majProduct_majNested_product2';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", $a_0, new Phpurs_Data2("Tuple", $b_1, $GLOBALS['Data_Unit_unit']));
+  $__res = new \Data\Tuple\Data_Tuple_Tuple($a_0, new \Data\Tuple\Data_Tuple_Tuple($b_1, $GLOBALS['Data_Unit_unit']));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Functor_Product_Nested_product2'] = __NAMESPACE__ . '\\majData_majFunctor_majProduct_majNested_product2';
 
 // Data_Functor_Product_Nested_product10
-$GLOBALS['Data_Functor_Product_Nested_product10'] = (function() {
-  $__fn = function($a_0 = null, $b_1 = null, $c_2 = null, $d_3 = null, $e_4 = null, $f_5 = null, $g_6 = null, $h_7 = null, $i_8 = null, $j_9 = null) use (&$__fn) {
+function majData_majFunctor_majProduct_majNested_product10($a_0, $b_1 = null, $c_2 = null, $d_3 = null, $e_4 = null, $f_5 = null, $g_6 = null, $h_7 = null, $i_8 = null, $j_9 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majProduct_majNested_product10';
   if ($__num < 10) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 10);
   }
-  $__res = new Phpurs_Data2("Tuple", $a_0, new Phpurs_Data2("Tuple", $b_1, new Phpurs_Data2("Tuple", $c_2, new Phpurs_Data2("Tuple", $d_3, new Phpurs_Data2("Tuple", $e_4, new Phpurs_Data2("Tuple", $f_5, new Phpurs_Data2("Tuple", $g_6, new Phpurs_Data2("Tuple", $h_7, new Phpurs_Data2("Tuple", $i_8, new Phpurs_Data2("Tuple", $j_9, $GLOBALS['Data_Unit_unit']))))))))));
+  $__res = new \Data\Tuple\Data_Tuple_Tuple($a_0, new \Data\Tuple\Data_Tuple_Tuple($b_1, new \Data\Tuple\Data_Tuple_Tuple($c_2, new \Data\Tuple\Data_Tuple_Tuple($d_3, new \Data\Tuple\Data_Tuple_Tuple($e_4, new \Data\Tuple\Data_Tuple_Tuple($f_5, new \Data\Tuple\Data_Tuple_Tuple($g_6, new \Data\Tuple\Data_Tuple_Tuple($h_7, new \Data\Tuple\Data_Tuple_Tuple($i_8, new \Data\Tuple\Data_Tuple_Tuple($j_9, $GLOBALS['Data_Unit_unit']))))))))));
   goto __end;;
   __end:
-  return $__num > 10 ? $__res(...\array_slice(\func_get_args(), 10)) : $__res;
-  };
-  return $__fn;
-})();
+  return 10 < $__num ? $__res(...\array_slice(\func_get_args(), 10)) : $__res;
+}
+$GLOBALS['Data_Functor_Product_Nested_product10'] = __NAMESPACE__ . '\\majData_majFunctor_majProduct_majNested_product10';
 
 // Data_Functor_Product_Nested_product1
-$GLOBALS['Data_Functor_Product_Nested_product1'] = function($a_0 = null) {
+function majData_majFunctor_majProduct_majNested_product1($a_0) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Tuple", $a_0, $GLOBALS['Data_Unit_unit']);
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majProduct_majNested_product1';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = new \Data\Tuple\Data_Tuple_Tuple($a_0, $GLOBALS['Data_Unit_unit']);
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_Product_Nested_product1'] = __NAMESPACE__ . '\\majData_majFunctor_majProduct_majNested_product1';
 
 // Data_Functor_Product_Nested_get9
-$GLOBALS['Data_Functor_Product_Nested_get9'] = function($v_0 = null) {
+function majData_majFunctor_majProduct_majNested_get9($v_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majProduct_majNested_get9';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ((((((((($v_0)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'};
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_Product_Nested_get9'] = __NAMESPACE__ . '\\majData_majFunctor_majProduct_majNested_get9';
 
 // Data_Functor_Product_Nested_get8
-$GLOBALS['Data_Functor_Product_Nested_get8'] = function($v_0 = null) {
+function majData_majFunctor_majProduct_majNested_get8($v_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majProduct_majNested_get8';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = (((((((($v_0)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'};
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_Product_Nested_get8'] = __NAMESPACE__ . '\\majData_majFunctor_majProduct_majNested_get8';
 
 // Data_Functor_Product_Nested_get7
-$GLOBALS['Data_Functor_Product_Nested_get7'] = function($v_0 = null) {
+function majData_majFunctor_majProduct_majNested_get7($v_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majProduct_majNested_get7';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ((((((($v_0)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'};
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_Product_Nested_get7'] = __NAMESPACE__ . '\\majData_majFunctor_majProduct_majNested_get7';
 
 // Data_Functor_Product_Nested_get6
-$GLOBALS['Data_Functor_Product_Nested_get6'] = function($v_0 = null) {
+function majData_majFunctor_majProduct_majNested_get6($v_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majProduct_majNested_get6';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = (((((($v_0)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'};
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_Product_Nested_get6'] = __NAMESPACE__ . '\\majData_majFunctor_majProduct_majNested_get6';
 
 // Data_Functor_Product_Nested_get5
-$GLOBALS['Data_Functor_Product_Nested_get5'] = function($v_0 = null) {
+function majData_majFunctor_majProduct_majNested_get5($v_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majProduct_majNested_get5';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ((((($v_0)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'};
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_Product_Nested_get5'] = __NAMESPACE__ . '\\majData_majFunctor_majProduct_majNested_get5';
 
 // Data_Functor_Product_Nested_get4
-$GLOBALS['Data_Functor_Product_Nested_get4'] = function($v_0 = null) {
+function majData_majFunctor_majProduct_majNested_get4($v_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majProduct_majNested_get4';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = (((($v_0)->{'value1'})->{'value1'})->{'value1'})->{'value0'};
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_Product_Nested_get4'] = __NAMESPACE__ . '\\majData_majFunctor_majProduct_majNested_get4';
 
 // Data_Functor_Product_Nested_get3
-$GLOBALS['Data_Functor_Product_Nested_get3'] = function($v_0 = null) {
+function majData_majFunctor_majProduct_majNested_get3($v_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majProduct_majNested_get3';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ((($v_0)->{'value1'})->{'value1'})->{'value0'};
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_Product_Nested_get3'] = __NAMESPACE__ . '\\majData_majFunctor_majProduct_majNested_get3';
 
 // Data_Functor_Product_Nested_get2
-$GLOBALS['Data_Functor_Product_Nested_get2'] = function($v_0 = null) {
+function majData_majFunctor_majProduct_majNested_get2($v_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majProduct_majNested_get2';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = (($v_0)->{'value1'})->{'value0'};
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_Product_Nested_get2'] = __NAMESPACE__ . '\\majData_majFunctor_majProduct_majNested_get2';
 
 // Data_Functor_Product_Nested_get10
-$GLOBALS['Data_Functor_Product_Nested_get10'] = function($v_0 = null) {
+function majData_majFunctor_majProduct_majNested_get10($v_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majProduct_majNested_get10';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = (((((((((($v_0)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'};
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_Product_Nested_get10'] = __NAMESPACE__ . '\\majData_majFunctor_majProduct_majNested_get10';
 
 // Data_Functor_Product_Nested_get1
-$GLOBALS['Data_Functor_Product_Nested_get1'] = function($v_0 = null) {
+function majData_majFunctor_majProduct_majNested_get1($v_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majProduct_majNested_get1';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($v_0)->{'value0'};
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_Product_Nested_get1'] = __NAMESPACE__ . '\\majData_majFunctor_majProduct_majNested_get1';
 

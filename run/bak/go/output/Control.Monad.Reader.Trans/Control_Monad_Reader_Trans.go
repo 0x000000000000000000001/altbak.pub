@@ -387,7 +387,7 @@ _ = functorReaderT1_2_1
 return gopurs_runtime.RecordDict3("Functor0", "collect", "distribute", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return functorReaderT1_2_1
 }), gopurs_runtime.Func2(func(dictFunctor_3 gopurs_runtime.Value, f_4 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_5_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(Get_distributiveReaderT(), dictDistributive_0), "distribute"), dictFunctor_3)
+__local_var_5_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Call_distributiveReaderT(dictDistributive_0), "distribute"), dictFunctor_3)
 _ = __local_var_5_3
 __local_var_6_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctor_3, "map"), f_4)
 _ = __local_var_6_4
@@ -539,7 +539,7 @@ return __local_var_7_7
 })
 }))
 _ = applicativeReaderT1_3_2
-bindReaderT1_4_8 := gopurs_runtime.Apply(Get_bindReaderT(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Bind1"), gopurs_runtime.Value{}))
+bindReaderT1_4_8 := Call_bindReaderT(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Bind1"), gopurs_runtime.Value{}))
 _ = bindReaderT1_4_8
 return gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return applicativeReaderT1_3_2
@@ -551,7 +551,7 @@ return bindReaderT1_4_8
 func Call_monadAskReaderT(dictMonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
-monadReaderT1_1_0 := gopurs_runtime.Apply(Get_monadReaderT(), dictMonad_0)
+monadReaderT1_1_0 := Call_monadReaderT(dictMonad_0)
 _ = monadReaderT1_1_0
 return gopurs_runtime.RecordDict2("Monad0", "ask", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return monadReaderT1_1_0
@@ -561,7 +561,7 @@ return monadReaderT1_1_0
 func Call_monadReaderReaderT(dictMonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
-monadReaderT1_1_0 := gopurs_runtime.Apply(Get_monadReaderT(), dictMonad_0)
+monadReaderT1_1_0 := Call_monadReaderT(dictMonad_0)
 _ = monadReaderT1_1_0
 monadAskReaderT1_2_1 := gopurs_runtime.RecordDict2("Monad0", "ask", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return monadReaderT1_1_0
@@ -575,7 +575,7 @@ return monadAskReaderT1_2_1
 func Call_monadContReaderT(dictMonadCont_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadCont_0 gopurs_runtime.Value = dictMonadCont_0_loop
 _ = dictMonadCont_0
-monadReaderT1_1_0 := gopurs_runtime.Apply(Get_monadReaderT(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadCont_0, "Monad0"), gopurs_runtime.Value{}))
+monadReaderT1_1_0 := Call_monadReaderT(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadCont_0, "Monad0"), gopurs_runtime.Value{}))
 _ = monadReaderT1_1_0
 return gopurs_runtime.RecordDict2("Monad0", "callCC", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return monadReaderT1_1_0
@@ -597,7 +597,7 @@ var dictMonadEffect_0 gopurs_runtime.Value = dictMonadEffect_0_loop
 _ = dictMonadEffect_0
 Monad0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "Monad0"), gopurs_runtime.Value{})
 _ = Monad0_1_0
-monadReaderT1_2_1 := gopurs_runtime.Apply(Get_monadReaderT(), Monad0_1_0)
+monadReaderT1_2_1 := Call_monadReaderT(Monad0_1_0)
 _ = monadReaderT1_2_1
 __local_var_3_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_monadTransReaderT(), "lift"), Monad0_1_0)
 _ = __local_var_3_2
@@ -617,7 +617,7 @@ __local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Bi
 _ = __local_var_2_1
 pure_3_2 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Applicative0"), gopurs_runtime.Value{}), "pure")
 _ = pure_3_2
-monadReaderT1_4_3 := gopurs_runtime.Apply(Get_monadReaderT(), Monad0_1_0)
+monadReaderT1_4_3 := Call_monadReaderT(Monad0_1_0)
 _ = monadReaderT1_4_3
 return gopurs_runtime.RecordDict2("Monad0", "tailRecM", gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return monadReaderT1_4_3
@@ -633,7 +633,7 @@ var dictMonadState_0 gopurs_runtime.Value = dictMonadState_0_loop
 _ = dictMonadState_0
 Monad0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadState_0, "Monad0"), gopurs_runtime.Value{})
 _ = Monad0_1_0
-monadReaderT1_2_1 := gopurs_runtime.Apply(Get_monadReaderT(), Monad0_1_0)
+monadReaderT1_2_1 := Call_monadReaderT(Monad0_1_0)
 _ = monadReaderT1_2_1
 __local_var_3_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_monadTransReaderT(), "lift"), Monad0_1_0)
 _ = __local_var_3_2
@@ -651,7 +651,7 @@ Monad1_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadTell_0, "Mo
 _ = Monad1_1_0
 Semigroup0_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadTell_0, "Semigroup0"), gopurs_runtime.Value{})
 _ = Semigroup0_2_1
-monadReaderT1_3_2 := gopurs_runtime.Apply(Get_monadReaderT(), Monad1_1_0)
+monadReaderT1_3_2 := Call_monadReaderT(Monad1_1_0)
 _ = monadReaderT1_3_2
 __local_var_4_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_monadTransReaderT(), "lift"), Monad1_1_0)
 _ = __local_var_4_3
@@ -669,7 +669,7 @@ var dictMonadWriter_0 gopurs_runtime.Value = dictMonadWriter_0_loop
 _ = dictMonadWriter_0
 Monoid0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadWriter_0, "Monoid0"), gopurs_runtime.Value{})
 _ = Monoid0_1_0
-monadTellReaderT1_2_1 := gopurs_runtime.Apply(Get_monadTellReaderT(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadWriter_0, "MonadTell1"), gopurs_runtime.Value{}))
+monadTellReaderT1_2_1 := Call_monadTellReaderT(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadWriter_0, "MonadTell1"), gopurs_runtime.Value{}))
 _ = monadTellReaderT1_2_1
 return gopurs_runtime.RecordDict4("MonadTell1", "Monoid0", "listen", "pass", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return monadTellReaderT1_2_1
@@ -687,7 +687,7 @@ var dictMonadThrow_0 gopurs_runtime.Value = dictMonadThrow_0_loop
 _ = dictMonadThrow_0
 Monad0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadThrow_0, "Monad0"), gopurs_runtime.Value{})
 _ = Monad0_1_0
-monadReaderT1_2_1 := gopurs_runtime.Apply(Get_monadReaderT(), Monad0_1_0)
+monadReaderT1_2_1 := Call_monadReaderT(Monad0_1_0)
 _ = monadReaderT1_2_1
 __local_var_3_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_monadTransReaderT(), "lift"), Monad0_1_0)
 _ = __local_var_3_2
@@ -701,7 +701,7 @@ return gopurs_runtime.Apply(__local_var_3_2, gopurs_runtime.Apply(gopurs_runtime
 func Call_monadErrorReaderT(dictMonadError_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadError_0 gopurs_runtime.Value = dictMonadError_0_loop
 _ = dictMonadError_0
-monadThrowReaderT1_1_0 := gopurs_runtime.Apply(Get_monadThrowReaderT(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadError_0, "MonadThrow0"), gopurs_runtime.Value{}))
+monadThrowReaderT1_1_0 := Call_monadThrowReaderT(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadError_0, "MonadThrow0"), gopurs_runtime.Value{}))
 _ = monadThrowReaderT1_1_0
 return gopurs_runtime.RecordDict2("MonadThrow0", "catchError", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return monadThrowReaderT1_1_0
@@ -717,7 +717,7 @@ var dictMonadST_0 gopurs_runtime.Value = dictMonadST_0_loop
 _ = dictMonadST_0
 Monad0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadST_0, "Monad0"), gopurs_runtime.Value{})
 _ = Monad0_1_0
-monadReaderT1_2_1 := gopurs_runtime.Apply(Get_monadReaderT(), Monad0_1_0)
+monadReaderT1_2_1 := Call_monadReaderT(Monad0_1_0)
 _ = monadReaderT1_2_1
 __local_var_3_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_monadTransReaderT(), "lift"), Monad0_1_0)
 _ = __local_var_3_2
@@ -877,9 +877,9 @@ return plusReaderT1_6_10
 func Call_monadPlusReaderT(dictMonadPlus_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadPlus_0 gopurs_runtime.Value = dictMonadPlus_0_loop
 _ = dictMonadPlus_0
-monadReaderT1_1_0 := gopurs_runtime.Apply(Get_monadReaderT(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadPlus_0, "Monad0"), gopurs_runtime.Value{}))
+monadReaderT1_1_0 := Call_monadReaderT(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadPlus_0, "Monad0"), gopurs_runtime.Value{}))
 _ = monadReaderT1_1_0
-alternativeReaderT1_2_1 := gopurs_runtime.Apply(Get_alternativeReaderT(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadPlus_0, "Alternative1"), gopurs_runtime.Value{}))
+alternativeReaderT1_2_1 := Call_alternativeReaderT(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadPlus_0, "Alternative1"), gopurs_runtime.Value{}))
 _ = alternativeReaderT1_2_1
 return gopurs_runtime.RecordDict2("Alternative1", "Monad0", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return alternativeReaderT1_2_1

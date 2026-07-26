@@ -105,21 +105,33 @@ return $exports;
 $GLOBALS['Partial__crashWith'] = $ffi_Partial['_crashWith'] ?? new class { public function __invoke(...$args) { return $this; } };
 
 
+
+
 // Partial_crashWith
-$GLOBALS['Partial_crashWith'] = function($_dollar__unused_0 = null) {
+function majPartial_crashmajWith($_dollar__unused_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majPartial_crashmajWith';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $GLOBALS['Partial__crashWith'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Partial_crashWith'] = __NAMESPACE__ . '\\majPartial_crashmajWith';
 
 // Partial_crash
-$GLOBALS['Partial_crash'] = function($_dollar__unused_0 = null) {
+function majPartial_crash($_dollar__unused_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majPartial_crash';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($GLOBALS['Partial__crashWith'])("Partial.crash: partial function");
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Partial_crash'] = __NAMESPACE__ . '\\majPartial_crash';
 

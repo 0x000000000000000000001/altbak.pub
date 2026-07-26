@@ -35,7 +35,7 @@ var once_area sync.Once
 func Get_area() gopurs_runtime.Value {
 	once_area.Do(func() {
 		cache_area = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_area(v_0_box)
+return gopurs_runtime.Int(Call_area(v_0_box))
 })
 	})
 	return cache_area
@@ -52,7 +52,7 @@ type Constructor_Rect struct {
 }
 
 
-func Call_area(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_area(v_0_loop gopurs_runtime.Value) int64 {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 var __t0 gopurs_runtime.Value
@@ -76,7 +76,7 @@ goto end_branch_0
 __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_0:
-return __t0
+return __t0.IntVal
 }
 
 

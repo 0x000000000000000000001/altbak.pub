@@ -97,64 +97,85 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_Monoid_Generic_genericMonoidNoArguments
-$GLOBALS['Data_Monoid_Generic_genericMonoidNoArguments'] = ["genericMempty__prime__" => new Phpurs_Data0("NoArguments")];
+$GLOBALS['Data_Monoid_Generic_genericMonoidNoArguments'] = ["genericMempty__prime__" => new \Data\Generic\Rep\Data_Generic_Rep_NoArguments()];
 
 // Data_Monoid_Generic_genericMonoidArgument
-$GLOBALS['Data_Monoid_Generic_genericMonoidArgument'] = function($dictMonoid_0 = null) {
+function majData_majMonoid_majGeneric_genericmajMonoidmajArgument($dictMonoid_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMonoid_majGeneric_genericmajMonoidmajArgument';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["genericMempty__prime__" => ($dictMonoid_0)['mempty']];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Monoid_Generic_genericMonoidArgument'] = __NAMESPACE__ . '\\majData_majMonoid_majGeneric_genericmajMonoidmajArgument';
 
 // Data_Monoid_Generic_genericMempty'
-$GLOBALS['Data_Monoid_Generic_genericMempty__prime__'] = function($dict_0 = null) {
+function majData_majMonoid_majGeneric_genericmajMempty__prime__($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMonoid_majGeneric_genericmajMempty__prime__';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['genericMempty__prime__'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Monoid_Generic_genericMempty__prime__'] = __NAMESPACE__ . '\\majData_majMonoid_majGeneric_genericmajMempty__prime__';
 
 // Data_Monoid_Generic_genericMonoidConstructor
-$GLOBALS['Data_Monoid_Generic_genericMonoidConstructor'] = function($dictGenericMonoid_0 = null) {
+function majData_majMonoid_majGeneric_genericmajMonoidmajConstructor($dictGenericMonoid_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMonoid_majGeneric_genericmajMonoidmajConstructor';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["genericMempty__prime__" => ($dictGenericMonoid_0)['genericMempty__prime__']];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Monoid_Generic_genericMonoidConstructor'] = __NAMESPACE__ . '\\majData_majMonoid_majGeneric_genericmajMonoidmajConstructor';
 
 // Data_Monoid_Generic_genericMonoidProduct
-$GLOBALS['Data_Monoid_Generic_genericMonoidProduct'] = function($dictGenericMonoid_0 = null) {
+function majData_majMonoid_majGeneric_genericmajMonoidmajProduct($dictGenericMonoid_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMonoid_majGeneric_genericmajMonoidmajProduct';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $genericMempty_prime1_1_0 = ($dictGenericMonoid_0)['genericMempty__prime__'];
   $__res = function($dictGenericMonoid1_2 = null) use ($genericMempty_prime1_1_0) {
   $__num = \func_num_args();
-  $__res = ["genericMempty__prime__" => new Phpurs_Data2("Product", $genericMempty_prime1_1_0, ($dictGenericMonoid1_2)['genericMempty__prime__'])];
+  $__res = ["genericMempty__prime__" => new \Data\Generic\Rep\Data_Generic_Rep_Product($genericMempty_prime1_1_0, ($dictGenericMonoid1_2)['genericMempty__prime__'])];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Monoid_Generic_genericMonoidProduct'] = __NAMESPACE__ . '\\majData_majMonoid_majGeneric_genericmajMonoidmajProduct';
 
 // Data_Monoid_Generic_genericMempty
-$GLOBALS['Data_Monoid_Generic_genericMempty'] = (function() {
-  $__fn = function($dictGeneric_0 = null, $dictGenericMonoid_1 = null) use (&$__fn) {
+function majData_majMonoid_majGeneric_genericmajMempty($dictGeneric_0, $dictGenericMonoid_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMonoid_majGeneric_genericmajMempty';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__res = (($dictGeneric_0)['to'])(($dictGenericMonoid_1)['genericMempty__prime__']);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Monoid_Generic_genericMempty'] = __NAMESPACE__ . '\\majData_majMonoid_majGeneric_genericmajMempty';
 

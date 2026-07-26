@@ -107,40 +107,56 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_Monoid_Dual_Dual
-$GLOBALS['Data_Monoid_Dual_Dual'] = function($x_0 = null) {
+function majData_majMonoid_majDual_majDual($x_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMonoid_majDual_majDual';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $x_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Monoid_Dual_Dual'] = __NAMESPACE__ . '\\majData_majMonoid_majDual_majDual';
 
 // Data_Monoid_Dual_showDual
-$GLOBALS['Data_Monoid_Dual_showDual'] = function($dictShow_0 = null) {
+function majData_majMonoid_majDual_showmajDual($dictShow_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMonoid_majDual_showmajDual';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Dual "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1)))(")"));
+  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Dual ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1), ")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Monoid_Dual_showDual'] = __NAMESPACE__ . '\\majData_majMonoid_majDual_showmajDual';
 
 // Data_Monoid_Dual_semigroupDual
-$GLOBALS['Data_Monoid_Dual_semigroupDual'] = function($dictSemigroup_0 = null) {
+function majData_majMonoid_majDual_semigroupmajDual($dictSemigroup_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMonoid_majDual_semigroupmajDual';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["append" => (function() use ($dictSemigroup_0) {
   $__fn = function($v_1 = null, $v1_2 = null) use ($dictSemigroup_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictSemigroup_0)['append'])($v1_2))($v_1);
+  $__res = (($dictSemigroup_0)['append'])($v1_2, $v_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -149,21 +165,31 @@ $GLOBALS['Data_Monoid_Dual_semigroupDual'] = function($dictSemigroup_0 = null) {
 })()];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Monoid_Dual_semigroupDual'] = __NAMESPACE__ . '\\majData_majMonoid_majDual_semigroupmajDual';
 
 // Data_Monoid_Dual_ordDual
-$GLOBALS['Data_Monoid_Dual_ordDual'] = function($dictOrd_0 = null) {
+function majData_majMonoid_majDual_ordmajDual($dictOrd_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMonoid_majDual_ordmajDual';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictOrd_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Monoid_Dual_ordDual'] = __NAMESPACE__ . '\\majData_majMonoid_majDual_ordmajDual';
 
 // Data_Monoid_Dual_monoidDual
-$GLOBALS['Data_Monoid_Dual_monoidDual'] = function($dictMonoid_0 = null) {
+function majData_majMonoid_majDual_monoidmajDual($dictMonoid_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMonoid_majDual_monoidmajDual';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__local_var_1_0 = (($dictMonoid_0)['Semigroup0'])(null);
   $semigroupDual1_2_1 = ["append" => (function() use ($__local_var_1_0) {
   $__fn = function($v_2 = null, $v1_3 = null) use ($__local_var_1_0, &$__fn) {
@@ -171,7 +197,7 @@ $GLOBALS['Data_Monoid_Dual_monoidDual'] = function($dictMonoid_0 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($__local_var_1_0)['append'])($v1_3))($v_2);
+  $__res = (($__local_var_1_0)['append'])($v1_3, $v_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -187,8 +213,9 @@ $GLOBALS['Data_Monoid_Dual_monoidDual'] = function($dictMonoid_0 = null) {
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Monoid_Dual_monoidDual'] = __NAMESPACE__ . '\\majData_majMonoid_majDual_monoidmajDual';
 
 // Data_Monoid_Dual_functorDual
 $GLOBALS['Data_Monoid_Dual_functorDual'] = ["map" => (function() {
@@ -206,13 +233,18 @@ $GLOBALS['Data_Monoid_Dual_functorDual'] = ["map" => (function() {
 })()];
 
 // Data_Monoid_Dual_eqDual
-$GLOBALS['Data_Monoid_Dual_eqDual'] = function($dictEq_0 = null) {
+function majData_majMonoid_majDual_eqmajDual($dictEq_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMonoid_majDual_eqmajDual';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictEq_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Monoid_Dual_eqDual'] = __NAMESPACE__ . '\\majData_majMonoid_majDual_eqmajDual';
 
 // Data_Monoid_Dual_eq1Dual
 $GLOBALS['Data_Monoid_Dual_eq1Dual'] = ["eq1" => function($dictEq_0 = null) {
@@ -239,13 +271,18 @@ $GLOBALS['Data_Monoid_Dual_ord1Dual'] = ["compare1" => function($dictOrd_0 = nul
 }];
 
 // Data_Monoid_Dual_boundedDual
-$GLOBALS['Data_Monoid_Dual_boundedDual'] = function($dictBounded_0 = null) {
+function majData_majMonoid_majDual_boundedmajDual($dictBounded_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMonoid_majDual_boundedmajDual';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictBounded_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Monoid_Dual_boundedDual'] = __NAMESPACE__ . '\\majData_majMonoid_majDual_boundedmajDual';
 
 // Data_Monoid_Dual_applyDual
 $GLOBALS['Data_Monoid_Dual_applyDual'] = ["apply" => (function() {

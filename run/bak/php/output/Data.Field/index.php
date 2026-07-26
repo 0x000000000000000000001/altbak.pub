@@ -100,10 +100,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_Field_field
-$GLOBALS['Data_Field_field'] = (function() {
-  $__fn = function($dictEuclideanRing_0 = null, $dictDivisionRing_1 = null) use (&$__fn) {
+function majData_majField_field($dictEuclideanRing_0, $dictDivisionRing_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majField_field';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
@@ -122,8 +124,7 @@ $GLOBALS['Data_Field_field'] = (function() {
 }];
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Field_field'] = __NAMESPACE__ . '\\majData_majField_field';
 

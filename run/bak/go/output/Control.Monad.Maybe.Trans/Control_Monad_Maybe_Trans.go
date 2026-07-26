@@ -357,9 +357,9 @@ func Call_monadMaybeT(dictMonad_0_loop gopurs_runtime.Value) gopurs_runtime.Valu
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
 return gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_applicativeMaybeT(), dictMonad_0)
+return Call_applicativeMaybeT(dictMonad_0)
 }), gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_bindMaybeT(), dictMonad_0)
+return Call_bindMaybeT(dictMonad_0)
 }))
 }
 
@@ -367,7 +367,7 @@ func Call_bindMaybeT(dictMonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
 return gopurs_runtime.RecordDict2("Apply0", "bind", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_applyMaybeT(), dictMonad_0)
+return Call_applyMaybeT(dictMonad_0)
 }), gopurs_runtime.Func2(func(v_1 gopurs_runtime.Value, f_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Bind1"), gopurs_runtime.Value{}), "bind"), v_1, gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
@@ -405,14 +405,14 @@ functorMaybeT1_2_1 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func2(fun
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "map"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Maybe.Get_functorMaybe(), "map"), f_2), v_3)
 }))
 _ = functorMaybeT1_2_1
-__local_var_3_2 := gopurs_runtime.Apply(Get_bindMaybeT(), dictMonad_0)
+__local_var_3_2 := Call_bindMaybeT(dictMonad_0)
 _ = __local_var_3_2
 return gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return functorMaybeT1_2_1
 }), gopurs_runtime.Func2(func(f_4 gopurs_runtime.Value, a_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_2, "bind"), f_4, gopurs_runtime.Func(func(f_prime_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_2, "bind"), a_5, gopurs_runtime.Func(func(a_prime_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(Get_applicativeMaybeT(), dictMonad_0), "pure"), gopurs_runtime.Apply(f_prime_6, a_prime_7))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Call_applicativeMaybeT(dictMonad_0), "pure"), gopurs_runtime.Apply(f_prime_6, a_prime_7))
 }))
 }))
 }))
@@ -422,7 +422,7 @@ func Call_applicativeMaybeT(dictMonad_0_loop gopurs_runtime.Value) gopurs_runtim
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
 return gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_applyMaybeT(), dictMonad_0)
+return Call_applyMaybeT(dictMonad_0)
 }), gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{x_1})})
 }))
@@ -431,7 +431,7 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs
 func Call_semigroupMaybeT(dictMonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
-__local_var_1_0 := gopurs_runtime.Apply(Get_applyMaybeT(), dictMonad_0)
+__local_var_1_0 := Call_applyMaybeT(dictMonad_0)
 _ = __local_var_1_0
 return gopurs_runtime.Func(func(dictSemigroup_2 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_3_1 := gopurs_runtime.RecordGet(dictSemigroup_2, "append")
@@ -448,9 +448,9 @@ _ = dictMonadAsk_0
 Monad0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadAsk_0, "Monad0"), gopurs_runtime.Value{})
 _ = Monad0_1_0
 monadMaybeT1_2_1 := gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_applicativeMaybeT(), Monad0_1_0)
+return Call_applicativeMaybeT(Monad0_1_0)
 }), gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_bindMaybeT(), Monad0_1_0)
+return Call_bindMaybeT(Monad0_1_0)
 }))
 _ = monadMaybeT1_2_1
 return gopurs_runtime.RecordDict2("Monad0", "ask", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -461,7 +461,7 @@ return monadMaybeT1_2_1
 func Call_monadReaderMaybeT(dictMonadReader_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadReader_0 gopurs_runtime.Value = dictMonadReader_0_loop
 _ = dictMonadReader_0
-monadAskMaybeT1_1_0 := gopurs_runtime.Apply(Get_monadAskMaybeT(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadReader_0, "MonadAsk0"), gopurs_runtime.Value{}))
+monadAskMaybeT1_1_0 := Call_monadAskMaybeT(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadReader_0, "MonadAsk0"), gopurs_runtime.Value{}))
 _ = monadAskMaybeT1_1_0
 return gopurs_runtime.RecordDict2("MonadAsk0", "local", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return monadAskMaybeT1_1_0
@@ -476,9 +476,9 @@ _ = dictMonadCont_0
 __local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadCont_0, "Monad0"), gopurs_runtime.Value{})
 _ = __local_var_1_0
 monadMaybeT1_2_1 := gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_applicativeMaybeT(), __local_var_1_0)
+return Call_applicativeMaybeT(__local_var_1_0)
 }), gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_bindMaybeT(), __local_var_1_0)
+return Call_bindMaybeT(__local_var_1_0)
 }))
 _ = monadMaybeT1_2_1
 return gopurs_runtime.RecordDict2("Monad0", "callCC", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -498,9 +498,9 @@ _ = dictMonadEffect_0
 Monad0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "Monad0"), gopurs_runtime.Value{})
 _ = Monad0_1_0
 monadMaybeT1_2_1 := gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_applicativeMaybeT(), Monad0_1_0)
+return Call_applicativeMaybeT(Monad0_1_0)
 }), gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_bindMaybeT(), Monad0_1_0)
+return Call_bindMaybeT(Monad0_1_0)
 }))
 _ = monadMaybeT1_2_1
 __local_var_3_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_monadTransMaybeT(), "lift"), Monad0_1_0)
@@ -518,9 +518,9 @@ _ = dictMonadRec_0
 Monad0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadRec_0, "Monad0"), gopurs_runtime.Value{})
 _ = Monad0_1_0
 monadMaybeT1_2_1 := gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_applicativeMaybeT(), Monad0_1_0)
+return Call_applicativeMaybeT(Monad0_1_0)
 }), gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_bindMaybeT(), Monad0_1_0)
+return Call_bindMaybeT(Monad0_1_0)
 }))
 _ = monadMaybeT1_2_1
 return gopurs_runtime.RecordDict2("Monad0", "tailRecM", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -586,9 +586,9 @@ _ = Monad0_1_0
 lift1_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_monadTransMaybeT(), "lift"), Monad0_1_0)
 _ = lift1_2_1
 monadMaybeT1_3_2 := gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_applicativeMaybeT(), Monad0_1_0)
+return Call_applicativeMaybeT(Monad0_1_0)
 }), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_bindMaybeT(), Monad0_1_0)
+return Call_bindMaybeT(Monad0_1_0)
 }))
 _ = monadMaybeT1_3_2
 return gopurs_runtime.RecordDict2("Monad0", "state", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -606,9 +606,9 @@ _ = Monad1_1_0
 Semigroup0_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadTell_0, "Semigroup0"), gopurs_runtime.Value{})
 _ = Semigroup0_2_1
 monadMaybeT1_3_2 := gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_applicativeMaybeT(), Monad1_1_0)
+return Call_applicativeMaybeT(Monad1_1_0)
 }), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_bindMaybeT(), Monad1_1_0)
+return Call_bindMaybeT(Monad1_1_0)
 }))
 _ = monadMaybeT1_3_2
 __local_var_4_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_monadTransMaybeT(), "lift"), Monad1_1_0)
@@ -635,7 +635,7 @@ __local_var_4_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad1_2_1, "Ap
 _ = __local_var_4_3
 Monoid0_5_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadWriter_0, "Monoid0"), gopurs_runtime.Value{})
 _ = Monoid0_5_4
-monadTellMaybeT1_6_5 := gopurs_runtime.Apply(Get_monadTellMaybeT(), MonadTell1_1_0)
+monadTellMaybeT1_6_5 := Call_monadTellMaybeT(MonadTell1_1_0)
 _ = monadTellMaybeT1_6_5
 return gopurs_runtime.RecordDict4("MonadTell1", "Monoid0", "listen", "pass", gopurs_runtime.Func(func(_dollar__unused_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return monadTellMaybeT1_6_5
@@ -685,9 +685,9 @@ _ = Monad0_1_0
 lift1_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_monadTransMaybeT(), "lift"), Monad0_1_0)
 _ = lift1_2_1
 monadMaybeT1_3_2 := gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_applicativeMaybeT(), Monad0_1_0)
+return Call_applicativeMaybeT(Monad0_1_0)
 }), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_bindMaybeT(), Monad0_1_0)
+return Call_bindMaybeT(Monad0_1_0)
 }))
 _ = monadMaybeT1_3_2
 return gopurs_runtime.RecordDict2("Monad0", "throwError", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -700,7 +700,7 @@ return gopurs_runtime.Apply(lift1_2_1, gopurs_runtime.Apply(gopurs_runtime.Recor
 func Call_monadErrorMaybeT(dictMonadError_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadError_0 gopurs_runtime.Value = dictMonadError_0_loop
 _ = dictMonadError_0
-monadThrowMaybeT1_1_0 := gopurs_runtime.Apply(Get_monadThrowMaybeT(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadError_0, "MonadThrow0"), gopurs_runtime.Value{}))
+monadThrowMaybeT1_1_0 := Call_monadThrowMaybeT(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadError_0, "MonadThrow0"), gopurs_runtime.Value{}))
 _ = monadThrowMaybeT1_1_0
 return gopurs_runtime.RecordDict2("MonadThrow0", "catchError", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return monadThrowMaybeT1_1_0
@@ -717,9 +717,9 @@ _ = dictMonadST_0
 Monad0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadST_0, "Monad0"), gopurs_runtime.Value{})
 _ = Monad0_1_0
 monadMaybeT1_2_1 := gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_applicativeMaybeT(), Monad0_1_0)
+return Call_applicativeMaybeT(Monad0_1_0)
 }), gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_bindMaybeT(), Monad0_1_0)
+return Call_bindMaybeT(Monad0_1_0)
 }))
 _ = monadMaybeT1_2_1
 __local_var_3_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_monadTransMaybeT(), "lift"), Monad0_1_0)
@@ -734,14 +734,14 @@ return gopurs_runtime.Apply(__local_var_3_2, gopurs_runtime.Apply(gopurs_runtime
 func Call_monoidMaybeT(dictMonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
-semigroupMaybeT1_1_0 := gopurs_runtime.Apply(Get_semigroupMaybeT(), dictMonad_0)
+semigroupMaybeT1_1_0 := Call_semigroupMaybeT(dictMonad_0)
 _ = semigroupMaybeT1_1_0
 return gopurs_runtime.Func(func(dictMonoid_2 gopurs_runtime.Value) gopurs_runtime.Value {
 semigroupMaybeT2_3_1 := gopurs_runtime.Apply(semigroupMaybeT1_1_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_2, "Semigroup0"), gopurs_runtime.Value{}))
 _ = semigroupMaybeT2_3_1
 return gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return semigroupMaybeT2_3_1
-}), gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(Get_applicativeMaybeT(), dictMonad_0), "pure"), gopurs_runtime.RecordGet(dictMonoid_2, "mempty")))
+}), gopurs_runtime.Apply(gopurs_runtime.RecordGet(Call_applicativeMaybeT(dictMonad_0), "pure"), gopurs_runtime.RecordGet(dictMonoid_2, "mempty")))
 })
 }
 
@@ -781,7 +781,7 @@ return __t3
 func Call_plusMaybeT(dictMonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
-altMaybeT1_1_0 := gopurs_runtime.Apply(Get_altMaybeT(), dictMonad_0)
+altMaybeT1_1_0 := Call_altMaybeT(dictMonad_0)
 _ = altMaybeT1_1_0
 return gopurs_runtime.RecordDict2("Alt0", "empty", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return altMaybeT1_1_0
@@ -791,9 +791,9 @@ return altMaybeT1_1_0
 func Call_alternativeMaybeT(dictMonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
-applicativeMaybeT1_1_0 := gopurs_runtime.Apply(Get_applicativeMaybeT(), dictMonad_0)
+applicativeMaybeT1_1_0 := Call_applicativeMaybeT(dictMonad_0)
 _ = applicativeMaybeT1_1_0
-plusMaybeT1_2_1 := gopurs_runtime.Apply(Get_plusMaybeT(), dictMonad_0)
+plusMaybeT1_2_1 := Call_plusMaybeT(dictMonad_0)
 _ = plusMaybeT1_2_1
 return gopurs_runtime.RecordDict2("Applicative0", "Plus1", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return applicativeMaybeT1_1_0
@@ -806,12 +806,12 @@ func Call_monadPlusMaybeT(dictMonad_0_loop gopurs_runtime.Value) gopurs_runtime.
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
 monadMaybeT1_1_0 := gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_applicativeMaybeT(), dictMonad_0)
+return Call_applicativeMaybeT(dictMonad_0)
 }), gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_bindMaybeT(), dictMonad_0)
+return Call_bindMaybeT(dictMonad_0)
 }))
 _ = monadMaybeT1_1_0
-alternativeMaybeT1_2_1 := gopurs_runtime.Apply(Get_alternativeMaybeT(), dictMonad_0)
+alternativeMaybeT1_2_1 := Call_alternativeMaybeT(dictMonad_0)
 _ = alternativeMaybeT1_2_1
 return gopurs_runtime.RecordDict2("Alternative1", "Monad0", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return alternativeMaybeT1_2_1

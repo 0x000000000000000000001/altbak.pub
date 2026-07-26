@@ -106,40 +106,56 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_Profunctor_Join_Join
-$GLOBALS['Data_Profunctor_Join_Join'] = function($x_0 = null) {
+function majData_majProfunctor_majJoin_majJoin($x_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majProfunctor_majJoin_majJoin';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $x_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Profunctor_Join_Join'] = __NAMESPACE__ . '\\majData_majProfunctor_majJoin_majJoin';
 
 // Data_Profunctor_Join_showJoin
-$GLOBALS['Data_Profunctor_Join_showJoin'] = function($dictShow_0 = null) {
+function majData_majProfunctor_majJoin_showmajJoin($dictShow_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majProfunctor_majJoin_showmajJoin';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Join "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1)))(")"));
+  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Join ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1), ")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Profunctor_Join_showJoin'] = __NAMESPACE__ . '\\majData_majProfunctor_majJoin_showmajJoin';
 
 // Data_Profunctor_Join_semigroupJoin
-$GLOBALS['Data_Profunctor_Join_semigroupJoin'] = function($dictSemigroupoid_0 = null) {
+function majData_majProfunctor_majJoin_semigroupmajJoin($dictSemigroupoid_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majProfunctor_majJoin_semigroupmajJoin';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["append" => (function() use ($dictSemigroupoid_0) {
   $__fn = function($v_1 = null, $v1_2 = null) use ($dictSemigroupoid_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictSemigroupoid_0)['compose'])($v_1))($v1_2);
+  $__res = (($dictSemigroupoid_0)['compose'])($v_1, $v1_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -148,17 +164,23 @@ $GLOBALS['Data_Profunctor_Join_semigroupJoin'] = function($dictSemigroupoid_0 = 
 })()];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Profunctor_Join_semigroupJoin'] = __NAMESPACE__ . '\\majData_majProfunctor_majJoin_semigroupmajJoin';
 
 // Data_Profunctor_Join_ordJoin
-$GLOBALS['Data_Profunctor_Join_ordJoin'] = function($dictOrd_0 = null) {
+function majData_majProfunctor_majJoin_ordmajJoin($dictOrd_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majProfunctor_majJoin_ordmajJoin';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictOrd_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Profunctor_Join_ordJoin'] = __NAMESPACE__ . '\\majData_majProfunctor_majJoin_ordmajJoin';
 
 // Data_Profunctor_Join_newtypeJoin
 $GLOBALS['Data_Profunctor_Join_newtypeJoin'] = ["Coercible0" => function($_dollar__unused_0 = null) {
@@ -170,8 +192,12 @@ $GLOBALS['Data_Profunctor_Join_newtypeJoin'] = ["Coercible0" => function($_dolla
 }];
 
 // Data_Profunctor_Join_monoidJoin
-$GLOBALS['Data_Profunctor_Join_monoidJoin'] = function($dictCategory_0 = null) {
+function majData_majProfunctor_majJoin_monoidmajJoin($dictCategory_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majProfunctor_majJoin_monoidmajJoin';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__local_var_1_0 = (($dictCategory_0)['Semigroupoid0'])(null);
   $semigroupJoin1_2_1 = ["append" => (function() use ($__local_var_1_0) {
   $__fn = function($v_2 = null, $v1_3 = null) use ($__local_var_1_0, &$__fn) {
@@ -179,7 +205,7 @@ $GLOBALS['Data_Profunctor_Join_monoidJoin'] = function($dictCategory_0 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($__local_var_1_0)['compose'])($v_2))($v1_3);
+  $__res = (($__local_var_1_0)['compose'])($v_2, $v1_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -195,19 +221,24 @@ $GLOBALS['Data_Profunctor_Join_monoidJoin'] = function($dictCategory_0 = null) {
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Profunctor_Join_monoidJoin'] = __NAMESPACE__ . '\\majData_majProfunctor_majJoin_monoidmajJoin';
 
 // Data_Profunctor_Join_invariantJoin
-$GLOBALS['Data_Profunctor_Join_invariantJoin'] = function($dictProfunctor_0 = null) {
+function majData_majProfunctor_majJoin_invariantmajJoin($dictProfunctor_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majProfunctor_majJoin_invariantmajJoin';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["imap" => (function() use ($dictProfunctor_0) {
   $__fn = function($f_1 = null, $g_2 = null, $v_3 = null) use ($dictProfunctor_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (((($dictProfunctor_0)['dimap'])($g_2))($f_1))($v_3);
+  $__res = (($dictProfunctor_0)['dimap'])($g_2, $f_1, $v_3);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -216,15 +247,21 @@ $GLOBALS['Data_Profunctor_Join_invariantJoin'] = function($dictProfunctor_0 = nu
 })()];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Profunctor_Join_invariantJoin'] = __NAMESPACE__ . '\\majData_majProfunctor_majJoin_invariantmajJoin';
 
 // Data_Profunctor_Join_eqJoin
-$GLOBALS['Data_Profunctor_Join_eqJoin'] = function($dictEq_0 = null) {
+function majData_majProfunctor_majJoin_eqmajJoin($dictEq_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majProfunctor_majJoin_eqmajJoin';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictEq_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Profunctor_Join_eqJoin'] = __NAMESPACE__ . '\\majData_majProfunctor_majJoin_eqmajJoin';
 

@@ -223,14 +223,21 @@ $GLOBALS['Data_Array_NonEmpty_Internal_foldr1Impl'] = $ffi_Data_Array_NonEmpty_I
 $GLOBALS['Data_Array_NonEmpty_Internal_traverse1Impl'] = $ffi_Data_Array_NonEmpty_Internal['traverse1Impl'] ?? new class { public function __invoke(...$args) { return $this; } };
 
 
+
+
 // Data_Array_NonEmpty_Internal_NonEmptyArray
-$GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray'] = function($x_0 = null) {
+function majData_majArray_majNonmajEmpty_majInternal_majNonmajEmptymajArray($x_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majArray_majNonmajEmpty_majInternal_majNonmajEmptymajArray';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $x_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray'] = __NAMESPACE__ . '\\majData_majArray_majNonmajEmpty_majInternal_majNonmajEmptymajArray';
 
 // Data_Array_NonEmpty_Internal_unfoldable1NonEmptyArray
 $GLOBALS['Data_Array_NonEmpty_Internal_unfoldable1NonEmptyArray'] = $GLOBALS['Data_Unfoldable1_unfoldable1Array'];
@@ -242,31 +249,41 @@ $GLOBALS['Data_Array_NonEmpty_Internal_traversableWithIndexNonEmptyArray'] = $GL
 $GLOBALS['Data_Array_NonEmpty_Internal_traversableNonEmptyArray'] = $GLOBALS['Data_Traversable_traversableArray'];
 
 // Data_Array_NonEmpty_Internal_showNonEmptyArray
-$GLOBALS['Data_Array_NonEmpty_Internal_showNonEmptyArray'] = function($dictShow_0 = null) {
+function majData_majArray_majNonmajEmpty_majInternal_showmajNonmajEmptymajArray($dictShow_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majArray_majNonmajEmpty_majInternal_showmajNonmajEmptymajArray';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(NonEmptyArray "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($GLOBALS['Data_Show_showArrayImpl'])(($dictShow_0)['show']))($v_1)))(")"));
+  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(NonEmptyArray ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])(($GLOBALS['Data_Show_showArrayImpl'])(($dictShow_0)['show'], $v_1), ")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Array_NonEmpty_Internal_showNonEmptyArray'] = __NAMESPACE__ . '\\majData_majArray_majNonmajEmpty_majInternal_showmajNonmajEmptymajArray';
 
 // Data_Array_NonEmpty_Internal_semigroupNonEmptyArray
 $GLOBALS['Data_Array_NonEmpty_Internal_semigroupNonEmptyArray'] = $GLOBALS['Data_Semigroup_semigroupArray'];
 
 // Data_Array_NonEmpty_Internal_ordNonEmptyArray
-$GLOBALS['Data_Array_NonEmpty_Internal_ordNonEmptyArray'] = function($dictOrd_0 = null) {
+function majData_majArray_majNonmajEmpty_majInternal_ordmajNonmajEmptymajArray($dictOrd_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majArray_majNonmajEmpty_majInternal_ordmajNonmajEmptymajArray';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($GLOBALS['Data_Ord_ordArray'])($dictOrd_0);
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Array_NonEmpty_Internal_ordNonEmptyArray'] = __NAMESPACE__ . '\\majData_majArray_majNonmajEmpty_majInternal_ordmajNonmajEmptymajArray';
 
 // Data_Array_NonEmpty_Internal_ord1NonEmptyArray
 $GLOBALS['Data_Array_NonEmpty_Internal_ord1NonEmptyArray'] = $GLOBALS['Data_Ord_ord1Array'];
@@ -289,7 +306,7 @@ $GLOBALS['Data_Array_NonEmpty_Internal_foldableNonEmptyArray'] = $GLOBALS['Data_
 // Data_Array_NonEmpty_Internal_foldable1NonEmptyArray
 $GLOBALS['Data_Array_NonEmpty_Internal_foldable1NonEmptyArray'] = ["foldMap1" => function($dictSemigroup_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semigroup_Foldable_foldMap1DefaultL'])($GLOBALS['Data_Array_NonEmpty_Internal_foldable1NonEmptyArray']))($GLOBALS['Data_Functor_functorArray']))($dictSemigroup_0);
+  $__res = ($GLOBALS['Data_Semigroup_Foldable_foldMap1DefaultL'])($GLOBALS['Data_Array_NonEmpty_Internal_foldable1NonEmptyArray'], $GLOBALS['Data_Functor_functorArray'], $dictSemigroup_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -342,7 +359,7 @@ $GLOBALS['Data_Array_NonEmpty_Internal_traversable1NonEmptyArray'] = ["traverse1
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "sequence1" => function($dictApply_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Array_NonEmpty_Internal_traversable1NonEmptyArray'])['traverse1'])($dictApply_0))($GLOBALS['Data_Semigroup_Traversable_identity']);
+  $__res = (($GLOBALS['Data_Array_NonEmpty_Internal_traversable1NonEmptyArray'])['traverse1'])($dictApply_0, $GLOBALS['Data_Semigroup_Traversable_identity']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -361,13 +378,18 @@ $GLOBALS['Data_Array_NonEmpty_Internal_traversable1NonEmptyArray'] = ["traverse1
 }];
 
 // Data_Array_NonEmpty_Internal_eqNonEmptyArray
-$GLOBALS['Data_Array_NonEmpty_Internal_eqNonEmptyArray'] = function($dictEq_0 = null) {
+function majData_majArray_majNonmajEmpty_majInternal_eqmajNonmajEmptymajArray($dictEq_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majArray_majNonmajEmpty_majInternal_eqmajNonmajEmptymajArray';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["eq" => ($GLOBALS['Data_Eq_eqArrayImpl'])(($dictEq_0)['eq'])];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Array_NonEmpty_Internal_eqNonEmptyArray'] = __NAMESPACE__ . '\\majData_majArray_majNonmajEmpty_majInternal_eqmajNonmajEmptymajArray';
 
 // Data_Array_NonEmpty_Internal_eq1NonEmptyArray
 $GLOBALS['Data_Array_NonEmpty_Internal_eq1NonEmptyArray'] = $GLOBALS['Data_Eq_eq1Array'];

@@ -420,9 +420,9 @@ func Call_monadExceptT(dictMonad_0_loop gopurs_runtime.Value) gopurs_runtime.Val
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
 return gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_applicativeExceptT(), dictMonad_0)
+return Call_applicativeExceptT(dictMonad_0)
 }), gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_bindExceptT(), dictMonad_0)
+return Call_bindExceptT(dictMonad_0)
 }))
 }
 
@@ -430,7 +430,7 @@ func Call_bindExceptT(dictMonad_0_loop gopurs_runtime.Value) gopurs_runtime.Valu
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
 return gopurs_runtime.RecordDict2("Apply0", "bind", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_applyExceptT(), dictMonad_0)
+return Call_applyExceptT(dictMonad_0)
 }), gopurs_runtime.Func2(func(v_1 gopurs_runtime.Value, k_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Bind1"), gopurs_runtime.Value{}), "bind"), v_1, gopurs_runtime.Func(func(v2_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
@@ -468,14 +468,14 @@ functorExceptT1_2_1 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(fun
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_0, "map"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Either.Get_functorEither(), "map"), f_2))
 }))
 _ = functorExceptT1_2_1
-__local_var_3_2 := gopurs_runtime.Apply(Get_bindExceptT(), dictMonad_0)
+__local_var_3_2 := Call_bindExceptT(dictMonad_0)
 _ = __local_var_3_2
 return gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return functorExceptT1_2_1
 }), gopurs_runtime.Func2(func(f_4 gopurs_runtime.Value, a_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_2, "bind"), f_4, gopurs_runtime.Func(func(f_prime_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_2, "bind"), a_5, gopurs_runtime.Func(func(a_prime_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(Get_applicativeExceptT(), dictMonad_0), "pure"), gopurs_runtime.Apply(f_prime_6, a_prime_7))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Call_applicativeExceptT(dictMonad_0), "pure"), gopurs_runtime.Apply(f_prime_6, a_prime_7))
 }))
 }))
 }))
@@ -485,7 +485,7 @@ func Call_applicativeExceptT(dictMonad_0_loop gopurs_runtime.Value) gopurs_runti
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
 return gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_applyExceptT(), dictMonad_0)
+return Call_applyExceptT(dictMonad_0)
 }), gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{x_1})})
 }))
@@ -494,7 +494,7 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs
 func Call_semigroupExceptT(dictMonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
-__local_var_1_0 := gopurs_runtime.Apply(Get_applyExceptT(), dictMonad_0)
+__local_var_1_0 := Call_applyExceptT(dictMonad_0)
 _ = __local_var_1_0
 return gopurs_runtime.Func(func(dictSemigroup_2 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_3_1 := gopurs_runtime.RecordGet(dictSemigroup_2, "append")
@@ -511,9 +511,9 @@ _ = dictMonadAsk_0
 Monad0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadAsk_0, "Monad0"), gopurs_runtime.Value{})
 _ = Monad0_1_0
 monadExceptT1_2_1 := gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_applicativeExceptT(), Monad0_1_0)
+return Call_applicativeExceptT(Monad0_1_0)
 }), gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_bindExceptT(), Monad0_1_0)
+return Call_bindExceptT(Monad0_1_0)
 }))
 _ = monadExceptT1_2_1
 return gopurs_runtime.RecordDict2("Monad0", "ask", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -524,7 +524,7 @@ return monadExceptT1_2_1
 func Call_monadReaderExceptT(dictMonadReader_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadReader_0 gopurs_runtime.Value = dictMonadReader_0_loop
 _ = dictMonadReader_0
-monadAskExceptT1_1_0 := gopurs_runtime.Apply(Get_monadAskExceptT(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadReader_0, "MonadAsk0"), gopurs_runtime.Value{}))
+monadAskExceptT1_1_0 := Call_monadAskExceptT(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadReader_0, "MonadAsk0"), gopurs_runtime.Value{}))
 _ = monadAskExceptT1_1_0
 return gopurs_runtime.RecordDict2("MonadAsk0", "local", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return monadAskExceptT1_1_0
@@ -539,9 +539,9 @@ _ = dictMonadCont_0
 __local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadCont_0, "Monad0"), gopurs_runtime.Value{})
 _ = __local_var_1_0
 monadExceptT1_2_1 := gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_applicativeExceptT(), __local_var_1_0)
+return Call_applicativeExceptT(__local_var_1_0)
 }), gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_bindExceptT(), __local_var_1_0)
+return Call_bindExceptT(__local_var_1_0)
 }))
 _ = monadExceptT1_2_1
 return gopurs_runtime.RecordDict2("Monad0", "callCC", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -561,9 +561,9 @@ _ = dictMonadEffect_0
 Monad0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "Monad0"), gopurs_runtime.Value{})
 _ = Monad0_1_0
 monadExceptT1_2_1 := gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_applicativeExceptT(), Monad0_1_0)
+return Call_applicativeExceptT(Monad0_1_0)
 }), gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_bindExceptT(), Monad0_1_0)
+return Call_bindExceptT(Monad0_1_0)
 }))
 _ = monadExceptT1_2_1
 __local_var_3_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_monadTransExceptT(), "lift"), Monad0_1_0)
@@ -581,9 +581,9 @@ _ = dictMonadRec_0
 Monad0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadRec_0, "Monad0"), gopurs_runtime.Value{})
 _ = Monad0_1_0
 monadExceptT1_2_1 := gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_applicativeExceptT(), Monad0_1_0)
+return Call_applicativeExceptT(Monad0_1_0)
 }), gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_bindExceptT(), Monad0_1_0)
+return Call_bindExceptT(Monad0_1_0)
 }))
 _ = monadExceptT1_2_1
 return gopurs_runtime.RecordDict2("Monad0", "tailRecM", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -649,9 +649,9 @@ _ = Monad0_1_0
 lift1_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_monadTransExceptT(), "lift"), Monad0_1_0)
 _ = lift1_2_1
 monadExceptT1_3_2 := gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_applicativeExceptT(), Monad0_1_0)
+return Call_applicativeExceptT(Monad0_1_0)
 }), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_bindExceptT(), Monad0_1_0)
+return Call_bindExceptT(Monad0_1_0)
 }))
 _ = monadExceptT1_3_2
 return gopurs_runtime.RecordDict2("Monad0", "state", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -669,9 +669,9 @@ _ = Monad1_1_0
 Semigroup0_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadTell_0, "Semigroup0"), gopurs_runtime.Value{})
 _ = Semigroup0_2_1
 monadExceptT1_3_2 := gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_applicativeExceptT(), Monad1_1_0)
+return Call_applicativeExceptT(Monad1_1_0)
 }), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_bindExceptT(), Monad1_1_0)
+return Call_bindExceptT(Monad1_1_0)
 }))
 _ = monadExceptT1_3_2
 __local_var_4_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_monadTransExceptT(), "lift"), Monad1_1_0)
@@ -698,7 +698,7 @@ __local_var_4_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad1_2_1, "Ap
 _ = __local_var_4_3
 Monoid0_5_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadWriter_0, "Monoid0"), gopurs_runtime.Value{})
 _ = Monoid0_5_4
-monadTellExceptT1_6_5 := gopurs_runtime.Apply(Get_monadTellExceptT(), MonadTell1_1_0)
+monadTellExceptT1_6_5 := Call_monadTellExceptT(MonadTell1_1_0)
 _ = monadTellExceptT1_6_5
 return gopurs_runtime.RecordDict4("MonadTell1", "Monoid0", "listen", "pass", gopurs_runtime.Func(func(_dollar__unused_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return monadTellExceptT1_6_5
@@ -744,9 +744,9 @@ func Call_monadThrowExceptT(dictMonad_0_loop gopurs_runtime.Value) gopurs_runtim
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
 monadExceptT1_1_0 := gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_applicativeExceptT(), dictMonad_0)
+return Call_applicativeExceptT(dictMonad_0)
 }), gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_bindExceptT(), dictMonad_0)
+return Call_bindExceptT(dictMonad_0)
 }))
 _ = monadExceptT1_1_0
 return gopurs_runtime.RecordDict2("Monad0", "throwError", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -759,7 +759,7 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs
 func Call_monadErrorExceptT(dictMonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
-monadThrowExceptT1_1_0 := gopurs_runtime.Apply(Get_monadThrowExceptT(), dictMonad_0)
+monadThrowExceptT1_1_0 := Call_monadThrowExceptT(dictMonad_0)
 _ = monadThrowExceptT1_1_0
 return gopurs_runtime.RecordDict2("MonadThrow0", "catchError", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return monadThrowExceptT1_1_0
@@ -797,9 +797,9 @@ _ = dictMonadST_0
 Monad0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadST_0, "Monad0"), gopurs_runtime.Value{})
 _ = Monad0_1_0
 monadExceptT1_2_1 := gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_applicativeExceptT(), Monad0_1_0)
+return Call_applicativeExceptT(Monad0_1_0)
 }), gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_bindExceptT(), Monad0_1_0)
+return Call_bindExceptT(Monad0_1_0)
 }))
 _ = monadExceptT1_2_1
 __local_var_3_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_monadTransExceptT(), "lift"), Monad0_1_0)
@@ -814,14 +814,14 @@ return gopurs_runtime.Apply(__local_var_3_2, gopurs_runtime.Apply(gopurs_runtime
 func Call_monoidExceptT(dictMonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
-semigroupExceptT1_1_0 := gopurs_runtime.Apply(Get_semigroupExceptT(), dictMonad_0)
+semigroupExceptT1_1_0 := Call_semigroupExceptT(dictMonad_0)
 _ = semigroupExceptT1_1_0
 return gopurs_runtime.Func(func(dictMonoid_2 gopurs_runtime.Value) gopurs_runtime.Value {
 semigroupExceptT2_3_1 := gopurs_runtime.Apply(semigroupExceptT1_1_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_2, "Semigroup0"), gopurs_runtime.Value{}))
 _ = semigroupExceptT2_3_1
 return gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return semigroupExceptT2_3_1
-}), gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(Get_applicativeExceptT(), dictMonad_0), "pure"), gopurs_runtime.RecordGet(dictMonoid_2, "mempty")))
+}), gopurs_runtime.Apply(gopurs_runtime.RecordGet(Call_applicativeExceptT(dictMonad_0), "pure"), gopurs_runtime.RecordGet(dictMonoid_2, "mempty")))
 })
 }
 
@@ -907,17 +907,17 @@ altExceptT2_4_2 := gopurs_runtime.Apply(altExceptT1_2_1, dictMonad_3)
 _ = altExceptT2_4_2
 return gopurs_runtime.RecordDict2("Alt0", "empty", gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return altExceptT2_4_2
-}), gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(Get_monadThrowExceptT(), dictMonad_3), "throwError"), mempty_1_0))
+}), gopurs_runtime.Apply(gopurs_runtime.RecordGet(Call_monadThrowExceptT(dictMonad_3), "throwError"), mempty_1_0))
 })
 }
 
 func Call_alternativeExceptT(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
 _ = dictMonoid_0
-plusExceptT1_1_0 := gopurs_runtime.Apply(Get_plusExceptT(), dictMonoid_0)
+plusExceptT1_1_0 := Call_plusExceptT(dictMonoid_0)
 _ = plusExceptT1_1_0
 return gopurs_runtime.Func(func(dictMonad_2 gopurs_runtime.Value) gopurs_runtime.Value {
-applicativeExceptT1_3_1 := gopurs_runtime.Apply(Get_applicativeExceptT(), dictMonad_2)
+applicativeExceptT1_3_1 := Call_applicativeExceptT(dictMonad_2)
 _ = applicativeExceptT1_3_1
 plusExceptT2_4_2 := gopurs_runtime.Apply(plusExceptT1_1_0, dictMonad_2)
 _ = plusExceptT2_4_2
@@ -932,13 +932,13 @@ return plusExceptT2_4_2
 func Call_monadPlusExceptT(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
 _ = dictMonoid_0
-alternativeExceptT1_1_0 := gopurs_runtime.Apply(Get_alternativeExceptT(), dictMonoid_0)
+alternativeExceptT1_1_0 := Call_alternativeExceptT(dictMonoid_0)
 _ = alternativeExceptT1_1_0
 return gopurs_runtime.Func(func(dictMonad_2 gopurs_runtime.Value) gopurs_runtime.Value {
 monadExceptT1_3_1 := gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_applicativeExceptT(), dictMonad_2)
+return Call_applicativeExceptT(dictMonad_2)
 }), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_bindExceptT(), dictMonad_2)
+return Call_bindExceptT(dictMonad_2)
 }))
 _ = monadExceptT1_3_1
 alternativeExceptT2_4_2 := gopurs_runtime.Apply(alternativeExceptT1_1_0, dictMonad_2)

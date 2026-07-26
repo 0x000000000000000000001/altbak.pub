@@ -263,7 +263,7 @@ var once_size sync.Once
 func Get_size() gopurs_runtime.Value {
 	once_size.Do(func() {
 		cache_size = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_size((*Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(v_0_box.UnsafePtr))
+return gopurs_runtime.Int(Call_size((*Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(v_0_box.UnsafePtr)))
 })
 	})
 	return cache_size
@@ -274,7 +274,7 @@ var once_singleton sync.Once
 func Get_singleton() gopurs_runtime.Value {
 	once_singleton.Do(func() {
 		cache_singleton = gopurs_runtime.Func2(func(k_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_singleton(k_0_box, v_1_box)
+return gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(Call_singleton(k_0_box, v_1_box))}
 })
 	})
 	return cache_singleton
@@ -1217,7 +1217,7 @@ var once_findMin sync.Once
 func Get_findMin() gopurs_runtime.Value {
 	once_findMin.Do(func() {
 		cache_findMin = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_findMin((*Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(v_0_box.UnsafePtr))
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_findMin((*Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(v_0_box.UnsafePtr)))}
 })
 	})
 	return cache_findMin
@@ -1239,7 +1239,7 @@ var once_findMax sync.Once
 func Get_findMax() gopurs_runtime.Value {
 	once_findMax.Do(func() {
 		cache_findMax = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_findMax((*Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(v_0_box.UnsafePtr))
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_findMax((*Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(v_0_box.UnsafePtr)))}
 })
 	})
 	return cache_findMax
@@ -1742,7 +1742,7 @@ return __t1
 return go__3_0
 }
 
-func Call_size(v_0_loop *Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
+func Call_size(v_0_loop *Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value]) int64 {
 var v_0 *Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value] = v_0_loop
 _ = v_0
 var __t0 gopurs_runtime.Value
@@ -1766,15 +1766,15 @@ goto end_branch_0
 __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_0:
-return __t0
+return __t0.IntVal
 }
 
-func Call_singleton(k_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_singleton(k_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) *Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value] {
 var k_0 gopurs_runtime.Value = k_0_loop
 _ = k_0
 var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
-return gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(&Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value]{1, 1, k_0, v_1, (*Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: nil}.UnsafePtr), (*Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: nil}.UnsafePtr)})}
+return (*Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(&Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value]{1, 1, k_0, v_1, (*Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: nil}.UnsafePtr), (*Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: nil}.UnsafePtr)})}.UnsafePtr)
 }
 
 func Call_unsafeBalancedNode(k_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value, l_2_loop gopurs_runtime.Value, r_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -3825,7 +3825,7 @@ _ = dictMonoid_1
 return gopurs_runtime.Apply3(Get_foldSubmapBy(), dictOrd_0, gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_1, "Semigroup0"), gopurs_runtime.Value{}), "append"), gopurs_runtime.RecordGet(dictMonoid_1, "mempty"))
 }
 
-func Call_findMin(v_0_loop *Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
+func Call_findMin(v_0_loop *Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value]) *pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value] {
 findMin:
 for {
 if false { continue findMin }
@@ -3868,7 +3868,7 @@ goto end_branch_0
 __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_0:
-return __t0
+return (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(__t0.UnsafePtr)
 }
 }
 
@@ -3927,7 +3927,7 @@ goto end_branch_3
 }
 {
 if (v1_4_2.Type == 9 && v1_4_2.IntVal == 902936544) {
-__t3 = gopurs_runtime.Apply(Get_findMin(), gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer((*Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(v_3.UnsafePtr).V5)})
+__t3 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_findMin((*Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer((*Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(v_3.UnsafePtr).V5)}.UnsafePtr)))}
 goto end_branch_3
 } else {
 
@@ -3952,7 +3952,7 @@ return __t1
 return go__2_0
 }
 
-func Call_findMax(v_0_loop *Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
+func Call_findMax(v_0_loop *Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value]) *pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value] {
 findMax:
 for {
 if false { continue findMax }
@@ -3995,7 +3995,7 @@ goto end_branch_0
 __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_0:
-return __t0
+return (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(__t0.UnsafePtr)
 }
 }
 
@@ -4054,7 +4054,7 @@ goto end_branch_3
 }
 {
 if (v1_4_2.Type == 9 && v1_4_2.IntVal == 902936544) {
-__t3 = gopurs_runtime.Apply(Get_findMax(), gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer((*Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(v_3.UnsafePtr).V4)})
+__t3 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_findMax((*Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer((*Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(v_3.UnsafePtr).V4)}.UnsafePtr)))}
 goto end_branch_3
 } else {
 
@@ -4217,7 +4217,7 @@ return __t0
 func Call_ordMap(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-ordMapIter1_1_0 := gopurs_runtime.Apply(Get_ordMapIter(), dictOrd_0)
+ordMapIter1_1_0 := Call_ordMapIter(dictOrd_0)
 _ = ordMapIter1_1_0
 eqMap1_2_1 := gopurs_runtime.Apply(Get_eqMap(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd_0, "Eq0"), gopurs_runtime.Value{}))
 _ = eqMap1_2_1
@@ -4277,7 +4277,7 @@ return gopurs_runtime.RecordGet(Call_eqMap(dictEq_0, dictEq1_1), "eq")
 func Call_ord1Map(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-ordMap1_1_0 := gopurs_runtime.Apply(Get_ordMap(), dictOrd_0)
+ordMap1_1_0 := Call_ordMap(dictOrd_0)
 _ = ordMap1_1_0
 __local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd_0, "Eq0"), gopurs_runtime.Value{})
 _ = __local_var_2_1

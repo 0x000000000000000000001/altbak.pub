@@ -108,31 +108,38 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_Functor_Coproduct_Coproduct
-$GLOBALS['Data_Functor_Coproduct_Coproduct'] = function($x_0 = null) {
+function majData_majFunctor_majCoproduct_majCoproduct($x_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majCoproduct_majCoproduct';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $x_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_Coproduct_Coproduct'] = __NAMESPACE__ . '\\majData_majFunctor_majCoproduct_majCoproduct';
 
 // Data_Functor_Coproduct_showCoproduct
-$GLOBALS['Data_Functor_Coproduct_showCoproduct'] = (function() {
-  $__fn = function($dictShow_0 = null, $dictShow1_1 = null) use (&$__fn) {
+function majData_majFunctor_majCoproduct_showmajCoproduct($dictShow_0, $dictShow1_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majCoproduct_showmajCoproduct';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__res = ["show" => function($v_2 = null) use ($dictShow1_1, $dictShow_0) {
   $__num = \func_num_args();
   $__t0 = null;;
-  if ((is_object($v_2) && (($v_2)->{'tag'} === "Left"))) {
-$__t0 = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(left "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])(($v_2)->{'value0'})))(")"));
+  if ($v_2 instanceof \Data\Either\Data_Either_Left) {
+$__t0 = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(left ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])(($v_2)->{'value0'}), ")"));
 goto end_branch_0;;
 };
-  if ((is_object($v_2) && (($v_2)->{'tag'} === "Right"))) {
-$__t0 = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(right "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow1_1)['show'])(($v_2)->{'value0'})))(")"));
+  if ($v_2 instanceof \Data\Either\Data_Either_Right) {
+$__t0 = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(right ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow1_1)['show'])(($v_2)->{'value0'}), ")"));
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -145,19 +152,23 @@ goto end_branch_0;;
 }];
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Functor_Coproduct_showCoproduct'] = __NAMESPACE__ . '\\majData_majFunctor_majCoproduct_showmajCoproduct';
 
 // Data_Functor_Coproduct_right
-$GLOBALS['Data_Functor_Coproduct_right'] = function($ga_0 = null) {
+function majData_majFunctor_majCoproduct_right($ga_0) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data1("Right", $ga_0);
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majCoproduct_right';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = new \Data\Either\Data_Either_Right($ga_0);
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_Coproduct_right'] = __NAMESPACE__ . '\\majData_majFunctor_majCoproduct_right';
 
 // Data_Functor_Coproduct_newtypeCoproduct
 $GLOBALS['Data_Functor_Coproduct_newtypeCoproduct'] = ["Coercible0" => function($_dollar__unused_0 = null) {
@@ -169,18 +180,23 @@ $GLOBALS['Data_Functor_Coproduct_newtypeCoproduct'] = ["Coercible0" => function(
 }];
 
 // Data_Functor_Coproduct_left
-$GLOBALS['Data_Functor_Coproduct_left'] = function($fa_0 = null) {
+function majData_majFunctor_majCoproduct_left($fa_0) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data1("Left", $fa_0);
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majCoproduct_left';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = new \Data\Either\Data_Either_Left($fa_0);
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_Coproduct_left'] = __NAMESPACE__ . '\\majData_majFunctor_majCoproduct_left';
 
 // Data_Functor_Coproduct_functorCoproduct
-$GLOBALS['Data_Functor_Coproduct_functorCoproduct'] = (function() {
-  $__fn = function($dictFunctor_0 = null, $dictFunctor1_1 = null) use (&$__fn) {
+function majData_majFunctor_majCoproduct_functormajCoproduct($dictFunctor_0, $dictFunctor1_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majCoproduct_functormajCoproduct';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
@@ -190,7 +206,7 @@ $GLOBALS['Data_Functor_Coproduct_functorCoproduct'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($GLOBALS['Data_Bifunctor_bifunctorEither'])['bimap'])((($dictFunctor_0)['map'])($f_2)))((($dictFunctor1_1)['map'])($f_2)))($v_3);
+  $__res = (($GLOBALS['Data_Bifunctor_bifunctorEither'])['bimap'])((($dictFunctor_0)['map'])($f_2), (($dictFunctor1_1)['map'])($f_2), $v_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -199,15 +215,14 @@ $GLOBALS['Data_Functor_Coproduct_functorCoproduct'] = (function() {
 })()];
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Functor_Coproduct_functorCoproduct'] = __NAMESPACE__ . '\\majData_majFunctor_majCoproduct_functormajCoproduct';
 
 // Data_Functor_Coproduct_eq1Coproduct
-$GLOBALS['Data_Functor_Coproduct_eq1Coproduct'] = (function() {
-  $__fn = function($dictEq1_0 = null, $dictEq11_1 = null) use (&$__fn) {
+function majData_majFunctor_majCoproduct_eq1majCoproduct($dictEq1_0, $dictEq11_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majCoproduct_eq1majCoproduct';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
@@ -222,11 +237,11 @@ $GLOBALS['Data_Functor_Coproduct_eq1Coproduct'] = (function() {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__t2 = null;;
-  if ((is_object($v_5) && (($v_5)->{'tag'} === "Left"))) {
-$__t2 = ((is_object($v1_6) && (($v1_6)->{'tag'} === "Left")) && (($eq12_3_0)(($v_5)->{'value0'}))(($v1_6)->{'value0'}));
+  if ($v_5 instanceof \Data\Either\Data_Either_Left) {
+$__t2 = ($v1_6 instanceof \Data\Either\Data_Either_Left && ($eq12_3_0)(($v_5)->{'value0'}, ($v1_6)->{'value0'}));
 goto end_branch_2;;
 };
-  $__t2 = ((is_object($v_5) && (($v_5)->{'tag'} === "Right")) && ((is_object($v1_6) && (($v1_6)->{'tag'} === "Right")) && (($eq13_4_1)(($v_5)->{'value0'}))(($v1_6)->{'value0'})));
+  $__t2 = ($v_5 instanceof \Data\Either\Data_Either_Right && ($v1_6 instanceof \Data\Either\Data_Either_Right && ($eq13_4_1)(($v_5)->{'value0'}, ($v1_6)->{'value0'})));
   end_branch_2:;
   $__res = $__t2;
   goto __end;;
@@ -241,15 +256,14 @@ goto end_branch_2;;
 }];
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Functor_Coproduct_eq1Coproduct'] = __NAMESPACE__ . '\\majData_majFunctor_majCoproduct_eq1majCoproduct';
 
 // Data_Functor_Coproduct_eqCoproduct
-$GLOBALS['Data_Functor_Coproduct_eqCoproduct'] = (function() {
-  $__fn = function($dictEq1_0 = null, $dictEq11_1 = null, $dictEq_2 = null) use (&$__fn) {
+function majData_majFunctor_majCoproduct_eqmajCoproduct($dictEq1_0, $dictEq11_1 = null, $dictEq_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majCoproduct_eqmajCoproduct';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
@@ -262,11 +276,11 @@ $GLOBALS['Data_Functor_Coproduct_eqCoproduct'] = (function() {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__t2 = null;;
-  if ((is_object($v_5) && (($v_5)->{'tag'} === "Left"))) {
-$__t2 = ((is_object($v1_6) && (($v1_6)->{'tag'} === "Left")) && (($eq12_3_0)(($v_5)->{'value0'}))(($v1_6)->{'value0'}));
+  if ($v_5 instanceof \Data\Either\Data_Either_Left) {
+$__t2 = ($v1_6 instanceof \Data\Either\Data_Either_Left && ($eq12_3_0)(($v_5)->{'value0'}, ($v1_6)->{'value0'}));
 goto end_branch_2;;
 };
-  $__t2 = ((is_object($v_5) && (($v_5)->{'tag'} === "Right")) && ((is_object($v1_6) && (($v1_6)->{'tag'} === "Right")) && (($eq13_4_1)(($v_5)->{'value0'}))(($v1_6)->{'value0'})));
+  $__t2 = ($v_5 instanceof \Data\Either\Data_Either_Right && ($v1_6 instanceof \Data\Either\Data_Either_Right && ($eq13_4_1)(($v_5)->{'value0'}, ($v1_6)->{'value0'})));
   end_branch_2:;
   $__res = $__t2;
   goto __end;;
@@ -277,14 +291,17 @@ goto end_branch_2;;
 })()];
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_Functor_Coproduct_eqCoproduct'] = __NAMESPACE__ . '\\majData_majFunctor_majCoproduct_eqmajCoproduct';
 
 // Data_Functor_Coproduct_ord1Coproduct
-$GLOBALS['Data_Functor_Coproduct_ord1Coproduct'] = function($dictOrd1_0 = null) {
+function majData_majFunctor_majCoproduct_ord1majCoproduct($dictOrd1_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majCoproduct_ord1majCoproduct';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__local_var_1_0 = (($dictOrd1_0)['Eq10'])(null);
   $__res = function($dictOrd11_2 = null) use ($__local_var_1_0, $dictOrd1_0) {
   $__num = \func_num_args();
@@ -300,11 +317,11 @@ $GLOBALS['Data_Functor_Coproduct_ord1Coproduct'] = function($dictOrd1_0 = null) 
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__t4 = null;;
-  if ((is_object($v_7) && (($v_7)->{'tag'} === "Left"))) {
-$__t4 = ((is_object($v1_8) && (($v1_8)->{'tag'} === "Left")) && (($eq12_5_2)(($v_7)->{'value0'}))(($v1_8)->{'value0'}));
+  if ($v_7 instanceof \Data\Either\Data_Either_Left) {
+$__t4 = ($v1_8 instanceof \Data\Either\Data_Either_Left && ($eq12_5_2)(($v_7)->{'value0'}, ($v1_8)->{'value0'}));
 goto end_branch_4;;
 };
-  $__t4 = ((is_object($v_7) && (($v_7)->{'tag'} === "Right")) && ((is_object($v1_8) && (($v1_8)->{'tag'} === "Right")) && (($eq13_6_3)(($v_7)->{'value0'}))(($v1_8)->{'value0'})));
+  $__t4 = ($v_7 instanceof \Data\Either\Data_Either_Right && ($v1_8 instanceof \Data\Either\Data_Either_Right && ($eq13_6_3)(($v_7)->{'value0'}, ($v1_8)->{'value0'})));
   end_branch_4:;
   $__res = $__t4;
   goto __end;;
@@ -328,23 +345,23 @@ goto end_branch_4;;
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__t8 = null;;
-  if ((is_object($v_8) && (($v_8)->{'tag'} === "Left"))) {
+  if ($v_8 instanceof \Data\Either\Data_Either_Left) {
 $__t9 = null;;
-if ((is_object($v1_9) && (($v1_9)->{'tag'} === "Left"))) {
-$__t9 = (($compare12_6_6)(($v_8)->{'value0'}))(($v1_9)->{'value0'});
+if ($v1_9 instanceof \Data\Either\Data_Either_Left) {
+$__t9 = ($compare12_6_6)(($v_8)->{'value0'}, ($v1_9)->{'value0'});
 goto end_branch_9;;
 };
-$__t9 = new Phpurs_Data0("LT");
+$__t9 = new \Data\Ordering\Data_Ordering_LT();
 end_branch_9:;
 $__t8 = $__t9;
 goto end_branch_8;;
 };
-  if ((is_object($v1_9) && (($v1_9)->{'tag'} === "Left"))) {
-$__t8 = new Phpurs_Data0("GT");
+  if ($v1_9 instanceof \Data\Either\Data_Either_Left) {
+$__t8 = new \Data\Ordering\Data_Ordering_GT();
 goto end_branch_8;;
 };
-  if (((is_object($v_8) && (($v_8)->{'tag'} === "Right")) && (is_object($v1_9) && (($v1_9)->{'tag'} === "Right")))) {
-$__t8 = (($compare13_7_7)(($v_8)->{'value0'}))(($v1_9)->{'value0'});
+  if (($v_8 instanceof \Data\Either\Data_Either_Right && $v1_9 instanceof \Data\Either\Data_Either_Right)) {
+$__t8 = ($compare13_7_7)(($v_8)->{'value0'}, ($v1_9)->{'value0'});
 goto end_branch_8;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -373,12 +390,17 @@ goto end_branch_8;;
 };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_Coproduct_ord1Coproduct'] = __NAMESPACE__ . '\\majData_majFunctor_majCoproduct_ord1majCoproduct';
 
 // Data_Functor_Coproduct_ordCoproduct
-$GLOBALS['Data_Functor_Coproduct_ordCoproduct'] = function($dictOrd1_0 = null) {
+function majData_majFunctor_majCoproduct_ordmajCoproduct($dictOrd1_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majCoproduct_ordmajCoproduct';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $ord1Coproduct1_1_0 = ($GLOBALS['Data_Functor_Coproduct_ord1Coproduct'])($dictOrd1_0);
   $__local_var_2_1 = (($dictOrd1_0)['Eq10'])(null);
   $__res = function($dictOrd11_3 = null) use ($__local_var_2_1, $ord1Coproduct1_1_0) {
@@ -396,11 +418,11 @@ $GLOBALS['Data_Functor_Coproduct_ordCoproduct'] = function($dictOrd1_0 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__t6 = null;;
-  if ((is_object($v_9) && (($v_9)->{'tag'} === "Left"))) {
-$__t6 = ((is_object($v1_10) && (($v1_10)->{'tag'} === "Left")) && (($eq12_7_4)(($v_9)->{'value0'}))(($v1_10)->{'value0'}));
+  if ($v_9 instanceof \Data\Either\Data_Either_Left) {
+$__t6 = ($v1_10 instanceof \Data\Either\Data_Either_Left && ($eq12_7_4)(($v_9)->{'value0'}, ($v1_10)->{'value0'}));
 goto end_branch_6;;
 };
-  $__t6 = ((is_object($v_9) && (($v_9)->{'tag'} === "Right")) && ((is_object($v1_10) && (($v1_10)->{'tag'} === "Right")) && (($eq13_8_5)(($v_9)->{'value0'}))(($v1_10)->{'value0'})));
+  $__t6 = ($v_9 instanceof \Data\Either\Data_Either_Right && ($v1_10 instanceof \Data\Either\Data_Either_Right && ($eq13_8_5)(($v_9)->{'value0'}, ($v1_10)->{'value0'})));
   end_branch_6:;
   $__res = $__t6;
   goto __end;;
@@ -426,22 +448,23 @@ goto end_branch_6;;
 };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_Coproduct_ordCoproduct'] = __NAMESPACE__ . '\\majData_majFunctor_majCoproduct_ordmajCoproduct';
 
 // Data_Functor_Coproduct_coproduct
-$GLOBALS['Data_Functor_Coproduct_coproduct'] = (function() {
-  $__fn = function($v_0 = null, $v1_1 = null, $v2_2 = null) use (&$__fn) {
+function majData_majFunctor_majCoproduct_coproduct($v_0, $v1_1 = null, $v2_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majCoproduct_coproduct';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   $__t0 = null;;
-  if ((is_object($v2_2) && (($v2_2)->{'tag'} === "Left"))) {
+  if ($v2_2 instanceof \Data\Either\Data_Either_Left) {
 $__t0 = ($v_0)(($v2_2)->{'value0'});
 goto end_branch_0;;
 };
-  if ((is_object($v2_2) && (($v2_2)->{'tag'} === "Right"))) {
+  if ($v2_2 instanceof \Data\Either\Data_Either_Right) {
 $__t0 = ($v1_1)(($v2_2)->{'value0'});
 goto end_branch_0;;
 };
@@ -451,30 +474,33 @@ goto end_branch_0;;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_Functor_Coproduct_coproduct'] = __NAMESPACE__ . '\\majData_majFunctor_majCoproduct_coproduct';
 
 // Data_Functor_Coproduct_extendCoproduct
-$GLOBALS['Data_Functor_Coproduct_extendCoproduct'] = function($dictExtend_0 = null) {
+function majData_majFunctor_majCoproduct_extendmajCoproduct($dictExtend_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majCoproduct_extendmajCoproduct';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $functorCoproduct1_1_0 = ($GLOBALS['Data_Functor_Coproduct_functorCoproduct'])((($dictExtend_0)['Functor0'])(null));
   $__res = function($dictExtend1_2 = null) use ($dictExtend_0, $functorCoproduct1_1_0) {
   $__num = \func_num_args();
   $functorCoproduct2_3_1 = ($functorCoproduct1_1_0)((($dictExtend1_2)['Functor0'])(null));
   $__res = ["extend" => function($f_4 = null) use ($dictExtend1_2, $dictExtend_0) {
   $__num = \func_num_args();
-  $__local_var_5_2 = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Either_Left']))((($dictExtend_0)['extend'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_4))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Functor_Coproduct_Coproduct']))($GLOBALS['Data_Either_Left']))));
-  $__local_var_6_3 = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Either_Right']))((($dictExtend1_2)['extend'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_4))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Functor_Coproduct_Coproduct']))($GLOBALS['Data_Either_Right']))));
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Functor_Coproduct_Coproduct']))(function($v2_7 = null) use ($__local_var_5_2, $__local_var_6_3) {
+  $__local_var_5_2 = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Either_Left'], (($dictExtend_0)['extend'])(($GLOBALS['Control_Semigroupoid_composeImpl'])($f_4, ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Functor_Coproduct_Coproduct'], $GLOBALS['Data_Either_Left']))));
+  $__local_var_6_3 = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Either_Right'], (($dictExtend1_2)['extend'])(($GLOBALS['Control_Semigroupoid_composeImpl'])($f_4, ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Functor_Coproduct_Coproduct'], $GLOBALS['Data_Either_Right']))));
+  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Functor_Coproduct_Coproduct'], function($v2_7 = null) use ($__local_var_5_2, $__local_var_6_3) {
   $__num = \func_num_args();
   $__t4 = null;;
-  if ((is_object($v2_7) && (($v2_7)->{'tag'} === "Left"))) {
+  if ($v2_7 instanceof \Data\Either\Data_Either_Left) {
 $__t4 = ($__local_var_5_2)(($v2_7)->{'value0'});
 goto end_branch_4;;
 };
-  if ((is_object($v2_7) && (($v2_7)->{'tag'} === "Right"))) {
+  if ($v2_7 instanceof \Data\Either\Data_Either_Right) {
 $__t4 = ($__local_var_6_3)(($v2_7)->{'value0'});
 goto end_branch_4;;
 };
@@ -502,12 +528,17 @@ goto end_branch_4;;
 };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_Coproduct_extendCoproduct'] = __NAMESPACE__ . '\\majData_majFunctor_majCoproduct_extendmajCoproduct';
 
 // Data_Functor_Coproduct_comonadCoproduct
-$GLOBALS['Data_Functor_Coproduct_comonadCoproduct'] = function($dictComonad_0 = null) {
+function majData_majFunctor_majCoproduct_comonadmajCoproduct($dictComonad_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majCoproduct_comonadmajCoproduct';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $extendCoproduct1_1_0 = ($GLOBALS['Data_Functor_Coproduct_extendCoproduct'])((($dictComonad_0)['Extend0'])(null));
   $__res = function($dictComonad1_2 = null) use ($dictComonad_0, $extendCoproduct1_1_0) {
   $__num = \func_num_args();
@@ -515,11 +546,11 @@ $GLOBALS['Data_Functor_Coproduct_comonadCoproduct'] = function($dictComonad_0 = 
   $__res = ["extract" => function($v2_4 = null) use ($dictComonad1_2, $dictComonad_0) {
   $__num = \func_num_args();
   $__t2 = null;;
-  if ((is_object($v2_4) && (($v2_4)->{'tag'} === "Left"))) {
+  if ($v2_4 instanceof \Data\Either\Data_Either_Left) {
 $__t2 = (($dictComonad_0)['extract'])(($v2_4)->{'value0'});
 goto end_branch_2;;
 };
-  if ((is_object($v2_4) && (($v2_4)->{'tag'} === "Right"))) {
+  if ($v2_4 instanceof \Data\Either\Data_Either_Right) {
 $__t2 = (($dictComonad1_2)['extract'])(($v2_4)->{'value0'});
 goto end_branch_2;;
 };
@@ -543,21 +574,21 @@ goto end_branch_2;;
 };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_Coproduct_comonadCoproduct'] = __NAMESPACE__ . '\\majData_majFunctor_majCoproduct_comonadmajCoproduct';
 
 // Data_Functor_Coproduct_bihoistCoproduct
-$GLOBALS['Data_Functor_Coproduct_bihoistCoproduct'] = (function() {
-  $__fn = function($natF_0 = null, $natG_1 = null, $v_2 = null) use (&$__fn) {
+function majData_majFunctor_majCoproduct_bihoistmajCoproduct($natF_0, $natG_1 = null, $v_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majCoproduct_bihoistmajCoproduct';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (((($GLOBALS['Data_Bifunctor_bifunctorEither'])['bimap'])($natF_0))($natG_1))($v_2);
+  $__res = (($GLOBALS['Data_Bifunctor_bifunctorEither'])['bimap'])($natF_0, $natG_1, $v_2);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_Functor_Coproduct_bihoistCoproduct'] = __NAMESPACE__ . '\\majData_majFunctor_majCoproduct_bihoistmajCoproduct';
 

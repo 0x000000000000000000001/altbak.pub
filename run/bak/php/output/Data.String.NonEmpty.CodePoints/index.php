@@ -106,16 +106,18 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_String_NonEmpty_CodePoints_lessThan
 $GLOBALS['Data_String_NonEmpty_CodePoints_lessThan'] = (function() use (&$__fn) {
-$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT"));
+$__local_var_0_0 = ($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT(), new \Data\Ordering\Data_Ordering_EQ(), new \Data\Ordering\Data_Ordering_GT());
 return (function() use ($__local_var_0_0) {
   $__fn = function($a1_1 = null, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (is_object((($__local_var_0_0)($a1_1))($a2_2)) && (((($__local_var_0_0)($a1_1))($a2_2))->{'tag'} === "LT"));
+  $__res = ($__local_var_0_0)($a1_1, $a2_2) instanceof \Data\Ordering\Data_Ordering_LT;
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -125,10 +127,14 @@ return (function() use ($__local_var_0_0) {
 })();
 
 // Data_String_NonEmpty_CodePoints_fromJust
-$GLOBALS['Data_String_NonEmpty_CodePoints_fromJust'] = function($v_0 = null) {
+function majData_majString_majNonmajEmpty_majCodemajPoints_frommajJust($v_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majNonmajEmpty_majCodemajPoints_frommajJust';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__t0 = null;;
-  if ((is_object($v_0) && (($v_0)->{'tag'} === "Just"))) {
+  if ($v_0 instanceof \Data\Maybe\Data_Maybe_Just) {
 $__t0 = ($v_0)->{'value0'};
 goto end_branch_0;;
 };
@@ -138,19 +144,20 @@ goto end_branch_0;;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_String_NonEmpty_CodePoints_fromJust'] = __NAMESPACE__ . '\\majData_majString_majNonmajEmpty_majCodemajPoints_frommajJust';
 
 // Data_String_NonEmpty_CodePoints_greaterThanOrEq
 $GLOBALS['Data_String_NonEmpty_CodePoints_greaterThanOrEq'] = (function() use (&$__fn) {
-$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT"));
+$__local_var_0_0 = ($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT(), new \Data\Ordering\Data_Ordering_EQ(), new \Data\Ordering\Data_Ordering_GT());
 return (function() use ($__local_var_0_0) {
   $__fn = function($a1_1 = null, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ( ! (is_object((($__local_var_0_0)($a1_1))($a2_2)) && (((($__local_var_0_0)($a1_1))($a2_2))->{'tag'} === "LT")));
+  $__res = ( ! ($__local_var_0_0)($a1_1, $a2_2) instanceof \Data\Ordering\Data_Ordering_LT);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -160,228 +167,388 @@ return (function() use ($__local_var_0_0) {
 })();
 
 // Data_String_NonEmpty_CodePoints_snoc
-$GLOBALS['Data_String_NonEmpty_CodePoints_snoc'] = (function() {
-  $__fn = function($c_0 = null, $s_1 = null) use (&$__fn) {
+function majData_majString_majNonmajEmpty_majCodemajPoints_snoc($c_0, $s_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majNonmajEmpty_majCodemajPoints_snoc';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])($s_1))(($GLOBALS['Data_String_CodePoints_singleton'])($c_0));
+  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])($s_1, ($GLOBALS['Data_String_CodePoints_singleton'])($c_0));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_String_NonEmpty_CodePoints_snoc'] = __NAMESPACE__ . '\\majData_majString_majNonmajEmpty_majCodemajPoints_snoc';
+
+// Data_String_NonEmpty_CodePoints_singleton_closure
+$GLOBALS['Data_String_NonEmpty_CodePoints_singleton_closure'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_Internal_NonEmptyString'], $GLOBALS['Data_String_CodePoints_singleton']);
 
 // Data_String_NonEmpty_CodePoints_singleton
-$GLOBALS['Data_String_NonEmpty_CodePoints_singleton'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_Internal_NonEmptyString']))($GLOBALS['Data_String_CodePoints_singleton']);
+function majData_majString_majNonmajEmpty_majCodemajPoints_singleton($v_0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majNonmajEmpty_majCodemajPoints_singleton';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ($GLOBALS['Data_String_NonEmpty_CodePoints_singleton_closure'])($v_0);
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_String_NonEmpty_CodePoints_singleton'] = __NAMESPACE__ . '\\majData_majString_majNonmajEmpty_majCodemajPoints_singleton';
 
 // Data_String_NonEmpty_CodePoints_liftS
-$GLOBALS['Data_String_NonEmpty_CodePoints_liftS'] = (function() {
-  $__fn = function($f_0 = null, $v_1 = null) use (&$__fn) {
+function majData_majString_majNonmajEmpty_majCodemajPoints_liftmajS($f_0, $v_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majNonmajEmpty_majCodemajPoints_liftmajS';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__res = ($f_0)($v_1);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_String_NonEmpty_CodePoints_liftS'] = __NAMESPACE__ . '\\majData_majString_majNonmajEmpty_majCodemajPoints_liftmajS';
 
 // Data_String_NonEmpty_CodePoints_takeWhile
-$GLOBALS['Data_String_NonEmpty_CodePoints_takeWhile'] = function($f_0 = null) {
+function majData_majString_majNonmajEmpty_majCodemajPoints_takemajWhile($f_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_Internal_fromString']))(function($v_1 = null) use ($f_0) {
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majNonmajEmpty_majCodemajPoints_takemajWhile';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_Internal_fromString'], function($v_1 = null) use ($f_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_String_CodePoints_take'])((($GLOBALS['Data_String_CodePoints_countPrefix'])($f_0))($v_1)))($v_1);
+  $__res = ($GLOBALS['Data_String_CodePoints_take'])(($GLOBALS['Data_String_CodePoints_countPrefix'])($f_0, $v_1), $v_1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 });
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_String_NonEmpty_CodePoints_takeWhile'] = __NAMESPACE__ . '\\majData_majString_majNonmajEmpty_majCodemajPoints_takemajWhile';
 
 // Data_String_NonEmpty_CodePoints_lastIndexOf'
-$GLOBALS['Data_String_NonEmpty_CodePoints_lastIndexOf__prime__'] = function($pat_0 = null) {
+function majData_majString_majNonmajEmpty_majCodemajPoints_lastmajIndexmajOf__prime__($pat_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_CodePoints_liftS']))(($GLOBALS['Data_String_CodePoints_lastIndexOf__prime__'])($pat_0));
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majNonmajEmpty_majCodemajPoints_lastmajIndexmajOf__prime__';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_CodePoints_liftS'], ($GLOBALS['Data_String_CodePoints_lastIndexOf__prime__'])($pat_0));
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_String_NonEmpty_CodePoints_lastIndexOf__prime__'] = __NAMESPACE__ . '\\majData_majString_majNonmajEmpty_majCodemajPoints_lastmajIndexmajOf__prime__';
+
+// Data_String_NonEmpty_CodePoints_lastIndexOf_closure
+$GLOBALS['Data_String_NonEmpty_CodePoints_lastIndexOf_closure'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_CodePoints_liftS'], $GLOBALS['Data_String_CodePoints_lastIndexOf']);
 
 // Data_String_NonEmpty_CodePoints_lastIndexOf
-$GLOBALS['Data_String_NonEmpty_CodePoints_lastIndexOf'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_CodePoints_liftS']))($GLOBALS['Data_String_CodePoints_lastIndexOf']);
-
-// Data_String_NonEmpty_CodePoints_indexOf'
-$GLOBALS['Data_String_NonEmpty_CodePoints_indexOf__prime__'] = function($pat_0 = null) {
+function majData_majString_majNonmajEmpty_majCodemajPoints_lastmajIndexmajOf($v_0, $v_1 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_CodePoints_liftS']))(($GLOBALS['Data_String_CodePoints_indexOf__prime__'])($pat_0));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
-
-// Data_String_NonEmpty_CodePoints_indexOf
-$GLOBALS['Data_String_NonEmpty_CodePoints_indexOf'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_CodePoints_liftS']))($GLOBALS['Data_String_CodePoints_indexOf']);
-
-// Data_String_NonEmpty_CodePoints_fromNonEmptyString
-$GLOBALS['Data_String_NonEmpty_CodePoints_fromNonEmptyString'] = function($v_0 = null) {
-  $__num = \func_num_args();
-  $__res = $v_0;
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
-
-// Data_String_NonEmpty_CodePoints_length
-$GLOBALS['Data_String_NonEmpty_CodePoints_length'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_CodePoints_length']))($GLOBALS['Data_String_NonEmpty_CodePoints_fromNonEmptyString']);
-
-// Data_String_NonEmpty_CodePoints_splitAt
-$GLOBALS['Data_String_NonEmpty_CodePoints_splitAt'] = (function() {
-  $__fn = function($i_0 = null, $nes_1 = null) use (&$__fn) {
-  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majNonmajEmpty_majCodemajPoints_lastmajIndexmajOf';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $v_2_0 = (($GLOBALS['Data_String_CodePoints_splitAt'])($i_0))($nes_1);
-  $__res = ["before" => match (($v_2_0)['before']) { "" => new Phpurs_Data0("Nothing"), default => new Phpurs_Data1("Just", ($v_2_0)['before']) }, "after" => match (($v_2_0)['after']) { "" => new Phpurs_Data0("Nothing"), default => new Phpurs_Data1("Just", ($v_2_0)['after']) }];
+  $__res = ($GLOBALS['Data_String_NonEmpty_CodePoints_lastIndexOf_closure'])($v_0, $v_1);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_String_NonEmpty_CodePoints_lastIndexOf'] = __NAMESPACE__ . '\\majData_majString_majNonmajEmpty_majCodemajPoints_lastmajIndexmajOf';
+
+// Data_String_NonEmpty_CodePoints_indexOf'
+function majData_majString_majNonmajEmpty_majCodemajPoints_indexmajOf__prime__($pat_0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majNonmajEmpty_majCodemajPoints_indexmajOf__prime__';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_CodePoints_liftS'], ($GLOBALS['Data_String_CodePoints_indexOf__prime__'])($pat_0));
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_String_NonEmpty_CodePoints_indexOf__prime__'] = __NAMESPACE__ . '\\majData_majString_majNonmajEmpty_majCodemajPoints_indexmajOf__prime__';
+
+// Data_String_NonEmpty_CodePoints_indexOf_closure
+$GLOBALS['Data_String_NonEmpty_CodePoints_indexOf_closure'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_CodePoints_liftS'], $GLOBALS['Data_String_CodePoints_indexOf']);
+
+// Data_String_NonEmpty_CodePoints_indexOf
+function majData_majString_majNonmajEmpty_majCodemajPoints_indexmajOf($v_0, $v_1 = null) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majNonmajEmpty_majCodemajPoints_indexmajOf';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ($GLOBALS['Data_String_NonEmpty_CodePoints_indexOf_closure'])($v_0, $v_1);
+  goto __end;;
+  __end:
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_String_NonEmpty_CodePoints_indexOf'] = __NAMESPACE__ . '\\majData_majString_majNonmajEmpty_majCodemajPoints_indexmajOf';
+
+// Data_String_NonEmpty_CodePoints_fromNonEmptyString
+function majData_majString_majNonmajEmpty_majCodemajPoints_frommajNonmajEmptymajString($v_0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majNonmajEmpty_majCodemajPoints_frommajNonmajEmptymajString';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = $v_0;
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_String_NonEmpty_CodePoints_fromNonEmptyString'] = __NAMESPACE__ . '\\majData_majString_majNonmajEmpty_majCodemajPoints_frommajNonmajEmptymajString';
+
+// Data_String_NonEmpty_CodePoints_length_closure
+$GLOBALS['Data_String_NonEmpty_CodePoints_length_closure'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_CodePoints_length'], $GLOBALS['Data_String_NonEmpty_CodePoints_fromNonEmptyString']);
+
+// Data_String_NonEmpty_CodePoints_length
+function majData_majString_majNonmajEmpty_majCodemajPoints_length($v_0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majNonmajEmpty_majCodemajPoints_length';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ($GLOBALS['Data_String_NonEmpty_CodePoints_length_closure'])($v_0);
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_String_NonEmpty_CodePoints_length'] = __NAMESPACE__ . '\\majData_majString_majNonmajEmpty_majCodemajPoints_length';
+
+// Data_String_NonEmpty_CodePoints_splitAt
+function majData_majString_majNonmajEmpty_majCodemajPoints_splitmajAt($i_0, $nes_1 = null) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majNonmajEmpty_majCodemajPoints_splitmajAt';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $v_2_0 = ($GLOBALS['Data_String_CodePoints_splitAt'])($i_0, $nes_1);
+  $__res = ["before" => match (($v_2_0)['before']) { "" => new \Data\Maybe\Data_Maybe_Nothing(), default => new \Data\Maybe\Data_Maybe_Just(($v_2_0)['before']) }, "after" => match (($v_2_0)['after']) { "" => new \Data\Maybe\Data_Maybe_Nothing(), default => new \Data\Maybe\Data_Maybe_Just(($v_2_0)['after']) }];
+  goto __end;;
+  __end:
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_String_NonEmpty_CodePoints_splitAt'] = __NAMESPACE__ . '\\majData_majString_majNonmajEmpty_majCodemajPoints_splitmajAt';
 
 // Data_String_NonEmpty_CodePoints_take
-$GLOBALS['Data_String_NonEmpty_CodePoints_take'] = (function() {
-  $__fn = function($i_0 = null, $nes_1 = null) use (&$__fn) {
+function majData_majString_majNonmajEmpty_majCodemajPoints_take($i_0, $nes_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majNonmajEmpty_majCodemajPoints_take';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__t0 = null;;
-  if ((($GLOBALS['Data_String_NonEmpty_CodePoints_lessThan'])($i_0))(1)) {
-$__t0 = new Phpurs_Data0("Nothing");
+  if (($GLOBALS['Data_String_NonEmpty_CodePoints_lessThan'])($i_0, 1)) {
+$__t0 = new \Data\Maybe\Data_Maybe_Nothing();
 goto end_branch_0;;
 };
-  $__t0 = new Phpurs_Data1("Just", (($GLOBALS['Data_String_CodePoints_take'])($i_0))($nes_1));
+  $__t0 = new \Data\Maybe\Data_Maybe_Just(($GLOBALS['Data_String_CodePoints_take'])($i_0, $nes_1));
   end_branch_0:;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_String_NonEmpty_CodePoints_take'] = __NAMESPACE__ . '\\majData_majString_majNonmajEmpty_majCodemajPoints_take';
+
+// Data_String_NonEmpty_CodePoints_toCodePointArray_closure
+$GLOBALS['Data_String_NonEmpty_CodePoints_toCodePointArray_closure'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_CodePoints_toCodePointArray'], $GLOBALS['Data_String_NonEmpty_CodePoints_fromNonEmptyString']);
 
 // Data_String_NonEmpty_CodePoints_toCodePointArray
-$GLOBALS['Data_String_NonEmpty_CodePoints_toCodePointArray'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_CodePoints_toCodePointArray']))($GLOBALS['Data_String_NonEmpty_CodePoints_fromNonEmptyString']);
+function majData_majString_majNonmajEmpty_majCodemajPoints_tomajCodemajPointmajArray($v_0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majNonmajEmpty_majCodemajPoints_tomajCodemajPointmajArray';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ($GLOBALS['Data_String_NonEmpty_CodePoints_toCodePointArray_closure'])($v_0);
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_String_NonEmpty_CodePoints_toCodePointArray'] = __NAMESPACE__ . '\\majData_majString_majNonmajEmpty_majCodemajPoints_tomajCodemajPointmajArray';
+
+// Data_String_NonEmpty_CodePoints_toNonEmptyCodePointArray_closure
+$GLOBALS['Data_String_NonEmpty_CodePoints_toNonEmptyCodePointArray_closure'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_CodePoints_fromJust'], ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_fromArray'], $GLOBALS['Data_String_NonEmpty_CodePoints_toCodePointArray']));
 
 // Data_String_NonEmpty_CodePoints_toNonEmptyCodePointArray
-$GLOBALS['Data_String_NonEmpty_CodePoints_toNonEmptyCodePointArray'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_CodePoints_fromJust']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_fromArray']))($GLOBALS['Data_String_NonEmpty_CodePoints_toCodePointArray']));
+function majData_majString_majNonmajEmpty_majCodemajPoints_tomajNonmajEmptymajCodemajPointmajArray($v_0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majNonmajEmpty_majCodemajPoints_tomajNonmajEmptymajCodemajPointmajArray';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ($GLOBALS['Data_String_NonEmpty_CodePoints_toNonEmptyCodePointArray_closure'])($v_0);
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_String_NonEmpty_CodePoints_toNonEmptyCodePointArray'] = __NAMESPACE__ . '\\majData_majString_majNonmajEmpty_majCodemajPoints_tomajNonmajEmptymajCodemajPointmajArray';
 
 // Data_String_NonEmpty_CodePoints_uncons
-$GLOBALS['Data_String_NonEmpty_CodePoints_uncons'] = function($nes_0 = null) {
+function majData_majString_majNonmajEmpty_majCodemajPoints_uncons($nes_0) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($GLOBALS['Data_String_CodePoints_codePointAt'])(0))($nes_0);
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majNonmajEmpty_majCodemajPoints_uncons';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__local_var_1_0 = ($GLOBALS['Data_String_CodePoints_codePointAt'])(0, $nes_0);
   $__t1 = null;;
-  if ((is_object($__local_var_1_0) && (($__local_var_1_0)->{'tag'} === "Just"))) {
+  if ($__local_var_1_0 instanceof \Data\Maybe\Data_Maybe_Just) {
 $__t1 = ($__local_var_1_0)->{'value0'};
 goto end_branch_1;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
   $__t1 = null;
   end_branch_1:;
-  $__local_var_1_2 = (($GLOBALS['Data_String_CodeUnits_drop'])(($GLOBALS['Data_String_CodeUnits_length'])((($GLOBALS['Data_String_CodePoints_take'])(1))($nes_0))))($nes_0);
-  $__res = ["head" => $__t1, "tail" => match ($__local_var_1_2) { "" => new Phpurs_Data0("Nothing"), default => new Phpurs_Data1("Just", $__local_var_1_2) }];
+  $__local_var_1_2 = ($GLOBALS['Data_String_CodeUnits_drop'])(($GLOBALS['Data_String_CodeUnits_length'])(($GLOBALS['Data_String_CodePoints_take'])(1, $nes_0)), $nes_0);
+  $__res = ["head" => $__t1, "tail" => match ($__local_var_1_2) { "" => new \Data\Maybe\Data_Maybe_Nothing(), default => new \Data\Maybe\Data_Maybe_Just($__local_var_1_2) }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_String_NonEmpty_CodePoints_uncons'] = __NAMESPACE__ . '\\majData_majString_majNonmajEmpty_majCodemajPoints_uncons';
 
 // Data_String_NonEmpty_CodePoints_fromFoldable1
-$GLOBALS['Data_String_NonEmpty_CodePoints_fromFoldable1'] = function($dictFoldable1_0 = null) {
+function majData_majString_majNonmajEmpty_majCodemajPoints_frommajFoldable1($dictFoldable1_0) {
   $__num = \func_num_args();
-  $__res = ((($dictFoldable1_0)['foldMap1'])($GLOBALS['Data_Semigroup_semigroupString']))($GLOBALS['Data_String_NonEmpty_CodePoints_singleton']);
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majNonmajEmpty_majCodemajPoints_frommajFoldable1';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = (($dictFoldable1_0)['foldMap1'])($GLOBALS['Data_Semigroup_semigroupString'], $GLOBALS['Data_String_NonEmpty_CodePoints_singleton']);
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_String_NonEmpty_CodePoints_fromFoldable1'] = __NAMESPACE__ . '\\majData_majString_majNonmajEmpty_majCodemajPoints_frommajFoldable1';
 
 // Data_String_NonEmpty_CodePoints_fromCodePointArray
-$GLOBALS['Data_String_NonEmpty_CodePoints_fromCodePointArray'] = function($v_0 = null) {
+function majData_majString_majNonmajEmpty_majCodemajPoints_frommajCodemajPointmajArray($v_0) {
   $__num = \func_num_args();
-  $__res = match (count($v_0)) { 0 => new Phpurs_Data0("Nothing"), default => new Phpurs_Data1("Just", ($GLOBALS['Data_String_CodePoints_fromCodePointArray'])($v_0)) };
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majNonmajEmpty_majCodemajPoints_frommajCodemajPointmajArray';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = match (count($v_0)) { 0 => new \Data\Maybe\Data_Maybe_Nothing(), default => new \Data\Maybe\Data_Maybe_Just(($GLOBALS['Data_String_CodePoints_fromCodePointArray'])($v_0)) };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_String_NonEmpty_CodePoints_fromCodePointArray'] = __NAMESPACE__ . '\\majData_majString_majNonmajEmpty_majCodemajPoints_frommajCodemajPointmajArray';
+
+// Data_String_NonEmpty_CodePoints_fromNonEmptyCodePointArray_closure
+$GLOBALS['Data_String_NonEmpty_CodePoints_fromNonEmptyCodePointArray_closure'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_CodePoints_fromJust'], ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_CodePoints_fromCodePointArray'], $GLOBALS['Data_Array_NonEmpty_toArray']));
 
 // Data_String_NonEmpty_CodePoints_fromNonEmptyCodePointArray
-$GLOBALS['Data_String_NonEmpty_CodePoints_fromNonEmptyCodePointArray'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_CodePoints_fromJust']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_CodePoints_fromCodePointArray']))($GLOBALS['Data_Array_NonEmpty_toArray']));
+function majData_majString_majNonmajEmpty_majCodemajPoints_frommajNonmajEmptymajCodemajPointmajArray($v_0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majNonmajEmpty_majCodemajPoints_frommajNonmajEmptymajCodemajPointmajArray';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ($GLOBALS['Data_String_NonEmpty_CodePoints_fromNonEmptyCodePointArray_closure'])($v_0);
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_String_NonEmpty_CodePoints_fromNonEmptyCodePointArray'] = __NAMESPACE__ . '\\majData_majString_majNonmajEmpty_majCodemajPoints_frommajNonmajEmptymajCodemajPointmajArray';
 
 // Data_String_NonEmpty_CodePoints_dropWhile
-$GLOBALS['Data_String_NonEmpty_CodePoints_dropWhile'] = function($f_0 = null) {
+function majData_majString_majNonmajEmpty_majCodemajPoints_dropmajWhile($f_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_Internal_fromString']))(function($v_1 = null) use ($f_0) {
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majNonmajEmpty_majCodemajPoints_dropmajWhile';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_Internal_fromString'], function($v_1 = null) use ($f_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_String_CodePoints_dropWhile'])($f_0))($v_1);
+  $__res = ($GLOBALS['Data_String_CodePoints_dropWhile'])($f_0, $v_1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 });
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_String_NonEmpty_CodePoints_dropWhile'] = __NAMESPACE__ . '\\majData_majString_majNonmajEmpty_majCodemajPoints_dropmajWhile';
 
 // Data_String_NonEmpty_CodePoints_drop
-$GLOBALS['Data_String_NonEmpty_CodePoints_drop'] = (function() {
-  $__fn = function($i_0 = null, $nes_1 = null) use (&$__fn) {
+function majData_majString_majNonmajEmpty_majCodemajPoints_drop($i_0, $nes_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majNonmajEmpty_majCodemajPoints_drop';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__t0 = null;;
-  if ((($GLOBALS['Data_String_NonEmpty_CodePoints_greaterThanOrEq'])($i_0))(($GLOBALS['Data_String_CodePoints_length'])($nes_1))) {
-$__t0 = new Phpurs_Data0("Nothing");
+  if (($GLOBALS['Data_String_NonEmpty_CodePoints_greaterThanOrEq'])($i_0, ($GLOBALS['Data_String_CodePoints_length'])($nes_1))) {
+$__t0 = new \Data\Maybe\Data_Maybe_Nothing();
 goto end_branch_0;;
 };
-  $__t0 = new Phpurs_Data1("Just", (($GLOBALS['Data_String_CodeUnits_drop'])(($GLOBALS['Data_String_CodeUnits_length'])((($GLOBALS['Data_String_CodePoints_take'])($i_0))($nes_1))))($nes_1));
+  $__t0 = new \Data\Maybe\Data_Maybe_Just(($GLOBALS['Data_String_CodeUnits_drop'])(($GLOBALS['Data_String_CodeUnits_length'])(($GLOBALS['Data_String_CodePoints_take'])($i_0, $nes_1)), $nes_1));
   end_branch_0:;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_String_NonEmpty_CodePoints_drop'] = __NAMESPACE__ . '\\majData_majString_majNonmajEmpty_majCodemajPoints_drop';
+
+// Data_String_NonEmpty_CodePoints_countPrefix_closure
+$GLOBALS['Data_String_NonEmpty_CodePoints_countPrefix_closure'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_CodePoints_liftS'], $GLOBALS['Data_String_CodePoints_countPrefix']);
 
 // Data_String_NonEmpty_CodePoints_countPrefix
-$GLOBALS['Data_String_NonEmpty_CodePoints_countPrefix'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_CodePoints_liftS']))($GLOBALS['Data_String_CodePoints_countPrefix']);
-
-// Data_String_NonEmpty_CodePoints_cons
-$GLOBALS['Data_String_NonEmpty_CodePoints_cons'] = (function() {
-  $__fn = function($c_0 = null, $s_1 = null) use (&$__fn) {
+function majData_majString_majNonmajEmpty_majCodemajPoints_countmajPrefix($v_0, $v_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majNonmajEmpty_majCodemajPoints_countmajPrefix';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])(($GLOBALS['Data_String_CodePoints_singleton'])($c_0)))($s_1);
+  $__res = ($GLOBALS['Data_String_NonEmpty_CodePoints_countPrefix_closure'])($v_0, $v_1);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_String_NonEmpty_CodePoints_countPrefix'] = __NAMESPACE__ . '\\majData_majString_majNonmajEmpty_majCodemajPoints_countmajPrefix';
+
+// Data_String_NonEmpty_CodePoints_cons
+function majData_majString_majNonmajEmpty_majCodemajPoints_cons($c_0, $s_1 = null) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majNonmajEmpty_majCodemajPoints_cons';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])(($GLOBALS['Data_String_CodePoints_singleton'])($c_0), $s_1);
+  goto __end;;
+  __end:
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_String_NonEmpty_CodePoints_cons'] = __NAMESPACE__ . '\\majData_majString_majNonmajEmpty_majCodemajPoints_cons';
+
+// Data_String_NonEmpty_CodePoints_codePointAt_closure
+$GLOBALS['Data_String_NonEmpty_CodePoints_codePointAt_closure'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_CodePoints_liftS'], $GLOBALS['Data_String_CodePoints_codePointAt']);
 
 // Data_String_NonEmpty_CodePoints_codePointAt
-$GLOBALS['Data_String_NonEmpty_CodePoints_codePointAt'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_CodePoints_liftS']))($GLOBALS['Data_String_CodePoints_codePointAt']);
+function majData_majString_majNonmajEmpty_majCodemajPoints_codemajPointmajAt($v_0, $v_1 = null) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majNonmajEmpty_majCodemajPoints_codemajPointmajAt';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ($GLOBALS['Data_String_NonEmpty_CodePoints_codePointAt_closure'])($v_0, $v_1);
+  goto __end;;
+  __end:
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_String_NonEmpty_CodePoints_codePointAt'] = __NAMESPACE__ . '\\majData_majString_majNonmajEmpty_majCodemajPoints_codemajPointmajAt';
 

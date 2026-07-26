@@ -556,7 +556,7 @@ return foldableCompose1_7_5
 }), gopurs_runtime.Func(func(_dollar__unused_8 gopurs_runtime.Value) gopurs_runtime.Value {
 return functorCompose1_5_3
 }), gopurs_runtime.Func(func(dictApplicative_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply2(Get_traversableCompose(), dictTraversable_0, dictTraversable1_3), "traverse"), dictApplicative_8, Get_identity())
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(Call_traversableCompose(dictTraversable_0), dictTraversable1_3), "traverse"), dictApplicative_8, Get_identity())
 }), gopurs_runtime.Func(func(dictApplicative_8 gopurs_runtime.Value) gopurs_runtime.Value {
 traverse4_9_9 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTraversable_0, "traverse"), dictApplicative_8)
 _ = traverse4_9_9
@@ -789,7 +789,7 @@ return gopurs_runtime.Apply2(f_2, s_6, a_5)
 func Call_scanr(dictTraversable_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictTraversable_0 gopurs_runtime.Value = dictTraversable_0_loop
 _ = dictTraversable_0
-mapAccumR1_1_0 := gopurs_runtime.Apply(Get_mapAccumR(), dictTraversable_0)
+mapAccumR1_1_0 := Call_mapAccumR(dictTraversable_0)
 _ = mapAccumR1_1_0
 return gopurs_runtime.Func3(func(f_2 gopurs_runtime.Value, b0_3 gopurs_runtime.Value, xs_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordGet(gopurs_runtime.Apply3(mapAccumR1_1_0, gopurs_runtime.Func2(func(b_5 gopurs_runtime.Value, a_6 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -815,7 +815,7 @@ return gopurs_runtime.Apply2(f_2, s_6, a_5)
 func Call_scanl(dictTraversable_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictTraversable_0 gopurs_runtime.Value = dictTraversable_0_loop
 _ = dictTraversable_0
-mapAccumL1_1_0 := gopurs_runtime.Apply(Get_mapAccumL(), dictTraversable_0)
+mapAccumL1_1_0 := Call_mapAccumL(dictTraversable_0)
 _ = mapAccumL1_1_0
 return gopurs_runtime.Func3(func(f_2 gopurs_runtime.Value, b0_3 gopurs_runtime.Value, xs_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordGet(gopurs_runtime.Apply3(mapAccumL1_1_0, gopurs_runtime.Func2(func(b_5 gopurs_runtime.Value, a_6 gopurs_runtime.Value) gopurs_runtime.Value {

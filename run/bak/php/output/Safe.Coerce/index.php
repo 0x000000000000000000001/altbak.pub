@@ -95,12 +95,19 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Safe_Coerce_coerce
-$GLOBALS['Safe_Coerce_coerce'] = function($_dollar__unused_0 = null) {
+function majSafe_majCoerce_coerce($_dollar__unused_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majSafe_majCoerce_coerce';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $GLOBALS['Unsafe_Coerce_unsafeCoerce'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Safe_Coerce_coerce'] = __NAMESPACE__ . '\\majSafe_majCoerce_coerce';
 

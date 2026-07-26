@@ -95,9 +95,39 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
+// Data_Exists_runExists_closure
+$GLOBALS['Data_Exists_runExists_closure'] = $GLOBALS['Unsafe_Coerce_unsafeCoerce'];
+
 // Data_Exists_runExists
-$GLOBALS['Data_Exists_runExists'] = $GLOBALS['Unsafe_Coerce_unsafeCoerce'];
+function majData_majExists_runmajExists($v_0, $v_1 = null) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majExists_runmajExists';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ($GLOBALS['Data_Exists_runExists_closure'])($v_0, $v_1);
+  goto __end;;
+  __end:
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Exists_runExists'] = __NAMESPACE__ . '\\majData_majExists_runmajExists';
+
+// Data_Exists_mkExists_closure
+$GLOBALS['Data_Exists_mkExists_closure'] = $GLOBALS['Unsafe_Coerce_unsafeCoerce'];
 
 // Data_Exists_mkExists
-$GLOBALS['Data_Exists_mkExists'] = $GLOBALS['Unsafe_Coerce_unsafeCoerce'];
+function majData_majExists_mkmajExists($v_0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majExists_mkmajExists';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ($GLOBALS['Data_Exists_mkExists_closure'])($v_0);
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Exists_mkExists'] = __NAMESPACE__ . '\\majData_majExists_mkmajExists';
 

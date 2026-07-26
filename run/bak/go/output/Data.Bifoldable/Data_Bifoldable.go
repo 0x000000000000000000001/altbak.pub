@@ -552,9 +552,9 @@ return gopurs_runtime.Func3(func(l_5 gopurs_runtime.Value, r_6 gopurs_runtime.Va
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_2, "Semigroup0"), gopurs_runtime.Value{}), "append"), gopurs_runtime.Apply3(bifoldMap3_3_0, l_5, r_6, (*pkg_Data_Functor_Product2.Constructor_Product2[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value])(v_7.UnsafePtr).V0), gopurs_runtime.Apply3(bifoldMap4_4_1, l_5, r_6, (*pkg_Data_Functor_Product2.Constructor_Product2[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value])(v_7.UnsafePtr).V1))
 })
 }), gopurs_runtime.Func4(func(l_2 gopurs_runtime.Value, r_3 gopurs_runtime.Value, u_4 gopurs_runtime.Value, m_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply5(Get_bifoldlDefault(), Call_bifoldableProduct2(dictBifoldable_0, dictBifoldable1_1), l_2, r_3, u_4, m_5)
+return gopurs_runtime.Apply4(Call_bifoldlDefault(Call_bifoldableProduct2(dictBifoldable_0, dictBifoldable1_1)), l_2, r_3, u_4, m_5)
 }), gopurs_runtime.Func4(func(l_2 gopurs_runtime.Value, r_3 gopurs_runtime.Value, u_4 gopurs_runtime.Value, m_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply5(Get_bifoldrDefault(), Call_bifoldableProduct2(dictBifoldable_0, dictBifoldable1_1), l_2, r_3, u_4, m_5)
+return gopurs_runtime.Apply4(Call_bifoldrDefault(Call_bifoldableProduct2(dictBifoldable_0, dictBifoldable1_1)), l_2, r_3, u_4, m_5)
 }))
 }
 }

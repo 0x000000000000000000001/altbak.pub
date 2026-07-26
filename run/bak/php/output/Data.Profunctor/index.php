@@ -99,14 +99,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_Profunctor_identity
-$GLOBALS['Data_Profunctor_identity'] = function($x_0 = null) {
+function majData_majProfunctor_identity($x_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majProfunctor_identity';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $x_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Profunctor_identity'] = __NAMESPACE__ . '\\majData_majProfunctor_identity';
 
 // Data_Profunctor_profunctorFn
 $GLOBALS['Data_Profunctor_profunctorFn'] = ["dimap" => (function() {
@@ -115,7 +122,7 @@ $GLOBALS['Data_Profunctor_profunctorFn'] = ["dimap" => (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($c2d_1))($b2c_2)))($a2b_0);
+  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Control_Semigroupoid_composeImpl'])($c2d_1, $b2c_2), $a2b_0);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -124,77 +131,82 @@ $GLOBALS['Data_Profunctor_profunctorFn'] = ["dimap" => (function() {
 })()];
 
 // Data_Profunctor_dimap
-$GLOBALS['Data_Profunctor_dimap'] = function($dict_0 = null) {
+function majData_majProfunctor_dimap($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majProfunctor_dimap';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['dimap'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Profunctor_dimap'] = __NAMESPACE__ . '\\majData_majProfunctor_dimap';
 
 // Data_Profunctor_lcmap
-$GLOBALS['Data_Profunctor_lcmap'] = (function() {
-  $__fn = function($dictProfunctor_0 = null, $a2b_1 = null) use (&$__fn) {
+function majData_majProfunctor_lcmap($dictProfunctor_0, $a2b_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majProfunctor_lcmap';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictProfunctor_0)['dimap'])($a2b_1))($GLOBALS['Data_Profunctor_identity']);
+  $__res = (($dictProfunctor_0)['dimap'])($a2b_1, $GLOBALS['Data_Profunctor_identity']);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Profunctor_lcmap'] = __NAMESPACE__ . '\\majData_majProfunctor_lcmap';
 
 // Data_Profunctor_rmap
-$GLOBALS['Data_Profunctor_rmap'] = (function() {
-  $__fn = function($dictProfunctor_0 = null, $b2c_1 = null) use (&$__fn) {
+function majData_majProfunctor_rmap($dictProfunctor_0, $b2c_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majProfunctor_rmap';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictProfunctor_0)['dimap'])($GLOBALS['Data_Profunctor_identity']))($b2c_1);
+  $__res = (($dictProfunctor_0)['dimap'])($GLOBALS['Data_Profunctor_identity'], $b2c_1);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Profunctor_rmap'] = __NAMESPACE__ . '\\majData_majProfunctor_rmap';
 
 // Data_Profunctor_unwrapIso
-$GLOBALS['Data_Profunctor_unwrapIso'] = (function() {
-  $__fn = function($dictProfunctor_0 = null, $_dollar__unused_1 = null) use (&$__fn) {
+function majData_majProfunctor_unwrapmajIso($dictProfunctor_0, $_dollar__unused_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majProfunctor_unwrapmajIso';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictProfunctor_0)['dimap'])($GLOBALS['Unsafe_Coerce_unsafeCoerce']))($GLOBALS['Unsafe_Coerce_unsafeCoerce']);
+  $__res = (($dictProfunctor_0)['dimap'])($GLOBALS['Unsafe_Coerce_unsafeCoerce'], $GLOBALS['Unsafe_Coerce_unsafeCoerce']);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Profunctor_unwrapIso'] = __NAMESPACE__ . '\\majData_majProfunctor_unwrapmajIso';
 
 // Data_Profunctor_wrapIso
-$GLOBALS['Data_Profunctor_wrapIso'] = (function() {
-  $__fn = function($dictProfunctor_0 = null, $_dollar__unused_1 = null, $v_2 = null) use (&$__fn) {
+function majData_majProfunctor_wrapmajIso($dictProfunctor_0, $_dollar__unused_1 = null, $v_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majProfunctor_wrapmajIso';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($dictProfunctor_0)['dimap'])($GLOBALS['Unsafe_Coerce_unsafeCoerce']))($GLOBALS['Unsafe_Coerce_unsafeCoerce']);
+  $__res = (($dictProfunctor_0)['dimap'])($GLOBALS['Unsafe_Coerce_unsafeCoerce'], $GLOBALS['Unsafe_Coerce_unsafeCoerce']);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_Profunctor_wrapIso'] = __NAMESPACE__ . '\\majData_majProfunctor_wrapmajIso';
 
 // Data_Profunctor_arr
-$GLOBALS['Data_Profunctor_arr'] = function($dictCategory_0 = null) {
+function majData_majProfunctor_arr($dictCategory_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majProfunctor_arr';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $identity1_1_0 = ($dictCategory_0)['identity'];
   $__res = (function() use ($identity1_1_0) {
   $__fn = function($dictProfunctor_2 = null, $f_3 = null) use ($identity1_1_0, &$__fn) {
@@ -202,7 +214,7 @@ $GLOBALS['Data_Profunctor_arr'] = function($dictCategory_0 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($dictProfunctor_2)['dimap'])($GLOBALS['Data_Profunctor_identity']))($f_3))($identity1_1_0);
+  $__res = (($dictProfunctor_2)['dimap'])($GLOBALS['Data_Profunctor_identity'], $f_3, $identity1_1_0);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -211,6 +223,7 @@ $GLOBALS['Data_Profunctor_arr'] = function($dictCategory_0 = null) {
 })();
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Profunctor_arr'] = __NAMESPACE__ . '\\majData_majProfunctor_arr';
 

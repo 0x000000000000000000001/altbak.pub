@@ -12,7 +12,7 @@ var once_tail sync.Once
 func Get_tail() gopurs_runtime.Value {
 	once_tail.Do(func() {
 		cache_tail = gopurs_runtime.Func2(func(_dollar__unused_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_tail(_dollar__unused_0_box, (*pkg_Data_List_Types.Constructor_Cons[gopurs_runtime.Value])(v_1_box.UnsafePtr))
+return gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(Call_tail(_dollar__unused_0_box, (*pkg_Data_List_Types.Constructor_Cons[gopurs_runtime.Value])(v_1_box.UnsafePtr)))}
 })
 	})
 	return cache_tail
@@ -34,7 +34,7 @@ var once_init_ sync.Once
 func Get_init_() gopurs_runtime.Value {
 	once_init_.Do(func() {
 		cache_init_ = gopurs_runtime.Func2(func(_dollar__unused_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_init_(_dollar__unused_0_box, (*pkg_Data_List_Types.Constructor_Cons[gopurs_runtime.Value])(v_1_box.UnsafePtr))
+return gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(Call_init_(_dollar__unused_0_box, (*pkg_Data_List_Types.Constructor_Cons[gopurs_runtime.Value])(v_1_box.UnsafePtr)))}
 })
 	})
 	return cache_init_
@@ -51,7 +51,7 @@ return Call_head(_dollar__unused_0_box, (*pkg_Data_List_Types.Constructor_Cons[g
 	return cache_head
 }
 
-func Call_tail(_dollar__unused_0_loop gopurs_runtime.Value, v_1_loop *pkg_Data_List_Types.Constructor_Cons[gopurs_runtime.Value]) gopurs_runtime.Value {
+func Call_tail(_dollar__unused_0_loop gopurs_runtime.Value, v_1_loop *pkg_Data_List_Types.Constructor_Cons[gopurs_runtime.Value]) *pkg_Data_List_Types.Constructor_Cons[gopurs_runtime.Value] {
 var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
 var v_1 *pkg_Data_List_Types.Constructor_Cons[gopurs_runtime.Value] = v_1_loop
@@ -69,7 +69,7 @@ goto end_branch_0
 __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_0:
-return __t0
+return (*pkg_Data_List_Types.Constructor_Cons[gopurs_runtime.Value])(__t0.UnsafePtr)
 }
 
 func Call_last(_dollar__unused_0_loop gopurs_runtime.Value, v_1_loop *pkg_Data_List_Types.Constructor_Cons[gopurs_runtime.Value]) gopurs_runtime.Value {
@@ -114,7 +114,7 @@ return __t0
 }
 }
 
-func Call_init_(_dollar__unused_0_loop gopurs_runtime.Value, v_1_loop *pkg_Data_List_Types.Constructor_Cons[gopurs_runtime.Value]) gopurs_runtime.Value {
+func Call_init_(_dollar__unused_0_loop gopurs_runtime.Value, v_1_loop *pkg_Data_List_Types.Constructor_Cons[gopurs_runtime.Value]) *pkg_Data_List_Types.Constructor_Cons[gopurs_runtime.Value] {
 init_:
 for {
 if false { continue init_ }
@@ -149,7 +149,7 @@ goto end_branch_0
 __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_0:
-return __t0
+return (*pkg_Data_List_Types.Constructor_Cons[gopurs_runtime.Value])(__t0.UnsafePtr)
 }
 }
 

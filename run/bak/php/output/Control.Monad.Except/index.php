@@ -101,22 +101,24 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Control_Monad_Except_withExcept
-$GLOBALS['Control_Monad_Except_withExcept'] = (function() {
-  $__fn = function($f_0 = null, $v_1 = null) use (&$__fn) {
+function majControl_majMonad_majExcept_withmajExcept($f_0, $v_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majExcept_withmajExcept';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_Identity_functorIdentity'])['map'])(function($v2_2 = null) use ($f_0) {
+  $__res = (($GLOBALS['Data_Identity_functorIdentity'])['map'])(function($v2_2 = null) use ($f_0) {
   $__num = \func_num_args();
   $__t0 = null;;
-  if ((is_object($v2_2) && (($v2_2)->{'tag'} === "Right"))) {
-$__t0 = new Phpurs_Data1("Right", ($v2_2)->{'value0'});
+  if ($v2_2 instanceof \Data\Either\Data_Either_Right) {
+$__t0 = new \Data\Either\Data_Either_Right(($v2_2)->{'value0'});
 goto end_branch_0;;
 };
-  if ((is_object($v2_2) && (($v2_2)->{'tag'} === "Left"))) {
-$__t0 = new Phpurs_Data1("Left", ($f_0)(($v2_2)->{'value0'}));
+  if ($v2_2 instanceof \Data\Either\Data_Either_Left) {
+$__t0 = new \Data\Either\Data_Either_Left(($f_0)(($v2_2)->{'value0'}));
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -126,23 +128,41 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))($v_1);
+}, $v_1);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Control_Monad_Except_withExcept'] = __NAMESPACE__ . '\\majControl_majMonad_majExcept_withmajExcept';
+
+// Control_Monad_Except_runExcept_closure
+$GLOBALS['Control_Monad_Except_runExcept_closure'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce'], $GLOBALS['Control_Monad_Except_Trans_runExceptT']);
 
 // Control_Monad_Except_runExcept
-$GLOBALS['Control_Monad_Except_runExcept'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce']))($GLOBALS['Control_Monad_Except_Trans_runExceptT']);
-
-// Control_Monad_Except_mapExcept
-$GLOBALS['Control_Monad_Except_mapExcept'] = function($f_0 = null) {
+function majControl_majMonad_majExcept_runmajExcept($v_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Identity_Identity']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_0))($GLOBALS['Unsafe_Coerce_unsafeCoerce']));
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majExcept_runmajExcept';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ($GLOBALS['Control_Monad_Except_runExcept_closure'])($v_0);
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_Except_runExcept'] = __NAMESPACE__ . '\\majControl_majMonad_majExcept_runmajExcept';
+
+// Control_Monad_Except_mapExcept
+function majControl_majMonad_majExcept_mapmajExcept($f_0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majExcept_mapmajExcept';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Identity_Identity'], ($GLOBALS['Control_Semigroupoid_composeImpl'])($f_0, $GLOBALS['Unsafe_Coerce_unsafeCoerce']));
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_Except_mapExcept'] = __NAMESPACE__ . '\\majControl_majMonad_majExcept_mapmajExcept';
 

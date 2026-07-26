@@ -178,7 +178,7 @@ var once_notEq sync.Once
 func Get_notEq() gopurs_runtime.Value {
 	once_notEq.Do(func() {
 		cache_notEq = gopurs_runtime.Func3(func(dictEq_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value, y_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_notEq(dictEq_0_box, x_1_box, y_2_box)
+return gopurs_runtime.Bool(Call_notEq(dictEq_0_box, x_1_box, y_2_box))
 })
 	})
 	return cache_notEq
@@ -243,14 +243,14 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Ge
 }))
 }
 
-func Call_notEq(dictEq_0_loop gopurs_runtime.Value, x_1_loop gopurs_runtime.Value, y_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_notEq(dictEq_0_loop gopurs_runtime.Value, x_1_loop gopurs_runtime.Value, y_2_loop gopurs_runtime.Value) bool {
 var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
 _ = dictEq_0
 var x_1 gopurs_runtime.Value = x_1_loop
 _ = x_1
 var y_2 gopurs_runtime.Value = y_2_loop
 _ = y_2
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_eqBoolean(), "eq"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), x_1, y_2), gopurs_runtime.Bool(false))
+return (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_eqBoolean(), "eq"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), x_1, y_2), gopurs_runtime.Bool(false)).IntVal) != (0)
 }
 
 func Call_notEq1(dictEq1_0_loop gopurs_runtime.Value, dictEq_1_loop gopurs_runtime.Value) gopurs_runtime.Value {

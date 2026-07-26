@@ -120,23 +120,35 @@ return $exports;
 $GLOBALS['Control_Bind_arrayBind'] = $ffi_Control_Bind['arrayBind'] ?? new class { public function __invoke(...$args) { return $this; } };
 
 
+
+
 // Control_Bind_identity
-$GLOBALS['Control_Bind_identity'] = function($x_0 = null) {
+function majControl_majBind_identity($x_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majBind_identity';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $x_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Bind_identity'] = __NAMESPACE__ . '\\majControl_majBind_identity';
 
 // Control_Bind_discard
-$GLOBALS['Control_Bind_discard'] = function($dict_0 = null) {
+function majControl_majBind_discard($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majBind_discard';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['discard'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Bind_discard'] = __NAMESPACE__ . '\\majControl_majBind_discard';
 
 // Control_Bind_bindProxy
 $GLOBALS['Control_Bind_bindProxy'] = ["bind" => (function() {
@@ -145,7 +157,7 @@ $GLOBALS['Control_Bind_bindProxy'] = ["bind" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data0("Proxy");
+  $__res = new \Type\Proxy\Type_Proxy_Proxy();
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -166,7 +178,7 @@ $GLOBALS['Control_Bind_bindFn'] = ["bind" => (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($f_1)(($m_0)($x_2)))($x_2);
+  $__res = ($f_1)(($m_0)($x_2), $x_2);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -190,58 +202,60 @@ $GLOBALS['Control_Bind_bindArray'] = ["bind" => $GLOBALS['Control_Bind_arrayBind
 }];
 
 // Control_Bind_bind
-$GLOBALS['Control_Bind_bind'] = function($dict_0 = null) {
+function majControl_majBind_bind($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majBind_bind';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['bind'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Bind_bind'] = __NAMESPACE__ . '\\majControl_majBind_bind';
 
 // Control_Bind_bindFlipped
-$GLOBALS['Control_Bind_bindFlipped'] = (function() {
-  $__fn = function($dictBind_0 = null, $b_1 = null, $a_2 = null) use (&$__fn) {
+function majControl_majBind_bindmajFlipped($dictBind_0, $b_1 = null, $a_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majBind_bindmajFlipped';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($dictBind_0)['bind'])($a_2))($b_1);
+  $__res = (($dictBind_0)['bind'])($a_2, $b_1);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Control_Bind_bindFlipped'] = __NAMESPACE__ . '\\majControl_majBind_bindmajFlipped';
 
 // Control_Bind_composeKleisliFlipped
-$GLOBALS['Control_Bind_composeKleisliFlipped'] = (function() {
-  $__fn = function($dictBind_0 = null, $f_1 = null, $g_2 = null, $a_3 = null) use (&$__fn) {
+function majControl_majBind_composemajKleislimajFlipped($dictBind_0, $f_1 = null, $g_2 = null, $a_3 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majBind_composemajKleislimajFlipped';
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ((($dictBind_0)['bind'])(($g_2)($a_3)))($f_1);
+  $__res = (($dictBind_0)['bind'])(($g_2)($a_3), $f_1);
   goto __end;;
   __end:
-  return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
-  };
-  return $__fn;
-})();
+  return 4 < $__num ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
+}
+$GLOBALS['Control_Bind_composeKleisliFlipped'] = __NAMESPACE__ . '\\majControl_majBind_composemajKleislimajFlipped';
 
 // Control_Bind_composeKleisli
-$GLOBALS['Control_Bind_composeKleisli'] = (function() {
-  $__fn = function($dictBind_0 = null, $f_1 = null, $g_2 = null, $a_3 = null) use (&$__fn) {
+function majControl_majBind_composemajKleisli($dictBind_0, $f_1 = null, $g_2 = null, $a_3 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majBind_composemajKleisli';
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ((($dictBind_0)['bind'])(($f_1)($a_3)))($g_2);
+  $__res = (($dictBind_0)['bind'])(($f_1)($a_3), $g_2);
   goto __end;;
   __end:
-  return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
-  };
-  return $__fn;
-})();
+  return 4 < $__num ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
+}
+$GLOBALS['Control_Bind_composeKleisli'] = __NAMESPACE__ . '\\majControl_majBind_composemajKleisli';
 
 // Control_Bind_discardProxy
 $GLOBALS['Control_Bind_discardProxy'] = ["discard" => function($dictBind_0 = null) {
@@ -262,13 +276,13 @@ $GLOBALS['Control_Bind_discardUnit'] = ["discard" => function($dictBind_0 = null
 }];
 
 // Control_Bind_ifM
-$GLOBALS['Control_Bind_ifM'] = (function() {
-  $__fn = function($dictBind_0 = null, $cond_1 = null, $t_2 = null, $f_3 = null) use (&$__fn) {
+function majControl_majBind_ifmajM($dictBind_0, $cond_1 = null, $t_2 = null, $f_3 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majBind_ifmajM';
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ((($dictBind_0)['bind'])($cond_1))(function($cond_prime_4 = null) use ($f_3, $t_2) {
+  $__res = (($dictBind_0)['bind'])($cond_1, function($cond_prime_4 = null) use ($f_3, $t_2) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ($cond_prime_4) {
@@ -284,23 +298,21 @@ goto end_branch_0;;
 });
   goto __end;;
   __end:
-  return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
-  };
-  return $__fn;
-})();
+  return 4 < $__num ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
+}
+$GLOBALS['Control_Bind_ifM'] = __NAMESPACE__ . '\\majControl_majBind_ifmajM';
 
 // Control_Bind_join
-$GLOBALS['Control_Bind_join'] = (function() {
-  $__fn = function($dictBind_0 = null, $m_1 = null) use (&$__fn) {
+function majControl_majBind_join($dictBind_0, $m_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majBind_join';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictBind_0)['bind'])($m_1))($GLOBALS['Control_Bind_identity']);
+  $__res = (($dictBind_0)['bind'])($m_1, $GLOBALS['Control_Bind_identity']);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Control_Bind_join'] = __NAMESPACE__ . '\\majControl_majBind_join';
 

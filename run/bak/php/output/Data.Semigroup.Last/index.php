@@ -106,29 +106,41 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_Semigroup_Last_Last
-$GLOBALS['Data_Semigroup_Last_Last'] = function($x_0 = null) {
+function majData_majSemigroup_majLast_majLast($x_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majSemigroup_majLast_majLast';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $x_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Semigroup_Last_Last'] = __NAMESPACE__ . '\\majData_majSemigroup_majLast_majLast';
 
 // Data_Semigroup_Last_showLast
-$GLOBALS['Data_Semigroup_Last_showLast'] = function($dictShow_0 = null) {
+function majData_majSemigroup_majLast_showmajLast($dictShow_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majSemigroup_majLast_showmajLast';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Last "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1)))(")"));
+  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Last ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1), ")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Semigroup_Last_showLast'] = __NAMESPACE__ . '\\majData_majSemigroup_majLast_showmajLast';
 
 // Data_Semigroup_Last_semigroupLast
 $GLOBALS['Data_Semigroup_Last_semigroupLast'] = ["append" => (function() {
@@ -146,13 +158,18 @@ $GLOBALS['Data_Semigroup_Last_semigroupLast'] = ["append" => (function() {
 })()];
 
 // Data_Semigroup_Last_ordLast
-$GLOBALS['Data_Semigroup_Last_ordLast'] = function($dictOrd_0 = null) {
+function majData_majSemigroup_majLast_ordmajLast($dictOrd_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majSemigroup_majLast_ordmajLast';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictOrd_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Semigroup_Last_ordLast'] = __NAMESPACE__ . '\\majData_majSemigroup_majLast_ordmajLast';
 
 // Data_Semigroup_Last_functorLast
 $GLOBALS['Data_Semigroup_Last_functorLast'] = ["map" => (function() {
@@ -170,13 +187,18 @@ $GLOBALS['Data_Semigroup_Last_functorLast'] = ["map" => (function() {
 })()];
 
 // Data_Semigroup_Last_eqLast
-$GLOBALS['Data_Semigroup_Last_eqLast'] = function($dictEq_0 = null) {
+function majData_majSemigroup_majLast_eqmajLast($dictEq_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majSemigroup_majLast_eqmajLast';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictEq_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Semigroup_Last_eqLast'] = __NAMESPACE__ . '\\majData_majSemigroup_majLast_eqmajLast';
 
 // Data_Semigroup_Last_eq1Last
 $GLOBALS['Data_Semigroup_Last_eq1Last'] = ["eq1" => function($dictEq_0 = null) {
@@ -203,13 +225,18 @@ $GLOBALS['Data_Semigroup_Last_ord1Last'] = ["compare1" => function($dictOrd_0 = 
 }];
 
 // Data_Semigroup_Last_boundedLast
-$GLOBALS['Data_Semigroup_Last_boundedLast'] = function($dictBounded_0 = null) {
+function majData_majSemigroup_majLast_boundedmajLast($dictBounded_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majSemigroup_majLast_boundedmajLast';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictBounded_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Semigroup_Last_boundedLast'] = __NAMESPACE__ . '\\majData_majSemigroup_majLast_boundedmajLast';
 
 // Data_Semigroup_Last_applyLast
 $GLOBALS['Data_Semigroup_Last_applyLast'] = ["apply" => (function() {

@@ -107,16 +107,19 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+final class Test_Primes_Nil { public function __construct() {} }
+final class Test_Primes_Cons { public function __construct(public mixed $value0, public mixed $value1) {} }
+
 // Test_Primes_lessThan
 $GLOBALS['Test_Primes_lessThan'] = (function() use (&$__fn) {
-$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT"));
+$__local_var_0_0 = ($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT(), new \Data\Ordering\Data_Ordering_EQ(), new \Data\Ordering\Data_Ordering_GT());
 return (function() use ($__local_var_0_0) {
   $__fn = function($a1_1 = null, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (is_object((($__local_var_0_0)($a1_1))($a2_2)) && (((($__local_var_0_0)($a1_1))($a2_2))->{'tag'} === "LT"));
+  $__res = ($__local_var_0_0)($a1_1, $a2_2) instanceof \Data\Ordering\Data_Ordering_LT;
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -126,7 +129,7 @@ return (function() use ($__local_var_0_0) {
 })();
 
 // Test_Primes_Nil
-$GLOBALS['Test_Primes_Nil'] = ($GLOBALS['__phpurs_data0_Nil'] ??= new Phpurs_Data0("Nil"));
+$GLOBALS['Test_Primes_Nil'] = ($GLOBALS['__phpurs_data0_Nil'] ??= new \Test\Primes\Test_Primes_Nil());
 
 // Test_Primes_Cons
 $GLOBALS['Test_Primes_Cons'] = (function() {
@@ -135,7 +138,7 @@ $GLOBALS['Test_Primes_Cons'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Cons", $value0, $value1);
+  $__res = new \Test\Primes\Test_Primes_Cons($value0, $value1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -144,8 +147,12 @@ $GLOBALS['Test_Primes_Cons'] = (function() {
 })();
 
 // Test_Primes_sumList
-$GLOBALS['Test_Primes_sumList'] = function($lst_0 = null) {
+function majTest_majPrimes_summajList($lst_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majTest_majPrimes_summajList';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $go__1_0 = null;
   $go__1_0 = (function() use (&$go__1_0) {
   $__fn = function($v_2 = null, $v1_3 = null) use (&$go__1_0, &$__fn) {
@@ -159,11 +166,11 @@ $GLOBALS['Test_Primes_sumList'] = function($lst_0 = null) {
   $v_2 = $__tco_var_go__1_0_0_v_2;
   $v1_3 = $__tco_var_go__1_0_0_v1_3;
   $__t0 = null;;
-  if ((is_object($v_2) && (($v_2)->{'tag'} === "Nil"))) {
+  if ($v_2 instanceof \Test\Primes\Test_Primes_Nil) {
 $__t0 = $v1_3;
 goto end_branch_0;;
 };
-  if ((is_object($v_2) && (($v_2)->{'tag'} === "Cons"))) {
+  if ($v_2 instanceof \Test\Primes\Test_Primes_Cons) {
 $__tco_1 = ($v_2)->{'value1'};
 $__tco_2 = ($v1_3 + ($v_2)->{'value0'});
 $__tco_var_go__1_0_0_v_2 = $__tco_1;
@@ -182,15 +189,20 @@ goto end_branch_0;;
   };
   return $__fn;
 })();
-  $__res = (($go__1_0)($lst_0))(0);
+  $__res = ($go__1_0)($lst_0, 0);
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Test_Primes_sumList'] = __NAMESPACE__ . '\\majTest_majPrimes_summajList';
 
 // Test_Primes_reverse
-$GLOBALS['Test_Primes_reverse'] = function($lst_0 = null) {
+function majTest_majPrimes_reverse($lst_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majTest_majPrimes_reverse';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $go__1_0 = null;
   $go__1_0 = (function() use (&$go__1_0) {
   $__fn = function($v_2 = null, $v1_3 = null) use (&$go__1_0, &$__fn) {
@@ -204,13 +216,13 @@ $GLOBALS['Test_Primes_reverse'] = function($lst_0 = null) {
   $v_2 = $__tco_var_go__1_0_0_v_2;
   $v1_3 = $__tco_var_go__1_0_0_v1_3;
   $__t0 = null;;
-  if ((is_object($v_2) && (($v_2)->{'tag'} === "Nil"))) {
+  if ($v_2 instanceof \Test\Primes\Test_Primes_Nil) {
 $__t0 = $v1_3;
 goto end_branch_0;;
 };
-  if ((is_object($v_2) && (($v_2)->{'tag'} === "Cons"))) {
+  if ($v_2 instanceof \Test\Primes\Test_Primes_Cons) {
 $__tco_1 = ($v_2)->{'value1'};
-$__tco_2 = new Phpurs_Data2("Cons", ($v_2)->{'value0'}, $v1_3);
+$__tco_2 = new \Test\Primes\Test_Primes_Cons(($v_2)->{'value0'}, $v1_3);
 $__tco_var_go__1_0_0_v_2 = $__tco_1;
 $__tco_var_go__1_0_0_v1_3 = $__tco_2;
 goto tco_loop_go__1_0_0;;
@@ -227,16 +239,17 @@ goto end_branch_0;;
   };
   return $__fn;
 })();
-  $__res = (($go__1_0)($lst_0))(new Phpurs_Data0("Nil"));
+  $__res = ($go__1_0)($lst_0, new \Test\Primes\Test_Primes_Nil());
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Test_Primes_reverse'] = __NAMESPACE__ . '\\majTest_majPrimes_reverse';
 
 // Test_Primes_range
-$GLOBALS['Test_Primes_range'] = (function() {
-  $__fn = function($start_0 = null, $end_1 = null) use (&$__fn) {
+function majTest_majPrimes_range($start_0, $end_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majTest_majPrimes_range';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
@@ -253,12 +266,12 @@ $GLOBALS['Test_Primes_range'] = (function() {
   $curr_3 = $__tco_var_go__2_0_0_curr_3;
   $acc_4 = $__tco_var_go__2_0_0_acc_4;
   $__t2 = null;;
-  if ((($GLOBALS['Test_Primes_lessThan'])($curr_3))($start_0)) {
+  if (($GLOBALS['Test_Primes_lessThan'])($curr_3, $start_0)) {
 $__t2 = $acc_4;
 goto end_branch_2;;
 };
   $__tco_0 = ($curr_3 - 1);
-  $__tco_1 = new Phpurs_Data2("Cons", $curr_3, $acc_4);
+  $__tco_1 = new \Test\Primes\Test_Primes_Cons($curr_3, $acc_4);
   $__tco_var_go__2_0_0_curr_3 = $__tco_0;
   $__tco_var_go__2_0_0_acc_4 = $__tco_1;
   goto tco_loop_go__2_0_0;;
@@ -271,18 +284,17 @@ goto end_branch_2;;
   };
   return $__fn;
 })();
-  $__res = (($go__2_0)($end_1))(new Phpurs_Data0("Nil"));
+  $__res = ($go__2_0)($end_1, new \Test\Primes\Test_Primes_Nil());
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Test_Primes_range'] = __NAMESPACE__ . '\\majTest_majPrimes_range';
 
 // Test_Primes_filter
-$GLOBALS['Test_Primes_filter'] = (function() {
-  $__fn = function($p_0 = null, $lst_1 = null) use (&$__fn) {
+function majTest_majPrimes_filter($p_0, $lst_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majTest_majPrimes_filter';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
@@ -299,7 +311,7 @@ $GLOBALS['Test_Primes_filter'] = (function() {
   $v_3 = $__tco_var_go__2_0_0_v_3;
   $v1_4 = $__tco_var_go__2_0_0_v1_4;
   $__t0 = null;;
-  if ((is_object($v_3) && (($v_3)->{'tag'} === "Nil"))) {
+  if ($v_3 instanceof \Test\Primes\Test_Primes_Nil) {
 $go__5_1 = null;
 $go__5_1 = (function() use (&$__tco_var_go__2_0_0_v_3, &$__tco_var_go__2_0_0_v1_4, &$go__5_1) {
   $__fn = function($v_6 = null, $v1_7 = null) use (&$__tco_var_go__2_0_0_v_3, &$__tco_var_go__2_0_0_v1_4, &$go__5_1, &$__fn) {
@@ -313,13 +325,13 @@ $go__5_1 = (function() use (&$__tco_var_go__2_0_0_v_3, &$__tco_var_go__2_0_0_v1_
   $v_6 = $__tco_var_go__5_1_1_v_6;
   $v1_7 = $__tco_var_go__5_1_1_v1_7;
   $__t1 = null;;
-  if ((is_object($v_6) && (($v_6)->{'tag'} === "Nil"))) {
+  if ($v_6 instanceof \Test\Primes\Test_Primes_Nil) {
 $__t1 = $v1_7;
 goto end_branch_1;;
 };
-  if ((is_object($v_6) && (($v_6)->{'tag'} === "Cons"))) {
+  if ($v_6 instanceof \Test\Primes\Test_Primes_Cons) {
 $__tco_2 = ($v_6)->{'value1'};
-$__tco_3 = new Phpurs_Data2("Cons", ($v_6)->{'value0'}, $v1_7);
+$__tco_3 = new \Test\Primes\Test_Primes_Cons(($v_6)->{'value0'}, $v1_7);
 $__tco_var_go__5_1_1_v_6 = $__tco_2;
 $__tco_var_go__5_1_1_v1_7 = $__tco_3;
 goto tco_loop_go__5_1_1;;
@@ -336,14 +348,14 @@ goto end_branch_1;;
   };
   return $__fn;
 })();
-$__t0 = (($go__5_1)($v1_4))(new Phpurs_Data0("Nil"));
+$__t0 = ($go__5_1)($v1_4, new \Test\Primes\Test_Primes_Nil());
 goto end_branch_0;;
 };
-  if ((is_object($v_3) && (($v_3)->{'tag'} === "Cons"))) {
+  if ($v_3 instanceof \Test\Primes\Test_Primes_Cons) {
 $__t4 = null;;
 if (($p_0)(($v_3)->{'value0'})) {
 $__tco_5 = ($v_3)->{'value1'};
-$__tco_6 = new Phpurs_Data2("Cons", ($v_3)->{'value0'}, $v1_4);
+$__tco_6 = new \Test\Primes\Test_Primes_Cons(($v_3)->{'value0'}, $v1_4);
 $__tco_var_go__2_0_0_v_3 = $__tco_5;
 $__tco_var_go__2_0_0_v1_4 = $__tco_6;
 goto tco_loop_go__2_0_0;;
@@ -370,26 +382,29 @@ goto end_branch_0;;
   };
   return $__fn;
 })();
-  $__res = (($go__2_0)($lst_1))(new Phpurs_Data0("Nil"));
+  $__res = ($go__2_0)($lst_1, new \Test\Primes\Test_Primes_Nil());
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Test_Primes_filter'] = __NAMESPACE__ . '\\majTest_majPrimes_filter';
 
 // Test_Primes_sieve
-$GLOBALS['Test_Primes_sieve'] = function($v_0 = null) {
+function majTest_majPrimes_sieve($v_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majTest_majPrimes_sieve';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__tco_var_Test_Primes_sieve_v_0 = $v_0;
   tco_loop_Test_Primes_sieve:;
   $v_0 = $__tco_var_Test_Primes_sieve_v_0;
   $__t0 = null;;
-  if ((is_object($v_0) && (($v_0)->{'tag'} === "Nil"))) {
-$__t0 = new Phpurs_Data0("Nil");
+  if ($v_0 instanceof \Test\Primes\Test_Primes_Nil) {
+$__t0 = new \Test\Primes\Test_Primes_Nil();
 goto end_branch_0;;
 };
-  if ((is_object($v_0) && (($v_0)->{'tag'} === "Cons"))) {
+  if ($v_0 instanceof \Test\Primes\Test_Primes_Cons) {
 $__local_var_1_1 = ($v_0)->{'value0'};
 $go__2_2 = null;
 $go__2_2 = (function() use ($__local_var_1_1, &$go__2_2) {
@@ -404,7 +419,7 @@ $go__2_2 = (function() use ($__local_var_1_1, &$go__2_2) {
   $v_3 = $__tco_var_go__2_2_2_v_3;
   $v1_4 = $__tco_var_go__2_2_2_v1_4;
   $__t2 = null;;
-  if ((is_object($v_3) && (($v_3)->{'tag'} === "Nil"))) {
+  if ($v_3 instanceof \Test\Primes\Test_Primes_Nil) {
 $go__5_3 = null;
 $go__5_3 = (function() use (&$__tco_var_go__2_2_2_v_3, &$__tco_var_go__2_2_2_v1_4, &$go__5_3) {
   $__fn = function($v_6 = null, $v1_7 = null) use (&$__tco_var_go__2_2_2_v_3, &$__tco_var_go__2_2_2_v1_4, &$go__5_3, &$__fn) {
@@ -418,13 +433,13 @@ $go__5_3 = (function() use (&$__tco_var_go__2_2_2_v_3, &$__tco_var_go__2_2_2_v1_
   $v_6 = $__tco_var_go__5_3_3_v_6;
   $v1_7 = $__tco_var_go__5_3_3_v1_7;
   $__t3 = null;;
-  if ((is_object($v_6) && (($v_6)->{'tag'} === "Nil"))) {
+  if ($v_6 instanceof \Test\Primes\Test_Primes_Nil) {
 $__t3 = $v1_7;
 goto end_branch_3;;
 };
-  if ((is_object($v_6) && (($v_6)->{'tag'} === "Cons"))) {
+  if ($v_6 instanceof \Test\Primes\Test_Primes_Cons) {
 $__tco_4 = ($v_6)->{'value1'};
-$__tco_5 = new Phpurs_Data2("Cons", ($v_6)->{'value0'}, $v1_7);
+$__tco_5 = new \Test\Primes\Test_Primes_Cons(($v_6)->{'value0'}, $v1_7);
 $__tco_var_go__5_3_3_v_6 = $__tco_4;
 $__tco_var_go__5_3_3_v1_7 = $__tco_5;
 goto tco_loop_go__5_3_3;;
@@ -441,14 +456,14 @@ goto end_branch_3;;
   };
   return $__fn;
 })();
-$__t2 = (($go__5_3)($v1_4))(new Phpurs_Data0("Nil"));
+$__t2 = ($go__5_3)($v1_4, new \Test\Primes\Test_Primes_Nil());
 goto end_branch_2;;
 };
-  if ((is_object($v_3) && (($v_3)->{'tag'} === "Cons"))) {
+  if ($v_3 instanceof \Test\Primes\Test_Primes_Cons) {
 $__t6 = null;;
-if (((($GLOBALS['Data_Eq_eqBoolean'])['eq'])((((($GLOBALS['Data_EuclideanRing_euclideanRingInt'])['mod'])(($v_3)->{'value0'}))($__local_var_1_1) === 0)))(false)) {
+if ((($GLOBALS['Data_Eq_eqBoolean'])['eq'])(((($GLOBALS['Data_EuclideanRing_euclideanRingInt'])['mod'])(($v_3)->{'value0'}, $__local_var_1_1) === 0), false)) {
 $__tco_7 = ($v_3)->{'value1'};
-$__tco_8 = new Phpurs_Data2("Cons", ($v_3)->{'value0'}, $v1_4);
+$__tco_8 = new \Test\Primes\Test_Primes_Cons(($v_3)->{'value0'}, $v1_4);
 $__tco_var_go__2_2_2_v_3 = $__tco_7;
 $__tco_var_go__2_2_2_v1_4 = $__tco_8;
 goto tco_loop_go__2_2_2;;
@@ -475,7 +490,7 @@ goto end_branch_2;;
   };
   return $__fn;
 })();
-$__t0 = new Phpurs_Data2("Cons", $__local_var_1_1, ($GLOBALS['Test_Primes_sieve'])((($go__2_2)(($v_0)->{'value1'}))(new Phpurs_Data0("Nil"))));
+$__t0 = new \Test\Primes\Test_Primes_Cons($__local_var_1_1, ($GLOBALS['Test_Primes_sieve'])(($go__2_2)(($v_0)->{'value1'}, new \Test\Primes\Test_Primes_Nil())));
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -484,14 +499,15 @@ goto end_branch_0;;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Test_Primes_sieve'] = __NAMESPACE__ . '\\majTest_majPrimes_sieve';
 
 // Test_Primes_describe
 $GLOBALS['Test_Primes_describe'] = ($GLOBALS['Effect_Console_log'])("Prime Sieve (sum primes up to 500):");
 
 // Test_Primes_act
-$GLOBALS['Test_Primes_act'] = ((($GLOBALS['Effect_bindEffect'])['bind'])(($GLOBALS['Bench_opaque'])(500)))(function($dummy_0 = null) {
+$GLOBALS['Test_Primes_act'] = (($GLOBALS['Effect_bindEffect'])['bind'])(($GLOBALS['Bench_opaque'])(500), function($dummy_0 = null) {
   $__num = \func_num_args();
   $go__1_0 = null;
   $go__1_0 = (function() use (&$go__1_0) {
@@ -506,11 +522,11 @@ $GLOBALS['Test_Primes_act'] = ((($GLOBALS['Effect_bindEffect'])['bind'])(($GLOBA
   $v_2 = $__tco_var_go__1_0_0_v_2;
   $v1_3 = $__tco_var_go__1_0_0_v1_3;
   $__t0 = null;;
-  if ((is_object($v_2) && (($v_2)->{'tag'} === "Nil"))) {
+  if ($v_2 instanceof \Test\Primes\Test_Primes_Nil) {
 $__t0 = $v1_3;
 goto end_branch_0;;
 };
-  if ((is_object($v_2) && (($v_2)->{'tag'} === "Cons"))) {
+  if ($v_2 instanceof \Test\Primes\Test_Primes_Cons) {
 $__tco_1 = ($v_2)->{'value1'};
 $__tco_2 = ($v1_3 + ($v_2)->{'value0'});
 $__tco_var_go__1_0_0_v_2 = $__tco_1;
@@ -529,7 +545,7 @@ goto end_branch_0;;
   };
   return $__fn;
 })();
-  $__res = ($GLOBALS['Effect_Console_log'])((($GLOBALS['Data_Show_showInt'])['show'])((($go__1_0)(($GLOBALS['Test_Primes_sieve'])((($GLOBALS['Test_Primes_range'])(2))($dummy_0))))(0)));
+  $__res = ($GLOBALS['Effect_Console_log'])((($GLOBALS['Data_Show_showInt'])['show'])(($go__1_0)(($GLOBALS['Test_Primes_sieve'])(($GLOBALS['Test_Primes_range'])(2, $dummy_0)), 0)));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

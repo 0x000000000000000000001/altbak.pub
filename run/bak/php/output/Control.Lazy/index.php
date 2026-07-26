@@ -96,6 +96,8 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Control_Lazy_lazyUnit
 $GLOBALS['Control_Lazy_lazyUnit'] = ["defer" => function($v_0 = null) {
   $__num = \func_num_args();
@@ -112,7 +114,7 @@ $GLOBALS['Control_Lazy_lazyFn'] = ["defer" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($f_0)($GLOBALS['Data_Unit_unit']))($x_1);
+  $__res = ($f_0)($GLOBALS['Data_Unit_unit'], $x_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -121,18 +123,23 @@ $GLOBALS['Control_Lazy_lazyFn'] = ["defer" => (function() {
 })()];
 
 // Control_Lazy_defer
-$GLOBALS['Control_Lazy_defer'] = function($dict_0 = null) {
+function majControl_majLazy_defer($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majLazy_defer';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['defer'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Lazy_defer'] = __NAMESPACE__ . '\\majControl_majLazy_defer';
 
 // Control_Lazy_fix
-$GLOBALS['Control_Lazy_fix'] = (function() {
-  $__fn = function($dictLazy_0 = null, $f_1 = null) use (&$__fn) {
+function majControl_majLazy_fix($dictLazy_0, $f_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majLazy_fix';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
@@ -147,8 +154,7 @@ $GLOBALS['Control_Lazy_fix'] = (function() {
   $__res = $go__2_0;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Control_Lazy_fix'] = __NAMESPACE__ . '\\majControl_majLazy_fix';
 

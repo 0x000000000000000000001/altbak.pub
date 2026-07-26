@@ -102,14 +102,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_Op_Op
-$GLOBALS['Data_Op_Op'] = function($x_0 = null) {
+function majData_majOp_majOp($x_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majOp_majOp';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $x_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Op_Op'] = __NAMESPACE__ . '\\majData_majOp_majOp';
 
 // Data_Op_semigroupoidOp
 $GLOBALS['Data_Op_semigroupoidOp'] = ["compose" => (function() {
@@ -118,7 +125,7 @@ $GLOBALS['Data_Op_semigroupoidOp'] = ["compose" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($v1_1))($v_0);
+  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($v1_1, $v_0);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -127,15 +134,19 @@ $GLOBALS['Data_Op_semigroupoidOp'] = ["compose" => (function() {
 })()];
 
 // Data_Op_semigroupOp
-$GLOBALS['Data_Op_semigroupOp'] = function($dictSemigroup_0 = null) {
+function majData_majOp_semigroupmajOp($dictSemigroup_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majOp_semigroupmajOp';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["append" => (function() use ($dictSemigroup_0) {
   $__fn = function($f_1 = null, $g_2 = null, $x_3 = null) use ($dictSemigroup_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($dictSemigroup_0)['append'])(($f_1)($x_3)))(($g_2)($x_3));
+  $__res = (($dictSemigroup_0)['append'])(($f_1)($x_3), ($g_2)($x_3));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -144,8 +155,9 @@ $GLOBALS['Data_Op_semigroupOp'] = function($dictSemigroup_0 = null) {
 })()];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Op_semigroupOp'] = __NAMESPACE__ . '\\majData_majOp_semigroupmajOp';
 
 // Data_Op_newtypeOp
 $GLOBALS['Data_Op_newtypeOp'] = ["Coercible0" => function($_dollar__unused_0 = null) {
@@ -157,8 +169,12 @@ $GLOBALS['Data_Op_newtypeOp'] = ["Coercible0" => function($_dollar__unused_0 = n
 }];
 
 // Data_Op_monoidOp
-$GLOBALS['Data_Op_monoidOp'] = function($dictMonoid_0 = null) {
+function majData_majOp_monoidmajOp($dictMonoid_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majOp_monoidmajOp';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $mempty1_1_0 = ($dictMonoid_0)['mempty'];
   $__local_var_2_1 = (($dictMonoid_0)['Semigroup0'])(null);
   $semigroupFn_3_2 = ["append" => (function() use ($__local_var_2_1) {
@@ -167,7 +183,7 @@ $GLOBALS['Data_Op_monoidOp'] = function($dictMonoid_0 = null) {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($__local_var_2_1)['append'])(($f_3)($x_5)))(($g_4)($x_5));
+  $__res = (($__local_var_2_1)['append'])(($f_3)($x_5), ($g_4)($x_5));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -189,8 +205,9 @@ $GLOBALS['Data_Op_monoidOp'] = function($dictMonoid_0 = null) {
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Op_monoidOp'] = __NAMESPACE__ . '\\majData_majOp_monoidmajOp';
 
 // Data_Op_contravariantOp
 $GLOBALS['Data_Op_contravariantOp'] = ["cmap" => (function() {
@@ -199,7 +216,7 @@ $GLOBALS['Data_Op_contravariantOp'] = ["cmap" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($v_1))($f_0);
+  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($v_1, $f_0);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

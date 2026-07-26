@@ -131,21 +131,33 @@ $GLOBALS['Data_Array_ST_Partial_peekImpl'] = $ffi_Data_Array_ST_Partial['peekImp
 $GLOBALS['Data_Array_ST_Partial_pokeImpl'] = $ffi_Data_Array_ST_Partial['pokeImpl'] ?? new class { public function __invoke(...$args) { return $this; } };
 
 
+
+
 // Data_Array_ST_Partial_poke
-$GLOBALS['Data_Array_ST_Partial_poke'] = function($_dollar__unused_0 = null) {
+function majData_majArray_majSmajT_majPartial_poke($_dollar__unused_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majArray_majSmajT_majPartial_poke';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($GLOBALS['Control_Monad_ST_Uncurried_runSTFn3'])($GLOBALS['Data_Array_ST_Partial_pokeImpl']);
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Array_ST_Partial_poke'] = __NAMESPACE__ . '\\majData_majArray_majSmajT_majPartial_poke';
 
 // Data_Array_ST_Partial_peek
-$GLOBALS['Data_Array_ST_Partial_peek'] = function($_dollar__unused_0 = null) {
+function majData_majArray_majSmajT_majPartial_peek($_dollar__unused_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majArray_majSmajT_majPartial_peek';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($GLOBALS['Control_Monad_ST_Uncurried_runSTFn2'])($GLOBALS['Data_Array_ST_Partial_peekImpl']);
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Array_ST_Partial_peek'] = __NAMESPACE__ . '\\majData_majArray_majSmajT_majPartial_peek';
 

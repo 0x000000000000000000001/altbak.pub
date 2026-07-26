@@ -355,7 +355,7 @@ length_2_0 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Appl
 return gopurs_runtime.Int((1) + (c_2.IntVal))
 }), gopurs_runtime.Int(0))
 _ = length_2_0
-fromIndex1_3_1 := gopurs_runtime.Apply(Get_fromIndex(), dictFoldable1_1)
+fromIndex1_3_1 := Call_fromIndex(dictFoldable1_1)
 _ = fromIndex1_3_1
 return gopurs_runtime.Func(func(xs_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadGen_0, "Monad0"), gopurs_runtime.Value{}), "Bind1"), gopurs_runtime.Value{}), "bind"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadGen_0, "chooseInt"), gopurs_runtime.Int(0), gopurs_runtime.Int((gopurs_runtime.Apply(length_2_0, xs_4).IntVal) - (1))), gopurs_runtime.Func(func(n_5 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -483,7 +483,7 @@ length_3_1 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Appl
 return gopurs_runtime.Int((1) + (c_3.IntVal))
 }), gopurs_runtime.Int(0))
 _ = length_3_1
-fromIndex1_4_2 := gopurs_runtime.Apply(Get_fromIndex(), dictFoldable1_2)
+fromIndex1_4_2 := Call_fromIndex(dictFoldable1_2)
 _ = fromIndex1_4_2
 return gopurs_runtime.Func(func(xs_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Bind1"), gopurs_runtime.Value{}), "bind"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadGen_0, "chooseInt"), gopurs_runtime.Int(0), gopurs_runtime.Int((gopurs_runtime.Apply(length_3_1, xs_5).IntVal) - (1))), gopurs_runtime.Func(func(n_6 gopurs_runtime.Value) gopurs_runtime.Value {

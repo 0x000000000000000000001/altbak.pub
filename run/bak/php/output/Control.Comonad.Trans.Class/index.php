@@ -97,14 +97,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Control_Comonad_Trans_Class_lower
-$GLOBALS['Control_Comonad_Trans_Class_lower'] = function($dict_0 = null) {
+function majControl_majComonad_majTrans_majClass_lower($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majComonad_majTrans_majClass_lower';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['lower'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Comonad_Trans_Class_lower'] = __NAMESPACE__ . '\\majControl_majComonad_majTrans_majClass_lower';
 
 // Control_Comonad_Trans_Class_comonadTransIdentityT
 $GLOBALS['Control_Comonad_Trans_Class_comonadTransIdentityT'] = ["lower" => function($dictComonad_0 = null) {

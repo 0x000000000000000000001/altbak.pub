@@ -119,65 +119,97 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_Identity_Identity
-$GLOBALS['Data_Identity_Identity'] = function($x_0 = null) {
+function majData_majIdentity_majIdentity($x_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majIdentity_majIdentity';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $x_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Identity_Identity'] = __NAMESPACE__ . '\\majData_majIdentity_majIdentity';
 
 // Data_Identity_showIdentity
-$GLOBALS['Data_Identity_showIdentity'] = function($dictShow_0 = null) {
+function majData_majIdentity_showmajIdentity($dictShow_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majIdentity_showmajIdentity';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Identity "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1)))(")"));
+  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Identity ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1), ")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Identity_showIdentity'] = __NAMESPACE__ . '\\majData_majIdentity_showmajIdentity';
 
 // Data_Identity_semiringIdentity
-$GLOBALS['Data_Identity_semiringIdentity'] = function($dictSemiring_0 = null) {
+function majData_majIdentity_semiringmajIdentity($dictSemiring_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majIdentity_semiringmajIdentity';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictSemiring_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Identity_semiringIdentity'] = __NAMESPACE__ . '\\majData_majIdentity_semiringmajIdentity';
 
 // Data_Identity_semigroupIdentity
-$GLOBALS['Data_Identity_semigroupIdentity'] = function($dictSemigroup_0 = null) {
+function majData_majIdentity_semigroupmajIdentity($dictSemigroup_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majIdentity_semigroupmajIdentity';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictSemigroup_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Identity_semigroupIdentity'] = __NAMESPACE__ . '\\majData_majIdentity_semigroupmajIdentity';
 
 // Data_Identity_ringIdentity
-$GLOBALS['Data_Identity_ringIdentity'] = function($dictRing_0 = null) {
+function majData_majIdentity_ringmajIdentity($dictRing_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majIdentity_ringmajIdentity';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictRing_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Identity_ringIdentity'] = __NAMESPACE__ . '\\majData_majIdentity_ringmajIdentity';
 
 // Data_Identity_ordIdentity
-$GLOBALS['Data_Identity_ordIdentity'] = function($dictOrd_0 = null) {
+function majData_majIdentity_ordmajIdentity($dictOrd_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majIdentity_ordmajIdentity';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictOrd_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Identity_ordIdentity'] = __NAMESPACE__ . '\\majData_majIdentity_ordmajIdentity';
 
 // Data_Identity_newtypeIdentity
 $GLOBALS['Data_Identity_newtypeIdentity'] = ["Coercible0" => function($_dollar__unused_0 = null) {
@@ -189,31 +221,46 @@ $GLOBALS['Data_Identity_newtypeIdentity'] = ["Coercible0" => function($_dollar__
 }];
 
 // Data_Identity_monoidIdentity
-$GLOBALS['Data_Identity_monoidIdentity'] = function($dictMonoid_0 = null) {
+function majData_majIdentity_monoidmajIdentity($dictMonoid_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majIdentity_monoidmajIdentity';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictMonoid_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Identity_monoidIdentity'] = __NAMESPACE__ . '\\majData_majIdentity_monoidmajIdentity';
 
 // Data_Identity_lazyIdentity
-$GLOBALS['Data_Identity_lazyIdentity'] = function($dictLazy_0 = null) {
+function majData_majIdentity_lazymajIdentity($dictLazy_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majIdentity_lazymajIdentity';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictLazy_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Identity_lazyIdentity'] = __NAMESPACE__ . '\\majData_majIdentity_lazymajIdentity';
 
 // Data_Identity_heytingAlgebraIdentity
-$GLOBALS['Data_Identity_heytingAlgebraIdentity'] = function($dictHeytingAlgebra_0 = null) {
+function majData_majIdentity_heytingmajAlgebramajIdentity($dictHeytingAlgebra_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majIdentity_heytingmajAlgebramajIdentity';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictHeytingAlgebra_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Identity_heytingAlgebraIdentity'] = __NAMESPACE__ . '\\majData_majIdentity_heytingmajAlgebramajIdentity';
 
 // Data_Identity_functorIdentity
 $GLOBALS['Data_Identity_functorIdentity'] = ["map" => (function() {
@@ -267,22 +314,32 @@ $GLOBALS['Data_Identity_extendIdentity'] = ["extend" => (function() {
 }];
 
 // Data_Identity_euclideanRingIdentity
-$GLOBALS['Data_Identity_euclideanRingIdentity'] = function($dictEuclideanRing_0 = null) {
+function majData_majIdentity_euclideanmajRingmajIdentity($dictEuclideanRing_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majIdentity_euclideanmajRingmajIdentity';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictEuclideanRing_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Identity_euclideanRingIdentity'] = __NAMESPACE__ . '\\majData_majIdentity_euclideanmajRingmajIdentity';
 
 // Data_Identity_eqIdentity
-$GLOBALS['Data_Identity_eqIdentity'] = function($dictEq_0 = null) {
+function majData_majIdentity_eqmajIdentity($dictEq_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majIdentity_eqmajIdentity';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictEq_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Identity_eqIdentity'] = __NAMESPACE__ . '\\majData_majIdentity_eqmajIdentity';
 
 // Data_Identity_eq1Identity
 $GLOBALS['Data_Identity_eq1Identity'] = ["eq1" => function($dictEq_0 = null) {
@@ -324,31 +381,46 @@ $GLOBALS['Data_Identity_comonadIdentity'] = ["extract" => function($v_0 = null) 
 }];
 
 // Data_Identity_commutativeRingIdentity
-$GLOBALS['Data_Identity_commutativeRingIdentity'] = function($dictCommutativeRing_0 = null) {
+function majData_majIdentity_commutativemajRingmajIdentity($dictCommutativeRing_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majIdentity_commutativemajRingmajIdentity';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictCommutativeRing_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Identity_commutativeRingIdentity'] = __NAMESPACE__ . '\\majData_majIdentity_commutativemajRingmajIdentity';
 
 // Data_Identity_boundedIdentity
-$GLOBALS['Data_Identity_boundedIdentity'] = function($dictBounded_0 = null) {
+function majData_majIdentity_boundedmajIdentity($dictBounded_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majIdentity_boundedmajIdentity';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictBounded_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Identity_boundedIdentity'] = __NAMESPACE__ . '\\majData_majIdentity_boundedmajIdentity';
 
 // Data_Identity_booleanAlgebraIdentity
-$GLOBALS['Data_Identity_booleanAlgebraIdentity'] = function($dictBooleanAlgebra_0 = null) {
+function majData_majIdentity_booleanmajAlgebramajIdentity($dictBooleanAlgebra_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majIdentity_booleanmajAlgebramajIdentity';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictBooleanAlgebra_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Identity_booleanAlgebraIdentity'] = __NAMESPACE__ . '\\majData_majIdentity_booleanmajAlgebramajIdentity';
 
 // Data_Identity_applyIdentity
 $GLOBALS['Data_Identity_applyIdentity'] = ["apply" => (function() {

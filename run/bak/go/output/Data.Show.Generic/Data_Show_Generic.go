@@ -100,7 +100,7 @@ var once_genericShow sync.Once
 func Get_genericShow() gopurs_runtime.Value {
 	once_genericShow.Do(func() {
 		cache_genericShow = gopurs_runtime.Func3(func(dictGeneric_0_box gopurs_runtime.Value, dictGenericShow_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_genericShow(dictGeneric_0_box, dictGenericShow_1_box, x_2_box)
+return gopurs_runtime.Str(Call_genericShow(dictGeneric_0_box, dictGenericShow_1_box, x_2_box))
 })
 	})
 	return cache_genericShow
@@ -194,14 +194,14 @@ return __t0
 }))
 }
 
-func Call_genericShow(dictGeneric_0_loop gopurs_runtime.Value, dictGenericShow_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_genericShow(dictGeneric_0_loop gopurs_runtime.Value, dictGenericShow_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) string {
 var dictGeneric_0 gopurs_runtime.Value = dictGeneric_0_loop
 _ = dictGeneric_0
 var dictGenericShow_1 gopurs_runtime.Value = dictGenericShow_1_loop
 _ = dictGenericShow_1
 var x_2 gopurs_runtime.Value = x_2_loop
 _ = x_2
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericShow_1, "genericShow'"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGeneric_0, "from"), x_2))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericShow_1, "genericShow'"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGeneric_0, "from"), x_2)).StrVal()
 }
 
 func Get_intercalate() gopurs_runtime.Value {

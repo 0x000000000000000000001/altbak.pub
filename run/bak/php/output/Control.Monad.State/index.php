@@ -101,54 +101,78 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
+// Control_Monad_State_withState_closure
+$GLOBALS['Control_Monad_State_withState_closure'] = $GLOBALS['Control_Monad_State_Trans_withStateT'];
+
 // Control_Monad_State_withState
-$GLOBALS['Control_Monad_State_withState'] = $GLOBALS['Control_Monad_State_Trans_withStateT'];
+function majControl_majMonad_majState_withmajState($v_0, $v_1 = null) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majState_withmajState';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ($GLOBALS['Control_Monad_State_withState_closure'])($v_0, $v_1);
+  goto __end;;
+  __end:
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Control_Monad_State_withState'] = __NAMESPACE__ . '\\majControl_majMonad_majState_withmajState';
 
 // Control_Monad_State_runState
-$GLOBALS['Control_Monad_State_runState'] = function($v_0 = null) {
+function majControl_majMonad_majState_runmajState($v_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce']))($v_0);
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majState_runmajState';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce'], $v_0);
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_State_runState'] = __NAMESPACE__ . '\\majControl_majMonad_majState_runmajState';
 
 // Control_Monad_State_mapState
-$GLOBALS['Control_Monad_State_mapState'] = function($f_0 = null) {
+function majControl_majMonad_majState_mapmajState($f_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Monad_State_Trans_mapStateT'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Identity_Identity']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_0))($GLOBALS['Unsafe_Coerce_unsafeCoerce'])));
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majState_mapmajState';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ($GLOBALS['Control_Monad_State_Trans_mapStateT'])(($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Identity_Identity'], ($GLOBALS['Control_Semigroupoid_composeImpl'])($f_0, $GLOBALS['Unsafe_Coerce_unsafeCoerce'])));
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_State_mapState'] = __NAMESPACE__ . '\\majControl_majMonad_majState_mapmajState';
 
 // Control_Monad_State_execState
-$GLOBALS['Control_Monad_State_execState'] = (function() {
-  $__fn = function($v_0 = null, $s_1 = null) use (&$__fn) {
+function majControl_majMonad_majState_execmajState($v_0, $s_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majState_execmajState';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__res = (($v_0)($s_1))->{'value1'};
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Control_Monad_State_execState'] = __NAMESPACE__ . '\\majControl_majMonad_majState_execmajState';
 
 // Control_Monad_State_evalState
-$GLOBALS['Control_Monad_State_evalState'] = (function() {
-  $__fn = function($v_0 = null, $s_1 = null) use (&$__fn) {
+function majControl_majMonad_majState_evalmajState($v_0, $s_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majState_evalmajState';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__res = (($v_0)($s_1))->{'value0'};
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Control_Monad_State_evalState'] = __NAMESPACE__ . '\\majControl_majMonad_majState_evalmajState';
 

@@ -124,28 +124,30 @@ $GLOBALS['Bench_formatNumber'] = $ffi_Bench['formatNumber'] ?? new class { publi
 $GLOBALS['Bench_opaque'] = $ffi_Bench['opaque'] ?? new class { public function __invoke(...$args) { return $this; } };
 
 
+
+
 // Bench_discard
 $GLOBALS['Bench_discard'] = (($GLOBALS['Control_Bind_discardUnit'])['discard'])($GLOBALS['Effect_bindEffect']);
 
 // Bench_runBench
-$GLOBALS['Bench_runBench'] = (function() {
-  $__fn = function($describe_0 = null, $act_1 = null) use (&$__fn) {
+function majBench_runmajBench($describe_0, $act_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majBench_runmajBench';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Bench_discard'])($describe_0))(function($_dollar__unused_2 = null) use ($act_1) {
+  $__res = ($GLOBALS['Bench_discard'])($describe_0, function($_dollar__unused_2 = null) use ($act_1) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Effect_bindEffect'])['bind'])($GLOBALS['Bench_benchNow']))(function($t1_3 = null) use ($act_1) {
+  $__res = (($GLOBALS['Effect_bindEffect'])['bind'])($GLOBALS['Bench_benchNow'], function($t1_3 = null) use ($act_1) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Bench_discard'])($act_1))(function($_dollar__unused_4 = null) use ($t1_3) {
+  $__res = ($GLOBALS['Bench_discard'])($act_1, function($_dollar__unused_4 = null) use ($t1_3) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Effect_bindEffect'])['bind'])($GLOBALS['Bench_benchNow']))(function($t2_5 = null) use ($t1_3) {
+  $__res = (($GLOBALS['Effect_bindEffect'])['bind'])($GLOBALS['Bench_benchNow'], function($t2_5 = null) use ($t1_3) {
   $__num = \func_num_args();
-  $dt_6_0 = ((($GLOBALS['Data_Ring_ringNumber'])['sub'])($t2_5))($t1_3);
-  $__res = (($GLOBALS['Bench_discard'])(($GLOBALS['Effect_Console_log'])(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("
-Execution time: "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])(($GLOBALS['Bench_formatNumber'])($dt_6_0)))(" μs
-")))))(function($_dollar__unused_7 = null) use ($dt_6_0) {
+  $dt_6_0 = (($GLOBALS['Data_Ring_ringNumber'])['sub'])($t2_5, $t1_3);
+  $__res = ($GLOBALS['Bench_discard'])(($GLOBALS['Effect_Console_log'])((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("
+Execution time: ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])(($GLOBALS['Bench_formatNumber'])($dt_6_0), " μs
+"))), function($_dollar__unused_7 = null) use ($dt_6_0) {
   $__num = \func_num_args();
   $__res = (($GLOBALS['Effect_applicativeEffect'])['pure'])($dt_6_0);
   goto __end;;
@@ -170,8 +172,7 @@ Execution time: "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])(($
 });
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Bench_runBench'] = __NAMESPACE__ . '\\majBench_runmajBench';
 

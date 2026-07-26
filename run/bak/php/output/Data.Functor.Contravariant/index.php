@@ -99,6 +99,8 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_Functor_Contravariant_contravariantConst
 $GLOBALS['Data_Functor_Contravariant_contravariantConst'] = ["cmap" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
@@ -115,56 +117,58 @@ $GLOBALS['Data_Functor_Contravariant_contravariantConst'] = ["cmap" => (function
 })()];
 
 // Data_Functor_Contravariant_cmap
-$GLOBALS['Data_Functor_Contravariant_cmap'] = function($dict_0 = null) {
+function majData_majFunctor_majContravariant_cmap($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majContravariant_cmap';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['cmap'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_Contravariant_cmap'] = __NAMESPACE__ . '\\majData_majFunctor_majContravariant_cmap';
 
 // Data_Functor_Contravariant_cmapFlipped
-$GLOBALS['Data_Functor_Contravariant_cmapFlipped'] = (function() {
-  $__fn = function($dictContravariant_0 = null, $x_1 = null, $f_2 = null) use (&$__fn) {
+function majData_majFunctor_majContravariant_cmapmajFlipped($dictContravariant_0, $x_1 = null, $f_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majContravariant_cmapmajFlipped';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($dictContravariant_0)['cmap'])($f_2))($x_1);
+  $__res = (($dictContravariant_0)['cmap'])($f_2, $x_1);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_Functor_Contravariant_cmapFlipped'] = __NAMESPACE__ . '\\majData_majFunctor_majContravariant_cmapmajFlipped';
 
 // Data_Functor_Contravariant_coerce
-$GLOBALS['Data_Functor_Contravariant_coerce'] = (function() {
-  $__fn = function($dictContravariant_0 = null, $dictFunctor_1 = null, $a_2 = null) use (&$__fn) {
+function majData_majFunctor_majContravariant_coerce($dictContravariant_0, $dictFunctor_1 = null, $a_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majContravariant_coerce';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($dictFunctor_1)['map'])($GLOBALS['Data_Void_absurd']))(((($dictContravariant_0)['cmap'])($GLOBALS['Data_Void_absurd']))($a_2));
+  $__res = (($dictFunctor_1)['map'])($GLOBALS['Data_Void_absurd'], (($dictContravariant_0)['cmap'])($GLOBALS['Data_Void_absurd'], $a_2));
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_Functor_Contravariant_coerce'] = __NAMESPACE__ . '\\majData_majFunctor_majContravariant_coerce';
 
 // Data_Functor_Contravariant_imapC
-$GLOBALS['Data_Functor_Contravariant_imapC'] = (function() {
-  $__fn = function($dictContravariant_0 = null, $v_1 = null, $f_2 = null) use (&$__fn) {
+function majData_majFunctor_majContravariant_imapmajC($dictContravariant_0, $v_1 = null, $f_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majContravariant_imapmajC';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   $__res = (($dictContravariant_0)['cmap'])($f_2);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_Functor_Contravariant_imapC'] = __NAMESPACE__ . '\\majData_majFunctor_majContravariant_imapmajC';
 

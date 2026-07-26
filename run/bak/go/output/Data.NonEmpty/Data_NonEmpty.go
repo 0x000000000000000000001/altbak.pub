@@ -462,9 +462,9 @@ return gopurs_runtime.Apply(f_4, gopurs_runtime.Value{Type: 9, IntVal: 930809136
 }), (*Constructor_NonEmpty[gopurs_runtime.Value, gopurs_runtime.Value])(v_5.UnsafePtr).V1)})}
 }))
 _ = functorWithIndex1_3_2
-foldableWithIndexNonEmpty1_4_4 := gopurs_runtime.Apply(Get_foldableWithIndexNonEmpty(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTraversableWithIndex_0, "FoldableWithIndex1"), gopurs_runtime.Value{}))
+foldableWithIndexNonEmpty1_4_4 := Call_foldableWithIndexNonEmpty(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTraversableWithIndex_0, "FoldableWithIndex1"), gopurs_runtime.Value{}))
 _ = foldableWithIndexNonEmpty1_4_4
-traversableNonEmpty1_5_5 := gopurs_runtime.Apply(Get_traversableNonEmpty(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTraversableWithIndex_0, "Traversable2"), gopurs_runtime.Value{}))
+traversableNonEmpty1_5_5 := Call_traversableNonEmpty(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTraversableWithIndex_0, "Traversable2"), gopurs_runtime.Value{}))
 _ = traversableNonEmpty1_5_5
 return gopurs_runtime.RecordDict4("FoldableWithIndex1", "FunctorWithIndex0", "Traversable2", "traverseWithIndex", gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return foldableWithIndexNonEmpty1_4_4
@@ -568,7 +568,7 @@ return __t6
 func Call_foldl1(dictFoldable_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictFoldable_0 gopurs_runtime.Value = dictFoldable_0_loop
 _ = dictFoldable_0
-return gopurs_runtime.RecordGet(gopurs_runtime.Apply(Get_foldable1NonEmpty(), dictFoldable_0), "foldl1")
+return gopurs_runtime.RecordGet(Call_foldable1NonEmpty(dictFoldable_0), "foldl1")
 }
 
 func Call_eqNonEmpty(dictEq1_0_loop gopurs_runtime.Value, dictEq_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -635,7 +635,7 @@ return gopurs_runtime.RecordGet(Call_eqNonEmpty(dictEq1_0, dictEq_1), "eq")
 func Call_ord1NonEmpty(dictOrd1_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictOrd1_0 gopurs_runtime.Value = dictOrd1_0_loop
 _ = dictOrd1_0
-ordNonEmpty1_1_0 := gopurs_runtime.Apply(Get_ordNonEmpty(), dictOrd1_0)
+ordNonEmpty1_1_0 := Call_ordNonEmpty(dictOrd1_0)
 _ = ordNonEmpty1_1_0
 __local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd1_0, "Eq10"), gopurs_runtime.Value{})
 _ = __local_var_2_1

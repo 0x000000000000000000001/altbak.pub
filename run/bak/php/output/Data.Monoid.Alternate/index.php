@@ -113,40 +113,56 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_Monoid_Alternate_Alternate
-$GLOBALS['Data_Monoid_Alternate_Alternate'] = function($x_0 = null) {
+function majData_majMonoid_majAlternate_majAlternate($x_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMonoid_majAlternate_majAlternate';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $x_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Monoid_Alternate_Alternate'] = __NAMESPACE__ . '\\majData_majMonoid_majAlternate_majAlternate';
 
 // Data_Monoid_Alternate_showAlternate
-$GLOBALS['Data_Monoid_Alternate_showAlternate'] = function($dictShow_0 = null) {
+function majData_majMonoid_majAlternate_showmajAlternate($dictShow_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMonoid_majAlternate_showmajAlternate';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Alternate "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1)))(")"));
+  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Alternate ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1), ")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Monoid_Alternate_showAlternate'] = __NAMESPACE__ . '\\majData_majMonoid_majAlternate_showmajAlternate';
 
 // Data_Monoid_Alternate_semigroupAlternate
-$GLOBALS['Data_Monoid_Alternate_semigroupAlternate'] = function($dictAlt_0 = null) {
+function majData_majMonoid_majAlternate_semigroupmajAlternate($dictAlt_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMonoid_majAlternate_semigroupmajAlternate';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["append" => (function() use ($dictAlt_0) {
   $__fn = function($v_1 = null, $v1_2 = null) use ($dictAlt_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictAlt_0)['alt'])($v_1))($v1_2);
+  $__res = (($dictAlt_0)['alt'])($v_1, $v1_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -155,35 +171,51 @@ $GLOBALS['Data_Monoid_Alternate_semigroupAlternate'] = function($dictAlt_0 = nul
 })()];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Monoid_Alternate_semigroupAlternate'] = __NAMESPACE__ . '\\majData_majMonoid_majAlternate_semigroupmajAlternate';
 
 // Data_Monoid_Alternate_plusAlternate
-$GLOBALS['Data_Monoid_Alternate_plusAlternate'] = function($dictPlus_0 = null) {
+function majData_majMonoid_majAlternate_plusmajAlternate($dictPlus_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMonoid_majAlternate_plusmajAlternate';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictPlus_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Monoid_Alternate_plusAlternate'] = __NAMESPACE__ . '\\majData_majMonoid_majAlternate_plusmajAlternate';
 
 // Data_Monoid_Alternate_ordAlternate
-$GLOBALS['Data_Monoid_Alternate_ordAlternate'] = function($dictOrd_0 = null) {
+function majData_majMonoid_majAlternate_ordmajAlternate($dictOrd_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMonoid_majAlternate_ordmajAlternate';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictOrd_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Monoid_Alternate_ordAlternate'] = __NAMESPACE__ . '\\majData_majMonoid_majAlternate_ordmajAlternate';
 
 // Data_Monoid_Alternate_ord1Alternate
-$GLOBALS['Data_Monoid_Alternate_ord1Alternate'] = function($dictOrd1_0 = null) {
+function majData_majMonoid_majAlternate_ord1majAlternate($dictOrd1_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMonoid_majAlternate_ord1majAlternate';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictOrd1_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Monoid_Alternate_ord1Alternate'] = __NAMESPACE__ . '\\majData_majMonoid_majAlternate_ord1majAlternate';
 
 // Data_Monoid_Alternate_newtypeAlternate
 $GLOBALS['Data_Monoid_Alternate_newtypeAlternate'] = ["Coercible0" => function($_dollar__unused_0 = null) {
@@ -195,8 +227,12 @@ $GLOBALS['Data_Monoid_Alternate_newtypeAlternate'] = ["Coercible0" => function($
 }];
 
 // Data_Monoid_Alternate_monoidAlternate
-$GLOBALS['Data_Monoid_Alternate_monoidAlternate'] = function($dictPlus_0 = null) {
+function majData_majMonoid_majAlternate_monoidmajAlternate($dictPlus_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMonoid_majAlternate_monoidmajAlternate';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__local_var_1_0 = (($dictPlus_0)['Alt0'])(null);
   $semigroupAlternate1_2_1 = ["append" => (function() use ($__local_var_1_0) {
   $__fn = function($v_2 = null, $v1_3 = null) use ($__local_var_1_0, &$__fn) {
@@ -204,7 +240,7 @@ $GLOBALS['Data_Monoid_Alternate_monoidAlternate'] = function($dictPlus_0 = null)
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($__local_var_1_0)['alt'])($v_2))($v1_3);
+  $__res = (($__local_var_1_0)['alt'])($v_2, $v1_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -220,114 +256,175 @@ $GLOBALS['Data_Monoid_Alternate_monoidAlternate'] = function($dictPlus_0 = null)
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Monoid_Alternate_monoidAlternate'] = __NAMESPACE__ . '\\majData_majMonoid_majAlternate_monoidmajAlternate';
 
 // Data_Monoid_Alternate_monadAlternate
-$GLOBALS['Data_Monoid_Alternate_monadAlternate'] = function($dictMonad_0 = null) {
+function majData_majMonoid_majAlternate_monadmajAlternate($dictMonad_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMonoid_majAlternate_monadmajAlternate';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictMonad_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Monoid_Alternate_monadAlternate'] = __NAMESPACE__ . '\\majData_majMonoid_majAlternate_monadmajAlternate';
 
 // Data_Monoid_Alternate_functorAlternate
-$GLOBALS['Data_Monoid_Alternate_functorAlternate'] = function($dictFunctor_0 = null) {
+function majData_majMonoid_majAlternate_functormajAlternate($dictFunctor_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMonoid_majAlternate_functormajAlternate';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictFunctor_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Monoid_Alternate_functorAlternate'] = __NAMESPACE__ . '\\majData_majMonoid_majAlternate_functormajAlternate';
 
 // Data_Monoid_Alternate_extendAlternate
-$GLOBALS['Data_Monoid_Alternate_extendAlternate'] = function($dictExtend_0 = null) {
+function majData_majMonoid_majAlternate_extendmajAlternate($dictExtend_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMonoid_majAlternate_extendmajAlternate';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictExtend_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Monoid_Alternate_extendAlternate'] = __NAMESPACE__ . '\\majData_majMonoid_majAlternate_extendmajAlternate';
 
 // Data_Monoid_Alternate_eqAlternate
-$GLOBALS['Data_Monoid_Alternate_eqAlternate'] = function($dictEq_0 = null) {
+function majData_majMonoid_majAlternate_eqmajAlternate($dictEq_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMonoid_majAlternate_eqmajAlternate';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictEq_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Monoid_Alternate_eqAlternate'] = __NAMESPACE__ . '\\majData_majMonoid_majAlternate_eqmajAlternate';
 
 // Data_Monoid_Alternate_eq1Alternate
-$GLOBALS['Data_Monoid_Alternate_eq1Alternate'] = function($dictEq1_0 = null) {
+function majData_majMonoid_majAlternate_eq1majAlternate($dictEq1_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMonoid_majAlternate_eq1majAlternate';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictEq1_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Monoid_Alternate_eq1Alternate'] = __NAMESPACE__ . '\\majData_majMonoid_majAlternate_eq1majAlternate';
 
 // Data_Monoid_Alternate_comonadAlternate
-$GLOBALS['Data_Monoid_Alternate_comonadAlternate'] = function($dictComonad_0 = null) {
+function majData_majMonoid_majAlternate_comonadmajAlternate($dictComonad_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMonoid_majAlternate_comonadmajAlternate';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictComonad_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Monoid_Alternate_comonadAlternate'] = __NAMESPACE__ . '\\majData_majMonoid_majAlternate_comonadmajAlternate';
 
 // Data_Monoid_Alternate_boundedAlternate
-$GLOBALS['Data_Monoid_Alternate_boundedAlternate'] = function($dictBounded_0 = null) {
+function majData_majMonoid_majAlternate_boundedmajAlternate($dictBounded_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMonoid_majAlternate_boundedmajAlternate';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictBounded_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Monoid_Alternate_boundedAlternate'] = __NAMESPACE__ . '\\majData_majMonoid_majAlternate_boundedmajAlternate';
 
 // Data_Monoid_Alternate_bindAlternate
-$GLOBALS['Data_Monoid_Alternate_bindAlternate'] = function($dictBind_0 = null) {
+function majData_majMonoid_majAlternate_bindmajAlternate($dictBind_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMonoid_majAlternate_bindmajAlternate';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictBind_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Monoid_Alternate_bindAlternate'] = __NAMESPACE__ . '\\majData_majMonoid_majAlternate_bindmajAlternate';
 
 // Data_Monoid_Alternate_applyAlternate
-$GLOBALS['Data_Monoid_Alternate_applyAlternate'] = function($dictApply_0 = null) {
+function majData_majMonoid_majAlternate_applymajAlternate($dictApply_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMonoid_majAlternate_applymajAlternate';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictApply_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Monoid_Alternate_applyAlternate'] = __NAMESPACE__ . '\\majData_majMonoid_majAlternate_applymajAlternate';
 
 // Data_Monoid_Alternate_applicativeAlternate
-$GLOBALS['Data_Monoid_Alternate_applicativeAlternate'] = function($dictApplicative_0 = null) {
+function majData_majMonoid_majAlternate_applicativemajAlternate($dictApplicative_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMonoid_majAlternate_applicativemajAlternate';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictApplicative_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Monoid_Alternate_applicativeAlternate'] = __NAMESPACE__ . '\\majData_majMonoid_majAlternate_applicativemajAlternate';
 
 // Data_Monoid_Alternate_alternativeAlternate
-$GLOBALS['Data_Monoid_Alternate_alternativeAlternate'] = function($dictAlternative_0 = null) {
+function majData_majMonoid_majAlternate_alternativemajAlternate($dictAlternative_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMonoid_majAlternate_alternativemajAlternate';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictAlternative_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Monoid_Alternate_alternativeAlternate'] = __NAMESPACE__ . '\\majData_majMonoid_majAlternate_alternativemajAlternate';
 
 // Data_Monoid_Alternate_altAlternate
-$GLOBALS['Data_Monoid_Alternate_altAlternate'] = function($dictAlt_0 = null) {
+function majData_majMonoid_majAlternate_altmajAlternate($dictAlt_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMonoid_majAlternate_altmajAlternate';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictAlt_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Monoid_Alternate_altAlternate'] = __NAMESPACE__ . '\\majData_majMonoid_majAlternate_altmajAlternate';
 

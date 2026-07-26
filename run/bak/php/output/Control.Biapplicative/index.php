@@ -97,14 +97,21 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Control_Biapplicative_bipure
-$GLOBALS['Control_Biapplicative_bipure'] = function($dict_0 = null) {
+function majControl_majBiapplicative_bipure($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majBiapplicative_bipure';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['bipure'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Biapplicative_bipure'] = __NAMESPACE__ . '\\majControl_majBiapplicative_bipure';
 
 // Control_Biapplicative_biapplicativeTuple
 $GLOBALS['Control_Biapplicative_biapplicativeTuple'] = ["bipure" => $GLOBALS['Data_Tuple_Tuple'], "Biapply0" => function($_dollar__unused_0 = null) {

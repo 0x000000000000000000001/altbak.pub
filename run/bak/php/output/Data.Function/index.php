@@ -99,16 +99,18 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_Function_lessThanOrEq
 $GLOBALS['Data_Function_lessThanOrEq'] = (function() use (&$__fn) {
-$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT"));
+$__local_var_0_0 = ($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT(), new \Data\Ordering\Data_Ordering_EQ(), new \Data\Ordering\Data_Ordering_GT());
 return (function() use ($__local_var_0_0) {
   $__fn = function($a1_1 = null, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ( ! (is_object((($__local_var_0_0)($a1_1))($a2_2)) && (((($__local_var_0_0)($a1_1))($a2_2))->{'tag'} === "GT")));
+  $__res = ( ! ($__local_var_0_0)($a1_1, $a2_2) instanceof \Data\Ordering\Data_Ordering_GT);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -118,53 +120,54 @@ return (function() use ($__local_var_0_0) {
 })();
 
 // Data_Function_on
-$GLOBALS['Data_Function_on'] = (function() {
-  $__fn = function($f_0 = null, $g_1 = null, $x_2 = null, $y_3 = null) use (&$__fn) {
+function majData_majFunction_on($f_0, $g_1 = null, $x_2 = null, $y_3 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunction_on';
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = (($f_0)(($g_1)($x_2)))(($g_1)($y_3));
+  $__res = ($f_0)(($g_1)($x_2), ($g_1)($y_3));
   goto __end;;
   __end:
-  return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
-  };
-  return $__fn;
-})();
+  return 4 < $__num ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
+}
+$GLOBALS['Data_Function_on'] = __NAMESPACE__ . '\\majData_majFunction_on';
 
 // Data_Function_flip
-$GLOBALS['Data_Function_flip'] = (function() {
-  $__fn = function($f_0 = null, $b_1 = null, $a_2 = null) use (&$__fn) {
+function majData_majFunction_flip($f_0, $b_1 = null, $a_2 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunction_flip';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($f_0)($a_2))($b_1);
+  $__res = ($f_0)($a_2, $b_1);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+}
+$GLOBALS['Data_Function_flip'] = __NAMESPACE__ . '\\majData_majFunction_flip';
 
 // Data_Function_const
-$GLOBALS['Data_Function_const'] = (function() {
-  $__fn = function($a_0 = null, $v_1 = null) use (&$__fn) {
+function majData_majFunction_const($a_0, $v_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunction_const';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__res = $a_0;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Function_const'] = __NAMESPACE__ . '\\majData_majFunction_const';
 
 // Data_Function_applyN
-$GLOBALS['Data_Function_applyN'] = function($f_0 = null) {
+function majData_majFunction_applymajN($f_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunction_applymajN';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $go__1_0 = null;
   $go__1_0 = (function() use ($f_0, &$go__1_0) {
   $__fn = function($n_2 = null, $acc_3 = null) use ($f_0, &$go__1_0, &$__fn) {
@@ -178,7 +181,7 @@ $GLOBALS['Data_Function_applyN'] = function($f_0 = null) {
   $n_2 = $__tco_var_go__1_0_0_n_2;
   $acc_3 = $__tco_var_go__1_0_0_acc_3;
   $__t2 = null;;
-  if ((($GLOBALS['Data_Function_lessThanOrEq'])($n_2))(0)) {
+  if (($GLOBALS['Data_Function_lessThanOrEq'])($n_2, 0)) {
 $__t2 = $acc_3;
 goto end_branch_2;;
 };
@@ -199,36 +202,35 @@ goto end_branch_2;;
   $__res = $go__1_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Function_applyN'] = __NAMESPACE__ . '\\majData_majFunction_applymajN';
 
 // Data_Function_applyFlipped
-$GLOBALS['Data_Function_applyFlipped'] = (function() {
-  $__fn = function($x_0 = null, $f_1 = null) use (&$__fn) {
+function majData_majFunction_applymajFlipped($x_0, $f_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunction_applymajFlipped';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__res = ($f_1)($x_0);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Function_applyFlipped'] = __NAMESPACE__ . '\\majData_majFunction_applymajFlipped';
 
 // Data_Function_apply
-$GLOBALS['Data_Function_apply'] = (function() {
-  $__fn = function($f_0 = null, $x_1 = null) use (&$__fn) {
+function majData_majFunction_apply($f_0, $x_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunction_apply';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__res = ($f_0)($x_1);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Function_apply'] = __NAMESPACE__ . '\\majData_majFunction_apply';
 

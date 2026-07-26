@@ -195,15 +195,36 @@ $GLOBALS['Data_String_Common_toUpper'] = $ffi_Data_String_Common['toUpper'] ?? n
 $GLOBALS['Data_String_Common_trim'] = $ffi_Data_String_Common['trim'] ?? new class { public function __invoke(...$args) { return $this; } };
 
 
+
+
 // Data_String_Common_null
-$GLOBALS['Data_String_Common_null'] = function($s_0 = null) {
+function majData_majString_majCommon_null($s_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Eq_eqString'])['eq'])($s_0))("");
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majCommon_null';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = (($GLOBALS['Data_Eq_eqString'])['eq'])($s_0, "");
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_String_Common_null'] = __NAMESPACE__ . '\\majData_majString_majCommon_null';
+
+// Data_String_Common_localeCompare_closure
+$GLOBALS['Data_String_Common_localeCompare_closure'] = ($GLOBALS['Data_String_Common__localeCompare'])(new \Data\Ordering\Data_Ordering_LT(), new \Data\Ordering\Data_Ordering_EQ(), new \Data\Ordering\Data_Ordering_GT());
 
 // Data_String_Common_localeCompare
-$GLOBALS['Data_String_Common_localeCompare'] = ((($GLOBALS['Data_String_Common__localeCompare'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT"));
+function majData_majString_majCommon_localemajCompare($v_0, $v_1 = null) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majCommon_localemajCompare';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ($GLOBALS['Data_String_Common_localeCompare_closure'])($v_0, $v_1);
+  goto __end;;
+  __end:
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_String_Common_localeCompare'] = __NAMESPACE__ . '\\majData_majString_majCommon_localemajCompare';
 

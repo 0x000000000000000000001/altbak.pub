@@ -132,17 +132,25 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+final class Data_List_Types_Nil { public function __construct() {} }
+final class Data_List_Types_Cons { public function __construct(public mixed $value0, public mixed $value1) {} }
+
 // Data_List_Types_identity
-$GLOBALS['Data_List_Types_identity'] = function($x_0 = null) {
+function majData_majList_majTypes_identity($x_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majTypes_identity';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $x_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_Types_identity'] = __NAMESPACE__ . '\\majData_majList_majTypes_identity';
 
 // Data_List_Types_Nil
-$GLOBALS['Data_List_Types_Nil'] = ($GLOBALS['__phpurs_data0_Nil'] ??= new Phpurs_Data0("Nil"));
+$GLOBALS['Data_List_Types_Nil'] = ($GLOBALS['__phpurs_data0_Nil'] ??= new \Data\List\Types\Data_List_Types_Nil());
 
 // Data_List_Types_Cons
 $GLOBALS['Data_List_Types_Cons'] = (function() {
@@ -151,7 +159,7 @@ $GLOBALS['Data_List_Types_Cons'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Cons", $value0, $value1);
+  $__res = new \Data\List\Types\Data_List_Types_Cons($value0, $value1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -160,22 +168,32 @@ $GLOBALS['Data_List_Types_Cons'] = (function() {
 })();
 
 // Data_List_Types_NonEmptyList
-$GLOBALS['Data_List_Types_NonEmptyList'] = function($x_0 = null) {
+function majData_majList_majTypes_majNonmajEmptymajList($x_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majTypes_majNonmajEmptymajList';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $x_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_Types_NonEmptyList'] = __NAMESPACE__ . '\\majData_majList_majTypes_majNonmajEmptymajList';
 
 // Data_List_Types_toList
-$GLOBALS['Data_List_Types_toList'] = function($v_0 = null) {
+function majData_majList_majTypes_tomajList($v_0) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Cons", ($v_0)->{'value0'}, ($v_0)->{'value1'});
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majTypes_tomajList';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = new \Data\List\Types\Data_List_Types_Cons(($v_0)->{'value0'}, ($v_0)->{'value1'});
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_Types_toList'] = __NAMESPACE__ . '\\majData_majList_majTypes_tomajList';
 
 // Data_List_Types_newtypeNonEmptyList
 $GLOBALS['Data_List_Types_newtypeNonEmptyList'] = ["Coercible0" => function($_dollar__unused_0 = null) {
@@ -187,23 +205,26 @@ $GLOBALS['Data_List_Types_newtypeNonEmptyList'] = ["Coercible0" => function($_do
 }];
 
 // Data_List_Types_nelCons
-$GLOBALS['Data_List_Types_nelCons'] = (function() {
-  $__fn = function($a_0 = null, $v_1 = null) use (&$__fn) {
+function majData_majList_majTypes_nelmajCons($a_0, $v_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majTypes_nelmajCons';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("NonEmpty", $a_0, new Phpurs_Data2("Cons", ($v_1)->{'value0'}, ($v_1)->{'value1'}));
+  $__res = new \Data\NonEmpty\Data_NonEmpty_NonEmpty($a_0, new \Data\List\Types\Data_List_Types_Cons(($v_1)->{'value0'}, ($v_1)->{'value1'}));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_List_Types_nelCons'] = __NAMESPACE__ . '\\majData_majList_majTypes_nelmajCons';
 
 // Data_List_Types_listMap
-$GLOBALS['Data_List_Types_listMap'] = function($f_0 = null) {
+function majData_majList_majTypes_listmajMap($f_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majTypes_listmajMap';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $chunkedRevMap_1_0 = null;
   $chunkedRevMap_1_0 = (function() use (&$chunkedRevMap_1_0, $f_0) {
   $__fn = function($v_2 = null, $v1_3 = null) use (&$chunkedRevMap_1_0, $f_0, &$__fn) {
@@ -217,8 +238,8 @@ $GLOBALS['Data_List_Types_listMap'] = function($f_0 = null) {
   $v_2 = $__tco_var_chunkedRevMap_1_0_0_v_2;
   $v1_3 = $__tco_var_chunkedRevMap_1_0_0_v1_3;
   $__t4 = null;;
-  if (((is_object($v1_3) && (($v1_3)->{'tag'} === "Cons")) && ((is_object(($v1_3)->{'value1'}) && ((($v1_3)->{'value1'})->{'tag'} === "Cons")) && (is_object((($v1_3)->{'value1'})->{'value1'}) && (((($v1_3)->{'value1'})->{'value1'})->{'tag'} === "Cons"))))) {
-$__tco_5 = new Phpurs_Data2("Cons", $v1_3, $v_2);
+  if (($v1_3 instanceof \Data\List\Types\Data_List_Types_Cons && (($v1_3)->{'value1'} instanceof \Data\List\Types\Data_List_Types_Cons && (($v1_3)->{'value1'})->{'value1'} instanceof \Data\List\Types\Data_List_Types_Cons))) {
+$__tco_5 = new \Data\List\Types\Data_List_Types_Cons($v1_3, $v_2);
 $__tco_6 = ((($v1_3)->{'value1'})->{'value1'})->{'value1'};
 $__tco_var_chunkedRevMap_1_0_0_v_2 = $__tco_5;
 $__tco_var_chunkedRevMap_1_0_0_v1_3 = $__tco_6;
@@ -239,9 +260,9 @@ goto end_branch_4;;
   $v2_5 = $__tco_var_reverseUnrolledMap_4_0_0_v2_5;
   $v3_6 = $__tco_var_reverseUnrolledMap_4_0_0_v3_6;
   $__t0 = null;;
-  if (((is_object($v2_5) && (($v2_5)->{'tag'} === "Cons")) && ((is_object(($v2_5)->{'value0'}) && ((($v2_5)->{'value0'})->{'tag'} === "Cons")) && ((is_object((($v2_5)->{'value0'})->{'value1'}) && (((($v2_5)->{'value0'})->{'value1'})->{'tag'} === "Cons")) && (is_object(((($v2_5)->{'value0'})->{'value1'})->{'value1'}) && ((((($v2_5)->{'value0'})->{'value1'})->{'value1'})->{'tag'} === "Cons")))))) {
+  if (($v2_5 instanceof \Data\List\Types\Data_List_Types_Cons && (($v2_5)->{'value0'} instanceof \Data\List\Types\Data_List_Types_Cons && ((($v2_5)->{'value0'})->{'value1'} instanceof \Data\List\Types\Data_List_Types_Cons && ((($v2_5)->{'value0'})->{'value1'})->{'value1'} instanceof \Data\List\Types\Data_List_Types_Cons)))) {
 $__tco_1 = ($v2_5)->{'value1'};
-$__tco_2 = new Phpurs_Data2("Cons", ($f_0)((($v2_5)->{'value0'})->{'value0'}), new Phpurs_Data2("Cons", ($f_0)(((($v2_5)->{'value0'})->{'value1'})->{'value0'}), new Phpurs_Data2("Cons", ($f_0)((((($v2_5)->{'value0'})->{'value1'})->{'value1'})->{'value0'}), $v3_6)));
+$__tco_2 = new \Data\List\Types\Data_List_Types_Cons(($f_0)((($v2_5)->{'value0'})->{'value0'}), new \Data\List\Types\Data_List_Types_Cons(($f_0)(((($v2_5)->{'value0'})->{'value1'})->{'value0'}), new \Data\List\Types\Data_List_Types_Cons(($f_0)((((($v2_5)->{'value0'})->{'value1'})->{'value1'})->{'value0'}), $v3_6)));
 $__tco_var_reverseUnrolledMap_4_0_0_v2_5 = $__tco_1;
 $__tco_var_reverseUnrolledMap_4_0_0_v3_6 = $__tco_2;
 goto tco_loop_reverseUnrolledMap_4_0_0;;
@@ -258,31 +279,31 @@ goto end_branch_0;;
   return $__fn;
 })();
   $__t1 = null;;
-  if ((is_object($v1_3) && (($v1_3)->{'tag'} === "Cons"))) {
+  if ($v1_3 instanceof \Data\List\Types\Data_List_Types_Cons) {
 $__t2 = null;;
-if ((is_object(($v1_3)->{'value1'}) && ((($v1_3)->{'value1'})->{'tag'} === "Cons"))) {
+if (($v1_3)->{'value1'} instanceof \Data\List\Types\Data_List_Types_Cons) {
 $__t3 = null;;
-if ((is_object((($v1_3)->{'value1'})->{'value1'}) && (((($v1_3)->{'value1'})->{'value1'})->{'tag'} === "Nil"))) {
-$__t3 = new Phpurs_Data2("Cons", ($f_0)(($v1_3)->{'value0'}), new Phpurs_Data2("Cons", ($f_0)((($v1_3)->{'value1'})->{'value0'}), new Phpurs_Data0("Nil")));
+if ((($v1_3)->{'value1'})->{'value1'} instanceof \Data\List\Types\Data_List_Types_Nil) {
+$__t3 = new \Data\List\Types\Data_List_Types_Cons(($f_0)(($v1_3)->{'value0'}), new \Data\List\Types\Data_List_Types_Cons(($f_0)((($v1_3)->{'value1'})->{'value0'}), new \Data\List\Types\Data_List_Types_Nil()));
 goto end_branch_3;;
 };
-$__t3 = new Phpurs_Data0("Nil");
+$__t3 = new \Data\List\Types\Data_List_Types_Nil();
 end_branch_3:;
 $__t2 = $__t3;
 goto end_branch_2;;
 };
-if ((is_object(($v1_3)->{'value1'}) && ((($v1_3)->{'value1'})->{'tag'} === "Nil"))) {
-$__t2 = new Phpurs_Data2("Cons", ($f_0)(($v1_3)->{'value0'}), new Phpurs_Data0("Nil"));
+if (($v1_3)->{'value1'} instanceof \Data\List\Types\Data_List_Types_Nil) {
+$__t2 = new \Data\List\Types\Data_List_Types_Cons(($f_0)(($v1_3)->{'value0'}), new \Data\List\Types\Data_List_Types_Nil());
 goto end_branch_2;;
 };
-$__t2 = new Phpurs_Data0("Nil");
+$__t2 = new \Data\List\Types\Data_List_Types_Nil();
 end_branch_2:;
 $__t1 = $__t2;
 goto end_branch_1;;
 };
-  $__t1 = new Phpurs_Data0("Nil");
+  $__t1 = new \Data\List\Types\Data_List_Types_Nil();
   end_branch_1:;
-  $__t4 = (($reverseUnrolledMap_4_0)($v_2))($__t1);
+  $__t4 = ($reverseUnrolledMap_4_0)($v_2, $__t1);
   end_branch_4:;
   $__res = $__t4;
   goto __end;;
@@ -291,11 +312,12 @@ goto end_branch_1;;
   };
   return $__fn;
 })();
-  $__res = ($chunkedRevMap_1_0)(new Phpurs_Data0("Nil"));
+  $__res = ($chunkedRevMap_1_0)(new \Data\List\Types\Data_List_Types_Nil());
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_Types_listMap'] = __NAMESPACE__ . '\\majData_majList_majTypes_listmajMap';
 
 // Data_List_Types_functorList
 $GLOBALS['Data_List_Types_functorList'] = ["map" => $GLOBALS['Data_List_Types_listMap']];
@@ -307,7 +329,7 @@ $GLOBALS['Data_List_Types_functorNonEmptyList'] = ["map" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("NonEmpty", ($f_0)(($m_1)->{'value0'}), ((($GLOBALS['Data_List_Types_functorList'])['map'])($f_0))(($m_1)->{'value1'}));
+  $__res = new \Data\NonEmpty\Data_NonEmpty_NonEmpty(($f_0)(($m_1)->{'value0'}), (($GLOBALS['Data_List_Types_functorList'])['map'])($f_0, ($m_1)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -335,12 +357,12 @@ $GLOBALS['Data_List_Types_foldableList'] = ["foldr" => (function() {
   $v_3 = $__tco_var_go__2_0_0_v_3;
   $v1_4 = $__tco_var_go__2_0_0_v1_4;
   $__t0 = null;;
-  if ((is_object($v1_4) && (($v1_4)->{'tag'} === "Nil"))) {
+  if ($v1_4 instanceof \Data\List\Types\Data_List_Types_Nil) {
 $__t0 = $v_3;
 goto end_branch_0;;
 };
-  if ((is_object($v1_4) && (($v1_4)->{'tag'} === "Cons"))) {
-$__tco_1 = new Phpurs_Data2("Cons", ($v1_4)->{'value0'}, $v_3);
+  if ($v1_4 instanceof \Data\List\Types\Data_List_Types_Cons) {
+$__tco_1 = new \Data\List\Types\Data_List_Types_Cons(($v1_4)->{'value0'}, $v_3);
 $__tco_2 = ($v1_4)->{'value1'};
 $__tco_var_go__2_0_0_v_3 = $__tco_1;
 $__tco_var_go__2_0_0_v1_4 = $__tco_2;
@@ -358,19 +380,19 @@ goto end_branch_0;;
   };
   return $__fn;
 })();
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(((($GLOBALS['Data_List_Types_foldableList'])['foldl'])((function() use ($f_0) {
+  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_List_Types_foldableList'])['foldl'])((function() use ($f_0) {
   $__fn = function($b_2 = null, $a_3 = null) use ($f_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($f_0)($a_3))($b_2);
+  $__res = ($f_0)($a_3, $b_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))($b_1)))(($go__2_0)(new Phpurs_Data0("Nil")));
+})(), $b_1), ($go__2_0)(new \Data\List\Types\Data_List_Types_Nil()));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -391,12 +413,12 @@ goto end_branch_0;;
   $b_2 = $__tco_var_go__1_1_1_b_2;
   $v_3 = $__tco_var_go__1_1_1_v_3;
   $__t1 = null;;
-  if ((is_object($v_3) && (($v_3)->{'tag'} === "Nil"))) {
+  if ($v_3 instanceof \Data\List\Types\Data_List_Types_Nil) {
 $__t1 = $b_2;
 goto end_branch_1;;
 };
-  if ((is_object($v_3) && (($v_3)->{'tag'} === "Cons"))) {
-$__tco_2 = (($f_0)($b_2))(($v_3)->{'value0'});
+  if ($v_3 instanceof \Data\List\Types\Data_List_Types_Cons) {
+$__tco_2 = ($f_0)($b_2, ($v_3)->{'value0'});
 $__tco_3 = ($v_3)->{'value1'};
 $__tco_var_go__1_1_1_b_2 = $__tco_2;
 $__tco_var_go__1_1_1_v_3 = $__tco_3;
@@ -423,13 +445,13 @@ goto end_branch_1;;
   $mempty_1_2 = ($dictMonoid_0)['mempty'];
   $__res = function($f_2 = null) use ($dictMonoid_0, $mempty_1_2) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_List_Types_foldableList'])['foldl'])(function($acc_3 = null) use ($dictMonoid_0, $f_2) {
+  $__res = (($GLOBALS['Data_List_Types_foldableList'])['foldl'])(function($acc_3 = null) use ($dictMonoid_0, $f_2) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((((($dictMonoid_0)['Semigroup0'])(null))['append'])($acc_3)))($f_2);
+  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])((((($dictMonoid_0)['Semigroup0'])(null))['append'])($acc_3), $f_2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))($mempty_1_2);
+}, $mempty_1_2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -448,7 +470,7 @@ return (function() use ($__local_var_0_0) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((($GLOBALS['Data_List_Types_foldableList'])['foldl'])((function() use ($__local_var_0_0, $sep_1) {
+  $__res = ((($GLOBALS['Data_List_Types_foldableList'])['foldl'])((function() use ($__local_var_0_0, $sep_1) {
   $__fn = function($v_3 = null, $v1_4 = null) use ($__local_var_0_0, $sep_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -459,7 +481,7 @@ return (function() use ($__local_var_0_0) {
 $__t1 = ["init" => false, "acc" => $v1_4];
 goto end_branch_1;;
 };
-  $__t1 = ["init" => false, "acc" => ((($__local_var_0_0)['append'])(($v_3)['acc']))(((($__local_var_0_0)['append'])($sep_1))($v1_4))];
+  $__t1 = ["init" => false, "acc" => (($__local_var_0_0)['append'])(($v_3)['acc'], (($__local_var_0_0)['append'])($sep_1, $v1_4))];
   end_branch_1:;
   $__res = $__t1;
   goto __end;;
@@ -467,7 +489,7 @@ goto end_branch_1;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))(["init" => true, "acc" => ($GLOBALS['Data_Monoid_monoidString'])['mempty']]))($xs_2))['acc'];
+})(), ["init" => true, "acc" => ($GLOBALS['Data_Monoid_monoidString'])['mempty']], $xs_2))['acc'];
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -486,7 +508,7 @@ $GLOBALS['Data_List_Types_foldableNonEmptyList'] = ["foldMap" => function($dictM
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((($dictMonoid_0)['Semigroup0'])(null))['append'])(($f_2)(($v_3)->{'value0'})))((($foldMap1_1_0)($f_2))(($v_3)->{'value1'}));
+  $__res = (((($dictMonoid_0)['Semigroup0'])(null))['append'])(($f_2)(($v_3)->{'value0'}), ($foldMap1_1_0)($f_2, ($v_3)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -502,7 +524,7 @@ $GLOBALS['Data_List_Types_foldableNonEmptyList'] = ["foldMap" => function($dictM
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (((($GLOBALS['Data_List_Types_foldableList'])['foldl'])($f_0))((($f_0)($b_1))(($v_2)->{'value0'})))(($v_2)->{'value1'});
+  $__res = (($GLOBALS['Data_List_Types_foldableList'])['foldl'])($f_0, ($f_0)($b_1, ($v_2)->{'value0'}), ($v_2)->{'value1'});
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -514,7 +536,7 @@ $GLOBALS['Data_List_Types_foldableNonEmptyList'] = ["foldMap" => function($dictM
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($f_0)(($v_2)->{'value0'}))((((($GLOBALS['Data_List_Types_foldableList'])['foldr'])($f_0))($b_1))(($v_2)->{'value1'}));
+  $__res = ($f_0)(($v_2)->{'value0'}, (($GLOBALS['Data_List_Types_foldableList'])['foldr'])($f_0, $b_1, ($v_2)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -529,13 +551,13 @@ $GLOBALS['Data_List_Types_foldableWithIndexList'] = ["foldrWithIndex" => (functi
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $v_3_0 = (((($GLOBALS['Data_List_Types_foldableList'])['foldl'])(function($v1_3 = null) {
+  $v_3_0 = (($GLOBALS['Data_List_Types_foldableList'])['foldl'])(function($v1_3 = null) {
   $__num = \func_num_args();
   $__local_var_4_0 = ($v1_3)->{'value1'};
   $__local_var_5_1 = ($v1_3)->{'value0'};
   $__res = function($a_6 = null) use ($__local_var_4_0, $__local_var_5_1) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Tuple", ($__local_var_5_1 + 1), new Phpurs_Data2("Cons", $a_6, $__local_var_4_0));
+  $__res = new \Data\Tuple\Data_Tuple_Tuple(($__local_var_5_1 + 1), new \Data\List\Types\Data_List_Types_Cons($a_6, $__local_var_4_0));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -543,14 +565,14 @@ $GLOBALS['Data_List_Types_foldableWithIndexList'] = ["foldrWithIndex" => (functi
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(new Phpurs_Data2("Tuple", 0, new Phpurs_Data0("Nil"))))($xs_2);
-  $__res = ((((($GLOBALS['Data_List_Types_foldableList'])['foldl'])(function($v1_4 = null) use ($f_0) {
+}, new \Data\Tuple\Data_Tuple_Tuple(0, new \Data\List\Types\Data_List_Types_Nil()), $xs_2);
+  $__res = ((($GLOBALS['Data_List_Types_foldableList'])['foldl'])(function($v1_4 = null) use ($f_0) {
   $__num = \func_num_args();
   $__local_var_5_3 = ($v1_4)->{'value1'};
   $__local_var_6_4 = ($v1_4)->{'value0'};
   $__res = function($a_7 = null) use ($__local_var_5_3, $__local_var_6_4, $f_0) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Tuple", ($__local_var_6_4 - 1), ((($f_0)(($__local_var_6_4 - 1)))($a_7))($__local_var_5_3));
+  $__res = new \Data\Tuple\Data_Tuple_Tuple(($__local_var_6_4 - 1), ($f_0)(($__local_var_6_4 - 1), $a_7, $__local_var_5_3));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -558,7 +580,7 @@ $GLOBALS['Data_List_Types_foldableWithIndexList'] = ["foldrWithIndex" => (functi
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(new Phpurs_Data2("Tuple", ($v_3_0)->{'value0'}, $b_1)))(($v_3_0)->{'value1'}))->{'value1'};
+}, new \Data\Tuple\Data_Tuple_Tuple(($v_3_0)->{'value0'}, $b_1), ($v_3_0)->{'value1'}))->{'value1'};
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -570,13 +592,13 @@ $GLOBALS['Data_List_Types_foldableWithIndexList'] = ["foldrWithIndex" => (functi
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Tuple_snd']))(((($GLOBALS['Data_List_Types_foldableList'])['foldl'])(function($v_2 = null) use ($f_0) {
+  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Tuple_snd'], (($GLOBALS['Data_List_Types_foldableList'])['foldl'])(function($v_2 = null) use ($f_0) {
   $__num = \func_num_args();
   $__local_var_3_5 = ($v_2)->{'value1'};
   $__local_var_4_6 = ($v_2)->{'value0'};
   $__res = function($a_5 = null) use ($__local_var_3_5, $__local_var_4_6, $f_0) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Tuple", ($__local_var_4_6 + 1), ((($f_0)($__local_var_4_6))($__local_var_3_5))($a_5));
+  $__res = new \Data\Tuple\Data_Tuple_Tuple(($__local_var_4_6 + 1), ($f_0)($__local_var_4_6, $__local_var_3_5, $a_5));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -584,7 +606,7 @@ $GLOBALS['Data_List_Types_foldableWithIndexList'] = ["foldrWithIndex" => (functi
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(new Phpurs_Data2("Tuple", 0, $acc_1)));
+}, new \Data\Tuple\Data_Tuple_Tuple(0, $acc_1)));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -595,19 +617,19 @@ $GLOBALS['Data_List_Types_foldableWithIndexList'] = ["foldrWithIndex" => (functi
   $mempty_1_7 = ($dictMonoid_0)['mempty'];
   $__res = function($f_2 = null) use ($dictMonoid_0, $mempty_1_7) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_List_Types_foldableWithIndexList'])['foldlWithIndex'])((function() use ($dictMonoid_0, $f_2) {
+  $__res = (($GLOBALS['Data_List_Types_foldableWithIndexList'])['foldlWithIndex'])((function() use ($dictMonoid_0, $f_2) {
   $__fn = function($i_3 = null, $acc_4 = null) use ($dictMonoid_0, $f_2, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((((($dictMonoid_0)['Semigroup0'])(null))['append'])($acc_4)))(($f_2)($i_3));
+  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])((((($dictMonoid_0)['Semigroup0'])(null))['append'])($acc_4), ($f_2)($i_3));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))($mempty_1_7);
+})(), $mempty_1_7);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -636,14 +658,14 @@ $GLOBALS['Data_List_Types_foldableWithIndexNonEmptyList'] = ["foldMapWithIndex" 
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($foldMapWithIndex1_1_0)((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_2))(function($v2_4 = null) {
+  $__res = ($foldMapWithIndex1_1_0)(($GLOBALS['Control_Semigroupoid_composeImpl'])($f_2, function($v2_4 = null) {
   $__num = \func_num_args();
   $__t1 = null;;
-  if ((is_object($v2_4) && (($v2_4)->{'tag'} === "Nothing"))) {
+  if ($v2_4 instanceof \Data\Maybe\Data_Maybe_Nothing) {
 $__t1 = 0;
 goto end_branch_1;;
 };
-  if ((is_object($v2_4) && (($v2_4)->{'tag'} === "Just"))) {
+  if ($v2_4 instanceof \Data\Maybe\Data_Maybe_Just) {
 $__t1 = (1 + ($v2_4)->{'value0'});
 goto end_branch_1;;
 };
@@ -654,7 +676,7 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-})))($v_3);
+}), $v_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -670,14 +692,14 @@ goto end_branch_1;;
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (((($GLOBALS['Data_List_Types_foldableWithIndexNonEmpty'])['foldlWithIndex'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_0))(function($v2_3 = null) {
+  $__res = (($GLOBALS['Data_List_Types_foldableWithIndexNonEmpty'])['foldlWithIndex'])(($GLOBALS['Control_Semigroupoid_composeImpl'])($f_0, function($v2_3 = null) {
   $__num = \func_num_args();
   $__t2 = null;;
-  if ((is_object($v2_3) && (($v2_3)->{'tag'} === "Nothing"))) {
+  if ($v2_3 instanceof \Data\Maybe\Data_Maybe_Nothing) {
 $__t2 = 0;
 goto end_branch_2;;
 };
-  if ((is_object($v2_3) && (($v2_3)->{'tag'} === "Just"))) {
+  if ($v2_3 instanceof \Data\Maybe\Data_Maybe_Just) {
 $__t2 = (1 + ($v2_3)->{'value0'});
 goto end_branch_2;;
 };
@@ -688,7 +710,7 @@ goto end_branch_2;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-})))($b_1))($v_2);
+}), $b_1, $v_2);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -700,14 +722,14 @@ goto end_branch_2;;
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (((($GLOBALS['Data_List_Types_foldableWithIndexNonEmpty'])['foldrWithIndex'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_0))(function($v2_3 = null) {
+  $__res = (($GLOBALS['Data_List_Types_foldableWithIndexNonEmpty'])['foldrWithIndex'])(($GLOBALS['Control_Semigroupoid_composeImpl'])($f_0, function($v2_3 = null) {
   $__num = \func_num_args();
   $__t3 = null;;
-  if ((is_object($v2_3) && (($v2_3)->{'tag'} === "Nothing"))) {
+  if ($v2_3 instanceof \Data\Maybe\Data_Maybe_Nothing) {
 $__t3 = 0;
 goto end_branch_3;;
 };
-  if ((is_object($v2_3) && (($v2_3)->{'tag'} === "Just"))) {
+  if ($v2_3 instanceof \Data\Maybe\Data_Maybe_Just) {
 $__t3 = (1 + ($v2_3)->{'value0'});
 goto end_branch_3;;
 };
@@ -718,7 +740,7 @@ goto end_branch_3;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-})))($b_1))($v_2);
+}), $b_1, $v_2);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -735,19 +757,19 @@ goto end_branch_3;;
 // Data_List_Types_functorWithIndexList
 $GLOBALS['Data_List_Types_functorWithIndexList'] = ["mapWithIndex" => function($f_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_List_Types_foldableWithIndexList'])['foldrWithIndex'])((function() use ($f_0) {
+  $__res = (($GLOBALS['Data_List_Types_foldableWithIndexList'])['foldrWithIndex'])((function() use ($f_0) {
   $__fn = function($i_1 = null, $x_2 = null, $acc_3 = null) use ($f_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = new Phpurs_Data2("Cons", (($f_0)($i_1))($x_2), $acc_3);
+  $__res = new \Data\List\Types\Data_List_Types_Cons(($f_0)($i_1, $x_2), $acc_3);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})()))(new Phpurs_Data0("Nil"));
+})(), new \Data\List\Types\Data_List_Types_Nil());
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -769,14 +791,14 @@ $GLOBALS['Data_List_Types_functorWithIndexNonEmptyList'] = ["mapWithIndex" => (f
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_List_Types_mapWithIndex'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($fn_0))(function($v2_2 = null) {
+  $__res = ($GLOBALS['Data_List_Types_mapWithIndex'])(($GLOBALS['Control_Semigroupoid_composeImpl'])($fn_0, function($v2_2 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
-  if ((is_object($v2_2) && (($v2_2)->{'tag'} === "Nothing"))) {
+  if ($v2_2 instanceof \Data\Maybe\Data_Maybe_Nothing) {
 $__t0 = 0;
 goto end_branch_0;;
 };
-  if ((is_object($v2_2) && (($v2_2)->{'tag'} === "Just"))) {
+  if ($v2_2 instanceof \Data\Maybe\Data_Maybe_Just) {
 $__t0 = (1 + ($v2_2)->{'value0'});
 goto end_branch_0;;
 };
@@ -787,7 +809,7 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-})))($v_1);
+}), $v_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -808,7 +830,7 @@ $GLOBALS['Data_List_Types_semigroupList'] = ["append" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($GLOBALS['Data_List_Types_foldableList'])['foldr'])($GLOBALS['Data_List_Types_Cons']))($ys_1))($xs_0);
+  $__res = (($GLOBALS['Data_List_Types_foldableList'])['foldr'])($GLOBALS['Data_List_Types_Cons'], $ys_1, $xs_0);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -817,7 +839,7 @@ $GLOBALS['Data_List_Types_semigroupList'] = ["append" => (function() {
 })()];
 
 // Data_List_Types_monoidList
-$GLOBALS['Data_List_Types_monoidList'] = ["mempty" => new Phpurs_Data0("Nil"), "Semigroup0" => function($_dollar__unused_0 = null) {
+$GLOBALS['Data_List_Types_monoidList'] = ["mempty" => new \Data\List\Types\Data_List_Types_Nil(), "Semigroup0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_List_Types_semigroupList'];
   goto __end;;
@@ -832,7 +854,7 @@ $GLOBALS['Data_List_Types_semigroupNonEmptyList'] = ["append" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("NonEmpty", ($v_0)->{'value0'}, ((($GLOBALS['Data_List_Types_semigroupList'])['append'])(($v_0)->{'value1'}))(new Phpurs_Data2("Cons", ($as_prime_1)->{'value0'}, ($as_prime_1)->{'value1'})));
+  $__res = new \Data\NonEmpty\Data_NonEmpty_NonEmpty(($v_0)->{'value0'}, (($GLOBALS['Data_List_Types_semigroupList'])['append'])(($v_0)->{'value1'}, new \Data\List\Types\Data_List_Types_Cons(($as_prime_1)->{'value0'}, ($as_prime_1)->{'value1'})));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -841,17 +863,21 @@ $GLOBALS['Data_List_Types_semigroupNonEmptyList'] = ["append" => (function() {
 })()];
 
 // Data_List_Types_showList
-$GLOBALS['Data_List_Types_showList'] = function($dictShow_0 = null) {
+function majData_majList_majTypes_showmajList($dictShow_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majTypes_showmajList';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $show_1_0 = ($dictShow_0)['show'];
   $__res = ["show" => function($v_2 = null) use ($show_1_0) {
   $__num = \func_num_args();
   $__t1 = null;;
-  if ((is_object($v_2) && (($v_2)->{'tag'} === "Nil"))) {
+  if ($v_2 instanceof \Data\List\Types\Data_List_Types_Nil) {
 $__t1 = "Nil";
 goto end_branch_1;;
 };
-  $__t1 = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("("))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($GLOBALS['Data_List_Types_intercalate'])(" : "))(((($GLOBALS['Data_List_Types_functorList'])['map'])($show_1_0))($v_2))))(" : Nil)"));
+  $__t1 = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])(($GLOBALS['Data_List_Types_intercalate'])(" : ", (($GLOBALS['Data_List_Types_functorList'])['map'])($show_1_0, $v_2)), " : Nil)"));
   end_branch_1:;
   $__res = $__t1;
   goto __end;;
@@ -860,23 +886,29 @@ goto end_branch_1;;
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_Types_showList'] = __NAMESPACE__ . '\\majData_majList_majTypes_showmajList';
 
 // Data_List_Types_showNonEmptyList
-$GLOBALS['Data_List_Types_showNonEmptyList'] = function($dictShow_0 = null) {
+function majData_majList_majTypes_showmajNonmajEmptymajList($dictShow_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majTypes_showmajNonmajEmptymajList';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(NonEmptyList "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((((($GLOBALS['Data_NonEmpty_showNonEmpty'])($dictShow_0))(($GLOBALS['Data_List_Types_showList'])($dictShow_0)))['show'])($v_1)))(")"));
+  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(NonEmptyList ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])(((($GLOBALS['Data_NonEmpty_showNonEmpty'])($dictShow_0, ($GLOBALS['Data_List_Types_showList'])($dictShow_0)))['show'])($v_1), ")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_Types_showNonEmptyList'] = __NAMESPACE__ . '\\majData_majList_majTypes_showmajNonmajEmptymajList';
 
 // Data_List_Types_traversableList
 $GLOBALS['Data_List_Types_traversableList'] = ["traverse" => function($dictApplicative_0 = null) {
@@ -884,43 +916,43 @@ $GLOBALS['Data_List_Types_traversableList'] = ["traverse" => function($dictAppli
   $Apply0_1_0 = (($dictApplicative_0)['Apply0'])(null);
   $__res = function($f_2 = null) use ($Apply0_1_0, $dictApplicative_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((((($Apply0_1_0)['Functor0'])(null))['map'])(((($GLOBALS['Data_List_Types_foldableList'])['foldl'])((function() {
+  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])((((($Apply0_1_0)['Functor0'])(null))['map'])((($GLOBALS['Data_List_Types_foldableList'])['foldl'])((function() {
   $__fn = function($b_3 = null, $a_4 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Cons", $a_4, $b_3);
+  $__res = new \Data\List\Types\Data_List_Types_Cons($a_4, $b_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))(new Phpurs_Data0("Nil")))))(((($GLOBALS['Data_List_Types_foldableList'])['foldl'])(function($acc_3 = null) use ($Apply0_1_0, $f_2) {
+})(), new \Data\List\Types\Data_List_Types_Nil())), (($GLOBALS['Data_List_Types_foldableList'])['foldl'])(function($acc_3 = null) use ($Apply0_1_0, $f_2) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(function($b_4 = null) use ($Apply0_1_0, $acc_3) {
+  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(function($b_4 = null) use ($Apply0_1_0, $acc_3) {
   $__num = \func_num_args();
-  $__res = ((($Apply0_1_0)['apply'])(((((($Apply0_1_0)['Functor0'])(null))['map'])((function() {
+  $__res = (($Apply0_1_0)['apply'])((((($Apply0_1_0)['Functor0'])(null))['map'])((function() {
   $__fn = function($b_5 = null, $a_6 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Cons", $a_6, $b_5);
+  $__res = new \Data\List\Types\Data_List_Types_Cons($a_6, $b_5);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))($acc_3)))($b_4);
+})(), $acc_3), $b_4);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))($f_2);
+}, $f_2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))((($dictApplicative_0)['pure'])(new Phpurs_Data0("Nil"))));
+}, (($dictApplicative_0)['pure'])(new \Data\List\Types\Data_List_Types_Nil())));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -930,7 +962,7 @@ $GLOBALS['Data_List_Types_traversableList'] = ["traverse" => function($dictAppli
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "sequence" => function($dictApplicative_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_List_Types_traversableList'])['traverse'])($dictApplicative_0))($GLOBALS['Data_List_Types_identity']);
+  $__res = (($GLOBALS['Data_List_Types_traversableList'])['traverse'])($dictApplicative_0, $GLOBALS['Data_List_Types_identity']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -957,49 +989,49 @@ $GLOBALS['Data_List_Types_traversableWithIndexList'] = ["traverseWithIndex" => f
   $Apply0_1_0 = (($dictApplicative_0)['Apply0'])(null);
   $__res = function($f_2 = null) use ($Apply0_1_0, $dictApplicative_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((((($Apply0_1_0)['Functor0'])(null))['map'])(((($GLOBALS['Data_List_Types_foldableList'])['foldl'])((function() {
+  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])((((($Apply0_1_0)['Functor0'])(null))['map'])((($GLOBALS['Data_List_Types_foldableList'])['foldl'])((function() {
   $__fn = function($b_3 = null, $a_4 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Cons", $a_4, $b_3);
+  $__res = new \Data\List\Types\Data_List_Types_Cons($a_4, $b_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))(new Phpurs_Data0("Nil")))))(((($GLOBALS['Data_List_Types_foldableWithIndexList'])['foldlWithIndex'])((function() use ($Apply0_1_0, $f_2) {
+})(), new \Data\List\Types\Data_List_Types_Nil())), (($GLOBALS['Data_List_Types_foldableWithIndexList'])['foldlWithIndex'])((function() use ($Apply0_1_0, $f_2) {
   $__fn = function($i_3 = null, $acc_4 = null) use ($Apply0_1_0, $f_2, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(function($b_5 = null) use ($Apply0_1_0, $acc_4) {
+  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(function($b_5 = null) use ($Apply0_1_0, $acc_4) {
   $__num = \func_num_args();
-  $__res = ((($Apply0_1_0)['apply'])(((((($Apply0_1_0)['Functor0'])(null))['map'])((function() {
+  $__res = (($Apply0_1_0)['apply'])((((($Apply0_1_0)['Functor0'])(null))['map'])((function() {
   $__fn = function($b_6 = null, $a_7 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Cons", $a_7, $b_6);
+  $__res = new \Data\List\Types\Data_List_Types_Cons($a_7, $b_6);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))($acc_4)))($b_5);
+})(), $acc_4), $b_5);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(($f_2)($i_3));
+}, ($f_2)($i_3));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))((($dictApplicative_0)['pure'])(new Phpurs_Data0("Nil"))));
+})(), (($dictApplicative_0)['pure'])(new \Data\List\Types\Data_List_Types_Nil())));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1040,14 +1072,14 @@ $GLOBALS['Data_List_Types_traversableWithIndexNonEmptyList'] = ["traverseWithInd
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((((($dictApplicative_0)['Apply0'])(null))['Functor0'])(null))['map'])($GLOBALS['Data_List_Types_NonEmptyList']))((($traverseWithIndex1_1_0)((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_2))(function($v2_4 = null) {
+  $__res = (((((($dictApplicative_0)['Apply0'])(null))['Functor0'])(null))['map'])($GLOBALS['Data_List_Types_NonEmptyList'], ($traverseWithIndex1_1_0)(($GLOBALS['Control_Semigroupoid_composeImpl'])($f_2, function($v2_4 = null) {
   $__num = \func_num_args();
   $__t1 = null;;
-  if ((is_object($v2_4) && (($v2_4)->{'tag'} === "Nothing"))) {
+  if ($v2_4 instanceof \Data\Maybe\Data_Maybe_Nothing) {
 $__t1 = 0;
 goto end_branch_1;;
 };
-  if ((is_object($v2_4) && (($v2_4)->{'tag'} === "Just"))) {
+  if ($v2_4 instanceof \Data\Maybe\Data_Maybe_Just) {
 $__t1 = (1 + ($v2_4)->{'value0'});
 goto end_branch_1;;
 };
@@ -1058,7 +1090,7 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-})))($v_3));
+}), $v_3));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1109,29 +1141,29 @@ $GLOBALS['Data_List_Types_unfoldable1List'] = ["unfoldr1" => (function() {
   $memo_4 = $__tco_var_go__2_0_0_memo_4;
   $v_5_0 = ($f_0)($source_3);
   $__t1 = null;;
-  if ((is_object(($v_5_0)->{'value1'}) && ((($v_5_0)->{'value1'})->{'tag'} === "Just"))) {
+  if (($v_5_0)->{'value1'} instanceof \Data\Maybe\Data_Maybe_Just) {
 $__tco_2 = (($v_5_0)->{'value1'})->{'value0'};
-$__tco_3 = new Phpurs_Data2("Cons", ($v_5_0)->{'value0'}, $memo_4);
+$__tco_3 = new \Data\List\Types\Data_List_Types_Cons(($v_5_0)->{'value0'}, $memo_4);
 $__tco_var_go__2_0_0_source_3 = $__tco_2;
 $__tco_var_go__2_0_0_memo_4 = $__tco_3;
 goto tco_loop_go__2_0_0;;
 $__t1 = null;
 goto end_branch_1;;
 };
-  if ((is_object(($v_5_0)->{'value1'}) && ((($v_5_0)->{'value1'})->{'tag'} === "Nothing"))) {
-$__t1 = (((($GLOBALS['Data_List_Types_foldableList'])['foldl'])((function() {
+  if (($v_5_0)->{'value1'} instanceof \Data\Maybe\Data_Maybe_Nothing) {
+$__t1 = (($GLOBALS['Data_List_Types_foldableList'])['foldl'])((function() {
   $__fn = function($b_6 = null, $a_7 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Cons", $a_7, $b_6);
+  $__res = new \Data\List\Types\Data_List_Types_Cons($a_7, $b_6);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))(new Phpurs_Data0("Nil")))(new Phpurs_Data2("Cons", ($v_5_0)->{'value0'}, $memo_4));
+})(), new \Data\List\Types\Data_List_Types_Nil(), new \Data\List\Types\Data_List_Types_Cons(($v_5_0)->{'value0'}, $memo_4));
 goto end_branch_1;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -1144,7 +1176,7 @@ goto end_branch_1;;
   };
   return $__fn;
 })();
-  $__res = (($go__2_0)($b_1))(new Phpurs_Data0("Nil"));
+  $__res = ($go__2_0)($b_1, new \Data\List\Types\Data_List_Types_Nil());
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1173,25 +1205,25 @@ $GLOBALS['Data_List_Types_unfoldableList'] = ["unfoldr" => (function() {
   $memo_4 = $__tco_var_go__2_0_0_memo_4;
   $v_5_0 = ($f_0)($source_3);
   $__t1 = null;;
-  if ((is_object($v_5_0) && (($v_5_0)->{'tag'} === "Nothing"))) {
-$__t1 = (((($GLOBALS['Data_List_Types_foldableList'])['foldl'])((function() {
+  if ($v_5_0 instanceof \Data\Maybe\Data_Maybe_Nothing) {
+$__t1 = (($GLOBALS['Data_List_Types_foldableList'])['foldl'])((function() {
   $__fn = function($b_6 = null, $a_7 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Cons", $a_7, $b_6);
+  $__res = new \Data\List\Types\Data_List_Types_Cons($a_7, $b_6);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))(new Phpurs_Data0("Nil")))($memo_4);
+})(), new \Data\List\Types\Data_List_Types_Nil(), $memo_4);
 goto end_branch_1;;
 };
-  if ((is_object($v_5_0) && (($v_5_0)->{'tag'} === "Just"))) {
+  if ($v_5_0 instanceof \Data\Maybe\Data_Maybe_Just) {
 $__tco_2 = (($v_5_0)->{'value0'})->{'value1'};
-$__tco_3 = new Phpurs_Data2("Cons", (($v_5_0)->{'value0'})->{'value0'}, $memo_4);
+$__tco_3 = new \Data\List\Types\Data_List_Types_Cons((($v_5_0)->{'value0'})->{'value0'}, $memo_4);
 $__tco_var_go__2_0_0_source_3 = $__tco_2;
 $__tco_var_go__2_0_0_memo_4 = $__tco_3;
 goto tco_loop_go__2_0_0;;
@@ -1208,7 +1240,7 @@ goto end_branch_1;;
   };
   return $__fn;
 })();
-  $__res = (($go__2_0)($b_1))(new Phpurs_Data0("Nil"));
+  $__res = ($go__2_0)($b_1, new \Data\List\Types\Data_List_Types_Nil());
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1235,19 +1267,19 @@ $GLOBALS['Data_List_Types_extendNonEmptyList'] = ["extend" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("NonEmpty", ($f_0)($v_1), ((((($GLOBALS['Data_List_Types_foldableList'])['foldr'])((function() use ($f_0) {
+  $__res = new \Data\NonEmpty\Data_NonEmpty_NonEmpty(($f_0)($v_1), ((($GLOBALS['Data_List_Types_foldableList'])['foldr'])((function() use ($f_0) {
   $__fn = function($a_2 = null, $v1_3 = null) use ($f_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ["val" => new Phpurs_Data2("Cons", ($f_0)(new Phpurs_Data2("NonEmpty", $a_2, ($v1_3)['acc'])), ($v1_3)['val']), "acc" => new Phpurs_Data2("Cons", $a_2, ($v1_3)['acc'])];
+  $__res = ["val" => new \Data\List\Types\Data_List_Types_Cons(($f_0)(new \Data\NonEmpty\Data_NonEmpty_NonEmpty($a_2, ($v1_3)['acc'])), ($v1_3)['val']), "acc" => new \Data\List\Types\Data_List_Types_Cons($a_2, ($v1_3)['acc'])];
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))(["val" => new Phpurs_Data0("Nil"), "acc" => new Phpurs_Data0("Nil")]))(($v_1)->{'value1'}))['val']);
+})(), ["val" => new \Data\List\Types\Data_List_Types_Nil(), "acc" => new \Data\List\Types\Data_List_Types_Nil()], ($v_1)->{'value1'}))['val']);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1269,24 +1301,24 @@ $GLOBALS['Data_List_Types_extendList'] = ["extend" => (function() {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__t0 = null;;
-  if ((is_object($v1_1) && (($v1_1)->{'tag'} === "Nil"))) {
-$__t0 = new Phpurs_Data0("Nil");
+  if ($v1_1 instanceof \Data\List\Types\Data_List_Types_Nil) {
+$__t0 = new \Data\List\Types\Data_List_Types_Nil();
 goto end_branch_0;;
 };
-  if ((is_object($v1_1) && (($v1_1)->{'tag'} === "Cons"))) {
-$__t0 = new Phpurs_Data2("Cons", ($v_0)($v1_1), ((((($GLOBALS['Data_List_Types_foldableList'])['foldr'])((function() use ($v_0) {
+  if ($v1_1 instanceof \Data\List\Types\Data_List_Types_Cons) {
+$__t0 = new \Data\List\Types\Data_List_Types_Cons(($v_0)($v1_1), ((($GLOBALS['Data_List_Types_foldableList'])['foldr'])((function() use ($v_0) {
   $__fn = function($a_prime_2 = null, $v2_3 = null) use ($v_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ["val" => new Phpurs_Data2("Cons", ($v_0)(new Phpurs_Data2("Cons", $a_prime_2, ($v2_3)['acc'])), ($v2_3)['val']), "acc" => new Phpurs_Data2("Cons", $a_prime_2, ($v2_3)['acc'])];
+  $__res = ["val" => new \Data\List\Types\Data_List_Types_Cons(($v_0)(new \Data\List\Types\Data_List_Types_Cons($a_prime_2, ($v2_3)['acc'])), ($v2_3)['val']), "acc" => new \Data\List\Types\Data_List_Types_Cons($a_prime_2, ($v2_3)['acc'])];
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))(["val" => new Phpurs_Data0("Nil"), "acc" => new Phpurs_Data0("Nil")]))(($v1_1)->{'value1'}))['val']);
+})(), ["val" => new \Data\List\Types\Data_List_Types_Nil(), "acc" => new \Data\List\Types\Data_List_Types_Nil()], ($v1_1)->{'value1'}))['val']);
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -1325,11 +1357,11 @@ $GLOBALS['Data_List_Types_eq1List'] = ["eq1" => (function() {
 $__t1 = false;
 goto end_branch_1;;
 };
-  if ((is_object($v_4) && (($v_4)->{'tag'} === "Nil"))) {
-$__t1 = ((is_object($v1_5) && (($v1_5)->{'tag'} === "Nil")) && $v2_6);
+  if ($v_4 instanceof \Data\List\Types\Data_List_Types_Nil) {
+$__t1 = ($v1_5 instanceof \Data\List\Types\Data_List_Types_Nil && $v2_6);
 goto end_branch_1;;
 };
-  $__t1 = ((is_object($v_4) && (($v_4)->{'tag'} === "Cons")) && ((is_object($v1_5) && (($v1_5)->{'tag'} === "Cons")) && ((($go__3_0)(($v_4)->{'value1'}))(($v1_5)->{'value1'}))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])($v2_6))(((($dictEq_0)['eq'])(($v1_5)->{'value0'}))(($v_4)->{'value0'})))));
+  $__t1 = ($v_4 instanceof \Data\List\Types\Data_List_Types_Cons && ($v1_5 instanceof \Data\List\Types\Data_List_Types_Cons && ($go__3_0)(($v_4)->{'value1'}, ($v1_5)->{'value1'}, (($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])($v2_6, (($dictEq_0)['eq'])(($v1_5)->{'value0'}, ($v_4)->{'value0'})))));
   end_branch_1:;
   $__res = $__t1;
   goto __end;;
@@ -1338,7 +1370,7 @@ goto end_branch_1;;
   };
   return $__fn;
 })();
-  $__res = ((($go__3_0)($xs_1))($ys_2))(true);
+  $__res = ($go__3_0)($xs_1, $ys_2, true);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -1349,29 +1381,39 @@ goto end_branch_1;;
 // Data_List_Types_eq1NonEmptyList
 $GLOBALS['Data_List_Types_eq1NonEmptyList'] = ["eq1" => function($dictEq_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_NonEmpty_eqNonEmpty'])($GLOBALS['Data_List_Types_eq1List']))($dictEq_0))['eq'];
+  $__res = (($GLOBALS['Data_NonEmpty_eqNonEmpty'])($GLOBALS['Data_List_Types_eq1List'], $dictEq_0))['eq'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
 
 // Data_List_Types_eqList
-$GLOBALS['Data_List_Types_eqList'] = function($dictEq_0 = null) {
+function majData_majList_majTypes_eqmajList($dictEq_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majTypes_eqmajList';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["eq" => (($GLOBALS['Data_List_Types_eq1List'])['eq1'])($dictEq_0)];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_Types_eqList'] = __NAMESPACE__ . '\\majData_majList_majTypes_eqmajList';
 
 // Data_List_Types_eqNonEmptyList
-$GLOBALS['Data_List_Types_eqNonEmptyList'] = function($dictEq_0 = null) {
+function majData_majList_majTypes_eqmajNonmajEmptymajList($dictEq_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_NonEmpty_eqNonEmpty'])($GLOBALS['Data_List_Types_eq1List']))($dictEq_0);
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majTypes_eqmajNonmajEmptymajList';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ($GLOBALS['Data_NonEmpty_eqNonEmpty'])($GLOBALS['Data_List_Types_eq1List'], $dictEq_0);
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_Types_eqNonEmptyList'] = __NAMESPACE__ . '\\majData_majList_majTypes_eqmajNonmajEmptymajList';
 
 // Data_List_Types_ord1List
 $GLOBALS['Data_List_Types_ord1List'] = ["compare1" => (function() {
@@ -1393,25 +1435,25 @@ $GLOBALS['Data_List_Types_ord1List'] = ["compare1" => (function() {
   $v_4 = $__tco_var_go__3_0_0_v_4;
   $v1_5 = $__tco_var_go__3_0_0_v1_5;
   $__t0 = null;;
-  if ((is_object($v_4) && (($v_4)->{'tag'} === "Nil"))) {
+  if ($v_4 instanceof \Data\List\Types\Data_List_Types_Nil) {
 $__t1 = null;;
-if ((is_object($v1_5) && (($v1_5)->{'tag'} === "Nil"))) {
-$__t1 = new Phpurs_Data0("EQ");
+if ($v1_5 instanceof \Data\List\Types\Data_List_Types_Nil) {
+$__t1 = new \Data\Ordering\Data_Ordering_EQ();
 goto end_branch_1;;
 };
-$__t1 = new Phpurs_Data0("LT");
+$__t1 = new \Data\Ordering\Data_Ordering_LT();
 end_branch_1:;
 $__t0 = $__t1;
 goto end_branch_0;;
 };
-  if ((is_object($v1_5) && (($v1_5)->{'tag'} === "Nil"))) {
-$__t0 = new Phpurs_Data0("GT");
+  if ($v1_5 instanceof \Data\List\Types\Data_List_Types_Nil) {
+$__t0 = new \Data\Ordering\Data_Ordering_GT();
 goto end_branch_0;;
 };
-  if (((is_object($v_4) && (($v_4)->{'tag'} === "Cons")) && (is_object($v1_5) && (($v1_5)->{'tag'} === "Cons")))) {
-$v2_6_2 = ((($dictOrd_0)['compare'])(($v_4)->{'value0'}))(($v1_5)->{'value0'});
+  if (($v_4 instanceof \Data\List\Types\Data_List_Types_Cons && $v1_5 instanceof \Data\List\Types\Data_List_Types_Cons)) {
+$v2_6_2 = (($dictOrd_0)['compare'])(($v_4)->{'value0'}, ($v1_5)->{'value0'});
 $__t3 = null;;
-if ((is_object($v2_6_2) && (($v2_6_2)->{'tag'} === "EQ"))) {
+if ($v2_6_2 instanceof \Data\Ordering\Data_Ordering_EQ) {
 $__tco_4 = ($v_4)->{'value1'};
 $__tco_5 = ($v1_5)->{'value1'};
 $__tco_var_go__3_0_0_v_4 = $__tco_4;
@@ -1435,7 +1477,7 @@ goto end_branch_0;;
   };
   return $__fn;
 })();
-  $__res = (($go__3_0)($xs_1))($ys_2);
+  $__res = ($go__3_0)($xs_1, $ys_2);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -1456,8 +1498,12 @@ $GLOBALS['Data_List_Types_ordNonEmpty'] = ($GLOBALS['Data_NonEmpty_ordNonEmpty']
 $GLOBALS['Data_List_Types_ord1NonEmptyList'] = ($GLOBALS['Data_NonEmpty_ord1NonEmpty'])($GLOBALS['Data_List_Types_ord1List']);
 
 // Data_List_Types_ordList
-$GLOBALS['Data_List_Types_ordList'] = function($dictOrd_0 = null) {
+function majData_majList_majTypes_ordmajList($dictOrd_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majTypes_ordmajList';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $eqList1_1_0 = ["eq" => (($GLOBALS['Data_List_Types_eq1List'])['eq1'])((($dictOrd_0)['Eq0'])(null))];
   $__res = ["compare" => (($GLOBALS['Data_List_Types_ord1List'])['compare1'])($dictOrd_0), "Eq0" => function($_dollar__unused_2 = null) use ($eqList1_1_0) {
   $__num = \func_num_args();
@@ -1468,17 +1514,23 @@ $GLOBALS['Data_List_Types_ordList'] = function($dictOrd_0 = null) {
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_Types_ordList'] = __NAMESPACE__ . '\\majData_majList_majTypes_ordmajList';
 
 // Data_List_Types_ordNonEmptyList
-$GLOBALS['Data_List_Types_ordNonEmptyList'] = function($dictOrd_0 = null) {
+function majData_majList_majTypes_ordmajNonmajEmptymajList($dictOrd_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majList_majTypes_ordmajNonmajEmptymajList';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($GLOBALS['Data_List_Types_ordNonEmpty'])($dictOrd_0);
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_List_Types_ordNonEmptyList'] = __NAMESPACE__ . '\\majData_majList_majTypes_ordmajNonmajEmptymajList';
 
 // Data_List_Types_comonadNonEmptyList
 $GLOBALS['Data_List_Types_comonadNonEmptyList'] = ["extract" => function($v_0 = null) {
@@ -1503,12 +1555,12 @@ $GLOBALS['Data_List_Types_applyList'] = ["apply" => (function() {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__t0 = null;;
-  if ((is_object($v_0) && (($v_0)->{'tag'} === "Nil"))) {
-$__t0 = new Phpurs_Data0("Nil");
+  if ($v_0 instanceof \Data\List\Types\Data_List_Types_Nil) {
+$__t0 = new \Data\List\Types\Data_List_Types_Nil();
 goto end_branch_0;;
 };
-  if ((is_object($v_0) && (($v_0)->{'tag'} === "Cons"))) {
-$__t0 = ((($GLOBALS['Data_List_Types_semigroupList'])['append'])(((($GLOBALS['Data_List_Types_functorList'])['map'])(($v_0)->{'value0'}))($v1_1)))(((($GLOBALS['Data_List_Types_applyList'])['apply'])(($v_0)->{'value1'}))($v1_1));
+  if ($v_0 instanceof \Data\List\Types\Data_List_Types_Cons) {
+$__t0 = (($GLOBALS['Data_List_Types_semigroupList'])['append'])((($GLOBALS['Data_List_Types_functorList'])['map'])(($v_0)->{'value0'}, $v1_1), (($GLOBALS['Data_List_Types_applyList'])['apply'])(($v_0)->{'value1'}, $v1_1));
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -1535,7 +1587,7 @@ $GLOBALS['Data_List_Types_applyNonEmptyList'] = ["apply" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("NonEmpty", (($v_0)->{'value0'})(($v1_1)->{'value0'}), ((($GLOBALS['Data_List_Types_semigroupList'])['append'])(((($GLOBALS['Data_List_Types_applyList'])['apply'])(($v_0)->{'value1'}))(new Phpurs_Data2("Cons", ($v1_1)->{'value0'}, new Phpurs_Data0("Nil")))))(((($GLOBALS['Data_List_Types_applyList'])['apply'])(new Phpurs_Data2("Cons", ($v_0)->{'value0'}, ($v_0)->{'value1'})))(($v1_1)->{'value1'})));
+  $__res = new \Data\NonEmpty\Data_NonEmpty_NonEmpty((($v_0)->{'value0'})(($v1_1)->{'value0'}), (($GLOBALS['Data_List_Types_semigroupList'])['append'])((($GLOBALS['Data_List_Types_applyList'])['apply'])(($v_0)->{'value1'}, new \Data\List\Types\Data_List_Types_Cons(($v1_1)->{'value0'}, new \Data\List\Types\Data_List_Types_Nil())), (($GLOBALS['Data_List_Types_applyList'])['apply'])(new \Data\List\Types\Data_List_Types_Cons(($v_0)->{'value0'}, ($v_0)->{'value1'}), ($v1_1)->{'value1'})));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1557,12 +1609,12 @@ $GLOBALS['Data_List_Types_bindList'] = ["bind" => (function() {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__t0 = null;;
-  if ((is_object($v_0) && (($v_0)->{'tag'} === "Nil"))) {
-$__t0 = new Phpurs_Data0("Nil");
+  if ($v_0 instanceof \Data\List\Types\Data_List_Types_Nil) {
+$__t0 = new \Data\List\Types\Data_List_Types_Nil();
 goto end_branch_0;;
 };
-  if ((is_object($v_0) && (($v_0)->{'tag'} === "Cons"))) {
-$__t0 = ((($GLOBALS['Data_List_Types_semigroupList'])['append'])(($v1_1)(($v_0)->{'value0'})))(((($GLOBALS['Data_List_Types_bindList'])['bind'])(($v_0)->{'value1'}))($v1_1));
+  if ($v_0 instanceof \Data\List\Types\Data_List_Types_Cons) {
+$__t0 = (($GLOBALS['Data_List_Types_semigroupList'])['append'])(($v1_1)(($v_0)->{'value0'}), (($GLOBALS['Data_List_Types_bindList'])['bind'])(($v_0)->{'value1'}, $v1_1));
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -1590,7 +1642,7 @@ $GLOBALS['Data_List_Types_bindNonEmptyList'] = ["bind" => (function() {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $v1_2_0 = ($f_1)(($v_0)->{'value0'});
-  $__res = new Phpurs_Data2("NonEmpty", ($v1_2_0)->{'value0'}, ((($GLOBALS['Data_List_Types_semigroupList'])['append'])(($v1_2_0)->{'value1'}))(((($GLOBALS['Data_List_Types_bindList'])['bind'])(($v_0)->{'value1'}))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_List_Types_toList']))($f_1))));
+  $__res = new \Data\NonEmpty\Data_NonEmpty_NonEmpty(($v1_2_0)->{'value0'}, (($GLOBALS['Data_List_Types_semigroupList'])['append'])(($v1_2_0)->{'value1'}, (($GLOBALS['Data_List_Types_bindList'])['bind'])(($v_0)->{'value1'}, ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_List_Types_toList'], $f_1))));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1607,7 +1659,7 @@ $GLOBALS['Data_List_Types_bindNonEmptyList'] = ["bind" => (function() {
 // Data_List_Types_applicativeList
 $GLOBALS['Data_List_Types_applicativeList'] = ["pure" => function($a_0 = null) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Cons", $a_0, new Phpurs_Data0("Nil"));
+  $__res = new \Data\List\Types\Data_List_Types_Cons($a_0, new \Data\List\Types\Data_List_Types_Nil());
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1653,7 +1705,7 @@ $GLOBALS['Data_List_Types_altList'] = ["alt" => ($GLOBALS['Data_List_Types_semig
 }];
 
 // Data_List_Types_plusList
-$GLOBALS['Data_List_Types_plusList'] = ["empty" => new Phpurs_Data0("Nil"), "Alt0" => function($_dollar__unused_0 = null) {
+$GLOBALS['Data_List_Types_plusList'] = ["empty" => new \Data\List\Types\Data_List_Types_Nil(), "Alt0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_List_Types_altList'];
   goto __end;;
@@ -1692,9 +1744,9 @@ $GLOBALS['Data_List_Types_monadPlusList'] = ["Monad0" => function($_dollar__unus
 }];
 
 // Data_List_Types_applicativeNonEmptyList
-$GLOBALS['Data_List_Types_applicativeNonEmptyList'] = ["pure" => (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_List_Types_NonEmptyList']))(function($a_0 = null) {
+$GLOBALS['Data_List_Types_applicativeNonEmptyList'] = ["pure" => ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_List_Types_NonEmptyList'], function($a_0 = null) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("NonEmpty", $a_0, ($GLOBALS['Data_List_Types_plusList'])['empty']);
+  $__res = new \Data\NonEmpty\Data_NonEmpty_NonEmpty($a_0, ($GLOBALS['Data_List_Types_plusList'])['empty']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1731,49 +1783,49 @@ $GLOBALS['Data_List_Types_traversable1NonEmptyList'] = ["traverse1" => function(
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($Functor0_1_0)['map'])(function($v1_4 = null) {
+  $__res = (($Functor0_1_0)['map'])(function($v1_4 = null) {
   $__num = \func_num_args();
-  $__res = (((($GLOBALS['Data_List_Types_foldableList'])['foldl'])((function() {
+  $__res = (($GLOBALS['Data_List_Types_foldableList'])['foldl'])((function() {
   $__fn = function($b_5 = null, $a_6 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("NonEmpty", $a_6, new Phpurs_Data2("Cons", ($b_5)->{'value0'}, ($b_5)->{'value1'}));
+  $__res = new \Data\NonEmpty\Data_NonEmpty_NonEmpty($a_6, new \Data\List\Types\Data_List_Types_Cons(($b_5)->{'value0'}, ($b_5)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))((($GLOBALS['Data_List_Types_applicativeNonEmptyList'])['pure'])(($v1_4)->{'value0'})))(($v1_4)->{'value1'});
+})(), (($GLOBALS['Data_List_Types_applicativeNonEmptyList'])['pure'])(($v1_4)->{'value0'}), ($v1_4)->{'value1'});
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))((((($GLOBALS['Data_List_Types_foldableList'])['foldl'])(function($acc_4 = null) use ($dictApply_0, $f_2) {
+}, (($GLOBALS['Data_List_Types_foldableList'])['foldl'])(function($acc_4 = null) use ($dictApply_0, $f_2) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(function($b_5 = null) use ($acc_4, $dictApply_0) {
+  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(function($b_5 = null) use ($acc_4, $dictApply_0) {
   $__num = \func_num_args();
-  $__res = ((($dictApply_0)['apply'])(((((($dictApply_0)['Functor0'])(null))['map'])((function() {
+  $__res = (($dictApply_0)['apply'])((((($dictApply_0)['Functor0'])(null))['map'])((function() {
   $__fn = function($b_6 = null, $a_7 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("NonEmpty", $a_7, new Phpurs_Data2("Cons", ($b_6)->{'value0'}, ($b_6)->{'value1'}));
+  $__res = new \Data\NonEmpty\Data_NonEmpty_NonEmpty($a_7, new \Data\List\Types\Data_List_Types_Cons(($b_6)->{'value0'}, ($b_6)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))($acc_4)))($b_5);
+})(), $acc_4), $b_5);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))($f_2);
+}, $f_2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(((($Functor0_1_0)['map'])(($GLOBALS['Data_List_Types_applicativeNonEmptyList'])['pure']))(($f_2)(($v_3)->{'value0'}))))(($v_3)->{'value1'}));
+}, (($Functor0_1_0)['map'])(($GLOBALS['Data_List_Types_applicativeNonEmptyList'])['pure'], ($f_2)(($v_3)->{'value0'})), ($v_3)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1785,7 +1837,7 @@ $GLOBALS['Data_List_Types_traversable1NonEmptyList'] = ["traverse1" => function(
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "sequence1" => function($dictApply_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_List_Types_traversable1NonEmptyList'])['traverse1'])($dictApply_0))($GLOBALS['Data_List_Types_identity']);
+  $__res = (($GLOBALS['Data_List_Types_traversable1NonEmptyList'])['traverse1'])($dictApply_0, $GLOBALS['Data_List_Types_identity']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

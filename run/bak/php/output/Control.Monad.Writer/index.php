@@ -103,27 +103,67 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
+// Control_Monad_Writer_writer_closure
+$GLOBALS['Control_Monad_Writer_writer_closure'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_Writer_Trans_WriterT'], ($GLOBALS['Data_Identity_applicativeIdentity'])['pure']);
+
 // Control_Monad_Writer_writer
-$GLOBALS['Control_Monad_Writer_writer'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_Writer_Trans_WriterT']))(($GLOBALS['Data_Identity_applicativeIdentity'])['pure']);
-
-// Control_Monad_Writer_runWriter
-$GLOBALS['Control_Monad_Writer_runWriter'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce']))($GLOBALS['Control_Monad_Writer_Trans_runWriterT']);
-
-// Control_Monad_Writer_mapWriter
-$GLOBALS['Control_Monad_Writer_mapWriter'] = function($f_0 = null) {
+function majControl_majMonad_majWriter_writer($v_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Identity_Identity']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_0))($GLOBALS['Unsafe_Coerce_unsafeCoerce']));
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majWriter_writer';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ($GLOBALS['Control_Monad_Writer_writer_closure'])($v_0);
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_Writer_writer'] = __NAMESPACE__ . '\\majControl_majMonad_majWriter_writer';
+
+// Control_Monad_Writer_runWriter_closure
+$GLOBALS['Control_Monad_Writer_runWriter_closure'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce'], $GLOBALS['Control_Monad_Writer_Trans_runWriterT']);
+
+// Control_Monad_Writer_runWriter
+function majControl_majMonad_majWriter_runmajWriter($v_0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majWriter_runmajWriter';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ($GLOBALS['Control_Monad_Writer_runWriter_closure'])($v_0);
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_Writer_runWriter'] = __NAMESPACE__ . '\\majControl_majMonad_majWriter_runmajWriter';
+
+// Control_Monad_Writer_mapWriter
+function majControl_majMonad_majWriter_mapmajWriter($f_0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majWriter_mapmajWriter';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Identity_Identity'], ($GLOBALS['Control_Semigroupoid_composeImpl'])($f_0, $GLOBALS['Unsafe_Coerce_unsafeCoerce']));
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_Writer_mapWriter'] = __NAMESPACE__ . '\\majControl_majMonad_majWriter_mapmajWriter';
 
 // Control_Monad_Writer_execWriter
-$GLOBALS['Control_Monad_Writer_execWriter'] = function($m_0 = null) {
+function majControl_majMonad_majWriter_execmajWriter($m_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majWriter_execmajWriter';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = (($GLOBALS['Control_Monad_Writer_runWriter'])($m_0))->{'value1'};
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_Writer_execWriter'] = __NAMESPACE__ . '\\majControl_majMonad_majWriter_execmajWriter';
 

@@ -332,7 +332,7 @@ _ = functorStar1_2_1
 return gopurs_runtime.RecordDict3("Functor0", "collect", "distribute", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return functorStar1_2_1
 }), gopurs_runtime.Func2(func(dictFunctor_3 gopurs_runtime.Value, f_4 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_5_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(Get_distributiveStar(), dictDistributive_0), "distribute"), dictFunctor_3)
+__local_var_5_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Call_distributiveStar(dictDistributive_0), "distribute"), dictFunctor_3)
 _ = __local_var_5_3
 __local_var_6_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctor_3, "map"), f_4)
 _ = __local_var_6_4
@@ -568,7 +568,7 @@ return applyStar1_5_6
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_0, "pure"), a_6)
 }))
 _ = applicativeStar1_3_2
-bindStar1_4_7 := gopurs_runtime.Apply(Get_bindStar(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Bind1"), gopurs_runtime.Value{}))
+bindStar1_4_7 := Call_bindStar(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Bind1"), gopurs_runtime.Value{}))
 _ = bindStar1_4_7
 return gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return applicativeStar1_3_2
@@ -694,9 +694,9 @@ return plusStar1_6_9
 func Call_monadPlusStar(dictMonadPlus_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadPlus_0 gopurs_runtime.Value = dictMonadPlus_0_loop
 _ = dictMonadPlus_0
-monadStar1_1_0 := gopurs_runtime.Apply(Get_monadStar(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadPlus_0, "Monad0"), gopurs_runtime.Value{}))
+monadStar1_1_0 := Call_monadStar(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadPlus_0, "Monad0"), gopurs_runtime.Value{}))
 _ = monadStar1_1_0
-alternativeStar1_2_1 := gopurs_runtime.Apply(Get_alternativeStar(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadPlus_0, "Alternative1"), gopurs_runtime.Value{}))
+alternativeStar1_2_1 := Call_alternativeStar(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadPlus_0, "Alternative1"), gopurs_runtime.Value{}))
 _ = alternativeStar1_2_1
 return gopurs_runtime.RecordDict2("Alternative1", "Monad0", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return alternativeStar1_2_1

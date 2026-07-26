@@ -103,19 +103,26 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_String_CaseInsensitive_CaseInsensitiveString
-$GLOBALS['Data_String_CaseInsensitive_CaseInsensitiveString'] = function($x_0 = null) {
+function majData_majString_majCasemajInsensitive_majCasemajInsensitivemajString($x_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majCasemajInsensitive_majCasemajInsensitivemajString';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $x_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_String_CaseInsensitive_CaseInsensitiveString'] = __NAMESPACE__ . '\\majData_majString_majCasemajInsensitive_majCasemajInsensitivemajString';
 
 // Data_String_CaseInsensitive_showCaseInsensitiveString
 $GLOBALS['Data_String_CaseInsensitive_showCaseInsensitiveString'] = ["show" => function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(CaseInsensitiveString "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($GLOBALS['Data_Show_showString'])['show'])($v_0)))(")"));
+  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(CaseInsensitiveString ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($GLOBALS['Data_Show_showString'])['show'])($v_0), ")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -137,7 +144,7 @@ $GLOBALS['Data_String_CaseInsensitive_eqCaseInsensitiveString'] = ["eq" => (func
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_Eq_eqString'])['eq'])(($GLOBALS['Data_String_Common_toLower'])($v_0)))(($GLOBALS['Data_String_Common_toLower'])($v1_1));
+  $__res = (($GLOBALS['Data_Eq_eqString'])['eq'])(($GLOBALS['Data_String_Common_toLower'])($v_0), ($GLOBALS['Data_String_Common_toLower'])($v1_1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -152,7 +159,7 @@ $GLOBALS['Data_String_CaseInsensitive_ordCaseInsensitiveString'] = ["compare" =>
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_Ord_ordString'])['compare'])(($GLOBALS['Data_String_Common_toLower'])($v_0)))(($GLOBALS['Data_String_Common_toLower'])($v1_1));
+  $__res = (($GLOBALS['Data_Ord_ordString'])['compare'])(($GLOBALS['Data_String_Common_toLower'])($v_0), ($GLOBALS['Data_String_Common_toLower'])($v1_1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

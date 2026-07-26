@@ -122,6 +122,8 @@ $GLOBALS['Data_Number_tan'] = new class { public function __invoke(...$args) { r
 $GLOBALS['Data_Number_trunc'] = new class { public function __invoke(...$args) { return $this; } };
 
 
+
+
 // Data_Number_tau
 $GLOBALS['Data_Number_tau'] = 6.283185307179586;
 
@@ -147,13 +149,18 @@ $GLOBALS['Data_Number_ln2'] = 0.6931471805599453;
 $GLOBALS['Data_Number_ln10'] = 2.302585092994046;
 
 // Data_Number_fromString
-$GLOBALS['Data_Number_fromString'] = function($str_0 = null) {
+function majData_majNumber_frommajString($str_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Number_fromStringImpl'])($str_0, $GLOBALS['Data_Number_isFinite'], $GLOBALS['Data_Maybe_Just'], new Phpurs_Data0("Nothing"));
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majNumber_frommajString';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ($GLOBALS['Data_Number_fromStringImpl'])($str_0, $GLOBALS['Data_Number_isFinite'], $GLOBALS['Data_Maybe_Just'], new \Data\Maybe\Data_Maybe_Nothing());
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Number_fromString'] = __NAMESPACE__ . '\\majData_majNumber_frommajString';
 
 // Data_Number_e
 $GLOBALS['Data_Number_e'] = 2.718281828459045;

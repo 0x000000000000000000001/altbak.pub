@@ -95,6 +95,8 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Type_Equality_refl
 $GLOBALS['Type_Equality_refl'] = ["proof" => function($a_0 = null) {
   $__num = \func_num_args();
@@ -111,17 +113,26 @@ $GLOBALS['Type_Equality_refl'] = ["proof" => function($a_0 = null) {
 }];
 
 // Type_Equality_proof
-$GLOBALS['Type_Equality_proof'] = function($dict_0 = null) {
+function majType_majEquality_proof($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majType_majEquality_proof';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['proof'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Type_Equality_proof'] = __NAMESPACE__ . '\\majType_majEquality_proof';
 
 // Type_Equality_to
-$GLOBALS['Type_Equality_to'] = function($dictTypeEquals_0 = null) {
+function majType_majEquality_to($dictTypeEquals_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majType_majEquality_to';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = (($dictTypeEquals_0)['proof'])(function($a_1 = null) {
   $__num = \func_num_args();
   $__res = $a_1;
@@ -131,12 +142,17 @@ $GLOBALS['Type_Equality_to'] = function($dictTypeEquals_0 = null) {
 });
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Type_Equality_to'] = __NAMESPACE__ . '\\majType_majEquality_to';
 
 // Type_Equality_from
-$GLOBALS['Type_Equality_from'] = function($dictTypeEquals_0 = null) {
+function majType_majEquality_from($dictTypeEquals_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majType_majEquality_from';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = (($dictTypeEquals_0)['proof'])(function($a_1 = null) {
   $__num = \func_num_args();
   $__res = $a_1;
@@ -146,6 +162,7 @@ $GLOBALS['Type_Equality_from'] = function($dictTypeEquals_0 = null) {
 });
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Type_Equality_from'] = __NAMESPACE__ . '\\majType_majEquality_from';
 

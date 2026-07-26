@@ -99,20 +99,22 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_String_Regex_Unsafe_unsafeRegex
-$GLOBALS['Data_String_Regex_Unsafe_unsafeRegex'] = (function() {
-  $__fn = function($s_0 = null, $f_1 = null) use (&$__fn) {
+function majData_majString_majRegex_majUnsafe_unsafemajRegex($s_0, $f_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majRegex_majUnsafe_unsafemajRegex';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__local_var_2_0 = (((($GLOBALS['Data_String_Regex_regexImpl'])($GLOBALS['Data_Either_Left']))($GLOBALS['Data_Either_Right']))($s_0))(($GLOBALS['Data_String_Regex_renderFlags'])($f_1));
+  $__local_var_2_0 = ($GLOBALS['Data_String_Regex_regexImpl'])($GLOBALS['Data_Either_Left'], $GLOBALS['Data_Either_Right'], $s_0, ($GLOBALS['Data_String_Regex_renderFlags'])($f_1));
   $__t1 = null;;
-  if ((is_object($__local_var_2_0) && (($__local_var_2_0)->{'tag'} === "Left"))) {
+  if ($__local_var_2_0 instanceof \Data\Either\Data_Either_Left) {
 $__t1 = ($GLOBALS['Partial__crashWith'])(($__local_var_2_0)->{'value0'});
 goto end_branch_1;;
 };
-  if ((is_object($__local_var_2_0) && (($__local_var_2_0)->{'tag'} === "Right"))) {
+  if ($__local_var_2_0 instanceof \Data\Either\Data_Either_Right) {
 $__t1 = ($__local_var_2_0)->{'value0'};
 goto end_branch_1;;
 };
@@ -122,8 +124,7 @@ goto end_branch_1;;
   $__res = $__t1;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_String_Regex_Unsafe_unsafeRegex'] = __NAMESPACE__ . '\\majData_majString_majRegex_majUnsafe_unsafemajRegex';
 

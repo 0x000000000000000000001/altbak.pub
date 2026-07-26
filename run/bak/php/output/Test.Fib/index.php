@@ -104,23 +104,30 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Test_Fib_fib
-$GLOBALS['Test_Fib_fib'] = function($v_0 = null) {
+function majTest_majFib_fib($v_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majTest_majFib_fib';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__tco_var_Test_Fib_fib_v_0 = $v_0;
   tco_loop_Test_Fib_fib:;
   $v_0 = $__tco_var_Test_Fib_fib_v_0;
   $__res = match ($v_0) { 0 => 0, 1 => 1, default => (($GLOBALS['Test_Fib_fib'])(($v_0 - 1)) + ($GLOBALS['Test_Fib_fib'])(($v_0 - 2))) };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Test_Fib_fib'] = __NAMESPACE__ . '\\majTest_majFib_fib';
 
 // Test_Fib_describe
 $GLOBALS['Test_Fib_describe'] = ($GLOBALS['Effect_Console_log'])("Fibonacci:");
 
 // Test_Fib_act
-$GLOBALS['Test_Fib_act'] = ((($GLOBALS['Effect_bindEffect'])['bind'])(($GLOBALS['Bench_opaque'])(10)))(function($dummy_0 = null) {
+$GLOBALS['Test_Fib_act'] = (($GLOBALS['Effect_bindEffect'])['bind'])(($GLOBALS['Bench_opaque'])(10), function($dummy_0 = null) {
   $__num = \func_num_args();
   $__res = ($GLOBALS['Effect_Console_log'])((($GLOBALS['Data_Show_showInt'])['show'])(($GLOBALS['Test_Fib_fib'])($dummy_0)));
   goto __end;;

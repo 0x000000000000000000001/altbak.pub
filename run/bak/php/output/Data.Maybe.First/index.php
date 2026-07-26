@@ -114,29 +114,41 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_Maybe_First_First
-$GLOBALS['Data_Maybe_First_First'] = function($x_0 = null) {
+function majData_majMaybe_majFirst_majFirst($x_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMaybe_majFirst_majFirst';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $x_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Maybe_First_First'] = __NAMESPACE__ . '\\majData_majMaybe_majFirst_majFirst';
 
 // Data_Maybe_First_showFirst
-$GLOBALS['Data_Maybe_First_showFirst'] = function($dictShow_0 = null) {
+function majData_majMaybe_majFirst_showmajFirst($dictShow_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMaybe_majFirst_showmajFirst';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("First ("))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])(((($GLOBALS['Data_Maybe_showMaybe'])($dictShow_0))['show'])($v_1)))(")"));
+  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("First (", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])(((($GLOBALS['Data_Maybe_showMaybe'])($dictShow_0))['show'])($v_1), ")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Maybe_First_showFirst'] = __NAMESPACE__ . '\\majData_majMaybe_majFirst_showmajFirst';
 
 // Data_Maybe_First_semigroupFirst
 $GLOBALS['Data_Maybe_First_semigroupFirst'] = ["append" => (function() {
@@ -146,7 +158,7 @@ $GLOBALS['Data_Maybe_First_semigroupFirst'] = ["append" => (function() {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__t0 = null;;
-  if ((is_object($v_0) && (($v_0)->{'tag'} === "Just"))) {
+  if ($v_0 instanceof \Data\Maybe\Data_Maybe_Just) {
 $__t0 = $v_0;
 goto end_branch_0;;
 };
@@ -161,8 +173,12 @@ goto end_branch_0;;
 })()];
 
 // Data_Maybe_First_ordFirst
-$GLOBALS['Data_Maybe_First_ordFirst'] = function($dictOrd_0 = null) {
+function majData_majMaybe_majFirst_ordmajFirst($dictOrd_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMaybe_majFirst_ordmajFirst';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__local_var_1_0 = (($dictOrd_0)['Eq0'])(null);
   $eqMaybe1_2_1 = ["eq" => (function() use ($__local_var_1_0) {
   $__fn = function($x_2 = null, $y_3 = null) use ($__local_var_1_0, &$__fn) {
@@ -171,11 +187,11 @@ $GLOBALS['Data_Maybe_First_ordFirst'] = function($dictOrd_0 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__t1 = null;;
-  if ((is_object($x_2) && (($x_2)->{'tag'} === "Nothing"))) {
-$__t1 = (is_object($y_3) && (($y_3)->{'tag'} === "Nothing"));
+  if ($x_2 instanceof \Data\Maybe\Data_Maybe_Nothing) {
+$__t1 = $y_3 instanceof \Data\Maybe\Data_Maybe_Nothing;
 goto end_branch_1;;
 };
-  $__t1 = ((is_object($x_2) && (($x_2)->{'tag'} === "Just")) && ((is_object($y_3) && (($y_3)->{'tag'} === "Just")) && ((($__local_var_1_0)['eq'])(($x_2)->{'value0'}))(($y_3)->{'value0'})));
+  $__t1 = ($x_2 instanceof \Data\Maybe\Data_Maybe_Just && ($y_3 instanceof \Data\Maybe\Data_Maybe_Just && (($__local_var_1_0)['eq'])(($x_2)->{'value0'}, ($y_3)->{'value0'})));
   end_branch_1:;
   $__res = $__t1;
   goto __end;;
@@ -191,23 +207,23 @@ goto end_branch_1;;
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__t3 = null;;
-  if ((is_object($x_3) && (($x_3)->{'tag'} === "Nothing"))) {
+  if ($x_3 instanceof \Data\Maybe\Data_Maybe_Nothing) {
 $__t4 = null;;
-if ((is_object($y_4) && (($y_4)->{'tag'} === "Nothing"))) {
-$__t4 = new Phpurs_Data0("EQ");
+if ($y_4 instanceof \Data\Maybe\Data_Maybe_Nothing) {
+$__t4 = new \Data\Ordering\Data_Ordering_EQ();
 goto end_branch_4;;
 };
-$__t4 = new Phpurs_Data0("LT");
+$__t4 = new \Data\Ordering\Data_Ordering_LT();
 end_branch_4:;
 $__t3 = $__t4;
 goto end_branch_3;;
 };
-  if ((is_object($y_4) && (($y_4)->{'tag'} === "Nothing"))) {
-$__t3 = new Phpurs_Data0("GT");
+  if ($y_4 instanceof \Data\Maybe\Data_Maybe_Nothing) {
+$__t3 = new \Data\Ordering\Data_Ordering_GT();
 goto end_branch_3;;
 };
-  if (((is_object($x_3) && (($x_3)->{'tag'} === "Just")) && (is_object($y_4) && (($y_4)->{'tag'} === "Just")))) {
-$__t3 = ((($dictOrd_0)['compare'])(($x_3)->{'value0'}))(($y_4)->{'value0'});
+  if (($x_3 instanceof \Data\Maybe\Data_Maybe_Just && $y_4 instanceof \Data\Maybe\Data_Maybe_Just)) {
+$__t3 = (($dictOrd_0)['compare'])(($x_3)->{'value0'}, ($y_4)->{'value0'});
 goto end_branch_3;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -228,8 +244,9 @@ goto end_branch_3;;
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Maybe_First_ordFirst'] = __NAMESPACE__ . '\\majData_majMaybe_majFirst_ordmajFirst';
 
 // Data_Maybe_First_ord1First
 $GLOBALS['Data_Maybe_First_ord1First'] = $GLOBALS['Data_Maybe_ord1Maybe'];
@@ -244,7 +261,7 @@ $GLOBALS['Data_Maybe_First_newtypeFirst'] = ["Coercible0" => function($_dollar__
 }];
 
 // Data_Maybe_First_monoidFirst
-$GLOBALS['Data_Maybe_First_monoidFirst'] = ["mempty" => new Phpurs_Data0("Nothing"), "Semigroup0" => function($_dollar__unused_0 = null) {
+$GLOBALS['Data_Maybe_First_monoidFirst'] = ["mempty" => new \Data\Maybe\Data_Maybe_Nothing(), "Semigroup0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Maybe_First_semigroupFirst'];
   goto __end;;
@@ -265,8 +282,12 @@ $GLOBALS['Data_Maybe_First_functorFirst'] = $GLOBALS['Data_Maybe_functorMaybe'];
 $GLOBALS['Data_Maybe_First_extendFirst'] = $GLOBALS['Data_Maybe_extendMaybe'];
 
 // Data_Maybe_First_eqFirst
-$GLOBALS['Data_Maybe_First_eqFirst'] = function($dictEq_0 = null) {
+function majData_majMaybe_majFirst_eqmajFirst($dictEq_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMaybe_majFirst_eqmajFirst';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["eq" => (function() use ($dictEq_0) {
   $__fn = function($x_1 = null, $y_2 = null) use ($dictEq_0, &$__fn) {
   $__num = \func_num_args();
@@ -274,11 +295,11 @@ $GLOBALS['Data_Maybe_First_eqFirst'] = function($dictEq_0 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__t0 = null;;
-  if ((is_object($x_1) && (($x_1)->{'tag'} === "Nothing"))) {
-$__t0 = (is_object($y_2) && (($y_2)->{'tag'} === "Nothing"));
+  if ($x_1 instanceof \Data\Maybe\Data_Maybe_Nothing) {
+$__t0 = $y_2 instanceof \Data\Maybe\Data_Maybe_Nothing;
 goto end_branch_0;;
 };
-  $__t0 = ((is_object($x_1) && (($x_1)->{'tag'} === "Just")) && ((is_object($y_2) && (($y_2)->{'tag'} === "Just")) && ((($dictEq_0)['eq'])(($x_1)->{'value0'}))(($y_2)->{'value0'})));
+  $__t0 = ($x_1 instanceof \Data\Maybe\Data_Maybe_Just && ($y_2 instanceof \Data\Maybe\Data_Maybe_Just && (($dictEq_0)['eq'])(($x_1)->{'value0'}, ($y_2)->{'value0'})));
   end_branch_0:;
   $__res = $__t0;
   goto __end;;
@@ -289,20 +310,26 @@ goto end_branch_0;;
 })()];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Maybe_First_eqFirst'] = __NAMESPACE__ . '\\majData_majMaybe_majFirst_eqmajFirst';
 
 // Data_Maybe_First_eq1First
 $GLOBALS['Data_Maybe_First_eq1First'] = $GLOBALS['Data_Maybe_eq1Maybe'];
 
 // Data_Maybe_First_boundedFirst
-$GLOBALS['Data_Maybe_First_boundedFirst'] = function($dictBounded_0 = null) {
+function majData_majMaybe_majFirst_boundedmajFirst($dictBounded_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMaybe_majFirst_boundedmajFirst';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($GLOBALS['Data_Maybe_boundedMaybe'])($dictBounded_0);
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Maybe_First_boundedFirst'] = __NAMESPACE__ . '\\majData_majMaybe_majFirst_boundedmajFirst';
 
 // Data_Maybe_First_bindFirst
 $GLOBALS['Data_Maybe_First_bindFirst'] = $GLOBALS['Data_Maybe_bindMaybe'];

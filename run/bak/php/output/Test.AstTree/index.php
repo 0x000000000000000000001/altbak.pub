@@ -104,10 +104,15 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+final class Test_AstTree_Val { public function __construct(public int $value0) {} }
+final class Test_AstTree_Add { public function __construct(public mixed $value0, public mixed $value1) {} }
+final class Test_AstTree_Mul { public function __construct(public mixed $value0, public mixed $value1) {} }
+final class Test_AstTree_Sub { public function __construct(public mixed $value0, public mixed $value1) {} }
+
 // Test_AstTree_Val
 $GLOBALS['Test_AstTree_Val'] = function($value0 = null) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data1("Val", $value0);
+  $__res = new \Test\AstTree\Test_AstTree_Val($value0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -120,7 +125,7 @@ $GLOBALS['Test_AstTree_Add'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Add", $value0, $value1);
+  $__res = new \Test\AstTree\Test_AstTree_Add($value0, $value1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -135,7 +140,7 @@ $GLOBALS['Test_AstTree_Mul'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Mul", $value0, $value1);
+  $__res = new \Test\AstTree\Test_AstTree_Mul($value0, $value1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -150,7 +155,7 @@ $GLOBALS['Test_AstTree_Sub'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Sub", $value0, $value1);
+  $__res = new \Test\AstTree\Test_AstTree_Sub($value0, $value1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -159,25 +164,29 @@ $GLOBALS['Test_AstTree_Sub'] = (function() {
 })();
 
 // Test_AstTree_eval
-$GLOBALS['Test_AstTree_eval'] = function($v_0 = null) {
+function majTest_majAstmajTree_eval($v_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majTest_majAstmajTree_eval';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__tco_var_Test_AstTree_eval_v_0 = $v_0;
   tco_loop_Test_AstTree_eval:;
   $v_0 = $__tco_var_Test_AstTree_eval_v_0;
   $__t0 = null;;
-  if ((is_object($v_0) && (($v_0)->{'tag'} === "Val"))) {
+  if ($v_0 instanceof \Test\AstTree\Test_AstTree_Val) {
 $__t0 = ($v_0)->{'value0'};
 goto end_branch_0;;
 };
-  if ((is_object($v_0) && (($v_0)->{'tag'} === "Add"))) {
+  if ($v_0 instanceof \Test\AstTree\Test_AstTree_Add) {
 $__t0 = (($GLOBALS['Test_AstTree_eval'])(($v_0)->{'value0'}) + ($GLOBALS['Test_AstTree_eval'])(($v_0)->{'value1'}));
 goto end_branch_0;;
 };
-  if ((is_object($v_0) && (($v_0)->{'tag'} === "Mul"))) {
+  if ($v_0 instanceof \Test\AstTree\Test_AstTree_Mul) {
 $__t0 = (($GLOBALS['Test_AstTree_eval'])(($v_0)->{'value0'}) * ($GLOBALS['Test_AstTree_eval'])(($v_0)->{'value1'}));
 goto end_branch_0;;
 };
-  if ((is_object($v_0) && (($v_0)->{'tag'} === "Sub"))) {
+  if ($v_0 instanceof \Test\AstTree\Test_AstTree_Sub) {
 $__t0 = (($GLOBALS['Test_AstTree_eval'])(($v_0)->{'value0'}) - ($GLOBALS['Test_AstTree_eval'])(($v_0)->{'value1'}));
 goto end_branch_0;;
 };
@@ -187,26 +196,32 @@ goto end_branch_0;;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Test_AstTree_eval'] = __NAMESPACE__ . '\\majTest_majAstmajTree_eval';
 
 // Test_AstTree_describe
 $GLOBALS['Test_AstTree_describe'] = ($GLOBALS['Effect_Console_log'])("AST Evaluation:");
 
 // Test_AstTree_buildTree
-$GLOBALS['Test_AstTree_buildTree'] = function($v_0 = null) {
+function majTest_majAstmajTree_buildmajTree($v_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majTest_majAstmajTree_buildmajTree';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__tco_var_Test_AstTree_buildTree_v_0 = $v_0;
   tco_loop_Test_AstTree_buildTree:;
   $v_0 = $__tco_var_Test_AstTree_buildTree_v_0;
-  $__res = match ($v_0) { 0 => new Phpurs_Data1("Val", 1), default => new Phpurs_Data2("Add", new Phpurs_Data2("Mul", new Phpurs_Data1("Val", $v_0), ($GLOBALS['Test_AstTree_buildTree'])(($v_0 - 1))), new Phpurs_Data2("Sub", ($GLOBALS['Test_AstTree_buildTree'])(($v_0 - 1)), new Phpurs_Data1("Val", 1))) };
+  $__res = match ($v_0) { 0 => new \Test\AstTree\Test_AstTree_Val(1), default => new \Test\AstTree\Test_AstTree_Add(new \Test\AstTree\Test_AstTree_Mul(new \Test\AstTree\Test_AstTree_Val($v_0), ($GLOBALS['Test_AstTree_buildTree'])(($v_0 - 1))), new \Test\AstTree\Test_AstTree_Sub(($GLOBALS['Test_AstTree_buildTree'])(($v_0 - 1)), new \Test\AstTree\Test_AstTree_Val(1))) };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Test_AstTree_buildTree'] = __NAMESPACE__ . '\\majTest_majAstmajTree_buildmajTree';
 
 // Test_AstTree_act
-$GLOBALS['Test_AstTree_act'] = ((($GLOBALS['Effect_bindEffect'])['bind'])(($GLOBALS['Bench_opaque'])(3)))(function($dummy_0 = null) {
+$GLOBALS['Test_AstTree_act'] = (($GLOBALS['Effect_bindEffect'])['bind'])(($GLOBALS['Bench_opaque'])(3), function($dummy_0 = null) {
   $__num = \func_num_args();
   $__res = ($GLOBALS['Effect_Console_log'])((($GLOBALS['Data_Show_showInt'])['show'])(($GLOBALS['Test_AstTree_eval'])(($GLOBALS['Test_AstTree_buildTree'])($dummy_0))));
   goto __end;;

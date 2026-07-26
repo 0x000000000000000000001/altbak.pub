@@ -293,7 +293,7 @@ var once_hush sync.Once
 func Get_hush() gopurs_runtime.Value {
 	once_hush.Do(func() {
 		cache_hush = gopurs_runtime.Func(func(v2_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_hush(v2_0_box)
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_hush(v2_0_box))}
 })
 	})
 	return cache_hush
@@ -304,7 +304,7 @@ var once_isLeft sync.Once
 func Get_isLeft() gopurs_runtime.Value {
 	once_isLeft.Do(func() {
 		cache_isLeft = gopurs_runtime.Func(func(v2_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_isLeft(v2_0_box)
+return gopurs_runtime.Bool(Call_isLeft(v2_0_box))
 })
 	})
 	return cache_isLeft
@@ -315,7 +315,7 @@ var once_isRight sync.Once
 func Get_isRight() gopurs_runtime.Value {
 	once_isRight.Do(func() {
 		cache_isRight = gopurs_runtime.Func(func(v2_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_isRight(v2_0_box)
+return gopurs_runtime.Bool(Call_isRight(v2_0_box))
 })
 	})
 	return cache_isRight
@@ -348,7 +348,7 @@ var once_blush sync.Once
 func Get_blush() gopurs_runtime.Value {
 	once_blush.Do(func() {
 		cache_blush = gopurs_runtime.Func(func(v2_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_blush(v2_0_box)
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_blush(v2_0_box))}
 })
 	})
 	return cache_blush
@@ -796,7 +796,7 @@ return __t0
 func Call_ord1Either(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-ordEither1_1_0 := gopurs_runtime.Apply(Get_ordEither(), dictOrd_0)
+ordEither1_1_0 := Call_ordEither(dictOrd_0)
 _ = ordEither1_1_0
 __local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd_0, "Eq0"), gopurs_runtime.Value{})
 _ = __local_var_2_1
@@ -855,7 +855,7 @@ end_branch_0:
 return __t0
 }
 
-func Call_hush(v2_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_hush(v2_0_loop gopurs_runtime.Value) *pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value] {
 var v2_0 gopurs_runtime.Value = v2_0_loop
 _ = v2_0
 var __t0 gopurs_runtime.Value
@@ -879,10 +879,10 @@ goto end_branch_0
 __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_0:
-return __t0
+return (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(__t0.UnsafePtr)
 }
 
-func Call_isLeft(v2_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_isLeft(v2_0_loop gopurs_runtime.Value) bool {
 var v2_0 gopurs_runtime.Value = v2_0_loop
 _ = v2_0
 var __t0 gopurs_runtime.Value
@@ -906,10 +906,10 @@ goto end_branch_0
 __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_0:
-return __t0
+return (__t0.IntVal) != (0)
 }
 
-func Call_isRight(v2_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_isRight(v2_0_loop gopurs_runtime.Value) bool {
 var v2_0 gopurs_runtime.Value = v2_0_loop
 _ = v2_0
 var __t0 gopurs_runtime.Value
@@ -933,7 +933,7 @@ goto end_branch_0
 __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_0:
-return __t0
+return (__t0.IntVal) != (0)
 }
 
 func Call_choose(dictAlt_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -951,7 +951,7 @@ var dictBounded_0 gopurs_runtime.Value = dictBounded_0_loop
 _ = dictBounded_0
 bottom_1_0 := gopurs_runtime.RecordGet(dictBounded_0, "bottom")
 _ = bottom_1_0
-ordEither1_2_1 := gopurs_runtime.Apply(Get_ordEither(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBounded_0, "Ord0"), gopurs_runtime.Value{}))
+ordEither1_2_1 := Call_ordEither(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBounded_0, "Ord0"), gopurs_runtime.Value{}))
 _ = ordEither1_2_1
 return gopurs_runtime.Func(func(dictBounded1_3 gopurs_runtime.Value) gopurs_runtime.Value {
 ordEither2_4_2 := gopurs_runtime.Apply(ordEither1_2_1, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBounded1_3, "Ord0"), gopurs_runtime.Value{}))
@@ -962,7 +962,7 @@ return ordEither2_4_2
 })
 }
 
-func Call_blush(v2_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_blush(v2_0_loop gopurs_runtime.Value) *pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value] {
 var v2_0 gopurs_runtime.Value = v2_0_loop
 _ = v2_0
 var __t0 gopurs_runtime.Value
@@ -986,7 +986,7 @@ goto end_branch_0
 __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_0:
-return __t0
+return (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(__t0.UnsafePtr)
 }
 
 func Call_semigroupEither(dictSemigroup_0_loop gopurs_runtime.Value) gopurs_runtime.Value {

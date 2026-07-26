@@ -556,7 +556,7 @@ return gopurs_runtime.RecordGet(Call_eqTuple(dictEq_0, dictEq1_1), "eq")
 func Call_ord1Tuple(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-ordTuple1_1_0 := gopurs_runtime.Apply(Get_ordTuple(), dictOrd_0)
+ordTuple1_1_0 := Call_ordTuple(dictOrd_0)
 _ = ordTuple1_1_0
 __local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd_0, "Eq0"), gopurs_runtime.Value{})
 _ = __local_var_2_1
@@ -584,7 +584,7 @@ return gopurs_runtime.Apply(f_0, gopurs_runtime.Value{Type: 9, IntVal: 233935218
 func Call_commutativeRingTuple(dictCommutativeRing_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictCommutativeRing_0 gopurs_runtime.Value = dictCommutativeRing_0_loop
 _ = dictCommutativeRing_0
-ringTuple1_1_0 := gopurs_runtime.Apply(Get_ringTuple(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictCommutativeRing_0, "Ring0"), gopurs_runtime.Value{}))
+ringTuple1_1_0 := Call_ringTuple(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictCommutativeRing_0, "Ring0"), gopurs_runtime.Value{}))
 _ = ringTuple1_1_0
 return gopurs_runtime.Func(func(dictCommutativeRing1_2 gopurs_runtime.Value) gopurs_runtime.Value {
 ringTuple2_3_1 := gopurs_runtime.Apply(ringTuple1_1_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictCommutativeRing1_2, "Ring0"), gopurs_runtime.Value{}))
@@ -602,7 +602,7 @@ top_1_0 := gopurs_runtime.RecordGet(dictBounded_0, "top")
 _ = top_1_0
 bottom_2_1 := gopurs_runtime.RecordGet(dictBounded_0, "bottom")
 _ = bottom_2_1
-ordTuple1_3_2 := gopurs_runtime.Apply(Get_ordTuple(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBounded_0, "Ord0"), gopurs_runtime.Value{}))
+ordTuple1_3_2 := Call_ordTuple(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBounded_0, "Ord0"), gopurs_runtime.Value{}))
 _ = ordTuple1_3_2
 return gopurs_runtime.Func(func(dictBounded1_4 gopurs_runtime.Value) gopurs_runtime.Value {
 ordTuple2_5_3 := gopurs_runtime.Apply(ordTuple1_3_2, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBounded1_4, "Ord0"), gopurs_runtime.Value{}))
@@ -616,7 +616,7 @@ return ordTuple2_5_3
 func Call_booleanAlgebraTuple(dictBooleanAlgebra_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictBooleanAlgebra_0 gopurs_runtime.Value = dictBooleanAlgebra_0_loop
 _ = dictBooleanAlgebra_0
-heytingAlgebraTuple1_1_0 := gopurs_runtime.Apply(Get_heytingAlgebraTuple(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBooleanAlgebra_0, "HeytingAlgebra0"), gopurs_runtime.Value{}))
+heytingAlgebraTuple1_1_0 := Call_heytingAlgebraTuple(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBooleanAlgebra_0, "HeytingAlgebra0"), gopurs_runtime.Value{}))
 _ = heytingAlgebraTuple1_1_0
 return gopurs_runtime.Func(func(dictBooleanAlgebra1_2 gopurs_runtime.Value) gopurs_runtime.Value {
 heytingAlgebraTuple2_3_1 := gopurs_runtime.Apply(heytingAlgebraTuple1_1_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBooleanAlgebra1_2, "HeytingAlgebra0"), gopurs_runtime.Value{}))
@@ -640,7 +640,7 @@ return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Point
 func Call_bindTuple(dictSemigroup_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictSemigroup_0 gopurs_runtime.Value = dictSemigroup_0_loop
 _ = dictSemigroup_0
-applyTuple1_1_0 := gopurs_runtime.Apply(Get_applyTuple(), dictSemigroup_0)
+applyTuple1_1_0 := Call_applyTuple(dictSemigroup_0)
 _ = applyTuple1_1_0
 return gopurs_runtime.RecordDict2("Apply0", "bind", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return applyTuple1_1_0
@@ -654,7 +654,7 @@ return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Point
 func Call_applicativeTuple(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
 _ = dictMonoid_0
-applyTuple1_1_0 := gopurs_runtime.Apply(Get_applyTuple(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{}))
+applyTuple1_1_0 := Call_applyTuple(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{}))
 _ = applyTuple1_1_0
 return gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return applyTuple1_1_0
@@ -664,9 +664,9 @@ return applyTuple1_1_0
 func Call_monadTuple(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
 _ = dictMonoid_0
-applicativeTuple1_1_0 := gopurs_runtime.Apply(Get_applicativeTuple(), dictMonoid_0)
+applicativeTuple1_1_0 := Call_applicativeTuple(dictMonoid_0)
 _ = applicativeTuple1_1_0
-bindTuple1_2_1 := gopurs_runtime.Apply(Get_bindTuple(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{}))
+bindTuple1_2_1 := Call_bindTuple(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{}))
 _ = bindTuple1_2_1
 return gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return applicativeTuple1_1_0

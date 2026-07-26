@@ -69,7 +69,12 @@ var once_withArray sync.Once
 func Get_withArray() gopurs_runtime.Value {
 	once_withArray.Do(func() {
 		cache_withArray = gopurs_runtime.Func2(func(f_0_box gopurs_runtime.Value, xs_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_withArray(f_0_box, xs_1_box)
+return Call_withArray(f_0_box, func() []gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(xs_1_box.UnsafePtr)
+					unboxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { unboxed[i] = v }
+					return unboxed
+				}())
 })
 	})
 	return cache_withArray
@@ -131,7 +136,7 @@ var once_run sync.Once
 func Get_run() gopurs_runtime.Value {
 	once_run.Do(func() {
 		cache_run = gopurs_runtime.Func(func(st_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_run(st_0_box)
+return gopurs_runtime.Array(Call_run(st_0_box))
 })
 	})
 	return cache_run
@@ -226,13 +231,13 @@ _ = a_0
 return gopurs_runtime.Apply2(pkg_Control_Monad_ST_Uncurried.Get_runSTFn2(), Get_unshiftAllImpl(), gopurs_runtime.Array([]gopurs_runtime.Value{a_0}))
 }
 
-func Call_withArray(f_0_loop gopurs_runtime.Value, xs_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_withArray(f_0_loop gopurs_runtime.Value, xs_1_loop []gopurs_runtime.Value) gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
-var xs_1 gopurs_runtime.Value = xs_1_loop
+var xs_1 []gopurs_runtime.Value = xs_1_loop
 _ = xs_1
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Control_Monad_ST_Internal.Get_bindST(), "bind"), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.UncurriedApp(Get_thawImpl(), xs_1)
+return gopurs_runtime.UncurriedApp(Get_thawImpl(), gopurs_runtime.Array(xs_1))
 }), gopurs_runtime.Func(func(result_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Control_Monad_ST_Internal.Get_bindST(), "bind"), gopurs_runtime.Apply(f_0, result_2), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
@@ -284,7 +289,7 @@ var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
 var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
-return gopurs_runtime.Apply(Get_sortBy(), gopurs_runtime.Func2(func(x_2 gopurs_runtime.Value, y_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_sortBy(gopurs_runtime.Func2(func(x_2 gopurs_runtime.Value, y_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), gopurs_runtime.Apply(f_1, x_2), gopurs_runtime.Apply(f_1, y_3))
 }))
 }
@@ -292,13 +297,18 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), gop
 func Call_sort(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-return gopurs_runtime.Apply(Get_sortBy(), gopurs_runtime.RecordGet(dictOrd_0, "compare"))
+return Call_sortBy(gopurs_runtime.RecordGet(dictOrd_0, "compare"))
 }
 
-func Call_run(st_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_run(st_0_loop gopurs_runtime.Value) []gopurs_runtime.Value {
 var st_0 gopurs_runtime.Value = st_0_loop
 _ = st_0
-return gopurs_runtime.Apply(pkg_Control_Monad_ST_Internal.Get_run(), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Control_Monad_ST_Internal.Get_bindST(), "bind"), st_0, Get_unsafeFreeze()))
+return func() []gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply(pkg_Control_Monad_ST_Internal.Get_run(), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Control_Monad_ST_Internal.Get_bindST(), "bind"), st_0, Get_unsafeFreeze())).UnsafePtr)
+					unboxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { unboxed[i] = v }
+					return unboxed
+				}()
 }
 
 func Call_modify(i_0_loop int64, f_1_loop gopurs_runtime.Value, xs_2_loop gopurs_runtime.Value) gopurs_runtime.Value {

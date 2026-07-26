@@ -106,56 +106,67 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Test_ArrayOps_range
-$GLOBALS['Test_ArrayOps_range'] = (function() {
-  $__fn = function($start_0 = null, $end_1 = null) use (&$__fn) {
+function majTest_majArraymajOps_range($start_0, $end_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majTest_majArraymajOps_range';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__res = ($GLOBALS['Data_Array_rangeImpl'])($start_0, $end_1);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Test_ArrayOps_range'] = __NAMESPACE__ . '\\majTest_majArraymajOps_range';
 
 // Test_ArrayOps_filterEvens
-$GLOBALS['Test_ArrayOps_filterEvens'] = function($arr_0 = null) {
+function majTest_majArraymajOps_filtermajEvens($arr_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majTest_majArraymajOps_filtermajEvens';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($GLOBALS['Data_Array_filterImpl'])(function($x_1 = null) {
   $__num = \func_num_args();
-  $__res = (((($GLOBALS['Data_EuclideanRing_euclideanRingInt'])['mod'])($x_1))(2) === 0);
+  $__res = ((($GLOBALS['Data_EuclideanRing_euclideanRingInt'])['mod'])($x_1, 2) === 0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, $arr_0);
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Test_ArrayOps_filterEvens'] = __NAMESPACE__ . '\\majTest_majArraymajOps_filtermajEvens';
 
 // Test_ArrayOps_sumEvens
-$GLOBALS['Test_ArrayOps_sumEvens'] = function($n_0 = null) {
+function majTest_majArraymajOps_summajEvens($n_0) {
   $__num = \func_num_args();
-  $__res = (((($GLOBALS['Data_Foldable_foldableArray'])['foldl'])($GLOBALS['Data_Semiring_intAdd']))(0))(($GLOBALS['Data_Array_filterImpl'])(function($x_1 = null) {
+  $__fn = __NAMESPACE__ . '\\' . 'majTest_majArraymajOps_summajEvens';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = (($GLOBALS['Data_Foldable_foldableArray'])['foldl'])($GLOBALS['Data_Semiring_intAdd'], 0, ($GLOBALS['Data_Array_filterImpl'])(function($x_1 = null) {
   $__num = \func_num_args();
-  $__res = (((($GLOBALS['Data_EuclideanRing_euclideanRingInt'])['mod'])($x_1))(2) === 0);
+  $__res = ((($GLOBALS['Data_EuclideanRing_euclideanRingInt'])['mod'])($x_1, 2) === 0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, ($GLOBALS['Data_Array_rangeImpl'])(1, $n_0)));
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Test_ArrayOps_sumEvens'] = __NAMESPACE__ . '\\majTest_majArraymajOps_summajEvens';
 
 // Test_ArrayOps_describe
 $GLOBALS['Test_ArrayOps_describe'] = ($GLOBALS['Effect_Console_log'])("Array Processing (900 elements):");
 
 // Test_ArrayOps_act
-$GLOBALS['Test_ArrayOps_act'] = ((($GLOBALS['Effect_bindEffect'])['bind'])(($GLOBALS['Bench_opaque'])(900)))(function($dummy_0 = null) {
+$GLOBALS['Test_ArrayOps_act'] = (($GLOBALS['Effect_bindEffect'])['bind'])(($GLOBALS['Bench_opaque'])(900), function($dummy_0 = null) {
   $__num = \func_num_args();
   $__res = ($GLOBALS['Effect_Console_log'])((($GLOBALS['Data_Show_showInt'])['show'])(($GLOBALS['Test_ArrayOps_sumEvens'])($dummy_0)));
   goto __end;;

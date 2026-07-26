@@ -143,66 +143,65 @@ $GLOBALS['Effect_Console_timeLog'] = $ffi_Effect_Console['timeLog'] ?? new class
 $GLOBALS['Effect_Console_warn'] = $ffi_Effect_Console['warn'] ?? new class { public function __invoke(...$args) { return $this; } };
 
 
+
+
 // Effect_Console_discard
 $GLOBALS['Effect_Console_discard'] = (($GLOBALS['Control_Bind_discardUnit'])['discard'])($GLOBALS['Effect_bindEffect']);
 
 // Effect_Console_warnShow
-$GLOBALS['Effect_Console_warnShow'] = (function() {
-  $__fn = function($dictShow_0 = null, $a_1 = null) use (&$__fn) {
+function majEffect_majConsole_warnmajShow($dictShow_0, $a_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majEffect_majConsole_warnmajShow';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__res = ($GLOBALS['Effect_Console_warn'])((($dictShow_0)['show'])($a_1));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Effect_Console_warnShow'] = __NAMESPACE__ . '\\majEffect_majConsole_warnmajShow';
 
 // Effect_Console_logShow
-$GLOBALS['Effect_Console_logShow'] = (function() {
-  $__fn = function($dictShow_0 = null, $a_1 = null) use (&$__fn) {
+function majEffect_majConsole_logmajShow($dictShow_0, $a_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majEffect_majConsole_logmajShow';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__res = ($GLOBALS['Effect_Console_log'])((($dictShow_0)['show'])($a_1));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Effect_Console_logShow'] = __NAMESPACE__ . '\\majEffect_majConsole_logmajShow';
 
 // Effect_Console_infoShow
-$GLOBALS['Effect_Console_infoShow'] = (function() {
-  $__fn = function($dictShow_0 = null, $a_1 = null) use (&$__fn) {
+function majEffect_majConsole_infomajShow($dictShow_0, $a_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majEffect_majConsole_infomajShow';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__res = ($GLOBALS['Effect_Console_info'])((($dictShow_0)['show'])($a_1));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Effect_Console_infoShow'] = __NAMESPACE__ . '\\majEffect_majConsole_infomajShow';
 
 // Effect_Console_grouped
-$GLOBALS['Effect_Console_grouped'] = (function() {
-  $__fn = function($name_0 = null, $inner_1 = null) use (&$__fn) {
+function majEffect_majConsole_grouped($name_0, $inner_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majEffect_majConsole_grouped';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Effect_Console_discard'])(($GLOBALS['Effect_Console_group'])($name_0)))(function($_dollar__unused_2 = null) use ($inner_1) {
+  $__res = ($GLOBALS['Effect_Console_discard'])(($GLOBALS['Effect_Console_group'])($name_0), function($_dollar__unused_2 = null) use ($inner_1) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Effect_bindEffect'])['bind'])($inner_1))(function($result_3 = null) {
+  $__res = (($GLOBALS['Effect_bindEffect'])['bind'])($inner_1, function($result_3 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_Console_discard'])($GLOBALS['Effect_Console_groupEnd']))(function($_dollar__unused_4 = null) use ($result_3) {
+  $__res = ($GLOBALS['Effect_Console_discard'])($GLOBALS['Effect_Console_groupEnd'], function($_dollar__unused_4 = null) use ($result_3) {
   $__num = \func_num_args();
   $__res = (($GLOBALS['Effect_applicativeEffect'])['pure'])($result_3);
   goto __end;;
@@ -219,38 +218,35 @@ $GLOBALS['Effect_Console_grouped'] = (function() {
 });
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Effect_Console_grouped'] = __NAMESPACE__ . '\\majEffect_majConsole_grouped';
 
 // Effect_Console_errorShow
-$GLOBALS['Effect_Console_errorShow'] = (function() {
-  $__fn = function($dictShow_0 = null, $a_1 = null) use (&$__fn) {
+function majEffect_majConsole_errormajShow($dictShow_0, $a_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majEffect_majConsole_errormajShow';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__res = ($GLOBALS['Effect_Console_error'])((($dictShow_0)['show'])($a_1));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Effect_Console_errorShow'] = __NAMESPACE__ . '\\majEffect_majConsole_errormajShow';
 
 // Effect_Console_debugShow
-$GLOBALS['Effect_Console_debugShow'] = (function() {
-  $__fn = function($dictShow_0 = null, $a_1 = null) use (&$__fn) {
+function majEffect_majConsole_debugmajShow($dictShow_0, $a_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majEffect_majConsole_debugmajShow';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__res = ($GLOBALS['Effect_Console_debug'])((($dictShow_0)['show'])($a_1));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Effect_Console_debugShow'] = __NAMESPACE__ . '\\majEffect_majConsole_debugmajShow';
 

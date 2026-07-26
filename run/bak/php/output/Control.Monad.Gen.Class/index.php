@@ -96,48 +96,75 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Control_Monad_Gen_Class_sized
-$GLOBALS['Control_Monad_Gen_Class_sized'] = function($dict_0 = null) {
+function majControl_majMonad_majGen_majClass_sized($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majGen_majClass_sized';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['sized'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_Gen_Class_sized'] = __NAMESPACE__ . '\\majControl_majMonad_majGen_majClass_sized';
 
 // Control_Monad_Gen_Class_resize
-$GLOBALS['Control_Monad_Gen_Class_resize'] = function($dict_0 = null) {
+function majControl_majMonad_majGen_majClass_resize($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majGen_majClass_resize';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['resize'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_Gen_Class_resize'] = __NAMESPACE__ . '\\majControl_majMonad_majGen_majClass_resize';
 
 // Control_Monad_Gen_Class_chooseInt
-$GLOBALS['Control_Monad_Gen_Class_chooseInt'] = function($dict_0 = null) {
+function majControl_majMonad_majGen_majClass_choosemajInt($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majGen_majClass_choosemajInt';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['chooseInt'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_Gen_Class_chooseInt'] = __NAMESPACE__ . '\\majControl_majMonad_majGen_majClass_choosemajInt';
 
 // Control_Monad_Gen_Class_chooseFloat
-$GLOBALS['Control_Monad_Gen_Class_chooseFloat'] = function($dict_0 = null) {
+function majControl_majMonad_majGen_majClass_choosemajFloat($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majGen_majClass_choosemajFloat';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['chooseFloat'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_Gen_Class_chooseFloat'] = __NAMESPACE__ . '\\majControl_majMonad_majGen_majClass_choosemajFloat';
 
 // Control_Monad_Gen_Class_chooseBool
-$GLOBALS['Control_Monad_Gen_Class_chooseBool'] = function($dict_0 = null) {
+function majControl_majMonad_majGen_majClass_choosemajBool($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majGen_majClass_choosemajBool';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['chooseBool'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_Gen_Class_chooseBool'] = __NAMESPACE__ . '\\majControl_majMonad_majGen_majClass_choosemajBool';
 

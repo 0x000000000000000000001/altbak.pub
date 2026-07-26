@@ -112,16 +112,18 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_Enum_Generic_greaterThanOrEq
 $GLOBALS['Data_Enum_Generic_greaterThanOrEq'] = (function() use (&$__fn) {
-$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT"));
+$__local_var_0_0 = ($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT(), new \Data\Ordering\Data_Ordering_EQ(), new \Data\Ordering\Data_Ordering_GT());
 return (function() use ($__local_var_0_0) {
   $__fn = function($a1_1 = null, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ( ! (is_object((($__local_var_0_0)($a1_1))($a2_2)) && (((($__local_var_0_0)($a1_1))($a2_2))->{'tag'} === "LT")));
+  $__res = ( ! ($__local_var_0_0)($a1_1, $a2_2) instanceof \Data\Ordering\Data_Ordering_LT);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -132,14 +134,14 @@ return (function() use ($__local_var_0_0) {
 
 // Data_Enum_Generic_lessThan
 $GLOBALS['Data_Enum_Generic_lessThan'] = (function() use (&$__fn) {
-$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT"));
+$__local_var_0_0 = ($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT(), new \Data\Ordering\Data_Ordering_EQ(), new \Data\Ordering\Data_Ordering_GT());
 return (function() use ($__local_var_0_0) {
   $__fn = function($a1_1 = null, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (is_object((($__local_var_0_0)($a1_1))($a2_2)) && (((($__local_var_0_0)($a1_1))($a2_2))->{'tag'} === "LT"));
+  $__res = ($__local_var_0_0)($a1_1, $a2_2) instanceof \Data\Ordering\Data_Ordering_LT;
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -149,111 +151,151 @@ return (function() use ($__local_var_0_0) {
 })();
 
 // Data_Enum_Generic_genericToEnum'
-$GLOBALS['Data_Enum_Generic_genericToEnum__prime__'] = function($dict_0 = null) {
+function majData_majEnum_majGeneric_genericmajTomajEnum__prime__($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majEnum_majGeneric_genericmajTomajEnum__prime__';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['genericToEnum__prime__'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Enum_Generic_genericToEnum__prime__'] = __NAMESPACE__ . '\\majData_majEnum_majGeneric_genericmajTomajEnum__prime__';
 
 // Data_Enum_Generic_genericToEnum
-$GLOBALS['Data_Enum_Generic_genericToEnum'] = function($dictGeneric_0 = null) {
+function majData_majEnum_majGeneric_genericmajTomajEnum($dictGeneric_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majEnum_majGeneric_genericmajTomajEnum';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $to_1_0 = ($dictGeneric_0)['to'];
   $__res = function($dictGenericBoundedEnum_2 = null) use ($to_1_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Maybe_functorMaybe'])['map'])($to_1_0)))(($dictGenericBoundedEnum_2)['genericToEnum__prime__']);
+  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Maybe_functorMaybe'])['map'])($to_1_0), ($dictGenericBoundedEnum_2)['genericToEnum__prime__']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Enum_Generic_genericToEnum'] = __NAMESPACE__ . '\\majData_majEnum_majGeneric_genericmajTomajEnum';
 
 // Data_Enum_Generic_genericSucc'
-$GLOBALS['Data_Enum_Generic_genericSucc__prime__'] = function($dict_0 = null) {
+function majData_majEnum_majGeneric_genericmajSucc__prime__($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majEnum_majGeneric_genericmajSucc__prime__';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['genericSucc__prime__'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Enum_Generic_genericSucc__prime__'] = __NAMESPACE__ . '\\majData_majEnum_majGeneric_genericmajSucc__prime__';
 
 // Data_Enum_Generic_genericSucc
-$GLOBALS['Data_Enum_Generic_genericSucc'] = function($dictGeneric_0 = null) {
+function majData_majEnum_majGeneric_genericmajSucc($dictGeneric_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majEnum_majGeneric_genericmajSucc';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $to_1_0 = ($dictGeneric_0)['to'];
   $from_2_1 = ($dictGeneric_0)['from'];
   $__res = function($dictGenericEnum_3 = null) use ($from_2_1, $to_1_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Maybe_functorMaybe'])['map'])($to_1_0)))((($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictGenericEnum_3)['genericSucc__prime__']))($from_2_1));
+  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Maybe_functorMaybe'])['map'])($to_1_0), ($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictGenericEnum_3)['genericSucc__prime__'], $from_2_1));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Enum_Generic_genericSucc'] = __NAMESPACE__ . '\\majData_majEnum_majGeneric_genericmajSucc';
 
 // Data_Enum_Generic_genericPred'
-$GLOBALS['Data_Enum_Generic_genericPred__prime__'] = function($dict_0 = null) {
+function majData_majEnum_majGeneric_genericmajPred__prime__($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majEnum_majGeneric_genericmajPred__prime__';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['genericPred__prime__'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Enum_Generic_genericPred__prime__'] = __NAMESPACE__ . '\\majData_majEnum_majGeneric_genericmajPred__prime__';
 
 // Data_Enum_Generic_genericPred
-$GLOBALS['Data_Enum_Generic_genericPred'] = function($dictGeneric_0 = null) {
+function majData_majEnum_majGeneric_genericmajPred($dictGeneric_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majEnum_majGeneric_genericmajPred';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $to_1_0 = ($dictGeneric_0)['to'];
   $from_2_1 = ($dictGeneric_0)['from'];
   $__res = function($dictGenericEnum_3 = null) use ($from_2_1, $to_1_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Maybe_functorMaybe'])['map'])($to_1_0)))((($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictGenericEnum_3)['genericPred__prime__']))($from_2_1));
+  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Maybe_functorMaybe'])['map'])($to_1_0), ($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictGenericEnum_3)['genericPred__prime__'], $from_2_1));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Enum_Generic_genericPred'] = __NAMESPACE__ . '\\majData_majEnum_majGeneric_genericmajPred';
 
 // Data_Enum_Generic_genericFromEnum'
-$GLOBALS['Data_Enum_Generic_genericFromEnum__prime__'] = function($dict_0 = null) {
+function majData_majEnum_majGeneric_genericmajFrommajEnum__prime__($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majEnum_majGeneric_genericmajFrommajEnum__prime__';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['genericFromEnum__prime__'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Enum_Generic_genericFromEnum__prime__'] = __NAMESPACE__ . '\\majData_majEnum_majGeneric_genericmajFrommajEnum__prime__';
 
 // Data_Enum_Generic_genericFromEnum
-$GLOBALS['Data_Enum_Generic_genericFromEnum'] = function($dictGeneric_0 = null) {
+function majData_majEnum_majGeneric_genericmajFrommajEnum($dictGeneric_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majEnum_majGeneric_genericmajFrommajEnum';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $from_1_0 = ($dictGeneric_0)['from'];
   $__res = function($dictGenericBoundedEnum_2 = null) use ($from_1_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictGenericBoundedEnum_2)['genericFromEnum__prime__']))($from_1_0);
+  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictGenericBoundedEnum_2)['genericFromEnum__prime__'], $from_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Enum_Generic_genericFromEnum'] = __NAMESPACE__ . '\\majData_majEnum_majGeneric_genericmajFrommajEnum';
 
 // Data_Enum_Generic_genericEnumSum
-$GLOBALS['Data_Enum_Generic_genericEnumSum'] = (function() {
-  $__fn = function($dictGenericEnum_0 = null, $dictGenericTop_1 = null) use (&$__fn) {
+function majData_majEnum_majGeneric_genericmajEnummajSum($dictGenericEnum_0, $dictGenericTop_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majEnum_majGeneric_genericmajEnummajSum';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
@@ -268,19 +310,19 @@ $GLOBALS['Data_Enum_Generic_genericEnumSum'] = (function() {
   $__res = ["genericPred__prime__" => function($v_6 = null) use ($dictGenericEnum1_3, $dictGenericEnum_0, $genericTop_prime_2_0) {
   $__num = \func_num_args();
   $__t2 = null;;
-  if ((is_object($v_6) && (($v_6)->{'tag'} === "Inl"))) {
-$__t2 = ((($GLOBALS['Data_Maybe_functorMaybe'])['map'])($GLOBALS['Data_Generic_Rep_Inl']))((($dictGenericEnum_0)['genericPred__prime__'])(($v_6)->{'value0'}));
+  if ($v_6 instanceof \Data\Generic\Rep\Data_Generic_Rep_Inl) {
+$__t2 = (($GLOBALS['Data_Maybe_functorMaybe'])['map'])($GLOBALS['Data_Generic_Rep_Inl'], (($dictGenericEnum_0)['genericPred__prime__'])(($v_6)->{'value0'}));
 goto end_branch_2;;
 };
-  if ((is_object($v_6) && (($v_6)->{'tag'} === "Inr"))) {
+  if ($v_6 instanceof \Data\Generic\Rep\Data_Generic_Rep_Inr) {
 $v1_7_3 = (($dictGenericEnum1_3)['genericPred__prime__'])(($v_6)->{'value0'});
 $__t4 = null;;
-if ((is_object($v1_7_3) && (($v1_7_3)->{'tag'} === "Nothing"))) {
-$__t4 = new Phpurs_Data1("Just", new Phpurs_Data1("Inl", $genericTop_prime_2_0));
+if ($v1_7_3 instanceof \Data\Maybe\Data_Maybe_Nothing) {
+$__t4 = new \Data\Maybe\Data_Maybe_Just(new \Data\Generic\Rep\Data_Generic_Rep_Inl($genericTop_prime_2_0));
 goto end_branch_4;;
 };
-if ((is_object($v1_7_3) && (($v1_7_3)->{'tag'} === "Just"))) {
-$__t4 = new Phpurs_Data1("Just", new Phpurs_Data1("Inr", ($v1_7_3)->{'value0'}));
+if ($v1_7_3 instanceof \Data\Maybe\Data_Maybe_Just) {
+$__t4 = new \Data\Maybe\Data_Maybe_Just(new \Data\Generic\Rep\Data_Generic_Rep_Inr(($v1_7_3)->{'value0'}));
 goto end_branch_4;;
 };
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -299,15 +341,15 @@ goto end_branch_2;;
 }, "genericSucc__prime__" => function($v_6 = null) use ($dictGenericEnum1_3, $dictGenericEnum_0, $genericBottom_prime_5_1) {
   $__num = \func_num_args();
   $__t5 = null;;
-  if ((is_object($v_6) && (($v_6)->{'tag'} === "Inl"))) {
+  if ($v_6 instanceof \Data\Generic\Rep\Data_Generic_Rep_Inl) {
 $v1_7_6 = (($dictGenericEnum_0)['genericSucc__prime__'])(($v_6)->{'value0'});
 $__t7 = null;;
-if ((is_object($v1_7_6) && (($v1_7_6)->{'tag'} === "Nothing"))) {
-$__t7 = new Phpurs_Data1("Just", new Phpurs_Data1("Inr", $genericBottom_prime_5_1));
+if ($v1_7_6 instanceof \Data\Maybe\Data_Maybe_Nothing) {
+$__t7 = new \Data\Maybe\Data_Maybe_Just(new \Data\Generic\Rep\Data_Generic_Rep_Inr($genericBottom_prime_5_1));
 goto end_branch_7;;
 };
-if ((is_object($v1_7_6) && (($v1_7_6)->{'tag'} === "Just"))) {
-$__t7 = new Phpurs_Data1("Just", new Phpurs_Data1("Inl", ($v1_7_6)->{'value0'}));
+if ($v1_7_6 instanceof \Data\Maybe\Data_Maybe_Just) {
+$__t7 = new \Data\Maybe\Data_Maybe_Just(new \Data\Generic\Rep\Data_Generic_Rep_Inl(($v1_7_6)->{'value0'}));
 goto end_branch_7;;
 };
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -316,8 +358,8 @@ end_branch_7:;
 $__t5 = $__t7;
 goto end_branch_5;;
 };
-  if ((is_object($v_6) && (($v_6)->{'tag'} === "Inr"))) {
-$__t5 = ((($GLOBALS['Data_Maybe_functorMaybe'])['map'])($GLOBALS['Data_Generic_Rep_Inr']))((($dictGenericEnum1_3)['genericSucc__prime__'])(($v_6)->{'value0'}));
+  if ($v_6 instanceof \Data\Generic\Rep\Data_Generic_Rep_Inr) {
+$__t5 = (($GLOBALS['Data_Maybe_functorMaybe'])['map'])($GLOBALS['Data_Generic_Rep_Inr'], (($dictGenericEnum1_3)['genericSucc__prime__'])(($v_6)->{'value0'}));
 goto end_branch_5;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -336,15 +378,14 @@ goto end_branch_5;;
 })();
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Enum_Generic_genericEnumSum'] = __NAMESPACE__ . '\\majData_majEnum_majGeneric_genericmajEnummajSum';
 
 // Data_Enum_Generic_genericEnumProduct
-$GLOBALS['Data_Enum_Generic_genericEnumProduct'] = (function() {
-  $__fn = function($dictGenericEnum_0 = null, $dictGenericTop_1 = null, $dictGenericBottom_2 = null, $dictGenericEnum1_3 = null, $dictGenericTop1_4 = null) use (&$__fn) {
+function majData_majEnum_majGeneric_genericmajEnummajProduct($dictGenericEnum_0, $dictGenericTop_1 = null, $dictGenericBottom_2 = null, $dictGenericEnum1_3 = null, $dictGenericTop1_4 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majEnum_majGeneric_genericmajEnummajProduct';
   if ($__num < 5) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 5);
   }
@@ -356,18 +397,18 @@ $GLOBALS['Data_Enum_Generic_genericEnumProduct'] = (function() {
   $__num = \func_num_args();
   $v1_9_2 = (($dictGenericEnum1_3)['genericPred__prime__'])(($v_8)->{'value1'});
   $__t3 = null;;
-  if ((is_object($v1_9_2) && (($v1_9_2)->{'tag'} === "Just"))) {
-$__t3 = new Phpurs_Data1("Just", new Phpurs_Data2("Product", ($v_8)->{'value0'}, ($v1_9_2)->{'value0'}));
+  if ($v1_9_2 instanceof \Data\Maybe\Data_Maybe_Just) {
+$__t3 = new \Data\Maybe\Data_Maybe_Just(new \Data\Generic\Rep\Data_Generic_Rep_Product(($v_8)->{'value0'}, ($v1_9_2)->{'value0'}));
 goto end_branch_3;;
 };
-  if ((is_object($v1_9_2) && (($v1_9_2)->{'tag'} === "Nothing"))) {
-$__t3 = ((($GLOBALS['Data_Maybe_functorMaybe'])['map'])(function($a_10 = null) use ($genericTop_prime_5_0) {
+  if ($v1_9_2 instanceof \Data\Maybe\Data_Maybe_Nothing) {
+$__t3 = (($GLOBALS['Data_Maybe_functorMaybe'])['map'])(function($a_10 = null) use ($genericTop_prime_5_0) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Product", $a_10, $genericTop_prime_5_0);
+  $__res = new \Data\Generic\Rep\Data_Generic_Rep_Product($a_10, $genericTop_prime_5_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))((($dictGenericEnum_0)['genericPred__prime__'])(($v_8)->{'value0'}));
+}, (($dictGenericEnum_0)['genericPred__prime__'])(($v_8)->{'value0'}));
 goto end_branch_3;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -381,18 +422,18 @@ goto end_branch_3;;
   $__num = \func_num_args();
   $v1_9_4 = (($dictGenericEnum1_3)['genericSucc__prime__'])(($v_8)->{'value1'});
   $__t5 = null;;
-  if ((is_object($v1_9_4) && (($v1_9_4)->{'tag'} === "Just"))) {
-$__t5 = new Phpurs_Data1("Just", new Phpurs_Data2("Product", ($v_8)->{'value0'}, ($v1_9_4)->{'value0'}));
+  if ($v1_9_4 instanceof \Data\Maybe\Data_Maybe_Just) {
+$__t5 = new \Data\Maybe\Data_Maybe_Just(new \Data\Generic\Rep\Data_Generic_Rep_Product(($v_8)->{'value0'}, ($v1_9_4)->{'value0'}));
 goto end_branch_5;;
 };
-  if ((is_object($v1_9_4) && (($v1_9_4)->{'tag'} === "Nothing"))) {
-$__t5 = ((($GLOBALS['Data_Maybe_functorMaybe'])['map'])(function($a_10 = null) use ($genericBottom_prime_7_1) {
+  if ($v1_9_4 instanceof \Data\Maybe\Data_Maybe_Nothing) {
+$__t5 = (($GLOBALS['Data_Maybe_functorMaybe'])['map'])(function($a_10 = null) use ($genericBottom_prime_7_1) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Product", $a_10, $genericBottom_prime_7_1);
+  $__res = new \Data\Generic\Rep\Data_Generic_Rep_Product($a_10, $genericBottom_prime_7_1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))((($dictGenericEnum_0)['genericSucc__prime__'])(($v_8)->{'value0'}));
+}, (($dictGenericEnum_0)['genericSucc__prime__'])(($v_8)->{'value0'}));
 goto end_branch_5;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -409,106 +450,123 @@ goto end_branch_5;;
 };
   goto __end;;
   __end:
-  return $__num > 5 ? $__res(...\array_slice(\func_get_args(), 5)) : $__res;
-  };
-  return $__fn;
-})();
+  return 5 < $__num ? $__res(...\array_slice(\func_get_args(), 5)) : $__res;
+}
+$GLOBALS['Data_Enum_Generic_genericEnumProduct'] = __NAMESPACE__ . '\\majData_majEnum_majGeneric_genericmajEnummajProduct';
 
 // Data_Enum_Generic_genericEnumNoArguments
 $GLOBALS['Data_Enum_Generic_genericEnumNoArguments'] = ["genericPred__prime__" => function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data0("Nothing");
+  $__res = new \Data\Maybe\Data_Maybe_Nothing();
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "genericSucc__prime__" => function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data0("Nothing");
+  $__res = new \Data\Maybe\Data_Maybe_Nothing();
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
 
 // Data_Enum_Generic_genericEnumConstructor
-$GLOBALS['Data_Enum_Generic_genericEnumConstructor'] = function($dictGenericEnum_0 = null) {
+function majData_majEnum_majGeneric_genericmajEnummajConstructor($dictGenericEnum_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majEnum_majGeneric_genericmajEnummajConstructor';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["genericPred__prime__" => function($v_1 = null) use ($dictGenericEnum_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Maybe_functorMaybe'])['map'])($GLOBALS['Data_Generic_Rep_Constructor']))((($dictGenericEnum_0)['genericPred__prime__'])($v_1));
+  $__res = (($GLOBALS['Data_Maybe_functorMaybe'])['map'])($GLOBALS['Data_Generic_Rep_Constructor'], (($dictGenericEnum_0)['genericPred__prime__'])($v_1));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "genericSucc__prime__" => function($v_1 = null) use ($dictGenericEnum_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Maybe_functorMaybe'])['map'])($GLOBALS['Data_Generic_Rep_Constructor']))((($dictGenericEnum_0)['genericSucc__prime__'])($v_1));
+  $__res = (($GLOBALS['Data_Maybe_functorMaybe'])['map'])($GLOBALS['Data_Generic_Rep_Constructor'], (($dictGenericEnum_0)['genericSucc__prime__'])($v_1));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Enum_Generic_genericEnumConstructor'] = __NAMESPACE__ . '\\majData_majEnum_majGeneric_genericmajEnummajConstructor';
 
 // Data_Enum_Generic_genericEnumArgument
-$GLOBALS['Data_Enum_Generic_genericEnumArgument'] = function($dictEnum_0 = null) {
+function majData_majEnum_majGeneric_genericmajEnummajArgument($dictEnum_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majEnum_majGeneric_genericmajEnummajArgument';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["genericPred__prime__" => function($v_1 = null) use ($dictEnum_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Maybe_functorMaybe'])['map'])($GLOBALS['Data_Generic_Rep_Argument']))((($dictEnum_0)['pred'])($v_1));
+  $__res = (($GLOBALS['Data_Maybe_functorMaybe'])['map'])($GLOBALS['Data_Generic_Rep_Argument'], (($dictEnum_0)['pred'])($v_1));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "genericSucc__prime__" => function($v_1 = null) use ($dictEnum_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Maybe_functorMaybe'])['map'])($GLOBALS['Data_Generic_Rep_Argument']))((($dictEnum_0)['succ'])($v_1));
+  $__res = (($GLOBALS['Data_Maybe_functorMaybe'])['map'])($GLOBALS['Data_Generic_Rep_Argument'], (($dictEnum_0)['succ'])($v_1));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Enum_Generic_genericEnumArgument'] = __NAMESPACE__ . '\\majData_majEnum_majGeneric_genericmajEnummajArgument';
 
 // Data_Enum_Generic_genericCardinality'
-$GLOBALS['Data_Enum_Generic_genericCardinality__prime__'] = function($dict_0 = null) {
+function majData_majEnum_majGeneric_genericmajCardinality__prime__($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majEnum_majGeneric_genericmajCardinality__prime__';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['genericCardinality__prime__'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Enum_Generic_genericCardinality__prime__'] = __NAMESPACE__ . '\\majData_majEnum_majGeneric_genericmajCardinality__prime__';
 
 // Data_Enum_Generic_genericCardinality
-$GLOBALS['Data_Enum_Generic_genericCardinality'] = (function() {
-  $__fn = function($dictGeneric_0 = null, $dictGenericBoundedEnum_1 = null) use (&$__fn) {
+function majData_majEnum_majGeneric_genericmajCardinality($dictGeneric_0, $dictGenericBoundedEnum_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majEnum_majGeneric_genericmajCardinality';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__res = ($dictGenericBoundedEnum_1)['genericCardinality__prime__'];
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Enum_Generic_genericCardinality'] = __NAMESPACE__ . '\\majData_majEnum_majGeneric_genericmajCardinality';
 
 // Data_Enum_Generic_genericBoundedEnumSum
-$GLOBALS['Data_Enum_Generic_genericBoundedEnumSum'] = function($dictGenericBoundedEnum_0 = null) {
+function majData_majEnum_majGeneric_genericmajBoundedmajEnummajSum($dictGenericBoundedEnum_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majEnum_majGeneric_genericmajBoundedmajEnummajSum';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $genericCardinality_prime1_1_0 = ($dictGenericBoundedEnum_0)['genericCardinality__prime__'];
   $__res = function($dictGenericBoundedEnum1_2 = null) use ($dictGenericBoundedEnum_0, $genericCardinality_prime1_1_0) {
   $__num = \func_num_args();
   $__res = ["genericCardinality__prime__" => ($genericCardinality_prime1_1_0 + ($dictGenericBoundedEnum1_2)['genericCardinality__prime__']), "genericToEnum__prime__" => function($n_3 = null) use ($dictGenericBoundedEnum1_2, $dictGenericBoundedEnum_0, $genericCardinality_prime1_1_0) {
   $__num = \func_num_args();
   $__t1 = null;;
-  if (((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])((($GLOBALS['Data_Enum_Generic_greaterThanOrEq'])($n_3))(0)))((($GLOBALS['Data_Enum_Generic_lessThan'])($n_3))($genericCardinality_prime1_1_0))) {
-$__t1 = ((($GLOBALS['Data_Maybe_functorMaybe'])['map'])($GLOBALS['Data_Generic_Rep_Inl']))((($dictGenericBoundedEnum_0)['genericToEnum__prime__'])($n_3));
+  if ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(($GLOBALS['Data_Enum_Generic_greaterThanOrEq'])($n_3, 0), ($GLOBALS['Data_Enum_Generic_lessThan'])($n_3, $genericCardinality_prime1_1_0))) {
+$__t1 = (($GLOBALS['Data_Maybe_functorMaybe'])['map'])($GLOBALS['Data_Generic_Rep_Inl'], (($dictGenericBoundedEnum_0)['genericToEnum__prime__'])($n_3));
 goto end_branch_1;;
 };
-  $__t1 = ((($GLOBALS['Data_Maybe_functorMaybe'])['map'])($GLOBALS['Data_Generic_Rep_Inr']))((($dictGenericBoundedEnum1_2)['genericToEnum__prime__'])(($n_3 - $genericCardinality_prime1_1_0)));
+  $__t1 = (($GLOBALS['Data_Maybe_functorMaybe'])['map'])($GLOBALS['Data_Generic_Rep_Inr'], (($dictGenericBoundedEnum1_2)['genericToEnum__prime__'])(($n_3 - $genericCardinality_prime1_1_0)));
   end_branch_1:;
   $__res = $__t1;
   goto __end;;
@@ -517,11 +575,11 @@ goto end_branch_1;;
 }, "genericFromEnum__prime__" => function($v_3 = null) use ($dictGenericBoundedEnum1_2, $dictGenericBoundedEnum_0, $genericCardinality_prime1_1_0) {
   $__num = \func_num_args();
   $__t2 = null;;
-  if ((is_object($v_3) && (($v_3)->{'tag'} === "Inl"))) {
+  if ($v_3 instanceof \Data\Generic\Rep\Data_Generic_Rep_Inl) {
 $__t2 = (($dictGenericBoundedEnum_0)['genericFromEnum__prime__'])(($v_3)->{'value0'});
 goto end_branch_2;;
 };
-  if ((is_object($v_3) && (($v_3)->{'tag'} === "Inr"))) {
+  if ($v_3 instanceof \Data\Generic\Rep\Data_Generic_Rep_Inr) {
 $__t2 = ((($dictGenericBoundedEnum1_2)['genericFromEnum__prime__'])(($v_3)->{'value0'}) + $genericCardinality_prime1_1_0);
 goto end_branch_2;;
 };
@@ -539,19 +597,24 @@ goto end_branch_2;;
 };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Enum_Generic_genericBoundedEnumSum'] = __NAMESPACE__ . '\\majData_majEnum_majGeneric_genericmajBoundedmajEnummajSum';
 
 // Data_Enum_Generic_genericBoundedEnumProduct
-$GLOBALS['Data_Enum_Generic_genericBoundedEnumProduct'] = function($dictGenericBoundedEnum_0 = null) {
+function majData_majEnum_majGeneric_genericmajBoundedmajEnummajProduct($dictGenericBoundedEnum_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majEnum_majGeneric_genericmajBoundedmajEnummajProduct';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $genericCardinality_prime1_1_0 = ($dictGenericBoundedEnum_0)['genericCardinality__prime__'];
   $__res = function($dictGenericBoundedEnum1_2 = null) use ($dictGenericBoundedEnum_0, $genericCardinality_prime1_1_0) {
   $__num = \func_num_args();
   $genericCardinality_prime2_3_1 = ($dictGenericBoundedEnum1_2)['genericCardinality__prime__'];
   $__res = ["genericCardinality__prime__" => ($genericCardinality_prime1_1_0 * $genericCardinality_prime2_3_1), "genericToEnum__prime__" => function($n_4 = null) use ($dictGenericBoundedEnum1_2, $dictGenericBoundedEnum_0, $genericCardinality_prime2_3_1) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Maybe_applyMaybe'])['apply'])(((($GLOBALS['Data_Maybe_functorMaybe'])['map'])($GLOBALS['Data_Generic_Rep_Product']))((($dictGenericBoundedEnum_0)['genericToEnum__prime__'])(((($GLOBALS['Data_EuclideanRing_euclideanRingInt'])['div'])($n_4))($genericCardinality_prime2_3_1)))))((($dictGenericBoundedEnum1_2)['genericToEnum__prime__'])(((($GLOBALS['Data_EuclideanRing_euclideanRingInt'])['mod'])($n_4))($genericCardinality_prime2_3_1)));
+  $__res = (($GLOBALS['Data_Maybe_applyMaybe'])['apply'])((($GLOBALS['Data_Maybe_functorMaybe'])['map'])($GLOBALS['Data_Generic_Rep_Product'], (($dictGenericBoundedEnum_0)['genericToEnum__prime__'])((($GLOBALS['Data_EuclideanRing_euclideanRingInt'])['div'])($n_4, $genericCardinality_prime2_3_1))), (($dictGenericBoundedEnum1_2)['genericToEnum__prime__'])((($GLOBALS['Data_EuclideanRing_euclideanRingInt'])['mod'])($n_4, $genericCardinality_prime2_3_1)));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -568,13 +631,14 @@ $GLOBALS['Data_Enum_Generic_genericBoundedEnumProduct'] = function($dictGenericB
 };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Enum_Generic_genericBoundedEnumProduct'] = __NAMESPACE__ . '\\majData_majEnum_majGeneric_genericmajBoundedmajEnummajProduct';
 
 // Data_Enum_Generic_genericBoundedEnumNoArguments
 $GLOBALS['Data_Enum_Generic_genericBoundedEnumNoArguments'] = ["genericCardinality__prime__" => 1, "genericToEnum__prime__" => function($i_0 = null) {
   $__num = \func_num_args();
-  $__res = match ($i_0) { 0 => new Phpurs_Data1("Just", new Phpurs_Data0("NoArguments")), default => new Phpurs_Data0("Nothing") };
+  $__res = match ($i_0) { 0 => new \Data\Maybe\Data_Maybe_Just(new \Data\Generic\Rep\Data_Generic_Rep_NoArguments()), default => new \Data\Maybe\Data_Maybe_Nothing() };
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -587,11 +651,15 @@ $GLOBALS['Data_Enum_Generic_genericBoundedEnumNoArguments'] = ["genericCardinali
 }];
 
 // Data_Enum_Generic_genericBoundedEnumConstructor
-$GLOBALS['Data_Enum_Generic_genericBoundedEnumConstructor'] = function($dictGenericBoundedEnum_0 = null) {
+function majData_majEnum_majGeneric_genericmajBoundedmajEnummajConstructor($dictGenericBoundedEnum_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majEnum_majGeneric_genericmajBoundedmajEnummajConstructor';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["genericCardinality__prime__" => ($dictGenericBoundedEnum_0)['genericCardinality__prime__'], "genericToEnum__prime__" => function($i_1 = null) use ($dictGenericBoundedEnum_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Maybe_functorMaybe'])['map'])($GLOBALS['Data_Generic_Rep_Constructor']))((($dictGenericBoundedEnum_0)['genericToEnum__prime__'])($i_1));
+  $__res = (($GLOBALS['Data_Maybe_functorMaybe'])['map'])($GLOBALS['Data_Generic_Rep_Constructor'], (($dictGenericBoundedEnum_0)['genericToEnum__prime__'])($i_1));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -604,15 +672,20 @@ $GLOBALS['Data_Enum_Generic_genericBoundedEnumConstructor'] = function($dictGene
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Enum_Generic_genericBoundedEnumConstructor'] = __NAMESPACE__ . '\\majData_majEnum_majGeneric_genericmajBoundedmajEnummajConstructor';
 
 // Data_Enum_Generic_genericBoundedEnumArgument
-$GLOBALS['Data_Enum_Generic_genericBoundedEnumArgument'] = function($dictBoundedEnum_0 = null) {
+function majData_majEnum_majGeneric_genericmajBoundedmajEnummajArgument($dictBoundedEnum_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majEnum_majGeneric_genericmajBoundedmajEnummajArgument';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["genericCardinality__prime__" => ($dictBoundedEnum_0)['cardinality'], "genericToEnum__prime__" => function($i_1 = null) use ($dictBoundedEnum_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Maybe_functorMaybe'])['map'])($GLOBALS['Data_Generic_Rep_Argument']))((($dictBoundedEnum_0)['toEnum'])($i_1));
+  $__res = (($GLOBALS['Data_Maybe_functorMaybe'])['map'])($GLOBALS['Data_Generic_Rep_Argument'], (($dictBoundedEnum_0)['toEnum'])($i_1));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -625,6 +698,7 @@ $GLOBALS['Data_Enum_Generic_genericBoundedEnumArgument'] = function($dictBounded
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Enum_Generic_genericBoundedEnumArgument'] = __NAMESPACE__ . '\\majData_majEnum_majGeneric_genericmajBoundedmajEnummajArgument';
 

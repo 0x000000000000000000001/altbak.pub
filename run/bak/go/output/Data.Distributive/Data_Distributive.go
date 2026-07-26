@@ -184,7 +184,7 @@ _ = from_1_0
 return gopurs_runtime.RecordDict3("Functor0", "collect", "distribute", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Tuple.Get_functorTuple()
 }), gopurs_runtime.Func(func(dictFunctor_2 gopurs_runtime.Value) gopurs_runtime.Value {
-distribute2_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(Get_distributiveTuple(), dictTypeEquals_0), "distribute"), dictFunctor_2)
+distribute2_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Call_distributiveTuple(dictTypeEquals_0), "distribute"), dictFunctor_2)
 _ = distribute2_3_1
 return gopurs_runtime.Func(func(f_4 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_5_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctor_2, "map"), f_4)

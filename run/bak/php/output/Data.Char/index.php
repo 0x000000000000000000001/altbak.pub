@@ -96,9 +96,39 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
+// Data_Char_toCharCode_closure
+$GLOBALS['Data_Char_toCharCode_closure'] = ($GLOBALS['Data_Enum_boundedEnumChar'])['fromEnum'];
+
 // Data_Char_toCharCode
-$GLOBALS['Data_Char_toCharCode'] = ($GLOBALS['Data_Enum_boundedEnumChar'])['fromEnum'];
+function majData_majChar_tomajCharmajCode($v_0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majChar_tomajCharmajCode';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ($GLOBALS['Data_Char_toCharCode_closure'])($v_0);
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Char_toCharCode'] = __NAMESPACE__ . '\\majData_majChar_tomajCharmajCode';
+
+// Data_Char_fromCharCode_closure
+$GLOBALS['Data_Char_fromCharCode_closure'] = ($GLOBALS['Data_Enum_boundedEnumChar'])['toEnum'];
 
 // Data_Char_fromCharCode
-$GLOBALS['Data_Char_fromCharCode'] = ($GLOBALS['Data_Enum_boundedEnumChar'])['toEnum'];
+function majData_majChar_frommajCharmajCode($v_0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majChar_frommajCharmajCode';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ($GLOBALS['Data_Char_fromCharCode_closure'])($v_0);
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Char_fromCharCode'] = __NAMESPACE__ . '\\majData_majChar_frommajCharmajCode';
 

@@ -100,10 +100,15 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+final class Data_Generic_Rep_Inl { public function __construct(public mixed $value0) {} }
+final class Data_Generic_Rep_Inr { public function __construct(public mixed $value0) {} }
+final class Data_Generic_Rep_Product { public function __construct(public mixed $value0, public mixed $value1) {} }
+final class Data_Generic_Rep_NoArguments { public function __construct() {} }
+
 // Data_Generic_Rep_Inl
 $GLOBALS['Data_Generic_Rep_Inl'] = function($value0 = null) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data1("Inl", $value0);
+  $__res = new \Data\Generic\Rep\Data_Generic_Rep_Inl($value0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -112,7 +117,7 @@ $GLOBALS['Data_Generic_Rep_Inl'] = function($value0 = null) {
 // Data_Generic_Rep_Inr
 $GLOBALS['Data_Generic_Rep_Inr'] = function($value0 = null) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data1("Inr", $value0);
+  $__res = new \Data\Generic\Rep\Data_Generic_Rep_Inr($value0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -125,7 +130,7 @@ $GLOBALS['Data_Generic_Rep_Product'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Product", $value0, $value1);
+  $__res = new \Data\Generic\Rep\Data_Generic_Rep_Product($value0, $value1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -134,51 +139,66 @@ $GLOBALS['Data_Generic_Rep_Product'] = (function() {
 })();
 
 // Data_Generic_Rep_NoArguments
-$GLOBALS['Data_Generic_Rep_NoArguments'] = ($GLOBALS['__phpurs_data0_NoArguments'] ??= new Phpurs_Data0("NoArguments"));
+$GLOBALS['Data_Generic_Rep_NoArguments'] = ($GLOBALS['__phpurs_data0_NoArguments'] ??= new \Data\Generic\Rep\Data_Generic_Rep_NoArguments());
 
 // Data_Generic_Rep_Constructor
-$GLOBALS['Data_Generic_Rep_Constructor'] = function($x_0 = null) {
+function majData_majGeneric_majRep_majConstructor($x_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majGeneric_majRep_majConstructor';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $x_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Generic_Rep_Constructor'] = __NAMESPACE__ . '\\majData_majGeneric_majRep_majConstructor';
 
 // Data_Generic_Rep_Argument
-$GLOBALS['Data_Generic_Rep_Argument'] = function($x_0 = null) {
+function majData_majGeneric_majRep_majArgument($x_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majGeneric_majRep_majArgument';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $x_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Generic_Rep_Argument'] = __NAMESPACE__ . '\\majData_majGeneric_majRep_majArgument';
 
 // Data_Generic_Rep_to
-$GLOBALS['Data_Generic_Rep_to'] = function($dict_0 = null) {
+function majData_majGeneric_majRep_to($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majGeneric_majRep_to';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['to'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Generic_Rep_to'] = __NAMESPACE__ . '\\majData_majGeneric_majRep_to';
 
 // Data_Generic_Rep_showSum
-$GLOBALS['Data_Generic_Rep_showSum'] = (function() {
-  $__fn = function($dictShow_0 = null, $dictShow1_1 = null) use (&$__fn) {
+function majData_majGeneric_majRep_showmajSum($dictShow_0, $dictShow1_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majGeneric_majRep_showmajSum';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__res = ["show" => function($v_2 = null) use ($dictShow1_1, $dictShow_0) {
   $__num = \func_num_args();
   $__t0 = null;;
-  if ((is_object($v_2) && (($v_2)->{'tag'} === "Inl"))) {
-$__t0 = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Inl "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])(($v_2)->{'value0'})))(")"));
+  if ($v_2 instanceof \Data\Generic\Rep\Data_Generic_Rep_Inl) {
+$__t0 = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Inl ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])(($v_2)->{'value0'}), ")"));
 goto end_branch_0;;
 };
-  if ((is_object($v_2) && (($v_2)->{'tag'} === "Inr"))) {
-$__t0 = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Inr "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow1_1)['show'])(($v_2)->{'value0'})))(")"));
+  if ($v_2 instanceof \Data\Generic\Rep\Data_Generic_Rep_Inr) {
+$__t0 = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Inr ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow1_1)['show'])(($v_2)->{'value0'}), ")"));
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -191,31 +211,29 @@ goto end_branch_0;;
 }];
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Generic_Rep_showSum'] = __NAMESPACE__ . '\\majData_majGeneric_majRep_showmajSum';
 
 // Data_Generic_Rep_showProduct
-$GLOBALS['Data_Generic_Rep_showProduct'] = (function() {
-  $__fn = function($dictShow_0 = null, $dictShow1_1 = null) use (&$__fn) {
+function majData_majGeneric_majRep_showmajProduct($dictShow_0, $dictShow1_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majGeneric_majRep_showmajProduct';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__res = ["show" => function($v_2 = null) use ($dictShow1_1, $dictShow_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Product "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])(($v_2)->{'value0'})))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])(" "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow1_1)['show'])(($v_2)->{'value1'})))(")"))));
+  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Product ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])(($v_2)->{'value0'}), (($GLOBALS['Data_Semigroup_semigroupString'])['append'])(" ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow1_1)['show'])(($v_2)->{'value1'}), ")"))));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Generic_Rep_showProduct'] = __NAMESPACE__ . '\\majData_majGeneric_majRep_showmajProduct';
 
 // Data_Generic_Rep_showNoArguments
 $GLOBALS['Data_Generic_Rep_showNoArguments'] = ["show" => function($v_0 = null) {
@@ -227,62 +245,70 @@ $GLOBALS['Data_Generic_Rep_showNoArguments'] = ["show" => function($v_0 = null) 
 }];
 
 // Data_Generic_Rep_showConstructor
-$GLOBALS['Data_Generic_Rep_showConstructor'] = (function() {
-  $__fn = function($dictIsSymbol_0 = null, $dictShow_1 = null) use (&$__fn) {
+function majData_majGeneric_majRep_showmajConstructor($dictIsSymbol_0, $dictShow_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majGeneric_majRep_showmajConstructor';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__res = ["show" => function($v_2 = null) use ($dictIsSymbol_0, $dictShow_1) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Constructor @"))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($GLOBALS['Data_Show_showString'])['show'])((($dictIsSymbol_0)['reflectSymbol'])(new Phpurs_Data0("Proxy")))))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])(" "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_1)['show'])($v_2)))(")"))));
+  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Constructor @", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($GLOBALS['Data_Show_showString'])['show'])((($dictIsSymbol_0)['reflectSymbol'])(new \Type\Proxy\Type_Proxy_Proxy())), (($GLOBALS['Data_Semigroup_semigroupString'])['append'])(" ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_1)['show'])($v_2), ")"))));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Generic_Rep_showConstructor'] = __NAMESPACE__ . '\\majData_majGeneric_majRep_showmajConstructor';
 
 // Data_Generic_Rep_showArgument
-$GLOBALS['Data_Generic_Rep_showArgument'] = function($dictShow_0 = null) {
+function majData_majGeneric_majRep_showmajArgument($dictShow_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majGeneric_majRep_showmajArgument';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Argument "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1)))(")"));
+  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Argument ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1), ")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Generic_Rep_showArgument'] = __NAMESPACE__ . '\\majData_majGeneric_majRep_showmajArgument';
 
 // Data_Generic_Rep_repOf
-$GLOBALS['Data_Generic_Rep_repOf'] = (function() {
-  $__fn = function($dictGeneric_0 = null, $v_1 = null) use (&$__fn) {
+function majData_majGeneric_majRep_repmajOf($dictGeneric_0, $v_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majGeneric_majRep_repmajOf';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data0("Proxy");
+  $__res = new \Type\Proxy\Type_Proxy_Proxy();
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Generic_Rep_repOf'] = __NAMESPACE__ . '\\majData_majGeneric_majRep_repmajOf';
 
 // Data_Generic_Rep_from
-$GLOBALS['Data_Generic_Rep_from'] = function($dict_0 = null) {
+function majData_majGeneric_majRep_from($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majGeneric_majRep_from';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['from'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Generic_Rep_from'] = __NAMESPACE__ . '\\majData_majGeneric_majRep_from';
 

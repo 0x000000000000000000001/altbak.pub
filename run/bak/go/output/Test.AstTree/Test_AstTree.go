@@ -65,7 +65,7 @@ var once_eval sync.Once
 func Get_eval() gopurs_runtime.Value {
 	once_eval.Do(func() {
 		cache_eval = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_eval(v_0_box)
+return gopurs_runtime.Int(Call_eval(v_0_box))
 })
 	})
 	return cache_eval
@@ -96,7 +96,7 @@ var once_act sync.Once
 func Get_act() gopurs_runtime.Value {
 	once_act.Do(func() {
 		cache_act = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Effect.Get_bindEffect(), "bind"), gopurs_runtime.Apply(pkg_Bench.Get_opaque(), gopurs_runtime.Int(3)), gopurs_runtime.Func(func(dummy_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Show.Get_showInt(), "show"), gopurs_runtime.Apply(Get_eval(), gopurs_runtime.Apply(Get_buildTree(), dummy_0))))
+return gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Show.Get_showInt(), "show"), gopurs_runtime.Int(Call_eval(Call_buildTree(dummy_0.IntVal)))))
 }))
 	})
 	return cache_act
@@ -125,7 +125,7 @@ type Constructor_Sub struct {
 }
 
 
-func Call_eval(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_eval(v_0_loop gopurs_runtime.Value) int64 {
 eval:
 for {
 if false { continue eval }
@@ -142,7 +142,7 @@ goto end_branch_0
 }
 {
 if (v_0.Type == 9 && v_0.IntVal == 2937956733) {
-__t0 = gopurs_runtime.Int((gopurs_runtime.Apply(Get_eval(), (*Constructor_Add)(v_0.UnsafePtr).V0).IntVal) + (gopurs_runtime.Apply(Get_eval(), (*Constructor_Add)(v_0.UnsafePtr).V1).IntVal))
+__t0 = gopurs_runtime.Int((gopurs_runtime.Int(Call_eval((*Constructor_Add)(v_0.UnsafePtr).V0)).IntVal) + (gopurs_runtime.Int(Call_eval((*Constructor_Add)(v_0.UnsafePtr).V1)).IntVal))
 goto end_branch_0
 } else {
 
@@ -150,7 +150,7 @@ goto end_branch_0
 }
 {
 if (v_0.Type == 9 && v_0.IntVal == 3406566728) {
-__t0 = gopurs_runtime.Int((gopurs_runtime.Apply(Get_eval(), (*Constructor_Mul)(v_0.UnsafePtr).V0).IntVal) * (gopurs_runtime.Apply(Get_eval(), (*Constructor_Mul)(v_0.UnsafePtr).V1).IntVal))
+__t0 = gopurs_runtime.Int((gopurs_runtime.Int(Call_eval((*Constructor_Mul)(v_0.UnsafePtr).V0)).IntVal) * (gopurs_runtime.Int(Call_eval((*Constructor_Mul)(v_0.UnsafePtr).V1)).IntVal))
 goto end_branch_0
 } else {
 
@@ -158,7 +158,7 @@ goto end_branch_0
 }
 {
 if (v_0.Type == 9 && v_0.IntVal == 2029887576) {
-__t0 = gopurs_runtime.Int((gopurs_runtime.Apply(Get_eval(), (*Constructor_Sub)(v_0.UnsafePtr).V0).IntVal) - (gopurs_runtime.Apply(Get_eval(), (*Constructor_Sub)(v_0.UnsafePtr).V1).IntVal))
+__t0 = gopurs_runtime.Int((gopurs_runtime.Int(Call_eval((*Constructor_Sub)(v_0.UnsafePtr).V0)).IntVal) - (gopurs_runtime.Int(Call_eval((*Constructor_Sub)(v_0.UnsafePtr).V1)).IntVal))
 goto end_branch_0
 } else {
 
@@ -168,7 +168,7 @@ goto end_branch_0
 __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_0:
-return __t0
+return __t0.IntVal
 }
 }
 
@@ -188,7 +188,7 @@ goto end_branch_0
 }
 }
 {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 2937956733, UnsafePtr: unsafe.Pointer(&Constructor_Add{gopurs_runtime.Value{Type: 9, IntVal: 3406566728, UnsafePtr: unsafe.Pointer(&Constructor_Mul{gopurs_runtime.Value{Type: 9, IntVal: 245188743, UnsafePtr: unsafe.Pointer(&Constructor_Val{v_0})}, gopurs_runtime.Apply(Get_buildTree(), gopurs_runtime.Int((v_0) - (1)))})}, gopurs_runtime.Value{Type: 9, IntVal: 2029887576, UnsafePtr: unsafe.Pointer(&Constructor_Sub{gopurs_runtime.Apply(Get_buildTree(), gopurs_runtime.Int((v_0) - (1))), gopurs_runtime.Value{Type: 9, IntVal: 245188743, UnsafePtr: unsafe.Pointer(&Constructor_Val{1})}})}})}
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 2937956733, UnsafePtr: unsafe.Pointer(&Constructor_Add{gopurs_runtime.Value{Type: 9, IntVal: 3406566728, UnsafePtr: unsafe.Pointer(&Constructor_Mul{gopurs_runtime.Value{Type: 9, IntVal: 245188743, UnsafePtr: unsafe.Pointer(&Constructor_Val{v_0})}, Call_buildTree((v_0) - (1))})}, gopurs_runtime.Value{Type: 9, IntVal: 2029887576, UnsafePtr: unsafe.Pointer(&Constructor_Sub{Call_buildTree((v_0) - (1)), gopurs_runtime.Value{Type: 9, IntVal: 245188743, UnsafePtr: unsafe.Pointer(&Constructor_Val{1})}})}})}
 }
 end_branch_0:
 return __t0

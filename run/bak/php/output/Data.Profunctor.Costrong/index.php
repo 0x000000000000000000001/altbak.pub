@@ -97,21 +97,33 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_Profunctor_Costrong_unsecond
-$GLOBALS['Data_Profunctor_Costrong_unsecond'] = function($dict_0 = null) {
+function majData_majProfunctor_majCostrong_unsecond($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majProfunctor_majCostrong_unsecond';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['unsecond'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Profunctor_Costrong_unsecond'] = __NAMESPACE__ . '\\majData_majProfunctor_majCostrong_unsecond';
 
 // Data_Profunctor_Costrong_unfirst
-$GLOBALS['Data_Profunctor_Costrong_unfirst'] = function($dict_0 = null) {
+function majData_majProfunctor_majCostrong_unfirst($dict_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majProfunctor_majCostrong_unfirst';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ($dict_0)['unfirst'];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Profunctor_Costrong_unfirst'] = __NAMESPACE__ . '\\majData_majProfunctor_majCostrong_unfirst';
 

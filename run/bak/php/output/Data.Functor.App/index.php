@@ -115,34 +115,46 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_Functor_App_App
-$GLOBALS['Data_Functor_App_App'] = function($x_0 = null) {
+function majData_majFunctor_majApp_majApp($x_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majApp_majApp';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $x_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_App_App'] = __NAMESPACE__ . '\\majData_majFunctor_majApp_majApp';
 
 // Data_Functor_App_showApp
-$GLOBALS['Data_Functor_App_showApp'] = function($dictShow_0 = null) {
+function majData_majFunctor_majApp_showmajApp($dictShow_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majApp_showmajApp';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(App "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1)))(")"));
+  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(App ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1), ")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_App_showApp'] = __NAMESPACE__ . '\\majData_majFunctor_majApp_showmajApp';
 
 // Data_Functor_App_semigroupApp
-$GLOBALS['Data_Functor_App_semigroupApp'] = (function() {
-  $__fn = function($dictApply_0 = null, $dictSemigroup_1 = null) use (&$__fn) {
+function majData_majFunctor_majApp_semigroupmajApp($dictApply_0, $dictSemigroup_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majApp_semigroupmajApp';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
@@ -153,7 +165,7 @@ $GLOBALS['Data_Functor_App_semigroupApp'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictApply_0)['apply'])(((((($dictApply_0)['Functor0'])(null))['map'])($append1_2_0))($v_3)))($v1_4);
+  $__res = (($dictApply_0)['apply'])((((($dictApply_0)['Functor0'])(null))['map'])($append1_2_0, $v_3), $v1_4);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -162,19 +174,23 @@ $GLOBALS['Data_Functor_App_semigroupApp'] = (function() {
 })()];
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Functor_App_semigroupApp'] = __NAMESPACE__ . '\\majData_majFunctor_majApp_semigroupmajApp';
 
 // Data_Functor_App_plusApp
-$GLOBALS['Data_Functor_App_plusApp'] = function($dictPlus_0 = null) {
+function majData_majFunctor_majApp_plusmajApp($dictPlus_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majApp_plusmajApp';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictPlus_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_App_plusApp'] = __NAMESPACE__ . '\\majData_majFunctor_majApp_plusmajApp';
 
 // Data_Functor_App_newtypeApp
 $GLOBALS['Data_Functor_App_newtypeApp'] = ["Coercible0" => function($_dollar__unused_0 = null) {
@@ -186,8 +202,12 @@ $GLOBALS['Data_Functor_App_newtypeApp'] = ["Coercible0" => function($_dollar__un
 }];
 
 // Data_Functor_App_monoidApp
-$GLOBALS['Data_Functor_App_monoidApp'] = function($dictApplicative_0 = null) {
+function majData_majFunctor_majApp_monoidmajApp($dictApplicative_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majApp_monoidmajApp';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__local_var_1_0 = (($dictApplicative_0)['Apply0'])(null);
   $__res = function($dictMonoid_2 = null) use ($__local_var_1_0, $dictApplicative_0) {
   $__num = \func_num_args();
@@ -198,7 +218,7 @@ $GLOBALS['Data_Functor_App_monoidApp'] = function($dictApplicative_0 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($__local_var_1_0)['apply'])(((((($__local_var_1_0)['Functor0'])(null))['map'])($append1_3_1))($v_4)))($v1_5);
+  $__res = (($__local_var_1_0)['apply'])((((($__local_var_1_0)['Functor0'])(null))['map'])($append1_3_1, $v_4), $v1_5);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -218,79 +238,132 @@ $GLOBALS['Data_Functor_App_monoidApp'] = function($dictApplicative_0 = null) {
 };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_App_monoidApp'] = __NAMESPACE__ . '\\majData_majFunctor_majApp_monoidmajApp';
 
 // Data_Functor_App_monadPlusApp
-$GLOBALS['Data_Functor_App_monadPlusApp'] = function($dictMonadPlus_0 = null) {
+function majData_majFunctor_majApp_monadmajPlusmajApp($dictMonadPlus_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majApp_monadmajPlusmajApp';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictMonadPlus_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_App_monadPlusApp'] = __NAMESPACE__ . '\\majData_majFunctor_majApp_monadmajPlusmajApp';
 
 // Data_Functor_App_monadApp
-$GLOBALS['Data_Functor_App_monadApp'] = function($dictMonad_0 = null) {
+function majData_majFunctor_majApp_monadmajApp($dictMonad_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majApp_monadmajApp';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictMonad_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_App_monadApp'] = __NAMESPACE__ . '\\majData_majFunctor_majApp_monadmajApp';
 
 // Data_Functor_App_lazyApp
-$GLOBALS['Data_Functor_App_lazyApp'] = function($dictLazy_0 = null) {
+function majData_majFunctor_majApp_lazymajApp($dictLazy_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majApp_lazymajApp';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictLazy_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_App_lazyApp'] = __NAMESPACE__ . '\\majData_majFunctor_majApp_lazymajApp';
+
+// Data_Functor_App_hoistLowerApp_closure
+$GLOBALS['Data_Functor_App_hoistLowerApp_closure'] = $GLOBALS['Unsafe_Coerce_unsafeCoerce'];
 
 // Data_Functor_App_hoistLowerApp
-$GLOBALS['Data_Functor_App_hoistLowerApp'] = $GLOBALS['Unsafe_Coerce_unsafeCoerce'];
+function majData_majFunctor_majApp_hoistmajLowermajApp($v_0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majApp_hoistmajLowermajApp';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ($GLOBALS['Data_Functor_App_hoistLowerApp_closure'])($v_0);
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_App_hoistLowerApp'] = __NAMESPACE__ . '\\majData_majFunctor_majApp_hoistmajLowermajApp';
+
+// Data_Functor_App_hoistLiftApp_closure
+$GLOBALS['Data_Functor_App_hoistLiftApp_closure'] = $GLOBALS['Unsafe_Coerce_unsafeCoerce'];
 
 // Data_Functor_App_hoistLiftApp
-$GLOBALS['Data_Functor_App_hoistLiftApp'] = $GLOBALS['Unsafe_Coerce_unsafeCoerce'];
+function majData_majFunctor_majApp_hoistmajLiftmajApp($v_0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majApp_hoistmajLiftmajApp';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ($GLOBALS['Data_Functor_App_hoistLiftApp_closure'])($v_0);
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_App_hoistLiftApp'] = __NAMESPACE__ . '\\majData_majFunctor_majApp_hoistmajLiftmajApp';
 
 // Data_Functor_App_hoistApp
-$GLOBALS['Data_Functor_App_hoistApp'] = (function() {
-  $__fn = function($f_0 = null, $v_1 = null) use (&$__fn) {
+function majData_majFunctor_majApp_hoistmajApp($f_0, $v_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majApp_hoistmajApp';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__res = ($f_0)($v_1);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Functor_App_hoistApp'] = __NAMESPACE__ . '\\majData_majFunctor_majApp_hoistmajApp';
 
 // Data_Functor_App_functorApp
-$GLOBALS['Data_Functor_App_functorApp'] = function($dictFunctor_0 = null) {
+function majData_majFunctor_majApp_functormajApp($dictFunctor_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majApp_functormajApp';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictFunctor_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_App_functorApp'] = __NAMESPACE__ . '\\majData_majFunctor_majApp_functormajApp';
 
 // Data_Functor_App_extendApp
-$GLOBALS['Data_Functor_App_extendApp'] = function($dictExtend_0 = null) {
+function majData_majFunctor_majApp_extendmajApp($dictExtend_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majApp_extendmajApp';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictExtend_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_App_extendApp'] = __NAMESPACE__ . '\\majData_majFunctor_majApp_extendmajApp';
 
 // Data_Functor_App_eqApp
-$GLOBALS['Data_Functor_App_eqApp'] = (function() {
-  $__fn = function($dictEq1_0 = null, $dictEq_1 = null) use (&$__fn) {
+function majData_majFunctor_majApp_eqmajApp($dictEq1_0, $dictEq_1 = null) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majApp_eqmajApp';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
@@ -301,7 +374,7 @@ $GLOBALS['Data_Functor_App_eqApp'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($eq11_2_0)($x_3))($y_4);
+  $__res = ($eq11_2_0)($x_3, $y_4);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -310,14 +383,17 @@ $GLOBALS['Data_Functor_App_eqApp'] = (function() {
 })()];
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Functor_App_eqApp'] = __NAMESPACE__ . '\\majData_majFunctor_majApp_eqmajApp';
 
 // Data_Functor_App_ordApp
-$GLOBALS['Data_Functor_App_ordApp'] = function($dictOrd1_0 = null) {
+function majData_majFunctor_majApp_ordmajApp($dictOrd1_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majApp_ordmajApp';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__local_var_1_0 = (($dictOrd1_0)['Eq10'])(null);
   $__res = function($dictOrd_2 = null) use ($__local_var_1_0, $dictOrd1_0) {
   $__num = \func_num_args();
@@ -329,7 +405,7 @@ $GLOBALS['Data_Functor_App_ordApp'] = function($dictOrd1_0 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($eq11_4_2)($x_5))($y_6);
+  $__res = ($eq11_4_2)($x_5, $y_6);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -342,7 +418,7 @@ $GLOBALS['Data_Functor_App_ordApp'] = function($dictOrd1_0 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($compare11_3_1)($x_6))($y_7);
+  $__res = ($compare11_3_1)($x_6, $y_7);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -361,12 +437,17 @@ $GLOBALS['Data_Functor_App_ordApp'] = function($dictOrd1_0 = null) {
 };
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_App_ordApp'] = __NAMESPACE__ . '\\majData_majFunctor_majApp_ordmajApp';
 
 // Data_Functor_App_eq1App
-$GLOBALS['Data_Functor_App_eq1App'] = function($dictEq1_0 = null) {
+function majData_majFunctor_majApp_eq1majApp($dictEq1_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majApp_eq1majApp';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = ["eq1" => function($dictEq_1 = null) use ($dictEq1_0) {
   $__num = \func_num_args();
   $__res = (($dictEq1_0)['eq1'])($dictEq_1);
@@ -376,12 +457,17 @@ $GLOBALS['Data_Functor_App_eq1App'] = function($dictEq1_0 = null) {
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_App_eq1App'] = __NAMESPACE__ . '\\majData_majFunctor_majApp_eq1majApp';
 
 // Data_Functor_App_ord1App
-$GLOBALS['Data_Functor_App_ord1App'] = function($dictOrd1_0 = null) {
+function majData_majFunctor_majApp_ord1majApp($dictOrd1_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majApp_ord1majApp';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__local_var_1_0 = (($dictOrd1_0)['Eq10'])(null);
   $__local_var_2_1 = (($dictOrd1_0)['Eq10'])(null);
   $eq1App1_3_2 = ["eq1" => function($dictEq_3 = null) use ($__local_var_2_1) {
@@ -401,7 +487,7 @@ $GLOBALS['Data_Functor_App_ord1App'] = function($dictOrd1_0 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($eq11_6_4)($x_7))($y_8);
+  $__res = ($eq11_6_4)($x_7, $y_8);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -414,7 +500,7 @@ $GLOBALS['Data_Functor_App_ord1App'] = function($dictOrd1_0 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($compare11_5_3)($x_8))($y_9);
+  $__res = ($compare11_5_3)($x_8, $y_9);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -439,60 +525,91 @@ $GLOBALS['Data_Functor_App_ord1App'] = function($dictOrd1_0 = null) {
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_App_ord1App'] = __NAMESPACE__ . '\\majData_majFunctor_majApp_ord1majApp';
 
 // Data_Functor_App_comonadApp
-$GLOBALS['Data_Functor_App_comonadApp'] = function($dictComonad_0 = null) {
+function majData_majFunctor_majApp_comonadmajApp($dictComonad_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majApp_comonadmajApp';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictComonad_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_App_comonadApp'] = __NAMESPACE__ . '\\majData_majFunctor_majApp_comonadmajApp';
 
 // Data_Functor_App_bindApp
-$GLOBALS['Data_Functor_App_bindApp'] = function($dictBind_0 = null) {
+function majData_majFunctor_majApp_bindmajApp($dictBind_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majApp_bindmajApp';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictBind_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_App_bindApp'] = __NAMESPACE__ . '\\majData_majFunctor_majApp_bindmajApp';
 
 // Data_Functor_App_applyApp
-$GLOBALS['Data_Functor_App_applyApp'] = function($dictApply_0 = null) {
+function majData_majFunctor_majApp_applymajApp($dictApply_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majApp_applymajApp';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictApply_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_App_applyApp'] = __NAMESPACE__ . '\\majData_majFunctor_majApp_applymajApp';
 
 // Data_Functor_App_applicativeApp
-$GLOBALS['Data_Functor_App_applicativeApp'] = function($dictApplicative_0 = null) {
+function majData_majFunctor_majApp_applicativemajApp($dictApplicative_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majApp_applicativemajApp';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictApplicative_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_App_applicativeApp'] = __NAMESPACE__ . '\\majData_majFunctor_majApp_applicativemajApp';
 
 // Data_Functor_App_alternativeApp
-$GLOBALS['Data_Functor_App_alternativeApp'] = function($dictAlternative_0 = null) {
+function majData_majFunctor_majApp_alternativemajApp($dictAlternative_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majApp_alternativemajApp';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictAlternative_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_App_alternativeApp'] = __NAMESPACE__ . '\\majData_majFunctor_majApp_alternativemajApp';
 
 // Data_Functor_App_altApp
-$GLOBALS['Data_Functor_App_altApp'] = function($dictAlt_0 = null) {
+function majData_majFunctor_majApp_altmajApp($dictAlt_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majFunctor_majApp_altmajApp';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $__res = $dictAlt_0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Functor_App_altApp'] = __NAMESPACE__ . '\\majData_majFunctor_majApp_altmajApp';
 

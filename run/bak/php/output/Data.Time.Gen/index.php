@@ -100,13 +100,20 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+
+
 // Data_Time_Gen_genTime
-$GLOBALS['Data_Time_Gen_genTime'] = function($dictMonadGen_0 = null) {
+function majData_majTime_majGen_genmajTime($dictMonadGen_0) {
   $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTime_majGen_genmajTime';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
   $Apply0_1_0 = (((((($dictMonadGen_0)['Monad0'])(null))['Bind1'])(null))['Apply0'])(null);
-  $__res = ((($Apply0_1_0)['apply'])(((($Apply0_1_0)['apply'])(((($Apply0_1_0)['apply'])(((((($Apply0_1_0)['Functor0'])(null))['map'])($GLOBALS['Data_Time_Time']))((($GLOBALS['Data_Enum_Gen_genBoundedEnum'])($dictMonadGen_0))($GLOBALS['Data_Time_Component_boundedEnumHour']))))((($GLOBALS['Data_Enum_Gen_genBoundedEnum'])($dictMonadGen_0))($GLOBALS['Data_Time_Component_boundedEnumMinute']))))((($GLOBALS['Data_Enum_Gen_genBoundedEnum'])($dictMonadGen_0))($GLOBALS['Data_Time_Component_boundedEnumSecond']))))((($GLOBALS['Data_Enum_Gen_genBoundedEnum'])($dictMonadGen_0))($GLOBALS['Data_Time_Component_boundedEnumMillisecond']));
+  $__res = (($Apply0_1_0)['apply'])((($Apply0_1_0)['apply'])((($Apply0_1_0)['apply'])((((($Apply0_1_0)['Functor0'])(null))['map'])($GLOBALS['Data_Time_Time'], ($GLOBALS['Data_Enum_Gen_genBoundedEnum'])($dictMonadGen_0, $GLOBALS['Data_Time_Component_boundedEnumHour'])), ($GLOBALS['Data_Enum_Gen_genBoundedEnum'])($dictMonadGen_0, $GLOBALS['Data_Time_Component_boundedEnumMinute'])), ($GLOBALS['Data_Enum_Gen_genBoundedEnum'])($dictMonadGen_0, $GLOBALS['Data_Time_Component_boundedEnumSecond'])), ($GLOBALS['Data_Enum_Gen_genBoundedEnum'])($dictMonadGen_0, $GLOBALS['Data_Time_Component_boundedEnumMillisecond']));
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Time_Gen_genTime'] = __NAMESPACE__ . '\\majData_majTime_majGen_genmajTime';
 
